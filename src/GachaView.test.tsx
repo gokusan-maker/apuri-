@@ -566,3 +566,11 @@ it('デザイン112：もう会っている子が出たときは「○体目」�
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.queryByText(/体目！/)).toBeNull()
 })
+
+it('デザイン116：キャラ図鑑で、今の相棒と同じ種類の子に「⭐相棒」が出る（ひとつだけ）', () => {
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} partnerSpecies="fox" onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const marks = screen.getAllByLabelText('今の相棒')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.textContent).toContain(speciesOf('fox').name)
+})

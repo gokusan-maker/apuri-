@@ -42,6 +42,7 @@ function ShareButton({ text }: { text: string }) {
 
 type Props = {
   ownedSpecies?: string[] // 持っているキャラクターの種類（図鑑用）
+  partnerSpecies?: string // デザイン116：今の相棒の種類（図鑑に ⭐相棒 を出す）
   speciesLevels?: Record<string, number> // デザイン101：種類ごとのいちばん高いレベル（図鑑用）
   onChara?: () => GachaResult | null // キャラガチャ（生まれた姿で出る）
   charaPrice?: number
@@ -77,7 +78,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, speciesLevels, onChara, charaPrice = CHARA_PRICE }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, speciesLevels, partnerSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [shake, setShake] = useState(0) // コインがたりないのに押した回数（首をふる）
   const [shakeM, setShakeM] = useState(0) // 首をふった連ガチャ（3 か 5）
@@ -190,7 +191,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🎉 {charaGot}が仲間になった！ 「記録」→「あいぼう」で相棒にできるよ
             </p>
           )}
-          {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} />}
+          {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} partner={partnerSpecies} />}
         </div>
       ) : (
         <>
@@ -489,7 +490,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           🏰 城のボーナス：レアが出やすさ +{Math.round(castleLuck(castles) * 100)}%（制覇した城 {castles}）
         </p>
       )}
-      {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} />}
+      {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} partner={partnerSpecies} />}
       {log.length > 0 && (
         <details className="gacha-odds gacha-log chip-fold cf-4">
           <summary>最近のガチャ（{log.length}回）</summary>
@@ -672,7 +673,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
 }
 
 // キャラクター図鑑：ガチャで出るキャラ全部。まだ会っていない子はシルエットと「？？？」
-function CharBook({ owned, fresh = '', levels }: { owned: string[]; fresh?: string; levels?: Record<string, number> }) {
+function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fresh?: string; levels?: Record<string, number>; partner?: string }) {
   const got = new Set(['mochi', ...owned])
   const [pick, setPick] = useState<string | null>(null)
   const [onlyNew, setOnlyNew] = useState(false) // まだ会っていない子だけ見る
@@ -703,6 +704,7 @@ function CharBook({ owned, fresh = '', levels }: { owned: string[]; fresh?: stri
               <button className="char-book-pick" aria-label={ok ? `${sp.name}（${t.name}）` : 'まだ会っていないキャラクター'} onClick={() => setPick(pick === sp.id ? null : sp.id)}>
                 <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
+                {ok && (partner ?? 'mochi') === sp.id && <span className="char-book-partner" aria-label="今の相棒">⭐相棒</span>}
                 <span className={`char-type t-${t.id}`} title={t.desc}>
                   {t.icon}
                   {t.name.replace('型', '')}
