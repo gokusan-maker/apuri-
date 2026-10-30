@@ -276,6 +276,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Neither the nurses nor the doctor [were] aware of the problem.', choices: ['was', 'have', 'are', 'being'], answer: 0, why: 'neither A nor B では動詞は B（近いほう）に合わせる。B は the doctor（単数）なので was。' },
     ],
   },
+  {
+    id: 'exam-fix-4',
+    title: '入試の誤文訂正④（TOEFL・IELTS の書き言葉）',
+    points: ['TOEFL・IELTS のライティングで、日本人がよくまちがえる形。主語と動詞の一致・数えられる名詞・前置詞のつけすぎなど。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This essay will discuss the advantages of online learning.', ja: 'この小論文では、オンライン学習の利点を論じる。（discuss は他動詞なので about はいらない）' }],
+    questions: [
+      { sentence: 'Recent research [show] that sleep improves memory.', choices: ['shows', 'showing', 'have shown', 'are showing'], answer: 0, why: 'research は数えられない名詞で単数あつかい：research shows。' },
+      { sentence: 'There has been a significant [raise] in global temperatures.', choices: ['rise', 'raising', 'arise', 'rising'], answer: 0, why: '「上昇」という名詞は rise（a rise in ～）。raise はふつう動詞「上げる」。' },
+      { sentence: 'Many people [is agree] that education is important.', choices: ['agree', 'agrees', 'agreeing', 'is agreed'], answer: 0, why: 'agree は一般動詞なので be 動詞はいらない。主語は複数の Many people なので agree。' },
+      { sentence: 'This essay will [discuss about] the advantages of online learning.', choices: ['discuss', 'discuss on', 'discuss of', 'discussing about'], answer: 0, why: 'discuss は他動詞で、すぐうしろに目的語を置く：discuss the advantages。' },
+      { sentence: '[Despite of] the high cost, many families choose private schools.', choices: ['Despite', 'In spite', 'Although', 'Even'], answer: 0, why: 'Despite は前置詞で of はつけない（in spite of とまぜない）。Although のあとには主語＋動詞が必要。' },
+      { sentence: 'The number of cars has increased, [which cause] serious air pollution.', choices: ['which causes', 'that cause', 'which causing', 'what causes'], answer: 0, why: 'コンマのあとで前の文の内容を受ける which は単数あつかい：which causes。コンマのあとに that は使えない。' },
+      { sentence: 'Young people today have [less] opportunities to play outside.', choices: ['fewer', 'little', 'least', 'much'], answer: 0, why: 'opportunities は数えられる名詞の複数形なので fewer。less は数えられない名詞に使う。' },
+      { sentence: 'It is important for students [learning] how to manage their time.', choices: ['to learn', 'learn', 'learned', 'for learning'], answer: 0, why: 'It is ～ for 人 to 動詞の原形「人が…することは～だ」：for students to learn。' },
+      { sentence: '[The amount of students] studying abroad has risen sharply.', choices: ['The number of students', 'The amount of student', 'A number of student', 'The many of students'], answer: 0, why: 'students は数えられる名詞なので amount ではなく number：The number of students。' },
+      { sentence: 'In conclusion, the benefits of technology [outweighs] its drawbacks.', choices: ['outweigh', 'is outweighing', 'outweighing', 'has outweighed'], answer: 0, why: '主語の中心は複数の the benefits なので outweigh（三人称単数の s はつけない）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

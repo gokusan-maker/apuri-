@@ -97,3 +97,10 @@ it('誤文訂正③：医学部・難関大レベルの単元が10問あり、�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('had I arrived')
   for (const q of u.questions) expect(q.choices).toHaveLength(4)
 })
+
+it('誤文訂正④：TOEFL・IELTS の書き言葉の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-4')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('discuss')
+})
