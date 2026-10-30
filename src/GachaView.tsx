@@ -709,6 +709,9 @@ function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
               <span className="zukan-challenge">（とくぎ：{skillOf(pick).name}）</span>
               <span className="zukan-challenge">（必殺技：{specialOf(pick).name}）</span>
               <span className="zukan-challenge" lang="en">「{replyOf(pick).en}」</span>
+              <button className="speak small" onClick={() => speak(replyOf(pick).en)} aria-label="図鑑のあいさつを聞く">
+                🔊
+              </button>
               <span className="zukan-challenge">（{replyOf(pick).ja}）</span>
             </>
           ) : (

@@ -482,3 +482,17 @@ it('デザイン99：キャラ図鑑で会えた子をえらぶと、その子�
   expect(screen.getByText(`「${replyOf('fox').en}」`)).toBeInTheDocument()
   expect(screen.getByText(`（${replyOf('fox').ja}）`)).toBeInTheDocument()
 })
+
+it('デザイン100：キャラ図鑑のあいさつは🔊を押したときだけ英語で読み上げる', async () => {
+  const { SPECIES } = await import('./monster')
+  const { replyOf } = await import('./partner')
+  const sp = vi.spyOn(await import('./speech'), 'speak').mockImplementation(() => {})
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(sp).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByRole('button', { name: '図鑑のあいさつを聞く' }))
+  expect(sp).toHaveBeenCalledWith(replyOf('fox').en)
+  sp.mockRestore()
+})
