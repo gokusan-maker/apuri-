@@ -780,3 +780,16 @@ it('デザイン114：必殺技を出さずに勝ったときは、結果画面�
   expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
   expect(screen.queryByLabelText(/^必殺技 \d+回$/)).toBeNull()
 })
+
+it('デザイン115：ボスに勝つと、結果画面にたおすまでに答えた問題の数が出る（まちがえた問題もふくむ）', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  let n = 1
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    n++
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText(`たおすまでの問題数 ${n}`).textContent).toBe(`📝 ${n}問でたおした`)
+})
