@@ -265,3 +265,30 @@ it('デザイン109：ボス図鑑の「✨ノーミスだけ」で、ノーミ�
   expect(document.querySelectorAll('.boss-book-list li.got').length).toBe(before)
   expect(screen.getByRole('button', { name: '✨ノーミスだけ' })).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('デザイン117：2回以上勝ったボスがいると、いちばん勝ったボスに「🏆 いちばん勝った」が出る', () => {
+  localStorage.clear()
+  for (let k = 0; k < 2; k++) {
+    const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+    const en = document.querySelector('.boss .en')!.textContent
+    const w = wordsOf(['中1']).find((x) => x.en === en)!
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+    unmount()
+  }
+  const book = JSON.parse(localStorage.getItem('eitan:boss-book')!) as Record<string, { wins: number }>
+  const best = Math.max(...Object.values(book).map((e) => e.wins))
+  render(<BossBook />)
+  if (best >= 2) expect(screen.getAllByText(/🏆 いちばん勝った/)).toHaveLength(1)
+  else expect(screen.queryByText(/🏆 いちばん勝った/)).toBeNull()
+})
+
+it('デザイン117：どのボスにも1回しか勝っていなければ「いちばん勝った」は出ない', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  expect(screen.queryByText(/🏆 いちばん勝った/)).toBeNull()
+})
