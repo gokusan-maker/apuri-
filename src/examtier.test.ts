@@ -492,3 +492,10 @@ it('本番の長さの長文：IELTS の「孤独と公衆衛生」の長文は7
   expect(passageStats(p).words).toBeLessThanOrEqual(950)
   expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
 })
+
+it('本番の長さの長文：旧帝大評論の「臨界期」は600語以上・1文18語以上で旧帝大のレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyutei-critical-period')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(tierOf(p)).toBe('kyutei')
+})
