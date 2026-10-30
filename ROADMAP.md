@@ -89,7 +89,8 @@
   - [x] ③ 現在完了進行形・経験・継続・関係代名詞 what・whose・while / during・倍数表現・完了・as soon as・not to の10単元に4つ目の選択肢（183→153。tell 人 to not 〜 は正解にもなるので選択肢から外した）
   - [x] ④ 関係代名詞 that・動名詞と分詞・so / such・spend ～ing・keep ～ing・比較級の強調・進行形と完了形の受け身・unless・find / leave ＋O＋C・still / anymore の10単元に4つ目の選択肢（153→123）
   - [x] ⑤ It is said that・受け身＋前置詞・I think so・形容詞＋that・分数・命令文の付加疑問・each other・get ＋過去分詞・be about to・must / can't be の10単元に4つ目の選択肢（123→93）
-  - [ ] ⑥ つづきの10単元を4択に
+  - [x] ⑥ 状態の変化（get / go ＋形容詞）・助動詞の受け身・as ～ as possible・the second ＋最上級・most of・almost / most・the first time・make sure・not A but B・have been / gone の10単元に4つ目の選択肢（93→63）
+  - [ ] ⑦ つづきの10単元を4択に
 - [x] 文法（高校）の3択の問題（861問）を入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
   - [x] ① 群前置詞・前置詞の熟語6単元（in depth / at length、in line with、contrary to、except for など）を4択に（861→843。テストでふえないようにした）
   - [x] ② by の熟語・now and then・in the way / in return・ahead of / prior to・句動詞の6単元を4択に（843→825）

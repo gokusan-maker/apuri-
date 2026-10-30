@@ -3109,9 +3109,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I hope your dream will come true.', ja: 'あなたの夢がかなうといいね。' },
     ],
     questions: [
-      { sentence: 'It is getting ___. Let\'s go home.', choices: ['dark', 'darkly', 'darkness'], answer: 0, why: 'get ＋ 形容詞「～になる」。副詞 darkly や名詞 darkness は置けない。' },
-      { sentence: 'The milk has gone ___. Don\'t drink it.', choices: ['bad', 'badly', 'worse to'], answer: 0, why: 'go bad「（食べ物が）くさる」。' },
-      { sentence: 'He ___ asleep during the movie.', choices: ['fell', 'came', 'turned'], answer: 0, why: 'fall asleep「ねむりこむ」。過去形は fell。' },
+      { sentence: 'It is getting ___. Let\'s go home.', choices: ['dark', 'darkly', 'darkness', 'darken'], answer: 0, why: 'get ＋ 形容詞「～になる」。副詞 darkly や名詞 darkness は置けない。' },
+      { sentence: 'The milk has gone ___. Don\'t drink it.', choices: ['bad', 'badly', 'worse to', 'bads'], answer: 0, why: 'go bad「（食べ物が）くさる」。' },
+      { sentence: 'He ___ asleep during the movie.', choices: ['fell', 'came', 'turned', 'made'], answer: 0, why: 'fall asleep「ねむりこむ」。過去形は fell。' },
     ],
   },
   {
@@ -3160,9 +3160,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This homework must be finished by Friday.', ja: 'この宿題は金曜日までに終わらせなければならない。' },
     ],
     questions: [
-      { sentence: 'Mt. Fuji can ___ from my room.', choices: ['be seen', 'seen', 'is seen'], answer: 0, why: '助動詞の受け身は〈can ＋ be ＋ 過去分詞〉。' },
-      { sentence: 'The meeting will ___ in Room 3.', choices: ['be held', 'held', 'hold to'], answer: 0, why: '「行われる」は受け身。will のあとは原形 be ＋ held。' },
-      { sentence: 'These rules must ___ by everyone.', choices: ['be followed', 'follow', 'are followed'], answer: 0, why: 'ルールは「守られる」側なので must be followed。' },
+      { sentence: 'Mt. Fuji can ___ from my room.', choices: ['be seen', 'seen', 'is seen', 'be see'], answer: 0, why: '助動詞の受け身は〈can ＋ be ＋ 過去分詞〉。' },
+      { sentence: 'The meeting will ___ in Room 3.', choices: ['be held', 'held', 'hold to', 'be hold'], answer: 0, why: '「行われる」は受け身。will のあとは原形 be ＋ held。' },
+      { sentence: 'These rules must ___ by everyone.', choices: ['be followed', 'follow', 'are followed', 'be follow'], answer: 0, why: 'ルールは「守られる」側なので must be followed。' },
     ],
   },
   {
@@ -3177,9 +3177,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She studied as hard as she could before the test.', ja: '彼女はテストの前にできるだけ一生けんめい勉強した。' },
     ],
     questions: [
-      { sentence: 'Please answer as ___ as possible.', choices: ['quickly', 'more quickly', 'quickest'], answer: 0, why: 'as と as のあいだは原級。answer を修飾するので副詞 quickly。' },
-      { sentence: 'I walked as fast as I ___ to catch the bus.', choices: ['could', 'can', 'possible'], answer: 0, why: '過去の文（walked）なので could。' },
-      { sentence: 'Drink as much water ___ possible on hot days.', choices: ['as', 'than', 'so'], answer: 0, why: 'as much ～ as possible「できるだけたくさんの～」。' },
+      { sentence: 'Please answer as ___ as possible.', choices: ['quickly', 'more quickly', 'quickest', 'quicker'], answer: 0, why: 'as と as のあいだは原級。answer を修飾するので副詞 quickly。' },
+      { sentence: 'I walked as fast as I ___ to catch the bus.', choices: ['could', 'can', 'possible', 'possibly'], answer: 0, why: '過去の文（walked）なので could。' },
+      { sentence: 'Drink as much water ___ possible on hot days.', choices: ['as', 'than', 'so', 'that'], answer: 0, why: 'as much ～ as possible「できるだけたくさんの～」。' },
     ],
   },
   {
@@ -3262,9 +3262,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'That was the most exciting game I have ever watched.', ja: 'あれは今まで見た中でいちばんわくわくする試合だった。' },
     ],
     questions: [
-      { sentence: 'This is the ___ cake I have ever eaten.', choices: ['best', 'better', 'good'], answer: 0, why: '「今まで食べた中でいちばん」なので最上級 best。' },
-      { sentence: 'She is the ___ tallest girl in our class.', choices: ['second', 'two', 'twice'], answer: 0, why: '「2番目に背が高い」は the second ＋ 最上級。' },
-      { sentence: 'It is the most beautiful place I have ever ___.', choices: ['visited', 'visit', 'visiting'], answer: 0, why: 'I have ever ＋ 過去分詞（現在完了の経験）。' },
+      { sentence: 'This is the ___ cake I have ever eaten.', choices: ['best', 'better', 'good', 'well'], answer: 0, why: '「今まで食べた中でいちばん」なので最上級 best。' },
+      { sentence: 'She is the ___ tallest girl in our class.', choices: ['second', 'two', 'twice', 'secondly'], answer: 0, why: '「2番目に背が高い」は the second ＋ 最上級。' },
+      { sentence: 'It is the most beautiful place I have ever ___.', choices: ['visited', 'visit', 'visiting', 'visits'], answer: 0, why: 'I have ever ＋ 過去分詞（現在完了の経験）。' },
     ],
   },
   {
@@ -3381,9 +3381,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'None of us could answer the last question.', ja: '私たちのだれも最後の問題に答えられなかった。' },
     ],
     questions: [
-      { sentence: 'Most ___ my classmates have a smartphone.', choices: ['of', 'in', 'the'], answer: 0, why: 'my のついた決まったグループなので most of my ～。' },
-      { sentence: '___ people enjoy listening to music.', choices: ['Most', 'Most of', 'The most of'], answer: 0, why: '「たいていの人」と一般的に言うときは most ＋ 名詞。' },
-      { sentence: 'I called my friends, but ___ of them answered.', choices: ['none', 'no', 'nothing'], answer: 0, why: 'none of them「彼らのだれも～ない」。no や nothing は of them の前に置けない。' },
+      { sentence: 'Most ___ my classmates have a smartphone.', choices: ['of', 'in', 'the', 'at'], answer: 0, why: 'my のついた決まったグループなので most of my ～。' },
+      { sentence: '___ people enjoy listening to music.', choices: ['Most', 'Most of', 'The most of', 'Almost'], answer: 0, why: '「たいていの人」と一般的に言うときは most ＋ 名詞。' },
+      { sentence: 'I called my friends, but ___ of them answered.', choices: ['none', 'no', 'nothing', 'nobody'], answer: 0, why: 'none of them「彼らのだれも～ない」。no や nothing は of them の前に置けない。' },
     ],
   },
   {
@@ -3449,9 +3449,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is almost time for dinner.', ja: 'もうすぐ夕食の時間だ。' },
     ],
     questions: [
-      { sentence: '___ students in this school walk to school.', choices: ['Most', 'Almost', 'The most'], answer: 0, why: '名詞の前に直接置けるのは most。almost は副詞。' },
-      { sentence: 'Almost ___ student passed the test.', choices: ['every', 'all', 'most'], answer: 0, why: 'student が単数なので almost every。almost all なら students（複数）。' },
-      { sentence: 'I ___ missed the bus this morning.', choices: ['almost', 'most', 'mostly'], answer: 0, why: '動詞 missed を修飾して「もう少しで乗りおくれるところだった」は almost。' },
+      { sentence: '___ students in this school walk to school.', choices: ['Most', 'Almost', 'The most', 'Almost of'], answer: 0, why: '名詞の前に直接置けるのは most。almost は副詞。' },
+      { sentence: 'Almost ___ student passed the test.', choices: ['every', 'all', 'most', 'many'], answer: 0, why: 'student が単数なので almost every。almost all なら students（複数）。' },
+      { sentence: 'I ___ missed the bus this morning.', choices: ['almost', 'most', 'mostly', 'more'], answer: 0, why: '動詞 missed を修飾して「もう少しで乗りおくれるところだった」は almost。' },
     ],
   },
   {
@@ -3466,9 +3466,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She went abroad for the first time when she was twenty.', ja: '彼女は20歳のときに初めて海外へ行った。' },
     ],
     questions: [
-      { sentence: 'This is the first time I have ___ a horse.', choices: ['ridden', 'rode', 'ride'], answer: 0, why: 'This is the first time のあとは現在完了〈have ＋ 過去分詞〉。ride の過去分詞は ridden。' },
-      { sentence: 'I visited Kyoto ___ the first time last spring.', choices: ['for', 'at', 'in'], answer: 0, why: 'for the first time「初めて」。' },
-      { sentence: 'Is this the first time you ___ to Japan?', choices: ['have come', 'coming', 'come'], answer: 0, why: 'the first time ＋ 現在完了「～するのは初めて」。' },
+      { sentence: 'This is the first time I have ___ a horse.', choices: ['ridden', 'rode', 'ride', 'riding'], answer: 0, why: 'This is the first time のあとは現在完了〈have ＋ 過去分詞〉。ride の過去分詞は ridden。' },
+      { sentence: 'I visited Kyoto ___ the first time last spring.', choices: ['for', 'at', 'in', 'on'], answer: 0, why: 'for the first time「初めて」。' },
+      { sentence: 'Is this the first time you ___ to Japan?', choices: ['have come', 'coming', 'come', 'comes'], answer: 0, why: 'the first time ＋ 現在完了「～するのは初めて」。' },
     ],
   },
   {
@@ -3500,9 +3500,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I checked my bag twice to make sure I had my ticket.', ja: '切符を持っているか確かめるために、かばんを2回見た。' },
     ],
     questions: [
-      { sentence: 'Make ___ you turn off the lights.', choices: ['sure', 'surely', 'sure to'], answer: 0, why: 'make sure (that) ＋ 主語 ＋ 動詞「必ず～するようにする」。' },
-      { sentence: 'Make sure ___ your name on the paper.', choices: ['to write', 'writing', 'wrote'], answer: 0, why: 'make sure to ＋ 動詞の原形。' },
-      { sentence: 'Please make sure the door ___ locked.', choices: ['is', 'being', 'be'], answer: 0, why: 'make sure の that 節の中は〈主語 ＋ 動詞〉。未来のことでもふつう現在形 is。' },
+      { sentence: 'Make ___ you turn off the lights.', choices: ['sure', 'surely', 'sure to', 'sureness'], answer: 0, why: 'make sure (that) ＋ 主語 ＋ 動詞「必ず～するようにする」。' },
+      { sentence: 'Make sure ___ your name on the paper.', choices: ['to write', 'writing', 'wrote', 'write'], answer: 0, why: 'make sure to ＋ 動詞の原形。' },
+      { sentence: 'Please make sure the door ___ locked.', choices: ['is', 'being', 'be', 'to be'], answer: 0, why: 'make sure の that 節の中は〈主語 ＋ 動詞〉。未来のことでもふつう現在形 is。' },
     ],
   },
   {
@@ -8821,9 +8821,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What matters is not winning but doing your best.', ja: '大切なのは勝つことではなく、全力をつくすことだ。' },
     ],
     questions: [
-      { sentence: 'That animal is not a cat ___ a fox.', choices: ['but', 'and', 'or'], answer: 0, why: '「ネコではなくキツネ」は not A but B。' },
-      { sentence: 'He came here not to work but ___ rest.', choices: ['to', 'at', 'and'], answer: 0, why: 'not A but B の A と B は同じ形。not to work に合わせて to rest。' },
-      { sentence: 'The concert is on Sunday, ___ on Saturday.', choices: ['not', 'but', 'no'], answer: 0, why: 'B, not A「A ではなく B」の形。' },
+      { sentence: 'That animal is not a cat ___ a fox.', choices: ['but', 'and', 'or', 'so'], answer: 0, why: '「ネコではなくキツネ」は not A but B。' },
+      { sentence: 'He came here not to work but ___ rest.', choices: ['to', 'at', 'and', 'for'], answer: 0, why: 'not A but B の A と B は同じ形。not to work に合わせて to rest。' },
+      { sentence: 'The concert is on Sunday, ___ on Saturday.', choices: ['not', 'but', 'no', 'nor'], answer: 0, why: 'B, not A「A ではなく B」の形。' },
     ],
   },
   {
@@ -9008,9 +9008,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Ken isn't here. He has gone to the library.", ja: 'ケンはここにいない。図書館に行ってしまった。' },
     ],
     questions: [
-      { sentence: "Mika isn't in the classroom. She has ___ to the nurse's office.", choices: ['gone', 'been', 'went'], answer: 0, why: '今ここにいない（行ってしまった）ので has gone to。' },
-      { sentence: "I have just ___ to the post office, so I'm back now.", choices: ['been', 'gone', 'go'], answer: 0, why: 'もうもどってきているので have been to「行ってきたところだ」。' },
-      { sentence: '"Where ___ you been?" "I was at the park."', choices: ['have', 'did', 'are'], answer: 0, why: 'Where have you been?「どこに行っていたの？」は現在完了。' },
+      { sentence: "Mika isn't in the classroom. She has ___ to the nurse's office.", choices: ['gone', 'been', 'went', 'go'], answer: 0, why: '今ここにいない（行ってしまった）ので has gone to。' },
+      { sentence: "I have just ___ to the post office, so I'm back now.", choices: ['been', 'gone', 'go', 'went'], answer: 0, why: 'もうもどってきているので have been to「行ってきたところだ」。' },
+      { sentence: '"Where ___ you been?" "I was at the park."', choices: ['have', 'did', 'are', 'do'], answer: 0, why: 'Where have you been?「どこに行っていたの？」は現在完了。' },
     ],
   },
   {
