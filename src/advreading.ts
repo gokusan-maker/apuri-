@@ -16249,6 +16249,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-onion-tears',
+    title: 'Why Onions Make Us Cry',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Almost everyone who has cooked has had the experience of cutting an onion and suddenly finding tears running down their face. It may seem strange that a simple vegetable can have such a strong effect on our eyes. The reason, however, lies in a clever chemical defense that onions have developed to protect themselves from animals that might try to eat them.",
+      "An onion is made up of many tiny cells. Inside these cells are certain substances that contain sulfur, and in separate parts of the cells there are special proteins called enzymes. As long as the onion is whole, these substances are kept apart. When we cut the onion with a knife, however, the walls of the cells are broken, ( A ) the substances and enzymes mix together.",
+      "This mixing starts a series of chemical reactions. One of the products is a gas that floats up from the cutting board into the air. When this gas reaches our eyes, it irritates the nerves on the surface of the eye. The body responds by producing tears in order to wash the irritating substance away. In other words, our tears are a natural form of protection, not a sign that something is wrong.",
+      "For the onion, this reaction is useful. An animal that bites into an onion will experience the same unpleasant feeling in its mouth and eyes, and it may decide not to eat any more. Many plants protect themselves with chemicals in a similar way. The strong taste of garlic and the hot feeling of chili peppers are other examples of defenses that plants use against animals and insects.",
+      "Fortunately, there are several ways to reduce the tears. Cooling an onion in the refrigerator before cutting it slows down the chemical reactions, so less gas is produced. Using a very sharp knife also helps, because it breaks fewer cells than a dull one. Some cooks cut onions near a fan or an open window ( B ) the gas moves away from their faces. Understanding the science behind a common problem can help us find simple solutions ( C ) make everyday life a little easier.",
+    ],
+    ja: [
+      '料理をしたことのあるほとんどだれもが、玉ねぎを切っていると急に顔に涙が流れてきたという経験をしている。ただの野菜が目にこれほど強い影響をあたえるのは、ふしぎに思えるかもしれない。しかしその理由は、玉ねぎが自分を食べようとするかもしれない動物から身を守るために発達させてきた、たくみな化学的な防御にある。',
+      '玉ねぎはたくさんの小さな細胞でできている。その細胞の中には硫黄をふくむある種の物質があり、細胞の別の部分には酵素とよばれる特別なたんぱく質がある。玉ねぎがまるごとのあいだは、これらの物質ははなれたままに保たれている。しかし包丁で玉ねぎを切ると細胞のかべがこわれ、そのため物質と酵素がまざり合う。',
+      'このまざり合いが、一連の化学反応を始める。その産物の一つが、まな板から空気中にただよい上がる気体である。この気体が目に届くと、目の表面の神経を刺激する。体はその刺激する物質を洗い流すために涙を出して反応する。言いかえれば、わたしたちの涙は自然な守りの形であって、何か悪いことが起きているしるしではないのである。',
+      '玉ねぎにとって、この反応は役に立つ。玉ねぎにかみついた動物は、口や目で同じいやな感じを味わい、それ以上食べないことにするかもしれない。多くの植物が、同じような方法で化学物質を使って身を守っている。にんにくの強い味や、とうがらしのからさも、植物が動物や虫に対して使う守りのほかの例である。',
+      'さいわい、涙を減らす方法はいくつかある。切る前に玉ねぎを冷蔵庫で冷やすと化学反応がおそくなり、出る気体が少なくなる。とてもよく切れる包丁を使うのも役に立つ。切れない包丁よりこわす細胞が少ないからである。気体が顔から遠ざかるように、扇風機や開けた窓の近くで玉ねぎを切る料理人もいる。よくある問題の背後にある科学を理解すると、日々の生活を少し楽にする簡単な解決策を見つけるのに役立つのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'but', 'or', 'unless'], answer: 0, why: '「細胞のかべがこわれ、（そして）物質と酵素がまざる」と、続けて起こることをつなぐので and。' },
+      { id: 'B', choices: ['so that', 'even if', 'as if', 'unless'], answer: 0, why: '「気体が顔から遠ざかるように」と目的を表すので so that。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 simple solutions を受け、うしろに主語が欠けている（make everyday life …）ので主格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: '玉ねぎがまるごとのあいだは、物質と酵素ははなれたままになっている。', answer: true, why: '第2段落 As long as the onion is whole, these substances are kept apart。' },
+      { statement: '涙は、目に何か悪いことが起きているしるしである。', answer: false, why: '第3段落 our tears are a natural form of protection, not a sign that something is wrong。' },
+      { statement: 'にんにくやとうがらしも、化学物質で身を守る植物の例である。', answer: true, why: '第4段落 The strong taste of garlic and the hot feeling of chili peppers are other examples。' },
+      { statement: '切れない包丁を使うと、涙が出にくくなる。', answer: false, why: '第5段落 Using a very sharp knife also helps, because it breaks fewer cells than a dull one。' },
+    ],
+    qa: [
+      { q: 'Why does cooling an onion before cutting it help?', choices: ['It slows down the chemical reactions, so less gas is produced.', 'It makes the onion taste sweeter.', 'It makes the cells larger.', 'It removes the sulfur from the onion.'], answer: 0, why: '第5段落 Cooling an onion … slows down the chemical reactions, so less gas is produced。' },
+      { q: 'What is the main purpose of the chemical reaction for the onion?', choices: ['To protect itself from animals that might eat it.', 'To help it grow faster.', 'To attract insects.', 'To keep its cells warm.'], answer: 0, why: '第1・4段落 a clever chemical defense … to protect themselves from animals。' },
+    ],
+    gist: [
+      { para: 2, choices: ['気体が目を刺激し、涙が出るしくみ', 'まな板の洗い方', '神経の病気', '空気のよごれ'], answer: 0, why: '第3段落は、化学反応でできた気体が目の神経を刺激し、体が涙で洗い流そうとするしくみを説明している。' },
+      { para: 4, choices: ['涙を減らすための簡単な工夫', '冷蔵庫の使い方', '包丁のとぎ方', '窓の開け方'], answer: 0, why: '第5段落は、冷やす・よく切れる包丁を使う・風通しのよい所で切るなど、涙を減らす方法を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
