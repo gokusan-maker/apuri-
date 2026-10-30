@@ -520,9 +520,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There used to be a big tree here.', ja: '以前ここに大きな木があった。' },
     ],
     questions: [
-      { sentence: 'My father used to ___ soccer.', choices: ['play', 'playing', 'played'], answer: 0, why: 'used to のあとは動詞の原形。' },
-      { sentence: 'I ___ to be afraid of dogs, but now I love them.', choices: ['use', 'used', 'using'], answer: 1, why: '「以前は～だった」は used to。' },
-      { sentence: 'There ___ to be a bookstore near the station.', choices: ['used', 'uses', 'use'], answer: 0, why: 'There used to be ～で「以前は～があった」。' },
+      { sentence: 'My father used to ___ soccer.', choices: ['play', 'playing', 'played', 'plays'], answer: 0, why: 'used to のあとは動詞の原形。' },
+      { sentence: 'I ___ to be afraid of dogs, but now I love them.', choices: ['use', 'used', 'using', 'uses'], answer: 1, why: '「以前は～だった」は used to。' },
+      { sentence: 'There ___ to be a bookstore near the station.', choices: ['used', 'uses', 'use', 'using'], answer: 0, why: 'There used to be ～で「以前は～があった」。' },
     ],
   },
   {
@@ -632,9 +632,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I had to wait for an hour.', ja: '1時間待たなければならなかった。' },
     ],
     questions: [
-      { sentence: 'It\'s late. You had better ___ home.', choices: ['go', 'going', 'to go'], answer: 0, why: 'had better のあとは動詞の原形。' },
-      { sentence: 'Yesterday I ___ to clean my room.', choices: ['must', 'had', 'have'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
-      { sentence: 'You had better ___ eat too much candy.', choices: ['not', 'no', "don't"], answer: 0, why: '否定は had better not ＋原形。' },
+      { sentence: 'It\'s late. You had better ___ home.', choices: ['go', 'going', 'to go', 'went'], answer: 0, why: 'had better のあとは動詞の原形。' },
+      { sentence: 'Yesterday I ___ to clean my room.', choices: ['must', 'had', 'have', 'did'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
+      { sentence: 'You had better ___ eat too much candy.', choices: ['not', 'no', "don't", 'not to'], answer: 0, why: '否定は had better not ＋原形。' },
     ],
   },
   {
@@ -688,9 +688,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She had never seen snow before she moved to Hokkaido.', ja: '彼女は北海道に引っ越すまで、雪を見たことがなかった。' },
     ],
     questions: [
-      { sentence: 'When we arrived, the movie ___ already started.', choices: ['has', 'had', 'have'], answer: 1, why: '着いた（過去）より前に始まっていたので had ＋過去分詞。' },
-      { sentence: 'I had ___ my homework before dinner.', choices: ['finish', 'finishing', 'finished'], answer: 2, why: 'had のあとは過去分詞 finished。' },
-      { sentence: 'He ___ lived in Osaka for ten years before he came here.', choices: ['had', 'has', 'was'], answer: 0, why: 'ここに来た（過去）までの10年間なので had lived。' },
+      { sentence: 'When we arrived, the movie ___ already started.', choices: ['has', 'had', 'have', 'does'], answer: 1, why: '着いた（過去）より前に始まっていたので had ＋過去分詞。' },
+      { sentence: 'I had ___ my homework before dinner.', choices: ['finish', 'finishing', 'finished', 'finishes'], answer: 2, why: 'had のあとは過去分詞 finished。' },
+      { sentence: 'He ___ lived in Osaka for ten years before he came here.', choices: ['had', 'has', 'was', 'have'], answer: 0, why: 'ここに来た（過去）までの10年間なので had lived。' },
     ],
   },
   {
@@ -702,9 +702,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I remember the day when we first met.', ja: '私たちがはじめて会った日をおぼえています。' },
     ],
     questions: [
-      { sentence: 'That is the house ___ my grandmother lives.', choices: ['where', 'when', 'which'], answer: 0, why: 'the house（場所）のあとで「住んでいる」と続くので where。' },
-      { sentence: 'Summer is the season ___ we can swim in the sea.', choices: ['where', 'when', 'who'], answer: 1, why: 'the season（時）を説明するので when。' },
-      { sentence: 'Do you know a shop ___ I can buy cheap shoes?', choices: ['where', 'when', 'what'], answer: 0, why: 'a shop（場所）で「買える」と続くので where。' },
+      { sentence: 'That is the house ___ my grandmother lives.', choices: ['where', 'when', 'which', 'what'], answer: 0, why: 'the house（場所）のあとで「住んでいる」と続くので where。' },
+      { sentence: 'Summer is the season ___ we can swim in the sea.', choices: ['where', 'when', 'who', 'which'], answer: 1, why: 'the season（時）を説明するので when。' },
+      { sentence: 'Do you know a shop ___ I can buy cheap shoes?', choices: ['where', 'when', 'what', 'who'], answer: 0, why: 'a shop（場所）で「買える」と続くので where。' },
     ],
   },
   {
@@ -814,9 +814,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Who do you think will win the game?', ja: 'だれが試合に勝つと思いますか。' },
     ],
     questions: [
-      { sentence: 'Where do you think ___?', choices: ['she lives', 'does she live', 'lives she'], answer: 0, why: 'do you think のあとは主語＋動詞の語順。' },
-      { sentence: '___ do you think is the best player on the team?', choices: ['Who', 'Does', 'Are'], answer: 0, why: '疑問詞 who を文の先頭に出す。' },
-      { sentence: 'How old do you think ___?', choices: ['is this tree', 'this tree is', 'does this tree'], answer: 1, why: 'do you think のあとはふつうの語順 this tree is。' },
+      { sentence: 'Where do you think ___?', choices: ['she lives', 'does she live', 'lives she', 'is she live'], answer: 0, why: 'do you think のあとは主語＋動詞の語順。' },
+      { sentence: '___ do you think is the best player on the team?', choices: ['Who', 'Does', 'Are', 'Do'], answer: 0, why: '疑問詞 who を文の先頭に出す。' },
+      { sentence: 'How old do you think ___?', choices: ['is this tree', 'this tree is', 'does this tree', 'this is tree'], answer: 1, why: 'do you think のあとはふつうの語順 this tree is。' },
     ],
   },
   {
@@ -856,9 +856,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It was careless of him to leave his bag on the train.', ja: '電車にかばんを置き忘れるなんて、彼は不注意だった。' },
     ],
     questions: [
-      { sentence: 'It is nice ___ you to say so.', choices: ['for', 'of', 'to'], answer: 1, why: 'nice は人の性質なので of 人。' },
-      { sentence: 'It is difficult ___ me to get up early.', choices: ['of', 'for', 'with'], answer: 1, why: 'difficult は物事の性質なので for 人。' },
-      { sentence: 'It was brave of her ___ the child.', choices: ['save', 'saving', 'to save'], answer: 2, why: 'of 人 のあとは to ＋原形。' },
+      { sentence: 'It is nice ___ you to say so.', choices: ['for', 'of', 'to', 'at'], answer: 1, why: 'nice は人の性質なので of 人。' },
+      { sentence: 'It is difficult ___ me to get up early.', choices: ['of', 'for', 'with', 'by'], answer: 1, why: 'difficult は物事の性質なので for 人。' },
+      { sentence: 'It was brave of her ___ the child.', choices: ['save', 'saving', 'to save', 'saved'], answer: 2, why: 'of 人 のあとは to ＋原形。' },
     ],
   },
   {
@@ -898,9 +898,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The girl with whom I talked was from Canada.', ja: '私が話した女の子はカナダ出身だった。' },
     ],
     questions: [
-      { sentence: 'This is the town in ___ my father was born.', choices: ['that', 'which', 'what'], answer: 1, why: '前置詞 in のあとは which（that は使えない）。' },
-      { sentence: 'The friend ___ whom I went to the concert is Ken.', choices: ['for', 'with', 'by'], answer: 1, why: 'go to the concert with 人 なので with whom。' },
-      { sentence: 'The chair on which you are ___ is very old.', choices: ['sit', 'sitting', 'sat'], answer: 1, why: 'you are sitting on the chair の形。are のあとなので sitting。' },
+      { sentence: 'This is the town in ___ my father was born.', choices: ['that', 'which', 'what', 'whom'], answer: 1, why: '前置詞 in のあとは which（that は使えない）。' },
+      { sentence: 'The friend ___ whom I went to the concert is Ken.', choices: ['for', 'with', 'by', 'at'], answer: 1, why: 'go to the concert with 人 なので with whom。' },
+      { sentence: 'The chair on which you are ___ is very old.', choices: ['sit', 'sitting', 'sat', 'sits'], answer: 1, why: 'you are sitting on the chair の形。are のあとなので sitting。' },
     ],
   },
   {
@@ -1346,9 +1346,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Remember to bring your lunch tomorrow.', ja: '明日はわすれずにお弁当を持ってきてね。' },
     ],
     questions: [
-      { sentence: 'Please stop ___ so loudly.', choices: ['to talk', 'talking', 'talk'], answer: 1, why: '「話すのをやめる」は stop 〜ing。' },
-      { sentence: 'Remember ___ the window before you leave.', choices: ['closing', 'to close', 'closed'], answer: 1, why: '「わすれずに〜する（これから）」は remember to 〜。' },
-      { sentence: 'I remember ___ him at the party last year.', choices: ['meeting', 'to meet', 'meet'], answer: 0, why: '「（過去に）会ったことを覚えている」は remember 〜ing。' },
+      { sentence: 'Please stop ___ so loudly.', choices: ['to talk', 'talking', 'talk', 'talked'], answer: 1, why: '「話すのをやめる」は stop 〜ing。' },
+      { sentence: 'Remember ___ the window before you leave.', choices: ['closing', 'to close', 'closed', 'close'], answer: 1, why: '「わすれずに〜する（これから）」は remember to 〜。' },
+      { sentence: 'I remember ___ him at the party last year.', choices: ['meeting', 'to meet', 'meet', 'met'], answer: 0, why: '「（過去に）会ったことを覚えている」は remember 〜ing。' },
     ],
   },
   {
@@ -1430,9 +1430,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The older he got, the kinder he became.', ja: '彼は年をとるにつれて、ますますやさしくなった。' },
     ],
     questions: [
-      { sentence: 'The more you practice, the ___ you will play.', choices: ['good', 'better', 'best'], answer: 1, why: 'the ＋比較級なので better。' },
-      { sentence: '___ sooner, the better.', choices: ['The', 'A', 'More'], answer: 0, why: 'The sooner, the better.（早ければ早いほどよい）' },
-      { sentence: 'The higher we climbed, the ___ it became.', choices: ['cold', 'coldest', 'colder'], answer: 2, why: 'the ＋比較級なので colder。' },
+      { sentence: 'The more you practice, the ___ you will play.', choices: ['good', 'better', 'best', 'well'], answer: 1, why: 'the ＋比較級なので better。' },
+      { sentence: '___ sooner, the better.', choices: ['The', 'A', 'More', 'An'], answer: 0, why: 'The sooner, the better.（早ければ早いほどよい）' },
+      { sentence: 'The higher we climbed, the ___ it became.', choices: ['cold', 'coldest', 'colder', 'more cold'], answer: 2, why: 'the ＋比較級なので colder。' },
     ],
   },
   {
@@ -1542,9 +1542,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The cat seems to like you.', ja: 'そのねこはあなたのことが好きなようだ。' },
     ],
     questions: [
-      { sentence: 'She seems ___ today.', choices: ['happily', 'happy', 'happiness'], answer: 1, why: 'seem のあとは形容詞 happy。' },
-      { sentence: 'He seems ___ the answer.', choices: ['know', 'knowing', 'to know'], answer: 2, why: 'seem のあとに動詞を続けるときは to ＋動詞の原形。' },
-      { sentence: 'They ___ to be busy now.', choices: ['seem', 'seems', 'seeming'], answer: 0, why: '主語 They は複数なので seem（-s はつけない）。' },
+      { sentence: 'She seems ___ today.', choices: ['happily', 'happy', 'happiness', 'happen'], answer: 1, why: 'seem のあとは形容詞 happy。' },
+      { sentence: 'He seems ___ the answer.', choices: ['know', 'knowing', 'to know', 'known'], answer: 2, why: 'seem のあとに動詞を続けるときは to ＋動詞の原形。' },
+      { sentence: 'They ___ to be busy now.', choices: ['seem', 'seems', 'seeming', 'to seem'], answer: 0, why: '主語 They は複数なので seem（-s はつけない）。' },
     ],
   },
   {
@@ -1800,9 +1800,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I wish I had studied harder.', ja: 'もっと一生けんめい勉強していたらよかったのに。' },
     ],
     questions: [
-      { sentence: 'If I ___ known the answer, I would have told you.', choices: ['had', 'have', 'would'], answer: 0, why: '過去の事実とちがう想像なので If ＋ had ＋ 過去分詞。' },
-      { sentence: 'If she had taken the bus, she ___ been late.', choices: ['would not have', 'will not', 'does not'], answer: 0, why: '後半は would (not) have ＋ 過去分詞「〜しなかっただろうに」。' },
-      { sentence: 'I wish I ___ the movie with you yesterday.', choices: ['had seen', 'saw', 'see'], answer: 0, why: 'yesterday（過去）のことを残念に思うので I wish ＋ had ＋ 過去分詞。' },
+      { sentence: 'If I ___ known the answer, I would have told you.', choices: ['had', 'have', 'would', 'has'], answer: 0, why: '過去の事実とちがう想像なので If ＋ had ＋ 過去分詞。' },
+      { sentence: 'If she had taken the bus, she ___ been late.', choices: ['would not have', 'will not', 'does not', 'would not'], answer: 0, why: '後半は would (not) have ＋ 過去分詞「〜しなかっただろうに」。' },
+      { sentence: 'I wish I ___ the movie with you yesterday.', choices: ['had seen', 'saw', 'see', 'have seen'], answer: 0, why: 'yesterday（過去）のことを残念に思うので I wish ＋ had ＋ 過去分詞。' },
     ],
   },
   {
@@ -1817,9 +1817,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is in summer that this town is the busiest.', ja: 'この町がいちばんにぎわうのは夏だ。' },
     ],
     questions: [
-      { sentence: 'It was yesterday ___ I met her at the station.', choices: ['that', 'what', 'which'], answer: 0, why: '強調構文 It was 〜 that …。強調しているのは yesterday（時）なので that。' },
-      { sentence: 'It is my brother ___ cooks dinner on Sundays.', choices: ['who', 'which', 'what'], answer: 0, why: '人（my brother）を強調するときは that のかわりに who も使える。' },
-      { sentence: '___ was in Kyoto that we first met.', choices: ['It', 'This', 'There'], answer: 0, why: '強調構文は It で始める。「私たちがはじめて会ったのは京都だった」。' },
+      { sentence: 'It was yesterday ___ I met her at the station.', choices: ['that', 'what', 'which', 'where'], answer: 0, why: '強調構文 It was 〜 that …。強調しているのは yesterday（時）なので that。' },
+      { sentence: 'It is my brother ___ cooks dinner on Sundays.', choices: ['who', 'which', 'what', 'whose'], answer: 0, why: '人（my brother）を強調するときは that のかわりに who も使える。' },
+      { sentence: '___ was in Kyoto that we first met.', choices: ['It', 'This', 'There', 'That'], answer: 0, why: '強調構文は It で始める。「私たちがはじめて会ったのは京都だった」。' },
     ],
   },
   {
@@ -1834,9 +1834,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Not only did she sing, but she also played the piano.', ja: '彼女は歌っただけでなく、ピアノもひいた。' },
     ],
     questions: [
-      { sentence: 'Never ___ I heard such a strange story.', choices: ['have', 'I have', 'has'], answer: 0, why: 'Never が文の最初なので倒置して have I heard の語順になる。' },
-      { sentence: 'Not only ___ he study hard, but he also helps his friends.', choices: ['does', 'is', 'do'], answer: 0, why: '現在の一般動詞の文の倒置は does ＋ 主語 ＋ 動詞の原形。主語が he なので does。' },
-      { sentence: 'Little ___ she know about the surprise party.', choices: ['did', 'was', 'does she'], answer: 0, why: 'Little を文の最初に出すと倒置。過去の文なので did ＋ 主語 ＋ 原形「〜とはほとんど知らなかった」。' },
+      { sentence: 'Never ___ I heard such a strange story.', choices: ['have', 'I have', 'has', 'I had'], answer: 0, why: 'Never が文の最初なので倒置して have I heard の語順になる。' },
+      { sentence: 'Not only ___ he study hard, but he also helps his friends.', choices: ['does', 'is', 'do', 'has'], answer: 0, why: '現在の一般動詞の文の倒置は does ＋ 主語 ＋ 動詞の原形。主語が he なので does。' },
+      { sentence: 'Little ___ she know about the surprise party.', choices: ['did', 'was', 'does she', 'she did'], answer: 0, why: 'Little を文の最初に出すと倒置。過去の文なので did ＋ 主語 ＋ 原形「〜とはほとんど知らなかった」。' },
     ],
   },
   {

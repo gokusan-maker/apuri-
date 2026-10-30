@@ -78,7 +78,7 @@
   - [x] ⑨ 前置詞の熟語8単元（by heart / at heart、on display / on board、in honor of / in favor of など）を4択に作りかえる（132→111）
   - [x] ⑩ 群前置詞6単元（on account of / on behalf of、in favor of / in charge of など）を4択に作りかえる（111→96）。のこりの96問は、分詞・動名詞・時制など「形を選ぶこと」自体が文法のポイントの問題なので、そのままにする
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
-- [ ] 文法（高校）の3択の問題（861問）を入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+- [x] 文法（高校）の3択の問題（861問）を入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
   - [x] ① 群前置詞・前置詞の熟語6単元（in depth / at length、in line with、contrary to、except for など）を4択に（861→843。テストでふえないようにした）
   - [x] ② by の熟語・now and then・in the way / in return・ahead of / prior to・句動詞の6単元を4択に（843→825）
   - [x] ③ 形容詞＋前置詞・against / throughout / unlike・above / below / beyond・through / toward / past・beside / besides・have fun ～ing の6単元を4択に（825→807）
@@ -110,7 +110,7 @@
   - [x] ㉙ may well / might as well・No sooner ～ than・the ＋形容詞・if の省略と倒置・as long as / as far as・It is time・would rather・without / but for・完了分詞構文・完了不定詞の10単元に4つ目の選択肢（129→99）
   - [x] ㉚ 否定の分詞構文・as if・no matter how・最上級の言いかえ・同格の that・強調の do・be to・have ＋物＋過去分詞・not until・部分否定の10単元に4つ目の選択肢（99→69）
   - [x] ㉛ 動名詞の意味上の主語・形式目的語 it・時制の一致・非制限用法・so that・助動詞＋完了形・未来完了・複合関係詞・付帯状況の with・分詞構文の10単元に4つ目の選択肢（69→39）
-  - [ ] ㉜ のこりの単元を4択に
+  - [x] ㉜ のこりの13単元（仮定法過去完了・強調構文・否定の倒置・seem to・the 比較級・stop / remember・過去完了・関係副詞・used to・had better・疑問詞＋do you think・It is ～ of 人 to・前置詞＋関係代名詞）に4つ目の選択肢（39→0。高校の3択はなくなった）
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
