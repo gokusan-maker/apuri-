@@ -583,3 +583,9 @@ it('デザイン120：ガチャの結果に、出た子のとくぎが小さく�
   expect(document.querySelector('.gacha-skill')!.textContent).toContain(`とくぎ：${skillOf('cat').name}`)
   expect(document.querySelector('.gacha-skill')!.textContent).toContain(skillOf('cat').desc)
 })
+
+it('デザイン122：キャラ図鑑で、なかまにいるけれど Lv.1 のままの子に 🌱 がつく（相棒と育てた子にはつかない）', () => {
+  render(<Gacha coins={0} members={3} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat']} speciesLevels={{ mochi: 1, fox: 1, cat: 5 }} />)
+  expect(screen.getAllByLabelText('まだ育てていない')).toHaveLength(1)
+  expect(screen.getByLabelText('まだ育てていない').closest('li')!.querySelector('.char-book-name')!.textContent).toBe(speciesOf('fox').name)
+})

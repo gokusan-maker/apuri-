@@ -720,6 +720,7 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
                 <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
                 {ok && (partner ?? 'mochi') === sp.id && <span className="char-book-partner" aria-label="今の相棒">⭐相棒</span>}
+                {ok && levels?.[sp.id] === 1 && (partner ?? 'mochi') !== sp.id && <span className="char-book-sprout" aria-label="まだ育てていない">🌱</span>} {/* デザイン122 */}
                 <span className={`char-type t-${t.id}`} title={t.desc}>
                   {t.icon}
                   {t.name.replace('型', '')}
