@@ -705,6 +705,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M42 50 Q50 40 60 48" fill="#f97316" stroke="#3f3f46" strokeWidth="2" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'tarsier')
+    return (
+      <g>
+        {/* とても大きな目 */}
+        <circle cx="38" cy="46" r="11" fill="none" stroke="#5c3d1e" strokeWidth="2" />
+        <circle cx="62" cy="46" r="11" fill="none" stroke="#5c3d1e" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
