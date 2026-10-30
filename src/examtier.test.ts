@@ -452,3 +452,10 @@ it('本番の長さの長文：IELTS の「分散効果」の長文は700〜950�
   expect(passageStats(p).words).toBeLessThanOrEqual(950)
   expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
 })
+
+it('本番の長さの長文：旧帝大評論の「海の酸性化」は600語以上・1文18語以上で旧帝大のレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyutei-ocean-acidification')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(tierOf(p)).toBe('kyutei')
+})
