@@ -17980,6 +17980,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Why We Daydream', 'How to Wash Dishes', 'The History of Schools', 'Why Phones Are Dangerous'], answer: 0, why: '全体として、心のさまよいがどれほどよくあるか、その問題点と利点、バランスの大切さを述べている。' },
   },
   {
+    id: 'kyotsu-time-zones',
+    title: 'Who Decides What Time It Is?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When it is noon in Tokyo, it is early morning in London and still the night before in New York. Most people today accept these differences without thinking about them, but the system of time zones that makes them possible is a relatively recent invention. For most of history, there was no need for such a system at all.",
+      "In the past, each town usually set its clocks by the position of the sun. When the sun was at its highest point in the sky, it was noon. Because the sun reaches this point at slightly different moments in different places, a town a short distance to the east would have a time a few minutes ahead of a town to the west. As long as people travelled slowly, these small differences caused few problems, ( A ) nobody could move far enough in a day to notice them.",
+      "The situation changed with the spread of railways in the nineteenth century. Trains could travel long distances quickly, and railway companies needed timetables that everyone could understand. If every station kept its own local time, it was extremely difficult to plan connections between trains, and the risk of accidents increased. To solve this problem, railways in several countries began to use standard times that covered wide areas.",
+      "Eventually, an international system was developed. The Earth turns through 360 degrees in about 24 hours, so the world was divided into zones roughly 15 degrees wide, each differing from the next by about one hour. However, the borders of time zones do not always follow straight lines. Many countries choose a time that suits their political or economic needs. Some large countries use a single time across their whole territory, ( B ) a few use zones that differ by half an hour instead of a full hour.",
+      "Time zones also created a puzzle: somewhere on the Earth, the date must change. This place is called the International Date Line, and it runs mainly through the Pacific Ocean, where few people live. A traveller who crosses it may suddenly move forward or back by a whole day. The history of time zones shows ( C ) even something as basic as the time on our clocks is the result of human decisions made to meet the needs of a changing world.",
+    ],
+    ja: [
+      '東京が正午のとき、ロンドンは朝早く、ニューヨークはまだ前の日の夜である。今日ほとんどの人はこうしたちがいを考えずに受け入れているが、それを可能にしている時間帯（タイムゾーン）のしくみは、比較的新しい発明である。歴史のほとんどのあいだ、そのようなしくみはまったく必要なかったのである。',
+      '昔は、それぞれの町がふつう、太陽の位置で時計を合わせていた。太陽が空のいちばん高いところにあるときが正午だった。太陽がこの位置にくる時刻は場所によって少しずつちがうので、少し東にある町は、西にある町より数分進んだ時刻になった。人々がゆっくり移動しているかぎり、こうした小さなちがいはほとんど問題にならなかった。1日で気づくほど遠くまで移動できる人はいなかったからである。',
+      'この状況は19世紀に鉄道が広まると変わった。列車は長いきょりをすばやく移動でき、鉄道会社はだれもが理解できる時刻表を必要とした。それぞれの駅が自分の地方の時刻を使っていたら、列車の乗りつぎを計画するのはきわめてむずかしく、事故の危険も高まった。この問題を解決するために、いくつかの国の鉄道は、広い地域をおおう標準時を使いはじめた。',
+      'やがて、国際的なしくみが作られた。地球はおよそ24時間で360度回るので、世界はおよそ15度の幅の時間帯に分けられ、となりの時間帯とはおよそ1時間ずつちがう。しかし、時間帯のさかい目はいつもまっすぐな線にそっているわけではない。多くの国は、政治や経済の必要に合った時刻を選んでいる。国土全体で1つの時刻を使う大きな国もあれば、一方で、1時間ではなく30分ずれた時間帯を使う国もいくつかある。',
+      '時間帯は1つのなぞも生んだ。地球のどこかで日付が変わらなければならないのである。この場所は日付変更線とよばれ、おもに人のほとんど住んでいない太平洋の上を通っている。それをこえる旅行者は、とつぜんまる1日進んだりもどったりすることがある。時間帯の歴史は、時計の時刻のような基本的なものでさえ、変わりゆく世界の必要にこたえるために人間がした決定の結果であることを示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「ちがいは問題にならなかった。なぜなら気づくほど遠くへ移動できる人はいなかったから」と理由を表すので because。' },
+      { id: 'B', choices: ['while', 'because', 'unless', 'since'], answer: 0, why: '「1つの時刻を使う国もあれば、一方で30分ずれた時間帯を使う国もある」と2つを対比するので while。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '昔は、町ごとに太陽の位置で時計を合わせていた。', answer: true, why: '第2段落 each town usually set its clocks by the position of the sun。' },
+      { statement: '鉄道が広まっても、駅ごとの地方の時刻で問題はなかった。', answer: false, why: '第3段落 If every station kept its own local time, it was extremely difficult to plan connections。' },
+      { statement: '時間帯のさかい目は、いつもまっすぐな線にそっている。', answer: false, why: '第4段落 the borders of time zones do not always follow straight lines。' },
+      { statement: '日付変更線は、おもに太平洋の上を通っている。', answer: true, why: '第5段落 it runs mainly through the Pacific Ocean。' },
+    ],
+    qa: [
+      { q: 'Why is the world divided into zones roughly 15 degrees wide?', choices: ['The Earth turns 360 degrees in about 24 hours.', 'There are 15 large countries in the world.', 'Railways are about 15 kilometres long.', 'The sun is 15 times larger than the Earth.'], answer: 0, why: '第4段落 The Earth turns through 360 degrees in about 24 hours, so the world was divided into zones roughly 15 degrees wide。' },
+      { q: 'What can happen to a traveller who crosses the International Date Line?', choices: ['They may move forward or back by a whole day.', 'Their watch stops working.', 'They must change trains.', 'They lose one hour only.'], answer: 0, why: '第5段落 A traveller who crosses it may suddenly move forward or back by a whole day。' },
+    ],
+    gist: [
+      { para: 2, choices: ['鉄道が標準時を必要にしたこと', '列車の作り方', '駅の名前のつけ方', '時刻表の印刷のしかた'], answer: 0, why: '第3段落は、鉄道が広まり、列車の時刻表のために広い地域の標準時が使われはじめたことを述べている。' },
+      { para: 3, choices: ['国際的な時間帯のしくみと国ごとのちがい', '地球の大きさのはかり方', '政治家の選び方', '時計の値段'], answer: 0, why: '第4段落は、約15度ずつの時間帯のしくみと、国によるさかい目のちがいを述べている。' },
+    ],
+    titleQ: { choices: ['Who Decides What Time It Is?', 'How to Build a Railway', 'The History of the Pacific Ocean', 'Why Clocks Are Round'], answer: 0, why: '全体として、時間帯が生まれた理由としくみ、日付変更線を述べ、時刻も人間の決定の結果だとまとめている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
