@@ -240,6 +240,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I have [much] friends in Canada.', choices: ['many', 'much more', 'a little', 'few of'], answer: 0, why: 'friends は数えられる名詞の複数形なので many。' },
     ],
   },
+  {
+    id: 'exam-fix-2',
+    title: '入試の誤文訂正②（［ ］を正しい形に）',
+    points: ['文の［ ］の部分はまちがっている。正しくなるものを4つから選ぶ。関係詞・比較・数えられない名詞・語法を中心に。'],
+    examples: [{ en: 'Tokyo is larger than any other city in Japan.', ja: '東京は日本のほかのどの都市よりも大きい。（東京も日本の都市なので other）' }],
+    questions: [
+      { sentence: 'This is the most interesting book [that I have never] read.', choices: ['that I have ever', 'that I never', 'which I have not', 'what I have ever'], answer: 0, why: '最上級のあとの「今まで～した中で」は that I have ever ＋過去分詞。' },
+      { sentence: 'Tokyo is larger than [any city] in Japan.', choices: ['any other city', 'all cities', 'any cities', 'other city'], answer: 0, why: '東京も日本の都市なので、自分をのぞいて any other city（単数）。' },
+      { sentence: 'The man [which] lives next door is a doctor.', choices: ['who', 'whom', 'whose', 'what'], answer: 0, why: '先行詞は人（The man）で、lives の主語になるので主格の who。' },
+      { sentence: 'She speaks English [more fluent] than her brother.', choices: ['more fluently', 'most fluently', 'fluenter', 'as fluent'], answer: 0, why: '動詞 speaks を説明するので副詞の比較級 more fluently。' },
+      { sentence: 'Could you give me [an information] about the tour?', choices: ['some information', 'informations', 'an informations', 'many information'], answer: 0, why: 'information は数えられない名詞なので a をつけず複数形にもしない：some information。' },
+      { sentence: 'He made me [to wait] for an hour.', choices: ['wait', 'waiting', 'waited', 'be waited'], answer: 0, why: '使役の make ＋人＋動詞の原形：made me wait。' },
+      { sentence: 'Do you know [where does she live]?', choices: ['where she lives', 'where lives she', 'where does she lives', 'where is she living'], answer: 0, why: '文の中の疑問（間接疑問）は疑問詞＋主語＋動詞の順：where she lives。' },
+      { sentence: 'The number of tourists [have] increased recently.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: '主語の中心は The number（数）なので単数あつかい：has increased。' },
+      { sentence: 'I am used to [get up] early in the morning.', choices: ['getting up', 'got up', 'be getting up', 'gets up'], answer: 0, why: 'be used to の to は前置詞なので動名詞 getting up「～するのに慣れている」。' },
+      { sentence: '[Although] the heavy rain, we went out for a walk.', choices: ['Despite', 'Even though', 'Because', 'However'], answer: 0, why: 'うしろが名詞（the heavy rain）なので前置詞 Despite。although・even though のあとには主語＋動詞が必要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
