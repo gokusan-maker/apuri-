@@ -98,4 +98,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Please call me (A) as soon as you (B) will arrive (C) at the station (D) tomorrow.', choices: ['(A) as soon as you', '(B) will arrive', '(C) at the station', '(D) tomorrow'], answer: 1, why: '時を表す as soon as の中は、未来のことでも現在形 arrive。' },
     ],
   },
+  {
+    id: 'exam-error-noun',
+    title: '入試の正誤問題⑤（前置詞・代名詞・名詞）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。',
+      '数えられない名詞（advice・furniture・news）、前置詞のいらない動詞（discuss・marry）、所有代名詞（mine・hers）、時の前置詞に注目する。',
+    ],
+    examples: [
+      { en: 'My teacher gave me some useful advice.', ja: '先生は私に役に立つ助言をくれた。（advice は数えられないので a をつけない）' },
+      { en: 'We discussed the plan after school.', ja: '私たちは放課後その計画について話し合った。（discuss は about をつけない）' },
+    ],
+    questions: [
+      { sentence: 'I (A) gave him (B) an advice (C) about (D) his future.', choices: ['(A) gave him', '(B) an advice', '(C) about', '(D) his future'], answer: 1, why: 'advice は数えられない名詞なので an をつけない：some advice / a piece of advice。' },
+      { sentence: '(A) Every students in (B) this class (C) has (D) a tablet.', choices: ['(A) Every students in', '(B) this class', '(C) has', '(D) a tablet'], answer: 0, why: 'every のあとは単数の名詞：Every student。' },
+      { sentence: 'We (A) discussed (B) about the problem (C) for (D) two hours.', choices: ['(A) discussed', '(B) about the problem', '(C) for', '(D) two hours'], answer: 1, why: 'discuss は「～について話し合う」という意味の他動詞なので about をつけない：discussed the problem。' },
+      { sentence: 'She got married (A) to a doctor (B) whom she (C) met him (D) in London.', choices: ['(A) to a doctor', '(B) whom she', '(C) met him', '(D) in London'], answer: 2, why: 'whom が met の目的語の役わりをしているので him はいらない：whom she met。' },
+      { sentence: 'This room has (A) too (B) many furnitures (C) for (D) such a small space.', choices: ['(A) too', '(B) many furnitures', '(C) for', '(D) such a small space'], answer: 1, why: 'furniture は数えられない名詞なので複数形にせず、much を使う：too much furniture。' },
+      { sentence: 'I am going to visit my grandparents (A) in (B) next week (C) with (D) my sister.', choices: ['(A) in', '(B) next week', '(C) with', '(D) my sister'], answer: 0, why: 'next week・last year・this morning などの前には前置詞をつけない。' },
+      { sentence: 'Please (A) call me (B) at seven o’clock (C) in (D) Monday morning.', choices: ['(A) call me', '(B) at seven o’clock', '(C) in', '(D) Monday morning'], answer: 2, why: '曜日がつくと朝でも on：on Monday morning。' },
+      { sentence: 'This book is (A) mine, and that one (B) on the desk (C) is (D) her.', choices: ['(A) mine', '(B) on the desk', '(C) is', '(D) her'], answer: 3, why: '「彼女のもの」は所有代名詞 hers。her だけでは名詞の代わりにならない。' },
+      { sentence: 'He (A) arrived (B) to Tokyo (C) late (D) last night.', choices: ['(A) arrived', '(B) to Tokyo', '(C) late', '(D) last night'], answer: 1, why: 'arrive は to をとらない。都市など広い場所には arrive in、駅など地点には arrive at。' },
+      { sentence: 'The news (A) were (B) so shocking (C) that nobody (D) said a word.', choices: ['(A) were', '(B) so shocking', '(C) that nobody', '(D) said a word'], answer: 0, why: 'news は -s で終わるが数えられない名詞で、単数あつかい：The news was ～。' },
+    ],
+  },
 ]
