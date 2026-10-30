@@ -816,6 +816,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 62 q-8 -10 -2 -18 M70 62 q8 -10 2 -18" fill="none" stroke="#166534" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'sunfish')
+    return (
+      <g>
+        {/* 上と下の大きなひれ */}
+        <path d="M50 24 l6 -12 l4 14 Z" fill="#94a3b8" stroke="#475569" strokeWidth="1.5" />
+        <path d="M50 84 l6 12 l4 -14 Z" fill="#94a3b8" stroke="#475569" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
