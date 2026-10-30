@@ -61,3 +61,31 @@ it('正誤問題でまちがえた問題は、結果画面の「🔁 まちが�
   expect(document.querySelector('.grammar-progress')!.textContent).toBe('1 / 1 問目')
   expect(document.querySelector('.blank-sentence')!.textContent).toBe(unit.questions[1].sentence)
 })
+
+it('誤文訂正：文に［ ］が1つあり、選択肢は4つでかぶらず、答えは［ ］の中の語とちがう', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  for (const u of EXAM_FIX) {
+    expect(u.questions.length).toBeGreaterThanOrEqual(10)
+    for (const q of u.questions) {
+      const m = q.sentence.match(/\[([^\]]+)\]/g)
+      expect(m, q.sentence).toHaveLength(1)
+      expect(q.choices).toHaveLength(4)
+      expect(new Set(q.choices).size).toBe(4)
+      expect(q.choices[q.answer]).not.toBe(m![0].slice(1, -1))
+    }
+  }
+})
+
+it('文法ページの「🎓 入試の文法」から誤文訂正を開ける', async () => {
+  const { render, screen, fireEvent, within } = await import('@testing-library/react')
+  const { Grammar } = await import('./GrammarView')
+  render(<Grammar />)
+  fireEvent.click(within(screen.getByRole('group', { name: '入試の文法' })).getByRole('button', { name: /誤文訂正①/ }))
+  fireEvent.click(screen.getByText(/確認問題へ/))
+  expect(document.querySelector('.blank-sentence')!.textContent).toMatch(/\[.+\]/)
+})
+
+it('誤文訂正の正解の位置はかたよらない', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  expect(new Set(EXAM_FIX.flatMap((u) => u.questions.map((q) => q.answer))).size).toBe(4)
+})

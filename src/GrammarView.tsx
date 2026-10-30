@@ -13,7 +13,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
-import { EXAM_ERROR, randomErrorUnit } from './examerror'
+import { EXAM_ERROR, EXAM_FIX, randomErrorUnit } from './examerror'
 import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
@@ -490,6 +490,12 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
               {EXAM_ERROR.map((u) => (
                 <button key={u.id} className="exam-tier" onClick={() => open(u)}>
                   {u.title.replace('入試の', '')}
+                  <small>{u.questions.length}問</small>
+                </button>
+              ))}
+              {EXAM_FIX.map((u) => (
+                <button key={u.id} className="exam-tier" onClick={() => open(u)}>
+                  {u.title.replace('入試の', '').replace('（［ ］を正しい形に）', '')}
                   <small>{u.questions.length}問</small>
                 </button>
               ))}

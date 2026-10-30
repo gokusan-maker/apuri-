@@ -220,6 +220,38 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
 ]
 
+// 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
+const RAW_FIX: GrammarUnit[] = [
+  {
+    id: 'exam-fix-1',
+    title: '入試の誤文訂正①（［ ］を正しい形に）',
+    points: ['文の［ ］の部分はまちがっている。正しくなるものを4つから選ぶ。私大の入試によく出る「誤文訂正」の形。'],
+    examples: [{ en: 'My sister went to Osaka last week.', ja: '姉は先週大阪へ行った。（last week があるので過去形）' }],
+    questions: [
+      { sentence: 'My sister [has went] to Osaka last week.', choices: ['went', 'has gone', 'is going', 'had go'], answer: 0, why: 'last week（過去の一点）があるので過去形 went。現在完了は使えない。' },
+      { sentence: 'If I [will have] time tomorrow, I will call you.', choices: ['have', 'will have had', 'had had', 'having'], answer: 0, why: '条件を表す if の中は、未来のことでも現在形 have。' },
+      { sentence: 'She is good at [play] the piano.', choices: ['playing', 'to play', 'played', 'plays'], answer: 0, why: '前置詞 at のあとは動名詞 playing。' },
+      { sentence: 'The book [writing] by him is very popular.', choices: ['written', 'wrote', 'was written', 'writes'], answer: 0, why: '本は「書かれた」側。The book をうしろから説明する過去分詞 written。文の動詞は is。' },
+      { sentence: 'I am looking forward to [hear] from you soon.', choices: ['hearing', 'hear', 'heard', 'be heard'], answer: 0, why: 'look forward to の to は前置詞なので動名詞 hearing。' },
+      { sentence: 'This is the house [which] I was born.', choices: ['where', 'that', 'what', 'whose'], answer: 0, why: 'was born は目的語をとらないので、場所を表す関係副詞 where（in which）。' },
+      { sentence: 'The doctor [suggested me to] see a specialist.', choices: ['suggested that I', 'suggested me that', 'suggested to me to', 'suggested for me'], answer: 0, why: 'suggest は suggest (to 人) that ～ の形：suggested that I (should) see。' },
+      { sentence: 'Neither Tom nor I [are] ready for the test.', choices: ['am', 'is', 'are being', 'be'], answer: 0, why: 'neither A nor B の動詞は B（I）に合わせて am。' },
+      { sentence: 'There [is] many people in the park today.', choices: ['are', 'is being', 'be', 'has'], answer: 0, why: 'many people（複数）なので There are。' },
+      { sentence: 'I have [much] friends in Canada.', choices: ['many', 'much more', 'a little', 'few of'], answer: 0, why: 'friends は数えられる名詞の複数形なので many。' },
+    ],
+  },
+]
+
+// 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
+export const EXAM_FIX: GrammarUnit[] = RAW_FIX.map((u) => ({
+  ...u,
+  questions: u.questions.map((q, i) => {
+    const k = (i * 3 + 1) % q.choices.length
+    const choices = [...q.choices.slice(k), ...q.choices.slice(0, k)]
+    return { ...q, choices, answer: choices.indexOf(q.choices[q.answer]) }
+  }),
+}))
+
 // 正誤問題をすべての単元からランダムに n 問まとめて出す
 export function randomErrorUnit(n = 10, rng: () => number = Math.random): GrammarUnit {
   const all = EXAM_ERROR.flatMap((u) => u.questions)
