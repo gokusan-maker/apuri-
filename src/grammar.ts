@@ -1402,9 +1402,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is all that I know.', ja: 'これが私の知っているすべてだ。' },
     ],
     questions: [
-      { sentence: 'She is the only friend ___ I can trust.', choices: ['that', 'what', 'whose'], answer: 0, why: 'the only がつく先行詞には that がよく使われる。' },
-      { sentence: 'This is the best movie ___ I have ever seen.', choices: ['what', 'that', 'who'], answer: 1, why: '最上級がつく先行詞には that。' },
-      { sentence: 'Look at the boy and his dog ___ are running in the park.', choices: ['who', 'which', 'that'], answer: 2, why: '人と動物の両方を説明するので that。' },
+      { sentence: 'She is the only friend ___ I can trust.', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: 'the only がつく先行詞には that がよく使われる。' },
+      { sentence: 'This is the best movie ___ I have ever seen.', choices: ['what', 'that', 'who', 'whose'], answer: 1, why: '最上級がつく先行詞には that。' },
+      { sentence: 'Look at the boy and his dog ___ are running in the park.', choices: ['who', 'which', 'that', 'whose'], answer: 2, why: '人と動物の両方を説明するので that。' },
     ],
   },
   {
@@ -1444,9 +1444,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The girl reading a book is my sister.', ja: '本を読んでいる女の子は私の姉だ。（分詞）' },
     ],
     questions: [
-      { sentence: '___ English is interesting.', choices: ['Learn', 'Learning', 'Learns'], answer: 1, why: '主語になる「〜すること」は動名詞 Learning。' },
-      { sentence: 'Look at the ___ baby.', choices: ['sleeping', 'sleep', 'sleeps'], answer: 0, why: '名詞 baby を説明する分詞「眠っている」。' },
-      { sentence: 'The boy ___ soccer over there is Ken.', choices: ['plays', 'is playing', 'playing'], answer: 2, why: 'The boy を後ろから説明する分詞 playing。文の動詞は is。' },
+      { sentence: '___ English is interesting.', choices: ['Learn', 'Learning', 'Learns', 'Learned'], answer: 1, why: '主語になる「〜すること」は動名詞 Learning。' },
+      { sentence: 'Look at the ___ baby.', choices: ['sleeping', 'sleep', 'sleeps', 'slept'], answer: 0, why: '名詞 baby を説明する分詞「眠っている」。' },
+      { sentence: 'The boy ___ soccer over there is Ken.', choices: ['plays', 'is playing', 'playing', 'play'], answer: 2, why: 'The boy を後ろから説明する分詞 playing。文の動詞は is。' },
     ],
   },
   {
@@ -1486,9 +1486,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It was such an easy test.', ja: 'それはとてもかんたんなテストだった。' },
     ],
     questions: [
-      { sentence: 'It was ___ a hot day that we went swimming.', choices: ['so', 'such', 'very'], answer: 1, why: 'a hot day（名詞）があるので such。' },
-      { sentence: 'The movie was ___ exciting that I watched it twice.', choices: ['so', 'such', 'such a'], answer: 0, why: '形容詞 exciting だけなので so。' },
-      { sentence: 'She is ___ kind girl.', choices: ['so', 'such a', 'such'], answer: 1, why: '名詞 girl があるので such a kind girl。' },
+      { sentence: 'It was ___ a hot day that we went swimming.', choices: ['so', 'such', 'very', 'too'], answer: 1, why: 'a hot day（名詞）があるので such。' },
+      { sentence: 'The movie was ___ exciting that I watched it twice.', choices: ['so', 'such', 'such a', 'much'], answer: 0, why: '形容詞 exciting だけなので so。' },
+      { sentence: 'She is ___ kind girl.', choices: ['so', 'such a', 'such', 'very'], answer: 1, why: '名詞 girl があるので such a kind girl。' },
     ],
   },
   {
@@ -1514,9 +1514,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She spends a lot of money on books.', ja: '彼女は本にたくさんのお金を使う。' },
     ],
     questions: [
-      { sentence: 'We spent the afternoon ___ in the park.', choices: ['walk', 'walking', 'to walk'], answer: 1, why: 'spend 時間 のあとは -ing 形 walking。' },
-      { sentence: 'He spent 1,000 yen ___ a new pen.', choices: ['in', 'on', 'to'], answer: 1, why: 'spend お金 on もの で「〜にお金を使う」。' },
-      { sentence: 'How much time do you spend ___ English every day?', choices: ['study', 'studying', 'studied'], answer: 1, why: 'spend 時間 のあとは -ing 形 studying。' },
+      { sentence: 'We spent the afternoon ___ in the park.', choices: ['walk', 'walking', 'to walk', 'walked'], answer: 1, why: 'spend 時間 のあとは -ing 形 walking。' },
+      { sentence: 'He spent 1,000 yen ___ a new pen.', choices: ['in', 'on', 'to', 'at'], answer: 1, why: 'spend お金 on もの で「〜にお金を使う」。' },
+      { sentence: 'How much time do you spend ___ English every day?', choices: ['study', 'studying', 'studied', 'to study'], answer: 1, why: 'spend 時間 のあとは -ing 形 studying。' },
     ],
   },
   {
@@ -1528,9 +1528,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please keep the door open.', ja: 'ドアを開けたままにしておいてください。' },
     ],
     questions: [
-      { sentence: 'The baby kept ___ all night.', choices: ['cry', 'crying', 'to cry'], answer: 1, why: 'keep のあとは -ing 形 crying。' },
-      { sentence: 'Keep your hands ___.', choices: ['clean', 'cleanly', 'cleaning'], answer: 0, why: 'keep A ＋形容詞 で「Aを〜にしておく」。' },
-      { sentence: 'It kept ___ until evening.', choices: ['rain', 'rained', 'raining'], answer: 2, why: 'keep -ing で「〜し続ける」。' },
+      { sentence: 'The baby kept ___ all night.', choices: ['cry', 'crying', 'to cry', 'cried'], answer: 1, why: 'keep のあとは -ing 形 crying。' },
+      { sentence: 'Keep your hands ___.', choices: ['clean', 'cleanly', 'cleaning', 'cleans'], answer: 0, why: 'keep A ＋形容詞 で「Aを〜にしておく」。' },
+      { sentence: 'It kept ___ until evening.', choices: ['rain', 'rained', 'raining', 'rains'], answer: 2, why: 'keep -ing で「〜し続ける」。' },
     ],
   },
   {
@@ -2208,9 +2208,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Today is even colder than yesterday.', ja: '今日はきのうよりさらに寒い。' },
     ],
     questions: [
-      { sentence: 'My brother is ___ taller than me.', choices: ['much', 'very', 'more'], answer: 0, why: '比較級（taller）を強めるのは much。very は使えない。' },
-      { sentence: 'This test was ___ easier than the last one.', choices: ['far', 'very', 'most'], answer: 0, why: 'far ＋ 比較級「ずっと〜」。' },
-      { sentence: 'Your idea is ___ better than mine.', choices: ['even', 'very', 'so'], answer: 0, why: 'even ＋ 比較級「さらに・いっそう」。very・so は比較級を強められない。' },
+      { sentence: 'My brother is ___ taller than me.', choices: ['much', 'very', 'more', 'many'], answer: 0, why: '比較級（taller）を強めるのは much。very は使えない。' },
+      { sentence: 'This test was ___ easier than the last one.', choices: ['far', 'very', 'most', 'such'], answer: 0, why: 'far ＋ 比較級「ずっと〜」。' },
+      { sentence: 'Your idea is ___ better than mine.', choices: ['even', 'very', 'so', 'more'], answer: 0, why: 'even ＋ 比較級「さらに・いっそう」。very・so は比較級を強められない。' },
     ],
   },
   {
@@ -2310,9 +2310,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This song has been loved for fifty years.', ja: 'この歌は50年間ずっと愛されてきた。' },
     ],
     questions: [
-      { sentence: 'Dinner is ___ cooked by my father now.', choices: ['being', 'been', 'be'], answer: 0, why: '「今つくられているところ」なので is being ＋ 過去分詞。' },
-      { sentence: 'The window has ___ broken.', choices: ['been', 'being', 'be'], answer: 0, why: '完了形の受け身は has been ＋ 過去分詞。' },
-      { sentence: 'Many trees ___ been cut down since last year.', choices: ['have', 'are', 'were'], answer: 0, why: 'since があるので現在完了。主語が複数なので have been。' },
+      { sentence: 'Dinner is ___ cooked by my father now.', choices: ['being', 'been', 'be', 'was'], answer: 0, why: '「今つくられているところ」なので is being ＋ 過去分詞。' },
+      { sentence: 'The window has ___ broken.', choices: ['been', 'being', 'be', 'is'], answer: 0, why: '完了形の受け身は has been ＋ 過去分詞。' },
+      { sentence: 'Many trees ___ been cut down since last year.', choices: ['have', 'are', 'were', 'has'], answer: 0, why: 'since があるので現在完了。主語が複数なので have been。' },
     ],
   },
   {
@@ -2327,9 +2327,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Unless it rains, we will play soccer.", ja: '雨がふらないかぎり、サッカーをします。' },
     ],
     questions: [
-      { sentence: "I can't go ___ my homework is finished.", choices: ['unless', 'if', 'because'], answer: 0, why: '「宿題が終わらないかぎり行けない」なので unless。' },
-      { sentence: 'Unless you ___ hard, you will not pass.', choices: ['study', "don't study", 'will study'], answer: 0, why: 'unless のあとは肯定の形で、未来のことでも現在形。' },
-      { sentence: "If you don't hurry, you'll be late. ＝ ___ you hurry, you'll be late.", choices: ['Unless', 'If', 'When'], answer: 0, why: 'if 〜 not ＝ unless。' },
+      { sentence: "I can't go ___ my homework is finished.", choices: ['unless', 'if', 'because', 'so'], answer: 0, why: '「宿題が終わらないかぎり行けない」なので unless。' },
+      { sentence: 'Unless you ___ hard, you will not pass.', choices: ['study', "don't study", 'will study', 'studied'], answer: 0, why: 'unless のあとは肯定の形で、未来のことでも現在形。' },
+      { sentence: "If you don't hurry, you'll be late. ＝ ___ you hurry, you'll be late.", choices: ['Unless', 'If', 'When', 'Despite'], answer: 0, why: 'if 〜 not ＝ unless。' },
     ],
   },
   {
@@ -2378,9 +2378,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He left the lights on all night.', ja: '彼は一晩じゅう電気をつけっぱなしにした。' },
     ],
     questions: [
-      { sentence: 'We found the movie very ___.', choices: ['exciting', 'excitingly', 'excite'], answer: 0, why: 'find ＋ O ＋ 形容詞。副詞（excitingly）は使えない。' },
-      { sentence: 'Please ___ the door open. It is hot.', choices: ['leave', 'find', 'say'], answer: 0, why: '「ドアを開けたままにしておいて」なので leave ＋ O ＋ 形容詞。' },
-      { sentence: 'She found ___ difficult.', choices: ['the question', 'to the question', 'of the question'], answer: 0, why: 'find のあとにすぐ O（the question）を置き、そのあとに形容詞。' },
+      { sentence: 'We found the movie very ___.', choices: ['exciting', 'excitingly', 'excite', 'excitement'], answer: 0, why: 'find ＋ O ＋ 形容詞。副詞（excitingly）は使えない。' },
+      { sentence: 'Please ___ the door open. It is hot.', choices: ['leave', 'find', 'say', 'tell'], answer: 0, why: '「ドアを開けたままにしておいて」なので leave ＋ O ＋ 形容詞。' },
+      { sentence: 'She found ___ difficult.', choices: ['the question', 'to the question', 'of the question', 'at the question'], answer: 0, why: 'find のあとにすぐ O（the question）を置き、そのあとに形容詞。' },
     ],
   },
   {
@@ -2446,9 +2446,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My brother no longer plays baseball.', ja: '兄はもう野球をしていない。' },
     ],
     questions: [
-      { sentence: 'Are you ___ hungry? Have some more.', choices: ['still', 'yet', 'anymore'], answer: 0, why: '「まだおなかがすいている？」は still。' },
-      { sentence: "I don't use this bag ___.", choices: ['anymore', 'still', 'no longer'], answer: 0, why: 'not 〜 anymore「もう〜ない」。anymore は文の最後。' },
-      { sentence: 'He ___ works at the bank. He changed jobs.', choices: ['no longer', 'still', 'not'], answer: 0, why: '仕事をかえたので「もう〜していない」no longer。' },
+      { sentence: 'Are you ___ hungry? Have some more.', choices: ['still', 'yet', 'anymore', 'ago'], answer: 0, why: '「まだおなかがすいている？」は still。' },
+      { sentence: "I don't use this bag ___.", choices: ['anymore', 'still', 'no longer', 'any'], answer: 0, why: 'not 〜 anymore「もう〜ない」。anymore は文の最後。' },
+      { sentence: 'He ___ works at the bank. He changed jobs.', choices: ['no longer', 'still', 'not', 'not longer'], answer: 0, why: '仕事をかえたので「もう〜していない」no longer。' },
     ],
   },
   {
