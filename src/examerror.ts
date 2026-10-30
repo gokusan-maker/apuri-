@@ -318,6 +318,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'In conclusion, the benefits of technology [outweighs] its drawbacks.', choices: ['outweigh', 'is outweighing', 'outweighing', 'has outweighed'], answer: 0, why: '主語の中心は複数の the benefits なので outweigh（三人称単数の s はつけない）。' },
     ],
   },
+  {
+    id: 'exam-fix-5',
+    title: '入試の誤文訂正⑤（時制・仮定法の難問）',
+    points: ['過去形と現在完了・過去完了のちがい、時や条件を表す節の現在形、仮定法（過去・過去完了・混合）、I wish / as if など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'If he had studied harder last year, he would be a college student now.', ja: '去年もっと勉強していたら、今ごろ大学生だろうに。（過去の仮定＋今の結果）' }],
+    questions: [
+      { sentence: 'I [have seen] him at the station yesterday.', choices: ['saw', 'have saw', 'had seen', 'have been seen'], answer: 0, why: 'yesterday のような過去をはっきり表す語があると現在完了は使えない：saw。' },
+      { sentence: 'By the time we arrived, the movie [already started].', choices: ['had already started', 'has already started', 'already starts', 'was already start'], answer: 0, why: '着いた（過去）よりも前に始まっていたので過去完了：had already started。' },
+      { sentence: 'I [know] her since I was a child.', choices: ['have known', 'knew', 'am knowing', 'had know'], answer: 0, why: 'since ～「～以来ずっと」は現在完了（継続）：have known。know は進行形にしない。' },
+      { sentence: 'If I [would have] known the truth, I would have helped you.', choices: ['had', 'have', 'would', 'was'], answer: 0, why: '過去の事実に反する仮定は if 節を過去完了に：If I had known。if 節に would have は使わない。' },
+      { sentence: 'I wish I [can] speak French as well as you.', choices: ['could', 'can be', 'will', 'am able'], answer: 0, why: 'I wish ＋仮定法過去「今～できればいいのに」：I wish I could speak。' },
+      { sentence: 'If he [studied] harder last year, he would be a college student now.', choices: ['had studied', 'studies', 'has studied', 'would study'], answer: 0, why: 'last year の過去の仮定なので if 節は過去完了、主節は now の今の結果（混合）：If he had studied。' },
+      { sentence: 'She will call you when she [will arrive] at the airport.', choices: ['arrives', 'arrived', 'will have arrived', 'is arrived'], answer: 0, why: '時を表す when の節では未来のことも現在形：when she arrives。' },
+      { sentence: 'He talks as if he [knows] everything, but in fact he knows very little.', choices: ['knew', 'has known', 'is knowing', 'will know'], answer: 0, why: '事実とちがう「まるで～かのように」は as if ＋仮定法過去：as if he knew。' },
+      { sentence: 'It has been ten years since my grandfather [has died].', choices: ['died', 'dies', 'has been dead', 'had died'], answer: 0, why: 'It has been ＋期間＋ since ～ の since の節は過去形：since my grandfather died。' },
+      { sentence: 'I [am living] in Osaka for ten years now.', choices: ['have been living', 'was living', 'had lived', 'will live'], answer: 0, why: 'for ten years now「今まで10年間ずっと」は現在完了進行形：have been living。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
