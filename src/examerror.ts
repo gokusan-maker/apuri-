@@ -266,6 +266,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Please (A) wait (B) for me (C) at front of (D) the station.', choices: ['(A) wait', '(B) for me', '(C) at front of', '(D) the station'], answer: 2, why: '「～の前で」は in front of：in front of the station。' },
     ],
   },
+  {
+    id: 'exam-error-noun2',
+    title: '入試の正誤問題⑬（名詞・代名詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '数えられない名詞（furniture・advice・homework）、複数形が特別な名詞（children・sheep）、police の複数あつかい、所有代名詞 hers、比較の that of ～ に注目する。',
+    ],
+    examples: [
+      { en: 'She gave me some useful advice.', ja: '彼女は役に立つアドバイスをくれた。（advice は数えられない）' },
+      { en: 'The climate of Japan is milder than that of Canada.', ja: '日本の気候はカナダの気候よりおだやかだ。（that ＝ the climate）' },
+    ],
+    questions: [
+      { sentence: 'I (A) bought (B) two (C) furnitures (D) for my new room.', choices: ['(A) bought', '(B) two', '(C) furnitures', '(D) for my new room'], answer: 2, why: 'furniture は数えられない名詞で複数形にしない：two pieces of furniture。' },
+      { sentence: 'She gave me (A) some useful (B) advices (C) about (D) studying abroad.', choices: ['(A) some useful', '(B) advices', '(C) about', '(D) studying abroad'], answer: 1, why: 'advice は数えられない名詞：some useful advice。' },
+      { sentence: 'This bag (A) is not (B) mine, so it (C) must be (D) her.', choices: ['(A) is not', '(B) mine, so it', '(C) must be', '(D) her'], answer: 3, why: '「彼女のもの」は所有代名詞 hers。' },
+      { sentence: 'The (A) police (B) is looking (C) for the man (D) who escaped.', choices: ['(A) police', '(B) is looking', '(C) for the man', '(D) who escaped'], answer: 1, why: 'police は複数あつかいの名詞：The police are looking ～。' },
+      { sentence: '(A) Us students (B) were told (C) to wait (D) in the hall.', choices: ['(A) Us students', '(B) were told', '(C) to wait', '(D) in the hall'], answer: 0, why: '主語なので主格：We students。' },
+      { sentence: 'The (A) climate of Japan (B) is milder (C) than (D) Canada.', choices: ['(A) climate of Japan', '(B) is milder', '(C) than', '(D) Canada'], answer: 3, why: '比べるのは「日本の気候」と「カナダの気候」：than that of Canada。' },
+      { sentence: 'He has (A) a lot of (B) homeworks (C) to do (D) tonight.', choices: ['(A) a lot of', '(B) homeworks', '(C) to do', '(D) tonight'], answer: 1, why: 'homework は数えられない名詞：a lot of homework。' },
+      { sentence: '(A) Everyone (B) in the class (C) have (D) finished the test.', choices: ['(A) Everyone', '(B) in the class', '(C) have', '(D) finished the test'], answer: 2, why: 'everyone は単数あつかい：Everyone … has finished。' },
+      { sentence: '(A) Childs (B) under twelve (C) can enter the museum (D) for free.', choices: ['(A) Childs', '(B) under twelve', '(C) can enter the museum', '(D) for free'], answer: 0, why: 'child の複数形は children。' },
+      { sentence: '(A) Two sheeps (B) were eating (C) grass (D) in the field.', choices: ['(A) Two sheeps', '(B) were eating', '(C) grass', '(D) in the field'], answer: 0, why: 'sheep は単数と複数が同じ形：Two sheep。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

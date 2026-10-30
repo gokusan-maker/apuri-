@@ -132,3 +132,11 @@ it('誤文訂正⑥：接続詞・分詞構文の難問の単元が10問ある',
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('Seen')
 })
+
+it('正誤問題⑬：名詞・代名詞の難問の単元が10問ある（単元の id はかぶらない）', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-noun2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) furnitures')
+  expect(new Set(EXAM_ERROR.map((x) => x.id)).size).toBe(EXAM_ERROR.length)
+})
