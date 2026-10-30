@@ -793,6 +793,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 50 l-6 -2 M76 50 l6 -2 M50 22 l0 -6 M30 32 l-4 -4 M70 32 l4 -4" stroke="#92400e" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'cheetah')
+    return (
+      <g>
+        {/* 体の黒いもよう */}
+        <circle cx="36" cy="64" r="2.5" fill="#78350f" />
+        <circle cx="64" cy="64" r="2.5" fill="#78350f" />
+        <circle cx="50" cy="72" r="2.5" fill="#78350f" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
