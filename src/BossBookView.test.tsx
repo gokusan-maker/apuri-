@@ -292,3 +292,20 @@ it('デザイン117：どのボスにも1回しか勝っていなければ「い
   render(<BossBook />)
   expect(screen.queryByText(/🏆 いちばん勝った/)).toBeNull()
 })
+
+it('デザイン118：ボス図鑑の「🏆 勝った回数順」で、勝った回数の多いボスが先に来る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  const book = JSON.parse(localStorage.getItem('eitan:boss-book')!) as Record<string, { wins: number; best: string; look: unknown; first: string }>
+  const [name, e] = Object.entries(book)[0]
+  const fake = { ...(e.look as { name: string }), name: 'テストボス' }
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [name]: e, テストボス: { wins: 9, best: 'S', look: fake, first: '2026-10-01' } }))
+  render(<BossBook />)
+  fireEvent.click(screen.getByRole('button', { name: '🏆 勝った回数順' }))
+  const names = [...document.querySelectorAll('.boss-book-list li.got .badge-name')].map((x) => x.textContent)
+  expect(names[0]).toBe('テストボス')
+})
