@@ -1987,9 +1987,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I am not always busy.', ja: 'いつもいそがしいわけではない。' },
     ],
     questions: [
-      { sentence: '___ all birds can fly. Penguins cannot.', choices: ['Not', 'No', 'None'], answer: 0, why: '「すべての鳥が飛べるわけではない」は Not all（部分否定）。' },
-      { sentence: 'He is rich, but he is not ___ happy.', choices: ['always', 'never', 'ever'], answer: 0, why: 'not always「いつも〜とはかぎらない」（部分否定）。' },
-      { sentence: '___ of my friends came. I was all alone.', choices: ['None', 'Not all', 'Not'], answer: 0, why: '「ひとりぼっちだった」ので、だれも来なかった。全部を否定する None。' },
+      { sentence: '___ all birds can fly. Penguins cannot.', choices: ['Not', 'No', 'None', 'Neither'], answer: 0, why: '「すべての鳥が飛べるわけではない」は Not all（部分否定）。' },
+      { sentence: 'He is rich, but he is not ___ happy.', choices: ['always', 'never', 'ever', 'any'], answer: 0, why: 'not always「いつも〜とはかぎらない」（部分否定）。' },
+      { sentence: '___ of my friends came. I was all alone.', choices: ['None', 'Not all', 'Not', 'Nobody'], answer: 0, why: '「ひとりぼっちだった」ので、だれも来なかった。全部を否定する None。' },
     ],
   },
   {
@@ -2021,9 +2021,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She got her watch repaired.', ja: '彼女は腕時計を修理してもらった。' },
     ],
     questions: [
-      { sentence: 'I had my car ___ at the shop.', choices: ['washed', 'wash', 'washing'], answer: 0, why: '車は「洗われる」側なので過去分詞 washed「洗ってもらった」。' },
-      { sentence: 'He ___ his bag stolen on the train.', choices: ['had', 'made', 'let'], answer: 0, why: 'have ＋ 物 ＋ 過去分詞 で「〜される」（よくないこと）。make・let はこの形では使わない。' },
-      { sentence: 'Where did you get your photos ___?', choices: ['printed', 'print', 'to print'], answer: 0, why: 'get ＋ 物 ＋ 過去分詞「〜してもらう」。写真は「印刷される」側。' },
+      { sentence: 'I had my car ___ at the shop.', choices: ['washed', 'wash', 'washing', 'to wash'], answer: 0, why: '車は「洗われる」側なので過去分詞 washed「洗ってもらった」。' },
+      { sentence: 'He ___ his bag stolen on the train.', choices: ['had', 'made', 'let', 'took'], answer: 0, why: 'have ＋ 物 ＋ 過去分詞 で「〜される」（よくないこと）。make・let はこの形では使わない。' },
+      { sentence: 'Where did you get your photos ___?', choices: ['printed', 'print', 'to print', 'printing'], answer: 0, why: 'get ＋ 物 ＋ 過去分詞「〜してもらう」。写真は「印刷される」側。' },
     ],
   },
   {
@@ -2038,9 +2038,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It was not until I lived abroad that I understood my own culture.', ja: '外国に住んで初めて、自分の文化がわかった。' },
     ],
     questions: [
-      { sentence: 'He did not start studying ___ the night before the test.', choices: ['until', 'by', 'since'], answer: 0, why: 'not 〜 until …「…まで〜しない」。テストの前の晩まで勉強を始めなかった。' },
-      { sentence: 'It was not until she came home ___ she noticed the mistake.', choices: ['that', 'when', 'which'], answer: 0, why: 'It was not until 〜 that …（強調構文）「〜して初めて…した」。' },
-      { sentence: "We won't leave ___ the rain stops.", choices: ['until', 'by', 'during'], answer: 0, why: '「雨がやむまで出発しない」。あとに文が続くので接続詞の until。by・during はあとに文を続けられない。' },
+      { sentence: 'He did not start studying ___ the night before the test.', choices: ['until', 'by', 'since', 'for'], answer: 0, why: 'not 〜 until …「…まで〜しない」。テストの前の晩まで勉強を始めなかった。' },
+      { sentence: 'It was not until she came home ___ she noticed the mistake.', choices: ['that', 'when', 'which', 'where'], answer: 0, why: 'It was not until 〜 that …（強調構文）「〜して初めて…した」。' },
+      { sentence: "We won't leave ___ the rain stops.", choices: ['until', 'by', 'during', 'at'], answer: 0, why: '「雨がやむまで出発しない」。あとに文が続くので接続詞の until。by・during はあとに文を続けられない。' },
     ],
   },
   {
@@ -2055,9 +2055,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She did finish her homework.', ja: '彼女は本当に宿題を終わらせたんだよ。' },
     ],
     questions: [
-      { sentence: 'I ___ like your new shoes. They look great!', choices: ['do', 'am', 'did to'], answer: 0, why: '「本当に好き」と強調する do。あとの動詞は原形 like。' },
-      { sentence: 'He does ___ hard every day.', choices: ['study', 'studies', 'studying'], answer: 0, why: '強調の does のあとは動詞の原形。' },
-      { sentence: 'I did ___ the door. I am sure.', choices: ['lock', 'locked', 'locking'], answer: 0, why: '過去を強調する did のあとも原形。「本当にかぎをかけた」。' },
+      { sentence: 'I ___ like your new shoes. They look great!', choices: ['do', 'am', 'did to', 'have'], answer: 0, why: '「本当に好き」と強調する do。あとの動詞は原形 like。' },
+      { sentence: 'He does ___ hard every day.', choices: ['study', 'studies', 'studying', 'studied'], answer: 0, why: '強調の does のあとは動詞の原形。' },
+      { sentence: 'I did ___ the door. I am sure.', choices: ['lock', 'locked', 'locking', 'to lock'], answer: 0, why: '過去を強調する did のあとも原形。「本当にかぎをかけた」。' },
     ],
   },
   {
@@ -2072,9 +2072,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You are to finish this by Friday.', ja: 'これを金曜日までに終えなければならない。' },
     ],
     questions: [
-      { sentence: 'The new library ___ to open in April.', choices: ['is', 'has', 'does'], answer: 0, why: 'be to 〜「〜する予定だ」。主語が単数なので is。' },
-      { sentence: 'Students are ___ wear their uniforms at the ceremony.', choices: ['to', 'for', 'in'], answer: 0, why: 'be to 〜「〜しなければならない」（義務）。' },
-      { sentence: 'The concert is to ___ held in the park.', choices: ['be', 'being', 'been'], answer: 0, why: 'be to のあとは原形。コンサートは「開かれる」側なので be held。' },
+      { sentence: 'The new library ___ to open in April.', choices: ['is', 'has', 'does', 'are'], answer: 0, why: 'be to 〜「〜する予定だ」。主語が単数なので is。' },
+      { sentence: 'Students are ___ wear their uniforms at the ceremony.', choices: ['to', 'for', 'in', 'with'], answer: 0, why: 'be to 〜「〜しなければならない」（義務）。' },
+      { sentence: 'The concert is to ___ held in the park.', choices: ['be', 'being', 'been', 'was'], answer: 0, why: 'be to のあとは原形。コンサートは「開かれる」側なので be held。' },
     ],
   },
   {
@@ -2089,9 +2089,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She has the idea that everyone can learn English.', ja: '彼女は、だれでも英語を学べるという考えをもっている。' },
     ],
     questions: [
-      { sentence: 'We heard the news ___ the school would close.', choices: ['that', 'which', 'what'], answer: 0, why: '「学校が閉校するという知らせ」。後ろが完全な文なので同格の that。' },
-      { sentence: 'The fact ___ he lied made me sad.', choices: ['that', 'who', 'where'], answer: 0, why: 'the fact that 〜「〜という事実」。' },
-      { sentence: 'There is no hope ___ the bus will come on time.', choices: ['that', 'what', 'how'], answer: 0, why: 'hope that 〜「〜という望み」（同格の that）。' },
+      { sentence: 'We heard the news ___ the school would close.', choices: ['that', 'which', 'what', 'who'], answer: 0, why: '「学校が閉校するという知らせ」。後ろが完全な文なので同格の that。' },
+      { sentence: 'The fact ___ he lied made me sad.', choices: ['that', 'who', 'where', 'when'], answer: 0, why: 'the fact that 〜「〜という事実」。' },
+      { sentence: 'There is no hope ___ the bus will come on time.', choices: ['that', 'what', 'how', 'which'], answer: 0, why: 'hope that 〜「〜という望み」（同格の that）。' },
     ],
   },
   {
@@ -2106,9 +2106,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'No other student in my class is as tall as Ken.', ja: 'クラスでケンほど背の高い生徒はいない。' },
     ],
     questions: [
-      { sentence: 'This bridge is longer than any other ___ in the city.', choices: ['bridge', 'bridges', 'the bridge'], answer: 0, why: 'than any other のあとは単数名詞（bridge）。' },
-      { sentence: '___ other city in Japan is as large as Tokyo.', choices: ['No', 'Not', 'None'], answer: 0, why: 'No other ＋ 名詞 ＋ is as 〜 as …「…ほど〜な―はない」。' },
-      { sentence: 'Nothing is ___ important than health.', choices: ['more', 'most', 'much'], answer: 0, why: 'Nothing is 比較級 than …「…より〜なものはない」。than があるので比較級 more。' },
+      { sentence: 'This bridge is longer than any other ___ in the city.', choices: ['bridge', 'bridges', 'the bridge', "bridge's"], answer: 0, why: 'than any other のあとは単数名詞（bridge）。' },
+      { sentence: '___ other city in Japan is as large as Tokyo.', choices: ['No', 'Not', 'None', 'Nothing'], answer: 0, why: 'No other ＋ 名詞 ＋ is as 〜 as …「…ほど〜な―はない」。' },
+      { sentence: 'Nothing is ___ important than health.', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'Nothing is 比較級 than …「…より〜なものはない」。than があるので比較級 more。' },
     ],
   },
   {
@@ -2123,9 +2123,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She looked as if she had seen a ghost.', ja: '彼女はまるでゆうれいを見たかのような顔をしていた。' },
     ],
     questions: [
-      { sentence: 'He is only a student, but he acts as if he ___ the boss.', choices: ['were', 'been', 'be'], answer: 0, why: '本当はちがうことの想像なので、as if のあとは were。' },
-      { sentence: 'She has never been abroad, but she speaks English as if she ___ in London.', choices: ['lived', 'lives', 'living'], answer: 0, why: '外国に行ったことがないので事実とちがう想像。as if ＋ 過去形 lived。' },
-      { sentence: 'He looked as if he ___ not slept for days.', choices: ['had', 'has', 'was'], answer: 0, why: '「何日も寝ていなかったかのよう」と過去のことの想像なので as if ＋ had ＋ 過去分詞。' },
+      { sentence: 'He is only a student, but he acts as if he ___ the boss.', choices: ['were', 'been', 'be', 'being'], answer: 0, why: '本当はちがうことの想像なので、as if のあとは were。' },
+      { sentence: 'She has never been abroad, but she speaks English as if she ___ in London.', choices: ['lived', 'lives', 'living', 'live'], answer: 0, why: '外国に行ったことがないので事実とちがう想像。as if ＋ 過去形 lived。' },
+      { sentence: 'He looked as if he ___ not slept for days.', choices: ['had', 'has', 'was', 'did'], answer: 0, why: '「何日も寝ていなかったかのよう」と過去のことの想像なので as if ＋ had ＋ 過去分詞。' },
     ],
   },
   {
@@ -2140,9 +2140,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'However tired you are, brush your teeth before bed.', ja: 'どんなにつかれていても、寝る前に歯をみがきなさい。' },
     ],
     questions: [
-      { sentence: 'No matter ___ busy he is, he always calls his mother.', choices: ['how', 'what', 'who'], answer: 0, why: '形容詞 busy の前なので no matter how「どんなにいそがしくても」。' },
-      { sentence: '___ late it is, please call me.', choices: ['However', 'Whatever', 'Whenever'], answer: 0, why: 'However ＋ 形容詞（late）「どんなにおそくても」。' },
-      { sentence: 'No matter ___ you go, I will find you.', choices: ['where', 'how', 'what'], answer: 0, why: '「どこへ行っても」は no matter where。' },
+      { sentence: 'No matter ___ busy he is, he always calls his mother.', choices: ['how', 'what', 'who', 'which'], answer: 0, why: '形容詞 busy の前なので no matter how「どんなにいそがしくても」。' },
+      { sentence: '___ late it is, please call me.', choices: ['However', 'Whatever', 'Whenever', 'Whoever'], answer: 0, why: 'However ＋ 形容詞（late）「どんなにおそくても」。' },
+      { sentence: 'No matter ___ you go, I will find you.', choices: ['where', 'how', 'what', 'whose'], answer: 0, why: '「どこへ行っても」は no matter where。' },
     ],
   },
   {
@@ -2174,9 +2174,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Never having seen snow, the children were very excited.', ja: '雪を見たことがなかったので、子どもたちはとても興奮していた。' },
     ],
     questions: [
-      { sentence: '___ what to say, she just smiled.', choices: ['Not knowing', 'Knowing not', "Don't know"], answer: 0, why: '否定の分詞構文は not を -ing の前に置く。' },
-      { sentence: 'Not ___ the answer, he kept quiet.', choices: ['knowing', 'known', 'to know'], answer: 0, why: 'Not のあとは -ing（分詞構文）。「答えがわからなかったので」。' },
-      { sentence: '___ been to Kyoto before, I was excited to visit it.', choices: ['Never having', 'Having never not', 'Not had'], answer: 0, why: '「前に行ったことがなかったので」は Never having ＋ 過去分詞。' },
+      { sentence: '___ what to say, she just smiled.', choices: ['Not knowing', 'Knowing not', "Don't know", 'Not know'], answer: 0, why: '否定の分詞構文は not を -ing の前に置く。' },
+      { sentence: 'Not ___ the answer, he kept quiet.', choices: ['knowing', 'known', 'to know', 'knew'], answer: 0, why: 'Not のあとは -ing（分詞構文）。「答えがわからなかったので」。' },
+      { sentence: '___ been to Kyoto before, I was excited to visit it.', choices: ['Never having', 'Having never not', 'Not had', 'Never had'], answer: 0, why: '「前に行ったことがなかったので」は Never having ＋ 過去分詞。' },
     ],
   },
   {
