@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'eagle', name: 'ワシーン', egg: 'たかねのタマゴ', token: 'ワシ', bigToken: 'ワシーン', color: '#d6d3d1', line: '#44403c', rate: 0.02, desc: '高い山の上を飛ぶワシ。空の上からでも小さなものを見つけるするどい目で、文の中の大事な単語を見のがさない。' },
   { id: 'beetle', name: 'カブトン', egg: 'くぬぎのタマゴ', token: 'カブ', bigToken: 'カブトン', color: '#a16207', line: '#422006', rate: 0.02, desc: '夏の森にすむカブトムシ。自分の体の何倍も重いものを持ち上げる力もちで、むずかしい単語もぐいっと持ち上げる。' },
   { id: 'kingfisher', name: 'カワセミン', egg: 'るりいろのタマゴ', token: 'カワ', bigToken: 'カワセミン', color: '#38bdf8', line: '#0c4a6e', rate: 0.02, desc: '川べりにすむ青い小鳥カワセミ。水の中の魚をねらって一直線に飛びこむように、正しい答えをすばやく見ぬく。' },
   { id: 'zebra', name: 'シマウマン', egg: 'しろくろのタマゴ', token: 'シマ', bigToken: 'シマウマン', color: '#f1f5f9', line: '#1e293b', rate: 0.02, desc: 'サバンナを走るシマウマ。しまもようは1頭ずつちがい、白と黒をきっちり見分けるように、にた単語もまちがえない。' },
