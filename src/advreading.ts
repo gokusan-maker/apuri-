@@ -16873,6 +16873,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Other Carbon Dioxide Problem', 'How to Farm Oysters', 'The History of the pH Scale', 'Why Fish Like Warm Water'], answer: 0, why: '全体として、気温上昇とならぶ二酸化炭素のもう一つの問題である海の酸性化を論じている。' },
   },
   {
+    id: 'kyotsu-loanwords',
+    title: 'Words That Travel',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every language borrows words from other languages. Japanese speakers use the word pan for bread, which came from Portuguese several hundred years ago, and they use many words from English, such as computer and smartphone. In the same way, English speakers use Japanese words such as tsunami, karaoke, and emoji. These borrowed words, often called loanwords, show how languages change when people from different cultures meet.",
+      "One common reason for borrowing is that a new object or idea arrives from another culture. When people first see something they have no word for, it is often easiest to use the name that comes with it. Inventing a completely new word takes time, and it may not be accepted by everyone. This is why many words for foods, sports, and new technology are borrowed. For example, English borrowed the word sushi along with the food itself, ( A ) there was no English word that meant the same thing.",
+      "Loanwords often change when they enter a new language. Their pronunciation is adjusted to fit the sounds of the new language, and their meanings may become wider or narrower. In Japanese, some English words are shortened, and new expressions are sometimes created from English words in ways that native English speakers would not understand. Such words are not mistakes; they are a natural result of a language making foreign words its own. Over time, many speakers forget that such words were ever borrowed at all.",
+      "Some people worry that too many loanwords might weaken their language. They argue that if people use foreign words instead of their own, traditional expressions may slowly be forgotten. Others point out that borrowing has always been part of how languages grow. English itself contains a very large number of words from French, Latin, and many other languages, ( B ) it has not stopped being English.",
+      "Looking at loanwords can teach us a lot about history. The words a language has borrowed often tell us which cultures its speakers traded with, learned from, or admired. When we use an everyday word such as pan or sushi, we are also using a small piece of the long story of contact between people. In this sense, every language is a record of the meetings ( C ) have shaped it.",
+    ],
+    ja: [
+      'どの言語もほかの言語から言葉を借りている。日本語を話す人はパンのことを「パン」と言うが、これは数百年前にポルトガル語から来たものであり、コンピューターやスマートフォンのように英語から来た言葉もたくさん使っている。同じように、英語を話す人も tsunami や karaoke、emoji のような日本語の言葉を使う。しばしば借用語とよばれるこうした借りた言葉は、ちがう文化の人々が出会うと言語がどのように変わるかを示している。',
+      '言葉を借りるよくある理由の一つは、新しい物や考えがほかの文化からやってくることである。それを表す言葉のないものを人々が初めて見るとき、それといっしょに来た名前を使うのがいちばんかんたんなことが多い。まったく新しい言葉をつくるには時間がかかり、それがみんなに受け入れられるとはかぎらない。食べ物やスポーツ、新しい技術を表す言葉の多くが借りられているのはそのためである。たとえば英語は、同じ意味の英語の言葉がなかったので、食べ物そのものといっしょに sushi という言葉を借りた。',
+      '借用語は新しい言語に入るとしばしば変わる。発音は新しい言語の音に合うように調整され、意味が広くなったりせまくなったりすることもある。日本語では、英語の言葉が短くされたり、英語を母語とする人にはわからないようなしかたで英語の言葉から新しい表現がつくられたりすることがある。こうした言葉はまちがいではない。それは、言語が外国の言葉を自分のものにしていく自然な結果なのである。やがて多くの話し手は、そうした言葉がかつて借りられたものだったことさえ忘れてしまう。',
+      '借用語が多すぎると自分たちの言語が弱くなるのではないかと心配する人もいる。彼らは、人々が自分たちの言葉のかわりに外国の言葉を使えば、伝統的な表現が少しずつ忘れられるかもしれないと主張する。一方で、言葉を借りることは昔から言語が育っていくしかたの一部だったと指摘する人もいる。英語そのものもフランス語やラテン語、ほかの多くの言語から来たとても多くの言葉をふくんでいるが、それでも英語であることをやめてはいない。',
+      '借用語を調べると、歴史について多くのことを学べる。ある言語が借りた言葉は、その話し手がどの文化と取り引きし、どの文化から学び、どの文化にあこがれたかを教えてくれることが多い。パンや sushi のようなふだんの言葉を使うとき、わたしたちは人々の出会いの長い物語の小さなかけらも使っているのである。この意味で、どの言語も、それを形づくってきた出会いの記録なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「sushi という言葉を借りた」理由「同じ意味の英語の言葉がなかった」を表すので because。' },
+      { id: 'B', choices: ['but', 'so', 'or', 'because'], answer: 0, why: '「多くの外国の言葉をふくんでいる、しかし英語であることをやめていない」と逆接なので but。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the meetings を受け、うしろに主語が欠けている（have shaped it）ので主格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: 'パンという言葉は、ポルトガル語から来た。', answer: true, why: '第1段落 the word pan for bread, which came from Portuguese。' },
+      { statement: '新しい物を表す言葉がないとき、それといっしょに来た名前を使うことが多い。', answer: true, why: '第2段落 it is often easiest to use the name that comes with it。' },
+      { statement: '筆者は、日本語で英語の言葉が変わるのはまちがいだと述べている。', answer: false, why: '第3段落 Such words are not mistakes。' },
+      { statement: '英語には、ほかの言語から来た言葉はほとんどない。', answer: false, why: '第4段落 English itself contains a very large number of words from French, Latin, and many other languages。' },
+    ],
+    qa: [
+      { q: 'Why are many words for foods, sports, and new technology borrowed?', choices: ['They often arrive from another culture together with their names.', 'They are easier to pronounce in every language.', 'Governments order people to use them.', 'They are always shorter than native words.'], answer: 0, why: '第2段落 a new object or idea arrives from another culture … it is often easiest to use the name that comes with it。' },
+      { q: 'What can loanwords teach us, according to the last paragraph?', choices: ['Which cultures a language’s speakers traded with, learned from, or admired.', 'How to speak many languages quickly.', 'Which language is the oldest.', 'Why some foods are more popular than others.'], answer: 0, why: '第5段落 The words a language has borrowed often tell us which cultures its speakers traded with, learned from, or admired。' },
+    ],
+    gist: [
+      { para: 2, choices: ['借用語が新しい言語に合わせて変わること', '英語の発音のしかた', 'まちがった言葉の直し方', '言葉を短くする規則'], answer: 0, why: '第3段落は、借用語の発音や意味が新しい言語に合わせて変わり、それが自然な結果であることを述べている。' },
+      { para: 3, choices: ['借用語への心配と、それへの反論', 'フランス語の歴史', 'ラテン語の学び方', '伝統的な歌の言葉'], answer: 0, why: '第4段落は、借用語が多すぎると言語が弱くなるという心配と、借りることは言語が育つ一部だという反論を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
