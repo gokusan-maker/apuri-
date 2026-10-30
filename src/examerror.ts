@@ -612,6 +612,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Each of the three countries [show] a rising trend.', choices: ['shows', 'are showing', 'showing', 'have shown'], answer: 0, why: '主語の中心は Each（単数）なので shows。' },
     ],
   },
+  {
+    id: 'exam-fix-12',
+    title: '入試の誤文訂正⑫（TOEFL・IELTS の書き言葉④：意見を述べる表現）',
+    points: ['小論文で意見を書くときの表現。In my opinion、agree with、On the one hand、the reason why、It can be argued that、whether ～ or not など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'In my opinion, students should be allowed to use smartphones at school.', ja: '私の意見では、生徒は学校でスマートフォンを使うことを許されるべきだ。' }],
+    questions: [
+      { sentence: '[According to me], the plan will fail.', choices: ['In my opinion', 'According to my opinion', 'To my opinion', 'On my opinion'], answer: 0, why: '自分の意見を言うときは In my opinion。according to は他人や資料を情報源にするときに使い、me とはふつう使わない。' },
+      { sentence: 'I completely agree [to] your opinion.', choices: ['with', 'for', 'on', 'at'], answer: 0, why: '人や意見に「賛成する」は agree with ～。agree to は提案や条件に同意するとき。' },
+      { sentence: 'There are [many advantage] of living in a big city.', choices: ['many advantages', 'much advantage', 'many advantage of', 'a lot advantage'], answer: 0, why: 'advantage は数えられる名詞なので many のあとは複数形：many advantages。' },
+      { sentence: 'Students should be [allowed use] smartphones at school.', choices: ['allowed to use', 'allowed using', 'allow to use', 'allowing use'], answer: 0, why: 'be allowed to ＋原形「～することを許される」。' },
+      { sentence: 'It is [importance] for children to read books every day.', choices: ['important', 'importantly', 'imported', 'of important'], answer: 0, why: 'It is ＋形容詞＋ for 人 to ～：It is important for children to read。' },
+      { sentence: '[On the one side], cars are convenient; on the other hand, they cause pollution.', choices: ['On the one hand', 'In one hand', 'At the one side', 'By one hand'], answer: 0, why: '「一方では～、他方では…」は On the one hand ～; on the other hand …。' },
+      { sentence: 'This is the reason [because] I disagree with the plan.', choices: ['why', 'what', 'for', 'which because'], answer: 0, why: 'the reason のあとで「～する理由」は関係副詞 why：the reason why I disagree。' },
+      { sentence: 'Not everyone [agree] with this view.', choices: ['agrees', 'agreeing', 'are agreeing', 'have agree'], answer: 0, why: 'everyone は単数あつかい：Not everyone agrees「全員が賛成するわけではない」。' },
+      { sentence: 'Whether this policy is effective [or no] remains unclear.', choices: ['or not', 'and not', 'or none', 'either not'], answer: 0, why: '「～かどうか」は whether ～ or not。' },
+      { sentence: 'It can be [argue] that online learning is less effective.', choices: ['argued', 'arguing', 'to argue', 'argues'], answer: 0, why: '助動詞 can のあとの受け身は be ＋過去分詞：It can be argued that ～「～と主張することもできる」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

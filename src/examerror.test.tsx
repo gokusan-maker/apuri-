@@ -211,3 +211,10 @@ it('正誤問題⑱：仮定法・助動詞の難問の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[2].choices[u.questions[2].answer]).toBe('(A) have')
 })
+
+it('誤文訂正⑫：意見を述べる表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-12')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('with')
+})

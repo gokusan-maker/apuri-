@@ -3216,3 +3216,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑱（仮定法・助動詞の難問：would have ＋過去分詞・I wish・as if・Were I の倒置・need not ＋原形・had better not）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「自転車が生まれるまで」（歴史・発明・結果の so／目的格の that の空所）
 - 2026-10-30: デザイン：ボス戦で、ボスのHPが2割以下のところで負けたときに「😣 おしい！ のこりHP ○だった」を出すようにした
+- 2026-10-30: 文法：入試の誤文訂正⑫（TOEFL・IELTS の書き言葉④：In my opinion・agree with・On the one hand・the reason why・It can be argued that）10問
