@@ -16654,6 +16654,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-ketchup',
+    title: 'The Surprising Journey of Ketchup',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Ketchup is so common today that many people think of it as a typical Western food. It appears on tables in fast-food restaurants around the world and is often eaten with French fries, hamburgers, and omelets. However, the history of this red sauce is much longer and more surprising than most people imagine, and it shows how foods can change as they travel from one culture to another.",
+      "Many food historians believe that the word ketchup came from a language spoken in southern China, where it referred to a salty sauce made from fermented fish. This sauce had nothing to do with tomatoes. Traders who traveled across Asia carried the sauce and its name to other regions, and in the seventeenth and eighteenth centuries British sailors and merchants brought the idea back to Europe.",
+      "In Britain, cooks tried to make their own versions of the sauce, but they did not have the same ingredients. Instead, they used things that were easier to find, such as mushrooms, walnuts, and oysters. These early ketchups were dark brown and thin, ( A ) were used mainly to add flavor to soups and meat dishes rather than to be eaten directly. Recipes for mushroom ketchup can still be found in some old cookbooks.",
+      "Tomatoes entered the story later, mainly in the United States. In the early nineteenth century, some American cooks began to make ketchup from tomatoes. At first, these sauces spoiled quickly, but in the late nineteenth century, companies started to produce thicker, sweeter tomato ketchup with more sugar and vinegar, which helped it last longer. Bottled ketchup ( B ) be bought in shops soon became popular, and the tomato version gradually replaced the older types. Today, most people have never even heard of ketchup made without tomatoes.",
+      "The story of ketchup shows that a food we think of as belonging to one place may have roots in a very different part of the world. Ingredients, recipes, and even names change as they move between cultures. Learning the history behind everyday foods can help us see how closely connected the world has been for hundreds of years, and it reminds us that cultures are constantly influencing one another ( C ) through trade and travel.",
+    ],
+    ja: [
+      'ケチャップは今日とてもありふれているので、多くの人はそれを典型的な西洋の食べ物だと思っている。それは世界中のファストフード店のテーブルにあり、しばしばフライドポテトやハンバーガー、オムレツといっしょに食べられる。しかし、この赤いソースの歴史は、たいていの人が想像するよりもはるかに長く、おどろくべきものであり、食べ物がある文化から別の文化へ伝わるにつれて、どのように変わりうるかを示している。',
+      '多くの食の歴史家は、ケチャップという言葉は中国南部で話されていた言葉から来たと考えている。そこではその言葉は、発酵させた魚から作る塩からいソースを指していた。このソースはトマトとはまったく関係がなかった。アジアを旅した商人たちがそのソースとその名前をほかの地域へ運び、17世紀から18世紀にかけて、イギリスの船乗りや商人がその考えをヨーロッパに持ち帰った。',
+      'イギリスでは、料理人たちが自分たちのソースを作ろうとしたが、同じ材料をもっていなかった。そのかわりに、マッシュルームやクルミ、カキのような、手に入りやすいものを使った。こうした初期のケチャップはこい茶色でさらさらしており、直接食べるためというより、主にスープや肉料理に風味をつけるために使われた。マッシュルームのケチャップの作り方は、今でもいくつかの古い料理の本に見ることができる。',
+      'トマトが話に登場するのはもっとあとで、主にアメリカでのことである。19世紀のはじめ、アメリカの料理人の中にはトマトでケチャップを作りはじめる人がいた。はじめはこうしたソースはすぐにいたんだが、19世紀の終わりに、会社が砂糖と酢をふやしたより濃くてあまいトマトケチャップを作りはじめ、それが長もちするのに役立った。店で買えるびん入りのケチャップはすぐに人気になり、トマトのケチャップは少しずつ古い種類に取ってかわった。今日では、ほとんどの人はトマトを使わないケチャップのことを聞いたことさえない。',
+      'ケチャップの話は、ある場所のものだと思っている食べ物が、まったくちがう地域にルーツをもっていることがあると示している。材料も作り方も、名前さえも、文化のあいだを移るにつれて変わる。ふだんの食べ物の背後にある歴史を学ぶと、世界が何百年ものあいだどれほど深くつながってきたかがわかり、文化は、とくに交易や旅を通して、たえずたがいに影響し合っていることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'but', 'or', 'so'], answer: 0, why: '「こい茶色でさらさらしていた、そして主に風味づけに使われた」と内容をつけ加えるので and（主語 These early ketchups が共通）。' },
+      { id: 'B', choices: ['that could', 'what could', 'could', 'which it could'], answer: 0, why: 'Bottled ketchup that could be bought in shops「店で買えるびん入りのケチャップ」。主格の関係代名詞 that ＋ could be bought。' },
+      { id: 'C', choices: ['especially', 'hardly', 'never', 'rarely'], answer: 0, why: 'especially through trade and travel「とくに交易や旅を通して」。影響し合う手段を強調する副詞 especially。' },
+    ],
+    tf: [
+      { statement: 'ケチャップという言葉は、もとは発酵させた魚のソースを指していたと考えられている。', answer: true, why: '第2段落 it referred to a salty sauce made from fermented fish。' },
+      { statement: 'イギリスの初期のケチャップは、トマトで作られていた。', answer: false, why: '第3段落 they used things … such as mushrooms, walnuts, and oysters。' },
+      { statement: '砂糖と酢をふやしたことで、トマトケチャップは長もちするようになった。', answer: true, why: '第4段落 with more sugar and vinegar, which helped it last longer。' },
+      { statement: '筆者は、食べ物の名前は文化のあいだを移っても変わらないと述べている。', answer: false, why: '第5段落 Ingredients, recipes, and even names change as they move between cultures。' },
+    ],
+    qa: [
+      { q: 'How were early British ketchups mainly used?', choices: ['To add flavor to soups and meat dishes.', 'To be eaten with French fries.', 'As a sweet dessert sauce.', 'As medicine for sailors.'], answer: 0, why: '第3段落 were used mainly to add flavor to soups and meat dishes。' },
+      { q: 'What is the main lesson of the last paragraph?', choices: ['Everyday foods can show how connected cultures have been.', 'Ketchup should only be made from tomatoes.', 'Western food is better than Asian food.', 'Food never changes over time.'], answer: 0, why: '第5段落 Learning the history behind everyday foods can help us see how closely connected the world has been。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ケチャップという言葉のアジアの起源', '中国の魚のとり方', 'イギリスの船の歴史', '商人の旅のしかた'], answer: 0, why: '第2段落は、ケチャップという言葉が中国南部の魚のソースから来て、商人や船乗りによってヨーロッパへ伝わったことを述べている。' },
+      { para: 3, choices: ['アメリカでトマトのケチャップが広まったこと', 'トマトの育て方', 'びんの作り方', '酢の歴史'], answer: 0, why: '第4段落は、アメリカでトマトのケチャップが作られ、長もちするようになって広まったことを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

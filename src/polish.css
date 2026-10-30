@@ -4629,3 +4629,7 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 /* デザイン105：キャラ図鑑の説明を閉じるボタン */
 .zukan-detail { position: relative; }
 .zukan-close { float: right; margin: -4px -4px 4px 8px; min-width: 32px; min-height: 32px; border-radius: 50%; font-weight: 800; }
+
+/* デザイン106：ボス図鑑のとくぎはボタン（見た目は文字のまま） */
+button.boss-book-trait { background: none; border: none; padding: 0; font: inherit; color: inherit; text-decoration: underline dotted; cursor: pointer; }
+.boss-book-trait-desc { display: block; font-size: 0.85em; margin-top: 2px; }
