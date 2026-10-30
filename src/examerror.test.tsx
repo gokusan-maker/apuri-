@@ -44,3 +44,20 @@ it('文法ページの「🎲 正誤問題ランダム」から10問を解ける
   fireEvent.click(screen.getByText(/確認問題へ/))
   expect(document.querySelector('.blank-sentence')!.textContent).toContain('(A)')
 })
+
+it('正誤問題でまちがえた問題は、結果画面の「🔁 まちがい○問をもう一度」でその問題だけ解き直せる', async () => {
+  const { render, screen, fireEvent, within } = await import('@testing-library/react')
+  const { Grammar } = await import('./GrammarView')
+  localStorage.clear()
+  render(<Grammar />)
+  const unit = EXAM_ERROR[0]
+  fireEvent.click(within(screen.getByRole('group', { name: '入試の文法' })).getByRole('button', { name: /正誤問題①/ }))
+  fireEvent.click(screen.getByText(/確認問題へ/))
+  unit.questions.forEach((q, i) => {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[i === 1 ? (q.answer + 1) % q.choices.length : q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  })
+  fireEvent.click(screen.getByText('🔁 まちがい1問をもう一度'))
+  expect(document.querySelector('.grammar-progress')!.textContent).toBe('1 / 1 問目')
+  expect(document.querySelector('.blank-sentence')!.textContent).toBe(unit.questions[1].sentence)
+})
