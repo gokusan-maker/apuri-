@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'hornbill', name: 'サイチョーン', egg: 'ねったいりんのタマゴ', token: 'サイ', bigToken: 'サイチョーン', color: '#fde047', line: '#3f3f46', rate: 0.02, desc: '熱帯の森にすむサイチョウ。大きなくちばしで木の実を運び、森に種をまくように、おぼえた単語をあちこちで使って広げていく。' },
   { id: 'pika', name: 'ナキウサン', egg: 'がんばのタマゴ', token: 'ナキ', bigToken: 'ナキウサン', color: '#d6d3d1', line: '#57534e', rate: 0.02, desc: '高い山の岩場にすむナキウサギ。冬にそなえて草をこつこつためるように、単語も毎日少しずつためていく。' },
   { id: 'clione', name: 'クリオネン', egg: 'ひょうかいのタマゴ', token: 'クリ', bigToken: 'クリオネン', color: '#e0f2fe', line: '#0369a1', rate: 0.02, desc: '冷たい海をひらひら泳ぐクリオネ。「流氷の天使」とよばれるすきとおった体で、むずかしい英文もすっきり見通す。' },
   { id: 'molecricket', name: 'ケララ', egg: 'つちのなかのタマゴ', token: 'ケラ', bigToken: 'ケララ', color: '#a8a29e', line: '#44403c', rate: 0.02, desc: '土の中にトンネルをほって暮らすケラ。小さな前足でどんどんほり進むように、単語の意味を深くまでほり下げる。' },

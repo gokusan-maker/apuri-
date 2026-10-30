@@ -698,6 +698,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="64" cy="24" r="6" fill="#d6d3d1" stroke="#57534e" strokeWidth="2" />
       </g>
     )
+  if (species === 'hornbill')
+    return (
+      <g>
+        {/* くちばしの上のかぶと */}
+        <path d="M42 50 Q50 40 60 48" fill="#f97316" stroke="#3f3f46" strokeWidth="2" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
