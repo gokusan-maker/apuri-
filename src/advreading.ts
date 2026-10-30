@@ -17863,6 +17863,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Machine That Gave Us Time', 'How to Fix a Smartphone', 'The History of Rivers', 'Why Clothes Are Expensive'], answer: 0, why: '全体として、洗濯機が家事の時間を減らし社会に影響をあたえたことを述べている。' },
   },
   {
+    id: 'kyotsu-camouflage',
+    title: 'Hiding in Plain Sight',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the natural world, being seen can be dangerous. An animal that is easy to notice may quickly become a meal for a predator, while a hunter that is easy to see may find that its prey runs away before it can get close. For this reason, many animals have developed ways of hiding in plain sight. This ability, known as camouflage, is one of the most fascinating examples of how living things adapt to their surroundings.",
+      "The most common form of camouflage is simply matching the colour of the environment. Many insects that live among leaves are green, and many animals that live in deserts are a sandy brown. Some animals even change colour with the seasons. In cold northern regions, certain hares and foxes have brown fur in summer but grow white fur in winter, ( A ) allows them to blend in with the snow.",
+      "Other animals hide by imitating the shape of objects around them. Stick insects look so much like thin branches that they can be almost impossible to find, even when a person is looking directly at them. Some moths have wings with patterns that resemble tree bark, and certain fish look like stones or pieces of seaweed. By keeping still, these animals make it even harder for others to notice ( B ) they are alive at all.",
+      "Interestingly, not all animals try to hide. Some do the opposite and show bright colours, such as red, yellow, or orange. In many cases, these colours act as a warning. Certain frogs, for example, are brightly coloured because their skin contains poison, and predators that have had a bad experience learn to avoid them. Some harmless animals take advantage of this by having similar colours, so that predators mistake them for dangerous ones.",
+      "Scientists study camouflage not only to understand animals but also to develop new technology. Ideas taken from animal colours and patterns have been used to design clothing, buildings, and materials that change appearance in different light. However, many animals that depend on camouflage are now facing new problems. When forests are cut down or snow melts earlier because of a warmer climate, animals may suddenly find that their colours no longer match their surroundings, ( C ) makes them much easier for predators to spot.",
+    ],
+    ja: [
+      '自然の世界では、見つかることは危険になりうる。目立ちやすい動物はすぐに捕食者のえじきになるかもしれず、一方、見つかりやすい狩りをする動物は、近づく前にえものににげられてしまうかもしれない。このため、多くの動物は、目の前にいながら身をかくす方法を身につけてきた。擬態（カモフラージュ）として知られるこの能力は、生き物が周りの環境にどのように適応するかを示す、最も興味深い例の一つである。',
+      '最もよく見られる擬態の形は、ただ周りの色に合わせることである。葉のあいだにすむ多くの昆虫は緑色で、砂漠にすむ多くの動物は砂のような茶色である。季節によって色を変える動物さえいる。寒い北の地域では、ある種のウサギやキツネは夏には茶色の毛をしているが、冬には白い毛が生え、そのことで雪にとけこむことができる。',
+      'まわりの物の形をまねてかくれる動物もいる。ナナフシは細い枝によく似ているので、人がまっすぐ見ていても、見つけるのがほとんど不可能なことがある。木の皮に似た模様の羽をもつガもいれば、石や海藻のかけらのように見える魚もいる。じっと動かないことで、こうした動物は、自分が生きていることにほかのものが気づくのをいっそうむずかしくしている。',
+      'おもしろいことに、すべての動物がかくれようとするわけではない。反対に、赤や黄色、オレンジのようなあざやかな色を見せる動物もいる。多くの場合、こうした色は警告のはたらきをする。たとえば、ある種のカエルは皮ふに毒をもつためにあざやかな色をしており、いやな経験をした捕食者はそのカエルをさけるようになる。害のない動物の中には、似た色をもつことでこれを利用し、捕食者に危険な動物だと思いちがいさせるものもいる。',
+      '科学者は、動物を理解するためだけでなく、新しい技術を開発するためにも擬態を研究している。動物の色や模様から得た考えは、服や建物、光によって見え方が変わる材料の設計に使われてきた。しかし、擬態にたよる多くの動物は今、新しい問題に直面している。森が切りひらかれたり、気候があたたかくなって雪が早くとけたりすると、動物は自分の色がとつぜん周りに合わなくなったと気づくかもしれず、そのことで捕食者にずっと見つかりやすくなってしまう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（冬に白い毛が生えること）を受け、allows の主語になるので which。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'notice のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文（they are alive at all）。' },
+      { id: 'C', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（色が周りに合わなくなること）を受け、makes の主語になるので which。' },
+    ],
+    tf: [
+      { statement: 'ある種のウサギやキツネは、冬に白い毛が生える。', answer: true, why: '第2段落 grow white fur in winter。' },
+      { statement: 'ナナフシは、人がまっすぐ見ていれば必ずすぐに見つけられる。', answer: false, why: '第3段落 they can be almost impossible to find, even when a person is looking directly at them。' },
+      { statement: 'あざやかな色は、警告のはたらきをすることがある。', answer: true, why: '第4段落 these colours act as a warning。' },
+      { statement: '筆者によれば、気候の変化は擬態にたよる動物に影響しない。', answer: false, why: '第5段落 When … snow melts earlier because of a warmer climate, animals may suddenly find that their colours no longer match。' },
+    ],
+    qa: [
+      { q: 'Why do some harmless animals have bright colours similar to poisonous ones?', choices: ['So that predators mistake them for dangerous animals.', 'So that they can find food more easily.', 'Because they live only in deserts.', 'Because bright colours keep them warm.'], answer: 0, why: '第4段落 Some harmless animals take advantage of this by having similar colours, so that predators mistake them for dangerous ones。' },
+      { q: 'Which is NOT mentioned as an example of imitating the shape of objects?', choices: ['Birds that look like clouds.', 'Stick insects that look like branches.', 'Moths with patterns like tree bark.', 'Fish that look like stones or seaweed.'], answer: 0, why: '第3段落に雲のように見える鳥の話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['周りの色に合わせる擬態', '砂漠の天気', '動物の毛の手入れ', '昆虫の食べ物'], answer: 0, why: '第2段落は、周りの色に合わせる擬態と、季節で色を変える動物を述べている。' },
+      { para: 3, choices: ['あざやかな色による警告', 'カエルの鳴き声', '毒の作り方', '動物園の動物'], answer: 0, why: '第4段落は、かくれるかわりにあざやかな色で警告する動物を述べている。' },
+    ],
+    titleQ: { choices: ['Hiding in Plain Sight', 'How to Catch Fish', 'The History of Paint', 'Why Snow Is White'], answer: 0, why: '全体として、色や形による擬態、警告の色、擬態と技術・環境のかかわりを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
