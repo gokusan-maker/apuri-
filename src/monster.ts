@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'reindeer', name: 'トナカイン', egg: 'ゆきのそりのタマゴ', token: 'トナ', bigToken: 'トナカイン', color: '#a16207', line: '#422006', rate: 0.02, desc: '雪の国で長い旅をするトナカイ。何百キロも歩きつづけるねばり強さで、毎日の単語の旅もこつこつ続ける。' },
   { id: 'phoenix', name: 'フェニックス', egg: 'ほのおのはねのタマゴ', token: 'フェ', bigToken: 'フェニックス', color: '#f97316', line: '#7c2d12', rate: 0.02, desc: '100体目の記念キャラ。伝説の火の鳥フェニックス。何度まちがえても炎の中からよみがえるように、あきらめずに単語をおぼえなおす。' },
   { id: 'flyingsquirrel', name: 'モモンガン', egg: 'よぞらのきのタマゴ', token: 'モモ', bigToken: 'モモンガン', color: '#d6d3d1', line: '#44403c', rate: 0.02, desc: '木から木へ皮のまくを広げてすべるように飛ぶモモンガ。文から文へひょいっと飛びうつるように、長文もすいすい読み進める。' },
   { id: 'stagbeetle', name: 'クワガッタ', egg: 'こならのタマゴ', token: 'クワ', bigToken: 'クワガッタ', color: '#57534e', line: '#1c1917', rate: 0.02, desc: '大きなあごをもつクワガタ。木のみきをがっちりはさんではなさないように、むずかしい熟語もがっちりつかむ。' },
