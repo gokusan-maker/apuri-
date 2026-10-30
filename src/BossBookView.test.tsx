@@ -187,3 +187,20 @@ it('とくぎ封じは、とくぎの種類ごとにも数えて、図鑑の「�
   render(<BossBook />)
   expect(document.querySelector('.trait-guide')!.textContent).toContain('🔒×1')
 })
+
+it('デザイン94：ノーミスでたおしたボスのカードに「✨ ノーミス」', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  expect(screen.getByText(/✨ ノーミス/)).toBeInTheDocument()
+})
+
+it('デザイン94：ノーミスの記録がなければ「✨ ノーミス」は出ない', () => {
+  localStorage.clear()
+  render(<BossBook />)
+  expect(screen.queryByText(/✨ ノーミス/)).toBeNull()
+})

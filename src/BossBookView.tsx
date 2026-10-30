@@ -1,6 +1,6 @@
 import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
-import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, loadSealTraits, traitOf, type BossLook } from './boss'
+import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, loadNoMissBosses, loadSealTraits, traitOf, type BossLook } from './boss'
 import { BossArena } from './BossArenaView'
 import { loadBook, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
@@ -18,6 +18,7 @@ const arenaOf = (name: string) => {
 export function BossBook({ onFight }: { onFight?: (name: string) => void } = {}) {
   const [book] = useState(loadBook)
   const [times] = useState(loadBossTimes)
+  const [noMiss] = useState(loadNoMissBosses) // デザイン94：ノーミスでたおしたボス
   const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
   const [sealT] = useState(loadSealTraits) // とくぎごとの、封じて勝った回数
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
@@ -93,6 +94,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
                   {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}{times[b.name] < 60 && <strong className="speed-clear"> ⚡ スピードクリア</strong>}</>}
+                  {noMiss.includes(b.name) && <strong className="speed-clear"> ✨ ノーミス</strong>}
                 </span>
               )}
               {e && (
