@@ -968,9 +968,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She has a lot of homework to do today.', ja: '彼女は今日やるべき宿題がたくさんある。' },
     ],
     questions: [
-      { sentence: 'Do you have anything ___ eat?', choices: ['to', 'for', 'of'], answer: 0, why: 'anything to eat で「何か食べるもの」。' },
-      { sentence: 'There are many places to ___ in Kyoto.', choices: ['visiting', 'visit', 'visited'], answer: 1, why: 'to のあとは動詞の原形 visit。' },
-      { sentence: 'I had no time ___ breakfast this morning.', choices: ['eat', 'eating', 'to eat'], answer: 2, why: 'time to eat で「食べる時間」。' },
+      { sentence: 'Do you have anything ___ eat?', choices: ['to', 'for', 'of', 'with'], answer: 0, why: 'anything to eat で「何か食べるもの」。' },
+      { sentence: 'There are many places to ___ in Kyoto.', choices: ['visiting', 'visit', 'visited', 'visits'], answer: 1, why: 'to のあとは動詞の原形 visit。' },
+      { sentence: 'I had no time ___ breakfast this morning.', choices: ['eat', 'eating', 'to eat', 'ate'], answer: 2, why: 'time to eat で「食べる時間」。' },
     ],
   },
   {
@@ -982,9 +982,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I waited for him until six.', ja: '私は6時まで彼を待った。' },
     ],
     questions: [
-      { sentence: 'You must come home ___ seven o\'clock.', choices: ['by', 'until', 'for'], answer: 0, why: '7時「までに」帰る（締め切り）なので by。' },
-      { sentence: 'It rained ___ noon.', choices: ['by', 'until', 'since'], answer: 1, why: '正午「まで（ずっと）」雨が続いたので until。' },
-      { sentence: 'Can you return the book ___ next Monday?', choices: ['until', 'by', 'during'], answer: 1, why: '次の月曜日「までに」返すので by。' },
+      { sentence: 'You must come home ___ seven o\'clock.', choices: ['by', 'until', 'for', 'in'], answer: 0, why: '7時「までに」帰る（締め切り）なので by。' },
+      { sentence: 'It rained ___ noon.', choices: ['by', 'until', 'since', 'for'], answer: 1, why: '正午「まで（ずっと）」雨が続いたので until。' },
+      { sentence: 'Can you return the book ___ next Monday?', choices: ['until', 'by', 'during', 'since'], answer: 1, why: '次の月曜日「までに」返すので by。' },
     ],
   },
   {
@@ -1066,9 +1066,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Shall we go to the movies? — Yes, let's.", ja: '映画に行きましょうか。—ええ、そうしましょう。' },
     ],
     questions: [
-      { sentence: 'Your bag looks heavy. ___ I carry it for you?', choices: ['Shall', 'Will', 'Do'], answer: 0, why: '「（私が）〜しましょうか」は Shall I 〜?。' },
-      { sentence: "Shall we play tennis after school? — Yes, ___.", choices: ['we shall', "let's", 'please'], answer: 1, why: 'Shall we 〜? には Yes, let\'s. と答える。' },
-      { sentence: 'Shall I ___ you with your homework?', choices: ['help', 'helping', 'to help'], answer: 0, why: 'Shall I のあとは動詞の原形。' },
+      { sentence: 'Your bag looks heavy. ___ I carry it for you?', choices: ['Shall', 'Will', 'Do', 'Am'], answer: 0, why: '「（私が）〜しましょうか」は Shall I 〜?。' },
+      { sentence: "Shall we play tennis after school? — Yes, ___.", choices: ['we shall', "let's", 'please', 'you are'], answer: 1, why: 'Shall we 〜? には Yes, let\'s. と答える。' },
+      { sentence: 'Shall I ___ you with your homework?', choices: ['help', 'helping', 'to help', 'helped'], answer: 0, why: 'Shall I のあとは動詞の原形。' },
     ],
   },
   {
@@ -1094,9 +1094,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Do you know the boy with a red cap?', ja: '赤いぼうしをかぶった男の子を知っていますか。' },
     ],
     questions: [
-      { sentence: 'The pictures ___ the wall are beautiful.', choices: ['on', 'of', 'to'], answer: 0, why: '「かべに（かかっている）」は on the wall。' },
-      { sentence: 'The girl ___ glasses is my sister.', choices: ['at', 'with', 'by'], answer: 1, why: '「メガネをかけた」は with glasses。' },
-      { sentence: 'The cat under the table ___ sleeping.', choices: ['are', 'is', 'am'], answer: 1, why: '主語は The cat（単数）なので is。under the table は説明の部分。' },
+      { sentence: 'The pictures ___ the wall are beautiful.', choices: ['on', 'of', 'to', 'into'], answer: 0, why: '「かべに（かかっている）」は on the wall。' },
+      { sentence: 'The girl ___ glasses is my sister.', choices: ['at', 'with', 'by', 'of'], answer: 1, why: '「メガネをかけた」は with glasses。' },
+      { sentence: 'The cat under the table ___ sleeping.', choices: ['are', 'is', 'am', 'be'], answer: 1, why: '主語は The cat（単数）なので is。under the table は説明の部分。' },
     ],
   },
   {
@@ -1108,9 +1108,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There is a little milk in the bottle.', ja: 'びんに牛乳が少し入っている。' },
     ],
     questions: [
-      { sentence: 'I bought a ___ apples at the store.', choices: ['few', 'little', 'much'], answer: 0, why: 'apples は数えられる名詞の複数形なので a few。' },
-      { sentence: 'Can I have a ___ water, please?', choices: ['few', 'little', 'many'], answer: 1, why: 'water は数えられない名詞なので a little。' },
-      { sentence: 'He was sad because he had ___ friends at his new school.', choices: ['a few', 'few', 'a little'], answer: 1, why: '「ほとんどいない（だから悲しい）」なので a のない few。' },
+      { sentence: 'I bought a ___ apples at the store.', choices: ['few', 'little', 'much', 'many'], answer: 0, why: 'apples は数えられる名詞の複数形なので a few。' },
+      { sentence: 'Can I have a ___ water, please?', choices: ['few', 'little', 'many', 'much'], answer: 1, why: 'water は数えられない名詞なので a little。' },
+      { sentence: 'He was sad because he had ___ friends at his new school.', choices: ['a few', 'few', 'a little', 'little'], answer: 1, why: '「ほとんどいない（だから悲しい）」なので a のない few。' },
     ],
   },
   {
@@ -1122,9 +1122,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Wash your hands before eating.', ja: '食べる前に手を洗いなさい。' },
     ],
     questions: [
-      { sentence: 'She went out without ___ breakfast.', choices: ['eat', 'eating', 'to eat'], answer: 1, why: '前置詞 without のあとは動名詞 eating。' },
-      { sentence: 'Brush your teeth before ___ to bed.', choices: ['going', 'go', 'went'], answer: 0, why: '前置詞 before のあとは動名詞 going。' },
-      { sentence: 'You can learn English ___ watching movies.', choices: ['by', 'with', 'of'], answer: 0, why: 'by 〜ing で「〜することによって」。' },
+      { sentence: 'She went out without ___ breakfast.', choices: ['eat', 'eating', 'to eat', 'ate'], answer: 1, why: '前置詞 without のあとは動名詞 eating。' },
+      { sentence: 'Brush your teeth before ___ to bed.', choices: ['going', 'go', 'went', 'goes'], answer: 0, why: '前置詞 before のあとは動名詞 going。' },
+      { sentence: 'You can learn English ___ watching movies.', choices: ['by', 'with', 'of', 'for'], answer: 0, why: 'by 〜ing で「〜することによって」。' },
     ],
   },
   {
@@ -1136,9 +1136,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I like summer the best of all seasons.', ja: '私はすべての季節の中で夏がいちばん好きだ。' },
     ],
     questions: [
-      { sentence: 'She sings ___ than her sister.', choices: ['more well', 'better', 'gooder'], answer: 1, why: 'well の比較級は better。' },
-      { sentence: 'This is the ___ movie I have ever seen.', choices: ['best', 'better', 'most good'], answer: 0, why: 'good の最上級は best。' },
-      { sentence: 'Which do you like ___, cats or dogs?', choices: ['good', 'better', 'well'], answer: 1, why: '2つをくらべるので better。' },
+      { sentence: 'She sings ___ than her sister.', choices: ['more well', 'better', 'gooder', 'best'], answer: 1, why: 'well の比較級は better。' },
+      { sentence: 'This is the ___ movie I have ever seen.', choices: ['best', 'better', 'most good', 'good'], answer: 0, why: 'good の最上級は best。' },
+      { sentence: 'Which do you like ___, cats or dogs?', choices: ['good', 'better', 'well', 'more good'], answer: 1, why: '2つをくらべるので better。' },
     ],
   },
   {
@@ -1164,9 +1164,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You can have either tea or coffee.', ja: '紅茶かコーヒーのどちらかを飲めます。' },
     ],
     questions: [
-      { sentence: 'Both my father ___ my mother like cooking.', choices: ['or', 'and', 'but'], answer: 1, why: 'both A and B の形。' },
-      { sentence: 'We can go there either by bus ___ by train.', choices: ['or', 'and', 'nor'], answer: 0, why: 'either A or B の形。' },
-      { sentence: 'Both Tom and Lisa ___ from Canada.', choices: ['is', 'are', 'am'], answer: 1, why: 'both A and B が主語なので複数あつかいで are。' },
+      { sentence: 'Both my father ___ my mother like cooking.', choices: ['or', 'and', 'but', 'nor'], answer: 1, why: 'both A and B の形。' },
+      { sentence: 'We can go there either by bus ___ by train.', choices: ['or', 'and', 'nor', 'but'], answer: 0, why: 'either A or B の形。' },
+      { sentence: 'Both Tom and Lisa ___ from Canada.', choices: ['is', 'are', 'am', 'be'], answer: 1, why: 'both A and B が主語なので複数あつかいで are。' },
     ],
   },
   {
@@ -1206,9 +1206,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This song is popular among young people.', ja: 'この歌は若い人の間で人気がある。' },
     ],
     questions: [
-      { sentence: 'Sit ___ Ken and Mika, please.', choices: ['between', 'among', 'during'], answer: 0, why: '2人の間なので between A and B。' },
-      { sentence: 'The singer is famous ___ teenagers.', choices: ['between', 'among', 'by'], answer: 1, why: '大勢（10代の若者）の間で人気なので among。' },
-      { sentence: 'The shop is open between 10 a.m. ___ 8 p.m.', choices: ['or', 'with', 'and'], answer: 2, why: 'between A and B の形。' },
+      { sentence: 'Sit ___ Ken and Mika, please.', choices: ['between', 'among', 'during', 'from'], answer: 0, why: '2人の間なので between A and B。' },
+      { sentence: 'The singer is famous ___ teenagers.', choices: ['between', 'among', 'by', 'at'], answer: 1, why: '大勢（10代の若者）の間で人気なので among。' },
+      { sentence: 'The shop is open between 10 a.m. ___ 8 p.m.', choices: ['or', 'with', 'and', 'from'], answer: 2, why: 'between A and B の形。' },
     ],
   },
   {
@@ -1234,9 +1234,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'May I use your pen?', ja: 'ペンを使ってもいいですか。' },
     ],
     questions: [
-      { sentence: 'Take an umbrella. It ___ rain later.', choices: ['may', 'must', 'shall'], answer: 0, why: '「雨がふるかもしれない」は may。' },
-      { sentence: '___ I come in? — Sure.', choices: ['May', 'Must', 'Do'], answer: 0, why: '許可を求める「〜してもいいですか」は May I 〜?。' },
-      { sentence: 'He might ___ late today.', choices: ['is', 'be', 'being'], answer: 1, why: 'might のあとは動詞の原形 be。' },
+      { sentence: 'Take an umbrella. It ___ rain later.', choices: ['may', 'must', 'shall', 'is'], answer: 0, why: '「雨がふるかもしれない」は may。' },
+      { sentence: '___ I come in? — Sure.', choices: ['May', 'Must', 'Do', 'Will'], answer: 0, why: '許可を求める「〜してもいいですか」は May I 〜?。' },
+      { sentence: 'He might ___ late today.', choices: ['is', 'be', 'being', 'been'], answer: 1, why: 'might のあとは動詞の原形 be。' },
     ],
   },
   {
