@@ -15504,6 +15504,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-roads-to-parks',
+    title: 'When Cities Remove Their Highways',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the twentieth century, many cities built large highways through their centers. At the time, it seemed obvious that more roads would mean faster travel and a stronger economy. Today, however, a growing number of cities are doing something that once seemed unthinkable: they are tearing down highways and replacing them with parks, walking paths, and ordinary streets.",
+      "One well-known example comes from Seoul, the capital of South Korea. For decades, a small stream in the city center had been covered by a road and an elevated highway that carried tens of thousands of cars every day. In the early 2000s, the city decided to remove the highway and bring the stream back to the surface. When the project was finished in 2005, nearly six kilometers of water and green space ran through the heart of the city, and people began to use the area for walking, resting, and meeting friends.",
+      "Many people expected that removing such a busy road would cause terrible traffic jams. Surprisingly, ( A ) did not happen to the degree they feared. Some drivers changed their routes, some started to use buses and trains, and some simply made fewer trips by car. Traffic researchers have described a related idea called induced demand. According to this idea, building more roads tends to encourage more people to drive, ( B ) the roads soon become crowded again. In the same way, reducing road space can lead some people to drive less.",
+      "Removing a highway also changes the surrounding neighborhood. The noise and air pollution from cars decrease, and land that was once divided by a wall of concrete becomes connected again. Shops and cafes may open along the new paths, and the value of nearby land often rises. However, this rise can bring problems as well. When an area becomes more attractive, rents may go up, and people ( C ) have lived there for a long time may no longer be able to afford it.",
+      "These projects show that roads are not simply a technical matter of moving cars from one place to another. They shape how people live, work, and spend their free time. When cities decide how to use their limited space, they are really deciding what kind of life they want their citizens to have. The best plans are likely to be those that consider not only traffic but also the needs of the people who live in each area.",
+    ],
+    ja: [
+      '20世紀、多くの都市は中心部を通る大きな幹線道路を建設した。当時は、道路が増えれば移動は速くなり、経済も強くなるのは当然だと思われていた。しかし今日、ますます多くの都市が、かつては考えられなかったことをしている。幹線道路を取りこわし、公園や遊歩道、ふつうの通りに置きかえているのである。',
+      'よく知られた例の一つは、韓国の首都ソウルである。数十年のあいだ、市の中心部の小さな川は、毎日何万台もの車が通る道路と高架の幹線道路におおわれていた。2000年代のはじめ、市はその高架道路を取りのぞき、川を地上によみがえらせることを決めた。2005年に事業が完成すると、6キロメートル近い水と緑の空間が街の中心を流れるようになり、人々はその場所を散歩や休息、友人と会うために使いはじめた。',
+      'これほど交通量の多い道路を取りのぞけば、ひどい渋滞が起きると多くの人が予想した。おどろいたことに、それは人々がおそれたほどには起こらなかった。道を変えたドライバーもいれば、バスや電車を使いはじめた人もいたし、単に車で出かける回数を減らした人もいた。交通の研究者は、これに関連する「誘発需要」という考えを説明している。この考えによれば、道路を増やすとより多くの人が車を運転するようになりがちで、そのため道路はすぐにまた混雑する。同じように、道路の空間を減らすと、車の運転を減らす人も出てくるのである。',
+      '幹線道路を取りのぞくと、まわりの地域も変わる。車の騒音や大気汚染が減り、かつてコンクリートの壁で分けられていた土地がふたたびつながる。新しい道ぞいに店やカフェができることもあり、近くの土地の価値が上がることも多い。しかし、この上昇は問題をもたらすこともある。ある地域がより魅力的になると家賃が上がり、長くそこに住んできた人々がもうそこに住む余裕がなくなるかもしれないのである。',
+      'こうした事業は、道路が単に車をある場所から別の場所へ動かすという技術的な問題ではないことを示している。道路は、人々がどのように暮らし、働き、自由な時間を過ごすかを形づくる。都市がかぎられた空間をどう使うかを決めるとき、実は市民にどのような暮らしをしてほしいかを決めているのである。最もよい計画とは、交通だけでなく、それぞれの地域に住む人々の必要も考えた計画であろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['this', 'they', 'these', 'those'], answer: 0, why: '直前の文の内容「ひどい渋滞が起きること」を1つのことがらとして受けるので this。did not happen の主語になる単数。' },
+      { id: 'B', choices: ['so', 'but', 'although', 'unless'], answer: 0, why: '「道路を増やすと運転する人が増える、その結果道路はまた混雑する」と結果を表すので so。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は people（人）で、うしろに主語が欠けている（have lived there …）ので主格の関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: 'ソウルの事業では、高架の幹線道路を取りのぞいて川を地上にもどした。', answer: true, why: '第2段落 the city decided to remove the highway and bring the stream back to the surface。' },
+      { statement: '道路を取りのぞいたあと、予想どおりひどい渋滞が長く続いた。', answer: false, why: '第3段落 Surprisingly, this did not happen to the degree they feared。予想したほどの渋滞は起きなかった。' },
+      { statement: '「誘発需要」の考えでは、道路を増やすと運転する人も増えがちである。', answer: true, why: '第3段落 building more roads tends to encourage more people to drive。' },
+      { statement: '筆者は、地域が魅力的になれば住民にとってよいことしか起こらないと述べている。', answer: false, why: '第4段落 this rise can bring problems as well。家賃が上がり、住みつづけられない人が出るおそれも述べている。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why did traffic not become as bad as people expected?', choices: ['Some people changed routes, used public transportation, or drove less.', 'The city built a new highway somewhere else.', 'Cars were not allowed in the city at all.', 'Most people moved out of the city center.'], answer: 0, why: '第3段落 Some drivers changed their routes, some started to use buses and trains, and some simply made fewer trips by car。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['Decisions about roads are also decisions about how people will live.', 'Highways are the best way to make a city rich.', 'Traffic is the only thing city planners should consider.', 'Parks are more expensive than roads.'], answer: 0, why: '第5段落 they are really deciding what kind of life they want their citizens to have。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ソウルで高架道路を川と緑の空間に変えた例', '韓国の自動車産業の歴史', '川の水をきれいにする技術', 'ソウルの人口の変化'], answer: 0, why: '第2段落は、ソウルで高架の幹線道路を取りのぞき、川と緑の空間をよみがえらせた例を紹介している。' },
+      { para: 3, choices: ['道路を取りのぞいたことで地域に起こるよい変化と問題', '店やカフェの開き方', '騒音を測る方法', 'コンクリートの作り方'], answer: 0, why: '第4段落は、騒音の減少や土地の価値の上昇などのよい変化と、家賃の上昇という問題の両方を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
