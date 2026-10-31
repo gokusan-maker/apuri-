@@ -1159,6 +1159,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="62" rx="12" ry="8" fill="#f8fafc" opacity="0.95" />
       </g>
     )
+  if (species === 'starling')
+    return (
+      <g>
+        {/* 黄色いくちばし */}
+        <path d="M46 44 L50 52 L54 44 Z" fill="#facc15" stroke="#1c1917" strokeWidth="1" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
