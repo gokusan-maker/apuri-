@@ -745,6 +745,12 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
           </button>
         ))}
       </p>
+      {onlyNew && typeOnly && (
+        // デザイン146：まだ会っていない子をタイプでしぼったとき、そのタイプの「あと○体」
+        <p className="book-left-types" aria-label="このタイプのまだ会っていない数">
+          {CHAR_TYPES[typeOnly as keyof typeof CHAR_TYPES]?.icon}あと{SPECIES.filter((sp) => !got.has(sp.id) && typeOf(sp.id).id === typeOnly).length}体
+        </p>
+      )}
       {n < SPECIES.length && (
         // デザイン134：まだ会っていない子の数をタイプ別に
         <p className="book-left-types" aria-label="タイプ別のまだ会っていない数">

@@ -153,3 +153,12 @@ it('デザイン143：キャラ図鑑の説明に、とくぎの効果の説明�
   fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
   expect(screen.getByLabelText('とくぎの説明').textContent).toBe(`（${skillOf('fox').desc}）`)
 })
+
+it('デザイン146：まだ会っていない子をタイプでしぼると、そのタイプの「あと○体」が出る', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  expect(screen.queryByLabelText('このタイプのまだ会っていない数')).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: '❓ まだ会っていない子だけ見る' }))
+  fireEvent.click(screen.getByRole('button', { name: `${CHAR_TYPES.attack.icon} ${CHAR_TYPES.attack.name}` }))
+  const n = SPECIES.filter((sp) => sp.id !== 'mochi' && sp.id !== 'fox' && typeOf(sp.id).id === 'attack').length
+  expect(screen.getByLabelText('このタイプのまだ会っていない数').textContent).toBe(`${CHAR_TYPES.attack.icon}あと${n}体`)
+})
