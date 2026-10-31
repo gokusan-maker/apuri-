@@ -19111,6 +19111,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living on Tatami', 'How to Build a Wooden Floor', 'The History of Hotels', 'Why Grass Grows in Summer'], answer: 0, why: '全体として、畳の特徴・部屋の大きさのはかり方・利点・へっている現状・新しい関心を述べている。' },
   },
   {
+    id: 'kyotsu-el-nino',
+    title: 'When the Ocean Warms',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every few years, something unusual happens in the Pacific Ocean. The surface water in the eastern part of the ocean, near the coast of South America, becomes much warmer than normal. This change may seem small and far away, but it can affect the weather in many parts of the world, from heavy rain in some countries to dry conditions in others. Scientists call this event El Niño.",
+      "The name has an interesting history. It was first used by fishermen in Peru, who noticed that a warm current sometimes appeared off their coast around Christmas. They called it El Niño, a Spanish phrase meaning “the boy” or “the child,” in reference to the Christmas season. For these fishermen, the warm water was not good news, ( A ) it often meant that fewer fish could be caught.",
+      "Normally, strong winds blow from east to west across the tropical Pacific, pushing warm surface water toward Asia and Australia. Along the coast of South America, cold water rich in nutrients rises from the deep ocean and supports large numbers of fish. During an El Niño, however, these winds become weaker, and warm water spreads back toward the east. The cold water can no longer rise as easily, ( B ) has serious effects on fishing.",
+      "Because the ocean and the atmosphere are closely connected, changes in sea temperature also change patterns of rainfall and wind far away. During El Niño years, some regions experience floods, while others suffer from droughts that damage crops. In Japan, El Niño tends to be linked with cooler summers and warmer winters, although its effects vary from year to year. There is also an opposite pattern, known as La Niña, in which the eastern Pacific becomes cooler than usual.",
+      "Today, scientists use satellites, ocean buoys, and computer models to watch the Pacific closely and predict when El Niño may develop. Such forecasts can help farmers choose suitable crops and allow governments to prepare for floods or water shortages. El Niño reminds us ( C ) the Earth's systems are linked in complex ways, so that a change in one ocean can affect people living on the other side of the world.",
+    ],
+    ja: [
+      '数年ごとに、太平洋でふつうでないことが起こる。太平洋の東部、南アメリカの海岸近くの表面の水が、ふだんよりずっとあたたかくなるのである。この変化は小さく遠いことに思えるかもしれないが、ある国での大雨から別の国での乾燥まで、世界の多くの地域の天気に影響しうる。科学者はこのできごとをエルニーニョとよぶ。',
+      'この名前にはおもしろい歴史がある。最初にそれを使ったのはペルーの漁師たちで、彼らは、クリスマスのころに海岸の沖にあたたかい海流が現れることがあると気づいた。彼らはクリスマスの季節にちなんで、それを「男の子」あるいは「その子」を意味するスペイン語でエルニーニョとよんだ。こうした漁師たちにとって、あたたかい水はよい知らせではなかった。とれる魚がへることが多かったからである。',
+      'ふだん、熱帯の太平洋では強い風が東から西へふき、あたたかい表面の水をアジアやオーストラリアのほうへおし流している。南アメリカの海岸ぞいでは、栄養の豊かな冷たい水が深い海からわき上がり、たくさんの魚をささえている。しかしエルニーニョのあいだはこの風が弱くなり、あたたかい水が東へもどって広がる。冷たい水はそれまでのようにわき上がりにくくなり、そのことが漁業に深刻な影響をあたえる。',
+      '海と大気は深く結びついているので、海水の温度の変化は遠くの雨や風のパターンも変える。エルニーニョの年には、洪水にみまわれる地域もあれば、作物を傷める干ばつに苦しむ地域もある。日本では、エルニーニョは冷夏や暖冬と結びつく傾向があるが、その影響は年によってちがう。また、ラニーニャとして知られる反対のパターンもあり、そのときは太平洋の東部がふだんより冷たくなる。',
+      '今日、科学者は人工衛星や海のブイ、コンピューターのモデルを使って太平洋を注意深く見守り、エルニーニョがいつ起こりそうかを予測している。こうした予測は、農家が合った作物を選ぶのを助け、政府が洪水や水不足にそなえるのを可能にする。エルニーニョは、地球のしくみが複雑な形で結びついていて、ある海での変化が地球の反対側に住む人々に影響しうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「あたたかい水はよい知らせではなかった。なぜなら魚がへったから」と理由を表すので because。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（冷たい水がわき上がりにくくなること）を受け、has の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: 'エルニーニョという名前は、ペルーの漁師が最初に使った。', answer: true, why: '第2段落 It was first used by fishermen in Peru。' },
+      { statement: 'エルニーニョのあいだは、東から西への風が強くなる。', answer: false, why: '第3段落 During an El Niño, however, these winds become weaker。' },
+      { statement: '日本では、エルニーニョは冷夏や暖冬と結びつく傾向がある。', answer: true, why: '第4段落 In Japan, El Niño tends to be linked with cooler summers and warmer winters。' },
+      { statement: 'ラニーニャのときは、太平洋の東部がふだんよりあたたかくなる。', answer: false, why: '第4段落 La Niña, in which the eastern Pacific becomes cooler than usual。' },
+    ],
+    qa: [
+      { q: 'Why were Peruvian fishermen unhappy when the warm current appeared?', choices: ['Fewer fish could be caught.', 'Their boats were damaged.', 'It was too cold to fish.', 'Christmas was cancelled.'], answer: 0, why: '第2段落 it often meant that fewer fish could be caught。' },
+      { q: 'How can El Niño forecasts help people?', choices: ['Farmers can choose suitable crops and governments can prepare.', 'They can stop El Niño from happening.', 'They make the ocean cooler.', 'They increase the number of fish.'], answer: 0, why: '第5段落 Such forecasts can help farmers choose suitable crops and allow governments to prepare for floods or water shortages。' },
+    ],
+    gist: [
+      { para: 2, choices: ['エルニーニョが起こるしくみ', '魚の料理のしかた', 'オーストラリアの観光', '船の作り方'], answer: 0, why: '第3段落は、ふだんの風と海流のようすと、エルニーニョで風が弱まり冷たい水が上がりにくくなるしくみを述べている。' },
+      { para: 3, choices: ['世界の天気への影響とラニーニャ', '雨のふり方の歴史', '日本の四季の行事', '作物の値段'], answer: 0, why: '第4段落は、洪水や干ばつなど世界への影響、日本への影響、反対のラニーニャを述べている。' },
+    ],
+    titleQ: { choices: ['When the Ocean Warms', 'How to Catch More Fish', 'The History of Christmas', 'Why Satellites Are Useful'], answer: 0, why: '全体として、エルニーニョの名前の由来、しくみ、世界への影響、予測を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
