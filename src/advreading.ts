@@ -18370,6 +18370,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['What Pocket Money Teaches', 'How to Open a Bank', 'The History of Coins', 'Why Snacks Are Expensive'], answer: 0, why: '全体として、おこづかいが教える限りやためること、あげ方のちがい、現金を使わない時代の課題を述べている。' },
   },
   {
+    id: 'kyotsu-plankton',
+    title: 'Small but Mighty',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think of life in the ocean, they usually imagine whales, dolphins, sharks, or colourful fish swimming among coral. Yet some of the most important living things in the sea are so small that most of them cannot be seen without a microscope. These tiny organisms, which drift with the currents rather than swimming strongly on their own, are known as plankton. Their name comes from a Greek word meaning “wanderer” or “drifter.”",
+      "Plankton can be divided into two main groups. Phytoplankton are tiny plant-like organisms that live near the surface of the water, where they can receive sunlight. Like plants on land, they use sunlight to make their own food and release oxygen in the process. Zooplankton, on the other hand, are tiny animals, including the young forms of many fish and crabs, ( A ) feed on phytoplankton or on other zooplankton.",
+      "Although each one is extremely small, phytoplankton exist in such enormous numbers that together they have a huge effect on the planet. By some estimates, they produce about half of the oxygen in the Earth's atmosphere. This means that every second breath we take may depend on organisms living in the sea, ( B ) most of us have never seen them. In this sense, the health of the ocean is closely connected to our own health.",
+      "Plankton are also the foundation of the ocean food chain. Small fish eat zooplankton, larger fish eat the small fish, and so on up to seabirds, seals, and humans. Some of the largest animals on Earth depend directly on plankton. Certain whales, for example, feed by swallowing huge amounts of water and filtering out tiny animals such as krill. Without plankton, much of the life in the sea would not be able to survive.",
+      "Scientists are now paying close attention to how plankton are affected by changes in the environment. Warmer water, changes in ocean currents, and pollution can all influence where plankton grow and how many there are. Because so many other creatures rely on them, even small changes in plankton populations could have large effects throughout the ocean. Studying these tiny organisms is therefore one of the best ways to understand the health of the sea ( C ) covers most of our planet.",
+    ],
+    ja: [
+      '海の生き物について考えるとき、人々はふつう、クジラやイルカ、サメ、サンゴのあいだを泳ぐ色あざやかな魚を思いうかべる。しかし海で最も大切な生き物のいくつかは、とても小さいので、そのほとんどはけんび鏡なしでは見ることができない。自分の力で強く泳ぐのではなく、海流にのってただようこうした小さな生き物は、プランクトンとして知られている。その名前は、「さまよう者」や「ただよう者」を意味するギリシャ語から来ている。',
+      'プランクトンはおもに2つのグループに分けられる。植物プランクトンは、日光を受けられる水面の近くにすむ、植物のような小さな生き物である。陸の植物と同じように、日光を使って自分の食べ物を作り、そのときに酸素を出す。一方、動物プランクトンは、多くの魚やカニの子どもの姿もふくむ小さな動物で、植物プランクトンやほかの動物プランクトンを食べる。',
+      '1つ1つはとても小さいが、植物プランクトンはばく大な数がいるので、合わせると地球に大きな影響をあたえている。ある推定では、植物プランクトンは地球の大気中の酸素の約半分を作り出している。つまり、私たちのほとんどはそれを見たことがないのに、私たちがする呼吸の2回に1回は、海にすむ生き物にたよっているのかもしれないのである。この意味で、海の健康は私たち自身の健康と深く結びついている。',
+      'プランクトンは海の食物連鎖の土台でもある。小さな魚が動物プランクトンを食べ、大きな魚が小さな魚を食べ、というように、海鳥やアザラシ、人間まで続いていく。地球で最も大きな動物のいくつかは、プランクトンに直接たよっている。たとえばある種のクジラは、大量の水を飲みこんでオキアミのような小さな動物をこしとって食べる。プランクトンがいなければ、海の生き物の多くは生きのびることができないだろう。',
+      '科学者は今、環境の変化によってプランクトンがどのような影響を受けるかに強い関心を向けている。水温の上昇、海流の変化、汚染はどれも、プランクトンがどこで育ち、どれだけいるかに影響しうる。とても多くのほかの生き物がプランクトンにたよっているので、プランクトンの数の小さな変化でも、海全体に大きな影響をあたえるかもしれない。したがって、この小さな生き物を研究することは、地球のほとんどをおおう海の健康を理解する最もよい方法の一つなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'whose', 'where'], answer: 0, why: 'コンマのあとで先行詞 tiny animals を受け、feed の主語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['even though', 'because', 'so that', 'unless'], answer: 0, why: '「見たことがないのに、それにたよっている」と譲歩を表すので even though。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the sea を受け、うしろの covers の主語になるので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'プランクトンは、海流にのってただよう小さな生き物である。', answer: true, why: '第1段落 tiny organisms, which drift with the currents。' },
+      { statement: '植物プランクトンは、日光のとどかない深い海の底にすむ。', answer: false, why: '第2段落 live near the surface of the water, where they can receive sunlight。' },
+      { statement: 'ある推定では、植物プランクトンは大気中の酸素の約半分を作り出している。', answer: true, why: '第3段落 By some estimates, they produce about half of the oxygen。' },
+      { statement: '筆者によれば、プランクトンの数が変わっても海のほかの生き物には影響しない。', answer: false, why: '第5段落 even small changes in plankton populations could have large effects throughout the ocean。' },
+    ],
+    qa: [
+      { q: 'How do certain whales feed?', choices: ['By swallowing water and filtering out tiny animals such as krill.', 'By hunting large sharks.', 'By eating plants on the sea floor.', 'By catching birds.'], answer: 0, why: '第4段落 feed by swallowing huge amounts of water and filtering out tiny animals such as krill。' },
+      { q: 'Which is NOT mentioned as something that can affect plankton?', choices: ['The noise of ships.', 'Warmer water.', 'Changes in ocean currents.', 'Pollution.'], answer: 0, why: '第5段落に船の音の話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['植物プランクトンと動物プランクトンのちがい', 'けんび鏡の使い方', 'カニの育て方', '水面の温度'], answer: 0, why: '第2段落は、植物プランクトンと動物プランクトンの2つのグループを説明している。' },
+      { para: 3, choices: ['海の食物連鎖の土台としてのプランクトン', '魚の料理のしかた', '海鳥の種類', 'アザラシの生活'], answer: 0, why: '第4段落は、プランクトンが食物連鎖の土台で、クジラなどもたよっていることを述べている。' },
+    ],
+    titleQ: { choices: ['Small but Mighty', 'How to Swim with Dolphins', 'The History of Microscopes', 'Why Sharks Are Dangerous'], answer: 0, why: '全体として、小さいけれど酸素や食物連鎖をささえるプランクトンの大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
