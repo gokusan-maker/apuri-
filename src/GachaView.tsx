@@ -738,6 +738,19 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
           </button>
         ))}
       </p>
+      {n < SPECIES.length && (
+        // デザイン134：まだ会っていない子の数をタイプ別に
+        <p className="book-left-types" aria-label="タイプ別のまだ会っていない数">
+          {Object.values(CHAR_TYPES)
+            .map((ty) => ({ ty, left: SPECIES.filter((sp) => !got.has(sp.id) && typeOf(sp.id).id === ty.id).length }))
+            .filter((x) => x.left > 0)
+            .map(({ ty, left }) => (
+              <span key={ty.id} className={`char-type t-${ty.id}`}>
+                {ty.icon}あと{left}
+              </span>
+            ))}
+        </p>
+      )}
       <button className="list-link pill-btn book-filter" aria-pressed={byCount} onClick={() => setByCount(!byCount)}>
         {byCount ? '📖 図鑑の番号順' : '👥 なかまの多い順'}
       </button>

@@ -130,3 +130,10 @@ it('デザイン131：キャラ図鑑を、なかまにいる数の多い順に�
   fireEvent.click(screen.getByRole('button', { name: '📖 図鑑の番号順' }))
   expect(first()).toBe(SPECIES[0].name)
 })
+
+it('デザイン134：キャラ図鑑に、まだ会っていない子の数がタイプ別に出る', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  const el = screen.getByLabelText('タイプ別のまだ会っていない数')
+  const n = SPECIES.filter((sp) => sp.id !== 'mochi' && sp.id !== 'fox' && typeOf(sp.id).id === 'attack').length
+  expect(el.textContent).toContain(`⚔あと${n}`)
+})
