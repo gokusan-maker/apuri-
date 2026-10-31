@@ -20203,6 +20203,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Our Living Bones', 'How Museums Display Skeletons', 'The Life of Astronauts', 'Why Milk Is White'], answer: 0, why: '全体として、骨が生きた組織であり、仕事をし、作りなおされ、くらし方で強さが変わることを述べている。' },
   },
   {
+    id: 'kyotsu-rural-transport',
+    title: 'Keeping the Countryside Connected',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In large cities, it is easy to take public transportation for granted. Trains and buses come every few minutes, and it is possible to travel almost anywhere without a car. In many rural areas, however, the situation is very different. As populations shrink and more people drive their own cars, bus and train services in the countryside have been reduced, and some have disappeared completely.",
+      "The loss of public transportation creates serious problems, especially for people who cannot drive. Elderly residents may find it difficult to visit hospitals, go shopping, or meet friends. Students who live far from their schools may have to depend on their parents for rides every day. For older people who decide to give up driving for safety reasons, the lack of buses can mean losing much of their independence, ( A ) can lead to loneliness and poorer health.",
+      "To deal with this problem, some communities have tried new approaches. One example is the on-demand bus. Instead of following a fixed route on a fixed timetable, these smaller vehicles travel only when passengers request them, usually by phone or through an app. Because the bus goes only where people actually need to go, it can operate with fewer empty seats, ( B ) helps to keep costs down.",
+      "Other towns have introduced community buses run with the help of local volunteers, or have asked taxi companies to provide shared rides at low prices. Some places are also testing self-driving vehicles, hoping that they may one day solve the shortage of drivers. Each of these ideas has advantages and disadvantages, and what works well in one town may not work in another.",
+      "Experts point out that public transportation in rural areas is not only about moving people from one place to another. It also supports local shops, allows people to take part in community events, and helps young families decide to stay in the area. For these reasons, many argue that rural transportation should be seen as an essential service, like water and electricity, rather than as a business that must always make a profit. Finding ways to keep people connected may be the key to ( C ) rural communities can survive in the future.",
+    ],
+    ja: [
+      '大都市では、公共交通をあたりまえと思いやすい。電車やバスが数分おきに来て、車がなくてもほとんどどこへでも行ける。しかし、多くのいなかの地域では、状況がまったくちがう。人口がへり、自分の車を運転する人がふえるにつれて、いなかのバスや電車の便はへらされ、まったくなくなったものもある。',
+      '公共交通がなくなると、とくに運転できない人にとって深刻な問題が生まれる。お年よりの住民は、病院に行ったり、買い物をしたり、友だちに会ったりするのがむずかしくなるかもしれない。学校から遠くに住む生徒は、毎日親の送りむかえにたよらなければならないかもしれない。安全のために運転をやめると決めたお年よりにとって、バスがないことは自立の多くを失うことになりかねず、それは孤独や健康の悪化につながることがある。',
+      'この問題に対処するために、新しい方法をためしてきた地域もある。1つの例はデマンドバス（予約型の乗り合いバス）である。決まった時刻表で決まった道を走るかわりに、こうした小さな車は、ふつう電話やアプリで乗客がたのんだときだけ走る。バスは人々が実際に行く必要のある場所にだけ行くので、空席を少なくして運行でき、それが費用をおさえるのに役立つ。',
+      '地元のボランティアの助けで走るコミュニティバスを取り入れたり、タクシー会社に安い値段で乗り合いの移動をたのんだりした町もある。運転手の不足をいつか解決できるかもしれないと期待して、自動運転の車をためしているところもある。こうした考えにはそれぞれ利点と欠点があり、ある町でうまくいくことがほかの町ではうまくいかないかもしれない。',
+      '専門家は、いなかの公共交通は人をある場所から別の場所へ運ぶだけのものではないと指摘している。それは地元の店をささえ、人々が地域の行事に参加できるようにし、若い家族がその地域にとどまる決心をするのを助ける。このような理由から、いなかの交通はいつも利益を出さなければならない商売としてではなく、水道や電気のような欠かせないサービスとして見るべきだと多くの人が主張している。人々をつなぎつづける方法を見つけることが、いなかの地域が将来生き残れるかどうかのかぎになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'that'], answer: 0, why: 'コンマのあとで前の内容（自立を失うこと）を受け、can lead の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['which', 'what', 'where', 'who'], answer: 0, why: 'コンマのあとで前の内容（空席を少なくして運行できること）を受け、helps の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['whether', 'that', 'what', 'unless'], answer: 0, why: 'the key to whether ～「～かどうかのかぎ」。前置詞 to のあとで「～かどうか」の名詞節をつくる whether。' },
+    ],
+    tf: [
+      { statement: 'いなかの地域では、バスや電車の便がへらされてきた。', answer: true, why: '第1段落 bus and train services in the countryside have been reduced。' },
+      { statement: 'デマンドバスは、決まった時刻表で決まった道を走る。', answer: false, why: '第3段落 Instead of following a fixed route on a fixed timetable, these smaller vehicles travel only when passengers request them。' },
+      { statement: '自動運転の車をためしている地域もある。', answer: true, why: '第4段落 Some places are also testing self-driving vehicles。' },
+      { statement: '筆者によれば、ある町でうまくいく方法は、どの町でもかならずうまくいく。', answer: false, why: '第4段落 what works well in one town may not work in another。' },
+    ],
+    qa: [
+      { q: 'Why can losing buses be serious for older people who stop driving?', choices: ['They may lose much of their independence.', 'They have to buy new cars.', 'They must move to big cities.', 'They cannot use telephones.'], answer: 0, why: '第2段落 the lack of buses can mean losing much of their independence。' },
+      { q: 'How do many people argue rural transportation should be seen?', choices: ['As an essential service, like water and electricity.', 'As a business that must make a profit.', 'As something only tourists need.', 'As a service that should be stopped.'], answer: 0, why: '第5段落 rural transportation should be seen as an essential service, like water and electricity。' },
+    ],
+    gist: [
+      { para: 1, choices: ['公共交通がなくなることで生まれる問題', '病院の建て方', '親の仕事', '友だちの作り方'], answer: 0, why: '第2段落は、お年よりや生徒など運転できない人がこまることを述べている。' },
+      { para: 2, choices: ['デマンドバスというしくみ', 'アプリの作り方', 'バスの色', '電話のかけ方'], answer: 0, why: '第3段落は、乗客がたのんだときだけ走るデマンドバスのしくみと利点を述べている。' },
+    ],
+    titleQ: { choices: ['Keeping the Countryside Connected', 'How to Drive a Bus', 'The History of Trains in Cities', 'Why Taxis Are Expensive'], answer: 0, why: '全体として、いなかの公共交通の問題と新しい取り組み、その大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
