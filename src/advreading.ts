@@ -19696,6 +19696,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Catching the Rain', 'Why Cities Need More Roads', 'The History of Bottled Water', 'How Typhoons Are Formed'], answer: 0, why: '全体として、雨水を集めて使うことの歴史、利点、非常時の役割、限界を述べている。' },
   },
   {
+    id: 'kyotsu-outdoor-learning',
+    title: 'Lessons Beyond the Classroom',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For most students, learning happens inside a classroom. They sit at desks, listen to the teacher, and read from textbooks. However, a growing number of schools are taking students outside, to parks, rivers, farms, and museums, to learn there. Supporters of this approach argue that some lessons are understood far better when students can see, touch, and experience the subject for themselves.",
+      "Consider a science lesson about the life of insects. In a classroom, students might look at photographs and memorize the names of different body parts. In a field near the school, ( A ), they can watch real insects searching for food, hiding from birds, and visiting flowers. Many teachers report that students ask more questions outside, because they notice things that no textbook could show them. Questions like these often lead to deeper understanding.",
+      "Learning outside the classroom can also develop skills that are difficult to teach at a desk. When students work in groups to measure the depth of a river or to record the plants in a forest, they have to share tasks, solve unexpected problems, and explain their ideas to one another. These experiences help them learn ( B ) to cooperate and to communicate, abilities that are valuable in almost any job.",
+      "In addition, time spent outdoors may be good for students’ health and well-being. Studies suggest that children who regularly spend time in nature tend to be more active and may find it easier to concentrate afterward. For students who find it hard to sit still for long periods, a lesson outdoors can be a welcome change and a chance to succeed in a different way.",
+      "Nevertheless, outdoor learning is not always easy to organize. Teachers must plan carefully, consider safety, and prepare for bad weather. Trips to museums or farms can be expensive, and some schools, especially in large cities, have little green space nearby. Because of these difficulties, many educators suggest starting with small steps, such as holding a single lesson in the schoolyard. The goal is not to replace the classroom but to remind students ( C ) the world itself is full of things to learn.",
+    ],
+    ja: [
+      '多くの生徒にとって、学びは教室の中で起こる。机にすわり、先生の話を聞き、教科書を読む。しかし、生徒を外へ、つまり公園や川、農場、博物館へ連れ出して、そこで学ばせる学校がふえている。この方法を支持する人々は、生徒が自分でその題材を見たり、さわったり、体験したりできると、はるかによく理解できる授業もあると主張している。',
+      '昆虫の生活についての理科の授業を考えてみよう。教室では、生徒は写真を見て、体のさまざまな部分の名前を覚えるかもしれない。しかし、学校の近くの野原では、本物の昆虫がえさをさがし、鳥からかくれ、花をおとずれるようすを観察できる。外では生徒がより多くの質問をすると、多くの先生が報告している。どんな教科書も見せられないことに気づくからである。こうした質問は、しばしばより深い理解につながる。',
+      '教室の外での学びは、机では教えにくい力をのばすこともできる。生徒がグループで川の深さを測ったり、森の植物を記録したりするとき、仕事を分担し、思いがけない問題を解決し、自分の考えをたがいに説明しなければならない。こうした経験は、協力し伝え合う方法を学ぶのに役立ち、それらはほとんどどんな仕事でも大切な力である。',
+      'さらに、外ですごす時間は、生徒の健康と幸福によいかもしれない。定期的に自然の中ですごす子どもは、より活動的になる傾向があり、そのあと集中しやすくなるかもしれないことが研究で示されている。長い時間じっとすわっているのが苦手な生徒にとって、外での授業はうれしい変化であり、ちがう形で成功するチャンスになりうる。',
+      'それでも、外での学びをととのえるのはいつもかんたんではない。先生は注意深く計画し、安全を考え、悪い天気に備えなければならない。博物館や農場への見学はお金がかかることがあり、とくに大都市の学校には近くに緑の場所がほとんどないこともある。こうした困難があるので、多くの教育者は、校庭で1回だけ授業をするなど、小さな一歩から始めることをすすめている。目的は教室にとってかわることではなく、世界そのものが学ぶことでいっぱいだと生徒に思い出させることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['however', 'therefore', 'for example', 'in short'], answer: 0, why: '教室での学び（写真と暗記）と、野原での学び（本物の観察）を対比しているので however「しかし」。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'why'], answer: 0, why: 'learn how to ～「～のしかたを学ぶ」：how to cooperate and to communicate。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '外での授業では、生徒がより多くの質問をすると報告する先生が多い。', answer: true, why: '第2段落 Many teachers report that students ask more questions outside。' },
+      { statement: 'グループで川の深さを測る活動では、協力する必要はない。', answer: false, why: '第3段落 they have to share tasks, solve unexpected problems, and explain their ideas to one another。' },
+      { statement: '大都市の学校の中には、近くに緑の場所がほとんどないところもある。', answer: true, why: '第5段落 some schools, especially in large cities, have little green space nearby。' },
+      { statement: '筆者によれば、外での学びの目的は教室をなくすことである。', answer: false, why: '第5段落 The goal is not to replace the classroom。' },
+    ],
+    qa: [
+      { q: 'Why do students ask more questions outside, according to many teachers?', choices: ['They notice things that no textbook could show them.', 'They want to go back inside quickly.', 'They have no textbooks.', 'The teacher asks them to.'], answer: 0, why: '第2段落 because they notice things that no textbook could show them。' },
+      { q: 'What do many educators suggest because of the difficulties?', choices: ['Starting with small steps, such as one lesson in the schoolyard.', 'Stopping all trips to museums.', 'Building a new school in a forest.', 'Studying only on sunny days.'], answer: 0, why: '第5段落 many educators suggest starting with small steps, such as holding a single lesson in the schoolyard。' },
+    ],
+    gist: [
+      { para: 2, choices: ['外での学びがのばす協力と伝え合う力', '川の深さの測り方', '森の植物の名前', '仕事の選び方'], answer: 0, why: '第3段落は、グループ活動で協力し伝え合う力がのびることを述べている。' },
+      { para: 3, choices: ['外ですごすことの健康と集中への効果', 'スポーツの大会', '病院での治療', '天気の調べ方'], answer: 0, why: '第4段落は、自然の中ですごすことが健康や集中によいかもしれないと述べている。' },
+    ],
+    titleQ: { choices: ['Lessons Beyond the Classroom', 'How to Catch Insects', 'Why Museums Are Expensive', 'The History of Textbooks'], answer: 0, why: '全体として、教室の外での学びの効果と課題、始め方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
