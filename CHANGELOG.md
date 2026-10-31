@@ -3380,3 +3380,4 @@
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「頭の上の機械（人工衛星）」（科学・宇宙・what／which／so that の空所）
 - 2026-10-31: キャラクター：イモリの「イモリン」を追加（とくぎ：じわじわ再生）
 - 2026-10-31: 文法：入試の誤文訂正㊴（TOEFL・IELTS の書き言葉⑯：In my opinion・Despite・It is true that ～, but・agree with・On the other hand・believe that・Whatever・No matter how・Even if・disagree with）10問
+- 2026-10-31: 長文：共通テストの評論を本番の長さで「学びは終わらない（おとなの学びなおし）」（社会・働き方・either／who／that の空所）

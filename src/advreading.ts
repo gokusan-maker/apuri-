@@ -20047,6 +20047,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Machines Above Our Heads', 'How to Become an Astronaut', 'The History of the Moon', 'Why Phones Need Batteries'], answer: 0, why: '全体として、人工衛星が毎日の生活をささえるしくみと役割、そして新しい問題を述べている。' },
   },
   {
+    id: 'kyotsu-lifelong-learning',
+    title: 'Learning Never Ends',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the past, many people expected to finish their education in their early twenties, find a job, and stay in the same kind of work until they retired. The skills they learned when they were young were often enough to last a whole career. Today, however, this pattern is becoming less common, and more and more adults are returning to learning long after they have left school.",
+      "One reason for this change is the speed of technological development. New machines and software are changing the way work is done in almost every field, from factories and offices to hospitals and farms. Some jobs are disappearing, while new ones are appearing that did not exist only a few years ago. As a result, workers often need to learn new skills in order to keep their jobs or to move into different ones.",
+      "Another reason is that people are living and working longer than before. A person who starts working at twenty-two may continue for more than forty years, and it is unlikely that the knowledge gained at the beginning will remain useful for such a long time. Many people also change careers by choice, ( A ) because they want new challenges or because their interests change as they grow older.",
+      "Fortunately, it has become easier than ever to keep learning. Online courses allow adults to study at home in the evenings or on weekends, and many universities offer programs designed for working people. Some companies pay for their employees to take classes, believing that staff ( B ) continue to learn are more creative and more productive. Libraries and community centers also offer free lessons in subjects ranging from computer skills to foreign languages.",
+      "Of course, learning as an adult is not always easy. People with jobs and families often have little free time, and some feel nervous about studying again after many years. Experts suggest starting with small goals and choosing subjects that are personally interesting. Above all, they emphasize ( C ) learning is not something that ends with graduation. In a rapidly changing world, the ability to keep learning may be the most valuable skill of all.",
+    ],
+    ja: [
+      'かつては、多くの人が20代前半で教育を終え、仕事を見つけ、退職するまで同じような仕事を続けるものと考えていた。若いころに学んだ技能だけで、一生の仕事に十分なことが多かった。しかし今日、このパターンはあまり一般的ではなくなりつつあり、学校を出てずっとあとに、ふたたび学びはじめるおとながますますふえている。',
+      'この変化の理由の1つは、技術の発展の速さである。新しい機械やソフトウェアが、工場や事務所から病院や農場まで、ほとんどすべての分野で仕事のやり方を変えている。なくなっていく仕事がある一方で、ほんの数年前にはなかった新しい仕事が現れている。その結果、働く人は仕事を続けたり、ちがう仕事に移ったりするために、新しい技能を学ぶ必要がしばしばある。',
+      'もう1つの理由は、人々が以前より長く生き、長く働くようになったことである。22歳で働きはじめた人は40年以上働きつづけるかもしれず、はじめに得た知識がそれほど長いあいだ役に立ちつづけることはまずない。また、新しい挑戦をしたいから、あるいは年をとるにつれて興味が変わるから、といった理由で、自分から仕事を変える人も多い。',
+      '幸いにも、学びつづけることは今までになくかんたんになった。オンラインの講座を使えば、おとなは夜や週末に家で勉強でき、多くの大学が働く人のために作られたプログラムを開いている。学びつづける社員はより創造的で生産的だと考え、社員が授業を受ける費用を出す会社もある。図書館や公民館も、コンピューターの技能から外国語まで、さまざまな科目の無料の講座を開いている。',
+      'もちろん、おとなになってから学ぶことはいつもかんたんではない。仕事や家族のある人は自由な時間が少ないことが多く、何年もたってからふたたび勉強することに不安を感じる人もいる。専門家は、小さな目標から始め、自分にとっておもしろい科目を選ぶことをすすめている。何よりも、学びは卒業で終わるものではないと強調している。急速に変わる世界では、学びつづける力こそ、最も価値のある技能かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['either', 'both', 'neither', 'whether'], answer: 0, why: 'either A or B「A か B のどちらか」：either because ～ or because ～。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は staff（人）で、continue の主語になるので主格の関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'emphasize that ～「～ということを強調する」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: 'かつては、若いころに学んだ技能で一生の仕事に足りることが多かった。', answer: true, why: '第1段落 The skills they learned when they were young were often enough to last a whole career。' },
+      { statement: '技術の発展によって、新しい仕事はまったく生まれていない。', answer: false, why: '第2段落 new ones are appearing that did not exist only a few years ago。' },
+      { statement: '社員が授業を受ける費用を出す会社もある。', answer: true, why: '第4段落 Some companies pay for their employees to take classes。' },
+      { statement: '専門家は、はじめから大きな目標を立てるべきだと言っている。', answer: false, why: '第5段落 Experts suggest starting with small goals。' },
+    ],
+    qa: [
+      { q: 'Why is it unlikely that knowledge gained at the beginning of a career will stay useful?', choices: ['Because people may work for more than forty years.', 'Because schools teach nothing useful.', 'Because people forget everything quickly.', 'Because jobs never change.'], answer: 0, why: '第3段落 A person who starts working at twenty-two may continue for more than forty years。' },
+      { q: 'What do libraries and community centers offer?', choices: ['Free lessons in various subjects.', 'Jobs for young people.', 'New computers for sale.', 'Trips to foreign countries.'], answer: 0, why: '第4段落 Libraries and community centers also offer free lessons in subjects ranging from computer skills to foreign languages。' },
+    ],
+    gist: [
+      { para: 1, choices: ['技術の発展で新しい技能が必要になっていること', '工場の歴史', '農業の機械', 'ソフトウェアの作り方'], answer: 0, why: '第2段落は、技術の変化で仕事が変わり、新しい技能を学ぶ必要があることを述べている。' },
+      { para: 3, choices: ['おとなが学びつづけやすくなった環境', '大学の入学試験', '図書館の本の数', '週末のすごし方'], answer: 0, why: '第4段落は、オンライン講座、大学のプログラム、会社の支援、無料の講座を述べている。' },
+    ],
+    titleQ: { choices: ['Learning Never Ends', 'How to Retire Early', 'The History of Universities', 'Why Factories Are Closing'], answer: 0, why: '全体として、おとなが学びつづける理由と、そのための環境、心がまえを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
