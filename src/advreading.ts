@@ -21373,6 +21373,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Printing Real Objects', 'How to Print a Photo', 'The History of Paper', 'Why Plastic Melts'], answer: 0, why: '全体として、3Dプリンターのしくみ、医療やものづくりでの利点、心配な点を述べている。' },
   },
   {
+    id: 'kyotsu-volunteering',
+    title: 'Giving Time, Gaining More',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every day, millions of people around the world give their time to help others without being paid. They clean beaches, teach children to read, cook meals for people in need, and support victims of natural disasters. Volunteering is often described as an act of kindness, and it is. But research suggests that it also brings many benefits to the volunteers themselves.",
+      "One important benefit is a sense of purpose. Many people say that helping others makes them feel useful and connected to their community. This feeling can be especially valuable for people who have retired from work or who have recently moved to a new area and have few friends there. Volunteering gives them a reason to go out, meet people, and use their skills in meaningful ways.",
+      "Volunteering can also help people develop new skills. A student who volunteers at a local event may learn how to organize activities, communicate with people of different ages, and solve unexpected problems. These experiences can be useful when applying for jobs, and some companies look favorably on applicants ( A ) have taken part in volunteer work. In this sense, volunteering can be a bridge between school and the working world.",
+      "Studies have also found links between volunteering and health. People who volunteer regularly often report lower levels of stress and higher levels of happiness than those who do not. Some researchers believe that the social contact involved in volunteering, as well as the pleasure of helping others, may be part of the reason. Of course, the relationship is complex, and people who are already healthy may also find it easier to volunteer.",
+      "Despite these benefits, many people say they are too busy to volunteer. Experts suggest that volunteering does not have to take a great deal of time. Even helping at an event once a month or doing small tasks online can make a difference. It is also important to choose an activity ( B ) matches one's interests, since people are more likely to continue when they enjoy what they are doing. When many people each contribute a little, the combined effect on a community can be remarkable, which shows ( C ) small acts of kindness can lead to big changes.",
+    ],
+    ja: [
+      '毎日、世界中の何百万もの人が、お金をもらわずにほかの人を助けるために時間をささげている。浜辺をそうじし、子どもに読み方を教え、こまっている人のために食事をつくり、自然災害の被災者をささえている。ボランティアはよく親切な行いだと言われ、実際にそうである。しかし研究によると、ボランティアはボランティアをする人自身にも多くのめぐみをもたらしている。',
+      '大切なめぐみの1つは、生きがいの感覚である。多くの人が、ほかの人を助けると自分が役に立ち、地域とつながっていると感じると言う。この気持ちは、仕事を引退した人や、最近新しい地域に引っこしてきてそこに友だちが少ない人にとって、とくに価値がある。ボランティアは、出かけ、人と出会い、自分の技能を意味のある方法で使う理由をあたえてくれる。',
+      'ボランティアは、新しい技能をのばすのにも役立つ。地元の行事でボランティアをする生徒は、活動のまとめ方や、ちがう年齢の人との伝え合い方、思いがけない問題の解決のしかたを学ぶかもしれない。こうした経験は仕事に応募するときに役立つことがあり、ボランティア活動に参加したことのある応募者をよく見る会社もある。この意味で、ボランティアは学校と働く世界の橋わたしになりうる。',
+      '研究では、ボランティアと健康とのつながりも見つかっている。定期的にボランティアをする人は、しない人よりもストレスが少なく、幸福感が高いと答えることが多い。ボランティアにふくまれる人とのふれあいや、人を助けるよろこびが、その理由の一部かもしれないと考える研究者もいる。もちろん、その関係は複雑で、すでに健康な人のほうがボランティアをしやすいということもあるかもしれない。',
+      'こうしためぐみがあるにもかかわらず、多くの人はいそがしすぎてボランティアができないと言う。専門家は、ボランティアにそれほど多くの時間をかける必要はないと言っている。月に1回行事を手伝ったり、オンラインで小さな仕事をしたりするだけでも、ちがいを生むことができる。また、自分の興味に合った活動を選ぶことも大切である。人は自分のしていることを楽しんでいるほうが続けやすいからである。多くの人がそれぞれ少しずつ力を出し合えば、地域へのその合わさった効果はおどろくほど大きくなりうる。それは、小さな親切が大きな変化につながりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は applicants（人）で、have taken part の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 an activity を受け、matches の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'whom'], answer: 0, why: 'show how ～「どのように～かを示す」。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'ボランティアは、ボランティアをする人自身にもめぐみをもたらすと研究は示している。', answer: true, why: '第1段落 research suggests that it also brings many benefits to the volunteers themselves。' },
+      { statement: 'ボランティア活動は、仕事に応募するときにまったく役に立たない。', answer: false, why: '第3段落 These experiences can be useful when applying for jobs。' },
+      { statement: 'ボランティアと健康の関係は、とてもかんたんだと筆者は述べている。', answer: false, why: '第4段落 the relationship is complex。' },
+      { statement: '専門家は、ボランティアにそれほど多くの時間をかける必要はないと言っている。', answer: true, why: '第5段落 volunteering does not have to take a great deal of time。' },
+    ],
+    qa: [
+      { q: 'For whom can a sense of purpose from volunteering be especially valuable?', choices: ['People who have retired or recently moved.', 'Only young children.', 'People who are very busy.', 'People who live alone in big cities only.'], answer: 0, why: '第2段落 for people who have retired from work or who have recently moved to a new area。' },
+      { q: 'Why is it important to choose an activity that matches one’s interests?', choices: ['People are more likely to continue when they enjoy it.', 'It is cheaper.', 'It takes less time.', 'Companies require it.'], answer: 0, why: '第5段落 since people are more likely to continue when they enjoy what they are doing。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ボランティアで新しい技能がのびること', '学校の行事の歴史', '会社のえらび方', '問題の解き方'], answer: 0, why: '第3段落は、活動のまとめ方や伝え合いなどの技能がのび、仕事にも役立つことを述べている。' },
+      { para: 3, choices: ['ボランティアと健康のつながり', '病院の数', 'ストレスの測り方', '幸福の定義'], answer: 0, why: '第4段落は、ストレスの少なさや幸福感とボランティアの関係を述べている。' },
+    ],
+    titleQ: { choices: ['Giving Time, Gaining More', 'How to Clean a Beach', 'The History of Disasters', 'Why People Retire'], answer: 0, why: '全体として、ボランティアがほかの人だけでなく自分自身にももたらすめぐみと、始め方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
