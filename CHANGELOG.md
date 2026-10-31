@@ -3345,3 +3345,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉝（TOEFL・IELTS の書き言葉⑬：that of・those・superior to・The 比較級・whereas・倍数・No other・similar to・the better of the two・differ from）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「火山とともにくらす」（科学・地球・while／how／which の空所）
 - 2026-10-31: デザイン：キャラ図鑑で、まだ会っていない子をタイプでしぼると、そのタイプの「あと○体」を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊵（比べる・対比する表現：that of・those・superior to・The 比較級・whereas・倍数・No other・the better of the two・differ from）10問

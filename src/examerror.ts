@@ -914,6 +914,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The medicine (A) should be taken (B) three times a day (C) after (D) eat.', choices: ['(A) should be taken', '(B) three times a day', '(C) after', '(D) eat'], answer: 3, why: '前置詞 after のあとは動名詞か名詞：after eating（または after meals）。' },
     ],
   },
+  {
+    id: 'exam-error-compare3',
+    title: '入試の正誤問題㊵（比べる・対比する表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'that of ／ those of、superior to、The 比較級 ～, the 比較級 …、whereas と despite、倍数 as ～ as、No other ～、the 比較級 of the two、differ from など、比べるときの表現。',
+    ],
+    examples: [
+      { en: 'Prices in big cities are higher than those in rural areas.', ja: '大都市の物価はいなかの物価より高い。' },
+      { en: 'Of the two proposals, the second one is the better.', ja: '2つの案のうち、2つ目のほうがよい。' },
+    ],
+    questions: [
+      { sentence: 'The population (A) of Tokyo is (B) much larger (C) than (D) Osaka.', choices: ['(A) of Tokyo is', '(B) much larger', '(C) than', '(D) Osaka'], answer: 3, why: '比べるのは人口どうしなので than that of Osaka。' },
+      { sentence: 'Prices (A) in big cities (B) are higher (C) than that (D) in rural areas.', choices: ['(A) in big cities', '(B) are higher', '(C) than that', '(D) in rural areas'], answer: 2, why: '比べるのは Prices（複数）なので than those。' },
+      { sentence: 'This new method (A) is more superior (B) to the old one (C) in (D) several ways.', choices: ['(A) is more superior', '(B) to the old one', '(C) in', '(D) several ways'], answer: 0, why: 'superior はそれ自体で比較の意味をもつので more をつけない：is superior to。' },
+      { sentence: 'The more (A) you read, (B) the better (C) you will (D) understanding the world.', choices: ['(A) you read,', '(B) the better', '(C) you will', '(D) understanding the world'], answer: 3, why: 'will のあとは動詞の原形：you will understand。The 比較級 ～, the 比較級 … は正しい。' },
+      { sentence: 'Some students (A) prefer online classes, (B) despite others (C) prefer (D) face-to-face ones.', choices: ['(A) prefer online classes,', '(B) despite others', '(C) prefer', '(D) face-to-face ones'], answer: 1, why: 'うしろが文（主語＋動詞）なので前置詞 despite は使えない：whereas others prefer。' },
+      { sentence: 'This year’s (A) sales (B) were twice (C) as large than (D) last year’s.', choices: ['(A) sales', '(B) were twice', '(C) as large than', '(D) last year’s'], answer: 2, why: '倍数 ＋ as ～ as：twice as large as。' },
+      { sentence: 'No other planet (A) are (B) as large (C) as Jupiter (D) in the solar system.', choices: ['(A) are', '(B) as large', '(C) as Jupiter', '(D) in the solar system'], answer: 0, why: '主語は No other planet（単数）なので is。' },
+      { sentence: 'The results (A) were similar to (B) that of (C) earlier studies (D) in many respects.', choices: ['(A) were similar to', '(B) that of', '(C) earlier studies', '(D) in many respects'], answer: 1, why: '比べるのは results（複数）なので those of earlier studies。' },
+      { sentence: '(A) Of the two (B) proposals, the second one (C) is (D) the best.', choices: ['(A) Of the two', '(B) proposals, the second one', '(C) is', '(D) the best'], answer: 3, why: '2つのうちで比べるときは the ＋比較級：the better。' },
+      { sentence: 'Life in (A) cities (B) differs (C) with life (D) in the countryside.', choices: ['(A) cities', '(B) differs', '(C) with life', '(D) in the countryside'], answer: 2, why: '「～とちがう」は differ from ～：differs from life。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
