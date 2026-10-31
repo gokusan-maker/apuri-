@@ -20281,6 +20281,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Joining with Gold', 'How to Buy a New Cup', 'The History of Tea', 'Why Pottery Breaks'], answer: 0, why: '全体として、金継ぎの技術、その背後の考え方、世界での広まり、人への教えを述べている。' },
   },
   {
+    id: 'kyotsu-batteries',
+    title: 'Power in Your Pocket',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Think about how many devices you use in a single day that run on batteries: a smartphone, a laptop, wireless earphones, perhaps even an electric bicycle. Batteries have become so common that we rarely notice them until they run out. Yet the ability to store electricity in a small, portable form has changed the way we live, work, and communicate, and it may play an even larger role in the future.",
+      "A battery works by turning stored chemical energy into electrical energy. Inside it, chemical reactions cause tiny particles called electrons to move from one side to the other through a wire, ( A ) creates an electric current. In rechargeable batteries, this process can be reversed. When we plug in a phone, electricity pushes the particles back to where they started, so that the battery can be used again and again.",
+      "Many modern devices use lithium-ion batteries, which are light and can store a large amount of energy for their size. These batteries made it possible to build thin smartphones and laptops that can run for many hours. They are also used in electric cars, allowing these vehicles to travel long distances without producing exhaust gases from the car itself.",
+      "Batteries are becoming increasingly important for renewable energy as well. Solar panels produce electricity only when the sun is shining, and wind turbines work only when the wind is blowing. Large battery systems can store extra electricity when production is high and release it when it is needed, for example in the evening. In this way, batteries can help to make renewable energy more reliable.",
+      "However, batteries also raise concerns. The materials used to make them must be mined, and mining can damage the environment and the communities nearby. In addition, used batteries can cause fires or pollution if they are not thrown away properly. For these reasons, researchers are working to develop batteries that use more common materials, and many countries are building systems to recycle old batteries. Making sure that batteries are produced and used responsibly will be essential ( B ) we are to enjoy their benefits without creating new problems. As our need for portable power grows, the small battery may turn out to be ( C ) of the most important technologies of our time.",
+    ],
+    ja: [
+      '1日に、電池で動く機器をどれだけ使っているか考えてみよう。スマートフォン、ノートパソコン、ワイヤレスイヤホン、もしかすると電動自転車も。電池はとてもありふれたものになったので、切れるまでその存在にほとんど気づかない。しかし、電気を小さく持ち運べる形でたくわえられるようになったことは、私たちのくらし方、働き方、伝え合い方を変えてきた。そして将来、さらに大きな役割をはたすかもしれない。',
+      '電池は、たくわえた化学エネルギーを電気エネルギーに変えることで働く。その中では、化学反応によって電子とよばれる小さな粒が導線を通って片側からもう片側へ動き、それが電流を生み出す。充電できる電池では、このはたらきを逆にすることができる。スマートフォンをコンセントにつなぐと、電気が粒をもとの場所へおしもどすので、電池をくり返し使えるのである。',
+      '現代の多くの機器はリチウムイオン電池を使っている。これは軽く、その大きさのわりに大量のエネルギーをたくわえられる。こうした電池のおかげで、何時間も使えるうすいスマートフォンやノートパソコンを作ることができるようになった。また電気自動車にも使われ、車そのものから排気ガスを出さずに長い距離を走れるようにしている。',
+      '電池は、再生可能エネルギーにとってもますます大切になっている。太陽光パネルは太陽が出ているときしか電気をつくらず、風力発電機は風がふいているときしか動かない。大きな電池のシステムは、発電が多いときに余った電気をたくわえ、たとえば夕方など必要なときに送り出すことができる。このようにして、電池は再生可能エネルギーをよりたよれるものにするのに役立つ。',
+      'しかし、電池には心配な点もある。電池を作るのに使う材料はほり出さなければならず、採掘は環境や近くの地域をそこなうことがある。さらに、使い終わった電池は、正しくすてないと火事や汚染の原因になることがある。このため、研究者はよりありふれた材料を使う電池の開発に取り組み、多くの国が古い電池をリサイクルするしくみをつくっている。新しい問題を生まずに電池のめぐみを楽しむつもりなら、電池が責任をもって作られ使われるようにすることが欠かせないだろう。持ち運べる電気への必要が高まるにつれ、小さな電池は、私たちの時代の最も大切な技術の1つだとわかるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（電子が動くこと）を受け、creates の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['if', 'unless', 'until', 'though'], answer: 0, why: 'if 主語 be to ～「～するつもりなら（～するためには）」：if we are to enjoy their benefits。' },
+      { id: 'C', choices: ['one', 'each', 'some', 'any'], answer: 0, why: 'one of the ＋最上級＋複数名詞「最も～な…の1つ」：one of the most important technologies。' },
+    ],
+    tf: [
+      { statement: '充電できる電池では、電池の中のはたらきを逆にすることができる。', answer: true, why: '第2段落 In rechargeable batteries, this process can be reversed。' },
+      { statement: 'リチウムイオン電池は重いが、たくさんのエネルギーをたくわえられる。', answer: false, why: '第3段落 lithium-ion batteries, which are light。' },
+      { statement: '大きな電池のシステムは、再生可能エネルギーをよりたよれるものにするのに役立つ。', answer: true, why: '第4段落 batteries can help to make renewable energy more reliable。' },
+      { statement: '使い終わった電池は、どのようにすてても問題はない。', answer: false, why: '第5段落 used batteries can cause fires or pollution if they are not thrown away properly。' },
+    ],
+    qa: [
+      { q: 'Why are batteries useful for solar and wind power?', choices: ['They can store extra electricity and release it when needed.', 'They make the sun shine longer.', 'They create wind.', 'They make solar panels cheaper.'], answer: 0, why: '第4段落 Large battery systems can store extra electricity when production is high and release it when it is needed。' },
+      { q: 'What are researchers trying to do?', choices: ['Develop batteries that use more common materials.', 'Stop using batteries completely.', 'Make batteries heavier.', 'Mine more rare materials.'], answer: 0, why: '第5段落 researchers are working to develop batteries that use more common materials。' },
+    ],
+    gist: [
+      { para: 1, choices: ['電池が電気を生み出すしくみ', '電子の発見者', '導線の作り方', 'コンセントの歴史'], answer: 0, why: '第2段落は、化学エネルギーを電気に変えるしくみと、充電のしくみを述べている。' },
+      { para: 4, choices: ['電池の心配な点と、その対策', '採掘の方法', '火事の防ぎ方だけ', '電池の値段'], answer: 0, why: '第5段落は、採掘や廃棄の問題と、新しい電池の開発やリサイクルという対策を述べている。' },
+    ],
+    titleQ: { choices: ['Power in Your Pocket', 'How to Build a Smartphone', 'The History of Mining', 'Why the Wind Blows'], answer: 0, why: '全体として、電池のしくみと役割、再生可能エネルギーへの貢献、心配な点を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
