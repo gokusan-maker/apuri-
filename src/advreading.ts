@@ -18604,6 +18604,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Who Makes the Call?', 'How to Become a Referee', 'The History of Tennis', 'Why Fans Get Angry'], answer: 0, why: '全体として、スポーツのビデオ判定の利点と批判、バランスのとり方を述べている。' },
   },
   {
+    id: 'kyotsu-eating-slowly',
+    title: 'How We Eat Matters',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many busy lives today, meals are often eaten in a hurry. People eat lunch at their desks while checking emails, grab breakfast on the way to the station, or finish dinner in front of the television without paying much attention to their food. Yet a growing number of health experts believe that how we eat may be almost as important as what we eat. In particular, they point to the benefits of eating slowly.",
+      "One reason is the way our bodies tell us that we are full. When we eat, the stomach and digestive system send signals to the brain, but these signals take time to arrive. It is often said that the brain needs around twenty minutes to recognise that the body has had enough. If we eat very quickly, we may finish a large amount of food before this message reaches the brain, ( A ) can lead to eating more than we need.",
+      "Eating slowly and chewing food well can also help digestion. Chewing breaks food into smaller pieces and mixes it with saliva, which contains substances that begin the process of digestion in the mouth. When food is not chewed properly, the stomach has to work harder, and some people may feel uncomfortable after meals. In addition, people who take their time often say that they enjoy the taste and texture of their food more.",
+      "In Japan, there is a traditional saying, “hara hachi bu,” which advises people to stop eating when they are about eighty percent full. This idea is often connected with communities known for long and healthy lives, ( B ) people tend to eat moderate amounts and share meals slowly with family and friends. Although many factors affect health, such habits may help people avoid eating too much.",
+      "Changing the way we eat does not have to be difficult. Simple steps, such as putting down chopsticks or a fork between bites, turning off the television during meals, or talking with others at the table, can naturally slow the pace of eating. Health experts suggest that paying attention to each meal is a small habit ( C ) may bring large benefits over a lifetime. A meal, after all, is not only fuel for the body but also a chance to rest and enjoy.",
+    ],
+    ja: [
+      '今日の多くのいそがしい生活では、食事はしばしば急いで食べられる。人々はメールを確かめながら机で昼食を食べ、駅へ行くとちゅうで朝食をさっととり、食べ物にあまり注意をはらわずにテレビの前で夕食をすませる。しかし、どのように食べるかは、何を食べるかとほとんど同じくらい大切かもしれないと考える健康の専門家がふえている。とくに、彼らはゆっくり食べることの利点を指摘している。',
+      'その理由の一つは、体がおなかがいっぱいだと私たちに知らせるしくみである。食べると、胃や消化器は脳に信号を送るが、この信号がとどくには時間がかかる。体が十分に食べたと脳が気づくにはおよそ20分かかるとよく言われる。とても速く食べると、この知らせが脳にとどく前に大量の食べ物を食べ終えてしまうかもしれず、そのことが必要以上に食べることにつながりうる。',
+      'ゆっくり食べて食べ物をよくかむことは、消化も助ける。かむことは食べ物を小さく分け、それをだ液とまぜる。だ液には口の中で消化を始める物質がふくまれている。食べ物がよくかまれないと、胃はより多くはたらかなければならず、食後に気分が悪くなる人もいる。さらに、時間をかけて食べる人は、食べ物の味や食感をより楽しめるとよく言う。',
+      '日本には「腹八分目」という伝統的な言葉があり、おなかが8割ほど満ちたら食べるのをやめるよう人々にすすめている。この考えは、長生きで健康なことで知られる地域社会とよく結びつけられる。そこでは人々は適度な量を食べ、家族や友だちとゆっくり食事を分け合う傾向がある。健康には多くの要因が影響するが、こうした習慣は人々が食べすぎるのをさける助けになるかもしれない。',
+      '食べ方を変えるのはむずかしくなくてよい。ひと口ごとにはしやフォークを置く、食事中はテレビを消す、食卓でほかの人と話すといったかんたんな手順で、食べるペースは自然にゆっくりになる。健康の専門家は、毎回の食事に注意をはらうことは、一生のあいだに大きな利益をもたらしうる小さな習慣だとすすめている。結局のところ、食事は体の燃料であるだけでなく、休んで楽しむ機会でもあるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（知らせがとどく前に大量に食べること）を受け、can lead の主語になるので which。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は communities（場所としての地域社会）で、うしろが完全な文（people tend to eat …）なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a small habit を受け、うしろの may bring の主語になるので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '体が十分に食べたと脳が気づくには時間がかかる。', answer: true, why: '第2段落 these signals take time to arrive。' },
+      { statement: 'だ液には、口の中で消化を始める物質がふくまれている。', answer: true, why: '第3段落 saliva, which contains substances that begin the process of digestion in the mouth。' },
+      { statement: '「腹八分目」は、おなかがいっぱいになるまで食べるようすすめる言葉である。', answer: false, why: '第4段落 advises people to stop eating when they are about eighty percent full。' },
+      { statement: '筆者によれば、食べ方を変えるにはむずかしい訓練が必要である。', answer: false, why: '第5段落 Changing the way we eat does not have to be difficult。' },
+    ],
+    qa: [
+      { q: 'What can happen if we eat very quickly?', choices: ['We may eat more than we need before the brain knows we are full.', 'Our food becomes tastier.', 'We digest food more easily.', 'We feel full immediately.'], answer: 0, why: '第2段落 we may finish a large amount of food before this message reaches the brain, which can lead to eating more than we need。' },
+      { q: 'Which is NOT mentioned as a simple step to slow the pace of eating?', choices: ['Eating only once a day.', 'Putting down chopsticks between bites.', 'Turning off the television.', 'Talking with others at the table.'], answer: 0, why: '第5段落に1日1回だけ食べるという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['よくかむことと消化', '歯のみがき方', '料理の味つけ', 'フォークの使い方'], answer: 0, why: '第3段落は、よくかむことが消化を助け、味も楽しめることを述べている。' },
+      { para: 3, choices: ['「腹八分目」と長生きの地域社会', '日本の祭り', '家族旅行', '健康診断の受け方'], answer: 0, why: '第4段落は、腹八分目の考えと、ゆっくり適量を食べる地域社会を述べている。' },
+    ],
+    titleQ: { choices: ['How We Eat Matters', 'How to Cook Quickly', 'The History of Chopsticks', 'Why Breakfast Is Expensive'], answer: 0, why: '全体として、ゆっくりよくかんで食べることの利点と、そのためのくふうを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
