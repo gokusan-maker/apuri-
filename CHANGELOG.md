@@ -3302,3 +3302,4 @@
 - 2026-10-31: キャラクター追加：アシカン（アシカ・みなとのいわばタマゴ・サポートのとくぎ）
 - 2026-10-31: 文法：入試の誤文訂正㉖（国公立二次レベル：It was not until ～ that・not so much A as B・It goes without saying・cannot help but・make it a rule to・Should you・anything but）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「物の中を見る（X線の発見）」（科学・発見・主格の that／非制限の which の空所）
+- 2026-10-31: デザイン：ボス戦の負け画面に、まちがえた問題の数（❌ ○問まちがえた）を出すようにした

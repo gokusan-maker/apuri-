@@ -959,6 +959,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <p className="boss-lose-combo" aria-label={`正解した数 ${corrects}`}>
             ⭕ {corrects}問正解
           </p>
+          {/* デザイン139：負けたとき、まちがえた問題の数も見せる */}
+          <p className="boss-lose-combo" aria-label={`まちがえた数 ${wrongs}`}>
+            ❌ {wrongs}問まちがえた
+          </p>
           {bestCombo >= 2 && ( // デザイン89：負けても、このボス戦の最大コンボを見せる
             <p className="boss-lose-combo" aria-label={`最大コンボ ${bestCombo}`}>
               🔥 最大 {bestCombo} コンボ

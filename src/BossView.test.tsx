@@ -876,3 +876,15 @@ it('デザイン136：ボスに勝つと、結果画面にいっしょに戦っ�
   expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
   expect(screen.getByLabelText('いっしょに戦った相棒').textContent).toBe(`${typeOf('dragon').icon} ドラといっしょに勝った`)
 })
+
+it('デザイン139：ボスに負けた結果画面に、まちがえた問題の数が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={999} traits={[]} />)
+  let n = 0
+  for (let i = 0; i < 12 && !screen.queryByText('まけてしまった…'); i++) {
+    answer(false)
+    n++
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+  expect(screen.getByLabelText(`まちがえた数 ${n}`).textContent).toBe(`❌ ${n}問まちがえた`)
+})
