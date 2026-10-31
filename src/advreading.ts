@@ -19891,6 +19891,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Art of Saying Sorry', 'How to Remember Birthdays', 'Why People Arrive Late', 'The History of the Japanese Language'], answer: 0, why: '全体として、上手な謝罪の要素、失敗する謝罪、文化によるちがい、謝罪の大切さを述べている。' },
   },
   {
+    id: 'kyotsu-subscriptions',
+    title: 'Paying Every Month',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Not long ago, people who wanted to listen to music bought records or CDs, and people who wanted to watch a film bought or rented a copy. Today, many of us simply pay a monthly fee and enjoy as much music or as many films as we like. This change from owning things to paying for access to them is one of the most important shifts in the modern economy.",
+      "Subscription services, as they are called, are now found in many areas of life. Besides music and video, people subscribe to software, news, meal kits, clothes, and even cars. For businesses, subscriptions are attractive because they provide a steady income every month, ( A ) makes it easier to plan for the future. Companies can also collect information about what customers use, which helps them to improve their services.",
+      "For consumers, subscriptions offer clear benefits. They allow people to try a wide range of products without paying a large amount at once. A student who could never afford to buy hundreds of albums can listen to millions of songs for a small monthly fee. Subscriptions also save space, because there is no need to store piles of discs or books at home, and the service is often updated automatically.",
+      "However, there are also disadvantages. Because the payments are small and automatic, people sometimes forget how many services they are paying for. Several monthly fees can add up to a surprisingly large amount over a year. In addition, when people stop paying, they lose access to everything, so they do not really own any of the music, films, or books ( B ) they have enjoyed. Some people worry that this makes consumers too dependent on a small number of large companies.",
+      "Experts suggest that consumers should check their subscriptions regularly and cancel the ones they rarely use. It is also wise to think about ( C ) owning a product or paying for access to it is better in each case. For something used every day, a subscription may be good value, but for something used only occasionally, buying it once may cost less. As the subscription economy continues to grow, making careful choices will become an increasingly important skill.",
+    ],
+    ja: [
+      '少し前まで、音楽を聞きたい人はレコードやCDを買い、映画を見たい人はコピーを買ったり借りたりしていた。今日、私たちの多くはただ毎月の料金をはらい、好きなだけ音楽や映画を楽しんでいる。物を持つことから、それを利用する権利にお金をはらうことへのこの変化は、現代の経済で最も大切な変化の1つである。',
+      'いわゆるサブスクリプション（定額制）のサービスは、今では生活の多くの分野で見られる。音楽や動画のほかに、人々はソフトウェア、ニュース、料理キット、服、さらには車まで定額で利用している。企業にとって定額制が魅力的なのは、毎月安定した収入が得られるからであり、そのことで将来の計画が立てやすくなる。企業はまた、客が何を使っているかという情報を集めることもでき、それはサービスをよくするのに役立つ。',
+      '消費者にとって、定額制にははっきりした利点がある。一度に大きなお金をはらわずに、さまざまな商品をためすことができる。何百枚ものアルバムを買う余裕がまったくない学生でも、少しの月額料金で何百万曲も聞くことができる。定額制は場所の節約にもなる。家にディスクや本の山を置いておく必要がないからであり、サービスは自動的に新しくなることも多い。',
+      'しかし、欠点もある。支払いが少額で自動的なので、人々はいくつのサービスにお金をはらっているかわすれてしまうことがある。いくつかの月額料金は、1年でおどろくほど大きな金額になることがある。さらに、支払いをやめるとすべてを利用できなくなるので、楽しんできた音楽や映画や本のどれも本当には自分のものになっていない。これによって消費者が少数の大企業にたよりすぎるようになると心配する人もいる。',
+      '専門家は、消費者は定期的に自分の定額サービスを見直し、めったに使わないものは解約すべきだとすすめている。また、それぞれの場合に、商品を持つのと利用する権利にお金をはらうのとどちらがよいかを考えるのもかしこい。毎日使うものなら定額制はお得かもしれないが、たまにしか使わないものなら、一度買うほうが安くすむかもしれない。定額制の経済が成長しつづけるにつれ、注意深く選ぶことはますます大切な力になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（安定した収入が得られること）を受け、makes の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 the music, films, or books を受け、enjoyed の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['whether', 'that', 'what', 'unless'], answer: 0, why: 'think about whether A or B「A か B かについて考える」：whether owning ～ or paying ～ is better。' },
+    ],
+    tf: [
+      { statement: '定額制は、企業に毎月安定した収入をもたらす。', answer: true, why: '第2段落 they provide a steady income every month。' },
+      { statement: '定額制を使うと、家にディスクや本をたくさん置かなければならない。', answer: false, why: '第3段落 there is no need to store piles of discs or books at home。' },
+      { statement: 'いくつかの月額料金は、1年で大きな金額になることがある。', answer: true, why: '第4段落 Several monthly fees can add up to a surprisingly large amount over a year。' },
+      { statement: '筆者は、どんな場合でも定額制のほうが安いと述べている。', answer: false, why: '第5段落 for something used only occasionally, buying it once may cost less。' },
+    ],
+    qa: [
+      { q: 'Why do people sometimes forget how many services they pay for?', choices: ['Because the payments are small and automatic.', 'Because the services are free.', 'Because they pay only once a year.', 'Because companies hide the prices.'], answer: 0, why: '第4段落 Because the payments are small and automatic, people sometimes forget。' },
+      { q: 'What do experts suggest consumers should do?', choices: ['Check their subscriptions and cancel the ones they rarely use.', 'Subscribe to as many services as possible.', 'Never buy anything.', 'Pay for a whole year at once.'], answer: 0, why: '第5段落 consumers should check their subscriptions regularly and cancel the ones they rarely use。' },
+    ],
+    gist: [
+      { para: 2, choices: ['消費者にとっての定額制の利点', '音楽の作り方', '学生のアルバイト', '本の歴史'], answer: 0, why: '第3段落は、少額でためせる、場所の節約、自動の更新という利点を述べている。' },
+      { para: 3, choices: ['定額制の欠点', '大企業の歴史', '映画の選び方', '料理キットの作り方'], answer: 0, why: '第4段落は、料金のわすれ、所有しないこと、大企業への依存という欠点を述べている。' },
+    ],
+    titleQ: { choices: ['Paying Every Month', 'How to Make a Film', 'The History of Records', 'Why Cars Are Expensive'], answer: 0, why: '全体として、物を持つことから定額で利用することへの変化と、その利点・欠点、かしこい選び方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
