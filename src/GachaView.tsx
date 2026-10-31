@@ -795,6 +795,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
               {levels?.[pick] !== undefined && <span className="zukan-challenge">（いちばん育っている子：Lv.{levels[pick]}）</span>}
               <span className="zukan-challenge">（今日のチャレンジ：{challengeOf(pick).icon} {challengeOf(pick).label}）</span>
               <span className="zukan-challenge">（とくぎ：{skillOf(pick).name}）</span>
+              <span className="zukan-challenge" aria-label="とくぎの説明">（{skillOf(pick).desc}）</span> {/* デザイン143 */}
               <span className="zukan-challenge">（同じ{typeOf(pick).name}のキャラ：ほかに{SPECIES.filter((sp) => sp.id !== pick && typeOf(sp.id).id === typeOf(pick).id).length}体）</span> {/* デザイン126 */}
               <span className="zukan-challenge">（必殺技：{specialOf(pick).name}）</span>
               <span className="zukan-challenge" lang="en">「{replyOf(pick).en}」</span>

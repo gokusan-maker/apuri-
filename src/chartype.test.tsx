@@ -146,3 +146,10 @@ it('デザイン140：キャラ図鑑の説明で、生まれたタマゴの名�
   expect(el.textContent).toBe(`（🥚 ${speciesOf('fox').egg}から生まれた）`)
   expect(el.querySelector('strong')!.textContent).toBe(speciesOf('fox').egg)
 })
+
+it('デザイン143：キャラ図鑑の説明に、とくぎの効果の説明も出る', async () => {
+  const { skillOf } = await import('./partner')
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
+  expect(screen.getByLabelText('とくぎの説明').textContent).toBe(`（${skillOf('fox').desc}）`)
+})
