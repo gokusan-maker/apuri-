@@ -1074,6 +1074,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She [apologized me] for being late.', choices: ['apologized to me', 'apologized me to', 'apologized for me', 'apologize me'], answer: 0, why: 'apologize は自動詞：apologize to 人 for ～「人に～のことであやまる」。' },
     ],
   },
+  {
+    id: 'exam-fix-23',
+    title: '入試の誤文訂正㉓（TOEFL・IELTS の書き言葉⑩：時制をそろえる）',
+    points: ['小論文やグラフの説明では、過去の年・since・for・next month などの時を表す語に合わせて時制をそろえる。and でつなぐ動詞の時制、過去完了、現在完了（進行形）、過去進行形にも注意。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Since 2010, the number of users has increased steadily.', ja: '2010年以来、利用者の数は着実にふえてきた。（since → 現在完了）' }],
+    questions: [
+      { sentence: 'Last year, the company opened a new store and [hires] fifty workers.', choices: ['hired', 'has hired', 'is hiring', 'will hire'], answer: 0, why: 'Last year の過去のことで、opened と時制をそろえる：hired。' },
+      { sentence: 'When I arrived at the party, everyone [has left].', choices: ['had left', 'leaves', 'has been leaving', 'is left'], answer: 0, why: '着いた（過去）より前にみんな帰っていたので過去完了：had left。' },
+      { sentence: 'Since 2010, the number of users [increased] steadily.', choices: ['has increased', 'increases', 'had increased', 'is increasing'], answer: 0, why: 'since ～「～以来（今まで）」は現在完了：has increased。' },
+      { sentence: 'In the 1990s, few people [have owned] a mobile phone.', choices: ['owned', 'have been owning', 'own', 'are owning'], answer: 0, why: 'In the 1990s という過去のことなので過去形：owned。現在完了は過去をはっきり表す語といっしょに使わない。' },
+      { sentence: 'The graph shows that sales rose in 2015 and [fall] in 2016.', choices: ['fell', 'falls', 'have fallen', 'fallen'], answer: 0, why: '2016年も過去のことで、rose と時制をそろえる：fell。' },
+      { sentence: 'I [have lived] in Tokyo when I was a child.', choices: ['lived', 'had lived', 'am living', 'have been living'], answer: 0, why: 'when I was a child の過去のことなので過去形：lived。' },
+      { sentence: 'Next month, the museum [opened] a new exhibition.', choices: ['will open', 'has opened', 'had opened', 'opening'], answer: 0, why: 'Next month は未来なので will open。' },
+      { sentence: 'I [am studying] English for six years now.', choices: ['have been studying', 'studied', 'was studying', 'had studying'], answer: 0, why: 'for six years now「今まで6年間ずっと」は現在完了進行形：have been studying。' },
+      { sentence: 'While I [walk] home yesterday, I met an old friend.', choices: ['was walking', 'am walking', 'have walked', 'walks'], answer: 0, why: '昨日、あることが起きたときにしていた最中のことは過去進行形：was walking。' },
+      { sentence: 'The report, which [is published] last week, shows a clear trend.', choices: ['was published', 'has published', 'publishes', 'is publishing'], answer: 0, why: 'last week の過去のことで、報告書は「発表された」ので過去の受け身：was published。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
