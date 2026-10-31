@@ -305,9 +305,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [sealed, setSealed] = useState(false) // とくぎ封じで勝った
   const [sealTicket, setSealTicket] = useState(false) // とくぎ封じ10回ごとのチケット
   const giveTicket = useContext(ChestTicketContext)
+  const [traitCount, setTraitCount] = useState(0) // デザイン172：このバトルでボスのとくぎが出た回数
   const setTraitMsg = (m: string) => {
     if (m) {
       fired.current = true
+      setTraitCount((n) => n + 1)
     }
     setTraitMsgRaw(m)
   }
@@ -899,6 +901,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {todayWins >= 2 && <span aria-label="今日このボスに勝った回数">📅 今日{todayWins}回目の勝利</span>} {/* デザイン160 */}
             {corrects >= 10 && <strong className="game-best" style={{ fontSize: '1.15em' }} aria-label="正解した問題の数">📚 {corrects}問正解！</strong>} {/* デザイン163 */}
             {hearts >= HEARTS && <span className="game-best" aria-label="ハート満タンで勝利">❤️ ハート満タンで勝利！</span>} {/* デザイン169 */}
+            {traitCount >= 3 && <span className="game-best" aria-label="とくぎにまけずに勝利">🛡 とくぎにまけずに勝利！（{traitCount}回）</span>} {/* デザイン172 */}
             <span className={newRecord > 0 ? 'game-best' : undefined} aria-label={newRecord > 0 ? `最大ダメージ記録を更新！ ${newRecord}` : `最大ダメージ記録 ${loadMaxHit()}`}>
               💥 {newRecord > 0 ? `${newRecord} 更新！` : `最大 ${loadMaxHit()}`}
             </span>

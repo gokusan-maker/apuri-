@@ -1022,3 +1022,16 @@ it('デザイン169：ハートをへらさずに勝つと「❤️ ハート満
   win(true)
   expect(screen.queryByLabelText('ハート満タンで勝利')).toBeNull()
 })
+
+it('デザイン172：ボスのとくぎが3回以上出ても勝つと「🛡 とくぎにまけずに勝利！」が出る', () => {
+  localStorage.clear()
+  let t = 1_000_000
+  const spy = vi.spyOn(Date, 'now').mockImplementation(() => (t += 10_000)) // ゆっくり答えて会心を出さない（てっぺきが毎回出る）
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={['armor']} />)
+  for (let i = 0; i < 30 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  spy.mockRestore()
+  expect(screen.getByLabelText('とくぎにまけずに勝利').textContent).toMatch(/^🛡 とくぎにまけずに勝利！（\d+回）$/)
+})
