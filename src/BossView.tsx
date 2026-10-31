@@ -16,7 +16,7 @@ import { isNight } from './daytime'
 import { ChestTicketContext } from './castle'
 import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
-import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
+import { isWinMilestone, loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
 import { addSealTraits, addSealWin, arenaSeasonOf, attackElemOf, battleRank, BIG_COMBO, BOSS_HP, BOSS_QUESTIONS, BOSS_TRAITS, bossBgOf, BOSSES, bossQuestions, bossTraits, CHARGE_HIT, CHARGE_STUN, cheerOnLose, CONTINUE_COST, countBattle, COUNTER_DMG, counterTarget, CRIT_MS, critDamage, damage, defeatLineOf, DRAIN_HEAL, formatSec, fullTeamHp, GAUGE_MAX, gaugeAfter, GOLDEN_COINS, goldenLook, HEAL_COST, HEARTS, hitMember, hitTarget, hurtLineOf, introLineOf, isAsleep, isChance, isCharge, isCloseLoss, isComeback, isCounterTurn, isCritical, isEnraged, isTeamCombo, levelAttack, loadBossTimes, loadMaxHit, MEMBER_HIT, MEMBER_HP, MINION_COINS, QUICK_RATE, RANK_S_COINS, recordBossTime, recordHit, recordNoMissBoss, reviveOne, SEAL_COINS, SEAL_TICKET_EVERY, shinyLook, SPECIAL_DAMAGE, sRouletteOf, TEAM_COMBO_DAMAGE, TEAM_ORDER, teamBossQuestions, traitAfterHit, type BossLook, type BossRecord, type BossTrait, type TeamHp, type TeamRole } from './boss'
@@ -329,6 +329,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [minionAt, setMinionAt] = useState(-1) // 子分をたおした問題の番号
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
+  const [winCount, setWinCount] = useState(0) // デザイン130：このボスに勝った回数（図鑑の記録）
   const [skillUsed, setSkillUsed] = useState(0) // デザイン121：この戦いで相棒のとくぎが出た回数
   const fireSkill = () => {
     onSkill?.()
@@ -549,7 +550,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     const sec = Math.max(1, Math.round((nowMs() - startedAt.current) / 1000))
     setTime({ sec, best: recordBossTime(look.name, sec) })
     if (wrongs === 0) recordNoMissBoss(look.name)
-    if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
+    if (!noBook) {
+      const nb = recordWin(loadBook(), look, battleRank(hearts, c), dayKey())
+      saveBook(nb)
+      setWinCount(nb[look.name].wins)
+    }
     onWin()
     onDefeat?.()
     if (golden) onRankBonus?.(GOLDEN_COINS)
@@ -603,6 +608,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setWrongs(0)
     setSpecial(0)
     setSkillUsed(0)
+    setWinCount(0)
     setGauge(0)
     setCorrects(0)
     setTeamHits({ word: 0, grammar: 0, reading: 0 })
@@ -867,6 +873,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {corrects + wrongs > 0 && <span aria-label={`正答率 ${Math.round((corrects / (corrects + wrongs)) * 100)}%`}>🎯 正答率 {Math.round((corrects / (corrects + wrongs)) * 100)}%</span>} {/* デザイン127 */}
             {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
             {skill && skillUsed > 0 && <span aria-label={`とくぎ ${skillUsed}回`}>✨ {skill.name} {skillUsed}回</span>} {/* デザイン121 */}
+            {isWinMilestone(winCount) && <span aria-label={`${winCount}回目の勝利`}>🎖 {winCount}回目の勝利！</span>} {/* デザイン130 */}
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}

@@ -839,3 +839,19 @@ it('デザイン127：ボスに勝つと、結果画面にその戦いの正答�
   const pct = Math.round((ok / (ok + 1)) * 100)
   expect(screen.getByLabelText(`正答率 ${pct}%`).textContent).toBe(`🎯 正答率 ${pct}%`)
 })
+
+it('デザイン130：勝った回数の区切りの判定（10・30・50回、そのあとは100回ごと）', async () => {
+  const { isWinMilestone } = await import('./bossbook')
+  expect([1, 9, 10, 11, 30, 50, 99, 100, 150, 200].map(isWinMilestone)).toEqual([false, false, true, false, true, true, false, true, false, true])
+})
+
+it('デザイン130：ボスに勝った回数が10回目になると、結果画面に「🎖 10回目の勝利！」が出る', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const look = BOSSES['中1']
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [look.name]: { look, wins: 9, best: 'A', first: '2026-10-01' } }))
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={[]} />)
+  answer(true)
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(screen.getByLabelText('10回目の勝利').textContent).toBe('🎖 10回目の勝利！')
+})

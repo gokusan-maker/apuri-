@@ -96,3 +96,6 @@ export function secretOf(name: string): string {
   const k = [...name].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 0)
   return SECRETS[k % SECRETS.length]
 }
+
+// デザイン130：勝った回数の区切り（10・30・50回、そのあとは100回ごと）
+export const isWinMilestone = (n: number): boolean => n === 10 || n === 30 || n === 50 || (n >= 100 && n % 100 === 0)
