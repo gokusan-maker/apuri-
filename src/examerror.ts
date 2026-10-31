@@ -864,6 +864,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She was absent [at] school yesterday because of a cold.', choices: ['from', 'of', 'in', 'on'], answer: 0, why: '「～を休む」は be absent from ～。' },
     ],
   },
+  {
+    id: 'exam-fix-18',
+    title: '入試の誤文訂正⑱（TOEFL・IELTS の書き言葉⑦：くり返しをさける言いかえ）',
+    points: ['同じ名詞のくり返しをさける that / those、one / ones、do so、the former / the latter、I hope not など。小論文で比べたり言いかえたりするときによく使う。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The population of China is larger than that of India.', ja: '中国の人口はインドの人口より多い。（that ＝ the population）' }],
+    questions: [
+      { sentence: 'The population of China is larger than [India].', choices: ['that of India', 'those of India', 'India one', 'India\'s one'], answer: 0, why: '比べるのは「中国の人口」と「インドの人口」。単数の名詞のくり返しをさけるのは that of ～。' },
+      { sentence: 'I lost my umbrella, so I bought [new one].', choices: ['a new one', 'new ones', 'a new it', 'the new'], answer: 0, why: '数えられる名詞のくり返しをさける one には、形容詞がつくと a がいる：a new one。' },
+      { sentence: 'These apples are better than [that] at the supermarket.', choices: ['those', 'that ones', 'this', 'them'], answer: 0, why: 'くり返しをさける名詞が複数（apples）なので those。' },
+      { sentence: 'I like red roses better than white [one].', choices: ['ones', 'one', 'it', 'them'], answer: 0, why: 'roses（複数）のくり返しをさけるのは ones：white ones。' },
+      { sentence: 'She asked me to help her, and I was happy to [do it so].', choices: ['do so', 'do so it', 'doing so', 'so do'], answer: 0, why: '前の動詞句（help her）をくり返さずに言うのは do so。' },
+      { sentence: 'I have a cat and a dog; [the former one] is white.', choices: ['the former', 'former one', 'the formers', 'a former'], answer: 0, why: '2つのうち「前者」は the former（後者は the latter）。one はつけない。' },
+      { sentence: 'If you need a pen, I can lend you [it].', choices: ['one', 'ones', 'that', 'the one it'], answer: 0, why: '特定のペンではなく「1本」を指すので one。it は特定のものを指す。' },
+      { sentence: '"Will it rain tomorrow?" "I hope [not it]."', choices: ['not', 'no', 'not so', 'it not'], answer: 0, why: '「そうでないといい」は I hope not。' },
+      { sentence: 'The rules of chess are more complex than [that of] checkers.', choices: ['those of', 'this of', 'it of', 'them of'], answer: 0, why: 'くり返しをさける名詞が複数（rules）なので those of。' },
+      { sentence: 'He said he would come, but he didn\'t [come it].', choices: ['come', 'do so it', 'came', 'coming'], answer: 0, why: 'come は自動詞で目的語をとらない。didn\'t のあとは原形：didn\'t come。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
