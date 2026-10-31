@@ -18409,6 +18409,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Small but Mighty', 'How to Swim with Dolphins', 'The History of Microscopes', 'Why Sharks Are Dangerous'], answer: 0, why: '全体として、小さいけれど酸素や食物連鎖をささえるプランクトンの大切さを述べている。' },
   },
   {
+    id: 'kyotsu-audiobooks',
+    title: 'Reading with Your Ears',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For most of history, reading a book meant looking at words printed on a page. Today, however, a growing number of people are “reading” with their ears. Audiobooks, recordings of books read aloud by professional narrators or by the authors themselves, have become popular around the world. People listen to them while commuting, exercising, cooking, or even falling asleep. This change raises an interesting question about what it really means to read.",
+      "One reason for their popularity is convenience. Busy adults often say that they have no time to sit down with a book, but they can listen while doing other things. Audiobooks also make stories available to people who find printed text difficult to read, such as those with poor eyesight or certain learning difficulties. For them, listening may be the most comfortable way to enjoy literature, ( A ) audiobooks can open doors that were once closed.",
+      "However, some people wonder whether listening to a book is really the same as reading it. Studies comparing the two have produced mixed results. For simple stories, listeners and readers often understand and remember the content about equally well. For difficult texts, though, some research suggests that readers may have an advantage, ( B ) they can easily slow down, go back, and read a difficult sentence again. When listening, it is easier for the mind to wander without the listener noticing.",
+      "Audiobooks also offer experiences that printed books cannot. A skilled narrator can bring characters to life with different voices and show emotions through tone and rhythm. For language learners, listening to a book while following the printed text can be an excellent way to connect the written form of words with their pronunciation. Many learners of English use audiobooks in this way to improve both their listening and their reading.",
+      "In the end, perhaps the question is not which method is better, but which one suits a particular purpose. Reading on paper may be best for studying a difficult textbook, while listening may be ideal for enjoying a novel on a long train journey. What matters most is that people continue to enjoy stories and ideas, in ( C ) form works best for them. After all, a good story can reach us through our eyes or our ears.",
+    ],
+    ja: [
+      '歴史のほとんどのあいだ、本を読むことはページに印刷された言葉を見ることを意味していた。しかし今日、耳で「読む」人がふえている。プロの朗読者や作者自身が本を声に出して読んだ録音であるオーディオブックは、世界中で人気になっている。人々は通勤や運動、料理のあいだ、あるいはねむりにつくときにさえ、それを聞いている。この変化は、読むとは本当はどういうことなのかという興味深い問いを投げかけている。',
+      '人気の理由の一つは便利さである。いそがしい大人は、すわって本を読む時間がないとよく言うが、ほかのことをしながら聞くことはできる。オーディオブックはまた、目が悪い人やある種の学習のむずかしさをかかえる人など、印刷された文字を読むのがむずかしい人にも物語をとどける。そうした人々にとって、聞くことは文学を楽しむ最も快適な方法かもしれず、そのためオーディオブックは、かつては閉ざされていたとびらを開くことができるのである。',
+      'しかし、本を聞くことが本当に読むことと同じなのかと疑問に思う人もいる。2つを比べた研究の結果はさまざまである。かんたんな物語では、聞く人と読む人はしばしば内容を同じくらいよく理解し覚えている。しかしむずかしい文章では、読む人のほうが有利かもしれないと示す研究もある。読む人は、かんたんにゆっくり読んだり、もどったり、むずかしい文を読み直したりできるからである。聞いているときは、聞く人が気づかないうちに心がさまよいやすい。',
+      'オーディオブックには、印刷された本にはない経験もある。うまい朗読者は、ちがう声で登場人物をいきいきとさせ、声の調子やリズムで感情を表すことができる。言語を学ぶ人にとって、印刷された文章を目で追いながら本を聞くことは、言葉の書かれた形と発音を結びつけるすばらしい方法になりうる。英語を学ぶ多くの人が、聞く力と読む力の両方をのばすために、このようにオーディオブックを使っている。',
+      '結局、問題はどちらの方法がすぐれているかではなく、どちらが特定の目的に合っているかなのかもしれない。むずかしい教科書を勉強するには紙で読むのがいちばんかもしれないが、長い電車の旅で小説を楽しむには聞くのが理想的かもしれない。最も大切なのは、どんな形であれ自分に合った形で、人々が物語や考えを楽しみつづけることである。結局のところ、よい物語は目からでも耳からでも私たちにとどくのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「聞くことが最も快適な方法かもしれない、だからとびらを開ける」と結果を表すので so。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「読む人が有利かもしれない。なぜなら読み直しなどができるから」と理由を表すので because。' },
+      { id: 'C', choices: ['whatever', 'whoever', 'however', 'wherever'], answer: 0, why: 'in whatever form ～「どんな形であれ～な形で」。うしろの名詞 form を説明し、works の主語になる名詞句を作るのは whatever。' },
+    ],
+    tf: [
+      { statement: 'オーディオブックは、通勤や料理をしながら聞くことができる。', answer: true, why: '第1段落 People listen to them while commuting, exercising, cooking。' },
+      { statement: 'かんたんな物語では、聞く人は読む人よりいつもずっと理解が低い。', answer: false, why: '第3段落 listeners and readers often understand and remember the content about equally well。' },
+      { statement: '聞いているときは、気づかないうちに心がさまよいやすい。', answer: true, why: '第3段落 When listening, it is easier for the mind to wander without the listener noticing。' },
+      { statement: '筆者は、どんな目的でも紙で読むほうが必ずすぐれていると述べている。', answer: false, why: '第5段落 perhaps the question is not which method is better, but which one suits a particular purpose。' },
+    ],
+    qa: [
+      { q: 'Why might readers have an advantage with difficult texts?', choices: ['They can slow down, go back, and read sentences again.', 'They can listen to different voices.', 'They can read while cooking.', 'They never get tired.'], answer: 0, why: '第3段落 they can easily slow down, go back, and read a difficult sentence again。' },
+      { q: 'How can audiobooks help language learners?', choices: ['By connecting the written form of words with their pronunciation.', 'By replacing all textbooks.', 'By making stories shorter.', 'By translating every word.'], answer: 0, why: '第4段落 an excellent way to connect the written form of words with their pronunciation。' },
+    ],
+    gist: [
+      { para: 1, choices: ['オーディオブックの便利さとだれでも楽しめること', '朗読者の給料', '目の病気の治し方', '料理の手順'], answer: 0, why: '第2段落は、ほかのことをしながら聞ける便利さと、読むのがむずかしい人にもとどくことを述べている。' },
+      { para: 3, choices: ['オーディオブックならではの経験', '声の出し方の練習', '電車の時刻表', '英語の試験の日程'], answer: 0, why: '第4段落は、朗読者の表現や、言語学習への役立ち方など、オーディオブックならではの利点を述べている。' },
+    ],
+    titleQ: { choices: ['Reading with Your Ears', 'How to Write a Novel', 'The History of Printing', 'Why Trains Are Slow'], answer: 0, why: '全体として、オーディオブックの人気・読むこととの比較・独自の利点・目的に合わせた選び方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
