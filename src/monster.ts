@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'salamander', name: 'サンショウオン', egg: 'きよいかわのしずかなタマゴ', token: 'サン', bigToken: 'サンショウオン', color: '#a8a29e', line: '#44403c', rate: 0.02, desc: 'きれいな川の底でじっとくらすオオサンショウウオ。大昔から姿をほとんど変えずに生きてきたように、こつこつ長く学びつづける。' },
   { id: 'goldfish', name: 'キンギョン', egg: 'なつまつりのすくいタマゴ', token: 'キン', bigToken: 'キンギョン', color: '#fb923c', line: '#9a3412', rate: 0.02, desc: '夏祭りでおなじみの赤い金魚。ひらひらと長いひれで水の中をおよぐように、楽しく軽やかに単語を覚える。' },
   { id: 'seaurchin', name: 'ウニン', egg: 'いわばのとげとげタマゴ', token: 'ウニ', bigToken: 'ウニン', color: '#a78bfa', line: '#3b0764', rate: 0.02, desc: '岩場でとげを立ててゆっくり動くウニ。たくさんのとげで身を守るように、まちがえやすい問題にもしっかり身がまえる。' },
   { id: 'honeybee', name: 'ミツバッチ', egg: 'はなばたけのみつタマゴ', token: 'ミツ', bigToken: 'ミツバッチ', color: '#fde047', line: '#713f12', rate: 0.02, desc: '花から花へとびまわって蜜を集めるミツバチ。仲間とダンスで花の場所を教え合うように、覚えたことをみんなと分かち合う。' },

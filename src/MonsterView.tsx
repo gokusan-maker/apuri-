@@ -911,6 +911,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 82 q-14 12 -20 4 q8 -2 20 -4 q12 2 20 4 q-6 8 -20 -4 Z" fill="#fdba74" stroke="#9a3412" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'salamander')
+    return (
+      <g>
+        {/* 体のまだらもよう */}
+        <circle cx="38" cy="66" r="3" fill="#57534e" />
+        <circle cx="60" cy="72" r="2.5" fill="#57534e" />
+        <circle cx="64" cy="60" r="2" fill="#57534e" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
