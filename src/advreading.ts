@@ -21295,6 +21295,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living with Earthquakes', 'How to Build a Tall Tower', 'The History of Trains', 'Why Rocks Are Hard'], answer: 0, why: '全体として、地震のしくみ、予測と速報、建物の工夫、一人ひとりの備えを述べている。' },
   },
   {
+    id: 'kyotsu-picture-books',
+    title: 'More Than Pictures',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many of us can still remember the picture books we loved as small children. We may have forgotten most of the words, but the colorful pictures and the feeling of sitting close to someone who was reading to us often stay in our memories for a lifetime. Although picture books are usually thought of as simple stories for young children, they are a rich form of art that combines words and images in powerful ways.",
+      "In a good picture book, the words and pictures do not simply repeat each other. Instead, they work together, and each adds something the other cannot. The text might say only that a child walked home, while the picture shows a dark forest, a worried face, and a small animal following behind. Young readers learn to look carefully and to notice details ( A ) tell them more about the story. In this way, picture books help children develop the ability to interpret images, a skill that is increasingly important in a world full of visual information.",
+      "Reading picture books aloud also has many benefits. When adults read to children, the children hear new words and learn how sentences are formed, which can help their language development. Sharing a book also creates time for conversation. A parent might ask what a character is feeling or what will happen next, encouraging the child to think and express ideas. Many experts believe that such experiences can help children develop a lifelong love of reading.",
+      "Picture books are not only for children, however. Some books deal with serious topics such as loss, friendship, or the environment in ways that adults find moving. Because the stories are short and the images are strong, they can express complex feelings very directly. In some countries, picture books are even used in hospitals and care homes, ( B ) they help people of all ages relax and share memories.",
+      "Creating a picture book is far from easy. Authors must choose every word carefully, since there is little space, and illustrators must decide how each page will look and how it will lead the reader to the next. The result, when it succeeds, is a small work of art that can be enjoyed again and again. Perhaps that is why so many adults keep the picture books of their childhood and later share them with their own children. A good picture book reminds us ( C ) a simple story can stay with us for many years.",
+    ],
+    ja: [
+      '私たちの多くは、小さいころに大好きだった絵本を今でも思い出すことができる。ことばのほとんどはわすれてしまったかもしれないが、色あざやかな絵や、読んでくれる人のすぐそばにすわっていたときの気持ちは、一生記憶に残ることが多い。絵本はふつう小さな子どものためのかんたんな物語だと考えられているが、ことばと絵を力強く組み合わせた豊かな芸術の形である。',
+      'よい絵本では、ことばと絵はただおたがいをくり返すのではない。そうではなく、いっしょに働き、それぞれが相手にはできないものを加える。文章は子どもが歩いて家に帰ったとしか言わないかもしれないが、絵には暗い森や心配そうな顔、うしろからついてくる小さな動物がえがかれている。小さな読者は注意深く見て、物語についてより多くを教えてくれる細かいところに気づくようになる。このようにして、絵本は子どもが絵を読みとる力をのばすのを助ける。それは、目で見る情報にあふれた世界でますます大切になっている力である。',
+      '絵本を読み聞かせることにも多くの利点がある。おとなが子どもに読むと、子どもは新しいことばを聞き、文がどのように作られるかを学び、それがことばの発達を助けることがある。本をいっしょに読むことは、会話の時間も生み出す。親は登場人物がどう感じているか、次に何が起こるかをたずね、子どもが考えて自分の考えを表すようにうながすかもしれない。多くの専門家は、そうした経験が、子どもが一生読書を好きになるのに役立つと考えている。',
+      'しかし、絵本は子どもだけのものではない。別れや友情や環境のような重いテーマを、おとなが心を動かされるような方法であつかう本もある。物語が短く絵が強いので、複雑な気持ちをとても直接に伝えることができる。国によっては、絵本は病院や介護施設でも使われており、そこでは、あらゆる年齢の人がリラックスし、思い出を分かち合うのに役立っている。',
+      '絵本をつくることはけっしてかんたんではない。場所が少ないので作家は一つひとつのことばを注意深く選ばなければならず、画家は各ページをどのように見せ、どのように読者を次のページへみちびくかを決めなければならない。それがうまくいったとき、その結果は何度も楽しめる小さな芸術作品になる。おそらくそれが、多くのおとなが子どものころの絵本をとっておき、のちに自分の子どもと分かち合う理由だろう。よい絵本は、かんたんな物語が何年も心に残りうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 details を受け、tell の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は hospitals and care homes（場所）で、うしろの they help ～ は完全な文なので関係副詞 where（非制限用法）。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: 'よい絵本では、ことばと絵が同じことをくり返すだけである。', answer: false, why: '第2段落 the words and pictures do not simply repeat each other。' },
+      { statement: '読み聞かせは、子どもが新しいことばを聞く機会になる。', answer: true, why: '第3段落 the children hear new words。' },
+      { statement: '絵本の中には、おとなが心を動かされるものもある。', answer: true, why: '第4段落 in ways that adults find moving。' },
+      { statement: '筆者によれば、絵本をつくるのはかんたんである。', answer: false, why: '第5段落 Creating a picture book is far from easy。' },
+    ],
+    qa: [
+      { q: 'What skill do picture books help children develop?', choices: ['The ability to interpret images.', 'The ability to draw quickly.', 'The ability to write long stories.', 'The ability to sing.'], answer: 0, why: '第2段落 picture books help children develop the ability to interpret images。' },
+      { q: 'Where are picture books used in some countries besides homes?', choices: ['In hospitals and care homes.', 'Only in libraries.', 'In factories.', 'At sports events.'], answer: 0, why: '第4段落 picture books are even used in hospitals and care homes。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ことばと絵がいっしょに働く絵本のしくみ', '森の歩き方', '動物の育て方', '色の名前'], answer: 0, why: '第2段落は、ことばと絵がたがいに足りないものをおぎない合うことと、絵を読みとる力を述べている。' },
+      { para: 2, choices: ['読み聞かせの利点', '親の仕事', '本の値段', '文法のきまり'], answer: 0, why: '第3段落は、ことばの発達、会話、読書好きになることという読み聞かせの利点を述べている。' },
+    ],
+    titleQ: { choices: ['More Than Pictures', 'How to Draw a Forest', 'The History of Hospitals', 'Why Children Sleep'], answer: 0, why: '全体として、絵本がことばと絵を組み合わせた芸術であり、子どもにもおとなにも価値があることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
