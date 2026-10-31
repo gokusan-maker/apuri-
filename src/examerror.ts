@@ -530,6 +530,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He got his sister (A) help (B) him (C) with (D) his homework.', choices: ['(A) help', '(B) him', '(C) with', '(D) his homework'], answer: 0, why: 'get ＋人＋ to ＋原形「人に～してもらう」：got his sister to help。' },
     ],
   },
+  {
+    id: 'exam-error-pronoun',
+    title: '入試の正誤問題㉔（代名詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主格と目的格（between you and me）、所有代名詞 mine・a friend of mine、再帰代名詞、the other と the others、another、くり返しをさける that と those、their と theirs に注目する。',
+    ],
+    examples: [
+      { en: 'The climate of Osaka is milder than that of Hokkaido.', ja: '大阪の気候は北海道の気候よりおだやかだ。（that ＝ the climate）' },
+      { en: 'I have two brothers; one lives in Tokyo, and the other lives in Osaka.', ja: '兄弟が2人いて、1人は東京、もう1人は大阪に住んでいる。' },
+    ],
+    questions: [
+      { sentence: 'My sister and (A) me (B) went (C) to the park (D) yesterday.', choices: ['(A) me', '(B) went', '(C) to the park', '(D) yesterday'], answer: 0, why: '主語なので主格：My sister and I。' },
+      { sentence: 'Please (A) keep this secret (B) between (C) you and (D) I.', choices: ['(A) keep this secret', '(B) between', '(C) you and', '(D) I'], answer: 3, why: '前置詞 between のあとは目的格：between you and me。' },
+      { sentence: 'This umbrella (A) must be (B) yours because it (C) is not (D) my.', choices: ['(A) must be', '(B) yours because it', '(C) is not', '(D) my'], answer: 3, why: '「私のもの」は所有代名詞 mine。' },
+      { sentence: 'The children (A) enjoyed (B) them (C) at the party (D) very much.', choices: ['(A) enjoyed', '(B) them', '(C) at the party', '(D) very much'], answer: 1, why: '主語と同じ人を目的語にするときは再帰代名詞：enjoyed themselves。' },
+      { sentence: 'I have two brothers; one lives in Tokyo, and (A) the (B) others (C) lives (D) in Osaka.', choices: ['(A) the', '(B) others', '(C) lives', '(D) in Osaka'], answer: 1, why: '2人のうち「もう一方」は the other（単数）。the others は残り全部（複数）。' },
+      { sentence: 'The climate (A) of Osaka is (B) milder than (C) this (D) of Hokkaido.', choices: ['(A) of Osaka is', '(B) milder than', '(C) this', '(D) of Hokkaido'], answer: 2, why: '前に出た名詞（the climate）のくり返しをさけるのは that：that of Hokkaido。' },
+      { sentence: 'I don’t like this shirt; can you show me (A) other (B) one (C) in (D) blue?', choices: ['(A) other', '(B) one', '(C) in', '(D) blue'], answer: 0, why: '「別のもう1つ」は another：another one。other は単数の名詞の前に単独で置かない。' },
+      { sentence: '(A) Everyone (B) must bring (C) theirs own (D) lunch.', choices: ['(A) Everyone', '(B) must bring', '(C) theirs own', '(D) lunch'], answer: 2, why: '名詞の前に置く所有の形は their：their own lunch。theirs は「彼らのもの」。' },
+      { sentence: 'He is a friend of (A) me, and we (B) often (C) play (D) tennis.', choices: ['(A) me, and we', '(B) often', '(C) play', '(D) tennis'], answer: 0, why: 'a friend of ＋所有代名詞：a friend of mine。' },
+      { sentence: 'These shoes (A) are cheaper (B) than (C) that (D) in the other shop.', choices: ['(A) are cheaper', '(B) than', '(C) that', '(D) in the other shop'], answer: 2, why: 'くり返しをさける名詞が複数（shoes）なので those：than those in the other shop。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

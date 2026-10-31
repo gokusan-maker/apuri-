@@ -3249,3 +3249,4 @@
 - 2026-10-31: 文法：入試の誤文訂正⑰（前置詞の難問②：on May 5・arrive at・good at・interested in・different from・by Friday・famous for・absent from）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「おこづかいが教えること」（くらし・お金・what の名詞節／but／主格の that の空所）
 - 2026-10-31: デザイン：ボスに勝った回数が10・30・50回、100回ごとの区切りになったとき、勝利画面に「🎖 ○回目の勝利！」を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㉔（代名詞の難問：between you and me・mine・themselves・the other・another・that/those of・their own）10問

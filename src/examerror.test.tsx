@@ -288,3 +288,10 @@ it('誤文訂正⑰：前置詞の難問②の単元が10問ある', async () =>
   expect(u.questions).toHaveLength(10)
   expect(u.questions[6].choices[u.questions[6].answer]).toBe('by')
 })
+
+it('正誤問題㉔：代名詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-pronoun')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[2].choices[u.questions[2].answer]).toBe('(D) my')
+})
