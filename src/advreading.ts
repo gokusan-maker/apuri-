@@ -18916,6 +18916,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Talking to Machines', 'How to Build a Speaker', 'The History of Refrigerators', 'Why Children Are Polite'], answer: 0, why: '全体として、音声アシスタントの便利さと、聞きまちがい・プライバシー・礼儀の問題を述べている。' },
   },
   {
+    id: 'kyotsu-punctuation',
+    title: 'The Story of Punctuation',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Imagine trying to read a book in which there were no spaces between words, no commas, and no full stops. Every line would be a long chain of letters, and you would have to work out for yourself where each word and sentence began and ended. Surprisingly, this is how many texts were written in the ancient world. The marks that help us read today have a long and interesting history. Most of them were developed slowly over many centuries.",
+      "In ancient Greece and Rome, it was common to write words one after another without spaces. Reading was usually done aloud, often by trained readers ( A ) had studied the text in advance and knew where to pause. Since few people could read at all, there was little need to make writing easier for ordinary readers. A text was treated more like a record of speech than something designed to be read silently.",
+      "Over many centuries, scribes who copied books by hand began to add marks to help readers. Some used dots placed at different heights to show short or long pauses, and in the early Middle Ages, spaces between words gradually became common in many places. These changes made it possible for more people to read silently and quickly, without needing to sound out every letter.",
+      "The invention of printing had a great influence on punctuation. When books were produced in large numbers, printers needed consistent rules so that the same marks meant the same things in every copy. Over time, symbols such as the comma, the full stop, and the question mark became standard, ( B ) helped readers in different places understand texts in the same way.",
+      "Today, punctuation may seem like a small detail, but it can completely change the meaning of a sentence. “Let's eat, children” is an invitation, while “Let's eat children” sounds like something from a horror story. In the age of text messages, people have even created new uses for marks, such as using several exclamation marks to show excitement. The history of punctuation shows ( C ) writing is not fixed, but continues to change as people find new ways to communicate. Perhaps the marks we use tomorrow will look quite different from the ones we use today.",
+    ],
+    ja: [
+      '単語のあいだにすき間がなく、コンマもピリオドもない本を読もうとすることを想像してみよう。どの行も文字の長い連なりで、それぞれの単語や文がどこで始まりどこで終わるかを自分で考えなければならないだろう。おどろくことに、古代の世界では多くの文章がこのように書かれていた。今日私たちが読むのを助けている記号には、長くておもしろい歴史がある。そのほとんどは、何世紀もかけてゆっくりと生まれてきたものである。',
+      '古代のギリシャやローマでは、単語をすき間なく次々に書くのがふつうだった。読むことはふつう声に出して行われ、しばしば前もって文章を学び、どこで区切ればよいかを知っている訓練を受けた読み手がそれをした。字を読める人はほとんどいなかったので、ふつうの読み手のために書き方をかんたんにする必要はあまりなかった。文章は、だまって読むためのものというより、話した言葉の記録のようにあつかわれていた。',
+      '何世紀ものあいだに、本を手で書き写す写字生が、読み手を助けるための記号を加えはじめた。ちがう高さに打った点で短い区切りや長い区切りを示す人もおり、中世のはじめごろには、単語のあいだのすき間が多くの場所でだんだんふつうになった。こうした変化によって、より多くの人が、一字一字声に出さなくても、だまってすばやく読めるようになった。',
+      '印刷の発明は句読点に大きな影響をあたえた。本が大量に作られるようになると、印刷業者は、どの本でも同じ記号が同じ意味を表すように、一貫したきまりを必要とした。時がたつにつれて、コンマやピリオド、疑問符のような記号が標準になり、そのことが、ちがう場所の読み手が同じように文章を理解するのを助けた。',
+      '今日、句読点は小さなことに思えるかもしれないが、文の意味をすっかり変えてしまうことがある。「子どもたち、食べよう」は誘いの言葉だが、コンマがないと「子どもたちを食べよう」と、こわい物語のように聞こえてしまう。メールやメッセージの時代には、感嘆符をいくつも使って興奮を表すなど、人々は記号の新しい使い方まで生み出している。句読点の歴史は、書くことが決まったものではなく、人々が新しい伝え方を見つけるにつれて変わりつづけることを示している。もしかすると、明日私たちが使う記号は、今日使っているものとはかなりちがって見えるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 trained readers（人）を受け、うしろの had studied の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（記号が標準になったこと）を受け、helped の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '古代のギリシャやローマでは、単語のあいだにすき間を入れずに書くのがふつうだった。', answer: true, why: '第2段落 it was common to write words one after another without spaces。' },
+      { statement: '古代では、ほとんどの人が字を読むことができた。', answer: false, why: '第2段落 Since few people could read at all。' },
+      { statement: '印刷が広まると、句読点のきまりをそろえる必要が生まれた。', answer: true, why: '第4段落 printers needed consistent rules。' },
+      { statement: '筆者によれば、句読点は文の意味にほとんど影響しない。', answer: false, why: '第5段落 it can completely change the meaning of a sentence。' },
+    ],
+    qa: [
+      { q: 'Why was there little need to make writing easier in the ancient world?', choices: ['Few people could read at all.', 'Books were very short.', 'Everyone read silently.', 'Paper was cheap.'], answer: 0, why: '第2段落 Since few people could read at all, there was little need to make writing easier。' },
+      { q: 'What did spaces between words make possible?', choices: ['More people could read silently and quickly.', 'Books became longer.', 'Printing became unnecessary.', 'Reading aloud became required.'], answer: 0, why: '第3段落 These changes made it possible for more people to read silently and quickly。' },
+    ],
+    gist: [
+      { para: 2, choices: ['写字生が加えた記号と単語のすき間', '紙の作り方', '修道院のくらし', '声の出し方'], answer: 0, why: '第3段落は、写字生が区切りの点を打ち、単語のすき間がふつうになった変化を述べている。' },
+      { para: 3, choices: ['印刷と句読点の標準化', '印刷機の値段', '本屋の歴史', '疑問符の形'], answer: 0, why: '第4段落は、印刷によって句読点のきまりがそろえられ、標準になったことを述べている。' },
+    ],
+    titleQ: { choices: ['The Story of Punctuation', 'How to Write a Novel', 'The History of Rome', 'Why Children Like Stories'], answer: 0, why: '全体として、すき間も句読点もない古代の文章から、今日の句読点までの歴史と、その大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
