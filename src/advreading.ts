@@ -19813,6 +19813,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Drinking Water the Right Way', 'How to Win a Marathon', 'The History of Sports Drinks', 'Why We Feel Hungry'], answer: 0, why: '全体として、運動中の水分のとり方とその理由、塩分、飲みすぎへの注意を述べている。' },
   },
   {
+    id: 'kyotsu-canned-food',
+    title: 'Food in a Sealed Box',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, we can walk into a supermarket and buy fish caught on the other side of the world or fruit picked months ago. One of the inventions that made this possible is surprisingly simple: the sealed container. The story of canned food shows how a practical problem can lead to an idea that changes the daily lives of millions of people.",
+      "About two hundred years ago, armies and sailors faced a serious difficulty. Soldiers marching far from home and sailors on long voyages needed food that would not spoil. Dried and salted foods lasted for a long time, but they were not very nutritious, and many sailors became ill during long voyages. The French government is said to have offered a prize to anyone ( A ) could find a better way to preserve food.",
+      "A French cook named Nicolas Appert worked on this problem for years. He discovered that if food was sealed tightly in glass bottles and then heated in boiling water, it stayed good for months. At the time, nobody understood exactly why this method worked. It was only decades later that scientists showed that tiny living things called bacteria cause food to spoil, and that heating kills them. Appert had found the right method long before anyone could explain it.",
+      "Glass bottles, however, were heavy and broke easily. Soon, people in Britain began using containers made of metal coated with tin, which were stronger and lighter. These early cans were so thick and hard to open that people sometimes needed a hammer and a knife. Interestingly, a practical can opener was not invented until many years after the can itself, ( B ) shows that inventions do not always appear in the order we might expect.",
+      "Over time, canning became faster and cheaper, and canned food spread around the world. It allowed people to eat vegetables and fish in places where they could not be grown or caught, and to store food for emergencies. Today, many households keep canned food in case of disasters. Although canned food is now so common that we rarely think about it, its history reminds us ( C ) great changes can begin with an attempt to solve one simple problem.",
+    ],
+    ja: [
+      '今日、私たちはスーパーマーケットに入れば、世界の反対側でとれた魚や何か月も前につんだ果物を買うことができる。これを可能にした発明の1つは、おどろくほどシンプルなもの、つまり密閉された容器である。かんづめの物語は、実際的な問題が何百万人もの毎日の生活を変える考えにつながりうることを示している。',
+      '約200年前、軍隊や船乗りは深刻な困難にぶつかっていた。故郷から遠くへ行軍する兵士や長い航海に出る船乗りには、いたまない食べ物が必要だった。乾燥させた食べ物や塩づけの食べ物は長もちしたが、栄養があまりなく、多くの船乗りが長い航海のあいだに病気になった。フランス政府は、食べ物を保存するよりよい方法を見つけた人に賞をあたえると申し出たといわれている。',
+      'ニコラ・アペールというフランスの料理人が、何年もこの問題に取り組んだ。彼は、食べ物をガラスびんにしっかり密閉し、それから沸とうしたお湯で温めると、何か月ももつことを発見した。当時、この方法がなぜうまくいくのか正確に理解している人はだれもいなかった。細菌とよばれる小さな生き物が食べ物をいたませ、熱がそれを殺すことを科学者が示したのは、何十年もあとのことだった。アペールは、だれもそれを説明できるようになるずっと前に、正しい方法を見つけていたのである。',
+      'しかし、ガラスびんは重く、こわれやすかった。まもなく、イギリスの人々は、すずをぬった金属でできた、より丈夫で軽い容器を使いはじめた。こうした初期のかんはとても厚くて開けにくかったので、人々はときにはハンマーとナイフを必要とした。興味深いことに、実用的なかん切りはかんそのものより何年もあとまで発明されなかった。このことは、発明が私たちの予想する順番で現れるとはかぎらないことを示している。',
+      '時がたつにつれ、かんづめづくりはより速く安くなり、かんづめは世界中に広まった。かんづめのおかげで、野菜や魚を育てたりとったりできない場所でも食べられるようになり、非常時のために食べ物をたくわえられるようになった。今日、多くの家庭が災害に備えてかんづめを置いている。かんづめは今ではとてもありふれているので私たちはめったにそれについて考えないが、その歴史は、大きな変化が1つのシンプルな問題を解決しようとすることから始まりうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'whom'], answer: 0, why: '先行詞は anyone（人）で、could find の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の文の内容全体を受け、shows の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '約200年前、長い航海に出る船乗りには、いたまない食べ物が必要だった。', answer: true, why: '第2段落 sailors on long voyages needed food that would not spoil。' },
+      { statement: 'アペールは、細菌が食べ物をいたませることを知っていた。', answer: false, why: '第3段落 At the time, nobody understood exactly why this method worked。' },
+      { statement: '初期のかんは、開けるのにハンマーとナイフが必要なこともあった。', answer: true, why: '第4段落 people sometimes needed a hammer and a knife。' },
+      { statement: 'かん切りは、かんよりも先に発明された。', answer: false, why: '第4段落 a practical can opener was not invented until many years after the can itself。' },
+    ],
+    qa: [
+      { q: 'What did Appert discover?', choices: ['Food sealed in bottles and heated in boiling water stayed good for months.', 'Salt makes food more nutritious.', 'Bacteria can be seen without tools.', 'Metal cans are lighter than bottles.'], answer: 0, why: '第3段落 if food was sealed tightly in glass bottles and then heated in boiling water, it stayed good for months。' },
+      { q: 'Why did people begin using metal containers?', choices: ['They were stronger and lighter than glass bottles.', 'They were easier to open.', 'They were made in France.', 'They kept food warm.'], answer: 0, why: '第4段落 Glass bottles ... were heavy and broke easily ... containers made of metal coated with tin, which were stronger and lighter。' },
+    ],
+    gist: [
+      { para: 1, choices: ['食べ物の保存という問題と賞', '軍隊の歴史', '船の作り方', '塩の値段'], answer: 0, why: '第2段落は、軍隊や船乗りの食べ物の問題と、よりよい保存方法への賞を述べている。' },
+      { para: 4, choices: ['かんづめの広まりと今日の役割', 'スーパーマーケットの経営', '災害の予測', '野菜の育て方'], answer: 0, why: '第5段落は、かんづめが世界に広まり、遠くの食べ物や非常時の備えに役立つことを述べている。' },
+    ],
+    titleQ: { choices: ['Food in a Sealed Box', 'How to Become a Cook', 'The History of Sailing Ships', 'Why Bacteria Are Useful'], answer: 0, why: '全体として、食べ物を保存する問題からかんづめが生まれ、広まった歴史を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
