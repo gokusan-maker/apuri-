@@ -578,6 +578,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) don’t know (B) whether he will come (C) and (D) not.', choices: ['(A) don’t know', '(B) whether he will come', '(C) and', '(D) not'], answer: 2, why: '「～かどうか」は whether ～ or not。' },
     ],
   },
+  {
+    id: 'exam-error-invert',
+    title: '入試の正誤問題㉖（倒置・強調の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'Never・Little・Rarely・Only・Not until が文頭に出たときの倒置、So ～ that の倒置、強調構文 It is ～ that、助動詞 do による強調、場所の語句が文頭に出る倒置に注目する。',
+    ],
+    examples: [
+      { en: 'It was in 2010 that we first met.', ja: '私たちがはじめて会ったのは2010年だった。（強調構文）' },
+      { en: 'Not until he lost his job did he realize the value of money.', ja: '仕事を失ってはじめて、彼はお金の大切さに気づいた。' },
+    ],
+    questions: [
+      { sentence: 'Never (A) I have (B) seen (C) such (D) a beautiful view.', choices: ['(A) I have', '(B) seen', '(C) such', '(D) a beautiful view'], answer: 0, why: '否定語 Never が文頭に出ると倒置：Never have I seen ～。' },
+      { sentence: 'It was (A) in 2010 (B) which (C) we (D) first met.', choices: ['(A) in 2010', '(B) which', '(C) we', '(D) first met'], answer: 1, why: '強調構文 It was ～ that …：It was in 2010 that we first met。' },
+      { sentence: 'Only (A) yesterday (B) I learned (C) the (D) truth.', choices: ['(A) yesterday', '(B) I learned', '(C) the', '(D) truth'], answer: 1, why: 'Only ＋副詞が文頭に出ると倒置：Only yesterday did I learn the truth。' },
+      { sentence: 'Not until (A) he lost his job (B) he realized (C) the value (D) of money.', choices: ['(A) he lost his job', '(B) he realized', '(C) the value', '(D) of money'], answer: 1, why: 'Not until ～ が文頭に出ると、主節が倒置：did he realize。' },
+      { sentence: 'So difficult (A) was (B) the exam (C) which (D) many students failed.', choices: ['(A) was', '(B) the exam', '(C) which', '(D) many students failed'], answer: 2, why: 'So ～ that … の構文：So difficult was the exam that many students failed。' },
+      { sentence: 'Little (A) she knew (B) about (C) the (D) plan.', choices: ['(A) she knew', '(B) about', '(C) the', '(D) plan'], answer: 0, why: '否定の Little が文頭に出ると倒置：Little did she know。' },
+      { sentence: 'She (A) did (B) come (C) to the party, but she (D) leaved early.', choices: ['(A) did', '(B) come', '(C) to the party, but she', '(D) leaved early'], answer: 3, why: 'leave の過去形は left。did come は「本当に来た」と強める正しい形。' },
+      { sentence: 'It is not (A) money (B) but (C) health (D) what matters most.', choices: ['(A) money', '(B) but', '(C) health', '(D) what matters most'], answer: 3, why: '強調構文 It is not A but B that …：that matters most。' },
+      { sentence: 'Rarely (A) we see (B) such (C) heavy snow (D) in this city.', choices: ['(A) we see', '(B) such', '(C) heavy snow', '(D) in this city'], answer: 0, why: '否定の Rarely が文頭に出ると倒置：Rarely do we see ～。' },
+      { sentence: 'Under the tree (A) sat (B) an old man, (C) who (D) were reading a book.', choices: ['(A) sat', '(B) an old man,', '(C) who', '(D) were reading a book'], answer: 3, why: '先行詞は an old man（単数）なので was reading。場所が文頭に出た倒置 sat an old man は正しい。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

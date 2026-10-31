@@ -316,3 +316,10 @@ it('誤文訂正⑲：並列の形をそろえる単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('cooking')
 })
+
+it('正誤問題㉖：倒置・強調の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-invert')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(B) which')
+})
