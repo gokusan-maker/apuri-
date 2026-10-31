@@ -351,3 +351,10 @@ it('正誤問題㉘：関係詞・名詞節の難問の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[7].choices[u.questions[7].answer]).toBe('(A) where')
 })
+
+it('誤文訂正㉒：動詞の語法の難問③の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-22')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('robbed me')
+})

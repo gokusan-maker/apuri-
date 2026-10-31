@@ -1032,6 +1032,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The factory bought some new [machineries].', choices: ['machinery', 'machines of', 'a machinery', 'machineries of'], answer: 0, why: 'machinery「機械類」は数えられない名詞：some new machinery（数えるなら machines）。' },
     ],
   },
+  {
+    id: 'exam-fix-22',
+    title: '入試の誤文訂正㉒（動詞の語法の難問③）',
+    points: ['steal と rob、mention・enter・approach（前置詞がいらない他動詞）、prevent 人 from -ing、afford to ～、suit（前置詞なし）、deny -ing、apologize to 人 for ～ など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The thief robbed me of my wallet.', ja: 'どろぼうは私から財布をうばった。（rob 人 of 物）' }],
+    questions: [
+      { sentence: 'Someone [robbed my bag] while I was asleep on the train.', choices: ['stole my bag', 'robbed me my bag', 'stole me of my bag', 'robbed of my bag'], answer: 0, why: '物を目的語にするのは steal：stole my bag。rob は rob 人 of 物 の形。' },
+      { sentence: 'The thief [stole me] of my wallet.', choices: ['robbed me', 'stole from me', 'robbed from me', 'stealed me'], answer: 0, why: 'rob 人 of 物「人から物をうばう」：robbed me of my wallet。' },
+      { sentence: 'Did he [mention about] the plan at the meeting?', choices: ['mention', 'mention of', 'mention on', 'mentioning about'], answer: 0, why: 'mention は他動詞で前置詞はいらない：mention the plan。' },
+      { sentence: 'He [entered into] the room quietly.', choices: ['entered', 'entered in', 'was entered', 'entered to'], answer: 0, why: '場所に「入る」enter は他動詞：entered the room。' },
+      { sentence: 'We slowly [approached to] the old castle.', choices: ['approached', 'approached at', 'were approached to', 'approach to'], answer: 0, why: 'approach「～に近づく」は他動詞で前置詞はいらない：approached the castle。' },
+      { sentence: 'The doctor [prevented him to smoke] in the hospital.', choices: ['prevented him from smoking', 'prevented him smoke', 'prevented from him smoking', 'prevented his to smoke'], answer: 0, why: 'prevent 人 from -ing「人が～するのをさまたげる」。' },
+      { sentence: 'I can\'t [afford buying] a new car this year.', choices: ['afford to buy', 'afford buy', 'afford of buying', 'afford for buying'], answer: 0, why: 'afford「～する余裕がある」のあとは to 不定詞：afford to buy。' },
+      { sentence: 'That blue shirt really [suits with] you.', choices: ['suits', 'suits to', 'is suited with', 'suit for'], answer: 0, why: 'suit「（人に）似合う」は他動詞で前置詞はいらない：suits you。' },
+      { sentence: 'He [denied to have] taken the money.', choices: ['denied having', 'denied to take', 'denied take', 'denied of having'], answer: 0, why: 'deny のあとは動名詞：denied having taken the money。' },
+      { sentence: 'She [apologized me] for being late.', choices: ['apologized to me', 'apologized me to', 'apologized for me', 'apologize me'], answer: 0, why: 'apologize は自動詞：apologize to 人 for ～「人に～のことであやまる」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
