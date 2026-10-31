@@ -18877,6 +18877,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Water Beneath Our Feet', 'How to Swim in Lakes', 'The History of Tokyo', 'Why Rain Is Cold'], answer: 0, why: '全体として、見えない地下水の大切さ、使い道、くみすぎや汚染の問題と管理を述べている。' },
   },
   {
+    id: 'kyotsu-voice-assistants',
+    title: 'Talking to Machines',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "“What will the weather be like tomorrow?” “Play my favourite song.” “Set an alarm for six o'clock.” In many homes today, people say such things not to another person but to a machine. Voice assistants, programs that understand spoken requests and respond to them, are now built into smartphones, speakers, cars, and even refrigerators. For many users, talking to technology has become a normal part of daily life.",
+      "The main attraction of voice assistants is convenience. Users can ask questions, send messages, or control lights and heating without touching a screen, which is especially useful when their hands are busy, for example while cooking or driving. Voice assistants can also be very helpful for people who find screens and small buttons difficult to use, such as older people or those with poor eyesight. For them, simply speaking may be the easiest way to use technology.",
+      "However, voice assistants do not always understand what people say. They may have difficulty with strong accents, background noise, or unusual words, and they sometimes give answers that are completely unrelated to the question. Users who are not understood may have to repeat themselves several times, ( A ) can be frustrating. Developers are working to improve the systems by training them with recordings of many different voices.",
+      "Privacy is another important concern. In order to respond quickly, many devices are always listening for a special word that wakes them up. Some people worry that the devices might record private conversations by mistake, or that the information collected could be used in ways they did not expect. Experts advise users to check the privacy settings carefully and to delete recordings ( B ) they do not want to keep.",
+      "Some parents have also raised a different question: how will talking to machines affect children? Because voice assistants respond to commands without needing “please” or “thank you,” some worry that children may become less polite. Others point out that children can learn to tell the difference between speaking to a machine and speaking to a person. As voice technology becomes more common, the way ( C ) we use it will continue to raise new questions about convenience, privacy, and manners.",
+    ],
+    ja: [
+      '「明日の天気はどう？」「お気に入りの曲をかけて」「6時にアラームをセットして」。今日、多くの家庭で、人々はこうしたことをほかの人ではなく機械に向かって言っている。話しかけられたお願いを理解してこたえるプログラムである音声アシスタントは、今ではスマートフォンやスピーカー、車、さらには冷蔵庫にまで組みこまれている。多くの利用者にとって、技術に話しかけることは日常生活のふつうの一部になっている。',
+      '音声アシスタントのおもな魅力は便利さである。利用者は画面にふれずに質問したり、メッセージを送ったり、明かりや暖房を操作したりでき、これはたとえば料理や運転のように手がふさがっているときにとくに役立つ。音声アシスタントはまた、年配の人や目の悪い人など、画面や小さなボタンが使いにくい人にとって、とても助けになる。そうした人々にとっては、ただ話すことが技術を使う最もかんたんな方法かもしれない。',
+      'しかし、音声アシスタントはいつも人が言うことを理解できるわけではない。強いなまりや周りの雑音、めずらしい言葉が苦手なことがあり、質問とまったく関係のない答えを返すこともある。理解してもらえない利用者は何度もくり返さなければならないかもしれず、そのことはいらいらさせることがある。開発者は、さまざまな声の録音を使ってしくみを訓練し、改良しようとしている。',
+      'プライバシーも大切な心配ごとである。すばやくこたえるために、多くの機器は、自分を起こす特別な言葉をいつも聞きとろうとしている。機器がまちがって私的な会話を録音してしまうのではないか、集められた情報が思いがけない形で使われるのではないかと心配する人もいる。専門家は、利用者にプライバシーの設定を注意深く確かめ、残しておきたくない録音は消すよう助言している。',
+      '別の問いを投げかける親もいる。機械に話しかけることは子どもにどう影響するのだろうか。音声アシスタントは「お願いします」や「ありがとう」がなくても命令にこたえるので、子どもがあまりていねいでなくなるのではないかと心配する人もいる。一方で、子どもは機械に話すことと人に話すことのちがいを見分けられるようになると指摘する人もいる。音声の技術がよりふつうになるにつれて、私たちのその使い方は、便利さやプライバシー、礼儀について新しい問いを投げかけつづけるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（何度もくり返さなければならないこと）を受け、can be の主語になるので which。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 recordings を受け、うしろの keep の目的語が欠けているので目的格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'which of'], answer: 0, why: 'the way that ～「～するしかた」。the way のあとの that は省略もできる（the way how とは言わない）。' },
+    ],
+    tf: [
+      { statement: '音声アシスタントは、手がふさがっているときにとくに役立つ。', answer: true, why: '第2段落 especially useful when their hands are busy。' },
+      { statement: '音声アシスタントは、どんななまりでも必ず正しく理解する。', answer: false, why: '第3段落 They may have difficulty with strong accents。' },
+      { statement: '多くの機器は、自分を起こす特別な言葉をいつも聞きとろうとしている。', answer: true, why: '第4段落 many devices are always listening for a special word that wakes them up。' },
+      { statement: '筆者によれば、すべての親が子どもへの影響を心配していない。', answer: false, why: '第5段落 Some parents have also raised a different question … some worry that children may become less polite。' },
+    ],
+    qa: [
+      { q: 'Why can voice assistants be helpful for older people?', choices: ['Speaking may be easier for them than using screens and small buttons.', 'They can repair their computers.', 'They make their eyesight better.', 'They cook meals for them.'], answer: 0, why: '第2段落 helpful for people who find screens and small buttons difficult to use, such as older people。' },
+      { q: 'What do experts advise users to do about privacy?', choices: ['Check the privacy settings and delete unwanted recordings.', 'Never use the internet.', 'Speak more loudly.', 'Buy more devices.'], answer: 0, why: '第4段落 Experts advise users to check the privacy settings carefully and to delete recordings that they do not want to keep。' },
+    ],
+    gist: [
+      { para: 1, choices: ['音声アシスタントの便利さ', '料理の手順', '運転のしかた', '暖房の値段'], answer: 0, why: '第2段落は、画面にふれずに使える便利さと、使いにくい人への助けを述べている。' },
+      { para: 3, choices: ['プライバシーについての心配', '会話の練習', '録音機の作り方', '起きる時間の決め方'], answer: 0, why: '第4段落は、機器がいつも聞いていることによるプライバシーの心配と対策を述べている。' },
+    ],
+    titleQ: { choices: ['Talking to Machines', 'How to Build a Speaker', 'The History of Refrigerators', 'Why Children Are Polite'], answer: 0, why: '全体として、音声アシスタントの便利さと、聞きまちがい・プライバシー・礼儀の問題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
