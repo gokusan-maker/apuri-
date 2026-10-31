@@ -21002,7 +21002,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 another tool を受け、can be used の主語になる関係代名詞 that。what は先行詞をとらない。' },
-      { id: 'B', choices: ['whom', 'what', 'where', 'how'], answer: 0, why: '「だれをさけるべきか」：whom to avoid。avoid の目的語で人をさすので whom。' },
+      { id: 'B', choices: ['whom', 'where', 'why', 'whose'], answer: 0, why: '「だれをさけるべきか」：whom to avoid。avoid の目的語が欠けていて、前の文の dangerous individuals（人）をさすので whom。' },
       { id: 'C', choices: ['that', 'what', 'which of', 'whose'], answer: 0, why: '先行詞 much を受け、know の目的語になる関係代名詞 that。much のあとにはふつう that を使う。' },
     ],
     tf: [

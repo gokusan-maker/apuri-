@@ -3455,3 +3455,4 @@
 - 2026-10-31: キャラクター：トガリネズミの「トガリン」を追加（とくぎ：せかせかパワー）
 - 2026-10-31: 文法：入試の誤文訂正〈51〉（TOEFL・IELTS の書き言葉⑳：One way is to・take measures・be dealt with・If nothing is done・for 人 to・Unless・result in・lie in・help 人 原形・should be taken）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「かしこいカラス」（自然・動物・関係代名詞 that／whom to／much that の空所）
+- 2026-10-31: 長文：カラスの長文の空所Bの選択肢を、答えが1つに決まるように直した
