@@ -18682,6 +18682,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Birds and Glass', 'How to Build a Skyscraper', 'The History of Windows', 'Why Birds Sing at Night'], answer: 0, why: '全体として、鳥がガラスにぶつかる理由、夜の明かりの危険、対策を述べている。' },
   },
   {
+    id: 'kyotsu-black-holes',
+    title: 'Seeing the Invisible',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Of all the objects in the universe, few capture people's imagination as strongly as black holes. They appear in films, novels, and science magazines, often described as cosmic monsters that swallow everything around them. But what exactly is a black hole, and how can scientists study something that cannot be seen? The answers reveal some of the most remarkable ideas in modern science.",
+      "A black hole is a region of space where gravity is so strong that nothing, not even light, can escape from it. Many black holes are believed to form when a very large star reaches the end of its life. When such a star runs out of fuel, it can no longer support its own enormous weight, and its centre collapses into an extremely small space. The result is an object ( A ) gravity is so powerful that it bends space around it.",
+      "Because black holes do not give off light, they cannot be observed directly in the usual way. Instead, astronomers look for their effects on the things around them. When gas and dust are pulled toward a black hole, they move faster and faster and become extremely hot, giving off strong radiation that telescopes can detect. Scientists can also watch stars moving around an invisible point, ( B ) reveals the presence of a massive object there.",
+      "In 2019, an international team of scientists announced that they had produced the first image of a black hole's shadow. To do this, they connected radio telescopes in different parts of the world so that they worked together like a single telescope the size of the Earth. The image showed a dark centre surrounded by a bright ring of glowing gas, much as many scientists had predicted.",
+      "Studying black holes helps scientists test their ideas about gravity, space, and time under the most extreme conditions in the universe. Researchers now believe that a giant black hole lies at the centre of our own galaxy, as well as at the centres of many others. There is still a great deal we do not know, but the story of black holes shows ( C ) human curiosity and cooperation can help us understand even things that cannot be seen. Future discoveries may change our understanding of the universe once again.",
+    ],
+    ja: [
+      '宇宙のあらゆる天体の中で、ブラックホールほど人々の想像力を強くとらえるものはほとんどない。ブラックホールは映画や小説、科学雑誌に登場し、しばしば周りのすべてをのみこむ宇宙の怪物としてえがかれる。しかし、ブラックホールとはいったい何なのだろうか。そして科学者は、見ることのできないものをどうやって研究できるのだろうか。その答えは、現代科学の最もおどろくべき考えのいくつかを明らかにしてくれる。',
+      'ブラックホールとは、重力がとても強いため、光さえも何ものもぬけ出すことができない宇宙の領域である。多くのブラックホールは、とても大きな星が一生の終わりをむかえるときにできると考えられている。そのような星が燃料を使い果たすと、自分の巨大な重さをもうささえられなくなり、中心がきわめて小さな空間へとつぶれる。その結果、重力がとても強く、周りの空間をゆがめるほどの天体ができるのである。',
+      'ブラックホールは光を出さないので、ふつうの方法で直接観測することはできない。そのかわり、天文学者は周りのものへの影響をさがす。ガスやちりがブラックホールに引きよせられると、どんどん速く動き、とても熱くなって、望遠鏡がとらえられる強い放射を出す。科学者はまた、目に見えない一点の周りを星が回っているのを観察することもでき、そのことが、そこに重い天体があることを明らかにする。',
+      '2019年、国際的な科学者のチームが、ブラックホールの影の最初の画像を作ったと発表した。そのために彼らは、世界のさまざまな場所にある電波望遠鏡を結び、地球の大きさの1つの望遠鏡のようにいっしょにはたらかせた。画像には、かがやくガスの明るい輪にかこまれた暗い中心がうつっており、多くの科学者が予想していたとおりだった。',
+      'ブラックホールを研究することは、宇宙で最もきびしい条件のもとで、重力や空間、時間についての考えを確かめるのに役立つ。研究者は今、私たちの銀河の中心にも、ほかの多くの銀河の中心にも、巨大なブラックホールがあると考えている。まだわからないことはたくさんあるが、ブラックホールの物語は、人間の好奇心と協力が、見ることのできないものさえ理解する助けになりうることを示している。これからの発見が、宇宙についての私たちの理解をふたたび変えるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'which', 'what', 'where'], answer: 0, why: '「その天体の重力」と所有を表し、うしろに名詞 gravity が続くので whose：an object whose gravity is ～。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（星が見えない一点の周りを回ること）を受け、reveals の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'ブラックホールからは、光さえぬけ出すことができない。', answer: true, why: '第2段落 nothing, not even light, can escape from it。' },
+      { statement: 'ブラックホールは光を出すので、ふつうの望遠鏡で直接見ることができる。', answer: false, why: '第3段落 Because black holes do not give off light, they cannot be observed directly。' },
+      { statement: '2019年の画像は、1台の小さな望遠鏡だけで作られた。', answer: false, why: '第4段落 they connected radio telescopes in different parts of the world。' },
+      { statement: '研究者は、私たちの銀河の中心に巨大なブラックホールがあると考えている。', answer: true, why: '第5段落 a giant black hole lies at the centre of our own galaxy。' },
+    ],
+    qa: [
+      { q: 'How do many black holes form?', choices: ['A very large star collapses at the end of its life.', 'Two planets crash into each other.', 'A comet becomes very cold.', 'Light gathers in one place.'], answer: 0, why: '第2段落 form when a very large star reaches the end of its life … its centre collapses。' },
+      { q: 'What did the 2019 image show?', choices: ['A dark centre surrounded by a bright ring of glowing gas.', 'A star exploding into pieces.', 'A planet with many moons.', 'A black hole giving off bright light.'], answer: 0, why: '第4段落 a dark centre surrounded by a bright ring of glowing gas。' },
+    ],
+    gist: [
+      { para: 2, choices: ['見えないブラックホールを見つける方法', '望遠鏡の作り方', 'ガスの温め方', '星の名前のつけ方'], answer: 0, why: '第3段落は、熱いガスの放射や星の動きから、見えないブラックホールを見つける方法を述べている。' },
+      { para: 3, choices: ['ブラックホールの影の最初の画像', '地球の大きさのはかり方', '国際会議の開き方', '電波の歴史'], answer: 0, why: '第4段落は、世界の電波望遠鏡を結んでブラックホールの影の画像を作ったことを述べている。' },
+    ],
+    titleQ: { choices: ['Seeing the Invisible', 'How to Become an Astronaut', 'The History of Films', 'Why Stars Are Hot'], answer: 0, why: '全体として、ブラックホールとは何か、見えないものをどう研究するか、最初の画像とその意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
