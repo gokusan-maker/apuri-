@@ -115,6 +115,17 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
           </p>
         ) : null
       })()}
+      {beaten > 0 && (
+        // デザイン144：とくぎの種類ごとに、勝ったボスの数
+        <p className="boss-trait-counts" aria-label="とくぎごとに勝ったボスの数">
+          {(Object.keys(BOSS_TRAITS) as (keyof typeof BOSS_TRAITS)[]).map((t) => (
+            <span key={t}>
+              {BOSS_TRAITS[t].icon}
+              {all.filter((b) => book[b.name] && traitOf(b.name) === t).length}
+            </span>
+          ))}
+        </p>
+      )}
       <ul className="boss-book-list">
         {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only) && (!cleanOnly || noMiss.includes(b.name))).sort((x, y) => (byWins ? (book[y.name]?.wins ?? 0) - (book[x.name]?.wins ?? 0) : 0)).map((b) => {
           const e = book[b.name]

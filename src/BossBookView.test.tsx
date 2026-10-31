@@ -361,3 +361,13 @@ it('デザイン138：ボス図鑑に、まだ勝っていないステージの�
   render(<BossBook />)
   expect(screen.getByLabelText('つぎのめあて').textContent).toBe(`🎯 つぎのめあて：${lv2}のボス`)
 })
+
+it('デザイン144：ボス図鑑に、とくぎの種類ごとに勝ったボスの数が出る', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const a = BOSSES['中1']
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [a.name]: { look: a, wins: 1, best: 'A', first: '2026-10-01' } }))
+  render(<BossBook />)
+  const t = traitOf(a.name)
+  expect(screen.getByLabelText('とくぎごとに勝ったボスの数').textContent).toContain(`${BOSS_TRAITS[t].icon}1`)
+})

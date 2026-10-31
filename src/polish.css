@@ -4664,3 +4664,12 @@ button.boss-book-trait { background: none; border: none; padding: 0; font: inher
   font-weight: bold;
   color: #b45309;
 }
+
+/* デザイン144：とくぎごとに勝ったボスの数 */
+.boss-trait-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0;
+  font-size: 0.85rem;
+}
