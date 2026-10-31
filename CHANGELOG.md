@@ -3433,3 +3433,4 @@
 - 2026-10-31: デザイン：ガチャでその日はじめて SR 以上が出たら「🌟 今日はじめての SR！」を出すようにした
 - 2026-10-31: 文法：入試の正誤問題〈54〉（グラフ・表を説明する表現：rise と raise・increase by・As shown・reach・who own・increase in・remain stable・the highest・Compared with・two thirds）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「必要のないものを買うわけ（衝動買い）」（くらし・お金・関係副詞 where／something／関係代名詞 that の空所）
+- 2026-10-31: キャラクター：オコジョの「オコジョン」を追加（とくぎ：ゆきげしょうガード）
