@@ -1494,6 +1494,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Neither the doctor nor the nurses [was] aware of the problem.', choices: ['were', 'is', 'has', 'being'], answer: 0, why: 'neither A nor B では動詞は B（近いほう）に合わせる。B は the nurses（複数）なので were。' },
     ],
   },
+  {
+    id: 'exam-fix-33',
+    title: '入試の誤文訂正㉝（TOEFL・IELTS の書き言葉⑬：比べる・対比する表現）',
+    points: ['that of ～／those of ～（くり返しをさける代名詞）、superior to、The 比較級 ～, the 比較級 …、whereas、倍数 as ～ as、No other ～ as … as、similar to、the 比較級 of the two、differ from など、レポートやエッセイで比べるときの表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The population of Tokyo is larger than that of Osaka.', ja: '東京の人口は大阪の人口より多い。' }],
+    questions: [
+      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'it of Osaka', 'Osaka of that'], answer: 0, why: '比べるのは「人口」どうしなので、the population をくり返す代わりに that of Osaka。' },
+      { sentence: 'Prices in big cities are higher than [that] in rural areas.', choices: ['those', 'it', 'this', 'what'], answer: 0, why: '比べるのは Prices（複数）なので、くり返しをさける代名詞は those。' },
+      { sentence: 'This method is [more superior] to the old one.', choices: ['superior', 'superior than', 'more superior than', 'the most superior'], answer: 0, why: 'superior はそれ自体で比較の意味をもち、more をつけず to を使う：superior to ～。' },
+      { sentence: 'The more you read, [you understand better].', choices: ['the better you understand', 'the better understand you', 'better you understand', 'the more better you understand'], answer: 0, why: 'The 比較級 ～, the 比較級 …「～すればするほど…」：the better you understand。' },
+      { sentence: 'Some students prefer online classes, [despite] others prefer face-to-face ones.', choices: ['whereas', 'in spite of', 'unlike', 'instead of'], answer: 0, why: 'うしろに文（主語＋動詞）が続き、2つを対比するので接続詞 whereas「～なのに対して」。' },
+      { sentence: 'This year’s sales were twice [as large than] last year’s.', choices: ['as large as', 'larger as', 'as larger as', 'so large than'], answer: 0, why: '倍数の表現は 倍数 ＋ as ～ as：twice as large as。' },
+      { sentence: 'No other planet in the solar system is [as large] Jupiter.', choices: ['as large as', 'large as', 'the largest than', 'so large than'], answer: 0, why: 'No other ～ is as … as A「A ほど…な～はない」：as large as Jupiter。' },
+      { sentence: 'The results were [similar with] those of earlier studies.', choices: ['similar to', 'similar as', 'same to', 'similar than'], answer: 0, why: '「～に似ている」は be similar to ～。' },
+      { sentence: 'Of the two proposals, the second one is [the best].', choices: ['the better', 'best', 'the more good', 'better than'], answer: 0, why: '2つのうちで比べるときは the ＋比較級 of the two：the better。' },
+      { sentence: 'Life in cities differs [with] life in the countryside in many ways.', choices: ['from', 'than', 'against', 'to'], answer: 0, why: '「～とちがう」は differ from ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

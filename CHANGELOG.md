@@ -3342,3 +3342,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊴（医学部・難関大レベル③：too ～ to・Had it not been for・demand that・Not only の倒置・who・lay・Hardly ～ when・neither nor・after eating）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「みんなの緑の場所（公園）」（社会・まちづくり・非制限の which／that の空所）
 - 2026-10-31: キャラクター：トカゲの「トカゲン」を追加（とくぎ：ひなたぼっこガード）
+- 2026-10-31: 文法：入試の誤文訂正㉝（TOEFL・IELTS の書き言葉⑬：that of・those・superior to・The 比較級・whereas・倍数・No other・similar to・the better of the two・differ from）10問
