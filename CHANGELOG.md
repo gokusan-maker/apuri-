@@ -3410,3 +3410,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊿（国公立レベル：名詞・冠詞・代名詞の総まとめ：advice・furniture・スポーツと冠詞・by bus・an honest・help yourself・mine・the other・others・There is）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「レビューをかしこく読む（オンラインのレビュー）」（社会・情報・while／whether／関係代名詞 that の空所）
 - 2026-10-31: キャラクター：コウノトリの「コウノトリン」を追加（とくぎ：おおきなつばさ）
+- 2026-10-31: 文法：入試の誤文訂正㊹（TOEFL・IELTS の書き言葉⑱：受け身の時制・助動詞の受け身・進行形の受け身・by・surprised と surprising・無生物主語の take と make）10問

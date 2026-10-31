@@ -1956,6 +1956,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There [are] much water in the bottle.', choices: ['is', 'be', 'are being', 'were'], answer: 0, why: 'water は数えられない名詞で単数あつかいなので There is much water。' },
     ],
   },
+  {
+    id: 'exam-fix-44',
+    title: '入試の誤文訂正㊹（TOEFL・IELTS の書き言葉⑱：受け身と無生物主語）',
+    points: ['過去・現在の受け身、助動詞のあとの受け身（will be ～ed・should be ～ed）、進行形の受け身（is being ～ed）、行為者の by、感情の surprised と surprising、無生物主語（The news surprised everyone・This road will take you to ～・Her success made her parents happy）など、レポートで多い受け身と、ものを主語にした書き方。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'English is spoken in many countries.', ja: '英語は多くの国で話されている。' }],
+    questions: [
+      { sentence: 'The bridge [built] in 1990.', choices: ['was built', 'has built', 'building', 'is building'], answer: 0, why: '橋は「建てられた」側で、1990年は過去なので過去の受け身 was built。' },
+      { sentence: 'English [speaks] in many countries.', choices: ['is spoken', 'speaking', 'has spoken', 'spoke'], answer: 0, why: '英語は「話される」側なので受け身 is spoken。' },
+      { sentence: 'The results will [announce] next week.', choices: ['be announced', 'announced', 'announcing', 'being announced'], answer: 0, why: '助動詞のあとの受け身は will be ＋過去分詞：will be announced。' },
+      { sentence: 'The news [surprised at] everyone.', choices: ['surprised', 'was surprised', 'surprising', 'surprised to'], answer: 0, why: '無生物主語：The news surprised everyone「その知らせはみんなをおどろかせた」。他動詞なので at はいらない。' },
+      { sentence: 'I was [surprising] at the news.', choices: ['surprised', 'surprise', 'to surprise', 'being surprised'], answer: 0, why: '人が「おどろかされる」ので過去分詞 surprised：be surprised at ～。' },
+      { sentence: 'This road will take you [at] the station.', choices: ['to', 'in', 'for', 'on'], answer: 0, why: '無生物主語 take 人 to 場所「（道などが）人を～へ連れていく」：take you to the station。' },
+      { sentence: 'The window was broken [with] Tom.', choices: ['by', 'from', 'of', 'at'], answer: 0, why: '受け身で「だれによって」をあらわすのは by：broken by Tom。with は道具（with a ball）。' },
+      { sentence: 'The room is being [clean] now.', choices: ['cleaned', 'cleaning', 'to clean', 'clean by'], answer: 0, why: '進行形の受け身は be being ＋過去分詞：is being cleaned。' },
+      { sentence: 'The problem should [solve] as soon as possible.', choices: ['be solved', 'solved', 'solving', 'to solve'], answer: 0, why: '問題は「解決される」側なので should be solved。' },
+      { sentence: 'Her success made her parents [happily].', choices: ['happy', 'happiness', 'to be happily', 'happier of'], answer: 0, why: '無生物主語 make O C「O を C にする」。C には形容詞 happy を置く。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
