@@ -943,6 +943,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="60" cy="26" r="6" fill="#ffffff" stroke="#4d4d26" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'gorilla')
+    return (
+      <g>
+        {/* 大きなむね */}
+        <ellipse cx="50" cy="66" rx="14" ry="10" fill="#9ca3af" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

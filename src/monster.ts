@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'gorilla', name: 'ゴリラン', egg: 'みどりのやまのたくましタマゴ', token: 'ゴリ', bigToken: 'ゴリラン', color: '#6b7280', line: '#111827', rate: 0.02, desc: '森でくらす力もちでやさしいゴリラ。むねをたたいて気持ちを伝えるように、大きな声で英語を言ってみるのが得意。' },
   { id: 'mudskipper', name: 'ムツゴロン', egg: 'ひがたのどろんこタマゴ', token: 'ムツ', bigToken: 'ムツゴロン', color: '#a3a380', line: '#4d4d26', rate: 0.02, desc: '干潟の上をむなびれではねまわるムツゴロウ。水の中でも陸でもくらせるように、どんな問題の形にもすぐなれる。' },
   { id: 'aardvark', name: 'ツチブタン', egg: 'さばんなのよるのタマゴ', token: 'ツチ', bigToken: 'ツチブタン', color: '#e7c6a5', line: '#6b4423', rate: 0.02, desc: '夜のサバンナで長い耳と鼻をつかってアリの巣を見つけるツチブタ。するどいつめで土をほるように、問題の答えをほり当てる。' },
   { id: 'clownfish', name: 'クマノミン', egg: 'いそぎんちゃくのおうちタマゴ', token: 'ノミ', bigToken: 'クマノミン', color: '#fb923c', line: '#7c2d12', rate: 0.02, desc: 'イソギンチャクの中を家にしてくらすクマノミ。なかまと助け合ってくらすように、相棒といっしょに力を合わせて問題にいどむ。' },

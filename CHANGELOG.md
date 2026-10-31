@@ -3290,3 +3290,4 @@
 - 2026-10-31: キャラクター追加：ムツゴロン（ムツゴロウ・ひがたのどろんこタマゴ・スピードのとくぎ）
 - 2026-10-31: 文法：入試の誤文訂正㉔（総合：There exist・This essay will discuss・encourage to・be concerned about・It is widely believed・In recent years・Not only の倒置）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「機械に話しかける（音声アシスタント）」（くらし・技術・非制限の which／目的格の that／the way that の空所）
+- 2026-10-31: キャラクター追加：ゴリラン（ゴリラ・みどりのやまのたくましタマゴ・アタックのとくぎ）
