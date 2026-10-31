@@ -1704,6 +1704,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'A large [number] of water is wasted every day.', choices: ['amount', 'many', 'few', 'number of many'], answer: 0, why: '数えられない名詞（water）の量は a large amount of ～。number は数えられる名詞に使う。' },
     ],
   },
+  {
+    id: 'exam-fix-38',
+    title: '入試の誤文訂正㊳（私学難関レベル：熟語・語法の総まとめ）',
+    points: ['look forward to -ing・be used to -ing・object to -ing（to のあとは動名詞）、mind -ing、can’t help -ing、make 人 ＋原形、have 物 ＋過去分詞、be worth -ing、prevent 人 from -ing、remember -ing（～したことを覚えている）など、私立大学の入試でよく問われる熟語と語法。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I am looking forward to seeing you.', ja: 'あなたに会えるのを楽しみにしています。' }],
+    questions: [
+      { sentence: 'I am looking forward to [see] you again.', choices: ['seeing', 'seen', 'be seeing', 'have seen'], answer: 0, why: 'look forward to の to は前置詞なので、うしろは動名詞：to seeing。' },
+      { sentence: 'She is used to [get] up early in the morning.', choices: ['getting', 'got', 'have got', 'be got'], answer: 0, why: 'be used to -ing「～するのになれている」。to は前置詞。' },
+      { sentence: 'He objected to [be] treated like a child.', choices: ['being', 'been', 'be being', 'have been'], answer: 0, why: 'object to -ing「～することに反対する」。受け身の動名詞 being treated。' },
+      { sentence: 'Would you mind [to open] the window?', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind は動名詞を目的語にとる：mind opening。' },
+      { sentence: 'I couldn’t help [laugh] at his joke.', choices: ['laughing', 'to laughing', 'laughed', 'for laughing'], answer: 0, why: 'can’t help -ing「～せずにはいられない」。' },
+      { sentence: 'The teacher made us [to clean] the classroom.', choices: ['clean', 'cleaning', 'cleaned', 'for cleaning'], answer: 0, why: '使役の make 人 ＋原形「人に～させる」：made us clean。' },
+      { sentence: 'I had my bike [repair] yesterday.', choices: ['repaired', 'repairing', 'to repair', 'be repaired'], answer: 0, why: 'have 物 ＋過去分詞「物を～してもらう」：had my bike repaired。' },
+      { sentence: 'This book is worth [to read].', choices: ['reading', 'read', 'to be read', 'being read'], answer: 0, why: 'be worth -ing「～する価値がある」：worth reading（受け身の形にしない）。' },
+      { sentence: 'The heavy rain prevented us [to go] out.', choices: ['from going', 'going', 'to going', 'for going'], answer: 0, why: 'prevent 人 from -ing「人が～するのをさまたげる」。' },
+      { sentence: 'I remember [to meet] her once in Kyoto.', choices: ['meeting', 'met', 'to have met', 'meet'], answer: 0, why: '過去に「～したことを覚えている」は remember -ing。remember to ～ は「わすれずに～する」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
