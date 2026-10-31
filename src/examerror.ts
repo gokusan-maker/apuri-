@@ -1200,6 +1200,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I have a friend [which] lives in Osaka.', choices: ['who', 'whose', 'whom', 'what'], answer: 0, why: '先行詞は人（a friend）で、lives の主語になるので主格の who。' },
     ],
   },
+  {
+    id: 'exam-fix-26',
+    title: '入試の誤文訂正㉖（国公立二次レベル）',
+    points: ['It was not until ～ that、not so much A as B、It goes without saying、There is no use -ing、cannot help but ＋原形、What do you say to -ing、have no objection to -ing、make it a rule to ～、Should you ～（倒置）、anything but など、国公立二次で問われる構文。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was not until midnight that he came home.', ja: '真夜中になってはじめて彼は帰ってきた。' }],
+    questions: [
+      { sentence: 'It was not until midnight [when] he came home.', choices: ['that', 'which', 'while', 'before'], answer: 0, why: 'It was not until ～ that …「～になってはじめて…」（強調構文）。' },
+      { sentence: 'He is not so much a scholar [than] a writer.', choices: ['as', 'but', 'or', 'like'], answer: 0, why: 'not so much A as B「A というよりむしろ B」。' },
+      { sentence: 'It goes [without say] that health is more important than money.', choices: ['without saying', 'without said', 'to say', 'saying without'], answer: 0, why: 'It goes without saying that ～「～は言うまでもない」。前置詞 without のあとは動名詞。' },
+      { sentence: 'There is no [use to cry] over spilled milk.', choices: ['use crying', 'using cry', 'use cry', 'use of to cry'], answer: 0, why: 'There is no use -ing「～してもむだだ」。' },
+      { sentence: 'When I saw his face, I could not help [but to laugh].', choices: ['but laugh', 'but laughing', 'to laugh but', 'laughing but'], answer: 0, why: 'cannot help but ＋原形「～せずにはいられない」（cannot help -ing と同じ意味）。' },
+      { sentence: 'What do you say [to go] for a walk in the park?', choices: ['to going', 'going to', 'go', 'to be gone'], answer: 0, why: 'What do you say to -ing?「～するのはどうですか」。to は前置詞。' },
+      { sentence: 'I have no objection [to sign] the contract.', choices: ['to signing', 'for signing', 'signing to', 'to be sign'], answer: 0, why: 'have no objection to -ing「～することに異論はない」。to は前置詞。' },
+      { sentence: 'He makes [it a rule getting] up early every morning.', choices: ['it a rule to get', 'a rule to get', 'it rule to get', 'a rule getting'], answer: 0, why: 'make it a rule to ～「～することにしている」。it は to 以下を指す形式目的語。' },
+      { sentence: '[Should you will need] any help, please call me.', choices: ['Should you need', 'You should need', 'If should you need', 'Should need you'], answer: 0, why: 'If you should need ～ の if を省いた倒置：Should you need ～「万一～なら」。' },
+      { sentence: 'She is [nothing but] lazy; in fact, she works very hard.', choices: ['anything but', 'nothing more', 'all but', 'anything not'], answer: 0, why: 'anything but ～「決して～ではない」。nothing but は「～だけ」、all but は「ほとんど～」で意味が合わない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

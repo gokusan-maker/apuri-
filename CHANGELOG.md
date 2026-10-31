@@ -3300,3 +3300,4 @@
 - 2026-10-31: 文法：入試の正誤問題㉜（共通テストレベル：仮定法過去・since・先行詞と動詞の一致・stop -ing・too ～ to・Seen・surprised・the better・I wish の総復習）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「ともに長く生きる（日本の高齢化）」（社会・高齢化・and／対比の while／関係副詞 where の空所）
 - 2026-10-31: キャラクター追加：アシカン（アシカ・みなとのいわばタマゴ・サポートのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正㉖（国公立二次レベル：It was not until ～ that・not so much A as B・It goes without saying・cannot help but・make it a rule to・Should you・anything but）10問
