@@ -3321,3 +3321,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉙（関係詞と前置詞：in which・to whom・with which・前置詞の重複・on which・whom I talked to・both of which）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「カレーライスの旅」（文化・食の歴史・, which is why／非制限の which／how の空所）
 - 2026-10-31: デザイン：ガチャの結果に、今日何回目のガチャか（🎰 今日 ○回目）を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊱（関係詞と前置詞：in which・to whom・前置詞の重複・on which・with whom・all of whom・for which）10問

@@ -818,6 +818,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'A lot of the (A) information (B) on the internet (C) are (D) not reliable.', choices: ['(A) information', '(B) on the internet', '(C) are', '(D) not reliable'], answer: 2, why: 'information は数えられない名詞なので、a lot of the information は単数あつかい：is。' },
     ],
   },
+  {
+    id: 'exam-error-relprep',
+    title: '入試の正誤問題㊱（関係詞と前置詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '前置詞のあとに that・who・when は置けない（which / whom を使う）。前置詞を前に出したら文末にくり返さない。会社など組織は which。コンマのあとの all of them は all of whom にする。',
+    ],
+    examples: [
+      { en: 'The friend with whom I often play tennis lives near the station.', ja: 'よくいっしょにテニスをする友だちは駅の近くに住んでいる。' },
+      { en: 'She has three brothers, all of whom are doctors.', ja: '彼女には兄弟が3人いて、全員が医者だ。' },
+    ],
+    questions: [
+      { sentence: 'This is the town (A) in (B) that (C) my mother (D) grew up.', choices: ['(A) in', '(B) that', '(C) my mother', '(D) grew up'], answer: 1, why: '前置詞のあとに that は置けない：in which my mother grew up。' },
+      { sentence: 'The man to (A) who I gave (B) the letter (C) was (D) the manager.', choices: ['(A) who I gave', '(B) the letter', '(C) was', '(D) the manager'], answer: 0, why: '前置詞 to のあとは目的格 whom：to whom I gave the letter。' },
+      { sentence: 'The box in which (A) I put (B) my books (C) in (D) was heavy.', choices: ['(A) I put', '(B) my books', '(C) in', '(D) was heavy'], answer: 2, why: 'in which ですでに in を使っているので、最後の in はいらない。' },
+      { sentence: 'The day (A) on (B) when (C) we met (D) was sunny.', choices: ['(A) on', '(B) when', '(C) we met', '(D) was sunny'], answer: 1, why: '前置詞のあとに when は置けない：on which we met。' },
+      { sentence: 'The friend (A) with who I (B) often play tennis (C) lives (D) near the station.', choices: ['(A) with who I', '(B) often play tennis', '(C) lives', '(D) near the station'], answer: 0, why: '前置詞 with のあとは目的格 whom：with whom I often play tennis。' },
+      { sentence: 'She has three brothers, (A) all of (B) them (C) are (D) doctors.', choices: ['(A) all of', '(B) them', '(C) are', '(D) doctors'], answer: 1, why: 'コンマのあとで文をつなぐので関係代名詞：all of whom are doctors。' },
+      { sentence: 'The company (A) for whom (B) my father (C) works (D) is large.', choices: ['(A) for whom', '(B) my father', '(C) works', '(D) is large'], answer: 0, why: '先行詞 The company は物（組織）なので which：for which my father works。' },
+      { sentence: 'This is the reason (A) for which (B) I (C) left the company (D) for.', choices: ['(A) for which', '(B) I', '(C) left the company', '(D) for'], answer: 3, why: 'for which ですでに for を使っているので、最後の for はいらない。' },
+      { sentence: 'The city (A) in which (B) she lives (C) in (D) is famous.', choices: ['(A) in which', '(B) she lives', '(C) in', '(D) is famous'], answer: 2, why: 'in which ですでに in を使っているので、最後の in はいらない。' },
+      { sentence: 'The topic (A) about (B) that (C) we talked (D) was interesting.', choices: ['(A) about', '(B) that', '(C) we talked', '(D) was interesting'], answer: 1, why: '前置詞のあとに that は置けない：about which we talked。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
