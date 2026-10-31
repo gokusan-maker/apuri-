@@ -780,6 +780,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Whomever] wants to join the club is welcome.', choices: ['Whoever', 'Whomever that', 'Who ever that', 'Anyone whom'], answer: 0, why: 'wants の主語になるので主格の Whoever「～する人はだれでも」。' },
     ],
   },
+  {
+    id: 'exam-fix-16',
+    title: '入試の誤文訂正⑯（名詞・冠詞の難問）',
+    points: ['楽器の the、a と an（発音で決まる）、食事に冠詞をつけない、ただ1つのもの（the sun）、数えられない名詞（luggage・bread・hair）、言語名に the をつけない、ten-minute のような数字＋単数名詞の形容詞など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Let’s take a ten-minute break.', ja: '10分休けいしよう。（名詞の前でハイフンでつなぐときは minute と単数）' }],
+    questions: [
+      { sentence: 'She plays [a piano] every evening after dinner.', choices: ['the piano', 'piano a', 'an piano', 'pianos the'], answer: 0, why: '楽器を演奏する play のあとは the ＋楽器：play the piano。' },
+      { sentence: 'He is [an university] student.', choices: ['a university', 'an universities', 'the an university', 'university a'], answer: 0, why: 'university は「ユ」と子音の音で始まるので a university。a / an はつづりではなく発音で決まる。' },
+      { sentence: 'I usually have [a breakfast] at seven.', choices: ['breakfast', 'the breakfasts', 'an breakfast', 'breakfasts'], answer: 0, why: '食事名（breakfast・lunch・dinner）にはふつう冠詞をつけない：have breakfast。' },
+      { sentence: '[Sun] rises in the east.', choices: ['The sun', 'A sun', 'Suns', 'The suns'], answer: 0, why: 'ただ1つしかないものには the をつける：The sun rises in the east。' },
+      { sentence: 'There are [many luggages] at the station.', choices: ['a lot of luggage', 'many luggage', 'a luggages', 'lots luggages'], answer: 0, why: 'luggage は数えられない名詞で複数形にしない：a lot of luggage。' },
+      { sentence: 'I need [two breads] to make sandwiches.', choices: ['two loaves of bread', 'two bread', 'two of breads', 'two loaf of bread'], answer: 0, why: 'bread は数えられないので、数えるときは a loaf of bread（複数は loaves）。' },
+      { sentence: 'He can speak [the English] very well.', choices: ['English', 'an English', 'the Englishes', 'English language the'], answer: 0, why: '言語名には冠詞をつけない：speak English（the English language なら the が必要）。' },
+      { sentence: 'This is [my friend\'s of] book.', choices: ['my friend\'s', 'of my friend', 'my friend of', 'friend\'s my'], answer: 0, why: '所有は my friend\'s book。\'s と of をいっしょに使わない。' },
+      { sentence: 'Let\'s take [a ten-minutes break].', choices: ['a ten-minute break', 'a ten minutes break', 'ten-minutes break', 'a ten-minute breaks'], answer: 0, why: '数字とハイフンでつないで名詞を説明するときは単数形：a ten-minute break。' },
+      { sentence: 'She has [long hairs] and big eyes.', choices: ['long hair', 'a long hair', 'long hairs of', 'longs hair'], answer: 0, why: '頭の髪全体を言う hair は数えられない名詞：long hair。a hair は「髪の毛1本」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
