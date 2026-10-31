@@ -2418,6 +2418,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Especial] in summer, many tourists visit Kyoto.', choices: ['Especially', 'Special', 'Especial of', 'Specially of'], answer: 0, why: '「とくに夏に」と副詞句を修飾するのは副詞 Especially。' },
     ],
   },
+  {
+    id: 'exam-fix-55',
+    title: '入試の誤文訂正〈55〉（国公立レベル：時制と一致の総まとめ）',
+    points: ['主節が過去のときの時制の一致（is → was、will → would、can → could、現在完了 → 過去完了）、不変の真理は現在形のまま、間接疑問は「疑問詞 ＋主語＋動詞」の語順、ask if ＋主語＋動詞など、時制の一致と話法のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Our teacher told us that the earth moves around the sun.', ja: '先生は、地球は太陽のまわりを回っていると教えてくれた。' }],
+    questions: [
+      { sentence: 'Yesterday he said that he [is] tired, but he is fine today.', choices: ['was', 'will be', 'has been', 'being'], answer: 0, why: '主節が過去（said）で、つかれていたのは昨日のことなので時制を合わせて was。' },
+      { sentence: 'I thought she [will] come, but she didn’t.', choices: ['would', 'shall', 'can', 'is going'], answer: 0, why: '主節が過去（thought）なので will は would にする。' },
+      { sentence: 'Our teacher told us that the earth [moved] around the sun.', choices: ['moves', 'had moved', 'was moving', 'would move'], answer: 0, why: 'いつでも正しいこと（不変の真理）は、主節が過去でも現在形のまま：moves。' },
+      { sentence: 'She told me she [has lost] her key the day before.', choices: ['had lost', 'loses', 'is losing', 'has been losing'], answer: 0, why: '話した時（told）よりも前のこと（the day before）なので過去完了 had lost。' },
+      { sentence: 'I knew that he [has been] ill for a week.', choices: ['had been', 'is', 'will be', 'has'], answer: 0, why: '主節が過去（knew）なので、そのときまでの継続は過去完了 had been。' },
+      { sentence: 'He asked me where [did I live].', choices: ['I lived', 'I live did', 'do I live', 'I had live'], answer: 0, why: '間接疑問は「疑問詞＋主語＋動詞」の語順。主節が過去なので where I lived。' },
+      { sentence: 'She asked me [if had I] finished the work.', choices: ['if I had', 'had I if', 'if did I', 'whether had I'], answer: 0, why: '「～かどうか」の if のあとはふつうの語順：if I had finished。' },
+      { sentence: 'He told me that he [will visit] me the next day.', choices: ['would visit', 'visits', 'is visiting', 'has visited'], answer: 0, why: '主節が過去（told）なので will visit は would visit にする。' },
+      { sentence: 'I wondered what [was he] doing.', choices: ['he was', 'is he', 'did he', 'he is being'], answer: 0, why: '間接疑問の語順は「疑問詞＋主語＋動詞」：what he was doing。' },
+      { sentence: 'I didn’t know that you [can] speak Chinese.', choices: ['could', 'will', 'can be', 'are able'], answer: 0, why: '主節が過去（didn’t know）なので can は could にする。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

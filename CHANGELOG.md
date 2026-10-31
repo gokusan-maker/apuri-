@@ -3480,3 +3480,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈61〉（例をあげる・言いかえる表現：For example・such as・In other words・including・an example of・To put it simply・namely・typical・especially・That is to say）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「地震とともにくらす」（自然・地球・関係代名詞 that／接続詞 that の空所）
 - 2026-10-31: キャラクター：ムクドリの「ムクドリン」を追加（とくぎ：むれのうず）
+- 2026-10-31: 文法：入試の誤文訂正〈55〉（国公立レベル：時制の一致・不変の真理・過去完了・間接疑問の語順・if ＋過去完了・would・could）10問
