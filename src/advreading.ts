@@ -19735,6 +19735,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Lessons Beyond the Classroom', 'How to Catch Insects', 'Why Museums Are Expensive', 'The History of Textbooks'], answer: 0, why: '全体として、教室の外での学びの効果と課題、始め方を述べている。' },
   },
   {
+    id: 'kyotsu-refrigerators',
+    title: 'The Quiet Machine in the Kitchen',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Open the kitchen door in almost any home today, and you will find a refrigerator. It is so ordinary that few people stop to think about it. Yet this simple machine has changed the way people shop, cook, and eat more than many inventions that receive far more attention. To understand its importance, it helps to imagine life before it existed.",
+      "For most of human history, keeping food fresh was a constant challenge. Meat and fish spoiled quickly, especially in hot weather, and milk turned sour within a day or two. People developed clever ways to make food last longer, such as drying, salting, smoking, and pickling. In some places, people cut blocks of ice from frozen lakes in winter and stored them in special buildings so that they could keep food cool in summer. ( A ), these methods were limited, and many families had to buy fresh food almost every day.",
+      "When electric refrigerators became common in homes during the twentieth century, daily life began to change. Families could now buy food once or twice a week and store it safely. This saved time, and it allowed people to eat a wider variety of fresh fruit, vegetables, and dairy products throughout the year. Refrigeration also made it possible to transport food over long distances, ( B ) meant that people could enjoy products grown far away.",
+      "However, the refrigerator has also created new problems. Early refrigerators used certain gases that were later found to damage the ozone layer, which protects the Earth from harmful sunlight. These gases have since been replaced in many countries, but refrigerators still use a large amount of electricity because they run day and night. In addition, some people buy more food than they need, forget it at the back of the refrigerator, and end up throwing it away.",
+      "Engineers are now working to make refrigerators more efficient, and some new models can even tell users ( C ) food is inside and when it should be eaten. Still, the most important change may depend on the people who use them. By buying only what they need, checking what is already in the refrigerator, and keeping it at the right temperature, people can make the most of this remarkable machine.",
+    ],
+    ja: [
+      '今日、ほとんどどの家でも台所のドアを開ければ冷蔵庫がある。あまりにふつうなので、それについて立ち止まって考える人はほとんどいない。しかし、このシンプルな機械は、はるかに注目されている多くの発明以上に、人々の買い物、料理、食事のしかたを変えてきた。その大切さを理解するには、冷蔵庫がなかったころの生活を想像してみるとよい。',
+      '人類の歴史のほとんどで、食べ物を新鮮にたもつことはたえまない課題だった。肉や魚は、とくに暑い時期にはすぐにいたみ、牛乳は1日か2日ですっぱくなった。人々は、乾燥させる、塩づけにする、くんせいにする、酢づけにするなど、食べ物を長もちさせるくふうを生み出した。地域によっては、冬に凍った湖から氷のかたまりを切り出して特別な建物にたくわえ、夏に食べ物を冷やせるようにした。それでも、こうした方法には限りがあり、多くの家庭はほとんど毎日新鮮な食べ物を買わなければならなかった。',
+      '20世紀に電気冷蔵庫が家庭に広まると、毎日の生活が変わりはじめた。家族は週に1、2回食べ物を買い、安全に保存できるようになった。これは時間の節約になり、1年じゅうさまざまな新鮮な果物や野菜、乳製品を食べられるようにした。冷蔵の技術は、食べ物を遠くまで運ぶことも可能にし、そのおかげで人々は遠くで育てられた産物を楽しめるようになった。',
+      'しかし、冷蔵庫は新しい問題も生んだ。初期の冷蔵庫は、のちに、有害な日光から地球を守るオゾン層をこわすとわかったある種のガスを使っていた。そうしたガスはその後多くの国で置きかえられたが、冷蔵庫は昼も夜も動いているので、今でも大量の電気を使う。さらに、必要以上に食べ物を買い、冷蔵庫のおくにわすれて、結局すててしまう人もいる。',
+      '技術者は今、冷蔵庫をより効率的にしようとしており、新しい型の中には、中にどんな食べ物があり、いつ食べるべきかを使う人に知らせてくれるものまである。それでも、最も大切な変化は、使う人しだいかもしれない。必要なものだけを買い、すでに冷蔵庫にあるものをたしかめ、正しい温度にたもつことで、人々はこのすばらしい機械を最大限に生かすことができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Even so', 'For example', 'As a result', 'In the same way'], answer: 0, why: '前の文で多くのくふうを述べ、「それでも限りがあった」と続けるので Even so「それでも」。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容全体を受け、meant の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'whether'], answer: 0, why: 'tell 人 what ～「何が～かを伝える」。うしろの節は主語が欠けているので what（what food is inside）。' },
+    ],
+    tf: [
+      { statement: '冷蔵庫がなかったころ、人々は食べ物を長もちさせるくふうをしていた。', answer: true, why: '第2段落 drying, salting, smoking, and pickling。' },
+      { statement: '電気冷蔵庫が広まると、毎日買い物をする家庭がふえた。', answer: false, why: '第3段落 Families could now buy food once or twice a week。' },
+      { statement: '初期の冷蔵庫に使われたガスの中には、オゾン層をこわすものがあった。', answer: true, why: '第4段落 gases that were later found to damage the ozone layer。' },
+      { statement: '冷蔵庫はほとんど電気を使わない。', answer: false, why: '第4段落 refrigerators still use a large amount of electricity。' },
+    ],
+    qa: [
+      { q: 'How did some people keep food cool in summer before refrigerators?', choices: ['They stored blocks of ice cut from frozen lakes.', 'They put food in the sun.', 'They bought electric fans.', 'They kept food in the snow all year.'], answer: 0, why: '第2段落 people cut blocks of ice from frozen lakes in winter and stored them in special buildings。' },
+      { q: 'What can people do to make the most of refrigerators?', choices: ['Buy only what they need and check what is already inside.', 'Buy as much food as possible.', 'Turn the refrigerator off at night.', 'Keep the door open.'], answer: 0, why: '第5段落 By buying only what they need, checking what is already in the refrigerator。' },
+    ],
+    gist: [
+      { para: 2, choices: ['電気冷蔵庫による生活の変化', '湖の氷の切り方', '牛乳の作り方', '20世紀の戦争'], answer: 0, why: '第3段落は、週に1、2回の買い物、1年じゅうの新鮮な食べ物、遠くからの輸送という変化を述べている。' },
+      { para: 3, choices: ['冷蔵庫が生んだ新しい問題', 'オゾン層の歴史', '電気料金の決め方', '台所のそうじ'], answer: 0, why: '第4段落は、オゾン層、電気の使用、食品ロスという問題を述べている。' },
+    ],
+    titleQ: { choices: ['The Quiet Machine in the Kitchen', 'How to Make Ice Cream', 'The History of Salt', 'Why Lakes Freeze'], answer: 0, why: '全体として、冷蔵庫がくらしを大きく変えたこと、その問題、よりよい使い方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
