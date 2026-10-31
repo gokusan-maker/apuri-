@@ -18799,6 +18799,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Flowers of Fire', 'How to Wear a Yukata', 'The History of Rivers', 'Why Summer Is Hot'], answer: 0, why: '全体として、花火の歴史・色のしくみ・日本の花火の特徴・花火大会の課題を述べている。' },
   },
   {
+    id: 'kyotsu-music-brain',
+    title: 'Music and the Brain',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Almost every culture in the world has music. People sing to babies, dance at festivals, and listen to songs on the way to school or work. Music can make us feel happy, calm, or even sad, often within a few seconds. Scientists have long wondered why music has such a strong effect on us, and recent research on the brain has begun to provide some answers. These answers show that music is far more than simple entertainment.",
+      "When we listen to music, many different parts of the brain become active at the same time. Some areas process the sounds themselves, such as pitch and rhythm, while others are connected with memory, emotion, and movement. This is one reason why a familiar song can suddenly bring back memories from years ago, and why it is so difficult to keep still when we hear music with a strong beat. In a sense, music gives the whole brain a workout.",
+      "Playing a musical instrument seems to involve the brain even more. A pianist, for example, must read notes, move both hands in different ways, listen carefully, and control timing, all at once. Some studies have found that people who have received musical training are better at noticing small differences in sounds, ( A ) may help them in tasks such as learning the pronunciation of a foreign language.",
+      "It is important, however, not to exaggerate these findings. A number of years ago, a popular idea claimed that simply listening to classical music could make children more intelligent. Later research did not support this strong claim. Any benefits from music appear to come mainly from active and long-term involvement, such as practising an instrument regularly, rather than from listening ( B ) for a short time.",
+      "Even so, music clearly plays a valuable role in human life. It brings people together, helps them express feelings that are hard to put into words, and gives pleasure to people of all ages. Some hospitals and care homes now use music to help patients relax or to encourage older people to communicate. Whether or not music makes us smarter, research suggests ( C ) it can enrich our minds in many different ways. Perhaps that is why music has remained part of human life for so long.",
+    ],
+    ja: [
+      '世界のほとんどすべての文化に音楽がある。人々は赤ちゃんに歌い、祭りでおどり、学校や職場へ行くとちゅうで歌を聞く。音楽はしばしば数秒のうちに、私たちを楽しく、落ち着いた、あるいは悲しい気持ちにさえさせることができる。科学者は長いあいだ、なぜ音楽が私たちにこれほど強い影響をあたえるのかを不思議に思ってきたが、最近の脳の研究がいくつかの答えを示しはじめている。こうした答えは、音楽がただの娯楽をはるかにこえるものであることを示している。',
+      '音楽を聞くと、脳のさまざまな部分が同時にはたらきはじめる。音の高さやリズムなど音そのものを処理する領域もあれば、記憶や感情、体の動きに結びついた領域もある。これが、聞きなれた歌が何年も前の思い出をとつぜんよみがえらせたり、強いビートの音楽を聞くとじっとしているのがむずかしかったりする理由の一つである。ある意味で、音楽は脳全体の運動になるのである。',
+      '楽器を演奏することは、脳をさらに多く使うようである。たとえばピアノをひく人は、楽ふを読み、両手をちがうように動かし、注意深く聞き、タイミングを調節することを、すべて同時にしなければならない。音楽の訓練を受けた人は、音の小さなちがいに気づくのがより得意だと示した研究もあり、そのことは外国語の発音を学ぶような作業で役立つかもしれない。',
+      'しかし、こうした発見を大げさに言わないことが大切である。何年か前、クラシック音楽を聞くだけで子どもがかしこくなるという考えが広まった。のちの研究は、この強い主張をささえなかった。音楽から得られる利点は、短いあいだただ聞くことからではなく、楽器を定期的に練習するような、積極的で長期的なかかわりからおもに生まれるようである。',
+      'それでも、音楽が人間の生活で価値のある役割をはたしていることは明らかである。音楽は人々を結びつけ、言葉にしにくい気持ちを表す助けとなり、あらゆる年齢の人に喜びをあたえる。今では、患者をリラックスさせたり、年配の人がコミュニケーションをとるのをうながしたりするために音楽を使う病院や介護施設もある。音楽が私たちをかしこくするかどうかにかかわらず、研究は、音楽がさまざまな形で私たちの心を豊かにしうることを示している。だからこそ、音楽はこれほど長いあいだ人間の生活の一部でありつづけてきたのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（音の小さなちがいに気づくのが得意なこと）を受け、may help の主語になるので which。' },
+      { id: 'B', choices: ['passively', 'passive', 'passivity', 'pass'], answer: 0, why: '動詞 listening を説明するので副詞 passively「受け身で、ただ」。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'suggest のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '音楽を聞くと、脳のさまざまな部分が同時にはたらく。', answer: true, why: '第2段落 many different parts of the brain become active at the same time。' },
+      { statement: 'ピアノをひく人は、一度に1つのことしかしなくてよい。', answer: false, why: '第3段落 must read notes, move both hands … all at once。' },
+      { statement: 'のちの研究は、クラシック音楽を聞くだけでかしこくなるという主張をささえなかった。', answer: true, why: '第4段落 Later research did not support this strong claim。' },
+      { statement: '筆者によれば、音楽は病院では使われていない。', answer: false, why: '第5段落 Some hospitals and care homes now use music to help patients relax。' },
+    ],
+    qa: [
+      { q: 'Why can a familiar song bring back old memories?', choices: ['Music activates brain areas connected with memory and emotion.', 'Songs are always about the past.', 'The brain stops working when we hear music.', 'Old songs are louder than new ones.'], answer: 0, why: '第2段落 others are connected with memory, emotion, and movement. This is one reason why a familiar song can suddenly bring back memories。' },
+      { q: 'Where do the benefits of music mainly seem to come from?', choices: ['Active and long-term involvement, such as practising an instrument.', 'Listening to classical music for a few minutes.', 'Buying expensive instruments.', 'Watching music videos.'], answer: 0, why: '第4段落 benefits … appear to come mainly from active and long-term involvement, such as practising an instrument regularly。' },
+    ],
+    gist: [
+      { para: 2, choices: ['楽器の演奏が脳をより多く使うこと', 'ピアノの値段', '外国語の文法', '楽ふの書き方'], answer: 0, why: '第3段落は、楽器の演奏が脳の多くのはたらきを同時に使い、音を聞き分ける力にもつながりうることを述べている。' },
+      { para: 3, choices: ['発見を大げさに言わないことの大切さ', 'クラシック音楽の歴史', '子どもの遊び方', '研究者の生活'], answer: 0, why: '第4段落は、聞くだけでかしこくなるという主張がささえられなかったことと、利点の正しい理解を述べている。' },
+    ],
+    titleQ: { choices: ['Music and the Brain', 'How to Play the Piano', 'The History of Festivals', 'Why Babies Cry'], answer: 0, why: '全体として、音楽が脳にあたえる影響、演奏の効果、大げさな主張への注意、音楽の価値を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
