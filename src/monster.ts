@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'jay', name: 'カケスン', egg: 'どんぐりやまのあおいタマゴ', token: 'カケ', bigToken: 'カケスン', color: '#93c5fd', line: '#1e3a8a', rate: 0.02, desc: 'つばさに青いもようのあるカケス。秋にどんぐりを土にうめてたくわえ、冬になるとその場所を思い出して食べる。' },
   { id: 'starling', name: 'ムクドリン', egg: 'のきしたのにぎやかタマゴ', token: 'ムク', bigToken: 'ムクドリン', color: '#57534e', line: '#1c1917', rate: 0.02, desc: '夕方になると大きな群れで空をまうムクドリ。みんなで息を合わせて、空に大きなもようをえがく。' },
   { id: 'magpie', name: 'カササギン', egg: 'さとやまのしましまタマゴ', token: 'カサ', bigToken: 'カササギン', color: '#1e293b', line: '#020617', rate: 0.02, desc: '白と黒のつばさに長いしっぽのカササギ。光るものが気になって、いろいろなものをじっと観察する、ものしりな子。' },
   { id: 'vole', name: 'ハタネン', egg: 'はたけのこっそりタマゴ', token: 'ハタネ', bigToken: 'ハタネン', color: '#b45309', line: '#431407', rate: 0.02, desc: '野原の土の中に通り道をつくるハタネズミ。草のかげからこっそり顔を出して、まわりをよく見ている。' },
