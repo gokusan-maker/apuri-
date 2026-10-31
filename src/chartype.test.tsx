@@ -137,3 +137,12 @@ it('デザイン134：キャラ図鑑に、まだ会っていない子の数が�
   const n = SPECIES.filter((sp) => sp.id !== 'mochi' && sp.id !== 'fox' && typeOf(sp.id).id === 'attack').length
   expect(el.textContent).toContain(`⚔あと${n}`)
 })
+
+it('デザイン140：キャラ図鑑の説明で、生まれたタマゴの名前が 🥚 つきで目立つ', async () => {
+  const { speciesOf } = await import('./monster')
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
+  const el = screen.getByLabelText('生まれたタマゴ')
+  expect(el.textContent).toBe(`（🥚 ${speciesOf('fox').egg}から生まれた）`)
+  expect(el.querySelector('strong')!.textContent).toBe(speciesOf('fox').egg)
+})

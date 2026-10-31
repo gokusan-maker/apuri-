@@ -521,7 +521,7 @@ it('デザイン104：キャラ図鑑で会えた子をえらぶと、その子�
   fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
   const fox = SPECIES.find((s) => s.id === 'fox')!
   fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
-  expect(screen.getByText(`（${fox.egg}から生まれた）`)).toBeInTheDocument()
+  expect(screen.getByLabelText('生まれたタマゴ').textContent).toBe(`（🥚 ${fox.egg}から生まれた）`)
 })
 
 it('デザイン105：キャラ図鑑の詳しい説明は ✕ ボタンで閉じられる', async () => {
