@@ -3243,3 +3243,4 @@
 - 2026-10-31: 文法：入試の誤文訂正⑯（名詞・冠詞の難問：the piano・a university・have breakfast・the sun・luggage・loaves of bread・a ten-minute break）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「空き家に第2の人生を」（社会・まちづくり・結果の so／関係副詞 where／主格の that の空所）
 - 2026-10-31: キャラクター追加：ニホンザルン（ニホンザル・ゆきやまのおんせんタマゴ・サポートのとくぎ）
+- 2026-10-31: 文法：入試の正誤問題㉓（TOEFL・IELTS の語法②：let/allow/get・have ＋物＋過去分詞・rise/raise・lie/lay）10問

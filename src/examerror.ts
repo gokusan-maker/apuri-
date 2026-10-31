@@ -506,6 +506,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) will (B) tell him (C) when he (D) will come back.', choices: ['(A) will', '(B) tell him', '(C) when he', '(D) will come back'], answer: 3, why: '時を表す when の節では未来のことも現在形：when he comes back。' },
     ],
   },
+  {
+    id: 'exam-error-usage2',
+    title: '入試の正誤問題㉓（TOEFL・IELTS の語法②：make/let/allow・rise/raise・lie/lay）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'let ＋人＋原形、allow ＋人＋ to ～、get ＋人＋ to ～、have ＋物＋過去分詞、自動詞 rise と他動詞 raise、自動詞 lie（lay・lain）と他動詞 lay（laid・laid）に注目する。',
+    ],
+    examples: [
+      { en: 'Prices have risen sharply this year.', ja: '今年は物価が急に上がった。（自動詞 rise）' },
+      { en: 'Please lie down on the bed.', ja: 'ベッドに横になってください。（自動詞 lie）' },
+    ],
+    questions: [
+      { sentence: 'Prices (A) have (B) raised (C) sharply (D) this year.', choices: ['(A) have', '(B) raised', '(C) sharply', '(D) this year'], answer: 1, why: '「（物価が）上がる」は自動詞 rise（過去分詞 risen）：have risen。raise は「～を上げる」。' },
+      { sentence: 'My parents (A) let (B) me (C) to stay up (D) late on weekends.', choices: ['(A) let', '(B) me', '(C) to stay up', '(D) late on weekends'], answer: 2, why: 'let ＋人＋原形：let me stay up。' },
+      { sentence: 'The teacher (A) allowed us use (B) dictionaries (C) during (D) the test.', choices: ['(A) allowed us use', '(B) dictionaries', '(C) during', '(D) the test'], answer: 0, why: 'allow ＋人＋ to ＋原形：allowed us to use。' },
+      { sentence: 'Please (A) lay down (B) on the bed and (C) rest (D) for a while.', choices: ['(A) lay down', '(B) on the bed and', '(C) rest', '(D) for a while'], answer: 0, why: '「横になる」は自動詞 lie：lie down。lay は「～を置く・横たえる」（他動詞）。' },
+      { sentence: 'He (A) has (B) laid (C) in bed (D) all morning.', choices: ['(A) has', '(B) laid', '(C) in bed', '(D) all morning'], answer: 1, why: '「横になっている」の lie の過去分詞は lain：has lain。laid は lay（置く）の過去分詞。' },
+      { sentence: 'She made her son (A) clean (B) his room, and then she (C) let him (D) to go out.', choices: ['(A) clean', '(B) his room, and then she', '(C) let him', '(D) to go out'], answer: 3, why: 'let ＋人＋原形：let him go out。' },
+      { sentence: 'I (A) had my bike (B) repair (C) at the shop (D) yesterday.', choices: ['(A) had my bike', '(B) repair', '(C) at the shop', '(D) yesterday'], answer: 1, why: 'have ＋物＋過去分詞「～してもらう」：had my bike repaired。' },
+      { sentence: 'Smoke (A) was rising (B) from the chimney, so we (C) rose (D) the alarm.', choices: ['(A) was rising', '(B) from the chimney, so we', '(C) rose', '(D) the alarm'], answer: 2, why: '「（警報を）鳴らす・上げる」は他動詞 raise：raised the alarm。rise は目的語をとらない。' },
+      { sentence: 'The rule (A) does not (B) allow (C) to use (D) phones in class.', choices: ['(A) does not', '(B) allow', '(C) to use', '(D) phones in class'], answer: 2, why: 'allow のあとに人がないときは動名詞：allow using phones（または allow students to use）。' },
+      { sentence: 'He got his sister (A) help (B) him (C) with (D) his homework.', choices: ['(A) help', '(B) him', '(C) with', '(D) his homework'], answer: 0, why: 'get ＋人＋ to ＋原形「人に～してもらう」：got his sister to help。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

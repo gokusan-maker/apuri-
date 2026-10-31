@@ -274,3 +274,10 @@ it('誤文訂正⑯：名詞・冠詞の難問の単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('a university')
 })
+
+it('正誤問題㉓：make/let/allow・rise/raise・lie/lay の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-usage2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('(A) lay down')
+})
