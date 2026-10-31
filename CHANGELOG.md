@@ -3325,3 +3325,4 @@
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「可能性の光線（レーザー）」（科学・光・, which is why／非制限の which／that の空所）
 - 2026-10-31: キャラクター追加：チョウチンアンコン（チョウチンアンコウ・しんかいのあかりタマゴ・サポートのとくぎ）
 - 2026-10-31: 文法：入試の誤文訂正㉚（TOEFL・IELTS の書き言葉⑫：affect/effect・advise/advice・less/fewer・lose/loose・except/accept・its/it's・their/there・than/then・raise/rise）10問
+- 2026-10-31: 長文：共通テストの評論を本番の長さで「血液というおくりもの（献血）」（社会・ボランティア・非制限の which／主格の who／that の空所）

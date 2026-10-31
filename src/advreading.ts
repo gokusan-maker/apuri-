@@ -19345,6 +19345,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Beam of Possibilities', 'How to Use a Supermarket', 'The History of Lamps', 'Why the Moon Is Bright'], answer: 0, why: '全体として、レーザーの性質、はじめの評価、多くの使い道、正確さの例、注意点を述べている。' },
   },
   {
+    id: 'kyotsu-blood-donation',
+    title: 'The Gift of Blood',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every day, hospitals around the world need blood. Patients undergoing major surgery, people injured in accidents, mothers who lose a lot of blood during childbirth, and patients being treated for certain diseases may all need blood from other people to survive. Despite great advances in medicine, there is still no artificial substance that can fully replace human blood, so hospitals depend on donations from healthy volunteers. Without these people, many modern treatments would simply be impossible.",
+      "Donating blood is a fairly simple process. A volunteer first answers questions about their health and has a short medical check, such as a test of blood pressure. If they are healthy enough, a nurse takes a certain amount of blood, which usually takes only a few minutes. Afterwards, donors are asked to rest for a while and drink something, ( A ) helps the body recover. Many donors say that the experience is less frightening than they expected.",
+      "One of the difficulties of the blood supply is that blood cannot be stored forever. Some parts of blood can be kept for several weeks, but others, such as platelets, which help blood to clot, last only a few days. This means that hospitals need a steady supply of new donations throughout the year, not just a large amount at one time. Shortages can occur during holidays or bad weather, when fewer people come to donate.",
+      "In many countries, including Japan, changes in the population also create challenges. As society ages, more older people may need blood for medical treatment, while the number of young, healthy people ( B ) can donate is shrinking. For this reason, blood services make special efforts to encourage students and young adults to become regular donors, for example by setting up donation buses near universities and shopping areas.",
+      "For many donors, giving blood is a meaningful way to help others. A single donation can be used to support several patients, and donors never know exactly whose life they may help to save. Some people donate regularly for many years. Blood donation reminds us ( C ) even ordinary people can make a real difference in the lives of strangers, simply by giving a small part of themselves.",
+    ],
+    ja: [
+      '毎日、世界中の病院が血液を必要としている。大きな手術を受ける患者、事故でけがをした人、出産で多くの血を失う母親、ある病気の治療を受けている患者は、生きのびるためにほかの人からの血液を必要とすることがある。医学が大きく進歩したにもかかわらず、人の血液を完全にかわりにできる人工の物質はまだないので、病院は健康なボランティアからの献血にたよっている。こうした人々がいなければ、多くの現代の治療はとてもできないだろう。',
+      '献血はかなりかんたんな手順である。ボランティアはまず健康についての質問に答え、血圧の検査などの短い診察を受ける。十分に健康であれば、看護師が決まった量の血液をとり、それはふつう数分しかかからない。そのあと献血した人はしばらく休んで何か飲むよう言われ、そのことが体の回復を助ける。多くの献血者は、その経験は思っていたほどこわくなかったと言う。',
+      '血液の供給のむずかしさの一つは、血液がいつまでも保存できるわけではないことである。血液のある成分は数週間保存できるが、血液をかためるのを助ける血小板のように、数日しかもたないものもある。つまり病院は、一度に大量の血液ではなく、1年を通して新しい献血を安定して必要としている。人が献血に来にくい休日や悪天候のときには、不足が起こることがある。',
+      '日本をふくむ多くの国では、人口の変化も課題を生んでいる。社会が高齢化するにつれて、治療のために血液を必要とする年配の人がふえるかもしれない一方で、献血できる若く健康な人の数はへっている。このため、血液事業は、大学や商店街の近くに献血バスを置くなどして、学生や若い大人が定期的な献血者になるよう、とくに努力している。',
+      '多くの献血者にとって、献血はほかの人を助ける意味のある方法である。1回の献血で何人かの患者をささえることができ、献血者は自分がだれの命を救う助けになるのかを正確に知ることはない。何年も定期的に献血する人もいる。献血は、ふつうの人でも、自分のほんの一部をあたえるだけで、見知らぬ人の人生に本当のちがいを生むことができると思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（休んで何か飲むこと）を受け、helps の主語になるので which。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 young, healthy people（人）を受け、うしろの can donate の主語になるので主格の関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '人の血液を完全にかわりにできる人工の物質は、まだない。', answer: true, why: '第1段落 there is still no artificial substance that can fully replace human blood。' },
+      { statement: '献血で血液をとるのには、ふつう何時間もかかる。', answer: false, why: '第2段落 which usually takes only a few minutes。' },
+      { statement: '血小板は、数日しかもたない。', answer: true, why: '第3段落 platelets … last only a few days。' },
+      { statement: '筆者によれば、献血者は自分の血液がだれを助けるか正確に知っている。', answer: false, why: '第5段落 donors never know exactly whose life they may help to save。' },
+    ],
+    qa: [
+      { q: 'Why do hospitals need a steady supply of blood throughout the year?', choices: ['Some parts of blood cannot be stored for long.', 'Blood becomes more valuable over time.', 'Hospitals are closed in winter.', 'Patients only need blood in summer.'], answer: 0, why: '第3段落 blood cannot be stored forever … This means that hospitals need a steady supply。' },
+      { q: 'How do blood services try to encourage young donors?', choices: ['By setting up donation buses near universities and shopping areas.', 'By paying them large amounts of money.', 'By closing hospitals on weekends.', 'By asking only older people to donate.'], answer: 0, why: '第4段落 by setting up donation buses near universities and shopping areas。' },
+    ],
+    gist: [
+      { para: 2, choices: ['血液が長く保存できないむずかしさ', '冷蔵庫の作り方', '休日のすごし方', '天気予報の見方'], answer: 0, why: '第3段落は、血液の成分によって保存期間が短く、安定した献血が必要なことを述べている。' },
+      { para: 3, choices: ['高齢化による献血の課題と若者への呼びかけ', '大学の入試', 'バスの時刻表', '商店街の歴史'], answer: 0, why: '第4段落は、高齢化で必要な人がふえ献血できる人がへる課題と、若者への働きかけを述べている。' },
+    ],
+    titleQ: { choices: ['The Gift of Blood', 'How to Become a Nurse', 'The History of Hospitals', 'Why Exercise Is Important'], answer: 0, why: '全体として、献血の必要性・手順・保存の課題・高齢化・その意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
