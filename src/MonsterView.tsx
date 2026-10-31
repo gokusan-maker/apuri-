@@ -867,6 +867,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 50 m-10 0 a10 10 0 1 1 20 0 a6 6 0 1 1 -12 0 a3 3 0 1 1 6 0" fill="none" stroke="#7c2d12" strokeWidth="2" />
       </g>
     )
+  if (species === 'treefrog')
+    return (
+      <g>
+        {/* 指の丸い吸盤 */}
+        <circle cx="30" cy="84" r="3" fill="#bbf7d0" stroke="#14532d" strokeWidth="1" />
+        <circle cx="70" cy="84" r="3" fill="#bbf7d0" stroke="#14532d" strokeWidth="1" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
