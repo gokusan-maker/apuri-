@@ -449,3 +449,10 @@ it('正誤問題㉟：長い主語と動詞の単元が10問ある', async () =>
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('(D) are the castle')
 })
+
+it('誤文訂正㉙：関係詞と前置詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-29')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('to whom')
+})

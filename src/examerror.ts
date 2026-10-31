@@ -1326,6 +1326,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The quality of the products made in these factories [have] improved.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: '主語の中心は The quality（単数）：has improved。' },
     ],
   },
+  {
+    id: 'exam-fix-29',
+    title: '入試の誤文訂正㉙（関係詞と前置詞）',
+    points: ['前置詞＋関係代名詞では、人は whom、物は which を使い、that や who は使わない。前置詞を前に出したら文の最後に重ねない。前置詞を最後に残す形（whom I talked to）もある。[ ] の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the house in which I was born.', ja: 'ここは私が生まれた家だ。（in which ＝ where）' }],
+    questions: [
+      { sentence: 'This is the house [in that] I was born.', choices: ['in which', 'in where', 'where in', 'which in'], answer: 0, why: '前置詞のあとに that は置けない：in which（または where）。' },
+      { sentence: 'The person [to who] I spoke was very kind.', choices: ['to whom', 'to that', 'who to', 'whom to'], answer: 0, why: '前置詞のあとの人を表す関係代名詞は目的格 whom：to whom。' },
+      { sentence: 'The tool [with that] he opened the box was very old.', choices: ['with which', 'with what', 'which with', 'that with'], answer: 0, why: '物を表す前置詞＋関係代名詞は which：with which。' },
+      { sentence: 'The topic [about which we talked about] was interesting.', choices: ['about which we talked', 'which we talked', 'about we talked', 'that about we talked'], answer: 0, why: '前置詞 about を前に出したので最後の about はいらない：about which we talked。which we talked だけでは前置詞が足りない。' },
+      { sentence: 'The reason [for why] he came is still unknown.', choices: ['why', 'for that', 'which for', 'for when'], answer: 0, why: 'the reason のあとは関係副詞 why（または for which）。for why とは言わない。' },
+      { sentence: 'The day [on when] we met was rainy.', choices: ['on which', 'on that', 'which on', 'in when'], answer: 0, why: '前置詞のあとに関係副詞 when は置けない：on which（または when だけ）。' },
+      { sentence: 'The girl [whom I talked] yesterday is my cousin.', choices: ['whom I talked to', 'to I talked whom', 'whom talked I', 'who to I talked'], answer: 0, why: 'talk to ～ の to を最後に残す：the girl whom I talked to（＝ to whom I talked）。' },
+      { sentence: 'The company [for whom] she works is very large.', choices: ['for which', 'for that', 'which for', 'whom for'], answer: 0, why: '先行詞 The company は物（組織）なので which：for which she works。' },
+      { sentence: 'I have two cats, both of [them] are white.', choices: ['which', 'them which', 'that', 'whom'], answer: 0, why: 'コンマのあとで2つの文をつなぐので関係代名詞：both of which are white。them だと接続詞がない。' },
+      { sentence: 'The chair [on that] I was sitting suddenly broke.', choices: ['on which', 'which on', 'that on', 'on what'], answer: 0, why: '前置詞のあとの物を表す関係代名詞は which：on which I was sitting。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
