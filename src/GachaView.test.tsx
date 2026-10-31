@@ -617,3 +617,12 @@ it('デザイン128：同じタイプのなかまがすでにいるときは「�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText(/🆕 はじめての/)).toBeNull()
 })
+
+it('デザイン132：ガチャの結果に、図鑑のコンプリート率が小さく出る', async () => {
+  localStorage.clear()
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={GACHA_PRICE} members={2} ownedSpecies={['mochi', 'fox']} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  const pct = Math.floor((3 / SPECIES.length) * 100)
+  expect(screen.getByLabelText(`図鑑のコンプリート率 ${pct}%`).textContent).toBe(`📖 図鑑 ${pct}%（3/${SPECIES.length}）`)
+})
