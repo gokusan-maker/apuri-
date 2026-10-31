@@ -3428,3 +3428,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈53〉（共通テストレベル：enjoy・decide・forget to・avoid・soon・It is ～ to・think of -ing・promise・finish・主語の動名詞）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「試合を公正にする人たち（審判）」（文化・スポーツ・since／whose／how の空所）
 - 2026-10-31: キャラクター：ガラゴの「ガラゴン」を追加（とくぎ：よるのジャンプ）
+- 2026-10-31: 文法：入試の誤文訂正㊼（TOEFL・IELTS の書き言葉⑲：rise と raise・increase by・As shown・reach・who own・increase in・remain stable・the highest・Compared with・two thirds）10問

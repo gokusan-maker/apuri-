@@ -2082,6 +2082,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He finished [to write] the report at midnight.', choices: ['writing', 'write', 'wrote', 'to writing'], answer: 0, why: 'finish は動名詞を目的語にとる：finish writing。' },
     ],
   },
+  {
+    id: 'exam-fix-47',
+    title: '入試の誤文訂正㊼（TOEFL・IELTS の書き言葉⑲：グラフ・表を説明する表現）',
+    points: ['自動詞 rise と他動詞 raise、増減の差の by、As shown in the graph、reach（他動詞）、関係代名詞の主格、an increase in ～、remain ＋形容詞、最上級、Compared with ～、分数の two thirds など、IELTS のグラフ問題やレポートでよく使う表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'As shown in the graph, sales rose sharply in 2020.', ja: 'グラフに示されているように、売り上げは2020年に急に上がった。' }],
+    questions: [
+      { sentence: 'The number of tourists [raised] sharply in 2020.', choices: ['rose', 'raise', 'was risen', 'rising'], answer: 0, why: '「（数が）上がる」は自動詞 rise（過去形 rose）。raise は「～を上げる」という他動詞。' },
+      { sentence: 'Prices [increased in] 5 percent last year.', choices: ['increased by', 'increased at', 'increased for', 'increased with'], answer: 0, why: '増減の差（5%）をあらわすのは by：increased by 5 percent。' },
+      { sentence: 'As [showing] in the graph, sales rose steadily.', choices: ['shown', 'show', 'to show', 'showed'], answer: 0, why: '「グラフに示されているように」は受け身の意味なので As shown in the graph。' },
+      { sentence: 'The figure [reached to] its peak in 2015.', choices: ['reached', 'reached at', 'arrived', 'got at'], answer: 0, why: 'reach は他動詞なので前置詞はいらない：reached its peak。' },
+      { sentence: 'The percentage of students [own] a smartphone is about 90 percent.', choices: ['who own', 'owns', 'owning of', 'who owns'], answer: 0, why: 'students を説明する関係代名詞の節が必要で、先行詞が複数なので who own。' },
+      { sentence: 'There was a [sharp increase of] the price of rice.', choices: ['sharp increase in', 'sharp increase to', 'sharply increase in', 'sharp increasing of'], answer: 0, why: '名詞の increase のあとは in：a sharp increase in ～「～の急な増加」。' },
+      { sentence: 'Sales remained [stably] throughout the year.', choices: ['stable', 'stability', 'stabled', 'to stable'], answer: 0, why: 'remain ＋形容詞「～のままである」：remained stable。' },
+      { sentence: 'Exports were [the most high] in 2018.', choices: ['the highest', 'most highest', 'the more high', 'highest of'], answer: 0, why: 'high の最上級は the highest。' },
+      { sentence: '[Comparing] with last year, sales were much better.', choices: ['Compared', 'Compare', 'To compare', 'Comparison'], answer: 0, why: '「～とくらべると」は受け身の分詞構文 Compared with ～。' },
+      { sentence: 'Two [third] of the students agreed with the plan.', choices: ['thirds', 'third of', 'thirdly', 'threes'], answer: 0, why: '分子が2以上の分数は分母を複数形にする：two thirds。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
