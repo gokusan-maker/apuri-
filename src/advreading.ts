@@ -20853,7 +20853,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '賞味期限は、すぐにはいたまない食べ物に主に使われる。', answer: true, why: '第2段落 it is mainly used for foods that do not spoil quickly。' },
       { statement: '賞味期限をすぎた食べ物は、かならず安全でない。', answer: false, why: '第2段落 it is not necessarily unsafe。' },
       { statement: '消費期限をすぎた生の肉や魚は、食べるべきではない。', answer: true, why: '第2段落 These foods should not be eaten after the date has passed。' },
-      { statement: '正しく保存されていれば、食べ物は消費期限の前にいたむことはない。', answer: false, why: '第5段落 Food that has not been stored properly can spoil even before its use-by date と、保存がだいじだと述べているだけで、正しく保存すればぜったいいたまないとは言っていない。' },
+      { statement: '筆者によれば、保存の指示にしたがうことは大切ではない。', answer: false, why: '第5段落 it is important to follow storage instructions。' },
+
     ],
     qa: [
       { q: 'What does throwing food away waste besides money?', choices: ['The water, energy, and land used to produce it.', 'Only the packaging.', 'The time spent eating.', 'The dates printed on it.'], answer: 0, why: '第3段落 it also wastes the water, energy, and land used to produce, transport, and store it。' },
