@@ -169,3 +169,9 @@ it('デザイン149：キャラ図鑑の説明に、ガチャでの出やすさ�
   fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
   expect(screen.getByLabelText('ガチャでの出やすさ').textContent).toBe(`（🎲 ガチャでの出やすさ：${(baseRate(speciesOf('fox')) * 100).toFixed(1)}%）`)
 })
+
+it('デザイン152：キャラ図鑑で、なかまに3体以上いる子に「👥×○」が出る', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={5} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'fox', 'cat', 'cat', 'cat']} />)
+  expect(screen.getByLabelText('なかまに 3体').textContent).toBe('👥×3')
+  expect(screen.queryByLabelText('なかまに 2体')).toBeNull()
+})
