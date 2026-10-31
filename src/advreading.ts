@@ -18136,6 +18136,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Can You Believe Everything Online?', 'How to Make a Video', 'The History of Smartphones', 'Why Advertising Is Necessary'], answer: 0, why: '全体として、ネット上のまちがった情報の広まり方・害・見分け方・メディア・リテラシーを述べている。' },
   },
   {
+    id: 'kyotsu-geothermal',
+    title: 'Power from Beneath Our Feet',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Deep beneath our feet, the Earth is extremely hot. In some places, this heat comes close to the surface, warming underground water and creating hot springs and steam. For thousands of years, people have enjoyed bathing in these natural hot waters. Today, however, many countries are interested in this heat for a different reason: it can be used to produce electricity and to warm buildings.",
+      "This type of energy is called geothermal energy. In a typical geothermal power plant, wells are drilled deep into the ground to reach hot water and steam. The steam is used to turn turbines, which produce electricity, and the water is often returned underground afterwards. One great advantage of geothermal energy is that it does not depend on the weather. Unlike solar power, which stops at night, or wind power, which stops when the wind is calm, a geothermal plant can produce electricity day and night throughout the year.",
+      "Countries that have many volcanoes are especially well suited to geothermal energy. Iceland is a famous example. There, geothermal heat is used not only to generate electricity but also to heat a large number of homes, ( A ) means that many families rarely need other fuels for heating. Japan also has a large number of volcanoes, and experts believe that it has a great deal of geothermal potential. Yet only a small part of its electricity currently comes from this source.",
+      "There are several reasons for this. Many of the most promising areas are located in national parks, where development is strictly limited in order to protect nature and scenery. In addition, the owners of hot spring resorts sometimes worry that drilling nearby may reduce the amount or temperature of the water ( B ) their business depends on. Building a geothermal plant is also expensive, and it is not always certain that a well will find enough heat.",
+      "Despite these challenges, interest in geothermal energy is growing. New technologies may make it possible to use heat from areas that were once considered unsuitable, and some projects have been planned through careful discussion with local communities. If people can find ways to balance energy needs with the protection of nature and local traditions, the heat beneath Japan may become an important source of clean and stable energy ( C ) the country can rely on.",
+    ],
+    ja: [
+      '私たちの足のはるか下では、地球はとても熱い。場所によってはこの熱が地表の近くまで来て、地下の水を温め、温泉や蒸気を生み出している。何千年ものあいだ、人々はこうした天然の温泉に入るのを楽しんできた。しかし今日、多くの国が別の理由でこの熱に関心をもっている。電気を作ったり建物を温めたりするのに使えるからである。',
+      'この種類のエネルギーは地熱エネルギーとよばれる。ふつうの地熱発電所では、熱い水や蒸気にとどくよう地中深くに井戸がほられる。蒸気はタービンをまわすのに使われ、それが電気を生み、水はそのあとふつう地下にもどされる。地熱エネルギーの大きな利点の一つは、天気に左右されないことである。夜には止まる太陽光発電や、風がないと止まる風力発電とちがい、地熱発電所は1年中、昼も夜も電気を作ることができる。',
+      '火山の多い国は、とくに地熱エネルギーに向いている。アイスランドは有名な例である。そこでは地熱は電気を作るだけでなく、多くの家を温めるのにも使われており、そのことは、多くの家庭が暖房のためにほかの燃料をほとんど必要としないことを意味している。日本も多くの火山をもち、専門家は日本には地熱の大きな可能性があると考えている。しかし今のところ、日本の電気のうちこの方法で作られているのはわずかである。',
+      'これにはいくつかの理由がある。最も有望な地域の多くは国立公園の中にあり、そこでは自然や景色を守るために開発がきびしく制限されている。さらに、温泉地の持ち主は、近くで地面をほると、自分たちの商売がたよっているお湯の量や温度がへるのではないかと心配することがある。地熱発電所を建てるのはお金もかかり、井戸が十分な熱を見つけられるかどうかはいつも確かとはかぎらない。',
+      'こうした課題にもかかわらず、地熱エネルギーへの関心は高まっている。新しい技術によって、かつては向いていないと考えられていた地域の熱も使えるようになるかもしれず、地域の人々との注意深い話し合いを通じて計画された取り組みもある。もし人々が、エネルギーの必要と、自然や地域の伝統を守ることとのバランスをとる方法を見つけられれば、日本の地下の熱は、国がたよることのできる、クリーンで安定したエネルギーの大切な源になるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（地熱で多くの家を温めること）を受け、means の主語になるので which。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the water を受け、うしろの depends on の目的語が欠けているので目的格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 energy を受け、うしろの rely on の目的語が欠けているので目的格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '地熱発電所では、使ったあとの水がふつう地下にもどされる。', answer: true, why: '第2段落 the water is often returned underground afterwards。' },
+      { statement: '地熱発電は、太陽光発電と同じように夜には止まる。', answer: false, why: '第2段落 a geothermal plant can produce electricity day and night throughout the year。' },
+      { statement: '日本の電気のうち、地熱で作られているのはすでに大部分である。', answer: false, why: '第3段落 only a small part of its electricity currently comes from this source。' },
+      { statement: '温泉地の持ち主の中には、近くの掘削を心配する人がいる。', answer: true, why: '第4段落 the owners of hot spring resorts sometimes worry that drilling nearby may reduce the amount or temperature of the water。' },
+    ],
+    qa: [
+      { q: 'What is one great advantage of geothermal energy?', choices: ['It does not depend on the weather.', 'It needs no drilling at all.', 'It can only be used in summer.', 'It is the cheapest energy to build.'], answer: 0, why: '第2段落 One great advantage of geothermal energy is that it does not depend on the weather。' },
+      { q: 'Which is NOT mentioned as a reason Japan uses little geothermal energy?', choices: ['Japan has very few volcanoes.', 'Promising areas are in national parks.', 'Hot spring owners worry about drilling.', 'Building a plant is expensive.'], answer: 0, why: '第3段落で日本は火山が多いと述べられており、火山が少ないという理由はない。ほかの3つは第4段落にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['地熱に向いた国の例と日本の現状', '火山の噴火の予知', 'アイスランドの観光地', '管の作り方'], answer: 0, why: '第3段落は、アイスランドの例と、可能性が大きいのにあまり使われていない日本の現状を述べている。' },
+      { para: 3, choices: ['日本で地熱の利用が進まない理由', '国立公園の歴史', '温泉の入り方', '井戸のほり方'], answer: 0, why: '第4段落は、国立公園の制限、温泉地の心配、費用と不確かさという理由を述べている。' },
+    ],
+    titleQ: { choices: ['Power from Beneath Our Feet', 'How to Enjoy Hot Springs', 'The History of Iceland', 'Why Wind Power Stops'], answer: 0, why: '全体として、地熱エネルギーのしくみ・利点・日本での課題と可能性を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
