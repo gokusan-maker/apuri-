@@ -3394,3 +3394,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㊶（共通テストレベル：前置詞の総まとめ：on 日付・by 期限・for 期間・arrive at・good at・at 時刻・married to・interested in・on foot・discuss）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「いなかをつなぎつづける（地方の公共交通）」（社会・交通・非制限の which／whether の空所）
 - 2026-10-31: デザイン：まちがえても相棒のとくぎにたよらずにボスに勝つと「💪 とくぎなしで勝利！」を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊽（共通テストレベル：前置詞の総まとめ：on 日付・by 期限・for 期間・arrive at・good at・at 時刻・married to・interested in・on foot・discuss）10問

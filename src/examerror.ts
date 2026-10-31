@@ -1106,6 +1106,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The fact (A) that smoking (B) harms (C) health (D) are well known.', choices: ['(A) that smoking', '(B) harms', '(C) health', '(D) are well known'], answer: 3, why: '主語は The fact（単数）なので is well known。' },
     ],
   },
+  {
+    id: 'exam-error-prep2',
+    title: '入試の正誤問題㊽（共通テストレベル：前置詞の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '日付の on、期限の by、期間の for、arrive at、good at、時刻の at、married to、interested in、on foot、他動詞 discuss など、まちがえやすい前置詞。',
+    ],
+    examples: [
+      { en: 'Please finish the report by Friday.', ja: '金曜日までに報告書を仕上げてください。' },
+      { en: 'He usually goes to school on foot.', ja: '彼はふだん歩いて学校に行く。' },
+    ],
+    questions: [
+      { sentence: 'I (A) was born (B) in (C) May 5, (D) 2010.', choices: ['(A) was born', '(B) in', '(C) May 5', '(D) 2010'], answer: 1, why: '日付には on：on May 5。' },
+      { sentence: 'Please (A) finish (B) the report (C) until (D) Friday.', choices: ['(A) finish', '(B) the report', '(C) until', '(D) Friday'], answer: 2, why: '期限は by Friday。until は継続。' },
+      { sentence: 'She (A) has lived (B) here (C) since (D) ten years.', choices: ['(A) has lived', '(B) here', '(C) since', '(D) ten years'], answer: 2, why: '期間の長さには for：for ten years。' },
+      { sentence: 'We (A) arrived (B) to (C) the station (D) at noon.', choices: ['(A) arrived', '(B) to', '(C) the station', '(D) at noon'], answer: 1, why: '地点に着くは arrive at。' },
+      { sentence: '(A) He is good (B) in (C) playing (D) the piano.', choices: ['(A) He is good', '(B) in', '(C) playing', '(D) the piano'], answer: 1, why: 'be good at ～。' },
+      { sentence: 'The meeting (A) will start (B) in (C) 3 p.m. (D) tomorrow.', choices: ['(A) will start', '(B) in', '(C) 3 p.m', '(D) tomorrow'], answer: 1, why: '時刻には at：at 3 p.m.。' },
+      { sentence: 'She (A) has been (B) married (C) with (D) a doctor for years.', choices: ['(A) has been', '(B) married', '(C) with', '(D) a doctor for years'], answer: 2, why: 'be married to ～。' },
+      { sentence: '(A) I am interested (B) about (C) Japanese (D) history.', choices: ['(A) I am interested', '(B) about', '(C) Japanese', '(D) history'], answer: 1, why: 'be interested in ～。' },
+      { sentence: 'He (A) usually (B) goes (C) to school (D) by foot.', choices: ['(A) usually', '(B) goes', '(C) to school', '(D) by foot'], answer: 3, why: '「歩いて」は on foot。' },
+      { sentence: '(A) Let’s discuss about (B) the plan (C) after (D) lunch.', choices: ['(A) Let’s discuss about', '(B) the plan', '(C) after', '(D) lunch'], answer: 0, why: 'discuss は他動詞なので about はいらない：discuss the plan。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
