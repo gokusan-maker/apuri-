@@ -3228,3 +3228,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑳（主語と動詞の一致の難問：one of・mathematics・news・a number of・either A or B・not only A but also B・the rich）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「指紋のふしぎ」（科学・からだ・even though／結果の so の空所）
 - 2026-10-31: デザイン：ボス戦の勝利画面に、その戦いの正答率（🎯 ○%）を出すようにした
+- 2026-10-31: 文法：入試の誤文訂正⑭（TOEFL・IELTS の書き言葉⑥：gonna・wanna・kind of・a lot・plus などを書き言葉に）10問

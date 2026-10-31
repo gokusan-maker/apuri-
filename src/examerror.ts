@@ -696,6 +696,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The rise in prices [was affected] many families.', choices: ['affected', 'was effected', 'effected to', 'affected on'], answer: 0, why: '「～に影響する」は他動詞 affect で、ここでは物価の上昇が影響をあたえる側なので能動態：affected many families。' },
     ],
   },
+  {
+    id: 'exam-fix-14',
+    title: '入試の誤文訂正⑭（TOEFL・IELTS の書き言葉⑥：くだけすぎた表現を書き言葉に）',
+    points: ['小論文では話し言葉のくだけた表現（gonna・wanna・ain\'t・a lot・plus など）をさけ、正式な書き言葉にする。［ ］の部分を、文法的に正しく書き言葉にふさわしい形にするものを4つから選ぶ。'],
+    examples: [{ en: 'The number of tourists has increased considerably.', ja: '観光客の数はかなりふえた。（a lot より considerably が書き言葉向き）' }],
+    questions: [
+      { sentence: 'Many people [gonna] move to cities in the future.', choices: ['are going to', 'gonna be', 'is going', 'going to'], answer: 0, why: 'gonna は話し言葉。書き言葉では are going to ＋原形（主語が複数なので are）。' },
+      { sentence: 'The results of the survey were [kind of] disappointing.', choices: ['somewhat', 'kind', 'sort', 'a kind of'], answer: 0, why: 'kind of「ちょっと」は話し言葉。書き言葉では somewhat「いくぶん」。' },
+      { sentence: '[There\'s] many reasons for this trend.', choices: ['There are', 'There is', 'It is', 'Its'], answer: 0, why: 'うしろが many reasons（複数）なので There are。短縮形もさける。' },
+      { sentence: 'Most students [wanna] learn practical skills.', choices: ['want to', 'wants to', 'wanna to', 'want'], answer: 0, why: 'wanna は話し言葉。書き言葉では want to ＋原形（主語が複数なので want）。' },
+      { sentence: 'This environmental problem is [real] serious.', choices: ['extremely', 'extreme', 'more extreme', 'extremity'], answer: 0, why: '形容詞 serious を強めるのは副詞。real は話し言葉で、書き言葉では extremely などを使う。' },
+      { sentence: 'Governments [got to] act quickly to reduce pollution.', choices: ['must', 'got', 'getting', 'gotta'], answer: 0, why: 'got to・gotta は話し言葉。書き言葉では must（または need to / have to）。' },
+      { sentence: 'The number of tourists has gone up [a lot].', choices: ['considerably', 'a lots', 'lots', 'much a lot'], answer: 0, why: 'a lot は話し言葉に近い。書き言葉では considerably「かなり」。' },
+      { sentence: 'Online shopping is convenient. [Plus], it saves time.', choices: ['Furthermore', 'Plusly', 'More', 'Further more'], answer: 0, why: '文頭の Plus「それに」は話し言葉。書き言葉では Furthermore（または In addition）。' },
+      { sentence: 'Many young people [ain\'t] interested in politics.', choices: ['are not', 'is not', 'not', 'be not'], answer: 0, why: 'ain\'t は話し言葉でも正式ではない形。主語が複数なので are not。' },
+      { sentence: 'Housing is [way more] expensive than it was ten years ago.', choices: ['much more', 'way much', 'more way', 'very more'], answer: 0, why: '比較級を強める way は話し言葉。書き言葉では much more。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
