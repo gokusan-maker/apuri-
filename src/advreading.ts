@@ -20671,6 +20671,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The People Who Keep the Game Fair', 'How to Become a Soccer Star', 'The History of Cameras', 'Why Fans Shout'], answer: 0, why: '全体として、審判の役割とむずかしさ、技術の利用とその議論、判定を受け入れることの大切さを述べている。' },
   },
   {
+    id: 'kyotsu-hydropower',
+    title: 'The Power of Moving Water',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For thousands of years, people have used the power of moving water. Ancient water wheels turned millstones to grind grain, and later they powered machines in factories. Today, the same basic idea is used on a much larger scale to produce electricity. Hydropower, as it is called, is one of the oldest and most widely used sources of renewable energy in the world.",
+      "Most hydropower plants work by building a dam across a river. The dam holds back a large amount of water, creating a lake called a reservoir. When the water is released, it flows through large turbines, ( A ) spin and drive generators that produce electricity. Because the amount of water released can be controlled, hydropower plants can quickly increase or decrease the electricity they produce, which helps to match supply with demand.",
+      "Hydropower has several important advantages. Once a plant has been built, it can produce electricity for many decades without burning fuel, so it releases very little carbon dioxide during operation. Reservoirs can also store water for farming and drinking, and dams can help to control floods by holding back water during heavy rain. In some countries, hydropower provides a large share of all the electricity that people use.",
+      "However, large dams can have serious effects on the environment and on people. When a valley is flooded to create a reservoir, forests, farmland, and sometimes entire villages disappear under the water, and residents may have to move elsewhere. Dams also change the natural flow of rivers. Fish such as salmon, ( B ) swim upstream to lay their eggs, can find their journeys blocked. In addition, rivers carry soil and nutrients downstream, and dams can stop this flow, affecting the land and sea far below.",
+      "Because of these problems, many people now argue that the future of hydropower lies not in building more giant dams but in improving existing ones and building smaller systems that cause less damage. Some dams have been fitted with special passages that allow fish to swim around them. Small hydropower plants on streams can provide electricity to nearby communities without flooding large areas. As with any source of energy, the challenge is to balance the benefits we gain with the costs to nature and to the people ( C ) live near the rivers.",
+    ],
+    ja: [
+      '何千年ものあいだ、人々は流れる水の力を使ってきた。昔の水車は穀物をひくために石うすを回し、のちには工場の機械を動かした。今日、同じ基本的な考えが、はるかに大きな規模で電気をつくるのに使われている。水力発電とよばれるものは、世界で最も古く、最も広く使われている再生可能エネルギーの1つである。',
+      'ほとんどの水力発電所は、川をせきとめるダムをつくることで働く。ダムは大量の水をため、貯水池とよばれる湖をつくる。水が放流されると、大きなタービンの中を流れ、タービンが回って電気をつくる発電機を動かす。放流する水の量を調節できるので、水力発電所はつくる電気をすばやくふやしたりへらしたりでき、それは供給と需要を合わせるのに役立つ。',
+      '水力発電にはいくつかの大切な利点がある。いったん発電所ができると、燃料を燃やさずに何十年も電気をつくることができるので、運転中に二酸化炭素をほとんど出さない。貯水池は農業や飲み水のための水をたくわえることもでき、ダムは大雨のときに水をせきとめて洪水をおさえるのに役立つ。国によっては、水力発電が人々の使う電気全体の大きな割合をしめている。',
+      'しかし、大きなダムは環境や人々に深刻な影響をあたえることがある。貯水池をつくるために谷が水にしずめられると、森や農地、ときには村全体が水の下に消え、住民はほかの場所へ移らなければならないことがある。ダムはまた川の自然な流れを変える。サケのように卵を産むために川をのぼる魚は、その旅をさまたげられることがある。さらに、川は土や栄養を下流へ運ぶが、ダムはこの流れを止めて、はるか下流の陸や海に影響をあたえることがある。',
+      'こうした問題があるので、今では多くの人が、水力発電の未来は巨大なダムをもっとつくることではなく、今あるダムをよりよくし、害の少ない小さなしくみをつくることにあると主張している。魚がダムをう回して泳げる特別な通り道をつけたダムもある。小川の小さな水力発電所は、広い地域を水にしずめることなく、近くの地域に電気を送ることができる。どんなエネルギー源とも同じように、課題は、私たちが得るめぐみと、自然や川の近くに住む人々にとってのコストのバランスをとることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 large turbines を受け、spin の主語になる非制限用法の which。' },
+      { id: 'B', choices: ['which', 'what', 'whose', 'where'], answer: 0, why: 'コンマではさんで先行詞 Fish such as salmon を受け、swim の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は the people（人）で、live の主語になるので主格の関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '水力発電所は、放流する水の量を調節して発電量を変えられる。', answer: true, why: '第2段落 Because the amount of water released can be controlled, hydropower plants can quickly increase or decrease the electricity。' },
+      { statement: '水力発電所は、運転中に大量の二酸化炭素を出す。', answer: false, why: '第3段落 it releases very little carbon dioxide during operation。' },
+      { statement: '貯水池をつくるために、村全体が水にしずむこともある。', answer: true, why: '第4段落 sometimes entire villages disappear under the water。' },
+      { statement: '筆者によれば、多くの人がもっと巨大なダムをつくるべきだと主張している。', answer: false, why: '第5段落 the future of hydropower lies not in building more giant dams。' },
+    ],
+    qa: [
+      { q: 'How can dams help to control floods?', choices: ['By holding back water during heavy rain.', 'By making rivers flow faster.', 'By removing all the rain.', 'By moving villages.'], answer: 0, why: '第3段落 dams can help to control floods by holding back water during heavy rain。' },
+      { q: 'What have some dams been fitted with?', choices: ['Special passages that allow fish to swim around them.', 'Larger turbines that use fuel.', 'Bridges for cars.', 'Walls that stop all fish.'], answer: 0, why: '第5段落 Some dams have been fitted with special passages that allow fish to swim around them。' },
+    ],
+    gist: [
+      { para: 1, choices: ['水力発電所のしくみ', '水車の作り方', '湖の名前', '発電機の値段'], answer: 0, why: '第2段落は、ダムで水をため、放流してタービンを回すしくみを述べている。' },
+      { para: 3, choices: ['大きなダムが環境や人にあたえる影響', 'サケの料理', '谷の地図', '土の種類'], answer: 0, why: '第4段落は、村や森が水にしずむこと、魚の移動や土の流れへの影響を述べている。' },
+    ],
+    titleQ: { choices: ['The Power of Moving Water', 'How to Catch Salmon', 'The History of Factories', 'Why Rain Falls'], answer: 0, why: '全体として、水力発電のしくみと利点、大きなダムの問題、これからの方向を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

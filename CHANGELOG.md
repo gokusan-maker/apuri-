@@ -3429,3 +3429,4 @@
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「試合を公正にする人たち（審判）」（文化・スポーツ・since／whose／how の空所）
 - 2026-10-31: キャラクター：ガラゴの「ガラゴン」を追加（とくぎ：よるのジャンプ）
 - 2026-10-31: 文法：入試の誤文訂正㊼（TOEFL・IELTS の書き言葉⑲：rise と raise・increase by・As shown・reach・who own・increase in・remain stable・the highest・Compared with・two thirds）10問
+- 2026-10-31: 長文：共通テストの評論を本番の長さで「流れる水の力（水力発電）」（環境・エネルギー・非制限の which／who の空所）
