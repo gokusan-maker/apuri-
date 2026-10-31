@@ -3413,3 +3413,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㊹（TOEFL・IELTS の書き言葉⑱：受け身の時制・助動詞の受け身・進行形の受け身・by・surprised と surprising・無生物主語の take と make）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「灰色のカーテン（霧）」（自然・天気・which is why／where／how closely の空所）
 - 2026-10-31: デザイン：キャラ図鑑の説明で、必殺技の色を小さな丸で見せるようにした
+- 2026-10-31: 文法：入試の正誤問題〈51〉（受け身と無生物主語：過去の受け身・is spoken・will be ～ed・surprise・surprised・take 人 to・by・is being ～ed・should be ～ed・make O C）10問

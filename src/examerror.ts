@@ -1178,6 +1178,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) There are (B) much water (C) in (D) the bottle.', choices: ['(A) There are', '(B) much water', '(C) in', '(D) the bottle'], answer: 0, why: 'water は単数あつかいなので There is。' },
     ],
   },
+  {
+    id: 'exam-error-passive3',
+    title: '入試の正誤問題〈51〉（受け身と無生物主語）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '過去・現在の受け身、助動詞の受け身、進行形の受け身、行為者の by、surprised と surprising、無生物主語の surprise・take・make など、レポートで多い受け身と、ものを主語にした書き方。',
+    ],
+    examples: [
+      { en: 'The results of the test will be announced next week.', ja: 'テストの結果は来週発表される。' },
+      { en: 'This road will take you to the station.', ja: 'この道を行けば駅に着きます。' },
+    ],
+    questions: [
+      { sentence: 'The bridge (A) over the river (B) built (C) in 1990 (D) by a local company.', choices: ['(A) over the river', '(B) built', '(C) in 1990', '(D) by a local company'], answer: 1, why: '橋は「建てられた」側なので was built。' },
+      { sentence: 'English (A) speaks (B) in (C) many countries (D) around the world.', choices: ['(A) speaks', '(B) in', '(C) many countries', '(D) around the world'], answer: 0, why: '英語は「話される」側なので is spoken。' },
+      { sentence: 'The results (A) of the test (B) will (C) announce (D) next week.', choices: ['(A) of the test', '(B) will', '(C) announce', '(D) next week'], answer: 2, why: '助動詞のあとの受け身は will be announced：(C) を be announced に。' },
+      { sentence: 'The news (A) surprised at (B) everyone (C) in (D) the class.', choices: ['(A) surprised at', '(B) everyone', '(C) in', '(D) the class'], answer: 0, why: 'surprise は他動詞なので at はいらない：The news surprised everyone。' },
+      { sentence: 'I (A) was (B) surprising (C) at (D) the news.', choices: ['(A) was', '(B) surprising', '(C) at', '(D) the news'], answer: 1, why: '人が「おどろかされる」ので surprised。' },
+      { sentence: 'This road (A) will take (B) you (C) at (D) the station.', choices: ['(A) will take', '(B) you', '(C) at', '(D) the station'], answer: 2, why: 'take 人 to 場所：take you to the station。' },
+      { sentence: 'The window (A) was broken (B) with (C) Tom (D) yesterday.', choices: ['(A) was broken', '(B) with', '(C) Tom', '(D) yesterday'], answer: 1, why: '受け身の行為者は by：by Tom。' },
+      { sentence: 'The room (A) is being (B) clean (C) by the staff (D) now.', choices: ['(A) is being', '(B) clean', '(C) by the staff', '(D) now'], answer: 1, why: '進行形の受け身は is being cleaned。' },
+      { sentence: 'The problem (A) should (B) solve (C) as soon (D) as possible.', choices: ['(A) should', '(B) solve', '(C) as soon', '(D) as possible'], answer: 1, why: '問題は「解決される」側なので should be solved：(B) を be solved に。' },
+      { sentence: 'Her success (A) made (B) her parents (C) very (D) happily.', choices: ['(A) made', '(B) her parents', '(C) very', '(D) happily'], answer: 3, why: 'make O C の C は形容詞：very happy。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

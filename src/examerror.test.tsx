@@ -666,3 +666,10 @@ it('誤文訂正㊹：受け身と無生物主語の単元が10問ある', async
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('is spoken')
 })
+
+it('正誤問題〈51〉：受け身と無生物主語の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-passive3')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(A) speaks')
+})
