@@ -20788,6 +20788,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Hidden Rivers in the Sea', 'How to Swim in the Ocean', 'The History of Fishing Boats', 'Why Waves Are Noisy'], answer: 0, why: '全体として、海流のしくみ、熱を運ぶ役割、生命をささえる役割、気候変動との関係を述べている。' },
   },
   {
+    id: 'kyotsu-shopping-streets',
+    title: 'Bringing Shopping Streets Back to Life',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many towns in Japan, there is a shopping street lined with small family-run stores: a fishmonger, a bakery, a bookstore, and a shop selling tea. For decades, these streets were the center of local life. People did their daily shopping there, chatted with shop owners they had known for years, and met neighbors along the way. Today, however, many of these streets are struggling, and some are lined with shops whose shutters stay closed all day.",
+      "There are several reasons for this decline. As more people began to own cars, large shopping centers were built on the edges of towns, offering free parking and a wide range of goods under one roof. More recently, online shopping has made it possible to buy almost anything without leaving home. At the same time, many shop owners are growing older, and their children often choose other careers, so there is no one to take over the business ( A ) the owners retire.",
+      "The loss of these streets affects more than shopping. Small local stores often play an important role in the community. Shop owners may notice when an elderly customer has not visited for several days and check that they are all right. Local festivals and events are frequently organized by shopping street associations. When the shops disappear, these social connections can disappear too, ( B ) can make a neighborhood feel less safe and less lively.",
+      "In response, some towns have tried creative ways to bring their shopping streets back to life. Empty shops have been rented at low prices to young people who want to start new businesses, such as cafés, craft studios, or shops selling local products. Some streets hold regular markets or events that attract visitors from other areas. Others have turned unused buildings into spaces where children can study or elderly residents can gather.",
+      "These efforts do not always succeed, and it is unlikely that shopping streets will ever return to the way they were in the past. However, many people believe that they can find a new role suited to the present. Rather than competing with large stores on price, small shops can offer things that big stores and websites cannot, such as personal service, local knowledge, and a sense of community. The future of shopping streets may depend on ( C ) well they can combine tradition with new ideas.",
+    ],
+    ja: [
+      '日本の多くの町には、魚屋、パン屋、本屋、お茶屋など、家族で営む小さな店がならぶ商店街がある。何十年ものあいだ、こうした通りは地域の生活の中心だった。人々はそこで毎日の買い物をし、何年も前から知っている店主とおしゃべりをし、とちゅうで近所の人に会った。しかし今日、こうした通りの多くは苦しんでおり、1日じゅうシャッターが閉まったままの店がならぶ通りもある。',
+      'このおとろえにはいくつかの理由がある。車を持つ人がふえるにつれ、町のはずれに大きなショッピングセンターがつくられ、無料の駐車場と1つの屋根の下でさまざまな品物を提供した。より最近では、オンラインの買い物によって、家を出ずにほとんど何でも買えるようになった。同時に、多くの店主は年をとってきており、その子どもたちはほかの仕事を選ぶことが多いので、店主が引退すると店をつぐ人がいない。',
+      'こうした通りを失うことは、買い物以上のことに影響する。地元の小さな店は、地域で大切な役割をはたしていることが多い。店主は、お年よりの客が何日も来ていないことに気づき、元気かどうかたしかめることがある。地元のお祭りや行事は、商店街の組合によって運営されていることが多い。店が消えると、こうした社会のつながりも消えることがあり、それは地域を安全でなく、活気のないものに感じさせることがある。',
+      'これにこたえて、商店街を生き返らせるくふうをしてきた町もある。空いた店が、カフェや手作りの工房、地元の産物を売る店など、新しい商売を始めたい若い人に安い家賃で貸し出されている。定期的に市場や行事を開いて、ほかの地域から人を集める通りもある。使われていない建物を、子どもが勉強したり、お年よりの住民が集まったりできる場所に変えたところもある。',
+      'こうした取り組みはいつも成功するわけではなく、商店街が昔のすがたにもどることはまずないだろう。しかし、多くの人は、商店街が今の時代に合った新しい役割を見つけられると考えている。値段で大きな店と競争するのではなく、小さな店は、ていねいな接客や地元の知識、地域のつながりなど、大きな店やウェブサイトにはできないものを提供できる。商店街の未来は、伝統と新しい考えをどれほどうまく組み合わせられるかにかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'unless', 'although', 'whether'], answer: 0, why: '「店主が引退するとき（に）」と時をあらわすので when。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（つながりが消えること）を受け、can make の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋副詞 well ＋主語＋動詞で「どれほどうまく～か」。前置詞 on の目的語になる名詞節。' },
+    ],
+    tf: [
+      { statement: '大きなショッピングセンターは、町のはずれにつくられることが多かった。', answer: true, why: '第2段落 large shopping centers were built on the edges of towns。' },
+      { statement: '店主の子どもたちは、ほとんどが店をつぐ。', answer: false, why: '第2段落 their children often choose other careers, so there is no one to take over the business。' },
+      { statement: '空いた店を、若い人に安い家賃で貸している町がある。', answer: true, why: '第4段落 Empty shops have been rented at low prices to young people。' },
+      { statement: '筆者は、商店街はかならず昔のすがたにもどると考えている。', answer: false, why: '第5段落 it is unlikely that shopping streets will ever return to the way they were in the past。' },
+    ],
+    qa: [
+      { q: 'What social role can small local stores play?', choices: ['Shop owners may check on elderly customers.', 'They sell the cheapest products.', 'They provide free parking.', 'They are open all night.'], answer: 0, why: '第3段落 Shop owners may notice when an elderly customer has not visited for several days and check that they are all right。' },
+      { q: 'What can small shops offer that big stores cannot?', choices: ['Personal service, local knowledge, and a sense of community.', 'Lower prices on everything.', 'Larger parking lots.', 'Faster delivery.'], answer: 0, why: '第5段落 personal service, local knowledge, and a sense of community。' },
+    ],
+    gist: [
+      { para: 1, choices: ['商店街がおとろえた理由', '車の歴史', 'オンラインの買い方', '店主の趣味'], answer: 0, why: '第2段落は、ショッピングセンター、オンラインの買い物、後継者不足という理由を述べている。' },
+      { para: 3, choices: ['商店街を生き返らせるくふう', 'カフェの開き方', '市場の値段', '建物の作り方'], answer: 0, why: '第4段落は、空き店舗の貸し出し、市場や行事、建物の活用というくふうを述べている。' },
+    ],
+    titleQ: { choices: ['Bringing Shopping Streets Back to Life', 'How to Build a Shopping Center', 'The History of Tea', 'Why People Buy Cars'], answer: 0, why: '全体として、商店街のおとろえの理由と影響、生き返らせるくふう、これからの役割を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
