@@ -746,6 +746,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) wish I (B) can (C) speak (D) French.', choices: ['(A) wish I', '(B) can', '(C) speak', '(D) French'], answer: 1, why: 'I wish ＋仮定法過去：I wish I could speak。' },
     ],
   },
+  {
+    id: 'exam-error-national',
+    title: '入試の正誤問題㉝（国公立二次レベル）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'It was not until ～ that、not so much A as B、There is no use -ing、前置詞のあとの動名詞、Should の倒置、and で結ぶ形のそろえ、It goes without saying、cannot help but ＋原形、Not until の倒置、主語と動詞の一致に注目する。',
+    ],
+    examples: [
+      { en: 'It was not until he lost his health that he realized its value.', ja: '健康を失ってはじめて、彼はそのありがたさに気づいた。' },
+      { en: 'He is not so much a teacher as a friend to us.', ja: '彼は私たちにとって先生というよりむしろ友だちだ。' },
+    ],
+    questions: [
+      { sentence: 'It was (A) not until (B) he lost his health (C) when he (D) realized its value.', choices: ['(A) not until', '(B) he lost his health', '(C) when he', '(D) realized its value'], answer: 2, why: 'It was not until ～ that …「～してはじめて…」：that he realized。' },
+      { sentence: 'He is not so much (A) a teacher (B) than (C) a friend (D) to us.', choices: ['(A) a teacher', '(B) than', '(C) a friend', '(D) to us'], answer: 1, why: 'not so much A as B「A というよりむしろ B」：as a friend。' },
+      { sentence: 'There is (A) no use (B) to complain (C) about (D) the weather.', choices: ['(A) no use', '(B) to complain', '(C) about', '(D) the weather'], answer: 1, why: 'There is no use -ing「～してもむだだ」：no use complaining。' },
+      { sentence: 'I make it a rule (A) to take a walk (B) every morning (C) before (D) to eat breakfast.', choices: ['(A) to take a walk', '(B) every morning', '(C) before', '(D) to eat breakfast'], answer: 3, why: '前置詞 before のあとは動名詞：before eating breakfast。' },
+      { sentence: '(A) Should (B) you will have (C) any questions, (D) please ask me.', choices: ['(A) Should', '(B) you will have', '(C) any questions,', '(D) please ask me'], answer: 1, why: 'Should ＋主語＋原形（if を省いた倒置）：Should you have any questions。' },
+      { sentence: 'What do you say to (A) taking (B) a break (C) and (D) have a cup of tea?', choices: ['(A) taking', '(B) a break', '(C) and', '(D) have a cup of tea'], answer: 3, why: 'to taking … and having と、and の前後を同じ動名詞にそろえる。' },
+      { sentence: '(A) It goes (B) without (C) say that (D) honesty matters.', choices: ['(A) It goes', '(B) without', '(C) say that', '(D) honesty matters'], answer: 2, why: 'It goes without saying that ～「～は言うまでもない」。' },
+      { sentence: 'I (A) couldn’t help but laughing (B) when (C) I heard (D) his joke.', choices: ['(A) couldn’t help but laughing', '(B) when', '(C) I heard', '(D) his joke'], answer: 0, why: 'cannot help but ＋原形：couldn’t help but laugh（または couldn’t help laughing）。' },
+      { sentence: 'Not until (A) the 20th century (B) women were (C) allowed (D) to vote in Japan.', choices: ['(A) the 20th century', '(B) women were', '(C) allowed', '(D) to vote in Japan'], answer: 1, why: 'Not until ～ が文頭に出ると主節が倒置：were women allowed。' },
+      { sentence: '(A) The last thing I want are (B) to (C) hurt (D) your feelings.', choices: ['(A) The last thing I want are', '(B) to', '(C) hurt', '(D) your feelings'], answer: 0, why: '主語は The last thing（単数）なので is：The last thing I want is to hurt ～。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

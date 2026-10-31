@@ -414,3 +414,10 @@ it('誤文訂正㉖：国公立二次レベルの単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('that')
 })
+
+it('正誤問題㉝：国公立二次レベルの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-national')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(B) than')
+})
