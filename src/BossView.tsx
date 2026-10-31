@@ -864,6 +864,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {time && !time.best && <span>🏁 最短 {formatSec(loadBossTimes()[look.name] ?? time.sec)}</span>}
             {wrongs === 0 && <span className="game-best" aria-label="ノーミス">✨ ノーミス！</span>}
             <span aria-label={`たおすまでの問題数 ${corrects + wrongs}`}>📝 {corrects + wrongs}問でたおした</span> {/* デザイン115 */}
+            {corrects + wrongs > 0 && <span aria-label={`正答率 ${Math.round((corrects / (corrects + wrongs)) * 100)}%`}>🎯 正答率 {Math.round((corrects / (corrects + wrongs)) * 100)}%</span>} {/* デザイン127 */}
             {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
             {skill && skillUsed > 0 && <span aria-label={`とくぎ ${skillUsed}回`}>✨ {skill.name} {skillUsed}回</span>} {/* デザイン121 */}
             {/* デザイン90：このボス戦で正解した数 */}

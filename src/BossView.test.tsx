@@ -825,3 +825,17 @@ it('デザイン125：ボスのHPがたくさん残って負けたときは「�
   expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
   expect(screen.queryByLabelText('おしい')).toBeNull()
 })
+
+it('デザイン127：ボスに勝つと、結果画面にその戦いの正答率が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  let ok = 0
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    ok++
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  const pct = Math.round((ok / (ok + 1)) * 100)
+  expect(screen.getByLabelText(`正答率 ${pct}%`).textContent).toBe(`🎯 正答率 ${pct}%`)
+})
