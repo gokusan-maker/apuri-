@@ -3379,3 +3379,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊺（私学難関レベル：熟語・語法の総まとめ：look forward to -ing・be used to -ing・object to being・mind -ing・can't help -ing・make 人 原形・have 物 過去分詞・worth -ing・prevent from・remember -ing）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「頭の上の機械（人工衛星）」（科学・宇宙・what／which／so that の空所）
 - 2026-10-31: キャラクター：イモリの「イモリン」を追加（とくぎ：じわじわ再生）
+- 2026-10-31: 文法：入試の誤文訂正㊴（TOEFL・IELTS の書き言葉⑯：In my opinion・Despite・It is true that ～, but・agree with・On the other hand・believe that・Whatever・No matter how・Even if・disagree with）10問

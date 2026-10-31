@@ -1746,6 +1746,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I remember [to meet] her once in Kyoto.', choices: ['meeting', 'met', 'to have met', 'meet'], answer: 0, why: '過去に「～したことを覚えている」は remember -ing。remember to ～ は「わすれずに～する」。' },
     ],
   },
+  {
+    id: 'exam-fix-39',
+    title: '入試の誤文訂正㊴（TOEFL・IELTS の書き言葉⑯：意見を述べる・ゆずる表現）',
+    points: ['In my opinion、Despite ＋名詞、It is true that ～, but …（ゆずって反論する）、agree with・disagree with、On the other hand、believe that、Whatever ～、No matter how ～、Even if ～ など、エッセイで意見を述べたり、反対の意見をみとめたりするときの表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It is true that cars are convenient, but they also cause pollution.', ja: 'たしかに車は便利だが、汚染の原因にもなる。' }],
+    questions: [
+      { sentence: 'In my [opinions], cities should have more parks.', choices: ['opinion', 'thought', 'view of', 'mind of'], answer: 0, why: '「私の意見では」は In my opinion（単数）。' },
+      { sentence: '[Although] its advantages, the plan has serious problems.', choices: ['Despite', 'Even though', 'However', 'Though'], answer: 0, why: 'うしろが名詞（its advantages）なので前置詞 Despite。Although・Even though・Though は接続詞。' },
+      { sentence: 'It is true that cars are convenient, [and] they also cause pollution.', choices: ['but', 'so', 'or', 'because'], answer: 0, why: 'It is true that ～, but …「たしかに～だが…」とゆずってから反論する形。' },
+      { sentence: 'I [am agree] with this idea.', choices: ['agree', 'have agree', 'agreeing', 'am agreeing'], answer: 0, why: 'agree は動詞なので be 動詞はいらない：I agree with ～。' },
+      { sentence: '[On the other hands], online classes save time.', choices: ['On the other hand', 'In the other hand', 'On other hand', 'By the other hand'], answer: 0, why: '「一方で」は On the other hand（hand は単数、the が必要）。' },
+      { sentence: 'Some people believe [what] technology makes life easier.', choices: ['that', 'which', 'who', 'whose'], answer: 0, why: 'うしろは完全な文なので、believe の目的語になる名詞節をつくる接続詞 that。' },
+      { sentence: 'Whatever [happen], I will support you.', choices: ['happens', 'happened to', 'is happen', 'happening'], answer: 0, why: 'Whatever「何が～しても」は主語のはたらきをし、単数あつかいで現在形：Whatever happens。' },
+      { sentence: 'No matter [what] hard it is, we must keep trying.', choices: ['how', 'what way', 'which', 'however'], answer: 0, why: '形容詞 hard の前について「どれほど～でも」は No matter how hard ～。' },
+      { sentence: '[Even] it rains tomorrow, the event will be held.', choices: ['Even if', 'Even so', 'Even though of', 'Only'], answer: 0, why: 'うしろが文なので接続詞が必要：Even if「たとえ～しても」。Even だけでは文をつなげない。' },
+      { sentence: 'I disagree [to] the idea that homework should be banned.', choices: ['with', 'for', 'against to', 'on with'], answer: 0, why: '「～に反対する・賛成しない」は disagree with ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
