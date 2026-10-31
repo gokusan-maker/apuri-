@@ -3336,3 +3336,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊳（共通テストレベル：tell me・listen to・wait for・arrive at・look for・said/told・did・enjoy oneself・It took・for inviting）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「レコードの復活」（文化・音楽・非制限の which／instead of／that の空所）
 - 2026-10-31: キャラクター追加：エビン（エビ・いそべのぴちぴちタマゴ・ねばりのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正㉜（医学部・難関大レベル③：too ～ to・Had it not been for・demand that ＋原形・Not only の倒置・Little is known・lay down・Hardly の倒置）10問

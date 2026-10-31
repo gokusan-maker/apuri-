@@ -1452,6 +1452,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Thank you [to help] me with my homework.', choices: ['for helping', 'to helping', 'helping for', 'for help'], answer: 0, why: 'Thank you for -ing「～してくれてありがとう」：for helping me。' },
     ],
   },
+  {
+    id: 'exam-fix-32',
+    title: '入試の誤文訂正㉜（医学部・難関大レベル③）',
+    points: ['too ～ to …、Had it not been for と would have ＋過去分詞、demand 人 ＋原形、Not only の倒置、Little is known、連鎖関係詞節の who、despite ＋動名詞、lie と lay、Hardly の倒置、neither A nor B の一致など、医療の場面で問われる難しい構文。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Had it not been for the vaccine, many more people would have died.', ja: 'ワクチンがなかったら、もっと多くの人が亡くなっていただろう。' }],
+    questions: [
+      { sentence: 'The patient was [so weak to walk] by himself.', choices: ['too weak to walk', 'so weak as walking', 'very weak to walk', 'weak too to walk'], answer: 0, why: 'too ～ to …「あまりに～なので…できない」：too weak to walk。' },
+      { sentence: 'Had it not been for the vaccine, many more people [would die].', choices: ['would have died', 'will die', 'had died', 'would be died'], answer: 0, why: 'Had it not been for ～（仮定法過去完了の倒置）なので主節は would have ＋過去分詞。' },
+      { sentence: 'The doctor [demanded that she stops] smoking.', choices: ['demanded that she stop', 'demanded her stopping', 'demanded she to stop', 'demanded her stop'], answer: 0, why: 'demand that ～ の節は動詞の原形（または should ＋原形）：that she stop smoking。' },
+      { sentence: 'Not only [the disease spreads] quickly, but it is also hard to treat.', choices: ['does the disease spread', 'the disease does spread', 'spreads the disease', 'the disease spreading'], answer: 0, why: 'Not only が文頭に出ると倒置：Not only does the disease spread quickly。' },
+      { sentence: 'Little [are] known about the cause of this disease.', choices: ['is', 'have', 'were', 'being'], answer: 0, why: 'Little「ほとんど～ない（こと）」は単数あつかい：Little is known about ～。' },
+      { sentence: 'The researcher, [whom] we believe discovered the cure, is famous.', choices: ['who', 'whose', 'which', 'what'], answer: 0, why: 'we believe がはさまっているが、関係代名詞は discovered の主語なので主格 who。' },
+      { sentence: 'Despite [he was tired], the surgeon continued the operation.', choices: ['being tired', 'he tired', 'of being tired', 'tired he was'], answer: 0, why: 'despite は前置詞なので名詞か動名詞：Despite being tired。' },
+      { sentence: 'After a long day, the nurse [laid down] on the sofa.', choices: ['lay down', 'lied down', 'layed down', 'was laid down'], answer: 0, why: '「横になる」は自動詞 lie で、過去形は lay：lay down。laid は lay（置く）の過去形。' },
+      { sentence: 'Hardly [the operation had finished] when the patient woke up.', choices: ['had the operation finished', 'the operation finished', 'did the operation finish', 'was the operation finish'], answer: 0, why: '否定の Hardly が文頭に出ると倒置：Hardly had the operation finished when ～。' },
+      { sentence: 'Neither the doctor nor the nurses [was] aware of the problem.', choices: ['were', 'is', 'has', 'being'], answer: 0, why: 'neither A nor B では動詞は B（近いほう）に合わせる。B は the nurses（複数）なので were。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

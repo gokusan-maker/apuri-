@@ -491,3 +491,10 @@ it('正誤問題㊳：共通テストレベル（語法の総復習）の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[8].choices[u.questions[8].answer]).toBe('(A) spent')
 })
+
+it('誤文訂正㉜：医学部・難関大レベル③の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-32')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[7].choices[u.questions[7].answer]).toBe('lay down')
+})
