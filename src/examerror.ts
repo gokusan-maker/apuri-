@@ -1250,6 +1250,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Swim (B) in this river (C) is (D) dangerous.', choices: ['(A) Swim', '(B) in this river', '(C) is', '(D) dangerous'], answer: 0, why: '主語になるのは動名詞（または不定詞）：Swimming in this river is dangerous。' },
     ],
   },
+  {
+    id: 'exam-error-graph',
+    title: '入試の正誤問題〈54〉（グラフ・表を説明する表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'rise と raise、増減の by、As shown in、reach、who own、an increase in、remain stable、the highest、Compared with、two thirds など、IELTS のグラフ問題やレポートで使う表現。',
+    ],
+    examples: [
+      { en: 'Prices increased by 5 percent last year.', ja: '去年、物価は5パーセント上がった。' },
+      { en: 'Compared with last year, sales were much better.', ja: '去年とくらべると、売り上げはずっとよかった。' },
+    ],
+    questions: [
+      { sentence: 'The number (A) of tourists (B) raised (C) sharply (D) in 2020.', choices: ['(A) of tourists', '(B) raised', '(C) sharply', '(D) in 2020'], answer: 1, why: '「（数が）上がる」は自動詞 rise：rose sharply。' },
+      { sentence: 'Prices (A) increased (B) in (C) 5 percent (D) last year.', choices: ['(A) increased', '(B) in', '(C) 5 percent', '(D) last year'], answer: 1, why: '増減の差は by：increased by 5 percent。' },
+      { sentence: 'As (A) showing (B) in the graph, (C) sales (D) rose steadily.', choices: ['(A) showing', '(B) in the graph', '(C) sales', '(D) rose steadily'], answer: 0, why: '受け身の意味なので As shown in the graph。' },
+      { sentence: 'In 2015, the figure (A) finally (B) reached (C) to (D) its peak.', choices: ['(A) finally', '(B) reached', '(C) to', '(D) its peak'], answer: 2, why: 'reach は他動詞なので to はいらない：reached its peak。' },
+      { sentence: 'The percentage (A) of students (B) who owns (C) a smartphone (D) is about 90 percent.', choices: ['(A) of students', '(B) who owns', '(C) a smartphone', '(D) is about 90 percent'], answer: 1, why: '先行詞 students は複数なので who own。' },
+      { sentence: 'There was (A) a sharp (B) increase (C) of (D) the price of rice.', choices: ['(A) a sharp', '(B) increase', '(C) of', '(D) the price of rice'], answer: 2, why: '名詞 increase のあとは in：a sharp increase in the price。' },
+      { sentence: 'Sales (A) remained (B) stably (C) throughout (D) the year.', choices: ['(A) remained', '(B) stably', '(C) throughout', '(D) the year'], answer: 1, why: 'remain ＋形容詞：remained stable。' },
+      { sentence: 'Exports (A) grew (B) steadily and (C) were (D) the most high in 2018.', choices: ['(A) grew', '(B) steadily and', '(C) were', '(D) the most high in 2018'], answer: 3, why: 'high の最上級は the highest。' },
+      { sentence: '(A) Comparing with last year, (B) sales (C) were (D) much better.', choices: ['(A) Comparing with last year', '(B) sales', '(C) were', '(D) much better'], answer: 0, why: '「～とくらべると」は Compared with ～。' },
+      { sentence: 'Two (A) third of (B) the students (C) agreed (D) with the plan.', choices: ['(A) third of', '(B) the students', '(C) agreed', '(D) with the plan'], answer: 0, why: '分子が2以上なので two thirds of。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
