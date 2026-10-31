@@ -20710,6 +20710,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Power of Moving Water', 'How to Catch Salmon', 'The History of Factories', 'Why Rain Falls'], answer: 0, why: '全体として、水力発電のしくみと利点、大きなダムの問題、これからの方向を述べている。' },
   },
   {
+    id: 'kyotsu-impulse-buying',
+    title: 'Why We Buy What We Do Not Need',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Have you ever gone into a shop to buy one thing and come out with a bag full of items you did not plan to buy? If so, you are not alone. Buying things suddenly, without thinking carefully, is known as impulse buying, and it is extremely common. Understanding why it happens can help us to make better decisions about how we spend our money.",
+      "Shops are often designed to encourage impulse buying. Everyday items such as milk and bread are frequently placed at the back of supermarkets, so that customers must walk past many other products to reach them. Small, inexpensive goods like candy and batteries are displayed near the cash register, ( A ) people waiting in line are likely to pick them up. Signs announcing “limited time only” or “only a few left” also create a feeling that we must buy something now or lose the chance.",
+      "Online shopping can make impulse buying even easier. With just one click, a product can be ordered, and saved payment information means that we do not even have to take out a wallet. Websites often recommend items based on what we have looked at before, and messages such as “people who bought this also bought” encourage us to add more to our carts. Because we do not hand over physical money, it can be harder to feel how much we are actually spending.",
+      "Our emotions also play an important role. Many people shop more when they feel stressed, bored, or sad, hoping that a new purchase will make them feel better. The pleasure of buying something new is often real, but it usually does not last long. In some cases, it may be followed by regret, especially if the item was expensive or ( B ) we did not really need.",
+      "Fortunately, there are simple ways to avoid unnecessary spending. Making a shopping list and sticking to it can help us focus on what we really need. Some experts suggest waiting a day or two before buying anything that was not planned; if we still want it after that, it may be a sensible purchase. Paying attention to our feelings while shopping is also useful. By understanding the forces that push us to buy, we can learn to spend our money in ways ( C ) truly make our lives better.",
+    ],
+    ja: [
+      '1つのものを買いに店に入ったのに、買うつもりのなかった品物でいっぱいのふくろを持って出てきたことはないだろうか。もしあるなら、あなただけではない。よく考えずに急にものを買うことは衝動買いとよばれ、とてもよくあることである。なぜそれが起こるのかを理解することは、お金の使い方についてよりよい決定をするのに役立つ。',
+      '店は、衝動買いをうながすように作られていることが多い。牛乳やパンのような毎日の品物は、スーパーマーケットのおくに置かれることが多く、客はそこへ行くまでに多くのほかの商品の前を通らなければならない。あめや電池のような小さく安い品物はレジの近くにならべられており、そこでは列に並んで待っている人が手に取りやすい。「期間限定」や「残りわずか」という表示も、今買わなければ機会をのがすという気持ちを生み出す。',
+      'オンラインの買い物は、衝動買いをさらにかんたんにすることがある。1回クリックするだけで商品を注文でき、支払いの情報が保存されているので、さいふを出す必要さえない。ウェブサイトは以前に見たものをもとに品物をすすめることが多く、「この商品を買った人はこんな商品も買っています」といったメッセージが、カートにさらに入れるようにうながす。実際のお金をわたさないので、実際にどれだけ使っているかを感じにくくなることがある。',
+      '感情も大切な役割をはたしている。多くの人は、ストレスを感じたり、たいくつだったり、悲しかったりするときに、新しい買い物で気分がよくなることを願って、より多く買い物をする。新しいものを買うよろこびはたいてい本物だが、ふつうは長く続かない。とくにその品物が高かったり、本当は必要なかったものだったりすると、そのあとに後悔が続くこともある。',
+      '幸いにも、むだな出費をさけるかんたんな方法がある。買い物リストを作ってそれを守ることは、本当に必要なものに集中するのに役立つ。予定になかったものを買う前に1日か2日待つことをすすめる専門家もいる。それでもほしければ、それはかしこい買い物かもしれない。買い物中に自分の気持ちに注意することも役に立つ。私たちに買わせようとする力を理解することで、本当に生活をよりよくする方法でお金を使えるようになる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the cash register（場所）で、うしろの people ～ are likely to pick them up は完全な文なので関係副詞 where（非制限用法）。' },
+      { id: 'B', choices: ['something', 'anything', 'nothing', 'everything'], answer: 0, why: '「本当は必要なかった何か」：something (that) we did not really need。前の was expensive と or でならぶ was something ～。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 ways を受け、make の主語になる関係代名詞 that。where はうしろが完全な文のときに使う。' },
+    ],
+    tf: [
+      { statement: '牛乳やパンは、スーパーマーケットの入り口のすぐ近くに置かれることが多い。', answer: false, why: '第2段落 Everyday items such as milk and bread are frequently placed at the back of supermarkets。' },
+      { statement: 'オンラインでは実際のお金をわたさないので、使った額を感じにくいことがある。', answer: true, why: '第3段落 Because we do not hand over physical money, it can be harder to feel how much we are actually spending。' },
+      { statement: '新しいものを買うよろこびは、ふつうはずっと続く。', answer: false, why: '第4段落 it usually does not last long。' },
+      { statement: '予定にないものを買う前に1日か2日待つことをすすめる専門家がいる。', answer: true, why: '第5段落 Some experts suggest waiting a day or two before buying anything that was not planned。' },
+    ],
+    qa: [
+      { q: 'Why are small, inexpensive goods placed near the cash register?', choices: ['People waiting in line are likely to pick them up.', 'They are too heavy to carry far.', 'They are the most expensive items.', 'Workers need them.'], answer: 0, why: '第2段落 displayed near the cash register, where people waiting in line are likely to pick them up。' },
+      { q: 'What can help us focus on what we really need?', choices: ['Making a shopping list and sticking to it.', 'Shopping when we feel stressed.', 'Buying everything on sale.', 'Saving payment information online.'], answer: 0, why: '第5段落 Making a shopping list and sticking to it can help us focus on what we really need。' },
+    ],
+    gist: [
+      { para: 1, choices: ['店が衝動買いをうながすくふう', 'スーパーマーケットの歴史', 'レジの使い方', 'パンの作り方'], answer: 0, why: '第2段落は、商品の置き方や「期間限定」の表示など、店のくふうを述べている。' },
+      { para: 3, choices: ['衝動買いと感情の関係', '病気の治し方', '高い品物の選び方', 'たいくつしない方法'], answer: 0, why: '第4段落は、ストレスや悲しみが買い物につながり、後悔することもあると述べている。' },
+    ],
+    titleQ: { choices: ['Why We Buy What We Do Not Need', 'How to Open a Supermarket', 'The History of Credit Cards', 'Why Candy Is Cheap'], answer: 0, why: '全体として、衝動買いが起こる理由（店・オンライン・感情）と、それをさける方法を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
