@@ -1116,6 +1116,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="86" cy="56" r="3" fill="#0f172a" />
       </g>
     )
+  if (species === 'lemming')
+    return (
+      <g>
+        {/* 小さな丸い耳 */}
+        <circle cx="38" cy="30" r="5" fill="#d97706" stroke="#451a03" strokeWidth="1.2" />
+        <circle cx="62" cy="30" r="5" fill="#d97706" stroke="#451a03" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
