@@ -1998,6 +1998,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Her success made her parents [happily].', choices: ['happy', 'happiness', 'to be happily', 'happier of'], answer: 0, why: '無生物主語 make O C「O を C にする」。C には形容詞 happy を置く。' },
     ],
   },
+  {
+    id: 'exam-fix-45',
+    title: '入試の誤文訂正㊺（私学難関レベル：比較の慣用表現）',
+    points: ['no more than（たった～）と no less than（～も）、not so much A as B（A というよりむしろ B）、by far the 最上級、The 比較級 ～, the 比較級 …、know better than to ～（～するほどばかではない）、A is no more B than C is D（クジラの公式型）、superior to、prefer A to B、Nothing is more ～ than …、as soon as possible など、私立大学でよく問われる比較の慣用表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He is not so much a scholar as a writer.', ja: '彼は学者というよりむしろ作家だ。' }],
+    questions: [
+      { sentence: 'I have only 1,000 yen. In other words, I have [no less than] 1,000 yen.', choices: ['no more than', 'not less than', 'no fewer than', 'not more less'], answer: 0, why: '「たった1,000円しか」は no more than（= only）。no less than は「～も（多い）」。' },
+      { sentence: 'He is not so much a scholar [than] a writer.', choices: ['as', 'but', 'or', 'that'], answer: 0, why: 'not so much A as B「A というよりむしろ B」。' },
+      { sentence: 'This is [by far the better] answer of all.', choices: ['by far the best', 'by far better', 'far the best', 'the far best'], answer: 0, why: '3つ以上の中で「ずばぬけて最も～」は by far the ＋最上級：by far the best。' },
+      { sentence: '[More] you practice, the better you will become.', choices: ['The more', 'The most', 'Much', 'More than'], answer: 0, why: 'The 比較級 ～, the 比較級 …「～すればするほど…」：The more you practice。' },
+      { sentence: 'He knows [better to] trust strangers.', choices: ['better than to', 'better than', 'best to', 'well to'], answer: 0, why: 'know better than to ～「～するほどばかではない」。' },
+      { sentence: 'A bat is no more a bird [as] a mouse is.', choices: ['than', 'that', 'like', 'so'], answer: 0, why: 'A is no more B than C is (D)「A が B でないのは C が B でないのと同じ」。' },
+      { sentence: 'She is [superior than] me in math.', choices: ['superior to', 'more superior to', 'superior from', 'superior over'], answer: 0, why: 'superior は比較の意味をもつので than ではなく to：superior to me。' },
+      { sentence: 'I prefer reading [than] watching TV.', choices: ['to', 'over than', 'rather', 'for'], answer: 0, why: 'prefer A to B「B より A を好む」。' },
+      { sentence: 'Nothing is [more important as] health.', choices: ['more important than', 'as important than', 'most important than', 'so important that'], answer: 0, why: 'Nothing is more ～ than A「A ほど～なものはない」：more important than health。' },
+      { sentence: 'Please reply [as soon as possibly].', choices: ['as soon as possible', 'as soon as possibility', 'soon as possible', 'as sooner as possible'], answer: 0, why: '「できるだけ早く」は as soon as possible（possible は形容詞）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

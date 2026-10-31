@@ -3416,3 +3416,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈51〉（受け身と無生物主語：過去の受け身・is spoken・will be ～ed・surprise・surprised・take 人 to・by・is being ～ed・should be ～ed・make O C）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「夜を照らす（街灯の歴史）」（歴史・くらし・非制限の which／関係代名詞 that の空所）
 - 2026-10-31: キャラクター：トキの「トキリン」を追加（とくぎ：もものつばさ）
+- 2026-10-31: 文法：入試の誤文訂正㊺（私学難関レベル：no more than・not so much A as B・by far the best・The 比較級・know better than to・no more ～ than・superior to・prefer A to B・Nothing is more ～ than・as soon as possible）10問
