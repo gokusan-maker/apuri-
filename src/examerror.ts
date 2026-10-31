@@ -2376,6 +2376,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'If he had taken the medicine last week, he [would have been] healthy now.', choices: ['would be', 'will be', 'had been', 'is'], answer: 0, why: '過去の仮定（had taken）で今（now）の結果を言うときは、主節を would ＋原形にする（混合仮定法）。' },
     ],
   },
+  {
+    id: 'exam-fix-54',
+    title: '入試の誤文訂正〈54〉（TOEFL・IELTS の書き言葉㉑：例をあげる・言いかえる表現）',
+    points: ['For example（副詞句）と such as（名詞の前）、In other words・That is to say（言いかえ）、including ＋名詞、an example of ～、To put it simply、namely、typical（形容詞）、Especially（副詞）など、エッセイで例をあげたり、言いかえたりするときの表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'In other words, the plan failed.', ja: '言いかえれば、その計画は失敗したのだ。' }],
+    questions: [
+      { sentence: '[For example of], students can use the library on weekends.', choices: ['For example', 'For an example', 'Such as', 'Example for'], answer: 0, why: '文頭で「たとえば」とつなぐのは For example（, ～）。such as は名詞の前に置く。' },
+      { sentence: 'Fruits [like as] apples and oranges are healthy.', choices: ['such as', 'such', 'as like', 'likes'], answer: 0, why: '名詞の例をあげるのは such as ～（または like ～）。like as とはいわない。' },
+      { sentence: '[In other word], the plan failed.', choices: ['In other words', 'By other words', 'In another word', 'With other words'], answer: 0, why: '「言いかえれば」は In other words（words は複数形）。' },
+      { sentence: '[That is to saying], we need more time.', choices: ['That is to say', 'That is saying', 'That to say', 'It is to say'], answer: 0, why: '「つまり」は That is to say（, ～）。' },
+      { sentence: 'Some birds, [include] penguins and ostriches, cannot fly.', choices: ['including', 'included', 'includes', 'to include'], answer: 0, why: '「～をふくめて」は前置詞のはたらきをする including ＋名詞。' },
+      { sentence: 'This is a good example [for] how technology helps people.', choices: ['of', 'to', 'in', 'at'], answer: 0, why: '「～の例」は an example of ～。' },
+      { sentence: '[To put it simple], the answer is no.', choices: ['To put it simply', 'To put simply it', 'Putting simple', 'To simple put'], answer: 0, why: '「かんたんに言えば」は To put it simply。動詞 put を修飾するので副詞 simply。' },
+      { sentence: 'Two students, [namely to] Ken and Aya, were absent.', choices: ['namely', 'name', 'naming', 'named as'], answer: 0, why: '「すなわち」と具体的に言いかえるのは namely。to はいらない。' },
+      { sentence: 'A [typically] example is the use of solar power.', choices: ['typical', 'typically of', 'type', 'typed'], answer: 0, why: '名詞 example を修飾するのは形容詞 typical「典型的な」。' },
+      { sentence: '[Especial] in summer, many tourists visit Kyoto.', choices: ['Especially', 'Special', 'Especial of', 'Specially of'], answer: 0, why: '「とくに夏に」と副詞句を修飾するのは副詞 Especially。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

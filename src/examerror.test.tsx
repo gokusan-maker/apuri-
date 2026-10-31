@@ -799,3 +799,10 @@ it('正誤問題〈60〉：仮定法の総まとめの単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) am taller')
 })
+
+it('誤文訂正〈54〉：例をあげる・言いかえる表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-54')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('For example')
+})

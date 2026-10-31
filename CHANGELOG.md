@@ -3474,3 +3474,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈60〉（共通テストレベル：仮定法の総まとめ：I wish・as if had seen・It's time・But for・If I had known・If it were not for・would rather・If only・Had I known・混合仮定法）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「体で最も大きな器官（皮ふ）」（科学・からだ・非制限の which／関係代名詞 that／how の空所）
 - 2026-10-31: キャラクター：カササギの「カササギン」を追加（とくぎ：しましまのねばり）
+- 2026-10-31: 文法：入試の誤文訂正〈54〉（TOEFL・IELTS の書き言葉㉑：For example・such as・In other words・That is to say・including・an example of・To put it simply・namely・typical・Especially）10問
