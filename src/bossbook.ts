@@ -14,6 +14,26 @@ export function recordWin(book: BossBook, look: BossLook, rank: Rank, day: strin
   return { ...book, [look.name]: old ? { ...old, wins: old.wins + 1, best: betterRank(old.best, rank) } : { wins: 1, best: rank, look, first: day } }
 }
 
+// デザイン160：今日このボスに何回勝ったか（日がかわるとリセット）
+const TODAY_KEY = 'eitan:boss-today-wins'
+export function recordTodayWin(name: string, day: string): number {
+  let v: { day: string; wins: Record<string, number> } = { day, wins: {} }
+  try {
+    const raw = JSON.parse(localStorage.getItem(TODAY_KEY) ?? 'null') as typeof v | null
+    if (raw && raw.day === day && raw.wins && typeof raw.wins === 'object') v = raw
+  } catch {
+    // こわれたデータは捨てて今日から数えなおす
+  }
+  const n = (typeof v.wins[name] === 'number' ? v.wins[name] : 0) + 1
+  v = { day, wins: { ...v.wins, [name]: n } }
+  try {
+    localStorage.setItem(TODAY_KEY, JSON.stringify(v))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return n
+}
+
 // デザイン154：いちばん最近たおしたボスの名前（図鑑に 🆕 さいきん を出す）
 const LAST_KEY = 'eitan:boss-last'
 export function loadLastBoss(): string {

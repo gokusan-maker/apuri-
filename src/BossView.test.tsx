@@ -962,3 +962,25 @@ it('デザイン156：まちがえても相棒のとくぎを使わずに勝つ�
   }
   expect(screen.getByLabelText('とくぎなしで勝利').textContent).toBe('💪 とくぎなしで勝利！')
 })
+
+it('デザイン160：今日同じボスに2回目以上勝つと「📅 今日○回目の勝利」が出る', async () => {
+  localStorage.clear()
+  const { recordTodayWin } = await import('./bossbook')
+  expect(recordTodayWin('X', '2026-10-31')).toBe(1)
+  expect(recordTodayWin('X', '2026-10-31')).toBe(2)
+  expect(recordTodayWin('X', '2026-11-01')).toBe(1) // 日がかわるとリセット
+  localStorage.clear()
+  const play = () => {
+    const r = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      answer(true)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    return r
+  }
+  const first = play()
+  expect(screen.queryByLabelText('今日このボスに勝った回数')).toBeNull()
+  first.unmount()
+  play()
+  expect(screen.getByLabelText('今日このボスに勝った回数').textContent).toBe('📅 今日2回目の勝利')
+})
