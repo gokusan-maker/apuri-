@@ -1082,6 +1082,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) disagree (B) with the idea (C) that homework (D) should banned.', choices: ['(A) disagree', '(B) with the idea', '(C) that homework', '(D) should banned'], answer: 3, why: '助動詞のあとの受け身は should be banned。' },
     ],
   },
+  {
+    id: 'exam-error-hard4',
+    title: '入試の正誤問題㊼（医学部・難関大レベル④：分詞構文・強調構文・同格の that）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '受け身・完了・否定の分詞構文、独立分詞構文、強調構文 It is ～ that、同格の that、Judging from、the news・the fact の主語と動詞の一致など、難関大学でよく問われる構文。',
+    ],
+    examples: [
+      { en: 'Having finished the report, she went home early.', ja: '報告書を書き終えて、彼女は早く帰った。' },
+      { en: 'The fact that smoking harms health is well known.', ja: 'たばこが健康を害するという事実はよく知られている。' },
+    ],
+    questions: [
+      { sentence: '(A) Seeing from the plane, (B) the island (C) looked (D) tiny.', choices: ['(A) Seeing from the plane', '(B) the island', '(C) looked', '(D) tiny'], answer: 0, why: '島は「見られる」側なので受け身の分詞構文 Seen from the plane。' },
+      { sentence: '(A) Being finished the report, (B) she (C) went (D) home early.', choices: ['(A) Being finished the report', '(B) she', '(C) went', '(D) home early'], answer: 0, why: '報告書を書き終えたあとなので完了の分詞構文 Having finished。' },
+      { sentence: '(A) Knowing not (B) what to say, (C) he (D) remained silent.', choices: ['(A) Knowing not', '(B) what to say', '(C) he', '(D) remained silent'], answer: 0, why: '分詞構文の否定は Not knowing。' },
+      { sentence: 'It was (A) in 2010 (B) when (C) the hospital (D) was built.', choices: ['(A) in 2010', '(B) when', '(C) the hospital', '(D) was built'], answer: 1, why: '前置詞句 in 2010 を強調する強調構文なので that。' },
+      { sentence: 'It was (A) Dr. Kato (B) who (C) discover (D) the cause.', choices: ['(A) Dr. Kato', '(B) who', '(C) discover', '(D) the cause'], answer: 2, why: '過去のことなので discovered。強調構文の who は正しい。' },
+      { sentence: 'There is (A) a possibility (B) which (C) the virus (D) will spread.', choices: ['(A) a possibility', '(B) which', '(C) the virus', '(D) will spread'], answer: 1, why: 'a possibility の内容を説明する同格の that。' },
+      { sentence: 'The news (A) that the patient (B) had recovered (C) were (D) a surprise to everyone.', choices: ['(A) that the patient', '(B) had recovered', '(C) were', '(D) a surprise to everyone'], answer: 2, why: '主語は The news（数えられない名詞・単数）なので was。' },
+      { sentence: 'The weather (A) is fine, (B) we (C) went (D) for a walk.', choices: ['(A) is fine', '(B) we', '(C) went', '(D) for a walk'], answer: 0, why: '独立分詞構文 The weather being fine。is のままでは文が2つつながらない。' },
+      { sentence: 'Judging (A) from his accent, (B) he (C) must (D) being from Osaka.', choices: ['(A) from his accent', '(B) he', '(C) must', '(D) being from Osaka'], answer: 3, why: '助動詞のあとは原形：must be from Osaka。' },
+      { sentence: 'The fact (A) that smoking (B) harms (C) health (D) are well known.', choices: ['(A) that smoking', '(B) harms', '(C) health', '(D) are well known'], answer: 3, why: '主語は The fact（単数）なので is well known。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
