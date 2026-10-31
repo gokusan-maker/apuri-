@@ -1226,6 +1226,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) No other (B) student in the class (C) is (D) as tall than Ken.', choices: ['(A) No other', '(B) student in the class', '(C) is', '(D) as tall than Ken'], answer: 3, why: 'No other ～ as tall as Ken。' },
     ],
   },
+  {
+    id: 'exam-error-infger',
+    title: '入試の正誤問題〈53〉（共通テストレベル：不定詞と動名詞の使い分けの総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'enjoy・avoid・finish（動名詞）、decide・hope・promise（不定詞）、forget to、It is ～ to、前置詞のあとの動名詞、主語になる動名詞など、不定詞と動名詞の使い分け。',
+    ],
+    examples: [
+      { en: 'He finally finished writing the report at midnight.', ja: '彼はついに真夜中に報告書を書き終えた。' },
+      { en: 'Swimming in this river is dangerous.', ja: 'この川で泳ぐのは危険だ。' },
+    ],
+    questions: [
+      { sentence: 'I (A) enjoy (B) to swim (C) in the sea (D) every summer.', choices: ['(A) enjoy', '(B) to swim', '(C) in the sea', '(D) every summer'], answer: 1, why: 'enjoy は動名詞をとる：enjoy swimming。' },
+      { sentence: 'She (A) decided (B) studying (C) abroad (D) next year.', choices: ['(A) decided', '(B) studying', '(C) abroad', '(D) next year'], answer: 1, why: 'decide は不定詞をとる：decided to study。' },
+      { sentence: '(A) Don’t forget (B) locking (C) the door (D) when you leave.', choices: ['(A) Don’t forget', '(B) locking', '(C) the door', '(D) when you leave'], answer: 1, why: 'これからすることは forget to ～：to lock the door。' },
+      { sentence: 'He (A) avoided (B) to answer (C) the question (D) in the interview.', choices: ['(A) avoided', '(B) to answer', '(C) the question', '(D) in the interview'], answer: 1, why: 'avoid は動名詞をとる：avoided answering。' },
+      { sentence: 'We (A) hope (B) to see you (C) again (D) soonly.', choices: ['(A) hope', '(B) to see you', '(C) again', '(D) soonly'], answer: 3, why: '「すぐに」は副詞 soon。soonly という語はない。' },
+      { sentence: '(A) It is important (B) learn (C) a foreign (D) language.', choices: ['(A) It is important', '(B) learn', '(C) a foreign', '(D) language'], answer: 1, why: 'It is ～ to …：important to learn。' },
+      { sentence: 'I’m (A) thinking (B) of (C) change (D) my job.', choices: ['(A) thinking', '(B) of', '(C) change', '(D) my job'], answer: 2, why: '前置詞 of のあとは動名詞：of changing。' },
+      { sentence: 'She (A) kindly (B) promised (C) helping (D) me with my homework.', choices: ['(A) kindly', '(B) promised', '(C) helping', '(D) me with my homework'], answer: 2, why: 'promise は不定詞をとる：promised to help。' },
+      { sentence: 'He (A) finally (B) finished (C) to write (D) the report at midnight.', choices: ['(A) finally', '(B) finished', '(C) to write', '(D) the report at midnight'], answer: 2, why: 'finish は動名詞をとる：finished writing。' },
+      { sentence: '(A) Swim (B) in this river (C) is (D) dangerous.', choices: ['(A) Swim', '(B) in this river', '(C) is', '(D) dangerous'], answer: 0, why: '主語になるのは動名詞（または不定詞）：Swimming in this river is dangerous。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
