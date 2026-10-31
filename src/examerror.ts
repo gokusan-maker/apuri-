@@ -770,6 +770,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The last thing I want are (B) to (C) hurt (D) your feelings.', choices: ['(A) The last thing I want are', '(B) to', '(C) hurt', '(D) your feelings'], answer: 0, why: '主語は The last thing（単数）なので is：The last thing I want is to hurt ～。' },
     ],
   },
+  {
+    id: 'exam-error-private',
+    title: '入試の正誤問題㉞（私大難関レベル）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'senior / preferable と to、Scarcely ～ when の時制、Few of ＋複数、make の受け身の to、倍数表現、きょり・時間の単数あつかい、such と so、advise 人 not to、主格 who に注目する。',
+    ],
+    examples: [
+      { en: 'Twenty miles is a long way to walk in a day.', ja: '20マイルは1日に歩くには長いきょりだ。（きょりのまとまりは単数）' },
+      { en: 'It was such an interesting story that I read it twice.', ja: 'とてもおもしろい話だったので、2回読んだ。' },
+    ],
+    questions: [
+      { sentence: 'She is (A) senior (B) than (C) me (D) by three years.', choices: ['(A) senior', '(B) than', '(C) me', '(D) by three years'], answer: 1, why: 'senior は than ではなく to と組む：senior to me。' },
+      { sentence: 'The plan (A) is (B) preferable (C) than (D) the old one.', choices: ['(A) is', '(B) preferable', '(C) than', '(D) the old one'], answer: 2, why: 'preferable は to と組む：preferable to the old one。' },
+      { sentence: 'Scarcely had I (A) left the house (B) when it (C) begins (D) to snow.', choices: ['(A) left the house', '(B) when it', '(C) begins', '(D) to snow'], answer: 2, why: 'Scarcely had ～ when … は過去のことなので began。' },
+      { sentence: 'Few (A) of the students (B) has (C) handed in (D) their reports.', choices: ['(A) of the students', '(B) has', '(C) handed in', '(D) their reports'], answer: 1, why: 'Few of the students は複数あつかい：have handed in。' },
+      { sentence: 'He (A) was made clean the room (B) by his mother (C) before (D) dinner.', choices: ['(A) was made clean the room', '(B) by his mother', '(C) before', '(D) dinner'], answer: 0, why: '使役 make の受け身は to 不定詞：was made to clean the room。' },
+      { sentence: 'This bridge is (A) three times (B) as long (C) than (D) that one.', choices: ['(A) three times', '(B) as long', '(C) than', '(D) that one'], answer: 2, why: '倍数＋ as ＋原級＋ as：three times as long as that one。' },
+      { sentence: 'Twenty miles (A) are (B) a long way (C) to walk (D) in a day.', choices: ['(A) are', '(B) a long way', '(C) to walk', '(D) in a day'], answer: 0, why: 'きょりのまとまりは単数あつかい：Twenty miles is a long way。' },
+      { sentence: 'It was (A) so (B) an interesting (C) story (D) that I read it twice.', choices: ['(A) so', '(B) an interesting', '(C) story', '(D) that I read it twice'], answer: 1, why: 'a ＋形容詞＋名詞の前は such：such an interesting story（so なら so interesting a story）。' },
+      { sentence: 'I advised him (A) to be careful (B) and (C) not (D) going out alone at night.', choices: ['(A) to be careful', '(B) and', '(C) not', '(D) going out alone at night'], answer: 3, why: 'advise 人 (not) to ～ の形にそろえる：(to be careful) and not (to) go out。' },
+      { sentence: 'Do you know (A) whom (B) is going to (C) speak (D) at the ceremony?', choices: ['(A) whom', '(B) is going to', '(C) speak', '(D) at the ceremony'], answer: 0, why: 'is going to の主語になるので主格の who。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
