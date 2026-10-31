@@ -3489,3 +3489,4 @@
 - 2026-10-31: 文法：入試の誤文訂正〈56〉（医学部・難関大レベル⑥：名詞構文 death・discovery・arrival・examination、無生物主語 make・prevent、強調の did・the very、a good speaker）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「時間をあたえ、もっと得る（ボランティア）」（社会・働き方・who／関係代名詞 that／how の空所）
 - 2026-10-31: デザイン：ガチャの結果に、出た子の出やすさ（%）を出すようにした
+- 2026-10-31: 文法：入試の正誤問題〈63〉（医学部・難関大レベル⑥：名詞構文 death・discovery・arrival、make 人 原形、prevent from、make O 形容詞、did see、a good speaker、the very、冠詞と数）10問

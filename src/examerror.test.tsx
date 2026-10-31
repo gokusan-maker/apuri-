@@ -834,3 +834,10 @@ it('誤文訂正〈56〉：名詞構文・無生物主語・強調の単元が10
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('death')
 })
+
+it('正誤問題〈63〉：名詞構文・無生物主語・強調の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-hard6')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) died')
+})

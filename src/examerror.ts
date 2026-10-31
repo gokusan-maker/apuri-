@@ -1466,6 +1466,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She (A) asked (B) me (C) where (D) was the station.', choices: ['(A) asked', '(B) me', '(C) where', '(D) was the station'], answer: 3, why: '間接疑問の語順：where the station was。' },
     ],
   },
+  {
+    id: 'exam-error-hard6',
+    title: '入試の正誤問題〈63〉（医学部・難関大レベル⑥：名詞構文・無生物主語・強調）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '名詞構文（death・discovery・arrival・examination）、無生物主語の make・prevent、強調の did・the very、a good speaker、冠詞と数など、難関大学の英文で多い書き方。',
+    ],
+    examples: [
+      { en: 'This medicine will make you feel better soon.', ja: 'この薬を飲めば、すぐに気分がよくなるだろう。' },
+      { en: 'I did see him at the station yesterday.', ja: '私はきのう、たしかに駅で彼を見た。' },
+    ],
+    questions: [
+      { sentence: 'His sudden (A) died (B) shocked (C) everyone (D) in the town.', choices: ['(A) died', '(B) shocked', '(C) everyone', '(D) in the town'], answer: 0, why: '所有格と形容詞に修飾される主語なので名詞 death。' },
+      { sentence: 'The (A) discover (B) of the new drug (C) saved (D) many lives.', choices: ['(A) discover', '(B) of the new drug', '(C) saved', '(D) many lives'], answer: 0, why: 'The ～ of の主語なので名詞 discovery。' },
+      { sentence: 'This medicine (A) will (B) make you to feel (C) better (D) soon.', choices: ['(A) will', '(B) make you to feel', '(C) better', '(D) soon'], answer: 1, why: 'make 人 ＋原形：make you feel。' },
+      { sentence: 'The heavy snow (A) prevented (B) us (C) to go (D) out.', choices: ['(A) prevented', '(B) us', '(C) to go', '(D) out'], answer: 2, why: 'prevent 人 from -ing：from going。' },
+      { sentence: 'The news (A) made (B) her (C) very (D) sadly.', choices: ['(A) made', '(B) her', '(C) very', '(D) sadly'], answer: 3, why: 'make O C の C は形容詞：very sad。' },
+      { sentence: 'I (A) did saw (B) him (C) at the station (D) yesterday.', choices: ['(A) did saw', '(B) him', '(C) at the station', '(D) yesterday'], answer: 0, why: '強調の did のあとは原形：did see。' },
+      { sentence: 'She (A) is (B) a well speaker (C) of (D) English.', choices: ['(A) is', '(B) a well speaker', '(C) of', '(D) English'], answer: 1, why: '名詞を修飾するのは形容詞：a good speaker。' },
+      { sentence: 'His (A) arrive (B) was delayed (C) by (D) the storm.', choices: ['(A) arrive', '(B) was delayed', '(C) by', '(D) the storm'], answer: 0, why: '所有格のあとの主語なので名詞 arrival。' },
+      { sentence: 'This is (A) the very (B) book (C) I (D) was look for.', choices: ['(A) the very', '(B) book', '(C) I', '(D) was look for'], answer: 3, why: '過去進行形は was looking for。the very は正しい。' },
+      { sentence: 'A careful (A) examination (B) of the data (C) revealed (D) a errors.', choices: ['(A) examination', '(B) of the data', '(C) revealed', '(D) a errors'], answer: 3, why: 'errors は複数なので a はつけない：some errors（または an error）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
