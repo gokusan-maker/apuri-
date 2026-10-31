@@ -21451,6 +21451,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Hidden Gardeners', 'How to Catch Fish', 'The Life of Charles Darwin', 'Why It Rains'], answer: 0, why: '全体として、ミミズが土を健康にたもつはたらきと、その大切さ、守るための取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-share-houses',
+    title: 'Living Together',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many large cities, finding a place to live has become increasingly difficult for young people. Rents are high, and small apartments can feel lonely, especially for those who have just moved from another town to study or work. One option that has become more popular in recent years is the share house, a home in which several unrelated people each have a private room but share the kitchen, living room, and bathroom.",
+      "The most obvious advantage of a share house is cost. Because residents divide the rent and utility bills, living in a share house is often cheaper than renting an apartment alone. Many share houses also come with furniture and appliances, so new residents do not need to buy a refrigerator or washing machine when they move in. For students and young workers ( A ) have limited budgets, this can make city life much more affordable.",
+      "Another advantage is the chance to meet people. Residents often cook together, talk in the living room after work, or go out on weekends. Some share houses bring together people from different countries, which gives residents the opportunity to practice foreign languages and learn about other cultures. For people who have moved to a city where they know no one, these connections can help them feel less isolated.",
+      "However, living with others also requires effort. Residents must agree on rules about cleaning, noise, and the use of shared spaces. Problems can arise when someone leaves dishes in the sink or plays loud music late at night. Successful share houses usually have clear rules and a system for dealing with complaints, ( B ) helps residents solve small problems before they become serious.",
+      "Share houses are not suitable for everyone. Some people value privacy and prefer to come home to a quiet space of their own. Still, for many, the benefits outweigh the difficulties. Some researchers believe that share houses reflect a wider change in the way people think about housing, with more value placed on community and shared experiences than on owning things alone. Whether or not this trend continues, share houses show ( C ) the way we live can shape the relationships we build.",
+    ],
+    ja: [
+      '多くの大都市では、若い人が住む場所を見つけるのがますますむずかしくなっている。家賃は高く、小さなアパートはさびしく感じられることがある。とくに、勉強や仕事のためにほかの町から引っこしてきたばかりの人にとってはそうである。近年人気が高まっている選択肢の1つがシェアハウスで、それは血のつながらない何人かの人がそれぞれ個室をもちながら、台所や居間、ふろを共有する家である。',
+      'シェアハウスのいちばんわかりやすい利点は費用である。住人が家賃や光熱費を分けるので、シェアハウスに住むほうが、ひとりでアパートを借りるより安いことが多い。家具や家電がついているシェアハウスも多いので、新しい住人は入居するときに冷蔵庫や洗たく機を買う必要がない。予算のかぎられた学生や若い働き手にとって、これは都市の生活をずっと手のとどくものにしうる。',
+      'もう1つの利点は、人と出会う機会である。住人はよくいっしょに料理をしたり、仕事のあと居間で話したり、週末に出かけたりする。いろいろな国の人が集まるシェアハウスもあり、住人は外国語を練習し、ほかの文化について学ぶ機会を得られる。知り合いのいない都市に引っこしてきた人にとって、こうしたつながりは孤独を感じにくくするのに役立つ。',
+      'しかし、ほかの人とくらすには努力も必要である。住人は、そうじや音、共有スペースの使い方についてのきまりに合意しなければならない。だれかが流しに皿を置きっぱなしにしたり、夜おそくに大きな音で音楽をかけたりすると、問題が起こることがある。うまくいっているシェアハウスには、ふつうはっきりしたきまりと苦情にたいおうするしくみがあり、それは住人が小さな問題を深刻になる前に解決するのに役立つ。',
+      'シェアハウスはだれにでも向いているわけではない。プライバシーを大切にし、自分だけの静かな場所に帰ることを好む人もいる。それでも多くの人にとっては、利点がむずかしさを上まわる。シェアハウスは、ひとりで物を持つことよりも、地域や共有する経験により価値をおくという、住まいについての考え方の広い変化を映し出していると考える研究者もいる。この流れが続くかどうかはともかく、シェアハウスは、私たちのくらし方がきずく人間関係を形づくりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は students and young workers（人）で、have の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容を受け、helps の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'whom'], answer: 0, why: 'show how ～「どのように～かを示す」。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'シェアハウスでは、住人がそれぞれ個室をもっている。', answer: true, why: '第1段落 several unrelated people each have a private room。' },
+      { statement: 'シェアハウスに住むほうが、ふつうはひとりでアパートを借りるより高い。', answer: false, why: '第2段落 living in a share house is often cheaper than renting an apartment alone。' },
+      { statement: 'いろいろな国の人が集まるシェアハウスもある。', answer: true, why: '第3段落 Some share houses bring together people from different countries。' },
+      { statement: '筆者によれば、シェアハウスはだれにでも向いている。', answer: false, why: '第5段落 Share houses are not suitable for everyone。' },
+    ],
+    qa: [
+      { q: 'Why do new residents often not need to buy a refrigerator?', choices: ['Many share houses come with furniture and appliances.', 'They eat at restaurants every day.', 'Refrigerators are not allowed.', 'They share one with the owner.'], answer: 0, why: '第2段落 Many share houses also come with furniture and appliances。' },
+      { q: 'What do successful share houses usually have?', choices: ['Clear rules and a system for dealing with complaints.', 'Very large private rooms.', 'No shared spaces.', 'Only residents from one country.'], answer: 0, why: '第4段落 Successful share houses usually have clear rules and a system for dealing with complaints。' },
+    ],
+    gist: [
+      { para: 2, choices: ['人と出会えるという利点', '外国語の教え方', '週末の旅行', '料理のレシピ'], answer: 0, why: '第3段落は、いっしょにすごし、外国の人と交流し、孤独をへらすという利点を述べている。' },
+      { para: 3, choices: ['ほかの人とくらすための努力', '音楽の聞き方', '皿の洗い方', '苦情の書き方'], answer: 0, why: '第4段落は、きまりへの合意や、問題を解決するしくみの必要を述べている。' },
+    ],
+    titleQ: { choices: ['Living Together', 'How to Buy a House', 'The History of Apartments', 'Why Rent Is Cheap'], answer: 0, why: '全体として、シェアハウスの利点と努力の必要、住まいについての考え方の変化を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
