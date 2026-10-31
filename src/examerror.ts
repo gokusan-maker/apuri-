@@ -554,6 +554,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'These shoes (A) are cheaper (B) than (C) that (D) in the other shop.', choices: ['(A) are cheaper', '(B) than', '(C) that', '(D) in the other shop'], answer: 2, why: 'くり返しをさける名詞が複数（shoes）なので those：than those in the other shop。' },
     ],
   },
+  {
+    id: 'exam-error-partconj',
+    title: '入試の正誤問題㉕（分詞構文・接続詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文の意味上の主語（ずれると誤り）、受け身の分詞構文（Written・Seen）、独立分詞構文（It being）、時の節の現在形、although と but、as long as、Hardly ～ when、whether ～ or not に注目する。',
+    ],
+    examples: [
+      { en: 'Seen from space, the Earth looks blue.', ja: '宇宙から見ると、地球は青く見える。（地球は見られる側）' },
+      { en: 'It being fine yesterday, we went on a picnic.', ja: '昨日は晴れていたので、ピクニックに行った。（独立分詞構文）' },
+    ],
+    questions: [
+      { sentence: '(A) Walking (B) along the street, (C) my wallet (D) was lost.', choices: ['(A) Walking', '(B) along the street,', '(C) my wallet', '(D) was lost'], answer: 2, why: '分詞構文の意味上の主語は文の主語と同じでなければならない。歩いていたのは「私」なので I lost my wallet とする。' },
+      { sentence: '(A) Writing (B) in easy English, (C) this book (D) is popular with students.', choices: ['(A) Writing', '(B) in easy English,', '(C) this book', '(D) is popular with students'], answer: 0, why: '本は「書かれる」側なので過去分詞：Written in easy English。' },
+      { sentence: '(A) Being (B) fine yesterday, (C) we (D) went on a picnic.', choices: ['(A) Being', '(B) fine yesterday,', '(C) we', '(D) went on a picnic'], answer: 0, why: '晴れていたのは we ではないので、意味上の主語 It を置く：It being fine。' },
+      { sentence: 'Please (A) wait here (B) until (C) I (D) will come back.', choices: ['(A) wait here', '(B) until', '(C) I', '(D) will come back'], answer: 3, why: '時を表す until の節では未来のことも現在形：until I come back。' },
+      { sentence: '(A) Although he is rich, (B) but he (C) is not (D) happy.', choices: ['(A) Although he is rich,', '(B) but he', '(C) is not', '(D) happy'], answer: 1, why: 'Although と but はいっしょに使わない：Although he is rich, he is not happy。' },
+      { sentence: 'You can stay here (A) as long (B) you (C) keep (D) quiet.', choices: ['(A) as long', '(B) you', '(C) keep', '(D) quiet'], answer: 0, why: '条件「～しさえすれば」は as long as：as long as you keep quiet。' },
+      { sentence: 'She was (A) so tired (B) that (C) she couldn’t (D) walked any more.', choices: ['(A) so tired', '(B) that', '(C) she couldn’t', '(D) walked any more'], answer: 3, why: '助動詞 couldn’t のあとは原形：couldn’t walk。' },
+      { sentence: 'Hardly had he (A) left (B) than (C) it (D) started to rain.', choices: ['(A) left', '(B) than', '(C) it', '(D) started to rain'], answer: 1, why: 'Hardly had ～ when …「～するとすぐに…」。than は No sooner ～ than と組む。' },
+      { sentence: '(A) Seeing (B) from space, the Earth (C) looks (D) blue.', choices: ['(A) Seeing', '(B) from space, the Earth', '(C) looks', '(D) blue'], answer: 0, why: '地球は「見られる」側なので過去分詞：Seen from space。' },
+      { sentence: 'I (A) don’t know (B) whether he will come (C) and (D) not.', choices: ['(A) don’t know', '(B) whether he will come', '(C) and', '(D) not'], answer: 2, why: '「～かどうか」は whether ～ or not。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

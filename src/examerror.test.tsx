@@ -302,3 +302,10 @@ it('誤文訂正⑱：くり返しをさける言いかえの単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('that of India')
 })
+
+it('正誤問題㉕：分詞構文・接続詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-partconj')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[8].choices[u.questions[8].answer]).toBe('(A) Seeing')
+})
