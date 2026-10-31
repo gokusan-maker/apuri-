@@ -3357,3 +3357,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉟（TOEFL・IELTS の書き言葉⑭：because of・result in・due to・lead to・effect on・affect・thanks to・caused by・causes of・as a result of）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「台所の静かな機械（冷蔵庫）」（技術・くらし・Even so／非制限の which／what の空所）
 - 2026-10-31: 長文：冷蔵庫の長文の空所Cの選択肢を、答えが1つに決まるように直した
+- 2026-10-31: キャラクター：サギの「サギリン」を追加（とくぎ：いっぽんあしのふんばり）
