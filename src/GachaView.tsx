@@ -739,6 +739,9 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
   const [byCount, setByCount] = useState(false) // デザイン131：なかまにいる数の多い順
   const countOf = (id: string) => owned.filter((x) => x === id).length
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
+  // デザイン161：いちばんレベルの高い子（Lv2 以上のときだけ。同じなら図鑑の番号が先の子）
+  const topLv = Math.max(0, ...Object.values(levels ?? {}))
+  const topSp = topLv >= 2 ? SPECIES.find((sp) => got.has(sp.id) && levels?.[sp.id] === topLv)?.id : undefined
   return (
     <details className="gacha-odds char-book chip-fold cf-1">
       <summary aria-label={`キャラクター図鑑 ${n} / ${SPECIES.length}`}>
@@ -798,6 +801,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
                 {ok && levels?.[sp.id] === 1 && (partner ?? 'mochi') !== sp.id && <span className="char-book-sprout" aria-label="まだ育てていない">🌱</span>} {/* デザイン122 */}
                 {ok && today.includes(sp.id) && <span className="char-book-sprout" aria-label="今日出会った">☀今日</span>} {/* デザイン137 */}
                 {ok && countOf(sp.id) >= 3 && <span className="char-book-sprout" aria-label={`なかまに ${countOf(sp.id)}体`}>👥×{countOf(sp.id)}</span>} {/* デザイン152 */}
+                {ok && topSp === sp.id && <span className="char-book-sprout" aria-label="いちばん育った子">🏅</span>} {/* デザイン161 */}
                 <span className={`char-type t-${t.id}`} title={t.desc}>
                   {t.icon}
                   {t.name.replace('型', '')}

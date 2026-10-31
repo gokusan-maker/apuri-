@@ -184,3 +184,10 @@ it('デザイン159：キャラ図鑑の説明で、必殺技の色が小さな�
   expect(dot).toHaveClass('special-dot')
   expect(dot.closest('.zukan-challenge')!.textContent).toContain(specialOf('fox').name)
 })
+
+it('デザイン161：キャラ図鑑で、いちばんレベルの高い子に 🏅 が出る', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={3} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat']} speciesLevels={{ mochi: 3, fox: 7, cat: 2 }} />)
+  const marks = screen.getAllByLabelText('いちばん育った子')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
+})
