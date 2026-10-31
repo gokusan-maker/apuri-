@@ -18487,6 +18487,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Return of the Electric Car', 'How to Build an Engine', 'The History of Coal', 'Why Petrol Is Cheap'], answer: 0, why: '全体として、電気自動車の歴史、利点、課題、クリーンな電気との関係を述べている。' },
   },
   {
+    id: 'kyotsu-ukiyoe',
+    title: 'Pictures of the Floating World',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "During the Edo period, a type of art called ukiyo-e became extremely popular in Japan. The word can be translated as “pictures of the floating world,” and the works often showed scenes from everyday city life, such as famous actors, beautiful women, festivals, and travellers on the road. Today, ukiyo-e prints are displayed in museums around the world, but in their own time they were something quite ordinary.",
+      "Ukiyo-e prints were made using carved wooden blocks. An artist first drew the design, and then skilled craftsmen carved it into blocks of wood, usually one block for each colour. Printers spread ink on the blocks and pressed paper onto them, one colour at a time. Because the same blocks could be used again and again, many copies of a picture could be produced, ( A ) made the prints cheap enough for ordinary people to buy.",
+      "Some ukiyo-e artists became especially famous. Katsushika Hokusai is known around the world for his picture of a huge wave with Mount Fuji in the background. Utagawa Hiroshige created series of landscapes showing the stations along the roads that connected Edo with other cities. Their works captured changing weather, seasons, and the movement of people in ways ( B ) many viewers found fresh and exciting.",
+      "In the second half of the nineteenth century, ukiyo-e prints began to reach Europe in large numbers. According to a popular story, some were first noticed because they had been used as wrapping paper for goods sent from Japan, although historians are not sure how true this is. Whatever the case, European artists were fascinated by the bold outlines, flat areas of colour, and unusual viewpoints of the prints. Painters such as Vincent van Gogh collected them and even made their own versions of Japanese pictures.",
+      "This influence helped to shape new movements in European art. Ironically, at the same time as ukiyo-e were being admired in Europe, many people in Japan were becoming more interested in Western styles of art, and the prints were sometimes considered old-fashioned. The story of ukiyo-e reminds us ( C ) the value of art can change depending on who is looking at it, and that ideas often travel in surprising directions between cultures.",
+    ],
+    ja: [
+      '江戸時代、浮世絵とよばれる種類の芸術が日本でとても人気になった。この言葉は「うつろう世の絵」と訳すことができ、作品は有名な役者、美しい女性、祭り、道を行く旅人など、都市のふだんの生活の場面をえがいたものが多かった。今日、浮世絵は世界中の美術館に展示されているが、その当時はごくありふれたものだった。',
+      '浮世絵は、ほった木の版を使って作られた。まず絵師が下絵をかき、それから腕のよい職人がそれを木の版にほった。ふつうは色ごとに1枚の版を使った。刷り師は版に絵の具をぬり、1色ずつ紙をおしつけた。同じ版を何度も使えたので、1つの絵をたくさん刷ることができ、そのことが浮世絵をふつうの人々が買えるほど安くした。',
+      '浮世絵師の中には、とくに有名になった人もいる。葛飾北斎は、うしろに富士山がある大きな波の絵で世界中に知られている。歌川広重は、江戸とほかの都市を結ぶ道ぞいの宿場をえがいた風景の連作を作った。彼らの作品は、移り変わる天気や季節、人々の動きを、多くの見る人が新鮮でわくわくすると感じるやり方でとらえていた。',
+      '19世紀の後半、浮世絵は大量にヨーロッパにとどきはじめた。よく知られた話によれば、日本から送られた品物の包み紙として使われていたことで最初に気づかれたものもあるというが、それがどれほど本当なのかは歴史家にもはっきりしない。いずれにせよ、ヨーロッパの画家たちは、浮世絵の大胆な輪郭、平らな色の面、めずらしい視点に心をうばわれた。フィンセント・ファン・ゴッホのような画家は浮世絵を集め、日本の絵を自分なりにえがいたものまで作った。',
+      'この影響は、ヨーロッパの芸術の新しい流れを形づくるのに役立った。皮肉なことに、ヨーロッパで浮世絵が称賛されていたのと同じころ、日本では多くの人が西洋風の芸術により関心をもつようになり、浮世絵は古くさいと考えられることもあった。浮世絵の物語は、芸術の価値はだれが見るかによって変わりうること、そして考えはしばしば文化のあいだを思いがけない方向に旅することを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（たくさん刷れること）を受け、made の主語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 ways を受け、うしろの found の目的語が欠けているので目的格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～, and that …「人に～ということ、そして…ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '浮世絵は、都市のふだんの生活の場面をえがいたものが多かった。', answer: true, why: '第1段落 the works often showed scenes from everyday city life。' },
+      { statement: '浮世絵は1枚ずつ手でかかれたので、とても高価だった。', answer: false, why: '第2段落 many copies of a picture could be produced, which made the prints cheap。' },
+      { statement: '包み紙の話がどれほど本当か、歴史家にもはっきりしない。', answer: true, why: '第4段落 although historians are not sure how true this is。' },
+      { statement: '浮世絵がヨーロッパで称賛されていたころ、日本でも浮世絵の人気はますます高まった。', answer: false, why: '第5段落 the prints were sometimes considered old-fashioned。' },
+    ],
+    qa: [
+      { q: 'Why were many copies of an ukiyo-e print possible?', choices: ['The same carved blocks could be used again and again.', 'Machines printed them automatically.', 'Each artist drew many copies by hand.', 'They were printed on cloth.'], answer: 0, why: '第2段落 Because the same blocks could be used again and again, many copies of a picture could be produced。' },
+      { q: 'What fascinated European artists about ukiyo-e?', choices: ['Bold outlines, flat areas of colour, and unusual viewpoints.', 'Their very high prices.', 'Their realistic shadows.', 'The use of oil paint.'], answer: 0, why: '第4段落 fascinated by the bold outlines, flat areas of colour, and unusual viewpoints of the prints。' },
+    ],
+    gist: [
+      { para: 1, choices: ['木版で作られた浮世絵の作り方', '絵の具の値段', '木の育て方', '職人の給料'], answer: 0, why: '第2段落は、絵師・ほり師・刷り師による木版の作り方と、それが安さにつながったことを述べている。' },
+      { para: 2, choices: ['北斎や広重など有名な浮世絵師', '富士山の高さ', '江戸の道路の作り方', '旅のしたく'], answer: 0, why: '第3段落は、北斎や広重などの有名な浮世絵師とその作品を述べている。' },
+    ],
+    titleQ: { choices: ['Pictures of the Floating World', 'How to Climb Mount Fuji', 'The History of Wrapping Paper', 'Why Museums Are Expensive'], answer: 0, why: '全体として、浮世絵の作り方、有名な絵師、ヨーロッパへの影響を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
