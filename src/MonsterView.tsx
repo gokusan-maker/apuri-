@@ -920,6 +920,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="64" cy="60" r="2" fill="#57534e" />
       </g>
     )
+  if (species === 'clownfish')
+    return (
+      <g>
+        {/* 体の白いしま */}
+        <path d="M38 40 L38 76 M62 40 L62 76" stroke="#ffffff" strokeWidth="5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
