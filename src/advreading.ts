@@ -20086,6 +20086,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Learning Never Ends', 'How to Retire Early', 'The History of Universities', 'Why Factories Are Closing'], answer: 0, why: '全体として、おとなが学びつづける理由と、そのための環境、心がまえを述べている。' },
   },
   {
+    id: 'kyotsu-seagrass',
+    title: 'Meadows Under the Sea',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think of important ocean habitats, they often imagine colorful coral reefs or the deep, dark sea. Few people think of seagrass, the plants that grow in shallow water along many coasts. Yet these underwater meadows, which can look like fields of grass waving in the current, play a surprisingly large role in keeping the oceans healthy.",
+      "Seagrass is different from seaweed. While seaweed is a type of algae, seagrass is a flowering plant with roots, leaves, and even seeds, much like the plants that grow on land. Its roots spread through the sand and mud on the sea floor, holding it in place. This helps to protect coastlines from erosion, especially during storms, because the plants slow down waves and currents.",
+      "Seagrass meadows are also home to an enormous variety of living things. Small fish, crabs, and shrimp hide among the leaves to escape from larger animals, and many young fish grow up there before moving into deeper water. Some well-known animals, such as sea turtles and dugongs, feed on seagrass directly. In this way, the meadows support fishing communities, ( A ) depend on healthy fish populations for their income.",
+      "In addition, seagrass helps to fight climate change. Like other plants, it takes in carbon dioxide from the water as it grows. When the leaves die, much of this carbon becomes trapped in the mud beneath the meadows, where it can remain for a very long time. Scientists believe that, for their size, seagrass meadows can store carbon more effectively than many forests on land. For this reason, some researchers have suggested that protecting and restoring seagrass could be a valuable part of plans to reduce global warming.",
+      "Unfortunately, seagrass meadows have been disappearing in many parts of the world. Pollution from farms and cities makes the water cloudy, ( B ) prevents sunlight from reaching the plants. Boats and coastal construction can also tear up the meadows. However, there is reason for hope. In several places, volunteers and scientists have replanted seagrass and improved water quality, and the meadows have slowly recovered. Protecting these quiet underwater fields reminds us ( C ) even the plants we rarely notice can be essential to life on Earth.",
+    ],
+    ja: [
+      '大切な海の生息地を思いうかべるとき、人々はよく色あざやかなサンゴ礁や深く暗い海を想像する。アマモなどの海草（うみくさ）、つまり多くの海岸ぞいの浅い海に育つ植物のことを考える人はほとんどいない。しかし、流れの中でゆれる草原のように見えるこうした海の中の草原は、海を健康にたもつのに、おどろくほど大きな役割をはたしている。',
+      '海草は海藻とはちがう。海藻が藻類の一種であるのに対して、海草は根、葉、さらには種をもつ花の咲く植物で、陸に育つ植物とよく似ている。その根は海底の砂や泥の中に広がり、それをしっかりおさえている。植物が波や流れをおそくするので、これは、とくにあらしのときに、海岸がけずられるのをふせぐのに役立つ。',
+      '海草の草原は、ひじょうにさまざまな生き物のすみかでもある。小さな魚やカニやエビは、大きな動物からにげるために葉のあいだにかくれ、多くの若い魚は深い海へ移る前にそこで育つ。ウミガメやジュゴンなど、よく知られた動物の中には、海草を直接食べるものもいる。このようにして、草原は漁業をする地域をささえており、そうした地域は収入を健康な魚の数にたよっている。',
+      'さらに、海草は気候変動とたたかうのにも役立つ。ほかの植物と同じように、海草は育つときに水の中から二酸化炭素を取りこむ。葉がかれると、この炭素の多くは草原の下の泥の中にとじこめられ、そこでとても長いあいだとどまることがある。科学者は、その大きさのわりに、海草の草原は陸上の多くの森よりも効果的に炭素をたくわえられると考えている。このため、海草を守り、回復させることは、地球温暖化をへらす計画の価値ある一部になりうると提案している研究者もいる。',
+      '残念なことに、海草の草原は世界の多くの地域で消えつつある。農場や都市からの汚染が水をにごらせ、それが日光が植物にとどくのをさまたげる。船や海岸の工事も草原を引きはがすことがある。しかし、希望もある。いくつかの場所では、ボランティアと科学者が海草を植えなおし、水質をよくしたことで、草原がゆっくりと回復している。こうした静かな海の中の草原を守ることは、私たちがめったに気づかない植物でさえ、地球の生命にとって欠かせないことがあるということを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'where', 'whose'], answer: 0, why: 'コンマのあとで先行詞 fishing communities を受け、depend の主語になる非制限用法の which。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（水がにごること）を受け、prevents の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '海草は、根や葉や種をもつ花の咲く植物である。', answer: true, why: '第2段落 seagrass is a flowering plant with roots, leaves, and even seeds。' },
+      { statement: '海草は海藻の一種である。', answer: false, why: '第2段落 Seagrass is different from seaweed. While seaweed is a type of algae。' },
+      { statement: 'ウミガメやジュゴンの中には、海草を食べるものがいる。', answer: true, why: '第3段落 sea turtles and dugongs, feed on seagrass directly。' },
+      { statement: '海草の草原は、どこでも回復することはない。', answer: false, why: '第5段落 the meadows have slowly recovered。' },
+    ],
+    qa: [
+      { q: 'How does seagrass protect coastlines?', choices: ['Its roots hold the sea floor and the plants slow down waves.', 'It builds walls along the beach.', 'It makes the water warmer.', 'It attracts more boats.'], answer: 0, why: '第2段落 Its roots ... holding it in place ... because the plants slow down waves and currents。' },
+      { q: 'Why do seagrass meadows disappear when water becomes cloudy?', choices: ['Sunlight cannot reach the plants.', 'Fish eat all the leaves.', 'The water becomes too cold.', 'The plants grow too fast.'], answer: 0, why: '第5段落 Pollution ... makes the water cloudy, which prevents sunlight from reaching the plants。' },
+    ],
+    gist: [
+      { para: 2, choices: ['海草の草原が多くの生き物をささえること', 'カニの料理のしかた', '漁船の作り方', 'ジュゴンの数え方'], answer: 0, why: '第3段落は、かくれ場や育つ場、食べ物として生き物をささえ、漁業にも役立つことを述べている。' },
+      { para: 3, choices: ['海草が炭素をたくわえ気候変動とたたかうこと', '森の木の切り方', '泥の成分', '天気の予報'], answer: 0, why: '第4段落は、海草が二酸化炭素を取りこみ、泥の中に炭素をたくわえることを述べている。' },
+    ],
+    titleQ: { choices: ['Meadows Under the Sea', 'How to Catch Shrimp', 'The Life of Coral Reefs', 'Why Seaweed Is Delicious'], answer: 0, why: '全体として、目立たない海草の草原の役割（海岸を守る・生き物をささえる・炭素をたくわえる）と保護を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
