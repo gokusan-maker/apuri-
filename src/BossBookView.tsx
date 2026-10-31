@@ -114,7 +114,12 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
           <p className="boss-next-goal" aria-label="つぎのめあて">
             🎯 つぎのめあて：{next[0]}のボス
           </p>
-        ) : null
+        ) : (
+          // デザイン158：ステージのボスにぜんぶ勝った
+          <p className="boss-next-goal" aria-label="ステージのボス制覇">
+            👑 ステージのボス制覇！
+          </p>
+        )
       })()}
       {beaten > 0 && (
         // デザイン144：とくぎの種類ごとに、勝ったボスの数

@@ -384,3 +384,18 @@ it('デザイン154：ボス図鑑で、いちばん最近たおしたボスに�
   expect(mark.textContent).toBe(' 🆕 さいきん')
   expect(mark.closest('li')!.querySelector('.badge-name')!.textContent).toBe('ヤミモチ')
 })
+
+it('デザイン158：ステージのボスにぜんぶ勝つと「👑 ステージのボス制覇！」が出る', async () => {
+  localStorage.clear()
+  const { BOSSES } = await import('./boss')
+  const { loadBook, recordWin, saveBook } = await import('./bossbook')
+  const { unmount } = render(<BossBook />)
+  expect(screen.queryByLabelText('ステージのボス制覇')).toBeNull()
+  unmount()
+  let b = loadBook()
+  for (const look of Object.values(BOSSES)) b = recordWin(b, look, 'A', '2026-10-31')
+  saveBook(b)
+  render(<BossBook />)
+  expect(screen.getByLabelText('ステージのボス制覇').textContent).toBe('👑 ステージのボス制覇！')
+  expect(screen.queryByLabelText('つぎのめあて')).toBeNull()
+})
