@@ -1242,6 +1242,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She is [nothing but] lazy; in fact, she works very hard.', choices: ['anything but', 'nothing more', 'all but', 'anything not'], answer: 0, why: 'anything but ～「決して～ではない」。nothing but は「～だけ」、all but は「ほとんど～」で意味が合わない。' },
     ],
   },
+  {
+    id: 'exam-fix-27',
+    title: '入試の誤文訂正㉗（私大難関レベル：早慶・上智の頻出）',
+    points: ['senior / preferable は than ではなく to、make の受け身の to、倍数表現、Scarcely の倒置、時間＋ walk の単数あつかい、so ＋形容詞＋ a ＋名詞、Few ＋複数、advise 人 not to ～、主格の who など、私大難関で問われる語法・構文。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She is senior to me by two years.', ja: '彼女は私より2つ年上だ。（senior は to と組む）' }],
+    questions: [
+      { sentence: 'She is [senior than] me by two years.', choices: ['senior to', 'more senior than', 'senior of', 'seniors to'], answer: 0, why: 'senior・junior・superior などラテン語由来の比較の語は than ではなく to：senior to me。' },
+      { sentence: 'Taking the train is [preferable than] driving in the city.', choices: ['preferable to', 'more preferable to', 'preferable from', 'prefer to'], answer: 0, why: 'preferable「～より好ましい」は to と組む。すでに比較の意味をふくむので more はつけない。' },
+      { sentence: 'He [was made laugh] by the clown.', choices: ['was made to laugh', 'was made laughing', 'made to laugh', 'was laughed'], answer: 0, why: '使役の make の受け身では to 不定詞：was made to laugh。' },
+      { sentence: 'I have [as twice many books] as she has.', choices: ['twice as many books', 'as many twice books', 'twice books as many', 'twice as much books'], answer: 0, why: '倍数＋ as many ＋複数名詞＋ as：twice as many books as。' },
+      { sentence: 'Scarcely [I had] closed the door when the phone rang.', choices: ['had I', 'I have', 'did I', 'I did'], answer: 0, why: '否定の Scarcely が文頭に出ると倒置：Scarcely had I closed ～ when …。' },
+      { sentence: 'Ten minutes\' walk [bring] you to the station.', choices: ['brings', 'bringing', 'are bringing', 'have brought'], answer: 0, why: 'Ten minutes\' walk「10分の歩き」はひとまとまりで単数あつかい：brings。' },
+      { sentence: 'She is [such kind] a woman that everyone loves her.', choices: ['so kind', 'such kind of', 'so a kind', 'kind such'], answer: 0, why: 'so ＋形容詞＋ a ＋名詞：so kind a woman（such なら such a kind woman）。' },
+      { sentence: 'Few students [has] finished the test yet.', choices: ['have', 'is', 'does', 'was'], answer: 0, why: 'Few ＋複数名詞は複数あつかい：Few students have finished。' },
+      { sentence: 'The doctor advised me [not drinking] too much coffee.', choices: ['not to drink', 'to not drinking', 'no drink', 'not drink'], answer: 0, why: 'advise 人 not to ＋原形「人に～しないよう忠告する」。' },
+      { sentence: 'I don\'t know [whom] will come to the party.', choices: ['who', 'whom ever', 'whose', 'which of'], answer: 0, why: 'will come の主語になるので主格の who。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

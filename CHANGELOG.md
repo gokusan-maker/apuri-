@@ -3306,3 +3306,4 @@
 - 2026-10-31: 文法：入試の正誤問題㉝（国公立二次レベル：It was not until ～ that・not so much A as B・no use -ing・Should の倒置・cannot help but・Not until の倒置）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「畳のくらし」（くらし・住まい・非制限の which／主格の who／that の空所）
 - 2026-10-31: キャラクター追加：サイノン（サイ・そうげんのつのタマゴ・まもりのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正㉗（私大難関レベル：senior to・preferable to・was made to・twice as many・Scarcely の倒置・so kind a woman・advise not to）10問
