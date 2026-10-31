@@ -783,7 +783,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
         <div className="type-ratio" aria-label="なかまのタイプの割合" style={{ display: 'flex', height: '0.5rem', borderRadius: '0.25rem', overflow: 'hidden', margin: '0.25rem 0' }}>
           {Object.values(CHAR_TYPES).map((ty) => {
             const n = owned.filter((x) => typeOf(x).id === ty.id).length
-            return n > 0 ? <span key={ty.id} className={`char-type t-${ty.id}`} title={`${ty.name} ${n}体`} aria-label={`${ty.name} ${Math.round((n / owned.length) * 100)}%`} style={{ flex: n, padding: 0, borderRadius: 0 }} /> : null
+            return n > 0 ? <span key={ty.id} className={`char-type t-${ty.id}`} title={`${ty.name} ${n}体`} aria-label={`${ty.name} ${Math.round((n / owned.length) * 100)}%`} style={{ flex: n, padding: 0, borderRadius: 0, background: 'currentColor' }} /> : null
           })}
         </div>
       )}
