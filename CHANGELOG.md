@@ -3364,3 +3364,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㊱（国公立レベル：where・when・What・why・whose・so that・Although・whether or not・so ～ that・which）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「密閉された箱の中の食べ物（かんづめの歴史）」（歴史・発明・who／非制限の which／that の空所）
 - 2026-10-31: デザイン：ボス戦の負け画面に、あと何問正解すれば勝てたかのめやすを出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊸（国公立レベル：関係詞と接続詞のまとめ：where・when・What・why・whose・so that・Although・whether or not・so ～ that・which）10問

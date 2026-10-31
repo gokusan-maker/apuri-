@@ -554,3 +554,10 @@ it('誤文訂正㊱：関係詞と接続詞のまとめの単元が10問ある',
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('where')
 })
+
+it('正誤問題㊸：関係詞と接続詞のまとめの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-relconj2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[4].choices[u.questions[4].answer]).toBe('(B) which roof')
+})

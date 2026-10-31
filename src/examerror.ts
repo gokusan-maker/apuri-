@@ -986,6 +986,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'As a result (A) of the new policy, crime (B) fell (C) sharply (D) in a year later.', choices: ['(A) of the new policy, crime', '(B) fell', '(C) sharply', '(D) in a year later'], answer: 3, why: 'in はいらない：a year later「1年後に」。' },
     ],
   },
+  {
+    id: 'exam-error-relconj2',
+    title: '入試の正誤問題㊸（国公立レベル：関係詞と接続詞のまとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係副詞 where・when・why、関係代名詞 what・whose、so that、Although と Despite、whether or not、so ～ that、疑問詞 which など、関係詞と接続詞のまとめ。',
+    ],
+    examples: [
+      { en: 'What he said at the meeting surprised everyone.', ja: '会議で彼が言ったことはみんなをおどろかせた。' },
+      { en: 'She was so kind that everyone liked her.', ja: '彼女はとても親切だったので、みんなに好かれた。' },
+    ],
+    questions: [
+      { sentence: 'This is (A) the town (B) which (C) I was born (D) in 2010.', choices: ['(A) the town', '(B) which', '(C) I was born', '(D) in 2010'], answer: 1, why: 'I was born は完全な文なので関係副詞 where（= in which）。' },
+      { sentence: 'I (A) will never forget (B) the day (C) where (D) we first met.', choices: ['(A) will never forget', '(B) the day', '(C) where', '(D) we first met'], answer: 2, why: '先行詞が時（the day）なので when。' },
+      { sentence: '(A) That he said (B) at the meeting (C) surprised (D) everyone.', choices: ['(A) That he said', '(B) at the meeting', '(C) surprised', '(D) everyone'], answer: 0, why: 'said の目的語が欠けているので What he said。' },
+      { sentence: 'Nobody (A) knows (B) the reason (C) why he (D) were absent yesterday.', choices: ['(A) knows', '(B) the reason', '(C) why he', '(D) were absent yesterday'], answer: 3, why: '主語は he（単数）なので was absent。the reason why は正しい。' },
+      { sentence: 'This is (A) the house (B) which roof (C) is (D) red.', choices: ['(A) the house', '(B) which roof', '(C) is', '(D) red'], answer: 1, why: '所有の関係なので whose roof。' },
+      { sentence: 'He (A) studied hard (B) so as he (C) could pass (D) the exam.', choices: ['(A) studied hard', '(B) so as he', '(C) could pass', '(D) the exam'], answer: 1, why: '目的は so that 主語 can ～：so that he could pass。' },
+      { sentence: '(A) Despite it was raining, (B) we went out (C) to play (D) soccer.', choices: ['(A) Despite it was raining', '(B) we went out', '(C) to play', '(D) soccer'], answer: 0, why: 'うしろが文なので接続詞 Although。Despite は前置詞。' },
+      { sentence: 'I (A) don’t know (B) if or not (C) he will come (D) to the party.', choices: ['(A) don’t know', '(B) if or not', '(C) he will come', '(D) to the party'], answer: 1, why: 'or not をすぐうしろにつけられるのは whether：whether or not。' },
+      { sentence: 'She (A) was (B) such kind (C) that everyone (D) liked her.', choices: ['(A) was', '(B) such kind', '(C) that everyone', '(D) liked her'], answer: 1, why: '形容詞だけが続くので so kind that。' },
+      { sentence: 'Tell me (A) what (B) you like better, (C) tea (D) or coffee.', choices: ['(A) what', '(B) you like better', '(C) tea', '(D) or coffee'], answer: 0, why: '決まった選択肢から選ぶので which。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
