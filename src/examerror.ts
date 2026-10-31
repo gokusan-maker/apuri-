@@ -1620,6 +1620,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[As a result for] the new policy, crime fell sharply.', choices: ['As a result of', 'As a result to', 'As result of', 'In a result of'], answer: 0, why: 'as a result of ～「～の結果として」。' },
     ],
   },
+  {
+    id: 'exam-fix-36',
+    title: '入試の誤文訂正㊱（国公立レベル：関係詞と接続詞のまとめ）',
+    points: ['関係副詞 where・when・why、関係代名詞 what・whose、so that ～ can（目的）、Although と Despite、whether or not、so ～ that と such ～ that、疑問詞 which など、関係詞と接続詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the town where I was born.', ja: 'ここが私の生まれた町だ。' }],
+    questions: [
+      { sentence: 'This is the town [which] I was born.', choices: ['where', 'that', 'what', 'when'], answer: 0, why: 'I was born は完全な文（名詞が欠けていない）ので、場所の関係副詞 where（= in which）。' },
+      { sentence: 'I will never forget the day [where] we first met.', choices: ['when', 'which', 'what', 'whose'], answer: 0, why: '先行詞が時（the day）で、うしろが完全な文なので関係副詞 when。' },
+      { sentence: '[That] he said surprised everyone.', choices: ['What', 'Which', 'It', 'Whose'], answer: 0, why: 'said の目的語が欠けていて、「彼が言ったこと」と主語になるので先行詞をふくむ関係代名詞 What。' },
+      { sentence: 'The reason [because] he was absent is still unknown.', choices: ['why', 'what', 'which', 'how'], answer: 0, why: 'the reason のあとで理由をあらわす関係副詞は why。' },
+      { sentence: 'This is the house [which] roof is red.', choices: ['whose', 'that', 'what', 'where'], answer: 0, why: '「その家の屋根」と所有の関係なので whose roof。' },
+      { sentence: 'He studied hard [so as] he could pass the exam.', choices: ['so that', 'in order', 'for that', 'as if'], answer: 0, why: '目的「～できるように」は so that 主語 can ～。so as はうしろに to ＋原形が続く。' },
+      { sentence: '[Despite] it was raining, we went out.', choices: ['Although', 'In spite', 'Because of', 'Even'], answer: 0, why: 'うしろが文（主語＋動詞）なので接続詞 Although。Despite は前置詞。' },
+      { sentence: 'I don’t know [if or not] he will come.', choices: ['whether or not', 'if not', 'that or not', 'what'], answer: 0, why: '「～かどうか」で or not をすぐうしろにつけられるのは whether：whether or not he will come。' },
+      { sentence: 'She was [such] kind that everyone liked her.', choices: ['so', 'such a', 'too', 'very'], answer: 0, why: 'うしろが形容詞だけ（名詞がない）ので so ～ that …。such は such a kind girl のように名詞をともなう。' },
+      { sentence: 'Tell me [what] you like better, tea or coffee.', choices: ['which', 'that', 'whose', 'how'], answer: 0, why: '決まった選択肢（tea or coffee）の中から選ぶので which。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

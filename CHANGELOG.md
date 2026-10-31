@@ -3361,3 +3361,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊷（原因と結果をあらわす表現：because of・result in・due to・lead to・effect on・affect・thanks to・caused by・one of the causes）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「正しい水の飲み方（運動と水分）」（健康・スポーツ・非制限の which／rather than／how much の空所）
 - 2026-10-31: デザイン：キャラ図鑑の説明に、その子のガチャでの出やすさ（%）を出すようにした
+- 2026-10-31: 文法：入試の誤文訂正㊱（国公立レベル：where・when・What・why・whose・so that・Although・whether or not・so ～ that・which）10問
