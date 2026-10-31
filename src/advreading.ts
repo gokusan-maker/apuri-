@@ -20359,6 +20359,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How Habits Shape Our Days', 'Why Breakfast Is Important', 'The History of Television', 'How to Stay Up Late'], answer: 0, why: '全体として、習慣のでき方、悪い習慣、変え方、新しい習慣のつくり方を述べている。' },
   },
   {
+    id: 'kyotsu-street-trees',
+    title: 'Trees Along the Street',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Walk down almost any street in a city, and you will probably pass trees planted along the sidewalk. Street trees are so familiar that we rarely think about why they are there. Yet city planners and scientists increasingly see them as an important part of a city’s infrastructure, just like roads, pipes, and power lines, because of the many services they quietly provide.",
+      "One of the most valuable things street trees do is to keep cities cool. Concrete and asphalt absorb heat from the sun during the day and release it slowly at night, making cities much hotter than the surrounding countryside. Trees help to reduce this effect by providing shade and by releasing water vapor from their leaves. On a hot summer afternoon, a street lined with large trees can feel noticeably cooler than a street ( A ) has none.",
+      "Trees also help to manage rainwater. Their leaves and branches catch some of the rain before it reaches the ground, and their roots help water to soak into the soil instead of running straight into drains. This can reduce the risk of flooding during heavy storms. In addition, trees provide homes and food for birds and insects, bringing a small piece of nature into busy urban areas.",
+      "Studies suggest that street trees benefit people’s well-being as well. Many residents say that tree-lined streets feel more pleasant and safer to walk along, and some research has found that people who live near green spaces report lower levels of stress. Shops on streets with trees may even attract more customers, ( B ) people tend to spend more time in attractive surroundings.",
+      "Nevertheless, street trees are not without problems. Their roots can damage sidewalks and pipes, falling leaves must be cleaned up, and old or weak trees can be dangerous during storms. Planting and caring for trees also costs money. For these reasons, experts emphasize the importance of choosing the right kinds of trees for each location and checking them regularly. With careful planning, they argue, the benefits of street trees far outweigh the costs, making them one of the simplest ways to make cities ( C ) comfortable places to live.",
+    ],
+    ja: [
+      '都市のほとんどどの通りを歩いても、歩道ぞいに植えられた木のそばをおそらく通るだろう。街路樹はとてもなじみがあるので、なぜそこにあるのかを考えることはめったにない。しかし、都市計画の専門家や科学者は、街路樹が静かに提供している多くのはたらきのために、道路や水道管や電線と同じように、都市の基盤の大切な一部としてますます見るようになっている。',
+      '街路樹がする最も価値のあることの1つは、都市をすずしくたもつことである。コンクリートやアスファルトは昼に太陽の熱を吸収し、夜にゆっくりと放出するので、都市はまわりのいなかよりずっと暑くなる。木はかげをつくり、葉から水蒸気を出すことで、この効果をへらすのに役立つ。暑い夏の午後には、大きな木がならぶ通りは、木のない通りよりもはっきりすずしく感じられることがある。',
+      '木は雨水の管理にも役立つ。葉や枝は雨の一部が地面にとどく前に受けとめ、根は水がそのまま排水口に流れこむのではなく土にしみこむのを助ける。これにより、激しいあらしのときの洪水の危険をへらすことができる。さらに、木は鳥や虫にすみかや食べ物をあたえ、にぎやかな都市の地域に小さな自然をもたらす。',
+      '研究によると、街路樹は人々の幸福にもよい影響をあたえる。多くの住民は、木のならぶ通りはより気持ちがよく、安全に歩けると感じると言い、緑の場所の近くに住む人はストレスが少ないと答えることを見いだした研究もある。人は魅力的なまわりの中でより長い時間をすごす傾向があるので、木のある通りの店はより多くの客を引きつけることさえあるかもしれない。',
+      'それでも、街路樹に問題がないわけではない。根が歩道や水道管をいためることがあり、落ち葉はそうじしなければならず、古い木や弱った木はあらしのときに危険になることがある。木を植えて世話をするにもお金がかかる。このような理由から、専門家はそれぞれの場所に合った種類の木を選び、定期的に点検することの大切さを強調している。注意深く計画すれば、街路樹のめぐみは費用をはるかに上まわり、都市をより快適な住む場所にする最もかんたんな方法の1つになると、彼らは主張している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a street を受け、has の主語になる関係代名詞 that。where はうしろが完全な文のときに使う。' },
+      { id: 'B', choices: ['because', 'unless', 'although', 'until'], answer: 0, why: '「人は魅力的なまわりで長くすごす傾向がある」ので客が多い、という理由なので because。' },
+      { id: 'C', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'make O C の C に比較級 more comfortable を置き、「より快適な場所にする」。' },
+    ],
+    tf: [
+      { statement: '都市はまわりのいなかよりも暑くなりやすい。', answer: true, why: '第2段落 making cities much hotter than the surrounding countryside。' },
+      { statement: '木の根は、水が土にしみこむのをさまたげる。', answer: false, why: '第3段落 their roots help water to soak into the soil。' },
+      { statement: '木のならぶ通りは安全に歩けると感じる住民が多い。', answer: true, why: '第4段落 Many residents say that tree-lined streets feel more pleasant and safer to walk along。' },
+      { statement: '専門家は、どこにでも同じ種類の木を植えるべきだと言っている。', answer: false, why: '第5段落 choosing the right kinds of trees for each location。' },
+    ],
+    qa: [
+      { q: 'How do trees help to keep cities cool?', choices: ['By providing shade and releasing water vapor.', 'By absorbing heat at night.', 'By blocking the wind completely.', 'By making the streets wider.'], answer: 0, why: '第2段落 by providing shade and by releasing water vapor from their leaves。' },
+      { q: 'What is one problem caused by street trees?', choices: ['Their roots can damage sidewalks and pipes.', 'They make the air dirty.', 'They make cities hotter.', 'They attract fewer customers.'], answer: 0, why: '第5段落 Their roots can damage sidewalks and pipes。' },
+    ],
+    gist: [
+      { para: 2, choices: ['街路樹が雨水を管理し、生き物にすみかをあたえること', '排水口のそうじ', '鳥の種類', '天気予報'], answer: 0, why: '第3段落は、雨を受けとめ土にしみこませる働きと、生き物のすみかとしての役割を述べている。' },
+      { para: 3, choices: ['街路樹が人々の幸福によい影響をあたえること', '店の売り方', '病院の数', '歩道の作り方'], answer: 0, why: '第4段落は、気持ちのよさ、安全さ、ストレスの少なさ、店への効果を述べている。' },
+    ],
+    titleQ: { choices: ['Trees Along the Street', 'How to Build a Road', 'The History of Concrete', 'Why Birds Sing'], answer: 0, why: '全体として、街路樹が都市にもたらすめぐみ（すずしさ・雨水・幸福）と課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
