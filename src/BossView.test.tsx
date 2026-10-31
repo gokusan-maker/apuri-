@@ -902,3 +902,21 @@ it('デザイン142：ボスに勝つと、結果画面にのこったハート�
   expect(n).toBeGreaterThan(0)
   expect(el.textContent).toBe(`${'❤'.repeat(n)} のこして勝った`)
 })
+
+it('デザイン148：はじめてノーミスでたおしたボスなら「✨ノーミス○体目！」が出る（2回目は出ない）', () => {
+  localStorage.clear()
+  const play = () => {
+    const r = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      answer(true)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    return r
+  }
+  const first = play()
+  expect(screen.getByLabelText('ノーミスでたおしたボスの数').textContent).toBe('✨ノーミス1体目！')
+  first.unmount()
+  play()
+  expect(screen.getByLabelText('ノーミス')).toBeInTheDocument()
+  expect(screen.queryByLabelText('ノーミスでたおしたボスの数')).toBeNull()
+})

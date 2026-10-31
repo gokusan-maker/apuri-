@@ -19,7 +19,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { isWinMilestone, loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { addSealTraits, addSealWin, arenaSeasonOf, attackElemOf, battleRank, BIG_COMBO, BOSS_HP, BOSS_QUESTIONS, BOSS_TRAITS, bossBgOf, BOSSES, bossQuestions, bossTraits, CHARGE_HIT, CHARGE_STUN, cheerOnLose, CONTINUE_COST, countBattle, COUNTER_DMG, counterTarget, CRIT_MS, critDamage, damage, defeatLineOf, DRAIN_HEAL, formatSec, fullTeamHp, GAUGE_MAX, gaugeAfter, GOLDEN_COINS, goldenLook, HEAL_COST, HEARTS, hitMember, hitTarget, hurtLineOf, introLineOf, isAsleep, isChance, isCharge, isCloseLoss, isComeback, isCounterTurn, isCritical, isEnraged, isTeamCombo, levelAttack, loadBossTimes, loadMaxHit, MEMBER_HIT, MEMBER_HP, MINION_COINS, QUICK_RATE, RANK_S_COINS, recordBossTime, recordHit, recordNoMissBoss, reviveOne, SEAL_COINS, SEAL_TICKET_EVERY, shinyLook, SPECIAL_DAMAGE, sRouletteOf, TEAM_COMBO_DAMAGE, TEAM_ORDER, teamBossQuestions, traitAfterHit, type BossLook, type BossRecord, type BossTrait, type TeamHp, type TeamRole } from './boss'
+import { addSealTraits, addSealWin, arenaSeasonOf, attackElemOf, battleRank, BIG_COMBO, BOSS_HP, BOSS_QUESTIONS, BOSS_TRAITS, bossBgOf, BOSSES, bossQuestions, bossTraits, CHARGE_HIT, CHARGE_STUN, cheerOnLose, CONTINUE_COST, countBattle, COUNTER_DMG, counterTarget, CRIT_MS, critDamage, damage, defeatLineOf, DRAIN_HEAL, formatSec, fullTeamHp, GAUGE_MAX, gaugeAfter, GOLDEN_COINS, goldenLook, HEAL_COST, HEARTS, hitMember, hitTarget, hurtLineOf, introLineOf, isAsleep, isChance, isCharge, isCloseLoss, isComeback, isCounterTurn, isCritical, isEnraged, isTeamCombo, levelAttack, loadBossTimes, loadMaxHit, loadNoMissBosses, MEMBER_HIT, MEMBER_HP, MINION_COINS, QUICK_RATE, RANK_S_COINS, recordBossTime, recordHit, recordNoMissBoss, reviveOne, SEAL_COINS, SEAL_TICKET_EVERY, shinyLook, SPECIAL_DAMAGE, sRouletteOf, TEAM_COMBO_DAMAGE, TEAM_ORDER, teamBossQuestions, traitAfterHit, type BossLook, type BossRecord, type BossTrait, type TeamHp, type TeamRole } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { easyIf } from './quiz'
@@ -331,6 +331,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const [bigHit, setBigHit] = useState(0) // デザイン133：このボス戦でいちばん大きかったダメージ（1回分）
   const [winCount, setWinCount] = useState(0) // デザイン130：このボスに勝った回数（図鑑の記録）
+  const [noMissNth, setNoMissNth] = useState(0) // デザイン148：はじめてノーミスでたおしたとき、ノーミスで何体目か
   const [skillUsed, setSkillUsed] = useState(0) // デザイン121：この戦いで相棒のとくぎが出た回数
   const fireSkill = () => {
     onSkill?.()
@@ -551,7 +552,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     }
     const sec = Math.max(1, Math.round((nowMs() - startedAt.current) / 1000))
     setTime({ sec, best: recordBossTime(look.name, sec) })
-    if (wrongs === 0) recordNoMissBoss(look.name)
+    if (wrongs === 0 && !loadNoMissBosses().includes(look.name)) {
+      recordNoMissBoss(look.name)
+      setNoMissNth(loadNoMissBosses().length)
+    }
     if (!noBook) {
       const nb = recordWin(loadBook(), look, battleRank(hearts, c), dayKey())
       saveBook(nb)
@@ -872,6 +876,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             )}
             {time && !time.best && <span>🏁 最短 {formatSec(loadBossTimes()[look.name] ?? time.sec)}</span>}
             {wrongs === 0 && <span className="game-best" aria-label="ノーミス">✨ ノーミス！</span>}
+            {wrongs === 0 && noMissNth > 0 && <span className="game-best" aria-label="ノーミスでたおしたボスの数">✨ノーミス{noMissNth}体目！</span>} {/* デザイン148 */}
             <span aria-label={`たおすまでの問題数 ${corrects + wrongs}`}>📝 {corrects + wrongs}問でたおした</span> {/* デザイン115 */}
             {corrects + wrongs > 0 && <span aria-label={`正答率 ${Math.round((corrects / (corrects + wrongs)) * 100)}%`}>🎯 正答率 {Math.round((corrects / (corrects + wrongs)) * 100)}%</span>} {/* デザイン127 */}
             {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
