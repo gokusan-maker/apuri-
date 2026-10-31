@@ -1029,3 +1029,9 @@ it('本番の長さの長文：共通テスト評論の「世代をこえた交�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：共通テスト評論の「聴力を守る」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-hearing')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})

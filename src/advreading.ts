@@ -20593,6 +20593,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Bringing Generations Together', 'How to Build a Care Home', 'The History of Smartphones', 'Why Families Are Getting Bigger'], answer: 0, why: '全体として、世代をこえた交流のプログラムと、その両方の世代への効果、課題を述べている。' },
   },
   {
+    id: 'kyotsu-hearing',
+    title: 'Protecting Our Hearing',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many young people today spend hours each day listening to music, videos, and games through earphones. On trains, in libraries, and even while walking down the street, it is common to see people wearing them. Earphones allow us to enjoy sound wherever we are without disturbing others. However, experts are increasingly worried that listening at high volume for long periods may be damaging the hearing of a whole generation.",
+      "To understand the risk, it helps to know how hearing works. Sound travels into the ear as waves that make the eardrum vibrate. These vibrations are passed to the inner ear, where thousands of tiny hair cells turn them into signals ( A ) the brain can understand. Very loud sounds can damage these delicate cells, and once they are destroyed, they do not grow back. This means that hearing loss caused by noise is usually permanent.",
+      "The danger depends on two things: how loud a sound is and how long we listen to it. A short burst of loud noise may not cause lasting harm, but listening to loud sound for hours every day can gradually injure the ear. Because the damage happens slowly, many people do not notice it until it is too late. Early signs include a ringing sound in the ears after listening, or difficulty following conversations in noisy places.",
+      "Fortunately, noise-induced hearing loss is largely preventable. Experts recommend keeping the volume at a moderate level and taking regular breaks to give the ears time to rest. One simple rule is that if a person standing nearby can hear the music from your earphones, it is probably too loud. Some smartphones can now warn users when they have been listening at high volume for too long, ( B ) helps people to notice risky habits.",
+      "Protecting our hearing is not only about earphones. Concerts, construction sites, and even some sports events can be extremely noisy, and wearing earplugs in such places can make a big difference. Good hearing allows us to communicate with others, enjoy music, and notice dangers around us, such as an approaching car. Taking small steps now can help to ensure ( C ) we continue to enjoy the sounds of the world for the rest of our lives.",
+    ],
+    ja: [
+      '今日、多くの若い人が、毎日何時間もイヤホンで音楽や動画やゲームを聞いている。電車の中、図書館、さらには通りを歩きながらでも、イヤホンをつけた人を見るのはふつうのことだ。イヤホンのおかげで、ほかの人のじゃまをせずに、どこにいても音を楽しむことができる。しかし専門家は、大きな音量で長い時間聞くことが、1つの世代全体の聴力をそこなっているかもしれないと、ますます心配している。',
+      'その危険を理解するには、聞こえるしくみを知るとよい。音は波として耳に入り、鼓膜をふるわせる。このふるえは内耳に伝わり、そこで何千もの小さな有毛細胞が、それを脳が理解できる信号に変える。とても大きな音はこうしたこわれやすい細胞をいためることがあり、いったんこわれると、もとにはもどらない。つまり、騒音による難聴はふつう一生治らないのである。',
+      '危険は2つのことによって決まる。音がどれほど大きいかと、それをどれほど長く聞くかである。短い大きな音ならあとに残る害はないかもしれないが、毎日何時間も大きな音を聞くと、少しずつ耳をいためることがある。害はゆっくり起こるので、多くの人は手おくれになるまで気づかない。早い兆候には、聞いたあとに耳鳴りがすることや、さわがしい場所で会話についていくのがむずかしいことがある。',
+      '幸いにも、騒音による難聴はほとんどふせぐことができる。専門家は、音量をほどほどにたもち、耳を休ませる時間をとるために定期的に休けいすることをすすめている。かんたんなきまりの1つは、近くに立っている人にあなたのイヤホンの音楽が聞こえるなら、たぶん大きすぎるというものである。今では、大きな音量で長く聞きすぎていると知らせてくれるスマートフォンもあり、それは危ない習慣に気づくのに役立つ。',
+      '聴力を守ることはイヤホンだけの問題ではない。コンサートや工事現場、さらには一部のスポーツの試合もとてもさわがしいことがあり、そうした場所で耳せんをすると大きなちがいが生まれる。よい聴力があるからこそ、私たちは人と伝え合い、音楽を楽しみ、近づいてくる車などまわりの危険に気づくことができる。今小さな一歩をふみ出すことが、一生世界の音を楽しみつづけられるようにするのに役立つ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 signals を受け、understand の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（知らせてくれること）を受け、helps の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'ensure that ～「かならず～であるようにする」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '内耳の有毛細胞は、こわれてももとにもどる。', answer: false, why: '第2段落 once they are destroyed, they do not grow back。' },
+      { statement: '害はゆっくり起こるので、気づかない人が多い。', answer: true, why: '第3段落 Because the damage happens slowly, many people do not notice it until it is too late。' },
+      { statement: '近くの人にイヤホンの音が聞こえるなら、たぶん音が大きすぎる。', answer: true, why: '第4段落 if a person standing nearby can hear the music from your earphones, it is probably too loud。' },
+      { statement: '聴力を守るのに大切なのはイヤホンだけである。', answer: false, why: '第5段落 Protecting our hearing is not only about earphones。' },
+    ],
+    qa: [
+      { q: 'What are early signs of hearing damage?', choices: ['Ringing in the ears and difficulty following conversations in noisy places.', 'Feeling hungry after listening to music.', 'Having a headache only in the morning.', 'Seeing colors when hearing sounds.'], answer: 0, why: '第3段落 Early signs include a ringing sound in the ears after listening, or difficulty following conversations in noisy places。' },
+      { q: 'What can make a big difference at concerts or construction sites?', choices: ['Wearing earplugs.', 'Using louder earphones.', 'Standing closer to the speakers.', 'Taking off your shoes.'], answer: 0, why: '第5段落 wearing earplugs in such places can make a big difference。' },
+    ],
+    gist: [
+      { para: 1, choices: ['聞こえるしくみと、騒音による害が治らない理由', '鼓膜の病気の治し方', '脳の大きさ', '音楽の歴史'], answer: 0, why: '第2段落は、音が信号に変わるしくみと、有毛細胞がこわれるともどらないことを述べている。' },
+      { para: 3, choices: ['騒音による難聴をふせぐ方法', 'スマートフォンの選び方', '音楽の作り方', 'イヤホンの値段'], answer: 0, why: '第4段落は、音量をおさえ、休けいをとるなどの予防の方法を述べている。' },
+    ],
+    titleQ: { choices: ['Protecting Our Hearing', 'How to Choose Earphones', 'The History of Concerts', 'Why Cars Are Noisy'], answer: 0, why: '全体として、大きな音が聴力をそこなうしくみと、その予防の大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
