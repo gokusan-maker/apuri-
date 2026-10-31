@@ -20827,6 +20827,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Bringing Shopping Streets Back to Life', 'How to Build a Shopping Center', 'The History of Tea', 'Why People Buy Cars'], answer: 0, why: '全体として、商店街のおとろえの理由と影響、生き返らせるくふう、これからの役割を述べている。' },
   },
   {
+    id: 'kyotsu-food-dates',
+    title: 'What the Date on Food Really Means',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Almost every packaged food we buy has a date printed on it. We check these dates when we shop, and we often look at them again before eating something that has been in the refrigerator for a while. However, many people do not know exactly what these dates mean. This confusion can lead people to throw away food that is still perfectly safe to eat.",
+      "In many countries, two main kinds of dates are used. One kind tells us until when a food is at its best quality. In Japan, this is called the “best-before” date, and it is mainly used for foods that do not spoil quickly, such as snacks, canned goods, and instant noodles. After this date, the food may lose some of its flavor or texture, but it is not necessarily unsafe. The other kind, the “use-by” date, is used for foods that spoil easily, such as fresh meat, fish, and boxed lunches. These foods should not be eaten after the date has passed.",
+      "Because many people treat both dates in the same way, a large amount of food is thrown away while it is still good. Studies in several countries have found that confusion about date labels is one of the causes of household food waste. Throwing food away not only wastes the money ( A ) was spent on it, but it also wastes the water, energy, and land used to produce, transport, and store it.",
+      "Shops and manufacturers also play a role. Some stores remove products from their shelves well before the best-before date, and some manufacturers set dates earlier than necessary to be safe. To reduce waste, a number of companies have begun to change how they show dates, for example by showing only the month and year for products that last a long time. Some shops also sell items close to their best-before dates at lower prices, ( B ) encourages customers to buy them before they are thrown away.",
+      "Of course, dates are only a guide. Food that has not been stored properly can spoil even before its use-by date, so it is important to follow storage instructions, such as keeping certain foods in the refrigerator. Using our senses to check whether food looks, smells, and tastes normal can help us decide whether foods past their best-before date are still fine to eat. By understanding ( C ) the dates really mean, we can protect our health and reduce unnecessary waste at the same time.",
+    ],
+    ja: [
+      '私たちが買うほとんどすべての包装された食べ物には、日付が印刷されている。買い物のときにこれらの日付をたしかめ、しばらく冷蔵庫に入っていたものを食べる前にもう一度見ることも多い。しかし、多くの人はこれらの日付が正確に何を意味するのかを知らない。この混乱によって、まだまったく安全に食べられる食べ物を人がすててしまうことがある。',
+      '多くの国では、主に2種類の日付が使われている。1つは、食べ物がいつまで最もよい品質であるかを教えてくれる。日本ではこれは「賞味期限」とよばれ、主にお菓子やかんづめ、インスタントめんなど、すぐにはいたまない食べ物に使われる。この日付をすぎると、食べ物は味や食感が少し落ちるかもしれないが、かならずしも安全でなくなるわけではない。もう1つの「消費期限」は、生の肉や魚、弁当など、いたみやすい食べ物に使われる。これらの食べ物は、日付をすぎたら食べるべきではない。',
+      '多くの人が両方の日付を同じようにあつかうので、まだよい状態のうちに大量の食べ物がすてられている。いくつかの国の研究で、日付の表示についての混乱が、家庭の食品ロスの原因の1つであることがわかっている。食べ物をすてることは、それに使ったお金をむだにするだけでなく、それをつくり、運び、保存するのに使われた水やエネルギーや土地もむだにする。',
+      '店や製造業者も役割をはたしている。賞味期限よりかなり前に商品をたなから下げる店もあり、安全のために必要より早い日付をつける製造業者もいる。むだをへらすために、たとえば長もちする商品には年と月だけを表示するなど、日付の示し方を変えはじめた会社もいくつかある。賞味期限が近い品物を安い値段で売る店もあり、それは、すてられる前に客がそれを買うのをうながす。',
+      'もちろん、日付はめやすにすぎない。正しく保存されていない食べ物は消費期限の前でもいたむことがあるので、特定の食べ物を冷蔵庫に入れるなど、保存の指示にしたがうことが大切である。見た目やにおいや味がふつうかどうかを五感でたしかめることは、賞味期限をすぎた食べ物がまだ食べられるかどうかを決めるのに役立つ。日付が本当に何を意味するのかを理解することで、私たちは健康を守ると同時に、むだな食品ロスをへらすことができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the money を受け、was spent の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（安く売ること）を受け、encourages の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'how'], answer: 0, why: 'mean の目的語が欠けた節で「何を意味するか」なので what（what the dates really mean）。' },
+    ],
+    tf: [
+      { statement: '賞味期限は、すぐにはいたまない食べ物に主に使われる。', answer: true, why: '第2段落 it is mainly used for foods that do not spoil quickly。' },
+      { statement: '賞味期限をすぎた食べ物は、かならず安全でない。', answer: false, why: '第2段落 it is not necessarily unsafe。' },
+      { statement: '消費期限をすぎた生の肉や魚は、食べるべきではない。', answer: true, why: '第2段落 These foods should not be eaten after the date has passed。' },
+      { statement: '正しく保存されていれば、食べ物は消費期限の前にいたむことはない。', answer: false, why: '第5段落 Food that has not been stored properly can spoil even before its use-by date と、保存がだいじだと述べているだけで、正しく保存すればぜったいいたまないとは言っていない。' },
+    ],
+    qa: [
+      { q: 'What does throwing food away waste besides money?', choices: ['The water, energy, and land used to produce it.', 'Only the packaging.', 'The time spent eating.', 'The dates printed on it.'], answer: 0, why: '第3段落 it also wastes the water, energy, and land used to produce, transport, and store it。' },
+      { q: 'How have some companies changed the way they show dates?', choices: ['By showing only the month and year for long-lasting products.', 'By removing all dates.', 'By printing dates in larger letters.', 'By using only use-by dates.'], answer: 0, why: '第4段落 by showing only the month and year for products that last a long time。' },
+    ],
+    gist: [
+      { para: 1, choices: ['2種類の日付のちがい', 'インスタントめんの作り方', '弁当の選び方', '肉の焼き方'], answer: 0, why: '第2段落は、賞味期限と消費期限のちがいと、それぞれが使われる食べ物を述べている。' },
+      { para: 3, choices: ['店や製造業者の取り組み', '工場の場所', '値段の決め方', '包装のデザイン'], answer: 0, why: '第4段落は、店や製造業者が早めに下げることと、むだをへらすための新しい取り組みを述べている。' },
+    ],
+    titleQ: { choices: ['What the Date on Food Really Means', 'How to Cook Fresh Fish', 'The History of Refrigerators', 'Why Snacks Are Popular'], answer: 0, why: '全体として、食べ物の日付の意味と、その混乱による食品ロス、へらすための取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
