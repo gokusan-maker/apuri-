@@ -842,6 +842,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The topic (A) about (B) that (C) we talked (D) was interesting.', choices: ['(A) about', '(B) that', '(C) we talked', '(D) was interesting'], answer: 1, why: '前置詞のあとに that は置けない：about which we talked。' },
     ],
   },
+  {
+    id: 'exam-error-confusing',
+    title: '入試の正誤問題㊲（まぎらわしい語の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'affect と effect、advise と advice、fewer と less、lose と loose、its と it’s、their と there、than と then、rise と raise、accept と except、principal と principle など、形や発音の似た語に注目する。',
+    ],
+    examples: [
+      { en: 'There were fewer people at the event than last year.', ja: '行事に来た人は去年より少なかった。（数えられる名詞 → fewer）' },
+      { en: 'The principal of our school gave a speech.', ja: '校長先生がスピーチをした。（principal ＝校長）' },
+    ],
+    questions: [
+      { sentence: 'The noise (A) effected (B) my (C) ability (D) to concentrate.', choices: ['(A) effected', '(B) my', '(C) ability', '(D) to concentrate'], answer: 0, why: '「影響した」という動詞は affect の過去形 affected。' },
+      { sentence: 'My teacher (A) gave (B) me a good (C) advise (D) about my future.', choices: ['(A) gave', '(B) me a good', '(C) advise', '(D) about my future'], answer: 2, why: '名詞「助言」は advice（数えられない名詞なので a good piece of advice ／ good advice）。advise は動詞。' },
+      { sentence: 'There were (A) less (B) people (C) at the event (D) than last year.', choices: ['(A) less', '(B) people', '(C) at the event', '(D) than last year'], answer: 0, why: 'people は数えられる名詞の複数なので fewer。' },
+      { sentence: 'Be careful not (A) to (B) loose (C) your (D) passport.', choices: ['(A) to', '(B) loose', '(C) your', '(D) passport'], answer: 1, why: '「なくす」という動詞は lose。loose は形容詞「ゆるい」。' },
+      { sentence: 'The team (A) lost (B) it’s (C) first (D) game.', choices: ['(A) lost', '(B) it’s', '(C) first', '(D) game'], answer: 1, why: '所有「その」は its。it’s は it is / it has の短縮形。' },
+      { sentence: 'The students (A) put (B) there (C) books (D) on the desk.', choices: ['(A) put', '(B) there', '(C) books', '(D) on the desk'], answer: 1, why: '所有「彼らの」は their。' },
+      { sentence: 'This test was (A) much (B) more difficult (C) then (D) the last one.', choices: ['(A) much', '(B) more difficult', '(C) then', '(D) the last one'], answer: 2, why: '比較の「～より」は than。' },
+      { sentence: 'Food prices in many countries (A) have (B) been (C) steadily (D) raising.', choices: ['(A) have', '(B) been', '(C) steadily', '(D) raising'], answer: 3, why: '「（物価が）上がる」は自動詞 rise：have been rising。raise は目的語が必要。' },
+      { sentence: 'I (A) accept (B) all of your ideas (C) accept (D) the last one.', choices: ['(A) accept', '(B) all of your ideas', '(C) accept', '(D) the last one'], answer: 2, why: '「～をのぞいて」は except：except the last one。' },
+      { sentence: 'The (A) principle (B) of our school (C) gave (D) a speech.', choices: ['(A) principle', '(B) of our school', '(C) gave', '(D) a speech'], answer: 0, why: '「校長」は principal。principle は「原理・主義」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

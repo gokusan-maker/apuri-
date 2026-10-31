@@ -3327,3 +3327,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉚（TOEFL・IELTS の書き言葉⑫：affect/effect・advise/advice・less/fewer・lose/loose・except/accept・its/it's・their/there・than/then・raise/rise）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「血液というおくりもの（献血）」（社会・ボランティア・非制限の which／主格の who／that の空所）
 - 2026-10-31: デザイン：ボス戦の勝利画面に、のこったハートの数を ❤ で出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊲（まぎらわしい語：affect/effect・advise/advice・fewer/less・lose/loose・its・their・than・rise/raise・except・principal）10問
