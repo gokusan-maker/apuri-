@@ -19774,6 +19774,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Quiet Machine in the Kitchen', 'How to Make Ice Cream', 'The History of Salt', 'Why Lakes Freeze'], answer: 0, why: '全体として、冷蔵庫がくらしを大きく変えたこと、その問題、よりよい使い方を述べている。' },
   },
   {
+    id: 'kyotsu-hydration',
+    title: 'Drinking Water the Right Way',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Water makes up more than half of the human body, and it plays a part in almost everything the body does. It carries nutrients to cells, helps to remove waste, and keeps our temperature stable. During exercise, the body loses water quickly through sweat, so drinking the right amount at the right time is one of the simplest ways to stay healthy and perform well.",
+      "When we exercise, our muscles produce heat. To prevent the body from becoming too hot, we sweat, and as the sweat evaporates from the skin, it cools us down. On a hot day, an athlete may lose more than a liter of water in an hour. If this water is not replaced, the blood becomes thicker, the heart has to work harder, and the athlete may feel tired, dizzy, or unable to concentrate. In serious cases, a lack of water can lead to heatstroke, ( A ) can be dangerous.",
+      "Many people believe that they only need to drink when they feel thirsty. However, thirst is not always a reliable signal. By the time we feel thirsty during hard exercise, our bodies may already have lost a significant amount of water. For this reason, coaches often advise athletes to drink small amounts regularly, before, during, and after activity, ( B ) than waiting until they are very thirsty.",
+      "Sweat contains not only water but also salt and other minerals. During long periods of exercise, such as a marathon or a full day of training in the heat, drinking only plain water may not be enough. Some sports drinks contain small amounts of salt and sugar, which help the body absorb water and replace what has been lost. At the same time, these drinks can be high in sugar, so they are usually unnecessary for short or light exercise.",
+      "Interestingly, it is also possible to drink too much water. If a person drinks large amounts in a short time without replacing salt, the level of salt in the blood can fall too low, which can also be harmful. The goal, therefore, is balance. By paying attention to the weather, the length of their activity, and signs such as the color of their urine, people can learn ( C ) much they need to drink to keep their bodies working well.",
+    ],
+    ja: [
+      '水は人間の体の半分以上をしめ、体が行うほとんどすべてのことに関わっている。細胞に栄養を運び、不要なものを取りのぞくのを助け、体温を一定にたもつ。運動中、体は汗によってすばやく水分を失うので、正しい量を正しいときに飲むことは、健康をたもち、よい成果を出すための最もかんたんな方法の1つである。',
+      '運動すると、筋肉が熱を生み出す。体が熱くなりすぎるのをふせぐために私たちは汗をかき、その汗が皮ふから蒸発するときに体が冷える。暑い日には、選手は1時間に1リットル以上の水分を失うことがある。この水分がおぎなわれないと、血液がこくなり、心臓はよりがんばって働かなければならず、選手はつかれやめまいを感じたり、集中できなくなったりすることがある。重い場合には、水分不足は熱中症につながることがあり、それは危険になりうる。',
+      '多くの人は、のどがかわいたときだけ飲めばよいと思っている。しかし、のどのかわきはいつもたよりになる合図ではない。はげしい運動中にのどのかわきを感じるころには、体はすでにかなりの水分を失っているかもしれない。このため、コーチはよく選手に、とてものどがかわくまで待つのではなく、運動の前、運動中、運動のあとに少しずつ定期的に飲むようにすすめる。',
+      '汗には水だけでなく、塩分やほかのミネラルもふくまれている。マラソンや暑い中での1日がかりの練習のような長い運動のあいだは、ただの水を飲むだけでは足りないことがある。スポーツドリンクの中には少量の塩分と糖分をふくむものがあり、体が水分を吸収し、失ったものをおぎなうのを助ける。同時に、こうした飲み物は糖分が多いことがあるので、短い運動や軽い運動にはふつう必要ない。',
+      '興味深いことに、水を飲みすぎることもありうる。塩分をおぎなわずに短い時間で大量の水を飲むと、血液中の塩分の濃さが下がりすぎることがあり、これも体に害になりうる。したがって、目標はバランスである。天気や運動の長さ、尿の色などの合図に注意することで、人は体をよく働かせるためにどれくらい飲む必要があるかを知ることができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 heatstroke を受け、can be の主語になる非制限用法の which。' },
+      { id: 'B', choices: ['rather', 'more', 'other', 'better'], answer: 0, why: 'A rather than B「B ではなく A」：drink small amounts regularly rather than waiting。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how much ～「どれくらい（の量）～か」：how much they need to drink。' },
+    ],
+    tf: [
+      { statement: '汗が皮ふから蒸発するとき、体は冷える。', answer: true, why: '第2段落 as the sweat evaporates from the skin, it cools us down。' },
+      { statement: 'のどのかわきは、水分が必要なことをいつも正確に知らせてくれる。', answer: false, why: '第3段落 thirst is not always a reliable signal。' },
+      { statement: 'スポーツドリンクは、短く軽い運動にもかならず必要である。', answer: false, why: '第4段落 they are usually unnecessary for short or light exercise。' },
+      { statement: '水を飲みすぎることも体に害になりうる。', answer: true, why: '第5段落 it is also possible to drink too much water ... which can also be harmful。' },
+    ],
+    qa: [
+      { q: 'What may happen if the water lost through sweat is not replaced?', choices: ['The heart has to work harder and the athlete may feel dizzy.', 'The athlete becomes stronger.', 'The body produces more muscles.', 'The blood becomes thinner.'], answer: 0, why: '第2段落 the blood becomes thicker, the heart has to work harder, and the athlete may feel tired, dizzy。' },
+      { q: 'Why can sports drinks be useful during long exercise?', choices: ['They contain salt and sugar that help the body absorb water.', 'They contain no water.', 'They make people sweat less.', 'They are cheaper than water.'], answer: 0, why: '第4段落 Some sports drinks contain small amounts of salt and sugar, which help the body absorb water。' },
+    ],
+    gist: [
+      { para: 2, choices: ['のどがかわく前に少しずつ飲むことの大切さ', 'コーチの選び方', '試合のルール', 'のどの病気'], answer: 0, why: '第3段落は、のどのかわきはたよりにならないので、定期的に少しずつ飲むようすすめている。' },
+      { para: 3, choices: ['汗で失う塩分とスポーツドリンクの役割', '塩の作り方', 'マラソンの歴史', '砂糖の値段'], answer: 0, why: '第4段落は、汗には塩分もふくまれ、長い運動ではスポーツドリンクが役立つことを述べている。' },
+    ],
+    titleQ: { choices: ['Drinking Water the Right Way', 'How to Win a Marathon', 'The History of Sports Drinks', 'Why We Feel Hungry'], answer: 0, why: '全体として、運動中の水分のとり方とその理由、塩分、飲みすぎへの注意を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
