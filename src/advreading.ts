@@ -20379,7 +20379,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a street を受け、has の主語になる関係代名詞 that。where はうしろが完全な文のときに使う。' },
       { id: 'B', choices: ['because', 'unless', 'although', 'until'], answer: 0, why: '「人は魅力的なまわりで長くすごす傾向がある」ので客が多い、という理由なので because。' },
-      { id: 'C', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'make O C の C に比較級 more comfortable を置き、「より快適な場所にする」。' },
+      { id: 'C', choices: ['more', 'much', 'many', 'less of'], answer: 0, why: '形容詞 comfortable の比較級は more comfortable。make O C で「都市をより快適な場所にする」。much・many は形容詞の前にそのまま置けない。' },
     ],
     tf: [
       { statement: '都市はまわりのいなかよりも暑くなりやすい。', answer: true, why: '第2段落 making cities much hotter than the surrounding countryside。' },
