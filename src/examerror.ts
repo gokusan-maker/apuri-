@@ -1370,6 +1370,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Strong measures (A) should (B) be taken (C) to protect (D) wildlifes.', choices: ['(A) should', '(B) be taken', '(C) to protect', '(D) wildlifes'], answer: 3, why: 'wildlife は数えられない名詞なので複数形にしない：wildlife。' },
     ],
   },
+  {
+    id: 'exam-error-verbs',
+    title: '入試の正誤問題〈59〉（私学難関レベル：まぎらわしい動詞の語法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'rise と raise、lie と lay、borrow と lend、tell と say、fit と suit、steal と rob など、まぎらわしい動詞の使い分け。',
+    ],
+    examples: [
+      { en: 'The price of vegetables has risen a lot this year.', ja: '今年は野菜の値段がかなり上がった。' },
+      { en: 'My friend kindly offered to lend me some money.', ja: '友だちは親切にもお金を貸そうと言ってくれた。' },
+    ],
+    questions: [
+      { sentence: 'The sun (A) raises (B) in the east (C) and sets (D) in the west.', choices: ['(A) raises', '(B) in the east', '(C) and sets', '(D) in the west'], answer: 0, why: '「のぼる」は自動詞 rise：rises。' },
+      { sentence: 'If you know (A) the answer, (B) please (C) rise (D) your hand.', choices: ['(A) the answer', '(B) please', '(C) rise', '(D) your hand'], answer: 2, why: '「手を上げる」は他動詞 raise：raise your hand。' },
+      { sentence: 'She was tired, (A) so she (B) laid (C) on the bed (D) for an hour.', choices: ['(A) so she', '(B) laid', '(C) on the bed', '(D) for an hour'], answer: 1, why: '「横になる」lie の過去形は lay。' },
+      { sentence: 'He (A) carefully (B) lay the book (C) on (D) the desk yesterday.', choices: ['(A) carefully', '(B) lay the book', '(C) on', '(D) the desk yesterday'], answer: 1, why: '「置く」lay の過去形は laid：laid the book。' },
+      { sentence: '(A) Excuse me, (B) can I (C) lend (D) your pen?', choices: ['(A) Excuse me', '(B) can I', '(C) lend', '(D) your pen'], answer: 2, why: '「借りる」は borrow：can I borrow your pen。' },
+      { sentence: 'When I lost my wallet, my friend (A) kindly (B) offered (C) to (D) borrow me some money.', choices: ['(A) kindly', '(B) offered', '(C) to', '(D) borrow me some money'], answer: 3, why: '「人に貸す」は lend：lend me some money。' },
+      { sentence: 'He (A) said me (B) the truth (C) about (D) the accident.', choices: ['(A) said me', '(B) the truth', '(C) about', '(D) the accident'], answer: 0, why: '人を目的語にとるのは tell：told me。' },
+      { sentence: 'This shirt (A) is too small, (B) so it (C) doesn’t suit (D) me.', choices: ['(A) is too small', '(B) so it', '(C) doesn’t suit', '(D) me'], answer: 2, why: 'サイズが合わないのは fit：doesn’t fit me。' },
+      { sentence: 'While I (A) was on the train, (B) someone (C) opened my bag and (D) robbed my wallet.', choices: ['(A) was on the train', '(B) someone', '(C) opened my bag and', '(D) robbed my wallet'], answer: 3, why: '物をぬすむのは steal：stole my wallet。' },
+      { sentence: 'The price (A) of vegetables (B) has (C) raised (D) a lot this year.', choices: ['(A) of vegetables', '(B) has', '(C) raised', '(D) a lot this year'], answer: 2, why: '「（値段が）上がる」は自動詞 rise：has risen。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
