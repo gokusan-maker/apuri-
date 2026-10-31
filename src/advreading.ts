@@ -19540,6 +19540,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How We Taste', 'How to Cook Vegetables', 'The History of Chocolate', 'Why Coffee Is Popular'], answer: 0, why: '全体として、基本の味、味蕾、においの役割、味覚の変化を述べている。' },
   },
   {
+    id: 'kyotsu-public-parks',
+    title: 'Green Spaces for Everyone',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the middle of almost every large city, there are green spaces where people can walk, play, and rest. Public parks are so familiar that we often take them for granted. Yet the idea of creating large parks that are open to everyone, rich and poor alike, is relatively new, and it developed in response to serious problems in growing cities.",
+      "During the nineteenth century, many cities in Europe and North America grew rapidly as people moved from the countryside to work in factories. Housing was crowded, the air was polluted by smoke, and many people became ill. Reformers argued that city residents needed open spaces with fresh air and trees, ( A ) they believed would improve both physical and mental health. As a result, many large public parks were created during this period, some of which are still famous today.",
+      "Modern research has supported many of these early ideas. Studies have found that people who live near green spaces tend to exercise more, and that spending time among trees and plants can reduce stress. Parks also help to cool cities in summer, because trees provide shade and plants release moisture into the air. In this way, a park can make the surrounding neighbourhood more comfortable during a heatwave.",
+      "Parks play an important social role as well. They are places where children can play safely, where families can have picnics, and where neighbours who might otherwise never meet can get to know one another. Many parks hold events such as concerts, markets, and sports days, ( B ) bring people of different ages and backgrounds together. In times of disaster, large parks can also serve as places where people gather safely.",
+      "However, parks need constant care. Paths must be repaired, trees must be pruned, and rubbish must be collected, all of which costs money. In some cities, the poorest neighbourhoods have the fewest parks, so not everyone benefits equally. Experts argue that cities should make sure that every resident can reach a green space within a short walk. Public parks remind us ( C ) a well-planned city is not only a place for buildings and roads, but also a place for people and nature.",
+    ],
+    ja: [
+      'ほとんどどの大都市にも、その真ん中に人々が歩き、遊び、休める緑の場所がある。公園はあまりになじみがあるので、私たちはそれをあたりまえだと思いがちである。しかし、金持ちにも貧しい人にも、だれにでも開かれた大きな公園をつくるという考えは比較的新しく、大きくなっていく都市の深刻な問題にこたえて生まれたものである。',
+      '19世紀、ヨーロッパや北アメリカの多くの都市は、人々がいなかから工場で働くために移ってきたため、急速に大きくなった。住まいはこみ合い、空気はけむりでよごれ、多くの人が病気になった。改革者たちは、都市の住民にはきれいな空気と木々のある広い場所が必要だと主張し、それが体と心の両方の健康をよくすると考えた。その結果、この時代に多くの大きな公園がつくられ、その中には今も有名なものがある。',
+      '現代の研究は、こうした初期の考えの多くをささえている。緑の場所の近くに住む人はより多く運動する傾向があり、木々や植物のあいだですごすとストレスがへりうることが研究でわかっている。公園は夏の都市を冷やすのにも役立つ。木がかげを作り、植物が空気中に水分を出すからである。このようにして、公園は熱波のあいだ周りの地域をより快適にすることができる。',
+      '公園は社会的にも大切な役割をはたしている。子どもが安全に遊べ、家族がピクニックをし、ほかでは出会わないかもしれない近所の人どうしが知り合える場所である。多くの公園ではコンサートや市場、運動会などの行事が開かれ、それがさまざまな年齢や背景の人々を結びつける。災害のときには、大きな公園は人々が安全に集まる場所にもなりうる。',
+      'しかし、公園にはたえず手入れが必要である。道を直し、木を切りそろえ、ごみを集めなければならず、そのすべてにお金がかかる。都市によっては、最も貧しい地域に最も公園が少なく、すべての人が同じように恩恵を受けているわけではない。専門家は、都市はすべての住民が少し歩けば緑の場所にとどくようにすべきだと主張している。公園は、よく計画された都市が建物や道路のための場所であるだけでなく、人と自然のための場所でもあることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 open spaces を受け、would improve の主語になる関係代名詞 which（they believed がはさまっている）。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 events を受け、bring の主語になるので which（非制限用法）。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '19世紀の多くの都市では、空気がけむりでよごれていた。', answer: true, why: '第2段落 the air was polluted by smoke。' },
+      { statement: '研究によれば、緑の場所の近くに住む人は運動をしなくなる。', answer: false, why: '第3段落 people who live near green spaces tend to exercise more。' },
+      { statement: '大きな公園は、災害のときに人々が集まる場所になりうる。', answer: true, why: '第4段落 large parks can also serve as places where people gather safely。' },
+      { statement: '筆者によれば、すべての地域に同じくらい公園がある。', answer: false, why: '第5段落 the poorest neighbourhoods have the fewest parks。' },
+    ],
+    qa: [
+      { q: 'How can parks help cool cities in summer?', choices: ['Trees provide shade and plants release moisture.', 'Parks have air conditioners.', 'People stay at home.', 'Parks are closed in summer.'], answer: 0, why: '第3段落 because trees provide shade and plants release moisture into the air。' },
+      { q: 'What do experts argue cities should do?', choices: ['Make sure every resident can reach a green space within a short walk.', 'Build more roads instead of parks.', 'Close parks at night.', 'Charge money to enter parks.'], answer: 0, why: '第5段落 cities should make sure that every resident can reach a green space within a short walk。' },
+    ],
+    gist: [
+      { para: 2, choices: ['公園の健康への効果と都市を冷やす働き', '木の植え方', '天気予報の見方', '病院の建て方'], answer: 0, why: '第3段落は、運動やストレスの軽減、夏の都市を冷やす効果を述べている。' },
+      { para: 3, choices: ['公園の社会的な役割', 'ピクニックの準備', 'コンサートの歴史', '市場の値段'], answer: 0, why: '第4段落は、遊び場、交流、行事、災害時の集合場所としての役割を述べている。' },
+    ],
+    titleQ: { choices: ['Green Spaces for Everyone', 'How to Build a Factory', 'The History of Smoke', 'Why Roads Are Important'], answer: 0, why: '全体として、公園の生まれた背景、健康と社会への役割、課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
