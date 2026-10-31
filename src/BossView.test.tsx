@@ -888,3 +888,17 @@ it('デザイン139：ボスに負けた結果画面に、まちがえた問題�
   expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
   expect(screen.getByLabelText(`まちがえた数 ${n}`).textContent).toBe(`❌ ${n}問まちがえた`)
 })
+
+it('デザイン142：ボスに勝つと、結果画面にのこったハートの数が ❤ で出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} startHearts={3} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  const el = screen.getByLabelText(/^勝ったときのハート \d+$/)
+  const n = Number(el.getAttribute('aria-label')!.match(/\d+/)![0])
+  expect(n).toBeGreaterThan(0)
+  expect(el.textContent).toBe(`${'❤'.repeat(n)} のこして勝った`)
+})

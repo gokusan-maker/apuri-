@@ -879,6 +879,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {isWinMilestone(winCount) && <span aria-label={`${winCount}回目の勝利`}>🎖 {winCount}回目の勝利！</span>} {/* デザイン130 */}
             {bigHit > 0 && <span aria-label={`最大ダメージ ${bigHit}`}>💥 最大 {bigHit} ダメージ</span>} {/* デザイン133 */}
             {partner && partner.form.stage > 0 && <span aria-label="いっしょに戦った相棒">{typeOf(partner.species).icon} {partner.name}といっしょに勝った</span>} {/* デザイン136 */}
+            {hearts > 0 && <span aria-label={`勝ったときのハート ${hearts}`}>{'❤'.repeat(hearts)} のこして勝った</span>} {/* デザイン142 */}
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}
