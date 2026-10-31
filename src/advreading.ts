@@ -20854,7 +20854,6 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '賞味期限をすぎた食べ物は、かならず安全でない。', answer: false, why: '第2段落 it is not necessarily unsafe。' },
       { statement: '消費期限をすぎた生の肉や魚は、食べるべきではない。', answer: true, why: '第2段落 These foods should not be eaten after the date has passed。' },
       { statement: '筆者によれば、保存の指示にしたがうことは大切ではない。', answer: false, why: '第5段落 it is important to follow storage instructions。' },
-
     ],
     qa: [
       { q: 'What does throwing food away waste besides money?', choices: ['The water, energy, and land used to produce it.', 'Only the packaging.', 'The time spent eating.', 'The dates printed on it.'], answer: 0, why: '第3段落 it also wastes the water, energy, and land used to produce, transport, and store it。' },
