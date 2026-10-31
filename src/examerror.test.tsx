@@ -771,3 +771,10 @@ it('正誤問題〈58〉：問題と解決を述べる表現の単元が10問あ
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) is improve')
 })
+
+it('誤文訂正〈52〉：まぎらわしい動詞の語法の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-52')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('rises')
+})

@@ -2292,6 +2292,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Strong measures [should take] to protect wildlife.', choices: ['should be taken', 'should taking', 'should took', 'should be taking'], answer: 0, why: '対策は「とられる」側なので助動詞の受け身 should be taken。' },
     ],
   },
+  {
+    id: 'exam-fix-52',
+    title: '入試の誤文訂正〈52〉（私学難関レベル：まぎらわしい動詞の語法）',
+    points: ['rise（上がる）と raise（～を上げる）、lie（横になる：lie-lay-lain）と lay（～を置く：lay-laid-laid）、borrow（借りる）と lend（貸す）、tell 人 ～ と say、fit（サイズが合う）と suit（にあう）、steal 物 と rob 人 of 物 など、私立大学でよく問われる、まぎらわしい動詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She lay on the bed because she was tired.', ja: '彼女はつかれていたのでベッドに横になった。' }],
+    questions: [
+      { sentence: 'The sun [raises] in the east.', choices: ['rises', 'is raised', 'rose up', 'raising'], answer: 0, why: '「（太陽が）のぼる」は自動詞 rise。いつものことなので現在形 rises。raise は「～を上げる」という他動詞。' },
+      { sentence: 'Please [rise] your hand if you know the answer.', choices: ['raise', 'rise up', 'arise', 'rising'], answer: 0, why: '「手を上げる」は目的語をとる他動詞 raise。' },
+      { sentence: 'She [laid] on the bed because she was tired.', choices: ['lay', 'lied', 'was laid', 'layed'], answer: 0, why: '「横になる」は自動詞 lie で、過去形は lay。laid は lay（～を置く）の過去形。' },
+      { sentence: 'Yesterday he [lay] the book on the desk.', choices: ['laid', 'lied', 'layed', 'lain'], answer: 0, why: '「～を置く」は他動詞 lay で、過去形は laid。' },
+      { sentence: 'Can I [lend] your pen for a minute?', choices: ['borrow', 'lent', 'rent of', 'loan of'], answer: 0, why: '「（ただで）借りる」は borrow。lend は「貸す」。' },
+      { sentence: 'Could you [borrow] me some money until Friday?', choices: ['lend', 'borrow to', 'rent', 'loan of'], answer: 0, why: '「人に～を貸す」は lend 人 物。' },
+      { sentence: 'He [said] me the truth about the accident.', choices: ['told', 'spoke', 'talked', 'said to'], answer: 0, why: '「人に～を言う」と人を目的語にとるのは tell 人 物。say はうしろに人を直接置けない。' },
+      { sentence: 'Can you [speak] me the way to the station?', choices: ['tell', 'say', 'talk', 'speak to'], answer: 0, why: '「人に道を教える」は tell 人 the way。' },
+      { sentence: 'This shirt is too small; it doesn’t [suit] me.', choices: ['fit', 'match', 'go with', 'suit to'], answer: 0, why: 'サイズが「合う」は fit。suit は色やデザインが「にあう」。' },
+      { sentence: 'Someone [robbed] my wallet on the train.', choices: ['stole', 'robbed of', 'stealed', 'was stolen'], answer: 0, why: '「物をぬすむ」は steal 物（過去形 stole）。rob は rob 人 of 物 の形で使う。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
