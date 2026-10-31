@@ -19228,6 +19228,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Clever Dolphin', 'How to Swim Faster', 'The History of Ships', 'Why the Sea Is Blue'], answer: 0, why: '全体として、イルカのコミュニケーション・自己認識・道具の使用と、守る必要を述べている。' },
   },
   {
+    id: 'kyotsu-roundabouts',
+    title: 'Going Around in Circles',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "At most crossroads in Japan, traffic is controlled by traffic lights. Cars wait at a red light, then move when it turns green. In many other countries, however, drivers often meet a different kind of junction: a roundabout. Instead of crossing straight through the intersection, cars drive around a circular island in the centre and leave by the road they want to take.",
+      "The basic rules of a roundabout are simple. Vehicles all travel in the same direction around the circle, and cars that are already inside the roundabout usually have priority over cars that want to enter. Drivers approaching the roundabout must slow down, look carefully, and wait for a safe gap before joining the traffic. Because there are no traffic lights, cars do not have to stop when the road is clear, ( A ) can reduce waiting times when traffic is light.",
+      "Many studies have suggested that roundabouts can make roads safer. At an ordinary crossroads, some of the most serious accidents happen when one car hits another from the side at high speed. In a roundabout, all vehicles move in the same direction and must slow down to go around the circle, so collisions that do occur tend to be less severe. For this reason, some countries have replaced dangerous crossroads with roundabouts.",
+      "In recent years, roundabouts have also begun to appear in Japan. One reason is that they can keep working even when there is no electricity. After a large earthquake or typhoon, traffic lights may stop working because of power cuts, causing confusion and danger at busy junctions. A roundabout, by contrast, needs no power at all, ( B ) makes it useful in a country where natural disasters are common.",
+      "However, roundabouts are not suitable everywhere. They require more space than an ordinary crossroads, and when traffic is very heavy, cars may have to wait a long time for a chance to enter. Drivers who are not used to them may also feel confused at first. Experts say that the most important thing is to understand the rules clearly. The spread of roundabouts shows ( C ) a simple change in road design can affect safety, convenience, and even preparation for disasters.",
+    ],
+    ja: [
+      '日本のほとんどの交差点では、交通は信号機で整理されている。車は赤信号で待ち、青に変わると動く。しかし多くのほかの国では、運転する人はしばしば別の種類の交差点に出会う。ラウンドアバウト（環状交差点）である。車は交差点をまっすぐ横切るのではなく、中央の円い島の周りをまわり、行きたい道から出ていく。',
+      'ラウンドアバウトの基本的なきまりはかんたんである。車はみな円の周りを同じ方向に進み、すでに中に入っている車は、ふつう入ろうとする車より優先される。ラウンドアバウトに近づく運転者は速度を落とし、よく見て、流れに加わる前に安全なすき間を待たなければならない。信号機がないので、道がすいているときには車は止まらなくてよく、そのことが交通量が少ないときの待ち時間をへらしうる。',
+      '多くの研究が、ラウンドアバウトは道路をより安全にしうることを示している。ふつうの交差点では、最も深刻な事故の一部は、1台の車が別の車に横から高速でぶつかるときに起こる。ラウンドアバウトでは、すべての車が同じ方向に進み、円をまわるために速度を落とさなければならないので、起こる衝突もそれほどひどくならない傾向がある。このため、危険な交差点をラウンドアバウトに作りかえた国もある。',
+      '近年、日本でもラウンドアバウトが現れはじめた。理由の一つは、電気がなくても機能しつづけられることである。大きな地震や台風のあと、停電のために信号機が止まり、交通量の多い交差点で混乱や危険が生まれることがある。それに対してラウンドアバウトは電気をまったく必要とせず、そのことが自然災害の多い国で役に立つものにしている。',
+      'しかし、ラウンドアバウトはどこにでも向いているわけではない。ふつうの交差点より広い場所が必要で、交通量がとても多いと、車は入る機会を長く待たなければならないこともある。なれていない運転者は、はじめはとまどうかもしれない。専門家は、最も大切なのはきまりをはっきり理解することだと言う。ラウンドアバウトの広まりは、道路の設計のかんたんな変化が、安全や便利さ、さらには災害へのそなえにまで影響しうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（道がすいていれば止まらなくてよいこと）を受け、can reduce の主語になるので which。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（電気を必要としないこと）を受け、makes の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'ラウンドアバウトでは、車はみな同じ方向に進む。', answer: true, why: '第2段落 Vehicles all travel in the same direction around the circle。' },
+      { statement: 'ラウンドアバウトでは、入ろうとする車がいつも優先される。', answer: false, why: '第2段落 cars that are already inside the roundabout usually have priority。' },
+      { statement: 'ラウンドアバウトは停電のときも機能しつづけられる。', answer: true, why: '第4段落 they can keep working even when there is no electricity。' },
+      { statement: '筆者によれば、ラウンドアバウトはどんな場所にも向いている。', answer: false, why: '第5段落 roundabouts are not suitable everywhere。' },
+    ],
+    qa: [
+      { q: 'Why do collisions in roundabouts tend to be less severe?', choices: ['All vehicles move in the same direction and must slow down.', 'There are more traffic lights.', 'Cars are not allowed to enter.', 'The roads are always empty.'], answer: 0, why: '第3段落 all vehicles move in the same direction and must slow down … so collisions that do occur tend to be less severe。' },
+      { q: 'Which is NOT mentioned as a disadvantage of roundabouts?', choices: ['They use a lot of electricity.', 'They need more space.', 'Cars may wait long in heavy traffic.', 'Some drivers may be confused at first.'], answer: 0, why: '第4段落で電気は不要と述べられており、電気を多く使うという欠点はない。ほかの3つは第5段落にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ラウンドアバウトが安全な理由', '事故の調査のしかた', '車の速さのはかり方', '保険の選び方'], answer: 0, why: '第3段落は、同じ方向に進み速度が落ちるため、ひどい事故がへることを述べている。' },
+      { para: 3, choices: ['日本で広まりはじめた理由（災害時の強さ）', '地震の予知', '台風の名前', '発電所の作り方'], answer: 0, why: '第4段落は、停電でも使えるため、災害の多い日本で役立つことを述べている。' },
+    ],
+    titleQ: { choices: ['Going Around in Circles', 'How to Get a Driving License', 'The History of Traffic Lights', 'Why Cars Are Fast'], answer: 0, why: '全体として、ラウンドアバウトのきまり・安全性・日本での広まり・課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
