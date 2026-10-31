@@ -698,6 +698,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Each students (B) in this school (C) has (D) a locker.', choices: ['(A) Each students', '(B) in this school', '(C) has', '(D) a locker'], answer: 0, why: 'each のあとは単数名詞：Each student。' },
     ],
   },
+  {
+    id: 'exam-error-hard2',
+    title: '入試の正誤問題㉛（医学部・難関大レベル②）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '長い主語の中心と動詞の一致、insist on -ing、recommend that ＋原形、Hardly ～ when の時制、the ＋比較級, the ＋比較級、Little / Not until の倒置、所有の whose、現在完了の付加疑問に注目する。医療・研究の場面の文が多い。',
+    ],
+    examples: [
+      { en: 'Patients suffering from this condition are advised to avoid salt.', ja: 'この病気の患者は塩分をさけるよう勧められる。（主語の中心は Patients）' },
+      { en: 'Not until the 19th century did scientists understand how diseases spread.', ja: '19世紀になってはじめて、科学者は病気の広がり方を理解した。' },
+    ],
+    questions: [
+      { sentence: 'The symptoms (A) of the disease (B) is (C) often (D) mild.', choices: ['(A) of the disease', '(B) is', '(C) often', '(D) mild'], answer: 1, why: '主語の中心は The symptoms（複数）なので are。' },
+      { sentence: 'The patient (A) insisted (B) on (C) to leave (D) the hospital early.', choices: ['(A) insisted', '(B) on', '(C) to leave', '(D) the hospital early'], answer: 2, why: 'insist on のあとは動名詞：insisted on leaving。' },
+      { sentence: 'The doctor (A) recommended (B) that the patient (C) rests (D) for a week.', choices: ['(A) recommended', '(B) that the patient', '(C) rests', '(D) for a week'], answer: 2, why: 'recommend that ～ の節は原形（または should ＋原形）：the patient rest。' },
+      { sentence: 'Hardly (A) had the treatment (B) begun (C) when the patient (D) begins to recover.', choices: ['(A) had the treatment', '(B) begun', '(C) when the patient', '(D) begins to recover'], answer: 3, why: 'Hardly had ～ when … は過去のことなので when のあとも過去形：began to recover。' },
+      { sentence: 'The (A) more (B) carefully the data (C) are analysed, (D) the reliable the results become.', choices: ['(A) more', '(B) carefully the data', '(C) are analysed,', '(D) the reliable the results become'], answer: 3, why: 'the ＋比較級, the ＋比較級：the more reliable the results become。' },
+      { sentence: 'Little (A) the scientists knew (B) that (C) their discovery (D) would save millions.', choices: ['(A) the scientists knew', '(B) that', '(C) their discovery', '(D) would save millions'], answer: 0, why: '否定の Little が文頭に出ると倒置：Little did the scientists know。' },
+      { sentence: 'The research, (A) which (B) results were published last year, (C) has attracted (D) much attention.', choices: ['(A) which', '(B) results were published last year,', '(C) has attracted', '(D) much attention'], answer: 0, why: '「その研究の結果」と所有を表すので whose：whose results。' },
+      { sentence: 'Over (A) the past decade, the cost of medicine (B) has risen (C) consistently, (D) isn’t it?', choices: ['(A) the past decade, the cost of medicine', '(B) has risen', '(C) consistently,', '(D) isn’t it'], answer: 3, why: '現在完了 has risen の付加疑問は hasn’t it?。' },
+      { sentence: 'Patients (A) suffering (B) from this condition (C) is advised (D) to avoid salt.', choices: ['(A) suffering', '(B) from this condition', '(C) is advised', '(D) to avoid salt'], answer: 2, why: '主語の中心は Patients（複数）なので are advised。' },
+      { sentence: 'Not until the 19th century (A) scientists understood (B) how (C) diseases (D) spread.', choices: ['(A) scientists understood', '(B) how', '(C) diseases', '(D) spread'], answer: 0, why: 'Not until ～ が文頭に出ると主節が倒置：did scientists understand。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
