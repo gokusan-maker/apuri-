@@ -3456,3 +3456,4 @@
 - 2026-10-31: 文法：入試の誤文訂正〈51〉（TOEFL・IELTS の書き言葉⑳：One way is to・take measures・be dealt with・If nothing is done・for 人 to・Unless・result in・lie in・help 人 原形・should be taken）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「かしこいカラス」（自然・動物・関係代名詞 that／whom to／much that の空所）
 - 2026-10-31: 長文：カラスの長文の空所Bの選択肢を、答えが1つに決まるように直した
+- 2026-10-31: デザイン：ガチャで出た子がなかまに5体以上になったら「🎉 大家族！」を出すようにした（166・167 は実装ずみだったので完了にした）

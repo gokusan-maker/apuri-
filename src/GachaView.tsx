@@ -573,7 +573,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             <span className="attr-badge attr-word">属性：単語</span>
           </p>
           {partnerName && !result.mystery && result.kind.rarity !== 'N' && <p className="grammar-praise gacha-cheer">🐣 {partnerName}「{rareCheer(result.kind.rarity)}」</p>}
-          {result.nth !== undefined && result.nth > 1 && <p className="gacha-nth">👥 {result.species.name} {result.nth}体目</p>}
+          {result.nth !== undefined && result.nth > 1 && (
+            <p className="gacha-nth">
+              👥 {result.species.name} {result.nth}体目
+              {result.nth >= 5 && <strong aria-label="大家族"> 🎉 大家族！</strong>} {/* デザイン168 */}
+            </p>
+          )}
           {(result.newKind || result.newSpecies) && (
             <p className="buddy-chips gacha-new-chips" aria-label={`はじめて：${[result.newSpecies ? result.species.name : '', result.newKind ? result.kind.name : ''].filter(Boolean).join('・')}`}>
               <span className="gacha-new">NEW!</span>

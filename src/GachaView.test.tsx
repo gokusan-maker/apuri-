@@ -697,3 +697,15 @@ it('デザイン162：その日はじめて SR 以上が出たら「🌟 今日�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText(/今日はじめての/)).toBeNull()
 })
+
+it('デザイン168：出た子がなかまに5体以上になったら「🎉 大家族！」が出る（4体目までは出ない）', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false, nth: 4 })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('大家族')).toBeNull()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false, nth: 5 })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('大家族').textContent).toBe(' 🎉 大家族！')
+})
