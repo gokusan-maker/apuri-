@@ -20437,6 +20437,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Reading Reviews Wisely', 'How to Open a Restaurant', 'The History of Advertising', 'Why Hotels Are Expensive'], answer: 0, why: '全体として、オンラインのレビューの利点と弱点、かしこい読み方を述べている。' },
   },
   {
+    id: 'kyotsu-fog',
+    title: 'The Gray Curtain',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On some mornings, the world seems to disappear. Buildings, trees, and even the other side of the street vanish behind a soft gray curtain. This is fog, one of the most familiar and yet most mysterious kinds of weather. Although fog can look like smoke, it is actually made of countless tiny drops of water floating in the air, and it is closely related to the clouds we see in the sky.",
+      "Fog forms when air near the ground cools until it cannot hold all of its water vapor. The extra vapor then turns into small drops of liquid water, much as drops appear on the outside of a cold glass on a summer day. This often happens on clear, calm nights, when the ground loses heat quickly and cools the air above it. It can also happen when warm, moist air moves over a cold surface, such as a cold ocean current, ( A ) is why some coastal areas are famous for their fog.",
+      "Fog can cause serious problems for transportation. When drivers cannot see far ahead, the risk of accidents rises, and airports and ports may have to delay or cancel flights and ships. For this reason, weather services issue warnings when thick fog is expected, and many roads have special lights to help drivers see ( B ) they are going. Modern ships and airplanes also use technology such as radar to travel safely in poor visibility.",
+      "Surprisingly, fog can also be a valuable resource. In some dry coastal regions where rain rarely falls, people have set up large nets that catch the tiny drops of water in the fog. As the drops collect on the nets, they join together and drip into containers below. In this way, communities can gather water for drinking and farming without using any electricity. Some plants and insects in these areas have developed similar ways of collecting water from fog to survive.",
+      "Fog has long inspired artists and writers, who often use it to create a feeling of mystery or calm. For scientists, it remains an important subject of study, because understanding how and when fog forms can help to improve weather forecasts and protect travelers. Whether we see it as a danger, a resource, or a beautiful sight, fog reminds us ( C ) closely the air, the land, and the sea are connected.",
+    ],
+    ja: [
+      'ある朝には、世界が消えてしまったように見える。建物や木、さらには通りの向こう側までが、やわらかな灰色のカーテンの向こうに消える。これが霧であり、最もなじみがありながら最もふしぎな天気の1つである。霧はけむりのように見えることがあるが、実は空気中にうかぶ数えきれない小さな水のつぶでできており、空に見える雲と深い関係がある。',
+      '霧は、地面の近くの空気が冷えて、ふくんでいる水蒸気をすべてはたもてなくなったときにできる。すると余った水蒸気は液体の小さな水のつぶに変わる。夏の日に冷たいコップの外側に水のつぶがつくのとよく似ている。これは、晴れて風のない夜によく起こる。地面がすばやく熱を失い、その上の空気を冷やすからである。また、あたたかくしめった空気が冷たい海流のような冷たい表面の上を動くときにも起こることがあり、それがいくつかの海岸地域が霧で有名な理由である。',
+      '霧は交通に深刻な問題をひき起こすことがある。運転する人が先まで見えないと事故の危険が高まり、空港や港は飛行機や船をおくらせたり取りやめたりしなければならないことがある。このため、気象の機関は濃い霧が予想されるときに注意報を出し、多くの道路には運転する人がどこへ向かっているかを見やすくする特別なライトがある。現代の船や飛行機は、見通しが悪いときに安全に進むために、レーダーなどの技術も使っている。',
+      'おどろくことに、霧は価値のある資源にもなりうる。雨がめったにふらないいくつかのかわいた海岸地域では、人々が霧の中の小さな水のつぶを受けとめる大きなネットを立てている。つぶがネットに集まると、くっついて下の入れ物にしたたり落ちる。このようにして、地域の人々は電気をまったく使わずに、飲み水や農業用の水を集めることができる。こうした地域の植物や虫の中には、生きのびるために霧から水を集める似た方法を身につけたものもいる。',
+      '霧は長いあいだ芸術家や作家に着想をあたえてきた。彼らはよく霧を使って、ふしぎさや静けさの感じをつくり出す。科学者にとって、霧は今も大切な研究の対象である。霧がどのように、いつできるかを理解することが、天気予報をよりよくし、旅をする人を守るのに役立つからである。危険と見ても、資源と見ても、美しい景色と見ても、霧は、空気と陸と海がどれほど深くつながっているかを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受ける非制限用法の which。which is why ～「それが～の理由だ」。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'see where they are going「どこへ向かっているかを見る」。うしろは完全な文なので場所をたずねる where。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋副詞 closely ＋主語＋動詞で「どれほど深く～か」。' },
+    ],
+    tf: [
+      { statement: '霧は、空気中にうかぶ小さな水のつぶでできている。', answer: true, why: '第1段落 it is actually made of countless tiny drops of water floating in the air。' },
+      { statement: '霧は、くもって風の強い夜にいちばんよくできる。', answer: false, why: '第2段落 This often happens on clear, calm nights。' },
+      { statement: '霧が濃いと、飛行機や船がおくれることがある。', answer: true, why: '第3段落 airports and ports may have to delay or cancel flights and ships。' },
+      { statement: '霧から水を集めるネットには、多くの電気が必要である。', answer: false, why: '第4段落 without using any electricity。' },
+    ],
+    qa: [
+      { q: 'Why are some coastal areas famous for their fog?', choices: ['Warm, moist air moves over cold ocean currents.', 'They have many factories.', 'It rains there every day.', 'The ground there is always hot.'], answer: 0, why: '第2段落 when warm, moist air moves over a cold surface, such as a cold ocean current, which is why some coastal areas are famous for their fog。' },
+      { q: 'How do some communities in dry coastal regions use fog?', choices: ['They catch water from it with large nets.', 'They use it to make electricity.', 'They sell it to other countries.', 'They use it to grow fish.'], answer: 0, why: '第4段落 people have set up large nets that catch the tiny drops of water in the fog。' },
+    ],
+    gist: [
+      { para: 1, choices: ['霧ができるしくみ', 'コップの洗い方', '夏の天気', '海流の名前'], answer: 0, why: '第2段落は、空気が冷えて水蒸気が水のつぶになるという霧のでき方を述べている。' },
+      { para: 3, choices: ['霧を資源として使う方法', '虫の種類', '農業の歴史', '雨のふり方'], answer: 0, why: '第4段落は、ネットで霧から水を集める方法と、似た方法をもつ生き物を述べている。' },
+    ],
+    titleQ: { choices: ['The Gray Curtain', 'How to Drive at Night', 'The History of Radar', 'Why Glasses Get Cold'], answer: 0, why: '全体として、霧のしくみ、交通への影響、資源としての利用、霧の意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
