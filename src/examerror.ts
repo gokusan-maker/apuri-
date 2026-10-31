@@ -2040,6 +2040,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Please reply [as soon as possibly].', choices: ['as soon as possible', 'as soon as possibility', 'soon as possible', 'as sooner as possible'], answer: 0, why: '「できるだけ早く」は as soon as possible（possible は形容詞）。' },
     ],
   },
+  {
+    id: 'exam-fix-46',
+    title: '入試の誤文訂正㊻（共通テストレベル：不定詞と動名詞の使い分けの総まとめ）',
+    points: ['動名詞をとる動詞（enjoy・avoid・finish・stop など）、不定詞をとる動詞（decide・hope・promise など）、forget to（わすれずに～）と stop -ing（～するのをやめる）、It is ～ to …、前置詞のあとの動名詞（think of -ing）など、不定詞と動名詞の使い分けのまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She decided to study abroad.', ja: '彼女は留学することに決めた。' }],
+    questions: [
+      { sentence: 'I enjoy [to swim] in the sea every summer.', choices: ['swimming', 'swim', 'to swimming', 'swam'], answer: 0, why: 'enjoy は動名詞を目的語にとる：enjoy swimming。' },
+      { sentence: 'She decided [studying] abroad.', choices: ['to study', 'study', 'studied', 'to studying'], answer: 0, why: 'decide は不定詞を目的語にとる：decide to study。' },
+      { sentence: 'Don’t forget [locking] the door when you leave.', choices: ['to lock', 'lock', 'locked', 'to locking'], answer: 0, why: '「わすれずに～する（これからすること）」は forget to ～。forget -ing は「～したことをわすれる」。' },
+      { sentence: 'I stopped [to smoke] for my health.', choices: ['smoking', 'smoke', 'smoked', 'to smoking'], answer: 0, why: '「健康のためにたばこをやめた」は stop -ing。stop to smoke は「たばこをすうために立ち止まる」。' },
+      { sentence: 'He avoided [to answer] the question.', choices: ['answering', 'answer', 'answered', 'to answering'], answer: 0, why: 'avoid は動名詞を目的語にとる：avoid answering。' },
+      { sentence: 'We hope [seeing] you again soon.', choices: ['to see', 'see', 'seen', 'to seeing'], answer: 0, why: 'hope は不定詞を目的語にとる：hope to see。' },
+      { sentence: 'It is important [learn] a foreign language.', choices: ['to learn', 'learning to', 'learned', 'for learn'], answer: 0, why: '形式主語の構文 It is ～ to …：It is important to learn ～。' },
+      { sentence: 'I’m thinking of [to change] my job.', choices: ['changing', 'change', 'changed', 'to changing'], answer: 0, why: '前置詞 of のあとは動名詞：thinking of changing。' },
+      { sentence: 'She promised [helping] me with my homework.', choices: ['to help', 'help', 'helped', 'to helping'], answer: 0, why: 'promise は不定詞を目的語にとる：promise to help。' },
+      { sentence: 'He finished [to write] the report at midnight.', choices: ['writing', 'write', 'wrote', 'to writing'], answer: 0, why: 'finish は動名詞を目的語にとる：finish writing。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
