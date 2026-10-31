@@ -709,3 +709,11 @@ it('デザイン168：出た子がなかまに5体以上になったら「🎉 �
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('大家族').textContent).toBe(' 🎉 大家族！')
 })
+
+it('デザイン173：ガチャの結果に、出た子の出やすさ（%）が出る', async () => {
+  localStorage.clear()
+  const { baseRate } = await import('./monster')
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('出た子の出やすさ').textContent).toBe(`🎲 この子の出やすさ：${(baseRate(speciesOf('cat')) * 100).toFixed(1)}%`)
+})

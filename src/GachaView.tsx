@@ -618,6 +618,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🆕 はじめての{typeOf(result.species.id).icon}{typeOf(result.species.id).name}！
             </p>
           )}
+          {!result.mystery && (
+            // デザイン173：出た子の出やすさ
+            <p className="gacha-skill" aria-label="出た子の出やすさ">
+              🎲 この子の出やすさ：{(baseRate(result.species) * 100).toFixed(1)}%
+            </p>
+          )}
           {!result.mystery && firstSr && (result.kind.rarity === 'SR' || result.kind.rarity === 'UR') && (
             // デザイン162：今日はじめての SR 以上
             <p className="gacha-new-type gacha-first-sr" role="status">
