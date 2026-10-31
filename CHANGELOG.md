@@ -3312,3 +3312,4 @@
 - 2026-10-31: 文法：入試の正誤問題㉞（私大難関レベル：senior to・preferable to・Scarcely ～ when・Few of・was made to・three times as long as・Twenty miles is・such an）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「相撲の世界」（文化・スポーツ・非制限の which／that の空所）
 - 2026-10-31: デザイン：キャラ図鑑の説明で、生まれたタマゴの名前を 🥚 つきの太字で目立たせた
+- 2026-10-31: 文法：入試の誤文訂正㉘（TOEFL・IELTS の書き言葉⑪：長い主語の中心を見つける・The list of・One of・What の節・動名詞の主語・Every one of）10問

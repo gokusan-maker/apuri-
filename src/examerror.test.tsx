@@ -435,3 +435,10 @@ it('正誤問題㉞：私大難関レベルの単元が10問ある', async () =>
   expect(u.questions).toHaveLength(10)
   expect(u.questions[6].choices[u.questions[6].answer]).toBe('(A) are')
 })
+
+it('誤文訂正㉘：主語のわかりにくい長い文の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-28')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('show')
+})

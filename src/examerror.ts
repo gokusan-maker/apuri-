@@ -1284,6 +1284,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I don\'t know [whom] will come to the party.', choices: ['who', 'whom ever', 'whose', 'which of'], answer: 0, why: 'will come の主語になるので主格の who。' },
     ],
   },
+  {
+    id: 'exam-fix-28',
+    title: '入試の誤文訂正㉘（TOEFL・IELTS の書き言葉⑪：主語のわかりにくい長い文）',
+    points: ['小論文では主語が長くなりがち。of ～・関係代名詞・分詞などの修飾をとりのぞいて「主語の中心」を見つけ、動詞の形を合わせる。動名詞や What の節が主語のときは単数あつかい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The results of the survey conducted last year show a clear trend.', ja: '昨年行われた調査の結果は、はっきりした傾向を示している。（主語の中心は The results）' }],
+    questions: [
+      { sentence: 'The list of items on the shelves [are] very long.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: '主語の中心は The list（単数）。items や shelves にまどわされない：is。' },
+      { sentence: 'The results of the survey conducted last year [shows] a clear trend.', choices: ['show', 'showing', 'has shown', 'is showing'], answer: 0, why: '主語の中心は The results（複数）：show。' },
+      { sentence: 'One of the main reasons for these problems [are] the lack of money.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: '主語の中心は One（単数）：is。' },
+      { sentence: 'The students who have finished the test [is] allowed to leave.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: '主語の中心は The students（複数）：are allowed。' },
+      { sentence: 'What the government needs to do [are] reduce taxes.', choices: ['is', 'are being', 'were', 'have'], answer: 0, why: 'What ～ の名詞節が主語のときは単数あつかい：What the government needs to do is (to) reduce taxes。' },
+      { sentence: 'Learning foreign languages [help] people understand other cultures.', choices: ['helps', 'helping', 'are helping', 'have helped'], answer: 0, why: '動名詞の主語（Learning ～）は単数あつかい：helps。' },
+      { sentence: 'The increase in the prices of food and energy [have] made life harder.', choices: ['has', 'have been', 'are', 'were'], answer: 0, why: '主語の中心は The increase（単数）：has made。' },
+      { sentence: 'Every one of the participants [were] given a certificate.', choices: ['was', 'have', 'are', 'being'], answer: 0, why: 'Every one of ～ は単数あつかい：was given。' },
+      { sentence: 'The man standing by the windows [look] familiar to me.', choices: ['looks', 'looking', 'are looking', 'have looked'], answer: 0, why: '主語の中心は The man（単数）：looks。' },
+      { sentence: 'The quality of the products made in these factories [have] improved.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: '主語の中心は The quality（単数）：has improved。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
