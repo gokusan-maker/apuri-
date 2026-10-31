@@ -21100,6 +21100,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Bathing in the Forest', 'How to Swim in a Lake', 'The History of Japanese Baths', 'Why Cities Are Noisy'], answer: 0, why: '全体として、森林浴とは何か、その効果、現代での意味、身近な取り入れ方を述べている。' },
   },
   {
+    id: 'kyotsu-photography',
+    title: 'Capturing a Moment',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, taking a photograph is one of the easiest things in the world. With a smartphone, we can capture a beautiful sunset, a delicious meal, or a funny moment with friends in less than a second, and share it with people around the world immediately. It is surprising to remember that only about two hundred years ago, no one had ever taken a photograph at all.",
+      "The basic idea behind the camera is very old. People had long known that when light passes through a small hole into a dark room, it forms an upside-down image of the scene outside on the opposite wall. Artists sometimes used this effect to help them draw. However, these images disappeared as soon as the light changed. The challenge was to find a way to make the image last, and this required discovering materials ( A ) changed when they were exposed to light.",
+      "In the nineteenth century, inventors finally succeeded. Early photographs, however, were very different from those we take today. Because the materials reacted slowly to light, people often had to sit completely still for a long time while their picture was taken. This is one reason why people in old photographs rarely smile; holding a smile for so long was difficult. Over the following decades, cameras became smaller and faster, and the invention of film made it possible for ordinary families to take their own pictures.",
+      "The arrival of digital cameras near the end of the twentieth century brought another major change. Instead of using film, digital cameras record images as electronic data. Photographers could see their pictures immediately and delete the ones they did not like, ( B ) made taking photographs cheaper and more convenient. When cameras were added to mobile phones, photography became part of everyday life for billions of people.",
+      "These changes have had both positive and negative effects. Photographs allow us to record important moments, share experiences, and even report events that might otherwise go unnoticed. At the same time, some people worry that taking too many pictures may prevent us from fully enjoying the moment, and that edited images can give a false picture of reality. As photography continues to develop, it is worth thinking about ( C ) we can use this powerful tool wisely.",
+    ],
+    ja: [
+      '今日、写真をとることは世界で最もかんたんなことの1つである。スマートフォンがあれば、美しい夕日やおいしい食事、友だちとのおもしろい瞬間を1秒もかからずにとらえ、すぐに世界中の人と分かち合える。ほんの200年ほど前には、写真をとったことのある人はまったくいなかったことを思い出すと、おどろかされる。',
+      'カメラの背後にある基本的な考えはとても古い。小さな穴を通って光が暗い部屋に入ると、反対側のかべに外の景色の上下さかさまの像ができることを、人々はずっと前から知っていた。画家はときどき、この効果を絵をかく助けに使った。しかし、こうした像は光が変わるとすぐに消えてしまった。課題は像を残す方法を見つけることであり、そのためには、光をあてると変化する材料を発見する必要があった。',
+      '19世紀に、発明家たちはついに成功した。しかし、初期の写真は今日私たちがとるものとはまったくちがっていた。材料が光にゆっくりとしか反応しなかったので、人々は写真をとられているあいだ、長い時間まったく動かずにすわっていなければならないことが多かった。古い写真の人々がめったにほほえんでいない理由の1つはこれである。そんなに長くほほえみつづけるのはむずかしかったのだ。その後の数十年で、カメラは小さく速くなり、フィルムの発明によってふつうの家族が自分で写真をとれるようになった。',
+      '20世紀の終わり近くにデジタルカメラが登場すると、また大きな変化が起きた。デジタルカメラはフィルムを使うかわりに、画像を電子データとして記録する。写真をとる人はすぐに写真を見て、気に入らないものを消すことができ、それによって写真をとることはより安く便利になった。カメラが携帯電話に加えられると、写真は何十億人もの人々の毎日の生活の一部になった。',
+      'こうした変化には、よい影響もわるい影響もあった。写真によって、私たちは大切な瞬間を記録し、経験を分かち合い、そうでなければ気づかれないかもしれないできごとを伝えることさえできる。同時に、写真をとりすぎるとその瞬間を十分に楽しめなくなるかもしれないこと、加工された画像が現実についてまちがったすがたを伝えうることを心配する人もいる。写真が発展しつづける中で、この強力な道具をどのようにかしこく使えるかを考える価値がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 materials を受け、changed の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（すぐ見て消せること）を受け、made の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'think about how ～「どのように～かを考える」。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '光が小さな穴を通ると、さかさまの像ができることは昔から知られていた。', answer: true, why: '第2段落 People had long known that ... it forms an upside-down image。' },
+      { statement: '初期の写真は、すぐにとることができた。', answer: false, why: '第3段落 people often had to sit completely still for a long time。' },
+      { statement: 'デジタルカメラは、画像を電子データとして記録する。', answer: true, why: '第4段落 digital cameras record images as electronic data。' },
+      { statement: '筆者は、写真にはよい影響しかないと述べている。', answer: false, why: '第5段落 These changes have had both positive and negative effects。' },
+    ],
+    qa: [
+      { q: 'Why do people in old photographs rarely smile?', choices: ['Holding a smile for a long time was difficult.', 'Smiling was not allowed.', 'Cameras could not record smiles.', 'People were always sad.'], answer: 0, why: '第3段落 holding a smile for so long was difficult。' },
+      { q: 'What do some people worry about?', choices: ['Edited images can give a false picture of reality.', 'Cameras are too heavy.', 'Photographs cannot be shared.', 'Film is too cheap.'], answer: 0, why: '第5段落 edited images can give a false picture of reality。' },
+    ],
+    gist: [
+      { para: 1, choices: ['カメラの基本的な考えと像を残す課題', '画家の生活', '部屋の作り方', '光の速さ'], answer: 0, why: '第2段落は、小さな穴でできる像と、それを残すための課題を述べている。' },
+      { para: 3, choices: ['デジタルカメラと携帯電話による変化', 'フィルムの作り方', '電子データの歴史', '電話のかけ方'], answer: 0, why: '第4段落は、デジタルカメラの登場と携帯電話のカメラによる変化を述べている。' },
+    ],
+    titleQ: { choices: ['Capturing a Moment', 'How to Paint a Sunset', 'The History of Smartphones', 'Why People Smile'], answer: 0, why: '全体として、写真の歴史（像を残す工夫・初期の写真・デジタル化）と、その影響を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
