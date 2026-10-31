@@ -19755,7 +19755,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['Even so', 'For example', 'As a result', 'In the same way'], answer: 0, why: '前の文で多くのくふうを述べ、「それでも限りがあった」と続けるので Even so「それでも」。' },
       { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容全体を受け、meant の主語になる非制限用法の which。' },
-      { id: 'C', choices: ['what', 'that', 'which', 'whether'], answer: 0, why: 'tell 人 what ～「何が～かを伝える」。うしろの節は主語が欠けているので what（what food is inside）。' },
+      { id: 'C', choices: ['what', 'that', 'whom', 'because'], answer: 0, why: 'tell 人 what ～「どんな～かを伝える」：what food is inside「中にどんな食べ物があるか」。that ではうしろが完全な文にならない。' },
     ],
     tf: [
       { statement: '冷蔵庫がなかったころ、人々は食べ物を長もちさせるくふうをしていた。', answer: true, why: '第2段落 drying, salting, smoking, and pickling。' },
