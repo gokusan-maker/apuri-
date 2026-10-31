@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'mink', name: 'ミンクン', egg: 'かわべのつやつやタマゴ', token: 'ミンク', bigToken: 'ミンクン', color: '#78350f', line: '#1c0a00', rate: 0.02, desc: '川べりにすむミンク。つやつやの毛で水をはじき、泳ぎも木登りもじょうずなよくばりさん。' },
   { id: 'shrew', name: 'トガリン', egg: 'おちばのちくちくタマゴ', token: 'トガ', bigToken: 'トガリン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '落ち葉の下をせわしなく動くトガリネズミ。とがった鼻でにおいをかぎ、いつもいそがしく食べ物をさがしている。' },
   { id: 'marten', name: 'テンテン', egg: 'きのうろのふわふわタマゴ', token: 'テンテ', bigToken: 'テンテン', color: '#facc15', line: '#713f12', rate: 0.02, desc: '森の木の上をすばやくかけまわるテン。冬になると毛が黄色くかがやき、細い枝の上もすいすい進む。' },
   { id: 'lemming', name: 'レミンガ', egg: 'ツンドラのころりタマゴ', token: 'レミ', bigToken: 'レミンガ', color: '#d97706', line: '#451a03', rate: 0.02, desc: '寒い北の草原にすむ小さなレミング。雪の下にトンネルをほって、冬のあいだも元気に動きまわる。' },
