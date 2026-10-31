@@ -19930,6 +19930,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Paying Every Month', 'How to Make a Film', 'The History of Records', 'Why Cars Are Expensive'], answer: 0, why: '全体として、物を持つことから定額で利用することへの変化と、その利点・欠点、かしこい選び方を述べている。' },
   },
   {
+    id: 'kyotsu-animal-play',
+    title: 'Why Animals Play',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Anyone who has watched puppies or kittens knows that young animals love to play. They chase each other, roll on the ground, and pretend to fight without really hurting one another. At first, play may seem like a waste of energy, especially for wild animals that must find food and avoid danger every day. So why do so many animals spend so much time playing?",
+      "One explanation is that play helps young animals practice skills they will need as adults. Young cats, for example, often jump on moving objects, much as they will later catch mice and birds. Young goats and deer run, jump, and suddenly change direction, movements that may help them escape from predators in the future. By practicing in a safe situation, animals can develop strength and coordination ( A ) their lives depend on these skills.",
+      "Play also seems to teach animals how to get along with others. When young wolves or dogs play-fight, they learn how hard they can bite without causing pain. If one animal plays too roughly, the others may stop playing with it, so it learns to control its behavior. Many animals use special signals to show that they are only playing. Dogs, for instance, lower the front of their bodies and raise their tails, ( B ) tells their partners that what follows is not a real attack.",
+      "Interestingly, play is not limited to mammals. Scientists have observed birds such as crows sliding down snowy roofs again and again, and some have reported octopuses pushing objects back and forth in the water. These examples suggest that play may be more widespread in the animal world than people once thought, and that it may be connected to intelligence and curiosity.",
+      "Although scientists still disagree about exactly why animals play, most agree that it is not simply a way to pass the time. Play allows animals to explore, to learn, and to build relationships in a world full of challenges. Perhaps the same is true for humans. When children play freely, they may be learning far more than adults realize, which suggests ( C ) play deserves a place in every childhood.",
+    ],
+    ja: [
+      '子犬や子ネコを見たことがある人ならだれでも、若い動物が遊ぶのが大好きだと知っている。おたがいを追いかけ、地面をころがり、本当には相手をけがさせずに戦うふりをする。はじめは、遊びはエネルギーのむだに思えるかもしれない。毎日えさを見つけ、危険をさけなければならない野生の動物ならなおさらである。では、なぜこれほど多くの動物が、これほど長い時間遊ぶのだろうか。',
+      '1つの説明は、遊びは若い動物がおとなになって必要になる技能を練習するのに役立つというものである。たとえば若いネコは、のちにネズミや鳥をつかまえるのと同じように、動くものによくとびかかる。若いヤギやシカは走り、とびはね、急に向きを変えるが、そうした動きは将来、捕食者からにげるのに役立つかもしれない。安全な状況で練習することで、動物は、命がこうした技能にかかるようになる前に、力と体の動きをととのえる力をのばすことができる。',
+      '遊びはまた、ほかの仲間とうまくやっていく方法を動物に教えているようである。若いオオカミや犬がじゃれ合いのけんかをするとき、どれくらい強くかめば痛みをあたえないかを学ぶ。1ぴきが乱暴に遊びすぎると、ほかの仲間はそのものと遊ぶのをやめることがあるので、そのものは自分のふるまいをおさえることを学ぶ。多くの動物は、ただ遊んでいるだけだと示すための特別な合図を使う。たとえば犬は、体の前を低くしてしっぽを上げるが、それは、このあとに続くのは本当の攻撃ではないと相手に伝えている。',
+      '興味深いことに、遊びはほ乳類だけにかぎらない。科学者は、カラスのような鳥が雪のつもった屋根を何度もすべりおりるのを観察しており、タコが水の中で物を行ったり来たりおすのを報告した人もいる。こうした例は、遊びが動物の世界でかつて考えられていたより広く見られること、そして知能や好奇心とつながっているかもしれないことを示している。',
+      '動物がなぜ遊ぶのかについて、科学者のあいだではまだ意見が分かれているが、ほとんどの人は、それがただ時間をすごす方法ではないという点で一致している。遊びによって、動物は課題にみちた世界で探検し、学び、関係をきずくことができる。人間にとっても同じことが言えるかもしれない。子どもが自由に遊ぶとき、おとなが気づいているよりはるかに多くのことを学んでいるのかもしれず、それは遊びがすべての子ども時代に場所をもつべきだということを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'unless', 'because', 'although'], answer: 0, why: '「命がこうした技能にかかるようになる前に」練習しておく、という時の関係なので before。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'that'], answer: 0, why: 'コンマのあとで前の動作全体を受け、tells の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'suggest that ～「～ということを示す」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '若いネコが動くものにとびかかるのは、のちの狩りの練習になると考えられている。', answer: true, why: '第2段落 Young cats ... often jump on moving objects, much as they will later catch mice and birds。' },
+      { statement: '乱暴に遊びすぎる動物は、ほかの仲間からもっと遊びにさそわれる。', answer: false, why: '第3段落 the others may stop playing with it。' },
+      { statement: '遊ぶのはほ乳類だけである。', answer: false, why: '第4段落 play is not limited to mammals。' },
+      { statement: '科学者のあいだでは、動物が遊ぶ理由についてまだ意見が分かれている。', answer: true, why: '第5段落 scientists still disagree about exactly why animals play。' },
+    ],
+    qa: [
+      { q: 'What do young wolves or dogs learn when they play-fight?', choices: ['How hard they can bite without causing pain.', 'How to find water.', 'How to build nests.', 'How to climb trees.'], answer: 0, why: '第3段落 they learn how hard they can bite without causing pain。' },
+      { q: 'What do the examples of crows and octopuses suggest?', choices: ['Play may be more widespread than people once thought.', 'Only birds can play in the snow.', 'Octopuses are dangerous.', 'Play is a waste of energy.'], answer: 0, why: '第4段落 These examples suggest that play may be more widespread in the animal world than people once thought。' },
+    ],
+    gist: [
+      { para: 1, choices: ['遊びはおとなになって必要な技能の練習になること', 'ネコの飼い方', 'シカの食べ物', '捕食者の種類'], answer: 0, why: '第2段落は、狩りやにげる動きの練習としての遊びを述べている。' },
+      { para: 2, choices: ['遊びが仲間とうまくやる方法を教えること', '犬のしつけの方法', 'オオカミの数の変化', 'しっぽの長さ'], answer: 0, why: '第3段落は、かむ強さの加減、ふるまいのコントロール、遊びの合図を述べている。' },
+    ],
+    titleQ: { choices: ['Why Animals Play', 'How to Train a Puppy', 'The Life of Octopuses', 'Why Crows Like Snow'], answer: 0, why: '全体として、動物が遊ぶ理由（技能の練習・社会性・知能）と、人間への示唆を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
