@@ -2502,6 +2502,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'A careful [examine] of the data revealed an error.', choices: ['examination', 'examining of', 'examined', 'to examine'], answer: 0, why: '形容詞 careful に修飾される主語なので名詞 examination「調査」。' },
     ],
   },
+  {
+    id: 'exam-fix-57',
+    title: '入試の誤文訂正〈57〉（共通テストレベル：助動詞の総まとめ）',
+    points: ['had better not ＋原形、can’t be（～のはずがない）、must have ＋過去分詞（～したにちがいない）、should have ＋過去分詞（～すべきだったのに）、don’t have to（～しなくてよい）と mustn’t（～してはいけない）、used to ＋原形、may have ＋過去分詞、need not ＋原形、Shall I ～?、would rather ＋原形など、助動詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She looks tired. She must have stayed up late last night.', ja: '彼女はつかれているようだ。昨夜おそくまで起きていたにちがいない。' }],
+    questions: [
+      { sentence: 'You [had better not to] go out tonight.', choices: ['had better not', 'had not better', 'had better not going', 'would better not'], answer: 0, why: 'had better の否定は had better not ＋原形。to はいらない。' },
+      { sentence: 'He [must] be at home; I saw him leave the house just now.', choices: ['can’t', 'mustn’t', 'doesn’t have to', 'won’t to'], answer: 0, why: '「家にいるはずがない」という強い否定の推量は can’t be。mustn’t は「～してはいけない」（禁止）。' },
+      { sentence: 'She looks tired. She [must stay] up late last night.', choices: ['must have stayed', 'must stayed', 'must staying', 'should stay'], answer: 0, why: '過去のことを「～したにちがいない」と推量するのは must have ＋過去分詞。' },
+      { sentence: 'You [should tell] me about it yesterday.', choices: ['should have told', 'should told', 'must tell', 'had told'], answer: 0, why: '過去に「～すべきだったのに（しなかった）」は should have ＋過去分詞。' },
+      { sentence: 'You [mustn’t] come tomorrow if you are busy; it’s not necessary.', choices: ['don’t have to', 'can’t', 'must', 'shouldn’t to'], answer: 0, why: '「来なくてもよい（必要がない）」は don’t have to。mustn’t は「来てはいけない」。' },
+      { sentence: 'I [use to] live in Osaka when I was a child.', choices: ['used to', 'was used to', 'am used to', 'used'], answer: 0, why: '「昔は～したものだ」は used to ＋原形。be used to -ing は「～になれている」。' },
+      { sentence: 'He [may has] gone home already.', choices: ['may have', 'may had', 'may having', 'may is'], answer: 0, why: '助動詞のあとは原形：may have gone「帰ったかもしれない」。' },
+      { sentence: 'You [need not to] worry about the test.', choices: ['need not', 'need not worrying', 'do not need', 'needn’t to'], answer: 0, why: '助動詞の need の否定は need not ＋原形。to はいらない。' },
+      { sentence: 'It’s late. [Shall I to] call a taxi for you?', choices: ['Shall I', 'Shall I will', 'Should I to', 'Will I to'], answer: 0, why: '「（私が）～しましょうか」は Shall I ＋原形 ～?。' },
+      { sentence: 'I would rather [to stay] home tonight.', choices: ['stay', 'staying', 'stayed', 'to staying'], answer: 0, why: 'would rather ＋原形「むしろ～したい」。to はいらない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

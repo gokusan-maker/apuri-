@@ -841,3 +841,10 @@ it('正誤問題〈63〉：名詞構文・無生物主語・強調の単元が10
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) died')
 })
+
+it('誤文訂正〈57〉：助動詞の総まとめの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-57')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('had better not')
+})

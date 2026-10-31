@@ -3492,3 +3492,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈63〉（医学部・難関大レベル⑥：名詞構文 death・discovery・arrival、make 人 原形、prevent from、make O 形容詞、did see、a good speaker、the very、冠詞と数）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「かくれた庭師（ミミズ）」（科学・生き物・関係代名詞 that／by -ing／副詞 extremely の空所）
 - 2026-10-31: キャラクター：アマツバメの「アマツバン」を追加（とくぎ：はやてガード）
+- 2026-10-31: 文法：入試の誤文訂正〈57〉（共通テストレベル：had better not・can't be・must have ＋過去分詞・should have ＋過去分詞・don't have to・used to・may have・need not・Shall I・would rather）10問
