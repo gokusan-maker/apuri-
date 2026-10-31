@@ -19618,6 +19618,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living with Volcanoes', 'How to Climb a Mountain', 'The Best Hot Springs in Japan', 'Why Rocks Are Hard'], answer: 0, why: '全体として、火山の力と影響、めぐみ、予測と備えを述べ、火山とともに安全にくらすことを説いている。' },
   },
   {
+    id: 'kyotsu-idioms',
+    title: 'More Than the Sum of Words',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Imagine that a friend tells you that a test was “a piece of cake.” If you understood only the meaning of each word, you might wonder what cake has to do with a test. In fact, the expression means that the test was very easy. Phrases like this, whose meaning cannot be guessed from the individual words, are called idioms. Every language has thousands of them, and they are one of the most difficult parts of learning a new language.",
+      "Idioms are difficult because they often depend on images that are familiar to people of a particular culture. In English, someone who is about to speak in front of a group might say that they have “butterflies in their stomach,” meaning that they feel nervous. In Japanese, a person who is extremely busy may say that they would even borrow a cat’s paws. Learners ( A ) have never heard these expressions may understand every word and still miss the meaning completely.",
+      "At the same time, idioms can tell us a great deal about the history and values of the people who use them. Many English idioms come from the sea, such as “to be in the same boat,” which means to share the same difficult situation. This reflects the long history of sailing and trade in English-speaking countries. Similarly, many Japanese expressions are related to rice or the seasons, showing ( B ) important farming and nature have been in Japanese life.",
+      "Interestingly, some idioms in different languages are surprisingly similar. English speakers say “kill two birds with one stone” when one action achieves two goals, and Japanese has a four-character expression with almost the same image of one stone and two birds. Such similarities suggest that people around the world often notice the same things in daily life and describe them in similar ways, even when their cultures are very different.",
+      "For language learners, the best way to master idioms is not to memorize long lists of them. It is more effective to learn each idiom in context, paying attention to the situation in which it is used and to the feelings it expresses. It is also important to remember ( C ) some idioms sound old-fashioned or too casual in certain situations. By learning idioms carefully, students can not only speak more naturally but also gain a deeper understanding of another culture.",
+    ],
+    ja: [
+      '友だちが、テストは「ケーキのひと切れ」だったと言ったと想像してほしい。それぞれの単語の意味しかわからなければ、ケーキとテストに何の関係があるのかとふしぎに思うかもしれない。実は、この表現はテストがとてもかんたんだったという意味である。このように、ひとつひとつの単語から意味が推測できない語句はイディオム（慣用句）とよばれる。どの言語にもイディオムは何千もあり、新しい言語を学ぶときに最もむずかしい部分の1つである。',
+      'イディオムがむずかしいのは、ある文化の人々にとってなじみのあるイメージに頼っていることが多いからである。英語では、人前で話そうとしている人が「おなかの中にチョウがいる」と言うことがあり、これは緊張しているという意味である。日本語では、とてもいそがしい人が「猫の手も借りたい」と言うことがある。こうした表現を聞いたことのない学習者は、すべての単語がわかっても、意味をまったく取りちがえることがある。',
+      '同時に、イディオムはそれを使う人々の歴史や価値観について多くのことを教えてくれる。英語のイディオムの多くは海に由来しており、たとえば「同じ船に乗っている」は同じ困難な状況をともにするという意味である。これは英語を話す国々で航海と貿易の歴史が長いことを反映している。同じように、日本語の多くの表現は米や季節に関係しており、日本の生活で農業や自然がどれほど大切だったかを示している。',
+      '興味深いことに、ちがう言語のイディオムの中には、おどろくほど似ているものもある。英語を話す人は、1つの行動で2つの目的をはたすとき「1つの石で2羽の鳥を殺す」と言い、日本語にもほとんど同じ「1つの石と2羽の鳥」のイメージをもつ四字熟語（一石二鳥）がある。こうした共通点は、世界中の人々が、文化がまったくちがっていても、日々の生活の中で同じことに気づき、それを似た方法で表すことが多いことを示している。',
+      '言語の学習者にとって、イディオムを身につける最もよい方法は、長いリストを暗記することではない。それぞれのイディオムを文脈の中で、それが使われる場面や表す気持ちに注意しながら学ぶほうが効果的である。また、イディオムの中には、場面によっては古くさく聞こえたり、くだけすぎていたりするものがあることを覚えておくことも大切である。イディオムをていねいに学ぶことで、学生はより自然に話せるようになるだけでなく、別の文化をより深く理解することもできる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は Learners（人）で、have never heard の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋形容詞 important ＋主語＋動詞で「どれほど大切だったか」。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'remember that ～「～ということを覚えておく」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '“a piece of cake” は「とてもかんたん」という意味である。', answer: true, why: '第1段落 the expression means that the test was very easy。' },
+      { statement: 'イディオムは、単語の意味がわかればかならず理解できる。', answer: false, why: '第2段落 may understand every word and still miss the meaning completely。' },
+      { statement: '英語のイディオムの多くは海に由来している。', answer: true, why: '第3段落 Many English idioms come from the sea。' },
+      { statement: '筆者は、イディオムを長いリストで暗記するのがいちばんよいと述べている。', answer: false, why: '第5段落 the best way to master idioms is not to memorize long lists of them。' },
+    ],
+    qa: [
+      { q: 'What does “to be in the same boat” mean?', choices: ['To share the same difficult situation.', 'To travel by ship together.', 'To work as a sailor.', 'To buy a new boat.'], answer: 0, why: '第3段落 which means to share the same difficult situation。' },
+      { q: 'According to the author, what do similar idioms in different languages suggest?', choices: ['People often notice the same things in daily life.', 'All languages come from English.', 'Idioms are never useful.', 'Cultures never change.'], answer: 0, why: '第4段落 people around the world often notice the same things in daily life。' },
+    ],
+    gist: [
+      { para: 1, choices: ['イディオムが文化のイメージに頼るためにむずかしいこと', '日本の猫の歴史', '人前で話すコツ', 'チョウの育て方'], answer: 0, why: '第2段落は、イディオムが文化になじみのあるイメージに頼るため、学習者にむずかしいことを述べている。' },
+      { para: 4, choices: ['イディオムの上手な学び方', 'イディオムの数の数え方', '古いことばの歴史', '辞書の作り方'], answer: 0, why: '第5段落は、文脈の中で学び、場面に合うかに注意するという学び方を述べている。' },
+    ],
+    titleQ: { choices: ['More Than the Sum of Words', 'How to Bake a Cake', 'The History of Sailing', 'Why Cats Are Busy'], answer: 0, why: '全体として、単語の意味を足しただけではわからないイディオムのむずかしさと、文化を映す面、学び方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
