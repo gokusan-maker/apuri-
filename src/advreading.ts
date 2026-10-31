@@ -21412,6 +21412,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Giving Time, Gaining More', 'How to Clean a Beach', 'The History of Disasters', 'Why People Retire'], answer: 0, why: '全体として、ボランティアがほかの人だけでなく自分自身にももたらすめぐみと、始め方を述べている。' },
   },
   {
+    id: 'kyotsu-earthworms',
+    title: 'The Hidden Gardeners',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Few animals receive less attention than the earthworm. Most people notice earthworms only after heavy rain, when they appear on sidewalks, and many find them unpleasant. Yet these simple creatures, which have no eyes, legs, or bones, play an essential role in keeping the soil healthy. Without them, many of the plants we depend on for food would grow far less well.",
+      "Earthworms spend most of their lives underground, eating soil and the remains of dead leaves and plants. As the material passes through their bodies, it is broken down into smaller pieces and mixed with substances ( A ) make it richer in nutrients. The worms then leave this material behind as small piles called castings, which act as a natural fertilizer for plants. In this way, earthworms help to recycle nutrients and return them to the soil.",
+      "Earthworms also improve the structure of the soil. As they move, they dig countless tiny tunnels. These tunnels allow air and water to enter the ground more easily, so that plant roots can breathe and absorb water. They also help rainwater to soak into the soil instead of running off the surface, which can reduce erosion and flooding. A field with many earthworms is often much easier for roots to grow through than one with few.",
+      "The importance of earthworms was recognized long ago. In the nineteenth century, the naturalist Charles Darwin spent many years studying them and wrote an entire book about their effect on the soil. He concluded that these small animals had played a major role in shaping the land over long periods of time. At the time, many people were surprised that such a famous scientist would take worms so seriously.",
+      "Today, however, earthworms face several threats. Heavy use of certain chemicals in farming, as well as soil that is packed down by large machines, can reduce their numbers. Some farmers are now changing their methods to protect them, for example by disturbing the soil less and leaving plant remains on the fields. Gardeners can help too, ( B ) adding compost and avoiding unnecessary chemicals. The humble earthworm reminds us that even the smallest and least noticed living things can be ( C ) important to the health of our planet.",
+    ],
+    ja: [
+      'ミミズほど注目されない動物はほとんどいない。ほとんどの人は大雨のあと、歩道に出てきたときにだけミミズに気づき、気味が悪いと思う人も多い。しかし、目も足も骨もないこの単純な生き物は、土を健康にたもつのに欠かせない役割をはたしている。ミミズがいなければ、私たちが食べ物としてたよっている植物の多くは、ずっと育ちが悪くなるだろう。',
+      'ミミズは一生のほとんどを地下ですごし、土やかれた葉や植物の残りを食べている。それらがミミズの体を通るあいだに、小さく分解され、栄養をより豊かにする物質とまぜ合わされる。そしてミミズはこれをふんとよばれる小さな山として残し、それは植物の天然の肥料となる。このようにして、ミミズは栄養をリサイクルし、土にもどすのを助けている。',
+      'ミミズは土の構造もよくする。動きながら、数えきれない小さなトンネルをほる。こうしたトンネルによって空気や水が地中に入りやすくなり、植物の根が呼吸し、水を吸収できるようになる。また、雨水が表面を流れてしまうのではなく土にしみこむのを助け、それは土が流されることや洪水をへらすことができる。ミミズの多い畑は、少ない畑よりも根がずっと育ちやすいことが多い。',
+      'ミミズの大切さは昔から知られていた。19世紀には、博物学者のチャールズ・ダーウィンが何年もかけてミミズを研究し、土へのミミズの影響について1冊まるごとの本を書いた。彼は、この小さな動物が長い時間をかけて土地の形をつくるのに大きな役割をはたしてきたと結論づけた。当時、多くの人は、そんなに有名な科学者がミミズをそれほど真剣にあつかうことにおどろいた。',
+      'しかし今日、ミミズはいくつかの脅威にさらされている。農業である種の薬を多く使うことや、大きな機械におしかためられた土が、ミミズの数をへらすことがある。今では、たとえば土をあまりかきまぜず、植物の残りを畑に残すなど、ミミズを守るために方法を変えている農家もいる。庭仕事をする人も、たい肥を加えたり、いらない薬をさけたりすることで手助けできる。目立たないミミズは、最も小さく最も気づかれない生き物でさえ、地球の健康にとってとても大切でありうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 substances を受け、make の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['by', 'for', 'with', 'to'], answer: 0, why: '「～することによって」と手段をあらわすのは by ＋動名詞：by adding compost。' },
+      { id: 'C', choices: ['extremely', 'extreme', 'extremes', 'extremity'], answer: 0, why: '形容詞 important を修飾するのは副詞 extremely「とても」。' },
+    ],
+    tf: [
+      { statement: 'ミミズには目も足も骨もない。', answer: true, why: '第1段落 which have no eyes, legs, or bones。' },
+      { statement: 'ミミズのふんは、植物の天然の肥料になる。', answer: true, why: '第2段落 castings, which act as a natural fertilizer for plants。' },
+      { statement: 'ミミズのトンネルは、水が土にしみこむのをさまたげる。', answer: false, why: '第3段落 They also help rainwater to soak into the soil。' },
+      { statement: 'ダーウィンはミミズにほとんど関心がなかった。', answer: false, why: '第4段落 Charles Darwin spent many years studying them and wrote an entire book。' },
+    ],
+    qa: [
+      { q: 'How do earthworm tunnels help plants?', choices: ['They let air and water enter the ground more easily.', 'They keep the soil dry.', 'They stop roots from growing.', 'They make the soil harder.'], answer: 0, why: '第3段落 These tunnels allow air and water to enter the ground more easily。' },
+      { q: 'What can reduce the number of earthworms?', choices: ['Heavy use of certain chemicals and soil packed down by machines.', 'Adding compost.', 'Leaving plant remains on fields.', 'Heavy rain.'], answer: 0, why: '第5段落 Heavy use of certain chemicals in farming, as well as soil that is packed down by large machines。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ミミズが栄養をリサイクルするはたらき', '葉の色の変化', '肥料の値段', '雨のふり方'], answer: 0, why: '第2段落は、ミミズが土や葉を分解し、ふんとして肥料を残すことを述べている。' },
+      { para: 3, choices: ['ミミズの大切さを示したダーウィンの研究', 'ダーウィンの旅行', '19世紀の農業', '本の書き方'], answer: 0, why: '第4段落は、ダーウィンがミミズを研究し、その大きな役割を結論づけたことを述べている。' },
+    ],
+    titleQ: { choices: ['The Hidden Gardeners', 'How to Catch Fish', 'The Life of Charles Darwin', 'Why It Rains'], answer: 0, why: '全体として、ミミズが土を健康にたもつはたらきと、その大切さ、守るための取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
