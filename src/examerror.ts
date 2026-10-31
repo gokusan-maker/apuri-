@@ -482,6 +482,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'It was (A) careless (B) for you (C) to leave (D) the door open.', choices: ['(A) careless', '(B) for you', '(C) to leave', '(D) the door open'], answer: 1, why: 'careless のように人の性質を表す形容詞では of 人：It was careless of you to ～。' },
     ],
   },
+  {
+    id: 'exam-error-tense2',
+    title: '入試の正誤問題㉒（時制の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'ago と現在完了、未来完了（by next year）、時制の一致の過去完了、know を進行形にしない、時や条件の節の現在形、recently と現在完了に注目する。',
+    ],
+    examples: [
+      { en: 'By next year, I will have studied English for five years.', ja: '来年で英語を5年間勉強したことになる。（未来完了）' },
+      { en: 'I will tell him when he comes back.', ja: '彼がもどったら伝えます。（時の節は現在形）' },
+    ],
+    questions: [
+      { sentence: 'I (A) have finished (B) my homework (C) two hours (D) ago.', choices: ['(A) have finished', '(B) my homework', '(C) two hours', '(D) ago'], answer: 0, why: 'ago は過去をはっきり表すので現在完了は使えない：I finished。' },
+      { sentence: 'When I (A) was a child, I (B) have visited (C) my grandparents (D) every summer.', choices: ['(A) was a child, I', '(B) have visited', '(C) my grandparents', '(D) every summer'], answer: 1, why: '子どものころという過去のことなので過去形：I visited。' },
+      { sentence: 'By next year, I (A) will (B) study (C) English (D) for five years.', choices: ['(A) will', '(B) study', '(C) English', '(D) for five years'], answer: 1, why: '未来のある時点までの継続は未来完了：will have studied（または will have been studying）。' },
+      { sentence: 'He told me (A) that (B) he (C) has already eaten (D) lunch.', choices: ['(A) that', '(B) he', '(C) has already eaten', '(D) lunch'], answer: 2, why: 'told（過去）より前のことなので過去完了：he had already eaten。' },
+      { sentence: 'I (A) am knowing (B) him (C) for (D) a long time.', choices: ['(A) am knowing', '(B) him', '(C) for', '(D) a long time'], answer: 0, why: 'know は進行形にしない。for a long time「ずっと」は現在完了：I have known him。' },
+      { sentence: 'The train (A) had (B) already (C) left when we (D) will arrive.', choices: ['(A) had', '(B) already', '(C) left when we', '(D) will arrive'], answer: 3, why: '列車が出たのは着いたときより前の過去なので、着いたのも過去：when we arrived。' },
+      { sentence: 'If it (A) will be (B) sunny (C) tomorrow, we (D) will go hiking.', choices: ['(A) will be', '(B) sunny', '(C) tomorrow, we', '(D) will go hiking'], answer: 0, why: '条件を表す if の節では未来のことも現在形：If it is sunny。' },
+      { sentence: 'I (A) was watching TV (B) when (C) the phone (D) has rung.', choices: ['(A) was watching TV', '(B) when', '(C) the phone', '(D) has rung'], answer: 3, why: '過去のあるときに起きたことは過去形：when the phone rang。' },
+      { sentence: 'Recently (A) I (B) am reading (C) many books (D) about history.', choices: ['(A) I', '(B) am reading', '(C) many books', '(D) about history'], answer: 1, why: 'recently「最近（ずっと）」は現在完了（進行形）とともに使う：I have been reading。' },
+      { sentence: 'I (A) will (B) tell him (C) when he (D) will come back.', choices: ['(A) will', '(B) tell him', '(C) when he', '(D) will come back'], answer: 3, why: '時を表す when の節では未来のことも現在形：when he comes back。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
