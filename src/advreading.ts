@@ -19033,6 +19033,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living Longer Together', 'How to Build a Robot', 'The History of Pensions', 'Why Babies Are Born'], answer: 0, why: '全体として、日本の高齢化の原因・課題・年配の人の力・技術の役割・世界への教訓を述べている。' },
   },
   {
+    id: 'kyotsu-x-rays',
+    title: 'Seeing Through Things',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "If you have ever broken a bone or visited a dentist, you have probably had an X-ray taken. Today, X-rays are such an ordinary part of medicine that it is easy to forget how astonishing they once seemed. When they were first discovered at the end of the nineteenth century, the idea that people could see inside the human body without cutting it open seemed almost like magic.",
+      "X-rays were discovered in 1895 by Wilhelm Röntgen, a German physicist. He was experimenting with an electrical tube in a dark room when he noticed that a nearby screen had begun to glow, even though the tube was covered with black paper. He realised that some unknown kind of ray was passing through the paper and reaching the screen. Because he did not know what the rays were, he called them “X” rays, using the letter ( A ) is often used for something unknown.",
+      "Röntgen soon found that the rays could pass through many materials, including wood and human skin, but were blocked by denser materials such as metal and bone. One of the first images he made showed the bones of his wife's hand, along with the ring she was wearing. News of the discovery spread quickly around the world, and within months doctors were using X-rays to find broken bones and objects that had been swallowed. In 1901, Röntgen received the first Nobel Prize in Physics for his work.",
+      "At first, however, people did not understand that X-rays could be dangerous. Some early researchers and doctors who worked with them every day suffered serious burns and other injuries. Over time, scientists learned that too much exposure could damage the body, ( B ) led to safety rules, such as protective clothing and limits on how often people should be X-rayed.",
+      "Today, X-ray technology is used not only in hospitals but also at airports to check luggage, in factories to find hidden flaws in products, and by scientists to study the structure of materials. The story of X-rays shows how an unexpected observation, followed by careful investigation, can lead to a discovery ( C ) changes the world, and how new technology must also be used with care.",
+    ],
+    ja: [
+      '骨を折ったり歯医者に行ったりしたことがあれば、たぶんレントゲン写真をとったことがあるだろう。今日、X線は医療のとてもありふれた一部なので、それがかつてどれほどおどろくべきものに思えたかを忘れがちである。19世紀の終わりにはじめて発見されたとき、切り開かずに人の体の中を見られるという考えは、ほとんど魔法のように思えた。',
+      'X線は1895年、ドイツの物理学者ヴィルヘルム・レントゲンによって発見された。彼が暗い部屋で電気の管を使って実験していると、管が黒い紙でおおわれていたのに、近くのスクリーンが光りはじめたことに気づいた。彼は、何か知られていない種類の光線が紙を通りぬけ、スクリーンにとどいているのだとわかった。その光線が何なのかわからなかったので、彼は、わからないものによく使われる文字を使って、それを「X」線とよんだ。',
+      'レントゲンはまもなく、その光線が木や人の皮ふなど多くの物を通りぬけるが、金属や骨のような密度の高い物にはさえぎられることを発見した。彼が作った最初の画像の一つは、妻の手の骨を、はめていた指輪といっしょにうつしたものだった。発見の知らせはすぐに世界中に広まり、数か月のうちに医師たちはX線を使って骨折や飲みこまれた物を見つけるようになった。1901年、レントゲンはこの業績で最初のノーベル物理学賞を受けた。',
+      'しかし最初は、人々はX線が危険になりうることを理解していなかった。毎日X線をあつかっていた初期の研究者や医師の中には、ひどいやけどやほかのけがを負った人もいた。時がたつにつれ、科学者はあびすぎると体を傷つけうることを学び、そのことが、身を守る服や、X線をとる回数の制限などの安全のきまりにつながった。',
+      '今日、X線の技術は病院だけでなく、空港で荷物を調べたり、工場で製品のかくれた欠陥を見つけたり、科学者が物質のつくりを研究したりするのにも使われている。X線の物語は、思いがけない観察とそれに続く注意深い調査が、世界を変える発見につながりうること、そして新しい技術は注意して使わなければならないことを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the letter を受け、うしろの is often used の主語になるので主格の関係代名詞 that。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（あびすぎると体を傷つけうると学んだこと）を受け、led の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a discovery を受け、うしろの changes の主語になるので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'X線は1895年にレントゲンによって発見された。', answer: true, why: '第2段落 X-rays were discovered in 1895 by Wilhelm Röntgen。' },
+      { statement: 'X線は金属や骨も、木と同じようにかんたんに通りぬける。', answer: false, why: '第3段落 were blocked by denser materials such as metal and bone。' },
+      { statement: 'レントゲンは最初のノーベル物理学賞を受けた。', answer: true, why: '第3段落 Röntgen received the first Nobel Prize in Physics。' },
+      { statement: '初期の研究者は、はじめからX線の危険をよく知っていた。', answer: false, why: '第4段落 At first, however, people did not understand that X-rays could be dangerous。' },
+    ],
+    qa: [
+      { q: 'What made Röntgen realise that an unknown ray existed?', choices: ['A nearby screen began to glow although the tube was covered.', 'His wife told him about it.', 'He read about it in a book.', 'The tube exploded.'], answer: 0, why: '第2段落 he noticed that a nearby screen had begun to glow, even though the tube was covered with black paper。' },
+      { q: 'Which is NOT mentioned as a modern use of X-ray technology?', choices: ['Cooking food quickly.', 'Checking luggage at airports.', 'Finding flaws in products.', 'Studying the structure of materials.'], answer: 0, why: '第5段落に料理の話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['X線の性質と医療での利用の広まり', '指輪の作り方', '新聞の歴史', 'ノーベル賞の選び方'], answer: 0, why: '第3段落は、X線が通る物と通らない物、最初の画像、医療への急速な広まりを述べている。' },
+      { para: 3, choices: ['X線の危険と安全のきまり', 'やけどの治し方', '服の選び方', '研究所の建て方'], answer: 0, why: '第4段落は、初期のけがからX線の危険がわかり、安全のきまりができたことを述べている。' },
+    ],
+    titleQ: { choices: ['Seeing Through Things', 'How to Fix a Broken Bone', 'The History of Germany', 'Why Airports Are Busy'], answer: 0, why: '全体として、X線の発見、性質、危険、今日の利用を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
