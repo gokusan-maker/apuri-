@@ -19852,6 +19852,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Food in a Sealed Box', 'How to Become a Cook', 'The History of Sailing Ships', 'Why Bacteria Are Useful'], answer: 0, why: '全体として、食べ物を保存する問題からかんづめが生まれ、広まった歴史を述べている。' },
   },
   {
+    id: 'kyotsu-apologies',
+    title: 'The Art of Saying Sorry',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Everyone makes mistakes: we forget a friend’s birthday, say something unkind when we are tired, or arrive late for an important meeting. When this happens, one of the most powerful things we can do is to apologize. A sincere apology can repair a damaged relationship, while a poor apology, or no apology at all, can make the situation even worse.",
+      "Researchers who study apologies have found that effective ones usually contain several elements. First, the person admits clearly what they did wrong, rather than speaking in vague terms. Second, they take responsibility instead of blaming others or making excuses. Third, they show that they understand how the other person feels. Finally, they offer to make things right, ( A ) by fixing the problem or by promising to behave differently in the future.",
+      "Many apologies fail because they leave out one of these elements. For example, a person might say, “I’m sorry if you were upset.” Although this sounds like an apology, it actually suggests that the problem lies in the other person’s feelings, not in the speaker’s action. Similarly, an apology followed immediately by “but” often turns into an excuse, and listeners tend to notice these signs and may feel ( B ) the speaker is not truly sorry.",
+      "The way people apologize also differs from culture to culture. In Japan, for instance, the word sumimasen is used not only to apologize but also to thank someone or to get a person’s attention. Because apologies are so common in daily conversation, they can help to keep relationships smooth, whereas in some other cultures, people may apologize less often, and an apology may be seen as a more serious admission of fault. Understanding these differences can help prevent misunderstandings between people from different backgrounds.",
+      "Apologizing is not always easy, because it requires us to admit that we were wrong, which can make us feel embarrassed or weak. Yet studies suggest that people who apologize sincerely are often trusted more, not less. An apology shows that we care about the other person and about the relationship, and in the end, learning ( C ) to apologize well may be one of the most useful social skills a person can develop.",
+    ],
+    ja: [
+      'だれでもまちがいをする。友だちの誕生日をわすれたり、つかれているときに意地の悪いことを言ったり、大事な会議におくれたりする。そうしたとき、私たちにできる最も力のあることの1つは、あやまることである。心からの謝罪はこわれた関係を修復できるが、へたな謝罪や、まったく謝罪しないことは、状況をさらに悪くすることがある。',
+      '謝罪を研究している人々は、効果的な謝罪にはふつういくつかの要素がふくまれていることを見いだした。第一に、あいまいな言い方ではなく、自分が何をまちがえたのかをはっきりみとめる。第二に、ほかの人をせめたり言いわけをしたりせず、責任を引き受ける。第三に、相手がどう感じているかを理解していることを示す。最後に、問題を直すか、これからはちがうふるまいをすると約束するかによって、つぐなうことを申し出る。',
+      '多くの謝罪がうまくいかないのは、これらの要素の1つが欠けているからである。たとえば、「もし気分を悪くしたならごめんなさい」と言う人がいるかもしれない。これは謝罪のように聞こえるが、実は問題は話し手の行動ではなく相手の気持ちにあるとほのめかしている。同じように、すぐあとに「でも」が続く謝罪は、しばしば言いわけに変わってしまう。聞き手はこうした合図に気づきやすく、話し手は本当には悪いと思っていないと感じるかもしれない。',
+      'あやまり方は文化によってもちがう。たとえば日本では、「すみません」ということばは、あやまるときだけでなく、人にお礼を言ったり、人の注意を引いたりするときにも使われる。謝罪が日々の会話でとてもよく使われるので、関係をなめらかにたもつのに役立つことがある。ほかの文化では、人々があやまる回数はもっと少なく、謝罪はあやまちをみとめる、より重いことと見られるかもしれない。こうしたちがいを理解することは、ちがう背景をもつ人々のあいだの誤解をふせぐのに役立つ。',
+      'あやまることはいつもかんたんではない。自分がまちがっていたとみとめなければならず、はずかしく感じたり、弱く感じたりすることがある。しかし、心からあやまる人は、信頼されなくなるどころか、より信頼されることが多いと研究は示している。謝罪は、相手と関係を大切に思っていることを示す。結局のところ、上手にあやまる方法を学ぶことは、人が身につけられる最も役に立つ社会的な力の1つかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['either', 'both', 'neither', 'not only'], answer: 0, why: 'either A or B「A か B のどちらか」：either by fixing the problem or by promising ～。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'feel that ～「～だと感じる」。うしろは完全な文なので接続詞 that。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'why'], answer: 0, why: 'learn how to ～「～のしかたを学ぶ」：how to apologize well。' },
+    ],
+    tf: [
+      { statement: '効果的な謝罪では、何をまちがえたのかをはっきりみとめる。', answer: true, why: '第2段落 the person admits clearly what they did wrong。' },
+      { statement: '「もし気分を悪くしたならごめんなさい」は、話し手の行動に問題があるとみとめる言い方である。', answer: false, why: '第3段落 it actually suggests that the problem lies in the other person’s feelings, not in the speaker’s action。' },
+      { statement: '日本の「すみません」は、お礼を言うときにも使われる。', answer: true, why: '第4段落 used not only to apologize but also to thank someone。' },
+      { statement: '研究によれば、あやまる人は信頼されなくなる。', answer: false, why: '第5段落 people who apologize sincerely are often trusted more, not less。' },
+    ],
+    qa: [
+      { q: 'What often happens when an apology is followed immediately by “but”?', choices: ['It often turns into an excuse.', 'It becomes more sincere.', 'It is easier to understand.', 'It makes the listener laugh.'], answer: 0, why: '第3段落 an apology followed immediately by “but” often turns into an excuse。' },
+      { q: 'Why can understanding cultural differences in apologizing be helpful?', choices: ['It can help prevent misunderstandings.', 'It makes apologies unnecessary.', 'It helps people learn new words.', 'It makes people apologize less.'], answer: 0, why: '第4段落 Understanding these differences can help prevent misunderstandings。' },
+    ],
+    gist: [
+      { para: 1, choices: ['効果的な謝罪にふくまれる要素', '誕生日のわすれ方', '会議の進め方', '研究者の生活'], answer: 0, why: '第2段落は、みとめる・責任を引き受ける・気持ちを理解する・つぐなうという要素を述べている。' },
+      { para: 3, choices: ['文化によるあやまり方のちがい', '日本語の文法', '旅行の準備', 'あいさつの歴史'], answer: 0, why: '第4段落は、日本と他の文化での謝罪の使われ方のちがいを述べている。' },
+    ],
+    titleQ: { choices: ['The Art of Saying Sorry', 'How to Remember Birthdays', 'Why People Arrive Late', 'The History of the Japanese Language'], answer: 0, why: '全体として、上手な謝罪の要素、失敗する謝罪、文化によるちがい、謝罪の大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
