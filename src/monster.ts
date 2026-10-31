@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'rhino', name: 'サイノン', egg: 'そうげんのつのタマゴ', token: 'サイ', bigToken: 'サイノン', color: '#9ca3af', line: '#374151', rate: 0.02, desc: '大きな体と鼻の上のつのが目印のサイ。まっすぐ前に走りだすように、決めた目標に向かってぐんぐん進む。' },
   { id: 'sealion', name: 'アシカン', egg: 'みなとのいわばタマゴ', token: 'アシ', bigToken: 'アシカン', color: '#a8836a', line: '#4a3426', rate: 0.02, desc: '港の岩場で日なたぼっこをするアシカ。鼻の上でボールをのせるように、むずかしい単語もじょうずにバランスよく覚える。' },
   { id: 'gorilla', name: 'ゴリラン', egg: 'みどりのやまのたくましタマゴ', token: 'ゴリ', bigToken: 'ゴリラン', color: '#6b7280', line: '#111827', rate: 0.02, desc: '森でくらす力もちでやさしいゴリラ。むねをたたいて気持ちを伝えるように、大きな声で英語を言ってみるのが得意。' },
   { id: 'mudskipper', name: 'ムツゴロン', egg: 'ひがたのどろんこタマゴ', token: 'ムツ', bigToken: 'ムツゴロン', color: '#a3a380', line: '#4d4d26', rate: 0.02, desc: '干潟の上をむなびれではねまわるムツゴロウ。水の中でも陸でもくらせるように、どんな問題の形にもすぐなれる。' },
