@@ -962,6 +962,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Without (A) your help, I (B) could not finish (C) the work (D) yesterday.', choices: ['(A) your help, I', '(B) could not finish', '(C) the work', '(D) yesterday'], answer: 1, why: '過去のことの仮定なので could not have finished。' },
     ],
   },
+  {
+    id: 'exam-error-cause',
+    title: '入試の正誤問題㊷（原因と結果をあらわす表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'because of、result in と result from、due to、lead to、effect on、affect と effect、thanks to、caused by、one of the causes of など、原因と結果をあらわす表現。',
+    ],
+    examples: [
+      { en: 'The heavy rain resulted in serious flooding.', ja: '大雨の結果、ひどい洪水になった。' },
+      { en: 'Lack of sleep can lead to poor concentration.', ja: '睡眠不足は集中力の低下につながることがある。' },
+    ],
+    questions: [
+      { sentence: 'The flight (A) was canceled (B) because (C) the heavy snow (D) last night.', choices: ['(A) was canceled', '(B) because', '(C) the heavy snow', '(D) last night'], answer: 1, why: 'うしろが名詞なので because of the heavy snow。' },
+      { sentence: 'The heavy rain (A) resulted from (B) serious flooding (C) in (D) the area.', choices: ['(A) resulted from', '(B) serious flooding', '(C) in', '(D) the area'], answer: 0, why: '雨が原因で洪水が結果なので resulted in。' },
+      { sentence: 'The accident (A) was due (B) the driver’s (C) carelessness, (D) according to the police.', choices: ['(A) was due', '(B) the driver’s', '(C) carelessness', '(D) according to the police'], answer: 0, why: '「～が原因である」は be due to：was due to。' },
+      { sentence: '(A) Lack of sleep (B) can (C) lead (D) poor concentration.', choices: ['(A) Lack of sleep', '(B) can', '(C) lead', '(D) poor concentration'], answer: 2, why: 'lead to ～「～につながる」：lead to poor concentration。' },
+      { sentence: 'Global warming (A) has (B) a great (C) effect for (D) sea levels.', choices: ['(A) has', '(B) a great', '(C) effect for', '(D) sea levels'], answer: 2, why: 'have an effect on ～：effect on sea levels。' },
+      { sentence: 'Smoking (A) can (B) seriously (C) effect (D) your health.', choices: ['(A) can', '(B) seriously', '(C) effect', '(D) your health'], answer: 2, why: '動詞「影響する」は affect。' },
+      { sentence: 'Thanks (A) for (B) the new medicine, many patients (C) recovered (D) quickly.', choices: ['(A) for', '(B) the new medicine, many patients', '(C) recovered', '(D) quickly'], answer: 0, why: '「～のおかげで」は thanks to。' },
+      { sentence: 'The fire (A) was (B) caused from (C) a cigarette (D) left on the sofa.', choices: ['(A) was', '(B) caused from', '(C) a cigarette', '(D) left on the sofa'], answer: 1, why: '受け身 be caused by ～：caused by a cigarette。' },
+      { sentence: 'Stress (A) is one of (B) the main (C) cause (D) of headaches.', choices: ['(A) is one of', '(B) the main', '(C) cause', '(D) of headaches'], answer: 2, why: 'one of the ＋複数名詞：the main causes of。' },
+      { sentence: 'As a result (A) of the new policy, crime (B) fell (C) sharply (D) in a year later.', choices: ['(A) of the new policy, crime', '(B) fell', '(C) sharply', '(D) in a year later'], answer: 3, why: 'in はいらない：a year later「1年後に」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

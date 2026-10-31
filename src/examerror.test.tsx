@@ -540,3 +540,10 @@ it('誤文訂正㉟：原因と結果をあらわす表現の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('resulted in')
 })
+
+it('正誤問題㊷：原因と結果をあらわす表現の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-cause')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(A) resulted from')
+})
