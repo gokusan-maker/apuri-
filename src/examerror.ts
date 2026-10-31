@@ -938,6 +938,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Life in (A) cities (B) differs (C) with life (D) in the countryside.', choices: ['(A) cities', '(B) differs', '(C) with life', '(D) in the countryside'], answer: 2, why: '「～とちがう」は differ from ～：differs from life。' },
     ],
   },
+  {
+    id: 'exam-error-tense3',
+    title: '入試の正誤問題㊶（共通テストレベル：時制と仮定法の総復習）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '過去をあらわす語句と過去形、過去完了、時・条件の副詞節の現在形、If I were、仮定法過去完了、I wish、状態動詞、have been to、Without ～ の仮定法など、時制と仮定法のまとめ。',
+    ],
+    examples: [
+      { en: 'I lived in Osaka when I was a child.', ja: '私は子どものころ大阪に住んでいた。' },
+      { en: 'If it rains tomorrow, the game will be canceled.', ja: 'もしあした雨がふったら、試合は中止になる。' },
+    ],
+    questions: [
+      { sentence: 'I (A) have lived (B) in Osaka (C) when I (D) was a child.', choices: ['(A) have lived', '(B) in Osaka', '(C) when I', '(D) was a child'], answer: 0, why: 'when I was a child（はっきりした過去）があるので過去形 lived。' },
+      { sentence: 'By the time (A) we arrived, the movie (B) has already started, (C) so we (D) missed the beginning.', choices: ['(A) we arrived, the movie', '(B) has already started', '(C) so we', '(D) missed the beginning'], answer: 1, why: '過去のある時までに終わっていたことは過去完了：had already started。so we missed は正しい。' },
+      { sentence: 'The game (A) will be (B) canceled (C) if it (D) will rain tomorrow.', choices: ['(A) will be', '(B) canceled', '(C) if it', '(D) will rain tomorrow'], answer: 3, why: '条件の if 節では未来のことも現在形：If it rains。' },
+      { sentence: 'I (A) would (B) apologize (C) to her if I (D) am you.', choices: ['(A) would', '(B) apologize', '(C) to her if I', '(D) am you'], answer: 3, why: '今の事実と反対の仮定は If I were you。' },
+      { sentence: 'If she (A) had studied harder, she (B) would pass (C) the exam (D) last year.', choices: ['(A) had studied harder, she', '(B) would pass', '(C) the exam', '(D) last year'], answer: 1, why: '過去の事実と反対なので would have passed。' },
+      { sentence: 'I (A) really wish (B) that I (C) can speak French (D) as well as you.', choices: ['(A) really wish', '(B) that I', '(C) can speak French', '(D) as well as you'], answer: 2, why: 'I wish のあとは仮定法過去：that I could speak。' },
+      { sentence: '(A) I (B) am knowing (C) the answer (D) to this question.', choices: ['(A) I', '(B) am knowing', '(C) the answer', '(D) to this question'], answer: 1, why: 'know は状態動詞なので進行形にしない：I know。' },
+      { sentence: 'She (A) loves France and (B) has gone (C) to Paris (D) three times.', choices: ['(A) loves France and', '(B) has gone', '(C) to Paris', '(D) three times'], answer: 1, why: '経験は have been to ～：has been to Paris。' },
+      { sentence: 'I (A) will call you (B) as soon as (C) I will get (D) home.', choices: ['(A) will call you', '(B) as soon as', '(C) I will get', '(D) home'], answer: 2, why: '時の as soon as 節では未来のことも現在形：as soon as I get home。' },
+      { sentence: 'Without (A) your help, I (B) could not finish (C) the work (D) yesterday.', choices: ['(A) your help, I', '(B) could not finish', '(C) the work', '(D) yesterday'], answer: 1, why: '過去のことの仮定なので could not have finished。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
