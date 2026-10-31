@@ -175,3 +175,12 @@ it('デザイン152：キャラ図鑑で、なかまに3体以上いる子に「
   expect(screen.getByLabelText('なかまに 3体').textContent).toBe('👥×3')
   expect(screen.queryByLabelText('なかまに 2体')).toBeNull()
 })
+
+it('デザイン159：キャラ図鑑の説明で、必殺技の色が小さな丸で出る', async () => {
+  const { specialOf } = await import('./partner')
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
+  const dot = screen.getByLabelText(`必殺技の色 ${specialOf('fox').color}`)
+  expect(dot).toHaveClass('special-dot')
+  expect(dot.closest('.zukan-challenge')!.textContent).toContain(specialOf('fox').name)
+})

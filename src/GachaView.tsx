@@ -823,7 +823,12 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
               <span className="zukan-challenge" aria-label="とくぎの説明">（{skillOf(pick).desc}）</span> {/* デザイン143 */}
               <span className="zukan-challenge" aria-label="ガチャでの出やすさ">（🎲 ガチャでの出やすさ：{(baseRate(speciesOf(pick)) * 100).toFixed(1)}%）</span> {/* デザイン149 */}
               <span className="zukan-challenge">（同じ{typeOf(pick).name}のキャラ：ほかに{SPECIES.filter((sp) => sp.id !== pick && typeOf(sp.id).id === typeOf(pick).id).length}体）</span> {/* デザイン126 */}
-              <span className="zukan-challenge">（必殺技：{specialOf(pick).name}）</span>
+              <span className="zukan-challenge">
+                （必殺技：
+                {/* デザイン159：必殺技の色を小さな丸で */}
+                <span className="special-dot" aria-label={`必殺技の色 ${specialOf(pick).color}`} style={{ display: 'inline-block', width: '0.7em', height: '0.7em', borderRadius: '50%', background: specialOf(pick).color, marginRight: '0.2em', verticalAlign: 'middle' }} />
+                {specialOf(pick).name}）
+              </span>
               <span className="zukan-challenge" lang="en">「{replyOf(pick).en}」</span>
               <button className="speak small" onClick={() => speak(replyOf(pick).en)} aria-label="図鑑のあいさつを聞く">
                 🔊
