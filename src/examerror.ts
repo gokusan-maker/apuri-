@@ -1490,6 +1490,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'A careful (A) examination (B) of the data (C) revealed (D) a errors.', choices: ['(A) examination', '(B) of the data', '(C) revealed', '(D) a errors'], answer: 3, why: 'errors は複数なので a はつけない：some errors（または an error）。' },
     ],
   },
+  {
+    id: 'exam-error-modal2',
+    title: '入試の正誤問題〈64〉（共通テストレベル：助動詞の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'had better（not）＋原形、must have ＋過去分詞、should have ＋過去分詞、used to、may have、need not、Shall I、would rather、can’t be など、助動詞のまとめ。',
+    ],
+    examples: [
+      { en: 'You should have told me about it yesterday.', ja: 'きのうそのことを私に話すべきだったのに。' },
+      { en: 'He left the house just now, so he can’t be at home.', ja: '彼はたった今家を出たので、家にいるはずがない。' },
+    ],
+    questions: [
+      { sentence: 'You (A) had better not to (B) go out (C) alone (D) tonight.', choices: ['(A) had better not to', '(B) go out', '(C) alone', '(D) tonight'], answer: 0, why: 'had better not ＋原形：had better not go。' },
+      { sentence: 'She looks tired. She (A) must (B) stay (C) up late (D) last night.', choices: ['(A) must', '(B) stay', '(C) up late', '(D) last night'], answer: 1, why: '過去の推量は must have stayed：(B) を have stayed に。' },
+      { sentence: 'You (A) should (B) tell (C) me (D) about it yesterday.', choices: ['(A) should', '(B) tell', '(C) me', '(D) about it yesterday'], answer: 1, why: '過去の後悔は should have told：(B) を have told に。' },
+      { sentence: 'I (A) use to (B) live (C) in Osaka (D) when I was a child.', choices: ['(A) use to', '(B) live', '(C) in Osaka', '(D) when I was a child'], answer: 0, why: '「昔は～した」は used to。' },
+      { sentence: 'He (A) may (B) has gone (C) home (D) already.', choices: ['(A) may', '(B) has gone', '(C) home', '(D) already'], answer: 1, why: '助動詞のあとは原形：may have gone。' },
+      { sentence: 'You (A) need not (B) to worry (C) about (D) the test.', choices: ['(A) need not', '(B) to worry', '(C) about', '(D) the test'], answer: 1, why: 'need not ＋原形：need not worry。' },
+      { sentence: 'It’s late. (A) Shall I (B) to call (C) a taxi (D) for you?', choices: ['(A) Shall I', '(B) to call', '(C) a taxi', '(D) for you'], answer: 1, why: 'Shall I ＋原形：Shall I call。' },
+      { sentence: 'I (A) would (B) rather (C) to stay (D) home tonight.', choices: ['(A) would', '(B) rather', '(C) to stay', '(D) home tonight'], answer: 2, why: 'would rather ＋原形：would rather stay。' },
+      { sentence: 'It (A) is (B) raining, so we (C) had better (D) to stay home.', choices: ['(A) is', '(B) raining, so we', '(C) had better', '(D) to stay home'], answer: 3, why: 'had better ＋原形：had better stay home。' },
+      { sentence: 'He (A) left the house (B) just now, so he (C) must (D) be at home.', choices: ['(A) left the house', '(B) just now, so he', '(C) must', '(D) be at home'], answer: 2, why: '「家にいるはずがない」は can’t be at home。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
