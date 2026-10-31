@@ -20164,6 +20164,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Long Journey of Spices', 'How to Cook Curry', 'The History of Supermarkets', 'Why Ships Are Dangerous'], answer: 0, why: '全体として、香辛料が長い旅をして運ばれ、歴史を動かし、今も文化をつないでいることを述べている。' },
   },
   {
+    id: 'kyotsu-living-bones',
+    title: 'Our Living Bones',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think of bones, they often imagine the dry, white skeletons displayed in museums or science classrooms. It is easy to assume that bones are like the hard frame of a building, solid and unchanging once they have been formed. In reality, however, the bones inside a living body are active tissues that grow, repair themselves, and constantly change throughout our lives.",
+      "Bones have several important jobs. They support the body and give it shape, and together with muscles they allow us to move. They also protect delicate organs; the skull protects the brain, while the ribs protect the heart and lungs. In addition, the soft tissue inside many bones, called bone marrow, produces blood cells, ( A ) means that bones play a part in keeping our blood healthy.",
+      "Surprisingly, our bones are being rebuilt all the time. Special cells break down small amounts of old bone, while other cells build new bone to replace it. Over a period of years, much of the skeleton is gradually renewed in this way. This process allows bones to heal after they break and to become stronger in the places ( B ) they receive the most stress. For example, the bones in the arm a tennis player uses most are often thicker than those in the other arm.",
+      "How strong our bones become depends partly on how we live, especially when we are young. Bones become denser and stronger during childhood and the teenage years, and they reach their greatest strength in early adulthood. Eating foods that contain calcium, such as milk, small fish, and green vegetables, helps to build strong bones. Vitamin D, which the body makes when the skin is exposed to sunlight, helps the body to use calcium effectively.",
+      "Exercise is equally important. Activities in which bones must support the body's weight, such as running, jumping, and dancing, signal the body to make bones stronger. In contrast, people who spend long periods without such activity, including astronauts living in space, can lose bone strength. Taking care of our bones when we are young is ( C ) a good investment, because strong bones lower the risk of breaking them later in life.",
+    ],
+    ja: [
+      '骨と聞くと、人々はよく博物館や理科の教室にかざられている、かわいた白い骸骨を想像する。骨は建物のかたい骨組みのように、いったんできるとかたくて変わらないものだと思いこみやすい。しかし実際には、生きている体の中の骨は、成長し、自分を修復し、一生を通じてたえず変化する活発な組織である。',
+      '骨にはいくつかの大切な仕事がある。体をささえて形をあたえ、筋肉といっしょに私たちが動けるようにする。また、こわれやすい臓器を守る。頭の骨は脳を、ろっ骨は心臓と肺を守っている。さらに、多くの骨の中にある骨髄とよばれるやわらかい組織は血液の細胞をつくっており、これは、骨が血液を健康にたもつ役割の一部をはたしていることを意味する。',
+      'おどろくことに、私たちの骨はいつも作りなおされている。特別な細胞が古い骨を少しずつこわし、別の細胞がそれにかわる新しい骨をつくる。何年もかけて、このようにして骨格の多くが少しずつ新しくなる。このはたらきによって、骨は折れたあとに治り、最も負担がかかる場所でより強くなることができる。たとえば、テニスの選手がよく使う腕の骨は、もう一方の腕の骨より太いことが多い。',
+      '骨がどれほど強くなるかは、とくに若いころのくらし方に一部左右される。骨は子どものころと10代のあいだにより密になって強くなり、おとなになってまもないころに最も強くなる。牛乳や小魚、緑の野菜など、カルシウムをふくむ食べ物を食べることは、強い骨をつくるのに役立つ。皮ふが日光をあびると体がつくるビタミンDは、体がカルシウムを効果的に使うのを助ける。',
+      '運動も同じくらい大切である。走る、とぶ、おどるなど、骨が体重をささえなければならない運動は、骨を強くするよう体に合図を送る。反対に、宇宙でくらす宇宙飛行士をふくめ、そうした運動をせずに長い期間をすごす人は、骨の強さを失うことがある。若いうちに骨を大切にすることは、強い骨があとで骨折する危険を下げるので、まさによい投資なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（骨髄が血液の細胞をつくること）を受け、means の主語になる非制限用法の which。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the places（場所）で、うしろの they receive the most stress は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['truly', 'true', 'truth', 'truer'], answer: 0, why: '形容詞 good を修飾するのは副詞 truly「本当に・まさに」。' },
+    ],
+    tf: [
+      { statement: '生きている体の中の骨は、一度できると変わらない。', answer: false, why: '第1段落 the bones inside a living body are active tissues that grow, repair themselves, and constantly change。' },
+      { statement: '骨髄は血液の細胞をつくる。', answer: true, why: '第2段落 bone marrow, produces blood cells。' },
+      { statement: 'テニスの選手がよく使う腕の骨は、太くなることが多い。', answer: true, why: '第3段落 the bones in the arm a tennis player uses most are often thicker。' },
+      { statement: '宇宙飛行士は、宇宙で骨が強くなる。', answer: false, why: '第5段落 astronauts living in space, can lose bone strength。' },
+    ],
+    qa: [
+      { q: 'What helps the body to use calcium effectively?', choices: ['Vitamin D, which the body makes in sunlight.', 'Drinking a lot of water.', 'Sleeping for a long time.', 'Eating sweet food.'], answer: 0, why: '第4段落 Vitamin D, which the body makes when the skin is exposed to sunlight, helps the body to use calcium effectively。' },
+      { q: 'What kind of exercise signals the body to make bones stronger?', choices: ['Activities in which bones support the body’s weight.', 'Only swimming.', 'Sitting quietly.', 'Exercises done lying down.'], answer: 0, why: '第5段落 Activities in which bones must support the body’s weight ... signal the body to make bones stronger。' },
+    ],
+    gist: [
+      { para: 2, choices: ['骨がたえず作りなおされていること', '骨折の治療費', 'テニスのルール', '細胞の数え方'], answer: 0, why: '第3段落は、古い骨をこわし新しい骨をつくるはたらきと、その結果を述べている。' },
+      { para: 3, choices: ['若いころのくらし方と強い骨', '牛乳の作り方', '日焼けの防ぎ方', '野菜の育て方'], answer: 0, why: '第4段落は、骨が強くなる時期と、カルシウムやビタミンDの役割を述べている。' },
+    ],
+    titleQ: { choices: ['Our Living Bones', 'How Museums Display Skeletons', 'The Life of Astronauts', 'Why Milk Is White'], answer: 0, why: '全体として、骨が生きた組織であり、仕事をし、作りなおされ、くらし方で強さが変わることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
