@@ -18331,6 +18331,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Letters from the Sky', 'How to Build a Snowman', 'The History of Gloves', 'Why Winter Is Cold'], answer: 0, why: '全体として、雪の結晶のでき方、形を決める条件、中谷宇吉郎の研究を述べている。' },
   },
   {
+    id: 'kyotsu-pocket-money',
+    title: 'What Pocket Money Teaches',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many children around the world receive a small amount of money from their parents each week or each month. This money, often called pocket money or an allowance, can be used to buy snacks, toys, books, or anything else the child wants. Although the amounts are usually small, many parents believe that pocket money can teach children valuable lessons about how money works.",
+      "One important lesson is the idea of limits. When children have only a fixed amount of money, they quickly learn that they cannot buy everything they want. If they spend all their money on sweets at the beginning of the week, they will have nothing left for a comic book they see a few days later. Through experiences like this, children learn to compare choices and think about ( A ) they really need.",
+      "Pocket money can also teach children to save. Some parents encourage their children to put part of their money aside each week, perhaps in a jar or a bank account, so that they can buy something more expensive in the future. Waiting patiently for several weeks to buy a special item can help children understand that saving requires effort, ( B ) the reward often feels greater because of that effort.",
+      "Families have different ideas about how pocket money should be given. In some homes, children receive the same amount regularly, no matter what they do. In others, children earn money by helping with housework, such as washing dishes or cleaning the bath. Supporters of the second method say that it teaches children the connection between work and money. Others worry that children may start to expect payment for every small task and become less willing to help simply because they are part of the family.",
+      "Today, the way people pay for things is changing. As more adults use cards and smartphone payments, children may rarely see coins and notes being exchanged. Some experts worry that this makes money seem invisible and harder to understand. For this reason, some parents still give pocket money in cash, while others use special apps that show children how much they have spent. Whatever method is used, the goal is the same: to help children develop habits ( C ) will help them manage money wisely as adults.",
+    ],
+    ja: [
+      '世界中の多くの子どもが、毎週や毎月、親から少しのお金をもらっている。おこづかいとよばれることが多いこのお金は、おかしやおもちゃ、本、そのほか子どもがほしいものを買うのに使える。金額はふつう少ないが、多くの親は、おこづかいがお金のしくみについての大切なことを子どもに教えられると考えている。',
+      '大切なことの一つは、限りがあるという考えである。決まった額のお金しかもっていないと、子どもはほしいものをすべては買えないとすぐに学ぶ。週のはじめにお金を全部おかしに使ってしまうと、数日後に見かけたまんがの本のためのお金は何も残らない。このような経験を通して、子どもは選択肢を比べ、本当に必要なものは何かを考えることを学ぶ。',
+      'おこづかいは、子どもにためることも教えられる。ある親は、子どもが将来もっと高いものを買えるように、毎週お金の一部を、たとえばびんや銀行口座にとっておくよううながす。特別なものを買うために何週間もしんぼう強く待つことは、ためるには努力が必要だが、その努力があるからこそ、ごほうびがより大きく感じられることが多いと子どもが理解する助けになる。',
+      'おこづかいのあげ方については、家庭によって考えがちがう。ある家では、子どもは何をしても同じ額を決まってもらう。別の家では、子どもは皿洗いやおふろのそうじなど、家事を手伝ってお金をかせぐ。2つ目の方法を支持する人は、それが働くこととお金のつながりを子どもに教えると言う。一方で、子どもがちょっとした仕事のたびにお金をもらえると思うようになり、ただ家族の一員だからという理由で手伝おうとしなくなるのではないかと心配する人もいる。',
+      '今日、物の代金のはらい方は変わりつつある。カードやスマートフォンではらう大人がふえるにつれて、子どもは硬貨やお札がやりとりされるのをめったに見ないかもしれない。これによってお金が目に見えず、理解しにくくなるのではないかと心配する専門家もいる。このため、今も現金でおこづかいをあげる親もいれば、どれだけ使ったかを子どもに示す特別なアプリを使う親もいる。どんな方法を使うにしても、目的は同じである。大人になってお金をかしこく管理するのに役立つ習慣を、子どもが身につけられるようにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'that', 'which of', 'whose'], answer: 0, why: 'about の目的語になる名詞節で、「本当に必要なものは何か」と need の目的語が欠けているので what。' },
+      { id: 'B', choices: ['but', 'so', 'or', 'unless'], answer: 0, why: '「ためるには努力が必要だ、しかしその努力のおかげでごほうびが大きく感じられる」と逆の面をつなぐので but。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 habits を受け、うしろの will help の主語になるので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '決まった額のお金しかないと、子どもはほしいものを全部は買えないと学ぶ。', answer: true, why: '第2段落 they quickly learn that they cannot buy everything they want。' },
+      { statement: '筆者によれば、ためることには努力がいらない。', answer: false, why: '第3段落 saving requires effort。' },
+      { statement: '家事を手伝ってお金をかせぐ方法をとる家庭もある。', answer: true, why: '第4段落 children earn money by helping with housework。' },
+      { statement: '専門家はみな、現金を使わないほうが子どもはお金を理解しやすいと言う。', answer: false, why: '第5段落 Some experts worry that this makes money seem invisible and harder to understand。' },
+    ],
+    qa: [
+      { q: 'What do supporters of earning money through housework say?', choices: ['It teaches the connection between work and money.', 'It makes children stop helping.', 'It gives children more free time.', 'It makes pocket money unnecessary.'], answer: 0, why: '第4段落 Supporters of the second method say that it teaches children the connection between work and money。' },
+      { q: 'What is the goal of every method of giving pocket money?', choices: ['To help children develop habits for managing money wisely as adults.', 'To make children spend as much as possible.', 'To stop children from using smartphones.', 'To make parents richer.'], answer: 0, why: '第5段落 the goal is the same: to help children develop habits that will help them manage money wisely as adults。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ためることを学ぶ', '銀行の作り方', 'びんの選び方', '高いものの値段'], answer: 0, why: '第3段落は、おこづかいの一部をとっておき、ためることの努力と喜びを学ぶことを述べている。' },
+      { para: 3, choices: ['おこづかいのあげ方についての考えのちがい', '皿洗いのしかた', 'おふろのそうじの道具', '家族の人数'], answer: 0, why: '第4段落は、決まった額をあげる方法と家事でかせぐ方法、それぞれへの意見を述べている。' },
+    ],
+    titleQ: { choices: ['What Pocket Money Teaches', 'How to Open a Bank', 'The History of Coins', 'Why Snacks Are Expensive'], answer: 0, why: '全体として、おこづかいが教える限りやためること、あげ方のちがい、現金を使わない時代の課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
