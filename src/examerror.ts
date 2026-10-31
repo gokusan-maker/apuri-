@@ -1830,6 +1830,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The fact [which] smoking harms health is well known.', choices: ['that', 'what', 'of which', 'whether'], answer: 0, why: 'the fact の内容を説明する同格の that：the fact that smoking harms health。' },
     ],
   },
+  {
+    id: 'exam-fix-41',
+    title: '入試の誤文訂正㊶（共通テストレベル：前置詞の総まとめ）',
+    points: ['日付の on、期限の by と継続の until、期間の for と起点の since、arrive at、be good at、時刻の at、be married to、be interested in、on foot、他動詞 discuss（前置詞がいらない）など、まちがえやすい前置詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Please finish the report by Friday.', ja: '金曜日までに報告書を仕上げてください。' }],
+    questions: [
+      { sentence: 'I was born [in] May 5.', choices: ['on', 'at', 'for', 'by'], answer: 0, why: '日付・曜日には on：on May 5。月だけなら in May。' },
+      { sentence: 'Please finish the report [until] Friday.', choices: ['by', 'till', 'in', 'for'], answer: 0, why: '「～までに（期限）」は by。until・till は「～までずっと（継続）」。' },
+      { sentence: 'She has lived here [since] ten years.', choices: ['for', 'from', 'during', 'by'], answer: 0, why: '期間の長さ（ten years）には for。since はうしろに起点（2015 など）がくる。' },
+      { sentence: 'We arrived [to] the station at noon.', choices: ['at', 'for', 'toward', 'on'], answer: 0, why: '駅などの地点に「着く」は arrive at。広い場所なら arrive in。' },
+      { sentence: 'He is good [in] playing the piano.', choices: ['at', 'for', 'on', 'with'], answer: 0, why: '「～が得意だ」は be good at ～。' },
+      { sentence: 'The meeting will start [in] 3 p.m.', choices: ['at', 'on', 'for', 'to'], answer: 0, why: '時刻には at：at 3 p.m.。' },
+      { sentence: 'She is married [with] a doctor.', choices: ['to', 'for', 'by', 'at'], answer: 0, why: '「～と結婚している」は be married to ～。' },
+      { sentence: 'I am interested [about] Japanese history.', choices: ['in', 'on', 'for', 'at'], answer: 0, why: '「～に興味がある」は be interested in ～。' },
+      { sentence: 'He went to school [by] foot.', choices: ['on', 'with', 'in', 'at'], answer: 0, why: '「歩いて」は on foot。by bus・by train とちがうので注意。' },
+      { sentence: 'Let’s [discuss about] the plan after lunch.', choices: ['discuss', 'talk', 'discuss on', 'speak'], answer: 0, why: 'discuss は他動詞なので前置詞なしで目的語をとる：discuss the plan（= talk about the plan）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
