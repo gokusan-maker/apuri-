@@ -20632,6 +20632,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Protecting Our Hearing', 'How to Choose Earphones', 'The History of Concerts', 'Why Cars Are Noisy'], answer: 0, why: '全体として、大きな音が聴力をそこなうしくみと、その予防の大切さを述べている。' },
   },
   {
+    id: 'kyotsu-referees',
+    title: 'The People Who Keep the Game Fair',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In almost every sport, from soccer and baseball to tennis and basketball, there is someone whose job is to make sure the game is played fairly. Referees and umpires must watch the action closely, apply the rules, and make decisions in a fraction of a second. Although spectators often focus on the players, these officials play an essential role in keeping sports safe, fair, and enjoyable.",
+      "Being a referee is far more difficult than it may seem. Officials must understand long and complicated rulebooks, and they must also stay calm under great pressure. In a single match, a soccer referee may run more than ten kilometers in order to stay close to the ball. At the same time, they must judge whether a player was fouled, whether the ball crossed a line, and whether a goal should count, often while thousands of fans are shouting at them.",
+      "Because humans can make mistakes, many sports have introduced technology to help officials. Cameras can show whether a tennis ball landed inside or outside the line, and video replays allow referees in some sports to review important decisions. Supporters say that such technology makes results more accurate and fairer, ( A ) a single wrong decision can change the outcome of a championship.",
+      "However, technology has also caused debate. Some fans complain that stopping the game to check replays interrupts the flow and excitement of the match. Others point out that even with video, some decisions still depend on human judgment, such as whether contact between two players was strong enough to be a foul. There is also concern that relying too much on machines could reduce respect for referees, ( B ) authority is important for keeping order on the field.",
+      "In the end, most people agree that the goal is the same: to make sports as fair as possible. Technology can be a useful tool, but it cannot replace the experience and judgment of skilled officials. Perhaps the most important lesson is one for players and fans as well. Accepting decisions, even when we disagree with them, is part of what makes sport a model of fair play. Without referees, and without respect for them, it would be difficult to imagine ( C ) any game could be played at all.",
+    ],
+    ja: [
+      'サッカーや野球からテニスやバスケットボールまで、ほとんどどのスポーツにも、試合が公正に行われるようにするのが仕事の人がいる。審判は動きをよく見て、ルールをあてはめ、一瞬で判定を下さなければならない。観客は選手に注目することが多いが、こうした審判は、スポーツを安全で公正で楽しいものにたもつのに欠かせない役割をはたしている。',
+      '審判であることは、見かけよりはるかにむずかしい。審判は長く複雑なルールブックを理解しなければならず、大きなプレッシャーの中でも落ち着いていなければならない。1つの試合で、サッカーの審判はボールの近くにいるために10キロ以上走ることがある。同時に、選手がファウルを受けたかどうか、ボールがラインをこえたかどうか、ゴールをみとめるべきかどうかを、何千ものファンにさけばれながら判断しなければならないことも多い。',
+      '人間はまちがえることがあるので、多くのスポーツが審判を助ける技術を取り入れてきた。カメラはテニスのボールがラインの内側に落ちたか外側に落ちたかを示すことができ、いくつかのスポーツではビデオのリプレーで審判が大事な判定を見直すことができる。1つのまちがった判定が選手権の結果を変えることがあるので、そうした技術は結果をより正確で公正にすると支持する人は言う。',
+      'しかし、技術は議論もまきおこしてきた。リプレーをたしかめるために試合を止めると、試合の流れや興奮がとぎれると不満を言うファンもいる。ビデオがあっても、2人の選手の接触がファウルになるほど強かったかどうかなど、人間の判断にたよる判定がまだあると指摘する人もいる。また、機械にたよりすぎると、審判への敬意がへるかもしれないという心配もある。審判の権威は、フィールドの秩序をたもつのに大切なのである。',
+      '結局のところ、ほとんどの人は目標が同じだという点で一致している。スポーツをできるだけ公正にすることである。技術は役に立つ道具になりうるが、熟練した審判の経験や判断にとってかわることはできない。おそらく最も大切な教えは、選手とファンにとってのものでもある。判定に賛成できないときでもそれを受け入れることは、スポーツをフェアプレーの手本にしているものの一部である。審判がいなければ、そして審判への敬意がなければ、そもそもどうやって試合ができるのか想像するのはむずかしいだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['since', 'unless', 'although', 'until'], answer: 0, why: '「1つのまちがった判定が結果を変えることがあるので」と理由をあらわすので since「～なので」。' },
+      { id: 'B', choices: ['whose', 'who', 'which', 'what'], answer: 0, why: '「審判の権威」と所有の関係なので whose authority。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'imagine how ～「どうやって～かを想像する」。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'サッカーの審判は、1試合で10キロ以上走ることがある。', answer: true, why: '第2段落 a soccer referee may run more than ten kilometers。' },
+      { statement: 'ビデオがあれば、すべての判定が人間の判断なしで決まる。', answer: false, why: '第4段落 even with video, some decisions still depend on human judgment。' },
+      { statement: 'リプレーで試合が止まることに不満を言うファンもいる。', answer: true, why: '第4段落 Some fans complain that stopping the game to check replays interrupts the flow。' },
+      { statement: '筆者は、技術が審判に完全にとってかわれると考えている。', answer: false, why: '第5段落 it cannot replace the experience and judgment of skilled officials。' },
+    ],
+    qa: [
+      { q: 'How can cameras help in tennis?', choices: ['They can show whether a ball landed inside or outside the line.', 'They can make the ball faster.', 'They can choose the winner.', 'They can count the fans.'], answer: 0, why: '第3段落 Cameras can show whether a tennis ball landed inside or outside the line。' },
+      { q: 'According to the author, what is part of fair play for players and fans?', choices: ['Accepting decisions even when they disagree.', 'Shouting at the referee.', 'Stopping the game often.', 'Ignoring the rules.'], answer: 0, why: '第5段落 Accepting decisions, even when we disagree with them, is part of what makes sport a model of fair play。' },
+    ],
+    gist: [
+      { para: 1, choices: ['審判の仕事のむずかしさ', 'ルールブックの作り方', 'サッカーの歴史', 'ファンの応援の方法'], answer: 0, why: '第2段落は、複雑なルール、プレッシャー、走る距離、一瞬の判断というむずかしさを述べている。' },
+      { para: 3, choices: ['技術をめぐる議論', 'カメラの値段', '選手の練習方法', '試合の時間'], answer: 0, why: '第4段落は、試合の流れ、人間の判断、審判への敬意という技術への疑問を述べている。' },
+    ],
+    titleQ: { choices: ['The People Who Keep the Game Fair', 'How to Become a Soccer Star', 'The History of Cameras', 'Why Fans Shout'], answer: 0, why: '全体として、審判の役割とむずかしさ、技術の利用とその議論、判定を受け入れることの大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
