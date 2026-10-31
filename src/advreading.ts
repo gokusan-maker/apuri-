@@ -18214,6 +18214,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Sounds of Words', 'How to Draw Manga', 'The History of Dogs', 'Why Rain Is Loud'], answer: 0, why: '全体として、日本語と英語のオノマトペのちがいと、それが言語の見方を映すことを述べている。' },
   },
   {
+    id: 'kyotsu-frozen-food',
+    title: 'The Science of Frozen Food',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Open the freezer in almost any home today, and you are likely to find frozen vegetables, fish, meat, or ready-made meals. Frozen food is so common that we rarely think about it. Yet the ability to freeze food in a way that keeps its taste and texture is the result of scientific discoveries made only about a hundred years ago. To understand these discoveries, we need to look at what happens inside food when it freezes.",
+      "People have used cold to preserve food for a very long time. In cold regions, meat and fish were simply left outside in winter, and in some places ice was cut from lakes and stored to keep food cool in summer. However, food frozen slowly in this way often became soft and watery when it was thawed. For a long time, many people believed that frozen food could never taste as good as fresh food.",
+      "The reason for this problem lies in the water inside food. When food freezes slowly, the water forms large ice crystals. These sharp crystals damage the walls of the cells in the food, ( A ) causes liquid to leak out when the food is thawed. As a result, the food loses its original texture. When food is frozen very quickly, on the other hand, the water forms many tiny crystals that cause much less damage.",
+      "This principle was put into practice in the early twentieth century. According to a well-known story, an American businessman travelling in the far north noticed that fish caught by local people froze almost instantly in the extremely cold air and still tasted fresh when they were cooked months later. Inspired by this, he developed machines that could freeze food quickly, ( B ) helped make frozen food a commercial success.",
+      "Today, frozen food plays an important role in our lives. It allows people to eat a variety of foods throughout the year, reduces waste because food can be stored for a long time, and saves time for busy families. Some studies have even found that certain frozen vegetables keep as many nutrients as fresh ones, because they are frozen soon after being harvested. The story of frozen food shows ( C ) careful observation of nature can lead to inventions that change everyday life.",
+    ],
+    ja: [
+      '今日、ほとんどどの家でも冷凍庫を開けると、冷凍の野菜や魚、肉、調理ずみの食事が見つかるだろう。冷凍食品はあまりにふつうなので、私たちはそれについてほとんど考えない。しかし、味や食感をたもったまま食べ物をこおらせることができるのは、わずか100年ほど前の科学的な発見の結果なのである。こうした発見を理解するには、食べ物がこおるときにその中で何が起こるのかを見る必要がある。',
+      '人々はとても長いあいだ、食べ物を保存するのに冷たさを使ってきた。寒い地域では、肉や魚は冬にただ外に置かれ、ある場所では、夏に食べ物を冷たく保つために湖から氷が切り出されてたくわえられた。しかし、このようにゆっくりこおらせた食べ物は、とかすとやわらかく水っぽくなることが多かった。長いあいだ、多くの人は、冷凍食品は新鮮な食べ物ほどおいしくなることはけっしてないと信じていた。',
+      'この問題の原因は、食べ物の中の水にある。食べ物がゆっくりこおると、水は大きな氷の結晶になる。こうしたするどい結晶は食べ物の細胞のかべを傷つけ、そのことが、食べ物をとかしたときに水分が流れ出す原因になる。その結果、食べ物はもとの食感を失う。一方、食べ物をとても速くこおらせると、水はずっと小さな結晶をたくさん作り、傷はずっと少なくなる。',
+      'この原理は20世紀のはじめに実用化された。よく知られた話によると、北のはての地を旅していたアメリカの実業家が、地元の人々がとった魚がとても冷たい空気の中でほとんど一瞬でこおり、何か月もあとに料理しても新鮮な味がすることに気づいた。これに刺激を受けて、彼は食べ物を速くこおらせる機械を開発し、そのことが冷凍食品を商売として成功させるのに役立った。',
+      '今日、冷凍食品は私たちの生活で大切な役割をはたしている。人々が1年中さまざまな食べ物を食べられるようにし、食べ物を長く保存できるのでむだをへらし、いそがしい家族の時間を節約する。ある種の冷凍野菜は、収穫されてすぐにこおらされるので、新鮮な野菜と同じくらい栄養を保っていると示した研究さえある。冷凍食品の物語は、自然を注意深く観察することが、日常生活を変える発明につながりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（結晶が細胞のかべを傷つけること）を受け、causes の主語になるので which。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（速くこおらせる機械を開発したこと）を受け、helped の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '昔、ゆっくりこおらせた食べ物は、とかすと水っぽくなることが多かった。', answer: true, why: '第2段落 food frozen slowly in this way often became soft and watery when it was thawed。' },
+      { statement: '食べ物をゆっくりこおらせると、小さな氷の結晶がたくさんできる。', answer: false, why: '第3段落 When food freezes slowly, the water forms large ice crystals。' },
+      { statement: '実業家は、北のはての地で速くこおった魚が新鮮な味のままだと気づいた。', answer: true, why: '第4段落 fish … froze almost instantly … and still tasted fresh。' },
+      { statement: '筆者によれば、冷凍食品はむだをふやす。', answer: false, why: '第5段落 reduces waste because food can be stored for a long time。' },
+    ],
+    qa: [
+      { q: 'Why does food frozen very quickly keep its texture better?', choices: ['Tiny ice crystals cause much less damage to the cells.', 'Quick freezing removes all the water.', 'The food becomes warmer inside.', 'Large crystals protect the cell walls.'], answer: 0, why: '第3段落 the water forms many tiny crystals that cause much less damage。' },
+      { q: 'Why may some frozen vegetables keep as many nutrients as fresh ones?', choices: ['They are frozen soon after being harvested.', 'They are grown in freezers.', 'They are cooked before freezing.', 'They contain more water.'], answer: 0, why: '第5段落 because they are frozen soon after being harvested。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ゆっくりこおらせると食感が悪くなる理由', '細胞の発見の歴史', '水の温め方', '料理の味つけ'], answer: 0, why: '第3段落は、大きな氷の結晶が細胞を傷つけて食感を失わせるしくみを説明している。' },
+      { para: 3, choices: ['速くこおらせる方法が実用化されたきっかけ', '北の地の観光', '魚のとり方', '機械の値段'], answer: 0, why: '第4段落は、北の地での観察から速くこおらせる機械が開発された話を述べている。' },
+    ],
+    titleQ: { choices: ['The Science of Frozen Food', 'How to Catch Fish in Winter', 'The History of Lakes', 'Why Ice Is Cold'], answer: 0, why: '全体として、冷凍の歴史、氷の結晶のしくみ、速い冷凍の発明、冷凍食品の役割を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
