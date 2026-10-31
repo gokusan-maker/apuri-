@@ -19969,6 +19969,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Why Animals Play', 'How to Train a Puppy', 'The Life of Octopuses', 'Why Crows Like Snow'], answer: 0, why: '全体として、動物が遊ぶ理由（技能の練習・社会性・知能）と、人間への示唆を述べている。' },
   },
   {
+    id: 'kyotsu-museums',
+    title: 'Museums Are Changing',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For many people, the word “museum” brings to mind quiet rooms, glass cases, and signs that say “Do not touch.” Visitors walk slowly from one object to the next, reading short labels and trying not to make noise. Although many museums still look like this, the way they work and the role they play in society have been changing significantly in recent decades.",
+      "Traditionally, the main purpose of a museum was to collect valuable objects, protect them, and display them to the public. Experts decided which objects were important and wrote explanations, and visitors were expected to learn by looking. This approach helped to preserve countless works of art and historical objects ( A ) might otherwise have been lost or destroyed. In this model, the museum acted mainly as a careful guardian of the past rather than as a place where visitors could ask questions and share their own ideas.",
+      "Today, however, many museums are trying to become more active places of learning. Science museums often allow visitors to touch exhibits, carry out simple experiments, and see how things work for themselves. Art museums hold workshops in which children and adults can create their own works after looking at famous paintings. Some museums even invite local people to share their own stories and objects, so that the museum reflects the community around it.",
+      "Technology has also changed museums. Many collections can now be viewed online, ( B ) means that people who live far away or cannot travel can still enjoy them. Digital guides on smartphones can provide more detailed information than a small label, and some museums use virtual reality to show what an ancient city might have looked like. Critics worry that screens may distract visitors from the real objects, but supporters argue that technology can make museums more accessible and attractive, especially to young people.",
+      "Museums face difficult questions as well. Some objects in famous collections were taken from other countries during periods of war or colonial rule, and people in those countries have asked for them to be returned. Museums must decide ( C ) to respond to such requests fairly. Despite these challenges, museums remain important places where people can meet the past, understand other cultures, and think about the future together.",
+    ],
+    ja: [
+      '多くの人にとって、「博物館」ということばは、静かな部屋、ガラスケース、「さわらないでください」という表示を思い起こさせる。来館者は1つの展示物から次の展示物へゆっくり歩き、短い説明を読み、音を立てないようにする。多くの博物館は今もこのように見えるが、そのはたらき方や社会での役割は、ここ数十年で大きく変わってきている。',
+      '伝統的に、博物館の主な目的は、価値のある物を集め、守り、人々に見せることだった。専門家がどの物が大切かを決めて説明を書き、来館者は見ることで学ぶものとされていた。この方法は、そうでなければ失われたりこわされたりしたかもしれない数えきれない美術作品や歴史的な物を守るのに役立った。このモデルでは、博物館は、来館者が質問したり自分の考えを話し合ったりできる場所というより、主に過去を大切に守る番人としてはたらいていた。',
+      'しかし今日、多くの博物館は、より活発な学びの場になろうとしている。科学館では、来館者が展示にさわったり、かんたんな実験をしたり、物がどのように動くかを自分で見たりできることが多い。美術館では、子どもやおとなが有名な絵を見たあとに自分の作品を作れるワークショップを開いている。地元の人々に自分の話や物を紹介してもらい、博物館がまわりの地域を映すようにしているところもある。',
+      '技術も博物館を変えた。多くの収蔵品は今ではオンラインで見ることができ、遠くに住んでいたり旅行できなかったりする人でも楽しめるようになった。スマートフォンのデジタルガイドは小さな説明板より詳しい情報を伝えられ、仮想現実を使って古代の都市がどのように見えたかを示す博物館もある。批判する人は画面が来館者の注意を本物の展示物からそらすかもしれないと心配するが、支持する人は、技術によって博物館がより利用しやすく魅力的になり、とくに若い人にとってそうだと主張している。',
+      '博物館はむずかしい問題にも直面している。有名な収蔵品の中には、戦争や植民地支配の時代にほかの国から持ち出された物があり、それらの国の人々は返還を求めている。博物館は、そうした求めにどのように公正にこたえるかを決めなければならない。こうした課題はあるものの、博物館は今も、人々が過去に出会い、ほかの文化を理解し、いっしょに未来について考えることができる大切な場所である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 works of art and historical objects（もの）を受け、might have been lost の主語になる関係代名詞 that。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容全体を受け、means の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'decide how to ～「どのように～するかを決める」。' },
+    ],
+    tf: [
+      { statement: '伝統的な博物館では、来館者は見ることで学ぶものとされていた。', answer: true, why: '第2段落 visitors were expected to learn by looking。' },
+      { statement: '今日の科学館では、展示にさわることはどこでも禁止されている。', answer: false, why: '第3段落 Science museums often allow visitors to touch exhibits。' },
+      { statement: '多くの収蔵品は、今ではオンラインで見ることができる。', answer: true, why: '第4段落 Many collections can now be viewed online。' },
+      { statement: '筆者によれば、技術を使うことに反対する人はだれもいない。', answer: false, why: '第4段落 Critics worry that screens may distract visitors from the real objects。' },
+    ],
+    qa: [
+      { q: 'What do some art museums offer?', choices: ['Workshops in which people can create their own works.', 'Free paintings to take home.', 'Lessons in building museums.', 'Concerts every night.'], answer: 0, why: '第3段落 Art museums hold workshops in which children and adults can create their own works。' },
+      { q: 'What difficult question do museums face?', choices: ['How to respond to requests to return objects taken from other countries.', 'How to make their rooms quieter.', 'How to sell more tickets online.', 'How to stop people from using smartphones.'], answer: 0, why: '第5段落 people in those countries have asked for them to be returned. Museums must decide how to respond。' },
+    ],
+    gist: [
+      { para: 2, choices: ['より活発な学びの場になろうとする博物館', '科学の実験の方法', '有名な画家の生涯', '地域のお祭り'], answer: 0, why: '第3段落は、さわれる展示、ワークショップ、地域の参加という新しい取り組みを述べている。' },
+      { para: 3, choices: ['技術が博物館にもたらした変化', 'スマートフォンの歴史', '古代都市のくらし', '若者の趣味'], answer: 0, why: '第4段落は、オンライン公開、デジタルガイド、仮想現実とその賛否を述べている。' },
+    ],
+    titleQ: { choices: ['Museums Are Changing', 'How to Paint a Picture', 'The History of Glass', 'Why Wars Happen'], answer: 0, why: '全体として、伝統的な博物館から、学びの場・技術の活用へと変わる博物館と、その課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
