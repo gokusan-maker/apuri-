@@ -817,6 +817,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
                 {ok && today.includes(sp.id) && <span className="char-book-sprout" aria-label="今日出会った">☀今日</span>} {/* デザイン137 */}
                 {ok && countOf(sp.id) >= 3 && <span className="char-book-sprout" aria-label={`なかまに ${countOf(sp.id)}体`}>👥×{countOf(sp.id)}</span>} {/* デザイン152 */}
                 {ok && topSp === sp.id && <span className="char-book-sprout" aria-label="いちばん育った子">🏅</span>} {/* デザイン161 */}
+                {ok && sp.id !== (partner ?? 'mochi') && t.id === typeOf(partner ?? 'mochi').id && <span className="char-book-sprout" aria-label="相棒と同じタイプ">🤝</span>} {/* デザイン171 */}
                 <span className={`char-type t-${t.id}`} title={t.desc}>
                   {t.icon}
                   {t.name.replace('型', '')}

@@ -201,3 +201,12 @@ it('デザイン164：キャラ図鑑で、同じタイプの子がぜんぶそ�
   render(<Gacha partnerName="モチ" coins={0} members={all.length + 1} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', ...all]} />)
   expect(screen.getByLabelText(`${t.name}コンプリート`).textContent).toBe(' ✔')
 })
+
+it('デザイン171：キャラ図鑑で、相棒と同じタイプの子に 🤝 がつく（相棒自身にはつかない）', () => {
+  const same = SPECIES.find((sp) => sp.id !== 'fox' && typeOf(sp.id).id === typeOf('fox').id)!
+  const other = SPECIES.find((sp) => typeOf(sp.id).id !== typeOf('fox').id)!
+  render(<Gacha partnerName="コンコン" coins={0} members={3} pityLeft={10} onDraw={() => null} ownedSpecies={['fox', same.id, other.id]} partnerSpecies="fox" />)
+  const marks = screen.getAllByLabelText('相棒と同じタイプ')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe(same.name)
+})
