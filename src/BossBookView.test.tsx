@@ -348,3 +348,16 @@ it('デザイン135：ボス図鑑の見出しに、ノーミスでたおした�
   render(<BossBook />)
   expect(screen.getByLabelText('ノーミス率 50%').textContent).toBe('（50%）')
 })
+
+it('デザイン138：ボス図鑑に、まだ勝っていないステージのボスが「つぎのめあて」として1体出る', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const [lv1, a] = Object.entries(BOSSES)[0]
+  const [lv2] = Object.entries(BOSSES)[1]
+  const r = render(<BossBook />)
+  expect(screen.getByLabelText('つぎのめあて').textContent).toBe(`🎯 つぎのめあて：${lv1}のボス`)
+  r.unmount()
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [a.name]: { look: a, wins: 1, best: 'A', first: '2026-10-01' } }))
+  render(<BossBook />)
+  expect(screen.getByLabelText('つぎのめあて').textContent).toBe(`🎯 つぎのめあて：${lv2}のボス`)
+})

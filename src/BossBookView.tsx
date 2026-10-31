@@ -106,6 +106,15 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
           )}
         </div>
       )}
+      {(() => {
+        // デザイン138：まだ勝っていないステージのボスを1体だけ「つぎのめあて」に（名前はまだひみつ）
+        const next = Object.entries(BOSSES).find(([, l]) => !book[l.name])
+        return next ? (
+          <p className="boss-next-goal" aria-label="つぎのめあて">
+            🎯 つぎのめあて：{next[0]}のボス
+          </p>
+        ) : null
+      })()}
       <ul className="boss-book-list">
         {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only) && (!cleanOnly || noMiss.includes(b.name))).sort((x, y) => (byWins ? (book[y.name]?.wins ?? 0) - (book[x.name]?.wins ?? 0) : 0)).map((b) => {
           const e = book[b.name]
