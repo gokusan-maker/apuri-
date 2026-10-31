@@ -20320,6 +20320,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Power in Your Pocket', 'How to Build a Smartphone', 'The History of Mining', 'Why the Wind Blows'], answer: 0, why: '全体として、電池のしくみと役割、再生可能エネルギーへの貢献、心配な点を述べている。' },
   },
   {
+    id: 'kyotsu-habits',
+    title: 'How Habits Shape Our Days',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every morning, many of us follow the same routine without thinking about it. We brush our teeth, make breakfast, and take the same route to school or work. These actions are habits: behaviors that we repeat so often that they become almost automatic. Psychologists believe that a large part of our daily behavior is made up of such habits, which means that understanding them can help us change our lives for the better.",
+      "Habits form through repetition. When we do something again and again in the same situation, our brains begin to connect the situation with the action. Over time, the situation alone is enough to start the behavior. For example, a student who always checks a phone as soon as they sit down at a desk may find that sitting down automatically makes them reach for the phone. Because habits require little conscious effort, they free our minds to focus on other things, ( A ) is one reason they are so useful.",
+      "However, the same process that creates good habits can also create bad ones. Habits such as eating snacks while watching television or staying up late can be difficult to break, ( B ) people know they are harmful. Simply deciding to stop is often not enough, because the habit is triggered automatically before we have time to think.",
+      "Researchers have suggested several strategies for changing habits. One is to change the situation that triggers the behavior. A student who wants to study without distraction might leave the phone in another room. Another strategy is to replace a bad habit with a better one, keeping the same trigger but changing the response. Someone who usually eats sweets when feeling stressed, for instance, could go for a short walk instead.",
+      "Building a new habit also takes time. Studies suggest that it can take weeks or even months before a new behavior becomes automatic, and the length of time varies greatly from person to person. Experts therefore recommend starting with small, easy actions, such as reading one page of a book each night, and gradually increasing them. Missing a day now and then is not a disaster. What matters most is returning to the habit and repeating it ( C ) it becomes part of daily life.",
+    ],
+    ja: [
+      '毎朝、私たちの多くは、考えることなく同じ日課にしたがっている。歯をみがき、朝ごはんを作り、学校や職場へ同じ道を通って行く。こうした行動は習慣、つまりあまりによくくり返すのでほとんど自動的になった行動である。心理学者は、私たちの毎日の行動の大部分がこのような習慣でできていると考えており、それは、習慣を理解することが人生をよりよく変えるのに役立つということを意味する。',
+      '習慣はくり返しによってできる。同じ状況で何度も何かをすると、脳はその状況とその行動を結びつけはじめる。やがて、その状況だけで行動が始まるようになる。たとえば、机にすわるとすぐにいつもスマートフォンを見る生徒は、すわるだけで自動的にスマートフォンに手がのびることに気づくかもしれない。習慣はほとんど意識的な努力を必要としないので、心をほかのことに集中させてくれる。それが習慣がとても役に立つ理由の1つである。',
+      'しかし、よい習慣をつくるのと同じはたらきが、悪い習慣もつくりうる。テレビを見ながらおやつを食べる、夜ふかしをするといった習慣は、体に悪いとわかっていても、やめるのがむずかしいことがある。習慣は考える時間がないうちに自動的に始まってしまうので、ただやめると決めるだけでは足りないことが多い。',
+      '研究者は、習慣を変えるためのいくつかの方法を提案している。1つは、その行動のきっかけとなる状況を変えることである。気を散らさずに勉強したい生徒は、スマートフォンを別の部屋に置いておくかもしれない。もう1つの方法は、きっかけは同じままで反応を変え、悪い習慣をよりよい習慣に置きかえることである。たとえば、ストレスを感じるといつもあまいものを食べる人は、かわりに少し散歩に行くことができる。',
+      '新しい習慣をつくるのにも時間がかかる。新しい行動が自動的になるまでに何週間、ときには何か月もかかることがあり、その長さは人によって大きくちがうことが研究で示されている。そのため専門家は、毎晩本を1ページ読むといった小さくかんたんな行動から始め、少しずつふやしていくことをすすめている。ときどき1日休んでしまっても大失敗ではない。最も大切なのは、その習慣にもどり、毎日の生活の一部になるまでくり返すことである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受け、is の主語になる非制限用法の which。' },
+      { id: 'B', choices: ['even when', 'so that', 'as if', 'in case'], answer: 0, why: '「体に悪いとわかっているときでさえ」やめにくい、という逆接なので even when。' },
+      { id: 'C', choices: ['until', 'unless', 'since', 'though'], answer: 0, why: '「生活の一部になるまで」くり返す、という時の終わりなので until。' },
+    ],
+    tf: [
+      { statement: '習慣は、ほとんど意識的な努力を必要としない。', answer: true, why: '第2段落 habits require little conscious effort。' },
+      { statement: '悪い習慣は、やめると決めればかならずすぐにやめられる。', answer: false, why: '第3段落 Simply deciding to stop is often not enough。' },
+      { statement: '新しい習慣が自動的になるまでの長さは、だれでも同じである。', answer: false, why: '第5段落 the length of time varies greatly from person to person。' },
+      { statement: '専門家は、小さくかんたんな行動から始めることをすすめている。', answer: true, why: '第5段落 Experts therefore recommend starting with small, easy actions。' },
+    ],
+    qa: [
+      { q: 'What might a student do to study without distraction?', choices: ['Leave the phone in another room.', 'Check the phone more often.', 'Study only late at night.', 'Eat snacks while studying.'], answer: 0, why: '第4段落 A student who wants to study without distraction might leave the phone in another room。' },
+      { q: 'What does the author say about missing a day?', choices: ['It is not a disaster.', 'It means the habit is lost forever.', 'It is the most important step.', 'It should never happen.'], answer: 0, why: '第5段落 Missing a day now and then is not a disaster。' },
+    ],
+    gist: [
+      { para: 1, choices: ['くり返しによって習慣ができるしくみ', '机の選び方', 'スマートフォンの使い方', '脳の大きさ'], answer: 0, why: '第2段落は、状況と行動が結びついて習慣ができるしくみを述べている。' },
+      { para: 3, choices: ['習慣を変えるための方法', 'あまいものの作り方', '散歩の効果', '別の部屋のそうじ'], answer: 0, why: '第4段落は、きっかけの状況を変える、反応を置きかえるという方法を述べている。' },
+    ],
+    titleQ: { choices: ['How Habits Shape Our Days', 'Why Breakfast Is Important', 'The History of Television', 'How to Stay Up Late'], answer: 0, why: '全体として、習慣のでき方、悪い習慣、変え方、新しい習慣のつくり方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
