@@ -21139,6 +21139,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Capturing a Moment', 'How to Paint a Sunset', 'The History of Smartphones', 'Why People Smile'], answer: 0, why: '全体として、写真の歴史（像を残す工夫・初期の写真・デジタル化）と、その影響を述べている。' },
   },
   {
+    id: 'kyotsu-garbage-sorting',
+    title: 'Sorting Our Garbage',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "People who move to a new town in Japan are often surprised by one particular task: sorting their garbage. In many places, household waste must be divided into several categories, such as burnable garbage, plastics, cans, bottles, and paper. Each type is collected on a different day of the week, and residents are expected to follow detailed rules about how to prepare it.",
+      "These rules can seem complicated at first. Bottles may need to be rinsed and their labels removed, newspapers tied together with string, and large items such as furniture collected only after a special request. Some towns divide garbage into more than ten categories. For newcomers, especially people from other countries, learning the system can take time, and many local governments provide guidebooks and posters in several languages ( A ) help residents understand.",
+      "Why do cities ask people to go to so much trouble? One important reason is to make recycling possible. When materials such as aluminum, glass, and paper are separated, they can be processed and turned into new products more easily. This reduces the need to dig up new raw materials and can save energy. Sorting also helps to reduce the amount of garbage that has to be burned or buried, ( B ) is important in a country with limited land for landfills.",
+      "The system depends heavily on the cooperation of residents. In many neighborhoods, people take turns keeping the collection areas clean and checking that garbage has been put out correctly. When someone makes a mistake, the bag may be left behind with a note explaining the problem. Some people find this strict, but others say it creates a sense of shared responsibility for the local environment.",
+      "Of course, sorting garbage is only one part of the solution. Experts point out that the most effective way to deal with waste is to produce less of it in the first place, for example by avoiding unnecessary packaging and repairing things instead of replacing them. Still, the habit of sorting encourages people to think about what they throw away and ( C ) happens to it afterward. In this way, a small daily task can help to build a more sustainable society.",
+    ],
+    ja: [
+      '日本で新しい町に引っこした人は、ある仕事におどろかされることが多い。それはごみの分別である。多くの場所では、家庭のごみを、燃えるごみ、プラスチック、かん、びん、紙など、いくつかの種類に分けなければならない。それぞれの種類は週のちがう曜日に集められ、住民はそれをどう準備するかについてのくわしいきまりにしたがうことになっている。',
+      'こうしたきまりは、はじめはややこしく思えることがある。びんはすすいでラベルをはがす必要があるかもしれず、新聞はひもでしばり、家具のような大きなものは特別に申しこんでからでないと集めてもらえない。ごみを10種類以上に分ける町もある。新しく来た人、とくにほかの国から来た人にとって、このしくみを覚えるには時間がかかることがあり、多くの地方自治体は、住民が理解するのを助けるために、いくつかの言語でガイドブックやポスターを用意している。',
+      'なぜ都市は人々にこれほどの手間をかけるよう求めるのだろうか。大切な理由の1つは、リサイクルを可能にすることである。アルミや紙やガラスのような材料が分けられていると、処理して新しい製品に変えやすくなる。これにより、新しい原料をほり出す必要がへり、エネルギーを節約できることもある。分別はまた、燃やしたりうめたりしなければならないごみの量をへらすのにも役立ち、それは埋め立て地のための土地がかぎられた国では大切なことである。',
+      'このしくみは住民の協力に大きくたよっている。多くの地域では、人々が交代でごみ置き場をきれいにし、ごみが正しく出されているかたしかめている。だれかがまちがえると、問題を説明するメモをつけてふくろが残されることがある。これをきびしいと感じる人もいるが、地域の環境に対する責任をみんなで分かち合う気持ちが生まれると言う人もいる。',
+      'もちろん、ごみの分別は解決策の一部にすぎない。専門家は、ごみに対処する最も効果的な方法は、たとえばいらない包装をさけたり、物を取りかえるかわりに直したりして、そもそもごみを出さないことだと指摘している。それでも、分別の習慣は、人々に自分が何をすて、そのあとそれがどうなるのかを考えさせる。このようにして、毎日の小さな仕事が、より持続可能な社会をつくる助けになりうる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'and', 'so'], answer: 0, why: '目的をあらわす不定詞 to help residents understand「住民が理解するのを助けるために」。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（ごみの量をへらすこと）を受け、is の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'how'], answer: 0, why: 'happens の主語が欠けた節で「何が起こるか」なので what。前の what they throw away と and でならんでいる。' },
+    ],
+    tf: [
+      { statement: '多くの場所では、ごみの種類ごとにちがう曜日に集められる。', answer: true, why: '第1段落 Each type is collected on a different day of the week。' },
+      { statement: 'すべての町が、ごみを3種類だけに分けている。', answer: false, why: '第2段落 Some towns divide garbage into more than ten categories。' },
+      { statement: '分別は、燃やしたりうめたりするごみの量をへらすのに役立つ。', answer: true, why: '第3段落 Sorting also helps to reduce the amount of garbage that has to be burned or buried。' },
+      { statement: '専門家は、分別だけでごみの問題はすべて解決すると言っている。', answer: false, why: '第5段落 sorting garbage is only one part of the solution。' },
+    ],
+    qa: [
+      { q: 'Why does separating materials make recycling easier?', choices: ['They can be processed and turned into new products more easily.', 'They become lighter.', 'They can be burned faster.', 'They take up more space.'], answer: 0, why: '第3段落 When materials ... are separated, they can be processed and turned into new products more easily。' },
+      { q: 'According to experts, what is the most effective way to deal with waste?', choices: ['Producing less of it in the first place.', 'Burning all of it.', 'Sorting it into more categories.', 'Sending it to other countries.'], answer: 0, why: '第5段落 the most effective way to deal with waste is to produce less of it in the first place。' },
+    ],
+    gist: [
+      { para: 1, choices: ['分別のきまりのややこしさと、その手助け', '家具の買い方', '新聞の読み方', 'ポスターの作り方'], answer: 0, why: '第2段落は、くわしいきまりと、新しく来た人への多言語の手助けを述べている。' },
+      { para: 3, choices: ['分別をささえる住民の協力', 'ごみ袋の値段', 'メモの書き方', '近所の人の名前'], answer: 0, why: '第4段落は、住民が交代で管理し、責任を分かち合うことを述べている。' },
+    ],
+    titleQ: { choices: ['Sorting Our Garbage', 'How to Move to a New Town', 'The History of Aluminum', 'Why Newspapers Are Popular'], answer: 0, why: '全体として、ごみの分別のしくみと理由、住民の協力、これからの課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
