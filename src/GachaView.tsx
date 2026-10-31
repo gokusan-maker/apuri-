@@ -639,6 +639,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🔊
             </button>
           </p>
+          {log.filter((e) => e.day === todayKey).length > 0 && (
+            // デザイン141：今日何回目のガチャか
+            <p className="gacha-skill gacha-today-count" aria-label="今日のガチャの回数">
+              🎰 今日 {log.filter((e) => e.day === todayKey).length}回目のガチャ
+            </p>
+          )}
           {ownedSpecies && (() => {
             // デザイン132：図鑑のコンプリート率
             const have = new Set(['mochi', result.species.id, ...ownedSpecies]).size

@@ -636,3 +636,10 @@ it('デザイン137：キャラ図鑑で、今日ガチャで出会った子に 
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe(speciesOf('cat').name)
 })
+
+it('デザイン141：ガチャの結果に、今日何回目のガチャかが出る', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('今日のガチャの回数').textContent).toBe('🎰 今日 1回目のガチャ')
+})
