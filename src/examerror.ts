@@ -1274,6 +1274,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Two (A) third of (B) the students (C) agreed (D) with the plan.', choices: ['(A) third of', '(B) the students', '(C) agreed', '(D) with the plan'], answer: 0, why: '分子が2以上なので two thirds of。' },
     ],
   },
+  {
+    id: 'exam-error-adjadv',
+    title: '入試の正誤問題〈55〉（国公立レベル：形容詞・副詞の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'good と well、形容詞 ＋ enough、hard と hardly、little と few、a few、surprising と surprised、late と lately、taste ＋形容詞、much ＋比較級、never など、形容詞と副詞の使い分け。',
+    ],
+    examples: [
+      { en: 'He is old enough to drive a car.', ja: '彼は車を運転できる年齢だ。' },
+      { en: 'The movie was much better than I expected.', ja: 'その映画は思っていたよりずっとよかった。' },
+    ],
+    questions: [
+      { sentence: 'She (A) speaks (B) English (C) very (D) good.', choices: ['(A) speaks', '(B) English', '(C) very', '(D) good'], answer: 3, why: '動詞を修飾するのは副詞 well：very well。' },
+      { sentence: 'He (A) is (B) enough old (C) to drive (D) a car.', choices: ['(A) is', '(B) enough old', '(C) to drive', '(D) a car'], answer: 1, why: 'enough は形容詞のうしろ：old enough。' },
+      { sentence: 'I (A) work (B) very (C) hardly (D) every day to pass the exam.', choices: ['(A) work', '(B) very', '(C) hardly', '(D) every day to pass the exam'], answer: 2, why: '「とても一生けんめいに」は very hard。hardly は「ほとんど～ない」。' },
+      { sentence: 'I (A) have (B) few money (C) left (D) this month.', choices: ['(A) have', '(B) few money', '(C) left', '(D) this month'], answer: 1, why: 'money は数えられないので little money。' },
+      { sentence: 'There (A) are (B) a little students (C) in (D) the room.', choices: ['(A) are', '(B) a little students', '(C) in', '(D) the room'], answer: 1, why: '数えられる名詞には a few：a few students。' },
+      { sentence: 'It was (A) a surprised result (B) for (C) everyone (D) in the class.', choices: ['(A) a surprised result', '(B) for', '(C) everyone', '(D) in the class'], answer: 0, why: '結果が人をおどろかせるので a surprising result。' },
+      { sentence: 'He (A) came (B) lately (C) to school (D) this morning.', choices: ['(A) came', '(B) lately', '(C) to school', '(D) this morning'], answer: 1, why: '「おそく」は late。lately は「最近」。' },
+      { sentence: 'This soup (A) smells (B) nice and (C) tastes (D) well.', choices: ['(A) smells', '(B) nice and', '(C) tastes', '(D) well'], answer: 3, why: 'taste ＋形容詞：tastes good。' },
+      { sentence: 'The movie (A) was (B) very better (C) than I (D) expected.', choices: ['(A) was', '(B) very better', '(C) than I', '(D) expected'], answer: 1, why: '比較級を強めるのは much：much better。' },
+      { sentence: 'I (A) have (B) ever (C) seen (D) a real panda.', choices: ['(A) have', '(B) ever', '(C) seen', '(D) a real panda'], answer: 1, why: 'ever は肯定文で使わない：have never seen。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
