@@ -20242,6 +20242,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Keeping the Countryside Connected', 'How to Drive a Bus', 'The History of Trains in Cities', 'Why Taxis Are Expensive'], answer: 0, why: '全体として、いなかの公共交通の問題と新しい取り組み、その大切さを述べている。' },
   },
   {
+    id: 'kyotsu-kintsugi',
+    title: 'Joining with Gold',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When a favorite cup or bowl breaks, most people simply throw it away and buy a new one. In Japan, however, there is a traditional craft that takes a very different approach. It is called kintsugi, which means “joining with gold.” Instead of hiding the cracks, craftspeople repair the broken pieces with a special lacquer and then decorate the lines with gold powder, so that the repaired object shines where it was once damaged.",
+      "The technique requires great patience. First, the broken pieces are carefully cleaned and joined together with lacquer, a natural material made from the sap of a tree. The lacquer must dry slowly over many days, and sometimes the process is repeated several times to make the repair strong. Only at the end is the gold applied. A single piece can take weeks or even months to complete, ( A ) is why kintsugi is considered a true art.",
+      "What makes kintsugi especially interesting is the way of thinking behind it. Rather than treating damage as something shameful that should be hidden, kintsugi treats it as part of the object’s history. The golden lines show that the bowl has been used, broken, and cared for. Many people feel that a repaired piece becomes even more beautiful and valuable than it was before, because it now carries a unique story.",
+      "In recent years, kintsugi has attracted attention far beyond Japan. Workshops are held in many countries, and simple kits allow beginners to try the technique at home. Some people say that its popularity is connected to a growing interest in repairing things instead of throwing them away. In a world ( B ) many products are designed to be replaced quickly, kintsugi offers a different message: things that are worth keeping are worth fixing.",
+      "The ideas behind kintsugi are also used to talk about people. Everyone experiences failures and difficult times, and these experiences can leave “cracks” in our lives. Kintsugi suggests that such experiences do not have to be hidden. Instead, the way we recover from them can become a source of strength. In this sense, an old craft for repairing pottery can teach us ( C ) to look at our own imperfections with kindness.",
+    ],
+    ja: [
+      'お気に入りのカップや茶わんが割れると、ほとんどの人はただすてて新しいものを買う。しかし日本には、まったくちがう考え方をする伝統工芸がある。それは金継ぎとよばれ、「金でつなぐ」という意味である。職人はひびをかくすのではなく、割れたかけらを特別な漆で直し、それからその線を金粉でかざるので、直された器はかつてこわれたところでかがやくのである。',
+      'この技術には大きなしんぼう強さが必要である。まず、割れたかけらをていねいにきれいにして、木の樹液からつくられる天然の材料である漆でつなぎ合わせる。漆は何日もかけてゆっくりかわかさなければならず、直したところを強くするために、この作業を何度もくり返すこともある。金をぬるのは最後になってからである。1つの作品を仕上げるのに何週間、ときには何か月もかかることがあり、だからこそ金継ぎは本物の芸術と考えられている。',
+      '金継ぎがとくに興味深いのは、その背後にある考え方である。金継ぎは、きずをかくすべきはずかしいものとしてあつかうのではなく、その器の歴史の一部としてあつかう。金色の線は、その茶わんが使われ、割れ、大切にされてきたことを示している。直された器は、今では独自の物語をもっているので、前よりもさらに美しく価値のあるものになると感じる人も多い。',
+      '近年、金継ぎは日本をはるかにこえて注目を集めている。多くの国でワークショップが開かれ、かんたんなキットで初心者も家でこの技術をためすことができる。その人気は、物をすてるかわりに直すことへの関心が高まっていることと関係があると言う人もいる。多くの製品がすぐに取りかえられるように作られている世界で、金継ぎは別のメッセージを伝えている。とっておく価値のある物は、直す価値もあるのだ。',
+      '金継ぎの考え方は、人について語るのにも使われる。だれもが失敗や苦しい時期を経験し、そうした経験は私たちの人生に「ひび」を残すことがある。金継ぎは、そうした経験をかくす必要はないことを示している。むしろ、そこからどのように立ち直るかが、強さのみなもとになりうる。この意味で、器を直す古い工芸は、自分の不完全さをやさしく見る方法を私たちに教えてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受ける非制限用法の which。which is why ～「だから～なのだ」。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a world で、うしろの many products are designed ～ は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'why'], answer: 0, why: 'teach 人 how to ～「人に～のしかたを教える」。' },
+    ],
+    tf: [
+      { statement: '金継ぎでは、ひびを目立たないようにかくす。', answer: false, why: '第1段落 Instead of hiding the cracks ... decorate the lines with gold powder。' },
+      { statement: '漆は木の樹液からつくられる天然の材料である。', answer: true, why: '第2段落 lacquer, a natural material made from the sap of a tree。' },
+      { statement: '金継ぎの作品は、1日で仕上がることが多い。', answer: false, why: '第2段落 A single piece can take weeks or even months to complete。' },
+      { statement: '金継ぎは、日本の外でも注目されている。', answer: true, why: '第4段落 kintsugi has attracted attention far beyond Japan。' },
+    ],
+    qa: [
+      { q: 'How does kintsugi treat damage?', choices: ['As part of the object’s history.', 'As something shameful to hide.', 'As a reason to throw the object away.', 'As a mistake made by the craftsperson.'], answer: 0, why: '第3段落 kintsugi treats it as part of the object’s history。' },
+      { q: 'What message does kintsugi offer in a world of quickly replaced products?', choices: ['Things that are worth keeping are worth fixing.', 'New products are always better.', 'Gold is the most valuable material.', 'Broken things should be sold.'], answer: 0, why: '第4段落 things that are worth keeping are worth fixing。' },
+    ],
+    gist: [
+      { para: 1, choices: ['金継ぎの作業に必要なしんぼう強さ', '金の値段', '木の育て方', '茶わんの買い方'], answer: 0, why: '第2段落は、漆でつなぎ、ゆっくりかわかし、最後に金をぬるという手間のかかる作業を述べている。' },
+      { para: 4, choices: ['金継ぎの考え方を人の生き方にあてはめること', '陶芸教室の値段', '失敗のさけ方', '古い工芸の歴史'], answer: 0, why: '第5段落は、失敗からの立ち直りを強さとみる、人への応用を述べている。' },
+    ],
+    titleQ: { choices: ['Joining with Gold', 'How to Buy a New Cup', 'The History of Tea', 'Why Pottery Breaks'], answer: 0, why: '全体として、金継ぎの技術、その背後の考え方、世界での広まり、人への教えを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
