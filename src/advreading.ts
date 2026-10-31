@@ -18838,6 +18838,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Music and the Brain', 'How to Play the Piano', 'The History of Festivals', 'Why Babies Cry'], answer: 0, why: '全体として、音楽が脳にあたえる影響、演奏の効果、大げさな主張への注意、音楽の価値を述べている。' },
   },
   {
+    id: 'kyotsu-groundwater',
+    title: 'The Water Beneath Our Feet',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think about water, they usually picture rivers, lakes, and the sea. Yet a huge amount of the world's fresh water is hidden beneath our feet. Rain and melting snow slowly soak into the ground and collect in layers of sand, gravel, and rock. This water, called groundwater, is one of the most important natural resources on Earth, even though most people never see it. Understanding how it works helps us see why it must be protected.",
+      "Groundwater is used in many ways. In many countries, a large share of drinking water comes from wells that reach underground layers of water. Farmers pump groundwater to irrigate their fields, especially in dry regions where rain is not enough to grow crops. Factories also use it for cooling machines and making products. Because groundwater is often cleaner than surface water and is available even during dry seasons, it can seem like an endless supply.",
+      "In reality, however, groundwater can run out. Water that is pumped from the ground is replaced only slowly, as rain gradually soaks downward over many years, or in some cases thousands of years. When people take water out faster than nature can refill it, the level of underground water falls. Wells must then be dug deeper, ( A ) raises costs and may eventually leave some areas without enough water. In some farming regions, this has already become a serious problem.",
+      "Taking too much groundwater can cause another serious problem: the ground itself may sink. As water is removed from layers of soil, the soil becomes compressed and the surface slowly drops. In the twentieth century, parts of several large cities, including some areas of Tokyo, sank noticeably because of heavy pumping. Rules limiting the use of groundwater were later introduced, ( B ) helped to slow or stop the sinking.",
+      "Pollution is also a concern. Chemicals from factories, farms, or leaking tanks can seep into the ground and contaminate groundwater, and cleaning it can be extremely difficult. For these reasons, experts emphasise careful management, such as monitoring water levels and protecting the areas where rain soaks into the ground. Groundwater reminds us ( C ) even resources we cannot see need to be used wisely. What we do on the surface today will affect the water of the future.",
+    ],
+    ja: [
+      '水について考えるとき、人々はふつう川や湖、海を思いうかべる。しかし世界の淡水のばく大な量は、私たちの足の下にかくれている。雨やとけた雪はゆっくりと地面にしみこみ、砂やじゃり、岩の層にたまる。地下水とよばれるこの水は、ほとんどの人が見たことがないけれども、地球で最も大切な天然資源の一つである。そのしくみを理解すると、なぜそれを守らなければならないのかがわかる。',
+      '地下水はさまざまな形で使われている。多くの国では、飲み水の大きな割合が、地下の水の層にとどく井戸から得られている。農家は、とくに雨だけでは作物を育てるのに足りない乾燥した地域で、畑に水をやるために地下水をくみ上げる。工場も、機械を冷やしたり製品を作ったりするのに地下水を使う。地下水はしばしば地表の水よりきれいで、乾季でも手に入るので、かぎりなく使えるように思えるかもしれない。',
+      'しかし実際には、地下水はなくなることがある。地面からくみ上げられた水は、雨が何年も、場合によっては何千年もかけてゆっくり下へしみこむことで、ゆっくりとしか補われない。自然が補うより速く人々が水をくみ出すと、地下水の水位は下がる。すると井戸をもっと深くほらなければならず、そのことが費用を上げ、やがては十分な水のない地域を生むかもしれない。いくつかの農業地域では、これはすでに深刻な問題になっている。',
+      '地下水をくみすぎると、もう一つ深刻な問題が起こりうる。地面そのものがしずむかもしれないのである。土の層から水がぬかれると、土はおしちぢめられ、地表はゆっくり下がる。20世紀には、東京の一部の地域をふくむいくつかの大都市の一部が、大量のくみ上げのためにはっきりとしずんだ。のちに地下水の使用を制限するきまりが取り入れられ、そのことがしずむのをおそくしたり止めたりするのに役立った。',
+      '汚染も心配されている。工場や農地、もれたタンクからの化学物質が地面にしみこんで地下水をよごすことがあり、それをきれいにするのはきわめてむずかしい。このため専門家は、水位を監視したり、雨が地面にしみこむ地域を守ったりするなど、注意深い管理を強調している。地下水は、見えない資源でさえかしこく使う必要があることを思い出させてくれる。今日私たちが地上ですることが、未来の水に影響するのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（井戸を深くほらなければならないこと）を受け、raises の主語になるので which。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（きまりが取り入れられたこと）を受け、helped の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '地下水は、雨やとけた雪が地面にしみこんでできる。', answer: true, why: '第1段落 Rain and melting snow slowly soak into the ground and collect in layers。' },
+      { statement: 'くみ上げた地下水は、すぐに自然に補われる。', answer: false, why: '第3段落 Water that is pumped from the ground is replaced only slowly。' },
+      { statement: '20世紀に、東京の一部の地域は地下水のくみ上げのためにしずんだ。', answer: true, why: '第4段落 some areas of Tokyo, sank noticeably because of heavy pumping。' },
+      { statement: '筆者によれば、よごれた地下水はかんたんにきれいにできる。', answer: false, why: '第5段落 cleaning it can be extremely difficult。' },
+    ],
+    qa: [
+      { q: 'Why can groundwater seem like an endless supply?', choices: ['It is often clean and available even during dry seasons.', 'It is always found near the sea.', 'It never needs to be pumped.', 'It is made in factories.'], answer: 0, why: '第2段落 Because groundwater is often cleaner than surface water and is available even during dry seasons, it can seem like an endless supply。' },
+      { q: 'What happens to the ground when too much water is removed from soil layers?', choices: ['The soil is compressed and the surface slowly sinks.', 'The ground rises higher.', 'New rivers appear.', 'The soil becomes cleaner.'], answer: 0, why: '第4段落 the soil becomes compressed and the surface slowly drops。' },
+    ],
+    gist: [
+      { para: 1, choices: ['地下水のさまざまな使い道', '井戸のほり方の歴史', '工場の機械', '雨のふり方'], answer: 0, why: '第2段落は、飲み水・農業・工場など、地下水の使われ方を述べている。' },
+      { para: 3, choices: ['くみすぎによる地盤沈下', '東京の歴史', '土の作り方', 'ビルの高さ'], answer: 0, why: '第4段落は、地下水のくみすぎで地面がしずむ問題と、きまりによる対策を述べている。' },
+    ],
+    titleQ: { choices: ['The Water Beneath Our Feet', 'How to Swim in Lakes', 'The History of Tokyo', 'Why Rain Is Cold'], answer: 0, why: '全体として、見えない地下水の大切さ、使い道、くみすぎや汚染の問題と管理を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
