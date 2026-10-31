@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'robin', name: 'コマドリン', egg: 'もりかげのさえずりタマゴ', token: 'コマ', bigToken: 'コマドリン', color: '#fb923c', line: '#7c2d12', rate: 0.02, desc: '森の木かげで高い声でさえずる小鳥。オレンジ色のむねをはって、毎朝いちばんに歌いはじめる。' },
   { id: 'quail', name: 'ウズラン', egg: 'のはらのころころタマゴ', token: 'ウズ', bigToken: 'ウズラン', color: '#d6b48a', line: '#78350f', rate: 0.02, desc: '草むらをちょこちょこ走る小さなウズラ。まるい体で地面をすばやく動き、こつこつ小さなたねを集めるのが得意。' },
   { id: 'heron', name: 'サギリン', egg: 'ひがたのすらりタマゴ', token: 'サギ', bigToken: 'サギリン', color: '#e2e8f0', line: '#334155', rate: 0.02, desc: '水辺に1本足で立つサギ。じっと動かずに水の中を見つめ、ここぞというときにすばやくくちばしをのばす。' },
   { id: 'dragonfly', name: 'トンボン', egg: 'みずべのすいすいタマゴ', token: 'トン', bigToken: 'トンボン', color: '#7dd3fc', line: '#075985', rate: 0.02, desc: '池の上をすいすい飛ぶトンボ。大きな目でまわりをぐるっと見わたし、空中でぴたっと止まってねらいをさだめる。' },
