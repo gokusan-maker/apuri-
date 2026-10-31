@@ -18721,6 +18721,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Seeing the Invisible', 'How to Become an Astronaut', 'The History of Films', 'Why Stars Are Hot'], answer: 0, why: '全体として、ブラックホールとは何か、見えないものをどう研究するか、最初の画像とその意味を述べている。' },
   },
   {
+    id: 'kyotsu-job-interviews',
+    title: 'Inside the Job Interview',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For most people, a job interview is one of the most stressful experiences in their working lives. In a short conversation, often lasting less than an hour, they must show a stranger why they are the right person for the position. Companies, too, take interviews seriously, because hiring the wrong person can be costly. Yet researchers have found that interviews are not always as reliable as people think. Understanding why can help both companies and job seekers.",
+      "One problem is the power of first impressions. Studies suggest that interviewers often form an opinion about a candidate within the first few minutes, based on things such as appearance, a handshake, or the way the person enters the room. Once this impression has formed, interviewers may pay more attention to information that supports it and less attention to information that does not, ( A ) can lead to unfair decisions.",
+      "Another problem is that interviewers may unconsciously prefer candidates who are similar to themselves, for example people who went to the same kind of school or share the same hobbies. Such preferences have little to do with whether a person can actually do the job well. As a result, talented candidates may be rejected simply because they seem unfamiliar.",
+      "To reduce these problems, many organisations now use what are called structured interviews. In a structured interview, every candidate is asked the same set of questions, which are carefully designed to relate to the skills the job requires. Answers are then scored using clear standards. Research has generally found that structured interviews predict job performance better than casual conversations, ( B ) they make it easier to compare candidates fairly.",
+      "For candidates, there are also lessons to learn. Preparing examples of past experiences, such as a time when you solved a problem or worked as part of a team, can help you give clear and convincing answers. It is also useful to learn about the company in advance and to prepare questions of your own. Above all, an interview is not only a chance for the company to judge you but also a chance for you to decide ( C ) the company is a place where you would like to work. Keeping this in mind may also help you feel a little less nervous.",
+    ],
+    ja: [
+      'ほとんどの人にとって、就職の面接は働く人生の中で最も緊張する経験の一つである。しばしば1時間にも満たない短い会話の中で、見知らぬ人に、なぜ自分がその仕事にふさわしい人物なのかを示さなければならない。会社のほうも、まちがった人をやとうと大きな損失になりうるので、面接を真剣に考えている。しかし研究者は、面接がいつも人々が思うほど信頼できるわけではないことを発見している。その理由を理解することは、会社と仕事をさがす人の両方の役に立つ。',
+      '一つの問題は、第一印象の力である。研究によれば、面接する人はしばしば、見た目や握手、部屋への入り方などにもとづいて、最初の数分のうちに候補者についての意見を作ってしまう。いったんこの印象ができると、面接する人はそれをささえる情報により注意をはらい、そうでない情報にはあまり注意をはらわなくなるかもしれず、そのことが不公平な判断につながりうる。',
+      '別の問題は、面接する人が無意識のうちに、たとえば同じような学校に通っていたり同じ趣味をもっていたりする、自分に似た候補者を好むかもしれないことである。そうした好みは、その人が実際に仕事をうまくこなせるかどうかとはほとんど関係がない。その結果、才能のある候補者が、ただなじみがないように見えるというだけで不合格にされるかもしれない。',
+      'こうした問題をへらすために、今では多くの組織が構造化面接とよばれるものを使っている。構造化面接では、すべての候補者が同じ一連の質問をされ、その質問は仕事に必要な技能に関係するよう注意深く作られている。答えは、はっきりした基準を使って点数がつけられる。研究ではおおむね、構造化面接はくだけた会話よりも仕事ぶりをよく予測することがわかっている。候補者を公平に比べやすくなるからである。',
+      '候補者にとっても、学ぶべきことがある。問題を解決したときやチームの一員として働いたときなど、過去の経験の例を用意しておくと、はっきりとして説得力のある答えをする助けになる。前もって会社について調べ、自分からの質問を用意しておくことも役に立つ。何よりも、面接は会社があなたを判断する機会であるだけでなく、あなたがその会社を働きたい場所かどうか決める機会でもあるのだ。このことを心にとめておくと、少し緊張がやわらぐかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（都合のよい情報だけに注意をはらうこと）を受け、can lead の主語になるので which。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「構造化面接はよく予測する。なぜなら公平に比べやすいから」と理由を表すので because。' },
+      { id: 'C', choices: ['whether', 'that', 'what', 'which'], answer: 0, why: 'decide のあとに「～かどうか」を表す名詞節を置くので whether。' },
+    ],
+    tf: [
+      { statement: '面接する人は、最初の数分で候補者についての意見を作ることが多い。', answer: true, why: '第2段落 interviewers often form an opinion about a candidate within the first few minutes。' },
+      { statement: '自分に似た候補者を好むことは、仕事の能力と強く関係している。', answer: false, why: '第3段落 Such preferences have little to do with whether a person can actually do the job well。' },
+      { statement: '構造化面接では、すべての候補者が同じ質問をされる。', answer: true, why: '第4段落 every candidate is asked the same set of questions。' },
+      { statement: '筆者によれば、面接は会社が候補者を判断するためだけのものである。', answer: false, why: '第5段落 not only a chance for the company to judge you but also a chance for you to decide。' },
+    ],
+    qa: [
+      { q: 'What is one reason interviews may be unreliable?', choices: ['First impressions can strongly influence interviewers.', 'Interviews always last too long.', 'Candidates never prepare.', 'Companies do not care about hiring.'], answer: 0, why: '第2段落 One problem is the power of first impressions。' },
+      { q: 'Which is NOT mentioned as advice for candidates?', choices: ['Wearing the most expensive clothes possible.', 'Preparing examples of past experiences.', 'Learning about the company in advance.', 'Preparing questions of your own.'], answer: 0, why: '第5段落に高い服を着るという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['自分に似た候補者を好む問題', '学校の選び方', '趣味の見つけ方', '会社の名前の決め方'], answer: 0, why: '第3段落は、面接する人が自分に似た人を好み、才能のある人を落とすかもしれない問題を述べている。' },
+      { para: 3, choices: ['構造化面接という対策', '点数のつけ方の歴史', 'テストの作り方', '会議の進め方'], answer: 0, why: '第4段落は、同じ質問と基準を使う構造化面接と、その効果を述べている。' },
+    ],
+    titleQ: { choices: ['Inside the Job Interview', 'How to Shake Hands', 'The History of Companies', 'Why Hobbies Are Important'], answer: 0, why: '全体として、面接の信頼性の問題、構造化面接という対策、候補者へのアドバイスを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
