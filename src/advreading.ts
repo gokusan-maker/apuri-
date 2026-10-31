@@ -21157,7 +21157,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'もちろん、ごみの分別は解決策の一部にすぎない。専門家は、ごみに対処する最も効果的な方法は、たとえばいらない包装をさけたり、物を取りかえるかわりに直したりして、そもそもごみを出さないことだと指摘している。それでも、分別の習慣は、人々に自分が何をすて、そのあとそれがどうなるのかを考えさせる。このようにして、毎日の小さな仕事が、より持続可能な社会をつくる助けになりうる。',
     ],
     blanks: [
-      { id: 'A', choices: ['to', 'for', 'and', 'so'], answer: 0, why: '目的をあらわす不定詞 to help residents understand「住民が理解するのを助けるために」。' },
+      { id: 'A', choices: ['to', 'for', 'of', 'so'], answer: 0, why: '目的をあらわす不定詞 to help residents understand「住民が理解するのを助けるために」。for・of は前置詞なので原形 help を続けられない。' },
       { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（ごみの量をへらすこと）を受け、is の主語になる非制限用法の which。that はコンマのあとに使えない。' },
       { id: 'C', choices: ['what', 'that', 'which', 'how'], answer: 0, why: 'happens の主語が欠けた節で「何が起こるか」なので what。前の what they throw away と and でならんでいる。' },
     ],
