@@ -617,6 +617,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               👯 相棒とおそろい！
             </p>
           )}
+          {!result.mystery && (partnerSpecies ?? 'mochi') !== result.species.id && typeOf(partnerSpecies ?? 'mochi').id === typeOf(result.species.id).id && (
+            // デザイン153：出た子のタイプが相棒と同じ
+            <p className="gacha-new-type gacha-same-type" role="status">
+              🤝 相棒と同じ{typeOf(result.species.id).icon}{typeOf(result.species.id).name}
+            </p>
+          )}
           {onNameNew && (named ? (
             <p className="gacha-named">🏷 「{named}」と名前をつけたよ！</p>
           ) : naming === null ? (

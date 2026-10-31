@@ -655,3 +655,19 @@ it('デザイン147：出た子が相棒と同じ種類なら「👯 相棒と�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText('👯 相棒とおそろい！')).toBeNull()
 })
+
+it('デザイン153：出た子のタイプが相棒と同じなら「🤝 相棒と同じ○○型」が出る（同じ種類のときは出さない）', async () => {
+  const { typeOf } = await import('./chartype')
+  const { SPECIES } = await import('./monster')
+  const other = SPECIES.find((sp) => sp.id !== 'fox' && typeOf(sp.id).id === typeOf('fox').id)!
+  const t = typeOf('fox')
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} partnerSpecies="fox" onDraw={() => ({ kind: kindOf('umi'), species: other, newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText(`🤝 相棒と同じ${t.icon}${t.name}`)).toBeInTheDocument()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} partnerSpecies="fox" onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('fox'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText(/🤝 相棒と同じ/)).toBeNull()
+})
