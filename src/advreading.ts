@@ -18994,6 +18994,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Masters of the Air', 'How to Catch Fish in a Pond', 'The History of Dinosaurs', 'Why Rice Fields Are Green'], answer: 0, why: '全体として、トンボの古い歴史、飛ぶ力、目、水の中の子ども時代、日本とのかかわりを述べている。' },
   },
   {
+    id: 'kyotsu-ageing-society',
+    title: 'Living Longer Together',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Japan has one of the oldest populations in the world. Today, more than one in four people in the country are aged sixty-five or older, and the proportion is expected to rise further in the coming decades. This change is the result of two trends: people are living much longer than in the past, and fewer babies are being born. Together, they are reshaping Japanese society in many ways. Understanding these changes is important for people of every generation.",
+      "An ageing population brings several challenges. As the number of older people increases, more money is needed for pensions and medical care, while the number of working-age people who pay taxes is shrinking. There is also a growing demand for care workers to help elderly people with daily tasks, yet many care facilities find it difficult to hire enough staff. In rural areas, where young people have often moved to cities, some communities are struggling to keep shops, buses, and schools running.",
+      "However, it would be a mistake to see older people only as a problem. Many people in their sixties and seventies are healthy and active, and a large number continue to work, volunteer, or take part in community activities. Their knowledge and experience can be valuable to younger generations, ( A ) many towns have started programmes in which older residents teach children traditional skills or help them with their studies.",
+      "Technology is also expected to play a role. Robots that help carry patients, devices that remind people to take medicine, and systems that allow doctors to check on patients from a distance are being developed and tested. Supporters believe that such tools can reduce the burden on care workers, ( B ) critics point out that human contact and kindness cannot easily be replaced by machines.",
+      "Other countries are watching Japan closely, because many of them will soon face similar changes. The way Japanese society responds may offer useful lessons for the rest of the world. In the end, the challenge is not only about money or technology, but about building a society ( C ) people of all ages can live with dignity and support one another. Such a society would benefit not only older people but everyone.",
+    ],
+    ja: [
+      '日本は世界で最も高齢化した人口をもつ国の一つである。今日、この国の4人に1人以上が65歳以上であり、その割合はこれから数十年でさらに上がると予想されている。この変化は2つの流れの結果である。人々が昔よりずっと長生きするようになったことと、生まれる赤ちゃんが少なくなったことである。この2つが合わさって、日本の社会をさまざまな形でつくり変えている。こうした変化を理解することは、あらゆる世代の人々にとって大切である。',
+      '人口の高齢化はいくつかの課題をもたらす。年配の人の数がふえるにつれて、年金や医療にもっと多くのお金が必要になる一方で、税金をはらう働く世代の人の数はへっている。年配の人の日々の生活を助ける介護職員の必要もふえているが、多くの介護施設は十分な職員をやとうのがむずかしいと感じている。若い人がしばしば都市に移ってしまった地方では、店やバス、学校を続けるのに苦労している地域もある。',
+      'しかし、年配の人を問題としてだけ見るのはまちがいだろう。60代や70代の多くの人は健康で活動的で、多くの人が働いたり、ボランティアをしたり、地域の活動に参加したりしつづけている。彼らの知識と経験は若い世代にとって価値があり、そのため多くの町が、年配の住民が子どもに伝統的な技を教えたり勉強を手伝ったりする取り組みを始めている。',
+      '技術も役割をはたすと期待されている。患者を運ぶのを助けるロボット、薬を飲むよう知らせる機器、医師が遠くから患者のようすを確かめられるしくみが開発され、ためされている。支持する人々は、こうした道具が介護職員の負担をへらせると考えているが、一方で批判する人々は、人と人とのふれあいややさしさはかんたんには機械にかえられないと指摘している。',
+      'ほかの国々は日本を注意深く見守っている。その多くがまもなく同じような変化に直面するからである。日本の社会がどのように対応するかは、世界のほかの国々に役立つ教訓をあたえるかもしれない。結局のところ、この課題はお金や技術だけの問題ではなく、あらゆる年齢の人々が尊厳をもってくらし、たがいにささえ合える社会をつくることの問題なのである。そのような社会は、年配の人だけでなくすべての人のためになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'but', 'or', 'unless'], answer: 0, why: '「知識と経験は価値がある、そして（そのため）多くの町が取り組みを始めている」と内容をつけ加えるので and。' },
+      { id: 'B', choices: ['while', 'because', 'unless', 'until'], answer: 0, why: '「支持する人は負担をへらせると考える一方で、批判する人は～と指摘する」と2つを対比するので while。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a society で、うしろが完全な文（people of all ages can live …）なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '今日、日本の4人に1人以上が65歳以上である。', answer: true, why: '第1段落 more than one in four people in the country are aged sixty-five or older。' },
+      { statement: '多くの介護施設は、十分な職員をかんたんにやとえている。', answer: false, why: '第2段落 many care facilities find it difficult to hire enough staff。' },
+      { statement: '60代や70代の多くの人は、働いたりボランティアをしたりしつづけている。', answer: true, why: '第3段落 a large number continue to work, volunteer, or take part in community activities。' },
+      { statement: '筆者によれば、介護はすべて機械にかえることができる。', answer: false, why: '第4段落 critics point out that human contact and kindness cannot easily be replaced by machines。' },
+    ],
+    qa: [
+      { q: 'What two trends have caused Japan’s population to age?', choices: ['People live longer and fewer babies are born.', 'More people move abroad and food is cheaper.', 'Cities are growing and schools are closing.', 'Taxes are higher and pensions are lower.'], answer: 0, why: '第1段落 people are living much longer than in the past, and fewer babies are being born。' },
+      { q: 'Why are other countries watching Japan closely?', choices: ['Many of them will soon face similar changes.', 'Japan has the largest population in the world.', 'Japan has stopped using technology.', 'Japan has no older people.'], answer: 0, why: '第5段落 because many of them will soon face similar changes。' },
+    ],
+    gist: [
+      { para: 1, choices: ['高齢化がもたらす課題', '年金の計算のしかた', '地方の観光', 'バスの時刻表'], answer: 0, why: '第2段落は、年金・医療のお金、介護職員の不足、地方の生活の課題を述べている。' },
+      { para: 3, choices: ['介護を助ける技術とその限界', 'ロボットの作り方', '病院の建て方', '薬の種類'], answer: 0, why: '第4段落は、介護を助ける技術への期待と、人のふれあいはかえられないという批判を述べている。' },
+    ],
+    titleQ: { choices: ['Living Longer Together', 'How to Build a Robot', 'The History of Pensions', 'Why Babies Are Born'], answer: 0, why: '全体として、日本の高齢化の原因・課題・年配の人の力・技術の役割・世界への教訓を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
