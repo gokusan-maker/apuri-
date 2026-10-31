@@ -3477,3 +3477,4 @@
 - 2026-10-31: 文法：入試の誤文訂正〈54〉（TOEFL・IELTS の書き言葉㉑：For example・such as・In other words・That is to say・including・an example of・To put it simply・namely・typical・Especially）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「アカウントを安全にたもつ（パスワード）」（社会・情報・The 比較級／非制限の which／in the future の空所）
 - 2026-10-31: デザイン：キャラ図鑑で、相棒と同じタイプの子に 🤝 のしるしを出すようにした
+- 2026-10-31: 文法：入試の正誤問題〈61〉（例をあげる・言いかえる表現：For example・such as・In other words・including・an example of・To put it simply・namely・typical・especially・That is to say）10問

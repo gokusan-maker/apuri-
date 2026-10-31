@@ -1418,6 +1418,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'If he (A) had taken the medicine (B) last week, he (C) would (D) have been healthy now.', choices: ['(A) had taken the medicine', '(B) last week, he', '(C) would', '(D) have been healthy now'], answer: 3, why: 'now の結果なので would be healthy（混合仮定法）：(D) を be healthy now に。' },
     ],
   },
+  {
+    id: 'exam-error-example',
+    title: '入試の正誤問題〈61〉（例をあげる・言いかえる表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'For example と such as、In other words、That is to say、including、an example of、To put it simply、namely、typical、especially など、エッセイで例をあげたり言いかえたりするときの表現。',
+    ],
+    examples: [
+      { en: 'Some birds, including penguins, cannot fly.', ja: 'ペンギンをふくめ、飛べない鳥もいる。' },
+      { en: 'A typical example of renewable energy is solar power.', ja: '再生可能エネルギーの典型的な例は太陽光発電である。' },
+    ],
+    questions: [
+      { sentence: '(A) For example of, (B) students (C) can use (D) the library on weekends.', choices: ['(A) For example of', '(B) students', '(C) can use', '(D) the library on weekends'], answer: 0, why: '文頭の「たとえば」は For example。' },
+      { sentence: 'Fruits (A) like as (B) apples (C) and oranges (D) are healthy.', choices: ['(A) like as', '(B) apples', '(C) and oranges', '(D) are healthy'], answer: 0, why: '例をあげるのは such as（または like）。like as とはいわない。' },
+      { sentence: 'The plan (A) was too expensive. (B) In other word, (C) it (D) was a failure.', choices: ['(A) was too expensive', '(B) In other word', '(C) it', '(D) was a failure'], answer: 1, why: '「言いかえれば」は In other words（複数形）。' },
+      { sentence: 'Some birds, (A) include penguins, (B) cannot fly (C) even though (D) they have wings.', choices: ['(A) include penguins', '(B) cannot fly', '(C) even though', '(D) they have wings'], answer: 0, why: '「～をふくめて」は including penguins。' },
+      { sentence: 'This is (A) a good example (B) for (C) how technology (D) helps people.', choices: ['(A) a good example', '(B) for', '(C) how technology', '(D) helps people'], answer: 1, why: '「～の例」は an example of。' },
+      { sentence: '(A) To put it simple, (B) the answer (C) to your question (D) is no.', choices: ['(A) To put it simple', '(B) the answer', '(C) to your question', '(D) is no'], answer: 0, why: 'To put it simply（副詞）。' },
+      { sentence: 'Two students, (A) namely Ken and Aya, (B) was (C) absent (D) yesterday.', choices: ['(A) namely Ken and Aya', '(B) was', '(C) absent', '(D) yesterday'], answer: 1, why: '主語は Two students（複数）なので were。namely は正しい。' },
+      { sentence: 'A (A) typically example (B) of renewable energy (C) is (D) solar power.', choices: ['(A) typically example', '(B) of renewable energy', '(C) is', '(D) solar power'], answer: 0, why: '名詞を修飾するのは形容詞 typical。' },
+      { sentence: 'Many tourists (A) visit (B) Kyoto, (C) especial (D) in autumn.', choices: ['(A) visit', '(B) Kyoto', '(C) especial', '(D) in autumn'], answer: 2, why: '副詞句を修飾するのは副詞 especially。' },
+      { sentence: 'We need (A) more time. (B) That is to say, (C) we cannot (D) finishing the work today.', choices: ['(A) more time', '(B) That is to say', '(C) we cannot', '(D) finishing the work today'], answer: 3, why: '助動詞のあとは原形：cannot finish。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
