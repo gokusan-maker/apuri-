@@ -19423,6 +19423,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Where People and Nature Meet', 'How to Make Charcoal', 'The History of Cities', 'Why Mountains Are High'], answer: 0, why: '全体として、里山のなりたち、豊かな生き物、おとろえ、取りもどす取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-undersea-cables',
+    title: 'The Internet Under the Sea',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When you send a message to a friend overseas or watch a video stored on a computer in another country, where does the information travel? Many people imagine that it flies through the air via satellites. In reality, the great majority of international internet traffic travels through cables lying on the bottom of the ocean. These undersea cables are among the most important, yet least noticed, parts of modern life.",
+      "The idea of connecting continents with cables is not new. In the middle of the nineteenth century, engineers laid the first telegraph cable across the Atlantic Ocean, allowing messages to be sent between Europe and North America in minutes rather than weeks. That early cable failed after only a short time, but it showed what was possible. Today's cables use optical fibres, thin strands of glass that carry information as pulses of light, ( A ) allows enormous amounts of data to be sent at high speed.",
+      "Laying an undersea cable is a huge task. Special ships carry thousands of kilometres of cable and slowly lower it onto the sea floor as they move across the ocean. In deep water, the cable may be only about as thick as a garden hose, because there is little danger from human activity there. Near the coast, however, cables are much thicker and are often buried under the sea floor to protect them.",
+      "Despite these precautions, cables are sometimes damaged. The most common causes are fishing equipment and ship anchors that drag along the bottom of shallow seas. Earthquakes and underwater landslides can also cut cables, sometimes several at once, ( B ) can slow down or interrupt internet services in an entire region. When this happens, repair ships must find the broken section, lift it to the surface, and join the cable together again.",
+      "Because so much of our communication depends on these cables, many countries now consider them part of their essential infrastructure. Companies and governments build extra routes so that if one cable fails, data can travel another way. The next time you send a message across the world, it may be worth remembering ( C ) it is probably travelling along a thin line of glass at the bottom of the sea.",
+    ],
+    ja: [
+      '海外の友だちにメッセージを送ったり、別の国のコンピューターに保存された動画を見たりするとき、その情報はどこを通っているのだろうか。多くの人は、人工衛星を使って空を飛んでいると想像する。実際には、国際的なインターネットの通信の大部分は、海の底にしかれたケーブルを通っている。こうした海底ケーブルは、現代の生活で最も大切であるのに、最も気づかれていない部分の一つである。',
+      '大陸をケーブルで結ぶという考えは新しいものではない。19世紀の中ごろ、技術者たちは大西洋をわたる最初の電信ケーブルをしき、ヨーロッパと北アメリカのあいだで、何週間ではなく何分かでメッセージを送れるようにした。その初期のケーブルはわずかなあいだでこわれてしまったが、何が可能かを示した。今日のケーブルは、情報を光のパルスとして運ぶ細いガラスの糸である光ファイバーを使っており、そのことがばく大な量のデータを高速で送ることを可能にしている。',
+      '海底ケーブルをしくのは大仕事である。特別な船が何千キロものケーブルを運び、海をわたりながらゆっくりと海底へおろしていく。深い海では人間の活動による危険がほとんどないので、ケーブルは庭の水まきホースくらいの太さしかないこともある。しかし海岸の近くでは、ケーブルはずっと太く、守るためにしばしば海底の下にうめられる。',
+      'こうした用心にもかかわらず、ケーブルはときどき傷つく。最もよくある原因は、浅い海の底を引きずられる漁の道具や船のいかりである。地震や海底の地すべりもケーブルを切ることがあり、ときには何本も同時に切れて、そのことが地域全体のインターネットのサービスをおそくしたり止めたりすることがある。そうなると、修理船がこわれた部分を見つけ、海面まで引き上げて、ケーブルをもう一度つながなければならない。',
+      '私たちのコミュニケーションのとても多くがこうしたケーブルにたよっているので、今では多くの国がそれを欠かせない社会の基盤の一部と考えている。会社や政府は、1本のケーブルがこわれてもデータが別の道を通れるように、予備の経路を作っている。次に世界の向こう側へメッセージを送るとき、それがたぶん海の底の細いガラスの線を通って旅しているのだと思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（光ファイバーを使うこと）を受け、allows の主語になるので which。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（ケーブルが何本も切れること）を受け、can slow down の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remember のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '国際的なインターネットの通信の大部分は、海底ケーブルを通っている。', answer: true, why: '第1段落 the great majority of international internet traffic travels through cables lying on the bottom of the ocean。' },
+      { statement: '最初の大西洋の電信ケーブルは、何十年もこわれずに使われた。', answer: false, why: '第2段落 That early cable failed after only a short time。' },
+      { statement: '深い海では、ケーブルは庭のホースくらいの太さしかないことがある。', answer: true, why: '第3段落 the cable may be only about as thick as a garden hose。' },
+      { statement: '筆者によれば、海底ケーブルはけっして傷つかない。', answer: false, why: '第4段落 Despite these precautions, cables are sometimes damaged。' },
+    ],
+    qa: [
+      { q: 'What are the most common causes of damage to undersea cables?', choices: ['Fishing equipment and ship anchors.', 'Sharks biting the cables.', 'Heavy rain on the sea.', 'Satellites falling into the ocean.'], answer: 0, why: '第4段落 The most common causes are fishing equipment and ship anchors。' },
+      { q: 'Why do companies and governments build extra cable routes?', choices: ['So that data can travel another way if one cable fails.', 'To make cables cheaper.', 'To stop ships from moving.', 'To replace all satellites.'], answer: 0, why: '第5段落 so that if one cable fails, data can travel another way。' },
+    ],
+    gist: [
+      { para: 2, choices: ['海底ケーブルのしき方', '船の作り方', 'ホースの使い方', '海岸の地図'], answer: 0, why: '第3段落は、特別な船でケーブルをしくことと、深さによる太さのちがいを述べている。' },
+      { para: 3, choices: ['ケーブルが傷つく原因と修理', '漁の方法', '地震の予知', 'インターネットの料金'], answer: 0, why: '第4段落は、いかりや地震などケーブルが傷つく原因と、その修理を述べている。' },
+    ],
+    titleQ: { choices: ['The Internet Under the Sea', 'How Satellites Work', 'The History of Fishing', 'Why the Ocean Is Deep'], answer: 0, why: '全体として、海底ケーブルの大切さ、歴史、しき方、傷つく原因、守る取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
