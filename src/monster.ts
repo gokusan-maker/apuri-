@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'magpie', name: 'カササギン', egg: 'さとやまのしましまタマゴ', token: 'カサ', bigToken: 'カササギン', color: '#1e293b', line: '#020617', rate: 0.02, desc: '白と黒のつばさに長いしっぽのカササギ。光るものが気になって、いろいろなものをじっと観察する、ものしりな子。' },
   { id: 'vole', name: 'ハタネン', egg: 'はたけのこっそりタマゴ', token: 'ハタネ', bigToken: 'ハタネン', color: '#b45309', line: '#431407', rate: 0.02, desc: '野原の土の中に通り道をつくるハタネズミ。草のかげからこっそり顔を出して、まわりをよく見ている。' },
   { id: 'mink', name: 'ミンクン', egg: 'かわべのつやつやタマゴ', token: 'ミンク', bigToken: 'ミンクン', color: '#78350f', line: '#1c0a00', rate: 0.02, desc: '川べりにすむミンク。つやつやの毛で水をはじき、泳ぎも木登りもじょうずなよくばりさん。' },
   { id: 'shrew', name: 'トガリン', egg: 'おちばのちくちくタマゴ', token: 'トガ', bigToken: 'トガリン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '落ち葉の下をせわしなく動くトガリネズミ。とがった鼻でにおいをかぎ、いつもいそがしく食べ物をさがしている。' },
