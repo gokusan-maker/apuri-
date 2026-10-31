@@ -1346,6 +1346,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He (A) told (B) me (C) everything (D) what he knew.', choices: ['(A) told', '(B) me', '(C) everything', '(D) what he knew'], answer: 3, why: '先行詞 everything があるので what は使えない：everything that he knew。' },
     ],
   },
+  {
+    id: 'exam-error-solution',
+    title: '入試の正誤問題〈58〉（問題と解決を述べる表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'One way to ～ is to …、take measures、be dealt with、If nothing is done、for 人 to ～、Unless、result in、lie in、help 人 ＋原形、should be taken など、エッセイで問題と解決策を書くときの表現。',
+    ],
+    examples: [
+      { en: 'If nothing is done, the situation will get worse.', ja: '何もしなければ、状況はもっと悪くなるだろう。' },
+      { en: 'Such a policy would help people save energy.', ja: 'そのような政策は、人々がエネルギーを節約するのに役立つだろう。' },
+    ],
+    questions: [
+      { sentence: 'One way (A) to solve (B) this problem (C) is improve (D) public transport.', choices: ['(A) to solve', '(B) this problem', '(C) is improve', '(D) public transport'], answer: 2, why: 'One way to ～ is to …：is to improve。' },
+      { sentence: 'The government (A) should (B) take (C) measure (D) to reduce pollution.', choices: ['(A) should', '(B) take', '(C) measure', '(D) to reduce pollution'], answer: 2, why: '「対策をとる」は take measures。' },
+      { sentence: 'This problem (A) must (B) deal (C) with (D) immediately.', choices: ['(A) must', '(B) deal', '(C) with', '(D) immediately'], answer: 1, why: '受け身にする：must be dealt with。(B) を be dealt に。' },
+      { sentence: 'If nothing (A) will be done, (B) the situation (C) will (D) get worse.', choices: ['(A) will be done', '(B) the situation', '(C) will', '(D) get worse'], answer: 0, why: '条件の if 節では現在形：If nothing is done。' },
+      { sentence: 'It (A) is necessary (B) for us (C) act (D) quickly.', choices: ['(A) is necessary', '(B) for us', '(C) act', '(D) quickly'], answer: 2, why: 'It is necessary for 人 to ～：to act。' },
+      { sentence: '(A) Unless we don’t change (B) our habits, (C) the problem (D) will continue.', choices: ['(A) Unless we don’t change', '(B) our habits', '(C) the problem', '(D) will continue'], answer: 0, why: 'unless は否定をふくむので not はいらない：Unless we change。' },
+      { sentence: 'This new rule (A) will (B) result to (C) fewer (D) accidents.', choices: ['(A) will', '(B) result to', '(C) fewer', '(D) accidents'], answer: 1, why: 'result in ～：result in fewer accidents。' },
+      { sentence: 'The real problem (A) lies (B) on (C) the lack (D) of money.', choices: ['(A) lies', '(B) on', '(C) the lack', '(D) of money'], answer: 1, why: 'The problem lies in ～。' },
+      { sentence: 'Such a policy (A) would help (B) people (C) saving (D) energy.', choices: ['(A) would help', '(B) people', '(C) saving', '(D) energy'], answer: 2, why: 'help 人 ＋原形：help people save energy。' },
+      { sentence: 'Strong measures (A) should (B) be taken (C) to protect (D) wildlifes.', choices: ['(A) should', '(B) be taken', '(C) to protect', '(D) wildlifes'], answer: 3, why: 'wildlife は数えられない名詞なので複数形にしない：wildlife。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
