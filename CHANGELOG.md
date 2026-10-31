@@ -3467,3 +3467,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈59〉（私学難関レベル：まぎらわしい動詞の語法：rise と raise・lie と lay・borrow と lend・tell と say・fit と suit・steal と rob）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「瞬間をとらえる（写真の歴史）」（歴史・技術・関係代名詞 that／非制限の which／how の空所）
 - 2026-10-31: キャラクター：ハタネズミの「ハタネン」を追加（とくぎ：くさかげガード）
+- 2026-10-31: 文法：入試の誤文訂正〈53〉（共通テストレベル：I wish・as if ＋過去完了・It's time・But for・仮定法過去完了・If it were not for・would rather・If only・Had I known・混合仮定法）10問

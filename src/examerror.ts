@@ -2334,6 +2334,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Someone [robbed] my wallet on the train.', choices: ['stole', 'robbed of', 'stealed', 'was stolen'], answer: 0, why: '「物をぬすむ」は steal 物（過去形 stole）。rob は rob 人 of 物 の形で使う。' },
     ],
   },
+  {
+    id: 'exam-fix-53',
+    title: '入試の誤文訂正〈53〉（共通テストレベル：仮定法の総まとめ）',
+    points: ['I wish ＋過去形、as if ＋過去完了、It’s time ＋過去形、But for ～、仮定法過去完了、If it were not for ～、would rather ＋過去形、If only ～、Had I known（if を省いた倒置）、過去の仮定と今の結果をあわせた形（混合仮定法）など、仮定法のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'If he had taken the medicine last week, he would be healthy now.', ja: '先週その薬を飲んでいたら、彼は今ごろ元気だろう。' }],
+    questions: [
+      { sentence: 'I wish I [am] taller.', choices: ['were', 'will be', 'have been', 'being'], answer: 0, why: 'I wish のあとは、今の事実と反対の願いを仮定法過去であらわす：I wish I were taller。' },
+      { sentence: 'He looked as if he [has seen] a ghost.', choices: ['had seen', 'sees', 'will see', 'has been seeing'], answer: 0, why: 'looked（過去）よりも前のことを「まるで～したかのように」とあらわすので as if ＋過去完了 had seen。' },
+      { sentence: 'It’s time you [go] to bed.', choices: ['went', 'will go', 'going', 'have gone'], answer: 0, why: 'It’s time ＋主語＋過去形「もう～する時間だ」：It’s time you went to bed。' },
+      { sentence: 'But for his help, I [will fail] the exam.', choices: ['would fail', 'failed', 'had failed', 'am failing'], answer: 0, why: 'But for ～「～がなければ」は仮定法なので、主節は would ＋原形。' },
+      { sentence: 'If I [knew] about it yesterday, I would have helped you.', choices: ['had known', 'know', 'have known', 'would know'], answer: 0, why: '過去（yesterday）の事実と反対の仮定は仮定法過去完了：If I had known。' },
+      { sentence: 'If it [is] not for the sun, no living things could exist.', choices: ['were', 'will be', 'has been', 'being'], answer: 0, why: '「もし～がなければ」は If it were not for ～（仮定法過去）。' },
+      { sentence: 'I would rather you [don’t] tell anyone about this.', choices: ['didn’t', 'won’t', 'not', 'haven’t'], answer: 0, why: 'would rather ＋主語＋過去形「（人に）～してほしい」：I would rather you didn’t tell ～。' },
+      { sentence: 'If only I [can] fly like a bird!', choices: ['could', 'will', 'can be', 'have'], answer: 0, why: 'If only ～「～でありさえすれば」は仮定法なので過去形 could。' },
+      { sentence: 'Had I [know] the truth, I would have told you.', choices: ['known', 'knew', 'knowing', 'to know'], answer: 0, why: 'If I had known の if を省いた倒置：Had I known。' },
+      { sentence: 'If he had taken the medicine last week, he [would have been] healthy now.', choices: ['would be', 'will be', 'had been', 'is'], answer: 0, why: '過去の仮定（had taken）で今（now）の結果を言うときは、主節を would ＋原形にする（混合仮定法）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
