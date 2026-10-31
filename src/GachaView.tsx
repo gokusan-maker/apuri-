@@ -771,6 +771,8 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
         {Object.values(CHAR_TYPES).map((ty) => (
           <button key={ty.id} className={`list-link pill-btn party-sort char-type t-${ty.id}`} aria-pressed={typeOnly === ty.id} onClick={() => setTypeOnly(typeOnly === ty.id ? '' : ty.id)}>
             {ty.icon} {ty.name}
+            {/* デザイン164：そのタイプの子がぜんぶそろった */}
+            {SPECIES.filter((sp) => typeOf(sp.id).id === ty.id).every((sp) => got.has(sp.id)) && <span aria-label={`${ty.name}コンプリート`}> ✔</span>}
           </button>
         ))}
       </p>

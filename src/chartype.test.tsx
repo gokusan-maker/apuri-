@@ -191,3 +191,13 @@ it('デザイン161：キャラ図鑑で、いちばんレベルの高い子に 
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
 })
+
+it('デザイン164：キャラ図鑑で、同じタイプの子がぜんぶそろったタイプのボタンに ✔ がつく', () => {
+  const t = CHAR_TYPES.attack
+  const all = SPECIES.filter((sp) => typeOf(sp.id).id === t.id).map((sp) => sp.id)
+  const { unmount } = render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', all[0]]} />)
+  expect(screen.queryByLabelText(`${t.name}コンプリート`)).toBeNull()
+  unmount()
+  render(<Gacha partnerName="モチ" coins={0} members={all.length + 1} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', ...all]} />)
+  expect(screen.getByLabelText(`${t.name}コンプリート`).textContent).toBe(' ✔')
+})
