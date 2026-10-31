@@ -20008,6 +20008,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Museums Are Changing', 'How to Paint a Picture', 'The History of Glass', 'Why Wars Happen'], answer: 0, why: '全体として、伝統的な博物館から、学びの場・技術の活用へと変わる博物館と、その課題を述べている。' },
   },
   {
+    id: 'kyotsu-satellites',
+    title: 'Machines Above Our Heads',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we check the weather forecast, use a map on our phones, or watch a live sports event from another country, we are probably depending on machines that we have never seen. Thousands of artificial satellites are circling the Earth, quietly providing services that have become an essential part of modern life. Most people rarely think about them, yet daily life would be very different without them.",
+      "A satellite is an object that moves around a larger body in space. The Moon is a natural satellite of the Earth, but the satellites we rely on today are machines launched by rockets. Once a satellite reaches the right height and speed, it continues to travel around the Earth without falling, because its forward speed balances the pull of gravity. Satellites are placed at different heights depending on ( A ) they are used for.",
+      "One of the most familiar uses of satellites is navigation. A smartphone can work out its position by receiving signals from several satellites at the same time and comparing how long each signal took to arrive. This technology helps drivers find their way, allows delivery companies to track packages, and even helps farmers guide machines across their fields with great accuracy. Without satellites, many of the services that we now take for granted, such as online maps and apps that show when the next bus will arrive, would simply not work.",
+      "Satellites are also vital for understanding our planet. Weather satellites take pictures of clouds and measure temperatures, which helps forecasters predict storms and warn people in advance. Other satellites watch forests, ice, and oceans, allowing scientists to see how the environment is changing over many years. After disasters such as floods or earthquakes, images from space can show rescue teams ( B ) areas have been damaged most seriously.",
+      "However, the growing number of satellites has created new problems. Old satellites and pieces of broken rockets remain in orbit as space debris, and collisions could damage working satellites. Astronomers also complain that bright satellites can interfere with their observations of the night sky. Many experts therefore argue that countries and companies should cooperate to manage space more carefully, ( C ) that the benefits of satellites can continue for future generations.",
+    ],
+    ja: [
+      '天気予報をたしかめたり、スマートフォンで地図を使ったり、ほかの国のスポーツの試合を生中継で見たりするとき、私たちはおそらく見たこともない機械にたよっている。何千もの人工衛星が地球のまわりを回り、現代の生活に欠かせない一部となったサービスを静かに提供している。ほとんどの人はそれについてめったに考えないが、人工衛星がなければ毎日の生活はずいぶんちがっているだろう。',
+      '衛星とは、宇宙でより大きな天体のまわりを動く物体である。月は地球の自然の衛星だが、今日私たちがたよっている衛星はロケットで打ち上げられた機械である。衛星はいったん正しい高さと速さに達すると、前に進む速さが重力の引く力とつり合うので、落ちることなく地球のまわりを回りつづける。衛星は、何に使われるかによってちがう高さに置かれる。',
+      '衛星の最もなじみのある使い方の1つは、位置を知ることである。スマートフォンは、いくつかの衛星からの信号を同時に受け取り、それぞれの信号がとどくのにかかった時間をくらべることで、自分の位置を計算できる。この技術は、運転する人が道を見つけるのを助け、配送会社が荷物の場所を追えるようにし、さらに農家が畑で機械をとても正確に動かすのにも役立っている。衛星がなければ、オンラインの地図や次のバスがいつ来るかを示すアプリなど、今ではあたりまえと思っている多くのサービスは、まったく動かないだろう。',
+      '衛星は、私たちの惑星を理解するのにも欠かせない。気象衛星は雲の写真をとり、気温を測るので、予報士があらしを予測し、前もって人々に警告するのに役立つ。ほかの衛星は森や氷や海を見守り、科学者が何年もかけて環境がどのように変わっているかを知ることができるようにしている。洪水や地震などの災害のあとには、宇宙からの画像が、どの地域が最もひどい被害を受けたかを救助チームに示すことができる。',
+      'しかし、衛星の数がふえたことで新しい問題も生まれた。古い衛星やこわれたロケットのかけらは宇宙ごみとして軌道に残り、衝突すれば動いている衛星をこわすおそれがある。天文学者も、明るい衛星が夜空の観測のじゃまになることがあると不満を言っている。そのため多くの専門家は、衛星のめぐみが将来の世代まで続くように、国や企業が協力して宇宙をもっと注意深く管理すべきだと主張している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'which', 'that', 'how'], answer: 0, why: 'for の目的語が欠けた節で「何に使われるか」なので what（what they are used for）。' },
+      { id: 'B', choices: ['which', 'that', 'whose', 'whom'], answer: 0, why: '名詞 areas の前について「どの地域が」となる疑問詞 which（which areas have been damaged）。' },
+      { id: 'C', choices: ['so', 'such', 'in order', 'as'], answer: 0, why: 'so that ～ can …「～が…できるように」：so that the benefits of satellites can continue。' },
+    ],
+    tf: [
+      { statement: '月は地球の自然の衛星である。', answer: true, why: '第2段落 The Moon is a natural satellite of the Earth。' },
+      { statement: 'スマートフォンは、1つの衛星だけからの信号で位置を計算する。', answer: false, why: '第3段落 by receiving signals from several satellites at the same time。' },
+      { statement: '気象衛星は、あらしの予測に役立つ。', answer: true, why: '第4段落 which helps forecasters predict storms。' },
+      { statement: '天文学者は、明るい衛星が観測に役立つとよろこんでいる。', answer: false, why: '第5段落 Astronomers also complain that bright satellites can interfere with their observations。' },
+    ],
+    qa: [
+      { q: 'Why does a satellite keep traveling around the Earth without falling?', choices: ['Its forward speed balances the pull of gravity.', 'It has no weight in space.', 'It is pulled by the Moon.', 'Its engine runs all the time.'], answer: 0, why: '第2段落 because its forward speed balances the pull of gravity。' },
+      { q: 'What do many experts argue about the growing number of satellites?', choices: ['Countries and companies should cooperate to manage space more carefully.', 'No more satellites should ever be launched.', 'Space debris is not a problem.', 'Only one country should control space.'], answer: 0, why: '第5段落 countries and companies should cooperate to manage space more carefully。' },
+    ],
+    gist: [
+      { para: 2, choices: ['衛星を使って位置を知るしくみと使い方', '道路の作り方', '荷物の包み方', '畑の耕し方'], answer: 0, why: '第3段落は、複数の衛星の信号から位置を計算するしくみと、その使い道を述べている。' },
+      { para: 4, choices: ['衛星がふえたことによる新しい問題', 'ロケットの作り方', '夜空の星座', '宇宙旅行の値段'], answer: 0, why: '第5段落は、宇宙ごみや天体観測へのじゃまという問題と、協力の必要を述べている。' },
+    ],
+    titleQ: { choices: ['Machines Above Our Heads', 'How to Become an Astronaut', 'The History of the Moon', 'Why Phones Need Batteries'], answer: 0, why: '全体として、人工衛星が毎日の生活をささえるしくみと役割、そして新しい問題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
