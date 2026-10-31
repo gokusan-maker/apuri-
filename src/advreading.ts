@@ -18760,6 +18760,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Inside the Job Interview', 'How to Shake Hands', 'The History of Companies', 'Why Hobbies Are Important'], answer: 0, why: '全体として、面接の信頼性の問題、構造化面接という対策、候補者へのアドバイスを述べている。' },
   },
   {
+    id: 'kyotsu-fireworks',
+    title: 'Flowers of Fire',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On summer evenings in Japan, crowds of people gather by rivers and beaches, many of them wearing light cotton kimono called yukata. As the sky grows dark, the first firework shoots upward and bursts into a huge flower of light, followed by a deep boom that can be felt in the chest. Fireworks festivals, known as hanabi taikai, are among the most popular summer events in the country. Some of the largest attract hundreds of thousands of visitors in a single night.",
+      "Fireworks have a long history. They are believed to have developed in China after the invention of gunpowder, and they later spread to many other parts of the world. In Japan, fireworks became popular entertainment during the Edo period. According to tradition, one of the most famous festivals, held on a river in Tokyo, began partly as a way to comfort the spirits of people who had died from hunger and disease, ( A ) shows that fireworks once had a meaning beyond simple fun.",
+      "The bright colours of fireworks come from chemistry. Different metals give off different colours when they are heated: compounds containing strontium produce red, copper produces blue, sodium produces yellow, and barium produces green. Fireworks makers carefully mix these substances and arrange them inside a shell, so that the colours appear in a planned pattern when the shell explodes in the sky.",
+      "Japanese fireworks are especially famous for their round shape. Many shells are designed to open evenly in every direction, so that the firework looks like a perfect circle from any angle. Some can even change colour several times as they spread. Making these shells requires great skill, and much of the work is still done by hand by craftspeople ( B ) have trained for many years.",
+      "Like many traditions, fireworks festivals face modern challenges. They require large budgets, careful safety planning, and the cooperation of many volunteers, and some communities have had difficulty continuing them. Concerns about crowds, noise, and smoke have also been raised. Even so, for many people, watching fireworks with family and friends remains one of the most memorable parts of summer, ( C ) is why so many towns work hard to keep the tradition alive.",
+    ],
+    ja: [
+      '日本の夏の夕方、人々は川や浜辺に集まり、その多くはゆかたとよばれる軽い木綿の着物を着ている。空が暗くなると、最初の花火が打ち上がり、大きな光の花となって開き、そのあとに胸にひびくような低いドーンという音が続く。花火大会は、この国で最も人気のある夏の行事の一つである。最も大きなものの中には、ひと晩で何十万人もの人が訪れるものもある。',
+      '花火には長い歴史がある。花火は火薬の発明のあとに中国で発達したと考えられており、のちに世界の多くの地域に広まった。日本では、江戸時代に花火が人気の娯楽になった。伝えられるところでは、東京の川で開かれる最も有名な花火大会の一つは、飢えや病気で亡くなった人々の霊をなぐさめる方法として始まった面もあるといい、このことは花火がかつてただの楽しみをこえた意味をもっていたことを示している。',
+      '花火のあざやかな色は、化学から生まれる。ちがう金属は、熱せられるとちがう色を出す。ストロンチウムをふくむ化合物は赤、銅は青、ナトリウムは黄色、バリウムは緑を出す。花火師はこうした物質を注意深くまぜ、玉の中にならべて、玉が空で破裂したときに計画どおりの模様で色が現れるようにする。',
+      '日本の花火は、とくにその丸い形で有名である。多くの玉はあらゆる方向に均等に開くように作られており、どの角度から見ても完全な円に見える。広がるにつれて何度も色を変えるものさえある。こうした玉を作るには高い技術が必要で、その仕事の多くは今も、何年も修業をつんだ職人の手で行われている。',
+      '多くの伝統と同じように、花火大会も現代の課題に直面している。大きな予算、注意深い安全の計画、多くのボランティアの協力が必要で、続けるのに苦労している地域もある。人ごみや音、けむりについての心配も出ている。それでも多くの人にとって、家族や友だちと花火を見ることは夏の最も思い出に残る部分の一つであり、そのため多くの町が伝統を守るために努力しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（霊をなぐさめるために始まったこと）を受け、shows の主語になるので which。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 craftspeople（人）を受け、うしろの have trained の主語になるので主格の関係代名詞 who。' },
+      { id: 'C', choices: ['which', 'what', 'that', 'whose'], answer: 0, why: 'コンマのあとで前の内容全体を受ける which。, which is why ～「そしてそれが～の理由だ」。非制限用法で that は使えない。' },
+    ],
+    tf: [
+      { statement: '花火は火薬の発明のあとに中国で発達したと考えられている。', answer: true, why: '第2段落 They are believed to have developed in China after the invention of gunpowder。' },
+      { statement: '花火の色は、どの金属を使っても同じになる。', answer: false, why: '第3段落 Different metals give off different colours when they are heated。' },
+      { statement: '日本の花火の玉の多くは、今も職人の手で作られている。', answer: true, why: '第4段落 much of the work is still done by hand by craftspeople。' },
+      { statement: '筆者によれば、花火大会を続けることに何の苦労もない。', answer: false, why: '第5段落 some communities have had difficulty continuing them。' },
+    ],
+    qa: [
+      { q: 'Which metal produces blue in fireworks?', choices: ['Copper.', 'Strontium.', 'Sodium.', 'Barium.'], answer: 0, why: '第3段落 copper produces blue。' },
+      { q: 'What are Japanese fireworks especially famous for?', choices: ['Their round shape that looks like a perfect circle from any angle.', 'Being the loudest in the world.', 'Being made only by machines.', 'Lasting for several hours each.'], answer: 0, why: '第4段落 especially famous for their round shape … looks like a perfect circle from any angle。' },
+    ],
+    gist: [
+      { para: 2, choices: ['花火の色を生む化学', '金属のほり方', '料理の色づけ', '空の色が変わる理由'], answer: 0, why: '第3段落は、金属ごとにちがう色が出るしくみと、花火師の色の配置を述べている。' },
+      { para: 3, choices: ['丸い形の日本の花火と職人の技', 'カメラの角度', '円のかき方', '職業の選び方'], answer: 0, why: '第4段落は、どこから見ても丸い日本の花火と、それを作る職人の技術を述べている。' },
+    ],
+    titleQ: { choices: ['Flowers of Fire', 'How to Wear a Yukata', 'The History of Rivers', 'Why Summer Is Hot'], answer: 0, why: '全体として、花火の歴史・色のしくみ・日本の花火の特徴・花火大会の課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
