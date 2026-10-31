@@ -855,3 +855,15 @@ it('デザイン130：ボスに勝った回数が10回目になると、結果�
   expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
   expect(screen.getByLabelText('10回目の勝利').textContent).toBe('🎖 10回目の勝利！')
 })
+
+it('デザイン133：ボスに勝つと、結果画面にその戦いでいちばん大きかったダメージが出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  const el = screen.getByLabelText(/^最大ダメージ \d+$/)
+  const n = Number(el.getAttribute('aria-label')!.match(/\d+/)![0])
+  expect(n).toBeGreaterThan(0)
+  expect(el.textContent).toBe(`💥 最大 ${n} ダメージ`)
+})

@@ -329,6 +329,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [minionAt, setMinionAt] = useState(-1) // 子分をたおした問題の番号
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
+  const [bigHit, setBigHit] = useState(0) // デザイン133：このボス戦でいちばん大きかったダメージ（1回分）
   const [winCount, setWinCount] = useState(0) // デザイン130：このボスに勝った回数（図鑑の記録）
   const [skillUsed, setSkillUsed] = useState(0) // デザイン121：この戦いで相棒のとくぎが出た回数
   const fireSkill = () => {
@@ -418,6 +419,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       }
       setCrit(critical)
       setLastDmg(hp - nextHp)
+      setBigHit((m) => Math.max(m, hp - nextHp))
       if (minion === 'here') {
         setMinion('beaten')
         setMinionAt(index)
@@ -609,6 +611,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setSpecial(0)
     setSkillUsed(0)
     setWinCount(0)
+    setBigHit(0)
     setGauge(0)
     setCorrects(0)
     setTeamHits({ word: 0, grammar: 0, reading: 0 })
@@ -874,6 +877,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
             {skill && skillUsed > 0 && <span aria-label={`とくぎ ${skillUsed}回`}>✨ {skill.name} {skillUsed}回</span>} {/* デザイン121 */}
             {isWinMilestone(winCount) && <span aria-label={`${winCount}回目の勝利`}>🎖 {winCount}回目の勝利！</span>} {/* デザイン130 */}
+            {bigHit > 0 && <span aria-label={`最大ダメージ ${bigHit}`}>💥 最大 {bigHit} ダメージ</span>} {/* デザイン133 */}
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}
