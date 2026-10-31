@@ -18526,6 +18526,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Pictures of the Floating World', 'How to Climb Mount Fuji', 'The History of Wrapping Paper', 'Why Museums Are Expensive'], answer: 0, why: '全体として、浮世絵の作り方、有名な絵師、ヨーロッパへの影響を述べている。' },
   },
   {
+    id: 'kyotsu-bamboo-flowers',
+    title: 'The Mystery of Bamboo Flowers',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Bamboo is one of the fastest-growing plants in the world. Some kinds can grow by many centimetres in a single day, and bamboo forests are a familiar sight in many parts of Asia. People have used bamboo for thousands of years to build houses, make tools, and create musical instruments. Yet this common plant has a surprising secret: most kinds of bamboo flower only very rarely. When they finally do, the results can be dramatic for both nature and people.",
+      "Unlike many plants that produce flowers every year, many species of bamboo flower only once every several decades, and in some cases the interval may be more than a hundred years. Even more remarkably, when one plant of a certain species flowers, plants of the same species in the same region, or even in distant places, often flower at around the same time. After flowering and producing seeds, the plants usually die, ( A ) can leave large areas of forest suddenly empty.",
+      "Scientists are still trying to understand how bamboo plants ( B ) are separated by great distances manage to flower together. One idea is that each plant has a kind of internal clock that counts the years since it began to grow. Because many bamboo forests spread from the same original plants, they may share the same timing, like a large family whose members all celebrate their birthdays on the same day.",
+      "Mass flowering can also cause problems for people. When huge numbers of bamboo plants produce seeds at once, the sudden supply of food can lead to a rapid increase in the number of rats and other animals that feed on the seeds. In some regions, after the seeds are gone, these animals have moved into farmers' fields and damaged crops, leading to serious food shortages.",
+      "Why might bamboo have developed such an unusual way of reproducing? One explanation is that producing an enormous number of seeds all at once means that animals cannot eat them all, so some seeds survive to grow into new plants. Whatever the reason, the story of bamboo flowering shows ( C ) even plants that seem ordinary can hide mysteries that scientists have not yet fully solved.",
+    ],
+    ja: [
+      '竹は、世界で最も成長の速い植物の一つである。種類によっては1日に何センチものびるものもあり、竹林はアジアの多くの地域でなじみのある光景である。人々は何千年ものあいだ、家を建て、道具を作り、楽器を作るのに竹を使ってきた。しかしこのありふれた植物には、おどろくべきひみつがある。ほとんどの種類の竹は、ごくまれにしか花をさかせないのである。そしてようやく花をさかせると、その結果は自然にとっても人々にとっても劇的なものになりうる。',
+      '毎年花をさかせる多くの植物とちがい、多くの種類の竹は数十年に一度しか花をさかせず、その間かくが100年をこえる場合もある。さらにおどろくことに、ある種類の竹の1本が花をさかせると、同じ地域の、あるいは遠くはなれた場所の同じ種類の竹も、ほぼ同じころに花をさかせることが多い。花をさかせて種を作ったあと、竹はふつうかれてしまい、そのことによって広い範囲の林がとつぜんからっぽになることがある。',
+      '科学者は、遠くはなれている竹がどのようにしていっしょに花をさかせるのかを今も理解しようとしている。一つの考えは、それぞれの竹が、育ちはじめてからの年数をかぞえる一種の体内時計をもっているというものである。多くの竹林は同じもとの竹から広がっているので、同じ時期を共有しているのかもしれない。ちょうど、家族全員が同じ日に誕生日を祝う大家族のように。',
+      'いっせいに花がさくことは、人々に問題を引き起こすこともある。ばく大な数の竹がいっぺんに種を作ると、とつぜんの食べ物の多さによって、種を食べるネズミなどの動物の数が急にふえることがある。地域によっては、種がなくなったあと、こうした動物が農家の畑に入りこんで作物をあらし、深刻な食料不足を引き起こしたこともある。',
+      'なぜ竹は、このようなめずらしいふえ方を身につけたのだろうか。一つの説明は、いっぺんにばく大な数の種を作れば、動物がすべてを食べきることはできず、いくつかの種が生きのこって新しい竹に育つというものである。理由が何であれ、竹の開花の物語は、ありふれて見える植物でさえ、科学者がまだ完全には解いていないなぞをかくしうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（竹がかれること）を受け、can leave の主語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 bamboo plants を受け、うしろの are separated の主語になるので主格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '多くの種類の竹は、毎年花をさかせる。', answer: false, why: '第2段落 many species of bamboo flower only once every several decades。' },
+      { statement: '竹は、花をさかせて種を作ったあと、ふつうかれる。', answer: true, why: '第2段落 After flowering and producing seeds, the plants usually die。' },
+      { statement: '竹がいっせいに花をさかせると、ネズミの数が急にふえることがある。', answer: true, why: '第4段落 can lead to a rapid increase in the number of rats。' },
+      { statement: '筆者によれば、竹の開花のしくみはすでに完全に解明されている。', answer: false, why: '第3段落 Scientists are still trying to understand … / 第5段落 mysteries that scientists have not yet fully solved。' },
+    ],
+    qa: [
+      { q: 'What is one idea about how distant bamboo plants flower together?', choices: ['Each plant has an internal clock that counts the years.', 'Birds carry messages between the plants.', 'The plants flower only when it rains heavily.', 'Farmers cut them at the same time.'], answer: 0, why: '第3段落 each plant has a kind of internal clock that counts the years since it began to grow。' },
+      { q: 'Why might producing many seeds at once help bamboo?', choices: ['Animals cannot eat them all, so some survive.', 'The seeds grow faster in large groups.', 'It stops rats from coming.', 'It makes the forest grow taller.'], answer: 0, why: '第5段落 animals cannot eat them all, so some seeds survive to grow into new plants。' },
+    ],
+    gist: [
+      { para: 1, choices: ['竹がまれに、いっせいに花をさかせること', '竹の切り方', '楽器の作り方', '森の歩き方'], answer: 0, why: '第2段落は、竹が数十年に一度、同じ種類がいっせいに花をさかせ、そのあとかれることを述べている。' },
+      { para: 3, choices: ['いっせいの開花が人々にあたえる問題', 'ネズミの飼い方', '畑の作り方', '種の売り方'], answer: 0, why: '第4段落は、種がふえてネズミがふえ、作物をあらすという問題を述べている。' },
+    ],
+    titleQ: { choices: ['The Mystery of Bamboo Flowers', 'How to Build a Bamboo House', 'The History of Rats', 'Why Plants Need Water'], answer: 0, why: '全体として、まれでいっせいの竹の開花、そのなぞ、人への影響、理由の説明を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
