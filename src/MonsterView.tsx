@@ -1043,6 +1043,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="62" rx="14" ry="10" fill="#fdba74" opacity="0.9" />
       </g>
     )
+  if (species === 'newt')
+    return (
+      <g>
+        {/* 赤いおなかのもよう */}
+        <ellipse cx="50" cy="64" rx="10" ry="7" fill="#fca5a5" opacity="0.9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
