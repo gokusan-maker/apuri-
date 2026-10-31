@@ -867,3 +867,12 @@ it('デザイン133：ボスに勝つと、結果画面にその戦いでいち�
   expect(n).toBeGreaterThan(0)
   expect(el.textContent).toBe(`💥 最大 ${n} ダメージ`)
 })
+
+it('デザイン136：ボスに勝つと、結果画面にいっしょに戦った相棒の名前とタイプのアイコンが出る', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  const { typeOf } = await import('./chartype')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={[]} partner={{ form: withSpecies(FORMS[1], 'dragon'), species: 'dragon', name: 'ドラ', skillUses: 0 }} />)
+  answer(true)
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(screen.getByLabelText('いっしょに戦った相棒').textContent).toBe(`${typeOf('dragon').icon} ドラといっしょに勝った`)
+})
