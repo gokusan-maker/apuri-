@@ -19579,6 +19579,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Green Spaces for Everyone', 'How to Build a Factory', 'The History of Smoke', 'Why Roads Are Important'], answer: 0, why: '全体として、公園の生まれた背景、健康と社会への役割、課題を述べている。' },
   },
   {
+    id: 'kyotsu-volcanoes',
+    title: 'Living with Volcanoes',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Volcanoes are among the most powerful forces on Earth. When they erupt, they can destroy towns, change the shape of the land, and even affect the weather around the world. Yet volcanoes are not only destructive. Over long periods of time, they have also helped to create the land we live on and the air we breathe.",
+      "Deep below the surface of the Earth, the temperature is so high that some rock melts and becomes a thick liquid called magma. Because magma is lighter than the solid rock around it, it slowly rises toward the surface. When the pressure becomes too great, the magma escapes through openings in the ground. Once it reaches the surface, it is called lava. Some eruptions are quiet, with lava flowing slowly down the sides of the mountain, ( A ) others are violent explosions that throw ash and rock high into the sky.",
+      "Large eruptions can have effects far beyond the area around the volcano. When huge amounts of ash and gas reach the upper atmosphere, they can block part of the sunlight for months. As a result, temperatures in many parts of the world may fall slightly, and crops may grow poorly. Scientists study records of past eruptions to understand ( B ) the climate might change after a major eruption in the future.",
+      "At the same time, volcanoes bring important benefits. Volcanic ash breaks down into soil that is rich in minerals, so farmland near volcanoes is often very productive. In countries such as Japan, the heat from underground is used to produce electricity and to warm the water of hot springs, which attract many visitors. In addition, over millions of years, gases released by volcanoes helped to form the early atmosphere of our planet.",
+      "Because people cannot stop eruptions, the most important task is to predict them and to prepare. Scientists measure small earthquakes, changes in the shape of the ground, and the gases coming out of volcanoes. These signs can warn that an eruption may be coming, although it is still difficult to say exactly when it will happen. Many towns near volcanoes have maps showing ( C ) areas are dangerous and where people should go. Living safely with volcanoes means respecting both their power and their gifts.",
+    ],
+    ja: [
+      '火山は地球上で最も強い力の1つである。噴火すると、町を破壊し、土地の形を変え、世界中の天気にまで影響を与えることがある。しかし、火山はただ破壊するだけではない。長い時間をかけて、火山は私たちが住む土地や吸う空気をつくるのにも役立ってきた。',
+      '地球の表面の深いところでは温度がとても高いので、岩の一部がとけてマグマとよばれるどろっとした液体になる。マグマはまわりのかたい岩より軽いので、ゆっくりと地表に向かって上がっていく。圧力が大きくなりすぎると、マグマは地面のすきまから外に出る。地表にとどくと、それは溶岩とよばれる。溶岩が山の斜面をゆっくり流れ下る静かな噴火もあれば、灰や岩を空高く吹き上げる激しい爆発もある。',
+      '大きな噴火は、火山のまわりの地域をはるかにこえて影響をおよぼすことがある。大量の灰やガスが大気の上のほうにとどくと、何か月も太陽の光の一部をさえぎることがある。その結果、世界の多くの地域で気温が少し下がり、作物がよく育たないことがある。科学者は、将来大きな噴火が起きたあとに気候がどのように変わるかを理解するために、過去の噴火の記録を研究している。',
+      '同時に、火山は大切なめぐみももたらす。火山灰は分解されてミネラルの多い土になるので、火山の近くの農地はとても実り豊かなことが多い。日本のような国では、地下の熱が電気をつくったり、温泉の湯をあたためたりするのに使われ、温泉は多くの観光客を引きつけている。さらに、何百万年もかけて、火山から出たガスが私たちの惑星の初期の大気をつくるのに役立った。',
+      '人は噴火を止めることができないので、最も大切な仕事は噴火を予測し、備えることである。科学者は小さな地震や地面の形の変化、火山から出てくるガスを測っている。こうした兆候は噴火が近づいているかもしれないと知らせてくれるが、それがいつ起きるかを正確に言うのはまだむずかしい。火山の近くの多くの町には、どの地域が危険で、人々がどこへ行けばよいかを示す地図がある。火山と安全にくらすことは、その力とめぐみの両方を大切に受けとめることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'so that'], answer: 0, why: '「静かな噴火もある」と「激しい爆発もある」を対比するので while「～の一方で」。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'whom'], answer: 0, why: 'うしろは the climate might change という完全な文で、「どのように変わるか」なので how。' },
+      { id: 'C', choices: ['which', 'how', 'whom', 'whose'], answer: 0, why: '名詞 areas の前について「どの地域が」となる疑問詞 which（which areas are dangerous）。' },
+    ],
+    tf: [
+      { statement: 'マグマはまわりの岩より軽いので、地表に向かって上がる。', answer: true, why: '第2段落 Because magma is lighter than the solid rock around it, it slowly rises。' },
+      { statement: 'すべての噴火は激しい爆発である。', answer: false, why: '第2段落 Some eruptions are quiet と、静かな噴火もあると述べている。' },
+      { statement: '火山灰からできた土はミネラルが多い。', answer: true, why: '第4段落 soil that is rich in minerals。' },
+      { statement: '科学者は噴火の起きる日を正確に予測できる。', answer: false, why: '第5段落 it is still difficult to say exactly when it will happen。' },
+    ],
+    qa: [
+      { q: 'Why may temperatures fall after a large eruption?', choices: ['Ash and gas block part of the sunlight.', 'Lava cools the oceans.', 'Volcanoes stop producing heat.', 'People use less electricity.'], answer: 0, why: '第3段落 they can block part of the sunlight for months. As a result, temperatures ... may fall slightly。' },
+      { q: 'What do scientists measure to warn of an eruption?', choices: ['Small earthquakes, changes in the ground, and gases.', 'The number of visitors to hot springs.', 'The size of crops near volcanoes.', 'The color of the lava.'], answer: 0, why: '第5段落 Scientists measure small earthquakes, changes in the shape of the ground, and the gases。' },
+    ],
+    gist: [
+      { para: 1, choices: ['噴火のしくみと噴火の種類', '温泉の楽しみ方', '岩の集め方', '天気予報の歴史'], answer: 0, why: '第2段落は、マグマが上がって溶岩になるしくみと、静かな噴火・激しい噴火を述べている。' },
+      { para: 3, choices: ['火山がもたらすめぐみ', '火山の危険な地域', '農業の機械', '電気の節約'], answer: 0, why: '第4段落は、豊かな土、地熱発電と温泉、初期の大気づくりというめぐみを述べている。' },
+    ],
+    titleQ: { choices: ['Living with Volcanoes', 'How to Climb a Mountain', 'The Best Hot Springs in Japan', 'Why Rocks Are Hard'], answer: 0, why: '全体として、火山の力と影響、めぐみ、予測と備えを述べ、火山とともに安全にくらすことを説いている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
