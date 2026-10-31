@@ -643,3 +643,15 @@ it('デザイン141：ガチャの結果に、今日何回目のガチャかが�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('今日のガチャの回数').textContent).toBe('🎰 今日 1回目のガチャ')
 })
+
+it('デザイン147：出た子が相棒と同じ種類なら「👯 相棒とおそろい！」が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} partnerSpecies="cat" onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('👯 相棒とおそろい！')).toBeInTheDocument()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} partnerSpecies="fox" onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText('👯 相棒とおそろい！')).toBeNull()
+})
