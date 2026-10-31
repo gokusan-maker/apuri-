@@ -1788,6 +1788,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I disagree [to] the idea that homework should be banned.', choices: ['with', 'for', 'against to', 'on with'], answer: 0, why: '「～に反対する・賛成しない」は disagree with ～。' },
     ],
   },
+  {
+    id: 'exam-fix-40',
+    title: '入試の誤文訂正㊵（医学部・難関大レベル④：分詞構文・強調構文・同格の that）',
+    points: ['受け身の分詞構文（Seen from ～）、完了の分詞構文（Having ＋過去分詞）、否定の Not ＋分詞、強調構文 It is ～ that …、同格の that（the fact that ～）、独立分詞構文（The weather being fine）、Judging from ～ など、難関大学でよく問われる構文。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Seen from the plane, the island looked tiny.', ja: '飛行機から見ると、その島はとても小さく見えた。' }],
+    questions: [
+      { sentence: '[Seeing] from the plane, the island looked tiny.', choices: ['Seen', 'See', 'To see', 'Having seen'], answer: 0, why: '主語の the island は「見られる」側なので、受け身の分詞構文 Seen from ～。' },
+      { sentence: '[Being] finished the report, she went home.', choices: ['Having finished', 'Finish', 'Finishing to', 'Been'], answer: 0, why: '「報告書を書き終えてから」と、主節より前に終わったことは完了の分詞構文 Having finished。' },
+      { sentence: '[Knowing not] what to say, he remained silent.', choices: ['Not knowing', 'Knowing no', 'Don’t knowing', 'No knowing'], answer: 0, why: '分詞構文の否定は、分詞の前に not を置く：Not knowing what to say。' },
+      { sentence: 'It was in 2010 [when] the hospital was built.', choices: ['that', 'which', 'what', 'where'], answer: 0, why: '強調構文 It was ～ that …。前置詞のついた in 2010 を強調するときは that。' },
+      { sentence: 'It was Dr. Kato [which] discovered the cause of the disease.', choices: ['who', 'whom', 'whose', 'what'], answer: 0, why: '強調構文で強調されるのが人（Dr. Kato）で、discovered の主語なので who（that でもよい）。' },
+      { sentence: 'There is a possibility [which] the virus will spread.', choices: ['that', 'what', 'whether of', 'of which'], answer: 0, why: 'うしろが完全な文で、a possibility の内容を説明するので同格の that。' },
+      { sentence: 'The news [which] the patient had recovered surprised everyone.', choices: ['that', 'what', 'whose', 'of what'], answer: 0, why: 'the news の内容（患者が回復したこと）を説明する同格の that。うしろは完全な文。' },
+      { sentence: 'The weather [is] fine, we went for a walk.', choices: ['being', 'been', 'was being', 'to be'], answer: 0, why: '主節と主語がちがう分詞構文は、意味上の主語を残す独立分詞構文：The weather being fine。' },
+      { sentence: '[Judged] from his accent, he must be from Osaka.', choices: ['Judging', 'Judge', 'To judging', 'Being judged'], answer: 0, why: '慣用的な分詞構文 Judging from ～「～から判断すると」。' },
+      { sentence: 'The fact [which] smoking harms health is well known.', choices: ['that', 'what', 'of which', 'whether'], answer: 0, why: 'the fact の内容を説明する同格の that：the fact that smoking harms health。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
