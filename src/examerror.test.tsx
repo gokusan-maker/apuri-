@@ -246,3 +246,10 @@ it('誤文訂正⑭：くだけすぎた表現を書き言葉にする単元が1
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('are going to')
 })
+
+it('正誤問題㉑：不定詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-inf')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[5].choices[u.questions[5].answer]).toBe('(B) to be')
+})

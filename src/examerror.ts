@@ -458,6 +458,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'People say that (A) the rich (B) is (C) not always (D) happy.', choices: ['(A) the rich', '(B) is', '(C) not always', '(D) happy'], answer: 1, why: 'the ＋形容詞は「～な人々」で複数あつかい：the rich are。' },
     ],
   },
+  {
+    id: 'exam-error-inf',
+    title: '入試の正誤問題㉑（不定詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'It is ～ for 人 to ～、ask 人 not to ～、the first ～ to ～、too ～ to ～、目的の to、完了不定詞 to have ＋過去分詞、how to、感情の原因の to、It is careless of you to ～ に注目する。',
+    ],
+    examples: [
+      { en: 'He seems to have been ill yesterday.', ja: '彼は昨日病気だったようだ。（今から見た過去 → 完了不定詞）' },
+      { en: 'It was careless of you to leave the door open.', ja: 'ドアを開けっぱなしにするなんて、あなたは不注意だった。（人の性質 → of）' },
+    ],
+    questions: [
+      { sentence: 'It is (A) necessary (B) for you (C) studying (D) English every day.', choices: ['(A) necessary', '(B) for you', '(C) studying', '(D) English every day'], answer: 2, why: 'It is ～ for 人 to ＋原形：for you to study。' },
+      { sentence: 'I (A) asked him (B) not (C) being (D) late again.', choices: ['(A) asked him', '(B) not', '(C) being', '(D) late again'], answer: 2, why: 'ask 人 not to ＋原形「人に～しないようにたのむ」：not to be late。' },
+      { sentence: 'She was (A) the first woman (B) climbing (C) the mountain (D) alone.', choices: ['(A) the first woman', '(B) climbing', '(C) the mountain', '(D) alone'], answer: 1, why: 'the first ＋名詞＋ to ＋原形「最初に～した…」：the first woman to climb。' },
+      { sentence: 'This house is (A) too small (B) for us (C) living (D) in.', choices: ['(A) too small', '(B) for us', '(C) living', '(D) in'], answer: 2, why: 'too ～ for 人 to ＋原形：too small for us to live in。' },
+      { sentence: '(A) For borrow some books, (B) I (C) went (D) to the library.', choices: ['(A) For borrow some books,', '(B) I', '(C) went', '(D) to the library'], answer: 0, why: '目的「～するために」は to ＋原形：To borrow some books。for のあとに原形は置かない。' },
+      { sentence: 'He (A) seems (B) to be (C) ill (D) yesterday.', choices: ['(A) seems', '(B) to be', '(C) ill', '(D) yesterday'], answer: 1, why: 'yesterday（過去）のことを今「～だったようだ」と言うので完了不定詞：seems to have been ill。' },
+      { sentence: 'I (A) don’t know (B) how (C) to (D) using this machine.', choices: ['(A) don’t know', '(B) how', '(C) to', '(D) using this machine'], answer: 3, why: 'how to ＋原形「～のしかた」：how to use。' },
+      { sentence: 'My dream is (A) become (B) a doctor (C) and (D) help sick people.', choices: ['(A) become', '(B) a doctor', '(C) and', '(D) help sick people'], answer: 0, why: '「夢は～することだ」は be 動詞のあとに to 不定詞：My dream is to become a doctor。' },
+      { sentence: 'We (A) were glad (B) hearing (C) the news (D) of your success.', choices: ['(A) were glad', '(B) hearing', '(C) the news', '(D) of your success'], answer: 1, why: '感情の原因「～して」は to 不定詞：were glad to hear。' },
+      { sentence: 'It was (A) careless (B) for you (C) to leave (D) the door open.', choices: ['(A) careless', '(B) for you', '(C) to leave', '(D) the door open'], answer: 1, why: 'careless のように人の性質を表す形容詞では of 人：It was careless of you to ～。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
