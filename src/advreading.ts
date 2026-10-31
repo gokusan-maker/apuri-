@@ -21256,6 +21256,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Keeping Our Accounts Safe', 'How to Use Social Media', 'The History of Computers', 'Why Pets Need Names'], answer: 0, why: '全体として、パスワードの危険と、アカウントを守るための方法と心がまえを述べている。' },
   },
   {
+    id: 'kyotsu-earthquakes',
+    title: 'Living with Earthquakes',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Japan experiences more earthquakes than almost any other country in the world. Most of them are so small that people hardly notice them, but every few years a powerful earthquake causes serious damage. Living in such a country means that understanding earthquakes, and preparing for them, is not only a matter for scientists but a part of everyday life.",
+      "Earthquakes happen because the surface of the Earth is not one solid shell. Instead, it is divided into huge pieces called plates, which move very slowly, usually only a few centimeters a year. Where plates meet, they can push against each other, pull apart, or slide past each other. Over time, stress builds up in the rocks along these boundaries. When the rocks suddenly break or slip, the stored energy is released as waves ( A ) shake the ground. Japan lies where several plates meet, which explains why earthquakes are so common there.",
+      "Scientists cannot yet predict exactly when and where a large earthquake will occur. However, they can estimate which areas face the greatest risk by studying the history of past earthquakes and measuring how the ground is moving. Japan has also developed an early warning system. When an earthquake begins, sensors detect the first, weaker waves and send alerts to phones and televisions, sometimes giving people several seconds before the strongest shaking arrives. Even a few seconds can be enough to take cover or stop a train.",
+      "Buildings play a crucial role in reducing damage. Over the years, Japan has introduced strict building rules, and many modern buildings are designed to sway rather than collapse during strong shaking. Some tall buildings even use special devices ( B ) absorb the energy of an earthquake. Older buildings that do not meet current standards are often strengthened to make them safer.",
+      "Individuals can prepare as well. Experts recommend fixing heavy furniture to walls, storing water and food for several days, and knowing the location of the nearest evacuation area. Schools and workplaces hold regular earthquake drills so that people know what to do without having to think. Earthquakes cannot be prevented, but careful preparation can greatly reduce the harm they cause. The experience of Japan shows ( C ) a society can learn to live more safely with the forces of nature.",
+    ],
+    ja: [
+      '日本は世界のほとんどどの国よりも多くの地震を経験している。そのほとんどは人がほとんど気づかないほど小さいが、数年ごとに強い地震が深刻な被害をもたらす。そのような国に住むということは、地震を理解し、それに備えることが、科学者だけの問題ではなく、毎日の生活の一部であることを意味する。',
+      '地震が起こるのは、地球の表面が1つのかたい殻ではないからである。そうではなく、表面はプレートとよばれる巨大なかたまりに分かれており、ふつう1年に数センチだけ、とてもゆっくり動いている。プレートが出会うところでは、たがいにおし合ったり、はなれたり、すれちがったりすることがある。時間がたつにつれ、こうした境目にそった岩にひずみがたまっていく。岩が急にこわれたりずれたりすると、たまっていたエネルギーが、地面をゆらす波として放たれる。日本はいくつかのプレートが出会うところにあり、それがそこで地震がとても多い理由である。',
+      '科学者は、大きな地震がいつどこで起こるのかを、まだ正確に予測することはできない。しかし、過去の地震の歴史を研究し、地面がどのように動いているかを測ることで、どの地域が最も危険かを見積もることはできる。日本はまた、緊急地震速報のしくみをつくりあげた。地震が始まると、センサーが最初の弱い波を感じとって電話やテレビに知らせを送り、最も強いゆれがとどく前に数秒の時間をあたえることもある。数秒でも、身を守ったり電車を止めたりするには十分なことがある。',
+      '建物は被害をへらすのに欠かせない役割をはたしている。長い年月をかけて、日本はきびしい建築のきまりを取り入れ、多くの現代の建物は強いゆれのあいだにたおれるのではなく、ゆれるように作られている。高い建物の中には、地震のエネルギーを吸収する特別な装置を使っているものさえある。今の基準に合わない古い建物は、より安全にするために補強されることが多い。',
+      '一人ひとりも備えることができる。専門家は、重い家具をかべに固定し、数日分の水や食べ物をたくわえ、いちばん近い避難場所を知っておくことをすすめている。学校や職場では定期的に地震の訓練を行い、人々が考えなくても何をすべきかがわかるようにしている。地震はふせげないが、注意深い備えによって、その害を大きくへらすことができる。日本の経験は、社会が自然の力とより安全にくらすことを学べることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 waves を受け、shake の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 special devices（もの）を受け、absorb の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'show that ～「～ということを示す」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: 'プレートは、ふつう1年に数センチしか動かない。', answer: true, why: '第2段落 move very slowly, usually only a few centimeters a year。' },
+      { statement: '科学者は、大きな地震がいつ起こるかを正確に予測できる。', answer: false, why: '第3段落 Scientists cannot yet predict exactly when and where a large earthquake will occur。' },
+      { statement: '多くの現代の建物は、強いゆれのあいだにゆれるように作られている。', answer: true, why: '第4段落 many modern buildings are designed to sway rather than collapse。' },
+      { statement: '筆者によれば、地震はふせぐことができる。', answer: false, why: '第5段落 Earthquakes cannot be prevented。' },
+    ],
+    qa: [
+      { q: 'How does Japan’s early warning system work?', choices: ['Sensors detect the first, weaker waves and send alerts.', 'It predicts earthquakes a week before.', 'It stops all earthquakes.', 'People call each other by phone.'], answer: 0, why: '第3段落 sensors detect the first, weaker waves and send alerts to phones and televisions。' },
+      { q: 'What do experts recommend individuals do?', choices: ['Fix heavy furniture to walls and store water and food.', 'Move to another country.', 'Build their own houses.', 'Ignore small earthquakes.'], answer: 0, why: '第5段落 fixing heavy furniture to walls, storing water and food for several days。' },
+    ],
+    gist: [
+      { para: 1, choices: ['地震が起こるしくみ', '岩の種類', '世界地図の見方', '日本の歴史'], answer: 0, why: '第2段落は、プレートの動きとひずみ、エネルギーの放出という地震のしくみを述べている。' },
+      { para: 3, choices: ['地震の被害をへらす建物の工夫', '高い建物の値段', '家具の選び方', '建築家の生活'], answer: 0, why: '第4段落は、建築のきまり、ゆれる建物、特別な装置、古い建物の補強を述べている。' },
+    ],
+    titleQ: { choices: ['Living with Earthquakes', 'How to Build a Tall Tower', 'The History of Trains', 'Why Rocks Are Hard'], answer: 0, why: '全体として、地震のしくみ、予測と速報、建物の工夫、一人ひとりの備えを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
