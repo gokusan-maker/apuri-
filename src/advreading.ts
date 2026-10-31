@@ -20476,6 +20476,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Gray Curtain', 'How to Drive at Night', 'The History of Radar', 'Why Glasses Get Cold'], answer: 0, why: '全体として、霧のしくみ、交通への影響、資源としての利用、霧の意味を述べている。' },
   },
   {
+    id: 'kyotsu-street-lights',
+    title: 'Lighting Up the Night',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, when the sun goes down, most city streets are filled with light. We can walk home safely, shop in the evening, and meet friends long after dark. It is easy to forget that for most of human history, nights in towns and cities were very dark. The story of street lighting shows how a simple technology changed the rhythm of daily life.",
+      "Before modern lighting, people who went out at night usually carried their own lamps or candles. In some cities, residents were required to hang a lamp outside their homes, but these lights were weak and often went out. Dark streets were dangerous, and many people preferred to stay indoors after sunset. As a result, most activities, from work to social life, had to end when daylight disappeared.",
+      "This began to change in the nineteenth century, when many large cities installed gas lamps along their main streets. Each evening, workers known as lamplighters walked from lamp to lamp, lighting them one by one, and returned in the morning to put them out. Gas lamps were much brighter than candles, and they made it possible for shops, theaters, and restaurants to stay open later. City life at night became busier and more lively, ( A ) changed the way people spent their free time.",
+      "Later, electric lights gradually replaced gas lamps. Electric lights were brighter and safer, and they could be switched on and off automatically, so lamplighters were no longer needed. Today, many cities are replacing older lights with LEDs, which use far less electricity and last much longer. Some systems can even become brighter when they detect people nearby and dimmer when the street is empty, ( B ) saves even more energy.",
+      "However, too much light can also cause problems. Bright city lights make it difficult to see the stars, and they can confuse animals such as birds and insects that depend on darkness. Some scientists also believe that too much artificial light at night may affect people’s sleep. For these reasons, a number of towns now use lights that point downward and turn off unnecessary lighting late at night. The challenge for the future is to find a balance between keeping streets safe and protecting the natural darkness ( C ) humans and animals both need.",
+    ],
+    ja: [
+      '今日、日がしずむと、ほとんどの都市の通りは明かりでいっぱいになる。私たちは安全に歩いて帰り、夕方に買い物をし、暗くなってからずっとあとまで友だちと会うことができる。人類の歴史のほとんどで、町や都市の夜はとても暗かったことはわすれやすい。街灯の物語は、シンプルな技術が毎日の生活のリズムをどのように変えたかを示している。',
+      '現代の明かりができる前、夜に出かける人はふつう自分のランプやろうそくを持ち歩いた。都市によっては、住民が家の外にランプをつるすよう決められていたが、こうした明かりは弱く、よく消えてしまった。暗い通りは危険で、多くの人は日がしずんだあとは家の中にいることを好んだ。その結果、仕事から人づきあいまで、ほとんどの活動は日の光が消えると終わらなければならなかった。',
+      'これは19世紀に変わりはじめた。多くの大都市が大通りにそってガス灯を置いたのである。毎夕、点灯夫とよばれる働き手がランプからランプへと歩き、1つずつ火をつけ、朝にはもどってきて消した。ガス灯はろうそくよりずっと明るく、店や劇場やレストランが遅くまで開いていることを可能にした。夜の都市の生活はよりにぎやかで活気のあるものになり、それは人々の自由な時間のすごし方を変えた。',
+      'のちに、電灯が少しずつガス灯にとってかわった。電灯はより明るく安全で、自動でつけたり消したりできたので、点灯夫はもう必要なくなった。今日、多くの都市が古い明かりを、はるかに少ない電気で長もちするLEDに取りかえている。近くに人がいるのを感知すると明るくなり、通りにだれもいないと暗くなるしくみまであり、それはさらにエネルギーを節約する。',
+      'しかし、明かりが多すぎることも問題を生む。都市の明るい光は星を見えにくくし、暗さにたよる鳥や虫などの動物をまどわせることがある。夜の人工の光が多すぎると人のねむりに影響するかもしれないと考える科学者もいる。このような理由から、今では下向きに照らす明かりを使い、夜おそくに必要のない明かりを消す町もいくつかある。これからの課題は、通りを安全にたもつことと、人間と動物の両方が必要とする自然の暗さを守ることのバランスを見つけることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容全体を受け、changed の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['which', 'what', 'where', 'whose'], answer: 0, why: 'コンマのあとで前の内容（明るさが変わること）を受け、saves の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the natural darkness を受け、need の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '現代の明かりができる前、多くの人は日がしずむと家の中にいることを好んだ。', answer: true, why: '第2段落 many people preferred to stay indoors after sunset。' },
+      { statement: '点灯夫は、ガス灯に1つずつ火をつけてまわった。', answer: true, why: '第3段落 lamplighters walked from lamp to lamp, lighting them one by one。' },
+      { statement: 'LEDは古い明かりより多くの電気を使う。', answer: false, why: '第4段落 LEDs, which use far less electricity。' },
+      { statement: '都市の明るい光は、動物には何の影響もない。', answer: false, why: '第5段落 they can confuse animals such as birds and insects。' },
+    ],
+    qa: [
+      { q: 'How did gas lamps change city life?', choices: ['Shops, theaters, and restaurants could stay open later.', 'People stopped going out at night.', 'Cities became quieter.', 'Candles became more popular.'], answer: 0, why: '第3段落 they made it possible for shops, theaters, and restaurants to stay open later。' },
+      { q: 'What are some towns doing about too much light?', choices: ['Using lights that point downward and turning off unnecessary lighting.', 'Removing all street lights.', 'Making lights brighter all night.', 'Building more gas lamps.'], answer: 0, why: '第5段落 a number of towns now use lights that point downward and turn off unnecessary lighting late at night。' },
+    ],
+    gist: [
+      { para: 1, choices: ['現代の明かりができる前の暗い夜のくらし', 'ろうそくの作り方', '家のかざり方', '日の出の時刻'], answer: 0, why: '第2段落は、自分のランプを持ち歩き、暗い通りをさけて活動が日没で終わったことを述べている。' },
+      { para: 3, choices: ['電灯とLEDへの変化', '電気料金の決め方', '点灯夫の給料', '光の速さ'], answer: 0, why: '第4段落は、電灯がガス灯にかわり、さらにLEDや自動で明るさを変えるしくみへ進んだことを述べている。' },
+    ],
+    titleQ: { choices: ['Lighting Up the Night', 'How to Make Candles', 'The Life of Night Animals', 'Why Stars Are Bright'], answer: 0, why: '全体として、街灯の歴史と、それが生活を変えたこと、明かりが多すぎる問題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
