@@ -1662,6 +1662,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Tell me [what] you like better, tea or coffee.', choices: ['which', 'that', 'whose', 'how'], answer: 0, why: '決まった選択肢（tea or coffee）の中から選ぶので which。' },
     ],
   },
+  {
+    id: 'exam-fix-37',
+    title: '入試の誤文訂正㊲（TOEFL・IELTS の書き言葉⑮：数や量をあらわす表現）',
+    points: ['the number of ～ は単数あつかい・a number of ～ は複数あつかい、fewer（数）と less（量）、information は数えられない、人口は large／small、Most ＋名詞、each of ～ は単数、分数 of ＋名詞の一致、増減の by、amount と number など、グラフや表を説明するときに使う表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The number of students is increasing.', ja: '学生の数はふえている。' }],
+    questions: [
+      { sentence: 'The number of students [are] increasing every year.', choices: ['is', 'have', 'were', 'being'], answer: 0, why: 'the number of ～「～の数」は、主語の中心が number（単数）なので is。' },
+      { sentence: 'A number of problems [has] been reported.', choices: ['have', 'is', 'was', 'has being'], answer: 0, why: 'a number of ～「たくさんの～」は複数あつかいなので have been reported。' },
+      { sentence: '[Less] students attended the class this year than last year.', choices: ['Fewer', 'Little', 'Few', 'Lesser'], answer: 0, why: '数えられる名詞（students）が「より少ない」ときは fewer。less は数えられない名詞に使う。' },
+      { sentence: 'We do not have [many] information about the project.', choices: ['much', 'a few', 'many of', 'several'], answer: 0, why: 'information は数えられない名詞なので much。' },
+      { sentence: 'The population of India is [more] than that of Japan.', choices: ['larger', 'much', 'more many', 'many'], answer: 0, why: '人口が「多い・少ない」は large／small であらわす：larger than。' },
+      { sentence: '[Most of] students passed the test.', choices: ['Most', 'Almost', 'Most of the all', 'The most'], answer: 0, why: '「たいていの～」は Most ＋名詞。most of を使うなら most of the students のように the などが必要。' },
+      { sentence: 'Each of the participants [were] given a number.', choices: ['was', 'have', 'are', 'being'], answer: 0, why: 'each of ～ は単数あつかいなので was given。' },
+      { sentence: 'Two thirds of the land [are] covered with forest.', choices: ['is', 'have', 'were', 'be'], answer: 0, why: '分数 of ～ は、of のあとの名詞に動詞を合わせる。the land は数えられない名詞（単数）なので is。' },
+      { sentence: 'Sales increased [with] 10 percent last year.', choices: ['by', 'in', 'for', 'at'], answer: 0, why: '増減の差をあらわすときは by：increased by 10 percent「10% ふえた」。' },
+      { sentence: 'A large [number] of water is wasted every day.', choices: ['amount', 'many', 'few', 'number of many'], answer: 0, why: '数えられない名詞（water）の量は a large amount of ～。number は数えられる名詞に使う。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

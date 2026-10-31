@@ -3367,3 +3367,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊸（国公立レベル：関係詞と接続詞のまとめ：where・when・What・why・whose・so that・Although・whether or not・so ～ that・which）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「ごめんなさいの言い方（謝罪）」（心理・人間関係・either／that／how to の空所）
 - 2026-10-31: キャラクター：ウズラの「ウズラン」を追加（とくぎ：ころころガード）
+- 2026-10-31: 文法：入試の誤文訂正㊲（TOEFL・IELTS の書き言葉⑮：the number of・a number of・fewer・much information・larger・most・each of・分数の一致・by ○%・a large amount of）10問
