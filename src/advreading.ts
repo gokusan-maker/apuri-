@@ -19462,6 +19462,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Internet Under the Sea', 'How Satellites Work', 'The History of Fishing', 'Why the Ocean Is Deep'], answer: 0, why: '全体として、海底ケーブルの大切さ、歴史、しき方、傷つく原因、守る取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-vinyl-records',
+    title: 'The Return of the Record',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For most of the twentieth century, people listened to recorded music on vinyl records, large black discs that were played on a turntable with a needle. Then came cassette tapes, compact discs, and finally digital music that could be downloaded or streamed from the internet. By the early twenty-first century, many people thought that records had become a thing of the past, kept only by a small number of collectors. Few would have guessed what was about to happen.",
+      "Surprisingly, however, records have made a comeback. In several countries, sales of vinyl records have grown again in recent years, and some music shops that once sold only CDs now have large sections for records. Many new albums are released on vinyl as well as in digital form, and some young people who grew up with smartphones are buying record players for the first time.",
+      "Why would people choose an old technology when music is available instantly on a phone? One reason is that a record is a physical object. Its large cover offers space for artwork and information about the musicians, ( A ) many fans enjoy looking at while they listen. Owning a collection of records can feel more personal than having a list of songs on a screen. Some listeners also say that records have a warm and rich sound, although experts disagree about whether this is really true.",
+      "Another reason is the experience of listening. Playing a record requires a little effort: taking it out of its cover, placing it on the turntable, and carefully lowering the needle. Because it is not easy to skip from song to song, listeners often play a whole side of an album from beginning to end. For some people, this slower way of listening helps them pay closer attention to the music ( B ) treating it simply as background noise.",
+      "Of course, records also have disadvantages. They are more expensive than streaming, take up space, and can be scratched easily. Still, their return shows ( C ) new technology does not always completely replace old technology. Sometimes, people choose older ways of doing things not because they are more convenient, but because they offer a different kind of value.",
+    ],
+    ja: [
+      '20世紀のほとんどのあいだ、人々は録音された音楽を、針のついたターンテーブルでかける大きな黒い円盤であるレコードで聞いていた。それからカセットテープ、CDが登場し、最後にはインターネットからダウンロードしたりストリーミングしたりできるデジタルの音楽が現れた。21世紀のはじめには、多くの人が、レコードは少数の収集家だけが持っている過去のものになったと思っていた。これから何が起こるのかを予想した人はほとんどいなかっただろう。',
+      'しかしおどろくことに、レコードは復活をとげている。いくつかの国では、近年レコードの売り上げがふたたびのびており、かつてはCDだけを売っていた音楽店の中には、今ではレコードの大きな売り場をもつところもある。多くの新しいアルバムがデジタルの形だけでなくレコードでも発売され、スマートフォンとともに育った若者の中には、はじめてレコードプレーヤーを買う人もいる。',
+      '音楽が電話ですぐに手に入るのに、なぜ人々は古い技術を選ぶのだろうか。理由の一つは、レコードが形のある物だということである。その大きなジャケットには、絵や音楽家についての情報のための場所があり、多くのファンは聞きながらそれをながめるのを楽しむ。レコードのコレクションをもつことは、画面の上の曲のリストをもつより個人的なものに感じられることがある。レコードには温かく豊かな音があると言う人もいるが、それが本当かどうかについては専門家の意見が分かれている。',
+      'もう一つの理由は、聞くという経験である。レコードをかけるには、ジャケットから出し、ターンテーブルにのせ、注意深く針をおろすという少しの手間が必要である。曲から曲へかんたんにとばせないので、聞く人はしばしばアルバムの片面を最初から最後まで通してかける。人によっては、このゆっくりした聞き方が、音楽をただの背景の音としてあつかうのではなく、より注意深く聞く助けになる。',
+      'もちろん、レコードには欠点もある。ストリーミングより値段が高く、場所をとり、傷がつきやすい。それでもレコードの復活は、新しい技術がいつも古い技術にすっかりとってかわるわけではないことを示している。人々はときに、古いやり方のほうが便利だからではなく、ちがう種類の価値をあたえてくれるから、それを選ぶのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞（絵や情報のための場所）を受け、look at の目的語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['instead of', 'because of', 'in spite of', 'in case of'], answer: 0, why: '「ただの背景の音としてあつかうのではなく」と前のこととの対比を表すので instead of（～するかわりに）。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '近年、いくつかの国でレコードの売り上げがふたたびのびている。', answer: true, why: '第2段落 sales of vinyl records have grown again in recent years。' },
+      { statement: 'スマートフォンとともに育った若者は、だれもレコードプレーヤーを買わない。', answer: false, why: '第2段落 some young people who grew up with smartphones are buying record players for the first time。' },
+      { statement: 'レコードの音が本当に温かいかどうかは、専門家の意見が分かれている。', answer: true, why: '第3段落 experts disagree about whether this is really true。' },
+      { statement: '筆者によれば、新しい技術はいつも古い技術にすっかりとってかわる。', answer: false, why: '第5段落 new technology does not always completely replace old technology。' },
+    ],
+    qa: [
+      { q: 'Why do listeners often play a whole side of a record?', choices: ['It is not easy to skip from song to song.', 'Records are very short.', 'They cannot stop the music.', 'Records have only one song.'], answer: 0, why: '第4段落 Because it is not easy to skip from song to song, listeners often play a whole side。' },
+      { q: 'Which is NOT mentioned as a disadvantage of records?', choices: ['They cannot play classical music.', 'They are more expensive than streaming.', 'They take up space.', 'They can be scratched easily.'], answer: 0, why: '第5段落にクラシック音楽がかけられないという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['レコードの復活', 'CDの作り方', '音楽店の場所', 'スマートフォンの値段'], answer: 0, why: '第2段落は、売り上げがのび、若者も買うなど、レコードが復活していることを述べている。' },
+      { para: 3, choices: ['レコードで聞くという経験', '針の作り方', '背景の音楽の選び方', 'アルバムの名前'], answer: 0, why: '第4段落は、手間をかけ、アルバムを通して聞くというレコードならではの経験を述べている。' },
+    ],
+    titleQ: { choices: ['The Return of the Record', 'How to Download Music', 'The History of the Internet', 'Why Phones Are Popular'], answer: 0, why: '全体として、レコードの復活と、その理由・欠点・新旧の技術についての教訓を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
