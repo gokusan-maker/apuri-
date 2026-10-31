@@ -860,6 +860,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="56" rx="7" ry="5" fill="#3f2d20" />
       </g>
     )
+  if (species === 'nautilus')
+    return (
+      <g>
+        {/* からのうずまき */}
+        <path d="M50 50 m-10 0 a10 10 0 1 1 20 0 a6 6 0 1 1 -12 0 a3 3 0 1 1 6 0" fill="none" stroke="#7c2d12" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
