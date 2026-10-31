@@ -683,3 +683,17 @@ it('デザイン157：今日のピックアップの子が出たら「🎯 ピ�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText('🎯 ピックアップ当たり！')).toBeNull()
 })
+
+it('デザイン162：その日はじめて SR 以上が出たら「🌟 今日はじめての○○！」が出る（2回目は出ない）', async () => {
+  localStorage.clear()
+  const { KINDS } = await import('./monster')
+  const sr = KINDS.find((k) => k.rarity === 'SR')!
+  const draw = () => ({ kind: sr, species: speciesOf('cat'), newKind: false, newSpecies: false })
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} onDraw={draw} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('🌟 今日はじめてのSR！')).toBeInTheDocument()
+  unmount()
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={draw} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText(/今日はじめての/)).toBeNull()
+})

@@ -8,7 +8,7 @@ import { STICKERS, STICKER_TICKETS } from './stickers'
 import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
 import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
-import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
+import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, PARTY_MAX, pushGachaLog } from './gacha'
 import { CHAR_TYPES, typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
 import { baseRate, FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
@@ -108,9 +108,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
     record(k)
     setCharaGot(`${k.kind.id === 'normal' ? '' : `${k.kind.name}の`}${k.species.name}`)
   }
+  const [firstSr, setFirstSr] = useState(false) // デザイン162：今日はじめての SR 以上
   const record = (k: GachaResult) => {
     setStats(loadGachaStats())
     recordLog(k)
+    setFirstSr((k.kind.rarity === 'SR' || k.kind.rarity === 'UR') && markSrToday(todayKey))
   }
   const recordLog = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
   const full = members >= PARTY_MAX
@@ -609,6 +611,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             // デザイン128：そのタイプの子がはじめてなかまになった
             <p className="gacha-new-type" role="status">
               🆕 はじめての{typeOf(result.species.id).icon}{typeOf(result.species.id).name}！
+            </p>
+          )}
+          {!result.mystery && firstSr && (result.kind.rarity === 'SR' || result.kind.rarity === 'UR') && (
+            // デザイン162：今日はじめての SR 以上
+            <p className="gacha-new-type gacha-first-sr" role="status">
+              🌟 今日はじめての{result.kind.rarity}！
             </p>
           )}
           {!result.mystery && pickup && pickup.id === result.species.id && (

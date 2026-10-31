@@ -49,6 +49,20 @@ export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, 
 }
 
 // 最近のガチャの結果（新しい順に10回まで）
+// デザイン162：その日はじめての SR 以上か（さいごに SR 以上が出た日をおぼえておく）
+const SR_DAY_KEY = 'eitan:gacha-sr-day'
+export function markSrToday(day: string): boolean {
+  let last = ''
+  try {
+    last = localStorage.getItem(SR_DAY_KEY) ?? ''
+    localStorage.setItem(SR_DAY_KEY, day)
+  } catch {
+    // ストレージが使えない環境では毎回「はじめて」あつかいにしない
+    return false
+  }
+  return last !== day
+}
+
 export type GachaLog = { day: string; kind: string; species: string }[]
 const LOG_KEY = 'eitan:gacha-log'
 
