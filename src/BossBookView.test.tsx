@@ -399,3 +399,16 @@ it('デザイン158：ステージのボスにぜんぶ勝つと「👑 ステ�
   expect(screen.getByLabelText('ステージのボス制覇').textContent).toBe('👑 ステージのボス制覇！')
   expect(screen.queryByLabelText('つぎのめあて')).toBeNull()
 })
+
+it('デザイン170：ボス図鑑で、いちばん最初にたおしたボスに「🥇 はじめての勝利」が出る', async () => {
+  localStorage.clear()
+  const { BOSSES } = await import('./boss')
+  const { recordWin, saveBook } = await import('./bossbook')
+  const looks = Object.values(BOSSES)
+  let b = recordWin({}, looks[1], 'A', '2026-10-01')
+  b = recordWin(b, looks[0], 'B', '2026-10-05')
+  saveBook(b)
+  render(<BossBook />)
+  const mark = screen.getByLabelText('いちばん最初にたおしたボス')
+  expect(mark.closest('li')!.querySelector('.badge-name')!.textContent).toBe(looks[1].name)
+})

@@ -38,6 +38,9 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   // デザイン117：いちばんたくさん勝ったボス（2回以上のときだけ。同じ回数なら先にあるほう）
   const topWins = Math.max(0, ...all.map((b) => book[b.name]?.wins ?? 0))
   const topName = topWins >= 2 ? all.find((b) => book[b.name]?.wins === topWins)?.name : undefined
+  // デザイン170：いちばん最初にたおしたボス（はじめて勝った日がいちばん早いボス。同じ日なら図鑑で先のボス。2体以上たおしたときだけ）
+  const dated = all.filter((b) => /^\d{4}-\d{2}-\d{2}$/.test(book[b.name]?.first ?? ''))
+  const firstWin = dated.length >= 2 ? dated.reduce((x, y) => (book[y.name].first < book[x.name].first ? y : x)).name : null
   const clean = all.filter((b) => book[b.name] && noMiss.includes(b.name)).length // デザイン108：ノーミスでたおしたボスの数
   return (
     <details className="boss-book game-fold">
@@ -150,6 +153,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                   {noMiss.includes(b.name) && <strong className="speed-clear"> ✨ ノーミス</strong>}
                   {topName === b.name && <strong className="speed-clear"> 🏆 いちばん勝った</strong>}
                   {lastBoss === b.name && <strong className="speed-clear" aria-label="いちばん最近たおしたボス"> 🆕 さいきん</strong>}
+                  {firstWin === b.name && <strong className="speed-clear" aria-label="いちばん最初にたおしたボス"> 🥇 はじめての勝利</strong>}
                   {/^\d{4}-\d{2}-\d{2}$/.test(e.first ?? '') && <span className="boss-book-first">・📅 はじめて勝った日 {Number(e.first.slice(5, 7))}月{Number(e.first.slice(8, 10))}日</span>}
                 </span>
               )}
