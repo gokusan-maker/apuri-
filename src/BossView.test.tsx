@@ -984,3 +984,20 @@ it('デザイン160：今日同じボスに2回目以上勝つと「📅 今日�
   play()
   expect(screen.getByLabelText('今日このボスに勝った回数').textContent).toBe('📅 今日2回目の勝利')
 })
+
+it('デザイン163：ボス戦で10問以上正解して勝つと「📚 ○問正解！」が出る（少ないときは出ない）', () => {
+  localStorage.clear()
+  const play = (hp: number) => {
+    const r = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={hp} traits={[]} />)
+    for (let i = 0; i < 40 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      answer(true)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    return r
+  }
+  const small = play(5)
+  expect(screen.queryByLabelText('正解した問題の数')).toBeNull()
+  small.unmount()
+  play(240)
+  expect(screen.getByLabelText('正解した問題の数').textContent).toMatch(/^📚 \d+問正解！$/)
+})
