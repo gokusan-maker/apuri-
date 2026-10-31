@@ -949,3 +949,16 @@ it('デザイン151：これまでの最大コンボをこえて勝つと「🔥
   expect(screen.getByLabelText('コンボ新記録').textContent).toBe('🔥 コンボ新記録！')
   expect(loadBossBestCombo()).toBeGreaterThan(2)
 })
+
+it('デザイン156：まちがえても相棒のとくぎを使わずに勝つと「💪 とくぎなしで勝利！」が出る', async () => {
+  localStorage.clear()
+  const { FORMS } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} partner={{ form: FORMS[1], species: 'mochi', name: 'モチ' }} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('とくぎなしで勝利').textContent).toBe('💪 とくぎなしで勝利！')
+})

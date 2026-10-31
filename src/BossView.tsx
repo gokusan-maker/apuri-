@@ -884,6 +884,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {corrects + wrongs > 0 && <span aria-label={`正答率 ${Math.round((corrects / (corrects + wrongs)) * 100)}%`}>🎯 正答率 {Math.round((corrects / (corrects + wrongs)) * 100)}%</span>} {/* デザイン127 */}
             {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
             {skill && skillUsed > 0 && <span aria-label={`とくぎ ${skillUsed}回`}>✨ {skill.name} {skillUsed}回</span>} {/* デザイン121 */}
+            {skill && skillUsed === 0 && wrongs > 0 && <span className="game-best" aria-label="とくぎなしで勝利">💪 とくぎなしで勝利！</span>} {/* デザイン156：まちがえても相棒のとくぎにたよらずに勝った */}
             {isWinMilestone(winCount) && <span aria-label={`${winCount}回目の勝利`}>🎖 {winCount}回目の勝利！</span>} {/* デザイン130 */}
             {bigHit > 0 && <span aria-label={`最大ダメージ ${bigHit}`}>💥 最大 {bigHit} ダメージ</span>} {/* デザイン133 */}
             {partner && partner.form.stage > 0 && <span aria-label="いっしょに戦った相棒">{typeOf(partner.species).icon} {partner.name}といっしょに勝った</span>} {/* デザイン136 */}
