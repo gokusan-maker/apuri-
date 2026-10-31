@@ -1158,6 +1158,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Not only [it saves] money, but it also protects the environment.', choices: ['does it save', 'it does save', 'saves it', 'it saving'], answer: 0, why: 'Not only が文頭に出ると疑問文の語順に倒置：Not only does it save money。' },
     ],
   },
+  {
+    id: 'exam-fix-25',
+    title: '入試の誤文訂正㉕（共通テストレベル：中学〜高1の総復習）',
+    points: ['三人称単数・助動詞＋原形・There are・不規則動詞の過去形・比較級・現在完了の疑問文・不定詞・過去分詞の形容詞的用法・現在進行形・関係代名詞 who など、共通テストの土台になる文法の総復習。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The book written by her is popular.', ja: '彼女によって書かれた本は人気がある。（過去分詞が名詞を説明）' }],
+    questions: [
+      { sentence: 'He [don\'t] like coffee.', choices: ['doesn\'t', 'isn\'t', 'not', 'aren\'t'], answer: 0, why: '主語が三人称単数（He）の一般動詞の否定は doesn\'t ＋原形。' },
+      { sentence: 'My brother [can swims] very fast.', choices: ['can swim', 'cans swim', 'can swimming', 'can to swim'], answer: 0, why: '助動詞 can のあとは動詞の原形：can swim。' },
+      { sentence: 'There [is] two cats under the table.', choices: ['are', 'be', 'has', 'have'], answer: 0, why: 'うしろの名詞が two cats（複数）なので There are。' },
+      { sentence: 'She [goed] to the park yesterday.', choices: ['went', 'gone', 'goes', 'was go'], answer: 0, why: 'go は不規則動詞で、過去形は went。' },
+      { sentence: 'This question is [more easy] than that one.', choices: ['easier', 'easyer', 'more easier', 'most easy'], answer: 0, why: 'easy の比較級は y を i にかえて -er：easier。' },
+      { sentence: '[Did] you ever been to Okinawa?', choices: ['Have', 'Do', 'Are', 'Were'], answer: 0, why: '経験をたずねる現在完了の疑問文は Have you ever been to ～?' },
+      { sentence: 'I want [eat] something sweet.', choices: ['to eat', 'eating', 'ate', 'eats'], answer: 0, why: 'want のあとは to 不定詞：want to eat。' },
+      { sentence: 'The book [writing] by her is very popular.', choices: ['written', 'wrote', 'writes', 'to write'], answer: 0, why: '本は「書かれた」ものなので過去分詞：The book written by her。' },
+      { sentence: 'Please be quiet. The baby [sleeps].', choices: ['is sleeping', 'slept', 'sleep', 'has slept'], answer: 0, why: '「今ねむっている（最中）」なので現在進行形：is sleeping。' },
+      { sentence: 'I have a friend [which] lives in Osaka.', choices: ['who', 'whose', 'whom', 'what'], answer: 0, why: '先行詞は人（a friend）で、lives の主語になるので主格の who。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
