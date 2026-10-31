@@ -20398,6 +20398,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Trees Along the Street', 'How to Build a Road', 'The History of Concrete', 'Why Birds Sing'], answer: 0, why: '全体として、街路樹が都市にもたらすめぐみ（すずしさ・雨水・幸福）と課題を述べている。' },
   },
   {
+    id: 'kyotsu-online-reviews',
+    title: 'Reading Reviews Wisely',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Before buying a new product, booking a hotel, or choosing a restaurant, many people now check online reviews. With just a few taps on a smartphone, we can read what hundreds or even thousands of other customers think. Online reviews have become one of the most powerful sources of information in modern life, but learning how to use them wisely is not as simple as it might seem.",
+      "Reviews can be extremely helpful. In the past, people often had to rely on advertisements, which naturally present products in the best possible light, or on the opinions of a few friends. Today, reviews allow us to learn from the experiences of many people with different needs. A parent might read whether a hotel is suitable for small children, ( A ) a traveler with a wheelchair might check whether the building is easy to enter.",
+      "However, reviews also have weaknesses. People who are extremely happy or extremely unhappy are more likely to write reviews than those whose experience was simply ordinary. As a result, reviews may not accurately reflect the experience of a typical customer. In addition, some reviews are not genuine at all. Some businesses have been found to pay people to write positive comments about their own products, or negative comments about their competitors.",
+      "For these reasons, experts recommend reading reviews carefully rather than looking only at the average rating. It is useful to read several reviews, including both positive and negative ones, and to look for comments that give specific details. A review that says “The room was small but very clean, and the staff helped us find a good restaurant nearby” is usually more useful than one that simply says “Great!” or “Terrible!” It is also worth checking ( B ) the reviews were written recently, since a business may have changed over time.",
+      "Many websites are now trying to make reviews more reliable, for example by allowing only customers who have actually bought a product to review it. Still, no system is perfect. In the end, online reviews are a tool, and like any tool, their value depends on how we use them. By thinking critically about what we read, we can make better decisions and avoid being misled by information ( C ) does not tell the whole story.",
+    ],
+    ja: [
+      '新しい製品を買ったり、ホテルを予約したり、レストランを選んだりする前に、今では多くの人がオンラインのレビューをたしかめる。スマートフォンを数回タップするだけで、何百、何千というほかの客がどう思っているかを読むことができる。オンラインのレビューは現代の生活で最も力のある情報源の1つになったが、それをかしこく使う方法を身につけることは、見かけほどかんたんではない。',
+      'レビューはとても役に立つことがある。かつて人々は、当然ながら製品をできるだけよく見せる広告や、何人かの友だちの意見にたよらなければならないことが多かった。今日では、レビューのおかげで、さまざまな必要をもつ多くの人の経験から学ぶことができる。親はホテルが小さな子どもに向いているかどうかを読み、車いすを使う旅行者は建物に入りやすいかどうかをたしかめるかもしれない。',
+      'しかし、レビューには弱点もある。とても満足した人やとても不満だった人は、経験がただふつうだった人よりもレビューを書きやすい。その結果、レビューはふつうの客の経験を正確に反映していないことがある。さらに、本物ではないレビューもある。自分の製品についてよいコメントを、競争相手についてはわるいコメントを書かせるために人にお金をはらっていた会社も見つかっている。',
+      'このような理由から、専門家は平均の評価だけを見るのではなく、レビューを注意深く読むようすすめている。よいものもわるいものもふくめていくつかのレビューを読み、具体的なことが書かれたコメントをさがすと役に立つ。「部屋はせまかったがとても清潔で、スタッフが近くのよいレストランを見つけるのを手伝ってくれた」というレビューは、ただ「最高！」や「最悪！」と言うだけのものより、ふつうはずっと役に立つ。お店は時がたつにつれて変わっているかもしれないので、レビューが最近書かれたものかどうかをたしかめる価値もある。',
+      '多くのウェブサイトは今、たとえば実際に製品を買った客だけがレビューを書けるようにするなどして、レビューをよりたよれるものにしようとしている。それでも、完ぺきなしくみはない。結局のところ、オンラインのレビューは道具であり、どんな道具とも同じように、その価値は使い方しだいである。読むものについて批判的に考えることで、私たちはよりよい決定をし、すべてを伝えていない情報にまどわされるのをさけることができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'until'], answer: 0, why: '親の例と車いすの旅行者の例をならべて対比しているので while「一方で」。' },
+      { id: 'B', choices: ['whether', 'what', 'which', 'unless'], answer: 0, why: 'check whether ～「～かどうかをたしかめる」。うしろは完全な文。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 information（もの）を受け、does not tell の主語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '広告は、ふつう製品をできるだけよく見せる。', answer: true, why: '第2段落 advertisements, which naturally present products in the best possible light。' },
+      { statement: 'レビューを書くのは、経験がふつうだった人が最も多い。', answer: false, why: '第3段落 People who are extremely happy or extremely unhappy are more likely to write reviews。' },
+      { statement: 'お金をはらってよいコメントを書かせていた会社もある。', answer: true, why: '第3段落 Some businesses have been found to pay people to write positive comments。' },
+      { statement: '専門家は、平均の評価だけを見ればよいと言っている。', answer: false, why: '第4段落 experts recommend reading reviews carefully rather than looking only at the average rating。' },
+    ],
+    qa: [
+      { q: 'What kind of review is usually more useful?', choices: ['One that gives specific details.', 'One that says only “Great!”.', 'One that is very short.', 'One written many years ago.'], answer: 0, why: '第4段落 look for comments that give specific details。' },
+      { q: 'How are some websites trying to make reviews more reliable?', choices: ['By allowing only customers who bought a product to review it.', 'By deleting all negative reviews.', 'By paying people to write reviews.', 'By showing only the average rating.'], answer: 0, why: '第5段落 by allowing only customers who have actually bought a product to review it。' },
+    ],
+    gist: [
+      { para: 1, choices: ['レビューが役に立つ理由', '広告の作り方', 'ホテルの予約方法', '車いすの歴史'], answer: 0, why: '第2段落は、多くの人の経験から学べるというレビューの利点を述べている。' },
+      { para: 2, choices: ['レビューの弱点', '会社の経営', '競争相手の見つけ方', 'お金のはらい方'], answer: 0, why: '第3段落は、かたよりや本物でないレビューという弱点を述べている。' },
+    ],
+    titleQ: { choices: ['Reading Reviews Wisely', 'How to Open a Restaurant', 'The History of Advertising', 'Why Hotels Are Expensive'], answer: 0, why: '全体として、オンラインのレビューの利点と弱点、かしこい読み方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
