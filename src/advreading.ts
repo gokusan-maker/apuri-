@@ -19306,6 +19306,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Journey of Curry Rice', 'How to Grow Rice', 'The History of the Navy', 'Why Spices Are Expensive'], answer: 0, why: '全体として、カレーがインドからイギリスを通って日本に来て、広まり、独自の料理になった道すじを述べている。' },
   },
   {
+    id: 'kyotsu-lasers',
+    title: 'A Beam of Possibilities',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When you pay at a supermarket, a red light scans the barcode on each item in a fraction of a second. When doctors perform certain kinds of eye surgery, they use a beam of light that is precise enough to reshape tiny parts of the eye. Both of these technologies depend on the same invention: the laser. Although lasers are now everywhere, they were once a scientific curiosity with no obvious use.",
+      "Ordinary light, such as the light from a lamp or the sun, is made up of many different colours and spreads out in all directions. Laser light is different. It usually consists of a single colour, and its light waves move in step with one another, so the beam can travel a long distance without spreading out very much. This makes it possible to focus a great deal of energy onto a very small spot, ( A ) is why lasers can cut through metal or burn holes in hard materials.",
+      "The first working laser was built in 1960. At the time, some people joked that it was “a solution looking for a problem,” because nobody was quite sure what it would be used for. Over the following decades, however, scientists and engineers discovered more and more applications. Today lasers are used to send information through optical fibres, to read and write data, to print documents, and to measure distances with remarkable accuracy.",
+      "One famous example of this accuracy involves the Moon. During space missions in the twentieth century, astronauts left special mirrors on the Moon's surface. Scientists on Earth can fire laser beams at these mirrors and measure how long the light takes to return. In this way, they can calculate the distance between the Earth and the Moon to within a few centimetres, ( B ) has helped them learn that the Moon is slowly moving away from us.",
+      "Like many powerful tools, lasers must be used carefully. Strong laser beams can seriously damage the eyes, and pointing lasers at aircraft is extremely dangerous and illegal in many countries. Still, the story of the laser shows ( C ) an invention that seems to have no use at first may eventually change many parts of everyday life.",
+    ],
+    ja: [
+      'スーパーマーケットで代金をはらうとき、赤い光がほんの一瞬でそれぞれの品物のバーコードを読み取る。医師がある種の目の手術をするときには、目の小さな部分の形を変えられるほど正確な光線を使う。この2つの技術はどちらも、同じ発明にたよっている。レーザーである。レーザーは今ではどこにでもあるが、かつては明らかな使い道のない科学上のめずらしいものだった。',
+      'ランプや太陽の光のようなふつうの光は、多くのちがう色でできており、あらゆる方向に広がる。レーザーの光はちがう。ふつうは1つの色でできていて、光の波がたがいにそろって進むので、光線はあまり広がらずに長いきょりを進むことができる。これによって、とても小さな一点に大量のエネルギーを集めることができ、それがレーザーが金属を切ったりかたい物に穴をあけたりできる理由である。',
+      '最初に実際に動くレーザーは1960年に作られた。当時、何に使われるのかだれにもはっきりわからなかったので、それは「問題をさがしている解決策」だとからかう人もいた。しかしそれから何十年かのあいだに、科学者や技術者はますます多くの使い道を見つけた。今日、レーザーは光ファイバーで情報を送り、データを読み書きし、書類を印刷し、おどろくほど正確にきょりをはかるのに使われている。',
+      'この正確さの有名な例の一つは、月にかかわるものである。20世紀の宇宙での任務のあいだに、宇宙飛行士は月の表面に特別な鏡を置いてきた。地球の科学者はこの鏡に向けてレーザー光線を発射し、光がもどってくるのにかかる時間をはかることができる。このようにして、彼らは地球と月のきょりを数センチの正確さで計算でき、そのことが、月がゆっくりと私たちから遠ざかっていることを知るのに役立ってきた。',
+      '多くの強力な道具と同じように、レーザーは注意して使わなければならない。強いレーザー光線は目に深刻な傷をあたえることがあり、レーザーを航空機に向けるのはきわめて危険で、多くの国で違法である。それでもレーザーの物語は、はじめは使い道がないように見える発明が、やがて日常生活の多くの部分を変えることがあると示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容全体を受ける which。, which is why ～「そしてそれが～の理由だ」。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（きょりを正確に計算できること）を受け、has helped の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'レーザーの光は、ふつうは1つの色でできている。', answer: true, why: '第2段落 It usually consists of a single colour。' },
+      { statement: '最初のレーザーができたとき、すぐに多くの使い道がわかっていた。', answer: false, why: '第3段落 nobody was quite sure what it would be used for。' },
+      { statement: '科学者は月に置かれた鏡を使って、地球と月のきょりをはかっている。', answer: true, why: '第4段落 Scientists on Earth can fire laser beams at these mirrors and measure how long the light takes to return。' },
+      { statement: '筆者によれば、レーザーを航空機に向けても危険はない。', answer: false, why: '第5段落 pointing lasers at aircraft is extremely dangerous and illegal in many countries。' },
+    ],
+    qa: [
+      { q: 'Why can a laser beam travel a long distance without spreading much?', choices: ['Its light waves move in step with one another.', 'It contains many different colours.', 'It is much hotter than sunlight.', 'It travels only at night.'], answer: 0, why: '第2段落 its light waves move in step with one another, so the beam can travel a long distance without spreading out very much。' },
+      { q: 'What have measurements using the Moon mirrors shown?', choices: ['The Moon is slowly moving away from the Earth.', 'The Moon is getting closer to the Earth.', 'The Moon has no mirrors.', 'The Moon is made of metal.'], answer: 0, why: '第4段落 the Moon is slowly moving away from us。' },
+    ],
+    gist: [
+      { para: 2, choices: ['最初のレーザーと広がった使い道', '印刷機の歴史', 'からかいのことば', 'データの消し方'], answer: 0, why: '第3段落は、1960年の最初のレーザーと、その後見つかった多くの使い道を述べている。' },
+      { para: 3, choices: ['月の鏡を使ったきょりの測定', '宇宙飛行士の訓練', '鏡のみがき方', '月の形の変化'], answer: 0, why: '第4段落は、月に置いた鏡にレーザーを当ててきょりを正確にはかる例を述べている。' },
+    ],
+    titleQ: { choices: ['A Beam of Possibilities', 'How to Use a Supermarket', 'The History of Lamps', 'Why the Moon Is Bright'], answer: 0, why: '全体として、レーザーの性質、はじめの評価、多くの使い道、正確さの例、注意点を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
