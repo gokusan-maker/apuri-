@@ -379,3 +379,10 @@ it('正誤問題㉚：総合（大学入試の頻出ミス）の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('(B) gone to')
 })
+
+it('誤文訂正㉔：TOEFL・IELTS の書き言葉のまとめの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-24')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('will discuss')
+})

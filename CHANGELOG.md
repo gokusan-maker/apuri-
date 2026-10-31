@@ -3288,3 +3288,4 @@
 - 2026-10-31: 文法：入試の正誤問題㉚（総合：married to・have been to・for/since・mind -ing・such a・yet・Most of the・each ＋単数）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「足もとの水（地下水）」（環境・水・非制限の which／that の空所）
 - 2026-10-31: キャラクター追加：ムツゴロン（ムツゴロウ・ひがたのどろんこタマゴ・スピードのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正㉔（総合：There exist・This essay will discuss・encourage to・be concerned about・It is widely believed・In recent years・Not only の倒置）10問

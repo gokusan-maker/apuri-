@@ -1116,6 +1116,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The report, which [is published] last week, shows a clear trend.', choices: ['was published', 'has published', 'publishes', 'is publishing'], answer: 0, why: 'last week の過去のことで、報告書は「発表された」ので過去の受け身：was published。' },
     ],
   },
+  {
+    id: 'exam-fix-24',
+    title: '入試の誤文訂正㉔（総合：TOEFL・IELTS の書き言葉のまとめ）',
+    points: ['小論文でよく減点される誤りのまとめ。There exist ＋複数、This essay will discuss、encourage 人 to ～、be concerned about、Most people、It is widely believed that、be more likely to ～、In recent years、Not only の倒置など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It is widely believed that exercise improves mental health.', ja: '運動は心の健康をよくすると広く信じられている。' }],
+    questions: [
+      { sentence: 'There [exists] many ways to save energy at home.', choices: ['exist', 'is existing', 'existing', 'exists of'], answer: 0, why: 'There ＋動詞のあとの名詞 many ways が複数なので exist。' },
+      { sentence: 'This essay [will be discussed] the causes of climate change.', choices: ['will discuss', 'will discussed', 'is discussing about', 'discussing'], answer: 0, why: '小論文が「論じる」側なので能動態：This essay will discuss ～。' },
+      { sentence: 'Governments should [encourage people use] public transport.', choices: ['encourage people to use', 'encourage people using', 'encourage to people use', 'encourage people for using'], answer: 0, why: 'encourage 人 to ＋原形「人に～するようすすめる」。' },
+      { sentence: 'Many people [are concerning] about rising prices.', choices: ['are concerned', 'concerning', 'are concern', 'concern'], answer: 0, why: '「～を心配している」は be concerned about ～。' },
+      { sentence: '[The most of] people prefer to live in cities.', choices: ['Most', 'The most', 'Most of', 'Almost'], answer: 0, why: '「ほとんどの人」は Most people。the most of や Most of people、Almost people とは言わない。' },
+      { sentence: 'It is [widely believe] that exercise improves mental health.', choices: ['widely believed', 'wide believed', 'widely believing', 'wide belief'], answer: 0, why: 'It is ＋副詞＋過去分詞＋ that ～「～と…に信じられている」：It is widely believed that ～。' },
+      { sentence: 'Young people are [more likely use] social media than older people.', choices: ['more likely to use', 'likely more using', 'more likely using', 'most likely to using'], answer: 0, why: 'be likely to ＋原形「～しそうだ」。比較級は be more likely to ～。' },
+      { sentence: '[In the recent years], online shopping has grown rapidly.', choices: ['In recent years', 'In the recently years', 'On recent years', 'At recent years'], answer: 0, why: '「近年」は In recent years（the はつけない）。' },
+      { sentence: 'This trend [has a] negative impacts on health.', choices: ['has negative impacts', 'has a negative impacts', 'have a negative impacts', 'is negative impacts'], answer: 0, why: 'impacts は複数なので a はつけない：has negative impacts（単数なら a negative impact）。' },
+      { sentence: 'Not only [it saves] money, but it also protects the environment.', choices: ['does it save', 'it does save', 'saves it', 'it saving'], answer: 0, why: 'Not only が文頭に出ると疑問文の語順に倒置：Not only does it save money。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
