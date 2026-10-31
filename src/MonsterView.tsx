@@ -897,6 +897,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M32 62 L68 62 M34 70 L66 70" stroke="#713f12" strokeWidth="4" strokeLinecap="round" />
       </g>
     )
+  if (species === 'seaurchin')
+    return (
+      <g>
+        {/* 体のとげ */}
+        <path d="M20 60 l-8 0 M80 60 l8 0 M28 40 l-6 -6 M72 40 l6 -6 M50 30 l0 -8" stroke="#3b0764" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
