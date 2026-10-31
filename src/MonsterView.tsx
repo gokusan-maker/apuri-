@@ -1001,6 +1001,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M70 26 q14 -6 14 -16 q-8 4 -12 2 q-2 6 -6 8 Z" fill="#d6b98c" stroke="#3b2a1a" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'shrimp')
+    return (
+      <g>
+        {/* 長いひげ */}
+        <path d="M44 34 Q36 14 22 10 M56 34 Q64 14 78 10" fill="none" stroke="#991b1b" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

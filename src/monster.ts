@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'shrimp', name: 'エビン', egg: 'いそべのぴちぴちタマゴ', token: 'エビ', bigToken: 'エビン', color: '#fca5a5', line: '#991b1b', rate: 0.02, desc: '岩のあいだを元気にはねるエビ。しっぽでぴょんと後ろにとぶように、まちがえてもすぐに体勢を立て直す。' },
   { id: 'moose', name: 'ヘラジカン', egg: 'きたのもりのおおつのタマゴ', token: 'ヘラ', bigToken: 'ヘラジカン', color: '#7c5a3c', line: '#3b2a1a', rate: 0.02, desc: '北の森にすむ、平たく大きなつのをもつヘラジカ。雪の中でもゆっくり力強く歩くように、どっしりとした学びを続ける。' },
   { id: 'anglerfish', name: 'チョウチンアンコン', egg: 'しんかいのあかりタマゴ', token: 'アン', bigToken: 'チョウチンアンコン', color: '#6b7280', line: '#111827', rate: 0.02, desc: 'まっくらな深海で頭の上の光でえものをさそうチョウチンアンコウ。暗い中でも小さな明かりをたよりに、正しい答えを見つける。' },
   { id: 'swallow', name: 'ツバメン', egg: 'のきさきのはるのタマゴ', token: 'ツバ', bigToken: 'ツバメン', color: '#1e3a8a', line: '#0f172a', rate: 0.02, desc: '春になると遠い南の国から海をこえてやってくるツバメ。長い旅をこなすように、毎日こつこつ英語の旅を続ける。' },
