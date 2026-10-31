@@ -21334,6 +21334,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['More Than Pictures', 'How to Draw a Forest', 'The History of Hospitals', 'Why Children Sleep'], answer: 0, why: '全体として、絵本がことばと絵を組み合わせた芸術であり、子どもにもおとなにも価値があることを述べている。' },
   },
   {
+    id: 'kyotsu-3d-printing',
+    title: 'Printing Real Objects',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Imagine being able to make a cup, a toy, or even a replacement part for a broken machine simply by pressing a button. With a 3D printer, this is already possible. Unlike an ordinary printer, which puts ink on paper, a 3D printer builds solid objects layer by layer. This technology, which was once used mainly by engineers in factories, is now becoming common in schools, hospitals, and even homes.",
+      "The basic process is simple to understand. First, a person designs an object on a computer or downloads a design that someone else has made. The computer then divides the design into hundreds or thousands of thin horizontal slices. The printer follows these instructions, adding one thin layer of material at a time, usually plastic that has been melted and then hardens as it cools. Gradually, the layers build up until the finished object appears. Depending on its size and detail, this can take anywhere from a few minutes to many hours.",
+      "One of the greatest advantages of 3D printing is that it makes it easy to create objects ( A ) are made for a particular person or purpose. In medicine, for example, doctors can print models of a patient’s organs to plan difficult operations, and some hospitals produce artificial limbs that fit each patient exactly. Because only the necessary material is used, 3D printing can also reduce waste compared with methods that cut objects out of large blocks.",
+      "The technology is also changing how people learn and create. Students can design and print their own inventions, turning ideas into real objects they can hold and test. Small businesses can produce small numbers of products without the high cost of building a factory. In some places, people have even begun experimenting with printing parts of houses using special concrete, ( B ) could make building faster and cheaper in the future.",
+      "However, 3D printing also raises some concerns. Many printers use plastic, and if objects are printed carelessly and then thrown away, they could add to the problem of plastic waste. There are also questions about safety and law, since it may be possible to copy protected designs or produce dangerous items. As with any powerful tool, the benefits of 3D printing will depend on ( C ) responsibly people choose to use it.",
+    ],
+    ja: [
+      'ボタンをおすだけで、カップやおもちゃ、こわれた機械の部品まで作れると想像してみよう。3Dプリンターがあれば、これはすでに可能である。紙にインクをのせるふつうのプリンターとはちがい、3Dプリンターは固体の物を1層ずつつくり上げる。かつては主に工場の技術者が使っていたこの技術は、今では学校や病院、さらには家庭でもふつうになりつつある。',
+      '基本的なしくみは理解しやすい。まず、人がコンピューターで物を設計するか、ほかの人がつくった設計をダウンロードする。次にコンピューターがその設計を、何百、何千もの水平のうすい切れはしに分ける。プリンターはこの指示にしたがって、ふつうはとかされて冷えるとかたまるプラスチックの材料を、1回にうすい1層ずつ加えていく。しだいに層が重なり、完成した物が現れる。大きさや細かさによって、これには数分から何時間もかかる。',
+      '3Dプリントの最も大きな利点の1つは、特定の人や目的のために作られた物をかんたんに作れることである。たとえば医療では、医師がむずかしい手術を計画するために患者の臓器の模型を印刷でき、一人ひとりの患者にぴったり合う義手や義足をつくる病院もある。必要な材料だけを使うので、3Dプリントは、大きなかたまりから物を切り出す方法とくらべて、むだをへらすこともできる。',
+      'この技術は、人々の学び方やものづくりのしかたも変えている。生徒は自分の発明を設計して印刷し、考えを、手に持ってためせる本物の物に変えることができる。小さな会社は、工場をつくる高い費用をかけずに、少ない数の製品をつくることができる。地域によっては、特別なコンクリートを使って家の一部を印刷する実験を始めた人もおり、それは将来、建物をより速く安く建てられるようにするかもしれない。',
+      'しかし、3Dプリントにはいくつかの心配な点もある。多くのプリンターはプラスチックを使っており、物を不注意に印刷してすてると、プラスチックごみの問題を大きくしかねない。保護されたデザインをコピーしたり、危険な物をつくったりできるかもしれないので、安全や法律についての問題もある。どんな強力な道具とも同じように、3Dプリントのめぐみは、人々がそれをどれほど責任をもって使うかにかかっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 objects を受け、are made の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（家の一部を印刷すること）を受け、could make の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋副詞 responsibly ＋主語＋動詞で「どれほど責任をもって～か」。' },
+    ],
+    tf: [
+      { statement: '3Dプリンターは、紙にインクをのせて物をつくる。', answer: false, why: '第1段落 Unlike an ordinary printer, which puts ink on paper, a 3D printer builds solid objects layer by layer。' },
+      { statement: '3Dプリンターは、物を1層ずつつくり上げる。', answer: true, why: '第2段落 adding one thin layer of material at a time。' },
+      { statement: '一人ひとりの患者に合う義手や義足をつくる病院がある。', answer: true, why: '第3段落 some hospitals produce artificial limbs that fit each patient exactly。' },
+      { statement: '筆者によれば、3Dプリントには心配な点はまったくない。', answer: false, why: '第5段落 3D printing also raises some concerns。' },
+    ],
+    qa: [
+      { q: 'How can 3D printing reduce waste?', choices: ['Only the necessary material is used.', 'It uses no electricity.', 'It recycles all paper.', 'It makes objects smaller.'], answer: 0, why: '第3段落 Because only the necessary material is used, 3D printing can also reduce waste。' },
+      { q: 'What concern does the author mention?', choices: ['Carelessly printed plastic objects could add to plastic waste.', '3D printers are too large for homes.', 'Students cannot use them.', 'They cannot print any objects.'], answer: 0, why: '第5段落 if objects are printed carelessly and then thrown away, they could add to the problem of plastic waste。' },
+    ],
+    gist: [
+      { para: 1, choices: ['3Dプリンターのしくみ', 'コンピューターの選び方', 'プラスチックの作り方', '設計図の値段'], answer: 0, why: '第2段落は、設計を切れはしに分け、1層ずつ重ねて物をつくるしくみを述べている。' },
+      { para: 3, choices: ['学びやものづくりへの影響', '工場のつくり方', 'コンクリートの歴史', '会社の名前'], answer: 0, why: '第4段落は、生徒の発明、小さな会社の生産、家の印刷の実験を述べている。' },
+    ],
+    titleQ: { choices: ['Printing Real Objects', 'How to Print a Photo', 'The History of Paper', 'Why Plastic Melts'], answer: 0, why: '全体として、3Dプリンターのしくみ、医療やものづくりでの利点、心配な点を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
