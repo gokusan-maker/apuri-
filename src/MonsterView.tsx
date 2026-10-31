@@ -927,6 +927,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 40 L38 76 M62 40 L62 76" stroke="#ffffff" strokeWidth="5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'aardvark')
+    return (
+      <g>
+        {/* 長い耳 */}
+        <ellipse cx="34" cy="22" rx="5" ry="12" fill="#e7c6a5" stroke="#6b4423" strokeWidth="1.5" />
+        <ellipse cx="66" cy="22" rx="5" ry="12" fill="#e7c6a5" stroke="#6b4423" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

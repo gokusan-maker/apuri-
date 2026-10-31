@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'aardvark', name: 'ツチブタン', egg: 'さばんなのよるのタマゴ', token: 'ツチ', bigToken: 'ツチブタン', color: '#e7c6a5', line: '#6b4423', rate: 0.02, desc: '夜のサバンナで長い耳と鼻をつかってアリの巣を見つけるツチブタ。するどいつめで土をほるように、問題の答えをほり当てる。' },
   { id: 'clownfish', name: 'クマノミン', egg: 'いそぎんちゃくのおうちタマゴ', token: 'ノミ', bigToken: 'クマノミン', color: '#fb923c', line: '#7c2d12', rate: 0.02, desc: 'イソギンチャクの中を家にしてくらすクマノミ。なかまと助け合ってくらすように、相棒といっしょに力を合わせて問題にいどむ。' },
   { id: 'salamander', name: 'サンショウオン', egg: 'きよいかわのしずかなタマゴ', token: 'サン', bigToken: 'サンショウオン', color: '#a8a29e', line: '#44403c', rate: 0.02, desc: 'きれいな川の底でじっとくらすオオサンショウウオ。大昔から姿をほとんど変えずに生きてきたように、こつこつ長く学びつづける。' },
   { id: 'goldfish', name: 'キンギョン', egg: 'なつまつりのすくいタマゴ', token: 'キン', bigToken: 'キンギョン', color: '#fb923c', line: '#9a3412', rate: 0.02, desc: '夏祭りでおなじみの赤い金魚。ひらひらと長いひれで水の中をおよぐように、楽しく軽やかに単語を覚える。' },
