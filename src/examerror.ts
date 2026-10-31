@@ -2208,6 +2208,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Here [the bus comes] at last.', choices: ['comes the bus', 'the bus come', 'come the bus', 'does the bus come'], answer: 0, why: 'Here が文頭で主語が名詞のときは倒置：Here comes the bus。代名詞なら Here it comes。' },
     ],
   },
+  {
+    id: 'exam-fix-50',
+    title: '入試の誤文訂正㊿（共通テストレベル：関係代名詞と関係副詞の総まとめ）',
+    points: ['うしろに名詞が欠けていれば関係代名詞（which・that）、欠けていなければ関係副詞（where・when）、the only ～ that、先行詞をふくむ what、所有の whose、the way と how はいっしょに使わない、コンマのあとに that は使えない、前置詞 ＋ which、everything that など、関係詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the house which my father built.', ja: 'これは父が建てた家だ。' }],
+    questions: [
+      { sentence: 'This is the house [where] my father built.', choices: ['which', 'where in', 'what', 'in that'], answer: 0, why: 'built の目的語が欠けているので関係代名詞 which。where はうしろが完全な文のときに使う。' },
+      { sentence: 'I visited the city [which] my grandmother was born.', choices: ['where', 'that', 'what', 'who'], answer: 0, why: 'my grandmother was born は完全な文なので、場所の関係副詞 where。' },
+      { sentence: 'Do you remember the day [which] we first met?', choices: ['when', 'what', 'who', 'whose'], answer: 0, why: 'we first met は完全な文で、先行詞が時（the day）なので関係副詞 when。' },
+      { sentence: 'He is the only student [which] passed the test.', choices: ['that', 'whom', 'whose', 'what'], answer: 0, why: '先行詞が人で the only がつくときは that がよく使われる（who でもよい）。which は人に使わない。' },
+      { sentence: 'Tell me [that] you want for your birthday.', choices: ['what', 'which', 'who', 'whom'], answer: 0, why: '先行詞がなく、want の目的語が欠けているので「～するもの」の what。' },
+      { sentence: 'The man [who’s] car was stolen called the police.', choices: ['whose', 'who', 'that', 'which'], answer: 0, why: '「その男性の車」と所有の関係なので whose car。who’s は who is の短い形。' },
+      { sentence: 'This is [the way how] he solved the problem.', choices: ['how', 'the way which', 'the how', 'what way how'], answer: 0, why: 'the way と how はいっしょに使わない：This is how ～（または the way ～）。' },
+      { sentence: 'I have a friend, [that] lives in London.', choices: ['who', 'whom', 'what', 'whose'], answer: 0, why: 'コンマのあとの非制限用法には that を使えない。lives の主語なので who。' },
+      { sentence: 'The hotel [at that] we stayed was very nice.', choices: ['at which', 'at what', 'at where', 'which at'], answer: 0, why: '前置詞のあとには that を使えない：at which（= where）。' },
+      { sentence: 'Everything [what] he said was true.', choices: ['that', 'which of', 'whose', 'what that'], answer: 0, why: '先行詞 Everything があるので what は使えない。everything のあとはふつう that。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

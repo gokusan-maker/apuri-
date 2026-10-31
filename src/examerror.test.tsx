@@ -743,3 +743,10 @@ it('正誤問題〈56〉：倒置・省略・挿入の単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) I have seen')
 })
+
+it('誤文訂正㊿：関係代名詞と関係副詞の総まとめの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-50')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('which')
+})

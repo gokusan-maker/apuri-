@@ -3447,3 +3447,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈56〉（医学部・難関大レベル⑤：Never・Only・So・Little の倒置、Should you・were I、While waiting・if necessary の省略、who I think、Here comes）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「あいさつの意味」（文化・ことば・関係代名詞 that／接続詞 that の空所）
 - 2026-10-31: キャラクター：テンの「テンテン」を追加（とくぎ：えだわたりガード）
+- 2026-10-31: 文法：入試の誤文訂正㊿（共通テストレベル：which と where・when・the only ～ that・what・whose・how・非制限の who・at which・everything that）10問
