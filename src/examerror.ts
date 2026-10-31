@@ -794,6 +794,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Do you know (A) whom (B) is going to (C) speak (D) at the ceremony?', choices: ['(A) whom', '(B) is going to', '(C) speak', '(D) at the ceremony'], answer: 0, why: 'is going to の主語になるので主格の who。' },
     ],
   },
+  {
+    id: 'exam-error-longsubj',
+    title: '入試の正誤問題㉟（TOEFL・IELTS の書き言葉：長い主語と動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'of ～・関係詞・分詞で長くなった主語の中心をさがす。The number of・One of・Each of は単数、動名詞と What の節も単数、数えられない名詞は a lot of がついても単数あつかい。',
+    ],
+    examples: [
+      { en: 'The cost of living in big cities is rising quickly.', ja: '大都市でくらす費用は急に上がっている。（主語の中心は The cost）' },
+      { en: 'What we need most is more time.', ja: '私たちが最も必要としているのは、もっと多くの時間だ。' },
+    ],
+    questions: [
+      { sentence: 'The opinions (A) of the expert (B) who visited our school (C) was (D) very helpful.', choices: ['(A) of the expert', '(B) who visited our school', '(C) was', '(D) very helpful'], answer: 2, why: '主語の中心は The opinions（複数）なので were。' },
+      { sentence: 'The number of students who (A) study abroad have (B) increased (C) a lot (D) recently.', choices: ['(A) study abroad have', '(B) increased', '(C) a lot', '(D) recently'], answer: 0, why: '主語の中心は The number（単数）なので has increased。' },
+      { sentence: 'Reading (A) books (B) in English (C) are (D) good practice.', choices: ['(A) books', '(B) in English', '(C) are', '(D) good practice'], answer: 2, why: '動名詞の主語（Reading ～）は単数あつかいなので is。' },
+      { sentence: '(A) One of the (B) most famous (C) buildings in the city (D) are the castle.', choices: ['(A) One of the', '(B) most famous', '(C) buildings in the city', '(D) are the castle'], answer: 3, why: '主語の中心は One（単数）なので is。' },
+      { sentence: 'The boys playing (A) soccer in the park (B) is (C) my (D) classmates.', choices: ['(A) soccer in the park', '(B) is', '(C) my', '(D) classmates'], answer: 1, why: '主語の中心は The boys（複数）なので are。' },
+      { sentence: 'What (A) we need (B) most (C) are (D) more time.', choices: ['(A) we need', '(B) most', '(C) are', '(D) more time'], answer: 2, why: 'What ～ の名詞節が主語のときは単数あつかい：What we need most is more time。' },
+      { sentence: 'Each of the students (A) in our class (B) have (C) a different (D) dream.', choices: ['(A) in our class', '(B) have', '(C) a different', '(D) dream'], answer: 1, why: 'Each of ～ は単数あつかいなので has。' },
+      { sentence: 'The cost of (A) living in big cities (B) are (C) rising (D) quickly.', choices: ['(A) living in big cities', '(B) are', '(C) rising', '(D) quickly'], answer: 1, why: '主語の中心は The cost（単数）なので is rising。' },
+      { sentence: 'The people (A) who lives (B) next door (C) are (D) very kind.', choices: ['(A) who lives', '(B) next door', '(C) are', '(D) very kind'], answer: 0, why: 'who の先行詞は The people（複数）なので who live。' },
+      { sentence: 'A lot of the (A) information (B) on the internet (C) are (D) not reliable.', choices: ['(A) information', '(B) on the internet', '(C) are', '(D) not reliable'], answer: 2, why: 'information は数えられない名詞なので、a lot of the information は単数あつかい：is。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
