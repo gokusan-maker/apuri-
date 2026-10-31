@@ -372,3 +372,10 @@ it('誤文訂正㉓：時制をそろえる単元が10問ある', async () => {
   expect(u.questions).toHaveLength(10)
   expect(u.questions[2].choices[u.questions[2].answer]).toBe('has increased')
 })
+
+it('正誤問題㉚：総合（大学入試の頻出ミス）の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-mix')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(B) gone to')
+})

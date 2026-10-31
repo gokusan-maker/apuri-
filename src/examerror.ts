@@ -674,6 +674,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I have (A) seen (B) this movie (C) three (D) time.', choices: ['(A) seen', '(B) this movie', '(C) three', '(D) time'], answer: 3, why: '回数を表す time は数えられる名詞：three times。' },
     ],
   },
+  {
+    id: 'exam-error-mix',
+    title: '入試の正誤問題㉚（総合：大学入試の頻出ミス）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be married to、have been to と have gone to、for と since、前置詞のあとの動名詞、mind -ing、such a と so、will ＋原形、yet と already、Most of the、each ＋単数名詞など、入試で何度も出る誤りの総まとめ。',
+    ],
+    examples: [
+      { en: 'He has been to Paris twice.', ja: '彼はパリに2回行ったことがある。（経験は have been to）' },
+      { en: 'I haven’t finished my homework yet.', ja: 'まだ宿題を終えていない。（否定文の「まだ」は yet）' },
+    ],
+    questions: [
+      { sentence: 'She (A) is (B) married (C) with (D) a lawyer.', choices: ['(A) is', '(B) married', '(C) with', '(D) a lawyer'], answer: 2, why: '「～と結婚している」は be married to ～。' },
+      { sentence: 'He (A) has (B) gone to (C) Paris (D) twice.', choices: ['(A) has', '(B) gone to', '(C) Paris', '(D) twice'], answer: 1, why: '経験「～へ行ったことがある」は have been to。have gone to は「行ってしまった（今いない）」で twice と合わない。' },
+      { sentence: 'We (A) talked (B) about (C) the problem (D) since two hours.', choices: ['(A) talked', '(B) about', '(C) the problem', '(D) since two hours'], answer: 3, why: '期間の長さは for：for two hours。since は起点に使う。' },
+      { sentence: 'She (A) is good (B) at (C) to cook (D) Italian food.', choices: ['(A) is good', '(B) at', '(C) to cook', '(D) Italian food'], answer: 2, why: '前置詞 at のあとは動名詞：good at cooking。' },
+      { sentence: '(A) Do you mind (B) to close (C) the door (D) for me?', choices: ['(A) Do you mind', '(B) to close', '(C) the door', '(D) for me'], answer: 1, why: 'mind のあとは動名詞：Do you mind closing ～?' },
+      { sentence: 'It (A) was (B) so a (C) hot day (D) that we stayed inside.', choices: ['(A) was', '(B) so a', '(C) hot day', '(D) that we stayed inside'], answer: 1, why: 'such a ＋形容詞＋名詞：such a hot day（so なら so hot a day）。' },
+      { sentence: '(A) Who (B) do you think (C) will (D) wins the game?', choices: ['(A) Who', '(B) do you think', '(C) will', '(D) wins the game'], answer: 3, why: '助動詞 will のあとは原形：will win。' },
+      { sentence: 'I (A) haven’t (B) finished (C) my homework (D) already.', choices: ['(A) haven’t', '(B) finished', '(C) my homework', '(D) already'], answer: 3, why: '否定文の「まだ」は yet：I haven’t finished my homework yet。' },
+      { sentence: '(A) Most of (B) Japanese (C) like (D) rice.', choices: ['(A) Most of', '(B) Japanese', '(C) like', '(D) rice'], answer: 0, why: 'Most of のあとには the などがつく名詞が必要：Most Japanese people（または Most of the Japanese）。' },
+      { sentence: '(A) Each students (B) in this school (C) has (D) a locker.', choices: ['(A) Each students', '(B) in this school', '(C) has', '(D) a locker'], answer: 0, why: 'each のあとは単数名詞：Each student。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
