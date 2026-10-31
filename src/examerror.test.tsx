@@ -309,3 +309,10 @@ it('正誤問題㉕：分詞構文・接続詞の難問の単元が10問ある',
   expect(u.questions).toHaveLength(10)
   expect(u.questions[8].choices[u.questions[8].answer]).toBe('(A) Seeing')
 })
+
+it('誤文訂正⑲：並列の形をそろえる単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-19')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('cooking')
+})

@@ -906,6 +906,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He said he would come, but he didn\'t [come it].', choices: ['come', 'do so it', 'came', 'coming'], answer: 0, why: 'come は自動詞で目的語をとらない。didn\'t のあとは原形：didn\'t come。' },
     ],
   },
+  {
+    id: 'exam-fix-19',
+    title: '入試の誤文訂正⑲（TOEFL・IELTS の書き言葉⑧：並列の形をそろえる）',
+    points: ['and・or・but also・than・both A and B・either A or B などで2つ以上をならべるときは、同じ形（名詞と名詞、動名詞と動名詞、原形と原形）にそろえる。小論文でよく減点される誤り。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She likes swimming, reading, and cooking.', ja: '彼女は泳ぐこと、読書、料理が好きだ。（すべて -ing の形）' }],
+    questions: [
+      { sentence: 'She likes swimming, reading, and [to cook].', choices: ['cooking', 'cook', 'cooks', 'to cooking'], answer: 0, why: 'swimming・reading と同じ動名詞の形にそろえる：cooking。' },
+      { sentence: 'The job requires patience, skill, and [being creative].', choices: ['creativity', 'creative', 'to create', 'be creative'], answer: 0, why: 'patience・skill と同じ名詞の形にそろえる：creativity。' },
+      { sentence: 'He not only plays the piano [but also is singing].', choices: ['but also sings', 'but sings also', 'and also is singing', 'but also singing'], answer: 0, why: 'not only plays … but also sings と、同じ現在形の動詞にそろえる。' },
+      { sentence: 'Students should read more books and [to spend] less time on games.', choices: ['spend', 'spending', 'spent', 'to spending'], answer: 0, why: 'should のあとの read と同じ原形にそろえる：should read … and spend。' },
+      { sentence: 'It is better to walk than [driving] in the city center.', choices: ['to drive', 'driven', 'drives', 'having drove'], answer: 0, why: 'to walk と比べるので同じ不定詞にそろえる：to walk than to drive。' },
+      { sentence: 'The plan is both cheap and [it is effective].', choices: ['effective', 'effectively', 'effect', 'it effective'], answer: 0, why: 'both A and B で、cheap と同じ形容詞にそろえる：both cheap and effective。' },
+      { sentence: 'I prefer tea [than] coffee.', choices: ['to', 'over than', 'rather', 'from'], answer: 0, why: 'prefer A to B「B より A を好む」。than は使わない。' },
+      { sentence: 'You can either call me [or sending] an email.', choices: ['or send', 'or to send', 'or sent', 'nor send'], answer: 0, why: 'either call … or send と、同じ原形にそろえる。' },
+      { sentence: 'Our goal is to reduce costs and [improving] quality.', choices: ['improve', 'improves', 'improved', 'to improving'], answer: 0, why: 'to reduce … and (to) improve と、同じ不定詞の形にそろえる。' },
+      { sentence: 'Neither the teacher [or] the students knew the answer.', choices: ['nor', 'and', 'but', 'either'], answer: 0, why: 'neither A nor B「A も B も～ない」。neither と or は組まない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
