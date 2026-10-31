@@ -600,3 +600,20 @@ it('デザイン123：ガチャの結果に、同じタイプのなかまが何�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText(`${t.name}のなかま ${n}体`).textContent).toBe(`${t.icon} ${t.name}のなかま：${n}体`)
 })
+
+it('デザイン128：そのタイプの子がはじめてなかまになったとき「🆕 はじめての○○型！」が出る', async () => {
+  localStorage.clear()
+  const { typeOf } = await import('./chartype')
+  const t = typeOf('penguin')
+  const owned = ['mochi'].filter((sp) => typeOf(sp).id !== t.id)
+  render(<Gacha coins={GACHA_PRICE} members={1} ownedSpecies={owned} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('penguin'), newKind: false, newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText(`🆕 はじめての${t.icon}${t.name}！`)).toBeInTheDocument()
+})
+
+it('デザイン128：同じタイプのなかまがすでにいるときは「はじめての」を出さない', async () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} ownedSpecies={['mochi', 'turtle']} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('penguin'), newKind: false, newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText(/🆕 はじめての/)).toBeNull()
+})

@@ -604,6 +604,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               </p>
             ) : null
           })()}
+          {!result.mystery && ownedSpecies && !ownedSpecies.some((sp) => sp !== result.species.id && typeOf(sp).id === typeOf(result.species.id).id) && (
+            // デザイン128：そのタイプの子がはじめてなかまになった
+            <p className="gacha-new-type" role="status">
+              🆕 はじめての{typeOf(result.species.id).icon}{typeOf(result.species.id).name}！
+            </p>
+          )}
           {onNameNew && (named ? (
             <p className="gacha-named">🏷 「{named}」と名前をつけたよ！</p>
           ) : naming === null ? (
