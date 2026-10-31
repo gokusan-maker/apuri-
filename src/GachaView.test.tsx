@@ -626,3 +626,13 @@ it('デザイン132：ガチャの結果に、図鑑のコンプリート率が�
   const pct = Math.floor((3 / SPECIES.length) * 100)
   expect(screen.getByLabelText(`図鑑のコンプリート率 ${pct}%`).textContent).toBe(`📖 図鑑 ${pct}%（3/${SPECIES.length}）`)
 })
+
+it('デザイン137：キャラ図鑑で、今日ガチャで出会った子に ☀今日 がつく', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} ownedSpecies={['mochi', 'fox', 'cat']} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  expect(screen.queryByLabelText('今日出会った')).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  const marks = screen.getAllByLabelText('今日出会った')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe(speciesOf('cat').name)
+})

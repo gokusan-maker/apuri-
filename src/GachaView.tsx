@@ -88,6 +88,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
     setShakeN(shakeN + 1)
   }
   const [log, setLog] = useState(loadGachaLog)
+  const [todayKey] = useState(() => new Date().toISOString().slice(0, 10)) // デザイン137：今日の日付（ガチャの記録と同じ形）
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
   const [named, setNamed] = useState('')
   const [capsule, setCapsule] = useState(loadCapsule)
@@ -191,7 +192,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🎉 {charaGot}が仲間になった！ 「記録」→「あいぼう」で相棒にできるよ
             </p>
           )}
-          {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} partner={partnerSpecies} />}
+          {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} partner={partnerSpecies} today={log.filter((e) => e.day === todayKey).map((e) => e.species)} />}
         </div>
       ) : (
         <>
@@ -490,7 +491,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           🏰 城のボーナス：レアが出やすさ +{Math.round(castleLuck(castles) * 100)}%（制覇した城 {castles}）
         </p>
       )}
-      {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} partner={partnerSpecies} />}
+      {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} levels={speciesLevels} partner={partnerSpecies} today={log.filter((e) => e.day === todayKey).map((e) => e.species)} />}
       {log.length > 0 && (
         <details className="gacha-odds gacha-log chip-fold cf-4">
           <summary>最近のガチャ（{log.length}回）</summary>
@@ -706,7 +707,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
 }
 
 // キャラクター図鑑：ガチャで出るキャラ全部。まだ会っていない子はシルエットと「？？？」
-function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fresh?: string; levels?: Record<string, number>; partner?: string }) {
+function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: string[]; fresh?: string; levels?: Record<string, number>; partner?: string; today?: string[] }) {
   const got = new Set(['mochi', ...owned])
   const [pick, setPick] = useState<string | null>(null)
   const [onlyNew, setOnlyNew] = useState(false) // まだ会っていない子だけ見る
@@ -765,6 +766,7 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
                 {ok && (partner ?? 'mochi') === sp.id && <span className="char-book-partner" aria-label="今の相棒">⭐相棒</span>}
                 {ok && levels?.[sp.id] === 1 && (partner ?? 'mochi') !== sp.id && <span className="char-book-sprout" aria-label="まだ育てていない">🌱</span>} {/* デザイン122 */}
+                {ok && today.includes(sp.id) && <span className="char-book-sprout" aria-label="今日出会った">☀今日</span>} {/* デザイン137 */}
                 <span className={`char-type t-${t.id}`} title={t.desc}>
                   {t.icon}
                   {t.name.replace('型', '')}
