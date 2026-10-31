@@ -18253,6 +18253,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Science of Frozen Food', 'How to Catch Fish in Winter', 'The History of Lakes', 'Why Ice Is Cold'], answer: 0, why: '全体として、冷凍の歴史、氷の結晶のしくみ、速い冷凍の発明、冷凍食品の役割を述べている。' },
   },
   {
+    id: 'kyotsu-akiya',
+    title: 'A Second Life for Empty Houses',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many parts of Japan, it is becoming common to see houses that nobody lives in. Their windows are dusty, their gardens are covered with weeds, and their mailboxes are full of old advertisements. By some counts, there are now millions of such empty houses across the country, and the number has been rising for years. These houses are often called akiya, which simply means “empty houses.”",
+      "There are several reasons why so many houses have been left empty. Japan's population is getting older and, in many areas, smaller, so there are fewer people to live in existing homes. When elderly owners move into care facilities or pass away, their children may already have homes in large cities and have no wish to move back. In addition, in Japan older houses are often considered less valuable than new ones, ( A ) many people prefer to build a new house rather than buy an old one.",
+      "Empty houses can cause problems for the communities around them. Buildings that are not looked after may become dangerous, especially in areas where earthquakes and typhoons are common. They can also attract pests, increase the risk of fires, and make a neighbourhood look neglected. When many houses in the same area are empty, local shops and services may lose customers and close, making the area even less attractive to new residents.",
+      "In response, many towns have started trying to give empty houses a second life. Some local governments have created online lists, sometimes called akiya banks, ( B ) owners can register houses they want to sell or rent cheaply. Young families, people who want to work remotely, and those who dream of a quieter life in the countryside have begun to use these lists. Some old houses have also been turned into cafes, guesthouses, or community spaces.",
+      "These efforts are not always easy. Old houses often need expensive repairs, and newcomers may find it difficult to adjust to life in a small community. Still, many people see empty houses not only as a problem but also as an opportunity. If they can be reused in creative ways, they may help to bring new energy to towns ( C ) have been losing people for many years.",
+    ],
+    ja: [
+      '日本の多くの地域で、だれも住んでいない家を見かけるのがふつうになりつつある。窓はほこりをかぶり、庭は雑草におおわれ、郵便受けは古い広告でいっぱいである。数え方によっては、今では国じゅうにこうした空き家が何百万戸もあるとされ、その数は何年も増えつづけている。こうした家はしばしば「空き家」、つまり「からっぽの家」とよばれる。',
+      'これほど多くの家が空き家になっている理由はいくつかある。日本の人口は高齢化し、多くの地域で減っているので、今ある家に住む人が少なくなっている。年配の持ち主が介護施設に移ったり亡くなったりしても、子どもたちはすでに大都市に家をもっていて、もどりたいと思わないかもしれない。さらに、日本では古い家は新しい家より価値が低いと考えられることが多く、そのため多くの人は古い家を買うより新しい家を建てるほうを好む。',
+      '空き家は、その周りの地域に問題を引き起こすことがある。手入れされない建物は、とくに地震や台風の多い地域では危険になりうる。また、害虫を引きよせたり、火事の危険を高めたり、地域を荒れたように見せたりすることもある。同じ地域で多くの家が空き家になると、地元の店やサービスは客を失って閉まるかもしれず、その地域は新しく住む人にとってさらに魅力のないものになってしまう。',
+      'これに対して、多くの町が空き家に第2の人生をあたえようとしはじめている。ある自治体は、「空き家バンク」とよばれることもあるインターネット上の一覧を作り、そこでは持ち主が安く売ったり貸したりしたい家を登録できる。若い家族、リモートで働きたい人、いなかでの静かなくらしを夢見る人々が、こうした一覧を使いはじめている。古い家の中には、カフェやゲストハウス、地域の集まりの場所に生まれ変わったものもある。',
+      'こうした取り組みはいつもかんたんというわけではない。古い家はお金のかかる修理が必要なことが多く、新しく来た人は小さな地域社会での生活になじむのがむずかしいと感じるかもしれない。それでも多くの人は、空き家を問題としてだけでなく、機会としても見ている。もし創造的な方法で再利用できれば、空き家は、長年人口が減ってきた町に新しい活気をもたらす助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「古い家は価値が低いと考えられる、だから新しい家を建てるほうを好む」と結果を表すので so。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は online lists で、うしろが完全な文（owners can register houses …）なので関係副詞 where（＝ on which）。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 towns を受け、うしろの have been losing の主語になるので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '日本の空き家の数は、何年も増えつづけている。', answer: true, why: '第1段落 the number has been rising for years。' },
+      { statement: '日本では、古い家は新しい家より価値が高いと考えられることが多い。', answer: false, why: '第2段落 older houses are often considered less valuable than new ones。' },
+      { statement: '手入れされない空き家は、地震や台風のときに危険になりうる。', answer: true, why: '第3段落 Buildings that are not looked after may become dangerous, especially in areas where earthquakes and typhoons are common。' },
+      { statement: '筆者によれば、空き家の再利用には何の困難もない。', answer: false, why: '第5段落 These efforts are not always easy。' },
+    ],
+    qa: [
+      { q: 'Why might the children of elderly owners not move back?', choices: ['They may already have homes in large cities.', 'They cannot find the house.', 'The houses are too new.', 'They are not allowed to live there.'], answer: 0, why: '第2段落 their children may already have homes in large cities and have no wish to move back。' },
+      { q: 'Which is NOT mentioned as a new use for old houses?', choices: ['Factories.', 'Cafes.', 'Guesthouses.', 'Community spaces.'], answer: 0, why: '第4段落に工場の話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['空き家が地域にあたえる問題', '家の建て方', '火事の消し方', '店の開き方'], answer: 0, why: '第3段落は、危険・害虫・火事・地域の衰退など、空き家が引き起こす問題を述べている。' },
+      { para: 3, choices: ['空き家に第2の人生をあたえる取り組み', 'インターネットの歴史', 'リモートワークのしかた', 'カフェのメニュー'], answer: 0, why: '第4段落は、空き家バンクや、カフェなどへの再利用の取り組みを述べている。' },
+    ],
+    titleQ: { choices: ['A Second Life for Empty Houses', 'How to Build a New House', 'The History of Typhoons', 'Why Cities Are Growing'], answer: 0, why: '全体として、空き家がふえる理由、問題、再利用の取り組みと課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
