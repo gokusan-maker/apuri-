@@ -19501,6 +19501,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Return of the Record', 'How to Download Music', 'The History of the Internet', 'Why Phones Are Popular'], answer: 0, why: '全体として、レコードの復活と、その理由・欠点・新旧の技術についての教訓を述べている。' },
   },
   {
+    id: 'kyotsu-sense-of-taste',
+    title: 'How We Taste',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Why does chocolate taste sweet, lemons taste sour, and coffee taste bitter? Our sense of taste seems simple, but it is actually a complex system that helps us decide what to eat and what to avoid. For our ancestors, being able to tell the difference between safe and dangerous food could mean the difference between life and death.",
+      "Scientists generally recognise five basic tastes: sweet, salty, sour, bitter, and umami, a savoury taste found in foods such as meat, cheese, and soup made from seaweed. Umami was first identified in the early twentieth century by a Japanese scientist who was studying why a certain kind of soup tasted so good. Each basic taste seems to have a purpose. Sweetness signals energy-rich food, saltiness helps us find minerals the body needs, and bitterness often warns us that something may be harmful.",
+      "We detect these tastes using taste buds, tiny groups of cells found mainly on the tongue. You may have seen a “tongue map” in old textbooks, showing that each part of the tongue senses only one taste. Scientists now know that this idea is wrong. Taste buds in all areas of the tongue can detect all five basic tastes, ( A ) some areas may be slightly more sensitive to certain ones.",
+      "Interestingly, much of what we call “taste” actually depends on smell. When we chew food, smells travel from the back of the mouth up into the nose, and the brain combines this information with signals from the tongue to create flavour. This is why food often seems to have little taste when we have a cold and our nose is blocked. You can test this yourself by holding your nose while eating a piece of fruit: it becomes much harder to tell ( B ) kind of fruit it is.",
+      "Our sense of taste also changes over time. Children are often more sensitive to bitter tastes than adults, which may explain why many young people dislike vegetables such as green peppers. As we grow older and experience more kinds of food, we often learn to enjoy flavours ( C ) we once disliked. Taste, in other words, is shaped not only by our biology but also by our experiences.",
+    ],
+    ja: [
+      'なぜチョコレートはあまく、レモンはすっぱく、コーヒーはにがいのだろうか。私たちの味覚はかんたんに思えるが、実は何を食べ何をさけるべきかを決めるのを助ける複雑なしくみである。私たちの祖先にとって、安全な食べ物と危険な食べ物を見分けられるかどうかは、生と死の分かれ目になりえた。',
+      '科学者はふつう、5つの基本の味をみとめている。あまみ、塩味、すっぱさ、にがみ、そして肉やチーズ、海藻から作ったスープなどの食べ物にあるうまみである。うまみは、20世紀のはじめに、ある種類のスープがなぜそれほどおいしいのかを研究していた日本の科学者によって最初に発見された。基本の味にはそれぞれ目的があるようだ。あまみはエネルギーの豊かな食べ物を知らせ、塩味は体に必要なミネラルを見つける助けになり、にがみはしばしば何かが害になるかもしれないと警告する。',
+      '私たちは、おもに舌にある小さな細胞の集まりである味蕾を使ってこうした味を感じとる。古い教科書で、舌の部分ごとに1つの味だけを感じることを示した「舌の地図」を見たことがあるかもしれない。科学者は今、この考えがまちがっていることを知っている。舌のどの部分の味蕾も5つの基本の味をすべて感じとることができるが、一方で、ある部分はある味に少しだけ敏感かもしれない。',
+      'おもしろいことに、私たちが「味」とよぶものの多くは、実はにおいにたよっている。食べ物をかむと、においが口のおくから鼻へ上がり、脳はこの情報を舌からの信号と合わせて風味を作り出す。かぜをひいて鼻がつまっていると、食べ物の味があまりしないように思えることが多いのはこのためである。果物を食べながら鼻をつまんでみると、自分でためすことができる。それがどんな種類の果物なのかを見分けるのがずっとむずかしくなる。',
+      '味覚は時とともに変わりもする。子どもはしばしば大人よりにがい味に敏感で、そのことが、多くの若い人がピーマンのような野菜をきらう理由かもしれない。年をとり、より多くの種類の食べ物を経験するにつれて、私たちはかつてきらいだった味を楽しめるようになることが多い。言いかえれば、味覚は体のしくみだけでなく、経験によっても形づくられるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['although', 'because', 'unless', 'so that'], answer: 0, why: '「すべての味を感じられる、けれども一部の味に少し敏感な部分もある」と譲歩を表すので although。' },
+      { id: 'B', choices: ['what', 'that', 'which of', 'whose'], answer: 0, why: 'tell のあとに「どんな種類の果物か」という疑問の名詞節を置く。what kind of ～「どんな種類の～」。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 flavours を受け、うしろの disliked の目的語が欠けているので目的格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '科学者はふつう、5つの基本の味をみとめている。', answer: true, why: '第2段落 Scientists generally recognise five basic tastes。' },
+      { statement: '舌の部分ごとに1つの味しか感じないという「舌の地図」は正しい。', answer: false, why: '第3段落 Scientists now know that this idea is wrong。' },
+      { statement: '鼻がつまっていると、食べ物の味がわかりにくくなる。', answer: true, why: '第4段落 food often seems to have little taste when we have a cold and our nose is blocked。' },
+      { statement: '筆者によれば、味覚は一生まったく変わらない。', answer: false, why: '第5段落 Our sense of taste also changes over time。' },
+    ],
+    qa: [
+      { q: 'What does bitterness often warn us about?', choices: ['That something may be harmful.', 'That food is rich in energy.', 'That food contains minerals.', 'That food is very fresh.'], answer: 0, why: '第2段落 bitterness often warns us that something may be harmful。' },
+      { q: 'Why might many young people dislike green peppers?', choices: ['Children are often more sensitive to bitter tastes.', 'Green peppers have no taste.', 'Children cannot smell.', 'Green peppers are too sweet.'], answer: 0, why: '第5段落 Children are often more sensitive to bitter tastes than adults, which may explain why many young people dislike vegetables such as green peppers。' },
+    ],
+    gist: [
+      { para: 1, choices: ['5つの基本の味とそれぞれの役割', 'スープの作り方', '海藻の育て方', 'チーズの歴史'], answer: 0, why: '第2段落は、5つの基本の味と、うまみの発見、それぞれの味の目的を述べている。' },
+      { para: 3, choices: ['においが味にあたえる影響', 'かぜの治し方', '果物の選び方', '鼻の病気'], answer: 0, why: '第4段落は、においと舌の信号が合わさって風味ができることを述べている。' },
+    ],
+    titleQ: { choices: ['How We Taste', 'How to Cook Vegetables', 'The History of Chocolate', 'Why Coffee Is Popular'], answer: 0, why: '全体として、基本の味、味蕾、においの役割、味覚の変化を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
