@@ -20983,6 +20983,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How Much Homework Is Enough?', 'How to Write a Worksheet', 'The History of Schools', 'Why Children Like Weekends'], answer: 0, why: '全体として、宿題の利点と批判、研究の示すこと、学校の新しい取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-crows',
+    title: 'The Clever Crow',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Crows are among the most familiar birds in the world. They can be seen in cities, farms, and forests, and many people think of them as noisy pests that scatter garbage. In recent decades, however, scientists have discovered that crows are remarkably intelligent animals. In some tests of problem-solving, they perform as well as young children and certain apes.",
+      "One sign of their intelligence is their ability to use tools. Crows living on some Pacific islands have been observed shaping sticks and leaves into hooks, which they use to pull insects out of holes in trees. In laboratory experiments, crows have solved puzzles that require several steps, such as using one tool to get another tool ( A ) can then be used to reach food.",
+      "Crows also seem to have excellent memories, especially for faces. In one famous study, researchers wore masks while catching and releasing a group of crows. Years later, crows in the area still scolded and followed people wearing the same masks, even though many of those birds had never been caught themselves. This suggests that crows not only remember dangerous individuals but may also learn ( B ) to avoid from other members of their group.",
+      "In cities, crows have found clever ways to take advantage of human activities. Some crows have been seen dropping hard nuts onto roads so that passing cars will crack them open. Others have learned when garbage is put out and which bags are easiest to open. Such behavior shows that crows can observe their surroundings carefully and change their habits to fit new environments. In fact, some researchers believe that living near humans has encouraged crows to become even more flexible and inventive over time.",
+      "Learning about crows can change the way we see them. Rather than simply being annoying, they are animals that think, remember, and adapt. Understanding their behavior may also help people live alongside them more peacefully, for example by covering garbage properly instead of trying to chase the birds away. The intelligence of crows reminds us that clever minds can be found in unexpected places, and that there is still much ( C ) we do not know about the animals around us.",
+    ],
+    ja: [
+      'カラスは世界で最もなじみのある鳥の1つである。都市や農場や森で見られ、多くの人はごみを散らかすうるさい害鳥だと思っている。しかしここ数十年で、科学者はカラスがおどろくほどかしこい動物であることを発見した。問題を解く力をためすいくつかのテストでは、カラスは小さな子どもや一部の類人猿と同じくらいよい成績を出す。',
+      'そのかしこさのしるしの1つは、道具を使う力である。太平洋のいくつかの島にすむカラスは、小枝や葉をかぎの形に整え、それを使って木の穴から虫を引き出すようすが観察されている。実験室での実験では、カラスは、1つの道具を使って別の道具を手に入れ、それを使ってえさにとどくといった、いくつもの段階が必要なパズルを解いた。',
+      'カラスはまた、とくに顔について、すぐれた記憶力をもっているようである。ある有名な研究では、研究者がお面をつけて、カラスの群れをつかまえてははなした。何年もたってから、その地域のカラスは、同じお面をつけた人をまだしかりつけたり追いかけたりした。その多くは自分ではつかまったことのない鳥だったにもかかわらずである。このことは、カラスが危険な相手を覚えているだけでなく、だれをさけるべきかを群れのほかの仲間から学ぶのかもしれないことを示している。',
+      '都市では、カラスは人間の活動をうまく利用するかしこい方法を見つけてきた。かたい木の実を道路に落とし、通る車にわらせるカラスも見られている。ごみがいつ出されるか、どのふくろがいちばん開けやすいかを覚えたカラスもいる。こうした行動は、カラスがまわりをよく観察し、新しい環境に合わせて習慣を変えられることを示している。実際に、人間の近くでくらすことが、カラスを時とともにいっそう柔軟で工夫に富むものにしてきたと考える研究者もいる。',
+      'カラスについて学ぶと、その見方が変わるかもしれない。ただめいわくなだけではなく、カラスは考え、覚え、適応する動物なのである。その行動を理解することは、たとえば鳥を追いはらおうとするかわりにごみにきちんとおおいをかけるなど、人々がカラスとより平和にくらすのにも役立つかもしれない。カラスのかしこさは、かしこい頭が思いがけない場所にあること、そして私たちのまわりの動物について、まだ知らないことがたくさんあることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 another tool を受け、can be used の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['whom', 'what', 'where', 'how'], answer: 0, why: '「だれをさけるべきか」：whom to avoid。avoid の目的語で人をさすので whom。' },
+      { id: 'C', choices: ['that', 'what', 'which of', 'whose'], answer: 0, why: '先行詞 much を受け、know の目的語になる関係代名詞 that。much のあとにはふつう that を使う。' },
+    ],
+    tf: [
+      { statement: '問題を解くテストで、カラスは小さな子どもと同じくらいよい成績を出すことがある。', answer: true, why: '第1段落 they perform as well as young children and certain apes。' },
+      { statement: '島のカラスは、小枝をかぎの形にして虫を引き出す。', answer: true, why: '第2段落 shaping sticks and leaves into hooks, which they use to pull insects out of holes。' },
+      { statement: 'お面の研究では、つかまったカラスだけがお面の人をしかりつけた。', answer: false, why: '第3段落 even though many of those birds had never been caught themselves。' },
+      { statement: '筆者は、カラスを追いはらうことがいちばんよい方法だと述べている。', answer: false, why: '第5段落 by covering garbage properly instead of trying to chase the birds away。' },
+    ],
+    qa: [
+      { q: 'Why do some crows drop hard nuts onto roads?', choices: ['So that passing cars will crack them open.', 'To hide them from other birds.', 'To feed their babies.', 'To clean the roads.'], answer: 0, why: '第4段落 dropping hard nuts onto roads so that passing cars will crack them open。' },
+      { q: 'What does the author suggest to live with crows more peacefully?', choices: ['Covering garbage properly.', 'Wearing masks.', 'Feeding them every day.', 'Cutting down trees.'], answer: 0, why: '第5段落 by covering garbage properly instead of trying to chase the birds away。' },
+    ],
+    gist: [
+      { para: 2, choices: ['カラスのすぐれた記憶力', 'お面の作り方', '研究者の生活', '群れの大きさ'], answer: 0, why: '第3段落は、お面の研究から、カラスが顔を覚え、仲間から学ぶかもしれないことを述べている。' },
+      { para: 3, choices: ['都市で人間の活動を利用するカラス', '車の運転', 'ごみの出し方の規則', '木の実の種類'], answer: 0, why: '第4段落は、車に木の実をわらせる、ごみの出る時を覚えるなどの行動を述べている。' },
+    ],
+    titleQ: { choices: ['The Clever Crow', 'How to Keep Birds Away', 'The History of Cities', 'Why Apes Use Tools'], answer: 0, why: '全体として、道具・記憶・都市での行動などカラスのかしこさと、そこから学べることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
