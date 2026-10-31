@@ -933,3 +933,19 @@ it('デザイン150：負けたとき、あと何問正解すれば勝てたか�
   }
   expect(screen.getByLabelText('勝つまでにあと必要だった正解の数').textContent).toBe(`🎯 あと${answersToWin(30)}問正解で勝てた（めやす）`)
 })
+
+it('デザイン151：これまでの最大コンボをこえて勝つと「🔥 コンボ新記録！」が出る', async () => {
+  localStorage.clear()
+  const { loadBossBestCombo, recordBossCombo } = await import('./boss')
+  expect(recordBossCombo(3)).toBe(false) // はじめての記録は「新記録」にしない
+  expect(loadBossBestCombo()).toBe(3)
+  expect(recordBossCombo(2)).toBe(false)
+  localStorage.setItem('eitan:boss-best-combo', '2')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('コンボ新記録').textContent).toBe('🔥 コンボ新記録！')
+  expect(loadBossBestCombo()).toBeGreaterThan(2)
+})

@@ -345,6 +345,26 @@ export function recordBossTime(name: string, sec: number): boolean {
   return true
 }
 // デザイン93：まちがえずにたおしたボスの名前（ボス選びの画面に ✨ を出す）
+// デザイン151：ボス戦でのこれまでの最大コンボ。こえたら保存して true を返す（2コンボ以上で、前の記録があるときだけ新記録）
+const COMBO_KEY = 'eitan:boss-best-combo'
+export function loadBossBestCombo(): number {
+  try {
+    const n = Number(localStorage.getItem(COMBO_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function recordBossCombo(c: number): boolean {
+  const prev = loadBossBestCombo()
+  if (c <= prev) return false
+  try {
+    localStorage.setItem(COMBO_KEY, String(c))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return prev >= 2
+}
 const NOMISS_KEY = 'eitan:boss-nomiss'
 export function loadNoMissBosses(): string[] {
   try {
