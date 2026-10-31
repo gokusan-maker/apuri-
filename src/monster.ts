@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'bushbaby', name: 'ガラゴン', egg: 'よぞらのまんまるタマゴ', token: 'ガラ', bigToken: 'ガラゴン', color: '#d6c4a8', line: '#57442c', rate: 0.02, desc: '夜の森で木から木へとびうつる小さなガラゴ。大きな目と耳で、暗やみの中でもしっかり見て聞いている。' },
   { id: 'condor', name: 'コンドルン', egg: 'たかいがけのおおきなタマゴ', token: 'コンド', bigToken: 'コンドルン', color: '#334155', line: '#0f172a', rate: 0.02, desc: '高い山のがけにすむ大きな鳥コンドル。つばさをほとんど動かさず、上へのぼる風にのって空高く回る。' },
   { id: 'ibis', name: 'トキリン', egg: 'たんぼのももいろタマゴ', token: 'トキ', bigToken: 'トキリン', color: '#fbcfe8', line: '#9d174d', rate: 0.02, desc: '田んぼでえさをさがすトキ。つばさを広げると、うすいもも色がきらりと光る。ゆっくりでもあきらめない子。' },
   { id: 'stork', name: 'コウノトリン', egg: 'やねのうえのしろいタマゴ', token: 'コウノ', bigToken: 'コウノトリン', color: '#f1f5f9', line: '#1e293b', rate: 0.02, desc: '長い足と大きなつばさをもつコウノトリ。高い所に大きな巣をつくり、ゆったりと空をわたっていく。' },
