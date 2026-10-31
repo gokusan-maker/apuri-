@@ -18175,6 +18175,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Power from Beneath Our Feet', 'How to Enjoy Hot Springs', 'The History of Iceland', 'Why Wind Power Stops'], answer: 0, why: '全体として、地熱エネルギーのしくみ・利点・日本での課題と可能性を述べている。' },
   },
   {
+    id: 'kyotsu-onomatopoeia',
+    title: 'The Sounds of Words',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "The rain falls “zaa-zaa,” a dog barks “wan-wan,” and a tired person walks “toboto-bo.” Japanese is famous for having a very large number of words like these, which imitate sounds or express feelings and conditions. Words that imitate sounds are called onomatopoeia, and Japanese learners of English are often surprised to discover how differently such words work in the two languages. Looking at these differences closely can teach us a great deal about both.",
+      "In Japanese, these expressions can be divided into two main groups. The first group imitates actual sounds, such as the sound of rain, a knock on the door, or an animal's cry. The second group describes things that make no sound at all, such as the feeling of a smooth surface, the way a star shines, or a person's emotions. Expressions like “kira-kira” for something sparkling and “doki-doki” for a nervous heartbeat belong to this second group, ( A ) is especially rich in Japanese.",
+      "English has onomatopoeia too. Dogs say “woof,” cats say “meow,” and a clock goes “tick-tock.” However, English generally has fewer words that describe silent conditions in this way. Instead, English speakers often express similar meanings through verbs and adjectives. Where Japanese might say that someone laughed “kusu-kusu,” English might simply use the verb “giggle.” Where Japanese uses a special expression for a slow walk, English might choose the verb “trudge” or “wander.”",
+      "Interestingly, the sounds that people hear are not always the same in different languages. A rooster's call is “kokekokko” in Japanese but “cock-a-doodle-doo” in English, even though the birds themselves make similar sounds. This suggests that onomatopoeia is not a perfect copy of real sounds. It is shaped by the sounds ( B ) each language commonly uses and by the habits of its speakers.",
+      "For learners, these differences can be both a challenge and an opportunity. Translating Japanese manga into English, for example, requires careful thought, because many expressions have no direct equivalent. On the other hand, paying attention to such words can help learners notice how each language sees the world. Onomatopoeia reminds us ( C ) language is not only a tool for communication but also a reflection of the way people experience their surroundings. Even a single small word can carry a whole way of seeing the world.",
+    ],
+    ja: [
+      '雨が「ザーザー」とふり、犬が「ワンワン」とほえ、つかれた人が「とぼとぼ」と歩く。日本語は、このような、音をまねたり気持ちや様子を表したりする言葉がとても多いことで知られている。音をまねた言葉はオノマトペとよばれ、英語を学ぶ日本人は、こうした言葉が2つの言語でどれほどちがうはたらきをするかを知っておどろくことが多い。こうしたちがいをくわしく見ると、両方の言語について多くのことがわかる。',
+      '日本語では、こうした表現はおもに2つのグループに分けられる。1つ目のグループは、雨の音やドアをたたく音、動物の鳴き声など、実際の音をまねる。2つ目のグループは、なめらかな表面の感じ、星のかがやき方、人の気持ちなど、まったく音を出さないものを表す。かがやくものを表す「キラキラ」や、緊張した胸の鼓動を表す「ドキドキ」のような表現はこの2つ目のグループに入り、このグループは日本語でとくに豊かである。',
+      '英語にもオノマトペはある。犬は「ウーフ」、ネコは「ミャウ」と鳴き、時計は「チクタク」と鳴る。しかし英語には、このように音のない様子を表す言葉は一般に少ない。そのかわり、英語を話す人はしばしば、動詞や形容詞で似た意味を表す。日本語ならだれかが「クスクス」笑ったと言うところを、英語ではただ giggle という動詞を使うかもしれない。日本語がゆっくり歩くことに特別な表現を使うところで、英語は trudge や wander という動詞を選ぶかもしれない。',
+      'おもしろいことに、人々に聞こえる音は、言語によっていつも同じとはかぎらない。おんどりの鳴き声は、鳥そのものは似た声を出しているのに、日本語では「コケコッコー」、英語では cock-a-doodle-doo である。このことは、オノマトペが本当の音の完全な写しではないことを示している。それは、それぞれの言語がよく使う音や、それを話す人々の習慣によって形づくられているのである。',
+      '学習者にとって、こうしたちがいはむずかしさであると同時に機会でもある。たとえば日本のまんがを英語に訳すには注意深く考える必要がある。多くの表現には、そのまま対応する言葉がないからである。一方で、こうした言葉に注意をはらうことは、それぞれの言語が世界をどう見ているかに気づく助けになる。オノマトペは、言語がコミュニケーションの道具であるだけでなく、人々が周りをどのように経験しているかを映すものでもあることを思い出させてくれる。たった1つの小さな言葉にも、世界の見方がまるごとこめられていることがあるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 this second group を受け、is の主語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the sounds を受け、うしろの uses の目的語が欠けているので目的格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '日本語には、音を出さない様子を表すオノマトペもある。', answer: true, why: '第2段落 The second group describes things that make no sound at all。' },
+      { statement: '英語にはオノマトペがまったくない。', answer: false, why: '第3段落 English has onomatopoeia too。' },
+      { statement: '英語では、似た意味を動詞や形容詞で表すことが多い。', answer: true, why: '第3段落 English speakers often express similar meanings through verbs and adjectives。' },
+      { statement: '筆者によれば、オノマトペは本当の音の完全な写しである。', answer: false, why: '第4段落 onomatopoeia is not a perfect copy of real sounds。' },
+    ],
+    qa: [
+      { q: 'What might English use where Japanese says someone laughed “kusu-kusu”?', choices: ['The verb “giggle.”', 'The word “woof.”', 'The verb “trudge.”', 'The word “tick-tock.”'], answer: 0, why: '第3段落 English might simply use the verb "giggle."' },
+      { q: 'What does the example of the rooster’s call show?', choices: ['Onomatopoeia is shaped by each language.', 'Roosters in Japan make different sounds.', 'English has more onomatopoeia than Japanese.', 'Animals cannot be described in words.'], answer: 0, why: '第4段落 even though the birds themselves make similar sounds … It is shaped by the sounds each language commonly uses。' },
+    ],
+    gist: [
+      { para: 1, choices: ['日本語のオノマトペの2つのグループ', '雨の量のはかり方', '星の見つけ方', '心臓の病気'], answer: 0, why: '第2段落は、音をまねるものと音のない様子を表すものの2つのグループを説明している。' },
+      { para: 3, choices: ['言語によって聞こえる音がちがうこと', 'おんどりの育て方', '鳥の種類', '朝の起き方'], answer: 0, why: '第4段落は、おんどりの例から、オノマトペが言語ごとに形づくられることを述べている。' },
+    ],
+    titleQ: { choices: ['The Sounds of Words', 'How to Draw Manga', 'The History of Dogs', 'Why Rain Is Loud'], answer: 0, why: '全体として、日本語と英語のオノマトペのちがいと、それが言語の見方を映すことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
