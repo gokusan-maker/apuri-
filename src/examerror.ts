@@ -738,6 +738,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Housing is [way more] expensive than it was ten years ago.', choices: ['much more', 'way much', 'more way', 'very more'], answer: 0, why: '比較級を強める way は話し言葉。書き言葉では much more。' },
     ],
   },
+  {
+    id: 'exam-fix-15',
+    title: '入試の誤文訂正⑮（関係詞の難問②）',
+    points: ['関係詞のあとの目的語の重複、非制限用法で that を使わない、連鎖関係詞節（who I think is）、what と that、前置詞＋ which、both of whom、関係副詞 when、whose、whoever など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He is the man who I think is honest.', ja: '彼は、私が正直だと思う男性だ。（who は is の主語。I think がはさまっている）' }],
+    questions: [
+      { sentence: 'This is the book [which I told you about it].', choices: ['which I told you about', 'about which I told you it', 'that I told you about it', 'what I told you about'], answer: 0, why: '関係代名詞 which が about の目的語なので、うしろに it を置かない。' },
+      { sentence: 'Last year I visited Kyoto, [that] is famous for its old temples.', choices: ['which', 'what', 'where', 'it'], answer: 0, why: 'コンマのあとの非制限用法では that は使えない：, which is famous ～。' },
+      { sentence: 'He is the man [whom I think] is honest.', choices: ['who I think', 'whom I think he', 'which I think', 'whose I think'], answer: 0, why: 'I think がはさまっているが、関係代名詞は is の主語なので主格 who。' },
+      { sentence: '[That] he said yesterday was true.', choices: ['What', 'Which', 'It', 'Who'], answer: 0, why: '「彼が言ったこと」は先行詞をふくむ what：What he said was true。' },
+      { sentence: 'This is the house [in where] I was born.', choices: ['in which', 'in that', 'which', 'on where'], answer: 0, why: '前置詞のあとに関係副詞は置けない：in which（または where だけ）。in that とも言わない。' },
+      { sentence: 'Please tell me [the thing what] you want for your birthday.', choices: ['what', 'the thing which what', 'that what', 'the what'], answer: 0, why: 'what は「～すること・もの」で先行詞をふくむので、the thing と重ねない：tell me what you want。' },
+      { sentence: 'She has two sons, [both of who] are doctors.', choices: ['both of whom', 'both of them who', 'both who', 'which both'], answer: 0, why: '前置詞 of のあとの関係代名詞は目的格 whom：both of whom。' },
+      { sentence: 'The day [which] we first met was rainy.', choices: ['when', 'what', 'where', 'whose'], answer: 0, why: '先行詞は時（The day）で、うしろが完全な文なので関係副詞 when。' },
+      { sentence: 'I have a friend [who\'s] father is a famous writer.', choices: ['whose', 'who', 'that his', 'which'], answer: 0, why: '「その友だちの父」は所有の whose。who\'s は who is の短縮形。' },
+      { sentence: '[Whomever] wants to join the club is welcome.', choices: ['Whoever', 'Whomever that', 'Who ever that', 'Anyone whom'], answer: 0, why: 'wants の主語になるので主格の Whoever「～する人はだれでも」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -253,3 +253,10 @@ it('正誤問題㉑：不定詞の難問の単元が10問ある', async () => {
   expect(u.questions).toHaveLength(10)
   expect(u.questions[5].choices[u.questions[5].answer]).toBe('(B) to be')
 })
+
+it('誤文訂正⑮：関係詞の難問②の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-15')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('which')
+})
