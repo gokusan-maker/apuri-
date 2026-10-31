@@ -1322,6 +1322,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Look! Here (A) the bus comes (B) at last, (C) so let’s (D) get on.', choices: ['(A) the bus comes', '(B) at last', '(C) so let’s', '(D) get on'], answer: 0, why: 'Here のあとが名詞なので倒置：Here comes the bus。' },
     ],
   },
+  {
+    id: 'exam-error-rel3',
+    title: '入試の正誤問題〈57〉（共通テストレベル：関係代名詞と関係副詞の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'which と where・when の使い分け、the only ～ that、what、whose、the way と how、非制限用法の who、前置詞 ＋ which、everything that など、関係詞のまとめ。',
+    ],
+    examples: [
+      { en: 'I visited the city where my grandmother was born.', ja: '私は祖母が生まれた町をおとずれた。' },
+      { en: 'He told me everything that he knew.', ja: '彼は知っていることをすべて私に話した。' },
+    ],
+    questions: [
+      { sentence: 'This is (A) the house (B) where (C) my father (D) built.', choices: ['(A) the house', '(B) where', '(C) my father', '(D) built'], answer: 1, why: 'built の目的語が欠けているので which。' },
+      { sentence: 'I (A) visited (B) the city (C) which (D) my grandmother was born.', choices: ['(A) visited', '(B) the city', '(C) which', '(D) my grandmother was born'], answer: 2, why: 'うしろが完全な文なので where。' },
+      { sentence: 'Do you (A) remember (B) the day (C) which we (D) first met?', choices: ['(A) remember', '(B) the day', '(C) which we', '(D) first met'], answer: 2, why: '時の先行詞でうしろが完全な文なので when。' },
+      { sentence: 'He is (A) the only student (B) which (C) passed (D) the test.', choices: ['(A) the only student', '(B) which', '(C) passed', '(D) the test'], answer: 1, why: '人には which を使わない：that（または who）。' },
+      { sentence: '(A) Tell me (B) that (C) you want (D) for your birthday.', choices: ['(A) Tell me', '(B) that', '(C) you want', '(D) for your birthday'], answer: 1, why: '先行詞がないので what。' },
+      { sentence: 'The man (A) who’s car (B) was stolen (C) called (D) the police.', choices: ['(A) who’s car', '(B) was stolen', '(C) called', '(D) the police'], answer: 0, why: '所有の関係なので whose car。' },
+      { sentence: 'This is (A) the way how (B) he (C) solved (D) the problem.', choices: ['(A) the way how', '(B) he', '(C) solved', '(D) the problem'], answer: 0, why: 'the way と how はいっしょに使わない。' },
+      { sentence: 'I have (A) a friend, (B) that (C) lives (D) in London.', choices: ['(A) a friend', '(B) that', '(C) lives', '(D) in London'], answer: 1, why: 'コンマのあとに that は使えない：who。' },
+      { sentence: 'The hotel (A) at that (B) we stayed (C) was (D) very nice.', choices: ['(A) at that', '(B) we stayed', '(C) was', '(D) very nice'], answer: 0, why: '前置詞のあとに that は使えない：at which。' },
+      { sentence: 'He (A) told (B) me (C) everything (D) what he knew.', choices: ['(A) told', '(B) me', '(C) everything', '(D) what he knew'], answer: 3, why: '先行詞 everything があるので what は使えない：everything that he knew。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
