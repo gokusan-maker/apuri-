@@ -19150,6 +19150,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['When the Ocean Warms', 'How to Catch More Fish', 'The History of Christmas', 'Why Satellites Are Useful'], answer: 0, why: '全体として、エルニーニョの名前の由来、しくみ、世界への影響、予測を述べている。' },
   },
   {
+    id: 'kyotsu-sumo',
+    title: 'The World of Sumo',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Two huge wrestlers face each other in a small circular ring. They crouch, stare into each other's eyes, and then crash together with tremendous force. Within seconds, one of them is pushed out of the ring or thrown to the ground, and the match is over. This is sumo, a sport that is often called the national sport of Japan and that has a history going back many centuries. Behind each short match lies a world of strict training and old customs.",
+      "Sumo is more than a sport; it is closely connected with tradition and ceremony. Before a match, wrestlers throw handfuls of salt into the ring, a ritual that is said to purify the space. The ring itself is treated with great respect, and the referee wears colourful traditional clothing. Many of these customs come from religious practices of the past, ( A ) helps to explain why sumo feels so different from many modern sports.",
+      "The lives of professional sumo wrestlers are also unusual. Most of them live together in training groups called stables, where they follow strict daily routines. Young wrestlers get up early, practise hard for hours, and help with cooking and cleaning, while higher-ranked wrestlers enjoy more privileges. Wrestlers are ranked according to their results, and only the very best reach the highest rank, yokozuna, which carries great honour and responsibility.",
+      "Professional sumo holds six major tournaments each year, each lasting fifteen days. During these tournaments, wrestlers compete once a day, and fans follow the results closely on television and in newspapers. In recent decades, many successful wrestlers have come from outside Japan, including countries such as Mongolia. Their success shows ( B ) sumo, though deeply Japanese, can be mastered by people from many different backgrounds.",
+      "Sumo also faces challenges. Fewer young Japanese people are choosing to become wrestlers, and the sport has had to deal with concerns about health and about rules that some people feel are old-fashioned. Supporters argue that sumo must find a balance between protecting its traditions and adapting to modern values. Whatever changes come, sumo remains a living link to Japan's past and a sport ( C ) continues to fascinate people around the world. Its future will depend on how well it can welcome new generations.",
+    ],
+    ja: [
+      '2人の大きな力士が、小さな円い土俵で向かい合う。2人は身をかがめ、たがいの目をにらみ、それからすさまじい力でぶつかり合う。数秒のうちに、どちらかが土俵の外におし出されるか地面に投げられ、取組は終わる。これが相撲であり、日本の国技とよばれることも多く、何世紀もさかのぼる歴史をもつスポーツである。一つ一つの短い取組のうしろには、きびしいけいこと古いしきたりの世界がある。',
+      '相撲はスポーツ以上のものであり、伝統や儀式と深く結びついている。取組の前に、力士は土俵にひとつかみの塩をまく。これは場を清めるといわれる儀式である。土俵そのものも大きな敬意をもってあつかわれ、行司は色あざやかな伝統的な衣装を着ている。こうした習慣の多くは昔の宗教的なならわしから来ており、そのことが、相撲が多くの現代のスポーツとこれほどちがって感じられる理由の説明に役立つ。',
+      'プロの力士の生活もめずらしいものである。そのほとんどは部屋とよばれる練習の集団でいっしょにくらし、そこできびしい毎日の決まりに従う。若い力士は朝早く起き、何時間もきびしく練習し、料理やそうじを手伝う一方で、位の高い力士はより多くの特権をもつ。力士は成績によって番付が決まり、最もすぐれた者だけが最高位の横綱になる。横綱には大きな名誉と責任がともなう。',
+      'プロの相撲は毎年6つの大きな場所を開き、それぞれ15日間続く。場所のあいだ、力士は1日に1回取組をし、ファンはテレビや新聞で結果を熱心に追う。ここ数十年、モンゴルのような国々をふくむ、日本の外から来た多くの力士が活躍している。彼らの成功は、相撲が深く日本的なものでありながら、さまざまな背景をもつ人々が身につけられるものであることを示している。',
+      '相撲は課題にも直面している。力士になることを選ぶ日本の若者はへっており、相撲は健康についての心配や、古くさいと感じる人もいるきまりについての心配に向き合わなければならなかった。支持する人々は、相撲は伝統を守ることと現代の価値観に合わせることのバランスを見つけなければならないと主張する。どんな変化が来ようとも、相撲は日本の過去へと生きてつながるものであり、世界中の人々を引きつけつづけるスポーツなのである。その未来は、新しい世代をどれだけうまく迎え入れられるかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（習慣が昔の宗教的なならわしから来ていること）を受け、helps の主語になるので which。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a sport を受け、うしろの continues の主語になるので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '取組の前に、力士は土俵に塩をまく。', answer: true, why: '第2段落 wrestlers throw handfuls of salt into the ring。' },
+      { statement: '若い力士は、料理やそうじを手伝わなくてよい。', answer: false, why: '第3段落 help with cooking and cleaning。' },
+      { statement: 'プロの相撲は毎年6つの大きな場所を開く。', answer: true, why: '第4段落 Professional sumo holds six major tournaments each year。' },
+      { statement: '筆者によれば、相撲は日本人しか身につけられない。', answer: false, why: '第4段落 can be mastered by people from many different backgrounds。' },
+    ],
+    qa: [
+      { q: 'What is the purpose of throwing salt before a match?', choices: ['It is said to purify the space.', 'It makes the ring slippery.', 'It shows who will win.', 'It feeds the audience.'], answer: 0, why: '第2段落 a ritual that is said to purify the space。' },
+      { q: 'How are sumo wrestlers ranked?', choices: ['According to their results.', 'According to their age.', 'According to their weight only.', 'According to their home town.'], answer: 0, why: '第3段落 Wrestlers are ranked according to their results。' },
+    ],
+    gist: [
+      { para: 2, choices: ['部屋でのきびしい生活と番付', '料理のレシピ', '横綱の歴史上の人物', '練習道具の作り方'], answer: 0, why: '第3段落は、部屋での共同生活ときびしい日課、成績による番付と横綱を述べている。' },
+      { para: 3, choices: ['年6回の場所と外国出身の力士の活躍', 'テレビ番組の作り方', 'モンゴルの観光', '新聞の読み方'], answer: 0, why: '第4段落は、年6回の場所と、日本の外から来た力士の成功を述べている。' },
+    ],
+    titleQ: { choices: ['The World of Sumo', 'How to Become a Referee', 'The History of Salt', 'Why Rings Are Round'], answer: 0, why: '全体として、相撲の伝統と儀式、力士の生活、場所と外国出身力士、課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
