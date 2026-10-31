@@ -3376,3 +3376,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㊳（私学難関レベル：look forward to -ing・be used to -ing・object to being・mind -ing・can't help -ing・make 人 原形・have 物 過去分詞・be worth -ing・prevent from・remember -ing）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「変わる博物館」（芸術・文化・関係代名詞 that／非制限の which／how to の空所）
 - 2026-10-31: デザイン：キャラ図鑑で、なかまに3体以上いる子に「👥×○」のしるしを出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊺（私学難関レベル：熟語・語法の総まとめ：look forward to -ing・be used to -ing・object to being・mind -ing・can't help -ing・make 人 原形・have 物 過去分詞・worth -ing・prevent from・remember -ing）10問

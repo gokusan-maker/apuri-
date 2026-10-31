@@ -1034,6 +1034,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'A large (A) number of water (B) is wasted (C) every day (D) in many homes.', choices: ['(A) number of water', '(B) is wasted', '(C) every day', '(D) in many homes'], answer: 0, why: '数えられない名詞 water の量は a large amount of。' },
     ],
   },
+  {
+    id: 'exam-error-idiom2',
+    title: '入試の正誤問題㊺（私学難関レベル：熟語・語法の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'look forward to -ing、be used to -ing、object to -ing、mind -ing、can’t help -ing、make 人 ＋原形、have 物 ＋過去分詞、be worth -ing、prevent 人 from -ing、remember -ing など、私立大学でよく問われる熟語と語法。',
+    ],
+    examples: [
+      { en: 'The heavy rain prevented us from going out.', ja: '大雨のせいで私たちは外出できなかった。' },
+      { en: 'This book is well worth reading.', ja: 'この本は十分読む価値がある。' },
+    ],
+    questions: [
+      { sentence: 'I (A) am looking forward (B) to (C) see you (D) again soon.', choices: ['(A) am looking forward', '(B) to', '(C) see you', '(D) again soon'], answer: 2, why: 'look forward to の to は前置詞なので to seeing。' },
+      { sentence: 'She (A) is used to (B) get up (C) early (D) in the morning.', choices: ['(A) is used to', '(B) get up', '(C) early', '(D) in the morning'], answer: 1, why: 'be used to -ing：getting up。' },
+      { sentence: 'He (A) strongly objected (B) to be treated (C) like (D) a child.', choices: ['(A) strongly objected', '(B) to be treated', '(C) like', '(D) a child'], answer: 1, why: 'object to -ing：to being treated。' },
+      { sentence: '(A) Would you (B) mind (C) to open (D) the window?', choices: ['(A) Would you', '(B) mind', '(C) to open', '(D) the window'], answer: 2, why: 'mind は動名詞をとる：mind opening。' },
+      { sentence: 'I (A) couldn’t help (B) laugh (C) at his (D) funny joke.', choices: ['(A) couldn’t help', '(B) laugh', '(C) at his', '(D) funny joke'], answer: 1, why: 'can’t help -ing：help laughing。' },
+      { sentence: 'The teacher (A) made us (B) to clean (C) the classroom (D) after school.', choices: ['(A) made us', '(B) to clean', '(C) the classroom', '(D) after school'], answer: 1, why: '使役の make 人 ＋原形：made us clean。' },
+      { sentence: 'I (A) had my bike (B) repair (C) at the shop (D) yesterday.', choices: ['(A) had my bike', '(B) repair', '(C) at the shop', '(D) yesterday'], answer: 1, why: 'have 物 ＋過去分詞：had my bike repaired。' },
+      { sentence: 'This book (A) is (B) well (C) worth (D) to read.', choices: ['(A) is', '(B) well', '(C) worth', '(D) to read'], answer: 3, why: 'be worth -ing：worth reading。' },
+      { sentence: 'The heavy rain (A) prevented (B) us (C) to go (D) out.', choices: ['(A) prevented', '(B) us', '(C) to go', '(D) out'], answer: 2, why: 'prevent 人 from -ing：from going out。' },
+      { sentence: '(A) I remember to meet (B) her once (C) in Kyoto (D) when I was a child.', choices: ['(A) I remember to meet', '(B) her once', '(C) in Kyoto', '(D) when I was a child'], answer: 0, why: '過去に～したことを覚えているは remember -ing：I remember meeting。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

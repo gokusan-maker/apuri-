@@ -582,3 +582,10 @@ it('誤文訂正㊳：熟語・語法の総まとめの単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('opening')
 })
+
+it('正誤問題㊺：熟語・語法の総まとめの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-idiom2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('(C) to open')
+})
