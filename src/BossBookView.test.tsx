@@ -321,3 +321,19 @@ it('デザイン124：ボス図鑑に、まだ勝っていないボスの数が�
   const total = Number(screen.getByLabelText(/ボス図鑑 1 \/ \d+体/).getAttribute('aria-label')!.match(/\/ (\d+)体/)![1])
   expect(screen.getByLabelText(`まだ勝っていないボス ${total - 1}体`).textContent).toBe(`あと${total - 1}体`)
 })
+
+it('デザイン129：ボス図鑑で、いちばん早くたおしたボスに ⚡最速 がつく（タイムが2体以上あるとき）', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const a = BOSSES['中1']
+  const b = BOSSES['中2']
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [a.name]: { look: a, wins: 1, best: 'A', first: '2026-10-01' }, [b.name]: { look: b, wins: 1, best: 'A', first: '2026-10-02' } }))
+  localStorage.setItem('eitan:boss-times', JSON.stringify({ [a.name]: 90, [b.name]: 70 }))
+  const r = render(<BossBook />)
+  expect(screen.getAllByLabelText('いちばん早くたおしたボス')).toHaveLength(1)
+  expect(screen.getByLabelText('いちばん早くたおしたボス').closest('li')!.textContent).toContain(b.name)
+  r.unmount()
+  localStorage.setItem('eitan:boss-times', JSON.stringify({ [a.name]: 90 }))
+  render(<BossBook />)
+  expect(screen.queryByLabelText('いちばん早くたおしたボス')).toBeNull()
+})
