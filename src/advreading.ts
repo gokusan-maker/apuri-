@@ -21022,6 +21022,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Clever Crow', 'How to Keep Birds Away', 'The History of Cities', 'Why Apes Use Tools'], answer: 0, why: '全体として、道具・記憶・都市での行動などカラスのかしこさと、そこから学べることを述べている。' },
   },
   {
+    id: 'kyotsu-convenience-stores',
+    title: 'More Than a Shop',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In Japan, it is hard to walk far in a city without passing a convenience store. These small shops, many of which are open twenty-four hours a day, have become a familiar part of daily life. Visitors from other countries are often surprised by how much they offer. A convenience store in Japan is not just a place to buy snacks and drinks; it can feel more like a small center for the whole neighborhood.",
+      "The range of products and services is remarkable. Besides food and everyday goods, many stores sell freshly prepared meals, hot drinks, and seasonal items. Customers can pay their electricity and water bills, send and receive packages, print documents, and withdraw cash from machines inside the store. Some stores even allow people to buy tickets for concerts and sports events. For busy people, being able to do so many things in one place ( A ) saves a great deal of time.",
+      "To offer all of this in a small space, convenience stores rely on careful planning and advanced technology. Information about what is sold, and when, is collected at the cash register and analyzed to decide what to order. Deliveries arrive several times a day, so that shelves can be filled with fresh products without keeping large amounts in stock. In this way, stores can respond quickly to changes in weather, events, and customer needs.",
+      "Convenience stores also play a role in the community. Because they are open late at night, they can serve as safe places for people who feel threatened on the street. After natural disasters, some chains have worked with local governments to provide food, water, and information to residents. In areas where the population is aging, a few stores deliver goods to elderly customers ( B ) find it difficult to go shopping.",
+      "However, the convenience store system faces challenges. Many stores have difficulty finding enough workers, especially for night shifts, and some owners have said that staying open twenty-four hours is too demanding. Large amounts of food are thrown away when it is not sold in time, which has led to criticism about waste. In response, some stores have experimented with shorter opening hours and discounts on food close to its sell-by time. How convenience stores adapt to these problems will decide ( C ) they can continue to serve their communities in the years ahead.",
+    ],
+    ja: [
+      '日本では、都市であまり歩かないうちにコンビニエンスストアの前を通ることになる。多くが1日24時間開いているこうした小さな店は、毎日の生活のなじみのある一部になった。外国からの訪問者は、その品ぞろえやサービスの多さにおどろくことが多い。日本のコンビニはおかしや飲み物を買う場所というだけでなく、地域全体の小さな中心のように感じられることもある。',
+      '商品やサービスのはばはおどろくほど広い。食べ物や日用品のほかに、多くの店ではできたての食事や温かい飲み物、季節の品物を売っている。客は電気代や水道代をはらったり、荷物を送ったり受け取ったり、書類を印刷したり、店内の機械で現金を引き出したりできる。コンサートやスポーツの試合のチケットを買える店まである。いそがしい人にとって、1か所でこれほど多くのことができるのは、たいへんな時間の節約になる。',
+      'せまい場所でこのすべてを提供するために、コンビニは注意深い計画と進んだ技術にたよっている。何がいつ売れたかという情報はレジで集められ、何を注文するかを決めるために分析される。配送は1日に何回も来るので、大量の在庫をかかえずに、たなを新しい商品でいっぱいにできる。このようにして、店は天気や行事や客の必要の変化にすばやくこたえることができる。',
+      'コンビニは地域でも役割をはたしている。夜おそくまで開いているので、通りで身の危険を感じる人にとって安全な場所になりうる。自然災害のあとには、地方自治体と協力して住民に食べ物や水や情報を提供してきたチェーンもある。高齢化が進む地域では、買い物に行くのがむずかしいお年よりの客に品物を届ける店もいくつかある。',
+      'しかし、コンビニのしくみは課題にも直面している。多くの店が、とくに夜の勤務のために十分な働き手を見つけるのに苦労しており、24時間開けておくのは負担が大きすぎると言う店主もいる。時間内に売れなかった大量の食べ物がすてられ、そのことがむだへの批判につながっている。これにこたえて、営業時間を短くしたり、販売期限の近い食べ物を値引きしたりする実験をしてきた店もある。コンビニがこうした問題にどのように適応するかが、これからも地域に役立ちつづけられるかどうかを決めるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['saves', 'save', 'saving', 'to save'], answer: 0, why: '主語は動名詞の being able to do ～（単数あつかい）なので三人称単数の saves。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は elderly customers（人）で、find の主語になるので主格の関係代名詞 who。' },
+      { id: 'C', choices: ['whether', 'that', 'what', 'unless'], answer: 0, why: 'decide whether ～「～かどうかを決める」。' },
+    ],
+    tf: [
+      { statement: '日本のコンビニでは、電気代をはらうことができる。', answer: true, why: '第2段落 Customers can pay their electricity and water bills。' },
+      { statement: 'コンビニは、大量の在庫をかかえておくのがふつうである。', answer: false, why: '第3段落 without keeping large amounts in stock。' },
+      { statement: '災害のあとに、住民に食べ物や水を提供してきたチェーンもある。', answer: true, why: '第4段落 some chains have worked with local governments to provide food, water, and information。' },
+      { statement: 'すべての店主が、24時間営業はかんたんだと言っている。', answer: false, why: '第5段落 some owners have said that staying open twenty-four hours is too demanding。' },
+    ],
+    qa: [
+      { q: 'How do convenience stores decide what to order?', choices: ['By analyzing information collected at the cash register.', 'By asking customers every morning.', 'By ordering the same things every day.', 'By guessing what will sell.'], answer: 0, why: '第3段落 Information about what is sold, and when, is collected at the cash register and analyzed to decide what to order。' },
+      { q: 'What have some stores done to reduce food waste?', choices: ['Offered discounts on food close to its sell-by time.', 'Stopped selling food.', 'Opened longer hours.', 'Hired more night workers.'], answer: 0, why: '第5段落 discounts on food close to its sell-by time。' },
+    ],
+    gist: [
+      { para: 1, choices: ['コンビニの商品とサービスの広さ', 'チケットの値段', 'おかしの作り方', '水道のしくみ'], answer: 0, why: '第2段落は、食べ物から支払い・荷物・印刷・現金・チケットまでの品ぞろえとサービスを述べている。' },
+      { para: 3, choices: ['地域でのコンビニの役割', '夜の散歩のしかた', '災害の予測', '高齢化の歴史'], answer: 0, why: '第4段落は、安全な場所、災害時の支援、お年よりへの配達という地域での役割を述べている。' },
+    ],
+    titleQ: { choices: ['More Than a Shop', 'How to Open a Restaurant', 'The History of Money', 'Why People Work at Night'], answer: 0, why: '全体として、コンビニの多様なサービス、それをささえるしくみ、地域での役割、課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
