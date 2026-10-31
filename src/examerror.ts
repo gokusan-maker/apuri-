@@ -1368,6 +1368,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The chair [on that] I was sitting suddenly broke.', choices: ['on which', 'which on', 'that on', 'on what'], answer: 0, why: '前置詞のあとの物を表す関係代名詞は which：on which I was sitting。' },
     ],
   },
+  {
+    id: 'exam-fix-30',
+    title: '入試の誤文訂正㉚（TOEFL・IELTS の書き言葉⑫：まぎらわしい語の使い分け）',
+    points: ['小論文でよくまちがえる、形や発音の似た語。affect（動詞）と effect（名詞）、advise（動詞）と advice（名詞）、less と fewer、lose と loose、except と accept、its と it\'s、their と there、than と then、raise と rise。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The new rule will affect everyone.', ja: '新しいきまりはすべての人に影響する。（動詞は affect、名詞は effect）' }],
+    questions: [
+      { sentence: 'The new rule will [effect] everyone in the school.', choices: ['affect', 'affection', 'effective', 'effects to'], answer: 0, why: '「影響する」という動詞は affect。effect はふつう名詞「影響」。' },
+      { sentence: 'Could you [advice] me on this matter?', choices: ['advise', 'advices', 'advising', 'be advice'], answer: 0, why: '「助言する」という動詞は advise。advice は名詞「助言」。' },
+      { sentence: 'The amount of rain this year was [fewer] than usual.', choices: ['less', 'few', 'lesser', 'littler'], answer: 0, why: 'amount（量）や数えられない名詞には less を使う。fewer は数えられる名詞の複数形に使う。' },
+      { sentence: 'You will [loose] weight if you exercise regularly.', choices: ['lose', 'loss', 'lost of', 'losing'], answer: 0, why: '「（体重を）へらす・失う」という動詞は lose。loose は形容詞「ゆるい」。' },
+      { sentence: 'Everyone [accept] me went to the party.', choices: ['except', 'excepting of', 'accepted', 'expect'], answer: 0, why: '「～をのぞいて」は前置詞 except。accept は動詞「受け入れる」。' },
+      { sentence: 'The dog happily wagged [it\'s] tail.', choices: ['its', 'its\'', 'it', 'it is'], answer: 0, why: '所有「その」は its。it\'s は it is / it has の短縮形。' },
+      { sentence: 'The students left [there] bags in the classroom.', choices: ['their', 'they\'re', 'theirs', 'them'], answer: 0, why: '所有「彼らの」は their。there は「そこに」、they\'re は they are。' },
+      { sentence: 'She is much taller [then] her brother.', choices: ['than', 'that', 'when', 'as'], answer: 0, why: '比較の「～より」は than。then は「そのとき・それから」。' },
+      { sentence: 'We need to [rise] money for the school trip.', choices: ['raise', 'rising', 'arise', 'rose'], answer: 0, why: '「（お金を）集める・上げる」は他動詞 raise。rise は目的語をとらない自動詞。' },
+      { sentence: 'Fortunately, this medicine has no side [affects].', choices: ['effects', 'affections', 'affected', 'effecting'], answer: 0, why: '「副作用」は side effects。名詞なので effect。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
