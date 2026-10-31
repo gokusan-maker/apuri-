@@ -20905,6 +20905,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Meaning of a Greeting', 'How to Bow Correctly', 'The History of Handshakes', 'Why People Eat Breakfast'], answer: 0, why: '全体として、あいさつの役割、文化によるちがいと誤解、ことばのちがい、学ぶ意味を述べている。' },
   },
   {
+    id: 'kyotsu-space-station',
+    title: 'Life Above the Earth',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "About four hundred kilometers above our heads, a large laboratory is circling the Earth. It is the International Space Station, built and operated by several countries working together. Astronauts from around the world live and work there for months at a time, carrying out experiments that would be impossible on the ground. Their daily life, however, is very different from ours, and many ordinary activities become surprising challenges in space.",
+      "One of the biggest differences is the lack of a sense of weight. Because the station and everything inside it are constantly falling around the Earth, astronauts float rather than stand or sit. This makes simple tasks unusual. Water does not flow from a cup but forms floating balls, so drinks are taken from special bags with straws. Astronauts sleep in small sleeping bags attached to the wall, ( A ) they do not drift around the cabin during the night.",
+      "Life in space also affects the human body. Without the constant pull of gravity, muscles and bones are not used in the same way as on Earth, and they can gradually become weaker. To prevent this, astronauts exercise for about two hours every day using special machines, such as treadmills with straps that hold them down. Scientists study these changes carefully, because the knowledge may help to treat people on Earth whose bones become weak with age.",
+      "Another challenge is the use of resources. Sending supplies from Earth is extremely expensive, so the station is designed to waste as little as possible. Much of the water astronauts use, including moisture from their breath and sweat, is collected, cleaned, and used again. Fresh food is limited, and some experiments have even tested ( B ) vegetables can be grown on board, which could be important for longer journeys in the future.",
+      "The station also offers a view that few people ever see. Because it travels around the Earth roughly every ninety minutes, astronauts can watch about sixteen sunrises and sunsets in a single day. Many say that seeing the planet from above, with no borders visible between countries, changes the way they think about the Earth. The International Space Station shows ( C ) much people can achieve when nations work together, and it is helping to prepare humans for travel to places farther away, such as the Moon and Mars.",
+    ],
+    ja: [
+      '私たちの頭の上およそ400キロのところで、大きな実験室が地球のまわりを回っている。それは国際宇宙ステーションで、いくつかの国が協力してつくり、運用している。世界中の宇宙飛行士がそこで何か月もくらしながら働き、地上ではできない実験を行っている。しかし、彼らの毎日の生活は私たちのものとはまったくちがい、多くのふつうの活動が宇宙ではおどろくような課題になる。',
+      '最も大きなちがいの1つは、重さの感覚がないことである。ステーションとその中のすべてのものは地球のまわりをたえず落ちつづけているので、宇宙飛行士は立ったりすわったりするのではなく、うかんでいる。このため、かんたんな作業がふつうでなくなる。水はコップから流れず、うかぶ玉になるので、飲み物はストローのついた特別なふくろから飲む。宇宙飛行士は、夜のあいだ室内をただよわないように、かべにとりつけた小さなねぶくろでねむる。',
+      '宇宙での生活は人間の体にも影響する。たえず引く重力がないと、筋肉や骨は地球と同じようには使われず、少しずつ弱くなることがある。これをふせぐために、宇宙飛行士は体をおさえるベルトのついたランニングマシンなど、特別な機械を使って毎日2時間ほど運動する。科学者はこうした変化を注意深く研究している。その知識が、年をとって骨が弱くなる地球の人々を治療するのに役立つかもしれないからである。',
+      'もう1つの課題は資源の使い方である。地球から物資を送るのはとてもお金がかかるので、ステーションはむだをできるだけ少なくするように作られている。宇宙飛行士が使う水の多くは、息や汗にふくまれる水分もふくめて、集められ、きれいにされ、ふたたび使われる。新鮮な食べ物はかぎられており、船内で野菜を育てられるかどうかをためした実験もある。それは、将来のより長い旅にとって大切になるかもしれない。',
+      'ステーションは、ほとんどの人が見ることのない景色もあたえてくれる。およそ90分ごとに地球を1周するので、宇宙飛行士は1日に約16回の日の出と日の入りを見ることができる。上から地球を見ると国と国のあいだの境目が見えず、それが地球についての考え方を変えると多くの人が言う。国際宇宙ステーションは、国どうしが協力すると人々がどれほど多くのことをなしとげられるかを示しており、月や火星のようなより遠い場所への旅に人類が備えるのを助けている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so that', 'even if', 'as if', 'unless'], answer: 0, why: '「ただよわないように」と目的をあらわすので so that ～。' },
+      { id: 'B', choices: ['whether', 'what', 'that', 'which'], answer: 0, why: 'test whether ～「～かどうかをためす」。まだわからないことをためすので whether。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how much ～「どれほど多くのことを～か」：how much people can achieve。' },
+    ],
+    tf: [
+      { statement: '国際宇宙ステーションは、1つの国だけでつくられた。', answer: false, why: '第1段落 built and operated by several countries working together。' },
+      { statement: '宇宙では、飲み物はストローのついたふくろから飲む。', answer: true, why: '第2段落 drinks are taken from special bags with straws。' },
+      { statement: '宇宙飛行士は、毎日2時間ほど運動する。', answer: true, why: '第3段落 astronauts exercise for about two hours every day。' },
+      { statement: 'ステーションで使う水は、すべて地球から送られている。', answer: false, why: '第4段落 Much of the water ... is collected, cleaned, and used again。' },
+    ],
+    qa: [
+      { q: 'Why do scientists carefully study changes in astronauts’ bodies?', choices: ['The knowledge may help people on Earth whose bones become weak with age.', 'They want to stop people from going to space.', 'They want to make astronauts taller.', 'They need to choose new astronauts.'], answer: 0, why: '第3段落 the knowledge may help to treat people on Earth whose bones become weak with age。' },
+      { q: 'How many sunrises can astronauts see in a single day?', choices: ['About sixteen.', 'Only one.', 'About ninety.', 'About four hundred.'], answer: 0, why: '第5段落 astronauts can watch about sixteen sunrises and sunsets in a single day。' },
+    ],
+    gist: [
+      { para: 1, choices: ['重さの感覚がない宇宙での生活', 'ねぶくろの作り方', '水のきれいにし方', 'ストローの歴史'], answer: 0, why: '第2段落は、うかぶ体、飲み物、ねむり方など、重さの感覚がない生活を述べている。' },
+      { para: 3, choices: ['宇宙での資源の使い方', '野菜の値段', 'ロケットの燃料', '物資の運び方'], answer: 0, why: '第4段落は、むだを少なくし、水を再利用し、野菜を育てる実験を述べている。' },
+    ],
+    titleQ: { choices: ['Life Above the Earth', 'How to Build a Rocket', 'The History of the Moon', 'Why Water Flows'], answer: 0, why: '全体として、国際宇宙ステーションでの生活、体への影響、資源、そこからの景色と意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
