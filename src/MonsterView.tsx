@@ -935,6 +935,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="66" cy="22" rx="5" ry="12" fill="#e7c6a5" stroke="#6b4423" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'mudskipper')
+    return (
+      <g>
+        {/* 頭の上の大きな目 */}
+        <circle cx="40" cy="26" r="6" fill="#ffffff" stroke="#4d4d26" strokeWidth="1.5" />
+        <circle cx="60" cy="26" r="6" fill="#ffffff" stroke="#4d4d26" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
