@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'swallow', name: 'ツバメン', egg: 'のきさきのはるのタマゴ', token: 'ツバ', bigToken: 'ツバメン', color: '#1e3a8a', line: '#0f172a', rate: 0.02, desc: '春になると遠い南の国から海をこえてやってくるツバメ。長い旅をこなすように、毎日こつこつ英語の旅を続ける。' },
   { id: 'falcon', name: 'ハヤブサン', egg: 'がけのうえのはやてタマゴ', token: 'ハヤ', bigToken: 'ハヤブサン', color: '#94a3b8', line: '#1e293b', rate: 0.02, desc: '急降下のときには世界一速いともいわれるハヤブサ。するどい目でえものを見つけるように、問題の答えを一瞬で見ぬく。' },
   { id: 'boar', name: 'イノシシン', egg: 'やまのたきのいのししタマゴ', token: 'イノ', bigToken: 'イノシシン', color: '#a16207', line: '#422006', rate: 0.02, desc: '山を元気にかけまわるイノシシ。「猪突猛進」ということばのように、決めたらまっすぐ問題にぶつかっていく。' },
   { id: 'rhino', name: 'サイノン', egg: 'そうげんのつのタマゴ', token: 'ツノ', bigToken: 'サイノン', color: '#9ca3af', line: '#374151', rate: 0.02, desc: '大きな体と鼻の上のつのが目印のサイ。まっすぐ前に走りだすように、決めた目標に向かってぐんぐん進む。' },
