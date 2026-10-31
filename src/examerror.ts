@@ -1442,6 +1442,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'We need (A) more time. (B) That is to say, (C) we cannot (D) finishing the work today.', choices: ['(A) more time', '(B) That is to say', '(C) we cannot', '(D) finishing the work today'], answer: 3, why: '助動詞のあとは原形：cannot finish。' },
     ],
   },
+  {
+    id: 'exam-error-tense4',
+    title: '入試の正誤問題〈62〉（国公立レベル：時制と一致の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '時制の一致（was・would・had ＋過去分詞）、不変の真理の現在形、間接疑問の語順、if のあとの語順など、時制の一致と話法のまとめ。',
+    ],
+    examples: [
+      { en: 'She asked me where the station was.', ja: '彼女は私に駅はどこかとたずねた。' },
+      { en: 'I knew that he had been ill for a week.', ja: '彼が1週間病気だったことを私は知っていた。' },
+    ],
+    questions: [
+      { sentence: 'Yesterday he (A) said that (B) he is (C) tired, but he (D) is fine today.', choices: ['(A) said that', '(B) he is', '(C) tired, but he', '(D) is fine today'], answer: 1, why: '昨日のことなので時制を合わせて he was tired。' },
+      { sentence: 'I (A) thought (B) she will come, (C) but she (D) didn’t.', choices: ['(A) thought', '(B) she will come', '(C) but she', '(D) didn’t'], answer: 1, why: 'thought（過去）に合わせて she would come。' },
+      { sentence: 'Our teacher (A) told us (B) that the earth (C) moved (D) around the sun.', choices: ['(A) told us', '(B) that the earth', '(C) moved', '(D) around the sun'], answer: 2, why: '不変の真理は現在形のまま：moves。' },
+      { sentence: 'She (A) told me (B) she has lost (C) her key (D) the day before.', choices: ['(A) told me', '(B) she has lost', '(C) her key', '(D) the day before'], answer: 1, why: '話す前のことなので過去完了 she had lost。' },
+      { sentence: 'I (A) knew (B) that he (C) has been ill (D) for a week.', choices: ['(A) knew', '(B) that he', '(C) has been ill', '(D) for a week'], answer: 2, why: 'knew に合わせて過去完了 had been ill。' },
+      { sentence: 'He (A) asked me (B) where (C) did I live (D) at that time.', choices: ['(A) asked me', '(B) where', '(C) did I live', '(D) at that time'], answer: 2, why: '間接疑問はふつうの語順：where I lived。' },
+      { sentence: 'She (A) asked me (B) if had I (C) finished (D) the work.', choices: ['(A) asked me', '(B) if had I', '(C) finished', '(D) the work'], answer: 1, why: 'if のあとはふつうの語順：if I had。' },
+      { sentence: 'I (A) wondered (B) what (C) was he (D) doing.', choices: ['(A) wondered', '(B) what', '(C) was he', '(D) doing'], answer: 2, why: '間接疑問の語順：what he was doing。' },
+      { sentence: 'Last week, my brother (A) tells me (B) that he (C) had passed (D) the exam.', choices: ['(A) tells me', '(B) that he', '(C) had passed', '(D) the exam'], answer: 0, why: 'Last week（過去）なので told me。' },
+      { sentence: 'She (A) asked (B) me (C) where (D) was the station.', choices: ['(A) asked', '(B) me', '(C) where', '(D) was the station'], answer: 3, why: '間接疑問の語順：where the station was。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
