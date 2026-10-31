@@ -19267,6 +19267,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Going Around in Circles', 'How to Get a Driving License', 'The History of Traffic Lights', 'Why Cars Are Fast'], answer: 0, why: '全体として、ラウンドアバウトのきまり・安全性・日本での広まり・課題を述べている。' },
   },
   {
+    id: 'kyotsu-curry-rice',
+    title: 'The Journey of Curry Rice',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Ask people in Japan to name a dish they often eat at home, and many will answer curry rice. With its thick, mild sauce poured over white rice, Japanese curry is a favourite of children and adults alike. Yet this dish, which feels so Japanese today, has a surprisingly international history that connects India, Britain, and Japan. Following that history reveals how food changes as it moves from place to place.",
+      "Curry originally comes from the Indian subcontinent, where many different spiced dishes have been eaten for centuries. During the period when Britain ruled India, British people developed a taste for these dishes and created curry powder, a ready-made mixture of spices that made it easier to cook curry at home. When Japan opened up to the West in the late nineteenth century, curry arrived in Japan not directly from India but through Britain, ( A ) is why early Japanese curry was based on the British style.",
+      "The Japanese navy played an important role in spreading curry. Sailors needed meals that were nutritious, easy to cook in large amounts, and could be eaten with rice. Curry made with meat and vegetables met all these needs. Many young men learned to eat curry during their time in the navy and continued to enjoy it after returning home. Even today, some naval bases are known for their own special curry recipes.",
+      "After the Second World War, curry became even more common in Japanese homes. Food companies began selling curry roux, solid blocks of sauce base that could simply be melted into a pot of cooked meat and vegetables. This made it possible for almost anyone to cook curry quickly, ( B ) helped it become one of the most popular home-cooked meals in the country. Schools also served curry in their lunches, so many children grew up with it.",
+      "Today, Japanese curry has developed its own unique character, and it is very different from many Indian curries. It has even begun to spread overseas, with Japanese curry restaurants opening in many countries. The story of curry rice shows ( C ) food can travel across the world, change along the way, and finally become an important part of a new culture. Perhaps the curry eaten in Japan today will itself keep changing in the future.",
+    ],
+    ja: [
+      '日本の人に家でよく食べる料理をたずねると、多くの人がカレーライスと答えるだろう。白いごはんにかけたとろりとしたまろやかなソースの日本のカレーは、子どもにも大人にも人気がある。しかし、今日これほど日本的に感じられるこの料理には、インド、イギリス、日本を結ぶ、おどろくほど国際的な歴史がある。その歴史をたどると、食べ物が場所から場所へ移るにつれてどう変わるかがわかる。',
+      'カレーはもともとインド亜大陸から来たもので、そこでは何世紀にもわたってさまざまな香辛料の料理が食べられてきた。イギリスがインドを支配していた時代に、イギリスの人々はこうした料理を好むようになり、カレー粉を作り出した。これは香辛料をまぜた既製品で、家でカレーを作りやすくした。19世紀の後半に日本が西洋に国を開いたとき、カレーはインドから直接ではなくイギリスを通じて日本にとどいた。そのため、初期の日本のカレーはイギリス風のものをもとにしていたのである。',
+      '日本の海軍は、カレーを広めるのに大切な役割をはたした。船員には、栄養があり、大量に作りやすく、ごはんといっしょに食べられる食事が必要だった。肉と野菜で作るカレーは、こうした必要をすべて満たした。多くの若い男性が海軍にいるあいだにカレーを食べるようになり、家にもどったあとも楽しみつづけた。今日でも、独自の特別なカレーのレシピで知られる海軍の基地がある。',
+      '第二次世界大戦のあと、カレーは日本の家庭でさらにふつうのものになった。食品会社は、火を通した肉と野菜のなべにとかすだけでよい、固形のソースのもとであるカレールウを売りはじめた。これによってほとんどだれでもすばやくカレーを作れるようになり、そのことが、カレーがこの国で最も人気のある家庭料理の一つになるのを助けた。学校も給食でカレーを出したので、多くの子どもがカレーとともに育った。',
+      '今日、日本のカレーは独自の特徴を発展させ、多くのインドのカレーとはかなりちがうものになっている。日本のカレーの店が多くの国で開かれ、海外にも広まりはじめている。カレーライスの物語は、食べ物が世界を旅し、とちゅうで変わり、ついには新しい文化の大切な一部になりうることを示している。もしかすると、今日日本で食べられているカレーも、これから先さらに変わっていくのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容全体を受ける which。, which is why ～「そしてそれが～の理由だ」。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（だれでもすばやく作れるようになったこと）を受け、helped の主語になるので which。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「どのように～か」を表す名詞節を置く。うしろが完全な文なので how。' },
+    ],
+    tf: [
+      { statement: 'カレーはインドから直接ではなく、イギリスを通じて日本に来た。', answer: true, why: '第2段落 curry arrived in Japan not directly from India but through Britain。' },
+      { statement: 'カレー粉は、日本の料理人が最初に作り出した。', answer: false, why: '第2段落 British people … created curry powder。' },
+      { statement: '海軍の船員にとって、カレーは大量に作りやすい食事だった。', answer: true, why: '第3段落 easy to cook in large amounts … Curry … met all these needs。' },
+      { statement: '筆者によれば、日本のカレーは多くのインドのカレーとまったく同じである。', answer: false, why: '第5段落 it is very different from many Indian curries。' },
+    ],
+    qa: [
+      { q: 'What did curry roux make possible?', choices: ['Almost anyone could cook curry quickly.', 'Curry could be eaten without rice.', 'Curry became spicier.', 'Curry could be grown in gardens.'], answer: 0, why: '第4段落 This made it possible for almost anyone to cook curry quickly。' },
+      { q: 'Why did curry suit the needs of navy sailors?', choices: ['It was nutritious, easy to make in large amounts, and eaten with rice.', 'It could be kept for years without cooking.', 'It was the cheapest food in the world.', 'It was eaten only on holidays.'], answer: 0, why: '第3段落 meals that were nutritious, easy to cook in large amounts, and could be eaten with rice。' },
+    ],
+    gist: [
+      { para: 2, choices: ['海軍がカレーを広めた役割', '船の作り方', '海の天気', '野菜の育て方'], answer: 0, why: '第3段落は、栄養があり作りやすいカレーが海軍で食べられ、広まったことを述べている。' },
+      { para: 3, choices: ['カレールウと給食による家庭への広まり', '戦争の歴史', '食品会社の名前', 'なべの選び方'], answer: 0, why: '第4段落は、戦後のカレールウや給食によって家庭料理として広まったことを述べている。' },
+    ],
+    titleQ: { choices: ['The Journey of Curry Rice', 'How to Grow Rice', 'The History of the Navy', 'Why Spices Are Expensive'], answer: 0, why: '全体として、カレーがインドからイギリスを通って日本に来て、広まり、独自の料理になった道すじを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
