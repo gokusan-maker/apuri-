@@ -3397,3 +3397,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊽（共通テストレベル：前置詞の総まとめ：on 日付・by 期限・for 期間・arrive at・good at・at 時刻・married to・interested in・on foot・discuss）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「金でつなぐ（金継ぎ）」（文化・伝統・which is why／関係副詞 where／how to の空所）
 - 2026-10-31: キャラクター：ヒバリの「ヒバリン」を追加（とくぎ：まいあがりの歌）
+- 2026-10-31: 文法：入試の誤文訂正㊷（TOEFL・IELTS の書き言葉⑰：However・Therefore・In addition・命令文, or・but と however・such as・Nevertheless・In spite of・because・In contrast）10問

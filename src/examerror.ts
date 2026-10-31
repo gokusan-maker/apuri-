@@ -1872,6 +1872,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Let’s [discuss about] the plan after lunch.', choices: ['discuss', 'talk', 'discuss on', 'speak'], answer: 0, why: 'discuss は他動詞なので前置詞なしで目的語をとる：discuss the plan（= talk about the plan）。' },
     ],
   },
+  {
+    id: 'exam-fix-42',
+    title: '入試の誤文訂正㊷（TOEFL・IELTS の書き言葉⑰：つなぎのことば）',
+    points: ['However（逆接）・Therefore（結果）・In addition（追加）・In contrast（対比）など、文と文をつなぐ副詞のはたらき、命令文, or …、副詞の however は文と文を直接つなげない（接続詞 but を使う）、such as、Nevertheless、In spite of ＋名詞、because ＋文 など、エッセイの流れをつくる表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It rained heavily. Therefore, the game was canceled.', ja: '大雨がふった。そのため、試合は中止になった。' }],
+    questions: [
+      { sentence: 'The plan was very expensive. [Moreover], it was approved by the city.', choices: ['However', 'Therefore', 'In addition', 'For example'], answer: 0, why: '「高かった」のに「認められた」という逆の流れなので However「しかし」。' },
+      { sentence: 'It rained heavily. [However], the game was canceled.', choices: ['Therefore', 'Moreover', 'On the contrary', 'For instance'], answer: 0, why: '大雨が原因で中止になったという結果なので Therefore「そのため」。' },
+      { sentence: 'The hotel was clean. [In contrast], the staff were very kind.', choices: ['In addition', 'However', 'For example', 'Otherwise'], answer: 0, why: '「きれい」に「親切」というよい点を加えているので In addition「さらに」。' },
+      { sentence: 'Hurry up, [however] you will miss the bus.', choices: ['or', 'and', 'but', 'so'], answer: 0, why: '命令文, or …「～しなさい、さもないと…」。' },
+      { sentence: 'He was very tired, [however] he kept working.', choices: ['but', 'however of', 'despite', 'moreover'], answer: 0, why: 'however は副詞なので、コンマだけで2つの文をつなげない。接続詞 but を使う。' },
+      { sentence: 'Some animals, [such] dolphins, are very intelligent.', choices: ['such as', 'like as', 'for example of', 'as such'], answer: 0, why: '例をあげる such as ～「たとえば～のような」。' },
+      { sentence: 'The experiment had some problems. [Although], the results were useful.', choices: ['Nevertheless', 'Despite', 'Even', 'Although of'], answer: 0, why: '文頭で前の文を受けて「それでも」とつなぐ副詞は Nevertheless。Although は接続詞なので単独では使えない。' },
+      { sentence: '[In spite] the bad weather, we went out.', choices: ['In spite of', 'Despite of', 'Although', 'Even though'], answer: 0, why: 'うしろが名詞なので前置詞 In spite of。Despite には of をつけない。' },
+      { sentence: 'The project failed [due to] it lacked money.', choices: ['because', 'because of', 'owing to', 'thanks to'], answer: 0, why: 'うしろが文（it lacked money）なので接続詞 because。due to・because of・owing to は名詞が続く。' },
+      { sentence: 'Cities are noisy. [On the contrary], the countryside is quiet.', choices: ['In contrast', 'Therefore', 'For example', 'In addition'], answer: 0, why: '2つのものを対比するのは In contrast。On the contrary は「それどころか（前の内容を打ち消す）」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

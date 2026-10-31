@@ -631,3 +631,10 @@ it('正誤問題㊽：前置詞の総まとめの単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[8].choices[u.questions[8].answer]).toBe('(D) by foot')
 })
+
+it('誤文訂正㊷：つなぎのことばの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-42')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('or')
+})
