@@ -866,6 +866,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The (A) principle (B) of our school (C) gave (D) a speech.', choices: ['(A) principle', '(B) of our school', '(C) gave', '(D) a speech'], answer: 0, why: '「校長」は principal。principle は「原理・主義」。' },
     ],
   },
+  {
+    id: 'exam-error-usage3',
+    title: '入試の正誤問題㊳（共通テストレベル：語法の総復習）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'tell 人、listen to、wait for、arrive at、look for と look at、say と tell、時制のそろえ、enjoy oneself、It takes 人 時間、Thank you for -ing など、共通テストで必要な動詞の語法の総復習。',
+    ],
+    examples: [
+      { en: 'I spent an hour looking for my key.', ja: 'かぎをさがすのに1時間かかった。（look for ＝さがす）' },
+      { en: 'It took me three hours to finish the report.', ja: 'レポートを終えるのに3時間かかった。' },
+    ],
+    questions: [
+      { sentence: 'Please (A) tell (B) to me (C) your (D) phone number.', choices: ['(A) tell', '(B) to me', '(C) your', '(D) phone number'], answer: 1, why: 'tell ＋人＋物で to はいらない：tell me your phone number。' },
+      { sentence: '(A) I often (B) listen (C) music (D) on the train.', choices: ['(A) I often', '(B) listen', '(C) music', '(D) on the train'], answer: 2, why: 'listen のあとは to が必要：listen to music。' },
+      { sentence: 'We waited (A) the bus (B) at the stop (C) for (D) thirty minutes.', choices: ['(A) the bus', '(B) at the stop', '(C) for', '(D) thirty minutes'], answer: 0, why: '「～を待つ」は wait for ～：waited for the bus。' },
+      { sentence: 'They (A) arrived (B) to (C) the airport (D) just in time.', choices: ['(A) arrived', '(B) to', '(C) the airport', '(D) just in time'], answer: 1, why: '空港などの地点に着くのは arrive at。' },
+      { sentence: 'I lost my key, so I (A) spent (B) an hour (C) looking (D) at it everywhere.', choices: ['(A) spent', '(B) an hour', '(C) looking', '(D) at it everywhere'], answer: 3, why: '「さがす」は look for：looking for it。look at は「見る」。' },
+      { sentence: 'She (A) said (B) me (C) that she (D) was busy.', choices: ['(A) said', '(B) me', '(C) that she', '(D) was busy'], answer: 1, why: 'say は人をすぐあとに置けない：said (to me) that ～ ／ told me that ～。' },
+      { sentence: 'After school, I went (A) straight (B) home (C) and (D) do my homework.', choices: ['(A) straight', '(B) home', '(C) and', '(D) do my homework'], answer: 3, why: 'went と時制をそろえて過去形：did my homework。' },
+      { sentence: 'We (A) enjoyed (B) at the festival (C) very (D) much.', choices: ['(A) enjoyed', '(B) at the festival', '(C) very', '(D) much'], answer: 0, why: 'enjoy は目的語が必要：enjoyed ourselves at the festival。' },
+      { sentence: 'It (A) spent (B) me (C) three hours (D) to finish the report.', choices: ['(A) spent', '(B) me', '(C) three hours', '(D) to finish the report'], answer: 0, why: '「（人に）時間がかかる」は It takes 人 時間 to ～：It took me three hours。' },
+      { sentence: 'Thank you (A) for (B) invite (C) me (D) to your party.', choices: ['(A) for', '(B) invite', '(C) me', '(D) to your party'], answer: 1, why: '前置詞 for のあとは動名詞：for inviting me。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
