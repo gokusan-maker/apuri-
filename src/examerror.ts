@@ -722,6 +722,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Not until the 19th century (A) scientists understood (B) how (C) diseases (D) spread.', choices: ['(A) scientists understood', '(B) how', '(C) diseases', '(D) spread'], answer: 0, why: 'Not until ～ が文頭に出ると主節が倒置：did scientists understand。' },
     ],
   },
+  {
+    id: 'exam-error-review2',
+    title: '入試の正誤問題㉜（共通テストレベル：高2の総復習）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '仮定法過去、since と for、関係代名詞の先行詞と動詞の一致、stop -ing と stop to、too ～ to の目的語、受け身の分詞構文、surprised と surprising、the ＋比較級、I wish など、高2までの重要文法の総復習。',
+    ],
+    examples: [
+      { en: 'He stopped smoking for his health.', ja: '彼は健康のためにタバコをやめた。（stop ＋動名詞）' },
+      { en: 'Seen from the hill, the town looks beautiful.', ja: '丘から見ると、町は美しく見える。' },
+    ],
+    questions: [
+      { sentence: 'If I (A) had (B) more money, I (C) will (D) buy a new bike.', choices: ['(A) had', '(B) more money, I', '(C) will', '(D) buy a new bike'], answer: 2, why: '仮定法過去（If I had ～）なので主節は would ＋原形：I would buy。' },
+      { sentence: 'She (A) has been (B) studying English (C) for (D) she was ten.', choices: ['(A) has been', '(B) studying English', '(C) for', '(D) she was ten'], answer: 2, why: 'うしろが主語＋動詞（she was ten）で「～して以来」なので since。' },
+      { sentence: 'The man I met yesterday (A) is (B) a doctor (C) who (D) work at a big hospital.', choices: ['(A) is', '(B) a doctor', '(C) who', '(D) work at a big hospital'], answer: 3, why: 'who の先行詞は a doctor（単数）なので works。' },
+      { sentence: 'He (A) stopped (B) to smoke (C) for his health (D) last year.', choices: ['(A) stopped', '(B) to smoke', '(C) for his health', '(D) last year'], answer: 1, why: '「タバコをやめた」は stop ＋動名詞：stopped smoking。stop to smoke は「タバコをすうために立ち止まる」。' },
+      { sentence: 'This book is (A) too difficult (B) for me (C) to read (D) it.', choices: ['(A) too difficult', '(B) for me', '(C) to read', '(D) it'], answer: 3, why: '主語 This book が read の目的語なので、最後の it はいらない。' },
+      { sentence: '(A) Seeing from the hill, (B) the town (C) looks (D) beautiful.', choices: ['(A) Seeing from the hill,', '(B) the town', '(C) looks', '(D) beautiful'], answer: 0, why: '町は「見られる」側なので過去分詞：Seen from the hill。' },
+      { sentence: 'It (A) is said (B) that (C) he (D) were a great singer.', choices: ['(A) is said', '(B) that', '(C) he', '(D) were a great singer'], answer: 3, why: '主語 he は単数なので was。' },
+      { sentence: 'We (A) were (B) surprising (C) at (D) the news.', choices: ['(A) were', '(B) surprising', '(C) at', '(D) the news'], answer: 1, why: '人が「おどろいた」ので過去分詞：were surprised。' },
+      { sentence: 'The more (A) you practice, (B) the (C) good (D) you will become.', choices: ['(A) you practice,', '(B) the', '(C) good', '(D) you will become'], answer: 2, why: 'the ＋比較級, the ＋比較級：the better。' },
+      { sentence: 'I (A) wish I (B) can (C) speak (D) French.', choices: ['(A) wish I', '(B) can', '(C) speak', '(D) French'], answer: 1, why: 'I wish ＋仮定法過去：I wish I could speak。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

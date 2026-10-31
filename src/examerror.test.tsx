@@ -400,3 +400,10 @@ it('誤文訂正㉕：共通テストレベルの総復習の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('went')
 })
+
+it('正誤問題㉜：共通テストレベル（高2の総復習）の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-review2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('(B) to smoke')
+})
