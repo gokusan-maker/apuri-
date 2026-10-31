@@ -18955,6 +18955,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Story of Punctuation', 'How to Write a Novel', 'The History of Rome', 'Why Children Like Stories'], answer: 0, why: '全体として、すき間も句読点もない古代の文章から、今日の句読点までの歴史と、その大切さを述べている。' },
   },
   {
+    id: 'kyotsu-dragonflies',
+    title: 'Masters of the Air',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On a warm afternoon near a pond, you may see a dragonfly darting over the water, suddenly stopping in mid-air, and then racing off in another direction. Dragonflies are among the most skilful fliers in the insect world. They are also among the oldest: relatives of today's dragonflies were already flying hundreds of millions of years ago, long before the first dinosaurs appeared. Some of those ancient insects had wings wider than a person's arm.",
+      "One secret of the dragonfly's flying ability is its wings. A dragonfly has four wings, and it can move each pair separately. This allows it to fly forwards, backwards, and sideways, and even to hover in one place like a tiny helicopter. Such control makes dragonflies excellent hunters. They catch other insects, such as mosquitoes and flies, in the air, and some studies have found that they succeed in a very high proportion of their attempts.",
+      "Their eyes are another remarkable feature. A dragonfly's two huge eyes cover most of its head and are made up of thousands of tiny units, each of ( A ) sees a small part of the world. Together, they give the insect an extremely wide view, so it can notice movement almost all around it. This helps dragonflies both to find prey and to avoid being caught by birds.",
+      "Surprisingly, dragonflies spend most of their lives not in the air but underwater. Young dragonflies, called nymphs, hatch from eggs laid in water and live there for months or even years, eating small water creatures. Only when they are fully grown do they climb out of the water, shed their skin, and become the flying adults we usually see. Because nymphs need clean water, the number of dragonflies in an area can be a sign of ( B ) healthy the local environment is.",
+      "In Japan, dragonflies have long been loved. One old poetic name for the country, Akitsushima, is often explained as meaning “the island of dragonflies,” and dragonflies appear in many songs and pictures. Today, however, some kinds are becoming rarer as ponds and rice fields disappear. Protecting the places ( C ) dragonflies live may help not only these insects but also many other living things that share their homes.",
+    ],
+    ja: [
+      'あたたかい午後に池のそばで、トンボが水面の上をすばやく飛び、とつぜん空中で止まり、それから別の方向へかけ去るのを見かけることがあるだろう。トンボは昆虫の世界で最も飛ぶのがうまいものの一つである。また最も古いものの一つでもある。今日のトンボのなかまは、最初の恐竜が現れるずっと前の何億年も前に、すでに空を飛んでいた。そうした大昔の昆虫の中には、人のうでより大きな羽をもつものもいた。',
+      'トンボの飛ぶ力のひみつの一つは、その羽にある。トンボには4枚の羽があり、それぞれのペアを別々に動かすことができる。これによって、前にも後ろにも横にも飛び、小さなヘリコプターのように1か所にとどまることさえできる。このようなあやつり方ができるので、トンボはすぐれた狩りをする昆虫である。蚊やハエのようなほかの昆虫を空中でつかまえ、ねらったうちのとても高い割合で成功していると示した研究もある。',
+      '目ももう一つのおどろくべき特徴である。トンボの2つの大きな目は頭のほとんどをおおい、何千もの小さな単位でできていて、その一つ一つが世界の小さな部分を見ている。それらを合わせると、トンボはとても広く見わたすことができ、ほぼ周り全体の動きに気づける。これはトンボがえものを見つけるのにも、鳥につかまらないようにするのにも役立っている。',
+      'おどろくことに、トンボは一生のほとんどを空中ではなく水の中ですごす。ヤゴとよばれるトンボの子どもは、水の中に産みつけられた卵からかえり、小さな水の生き物を食べながら、何か月も、あるいは何年もそこでくらす。すっかり育ってはじめて、水から出て皮をぬぎ、私たちがふつう目にする飛ぶ成虫になる。ヤゴにはきれいな水が必要なので、ある地域のトンボの数は、その地域の環境がどれほど健康かのしるしになりうる。',
+      '日本では、トンボは昔から愛されてきた。この国の古い詩的な名前の一つ「秋津島」は、「トンボの島」を意味するとよく説明され、トンボは多くの歌や絵に登場する。しかし今日、池や田んぼがなくなるにつれて、めずらしくなりつつある種類もある。トンボがすむ場所を守ることは、この昆虫だけでなく、すみかを共有するほかの多くの生き物も助けるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'whom', 'what', 'that'], answer: 0, why: '前置詞 of のあとの関係代名詞で、先行詞 thousands of tiny units（物）を受けるので which：each of which「その一つ一つ」。whom は人に使い、that は前置詞のあとに置けない。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'that'], answer: 0, why: '「環境がどれほど健康か」と程度をたずねる名詞節なので how ＋形容詞（how healthy）。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the places（場所）で、うしろが完全な文（dragonflies live）なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: 'トンボのなかまは、恐竜が現れる前から空を飛んでいた。', answer: true, why: '第1段落 long before the first dinosaurs appeared。' },
+      { statement: 'トンボは前にしか飛ぶことができない。', answer: false, why: '第2段落 fly forwards, backwards, and sideways。' },
+      { statement: 'ヤゴは、水の中で何か月も、あるいは何年もくらす。', answer: true, why: '第4段落 live there for months or even years。' },
+      { statement: '筆者によれば、トンボはどの地域でもふえている。', answer: false, why: '第5段落 some kinds are becoming rarer as ponds and rice fields disappear。' },
+    ],
+    qa: [
+      { q: 'What makes dragonflies excellent hunters?', choices: ['They can control their flight very precisely.', 'They hunt only at night.', 'They have very long legs.', 'They live in large groups.'], answer: 0, why: '第2段落 Such control makes dragonflies excellent hunters。' },
+      { q: 'Why can the number of dragonflies be a sign of a healthy environment?', choices: ['Their nymphs need clean water.', 'They eat only clean plants.', 'They avoid cities completely.', 'They live for many hundreds of years.'], answer: 0, why: '第4段落 Because nymphs need clean water, the number of dragonflies in an area can be a sign of how healthy the local environment is。' },
+    ],
+    gist: [
+      { para: 1, choices: ['自由に飛べる4枚の羽', 'ヘリコプターの作り方', '蚊のふせぎ方', '空の天気'], answer: 0, why: '第2段落は、4枚の羽を別々に動かして自由に飛び、狩りがうまいことを述べている。' },
+      { para: 2, choices: ['周りを広く見わたす大きな目', 'めがねの作り方', '鳥の種類', '色の見え方の歴史'], answer: 0, why: '第3段落は、何千もの単位でできた大きな目で、ほぼ周り全体を見られることを述べている。' },
+    ],
+    titleQ: { choices: ['Masters of the Air', 'How to Catch Fish in a Pond', 'The History of Dinosaurs', 'Why Rice Fields Are Green'], answer: 0, why: '全体として、トンボの古い歴史、飛ぶ力、目、水の中の子ども時代、日本とのかかわりを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
