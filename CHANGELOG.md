@@ -3440,3 +3440,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈55〉（国公立レベル：形容詞・副詞の総まとめ：well・old enough・hard と hardly・little・a few・surprising・late と lately・taste good・much better・never）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「商店街を生き返らせる」（社会・まちづくり・when／非制限の which／how well の空所）
 - 2026-10-31: キャラクター：レミングの「レミンガ」を追加（とくぎ：ゆきのしたトンネル）
+- 2026-10-31: 文法：入試の誤文訂正㊾（医学部・難関大レベル⑤：Never・Only after・So ～ that・Should you・Were I・Little の倒置、While waiting・If necessary の省略、挿入節の who、Here comes）10問

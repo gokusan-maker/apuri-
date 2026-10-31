@@ -2166,6 +2166,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I have [ever] seen a real panda.', choices: ['never', 'yet', 'ago', 'already of'], answer: 0, why: 'ever はふつう疑問文や否定文で使う。「一度も見たことがない」は have never seen。' },
     ],
   },
+  {
+    id: 'exam-fix-49',
+    title: '入試の誤文訂正㊾（医学部・難関大レベル⑤：倒置・省略・挿入）',
+    points: ['否定語（Never・Little）や Only ～・So ～ が文頭に出たときの倒置、if を省いた仮定の倒置（Should you ～・Were I ～）、While ～ing・If necessary のような主語と be 動詞の省略、who I think のような挿入、Here comes ＋名詞など、難関大学でよく問われる特別な語順。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Never have I seen such a strange disease.', ja: 'こんなにふしぎな病気は見たことがない。' }],
+    questions: [
+      { sentence: 'Never [I have seen] such a strange disease.', choices: ['have I seen', 'I saw', 'did I saw', 'I had seen'], answer: 0, why: '否定の Never が文頭に出ると倒置：Never have I seen ～。' },
+      { sentence: 'Only after the test [he realized] his mistake.', choices: ['did he realize', 'he did realize', 'realized he', 'he has realized'], answer: 0, why: 'Only ～ が文頭に出ると倒置：Only after the test did he realize ～。' },
+      { sentence: 'So severe [the pain was] that she could not sleep.', choices: ['was the pain', 'the pain is', 'did the pain', 'pain was'], answer: 0, why: 'So ＋形容詞が文頭に出ると倒置：So severe was the pain that ～。' },
+      { sentence: '[If should you] have any questions, please call us.', choices: ['Should you', 'If you should to', 'Should you to', 'Were you'], answer: 0, why: 'if を省いた仮定の倒置：Should you have any questions（= If you should have ～）。' },
+      { sentence: '[Was I] you, I would accept the offer.', choices: ['Were I', 'Had I', 'If I am', 'I were'], answer: 0, why: 'If I were you の if を省くと倒置：Were I you。' },
+      { sentence: 'Little [he knew] that the test result would change his life.', choices: ['did he know', 'he did know', 'knew he', 'he knows'], answer: 0, why: '否定の Little が文頭に出ると倒置：Little did he know ～「まったく知らなかった」。' },
+      { sentence: 'While [was waiting] for the bus, I read a book.', choices: ['waiting', 'I waiting', 'was waited', 'to wait'], answer: 0, why: '主節と主語が同じとき、While のあとの主語と be 動詞を省ける：While waiting。' },
+      { sentence: 'If [it necessary], call the doctor at once.', choices: ['necessary', 'necessarily', 'necessity', 'be necessary'], answer: 0, why: 'If (it is) necessary の it is を省いた形：If necessary「必要なら」。' },
+      { sentence: 'The patient, [whom I think] is recovering well, will leave soon.', choices: ['who I think', 'whom I think of', 'which I think', 'what I think'], answer: 0, why: 'I think は挿入で、関係代名詞は is recovering の主語なので主格 who。' },
+      { sentence: 'Here [the bus comes] at last.', choices: ['comes the bus', 'the bus come', 'come the bus', 'does the bus come'], answer: 0, why: 'Here が文頭で主語が名詞のときは倒置：Here comes the bus。代名詞なら Here it comes。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
