@@ -18097,6 +18097,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Patterns on Our Fingers', 'How to Catch a Thief', 'The History of Smartphones', 'Why Twins Look the Same'], answer: 0, why: '全体として、指紋のでき方、人を見分ける利用、日常での利用と心配、指紋の役割を述べている。' },
   },
   {
+    id: 'kyotsu-misinformation',
+    title: 'Can You Believe Everything Online?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every day, huge amounts of information are shared online. With a few taps on a smartphone, we can read news from the other side of the world, watch videos made by people we have never met, and pass them on to our friends in seconds. This is a remarkable change, but it also brings a serious problem: not everything that appears on the internet is true. Learning how to tell the difference has become an essential skill.",
+      "False or misleading information can spread in several ways. Sometimes people share a story because it is surprising or emotional, without checking whether it is accurate. Sometimes old photos are presented as if they showed a recent event. In other cases, information is deliberately invented in order to attract attention, make money from advertising, or influence people's opinions. Studies have suggested that false stories may spread faster than true ones, ( A ) they often seem more shocking or exciting.",
+      "The effects of false information can be harmful. During natural disasters, untrue rumours about dangers or about where help is available can cause confusion and panic. False health advice may lead people to try treatments that do not work or are even dangerous. Over time, the spread of misleading stories can also make people less willing to trust any source of information, ( B ) makes it harder for societies to discuss important issues calmly.",
+      "Fortunately, there are simple steps that anyone can take to avoid being misled. Before sharing something, we can ask who created it and whether the source is reliable. We can check whether other trusted news organisations are reporting the same story, and look carefully at the date to see whether it is recent. If a story makes us feel very angry or very excited, it may be a good idea to pause before passing it on, because strong emotions can make us less careful.",
+      "Many schools now teach these skills as part of what is called media literacy. Learning to think critically about information is not only useful for avoiding false stories but also for understanding different points of view. In a world full of information, the ability to judge ( C ) can be trusted may be one of the most important skills a person can have.",
+    ],
+    ja: [
+      '毎日、ばく大な量の情報がインターネット上で共有されている。スマートフォンを数回タップするだけで、地球の反対側のニュースを読み、会ったこともない人が作った動画を見て、それを数秒で友だちに伝えることができる。これはおどろくべき変化だが、深刻な問題ももたらしている。インターネットに出てくるすべてが本当というわけではないのである。そのちがいを見分ける方法を学ぶことは、欠かせない技術になっている。',
+      'まちがった情報や誤解をまねく情報は、いくつかの形で広まりうる。人々が、話がおどろくようなものだったり感情をゆさぶるものだったりするために、正確かどうかを確かめずに共有することがある。古い写真が、最近のできごとをうつしたものであるかのように示されることもある。また別の場合には、注目を集めたり、広告でお金をかせいだり、人々の意見を左右したりするために、情報がわざと作り上げられる。まちがった話は本当の話より速く広まるかもしれないと示す研究もある。まちがった話のほうが、しばしばより衝撃的で刺激的に見えるからである。',
+      'まちがった情報の影響は有害になりうる。自然災害のとき、危険や助けがどこで受けられるかについてのうそのうわさは、混乱やパニックを引き起こしうる。まちがった健康のアドバイスは、人々に効かない、あるいは危険でさえある治療をためさせるかもしれない。時がたつにつれて、誤解をまねく話が広まると、人々はどんな情報源も信じにくくなることもあり、そのことが社会が大切な問題を落ち着いて話し合うのをむずかしくする。',
+      'さいわい、だまされないためにだれでもできるかんたんな手順がある。何かを共有する前に、だれがそれを作ったのか、情報源は信頼できるのかを問うことができる。ほかの信頼できる報道機関が同じ話を伝えているかを確かめ、日付をよく見て最近のものかどうかを確かめることもできる。ある話にとてもいかりを感じたり、とても興奮したりしたら、強い感情は私たちを不注意にしうるので、それを伝える前に少し立ち止まるのがよいかもしれない。',
+      '今では多くの学校が、メディア・リテラシーとよばれるものの一部としてこうした技術を教えている。情報について批判的に考えることを学ぶのは、まちがった話をさけるのに役立つだけでなく、ちがう見方を理解するのにも役立つ。情報があふれる世界では、何が信頼できるかを判断する力は、人がもてる最も大切な技術の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「まちがった話は速く広まるかもしれない。なぜならより衝撃的に見えるから」と理由を表すので because。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（人々が情報を信じにくくなること）を受け、makes の主語になるので which。' },
+      { id: 'C', choices: ['what', 'that', 'which of', 'whose'], answer: 0, why: 'judge の目的語になる名詞節で、「何が信頼できるか」と can be trusted の主語が欠けているので what。' },
+    ],
+    tf: [
+      { statement: '古い写真が、最近のできごとのように示されることがある。', answer: true, why: '第2段落 old photos are presented as if they showed a recent event。' },
+      { statement: '研究によれば、まちがった話は本当の話より必ずおそく広まる。', answer: false, why: '第2段落 false stories may spread faster than true ones。' },
+      { statement: '災害のときのうそのうわさは、混乱を引き起こしうる。', answer: true, why: '第3段落 untrue rumours … can cause confusion and panic。' },
+      { statement: '筆者は、強い感情を感じたらすぐに情報を共有するべきだとすすめている。', answer: false, why: '第4段落 it may be a good idea to pause before passing it on。' },
+    ],
+    qa: [
+      { q: 'Why might people share a story without checking it?', choices: ['Because it is surprising or emotional.', 'Because they are paid to check it.', 'Because it is always from a newspaper.', 'Because it is very old.'], answer: 0, why: '第2段落 people share a story because it is surprising or emotional, without checking whether it is accurate。' },
+      { q: 'Which is NOT mentioned as a step to avoid being misled?', choices: ['Sharing the story with as many people as possible.', 'Asking who created it.', 'Checking whether other trusted news organisations report it.', 'Looking carefully at the date.'], answer: 0, why: '第4段落にできるだけ多くの人に共有するという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['まちがった情報があたえる害', '災害のそなえ方', '病院の選び方', '社会の歴史'], answer: 0, why: '第3段落は、災害時の混乱や健康への害、信頼の低下など、まちがった情報の害を述べている。' },
+      { para: 3, choices: ['だまされないためのかんたんな手順', '報道機関の作り方', 'カレンダーの読み方', '感情のおさえ方の練習'], answer: 0, why: '第4段落は、情報源・ほかの報道・日付を確かめるなど、だまされないための手順を述べている。' },
+    ],
+    titleQ: { choices: ['Can You Believe Everything Online?', 'How to Make a Video', 'The History of Smartphones', 'Why Advertising Is Necessary'], answer: 0, why: '全体として、ネット上のまちがった情報の広まり方・害・見分け方・メディア・リテラシーを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
