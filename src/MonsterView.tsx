@@ -1050,6 +1050,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="64" rx="10" ry="7" fill="#fca5a5" opacity="0.9" />
       </g>
     )
+  if (species === 'pheasant')
+    return (
+      <g>
+        {/* 赤い顔のもよう */}
+        <circle cx="42" cy="40" r="4" fill="#ef4444" opacity="0.9" />
+        <circle cx="58" cy="40" r="4" fill="#ef4444" opacity="0.9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
