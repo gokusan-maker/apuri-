@@ -20515,6 +20515,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Lighting Up the Night', 'How to Make Candles', 'The Life of Night Animals', 'Why Stars Are Bright'], answer: 0, why: '全体として、街灯の歴史と、それが生活を変えたこと、明かりが多すぎる問題を述べている。' },
   },
   {
+    id: 'kyotsu-weeds',
+    title: 'What Is a Weed?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Gardeners and farmers spend a great deal of time pulling out weeds. These unwanted plants seem to appear everywhere, from cracks in the sidewalk to the middle of carefully planted vegetable beds. But what exactly is a weed? Surprisingly, there is no scientific category of plants called “weeds.” A weed is simply a plant that grows where people do not want it to grow.",
+      "This means that the same plant can be a weed in one place and a valuable plant in another. Dandelions, for example, are often removed from lawns, yet their leaves can be eaten in salads and their flowers provide food for bees in early spring. Some plants that are grown as crops in one country have spread to other countries and become serious weeds there, ( A ) they compete with local plants for light, water, and nutrients.",
+      "Weeds are remarkably good at surviving. Many of them grow quickly, produce huge numbers of seeds, and can live in poor soil where other plants struggle. Some seeds can remain in the ground for many years and still sprout when conditions become suitable. Others spread through their roots, so that pulling out the part above ground does not kill the whole plant. These abilities explain ( B ) weeds are so difficult to control.",
+      "Nevertheless, weeds are not always harmful. Their roots can help to hold soil in place and prevent it from being washed away by rain. When they die and break down, they add nutrients to the soil. Weeds also provide food and shelter for insects, birds, and other animals. In fact, some farmers now leave strips of wild plants along the edges of their fields to attract insects that pollinate crops or eat harmful pests.",
+      "For these reasons, many experts suggest that people should think carefully before trying to remove every weed. Using large amounts of chemicals to kill weeds can harm other living things and pollute water. Instead, it may be better to control weeds only where they cause real problems and to accept them in other places. Looking at weeds in this way reminds us that whether a plant is “good” or “bad” often depends ( C ) on the plant itself than on what humans want from the land.",
+    ],
+    ja: [
+      '庭師や農家は、雑草をぬくのに多くの時間をかけている。こうしたいらない植物は、歩道のわれめから、ていねいに植えた野菜の畑のまん中まで、どこにでも現れるように思える。しかし、雑草とはいったい何なのだろうか。おどろくことに、科学には「雑草」とよばれる植物の分類はない。雑草とは、ただ人が育ってほしくない場所に育つ植物のことである。',
+      'これは、同じ植物がある場所では雑草で、別の場所では価値のある植物になりうるということである。たとえばタンポポは、しばふからはよくぬかれるが、葉はサラダにして食べられ、花は早春にハチに食べ物をあたえる。ある国で作物として育てられている植物の中には、ほかの国に広がってそこで深刻な雑草になったものもある。そこで地元の植物と光や水や栄養をうばい合うからである。',
+      '雑草はおどろくほど生きのびるのがうまい。その多くは速く育ち、とても多くの種をつくり、ほかの植物が育ちにくいやせた土でも生きられる。何年も土の中にとどまり、条件がととのうと芽を出す種もある。根で広がるものもあり、そのため地面より上の部分をぬいても植物全体はかれない。こうした力が、雑草がなぜこれほどおさえにくいのかを説明している。',
+      'それでも、雑草がいつも害になるわけではない。根は土をおさえ、雨で流されるのをふせぐのに役立つ。かれて分解されると、土に栄養を加える。雑草はまた、虫や鳥やほかの動物に食べ物やかくれ場をあたえる。実際に、作物の受粉をしたり害虫を食べたりする虫を引きよせるために、畑のふちにそって野生の植物の帯を残しておく農家も今ではいる。',
+      'このような理由から、多くの専門家は、すべての雑草を取りのぞこうとする前によく考えるべきだと言っている。雑草をからすために大量の薬を使うと、ほかの生き物を傷つけ、水をよごすことがある。そのかわりに、本当に問題を起こしている場所だけで雑草をおさえ、ほかの場所ではそのままにしておくほうがよいかもしれない。このように雑草を見ることは、植物が「よい」か「わるい」かは、植物そのものよりも、人間が土地に何を求めるかによることが多いということを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は other countries（場所）で、うしろの they compete ～ は完全な文なので関係副詞 where（非制限用法）。' },
+      { id: 'B', choices: ['why', 'what', 'which', 'that'], answer: 0, why: 'explain why ～「なぜ～かを説明する」。うしろは完全な文。' },
+      { id: 'C', choices: ['less', 'little', 'least', 'fewer'], answer: 0, why: 'あとの than と組み合わせる比較級 less：depends less on A than on B「A よりも B によることが多い」。' },
+    ],
+    tf: [
+      { statement: '科学には「雑草」という植物の分類がある。', answer: false, why: '第1段落 there is no scientific category of plants called “weeds.”' },
+      { statement: 'タンポポの葉はサラダにして食べられる。', answer: true, why: '第2段落 their leaves can be eaten in salads。' },
+      { statement: '雑草の種の中には、何年も土の中にとどまるものがある。', answer: true, why: '第3段落 Some seeds can remain in the ground for many years。' },
+      { statement: '専門家は、大量の薬ですべての雑草をからすべきだと言っている。', answer: false, why: '第5段落 Using large amounts of chemicals to kill weeds can harm other living things。' },
+    ],
+    qa: [
+      { q: 'Why do some farmers leave strips of wild plants along their fields?', choices: ['To attract insects that pollinate crops or eat pests.', 'To make the fields look bigger.', 'To sell the wild plants.', 'To stop rain from falling.'], answer: 0, why: '第4段落 to attract insects that pollinate crops or eat harmful pests。' },
+      { q: 'Why does pulling out the part above ground not always kill a weed?', choices: ['Some weeds spread through their roots.', 'Weeds have no roots.', 'The leaves grow back from the air.', 'Weeds live only for one day.'], answer: 0, why: '第3段落 Others spread through their roots, so that pulling out the part above ground does not kill the whole plant。' },
+    ],
+    gist: [
+      { para: 2, choices: ['雑草が生きのびるのがうまい理由', '種のまき方', 'やせた土の直し方', '根の長さの測り方'], answer: 0, why: '第3段落は、速く育つ・種が多い・種が長く生きる・根で広がるという力を述べている。' },
+      { para: 3, choices: ['雑草が役に立つ面', '虫の名前', '雨の量', '畑の広さ'], answer: 0, why: '第4段落は、土を守り、栄養を加え、生き物をささえるという雑草のよい面を述べている。' },
+    ],
+    titleQ: { choices: ['What Is a Weed?', 'How to Grow Dandelions', 'The History of Farming', 'Why Bees Like Spring'], answer: 0, why: '全体として、雑草とは何か、生きのびる力、役に立つ面、つき合い方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
