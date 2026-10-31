@@ -822,6 +822,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She has [long hairs] and big eyes.', choices: ['long hair', 'a long hair', 'long hairs of', 'longs hair'], answer: 0, why: '頭の髪全体を言う hair は数えられない名詞：long hair。a hair は「髪の毛1本」。' },
     ],
   },
+  {
+    id: 'exam-fix-17',
+    title: '入試の誤文訂正⑰（前置詞の難問②）',
+    points: ['日付の on、arrive at、be good at、be interested in、be different from、be afraid of、期限の by、be famous for、talk with、be absent from など、動詞・形容詞と組になる前置詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The museum is famous for its paintings.', ja: 'その美術館は絵画で有名だ。（be famous for ～）' }],
+    questions: [
+      { sentence: 'I was born [in] May 5, 2010.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '特定の日付には on：on May 5。in は月や年だけのとき（in May）。' },
+      { sentence: 'We arrived [to] the airport at noon.', choices: ['at', 'in', 'for', 'on'], answer: 0, why: '空港や駅のような地点に着くのは arrive at。arrive to とは言わない。' },
+      { sentence: 'My sister is very good [in] swimming.', choices: ['at', 'on', 'for', 'with'], answer: 0, why: '「～が得意だ」は be good at ～。' },
+      { sentence: 'I have been interested [about] science since I was a child.', choices: ['in', 'for', 'on', 'at'], answer: 0, why: '「～に興味がある」は be interested in ～。' },
+      { sentence: 'His opinion is quite different [with] mine.', choices: ['from', 'of', 'by', 'at'], answer: 0, why: '「～とちがう」は be different from ～。' },
+      { sentence: 'My little brother is afraid [from] big dogs.', choices: ['of', 'for', 'with', 'by'], answer: 0, why: '「～がこわい」は be afraid of ～。' },
+      { sentence: 'Please finish the report [until] Friday.', choices: ['by', 'in', 'on', 'till'], answer: 0, why: '「～までに（期限）」は by。until / till は「～までずっと（継続）」。' },
+      { sentence: 'The museum is famous [by] its beautiful paintings.', choices: ['for', 'of', 'to', 'at'], answer: 0, why: '「～で有名だ」は be famous for ～。' },
+      { sentence: 'We talked [each other] for hours last night.', choices: ['with each other', 'each other with', 'to each other with', 'each with other'], answer: 0, why: 'talk は自動詞なので前置詞が必要：talk with（または to）each other。' },
+      { sentence: 'She was absent [at] school yesterday because of a cold.', choices: ['from', 'of', 'in', 'on'], answer: 0, why: '「～を休む」は be absent from ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
