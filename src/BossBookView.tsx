@@ -44,6 +44,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         <span className="lg-icon" aria-hidden="true">📕</span>ボス図鑑
         {speedy > 0 && <span className="fold-meta" aria-label={`スピードクリア ${speedy}体`}>⚡{speedy}</span>}
         {clean > 0 && <span className="fold-meta" aria-label={`ノーミス ${clean}体`}>✨{clean}</span>}
+        {clean > 0 && <span className="fold-meta" aria-label={`ノーミス率 ${Math.round((clean / beaten) * 100)}%`}>（{Math.round((clean / beaten) * 100)}%）</span>} {/* デザイン135 */}
         <span className="fold-meta" aria-label={`ボス図鑑 ${beaten} / ${all.length}体`}>
           {beaten}/{all.length}
         </span>

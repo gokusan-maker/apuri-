@@ -337,3 +337,14 @@ it('デザイン129：ボス図鑑で、いちばん早くたおしたボスに 
   render(<BossBook />)
   expect(screen.queryByLabelText('いちばん早くたおしたボス')).toBeNull()
 })
+
+it('デザイン135：ボス図鑑の見出しに、ノーミスでたおしたボスの割合が出る', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const a = BOSSES['中1']
+  const b = BOSSES['中2']
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [a.name]: { look: a, wins: 1, best: 'A', first: '2026-10-01' }, [b.name]: { look: b, wins: 1, best: 'A', first: '2026-10-02' } }))
+  localStorage.setItem('eitan:boss-nomiss', JSON.stringify([a.name]))
+  render(<BossBook />)
+  expect(screen.getByLabelText('ノーミス率 50%').textContent).toBe('（50%）')
+})
