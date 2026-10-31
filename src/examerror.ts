@@ -948,6 +948,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Neither the teacher [or] the students knew the answer.', choices: ['nor', 'and', 'but', 'either'], answer: 0, why: 'neither A nor B「A も B も～ない」。neither と or は組まない。' },
     ],
   },
+  {
+    id: 'exam-fix-20',
+    title: '入試の誤文訂正⑳（医学部・難関大レベル②）',
+    points: ['consist of（進行形・受け身にしない）、would rather ＋仮定法、It is essential that ＋原形、Had I known の倒置、suggest -ing、No sooner ～ than、the reason why ＋主語＋動詞、2つの比較の the ＋比較級、Were it not for、one of those ＋複数名詞＋ who など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She is one of those people who never give up.', ja: '彼女はけっしてあきらめない人々の1人だ。（who の先行詞は those people で複数）' }],
+    questions: [
+      { sentence: 'The committee [is consisting] of ten members.', choices: ['consists', 'is consisted', 'are consist', 'consisting'], answer: 0, why: 'consist of「～から成る」は状態を表すので進行形・受け身にしない：The committee consists of ～。' },
+      { sentence: 'I would rather you [don\'t] tell anyone about this.', choices: ['didn\'t', 'won\'t', 'not', 'wouldn\'t'], answer: 0, why: 'would rather ＋主語＋過去形（仮定法）「（人に）～してほしい」：I would rather you didn\'t tell ～。' },
+      { sentence: 'It is essential that he [is] present at the meeting.', choices: ['be', 'was', 'will be', 'being'], answer: 0, why: 'essential・necessary などのあとの that 節は原形（または should ＋原形）：he be present。' },
+      { sentence: '[If I knew] the truth then, I would have acted differently.', choices: ['Had I known', 'If I know', 'Did I know', 'If I would know'], answer: 0, why: 'then と would have acted から過去の仮定（仮定法過去完了）。if を省いた倒置 Had I known ～。' },
+      { sentence: 'She suggested [to go] to the beach for the weekend.', choices: ['going', 'go', 'to going', 'that go'], answer: 0, why: 'suggest のあとは動名詞（または that ＋主語＋原形）：suggested going。' },
+      { sentence: 'No sooner had he arrived [when] the phone rang.', choices: ['than', 'then', 'that', 'as'], answer: 0, why: 'No sooner ～ than …「～するとすぐに…」。when は Hardly / Scarcely と組む。' },
+      { sentence: 'The reason [why did he leave] remains unclear.', choices: ['why he left', 'did he leave why', 'why left he', 'for why he left'], answer: 0, why: '関係副詞 why のあとはふつうの語順（主語＋動詞）：the reason why he left。' },
+      { sentence: 'This is [the most important] of the two issues.', choices: ['the more important', 'more important', 'most important', 'the importanter'], answer: 0, why: '2つのうちで「より～なほう」は the ＋比較級 of the two：the more important of the two。' },
+      { sentence: 'Were it not for water, [nothing can] live on the Earth.', choices: ['nothing could', 'nothing can be', 'nothing would can', 'nothing could have'], answer: 0, why: 'Were it not for ～ は If it were not for ～ の倒置（仮定法過去）なので主節は could ＋原形：nothing could live。' },
+      { sentence: 'She is one of those people [who never gives] up.', choices: ['who never give', 'who never giving', 'that never gives', 'whom never give'], answer: 0, why: 'who の先行詞は those people（複数）なので give。one of those ＋複数名詞＋ who ＋複数の動詞。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

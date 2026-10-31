@@ -3264,3 +3264,4 @@
 - 2026-10-31: 文法：入試の正誤問題㉖（倒置・強調の難問：Never/Little/Rarely/Only/Not until の倒置・強調構文 It is ～ that・do の強調）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「竹の花のなぞ」（科学・植物・非制限の which／主格の that の空所）
 - 2026-10-31: キャラクター追加：キンギョン（金魚・なつまつりのすくいタマゴ・ねばりのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正⑳（医学部・難関大レベル②：consist of・would rather ＋過去形・essential that ＋原形・Had I known・No sooner ～ than・one of those people who）10問
