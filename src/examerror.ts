@@ -2250,6 +2250,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Everything [what] he said was true.', choices: ['that', 'which of', 'whose', 'what that'], answer: 0, why: '先行詞 Everything があるので what は使えない。everything のあとはふつう that。' },
     ],
   },
+  {
+    id: 'exam-fix-51',
+    title: '入試の誤文訂正〈51〉（TOEFL・IELTS の書き言葉⑳：問題と解決を述べる表現）',
+    points: ['One way to ～ is to …、take measures、deal with の受け身（be dealt with）、条件の副詞節の現在形（If nothing is done）、It is necessary for 人 to ～、Unless（否定の意味をふくむ）、result in、The problem lies in ～、help 人 ＋原形、助動詞の受け身（should be taken）など、エッセイで問題と解決策を書くときの表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'One way to solve this problem is to improve public transport.', ja: 'この問題を解決する1つの方法は、公共交通をよくすることだ。' }],
+    questions: [
+      { sentence: 'One way to solve this problem [is improve] public transport.', choices: ['is to improve', 'is improving of', 'improves', 'to improve is'], answer: 0, why: 'One way to ～ is to …「～する1つの方法は…することだ」。be 動詞のあとに不定詞を置く。' },
+      { sentence: 'The government should take [measure] to reduce pollution.', choices: ['measures', 'a measure of', 'measuring', 'the measure'], answer: 0, why: '「対策をとる」は take measures（ふつう複数形）。' },
+      { sentence: 'This problem must [deal] with immediately.', choices: ['be dealt', 'deal', 'be dealing', 'dealt'], answer: 0, why: '問題は「対処される」側なので受け身 must be dealt with。' },
+      { sentence: 'If nothing [will be done], the situation will get worse.', choices: ['is done', 'will do', 'does', 'is doing'], answer: 0, why: '条件の if 節では未来のことも現在形。nothing は「される」側なので is done。' },
+      { sentence: 'It is necessary for us [act] quickly.', choices: ['to act', 'acting', 'acted', 'act to'], answer: 0, why: 'It is necessary for 人 to ～「人が～することが必要だ」。' },
+      { sentence: 'Unless we [don’t change] our habits, the problem will continue.', choices: ['change', 'won’t change', 'will change', 'not change'], answer: 0, why: 'unless は「～しないかぎり」と否定の意味をふくむので、not はいらない。条件の節なので現在形 change。' },
+      { sentence: 'This new rule will [result to] fewer accidents.', choices: ['result in', 'result from', 'result on', 'result at'], answer: 0, why: '原因 result in 結果「～という結果になる」：result in fewer accidents。' },
+      { sentence: 'The real problem [lies on] the lack of money.', choices: ['lies in', 'lays in', 'lies at', 'lie in'], answer: 0, why: '「問題は～にある」は The problem lies in ～。主語が単数なので lies。' },
+      { sentence: 'Such a policy would help people [saving] energy.', choices: ['save', 'to saving', 'saved', 'for saving'], answer: 0, why: 'help 人 ＋原形（または to ＋原形）「人が～するのを助ける」：help people save energy。' },
+      { sentence: 'Strong measures [should take] to protect wildlife.', choices: ['should be taken', 'should taking', 'should took', 'should be taking'], answer: 0, why: '対策は「とられる」側なので助動詞の受け身 should be taken。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
