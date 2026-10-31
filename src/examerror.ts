@@ -602,6 +602,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Under the tree (A) sat (B) an old man, (C) who (D) were reading a book.', choices: ['(A) sat', '(B) an old man,', '(C) who', '(D) were reading a book'], answer: 3, why: '先行詞は an old man（単数）なので was reading。場所が文頭に出た倒置 sat an old man は正しい。' },
     ],
   },
+  {
+    id: 'exam-error-hard',
+    title: '入試の正誤問題㉗（医学部・難関大レベル）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'avoid -ing、Scarcely ～ when、It is high time ＋過去形、Had ～ の倒置と would have ＋過去分詞、a number of ＋複数名詞、object to / be used to ＋ -ing、Hardly のあとの付加疑問、Without ～ の仮定法過去完了に注目する。医療の場面の文が多い。',
+    ],
+    examples: [
+      { en: 'Had the medicine been taken earlier, the patient would have recovered.', ja: 'もっと早く薬が飲まれていたら、患者は回復しただろう。（仮定法過去完了の倒置）' },
+      { en: 'She is used to working long hours at the hospital.', ja: '彼女は病院で長時間働くのに慣れている。' },
+    ],
+    questions: [
+      { sentence: 'The patient (A) was advised (B) to avoid (C) to eat (D) salty food.', choices: ['(A) was advised', '(B) to avoid', '(C) to eat', '(D) salty food'], answer: 2, why: 'avoid のうしろは動名詞：avoid eating。' },
+      { sentence: 'Scarcely (A) had the doctor (B) arrived (C) than (D) the patient woke up.', choices: ['(A) had the doctor', '(B) arrived', '(C) than', '(D) the patient woke up'], answer: 2, why: 'Scarcely had ～ when …「～するとすぐに…」。than は No sooner と組む。' },
+      { sentence: 'It is high time (A) the government (B) takes (C) action (D) on this problem.', choices: ['(A) the government', '(B) takes', '(C) action', '(D) on this problem'], answer: 1, why: 'It is high time ＋主語＋過去形（仮定法過去）：the government took action。' },
+      { sentence: '(A) Had (B) the medicine (C) been taken earlier, the patient (D) would recover.', choices: ['(A) Had', '(B) the medicine', '(C) been taken earlier, the patient', '(D) would recover'], answer: 3, why: 'Had ～ been taken は仮定法過去完了の倒置なので主節は would have ＋過去分詞：would have recovered。' },
+      { sentence: '(A) A number of patient (B) have (C) recovered (D) quickly.', choices: ['(A) A number of patient', '(B) have', '(C) recovered', '(D) quickly'], answer: 0, why: 'a number of のあとは複数名詞：A number of patients。' },
+      { sentence: 'He (A) objected to (B) be (C) examined (D) by a student doctor.', choices: ['(A) objected to', '(B) be', '(C) examined', '(D) by a student doctor'], answer: 1, why: 'object to の to は前置詞なので動名詞、受け身なので being examined。' },
+      { sentence: 'She is (A) used to (B) work (C) long hours (D) at the hospital.', choices: ['(A) used to', '(B) work', '(C) long hours', '(D) at the hospital'], answer: 1, why: 'be used to「～に慣れている」の to は前置詞なので動名詞：used to working。' },
+      { sentence: 'Hardly (A) anyone (B) knew (C) the answer, (D) didn’t they?', choices: ['(A) anyone', '(B) knew', '(C) the answer,', '(D) didn’t they'], answer: 3, why: 'Hardly は否定の意味をふくむので、付加疑問は肯定：did they?。' },
+      { sentence: 'The more (A) carefully you study, (B) the more (C) you will (D) understanding.', choices: ['(A) carefully you study,', '(B) the more', '(C) you will', '(D) understanding'], answer: 3, why: '助動詞 will のあとは原形：you will understand。' },
+      { sentence: 'Without (A) the doctor’s help, she (B) would not (C) survive (D) the accident last year.', choices: ['(A) the doctor’s help, she', '(B) would not', '(C) survive', '(D) the accident last year'], answer: 2, why: 'last year の過去の仮定（Without ～ ＝ If it had not been for ～）なので would not have survived。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

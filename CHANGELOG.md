@@ -3267,3 +3267,4 @@
 - 2026-10-31: 文法：入試の誤文訂正⑳（医学部・難関大レベル②：consist of・would rather ＋過去形・essential that ＋原形・Had I known・No sooner ～ than・one of those people who）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「判定はだれが下す？（スポーツのビデオ判定）」（社会・スポーツ・because／結果の so／that の空所）
 - 2026-10-31: デザイン：ボス戦の勝利画面に、その戦いでいちばん大きかったダメージ（💥 最大 ○ ダメージ）を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㉗（医学部・難関大レベル：avoid -ing・Scarcely ～ when・high time ＋過去形・Had の倒置・object to being・付加疑問・Without の仮定法）10問
