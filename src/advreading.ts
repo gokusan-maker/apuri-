@@ -18565,6 +18565,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Mystery of Bamboo Flowers', 'How to Build a Bamboo House', 'The History of Rats', 'Why Plants Need Water'], answer: 0, why: '全体として、まれでいっせいの竹の開花、そのなぞ、人への影響、理由の説明を述べている。' },
   },
   {
+    id: 'kyotsu-video-review',
+    title: 'Who Makes the Call?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many sports, a single decision by a referee can change the result of an important match. Was the ball inside the line? Did a player touch the ball with a hand? Was a runner safe or out? For most of sporting history, such questions were answered by officials who had to make decisions in a fraction of a second, using only their own eyes. Even the most experienced referees could not always be sure they were right.",
+      "In recent decades, however, technology has begun to play a larger role. Many professional sports now use video review, a system in which officials can watch replays of a play from several camera angles before making a final decision. In tennis, electronic systems can judge whether a ball landed in or out, and in football, video assistant referees check important incidents such as goals and penalties. Supporters argue that these systems make sports fairer, ( A ) mistakes that once decided championships can now be corrected.",
+      "There is no doubt that human officials sometimes make errors. Players move extremely fast, and the referee's view may be blocked by other players. When an obvious mistake is shown again and again on television, fans and players can become very angry, and the reputation of the sport may suffer. Video review gives officials a second chance to get the decision right.",
+      "Not everyone is happy with the change, though. Critics complain that reviews can take a long time, interrupting the flow of the game and spoiling the excitement for spectators in the stadium. Players who celebrate a goal may have to wait several minutes to find out whether it will count. Some people also feel that the occasional human mistake is part of what makes sport exciting and unpredictable, ( B ) a game decided entirely by machines may lose some of its charm.",
+      "Sports organisations continue to search for a balance. Some have set time limits for reviews or allowed only certain types of decisions to be checked. Others show the replays on large screens so that fans in the stadium can understand what is happening. The debate shows ( C ) even in sport, new technology raises questions not only about accuracy but also about what people truly value.",
+    ],
+    ja: [
+      '多くのスポーツでは、審判のたった1つの判定が大事な試合の結果を変えることがある。ボールは線の内側だったのか。選手は手でボールにさわったのか。走者はセーフだったのかアウトだったのか。スポーツの歴史のほとんどのあいだ、こうした問いは、自分の目だけをたよりに、ほんの一瞬で判定しなければならない審判によって答えられてきた。最も経験のある審判でさえ、いつも自分が正しいと確信できるわけではなかった。',
+      'しかしここ数十年、技術がより大きな役割をはたしはじめた。今では多くのプロスポーツがビデオ判定を使っている。それは、審判が最終的な判定をする前に、いくつかのカメラの角度からプレーの再生を見ることができるしくみである。テニスでは電子的なしくみがボールが入ったか出たかを判定でき、サッカーではビデオ・アシスタント・レフェリーがゴールやペナルティーのような大切な場面を確認する。支持する人々は、かつては優勝を決めてしまったまちがいを今では正せるので、こうしたしくみがスポーツをより公平にすると主張する。',
+      '人間の審判がときにまちがえることはうたがいない。選手はとても速く動き、審判の視界はほかの選手にさえぎられることもある。明らかなまちがいがテレビで何度もくり返しうつされると、ファンや選手はとてもおこることがあり、そのスポーツの評判がそこなわれるかもしれない。ビデオ判定は、審判に正しい判定をするための2度目の機会をあたえる。',
+      'しかし、だれもがこの変化を喜んでいるわけではない。批判する人々は、判定の確認に長い時間がかかることがあり、試合の流れを止め、スタジアムの観客の興奮を台なしにするとこぼす。ゴールを喜んだ選手が、それが認められるかどうかを知るために数分待たなければならないこともある。ときどきの人間のまちがいもスポーツを興奮させ予想できないものにしている一部だと感じる人もおり、そのため、すべて機械で決まる試合は魅力の一部を失うかもしれない。',
+      'スポーツの団体はバランスをさがしつづけている。確認の時間に制限を設けたり、ある種類の判定だけを確認できるようにしたりした団体もある。スタジアムのファンが何が起きているかを理解できるよう、大きな画面に再生をうつす団体もある。この議論は、スポーツにおいてさえ、新しい技術が正確さだけでなく、人々が本当に大切にしているものは何かという問いを投げかけることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「しくみがスポーツをより公平にする。なぜならまちがいを正せるから」と理由を表すので because。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「人間のまちがいも魅力の一部だと感じる人がいる、だから機械で決まる試合は魅力を失うかもしれない」と結果を表すので so。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'ビデオ判定では、いくつかのカメラの角度から再生を見られる。', answer: true, why: '第2段落 watch replays of a play from several camera angles。' },
+      { statement: '筆者によれば、人間の審判はけっしてまちがえない。', answer: false, why: '第3段落 There is no doubt that human officials sometimes make errors。' },
+      { statement: 'ビデオ判定の確認には長い時間がかかることがあると批判する人がいる。', answer: true, why: '第4段落 Critics complain that reviews can take a long time。' },
+      { statement: 'すべてのスポーツ団体が、確認できる判定の種類を制限していない。', answer: false, why: '第5段落 Some have … allowed only certain types of decisions to be checked。' },
+    ],
+    qa: [
+      { q: 'Why can human officials make mistakes?', choices: ['Players move very fast and their view may be blocked.', 'They are not allowed to watch the game.', 'They never receive any training.', 'They always decide before the play.'], answer: 0, why: '第3段落 Players move extremely fast, and the referee\'s view may be blocked by other players。' },
+      { q: 'How have some organisations helped fans in the stadium understand reviews?', choices: ['By showing replays on large screens.', 'By stopping all reviews.', 'By sending messages to fans’ phones only.', 'By asking fans to vote.'], answer: 0, why: '第5段落 Others show the replays on large screens so that fans in the stadium can understand。' },
+    ],
+    gist: [
+      { para: 2, choices: ['人間の審判のまちがいとビデオ判定の役割', 'テレビ番組の作り方', '選手の練習方法', 'スタジアムの建て方'], answer: 0, why: '第3段落は、審判がまちがえる理由と、ビデオ判定が2度目の機会をあたえることを述べている。' },
+      { para: 3, choices: ['ビデオ判定への批判', 'ゴールの喜び方', '時計の使い方', '機械の作り方'], answer: 0, why: '第4段落は、試合の流れを止める、魅力をうばうなど、ビデオ判定への批判を述べている。' },
+    ],
+    titleQ: { choices: ['Who Makes the Call?', 'How to Become a Referee', 'The History of Tennis', 'Why Fans Get Angry'], answer: 0, why: '全体として、スポーツのビデオ判定の利点と批判、バランスのとり方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
