@@ -3382,3 +3382,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㊴（TOEFL・IELTS の書き言葉⑯：In my opinion・Despite・It is true that ～, but・agree with・On the other hand・believe that・Whatever・No matter how・Even if・disagree with）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「学びは終わらない（おとなの学びなおし）」（社会・働き方・either／who／that の空所）
 - 2026-10-31: デザイン：ガチャの結果で、出た子のタイプが相棒と同じなら「🤝 相棒と同じ○○型」を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊻（意見を述べる・ゆずる表現：in my opinion・Despite・It is true that ～, but・agree with・On the other hand・believe that・Whatever・No matter how・Even if・should be）10問

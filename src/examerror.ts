@@ -1058,6 +1058,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I remember to meet (B) her once (C) in Kyoto (D) when I was a child.', choices: ['(A) I remember to meet', '(B) her once', '(C) in Kyoto', '(D) when I was a child'], answer: 0, why: '過去に～したことを覚えているは remember -ing：I remember meeting。' },
     ],
   },
+  {
+    id: 'exam-error-opinion',
+    title: '入試の正誤問題㊻（意見を述べる・ゆずる表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'in my opinion、Despite と Although、It is true that ～, but、agree with、On the other hand、believe that、Whatever、No matter how、Even if、助動詞の受け身など、エッセイで意見を述べるときの表現。',
+    ],
+    examples: [
+      { en: 'Despite its advantages, the plan has serious problems.', ja: '利点はあるものの、その計画には深刻な問題がある。' },
+      { en: 'No matter how hard it is, we must keep trying.', ja: 'どれほどむずかしくても、私たちはためしつづけなければならない。' },
+    ],
+    questions: [
+      { sentence: 'Cities (A) should have (B) more parks, (C) in my (D) opinions.', choices: ['(A) should have', '(B) more parks', '(C) in my', '(D) opinions'], answer: 3, why: '「私の意見では」は in my opinion（単数）。' },
+      { sentence: '(A) Although its advantages, (B) the plan (C) has (D) serious problems.', choices: ['(A) Although its advantages', '(B) the plan', '(C) has', '(D) serious problems'], answer: 0, why: 'うしろが名詞なので前置詞 Despite its advantages。' },
+      { sentence: 'It is true (A) that cars (B) are convenient, (C) and they (D) also cause pollution.', choices: ['(A) that cars', '(B) are convenient', '(C) and they', '(D) also cause pollution'], answer: 2, why: 'ゆずってから反論するので It is true that ～, but …。' },
+      { sentence: 'I (A) am agree (B) with (C) this idea (D) completely.', choices: ['(A) am agree', '(B) with', '(C) this idea', '(D) completely'], answer: 0, why: 'agree は動詞なので be 動詞はいらない：I agree with。' },
+      { sentence: 'Online classes (A) save time. (B) On the other hands, (C) they (D) can feel lonely.', choices: ['(A) save time', '(B) On the other hands', '(C) they', '(D) can feel lonely'], answer: 1, why: 'On the other hand（hand は単数）。' },
+      { sentence: 'Some people (A) believe (B) what (C) technology (D) makes life easier.', choices: ['(A) believe', '(B) what', '(C) technology', '(D) makes life easier'], answer: 1, why: 'うしろは完全な文なので接続詞 that。' },
+      { sentence: '(A) Whatever (B) happen, (C) I will (D) support you.', choices: ['(A) Whatever', '(B) happen', '(C) I will', '(D) support you'], answer: 1, why: 'Whatever は単数あつかいで現在形：Whatever happens。' },
+      { sentence: 'No matter (A) what hard (B) it is, (C) we must (D) keep trying.', choices: ['(A) what hard', '(B) it is', '(C) we must', '(D) keep trying'], answer: 0, why: '形容詞の前は how：No matter how hard。' },
+      { sentence: '(A) Even if (B) it will rain tomorrow, (C) the event (D) will be held.', choices: ['(A) Even if', '(B) it will rain tomorrow', '(C) the event', '(D) will be held'], answer: 1, why: '条件の副詞節では未来も現在形：it rains tomorrow。' },
+      { sentence: 'I (A) disagree (B) with the idea (C) that homework (D) should banned.', choices: ['(A) disagree', '(B) with the idea', '(C) that homework', '(D) should banned'], answer: 3, why: '助動詞のあとの受け身は should be banned。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
