@@ -18643,6 +18643,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How We Eat Matters', 'How to Cook Quickly', 'The History of Chopsticks', 'Why Breakfast Is Expensive'], answer: 0, why: '全体として、ゆっくりよくかんで食べることの利点と、そのためのくふうを述べている。' },
   },
   {
+    id: 'kyotsu-birds-glass',
+    title: 'Birds and Glass',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Modern cities are full of tall buildings covered in shining glass. To people, these buildings can look beautiful and bright. For birds, however, they can be deadly. Every year, a huge number of birds are injured or killed when they fly into windows. By some estimates, in a single large country the number may reach hundreds of millions each year, making glass one of the most serious dangers that birds face in cities.",
+      "The main problem is that birds do not understand glass. Clear windows look like open space, so a bird may try to fly straight through them to reach plants or sky on the other side. Reflective glass can be even more confusing, because it shows images of trees, clouds, and sky. A bird that sees a reflection of a tree may fly toward it, believing it to be a real place to rest, and then hit the hard surface at full speed. Even a small bird flying fast can be seriously hurt by such a crash.",
+      "Light at night creates another danger. Many birds migrate long distances at night, using the stars to find their way. Bright lights from tall buildings can attract them and make them lose their sense of direction. Confused birds may circle around the buildings ( A ) they become exhausted, or they may crash into windows.",
+      "Fortunately, there are ways to reduce these accidents. One effective method is to add patterns to glass, such as small dots or lines, placed close enough together that birds recognise the surface as something solid. Special types of glass that reflect ultraviolet light, which birds can see but humans cannot, are also being developed. In some cities, buildings switch off unnecessary lights at night during the migration seasons, ( B ) helps birds pass safely.",
+      "Ordinary people can help too. Placing stickers or strings on home windows, keeping curtains partly closed, or moving bird feeders closer to or much farther from windows can all make a difference. These simple actions show ( C ) protecting wildlife is not only the responsibility of scientists and governments, but something that each of us can take part in. Even small changes, repeated in many homes, can save a great number of birds.",
+    ],
+    ja: [
+      '現代の都市は、かがやくガラスでおおわれた高いビルでいっぱいである。人々にとって、こうしたビルは美しく明るく見えるかもしれない。しかし鳥にとっては、命にかかわることがある。毎年、ばく大な数の鳥が窓にぶつかってけがをしたり死んだりしている。ある推定では、1つの大きな国だけで、その数は1年に何億羽にもなるかもしれず、ガラスは都市で鳥が直面する最も深刻な危険の一つになっている。',
+      'おもな問題は、鳥がガラスを理解できないことである。とうめいな窓はひらけた空間のように見えるので、鳥は向こう側の植物や空にとどこうとして、まっすぐ通りぬけようとするかもしれない。反射するガラスは、木や雲や空のすがたをうつすので、さらにまぎらわしいことがある。木のすがたが映っているのを見た鳥は、それが本当に休める場所だと思ってそちらへ飛んでいくかもしれず、そして全速力でかたい表面にぶつかってしまう。速く飛ぶ小さな鳥でも、こうした衝突で大けがをすることがある。',
+      '夜の明かりも別の危険を生む。多くの鳥は星をたよりに道を見つけながら、夜に長いきょりをわたる。高いビルの明るい光は鳥を引きよせ、方向の感覚を失わせることがある。まよった鳥はつかれきるまでビルの周りをまわったり、窓にぶつかったりするかもしれない。',
+      'さいわい、こうした事故をへらす方法がある。効果的な方法の一つは、小さな点や線のような模様を、鳥が表面をかたいものだと気づけるほど間かくをつめてガラスにつけることである。鳥には見えるが人間には見えない紫外線を反射する特別なガラスも開発されている。都市によっては、わたりの季節の夜にビルが不要な明かりを消しており、そのことが鳥が安全に通りすぎるのを助けている。',
+      'ふつうの人々も助けることができる。家の窓にステッカーやひもをつける、カーテンを少し閉めておく、鳥のえさ台を窓のすぐ近くかずっと遠くに移すといったことは、どれもちがいを生みうる。こうしたかんたんな行動は、野生の生き物を守ることが科学者や政府だけの責任ではなく、私たち一人一人が参加できるものだということを示している。小さな変化でも、多くの家でくり返されれば、たくさんの鳥を救うことができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['until', 'unless', 'because', 'so'], answer: 0, why: '「つかれきるまで（ずっと）まわる」と継続の終わりを表すので until（～するまで）。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（夜に明かりを消すこと）を受け、helps の主語になるので which（非制限用法）。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '鳥は、とうめいな窓をひらけた空間だと思うことがある。', answer: true, why: '第2段落 Clear windows look like open space。' },
+      { statement: '夜にわたる鳥は、ビルの明かりの影響を受けない。', answer: false, why: '第3段落 Bright lights from tall buildings can attract them and make them lose their sense of direction。' },
+      { statement: '鳥には紫外線が見える。', answer: true, why: '第4段落 ultraviolet light, which birds can see but humans cannot。' },
+      { statement: '筆者によれば、鳥を守れるのは科学者と政府だけである。', answer: false, why: '第5段落 not only the responsibility of scientists and governments, but something that each of us can take part in。' },
+    ],
+    qa: [
+      { q: 'Why can reflective glass be especially confusing for birds?', choices: ['It shows images of trees, clouds, and sky.', 'It makes loud noises.', 'It is always dirty.', 'It is warmer than other glass.'], answer: 0, why: '第2段落 because it shows images of trees, clouds, and sky。' },
+      { q: 'Which is NOT mentioned as something ordinary people can do?', choices: ['Building taller houses.', 'Placing stickers on windows.', 'Keeping curtains partly closed.', 'Moving bird feeders.'], answer: 0, why: '第5段落に家を高くする話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['夜の明かりがわたり鳥をまよわせること', '星座の見つけ方', 'ビルの建て方', '鳥のねむり方'], answer: 0, why: '第3段落は、夜の明るい光がわたり鳥を引きよせ、まよわせる危険を述べている。' },
+      { para: 3, choices: ['事故をへらす方法', 'ガラスの値段', '紫外線の発見', 'わたりの季節の天気'], answer: 0, why: '第4段落は、ガラスの模様、特別なガラス、明かりを消すといった対策を述べている。' },
+    ],
+    titleQ: { choices: ['Birds and Glass', 'How to Build a Skyscraper', 'The History of Windows', 'Why Birds Sing at Night'], answer: 0, why: '全体として、鳥がガラスにぶつかる理由、夜の明かりの危険、対策を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
