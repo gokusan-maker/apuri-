@@ -2460,6 +2460,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I didn’t know that you [can] speak Chinese.', choices: ['could', 'will', 'can be', 'are able'], answer: 0, why: '主節が過去（didn’t know）なので can は could にする。' },
     ],
   },
+  {
+    id: 'exam-fix-56',
+    title: '入試の誤文訂正〈56〉（医学部・難関大レベル⑥：名詞構文・無生物主語・強調）',
+    points: ['動詞を名詞にした名詞構文（die → death、discover → discovery、arrive → arrival、examine → examination）、無生物主語（This medicine will make you feel ～・The snow prevented us from going ～）、強調の did ＋原形・the very ～、a good speaker of ～ など、医学部や難関大学の英文で多い書き方。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The discovery of the new drug saved many lives.', ja: '新しい薬の発見が多くの命を救った。' }],
+    questions: [
+      { sentence: 'His sudden [died] shocked everyone.', choices: ['death', 'dying', 'dead', 'die'], answer: 0, why: '形容詞 sudden と所有格 His に修飾される主語なので名詞 death。' },
+      { sentence: 'The [discover] of the new drug saved many lives.', choices: ['discovery', 'discovering of', 'discovered', 'to discover'], answer: 0, why: 'The ～ of … の形の主語なので名詞 discovery「発見」。' },
+      { sentence: 'This medicine will [make you to feel] better.', choices: ['make you feel', 'make you feeling', 'make to you feel', 'make feel you'], answer: 0, why: '無生物主語 make 人 ＋原形「（物が）人を～させる」：make you feel better。' },
+      { sentence: 'The heavy snow [prevented that we went] out.', choices: ['prevented us from going', 'prevented us to go', 'prevented we going', 'prevented from us going'], answer: 0, why: '無生物主語 prevent 人 from -ing「（物が）人が～するのをさまたげる」。' },
+      { sentence: 'The news [made her sadly].', choices: ['made her sad', 'made her sadness', 'made sad her', 'made her be sadly'], answer: 0, why: 'make O C の C には形容詞：made her sad「その知らせは彼女を悲しませた」。' },
+      { sentence: 'I [did saw] him at the station yesterday.', choices: ['did see', 'do saw', 'did seen', 'was see'], answer: 0, why: '動詞を強調する did のあとは原形：I did see him「たしかに見た」。' },
+      { sentence: 'She is a [well] speaker of English.', choices: ['good', 'goodly', 'better of', 'best of'], answer: 0, why: '名詞 speaker を修飾するのは形容詞 good（= She speaks English well）。' },
+      { sentence: 'His [arrive] was delayed by the storm.', choices: ['arrival', 'arriving of', 'arrived', 'to arrive'], answer: 0, why: '所有格 His のあとの主語なので名詞 arrival「到着」。' },
+      { sentence: 'This is [very the] book I was looking for.', choices: ['the very', 'very a', 'the much', 'so the'], answer: 0, why: '名詞を強調して「まさにその」は the very ＋名詞。' },
+      { sentence: 'A careful [examine] of the data revealed an error.', choices: ['examination', 'examining of', 'examined', 'to examine'], answer: 0, why: '形容詞 careful に修飾される主語なので名詞 examination「調査」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
