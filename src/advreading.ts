@@ -19189,6 +19189,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The World of Sumo', 'How to Become a Referee', 'The History of Salt', 'Why Rings Are Round'], answer: 0, why: '全体として、相撲の伝統と儀式、力士の生活、場所と外国出身力士、課題を述べている。' },
   },
   {
+    id: 'kyotsu-dolphins',
+    title: 'The Clever Dolphin',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Dolphins have long been admired for their friendly faces and playful behaviour. They leap out of the water, ride the waves made by boats, and sometimes seem curious about humans. Behind this cheerful image, however, scientists have discovered that dolphins are among the most intelligent animals on Earth, with abilities that in some ways resemble our own. Studying them has changed the way many people think about intelligence in animals.",
+      "One remarkable discovery concerns the way dolphins communicate. Many dolphins produce a special whistle that seems to be unique to each individual, a little like a name. Researchers have found that dolphins can recognise the whistles of other dolphins and may even copy them, as if calling a particular friend. This suggests that dolphins can keep track of many individuals in their group, ( A ) is an important skill for animals that live in complex societies.",
+      "Dolphins also appear to recognise themselves. In experiments, researchers placed marks on dolphins' bodies and then gave them access to a mirror. Some dolphins swam to the mirror and turned their bodies to look at the marked area, as if they understood that the image in the mirror was themselves. Only a few kinds of animals, such as great apes and elephants, have shown similar behaviour. For many researchers, this is a sign of a high level of self-awareness.",
+      "In some places, dolphins even use tools. Off the coast of western Australia, a group of dolphins has been observed carrying pieces of sea sponge on their noses while searching for food on the rocky sea floor. The sponge protects their noses from sharp rocks and stinging creatures. Interestingly, this behaviour seems to be passed mainly from mothers to their young, ( B ) suggests that dolphins can learn skills from one another.",
+      "Learning about dolphin intelligence raises important questions for humans. If dolphins are able to communicate, recognise themselves, and pass on knowledge, how should we treat them? Many scientists argue that pollution, fishing nets, and noise from ships pose serious threats to these animals. Understanding how clever dolphins are may encourage people to protect the oceans ( C ) they depend on. In protecting dolphins, we may also protect the health of the sea itself.",
+    ],
+    ja: [
+      'イルカは長いあいだ、その親しみやすい顔と遊び好きなふるまいで愛されてきた。水からとび出し、船が作る波にのり、ときには人間に興味をもっているようにも見える。しかしこの明るいイメージのうしろで、科学者は、イルカが地球で最もかしこい動物の一つであり、ある意味で私たちに似た能力をもっていることを発見してきた。イルカの研究は、動物のかしこさについての多くの人の考え方を変えてきた。',
+      'おどろくべき発見の一つは、イルカのコミュニケーションのしかたにかかわるものである。多くのイルカは、それぞれの個体に特有だと思われる特別な口笛のような音を出す。ちょうど名前のようなものである。研究者は、イルカがほかのイルカの口笛を聞き分けることができ、まるで特定の友だちをよぶかのように、それをまねることさえあるかもしれないと発見した。このことは、イルカが群れの中の多くの個体を見分けられることを示しており、それは複雑な社会でくらす動物にとって大切な能力である。',
+      'イルカは自分自身を認識することもできるようである。実験で、研究者はイルカの体にしるしをつけ、それから鏡を使えるようにした。鏡のところへ泳いでいき、しるしのついた部分を見ようと体の向きを変えたイルカもおり、まるで鏡の中のすがたが自分だとわかっているかのようだった。似たふるまいを示した動物は、大型類人猿やゾウなど、ほんのわずかな種類しかいない。多くの研究者にとって、これは高い自己認識のしるしである。',
+      '場所によっては、イルカは道具さえ使う。オーストラリア西部の沖では、岩の多い海底で食べ物をさがすあいだ、海綿のかけらを鼻先にのせて運ぶイルカの群れが観察されている。海綿は、するどい岩や毒をもつ生き物から鼻を守る。おもしろいことに、このふるまいはおもに母親から子どもへと伝えられているようで、そのことは、イルカがたがいから技術を学べることを示している。',
+      'イルカのかしこさについて学ぶことは、人間に大切な問いを投げかける。もしイルカがコミュニケーションをとり、自分を認識し、知識を伝えられるなら、私たちはイルカをどうあつかうべきなのだろうか。多くの科学者は、汚染や漁網、船の騒音がこの動物にとって深刻な脅威になっていると主張している。イルカがどれほどかしこいかを理解することは、イルカがたよっている海を守るよう人々をうながすかもしれない。イルカを守ることで、私たちは海そのものの健康も守ることになるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（多くの個体を見分けられること）を受け、is の主語になるので which。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（ふるまいが母から子へ伝わること）を受け、suggests の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the oceans を受け、うしろの depend on の目的語が欠けているので目的格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '多くのイルカは、それぞれに特有の口笛のような音を出す。', answer: true, why: '第2段落 a special whistle that seems to be unique to each individual。' },
+      { statement: '鏡の実験で、すべてのイルカがしるしにまったく反応しなかった。', answer: false, why: '第3段落 Some dolphins swam to the mirror and turned their bodies to look at the marked area。' },
+      { statement: 'オーストラリア西部のイルカは、海綿を鼻先にのせて食べ物をさがす。', answer: true, why: '第4段落 carrying pieces of sea sponge on their noses while searching for food。' },
+      { statement: '筆者によれば、イルカは人間の活動の影響を受けていない。', answer: false, why: '第5段落 pollution, fishing nets, and noise from ships pose serious threats。' },
+    ],
+    qa: [
+      { q: 'Why do some dolphins carry sponges on their noses?', choices: ['To protect their noses from sharp rocks and stinging creatures.', 'To play with other dolphins.', 'To keep their noses warm.', 'To attract humans.'], answer: 0, why: '第4段落 The sponge protects their noses from sharp rocks and stinging creatures。' },
+      { q: 'Which animals are mentioned as having shown similar mirror behaviour?', choices: ['Great apes and elephants.', 'Cats and dogs.', 'Sharks and whales.', 'Birds and fish.'], answer: 0, why: '第3段落 Only a few kinds of animals, such as great apes and elephants, have shown similar behaviour。' },
+    ],
+    gist: [
+      { para: 1, choices: ['名前のような口笛でのコミュニケーション', '口笛のふき方', '音楽の歴史', '船の汽笛'], answer: 0, why: '第2段落は、個体ごとの口笛で仲間を見分け、まねることを述べている。' },
+      { para: 3, choices: ['道具を使い、技術を伝えるイルカ', '海綿の育て方', 'オーストラリアの観光', '岩の種類'], answer: 0, why: '第4段落は、海綿を道具として使い、それが母から子へ伝わることを述べている。' },
+    ],
+    titleQ: { choices: ['The Clever Dolphin', 'How to Swim Faster', 'The History of Ships', 'Why the Sea Is Blue'], answer: 0, why: '全体として、イルカのコミュニケーション・自己認識・道具の使用と、守る必要を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
