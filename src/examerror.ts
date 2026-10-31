@@ -2124,6 +2124,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Two [third] of the students agreed with the plan.', choices: ['thirds', 'third of', 'thirdly', 'threes'], answer: 0, why: '分子が2以上の分数は分母を複数形にする：two thirds。' },
     ],
   },
+  {
+    id: 'exam-fix-48',
+    title: '入試の誤文訂正㊽（国公立レベル：形容詞・副詞の総まとめ）',
+    points: ['good（形容詞）と well（副詞）、形容詞 ＋ enough、hard（一生けんめい）と hardly（ほとんど～ない）、little（量）と few（数）、a few（少しある）、surprising と surprised、late（おそく）と lately（最近）、taste ＋形容詞、比較級を強める much、never など、形容詞と副詞の使い分けのまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She speaks English very well.', ja: '彼女はとてもじょうずに英語を話す。' }],
+    questions: [
+      { sentence: 'She speaks English very [good].', choices: ['well', 'better of', 'goodly', 'fine of'], answer: 0, why: '動詞 speaks を修飾するのは副詞 well。good は形容詞。' },
+      { sentence: 'He is [enough old] to drive a car.', choices: ['old enough', 'enough of old', 'so old', 'too old enough'], answer: 0, why: 'enough は形容詞のうしろに置く：old enough to ～「～できるほど年をとっている」。' },
+      { sentence: 'I work [hardly] every day to pass the exam.', choices: ['hard', 'hardest of', 'more hardly', 'hardness'], answer: 0, why: '「一生けんめいに」は副詞 hard。hardly は「ほとんど～ない」。' },
+      { sentence: 'I have [few] money left this month.', choices: ['little', 'a few', 'many', 'several'], answer: 0, why: 'money は数えられない名詞なので「ほとんどない」は little。few は数えられる名詞に使う。' },
+      { sentence: 'There are [a little] students in the room.', choices: ['a few', 'little', 'much', 'a less'], answer: 0, why: 'students は数えられる名詞なので「少しいる」は a few。' },
+      { sentence: 'It was a [surprised] result for everyone.', choices: ['surprising', 'surprise of', 'surprisedly', 'surprises'], answer: 0, why: '結果が人を「おどろかせる」ので surprising。surprised は人が「おどろいた」。' },
+      { sentence: 'He [late came] to school this morning.', choices: ['came late', 'lately came', 'late was coming', 'came lately'], answer: 0, why: '「おそく来た」は came late。lately は「最近」という意味。' },
+      { sentence: 'This soup tastes [well].', choices: ['good', 'goodly', 'better of', 'nicely'], answer: 0, why: 'taste ＋形容詞「～な味がする」：tastes good。' },
+      { sentence: 'The movie was [very] better than I expected.', choices: ['much', 'very much of', 'so', 'too'], answer: 0, why: '比較級を強めるのは much（または far・even など）。very は比較級を強められない。' },
+      { sentence: 'I have [ever] seen a real panda.', choices: ['never', 'yet', 'ago', 'already of'], answer: 0, why: 'ever はふつう疑問文や否定文で使う。「一度も見たことがない」は have never seen。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
