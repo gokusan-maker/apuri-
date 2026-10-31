@@ -3420,3 +3420,4 @@
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「雑草とは何か」（科学・植物・関係副詞 where／why／less ～ than の空所）
 - 2026-10-31: デザイン：今日同じボスに2回目以上勝つと、勝利画面に「📅 今日○回目の勝利」を出すようにした
 - 2026-10-31: 文法：入試の正誤問題〈52〉（私学難関レベル：比較の慣用表現：not so much A as B・by far the best・The 比較級・know better than to・no more ～ than・superior to・prefer A to B・Nothing is more ～ than・as soon as possible・No other ～ as tall as）10問
+- 2026-10-31: 長文：共通テストの評論を本番の長さで「世代をこえてつながる」（社会・福祉・while／非制限の which／that の空所）

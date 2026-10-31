@@ -20554,6 +20554,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['What Is a Weed?', 'How to Grow Dandelions', 'The History of Farming', 'Why Bees Like Spring'], answer: 0, why: '全体として、雑草とは何か、生きのびる力、役に立つ面、つき合い方を述べている。' },
   },
   {
+    id: 'kyotsu-generations',
+    title: 'Bringing Generations Together',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many societies today, people of different generations spend surprisingly little time together. Children spend most of their day at school with others their own age, working adults are busy with their jobs, and many elderly people live alone or in care homes. As families become smaller and more people move away from their hometowns, opportunities for young and old to meet naturally have become less common.",
+      "To address this situation, a growing number of communities are creating programs that bring different generations together on purpose. In some towns, nursery schools and care homes for the elderly share the same building, so that children and older residents can sing, draw, and eat lunch together. In others, high school students visit elderly neighbors to teach them how to use smartphones, ( A ) the older people share stories about the history of the area.",
+      "Such programs appear to benefit both groups. For elderly people, regular contact with children can bring energy and joy, and it may reduce feelings of loneliness. Some care workers report that residents who rarely spoke began to smile and talk more after they started spending time with young visitors. Feeling needed by others can also give older people a renewed sense of purpose.",
+      "Young people gain a great deal as well. By listening to older people, children can learn about the past in a way that no textbook can offer. They may also develop patience and respect, and they often become less nervous about talking to people who are different from themselves. In addition, older people can pass on practical skills, such as cooking, gardening, or traditional crafts, ( B ) might otherwise be forgotten.",
+      "Of course, these programs require careful planning. Organizers must think about safety, health, and the different needs of each group, and the activities must be enjoyable for everyone rather than for only one side. Nevertheless, many experts believe that the effort is worthwhile. As societies age, finding ways for generations to support and learn from one another may become one of the most important challenges we face. Programs like these suggest ( C ) the answer may be simpler than we think: just bringing people together.",
+    ],
+    ja: [
+      '今日、多くの社会では、ちがう世代の人々がいっしょにすごす時間はおどろくほど少ない。子どもは1日の大部分を学校で同じ年の仲間とすごし、働くおとなは仕事でいそがしく、多くのお年よりはひとりで、あるいは介護施設でくらしている。家族が小さくなり、ふるさとをはなれる人がふえるにつれて、若い人とお年よりが自然に出会う機会は少なくなってきた。',
+      'この状況に取り組むために、ちがう世代をあえていっしょにするプログラムをつくる地域がふえている。ある町では、保育園とお年よりの介護施設が同じ建物を使い、子どもと高齢の住民がいっしょに歌い、絵をかき、昼ごはんを食べられるようにしている。別の町では、高校生が近所のお年よりをたずねてスマートフォンの使い方を教え、一方でお年よりはその地域の歴史についての話をしている。',
+      'こうしたプログラムは、両方の世代によい影響があるようである。お年よりにとって、子どもとの定期的なふれあいは元気とよろこびをもたらし、さびしさをへらすかもしれない。めったに話さなかった住民が、若い訪問者とすごすようになってから、よくほほえみ、よく話すようになったと報告する介護職員もいる。人から必要とされていると感じることは、お年よりに新たな生きがいをあたえることもある。',
+      '若い人も多くのものを得る。お年よりの話を聞くことで、子どもはどんな教科書にもできない方法で昔について学ぶことができる。しんぼう強さや敬意も身につけるかもしれず、自分とちがう人と話すことにあまり緊張しなくなることも多い。さらに、お年よりは料理や庭仕事、伝統工芸など、そうしなければわすれられてしまうかもしれない実用的な技を伝えることができる。',
+      'もちろん、こうしたプログラムには注意深い計画が必要である。運営する人は、安全や健康、それぞれの世代のちがう必要について考えなければならず、活動は片方だけでなくみんなにとって楽しいものでなければならない。それでも、多くの専門家はその努力にはそれだけの価値があると考えている。社会が高齢化するにつれ、世代どうしがささえ合い、学び合う方法を見つけることは、私たちが直面する最も大切な課題の1つになるかもしれない。こうしたプログラムは、その答えが思っているよりかんたんかもしれないこと、つまり人々をただ集めることだということを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'so that'], answer: 0, why: '高校生が教える一方で、お年よりは話をする、という2つの動きを対比してならべるので while「一方で」。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 practical skills（もの）を受け、might be forgotten の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'suggest that ～「～ということを示す」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: 'ちがう世代が自然に出会う機会は少なくなってきた。', answer: true, why: '第1段落 opportunities for young and old to meet naturally have become less common。' },
+      { statement: '保育園と介護施設が同じ建物を使っている町がある。', answer: true, why: '第2段落 nursery schools and care homes for the elderly share the same building。' },
+      { statement: 'こうしたプログラムは、お年よりだけによい影響がある。', answer: false, why: '第3段落 Such programs appear to benefit both groups。' },
+      { statement: '専門家は、こうしたプログラムには計画がまったくいらないと言っている。', answer: false, why: '第5段落 these programs require careful planning。' },
+    ],
+    qa: [
+      { q: 'What did some care workers report?', choices: ['Residents who rarely spoke began to smile and talk more.', 'Children did not want to visit.', 'Residents became more lonely.', 'The programs were too expensive.'], answer: 0, why: '第3段落 residents who rarely spoke began to smile and talk more。' },
+      { q: 'What can older people pass on to young people?', choices: ['Practical skills such as cooking and gardening.', 'Only money.', 'New smartphones.', 'Their homes.'], answer: 0, why: '第4段落 older people can pass on practical skills, such as cooking, gardening, or traditional crafts。' },
+    ],
+    gist: [
+      { para: 2, choices: ['プログラムがお年よりにもたらすよい影響', '介護施設の建て方', '子どもの遊び方', '病院の数'], answer: 0, why: '第3段落は、元気やよろこび、さびしさの軽減、生きがいというお年よりへの効果を述べている。' },
+      { para: 3, choices: ['プログラムが若い人にもたらすよい影響', '教科書の作り方', '伝統工芸の値段', '料理のレシピ'], answer: 0, why: '第4段落は、昔について学ぶ、敬意を身につける、技を受けつぐという若い人への効果を述べている。' },
+    ],
+    titleQ: { choices: ['Bringing Generations Together', 'How to Build a Care Home', 'The History of Smartphones', 'Why Families Are Getting Bigger'], answer: 0, why: '全体として、世代をこえた交流のプログラムと、その両方の世代への効果、課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
