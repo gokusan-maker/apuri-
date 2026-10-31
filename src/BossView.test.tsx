@@ -920,3 +920,16 @@ it('デザイン148：はじめてノーミスでたおしたボスなら「✨�
   expect(screen.getByLabelText('ノーミス')).toBeInTheDocument()
   expect(screen.queryByLabelText('ノーミスでたおしたボスの数')).toBeNull()
 })
+
+it('デザイン150：負けたとき、あと何問正解すれば勝てたかのめやすが出る', async () => {
+  const { answersToWin, damage } = await import('./boss')
+  expect(answersToWin(0)).toBe(0)
+  expect(answersToWin(damage(1))).toBe(1)
+  expect(answersToWin(damage(1) + 1)).toBe(2)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 12 && !screen.queryByText('まけてしまった…'); i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('勝つまでにあと必要だった正解の数').textContent).toBe(`🎯 あと${answersToWin(30)}問正解で勝てた（めやす）`)
+})

@@ -605,4 +605,6 @@ export const arenaSeasonOf = (month: number): ArenaSeason => (month === 11 || mo
 
 // デザイン125：負けたときボスのHPが2割以下なら「おしい！」
 export const CLOSE_LOSS_RATE = 0.2
+// デザイン150：のこりHPを、コンボなしの正解（いちばん弱いダメージ）で何問たおせるか（負け画面のめやす）
+export const answersToWin = (hp: number): number => (hp > 0 ? Math.ceil(hp / damage(1)) : 0)
 export const isCloseLoss = (hp: number, maxHp: number): boolean => hp > 0 && maxHp > 0 && hp <= maxHp * CLOSE_LOSS_RATE
