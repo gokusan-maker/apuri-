@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'lark', name: 'ヒバリン', egg: 'そらたかくのうたうタマゴ', token: 'ヒバ', bigToken: 'ヒバリン', color: '#d4a373', line: '#5c3d1e', rate: 0.02, desc: '春の畑から空高くまいあがり、歌いながら飛ぶヒバリ。高く高くのぼっていく元気な子。' },
   { id: 'wren', name: 'ミソサザン', egg: 'しげみのちいさなタマゴ', token: 'ミソ', bigToken: 'ミソサザン', color: '#a16207', line: '#422006', rate: 0.02, desc: '小さな体なのに大きな声で歌うミソサザイ。しっぽをぴんと立てて、しげみの中をすばしっこく動きまわる。' },
   { id: 'pheasant', name: 'キジリン', egg: 'やまみちのにじいろタマゴ', token: 'キジ', bigToken: 'キジリン', color: '#34d399', line: '#064e3b', rate: 0.02, desc: '山の道を力強く歩くキジ。顔は赤く、羽はみどりにかがやき、いざというときはぱっと飛び立つ。' },
   { id: 'newt', name: 'イモリン', egg: 'いずみのしっとりタマゴ', token: 'イモ', bigToken: 'イモリン', color: '#f87171', line: '#7f1d1d', rate: 0.02, desc: 'きれいな水の中にすむイモリ。おなかは赤くて、けがをしてもゆっくり体を治していく、ねばり強い子。' },
