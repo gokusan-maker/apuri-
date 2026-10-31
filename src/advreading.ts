@@ -19384,6 +19384,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Gift of Blood', 'How to Become a Nurse', 'The History of Hospitals', 'Why Exercise Is Important'], answer: 0, why: '全体として、献血の必要性・手順・保存の課題・高齢化・その意味を述べている。' },
   },
   {
+    id: 'kyotsu-satoyama',
+    title: 'Where People and Nature Meet',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Between the deep mountains and the towns of Japan lies a special kind of landscape known as satoyama. It is a mixture of small woods, rice fields, ponds, streams, and farms, all close to the villages where people live. Unlike wild forests, satoyama were shaped by human activity over many centuries. People and nature lived side by side there, each influencing the other. This long relationship has given satoyama a value that is now being rediscovered.",
+      "In the past, villagers used the woods of satoyama in many ways. They cut trees for firewood and charcoal, gathered fallen leaves to make fertiliser for their fields, and collected mushrooms and wild plants to eat. Because people regularly cut some of the trees and cleared the forest floor, sunlight could reach the ground, ( A ) allowed many different kinds of plants to grow. This careful use kept the woods healthy and productive. In this way, people took what they needed without using up the forest.",
+      "As a result, satoyama became home to a remarkable variety of living things. Fireflies glowed above the streams, frogs and dragonflies lived in the rice fields, and many kinds of birds and insects found food and shelter in the mixed woods. Scientists now recognise that this landscape, created through cooperation between people and nature, supports more kinds of life than many people once imagined.",
+      "In the second half of the twentieth century, however, life in rural Japan changed rapidly. People began to use gas and oil instead of firewood and charcoal, and chemical fertilisers replaced fallen leaves. Many young people moved to cities. Without regular care, many satoyama woods became dark and overgrown, and the plants and animals that depended on open, managed land began to disappear. Some areas were also cleared for housing and roads.",
+      "Today, there are efforts to protect and restore satoyama. In many places, volunteers cut back bushes, repair ponds, and teach children about the plants and animals of the area. The idea has even attracted international attention as an example of how people can use nature without destroying it. Satoyama remind us ( B ) protecting the environment does not always mean keeping people away from nature, but sometimes means finding ways ( C ) people and nature can continue to live together.",
+    ],
+    ja: [
+      '日本の深い山と町のあいだには、里山として知られる特別な種類の風景がある。それは小さな林、田んぼ、池、小川、畑がまざり合ったもので、どれも人々がくらす村の近くにある。野生の森とちがい、里山は何世紀にもわたる人間の活動によって形づくられてきた。そこでは人と自然がならんでくらし、たがいに影響し合っていた。この長い関係が里山に価値をあたえ、それが今ふたたび見直されている。',
+      '昔、村の人々は里山の林をさまざまな形で使っていた。たきぎや炭のために木を切り、畑の肥料を作るために落ち葉を集め、食べるためにキノコや野草をとった。人々が定期的に木の一部を切り、林の地面をきれいにしたので、日光が地面までとどき、そのことが多くの種類の植物が育つのを可能にした。この注意深い使い方が、林を健康で豊かに保っていた。このようにして、人々は森を使いつくすことなく、必要なものを得ていたのである。',
+      'その結果、里山はおどろくほどさまざまな生き物のすみかになった。小川の上ではホタルが光り、田んぼにはカエルやトンボがすみ、多くの種類の鳥や虫がまざり合った林で食べ物やかくれ場所を見つけた。科学者は今、人と自然の協力によってつくられたこの風景が、かつて多くの人が思っていたより多くの種類の生き物をささえていることをみとめている。',
+      'しかし20世紀の後半、日本のいなかの生活は急速に変わった。人々はたきぎや炭のかわりにガスや石油を使いはじめ、化学肥料が落ち葉にとってかわった。多くの若者が都市へ移った。定期的な手入れがなくなると、多くの里山の林は暗くしげりすぎてしまい、ひらけて管理された土地にたよっていた植物や動物は消えはじめた。住宅や道路のために切りひらかれた地域もある。',
+      '今日、里山を守り、取りもどそうとする取り組みがある。多くの場所で、ボランティアがやぶをかりこみ、池を直し、子どもたちにその地域の植物や動物について教えている。この考えは、人がこわさずに自然を利用する方法の例として、国際的な注目さえ集めている。里山は、環境を守ることがいつも人を自然から遠ざけることを意味するのではなく、ときには人と自然がともにくらしつづけられる方法を見つけることを意味するのだと思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（日光が地面までとどくこと）を受け、allowed の主語になるので which。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+      { id: 'C', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: '先行詞 ways で、うしろが完全な文（people and nature can continue to live together）なので前置詞＋関係代名詞 in which。' },
+    ],
+    tf: [
+      { statement: '里山は、人間の活動によって形づくられてきた。', answer: true, why: '第1段落 satoyama were shaped by human activity over many centuries。' },
+      { statement: '昔の村人は、里山の木をまったく切らなかった。', answer: false, why: '第2段落 They cut trees for firewood and charcoal。' },
+      { statement: '手入れがなくなると、多くの里山の林は暗くしげりすぎた。', answer: true, why: '第4段落 many satoyama woods became dark and overgrown。' },
+      { statement: '筆者によれば、環境を守るには必ず人を自然から遠ざけなければならない。', answer: false, why: '第5段落 does not always mean keeping people away from nature。' },
+    ],
+    qa: [
+      { q: 'Why could many kinds of plants grow in satoyama woods?', choices: ['Sunlight could reach the ground because people cut some trees.', 'The woods were always dark.', 'Chemical fertilisers were used.', 'No one ever entered the woods.'], answer: 0, why: '第2段落 Because people regularly cut some of the trees … sunlight could reach the ground。' },
+      { q: 'Which is NOT mentioned as a change that harmed satoyama?', choices: ['More tourists visiting the area.', 'Using gas and oil instead of firewood.', 'Young people moving to cities.', 'Land cleared for housing and roads.'], answer: 0, why: '第4段落に観光客がふえた話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['里山がささえる多くの生き物', '鳥の飼い方', '田んぼの作り方', '虫の名前の覚え方'], answer: 0, why: '第3段落は、ホタルやカエル、トンボなど、里山にすむさまざまな生き物を述べている。' },
+      { para: 3, choices: ['生活の変化による里山のおとろえ', 'ガスの値段', '都市の発展の歴史', '肥料の作り方'], answer: 0, why: '第4段落は、燃料や肥料の変化、人口の移動で手入れがなくなり、里山がおとろえたことを述べている。' },
+    ],
+    titleQ: { choices: ['Where People and Nature Meet', 'How to Make Charcoal', 'The History of Cities', 'Why Mountains Are High'], answer: 0, why: '全体として、里山のなりたち、豊かな生き物、おとろえ、取りもどす取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
