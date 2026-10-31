@@ -18292,6 +18292,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Second Life for Empty Houses', 'How to Build a New House', 'The History of Typhoons', 'Why Cities Are Growing'], answer: 0, why: '全体として、空き家がふえる理由、問題、再利用の取り組みと課題を述べている。' },
   },
   {
+    id: 'kyotsu-snowflakes',
+    title: 'Letters from the Sky',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "If you catch a snowflake on a dark glove and look at it closely, you may see a tiny, beautiful shape with six arms. People have admired these delicate crystals for centuries, but it was only with the development of science that we began to understand why snowflakes look the way they do and why they come in so many different forms. The answer begins with what happens inside a cloud.",
+      "A snowflake begins high in a cloud, when water vapour freezes onto a tiny particle of dust. As the young ice crystal falls through the cloud, more water vapour freezes onto its surface, and it grows larger. The reason most snowflakes have six sides lies in the structure of water itself. When water molecules join together to form ice, they naturally arrange themselves in a six-sided pattern, ( A ) is then reflected in the shape of the whole crystal.",
+      "The exact shape of a snowflake, however, depends on the conditions it meets as it falls. Temperature and the amount of moisture in the air both play important roles. At some temperatures, crystals tend to grow into flat plates, while at others they become long needles or columns. When the air is very moist, the arms of the crystal can branch out into the complex, feathery patterns that many people imagine when they think of snowflakes.",
+      "One of the first scientists to study these conditions carefully was Ukichiro Nakaya, a Japanese physicist. In the 1930s, he succeeded in creating artificial snow crystals in a laboratory by controlling temperature and humidity. By comparing the shapes of the crystals with the conditions ( B ) produced them, he showed that a snowflake carries information about the air through which it has fallen. He famously described snow crystals as letters sent from the sky.",
+      "Because every snowflake follows a slightly different path through the cloud, it experiences slightly different conditions along the way. This is why it is often said that no two snowflakes are exactly alike. Today, scientists continue to study snow crystals to understand clouds and weather better. The next time snow falls, it may be worth remembering ( C ) each tiny flake is a record of its own long journey through the sky.",
+    ],
+    ja: [
+      '雪のひとひらを黒い手ぶくろで受けとめてよく見ると、6本のうでをもつ、小さく美しい形が見えるかもしれない。人々は何世紀にもわたってこのせんさいな結晶に見とれてきたが、なぜ雪の結晶がそのような形をしているのか、なぜこれほど多くのちがう形があるのかを理解しはじめたのは、科学が発達してからのことだった。その答えは、雲の中で起こることから始まる。',
+      '雪の結晶は、雲の高いところで、水蒸気が小さなちりのつぶにこおりつくことから始まる。できたばかりの氷の結晶が雲の中を落ちていくと、さらに水蒸気がその表面にこおりつき、結晶は大きくなる。ほとんどの雪の結晶が六角形である理由は、水そのもののつくりにある。水の分子が結びついて氷になるとき、分子は自然に六角形の形にならび、そのことが結晶全体の形に表れるのである。',
+      'しかし、雪の結晶の正確な形は、落ちていくときに出会う条件によって決まる。気温と空気中の水分の量がどちらも大切な役割をはたす。ある気温では結晶は平らな板の形に育ちやすく、別の気温では長い針や柱の形になる。空気がとてもしめっていると、結晶のうでが枝分かれして、多くの人が雪の結晶と聞いて思いうかべる、複雑な羽のような模様になる。',
+      'こうした条件を最初に注意深く研究した科学者の一人が、日本の物理学者、中谷宇吉郎である。1930年代に、彼は気温と湿度を調節して、実験室で人工の雪の結晶を作ることに成功した。結晶の形と、それを生み出した条件を比べることで、彼は雪の結晶が、落ちてきた空気についての情報を運んでいることを示した。彼は雪の結晶を、天から送られた手紙だと表現したことで有名である。',
+      'それぞれの雪の結晶は雲の中を少しずつちがう道すじで落ちてくるので、とちゅうで少しずつちがう条件を経験する。だから、まったく同じ雪の結晶は2つとない、とよく言われるのである。今日、科学者は雲や天気をよりよく理解するために雪の結晶を研究しつづけている。次に雪がふるとき、小さなひとひらの一つ一つが、空の長い旅の記録であることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 a six-sided pattern を受け、is reflected の主語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the conditions を受け、うしろの produced の主語になるので主格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remember のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '雪の結晶は、水蒸気が小さなちりのつぶにこおりつくことから始まる。', answer: true, why: '第2段落 water vapour freezes onto a tiny particle of dust。' },
+      { statement: '雪の結晶の形は、気温や水分の量に関係なくいつも同じである。', answer: false, why: '第3段落 The exact shape of a snowflake … depends on the conditions it meets as it falls。' },
+      { statement: '中谷宇吉郎は、実験室で人工の雪の結晶を作った。', answer: true, why: '第4段落 he succeeded in creating artificial snow crystals in a laboratory。' },
+      { statement: '筆者によれば、すべての雪の結晶はまったく同じ道すじで落ちてくる。', answer: false, why: '第5段落 every snowflake follows a slightly different path through the cloud。' },
+    ],
+    qa: [
+      { q: 'Why do most snowflakes have six sides?', choices: ['Water molecules naturally arrange themselves in a six-sided pattern.', 'Clouds are shaped like hexagons.', 'Dust particles always have six sides.', 'Wind cuts them into six pieces.'], answer: 0, why: '第2段落 they naturally arrange themselves in a six-sided pattern。' },
+      { q: 'What did Nakaya show by comparing crystal shapes with conditions?', choices: ['A snowflake carries information about the air it has fallen through.', 'Snow always falls in the same shape.', 'Snowflakes are made in laboratories only.', 'Temperature has no effect on snow.'], answer: 0, why: '第4段落 he showed that a snowflake carries information about the air through which it has fallen。' },
+    ],
+    gist: [
+      { para: 2, choices: ['気温と水分で変わる結晶の形', '雲のでき方の歴史', '針の作り方', '羽毛の集め方'], answer: 0, why: '第3段落は、気温や水分の量によって板・針・柱・羽のような形に変わることを述べている。' },
+      { para: 3, choices: ['中谷宇吉郎の人工雪の研究', '日本の冬の祭り', '実験室の作り方', '手紙の書き方'], answer: 0, why: '第4段落は、中谷宇吉郎が人工の雪の結晶を作り、結晶と条件の関係を示したことを述べている。' },
+    ],
+    titleQ: { choices: ['Letters from the Sky', 'How to Build a Snowman', 'The History of Gloves', 'Why Winter Is Cold'], answer: 0, why: '全体として、雪の結晶のでき方、形を決める条件、中谷宇吉郎の研究を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
