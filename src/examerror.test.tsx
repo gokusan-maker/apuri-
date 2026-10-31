@@ -337,3 +337,10 @@ it('正誤問題㉗：医学部・難関大レベルの単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[2].choices[u.questions[2].answer]).toBe('(B) takes')
 })
+
+it('誤文訂正㉑：数えられる名詞・数えられない名詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-21')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[2].choices[u.questions[2].answer]).toBe('progress')
+})

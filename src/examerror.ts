@@ -990,6 +990,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She is one of those people [who never gives] up.', choices: ['who never give', 'who never giving', 'that never gives', 'whom never give'], answer: 0, why: 'who の先行詞は those people（複数）なので give。one of those ＋複数名詞＋ who ＋複数の動詞。' },
     ],
   },
+  {
+    id: 'exam-fix-21',
+    title: '入試の誤文訂正㉑（TOEFL・IELTS の書き言葉⑨：数えられる名詞・数えられない名詞）',
+    points: ['小論文でよく使う数えられない名詞（traffic・equipment・progress・evidence・news・money・scenery・weather・machinery）は a をつけず複数形にもしない。much / many、a little / a few の使い分けも。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Scientists have made great progress in this field.', ja: '科学者はこの分野で大きな進歩をとげた。（progress は数えられない）' }],
+    questions: [
+      { sentence: 'There is too [many traffic] in the city center.', choices: ['much traffic', 'many traffics', 'a traffic', 'a lot traffic'], answer: 0, why: 'traffic は数えられない名詞なので much traffic。' },
+      { sentence: 'The hospital needs more medical [equipments].', choices: ['equipment', 'an equipment', 'equipment\'s', 'pieces equipment'], answer: 0, why: 'equipment は数えられない名詞で複数形にしない：medical equipment。' },
+      { sentence: 'Scientists have made great [progresses] in recent years.', choices: ['progress', 'a progress', 'progressing', 'many progress'], answer: 0, why: 'progress「進歩」は数えられない名詞：great progress。' },
+      { sentence: 'The theory is supported by a lot of [evidences].', choices: ['evidence', 'evidence\'s', 'an evidence', 'many evidence'], answer: 0, why: 'evidence「証拠」は数えられない名詞：a lot of evidence。' },
+      { sentence: 'He gave me [a good news] this morning.', choices: ['good news', 'a good new', 'good newses', 'many good news'], answer: 0, why: 'news は s で終わるが数えられない名詞で単数あつかい。a はつけない：good news。' },
+      { sentence: 'How [many] money do you need for the trip?', choices: ['much', 'many of', 'a few', 'lots'], answer: 0, why: 'money は数えられない名詞なので How much。' },
+      { sentence: 'This area is famous for its [beautiful sceneries].', choices: ['beautiful scenery', 'a beautiful scenery', 'beautifully scenery', 'beauty sceneries'], answer: 0, why: 'scenery「景色」は数えられない名詞：beautiful scenery（数えられる view なら beautiful views）。' },
+      { sentence: 'We had [a terrible weather] during our holiday.', choices: ['terrible weather', 'a terrible weathers', 'terribly weather', 'the terrible weathers'], answer: 0, why: 'weather は数えられない名詞なので a をつけない：terrible weather。' },
+      { sentence: 'She has [much] friends at her new school.', choices: ['many', 'much of', 'a little', 'little'], answer: 0, why: 'friends は数えられる名詞の複数形なので many。' },
+      { sentence: 'The factory bought some new [machineries].', choices: ['machinery', 'machines of', 'a machinery', 'machineries of'], answer: 0, why: 'machinery「機械類」は数えられない名詞：some new machinery（数えるなら machines）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -3270,3 +3270,4 @@
 - 2026-10-31: 文法：入試の正誤問題㉗（医学部・難関大レベル：avoid -ing・Scarcely ～ when・high time ＋過去形・Had の倒置・object to being・付加疑問・Without の仮定法）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「どう食べるかが大切（ゆっくり食べる・腹八分目）」（健康・食事・非制限の which／関係副詞 where の空所）
 - 2026-10-31: キャラクター追加：サンショウオン（オオサンショウウオ・きよいかわのしずかなタマゴ・ねばりのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正㉑（TOEFL・IELTS の書き言葉⑨：traffic・equipment・progress・evidence・news・scenery・weather・machinery など数えられない名詞）10問
