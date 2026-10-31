@@ -20125,6 +20125,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Meadows Under the Sea', 'How to Catch Shrimp', 'The Life of Coral Reefs', 'Why Seaweed Is Delicious'], answer: 0, why: '全体として、目立たない海草の草原の役割（海岸を守る・生き物をささえる・炭素をたくわえる）と保護を述べている。' },
   },
   {
+    id: 'kyotsu-spices',
+    title: 'The Long Journey of Spices',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Pepper, cinnamon, ginger, and many other spices are now so easy to buy that we can find them on the shelves of almost any supermarket. A small jar costs very little, and most families use spices every day without a second thought. For much of human history, however, spices were among the most valuable goods in the world, and the desire to obtain them helped to shape trade, travel, and even the history of entire nations.",
+      "Many spices come from plants that grow only in warm regions, especially in parts of South and Southeast Asia. For centuries, these spices were carried over long distances by land and by sea before they reached markets in Europe and other areas. Because each merchant along the way added to the price, spices became extremely expensive by the time they arrived. In some places, pepper was so valuable that it was even used like money.",
+      "The high value of spices encouraged people to search for new routes to the lands ( A ) they were grown. Explorers set out on dangerous voyages across unknown oceans, hoping to reach these lands directly and bring back spices without paying so many merchants. These journeys led to contact between distant parts of the world, which brought great wealth to some countries but also caused conflict and suffering for many people.",
+      "Why have humans loved spices so much? One obvious reason is flavor. Spices can make simple food more interesting and pleasant to eat. Some researchers have also suggested that spices may have helped to keep food safe in hot climates, since certain spices seem to slow the growth of some bacteria. Interestingly, recipes from hotter countries do tend to use more spices, although scientists still debate ( B ) this is the main reason.",
+      "Today, spices continue to connect people across cultures. Dishes that combine spices from different parts of the world are enjoyed far from where the ingredients first grew. At the same time, the history of spices reminds us that the ordinary things in our kitchens often have long and complicated stories. The next time you add a little pepper to your food, you might remember ( C ) much effort and how many journeys it once took to bring it to the table.",
+    ],
+    ja: [
+      'コショウ、シナモン、ショウガなど多くの香辛料は、今ではとてもかんたんに買えるので、ほとんどどのスーパーマーケットのたなでも見つけられる。小さなびんはとても安く、ほとんどの家庭が深く考えずに毎日香辛料を使っている。しかし、人類の歴史の大部分で、香辛料は世界で最も価値のある品物の1つであり、それを手に入れたいという願いが、貿易や旅、さらには国全体の歴史をつくるのに役立った。',
+      '多くの香辛料は、あたたかい地域、とくに南アジアや東南アジアの一部でしか育たない植物から得られる。何世紀ものあいだ、これらの香辛料は、ヨーロッパやほかの地域の市場にとどくまでに、陸や海を通って長い距離を運ばれた。とちゅうの商人がそれぞれ値段を上乗せしたので、香辛料はとどくころにはひじょうに高くなっていた。地域によっては、コショウはとても価値があったので、お金のように使われることさえあった。',
+      '香辛料の価値が高かったので、人々は香辛料が育つ土地への新しい道をさがすようになった。探検家たちは、そうした土地に直接たどりつき、多くの商人にお金をはらわずに香辛料を持ち帰ることを願って、未知の海をわたる危険な航海に出た。こうした旅は、世界の遠くはなれた地域どうしの接触につながり、それはいくつかの国に大きな富をもたらしたが、多くの人々に争いや苦しみも生んだ。',
+      'なぜ人間はこれほど香辛料を好んできたのだろうか。わかりやすい理由の1つは味である。香辛料はかんたんな料理をよりおもしろく、食べて楽しいものにできる。また、ある種の香辛料は一部の細菌の増え方をおそくするようなので、香辛料は暑い気候で食べ物を安全にたもつのに役立ったかもしれないと言う研究者もいる。興味深いことに、暑い国の料理はたしかに香辛料を多く使う傾向があるが、これが主な理由かどうかについては、科学者のあいだでまだ議論が続いている。',
+      '今日、香辛料は文化をこえて人々をつなぎつづけている。世界のさまざまな地域の香辛料を組み合わせた料理は、材料がはじめて育った場所から遠くはなれたところで楽しまれている。同時に、香辛料の歴史は、台所にあるありふれたものが、しばしば長くて複雑な物語をもっていることを思い出させてくれる。次に料理にコショウを少し加えるときには、かつてそれを食卓に運ぶのにどれほどの努力とどれほど多くの旅が必要だったかを思い出すかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the lands（場所）で、うしろの they were grown は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['whether', 'that', 'what', 'which'], answer: 0, why: 'debate whether ～「～かどうかを議論する」。まだ決まっていないことなので whether。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'so'], answer: 0, why: 'how much effort ～「どれほどの努力が～か」。あとの how many journeys と並んでいる。' },
+    ],
+    tf: [
+      { statement: '多くの香辛料は、あたたかい地域でしか育たない植物から得られる。', answer: true, why: '第2段落 Many spices come from plants that grow only in warm regions。' },
+      { statement: '香辛料は、運ばれるとちゅうでどんどん安くなった。', answer: false, why: '第2段落 Because each merchant along the way added to the price, spices became extremely expensive。' },
+      { statement: '香辛料を求める旅は、争いや苦しみも生んだ。', answer: true, why: '第3段落 but also caused conflict and suffering for many people。' },
+      { statement: '香辛料が食べ物を安全にたもつためにだけ使われたことは、科学者のあいだで決まっている。', answer: false, why: '第4段落 scientists still debate whether this is the main reason。' },
+    ],
+    qa: [
+      { q: 'How was pepper used in some places in the past?', choices: ['It was used like money.', 'It was used to build houses.', 'It was given away for free.', 'It was used as medicine only.'], answer: 0, why: '第2段落 pepper was so valuable that it was even used like money。' },
+      { q: 'Why did explorers set out on dangerous voyages?', choices: ['To reach spice-growing lands directly.', 'To find new kinds of fish.', 'To escape from merchants who chased them.', 'To study the weather.'], answer: 0, why: '第3段落 hoping to reach these lands directly and bring back spices without paying so many merchants。' },
+    ],
+    gist: [
+      { para: 1, choices: ['香辛料が遠くから運ばれて高価になったこと', 'コショウの育て方', 'スーパーマーケットの歴史', 'お金の作り方'], answer: 0, why: '第2段落は、香辛料が長い距離を運ばれ、商人ごとに値段が上がって高価になったことを述べている。' },
+      { para: 3, choices: ['人間が香辛料を好む理由', '暑い国の天気', '細菌の種類', '料理の道具'], answer: 0, why: '第4段落は、味という理由と、食べ物を安全にたもつという説を述べている。' },
+    ],
+    titleQ: { choices: ['The Long Journey of Spices', 'How to Cook Curry', 'The History of Supermarkets', 'Why Ships Are Dangerous'], answer: 0, why: '全体として、香辛料が長い旅をして運ばれ、歴史を動かし、今も文化をつないでいることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
