@@ -611,6 +611,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🆕 はじめての{typeOf(result.species.id).icon}{typeOf(result.species.id).name}！
             </p>
           )}
+          {!result.mystery && pickup && pickup.id === result.species.id && (
+            // デザイン157：今日のピックアップの子が出た
+            <p className="gacha-new-type gacha-pickup-hit" role="status">
+              🎯 ピックアップ当たり！
+            </p>
+          )}
           {!result.mystery && (partnerSpecies ?? 'mochi') === result.species.id && (
             // デザイン147：出た子が相棒と同じ種類
             <p className="gacha-new-type gacha-twin" role="status">

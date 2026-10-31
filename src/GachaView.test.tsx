@@ -671,3 +671,15 @@ it('デザイン153：出た子のタイプが相棒と同じなら「🤝 相�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText(/🤝 相棒と同じ/)).toBeNull()
 })
+
+it('デザイン157：今日のピックアップの子が出たら「🎯 ピックアップ当たり！」が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} pickup={speciesOf('cat')} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('🎯 ピックアップ当たり！')).toBeInTheDocument()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} pickup={speciesOf('fox')} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText('🎯 ピックアップ当たり！')).toBeNull()
+})
