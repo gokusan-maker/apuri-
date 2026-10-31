@@ -20944,6 +20944,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Life Above the Earth', 'How to Build a Rocket', 'The History of the Moon', 'Why Water Flows'], answer: 0, why: '全体として、国際宇宙ステーションでの生活、体への影響、資源、そこからの景色と意味を述べている。' },
   },
   {
+    id: 'kyotsu-homework',
+    title: 'How Much Homework Is Enough?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For generations, homework has been a normal part of school life. Students take worksheets, reading assignments, and practice problems home, and many families spend part of every evening helping with them. In recent years, however, people have begun to ask whether homework really helps students learn, and if so, how much homework is appropriate.",
+      "Supporters of homework point out several benefits. Practicing at home can help students remember what they learned in class and find out which parts they do not yet understand. Homework can also develop useful habits, such as managing time, working independently, and taking responsibility for one’s own learning. In addition, it gives parents a chance to see ( A ) their children are studying at school.",
+      "Critics, on the other hand, argue that too much homework can do more harm than good. When students spend many hours on assignments every night, they may have little time for sleep, exercise, hobbies, or family life. Some students begin to feel stressed and lose interest in learning altogether. Critics also note that homework can increase inequality, because students whose parents are busy or cannot help them may struggle more than those who receive support at home.",
+      "Research suggests that the answer may depend on the age of the students and the type of homework. For younger children, short and simple tasks, such as reading for fun, seem to be more useful than long written assignments. For older students, homework that is closely connected to classwork and can be completed in a reasonable amount of time appears to support learning. What matters most is not the amount of homework but its quality: assignments should have a clear purpose, ( B ) students understand why they are doing them.",
+      "As a result, some schools have started to rethink their approach. Instead of giving the same worksheet to everyone, teachers may offer choices, allowing students to select tasks that match their interests or level. Some schools have reduced homework on weekends so that families can spend more time together. These changes reflect a growing belief that learning does not happen only through assignments, and that rest and other activities are also important parts of a healthy education. The debate is likely to continue, but it is encouraging students, parents, and teachers to think carefully about ( C ) homework is really for.",
+    ],
+    ja: [
+      '何世代にもわたって、宿題は学校生活のふつうの一部だった。生徒はプリントや読みものの課題、練習問題を家に持ち帰り、多くの家庭は毎晩その一部の時間をそれを手伝うのに使っている。しかし近年、宿題が本当に生徒の学びに役立つのか、そしてもしそうなら、どれくらいの宿題が適切なのかを問う人が出てきた。',
+      '宿題を支持する人は、いくつかの利点をあげる。家で練習すると、授業で学んだことを覚え、まだわかっていない部分を見つけるのに役立つ。宿題はまた、時間を管理する、ひとりで取り組む、自分の学びに責任をもつといった役に立つ習慣をのばすことができる。さらに、子どもが学校で何を勉強しているのかを親が知る機会にもなる。',
+      '一方、批判する人は、宿題が多すぎると、よいことより害のほうが大きくなりうると主張する。生徒が毎晩何時間も課題に使うと、ねむりや運動、趣味、家族との生活にほとんど時間がなくなるかもしれない。ストレスを感じ、学ぶことへの関心をまったく失ってしまう生徒もいる。批判する人はまた、宿題が不平等を大きくすることがあると指摘する。親がいそがしかったり手伝えなかったりする生徒は、家で助けてもらえる生徒よりも苦労するかもしれないからである。',
+      '研究によると、その答えは生徒の年齢や宿題の種類によるのかもしれない。小さい子どもには、楽しみのための読書のような短くかんたんな課題のほうが、長い書く課題より役に立つようである。年上の生徒には、授業と深く結びつき、ほどよい時間で終えられる宿題が学びをささえるようである。最も大切なのは宿題の量ではなく質である。課題にははっきりした目的があり、生徒がなぜそれをしているのかを理解できるようにすべきである。',
+      'その結果、取り組み方を考えなおしはじめた学校もある。全員に同じプリントを出すのではなく、先生が選択肢をあたえ、生徒が自分の興味やレベルに合った課題を選べるようにすることもある。家族がいっしょにすごす時間をふやせるように、週末の宿題をへらした学校もある。こうした変化は、学びは課題を通してだけ起こるのではなく、休息やほかの活動も健康な教育の大切な一部だという考えが広まっていることを映し出している。議論は続きそうだが、それは生徒や親や先生に、宿題が本当は何のためにあるのかをよく考えるようにうながしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'that', 'which', 'whom'], answer: 0, why: 'studying の目的語が欠けた節で「何を勉強しているか」なので what。' },
+      { id: 'B', choices: ['so that', 'even though', 'as if', 'unless'], answer: 0, why: '「生徒がなぜそれをしているのかを理解できるように」と目的をあらわすので so that。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'how'], answer: 0, why: 'for の目的語が欠けた節で「何のためにあるのか」なので what（what homework is really for）。' },
+    ],
+    tf: [
+      { statement: '宿題を支持する人は、宿題が時間を管理する習慣をのばすと考えている。', answer: true, why: '第2段落 Homework can also develop useful habits, such as managing time。' },
+      { statement: '批判する人は、宿題はすべての生徒に同じように役立つと考えている。', answer: false, why: '第3段落 homework can increase inequality。' },
+      { statement: '研究によると、小さい子どもには長い書く課題が最も役に立つ。', answer: false, why: '第4段落 short and simple tasks ... seem to be more useful than long written assignments。' },
+      { statement: '週末の宿題をへらした学校もある。', answer: true, why: '第5段落 Some schools have reduced homework on weekends。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what matters most about homework?', choices: ['Its quality, not its amount.', 'How long it takes.', 'How difficult it is.', 'How many pages it has.'], answer: 0, why: '第4段落 What matters most is not the amount of homework but its quality。' },
+      { q: 'How have some teachers changed homework?', choices: ['By offering choices that match students’ interests or level.', 'By giving more worksheets to everyone.', 'By stopping all classes.', 'By asking parents to do it.'], answer: 0, why: '第5段落 teachers may offer choices, allowing students to select tasks that match their interests or level。' },
+    ],
+    gist: [
+      { para: 1, choices: ['宿題を支持する人があげる利点', '先生の仕事', '学校の歴史', '家庭の夕食'], answer: 0, why: '第2段落は、覚える・わからない部分を見つける・習慣・親が知る機会という利点を述べている。' },
+      { para: 2, choices: ['宿題が多すぎることへの批判', '運動のしかた', 'ねむりの長さ', '趣味の選び方'], answer: 0, why: '第3段落は、時間がなくなる、ストレス、不平等という批判を述べている。' },
+    ],
+    titleQ: { choices: ['How Much Homework Is Enough?', 'How to Write a Worksheet', 'The History of Schools', 'Why Children Like Weekends'], answer: 0, why: '全体として、宿題の利点と批判、研究の示すこと、学校の新しい取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
