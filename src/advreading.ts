@@ -21061,6 +21061,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['More Than a Shop', 'How to Open a Restaurant', 'The History of Money', 'Why People Work at Night'], answer: 0, why: '全体として、コンビニの多様なサービス、それをささえるしくみ、地域での役割、課題を述べている。' },
   },
   {
+    id: 'kyotsu-forest-bathing',
+    title: 'Bathing in the Forest',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the 1980s, a new idea for improving health began to spread in Japan. It was called shinrin-yoku, which can be translated as “forest bathing.” Despite its name, it has nothing to do with swimming or taking a bath. Instead, it means spending time in a forest slowly and quietly, paying attention to the sights, sounds, and smells of nature. Today, the idea has attracted interest from researchers and doctors in many countries.",
+      "Forest bathing is different from hiking or exercising. The goal is not to walk long distances or reach the top of a mountain, but to relax and become aware of one’s surroundings. People might listen to birds singing, touch the bark of trees, or simply sit and breathe deeply. Guides sometimes encourage participants to turn off their phones, ( A ) they can focus fully on the present moment rather than on work or worries.",
+      "Some studies suggest that spending time in forests may have real effects on the body. Researchers have reported that people who walk in forests tend to show lower levels of stress hormones and lower blood pressure than people who walk in cities. Many participants also say that they feel calmer and more refreshed afterward. Some scientists believe that natural chemicals released by trees, as well as the quiet environment, may partly explain these effects, although more research is needed to understand them fully.",
+      "The idea has become especially meaningful in modern societies, ( B ) more and more people live in cities and spend much of their day indoors looking at screens. Many people rarely have the chance to experience nature, and some feel tired or anxious without knowing why. Forest bathing offers a simple way to take a break from busy lives and reconnect with the natural world.",
+      "Of course, not everyone lives near a large forest. Experts point out that even short visits to a city park or a quiet garden may bring some of the same benefits. What matters most may be the attitude: slowing down, using all the senses, and allowing oneself to rest. In a world that often values speed and productivity, forest bathing reminds us ( C ) taking time to do nothing in nature can be a valuable way to care for both body and mind.",
+    ],
+    ja: [
+      '1980年代、健康をよくするための新しい考えが日本で広まりはじめた。それは「森林浴」とよばれ、英語では「森の入浴」と訳すことができる。その名前にもかかわらず、泳ぐことやおふろに入ることとは関係がない。そうではなく、自然の景色や音やにおいに注意を向けながら、森の中でゆっくり静かに時間をすごすことを意味する。今日、この考えは多くの国の研究者や医師の関心を集めている。',
+      '森林浴はハイキングや運動とはちがう。目的は長い距離を歩いたり山の頂上に着いたりすることではなく、リラックスしてまわりに気づくことである。鳥のさえずりを聞いたり、木の皮にさわったり、ただすわって深く呼吸したりするかもしれない。案内する人は、仕事や心配ごとではなく今この瞬間に十分集中できるように、参加者に電話の電源を切るようすすめることもある。',
+      'いくつかの研究は、森ですごす時間が体に本当の効果をもつかもしれないことを示している。研究者は、森を歩く人は都市を歩く人よりもストレスホルモンが少なく、血圧が低い傾向があると報告している。多くの参加者も、そのあと落ち着いて元気になったと感じると言う。木が出す自然の化学物質や静かな環境が、こうした効果の一部を説明するのかもしれないと考える科学者もいるが、それを十分に理解するにはさらに研究が必要である。',
+      'この考えは、ますます多くの人が都市に住み、1日の多くを室内で画面を見てすごす現代の社会で、とくに意味のあるものになっている。多くの人は自然を体験する機会がめったになく、理由もわからずにつかれや不安を感じる人もいる。森林浴は、いそがしい生活からひと休みし、自然の世界とふたたびつながるかんたんな方法をあたえてくれる。',
+      'もちろん、だれもが大きな森の近くに住んでいるわけではない。専門家は、都市の公園や静かな庭を短くおとずれるだけでも、同じ効果の一部が得られるかもしれないと指摘している。最も大切なのは心がまえかもしれない。ゆっくりし、すべての感覚を使い、自分を休ませることである。速さや生産性を重んじることの多い世界で、森林浴は、自然の中で何もしない時間をとることが、体と心の両方を大切にする価値ある方法になりうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so that', 'even if', 'as if', 'unless'], answer: 0, why: '「今この瞬間に十分集中できるように」と目的をあらわすので so that。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は modern societies で、うしろの more and more people live ～ は完全な文なので関係副詞 where（非制限用法）。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '森林浴は、森の中で泳ぐことを意味する。', answer: false, why: '第1段落 it has nothing to do with swimming or taking a bath。' },
+      { statement: '森林浴の目的は、山の頂上に着くことである。', answer: false, why: '第2段落 The goal is not to walk long distances or reach the top of a mountain。' },
+      { statement: '森を歩く人は、都市を歩く人より血圧が低い傾向があると報告されている。', answer: true, why: '第3段落 lower blood pressure than people who walk in cities。' },
+      { statement: '専門家は、都市の公園でも同じ効果の一部が得られるかもしれないと言っている。', answer: true, why: '第5段落 even short visits to a city park or a quiet garden may bring some of the same benefits。' },
+    ],
+    qa: [
+      { q: 'Why do guides sometimes encourage participants to turn off their phones?', choices: ['So that they can focus on the present moment.', 'To save battery power.', 'To take more photos.', 'To call their families.'], answer: 0, why: '第2段落 so that they can focus fully on the present moment rather than on work or worries。' },
+      { q: 'According to the author, what may matter most in forest bathing?', choices: ['The attitude of slowing down and resting.', 'The size of the forest.', 'The number of trees.', 'The speed of walking.'], answer: 0, why: '第5段落 What matters most may be the attitude: slowing down, using all the senses, and allowing oneself to rest。' },
+    ],
+    gist: [
+      { para: 1, choices: ['森林浴とハイキングのちがい', '山の登り方', '鳥の名前', '電話の使い方'], answer: 0, why: '第2段落は、森林浴は距離や頂上ではなく、リラックスしてまわりに気づくことが目的だと述べている。' },
+      { para: 2, choices: ['森ですごすことの体への効果', 'ホルモンの作り方', '都市の大きさ', '木の種類'], answer: 0, why: '第3段落は、ストレスホルモンや血圧が下がるなどの効果を述べている。' },
+    ],
+    titleQ: { choices: ['Bathing in the Forest', 'How to Swim in a Lake', 'The History of Japanese Baths', 'Why Cities Are Noisy'], answer: 0, why: '全体として、森林浴とは何か、その効果、現代での意味、身近な取り入れ方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
