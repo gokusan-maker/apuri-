@@ -18448,6 +18448,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Reading with Your Ears', 'How to Write a Novel', 'The History of Printing', 'Why Trains Are Slow'], answer: 0, why: '全体として、オーディオブックの人気・読むこととの比較・独自の利点・目的に合わせた選び方を述べている。' },
   },
   {
+    id: 'kyotsu-electric-cars',
+    title: 'The Return of the Electric Car',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many cities, more and more cars on the road make almost no noise as they pass. These are electric cars, which run on batteries instead of petrol. They are often described as the future of transport, but surprisingly, the idea is not new at all. In the early twentieth century, electric cars were quite common in some countries, before petrol cars became cheaper and able to travel much farther. Now, more than a hundred years later, the electric car is making a comeback.",
+      "Today, electric cars are attracting attention again, mainly because of concerns about the environment. A petrol car releases exhaust gases from its engine, which pollute the air in cities and add to the carbon dioxide that is warming the planet. An electric car, by contrast, produces no exhaust at all while it is being driven. This can make city air cleaner and streets quieter, ( A ) many people find more pleasant to live in.",
+      "Electric cars also have practical advantages. In many places, charging a car with electricity costs less than filling it with petrol, and electric motors need less regular maintenance than engines because they have fewer moving parts. Some drivers also enjoy the smooth and quick way electric cars speed up from a stop.",
+      "However, there are still challenges. Batteries are expensive, and although they have improved greatly, many electric cars still cannot travel as far on a single charge as petrol cars can on a full tank. Charging also takes much longer than filling a tank, and in some areas there are not yet enough charging stations. Moreover, producing batteries requires metals that must be mined, ( B ) can cause environmental and social problems in the places where they are found.",
+      "Experts also point out that an electric car is only as clean as the electricity it uses. If the electricity is produced mainly by burning coal, the overall reduction in pollution may be smaller than many people expect. For this reason, many believe that the spread of electric cars must go together with an increase in clean energy, such as solar and wind power. The story of the electric car shows ( C ) an old idea can return with new importance when the needs of society change.",
+    ],
+    ja: [
+      '多くの都市で、通りすぎるときにほとんど音を立てない車が道路にふえている。これはガソリンではなく電池で走る電気自動車である。電気自動車はしばしば交通の未来だと言われるが、おどろくことに、その考えはまったく新しくない。20世紀のはじめ、ガソリン車がより安くなり、ずっと遠くまで走れるようになる前には、いくつかの国で電気自動車はかなりよく見られたのである。それから100年以上たった今、電気自動車が復活しつつある。',
+      '今日、電気自動車がふたたび注目を集めているのは、おもに環境についての心配のためである。ガソリン車はエンジンから排気ガスを出し、それは都市の空気をよごし、地球をあたためている二酸化炭素をふやす。それに対して電気自動車は、走っているあいだ排気ガスをまったく出さない。これによって都市の空気はきれいになり、通りは静かになり、多くの人はそのほうがくらしやすいと感じる。',
+      '電気自動車には実用的な利点もある。多くの場所では、車を電気で充電するほうがガソリンを入れるより安く、電気モーターは動く部品が少ないので、エンジンほど定期的な手入れを必要としない。電気自動車が止まった状態からなめらかにすばやく速度を上げるところを楽しむ運転者もいる。',
+      'しかし、まだ課題もある。電池は値段が高く、大きく進歩したとはいえ、多くの電気自動車は1回の充電で、満タンのガソリン車ほど遠くまでは走れない。充電にはガソリンを入れるよりずっと時間がかかり、地域によっては充電スタンドがまだ十分にない。さらに、電池を作るには掘り出さなければならない金属が必要で、そのことがそれらがとれる場所で環境や社会の問題を引き起こしうる。',
+      '専門家はまた、電気自動車は使う電気と同じくらいしかクリーンではないと指摘している。電気がおもに石炭を燃やして作られているなら、全体としての汚染のへり方は、多くの人が思うより小さいかもしれない。このため、電気自動車が広まることは、太陽光や風力のようなクリーンなエネルギーがふえることといっしょに進まなければならないと多くの人は考えている。電気自動車の物語は、社会の必要が変わると、古い考えが新しい大切さをもってもどってくることがあると示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（空気がきれいで静かな通り）を受け、find の目的語になるので which（非制限用法）。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（金属を掘り出すこと）を受け、can cause の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '20世紀のはじめ、電気自動車はいくつかの国でかなりよく見られた。', answer: true, why: '第1段落 In the early twentieth century, electric cars were quite common in some countries。' },
+      { statement: '電気自動車は、走っているあいだも排気ガスを出す。', answer: false, why: '第2段落 An electric car … produces no exhaust at all while it is being driven。' },
+      { statement: '電気モーターは、エンジンより動く部品が少ない。', answer: true, why: '第3段落 because they have fewer moving parts。' },
+      { statement: '専門家によれば、電気がどう作られても電気自動車の汚染のへり方は同じである。', answer: false, why: '第5段落 If the electricity is produced mainly by burning coal, the overall reduction in pollution may be smaller。' },
+    ],
+    qa: [
+      { q: 'Why did petrol cars replace early electric cars?', choices: ['They became cheaper and could travel much farther.', 'They were quieter.', 'They produced no exhaust.', 'They needed no fuel.'], answer: 0, why: '第1段落 before petrol cars became cheaper and able to travel much farther。' },
+      { q: 'Which is NOT mentioned as a challenge for electric cars?', choices: ['They are too noisy for cities.', 'Batteries are expensive.', 'Charging takes a long time.', 'There are not enough charging stations in some areas.'], answer: 0, why: '第4段落にうるさいという話はない（むしろ静か）。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['電気自動車の実用的な利点', '車の色の選び方', 'ガソリンの作り方', '運転免許のとり方'], answer: 0, why: '第3段落は、充電が安い、手入れが少ない、なめらかに速度が上がるなどの利点を述べている。' },
+      { para: 3, choices: ['電気自動車の課題', '金属の値段', '充電スタンドの場所の地図', '旅行の計画'], answer: 0, why: '第4段落は、電池の値段、走れるきょり、充電時間、金属の採掘などの課題を述べている。' },
+    ],
+    titleQ: { choices: ['The Return of the Electric Car', 'How to Build an Engine', 'The History of Coal', 'Why Petrol Is Cheap'], answer: 0, why: '全体として、電気自動車の歴史、利点、課題、クリーンな電気との関係を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
