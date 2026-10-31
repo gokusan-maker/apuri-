@@ -1578,6 +1578,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Without your help, I [could not finish] the work yesterday.', choices: ['could not have finished', 'cannot finish', 'will not finish', 'could not finishing'], answer: 0, why: 'yesterday（過去）のことを「～がなかったら」と仮定するので could not have ＋過去分詞。' },
     ],
   },
+  {
+    id: 'exam-fix-35',
+    title: '入試の誤文訂正㉟（TOEFL・IELTS の書き言葉⑭：原因と結果をあらわす表現）',
+    points: ['because of ＋名詞、result in（結果として～になる）と result from（～から生じる）、due to、lead to、have an effect on、affect（動詞）と effect（名詞）、thanks to、be caused by、the causes of、as a result of など、レポートやエッセイで原因と結果を書くときの表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The heavy rain resulted in serious flooding.', ja: '大雨の結果、ひどい洪水になった。' }],
+    questions: [
+      { sentence: 'The flight was canceled [because] the heavy snow.', choices: ['because of', 'because that', 'due', 'owing'], answer: 0, why: 'うしろが名詞（the heavy snow）なので前置詞のはたらきをする because of。' },
+      { sentence: 'The heavy rain [resulted from] serious flooding in the area.', choices: ['resulted in', 'resulted on', 'resulted to', 'was resulted'], answer: 0, why: '原因 result in 結果「～という結果になる」。result from は「（結果が）～から生じる」で向きが逆。' },
+      { sentence: 'The accident was [due] the driver’s carelessness.', choices: ['due to', 'due of', 'due for', 'due by'], answer: 0, why: 'be due to ～「～が原因である」。' },
+      { sentence: 'Lack of sleep can [lead] poor concentration.', choices: ['lead to', 'lead in', 'lead for', 'leading'], answer: 0, why: 'lead to ～「～につながる・～を引き起こす」。' },
+      { sentence: 'Global warming has a great [effect for] sea levels.', choices: ['effect on', 'effect to', 'affect on', 'effect at'], answer: 0, why: 'have an effect on ～「～に影響をあたえる」。effect は名詞。' },
+      { sentence: 'Smoking can seriously [effect] your health.', choices: ['affect', 'effects', 'affection', 'be effect'], answer: 0, why: '「～に影響する」という動詞は affect。effect はふつう名詞。' },
+      { sentence: 'Thanks [for] the new medicine, many patients recovered quickly.', choices: ['to', 'of', 'with', 'by'], answer: 0, why: 'thanks to ～「～のおかげで」。' },
+      { sentence: 'The fire was [caused from] a cigarette.', choices: ['caused by', 'caused with', 'causing by', 'cause by'], answer: 0, why: '受け身 be caused by ～「～によって引き起こされる」。' },
+      { sentence: 'Stress is one of the main [causes for] headaches.', choices: ['causes of', 'causes to', 'causing of', 'cause with'], answer: 0, why: '「～の原因」は the cause(s) of ～。' },
+      { sentence: '[As a result for] the new policy, crime fell sharply.', choices: ['As a result of', 'As a result to', 'As result of', 'In a result of'], answer: 0, why: 'as a result of ～「～の結果として」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

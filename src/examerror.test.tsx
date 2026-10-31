@@ -533,3 +533,10 @@ it('正誤問題㊶：時制と仮定法の総復習の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('(D) am you')
 })
+
+it('誤文訂正㉟：原因と結果をあらわす表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-35')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('resulted in')
+})

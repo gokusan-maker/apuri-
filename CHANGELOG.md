@@ -3354,3 +3354,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊶（共通テストレベル：時制と仮定法の総復習：過去形・過去完了・時と条件の副詞節・If I were・仮定法過去完了・I wish・状態動詞・have been to・Without）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「教室の外での授業」（教育・学び・however／how to／that の空所）
 - 2026-10-31: デザイン：はじめてノーミスでボスをたおしたとき、勝利画面に「✨ノーミス○体目！」を出すようにした
+- 2026-10-31: 文法：入試の誤文訂正㉟（TOEFL・IELTS の書き言葉⑭：because of・result in・due to・lead to・effect on・affect・thanks to・caused by・causes of・as a result of）10問
