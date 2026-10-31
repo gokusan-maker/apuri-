@@ -20749,6 +20749,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Why We Buy What We Do Not Need', 'How to Open a Supermarket', 'The History of Credit Cards', 'Why Candy Is Cheap'], answer: 0, why: '全体として、衝動買いが起こる理由（店・オンライン・感情）と、それをさける方法を述べている。' },
   },
   {
+    id: 'kyotsu-ocean-currents',
+    title: 'Hidden Rivers in the Sea',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "If you look at the ocean from a beach, it may seem as if the water simply moves back and forth with the waves. In fact, the oceans are full of huge, slow-moving streams of water called currents. Some of these currents travel thousands of kilometers across the planet, carrying heat, nutrients, and living things with them. Although we rarely see them, ocean currents have a powerful influence on the climate and on life on Earth.",
+      "Currents near the surface of the ocean are driven mainly by the wind. Steady winds push the water in the same direction for long periods, and the rotation of the Earth causes these flows to curve, forming large circular patterns in each ocean. Deeper currents are driven by differences in temperature and saltiness. Cold, salty water is heavier than warm, fresh water, so it sinks toward the ocean floor and slowly spreads out, ( A ) warmer water moves in to take its place near the surface.",
+      "One of the most important jobs of ocean currents is moving heat around the world. Warm currents carry heat from areas near the equator toward colder regions, while cold currents bring cooler water back. This movement helps to explain why some places are much warmer or cooler than their location would suggest. For example, parts of northwestern Europe have relatively mild winters, partly because a warm current flows across the Atlantic toward them.",
+      "Currents also support life in the sea. In some coastal areas, winds push surface water away from the shore, and cold water rises from the depths to replace it. This deep water is rich in nutrients, ( B ) allows tiny plants called plankton to grow in great numbers. The plankton, in turn, feed fish, seabirds, and marine mammals, which is why some of the world’s richest fishing grounds are found in these areas.",
+      "Scientists are now studying how climate change might affect ocean currents. If ocean temperatures rise and large amounts of fresh water from melting ice enter the sea, some currents could become weaker. Because currents are connected to weather, fishing, and the health of the oceans, even small changes could have major effects. Learning more about these hidden rivers in the sea is therefore essential if we want to understand ( C ) our planet’s climate may change in the future.",
+    ],
+    ja: [
+      '浜辺から海を見ると、水はただ波とともに行ったり来たりしているだけのように見えるかもしれない。実は、海には海流とよばれる、巨大でゆっくり動く水の流れがたくさんある。そのうちのいくつかは地球をこえて何千キロも進み、熱や栄養や生き物をいっしょに運ぶ。めったに目にすることはないが、海流は気候や地球の生命に強い影響をあたえている。',
+      '海の表面近くの海流は、主に風によって動かされる。いつも同じ方向にふく風が長いあいだ水をおし、地球の自転によってこの流れがまがり、それぞれの海で大きな円をえがく流れができる。深いところの海流は、温度と塩からさのちがいによって動かされる。冷たく塩からい水はあたたかくてうすい水より重いので、海底に向かってしずみ、ゆっくりと広がっていく。その一方で、表面近くではそのあとをうめるようにあたたかい水が入ってくる。',
+      '海流の最も大切な仕事の1つは、世界中に熱を運ぶことである。暖流は赤道に近い地域から寒い地域へ熱を運び、一方で寒流は冷たい水をもどしてくる。この動きは、なぜ一部の場所がその位置から考えられるよりもずっとあたたかかったり、すずしかったりするのかを説明するのに役立つ。たとえば、ヨーロッパの北西部の一部の冬が比較的おだやかなのは、大西洋をこえてそちらへ暖流が流れていることが理由の1つである。',
+      '海流はまた、海の生命をささえている。いくつかの海岸地域では、風が表面の水を岸からおしやり、深いところから冷たい水が上がってきてそれにかわる。この深い水は栄養が豊かで、そのおかげでプランクトンとよばれる小さな植物がたくさん育つ。そしてプランクトンは魚や海鳥や海のほ乳類のえさとなり、それが、世界で最も豊かな漁場のいくつかがこうした地域にある理由である。',
+      '科学者は今、気候変動が海流にどのような影響をあたえるかを研究している。海の温度が上がり、とけた氷から大量の真水が海に入ると、いくつかの海流は弱くなるかもしれない。海流は天気や漁業、海の健康とつながっているので、小さな変化でも大きな影響が出るかもしれない。したがって、地球の気候が将来どのように変わるかを理解したいなら、こうした海の中のかくれた川についてもっと知ることが欠かせない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'before'], answer: 0, why: '冷たい水がしずむのと同時に、あたたかい水が入ってくるという2つの動きをならべるので while「一方で・～するあいだに」。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（深い水が栄養豊かなこと）を受け、allows の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'understand how ～「どのように～かを理解する」。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '表面近くの海流は、主に風によって動かされる。', answer: true, why: '第2段落 Currents near the surface of the ocean are driven mainly by the wind。' },
+      { statement: '冷たく塩からい水は、あたたかくてうすい水より軽い。', answer: false, why: '第2段落 Cold, salty water is heavier than warm, fresh water。' },
+      { statement: '深いところから上がってくる水は栄養が豊かである。', answer: true, why: '第4段落 This deep water is rich in nutrients。' },
+      { statement: '気候変動は海流に何の影響もあたえないとわかっている。', answer: false, why: '第5段落 some currents could become weaker。' },
+    ],
+    qa: [
+      { q: 'Why do parts of northwestern Europe have relatively mild winters?', choices: ['Partly because a warm current flows toward them.', 'Because they are near the equator.', 'Because there is no wind.', 'Because cold water rises there.'], answer: 0, why: '第3段落 partly because a warm current flows across the Atlantic toward them。' },
+      { q: 'Why are some of the richest fishing grounds found where deep water rises?', choices: ['The nutrients help plankton grow, which feed fish.', 'The water there is very warm.', 'There are no seabirds.', 'Fish cannot swim in deep water.'], answer: 0, why: '第4段落 rich in nutrients, which allows tiny plants called plankton to grow ... The plankton, in turn, feed fish。' },
+    ],
+    gist: [
+      { para: 1, choices: ['海流が動くしくみ', '波の高さの測り方', '風の名前', '海底の地図'], answer: 0, why: '第2段落は、風と地球の自転による表面の海流と、温度や塩からさによる深い海流のしくみを述べている。' },
+      { para: 2, choices: ['海流が世界中に熱を運ぶこと', 'ヨーロッパの観光', '赤道の長さ', '冬のすごし方'], answer: 0, why: '第3段落は、暖流と寒流が熱を運び、気候に影響することを述べている。' },
+    ],
+    titleQ: { choices: ['Hidden Rivers in the Sea', 'How to Swim in the Ocean', 'The History of Fishing Boats', 'Why Waves Are Noisy'], answer: 0, why: '全体として、海流のしくみ、熱を運ぶ役割、生命をささえる役割、気候変動との関係を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
