@@ -210,3 +210,10 @@ it('デザイン171：キャラ図鑑で、相棒と同じタイプの子に �
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe(same.name)
 })
+
+it('デザイン174：キャラ図鑑に、なかまのタイプの割合が小さな棒グラフで出る', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={4} pityLeft={10} onDraw={() => null} ownedSpecies={['fox', 'fox', 'fox', 'penguin']} />)
+  const bar = screen.getByLabelText('なかまのタイプの割合')
+  expect(bar.querySelector(`[aria-label="${typeOf('fox').name} 75%"]`)).not.toBeNull()
+  expect(bar.querySelector(`[aria-label="${typeOf('penguin').name} 25%"]`)).not.toBeNull()
+})

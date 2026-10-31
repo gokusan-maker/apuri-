@@ -778,6 +778,15 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
           {onlyNew ? '📖 ぜんぶ見る' : '❓ まだ会っていない子だけ見る'}
         </button>
       )}
+      {owned.length > 0 && (
+        // デザイン174：なかまにいる子のタイプの割合（小さな棒グラフ）
+        <div className="type-ratio" aria-label="なかまのタイプの割合" style={{ display: 'flex', height: '0.5rem', borderRadius: '0.25rem', overflow: 'hidden', margin: '0.25rem 0' }}>
+          {Object.values(CHAR_TYPES).map((ty) => {
+            const n = owned.filter((x) => typeOf(x).id === ty.id).length
+            return n > 0 ? <span key={ty.id} className={`char-type t-${ty.id}`} title={`${ty.name} ${n}体`} aria-label={`${ty.name} ${Math.round((n / owned.length) * 100)}%`} style={{ flex: n, padding: 0, borderRadius: 0 }} /> : null
+          })}
+        </div>
+      )}
       <p className="party-sorts party-types" role="group" aria-label="図鑑をタイプでしぼりこむ">
         {Object.values(CHAR_TYPES).map((ty) => (
           <button key={ty.id} className={`list-link pill-btn party-sort char-type t-${ty.id}`} aria-pressed={typeOnly === ty.id} onClick={() => setTypeOnly(typeOnly === ty.id ? '' : ty.id)}>
