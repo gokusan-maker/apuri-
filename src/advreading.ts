@@ -20866,6 +20866,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['What the Date on Food Really Means', 'How to Cook Fresh Fish', 'The History of Refrigerators', 'Why Snacks Are Popular'], answer: 0, why: '全体として、食べ物の日付の意味と、その混乱による食品ロス、へらすための取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-greetings',
+    title: 'The Meaning of a Greeting',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every day, we greet the people around us without thinking much about it. We say “Good morning” to our family, wave to friends, and bow or shake hands when we meet someone new. Greetings may seem like small, automatic actions, yet they play an important role in human relationships. They show that we have noticed another person and that we wish to communicate with them in a friendly way.",
+      "The way people greet each other differs greatly from culture to culture. In Japan, bowing is a common greeting, and the depth of the bow can show respect or apology. In many Western countries, people often shake hands when they meet for the first time, and close friends may hug. In some parts of Europe and Latin America, friends greet each other with light kisses on the cheek. Each of these customs reflects ideas about personal space, respect, and closeness ( A ) are shared within a culture.",
+      "Because greetings differ, they can sometimes cause misunderstandings. A person who is used to bowing may feel uncomfortable when someone suddenly offers a hug. Similarly, someone who expects a firm handshake may think that a light or brief one shows a lack of interest. Such reactions are usually not about the other person’s character but about different expectations. Knowing a little about other customs can help people avoid feeling hurt or confused.",
+      "Words used in greetings also reveal interesting cultural differences. In English, people often ask “How are you?” but do not necessarily expect a detailed answer; it is simply a polite way to start a conversation. In some languages, people traditionally greet each other by asking whether they have eaten, which shows concern for the other person’s well-being. These expressions show ( B ) greetings are not just about exchanging information but about building connections.",
+      "In today’s connected world, people from different backgrounds meet more often than ever before, both in person and online. Learning about greetings can therefore be a valuable first step in understanding another culture. When in doubt, many people find that a warm smile and a simple greeting in the other person’s language are welcomed almost everywhere. After all, the purpose of a greeting is the same in every culture: to show others ( C ) we are glad to see them.",
+    ],
+    ja: [
+      '毎日、私たちはあまり考えずにまわりの人にあいさつをしている。家族に「おはよう」と言い、友だちに手をふり、初めて会う人にはおじぎをしたり握手をしたりする。あいさつは小さな自動的な行動に見えるかもしれないが、人間関係で大切な役割をはたしている。あいさつは、私たちが相手に気づき、親しみをもって伝え合いたいと思っていることを示すのである。',
+      '人々のあいさつのしかたは、文化によって大きくちがう。日本ではおじぎがふつうのあいさつで、おじぎの深さで敬意やおわびを示すことができる。多くの西洋の国では、初めて会うときによく握手をし、親しい友だちどうしはだき合うこともある。ヨーロッパやラテンアメリカの一部では、友だちどうしがほおに軽くキスをしてあいさつする。こうした習慣のそれぞれは、ある文化の中で共有されている、個人の空間や敬意や親しさについての考えを映し出している。',
+      'あいさつがちがうので、ときに誤解が生まれることがある。おじぎになれている人は、急にだき合おうとされると落ち着かなく感じるかもしれない。同じように、しっかりした握手を期待している人は、軽く短い握手を関心がないしるしだと思うかもしれない。こうした反応はふつう相手の性格についてではなく、期待がちがうことによるものである。ほかの習慣について少し知っておけば、傷ついたりとまどったりするのをさけるのに役立つ。',
+      'あいさつに使うことばも、興味深い文化のちがいを示している。英語では人々はよく「お元気ですか」とたずねるが、かならずしもくわしい答えを期待しているわけではない。それは会話を始めるていねいな方法にすぎない。ある言語では、昔から「ごはんは食べましたか」とたずねてあいさつし、相手の元気を気づかう気持ちを示す。こうした表現は、あいさつが情報のやりとりだけでなく、つながりをきずくものであることを示している。',
+      'つながりの多い今日の世界では、ちがう背景をもつ人々が、直接にもオンラインでも、これまで以上によく出会う。だから、あいさつについて学ぶことは、別の文化を理解するための価値ある第一歩になりうる。迷ったときには、あたたかい笑顔と相手のことばでのかんたんなあいさつが、ほとんどどこでも歓迎されることに多くの人が気づいている。結局、あいさつの目的はどの文化でも同じである。会えてうれしいということを相手に示すことなのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 ideas about personal space, respect, and closeness を受け、are shared の主語になる関係代名詞 that。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whom'], answer: 0, why: 'show that ～「～ということを示す」。うしろは完全な文なので接続詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show 人 that ～「人に～ということを示す」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '日本では、おじぎの深さで敬意やおわびを示すことができる。', answer: true, why: '第2段落 the depth of the bow can show respect or apology。' },
+      { statement: 'あいさつのちがいによる反応は、ふつう相手の性格によるものである。', answer: false, why: '第3段落 Such reactions are usually not about the other person’s character but about different expectations。' },
+      { statement: '英語の “How are you?” には、いつもくわしい答えが期待されている。', answer: false, why: '第4段落 do not necessarily expect a detailed answer。' },
+      { statement: '笑顔とかんたんなあいさつは、ほとんどどこでも歓迎される。', answer: true, why: '第5段落 a warm smile and a simple greeting ... are welcomed almost everywhere。' },
+    ],
+    qa: [
+      { q: 'What does greeting by asking whether someone has eaten show?', choices: ['Concern for the other person’s well-being.', 'That the speaker is hungry.', 'That the speaker wants to cook.', 'A lack of interest.'], answer: 0, why: '第4段落 which shows concern for the other person’s well-being。' },
+      { q: 'Why can learning about greetings be valuable today?', choices: ['People from different backgrounds meet more often than ever before.', 'Greetings are the same everywhere.', 'People no longer meet in person.', 'Greetings are no longer used.'], answer: 0, why: '第5段落 people from different backgrounds meet more often than ever before。' },
+    ],
+    gist: [
+      { para: 1, choices: ['文化によるあいさつのちがい', '握手の強さの測り方', 'ヨーロッパの歴史', 'おじぎの練習方法'], answer: 0, why: '第2段落は、おじぎ・握手・だき合う・ほおへのキスなど、文化ごとのあいさつを述べている。' },
+      { para: 2, choices: ['あいさつのちがいが生む誤解', '性格の見分け方', '友だちの作り方', '手紙の書き方'], answer: 0, why: '第3段落は、期待のちがいから生まれる誤解と、その防ぎ方を述べている。' },
+    ],
+    titleQ: { choices: ['The Meaning of a Greeting', 'How to Bow Correctly', 'The History of Handshakes', 'Why People Eat Breakfast'], answer: 0, why: '全体として、あいさつの役割、文化によるちがいと誤解、ことばのちがい、学ぶ意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
