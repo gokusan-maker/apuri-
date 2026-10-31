@@ -993,6 +993,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="67" cy="13" r="4" fill="#fde047" />
       </g>
     )
+  if (species === 'moose')
+    return (
+      <g>
+        {/* 平たい大きなつの */}
+        <path d="M30 26 q-14 -6 -14 -16 q8 4 12 2 q2 6 6 8 Z" fill="#d6b98c" stroke="#3b2a1a" strokeWidth="1.5" />
+        <path d="M70 26 q14 -6 14 -16 q-8 4 -12 2 q-2 6 -6 8 Z" fill="#d6b98c" stroke="#3b2a1a" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
