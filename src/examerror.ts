@@ -890,6 +890,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Thank you (A) for (B) invite (C) me (D) to your party.', choices: ['(A) for', '(B) invite', '(C) me', '(D) to your party'], answer: 1, why: '前置詞 for のあとは動名詞：for inviting me。' },
     ],
   },
+  {
+    id: 'exam-error-hard3',
+    title: '入試の正誤問題㊴（医学部・難関大レベル③）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'too ～ to、Had it not been for、demand that ＋原形、Not only の倒置、連鎖関係詞節の who、lie の過去形 lay、Hardly ～ when、neither A nor B、前置詞のあとの動名詞など、医療の場面で問われる難しい文法。',
+    ],
+    examples: [
+      { en: 'The patient was too weak to walk by himself.', ja: '患者は弱りすぎていて、ひとりでは歩けなかった。' },
+      { en: 'Neither the doctor nor the nurses were aware of the problem.', ja: '医師も看護師たちも、その問題に気づいていなかった。' },
+    ],
+    questions: [
+      { sentence: 'The patient was (A) so (B) weak (C) to walk (D) by himself.', choices: ['(A) so', '(B) weak', '(C) to walk', '(D) by himself'], answer: 0, why: '「あまりに～なので…できない」は too ～ to …：too weak to walk。' },
+      { sentence: 'Had it not been for (A) the vaccine, many (B) more people (C) would (D) die.', choices: ['(A) the vaccine, many', '(B) more people', '(C) would', '(D) die'], answer: 3, why: '仮定法過去完了の倒置なので would have died。' },
+      { sentence: 'The doctor (A) demanded (B) that she (C) stops (D) smoking.', choices: ['(A) demanded', '(B) that she', '(C) stops', '(D) smoking'], answer: 2, why: 'demand that ～ の節は原形：she stop smoking。' },
+      { sentence: 'Not only (A) the disease spreads (B) quickly, but it (C) is also (D) hard to treat.', choices: ['(A) the disease spreads', '(B) quickly, but it', '(C) is also', '(D) hard to treat'], answer: 0, why: 'Not only が文頭に出ると倒置：does the disease spread。' },
+      { sentence: 'Despite (A) being tired, the surgeon (B) continue (C) the operation (D) for hours.', choices: ['(A) being tired, the surgeon', '(B) continue', '(C) the operation', '(D) for hours'], answer: 1, why: '過去のできごとで主語は単数なので continued。despite being tired は正しい。' },
+      { sentence: 'The researcher (A) whom (B) we believe (C) discovered the cure (D) is famous.', choices: ['(A) whom', '(B) we believe', '(C) discovered the cure', '(D) is famous'], answer: 0, why: 'we believe がはさまっているが、discovered の主語なので主格 who。' },
+      { sentence: 'After work, the nurse (A) was so tired (B) that she (C) laid (D) down on the sofa.', choices: ['(A) was so tired', '(B) that she', '(C) laid', '(D) down on the sofa'], answer: 2, why: '「横になった」は自動詞 lie の過去形 lay：lay down。' },
+      { sentence: 'Hardly (A) had (B) the operation finished (C) than (D) the patient woke up.', choices: ['(A) had', '(B) the operation finished', '(C) than', '(D) the patient woke up'], answer: 2, why: 'Hardly had ～ when …。than は No sooner と組む。' },
+      { sentence: 'Neither the doctor nor (A) the nurses (B) was (C) aware (D) of the problem.', choices: ['(A) the nurses', '(B) was', '(C) aware', '(D) of the problem'], answer: 1, why: 'neither A nor B では B（the nurses、複数）に合わせて were。' },
+      { sentence: 'The medicine (A) should be taken (B) three times a day (C) after (D) eat.', choices: ['(A) should be taken', '(B) three times a day', '(C) after', '(D) eat'], answer: 3, why: '前置詞 after のあとは動名詞か名詞：after eating（または after meals）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

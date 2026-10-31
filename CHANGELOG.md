@@ -3339,3 +3339,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉜（医学部・難関大レベル③：too ～ to・Had it not been for・demand that ＋原形・Not only の倒置・Little is known・lay down・Hardly の倒置）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「わたしたちはどう味わうか（味覚）」（科学・からだ・although／what kind of／目的格の that の空所）
 - 2026-10-31: デザイン：ボス図鑑に、とくぎの種類ごとに勝ったボスの数を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊴（医学部・難関大レベル③：too ～ to・Had it not been for・demand that・Not only の倒置・who・lay・Hardly ～ when・neither nor・after eating）10問
