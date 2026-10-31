@@ -1202,6 +1202,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Her success (A) made (B) her parents (C) very (D) happily.', choices: ['(A) made', '(B) her parents', '(C) very', '(D) happily'], answer: 3, why: 'make O C の C は形容詞：very happy。' },
     ],
   },
+  {
+    id: 'exam-error-compare4',
+    title: '入試の正誤問題〈52〉（私学難関レベル：比較の慣用表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'not so much A as B、by far the 最上級、The 比較級 ～, the 比較級、know better than to、no more ～ than、superior to、prefer A to B、Nothing is more ～ than、as soon as possible、No other ～ as … as など、比較の慣用表現。',
+    ],
+    examples: [
+      { en: 'He knows better than to trust strangers.', ja: '彼は知らない人を信じるほどばかではない。' },
+      { en: 'I prefer reading to watching TV.', ja: '私はテレビを見るより読書のほうが好きだ。' },
+    ],
+    questions: [
+      { sentence: 'He is (A) not so much (B) a scholar (C) than (D) a writer.', choices: ['(A) not so much', '(B) a scholar', '(C) than', '(D) a writer'], answer: 2, why: 'not so much A as B：as a writer。' },
+      { sentence: 'This is (A) by far (B) the better answer (C) of (D) all.', choices: ['(A) by far', '(B) the better answer', '(C) of', '(D) all'], answer: 1, why: '3つ以上の中では最上級：by far the best answer。' },
+      { sentence: '(A) More you practice, (B) the better (C) you will (D) become.', choices: ['(A) More you practice', '(B) the better', '(C) you will', '(D) become'], answer: 0, why: 'The 比較級 ～, the 比較級 …：The more you practice。' },
+      { sentence: 'He (A) knows (B) better to (C) trust (D) strangers.', choices: ['(A) knows', '(B) better to', '(C) trust', '(D) strangers'], answer: 1, why: 'know better than to ～：better than to trust。' },
+      { sentence: 'A bat (A) is no more (B) a bird (C) as (D) a mouse is.', choices: ['(A) is no more', '(B) a bird', '(C) as', '(D) a mouse is'], answer: 2, why: 'A is no more B than C is：than a mouse is。' },
+      { sentence: 'She (A) is (B) superior than (C) me (D) in math.', choices: ['(A) is', '(B) superior than', '(C) me', '(D) in math'], answer: 1, why: 'superior to me。' },
+      { sentence: 'I (A) prefer (B) reading (C) than (D) watching TV.', choices: ['(A) prefer', '(B) reading', '(C) than', '(D) watching TV'], answer: 2, why: 'prefer A to B：to watching TV。' },
+      { sentence: '(A) Nothing (B) is more (C) important as (D) health.', choices: ['(A) Nothing', '(B) is more', '(C) important as', '(D) health'], answer: 2, why: 'Nothing is more important than health：than health。' },
+      { sentence: 'Please (A) reply (B) to this email (C) as soon (D) as possibly.', choices: ['(A) reply', '(B) to this email', '(C) as soon', '(D) as possibly'], answer: 3, why: 'as soon as possible（possible は形容詞）。' },
+      { sentence: '(A) No other (B) student in the class (C) is (D) as tall than Ken.', choices: ['(A) No other', '(B) student in the class', '(C) is', '(D) as tall than Ken'], answer: 3, why: 'No other ～ as tall as Ken。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
