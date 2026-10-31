@@ -21178,6 +21178,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Sorting Our Garbage', 'How to Move to a New Town', 'The History of Aluminum', 'Why Newspapers Are Popular'], answer: 0, why: '全体として、ごみの分別のしくみと理由、住民の協力、これからの課題を述べている。' },
   },
   {
+    id: 'kyotsu-skin',
+    title: 'The Body’s Largest Organ',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we think of the organs of the human body, we usually imagine the heart, the lungs, or the brain. Yet the largest organ of all is one we can see every day: the skin. Covering the entire body, the skin does far more than simply hold us together. It protects us, helps to control our temperature, and allows us to sense the world around us.",
+      "One of the skin’s most important jobs is protection. It acts as a barrier that keeps out harmful bacteria and prevents the body from losing too much water. The outer layer of the skin is constantly being replaced; old cells are shed and new ones move up from below. In fact, the cells on the surface of our skin are completely renewed every few weeks, ( A ) helps the skin to repair minor injuries quickly.",
+      "The skin also plays a key role in keeping our body temperature stable. When we are hot, we sweat, and as the sweat evaporates, it carries heat away from the body. At the same time, blood vessels near the surface widen to release heat, which is why our faces may turn red after exercise. When we are cold, these vessels narrow to keep warm blood deeper inside the body.",
+      "Sunlight has both good and bad effects on the skin. A moderate amount of sunlight helps the skin to produce vitamin D, which is necessary for strong bones. However, too much exposure to ultraviolet light can cause sunburn and damage skin cells. Over many years, this damage can make the skin age faster and increase the risk of serious diseases. For this reason, doctors recommend avoiding strong sunlight in the middle of the day, wearing hats, and using sunscreen, especially in summer.",
+      "Finally, the skin is an important sense organ. It contains countless tiny nerve endings that allow us to feel touch, pressure, heat, cold, and pain. These sensations warn us of danger, such as a hot stove, and also allow us to enjoy pleasant experiences, such as the warmth of a friend’s hand. Taking care of our skin by keeping it clean, protecting it from the sun, and drinking enough water is a simple way to look after an organ ( B ) works hard for us every day. Learning about the skin reminds us ( C ) remarkable our bodies are.",
+    ],
+    ja: [
+      '人間の体の器官を考えるとき、私たちはふつう心臓や肺や脳を思いうかべる。しかし、すべての中で最も大きな器官は、私たちが毎日目にしているもの、つまり皮ふである。体全体をおおう皮ふは、ただ体をまとめているだけではない。私たちを守り、体温を調節するのを助け、まわりの世界を感じとれるようにしている。',
+      '皮ふの最も大切な仕事の1つは守ることである。皮ふは、有害な細菌を入れず、体から水分が失われすぎないようにするかべの役目をはたしている。皮ふのいちばん外側の層はたえず入れかわっており、古い細胞ははがれ落ち、新しい細胞が下から上がってくる。実は、皮ふの表面の細胞は数週間ごとにすっかり新しくなり、それが、皮ふが小さなけがをすばやく治すのに役立っている。',
+      '皮ふはまた、体温を一定にたもつのに大きな役割をはたしている。暑いとき私たちは汗をかき、汗が蒸発するときに体から熱を運び去る。同時に、表面近くの血管が広がって熱を出すので、運動のあとに顔が赤くなることがある。寒いときには、これらの血管が細くなり、あたたかい血を体のおくのほうにたもつ。',
+      '日光は皮ふによい影響もわるい影響もあたえる。ほどよい量の日光は、皮ふが、強い骨に必要なビタミンDをつくるのを助ける。しかし、紫外線をあびすぎると、日焼けを起こし、皮ふの細胞をいためることがある。長い年月のあいだに、このダメージは皮ふの老化を早め、重い病気の危険を高めることがある。このため医師は、とくに夏には、日中の強い日ざしをさけ、帽子をかぶり、日焼け止めを使うことをすすめている。',
+      '最後に、皮ふは大切な感覚器官である。皮ふには数えきれない小さな神経の末端があり、それによって私たちはふれること、おすこと、熱さ、冷たさ、痛みを感じることができる。こうした感覚は、熱いコンロのような危険を知らせてくれ、友だちの手のあたたかさのような心地よい経験を楽しませてもくれる。皮ふを清潔にたもち、日光から守り、水を十分に飲むことで皮ふを大切にすることは、毎日私たちのためによく働いている器官を世話するかんたんな方法である。皮ふについて学ぶと、私たちの体がどれほどすばらしいかを思い出させられる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（細胞が新しくなること）を受け、helps の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 an organ を受け、works の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋形容詞 remarkable ＋主語＋動詞で「どれほどすばらしいか」。' },
+    ],
+    tf: [
+      { statement: '人間の体で最も大きな器官は皮ふである。', answer: true, why: '第1段落 the largest organ of all is ... the skin。' },
+      { statement: '皮ふの表面の細胞は、一生入れかわらない。', answer: false, why: '第2段落 the cells on the surface of our skin are completely renewed every few weeks。' },
+      { statement: '寒いとき、皮ふの近くの血管は細くなる。', answer: true, why: '第3段落 When we are cold, these vessels narrow。' },
+      { statement: '医師は、夏には日中の強い日ざしをできるだけあびるようすすめている。', answer: false, why: '第4段落 doctors recommend avoiding strong sunlight in the middle of the day。' },
+    ],
+    qa: [
+      { q: 'What does a moderate amount of sunlight help the skin to do?', choices: ['Produce vitamin D.', 'Grow hair faster.', 'Stop sweating.', 'Become thicker.'], answer: 0, why: '第4段落 A moderate amount of sunlight helps the skin to produce vitamin D。' },
+      { q: 'Why might our faces turn red after exercise?', choices: ['Blood vessels near the surface widen to release heat.', 'The skin becomes thinner.', 'We lose vitamin D.', 'Bacteria enter the skin.'], answer: 0, why: '第3段落 blood vessels near the surface widen to release heat, which is why our faces may turn red。' },
+    ],
+    gist: [
+      { para: 1, choices: ['皮ふが体を守るはたらき', '細菌の種類', '水の飲み方', 'けがの治療法'], answer: 0, why: '第2段落は、細菌や水分の損失をふせぎ、細胞が入れかわるという守るはたらきを述べている。' },
+      { para: 3, choices: ['日光が皮ふにあたえる影響', '夏の天気', '帽子の選び方', '骨の強さの測り方'], answer: 0, why: '第4段落は、ビタミンDをつくるよい面と、紫外線による害を述べている。' },
+    ],
+    titleQ: { choices: ['The Body’s Largest Organ', 'How to Cure a Cold', 'The History of Sunscreen', 'Why We Exercise'], answer: 0, why: '全体として、皮ふの守る・体温を調節する・感じるはたらきと、日光との関係、世話のしかたを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
