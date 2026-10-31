@@ -14,6 +14,23 @@ export function recordWin(book: BossBook, look: BossLook, rank: Rank, day: strin
   return { ...book, [look.name]: old ? { ...old, wins: old.wins + 1, best: betterRank(old.best, rank) } : { wins: 1, best: rank, look, first: day } }
 }
 
+// デザイン154：いちばん最近たおしたボスの名前（図鑑に 🆕 さいきん を出す）
+const LAST_KEY = 'eitan:boss-last'
+export function loadLastBoss(): string {
+  try {
+    return localStorage.getItem(LAST_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+export function saveLastBoss(name: string): void {
+  try {
+    localStorage.setItem(LAST_KEY, name)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
 export function loadBook(): BossBook {
   try {
     const v = JSON.parse(localStorage.getItem(KEY) ?? '{}') as unknown

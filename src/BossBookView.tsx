@@ -2,7 +2,7 @@ import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
 import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, loadNoMissBosses, loadSealTraits, traitOf, type BossLook } from './boss'
 import { BossArena } from './BossArenaView'
-import { loadBook, SECRET_WINS, secretOf } from './bossbook'
+import { loadBook, loadLastBoss, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
 import { UNIV_BOSSES } from './univ'
 
@@ -17,6 +17,7 @@ const arenaOf = (name: string) => {
 // onFight：たおしたことのある単語帳のボスと再戦する（名前で知らせる）
 export function BossBook({ onFight }: { onFight?: (name: string) => void } = {}) {
   const [book] = useState(loadBook)
+  const [lastBoss] = useState(loadLastBoss) // デザイン154：いちばん最近たおしたボス
   const [times] = useState(loadBossTimes)
   const [noMiss] = useState(loadNoMissBosses) // デザイン94：ノーミスでたおしたボス
   const [byWins, setByWins] = useState(false) // デザイン118：勝った回数の多い順に並べる
@@ -143,6 +144,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                   {fastest === b.name && <strong className="speed-clear" aria-label="いちばん早くたおしたボス"> ⚡最速</strong>}
                   {noMiss.includes(b.name) && <strong className="speed-clear"> ✨ ノーミス</strong>}
                   {topName === b.name && <strong className="speed-clear"> 🏆 いちばん勝った</strong>}
+                  {lastBoss === b.name && <strong className="speed-clear" aria-label="いちばん最近たおしたボス"> 🆕 さいきん</strong>}
                   {/^\d{4}-\d{2}-\d{2}$/.test(e.first ?? '') && <span className="boss-book-first">・📅 はじめて勝った日 {Number(e.first.slice(5, 7))}月{Number(e.first.slice(8, 10))}日</span>}
                 </span>
               )}

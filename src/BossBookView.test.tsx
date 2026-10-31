@@ -371,3 +371,16 @@ it('デザイン144：ボス図鑑に、とくぎの種類ごとに勝ったボ�
   const t = traitOf(a.name)
   expect(screen.getByLabelText('とくぎごとに勝ったボスの数').textContent).toContain(`${BOSS_TRAITS[t].icon}1`)
 })
+
+it('デザイン154：ボス図鑑で、いちばん最近たおしたボスに「🆕 さいきん」が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  const mark = screen.getByLabelText('いちばん最近たおしたボス')
+  expect(mark.textContent).toBe(' 🆕 さいきん')
+  expect(mark.closest('li')!.querySelector('.badge-name')!.textContent).toBe('ヤミモチ')
+})
