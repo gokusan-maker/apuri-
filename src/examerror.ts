@@ -1154,6 +1154,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Cities (A) are noisy, (B) while (C) the countryside (D) are quiet.', choices: ['(A) are noisy', '(B) while', '(C) the countryside', '(D) are quiet'], answer: 3, why: 'the countryside は単数なので is quiet。while「～なのに対して」は正しい。' },
     ],
   },
+  {
+    id: 'exam-error-noun3',
+    title: '入試の正誤問題㊿（国公立レベル：名詞・冠詞・代名詞の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'advice・furniture・water（数えられない名詞）、スポーツ名と冠詞、by bus、an honest、help yourself、mine、the other、others など、名詞・冠詞・代名詞のまとめ。',
+    ],
+    examples: [
+      { en: 'I usually go to school by bus.', ja: '私はふだんバスで学校に行く。' },
+      { en: 'Some people like tea; others prefer coffee.', ja: '紅茶が好きな人もいれば、コーヒーのほうが好きな人もいる。' },
+    ],
+    questions: [
+      { sentence: 'She (A) gave me (B) an advice (C) about (D) my future.', choices: ['(A) gave me', '(B) an advice', '(C) about', '(D) my future'], answer: 1, why: 'advice は数えられないので some advice（a piece of advice）。' },
+      { sentence: 'I (A) bought (B) many furnitures (C) for (D) my new room.', choices: ['(A) bought', '(B) many furnitures', '(C) for', '(D) my new room'], answer: 1, why: 'furniture は数えられないので a lot of furniture。' },
+      { sentence: 'He (A) plays (B) the soccer (C) every day (D) after school.', choices: ['(A) plays', '(B) the soccer', '(C) every day', '(D) after school'], answer: 1, why: 'スポーツ名に冠詞はつけない：plays soccer。' },
+      { sentence: 'I (A) usually go (B) to school (C) by (D) a bus.', choices: ['(A) usually go', '(B) to school', '(C) by', '(D) a bus'], answer: 3, why: 'by ＋交通手段は冠詞なし：by bus。' },
+      { sentence: 'He (A) is (B) a honest man (C) who (D) never lies.', choices: ['(A) is', '(B) a honest man', '(C) who', '(D) never lies'], answer: 1, why: 'honest は母音の音で始まるので an honest man。' },
+      { sentence: '(A) Please help (B) you (C) to (D) the cake.', choices: ['(A) Please help', '(B) you', '(C) to', '(D) the cake'], answer: 1, why: 'help yourself to ～：help yourself。' },
+      { sentence: 'This bag (A) is not yours. (B) It is (C) my, (D) not his.', choices: ['(A) is not yours', '(B) It is', '(C) my', '(D) not his'], answer: 2, why: '「私のもの」は mine。' },
+      { sentence: 'I have (A) two sisters. One (B) lives in Tokyo, and (C) another (D) lives in Osaka.', choices: ['(A) two sisters. One', '(B) lives in Tokyo, and', '(C) another', '(D) lives in Osaka'], answer: 2, why: '2人のうちの残りの1人は the other。' },
+      { sentence: '(A) Some people like tea; (B) other (C) prefer (D) coffee.', choices: ['(A) Some people like tea', '(B) other', '(C) prefer', '(D) coffee'], answer: 1, why: '「ほかの人々」は others。' },
+      { sentence: '(A) There are (B) much water (C) in (D) the bottle.', choices: ['(A) There are', '(B) much water', '(C) in', '(D) the bottle'], answer: 0, why: 'water は単数あつかいなので There is。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
