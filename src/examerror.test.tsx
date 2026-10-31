@@ -344,3 +344,10 @@ it('誤文訂正㉑：数えられる名詞・数えられない名詞の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[2].choices[u.questions[2].answer]).toBe('progress')
 })
+
+it('正誤問題㉘：関係詞・名詞節の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-clause')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[7].choices[u.questions[7].answer]).toBe('(A) where')
+})

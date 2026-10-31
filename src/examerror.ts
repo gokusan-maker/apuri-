@@ -626,6 +626,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Without (A) the doctor’s help, she (B) would not (C) survive (D) the accident last year.', choices: ['(A) the doctor’s help, she', '(B) would not', '(C) survive', '(D) the accident last year'], answer: 2, why: 'last year の過去の仮定（Without ～ ＝ If it had not been for ～）なので would not have survived。' },
     ],
   },
+  {
+    id: 'exam-error-clause',
+    title: '入試の正誤問題㉘（関係詞・名詞節の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'whether と that、同格の that、前置詞＋関係代名詞での前置詞の重複、関係副詞 where と関係代名詞 which、名詞節の what と that、whoever と whomever、間接疑問の語順に注目する。',
+    ],
+    examples: [
+      { en: 'We were surprised by the fact that he had lied to us.', ja: '彼がうそをついていたという事実におどろいた。（同格の that）' },
+      { en: 'This is the town which I visited last summer.', ja: 'ここは去年の夏に私が訪れた町だ。（visit の目的語 → which）' },
+    ],
+    questions: [
+      { sentence: 'I can’t decide (A) that (B) I should (C) buy (D) the red one.', choices: ['(A) that', '(B) I should', '(C) buy', '(D) the red one'], answer: 0, why: '「～かどうか」を決められないので whether：I can’t decide whether I should buy ～。' },
+      { sentence: 'We were surprised (A) by the fact (B) which (C) he had (D) lied to us.', choices: ['(A) by the fact', '(B) which', '(C) he had', '(D) lied to us'], answer: 1, why: 'the fact の内容を説明する同格の節は that：the fact that he had lied。which は使えない。' },
+      { sentence: 'It is (A) still uncertain (B) that he will come (C) or (D) not.', choices: ['(A) still uncertain', '(B) that he will come', '(C) or', '(D) not'], answer: 1, why: '「来るかどうか」は whether：It is still uncertain whether he will come or not。' },
+      { sentence: 'This is (A) the reason (B) for which (C) I came (D) here for.', choices: ['(A) the reason', '(B) for which', '(C) I came', '(D) here for'], answer: 3, why: 'for which ですでに for を使っているので、最後の for はいらない：for which I came here。' },
+      { sentence: 'Ask him (A) when the meeting (B) will (C) starts (D) tomorrow.', choices: ['(A) when the meeting', '(B) will', '(C) starts', '(D) tomorrow'], answer: 2, why: '助動詞 will のあとは原形：will start。間接疑問なので語順は when the meeting will start。' },
+      { sentence: 'She asked me (A) what I (B) would like (C) eating (D) for dinner.', choices: ['(A) what I', '(B) would like', '(C) eating', '(D) for dinner'], answer: 2, why: 'would like のあとは to 不定詞：would like to eat。' },
+      { sentence: 'He is (A) not (B) what (C) he used to (D) being.', choices: ['(A) not', '(B) what', '(C) he used to', '(D) being'], answer: 3, why: 'used to「以前は～だった」のあとは原形：what he used to be。' },
+      { sentence: 'This is the town (A) where (B) I visited (C) last summer (D) with my family.', choices: ['(A) where', '(B) I visited', '(C) last summer', '(D) with my family'], answer: 0, why: 'visit は他動詞で目的語が欠けているので関係代名詞 which / that：the town which I visited。' },
+      { sentence: 'The problem is (A) what (B) we don’t (C) have (D) enough time.', choices: ['(A) what', '(B) we don’t', '(C) have', '(D) enough time'], answer: 0, why: 'うしろが完全な文なので接続詞 that：The problem is that we don’t have enough time。' },
+      { sentence: 'I’ll give this book (A) to (B) whomever (C) wants (D) to read it.', choices: ['(A) to', '(B) whomever', '(C) wants', '(D) to read it'], answer: 1, why: 'wants の主語になるので主格：whoever wants to read it。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

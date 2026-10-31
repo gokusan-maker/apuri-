@@ -3273,3 +3273,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉑（TOEFL・IELTS の書き言葉⑨：traffic・equipment・progress・evidence・news・scenery・weather・machinery など数えられない名詞）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「鳥とガラス」（環境・動物・until／非制限の which／that の空所）
 - 2026-10-31: キャラクター追加：クマノミン（クマノミ・いそぎんちゃくのおうちタマゴ・サポートのとくぎ）
+- 2026-10-31: 文法：入試の正誤問題㉘（関係詞・名詞節の難問：whether と that・同格の that・for which の重複・where と which・whoever）10問
