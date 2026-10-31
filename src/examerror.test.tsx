@@ -477,3 +477,10 @@ it('正誤問題㊲：まぎらわしい語の使い分けの単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[9].choices[u.questions[9].answer]).toBe('(A) principle')
 })
+
+it('誤文訂正㉛：共通テストレベル（語法の総復習）の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-31')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('listened to')
+})

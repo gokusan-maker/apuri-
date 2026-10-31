@@ -3330,3 +3330,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊲（まぎらわしい語：affect/effect・advise/advice・fewer/less・lose/loose・its・their・than・rise/raise・except・principal）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「人と自然が出会う場所（里山）」（自然・森・非制限の which／that／in which の空所）
 - 2026-10-31: キャラクター追加：ヘラジカン（ヘラジカ・きたのもりのおおつのタマゴ・まもりのとくぎ）
+- 2026-10-31: 文法：入試の誤文訂正㉛（共通テストレベル：tell me・listen to・wait for・get to・look for・told・go home・enjoy oneself・It takes・Thank you for）10問

@@ -1410,6 +1410,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Fortunately, this medicine has no side [affects].', choices: ['effects', 'affections', 'affected', 'effecting'], answer: 0, why: '「副作用」は side effects。名詞なので effect。' },
     ],
   },
+  {
+    id: 'exam-fix-31',
+    title: '入試の誤文訂正㉛（共通テストレベル：語法の総復習）',
+    points: ['tell 人、listen to、wait for、get to、look for、tell と say、go home、enjoy oneself、It takes 人 時間 to ～、Thank you for -ing など、共通テストの土台になる動詞の語法の総復習。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It takes me two hours to get there.', ja: 'そこへ行くのに2時間かかる。（時間がかかる → take）' }],
+    questions: [
+      { sentence: 'Please [tell to me] the truth.', choices: ['tell me', 'say me', 'tell for me', 'speak me'], answer: 0, why: 'tell ＋人＋物「人に～を話す」：tell me the truth。' },
+      { sentence: 'I [listened] music in my room last night.', choices: ['listened to', 'heard to', 'listened at', 'was listen'], answer: 0, why: '「～を聞く」は listen to ～。' },
+      { sentence: 'She [waited] the bus for an hour.', choices: ['waited for', 'waited to', 'waited at', 'was waiting'], answer: 0, why: '「～を待つ」は wait for ～。' },
+      { sentence: 'We [got] the station at noon.', choices: ['got to', 'got at', 'got in', 'get'], answer: 0, why: '「～に着く」は get to ～（arrive at ～・reach ～ も可）。' },
+      { sentence: 'I [look] my keys everywhere, but I couldn\'t find them.', choices: ['looked for', 'looked', 'looked at', 'look to'], answer: 0, why: '「～をさがす」は look for ～。couldn\'t と時制をそろえて過去形。' },
+      { sentence: 'He [said] me a funny story.', choices: ['told', 'spoke', 'talked', 'said to'], answer: 0, why: '「人に話を話す」は tell ＋人＋物：told me a funny story。say は人を目的語にとらない。' },
+      { sentence: 'I was tired, so I [went to home] early.', choices: ['went home', 'went at home', 'go to home', 'went the home'], answer: 0, why: 'home は「家へ」という副詞なので to はいらない：went home。' },
+      { sentence: 'We [enjoyed] at the party last night.', choices: ['enjoyed ourselves', 'enjoyed us', 'enjoyed with', 'were enjoyed'], answer: 0, why: 'enjoy は他動詞で目的語が必要：enjoy oneself「楽しく過ごす」。' },
+      { sentence: 'It [spends] me two hours to get to the city.', choices: ['takes', 'costs time', 'spend', 'uses'], answer: 0, why: '「（人に）時間がかかる」は It takes 人 時間 to ～。' },
+      { sentence: 'Thank you [to help] me with my homework.', choices: ['for helping', 'to helping', 'helping for', 'for help'], answer: 0, why: 'Thank you for -ing「～してくれてありがとう」：for helping me。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
