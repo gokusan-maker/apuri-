@@ -1001,3 +1001,24 @@ it('デザイン163：ボス戦で10問以上正解して勝つと「📚 ○問
   play(240)
   expect(screen.getByLabelText('正解した問題の数').textContent).toMatch(/^📚 \d+問正解！$/)
 })
+
+it('デザイン169：ハートをへらさずに勝つと「❤️ ハート満タンで勝利！」が出る（へったら出ない）', () => {
+  localStorage.clear()
+  const win = (miss: boolean) => {
+    const r = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+    if (miss) {
+      answer(false)
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      answer(true)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    return r
+  }
+  const a = win(false)
+  expect(screen.getByLabelText('ハート満タンで勝利').textContent).toBe('❤️ ハート満タンで勝利！')
+  a.unmount()
+  win(true)
+  expect(screen.queryByLabelText('ハート満タンで勝利')).toBeNull()
+})

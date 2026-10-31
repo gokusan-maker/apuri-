@@ -898,6 +898,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {comboRecord && <span className="game-best" aria-label="コンボ新記録">🔥 コンボ新記録！</span>} {/* デザイン151 */}
             {todayWins >= 2 && <span aria-label="今日このボスに勝った回数">📅 今日{todayWins}回目の勝利</span>} {/* デザイン160 */}
             {corrects >= 10 && <strong className="game-best" style={{ fontSize: '1.15em' }} aria-label="正解した問題の数">📚 {corrects}問正解！</strong>} {/* デザイン163 */}
+            {hearts >= HEARTS && <span className="game-best" aria-label="ハート満タンで勝利">❤️ ハート満タンで勝利！</span>} {/* デザイン169 */}
             <span className={newRecord > 0 ? 'game-best' : undefined} aria-label={newRecord > 0 ? `最大ダメージ記録を更新！ ${newRecord}` : `最大ダメージ記録 ${loadMaxHit()}`}>
               💥 {newRecord > 0 ? `${newRecord} 更新！` : `最大 ${loadMaxHit()}`}
             </span>
