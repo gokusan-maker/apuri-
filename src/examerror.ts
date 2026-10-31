@@ -1010,6 +1010,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Tell me (A) what (B) you like better, (C) tea (D) or coffee.', choices: ['(A) what', '(B) you like better', '(C) tea', '(D) or coffee'], answer: 0, why: '決まった選択肢から選ぶので which。' },
     ],
   },
+  {
+    id: 'exam-error-quantity',
+    title: '入試の正誤問題㊹（数や量をあらわす表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the number of と a number of、fewer と less、much information、人口の large、Most ＋名詞、each of、分数の一致、percent、amount と number など、グラフや表を説明するときの表現。',
+    ],
+    examples: [
+      { en: 'A number of problems have been reported recently.', ja: '最近たくさんの問題が報告されている。' },
+      { en: 'A large amount of water is wasted every day.', ja: '毎日大量の水がむだにされている。' },
+    ],
+    questions: [
+      { sentence: 'The number (A) of students (B) are (C) increasing (D) every year.', choices: ['(A) of students', '(B) are', '(C) increasing', '(D) every year'], answer: 1, why: 'the number of ～ は単数あつかいなので is increasing。' },
+      { sentence: 'A number of (A) problems (B) has (C) been reported (D) recently.', choices: ['(A) problems', '(B) has', '(C) been reported', '(D) recently'], answer: 1, why: 'a number of ～ は複数あつかいなので have been reported。' },
+      { sentence: '(A) Less students (B) attended the class (C) this year (D) than last year.', choices: ['(A) Less students', '(B) attended the class', '(C) this year', '(D) than last year'], answer: 0, why: '数えられる名詞には fewer：Fewer students。' },
+      { sentence: 'We (A) do not have (B) many information (C) about (D) the project.', choices: ['(A) do not have', '(B) many information', '(C) about', '(D) the project'], answer: 1, why: 'information は数えられないので much information。' },
+      { sentence: 'The population (A) of India (B) is (C) more (D) than that of Japan.', choices: ['(A) of India', '(B) is', '(C) more', '(D) than that of Japan'], answer: 2, why: '人口の多さは large であらわす：is larger than。' },
+      { sentence: '(A) Most of students (B) passed (C) the test (D) last week.', choices: ['(A) Most of students', '(B) passed', '(C) the test', '(D) last week'], answer: 0, why: 'Most students か most of the students。' },
+      { sentence: 'Each of (A) the participants (B) were (C) given (D) a number.', choices: ['(A) the participants', '(B) were', '(C) given', '(D) a number'], answer: 1, why: 'each of ～ は単数あつかいなので was given。' },
+      { sentence: 'Two thirds (A) of the land (B) in this area (C) are covered (D) with forest.', choices: ['(A) of the land', '(B) in this area', '(C) are covered', '(D) with forest'], answer: 2, why: '分数 of ～ は of のあとの名詞に合わせる。the land は単数なので is covered。' },
+      { sentence: 'Sales (A) increased (B) last year (C) by (D) 10 percents.', choices: ['(A) increased', '(B) last year', '(C) by', '(D) 10 percents'], answer: 3, why: 'percent は数字のあとでも複数形にしない：10 percent。increased by は正しい。' },
+      { sentence: 'A large (A) number of water (B) is wasted (C) every day (D) in many homes.', choices: ['(A) number of water', '(B) is wasted', '(C) every day', '(D) in many homes'], answer: 0, why: '数えられない名詞 water の量は a large amount of。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
