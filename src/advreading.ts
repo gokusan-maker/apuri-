@@ -19072,6 +19072,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Seeing Through Things', 'How to Fix a Broken Bone', 'The History of Germany', 'Why Airports Are Busy'], answer: 0, why: '全体として、X線の発見、性質、危険、今日の利用を述べている。' },
   },
   {
+    id: 'kyotsu-tatami',
+    title: 'Living on Tatami',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Step into a traditional Japanese room, and one of the first things you may notice is the floor. Instead of wood or carpet, it is covered with tatami, thick rectangular mats with a smooth surface woven from dried rush grass. Many people say that a new tatami room has a fresh, grassy smell that makes them feel calm. For centuries, tatami have been an important part of Japanese homes and culture.",
+      "Tatami are so closely connected with Japanese life that they are even used to measure rooms. When people describe the size of a room, they often say that it is a six-mat or eight-mat room, using the number of tatami that would cover the floor. Because tatami have a fairly standard shape, this system allows people to imagine the size of a room quickly, although the exact size of a mat can vary slightly from region to region.",
+      "Tatami also have practical advantages that suit Japan's climate. The rush grass on the surface can absorb moisture from the air when it is humid and release it when the air is dry, ( A ) helps to keep a room comfortable through the hot, wet summer. Tatami are soft enough to sit and sleep on, and they absorb some sound, making rooms quieter. Traditionally, people sat directly on the floor, and many still remove their shoes before entering a tatami room.",
+      "In recent decades, however, the number of tatami rooms in new homes has decreased. Many people now prefer Western-style rooms with wooden floors, chairs, and beds, partly because they are easier to clean and partly because lifestyles have changed. Tatami also need care: they can be damaged by heavy furniture, and their surface must be replaced every several years. As a result, the number of craftspeople ( B ) make tatami by hand has fallen.",
+      "At the same time, tatami are attracting new interest. Some designers are creating small, light tatami mats that can be placed on wooden floors, and visitors from abroad often enjoy staying in hotel rooms with tatami. Tatami show ( C ) a traditional material can continue to have value in modern life when people find new ways to use it.",
+    ],
+    ja: [
+      '伝統的な日本の部屋に足をふみ入れると、最初に気づくものの一つは床かもしれない。木やカーペットではなく、かわかしたイグサで織ったなめらかな表面をもつ、厚い長方形のマットである畳がしきつめられている。新しい畳の部屋には、心を落ち着かせるすがすがしい草のかおりがあると言う人が多い。何世紀にもわたって、畳は日本の家と文化の大切な一部であった。',
+      '畳は日本の生活と深く結びついているので、部屋の大きさをはかるのにさえ使われる。部屋の広さを説明するとき、人々はしばしば、床をおおう畳の数を使って6畳や8畳の部屋だと言う。畳はかなり決まった形をしているので、このしくみによって部屋の大きさをすぐに思いうかべられる。ただし、1枚の畳の正確な大きさは地域によって少しちがうことがある。',
+      '畳には、日本の気候に合った実用的な利点もある。表面のイグサは、しめっているときには空気中の水分をすい、かわいているときにはそれを出すことができ、そのことが暑くてじめじめした夏のあいだ部屋を快適に保つのに役立つ。畳はすわったりねたりできるほどやわらかく、音もいくらかすいこむので、部屋を静かにする。伝統的に人々は床にじかにすわり、今も多くの人が畳の部屋に入る前にくつをぬぐ。',
+      'しかしここ数十年、新しい家の畳の部屋の数はへってきた。多くの人が今では、木の床やいす、ベッドのある洋風の部屋を好む。その理由の一つはそうじがしやすいことであり、もう一つは生活のしかたが変わったことである。畳には手入れも必要である。重い家具で傷むことがあり、表面は数年ごとに張りかえなければならない。その結果、手で畳を作る職人の数はへってきた。',
+      '同時に、畳は新しい関心も集めている。木の床の上に置ける小さく軽い畳を作るデザイナーもおり、外国からの訪問者は畳のあるホテルの部屋にとまるのを楽しむことが多い。畳は、人々が新しい使い方を見つけるとき、伝統的な素材が現代の生活でも価値をもちつづけられることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（水分をすったり出したりすること）を受け、helps の主語になるので which。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 craftspeople（人）を受け、うしろの make の主語になるので主格の関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '畳の表面は、かわかしたイグサで織られている。', answer: true, why: '第1段落 woven from dried rush grass。' },
+      { statement: '1枚の畳の大きさは、どの地域でもまったく同じである。', answer: false, why: '第2段落 the exact size of a mat can vary slightly from region to region。' },
+      { statement: '畳は、しめっているときに空気中の水分をすうことができる。', answer: true, why: '第3段落 can absorb moisture from the air when it is humid。' },
+      { statement: '筆者によれば、畳の表面は一度作れば張りかえる必要がない。', answer: false, why: '第4段落 their surface must be replaced every several years。' },
+    ],
+    qa: [
+      { q: 'How do people often describe the size of a room in Japan?', choices: ['By the number of tatami that would cover the floor.', 'By the number of windows.', 'By the height of the ceiling.', 'By the number of doors.'], answer: 0, why: '第2段落 using the number of tatami that would cover the floor。' },
+      { q: 'Why have fewer tatami rooms been built in new homes?', choices: ['Many people prefer Western-style rooms that are easier to clean.', 'Tatami became illegal.', 'Rush grass is no longer grown anywhere.', 'Tatami are too hard to sleep on.'], answer: 0, why: '第4段落 Many people now prefer Western-style rooms … partly because they are easier to clean。' },
+    ],
+    gist: [
+      { para: 1, choices: ['畳を使った部屋の大きさのはかり方', '地図の読み方', '家の値段の決め方', '地域のことば'], answer: 0, why: '第2段落は、6畳・8畳のように畳の数で部屋の大きさを表すしくみを述べている。' },
+      { para: 3, choices: ['畳の部屋がへった理由と手入れ', '家具の作り方', 'ベッドの選び方', '職人の給料'], answer: 0, why: '第4段落は、洋風の部屋が好まれ、畳の手入れも必要なため、畳の部屋や職人がへったことを述べている。' },
+    ],
+    titleQ: { choices: ['Living on Tatami', 'How to Build a Wooden Floor', 'The History of Hotels', 'Why Grass Grows in Summer'], answer: 0, why: '全体として、畳の特徴・部屋の大きさのはかり方・利点・へっている現状・新しい関心を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
