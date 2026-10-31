@@ -638,3 +638,10 @@ it('誤文訂正㊷：つなぎのことばの単元が10問ある', async () =>
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('or')
 })
+
+it('正誤問題㊾：つなぎのことばの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-linking')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) however')
+})

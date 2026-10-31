@@ -1130,6 +1130,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Let’s discuss about (B) the plan (C) after (D) lunch.', choices: ['(A) Let’s discuss about', '(B) the plan', '(C) after', '(D) lunch'], answer: 0, why: 'discuss は他動詞なので about はいらない：discuss the plan。' },
     ],
   },
+  {
+    id: 'exam-error-linking',
+    title: '入試の正誤問題㊾（つなぎのことば）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'however と but、命令文, or、such as、In spite of と Despite、because と because of、Therefore・In addition・Nevertheless のあとの文の形、while による対比など、文と文をつなぐ表現。',
+    ],
+    examples: [
+      { en: 'He was very tired, but he kept working.', ja: '彼はとてもつかれていたが、働きつづけた。' },
+      { en: 'Hurry up, or you will miss the bus.', ja: '急ぎなさい、さもないとバスにおくれますよ。' },
+    ],
+    questions: [
+      { sentence: 'He (A) was very tired, (B) however (C) he kept (D) working.', choices: ['(A) was very tired', '(B) however', '(C) he kept', '(D) working'], answer: 1, why: 'however は副詞なのでコンマだけで文をつなげない：but he kept working。' },
+      { sentence: '(A) Hurry up, (B) and (C) you will miss (D) the bus.', choices: ['(A) Hurry up', '(B) and', '(C) you will miss', '(D) the bus'], answer: 1, why: '「さもないと」は命令文, or：Hurry up, or you will miss the bus。' },
+      { sentence: 'Some animals, (A) such (B) dolphins, (C) are (D) very intelligent.', choices: ['(A) such', '(B) dolphins', '(C) are', '(D) very intelligent'], answer: 0, why: '例をあげるのは such as：such as dolphins。' },
+      { sentence: '(A) In spite (B) the bad weather, (C) we (D) went out.', choices: ['(A) In spite', '(B) the bad weather', '(C) we', '(D) went out'], answer: 0, why: '前置詞句は In spite of ～：In spite of the bad weather。' },
+      { sentence: 'The project (A) failed (B) mainly (C) because of (D) it lacked money.', choices: ['(A) failed', '(B) mainly', '(C) because of', '(D) it lacked money'], answer: 2, why: 'うしろが文なので接続詞 because：because it lacked money。' },
+      { sentence: '(A) Despite of (B) the rain, (C) the event (D) was held.', choices: ['(A) Despite of', '(B) the rain', '(C) the event', '(D) was held'], answer: 0, why: 'Despite には of をつけない：Despite the rain。' },
+      { sentence: 'It rained (A) heavily. (B) Therefore, (C) the game (D) canceled.', choices: ['(A) heavily', '(B) Therefore', '(C) the game', '(D) canceled'], answer: 3, why: '試合は「中止される」側なので受け身：was canceled。' },
+      { sentence: 'The hotel (A) was clean. (B) In addition, (C) the rooms (D) was very large.', choices: ['(A) was clean', '(B) In addition', '(C) the rooms', '(D) was very large'], answer: 3, why: '主語 the rooms は複数なので were very large。' },
+      { sentence: 'The experiment (A) had problems. (B) Although, (C) the results (D) were useful.', choices: ['(A) had problems', '(B) Although', '(C) the results', '(D) were useful'], answer: 1, why: 'Although は接続詞なので単独で使えない：Nevertheless, the results were useful。' },
+      { sentence: 'Cities (A) are noisy, (B) while (C) the countryside (D) are quiet.', choices: ['(A) are noisy', '(B) while', '(C) the countryside', '(D) are quiet'], answer: 3, why: 'the countryside は単数なので is quiet。while「～なのに対して」は正しい。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

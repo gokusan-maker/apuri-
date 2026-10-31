@@ -3400,3 +3400,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㊷（TOEFL・IELTS の書き言葉⑰：However・Therefore・In addition・命令文, or・but と however・such as・Nevertheless・In spite of・because・In contrast）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「ポケットの中の電気（電池）」（科学・技術・非制限の which／if ～ be to／one of の空所）
 - 2026-10-31: デザイン：ガチャで今日のピックアップの子が出たら「🎯 ピックアップ当たり！」を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㊾（つなぎのことば：however と but・命令文, or・such as・In spite of・because・Despite・Therefore のあとの受け身・Nevertheless・while）10問
