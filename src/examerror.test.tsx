@@ -736,3 +736,10 @@ it('誤文訂正㊾：倒置・省略・挿入の単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('have I seen')
 })
+
+it('正誤問題〈56〉：倒置・省略・挿入の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-hard5')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) I have seen')
+})

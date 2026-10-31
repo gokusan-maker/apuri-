@@ -1298,6 +1298,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) have (B) ever (C) seen (D) a real panda.', choices: ['(A) have', '(B) ever', '(C) seen', '(D) a real panda'], answer: 1, why: 'ever は肯定文で使わない：have never seen。' },
     ],
   },
+  {
+    id: 'exam-error-hard5',
+    title: '入試の正誤問題〈56〉（医学部・難関大レベル⑤：倒置・省略・挿入）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'Never・Only・So・Little が文頭に出たときの倒置、Should you・Were I（if を省いた倒置）、While waiting・if necessary の省略、who I think の挿入、Here comes など、難関大学でよく問われる特別な語順。',
+    ],
+    examples: [
+      { en: 'So severe was the pain that she could not sleep.', ja: '痛みがあまりにひどかったので、彼女はねむれなかった。' },
+      { en: 'Call the doctor at once if necessary.', ja: '必要なら、すぐに医者をよびなさい。' },
+    ],
+    questions: [
+      { sentence: 'Never (A) in my life (B) I have seen (C) such (D) a strange disease.', choices: ['(A) in my life', '(B) I have seen', '(C) such', '(D) a strange disease'], answer: 1, why: '否定の Never が文頭なので倒置：have I seen。' },
+      { sentence: '(A) Only after (B) the test (C) he realized (D) his mistake.', choices: ['(A) Only after', '(B) the test', '(C) he realized', '(D) his mistake'], answer: 2, why: 'Only ～ が文頭なので倒置：did he realize。' },
+      { sentence: 'So (A) severe (B) the pain was (C) that she (D) could not sleep.', choices: ['(A) severe', '(B) the pain was', '(C) that she', '(D) could not sleep'], answer: 1, why: 'So ＋形容詞が文頭なので倒置：was the pain。' },
+      { sentence: 'Please (A) call us (B) at any time (C) if should you (D) have any questions.', choices: ['(A) call us', '(B) at any time', '(C) if should you', '(D) have any questions'], answer: 2, why: 'if を省いた倒置 Should you have ～ か、if you should have ～ のどちらか。if と倒置はいっしょに使わない。' },
+      { sentence: 'I (A) would (B) accept (C) the offer (D) was I you.', choices: ['(A) would', '(B) accept', '(C) the offer', '(D) was I you'], answer: 3, why: 'If I were you の倒置は were I you。' },
+      { sentence: '(A) Little he knew (B) that (C) the result (D) would change his life.', choices: ['(A) Little he knew', '(B) that', '(C) the result', '(D) would change his life'], answer: 0, why: '否定の Little が文頭なので倒置：Little did he know。' },
+      { sentence: '(A) While was waiting (B) for (C) the bus, I (D) read a book.', choices: ['(A) While was waiting', '(B) for', '(C) the bus, I', '(D) read a book'], answer: 0, why: '主語と be 動詞を省いて While waiting。' },
+      { sentence: 'The patient, (A) whom I think (B) is recovering, (C) will leave (D) soon.', choices: ['(A) whom I think', '(B) is recovering', '(C) will leave', '(D) soon'], answer: 0, why: 'is recovering の主語なので主格 who I think。' },
+      { sentence: '(A) Call the doctor (B) at once (C) if (D) it necessary.', choices: ['(A) Call the doctor', '(B) at once', '(C) if', '(D) it necessary'], answer: 3, why: 'if (it is) necessary の it is を省く：if necessary。' },
+      { sentence: 'Look! Here (A) the bus comes (B) at last, (C) so let’s (D) get on.', choices: ['(A) the bus comes', '(B) at last', '(C) so let’s', '(D) get on'], answer: 0, why: 'Here のあとが名詞なので倒置：Here comes the bus。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
