@@ -885,3 +885,9 @@ it('本番の長さの長文：共通テスト評論の「イディオム」は3
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：共通テスト評論の「雨水の利用」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-rainwater')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})

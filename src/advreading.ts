@@ -19657,6 +19657,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['More Than the Sum of Words', 'How to Bake a Cake', 'The History of Sailing', 'Why Cats Are Busy'], answer: 0, why: '全体として、単語の意味を足しただけではわからないイディオムのむずかしさと、文化を映す面、学び方を述べている。' },
   },
   {
+    id: 'kyotsu-rainwater',
+    title: 'Catching the Rain',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When it rains, most of the water that falls on a city runs off roofs and roads into drains and is quickly carried away. For a long time, this was seen as the best way to deal with rain. However, as the demand for water grows and droughts become more common in some regions, more and more people are beginning to see rainwater not as a problem to remove but as a resource to collect and use.",
+      "The idea of collecting rainwater is very old. In many dry parts of the world, people have stored rain in tanks or underground containers for thousands of years. Today, the basic method is still simple. Rain falls on a roof, flows through pipes, and is stored in a tank. The water can then be used for purposes ( A ) do not require drinking water, such as flushing toilets, washing cars, and watering gardens.",
+      "Using rainwater in this way has several advantages. First, it reduces the amount of treated tap water that households and businesses use. Treating and pumping tap water requires a lot of energy, so saving it also helps to reduce energy use. Second, when rain is stored instead of running straight into drains, it can help prevent flooding during heavy storms. In some cities, large buildings such as schools and stadiums have big underground tanks ( B ) hold rainwater for these reasons.",
+      "Rainwater can also be valuable in emergencies. After an earthquake or a typhoon, the water supply may stop for days. In such situations, stored rainwater can be used for toilets and cleaning, so that bottled water can be saved for drinking. For this reason, some local governments encourage residents to set up small rain tanks at home and even help to pay for them.",
+      "Of course, collecting rainwater has its limits. In areas with little rain, a tank may stay empty for long periods. Tanks must be cleaned regularly, and rainwater should not be used for drinking unless it has been properly treated. Still, many experts believe ( C ) rainwater collection will become increasingly important as climate change makes rainfall more unpredictable. Learning to catch and use the rain that falls on our homes is a small but practical step toward using water more wisely.",
+    ],
+    ja: [
+      '雨がふると、都市に落ちる水のほとんどは屋根や道路から排水口へ流れこみ、すぐに運び去られる。長いあいだ、これが雨に対処する最もよい方法だと考えられてきた。しかし、水の需要がふえ、地域によっては干ばつが多くなるにつれて、雨水を取りのぞくべき問題ではなく、集めて使う資源と考える人がふえている。',
+      '雨水を集めるという考えはとても古い。世界の多くのかわいた地域では、人々は何千年も前から雨をタンクや地下の入れ物にためてきた。今日でも、基本的な方法はかんたんである。雨が屋根に落ち、管を通って流れ、タンクにためられる。その水は、トイレを流す、車をあらう、庭に水をまくなど、飲み水を必要としない目的に使うことができる。',
+      'このように雨水を使うことにはいくつかの利点がある。第一に、家庭や会社が使う、処理された水道水の量がへる。水道水を処理してポンプで送るには多くのエネルギーが必要なので、水道水を節約することはエネルギーの使用をへらすことにも役立つ。第二に、雨がそのまま排水口に流れこまずにためられると、激しいあらしのときに洪水をふせぐのに役立つ。都市によっては、学校や競技場などの大きな建物が、こうした理由で雨水をためる大きな地下タンクをもっている。',
+      '雨水は非常時にも役に立つ。地震や台風のあと、水道が何日も止まることがある。そのようなときには、ためた雨水をトイレやそうじに使い、ペットボトルの水を飲むためにとっておくことができる。このため、住民に家に小さな雨水タンクを置くようすすめ、その費用の一部を出す自治体もある。',
+      'もちろん、雨水を集めることには限界もある。雨の少ない地域では、タンクが長いあいだ空のままかもしれない。タンクは定期的にそうじしなければならず、雨水はきちんと処理しないかぎり飲むのに使うべきではない。それでも、多くの専門家は、気候変動で雨のふり方が予測しにくくなるにつれて、雨水を集めることはますます大切になると考えている。家にふる雨を受けとめて使えるようになることは、水をもっとかしこく使うための小さいけれども実際的な一歩である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 purposes（もの）を受け、do not require の主語になる関係代名詞 that。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 big underground tanks を受け、hold の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'if'], answer: 0, why: 'believe that ～「～だと考える」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '雨水を集めるという考えは、最近になって生まれた。', answer: false, why: '第2段落 The idea of collecting rainwater is very old。' },
+      { statement: '雨水をためると、激しいあらしのときの洪水をふせぐのに役立つ。', answer: true, why: '第3段落 it can help prevent flooding during heavy storms。' },
+      { statement: '雨水タンクの費用の一部を出す自治体もある。', answer: true, why: '第4段落 even help to pay for them。' },
+      { statement: '筆者によれば、雨水はそのまま飲んでもよい。', answer: false, why: '第5段落 rainwater should not be used for drinking unless it has been properly treated。' },
+    ],
+    qa: [
+      { q: 'Why does saving tap water also help reduce energy use?', choices: ['Treating and pumping tap water requires a lot of energy.', 'Rainwater produces electricity.', 'Tanks are made of solar panels.', 'People take shorter showers.'], answer: 0, why: '第3段落 Treating and pumping tap water requires a lot of energy。' },
+      { q: 'How can stored rainwater be used after a disaster?', choices: ['For toilets and cleaning, so bottled water can be saved for drinking.', 'For drinking without any treatment.', 'For putting out large fires only.', 'For selling to other cities.'], answer: 0, why: '第4段落 stored rainwater can be used for toilets and cleaning, so that bottled water can be saved for drinking。' },
+    ],
+    gist: [
+      { para: 2, choices: ['雨水を使う利点', 'タンクのそうじ方法', '水道料金の歴史', '競技場の建て方'], answer: 0, why: '第3段落は、水道水とエネルギーの節約、洪水をふせぐという利点を述べている。' },
+      { para: 4, choices: ['雨水を集めることの限界と今後の重要性', '雨のふらない国の文化', '飲み水のつくり方', '天気予報の正確さ'], answer: 0, why: '第5段落は、限界をあげつつ、今後ますます大切になると述べている。' },
+    ],
+    titleQ: { choices: ['Catching the Rain', 'Why Cities Need More Roads', 'The History of Bottled Water', 'How Typhoons Are Formed'], answer: 0, why: '全体として、雨水を集めて使うことの歴史、利点、非常時の役割、限界を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
