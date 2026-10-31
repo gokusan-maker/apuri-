@@ -1394,6 +1394,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The price (A) of vegetables (B) has (C) raised (D) a lot this year.', choices: ['(A) of vegetables', '(B) has', '(C) raised', '(D) a lot this year'], answer: 2, why: '「（値段が）上がる」は自動詞 rise：has risen。' },
     ],
   },
+  {
+    id: 'exam-error-subj2',
+    title: '入試の正誤問題〈60〉（共通テストレベル：仮定法の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'I wish、as if ＋過去完了、It’s time ＋過去形、But for、仮定法過去完了、If it were not for、would rather、If only、Had I known、混合仮定法など、仮定法のまとめ。',
+    ],
+    examples: [
+      { en: 'It’s time you went to bed.', ja: 'もうねる時間ですよ。' },
+      { en: 'Had I known the truth, I would have told you.', ja: '本当のことを知っていたら、あなたに話したのに。' },
+    ],
+    questions: [
+      { sentence: 'I (A) really (B) wish (C) I (D) am taller.', choices: ['(A) really', '(B) wish', '(C) I', '(D) am taller'], answer: 3, why: 'I wish のあとは仮定法過去：I were taller。' },
+      { sentence: 'He (A) looked (B) as if (C) he has seen (D) a ghost.', choices: ['(A) looked', '(B) as if', '(C) he has seen', '(D) a ghost'], answer: 2, why: '過去より前のことなので as if he had seen。' },
+      { sentence: 'It’s (A) already late. (B) It’s time (C) you go (D) to bed.', choices: ['(A) already late', '(B) It’s time', '(C) you go', '(D) to bed'], answer: 2, why: 'It’s time ＋主語＋過去形：you went to bed。' },
+      { sentence: 'But for (A) his help, (B) I (C) will fail (D) the exam.', choices: ['(A) his help', '(B) I', '(C) will fail', '(D) the exam'], answer: 2, why: 'But for ～ は仮定法なので would fail。' },
+      { sentence: 'If I (A) knew (B) about it yesterday, I (C) would have helped (D) you.', choices: ['(A) knew', '(B) about it yesterday, I', '(C) would have helped', '(D) you'], answer: 0, why: '過去の事実と反対なので If I had known。' },
+      { sentence: 'If it (A) is not for (B) the sun, (C) no living things (D) could exist.', choices: ['(A) is not for', '(B) the sun', '(C) no living things', '(D) could exist'], answer: 0, why: 'If it were not for ～。' },
+      { sentence: 'I would rather (A) you (B) don’t tell (C) anyone (D) about this.', choices: ['(A) you', '(B) don’t tell', '(C) anyone', '(D) about this'], answer: 1, why: 'would rather ＋主語＋過去形：you didn’t tell。' },
+      { sentence: 'If only (A) I can (B) fly (C) like (D) a bird!', choices: ['(A) I can', '(B) fly', '(C) like', '(D) a bird'], answer: 0, why: 'If only は仮定法なので I could fly。' },
+      { sentence: 'Had I (A) know (B) the truth, (C) I would have (D) told you.', choices: ['(A) know', '(B) the truth', '(C) I would have', '(D) told you'], answer: 0, why: 'Had I known（If I had known の倒置）。' },
+      { sentence: 'If he (A) had taken the medicine (B) last week, he (C) would (D) have been healthy now.', choices: ['(A) had taken the medicine', '(B) last week, he', '(C) would', '(D) have been healthy now'], answer: 3, why: 'now の結果なので would be healthy（混合仮定法）：(D) を be healthy now に。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
