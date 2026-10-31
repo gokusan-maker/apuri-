@@ -3403,3 +3403,4 @@
 - 2026-10-31: 文法：入試の正誤問題㊾（つなぎのことば：however と but・命令文, or・such as・In spite of・because・Despite・Therefore のあとの受け身・Nevertheless・while）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「習慣が毎日をつくる」（心理・学び・非制限の which／even when／until の空所）
 - 2026-10-31: キャラクター：アトリの「アトリン」を追加（とくぎ：むれのまもり）
+- 2026-10-31: 文法：入試の誤文訂正㊸（国公立レベル：advice・furniture・スポーツと冠詞・by bus・an honest・help yourself・mine・the other・others・There is ＋数えられない名詞）10問

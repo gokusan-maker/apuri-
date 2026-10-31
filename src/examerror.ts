@@ -1914,6 +1914,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Cities are noisy. [On the contrary], the countryside is quiet.', choices: ['In contrast', 'Therefore', 'For example', 'In addition'], answer: 0, why: '2つのものを対比するのは In contrast。On the contrary は「それどころか（前の内容を打ち消す）」。' },
     ],
   },
+  {
+    id: 'exam-fix-43',
+    title: '入試の誤文訂正㊸（国公立レベル：名詞・冠詞・代名詞の総まとめ）',
+    points: ['数えられない名詞（advice・furniture・water）、スポーツ名に冠詞をつけない、by ＋交通手段、母音の音で始まる語の前の an、help yourself、所有代名詞 mine、2つのうちの残り the other、ほかの人々 others など、名詞・冠詞・代名詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She gave me some advice.', ja: '彼女は私にアドバイスをくれた。' }],
+    questions: [
+      { sentence: 'She gave me [an advice] about my future.', choices: ['some advice', 'an advices', 'a advice', 'many advice'], answer: 0, why: 'advice は数えられない名詞なので a／an や複数形にしない：some advice（1つなら a piece of advice）。' },
+      { sentence: 'I bought [a furniture] for my new room.', choices: ['some furniture', 'furnitures', 'a furnitures', 'many furniture'], answer: 0, why: 'furniture は数えられない名詞（家具類）：some furniture。' },
+      { sentence: 'He plays [the soccer] every day after school.', choices: ['soccer', 'a soccer', 'the soccers', 'soccers'], answer: 0, why: 'スポーツの名前には冠詞をつけない：play soccer。' },
+      { sentence: 'I usually go to school by [a bus].', choices: ['bus', 'the bus', 'buses', 'a buses'], answer: 0, why: 'by ＋交通手段では冠詞をつけない：by bus・by train。' },
+      { sentence: 'He is [a] honest man.', choices: ['an', 'the an', 'an a', 'a the'], answer: 0, why: 'honest の h は発音しないので母音の音で始まる：an honest man。' },
+      { sentence: 'Please help [you] to the cake.', choices: ['yourself', 'your', 'yours', 'you self'], answer: 0, why: 'help oneself to ～「～を自由にとって食べる」：help yourself to the cake。' },
+      { sentence: 'This bag is not yours. It is [my].', choices: ['mine', 'me', 'my one', 'myself'], answer: 0, why: '「私のもの」は所有代名詞 mine。' },
+      { sentence: 'I have two sisters. One lives in Tokyo, and [another] lives in Osaka.', choices: ['the other', 'other', 'others', 'the others'], answer: 0, why: '2つ（2人）のうち、1つが one なら残りの1つは the other。' },
+      { sentence: 'Some people like tea; [other] prefer coffee.', choices: ['others', 'another', 'the other', 'other one'], answer: 0, why: 'Some ～, others …「～な人もいれば…な人もいる」。others は「ほかの人々」。' },
+      { sentence: 'There [are] much water in the bottle.', choices: ['is', 'be', 'are being', 'were'], answer: 0, why: 'water は数えられない名詞で単数あつかいなので There is much water。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
