@@ -1536,6 +1536,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Life in cities differs [with] life in the countryside in many ways.', choices: ['from', 'than', 'against', 'to'], answer: 0, why: '「～とちがう」は differ from ～。' },
     ],
   },
+  {
+    id: 'exam-fix-34',
+    title: '入試の誤文訂正㉞（共通テストレベル：時制と仮定法の総復習）',
+    points: ['過去をあらわす語句と過去形、by the time と過去完了、時・条件の副詞節の現在形、仮定法過去（If I were）、仮定法過去完了、I wish ＋過去形、状態動詞は進行形にしない、have been to（経験）、Without ～ の仮定法など、時制と仮定法のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'If she had studied harder, she would have passed the exam.', ja: 'もっと一生けんめい勉強していたら、彼女は試験に受かっていただろう。' }],
+    questions: [
+      { sentence: 'I [have lived] in Osaka when I was a child.', choices: ['lived', 'have been living', 'am living', 'live'], answer: 0, why: 'when I was a child（はっきりした過去）があるので現在完了は使えず過去形 lived。' },
+      { sentence: 'By the time we arrived, the movie [already started].', choices: ['had already started', 'has already started', 'already starts', 'was already start'], answer: 0, why: '過去のある時（we arrived）までに終わっていたことは過去完了：had already started。' },
+      { sentence: 'If it [will rain] tomorrow, the game will be canceled.', choices: ['rains', 'rained', 'will be raining', 'would rain'], answer: 0, why: '条件をあらわす if 節では、未来のことも現在形：If it rains tomorrow。' },
+      { sentence: 'If I [am] you, I would apologize to her.', choices: ['were', 'had been', 'will be', 'have been'], answer: 0, why: '今の事実と反対の仮定（仮定法過去）は If I were you, I would ～。' },
+      { sentence: 'If she had studied harder, she [would pass] the exam last year.', choices: ['would have passed', 'will pass', 'had passed', 'passes'], answer: 0, why: '過去の事実と反対の仮定（仮定法過去完了）なので主節は would have ＋過去分詞。' },
+      { sentence: 'I wish I [can] speak French.', choices: ['could', 'will', 'can be', 'would can'], answer: 0, why: 'I wish のあとは、今かなわない願いを仮定法過去であらわす：I wish I could speak French。' },
+      { sentence: 'I [am knowing] the answer to this question.', choices: ['know', 'have been knowing', 'was knowing', 'am known'], answer: 0, why: 'know は状態をあらわす動詞なので、ふつう進行形にしない：I know the answer。' },
+      { sentence: 'She [has gone] to Paris three times.', choices: ['has been', 'has went', 'goes', 'is going'], answer: 0, why: '「～へ行ったことがある」（経験）は have been to ～。has gone to は「行ってしまって今いない」。' },
+      { sentence: 'I will call you as soon as I [will get] home.', choices: ['get', 'got', 'will have got', 'am get'], answer: 0, why: '時をあらわす as soon as の節では、未来のことも現在形：as soon as I get home。' },
+      { sentence: 'Without your help, I [could not finish] the work yesterday.', choices: ['could not have finished', 'cannot finish', 'will not finish', 'could not finishing'], answer: 0, why: 'yesterday（過去）のことを「～がなかったら」と仮定するので could not have ＋過去分詞。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

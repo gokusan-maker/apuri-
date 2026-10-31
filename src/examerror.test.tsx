@@ -519,3 +519,10 @@ it('正誤問題㊵：比べる・対比する表現の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[2].choices[u.questions[2].answer]).toBe('(A) is more superior')
 })
+
+it('誤文訂正㉞：時制と仮定法の総復習の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-34')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('were')
+})
