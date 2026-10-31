@@ -21217,6 +21217,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Body’s Largest Organ', 'How to Cure a Cold', 'The History of Sunscreen', 'Why We Exercise'], answer: 0, why: '全体として、皮ふの守る・体温を調節する・感じるはたらきと、日光との関係、世話のしかたを述べている。' },
   },
   {
+    id: 'kyotsu-passwords',
+    title: 'Keeping Our Accounts Safe',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Most of us have dozens of online accounts: for email, shopping, social media, games, and school or work. Each account is protected by a password, a secret word or phrase that proves we are who we say we are. Yet many people choose passwords that are easy to guess, or use the same one for every account. Understanding why this is risky can help us protect our personal information.",
+      "Criminals who try to break into accounts often use computer programs that can test millions of possible passwords very quickly. Simple passwords, such as “123456” or a common word, can be discovered in seconds. Passwords based on personal information, like a birthday or a pet’s name, are also dangerous, because such details can sometimes be found on social media. The longer and more unusual a password is, ( A ) harder it is to guess.",
+      "Using the same password for many accounts creates another problem. If one website is attacked and its passwords are stolen, criminals may try the same password on other popular sites. This means that a single leak can give someone access to a person’s email, shopping accounts, and even bank information. For this reason, experts strongly recommend using a different password for each important account.",
+      "Remembering many long passwords can be difficult, so experts suggest a few strategies. One is to use a passphrase, a series of several random words, ( B ) is long but easier to remember than a mix of random letters. Another is to use a password manager, a program that stores passwords safely and can create strong ones automatically. In addition, many services now offer two-step verification, which requires a second check, such as a code sent to a phone, before allowing someone to log in.",
+      "Of course, no system is completely safe, and people must also be careful about messages that try to trick them into revealing their passwords. A sensible rule is never to enter a password on a website reached through a suspicious link. Protecting our accounts may seem like a small task, but in a world where so much of our lives takes place online, it is one of the most important habits we can develop. Taking a few minutes to improve our passwords today can prevent serious problems ( C ) the future.",
+    ],
+    ja: [
+      '私たちのほとんどは、メールや買い物、SNS、ゲーム、学校や仕事のために何十ものオンラインのアカウントをもっている。それぞれのアカウントはパスワード、つまり自分が本人であることを証明する秘密のことばや語句で守られている。しかし、多くの人は推測しやすいパスワードを選んだり、すべてのアカウントで同じものを使ったりしている。なぜこれが危険なのかを理解することは、個人の情報を守るのに役立つ。',
+      'アカウントに入りこもうとする犯罪者は、何百万ものパスワードの候補をとても速くためせるコンピューターのプログラムを使うことが多い。「123456」やよくあることばのようなかんたんなパスワードは、数秒で見破られることがある。誕生日やペットの名前のような個人の情報をもとにしたパスワードも危険である。そうした情報はSNSで見つけられることがあるからである。パスワードが長くめずらしいほど、推測するのはむずかしくなる。',
+      '多くのアカウントで同じパスワードを使うと、別の問題が生まれる。あるウェブサイトがおそわれてパスワードがぬすまれると、犯罪者はほかの人気のあるサイトで同じパスワードをためすかもしれない。つまり、1回のもれで、だれかがその人のメールや買い物のアカウント、さらには銀行の情報にまで入りこめるかもしれないのである。このため専門家は、大切なアカウントごとにちがうパスワードを使うことを強くすすめている。',
+      'たくさんの長いパスワードを覚えるのはむずかしいので、専門家はいくつかの方法をすすめている。1つは、いくつかのでたらめなことばをならべたパスフレーズを使うことで、それは長いが、でたらめな文字のまぜ合わせより覚えやすい。もう1つは、パスワードを安全に保存し、強いパスワードを自動でつくってくれるプログラムであるパスワード管理ソフトを使うことである。さらに、今では多くのサービスが2段階認証を用意しており、それはログインをみとめる前に、電話に送られるコードのような2回目の確認を求めるものである。',
+      'もちろん、完全に安全なしくみはなく、人々はパスワードを明かすようにだまそうとするメッセージにも注意しなければならない。あやしいリンクからたどりついたウェブサイトにはけっしてパスワードを入力しないというのは、かしこいきまりである。アカウントを守ることは小さな仕事に思えるかもしれないが、生活のこれほど多くがオンラインで行われる世界では、身につけられる最も大切な習慣の1つである。今日数分かけてパスワードをよりよくすることが、将来の深刻な問題をふせぐことができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['the', 'more', 'so', 'very'], answer: 0, why: 'The 比較級 ～, the 比較級 …「～すればするほど…」：the harder it is to guess。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで先行詞 a passphrase を受け、is の主語になる非制限用法の which。' },
+      { id: 'C', choices: ['in', 'at', 'on', 'by'], answer: 0, why: '「将来」は in the future。' },
+    ],
+    tf: [
+      { statement: 'かんたんなパスワードは、数秒で見破られることがある。', answer: true, why: '第2段落 Simple passwords ... can be discovered in seconds。' },
+      { statement: '誕生日をもとにしたパスワードは安全である。', answer: false, why: '第2段落 Passwords based on personal information, like a birthday ... are also dangerous。' },
+      { statement: '専門家は、大切なアカウントごとにちがうパスワードを使うようすすめている。', answer: true, why: '第3段落 experts strongly recommend using a different password for each important account。' },
+      { statement: '筆者によれば、完全に安全なしくみがある。', answer: false, why: '第5段落 no system is completely safe。' },
+    ],
+    qa: [
+      { q: 'What is two-step verification?', choices: ['A second check, such as a code sent to a phone, before logging in.', 'Using two passwords at the same time.', 'Changing the password twice a day.', 'Logging in from two computers.'], answer: 0, why: '第4段落 two-step verification, which requires a second check, such as a code sent to a phone。' },
+      { q: 'Why is using the same password for many accounts risky?', choices: ['A single leak can give access to many accounts.', 'It is hard to remember.', 'Websites do not allow it.', 'It makes the password shorter.'], answer: 0, why: '第3段落 a single leak can give someone access to a person’s email, shopping accounts, and even bank information。' },
+    ],
+    gist: [
+      { para: 1, choices: ['かんたんなパスワードが危険な理由', 'プログラムの作り方', 'SNSの使い方', 'ペットの名前のつけ方'], answer: 0, why: '第2段落は、プログラムで多くの候補をためせることと、かんたんなパスワードや個人情報の危険を述べている。' },
+      { para: 3, choices: ['パスワードを守るための方法', 'でたらめなことばの作り方', '電話の選び方', 'ログインの歴史'], answer: 0, why: '第4段落は、パスフレーズ、パスワード管理ソフト、2段階認証という方法を述べている。' },
+    ],
+    titleQ: { choices: ['Keeping Our Accounts Safe', 'How to Use Social Media', 'The History of Computers', 'Why Pets Need Names'], answer: 0, why: '全体として、パスワードの危険と、アカウントを守るための方法と心がまえを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
