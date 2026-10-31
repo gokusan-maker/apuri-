@@ -3279,3 +3279,4 @@
 - 2026-10-31: 文法：入試の誤文訂正㉒（動詞の語法の難問③：steal/rob・mention/enter/approach・prevent from・afford to・suit・deny -ing・apologize to）10問
 - 2026-10-31: 長文：共通テストの評論を本番の長さで「就職の面接の内側（第一印象・構造化面接）」（社会・仕事・非制限の which／because／whether の空所）
 - 2026-10-31: デザイン：ボス図鑑の見出しに、ノーミスでたおしたボスの割合（○%）を出すようにした
+- 2026-10-31: 文法：入試の正誤問題㉙（冠詞と数の一致：a European・a pair of shoes・one of the best players・another・as an engineer・at midnight・three times）10問

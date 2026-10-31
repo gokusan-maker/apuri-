@@ -650,6 +650,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I’ll give this book (A) to (B) whomever (C) wants (D) to read it.', choices: ['(A) to', '(B) whomever', '(C) wants', '(D) to read it'], answer: 1, why: 'wants の主語になるので主格：whoever wants to read it。' },
     ],
   },
+  {
+    id: 'exam-error-article',
+    title: '入試の正誤問題㉙（冠詞と数の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'a と an（発音で決まる）、a pair of ＋複数形、one of the ＋複数名詞、another、職業の a / an、midnight に the をつけない、the first time のあとの現在完了、回数の times、一般的な意味の名詞に the をつけない、に注目する。',
+    ],
+    examples: [
+      { en: 'He is one of the best players on the team.', ja: '彼はチームで最もうまい選手の1人だ。（one of the ＋複数名詞）' },
+      { en: 'My father works as an engineer.', ja: '父は技術者として働いている。（職業の名詞に an）' },
+    ],
+    questions: [
+      { sentence: 'She is (A) an (B) European (C) student (D) studying in Japan.', choices: ['(A) an', '(B) European', '(C) student', '(D) studying in Japan'], answer: 0, why: 'European は「ユ」と子音の音で始まるので a European。a / an は発音で決まる。' },
+      { sentence: 'I (A) bought (B) a pair of (C) shoe (D) yesterday.', choices: ['(A) bought', '(B) a pair of', '(C) shoe', '(D) yesterday'], answer: 2, why: 'a pair of のあとは複数形：a pair of shoes。' },
+      { sentence: 'He (A) is (B) one of the (C) best player (D) on the team.', choices: ['(A) is', '(B) one of the', '(C) best player', '(D) on the team'], answer: 2, why: 'one of the ＋最上級＋複数名詞：one of the best players。' },
+      { sentence: 'We (A) need (B) an another (C) chair (D) for the guest.', choices: ['(A) need', '(B) an another', '(C) chair', '(D) for the guest'], answer: 1, why: 'another はすでに an をふくむ（an ＋ other）ので an はつけない：another chair。' },
+      { sentence: 'My father works (A) as (B) engineer (C) at (D) a big company.', choices: ['(A) as', '(B) engineer', '(C) at', '(D) a big company'], answer: 1, why: '職業を表す数えられる名詞には冠詞：as an engineer。' },
+      { sentence: 'I usually go to (A) bed (B) at (C) the midnight (D) on weekdays.', choices: ['(A) bed', '(B) at', '(C) the midnight', '(D) on weekdays'], answer: 2, why: 'midnight・noon には the をつけない：at midnight。go to bed も冠詞なしで正しい。' },
+      { sentence: 'This is (A) the (B) first time (C) I (D) visit Kyoto.', choices: ['(A) the', '(B) first time', '(C) I', '(D) visit Kyoto'], answer: 3, why: 'This is the first time ～「～するのははじめてだ」のあとは現在完了：I have visited。' },
+      { sentence: 'She has (A) two (B) child, (C) a boy and (D) a girl.', choices: ['(A) two', '(B) child,', '(C) a boy and', '(D) a girl'], answer: 1, why: 'child の複数形は children：two children。' },
+      { sentence: '(A) The (B) life is (C) full of (D) surprises.', choices: ['(A) The', '(B) life is', '(C) full of', '(D) surprises'], answer: 0, why: '一般的な「人生」には the をつけない：Life is full of surprises。' },
+      { sentence: 'I have (A) seen (B) this movie (C) three (D) time.', choices: ['(A) seen', '(B) this movie', '(C) three', '(D) time'], answer: 3, why: '回数を表す time は数えられる名詞：three times。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
