@@ -120,3 +120,13 @@ it('デザイン126：キャラ図鑑の説明に、同じタイプのほかの�
   const n = SPECIES.filter((sp) => sp.id !== 'fox' && typeOf(sp.id).id === 'attack').length
   expect(screen.getByRole('status').textContent).toContain(`（同じアタック型のキャラ：ほかに${n}体）`)
 })
+
+it('デザイン131：キャラ図鑑を、なかまにいる数の多い順にならべかえられる', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={5} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat', 'cat', 'cat']} />)
+  const first = () => document.querySelector('.char-book-list li .char-book-name')!.textContent
+  expect(first()).toBe(SPECIES[0].name)
+  fireEvent.click(screen.getByRole('button', { name: '👥 なかまの多い順' }))
+  expect(first()).toBe(SPECIES.find((sp) => sp.id === 'cat')!.name)
+  fireEvent.click(screen.getByRole('button', { name: '📖 図鑑の番号順' }))
+  expect(first()).toBe(SPECIES[0].name)
+})

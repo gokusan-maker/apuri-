@@ -701,6 +701,8 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
   const [pick, setPick] = useState<string | null>(null)
   const [onlyNew, setOnlyNew] = useState(false) // まだ会っていない子だけ見る
   const [typeOnly, setTypeOnly] = useState('') // デザイン119：タイプでしぼりこむ
+  const [byCount, setByCount] = useState(false) // デザイン131：なかまにいる数の多い順
+  const countOf = (id: string) => owned.filter((x) => x === id).length
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
   return (
     <details className="gacha-odds char-book chip-fold cf-1">
@@ -726,8 +728,11 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
           </button>
         ))}
       </p>
+      <button className="list-link pill-btn book-filter" aria-pressed={byCount} onClick={() => setByCount(!byCount)}>
+        {byCount ? '📖 図鑑の番号順' : '👥 なかまの多い順'}
+      </button>
       <ul className="char-book-list">
-        {SPECIES.filter((sp) => (!onlyNew || !got.has(sp.id)) && (!typeOnly || typeOf(sp.id).id === typeOnly)).map((sp) => {
+        {(byCount ? [...SPECIES].sort((x, y) => countOf(y.id) - countOf(x.id)) : SPECIES).filter((sp) => (!onlyNew || !got.has(sp.id)) && (!typeOnly || typeOf(sp.id).id === typeOnly)).map((sp) => {
           const ok = got.has(sp.id)
           const t = typeOf(sp.id)
           return (
