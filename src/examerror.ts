@@ -3552,6 +3552,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Can you play [piano]?', choices: ['the piano', 'a piano', 'pianos', 'an piano'], answer: 0, why: '楽器を演奏する play のあとは the ＋楽器：play the piano。' },
     ],
   },
+  {
+    id: 'exam-fix-82',
+    title: '入試の誤文訂正〈82〉（共通テストレベル：強調構文と it の用法）',
+    points: ['強調構文 It is ～ that …（人なら who も可）、形式主語 It is ～ to …／It is ～ that …、形式目的語 find it ～ to …、It takes 人 時間 to ～、It costs 人 お金 to ～、天気・時間・距離の it など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was Ken that broke the window.', ja: '窓をわったのはケンだった。' }],
+    questions: [
+      { sentence: 'It was Ken [which] broke the window.', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '強調構文 It was ～ that …。人を強調するので that（または who）。which は使わない。' },
+      { sentence: 'It was in Kyoto [where] I first met her.', choices: ['that', 'which', 'what', 'when'], answer: 0, why: '場所の語句（in Kyoto）を強調する強調構文は It was ～ that …。' },
+      { sentence: '[This] is important to get enough sleep.', choices: ['It', 'That', 'There', 'What'], answer: 0, why: '形式主語 It：It is important to ～「～することは大切だ」。' },
+      { sentence: 'I found [that] difficult to answer the question.', choices: ['it', 'this', 'what', 'its'], answer: 0, why: '形式目的語 it：find it ～ to …「…するのは～だとわかる」。' },
+      { sentence: 'It [took me] two hours finishing the report.', choices: ['took me two hours to finish', 'takes me two hours finish', 'took two hours me to finishing', 'taken me two hours to finish'], answer: 0, why: 'It takes 人 時間 to ～：It took me two hours to finish。' },
+      { sentence: 'It [cost] me 3,000 yen buying this book.', choices: ['cost me 3,000 yen to buy', 'costed me 3,000 yen to buy', 'cost 3,000 yen me buying', 'costs me 3,000 yen buy'], answer: 0, why: 'It costs 人 お金 to ～。cost の過去形は cost：It cost me 3,000 yen to buy。' },
+      { sentence: '[That] is about two kilometers from here to the station.', choices: ['It', 'This', 'There', 'What'], answer: 0, why: '距離を表すときは it：It is about two kilometers from here to the station。' },
+      { sentence: 'It is said [what] he is the best player on the team.', choices: ['that', 'which', 'it', 'whom'], answer: 0, why: 'It is said that ～「～と言われている」。形式主語 it のあとの that 節。' },
+      { sentence: 'It is kind [for] you to help me.', choices: ['of', 'to', 'with', 'by'], answer: 0, why: '人の性質（kind・nice）をほめる形式主語の文は It is kind of 人 to ～。' },
+      { sentence: 'It is necessary [of] us to protect the environment.', choices: ['for', 'by', 'with', 'from'], answer: 0, why: 'necessary・important などは It is ～ for 人 to …。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
