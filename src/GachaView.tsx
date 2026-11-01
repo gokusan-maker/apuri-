@@ -43,6 +43,7 @@ function ShareButton({ text }: { text: string }) {
 type Props = {
   ownedSpecies?: string[] // 持っているキャラクターの種類（図鑑用）
   partnerSpecies?: string // デザイン116：今の相棒の種類（図鑑に ⭐相棒 を出す）
+  partnerKind?: string // デザイン193：今の相棒の色ちがい
   speciesLevels?: Record<string, number> // デザイン101：種類ごとのいちばん高いレベル（図鑑用）
   onChara?: () => GachaResult | null // キャラガチャ（生まれた姿で出る）
   charaPrice?: number
@@ -78,7 +79,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, speciesLevels, partnerSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, speciesLevels, partnerSpecies, partnerKind, onChara, charaPrice = CHARA_PRICE }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [shake, setShake] = useState(0) // コインがたりないのに押した回数（首をふる）
   const [shakeM, setShakeM] = useState(0) // 首をふった連ガチャ（3 か 5）
@@ -681,6 +682,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             // デザイン147：出た子が相棒と同じ種類
             <p className="gacha-new-type gacha-twin" role="status">
               👯 相棒とおそろい！
+            </p>
+          )}
+          {!result.mystery && result.kind.id !== 'normal' && partnerKind === result.kind.id && (
+            // デザイン193：出た子が相棒と同じ色ちがい
+            <p className="gacha-new-type gacha-twin" role="status">
+              🎨 相棒と同じ{result.kind.name}！
             </p>
           )}
           {!result.mystery && (partnerSpecies ?? 'mochi') !== result.species.id && typeOf(partnerSpecies ?? 'mochi').id === typeOf(result.species.id).id && (

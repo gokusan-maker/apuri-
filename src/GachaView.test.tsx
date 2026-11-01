@@ -790,3 +790,15 @@ it('デザイン191：連続ガチャで、NEW の子の数がまとめて出る
   fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
   expect(screen.getByLabelText('NEW の数').textContent).toBe('🆕×2')
 })
+
+it('デザイン193：出た子が相棒と同じ色ちがいなら「相棒と同じ○○」が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} partnerKind="umi" onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText(`🎨 相棒と同じ${kindOf('umi').name}！`)).toBeInTheDocument()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} partnerKind="normal" onDraw={() => ({ kind: kindOf('normal'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText(/🎨 相棒と同じ/)).toBeNull()
+})
