@@ -2712,6 +2712,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There were many students, most of [them] were from Asia.', choices: ['whom', 'who', 'which', 'that'], answer: 0, why: 'コンマで文をつなぐには関係代名詞が必要。前置詞 of のあとで人をさすので most of whom。' },
     ],
   },
+  {
+    id: 'exam-fix-62',
+    title: '入試の誤文訂正〈62〉（共通テストレベル：受け身の総まとめ）',
+    points: ['受け身の基本（be ＋過去分詞）、句動詞の受け身（be spoken to・be taken care of）、by 以外の前置詞（be known to・be made from）、have 物 ＋過去分詞、未来や助動詞の受け身（will be held・must be cleaned）など、受け身のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I was spoken to by a stranger.', ja: '私は知らない人に話しかけられた。' }],
+    questions: [
+      { sentence: 'This song is [loving] by many people.', choices: ['loved', 'love', 'to love', 'lover'], answer: 0, why: '歌は「愛される」側なので受け身 is loved。' },
+      { sentence: 'The letter [was wrote] by my grandfather.', choices: ['was written', 'wrote', 'was writing', 'has wrote'], answer: 0, why: '受け身は be ＋過去分詞。write の過去分詞は written。' },
+      { sentence: 'I was [spoken] by a stranger on the train.', choices: ['spoken to', 'spoke to', 'speaking', 'spoken by to'], answer: 0, why: 'speak to ～ の受け身は be spoken to（to を残す）。' },
+      { sentence: 'The baby was [taken care] by her aunt.', choices: ['taken care of', 'taking care', 'took care of', 'taken care for'], answer: 0, why: 'take care of ～ の受け身は be taken care of（of を残す）。' },
+      { sentence: 'He is known [by] everyone in the town.', choices: ['to', 'with', 'for', 'at'], answer: 0, why: '「～に知られている」は be known to ～。' },
+      { sentence: 'Cheese is made [of] milk.', choices: ['from', 'by', 'with', 'at'], answer: 0, why: '材料が形を変えて別のものになるときは be made from ～。' },
+      { sentence: 'English [is speaking] in this country.', choices: ['is spoken', 'speaks', 'is speak', 'spoke'], answer: 0, why: '英語は「話される」側なので is spoken。' },
+      { sentence: 'I had my wallet [steal] on the bus.', choices: ['stolen', 'stole', 'stealing', 'to steal'], answer: 0, why: 'have 物 ＋過去分詞「物を～される（された）」：had my wallet stolen。' },
+      { sentence: 'The meeting [will hold] next Monday.', choices: ['will be held', 'will held', 'will be holding', 'is holding to'], answer: 0, why: '会議は「開かれる」側なので未来の受け身 will be held。' },
+      { sentence: 'The room must [clean] every day.', choices: ['be cleaned', 'be cleaning', 'cleaned', 'clean by'], answer: 0, why: '部屋は「そうじされる」側なので助動詞の受け身 must be cleaned。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

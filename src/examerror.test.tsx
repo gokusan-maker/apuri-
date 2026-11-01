@@ -911,3 +911,10 @@ it('正誤問題〈68〉：前置詞＋関係代名詞・複合関係詞の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) with that')
 })
+
+it('誤文訂正〈62〉：受け身の総まとめの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-62')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('loved')
+})

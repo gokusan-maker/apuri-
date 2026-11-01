@@ -3523,3 +3523,4 @@
 - 2026-11-01: 文法：入試の正誤問題〈68〉（医学部・難関大レベル⑦：with whom・with which・whoever・from・However・whenever・for which・in which・most of whom・主語と動詞の一致）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「朝ごはんは本当に大切か」（健康・食・非制限の which／a way to／throughout の空所）
 - 2026-11-01: デザイン：キャラ図鑑で、まだ会っていない子が10体以下になると、のこりのシルエットを少し明るく見せるようにした（178 は実装ずみ）
+- 2026-11-01: 文法：入試の誤文訂正〈62〉（共通テストレベル：受け身の総まとめ：is loved・was written・spoken to・taken care of・known to・made from・is spoken・have 物 過去分詞・will be held・must be cleaned）10問
