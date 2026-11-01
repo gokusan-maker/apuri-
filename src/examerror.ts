@@ -2450,6 +2450,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The number of cars (B) on the road (C) have risen (D) sharply.', choices: ['(A) The number of cars', '(B) on the road', '(C) have risen', '(D) sharply'], answer: 2, why: 'The number of ～ は単数あつかい。has risen。' },
     ],
   },
+  {
+    id: 'exam-error-confverbs',
+    title: '入試の正誤問題〈104〉（共通テストレベル：まぎらわしい動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'lie／lay・rise／raise・borrow／lend・rob／steal・say／tell・fit／suit の使い分けと、前置詞をつけない他動詞（discuss・resemble）、人を直接目的語にとらない explain。',
+    ],
+    examples: [
+      { en: 'He lay down on the sofa.', ja: '彼はソファに横になった。' },
+      { en: 'We discussed the problem for hours.', ja: '私たちはその問題について何時間も話し合った。' },
+    ],
+    questions: [
+      { sentence: 'After lunch, (A) he (B) laid down (C) on the sofa (D) for a short nap.', choices: ['(A) he', '(B) laid down', '(C) on the sofa', '(D) for a short nap'], answer: 1, why: '「横になった」は自動詞 lie の過去形。lay down。' },
+      { sentence: '(A) Prices (B) have raised (C) sharply (D) over the past year.', choices: ['(A) Prices', '(B) have raised', '(C) sharply', '(D) over the past year'], answer: 1, why: '「物価が上がった」は自動詞 rise。have risen。' },
+      { sentence: 'Could you (A) borrow me (B) some money (C) until (D) next Friday?', choices: ['(A) borrow me', '(B) some money', '(C) until', '(D) next Friday?'], answer: 0, why: '「人にお金を貸す」は lend me。' },
+      { sentence: '(A) The thief (B) robbed (C) a diamond ring (D) from the shop.', choices: ['(A) The thief', '(B) robbed', '(C) a diamond ring', '(D) from the shop'], answer: 1, why: '「物をぬすむ」は stole a diamond ring。rob は rob 人／場所 of 物。' },
+      { sentence: 'She (A) said (B) us (C) a funny story (D) about her trip.', choices: ['(A) said', '(B) us', '(C) a funny story', '(D) about her trip'], answer: 1, why: '「人に話を語る」は tell 人 物。told us。' },
+      { sentence: '(A) Please (B) lie the books (C) on the table (D) when you finish.', choices: ['(A) Please', '(B) lie the books', '(C) on the table', '(D) when you finish'], answer: 1, why: '「本を置く」は目的語をとる他動詞 lay。lay the books。' },
+      { sentence: 'These shoes (A) do not (B) suit me. (C) They are (D) too small.', choices: ['(A) do not', '(B) suit me', '(C) They are', '(D) too small'], answer: 1, why: 'サイズが合わないのは fit。do not fit me。' },
+      { sentence: 'The teacher (A) explained (B) us (C) how to (D) use the new software.', choices: ['(A) explained', '(B) us', '(C) how to', '(D) use the new software'], answer: 1, why: 'explain は人を直接目的語にとらない。explained to us。' },
+      { sentence: '(A) My brother (B) resembles (C) with our father (D) in many ways.', choices: ['(A) My brother', '(B) resembles', '(C) with our father', '(D) in many ways'], answer: 2, why: 'resemble は他動詞で前置詞をとらない。resembles our father。' },
+      { sentence: '(A) After (B) many meetings, (C) the members finally (D) discussed about the budget.', choices: ['(A) After', '(B) many meetings,', '(C) the members finally', '(D) discussed about the budget'], answer: 3, why: 'discuss は他動詞。discussed the budget。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
