@@ -2138,6 +2138,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Few of (B) the information (C) on the site (D) was useful.', choices: ['(A) Few of', '(B) the information', '(C) on the site', '(D) was useful'], answer: 0, why: 'information は数えられないので Little of。' },
     ],
   },
+  {
+    id: 'exam-error-conj3',
+    title: '入試の正誤問題〈91〉（共通テストレベル：接続詞の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'unless・as long as・in case・even if・once・by the time の使い分け、時・条件の節の中は現在形、because と because of のちがい、など。',
+    ],
+    examples: [
+      { en: 'Take an umbrella in case it rains.', ja: '雨がふるといけないから、かさを持っていきなさい。' },
+      { en: 'Call me as soon as you arrive.', ja: '着いたらすぐに電話してね。' },
+    ],
+    questions: [
+      { sentence: 'You (A) will miss (B) the bus (C) if you (D) hurry.', choices: ['(A) will miss', '(B) the bus', '(C) if you', '(D) hurry'], answer: 2, why: '「急がないかぎり」なので unless you hurry。' },
+      { sentence: 'Take (A) an umbrella (B) unless (C) it (D) rains.', choices: ['(A) an umbrella', '(B) unless', '(C) it', '(D) rains'], answer: 1, why: '「雨がふるといけないから」は in case。' },
+      { sentence: 'You (A) can borrow (B) my bike (C) unless you (D) bring it back by six.', choices: ['(A) can borrow', '(B) my bike', '(C) unless you', '(D) bring it back by six'], answer: 2, why: '「返すかぎり」は as long as。' },
+      { sentence: 'Call me (A) as soon as (B) you (C) will arrive (D) at the station.', choices: ['(A) as soon as', '(B) you', '(C) will arrive', '(D) at the station'], answer: 2, why: '時を表す節の中は現在形：arrive。' },
+      { sentence: 'If (A) it will be (B) sunny tomorrow, (C) we will (D) have a picnic.', choices: ['(A) it will be', '(B) sunny tomorrow,', '(C) we will', '(D) have a picnic'], answer: 0, why: '条件の if 節の中は現在形：it is。' },
+      { sentence: '(A) Until the time (B) we arrived, (C) the movie had (D) already started.', choices: ['(A) Until the time', '(B) we arrived,', '(C) the movie had', '(D) already started'], answer: 0, why: '「～するまでには」は By the time。' },
+      { sentence: 'I (A) could not (B) sleep (C) because of the room (D) was too hot.', choices: ['(A) could not', '(B) sleep', '(C) because of the room', '(D) was too hot'], answer: 2, why: 'あとが主語＋動詞なので because the room。' },
+      { sentence: 'She (A) studied hard, (B) so that she (C) failed (D) the exam.', choices: ['(A) studied hard,', '(B) so that she', '(C) failed', '(D) the exam'], answer: 1, why: '逆接なので but she。' },
+      { sentence: 'I love the sea, so I (A) will go (B) to the beach (C) tomorrow (D) as long as it rains.', choices: ['(A) will go', '(B) to the beach', '(C) tomorrow', '(D) as long as it rains'], answer: 3, why: '「たとえ雨がふっても行く」なので even if it rains。' },
+      { sentence: '(A) Once you (B) learned (C) the rules, the game (D) is easy.', choices: ['(A) Once you', '(B) learned', '(C) the rules, the game', '(D) is easy'], answer: 1, why: '時・条件の節（once）で今のことなので learn。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

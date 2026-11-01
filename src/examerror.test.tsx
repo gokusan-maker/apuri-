@@ -1226,3 +1226,10 @@ it('誤文訂正〈84〉：接続詞の使い分けの単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('unless')
 })
+
+it('正誤問題〈91〉：接続詞の使い分けの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-conj3')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) if you')
+})
