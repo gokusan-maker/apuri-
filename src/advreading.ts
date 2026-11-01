@@ -23206,6 +23206,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Tiny Pieces, Big Problem', 'How to Make Plastic Bottles', 'The Deepest Parts of the Ocean', 'Why Whales Sing'], answer: 0, why: '全体として、小さなマイクロプラスチックがもたらす大きな問題と、その対策を述べている。' },
   },
   {
+    id: 'kyotsu-public-baths',
+    title: 'More Than a Place to Wash',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many Japanese towns, you can still find public bathhouses called sento, with tall chimneys and large paintings of Mount Fuji on their walls. For centuries, these places were an essential part of daily life. Today, their number has fallen sharply, yet many people still feel a special attachment to them. The history of the public bath shows how a simple daily activity can shape the culture and social life of a community.",
+      "Public bathing has a long history in many parts of the world. In ancient Rome, huge public baths were not only places to wash but also centers of social life, where people exercised, talked about politics, and did business. In Japan, the custom of public bathing spread especially during the Edo period. At that time, most homes in crowded cities had no bath of their own, partly because fire was a constant danger and water was difficult to obtain. As a result, people from all levels of society visited the sento, often every day.",
+      "The sento soon became much more than a place to get clean. Neighbors met there and exchanged news, and children learned manners by watching adults. Many bathhouses had a second floor ( A ) men could relax, drink tea, and play games such as go after bathing. In this way, the bathhouse served as a kind of community center, helping people who lived close together to know and trust one another.",
+      "After the Second World War, however, the situation changed. As Japan's economy grew, more and more homes were built with their own baths. Families no longer needed to go out to wash, and the number of sento began to decline. In Tokyo alone, there were more than two thousand public bathhouses in the 1960s, but today only a small fraction of them remain. Many owners have closed their businesses because of rising costs and a lack of people ( B ) are willing to take over.",
+      "In recent years, though, some sento have found new life. Young owners have redesigned old bathhouses with modern art, held concerts and events, and opened cafes inside them. Visitors from abroad have also shown interest in this traditional culture. Supporters argue that in an age when many people feel lonely, the sento offers something valuable: a place ( C ) strangers can relax side by side and feel part of a community. The future of the public bath may depend on whether people continue to see it not just as a place to wash but as a place to connect.",
+    ],
+    ja: [
+      '日本の多くの町では、高いえんとつがあり、かべに富士山の大きな絵がえがかれた、銭湯とよばれる公衆浴場を今でも見つけることができる。何世紀もの間、こうした場所は日々のくらしに欠かせない一部だった。今日その数は大きくへったが、多くの人は今でも銭湯に特別な愛着を感じている。公衆浴場の歴史は、かんたんな日々の活動が地域の文化や人々のつながりを形づくりうることを示している。',
+      '公衆浴場には、世界の多くの場所で長い歴史がある。古代ローマでは、巨大な公衆浴場は体をあらう場所であるだけでなく、人々が運動したり、政治について話したり、商売をしたりする社会生活の中心でもあった。日本では、とくに江戸時代に公衆浴場の習慣が広まった。そのころ、混み合った都市のほとんどの家には自分の家の風呂がなかった。その理由のひとつは、火事がいつも危険で、水が手に入りにくかったことである。その結果、あらゆる身分の人々が、しばしば毎日銭湯にかよった。',
+      '銭湯はすぐに、体をきれいにする場所以上のものになった。近所の人々はそこで会って知らせを伝え合い、子どもたちはおとなを見て礼儀を学んだ。多くの銭湯には2階があり、男の人たちは入浴のあとにそこでくつろぎ、お茶を飲み、碁のような遊びをした。このようにして、銭湯は一種の地域の集まりの場の役割を果たし、近くにくらす人々がたがいを知り、信頼し合うのを助けた。',
+      'しかし第二次世界大戦のあと、状況は変わった。日本の経済が成長するにつれて、自分の家に風呂のある家がどんどん建てられた。家族はもう体をあらうために出かける必要がなくなり、銭湯の数はへりはじめた。東京だけでも1960年代には2千をこえる公衆浴場があったが、今ではそのごく一部しか残っていない。費用が上がり、あとをつぎたいという人がいないために、店をたたんだ持ち主も多い。',
+      'しかし近年、新しい命を得た銭湯もある。若い持ち主が古い銭湯を現代アートでつくり直したり、コンサートや行事を開いたり、中にカフェを開いたりしている。外国からの訪問者も、この伝統文化に関心を示している。支持する人々は、多くの人がさびしさを感じる時代に、銭湯は価値あるものをあたえてくれると主張する。それは、知らない人どうしがならんでくつろぎ、地域の一員だと感じられる場所である。公衆浴場の未来は、人々がそれをただあらう場所ではなく、つながる場所として見続けるかどうかにかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a second floor（場所）で、うしろの men could relax ... は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、are の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '先行詞は a place（場所）で、うしろの strangers can relax side by side ... は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '古代ローマの公衆浴場は、社会生活の中心でもあった。', answer: true, why: '第2段落 huge public baths were not only places to wash but also centers of social life。' },
+      { statement: '江戸時代の都市では、ほとんどの家に自分の風呂があった。', answer: false, why: '第2段落 most homes in crowded cities had no bath of their own。' },
+      { statement: '1960年代の東京には、2千をこえる公衆浴場があった。', answer: true, why: '第4段落 there were more than two thousand public bathhouses in the 1960s。' },
+      { statement: '近年、新しい工夫をする銭湯はまったくない。', answer: false, why: '第5段落 some sento have found new life。' },
+    ],
+    qa: [
+      { q: 'Why did many homes in Edo-period cities have no bath?', choices: ['Fire was a constant danger and water was difficult to obtain.', 'Baths were against the law.', 'People did not like to wash.', 'Baths were only for children.'], answer: 0, why: '第2段落 partly because fire was a constant danger and water was difficult to obtain。' },
+      { q: 'Why did the number of sento begin to decline after the war?', choices: ['More homes were built with their own baths.', 'Water became too expensive to drink.', 'People moved to Rome.', 'The paintings of Mount Fuji were removed.'], answer: 0, why: '第4段落 more and more homes were built with their own baths。' },
+    ],
+    gist: [
+      { para: 2, choices: ['銭湯が地域の集まりの場だったこと', '碁のきまり', 'お茶のいれ方', '子どもの遊び'], answer: 0, why: '第3段落は、銭湯が知らせを伝え合い、礼儀を学び、信頼を育てる場だったことを述べている。' },
+      { para: 4, choices: ['新しい工夫で生まれ変わる銭湯', '外国の観光地', 'カフェのメニュー', 'コンサートの歴史'], answer: 0, why: '第5段落は、現代アートや行事などで銭湯が新しい命を得ていることと、つながりの場としての価値を述べている。' },
+    ],
+    titleQ: { choices: ['More Than a Place to Wash', 'How to Build a Chimney', 'The History of Mount Fuji', 'Why Water Is Expensive'], answer: 0, why: '全体として、銭湯がただあらう場所ではなく、人々がつながる場所であったことと、その未来を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
