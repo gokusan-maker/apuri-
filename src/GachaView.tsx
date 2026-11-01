@@ -526,6 +526,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
       {multi && (
         <div key={multi.key} className={`gacha-multi r-${bestRarity(multi.list)}`} role="status">
           {gachaOmen(bestRarity(multi.list)) && <p className="gacha-omen">{gachaOmen(bestRarity(multi.list))}</p>}
+          {/* デザイン191：NEW の子の数をまとめて出す */}
+          {multi.list.filter((k) => k.newKind || k.newSpecies).length > 0 && (
+            <p className="gacha-omen" aria-label="NEW の数">
+              🆕×{multi.list.filter((k) => k.newKind || k.newSpecies).length}
+            </p>
+          )}
           <ul>
             {multi.list.map((k, i) => (
               <li key={i} className={`r-${k.kind.rarity}`} style={{ animationDelay: `${i * 0.25}s` }}>

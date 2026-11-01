@@ -778,3 +778,15 @@ it('デザイン188：もう会ったことのある子なら、コンプリー�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByLabelText('図鑑のコンプリートまで')).toBeNull()
 })
+
+it('デザイン191：連続ガチャで、NEW の子の数がまとめて出る', () => {
+  localStorage.clear()
+  const list = [
+    { kind: kindOf('normal'), species: speciesOf('fox'), newSpecies: true },
+    { kind: kindOf('kin'), species: speciesOf('cat'), newKind: true },
+    { kind: kindOf('umi'), species: speciesOf('mochi') },
+  ]
+  render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={() => list} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  expect(screen.getByLabelText('NEW の数').textContent).toBe('🆕×2')
+})
