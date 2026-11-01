@@ -32,3 +32,17 @@ it('大学入試レベルの単語を増やした分も、そのレベルに入�
   expect(courseWords('私学').some((w) => w.en === 'convey')).toBe(true)
   expect(courseWords('中3').some((w) => w.en === 'paradox')).toBe(false)
 })
+
+it('単語のレベルの見直し：CEFR で下のレベルの語は、高いレベル（京大・国公立・TOEFL/IELTS）に入れない', () => {
+  const ens = (id: Parameters<typeof courseWords>[0]) => new Set(courseWords(id).map((w) => w.en.toLowerCase()))
+  const kyodai = ens('京大')
+  for (const e of ['drought', 'sensible', 'dialect', 'immigrant', 'diligent', 'notorious']) expect(kyodai.has(e)).toBe(false)
+  const toefl = ens('TOEFL・IELTS')
+  for (const e of ['dandelion', 'eyebrow', 'eyelash', 'throat', 'waist', 'pirate']) expect(toefl.has(e)).toBe(false)
+  const kokko = ens('国公立')
+  for (const e of ['generous', 'tragedy', 'embarrass', 'symptom']) expect(kokko.has(e)).toBe(false)
+  // 移した語は、下のレベルで学べる
+  expect(ens('私学難関').has('drought')).toBe(true)
+  expect(ens('私学').has('generous')).toBe(true)
+  expect(ens('高3').has('fortune')).toBe(true)
+})
