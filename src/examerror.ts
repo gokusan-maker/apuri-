@@ -3342,6 +3342,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The sun [raises] in the east.', choices: ['rises', 'raise', 'rose up to', 'is risen'], answer: 0, why: '太陽が「のぼる」は自動詞 rise。主語が3人称単数で真理なので rises。' },
     ],
   },
+  {
+    id: 'exam-fix-77',
+    title: '入試の誤文訂正〈77〉（共通テストレベル：まぎらわしい前置詞）',
+    points: ['by（～までに：期限）／until（～までずっと：継続）、for（期間の長さ）／during（特定の期間の間）、in（～後に）／within（～以内に）、時刻は at・日付や曜日は on・月や年は in、交通手段の by bus（冠詞なし）など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Please hand in the report by Friday.', ja: '金曜日までにレポートを出してください。' }],
+    questions: [
+      { sentence: 'Please hand in the report [until] Friday.', choices: ['by', 'for', 'during', 'since'], answer: 0, why: '「金曜日までに（期限）」は by。until は「～までずっと」。' },
+      { sentence: 'I waited for her [by] six o\'clock, but she never came.', choices: ['until', 'during', 'within', 'for'], answer: 0, why: '「6時までずっと待った（継続）」は until。' },
+      { sentence: 'He stayed in London [during] three weeks.', choices: ['for', 'by', 'since', 'until'], answer: 0, why: '期間の長さ（three weeks）には for。during はあとに特定の期間（the summer など）がくる。' },
+      { sentence: 'I visited my grandparents [for] the summer vacation.', choices: ['during', 'by', 'since', 'until'], answer: 0, why: '特定の期間（the summer vacation）の間は during。' },
+      { sentence: 'The train will arrive [after] ten minutes, so let\'s wait here.', choices: ['in', 'by', 'since', 'during'], answer: 0, why: '「今から10分後に」は in ten minutes。after は過去や基準の時点からのあとに使う。' },
+      { sentence: 'The meeting starts [on] 3 p.m.', choices: ['at', 'in', 'by', 'for'], answer: 0, why: '時刻には at。' },
+      { sentence: 'My birthday is [in] May 5.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '日付には on。' },
+      { sentence: 'She was born [on] 2010.', choices: ['in', 'at', 'by', 'for'], answer: 0, why: '年には in。' },
+      { sentence: 'I usually go to school [by a bus].', choices: ['by bus', 'on bus', 'with bus', 'by the buses'], answer: 0, why: '交通手段の by には冠詞をつけない：by bus。' },
+      { sentence: 'You must finish the test [in] 30 minutes or less.', choices: ['within', 'until', 'since', 'during'], answer: 0, why: '「30分以内に」は within。or less とあるので期限内を表す within が適切。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
