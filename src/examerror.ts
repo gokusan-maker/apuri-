@@ -3804,6 +3804,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The results [will announce] next week.', choices: ['will be announced', 'will announcing', 'announce', 'will be announce'], answer: 0, why: '結果は「発表される」側なので未来の受け身 will be announced。' },
     ],
   },
+  {
+    id: 'exam-fix-88',
+    title: '入試の誤文訂正〈88〉（共通テストレベル：再帰代名詞と相互代名詞）',
+    points: ['主語と目的語が同じ人なら再帰代名詞（myself・themselves）、「自分で・ひとりで」は by oneself、enjoy oneself（楽しむ）・help oneself to ～（自由に取って食べる）、「おたがい」は each other／one another（each other は前置詞のあとも使う）、hisself・theirselves という形はない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Please help yourself to the cookies.', ja: 'クッキーをご自由にどうぞ。' }],
+    questions: [
+      { sentence: 'I cut [me] while I was cooking.', choices: ['myself', 'mine', 'my', 'I'], answer: 0, why: '主語と目的語が同じなので再帰代名詞 myself。' },
+      { sentence: 'He taught [hisself] how to play the guitar.', choices: ['himself', 'him', 'his', 'he self'], answer: 0, why: 'he の再帰代名詞は himself。hisself という形はない。' },
+      { sentence: 'The children enjoyed [them] at the party.', choices: ['themselves', 'theirselves', 'their', 'they'], answer: 0, why: 'enjoy oneself「楽しむ」：enjoyed themselves。' },
+      { sentence: 'Please help [you] to the cookies.', choices: ['yourself', 'your', 'yours', 'you self'], answer: 0, why: 'help oneself to ～「～を自由に取って食べる」：help yourself。' },
+      { sentence: 'She lives [by her] in a small apartment.', choices: ['by herself', 'by she', 'by hers', 'with herself'], answer: 0, why: '「ひとりで」は by oneself：by herself。' },
+      { sentence: 'Ken and Yuki often help [themselves] with their homework.', choices: ['each other', 'theirselves', 'them', 'every other'], answer: 0, why: '「おたがいに助け合う」は each other。themselves だとそれぞれが自分を助けることになる。' },
+      { sentence: 'The two friends looked at [themselves] and laughed.', choices: ['each other', 'them', 'theirselves', 'one'], answer: 0, why: '「おたがいを見た」は each other。' },
+      { sentence: 'We introduced [us] to the new teacher.', choices: ['ourselves', 'ours', 'our', 'we'], answer: 0, why: '主語 We と目的語が同じなので ourselves。' },
+      { sentence: 'The members talked with [each others] for an hour.', choices: ['each other', 'each another', 'themselves others', 'every other'], answer: 0, why: 'each other は複数形にしない：each other。' },
+      { sentence: 'Take care of [yourselfs], everyone!', choices: ['yourselves', 'yourself', 'yours', 'your selfs'], answer: 0, why: '相手が複数（everyone）なので yourselves。self の複数形は selves。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
