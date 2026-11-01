@@ -3384,6 +3384,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'You must finish the test [in] 30 minutes or less.', choices: ['within', 'until', 'since', 'during'], answer: 0, why: '「30分以内に」は within。or less とあるので期限内を表す within が適切。' },
     ],
   },
+  {
+    id: 'exam-fix-78',
+    title: '入試の誤文訂正〈78〉（TOEFL・IELTS の書き言葉：倒置）',
+    points: ['否定語（Never・Rarely・Seldom・Little・Not only・No sooner・Hardly）や Only ＋副詞句が文の前に出ると、うしろは疑問文と同じ語順（助動詞・be 動詞＋主語）になる。So ＋助動詞＋主語「～もそうだ」、Neither ＋助動詞＋主語「～もそうではない」も同じ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。' }],
+    questions: [
+      { sentence: 'Never [I have seen] such a beautiful sunset.', choices: ['have I seen', 'I saw', 'I have see', 'seen I have'], answer: 0, why: '否定語 Never が文頭に出ると倒置：Never have I seen。' },
+      { sentence: 'Not only [she speaks] English, but she also speaks Chinese.', choices: ['does she speak', 'she does speak', 'speaks she', 'she speaking'], answer: 0, why: 'Not only が文頭に出ると倒置：Not only does she speak。' },
+      { sentence: 'Rarely [we go] out to eat on weekdays.', choices: ['do we go', 'we do go', 'go we', 'we going'], answer: 0, why: 'Rarely（めったに～ない）が文頭に出ると倒置：Rarely do we go。' },
+      { sentence: 'Only after the meeting [I realized] my mistake.', choices: ['did I realize', 'I did realize', 'realized I', 'I realize'], answer: 0, why: 'Only ＋副詞句が文頭に出ると倒置：Only after the meeting did I realize。' },
+      { sentence: 'Little [he knew] that his life was about to change.', choices: ['did he know', 'he did know', 'knew he', 'he knows'], answer: 0, why: 'Little（まったく～ない）が文頭に出ると倒置：Little did he know。' },
+      { sentence: 'No sooner [I had arrived] than it began to rain.', choices: ['had I arrived', 'I arrived', 'did I arrived', 'I have arrived'], answer: 0, why: 'No sooner ～ than … が文頭に出ると倒置：No sooner had I arrived than ～。' },
+      { sentence: 'I like jazz, and so [my sister does].', choices: ['does my sister', 'my sister likes', 'is my sister', 'my sister is'], answer: 0, why: '「～もそうだ」は so ＋助動詞＋主語：so does my sister。' },
+      { sentence: 'Ken can not swim, and [so can not] his brother.', choices: ['neither can', 'so can', 'either can', 'neither can not'], answer: 0, why: '否定の「～もそうではない」は neither ＋助動詞＋主語：neither can his brother。' },
+      { sentence: 'Hardly [she had] left the house when the phone rang.', choices: ['had she', 'she has', 'did she', 'she did'], answer: 0, why: 'Hardly ～ when … が文頭に出ると倒置：Hardly had she left。' },
+      { sentence: 'Seldom [the city is] this quiet on a Saturday night.', choices: ['is the city', 'the city was being', 'does the city', 'the city does be'], answer: 0, why: 'Seldom が文頭に出ると倒置。be 動詞の文は be 動詞＋主語：Seldom is the city。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

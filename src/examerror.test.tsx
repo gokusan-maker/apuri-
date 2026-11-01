@@ -1135,3 +1135,10 @@ it('正誤問題〈84〉：まぎらわしい前置詞の単元が10問ある', 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) until')
 })
+
+it('誤文訂正〈78〉：倒置の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-78')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('have I seen')
+})
