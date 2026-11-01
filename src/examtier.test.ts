@@ -1287,3 +1287,9 @@ it('本番の長さの長文：共通テスト評論の「深海の熱水噴出�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：共通テスト評論の「ジャガイモの歴史」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-potato-history')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})

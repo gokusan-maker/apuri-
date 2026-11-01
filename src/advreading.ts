@@ -22270,6 +22270,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Life Without Sunlight', 'How Submarines Sink', 'The Moons of Jupiter', 'Cooking with Hot Springs'], answer: 0, why: '全体として、日光にたよらない深海の噴出口の生態系とその意義・危機を述べている。' },
   },
   {
+    id: 'kyotsu-potato-history',
+    title: "The Potato's Long Journey",
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, potatoes are eaten all over the world, whether they are fried, boiled, mashed, or baked. It is hard to imagine many national dishes without them. Yet for most of human history, potatoes were completely unknown outside a single region of South America. The story of how this humble vegetable spread across the globe shows how food can shape history, and how people's attitudes toward new foods can change over time.",
+      "Potatoes were first grown in the Andes Mountains, in what is now Peru and Bolivia, at least seven thousand years ago. The farmers of this region developed thousands of different varieties, each suited to particular conditions of soil, temperature, and height above sea level. They also invented clever ways of preserving potatoes. By leaving them outside to freeze at night and then drying them in the sun during the day, they produced a light, dry food ( A ) could be stored for years.",
+      "In the sixteenth century, Spanish explorers brought potatoes back to Europe. At first, however, many Europeans did not trust the new plant. Some believed that it caused disease, partly because it belongs to the same family as certain poisonous plants, and others simply disliked its unfamiliar appearance. For many years, potatoes were grown mainly as food for animals or as a curiosity in gardens ( B ) wealthy people displayed unusual plants.",
+      "Attitudes slowly changed, especially in times of war and hunger. Potatoes have important advantages over grains such as wheat. They produce more food from the same amount of land, they grow well in cool climates, and because they are hidden underground, they are harder for soldiers to destroy or steal. In some countries, rulers actively encouraged farmers to grow them. As potatoes became common, they helped to feed growing populations, and some historians believe they played a part in the rapid growth of European cities.",
+      "However, depending too heavily on a single crop can be dangerous. In the 1840s, a plant disease destroyed potato harvests in Ireland, where many poor families relied almost entirely on potatoes for food. Around one million people died, and many more were forced to leave the country. This tragedy is still remembered as a warning about the risks of growing only a few varieties. Today, scientists in Peru protect thousands of traditional types of potatoes, hoping that their genes will help to create new varieties ( C ) can resist disease and survive changes in climate.",
+    ],
+    ja: [
+      '今日、ジャガイモは、あげたり、ゆでたり、つぶしたり、焼いたりして世界中で食べられている。ジャガイモのない国の料理はなかなか想像しにくい。しかし人間の歴史の大部分で、ジャガイモは南アメリカのある一地域の外ではまったく知られていなかった。このありふれた野菜が世界中に広まった話は、食べ物が歴史をつくることがあり、新しい食べ物への人々の考え方が時とともに変わりうることを示している。',
+      'ジャガイモは、少なくとも7千年前に、今のペルーとボリビアにあたるアンデス山脈で最初に育てられた。この地域の農民は何千もの品種を生み出し、それぞれが土や気温や標高の特定の条件に合っていた。彼らはジャガイモを保存するかしこい方法も考え出した。夜に外に置いてこおらせ、昼は日光でかわかすことで、何年もたくわえておける軽くてかわいた食べ物を作ったのである。',
+      '16世紀に、スペインの探検家がジャガイモをヨーロッパに持ち帰った。しかし最初、多くのヨーロッパ人はこの新しい植物を信用しなかった。ひとつには毒のある植物と同じ仲間に属するという理由で、病気を起こすと考える人もいれば、見なれない見た目がきらいなだけの人もいた。長い間、ジャガイモはおもに家畜のえさとして、あるいは、お金持ちがめずらしい植物をかざる庭のめずらしいものとして育てられた。',
+      '考え方は、とくに戦争やききんのときに、少しずつ変わっていった。ジャガイモには小麦のような穀物よりすぐれた大切な点がある。同じ広さの土地からより多くの食べ物がとれ、すずしい気候でもよく育ち、地中にかくれているので兵士にこわされたりぬすまれたりしにくい。国によっては、支配者が農民に育てるよう強くすすめた。ジャガイモが広まると、ふえていく人口をやしなうのに役立ち、ヨーロッパの都市の急速な成長に一役買ったと考える歴史家もいる。',
+      'しかし、ひとつの作物にたよりすぎるのは危険なこともある。1840年代、アイルランドで植物の病気がジャガイモの収穫をだめにした。そこでは多くのまずしい家族がほとんどジャガイモだけを食べてくらしていた。およそ100万人が亡くなり、さらに多くの人が国を出ざるをえなくなった。この悲劇は、少ない品種だけを育てることの危険への警告として今も記憶されている。今日、ペルーの科学者たちは何千もの昔ながらのジャガイモを守っており、その遺伝子が、病気に強く気候の変化を生きぬける新しい品種を作る助けになることを願っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a light, dry food を受け、could be stored の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は gardens（場所）で、うしろの wealthy people displayed unusual plants は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 new varieties を受け、can resist の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'ジャガイモは、アンデス山脈で少なくとも7千年前に育てられはじめた。', answer: true, why: '第2段落 Potatoes were first grown in the Andes Mountains ... at least seven thousand years ago。' },
+      { statement: 'ヨーロッパ人は、ジャガイモをすぐに主食として受け入れた。', answer: false, why: '第3段落 At first, however, many Europeans did not trust the new plant。' },
+      { statement: 'ジャガイモは地中にあるので、兵士にこわされにくい。', answer: true, why: '第4段落 because they are hidden underground, they are harder for soldiers to destroy or steal。' },
+      { statement: '1840年代のアイルランドの悲劇は、多くの品種を育てていたために起きた。', answer: false, why: '第5段落 This tragedy is still remembered as a warning about the risks of growing only a few varieties。' },
+    ],
+    qa: [
+      { q: 'Why did some Europeans believe potatoes caused disease?', choices: ['Partly because potatoes belong to the same family as some poisonous plants.', 'Because potatoes were too expensive.', 'Because potatoes grew only in hot places.', 'Because animals refused to eat them.'], answer: 0, why: '第3段落 partly because it belongs to the same family as certain poisonous plants。' },
+      { q: 'Why do scientists in Peru protect traditional types of potatoes?', choices: ['To use their genes to create varieties that resist disease and climate change.', 'To sell them as decorations.', 'To stop people from eating potatoes.', 'To make potatoes grow faster in deserts only.'], answer: 0, why: '第5段落 hoping that their genes will help to create new varieties that can resist disease and survive changes in climate。' },
+    ],
+    gist: [
+      { para: 1, choices: ['アンデスでのジャガイモの始まりと保存の工夫', 'スペインの探検の歴史', '山の天気', '小麦の育て方'], answer: 0, why: '第2段落は、アンデスでの栽培の始まり、多くの品種、こおらせてかわかす保存法を述べている。' },
+      { para: 3, choices: ['ジャガイモが広まった理由（穀物よりすぐれた点）', '兵士の食事の量', '都市の建物', '王様の好物'], answer: 0, why: '第4段落は、戦争やききんの中で、ジャガイモの利点が広まりにつながったことを述べている。' },
+    ],
+    titleQ: { choices: ["The Potato's Long Journey", 'How to Make French Fries', 'The Mountains of Peru', 'Why Wheat Is Better Than Rice'], answer: 0, why: '全体として、ジャガイモがアンデスから世界へ広まった長い道のりと、その教訓を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
