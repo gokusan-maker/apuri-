@@ -449,7 +449,7 @@
   - [x] 170 正誤問題〈88〉（TOEFL・IELTS の書き言葉㊵：冠詞 a／the／なし）10問
   - [x] 171 誤文訂正〈82〉（共通テストレベル：強調構文と it の用法（It is ～ that・It takes 人 時間 to ～））10問
   - [x] 172 正誤問題〈89〉（共通テストレベル：強調構文と it の用法）10問
-  - [ ] 173 誤文訂正〈83〉（TOEFL・IELTS の書き言葉㊶：数量の表し方（many／much・few／little・a number of／an amount of））10問
+  - [x] 173 誤文訂正〈83〉（TOEFL・IELTS の書き言葉㊶：数量の表し方（many／much・few／little・a number of／an amount of））10問
   - [ ] 174 正誤問題〈90〉（TOEFL・IELTS の書き言葉㊷：数量の表し方）10問
   - [ ] 175 誤文訂正〈84〉（共通テストレベル：接続詞の使い分け（unless・as long as・in case・even if））10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

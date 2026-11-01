@@ -3594,6 +3594,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It is necessary [of] us to protect the environment.', choices: ['for', 'by', 'with', 'from'], answer: 0, why: 'necessary・important などは It is ～ for 人 to …。' },
     ],
   },
+  {
+    id: 'exam-fix-83',
+    title: '入試の誤文訂正〈83〉（TOEFL・IELTS の書き言葉：数量の表し方）',
+    points: ['数えられる名詞には many・few・a number of・fewer、数えられない名詞には much・little・an amount of・less。a few／a little は「少しある」、few／little は「ほとんどない」。large と small は number・amount に使い、many・much とはいっしょにしない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'A large number of students attended the lecture.', ja: '多くの学生がその講義に出席した。' }],
+    questions: [
+      { sentence: 'There are not [much] people in the park today.', choices: ['many', 'a little', 'an amount of', 'little'], answer: 0, why: 'people は数えられる名詞なので many。' },
+      { sentence: 'We do not have [many] time left before the test.', choices: ['much', 'a number of', 'few', 'several'], answer: 0, why: 'time（時間）は数えられない名詞なので much。' },
+      { sentence: 'A large [amount] of students attended the lecture.', choices: ['number', 'deal', 'quantity of much', 'size'], answer: 0, why: '数えられる students には a large number of。amount は数えられない名詞に使う。' },
+      { sentence: 'The factory produces a huge [number] of waste every year.', choices: ['amount', 'many', 'few', 'numbers'], answer: 0, why: 'waste（ごみ）は数えられない名詞なので an amount of。' },
+      { sentence: 'There were [less] cars on the road this morning than usual.', choices: ['fewer', 'little', 'much', 'a little'], answer: 0, why: '数えられる cars の「より少ない」は fewer。less は数えられない名詞に使う。' },
+      { sentence: 'I have [a few] money, so I can buy you a drink.', choices: ['a little', 'a few of', 'few', 'many'], answer: 0, why: 'money は数えられない名詞なので「少しある」は a little。' },
+      { sentence: 'He is very shy and has [little] friends at his new school.', choices: ['few', 'a little', 'much', 'less'], answer: 0, why: '数えられる friends の「ほとんどいない」は few。' },
+      { sentence: 'Please add [a few] salt to the soup.', choices: ['a little', 'many', 'few', 'a number of'], answer: 0, why: 'salt は数えられない名詞なので a little。' },
+      { sentence: 'The number of visitors was very [many] last year.', choices: ['large', 'much', 'lot', 'plenty'], answer: 0, why: 'number の大小は large／small で表す：very large。' },
+      { sentence: 'She has read [a lot] books about space.', choices: ['a lot of', 'much', 'a little', 'an amount of'], answer: 0, why: '名詞の前は a lot of（of をわすれない）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

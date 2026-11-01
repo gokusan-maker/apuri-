@@ -1205,3 +1205,10 @@ it('正誤問題〈89〉：強調構文と it の用法の単元が10問ある',
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) which')
 })
+
+it('誤文訂正〈83〉：数量の表し方の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-83')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('many')
+})
