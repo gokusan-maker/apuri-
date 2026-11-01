@@ -3520,3 +3520,4 @@
 - 2026-11-01: 文法：入試の誤文訂正〈61〉（医学部・難関大レベル⑦：in which・with whom・with which・Whoever・whatever・However・whenever・for which・most of whom）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「ロボットとともに働く」（社会・技術・関係代名詞 that／although／how の空所）
 - 2026-11-01: キャラクター：ヤツガシラの「ヤツガシラン」を追加（とくぎ：かんむりガード）
+- 2026-11-01: 文法：入試の正誤問題〈68〉（医学部・難関大レベル⑦：with whom・with which・whoever・from・However・whenever・for which・in which・most of whom・主語と動詞の一致）10問

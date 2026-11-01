@@ -1586,6 +1586,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'This problem (A) is (B) more easier (C) than (D) that one.', choices: ['(A) is', '(B) more easier', '(C) than', '(D) that one'], answer: 1, why: 'easier（more と -er を重ねない）。' },
     ],
   },
+  {
+    id: 'exam-error-hard7',
+    title: '入試の正誤問題〈68〉（医学部・難関大レベル⑦：前置詞＋関係代名詞・複合関係詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'with whom・with which・for which・in which、前置詞のあとに that・where を置かない、whoever・whatever・however・whenever、most of whom など、難関大学でよく問われる関係詞。',
+    ],
+    examples: [
+      { en: 'The prize will go to whoever comes first.', ja: '賞はいちばんに来た人にあたえられる。' },
+      { en: 'There were many students, most of whom were from Asia.', ja: '多くの学生がいて、そのほとんどはアジア出身だった。' },
+    ],
+    questions: [
+      { sentence: 'The friend (A) with that (B) I traveled (C) was (D) very kind.', choices: ['(A) with that', '(B) I traveled', '(C) was', '(D) very kind'], answer: 0, why: '前置詞のあとに that は使えない：with whom。' },
+      { sentence: 'I (A) lost (B) the pen (C) with what (D) I wrote the letter.', choices: ['(A) lost', '(B) the pen', '(C) with what', '(D) I wrote the letter'], answer: 2, why: 'もの（the pen）なので with which。' },
+      { sentence: 'The prize (A) will go (B) to (C) whomever (D) comes first.', choices: ['(A) will go', '(B) to', '(C) whomever', '(D) comes first'], answer: 2, why: 'comes の主語なので主格 whoever：to whoever comes first。' },
+      { sentence: 'You (A) can take (B) whatever (C) you like (D) of this box.', choices: ['(A) can take', '(B) whatever', '(C) you like', '(D) of this box'], answer: 3, why: '「この箱から」は from this box。' },
+      { sentence: '(A) Whatever hard (B) you try, (C) you cannot (D) finish it in a day.', choices: ['(A) Whatever hard', '(B) you try', '(C) you cannot', '(D) finish it in a day'], answer: 0, why: '「どれほど～しても」は However hard。' },
+      { sentence: 'Please (A) call me (B) whatever (C) you need (D) help.', choices: ['(A) call me', '(B) whatever', '(C) you need', '(D) help'], answer: 1, why: '「～するときはいつでも」は whenever。' },
+      { sentence: 'The reason (A) for that (B) he left (C) is still (D) unknown.', choices: ['(A) for that', '(B) he left', '(C) is still', '(D) unknown'], answer: 0, why: '前置詞のあとに that は使えない：for which。' },
+      { sentence: 'This is (A) the town (B) in where (C) I (D) was born.', choices: ['(A) the town', '(B) in where', '(C) I', '(D) was born'], answer: 1, why: '前置詞のあとに where は置けない：in which。' },
+      { sentence: 'There were (A) many students, (B) most of them (C) were (D) from Asia.', choices: ['(A) many students', '(B) most of them', '(C) were', '(D) from Asia'], answer: 1, why: 'コンマで文をつなぐので most of whom。' },
+      { sentence: 'The house (A) which (B) I lived (C) in as a child (D) are now empty.', choices: ['(A) which', '(B) I lived', '(C) in as a child', '(D) are now empty'], answer: 3, why: '主語は The house（単数）なので is now empty。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
