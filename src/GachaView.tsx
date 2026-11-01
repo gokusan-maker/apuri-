@@ -597,6 +597,13 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           <p className="gacha-name">
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
+            {!result.mystery && (
+              // デザイン181：名前の横にタイプのアイコン
+              <span className="gacha-type-icon" aria-label={`タイプ：${typeOf(result.species.id).name}`} title={typeOf(result.species.id).name}>
+                {' '}
+                {typeOf(result.species.id).icon}
+              </span>
+            )}
           </p>
           {!result.mystery && (
             // デザイン120：出た子のとくぎも小さく出す

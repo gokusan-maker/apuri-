@@ -726,3 +726,12 @@ it('デザイン176：ガチャの結果に、出た子の今日のチャレン�
   const c = challengeOf('cat')
   expect(screen.getByLabelText('出た子の今日のチャレンジ').textContent).toBe(`${c.icon} 今日のチャレンジ：${c.label}`)
 })
+
+it('デザイン181：ガチャの結果で、名前の横にタイプのアイコンが出る', async () => {
+  localStorage.clear()
+  const { typeOf } = await import('./chartype')
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  const t = typeOf('cat')
+  expect(screen.getByLabelText(`タイプ：${t.name}`).textContent).toContain(t.icon)
+})
