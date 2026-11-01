@@ -2018,6 +2018,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Seldom (A) does the city (B) is (C) this quiet (D) on a Saturday night.', choices: ['(A) does the city', '(B) is', '(C) this quiet', '(D) on a Saturday night'], answer: 1, why: 'be 動詞の文なので does は不要：Seldom is the city this quiet。' },
     ],
   },
+  {
+    id: 'exam-error-causative2',
+    title: '入試の正誤問題〈86〉（共通テストレベル：使役動詞と知覚動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'make・let・have 人 ＋原形、get 人 to ～、have 物 ＋過去分詞、see・hear・feel 人 ＋原形（～ing）、使役の受け身 be made to ～ など。',
+    ],
+    examples: [
+      { en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' },
+      { en: 'I saw a man enter the building.', ja: '私は男の人が建物に入るのを見た。' },
+    ],
+    questions: [
+      { sentence: 'My mother (A) made (B) me (C) to clean (D) my room.', choices: ['(A) made', '(B) me', '(C) to clean', '(D) my room'], answer: 2, why: 'make 人 ＋原形：made me clean。' },
+      { sentence: 'My father (A) let me (B) using (C) his camera (D) on the trip.', choices: ['(A) let me', '(B) using', '(C) his camera', '(D) on the trip'], answer: 1, why: 'let 人 ＋原形：let me use。' },
+      { sentence: 'I (A) got my friend (B) help me (C) with (D) my homework.', choices: ['(A) got my friend', '(B) help me', '(C) with', '(D) my homework'], answer: 1, why: 'get 人 ＋ to 不定詞：got my friend to help me。' },
+      { sentence: 'I (A) had (B) my bike (C) repair (D) at the shop.', choices: ['(A) had', '(B) my bike', '(C) repair', '(D) at the shop'], answer: 2, why: 'have 物 ＋過去分詞：had my bike repaired。' },
+      { sentence: 'I (A) saw a man (B) to enter (C) the building (D) at midnight.', choices: ['(A) saw a man', '(B) to enter', '(C) the building', '(D) at midnight'], answer: 1, why: 'see 人 ＋原形：saw a man enter。' },
+      { sentence: 'He (A) was made (B) clean the classroom (C) by (D) the teacher.', choices: ['(A) was made', '(B) clean the classroom', '(C) by', '(D) the teacher'], answer: 1, why: '使役の受け身は to が必要：was made to clean。' },
+      { sentence: 'I (A) felt (B) the ground (C) to shake (D) during the earthquake.', choices: ['(A) felt', '(B) the ground', '(C) to shake', '(D) during the earthquake'], answer: 2, why: 'feel 物 ＋原形（～ing）：felt the ground shake。' },
+      { sentence: 'I (A) heared (B) someone (C) call (D) my name in the dark.', choices: ['(A) heared', '(B) someone', '(C) call', '(D) my name in the dark'], answer: 0, why: 'hear の過去形は heard（不規則動詞）：I heard someone call my name。' },
+      { sentence: 'The teacher (A) had (B) us (C) to read (D) the story aloud.', choices: ['(A) had', '(B) us', '(C) to read', '(D) the story aloud'], answer: 2, why: 'have 人 ＋原形：had us read。' },
+      { sentence: 'Let us (A) have (B) lunch together, (C) and then (D) watching a movie.', choices: ['(A) have', '(B) lunch together,', '(C) and then', '(D) watching a movie'], answer: 3, why: 'Let us ＋原形を並べるので watch a movie。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
