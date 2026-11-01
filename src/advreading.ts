@@ -22231,6 +22231,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Too Safe to Learn?', 'How to Build a Slide', 'The History of Rubber', 'Why Children Dislike Parks'], answer: 0, why: '全体として、安全になりすぎた遊び場への疑問と、リスクのある遊びの大切さを述べている。' },
   },
   {
+    id: 'kyotsu-hydrothermal-vents',
+    title: 'Life Without Sunlight',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For a long time, scientists believed that almost all life on Earth depended, directly or indirectly, on sunlight. Plants use the energy of the Sun to make food, and animals survive by eating plants or other animals. The deep ocean, where no light reaches, was thought to be a cold, dark desert with very little life. In 1977, however, a discovery at the bottom of the Pacific Ocean forced scientists to rethink this idea completely.",
+      "That year, researchers in a small submarine were exploring the sea floor at a depth of about 2,500 meters. They were looking for hot springs ( A ) they believed might exist along cracks in the Earth's crust. They did find them: places where extremely hot water, heated by rock deep below the surface, shoots up from the sea floor. What surprised them, though, was not the water itself but the crowded communities of animals living around it, including giant tube worms, clams, and shrimp.",
+      "How could so much life exist in complete darkness? The answer turned out to be bacteria. The hot water coming from these vents is rich in chemicals such as hydrogen sulfide, which is poisonous to most living things. Certain bacteria, however, can use the energy stored in these chemicals to produce food, a process known as chemosynthesis. These bacteria form the base of the food chain. Some animals eat them directly, while others, like the giant tube worms, carry the bacteria inside their bodies and receive food from them in return for a safe place to live.",
+      "The discovery of these ecosystems has had an impact far beyond the study of the ocean. Because vent communities do not depend on sunlight, some scientists believe that life on Earth may have first appeared in similar environments billions of years ago. The discovery has also encouraged the search for life on other worlds. Several moons in our solar system, such as one of Jupiter's moons, are thought to have oceans hidden beneath thick layers of ice, and these oceans may contain vents ( B ) are similar to those on Earth.",
+      "Today, deep-sea vents face a new threat. The minerals that build up around them contain valuable metals, and some companies are interested in mining the sea floor. Scientists warn that mining could destroy communities ( C ) took thousands of years to develop and that we still understand very little. Protecting these remarkable places will require careful international agreements, since most of the deep ocean lies outside the control of any single country.",
+    ],
+    ja: [
+      '長い間、科学者たちは、地球上のほとんどすべての生命が、直接または間接に日光にたよっていると考えていた。植物は太陽のエネルギーを使って養分を作り、動物は植物やほかの動物を食べて生きている。光がまったくとどかない深海は、生き物のほとんどいない冷たく暗い砂漠だと考えられていた。しかし1977年、太平洋の海底での発見によって、科学者たちはこの考えを根本から考え直さなければならなくなった。',
+      'その年、小さな潜水艇に乗った研究者たちが、水深約2,500メートルの海底を調べていた。彼らは、地球の地殻の割れ目ぞいにあるかもしれないと考えていた温泉をさがしていた。そして実際に見つけた。地表の深いところの岩で熱せられたとても熱い水が、海底からふき出している場所である。しかし彼らをおどろかせたのは、水そのものではなく、そのまわりにすむ、巨大なチューブワームや貝やエビなどの動物のこみ合った群れだった。',
+      'まっくらな中で、どうしてこれほど多くの生命がいられるのだろうか。その答えは細菌だとわかった。この噴出口から出る熱い水には、ほとんどの生き物にとって毒である硫化水素のような化学物質が多くふくまれている。しかしある種の細菌は、こうした化学物質にたくわえられたエネルギーを使って養分を作ることができる。これは化学合成とよばれる。こうした細菌が食物連鎖の土台になっている。細菌を直接食べる動物もいれば、巨大なチューブワームのように細菌を体の中にすまわせ、安全なすみかをあたえるかわりに養分を受けとる動物もいる。',
+      'こうした生態系の発見は、海の研究をはるかにこえた影響をあたえた。噴出口の生き物の群れは日光にたよっていないので、地球の生命は何十億年も前に似た環境で最初に生まれたのかもしれないと考える科学者もいる。この発見は、ほかの天体での生命さがしもうながした。太陽系のいくつかの衛星、たとえば木星の衛星のひとつは、あつい氷の層の下に海をかくしていると考えられており、その海には地球のものに似た噴出口があるかもしれない。',
+      '今日、深海の噴出口は新しい危険に直面している。そのまわりにたまる鉱物には価値の高い金属がふくまれていて、海底の採掘に関心をもつ会社もある。科学者たちは、採掘によって、できるまでに何千年もかかり、私たちがまだほとんど理解していない生き物の群れがこわされるかもしれないと警告している。深海の大部分はどの国の管理もおよばないので、このすばらしい場所を守るには、注意深い国際的な取り決めが必要になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 hot springs を受け、might exist の主語になる関係代名詞 that（they believed は挿入）。うしろに主語がないので where は使えない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 vents を受け、are の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 communities を受け、took の主語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '1977年より前、深海には生き物がほとんどいないと考えられていた。', answer: true, why: '第1段落 The deep ocean ... was thought to be a cold, dark desert with very little life。' },
+      { statement: '研究者がいちばんおどろいたのは、ふき出す水の熱さだった。', answer: false, why: '第2段落 What surprised them, though, was not the water itself but the crowded communities of animals。' },
+      { statement: 'ある種の細菌は、化学物質のエネルギーを使って養分を作れる。', answer: true, why: '第3段落 Certain bacteria, however, can use the energy stored in these chemicals to produce food。' },
+      { statement: '深海の大部分は、ひとつの国が管理している。', answer: false, why: '第5段落 most of the deep ocean lies outside the control of any single country。' },
+    ],
+    qa: [
+      { q: 'How do giant tube worms get food?', choices: ['Bacteria living inside their bodies give them food.', 'They catch fish with their arms.', 'They use sunlight like plants.', 'They eat the hot water.'], answer: 0, why: '第3段落 the giant tube worms, carry the bacteria inside their bodies and receive food from them。' },
+      { q: 'Why has the discovery encouraged the search for life on other worlds?', choices: ['Some moons may have hidden oceans with vents similar to those on Earth.', 'Other planets have more sunlight.', 'Bacteria can fly through space.', 'Jupiter is covered with plants.'], answer: 0, why: '第4段落 these oceans may contain vents that are similar to those on Earth。' },
+    ],
+    gist: [
+      { para: 2, choices: ['暗やみでの生命をささえる細菌のしくみ', '潜水艇の作り方', '硫化水素の使い道', 'エビの料理'], answer: 0, why: '第3段落は、化学合成をする細菌が食物連鎖の土台になることを述べている。' },
+      { para: 4, choices: ['噴出口に対する採掘の危険と保護の必要', '金属の値段', '海の深さのはかり方', '国の数'], answer: 0, why: '第5段落は、海底採掘のおそれと、国際的な取り決めの必要を述べている。' },
+    ],
+    titleQ: { choices: ['Life Without Sunlight', 'How Submarines Sink', 'The Moons of Jupiter', 'Cooking with Hot Springs'], answer: 0, why: '全体として、日光にたよらない深海の噴出口の生態系とその意義・危機を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
