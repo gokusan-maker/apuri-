@@ -1898,6 +1898,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Swim in the river (B) can be (C) dangerous (D) after heavy rain.', choices: ['(A) Swim in the river', '(B) can be', '(C) dangerous', '(D) after heavy rain'], answer: 0, why: '主語になるので動名詞 Swimming（または To swim）。' },
     ],
   },
+  {
+    id: 'exam-error-wordform2',
+    title: '入試の正誤問題〈81〉（TOEFL・IELTS の書き言葉：語の形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '名詞の前は形容詞、動詞や形容詞をくわしくするのは副詞、冠詞・所有格のあとは名詞。economic／economical、effect（名詞）／affect（動詞）など、エッセイでよく問われる語の形。',
+    ],
+    examples: [
+      { en: 'The new rule had a strong effect on workers.', ja: '新しいきまりは働く人に強い影響をあたえた。' },
+      { en: 'She completed the project successfully.', ja: '彼女はその計画をうまくなしとげた。' },
+    ],
+    questions: [
+      { sentence: 'The country (A) is facing (B) serious (C) economical (D) problems.', choices: ['(A) is facing', '(B) serious', '(C) economical', '(D) problems'], answer: 2, why: '「経済の」問題は economic。economical は「むだのない」。' },
+      { sentence: 'She (A) completed (B) the project (C) successful (D) last month.', choices: ['(A) completed', '(B) the project', '(C) successful', '(D) last month'], answer: 2, why: '動詞 completed をくわしくするのは副詞 successfully。' },
+      { sentence: 'Many people (A) do not (B) understand (C) the important (D) of sleep.', choices: ['(A) do not', '(B) understand', '(C) the important', '(D) of sleep'], answer: 2, why: 'the のあとで of がつづくので名詞 importance。' },
+      { sentence: 'The new rule (A) had (B) a strong (C) affect (D) on workers.', choices: ['(A) had', '(B) a strong', '(C) affect', '(D) on workers'], answer: 2, why: '名詞「影響」は effect。' },
+      { sentence: 'Scientists (A) analyzed (B) the data (C) very (D) careful.', choices: ['(A) analyzed', '(B) the data', '(C) very', '(D) careful'], answer: 3, why: '動詞 analyzed をくわしくするのは副詞 carefully。' },
+      { sentence: '(A) There has been (B) a significantly (C) increase (D) in online shopping.', choices: ['(A) There has been', '(B) a significantly', '(C) increase', '(D) in online shopping'], answer: 1, why: '名詞 increase の前は形容詞 significant。' },
+      { sentence: '(A) His explain (B) of the problem (C) was (D) very clear.', choices: ['(A) His explain', '(B) of the problem', '(C) was', '(D) very clear'], answer: 0, why: '所有格のあとで主語になるので名詞 explanation。' },
+      { sentence: 'The results (A) were (B) surprising similar (C) to those (D) of the earlier study.', choices: ['(A) were', '(B) surprising similar', '(C) to those', '(D) of the earlier study'], answer: 1, why: '形容詞 similar をくわしくするのは副詞 surprisingly。' },
+      { sentence: 'Regular exercise (A) can (B) effect (C) your mood (D) in a positive way.', choices: ['(A) can', '(B) effect', '(C) your mood', '(D) in a positive way'], answer: 1, why: '動詞「影響する」は affect。' },
+      { sentence: 'Buying (A) a large pack (B) is often (C) more (D) economic than buying small ones.', choices: ['(A) a large pack', '(B) is often', '(C) more', '(D) economic than buying small ones'], answer: 3, why: '「お得な・むだのない」は economical。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
