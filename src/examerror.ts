@@ -4140,6 +4140,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Ants are known as [industrial] insects that work very hard.', choices: ['industrious', 'industry', 'industrially', 'industrialized'], answer: 0, why: '「勤勉な」は industrious。industrial は「産業の」。' },
     ],
   },
+  {
+    id: 'exam-fix-96',
+    title: '入試の誤文訂正〈96〉（TOEFL・IELTS の書き言葉：まとめ問題⑤）',
+    points: ['主語と動詞の一致（主語が長いとき・each／the number of／a number of・either A or B）、名詞の数（数えられない名詞 information／equipment／research、one of ＋複数名詞、criteria／phenomena の単数形）、冠詞（the＋最上級・楽器・唯一のもの、a／an の使い分け）をまぜた、論文や説明文でよく見るまちがい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The number of international students has increased.', ja: '留学生の数は増えている。' }],
+    questions: [
+      { sentence: 'The results of the latest survey [suggests] that many residents support the plan.', choices: ['suggest', 'suggesting', 'is suggesting', 'has suggested'], answer: 0, why: '主語は The results（複数）。of the latest survey にまどわされず suggest。' },
+      { sentence: 'The number of international students in the city [have] doubled since 2010.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: 'The number of ～ は「～の数」で単数あつかい。has doubled。' },
+      { sentence: 'Researchers collected [many informations] about local farming methods.', choices: ['a great deal of information', 'many information', 'an information', 'a lot of informations'], answer: 0, why: 'information は数えられない名詞。a great deal of information。' },
+      { sentence: 'Either the manager or the assistants [is] responsible for the report.', choices: ['are', 'was', 'has been', 'being'], answer: 0, why: 'Either A or B は動詞に近い B（the assistants・複数）に合わせて are。' },
+      { sentence: 'This is one of the most important [discovery] in modern medicine.', choices: ['discoveries', 'discovering', 'a discovery', 'discoverer'], answer: 0, why: 'one of the ＋最上級＋複数名詞。discoveries。' },
+      { sentence: 'Each of the participants [were] given a short questionnaire.', choices: ['was', 'have been', 'are', 'being'], answer: 0, why: 'Each of ～ は単数あつかい。was given。' },
+      { sentence: 'The laboratory bought several new [equipments] last year.', choices: ['pieces of equipment', 'equipment pieces of', 'equipment', 'an equipment'], answer: 0, why: 'equipment は数えられない名詞。数えるときは pieces of equipment。several のあとなので equipment だけでは不可。' },
+      { sentence: 'The study used only one [criteria] to select the schools.', choices: ['criterion', 'criterias', 'criterions of', 'criteria of'], answer: 0, why: 'criteria は複数形。単数は criterion。' },
+      { sentence: 'Mount Everest is [highest] mountain in the world.', choices: ['the highest', 'a highest', 'an highest', 'most high'], answer: 0, why: '最上級には the をつける。the highest mountain。' },
+      { sentence: 'It took her [a hour] to finish the essay.', choices: ['an hour', 'the hours', 'hour', 'an hours'], answer: 0, why: 'hour の h は発音しないので母音で始まる。an hour。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
