@@ -21880,6 +21880,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Castles of Japan', 'How to Build a Concrete Museum', 'The History of Wars in Europe', 'Why People Climb Stairs'], answer: 0, why: '全体として、日本の城の成り立ち、役割の変化、失われた城と再建、その意味を述べている。' },
   },
   {
+    id: 'kyotsu-elephants',
+    title: 'The Gentle Giants',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Elephants are the largest land animals on Earth, and their size alone makes them impressive. Yet what fascinates many scientists is not only their strength but also their rich social lives. Elephants live in close family groups, communicate in complex ways, and appear to remember places and companions for many years. Learning about them can teach us a great deal about intelligence in the animal world.",
+      "An elephant family group is usually led by the oldest female, often called the matriarch. She guides the group to sources of food and water, and her long experience can be especially valuable during difficult times, such as droughts. Young elephants are raised not only by their mothers but also by aunts, sisters, and cousins, who help to protect them from danger. This shared care allows calves to learn the skills ( A ) they will need as adults.",
+      "Elephants communicate in a variety of ways. Besides the trumpeting sounds that people often recognize, they produce deep rumbling calls, some of which are too low for human ears to hear. These low sounds can travel long distances, and researchers believe that elephants may even sense them through their feet as vibrations in the ground. In addition, elephants use touch, such as wrapping their trunks around each other, to greet family members and offer comfort.",
+      "Their memory also seems remarkable. Elephants can remember the locations of water holes across large areas and return to them years later. Some studies suggest that they can recognize the calls of dozens of other elephants and tell the difference between familiar and unfamiliar individuals. Such abilities help them survive in environments ( B ) food and water can be hard to find.",
+      "Sadly, many elephant populations are under threat. Their habitats are shrinking as forests and grasslands are turned into farms and towns, and illegal hunting for ivory continues in some areas. Conservation groups are working to protect elephants by creating safe areas, reducing conflicts with farmers, and stopping the illegal trade in ivory. Protecting these gentle giants is important not only for the elephants themselves but also for the ecosystems they help to shape, since they spread seeds and create paths ( C ) other animals use.",
+    ],
+    ja: [
+      'ゾウは地球上で最も大きな陸の動物であり、その大きさだけでもおどろくべきものである。しかし多くの科学者を引きつけているのは、その力強さだけでなく、ゆたかな社会生活でもある。ゾウは親しい家族の群れでくらし、複雑な方法で伝え合い、場所や仲間を何年も覚えているようである。ゾウについて学ぶことで、動物の世界のかしこさについて多くのことがわかる。',
+      'ゾウの家族の群れは、ふつう最も年上のメスにひきいられ、そのメスはよく女家長とよばれる。彼女は群れを食べ物や水のある場所へみちびき、その長い経験は、干ばつのような苦しい時期にとくに役に立つ。子どものゾウは母親だけでなく、おばや姉妹やいとこにも育てられ、彼女たちは子どもを危険から守るのを助ける。このように世話を分かち合うことで、子どものゾウはおとなになって必要になる技能を学ぶことができる。',
+      'ゾウはさまざまな方法で伝え合う。人がよく知っているラッパのような鳴き声のほかに、低くうなるような声を出し、その中には低すぎて人間の耳には聞こえないものもある。こうした低い音は遠くまでとどき、研究者は、ゾウが地面のふるえとして足でそれを感じとっているのかもしれないと考えている。さらに、ゾウは鼻をたがいにからめるなどのふれあいを使って、家族にあいさつしたり、なぐさめたりする。',
+      'ゾウの記憶力もすばらしいようである。ゾウは広い地域にわたる水場の場所を覚えていて、何年もたってからそこにもどることができる。ゾウはほかの何十頭ものゾウの声を聞き分け、知っている相手と知らない相手を区別できることを示す研究もある。こうした力は、食べ物や水を見つけるのがむずかしい環境で生きのびるのに役立っている。',
+      '残念なことに、多くのゾウの群れはおびやかされている。森や草原が畑や町に変えられてすみかがせまくなっており、地域によっては象牙を目的とした違法な狩りが続いている。保護団体は、安全な地域をつくり、農家との争いをへらし、象牙の違法な取り引きを止めることでゾウを守ろうとしている。このやさしい巨人を守ることは、ゾウ自身のためだけでなく、ゾウがつくるのを助けている生態系のためにも大切である。ゾウは種をまきちらし、ほかの動物が使う道をつくるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the skills を受け、need の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は environments（場所）で、うしろの food and water can be hard to find は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 paths を受け、use の目的語になる関係代名詞 that。where はうしろが完全な文のときに使う。' },
+    ],
+    tf: [
+      { statement: 'ゾウの家族の群れは、ふつう最も年上のメスにひきいられる。', answer: true, why: '第2段落 An elephant family group is usually led by the oldest female。' },
+      { statement: '子どものゾウは、母親だけに育てられる。', answer: false, why: '第2段落 Young elephants are raised not only by their mothers but also by aunts, sisters, and cousins。' },
+      { statement: 'ゾウの声の中には、人間の耳には聞こえないものがある。', answer: true, why: '第3段落 some of which are too low for human ears to hear。' },
+      { statement: 'ゾウのすみかは、どこでも広がっている。', answer: false, why: '第5段落 Their habitats are shrinking。' },
+    ],
+    qa: [
+      { q: 'How might elephants sense low sounds?', choices: ['Through their feet as vibrations in the ground.', 'Only with their eyes.', 'By smelling the air.', 'By looking at the sky.'], answer: 0, why: '第3段落 elephants may even sense them through their feet as vibrations in the ground。' },
+      { q: 'Why are elephants important for ecosystems?', choices: ['They spread seeds and create paths that other animals use.', 'They eat all the plants.', 'They stop rain from falling.', 'They keep other animals away.'], answer: 0, why: '第5段落 since they spread seeds and create paths that other animals use。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ゾウの家族の群れのしくみ', '森の地図', '干ばつの原因', '子どもの遊び'], answer: 0, why: '第2段落は、女家長がひきいる群れと、みんなで子どもを育てるしくみを述べている。' },
+      { para: 3, choices: ['ゾウのすぐれた記憶力', '水場のつくり方', '声の大きさ', '道路の歴史'], answer: 0, why: '第4段落は、水場の場所や仲間の声を覚えている記憶力を述べている。' },
+    ],
+    titleQ: { choices: ['The Gentle Giants', 'How to Ride an Elephant', 'The History of Ivory', 'Why Grass Is Green'], answer: 0, why: '全体として、ゾウの社会生活・伝え合い・記憶力と、ゾウを守る大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
