@@ -22660,6 +22660,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Underrated Sense', 'How Dogs Find Lost Things', 'The Best Perfumes in the World', 'Why We Catch Colds'], answer: 0, why: '全体として、軽く見られがちなきゅう覚のしくみと大切さを述べている。' },
   },
   {
+    id: 'kyotsu-price-psychology',
+    title: 'Why Prices End in 99',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Have you ever noticed that many prices end in 99? A shirt may cost 1,980 yen instead of 2,000 yen, or a game may be sold for 49.99 dollars rather than 50. The difference is tiny, yet stores around the world use this method again and again. Economists and psychologists have studied this habit for many years, and their research shows that the way a price is presented can influence our decisions far more than we might expect.",
+      "One explanation is what researchers call the left-digit effect. When people read a number, they pay the most attention to the first digit on the left. As a result, a price of 1,980 yen feels closer to 1,000 yen than to 2,000 yen, even though the real difference from 2,000 yen is only 20 yen. In several studies, products ( A ) were priced just below a round number sold noticeably better than the same products priced at the round number itself.",
+      "Stores also use other techniques. One common method is to place a very expensive item next to the product they actually want to sell. Compared with the expensive item, the second product suddenly seems reasonable, even if its price is high. Another technique is to show the original price crossed out next to a lower sale price. Shoppers often focus on the amount of money they believe they are saving, rather than on whether they really need the product at all.",
+      "Interestingly, prices that end in round numbers can send a different message. Luxury shops and expensive restaurants often choose prices such as 10,000 yen instead of 9,980 yen. Researchers believe that round numbers feel simple and confident, and they suggest quality rather than a bargain. In other words, stores choose the style of their prices depending on the image ( B ) they want customers to have of their products.",
+      "Understanding these techniques can help us become wiser consumers. Before buying something, we can ask ourselves whether we would still want it if its price were a round number, or if it were not on sale. Comparing the prices of similar products and setting a budget in advance are also useful habits. Prices are not simply numbers; they are messages designed to affect our choices, and recognizing them is the first step toward making decisions ( C ) truly reflect our own needs.",
+    ],
+    ja: [
+      '多くの値段が99で終わっていることに気づいたことがあるだろうか。シャツが2,000円ではなく1,980円だったり、ゲームが50ドルではなく49.99ドルで売られていたりする。そのちがいはごくわずかなのに、世界中の店がこの方法を何度もくり返し使っている。経済学者や心理学者は長年この習慣を研究しており、その研究によれば、値段の見せ方は私たちの判断に、思っているよりずっと大きな影響をあたえることがある。',
+      'ひとつの説明は、研究者が「左の数字の効果」とよぶものである。人は数字を読むとき、いちばん左の数字に最も注意をはらう。その結果、1,980円という値段は、2,000円との実際の差がたった20円なのに、2,000円より1,000円に近く感じられる。いくつかの研究では、きりのよい数字のすぐ下の値段をつけた商品は、同じ商品にきりのよい数字そのものの値段をつけたときより、目に見えてよく売れた。',
+      '店はほかの工夫も使っている。よくある方法のひとつは、本当に売りたい商品のとなりにとても高い品物を置くことである。高い品物とくらべると、2つめの商品は、値段が高くても急に手ごろに見える。もうひとつの工夫は、もとの値段を線で消して、となりに安いセールの値段を見せることである。買い物客は、その商品が本当に必要かどうかより、自分が節約できると思う金額に注目しがちである。',
+      'おもしろいことに、きりのよい数字で終わる値段は、別のメッセージを送ることがある。高級店や高いレストランは、9,980円ではなく10,000円のような値段を選ぶことが多い。研究者は、きりのよい数字はシンプルで自信があるように感じられ、お買い得ではなく品質の高さを感じさせると考えている。言いかえれば、店は、客に商品についてもってほしいイメージによって、値段のつけ方を選んでいるのである。',
+      'こうした工夫を理解すれば、私たちはかしこい消費者になれる。何かを買う前に、値段がきりのよい数字でも、セールでなくても、それでもほしいかどうかを自分に問いかけることができる。似た商品の値段をくらべたり、前もって予算を決めたりすることも役に立つ習慣である。値段はただの数字ではなく、私たちの選択に影響するように作られたメッセージであり、それに気づくことが、本当に自分の必要に合った判断をするための第一歩なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 products を受け、were priced の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the image を受け、have の目的語になる関係代名詞 that（want customers to have the image）。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 decisions を受け、reflect の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '人は数字を読むとき、いちばん左の数字に最も注意をはらう。', answer: true, why: '第2段落 they pay the most attention to the first digit on the left。' },
+      { statement: 'きりのよい数字の値段の商品のほうが、いつもよく売れる。', answer: false, why: '第2段落 products that were priced just below a round number sold noticeably better。' },
+      { statement: '高い品物のとなりに置くと、ほかの商品が手ごろに見えることがある。', answer: true, why: '第3段落 Compared with the expensive item, the second product suddenly seems reasonable。' },
+      { statement: '高級店は、99で終わる値段を好んで使う。', answer: false, why: '第4段落 Luxury shops ... often choose prices such as 10,000 yen instead of 9,980 yen。' },
+    ],
+    qa: [
+      { q: 'What do round-number prices often suggest?', choices: ['Quality rather than a bargain.', 'That the product is on sale.', 'That the store is closing.', 'That the product is old.'], answer: 0, why: '第4段落 they suggest quality rather than a bargain。' },
+      { q: 'What does the author suggest asking before buying something?', choices: ['Whether we would still want it at a round-number price or without a sale.', 'Whether the store is famous.', 'Whether our friends have it.', 'Whether the price ends in 99.'], answer: 0, why: '第5段落 we can ask ourselves whether we would still want it if its price were a round number, or if it were not on sale。' },
+    ],
+    gist: [
+      { para: 1, choices: ['左の数字の効果', '円とドルのちがい', 'レジの使い方', '数字の歴史'], answer: 0, why: '第2段落は、左の数字に注目するため、少し安い値段がずっと安く感じられることを述べている。' },
+      { para: 4, choices: ['かしこい消費者になるための習慣', '店の開き方', '予算の計算式', 'セールの日程'], answer: 0, why: '第5段落は、値段のメッセージに気づき、かしこく買うための習慣を述べている。' },
+    ],
+    titleQ: { choices: ['Why Prices End in 99', 'How to Open a Shop', 'The History of Money', 'The Best Places to Shop'], answer: 0, why: '全体として、値段の見せ方が私たちの判断に影響するしくみと、その見ぬき方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
