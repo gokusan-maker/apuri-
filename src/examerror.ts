@@ -2234,6 +2234,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'It (A) is thought (B) that sleep (C) helps us (D) remembering what we learned.', choices: ['(A) is thought', '(B) that sleep', '(C) helps us', '(D) remembering what we learned'], answer: 3, why: 'help 人 ＋原形：helps us remember。' },
     ],
   },
+  {
+    id: 'exam-error-reflexive',
+    title: '入試の正誤問題〈95〉（共通テストレベル：再帰代名詞と相互代名詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主語と目的語が同じなら再帰代名詞（myself・themselves）、by oneself・enjoy oneself・help oneself to、「おたがい」は each other、hisself・theirselves という形はない、主語に再帰代名詞は使わない、など。',
+    ],
+    examples: [
+      { en: 'Please help yourself to the cookies.', ja: 'クッキーをご自由にどうぞ。' },
+      { en: 'Ken and Yuki often help each other.', ja: 'ケンとユキはよく助け合う。' },
+    ],
+    questions: [
+      { sentence: '(A) Myself (B) cut (C) my finger (D) while I was cooking.', choices: ['(A) Myself', '(B) cut', '(C) my finger', '(D) while I was cooking'], answer: 0, why: '主語には再帰代名詞は使わない：I cut my finger。' },
+      { sentence: 'He (A) taught (B) hisself (C) how to play (D) the guitar.', choices: ['(A) taught', '(B) hisself', '(C) how to play', '(D) the guitar'], answer: 1, why: 'he の再帰代名詞は himself。' },
+      { sentence: 'The children (A) enjoyed (B) theirselves (C) at (D) the party.', choices: ['(A) enjoyed', '(B) theirselves', '(C) at', '(D) the party'], answer: 1, why: 'they の再帰代名詞は themselves。' },
+      { sentence: 'Please (A) help (B) you (C) to (D) the cookies.', choices: ['(A) help', '(B) you', '(C) to', '(D) the cookies'], answer: 1, why: 'help oneself to ～：help yourself。' },
+      { sentence: 'She (A) lives (B) by her (C) in (D) a small apartment.', choices: ['(A) lives', '(B) by her', '(C) in', '(D) a small apartment'], answer: 1, why: '「ひとりで」は by herself。' },
+      { sentence: 'Ken and Yuki (A) often (B) help (C) themselves (D) with their homework.', choices: ['(A) often', '(B) help', '(C) themselves', '(D) with their homework'], answer: 2, why: '「おたがいに」は each other。' },
+      { sentence: '(A) We introduced (B) us (C) to (D) the new teacher.', choices: ['(A) We introduced', '(B) us', '(C) to', '(D) the new teacher'], answer: 1, why: '主語と同じなので ourselves。' },
+      { sentence: 'The members (A) talked (B) with (C) each others (D) for an hour.', choices: ['(A) talked', '(B) with', '(C) each others', '(D) for an hour'], answer: 2, why: 'each other は複数形にしない。' },
+      { sentence: '(A) Take care (B) of (C) yourselfs, (D) everyone!', choices: ['(A) Take care', '(B) of', '(C) yourselfs,', '(D) everyone!'], answer: 2, why: 'self の複数形は selves：yourselves。' },
+      { sentence: 'My friend and I (A) went (B) to the zoo (C) by (D) ourself yesterday.', choices: ['(A) went', '(B) to the zoo', '(C) by', '(D) ourself yesterday'], answer: 3, why: 'we の再帰代名詞は ourselves：by ourselves「自分たちだけで」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
