@@ -3505,3 +3505,4 @@
 - 2026-11-01: 文法：入試の正誤問題〈65〉（私学難関レベル：前置詞をふくむ熟語の総まとめ：proud of・tired of・afraid of・full of・famous for・look forward to・belong to・water・responsible for・filled with）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「立ち上がって動こう（すわりすぎ）」（科学・からだ・非制限の which／when／関係代名詞 that の空所）
 - 2026-11-01: キャラクター：トビの「トビリン」を追加（とくぎ：かぜのりのねばり）
+- 2026-11-01: 文法：入試の誤文訂正〈59〉（TOEFL・IELTS の書き言葉㉒：In conclusion・To sum up・All in all・On the whole・For these reasons・Therefore・lies in・It can be concluded that・Above all・discuss）10問

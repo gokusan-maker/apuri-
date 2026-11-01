@@ -2586,6 +2586,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The room was filled [of] smoke.', choices: ['with', 'by', 'in', 'at'], answer: 0, why: '「～でいっぱいだ」は be filled with ～（be full of ～ とも言う）。' },
     ],
   },
+  {
+    id: 'exam-fix-59',
+    title: '入試の誤文訂正〈59〉（TOEFL・IELTS の書き言葉㉒：結論・まとめの表現）',
+    points: ['In conclusion、To sum up、All in all、On the whole、For these reasons、Therefore、The problem lies in、It can be concluded that ～、Above all、他動詞 discuss など、エッセイの最後で結論やまとめを書くときの表現。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'In conclusion, technology has changed our lives in many ways.', ja: '結論として、技術は多くの点で私たちの生活を変えてきた。' }],
+    questions: [
+      { sentence: '[In conclude], technology has changed our lives.', choices: ['In conclusion', 'To conclusion', 'In concluding of', 'For conclusion'], answer: 0, why: '「結論として」は In conclusion（conclusion は名詞）。' },
+      { sentence: '[To sum it], we need more cooperation.', choices: ['To sum up', 'To sum it on', 'Sum up to', 'Summing in'], answer: 0, why: '「まとめると」は To sum up。' },
+      { sentence: '[All in], the plan was a success.', choices: ['All in all', 'All of all', 'At all', 'In all of'], answer: 0, why: '「全体として見ると」は All in all。' },
+      { sentence: '[In the whole], the results were positive.', choices: ['On the whole', 'At whole', 'By the whole', 'For whole'], answer: 0, why: '「全体的に見て」は On the whole。' },
+      { sentence: 'For these [reason], I support the plan.', choices: ['reasons', 'reasoning', 'reasoned', 'reasonable'], answer: 0, why: 'these は複数なので名詞も複数形：For these reasons。' },
+      { sentence: '[Therefore of], we should act now.', choices: ['Therefore', 'Because', 'Although', 'Despite'], answer: 0, why: '前の内容を受けて「したがって」とつなぐのは副詞 Therefore。of はいらない。' },
+      { sentence: 'In short, the problem [lie] in poor communication.', choices: ['lies', 'lay in', 'lain', 'lying'], answer: 0, why: '主語 the problem は単数で、今のことなので lies：The problem lies in ～。' },
+      { sentence: 'It can be [concluding] that exercise improves health.', choices: ['concluded', 'conclude', 'conclusion', 'concludes'], answer: 0, why: 'It can be concluded that ～「～と結論づけられる」（受け身）。' },
+      { sentence: '[Above all things of], we must protect children.', choices: ['Above all', 'Above of all', 'Over all of', 'Most of all of'], answer: 0, why: '「何よりも」は Above all。' },
+      { sentence: 'This essay has [discussed about] three main points.', choices: ['discussed', 'discussed on', 'discussing about', 'discuss about'], answer: 0, why: 'discuss は他動詞なので前置詞なしで目的語をとる：has discussed three main points。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

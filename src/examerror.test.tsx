@@ -869,3 +869,10 @@ it('正誤問題〈65〉：前置詞をふくむ熟語の総まとめの単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) proud about')
 })
+
+it('誤文訂正〈59〉：結論・まとめの表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-59')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('In conclusion')
+})
