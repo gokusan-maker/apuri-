@@ -21607,6 +21607,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Get Up and Move', 'How to Choose a Sofa', 'The History of Office Desks', 'Why Trains Are Crowded'], answer: 0, why: '全体として、長時間すわることの害と、こまめに体を動かす工夫を述べている。' },
   },
   {
+    id: 'kyotsu-local-festivals',
+    title: 'Keeping Festivals Alive',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many towns and villages in Japan, the year is marked by local festivals. People carry portable shrines through the streets, play drums and flutes, and dance in colorful costumes. Food stalls line the roads, and families who live far away often return home for the occasion. For many residents, these festivals are among the most exciting and memorable events of the year.",
+      "Local festivals usually have long histories. Many began as religious events to pray for a good harvest, to give thanks to local gods, or to protect the community from disease and disaster. Over time, they have also become important cultural traditions. The music, dances, and costumes of each festival are often unique to that area and have been passed down from one generation to the next, ( A ) helps to keep local identity alive.",
+      "Festivals also play a valuable social role. Preparing for them takes months of work, and people of all ages cooperate to make decorations, practice performances, and organize events. Through this shared work, neighbors get to know one another, and young people learn from older residents. In this sense, a festival is not only an event to enjoy but also a way of building strong relationships within a community.",
+      "However, many local festivals are facing serious difficulties. In areas where the population is decreasing and aging, there are not enough young people to carry heavy shrines or to learn traditional performances. Some festivals have become smaller, and others have stopped altogether. In addition, the cost of holding a festival can be a burden for small communities with limited budgets.",
+      "To keep their festivals alive, some communities have started to welcome volunteers from outside the area, including students and foreign residents. Others use social media to attract visitors and explain the meaning of their traditions. These efforts are not always easy, and some people worry that festivals may lose their original character if they change too much. Still, many believe that sharing a festival with new people can give it fresh energy. The challenge is to find ways to protect what is most important ( B ) allowing the tradition to grow. Local festivals show ( C ) culture can connect the past, the present, and the future.",
+    ],
+    ja: [
+      '日本の多くの町や村では、1年が地元の祭りによって区切られている。人々はみこしをかついで通りをねり歩き、たいこや笛をならし、色あざやかな衣装でおどる。道には屋台がならび、遠くに住む家族もこのときにはよくふるさとに帰ってくる。多くの住民にとって、こうした祭りは1年で最もわくわくし、心に残る行事の1つである。',
+      '地元の祭りにはふつう長い歴史がある。多くは、豊作をいのったり、地元の神さまに感謝したり、病気や災害から地域を守ったりするための宗教的な行事として始まった。時がたつにつれ、それらは大切な文化の伝統にもなった。それぞれの祭りの音楽やおどりや衣装はその地域だけのものであることが多く、世代から世代へと受けつがれてきており、それが地域らしさを生きつづけさせるのに役立っている。',
+      '祭りは社会的にも価値のある役割をはたしている。準備には何か月もの作業がかかり、あらゆる年齢の人が協力して、かざりを作り、出し物を練習し、行事をまとめる。このいっしょの作業を通して、近所の人どうしが知り合い、若い人はお年よりから学ぶ。この意味で、祭りは楽しむ行事であるだけでなく、地域の中に強い関係をきずく方法でもある。',
+      'しかし、多くの地元の祭りは深刻な困難にぶつかっている。人口がへり高齢化が進む地域では、重いみこしをかついだり、伝統の出し物を覚えたりする若い人が足りない。小さくなった祭りもあれば、まったくなくなってしまった祭りもある。さらに、祭りを開く費用は、予算のかぎられた小さな地域にとって負担になることがある。',
+      '祭りを生きつづけさせるために、学生や外国人の住民をふくめ、地域の外からボランティアを受け入れはじめた地域もある。SNSを使って観光客をよび、伝統の意味を説明しているところもある。こうした取り組みはいつもかんたんではなく、祭りが変わりすぎるともとの持ち味を失うかもしれないと心配する人もいる。それでも、新しい人と祭りを分かち合うことで祭りに新しい力をあたえられると考える人は多い。課題は、伝統が育つのをみとめながら、最も大切なものを守る方法を見つけることである。地元の祭りは、文化がどのように過去と現在と未来をつなぎうるかを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（受けつがれてきたこと）を受け、helps の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['while', 'unless', 'because', 'until'], answer: 0, why: '「伝統が育つのをみとめながら（その一方で）」と、2つのことを同時に行うので while ＋ -ing。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'whom'], answer: 0, why: 'show how ～「どのように～かを示す」。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '多くの地元の祭りは、宗教的な行事として始まった。', answer: true, why: '第2段落 Many began as religious events。' },
+      { statement: '祭りの準備は、1日だけで終わることが多い。', answer: false, why: '第3段落 Preparing for them takes months of work。' },
+      { statement: '人口がへった地域では、みこしをかつぐ若い人が足りないことがある。', answer: true, why: '第4段落 there are not enough young people to carry heavy shrines。' },
+      { statement: '祭りが変わることを心配する人はだれもいない。', answer: false, why: '第5段落 some people worry that festivals may lose their original character。' },
+    ],
+    qa: [
+      { q: 'How do festivals help build relationships in a community?', choices: ['People of all ages cooperate to prepare for them.', 'Only experts prepare them.', 'People stay at home during festivals.', 'Festivals are held online.'], answer: 0, why: '第3段落 people of all ages cooperate ... neighbors get to know one another。' },
+      { q: 'What have some communities done to keep their festivals alive?', choices: ['Welcomed volunteers from outside the area.', 'Stopped the festivals.', 'Raised the price of food stalls.', 'Banned visitors.'], answer: 0, why: '第5段落 some communities have started to welcome volunteers from outside the area。' },
+    ],
+    gist: [
+      { para: 1, choices: ['祭りの長い歴史と文化の伝統', 'みこしの重さ', '笛の作り方', '神社の数'], answer: 0, why: '第2段落は、祭りが宗教的行事として始まり、文化の伝統として受けつがれてきたことを述べている。' },
+      { para: 3, choices: ['祭りが直面する困難', '屋台の値段', '衣装の色', '若い人の趣味'], answer: 0, why: '第4段落は、人口減少と高齢化、費用の負担という困難を述べている。' },
+    ],
+    titleQ: { choices: ['Keeping Festivals Alive', 'How to Play the Drums', 'The History of Food Stalls', 'Why People Move to Cities'], answer: 0, why: '全体として、地元の祭りの歴史と役割、直面する困難、守るための取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

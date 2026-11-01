@@ -3506,3 +3506,4 @@
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「立ち上がって動こう（すわりすぎ）」（科学・からだ・非制限の which／when／関係代名詞 that の空所）
 - 2026-11-01: キャラクター：トビの「トビリン」を追加（とくぎ：かぜのりのねばり）
 - 2026-11-01: 文法：入試の誤文訂正〈59〉（TOEFL・IELTS の書き言葉㉒：In conclusion・To sum up・All in all・On the whole・For these reasons・Therefore・lies in・It can be concluded that・Above all・discuss）10問
+- 2026-11-01: 長文：共通テストの評論を本番の長さで「祭りを生きつづけさせる（地元の祭り）」（社会・地域・非制限の which／while -ing／how の空所）
