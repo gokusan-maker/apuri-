@@ -22777,6 +22777,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['When a Language Falls Silent', 'How to Learn English Fast', 'The History of Hawaii', 'Why Snow Is White'], answer: 0, why: '全体として、言語が消えていく理由とその損失、よみがえらせる取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-ancient-trees',
+    title: 'Living Records of the Past',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Some of the oldest living things on Earth are trees. In the mountains of the western United States, there are pine trees that are believed to be more than four thousand years old, which means they were already growing when the ancient pyramids of Egypt were being built. In Japan, too, certain cedar trees on Yakushima Island are thought to be thousands of years old. How can trees live so much longer than humans and other animals?",
+      "Part of the answer is that trees grow in a very different way from animals. An animal's body develops according to a fixed plan and eventually stops growing. Trees, on the other hand, keep adding new layers of wood every year as long as they live. They also have special tissues at the tips of their branches and roots ( A ) can continue producing new cells for centuries. As a result, a tree is constantly renewing itself, and the parts that are actively growing are often quite young, even when the tree as a whole is very old.",
+      "Many of the oldest trees also live in harsh environments. This may seem surprising, but difficult conditions can actually help trees survive. In dry, cold mountains, trees grow very slowly, producing wood that is extremely dense and strong. Such wood resists insects, disease, and rot. In addition, few other plants can survive in these places, so the trees face little competition and are less likely to be destroyed by forest fires, which need plenty of dry plants to spread.",
+      "Ancient trees are valuable not only because of their age but also because of the information ( B ) they contain. By counting and measuring the rings inside a tree trunk, scientists can learn about the climate of the past. A wide ring usually shows a year with good growing conditions, while a narrow ring may indicate a drought or a cold summer. Using very old trees, researchers have built records of climate going back thousands of years, which help us understand how the climate is changing today.",
+      "Today, however, many ancient trees face new dangers. Rising temperatures, longer droughts, and new pests are putting pressure even on trees that have survived for millennia. Some old trees have also been damaged by visitors who walk on their roots or carve their names into the bark. To protect them, some areas now limit the number of visitors or keep the exact locations of the oldest trees secret. These living records of the past deserve careful protection, so that people ( C ) live in the future can learn from them too.",
+    ],
+    ja: [
+      '地球で最も年をとった生き物のいくつかは木である。アメリカ西部の山には、4千年以上生きていると考えられているマツの木があり、それはエジプトの古代のピラミッドが建てられていたころにはすでに育っていたことになる。日本でも、屋久島のある種のスギは何千年も生きていると考えられている。どうして木は、人間やほかの動物よりずっと長く生きられるのだろうか。',
+      '答えの一部は、木が動物とはまったくちがう育ち方をすることにある。動物の体は決まった計画どおりに育ち、やがて成長が止まる。一方、木は生きているかぎり毎年新しい木の層を加え続ける。また木は、枝や根の先に、何世紀も新しい細胞を作り続けられる特別な組織をもっている。その結果、木はたえず自分を新しくしており、木全体はとても古くても、活発に育っている部分はかなり若いことが多い。',
+      '最も古い木の多くは、きびしい環境にも生えている。これはおどろくべきことに思えるかもしれないが、きびしい条件が実は木が生きのびる助けになることがある。かわいた寒い山では、木はとてもゆっくり育ち、きわめてかたく強い木材を作る。そうした木材は虫や病気やくさるのに強い。さらに、こうした場所で生きられる植物はほとんどいないので、木は競争が少なく、燃え広がるのに多くのかわいた植物が必要な山火事でだめになることも少ない。',
+      '古い木は、年齢だけでなく、ふくんでいる情報のためにも価値がある。幹の中の年輪を数えたりはかったりすることで、科学者は過去の気候について知ることができる。はばの広い年輪はふつう育つのに条件のよかった年を示し、せまい年輪は干ばつや寒い夏を示すことがある。とても古い木を使って、研究者は何千年もさかのぼる気候の記録を作り、それは今日の気候がどう変わっているかを理解する助けになっている。',
+      'しかし今日、多くの古い木は新しい危険に直面している。気温の上昇や長くなる干ばつ、新しい害虫が、何千年も生きのびてきた木にさえ負担をかけている。根の上を歩いたり、木の皮に名前をほったりする訪問者に傷つけられた古い木もある。それらを守るために、訪問者の数を制限したり、最も古い木の正確な場所をひみつにしたりしている地域もある。こうした過去の生きた記録は、未来に生きる人々もそこから学べるように、注意深く守られるべきである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 special tissues を受け、can continue の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the information を受け、contain の目的語になる関係代名詞 that。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、live の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: 'アメリカ西部には、4千年以上生きていると考えられているマツの木がある。', answer: true, why: '第1段落 there are pine trees that are believed to be more than four thousand years old。' },
+      { statement: '木は、動物と同じように、やがて成長が止まる。', answer: false, why: '第2段落 Trees, on the other hand, keep adding new layers of wood every year as long as they live。' },
+      { statement: 'かわいた寒い山でゆっくり育った木は、かたく強い木材を作る。', answer: true, why: '第3段落 trees grow very slowly, producing wood that is extremely dense and strong。' },
+      { statement: 'はばの広い年輪は、ふつう干ばつの年を示す。', answer: false, why: '第4段落 A wide ring usually shows a year with good growing conditions, while a narrow ring may indicate a drought。' },
+    ],
+    qa: [
+      { q: 'Why are trees in harsh mountain areas less likely to be destroyed by forest fires?', choices: ['Few other plants grow there, so fires cannot spread easily.', 'It rains every day there.', 'The trees are too young to burn.', 'People put out every fire.'], answer: 0, why: '第3段落 few other plants can survive in these places ... forest fires, which need plenty of dry plants to spread。' },
+      { q: 'What can scientists learn from tree rings?', choices: ['The climate of the past.', 'The names of visitors.', 'The future price of wood.', 'The height of mountains.'], answer: 0, why: '第4段落 By counting and measuring the rings inside a tree trunk, scientists can learn about the climate of the past。' },
+    ],
+    gist: [
+      { para: 1, choices: ['木が長く生きられる育ち方のしくみ', 'ピラミッドの建て方', '動物の体の大きさ', '細胞の色'], answer: 0, why: '第2段落は、木が生きているかぎり成長し、たえず自分を新しくすることを述べている。' },
+      { para: 4, choices: ['古い木がかかえる新しい危険と、その守り方', '山登りのきまり', '名前のほり方', '害虫の種類'], answer: 0, why: '第5段落は、気候変動や訪問者による危険と、場所をひみつにするなどの守り方を述べている。' },
+    ],
+    titleQ: { choices: ['Living Records of the Past', 'How to Plant a Pine Tree', 'The Pyramids of Egypt', 'Why Leaves Fall in Autumn'], answer: 0, why: '全体として、何千年も生きる古い木の秘密と、過去を記録する価値、その保護を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
