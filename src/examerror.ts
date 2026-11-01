@@ -2378,6 +2378,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'We (A) discussed (B) about the problem (C) for (D) two hours.', choices: ['(A) discussed', '(B) about the problem', '(C) for', '(D) two hours'], answer: 1, why: 'discuss は前置詞なし：discussed the problem。' },
     ],
   },
+  {
+    id: 'exam-error-review4',
+    title: '入試の正誤問題〈101〉（共通テストレベル：まとめ問題④）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '時制（現在完了・過去完了・時制の一致）、関係詞（where・whose・what）、分詞（うしろからかざる分詞・分詞構文）、仮定法をまぜた総まとめ。',
+    ],
+    examples: [
+      { en: 'I have lived in this town since I was a child.', ja: '私は子どものころからこの町に住んでいる。' },
+      { en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' },
+    ],
+    questions: [
+      { sentence: 'I (A) live (B) in this town (C) since (D) I was a child.', choices: ['(A) live', '(B) in this town', '(C) since', '(D) I was a child'], answer: 0, why: 'since ～ と今まで続くので have lived。' },
+      { sentence: 'When I (A) arrived, (B) the train (C) has already (D) left.', choices: ['(A) arrived,', '(B) the train', '(C) has already', '(D) left'], answer: 2, why: '着いた時点より前なので had already left。' },
+      { sentence: 'She (A) said (B) that she (C) is tired (D) after the trip.', choices: ['(A) said', '(B) that she', '(C) is tired', '(D) after the trip'], answer: 2, why: '主節が過去なので was tired。' },
+      { sentence: 'This (A) is (B) the town (C) which I (D) was born.', choices: ['(A) is', '(B) the town', '(C) which I', '(D) was born'], answer: 2, why: 'うしろが完全な文なので where I。' },
+      { sentence: 'I (A) have a friend (B) who father (C) is (D) a famous chef.', choices: ['(A) have a friend', '(B) who father', '(C) is', '(D) a famous chef'], answer: 1, why: '「その父親が」なので whose father。' },
+      { sentence: '(A) That he said (B) at the party (C) surprised (D) everyone.', choices: ['(A) That he said', '(B) at the party', '(C) surprised', '(D) everyone'], answer: 0, why: '「彼が言ったこと」は What he said。' },
+      { sentence: 'The boy (A) plays (B) the piano (C) on the stage (D) is my brother.', choices: ['(A) plays', '(B) the piano', '(C) on the stage', '(D) is my brother'], answer: 0, why: 'うしろからかざる現在分詞 playing。' },
+      { sentence: '(A) Walking along the beach, (B) I (C) found (D) a beautifully shell.', choices: ['(A) Walking along the beach,', '(B) I', '(C) found', '(D) a beautifully shell'], answer: 3, why: '名詞 shell の前は形容詞：a beautiful shell。' },
+      { sentence: 'If I (A) have (B) more money, I (C) would buy (D) a new bike.', choices: ['(A) have', '(B) more money, I', '(C) would buy', '(D) a new bike'], answer: 0, why: '仮定法過去：If I had。' },
+      { sentence: 'If he (A) had left (B) earlier, he (C) would catch (D) the last train.', choices: ['(A) had left', '(B) earlier, he', '(C) would catch', '(D) the last train'], answer: 2, why: '仮定法過去完了：would have caught。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
