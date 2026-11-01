@@ -3048,6 +3048,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Many animals change [its] behavior when winter comes.', choices: ['their', 'it', 'his', 'theirs'], answer: 0, why: '主語 Many animals は複数なので their behavior。' },
     ],
   },
+  {
+    id: 'exam-fix-70',
+    title: '入試の誤文訂正〈70〉（共通テストレベル：関係詞の総まとめ）',
+    points: ['うしろに主語や目的語がぬけていれば関係代名詞（which・who・that）、完全な文なら関係副詞（where・when・why）、先行詞がなければ what、「～の」は whose、前置詞＋which、カンマのあとに that は使えない、など関係詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' }],
+    questions: [
+      { sentence: 'This is the town [which] I was born.', choices: ['where', 'what', 'whose', 'who'], answer: 0, why: 'うしろの I was born は完全な文なので関係副詞 where（＝in which）。' },
+      { sentence: 'This is the museum [where] I visited last year.', choices: ['which', 'what', 'when', 'whose'], answer: 0, why: 'visited の目的語がぬけているので関係代名詞 which。' },
+      { sentence: '[That] he said surprised everyone in the room.', choices: ['What', 'Which', 'Where', 'Whose'], answer: 0, why: '先行詞がなく「彼が言ったこと」なので What。' },
+      { sentence: 'I have a friend [who] father is a pilot.', choices: ['whose', 'who\'s', 'which', 'what'], answer: 0, why: '「その父親が」と所有を表すので whose。' },
+      { sentence: 'The house [which] roof is red belongs to my uncle.', choices: ['whose', 'where', 'what', 'who'], answer: 0, why: '「その屋根が」なので whose。物にも whose を使う。' },
+      { sentence: 'I remember the day [which] we first met.', choices: ['when', 'what', 'whose', 'who'], answer: 0, why: 'うしろの we first met は完全な文で、先行詞が時なので関係副詞 when。' },
+      { sentence: 'This is the reason [which] I was late.', choices: ['why', 'what', 'whose', 'where'], answer: 0, why: 'the reason のあとで完全な文が続くので関係副詞 why。' },
+      { sentence: 'My brother, [that] lives in Osaka, is a doctor.', choices: ['who', 'whom', 'which', 'what'], answer: 0, why: 'カンマのあと（非制限用法）に that は使えない。人なので who。' },
+      { sentence: 'This is the chair [on that] my grandfather used to sit.', choices: ['on which', 'on what', 'which on', 'where on'], answer: 0, why: '前置詞のあとには that を使えない：on which。' },
+      { sentence: 'She is the teacher [which] everyone respects.', choices: ['whom', 'which is', 'whose', 'what'], answer: 0, why: '先行詞が人で respects の目的語なので whom（または who・that）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
