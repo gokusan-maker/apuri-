@@ -23050,6 +23050,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Bringing Generations Together', 'How to Run a Nursery School', 'The History of Wheelchairs', 'Why Students Pay Rent'], answer: 0, why: '全体として、ちがう世代を結びつける取り組みとその効果を述べている。' },
   },
   {
+    id: 'kyotsu-japanese-eels',
+    title: 'The Mystery of the Eel',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In Japan, eel is a popular food, especially in summer, when many people eat grilled eel to gain energy during the hot weather. Yet despite their long history on Japanese tables, eels have remained one of the most mysterious animals in the natural world. For centuries, no one knew where they were born. Even the famous ancient Greek thinker Aristotle believed that eels appeared spontaneously from mud, because no one had ever seen their eggs.",
+      "Part of the mystery comes from the eel's unusual life cycle. Japanese eels spend most of their lives in rivers and lakes in East Asia, but they do not breed there. When they become adults, they swim thousands of kilometers into the open ocean to lay their eggs. After hatching, the tiny young eels, which look like transparent leaves, drift back toward Asia on ocean currents. As they approach the coast, they change into small, clear eels called glass eels, which then swim up rivers and grow into adults over many years.",
+      "Finding the place ( A ) Japanese eels are born took scientists decades of research. Researchers collected tiny young eels from the ocean and noticed that the smaller they were, the farther south they were found. Following this clue, they gradually narrowed down the search area. Finally, in 2009, a Japanese research team collected eel eggs for the first time in the wild, in an area of the Pacific Ocean near the Mariana Islands, more than two thousand kilometers from Japan.",
+      "Unfortunately, the number of Japanese eels has fallen sharply over the past several decades. There are several reasons for this decline. Many glass eels are caught as they enter rivers, because eel farms depend on wild young eels to raise them. Dams and concrete riverbanks can block the eels' routes and destroy the places ( B ) they live. Changes in ocean currents may also affect how many young eels reach the coast.",
+      "Because of these problems, the Japanese eel has been listed as an endangered species. Scientists are working to develop ways of breeding eels completely in captivity, so that farms will no longer need to catch wild young eels, but this has proved very difficult and expensive. Some researchers also call for limits on fishing and for rivers that eels can travel through more easily. Protecting eels will require cooperation among the countries ( C ) share the same population, as well as changes in the habits of the people who enjoy eating them.",
+    ],
+    ja: [
+      '日本ではウナギは人気のある食べ物で、とくに夏には、暑い中で元気をつけようと多くの人がかば焼きを食べる。しかし日本の食卓での長い歴史にもかかわらず、ウナギは自然の世界で最もなぞの多い動物のひとつであり続けてきた。何世紀もの間、ウナギがどこで生まれるのかだれも知らなかった。古代ギリシャの有名な思想家アリストテレスでさえ、だれもウナギのたまごを見たことがなかったので、ウナギはどろから自然に生まれると信じていた。',
+      'なぞの一部は、ウナギのめずらしい一生から来ている。ニホンウナギは一生の大部分を東アジアの川や湖ですごすが、そこで子どもをうむわけではない。おとなになると、たまごをうむために何千キロメートルも外洋へと泳いでいく。たまごからかえった小さな子どものウナギは、すきとおった葉のような形をしていて、海流にのってアジアのほうへただよってもどってくる。海岸に近づくと、シラスウナギとよばれる小さくすきとおったウナギに変わり、川をさかのぼって、何年もかけておとなに育つ。',
+      'ニホンウナギが生まれる場所を見つけるには、科学者たちの何十年もの研究が必要だった。研究者たちは海から小さな子どものウナギを集め、小さいものほど南で見つかることに気づいた。この手がかりをもとに、彼らはさがす範囲を少しずつしぼっていった。そしてついに2009年、日本の研究チームが、日本から2千キロメートル以上はなれたマリアナ諸島近くの太平洋で、野生のウナギのたまごをはじめて採集した。',
+      '残念なことに、ニホンウナギの数はここ数十年で大きくへっている。このへり方にはいくつかの理由がある。ウナギの養殖は野生の子どものウナギを育てることにたよっているので、多くのシラスウナギが川に入るときにとられてしまう。ダムやコンクリートの川岸はウナギの通り道をふさぎ、すみかをこわすことがある。海流の変化も、どれだけの子どものウナギが海岸にとどくかに影響しているかもしれない。',
+      'こうした問題のために、ニホンウナギは絶滅のおそれのある種に指定されている。科学者たちは、養殖場がもう野生の子どものウナギをとらなくてすむように、ウナギを完全に人の手で育てる方法を開発しようとしているが、これはとてもむずかしく、お金がかかることがわかっている。漁獲を制限したり、ウナギが通りやすい川にしたりすることを求める研究者もいる。ウナギを守るには、同じ集団を分かち合う国々の協力と、ウナギを食べるのを楽しむ人々の習慣の変化が必要になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the place（場所）で、うしろの Japanese eels are born は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '先行詞は the places（場所）で、うしろの they live は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the countries を受け、share の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+    ],
+    tf: [
+      { statement: 'アリストテレスは、ウナギはどろから自然に生まれると信じていた。', answer: true, why: '第1段落 Aristotle believed that eels appeared spontaneously from mud。' },
+      { statement: 'ニホンウナギは、すんでいる川や湖でたまごをうむ。', answer: false, why: '第2段落 they do not breed there ... they swim thousands of kilometers into the open ocean to lay their eggs。' },
+      { statement: '2009年に、野生のウナギのたまごがはじめて採集された。', answer: true, why: '第3段落 in 2009, a Japanese research team collected eel eggs for the first time in the wild。' },
+      { statement: 'ウナギを完全に人の手で育てるのは、かんたんで安い。', answer: false, why: '第5段落 this has proved very difficult and expensive。' },
+    ],
+    qa: [
+      { q: 'What clue helped scientists find where eels are born?', choices: ['The smaller the young eels were, the farther south they were found.', 'Eels always swim toward the Moon.', 'Adult eels carried maps.', 'Eggs were found in rivers in Japan.'], answer: 0, why: '第3段落 the smaller they were, the farther south they were found。' },
+      { q: 'Why are many glass eels caught as they enter rivers?', choices: ['Eel farms depend on wild young eels to raise them.', 'They damage boats.', 'They are used as medicine.', 'They block the rivers.'], answer: 0, why: '第4段落 because eel farms depend on wild young eels to raise them。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ウナギのめずらしい一生', '川の名前', '夏の料理', '海の色'], answer: 0, why: '第2段落は、川でくらし外洋でたまごをうみ、子どもが海流でもどってくる一生を述べている。' },
+      { para: 3, choices: ['ウナギがへった理由', '養殖場の値段', 'ダムの作り方', '海流の速さ'], answer: 0, why: '第4段落は、とりすぎや川の工事、海流の変化などへった理由を述べている。' },
+    ],
+    titleQ: { choices: ['The Mystery of the Eel', 'How to Grill Fish', 'The Life of Aristotle', 'The Deepest Lakes in Asia'], answer: 0, why: '全体として、ウナギの生まれる場所のなぞとその解明、そして保護の必要を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
