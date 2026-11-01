@@ -23635,6 +23635,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Small Answer to a Big Problem?', 'How to Catch Grasshoppers', 'The History of Beef', 'Why Insects Have Six Legs'], answer: 0, why: '全体として、小さな虫が食料や環境の大きな問題への答えになりうるかを論じている。' },
   },
   {
+    id: 'kyotsu-muscle-memory',
+    title: 'Memories in Motion',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Once you learn to ride a bicycle, you rarely forget how to do it, even if you have not ridden one for many years. The same is true of skills such as swimming, typing on a keyboard, or playing a familiar song on the piano. People often say that these skills are stored in \"muscle memory.\" The phrase is useful, but it is also a little misleading. Scientists have found that such memories are not really stored in the muscles but in the brain.",
+      "Learning a physical skill usually happens in stages. At first, we must think carefully about every movement. A beginner on a bicycle concentrates on keeping balance, holding the handlebars, and pushing the pedals, and the result is often slow and clumsy. With practice, the movements become smoother and require less attention. Eventually, the skill becomes automatic, so that we can ride while talking with a friend or looking at the scenery. At this stage, the brain has created a stable pattern ( A ) controls the movement without conscious effort.",
+      "Several areas of the brain are involved in this process. In the early stages, the front part of the brain, which is responsible for planning and decision-making, is very active. As the skill becomes automatic, other regions, including the cerebellum at the back of the brain, take on more of the work. The cerebellum helps to coordinate movements and correct small errors. This shift frees the front of the brain to focus on other tasks, which is why experienced drivers can listen to the radio while driving.",
+      "Interestingly, research suggests that sleep plays an important role in learning physical skills. In several studies, people who practiced a task, such as typing a sequence of keys, performed better the next day after a night's sleep than people who were tested after the same number of hours awake. It appears that during sleep, the brain replays and strengthens the patterns ( B ) were formed during practice. Short breaks between practice sessions can also help, because they give the brain time to organize what it has learned.",
+      "These findings have practical lessons for anyone learning a sport, a musical instrument, or a craft. Practicing a little every day is often more effective than practicing for many hours once a week. Getting enough sleep is not a waste of time but part of the learning process. And when a skill feels difficult at first, it is worth remembering that the clumsy stage is a normal step on the way to the smooth, automatic performance ( C ) experts seem to achieve so easily.",
+    ],
+    ja: [
+      'いったん自転車の乗り方を覚えると、何年も乗っていなくても、乗り方をわすれることはめったにない。泳ぐことや、キーボードを打つこと、よく知っている曲をピアノでひくことのような技能も同じである。人はよく、こうした技能は「筋肉の記憶」にたくわえられていると言う。この言い方は便利だが、少しまぎらわしくもある。科学者たちは、こうした記憶は実際には筋肉ではなく脳にたくわえられていることを発見した。',
+      '体の技能を身につけるのは、ふつう段階をふんで起こる。最初は、ひとつひとつの動きを注意深く考えなければならない。自転車の初心者はバランスをとり、ハンドルをにぎり、ペダルをこぐことに集中し、その結果、動きはおそくぎこちないことが多い。練習すると、動きはなめらかになり、それほど注意がいらなくなる。やがて技能は自動的になり、友だちと話したり景色を見たりしながら乗れるようになる。この段階では、脳は意識しなくても動きをコントロールする安定したパターンを作っている。',
+      'このはたらきには、脳のいくつかの部分がかかわっている。最初の段階では、計画や判断を受けもつ脳の前の部分がとても活発に働く。技能が自動的になるにつれて、脳の後ろにある小脳など、ほかの部分がより多くの仕事を引き受ける。小脳は動きをまとめ、小さなまちがいを直すのを助ける。この移り変わりによって、脳の前の部分はほかの作業に集中できるようになる。だから慣れた運転手は、運転しながらラジオを聞くことができるのである。',
+      'おもしろいことに、研究によれば、体の技能を身につけるのに睡眠が大切な役割を果たしている。いくつかの研究では、キーの並びを打つような作業を練習した人は、一晩ねむったあとの次の日のほうが、同じ時間起きていたあとにテストされた人より成績がよかった。睡眠の間に、脳は練習中にできたパターンをくり返し、強めているようである。練習の合間の短い休けいも役に立つ。脳が学んだことを整理する時間ができるからである。',
+      'こうした発見は、スポーツや楽器や手仕事を学ぶすべての人に役立つ教えをふくんでいる。週に1回何時間も練習するより、毎日少しずつ練習するほうが効果的なことが多い。十分にねむることは時間のむだではなく、学ぶ過程の一部である。そして、技能が最初はむずかしく感じられるときは、ぎこちない段階は、達人がいとも簡単にやってのけるように見える、なめらかで自動的な動きへの道のりのふつうの一歩だということを思い出すとよい。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a stable pattern を受け、controls の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the patterns を受け、were formed の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the smooth, automatic performance を受け、achieve の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '「筋肉の記憶」は、実際には脳にたくわえられている。', answer: true, why: '第1段落 such memories are not really stored in the muscles but in the brain。' },
+      { statement: '技能を身につけはじめたときは、動きを考えなくてもよい。', answer: false, why: '第2段落 At first, we must think carefully about every movement。' },
+      { statement: '小脳は、動きをまとめ、小さなまちがいを直すのを助ける。', answer: true, why: '第3段落 The cerebellum helps to coordinate movements and correct small errors。' },
+      { statement: '筆者は、週に1回長く練習するのがいちばん効果的だと考えている。', answer: false, why: '第5段落 Practicing a little every day is often more effective than practicing for many hours once a week。' },
+    ],
+    qa: [
+      { q: 'Why can experienced drivers listen to the radio while driving?', choices: ['Other brain areas take over, freeing the front of the brain.', 'They do not need to look at the road.', 'The radio helps them drive.', 'Their muscles store all the information.'], answer: 0, why: '第3段落 This shift frees the front of the brain to focus on other tasks。' },
+      { q: 'What does the brain seem to do during sleep?', choices: ['It replays and strengthens patterns formed during practice.', 'It forgets everything learned that day.', 'It stops working completely.', 'It creates new muscles.'], answer: 0, why: '第4段落 during sleep, the brain replays and strengthens the patterns that were formed during practice。' },
+    ],
+    gist: [
+      { para: 1, choices: ['技能を身につける段階', '自転車の選び方', '景色の楽しみ方', 'ハンドルの形'], answer: 0, why: '第2段落は、考えながら動く段階から自動的になる段階への変化を述べている。' },
+      { para: 3, choices: ['睡眠と休けいが技能の学習を助けること', 'キーボードの種類', '夢の内容', '時計の読み方'], answer: 0, why: '第4段落は、睡眠や休けいの間に脳が学んだことを強め、整理することを述べている。' },
+    ],
+    titleQ: { choices: ['Memories in Motion', 'How to Build a Bicycle', 'The History of the Piano', 'Why Muscles Get Tired'], answer: 0, why: '全体として、体の技能の記憶が脳の中でどう作られ強められるかを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
