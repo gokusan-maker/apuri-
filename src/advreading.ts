@@ -23986,6 +23986,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How Languages Divide the Rainbow', 'How to Paint a Rainbow', 'The History of Traffic Lights', 'Why the Sky Is Blue'], answer: 0, why: '全体として、言語ごとにちがう色のことばの分け方と、それが知覚とつながっていることを述べている。' },
   },
   {
+    id: 'kyotsu-hydrogen',
+    title: 'A Fuel That Leaves Only Water?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Hydrogen is the simplest and most common element in the universe. It makes up most of the Sun and the stars, and on Earth it is found in water and in many other substances. In recent years, hydrogen has attracted attention as a possible fuel of the future. When it is used to produce energy, the only waste it creates is water. For a world ( A ) is trying to reduce the carbon dioxide released by burning oil, coal, and gas, this sounds almost too good to be true.",
+      "Hydrogen can be used in several ways. It can be burned like natural gas, but it is often used in devices called fuel cells. Inside a fuel cell, hydrogen combines with oxygen from the air to produce electricity, with heat and water as the only by-products. Fuel cells are already used to power some cars, buses, and trains, as well as buildings. Because hydrogen can be stored and transported, it may also help solve one of the problems of solar and wind power: the fact that the sun does not always shine and the wind does not always blow.",
+      "However, hydrogen is not a source of energy in itself. Pure hydrogen gas is rare on Earth, so it must be produced, and producing it requires energy. Today, most hydrogen is made from natural gas in a process that releases carbon dioxide. Hydrogen can also be produced by using electricity to split water into hydrogen and oxygen. If the electricity comes from renewable sources, the resulting hydrogen is sometimes called green hydrogen, since its production releases almost no greenhouse gases.",
+      "Several challenges remain. Producing green hydrogen is still more expensive than producing fuels from oil or gas. Hydrogen is also difficult to store, because it is a very light gas that takes up a lot of space unless it is compressed at high pressure or cooled to extremely low temperatures. Building the pipelines, filling stations, and storage facilities ( B ) are needed for a hydrogen economy will require enormous investment. Safety is another concern, since hydrogen can burn easily if it leaks.",
+      "Despite these difficulties, many countries, including Japan, have made plans to increase the use of hydrogen, especially in industries such as steelmaking and shipping, which are hard to power with electricity alone. Experts generally agree that hydrogen will not replace all other energy sources. Instead, it is likely to become one part of a mix of clean technologies. Whether it fulfills its promise will depend on how quickly costs fall and how wisely societies choose the areas ( C ) hydrogen can make the greatest difference.",
+    ],
+    ja: [
+      '水素は宇宙で最も単純で、最もありふれた元素である。太陽や星の大部分は水素でできており、地球では水やほかの多くの物質の中に見つかる。近年、水素は未来の燃料になりうるものとして注目を集めている。水素を使ってエネルギーを作るとき、出る廃棄物は水だけなのである。石油や石炭やガスを燃やして出る二酸化炭素をへらそうとしている世界にとって、これはほとんどうますぎる話に聞こえる。',
+      '水素はいくつかの方法で使うことができる。天然ガスのように燃やすこともできるが、燃料電池とよばれる装置で使われることが多い。燃料電池の中では、水素が空気中の酸素と結びついて電気を作り、ほかに出るのは熱と水だけである。燃料電池はすでに一部の車やバス、列車、そして建物の動力として使われている。水素はたくわえたり運んだりできるので、太陽光や風力発電の問題のひとつ、つまり太陽がいつも照っているわけではなく、風がいつもふいているわけではないという問題を解決する助けにもなるかもしれない。',
+      'しかし、水素はそれ自体がエネルギー源ではない。純粋な水素ガスは地球にはほとんどないので、作り出さなければならず、作るにはエネルギーが必要である。今日、ほとんどの水素は天然ガスから、二酸化炭素を出すやり方で作られている。水素は、電気を使って水を水素と酸素に分けることでも作ることができる。その電気が再生可能なエネルギーから来ていれば、できた水素はグリーン水素とよばれることがある。作るときに温室効果ガスをほとんど出さないからである。',
+      'いくつかの課題も残っている。グリーン水素を作るのは、石油やガスから燃料を作るよりまだお金がかかる。水素はたくわえるのもむずかしい。とても軽い気体なので、高い圧力でおしちぢめたり、きわめて低い温度に冷やしたりしないかぎり、多くの場所をとってしまうからである。水素を使う経済に必要なパイプラインや水素ステーションや貯蔵施設を作るには、ばく大な投資が必要になる。安全性も心配のひとつで、水素はもれると燃えやすい。',
+      'こうしたむずかしさがあるにもかかわらず、日本をふくむ多くの国が、とくに電気だけでは動かしにくい製鉄や海運のような産業で、水素の利用をふやす計画を立てている。専門家たちはおおむね、水素がほかのすべてのエネルギー源にとってかわることはないという点で意見が一致している。むしろ、さまざまなクリーンな技術の組み合わせの一部になる見こみが高い。水素が期待にこたえられるかどうかは、費用がどれだけ早く下がるかと、社会が水素が最も大きなちがいを生みうる分野をどれだけかしこく選ぶかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a world を受け、is trying の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the pipelines, filling stations, and storage facilities を受け、are needed の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the areas（分野・場所）で、うしろの hydrogen can make the greatest difference は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '水素を使ってエネルギーを作るとき、出る廃棄物は水だけである。', answer: true, why: '第1段落 the only waste it creates is water。' },
+      { statement: '水素はそれ自体がエネルギー源で、作る必要はない。', answer: false, why: '第3段落 hydrogen is not a source of energy in itself ... it must be produced。' },
+      { statement: '今日、ほとんどの水素は天然ガスから作られている。', answer: true, why: '第3段落 Today, most hydrogen is made from natural gas。' },
+      { statement: '専門家は、水素がほかのすべてのエネルギー源にとってかわると考えている。', answer: false, why: '第5段落 Experts generally agree that hydrogen will not replace all other energy sources。' },
+    ],
+    qa: [
+      { q: 'What is green hydrogen?', choices: ['Hydrogen produced using electricity from renewable sources.', 'Hydrogen that is green in color.', 'Hydrogen made from coal.', 'Hydrogen found in plants.'], answer: 0, why: '第3段落 If the electricity comes from renewable sources, the resulting hydrogen is sometimes called green hydrogen。' },
+      { q: 'Why is hydrogen difficult to store?', choices: ['It is a very light gas that takes up a lot of space.', 'It is too heavy to move.', 'It turns into water at once.', 'It is always frozen.'], answer: 0, why: '第4段落 it is a very light gas that takes up a lot of space unless it is compressed ... or cooled。' },
+    ],
+    gist: [
+      { para: 1, choices: ['水素の使い方（燃料電池など）', '酸素の作り方', '車の歴史', '風の強さ'], answer: 0, why: '第2段落は、燃料電池などの使い方と、再生可能エネルギーの弱点をおぎなう可能性を述べている。' },
+      { para: 3, choices: ['水素を使う上での課題', '水素ステーションの場所', '安全な料理', '圧力のはかり方'], answer: 0, why: '第4段落は、費用、貯蔵、設備への投資、安全性などの課題を述べている。' },
+    ],
+    titleQ: { choices: ['A Fuel That Leaves Only Water?', 'How to Make Water at Home', 'The History of the Sun', 'Why Cars Need Wheels'], answer: 0, why: '全体として、水しか出さない燃料としての水素の可能性と課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
