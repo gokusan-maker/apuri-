@@ -23128,6 +23128,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Many Ways to Be Polite', 'How to Open a Window', 'The History of the Japanese Language', 'Why Silence Is Golden'], answer: 0, why: '全体として、文化によってちがうていねいさの表し方と、それを理解する大切さを述べている。' },
   },
   {
+    id: 'kyotsu-astronaut-life',
+    title: 'Living Above the Earth',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For more than twenty years, people have lived and worked continuously aboard the International Space Station, which orbits the Earth about every ninety minutes at a height of roughly four hundred kilometers. Astronauts from many countries stay there for months at a time, carrying out scientific experiments and maintaining the station. Their daily lives may seem exciting, but living in space also presents challenges ( A ) people on Earth rarely have to think about.",
+      "The biggest difference is microgravity. Because the station and everything inside it are constantly falling around the Earth, astronauts float as if they had no weight. This makes simple tasks surprisingly complicated. Water does not flow from a glass but forms floating balls, so drinks are taken through straws from sealed bags. Astronauts sleep in small cabins, attached to the wall in sleeping bags so that they do not drift around while they rest. Even washing hair requires special shampoo that does not need to be rinsed off.",
+      "Microgravity also affects the human body. On Earth, our muscles and bones are constantly working against gravity, which keeps them strong. In space, they are used much less, so they begin to weaken. Astronauts can lose a significant amount of bone mass during a long mission. To reduce this effect, they exercise for about two hours every day using special machines, such as a treadmill to which they are held by elastic straps. Fluids in the body also shift toward the head, which can cause puffy faces and changes in eyesight.",
+      "Living in a small space with the same few people for months can be difficult as well. Astronauts are far from their families and cannot simply go outside for a walk. For this reason, they are carefully trained not only in science and engineering but also in teamwork and communication. Many astronauts say that looking out of the windows at the Earth helps them stay positive. Seeing the planet without borders, they often describe a feeling ( B ) is sometimes called the \"overview effect,\" a deep sense of how fragile and connected life on Earth is.",
+      "The experience of astronauts on the space station is helping scientists prepare for longer journeys, such as missions to Mars, which could take several years. Research on bone loss, nutrition, and mental health in space may also benefit people on Earth, for example older adults ( C ) suffer from weakened bones. In this way, life on the space station teaches us not only about space but also about ourselves.",
+    ],
+    ja: [
+      '20年以上にわたって、人々は国際宇宙ステーションでずっと生活し働いてきた。ステーションは高さおよそ400キロメートルで、約90分ごとに地球を1周している。さまざまな国の宇宙飛行士が一度に何か月もそこにとどまり、科学の実験を行ったり、ステーションを整備したりしている。その毎日はわくわくするものに思えるかもしれないが、宇宙での生活には、地球の人がほとんど考えなくてすむような課題もある。',
+      'いちばん大きなちがいは微小重力である。ステーションと中のすべてのものはたえず地球のまわりを落ち続けているので、宇宙飛行士はまるで体重がないかのようにうかぶ。そのため、かんたんな作業がおどろくほど複雑になる。水はコップから流れず、うかぶ玉になるので、飲み物はとじた袋からストローで飲む。宇宙飛行士は小さな個室で、休んでいる間にただよわないよう、かべにとめた寝袋の中でねむる。髪をあらうのにさえ、すすぐ必要のない特別なシャンプーがいる。',
+      '微小重力は人の体にも影響する。地球では、筋肉と骨はたえず重力にさからって働いており、そのおかげで強く保たれている。宇宙ではそれらがあまり使われないので、弱くなりはじめる。宇宙飛行士は長い任務の間に、骨の量をかなり失うことがある。この影響をへらすために、彼らはゴムのベルトで体を固定するランニングマシンのような特別な機械を使って、毎日2時間ほど運動する。体の中の液体も頭のほうに移動し、顔がむくんだり、視力が変わったりすることがある。',
+      '何か月もの間、同じ少人数でせまい場所にくらすのもむずかしいことがある。宇宙飛行士は家族から遠くはなれていて、ちょっと外へ散歩に出ることもできない。そのため、彼らは科学や工学だけでなく、チームワークや伝え合いについても注意深く訓練を受ける。多くの宇宙飛行士は、窓から地球をながめることが前向きでいる助けになると言う。国境のない地球を見て、彼らはよく、「概観効果」とよばれることのある感覚、つまり地球の生命がどれほどこわれやすく、つながり合っているかを深く感じることを語る。',
+      '宇宙ステーションでの宇宙飛行士の経験は、何年もかかるかもしれない火星への任務のような、より長い旅にそなえるのに役立っている。宇宙での骨の減少や栄養や心の健康についての研究は、たとえば骨が弱くなったお年寄りなど、地球の人々のためにもなるかもしれない。このように、宇宙ステーションでの生活は、宇宙についてだけでなく、私たち自身についても教えてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 challenges を受け、think about の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 a feeling を受け、is called の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 older adults（人）を受け、suffer の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '国際宇宙ステーションは、約90分ごとに地球を1周している。', answer: true, why: '第1段落 which orbits the Earth about every ninety minutes。' },
+      { statement: '宇宙では、水はコップからふつうに流れ出る。', answer: false, why: '第2段落 Water does not flow from a glass but forms floating balls。' },
+      { statement: '宇宙飛行士は、骨が弱くなるのをへらすために毎日運動する。', answer: true, why: '第3段落 To reduce this effect, they exercise for about two hours every day。' },
+      { statement: '宇宙飛行士は、科学と工学だけを訓練される。', answer: false, why: '第4段落 they are carefully trained not only in science and engineering but also in teamwork and communication。' },
+    ],
+    qa: [
+      { q: 'Why do astronauts sleep in sleeping bags attached to the wall?', choices: ['So that they do not drift around while they rest.', 'Because the beds are too hot.', 'To watch the Earth all night.', 'Because the floor is wet.'], answer: 0, why: '第2段落 attached to the wall in sleeping bags so that they do not drift around while they rest。' },
+      { q: 'How might space research help people on Earth?', choices: ['It may help older adults who suffer from weakened bones.', 'It may make rockets cheaper for everyone.', 'It may stop all illnesses.', 'It may make people taller.'], answer: 0, why: '第5段落 may also benefit people on Earth, for example older adults who suffer from weakened bones。' },
+    ],
+    gist: [
+      { para: 1, choices: ['微小重力の中の日々のくらし', '水の作り方', 'シャンプーの値段', '寝袋の色'], answer: 0, why: '第2段落は、微小重力のために、飲むこと・ねむること・髪をあらうことがむずかしくなることを述べている。' },
+      { para: 2, choices: ['微小重力が体にあたえる影響', '機械の作り方', '顔の洗い方', 'ランニングの記録'], answer: 0, why: '第3段落は、筋肉や骨が弱くなることや体の液体の移動など、体への影響を述べている。' },
+    ],
+    titleQ: { choices: ['Living Above the Earth', 'How to Build a Rocket', 'The Moons of Mars', 'Why the Sky Is Blue'], answer: 0, why: '全体として、宇宙ステーションでのくらしの課題と、その経験が教えてくれることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
