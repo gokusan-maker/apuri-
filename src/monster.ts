@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'harrier', name: 'チュウヒン', egg: 'あしはらのそよかぜタマゴ', token: 'チュウヒ', bigToken: 'チュウヒン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: 'あしの原っぱの上を低くゆっくり飛ぶチュウヒ。風にのってすべるように進み、草の中の小さな動きも見のがさない。' },
   { id: 'buzzard', name: 'ノスリン', egg: 'のやまのふかふかタマゴ', token: 'ノスリ', bigToken: 'ノスリン', color: '#b45309', line: '#451a03', rate: 0.02, desc: '野原の上をゆったりとまうノスリ。高い木の上からじっとまわりを見わたし、えものを見つけるとすっとまいおりる。' },
   { id: 'kite', name: 'トビリン', egg: 'おかのうえのくるりタマゴ', token: 'トビリ', bigToken: 'トビリン', color: '#a16207', line: '#3f2a0a', rate: 0.02, desc: '空の高いところで、ぴーひょろろと鳴きながら輪をえがくトビ。風をつかまえて、ほとんど羽ばたかずに飛ぶ。' },
   { id: 'egret', name: 'シラサギン', egg: 'みずたのまっしろはねタマゴ', token: 'シラサ', bigToken: 'シラサギン', color: '#ffffff', line: '#475569', rate: 0.02, desc: '水田にすむまっ白なシラサギ。長い首をすっとのばして、水の中のえさをしずかにねらう、上品な子。' },
