@@ -21568,6 +21568,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Food on the Street', 'How to Open a Restaurant', 'The History of Spices', 'Why Tourists Travel'], answer: 0, why: '全体として、屋台の食べ物の歴史、文化を映す面、社会的な役割、課題を述べている。' },
   },
   {
+    id: 'kyotsu-sitting',
+    title: 'Get Up and Move',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many people today spend most of their waking hours sitting down. We sit in cars, buses, and trains, at desks at school or work, and on sofas in front of screens at home. Because sitting feels restful, it may seem harmless. However, a growing body of research suggests that sitting for long periods without a break can have negative effects on our health, even for people who exercise regularly.",
+      "When we sit for a long time, many of the large muscles in our legs and back are hardly used. As a result, the body burns less energy, and blood flows more slowly through the legs. Some studies have linked long hours of sitting to a higher risk of problems such as weight gain and heart disease. Researchers are still studying exactly why this happens, but they agree that the human body was designed to move rather than to stay still for hours.",
+      "Sitting can also affect the way we feel and think. Many people who sit at a desk all day complain of stiff necks, sore backs, and tired eyes. Poor posture, such as leaning forward to look at a screen, can make these problems worse. In addition, some studies suggest that short periods of movement can help people concentrate better and feel more energetic, ( A ) is good news for students and office workers alike.",
+      "Fortunately, small changes can make a big difference. Experts recommend standing up and moving for a few minutes at least every thirty to sixty minutes. This might mean stretching, walking to get a glass of water, or taking the stairs instead of the elevator. Some people use desks that allow them to work while standing for part of the day. Even standing up while talking on the phone can reduce the total time spent sitting.",
+      "Schools and workplaces are also beginning to pay attention to this issue. Some teachers include short activity breaks in their lessons, and some companies encourage employees to hold walking meetings. These efforts reflect a simple idea: our bodies stay healthier ( B ) we move them often throughout the day. Remembering to get up from our chairs from time to time may be one of the easiest ways to take care of ourselves, and it is a habit ( C ) almost anyone can develop.",
+    ],
+    ja: [
+      '今日、多くの人は起きている時間のほとんどをすわってすごしている。車やバスや電車の中で、学校や職場の机で、家では画面の前のソファで、私たちはすわっている。すわることは体が休まるように感じるので、害がないように思えるかもしれない。しかし、休けいなしに長い時間すわっていると、定期的に運動している人にとってさえ、健康によくない影響があるかもしれないことを、ふえつづける研究が示している。',
+      '長い時間すわっていると、足やせなかの大きな筋肉の多くはほとんど使われない。その結果、体が使うエネルギーがへり、足の中を血液がゆっくり流れるようになる。長時間すわることと、体重の増加や心臓の病気などの問題の危険が高いこととを結びつけた研究もある。研究者はなぜそうなるのかを今もくわしく調べているが、人間の体は何時間もじっとしているのではなく、動くようにできているという点では一致している。',
+      'すわることは、気分や考え方にも影響することがある。1日じゅう机にすわっている多くの人は、首のこりやこしの痛み、目のつかれをうったえる。画面を見るために前かがみになるといった悪い姿勢は、こうした問題をさらに悪くすることがある。さらに、短い時間体を動かすと集中しやすくなり、元気が出るかもしれないことを示す研究もあり、それは生徒にとっても会社員にとってもよい知らせである。',
+      '幸いにも、小さな変化が大きなちがいを生むことがある。専門家は、少なくとも30分から60分ごとに立ち上がって数分間体を動かすことをすすめている。それは、ストレッチをしたり、水を1ぱい取りに歩いたり、エレベーターのかわりに階段を使ったりすることかもしれない。1日の一部を立ったまま仕事ができる机を使う人もいる。電話で話すあいだ立っているだけでも、すわってすごす時間全体をへらすことができる。',
+      '学校や職場も、この問題に注意を向けはじめている。授業に短い運動の休けいを入れる先生もいれば、社員に歩きながらの会議をすすめる会社もある。こうした取り組みは、シンプルな考えを映し出している。1日を通してよく体を動かせば、体は健康にたもたれるということである。ときどきいすから立ち上がるのをわすれないことは、自分を大切にする最もかんたんな方法の1つかもしれず、ほとんどだれでも身につけられる習慣である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容全体を受け、is の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['when', 'unless', 'although', 'until'], answer: 0, why: '「1日を通してよく体を動かすとき（動かせば）」という条件なので when。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a habit を受け、develop の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '長時間すわることの影響は、定期的に運動している人にはまったくない。', answer: false, why: '第1段落 even for people who exercise regularly。' },
+      { statement: '長い時間すわると、体が使うエネルギーがへる。', answer: true, why: '第2段落 the body burns less energy。' },
+      { statement: '前かがみの姿勢は、首やこしの問題を悪くすることがある。', answer: true, why: '第3段落 Poor posture, such as leaning forward ... can make these problems worse。' },
+      { statement: '専門家は、数時間に1回立ち上がればよいと言っている。', answer: false, why: '第4段落 at least every thirty to sixty minutes。' },
+    ],
+    qa: [
+      { q: 'What do some companies encourage employees to do?', choices: ['Hold walking meetings.', 'Work longer hours.', 'Sit on the floor.', 'Stop using computers.'], answer: 0, why: '第5段落 some companies encourage employees to hold walking meetings。' },
+      { q: 'What is one way to reduce the total time spent sitting?', choices: ['Standing up while talking on the phone.', 'Taking the elevator.', 'Watching more TV.', 'Using a bigger sofa.'], answer: 0, why: '第4段落 Even standing up while talking on the phone can reduce the total time spent sitting。' },
+    ],
+    gist: [
+      { para: 1, choices: ['長時間すわることの体への影響', '心臓のしくみ', '足の筋肉のきたえ方', '血液の種類'], answer: 0, why: '第2段落は、筋肉が使われず、エネルギーの消費や血流がへることと、その危険を述べている。' },
+      { para: 3, choices: ['すわる時間をへらすための小さな変化', 'エレベーターのしくみ', '机の作り方', '水の飲み方'], answer: 0, why: '第4段落は、ストレッチや階段、立ったまま使う机などの工夫を述べている。' },
+    ],
+    titleQ: { choices: ['Get Up and Move', 'How to Choose a Sofa', 'The History of Office Desks', 'Why Trains Are Crowded'], answer: 0, why: '全体として、長時間すわることの害と、こまめに体を動かす工夫を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
