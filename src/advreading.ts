@@ -24454,6 +24454,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Tireless Pump', 'How to Build a Machine', 'The Longest Rivers on Earth', 'Why We Need to Sleep Less'], answer: 0, why: '全体として、休まず働く心臓のしくみと、それを大切にする習慣を述べている。' },
   },
   {
+    id: 'kyotsu-captcha',
+    title: 'Proving You Are Human',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Almost everyone who uses the internet has seen one. Before you can create an account, buy a concert ticket, or leave a comment, a small box appears and asks you to type some twisted letters, click on every picture that shows a bus, or simply tick a box saying \"I am not a robot.\" These tests are called CAPTCHAs, and although they can be annoying, they play an important role in protecting websites from automated programs.",
+      "The name CAPTCHA is a shortened form of a long phrase meaning a test that can tell computers and humans apart. The idea became popular in the early 2000s, when websites began to suffer from programs called bots. Bots could open thousands of fake email accounts in minutes, flood discussion boards with advertisements, or buy up all the tickets for a popular event ( A ) real fans had a chance. Website owners needed a quick way to check whether a visitor was a real person.",
+      "Early CAPTCHAs relied on a simple fact: computers of that time were poor at reading distorted text, while people could usually recognize the letters without much difficulty. However, as computer vision improved, programs learned to read these images even better than many humans. Designers therefore switched to new kinds of tests, such as choosing pictures of traffic lights or crosswalks. Some modern systems go further and quietly study how a visitor moves the mouse or how quickly a page is scrolled, so that many real users never see a puzzle at all.",
+      "Interestingly, CAPTCHAs have also been used to do useful work. In one well-known project, the words that people typed came from old books that computers had failed to read, so millions of short answers helped to turn printed pages into digital text. In a similar way, picture tests may help train computer systems ( B ) recognize objects in photographs.",
+      "Still, CAPTCHAs raise serious questions. People with poor eyesight or certain learning difficulties can find them extremely hard, and audio versions are not always easier. Critics also point out that every second spent solving a puzzle adds up to an enormous amount of human time around the world. Moreover, because artificial intelligence keeps advancing, a test that is easy for people but hard for machines becomes more difficult to design each year. ( C ), researchers are now looking for ways to protect websites without asking users to prove that they are human. The small box, in other words, may one day disappear.",
+    ],
+    ja: [
+      'インターネットを使う人なら、ほとんどだれでも一度は見たことがあるだろう。アカウントを作ったり、コンサートのチケットを買ったり、コメントを書きこんだりする前に、小さな枠があらわれて、ゆがんだ文字を打ちこむように、バスが写っている写真をすべてクリックするように、あるいは「私はロボットではありません」という箱にチェックを入れるように求めてくる。こうしたテストはCAPTCHAとよばれ、わずらわしいこともあるが、自動で動くプログラムからウェブサイトを守るうえで大切な役割をはたしている。',
+      'CAPTCHAという名前は、コンピューターと人間を見分けるテストを意味する長い言葉を短くしたものである。この考えが広まったのは2000年代のはじめで、ウェブサイトがボットとよばれるプログラムに悩まされはじめたころだった。ボットは数分のうちに何千もの偽のメールアカウントを開いたり、掲示板を広告でうめつくしたり、本当のファンが買えるようになる前に人気のイベントのチケットを買い占めたりすることができた。ウェブサイトの持ち主には、訪問者が本当の人間かどうかをすばやくたしかめる方法が必要だった。',
+      '初期のCAPTCHAは、かんたんな事実をたよりにしていた。当時のコンピューターはゆがんだ文字を読むのが苦手だったが、人間はたいてい大した苦労もなく文字を見分けられたのである。しかし、コンピューターが画像を見る技術が進むにつれて、プログラムは多くの人間よりもうまくこうした画像を読めるようになった。そこで設計者たちは、信号機や横断歩道の写真を選ぶといった、新しい種類のテストに切りかえた。現代のしくみの中にはさらに進んで、訪問者がマウスをどう動かすか、ページをどのくらいの速さでスクロールするかをひそかに調べるものもあり、そのため多くの本当の利用者はパズルをまったく目にしない。',
+      'おもしろいことに、CAPTCHAは役に立つ仕事にも使われてきた。よく知られたある計画では、人々が打ちこんだ単語は、コンピューターが読みとれなかった古い本から取られていた。そのため、何百万もの短い答えが、印刷されたページをデジタルの文字に変える手助けをした。同じように、写真のテストは、コンピューターのシステムが写真の中のものを見分けられるよう訓練する手助けになっているかもしれない。',
+      'それでも、CAPTCHAは重大な問題を投げかけている。目が不自由な人や、ある種の学習の困難をかかえる人にとっては、ひどくむずかしいことがあり、音声版がいつもやさしいとはかぎらない。批判する人たちはまた、パズルを解くのに使う1秒1秒が、世界じゅうでは人間のばくだいな時間になると指摘する。さらに、人工知能が進歩し続けるので、人間にはやさしく機械にはむずかしいテストを作ることは、年ごとにむずかしくなっている。そのため、研究者たちは今、利用者に人間であることを証明させずにウェブサイトを守る方法を探している。つまり、あの小さな枠はいつか消えてしまうかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['after', 'before', 'since', 'unless'], answer: 1, why: '「本当のファンが買えるようになる前に」買い占める、という時の流れなので before。' },
+      { id: 'B', choices: ['for', 'with', 'to', 'by'], answer: 2, why: 'help ＋ 目的語 ＋ (to) 動詞の原形で「〜が…するのを助ける」。train computer systems to recognize の形。' },
+      { id: 'C', choices: ['However', 'For example', 'In contrast', 'For this reason'], answer: 3, why: '前の文（テストを作るのが年ごとにむずかしくなる）が理由となり、新しい方法を探すという結果につながるので For this reason。' },
+    ],
+    tf: [
+      { statement: 'ボットは、人気のイベントのチケットを買い占めることができた。', answer: true, why: '第2段落 buy up all the tickets for a popular event。' },
+      { statement: 'コンピューターは今でも、ゆがんだ文字を人間ほどうまく読めない。', answer: false, why: '第3段落 programs learned to read these images even better than many humans。' },
+      { statement: 'CAPTCHAの答えが、古い本をデジタルの文字に変える手助けをしたことがある。', answer: true, why: '第4段落 millions of short answers helped to turn printed pages into digital text。' },
+      { statement: '音声版のCAPTCHAなら、だれにとっても必ずかんたんである。', answer: false, why: '第5段落 audio versions are not always easier。' },
+    ],
+    qa: [
+      { q: 'How do some modern systems check visitors without showing a puzzle?', choices: ['By studying how the visitor moves the mouse.', 'By asking for a phone number.', 'By reading old books.', 'By counting traffic lights outside.'], answer: 0, why: '第3段落 quietly study how a visitor moves the mouse or how quickly a page is scrolled。' },
+      { q: 'Why are CAPTCHAs becoming harder to design?', choices: ['Because websites have fewer visitors.', 'Because artificial intelligence keeps advancing.', 'Because people type more slowly.', 'Because bots no longer exist.'], answer: 1, why: '第5段落 because artificial intelligence keeps advancing, a test ... becomes more difficult to design each year。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ボットの問題とCAPTCHAが生まれた理由', 'メールの書き方', 'コンサートの歴史', '広告のつくり方'], answer: 0, why: '第2段落は、名前の意味と、ボットに悩まされたウェブサイトにCAPTCHAが必要になった理由を述べている。' },
+      { para: 4, choices: ['目の検査の方法', 'CAPTCHAがかかえる問題とこれから', 'ゲームの楽しみ方', '本の値段'], answer: 1, why: '第5段落は、使いにくさや人間の時間、AIの進歩という問題と、新しい方法を探す動きを述べている。' },
+    ],
+    titleQ: { choices: ['The History of Printed Books', 'How to Buy Concert Tickets', 'Proving You Are Human', 'Robots That Clean Houses'], answer: 2, why: '全体として、人間とコンピューターを見分けるテスト（CAPTCHA）の役割・変化・問題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
