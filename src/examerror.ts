@@ -2306,6 +2306,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) wish I (B) can (C) fly (D) like a bird.', choices: ['(A) wish I', '(B) can', '(C) fly', '(D) like a bird'], answer: 1, why: '今の事実と反対の願いは I wish ＋過去形：could。' },
     ],
   },
+  {
+    id: 'exam-error-prepverbs',
+    title: '入試の正誤問題〈98〉（TOEFL・IELTS の書き言葉：前置詞のつく動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'depend on・consist of・result in／result from・account for・contribute to・belong to・rely on など動詞と前置詞の組み合わせ、discuss・reach は前置詞をつけない、など。',
+    ],
+    examples: [
+      { en: 'The price depends on the size of the room.', ja: '値段は部屋の広さによる。' },
+      { en: 'We discussed the problem for an hour.', ja: '私たちはその問題について1時間話し合った。' },
+    ],
+    questions: [
+      { sentence: 'The price (A) depends (B) of (C) the size (D) of the room.', choices: ['(A) depends', '(B) of', '(C) the size', '(D) of the room'], answer: 1, why: '「～による」は depend on。' },
+      { sentence: 'The team (A) consists (B) in (C) five (D) members.', choices: ['(A) consists', '(B) in', '(C) five', '(D) members'], answer: 1, why: '「～からなる」は consist of。' },
+      { sentence: 'The heavy rain (A) resulted (B) to (C) serious (D) flooding.', choices: ['(A) resulted', '(B) to', '(C) serious', '(D) flooding'], answer: 1, why: '「～という結果になる」は result in。' },
+      { sentence: 'Young people (A) account (B) to (C) about 20 percent (D) of the population.', choices: ['(A) account', '(B) to', '(C) about 20 percent', '(D) of the population'], answer: 1, why: '「～をしめる」は account for。' },
+      { sentence: 'Her research (A) contributed (B) for (C) the development (D) of a new medicine.', choices: ['(A) contributed', '(B) for', '(C) the development', '(D) of a new medicine'], answer: 1, why: '「～に貢献する」は contribute to。' },
+      { sentence: 'We (A) discussed (B) about (C) the problem (D) for an hour.', choices: ['(A) discussed', '(B) about', '(C) the problem', '(D) for an hour'], answer: 1, why: 'discuss は前置詞なしで目的語をとる：discussed the problem。' },
+      { sentence: '(A) The train (B) reached (C) at Osaka (D) at noon.', choices: ['(A) The train', '(B) reached', '(C) at Osaka', '(D) at noon'], answer: 2, why: 'reach は前置詞なし：reached Osaka。' },
+      { sentence: 'This bag (A) belong (B) to (C) my (D) sister.', choices: ['(A) belong', '(B) to', '(C) my', '(D) sister'], answer: 0, why: '主語 This bag は3人称単数なので belongs。' },
+      { sentence: 'Many students (A) rely on (B) their phones (C) for (D) checking of the time.', choices: ['(A) rely on', '(B) their phones', '(C) for', '(D) checking of the time'], answer: 3, why: 'for のあとは動名詞＋目的語：for checking the time（of は不要）。' },
+      { sentence: '(A) Many health problems (B) result in (C) a lack (D) of sleep.', choices: ['(A) Many health problems', '(B) result in', '(C) a lack', '(D) of sleep'], answer: 1, why: '原因「～から生じる」は result from。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
