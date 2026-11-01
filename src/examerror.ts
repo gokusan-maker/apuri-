@@ -3678,6 +3678,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She studied hard [so that] she failed the exam.', choices: ['but', 'so', 'because', 'in order to'], answer: 0, why: '「がんばったが落ちた」と逆接なので but。' },
     ],
   },
+  {
+    id: 'exam-fix-85',
+    title: '入試の誤文訂正〈85〉（TOEFL・IELTS の書き言葉：名詞節）',
+    points: ['that 節・whether 節・what 節・疑問詞の節は名詞のかたまりとして主語や目的語になる。名詞節が主語なら動詞は単数、節の中は主語＋動詞の語順、「～かどうか」は whether（主語の位置では if は使わない）、「～すること・もの」は what。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Whether the plan will succeed is still unclear.', ja: 'その計画が成功するかどうかはまだわからない。' }],
+    questions: [
+      { sentence: '[If] the plan will succeed is still unclear.', choices: ['Whether', 'What', 'That if', 'Which'], answer: 0, why: '主語になる「～かどうか」は Whether。主語の位置に if は使えない。' },
+      { sentence: '[That] he said at the meeting surprised everyone.', choices: ['What', 'Which', 'Whether', 'It'], answer: 0, why: '「彼が言ったこと」は先行詞をふくむ what：What he said。' },
+      { sentence: 'I do not know where [does she live].', choices: ['she lives', 'lives she', 'she does live', 'living she'], answer: 0, why: '疑問詞の名詞節の中は主語＋動詞の語順：where she lives。' },
+      { sentence: 'What the students need [are] more time to practice.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: '名詞節 What the students need が主語なので単数あつかい：is。' },
+      { sentence: 'The problem is [what] we do not have enough money.', choices: ['that', 'which', 'whether to', 'how about'], answer: 0, why: '補語になる完全な文「～ということ」は that 節。what はあとが不完全な文のとき。' },
+      { sentence: 'It is clear [what] the experiment was a success.', choices: ['that', 'which', 'if', 'whose'], answer: 0, why: '形式主語 It のあとの「～ということ」は that 節。' },
+      { sentence: 'Scientists are studying [that] the virus spreads so quickly.', choices: ['why', 'which', 'what', 'whose'], answer: 0, why: '「なぜ～なのか」という疑問詞の名詞節：why the virus spreads。' },
+      { sentence: 'Please tell me [what time does the store open].', choices: ['what time the store opens', 'what time opens the store', 'the store what time opens', 'what does the store open'], answer: 0, why: '疑問詞の名詞節の中は主語＋動詞の語順：what time the store opens。' },
+      { sentence: '[What] people should eat less sugar is widely accepted.', choices: ['That', 'If', 'Whether that', 'Which'], answer: 0, why: '完全な文「人は砂糖をへらすべきだということ」が主語なので That 節。' },
+      { sentence: 'I am not sure [that] I will be able to come tomorrow.', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: '「来られるかどうかわからない」は whether（if でも可）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

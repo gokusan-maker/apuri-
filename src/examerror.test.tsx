@@ -1233,3 +1233,10 @@ it('正誤問題〈91〉：接続詞の使い分けの単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) if you')
 })
+
+it('誤文訂正〈85〉：名詞節の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-85')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Whether')
+})
