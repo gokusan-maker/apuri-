@@ -24493,6 +24493,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The History of Printed Books', 'How to Buy Concert Tickets', 'Proving You Are Human', 'Robots That Clean Houses'], answer: 2, why: '全体として、人間とコンピューターを見分けるテスト（CAPTCHA）の役割・変化・問題を述べている。' },
   },
   {
+    id: 'kyotsu-clouds',
+    title: 'The Quiet Work of Clouds',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Look up on almost any day, and you will see clouds drifting across the sky. Some are thin and feathery, others are thick and gray, and a few rise like enormous towers. Because they are so common, we rarely think about them. Yet clouds are far more than a pleasant part of the view. They shape our weather, carry water around the planet, and even help control the temperature of the Earth.",
+      "A cloud forms when air containing invisible water vapor rises and cools. Cooler air cannot hold as much water vapor as warm air, so some of the vapor turns into tiny liquid droplets or, at very low temperatures, into ice crystals. However, this change does not happen easily on its own. The droplets need something to form on, such as specks of dust, salt from the sea, or smoke. Each droplet is so small that millions of them are needed to make a single raindrop, which is why most clouds do not produce rain at all.",
+      "Scientists usually classify clouds by their shape and by how high they are. High, wispy clouds made of ice are called cirrus. Flat, gray layers that cover the whole sky are known as stratus, and they often bring light rain or drizzle. Puffy white clouds with clear edges are cumulus. On hot summer days, a cumulus cloud may keep growing upward until it becomes a cumulonimbus, a huge storm cloud that can produce heavy rain, lightning, and hail. ( A ) recognizing these types, people can often predict what the weather will do in the next few hours.",
+      "Clouds also have a powerful effect on climate. On the one hand, the white tops of clouds reflect sunlight back into space, which helps to cool the planet. On the other hand, clouds act like a blanket at night, trapping heat ( B ) would otherwise escape from the ground. This is why cloudy nights are usually warmer than clear ones. Which effect is stronger depends on the type and height of the cloud. Low, thick clouds tend to cool the Earth, while high, thin clouds tend to warm it.",
+      "For this reason, clouds remain one of the biggest puzzles in climate science. As the planet warms, the amount and kinds of clouds may change, and these changes could either slow down or speed up global warming. Computer models still have difficulty showing exactly how clouds will respond. ( C ), many researchers are now using satellites and aircraft to study clouds in greater detail. The next time you look at the sky, remember that those quiet shapes are doing important work above our heads.",
+    ],
+    ja: [
+      'ほとんどどの日でも空を見上げれば、雲がただよっているのが見えるだろう。うすくて羽のような雲もあれば、厚くて灰色の雲もあり、巨大な塔のようにそびえる雲もいくつかある。雲はとてもありふれているので、私たちが雲について考えることはめったにない。しかし雲は、ながめの心地よい一部というだけのものではない。雲は天気を形づくり、地球のあちこちへ水を運び、さらには地球の気温を調整する手助けまでしているのである。',
+      '雲ができるのは、目に見えない水蒸気をふくむ空気が上にのぼって冷えるときである。冷たい空気はあたたかい空気ほど多くの水蒸気をふくむことができないので、水蒸気の一部は小さな水のつぶに、とても低い温度ではこおりのつぶに変わる。しかし、この変化はそれだけではかんたんには起こらない。水のつぶには、ちりや海の塩、けむりのように、くっつく何かが必要なのである。1つ1つのつぶはとても小さいので、雨つぶ1つを作るのに何百万ものつぶが必要であり、そのためほとんどの雲はまったく雨をふらせない。',
+      '科学者はふつう、雲を形と高さによって分類する。こおりでできた高いところのすじのような雲は巻雲（けんうん）とよばれる。空全体をおおう平らな灰色の層は層雲（そううん）として知られ、よく小雨や霧雨をもたらす。輪かくのはっきりした、ふくらんだ白い雲は積雲（せきうん）である。暑い夏の日には、積雲が上へ上へとのび続け、やがて積乱雲になることがある。積乱雲は、大雨やかみなり、ひょうをもたらす巨大な嵐の雲である。こうした種類を見分けることで、人々はこれから数時間の天気をしばしば予測できる。',
+      '雲はまた、気候にも大きな影響をあたえる。一方では、雲の白い上面が日光を宇宙へはね返し、地球を冷やす手助けをする。他方では、雲は夜に毛布のような働きをして、そうでなければ地面からにげていくはずの熱をとじこめる。くもりの夜がふつう晴れた夜よりあたたかいのはこのためである。どちらの働きが強いかは、雲の種類と高さによってちがう。低くて厚い雲は地球を冷やしやすく、高くてうすい雲は地球をあたためやすい。',
+      'このため、雲は今でも気候の科学の最大のなぞのひとつである。地球があたたかくなるにつれて、雲の量や種類が変わるかもしれず、その変化は地球温暖化をおそくすることも、速めることもありうる。コンピューターのモデルは、雲がどのように反応するかを正確に示すことがまだむずかしい。そこで、多くの研究者が今、人工衛星や飛行機を使って雲をよりくわしく調べている。次に空を見上げたときには、あの静かな形が私たちの頭の上で大切な仕事をしていることを思い出してほしい。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Without', 'Despite', 'By', 'Instead of'], answer: 2, why: 'by ＋ 動名詞で「〜することによって」。種類を見分けることで天気を予測できる。' },
+      { id: 'B', choices: ['what', 'that', 'where', 'whose'], answer: 1, why: '先行詞 heat を受け、would escape の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['To improve their understanding', 'In spite of this', 'On the contrary', 'At first'], answer: 0, why: 'モデルではまだ雲の反応がわからないので、理解を深めるために衛星や飛行機で調べている、という目的を表す。' },
+    ],
+    tf: [
+      { statement: '水のつぶは、ちりや海の塩などのまわりにできる。', answer: true, why: '第2段落 The droplets need something to form on, such as specks of dust, salt from the sea, or smoke。' },
+      { statement: 'ほとんどの雲は雨をふらせる。', answer: false, why: '第2段落 most clouds do not produce rain at all。' },
+      { statement: 'くもりの夜は、ふつう晴れた夜よりあたたかい。', answer: true, why: '第4段落 cloudy nights are usually warmer than clear ones。' },
+      { statement: '高くてうすい雲は、地球を冷やしやすい。', answer: false, why: '第4段落 high, thin clouds tend to warm it。' },
+    ],
+    qa: [
+      { q: 'Which cloud can produce lightning and hail?', choices: ['Cirrus.', 'Stratus.', 'Cumulonimbus.', 'Thin, feathery clouds.'], answer: 2, why: '第3段落 a cumulonimbus, a huge storm cloud that can produce heavy rain, lightning, and hail。' },
+      { q: 'Why are clouds a puzzle in climate science?', choices: ['Because they never change.', 'Because it is hard to know how they will respond to warming.', 'Because satellites cannot see them.', 'Because they contain no water.'], answer: 1, why: '第5段落 Computer models still have difficulty showing exactly how clouds will respond。' },
+    ],
+    gist: [
+      { para: 2, choices: ['雲の種類と天気の予測', '雨つぶの大きさ', '夏休みの過ごし方', '飛行機の歴史'], answer: 0, why: '第3段落は、巻雲・層雲・積雲・積乱雲という雲の種類と、それによる天気の予測を述べている。' },
+      { para: 3, choices: ['夜空の星の見方', '海の塩の作り方', '雲が気候を冷やす働きとあたためる働き', 'コンピューターの値段'], answer: 2, why: '第4段落は、日光をはね返して冷やす働きと、熱をとじこめてあたためる働きを述べている。' },
+    ],
+    titleQ: { choices: ['How to Make Rain at Home', 'The Quiet Work of Clouds', 'The History of Weather Satellites', 'Why Summer Days Are Hot'], answer: 1, why: '全体として、雲のでき方・種類・気候への影響と、研究のなぞを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
