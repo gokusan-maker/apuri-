@@ -1267,6 +1267,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 42 Q72 40 74 48 L66 46" fill="#1c1917" stroke="#1c1917" strokeWidth="1.5" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'frigatebird')
+    return (
+      <g>
+        {/* のどの赤いふくろ */}
+        <ellipse cx="50" cy="66" rx="10" ry="8" fill="#ef4444" stroke="#7f1d1d" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
