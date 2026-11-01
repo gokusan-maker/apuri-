@@ -24259,6 +24259,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Train That Changed Travel', 'How to Build a Highway', 'The History of the Olympics', 'Why Airplanes Fly'], answer: 0, why: '全体として、移動のしかたを変えた新幹線の誕生とその成功・影響を述べている。' },
   },
   {
+    id: 'kyotsu-penguins',
+    title: 'Birds That Fly Underwater',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Penguins are among the most popular animals in zoos and aquariums. With their upright posture and black-and-white feathers, they can look almost like small people in formal suits. Yet behind their charming appearance lies a remarkable story of adaptation. Penguins are birds that cannot fly, but they have become some of the most skillful swimmers in the animal kingdom, and some species survive in one of the harshest environments on Earth.",
+      "Although penguins cannot fly through the air, their wings have not disappeared. Instead, they have evolved into stiff, flat flippers that work like the wings of an airplane underwater. By flapping these flippers, penguins can \"fly\" through the sea at high speeds, chasing fish, squid, and small shrimp-like animals called krill. Their bodies are shaped like torpedoes, which reduces resistance as they move through the water. Some species can dive to depths of more than 500 meters and stay underwater for over twenty minutes.",
+      "Penguins are also well protected against the cold. Their feathers are packed closely together and coated with oil, forming a waterproof layer that traps warm air next to the skin. Beneath the skin, a thick layer of fat helps to keep heat inside the body. In the Antarctic winter, emperor penguins huddle together in large groups to share warmth, slowly moving so that each bird takes turns standing on the cold outer edge and in the warmer center. This cooperation allows them to survive temperatures ( A ) can fall below minus forty degrees.",
+      "Raising chicks is a demanding task. In emperor penguins, the female lays a single egg and then returns to the sea to feed, while the male keeps the egg warm on his feet under a fold of skin for about two months, eating almost nothing during that time. When the chick hatches, the parents take turns traveling to the sea to find food and returning to feed it. Many other species also share the work of raising young, showing a strong partnership between parents.",
+      "Today, many penguin species face serious threats. Changes in sea ice and ocean temperatures caused by climate change can affect the supply of krill and fish ( B ) penguins depend on. Overfishing, oil spills, and plastic pollution add further pressure. Scientists monitor penguin colonies closely, since changes in their numbers can signal wider changes in the health of the ocean. Protecting penguins, then, means protecting the marine ecosystems ( C ) many other creatures, including humans, also rely on.",
+    ],
+    ja: [
+      'ペンギンは、動物園や水族館で最も人気のある動物のひとつである。まっすぐ立った姿勢と白黒の羽のおかげで、まるで正装をした小さな人のように見えることもある。しかしそのかわいらしい見た目のうしろには、おどろくべき適応の物語がある。ペンギンは飛べない鳥だが、動物の世界で最もじょうずに泳ぐもののひとつになり、地球上で最もきびしい環境のひとつで生きのびている種もいる。',
+      'ペンギンは空を飛べないが、翼がなくなったわけではない。そのかわりに、翼は水中で飛行機の翼のように働く、かたく平たいひれへと進化した。このひれをはばたかせることで、ペンギンは海の中を高速で「飛び」、魚やイカや、オキアミとよばれるエビに似た小さな動物を追いかける。体は魚雷のような形をしていて、水の中を進むときの抵抗をへらしている。500メートル以上の深さまでもぐり、20分以上水中にいられる種もいる。',
+      'ペンギンは寒さからもしっかり守られている。羽はすきまなくびっしりと生えて油でおおわれ、皮ふのすぐ近くにあたたかい空気をとじこめる防水の層を作っている。皮ふの下では、あつい脂肪の層が体の中の熱をにがさないのを助けている。南極の冬には、コウテイペンギンは大きな群れでおしくらまんじゅうのように集まってあたたかさを分かち合い、ゆっくり動いて、それぞれの鳥が冷たい外がわとあたたかい中心にかわるがわる立つようにしている。この協力のおかげで、マイナス40度より下がることもある気温を生きのびられるのである。',
+      'ひなを育てるのは大変な仕事である。コウテイペンギンでは、メスがたまごを1つうむと、えさを食べに海へもどり、オスは約2か月の間、足の上の皮ふのひだの下でたまごをあたため、その間ほとんど何も食べない。ひながかえると、親は交代で海へえさをとりに行き、もどってひなに食べさせる。ほかの多くの種も子育てを分担しており、親どうしの強い協力が見られる。',
+      '今日、多くのペンギンの種は深刻な危険に直面している。気候変動による海氷や海水温の変化は、ペンギンがたよっているオキアミや魚の量に影響しうる。魚のとりすぎ、油の流出、プラスチックによる汚染も負担を加えている。ペンギンの数の変化は海の健康のより大きな変化を知らせることがあるので、科学者たちはペンギンの集団を注意深く見守っている。だからペンギンを守ることは、人間をふくむほかの多くの生き物もたよっている海の生態系を守ることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 temperatures を受け、can fall の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 krill and fish を受け、depend on の目的語になる関係代名詞 that（on が後ろに残るので where は使えない）。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 the marine ecosystems を受け、rely on の目的語になる関係代名詞 that（on が後ろに残るので where は使えない）。' },
+    ],
+    tf: [
+      { statement: 'ペンギンの翼は、水中で働くひれへと進化した。', answer: true, why: '第2段落 they have evolved into stiff, flat flippers that work like the wings of an airplane underwater。' },
+      { statement: 'ペンギンの羽は、水をよく吸いこむ。', answer: false, why: '第3段落 coated with oil, forming a waterproof layer。' },
+      { statement: 'コウテイペンギンのオスは、たまごをあたためる間ほとんど何も食べない。', answer: true, why: '第4段落 eating almost nothing during that time。' },
+      { statement: 'ペンギンの数の変化は、海の健康とは関係がない。', answer: false, why: '第5段落 changes in their numbers can signal wider changes in the health of the ocean。' },
+    ],
+    qa: [
+      { q: 'How do emperor penguins survive the Antarctic winter?', choices: ['They huddle together and take turns standing in the warmer center.', 'They fly north to warmer places.', 'They sleep under the sea ice.', 'They stop eating and stay alone.'], answer: 0, why: '第3段落 emperor penguins huddle together ... so that each bird takes turns standing on the cold outer edge and in the warmer center。' },
+      { q: 'Why does the torpedo shape of penguins help them?', choices: ['It reduces resistance as they move through the water.', 'It keeps them warm on land.', 'It helps them fly in the air.', 'It makes them look bigger to enemies.'], answer: 0, why: '第2段落 Their bodies are shaped like torpedoes, which reduces resistance as they move through the water。' },
+    ],
+    gist: [
+      { para: 1, choices: ['水中を「飛ぶ」ための体のつくり', '飛行機の設計', 'イカの一生', '海の深さ'], answer: 0, why: '第2段落は、ひれと魚雷形の体で水中をすばやく泳ぐことを述べている。' },
+      { para: 3, choices: ['コウテイペンギンの子育て', 'たまごの値段', '海への行き方', '皮ふの色'], answer: 0, why: '第4段落は、オスとメスが分担してひなを育てるようすを述べている。' },
+    ],
+    titleQ: { choices: ['Birds That Fly Underwater', 'How to Build an Aquarium', 'The Coldest Cities on Earth', 'Why Fish Swim in Groups'], answer: 0, why: '全体として、水中を飛ぶように泳ぐペンギンの適応と、その危機を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
