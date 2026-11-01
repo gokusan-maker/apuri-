@@ -1562,6 +1562,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'This essay (A) has (B) discussed about (C) three main (D) points.', choices: ['(A) has', '(B) discussed about', '(C) three main', '(D) points'], answer: 1, why: 'discuss は他動詞なので about はいらない。' },
     ],
   },
+  {
+    id: 'exam-error-compare5',
+    title: '入試の正誤問題〈67〉（国公立レベル：比較の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '最上級・比較級の正しい形、as ～ as、副詞の最上級、fewer と less、the best ～ I have ever ～、比べるものをそろえる（mine）、one of the ＋複数名詞など、比較のまとめ。',
+    ],
+    examples: [
+      { en: 'Her English is much better than mine.', ja: '彼女の英語は私の英語よりずっとじょうずだ。' },
+      { en: 'Of all the students, she runs the fastest.', ja: '生徒全員の中で、彼女がいちばん速く走る。' },
+    ],
+    questions: [
+      { sentence: 'This is (A) the most tallest (B) building (C) in (D) the city.', choices: ['(A) the most tallest', '(B) building', '(C) in', '(D) the city'], answer: 0, why: 'the tallest（most と -est を重ねない）。' },
+      { sentence: 'She is (A) more smarter (B) than (C) her (D) brother.', choices: ['(A) more smarter', '(B) than', '(C) her', '(D) brother'], answer: 0, why: 'smarter（more と -er を重ねない）。' },
+      { sentence: 'My bag (A) is (B) heavy (C) than (D) yours.', choices: ['(A) is', '(B) heavy', '(C) than', '(D) yours'], answer: 1, why: 'than があるので heavier。' },
+      { sentence: 'Tom (A) is (B) so tall than (C) Ken (D) in the class.', choices: ['(A) is', '(B) so tall than', '(C) Ken', '(D) in the class'], answer: 1, why: 'as tall as Ken。' },
+      { sentence: 'Of all (A) the students, (B) she (C) runs (D) fast.', choices: ['(A) the students', '(B) she', '(C) runs', '(D) fast'], answer: 3, why: '全員の中で一番なので the fastest。' },
+      { sentence: 'He (A) has (B) less friends (C) than (D) I do.', choices: ['(A) has', '(B) less friends', '(C) than', '(D) I do'], answer: 1, why: '数えられる名詞には fewer：fewer friends。' },
+      { sentence: 'This is (A) the better movie (B) I (C) have ever (D) seen.', choices: ['(A) the better movie', '(B) I', '(C) have ever', '(D) seen'], answer: 0, why: 'the best movie I have ever seen。' },
+      { sentence: 'Her English (A) is (B) much (C) better than (D) me.', choices: ['(A) is', '(B) much', '(C) better than', '(D) me'], answer: 3, why: '比べるのは英語どうしなので mine。' },
+      { sentence: 'Kyoto is (A) one of (B) the oldest (C) city (D) in Japan.', choices: ['(A) one of', '(B) the oldest', '(C) city', '(D) in Japan'], answer: 2, why: 'one of the ＋最上級＋複数名詞：cities。' },
+      { sentence: 'This problem (A) is (B) more easier (C) than (D) that one.', choices: ['(A) is', '(B) more easier', '(C) than', '(D) that one'], answer: 1, why: 'easier（more と -er を重ねない）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
