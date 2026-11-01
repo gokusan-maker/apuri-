@@ -2402,6 +2402,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'If he (A) had left (B) earlier, he (C) would catch (D) the last train.', choices: ['(A) had left', '(B) earlier, he', '(C) would catch', '(D) the last train'], answer: 2, why: '仮定法過去完了：would have caught。' },
     ],
   },
+  {
+    id: 'exam-error-adjectives',
+    title: '入試の正誤問題〈102〉（共通テストレベル：まぎらわしい形容詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'sensitive／sensible、successful／successive、imaginary／imaginative、considerate／considerable、respectful／respectable、industrial／industrious、economic／economical など、形の似た形容詞の使い分け。',
+    ],
+    examples: [
+      { en: 'It was a sensible decision.', ja: 'それは分別のある判断だった。' },
+      { en: 'It was considerate of you to call me.', ja: '電話をくれるなんて思いやりがあるね。' },
+    ],
+    questions: [
+      { sentence: 'It (A) was (B) a sensitive decision (C) to leave early (D) because of the storm.', choices: ['(A) was', '(B) a sensitive decision', '(C) to leave early', '(D) because of the storm'], answer: 1, why: '「分別のある判断」は a sensible decision。' },
+      { sentence: 'My skin (A) is (B) very (C) sensible (D) to sunlight.', choices: ['(A) is', '(B) very', '(C) sensible', '(D) to sunlight'], answer: 2, why: '「日光に敏感な」は sensitive。' },
+      { sentence: 'The team (A) won (B) the title (C) for three (D) successful years.', choices: ['(A) won', '(B) the title', '(C) for three', '(D) successful years'], answer: 3, why: '「3年連続」は three successive years。' },
+      { sentence: 'She (A) is (B) a successive (C) businesswoman (D) who runs three companies.', choices: ['(A) is', '(B) a successive', '(C) businesswoman', '(D) who runs three companies'], answer: 1, why: '「成功した」は a successful。' },
+      { sentence: 'Dragons (A) are (B) imaginative animals (C) that appear (D) in many stories.', choices: ['(A) are', '(B) imaginative animals', '(C) that appear', '(D) in many stories'], answer: 1, why: '「想像上の動物」は imaginary animals。' },
+      { sentence: 'It (A) was (B) considerable (C) of you (D) to call me.', choices: ['(A) was', '(B) considerable', '(C) of you', '(D) to call me'], answer: 1, why: '「思いやりのある」は considerate。' },
+      { sentence: 'The project (A) cost (B) a considerate amount (C) of (D) money.', choices: ['(A) cost', '(B) a considerate amount', '(C) of', '(D) money'], answer: 1, why: '「かなりの量」は a considerable amount。' },
+      { sentence: 'Students (A) should be (B) respectable (C) to (D) their teachers.', choices: ['(A) should be', '(B) respectable', '(C) to', '(D) their teachers'], answer: 1, why: '「敬意をはらう」は respectful。' },
+      { sentence: '(A) Ants are known (B) as (C) industrial insects (D) that work hard.', choices: ['(A) Ants are known', '(B) as', '(C) industrial insects', '(D) that work hard'], answer: 2, why: '「勤勉な」は industrious insects。' },
+      { sentence: '(A) A economical crisis (B) can (C) affect (D) many families.', choices: ['(A) A economical crisis', '(B) can', '(C) affect', '(D) many families'], answer: 0, why: '「経済の危機」は An economic crisis。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
