@@ -3258,6 +3258,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'His [explain] of the problem was very clear.', choices: ['explanation', 'explaining of', 'explained', 'explanatory'], answer: 0, why: '所有格 His のあとで主語になるので名詞 explanation。' },
     ],
   },
+  {
+    id: 'exam-fix-75',
+    title: '入試の誤文訂正〈75〉（共通テストレベル：助動詞＋have ＋過去分詞）',
+    points: ['過去のことへの推量や後悔は「助動詞＋have ＋過去分詞」。must have ～（～したにちがいない）、can not have ～（～したはずがない）、may have ～（～したかもしれない）、should have ～（～すべきだったのに）、need not have ～（～する必要はなかったのに）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The ground is wet. It must have rained last night.', ja: '地面がぬれている。昨夜雨がふったにちがいない。' }],
+    questions: [
+      { sentence: 'The ground is wet. It [must rain] last night.', choices: ['must have rained', 'must be raining', 'should rain', 'must rained'], answer: 0, why: '過去のことを「～したにちがいない」は must have ＋過去分詞。' },
+      { sentence: 'He [can not have see] the movie; it opened only today.', choices: ['can not have seen', 'can not see', 'must have seen', 'can not have saw'], answer: 0, why: '「見たはずがない」は can not have ＋過去分詞。see の過去分詞は seen。' },
+      { sentence: 'You [should study] harder before the test, but you did not.', choices: ['should have studied', 'must have studied', 'should be studying', 'should studied'], answer: 0, why: '過去にしなかったことへの後悔「～すべきだったのに」は should have ＋過去分詞。' },
+      { sentence: 'She is late. She [may miss] the bus this morning.', choices: ['may have missed', 'may be missed', 'must miss', 'may missed'], answer: 0, why: '過去のことを「～したかもしれない」は may have ＋過去分詞。' },
+      { sentence: 'You [need not have bring] an umbrella. It did not rain at all.', choices: ['need not have brought', 'need not bring', 'must not have brought', 'need not have bringing'], answer: 0, why: '「持ってくる必要はなかったのに」は need not have ＋過去分詞。bring の過去分詞は brought。' },
+      { sentence: 'I [must leave] my phone at home, because I cannot find it anywhere.', choices: ['must have left', 'must be leaving', 'should leave', 'can not leave'], answer: 0, why: '見つからないので「家に置いてきたにちがいない」：must have left。' },
+      { sentence: 'Ken got full marks. He [must have study] very hard.', choices: ['must have studied', 'must study', 'should have study', 'must studied'], answer: 0, why: 'have のあとは過去分詞：must have studied。' },
+      { sentence: 'The train left an hour ago, so they [must arrive] in Osaka by now.', choices: ['must have arrived', 'must be arrive', 'should arrive', 'must arrived'], answer: 0, why: 'すでに起きたことを「着いたにちがいない」は must have ＋過去分詞：must have arrived。' },
+      { sentence: 'We [should not eat] so much cake last night. I feel sick now.', choices: ['should not have eaten', 'must not have eaten', 'should not be eating', 'can not eat'], answer: 0, why: '過去にしたことへの後悔「～すべきではなかった」：should not have eaten。' },
+      { sentence: 'The window is broken. Someone [might throw] a ball at it.', choices: ['might have thrown', 'might be thrown', 'must throw', 'might threw'], answer: 0, why: '過去のことを「～したのかもしれない」は might have ＋過去分詞。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

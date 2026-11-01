@@ -1093,3 +1093,10 @@ it('正誤問題〈81〉：語の形の単元が10問ある', async () => {
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) economical')
 })
+
+it('誤文訂正〈75〉：助動詞＋have ＋過去分詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-75')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('must have rained')
+})
