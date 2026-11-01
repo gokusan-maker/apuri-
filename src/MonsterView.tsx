@@ -1210,6 +1210,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="40" r="14" fill="none" stroke="#e7e5e4" strokeWidth="2" opacity="0.8" />
       </g>
     )
+  if (species === 'hoopoe')
+    return (
+      <g>
+        {/* 頭のかんむり羽 */}
+        <path d="M38 24 L42 10 L46 22 L50 8 L54 22 L58 10 L62 24" fill="#fdba74" stroke="#7c2d12" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
