@@ -1826,6 +1826,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She is (A) the only student (B) in our class (C) who (D) can speak it Chinese.', choices: ['(A) the only student', '(B) in our class', '(C) who', '(D) can speak it Chinese'], answer: 3, why: 'speak の目的語は Chinese だけでよい。it は不要：can speak Chinese。' },
     ],
   },
+  {
+    id: 'exam-error-speech2',
+    title: '入試の正誤問題〈78〉（共通テストレベル：時制の一致と話法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主節が過去なら that 節も過去にずらす、さらに前は過去完了、真理は現在形のまま、間接疑問は主語＋動詞、Yes / No の質問は if、命令は tell 人 to ～、tomorrow → the next day など、時制の一致と話法のまとめ。',
+    ],
+    examples: [
+      { en: 'She said that she was tired.', ja: '彼女はつかれていると言った。' },
+      { en: 'My mother told me to clean my room.', ja: '母は私に部屋をそうじするように言った。' },
+    ],
+    questions: [
+      { sentence: 'She (A) said that (B) she (C) is (D) very tired that day.', choices: ['(A) said that', '(B) she', '(C) is', '(D) very tired that day'], answer: 2, why: '主節が過去（said）で that day のことなので was。' },
+      { sentence: 'He (A) told me (B) that he (C) has lost (D) his key the day before.', choices: ['(A) told me', '(B) that he', '(C) has lost', '(D) his key the day before'], answer: 2, why: '言ったときより前のことなので過去完了 had lost。' },
+      { sentence: 'Our teacher (A) said (B) that water (C) boiled (D) at 100 degrees Celsius.', choices: ['(A) said', '(B) that water', '(C) boiled', '(D) at 100 degrees Celsius'], answer: 2, why: '今も変わらない真理は現在形のまま：boils。' },
+      { sentence: 'I (A) thought (B) it (C) will rain, so I (D) took an umbrella.', choices: ['(A) thought', '(B) it', '(C) will rain, so I', '(D) took an umbrella'], answer: 2, why: '主節が過去なので will は would にずらす。' },
+      { sentence: 'She (A) asked me (B) where (C) did I live (D) at that time.', choices: ['(A) asked me', '(B) where', '(C) did I live', '(D) at that time'], answer: 2, why: '間接疑問は主語＋動詞の語順：where I lived。' },
+      { sentence: 'He (A) asked me (B) that I (C) liked (D) sushi.', choices: ['(A) asked me', '(B) that I', '(C) liked', '(D) sushi'], answer: 1, why: 'Yes / No の質問の間接話法は if（whether）：asked me if I liked。' },
+      { sentence: 'My mother (A) told me (B) clean my room (C) before (D) dinner.', choices: ['(A) told me', '(B) clean my room', '(C) before', '(D) dinner'], answer: 1, why: '命令の間接話法は tell 人 to ～：told me to clean。' },
+      { sentence: '(A) He said (B) he would (C) call me (D) tomorrow, but he never called.', choices: ['(A) He said', '(B) he would', '(C) call me', '(D) tomorrow, but he never called'], answer: 3, why: '過去の発言を伝えるので tomorrow は the next day にかえる。' },
+      { sentence: '(A) She says that she (B) could swim (C) when she (D) was five.', choices: ['(A) She says that she', '(B) could swim', '(C) when she', '(D) was five'], answer: 0, why: 'あとの could・was と合わせ、過去の発言として She said にする。' },
+      { sentence: 'I (A) knew that (B) she (C) lives in Paris (D) at that time.', choices: ['(A) knew that', '(B) she', '(C) lives in Paris', '(D) at that time'], answer: 2, why: '主節が過去で at that time のことなので lived in Paris。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
