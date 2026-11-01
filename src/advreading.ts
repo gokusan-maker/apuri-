@@ -21919,6 +21919,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Gentle Giants', 'How to Ride an Elephant', 'The History of Ivory', 'Why Grass Is Green'], answer: 0, why: '全体として、ゾウの社会生活・伝え合い・記憶力と、ゾウを守る大切さを述べている。' },
   },
   {
+    id: 'kyotsu-podcasts',
+    title: 'The Return of Listening',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For much of the twentieth century, radio was one of the most important ways for people to receive news and entertainment. When television and later the internet became popular, many experts predicted that listening to programs would slowly disappear. Surprisingly, the opposite seems to be happening. Podcasts, which are audio programs that people can download or stream whenever they like, have attracted millions of listeners around the world in recent years.",
+      "One reason for their popularity is convenience. Unlike a television program, a podcast does not require people to look at a screen, so it can be enjoyed while doing other things, such as commuting, cooking, or exercising. Listeners can also choose exactly when to start, stop, or repeat an episode. For busy people ( A ) find it hard to sit down and watch a long program, this flexibility is very attractive.",
+      "Another reason is variety. Because recording a podcast requires little more than a microphone and a computer, almost anyone can create one. As a result, there are programs on nearly every subject imaginable, from history and science to cooking, language learning, and local sports. Listeners with very specific interests can usually find a program made for people just like them, something ( B ) traditional radio stations, which must appeal to large audiences, rarely provide.",
+      "Podcasts have also changed the relationship between creators and listeners. Many hosts speak in a relaxed, conversational style, and some regularly read messages from their audience during episodes. Listeners often say that they feel as if they know the hosts personally, even though they have never met them. This sense of closeness can build a loyal community around a program, and some creators are able to earn a living through advertising or support from their fans.",
+      "However, the freedom to publish anything also brings problems. Since most podcasts are not checked by editors in the way newspaper articles are, some programs spread information that is inaccurate or one-sided. For this reason, listeners need to think carefully about who is speaking and what evidence supports their claims. If audiences learn to listen critically, podcasts can remain a valuable source of knowledge and enjoyment, showing that a medium ( C ) many people thought was outdated can find new life in the digital age.",
+    ],
+    ja: [
+      '20世紀の大部分を通じて、ラジオは人々がニュースや娯楽を受けとる最も大切な手段のひとつだった。テレビや、のちにインターネットが広まると、多くの専門家は、番組を「聞く」ことはしだいになくなるだろうと予想した。おどろいたことに、その反対のことが起きているようだ。ポッドキャストとは、好きなときにダウンロードしたり配信で聞いたりできる音声番組のことで、近年、世界中で何百万人もの聞き手を集めている。',
+      '人気の理由のひとつは便利さである。テレビ番組とちがって、ポッドキャストは画面を見る必要がないので、通勤や料理や運動など、ほかのことをしながら楽しめる。聞き手は、いつ始め、止め、くり返すかを自分で決めることもできる。すわって長い番組を見るのがむずかしい忙しい人にとって、この自由さはとても魅力的である。',
+      'もうひとつの理由は種類の多さである。ポッドキャストの録音にはマイクとコンピューターくらいしか必要ないので、ほとんどだれでも番組を作ることができる。その結果、歴史や科学から料理、語学、地元のスポーツまで、思いつくかぎりほぼあらゆる分野の番組がある。とても限られた興味をもつ聞き手でも、たいてい自分のような人のための番組を見つけられる。これは、多くの聞き手に向けなければならない従来のラジオ局がめったに提供できないものである。',
+      'ポッドキャストは、作り手と聞き手の関係も変えた。多くの進行役はくつろいだ会話のような話し方をし、番組の中で聞き手からのメッセージをいつも読む人もいる。聞き手はよく、一度も会ったことがないのに進行役を個人的に知っているように感じると言う。この親しみが番組のまわりに熱心な仲間を生み、広告やファンからの支援で生計を立てられる作り手もいる。',
+      'しかし、何でも公開できる自由には問題もある。ほとんどのポッドキャストは新聞記事のように編集者に確認されないので、不正確だったりかたよったりした情報を広める番組もある。そのため聞き手は、だれが話しているのか、どんな根拠が主張を支えているのかをよく考える必要がある。聞き手が批判的に聞くことを身につければ、ポッドキャストは知識と楽しみの価値ある源であり続けるだろう。それは、多くの人が古いと思っていたメディアがデジタル時代に新しい命を得られることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 busy people（人）を受け、find の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['that', 'who', 'where', 'whose'], answer: 0, why: '先行詞 something を受け、provide の目的語になる関係代名詞 that。where はうしろが完全な文のときに使う。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a medium を受ける関係代名詞 that（many people thought は挿入。medium that ... was outdated）。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: 'テレビやインターネットが広まると、番組を聞くことはなくなると予想した専門家が多かった。', answer: true, why: '第1段落 many experts predicted that listening to programs would slowly disappear。' },
+      { statement: 'ポッドキャストを作るには、高価な設備がたくさん必要である。', answer: false, why: '第3段落 recording a podcast requires little more than a microphone and a computer。' },
+      { statement: '聞き手の中には、会ったことのない進行役を身近に感じる人がいる。', answer: true, why: '第4段落 they feel as if they know the hosts personally, even though they have never met them。' },
+      { statement: 'ほとんどのポッドキャストは、新聞記事と同じように編集者に確認されている。', answer: false, why: '第5段落 most podcasts are not checked by editors in the way newspaper articles are。' },
+    ],
+    qa: [
+      { q: 'Why can podcasts be enjoyed while doing other things?', choices: ['Because they do not require people to look at a screen.', 'Because they are always very short.', 'Because they are only played on the radio.', 'Because they have no sound.'], answer: 0, why: '第2段落 a podcast does not require people to look at a screen。' },
+      { q: 'What does the author advise listeners to do?', choices: ['Think carefully about who is speaking and what evidence supports their claims.', 'Stop listening to podcasts completely.', 'Listen only to traditional radio.', 'Believe everything the hosts say.'], answer: 0, why: '第5段落 listeners need to think carefully about who is speaking and what evidence supports their claims。' },
+    ],
+    gist: [
+      { para: 2, choices: ['あらゆる分野の番組があること', 'ラジオ局の歴史', 'マイクの選び方', '地元のスポーツの結果'], answer: 0, why: '第3段落は、だれでも作れるのであらゆる分野の番組があることを述べている。' },
+      { para: 4, choices: ['自由に公開できることの問題と、批判的に聞く大切さ', '広告の作り方', '新聞の売り上げ', '通勤時間の長さ'], answer: 0, why: '第5段落は、不正確な情報の問題と、批判的に聞く必要を述べている。' },
+    ],
+    titleQ: { choices: ['The Return of Listening', 'How to Build a Radio', 'The End of Television', 'Why Newspapers Are Free'], answer: 0, why: '全体として、聞くメディアであるポッドキャストが人気をとりもどした理由と注意点を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
