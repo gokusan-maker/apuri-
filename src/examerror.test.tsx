@@ -1100,3 +1100,10 @@ it('誤文訂正〈75〉：助動詞＋have ＋過去分詞の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('must have rained')
 })
+
+it('正誤問題〈82〉：助動詞＋have ＋過去分詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-modalpast')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) must rain')
+})

@@ -1922,6 +1922,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Buying (A) a large pack (B) is often (C) more (D) economic than buying small ones.', choices: ['(A) a large pack', '(B) is often', '(C) more', '(D) economic than buying small ones'], answer: 3, why: '「お得な・むだのない」は economical。' },
     ],
   },
+  {
+    id: 'exam-error-modalpast',
+    title: '入試の正誤問題〈82〉（共通テストレベル：助動詞＋have ＋過去分詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'must have ～（～したにちがいない）、can not have ～（～したはずがない）、may have ～（～したかもしれない）、should have ～（～すべきだったのに）、need not have ～（～する必要はなかったのに）。have のあとは過去分詞。',
+    ],
+    examples: [
+      { en: 'It must have rained last night.', ja: '昨夜雨がふったにちがいない。' },
+      { en: 'You should have studied harder.', ja: 'もっと勉強すべきだったのに。' },
+    ],
+    questions: [
+      { sentence: 'The ground (A) is wet. It (B) must rain (C) a lot (D) last night.', choices: ['(A) is wet. It', '(B) must rain', '(C) a lot', '(D) last night'], answer: 1, why: '過去の推量は must have ＋過去分詞：must have rained。' },
+      { sentence: 'He (A) can not have (B) saw the movie (C) because it (D) opened only today.', choices: ['(A) can not have', '(B) saw the movie', '(C) because it', '(D) opened only today'], answer: 1, why: 'have のあとは過去分詞：can not have seen。' },
+      { sentence: 'You (A) should study (B) harder (C) before (D) the test last week.', choices: ['(A) should study', '(B) harder', '(C) before', '(D) the test last week'], answer: 0, why: '過去にしなかったことへの後悔は should have studied。' },
+      { sentence: 'She (A) is late. (B) She may (C) miss (D) the bus this morning.', choices: ['(A) is late', '(B) She may', '(C) miss', '(D) the bus this morning'], answer: 2, why: '過去のことの推量は may have missed。' },
+      { sentence: 'You (A) need not (B) have bring (C) an umbrella; it (D) did not rain.', choices: ['(A) need not', '(B) have bring', '(C) an umbrella; it', '(D) did not rain'], answer: 1, why: 'have のあとは過去分詞：need not have brought。' },
+      { sentence: 'I (A) can not find my key. I (B) must have (C) leave it (D) at home.', choices: ['(A) can not find my key. I', '(B) must have', '(C) leave it', '(D) at home'], answer: 2, why: 'must have のあとは過去分詞：left。' },
+      { sentence: 'We (A) should not (B) have ate (C) so much cake (D) last night.', choices: ['(A) should not', '(B) have ate', '(C) so much cake', '(D) last night'], answer: 1, why: 'have のあとは過去分詞：have eaten。' },
+      { sentence: 'You (A) look cold. You (B) should have (C) wear (D) a coat this morning.', choices: ['(A) look cold. You', '(B) should have', '(C) wear', '(D) a coat this morning'], answer: 2, why: 'should have のあとは過去分詞：should have worn。' },
+      { sentence: 'Ken (A) got full marks, so he (B) must (C) have studied (D) very hardly.', choices: ['(A) got full marks, so he', '(B) must', '(C) have studied', '(D) very hardly'], answer: 3, why: '「一生けんめいに」は副詞 hard。hardly は「ほとんど～ない」。' },
+      { sentence: 'They (A) left an hour ago, so (B) they (C) must arrive (D) in Osaka by now.', choices: ['(A) left an hour ago, so', '(B) they', '(C) must arrive', '(D) in Osaka by now'], answer: 2, why: 'もう起きたことの推量は must have arrived。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
