@@ -2258,6 +2258,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'My friend and I (A) went (B) to the zoo (C) by (D) ourself yesterday.', choices: ['(A) went', '(B) to the zoo', '(C) by', '(D) ourself yesterday'], answer: 3, why: 'we の再帰代名詞は ourselves：by ourselves「自分たちだけで」。' },
     ],
   },
+  {
+    id: 'exam-error-compare7',
+    title: '入試の正誤問題〈96〉（TOEFL・IELTS の書き言葉：比較の書き言葉）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'different from、the same as、similar to、superior to、prefer A to B、compared with、in contrast to、that of ～、twice as ～ as など、エッセイでよく使う比較の言い方。',
+    ],
+    examples: [
+      { en: 'My opinion is different from yours.', ja: '私の意見はあなたの意見とちがう。' },
+      { en: 'I prefer tea to coffee.', ja: '私はコーヒーより紅茶が好きだ。' },
+    ],
+    questions: [
+      { sentence: 'My opinion (A) is (B) different (C) than (D) yours.', choices: ['(A) is', '(B) different', '(C) than', '(D) yours'], answer: 2, why: '「～とちがう」は different from。' },
+      { sentence: 'His phone (A) is (B) the same (C) like (D) mine.', choices: ['(A) is', '(B) the same', '(C) like', '(D) mine'], answer: 2, why: '「～と同じ」は the same as。' },
+      { sentence: 'This painting (A) is (B) similar (C) with (D) the one in the museum.', choices: ['(A) is', '(B) similar', '(C) with', '(D) the one in the museum'], answer: 2, why: '「～に似ている」は similar to。' },
+      { sentence: 'This model (A) is (B) superior (C) than (D) the old one.', choices: ['(A) is', '(B) superior', '(C) than', '(D) the old one'], answer: 2, why: 'superior は to をとる：superior to。' },
+      { sentence: 'I (A) prefer (B) tea (C) than (D) coffee.', choices: ['(A) prefer', '(B) tea', '(C) than', '(D) coffee'], answer: 2, why: 'prefer A to B：prefer tea to coffee。' },
+      { sentence: '(A) Compare with last year, (B) sales (C) have increased (D) by 20 percent.', choices: ['(A) Compare with last year,', '(B) sales', '(C) have increased', '(D) by 20 percent'], answer: 0, why: '「～とくらべると」は Compared with。' },
+      { sentence: 'In contrast (A) with the city, (B) the countryside (C) is (D) quiet.', choices: ['(A) with the city,', '(B) the countryside', '(C) is', '(D) quiet'], answer: 0, why: '「～とは対照的に」は In contrast to。' },
+      { sentence: 'The population (A) of Tokyo (B) is larger (C) than (D) Osaka.', choices: ['(A) of Tokyo', '(B) is larger', '(C) than', '(D) Osaka'], answer: 3, why: '人口どうしを比べるので than that of Osaka。' },
+      { sentence: 'This bridge (A) is (B) twice longer (C) than (D) that one.', choices: ['(A) is', '(B) twice longer', '(C) than', '(D) that one'], answer: 1, why: '倍数は twice as long as。' },
+      { sentence: 'Prices (A) in this area (B) are (C) highest (D) than in the city.', choices: ['(A) in this area', '(B) are', '(C) highest', '(D) than in the city'], answer: 2, why: 'than があるので比較級 higher。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

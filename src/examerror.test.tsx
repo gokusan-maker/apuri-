@@ -1296,3 +1296,10 @@ it('誤文訂正〈89〉：比較の書き言葉の単元が10問ある', async 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('from')
 })
+
+it('正誤問題〈96〉：比較の書き言葉の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-compare7')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) than')
+})
