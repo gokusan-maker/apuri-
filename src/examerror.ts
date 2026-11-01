@@ -3984,7 +3984,7 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The question was easy enough [of] children to answer.', choices: ['for', 'to', 'with', 'by'], answer: 0, why: '～ enough for 人 to …「人が…できるほど～」。' },
       { sentence: 'He seems [to be] ill last week.', choices: ['to have been', 'being', 'to being', 'have been'], answer: 0, why: '「先週具合が悪かったようだ」と主節より前のことなので完了不定詞 to have been。' },
       { sentence: 'She is said [to live] in Paris when she was young.', choices: ['to have lived', 'living', 'to living', 'lived'], answer: 0, why: '若いころのこと（過去）なので to have lived。' },
-      { sentence: 'I am sorry [to keep] you waiting so long.', choices: ['to have kept', 'keeping to', 'kept', 'to keeping'], answer: 0, why: 'すでに待たせた（過去から今まで）ことをあやまるので to have kept。' },
+      { sentence: 'I am glad [to meet] you at the party yesterday.', choices: ['to have met', 'meeting to', 'met', 'to meeting'], answer: 0, why: '会ったのは昨日（主節の今より前）なので完了不定詞 to have met。' },
       { sentence: 'It is necessary [of] us to protect the environment.', choices: ['for', 'by', 'with', 'from'], answer: 0, why: 'necessary は人の性質ではないので for 人：for us。' },
       { sentence: 'The museum seems [to be built] about 200 years ago.', choices: ['to have been built', 'to build', 'to have built', 'being built'], answer: 0, why: '過去に「建てられた」ので完了不定詞の受け身 to have been built。' },
       { sentence: 'It was very kind [to] you to help me with my bags.', choices: ['of', 'for', 'with', 'by'], answer: 0, why: 'kind は人の性質なので of 人：kind of you。' },
