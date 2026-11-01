@@ -1385,6 +1385,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="56" cy="42" rx="6" ry="4" fill="#111827" />
       </g>
     )
+  if (species === 'longtail')
+    return (
+      <g>
+        {/* 長くとがった尾と、ほおの黒いもよう */}
+        <path d="M50 86 L50 110" fill="none" stroke="#1f2937" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="46" cy="48" r="4" fill="#374151" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
