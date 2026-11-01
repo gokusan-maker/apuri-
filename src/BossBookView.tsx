@@ -165,6 +165,8 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                 <BossFigure hit={false} look={e ? b : { ...b, ...GRAY }} />
               </span>
               <span className="badge-name">{e ? b.name : '？？？'}</span>
+              {/* デザイン197：ランクSで勝ったボスの名前に🏅 */}
+              {e?.best === 'S' && <span className="boss-book-s" aria-label="ランクSで勝ったボス">🏅</span>}
               {e && (
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>

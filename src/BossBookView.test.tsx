@@ -513,3 +513,18 @@ it('デザイン194：ボス図鑑で、はじめて勝ってから何日たっ�
   expect(days).toHaveLength(1)
   expect(days[0].textContent).toBe('（3日前）')
 })
+
+it('デザイン197：ボス図鑑で、ランクSで勝ったボスの名前に🏅がつく', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const [a, b] = Object.values(BOSSES)
+  saveBook({
+    [a.name]: { wins: 1, best: 'S', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 1, best: 'A', look: b, first: '2026-10-02' },
+  })
+  render(<BossBook />)
+  const marks = screen.getAllByLabelText('ランクSで勝ったボス')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')?.querySelector('.badge-name')?.textContent).toBe(a.name)
+})
