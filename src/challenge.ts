@@ -59,6 +59,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   hummingbird: { dir: 'en-ja', label: '英→日', icon: '🐦' },
   ostrich: { dir: 'ja-en', label: '日→英', icon: '🏃' },
   woodpecker: { dir: 'en-ja', label: '英→日', icon: '🪵' },
+  albatross: { dir: 'en-ja', label: '英→日', icon: '🌬' },
   frigatebird: { dir: 'ja-en', label: '日→英', icon: '🎈' },
   skua: { dir: 'en-ja', label: '英→日', icon: '⚡' },
   shearwater: { dir: 'ja-en', label: '日→英', icon: '🌊' },
