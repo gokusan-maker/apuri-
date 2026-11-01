@@ -305,6 +305,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [sealed, setSealed] = useState(false) // とくぎ封じで勝った
   const [sealTicket, setSealTicket] = useState(false) // とくぎ封じ10回ごとのチケット
   const giveTicket = useContext(ChestTicketContext)
+  const [fastestMs, setFastestMs] = useState(Infinity) // デザイン177：このバトルでいちばん速く正解した時間
   const [traitCount, setTraitCount] = useState(0) // デザイン172：このバトルでボスのとくぎが出た回数
   const setTraitMsg = (m: string) => {
     if (m) {
@@ -388,6 +389,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       if (c % 3 === 0) setShield(true)
       setCorrects(n)
       const ms = nowMs() - shownAt.current
+      if (ms >= 0) setFastestMs((f) => Math.min(f, ms))
       if (q.word.id && (!mvp || ms < mvp.ms)) setMvp({ en: q.word.en, ja: q.word.ja, ms })
       const slow = usedItems.includes('clock') ? 2 : 1
       const critMs = (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs
@@ -902,6 +904,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {corrects >= 10 && <strong className="game-best" style={{ fontSize: '1.15em' }} aria-label="正解した問題の数">📚 {corrects}問正解！</strong>} {/* デザイン163 */}
             {hearts >= HEARTS && <span className="game-best" aria-label="ハート満タンで勝利">❤️ ハート満タンで勝利！</span>} {/* デザイン169 */}
             {traitCount >= 3 && <span className="game-best" aria-label="とくぎにまけずに勝利">🛡 とくぎにまけずに勝利！（{traitCount}回）</span>} {/* デザイン172 */}
+            {Number.isFinite(fastestMs) && <span aria-label="いちばん速く答えた時間">⚡ 最速 {(fastestMs / 1000).toFixed(1)}秒</span>} {/* デザイン177 */}
             <span className={newRecord > 0 ? 'game-best' : undefined} aria-label={newRecord > 0 ? `最大ダメージ記録を更新！ ${newRecord}` : `最大ダメージ記録 ${loadMaxHit()}`}>
               💥 {newRecord > 0 ? `${newRecord} 更新！` : `最大 ${loadMaxHit()}`}
             </span>

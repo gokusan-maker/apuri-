@@ -1035,3 +1035,13 @@ it('デザイン172：ボスのとくぎが3回以上出ても勝つと「🛡 �
   spy.mockRestore()
   expect(screen.getByLabelText('とくぎにまけずに勝利').textContent).toMatch(/^🛡 とくぎにまけずに勝利！（\d+回）$/)
 })
+
+it('デザイン177：ボスに勝つと、いちばん速く答えた時間が「⚡ 最速 ○秒」で出る', () => {
+  localStorage.clear()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('いちばん速く答えた時間').textContent).toMatch(/^⚡ 最速 \d+\.\d秒$/)
+})
