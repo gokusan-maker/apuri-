@@ -755,3 +755,11 @@ it('デザイン184：連続ガチャで、いちばんレアな子に王冠が�
   fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
   expect(screen.queryByLabelText('いちばんレア')).toBeNull()
 })
+
+it('デザイン186：キャラ図鑑の見出しに、今日会えた子の数が出る', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE * 2} members={2} ownedSpecies={['mochi', 'fox', 'cat']} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  expect(screen.queryByLabelText(/今日会えた子/)).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('今日会えた子 1体').textContent).toBe('☀今日 1体')
+})

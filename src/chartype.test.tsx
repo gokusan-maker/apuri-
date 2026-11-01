@@ -94,7 +94,7 @@ it('図鑑：会えたキャラの数がふえると、数字が作りなおさ�
   const r = render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
   const before = document.querySelector('.book-count')!
   expect(before.textContent).toBe('2')
-  expect(screen.getByLabelText(`キャラクター図鑑 2 / ${SPECIES.length}`).textContent).toBe(`📖 キャラクター図鑑（2/${SPECIES.length}）`)
+  expect(screen.getByLabelText(`キャラクター図鑑 2 / ${SPECIES.length}`).textContent).toBe(`📖 キャラクター図鑑（2/${SPECIES.length}）☀今日 1体`) // デザイン186：今日会えた子の数もつく
   r.rerender(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat']} />)
   expect(document.querySelector('.book-count')).not.toBe(before)
   expect(document.querySelector('.book-count')!.textContent).toBe('3')

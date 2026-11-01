@@ -794,6 +794,12 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
         /{SPECIES.length}）
         {SPECIES.length - n > 0 && SPECIES.length - n <= 5 && <span className="book-near">あと{SPECIES.length - n}体！</span>}
         {n === SPECIES.length && <span className="book-near book-done">👑 コンプリート！</span>}
+        {/* デザイン186：今日会えた子の数（同じ子は1体と数える） */}
+        {new Set(today).size > 0 && (
+          <span className="book-near" aria-label={`今日会えた子 ${new Set(today).size}体`}>
+            ☀今日 {new Set(today).size}体
+          </span>
+        )}
       </summary>
       {n < SPECIES.length && (
         <button className="list-link pill-btn book-filter" aria-pressed={onlyNew} onClick={() => setOnlyNew(!onlyNew)}>
