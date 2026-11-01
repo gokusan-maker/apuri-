@@ -23947,6 +23947,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Silent Hunters of the Night', 'How to Build a Wind Turbine', 'Stories About Wise Birds', 'Why Mice Hide in Snow'], answer: 0, why: '全体として、夜の静かな狩人であるフクロウのすぐれた体のつくりを述べている。' },
   },
   {
+    id: 'kyotsu-color-words',
+    title: 'How Languages Divide the Rainbow',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Most people assume that everyone sees the same colors in the same way, and in terms of the human eye, this is largely true. Yet languages divide the rainbow into names in surprisingly different ways. Some languages have only a few basic color words, while others have a dozen or more. Studying these differences has helped researchers explore an interesting question: does the language we speak affect the way we notice the world around us?",
+      "A well-known example comes from Japanese. Traditionally, the word ao was used for both blue and green, and even today Japanese traffic lights that look green are often called ao. Many older Japanese words and phrases reflect this broad meaning, such as aoba for fresh green leaves. Over time, the separate word midori became common for green, but the older usage still survives in everyday language. Similar patterns are found in other languages, some of which use a single word for a range of colors ( A ) English speakers would describe as either blue or green.",
+      "In the 1960s, two American researchers compared color words in many languages and suggested that they tend to develop in a particular order. According to their theory, languages with only two basic color terms divide colors into dark and light. If a third term exists, it is usually red, followed by green or yellow, and later blue. Although later studies have shown that the pattern is not as simple as they first proposed, the idea that color words are not completely random has remained influential.",
+      "Does having different color words change how people actually see colors? Some experiments suggest that it may have a small effect. Russian, for example, has two separate basic words for light blue and dark blue. In one study, Russian speakers were slightly faster than English speakers at telling apart shades of blue that crossed the boundary between these two words. The difference was small, but it suggests that language can influence how quickly we notice certain distinctions.",
+      "These findings do not mean that people who speak different languages live in completely different worlds. Everyone can see the difference between colors, even without a special word for each one. However, the research shows that language and perception are connected in subtle ways. Learning another language, then, may involve not only memorizing new words but also discovering new ways ( B ) the world can be divided and described, which is one reason ( C ) language learning can be such an eye-opening experience.",
+    ],
+    ja: [
+      'たいていの人は、だれもが同じ色を同じように見ていると思っており、人間の目という点では、それはおおむね正しい。しかし言語は、虹をおどろくほどちがうしかたで名前に分けている。基本的な色のことばが少ししかない言語もあれば、10以上ある言語もある。こうしたちがいを研究することで、研究者たちはおもしろい疑問を探ってきた。私たちが話す言語は、まわりの世界への気づき方に影響するのだろうか。',
+      'よく知られた例が日本語にある。昔から「青」ということばは青と緑の両方に使われ、今でも日本の緑に見える信号はよく「青」とよばれる。新緑の葉を表す「青葉」のように、多くの古い日本語のことばや言い回しにこの広い意味が残っている。時がたつにつれて、緑には別のことばの「緑」がふつうに使われるようになったが、古い使い方は今も日常のことばに生きている。ほかの言語にも似た例があり、英語を話す人なら青か緑のどちらかで表す色のはんいを、ひとつのことばで表す言語もある。',
+      '1960年代に、2人のアメリカの研究者が多くの言語の色のことばをくらべ、色のことばは決まった順番で発達する傾向があると提案した。その説によれば、基本的な色のことばが2つしかない言語は、色を暗いものと明るいものに分ける。3つ目のことばがあれば、それはたいてい赤で、そのあとに緑か黄色、さらにそのあとに青が続く。のちの研究で、そのパターンは最初に考えられたほど単純ではないことがわかったが、色のことばはまったくでたらめではないという考えは影響力をもち続けている。',
+      'ちがう色のことばをもつことで、人が実際に色を見る見方は変わるのだろうか。いくつかの実験によれば、小さな影響があるのかもしれない。たとえばロシア語には、明るい青とこい青を表す2つの別々の基本のことばがある。ある研究では、ロシア語を話す人は、この2つのことばの境目をまたぐ青の色合いを見分けるのが、英語を話す人よりわずかに速かった。そのちがいは小さかったが、言語が、ある区別にどれだけ早く気づくかに影響しうることを示している。',
+      'こうした発見は、ちがう言語を話す人がまったくちがう世界にくらしているという意味ではない。だれでも、それぞれの色に特別なことばがなくても、色のちがいを見ることができる。しかし研究は、言語と知覚が微妙な形でつながっていることを示している。だから、別の言語を学ぶことは、新しい単語を覚えるだけでなく、世界を分けたり表したりする新しいしかたを発見することでもあるのかもしれない。それが、語学の学習が目を見開かせる経験になりうる理由のひとつである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a range of colors を受け、describe の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: '先行詞 new ways のあとに完全な文（the world can be divided and described）が続くので in which（＝how の意味の関係詞）。which だけでは前置詞が足りない。' },
+      { id: 'C', choices: ['why', 'which', 'what', 'whose'], answer: 0, why: '先行詞 reason のあとに完全な文が続くので関係副詞 why。' },
+    ],
+    tf: [
+      { statement: '日本語の「青」は、昔から青と緑の両方に使われてきた。', answer: true, why: '第2段落 Traditionally, the word ao was used for both blue and green。' },
+      { statement: '1960年代の説では、色のことばはでたらめな順に発達するとされた。', answer: false, why: '第3段落 suggested that they tend to develop in a particular order。' },
+      { statement: 'ロシア語には、明るい青とこい青を表す別々の基本のことばがある。', answer: true, why: '第4段落 Russian ... has two separate basic words for light blue and dark blue。' },
+      { statement: 'ちがう言語を話す人は、まったくちがう世界にくらしている。', answer: false, why: '第5段落 These findings do not mean that people who speak different languages live in completely different worlds。' },
+    ],
+    qa: [
+      { q: 'What did Russian speakers do slightly faster in one study?', choices: ['Tell apart shades of blue across the boundary between two words.', 'Name all the colors of the rainbow.', 'Learn English color words.', 'See in the dark.'], answer: 0, why: '第4段落 Russian speakers were slightly faster ... at telling apart shades of blue that crossed the boundary between these two words。' },
+      { q: 'According to the theory, which color term usually comes third?', choices: ['Red.', 'Blue.', 'Purple.', 'Pink.'], answer: 0, why: '第3段落 If a third term exists, it is usually red。' },
+    ],
+    gist: [
+      { para: 1, choices: ['日本語の「青」の広い意味', '信号機の歴史', '葉の育ち方', '色のぬり方'], answer: 0, why: '第2段落は、日本語の「青」が青と緑の両方を表してきた例を述べている。' },
+      { para: 3, choices: ['色のことばが色の見分け方に小さな影響をあたえること', '目の病気', 'ロシアの気候', '英語の文法'], answer: 0, why: '第4段落は、ロシア語の例から、言語が色の区別に気づく速さに影響しうることを述べている。' },
+    ],
+    titleQ: { choices: ['How Languages Divide the Rainbow', 'How to Paint a Rainbow', 'The History of Traffic Lights', 'Why the Sky Is Blue'], answer: 0, why: '全体として、言語ごとにちがう色のことばの分け方と、それが知覚とつながっていることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
