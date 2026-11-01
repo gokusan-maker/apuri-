@@ -1730,6 +1730,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The more (B) carefully you check, (C) the fewer (D) mistake you will make.', choices: ['(A) The more', '(B) carefully you check,', '(C) the fewer', '(D) mistake you will make'], answer: 3, why: 'few の比較級 fewer のあとは複数名詞：fewer mistakes。' },
     ],
   },
+  {
+    id: 'exam-error-linking3',
+    title: '入試の正誤問題〈74〉（TOEFL・IELTS の書き言葉：つなぎのことば）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'although・because・while は接続詞（あとに主語＋動詞）、despite・because of・due to・in spite of は前置詞（あとに名詞）、however・therefore・moreover は副詞（カンマだけで文をつなげない）など、エッセイでよく問われるつなぎのことば。',
+    ],
+    examples: [
+      { en: 'Despite the heavy rain, the festival was a great success.', ja: '大雨にもかかわらず、お祭りは大成功だった。' },
+      { en: 'The plan was expensive; however, the city approved it.', ja: 'その計画はお金がかかったが、市はそれをみとめた。' },
+    ],
+    questions: [
+      { sentence: '(A) Although (B) the heavy rain, (C) the festival (D) was a great success.', choices: ['(A) Although', '(B) the heavy rain,', '(C) the festival', '(D) was a great success'], answer: 0, why: 'あとが名詞なので前置詞 Despite（または In spite of）。' },
+      { sentence: '(A) Despite (B) it was very cold, (C) the children (D) played outside.', choices: ['(A) Despite', '(B) it was very cold,', '(C) the children', '(D) played outside'], answer: 0, why: 'あとが主語＋動詞なので接続詞 Although。' },
+      { sentence: 'The game (A) was canceled (B) because (C) the strong wind (D) last night.', choices: ['(A) was canceled', '(B) because', '(C) the strong wind', '(D) last night'], answer: 1, why: 'あとが名詞なので because of。' },
+      { sentence: 'The plan (A) was expensive, (B) however (C) the city (D) approved it.', choices: ['(A) was expensive,', '(B) however', '(C) the city', '(D) approved it'], answer: 1, why: 'however は副詞なのでカンマだけで文をつなげない：but（または ; however,）。' },
+      { sentence: 'She (A) practiced every day; (B) therefore, she (C) won (D) despite of the strong rivals.', choices: ['(A) practiced every day;', '(B) therefore, she', '(C) won', '(D) despite of the strong rivals'], answer: 3, why: 'despite のあとに of はつけない：despite the strong rivals。' },
+      { sentence: '(A) Many people (B) like the city, (C) while others (D) prefers the countryside.', choices: ['(A) Many people', '(B) like the city,', '(C) while others', '(D) prefers the countryside'], answer: 3, why: '主語 others は複数なので prefer。' },
+      { sentence: 'The flight (A) was delayed (B) due to (C) the pilot (D) arrived late.', choices: ['(A) was delayed', '(B) due to', '(C) the pilot', '(D) arrived late'], answer: 1, why: 'あとが主語＋動詞なので接続詞 because。' },
+      { sentence: '(A) In spite (B) the difficulties, (C) they finished (D) the work on time.', choices: ['(A) In spite', '(B) the difficulties,', '(C) they finished', '(D) the work on time'], answer: 0, why: 'in spite of ～ の of をわすれない。' },
+      { sentence: 'Prices (A) have risen (B) sharply. (C) Despite, (D) many people still shop here.', choices: ['(A) have risen', '(B) sharply', '(C) Despite,', '(D) many people still shop here'], answer: 2, why: 'despite は前置詞なので単独では使えない：However,。' },
+      { sentence: 'He (A) was tired. (B) Moreover, (C) he (D) continued working until midnight.', choices: ['(A) was tired', '(B) Moreover,', '(C) he', '(D) continued working until midnight'], answer: 2, why: '「つかれていた」のに働き続けたので、追加の Moreover ではなく逆接の However（または Nevertheless）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
