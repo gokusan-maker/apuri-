@@ -24610,6 +24610,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Seeing the Invisible', 'The Life of a Shopkeeper', 'How to Clean Pond Water', 'The History of Glass Bottles'], answer: 0, why: '全体として、目に見えないものを見せる顕微鏡の発展と、それが科学と医学を変えたことを述べている。' },
   },
   {
+    id: 'kyotsu-peer-tutoring',
+    title: 'When Students Become Teachers',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "There is an old saying that the best way to learn something is to teach it. Many students have experienced this for themselves. When a friend asks for help with a math problem, you may suddenly realize that you understand the topic only halfway. Educators have long been interested in this effect, and many schools now use peer tutoring, a system in which students teach other students, as a regular part of their lessons.",
+      "Peer tutoring can take several forms. In some classes, older students help younger ones with reading or basic arithmetic. In others, classmates of the same age work in pairs and take turns playing the role of tutor. Some universities also train senior students to support first-year students who are struggling with difficult courses. ( A ) the form, the basic idea is the same: learners explain what they know to someone else.",
+      "Why should teaching help the teacher? One reason is that explaining forces us to organize our knowledge. To make an idea clear to another person, we must decide which points are most important and put them in a logical order. In addition, when the learner asks an unexpected question, the tutor has to think about the topic from a new angle. Gaps in understanding ( B ) might have gone unnoticed during quiet study become obvious. Researchers have also found that even the expectation of teaching can change how people study; those who believe they will have to explain the material later tend to read more carefully.",
+      "The students who receive help benefit too. A classmate may use simpler words than a teacher, and learners often feel more relaxed asking a friend a question they consider silly. Peer tutoring can also build confidence and a sense of responsibility, and it allows teachers to give individual attention to more students than they could alone.",
+      "However, peer tutoring is not a magic solution. If tutors themselves misunderstand a topic, they may pass on their mistakes. Some students may feel uncomfortable being taught by a classmate, and pairs that do not get along may waste time. ( C ), successful programs usually include training for tutors, clear goals for each session, and regular checks by teachers. When these conditions are met, peer tutoring turns a classroom into a place where everyone is both a learner and a teacher.",
+    ],
+    ja: [
+      '何かを学ぶいちばんよい方法はそれを教えることだ、という古いことわざがある。多くの生徒が、これを自分で経験してきた。友だちに数学の問題を手伝ってとたのまれたとき、自分がその単元を半分しか理解していないことに、ふと気づくことがあるかもしれない。教育者たちは長い間この効果に関心をもっており、今では多くの学校が、生徒がほかの生徒に教えるしくみであるピア・チュータリングを、授業のふだんの一部として取り入れている。',
+      'ピア・チュータリングには、いくつかの形がある。年上の生徒が年下の生徒の読み方やかんたんな計算を手伝うクラスもある。同じ年の同級生が2人1組になり、交代で教える役をするクラスもある。また、むずかしい授業で苦労している1年生を支えられるよう、上級生を訓練する大学もある。形がどうであれ、基本の考えは同じである。学ぶ人が、自分の知っていることをほかのだれかに説明するのである。',
+      'なぜ教えることが、教える側の助けになるのだろうか。理由のひとつは、説明することで、知識を整理せざるをえなくなることである。ある考えをほかの人にはっきり伝えるには、どの点がいちばん大切かを決め、それを筋の通った順番にならべなければならない。さらに、教わる人が思いがけない質問をすると、教える人はその単元を新しい角度から考えなければならない。ひとりで静かに勉強している間は気づかれなかったかもしれない理解の穴が、はっきりと見えてくるのである。研究者たちはまた、教えることになると思うだけでも勉強のしかたが変わりうることを見つけた。あとで内容を説明しなければならないと思っている人は、よりていねいに読む傾向がある。',
+      '助けを受ける生徒も、得をする。同級生は先生よりかんたんな言葉を使うかもしれないし、学ぶ人は、自分ではばかげていると思う質問でも、友だちにならより気楽にたずねられることが多い。ピア・チュータリングは、自信や責任感を育てることもでき、先生がひとりでできるより多くの生徒に、1人1人へ目を配ることを可能にする。',
+      'しかし、ピア・チュータリングは魔法の解決策ではない。教える生徒自身が単元を誤解していれば、そのまちがいを伝えてしまうかもしれない。同級生に教わることを気まずく感じる生徒もいるし、気の合わない2人組は時間をむだにしてしまうかもしれない。そのため、うまくいっている取り組みには、ふつう、教える生徒のための訓練、1回ごとのはっきりした目標、そして先生による定期的な確認がふくまれている。こうした条件がそろえば、ピア・チュータリングは、教室をだれもが学ぶ人でもあり教える人でもある場所に変えるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because of', 'Regardless of', 'Instead of', 'In addition to'], answer: 1, why: '形はいろいろだが「形に関係なく」基本の考えは同じ、なので Regardless of。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 Gaps in understanding を受け、might have gone の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['For this reason', 'In contrast', 'Even so', 'For instance'], answer: 0, why: '前に述べた問題点があるから、訓練や目標、確認を取り入れる、という理由と結果の関係なので For this reason。' },
+    ],
+    tf: [
+      { statement: 'ピア・チュータリングでは、同じ年の同級生が交代で教える役をすることもある。', answer: true, why: '第2段落 classmates of the same age work in pairs and take turns playing the role of tutor。' },
+      { statement: '説明することは、知識を整理する助けにはならない。', answer: false, why: '第3段落 explaining forces us to organize our knowledge。' },
+      { statement: '学ぶ人は、ばかげていると思う質問を友だちにならたずねやすいことが多い。', answer: true, why: '第4段落 learners often feel more relaxed asking a friend a question they consider silly。' },
+      { statement: 'ピア・チュータリングは、どんな条件でも必ずうまくいく。', answer: false, why: '第5段落 peer tutoring is not a magic solution。' },
+    ],
+    qa: [
+      { q: 'How can the expectation of teaching change the way people study?', choices: ['They stop reading the material.', 'They tend to read more carefully.', 'They forget the material sooner.', 'They ask fewer questions.'], answer: 1, why: '第3段落 those who believe they will have to explain the material later tend to read more carefully。' },
+      { q: 'What do successful peer tutoring programs usually include?', choices: ['Longer school holidays.', 'Training for tutors and regular checks by teachers.', 'Only older students.', 'No goals for each session.'], answer: 1, why: '第5段落 successful programs usually include training for tutors, clear goals for each session, and regular checks by teachers。' },
+    ],
+    gist: [
+      { para: 2, choices: ['教えることが教える側の理解を深める理由', '数学の問題の解き方', '静かな勉強部屋の作り方', '大学の入学試験'], answer: 0, why: '第3段落は、説明で知識が整理されることや、質問で理解の穴が見えることなど、教える側が得をする理由を述べている。' },
+      { para: 4, choices: ['先生の仕事の多さ', '同級生との遊び方', 'ピア・チュータリングの問題点とうまくいく条件', 'まちがいの直し方'], answer: 2, why: '第5段落は、まちがいが伝わるなどの問題点と、訓練・目標・確認という条件を述べている。' },
+    ],
+    titleQ: { choices: ['How to Become a Teacher', 'When Students Become Teachers', 'The History of Universities', 'Why Math Is Difficult'], answer: 1, why: '全体として、生徒どうしで教え合うピア・チュータリングの効果と注意点を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
