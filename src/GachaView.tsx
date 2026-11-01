@@ -641,6 +641,16 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🆕 はじめての{typeOf(result.species.id).icon}{typeOf(result.species.id).name}！
             </p>
           )}
+          {!result.mystery && ownedSpecies && result.newSpecies && !ownedSpecies.includes(result.species.id) && (() => {
+            // デザイン203：そのタイプの子（種類）がこの子で3体そろった
+            const t = typeOf(result.species.id)
+            const n = new Set(['mochi', ...ownedSpecies, result.species.id].filter((sp) => typeOf(sp).id === t.id)).size
+            return n === 3 ? (
+              <p className="gacha-new-type" aria-label="同じタイプが3体">
+                🎉 {t.icon}{t.name}が3体そろった！
+              </p>
+            ) : null
+          })()}
           {!result.mystery && ownedSpecies && result.newSpecies && (() => {
             // デザイン188：はじめての子が出たら、図鑑のコンプリートまであと何体か
             const left = SPECIES.length - new Set(['mochi', ...ownedSpecies, result.species.id]).size

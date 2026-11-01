@@ -814,3 +814,15 @@ it('デザイン200：出た子が今日のおすすめ色なら「🍀 今日�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText('🍀 今日のラッキーカラー！')).toBeNull()
 })
+
+it('デザイン203：同じタイプの子がこの子で3体そろうと「🎉 ○○が3体そろった！」が出る', async () => {
+  localStorage.clear()
+  const { typeOf } = await import('./chartype')
+  const { SPECIES } = await import('./monster')
+  const t = typeOf('cat')
+  const same = SPECIES.map((sp) => sp.id).filter((id) => id !== 'cat' && id !== 'mochi' && typeOf(id).id === t.id)
+  const base = typeOf('mochi').id === t.id ? [same[0]] : [same[0], same[1]]
+  render(<Gacha coins={GACHA_PRICE} members={2} ownedSpecies={['mochi', ...base]} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('同じタイプが3体').textContent).toBe(`🎉 ${t.icon}${t.name}が3体そろった！`)
+})
