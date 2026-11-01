@@ -2162,6 +2162,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Once you (B) learned (C) the rules, the game (D) is easy.', choices: ['(A) Once you', '(B) learned', '(C) the rules, the game', '(D) is easy'], answer: 1, why: '時・条件の節（once）で今のことなので learn。' },
     ],
   },
+  {
+    id: 'exam-error-nounclause',
+    title: '入試の正誤問題〈92〉（TOEFL・IELTS の書き言葉：名詞節）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'that 節・whether 節・what 節・疑問詞の節は名詞のかたまり。主語なら単数あつかい、節の中は主語＋動詞、主語の位置の「～かどうか」は whether、完全な文なら that・不完全なら what。',
+    ],
+    examples: [
+      { en: 'Whether the plan will succeed is still unclear.', ja: 'その計画が成功するかどうかはまだわからない。' },
+      { en: 'I do not know where she lives.', ja: '彼女がどこに住んでいるのか知らない。' },
+    ],
+    questions: [
+      { sentence: '(A) If the plan (B) will succeed (C) is still (D) unclear.', choices: ['(A) If the plan', '(B) will succeed', '(C) is still', '(D) unclear'], answer: 0, why: '主語になる「～かどうか」は Whether。' },
+      { sentence: '(A) That he said (B) at the meeting (C) surprised (D) everyone.', choices: ['(A) That he said', '(B) at the meeting', '(C) surprised', '(D) everyone'], answer: 0, why: '「彼が言ったこと」は What he said。' },
+      { sentence: 'I (A) do not know (B) where (C) does she live (D) now.', choices: ['(A) do not know', '(B) where', '(C) does she live', '(D) now'], answer: 2, why: '名詞節の中は主語＋動詞：where she lives。' },
+      { sentence: 'What (A) the students (B) need (C) are (D) more time to practice.', choices: ['(A) the students', '(B) need', '(C) are', '(D) more time to practice'], answer: 2, why: '名詞節の主語は単数あつかい：is。' },
+      { sentence: 'The problem (A) is (B) what we (C) do not have (D) enough money.', choices: ['(A) is', '(B) what we', '(C) do not have', '(D) enough money'], answer: 1, why: '完全な文が続くので that we。' },
+      { sentence: 'It (A) is clear (B) what the experiment (C) was (D) a success.', choices: ['(A) is clear', '(B) what the experiment', '(C) was', '(D) a success'], answer: 1, why: '形式主語 It のあとは that 節：that the experiment。' },
+      { sentence: 'Please (A) tell me (B) what time (C) does the store (D) open.', choices: ['(A) tell me', '(B) what time', '(C) does the store', '(D) open'], answer: 2, why: '名詞節の中は主語＋動詞：the store opens。' },
+      { sentence: 'I (A) am not sure (B) whether I (C) will be able (D) coming tomorrow.', choices: ['(A) am not sure', '(B) whether I', '(C) will be able', '(D) coming tomorrow'], answer: 3, why: 'be able のあとは to 不定詞：be able to come。' },
+      { sentence: 'Scientists (A) want to know (B) how (C) do birds (D) find their way.', choices: ['(A) want to know', '(B) how', '(C) do birds', '(D) find their way'], answer: 2, why: '名詞節の中は主語＋動詞：how birds find。' },
+      { sentence: '(A) Whether he will come (B) or not (C) are (D) not important.', choices: ['(A) Whether he will come', '(B) or not', '(C) are', '(D) not important'], answer: 2, why: '名詞節の主語は単数あつかい：is not important。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
