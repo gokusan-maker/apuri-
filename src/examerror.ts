@@ -2838,6 +2838,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There are many languages [speaking] in India.', choices: ['spoken', 'speak', 'spoke', 'are spoken'], answer: 0, why: '言語は「話される」側なので過去分詞 spoken が後ろからかざる。' },
     ],
   },
+  {
+    id: 'exam-fix-65',
+    title: '入試の誤文訂正〈65〉（TOEFL・IELTS の書き言葉：主語と動詞の一致）',
+    points: ['長い主語の中心（The results of the study …）をさがす、either A or B・neither A nor B・not only A but also B は B に合わせる、A as well as B・together with は A に合わせる、動名詞の主語や距離・時間・お金のまとまりは単数など、論文やエッセイでよく問われる主語と動詞の一致。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The results of the survey are surprising.', ja: 'その調査の結果はおどろくべきものだ。' }],
+    questions: [
+      { sentence: 'The results of the survey [is] very surprising.', choices: ['are', 'was', 'has been', 'being'], answer: 0, why: '主語の中心は results（複数）なので are。of the survey は修飾。' },
+      { sentence: 'Either my parents or my sister [are] going to pick me up.', choices: ['is', 'were', 'have', 'be'], answer: 0, why: 'either A or B は動詞に近い B（my sister）に合わせるので is。' },
+      { sentence: 'Neither the students nor the teacher [were] ready for the test.', choices: ['was', 'are', 'have', 'being'], answer: 0, why: 'neither A nor B は B（the teacher）に合わせるので was。' },
+      { sentence: 'The manager, as well as his staff, [are] working late tonight.', choices: ['is', 'were', 'have', 'be'], answer: 0, why: 'A as well as B は A（The manager）に合わせるので is。' },
+      { sentence: '[Learn] a new language takes a lot of time.', choices: ['Learning', 'Learned', 'Learns', 'To learning'], answer: 0, why: '「新しい言語を学ぶこと」が主語なので動名詞 Learning（単数あつかい）。' },
+      { sentence: 'Three hours [are] not enough to finish this project.', choices: ['is', 'were', 'have', 'be'], answer: 0, why: '時間のまとまりは単数あつかいなので Three hours is。' },
+      { sentence: 'The number of cars on the road [have] doubled in ten years.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: 'the number of ～ は単数あつかいなので has doubled。' },
+      { sentence: 'Many of the books in the library [is] very old.', choices: ['are', 'was', 'has', 'being'], answer: 0, why: 'many of the books は複数なので are。' },
+      { sentence: 'Everyone in my family [like] watching soccer.', choices: ['likes', 'are liking', 'like to', 'have liked'], answer: 0, why: 'everyone は単数あつかいなので likes。' },
+      { sentence: 'There [is] several ways to solve this problem.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'there is / are はうしろの名詞に合わせる。several ways は複数なので There are。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
