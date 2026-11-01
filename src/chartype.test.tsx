@@ -226,3 +226,12 @@ it('デザイン179：キャラ図鑑で、まだ会っていない子が10体�
   render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
   expect(document.querySelectorAll('.char-book-list li.near-complete')).toHaveLength(0)
 })
+
+it('デザイン189：キャラ図鑑で、さいごの姿まで進化した子に ⭐ がつく', async () => {
+  const { STAGES } = await import('./monster')
+  const top = STAGES[STAGES.length - 1].minLevel
+  render(<Gacha partnerName="モチ" coins={0} members={3} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat']} speciesLevels={{ mochi: 1, fox: top, cat: top - 1 }} />)
+  const marks = screen.getAllByLabelText('さいごの進化')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
+})

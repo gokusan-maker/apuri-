@@ -11,7 +11,7 @@ import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, multi5Off, multi5Price, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, PARTY_MAX, pushGachaLog } from './gacha'
 import { CHAR_TYPES, typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
-import { baseRate, FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
+import { baseRate, FORMS, kindOf, levelsToNextStage, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { challengeOf } from './challenge'
 import { MonsterFigure } from './MonsterView'
 import { GachaReveal } from './GachaRevealView'
@@ -873,6 +873,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
                 {ok && today.includes(sp.id) && <span className="char-book-sprout" aria-label="今日出会った">☀今日</span>} {/* デザイン137 */}
                 {ok && countOf(sp.id) >= 3 && <span className="char-book-sprout" aria-label={`なかまに ${countOf(sp.id)}体`}>👥×{countOf(sp.id)}</span>} {/* デザイン152 */}
                 {ok && topSp === sp.id && <span className="char-book-sprout" aria-label="いちばん育った子">🏅</span>} {/* デザイン161 */}
+                {ok && levels?.[sp.id] !== undefined && levelsToNextStage(levels[sp.id]) === null && <span className="char-book-sprout" aria-label="さいごの進化">⭐</span>} {/* デザイン189：さいごの姿まで進化した子 */}
                 {ok && sp.id !== (partner ?? 'mochi') && t.id === typeOf(partner ?? 'mochi').id && <span className="char-book-sprout" aria-label="相棒と同じタイプ">🤝</span>} {/* デザイン171 */}
                 <span className={`char-type t-${t.id}`} title={t.desc}>
                   {t.icon}
