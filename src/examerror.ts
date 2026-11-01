@@ -3762,6 +3762,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There are many places [to visit them] in this city.', choices: ['to visit', 'visiting them', 'to visit it', 'that visit'], answer: 0, why: '不定詞が places をくわしくするときは目的語をくり返さない：places to visit。' },
     ],
   },
+  {
+    id: 'exam-fix-87',
+    title: '入試の誤文訂正〈87〉（TOEFL・IELTS の書き言葉：受け身の書き言葉）',
+    points: ['It is believed／said／thought that ～（～と信じられている）、主語＋ be said to ～（～と言われている）、過去のことは be said to have ＋過去分詞、be expected to ～、be considered ～、be known for ～（～で有名）など、論文やエッセイでよく使う受け身の言い方。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It is believed that the castle was built in the 1500s.', ja: 'その城は1500年代に建てられたと信じられている。' }],
+    questions: [
+      { sentence: 'It [believes] that the castle was built in the 1500s.', choices: ['is believed', 'believed', 'is believing', 'has believe'], answer: 0, why: '「～と信じられている」は It is believed that ～。' },
+      { sentence: 'The city [says] to be the oldest in the country.', choices: ['is said', 'said', 'is saying', 'has said'], answer: 0, why: '「～と言われている」は be said to ～：is said to be。' },
+      { sentence: 'The tower is said [to be built] about 500 years ago.', choices: ['to have been built', 'to build', 'having built', 'be built'], answer: 0, why: '言われているのは今、建てられたのは過去なので to have been built。' },
+      { sentence: 'The new bridge [expects] to open next spring.', choices: ['is expected', 'expected', 'is expecting', 'expect'], answer: 0, why: '橋は「予定されている」側なので be expected to ～：is expected to open。' },
+      { sentence: 'Kyoto is known [by] its many old temples.', choices: ['for', 'to', 'with', 'as'], answer: 0, why: '「～で有名だ」は be known for ～。' },
+      { sentence: 'He is known [for] a great scientist all over the world.', choices: ['as', 'by', 'with', 'of'], answer: 0, why: '「～として知られている」は be known as ～。' },
+      { sentence: 'Exercise is [considering] good for both the body and the mind.', choices: ['considered', 'consider', 'considers', 'to consider'], answer: 0, why: '「～と考えられている」は be considered ～。' },
+      { sentence: 'It is [thinking] that sleep helps us remember what we learned.', choices: ['thought', 'think', 'thinks', 'to think'], answer: 0, why: '「～と考えられている」は It is thought that ～。' },
+      { sentence: 'Many old buildings [were destroying] by the earthquake.', choices: ['were destroyed', 'destroyed', 'have destroying', 'are destroy'], answer: 0, why: '建物は「こわされた」側なので受け身 were destroyed。' },
+      { sentence: 'The results [will announce] next week.', choices: ['will be announced', 'will announcing', 'announce', 'will be announce'], answer: 0, why: '結果は「発表される」側なので未来の受け身 will be announced。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
