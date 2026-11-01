@@ -695,6 +695,16 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               👯 相棒とおそろい！
             </p>
           )}
+          {!result.mystery && (() => {
+            // デザイン209：今日引いた中で、いちばんレア度が高い（前の子より上）
+            const others = log.slice(1).filter((e) => e.day === log[0]?.day)
+            const rank = RANK.indexOf(result.kind.rarity)
+            return result.kind.rarity !== 'N' && others.length > 0 && others.every((e) => RANK.indexOf(kindOf(e.kind).rarity) < rank) ? (
+              <p className="gacha-new-type" aria-label="今日のいちばん">
+                👑 今日のいちばん！
+              </p>
+            ) : null
+          })()}
           {!result.mystery && boostColor && result.kind.name === boostColor && (
             // デザイン200：出た子が今日のおすすめ色（ラッキーカラー）
             <p className="gacha-new-type gacha-twin" role="status">

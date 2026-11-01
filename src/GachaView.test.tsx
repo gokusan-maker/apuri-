@@ -838,3 +838,16 @@ it('デザイン206：はじめての色ちがいなら、色の名前が光る�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByLabelText('はじめての色')).toBeNull()
 })
+
+it('デザイン209：今日引いた中でいちばんレア度が高い子なら「👑 今日のいちばん！」が出る', () => {
+  localStorage.clear()
+  let n = 0
+  const draws = [kindOf('normal'), kindOf('kin'), kindOf('umi')]
+  render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => ({ kind: draws[n++], species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('今日のいちばん')).toBeNull() // 1回目は出ない
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('今日のいちばん')).toBeInTheDocument() // N のあとの SR
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('今日のいちばん')).toBeNull() // SR のあとの R は出ない
+})
