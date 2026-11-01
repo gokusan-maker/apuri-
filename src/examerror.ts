@@ -2066,6 +2066,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Having (B) lived in Kyoto (C) for ten years, he (D) know the city well.', choices: ['(A) Having', '(B) lived in Kyoto', '(C) for ten years, he', '(D) know the city well'], answer: 3, why: '主語 he は3人称単数なので knows。' },
     ],
   },
+  {
+    id: 'exam-error-article2',
+    title: '入試の正誤問題〈88〉（TOEFL・IELTS の書き言葉：冠詞 a／the／なし）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '2回目以降・ひとつしかないもの・最上級・序数・楽器には the、母音の音の前は an、数えられない名詞や一般的に言う複数名詞は冠詞なし、など。',
+    ],
+    examples: [
+      { en: 'I saw a cat. The cat was very small.', ja: '私はネコを見た。そのネコはとても小さかった。' },
+      { en: 'She waited for an hour.', ja: '彼女は1時間待った。' },
+    ],
+    questions: [
+      { sentence: 'I (A) saw a cat (B) in the park. (C) A cat (D) was very small.', choices: ['(A) saw a cat', '(B) in the park', '(C) A cat', '(D) was very small'], answer: 2, why: '2回目に出るので The cat。' },
+      { sentence: 'She (A) waited (B) for (C) a hour (D) at the station.', choices: ['(A) waited', '(B) for', '(C) a hour', '(D) at the station'], answer: 2, why: 'hour は母音の音で始まるので an hour。' },
+      { sentence: 'He (A) studies (B) at an university (C) in (D) Tokyo.', choices: ['(A) studies', '(B) at an university', '(C) in', '(D) Tokyo'], answer: 1, why: 'university は子音の音で始まるので a university。' },
+      { sentence: '(A) Sun (B) rises (C) in (D) the east.', choices: ['(A) Sun', '(B) rises', '(C) in', '(D) the east'], answer: 0, why: 'ひとつしかないものには the：The sun。' },
+      { sentence: 'Mt. Fuji (A) is (B) highest (C) mountain (D) in Japan.', choices: ['(A) is', '(B) highest', '(C) mountain', '(D) in Japan'], answer: 1, why: '最上級には the：the highest。' },
+      { sentence: 'I (A) usually (B) drink (C) a milk (D) in the morning.', choices: ['(A) usually', '(B) drink', '(C) a milk', '(D) in the morning'], answer: 2, why: '数えられない名詞 milk は冠詞なし。' },
+      { sentence: '(A) The dogs (B) are (C) loyal animals (D) in general.', choices: ['(A) The dogs', '(B) are', '(C) loyal animals', '(D) in general'], answer: 0, why: '一般的に言うときは無冠詞の複数形 Dogs。' },
+      { sentence: 'This is (A) a first time (B) I (C) have (D) visited Kyoto.', choices: ['(A) a first time', '(B) I', '(C) have', '(D) visited Kyoto'], answer: 0, why: '序数には the：the first time。' },
+      { sentence: 'Can (A) you (B) play (C) piano (D) well?', choices: ['(A) you', '(B) play', '(C) piano', '(D) well?'], answer: 2, why: 'play the ＋楽器：the piano。' },
+      { sentence: 'We (A) went to (B) the beach (C) and found (D) an unique shell.', choices: ['(A) went to', '(B) the beach', '(C) and found', '(D) an unique shell'], answer: 3, why: 'unique は「ユ」という子音の音で始まるので a unique shell。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
