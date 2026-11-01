@@ -24298,6 +24298,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Birds That Fly Underwater', 'How to Build an Aquarium', 'The Coldest Cities on Earth', 'Why Fish Swim in Groups'], answer: 0, why: '全体として、水中を飛ぶように泳ぐペンギンの適応と、その危機を述べている。' },
   },
   {
+    id: 'kyotsu-reading-pleasure',
+    title: 'Reading Just for Fun',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many schools, reading is treated mainly as a skill to be tested. Students read passages and answer questions about main ideas, vocabulary, and details. These activities are useful, but researchers have found that another kind of reading may matter just as much: reading for pleasure. Choosing books freely and reading them simply because they are interesting appears to bring benefits that go far beyond better test scores.",
+      "Several large studies have followed children over many years to see how their habits affect their development. One study found that children who often read for pleasure made greater progress not only in vocabulary and spelling but also in mathematics than children who rarely read, even after differences in family background were taken into account. The researchers suggested that regular reading builds general knowledge and the ability to concentrate, both of which support learning in many subjects.",
+      "Reading for pleasure may also help young people understand other people. When we read stories, we imagine the thoughts and feelings of characters ( A ) lives may be very different from our own. Some psychologists believe that this kind of imaginative experience can increase empathy, the ability to understand how others feel. Readers may also find comfort in stories, especially during difficult times, when a book can offer a world ( B ) they can escape for a while.",
+      "Unfortunately, surveys in several countries show that the amount of time young people spend reading for pleasure has declined. Smartphones, video games, and online videos compete for their attention, and busy schedules leave little free time. Some teenagers also say that they see reading as schoolwork rather than as something enjoyable, perhaps because they have mostly experienced it through tests and assignments.",
+      "To reverse this trend, some schools have introduced quiet reading time, when students and teachers read books of their own choice for fifteen or twenty minutes each day. Libraries organize book clubs and invite authors to speak, and parents are encouraged to read with their children or simply to let them see adults reading. The key, experts say, is choice: when young people can pick books that match their own interests, whether comics, novels, or books about sports or science, reading becomes less of a duty and more of a pleasure. In the end, the habit of reading for fun may be one of the most valuable gifts ( C ) education can offer.",
+    ],
+    ja: [
+      '多くの学校では、読書はおもにテストされる技能としてあつかわれている。生徒たちは文章を読み、要旨や語いやくわしい内容についての問いに答える。こうした活動は役に立つが、研究者たちは、別の種類の読書も同じくらい大切かもしれないことを見つけた。それは楽しみのための読書である。本を自由に選び、ただおもしろいから読むことは、テストの点数がよくなることをはるかにこえた利点をもたらすようである。',
+      'いくつかの大規模な研究は、子どもたちを何年も追いかけ、習慣が成長にどう影響するかを調べてきた。ある研究では、楽しみのためによく本を読む子どもは、ほとんど読まない子どもより、家庭の環境のちがいを考えに入れても、語いやつづりだけでなく数学でも大きくのびていた。研究者たちは、定期的な読書が一般的な知識と集中する力を育て、そのどちらも多くの教科の学習を支えるのだろうと考えた。',
+      '楽しみのための読書は、若い人がほかの人を理解する助けにもなるかもしれない。物語を読むとき、私たちは、自分とはまったくちがう人生を送るかもしれない登場人物の考えや気持ちを想像する。こうした想像の経験が、ほかの人がどう感じているかを理解する力である共感を高めうると考える心理学者もいる。読者は物語の中に、とくにつらい時期に、なぐさめを見つけることもある。そんなとき、本はしばらくにげこむことのできる世界をあたえてくれるのである。',
+      '残念なことに、いくつかの国の調査によれば、若い人が楽しみのための読書にかける時間はへっている。スマートフォンやテレビゲーム、オンラインの動画が彼らの注意をうばい合い、いそがしい予定で自由な時間はほとんどない。読書を楽しいものではなく学校の勉強と見ていると言う10代もいる。それはおそらく、おもにテストや課題を通して読書を経験してきたからだろう。',
+      'この流れを変えるために、生徒と先生が毎日15分か20分、自分で選んだ本を読む静かな読書の時間を取り入れた学校もある。図書館は読書会を開いたり作家をまねいて話してもらったりし、親は子どもといっしょに読んだり、ただおとなが本を読んでいるすがたを子どもに見せたりするようすすめられている。専門家によれば、かぎは選ぶ自由である。マンガでも小説でも、スポーツや科学の本でも、若い人が自分の興味に合う本を選べると、読書は義務ではなく楽しみになっていく。結局のところ、楽しみのために読む習慣は、教育があたえられる最も価値ある贈り物のひとつなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'who', 'which', 'where'], answer: 0, why: '「その人生が～」と characters の所有を表すので whose。' },
+      { id: 'B', choices: ['into which', 'which', 'what', 'whose'], answer: 0, why: 'escape into a world「世界ににげこむ」の into が関係代名詞の前に出た形：a world into which they can escape。which だけでは前置詞が足りない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the most valuable gifts を受け、offer の目的語になる関係代名詞 that（最上級がつく先行詞は that がよく使われる）。' },
+    ],
+    tf: [
+      { statement: '楽しみのためによく読む子どもは、数学でも大きくのびていた。', answer: true, why: '第2段落 made greater progress not only in vocabulary and spelling but also in mathematics。' },
+      { statement: '研究では、家庭の環境のちがいは考えに入れられていなかった。', answer: false, why: '第2段落 even after differences in family background were taken into account。' },
+      { statement: '若い人が楽しみのために読む時間は、どの国でもふえている。', answer: false, why: '第4段落 the amount of time young people spend reading for pleasure has declined。' },
+      { statement: '専門家は、本を選ぶ自由が大切だと考えている。', answer: true, why: '第5段落 The key, experts say, is choice。' },
+    ],
+    qa: [
+      { q: 'How might reading stories increase empathy?', choices: ['Readers imagine the thoughts and feelings of characters.', 'Stories are always about the reader.', 'Books teach math skills.', 'Reading makes people talk less.'], answer: 0, why: '第3段落 we imagine the thoughts and feelings of characters ... this kind of imaginative experience can increase empathy。' },
+      { q: 'What have some schools introduced to encourage reading?', choices: ['Quiet reading time with books of students\' own choice.', 'More reading tests every day.', 'Banning comics completely.', 'Longer homework assignments.'], answer: 0, why: '第5段落 some schools have introduced quiet reading time, when students and teachers read books of their own choice。' },
+    ],
+    gist: [
+      { para: 1, choices: ['読書が学習全体を支えるという研究', 'つづりの覚え方', '家庭の収入', 'テストの作り方'], answer: 0, why: '第2段落は、楽しみの読書が語いや数学ののびにつながったという研究を述べている。' },
+      { para: 3, choices: ['楽しみのための読書がへっている理由', 'ゲームのルール', '動画の作り方', '10代の部活'], answer: 0, why: '第4段落は、スマートフォンやいそがしさ、読書＝勉強という見方などの理由を述べている。' },
+    ],
+    titleQ: { choices: ['Reading Just for Fun', 'How to Pass a Reading Test', 'The History of Libraries', 'Why Comics Are Bad'], answer: 0, why: '全体として、楽しみのための読書の利点と、それを育てる取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
