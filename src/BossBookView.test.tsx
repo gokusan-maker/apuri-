@@ -578,3 +578,27 @@ it('デザイン212：とくぎのしくみで、そのとくぎのまだ勝っ�
   const total = [...Object.values(BOSSES), ...UNIV_BOSSES_FOR_TEST].filter((b) => traitOf(b.name) === t).length
   expect(screen.getByLabelText(`${BOSS_TRAITS[t].name}のまだ勝っていないボス`).textContent).toBe(`（あと${total}体）`)
 })
+
+it('デザイン215：とくぎの種類ごとに、いちばん早くたおしたボスに⚡をつける', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES, traitOf, recordBossTime } = await import('./boss')
+  localStorage.clear()
+  const list = Object.values(BOSSES)
+  const t = traitOf(list[0].name)
+  const same = list.filter((b) => traitOf(b.name) === t)
+  const other = list.find((b) => traitOf(b.name) !== t)!
+  if (same.length < 2) return
+  const [a, b] = same
+  saveBook({
+    [a.name]: { wins: 1, best: 'A', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 1, best: 'A', look: b, first: '2026-10-01' },
+    [other.name]: { wins: 1, best: 'A', look: other, first: '2026-10-01' },
+  })
+  recordBossTime(other.name, 10) // 全体の最速は別のとくぎのボス
+  recordBossTime(a.name, 40)
+  recordBossTime(b.name, 80)
+  render(<BossBook />)
+  const marks = screen.getAllByLabelText('とくぎの中でいちばん早くたおしたボス')
+  expect(marks.some((m) => m.closest('li')?.querySelector('.badge-name')?.textContent === a.name)).toBe(true)
+  expect(marks.some((m) => m.closest('li')?.querySelector('.badge-name')?.textContent === b.name)).toBe(false)
+})

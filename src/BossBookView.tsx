@@ -48,6 +48,11 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const dated = all.filter((b) => /^\d{4}-\d{2}-\d{2}$/.test(book[b.name]?.first ?? ''))
   const firstWin = dated.length >= 2 ? dated.reduce((x, y) => (book[y.name].first < book[x.name].first ? y : x)).name : null
   const clean = all.filter((b) => book[b.name] && noMiss.includes(b.name)).length // デザイン108：ノーミスでたおしたボスの数
+  // デザイン215：とくぎの種類ごとに、いちばん早くたおしたボス（タイムのあるボスが2体以上のとくぎだけ）
+  const traitFastest = (t: string) => {
+    const xs = timed.filter((b) => traitOf(b.name) === t)
+    return xs.length >= 2 ? xs.reduce((x, y) => (times[y.name] < times[x.name] ? y : x)).name : null
+  }
   const rankS = all.filter((b) => book[b.name]?.best === 'S').length // デザイン180：ランクSで勝ったボスの数
   return (
     <details className="boss-book game-fold">
@@ -182,6 +187,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                   {e.best !== 'S' && <span className="boss-book-to-s" aria-label={`ランクSまであと${e.best === 'A' ? 1 : 2}ランク`}>（Sまであと{e.best === 'A' ? 1 : 2}ランク）</span>}
                   {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}{times[b.name] < 60 && <strong className="speed-clear"> ⚡ スピードクリア</strong>}</>}
                   {fastest === b.name && <strong className="speed-clear" aria-label="いちばん早くたおしたボス"> ⚡最速</strong>}
+                  {fastest !== b.name && traitFastest(traitOf(b.name)) === b.name && <strong className="speed-clear" aria-label="とくぎの中でいちばん早くたおしたボス"> ⚡{BOSS_TRAITS[traitOf(b.name)].icon}最速</strong>}
                   {noMiss.includes(b.name) && <strong className="speed-clear"> ✨ ノーミス</strong>}
                   {topName === b.name && <strong className="speed-clear"> 🏆 いちばん勝った</strong>}
                   {lastBoss === b.name && <strong className="speed-clear" aria-label="いちばん最近たおしたボス"> 🆕 さいきん</strong>}
