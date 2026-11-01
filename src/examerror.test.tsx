@@ -1331,3 +1331,10 @@ it('正誤問題〈98〉：前置詞のつく動詞の単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) of')
 })
+
+it('誤文訂正〈92〉：不定詞の意味上の主語と完了不定詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-92')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('for')
+})

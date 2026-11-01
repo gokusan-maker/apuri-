@@ -3972,6 +3972,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Many students rely [to] their phones to check the time.', choices: ['on', 'in', 'with', 'from'], answer: 0, why: '「～にたよる」は rely on ～。' },
     ],
   },
+  {
+    id: 'exam-fix-92',
+    title: '入試の誤文訂正〈92〉（共通テストレベル：不定詞の意味上の主語と完了不定詞）',
+    points: ['不定詞の意味上の主語は for 人（It is easy for me to ～）、人の性質をほめる・せめるときは of 人（It is kind of you to ～）、too ～ for 人 to …、～ enough for 人 to …。主節より前のことは完了不定詞 to have ＋過去分詞（seem to have ～・be said to have ～）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He seems to have been ill last week.', ja: '彼は先週具合が悪かったようだ。' }],
+    questions: [
+      { sentence: 'It is easy [of] me to solve this problem.', choices: ['for', 'to', 'by', 'with'], answer: 0, why: '不定詞の意味上の主語は for 人：It is easy for me to ～。' },
+      { sentence: 'It was careless [for] you to leave the door open.', choices: ['of', 'to', 'with', 'at'], answer: 0, why: '人の性質（careless）を表すときは of 人：careless of you。' },
+      { sentence: 'This box is too heavy [of] me to carry.', choices: ['for', 'to', 'by', 'with'], answer: 0, why: 'too ～ for 人 to …「人が…するには～すぎる」。' },
+      { sentence: 'The question was easy enough [of] children to answer.', choices: ['for', 'to', 'with', 'by'], answer: 0, why: '～ enough for 人 to …「人が…できるほど～」。' },
+      { sentence: 'He seems [to be] ill last week.', choices: ['to have been', 'being', 'to being', 'have been'], answer: 0, why: '「先週具合が悪かったようだ」と主節より前のことなので完了不定詞 to have been。' },
+      { sentence: 'She is said [to live] in Paris when she was young.', choices: ['to have lived', 'living', 'to living', 'lived'], answer: 0, why: '若いころのこと（過去）なので to have lived。' },
+      { sentence: 'I am sorry [to keep] you waiting so long.', choices: ['to have kept', 'keeping to', 'kept', 'to keeping'], answer: 0, why: 'すでに待たせた（過去から今まで）ことをあやまるので to have kept。' },
+      { sentence: 'It is necessary [of] us to protect the environment.', choices: ['for', 'by', 'with', 'from'], answer: 0, why: 'necessary は人の性質ではないので for 人：for us。' },
+      { sentence: 'The museum seems [to be built] about 200 years ago.', choices: ['to have been built', 'to build', 'to have built', 'being built'], answer: 0, why: '過去に「建てられた」ので完了不定詞の受け身 to have been built。' },
+      { sentence: 'It was very kind [to] you to help me with my bags.', choices: ['of', 'for', 'with', 'by'], answer: 0, why: 'kind は人の性質なので of 人：kind of you。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
