@@ -23284,6 +23284,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['When the Body Makes a Mistake', 'How to Grow Cedar Trees', 'The History of Peanuts', 'Why Farms Are Noisy'], answer: 0, why: '全体として、体のまちがいであるアレルギーのしくみ・ふえた理由・つき合い方を述べている。' },
   },
   {
+    id: 'kyotsu-filter-bubbles',
+    title: 'Living Inside a Bubble?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When you open a news app or a video site, the content you see is often different from what your friends or family see. This is because many online services use programs called algorithms to choose what to show each user. These programs study what you click, watch, and like, and then recommend more of the same. In many ways, this is convenient. However, some researchers warn that it may also shape how we understand the world, by creating what they call a filter bubble.",
+      "A filter bubble is a situation ( A ) a person mainly sees information that matches their existing interests and opinions. If someone often watches videos supporting a particular political view, for example, the algorithm may show them more videos with the same view and fewer with different ones. Over time, the person may come to believe that most people agree with them, simply because they rarely encounter opposing arguments. A similar effect, sometimes called an echo chamber, can occur when people join online groups made up only of like-minded members.",
+      "Critics argue that filter bubbles can make societies more divided. When people with different opinions are exposed to completely different information, it becomes harder for them to discuss problems or reach agreement. They may also become more likely to believe false information, because claims that fit their beliefs are repeated without being challenged. In extreme cases, people may view those who disagree with them not just as wrong but as enemies.",
+      "However, not all researchers agree about how serious the problem is. Some studies have found that many people actually see a fairly wide range of views online, often more than they would through their friends or a single newspaper. People also choose their own information sources, so algorithms are not the only cause of narrow thinking. It may be that filter bubbles mostly affect people ( B ) already have strong opinions and actively look for content that supports them.",
+      "Whatever the exact size of the effect, there are steps we can take to avoid becoming trapped in a bubble. We can deliberately read news from different sources, follow people with different views, and ask ourselves whether a story might be presented differently elsewhere. Some services now let users see why a particular item was recommended or turn off personalized recommendations. Developing these habits can help us become more thoughtful users of technology and better members of a society ( C ) depends on open and informed discussion.",
+    ],
+    ja: [
+      'ニュースアプリや動画サイトを開くと、見える内容は友だちや家族が見るものとちがうことが多い。これは、多くのインターネットのサービスが、アルゴリズムとよばれるプログラムを使って、それぞれの利用者に何を見せるかを選んでいるからである。こうしたプログラムは、あなたが何をクリックし、何を見て、何に「いいね」をしたかを調べ、同じようなものをさらにすすめる。いろいろな意味で、これは便利である。しかし、それが「フィルターバブル」とよばれるものを生み出し、私たちの世界の理解のしかたを形づくっているかもしれないと警告する研究者もいる。',
+      'フィルターバブルとは、人がおもに自分のもともとの興味や意見に合う情報ばかりを見る状況のことである。たとえば、ある政治的な見方を支持する動画をよく見る人には、アルゴリズムが同じ見方の動画をもっと見せ、ちがう見方の動画をあまり見せなくなるかもしれない。時がたつにつれて、その人は反対の主張にめったに出会わないというだけの理由で、ほとんどの人が自分と同じ意見だと信じるようになるかもしれない。似た効果は、同じ考えの人だけでできたオンラインのグループに入ったときにも起こることがあり、エコーチェンバーとよばれることもある。',
+      '批判する人々は、フィルターバブルによって社会がより分断されうると主張している。ちがう意見の人々がまったくちがう情報にふれていると、問題について話し合ったり、合意したりするのがむずかしくなる。自分の考えに合う主張が反論されずにくり返されるので、まちがった情報を信じやすくなるかもしれない。極端な場合には、人々は自分に反対する人を、ただまちがっているだけでなく敵だと見なすようになるかもしれない。',
+      'しかし、問題がどれほど深刻かについては、すべての研究者の意見が一致しているわけではない。多くの人が実際にはインターネットでかなり広い範囲の見方にふれていて、友だちや1つの新聞を通じてよりも多いことさえあるとわかった研究もある。人は自分で情報源を選ぶので、アルゴリズムだけがせまい考え方の原因ではない。フィルターバブルは、おもに、もともと強い意見をもっていて、それを支える内容を自分から進んでさがす人に影響するのかもしれない。',
+      '影響の正確な大きさがどうであれ、バブルにとじこめられないようにするためにできることはある。わざとちがう情報源のニュースを読んだり、ちがう見方の人をフォローしたり、その話がほかの場所ではちがって伝えられているかもしれないと自分に問いかけたりできる。今では、ある項目がなぜすすめられたのかを見られたり、個人に合わせたおすすめを切ったりできるサービスもある。こうした習慣を身につければ、私たちはより考えて技術を使う人になり、開かれた、情報に基づいた話し合いにたよる社会のよりよい一員になれるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a situation（状況）で、うしろの a person mainly sees information ... は完全な文なので関係副詞 where（in which と同じ）。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、have の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 a society を受け、depends の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+    ],
+    tf: [
+      { statement: '多くのサービスは、利用者が何をクリックしたかを調べて、おすすめを決めている。', answer: true, why: '第1段落 These programs study what you click, watch, and like, and then recommend more of the same。' },
+      { statement: 'フィルターバブルでは、自分とちがう意見の情報がふえる。', answer: false, why: '第2段落 a person mainly sees information that matches their existing interests and opinions。' },
+      { statement: 'フィルターバブルの深刻さについて、すべての研究者の意見が一致している。', answer: false, why: '第4段落 not all researchers agree about how serious the problem is。' },
+      { statement: 'おすすめの理由を見られるサービスもある。', answer: true, why: '第5段落 Some services now let users see why a particular item was recommended。' },
+    ],
+    qa: [
+      { q: 'Why might people in a filter bubble believe false information more easily?', choices: ['Claims that fit their beliefs are repeated without being challenged.', 'They read too many newspapers.', 'Algorithms always show the truth.', 'They talk with many different people.'], answer: 0, why: '第3段落 because claims that fit their beliefs are repeated without being challenged。' },
+      { q: 'What is one step the author suggests?', choices: ['Deliberately reading news from different sources.', 'Stopping all use of the internet.', 'Following only people who agree with us.', 'Turning on more recommendations.'], answer: 0, why: '第5段落 We can deliberately read news from different sources。' },
+    ],
+    gist: [
+      { para: 2, choices: ['フィルターバブルが社会にあたえる悪い影響', '政治家の選び方', '新聞の歴史', 'ゲームのルール'], answer: 0, why: '第3段落は、分断がすすみ、まちがった情報を信じやすくなるという批判を述べている。' },
+      { para: 3, choices: ['問題の大きさについてのちがう見方', 'アルゴリズムの作り方', '友だちの数', 'ニュースの値段'], answer: 0, why: '第4段落は、実際には広い見方にふれているという研究など、反対の見方を述べている。' },
+    ],
+    titleQ: { choices: ['Living Inside a Bubble?', 'How to Make a Video', 'The History of Newspapers', 'Why Soap Makes Bubbles'], answer: 0, why: '全体として、おすすめのしくみが生むフィルターバブルの問題と、その向き合い方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
