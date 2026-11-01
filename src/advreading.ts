@@ -21841,6 +21841,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Is Breakfast Really Important?', 'How to Bake Bread', 'The History of Cereal', 'Why Teenagers Sleep Late'], answer: 0, why: '全体として、朝ごはんの効果、何を食べるかの大切さ、研究の意見の分かれ、生徒にとっての意味を述べている。' },
   },
   {
+    id: 'kyotsu-japanese-castles',
+    title: 'Castles of Japan',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Japanese castles, with their white walls and curved roofs rising above stone foundations, are among the most recognizable buildings in the country. Every year, millions of visitors climb their steep stairs and look out over the cities below. Yet many people do not realize that these castles were originally built not as beautiful sights but as military fortresses designed to protect their lords in times of war.",
+      "Most of the castles that can be seen today were built during a period of frequent conflict several hundred years ago. Lords needed strong bases from which to defend their territory, so castles were often placed on hills or surrounded by deep moats filled with water. The stone walls were carefully shaped so that attackers would find them difficult to climb, and the narrow, twisting paths inside made it hard for enemies to reach the main tower quickly.",
+      "As peace gradually returned to the country, castles took on new roles. They became centers of government and symbols of a lord’s power and wealth, and towns grew up around them. Many of today’s cities developed from these castle towns, and some streets still follow the patterns ( A ) were laid out centuries ago. In this way, castles shaped not only military history but also the way Japanese cities grew.",
+      "Unfortunately, many castles did not survive. Some were destroyed in wars or fires, and others were taken down when the government changed in the nineteenth century. Today, only a small number of castles keep their original main towers. Many of the castles that visitors see are reconstructions, some made of concrete and containing modern museums inside. While some people feel that such reconstructions lack the charm of the originals, others believe they play an important role in helping people learn about the past.",
+      "In recent years, some cities have chosen to rebuild their castles using traditional materials and methods, such as wood, in order to recreate them as faithfully as possible. These projects are expensive and take many years, but supporters argue that they help to preserve traditional building skills that might otherwise be lost. Whether original or rebuilt, Japanese castles continue to connect people with history, reminding them of ( B ) the country has changed and ( C ) much effort past generations put into building them.",
+    ],
+    ja: [
+      '白いかべと石垣の上にそびえる反りかえった屋根をもつ日本の城は、この国で最もよく知られた建物の1つである。毎年、何百万人もの観光客が急な階段をのぼり、下の町を見わたす。しかし多くの人は、こうした城がもともと美しい景色としてではなく、戦の時代に城主を守るためにつくられた軍事のとりでとして建てられたことに気づいていない。',
+      '今日見られる城のほとんどは、数百年前のたびたび争いが起きた時代に建てられた。城主は領地を守るための強い拠点を必要としていたので、城はよく丘の上に置かれたり、水をたたえた深い堀で囲まれたりした。石垣は攻める者がのぼりにくいように注意深く形づくられ、内部のせまく曲がりくねった道は、敵が天守にすぐにたどりつくのをむずかしくしていた。',
+      '国にしだいに平和がもどると、城は新しい役割をになうようになった。城は政治の中心となり、城主の力と富の象徴となり、そのまわりに町が育った。今日の都市の多くはこうした城下町から発展し、何百年も前につくられた形に今もそっている通りもある。このようにして、城は軍事の歴史だけでなく、日本の都市の育ち方も形づくったのである。',
+      '残念なことに、多くの城は残らなかった。戦や火事でこわれたものもあれば、19世紀に政府が変わったときにとりこわされたものもある。今日、もとの天守を残している城はわずかしかない。観光客が見る城の多くは再建されたもので、コンクリートでつくられ、中に現代の博物館があるものもある。こうした再建の城にはもとの城の魅力がないと感じる人もいるが、人々が過去について学ぶのを助ける大切な役割をはたしていると考える人もいる。',
+      '近年、できるだけ忠実に再現するために、木材などの伝統的な材料と方法を使って城を建てなおすことを選んだ都市もある。こうした計画はお金がかかり、何年もかかるが、支持する人は、そうしなければ失われるかもしれない伝統的な建築の技術を守るのに役立つと主張している。もとのものであれ再建されたものであれ、日本の城は人々を歴史とつなぎつづけ、国がどのように変わってきたか、そして昔の世代がそれを建てるのにどれほどの努力をかけたかを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the patterns を受け、were laid out の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'remind 人 of how ～「どのように～かを思い出させる」。うしろは完全な文。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'so'], answer: 0, why: 'how much effort ～「どれほどの努力を～か」。前の how 節と and でならぶ。' },
+    ],
+    tf: [
+      { statement: '日本の城は、もともと軍事のとりでとして建てられた。', answer: true, why: '第1段落 originally built ... as military fortresses。' },
+      { statement: '城の中の道は、敵が天守にすぐ着けるようにまっすぐだった。', answer: false, why: '第2段落 the narrow, twisting paths inside made it hard for enemies to reach the main tower quickly。' },
+      { statement: '今日の都市の多くは城下町から発展した。', answer: true, why: '第3段落 Many of today’s cities developed from these castle towns。' },
+      { statement: 'ほとんどの城がもとの天守を残している。', answer: false, why: '第4段落 only a small number of castles keep their original main towers。' },
+    ],
+    qa: [
+      { q: 'What happened to many castles in the nineteenth century?', choices: ['They were taken down when the government changed.', 'They were made larger.', 'They became schools.', 'They were moved to other countries.'], answer: 0, why: '第4段落 others were taken down when the government changed in the nineteenth century。' },
+      { q: 'Why do supporters favor rebuilding castles with traditional materials?', choices: ['It helps to preserve traditional building skills.', 'It is cheaper than using concrete.', 'It can be finished quickly.', 'It attracts fewer visitors.'], answer: 0, why: '第5段落 they help to preserve traditional building skills that might otherwise be lost。' },
+    ],
+    gist: [
+      { para: 1, choices: ['城を守るためのつくりのくふう', '石の切り方', '堀の魚', '丘ののぼり方'], answer: 0, why: '第2段落は、丘や堀、石垣、曲がりくねった道など、城を守るつくりを述べている。' },
+      { para: 2, choices: ['平和になってからの城の新しい役割', '城主の家族', '税のしくみ', '道路の名前'], answer: 0, why: '第3段落は、政治の中心や力の象徴になり、城下町が育ったことを述べている。' },
+    ],
+    titleQ: { choices: ['Castles of Japan', 'How to Build a Concrete Museum', 'The History of Wars in Europe', 'Why People Climb Stairs'], answer: 0, why: '全体として、日本の城の成り立ち、役割の変化、失われた城と再建、その意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
