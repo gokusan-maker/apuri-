@@ -24376,6 +24376,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Protecting the Earth from Space Rocks', 'How Dinosaurs Lived', 'The Brightest Stars in the Sky', 'Why Mars Is Red'], answer: 0, why: '全体として、宇宙から来る小惑星から地球を守る惑星防衛について述べている。' },
   },
   {
+    id: 'kyotsu-rakugo',
+    title: 'One Performer, Many Voices',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Imagine a theater with no scenery, no costumes changing from scene to scene, and only one performer sitting on a cushion. The performer holds just two simple objects, a fan and a small cloth, yet over the next half hour, the audience sees a busy street, a quarrel between a husband and wife, and a greedy merchant trying to cheat his customers. This is rakugo, a traditional form of Japanese storytelling ( A ) has entertained audiences for more than three hundred years.",
+      "A rakugo performer, called a rakugoka, plays every character in the story alone. To show who is speaking, the performer turns the head slightly to the left or right and changes the voice, expression, and manner of speaking. A rough carpenter might speak loudly and quickly, while an old lady speaks slowly and softly. The fan can become chopsticks, a pipe, a sword, or a writing brush, and the cloth can become a wallet, a letter, or a book. Through these small changes, the audience's imagination fills in everything else.",
+      "Many rakugo stories were created in the Edo period, and they often describe the lives of ordinary townspeople. The characters are usually not heroes but people with familiar weaknesses: they are lazy, foolish, forgetful, or a little too proud. Audiences laugh at their mistakes, but they also feel sympathy for them, because they recognize the same weaknesses in themselves. Most stories end with a punch line, called an ochi, which brings the story to a sudden and humorous close.",
+      "Becoming a rakugoka traditionally requires many years of training. Young performers become apprentices to a master, living a strict life of practice and service. They learn hundreds of stories by listening to their teachers and repeating them, since many stories are passed on orally rather than in writing. Only after years of experience do performers reach the highest rank, ( B ) allows them to take on apprentices of their own.",
+      "In recent decades, rakugo has attracted new audiences. Some performers tell stories in English and other languages, adapting the jokes for listeners abroad. Others create new stories about modern topics such as smartphones, office life, and online shopping. Television dramas and comics about rakugo have also drawn young people to theaters. Its continued popularity shows that a simple art, relying only on words and imagination, can still move people in an age ( C ) is full of high-tech entertainment.",
+    ],
+    ja: [
+      '背景も、場面ごとに変わる衣装もなく、座布団にすわった演者がひとりいるだけの劇場を想像してみよう。演者が持っているのは、せんすと小さな手ぬぐいという2つのかんたんな道具だけである。それなのに、それから30分の間に、観客はにぎやかな通りや、夫婦げんか、客をだまそうとする欲ばりな商人を目にする。これが落語であり、300年以上にわたって観客を楽しませてきた日本の伝統的な話芸である。',
+      '落語の演者は落語家とよばれ、話の中のすべての登場人物をひとりで演じる。だれが話しているのかを示すために、演者は顔を少し左や右に向け、声や表情や話し方を変える。荒っぽい大工は大きな声で早口に話し、おばあさんはゆっくりやさしく話すかもしれない。せんすははしやきせるや刀や筆になり、手ぬぐいはさいふや手紙や本になる。こうした小さな変化を通して、観客の想像力がほかのすべてをおぎなうのである。',
+      '多くの落語の話は江戸時代に作られ、ふつうの町人のくらしをえがいていることが多い。登場人物はたいてい英雄ではなく、なまけ者だったり、まぬけだったり、わすれっぽかったり、少しうぬぼれが強すぎたりと、身近な弱さをもつ人々である。観客は彼らの失敗を笑うが、自分の中にも同じ弱さがあると気づくので、同時に彼らに共感もする。ほとんどの話は「オチ」とよばれるしめくくりの一言で終わり、話を急にゆかいに終わらせる。',
+      '落語家になるには、昔から長い年月の修業が必要である。若い演者は師匠に弟子入りし、けいこと身の回りの仕事のきびしい生活を送る。多くの話は書かれたものではなく口で伝えられているので、彼らは師匠の話を聞いてくり返すことで、何百もの話を覚える。何年もの経験を積んではじめて、演者はいちばん上の位にたどり着き、その位になると自分の弟子をとることが許される。',
+      'ここ数十年で、落語は新しい観客を引きつけてきた。英語やほかの言語で話をし、外国の聞き手に合わせて笑いを作りかえる演者もいる。スマートフォンや会社のくらし、ネットショッピングのような現代の話題についての新しい話を作る演者もいる。落語をあつかったテレビドラマやマンガも、若い人を劇場へ引きよせてきた。落語が今も人気であることは、ことばと想像力だけにたよる単純な芸が、ハイテクな娯楽にあふれた時代でも人の心を動かせることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a traditional form of Japanese storytelling を受け、has entertained の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'where'], answer: 0, why: 'カンマのあと（非制限用法）で先行詞 the highest rank を受け、allows の主語になるので which。カンマのあとに that は使えない。' },
+      { id: 'C', choices: ['that', 'when', 'what', 'whose'], answer: 0, why: '先行詞 an age を受け、is の主語になる関係代名詞 that。うしろに主語がないので関係副詞 when は使えない。' },
+    ],
+    tf: [
+      { statement: '落語家は、せんすと手ぬぐいだけを道具として使う。', answer: true, why: '第1段落 The performer holds just two simple objects, a fan and a small cloth。' },
+      { statement: '落語では、登場人物ごとにちがう演者が出てくる。', answer: false, why: '第2段落 A rakugo performer ... plays every character in the story alone。' },
+      { statement: '落語の登場人物は、たいてい身近な弱さをもつふつうの人である。', answer: true, why: '第3段落 The characters are usually not heroes but people with familiar weaknesses。' },
+      { statement: '落語の話は、すべて書かれた本で伝えられている。', answer: false, why: '第4段落 many stories are passed on orally rather than in writing。' },
+    ],
+    qa: [
+      { q: 'How does a rakugo performer show which character is speaking?', choices: ['By turning the head and changing the voice and expression.', 'By changing costumes.', 'By using different stages.', 'By holding up name cards.'], answer: 0, why: '第2段落 the performer turns the head slightly to the left or right and changes the voice, expression, and manner of speaking。' },
+      { q: 'What is an ochi?', choices: ['A punch line that ends the story humorously.', 'A kind of fan.', 'A rank of performers.', 'A type of theater.'], answer: 0, why: '第3段落 Most stories end with a punch line, called an ochi。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ひとりで多くの人物を演じる技', '大工の仕事', '料理の作り方', '刀の歴史'], answer: 0, why: '第2段落は、顔の向きや声を変え、せんすと手ぬぐいを使って多くの人物を演じることを述べている。' },
+      { para: 3, choices: ['落語家になるための修業', '劇場の建て方', '本の書き方', '学校の時間割'], answer: 0, why: '第4段落は、弟子入りして長い年月の修業を積むことを述べている。' },
+    ],
+    titleQ: { choices: ['One Performer, Many Voices', 'How to Build a Theater', 'The History of Smartphones', 'Why Fans Keep Us Cool'], answer: 0, why: '全体として、ひとりの演者が多くの声で語る落語の魅力と伝統を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
