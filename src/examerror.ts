@@ -1658,6 +1658,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Our school library (A) has (B) a lot of (C) books and (D) much new furnitures.', choices: ['(A) has', '(B) a lot of', '(C) books and', '(D) much new furnitures'], answer: 3, why: 'furniture は数えられない名詞なので複数形にしない：much new furniture。' },
     ],
   },
+  {
+    id: 'exam-error-agree3',
+    title: '入試の正誤問題〈71〉（TOEFL・IELTS の書き言葉：主語と動詞の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '長い主語の中心をさがす、either A or B・neither A nor B・not only A but also B は B に合わせる、together with は主語に入らない、動名詞の主語や距離・時間のまとまりは単数、there is / are はうしろの名詞に合わせるなど、主語と動詞の一致のきまり。',
+    ],
+    examples: [
+      { en: 'Either the teacher or the students have to clean the room.', ja: '先生か生徒たちのどちらかが部屋をそうじしなければならない。' },
+      { en: 'Reading books helps children develop their imagination.', ja: '本を読むことは、子どもが想像力をのばす助けになる。' },
+    ],
+    questions: [
+      { sentence: 'The results of the new study (A) on sleep (B) is (C) likely to surprise (D) many readers.', choices: ['(A) on sleep', '(B) is', '(C) likely to surprise', '(D) many readers'], answer: 1, why: '主語の中心は results（複数）なので are。of the new study on sleep は修飾。' },
+      { sentence: 'Either the teacher or (A) the students (B) has to (C) clean (D) the room after class.', choices: ['(A) the students', '(B) has to', '(C) clean', '(D) the room after class'], answer: 1, why: 'either A or B は動詞に近い B（the students）に合わせるので have to。' },
+      { sentence: 'Neither my brother nor (A) I (B) are (C) good at (D) cooking.', choices: ['(A) I', '(B) are', '(C) good at', '(D) cooking'], answer: 1, why: 'neither A nor B は B（I）に合わせるので am。' },
+      { sentence: '(A) Not only the students but also (B) the teacher (C) were (D) surprised by the news.', choices: ['(A) Not only the students but also', '(B) the teacher', '(C) were', '(D) surprised by the news'], answer: 2, why: 'not only A but also B は B（the teacher）に合わせるので was。' },
+      { sentence: 'The teacher, (A) together with her students, (B) are planning (C) a trip (D) to the museum.', choices: ['(A) together with her students,', '(B) are planning', '(C) a trip', '(D) to the museum'], answer: 1, why: 'together with ～ は主語に入らない。主語は the teacher なので is planning。' },
+      { sentence: '(A) Reading books (B) help children (C) to develop (D) their imagination.', choices: ['(A) Reading books', '(B) help children', '(C) to develop', '(D) their imagination'], answer: 1, why: '動名詞 Reading books が主語のときは単数あつかいなので helps。' },
+      { sentence: '(A) There is (B) many reasons (C) why people (D) choose to live abroad.', choices: ['(A) There is', '(B) many reasons', '(C) why people', '(D) choose to live abroad'], answer: 0, why: 'there is / are はうしろの名詞に合わせる。many reasons は複数なので There are。' },
+      { sentence: 'Many workers (A) who (B) work from home (C) say that the number of meetings (D) have grown.', choices: ['(A) who', '(B) work from home', '(C) say that the number of meetings', '(D) have grown'], answer: 3, why: 'that 節の主語は the number of meetings（単数あつかい）なので has grown。' },
+      { sentence: 'Ten kilometers (A) are (B) too far (C) for a child (D) to walk.', choices: ['(A) are', '(B) too far', '(C) for a child', '(D) to walk'], answer: 0, why: '距離・時間・お金のまとまりは単数あつかいなので Ten kilometers is。' },
+      { sentence: 'Everyone in the class (A) was (B) given a book, and each of them (C) were (D) asked to write a report.', choices: ['(A) was', '(B) given a book, and each of them', '(C) were', '(D) asked to write a report'], answer: 2, why: 'each of ～ は単数あつかいなので was asked。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
