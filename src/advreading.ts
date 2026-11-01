@@ -24415,6 +24415,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['One Performer, Many Voices', 'How to Build a Theater', 'The History of Smartphones', 'Why Fans Keep Us Cool'], answer: 0, why: '全体として、ひとりの演者が多くの声で語る落語の魅力と伝統を述べている。' },
   },
   {
+    id: 'kyotsu-heart',
+    title: 'The Tireless Pump',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Place your hand on the left side of your chest, and you may feel a steady beat. Your heart, a muscle about the size of your fist, has been working since before you were born, and it will continue to beat about 100,000 times a day for the rest of your life. Over an average lifetime, it may beat more than two and a half billion times without ever taking a real rest. Understanding how this remarkable organ works can help us see why taking care of it is so important.",
+      "The heart's job is to pump blood around the body. Blood carries oxygen and nutrients to every cell and removes waste products such as carbon dioxide. The heart is divided into four chambers. The right side receives blood that has already delivered its oxygen and sends it to the lungs, where it picks up fresh oxygen. The left side then pumps this oxygen-rich blood out to the rest of the body through a large network of blood vessels ( A ) would stretch around the Earth more than twice if laid end to end.",
+      "What keeps the heart beating in such a regular rhythm? The answer lies in a small group of special cells that act like a natural pacemaker. These cells produce electrical signals that spread through the heart muscle, causing it to contract in a coordinated way. The heart rate can change depending on our needs. During exercise, for example, the heart beats faster to supply the muscles with more oxygen, while during sleep it slows down.",
+      "Unfortunately, heart disease is one of the leading causes of death in many countries. Problems often develop over many years as blood vessels become narrow or blocked, making it harder for blood to flow. Factors ( B ) increase the risk include smoking, a diet high in salt and fat, lack of exercise, and high stress. Some of these factors are related to lifestyle, which means that people can reduce their risk through daily choices.",
+      "Doctors recommend several simple habits to keep the heart healthy: eating plenty of vegetables and whole grains, staying physically active, getting enough sleep, and finding healthy ways to manage stress. Even walking for thirty minutes a day can make a noticeable difference. The heart works tirelessly for us from the beginning of life to the end. Taking care of it is one of the most valuable things ( C ) we can do for our long-term health.",
+    ],
+    ja: [
+      '胸の左がわに手を当ててみると、一定の鼓動を感じるかもしれない。こぶしほどの大きさの筋肉である心臓は、あなたが生まれる前から働き続けており、これからも一生の間、1日に約10万回打ち続ける。ふつうの一生の間に、心臓は本当の休みをとることなく25億回以上打つかもしれない。このすばらしい臓器のしくみを理解すれば、なぜそれを大切にすることがこれほど重要なのかがわかるだろう。',
+      '心臓の仕事は、体じゅうに血液を送り出すことである。血液は酸素と栄養をすべての細胞に運び、二酸化炭素のような不要なものを取りのぞく。心臓は4つの部屋に分かれている。右がわは、すでに酸素を届け終えた血液を受けとって肺へ送り、血液はそこで新しい酸素を取りこむ。そして左がわが、この酸素の多い血液を、血管の大きな網を通して体のほかの部分へ送り出す。その血管をすべてつなげると、地球を2周以上するほどの長さになる。',
+      '何が心臓をこれほど規則正しいリズムで打たせているのだろうか。その答えは、天然のペースメーカーのように働く、特別な細胞の小さな集まりにある。この細胞が電気の信号を出し、それが心臓の筋肉に広がって、筋肉をそろってちぢませる。心拍数は体の必要に応じて変わる。たとえば運動中は、筋肉により多くの酸素を届けるために心臓は速く打ち、ねむっている間はゆっくりになる。',
+      '残念なことに、心臓病は多くの国で主な死因のひとつである。問題は、血管がせまくなったりつまったりして血液が流れにくくなることで、何年もかけて進むことが多い。危険を高める要因には、たばこ、塩分や脂肪の多い食事、運動不足、強いストレスがある。こうした要因のいくつかは生活習慣に関係しているので、人々は日々の選択によって危険をへらすことができる。',
+      '医者たちは、心臓を健康に保つためのいくつかのかんたんな習慣をすすめている。野菜や全粒の穀物をたくさん食べること、体を動かし続けること、十分にねむること、そしてストレスとうまくつき合う方法を見つけることである。1日30分歩くだけでも、目に見えるちがいが生まれることがある。心臓は生まれてから死ぬまで、私たちのためにたゆまず働いてくれる。心臓を大切にすることは、長い目で見た健康のために私たちができる最も価値あることのひとつなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a large network of blood vessels を受け、would stretch の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 Factors を受け、increase の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the most valuable things を受け、do の目的語になる関係代名詞 that（最上級がつく先行詞は that がよく使われる）。' },
+    ],
+    tf: [
+      { statement: '心臓は、1日に約10万回打つ。', answer: true, why: '第1段落 it will continue to beat about 100,000 times a day。' },
+      { statement: '心臓の右がわは、酸素の多い血液を体じゅうに送り出す。', answer: false, why: '第2段落 The left side then pumps this oxygen-rich blood out to the rest of the body。' },
+      { statement: '運動中は、心臓は速く打つ。', answer: true, why: '第3段落 During exercise, for example, the heart beats faster。' },
+      { statement: '心臓病の危険を高める要因は、すべて生活習慣と関係がない。', answer: false, why: '第4段落 Some of these factors are related to lifestyle。' },
+    ],
+    qa: [
+      { q: 'What makes the heart beat in a regular rhythm?', choices: ['Special cells that produce electrical signals.', 'The lungs pushing on it.', 'The food we eat.', 'The movement of our hands.'], answer: 0, why: '第3段落 a small group of special cells that act like a natural pacemaker. These cells produce electrical signals。' },
+      { q: 'Which habit do doctors recommend for a healthy heart?', choices: ['Staying physically active.', 'Eating more salt.', 'Sleeping less.', 'Smoking less often but more heavily.'], answer: 0, why: '第5段落 staying physically active。' },
+    ],
+    gist: [
+      { para: 1, choices: ['血液を送る心臓のしくみ', '肺の大きさ', '地球の長さ', '細胞の色'], answer: 0, why: '第2段落は、4つの部屋をもつ心臓が肺と体に血液を送るしくみを述べている。' },
+      { para: 3, choices: ['心臓病とその危険を高める要因', '病院の歴史', '料理のレシピ', 'ストレスのはかり方'], answer: 0, why: '第4段落は、心臓病が進むしくみと、危険を高める要因を述べている。' },
+    ],
+    titleQ: { choices: ['The Tireless Pump', 'How to Build a Machine', 'The Longest Rivers on Earth', 'Why We Need to Sleep Less'], answer: 0, why: '全体として、休まず働く心臓のしくみと、それを大切にする習慣を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
