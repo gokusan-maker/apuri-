@@ -1706,6 +1706,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The (A) results of the experiment (B) were (C) very (D) disappointed for the scientists.', choices: ['(A) results of the experiment', '(B) were', '(C) very', '(D) disappointed for the scientists'], answer: 3, why: '結果は人を「がっかりさせる」側なので disappointing。' },
     ],
   },
+  {
+    id: 'exam-error-compare6',
+    title: '入試の正誤問題〈73〉（共通テストレベル：比較の慣用表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the 比較級 ～, the 比較級 …、比較級 and 比較級、not so much A as B、as ～ as possible、倍数 ＋ as ～ as、would rather A than B、No other ～ 比較級 than、no more than など、比較の慣用表現。',
+    ],
+    examples: [
+      { en: 'The more you read, the more words you will learn.', ja: '読めば読むほど、多くの単語を覚えるだろう。' },
+      { en: 'This bridge is three times as long as that one.', ja: 'この橋はあの橋の3倍の長さだ。' },
+    ],
+    questions: [
+      { sentence: 'The more (A) you read, (B) the most (C) words (D) you will learn.', choices: ['(A) you read,', '(B) the most', '(C) words', '(D) you will learn'], answer: 1, why: 'the 比較級 ～, the 比較級 …：the more words。' },
+      { sentence: 'It (A) is getting (B) dark and dark, so (C) we should (D) go home.', choices: ['(A) is getting', '(B) dark and dark, so', '(C) we should', '(D) go home'], answer: 1, why: '比較級 and 比較級「ますます」：darker and darker。' },
+      { sentence: 'He (A) is not so much (B) a singer (C) than (D) an actor.', choices: ['(A) is not so much', '(B) a singer', '(C) than', '(D) an actor'], answer: 2, why: 'not so much A as B「A というより B」：as an actor。' },
+      { sentence: 'Please (A) answer the email (B) as (C) quick as (D) possible.', choices: ['(A) answer the email', '(B) as', '(C) quick as', '(D) possible'], answer: 2, why: 'as ～ as possible は副詞の原級：as quickly as possible。' },
+      { sentence: 'This (A) bridge is (B) three times (C) as long (D) than that one.', choices: ['(A) bridge is', '(B) three times', '(C) as long', '(D) than that one'], answer: 3, why: '倍数 ＋ as ～ as：as long as。' },
+      { sentence: 'I would (A) rather to walk (B) than (C) take (D) a crowded bus.', choices: ['(A) rather to walk', '(B) than', '(C) take', '(D) a crowded bus'], answer: 0, why: 'would rather のあとは動詞の原形：would rather walk than take。' },
+      { sentence: 'No other (A) mountain in Japan (B) is (C) highest (D) than Mt. Fuji.', choices: ['(A) mountain in Japan', '(B) is', '(C) highest', '(D) than Mt. Fuji'], answer: 2, why: 'No other ～ is 比較級 than …：higher。' },
+      { sentence: '(A) This book is (B) much (C) more interesting (D) as the movie.', choices: ['(A) This book is', '(B) much', '(C) more interesting', '(D) as the movie'], answer: 3, why: '比較級のあとは than：more interesting than。' },
+      { sentence: 'I (A) have (B) no more as (C) two days (D) to finish the report.', choices: ['(A) have', '(B) no more as', '(C) two days', '(D) to finish the report'], answer: 1, why: 'no more than ～「たった～」：no more than。' },
+      { sentence: '(A) The more (B) carefully you check, (C) the fewer (D) mistake you will make.', choices: ['(A) The more', '(B) carefully you check,', '(C) the fewer', '(D) mistake you will make'], answer: 3, why: 'few の比較級 fewer のあとは複数名詞：fewer mistakes。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
