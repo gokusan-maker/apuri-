@@ -23401,6 +23401,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Freedom or Security?', 'How to Deliver Food Faster', 'The History of Smartphones', 'Why Companies Need Logos'], answer: 0, why: '全体として、ギグワークがもつ自由と、失われがちな安定との間の問題を述べている。' },
   },
   {
+    id: 'kyotsu-biomimicry',
+    title: 'Learning from Nature',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When engineers face a difficult problem, they sometimes find the answer not in a laboratory but in a forest, a river, or the ocean. Over millions of years, living things have developed remarkable solutions to the challenges of survival. Designing new technology by learning from these natural solutions is known as biomimicry. The idea is simple, but it has led to inventions that we now use every day without realizing where they came from.",
+      "One famous example began with a walk in the countryside. In the 1940s, a Swiss engineer returned from walking his dog and noticed small seed heads stuck to his clothes and to the dog's fur. Looking at them under a microscope, he saw that they were covered with tiny hooks ( A ) caught on loops of thread and hair. Inspired by this, he spent years developing a fastener made of two strips, one with hooks and one with loops. The result was the hook-and-loop fastener, which is now used on shoes, bags, and even spacesuits.",
+      "Another example comes from Japan's high-speed trains. When the trains first ran at very high speeds, they made a loud booming noise whenever they came out of tunnels, because the air in front of them was suddenly pushed out. An engineer who was also a bird watcher thought about the kingfisher, a bird that dives into water from the air with almost no splash. Its long, narrow beak allows it to move smoothly from one environment to another. The engineers redesigned the front of the train to be shaped like the bird's beak, which made the trains quieter and also helped them use less electricity.",
+      "Biomimicry is also being used to solve environmental problems. Some buildings in hot countries are designed to copy the way termite mounds stay cool, using natural airflow instead of air conditioning. Researchers have studied the surface of lotus leaves, which stay clean because water rolls off them and carries dirt away, to create self-cleaning paints and glass. Others are studying how spiders produce silk that is both light and extremely strong, hoping to develop new materials.",
+      "Supporters of biomimicry argue that nature has already tested countless designs through the long process of evolution, so it is a valuable source of ideas. At the same time, they point out that we can only learn from nature if we protect it. Every species ( B ) disappears may take with it a solution we have not yet discovered. In this sense, biomimicry reminds us that protecting biodiversity is not only about saving animals and plants but also about preserving knowledge ( C ) could help humans in the future.",
+    ],
+    ja: [
+      '技術者がむずかしい問題に直面したとき、その答えを研究室ではなく、森や川や海で見つけることがある。何百万年もかけて、生き物は生きのびるための課題に対するおどろくような解決策を生み出してきた。こうした自然の解決策から学んで新しい技術を設計することは、バイオミミクリー（生物模倣）として知られている。考え方はかんたんだが、それは私たちが今、どこから来たのか気づかずに毎日使っている発明をもたらしてきた。',
+      '有名な例のひとつは、いなかでの散歩から始まった。1940年代、スイスのある技術者がイヌの散歩から帰ると、自分の服やイヌの毛に小さな植物の実がくっついているのに気づいた。顕微鏡で見ると、それは糸や毛の輪にひっかかる小さなかぎでおおわれていた。これにヒントを得て、彼は何年もかけて、かぎのついた帯と輪のついた帯の2本でできた留め具を開発した。その結果が面ファスナーで、今では靴やかばん、さらには宇宙服にまで使われている。',
+      '別の例は日本の新幹線から来ている。新幹線がはじめてとても速く走ったとき、トンネルから出るたびに大きなドーンという音がした。前の空気が急におし出されたからである。バードウォッチャーでもあったある技術者は、空中から水にほとんど水しぶきを上げずにとびこむ鳥、カワセミのことを考えた。その長く細いくちばしのおかげで、カワセミはひとつの環境から別の環境へなめらかに移ることができる。技術者たちは列車の先頭をその鳥のくちばしのような形に設計し直し、それによって列車は静かになり、電気も少なくてすむようになった。',
+      'バイオミミクリーは環境問題を解決するのにも使われている。暑い国のいくつかの建物は、エアコンのかわりに自然の空気の流れを使って、シロアリの塚がすずしさを保つしくみをまねて設計されている。研究者たちは、水がころがり落ちてよごれを運び去るのできれいなままでいるハスの葉の表面を調べ、自分できれいになる塗料やガラスを作った。軽くてとても強い糸をクモがどうやって作るかを研究し、新しい材料を開発しようとしている人もいる。',
+      'バイオミミクリーを支持する人々は、自然は進化という長い過程を通じて、すでに数えきれないほどの設計をためしてきたのだから、価値あるアイデアの源だと主張する。同時に彼らは、自然を守らなければ、自然から学ぶことはできないと指摘する。消えていくひとつひとつの種が、私たちがまだ見つけていない解決策をいっしょにもち去ってしまうかもしれない。この意味で、バイオミミクリーは、生物の多様性を守ることが動物や植物を救うことだけでなく、将来人間を助けるかもしれない知恵を残すことでもあると思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 tiny hooks を受け、caught の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 Every species を受け、disappears の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 knowledge を受け、could help の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'スイスの技術者は、服についた植物の実を顕微鏡で調べた。', answer: true, why: '第2段落 Looking at them under a microscope, he saw that they were covered with tiny hooks。' },
+      { statement: '新幹線の先頭は、ワシのくちばしをまねて設計された。', answer: false, why: '第3段落 The engineers redesigned the front of the train to be shaped like the bird\'s beak（カワセミ）。' },
+      { statement: 'ハスの葉の研究から、自分できれいになるガラスが作られた。', answer: true, why: '第4段落 to create self-cleaning paints and glass。' },
+      { statement: '筆者は、自然を守らなくても自然から学び続けられると考えている。', answer: false, why: '第5段落 we can only learn from nature if we protect it。' },
+    ],
+    qa: [
+      { q: 'Why did the high-speed trains make a loud noise when leaving tunnels?', choices: ['The air in front of them was suddenly pushed out.', 'The wheels were too old.', 'Birds hit the windows.', 'The tunnels were made of glass.'], answer: 0, why: '第3段落 because the air in front of them was suddenly pushed out。' },
+      { q: 'How do some buildings in hot countries stay cool?', choices: ['By copying the way termite mounds use natural airflow.', 'By using more air conditioners.', 'By painting the walls black.', 'By building underground lakes.'], answer: 0, why: '第4段落 designed to copy the way termite mounds stay cool, using natural airflow。' },
+    ],
+    gist: [
+      { para: 1, choices: ['面ファスナーが生まれたきっかけ', 'イヌの散歩のしかた', '服のあらい方', '顕微鏡の歴史'], answer: 0, why: '第2段落は、服についた植物の実の小さなかぎから面ファスナーが生まれたことを述べている。' },
+      { para: 4, choices: ['自然を守ることと知恵を残すことの関係', '進化の速さ', 'クモの種類', '動物園の数'], answer: 0, why: '第5段落は、自然はアイデアの源であり、守らなければ学べないことを述べている。' },
+    ],
+    titleQ: { choices: ['Learning from Nature', 'How to Build a Train', 'The Life of a Kingfisher', 'Why Seeds Are Small'], answer: 0, why: '全体として、自然から学ぶバイオミミクリーの例と、自然を守る大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
