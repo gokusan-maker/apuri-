@@ -3888,6 +3888,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Prices in this area are [highest] than in the city center.', choices: ['higher', 'more high', 'the highest', 'high'], answer: 0, why: 'than があるので比較級 higher。' },
     ],
   },
+  {
+    id: 'exam-fix-90',
+    title: '入試の誤文訂正〈90〉（共通テストレベル：仮定法の発展）',
+    points: ['if を省略した倒置（Were I ～＝If I were ～、Had I known ～＝If I had known ～、Should you ～）、If it were not for ～／If it had not been for ～、But for ～、混合仮定法（If I had studied, I would be ～ now）、I would rather you ＋過去形、It is time ＋過去形など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Had I known the truth, I would have told you.', ja: 'もし本当のことを知っていたら、あなたに話していただろう。' }],
+    questions: [
+      { sentence: '[I were] you, I would accept the offer.', choices: ['Were I', 'I was', 'Am I', 'Had I'], answer: 0, why: 'if を省略すると倒置：Were I you（＝If I were you）。' },
+      { sentence: '[I had known] the truth, I would have told you.', choices: ['Had I known', 'I knew', 'Have I known', 'Did I know'], answer: 0, why: 'if を省略した倒置：Had I known（＝If I had known）。' },
+      { sentence: '[You should] need any help, please call me.', choices: ['Should you', 'You would', 'Would you', 'Had you'], answer: 0, why: '「万一～なら」の if you should ～ の倒置：Should you need。' },
+      { sentence: 'If it [was not] for your advice, I would be lost.', choices: ['were not', 'is not', 'had not', 'will not be'], answer: 0, why: '今の事実と反対の仮定：If it were not for ～「～がなければ」。' },
+      { sentence: 'If it had not [be] for the rain, we would have gone hiking.', choices: ['been', 'being', 'was', 'were'], answer: 0, why: '過去の事実と反対：If it had not been for ～。' },
+      { sentence: 'If I had studied harder in high school, I [would have been] a doctor now.', choices: ['would be', 'will be', 'had been', 'am'], answer: 0, why: '過去の仮定（had studied）＋今の結果（now）の混合仮定法：would be。' },
+      { sentence: 'I would rather you [don\'t] tell anyone about this.', choices: ['didn\'t', 'won\'t', 'not', 'haven\'t'], answer: 0, why: 'I would rather ＋人＋過去形「～してくれたらいいのに」：didn\'t tell。' },
+      { sentence: 'It is high time we [leave] for the airport.', choices: ['left', 'leaving', 'will leave', 'have left'], answer: 0, why: 'It is (high) time ＋過去形：left。' },
+      { sentence: 'But [of] your support, we would have failed.', choices: ['for', 'with', 'to', 'by'], answer: 0, why: 'But for ～「～がなければ（なかったら）」。' },
+      { sentence: 'She talks as if she [has seen] the accident herself, but she was not there.', choices: ['had seen', 'sees', 'will see', 'is seeing'], answer: 0, why: '過去の事実と反対のことを「まるで～したかのように」：as if ＋過去完了 had seen。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
