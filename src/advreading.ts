@@ -23596,6 +23596,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Clever Tool Users', 'How to Build a Hammer', 'The Life of Termites', 'Why Otters Sleep on Water'], answer: 0, why: '全体として、道具を使う動物の発見と、それが知能や文化の考え方を変えたことを述べている。' },
   },
   {
+    id: 'kyotsu-edible-insects',
+    title: 'A Small Answer to a Big Problem?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many parts of the world, insects such as crickets, grasshoppers, and certain kinds of larvae have been eaten for thousands of years. In some regions of Asia, Africa, and Latin America, they are still a common part of meals today. In Japan, too, grasshoppers cooked in soy sauce and sugar have long been a traditional food in some mountain areas. Yet for many people in other countries, the idea of eating insects seems strange or even unpleasant. Recently, however, scientists and food companies have begun to promote insects as a food of the future.",
+      "One reason is the growing world population. As the number of people on Earth increases, so does the demand for protein. Producing meat such as beef requires huge amounts of land, water, and feed, and cattle release large quantities of greenhouse gases. Insects, on the other hand, can be raised in small spaces and need far less food to produce the same amount of protein. Crickets, for example, can turn feed into body weight much more efficiently than cows, partly because they are cold-blooded and do not use energy ( A ) keeping their bodies warm.",
+      "Insects are also highly nutritious. Many species contain as much protein as meat, as well as healthy fats, vitamins, and minerals such as iron. They can even be raised on food waste, such as vegetable scraps, which would otherwise be thrown away. For these reasons, some experts believe that insect farming could help to feed people in a way that puts less pressure on the environment.",
+      "The biggest challenge is persuading people to try them. Many consumers feel uncomfortable at the thought of eating a whole insect. To overcome this, some companies grind insects into powder and add it to familiar foods such as bread, pasta, cookies, and protein bars. In this form, people often cannot see or taste the difference. Research suggests that once people have tried insect-based foods ( B ) look and taste familiar, they become more willing to eat them again.",
+      "There are still questions to answer. Scientists are studying how to raise insects safely, how to prevent allergies, and how to make insect farming affordable on a large scale. Laws about selling insects as food also differ from country to country. Nevertheless, the interest in edible insects shows how changing needs can lead people to reconsider foods ( C ) were once ignored. What seems unusual today may one day become an ordinary part of the menu.",
+    ],
+    ja: [
+      '世界の多くの地域では、コオロギやバッタ、ある種の幼虫のような虫が何千年も前から食べられてきた。アジアやアフリカ、中南米のいくつかの地域では、今でも食事のふつうの一部である。日本でも、しょうゆと砂糖で煮たイナゴは、山あいのいくつかの地域で昔ながらの食べ物だった。しかしほかの国の多くの人にとって、虫を食べるという考えはふしぎに、あるいはいやなものにさえ思える。しかし最近、科学者や食品会社が、虫を未来の食べ物としてすすめはじめている。',
+      'ひとつの理由は、世界の人口がふえていることである。地球の人の数がふえるにつれて、たんぱく質の必要量もふえる。牛肉のような肉を作るには、ばく大な土地と水とえさが必要で、牛は大量の温室効果ガスを出す。一方、虫はせまい場所で育てることができ、同じ量のたんぱく質を作るのに必要なえさがずっと少ない。たとえばコオロギは牛よりずっと効率よくえさを体重に変えられる。その理由のひとつは、コオロギは変温動物で、体をあたたかく保つことにエネルギーを使わないからである。',
+      '虫は栄養もとても豊富である。多くの種は肉と同じくらいのたんぱく質をふくみ、健康によい脂肪やビタミン、鉄のようなミネラルもふくんでいる。虫は、そうでなければすてられてしまう野菜くずのような食べ残しで育てることさえできる。こうした理由から、虫の養殖は、環境への負担を少なくしながら人々を養う助けになりうると考える専門家もいる。',
+      'いちばんの課題は、人々に食べてみてもらうことである。多くの消費者は、虫を丸ごと食べると考えると落ち着かない気持ちになる。これをのりこえるために、虫を粉にして、パンやパスタ、クッキーやプロテインバーのような身近な食べ物に加える会社もある。この形なら、人々はちがいを見ることも味わうこともできないことが多い。研究によれば、見た目も味も身近な虫入りの食べ物をいったん食べてみると、人はまた食べようという気持ちになりやすい。',
+      'まだ答えるべき問題もある。科学者たちは、虫を安全に育てる方法や、アレルギーを防ぐ方法、虫の養殖を大規模で安くする方法を研究している。虫を食べ物として売ることについてのきまりも、国によってちがう。それでも、食べられる虫への関心は、必要が変わることで、かつて見向きもされなかった食べ物を人々が考え直すようになることを示している。今日めずらしく思えるものが、いつかメニューのふつうの一部になるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['on', 'in', 'at', 'for'], answer: 0, why: 'use energy on ～ing「～することにエネルギーを使う」。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 insect-based foods を受け、look の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 foods を受け、were ignored の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '日本の山あいのいくつかの地域では、イナゴが昔ながらの食べ物だった。', answer: true, why: '第1段落 grasshoppers cooked in soy sauce and sugar have long been a traditional food in some mountain areas。' },
+      { statement: '虫を育てるには、牛を育てるより多くのえさが必要である。', answer: false, why: '第2段落 Insects ... need far less food to produce the same amount of protein。' },
+      { statement: '虫は野菜くずのような食べ残しで育てることができる。', answer: true, why: '第3段落 They can even be raised on food waste, such as vegetable scraps。' },
+      { statement: '虫を食べ物として売るきまりは、どの国でも同じである。', answer: false, why: '第5段落 Laws about selling insects as food also differ from country to country。' },
+    ],
+    qa: [
+      { q: 'Why can crickets turn feed into body weight efficiently?', choices: ['They are cold-blooded and do not use energy keeping warm.', 'They sleep all day.', 'They eat only meat.', 'They live in very large spaces.'], answer: 0, why: '第2段落 partly because they are cold-blooded and do not use energy on keeping their bodies warm。' },
+      { q: 'How do some companies make insects easier to accept?', choices: ['By grinding them into powder and adding it to familiar foods.', 'By selling them alive.', 'By making them bigger.', 'By coloring them gold.'], answer: 0, why: '第4段落 some companies grind insects into powder and add it to familiar foods。' },
+    ],
+    gist: [
+      { para: 1, choices: ['虫が環境にやさしいたんぱく源である理由', '牛の育て方', '人口の数え方', '水の使い道'], answer: 0, why: '第2段落は、人口増加と、虫が少ない土地とえさで育てられることを述べている。' },
+      { para: 3, choices: ['人々に食べてもらうための工夫', 'パンの作り方', 'クッキーの値段', '研究所の場所'], answer: 0, why: '第4段落は、粉にして身近な食べ物に加えるなど、受け入れてもらう工夫を述べている。' },
+    ],
+    titleQ: { choices: ['A Small Answer to a Big Problem?', 'How to Catch Grasshoppers', 'The History of Beef', 'Why Insects Have Six Legs'], answer: 0, why: '全体として、小さな虫が食料や環境の大きな問題への答えになりうるかを論じている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
