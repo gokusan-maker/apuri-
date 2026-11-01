@@ -22192,6 +22192,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Plants That Eat Insects', 'How Insects Find Flowers', 'The Life of Charles Darwin', 'Growing Vegetables at Home'], answer: 0, why: '全体として、虫を食べる食虫植物の理由・わなのしくみ・保護を述べている。' },
   },
   {
+    id: 'kyotsu-risky-play',
+    title: 'Too Safe to Learn?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many cities, playgrounds have become safer than ever before. Soft rubber surfaces have replaced hard ground, tall slides have been removed, and equipment is carefully designed so that children are unlikely to fall or get hurt. These changes were made with good intentions, and they have reduced the number of serious injuries. However, a growing number of researchers and city planners now argue that playgrounds can become too safe, and that children may lose something important as a result.",
+      "Their argument is based on the idea of risky play. This term refers to activities ( A ) involve a certain degree of uncertainty or danger, such as climbing trees, balancing on walls, or playing with tools. According to researchers, such play allows children to test their limits and learn how to judge risks for themselves. A child who climbs a little higher each time learns both courage and caution, discovering through experience which actions are safe and which are not.",
+      "Some experts even believe that a lack of risky play may make children more anxious. If young people are always protected from small dangers, they may never develop the confidence to deal with challenges on their own. In contrast, children who are allowed to take reasonable risks often become better at solving problems and handling fear. Of course, this does not mean that adults should ignore safety completely. The goal is to remove serious hazards, such as broken equipment, while leaving room for the kind of challenges ( B ) help children grow.",
+      "Inspired by these ideas, some cities have created so-called adventure playgrounds. Instead of fixed equipment, these spaces offer materials such as wood, ropes, boxes, and old tires, which children can use to build their own structures. Trained staff are present to watch over the children, but they generally avoid giving instructions. Visitors are often surprised to see children working together, solving problems, and concentrating for long periods on projects they have designed themselves.",
+      "Not everyone is convinced. Some parents worry about injuries, and local governments may fear being blamed if an accident occurs. Supporters respond that minor injuries such as scrapes and bruises are a normal part of childhood, and that the benefits of risky play are greater than its costs. As cities plan the playgrounds of the future, they will need to find a balance between protecting children and giving them the freedom ( C ) they need to explore the world and learn from their own experiences.",
+    ],
+    ja: [
+      '多くの都市で、遊び場はこれまでになく安全になった。かたい地面はやわらかいゴムの表面に変わり、高いすべり台はとりのぞかれ、遊具は子どもが落ちたりけがをしたりしにくいように注意して設計されている。こうした変化はよい意図で行われ、重いけがの数をへらしてきた。しかし今では、遊び場は安全になりすぎることがあり、その結果子どもたちが何か大切なものを失っているかもしれないと主張する研究者や都市計画の担当者がふえている。',
+      'その主張は「リスクのある遊び」という考え方にもとづいている。この言葉は、木登りや塀の上でバランスをとること、道具を使った遊びのような、ある程度の不確かさや危険をふくむ活動を指す。研究者によれば、そのような遊びによって子どもは自分の限界をためし、危険を自分で判断する方法を学ぶ。毎回少しずつ高く登る子どもは、勇気と用心深さの両方を身につけ、どの行動が安全でどれがそうでないかを経験を通して見つけていく。',
+      'リスクのある遊びが足りないと、子どもがより不安になりやすくなるかもしれないと考える専門家さえいる。若い人がいつも小さな危険から守られていると、自分の力で課題に向き合う自信を育てられないかもしれない。それに対して、ほどよい危険をおかすことを許された子どもは、問題を解決したり、こわさにうまく対処したりするのが上手になることが多い。もちろん、これはおとなが安全をまったく気にしなくてよいということではない。目的は、こわれた遊具のような重大な危険をとりのぞきながら、子どもの成長を助けるような挑戦の余地を残すことである。',
+      'こうした考えをもとに、いわゆる冒険遊び場をつくった都市もある。こうした場所は、固定された遊具のかわりに、木材やロープ、箱、古いタイヤのような材料を用意しており、子どもはそれを使って自分で建物をつくることができる。訓練を受けた職員が子どもを見守っているが、ふつうは指示をあたえないようにしている。訪れた人は、子どもたちが協力し、問題を解決し、自分で考えた作品に長い時間集中しているのを見て、よくおどろく。',
+      'だれもが納得しているわけではない。けがを心配する親もいれば、事故が起きたときに責められるのをおそれる自治体もある。支持する人々は、すりきずやあざのような小さなけがは子ども時代のふつうの一部であり、リスクのある遊びの利点は負担より大きいと答えている。都市がこれからの遊び場を計画するとき、子どもを守ることと、子どもが世界を探検し自分の経験から学ぶのに必要な自由をあたえることの間で、つり合いをとる必要があるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 activities を受け、involve の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the kind of challenges を受け、help の主語になる関係代名詞 that。挑戦はもの・ことなので who は使わない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the freedom を受け、need の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '遊び場を安全にした変化によって、重いけがの数はへった。', answer: true, why: '第1段落 they have reduced the number of serious injuries。' },
+      { statement: 'リスクのある遊びとは、危険をまったくふくまない活動のことである。', answer: false, why: '第2段落 activities that involve a certain degree of uncertainty or danger。' },
+      { statement: '冒険遊び場の職員は、ふつう子どもに指示をあたえないようにしている。', answer: true, why: '第4段落 they generally avoid giving instructions。' },
+      { statement: '支持する人々は、小さなけがも決して起こしてはならないと考えている。', answer: false, why: '第5段落 minor injuries such as scrapes and bruises are a normal part of childhood。' },
+    ],
+    qa: [
+      { q: 'What do children learn from climbing a little higher each time?', choices: ['Both courage and caution.', 'How to fix broken equipment.', 'How to avoid all play.', 'Only fear of high places.'], answer: 0, why: '第2段落 A child who climbs a little higher each time learns both courage and caution。' },
+      { q: 'What do adventure playgrounds offer instead of fixed equipment?', choices: ['Materials such as wood, ropes, boxes, and old tires.', 'Tall slides and swings.', 'Video games and screens.', 'Rubber floors only.'], answer: 0, why: '第4段落 these spaces offer materials such as wood, ropes, boxes, and old tires。' },
+    ],
+    gist: [
+      { para: 2, choices: ['リスクのある遊びと自信・不安の関係', '遊具のこわれ方', '親の仕事', '学校の試験'], answer: 0, why: '第3段落は、危険から守られすぎると自信が育たず、ほどよい危険が成長を助けることを述べている。' },
+      { para: 4, choices: ['反対意見と、守ることと自由のつり合い', 'タイヤのリサイクル', '都市の人口', 'けがの手当ての方法'], answer: 0, why: '第5段落は、心配する声と支持する人の反論、そしてつり合いの必要を述べている。' },
+    ],
+    titleQ: { choices: ['Too Safe to Learn?', 'How to Build a Slide', 'The History of Rubber', 'Why Children Dislike Parks'], answer: 0, why: '全体として、安全になりすぎた遊び場への疑問と、リスクのある遊びの大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
