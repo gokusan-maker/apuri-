@@ -1408,6 +1408,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M46 40 Q56 42 60 52" fill="none" stroke="#16a34a" strokeWidth="4" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pintail')
+    return (
+      <g>
+        {/* 細長い尾と、首の白いすじ */}
+        <path d="M50 86 L46 108" fill="none" stroke="#1c1917" strokeWidth="2" strokeLinecap="round" />
+        <path d="M54 48 Q56 58 52 66" fill="none" stroke="#f8fafc" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
