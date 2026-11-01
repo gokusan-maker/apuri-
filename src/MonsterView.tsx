@@ -1524,6 +1524,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="42" cy="40" r="3.5" fill="none" stroke="#facc15" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'wagtail')
+    return (
+      <g>
+        {/* 黒いむねのもようと、長い尾 */}
+        <path d="M40 54 Q50 60 60 54" fill="none" stroke="#111827" strokeWidth="3" strokeLinecap="round" />
+        <path d="M70 66 L84 72" fill="none" stroke="#111827" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
