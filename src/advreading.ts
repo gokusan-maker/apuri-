@@ -22582,6 +22582,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Inside a Typhoon', 'How to Build a Satellite', 'The Coldest Oceans', 'Why Rain Is Wet'], answer: 0, why: '全体として、台風のでき方・つくり・被害・予報について述べている。' },
   },
   {
+    id: 'kyotsu-postage-stamps',
+    title: 'A Small Stamp, a Big Change',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, sending a letter is so simple that we rarely think about it. We write an address, attach a stamp, and drop the envelope into a mailbox, confident that it will arrive within a few days. Yet for most of history, sending messages over long distances was slow, expensive, and unreliable. The modern postal system, and especially the small paper stamp, brought about a quiet revolution in the way people communicate.",
+      "Before the nineteenth century, many countries had postal services, but they were very different from those of today. In Britain, for example, the cost of a letter depended on the distance it traveled and the number of sheets of paper it contained. In addition, the fee was usually paid not by the sender but by the person ( A ) received the letter. If the receiver refused to pay, the letter was returned, and the post office earned nothing for its work. Because prices were high, ordinary people sent letters only rarely.",
+      "In the 1830s, a British teacher and reformer proposed a bold new system. He argued that the cost of sorting and carrying letters was much smaller than people assumed, and that most of the expense came from the complicated process of calculating and collecting fees. His solution was to charge a single low price for any letter within the country, regardless of distance, and to have the sender pay in advance. To show that a letter had been paid for, the sender would attach a small printed label, which became known as the postage stamp.",
+      "The first stamp was issued in Britain in 1840, and the results were remarkable. Within a few years, the number of letters sent in the country more than doubled. Families separated by long distances could keep in touch more easily, businesses could contact customers cheaply, and people ( B ) had never written letters before began to do so. Other countries soon copied the system, and by the end of the century, postal services around the world were connected by international agreements.",
+      "Although email and messaging apps have replaced many letters today, the influence of the postage stamp remains. The idea of paying a small, fixed price in advance is now found in many services, and stamps themselves have become popular objects for collectors. Many people also still value handwritten letters for important occasions. The story of the stamp shows how a simple idea can change daily life, especially when it makes something ( C ) was once a luxury available to everyone.",
+    ],
+    ja: [
+      '今日、手紙を送ることはとてもかんたんなので、私たちはそれについてめったに考えない。住所を書き、切手をはり、ふうとうをポストに入れれば、数日以内にとどくと信じている。しかし歴史の大部分では、遠くへ伝言を送るのは時間がかかり、お金がかかり、あてにならないものだった。近代の郵便制度、とくに小さな紙の切手は、人々の伝え合い方に静かな革命をもたらした。',
+      '19世紀より前にも多くの国に郵便のしくみはあったが、今日のものとはずいぶんちがっていた。たとえばイギリスでは、手紙の料金は運ぶ距離と、ふくまれる紙の枚数によって決まった。さらに、料金はふつう送る人ではなく、手紙を受けとった人がはらっていた。受けとる人がはらうのをことわれば手紙は返され、郵便局は仕事をしてもまったくもうからなかった。料金が高かったので、ふつうの人々はめったに手紙を送らなかった。',
+      '1830年代に、イギリスのある教師で改革者が、大たんな新しいしくみを提案した。彼は、手紙を仕分けて運ぶ費用は人々が考えているよりずっと小さく、費用の大部分は料金を計算して集める複雑な手続きから生まれていると主張した。彼の解決策は、国内の手紙なら距離に関係なくひとつの安い料金にし、送る人が前ばらいすることだった。手紙の料金がはらわれていることを示すため、送る人は小さな印刷されたラベルをはることになり、これが切手として知られるようになった。',
+      '最初の切手は1840年にイギリスで発行され、その成果はめざましかった。数年のうちに、国内で送られる手紙の数は2倍以上になった。遠くはなれてくらす家族は連絡をとりやすくなり、会社は安く客に連絡でき、それまで手紙を書いたことのなかった人々も書くようになった。ほかの国々もすぐにこのしくみをまね、19世紀の終わりまでには、世界中の郵便が国際的な取り決めでつながった。',
+      '今日では電子メールやメッセージアプリが多くの手紙にとってかわったが、切手の影響は残っている。小さな決まった料金を前ばらいするという考え方は今では多くのサービスに見られ、切手そのものも収集家に人気のあるものになった。大切なときには、手書きの手紙を大事にする人も今なお多い。切手の話は、とくにかつてはぜいたくだったものをだれもが使えるようにするとき、かんたんな考えが日々のくらしを変えうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 the person（人）を受け、received の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 people（人）を受け、had never written の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 something を受け、was の主語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '19世紀より前のイギリスでは、手紙の料金はふつう受けとる人がはらっていた。', answer: true, why: '第2段落 the fee was usually paid not by the sender but by the person who received the letter。' },
+      { statement: '改革者は、手紙の料金を距離によって細かく分けるべきだと提案した。', answer: false, why: '第3段落 to charge a single low price for any letter within the country, regardless of distance。' },
+      { statement: '最初の切手が発行されたあと、イギリスで送られる手紙の数は2倍以上になった。', answer: true, why: '第4段落 the number of letters sent in the country more than doubled。' },
+      { statement: '今日では、手書きの手紙を大事にする人はまったくいない。', answer: false, why: '第5段落 Many people also still value handwritten letters for important occasions。' },
+    ],
+    qa: [
+      { q: 'According to the reformer, where did most of the expense come from?', choices: ['The complicated process of calculating and collecting fees.', 'The cost of paper and ink.', 'The long distances letters traveled.', 'The salaries of letter writers.'], answer: 0, why: '第3段落 most of the expense came from the complicated process of calculating and collecting fees。' },
+      { q: 'What did the postage stamp show?', choices: ['That the letter had been paid for.', 'The address of the receiver.', 'How heavy the letter was.', 'The date the letter would arrive.'], answer: 0, why: '第3段落 To show that a letter had been paid for, the sender would attach a small printed label。' },
+    ],
+    gist: [
+      { para: 1, choices: ['昔の郵便のしくみと、その問題点', '紙の作り方', '手紙の書き方', '郵便局の建物'], answer: 0, why: '第2段落は、距離と枚数で決まる高い料金を受けとる人がはらう昔のしくみと、その問題を述べている。' },
+      { para: 3, choices: ['切手がもたらしためざましい成果', '切手のデザイン', '国際会議の場所', '会社の名前'], answer: 0, why: '第4段落は、手紙の数がふえ、人々のつながりが広がり、世界に広まったことを述べている。' },
+    ],
+    titleQ: { choices: ['A Small Stamp, a Big Change', 'How to Write a Love Letter', 'The History of Email', 'Why Mailboxes Are Red'], answer: 0, why: '全体として、小さな切手が手紙の送り方と人々の伝え合いを大きく変えたことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
