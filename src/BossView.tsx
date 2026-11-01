@@ -336,6 +336,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [bigHit, setBigHit] = useState(0) // デザイン133：このボス戦でいちばん大きかったダメージ（1回分）
   const [winCount, setWinCount] = useState(0) // デザイン130：このボスに勝った回数（図鑑の記録）
   const [todayWins, setTodayWins] = useState(0) // デザイン160：今日このボスに勝った回数
+  const [stageDone, setStageDone] = useState(false) // デザイン199：この勝利でステージのボスをぜんぶたおした
   const [noMissNth, setNoMissNth] = useState(0) // デザイン148：はじめてノーミスでたおしたとき、ノーミスで何体目か
   const [skillUsed, setSkillUsed] = useState(0) // デザイン121：この戦いで相棒のとくぎが出た回数
   const fireSkill = () => {
@@ -564,8 +565,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setNoMissNth(loadNoMissBosses().length)
     }
     if (!noBook) {
-      const nb = recordWin(loadBook(), look, battleRank(hearts, c), dayKey())
+      const before = loadBook()
+      const nb = recordWin(before, look, battleRank(hearts, c), dayKey())
       saveBook(nb)
+      // デザイン199：この勝利でステージのボスがぜんぶそろった
+      const stage = Object.values(BOSSES)
+      setStageDone(!stage.every((b) => before[b.name]) && stage.every((b) => nb[b.name]))
       saveLastBoss(look.name)
       setTodayWins(recordTodayWin(look.name, dayKey()))
       setWinCount(nb[look.name].wins)
@@ -901,6 +906,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {bestCombo >= 10 && <span className="game-best" aria-label="すごいコンボ">🔥🔥 すごいコンボ！</span>} {/* デザイン96 */}
             {comboRecord && <span className="game-best" aria-label="コンボ新記録">🔥 コンボ新記録！</span>} {/* デザイン151 */}
             {todayWins >= 2 && <span aria-label="今日このボスに勝った回数">📅 今日{todayWins}回目の勝利</span>} {/* デザイン160 */}
+            {stageDone && <span aria-label="ステージのボスをぜんぶたおした">👑 ステージのボスをぜんぶたおした！</span>}
             {corrects >= 10 && <strong className="game-best" style={{ fontSize: '1.15em' }} aria-label="正解した問題の数">📚 {corrects}問正解！</strong>} {/* デザイン163 */}
             {hearts >= HEARTS && <span className="game-best" aria-label="ハート満タンで勝利">❤️ ハート満タンで勝利！</span>} {/* デザイン169 */}
             {traitCount >= 3 && <span className="game-best" aria-label="とくぎにまけずに勝利">🛡 とくぎにまけずに勝利！（{traitCount}回）</span>} {/* デザイン172 */}

@@ -1045,3 +1045,24 @@ it('デザイン177：ボスに勝つと、いちばん速く答えた時間が�
   }
   expect(screen.getByLabelText('いちばん速く答えた時間').textContent).toMatch(/^⚡ 最速 \d+\.\d秒$/)
 })
+
+it('デザイン199：この勝利でステージのボスがぜんぶそろうと「👑 ステージのボスをぜんぶたおした！」が出る', async () => {
+  localStorage.clear()
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  const others = Object.entries(BOSSES).filter(([lv]) => lv !== '中1')
+  saveBook(Object.fromEntries(others.map(([, b]) => [b.name, { wins: 1, best: 'A', look: b, first: '2026-10-01' }])))
+  const play = () => {
+    const r = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      answer(true)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    return r
+  }
+  const first = play()
+  expect(screen.getByLabelText('ステージのボスをぜんぶたおした')).toBeInTheDocument()
+  first.unmount()
+  play()
+  expect(screen.queryByLabelText('ステージのボスをぜんぶたおした')).toBeNull() // 2回目からは出ない
+})
