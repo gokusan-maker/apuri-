@@ -2114,6 +2114,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) That is (B) about two kilometers (C) from here (D) to the station.', choices: ['(A) That is', '(B) about two kilometers', '(C) from here', '(D) to the station'], answer: 0, why: '距離を表すときは It：It is about two kilometers。' },
     ],
   },
+  {
+    id: 'exam-error-quantity2',
+    title: '入試の正誤問題〈90〉（TOEFL・IELTS の書き言葉：数量の表し方）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '数えられる名詞には many・few・a number of・fewer、数えられない名詞には much・little・an amount of・less。number の大小は large／small、a lot of の of をわすれない、など。',
+    ],
+    examples: [
+      { en: 'A large number of students attended the lecture.', ja: '多くの学生が講義に出席した。' },
+      { en: 'There were fewer cars on the road than usual.', ja: 'いつもより道路の車が少なかった。' },
+    ],
+    questions: [
+      { sentence: 'There (A) are not (B) much people (C) in the park (D) today.', choices: ['(A) are not', '(B) much people', '(C) in the park', '(D) today'], answer: 1, why: 'people は数えられるので many people。' },
+      { sentence: 'We (A) do not have (B) many time (C) left (D) before the test.', choices: ['(A) do not have', '(B) many time', '(C) left', '(D) before the test'], answer: 1, why: 'time は数えられないので much time。' },
+      { sentence: '(A) A large amount of (B) students (C) attended (D) the lecture.', choices: ['(A) A large amount of', '(B) students', '(C) attended', '(D) the lecture'], answer: 0, why: '数えられる students には A large number of。' },
+      { sentence: 'The factory (A) produces (B) a huge number of (C) waste (D) every year.', choices: ['(A) produces', '(B) a huge number of', '(C) waste', '(D) every year'], answer: 1, why: '数えられない waste には a huge amount of。' },
+      { sentence: 'There (A) were (B) less cars (C) on the road (D) than usual.', choices: ['(A) were', '(B) less cars', '(C) on the road', '(D) than usual'], answer: 1, why: '数えられる cars には fewer。' },
+      { sentence: 'He (A) is shy and (B) has (C) little friends (D) at school.', choices: ['(A) is shy and', '(B) has', '(C) little friends', '(D) at school'], answer: 2, why: '数えられる friends の「ほとんどいない」は few friends。' },
+      { sentence: 'Please (A) add (B) a few salt (C) to (D) the soup.', choices: ['(A) add', '(B) a few salt', '(C) to', '(D) the soup'], answer: 1, why: '数えられない salt には a little。' },
+      { sentence: 'The number of (A) visitors (B) was (C) very (D) many last year.', choices: ['(A) visitors', '(B) was', '(C) very', '(D) many last year'], answer: 3, why: 'number の大きさは large で表す：very large。' },
+      { sentence: 'She (A) has read (B) a lot (C) books (D) about space.', choices: ['(A) has read', '(B) a lot', '(C) books', '(D) about space'], answer: 1, why: '名詞の前は a lot of：a lot of books。' },
+      { sentence: '(A) Few of (B) the information (C) on the site (D) was useful.', choices: ['(A) Few of', '(B) the information', '(C) on the site', '(D) was useful'], answer: 0, why: 'information は数えられないので Little of。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
