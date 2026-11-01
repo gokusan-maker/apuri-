@@ -23479,6 +23479,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['More Than Pictures', 'How to Draw a Cat', 'The History of Films', 'Why Children Like Candy'], answer: 0, why: '全体として、マンガが絵以上の力をもつ芸術としてみとめられるようになったことを述べている。' },
   },
   {
+    id: 'kyotsu-flying-rivers',
+    title: 'Rivers in the Sky',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "We usually think of rain as something that comes from the ocean. Water evaporates from the sea, forms clouds, and falls on land. In many places, this is true. But in the Amazon rainforest of South America, scientists have discovered that the forest itself plays a surprisingly large role in creating its own rain. The trees release so much water into the air that they form what some researchers call flying rivers, invisible streams of water vapor moving across the sky.",
+      "The process begins with the trees' roots, which pull water up from deep in the soil. The water travels up through the trunk to the leaves, where much of it escapes into the air as vapor through tiny openings. This process is called transpiration. A single large tree in the Amazon can release hundreds of liters of water in a day. When millions of trees do the same, the amount of water ( A ) enters the atmosphere becomes enormous, possibly even greater than the amount carried by the Amazon River itself.",
+      "This moisture does not stay in one place. Winds carry the water vapor across the continent, where it forms clouds and falls as rain, sometimes thousands of kilometers away. Studies suggest that a significant share of the rainfall in parts of southern Brazil, Paraguay, and Argentina comes from moisture produced by the Amazon. Farms in these regions, which grow soybeans, coffee, and other crops, depend on this rain. Cities also rely on it to fill the reservoirs ( B ) supply their drinking water.",
+      "Scientists are worried that cutting down the rainforest could weaken these flying rivers. When trees are cleared for farmland or cattle ranching, less water is released into the air, and the region may become drier. A drier forest is more likely to suffer from fires, which destroy even more trees. Some researchers warn that if too much of the forest is lost, parts of the Amazon could reach a tipping point, after which the rainforest might gradually turn into a dry grassland.",
+      "The idea of flying rivers shows that forests are not only homes for plants and animals but also important parts of the water cycle that supports human life. Protecting the Amazon is therefore not just a local issue for the countries ( C ) the forest is located in. It may affect the food, water, and climate of an entire continent, and even the planet. Understanding these connections can help people see why the health of a distant forest matters to all of us.",
+    ],
+    ja: [
+      '私たちはふつう、雨は海から来るものだと考えている。水が海から蒸発して雲になり、陸にふる。多くの場所ではそのとおりである。しかし南アメリカのアマゾンの熱帯雨林では、森そのものが自分の雨を作るのにおどろくほど大きな役割を果たしていることを、科学者たちが発見した。木々が空気中にとても多くの水を出すので、一部の研究者が「空飛ぶ川」とよぶもの、つまり空を流れる目に見えない水蒸気の流れができるのである。',
+      'そのしくみは、土の深いところから水をすい上げる木の根から始まる。水は幹を通って葉までのぼり、その多くが小さなあなから水蒸気として空気中に出ていく。このはたらきは蒸散とよばれる。アマゾンの大きな木1本で、1日に何百リットルもの水を出すことがある。何百万本もの木が同じことをすると、大気に入る水の量はばく大になり、アマゾン川そのものが運ぶ水の量より多いかもしれないほどになる。',
+      'この水分はひとつの場所にとどまらない。風が水蒸気を大陸の向こうへ運び、そこで雲になって雨としてふる。ときには何千キロメートルもはなれた場所でふることもある。研究によれば、ブラジル南部やパラグアイ、アルゼンチンの一部の雨のかなりの部分は、アマゾンが生み出した水分から来ている。大豆やコーヒーなどの作物を育てるこうした地域の農場は、この雨にたよっている。都市も、飲み水をとどけるダム湖を満たすのにこの雨にたよっている。',
+      '科学者たちは、熱帯雨林を切りはらうとこの空飛ぶ川が弱まるかもしれないと心配している。農地や牧場のために木が切られると、空気中に出される水がへり、その地域はかわいていくかもしれない。かわいた森は火事が起きやすくなり、さらに多くの木がだめになる。森が失われすぎると、アマゾンの一部はある限界点に達し、そのあと熱帯雨林が少しずつかわいた草原に変わってしまうかもしれないと警告する研究者もいる。',
+      '空飛ぶ川という考えは、森が植物や動物のすみかであるだけでなく、人の命を支える水の循環の大切な一部でもあることを示している。だから、アマゾンを守ることは、森がある国々だけの問題ではない。それは大陸全体、さらには地球全体の食べ物や水や気候に影響するかもしれない。こうしたつながりを理解すれば、遠くの森の健康がなぜ私たちみんなにとって大切なのかがわかるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the amount of water を受け、enters の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the reservoirs を受け、supply の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 the countries を受け、前置詞 in の目的語になる関係代名詞 that（in が後ろに残るので where は使えない）。' },
+    ],
+    tf: [
+      { statement: 'アマゾンの熱帯雨林は、自分の雨を作るのに大きな役割を果たしている。', answer: true, why: '第1段落 the forest itself plays a surprisingly large role in creating its own rain。' },
+      { statement: '葉から水蒸気が出るはたらきは、光合成とよばれる。', answer: false, why: '第2段落 This process is called transpiration（蒸散）。' },
+      { statement: 'アマゾンが生み出した水分は、遠くの国々の雨にもなる。', answer: true, why: '第3段落 a significant share of the rainfall in parts of southern Brazil, Paraguay, and Argentina comes from moisture produced by the Amazon。' },
+      { statement: '森を切りはらうと、その地域はより雨が多くなる。', answer: false, why: '第4段落 less water is released into the air, and the region may become drier。' },
+    ],
+    qa: [
+      { q: 'What might happen if too much of the Amazon is lost?', choices: ['Parts of it could gradually turn into dry grassland.', 'It would rain more every day.', 'The trees would grow faster.', 'The Amazon River would become longer.'], answer: 0, why: '第4段落 the rainforest might gradually turn into a dry grassland。' },
+      { q: 'Why do farms in southern Brazil care about the Amazon?', choices: ['They depend on rain that comes from Amazon moisture.', 'They sell trees from the Amazon.', 'They use Amazon water for boats.', 'They want more forest fires.'], answer: 0, why: '第3段落 Farms in these regions ... depend on this rain。' },
+    ],
+    gist: [
+      { para: 1, choices: ['木が水を空気中に出すしくみ', '根の長さのはかり方', '川の流れの速さ', '葉の色の変化'], answer: 0, why: '第2段落は、根からすい上げた水を葉から出す蒸散のしくみと、その量の多さを述べている。' },
+      { para: 3, choices: ['森を切りはらうことの危険', '牧場の作り方', '火事の消し方', '草原の動物'], answer: 0, why: '第4段落は、伐採で空飛ぶ川が弱まり、森がかわいて限界点に達するおそれを述べている。' },
+    ],
+    titleQ: { choices: ['Rivers in the Sky', 'How to Grow Coffee', 'The Longest River in the World', 'Why Clouds Are White'], answer: 0, why: '全体として、アマゾンの森が作る空飛ぶ川と、それを守る大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
