@@ -235,3 +235,11 @@ it('デザイン189：キャラ図鑑で、さいごの姿まで進化した子�
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
 })
+
+it('デザイン195：キャラ図鑑のタイプのボタンに、会えた数／全体が出る', () => {
+  const t = CHAR_TYPES.attack
+  const all = SPECIES.filter((sp) => typeOf(sp.id).id === t.id).map((sp) => sp.id)
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', all[0]]} />)
+  const met = ['mochi', all[0]].filter((id) => typeOf(id).id === t.id).length
+  expect(screen.getByLabelText(`${t.name}で会えた子`).textContent).toBe(` ${met}/${all.length}`)
+})
