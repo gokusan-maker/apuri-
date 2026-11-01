@@ -22465,6 +22465,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Guardians of Old Paintings', 'How to Paint Like a Master', 'The Most Expensive Paintings', 'Why Museums Are Quiet'], answer: 0, why: '全体として、古い絵を未来に残す美術品保存修復家の仕事と原則を述べている。' },
   },
   {
+    id: 'kyotsu-elevators',
+    title: 'The Machine That Lifted Cities',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we look at the skyline of a modern city, we usually notice the tall buildings, not the machines inside them. Yet without one particular invention, most skyscrapers would be almost impossible to use. That invention is the elevator. Although people rarely think about it, the elevator has shaped the way cities grow, the way buildings are designed, and even the way we value different floors of a building.",
+      "Simple lifting devices have existed for thousands of years. Ancient builders used ropes, wheels, and the strength of animals or people to raise heavy materials. However, these machines were not safe enough to carry passengers, because if a rope broke, everything on the platform would fall. The turning point came in the 1850s, when an American inventor demonstrated a safety brake. In a famous public show, he stood on a raised platform and ordered the only rope ( A ) held it to be cut. The platform dropped only a few centimeters before the brake stopped it.",
+      "This invention changed architecture. Before passenger elevators, buildings were rarely more than five or six floors high, since few people wanted to climb more stairs than that. The top floors, which were the hardest to reach, were often the cheapest, and they were usually rented by people with little money. Once safe elevators became common, the situation was reversed. Upper floors, with their fine views and distance from the noise of the street, became the most desirable and expensive spaces in a building.",
+      "Elevators also made it possible for cities to grow upward instead of outward. By building tall towers, cities could fit large numbers of offices and homes into a small area of land. This made city centers more crowded and active, but it also created new challenges. In very tall buildings, waiting for an elevator can take a long time, so engineers have developed systems ( B ) group passengers going to similar floors and send them to the same car.",
+      "Today, engineers continue to improve elevators. Some new designs use lighter cables that allow elevators to travel higher, while others use computer programs to reduce energy use. Elevators are also essential for making buildings accessible to people ( C ) use wheelchairs, older adults, and parents with small children. Although we rarely notice them, elevators quietly carry billions of passengers every day and remain one of the most important technologies in modern urban life.",
+    ],
+    ja: [
+      '現代の都市の空を背にした景色を見るとき、私たちはふつう、建物の中の機械ではなく高い建物に目を向ける。しかしある発明がなければ、ほとんどの超高層ビルはとても使えないだろう。その発明とはエレベーターである。人々がそれについて考えることはめったにないが、エレベーターは、都市の広がり方や建物の設計のしかた、さらには建物の階ごとの価値の決め方までも形づくってきた。',
+      'かんたんな持ち上げる道具は何千年も前からあった。古代の建設者は、ロープや車輪、動物や人の力を使って重い材料を持ち上げた。しかし、ロープが切れれば台の上のものはすべて落ちてしまうので、こうした機械は人を乗せるには安全ではなかった。転機がおとずれたのは1850年代、あるアメリカの発明家が安全ブレーキを公開したときである。有名な公開実験で、彼は持ち上げた台の上に立ち、それをささえているたった1本のロープを切るよう命じた。台はほんの数センチ落ちただけで、ブレーキによって止まった。',
+      'この発明は建築を変えた。人が乗るエレベーターができる前、建物が5階や6階より高くなることはめったになかった。それより多くの階段を上りたい人はほとんどいなかったからである。最も行きにくい最上階はいちばん安いことが多く、たいていお金のあまりない人が借りていた。安全なエレベーターが広まると、この状況は逆転した。すばらしいながめがあり、通りの騒音から遠い上の階は、建物の中で最も人気があり高価な場所になった。',
+      'エレベーターのおかげで、都市は横に広がるかわりに上へのびることもできるようになった。高い塔を建てることで、都市はせまい土地に多くの事務所や住まいをおさめることができた。これによって都心はより混み合い活気が出たが、新しい課題も生まれた。とても高い建物ではエレベーターを待つのに長い時間がかかることがあるので、技術者は、似た階に行く乗客をまとめて同じかごに乗せるしくみを開発してきた。',
+      '今日も、技術者はエレベーターを改良し続けている。新しい設計の中には、より軽いケーブルを使ってエレベーターがより高くまで動けるようにするものもあれば、コンピューターのプログラムで使うエネルギーをへらすものもある。エレベーターは、車いすを使う人やお年寄り、小さな子どもをつれた親にとって、建物を利用しやすくするのにも欠かせない。私たちはめったに気づかないが、エレベーターは毎日何十億人もの乗客を静かに運び、現代の都市生活で最も大切な技術のひとつであり続けている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the only rope を受け、held の主語になる関係代名詞 that（the only がつく先行詞は that がよく使われる）。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 systems を受け、group の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、use の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '昔の持ち上げる道具は、人を乗せても安全だった。', answer: false, why: '第2段落 these machines were not safe enough to carry passengers。' },
+      { statement: '公開実験では、ロープを切っても台はほとんど落ちなかった。', answer: true, why: '第2段落 The platform dropped only a few centimeters before the brake stopped it。' },
+      { statement: 'エレベーターが広まる前、最上階はいちばん高価な場所だった。', answer: false, why: '第3段落 The top floors ... were often the cheapest。' },
+      { statement: 'エレベーターは、車いすを使う人などが建物を利用しやすくするのに役立つ。', answer: true, why: '第5段落 Elevators are also essential for making buildings accessible to people who use wheelchairs ...。' },
+    ],
+    qa: [
+      { q: 'Why were buildings rarely more than five or six floors high before passenger elevators?', choices: ['Few people wanted to climb more stairs than that.', 'It was against the law to build higher.', 'There were no materials for tall buildings.', 'People preferred to live underground.'], answer: 0, why: '第3段落 since few people wanted to climb more stairs than that。' },
+      { q: 'How do some elevator systems reduce waiting time in very tall buildings?', choices: ['They group passengers going to similar floors in the same car.', 'They stop at every floor.', 'They only carry one person at a time.', 'They close the top floors.'], answer: 0, why: '第4段落 systems that group passengers going to similar floors and send them to the same car。' },
+    ],
+    gist: [
+      { para: 2, choices: ['エレベーターによって上の階の価値が逆転したこと', '階段の作り方', '家賃のはらい方', '通りの騒音の原因'], answer: 0, why: '第3段落は、エレベーターの前と後で、上の階の価値が逆転したことを述べている。' },
+      { para: 3, choices: ['都市が上へのびることと、その新しい課題', '土地の値段の決め方', '事務所の仕事', '塔の歴史'], answer: 0, why: '第4段落は、都市が上にのびたことと、待ち時間という課題、その工夫を述べている。' },
+    ],
+    titleQ: { choices: ['The Machine That Lifted Cities', 'How to Climb Stairs Faster', 'The Tallest Mountains in the World', 'Why Ropes Break'], answer: 0, why: '全体として、エレベーターが建物と都市のすがたを変えてきたことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
