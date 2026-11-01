@@ -1508,6 +1508,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 62 Q40 70 52 64" fill="none" stroke="#2b1d14" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'ptarmigan')
+    return (
+      <g>
+        {/* 目の上の赤いとさかと、白い羽 */}
+        <path d="M38 34 Q42 30 46 34" fill="none" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" />
+        <ellipse cx="50" cy="66" rx="10" ry="7" fill="#ffffff" opacity="0.9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
