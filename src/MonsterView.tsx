@@ -1314,6 +1314,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 42 L72 45 L58 47" fill="#ef4444" stroke="#1e293b" strokeWidth="1.2" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'auklet')
+    return (
+      <g>
+        {/* 頭のくるんとした飾り羽と、オレンジのくちばし */}
+        <path d="M50 24 Q60 12 56 26" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
+        <path d="M58 42 L68 44 L58 47" fill="#fb923c" stroke="#0f172a" strokeWidth="1.2" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
