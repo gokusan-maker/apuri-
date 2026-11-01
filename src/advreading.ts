@@ -23323,6 +23323,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living Inside a Bubble?', 'How to Make a Video', 'The History of Newspapers', 'Why Soap Makes Bubbles'], answer: 0, why: '全体として、おすすめのしくみが生むフィルターバブルの問題と、その向き合い方を述べている。' },
   },
   {
+    id: 'kyotsu-yellowstone-wolves',
+    title: 'When the Wolves Came Back',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For much of the twentieth century, wolves were seen as dangerous pests in the United States. They attacked farm animals, and many people feared them. As a result, they were hunted until they had almost disappeared from large parts of the country. By the 1920s, no wolves remained in Yellowstone National Park, one of the most famous natural areas in the world. At the time, few people imagined that the loss of a single predator could change an entire ecosystem.",
+      "Without wolves, the number of elk, a large kind of deer, increased rapidly. The elk had few natural enemies, so they could stay in open valleys and along rivers, eating young trees and plants for as long as they liked. Over the following decades, many willow and aspen trees along the riverbanks failed to grow. This affected other animals as well. Beavers, ( A ) depend on willow trees for food and building materials, became rare, and many birds lost the trees in which they nested.",
+      "In 1995, after long debate, scientists and park officials decided to bring wolves back. Several dozen wolves were captured in Canada and released in the park. The results surprised many people. As the wolves began to hunt again, the elk changed their behavior. They avoided places ( B ) they could easily be trapped, such as narrow valleys and riverbanks, and they moved around more often. In some of these areas, young trees were able to grow again.",
+      "Scientists use the term trophic cascade to describe this kind of chain reaction, in which changes at the top of a food chain spread down through the ecosystem. As trees returned to the riverbanks, beavers came back and built dams, creating ponds that provided homes for fish, frogs, and insects. The wolves also left behind the remains of the animals they hunted, which became an important source of food for other species, including bears, eagles, and ravens.",
+      "However, researchers continue to debate how much of this change can be explained by wolves alone. Other factors, such as human hunting of elk, the return of bears, and changes in weather, may also have played a role. Moreover, wolves still cause conflict with farmers living near the park. Nevertheless, the story of Yellowstone has become a powerful example of how one species can influence many others. It shows that protecting predators may be important not only for the animals themselves but also for the health of the ecosystems ( C ) they belong to.",
+    ],
+    ja: [
+      '20世紀の大部分を通じて、アメリカではオオカミは危険な害獣と見なされていた。オオカミは家畜をおそい、多くの人がオオカミをこわがった。その結果、オオカミは国の広い地域からほとんどいなくなるまで狩られた。1920年代までには、世界で最も有名な自然地域のひとつであるイエローストーン国立公園に、オオカミは1頭も残っていなかった。そのころ、ひとつの捕食者がいなくなることが生態系全体を変えうるとは、ほとんどだれも想像していなかった。',
+      'オオカミがいなくなると、大きなシカのなかまであるエルクの数が急にふえた。エルクには天敵がほとんどいなかったので、開けた谷や川ぞいにとどまって、好きなだけ若い木や植物を食べることができた。その後の何十年かで、川岸の多くのヤナギやポプラの木が育たなくなった。これはほかの動物にも影響した。ヤナギの木を食べ物や巣の材料にたよっているビーバーは少なくなり、多くの鳥が巣をつくる木を失った。',
+      '1995年、長い議論のすえ、科学者と公園の職員はオオカミをもどすことを決めた。カナダで数十頭のオオカミがつかまえられ、公園に放された。その結果は多くの人をおどろかせた。オオカミがふたたび狩りをはじめると、エルクは行動を変えた。せまい谷や川岸のように、かんたんにおいつめられてしまう場所をさけるようになり、よく移動するようになったのである。そうした場所のいくつかでは、若い木がふたたび育つことができた。',
+      '科学者は、このような連鎖反応、つまり食物連鎖のいちばん上での変化が生態系の下へと広がっていくことを、栄養カスケードという言葉で表している。川岸に木がもどると、ビーバーがもどってきてダムをつくり、魚やカエルや虫のすみかとなる池ができた。オオカミは狩った動物の残りものも残し、それはクマやワシやワタリガラスなど、ほかの生き物にとって大切な食べ物になった。',
+      'しかし研究者たちは、この変化のどこまでがオオカミだけで説明できるのかについて議論を続けている。人間によるエルクの狩りやクマのもどり、天候の変化のようなほかの要因も関係していたかもしれない。さらに、オオカミは今でも公園の近くに住む農家ともめごとを起こしている。それでもイエローストーンの話は、ひとつの種がほかの多くの種に影響しうることを示す力強い例になった。それは、捕食者を守ることが、その動物自身のためだけでなく、その動物がふくまれる生態系の健康のためにも大切かもしれないことを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'that', 'what', 'where'], answer: 0, why: 'カンマのあと（非制限用法）で先行詞 Beavers を受け、depend の主語になるので which。カンマのあとに that は使えない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は places（場所）で、うしろの they could easily be trapped は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the ecosystems を受け、belong to の目的語になる関係代名詞 that（to が後ろに残るので where は使えない）。' },
+    ],
+    tf: [
+      { statement: '1920年代までに、イエローストーンからオオカミはいなくなった。', answer: true, why: '第1段落 By the 1920s, no wolves remained in Yellowstone National Park。' },
+      { statement: 'オオカミがいなくなると、エルクの数はへった。', answer: false, why: '第2段落 Without wolves, the number of elk ... increased rapidly。' },
+      { statement: 'オオカミがもどると、エルクは行動を変えた。', answer: true, why: '第3段落 As the wolves began to hunt again, the elk changed their behavior。' },
+      { statement: '研究者たちは、変化はすべてオオカミだけで説明できると考えている。', answer: false, why: '第5段落 researchers continue to debate how much of this change can be explained by wolves alone。' },
+    ],
+    qa: [
+      { q: 'Why did beavers become rare without wolves?', choices: ['Elk ate the young willow trees that beavers depend on.', 'Wolves hunted all the beavers.', 'The rivers became too cold.', 'Farmers built dams.'], answer: 0, why: '第2段落 many willow and aspen trees along the riverbanks failed to grow ... Beavers, which depend on willow trees ... became rare。' },
+      { q: 'What does the term trophic cascade describe?', choices: ['Changes at the top of a food chain spreading down through the ecosystem.', 'A kind of waterfall in the park.', 'The way wolves build dens.', 'The movement of rivers in winter.'], answer: 0, why: '第4段落 changes at the top of a food chain spread down through the ecosystem。' },
+    ],
+    gist: [
+      { para: 1, choices: ['オオカミがいなくなったあとの生態系の変化', 'エルクの食べ方', '鳥の巣の作り方', 'ヤナギの育て方'], answer: 0, why: '第2段落は、エルクがふえて木が育たず、ビーバーや鳥にまで影響したことを述べている。' },
+      { para: 3, choices: ['栄養カスケードという連鎖反応', 'ダムの作り方', 'クマの冬眠', 'ワシの飛び方'], answer: 0, why: '第4段落は、食物連鎖の上の変化が下へ広がる連鎖反応と、その例を述べている。' },
+    ],
+    titleQ: { choices: ['When the Wolves Came Back', 'How to Build a Dam', 'The Biggest Parks in Canada', 'Why Elk Run Fast'], answer: 0, why: '全体として、オオカミをもどしたことで生態系が大きく変わったイエローストーンの話を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
