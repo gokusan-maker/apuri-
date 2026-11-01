@@ -21958,6 +21958,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Return of Listening', 'How to Build a Radio', 'The End of Television', 'Why Newspapers Are Free'], answer: 0, why: '全体として、聞くメディアであるポッドキャストが人気をとりもどした理由と注意点を述べている。' },
   },
   {
+    id: 'kyotsu-hedgerows',
+    title: 'Living Borders',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many parts of the British countryside, fields are separated not by fences or walls but by long lines of bushes and small trees known as hedgerows. Some of these living borders are hundreds of years old, and a few may even date back more than a thousand years. Although they were originally planted to keep animals in and to mark the edges of farmland, scientists now recognize that hedgerows play a much larger role in protecting the natural environment.",
+      "First of all, hedgerows provide homes for a surprising number of living things. Birds build their nests among the thick branches, insects feed on the flowers and leaves, and small mammals such as mice and hedgehogs find shelter at the base of the bushes. In farmland ( A ) much of the land is used for a single crop, these narrow strips of mixed plants may be the only places where wild species can survive. For this reason, some researchers describe hedgerows as wildlife corridors that connect one patch of woodland to another.",
+      "Hedgerows also help farmers in practical ways. Their roots hold the soil in place, which reduces the amount of earth that is washed away by heavy rain or blown away by strong winds. In addition, many of the insects living in hedgerows eat pests ( B ) would otherwise damage crops, so farmers who keep their hedgerows may be able to use fewer chemicals. The bushes can also give cattle and sheep shade in summer and protection from cold winds in winter.",
+      "Unfortunately, a large proportion of Britain's hedgerows disappeared during the second half of the twentieth century. As farming became more mechanized, many farmers removed them to create larger fields that were easier to work with big machines. Other hedgerows were not removed but were cut too often or left without care, so they gradually became thin and full of gaps, which made them far less useful for wildlife.",
+      "In recent years, however, attitudes have begun to change. Government programs now offer money to farmers who plant new hedgerows or restore old ones, and volunteer groups organize events ( C ) local people learn traditional ways of caring for them. Supporters argue that hedgerows are a simple and low-cost way to protect wildlife, prevent soil loss, and store carbon. Their story shows that features of the landscape that look ordinary can turn out to be extremely valuable once we understand the roles they play.",
+    ],
+    ja: [
+      'イギリスの田園地帯の多くでは、畑はさくや壁ではなく、ヘッジロウとよばれる低い木やしげみの長い列で区切られている。こうした生きた境界の中には何百年も前のものがあり、千年以上さかのぼるかもしれないものさえある。もともとは家畜を中に入れておき、農地のはしを示すために植えられたが、今では科学者たちは、ヘッジロウが自然環境を守るうえでずっと大きな役割を果たしていることをみとめている。',
+      'まず、ヘッジロウはおどろくほど多くの生き物にすみかをあたえる。鳥はしげった枝の間に巣をつくり、虫は花や葉を食べ、ネズミやハリネズミのような小さなほ乳類はしげみの根もとに身をかくす。土地の多くがひとつの作物に使われている農地では、こうしたいろいろな植物の細い帯が、野生の生き物が生きのびられる唯一の場所かもしれない。そのため、ヘッジロウを、ひとつの林と別の林をつなぐ野生生物の通り道とよぶ研究者もいる。',
+      'ヘッジロウは農家の役にも実際に立っている。その根は土をおさえ、大雨で流されたり強い風でふき飛ばされたりする土の量をへらす。さらに、ヘッジロウにすむ虫の多くは、放っておけば作物を傷つける害虫を食べるので、ヘッジロウを残している農家は農薬を少なくできるかもしれない。しげみは、夏には牛や羊に日かげを、冬には冷たい風からの守りをあたえることもできる。',
+      '残念なことに、イギリスのヘッジロウの多くは20世紀の後半になくなった。農業の機械化が進むと、多くの農家が大きな機械で作業しやすい広い畑をつくるためにヘッジロウを取りのぞいた。取りのぞかれなかったヘッジロウも、かりこみすぎたり手入れされずに放っておかれたりして、しだいにうすくすきまだらけになり、野生生物にとってずっと役に立たなくなった。',
+      'しかし近年、考え方が変わりはじめている。政府の制度は、新しいヘッジロウを植えたり古いものを直したりする農家にお金を出し、ボランティア団体は地元の人が昔ながらの手入れのしかたを学ぶ行事を開いている。支持する人々は、ヘッジロウは野生生物を守り、土が失われるのを防ぎ、炭素をたくわえる、かんたんで費用の少ない方法だと主張している。その話は、ふつうに見える景色の一部も、その役割を理解すれば、きわめて価値のあるものだとわかることがあると示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は farmland（場所）で、うしろの much of the land is used for a single crop は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 pests を受け、would damage の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '先行詞は events（行事という場）で、うしろの local people learn traditional ways ... は完全な文なので関係副詞 where（at which と同じ）。' },
+    ],
+    tf: [
+      { statement: 'ヘッジロウの中には、何百年も前からあるものがある。', answer: true, why: '第1段落 Some of these living borders are hundreds of years old。' },
+      { statement: 'ヘッジロウは、もともと野生生物を守るために植えられた。', answer: false, why: '第1段落 they were originally planted to keep animals in and to mark the edges of farmland。' },
+      { statement: 'ヘッジロウの根は、土が雨や風で失われるのをへらす。', answer: true, why: '第3段落 Their roots hold the soil in place, which reduces the amount of earth that is washed away ...。' },
+      { statement: '20世紀の後半に、イギリスのヘッジロウは大きくふえた。', answer: false, why: '第4段落 a large proportion of Britain\'s hedgerows disappeared during the second half of the twentieth century。' },
+    ],
+    qa: [
+      { q: 'Why did many farmers remove hedgerows?', choices: ['To create larger fields that were easier to work with big machines.', 'To protect birds and insects.', 'To give animals more shade.', 'To store more carbon.'], answer: 0, why: '第4段落 many farmers removed them to create larger fields that were easier to work with big machines。' },
+      { q: 'How might hedgerows help farmers use fewer chemicals?', choices: ['Insects living in them eat pests that damage crops.', 'They make the soil wetter.', 'They keep all insects away from farms.', 'They grow food for people to eat.'], answer: 0, why: '第3段落 many of the insects living in hedgerows eat pests that would otherwise damage crops。' },
+    ],
+    gist: [
+      { para: 1, choices: ['生き物のすみかと通り道としてのヘッジロウ', '畑の広さの決め方', 'ハリネズミの食べ物', '林の木の種類'], answer: 0, why: '第2段落は、多くの生き物がすみ、林と林をつなぐ通り道になることを述べている。' },
+      { para: 4, choices: ['ヘッジロウを取りもどす動きとその価値', '大きな機械の値段', '炭素の性質', '政府の歴史'], answer: 0, why: '第5段落は、植え直しや手入れを支える動きと、ヘッジロウの価値を述べている。' },
+    ],
+    titleQ: { choices: ['Living Borders', 'How to Build a Stone Wall', 'The Life of a Hedgehog', 'Farming with Big Machines'], answer: 0, why: '全体として、畑を区切る「生きた境界」ヘッジロウの役割と、それが失われ取りもどされつつあることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
