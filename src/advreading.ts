@@ -22309,6 +22309,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ["The Potato's Long Journey", 'How to Make French Fries', 'The Mountains of Peru', 'Why Wheat Is Better Than Rice'], answer: 0, why: '全体として、ジャガイモがアンデスから世界へ広まった長い道のりと、その教訓を述べている。' },
   },
   {
+    id: 'kyotsu-spotlight-effect',
+    title: 'Nobody Is Watching as Closely as You Think',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Imagine walking into a classroom with a large stain on your shirt. You might feel that everyone is staring at you and that your mistake will be remembered for days. In reality, however, most people probably will not notice it at all, and those who do will forget about it quickly. Psychologists call this tendency to overestimate how much others pay attention to us the spotlight effect, because we feel as if a bright light were following us wherever we go.",
+      "The spotlight effect was demonstrated in a well-known experiment. University students were asked to wear a T-shirt printed with the face of a singer ( A ) many of them found embarrassing, and then to enter a room full of other students. Afterward, the students wearing the shirt were asked to guess how many people in the room had noticed it. On average, they guessed about half. In fact, only around a quarter of the people in the room could remember what was on the shirt.",
+      "Why do we make this mistake? One explanation is that we are naturally at the center of our own experience. We know every detail of our appearance and actions, and we find it difficult to imagine how little of this other people see. We also forget that others are busy thinking about themselves. The people around us are often worried about their own appearance, their own words, and the impression ( B ) they are making, so they have little time to examine ours closely.",
+      "The spotlight effect is not limited to embarrassing moments. It can also affect how we judge our successes. A person who gives an excellent speech may believe that the audience will remember it for a long time, when in fact most listeners soon move on to other thoughts. Similarly, people often believe that their nervousness is obvious to others, even when it is hardly visible. Studies have found that simply telling speakers about this effect can help them feel calmer and perform better.",
+      "Understanding the spotlight effect can make our lives easier. If we realize that others notice much less than we think, we may feel freer to try new things, ask questions in class, or make mistakes without fear. This does not mean that other people do not care about us, but rather that they are just as focused on themselves as we are. Remembering this simple fact may help us worry less and act with more confidence in situations ( C ) we would otherwise feel nervous.",
+    ],
+    ja: [
+      '大きなしみのついたシャツを着て教室に入るところを想像してみよう。みんなが自分をじろじろ見ていて、自分の失敗が何日も覚えられていると感じるかもしれない。しかし実際には、ほとんどの人はおそらくまったく気づかないし、気づいた人もすぐにわすれてしまう。心理学者は、他人が自分にどれだけ注意をはらっているかを大きく見積もりすぎるこの傾向を、スポットライト効果とよんでいる。まるで明るい光がどこへ行ってもついてくるように感じるからである。',
+      'スポットライト効果は、ある有名な実験で示された。大学生たちは、多くの学生がはずかしいと感じる歌手の顔が印刷されたTシャツを着て、ほかの学生でいっぱいの部屋に入るように言われた。そのあと、シャツを着た学生は、部屋の何人がそれに気づいたかを予想するよう求められた。平均すると、彼らは約半分と予想した。実際には、部屋の人のおよそ4分の1しか、シャツに何がかいてあったかを覚えていなかった。',
+      'なぜ私たちはこのまちがいをするのだろうか。ひとつの説明は、私たちはもともと自分自身の経験の中心にいるということである。私たちは自分の見た目や行動をすみずみまで知っていて、他人にはそのうちのほんの少ししか見えていないことを想像しにくい。また私たちは、ほかの人も自分のことを考えるのにいそがしいことをわすれている。まわりの人は、自分の見た目や自分のことばや、自分があたえている印象を気にしていることが多いので、私たちのことをくわしく見るひまはほとんどない。',
+      'スポットライト効果は、はずかしい場面だけにかぎらない。自分の成功をどう判断するかにも影響しうる。すばらしいスピーチをした人は、聞き手がそれを長い間覚えているだろうと信じるかもしれないが、実際にはほとんどの聞き手はすぐにほかのことを考えはじめる。同じように、人はよく、自分の緊張がほかの人にははっきりわかると思っているが、ほとんど見えていないこともある。研究では、話し手にこの効果について伝えるだけで、落ち着いてうまく話せるようになることがわかっている。',
+      'スポットライト効果を理解すれば、生活が楽になるかもしれない。他人は思っているよりずっと気づいていないとわかれば、新しいことに挑戦したり、授業で質問したり、こわがらずにまちがえたりしやすくなるかもしれない。これは、ほかの人が私たちのことを気にかけていないという意味ではなく、むしろ彼らも私たちと同じくらい自分のことに注意が向いているということである。このかんたんな事実を思い出せば、ふだんなら緊張する場面でも、心配を少なくし、もっと自信をもって行動できるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 a T-shirt printed with the face of a singer を受け、found の目的語になる関係代名詞 that（found ～ embarrassing「～をはずかしいと思う」）。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the impression を受け、making の目的語になる関係代名詞 that。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は situations（状況）で、うしろの we would otherwise feel nervous は完全な文なので関係副詞 where（in which と同じ）。' },
+    ],
+    tf: [
+      { statement: 'スポットライト効果とは、他人が自分に注意をはらう度合いを大きく見積もりすぎる傾向である。', answer: true, why: '第1段落 this tendency to overestimate how much others pay attention to us the spotlight effect。' },
+      { statement: '実験では、部屋の約半分の人がシャツの絵を覚えていた。', answer: false, why: '第2段落 In fact, only around a quarter of the people in the room could remember what was on the shirt。' },
+      { statement: 'まわりの人も、自分の見た目や印象を気にしていることが多い。', answer: true, why: '第3段落 The people around us are often worried about their own appearance ...。' },
+      { statement: 'スポットライト効果は、はずかしい場面にしか起こらない。', answer: false, why: '第4段落 The spotlight effect is not limited to embarrassing moments。' },
+    ],
+    qa: [
+      { q: 'What helped speakers feel calmer, according to studies?', choices: ['Simply telling them about the spotlight effect.', 'Wearing a special T-shirt.', 'Speaking in a dark room.', 'Practicing without an audience only.'], answer: 0, why: '第4段落 simply telling speakers about this effect can help them feel calmer and perform better。' },
+      { q: 'What is one reason we make the spotlight mistake?', choices: ['We are at the center of our own experience and know every detail about ourselves.', 'Other people always stare at us.', 'We cannot see our own clothes.', 'Lights in classrooms are too bright.'], answer: 0, why: '第3段落 we are naturally at the center of our own experience. We know every detail of our appearance and actions。' },
+    ],
+    gist: [
+      { para: 1, choices: ['スポットライト効果を示した実験', '歌手の人気の理由', 'Tシャツの作り方', '大学の授業料'], answer: 0, why: '第2段落は、Tシャツを使った実験で、予想と実際の差を示している。' },
+      { para: 4, choices: ['この効果を理解すると自信をもって行動しやすくなること', '授業での質問のしかた', 'まちがいの直し方', '友だちの作り方'], answer: 0, why: '第5段落は、他人はあまり気づいていないと知れば、心配がへり自信をもてることを述べている。' },
+    ],
+    titleQ: { choices: ['Nobody Is Watching as Closely as You Think', 'How to Remove Stains from Shirts', 'The Life of a Famous Singer', 'Why Speeches Should Be Short'], answer: 0, why: '全体として、他人の注目を大きく見積もりすぎるスポットライト効果とその理由・生かし方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
