@@ -29,3 +29,15 @@ it('文法ページの「🎓 入試の文法」から、レベルをえらん�
   fireEvent.click(within(screen.getByRole('group', { name: '入試の文法' })).getByRole('button', { name: /国立医学部/ }))
   expect(screen.getAllByText(/国立医学部の文法/).length).toBeGreaterThan(0)
 })
+
+it('京大の文法：長い文の骨組みを見ぬく本番レベルの問題（平均15語以上・高2レベルの決まり文句は出さない）', async () => {
+  const { LEVEL_GRAMMAR } = await import('./examgrammar2')
+  const u = LEVEL_GRAMMAR.find((x) => x.id === 'exam-kyodai')!
+  expect(u.questions).toHaveLength(25)
+  const words = u.questions.map((q) => q.sentence.split(/\s+/).length)
+  expect(words.reduce((a, b) => a + b, 0) / words.length).toBeGreaterThanOrEqual(15)
+  for (const q of u.questions) {
+    expect(q.sentence).not.toMatch(/spilt milk|goes without|the town ___ I was born/)
+    expect(new Set(q.choices).size).toBe(4)
+  }
+})
