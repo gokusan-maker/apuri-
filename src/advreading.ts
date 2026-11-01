@@ -23167,6 +23167,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living Above the Earth', 'How to Build a Rocket', 'The Moons of Mars', 'Why the Sky Is Blue'], answer: 0, why: '全体として、宇宙ステーションでのくらしの課題と、その経験が教えてくれることを述べている。' },
   },
   {
+    id: 'kyotsu-microplastics',
+    title: 'Tiny Pieces, Big Problem',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Plastic has become one of the most widely used materials in the world. It is light, strong, and cheap, and it can be shaped into almost anything, from bottles and bags to car parts and medical equipment. However, the same qualities that make plastic so useful also make it a serious environmental problem. Most plastic does not break down naturally for hundreds of years. Instead, it slowly breaks into smaller and smaller pieces, eventually forming what scientists call microplastics.",
+      "Microplastics are pieces of plastic smaller than five millimeters. Some come from larger objects, such as bottles or fishing nets, that are broken apart by sunlight, waves, and wind. Others are produced in small sizes from the start. For example, tiny fibers come off synthetic clothing every time it is washed, and small particles are worn away from car tires on the road. Because these pieces are so small, they easily pass through water treatment systems and enter rivers and the sea.",
+      "Today, microplastics have been found almost everywhere scientists have looked: in the deepest parts of the ocean, in Arctic ice, in the soil of farmland, and even in the air. Many sea creatures, from tiny plankton to large fish and whales, swallow these particles, often mistaking them for food. Microplastics can block the digestive systems of small animals, and they may also carry harmful chemicals ( A ) stick to their surfaces.",
+      "Researchers have also detected microplastics in drinking water, salt, and seafood, which means that humans are taking them into their bodies as well. Scientists do not yet fully understand how this affects human health. Some studies suggest that very small particles could cause inflammation or carry chemicals into the body, but more research is needed before firm conclusions can be drawn. This uncertainty is one reason ( B ) many experts call for caution.",
+      "Because microplastics are so widespread and so difficult to remove once they are in the environment, the most effective approach is to prevent them from forming in the first place. Governments in some countries have banned plastic microbeads in cosmetics and limited single-use plastic products. Companies are developing washing machine filters that catch clothing fibers and materials that break down more easily. Individuals can help by reducing their use of disposable plastic and recycling properly. Solving the problem will require action at every level, from international agreements to the everyday choices ( C ) each of us makes.",
+    ],
+    ja: [
+      'プラスチックは世界で最も広く使われている材料のひとつになった。軽くて強くて安く、びんや袋から車の部品や医療器具まで、ほとんど何の形にもできる。しかし、プラスチックをそれほど便利にしているのと同じ性質が、それを深刻な環境問題にもしている。ほとんどのプラスチックは何百年も自然には分解されない。そのかわりに少しずつどんどん小さなかけらにくだけ、やがて科学者がマイクロプラスチックとよぶものになる。',
+      'マイクロプラスチックとは、5ミリメートルより小さいプラスチックのかけらのことである。びんや漁網のような大きなものが、日光や波や風によってくだけてできるものもある。最初から小さな大きさで作られるものもある。たとえば、化学せんいの服をあらうたびに小さなせんいがはがれ落ち、道路では車のタイヤから小さな粒がすりへってできる。こうしたかけらはとても小さいので、水をきれいにするしくみをかんたんに通りぬけ、川や海に入ってしまう。',
+      '今日、マイクロプラスチックは、科学者が調べたほとんどあらゆる場所で見つかっている。海のいちばん深いところ、北極の氷、畑の土、さらには空気の中にもある。小さなプランクトンから大きな魚やクジラまで、多くの海の生き物が、えさとまちがえてこの粒を飲みこんでしまう。マイクロプラスチックは小さな動物の消化器官をつまらせることがあり、表面にくっついた有害な化学物質を運ぶかもしれない。',
+      '研究者たちは、飲み水や塩や魚介類からもマイクロプラスチックを見つけており、人間も体の中にそれを取りこんでいることになる。これが人の健康にどう影響するかは、科学者にもまだ十分にはわかっていない。とても小さな粒が炎症を起こしたり化学物質を体の中に運んだりするかもしれないとする研究もあるが、はっきりした結論を出すにはさらに研究が必要である。この不確かさが、多くの専門家が用心をよびかける理由のひとつである。',
+      'マイクロプラスチックはとても広く広がり、いったん環境に入るととりのぞくのがとてもむずかしいので、最も効果的な方法は、そもそもそれができないようにすることである。化粧品のプラスチックの小さな粒を禁止したり、使いすてのプラスチック製品を制限したりした国もある。会社は、服のせんいをとらえる洗たく機のフィルターや、より分解されやすい材料を開発している。個人も、使いすてのプラスチックの使用をへらし、正しくリサイクルすることで役に立てる。この問題を解決するには、国際的な取り決めから、私たち一人ひとりの毎日の選択まで、あらゆる段階での行動が必要になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 harmful chemicals を受け、stick の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['why', 'which', 'what', 'whose'], answer: 0, why: '先行詞 reason のあとに完全な文（many experts call for caution）が続くので関係副詞 why。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the everyday choices を受け、makes の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'ほとんどのプラスチックは、何百年も自然には分解されない。', answer: true, why: '第1段落 Most plastic does not break down naturally for hundreds of years。' },
+      { statement: 'マイクロプラスチックは、すべて大きなものがくだけてできる。', answer: false, why: '第2段落 Others are produced in small sizes from the start。' },
+      { statement: 'マイクロプラスチックは、北極の氷や空気の中でも見つかっている。', answer: true, why: '第3段落 in Arctic ice, in the soil of farmland, and even in the air。' },
+      { statement: 'マイクロプラスチックが人の健康にどう影響するかは、すでに完全にわかっている。', answer: false, why: '第4段落 Scientists do not yet fully understand how this affects human health。' },
+    ],
+    qa: [
+      { q: 'How do tiny fibers from clothing enter the environment?', choices: ['They come off synthetic clothing when it is washed.', 'They fall from the sky as rain.', 'They grow in the soil.', 'They are made by fish.'], answer: 0, why: '第2段落 tiny fibers come off synthetic clothing every time it is washed。' },
+      { q: 'What does the author say is the most effective approach?', choices: ['Preventing microplastics from forming in the first place.', 'Collecting all microplastics from the ocean.', 'Eating less salt.', 'Building more water treatment systems only.'], answer: 0, why: '第5段落 the most effective approach is to prevent them from forming in the first place。' },
+    ],
+    gist: [
+      { para: 1, choices: ['マイクロプラスチックのでき方', '服の選び方', 'タイヤの作り方', '海の深さ'], answer: 0, why: '第2段落は、大きなものがくだけたり、最初から小さく作られたりしてできることを述べている。' },
+      { para: 3, choices: ['人の体への影響はまだわからないこと', '塩の作り方', '魚の料理', '飲み水の値段'], answer: 0, why: '第4段落は、人も取りこんでいるが健康への影響はまだ十分わかっていないことを述べている。' },
+    ],
+    titleQ: { choices: ['Tiny Pieces, Big Problem', 'How to Make Plastic Bottles', 'The Deepest Parts of the Ocean', 'Why Whales Sing'], answer: 0, why: '全体として、小さなマイクロプラスチックがもたらす大きな問題と、その対策を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
