@@ -22699,6 +22699,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Why Prices End in 99', 'How to Open a Shop', 'The History of Money', 'The Best Places to Shop'], answer: 0, why: '全体として、値段の見せ方が私たちの判断に影響するしくみと、その見ぬき方を述べている。' },
   },
   {
+    id: 'kyotsu-magnetic-field',
+    title: 'The Invisible Shield',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "If you hold a compass in your hand, its needle will point toward the north wherever you are on Earth. This simple tool has helped travelers find their way for nearly a thousand years. But why does it work? The answer is that the Earth itself behaves like a giant magnet. It is surrounded by an invisible magnetic field, and this field plays a far more important role in our lives than most people realize.",
+      "Scientists believe that the magnetic field is produced deep inside the planet. The center of the Earth contains a solid inner core and a liquid outer core, both made mainly of iron and nickel. Because the outer core is extremely hot, the liquid metal in it is constantly moving. As this metal flows, it creates electric currents, and these currents in turn produce a magnetic field. This process, which continues day and night, is a little like a power station ( A ) never stops running.",
+      "The magnetic field does much more than guide compasses. It acts as a shield that protects the Earth from the solar wind, a stream of charged particles that flows constantly from the Sun. Without this protection, the solar wind could slowly strip away parts of our atmosphere, as scientists believe happened on Mars long ago. When some of these particles do reach the Earth near the North and South Poles, they collide with gases in the upper atmosphere and create the beautiful lights known as auroras.",
+      "Many animals also seem to use the magnetic field. Some birds, sea turtles, and fish travel thousands of kilometers between feeding and breeding areas, and research suggests that they can sense the direction and strength of the field. This ability may help them find their way across oceans and continents in conditions ( B ) the Sun and stars cannot be seen.",
+      "Interestingly, the magnetic field is not fixed. The position of the magnetic North Pole moves slowly over time, and in recent decades it has been shifting faster than before. Rocks also show that the field has completely reversed many times in the Earth's history, so that a compass would once have pointed south. Such reversals take place over thousands of years, and scientists are still studying what causes them. Learning more about the magnetic field helps us understand both the deep interior of our planet and the conditions ( C ) make life on its surface possible.",
+    ],
+    ja: [
+      '方位磁針を手に持つと、地球のどこにいても、その針は北を指す。このかんたんな道具は、千年近くにわたって旅人が道を見つけるのを助けてきた。しかし、なぜそうなるのだろうか。その答えは、地球そのものが巨大な磁石のようにふるまっているからである。地球は目に見えない磁場にかこまれており、この磁場はたいていの人が気づいているよりずっと大切な役割を私たちのくらしで果たしている。',
+      '科学者たちは、磁場は地球の深い内部で生み出されていると考えている。地球の中心には、おもに鉄とニッケルでできた、固体の内核と液体の外核がある。外核はとても熱いので、その中の液体の金属はたえず動いている。この金属が流れると電流が生まれ、その電流が今度は磁場を生み出す。昼も夜も続くこのしくみは、止まることのない発電所に少し似ている。',
+      '磁場は、方位磁針をみちびく以上のことをしている。磁場は、太陽からたえず流れてくる電気をおびた粒子の流れ、つまり太陽風から地球を守る盾の働きをしている。この守りがなければ、太陽風が大気の一部を少しずつはぎとってしまうかもしれない。科学者たちは、ずっと昔の火星でそれが起きたと考えている。こうした粒子の一部が北極や南極の近くで地球にとどくと、上空の気体とぶつかり、オーロラとして知られる美しい光を生み出す。',
+      '多くの動物も磁場を使っているようである。鳥やウミガメや魚の中には、えさ場と子育ての場の間を何千キロメートルも旅するものがいて、研究によれば、それらは磁場の向きや強さを感じとれる。この力は、太陽や星が見えない状況で、海や大陸をわたって道を見つけるのに役立っているのかもしれない。',
+      'おもしろいことに、磁場は固定されたものではない。北の磁極の位置は時とともにゆっくり動いており、ここ数十年は以前より速く移動している。岩石を調べると、地球の歴史の中で磁場は何度も完全に逆転してきたこともわかり、かつては方位磁針が南を指したこともあったのである。こうした逆転は何千年もかけて起こり、科学者たちはその原因をまだ研究している。磁場についてもっと知ることは、地球の深い内部と、地表の生命を可能にしている条件の両方を理解する助けになる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a power station を受け、stops の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は conditions（状況）で、うしろの the Sun and stars cannot be seen は完全な文なので関係副詞 where（in which と同じ）。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 the conditions を受け、make の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+    ],
+    tf: [
+      { statement: '地球の外核の液体の金属は、たえず動いている。', answer: true, why: '第2段落 the liquid metal in it is constantly moving。' },
+      { statement: '磁場は、太陽風を地球に引きよせる。', answer: false, why: '第3段落 It acts as a shield that protects the Earth from the solar wind。' },
+      { statement: 'オーロラは、太陽からの粒子が上空の気体とぶつかって生まれる。', answer: true, why: '第3段落 they collide with gases in the upper atmosphere and create the beautiful lights known as auroras。' },
+      { statement: '北の磁極の位置は、ずっと同じ場所にある。', answer: false, why: '第5段落 The position of the magnetic North Pole moves slowly over time。' },
+    ],
+    qa: [
+      { q: 'What do scientists believe happened on Mars long ago?', choices: ['The solar wind stripped away parts of its atmosphere.', 'Its magnetic field became stronger.', 'It moved closer to the Sun.', 'It got many auroras every night.'], answer: 0, why: '第3段落 the solar wind could slowly strip away parts of our atmosphere, as scientists believe happened on Mars long ago。' },
+      { q: 'How might some animals find their way across oceans?', choices: ['By sensing the direction and strength of the magnetic field.', 'By following ships.', 'By listening to the wind.', 'By using compasses.'], answer: 0, why: '第4段落 they can sense the direction and strength of the field。' },
+    ],
+    gist: [
+      { para: 1, choices: ['磁場が地球の内部で生まれるしくみ', '発電所の作り方', 'ニッケルの使い道', '地図の歴史'], answer: 0, why: '第2段落は、外核の液体の金属の動きが電流と磁場を生むしくみを述べている。' },
+      { para: 4, choices: ['磁場が動いたり逆転したりすること', '方位磁針の値段', '岩石の色', '北極の動物'], answer: 0, why: '第5段落は、磁極の移動や、過去の磁場の逆転について述べている。' },
+    ],
+    titleQ: { choices: ['The Invisible Shield', 'How to Make a Compass', 'The Coldest Place on Earth', 'Why the Sun Is Hot'], answer: 0, why: '全体として、地球を守る目に見えない盾である磁場のしくみと働きを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
