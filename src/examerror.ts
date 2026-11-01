@@ -2964,6 +2964,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Prices have risen sharply. [Despite], many people still shop at this store.', choices: ['However', 'Although', 'Because', 'Therefore'], answer: 0, why: '前の文と反対の内容を続けるので副詞 However。despite は前置詞なので単独では使えない。' },
     ],
   },
+  {
+    id: 'exam-fix-68',
+    title: '入試の誤文訂正〈68〉（共通テストレベル：仮定法の総まとめ）',
+    points: ['仮定法過去（If ＋過去形, would ＋原形）、仮定法過去完了（If ＋had ＋過去分詞, would have ＋過去分詞）、I wish ＋過去形・過去完了、as if ＋過去形、Without ～／But for ～、It is time ＋過去形、If it were not for ～ など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'If I were you, I would accept the offer.', ja: 'もし私があなたなら、その申し出を受けるだろう。' }],
+    questions: [
+      { sentence: 'If I [am] you, I would accept the offer.', choices: ['were', 'be', 'have been', 'will be'], answer: 0, why: '今の事実と反対の仮定は仮定法過去。be 動詞はふつう were。' },
+      { sentence: 'If he had studied harder, he [would pass] the exam last year.', choices: ['would have passed', 'will pass', 'had passed', 'passes'], answer: 0, why: '過去の事実と反対の仮定は仮定法過去完了：would have passed。' },
+      { sentence: 'I wish I [can] speak French as well as you.', choices: ['could', 'can be', 'will', 'have been'], answer: 0, why: '今の事実と反対の願いは I wish ＋過去形：could。' },
+      { sentence: 'I wish I [didn\'t say] such a thing to her yesterday.', choices: ['hadn\'t said', 'don\'t say', 'won\'t say', 'haven\'t said'], answer: 0, why: '過去のことへの後悔は I wish ＋過去完了：hadn\'t said。' },
+      { sentence: 'He talks as if he [knows] everything about the city, but he has never been there.', choices: ['knew', 'has known', 'will know', 'is knowing'], answer: 0, why: '事実ではないことを「まるで～のように」は as if ＋過去形：knew。' },
+      { sentence: '[With] your help, I could not have finished the work.', choices: ['Without', 'By', 'Because', 'Unless'], answer: 0, why: '「あなたの助けがなかったら」は Without ～（＝If it had not been for ～）。' },
+      { sentence: 'If it [is] not for water, no living things could survive.', choices: ['were', 'has been', 'will be', 'had'], answer: 0, why: '「もし～がなければ」は If it were not for ～。' },
+      { sentence: 'It is time you [go] to bed.', choices: ['went', 'going', 'will go', 'have gone'], answer: 0, why: 'It is time ＋過去形「もう～すべき時間だ」：went。' },
+      { sentence: 'If I had more money, I [will buy] a new bike.', choices: ['would buy', 'bought', 'had bought', 'buy'], answer: 0, why: '仮定法過去の主節は would ＋原形：would buy。' },
+      { sentence: 'If she [took] the earlier train, she would have arrived on time.', choices: ['had taken', 'takes', 'would take', 'has taken'], answer: 0, why: '主節が would have arrived（過去の仮定）なので、if 節は過去完了：had taken。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
