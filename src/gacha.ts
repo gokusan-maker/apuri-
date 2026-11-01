@@ -412,3 +412,21 @@ export function helloLine(speciesId: string): { en: string; ja: string } {
 export const CASTLE_LUCK_MAX = 0.05
 export const castleLuck = (castles: number) => Math.min(CASTLE_LUCK_MAX, Math.max(0, castles) * 0.01)
 export const luckyRoll = (r: number, castles: number) => (r < 0.6 ? Math.min(0.899, r + castleLuck(castles)) : r)
+
+// デザイン201：相棒にしたことのある子の種類をおぼえておく（図鑑で 💕 を出す）
+const PARTNER_HISTORY_KEY = 'eitan:partner-history'
+export function rememberPartner(species: string | undefined): string[] {
+  let list: string[] = []
+  try {
+    const v = JSON.parse(localStorage.getItem(PARTNER_HISTORY_KEY) ?? '[]')
+    if (Array.isArray(v)) list = v.filter((x): x is string => typeof x === 'string')
+    if (species && !list.includes(species)) {
+      list = [...list, species]
+      localStorage.setItem(PARTNER_HISTORY_KEY, JSON.stringify(list))
+    }
+  } catch {
+    // ストレージが使えないときは今の相棒だけ
+    return species ? [species] : []
+  }
+  return list
+}

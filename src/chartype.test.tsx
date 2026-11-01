@@ -250,3 +250,14 @@ it('デザイン198：キャラ図鑑で、なかまが5体以上いる子に「
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
 })
+
+it('デザイン201：キャラ図鑑で、前に相棒だった子に 💕 がつく', () => {
+  localStorage.clear()
+  const first = render(<Gacha partnerName="モチ" coins={0} members={3} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat']} partnerSpecies="fox" />)
+  expect(screen.queryByLabelText('前に相棒だった子')).toBeNull()
+  first.unmount()
+  render(<Gacha partnerName="モチ" coins={0} members={3} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'cat']} partnerSpecies="cat" />)
+  const marks = screen.getAllByLabelText('前に相棒だった子')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
+})
