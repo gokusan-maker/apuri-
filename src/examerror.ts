@@ -2474,6 +2474,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) After (B) many meetings, (C) the members finally (D) discussed about the budget.', choices: ['(A) After', '(B) many meetings,', '(C) the members finally', '(D) discussed about the budget'], answer: 3, why: 'discuss は他動詞。discussed the budget。' },
     ],
   },
+  {
+    id: 'exam-error-compare8',
+    title: '入試の正誤問題〈105〉（TOEFL・IELTS の書き言葉：比較）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '比べるものをそろえる（that of／those of・mine）、the 比較級, the 比較級、much／far で強める比較級、superior to、倍数 ＋ as 原級 as、compared with、fewer／less、最上級 ＋ ever。',
+    ],
+    examples: [
+      { en: 'The climate of Spain is warmer than that of Norway.', ja: 'スペインの気候はノルウェーの気候よりあたたかい。' },
+      { en: 'The older we get, the wiser we become.', ja: '年をとるほど、私たちはかしこくなる。' },
+    ],
+    questions: [
+      { sentence: 'The climate of (A) Spain is (B) warmer (C) than (D) Norway.', choices: ['(A) Spain is', '(B) warmer', '(C) than', '(D) Norway'], answer: 3, why: '比べるのは「スペインの気候」と「ノルウェーの気候」。than that of Norway。' },
+      { sentence: 'The salaries (A) in this industry (B) are lower (C) than that (D) in banking.', choices: ['(A) in this industry', '(B) are lower', '(C) than that', '(D) in banking'], answer: 2, why: '複数の The salaries をうけるので than those。' },
+      { sentence: '(A) The older (B) we get, (C) the wiser (D) we become more.', choices: ['(A) The older', '(B) we get,', '(C) the wiser', '(D) we become more'], answer: 3, why: 'the 比較級 ～, the 比較級 ～ の形なので、最後の more は不要。we become。' },
+      { sentence: 'Exports (A) were (B) very (C) higher in 2024 (D) than in 2019.', choices: ['(A) were', '(B) very', '(C) higher in 2024', '(D) than in 2019'], answer: 1, why: '比較級を強めるのは much／far。very は使えない。' },
+      { sentence: 'This method (A) is (B) superior (C) than (D) the traditional one.', choices: ['(A) is', '(B) superior', '(C) than', '(D) the traditional one'], answer: 2, why: 'superior は to をとる。superior to。' },
+      { sentence: 'The new bridge (A) is (B) three times (C) as longer (D) as the old one.', choices: ['(A) is', '(B) three times', '(C) as longer', '(D) as the old one'], answer: 2, why: '倍数 ＋ as 原級 as。as long as。' },
+      { sentence: '(A) Her essay was (B) more (C) clearly organized (D) than me.', choices: ['(A) Her essay was', '(B) more', '(C) clearly organized', '(D) than me'], answer: 3, why: '比べるのは「彼女の作文」と「私の作文」。than mine。' },
+      { sentence: '(A) Compared (B) than other cities, (C) Kyoto has (D) many old temples.', choices: ['(A) Compared', '(B) than other cities,', '(C) Kyoto has', '(D) many old temples'], answer: 1, why: '「〜とくらべると」は compared with（to）。than は使えない。' },
+      { sentence: '(A) Less students (B) chose (C) the online course (D) than the teachers expected.', choices: ['(A) Less students', '(B) chose', '(C) the online course', '(D) than the teachers expected'], answer: 0, why: 'students は数えられる名詞なので Fewer students。' },
+      { sentence: 'This is (A) the (B) most (C) interesting book (D) I have never read.', choices: ['(A) the', '(B) most', '(C) interesting book', '(D) I have never read'], answer: 3, why: '最上級 ＋ 現在完了の経験は I have ever read。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
