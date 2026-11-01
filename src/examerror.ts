@@ -1946,6 +1946,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'They (A) left an hour ago, so (B) they (C) must arrive (D) in Osaka by now.', choices: ['(A) left an hour ago, so', '(B) they', '(C) must arrive', '(D) in Osaka by now'], answer: 2, why: 'もう起きたことの推量は must have arrived。' },
     ],
   },
+  {
+    id: 'exam-error-verbs2',
+    title: '入試の正誤問題〈83〉（TOEFL・IELTS の書き言葉：まぎらわしい動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'rise／raise、lie／lay、borrow／lend、rob 人 of 物／steal 物、say／tell、remind 人 of ～ など、まぎらわしい動詞の使い分け。',
+    ],
+    examples: [
+      { en: 'Prices have risen sharply this year.', ja: '今年は物価が急に上がった。' },
+      { en: 'Can you lend me your pen?', ja: 'ペンを貸してくれる？' },
+    ],
+    questions: [
+      { sentence: 'Prices (A) have (B) raised (C) sharply (D) this year.', choices: ['(A) have', '(B) raised', '(C) sharply', '(D) this year'], answer: 1, why: '「上がる」は自動詞 rise：have risen。' },
+      { sentence: 'If you (A) know the answer, (B) please (C) rise (D) your hand.', choices: ['(A) know the answer,', '(B) please', '(C) rise', '(D) your hand'], answer: 2, why: '「手を上げる」は他動詞 raise。' },
+      { sentence: 'I (A) was so tired that I (B) laid (C) on the sofa (D) all afternoon.', choices: ['(A) was so tired that I', '(B) laid', '(C) on the sofa', '(D) all afternoon'], answer: 1, why: '「横になる」lie の過去形は lay。' },
+      { sentence: '(A) Can you (B) borrow me (C) your pen (D) for a minute?', choices: ['(A) Can you', '(B) borrow me', '(C) your pen', '(D) for a minute?'], answer: 1, why: '「人に貸す」は lend：lend me。' },
+      { sentence: 'Someone (A) robbed (B) my bag (C) on (D) the train yesterday.', choices: ['(A) robbed', '(B) my bag', '(C) on', '(D) the train yesterday'], answer: 0, why: '「物をぬすむ」は steal：stole my bag。' },
+      { sentence: 'She (A) said me (B) that she (C) would be (D) late.', choices: ['(A) said me', '(B) that she', '(C) would be', '(D) late'], answer: 0, why: '「人に言う」は tell 人：told me。' },
+      { sentence: 'This song (A) always (B) reminds me (C) about (D) my childhood.', choices: ['(A) always', '(B) reminds me', '(C) about', '(D) my childhood'], answer: 2, why: 'remind 人 of ～：reminds me of。' },
+      { sentence: 'We (A) borrowed (B) some books (C) from the library and (D) lent them back today.', choices: ['(A) borrowed', '(B) some books', '(C) from the library and', '(D) lent them back today'], answer: 3, why: '借りたものを「返す」は return：returned them。lend は「貸す」。' },
+      { sentence: 'Please (A) lie (B) the books (C) on (D) the desk.', choices: ['(A) lie', '(B) the books', '(C) on', '(D) the desk'], answer: 0, why: '「～を置く」は他動詞 lay：lay the books。' },
+      { sentence: 'May I (A) lend (B) your dictionary (C) for (D) a moment?', choices: ['(A) lend', '(B) your dictionary', '(C) for', '(D) a moment?'], answer: 0, why: '「借りる」は borrow：May I borrow。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
