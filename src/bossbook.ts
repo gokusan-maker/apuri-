@@ -136,3 +136,14 @@ export function secretOf(name: string): string {
 
 // デザイン130：勝った回数の区切り（10・30・50回、そのあとは100回ごと）
 export const isWinMilestone = (n: number): boolean => n === 10 || n === 30 || n === 50 || (n >= 100 && n % 100 === 0)
+
+// デザイン208：今日ボスに勝った回数の合計（どのボスでも）
+export function todayWinsTotal(day: string): number {
+  try {
+    const raw = JSON.parse(localStorage.getItem(TODAY_KEY) ?? 'null') as { day: string; wins: Record<string, number> } | null
+    if (!raw || raw.day !== day || !raw.wins || typeof raw.wins !== 'object') return 0
+    return Object.values(raw.wins).reduce((n, x) => n + (typeof x === 'number' ? x : 0), 0)
+  } catch {
+    return 0
+  }
+}

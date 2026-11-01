@@ -554,3 +554,17 @@ it('デザイン205：ボス図鑑の見出しに、勝った回数の合計（�
   render(<BossBook />)
   expect(screen.getByLabelText('のべ 5勝').textContent).toBe('⚔のべ5勝')
 })
+
+it('デザイン208：ボス図鑑の見出しに、今日ボスに勝った回数の合計を出す', async () => {
+  const { recordTodayWin } = await import('./bossbook')
+  const { dayKey } = await import('./srs')
+  localStorage.clear()
+  const { unmount } = render(<BossBook />)
+  expect(screen.queryByLabelText(/^今日 \d+勝$/)).toBeNull()
+  unmount()
+  recordTodayWin('A', dayKey())
+  recordTodayWin('A', dayKey())
+  recordTodayWin('B', dayKey())
+  render(<BossBook />)
+  expect(screen.getByLabelText('今日 3勝').textContent).toBe('🗓今日3勝')
+})
