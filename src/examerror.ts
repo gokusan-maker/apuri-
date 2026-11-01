@@ -2670,6 +2670,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Kyoto is one of the oldest [city] in Japan.', choices: ['cities', 'city of', 'citys', 'of cities'], answer: 0, why: 'one of the ＋最上級＋複数名詞：one of the oldest cities。' },
     ],
   },
+  {
+    id: 'exam-fix-61',
+    title: '入試の誤文訂正〈61〉（医学部・難関大レベル⑦：前置詞＋関係代名詞・複合関係詞）',
+    points: ['前置詞＋関係代名詞（in which・with whom・for which）、前置詞のあとに that は使えない、複合関係詞（whoever・whatever・however・whenever）、most of whom など、難関大学でよく問われる関係詞の形。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The friend with whom I traveled was very kind.', ja: 'いっしょに旅行した友だちはとても親切だった。' }],
+    questions: [
+      { sentence: 'This is the house [which] I lived as a child.', choices: ['in which', 'which in', 'in that', 'where in'], answer: 0, why: 'live in the house の in を関係代名詞の前に出して in which（= where）。' },
+      { sentence: 'The friend [with that] I traveled was very kind.', choices: ['with whom', 'with who', 'whom with', 'with which'], answer: 0, why: '前置詞のあとに that は使えない。人なので with whom。' },
+      { sentence: 'The pen [with what] I wrote the letter is broken.', choices: ['with which', 'with that', 'which with', 'with whom'], answer: 0, why: '先行詞は the pen（もの）なので with which。前置詞のあとに what・that は使えない。' },
+      { sentence: '[Whomever] comes first will win the prize.', choices: ['Whoever', 'Whatever', 'Whichever of', 'However'], answer: 0, why: 'comes の主語になるので主格の Whoever「～する人はだれでも」。' },
+      { sentence: 'You can take [what that] you like from this box.', choices: ['whatever', 'whenever', 'however', 'wherever'], answer: 0, why: 'take の目的語になり「～するものは何でも」は whatever。' },
+      { sentence: '[Whatever] hard you try, you cannot finish it in a day.', choices: ['However', 'Whatever so', 'How ever much', 'Whenever'], answer: 0, why: '形容詞・副詞の前に置いて「どれほど～しても」は However ＋形容詞・副詞。' },
+      { sentence: 'Please call me [whatever] you need help.', choices: ['whenever', 'however', 'whichever', 'whoever'], answer: 0, why: '「～するときはいつでも」は whenever。うしろは完全な文。' },
+      { sentence: 'The reason [for that] he left is still unknown.', choices: ['for which', 'for what', 'which for', 'of which'], answer: 0, why: 'the reason for ～ の for を前に出して for which（= why）。前置詞のあとに that は使えない。' },
+      { sentence: 'This is the town [in where] I was born.', choices: ['in which', 'in that', 'which in', 'at where'], answer: 0, why: '前置詞のあとには関係副詞 where を置かない：in which（= where）。' },
+      { sentence: 'There were many students, most of [them] were from Asia.', choices: ['whom', 'who', 'which', 'that'], answer: 0, why: 'コンマで文をつなぐには関係代名詞が必要。前置詞 of のあとで人をさすので most of whom。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

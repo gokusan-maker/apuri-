@@ -3517,3 +3517,4 @@
 - 2026-11-01: 文法：入試の正誤問題〈67〉（国公立レベル：比較の総まとめ：the tallest・smarter・heavier・as tall as・the fastest・fewer・the best・mine・cities・easier）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「静かな緑のじゅうたん（コケ）」（自然・植物・関係副詞 why／非制限の which／what の空所）
 - 2026-11-01: デザイン：ボスに勝つと、勝利画面にいちばん速く答えた時間を「⚡ 最速 ○秒」で出すようにした
+- 2026-11-01: 文法：入試の誤文訂正〈61〉（医学部・難関大レベル⑦：in which・with whom・with which・Whoever・whatever・However・whenever・for which・most of whom）10問
