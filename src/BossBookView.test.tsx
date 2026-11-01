@@ -495,3 +495,21 @@ it('デザイン192：ボス図鑑で、まだランクSを取っていないボ
   expect(screen.queryByText(a.name)).toBeNull()
   expect(screen.getByText(b.name)).toBeInTheDocument()
 })
+
+it('デザイン194：ボス図鑑で、はじめて勝ってから何日たったかを出す', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  const { dayKey } = await import('./srs')
+  localStorage.clear()
+  const [a, b] = Object.values(BOSSES)
+  const d = new Date()
+  d.setDate(d.getDate() - 3)
+  saveBook({
+    [a.name]: { wins: 1, best: 'S', look: a, first: dayKey(d) },
+    [b.name]: { wins: 1, best: 'A', look: b, first: dayKey() },
+  })
+  render(<BossBook />)
+  const days = screen.getAllByLabelText('はじめて勝ってからの日数')
+  expect(days).toHaveLength(1)
+  expect(days[0].textContent).toBe('（3日前）')
+})

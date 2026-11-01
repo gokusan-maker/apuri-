@@ -4,7 +4,11 @@ import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, loadNoMissBoss
 import { BossArena } from './BossArenaView'
 import { loadBook, loadLastBoss, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
+import { dayKey } from './srs'
 import { UNIV_BOSSES } from './univ'
+
+// デザイン194：YYYY-MM-DD の2つの日の差（日数）
+const daysSince = (from: string, to: string) => Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000)
 
 const GRAY = { color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }
 // 図鑑のカードの背景：そのボスと戦った舞台（単語帳のボスはレベルの舞台、それ以外は城）
@@ -26,6 +30,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const [traitOpen, setTraitOpen] = useState<string | null>(null) // デザイン106：とくぎの説明を開いているボス
   const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
   const [sealT] = useState(loadSealTraits) // とくぎごとの、封じて勝った回数
+  const [today] = useState(() => dayKey()) // デザイン194：はじめて勝ってから何日かを出すための今日
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
   const extra = Object.values(book)
     .map((e) => e.look)
@@ -171,7 +176,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                   {topName === b.name && <strong className="speed-clear"> 🏆 いちばん勝った</strong>}
                   {lastBoss === b.name && <strong className="speed-clear" aria-label="いちばん最近たおしたボス"> 🆕 さいきん</strong>}
                   {firstWin === b.name && <strong className="speed-clear" aria-label="いちばん最初にたおしたボス"> 🥇 はじめての勝利</strong>}
-                  {/^\d{4}-\d{2}-\d{2}$/.test(e.first ?? '') && <span className="boss-book-first">・📅 はじめて勝った日 {Number(e.first.slice(5, 7))}月{Number(e.first.slice(8, 10))}日</span>}
+                  {/^\d{4}-\d{2}-\d{2}$/.test(e.first ?? '') && <span className="boss-book-first">・📅 はじめて勝った日 {Number(e.first.slice(5, 7))}月{Number(e.first.slice(8, 10))}日{daysSince(e.first, today) > 0 && <span aria-label="はじめて勝ってからの日数">（{daysSince(e.first, today)}日前）</span>}</span>}
                 </span>
               )}
               {e && (
