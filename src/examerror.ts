@@ -3720,6 +3720,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I am not sure [that] I will be able to come tomorrow.', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: '「来られるかどうかわからない」は whether（if でも可）。' },
     ],
   },
+  {
+    id: 'exam-fix-86',
+    title: '入試の誤文訂正〈86〉（共通テストレベル：同格の that と名詞＋to 不定詞）',
+    points: ['the fact・the news・the idea・the belief のあとの同格の that（～という事実・知らせ）は、あとに完全な文が続く（関係代名詞の which は使えない）。decision・plan・ability・chance・way などのあとは to 不定詞で「～する決定・計画」、名詞をくわしくする不定詞は名詞のすぐあと。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The news that the team had won made everyone happy.', ja: 'チームが勝ったという知らせは、みんなを喜ばせた。' }],
+    questions: [
+      { sentence: 'The news [which] the team had won made everyone happy.', choices: ['that', 'what', 'whether', 'of'], answer: 0, why: 'あとに完全な文が続く「～という知らせ」は同格の that。which は使えない。' },
+      { sentence: 'I was surprised by the fact [what] he had never seen the sea.', choices: ['that', 'which', 'of', 'whether'], answer: 0, why: '「～という事実」は the fact that ＋完全な文。' },
+      { sentence: 'She made a decision [studying] abroad next year.', choices: ['to study', 'of study', 'that study', 'studied'], answer: 0, why: 'decision のあとは to 不定詞：a decision to study。' },
+      { sentence: 'We have a plan [visiting] Kyoto in spring.', choices: ['to visit', 'visit', 'that visit', 'visited'], answer: 0, why: 'plan のあとは to 不定詞：a plan to visit。' },
+      { sentence: 'He has the ability [of solving] difficult problems quickly.', choices: ['to solve', 'solve', 'solved', 'that solving'], answer: 0, why: 'ability のあとはふつう to 不定詞：the ability to solve。' },
+      { sentence: 'There is no evidence [which] the drug is harmful.', choices: ['that', 'what', 'of which', 'whose'], answer: 0, why: '「～という証拠」は evidence that ＋完全な文（同格）。' },
+      { sentence: 'I need something [drink] after running.', choices: ['to drink', 'drinking', 'drunk', 'for drink'], answer: 0, why: '「何か飲むもの」は something to drink（不定詞の形容詞用法）。' },
+      { sentence: 'This is a good chance [for practicing] your English.', choices: ['to practice', 'practice', 'practiced', 'that practice'], answer: 0, why: 'chance のあとは to 不定詞：a chance to practice。' },
+      { sentence: 'The idea [of] students should wear uniforms is old-fashioned to some people.', choices: ['that', 'which', 'what', 'whose'], answer: 0, why: 'あとが完全な文なので同格の that：the idea that students should wear uniforms。' },
+      { sentence: 'There are many places [to visit them] in this city.', choices: ['to visit', 'visiting them', 'to visit it', 'that visit'], answer: 0, why: '不定詞が places をくわしくするときは目的語をくり返さない：places to visit。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

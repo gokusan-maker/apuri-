@@ -461,7 +461,7 @@
   - [x] 176 正誤問題〈91〉（共通テストレベル：接続詞の使い分け）10問
   - [x] 177 誤文訂正〈85〉（TOEFL・IELTS の書き言葉㊸：名詞節（whether・what・that 節の主語））10問
   - [x] 178 正誤問題〈92〉（TOEFL・IELTS の書き言葉㊹：名詞節）10問
-  - [ ] 179 誤文訂正〈86〉（共通テストレベル：同格の that と名詞＋to 不定詞（the fact that・the news that・the decision to））10問
+  - [x] 179 誤文訂正〈86〉（共通テストレベル：同格の that と名詞＋to 不定詞（the fact that・the news that・the decision to））10問
   - [ ] 180 正誤問題〈93〉（共通テストレベル：同格の that と名詞＋to 不定詞）10問
   - [ ] 181 誤文訂正〈87〉（TOEFL・IELTS の書き言葉㊺：受け身の書き言葉（It is believed that・be said to））10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

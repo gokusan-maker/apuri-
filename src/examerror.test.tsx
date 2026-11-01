@@ -1247,3 +1247,10 @@ it('正誤問題〈92〉：名詞節の単元が10問ある', async () => {
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) If the plan')
 })
+
+it('誤文訂正〈86〉：同格の that と名詞＋to 不定詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-86')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('that')
+})
