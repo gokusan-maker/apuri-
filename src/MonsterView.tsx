@@ -1454,6 +1454,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 68 Q41 66 44 68 Q47 70 50 68 Q53 66 56 68 Q59 70 62 68" fill="none" stroke="#4b5563" strokeWidth="1.2" />
       </g>
     )
+  if (species === 'pochard')
+    return (
+      <g>
+        {/* 赤茶色の頭と赤い目 */}
+        <path d="M34 34 Q50 20 66 34" fill="none" stroke="#9a3412" strokeWidth="6" strokeLinecap="round" />
+        <circle cx="56" cy="40" r="2.2" fill="#dc2626" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
