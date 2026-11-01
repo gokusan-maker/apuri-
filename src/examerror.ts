@@ -3006,6 +3006,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'If she [took] the earlier train, she would have arrived on time.', choices: ['had taken', 'takes', 'would take', 'has taken'], answer: 0, why: '主節が would have arrived（過去の仮定）なので、if 節は過去完了：had taken。' },
     ],
   },
+  {
+    id: 'exam-fix-69',
+    title: '入試の誤文訂正〈69〉（TOEFL・IELTS の書き言葉：代名詞の一致）',
+    points: ['代名詞は指す名詞の数に合わせる（the company → its・the students → their）、比べるときの that of ～／those of ～（同じ名詞のくり返しをさける）、同じ種類のものは one・その物自体は it、each・every ～ を受ける代名詞など、エッセイでよく問われる代名詞のきまり。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The population of Tokyo is larger than that of Osaka.', ja: '東京の人口は大阪の人口より多い。' }],
+    questions: [
+      { sentence: 'The company announced [their] new product last week.', choices: ['its', 'it', 'it\'s', 'theirs'], answer: 0, why: 'the company は単数あつかいなので its。it\'s は it is の短縮形。' },
+      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'it of Osaka', 'Osaka\'s one'], answer: 0, why: '比べているのは「人口」どうしなので、population をくり返すかわりに that of Osaka。' },
+      { sentence: 'The prices in this store are lower than [that] in the station shops.', choices: ['those', 'it', 'them of', 'this'], answer: 0, why: '複数名詞 prices を受けるので those。' },
+      { sentence: 'I lost my umbrella, so I need to buy [it].', choices: ['one', 'them', 'that one of', 'its'], answer: 0, why: 'なくした傘そのものではなく「(新しい)傘をひとつ」なので one。' },
+      { sentence: 'I bought a new bag yesterday, and I really like [one].', choices: ['it', 'ones', 'them', 'this one of'], answer: 0, why: '買ったそのバッグそのものを指すので it。' },
+      { sentence: 'The students handed in [his] reports to the teacher.', choices: ['their', 'its', 'them', 'theirs'], answer: 0, why: '主語 the students は複数なので their reports。' },
+      { sentence: 'The museum is famous for [it\'s] collection of old maps.', choices: ['its', 'it', 'their', 'it is'], answer: 0, why: '所有を表すのは its。it\'s は it is の短縮形。' },
+      { sentence: 'These shoes are too small. Do you have bigger [one]?', choices: ['ones', 'it', 'them', 'one\'s'], answer: 0, why: '複数の shoes を受ける「同じ種類のもの」は ones。' },
+      { sentence: 'The climate of Japan is milder than [those] of Canada.', choices: ['that', 'it', 'these', 'them'], answer: 0, why: '単数の climate を受けるので that of Canada。' },
+      { sentence: 'Many animals change [its] behavior when winter comes.', choices: ['their', 'it', 'his', 'theirs'], answer: 0, why: '主語 Many animals は複数なので their behavior。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
