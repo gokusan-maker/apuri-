@@ -23713,6 +23713,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Noisy Ocean', 'How Ships Are Built', 'The Songs of Birds', 'Why the Sea Is Blue'], answer: 0, why: '全体として、人間の活動がさわがしくした海と、その影響・対策を述べている。' },
   },
   {
+    id: 'kyotsu-umbrellas',
+    title: 'The Long Journey of the Umbrella',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On a rainy morning in Tokyo, thousands of umbrellas open at once as people leave train stations. Today, umbrellas are so common and inexpensive that many people own several, and some even leave them behind without much thought. Yet for most of history, the umbrella was a symbol of wealth and power. Its long journey from a sign of high status to an everyday tool tells us a great deal about how objects and their meanings can change over time.",
+      "The earliest umbrellas were not used for rain at all. In ancient Egypt, Assyria, and China, servants held large shades over kings and nobles to protect them from the sun. These parasols were often decorated with silk, gold, or feathers, and only people of high rank were allowed to use them. In some cultures, the number of layers on a parasol showed how important its owner was. In this way, the umbrella was less a practical tool than a sign ( A ) separated the powerful from ordinary people.",
+      "China is often credited with developing the umbrella as protection against rain. Craftspeople there learned to cover paper umbrellas with oil or wax so that water would not soak through, and they invented a frame that could be opened and closed. This design spread to Japan and other parts of Asia. In Japan, traditional umbrellas made of bamboo and oiled paper, known as wagasa, became highly developed and are still made by skilled artisans today.",
+      "In Europe, the story was different. For a long time, carrying an umbrella in the rain was considered unusual, especially for men, who were expected to wear hats and coats instead. In eighteenth-century London, a traveler named Jonas Hanway became famous for carrying an umbrella through the streets for decades, even though people laughed at him. Gradually, however, attitudes changed, and the umbrella became an accepted part of city life, particularly in a rainy country ( B ) people had to walk outdoors so often.",
+      "Later inventions made umbrellas lighter, stronger, and cheaper. Steel frames replaced heavy wood and whalebone, and folding umbrellas small enough to fit in a bag became popular in the twentieth century. Today, the low price of umbrellas has created a new problem: huge numbers are thrown away every year, and many are difficult to recycle. Some cities and companies now offer umbrella-sharing services, ( C ) allow people to borrow an umbrella at one station and return it at another. Perhaps the next chapter in the umbrella's history will be about using it more wisely.",
+    ],
+    ja: [
+      '雨の朝の東京では、人々が駅を出るとき、何千本ものかさがいっせいに開く。今日、かさはとてもありふれていて安いので、何本も持っている人が多く、あまり気にせず置きわすれてしまう人さえいる。しかし歴史の大部分では、かさは富と権力の象徴だった。高い身分のしるしから日々の道具へという、かさの長い旅は、物とその意味が時とともにどう変わりうるかについて多くを教えてくれる。',
+      '最も古いかさは、雨にはまったく使われていなかった。古代のエジプトやアッシリアや中国では、使用人が王や貴族の上に大きな日よけをかかげ、太陽から守った。こうした日がさは絹や金や羽でかざられることが多く、身分の高い人だけが使うことを許された。文化によっては、日がさの重なりの数が持ち主の重要さを示した。このように、かさは実用的な道具というより、権力のある人とふつうの人を分けるしるしだったのである。',
+      '雨よけとしてのかさを生み出したのは中国だとよく言われる。中国の職人は、水がしみこまないよう紙のかさに油やろうをぬることを覚え、開いたりとじたりできる骨組みを発明した。この形は日本やアジアのほかの地域に広まった。日本では、竹と油をぬった紙で作る伝統的なかさ、和がさが大きく発達し、今でも熟練の職人によって作られている。',
+      'ヨーロッパでは、話はちがっていた。長い間、雨の中でかさをさすことはめずらしいこととされ、とくに男性はかわりに帽子とコートを身につけるものとされていた。18世紀のロンドンでは、ジョナス・ハンウェイという旅行家が、人々に笑われながらも何十年もかさをさして通りを歩いたことで有名になった。しかし少しずつ考え方は変わり、かさは都市生活のふつうの一部としてみとめられるようになった。とくに、人々がとても頻繁に外を歩かなければならない雨の多い国ではそうだった。',
+      'のちの発明によって、かさはより軽く、強く、安くなった。重い木やクジラのひげにかわって鉄の骨組みが使われ、20世紀にはかばんに入る小さなおりたたみがさが広まった。今日、かさの安さは新しい問題を生んでいる。毎年ばく大な数がすてられ、その多くはリサイクルしにくいのである。今ではかさのシェアサービスを用意している都市や会社もあり、ある駅でかさを借りて別の駅で返すことができる。かさの歴史の次の章は、それをもっとかしこく使うことについての話になるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a sign を受け、separated の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a rainy country（場所）で、うしろの people had to walk outdoors so often は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'where'], answer: 0, why: 'カンマのあと（非制限用法）で先行詞 umbrella-sharing services を受け、allow の主語になるので which。カンマのあとに that は使えない。' },
+    ],
+    tf: [
+      { statement: '最も古いかさは、太陽から身を守るために使われた。', answer: true, why: '第2段落 servants held large shades over kings and nobles to protect them from the sun。' },
+      { statement: '古代では、だれでも自由に日がさを使えた。', answer: false, why: '第2段落 only people of high rank were allowed to use them。' },
+      { statement: '18世紀のロンドンでは、雨の中でかさをさす男性はめずらしかった。', answer: true, why: '第4段落 carrying an umbrella in the rain was considered unusual, especially for men。' },
+      { statement: '今日のかさは、どれもかんたんにリサイクルできる。', answer: false, why: '第5段落 many are difficult to recycle。' },
+    ],
+    qa: [
+      { q: 'How did Chinese craftspeople make paper umbrellas waterproof?', choices: ['By covering them with oil or wax.', 'By painting them gold.', 'By adding feathers.', 'By making them heavier.'], answer: 0, why: '第3段落 Craftspeople there learned to cover paper umbrellas with oil or wax。' },
+      { q: 'What problem has the low price of umbrellas created?', choices: ['Huge numbers are thrown away every year.', 'Nobody wants to buy them.', 'They are too heavy to carry.', 'They are only sold to kings.'], answer: 0, why: '第5段落 huge numbers are thrown away every year, and many are difficult to recycle。' },
+    ],
+    gist: [
+      { para: 1, choices: ['身分のしるしだった古代のかさ', '雨の多い国', '絹の作り方', '王の一生'], answer: 0, why: '第2段落は、古代のかさが太陽をさけるための、身分の高い人のしるしだったことを述べている。' },
+      { para: 3, choices: ['ヨーロッパでかさが受け入れられるまで', 'ロンドンの天気', '帽子の歴史', '旅行の方法'], answer: 0, why: '第4段落は、ヨーロッパではかさが少しずつ受け入れられていったことを述べている。' },
+    ],
+    titleQ: { choices: ['The Long Journey of the Umbrella', 'How to Stay Dry in Winter', 'The Kings of Ancient Egypt', 'Why It Rains in Tokyo'], answer: 0, why: '全体として、身分のしるしから日々の道具へと変わってきたかさの歴史を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
