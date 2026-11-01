@@ -21802,6 +21802,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Working with Robots', 'How to Build a Robot', 'The History of Factories', 'Why Fruit Is Sweet'], answer: 0, why: '全体として、ロボットが生活や仕事に入る理由と利点、心配、人とロボットの協力を述べている。' },
   },
   {
+    id: 'kyotsu-breakfast',
+    title: 'Is Breakfast Really Important?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "“Breakfast is the most important meal of the day” is something many of us have heard from parents and teachers. Yet in many countries, a large number of people, especially teenagers and young adults, skip breakfast regularly. Some say they are too busy in the morning, while others simply do not feel hungry. Is eating breakfast really as important as people say?",
+      "After a night’s sleep, the body has gone many hours without food. Breakfast provides energy for the morning and helps to restore the supply of fuel that the brain needs. Some studies have found that students who eat breakfast tend to concentrate better and remember information more easily during morning classes than those who do not. Eating in the morning may also help people avoid feeling extremely hungry later, ( A ) can lead to overeating at lunch or choosing unhealthy snacks.",
+      "However, researchers point out that what we eat matters as much as whether we eat. A breakfast of sugary cereal or sweet pastries may give a quick burst of energy, but it can be followed by tiredness a short time later. In contrast, a breakfast that includes foods such as whole grains, eggs, fruit, or yogurt provides energy more slowly and keeps people feeling full for longer. A balanced breakfast does not have to be complicated or take a long time to prepare.",
+      "It is also worth noting that scientists do not completely agree about the effects of breakfast. Some studies of adults have found little difference in weight or health between people who eat breakfast and those who do not. This may be because the overall quality of a person’s diet, as well as factors such as sleep and exercise, have a greater influence on health than any single meal. In other words, breakfast is important, but it is only one part of a healthy lifestyle.",
+      "For students, however, the evidence for eating breakfast is generally stronger, because their bodies and brains are still developing. Some schools have started offering breakfast programs to make sure that every child can start the day with a meal. Small changes, such as preparing something simple the night before or keeping fruit at home, can make it easier to eat in the morning. Taking a few minutes for breakfast may be a simple way ( B ) help ourselves feel and perform better ( C ) the day.",
+    ],
+    ja: [
+      '「朝ごはんは1日で最も大切な食事だ」ということばを、多くの人は親や先生から聞いたことがある。しかし多くの国では、とくに10代や若いおとなを中心に、たくさんの人がふだん朝ごはんをぬいている。朝はいそがしすぎると言う人もいれば、ただおなかがすかないという人もいる。朝ごはんを食べることは、本当に言われているほど大切なのだろうか。',
+      '一晩ねたあと、体は何時間も食べ物をとっていない。朝ごはんは午前中のエネルギーをあたえ、脳が必要とする燃料をおぎなうのを助ける。朝ごはんを食べる生徒は、食べない生徒より午前中の授業でよく集中し、情報を覚えやすい傾向があることを見いだした研究もある。朝に食べることは、あとでひどくおなかがすくのをふせぐのにも役立つかもしれず、それは昼に食べすぎたり体によくないおやつを選んだりすることにつながりうる。',
+      'しかし研究者は、食べるかどうかと同じくらい、何を食べるかが大切だと指摘している。あまいシリアルやあまいパンの朝ごはんは、すぐにエネルギーをあたえるかもしれないが、しばらくするとつかれが続くことがある。それに対して、全粒穀物やたまご、果物、ヨーグルトなどをふくむ朝ごはんは、エネルギーをよりゆっくりあたえ、より長くおなかがいっぱいの感じをたもつ。バランスのよい朝ごはんは、ややこしかったり、準備に長い時間がかかったりする必要はない。',
+      'また、科学者が朝ごはんの効果について完全に意見が一致しているわけではないことも注目に値する。おとなを対象にしたいくつかの研究では、朝ごはんを食べる人と食べない人のあいだで、体重や健康にほとんどちがいが見られなかった。これは、ある1回の食事よりも、その人の食生活全体の質や、すいみんや運動などの要因のほうが健康に大きく影響するからかもしれない。言いかえれば、朝ごはんは大切だが、健康的な生活のほんの一部にすぎないのである。',
+      'しかし生徒にとっては、朝ごはんを食べることの根拠はふつうより強い。体と脳がまだ成長しているからである。すべての子どもが食事で1日を始められるよう、朝食のプログラムを始めた学校もある。前の晩にかんたんなものを用意しておいたり、家に果物を置いておいたりするなどの小さな変化で、朝に食べやすくなる。朝ごはんに数分をかけることは、1日を通して気分よく、よりよくすごせるようにするかんたんな方法かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（ひどくおなかがすくこと）を受け、can lead の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['to', 'for', 'of', 'that'], answer: 0, why: 'a simple way to ～「～するかんたんな方法」。不定詞の形容詞用法。' },
+      { id: 'C', choices: ['throughout', 'since', 'among', 'between'], answer: 0, why: '「1日を通して」は throughout the day。' },
+    ],
+    tf: [
+      { statement: '多くの国で、朝ごはんをぬく人はほとんどいない。', answer: false, why: '第1段落 a large number of people ... skip breakfast regularly。' },
+      { statement: '朝ごはんを食べる生徒は、午前中の授業でよく集中する傾向があるという研究がある。', answer: true, why: '第2段落 students who eat breakfast tend to concentrate better。' },
+      { statement: 'あまいシリアルの朝ごはんは、エネルギーをゆっくりあたえる。', answer: false, why: '第3段落 may give a quick burst of energy, but it can be followed by tiredness。' },
+      { statement: '科学者は、朝ごはんの効果について完全に意見が一致しているわけではない。', answer: true, why: '第4段落 scientists do not completely agree about the effects of breakfast。' },
+    ],
+    qa: [
+      { q: 'Why is the evidence for eating breakfast stronger for students?', choices: ['Their bodies and brains are still developing.', 'They have more free time.', 'They sleep less than adults.', 'Schools require it.'], answer: 0, why: '第5段落 because their bodies and brains are still developing。' },
+      { q: 'What kind of breakfast keeps people feeling full for longer?', choices: ['One that includes whole grains, eggs, fruit, or yogurt.', 'One with only sweet pastries.', 'One eaten very quickly.', 'One with no food at all.'], answer: 0, why: '第3段落 a breakfast that includes foods such as whole grains, eggs, fruit, or yogurt ... keeps people feeling full for longer。' },
+    ],
+    gist: [
+      { para: 1, choices: ['朝ごはんが体と脳にあたえる効果', 'すいみんの長さ', '昼ごはんのメニュー', '脳のしくみの歴史'], answer: 0, why: '第2段落は、エネルギー、集中、食べすぎの防止という朝ごはんの効果を述べている。' },
+      { para: 3, choices: ['朝ごはんの効果について意見が分かれていること', '体重の量り方', '運動の種類', '研究者の名前'], answer: 0, why: '第4段落は、おとなの研究ではちがいが小さいこともあり、生活全体が大切だと述べている。' },
+    ],
+    titleQ: { choices: ['Is Breakfast Really Important?', 'How to Bake Bread', 'The History of Cereal', 'Why Teenagers Sleep Late'], answer: 0, why: '全体として、朝ごはんの効果、何を食べるかの大切さ、研究の意見の分かれ、生徒にとっての意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
