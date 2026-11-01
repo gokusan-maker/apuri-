@@ -22816,6 +22816,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living Records of the Past', 'How to Plant a Pine Tree', 'The Pyramids of Egypt', 'Why Leaves Fall in Autumn'], answer: 0, why: '全体として、何千年も生きる古い木の秘密と、過去を記録する価値、その保護を述べている。' },
   },
   {
+    id: 'kyotsu-notifications',
+    title: 'The Cost of a Ping',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "A sound, a vibration, a small red circle on the screen: for many people, these signals appear dozens or even hundreds of times a day. Smartphone notifications tell us about new messages, news stories, games, and special offers, and they are designed to catch our attention immediately. While they can be useful, a growing number of researchers are asking what effect this constant stream of interruptions has on our ability to concentrate.",
+      "One problem is that switching attention takes more effort than we realize. When we stop what we are doing to check a notification, our brain must leave one task and focus on another. Returning to the original task is not instant. Studies of office workers have found that after an interruption, it can take several minutes to regain full concentration. If interruptions happen frequently, people may spend much of their day in a state ( A ) they are never fully focused on anything.",
+      "Even notifications that we ignore can be distracting. In one experiment, students were asked to complete a task requiring careful attention. Those who received a notification on their phone made more mistakes than those who did not, even when they did not look at the message. The researchers suggested that simply knowing a message was waiting caused the students' minds to wander. Some studies have even found that having a phone on the desk, turned face down and silent, can slightly reduce performance on difficult tasks.",
+      "Why are notifications so hard to resist? Part of the reason is that they offer small, unpredictable rewards. We never know whether a notification will bring exciting news or something unimportant, and this uncertainty makes checking feel attractive. Many apps are deliberately designed to take advantage of this tendency, because companies earn more money when people spend more time using their products.",
+      "Fortunately, there are simple steps ( B ) can help. People can turn off notifications for apps that are not essential, choose specific times of day to check messages, or keep their phones in another room while studying or working. Some phones now offer modes that block notifications during certain hours. Such habits do not require giving up technology. Instead, they allow people to use their devices as tools ( C ) serve their goals, rather than letting the devices decide where their attention goes.",
+    ],
+    ja: [
+      '音やふるえ、画面の小さな赤い丸。多くの人にとって、こうした合図は1日に何十回、あるいは何百回もあらわれる。スマートフォンの通知は、新しいメッセージやニュース、ゲーム、特別なお知らせについて伝え、すぐに私たちの注意を引くように作られている。役に立つこともあるが、このたえまない中断の流れが集中する力にどんな影響をあたえるのかを問う研究者がふえている。',
+      'ひとつの問題は、注意を切りかえるのは、私たちが思うより大きな努力がいるということである。通知を見るために今していることを止めると、脳はひとつの作業をはなれ、別の作業に集中しなければならない。元の作業にもどるのはすぐにはできない。会社で働く人の研究では、中断のあと、完全に集中をとりもどすのに数分かかることがあるとわかった。中断が何度も起これば、人は一日の多くを、何にも完全には集中していない状態ですごしてしまうかもしれない。',
+      '無視した通知でさえ、気をちらすことがある。ある実験では、学生たちが注意深さの必要な作業をするよう求められた。スマートフォンに通知が来た学生は、メッセージを見なかったときでも、通知が来なかった学生よりまちがいが多かった。研究者は、メッセージが待っているとわかっているだけで、学生の心がよそへ向いてしまったのだろうと考えた。音を消してうらがえしにしたスマートフォンが机の上にあるだけで、むずかしい作業の成績が少し下がることがあるとわかった研究さえある。',
+      'なぜ通知にさからうのはこんなにむずかしいのだろうか。理由の一部は、通知が小さな、予想できないごほうびをくれることにある。通知がわくわくする知らせなのか、どうでもいいものなのか、私たちには決してわからず、この不確かさが見たい気持ちをかき立てる。多くのアプリは、人々が製品を長く使うほど会社がもうかるので、この傾向を利用するようにわざと作られている。',
+      'さいわい、役に立つかんたんな方法がある。大切でないアプリの通知を切ったり、メッセージを見る時間を1日の中で決めたり、勉強や仕事の間はスマートフォンを別の部屋に置いたりすることができる。今では、ある時間帯に通知を止めるモードをそなえたスマートフォンもある。こうした習慣は、技術を手ばなすことを必要としない。そうではなく、機械に注意の向け先を決めさせるのではなく、自分の目標に役立つ道具として機械を使えるようにしてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a state（状態）で、うしろの they are never fully focused on anything は完全な文なので関係副詞 where（in which と同じ）。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 simple steps を受け、can help の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 tools を受け、serve の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '中断のあと、完全に集中をとりもどすのに数分かかることがある。', answer: true, why: '第2段落 it can take several minutes to regain full concentration。' },
+      { statement: '通知を見なければ、作業のまちがいはまったくふえない。', answer: false, why: '第3段落 Those who received a notification ... made more mistakes ..., even when they did not look at the message。' },
+      { statement: '多くのアプリは、人が長く使うようにわざと作られている。', answer: true, why: '第4段落 Many apps are deliberately designed to take advantage of this tendency。' },
+      { statement: '筆者は、集中するためにはスマートフォンを手ばなすしかないと考えている。', answer: false, why: '第5段落 Such habits do not require giving up technology。' },
+    ],
+    qa: [
+      { q: 'Why are notifications hard to resist?', choices: ['They offer small, unpredictable rewards.', 'They are always important.', 'They are very quiet.', 'They make phones cheaper.'], answer: 0, why: '第4段落 they offer small, unpredictable rewards。' },
+      { q: 'Which is one of the steps suggested by the author?', choices: ['Keeping the phone in another room while studying.', 'Checking messages every minute.', 'Buying a second phone.', 'Turning on all notifications.'], answer: 0, why: '第5段落 keep their phones in another room while studying or working。' },
+    ],
+    gist: [
+      { para: 1, choices: ['注意の切りかえにかかる負担', '会社の仕事の時間', '脳の大きさ', 'メッセージの書き方'], answer: 0, why: '第2段落は、中断のあと集中をとりもどすのに時間がかかることを述べている。' },
+      { para: 2, choices: ['見なかった通知でも気がちること', '机の選び方', '学生の成績表', '音楽の効果'], answer: 0, why: '第3段落は、通知を無視しても、また机の上にあるだけでも集中が下がることを述べている。' },
+    ],
+    titleQ: { choices: ['The Cost of a Ping', 'How to Build an App', 'The History of the Telephone', 'Why Phones Are Expensive'], answer: 0, why: '全体として、通知が集中にあたえる影響と、それへの対し方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
