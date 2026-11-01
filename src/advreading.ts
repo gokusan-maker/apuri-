@@ -23908,6 +23908,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Price of Free Services', 'How to Build a Website', 'The History of Advertising', 'Why Phones Need Batteries'], answer: 0, why: '全体として、無料のサービスの裏にある個人データの利用と、プライバシーの問題を述べている。' },
   },
   {
+    id: 'kyotsu-owls',
+    title: 'Silent Hunters of the Night',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Owls have long been seen as mysterious birds. In many stories they appear as symbols of wisdom, while in others they are linked with the night and with secrets. Part of this image comes from their unusual way of life. Most owls hunt in the dark, and they can catch mice and other small animals that are hidden under leaves or even snow. Scientists who study owls have discovered that these birds have several remarkable features ( A ) make them some of the most skilled hunters in nature.",
+      "One of the most famous features of owls is their silent flight. When most birds flap their wings, air rushing over the feathers creates a noise that small animals can hear. An owl's wings, however, are designed to reduce this sound. The front edges of their flight feathers have tiny comb-like structures that break up the flow of air, and the surfaces of the feathers are soft like velvet. As a result, an owl can approach its prey almost without a sound, giving the animal little chance to escape.",
+      "Owls also have extraordinary hearing. In some species, the ears are placed at different heights on each side of the head. Because of this, a sound reaches one ear slightly earlier and more strongly than the other, which helps the owl calculate exactly where the sound is coming from, both from side to side and up and down. The flat, round shape of an owl's face also works like a dish, collecting sound and directing it toward the ears. Some owls can catch prey in complete darkness by relying on hearing alone.",
+      "Their eyes are another important tool. Owls have very large eyes compared with the size of their heads, allowing them to collect as much light as possible at night. However, their eyes cannot move in their sockets the way human eyes can. To look around, owls must turn their whole heads, and some species can rotate their heads about 270 degrees. Special features in their necks protect the blood vessels so that blood can continue to flow even when the head is turned so far.",
+      "The study of owls has inspired engineers as well. Designers of fans, wind turbines, and even trains have studied the structure of owl feathers in order to reduce noise. Meanwhile, many owl species face threats from habitat loss, as old trees ( B ) they nest in are cut down. Protecting these silent hunters means protecting the forests and fields ( C ) they depend on, and it may also help us continue to learn from their remarkable design.",
+    ],
+    ja: [
+      'フクロウは昔から、なぞめいた鳥として見られてきた。多くの物語ではかしこさの象徴として登場し、ほかの物語では夜やひみつと結びつけられている。こうしたイメージの一部は、そのめずらしい生き方から来ている。ほとんどのフクロウは暗やみで狩りをし、落ち葉や雪の下にさえかくれているネズミなどの小さな動物をつかまえることができる。フクロウを研究する科学者たちは、この鳥が自然の中で最もすぐれた狩りの名人のひとつになっている、いくつかのおどろくべき特徴をもっていることを発見した。',
+      'フクロウの最も有名な特徴のひとつは、音を立てない飛び方である。たいていの鳥がはばたくと、羽の上を流れる空気が、小さな動物に聞こえる音を出す。しかしフクロウの翼は、この音をへらすようにできている。風切り羽の前のふちには、空気の流れを細かく分けるくしのような小さなつくりがあり、羽の表面はビロードのようにやわらかい。その結果、フクロウはほとんど音を立てずにえものに近づくことができ、えものはにげる機会がほとんどない。',
+      'フクロウはまた、ずばぬけた聴覚をもっている。種類によっては、耳が頭の左右でちがう高さについている。そのため、音は一方の耳にもう一方よりわずかに早く強くとどき、フクロウは音が左右・上下のどこから来ているのかを正確に計算できる。フクロウの平たく丸い顔の形も皿のような働きをし、音を集めて耳へとみちびく。まっくらな中でも、聴覚だけをたよりにえものをつかまえられるフクロウもいる。',
+      '目もまた大切な道具である。フクロウは頭の大きさにくらべてとても大きな目をもっており、夜にできるだけ多くの光を集めることができる。しかし、その目は人間の目のように眼窩の中で動かすことができない。まわりを見るには、フクロウは頭全体を回さなければならず、頭を約270度回せる種類もいる。首の特別なつくりが血管を守っているので、頭をそこまで回しても血は流れ続けることができる。',
+      'フクロウの研究は技術者にもヒントをあたえてきた。扇風機や風力発電の羽根、さらには列車の設計者は、騒音をへらすためにフクロウの羽のつくりを研究してきた。一方、多くのフクロウは、巣をつくる古い木が切られることで、すみかを失う危険に直面している。この静かな狩人を守ることは、フクロウがたよる森や野原を守ることであり、それはまた、そのすばらしいつくりから私たちが学び続けることにもつながるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 several remarkable features を受け、make の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 old trees を受け、nest in の目的語になる関係代名詞 that（in が後ろに残るので where は使えない）。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the forests and fields を受け、depend on の目的語になる関係代名詞 that（on が後ろに残るので where は使えない）。' },
+    ],
+    tf: [
+      { statement: 'フクロウの翼は、はばたくときの音をへらすようにできている。', answer: true, why: '第2段落 An owl\'s wings, however, are designed to reduce this sound。' },
+      { statement: 'フクロウの耳は、どの種類も左右同じ高さについている。', answer: false, why: '第3段落 In some species, the ears are placed at different heights on each side of the head。' },
+      { statement: 'フクロウの目は、人間の目のように動かすことができる。', answer: false, why: '第4段落 their eyes cannot move in their sockets the way human eyes can。' },
+      { statement: 'フクロウの羽のつくりは、騒音をへらす設計に役立てられている。', answer: true, why: '第5段落 Designers of fans, wind turbines, and even trains have studied the structure of owl feathers in order to reduce noise。' },
+    ],
+    qa: [
+      { q: 'How does the shape of an owl\'s face help it?', choices: ['It collects sound and directs it toward the ears.', 'It keeps the owl warm.', 'It makes the owl look bigger.', 'It helps the owl fly faster.'], answer: 0, why: '第3段落 The flat, round shape of an owl\'s face also works like a dish, collecting sound and directing it toward the ears。' },
+      { q: 'Why must owls turn their whole heads to look around?', choices: ['Their eyes cannot move in their sockets.', 'Their necks are very short.', 'They cannot see in the dark.', 'Their ears are on their backs.'], answer: 0, why: '第4段落 their eyes cannot move in their sockets ... To look around, owls must turn their whole heads。' },
+    ],
+    gist: [
+      { para: 1, choices: ['音を立てない飛び方のしくみ', '羽の色', '鳥の歌', '空気の重さ'], answer: 0, why: '第2段落は、くしのようなつくりとやわらかい羽で、音を立てずに飛べるしくみを述べている。' },
+      { para: 2, choices: ['すぐれた聴覚のしくみ', '耳のそうじ', '皿の作り方', '音楽の聞き方'], answer: 0, why: '第3段落は、左右でちがう高さの耳や、皿のような顔で音の場所を知るしくみを述べている。' },
+    ],
+    titleQ: { choices: ['Silent Hunters of the Night', 'How to Build a Wind Turbine', 'Stories About Wise Birds', 'Why Mice Hide in Snow'], answer: 0, why: '全体として、夜の静かな狩人であるフクロウのすぐれた体のつくりを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
