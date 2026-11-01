@@ -23674,6 +23674,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Memories in Motion', 'How to Build a Bicycle', 'The History of the Piano', 'Why Muscles Get Tired'], answer: 0, why: '全体として、体の技能の記憶が脳の中でどう作られ強められるかを述べている。' },
   },
   {
+    id: 'kyotsu-ocean-noise',
+    title: 'A Noisy Ocean',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we imagine the ocean, many of us picture a quiet, peaceful world beneath the waves. In reality, the sea is full of sound. Whales sing to one another across great distances, dolphins use clicks to find food, and even small fish and shrimp make noises. Because light does not travel far in water, many sea animals depend on sound to communicate, find their way, and detect danger. Over the past century, however, human activities have made the oceans much noisier than before.",
+      "The largest source of this noise is shipping. Thousands of large cargo ships cross the oceans every day, and their engines and propellers produce a constant low rumble that can travel hundreds of kilometers underwater. Other sources include offshore construction, oil and gas exploration, and military equipment such as sonar. Some of these activities create sudden, extremely loud sounds, while others add to a steady background noise ( A ) never seems to stop.",
+      "Scientists are concerned that this noise is harming marine life. For whales, which use low-frequency calls to keep in touch, ship noise can act like a crowd of people talking loudly in a restaurant, making it difficult to hear one another. Studies have found that some whales call more loudly or less often when ships are nearby. Loud noises can also cause stress, drive animals away from areas ( B ) they normally feed or give birth, and in extreme cases, even damage their hearing.",
+      "The effects are not limited to large animals. Research suggests that young fish use the sounds of healthy coral reefs to find a place to live. When these natural sounds are covered by human noise, the fish may have trouble finding suitable homes. Some studies have also shown that noise can make small animals, such as crabs, less able to escape from predators.",
+      "Unlike many other forms of pollution, noise disappears as soon as its source is removed, which means that solutions can have rapid effects. Ships can be designed with quieter propellers, and simply reducing their speed can greatly lower the noise they make. During a period when shipping traffic fell sharply, researchers recorded a noticeable drop in underwater noise in some regions. Such findings give hope that, with careful planning, we can protect the underwater world ( C ) so many creatures depend on for their survival.",
+    ],
+    ja: [
+      '海を思いうかべるとき、私たちの多くは波の下の静かでおだやかな世界を想像する。しかし実際には、海は音でいっぱいである。クジラは遠くはなれたなかまに歌いかけ、イルカはカチカチという音でえさを見つけ、小さな魚やエビでさえ音を出す。光は水の中では遠くまでとどかないので、多くの海の動物は伝え合い、道を見つけ、危険を知るのに音にたよっている。しかしこの100年の間に、人間の活動によって海は以前よりずっとさわがしくなった。',
+      'この騒音の最大の原因は船の行き来である。毎日何千もの大きな貨物船が海をわたり、そのエンジンとスクリューは、水中で何百キロメートルもとどく低いゴーッという音をたえず出している。ほかの原因には、海上の工事、石油やガスの探査、ソナーのような軍の装置がある。こうした活動の中には、急にとても大きな音を出すものもあれば、決して止まないように思える一定の背景の騒音をふやすものもある。',
+      '科学者たちは、この騒音が海の生き物を傷つけていることを心配している。低い声でなかまと連絡をとるクジラにとって、船の騒音はレストランで大勢の人が大声で話しているようなもので、たがいの声を聞きとりにくくする。研究によれば、船が近くにいると、より大きな声で鳴いたり、鳴く回数をへらしたりするクジラもいる。大きな音はストレスを起こし、ふだんえさを食べたり子どもをうんだりする場所から動物を追いはらい、極端な場合には耳を傷つけることさえある。',
+      '影響は大きな動物だけに限られない。研究によれば、魚の子どもは健康なサンゴ礁の音をたよりにすみかを見つける。こうした自然の音が人間の騒音でかき消されると、魚はよいすみかを見つけにくくなるかもしれない。騒音によって、カニのような小さな動物が天敵からにげにくくなることを示した研究もある。',
+      'ほかの多くの汚染とちがって、騒音は原因がなくなればすぐに消えるので、解決策はすぐに効果をあらわしうる。船はより静かなスクリューで設計でき、ただ速度を落とすだけでも、出す騒音を大きくへらせる。船の行き来が大きくへった時期には、いくつかの地域で水中の騒音がはっきり下がったことを研究者が記録した。こうした発見は、注意深く計画すれば、多くの生き物が生きのびるためにたよっている海の中の世界を守れるという希望をあたえてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a steady background noise を受け、seems の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は areas（場所）で、うしろの they normally feed or give birth は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 the underwater world を受け、depend on の目的語になる関係代名詞 that（on が後ろに残るので where は使えない）。' },
+    ],
+    tf: [
+      { statement: '多くの海の動物は、伝え合うのに音にたよっている。', answer: true, why: '第1段落 many sea animals depend on sound to communicate, find their way, and detect danger。' },
+      { statement: '海の騒音の最大の原因は、海上の工事である。', answer: false, why: '第2段落 The largest source of this noise is shipping。' },
+      { statement: '船が近くにいると、より大きな声で鳴くクジラがいる。', answer: true, why: '第3段落 some whales call more loudly or less often when ships are nearby。' },
+      { statement: '騒音は、原因がなくなってもずっと海に残り続ける。', answer: false, why: '第5段落 noise disappears as soon as its source is removed。' },
+    ],
+    qa: [
+      { q: 'How do young fish use sound?', choices: ['They use the sounds of healthy coral reefs to find a place to live.', 'They use it to scare away whales.', 'They use it to find ships.', 'They use it to sleep.'], answer: 0, why: '第4段落 young fish use the sounds of healthy coral reefs to find a place to live。' },
+      { q: 'What simple step can greatly lower the noise ships make?', choices: ['Reducing their speed.', 'Painting them a different color.', 'Using more powerful engines.', 'Traveling only at night.'], answer: 0, why: '第5段落 simply reducing their speed can greatly lower the noise they make。' },
+    ],
+    gist: [
+      { para: 1, choices: ['海の騒音の原因', '貨物船の大きさ', '石油の値段', '軍の歴史'], answer: 0, why: '第2段落は、船の行き来や工事、探査、ソナーなど騒音の原因を述べている。' },
+      { para: 2, choices: ['騒音がクジラなどにあたえる害', 'レストランのマナー', 'クジラの歌の歌詞', '耳のつくり'], answer: 0, why: '第3段落は、騒音がクジラの伝え合いをさまたげ、ストレスや耳の傷をもたらすことを述べている。' },
+    ],
+    titleQ: { choices: ['A Noisy Ocean', 'How Ships Are Built', 'The Songs of Birds', 'Why the Sea Is Blue'], answer: 0, why: '全体として、人間の活動がさわがしくした海と、その影響・対策を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
