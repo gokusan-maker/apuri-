@@ -735,3 +735,23 @@ it('デザイン181：ガチャの結果で、名前の横にタイプのアイ�
   const t = typeOf('cat')
   expect(screen.getByLabelText(`タイプ：${t.name}`).textContent).toContain(t.icon)
 })
+
+it('デザイン184：連続ガチャで、いちばんレアな子に王冠がつく（ぜんぶ同じレアならつかない）', () => {
+  localStorage.clear()
+  const list = [
+    { kind: kindOf('normal'), species: speciesOf('fox') },
+    { kind: kindOf('kin'), species: speciesOf('cat') },
+    { kind: kindOf('kin'), species: speciesOf('mochi') },
+  ]
+  const { unmount } = render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={() => list} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  const crowns = screen.getAllByLabelText('いちばんレア')
+  expect(crowns).toHaveLength(1)
+  expect(crowns[0].closest('li')?.textContent).toContain(speciesOf('cat').name)
+  unmount()
+  localStorage.clear()
+  const same = list.map((x) => ({ ...x, kind: kindOf('normal') }))
+  render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={() => same} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  expect(screen.queryByLabelText('いちばんレア')).toBeNull()
+})

@@ -537,6 +537,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
                   {k.species.name}
                 </span>
                 <span className={`kind-tag r-${k.kind.rarity}`}>{RARITY_LABEL[k.kind.rarity]}</span>
+                {/* デザイン184：レアがまざったときは、いちばんレアな子（同じなら先に出た子）に王冠 */}
+                {new Set(multi.list.map((x) => x.kind.rarity)).size > 1 && multi.list.findIndex((x) => x.kind.rarity === bestRarity(multi.list)) === i && (
+                  <span className="gacha-new" aria-label="いちばんレア">
+                    👑
+                  </span>
+                )}
                 {(k.newKind || k.newSpecies) && <span className="gacha-new">NEW!</span>}
                 {!!k.refund && <span className="gacha-dup">🪙{k.refund}もどった</span>}
                 {k.bonus && <span className="gacha-bonus">🎁{k.bonus}</span>}
