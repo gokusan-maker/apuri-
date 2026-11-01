@@ -3846,6 +3846,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Take care of [yourselfs], everyone!', choices: ['yourselves', 'yourself', 'yours', 'your selfs'], answer: 0, why: '相手が複数（everyone）なので yourselves。self の複数形は selves。' },
     ],
   },
+  {
+    id: 'exam-fix-89',
+    title: '入試の誤文訂正〈89〉（TOEFL・IELTS の書き言葉：比較の書き言葉）',
+    points: ['different from（～とちがう）、the same as（～と同じ）、similar to（～に似ている）、compared with／to（～とくらべると）、in contrast to（～とは対照的に）、superior／inferior to（than ではなく to）、prefer A to B、twice as ～ as、比べるものをそろえる（that of ～）など、エッセイでよく使う比較の言い方。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The climate of Japan is different from that of Australia.', ja: '日本の気候はオーストラリアの気候とちがう。' }],
+    questions: [
+      { sentence: 'My opinion is different [than] yours.', choices: ['from', 'with', 'to as', 'of'], answer: 0, why: '「～とちがう」は different from。書き言葉では from が標準。' },
+      { sentence: 'His phone is the same [like] mine.', choices: ['as', 'to', 'with', 'than'], answer: 0, why: '「～と同じ」は the same as。' },
+      { sentence: 'This painting is similar [with] the one in the museum.', choices: ['to', 'as', 'from', 'than'], answer: 0, why: '「～に似ている」は similar to。' },
+      { sentence: 'This model is superior [than] the old one in many ways.', choices: ['to', 'from', 'as', 'over than'], answer: 0, why: 'superior／inferior は than ではなく to をとる：superior to。' },
+      { sentence: 'I prefer tea [than] coffee.', choices: ['to', 'from', 'as', 'over to'], answer: 0, why: 'prefer A to B「B より A が好き」。than は使わない。' },
+      { sentence: '[Compare] with last year, sales have increased by 20 percent.', choices: ['Compared', 'Comparing to', 'To compare', 'Comparison'], answer: 0, why: '「～とくらべると」は Compared with ～（過去分詞の分詞構文）。' },
+      { sentence: 'In contrast [with] the city, the countryside is quiet and peaceful.', choices: ['to', 'from', 'than', 'of'], answer: 0, why: '「～とは対照的に」は in contrast to ～。' },
+      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka has', 'it of Osaka'], answer: 0, why: '人口どうしを比べるので that of Osaka。' },
+      { sentence: 'This bridge is [twice longer] than that one.', choices: ['twice as long as', 'two times long as', 'twice long as', 'as twice long as'], answer: 0, why: '倍数は twice as ～ as：twice as long as。' },
+      { sentence: 'Prices in this area are [highest] than in the city center.', choices: ['higher', 'more high', 'the highest', 'high'], answer: 0, why: 'than があるので比較級 higher。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

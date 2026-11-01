@@ -473,7 +473,7 @@
   - [x] 182 正誤問題〈94〉（TOEFL・IELTS の書き言葉㊻：受け身の書き言葉）10問
   - [x] 183 誤文訂正〈88〉（共通テストレベル：再帰代名詞と相互代名詞（myself・each other・by oneself））10問
   - [x] 184 正誤問題〈95〉（共通テストレベル：再帰代名詞と相互代名詞）10問
-  - [ ] 185 誤文訂正〈89〉（TOEFL・IELTS の書き言葉㊼：比較の書き言葉（compared with・in contrast to・the same as・different from））10問
+  - [x] 185 誤文訂正〈89〉（TOEFL・IELTS の書き言葉㊼：比較の書き言葉（compared with・in contrast to・the same as・different from））10問
   - [ ] 186 正誤問題〈96〉（TOEFL・IELTS の書き言葉㊽：比較の書き言葉）10問
   - [ ] 187 誤文訂正〈90〉（共通テストレベル：仮定法の発展（Were I ～・Had I known ～・If it were not for ～・as if））10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

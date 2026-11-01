@@ -1289,3 +1289,10 @@ it('正誤問題〈95〉：再帰代名詞と相互代名詞の単元が10問あ
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Myself')
 })
+
+it('誤文訂正〈89〉：比較の書き言葉の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-89')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('from')
+})
