@@ -22075,6 +22075,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Eyes Above the Sky', 'How to Make a Mirror', 'Why the Moon Shines', 'The Weather on Jupiter'], answer: 0, why: '全体として、空の上から宇宙を見る宇宙望遠鏡の利点・欠点・意義を述べている。' },
   },
   {
+    id: 'kyotsu-city-noise',
+    title: 'The Invisible Pollution',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people talk about pollution, they usually mean dirty air or water. However, many health experts believe that another kind of pollution deserves more attention: noise. In large cities, the sounds of traffic, trains, construction work, and airplanes continue from early morning until late at night. Because noise cannot be seen or smelled, its effects are easy to overlook, yet research suggests that it can have a serious influence on our bodies and minds.",
+      "One of the most obvious effects of noise is on sleep. Even when people do not fully wake up, loud sounds at night can cause the body to react as if it were in danger. The heart beats faster, and the body releases stress hormones. People ( A ) live near busy roads or airports often say that they feel tired in the morning, even after spending enough hours in bed. Over many years, poor sleep of this kind may increase the risk of heart disease and other health problems.",
+      "Noise also affects how well people can think and learn. In several studies, children attending schools located near airports performed worse on reading tests than children at quieter schools. The researchers suggested that constant noise made it harder for the children to concentrate and to hear their teachers clearly. Adults are affected too. Workers in noisy offices tend to make more mistakes and report feeling more stressed than those ( B ) work in calm environments.",
+      "Fortunately, there are many ways to reduce noise in cities. Some governments have built walls along highways to block traffic sounds, and others have introduced rules that limit night flights at airports. Road surfaces made of special materials can make cars quieter, and electric buses produce far less noise than older ones. Planting trees and creating parks can also help, since green spaces absorb some sound and give people a place to rest from the noise of the streets.",
+      "Individuals can protect themselves as well, for example by using earplugs at night or by keeping the volume of their headphones at a safe level. However, experts point out that noise is mainly a problem ( C ) must be solved by communities working together, not by each person alone. As cities continue to grow, careful planning will be needed to make sure that urban life remains not only convenient but also healthy and peaceful.",
+    ],
+    ja: [
+      '人々が汚染について話すとき、ふつうはよごれた空気や水のことを言う。しかし、多くの健康の専門家は、別の種類の汚染にもっと注意を向けるべきだと考えている。騒音である。大都市では、車や電車、工事、飛行機の音が、朝早くから夜おそくまで続く。騒音は見ることもにおいをかぐこともできないので、その影響は見すごされやすいが、研究によれば、騒音は私たちの体と心に深刻な影響をあたえることがある。',
+      '騒音の最もはっきりした影響のひとつは、睡眠へのものである。完全には目がさめなくても、夜の大きな音は、まるで危険にさらされているかのように体を反応させることがある。心臓はより速く打ち、体はストレスホルモンを出す。交通量の多い道路や空港の近くに住む人々は、十分な時間ねていても朝につかれを感じるとよく言う。何年もの間このような質の悪い睡眠が続くと、心臓病などの健康問題の危険が高まるかもしれない。',
+      '騒音は、人がどれだけよく考え、学べるかにも影響する。いくつかの研究では、空港の近くにある学校に通う子どもたちは、静かな学校の子どもたちより読解テストの成績が悪かった。研究者は、たえまない騒音のせいで、子どもたちが集中したり先生の話をはっきり聞いたりするのがむずかしくなったのだろうと考えた。おとなも影響を受ける。うるさい職場で働く人は、落ち着いた環境で働く人より、まちがいが多く、ストレスを強く感じると答える傾向がある。',
+      'さいわい、都市の騒音をへらす方法はたくさんある。高速道路ぞいに壁をつくって車の音をさえぎった政府もあれば、空港の夜間の飛行を制限するきまりを作った政府もある。特別な材料でできた道路の表面は車を静かにし、電気バスは古いバスよりずっと音が小さい。木を植えたり公園をつくったりすることも役に立つ。緑の多い場所は音の一部を吸収し、通りの騒音から休む場所を人々にあたえてくれるからである。',
+      '個人も、たとえば夜に耳せんを使ったり、ヘッドホンの音量を安全な大きさにしたりして、自分を守ることができる。しかし専門家は、騒音はおもに、一人ひとりではなく地域が協力して解決しなければならない問題だと指摘している。都市が大きくなり続ける中で、都会の生活が便利なだけでなく、健康でおだやかなものであり続けるように、ていねいな計画が必要になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 People（人）を受け、live の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['who', 'which', 'where', 'what'], answer: 0, why: '先行詞 those（～な人々）を受け、work の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a problem を受け、must be solved の主語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '騒音は目に見えないので、その影響は見すごされやすい。', answer: true, why: '第1段落 Because noise cannot be seen or smelled, its effects are easy to overlook。' },
+      { statement: '夜の大きな音は、目がさめないかぎり体に何の影響もない。', answer: false, why: '第2段落 Even when people do not fully wake up, loud sounds at night can cause the body to react。' },
+      { statement: '空港の近くの学校の子どもたちは、読解テストの成績が悪かった。', answer: true, why: '第3段落 children attending schools located near airports performed worse on reading tests。' },
+      { statement: '専門家は、騒音は一人ひとりが解決すべき問題だと考えている。', answer: false, why: '第5段落 noise is mainly a problem that must be solved by communities working together, not by each person alone。' },
+    ],
+    qa: [
+      { q: 'What happens to the body when loud sounds occur at night?', choices: ['The heart beats faster and stress hormones are released.', 'The body temperature drops quickly.', 'People always wake up completely.', 'The body becomes more relaxed.'], answer: 0, why: '第2段落 The heart beats faster, and the body releases stress hormones。' },
+      { q: 'Why can green spaces help reduce noise problems?', choices: ['They absorb some sound and give people a place to rest.', 'They make cars run faster.', 'They stop all airplanes from flying.', 'They create louder sounds.'], answer: 0, why: '第4段落 green spaces absorb some sound and give people a place to rest from the noise of the streets。' },
+    ],
+    gist: [
+      { para: 2, choices: ['騒音が考える力や学ぶ力にあたえる影響', '空港の歴史', '読解テストの作り方', '職場の給料'], answer: 0, why: '第3段落は、騒音が子どもとおとなの集中力や学習にあたえる影響を述べている。' },
+      { para: 3, choices: ['都市の騒音をへらすさまざまな方法', '電気バスの値段', '木の育て方', '道路の長さ'], answer: 0, why: '第4段落は、壁・きまり・道路の材料・電気バス・公園などの対策を述べている。' },
+    ],
+    titleQ: { choices: ['The Invisible Pollution', 'How Airplanes Fly', 'The Best Headphones', 'Why Cities Grow'], answer: 0, why: '全体として、目に見えない汚染である騒音の健康への影響と、その対策を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
