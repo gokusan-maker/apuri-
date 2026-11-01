@@ -3468,6 +3468,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I felt the ground [to shake] during the earthquake.', choices: ['shake', 'shaken', 'to shaking', 'shakes'], answer: 0, why: 'feel 物 ＋動詞の原形（または ～ing）：felt the ground shake。' },
     ],
   },
+  {
+    id: 'exam-fix-80',
+    title: '入試の誤文訂正〈80〉（共通テストレベル：分詞構文）',
+    points: ['分詞構文の主語は主節の主語と同じ。主語が「する」側なら -ing、「される」側なら過去分詞（Seen from ～）、主節より前のことは Having ＋過去分詞、否定は Not ～ing、慣用表現 Judging from ～・Generally speaking など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Seen from the plane, the island looked like a heart.', ja: '飛行機から見ると、その島はハートの形に見えた。' }],
+    questions: [
+      { sentence: '[Walk] along the beach, I found a beautiful shell.', choices: ['Walking', 'Walked', 'To walking', 'Walks'], answer: 0, why: '主語 I が「歩いている」ので現在分詞 Walking。' },
+      { sentence: '[Seeing] from the plane, the island looked like a heart.', choices: ['Seen', 'See', 'Having seen to', 'Saw'], answer: 0, why: '島は「見られる」側なので過去分詞 Seen。' },
+      { sentence: '[Finishing] my homework already, I went out to play.', choices: ['Having finished', 'Finished', 'To finish', 'Being finish'], answer: 0, why: '主節より前に終わっていたので Having ＋過去分詞：Having finished。' },
+      { sentence: '[Not knowing not] what to say, she kept silent.', choices: ['Not knowing', 'Knowing not to', 'Don\'t knowing', 'Not known'], answer: 0, why: '分詞構文の否定は Not ＋～ing：Not knowing。' },
+      { sentence: '[Write] in easy English, this book is good for beginners.', choices: ['Written', 'Writing', 'Wrote', 'To write'], answer: 0, why: '本は「書かれた」側なので過去分詞 Written。' },
+      { sentence: '[Judge] from his face, he must be very tired.', choices: ['Judging', 'Judged', 'To judge of', 'Judges'], answer: 0, why: '慣用表現 Judging from ～「～から判断すると」。' },
+      { sentence: '[General speaking], Japanese people are punctual.', choices: ['Generally speaking', 'General speak', 'Generally spoken', 'Generally to speak'], answer: 0, why: '慣用表現 Generally speaking「一般的に言えば」。' },
+      { sentence: '[Living] in the country for ten years, he knows the area well.', choices: ['Having lived', 'Lived', 'To live', 'Live'], answer: 0, why: '10年住んできたという、主節より前から続くことなので Having lived。' },
+      { sentence: '[Turned] left at the corner, you will see the station.', choices: ['Turning', 'Turn to', 'Being turned', 'Turns'], answer: 0, why: '主語 you が「曲がる」側なので現在分詞 Turning。' },
+      { sentence: '[Surprising] by the news, he could not say a word.', choices: ['Surprised', 'Surprise', 'Being surprising', 'To surprise'], answer: 0, why: '彼が「おどろかされた」ので過去分詞 Surprised。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
