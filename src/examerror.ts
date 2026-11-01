@@ -3510,6 +3510,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Surprising] by the news, he could not say a word.', choices: ['Surprised', 'Surprise', 'Being surprising', 'To surprise'], answer: 0, why: '彼が「おどろかされた」ので過去分詞 Surprised。' },
     ],
   },
+  {
+    id: 'exam-fix-81',
+    title: '入試の誤文訂正〈81〉（TOEFL・IELTS の書き言葉：冠詞 a／the／なし）',
+    points: ['はじめて出る数えられる単数名詞には a／an、話し手と聞き手がどれか分かるものや2回目以降は the、ひとつしかないもの（the sun・the Internet）・最上級・序数には the、数えられない名詞や複数名詞を一般的に言うときは冠詞なし、母音で始まる音の前は an（an hour・a university）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I saw a cat. The cat was very small.', ja: '私はネコを見た。そのネコはとても小さかった。' }],
+    questions: [
+      { sentence: 'I saw a cat in the park. [A cat] was very small.', choices: ['The cat', 'Cat', 'Cats', 'An cat'], answer: 0, why: '2回目に出るので the：The cat。' },
+      { sentence: 'She waited for [a hour] at the station.', choices: ['an hour', 'the hours', 'hour', 'a hours'], answer: 0, why: 'hour は母音の音で始まるので an hour。' },
+      { sentence: 'He studies at [an university] in Tokyo.', choices: ['a university', 'university', 'the universities', 'an universities'], answer: 0, why: 'university は「ユ」という子音の音で始まるので a university。' },
+      { sentence: '[Sun] rises in the east.', choices: ['The sun', 'A sun', 'Suns', 'An sun'], answer: 0, why: 'ひとつしかないものには the：The sun。' },
+      { sentence: 'Mt. Fuji is [highest] mountain in Japan.', choices: ['the highest', 'a highest', 'highest of', 'an highest'], answer: 0, why: '最上級には the：the highest mountain。' },
+      { sentence: 'We use [an Internet] every day for work and study.', choices: ['the Internet', 'a Internet', 'Internets', 'an Internets'], answer: 0, why: 'ひとつしかないとみなすものには the：the Internet。' },
+      { sentence: 'I usually drink [a milk] in the morning.', choices: ['milk', 'milks', 'an milk', 'a milks'], answer: 0, why: '数えられない名詞 milk を一般的に言うときは冠詞なし。' },
+      { sentence: '[The dogs] are loyal animals in general.', choices: ['Dogs', 'A dogs', 'The dog are', 'Dog'], answer: 0, why: '「イヌというもの」を一般的に言うときは無冠詞の複数形 Dogs。' },
+      { sentence: 'This is [a first] time I have visited Kyoto.', choices: ['the first', 'first', 'an first', 'firsts'], answer: 0, why: '序数（first）には the：the first time。' },
+      { sentence: 'Can you play [piano]?', choices: ['the piano', 'a piano', 'pianos', 'an piano'], answer: 0, why: '楽器を演奏する play のあとは the ＋楽器：play the piano。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
