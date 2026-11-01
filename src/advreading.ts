@@ -23830,6 +23830,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Prescription for Connection', 'How to Grow Vegetables', 'The History of Medicine', 'Why Doctors Wear White'], answer: 0, why: '全体として、人とのつながりを「処方」する社会的処方のしくみと効果・課題を述べている。' },
   },
   {
+    id: 'kyotsu-plant-defenses',
+    title: 'How Plants Fight Back',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Plants cannot run away from danger. When an insect begins to eat their leaves or an animal comes to graze, they must stay where they are. For a long time, people therefore thought of plants as passive living things that simply accepted whatever happened to them. Research over the past few decades, however, has revealed that plants have developed a surprising variety of ways to protect themselves.",
+      "Some defenses are easy to see. Roses have sharp thorns, cacti are covered with spines, and the leaves of certain plants are protected by tiny hairs that make them difficult to chew. Other defenses are chemical. Many plants produce substances that taste bitter or are even poisonous to the animals ( A ) try to eat them. The strong flavors of some herbs and spices, which humans often enjoy, actually developed as a way of keeping insects away.",
+      "Perhaps the most remarkable discovery is that plants can respond to attacks as they happen. When caterpillars start chewing on a tomato plant, for example, the plant may begin producing chemicals that make its leaves harder to digest. Some plants even release substances into the air that attract the natural enemies of the insects attacking them. A plant being eaten by caterpillars may send out a smell that draws in wasps, which then lay their eggs inside the caterpillars.",
+      "There is also evidence that plants may warn one another. In some experiments, plants growing near a damaged neighbor began to strengthen their own defenses, apparently in response to chemicals released by the injured plant. Scientists are still debating how to interpret these findings, and many are careful not to describe this as communication in the human sense. Nevertheless, it is clear that plants are far more sensitive to their surroundings than was once believed.",
+      "Understanding plant defenses has practical value for agriculture. Farmers have traditionally relied on chemical pesticides to protect their crops, but these can harm other living things and the environment. By studying the natural defenses of plants, researchers hope to develop crops ( B ) can protect themselves more effectively, or to use smells that attract helpful insects instead of spraying chemicals. In this way, learning how plants fight back may help us grow food in ways ( C ) are better for the planet.",
+    ],
+    ja: [
+      '植物は危険からにげることができない。虫が葉を食べはじめたり、動物が草を食べに来たりしても、その場にとどまるしかない。そのため長い間、人々は植物を、身に起こることをただ受け入れるだけの受け身の生き物だと考えていた。しかしここ数十年の研究によって、植物が自分を守るためのおどろくほどさまざまな方法を発達させてきたことが明らかになった。',
+      '守り方の中には、見てすぐわかるものもある。バラにはするどいとげがあり、サボテンはとげにおおわれ、ある種の植物の葉はかみにくくする小さな毛で守られている。化学的な守り方もある。多くの植物は、自分を食べようとする動物にとって苦い、あるいは毒にさえなる物質を作る。人間がよく楽しむいくつかのハーブやスパイスの強い風味は、実は虫を遠ざける方法として発達したものである。',
+      'いちばんおどろくべき発見は、植物がおそわれているその場で反応できることかもしれない。たとえば、イモムシがトマトの葉をかみはじめると、トマトは葉を消化しにくくする化学物質を作りはじめることがある。自分をおそっている虫の天敵を引きよせる物質を空気中に出す植物さえある。イモムシに食べられている植物は、ハチを引きよせるにおいを出すことがあり、ハチはそのイモムシの体の中にたまごをうむ。',
+      '植物がおたがいに危険を知らせ合っているかもしれないという証拠もある。いくつかの実験では、傷ついたとなりの植物の近くで育つ植物が、自分の守りを強めはじめた。どうやら傷ついた植物が出した化学物質に反応したらしい。科学者たちはこうした結果をどう解釈するかをまだ議論しており、多くの人は、これを人間のような意味での伝え合いとよばないよう注意している。それでも、植物がかつて信じられていたよりずっとまわりに敏感であることは明らかである。',
+      '植物の守り方を理解することは、農業にとって実際に役に立つ。農家は昔から作物を守るのに化学的な農薬にたよってきたが、農薬はほかの生き物や環境を傷つけることがある。植物の自然の守り方を研究することで、研究者たちは、もっと効果的に自分を守れる作物を作ったり、薬をまくかわりに役に立つ虫を引きよせるにおいを使ったりしたいと考えている。このように、植物がどう反撃するかを学ぶことは、地球にとってよりよい方法で食べ物を育てる助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the animals を受け、try の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 crops を受け、can protect の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 ways を受け、are の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+    ],
+    tf: [
+      { statement: '長い間、植物は受け身の生き物だと考えられていた。', answer: true, why: '第1段落 people therefore thought of plants as passive living things。' },
+      { statement: 'ハーブやスパイスの強い風味は、人間を引きよせるために発達した。', answer: false, why: '第2段落 actually developed as a way of keeping insects away。' },
+      { statement: 'イモムシに食べられている植物は、ハチを引きよせるにおいを出すことがある。', answer: true, why: '第3段落 A plant being eaten by caterpillars may send out a smell that draws in wasps。' },
+      { statement: '科学者たちは、植物どうしが人間と同じように話していると結論づけている。', answer: false, why: '第4段落 many are careful not to describe this as communication in the human sense。' },
+    ],
+    qa: [
+      { q: 'What may a tomato plant do when caterpillars start chewing on it?', choices: ['Produce chemicals that make its leaves harder to digest.', 'Grow taller very quickly.', 'Drop all its fruit.', 'Change its color to red.'], answer: 0, why: '第3段落 the plant may begin producing chemicals that make its leaves harder to digest。' },
+      { q: 'Why are researchers studying plant defenses for agriculture?', choices: ['To reduce the use of chemical pesticides.', 'To make plants grow without water.', 'To sell more spices.', 'To remove all insects from farms.'], answer: 0, why: '第5段落 Farmers have traditionally relied on chemical pesticides ... By studying the natural defenses of plants ...。' },
+    ],
+    gist: [
+      { para: 1, choices: ['目に見える守りと化学的な守り', 'バラの育て方', 'サボテンの水やり', 'スパイスの料理'], answer: 0, why: '第2段落は、とげや毛のような目に見える守りと、苦みや毒のような化学的な守りを述べている。' },
+      { para: 3, choices: ['植物どうしが危険を知らせ合うかもしれないこと', '実験室の作り方', '人間の会話', '葉の色'], answer: 0, why: '第4段落は、となりの植物が傷つくと守りを強める実験と、その解釈の議論を述べている。' },
+    ],
+    titleQ: { choices: ['How Plants Fight Back', 'How to Grow Tomatoes', 'The Life of a Caterpillar', 'Why Roses Smell Sweet'], answer: 0, why: '全体として、にげられない植物がさまざまな方法で自分を守っていることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
