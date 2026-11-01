@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'kite', name: 'トビリン', egg: 'おかのうえのくるりタマゴ', token: 'トビリ', bigToken: 'トビリン', color: '#a16207', line: '#3f2a0a', rate: 0.02, desc: '空の高いところで、ぴーひょろろと鳴きながら輪をえがくトビ。風をつかまえて、ほとんど羽ばたかずに飛ぶ。' },
   { id: 'egret', name: 'シラサギン', egg: 'みずたのまっしろはねタマゴ', token: 'シラサ', bigToken: 'シラサギン', color: '#ffffff', line: '#475569', rate: 0.02, desc: '水田にすむまっ白なシラサギ。長い首をすっとのばして、水の中のえさをしずかにねらう、上品な子。' },
   { id: 'swift', name: 'アマツバン', egg: 'くもまのはやてタマゴ', token: 'アマツ', bigToken: 'アマツバン', color: '#64748b', line: '#0f172a', rate: 0.02, desc: '空の上でほとんどの時間をすごすアマツバメ。細長いつばさで風を切り、だれよりも速く空をかける。' },
   { id: 'jay', name: 'カケスン', egg: 'どんぐりやまのあおいタマゴ', token: 'カケ', bigToken: 'カケスン', color: '#93c5fd', line: '#1e3a8a', rate: 0.02, desc: 'つばさに青いもようのあるカケス。秋にどんぐりを土にうめてたくわえ、冬になるとその場所を思い出して食べる。' },
