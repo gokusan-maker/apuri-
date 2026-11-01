@@ -23752,6 +23752,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Long Journey of the Umbrella', 'How to Stay Dry in Winter', 'The Kings of Ancient Egypt', 'Why It Rains in Tokyo'], answer: 0, why: '全体として、身分のしるしから日々の道具へと変わってきたかさの歴史を述べている。' },
   },
   {
+    id: 'kyotsu-mars-rovers',
+    title: 'Robots on the Red Planet',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Mars, the fourth planet from the Sun, has fascinated people for centuries. Its reddish color, caused by iron-rich dust on its surface, made it easy to recognize in the night sky, and early astronomers even imagined that intelligent beings might live there. Today we know that Mars is a cold, dry desert with a very thin atmosphere. Yet scientists are still eager to explore it, because evidence suggests that the planet was once very different, and it may hold clues to one of the biggest questions in science: has life ever existed beyond the Earth?",
+      "Since the 1970s, a series of spacecraft have been sent to study Mars. Some orbit the planet and take photographs from above, while others land on the surface. The most famous of these are the robotic vehicles known as rovers, which can drive across the ground, take pictures, and analyze rocks and soil. Because Mars is so far away, radio signals take several minutes to travel between the Earth and the planet, so the rovers cannot be controlled in real time like a remote-control car. Instead, engineers send instructions ( A ) the rovers carry out on their own.",
+      "The rovers have made several important discoveries. They have found rocks that could only have formed in the presence of liquid water, as well as ancient riverbeds and the remains of what appear to have been lakes. These findings suggest that billions of years ago, Mars was warmer and wetter, with conditions ( B ) might have allowed simple life to develop. Scientists believe that the planet gradually lost much of its atmosphere, causing its water to freeze or escape into space.",
+      "Recent missions have gone a step further. One rover has been collecting rock samples and sealing them in small tubes, which future missions plan to bring back to the Earth for detailed study in laboratories. A small helicopter also made history by becoming the first aircraft to fly on another planet, showing that flying vehicles could be used to explore areas that are difficult to reach on the ground.",
+      "Exploring Mars is extremely difficult and expensive, and some people question whether the money should be spent on problems on the Earth instead. Supporters argue, however, that space exploration encourages new technology, inspires young people to study science, and helps us understand our own planet better. By studying how Mars changed from a wet world into a dry one, scientists may learn more about the forces ( C ) shape climates, including the climate of the Earth.",
+    ],
+    ja: [
+      '太陽から4番目の惑星である火星は、何世紀にもわたって人々を引きつけてきた。表面の鉄分の多いちりによる赤っぽい色のおかげで夜空で見つけやすく、昔の天文学者は、そこに知的な生き物がすんでいるかもしれないと想像さえした。今日、火星はとても大気のうすい、寒くかわいた砂漠であることがわかっている。それでも科学者たちが火星を探査したいと強く願うのは、火星がかつてはまったくちがうすがただったことを示す証拠があり、科学の最大の疑問のひとつ、つまり地球の外に生命が存在したことはあるのか、という問いへの手がかりがあるかもしれないからである。',
+      '1970年代から、火星を調べるために次々と探査機が送られてきた。惑星のまわりを回って上から写真をとるものもあれば、表面に着陸するものもある。その中で最も有名なのは、ローバーとよばれるロボットの車で、地面を走り、写真をとり、岩や土を分析することができる。火星はとても遠いので、電波が地球と火星の間を行き来するのに数分かかり、ローバーをラジコンカーのようにその場であやつることはできない。そのかわりに、技術者は指示を送り、ローバーはそれを自分で実行する。',
+      'ローバーはいくつかの大切な発見をしてきた。液体の水があるところでしかできないはずの岩や、古い川床、湖だったように見えるもののあとを見つけたのである。こうした発見は、何十億年も前の火星はもっとあたたかくしめっていて、単純な生命が生まれることを可能にしたかもしれない条件があったことを示している。科学者たちは、火星はしだいに大気の多くを失い、そのために水がこおったり宇宙へにげたりしたと考えている。',
+      '最近の任務はさらに一歩進んだ。あるローバーは岩の試料を集めて小さな管にとじこめており、それを将来の任務で地球に持ち帰って、研究室でくわしく調べる計画である。小さなヘリコプターも、ほかの惑星を飛んだ最初の航空機として歴史をつくり、地上ではたどり着きにくい場所の探査に空飛ぶ乗り物が使えることを示した。',
+      '火星の探査はきわめてむずかしくお金がかかるので、そのお金はかわりに地球の問題に使うべきではないかと疑問をもつ人もいる。しかし支持する人々は、宇宙の探査は新しい技術を生み、若い人に科学を学ぶ気持ちを起こさせ、自分たちの惑星をよりよく理解する助けになると主張する。火星がしめった世界からかわいた世界へどう変わったかを調べることで、科学者は地球の気候をふくむ気候を形づくる力について、もっと多くのことを学べるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 instructions を受け、carry out の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 conditions を受け、might have allowed の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the forces を受け、shape の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '火星の赤い色は、表面の鉄分の多いちりによる。', answer: true, why: '第1段落 Its reddish color, caused by iron-rich dust on its surface。' },
+      { statement: 'ローバーは、地球からその場でラジコンのようにあやつられている。', answer: false, why: '第2段落 the rovers cannot be controlled in real time like a remote-control car。' },
+      { statement: 'ローバーは、液体の水があったことを示す岩を見つけた。', answer: true, why: '第3段落 They have found rocks that could only have formed in the presence of liquid water。' },
+      { statement: 'すべての人が、火星の探査にお金を使うことに賛成している。', answer: false, why: '第5段落 some people question whether the money should be spent on problems on the Earth instead。' },
+    ],
+    qa: [
+      { q: 'What do the rock samples collected by one rover show about future plans?', choices: ['Future missions plan to bring them back to the Earth for study.', 'They will be left on Mars forever.', 'They will be used as fuel.', 'They will be sold to collectors.'], answer: 0, why: '第4段落 which future missions plan to bring back to the Earth for detailed study in laboratories。' },
+      { q: 'Why did Mars become dry, according to scientists?', choices: ['It gradually lost much of its atmosphere.', 'Its rivers were blocked by rovers.', 'It moved closer to the Sun.', 'It was hit by a large helicopter.'], answer: 0, why: '第3段落 the planet gradually lost much of its atmosphere, causing its water to freeze or escape into space。' },
+    ],
+    gist: [
+      { para: 1, choices: ['火星を調べる探査機とローバー', '地球の天気', 'ラジコンカーの作り方', '電波の歴史'], answer: 0, why: '第2段落は、火星を回る探査機や、地面を走るローバーと、そのあやつり方を述べている。' },
+      { para: 4, choices: ['火星探査への疑問と、その意義', '宇宙飛行士の訓練', 'お金の数え方', '気候の名前'], answer: 0, why: '第5段落は、費用への疑問と、技術や理解につながる探査の意義を述べている。' },
+    ],
+    titleQ: { choices: ['Robots on the Red Planet', 'How to Build a Remote-Control Car', 'The Coldest Desert on Earth', 'Why the Moon Has No Air'], answer: 0, why: '全体として、赤い惑星を調べるロボットたちと、その発見と意義を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
