@@ -1282,6 +1282,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 42 L74 46 L58 47" fill="#fbcfe8" stroke="#1f2937" strokeWidth="1.2" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'cormorant')
+    return (
+      <g>
+        {/* 広げてかわかす翼と、黄色いくちもと */}
+        <path d="M22 56 L6 46 L10 62 M78 56 L94 46 L90 62" fill="none" stroke="#020617" strokeWidth="2.5" strokeLinejoin="round" />
+        <circle cx="58" cy="46" r="2.5" fill="#facc15" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
