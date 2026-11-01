@@ -1850,6 +1850,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) knew that (B) she (C) lives in Paris (D) at that time.', choices: ['(A) knew that', '(B) she', '(C) lives in Paris', '(D) at that time'], answer: 2, why: '主節が過去で at that time のことなので lived in Paris。' },
     ],
   },
+  {
+    id: 'exam-error-parallel2',
+    title: '入試の正誤問題〈79〉（TOEFL・IELTS の書き言葉：並列）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'and・or・but や both A and B・not only A but also B・either A or B でつなぐものは同じ形にそろえる（名詞は名詞、動名詞は動名詞、形容詞は形容詞、前置詞もそろえる）。',
+    ],
+    examples: [
+      { en: 'She enjoys reading, swimming, and cooking.', ja: '彼女は読書と水泳と料理を楽しむ。' },
+      { en: 'You can pay either by cash or by credit card.', ja: '現金でもクレジットカードでもはらえる。' },
+    ],
+    questions: [
+      { sentence: 'She (A) enjoys (B) reading, swimming, and (C) to cook (D) on weekends.', choices: ['(A) enjoys', '(B) reading, swimming, and', '(C) to cook', '(D) on weekends'], answer: 2, why: 'reading・swimming とそろえて cooking。' },
+      { sentence: 'The job (A) requires (B) patience, creativity, and (C) being honest (D) at all times.', choices: ['(A) requires', '(B) patience, creativity, and', '(C) being honest', '(D) at all times'], answer: 2, why: 'patience・creativity とそろえて名詞 honesty。' },
+      { sentence: 'He (A) hopes (B) to travel abroad and (C) learning (D) a new language.', choices: ['(A) hopes', '(B) to travel abroad and', '(C) learning', '(D) a new language'], answer: 2, why: 'to travel とそろえて（to）learn。' },
+      { sentence: 'The new phone (A) is faster, (B) more cheap, and (C) easier (D) to use.', choices: ['(A) is faster,', '(B) more cheap, and', '(C) easier', '(D) to use'], answer: 1, why: 'faster・easier とそろえて比較級 cheaper。cheap の比較級は -er。' },
+      { sentence: 'Students (A) should read carefully, (B) think critically, and (C) writing (D) clearly.', choices: ['(A) should read carefully,', '(B) think critically, and', '(C) writing', '(D) clearly'], answer: 2, why: 'should のあとの原形にそろえて write。' },
+      { sentence: 'I (A) prefer (B) walking to school rather than (C) to take (D) the bus.', choices: ['(A) prefer', '(B) walking to school rather than', '(C) to take', '(D) the bus'], answer: 2, why: 'walking とそろえて taking。' },
+      { sentence: '(A) Not only (B) is the city beautiful, but it (C) is also (D) safety.', choices: ['(A) Not only', '(B) is the city beautiful, but it', '(C) is also', '(D) safety'], answer: 3, why: 'beautiful とそろえて形容詞 safe。' },
+      { sentence: 'The report (A) was long, (B) detailed, and (C) it was (D) interesting.', choices: ['(A) was long,', '(B) detailed, and', '(C) it was', '(D) interesting'], answer: 2, why: 'long・detailed とそろえて形容詞だけにする：and interesting（it was を取る）。' },
+      { sentence: '(A) To swim, cycling, and running (B) are (C) the three parts (D) of a triathlon.', choices: ['(A) To swim, cycling, and running', '(B) are', '(C) the three parts', '(D) of a triathlon'], answer: 0, why: 'cycling・running とそろえて Swimming。' },
+      { sentence: 'You can (A) pay (B) either by cash (C) or (D) using a credit card.', choices: ['(A) pay', '(B) either by cash', '(C) or', '(D) using a credit card'], answer: 3, why: 'either by A or by B とそろえる：or by credit card。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

@@ -1058,3 +1058,10 @@ it('誤文訂正〈72〉：並列の単元が10問ある', async () => {
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('cooking')
 })
+
+it('正誤問題〈79〉：並列の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-parallel2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to cook')
+})
