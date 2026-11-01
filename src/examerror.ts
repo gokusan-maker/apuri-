@@ -2090,6 +2090,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'We (A) went to (B) the beach (C) and found (D) an unique shell.', choices: ['(A) went to', '(B) the beach', '(C) and found', '(D) an unique shell'], answer: 3, why: 'unique は「ユ」という子音の音で始まるので a unique shell。' },
     ],
   },
+  {
+    id: 'exam-error-itcleft',
+    title: '入試の正誤問題〈89〉（共通テストレベル：強調構文と it の用法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '強調構文 It is ～ that …、形式主語 It is ～ to …、形式目的語 find it ～ to …、It takes 人 時間 to ～、It costs 人 お金 to ～、It is kind of 人 to ～／It is necessary for 人 to ～、距離の it など。',
+    ],
+    examples: [
+      { en: 'It was Ken that broke the window.', ja: '窓をわったのはケンだった。' },
+      { en: 'It took me two hours to finish the report.', ja: 'レポートを終えるのに2時間かかった。' },
+    ],
+    questions: [
+      { sentence: 'It (A) was Ken (B) which (C) broke (D) the window.', choices: ['(A) was Ken', '(B) which', '(C) broke', '(D) the window'], answer: 1, why: '強調構文で人を強調するので that（または who）。' },
+      { sentence: 'It (A) was in Kyoto (B) where I (C) first (D) met her.', choices: ['(A) was in Kyoto', '(B) where I', '(C) first', '(D) met her'], answer: 1, why: '場所の語句を強調する強調構文は It was ～ that …。' },
+      { sentence: '(A) This is (B) important (C) to get (D) enough sleep.', choices: ['(A) This is', '(B) important', '(C) to get', '(D) enough sleep'], answer: 0, why: '形式主語 It：It is important to ～。' },
+      { sentence: 'I (A) found (B) that difficult (C) to answer (D) the question.', choices: ['(A) found', '(B) that difficult', '(C) to answer', '(D) the question'], answer: 1, why: '形式目的語 it：found it difficult to answer。' },
+      { sentence: 'It (A) took me (B) two hours (C) finishing (D) the report.', choices: ['(A) took me', '(B) two hours', '(C) finishing', '(D) the report'], answer: 2, why: 'It takes 人 時間 to ～：to finish。' },
+      { sentence: 'It (A) costed me (B) 3,000 yen (C) to buy (D) this book.', choices: ['(A) costed me', '(B) 3,000 yen', '(C) to buy', '(D) this book'], answer: 0, why: 'cost の過去形は cost：It cost me。' },
+      { sentence: 'It (A) is (B) said (C) what he is (D) the best player.', choices: ['(A) is', '(B) said', '(C) what he is', '(D) the best player'], answer: 2, why: 'It is said that ～：that he is。' },
+      { sentence: 'It (A) is (B) kind (C) for you (D) to help me.', choices: ['(A) is', '(B) kind', '(C) for you', '(D) to help me'], answer: 2, why: '人の性質を表す kind は of 人：kind of you。' },
+      { sentence: 'It (A) is (B) necessary (C) for us (D) protecting the environment.', choices: ['(A) is', '(B) necessary', '(C) for us', '(D) protecting the environment'], answer: 3, why: 'It is ～ for 人 to …：to protect。' },
+      { sentence: '(A) That is (B) about two kilometers (C) from here (D) to the station.', choices: ['(A) That is', '(B) about two kilometers', '(C) from here', '(D) to the station'], answer: 0, why: '距離を表すときは It：It is about two kilometers。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
