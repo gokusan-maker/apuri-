@@ -2042,6 +2042,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Let us (A) have (B) lunch together, (C) and then (D) watching a movie.', choices: ['(A) have', '(B) lunch together,', '(C) and then', '(D) watching a movie'], answer: 3, why: 'Let us ＋原形を並べるので watch a movie。' },
     ],
   },
+  {
+    id: 'exam-error-participle4',
+    title: '入試の正誤問題〈87〉（共通テストレベル：分詞構文）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文の主語は主節の主語と同じ。「する」側なら -ing、「される」側なら過去分詞、前のことは Having ＋過去分詞、否定は Not ～ing、Judging from ～・Generally speaking など。',
+    ],
+    examples: [
+      { en: 'Walking along the beach, I found a shell.', ja: '浜辺を歩いていて、私は貝がらを見つけた。' },
+      { en: 'Seen from the plane, the island looked like a heart.', ja: '飛行機から見ると、その島はハートの形に見えた。' },
+    ],
+    questions: [
+      { sentence: '(A) Walked along the beach, (B) I (C) found (D) a beautiful shell.', choices: ['(A) Walked along the beach,', '(B) I', '(C) found', '(D) a beautiful shell'], answer: 0, why: '主語 I が「歩いている」ので Walking。' },
+      { sentence: '(A) Seeing from the plane, (B) the island (C) looked (D) like a heart.', choices: ['(A) Seeing from the plane,', '(B) the island', '(C) looked', '(D) like a heart'], answer: 0, why: '島は「見られる」側なので Seen。' },
+      { sentence: '(A) Finishing my homework (B) already, I (C) went out (D) to play.', choices: ['(A) Finishing my homework', '(B) already, I', '(C) went out', '(D) to play'], answer: 0, why: '主節より前に終わっていたので Having finished。' },
+      { sentence: '(A) Written in easy English, (B) this book (C) is (D) good to beginners.', choices: ['(A) Written in easy English,', '(B) this book', '(C) is', '(D) good to beginners'], answer: 3, why: '「初心者に向いている」は good for beginners。' },
+      { sentence: 'Judging (A) from his face, he (B) must being (C) very (D) tired.', choices: ['(A) from his face, he', '(B) must being', '(C) very', '(D) tired'], answer: 1, why: '助動詞 must のあとは原形：must be。' },
+      { sentence: '(A) Generally speaking, (B) Japanese trains (C) are (D) punctually.', choices: ['(A) Generally speaking,', '(B) Japanese trains', '(C) are', '(D) punctually'], answer: 3, why: 'be 動詞のあとは形容詞：punctual。' },
+      { sentence: '(A) Not knowing (B) what (C) to say, she (D) kept silently.', choices: ['(A) Not knowing', '(B) what', '(C) to say, she', '(D) kept silently'], answer: 3, why: 'keep ＋形容詞「～のままでいる」：kept silent。' },
+      { sentence: '(A) Turning left (B) at the corner, (C) the station (D) will be on your right.', choices: ['(A) Turning left', '(B) at the corner,', '(C) the station', '(D) will be on your right'], answer: 2, why: '分詞構文の主語は主節と同じ。曲がるのは you なので you will see the station に。' },
+      { sentence: '(A) Surprising (B) by the news, he (C) could not (D) say a word.', choices: ['(A) Surprising', '(B) by the news, he', '(C) could not', '(D) say a word'], answer: 0, why: '彼が「おどろかされた」ので Surprised。' },
+      { sentence: '(A) Having (B) lived in Kyoto (C) for ten years, he (D) know the city well.', choices: ['(A) Having', '(B) lived in Kyoto', '(C) for ten years, he', '(D) know the city well'], answer: 3, why: '主語 he は3人称単数なので knows。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
