@@ -1298,6 +1298,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 40 L66 38" fill="none" stroke="#f8fafc" strokeWidth="1.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'kittiwake')
+    return (
+      <g>
+        {/* 黄色いくちばしと、黒い翼の先 */}
+        <path d="M58 42 L72 45 L58 47" fill="#facc15" stroke="#334155" strokeWidth="1.2" strokeLinejoin="round" />
+        <path d="M18 64 L26 60 M82 64 L74 60" fill="none" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
