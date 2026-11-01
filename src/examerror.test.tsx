@@ -1037,3 +1037,10 @@ it('正誤問題〈77〉：関係詞の総まとめの単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) which I')
 })
+
+it('誤文訂正〈71〉：時制の一致と話法の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-71')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('was')
+})

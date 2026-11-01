@@ -3090,6 +3090,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She is the teacher [which] everyone respects.', choices: ['whom', 'which is', 'whose', 'what'], answer: 0, why: '先行詞が人で respects の目的語なので whom（または who・that）。' },
     ],
   },
+  {
+    id: 'exam-fix-71',
+    title: '入試の誤文訂正〈71〉（共通テストレベル：時制の一致と話法）',
+    points: ['主節が過去なら that 節の動詞も過去にずらす（He said he was busy.）、さらに前のことは過去完了、ただし今も変わらない事実・真理は現在形のまま、間接話法では代名詞・時の語（tomorrow → the next day）も変える、間接疑問は主語＋動詞の語順、命令は tell 人 to ～ など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She said that she was tired.', ja: '彼女はつかれていると言った。' }],
+    questions: [
+      { sentence: 'She said that she [is] very tired.', choices: ['was', 'be', 'has been being', 'will'], answer: 0, why: '主節が過去（said）なので、時制を一致させて was。' },
+      { sentence: 'He told me that he [has lost] his wallet the day before.', choices: ['had lost', 'loses', 'has been lost', 'is losing'], answer: 0, why: '言ったときより前のことなので過去完了 had lost。' },
+      { sentence: 'Our teacher said that the earth [went] around the sun.', choices: ['goes', 'had gone', 'was going', 'would go'], answer: 0, why: '今も変わらない真理は時制の一致をうけず、現在形 goes のまま。' },
+      { sentence: 'I thought that it [will] rain, so I took an umbrella.', choices: ['would', 'is', 'has', 'will be'], answer: 0, why: '主節が過去（thought）なので will は would にずらす。' },
+      { sentence: 'She asked me where [did I live].', choices: ['I lived', 'I did live', 'do I live', 'lived I'], answer: 0, why: '間接疑問は主語＋動詞の語順で、時制も一致させる：where I lived。' },
+      { sentence: 'He asked me [that] I liked sushi.', choices: ['if', 'what', 'which', 'whom'], answer: 0, why: 'Yes / No でこたえる質問の間接話法は if（または whether）。' },
+      { sentence: 'My mother told me [clean] my room.', choices: ['to clean', 'cleaning', 'cleaned', 'that clean'], answer: 0, why: '命令の間接話法は tell 人 to ～：told me to clean。' },
+      { sentence: 'He said, "I will call you tomorrow." → He said that he would call me [tomorrow].', choices: ['the next day', 'yesterday', 'the day before', 'today'], answer: 0, why: '間接話法では時の語もかえる：tomorrow → the next day（the following day）。' },
+      { sentence: 'I knew that she [lives] in Paris at that time.', choices: ['lived', 'lives in', 'has lived', 'will live'], answer: 0, why: '主節が過去（knew）で、at that time のことなので lived。' },
+      { sentence: 'She said that she [can] swim when she was five.', choices: ['could', 'can be', 'will', 'may'], answer: 0, why: '主節が過去なので can は could にずらす。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
