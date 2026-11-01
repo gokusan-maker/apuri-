@@ -22,6 +22,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const [noMiss] = useState(loadNoMissBosses) // デザイン94：ノーミスでたおしたボス
   const [byWins, setByWins] = useState(false) // デザイン118：勝った回数の多い順に並べる
   const [cleanOnly, setCleanOnly] = useState(false) // デザイン109：ノーミスでたおしたボスだけ見る
+  const [notSOnly, setNotSOnly] = useState(false) // デザイン192：まだランクSを取っていないボスだけ見る
   const [traitOpen, setTraitOpen] = useState<string | null>(null) // デザイン106：とくぎの説明を開いているボス
   const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
   const [sealT] = useState(loadSealTraits) // とくぎごとの、封じて勝った回数
@@ -110,6 +111,11 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               ✨ノーミスだけ
             </button>
           )}
+          {all.some((b) => book[b.name] && book[b.name].best !== 'S') && (
+            <button className={notSOnly ? 'on' : ''} aria-pressed={notSOnly} onClick={() => setNotSOnly(!notSOnly)}>
+              🎯 まだSじゃない
+            </button>
+          )}
         </div>
       )}
       {(() => {
@@ -145,7 +151,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         </p>
       )}
       <ul className="boss-book-list">
-        {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only) && (!cleanOnly || noMiss.includes(b.name))).sort((x, y) => (byWins ? (book[y.name]?.wins ?? 0) - (book[x.name]?.wins ?? 0) : 0)).map((b) => {
+        {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only) && (!cleanOnly || noMiss.includes(b.name)) && (!notSOnly || book[b.name].best !== 'S')).sort((x, y) => (byWins ? (book[y.name]?.wins ?? 0) - (book[x.name]?.wins ?? 0) : 0)).map((b) => {
           const e = book[b.name]
           return (
             <li key={b.name} className={e ? 'got' : 'locked'}>

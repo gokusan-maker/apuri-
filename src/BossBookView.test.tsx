@@ -479,3 +479,19 @@ it('デザイン185：とくぎの種類ごとに、ランクSで勝った数を
   expect(screen.getByLabelText(`${BOSS_TRAITS[t].name}のボスにランクS 1体`).textContent).toBe('（S1）')
   expect(screen.getAllByLabelText(/のボスにランクS/)).toHaveLength(1)
 })
+
+it('デザイン192：ボス図鑑で、まだランクSを取っていないボスだけ見られる', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const [a, b] = Object.values(BOSSES)
+  saveBook({
+    [a.name]: { wins: 1, best: 'S', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 1, best: 'B', look: b, first: '2026-10-02' },
+  })
+  render(<BossBook />)
+  expect(screen.getByText(a.name)).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: '🎯 まだSじゃない' }))
+  expect(screen.queryByText(a.name)).toBeNull()
+  expect(screen.getByText(b.name)).toBeInTheDocument()
+})
