@@ -1754,6 +1754,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He (A) was tired. (B) Moreover, (C) he (D) continued working until midnight.', choices: ['(A) was tired', '(B) Moreover,', '(C) he', '(D) continued working until midnight'], answer: 2, why: '「つかれていた」のに働き続けたので、追加の Moreover ではなく逆接の However（または Nevertheless）。' },
     ],
   },
+  {
+    id: 'exam-error-subj3',
+    title: '入試の正誤問題〈75〉（共通テストレベル：仮定法の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '仮定法過去（If ＋過去形, would ＋原形）、仮定法過去完了（If ＋had ＋過去分詞, would have ＋過去分詞）、I wish、as if、Without ～、If it were not for ～、It is time ＋過去形など、仮定法のまとめ。',
+    ],
+    examples: [
+      { en: 'If I were you, I would take the job.', ja: 'もし私があなたなら、その仕事を引き受けるだろう。' },
+      { en: 'If he had left earlier, he would have caught the last train.', ja: 'もし彼がもっと早く出ていたら、最終電車に間に合っただろう。' },
+    ],
+    questions: [
+      { sentence: 'If I (A) am (B) you, I (C) would (D) take the job.', choices: ['(A) am', '(B) you, I', '(C) would', '(D) take the job'], answer: 0, why: '今の事実と反対の仮定は仮定法過去：If I were you。' },
+      { sentence: 'If he (A) had left (B) earlier, he (C) would catch (D) the last train.', choices: ['(A) had left', '(B) earlier, he', '(C) would catch', '(D) the last train'], answer: 2, why: 'if 節が過去完了なので主節は would have caught。' },
+      { sentence: 'I (A) wish I (B) can play (C) the piano (D) as well as my sister.', choices: ['(A) wish I', '(B) can play', '(C) the piano', '(D) as well as my sister'], answer: 1, why: '今の事実と反対の願いは I wish ＋過去形：could play。' },
+      { sentence: 'She (A) talks (B) as if she (C) is (D) a famous actress.', choices: ['(A) talks', '(B) as if she', '(C) is', '(D) a famous actress'], answer: 2, why: '事実ではないことは as if ＋過去形：as if she were。' },
+      { sentence: '(A) With your advice, I (B) could not (C) have solved (D) the problem.', choices: ['(A) With your advice, I', '(B) could not', '(C) have solved', '(D) the problem'], answer: 0, why: '「あなたの助言がなかったら」なので Without your advice。' },
+      { sentence: 'If it (A) were not (B) for the sun, (C) nothing (D) can live on the Earth.', choices: ['(A) were not', '(B) for the sun,', '(C) nothing', '(D) can live on the Earth'], answer: 3, why: '仮定法過去の主節は助動詞の過去形：could live。' },
+      { sentence: 'It (A) is (B) high time we (C) start (D) preparing for the exam.', choices: ['(A) is', '(B) high time we', '(C) start', '(D) preparing for the exam'], answer: 2, why: 'It is (high) time ＋過去形：started。' },
+      { sentence: 'I (A) wish I (B) did not eat (C) so much (D) at the party last night.', choices: ['(A) wish I', '(B) did not eat', '(C) so much', '(D) at the party last night'], answer: 1, why: '過去への後悔は I wish ＋過去完了：had not eaten。' },
+      { sentence: 'If I (A) had (B) more free time, I (C) will travel (D) around the world.', choices: ['(A) had', '(B) more free time, I', '(C) will travel', '(D) around the world'], answer: 2, why: '仮定法過去の主節は would ＋原形：would travel。' },
+      { sentence: 'If you (A) took (B) a taxi, you (C) would have arrived (D) on time yesterday.', choices: ['(A) took', '(B) a taxi, you', '(C) would have arrived', '(D) on time yesterday'], answer: 0, why: '主節が過去の仮定（would have arrived）なので if 節は過去完了：had taken。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
