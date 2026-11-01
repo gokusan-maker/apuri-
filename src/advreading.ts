@@ -22621,6 +22621,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Small Stamp, a Big Change', 'How to Write a Love Letter', 'The History of Email', 'Why Mailboxes Are Red'], answer: 0, why: '全体として、小さな切手が手紙の送り方と人々の伝え合いを大きく変えたことを述べている。' },
   },
   {
+    id: 'kyotsu-sense-of-smell',
+    title: 'The Underrated Sense',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Of the five senses, smell is often considered the least important for humans. We usually describe the world in terms of what we see and hear, and many people say that if they had to lose one sense, they would choose smell. For a long time, scientists also believed that the human nose was weak compared with those of animals such as dogs. Recent research, however, suggests that our sense of smell is far more powerful and important than we once thought.",
+      "How does smelling work? When we breathe in, tiny molecules floating in the air enter the nose and reach a small area at the top of the nasal cavity. This area contains millions of special cells ( A ) can detect different molecules. Each cell responds to only certain types of molecules, and the brain identifies a smell by combining the signals from many cells. In this way, humans can tell the difference between a huge number of smells, and some scientists estimate the number to be in the billions, although this figure is still debated.",
+      "Smell is closely connected to taste. Much of what we think of as the flavor of food actually comes from its smell. This is why food often seems tasteless when we have a cold and our noses are blocked. Smell also protects us from danger. It can warn us of smoke, gas leaks, or food that has gone bad, allowing us to avoid harm before we even see the source of the problem.",
+      "One of the most fascinating features of smell is its link with memory and emotion. The part of the brain that processes smells is directly connected to areas involved in memory and feelings. As a result, a particular smell can suddenly bring back a memory from many years ago, such as the scent of a grandparent's house or a favorite childhood meal. Many people report that memories triggered by smells feel especially vivid and emotional, more so than memories ( B ) are triggered by sights or sounds.",
+      "Interest in the sense of smell grew during recent years, when many people lost it temporarily because of illness. Their experiences showed how much smell contributes to daily life. Some said that food lost its pleasure, while others felt anxious because they could not detect smoke or spoiled food. Doctors have developed smell training, in which patients regularly sniff a set of strong scents, to help them recover. These experiences remind us that smell is not a minor sense but one ( C ) deeply shapes how we enjoy, remember, and stay safe in the world.",
+    ],
+    ja: [
+      '五感のうち、においは人間にとって最も大切ではない感覚だと考えられることが多い。私たちはふつう、見るものや聞くものをもとに世界を説明し、もしひとつの感覚を失わなければならないならにおいを選ぶと言う人も多い。長い間、科学者たちも、人間の鼻はイヌのような動物の鼻にくらべて弱いと考えていた。しかし最近の研究によれば、私たちのきゅう覚は、かつて考えられていたよりずっと強力で大切なものである。',
+      'においをかぐしくみはどうなっているのだろうか。息をすうと、空気中にただようごく小さな分子が鼻に入り、鼻の中の上のほうにある小さな部分にとどく。この部分には、さまざまな分子を感じとれる特別な細胞が何百万もある。それぞれの細胞は特定の種類の分子にしか反応せず、脳は多くの細胞からの信号を組み合わせてにおいを見分ける。このようにして人間はとても多くのにおいを区別でき、その数を何十億と見積もる科学者もいるが、この数字はまだ議論されている。',
+      'においは味と深くつながっている。私たちが食べ物の味だと思っているものの多くは、実際にはそのにおいから来ている。だから、かぜをひいて鼻がつまっていると、食べ物の味がしないように感じることが多い。においは私たちを危険からも守る。けむりやガスもれ、くさった食べ物を知らせてくれるので、問題のもとを見る前に害をさけることができる。',
+      'においの最も興味深い特徴のひとつは、記憶や感情とのつながりである。においを処理する脳の部分は、記憶や感情にかかわる部分と直接つながっている。そのため、祖父母の家のかおりや、子どものころの好きな料理のような、あるにおいによって、何年も前の記憶が急によみがえることがある。においによってよみがえる記憶は、見たものや聞いたものによってよみがえる記憶より、とくにあざやかで感情がこもっていると言う人が多い。',
+      'ここ数年、病気のために一時的にきゅう覚を失った人が多かったことで、においへの関心が高まった。その人たちの経験は、においが日々のくらしにどれほど役立っているかを示した。食べ物の楽しみがなくなったと言う人もいれば、けむりやいたんだ食べ物に気づけず不安になった人もいた。医者は、患者がいくつかの強いかおりを定期的にかぐ「きゅう覚トレーニング」を開発し、回復を助けている。こうした経験は、においが小さな感覚ではなく、私たちが世界を楽しみ、覚え、安全にすごすしかたを深く形づくる感覚であることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 millions of special cells を受け、can detect の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 memories を受け、are triggered の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 one（＝a sense）を受け、shapes の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '長い間、科学者は人間の鼻はイヌの鼻より弱いと考えていた。', answer: true, why: '第1段落 scientists also believed that the human nose was weak compared with those of animals such as dogs。' },
+      { statement: 'においを感じる細胞は、それぞれすべての種類の分子に反応する。', answer: false, why: '第2段落 Each cell responds to only certain types of molecules。' },
+      { statement: 'かぜで鼻がつまると、食べ物の味がしないように感じることが多い。', answer: true, why: '第3段落 This is why food often seems tasteless when we have a cold and our noses are blocked。' },
+      { statement: 'きゅう覚トレーニングでは、患者は弱いかおりだけをかぐ。', answer: false, why: '第5段落 patients regularly sniff a set of strong scents。' },
+    ],
+    qa: [
+      { q: 'Why can smells bring back old memories so strongly?', choices: ['The brain area for smell is directly connected to areas for memory and feelings.', 'Smells are stronger than sounds.', 'The nose stores memories.', 'People smell things only once.'], answer: 0, why: '第4段落 The part of the brain that processes smells is directly connected to areas involved in memory and feelings。' },
+      { q: 'How does smell protect us from danger?', choices: ['It can warn us of smoke, gas leaks, or spoiled food.', 'It makes us run faster.', 'It helps us see in the dark.', 'It keeps insects away.'], answer: 0, why: '第3段落 It can warn us of smoke, gas leaks, or food that has gone bad。' },
+    ],
+    gist: [
+      { para: 1, choices: ['においを感じるしくみ', '鼻の形の種類', '空気のよごれ', 'イヌの訓練'], answer: 0, why: '第2段落は、分子と細胞と脳によってにおいを見分けるしくみを述べている。' },
+      { para: 3, choices: ['においと記憶・感情のつながり', '祖父母の家の場所', '料理の作り方', '音楽の聞き方'], answer: 0, why: '第4段落は、においが昔の記憶や感情を強くよびおこすことを述べている。' },
+    ],
+    titleQ: { choices: ['The Underrated Sense', 'How Dogs Find Lost Things', 'The Best Perfumes in the World', 'Why We Catch Colds'], answer: 0, why: '全体として、軽く見られがちなきゅう覚のしくみと大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
