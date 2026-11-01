@@ -1802,6 +1802,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Each of (A) them have (B) to finish (C) the report (D) by Friday.', choices: ['(A) them have', '(B) to finish', '(C) the report', '(D) by Friday'], answer: 0, why: 'each of ～ は単数あつかいなので Each of them has。' },
     ],
   },
+  {
+    id: 'exam-error-rel4',
+    title: '入試の正誤問題〈77〉（共通テストレベル：関係詞の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'うしろに主語や目的語がぬけていれば関係代名詞、完全な文なら関係副詞（where・when・why）、先行詞がなければ what、「～の」は whose、カンマや前置詞のあとに that は使えない、など関係詞のまとめ。',
+    ],
+    examples: [
+      { en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' },
+      { en: 'This is the chair on which my grandfather used to sit.', ja: 'これは祖父がよくすわっていたいすだ。' },
+    ],
+    questions: [
+      { sentence: 'This (A) is the town (B) which I (C) was born (D) in 2010.', choices: ['(A) is the town', '(B) which I', '(C) was born', '(D) in 2010'], answer: 1, why: 'うしろの I was born は完全な文なので関係副詞 where。' },
+      { sentence: 'This is (A) the museum (B) where we (C) visited (D) last summer.', choices: ['(A) the museum', '(B) where we', '(C) visited', '(D) last summer'], answer: 1, why: 'visited の目的語がぬけているので関係代名詞 which。' },
+      { sentence: '(A) That he said (B) at the meeting (C) surprised (D) everyone.', choices: ['(A) That he said', '(B) at the meeting', '(C) surprised', '(D) everyone'], answer: 0, why: '先行詞がなく「彼が言ったこと」なので What he said。' },
+      { sentence: 'I (A) have a friend (B) who father (C) works (D) as a pilot.', choices: ['(A) have a friend', '(B) who father', '(C) works', '(D) as a pilot'], answer: 1, why: '「その父親が」なので whose father。' },
+      { sentence: 'I still (A) remember (B) the day (C) which we (D) first met.', choices: ['(A) remember', '(B) the day', '(C) which we', '(D) first met'], answer: 2, why: 'うしろが完全な文で先行詞が時なので when。' },
+      { sentence: 'My sister, (A) that lives (B) in Osaka, (C) is (D) a nurse.', choices: ['(A) that lives', '(B) in Osaka,', '(C) is', '(D) a nurse'], answer: 0, why: 'カンマのあとに that は使えない：who lives。' },
+      { sentence: 'This is (A) the chair (B) on that (C) my grandfather (D) used to sit.', choices: ['(A) the chair', '(B) on that', '(C) my grandfather', '(D) used to sit'], answer: 1, why: '前置詞のあとには that は使えない：on which。' },
+      { sentence: 'That is (A) the reason (B) which (C) I could not (D) come to school.', choices: ['(A) the reason', '(B) which', '(C) I could not', '(D) come to school'], answer: 1, why: 'the reason のあとで完全な文が続くので why。' },
+      { sentence: 'The book (A) which I (B) borrowed from you (C) are (D) very interesting.', choices: ['(A) which I', '(B) borrowed from you', '(C) are', '(D) very interesting'], answer: 2, why: '主語の中心は The book（単数）なので is。' },
+      { sentence: 'She is (A) the only student (B) in our class (C) who (D) can speak it Chinese.', choices: ['(A) the only student', '(B) in our class', '(C) who', '(D) can speak it Chinese'], answer: 3, why: 'speak の目的語は Chinese だけでよい。it は不要：can speak Chinese。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
