@@ -1778,6 +1778,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'If you (A) took (B) a taxi, you (C) would have arrived (D) on time yesterday.', choices: ['(A) took', '(B) a taxi, you', '(C) would have arrived', '(D) on time yesterday'], answer: 0, why: '主節が過去の仮定（would have arrived）なので if 節は過去完了：had taken。' },
     ],
   },
+  {
+    id: 'exam-error-pronoun3',
+    title: '入試の正誤問題〈76〉（TOEFL・IELTS の書き言葉：代名詞の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '代名詞は指す名詞の数に合わせる（the company → its・the students → their）、比べるときの that of ～／those of ～、同じ種類のものは one(s)・その物自体は it、its（所有）と it is のちがい、所有代名詞 ours・theirs など。',
+    ],
+    examples: [
+      { en: 'The population of China is larger than that of Japan.', ja: '中国の人口は日本の人口より多い。' },
+      { en: 'The museum is famous for its collection of old maps.', ja: 'その博物館は古い地図のコレクションで有名だ。' },
+    ],
+    questions: [
+      { sentence: 'The company (A) announced (B) their new plan (C) at (D) the meeting.', choices: ['(A) announced', '(B) their new plan', '(C) at', '(D) the meeting'], answer: 1, why: 'the company は単数あつかいなので its new plan。' },
+      { sentence: 'The population (A) of China (B) is larger (C) than (D) Japan.', choices: ['(A) of China', '(B) is larger', '(C) than', '(D) Japan'], answer: 3, why: '人口どうしを比べるので than that of Japan。' },
+      { sentence: 'The prices (A) at this store (B) are lower (C) than (D) that at the mall.', choices: ['(A) at this store', '(B) are lower', '(C) than', '(D) that at the mall'], answer: 3, why: '複数の prices を受けるので those at the mall。' },
+      { sentence: 'I (A) lost my pen, (B) so I (C) have to buy (D) it at the shop.', choices: ['(A) lost my pen,', '(B) so I', '(C) have to buy', '(D) it at the shop'], answer: 3, why: 'なくしたペンそのものではなく「ペンをひとつ」なので one。' },
+      { sentence: '(A) The students (B) handed in (C) his reports (D) on time.', choices: ['(A) The students', '(B) handed in', '(C) his reports', '(D) on time'], answer: 2, why: '主語は複数の the students なので their reports。' },
+      { sentence: 'The museum (A) is famous (B) for (C) it is (D) collection of old maps.', choices: ['(A) is famous', '(B) for', '(C) it is', '(D) collection of old maps'], answer: 2, why: '「その博物館の」と所有を表すのは its。' },
+      { sentence: '(A) These shoes (B) are too small, so I (C) need (D) bigger one.', choices: ['(A) These shoes', '(B) are too small, so I', '(C) need', '(D) bigger one'], answer: 3, why: '複数の shoes を受けるので bigger ones。' },
+      { sentence: '(A) Many animals (B) change (C) its behavior (D) in winter.', choices: ['(A) Many animals', '(B) change', '(C) its behavior', '(D) in winter'], answer: 2, why: '主語は複数の Many animals なので their behavior。' },
+      { sentence: 'The climate (A) of this island (B) is (C) milder than (D) those of the mainland.', choices: ['(A) of this island', '(B) is', '(C) milder than', '(D) those of the mainland'], answer: 3, why: '単数の climate を受けるので that of the mainland。' },
+      { sentence: 'Each of (A) them have (B) to finish (C) the report (D) by Friday.', choices: ['(A) them have', '(B) to finish', '(C) the report', '(D) by Friday'], answer: 0, why: 'each of ～ は単数あつかいなので Each of them has。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
