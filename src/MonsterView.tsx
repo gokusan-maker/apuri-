@@ -1330,6 +1330,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="70" cy="45" r="1.5" fill="#dc2626" />
       </g>
     )
+  if (species === 'skimmer')
+    return (
+      <g>
+        {/* 下が長い赤と黒のくちばし */}
+        <path d="M58 42 L70 42 M58 46 L78 48" fill="none" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
