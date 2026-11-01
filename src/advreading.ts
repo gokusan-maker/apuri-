@@ -22426,6 +22426,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The First Farmers', 'How to Grow Mushrooms at Home', 'Why Leaves Turn Red', 'The Biggest Forests on Earth'], answer: 0, why: '全体として、人間より前から農業をしてきたハキリアリの社会と協力のしくみを述べている。' },
   },
   {
+    id: 'kyotsu-art-conservation',
+    title: 'Guardians of Old Paintings',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many of the paintings we admire in museums today do not look exactly as they did when they were first created. Over hundreds of years, colors fade, varnish turns yellow, and the surface of a painting can crack or become covered with dirt and smoke. To slow this damage and help viewers see the works more clearly, museums employ specialists called art conservators. Their work is a fascinating mixture of science, history, and careful judgment.",
+      "Before touching a painting, conservators study it closely. They use tools such as microscopes, X-rays, and infrared cameras to look beneath the surface. These methods can reveal sketches ( A ) the artist later painted over, earlier repairs made by other people, and areas where the paint is in danger of falling off. Chemical analysis can also identify the materials used, which helps conservators choose treatments that will not harm the original work.",
+      "One of the most common tasks is cleaning. Many old paintings were coated with varnish to protect them, but over time this layer darkens and hides the true colors underneath. Removing old varnish can make a painting look dramatically brighter. However, this must be done extremely carefully, since the chemicals used to dissolve varnish may also damage the paint itself. A conservator may spend months cleaning a single large painting, working on an area no bigger than a coin at a time.",
+      "Conservation also raises difficult questions. How much should be repaired, and how much should be left as it is? Some people believe that a painting should be returned as closely as possible to its original appearance. Others argue that the signs of age are part of a work's history and should be respected. In the past, some restorers repainted large sections of damaged works, sometimes changing them in ways ( B ) the original artists would not have accepted. As a result, modern conservators generally follow the principle of doing as little as necessary.",
+      "Another important principle is that any changes should be reversible. Materials used for repairs today are chosen so that future conservators, who may have better technology, can remove them without harming the original paint. Conservators also keep detailed records of everything they do. Their goal is not to create something new but to protect the artist's work for future generations. In this sense, conservators act as a bridge between the past and the future, allowing people ( C ) live centuries from now to enjoy the same works that we admire today.",
+    ],
+    ja: [
+      '今日私たちが美術館で感心して見る絵の多くは、最初にえがかれたときとまったく同じには見えない。何百年もの間に、色はあせ、ニスは黄色くなり、絵の表面はひびわれたり、ほこりやすすでおおわれたりすることがある。こうした傷みをおそくし、見る人が作品をよりはっきり見られるように、美術館は美術品保存修復家とよばれる専門家をやとっている。その仕事は、科学と歴史と注意深い判断がまざり合った、興味深いものである。',
+      '絵にさわる前に、修復家は絵をくわしく調べる。顕微鏡やX線や赤外線カメラのような道具を使って、表面の下を見るのである。こうした方法によって、画家があとからぬりつぶした下絵や、ほかの人が前に行った修理や、絵の具がはがれ落ちそうになっている部分が明らかになることがある。化学的な分析で使われた材料を特定することもでき、これは修復家が元の作品を傷つけない処置を選ぶのに役立つ。',
+      '最もよくある仕事のひとつは、そうじである。古い絵の多くは守るためにニスがぬられていたが、時がたつとこの層が黒ずみ、下の本当の色をかくしてしまう。古いニスを取りのぞくと、絵がおどろくほど明るく見えるようになることがある。しかし、ニスをとかす薬品は絵の具そのものも傷つけるおそれがあるので、これはきわめて注意深く行わなければならない。修復家は、1回にコインほどの大きさの部分ずつ作業しながら、1枚の大きな絵のそうじに何か月もかけることもある。',
+      '保存修復はむずかしい問題も生む。どこまで直し、どこまでそのままにしておくべきなのだろうか。絵はできるだけ元のすがたにもどすべきだと考える人もいる。年月のあとも作品の歴史の一部であり、尊重すべきだと主張する人もいる。昔は、傷んだ作品の広い部分をぬり直した修復者もいて、ときには元の画家ならみとめなかったであろう形に変えてしまうこともあった。その結果、現代の修復家は、ふつう必要最小限のことだけをするという原則にしたがっている。',
+      'もうひとつの大切な原則は、どんな変更も元にもどせるようにすることである。今日の修理に使う材料は、よりよい技術をもっているかもしれない未来の修復家が、元の絵の具を傷つけずに取りのぞけるように選ばれる。修復家は、自分がしたことをすべてくわしく記録してもいる。その目的は新しいものを作ることではなく、画家の作品を未来の世代のために守ることである。この意味で、修復家は過去と未来をつなぐ橋のような役割を果たし、何世紀も先に生きる人々が、今日私たちが感心するのと同じ作品を楽しめるようにしているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 sketches を受け、painted over の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'who'], answer: 0, why: '先行詞 ways を受け、accepted の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、live の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '美術館の古い絵の多くは、えがかれたときと同じに見える。', answer: false, why: '第1段落 Many of the paintings ... do not look exactly as they did when they were first created。' },
+      { statement: 'X線などを使うと、画家があとからぬりつぶした下絵が見つかることがある。', answer: true, why: '第2段落 These methods can reveal sketches that the artist later painted over。' },
+      { statement: 'ニスをとかす薬品は、絵の具を傷つけることはない。', answer: false, why: '第3段落 the chemicals used to dissolve varnish may also damage the paint itself。' },
+      { statement: '今日の修理の材料は、あとで取りのぞけるように選ばれている。', answer: true, why: '第5段落 Materials used for repairs today are chosen so that future conservators ... can remove them。' },
+    ],
+    qa: [
+      { q: 'Why can removing old varnish make a painting look brighter?', choices: ['Because the old varnish darkens and hides the true colors.', 'Because the varnish adds new colors.', 'Because the paint becomes thicker.', 'Because the painting is moved to a brighter room.'], answer: 0, why: '第3段落 over time this layer darkens and hides the true colors underneath。' },
+      { q: 'What principle do modern conservators generally follow?', choices: ['Doing as little as necessary.', 'Repainting large sections.', 'Changing paintings to modern styles.', 'Removing all signs of age.'], answer: 0, why: '第4段落 modern conservators generally follow the principle of doing as little as necessary。' },
+    ],
+    gist: [
+      { para: 1, choices: ['修理の前に科学的な道具で絵を調べること', '美術館の入場料', 'カメラの歴史', '画家の生まれた国'], answer: 0, why: '第2段落は、顕微鏡やX線などで表面の下や材料を調べることを述べている。' },
+      { para: 3, choices: ['どこまで直すべきかというむずかしい問題', 'コインの大きさ', 'ニスの値段', '新しい絵の作り方'], answer: 0, why: '第4段落は、元にもどすべきか年月のあとを残すべきかという問題と、必要最小限の原則を述べている。' },
+    ],
+    titleQ: { choices: ['Guardians of Old Paintings', 'How to Paint Like a Master', 'The Most Expensive Paintings', 'Why Museums Are Quiet'], answer: 0, why: '全体として、古い絵を未来に残す美術品保存修復家の仕事と原則を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
