@@ -22933,6 +22933,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Born to Run Long', 'How to Win a Sprint', 'The Fastest Animal on Earth', 'Why Cheetahs Sleep a Lot'], answer: 0, why: '全体として、人間が長距離を走るのに向いている理由とその由来を述べている。' },
   },
   {
+    id: 'kyotsu-commuting',
+    title: 'The Hidden Cost of the Journey',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For many people living in large cities, the day begins and ends with a long journey. Workers and students often spend an hour or more each way on crowded trains, buses, or roads. Because this time is part of everyday life, it is easy to treat it as unimportant. However, researchers who study well-being have found that the way people travel to work or school can have a surprisingly large effect on how happy and healthy they feel.",
+      "In several large surveys, people were asked to rate how they felt during different activities throughout the day. Commuting was consistently ranked among the least enjoyable activities, often below housework and only slightly above working itself. Long commutes were linked to higher stress, less time for sleep and exercise, and less satisfaction with life in general. Some economists have even calculated that a person with a long commute would need a considerably higher salary to be as satisfied as someone ( A ) lives close to work.",
+      "Interestingly, people often underestimate these costs when making decisions. When choosing a place to live, many families prefer a larger house in the suburbs, even if it means a much longer journey. They imagine that the extra space will make them happier. In practice, however, people quickly get used to a bigger house, while the daily burden of a long commute does not fade so easily. This is one reason ( B ) some researchers describe commuting as a hidden cost of city life.",
+      "Not all commutes are equally unpleasant, though. Studies suggest that people who walk or cycle to work tend to be happier with their journeys than those who drive or take crowded trains. Walking and cycling provide exercise, allow people to enjoy the outdoors, and are less affected by traffic jams and delays. Even for longer distances, some people find that using travel time for reading, listening to music, or simply thinking can make it feel more meaningful.",
+      "Cities and companies can also help. Some cities are building safer bicycle lanes and improving public transport so that journeys become faster and more comfortable. Many companies now allow employees to start work at flexible times or to work from home on certain days, which reduces crowding during rush hour. These changes show that commuting is not just a personal matter but a social issue, and that planning cities with shorter and more pleasant journeys can improve the lives of the people ( C ) live in them.",
+    ],
+    ja: [
+      '大都市に住む多くの人にとって、一日は長い移動で始まり、長い移動で終わる。働く人や学生は、こみ合った電車やバスや道路で、片道1時間以上をすごすことがよくある。この時間は日々のくらしの一部なので、大切でないものとしてあつかいやすい。しかし幸福について研究する人々は、仕事や学校への通い方が、人がどれだけ幸せで健康だと感じるかに、おどろくほど大きな影響をあたえることがあると発見した。',
+      'いくつかの大きな調査で、人々は一日の中のさまざまな活動の間にどう感じたかを評価するよう求められた。通勤は一貫して最も楽しくない活動のひとつに数えられ、家事より下で、仕事そのものよりほんの少し上という結果が多かった。長い通勤は、ストレスの高さ、睡眠や運動の時間の少なさ、生活全体への満足の低さと結びついていた。長い通勤をする人が、職場の近くに住む人と同じくらい満足するには、かなり高い給料が必要だと計算した経済学者さえいる。',
+      'おもしろいことに、人は判断をするときにこうした負担を小さく見積もりがちである。住む場所を選ぶとき、多くの家族は、移動がずっと長くなっても、郊外の広い家を好む。広い場所があればもっと幸せになると想像するのである。しかし実際には、人は大きな家にすぐなれてしまう一方、長い通勤の毎日の負担はそうかんたんには消えない。これが、通勤を都市生活のかくれた負担とよぶ研究者がいる理由のひとつである。',
+      'しかし、すべての通勤が同じようにいやなわけではない。研究によれば、歩いたり自転車に乗ったりして通う人は、車や混んだ電車で通う人より、通勤に満足している傾向がある。歩くことや自転車は運動になり、外の空気を楽しめ、渋滞やおくれの影響も受けにくい。長い距離でも、移動の時間を読書や音楽を聞くこと、あるいはただ考えることに使うと、より意味のある時間に感じられると気づく人もいる。',
+      '都市や会社も手助けできる。移動がより速く快適になるように、より安全な自転車道をつくったり、公共交通を改善したりしている都市もある。今では多くの会社が、社員がはたらき始める時間を自由に選んだり、決まった日に家で働いたりすることを認めており、それによってラッシュアワーの混雑がへっている。こうした変化は、通勤が個人だけの問題ではなく社会の問題であり、より短く快適な移動ができるように都市を計画すれば、そこに住む人々の生活をよくできることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 someone（人）を受け、lives の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['why', 'which', 'what', 'whose'], answer: 0, why: '先行詞 reason のあとに完全な文（some researchers describe ...）が続くので関係副詞 why。' },
+      { id: 'C', choices: ['who', 'which', 'where', 'whose'], answer: 0, why: '先行詞 the people（人）を受け、live の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '調査では、通勤は最も楽しくない活動のひとつに数えられた。', answer: true, why: '第2段落 Commuting was consistently ranked among the least enjoyable activities。' },
+      { statement: '人は住む場所を選ぶとき、通勤の負担を大きく見積もりすぎることが多い。', answer: false, why: '第3段落 people often underestimate these costs when making decisions。' },
+      { statement: '歩いたり自転車で通ったりする人は、通勤に満足している傾向がある。', answer: true, why: '第4段落 people who walk or cycle to work tend to be happier with their journeys。' },
+      { statement: '筆者は、通勤は個人だけの問題だと考えている。', answer: false, why: '第5段落 commuting is not just a personal matter but a social issue。' },
+    ],
+    qa: [
+      { q: 'Why do some families choose a house far from work?', choices: ['They imagine that the extra space will make them happier.', 'They enjoy long train rides.', 'They want to sleep less.', 'They want higher stress.'], answer: 0, why: '第3段落 They imagine that the extra space will make them happier。' },
+      { q: 'How can companies help reduce crowding during rush hour?', choices: ['By allowing flexible start times or working from home.', 'By making everyone start at the same time.', 'By closing all offices.', 'By building more parking lots.'], answer: 0, why: '第5段落 allow employees to start work at flexible times or to work from home on certain days, which reduces crowding。' },
+    ],
+    gist: [
+      { para: 1, choices: ['通勤が幸福にあたえる悪い影響', '家事のやり方', '給料の決め方', '電車の時刻表'], answer: 0, why: '第2段落は、調査で通勤が楽しくない活動とされ、ストレスや満足の低さと結びつくことを述べている。' },
+      { para: 3, choices: ['より快適な通い方', '音楽の選び方', '自転車の値段', '天気予報'], answer: 0, why: '第4段落は、歩きや自転車の通勤や、移動時間の使い方で通勤がよりよくなることを述べている。' },
+    ],
+    titleQ: { choices: ['The Hidden Cost of the Journey', 'How to Buy a Bigger House', 'The History of Trains', 'Why Offices Are Crowded'], answer: 0, why: '全体として、通勤が幸福にあたえるかくれた負担と、その軽くし方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
