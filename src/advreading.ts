@@ -23518,6 +23518,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Rivers in the Sky', 'How to Grow Coffee', 'The Longest River in the World', 'Why Clouds Are White'], answer: 0, why: '全体として、アマゾンの森が作る空飛ぶ川と、それを守る大切さを述べている。' },
   },
   {
+    id: 'kyotsu-field-trips',
+    title: 'Learning Beyond the Classroom',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For many people, school field trips are among their most vivid childhood memories. Visiting a museum, a factory, a farm, or a historical site is often more exciting than an ordinary day in the classroom. In recent years, however, some schools have reduced the number of trips they take, mainly because of costs, safety concerns, and pressure to spend more time preparing for tests. This has led researchers to ask an important question: do field trips actually help students learn, or are they simply a fun break from lessons?",
+      "Several studies suggest that the benefits are real. In one large experiment in the United States, groups of students were chosen by lottery to visit an art museum, while others stayed at school. Weeks later, the students ( A ) had visited the museum remembered surprisingly detailed information about the paintings they had seen. They also showed greater interest in visiting museums in the future and were better at thinking critically about works of art.",
+      "Field trips seem to be especially valuable for students who have fewer opportunities outside school. Children from families with more money and free time often visit museums, theaters, and nature parks with their parents. For other children, a school trip may be their only chance to experience such places. Researchers found that the positive effects of the museum visit were largest among students from rural areas and low-income families, suggesting that field trips can help reduce gaps in cultural experience.",
+      "Why are these experiences so memorable? One reason is that learning outside the classroom involves all the senses. Seeing a real dinosaur skeleton, hearing the sounds of a working factory, or touching the soil on a farm creates stronger memories than reading about the same things in a textbook. Field trips also give students a chance to connect what they study with the real world, which can make lessons feel more meaningful. Teachers often notice that students ask more questions after a trip ( B ) has sparked their curiosity.",
+      "Of course, field trips require careful planning. Teachers must prepare students before the visit and help them reflect afterward, or the trip may become little more than a day out. Costs can also be a barrier, although some museums and companies offer free programs for schools. Still, the evidence suggests that well-planned trips are not a waste of school time. Instead, they may provide experiences ( C ) stay with students long after they have forgotten the details of many classroom lessons.",
+    ],
+    ja: [
+      '多くの人にとって、学校の遠足や校外学習は子ども時代の最もあざやかな思い出のひとつである。美術館や工場、農場や歴史のある場所をおとずれるのは、教室でのふつうの1日よりわくわくすることが多い。しかし近年、おもに費用や安全面の心配、テスト対策にもっと時間を使わなければならないというプレッシャーのために、校外学習の回数をへらした学校もある。このことから研究者たちは、校外学習は本当に生徒の学びに役立つのか、それともただ授業から楽しく休むだけなのか、という大切な疑問をもつようになった。',
+      'いくつかの研究によれば、その効果は本物である。アメリカでのある大規模な実験では、生徒のグループがくじで選ばれて美術館をおとずれ、ほかの生徒は学校に残った。数週間後、美術館をおとずれた生徒は、見た絵についておどろくほどくわしいことを覚えていた。また彼らは、これから美術館に行くことにより強い関心を示し、美術作品について批判的に考えるのも上手だった。',
+      '校外学習は、学校の外で機会の少ない生徒にとってとくに価値があるようである。お金や時間に余裕のある家庭の子どもは、親といっしょに美術館や劇場や自然公園をよくおとずれる。ほかの子どもにとっては、学校の校外学習がそうした場所を体験できる唯一の機会かもしれない。研究者たちは、美術館訪問のよい効果は、いなかの地域や所得の低い家庭の生徒のあいだで最も大きかったことを見つけた。これは、校外学習が文化的な経験の差をちぢめる助けになりうることを示している。',
+      'なぜこうした経験はこんなに記憶に残るのだろうか。ひとつの理由は、教室の外での学びがすべての感覚を使うことである。本物の恐竜の骨格を見たり、動いている工場の音を聞いたり、農場の土にさわったりすることは、教科書で同じことを読むより強い記憶を作る。校外学習は、学んでいることと実際の世界を結びつける機会にもなり、それによって授業がより意味のあるものに感じられることがある。先生たちはよく、好奇心に火をつけた校外学習のあとで、生徒がより多く質問することに気づく。',
+      'もちろん、校外学習にはていねいな計画が必要である。先生は訪問の前に生徒に準備させ、あとでふり返らせなければ、校外学習はただの遠出にすぎなくなってしまう。費用もさまたげになりうるが、学校向けに無料の取り組みを用意している美術館や会社もある。それでも証拠によれば、よく計画された校外学習は学校の時間のむだではない。むしろそれは、多くの授業のくわしい内容をわすれたあとも、ずっと生徒の心に残る経験をあたえてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 the students（人）を受け、had visited の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 a trip を受け、has sparked の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 experiences を受け、stay の主語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '近年、校外学習の回数をへらした学校もある。', answer: true, why: '第1段落 some schools have reduced the number of trips they take。' },
+      { statement: '実験では、美術館をおとずれた生徒は絵のことをほとんど覚えていなかった。', answer: false, why: '第2段落 remembered surprisingly detailed information about the paintings they had seen。' },
+      { statement: '美術館訪問の効果は、いなかの地域の生徒のあいだで最も大きかった。', answer: true, why: '第3段落 the positive effects ... were largest among students from rural areas and low-income families。' },
+      { statement: '筆者は、校外学習は準備をしなくても同じ効果があると考えている。', answer: false, why: '第5段落 Teachers must prepare students before the visit and help them reflect afterward, or the trip may become little more than a day out。' },
+    ],
+    qa: [
+      { q: 'How were the students chosen to visit the art museum in the experiment?', choices: ['By lottery.', 'By their test scores.', 'By their parents.', 'By their age.'], answer: 0, why: '第2段落 groups of students were chosen by lottery to visit an art museum。' },
+      { q: 'Why do field trips create strong memories?', choices: ['They involve all the senses.', 'They are always very long.', 'They have no teachers.', 'They happen only at night.'], answer: 0, why: '第4段落 learning outside the classroom involves all the senses。' },
+    ],
+    gist: [
+      { para: 2, choices: ['機会の少ない生徒にとっての校外学習の価値', '劇場の入場料', '自然公園の場所', '家族旅行の計画'], answer: 0, why: '第3段落は、学校の外で機会の少ない生徒にとって、校外学習がとくに価値をもつことを述べている。' },
+      { para: 4, choices: ['校外学習に必要な計画と、その価値', '美術館の建て方', '会社の利益', 'テストの作り方'], answer: 0, why: '第5段落は、準備とふり返りの必要と、よく計画された校外学習の価値を述べている。' },
+    ],
+    titleQ: { choices: ['Learning Beyond the Classroom', 'How to Paint a Picture', 'The History of Dinosaurs', 'Why Tests Are Important'], answer: 0, why: '全体として、教室の外で学ぶ校外学習の効果と、その意義を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
