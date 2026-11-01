@@ -620,6 +620,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           )}
           {!result.mystery && (
             // デザイン173：出た子の出やすさ
+            <p className="gacha-skill" aria-label="出た子の今日のチャレンジ">
+              {/* デザイン176 */}
+              {challengeOf(result.species.id).icon} 今日のチャレンジ：{challengeOf(result.species.id).label}
+            </p>
+          )}
+          {!result.mystery && (
             <p className="gacha-skill" aria-label="出た子の出やすさ">
               🎲 この子の出やすさ：{(baseRate(result.species) * 100).toFixed(1)}%
             </p>

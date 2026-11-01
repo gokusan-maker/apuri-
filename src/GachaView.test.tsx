@@ -717,3 +717,12 @@ it('デザイン173：ガチャの結果に、出た子の出やすさ（%）が
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('出た子の出やすさ').textContent).toBe(`🎲 この子の出やすさ：${(baseRate(speciesOf('cat')) * 100).toFixed(1)}%`)
 })
+
+it('デザイン176：ガチャの結果に、出た子の今日のチャレンジが出る', async () => {
+  localStorage.clear()
+  const { challengeOf } = await import('./challenge')
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  const c = challengeOf('cat')
+  expect(screen.getByLabelText('出た子の今日のチャレンジ').textContent).toBe(`${c.icon} 今日のチャレンジ：${c.label}`)
+})
