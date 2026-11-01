@@ -23089,6 +23089,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Mystery of the Eel', 'How to Grill Fish', 'The Life of Aristotle', 'The Deepest Lakes in Asia'], answer: 0, why: '全体として、ウナギの生まれる場所のなぞとその解明、そして保護の必要を述べている。' },
   },
   {
+    id: 'kyotsu-politeness',
+    title: 'Many Ways to Be Polite',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every language has ways of being polite, but the rules for politeness can be surprisingly different from one culture to another. In Japanese, for example, speakers choose different verb forms and words depending on whether they are talking to a friend, a teacher, or a customer. English does not have such a detailed system of honorific language, yet English speakers also have many ways of showing respect. Understanding these differences can help us avoid misunderstandings when we communicate across cultures.",
+      "In English, much of politeness is expressed through indirect requests. Instead of saying \"Open the window,\" speakers often say \"Could you open the window?\" or \"Would you mind opening the window?\" These sentences are grammatically questions, but everyone understands them as requests. Adding words such as \"please,\" \"maybe,\" or \"I was wondering if\" makes a request sound even softer. A direct command, which may be perfectly normal among close friends, can sound rude when it is used with people ( A ) the speaker does not know well.",
+      "Japanese, by contrast, builds politeness directly into its grammar. Speakers use polite forms such as desu and masu in many everyday situations, and they use special honorific and humble forms to show respect to others or to lower themselves. Choosing the right form depends on a careful judgment of the relationship between the speaker and the listener, including age, social position, and how well they know each other. For learners of Japanese, mastering this system is often one of the greatest challenges.",
+      "Politeness is not only about words. In some cultures, it is polite to look directly into a person's eyes while speaking, as a sign of honesty and attention. In others, especially when speaking to someone of higher status, avoiding direct eye contact shows respect. Silence, too, can carry different meanings. A short pause before answering may be seen as thoughtful in one culture but as hesitation or even disagreement in another.",
+      "Because of these differences, people sometimes judge others unfairly. A visitor who uses direct language may be seen as rude, when in fact they are simply following the rules of their own culture. Likewise, someone who speaks very indirectly may be seen as unclear. Learning about the politeness systems of other cultures does not mean giving up our own. Rather, it allows us to understand the intentions behind other people's words and to choose expressions ( B ) will be understood the way we mean them. In a world ( C ) people from different backgrounds meet more and more often, this awareness is an important skill.",
+    ],
+    ja: [
+      'どの言語にもていねいさを表す方法があるが、ていねいさのきまりは文化によっておどろくほどちがうことがある。たとえば日本語では、話し手は、友だちと話しているのか、先生と話しているのか、客と話しているのかによって、ちがう動詞の形やことばを選ぶ。英語にはそれほどくわしい敬語のしくみはないが、英語を話す人にも敬意を示す方法はたくさんある。こうしたちがいを理解すれば、文化をこえて伝え合うときの誤解をさけるのに役立つ。',
+      '英語では、ていねいさの多くは遠回しな頼み方で表される。「窓を開けて」と言うかわりに、話し手はよく「窓を開けてもらえますか」や「窓を開けていただけませんか」と言う。こうした文は文法上は疑問文だが、だれもが頼みごととして理解する。please や maybe、I was wondering if のようなことばを加えると、頼みごとはさらにやわらかく聞こえる。親しい友だちどうしならまったくふつうの直接的な命令も、話し手がよく知らない人に使うと失礼に聞こえることがある。',
+      'それに対して日本語は、ていねいさを文法そのものに組みこんでいる。話し手は多くの日常の場面で「です」「ます」のようなていねいな形を使い、相手に敬意を示したり自分をへりくだらせたりするために、特別な尊敬語やけんじょう語を使う。正しい形を選ぶには、年齢や社会的な立場、どのくらい親しいかなど、話し手と聞き手の関係をていねいに判断する必要がある。日本語を学ぶ人にとって、このしくみを身につけることは最大の課題のひとつであることが多い。',
+      'ていねいさはことばだけの問題ではない。ある文化では、話している間に相手の目をまっすぐ見ることが、正直さと注意のしるしとしてていねいだとされる。別の文化では、とくに立場が上の人と話すとき、目を直接合わせないことが敬意を示す。沈黙もまた、ちがう意味をもちうる。答える前の短い間は、ある文化ではよく考えているとみなされるが、別の文化ではためらいや、反対のしるしとさえ受けとられることがある。',
+      'こうしたちがいのために、人はときに他人を不公平に判断してしまう。直接的なことばを使う訪問者は、実は自分の文化のきまりにしたがっているだけなのに、失礼だと見られるかもしれない。同じように、とても遠回しに話す人はわかりにくいと見られるかもしれない。ほかの文化のていねいさのしくみを学ぶことは、自分の文化を捨てることではない。むしろ、他人のことばの裏にある意図を理解し、自分が意図したとおりに理解される表現を選べるようにしてくれる。ちがう背景をもつ人々がますます出会うようになった世界で、この意識は大切な力である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whom', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、know の目的語になる関係代名詞 whom（who・that でもよい）。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 expressions を受け、will be understood の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a world（場所）で、うしろの people ... meet more and more often は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '英語には、日本語ほどくわしい敬語のしくみはない。', answer: true, why: '第1段落 English does not have such a detailed system of honorific language。' },
+      { statement: 'Could you open the window? は、ふつう質問ではなく頼みごととして理解される。', answer: true, why: '第2段落 These sentences are grammatically questions, but everyone understands them as requests。' },
+      { statement: '目を合わせることは、どの文化でもていねいだとされる。', answer: false, why: '第4段落 In others ... avoiding direct eye contact shows respect。' },
+      { statement: '筆者は、ほかの文化のていねいさを学ぶには、自分の文化を捨てる必要があると考えている。', answer: false, why: '第5段落 Learning about the politeness systems of other cultures does not mean giving up our own。' },
+    ],
+    qa: [
+      { q: 'What does choosing the right polite form in Japanese depend on?', choices: ['The relationship between the speaker and the listener.', 'The weather that day.', 'The length of the sentence.', 'The number of people in the room.'], answer: 0, why: '第3段落 Choosing the right form depends on a careful judgment of the relationship between the speaker and the listener。' },
+      { q: 'How might a short pause before answering be seen in some cultures?', choices: ['As hesitation or even disagreement.', 'As a joke.', 'As a sign of hunger.', 'As a request for help.'], answer: 0, why: '第4段落 as hesitation or even disagreement in another。' },
+    ],
+    gist: [
+      { para: 1, choices: ['英語の遠回しな頼み方', '窓の開け方', '友だちの作り方', '文法のテスト'], answer: 0, why: '第2段落は、英語では疑問文の形などで遠回しに頼むことでていねいさを表すことを述べている。' },
+      { para: 3, choices: ['ことば以外のていねいさのちがい', '目の色', '音楽のリズム', '答えの正しさ'], answer: 0, why: '第4段落は、目の合わせ方や沈黙の意味が文化によってちがうことを述べている。' },
+    ],
+    titleQ: { choices: ['Many Ways to Be Polite', 'How to Open a Window', 'The History of the Japanese Language', 'Why Silence Is Golden'], answer: 0, why: '全体として、文化によってちがうていねいさの表し方と、それを理解する大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
