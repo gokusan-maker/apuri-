@@ -890,6 +890,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
                 {ok && levels?.[sp.id] === 1 && (partner ?? 'mochi') !== sp.id && <span className="char-book-sprout" aria-label="まだ育てていない">🌱</span>} {/* デザイン122 */}
                 {ok && today.includes(sp.id) && <span className="char-book-sprout" aria-label="今日出会った">☀今日</span>} {/* デザイン137 */}
                 {ok && countOf(sp.id) >= 3 && <span className="char-book-sprout" aria-label={`なかまに ${countOf(sp.id)}体`}>👥×{countOf(sp.id)}</span>} {/* デザイン152 */}
+                {ok && countOf(sp.id) >= 5 && <span className="char-book-sprout" aria-label="大家族">🏠大家族</span>} {/* デザイン198：なかまが5体以上 */}
                 {ok && topSp === sp.id && <span className="char-book-sprout" aria-label="いちばん育った子">🏅</span>} {/* デザイン161 */}
                 {ok && levels?.[sp.id] !== undefined && levelsToNextStage(levels[sp.id]) === null && <span className="char-book-sprout" aria-label="さいごの進化">⭐</span>} {/* デザイン189：さいごの姿まで進化した子 */}
                 {ok && sp.id !== (partner ?? 'mochi') && t.id === typeOf(partner ?? 'mochi').id && <span className="char-book-sprout" aria-label="相棒と同じタイプ">🤝</span>} {/* デザイン171 */}

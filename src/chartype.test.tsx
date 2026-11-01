@@ -243,3 +243,10 @@ it('デザイン195：キャラ図鑑のタイプのボタンに、会えた数�
   const met = ['mochi', all[0]].filter((id) => typeOf(id).id === t.id).length
   expect(screen.getByLabelText(`${t.name}で会えた子`).textContent).toBe(` ${met}/${all.length}`)
 })
+
+it('デザイン198：キャラ図鑑で、なかまが5体以上いる子に「🏠大家族」がつく', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={8} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'fox', 'fox', 'fox', 'fox', 'cat', 'cat']} />)
+  const marks = screen.getAllByLabelText('大家族')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
+})
