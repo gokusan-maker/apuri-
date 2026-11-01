@@ -22972,6 +22972,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Hidden Cost of the Journey', 'How to Buy a Bigger House', 'The History of Trains', 'Why Offices Are Crowded'], answer: 0, why: '全体として、通勤が幸福にあたえるかくれた負担と、その軽くし方を述べている。' },
   },
   {
+    id: 'kyotsu-food-preservation',
+    title: 'Keeping Food Before Refrigerators',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, most of us can keep food fresh for days or weeks simply by putting it in the refrigerator. For most of human history, however, this was impossible. Fresh meat, fish, fruit, and vegetables would spoil within a short time, and people faced the constant risk of hunger during winters or poor harvests. To survive, communities around the world developed clever methods of preserving food, many of which are still used today.",
+      "To understand these methods, it helps to know why food spoils. The main cause is tiny living things such as bacteria and molds. These organisms grow quickly in conditions ( A ) are warm and moist, breaking down food and sometimes producing substances that make people ill. Most preservation methods work by making food an unfriendly place for these organisms, usually by removing water, adding salt or sugar, increasing acidity, or changing the temperature.",
+      "Drying is one of the oldest techniques. When water is removed from food, bacteria and molds cannot grow easily. People in many cultures have dried fish, meat, fruit, and grains in the sun or by fire. Salting works in a similar way. Salt draws water out of food, and it also creates an environment ( B ) most harmful bacteria cannot survive. Before refrigeration, salted fish and meat allowed sailors to make long ocean voyages and helped communities store food through the winter.",
+      "Fermentation takes a different approach. Instead of stopping all living things from growing, it encourages helpful bacteria and yeasts to grow. These organisms produce acids or alcohol that prevent harmful organisms from spreading. Many familiar foods are made in this way, including yogurt, cheese, pickles, and Japanese miso and soy sauce. Fermentation not only preserves food but also creates new flavors and can make some nutrients easier for the body to absorb.",
+      "In the nineteenth century, new methods appeared. Canning, in which food is sealed in containers and heated to kill bacteria, made it possible to store food safely for years. Later, refrigerators and freezers became common in homes, changing the way people shopped and cooked. Yet traditional methods have not disappeared. Many people continue to enjoy dried, salted, and fermented foods, not only because they last a long time but also because they connect us with the knowledge ( C ) earlier generations developed through centuries of experience.",
+    ],
+    ja: [
+      '今日、私たちのほとんどは、食べ物を冷蔵庫に入れるだけで何日も何週間も新鮮に保てる。しかし人類の歴史の大部分では、これは不可能だった。新鮮な肉や魚、果物や野菜は短い間にいたみ、人々は冬や不作のときにはいつも飢えの危険と向き合っていた。生きのびるために、世界中の人々は食べ物を保存するかしこい方法を生み出し、その多くは今でも使われている。',
+      'こうした方法を理解するには、なぜ食べ物がいたむのかを知るとよい。おもな原因は、細菌やカビのような小さな生き物である。これらの生き物はあたたかくしめった条件ですばやくふえ、食べ物を分解し、ときには人を病気にする物質を作り出す。ほとんどの保存方法は、たいてい水分を取りのぞいたり、塩や砂糖を加えたり、酸味を強くしたり、温度を変えたりして、食べ物をこうした生き物にとってすみにくい場所にすることで働いている。',
+      'かんそうは最も古い方法のひとつである。食べ物から水分を取りのぞくと、細菌やカビはふえにくくなる。多くの文化の人々が、魚や肉、果物や穀物を日光や火でかわかしてきた。塩づけも同じように働く。塩は食べ物から水分を引き出し、ほとんどの有害な細菌が生きられない環境も作り出す。冷蔵が広まる前は、塩づけの魚や肉のおかげで、船乗りは長い航海に出ることができ、地域の人々は冬の間も食べ物をたくわえることができた。',
+      '発酵はちがう方法をとる。すべての生き物がふえるのを止めるのではなく、役に立つ細菌や酵母をふやすのである。こうした生き物は酸やアルコールを作り出し、有害な生き物が広がるのを防ぐ。ヨーグルト、チーズ、ピクルス、そして日本のみそやしょうゆなど、身近な食べ物の多くがこの方法で作られる。発酵は食べ物を保存するだけでなく、新しい風味を生み出し、いくつかの栄養を体が吸収しやすくすることもある。',
+      '19世紀には新しい方法があらわれた。食べ物を容器にとじこめて熱し、細菌を殺すかんづめによって、食べ物を何年も安全にたくわえられるようになった。のちに冷蔵庫や冷凍庫が家庭に広まり、人々の買い物や料理のしかたを変えた。それでも、昔ながらの方法はなくなっていない。多くの人が、長もちするからだけでなく、前の世代が何世紀もの経験を通して生み出した知恵とつながれるからこそ、ほした食べ物や塩づけ、発酵食品を楽しみ続けている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 conditions を受け、are の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は an environment（場所）で、うしろの most harmful bacteria cannot survive は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the knowledge を受け、developed の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '食べ物がいたむおもな原因は、細菌やカビのような小さな生き物である。', answer: true, why: '第2段落 The main cause is tiny living things such as bacteria and molds。' },
+      { statement: '塩は、食べ物に水分を加える働きをする。', answer: false, why: '第3段落 Salt draws water out of food。' },
+      { statement: '発酵は、役に立つ細菌や酵母をふやす方法である。', answer: true, why: '第4段落 it encourages helpful bacteria and yeasts to grow。' },
+      { statement: '冷蔵庫が広まると、昔ながらの保存方法はまったく使われなくなった。', answer: false, why: '第5段落 Yet traditional methods have not disappeared。' },
+    ],
+    qa: [
+      { q: 'How did salted fish and meat help sailors?', choices: ['They allowed sailors to make long ocean voyages.', 'They made ships faster.', 'They helped sailors sleep.', 'They kept the ships warm.'], answer: 0, why: '第3段落 salted fish and meat allowed sailors to make long ocean voyages。' },
+      { q: 'What is one benefit of fermentation besides preserving food?', choices: ['It creates new flavors.', 'It makes food heavier.', 'It removes all bacteria.', 'It makes food freeze quickly.'], answer: 0, why: '第4段落 Fermentation not only preserves food but also creates new flavors。' },
+    ],
+    gist: [
+      { para: 1, choices: ['食べ物がいたむ理由と保存のしくみ', '冷蔵庫の値段', 'カビの色', '料理のレシピ'], answer: 0, why: '第2段落は、細菌やカビが原因であることと、保存方法の共通のしくみを述べている。' },
+      { para: 3, choices: ['発酵という保存方法', 'みその歴史', 'アルコールの作り方', 'チーズの店'], answer: 0, why: '第4段落は、役に立つ生き物をふやして保存する発酵について述べている。' },
+    ],
+    titleQ: { choices: ['Keeping Food Before Refrigerators', 'How to Build a Refrigerator', 'The Best Cheese in the World', 'Why Sailors Love the Sea'], answer: 0, why: '全体として、冷蔵庫がなかった時代からの食べ物の保存方法と、その知恵を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
