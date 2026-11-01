@@ -1610,6 +1610,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The house (A) which (B) I lived (C) in as a child (D) are now empty.', choices: ['(A) which', '(B) I lived', '(C) in as a child', '(D) are now empty'], answer: 3, why: '主語は The house（単数）なので is now empty。' },
     ],
   },
+  {
+    id: 'exam-error-passive4',
+    title: '入試の正誤問題〈69〉（共通テストレベル：受け身の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be ＋過去分詞、be spoken to・be taken care of、be known to・be made from、have 物 ＋過去分詞、will be held、every day と everyday など、受け身のまとめ。',
+    ],
+    examples: [
+      { en: 'He is known to everyone in the town.', ja: '彼は町のだれにでも知られている。' },
+      { en: 'The meeting will be held next Monday.', ja: '会議は来週の月曜日に開かれる。' },
+    ],
+    questions: [
+      { sentence: 'This song (A) is loving (B) by (C) many people (D) around the world.', choices: ['(A) is loving', '(B) by', '(C) many people', '(D) around the world'], answer: 0, why: '歌は「愛される」側なので is loved。' },
+      { sentence: 'The letter (A) was (B) wrote (C) by (D) my grandfather.', choices: ['(A) was', '(B) wrote', '(C) by', '(D) my grandfather'], answer: 1, why: '受け身は be ＋過去分詞：was written。' },
+      { sentence: 'I (A) was spoken (B) by a stranger (C) on (D) the train.', choices: ['(A) was spoken', '(B) by a stranger', '(C) on', '(D) the train'], answer: 0, why: 'speak to の受け身は was spoken to。' },
+      { sentence: 'The baby (A) was (B) taken care (C) by (D) her aunt.', choices: ['(A) was', '(B) taken care', '(C) by', '(D) her aunt'], answer: 1, why: 'take care of の受け身は taken care of。' },
+      { sentence: 'He (A) is known (B) by everyone (C) in (D) the town.', choices: ['(A) is known', '(B) by everyone', '(C) in', '(D) the town'], answer: 1, why: '「～に知られている」は known to everyone。' },
+      { sentence: 'Cheese (A) is (B) made (C) of (D) milk.', choices: ['(A) is', '(B) made', '(C) of', '(D) milk'], answer: 2, why: '材料が形を変えるときは made from。' },
+      { sentence: 'English (A) is speaking (B) in (C) this (D) country.', choices: ['(A) is speaking', '(B) in', '(C) this', '(D) country'], answer: 0, why: '英語は「話される」側なので is spoken。' },
+      { sentence: 'I (A) had (B) my wallet (C) steal (D) on the bus.', choices: ['(A) had', '(B) my wallet', '(C) steal', '(D) on the bus'], answer: 2, why: 'have 物 ＋過去分詞：had my wallet stolen。' },
+      { sentence: 'The meeting (A) will (B) hold (C) next (D) Monday.', choices: ['(A) will', '(B) hold', '(C) next', '(D) Monday'], answer: 1, why: '未来の受け身：will be held。(B) を be held に。' },
+      { sentence: 'The room (A) must (B) be (C) cleaned (D) everyday.', choices: ['(A) must', '(B) be', '(C) cleaned', '(D) everyday'], answer: 3, why: '「毎日」は副詞句 every day（2語）。everyday は形容詞。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
