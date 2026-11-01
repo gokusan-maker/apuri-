@@ -1538,6 +1538,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The room was filled of (B) smoke (C) after (D) the fire.', choices: ['(A) The room was filled of', '(B) smoke', '(C) after', '(D) the fire'], answer: 0, why: 'be filled with ～：was filled with smoke。' },
     ],
   },
+  {
+    id: 'exam-error-conclusion',
+    title: '入試の正誤問題〈66〉（結論・まとめの表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'In conclusion、To sum up、All in all、On the whole、For these reasons、Therefore、lies in、It can be concluded that、Above all、discuss など、エッセイのまとめで使う表現と、主語と動詞の一致・助動詞のあとの原形。',
+    ],
+    examples: [
+      { en: 'On the whole, the results were positive.', ja: '全体的に見て、結果はよかった。' },
+      { en: 'It can be concluded that exercise improves health.', ja: '運動は健康をよくすると結論づけられる。' },
+    ],
+    questions: [
+      { sentence: '(A) In conclude, (B) technology (C) has changed (D) our lives.', choices: ['(A) In conclude', '(B) technology', '(C) has changed', '(D) our lives'], answer: 0, why: '「結論として」は In conclusion。' },
+      { sentence: '(A) To sum it, (B) we (C) need (D) more cooperation.', choices: ['(A) To sum it', '(B) we', '(C) need', '(D) more cooperation'], answer: 0, why: '「まとめると」は To sum up。' },
+      { sentence: 'All (A) in all, (B) the plan (C) were (D) a success.', choices: ['(A) in all', '(B) the plan', '(C) were', '(D) a success'], answer: 2, why: '主語 the plan は単数なので was。All in all は正しい。' },
+      { sentence: '(A) On the whole, (B) the results (C) was (D) positive.', choices: ['(A) On the whole', '(B) the results', '(C) was', '(D) positive'], answer: 2, why: '主語 the results は複数なので were。' },
+      { sentence: 'For these (A) reason, (B) I (C) support (D) the plan.', choices: ['(A) reason', '(B) I', '(C) support', '(D) the plan'], answer: 0, why: 'these のあとは複数形：these reasons。' },
+      { sentence: '(A) Therefore, (B) we (C) should (D) acting now.', choices: ['(A) Therefore', '(B) we', '(C) should', '(D) acting now'], answer: 3, why: '助動詞のあとは原形：should act。' },
+      { sentence: 'In short, (A) the problem (B) lie (C) in (D) poor communication.', choices: ['(A) the problem', '(B) lie', '(C) in', '(D) poor communication'], answer: 1, why: '主語は単数で現在のことなので lies。' },
+      { sentence: 'It (A) can be (B) concluding (C) that exercise (D) improves health.', choices: ['(A) can be', '(B) concluding', '(C) that exercise', '(D) improves health'], answer: 1, why: '受け身にする：can be concluded。' },
+      { sentence: '(A) Above all, (B) we (C) must (D) protecting children.', choices: ['(A) Above all', '(B) we', '(C) must', '(D) protecting children'], answer: 3, why: '助動詞のあとは原形：must protect。' },
+      { sentence: 'This essay (A) has (B) discussed about (C) three main (D) points.', choices: ['(A) has', '(B) discussed about', '(C) three main', '(D) points'], answer: 1, why: 'discuss は他動詞なので about はいらない。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
