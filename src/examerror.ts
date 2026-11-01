@@ -1634,6 +1634,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The room (A) must (B) be (C) cleaned (D) everyday.', choices: ['(A) must', '(B) be', '(C) cleaned', '(D) everyday'], answer: 3, why: '「毎日」は副詞句 every day（2語）。everyday は形容詞。' },
     ],
   },
+  {
+    id: 'exam-error-noun4',
+    title: '入試の正誤問題〈70〉（TOEFL・IELTS の書き言葉：名詞の数と冠詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'research・evidence・information・advice・equipment・furniture は数えられない名詞、a number of ＋複数名詞は複数・the number of ～ は単数、one of the ＋複数名詞、every ＋単数名詞など、論文やエッセイでよく問われる名詞のきまり。',
+    ],
+    examples: [
+      { en: 'Recent research suggests that exercise improves memory.', ja: '最近の研究は、運動が記憶をよくすることを示している。' },
+      { en: 'The number of tourists has increased sharply.', ja: '観光客の数が急にふえた。' },
+    ],
+    questions: [
+      { sentence: 'The professor (A) did (B) a lot of researches (C) on (D) sleep and memory.', choices: ['(A) did', '(B) a lot of researches', '(C) on', '(D) sleep and memory'], answer: 1, why: 'research は数えられない名詞なので複数形にしない：a lot of research。' },
+      { sentence: 'There (A) is (B) little (C) evidences that (D) the new drug works.', choices: ['(A) is', '(B) little', '(C) evidences that', '(D) the new drug works'], answer: 2, why: 'evidence は数えられない名詞なので little evidence。' },
+      { sentence: 'The website (A) provides (B) an information (C) about (D) local bus routes.', choices: ['(A) provides', '(B) an information', '(C) about', '(D) local bus routes'], answer: 1, why: 'information は数えられない名詞なので a(n) をつけない：provides information。' },
+      { sentence: 'She (A) gave me (B) many useful advices (C) before (D) I studied abroad.', choices: ['(A) gave me', '(B) many useful advices', '(C) before', '(D) I studied abroad'], answer: 1, why: 'advice は数えられない名詞。much useful advice や some useful advice にする。' },
+      { sentence: 'A number of (A) students (B) has chosen (C) to study (D) online this year.', choices: ['(A) students', '(B) has chosen', '(C) to study', '(D) online this year'], answer: 1, why: 'a number of ＋複数名詞は複数あつかいなので have chosen。' },
+      { sentence: 'The number of (A) tourists (B) visiting the city (C) have increased (D) sharply.', choices: ['(A) tourists', '(B) visiting the city', '(C) have increased', '(D) sharply'], answer: 2, why: 'the number of ～ は単数あつかいなので has increased。' },
+      { sentence: 'Tokyo (A) is one of (B) the largest (C) city (D) in the world.', choices: ['(A) is one of', '(B) the largest', '(C) city', '(D) in the world'], answer: 2, why: 'one of the ＋最上級＋複数名詞：the largest cities。' },
+      { sentence: 'The lab (A) bought (B) some new equipments (C) for (D) the experiment.', choices: ['(A) bought', '(B) some new equipments', '(C) for', '(D) the experiment'], answer: 1, why: 'equipment は数えられない名詞なので some new equipment。' },
+      { sentence: '(A) Every students (B) needs (C) to bring (D) a pen to the exam.', choices: ['(A) Every students', '(B) needs', '(C) to bring', '(D) a pen to the exam'], answer: 0, why: 'every のあとは単数名詞：Every student needs。' },
+      { sentence: 'Our school library (A) has (B) a lot of (C) books and (D) much new furnitures.', choices: ['(A) has', '(B) a lot of', '(C) books and', '(D) much new furnitures'], answer: 3, why: 'furniture は数えられない名詞なので複数形にしない：much new furniture。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
