@@ -1246,6 +1246,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 42 L80 44" fill="none" stroke="#dc2626" strokeWidth="3.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'gannet')
+    return (
+      <g>
+        {/* とがったくちばしと目のまわりの黒いふち */}
+        <path d="M58 42 L78 46 L58 48" fill="#94a3b8" stroke="#1c1917" strokeWidth="1.5" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

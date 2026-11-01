@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'gannet', name: 'カツオドリン', egg: 'しおかぜのとびこみタマゴ', token: 'カツオド', bigToken: 'カツオドリン', color: '#fef3c7', line: '#1c1917', rate: 0.02, desc: '高い空から矢のように海へとびこむ海鳥、カツオドリ。とがったくちばしと、空気のクッションのある体で、深いところの魚もつかまえる。' },
   { id: 'oystercatcher', name: 'ミヤコドリン', egg: 'いそべのあかはしタマゴ', token: 'ミヤコ', bigToken: 'ミヤコドリン', color: '#1f2937', line: '#030712', rate: 0.02, desc: '黒と白の羽に、まっ赤で長いくちばしをもつ海べの鳥、ミヤコドリ。かたい貝のすきまにくちばしを差しこんで、上手にあけて食べる。' },
   { id: 'tern', name: 'アジサシン', egg: 'すなはまのたびだちタマゴ', token: 'アジサ', bigToken: 'アジサシン', color: '#e2e8f0', line: '#0f172a', rate: 0.02, desc: '細い羽とふたまたの尾をもつ海の鳥、アジサシ。空からまっすぐ水にとびこんで魚をとり、なかまには地球を半周以上わたるものもいる。' },
   { id: 'avocet', name: 'ソリハシ', egg: 'ひがたのしろくろタマゴ', token: 'ソリハ', bigToken: 'ソリハシ', color: '#f8fafc', line: '#1e293b', rate: 0.02, desc: '上にそりかえった長いくちばしをもつ水辺の鳥、ソリハシセイタカシギ。くちばしを左右にふって、浅い水の中のえさをさがす。' },
