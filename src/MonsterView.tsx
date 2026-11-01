@@ -1377,6 +1377,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 54 Q50 58 62 54" fill="none" stroke="#86efac" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'smew')
+    return (
+      <g>
+        {/* 目のまわりの黒いもよう */}
+        <ellipse cx="44" cy="42" rx="6" ry="4" fill="#111827" />
+        <ellipse cx="56" cy="42" rx="6" ry="4" fill="#111827" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
