@@ -22894,6 +22894,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Wisdom of Slowness', 'How to Climb Trees Quickly', 'The Fastest Animals on Earth', 'Why Leaves Are Green'], answer: 0, why: '全体として、ナマケモノのゆっくりした生き方が生きのびるための知恵であることを述べている。' },
   },
   {
+    id: 'kyotsu-endurance-running',
+    title: 'Born to Run Long',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every year, millions of people around the world take part in marathons and other long-distance races. Many of them are not professional athletes but ordinary office workers, students, and retired people who train for months to complete a race of 42 kilometers. At first, this may seem strange. Humans are not particularly fast compared with many animals; a horse, a dog, or a cheetah can easily outrun us over a short distance. Yet when it comes to running long distances, humans turn out to be among the best runners in the animal world.",
+      "Several features of the human body make this possible. One of the most important is our ability to stay cool. Most mammals lose heat mainly by panting, which becomes difficult while running. Humans, in contrast, have millions of sweat glands and very little body hair, so sweat can evaporate from the skin and carry heat away even while we keep moving. Our long legs, strong leg tendons, and large muscles in the buttocks also help us move efficiently and keep our balance over long periods.",
+      "Some scientists believe that these features developed because early humans relied on a hunting method ( A ) is known as persistence hunting. Instead of using weapons to kill animals quickly, hunters followed an animal for hours under the hot sun. The animal would run away, but it could not stop to cool down properly, while the humans kept going at a steady pace. Eventually, the animal became so exhausted and overheated that it could no longer escape. A few communities in hot regions are reported to have used this method even in modern times.",
+      "Not every researcher accepts this theory. Some argue that early humans were more likely to have found animals that had already died, or to have used other ways of hunting. Others point out that walking long distances, rather than running, may have been more important. Still, most experts agree that the human body is unusually well suited to endurance activities, and that this ability may have helped our ancestors spread across many different environments.",
+      "Today, long-distance running is mostly a hobby rather than a way to find food, but it still offers many benefits. Regular running can strengthen the heart, reduce stress, and improve sleep. Many runners also say that races give them a sense of community, as they train and compete alongside people ( B ) share the same goal. In this sense, when we run a marathon, we may be connecting with an ability ( C ) has been part of human history for hundreds of thousands of years.",
+    ],
+    ja: [
+      '毎年、世界中で何百万人もの人がマラソンなどの長距離レースに参加している。その多くはプロの選手ではなく、42キロメートルのレースを走りきるために何か月も練習する、ふつうの会社員や学生や引退した人々である。最初はこれがふしぎに思えるかもしれない。人間は多くの動物にくらべてとくに速いわけではなく、ウマやイヌやチーターは短い距離ならかんたんに人間を追いぬく。しかし長い距離を走ることになると、人間は動物の世界で最もすぐれたランナーのひとつであることがわかる。',
+      '人間の体のいくつかの特徴がこれを可能にしている。最も大切なもののひとつは、体を冷やす力である。たいていのほ乳類はおもにハアハアと息をすることで熱を出すが、これは走っている間はむずかしくなる。それに対して人間は何百万もの汗腺をもち、体毛がとても少ないので、動き続けていても汗が皮ふから蒸発して熱を運び去る。長い脚、強い脚の腱、おしりの大きな筋肉も、長い間効率よく動き、バランスを保つのに役立っている。',
+      'こうした特徴は、初期の人類が「持久狩猟」として知られる狩りの方法にたよっていたためにできたと考える科学者もいる。狩りをする人は、武器を使ってすぐに動物をしとめるのではなく、暑い太陽の下で何時間も動物を追いかけた。動物はにげるが、止まってきちんと体を冷やすことができず、人間は一定のペースで進み続けた。やがて動物はつかれはてて体が熱くなりすぎ、もうにげられなくなった。暑い地域のいくつかの集団は、近代になってもこの方法を使っていたと伝えられている。',
+      'すべての研究者がこの説を受け入れているわけではない。初期の人類は、すでに死んでいた動物を見つけたり、ほかの方法で狩りをしたりしたことのほうが多かっただろうと主張する人もいる。走るより長い距離を歩くことのほうが大切だったかもしれないと指摘する人もいる。それでも、ほとんどの専門家は、人間の体が持久的な活動にめずらしいほど向いていること、そしてこの力が祖先がさまざまな環境に広がるのを助けたかもしれないことでは意見が一致している。',
+      '今日、長距離走は食べ物を手に入れる方法というより、ほとんど趣味になっているが、今でも多くの利点がある。定期的に走ると、心臓が強くなり、ストレスがへり、ねむりがよくなる。多くのランナーは、同じ目標をもつ人々といっしょに練習し競うので、レースで仲間意識を感じるとも言う。この意味で、私たちがマラソンを走るとき、何十万年も人類の歴史の一部であった力とつながっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a hunting method を受け、is known の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、share の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 an ability を受け、has been の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '人間は、短い距離ならほとんどの動物より速く走れる。', answer: false, why: '第1段落 a horse, a dog, or a cheetah can easily outrun us over a short distance。' },
+      { statement: '人間は汗をかくことで、走りながら体を冷やすことができる。', answer: true, why: '第2段落 sweat can evaporate from the skin and carry heat away even while we keep moving。' },
+      { statement: '持久狩猟では、武器ですぐに動物をしとめた。', answer: false, why: '第3段落 Instead of using weapons to kill animals quickly, hunters followed an animal for hours。' },
+      { statement: 'すべての研究者が持久狩猟の説を受け入れているわけではない。', answer: true, why: '第4段落 Not every researcher accepts this theory。' },
+    ],
+    qa: [
+      { q: 'Why is panting a problem for most mammals while running?', choices: ['It becomes difficult to lose heat that way while running.', 'It makes them run faster.', 'It helps them find food.', 'It makes their legs longer.'], answer: 0, why: '第2段落 Most mammals lose heat mainly by panting, which becomes difficult while running。' },
+      { q: 'What benefit of running is mentioned in the last paragraph?', choices: ['It can strengthen the heart and reduce stress.', 'It makes people taller.', 'It helps people find food.', 'It removes the need for sleep.'], answer: 0, why: '第5段落 Regular running can strengthen the heart, reduce stress, and improve sleep。' },
+    ],
+    gist: [
+      { para: 1, choices: ['長い距離を走るのに向いた体の特徴', '汗のにおい', 'ウマの育て方', '靴の選び方'], answer: 0, why: '第2段落は、汗で体を冷やす力や、脚と筋肉のつくりを述べている。' },
+      { para: 2, choices: ['持久狩猟という説', '武器の歴史', '太陽の熱さ', '動物の寿命'], answer: 0, why: '第3段落は、動物を何時間も追いかけてつかれさせる持久狩猟の説を述べている。' },
+    ],
+    titleQ: { choices: ['Born to Run Long', 'How to Win a Sprint', 'The Fastest Animal on Earth', 'Why Cheetahs Sleep a Lot'], answer: 0, why: '全体として、人間が長距離を走るのに向いている理由とその由来を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
