@@ -4098,6 +4098,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'If he had left earlier, he [would catch] the last train.', choices: ['would have caught', 'will catch', 'had caught', 'catches'], answer: 0, why: '過去の事実と反対は仮定法過去完了：would have caught。' },
     ],
   },
+  {
+    id: 'exam-fix-95',
+    title: '入試の誤文訂正〈95〉（共通テストレベル：まぎらわしい形容詞）',
+    points: ['sensitive（敏感な）／sensible（分別のある）、successful（成功した）／successive（連続した）、economic（経済の）／economical（むだのない）、imaginary（想像上の）／imaginative（想像力ゆたかな）、respectful（敬意をはらう）／respectable（立派な）、considerate（思いやりのある）／considerable（かなりの）、industrial（産業の）／industrious（勤勉な）など、形の似た形容詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was a sensible decision to leave early.', ja: '早く出発したのは分別のある判断だった。' }],
+    questions: [
+      { sentence: 'It was a [sensitive] decision to leave early because of the storm.', choices: ['sensible', 'sense', 'sensing', 'sensory'], answer: 0, why: '「分別のある・賢明な」判断は sensible。sensitive は「敏感な」。' },
+      { sentence: 'My skin is very [sensible] to sunlight.', choices: ['sensitive', 'sensational', 'senseless', 'sense'], answer: 0, why: '「日光に敏感な」は sensitive to ～。' },
+      { sentence: 'The team won the championship for three [successful] years.', choices: ['successive', 'success', 'succeeding to', 'successfully'], answer: 0, why: '「3年連続で」は three successive years。successful は「成功した」。' },
+      { sentence: 'She is a [successive] businesswoman who runs three companies.', choices: ['successful', 'success', 'succeed', 'successfully'], answer: 0, why: '「成功した実業家」は successful。' },
+      { sentence: 'Dragons are [imaginative] animals that appear in many stories.', choices: ['imaginary', 'imagine', 'imagination', 'imaginably'], answer: 0, why: '「想像上の」動物は imaginary。imaginative は「想像力ゆたかな」。' },
+      { sentence: 'The child drew a very [imaginary] picture of a city in the sky.', choices: ['imaginative', 'imagine', 'imagination of', 'imaginarily'], answer: 0, why: '「想像力ゆたかな」絵は imaginative。' },
+      { sentence: 'It was [considerable] of you to call me when I was sick.', choices: ['considerate', 'consider', 'considering', 'consideration'], answer: 0, why: '「思いやりのある」は considerate。considerable は「かなりの」。' },
+      { sentence: 'The project cost a [considerate] amount of money.', choices: ['considerable', 'consider', 'considering', 'considered of'], answer: 0, why: '「かなりの量の」は considerable。' },
+      { sentence: 'Students should be [respectable] to their teachers.', choices: ['respectful', 'respective', 'respect', 'respecting of'], answer: 0, why: '「～に敬意をはらう」は respectful to ～。respectable は「立派な」。' },
+      { sentence: 'Ants are known as [industrial] insects that work very hard.', choices: ['industrious', 'industry', 'industrially', 'industrialized'], answer: 0, why: '「勤勉な」は industrious。industrial は「産業の」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
