@@ -21646,6 +21646,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Keeping Festivals Alive', 'How to Play the Drums', 'The History of Food Stalls', 'Why People Move to Cities'], answer: 0, why: '全体として、地元の祭りの歴史と役割、直面する困難、守るための取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-reusable-rockets',
+    title: 'Rockets That Come Back',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For most of the history of space travel, rockets were used only once. After launching a satellite or a spacecraft, the huge rocket parts fell into the ocean or burned up in the atmosphere. Imagine if an airplane were thrown away after every flight; air travel would be far too expensive for most people. For a long time, this was exactly the situation with rockets, and it was one of the main reasons why going to space cost so much.",
+      "In recent years, however, engineers have developed rockets that can be used again. After sending its load into space, the lower part of such a rocket turns around, slows down using its engines, and lands upright on a platform on land or at sea. The rocket can then be inspected, repaired, and launched again. Seeing a tall rocket come down gently and stand on its legs once seemed like science fiction, ( A ) it has now become a regular event.",
+      "Reusable rockets have greatly reduced the cost of reaching space. As a result, many more satellites can be launched than before. These satellites provide services such as weather forecasting, navigation, and internet access in remote areas. Lower costs have also made it possible for universities and small companies, not only large governments, to send their own experiments into space.",
+      "Some people hope that cheaper launches will eventually allow ordinary people to travel to space and even help humans to build bases on the Moon or Mars. Others are more cautious. They point out that launching rockets still uses large amounts of fuel and that an increasing number of satellites may add to the problem of space debris, ( B ) could make future missions more dangerous.",
+      "Despite these concerns, there is no doubt that reusable rockets represent a major step forward. Just as reusable airplanes made it possible for millions of people to fly, reusable rockets may change the way humans use and explore space. The challenge for the future will be to make sure that this new access to space is used responsibly, so that space remains safe and useful for everyone. History suggests that each new technology brings both opportunities and responsibilities, and space travel is no exception to ( C ) rule.",
+    ],
+    ja: [
+      '宇宙旅行の歴史の大部分で、ロケットは1回しか使われなかった。人工衛星や宇宙船を打ち上げたあと、巨大なロケットの部品は海に落ちたり、大気の中で燃えつきたりした。もし飛行機が毎回の飛行のあとにすてられたらと想像してみよう。空の旅はほとんどの人にとってあまりにも高くなるだろう。長いあいだ、ロケットはまさにこの状況にあり、それが宇宙へ行くのにこれほどお金がかかる主な理由の1つだった。',
+      'しかし近年、技術者は、くり返し使えるロケットを開発した。荷物を宇宙に送ったあと、そうしたロケットの下の部分は向きを変え、エンジンを使って速度を落とし、陸や海の台の上にまっすぐ着陸する。それからロケットは点検され、修理され、ふたたび打ち上げられる。背の高いロケットがゆっくりおりてきて足で立つのを見ることは、かつてはSFのように思えたが、今ではふつうのできごとになった。',
+      '再使用できるロケットは、宇宙に行く費用を大きく下げた。その結果、以前よりずっと多くの人工衛星を打ち上げられるようになった。こうした人工衛星は、天気予報や位置の案内、遠い地域でのインターネットなどのサービスを提供している。費用が下がったことで、大きな政府だけでなく、大学や小さな会社も自分たちの実験を宇宙に送れるようになった。',
+      '打ち上げが安くなれば、いつかはふつうの人が宇宙を旅したり、人類が月や火星に基地をつくったりする助けになると期待する人もいる。もっと慎重な人もいる。ロケットの打ち上げは今も大量の燃料を使い、人工衛星がふえると宇宙ごみの問題を大きくするかもしれず、それが将来の任務をより危険にしかねないと彼らは指摘している。',
+      'こうした心配はあるものの、再使用できるロケットが大きな前進であることはまちがいない。再使用できる飛行機が何百万もの人が飛ぶことを可能にしたように、再使用できるロケットは人類の宇宙の使い方や探検のしかたを変えるかもしれない。これからの課題は、宇宙がだれにとっても安全で役に立つ場所でありつづけるように、この新しい宇宙への道を責任をもって使うようにすることだろう。歴史は、新しい技術はどれも機会と責任の両方をもたらすことを示しており、宇宙旅行もそのきまりの例外ではない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'so', 'or', 'because'], answer: 0, why: '「かつてはSFのように思えた」が「今ではふつう」という逆の内容をつなぐので but。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（宇宙ごみの問題）を受け、could make の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['this', 'these', 'those', 'such'], answer: 0, why: '前の文で述べた「新しい技術は機会と責任をもたらす」という1つのきまりをさして this rule。rule は単数なので these・those は使えない。' },
+    ],
+    tf: [
+      { statement: '長いあいだ、ロケットは1回しか使われなかった。', answer: true, why: '第1段落 For most of the history of space travel, rockets were used only once。' },
+      { statement: '再使用できるロケットは、海に落ちたあと回収される。', answer: false, why: '第2段落 lands upright on a platform on land or at sea。' },
+      { statement: '費用が下がり、大学も実験を宇宙に送れるようになった。', answer: true, why: '第3段落 it possible for universities and small companies ... to send their own experiments into space。' },
+      { statement: '筆者によれば、再使用できるロケットには心配な点はまったくない。', answer: false, why: '第4段落と第5段落 Despite these concerns。' },
+    ],
+    qa: [
+      { q: 'What happens to the lower part of a reusable rocket after launch?', choices: ['It turns around and lands upright on a platform.', 'It burns up in the atmosphere.', 'It stays in space forever.', 'It becomes a satellite.'], answer: 0, why: '第2段落 the lower part of such a rocket turns around, slows down using its engines, and lands upright on a platform。' },
+      { q: 'Why are some people cautious about cheaper launches?', choices: ['More satellites may add to the problem of space debris.', 'Rockets cannot carry satellites.', 'Space travel is too slow.', 'There is no fuel left on Earth.'], answer: 0, why: '第4段落 an increasing number of satellites may add to the problem of space debris。' },
+    ],
+    gist: [
+      { para: 1, choices: ['再使用できるロケットのしくみ', 'SF映画の歴史', '海の台の作り方', 'エンジンの値段'], answer: 0, why: '第2段落は、ロケットが向きを変えて着陸し、ふたたび打ち上げられるしくみを述べている。' },
+      { para: 2, choices: ['費用が下がったことによる変化', '天気予報のしくみ', 'インターネットの歴史', '大学の入学試験'], answer: 0, why: '第3段落は、人工衛星がふえ、大学や小さな会社も宇宙を使えるようになったことを述べている。' },
+    ],
+    titleQ: { choices: ['Rockets That Come Back', 'How to Fly an Airplane', 'The History of the Moon', 'Why Fuel Is Expensive'], answer: 0, why: '全体として、再使用できるロケットのしくみと意味、期待と心配、これからの課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
