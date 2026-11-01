@@ -63,6 +63,26 @@ export function markSrToday(day: string): boolean {
   return last !== day
 }
 
+// デザイン218：今月出た種類をおぼえ、その月はじめての種類なら true
+const MONTH_SPECIES_KEY = 'eitan:gacha-month-species'
+export function markMonthSpecies(species: string, month: string): boolean {
+  let v: { month: string; species: string[] } = { month, species: [] }
+  try {
+    const raw = JSON.parse(localStorage.getItem(MONTH_SPECIES_KEY) ?? 'null') as typeof v | null
+    if (raw && raw.month === month && Array.isArray(raw.species)) v = { month, species: raw.species.filter((x): x is string => typeof x === 'string') }
+  } catch {
+    // こわれたデータは捨てて今月から数えなおす
+  }
+  if (v.species.includes(species)) return false
+  try {
+    localStorage.setItem(MONTH_SPECIES_KEY, JSON.stringify({ month, species: [...v.species, species] }))
+  } catch {
+    // 保存できない環境では「はじめて」あつかいにしない
+    return false
+  }
+  return true
+}
+
 export type GachaLog = { day: string; kind: string; species: string }[]
 const LOG_KEY = 'eitan:gacha-log'
 

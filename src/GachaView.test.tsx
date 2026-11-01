@@ -872,3 +872,18 @@ it('デザイン214：UR が出たときだけ小さな花火が出る', () => {
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByLabelText('UR の花火')).toBeNull()
 })
+
+it('デザイン218：今月はじめて出た種類なら「🗓 今月はじめて」が出る（同じ月の2回目と、先月出ただけの子は区別する）', () => {
+  localStorage.clear()
+  const month = new Date().toISOString().slice(0, 7)
+  localStorage.setItem('eitan:gacha-month-species', JSON.stringify({ month: '2000-01', species: ['cat'] }))
+  const draw = () => ({ kind: kindOf('normal'), species: speciesOf('cat'), newKind: false, newSpecies: false })
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} onDraw={draw} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('今月はじめて出た種類')).toHaveTextContent('🗓 今月はじめて')
+  expect(JSON.parse(localStorage.getItem('eitan:gacha-month-species')!)).toEqual({ month, species: ['cat'] })
+  unmount()
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={draw} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('今月はじめて出た種類')).toBeNull()
+})
