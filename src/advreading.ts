@@ -23869,6 +23869,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How Plants Fight Back', 'How to Grow Tomatoes', 'The Life of a Caterpillar', 'Why Roses Smell Sweet'], answer: 0, why: '全体として、にげられない植物がさまざまな方法で自分を守っていることを述べている。' },
   },
   {
+    id: 'kyotsu-online-privacy',
+    title: 'The Price of Free Services',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every time we search the internet, buy something online, or use a free app on our phones, we leave behind small pieces of information about ourselves. These may include the websites we visit, the products we look at, where we are, and even how long we spend reading a particular article. Individually, these pieces of data may seem unimportant. When they are collected and combined, however, they can create a surprisingly detailed picture of a person's habits, interests, and daily life.",
+      "Many companies use this information to improve their services. A music app can recommend songs that match your taste, and a map app can warn you about traffic jams by using location data from many drivers. Much of the data, however, is also used for advertising. Free services are often paid for by companies ( A ) want to show advertisements to people who are most likely to buy their products. In this sense, as some critics say, if you are not paying for a product, you may be the product yourself.",
+      "This situation raises concerns about privacy. People do not always know what information is being collected or how it is being used. The terms and conditions that users must accept are often long and difficult to understand, so most people agree to them without reading. In some cases, personal information has been leaked because of poor security, or sold to other companies without users clearly understanding what they had agreed to.",
+      "Governments in many parts of the world have responded by introducing new laws. Some regulations require companies to explain clearly what data they collect, to ask for users' permission, and to delete personal information when users request it. Supporters believe these rules give people more control over their own information. Critics, however, worry that strict rules may make it harder for smaller companies to compete or slow down the development of new services.",
+      "Individuals can also take steps to protect their privacy. Checking the privacy settings on apps, using strong and different passwords, and thinking carefully before sharing personal details online are all simple habits ( B ) can make a difference. At the same time, experts point out that protecting privacy should not be the responsibility of individuals alone. In a world ( C ) so much of daily life takes place online, finding a fair balance between useful services and personal privacy is a challenge for companies, governments, and users together.",
+    ],
+    ja: [
+      'インターネットで検索したり、オンラインで買い物をしたり、スマートフォンで無料のアプリを使ったりするたびに、私たちは自分についての小さな情報を残している。その中には、見たウェブサイト、ながめた商品、いる場所、さらにはある記事を読むのにどれだけ時間をかけたかまでがふくまれるかもしれない。ひとつひとつのデータは大切でないように思えるかもしれない。しかしそれらが集められ組み合わされると、その人の習慣や興味や日々のくらしについて、おどろくほどくわしいすがたを作り出すことがある。',
+      '多くの会社は、この情報を使ってサービスをよくしている。音楽アプリは好みに合う曲をすすめ、地図アプリは多くの運転手の位置情報を使って渋滞を知らせてくれる。しかしデータの多くは広告にも使われる。無料のサービスは、自分の製品を買ってくれそうな人に広告を見せたい会社がお金をはらって成り立っていることが多い。この意味で、批判する人が言うように、製品にお金をはらっていないなら、あなた自身が製品なのかもしれない。',
+      'この状況はプライバシーについての心配を生む。人々は、どんな情報が集められ、どう使われているのかをいつも知っているわけではない。利用者が受け入れなければならない利用規約は長くてわかりにくいことが多いので、ほとんどの人は読まずに同意してしまう。安全対策が不十分なために個人情報がもれたり、利用者が何に同意したのかをはっきり理解しないまま、ほかの会社に売られたりしたこともある。',
+      '世界の多くの地域の政府は、新しい法律を作ることで対応してきた。会社に対して、どんなデータを集めるのかをはっきり説明し、利用者の許可を求め、利用者がたのめば個人情報を消すことを求めるきまりもある。支持する人々は、こうしたきまりが人々に自分の情報をよりよく管理する力をあたえると考えている。しかし批判する人々は、きびしいきまりのせいで小さな会社が競争しにくくなったり、新しいサービスの開発がおくれたりするのではないかと心配している。',
+      '個人もプライバシーを守るためにできることがある。アプリのプライバシー設定を確認すること、強くてそれぞれちがうパスワードを使うこと、インターネットで個人的なことを伝える前によく考えることは、どれも効果のあるかんたんな習慣である。同時に専門家は、プライバシーを守るのは個人だけの責任であるべきではないと指摘している。日々のくらしのこれほど多くがインターネット上で行われる世界で、便利なサービスと個人のプライバシーの公平なつり合いを見つけることは、会社と政府と利用者がいっしょにとり組むべき課題である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 companies を受け、want の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 simple habits を受け、can make の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a world（場所）で、うしろの so much of daily life takes place online は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: 'ひとつひとつのデータでも、組み合わされるとくわしい人物像を作ることがある。', answer: true, why: '第1段落 When they are collected and combined, however, they can create a surprisingly detailed picture。' },
+      { statement: '無料のサービスは、どれも広告とまったく関係がない。', answer: false, why: '第2段落 Free services are often paid for by companies that want to show advertisements。' },
+      { statement: 'ほとんどの人は、利用規約をよく読んでから同意する。', answer: false, why: '第3段落 most people agree to them without reading。' },
+      { statement: 'きびしいきまりが小さな会社の競争をむずかしくすると心配する人もいる。', answer: true, why: '第4段落 strict rules may make it harder for smaller companies to compete。' },
+    ],
+    qa: [
+      { q: 'How can a map app warn drivers about traffic jams?', choices: ['By using location data from many drivers.', 'By asking the police.', 'By reading newspapers.', 'By looking at the weather.'], answer: 0, why: '第2段落 a map app can warn you about traffic jams by using location data from many drivers。' },
+      { q: 'What do some new laws require companies to do?', choices: ['Delete personal information when users request it.', 'Stop all advertising.', 'Make every app expensive.', 'Share all data with the public.'], answer: 0, why: '第4段落 to delete personal information when users request it。' },
+    ],
+    gist: [
+      { para: 1, choices: ['データが広告に使われるしくみ', '音楽の作り方', '地図の読み方', '渋滞の原因'], answer: 0, why: '第2段落は、データがサービスの改善と広告に使われることを述べている。' },
+      { para: 4, choices: ['個人と社会が協力してプライバシーを守ること', 'パスワードの作り方', '会社の歴史', '設定の色'], answer: 0, why: '第5段落は、個人の習慣と、会社・政府・利用者がいっしょにとり組む必要を述べている。' },
+    ],
+    titleQ: { choices: ['The Price of Free Services', 'How to Build a Website', 'The History of Advertising', 'Why Phones Need Batteries'], answer: 0, why: '全体として、無料のサービスの裏にある個人データの利用と、プライバシーの問題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
