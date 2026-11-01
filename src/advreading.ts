@@ -22543,6 +22543,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Why Breaks Help Us Learn', 'How to Get Perfect Test Scores', 'The History of Finland', 'Games for Rainy Days'], answer: 0, why: '全体として、休み時間が学習・社会性・健康に役立つことを論じている。' },
   },
   {
+    id: 'kyotsu-typhoons',
+    title: 'Inside a Typhoon',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every year, Japan is visited by typhoons, powerful storms that bring strong winds and heavy rain. They can cause floods, landslides, and power outages, and they sometimes force schools and offices to close. Similar storms occur in other parts of the world, where they are called hurricanes or cyclones depending on the region. Although they have different names, they are all the same kind of weather system, and scientists have learned a great deal about how they form and why they are so destructive.",
+      "Typhoons are born over warm tropical oceans. When the surface of the sea is heated by the sun, large amounts of water evaporate and rise into the air. As this warm, moist air rises, it cools, and the water vapor turns into clouds. This process releases heat, which warms the surrounding air and causes it to rise even faster. Because of the Earth's rotation, the rising air begins to spin, and if conditions continue to be favorable, the storm can grow into a huge system ( A ) may be hundreds of kilometers wide.",
+      "At the center of a typhoon is a calm area called the eye. Inside the eye, the sky may be clear and the winds light, which can trick people into thinking that the storm has passed. In fact, the eye is surrounded by the eyewall, a ring of tall clouds ( B ) the strongest winds and heaviest rain are found. Once the eye moves away, the other side of the eyewall arrives, often bringing winds just as dangerous as before.",
+      "Typhoons usually lose strength when they move over land or over cooler water, because they are no longer supplied with the warm, moist air they need. However, even a weakening storm can cause serious damage. Heavy rain can continue for days, and strong winds can push seawater onto the coast, causing a dangerous rise in sea level known as a storm surge. In many past disasters, storm surges and floods have caused more deaths than the winds themselves.",
+      "In recent decades, forecasting has improved greatly. Weather satellites allow scientists to watch storms as they develop, and computer models can predict their paths several days in advance. This gives communities time to prepare and, if necessary, to evacuate. Some researchers also warn that as ocean temperatures rise, the strongest typhoons may become more common in the future. Understanding these storms is therefore essential for protecting the people ( C ) live in the regions they affect.",
+    ],
+    ja: [
+      '毎年、日本には台風がやってくる。強い風と大雨をもたらす強力な嵐である。台風は洪水や土砂くずれ、停電を起こすことがあり、学校や会社が休みになることもある。世界のほかの場所でも似た嵐が起こり、地域によってハリケーンやサイクロンとよばれている。名前はちがっても、すべて同じ種類の気象のしくみであり、科学者たちは、それがどのようにでき、なぜそれほど大きな被害をもたらすのかについて多くのことを明らかにしてきた。',
+      '台風はあたたかい熱帯の海の上で生まれる。海面が太陽で温められると、大量の水が蒸発して空気中にのぼる。このあたたかくしめった空気はのぼるにつれて冷え、水蒸気は雲に変わる。この過程で熱が出て、まわりの空気を温め、空気をさらに速くのぼらせる。地球の自転のために、のぼる空気はうずをまきはじめ、条件がととのい続ければ、嵐ははば何百キロメートルにもなる巨大なしくみに成長することがある。',
+      '台風の中心には、目とよばれる静かな場所がある。目の中では空が晴れて風が弱いこともあり、人々は嵐が過ぎ去ったと思いこんでしまうことがある。実際には、目のまわりは、最も強い風と最もはげしい雨がある高い雲の輪、つまり目の壁にかこまれている。目が去ると、目の壁の反対側がやってきて、前と同じくらい危険な風をもたらすことが多い。',
+      '台風はふつう、陸の上や冷たい海の上に進むと勢力が弱まる。必要なあたたかくしめった空気がもうあたえられなくなるからである。しかし、弱まりつつある嵐でも大きな被害をもたらすことがある。大雨が何日も続くことがあり、強い風が海水を海岸におしよせ、高潮とよばれる危険な海面の上昇を起こすことがある。過去の多くの災害では、高潮や洪水が風そのものより多くの死者を出してきた。',
+      'ここ数十年で、予報は大きく進歩した。気象衛星によって、科学者は嵐ができていくようすを見守ることができ、コンピューターのモデルは数日前に進路を予測できる。これにより地域は備え、必要ならひなんする時間を得られる。海の温度が上がるにつれて、最も強い台風が将来ふえるかもしれないと警告する研究者もいる。そのため、こうした嵐を理解することは、台風の影響を受ける地域に住む人々を守るために欠かせない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a huge system を受け、may be の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a ring of tall clouds（場所）で、うしろの the strongest winds and heaviest rain are found は完全な文なので関係副詞 where。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 the people（人）を受け、live の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '台風・ハリケーン・サイクロンは、同じ種類の気象のしくみである。', answer: true, why: '第1段落 they are all the same kind of weather system。' },
+      { statement: '台風は、冷たい海の上で生まれる。', answer: false, why: '第2段落 Typhoons are born over warm tropical oceans。' },
+      { statement: '台風の目が過ぎても、また強い風がやってくることが多い。', answer: true, why: '第3段落 the other side of the eyewall arrives, often bringing winds just as dangerous as before。' },
+      { statement: '過去の災害では、風そのものがいつも最も多くの死者を出してきた。', answer: false, why: '第4段落 storm surges and floods have caused more deaths than the winds themselves。' },
+    ],
+    qa: [
+      { q: 'Why do typhoons usually become weaker over land?', choices: ['They are no longer supplied with warm, moist air.', 'The land makes them spin faster.', 'Mountains add more rain to them.', 'The sun heats them more strongly.'], answer: 0, why: '第4段落 because they are no longer supplied with the warm, moist air they need。' },
+      { q: 'What can the calm eye of a typhoon make people think?', choices: ['That the storm has passed.', 'That the storm is getting stronger.', 'That it will snow.', 'That the sea level is falling.'], answer: 0, why: '第3段落 which can trick people into thinking that the storm has passed。' },
+    ],
+    gist: [
+      { para: 1, choices: ['台風ができるしくみ', '雲の名前', '太陽の大きさ', '地図の読み方'], answer: 0, why: '第2段落は、あたたかい海の上で空気がのぼり、うずをまいて台風ができるしくみを述べている。' },
+      { para: 4, choices: ['予報の進歩と、台風を理解する大切さ', '衛星の値段', 'コンピューターの歴史', 'ひなん所の場所'], answer: 0, why: '第5段落は、予報の進歩と、将来に向けて台風を理解する必要を述べている。' },
+    ],
+    titleQ: { choices: ['Inside a Typhoon', 'How to Build a Satellite', 'The Coldest Oceans', 'Why Rain Is Wet'], answer: 0, why: '全体として、台風のでき方・つくり・被害・予報について述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
