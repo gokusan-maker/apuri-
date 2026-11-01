@@ -214,6 +214,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${price}`}
       </button>
+      {/* デザイン211：今日ガチャを引いた回数（ボタンの近く） */}
+      {log.filter((e) => e.day === todayKey).length > 0 && (
+        <p className="gacha-short-note" aria-label="今日ガチャを引いた回数">
+          🎰 今日 {log.filter((e) => e.day === todayKey).length}回 引いたよ
+        </p>
+      )}
       {shake > 0 && !full && coins < price && (
         <p className="gacha-short-note" role="status">
           🪙 コインがあと {price - coins} たりないよ。問題に正解してためよう！

@@ -851,3 +851,12 @@ it('デザイン209：今日引いた中でいちばんレア度が高い子な�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByLabelText('今日のいちばん')).toBeNull() // SR のあとの R は出ない
 })
+
+it('デザイン211：ガチャのボタンの近くに、今日ガチャを引いた回数が出る', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  expect(screen.queryByLabelText('今日ガチャを引いた回数')).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('今日ガチャを引いた回数').textContent).toBe('🎰 今日 2回 引いたよ')
+})
