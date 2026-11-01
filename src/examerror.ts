@@ -3216,6 +3216,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We finished [to clean] the classroom before lunch.', choices: ['cleaning', 'clean', 'cleaned', 'to cleaning'], answer: 0, why: 'finish のあとは動名詞：finished cleaning。' },
     ],
   },
+  {
+    id: 'exam-fix-74',
+    title: '入試の誤文訂正〈74〉（TOEFL・IELTS の書き言葉：語の形）',
+    points: ['名詞の前は形容詞、動詞や形容詞をくわしくするのは副詞、冠詞や所有格のあとは名詞。economic（経済の）／economical（むだのない）、successful／successfully、importance／important など、エッセイでよく問われる語の形のまちがい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The government is facing serious economic problems.', ja: '政府は深刻な経済の問題に直面している。' }],
+    questions: [
+      { sentence: 'The country is facing serious [economical] problems.', choices: ['economic', 'economy', 'economically', 'economist'], answer: 0, why: '「経済の」問題は economic。economical は「むだのない・節約になる」。' },
+      { sentence: 'Buying a bigger pack is more [economic] than buying small ones.', choices: ['economical', 'economy', 'economics', 'economist'], answer: 0, why: '「お得な・むだのない」は economical。' },
+      { sentence: 'She completed the project [successful].', choices: ['successfully', 'success', 'succeed', 'successive'], answer: 0, why: '動詞 completed をくわしくするのは副詞 successfully。' },
+      { sentence: 'Many people do not understand the [important] of sleep.', choices: ['importance', 'importantly', 'import', 'importing'], answer: 0, why: 'the のあとで of がつづくので名詞 importance。' },
+      { sentence: 'The new policy had a strong [affect] on young workers.', choices: ['effect', 'affection', 'effective', 'affecting'], answer: 0, why: '名詞「影響」は effect。affect はふつう動詞「影響する」。' },
+      { sentence: 'Regular exercise can [effect] your mood in a positive way.', choices: ['affect', 'effective', 'affection', 'effectively'], answer: 0, why: '動詞「影響する」は affect。' },
+      { sentence: 'The results were [surprising similar] to those of the earlier study.', choices: ['surprisingly similar', 'surprise similar', 'surprised similar', 'surprising similarly'], answer: 0, why: '形容詞 similar をくわしくするのは副詞 surprisingly。' },
+      { sentence: 'Scientists need to analyze the data [careful].', choices: ['carefully', 'care', 'careless', 'caring'], answer: 0, why: '動詞 analyze をくわしくするのは副詞 carefully。' },
+      { sentence: 'There has been a [significantly] increase in online shopping.', choices: ['significant', 'significance', 'signify', 'signal'], answer: 0, why: '名詞 increase の前は形容詞 significant。' },
+      { sentence: 'His [explain] of the problem was very clear.', choices: ['explanation', 'explaining of', 'explained', 'explanatory'], answer: 0, why: '所有格 His のあとで主語になるので名詞 explanation。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
