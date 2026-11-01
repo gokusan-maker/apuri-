@@ -3300,6 +3300,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The window is broken. Someone [might throw] a ball at it.', choices: ['might have thrown', 'might be thrown', 'must throw', 'might threw'], answer: 0, why: '過去のことを「～したのかもしれない」は might have ＋過去分詞。' },
     ],
   },
+  {
+    id: 'exam-fix-76',
+    title: '入試の誤文訂正〈76〉（TOEFL・IELTS の書き言葉：まぎらわしい動詞）',
+    points: ['rise（上がる・自動詞）／raise（上げる・他動詞）、lie（横になる：lie-lay-lain）／lay（置く：lay-laid-laid）、borrow（借りる）／lend（貸す）、rob 人 of 物／steal 物、say／tell、remind 人 of ～ など、エッセイでよく問われるまぎらわしい動詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Prices have risen sharply this year.', ja: '今年は物価が急に上がった。' }],
+    questions: [
+      { sentence: 'Prices have [raised] sharply this year.', choices: ['risen', 'rose', 'raising', 'arisen up'], answer: 0, why: '「上がる」は自動詞 rise（rise-rose-risen）。raise は「～を上げる」で目的語が必要。' },
+      { sentence: 'If you know the answer, please [rise] your hand.', choices: ['raise', 'arise', 'rose', 'rising'], answer: 0, why: '「手を上げる」は目的語をとる他動詞 raise。' },
+      { sentence: 'I was so tired that I [laid] on the sofa all afternoon.', choices: ['lay', 'lied', 'layed', 'lain'], answer: 0, why: '「横になる」lie の過去形は lay。laid は lay（置く）の過去形。' },
+      { sentence: 'Please [lie] the books on the desk.', choices: ['lay', 'laid', 'lain', 'lying'], answer: 0, why: '「～を置く」は目的語をとる lay。' },
+      { sentence: 'Can you [borrow] me your pen for a minute?', choices: ['lend', 'rent to', 'lent', 'borrowing'], answer: 0, why: '「人に貸す」は lend 人 物。borrow は「借りる」。' },
+      { sentence: 'May I [lend] your dictionary?', choices: ['borrow', 'lent', 'rent', 'lending'], answer: 0, why: '「（無料で）借りる」は borrow。' },
+      { sentence: 'Someone [robbed] my bag on the train.', choices: ['stole', 'robs of', 'stolen', 'robbed of'], answer: 0, why: '「物をぬすむ」は steal 物。rob は rob 人 of 物（人から物をうばう）。' },
+      { sentence: 'She [said] me that she would be late.', choices: ['told', 'spoke', 'talked', 'said to'], answer: 0, why: '「人に～と言う」は tell 人 that ～。say は人を直接目的語にしない（say to 人）。' },
+      { sentence: 'This song always reminds me [about] my childhood.', choices: ['of', 'for', 'with', 'to'], answer: 0, why: '「人に～を思い出させる」は remind 人 of ～。' },
+      { sentence: 'The sun [raises] in the east.', choices: ['rises', 'raise', 'rose up to', 'is risen'], answer: 0, why: '太陽が「のぼる」は自動詞 rise。主語が3人称単数で真理なので rises。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
