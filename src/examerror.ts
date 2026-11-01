@@ -2544,6 +2544,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I would rather [to stay] home tonight.', choices: ['stay', 'staying', 'stayed', 'to staying'], answer: 0, why: 'would rather ＋原形「むしろ～したい」。to はいらない。' },
     ],
   },
+  {
+    id: 'exam-fix-58',
+    title: '入試の誤文訂正〈58〉（私学難関レベル：前置詞をふくむ熟語の総まとめ）',
+    points: ['be proud of、be tired of（あきている）、be afraid of、be full of と be filled with、be famous for、look forward to、belong to、depend on、be responsible for など、前置詞が決まっている熟語のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He is proud of his son.', ja: '彼は息子をほこりに思っている。' }],
+    questions: [
+      { sentence: 'He is proud [about] his son.', choices: ['of', 'for', 'with', 'at'], answer: 0, why: '「～をほこりに思う」は be proud of ～。' },
+      { sentence: 'I am tired [from] eating the same food every day.', choices: ['of', 'with', 'at', 'to'], answer: 0, why: '「～にあきている」は be tired of ～。be tired from ～ は「～でつかれている」。' },
+      { sentence: 'She is afraid [from] big dogs.', choices: ['of', 'with', 'at', 'to'], answer: 0, why: '「～がこわい」は be afraid of ～。' },
+      { sentence: 'The bus was full [with] people.', choices: ['of', 'in', 'by', 'at'], answer: 0, why: '「～でいっぱいだ」は be full of ～（be filled with ～ とも言う）。' },
+      { sentence: 'He is famous [of] his novels.', choices: ['for', 'with', 'by', 'to'], answer: 0, why: '「～で有名だ」は be famous for ～。' },
+      { sentence: 'I’m looking forward [for] the school trip.', choices: ['to', 'at', 'on', 'with'], answer: 0, why: '「～を楽しみにする」は look forward to ～。' },
+      { sentence: 'This bag belongs [with] my sister.', choices: ['to', 'for', 'of', 'by'], answer: 0, why: '「～のものである」は belong to ～。' },
+      { sentence: 'The village depends [to] the river for water.', choices: ['on', 'in', 'with', 'at'], answer: 0, why: '「～にたよる」は depend on ～。' },
+      { sentence: 'She is responsible [of] the new project.', choices: ['for', 'with', 'to', 'at'], answer: 0, why: '「～に責任がある」は be responsible for ～。' },
+      { sentence: 'The room was filled [of] smoke.', choices: ['with', 'by', 'in', 'at'], answer: 0, why: '「～でいっぱいだ」は be filled with ～（be full of ～ とも言う）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

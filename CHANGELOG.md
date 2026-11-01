@@ -3499,3 +3499,4 @@
 - 2026-10-31: 文法：入試の正誤問題〈64〉（共通テストレベル：助動詞の総まとめ：had better not・must have・should have・used to・may have・need not・Shall I・would rather・had better・can't be）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「わたしたちのカーボンフットプリント」（環境・気候・関係代名詞 that／前置詞＋動名詞の空所）
 - 2026-11-01: キャラクター：シラサギの「シラサギン」を追加（とくぎ：しろいはねガード）
+- 2026-11-01: 文法：入試の誤文訂正〈58〉（私学難関レベル：proud of・tired of・afraid of・full of・famous for・look forward to・belong to・depend on・responsible for・filled with）10問
