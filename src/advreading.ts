@@ -22348,6 +22348,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Nobody Is Watching as Closely as You Think', 'How to Remove Stains from Shirts', 'The Life of a Famous Singer', 'Why Speeches Should Be Short'], answer: 0, why: '全体として、他人の注目を大きく見積もりすぎるスポットライト効果とその理由・生かし方を述べている。' },
   },
   {
+    id: 'kyotsu-food-miles',
+    title: 'Is Local Food Always Greener?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people try to reduce their impact on the environment, one piece of advice they often hear is to buy food that is grown locally. The idea is based on the concept of food miles, which refers to the distance that food travels from the farm where it is produced to the table where it is eaten. Since transporting food by truck, ship, or airplane uses fuel and releases carbon dioxide, it seems logical that food from nearby farms should be better for the planet.",
+      "In many cases, this is true. Fresh fruit and vegetables that are flown across the world to reach supermarkets out of season can have a large environmental cost, because air transport produces far more carbon dioxide per kilogram than other methods. Buying local food can also bring other benefits. It supports farmers in the community, keeps money in the local economy, and allows people to enjoy produce ( A ) is fresher because it has spent less time on the road.",
+      "However, researchers who study the environmental impact of food warn that food miles tell only part of the story. For most foods, transport is responsible for a surprisingly small share of the total greenhouse gases produced. Much larger amounts are released during farming itself, through the use of fertilizers, the energy needed to run machines, and, especially in the case of beef and dairy products, the gases ( B ) cattle produce as they digest their food.",
+      "As a result, local food is not always the greener choice. For example, tomatoes grown in heated greenhouses in a cold country may be responsible for more emissions than tomatoes grown outdoors in a sunny country and then transported by ship, which is a relatively efficient method. Similarly, the type of food people choose often matters more than where it comes from. Eating less red meat, according to many studies, reduces a person's carbon footprint far more than buying everything locally.",
+      "None of this means that food miles should be ignored. Avoiding products that are flown long distances is still a sensible step, and buying from local farmers has social value of its own. The key lesson is that environmental problems are often more complex than they first appear. To make good decisions, consumers need to look at the whole life of a product, from the farm to the store to the kitchen, rather than focusing on a single number ( C ) seems to offer an easy answer.",
+    ],
+    ja: [
+      '人々が環境への影響をへらそうとするとき、よく耳にする助言のひとつは、地元で育てられた食べ物を買うことである。この考えは「フードマイル」という考え方にもとづいている。これは、食べ物が生産された農場から食べられる食卓までに移動する距離のことである。トラックや船や飛行機で食べ物を運ぶと燃料を使い二酸化炭素を出すので、近くの農場の食べ物のほうが地球にやさしいはずだと考えるのは、筋が通っているように思える。',
+      '多くの場合、それは正しい。季節はずれにスーパーマーケットにとどくよう世界の向こうから飛行機で運ばれる新鮮な果物や野菜は、環境への負担が大きいことがある。飛行機での輸送は、1キログラムあたり、ほかの方法よりずっと多くの二酸化炭素を出すからである。地元の食べ物を買うことには、ほかの利点もある。地域の農家を支え、お金を地域の経済にとどめ、道路の上ですごす時間が短いぶん新鮮な農産物を楽しめる。',
+      'しかし、食べ物が環境にあたえる影響を研究する人々は、フードマイルは話の一部しか語っていないと注意している。ほとんどの食べ物では、出される温室効果ガス全体のうち、輸送がしめる割合はおどろくほど小さい。ずっと多くの量は、肥料の使用や機械を動かすエネルギー、そしてとくに牛肉や乳製品の場合には牛が食べ物を消化するときに出すガスによって、農業そのものの段階で出されている。',
+      'そのため、地元の食べ物がいつも環境にやさしい選択だとはかぎらない。たとえば、寒い国の暖房した温室で育てたトマトは、日当たりのよい国の屋外で育て、比較的効率のよい方法である船で運んだトマトより、多くの排出の原因になることがある。同じように、どこから来たかより、どんな種類の食べ物を選ぶかのほうが大切なことが多い。多くの研究によれば、赤身の肉を食べる量をへらすほうが、何でも地元で買うよりずっと大きく個人の二酸化炭素の排出量をへらす。',
+      'だからといって、フードマイルを無視してよいわけではない。遠くから飛行機で運ばれる品物をさけるのは今でもかしこい一歩であり、地元の農家から買うことにはそれ自体の社会的な価値がある。大切な教訓は、環境の問題は最初に見えるより複雑なことが多いということである。よい判断をするには、消費者は、かんたんな答えをあたえてくれるように見えるひとつの数字に注目するのではなく、農場から店、台所までの製品の一生全体を見る必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 produce（農産物）を受け、is の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the gases を受け、produce の目的語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a single number を受け、seems の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'フードマイルとは、食べ物が農場から食卓まで移動する距離のことである。', answer: true, why: '第1段落 the distance that food travels from the farm where it is produced to the table where it is eaten。' },
+      { statement: '飛行機での輸送は、ほかの方法より二酸化炭素が少ない。', answer: false, why: '第2段落 air transport produces far more carbon dioxide per kilogram than other methods。' },
+      { statement: 'ほとんどの食べ物では、輸送が温室効果ガス全体にしめる割合は小さい。', answer: true, why: '第3段落 transport is responsible for a surprisingly small share of the total greenhouse gases produced。' },
+      { statement: '筆者は、フードマイルはまったく気にしなくてよいと考えている。', answer: false, why: '第5段落 None of this means that food miles should be ignored。' },
+    ],
+    qa: [
+      { q: 'Why might greenhouse tomatoes in a cold country cause more emissions?', choices: ['Because the greenhouses must be heated.', 'Because they are carried by airplane.', 'Because cattle eat them.', 'Because they grow outdoors.'], answer: 0, why: '第4段落 tomatoes grown in heated greenhouses in a cold country may be responsible for more emissions。' },
+      { q: 'According to many studies, what reduces a carbon footprint more than buying locally?', choices: ['Eating less red meat.', 'Buying more frozen food.', 'Driving to farms.', 'Eating only fruit flown from abroad.'], answer: 0, why: '第4段落 Eating less red meat ... reduces a person\'s carbon footprint far more than buying everything locally。' },
+    ],
+    gist: [
+      { para: 2, choices: ['温室効果ガスの多くは農業そのものから出ること', 'トラックの燃料', '肥料の作り方', '牛の育て方'], answer: 0, why: '第3段落は、輸送より農業の段階で出るガスのほうがずっと多いことを述べている。' },
+      { para: 4, choices: ['製品の一生全体を見る大切さ', '地元の祭り', 'スーパーの値段', '台所のそうじ'], answer: 0, why: '第5段落は、ひとつの数字ではなく、製品の一生全体を見て判断するべきだと述べている。' },
+    ],
+    titleQ: { choices: ['Is Local Food Always Greener?', 'How to Grow Tomatoes', 'The History of Supermarkets', 'Why Airplanes Are Fast'], answer: 0, why: '全体として、地元の食べ物がいつも環境にやさしいのかを、フードマイルの考え方の限界から論じている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
