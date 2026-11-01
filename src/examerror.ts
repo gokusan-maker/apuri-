@@ -1682,6 +1682,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Everyone in the class (A) was (B) given a book, and each of them (C) were (D) asked to write a report.', choices: ['(A) was', '(B) given a book, and each of them', '(C) were', '(D) asked to write a report'], answer: 2, why: 'each of ～ は単数あつかいなので was asked。' },
     ],
   },
+  {
+    id: 'exam-error-participle3',
+    title: '入試の正誤問題〈72〉（共通テストレベル：分詞の形容詞用法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'boring と bored のような感情の分詞（人をそうさせる側は -ing、そう感じる人は過去分詞）、名詞を後ろからかざる分詞（a girl singing ～・a watch made in ～）、名詞の前の分詞（broken glass）など。',
+    ],
+    examples: [
+      { en: 'The movie was so boring that many people left early.', ja: 'その映画はとてもたいくつだったので、多くの人が早く帰った。' },
+      { en: 'This is a watch made in Switzerland.', ja: 'これはスイスで作られた時計だ。' },
+    ],
+    questions: [
+      { sentence: 'The movie (A) was so (B) bored that (C) many people (D) left early.', choices: ['(A) was so', '(B) bored that', '(C) many people', '(D) left early'], answer: 1, why: '映画は人を「たいくつさせる」側なので so boring that。' },
+      { sentence: 'I (A) was (B) very exciting (C) to hear (D) the good news.', choices: ['(A) was', '(B) very exciting', '(C) to hear', '(D) the good news'], answer: 1, why: '人が「わくわくさせられた」ので very excited。' },
+      { sentence: 'The girl (A) sings (B) on the stage (C) is (D) my cousin.', choices: ['(A) sings', '(B) on the stage', '(C) is', '(D) my cousin'], answer: 0, why: '「ステージで歌っている少女」は後ろからかざる現在分詞 singing。' },
+      { sentence: 'This is (A) a watch (B) making (C) in Switzerland (D) many years ago.', choices: ['(A) a watch', '(B) making', '(C) in Switzerland', '(D) many years ago'], answer: 1, why: '時計は「作られた」側なので過去分詞 made。' },
+      { sentence: 'Please (A) be careful (B) of the (C) breaking glass (D) on the floor.', choices: ['(A) be careful', '(B) of the', '(C) breaking glass', '(D) on the floor'], answer: 2, why: 'ガラスは「わられた」側なので broken glass。' },
+      { sentence: 'The news (A) was (B) shocking, and everyone in the room (C) looked (D) shocking.', choices: ['(A) was', '(B) shocking, and everyone in the room', '(C) looked', '(D) shocking'], answer: 3, why: '人が「ショックを受けた」ので looked shocked。' },
+      { sentence: 'Most of (A) the guests (B) inviting to the wedding (C) were (D) her old friends.', choices: ['(A) the guests', '(B) inviting to the wedding', '(C) were', '(D) her old friends'], answer: 1, why: '客は「招待された」側なので invited to the wedding。' },
+      { sentence: 'She (A) felt (B) tiring after (C) the long walk (D) in the sun.', choices: ['(A) felt', '(B) tiring after', '(C) the long walk', '(D) in the sun'], answer: 1, why: '人が「つかれた」ので felt tired。' },
+      { sentence: 'There are (A) many languages (B) speaking (C) in (D) this country.', choices: ['(A) many languages', '(B) speaking', '(C) in', '(D) this country'], answer: 1, why: '言語は「話される」側なので spoken。' },
+      { sentence: 'The (A) results of the experiment (B) were (C) very (D) disappointed for the scientists.', choices: ['(A) results of the experiment', '(B) were', '(C) very', '(D) disappointed for the scientists'], answer: 3, why: '結果は人を「がっかりさせる」側なので disappointing。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

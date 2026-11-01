@@ -960,3 +960,10 @@ it('誤文訂正〈65〉：主語と動詞の一致の単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('are')
 })
+
+it('正誤問題〈72〉：分詞の形容詞用法の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-participle3')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) bored that')
+})
