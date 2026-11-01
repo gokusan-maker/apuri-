@@ -1253,6 +1253,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 42 L78 46 L58 48" fill="#94a3b8" stroke="#1c1917" strokeWidth="1.5" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'shearwater')
+    return (
+      <g>
+        {/* 細長い翼 */}
+        <path d="M22 60 Q10 54 4 58 M78 60 Q90 54 96 58" fill="none" stroke="#1c1917" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
