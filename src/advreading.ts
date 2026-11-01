@@ -22114,6 +22114,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Invisible Pollution', 'How Airplanes Fly', 'The Best Headphones', 'Why Cities Grow'], answer: 0, why: '全体として、目に見えない汚染である騒音の健康への影響と、その対策を述べている。' },
   },
   {
+    id: 'kyotsu-shipping-containers',
+    title: 'The Box That Changed the World',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many of the things we use every day, from clothes and shoes to phones and furniture, were made in another country and traveled thousands of kilometers before reaching us. Most of them made the journey inside a simple metal box: the shipping container. Although it looks ordinary, this box is often described as one of the most important inventions of the twentieth century, because it completely changed the way goods are moved around the world.",
+      "Before containers became common in the 1950s and 1960s, loading a ship was slow and expensive work. Goods were packed in boxes, bags, and barrels of many different sizes, and workers at ports had to carry them onto ships one by one. A large ship could spend a week or more in port while it was being loaded and unloaded. During this process, goods were often damaged, and some were stolen. As a result, the cost of transport was so high that trading with distant countries made sense only for valuable products.",
+      "The idea behind the container was simple. If goods were packed into large boxes of a standard size, the boxes could be lifted directly from trucks or trains onto ships by cranes, and then moved to other trucks or trains at the end of the voyage, without anyone touching the goods inside. An American businessman ( A ) owned a trucking company played a key role in making this idea a reality, and in time, countries around the world agreed on common sizes for containers.",
+      "The effects were enormous. Loading time fell from days to hours, and the cost of moving goods across oceans dropped dramatically. Ports were rebuilt with huge cranes and large storage areas, while older ports ( B ) could not adapt lost much of their business. Because transport became so cheap, companies began to make products in countries where labor and materials cost less, and then ship them to customers everywhere. In this way, the container helped to create the global economy we know today.",
+      "However, this change also brought problems. Many dock workers lost their jobs as machines replaced human labor, and the huge ships used today burn large amounts of fuel, adding to air pollution and climate change. When a single port or shipping route is blocked, shortages can quickly spread around the world. The story of the shipping container reminds us that even a simple invention can reshape societies, and that its benefits and costs must be considered together by the people ( C ) depend on it.",
+    ],
+    ja: [
+      '服や靴から電話や家具まで、私たちが毎日使うものの多くは別の国で作られ、私たちのもとにとどくまでに何千キロメートルも旅をしてきた。そのほとんどは、ある単純な金属の箱、つまり輸送用コンテナの中に入って旅をした。この箱はありふれて見えるが、世界中で品物を運ぶ方法を完全に変えたため、20世紀の最も重要な発明のひとつとよく言われる。',
+      '1950年代から1960年代にコンテナが広まる前、船に荷物をつむのは時間もお金もかかる仕事だった。品物はさまざまな大きさの箱や袋やたるにつめられ、港の作業員はそれをひとつずつ船に運ばなければならなかった。大きな船は、荷物のつみこみとおろしのために、港で1週間以上すごすこともあった。その間に品物はよくいたみ、ぬすまれるものもあった。その結果、運ぶ費用がとても高く、遠い国との取り引きは高価な製品でしか割に合わなかった。',
+      'コンテナの考え方は単純だった。品物を決まった大きさの大きな箱につめれば、その箱をクレーンでトラックや列車から直接船に持ち上げ、航海の終わりにはまた別のトラックや列車へ、中の品物にだれもさわらずに移すことができる。運送会社をもっていたあるアメリカの実業家が、この考えを実現するのに大きな役割を果たし、やがて世界中の国がコンテナの共通の大きさに合意した。',
+      'その影響はとても大きかった。つみこみの時間は数日から数時間にへり、海をこえて品物を運ぶ費用は大きく下がった。港は巨大なクレーンと広い置き場をそなえてつくり直され、対応できなかった古い港は仕事の多くを失った。運ぶのがとても安くなったので、会社は人件費や材料費の安い国で製品を作り、それをあらゆる場所の客に送るようになった。このようにして、コンテナは今日私たちが知っている世界経済をつくるのに役立った。',
+      'しかし、この変化は問題ももたらした。機械が人の労働にとってかわり、多くの港湾労働者が仕事を失った。また、今日使われる巨大な船は大量の燃料を燃やし、大気汚染や気候変動をすすめている。ひとつの港や航路がふさがれると、品不足がすぐに世界中に広がることもある。輸送用コンテナの話は、単純な発明でも社会をつくりかえることがあり、それにたよる人々は、その利益と負担をいっしょに考えなければならないことを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 An American businessman（人）を受け、owned の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 older ports を受け、could not adapt の主語になる関係代名詞 that。うしろに主語がないので関係副詞 where は使えない。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 the people（人）を受け、depend の主語になる関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: 'コンテナが広まる前は、大きな船が港で1週間以上すごすこともあった。', answer: true, why: '第2段落 A large ship could spend a week or more in port。' },
+      { statement: 'コンテナが広まる前、運ぶ費用はとても安かった。', answer: false, why: '第2段落 the cost of transport was so high that trading with distant countries made sense only for valuable products。' },
+      { statement: 'コンテナを使うと、中の品物にさわらずに船からトラックへ移せる。', answer: true, why: '第3段落 without anyone touching the goods inside。' },
+      { statement: 'コンテナの広まりによって、港湾労働者の仕事はふえた。', answer: false, why: '第5段落 Many dock workers lost their jobs as machines replaced human labor。' },
+    ],
+    qa: [
+      { q: 'Why did companies begin to make products in other countries?', choices: ['Because transport became cheap, so they could use places where labor and materials cost less.', 'Because containers could not travel by sea.', 'Because ports were closed in their own countries.', 'Because customers wanted damaged goods.'], answer: 0, why: '第4段落 Because transport became so cheap, companies began to make products in countries where labor and materials cost less。' },
+      { q: 'What can happen when a single port or shipping route is blocked?', choices: ['Shortages can quickly spread around the world.', 'Ships become faster.', 'Prices of all goods fall.', 'More dock workers are hired.'], answer: 0, why: '第5段落 When a single port or shipping route is blocked, shortages can quickly spread around the world。' },
+    ],
+    gist: [
+      { para: 1, choices: ['コンテナが広まる前の荷物の運び方', '船の大きさの決め方', '高価な製品の歴史', '港の作業員の給料'], answer: 0, why: '第2段落は、コンテナ以前の時間も費用もかかる荷物の運び方を述べている。' },
+      { para: 3, choices: ['コンテナが世界経済にあたえた大きな影響', 'クレーンの作り方', '古い港の観光', '材料の値段'], answer: 0, why: '第4段落は、時間と費用が大きくへり、世界経済がつくられたことを述べている。' },
+    ],
+    titleQ: { choices: ['The Box That Changed the World', 'How to Become a Truck Driver', 'The History of Shoes', 'Why Ships Float'], answer: 0, why: '全体として、輸送用コンテナが品物の運び方と世界経済を変えたことと、その問題点を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
