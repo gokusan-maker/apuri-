@@ -1423,6 +1423,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 28 Q50 24 56 28" fill="none" stroke="#fde68a" strokeWidth="4" strokeLinecap="round" />
       </g>
     )
+  if (species === 'shoveler')
+    return (
+      <g>
+        {/* しゃもじのような平たく広いくちばし */}
+        <path d="M58 42 Q72 40 78 46 Q72 52 58 48 Z" fill="#1f2937" stroke="#022c22" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
