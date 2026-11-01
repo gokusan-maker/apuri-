@@ -1393,6 +1393,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="46" cy="48" r="4" fill="#374151" />
       </g>
     )
+  if (species === 'goldeneye')
+    return (
+      <g>
+        {/* 金色の目と、ほおの白い丸 */}
+        <circle cx="56" cy="40" r="2.5" fill="#facc15" />
+        <circle cx="58" cy="48" r="3.5" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
