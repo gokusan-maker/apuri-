@@ -2330,6 +2330,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Many health problems (B) result in (C) a lack (D) of sleep.', choices: ['(A) Many health problems', '(B) result in', '(C) a lack', '(D) of sleep'], answer: 1, why: '原因「～から生じる」は result from。' },
     ],
   },
+  {
+    id: 'exam-error-infsubject',
+    title: '入試の正誤問題〈99〉（共通テストレベル：不定詞の意味上の主語と完了不定詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '不定詞の意味上の主語は for 人、人の性質（kind・careless）は of 人、too ～ for 人 to …・～ enough for 人 to …、主節より前のことは to have ＋過去分詞（受け身は to have been ＋過去分詞）。',
+    ],
+    examples: [
+      { en: 'It is easy for me to solve this problem.', ja: '私がこの問題を解くのはかんたんだ。' },
+      { en: 'He seems to have been ill last week.', ja: '彼は先週具合が悪かったようだ。' },
+    ],
+    questions: [
+      { sentence: 'It (A) is (B) easy (C) of me (D) to solve this problem.', choices: ['(A) is', '(B) easy', '(C) of me', '(D) to solve this problem'], answer: 2, why: '不定詞の意味上の主語は for 人：for me。' },
+      { sentence: 'It (A) was (B) careless (C) for you (D) to leave the door open.', choices: ['(A) was', '(B) careless', '(C) for you', '(D) to leave the door open'], answer: 2, why: '人の性質を表す careless は of 人：of you。' },
+      { sentence: 'This box (A) is (B) too heavy (C) of me (D) to carry.', choices: ['(A) is', '(B) too heavy', '(C) of me', '(D) to carry'], answer: 2, why: 'too ～ for 人 to …：for me。' },
+      { sentence: 'He (A) seems (B) to be (C) ill (D) last week.', choices: ['(A) seems', '(B) to be', '(C) ill', '(D) last week'], answer: 1, why: 'last week のことなので to have been。' },
+      { sentence: 'She (A) is said (B) to live (C) in Paris (D) when she was young.', choices: ['(A) is said', '(B) to live', '(C) in Paris', '(D) when she was young'], answer: 1, why: '若いころのことなので to have lived。' },
+      { sentence: 'I (A) am glad (B) to meet (C) you at the party (D) yesterday.', choices: ['(A) am glad', '(B) to meet', '(C) you at the party', '(D) yesterday'], answer: 1, why: '昨日のことなので to have met。' },
+      { sentence: '(A) That is necessary (B) for us (C) to protect (D) the environment.', choices: ['(A) That is necessary', '(B) for us', '(C) to protect', '(D) the environment'], answer: 0, why: '形式主語は It：It is necessary for us to ～。' },
+      { sentence: 'It (A) was very kind (B) to you (C) to help (D) me.', choices: ['(A) was very kind', '(B) to you', '(C) to help', '(D) me'], answer: 1, why: 'kind は of 人：of you。' },
+      { sentence: '(A) The museum seems (B) to have built (C) about (D) 200 years ago.', choices: ['(A) The museum seems', '(B) to have built', '(C) about', '(D) 200 years ago'], answer: 1, why: '建物は「建てられた」側なので to have been built。' },
+      { sentence: 'The question (A) was easy (B) enough for (C) children (D) answering.', choices: ['(A) was easy', '(B) enough for', '(C) children', '(D) answering'], answer: 3, why: '～ enough for 人 to …：to answer。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
