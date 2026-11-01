@@ -2426,6 +2426,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) A economical crisis (B) can (C) affect (D) many families.', choices: ['(A) A economical crisis', '(B) can', '(C) affect', '(D) many families'], answer: 0, why: '「経済の危機」は An economic crisis。' },
     ],
   },
+  {
+    id: 'exam-error-review5',
+    title: '入試の正誤問題〈103〉（TOEFL・IELTS の書き言葉：まとめ問題⑥）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主語と動詞の一致（each／a number of／the number of／neither A nor B）、名詞の数（advice・phenomenon／phenomena・one of ＋複数名詞）、冠詞（a／an・唯一のもの）をまぜた、論文や説明文でよく見るまちがい。',
+    ],
+    examples: [
+      { en: 'A number of volunteers have joined the project.', ja: '多くのボランティアが計画に参加した。' },
+      { en: 'The number of cars on the road has risen sharply.', ja: '道路の車の数は急に増えた。' },
+    ],
+    questions: [
+      { sentence: 'The findings of the recent study (A) clearly (B) shows that (C) regular exercise (D) improves memory.', choices: ['(A) clearly', '(B) shows that', '(C) regular exercise', '(D) improves memory'], answer: 1, why: '主語は The findings（複数）。show。' },
+      { sentence: '(A) A number of (B) volunteer (C) have joined (D) the project this year.', choices: ['(A) A number of', '(B) volunteer', '(C) have joined', '(D) the project this year'], answer: 1, why: 'a number of のあとは複数名詞。volunteers。' },
+      { sentence: 'Each of (A) the proposals (B) were (C) carefully reviewed (D) by the committee.', choices: ['(A) the proposals', '(B) were', '(C) carefully reviewed', '(D) by the committee'], answer: 1, why: 'Each of ～ は単数あつかい。was reviewed。' },
+      { sentence: 'The professor gave us (A) some useful (B) advices (C) on how (D) to write the report.', choices: ['(A) some useful', '(B) advices', '(C) on how', '(D) to write the report'], answer: 1, why: 'advice は数えられない名詞。some useful advice。' },
+      { sentence: '(A) The data (B) collected over ten years (C) reveals (D) a interesting pattern.', choices: ['(A) The data', '(B) collected over ten years', '(C) reveals', '(D) a interesting pattern'], answer: 3, why: 'interesting は母音で始まるので an interesting pattern。' },
+      { sentence: '(A) Neither the students (B) nor the teacher (C) were aware (D) of the change.', choices: ['(A) Neither the students', '(B) nor the teacher', '(C) were aware', '(D) of the change'], answer: 2, why: 'Neither A nor B は B（the teacher・単数）に合わせて was aware。' },
+      { sentence: '(A) Sun (B) provides (C) most of the energy (D) that plants need.', choices: ['(A) Sun', '(B) provides', '(C) most of the energy', '(D) that plants need'], answer: 0, why: '唯一のものには the をつける。The sun。' },
+      { sentence: 'This is (A) one of the (B) oldest (C) building (D) in the town.', choices: ['(A) one of the', '(B) oldest', '(C) building', '(D) in the town'], answer: 2, why: 'one of the ＋最上級＋複数名詞。buildings。' },
+      { sentence: '(A) The phenomena (B) was first described (C) by a scientist (D) in 1890.', choices: ['(A) The phenomena', '(B) was first described', '(C) by a scientist', '(D) in 1890'], answer: 0, why: 'phenomena は複数形。単数の主語なら The phenomenon。' },
+      { sentence: '(A) The number of cars (B) on the road (C) have risen (D) sharply.', choices: ['(A) The number of cars', '(B) on the road', '(C) have risen', '(D) sharply'], answer: 2, why: 'The number of ～ は単数あつかい。has risen。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

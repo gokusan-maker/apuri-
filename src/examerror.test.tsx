@@ -1394,3 +1394,10 @@ it('誤文訂正〈96〉：TOEFL・IELTS のまとめ問題⑤が10問ある', a
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('has')
 })
+
+it('正誤問題〈103〉：TOEFL・IELTS のまとめ問題⑥の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-review5')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) shows that')
+})
