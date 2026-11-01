@@ -42,3 +42,13 @@ it('負けたボスに勝つとリベンジ（1回だけ）', async () => {
   expect(takeRevenge('モチ')).toBe(true)
   expect(takeRevenge('モチ')).toBe(false)
 })
+
+it('デザイン213：1日の勝利回数の自己ベストをこえたときだけ true（最初の記録づくりでは出さない）', async () => {
+  const { recordDayBest } = await import('./bossbook')
+  localStorage.clear()
+  expect(recordDayBest('X', 1)).toBe(false) // はじめての記録
+  expect(recordDayBest('X', 2)).toBe(true) // 1日2勝で記録更新
+  expect(recordDayBest('X', 1)).toBe(false) // 次の日の1勝目は記録以下
+  expect(recordDayBest('X', 2)).toBe(false) // 記録と同じ
+  expect(recordDayBest('X', 3)).toBe(true) // 記録をこえた
+})

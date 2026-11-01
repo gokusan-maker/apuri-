@@ -147,3 +147,23 @@ export function todayWinsTotal(day: string): number {
     return 0
   }
 }
+
+// デザイン213：ボスごとに「1日に勝った回数」の自己ベストをおぼえ、こえたら true（2回目以上のときだけ）
+const DAY_BEST_KEY = 'eitan:boss-day-best'
+export function recordDayBest(name: string, todayWins: number): boolean {
+  let v: Record<string, number> = {}
+  try {
+    const raw = JSON.parse(localStorage.getItem(DAY_BEST_KEY) ?? '{}') as unknown
+    if (raw && typeof raw === 'object') v = raw as Record<string, number>
+  } catch {
+    // こわれたデータは捨てる
+  }
+  const prev = typeof v[name] === 'number' ? v[name] : 0
+  if (todayWins <= prev) return false
+  try {
+    localStorage.setItem(DAY_BEST_KEY, JSON.stringify({ ...v, [name]: todayWins }))
+  } catch {
+    // 保存できなくても進める
+  }
+  return todayWins >= 2 && prev >= 1
+}
