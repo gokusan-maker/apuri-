@@ -4056,6 +4056,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We [discussed about] the problem for two hours.', choices: ['discussed', 'discussed on', 'discussed of', 'discussed with'], answer: 0, why: 'discuss は前置詞なしで目的語をとる：discussed the problem。' },
     ],
   },
+  {
+    id: 'exam-fix-94',
+    title: '入試の誤文訂正〈94〉（共通テストレベル：まとめ問題③）',
+    points: ['時制（現在完了・過去完了・時制の一致）、関係詞（which・where・whose・what）、分詞（現在分詞・過去分詞・分詞構文）、仮定法をまぜた総まとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I have lived in this town since I was a child.', ja: '私は子どものころからこの町に住んでいる。' }],
+    questions: [
+      { sentence: 'I [live] in this town since I was a child.', choices: ['have lived', 'lived', 'am living', 'had live'], answer: 0, why: 'since ～ と今まで続くことなので現在完了 have lived。' },
+      { sentence: 'When I arrived at the station, the train [already left].', choices: ['had already left', 'has already left', 'already leaves', 'was already leave'], answer: 0, why: '着いた時点より前に出発していたので過去完了 had already left。' },
+      { sentence: 'She said that she [is] tired after the long trip.', choices: ['was', 'be', 'has', 'will'], answer: 0, why: '主節が過去なので時制を一致させて was。' },
+      { sentence: 'This is the town [which] I was born.', choices: ['where', 'what', 'whose', 'who'], answer: 0, why: 'うしろが完全な文なので関係副詞 where。' },
+      { sentence: 'I have a friend [who] father is a famous chef.', choices: ['whose', 'who\'s', 'which', 'that'], answer: 0, why: '「その父親が」なので whose。' },
+      { sentence: '[That] he said surprised everyone.', choices: ['What', 'Which', 'Who', 'Where'], answer: 0, why: '「彼が言ったこと」は What。' },
+      { sentence: 'The boy [plays] the piano on the stage is my brother.', choices: ['playing', 'played', 'to play', 'is playing'], answer: 0, why: '名詞をうしろからかざる現在分詞 playing。' },
+      { sentence: '[Seeing] from the plane, the island looked like a heart.', choices: ['Seen', 'See', 'Saw', 'To seeing'], answer: 0, why: '島は「見られる」側なので過去分詞 Seen。' },
+      { sentence: 'If I [have] more money, I would buy a new bike.', choices: ['had', 'have had', 'will have', 'am having'], answer: 0, why: '今の事実と反対の仮定は仮定法過去：had。' },
+      { sentence: 'If he had left earlier, he [would catch] the last train.', choices: ['would have caught', 'will catch', 'had caught', 'catches'], answer: 0, why: '過去の事実と反対は仮定法過去完了：would have caught。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
