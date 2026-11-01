@@ -826,3 +826,15 @@ it('デザイン203：同じタイプの子がこの子で3体そろうと「�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('同じタイプが3体').textContent).toBe(`🎉 ${t.icon}${t.name}が3体そろった！`)
 })
+
+it('デザイン206：はじめての色ちがいなら、色の名前が光る（はじめてでなければ光らない）', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: true, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('はじめての色').textContent).toBe(`${kindOf('umi').name}の`)
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('はじめての色')).toBeNull()
+})

@@ -4673,3 +4673,9 @@ button.boss-book-trait { background: none; border: none; padding: 0; font: inher
   margin: 4px 0;
   font-size: 0.85rem;
 }
+
+/* デザイン206：はじめての色ちがいの名前を光らせる */
+.gacha-kind-new { color: #b45309; text-shadow: 0 0 6px rgba(251, 191, 36, 0.8); animation: kind-glow 1.6s ease-in-out infinite alternate; }
+@keyframes kind-glow { from { text-shadow: 0 0 2px rgba(251, 191, 36, 0.4); } to { text-shadow: 0 0 8px rgba(251, 191, 36, 0.95); } }
+@media (prefers-reduced-motion: reduce) { .gacha-kind-new { animation: none; } }
+@media (prefers-color-scheme: dark) { .gacha-kind-new { color: #fcd34d; } }

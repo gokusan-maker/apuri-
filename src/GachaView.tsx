@@ -608,7 +608,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             </p>
           )}
           <p className="gacha-name">
-            {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
+            {/* デザイン206：はじめての色ちがいなら色の名前を光らせる */}
+            {result.kind.id === 'normal' ? '' : result.newKind && !result.mystery ? <span className="gacha-kind-new" aria-label="はじめての色">{result.kind.name}の</span> : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
             {!result.mystery && (
               // デザイン181：名前の横にタイプのアイコン
