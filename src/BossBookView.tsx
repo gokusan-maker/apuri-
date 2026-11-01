@@ -42,6 +42,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const dated = all.filter((b) => /^\d{4}-\d{2}-\d{2}$/.test(book[b.name]?.first ?? ''))
   const firstWin = dated.length >= 2 ? dated.reduce((x, y) => (book[y.name].first < book[x.name].first ? y : x)).name : null
   const clean = all.filter((b) => book[b.name] && noMiss.includes(b.name)).length // デザイン108：ノーミスでたおしたボスの数
+  const rankS = all.filter((b) => book[b.name]?.best === 'S').length // デザイン180：ランクSで勝ったボスの数
   return (
     <details className="boss-book game-fold">
       <summary>
@@ -49,6 +50,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         {speedy > 0 && <span className="fold-meta" aria-label={`スピードクリア ${speedy}体`}>⚡{speedy}</span>}
         {clean > 0 && <span className="fold-meta" aria-label={`ノーミス ${clean}体`}>✨{clean}</span>}
         {clean > 0 && <span className="fold-meta" aria-label={`ノーミス率 ${Math.round((clean / beaten) * 100)}%`}>（{Math.round((clean / beaten) * 100)}%）</span>} {/* デザイン135 */}
+        {rankS > 0 && <span className="fold-meta" aria-label={`ランクS ${rankS}体`}>🏅 S {rankS}体</span>}
         <span className="fold-meta" aria-label={`ボス図鑑 ${beaten} / ${all.length}体`}>
           {beaten}/{all.length}
         </span>

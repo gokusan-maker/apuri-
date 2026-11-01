@@ -429,3 +429,22 @@ it('デザイン175：ボス図鑑で、とくぎごとの勝った数をタッ�
   const got = [...document.querySelectorAll('.boss-book-list li.got .badge-name')].map((e) => e.textContent)
   expect(got).toEqual([looks[0].name])
 })
+
+it('デザイン180：ランクSで勝ったボスの数を見出しに出す', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const [a, b] = Object.values(BOSSES)
+  saveBook({
+    [a.name]: { wins: 1, best: 'S', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 2, best: 'A', look: b, first: '2026-10-02' },
+  })
+  render(<BossBook />)
+  expect(screen.getByLabelText('ランクS 1体').textContent).toBe('🏅 S 1体')
+})
+
+it('デザイン180：ランクSのボスがいなければ出さない', () => {
+  localStorage.clear()
+  render(<BossBook />)
+  expect(screen.queryByLabelText(/ランクS/)).toBeNull()
+})
