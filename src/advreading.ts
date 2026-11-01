@@ -24532,6 +24532,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How to Make Rain at Home', 'The Quiet Work of Clouds', 'The History of Weather Satellites', 'Why Summer Days Are Hot'], answer: 1, why: '全体として、雲のでき方・種類・気候への影響と、研究のなぞを述べている。' },
   },
   {
+    id: 'kyotsu-kimono',
+    title: 'From Everyday Clothing to Special Wear',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "The word kimono simply means \"a thing to wear.\" For many centuries, it was exactly that: the everyday clothing of people in Japan, worn at home, at work, and in the street. Today, however, most Japanese people wear kimono only a few times in their lives, if at all. The story of how this garment changed from daily clothing into special-occasion wear tells us a great deal about how a culture adapts to a changing world.",
+      "One remarkable feature of the kimono is the way it is made. A traditional kimono is cut from a single long roll of cloth, about 12 meters long and less than 40 centimeters wide. The cloth is divided into straight pieces and sewn together with very little waste. Because the pieces are rectangles, a kimono can be taken apart, washed, and sewn back together, or even remade into something else. In the past, an old kimono might ( A ) into children's clothes, cushion covers, and finally cleaning cloths.",
+      "From the late nineteenth century, Western-style clothing gradually spread in Japan. It was first adopted by soldiers, government officials, and students, and later by ordinary people, especially after the Second World War. Western clothes were cheaper to produce in factories and easier to move in, ( B ) wearing a kimono properly requires time and skill. As a result, kimono slowly disappeared from daily life in the cities.",
+      "Yet the kimono has not vanished. Many young women wear a long-sleeved kimono at the ceremony held to celebrate becoming an adult, and kimono are still common at weddings, tea ceremonies, and traditional performances. In summer, people of all ages put on the yukata, a light cotton version, to visit fireworks displays and local festivals. In popular tourist areas such as Kyoto, visitors from Japan and abroad rent kimono for a day and walk around old streets, taking photographs.",
+      "Interestingly, the kimono's long tradition of reuse fits well with modern concerns about the environment. Secondhand kimono shops have become popular, and some designers turn old kimono fabric into dresses, bags, and jackets. ( C ) helping the kimono survive, these activities also reduce the amount of clothing that is thrown away. The kimono may no longer be what most people wear every day, but its beauty and its careful use of materials continue to inspire new generations.",
+    ],
+    ja: [
+      '着物という言葉は、もともとは単に「着るもの」という意味である。何百年もの間、着物はまさにそのとおりのもの、つまり家でも仕事でも道でも着られる、日本の人々のふだんの服だった。しかし今日では、ほとんどの日本人は、着物を一生のうちに数回しか着ないか、まったく着ない。この衣服が、ふだんの服から特別な機会の服へとどのように変わったのかという話は、文化が変わりゆく世界にどう適応するかについて多くのことを教えてくれる。',
+      '着物のすぐれた特徴のひとつは、その作り方である。伝統的な着物は、長さ約12メートル、はば40センチ足らずの1本の長い反物から裁たれる。布はまっすぐな部分に分けられ、むだをほとんど出さずにぬい合わされる。部分が長方形なので、着物はほどいて洗い、またぬい直すことも、さらにはほかのものに作り変えることもできる。昔は、古い着物が子どもの服やざぶとんのカバーに作り変えられ、最後はぞうきんになることもあった。',
+      '19世紀の終わりごろから、洋服がしだいに日本に広まった。洋服はまず兵士や役人、学生に取り入れられ、のちに、とくに第二次世界大戦のあとに、ふつうの人々にも広まった。洋服は工場で安く作ることができ、動きやすかったが、一方で着物を正しく着るには時間と技術が必要である。その結果、都市のふだんの生活から着物はしだいに消えていった。',
+      'それでも、着物は消えてしまったわけではない。多くの若い女性が、おとなになったことを祝う式でふりそでの着物を着るし、着物は今でも結婚式や茶道、伝統的な芸能でよく見られる。夏には、あらゆる年れいの人々が、もめんでできた軽い着物であるゆかたを着て、花火大会や地元の祭りに出かける。京都のような人気の観光地では、国内外からの旅行者が1日着物を借りて、写真をとりながら古い町なみを歩く。',
+      'おもしろいことに、着物を長く使い回してきた伝統は、環境についての現代の関心とよく合っている。古着の着物の店が人気になり、古い着物の布をドレスやかばん、上着に作り変えるデザイナーもいる。こうした活動は、着物が生き残る手助けをするだけでなく、すてられる衣服の量もへらしている。着物はもう多くの人がふだん着るものではないかもしれないが、その美しさと材料を大切に使うやり方は、新しい世代に刺激をあたえ続けているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['turn', 'be turned', 'have turned', 'turning'], answer: 1, why: '古い着物は「作り変えられる」側なので受け身。might ＋ be ＋ 過去分詞で be turned。' },
+      { id: 'B', choices: ['because', 'so that', 'while', 'unless'], answer: 2, why: '洋服の手軽さと、着物には時間と技術がいることを対比するので while（一方で）。' },
+      { id: 'C', choices: ['Instead of', 'Besides', 'Without', 'Because of'], answer: 1, why: 'Besides ＋ 動名詞で「〜するだけでなく」。生き残りを助けることに加えて、すてられる服もへらす。' },
+    ],
+    tf: [
+      { statement: '伝統的な着物は、1本の長い反物から作られる。', answer: true, why: '第2段落 A traditional kimono is cut from a single long roll of cloth。' },
+      { statement: '着物は、ほどいてぬい直すことができない。', answer: false, why: '第2段落 a kimono can be taken apart, washed, and sewn back together。' },
+      { statement: '洋服は、まず兵士や役人、学生に取り入れられた。', answer: true, why: '第3段落 It was first adopted by soldiers, government officials, and students。' },
+      { statement: 'ゆかたは、若い女性だけが着るものである。', answer: false, why: '第4段落 people of all ages put on the yukata。' },
+    ],
+    qa: [
+      { q: 'Why did Western clothes spread in Japan?', choices: ['They were cheaper to make and easier to move in.', 'They were made from a single roll of cloth.', 'They were required at tea ceremonies.', 'They could be turned into cleaning cloths.'], answer: 0, why: '第3段落 Western clothes were cheaper to produce in factories and easier to move in。' },
+      { q: 'How does the kimono connect with modern environmental concerns?', choices: ['It is always made in factories.', 'Its fabric is reused, which reduces clothing waste.', 'It is only worn by tourists.', 'It uses more cloth than other clothes.'], answer: 1, why: '第5段落 the kimono\'s long tradition of reuse ... reduce the amount of clothing that is thrown away。' },
+    ],
+    gist: [
+      { para: 2, choices: ['工場の作り方', '洋服が広まって着物がふだんの生活から消えたこと', '戦争の歴史', '学生の制服のデザイン'], answer: 1, why: '第3段落は、洋服が広まった流れと、その結果として着物がふだんの生活から消えたことを述べている。' },
+      { para: 3, choices: ['今も着物が着られる場面', '京都の地図', '花火の作り方', '結婚式の費用'], answer: 0, why: '第4段落は、成人の式・結婚式・祭り・観光など、今も着物が着られる場面を述べている。' },
+    ],
+    titleQ: { choices: ['How to Wear a Kimono Correctly', 'The History of Japanese Factories', 'Fireworks Festivals in Summer', 'From Everyday Clothing to Special Wear'], answer: 3, why: '全体として、ふだんの服だった着物が特別な機会の服になり、今も形を変えて受けつがれていることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
