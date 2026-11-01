@@ -4224,6 +4224,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'That red jacket really [fits] you. The color is perfect.', choices: ['suits', 'fits to', 'matches with', 'is fit'], answer: 0, why: '色やデザインが「似合う」は suit。fit は大きさ・サイズが「合う」。' },
     ],
   },
+  {
+    id: 'exam-fix-98',
+    title: '入試の誤文訂正〈98〉（TOEFL・IELTS の書き言葉：比較）',
+    points: ['比べるものをそろえる（that of／those of）、the 比較級, the 比較級、比較級を強める much／far、as ～ as の形、than のあとの代名詞、superior to（than ではない）など、グラフや表を説明する文章でよく見る比較のまちがい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The population of Tokyo is larger than that of Osaka.', ja: '東京の人口は大阪の人口より多い。' }],
+    questions: [
+      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka has', 'it of Osaka'], answer: 0, why: '比べるのは「東京の人口」と「大阪の人口」。単数の population をうける that of Osaka。' },
+      { sentence: 'The prices of vegetables this year are higher than [that] of last year.', choices: ['those', 'it', 'them', 'this'], answer: 0, why: 'くり返しを避ける代名詞は、複数の The prices をうけるので those。' },
+      { sentence: '[More you practice], the better your writing becomes.', choices: ['The more you practice', 'The most you practice', 'As more you practice', 'More than you practice'], answer: 0, why: '「〜すればするほど…」は the 比較級 ＋ S ＋ V, the 比較級 ＋ S ＋ V。The more you practice。' },
+      { sentence: 'The more carefully you read the data, [the less mistakes] you will make.', choices: ['the fewer mistakes', 'the least mistakes', 'fewer the mistakes', 'the few mistakes'], answer: 0, why: 'mistakes は数えられる名詞の複数形なので fewer。the 比較級, the 比較級 の形で the fewer mistakes。' },
+      { sentence: 'Online sales were [very] higher in 2023 than in 2020.', choices: ['much', 'more', 'so', 'too'], answer: 0, why: '比較級を強めるのは much／far。very は比較級を強められない。' },
+      { sentence: 'This model is [superior than] the old one in every way.', choices: ['superior to', 'more superior than', 'superior from', 'superior as'], answer: 0, why: 'superior は than ではなく to をとる。superior to ～。' },
+      { sentence: 'Rainfall in June was twice as [heavier] as in May.', choices: ['heavy', 'heaviest', 'more heavy', 'heavily than'], answer: 0, why: '倍数 ＋ as 原級 as。twice as heavy as。' },
+      { sentence: 'Her score was higher than [me].', choices: ['mine', 'my', 'I am', 'myself'], answer: 0, why: '比べるのは「彼女の点数」と「私の点数」。mine（= my score）。' },
+      { sentence: 'Compared [than] last year, the number of visitors has fallen.', choices: ['with', 'as', 'for', 'by'], answer: 0, why: '「〜とくらべると」は compared with（to）～。than は使えない。' },
+      { sentence: 'Car use is [less commoner] in big cities than in rural areas.', choices: ['less common', 'least common', 'more commoner', 'lesser common'], answer: 0, why: '「〜ほど一般的でない」は less ＋ 原級 ＋ than。less common。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
