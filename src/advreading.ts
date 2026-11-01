@@ -21724,6 +21724,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Making the Most of Our Time', 'How to Write an Essay', 'The History of Clocks', 'Why Phones Are Popular'], answer: 0, why: '全体として、時間をうまく使うための考え方と方法（見積もり・優先順位・集中・休息）を述べている。' },
   },
   {
+    id: 'kyotsu-moss',
+    title: 'The Quiet Green Carpet',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "If you walk through a quiet forest or an old temple garden in Japan, you may notice soft green carpets covering rocks, tree trunks, and the ground. These are mosses, some of the oldest types of land plants on Earth. Although they are small and easy to overlook, mosses are remarkable plants that play important roles in nature and have long been admired in Japanese culture.",
+      "Mosses are very different from most of the plants we see every day. They have no flowers or seeds, and instead of true roots, they have tiny threads that simply hold them in place. Rather than drawing water up from the soil through roots, mosses absorb water and nutrients directly through their leaves. This is one reason ( A ) they often grow in damp, shady places, where water is easily available.",
+      "Surprisingly, many mosses can survive extreme conditions. When there is no rain, some mosses dry out completely and appear dead, but they can come back to life within hours once they are wet again. This ability allows them to live in places where few other plants can grow, such as bare rocks, rooftops, and even cold mountain areas. Over time, as mosses grow and break down, they help to form thin layers of soil, ( B ) makes it possible for other plants to grow later.",
+      "Mosses also benefit the environment in other ways. Like sponges, thick layers of moss can hold large amounts of water, which helps to reduce flooding and keeps forests moist during dry periods. They provide homes for tiny insects and other small creatures. Some scientists are also studying how mosses can absorb pollution from the air, since they take in substances directly through their surfaces.",
+      "In Japan, mosses have been valued for centuries. Some temple gardens are famous for their beautiful moss, which is carefully cared for by gardeners. Many people find that the calm green color creates a peaceful atmosphere. In recent years, moss has also become popular as a hobby, with people growing it in small glass containers at home. Mosses remind us that even the smallest plants can be strong, useful, and beautiful, and that there is value in looking closely at ( C ) we usually pass by without noticing.",
+    ],
+    ja: [
+      '日本の静かな森や古い寺の庭を歩くと、岩や木の幹や地面をおおう、やわらかい緑のじゅうたんに気づくかもしれない。それはコケであり、地球上で最も古い陸上の植物の仲間の一部である。コケは小さく見すごしやすいが、自然の中で大切な役割をはたし、日本の文化で長く愛されてきたすばらしい植物である。',
+      'コケは、私たちが毎日目にするほとんどの植物とはまったくちがう。花も種もなく、本当の根のかわりに、ただ体をその場にとどめておく小さな糸のようなものがある。根を通して土から水を吸い上げるのではなく、コケは葉から直接水や栄養を吸収する。これが、コケがしめった日かげの場所、つまり水を得やすい場所によく育つ理由の1つである。',
+      'おどろくことに、多くのコケはきびしい環境でも生きのびることができる。雨がふらないと、すっかりかわいて死んだように見えるコケもあるが、ふたたびぬれると数時間で生き返ることがある。この力によって、コケは、むき出しの岩や屋根、寒い山の地域など、ほかの植物がほとんど育たない場所でもくらすことができる。時がたつにつれ、コケが育ち分解されることでうすい土の層ができ、それによってのちにほかの植物が育つことができるようになる。',
+      'コケはほかの点でも環境に役立っている。スポンジのように、厚いコケの層は大量の水をたくわえることができ、それは洪水をへらし、かわいた時期にも森をしめった状態にたもつのに役立つ。コケは小さな虫やほかの小さな生き物にすみかをあたえる。コケは表面から直接物質を取りこむので、空気中の汚染をどのように吸収できるかを研究している科学者もいる。',
+      '日本では、コケは何世紀にもわたって大切にされてきた。美しいコケで有名な寺の庭もあり、そこでは庭師がていねいにコケの世話をしている。多くの人は、その落ち着いた緑色がおだやかなふんいきをつくると感じている。近年では、家で小さなガラスの入れ物でコケを育てる趣味も人気になっている。コケは、最も小さな植物でさえ強く、役に立ち、美しくありうること、そしてふだん気づかずに通りすぎているものをよく見ることに価値があることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'whose'], answer: 0, why: 'one reason のあとで理由をあらわす関係副詞 why：one reason why they often grow ～。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（土の層ができること）を受け、makes の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'where'], answer: 0, why: '前置詞 at のあとで「～するもの」となり、pass by の目的語が欠けた節なので what（what we usually pass by）。' },
+    ],
+    tf: [
+      { statement: 'コケには花も種もない。', answer: true, why: '第2段落 They have no flowers or seeds。' },
+      { statement: 'コケは根で土から水を吸い上げる。', answer: false, why: '第2段落 Rather than drawing water up from the soil through roots, mosses absorb water ... through their leaves。' },
+      { statement: 'かわいたコケの中には、ぬれると数時間で生き返るものがある。', answer: true, why: '第3段落 they can come back to life within hours once they are wet again。' },
+      { statement: 'コケは水をたくわえることができない。', answer: false, why: '第4段落 thick layers of moss can hold large amounts of water。' },
+    ],
+    qa: [
+      { q: 'How do mosses help other plants grow later?', choices: ['They help to form thin layers of soil.', 'They give seeds to other plants.', 'They block all sunlight.', 'They remove water from the ground.'], answer: 0, why: '第3段落 they help to form thin layers of soil, which makes it possible for other plants to grow later。' },
+      { q: 'What has become popular in recent years?', choices: ['Growing moss in small glass containers at home.', 'Removing moss from gardens.', 'Selling moss to foreign countries.', 'Painting moss blue.'], answer: 0, why: '第5段落 moss has also become popular as a hobby, with people growing it in small glass containers at home。' },
+    ],
+    gist: [
+      { para: 1, choices: ['コケとほかの植物とのちがい', '花の育て方', '種のまき方', '土の作り方'], answer: 0, why: '第2段落は、花・種・本当の根がなく、葉から水を吸収するというコケの特徴を述べている。' },
+      { para: 3, choices: ['コケが環境に役立つほかの点', '洪水の歴史', '虫の名前', '空気の成分'], answer: 0, why: '第4段落は、水をたくわえる、すみかをあたえる、汚染を吸収するという役割を述べている。' },
+    ],
+    titleQ: { choices: ['The Quiet Green Carpet', 'How to Build a Temple', 'The History of Gardening Tools', 'Why Rocks Are Gray'], answer: 0, why: '全体として、コケの特徴と強さ、環境への役割、日本での価値を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
