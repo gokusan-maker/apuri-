@@ -24025,6 +24025,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Fuel That Leaves Only Water?', 'How to Make Water at Home', 'The History of the Sun', 'Why Cars Need Wheels'], answer: 0, why: '全体として、水しか出さない燃料としての水素の可能性と課題を述べている。' },
   },
   {
+    id: 'kyotsu-public-benches',
+    title: 'A Seat for Everyone',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Few people pay much attention to public benches. We sit on them while waiting for a bus, eating lunch in a park, or resting during a long walk, and then we forget about them. Yet city planners and researchers increasingly argue that these simple pieces of furniture play an important role in making cities pleasant and fair places to live. Where benches are placed, how many there are, and how they are designed can affect who uses public spaces and how people feel in them.",
+      "For many people, benches are not a luxury but a necessity. Older adults, pregnant women, people with disabilities, and parents with small children often need to rest regularly when they are out walking. If there are no places to sit, some of them may avoid going out at all. A study in one city found that elderly residents were more likely to walk to shops and parks when benches were available along the way. In this sense, benches can help people stay active and connected to their communities.",
+      "Benches also encourage social life. A bench in a shady square or near a playground gives people a reason to stay rather than simply pass through. Neighbors may start conversations, friends may meet, and strangers may share a moment of rest. Urban designers sometimes describe such places as \"third places,\" spaces outside home and work ( A ) people can relax and interact informally.",
+      "In recent years, however, some cities have removed benches or replaced them with designs that are uncomfortable to use for long periods. Some new benches have armrests in the middle or sloping seats, which make it impossible to lie down. Supporters say these designs help keep public spaces clean and safe. Critics call this approach hostile architecture, arguing that it mainly pushes away homeless people and makes cities less welcoming for everyone, including those ( B ) simply want to rest.",
+      "The debate over benches reflects a larger question about what public spaces are for. If cities are designed only for efficient movement and shopping, they may become places where people pass through quickly but rarely stay. If they are designed with comfort and rest in mind, they may become places ( C ) people of all ages feel they belong. Something as ordinary as a bench, then, can say a great deal about the kind of community a city wants to be.",
+    ],
+    ja: [
+      '公共のベンチに注意をはらう人はほとんどいない。バスを待つ間や公園でお昼を食べるとき、長い散歩のとちゅうで休むときにすわり、そのあとはわすれてしまう。しかし都市計画の担当者や研究者は、この単純な家具が、都市を気持ちよく公平なくらしの場にするうえで大切な役割を果たしていると、ますます主張するようになっている。ベンチをどこに置き、いくつ置き、どんな形にするかは、だれが公共の場を使い、人々がそこでどう感じるかに影響しうるのである。',
+      '多くの人にとって、ベンチはぜいたく品ではなく、なくてはならないものである。お年寄り、妊娠中の女性、障がいのある人、小さな子どもをつれた親は、外を歩いているとき定期的に休む必要があることが多い。すわる場所がなければ、外出そのものをさける人もいるかもしれない。ある都市の研究では、道のとちゅうにベンチがあると、お年寄りの住民が店や公園まで歩いていきやすくなることがわかった。この意味で、ベンチは人々が活動的で地域とつながっていられる助けになる。',
+      'ベンチはまた、人々のつながりも生む。日かげのある広場や遊び場の近くのベンチは、ただ通りすぎるのではなく、とどまる理由を人々にあたえる。近所の人が話しはじめたり、友だちどうしが会ったり、知らない人どうしがひととき休みを分かち合ったりするかもしれない。都市のデザイナーは、こうした場所を「サードプレイス」とよぶことがある。家と職場の外にある、人々がくつろいで気軽に交流できる場所である。',
+      'しかし近年、ベンチを取りのぞいたり、長い時間使うには居心地の悪いデザインにかえたりした都市もある。新しいベンチの中には、まん中にひじかけがあったり、座面がかたむいていたりして、横になれないようになっているものがある。支持する人々は、こうしたデザインが公共の場を清潔で安全に保つのに役立つと言う。批判する人々は、このやり方を「排除アート（敵対的建築）」とよび、おもにホームレスの人を追いはらい、ただ休みたいだけの人をふくむすべての人にとって、都市をよそよそしい場所にしてしまうと主張している。',
+      'ベンチをめぐる議論は、公共の場は何のためにあるのかというより大きな問いを映している。都市が効率よく移動し買い物をするためだけに作られれば、人々がさっと通りすぎるだけで、めったにとどまらない場所になるかもしれない。居心地のよさと休むことを考えて作られれば、あらゆる年齢の人が自分の居場所だと感じられる場所になるかもしれない。ベンチのようなありふれたものも、その都市がどんな地域になりたいのかについて多くを語っているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は spaces（場所）で、うしろの people can relax and interact informally は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 those（～な人々）を受け、want の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は places（場所）で、うしろの people of all ages feel they belong は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: 'ベンチがあると、お年寄りが店や公園まで歩きやすくなるという研究がある。', answer: true, why: '第2段落 elderly residents were more likely to walk to shops and parks when benches were available along the way。' },
+      { statement: 'ベンチは、人々のつながりとは関係がない。', answer: false, why: '第3段落 Benches also encourage social life。' },
+      { statement: '横になれないようにしたベンチを作った都市がある。', answer: true, why: '第4段落 Some new benches have armrests in the middle or sloping seats, which make it impossible to lie down。' },
+      { statement: '筆者は、都市は移動と買い物のためだけに作るべきだと主張している。', answer: false, why: '第5段落 If cities are designed only for efficient movement and shopping, they may become places where people pass through quickly but rarely stay。' },
+    ],
+    qa: [
+      { q: 'Who especially needs benches when they are out walking?', choices: ['Older adults, pregnant women, people with disabilities, and parents with small children.', 'Only professional athletes.', 'People driving cars.', 'Shop owners.'], answer: 0, why: '第2段落 Older adults, pregnant women, people with disabilities, and parents with small children often need to rest regularly。' },
+      { q: 'What do critics call designs that prevent people from lying down?', choices: ['Hostile architecture.', 'Third places.', 'Public gardens.', 'Shopping centers.'], answer: 0, why: '第4段落 Critics call this approach hostile architecture。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ベンチが生活に欠かせない人がいること', '公園のそうじ', 'バスの時刻', '店の場所'], answer: 0, why: '第2段落は、休む必要のある人にとってベンチがなくてはならないものであることを述べている。' },
+      { para: 3, choices: ['居心地の悪いベンチをめぐる議論', 'ベンチの値段', '木材の種類', '雨の日の過ごし方'], answer: 0, why: '第4段落は、横になれないベンチへの賛否を述べている。' },
+    ],
+    titleQ: { choices: ['A Seat for Everyone', 'How to Build a Chair', 'The History of Parks', 'Why Buses Are Late'], answer: 0, why: '全体として、ありふれたベンチが、だれもが居場所を感じられる都市づくりにかかわっていることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
