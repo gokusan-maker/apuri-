@@ -1438,6 +1438,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 30 Q34 36 36 44" fill="none" stroke="#9d174d" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'baikal')
+    return (
+      <g>
+        {/* 顔の黄色と緑のともえもよう */}
+        <path d="M40 40 Q46 34 50 42 Q46 50 40 46" fill="#facc15" stroke="#1c1917" strokeWidth="1" />
+        <path d="M52 38 Q60 40 60 50" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
