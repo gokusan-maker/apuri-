@@ -22855,6 +22855,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Cost of a Ping', 'How to Build an App', 'The History of the Telephone', 'Why Phones Are Expensive'], answer: 0, why: '全体として、通知が集中にあたえる影響と、それへの対し方を述べている。' },
   },
   {
+    id: 'kyotsu-sloths',
+    title: 'The Wisdom of Slowness',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Sloths are often described as lazy. They spend most of their lives hanging upside down in the trees of Central and South American rainforests, moving so slowly that algae can grow on their fur. To many people, they seem like animals that have simply failed to keep up with the fast pace of nature. Biologists, however, see things differently. They point out that the sloth's slow lifestyle is not a weakness but a clever strategy for survival.",
+      "The key to understanding sloths is their diet. They eat mainly leaves, which are easy to find in the rainforest but provide very little energy. Leaves are also difficult to digest, and a sloth may need several days or even weeks to process a single meal. To survive on such a poor diet, sloths must use as little energy as possible. Their muscles are small, their body temperature is lower than that of most mammals, and they spend many hours each day resting. In this way, they can live on food ( A ) other animals could not survive on.",
+      "Moving slowly also helps sloths avoid predators. Many of the animals that hunt in the rainforest, such as eagles and wild cats, rely on spotting movement. Because sloths move so little, they are hard to notice. The algae growing on their fur give it a greenish color, helping them blend in with the leaves around them. In addition, sloths are surprisingly strong for their size. Their long, curved claws allow them to hang from branches for hours without using much energy.",
+      "One of the most unusual habits of sloths is their trip to the ground. About once a week, a sloth climbs down from its tree to go to the toilet, which is a dangerous journey since sloths are slow and clumsy on land. Scientists have long wondered why they take this risk. One theory is that the habit supports a small community of moths ( B ) live in the sloth's fur. The moths lay their eggs in the sloth's waste, and the presence of the moths may help the algae on the fur to grow, which in turn may provide the sloth with extra nutrients.",
+      "Sloths remind us that there is more than one way to succeed in nature. While some animals survive by being fast and powerful, others survive by saving energy and avoiding attention. Unfortunately, sloths are now threatened by the loss of rainforest, as well as by roads and power lines that cut through their habitat. Protecting the forests ( C ) they depend on is essential if these remarkable animals are to continue their slow and steady way of life.",
+    ],
+    ja: [
+      'ナマケモノはよく「なまけ者」と言われる。中央アメリカや南アメリカの熱帯雨林の木にさかさまにぶら下がって一生の大部分をすごし、とてもゆっくり動くので毛に藻が生えるほどである。多くの人には、自然の速いペースについていけなかった動物のように見える。しかし生物学者の見方はちがう。彼らは、ナマケモノのゆっくりした生き方は弱点ではなく、生きのびるためのかしこい作戦だと指摘している。',
+      'ナマケモノを理解するかぎは、その食べ物にある。ナマケモノはおもに葉を食べる。葉は熱帯雨林では見つけやすいが、エネルギーがとても少ない。葉は消化もしにくく、ナマケモノは1回の食事を消化するのに数日、ときには何週間もかかることがある。このようにとぼしい食べ物で生きるために、ナマケモノはできるだけエネルギーを使わないようにしなければならない。筋肉は小さく、体温はたいていのほ乳類より低く、毎日何時間も休んでいる。こうしてナマケモノは、ほかの動物なら生きられないような食べ物でくらしていけるのである。',
+      'ゆっくり動くことは、ナマケモノが天敵をさけるのにも役立つ。ワシや野生のネコのように熱帯雨林で狩りをする動物の多くは、動きを見つけることにたよっている。ナマケモノはほとんど動かないので、気づかれにくい。毛に生える藻は毛を緑っぽい色にし、まわりの葉にとけこむのを助ける。さらに、ナマケモノは体の大きさのわりにおどろくほど力が強い。長く曲がったつめのおかげで、あまりエネルギーを使わずに何時間も枝にぶら下がっていられる。',
+      'ナマケモノのいちばんめずらしい習性のひとつは、地面へのおでかけである。週に1回ほど、ナマケモノはトイレのために木からおりてくるが、ナマケモノは地上ではのろくてぎこちないので、これは危険な旅である。科学者たちは、なぜその危険をおかすのか長い間ふしぎに思ってきた。ひとつの説は、この習性がナマケモノの毛にすむ小さなガのなかまを支えているというものである。ガはナマケモノのふんにたまごをうみ、ガがいることで毛の藻が育ちやすくなり、それがナマケモノにさらに栄養をあたえているのかもしれない。',
+      'ナマケモノは、自然の中で成功する方法はひとつではないことを思い出させてくれる。速く力強くあることで生きのびる動物もいれば、エネルギーを節約し目立たないようにして生きのびる動物もいる。残念なことに、ナマケモノは今、熱帯雨林の減少や、すみかを横切る道路や電線によっておびやかされている。このすばらしい動物がゆっくり着実な生き方を続けていくためには、ナマケモノがたよる森を守ることが欠かせない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 food を受け、survive on の目的語になる関係代名詞 that（on が後ろに残る）。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 moths を受け、live の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the forests を受け、depend on の目的語になる関係代名詞 that（on が後ろに残るので where は使えない）。' },
+    ],
+    tf: [
+      { statement: '生物学者は、ナマケモノのゆっくりした生き方を生きのびるための作戦だと考えている。', answer: true, why: '第1段落 the sloth\'s slow lifestyle is not a weakness but a clever strategy for survival。' },
+      { statement: '葉はエネルギーが多く、消化しやすい食べ物である。', answer: false, why: '第2段落 provide very little energy. Leaves are also difficult to digest。' },
+      { statement: '毛に生える藻は、ナマケモノがまわりの葉にとけこむのを助ける。', answer: true, why: '第3段落 helping them blend in with the leaves around them。' },
+      { statement: 'ナマケモノは、地上ではすばやく動ける。', answer: false, why: '第4段落 sloths are slow and clumsy on land。' },
+    ],
+    qa: [
+      { q: 'Why are sloths hard for predators to notice?', choices: ['Because they move very little.', 'Because they are very loud.', 'Because they live underground.', 'Because they change color every day.'], answer: 0, why: '第3段落 Because sloths move so little, they are hard to notice。' },
+      { q: 'What do the moths in the sloth’s fur do?', choices: ['They lay their eggs in the sloth’s waste.', 'They eat the sloth’s leaves.', 'They carry the sloth to the ground.', 'They keep predators away.'], answer: 0, why: '第4段落 The moths lay their eggs in the sloth\'s waste。' },
+    ],
+    gist: [
+      { para: 1, choices: ['とぼしい食べ物で生きるための省エネのくらし', '熱帯雨林の天気', '葉の色の変化', 'ほ乳類の体の大きさ'], answer: 0, why: '第2段落は、エネルギーの少ない葉で生きるために、エネルギーを節約するくらしを述べている。' },
+      { para: 3, choices: ['地面へおりる習性のなぞ', 'ガの一生', 'トイレの作り方', '木の登り方'], answer: 0, why: '第4段落は、危険をおかして地面へおりる習性と、その理由の説を述べている。' },
+    ],
+    titleQ: { choices: ['The Wisdom of Slowness', 'How to Climb Trees Quickly', 'The Fastest Animals on Earth', 'Why Leaves Are Green'], answer: 0, why: '全体として、ナマケモノのゆっくりした生き方が生きのびるための知恵であることを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
