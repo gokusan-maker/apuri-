@@ -1446,6 +1446,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M52 38 Q60 40 60 50" fill="none" stroke="#16a34a" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'gadwall')
+    return (
+      <g>
+        {/* むねのこまかい波もよう */}
+        <path d="M38 62 Q41 60 44 62 Q47 64 50 62 Q53 60 56 62 Q59 64 62 62" fill="none" stroke="#4b5563" strokeWidth="1.2" />
+        <path d="M38 68 Q41 66 44 68 Q47 70 50 68 Q53 66 56 68 Q59 70 62 68" fill="none" stroke="#4b5563" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
