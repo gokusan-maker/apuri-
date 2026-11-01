@@ -93,7 +93,7 @@ import { Album } from './AlbumView'
 import { eventFor } from './events'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { speciesTopLevels, addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
-import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP , luckyRoll } from './gacha'
+import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, multi5Off, multi5Price, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP , luckyRoll } from './gacha'
 import {
   feed,
   FORMS,
@@ -1789,7 +1789,12 @@ function App() {
             if (k) setFreeGachaDay(today)
             return k
           }}
-          onGachaMulti={(n) => drawMany(false, n)}
+          onGachaMulti={(n) => {
+            // 5連ガチャは1割おトク：足りていれば、おまけぶんを先にもどしてから5回引く
+            const price = gachaPrice(hour) - omikujiDiscount(today)
+            if (n === MULTI5 && wallet.coins >= multi5Price(price)) return drawMany(false, n, { ...wallet, coins: wallet.coins + multi5Off(price) })
+            return drawMany(false, n)
+          }}
           boostColor={kindOf(dailyColor(today)).name}
           luckyBag={luckyMonth !== today.slice(0, 7) && wallet.coins >= LUCKY_BAG_PRICE}
           onLuckyBag={() => {

@@ -306,3 +306,10 @@ it('キャラクターごとにタマゴの名前はちがう（同じ名前の�
   const { SPECIES } = await import('./monster')
   expect(new Set(SPECIES.map((sp) => sp.egg)).size).toBe(SPECIES.length)
 })
+
+it('5連ガチャは1割おトク（50コインなら250 → 225）', async () => {
+  const { multi5Off, multi5Price } = await import('./gacha')
+  expect(multi5Off(50)).toBe(25)
+  expect(multi5Price(50)).toBe(225)
+  expect(multi5Price(40)).toBe(180)
+})

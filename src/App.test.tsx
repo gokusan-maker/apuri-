@@ -865,7 +865,25 @@ describe('App', () => {
     fireEvent.click(screen.getByLabelText('コイン 300枚・ショップを開く'))
     const row = document.querySelector('.gacha-multi')!
     expect(row.querySelectorAll('.gacha-btn')).toHaveLength(2)
-    expect(screen.getByRole('button', { name: /5連ガチャ/ }).textContent).toMatch(/レア以上1つ確定🪙250/)
+    expect(screen.getByRole('button', { name: /5連ガチャ/ }).textContent).toMatch(/レア以上1つ確定🪙250 🪙225🎁 25コインおトク/)
+  })
+
+  it('5連ガチャは1割おトク：225コインあれば5回引ける（224では足りない）', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 225, owned: [] }))
+    const { unmount } = render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 225枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    fireEvent.click(screen.getByRole('button', { name: /5連ガチャ/ }))
+    rnd.mockRestore()
+    expect(JSON.parse(localStorage.getItem('eitan:gacha-stats')!).total).toBe(5)
+    unmount()
+    localStorage.clear()
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 224, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 224枚・ショップを開く'))
+    fireEvent.click(screen.getByRole('button', { name: /5連ガチャ/ }))
+    expect(localStorage.getItem('eitan:gacha-stats')).toBeNull()
+    expect(screen.getByText('🪙 5連ガチャにはコインがあと 1 たりないよ')).toBeInTheDocument()
   })
 
   it('おさんぽは1日1回で、単語を拾ってきて🪙3', () => {

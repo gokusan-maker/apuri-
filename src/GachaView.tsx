@@ -8,7 +8,7 @@ import { STICKERS, STICKER_TICKETS } from './stickers'
 import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
 import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
-import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, PARTY_MAX, pushGachaLog } from './gacha'
+import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, multi5Off, multi5Price, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, PARTY_MAX, pushGachaLog } from './gacha'
 import { CHAR_TYPES, typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
 import { baseRate, FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
@@ -130,7 +130,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
   }
   const canMulti = !!onDrawMulti && members + MULTI <= PARTY_MAX && coins >= price * MULTI
   const poor3 = members + MULTI <= PARTY_MAX && coins < price * MULTI // 空きはあるのにコインがたりない（押すと首をふる）
-  const poor5 = members + MULTI5 <= PARTY_MAX && coins < price * MULTI5
+  const poor5 = members + MULTI5 <= PARTY_MAX && coins < multi5Price(price)
   return (
     <div className="gacha">
       {reveal && reveal.length > 0 && (
@@ -246,7 +246,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
         <button
           key={`multi5-${shakeM === 5 ? shakeN : 0}`}
           className={`good gacha-btn multi multi5${poor5 ? ' short' : ''}${poor5 && shakeM === 5 ? ' gacha-shake' : ''}`}
-          disabled={!(members + MULTI5 <= PARTY_MAX && coins >= price * MULTI5) && !poor5}
+          disabled={!(members + MULTI5 <= PARTY_MAX && coins >= multi5Price(price)) && !poor5}
           aria-disabled={poor5}
           onClick={() => {
             if (poor5) return shakeAt(5)
@@ -261,14 +261,17 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           <span className="gacha-multi-icon" aria-hidden="true">🌈</span>
           <span className="gacha-multi-title">5連ガチャ</span>
           <span className="gacha-multi-sub">レア以上1つ確定</span>
-          <span className="gacha-price">🪙{price * MULTI5}</span>
+          <span className="gacha-price">
+            <s className="muted">🪙{price * MULTI5}</s> 🪙{multi5Price(price)}
+          </span>
+          <span className="gacha-multi-sub" aria-label="5連ガチャのおトク">🎁 {multi5Off(price)}コインおトク</span>
           {members + MULTI5 > PARTY_MAX && <small>（仲間の空きが5ひつよう）</small>}
         </button>
       )}
       </div>
       {shakeM > 0 && (shakeM === 3 ? poor3 : poor5) && (
         <p className="gacha-short-note" role="status">
-          🪙 {shakeM}連ガチャにはコインがあと {price * shakeM - coins} たりないよ
+          🪙 {shakeM}連ガチャにはコインがあと {(shakeM === MULTI5 ? multi5Price(price) : price * shakeM) - coins} たりないよ
         </p>
       )}
       {full && <p className="stats-note gacha-full-hint">なかまがいっぱい！ 「記録」→「あいぼう」の「なかま」で 👋 おわかれすると、コインにかわってガチャを続けられるよ。</p>}

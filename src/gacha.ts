@@ -201,6 +201,10 @@ export const isLuckyPull = (n: number) => n > 0 && n % LUCKY_EVERY === 0
 
 // 5連ガチャ：5回目までにレア以上が出なければ、最後の1回はレア以上確定
 export const MULTI5 = 5
+// 5連ガチャは1割おトク（おまけぶんを引く前にもどすので、引く回数とレア保証はそのまま）
+export const MULTI5_OFF_RATE = 0.1
+export const multi5Off = (price: number): number => Math.round(price * MULTI5 * MULTI5_OFF_RATE)
+export const multi5Price = (price: number): number => price * MULTI5 - multi5Off(price)
 
 // コンプリート率（％・切り捨て）
 export const completionPct = (have: number, total: number) => (total > 0 ? Math.floor((Math.min(have, total) / total) * 100) : 0)
