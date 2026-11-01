@@ -23791,6 +23791,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Robots on the Red Planet', 'How to Build a Remote-Control Car', 'The Coldest Desert on Earth', 'Why the Moon Has No Air'], answer: 0, why: '全体として、赤い惑星を調べるロボットたちと、その発見と意義を述べている。' },
   },
   {
+    id: 'kyotsu-social-prescribing',
+    title: 'A Prescription for Connection',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people visit a doctor, they usually expect to leave with a prescription for medicine. In some countries, however, doctors have started to prescribe something quite different: a gardening club, an art class, a walking group, or volunteer work. This approach, known as social prescribing, is based on the idea that many health problems are connected not only to the body but also to people's social lives and daily activities.",
+      "Doctors have long noticed that some patients come to see them again and again with problems that medicine alone cannot solve. A retired man who lives alone may complain of tiredness and poor sleep, but the real cause may be loneliness. A young mother may feel anxious because she has no one to talk to. In such cases, a pill may reduce the symptoms for a while, but it does not address the underlying situation ( A ) is making the person unwell.",
+      "In social prescribing, doctors refer patients to a specially trained worker, sometimes called a link worker. This person spends time talking with the patient about their interests, worries, and goals, and then helps them find local activities or services that suit them. For example, someone who used to enjoy music might be introduced to a community choir, while a person struggling with money problems might be connected with an advice center. The aim is not to replace medical treatment but to support people in ways ( B ) improve their overall well-being.",
+      "Early results have been encouraging. Some studies have found that people who took part in social prescribing programs felt less lonely and less anxious, and visited their doctors less often. Activities such as gardening and walking groups also bring physical benefits, since they encourage people to move more and spend time outdoors. Many participants say that the greatest benefit was simply meeting new people and feeling part of a community again.",
+      "However, researchers point out that more evidence is needed to show how effective social prescribing is for different groups of people. The approach also depends on the availability of local activities, which may be limited in some areas, and on stable funding for link workers and community groups. Nevertheless, social prescribing reflects a growing recognition that health is shaped by many factors. Caring for people, it suggests, means paying attention not only to their bodies but also to the relationships and activities ( C ) give their lives meaning.",
+    ],
+    ja: [
+      '人が医者にかかるとき、ふつうは薬の処方せんをもらって帰ることを期待する。しかしいくつかの国では、医者がまったくちがうものを処方しはじめている。園芸クラブ、絵の教室、ウォーキングの会、ボランティア活動である。この方法は「社会的処方」とよばれ、多くの健康の問題は体だけでなく、人々の社会生活や日々の活動にもつながっているという考えにもとづいている。',
+      '医者たちは長い間、薬だけでは解決できない問題で何度も来る患者がいることに気づいてきた。ひとりぐらしの引退した男性は、つかれや眠れないことをうったえるかもしれないが、本当の原因はさびしさかもしれない。若い母親は、話し相手がいないために不安を感じているかもしれない。こうした場合、薬はしばらく症状をへらすかもしれないが、その人の具合を悪くしているもとの状況には向き合わない。',
+      '社会的処方では、医者は患者を、特別な訓練を受けた担当者（リンクワーカーとよばれることもある）につなぐ。この人は患者と、興味や悩みや目標について時間をかけて話し、その人に合った地域の活動やサービスを見つける手助けをする。たとえば、音楽が好きだった人は地域の合唱団を紹介されるかもしれないし、お金の問題で苦しむ人は相談窓口につなげられるかもしれない。目的は医療の治療にとってかわることではなく、全体的な幸福を高める形で人々を支えることである。',
+      '初期の結果は心強いものだった。社会的処方の取り組みに参加した人は、さびしさや不安が少なくなり、医者にかかる回数もへったとする研究もある。園芸やウォーキングの会のような活動は、人々がもっと体を動かし外ですごすことをうながすので、体にもよい。多くの参加者は、いちばんよかったのは、ただ新しい人と出会い、もう一度地域の一員だと感じられたことだと言う。',
+      'しかし研究者たちは、社会的処方がさまざまな人々にとってどれほど効果があるかを示すには、さらに多くの証拠が必要だと指摘している。この方法はまた、地域の活動がどれだけあるかによっても左右され、それが限られている地域もある。リンクワーカーや地域の団体への安定した資金も必要である。それでも社会的処方は、健康は多くの要因によって形づくられるという認識が広まっていることを表している。人を大切にするとは、体だけでなく、その人の生活に意味をあたえるつながりや活動にも目を向けることなのだと、それは示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the underlying situation を受け、is making の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 ways を受け、improve の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the relationships and activities を受け、give の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '社会的処方では、医者が園芸クラブやウォーキングの会などをすすめる。', answer: true, why: '第1段落 doctors have started to prescribe ... a gardening club, an art class, a walking group, or volunteer work。' },
+      { statement: '薬は、さびしさのようなもとの状況も解決してくれる。', answer: false, why: '第2段落 it does not address the underlying situation that is making the person unwell。' },
+      { statement: '社会的処方の目的は、医療の治療にとってかわることである。', answer: false, why: '第3段落 The aim is not to replace medical treatment。' },
+      { statement: '参加者の多くは、新しい人と出会えたことがいちばんよかったと言う。', answer: true, why: '第4段落 the greatest benefit was simply meeting new people and feeling part of a community again。' },
+    ],
+    qa: [
+      { q: 'What does a link worker do?', choices: ['Helps patients find local activities or services that suit them.', 'Gives patients medicine.', 'Performs surgery.', 'Builds gardens for hospitals.'], answer: 0, why: '第3段落 helps them find local activities or services that suit them。' },
+      { q: 'What is one limitation of social prescribing mentioned in the passage?', choices: ['It depends on the availability of local activities.', 'It is too cheap.', 'It is only for children.', 'It makes people lonelier.'], answer: 0, why: '第5段落 The approach also depends on the availability of local activities, which may be limited in some areas。' },
+    ],
+    gist: [
+      { para: 1, choices: ['薬だけでは解決できない問題', '睡眠薬の作り方', '病院の場所', '母親の仕事'], answer: 0, why: '第2段落は、さびしさや孤立が原因で、薬だけでは解決しない問題があることを述べている。' },
+      { para: 4, choices: ['社会的処方の課題と、その考え方の意義', '資金の集め方', '体のしくみ', '地域の地図'], answer: 0, why: '第5段落は、証拠や資金などの課題と、健康を広くとらえる考え方の意義を述べている。' },
+    ],
+    titleQ: { choices: ['A Prescription for Connection', 'How to Grow Vegetables', 'The History of Medicine', 'Why Doctors Wear White'], answer: 0, why: '全体として、人とのつながりを「処方」する社会的処方のしくみと効果・課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
