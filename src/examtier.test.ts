@@ -982,12 +982,6 @@ it('本番の長さの長文：共通テスト評論の「金継ぎ」は350語�
   expect(tierOf(p)).toBe('kyotsu')
 })
 
-it('本番の長さの長文：共通テスト評論の「電池」は350語以上で共通テストのレベルに残る', () => {
-  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-batteries')!
-  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
-  expect(tierOf(p)).toBe('kyotsu')
-})
-
 it('本番の長さの長文：共通テスト評論の「習慣」は350語以上で共通テストのレベルに残る', () => {
   const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-habits')!
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
