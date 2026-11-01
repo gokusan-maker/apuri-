@@ -568,3 +568,13 @@ it('デザイン208：ボス図鑑の見出しに、今日ボスに勝った回�
   render(<BossBook />)
   expect(screen.getByLabelText('今日 3勝').textContent).toBe('🗓今日3勝')
 })
+
+it('デザイン212：とくぎのしくみで、そのとくぎのまだ勝っていないボスの数を出す', async () => {
+  const { BOSSES, UNIV_BOSSES_FOR_TEST } = await import('./boss').then(async (m) => ({ ...m, UNIV_BOSSES_FOR_TEST: (await import('./univ')).UNIV_BOSSES }))
+  const { BOSS_TRAITS, traitOf } = await import('./boss')
+  localStorage.clear()
+  render(<BossBook />)
+  const t = traitOf(Object.values(BOSSES)[0].name)
+  const total = [...Object.values(BOSSES), ...UNIV_BOSSES_FOR_TEST].filter((b) => traitOf(b.name) === t).length
+  expect(screen.getByLabelText(`${BOSS_TRAITS[t].name}のまだ勝っていないボス`).textContent).toBe(`（あと${total}体）`)
+})
