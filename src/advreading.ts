@@ -21685,6 +21685,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Rockets That Come Back', 'How to Fly an Airplane', 'The History of the Moon', 'Why Fuel Is Expensive'], answer: 0, why: '全体として、再使用できるロケットのしくみと意味、期待と心配、これからの課題を述べている。' },
   },
   {
+    id: 'kyotsu-time-management',
+    title: 'Making the Most of Our Time',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many students and workers feel that there is never enough time. Homework, club activities, part-time jobs, and time with friends and family all compete for the same twenty-four hours. Some people seem to manage everything calmly, while others constantly feel rushed and stressed. The difference is often not how much time people have, but how they use it. Learning a few simple strategies can make a real difference to how we feel each day.",
+      "One common problem is that people underestimate how long tasks will take. A student might think that an essay will take one hour, only to discover that it takes three. As a result, they end up working late at night or missing deadlines. Experts suggest breaking large tasks into smaller steps and estimating the time needed for each one. This makes the work feel less overwhelming and helps people plan more realistically.",
+      "Another useful strategy is to decide which tasks are most important. Not everything on a to-do list has the same value. Some tasks are urgent but not very important, such as answering every message immediately, while others are important but not urgent, such as studying for an exam ( A ) is several weeks away. People who focus only on urgent tasks often find that important work is left until the last minute.",
+      "Distractions also take up a surprising amount of time. Checking a phone for just a few seconds may seem harmless, but frequent interruptions make it difficult to concentrate deeply. Research suggests that after being interrupted, it can take several minutes to return to the same level of focus. For this reason, some people turn off notifications or put their phones in another room while they study, ( B ) allows them to work more efficiently.",
+      "Finally, managing time well does not mean filling every minute with work. Rest, exercise, and sleep are essential for staying healthy and productive. A person who never takes breaks may become tired and make more mistakes. The goal of time management is not simply to do more, but to spend time on ( C ) truly matters. By planning carefully, setting priorities, and protecting time for rest, people can feel more in control of their days.",
+    ],
+    ja: [
+      '多くの生徒や働く人は、時間がいつも足りないと感じている。宿題、部活動、アルバイト、友だちや家族との時間が、すべて同じ24時間を取り合っている。すべてを落ち着いてこなしているように見える人もいれば、いつも急かされてストレスを感じている人もいる。そのちがいは、時間がどれだけあるかではなく、それをどう使うかであることが多い。いくつかのかんたんな方法を身につけるだけで、毎日の気分に本当のちがいが生まれることがある。',
+      'よくある問題の1つは、作業にかかる時間を少なく見積もってしまうことである。生徒は作文に1時間かかると思っていても、実際には3時間かかることに気づくかもしれない。その結果、夜おそくまで作業したり、しめ切りにおくれたりすることになる。専門家は、大きな作業を小さな段階に分け、それぞれに必要な時間を見積もることをすすめている。そうすると作業がそれほど大変に感じられず、より現実的に計画を立てるのに役立つ。',
+      'もう1つの役に立つ方法は、どの作業が最も大切かを決めることである。やることリストのすべてが同じ価値をもつわけではない。すべてのメッセージにすぐに返事をすることのように、急ぎだがそれほど大切でない作業もあれば、何週間も先の試験のための勉強のように、大切だが急ぎではない作業もある。急ぎの作業だけに集中する人は、大切な仕事がぎりぎりまで残されることが多い。',
+      '気を散らすものも、おどろくほど多くの時間をうばう。ほんの数秒スマートフォンをたしかめるのは害がないように思えるかもしれないが、何度もじゃまが入ると深く集中するのがむずかしくなる。研究によると、じゃまをされたあと、同じくらいの集中にもどるには数分かかることがある。このため、勉強のあいだは通知を切ったり、スマートフォンを別の部屋に置いたりする人もいて、それによってより効率的に作業できる。',
+      '最後に、時間をうまく使うことは、すべての分を作業でうめることではない。休息や運動やすいみんは、健康で生産的でいるために欠かせない。休けいをまったくとらない人はつかれてしまい、まちがいがふえるかもしれない。時間の使い方の目的は、ただ多くのことをすることではなく、本当に大切なことに時間を使うことである。注意深く計画し、優先順位をつけ、休む時間を守ることで、人は自分の1日をより自分で管理していると感じられるようになる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 an exam を受け、is の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（通知を切ること）を受け、allows の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'how'], answer: 0, why: '前置詞 on のあとで「～なこと」となり、matters の主語になる what（what truly matters）。' },
+    ],
+    tf: [
+      { statement: '人は作業にかかる時間を少なく見積もりがちである。', answer: true, why: '第2段落 people underestimate how long tasks will take。' },
+      { statement: 'やることリストのすべての作業は同じ価値をもつ。', answer: false, why: '第3段落 Not everything on a to-do list has the same value。' },
+      { statement: 'じゃまをされたあと、集中にもどるには数分かかることがある。', answer: true, why: '第4段落 it can take several minutes to return to the same level of focus。' },
+      { statement: '筆者は、休けいをとらずにずっと働くべきだと述べている。', answer: false, why: '第5段落 Rest, exercise, and sleep are essential。' },
+    ],
+    qa: [
+      { q: 'What do experts suggest doing with large tasks?', choices: ['Breaking them into smaller steps.', 'Doing them at the last minute.', 'Skipping them.', 'Asking someone else to do them.'], answer: 0, why: '第2段落 Experts suggest breaking large tasks into smaller steps。' },
+      { q: 'What is the goal of time management, according to the author?', choices: ['To spend time on what truly matters.', 'To do as much as possible.', 'To never rest.', 'To answer every message immediately.'], answer: 0, why: '第5段落 The goal of time management is not simply to do more, but to spend time on what truly matters。' },
+    ],
+    gist: [
+      { para: 2, choices: ['作業の大切さを見分けること', 'メッセージの返し方', '試験の日程', 'リストの書き方の歴史'], answer: 0, why: '第3段落は、急ぎの作業と大切な作業のちがいと、優先順位を決める大切さを述べている。' },
+      { para: 3, choices: ['気を散らすものがうばう時間', 'スマートフォンの値段', '研究者の生活', '別の部屋のそうじ'], answer: 0, why: '第4段落は、じゃまによる集中の低下と、通知を切るなどの対策を述べている。' },
+    ],
+    titleQ: { choices: ['Making the Most of Our Time', 'How to Write an Essay', 'The History of Clocks', 'Why Phones Are Popular'], answer: 0, why: '全体として、時間をうまく使うための考え方と方法（見積もり・優先順位・集中・休息）を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
