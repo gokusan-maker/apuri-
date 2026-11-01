@@ -1846,7 +1846,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He (A) asked me (B) that I (C) liked (D) sushi.', choices: ['(A) asked me', '(B) that I', '(C) liked', '(D) sushi'], answer: 1, why: 'Yes / No の質問の間接話法は if（whether）：asked me if I liked。' },
       { sentence: 'My mother (A) told me (B) clean my room (C) before (D) dinner.', choices: ['(A) told me', '(B) clean my room', '(C) before', '(D) dinner'], answer: 1, why: '命令の間接話法は tell 人 to ～：told me to clean。' },
       { sentence: '(A) He said (B) he would (C) call me (D) tomorrow, but he never called.', choices: ['(A) He said', '(B) he would', '(C) call me', '(D) tomorrow, but he never called'], answer: 3, why: '過去の発言を伝えるので tomorrow は the next day にかえる。' },
-      { sentence: '(A) She says that she (B) could swim (C) when she (D) was five.', choices: ['(A) She says that she', '(B) could swim', '(C) when she', '(D) was five'], answer: 0, why: 'あとの could・was と合わせ、過去の発言として She said にする。' },
+      { sentence: '(A) He said me (B) that he (C) was (D) very hungry.', choices: ['(A) He said me', '(B) that he', '(C) was', '(D) very hungry'], answer: 0, why: 'say は人を直接目的語にとらない：He told me（または He said to me）。' },
       { sentence: 'I (A) knew that (B) she (C) lives in Paris (D) at that time.', choices: ['(A) knew that', '(B) she', '(C) lives in Paris', '(D) at that time'], answer: 2, why: '主節が過去で at that time のことなので lived in Paris。' },
     ],
   },
