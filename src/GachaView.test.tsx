@@ -763,3 +763,18 @@ it('デザイン186：キャラ図鑑の見出しに、今日会えた子の数�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('今日会えた子 1体').textContent).toBe('☀今日 1体')
 })
+
+it('デザイン188：はじめての子が出たら、図鑑のコンプリートまであと何体かが出る', async () => {
+  localStorage.clear()
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={GACHA_PRICE} members={2} ownedSpecies={['mochi', 'fox']} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('図鑑のコンプリートまで').textContent).toBe(`📖 図鑑コンプリートまであと${SPECIES.length - 3}体`)
+})
+
+it('デザイン188：もう会ったことのある子なら、コンプリートまでの数は出ない', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} ownedSpecies={['mochi', 'cat']} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('図鑑のコンプリートまで')).toBeNull()
+})

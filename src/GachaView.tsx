@@ -634,6 +634,19 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🆕 はじめての{typeOf(result.species.id).icon}{typeOf(result.species.id).name}！
             </p>
           )}
+          {!result.mystery && ownedSpecies && result.newSpecies && (() => {
+            // デザイン188：はじめての子が出たら、図鑑のコンプリートまであと何体か
+            const left = SPECIES.length - new Set(['mochi', ...ownedSpecies, result.species.id]).size
+            return left > 0 ? (
+              <p className="gacha-skill" aria-label="図鑑のコンプリートまで">
+                📖 図鑑コンプリートまであと{left}体
+              </p>
+            ) : (
+              <p className="gacha-skill" aria-label="図鑑のコンプリートまで">
+                👑 図鑑コンプリート！
+              </p>
+            )
+          })()}
           {!result.mystery && (
             // デザイン173：出た子の出やすさ
             <p className="gacha-skill" aria-label="出た子の今日のチャレンジ">
