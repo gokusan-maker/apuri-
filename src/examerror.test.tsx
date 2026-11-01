@@ -1254,3 +1254,10 @@ it('誤文訂正〈86〉：同格の that と名詞＋to 不定詞の単元が10
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('that')
 })
+
+it('正誤問題〈93〉：同格の that と名詞＋to 不定詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-appositive')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) which the team')
+})

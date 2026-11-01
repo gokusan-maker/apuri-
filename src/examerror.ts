@@ -2186,6 +2186,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Whether he will come (B) or not (C) are (D) not important.', choices: ['(A) Whether he will come', '(B) or not', '(C) are', '(D) not important'], answer: 2, why: '名詞節の主語は単数あつかい：is not important。' },
     ],
   },
+  {
+    id: 'exam-error-appositive',
+    title: '入試の正誤問題〈93〉（共通テストレベル：同格の that と名詞＋to 不定詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the fact・the news・the idea・evidence のあとの同格の that（あとに完全な文）、decision・plan・ability・chance のあとの to 不定詞、something to drink のような不定詞の形容詞用法など。',
+    ],
+    examples: [
+      { en: 'The news that the team had won made everyone happy.', ja: 'チームが勝ったという知らせはみんなを喜ばせた。' },
+      { en: 'She made a decision to study abroad.', ja: '彼女は留学する決心をした。' },
+    ],
+    questions: [
+      { sentence: 'The news (A) which the team (B) had won (C) made (D) everyone happy.', choices: ['(A) which the team', '(B) had won', '(C) made', '(D) everyone happy'], answer: 0, why: 'あとに完全な文が続く「～という知らせ」は that：The news that。' },
+      { sentence: 'I (A) was surprised (B) by the fact (C) what he had never (D) seen the sea.', choices: ['(A) was surprised', '(B) by the fact', '(C) what he had never', '(D) seen the sea'], answer: 2, why: '「～という事実」は the fact that。' },
+      { sentence: 'She (A) made (B) a decision (C) studying (D) abroad next year.', choices: ['(A) made', '(B) a decision', '(C) studying', '(D) abroad next year'], answer: 2, why: 'decision のあとは to 不定詞：to study。' },
+      { sentence: 'We (A) have (B) a plan (C) visiting Kyoto (D) in spring.', choices: ['(A) have', '(B) a plan', '(C) visiting Kyoto', '(D) in spring'], answer: 2, why: 'plan のあとは to 不定詞：to visit Kyoto。' },
+      { sentence: 'There (A) is (B) no evidence (C) which the drug (D) is harmful.', choices: ['(A) is', '(B) no evidence', '(C) which the drug', '(D) is harmful'], answer: 2, why: '「～という証拠」は evidence that。' },
+      { sentence: 'I (A) need (B) something (C) drink (D) after running.', choices: ['(A) need', '(B) something', '(C) drink', '(D) after running'], answer: 2, why: '「何か飲むもの」は something to drink。' },
+      { sentence: 'This (A) is (B) a good chance (C) for practicing (D) your English.', choices: ['(A) is', '(B) a good chance', '(C) for practicing', '(D) your English'], answer: 2, why: 'chance のあとは to 不定詞：to practice。' },
+      { sentence: 'There (A) are (B) many places (C) in this city (D) to visit them.', choices: ['(A) are', '(B) many places', '(C) in this city', '(D) to visit them'], answer: 3, why: '不定詞が places をくわしくするので目的語をくり返さない：to visit。' },
+      { sentence: 'He (A) has the ability (B) of solve (C) problems (D) quickly.', choices: ['(A) has the ability', '(B) of solve', '(C) problems', '(D) quickly'], answer: 1, why: 'ability のあとは to 不定詞：the ability to solve。' },
+      { sentence: '(A) The idea (B) of students should (C) wear uniforms (D) is old-fashioned.', choices: ['(A) The idea', '(B) of students should', '(C) wear uniforms', '(D) is old-fashioned'], answer: 1, why: 'あとが完全な文なので同格の that：that students should。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
