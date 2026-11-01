@@ -2754,6 +2754,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The room must [clean] every day.', choices: ['be cleaned', 'be cleaning', 'cleaned', 'clean by'], answer: 0, why: '部屋は「そうじされる」側なので助動詞の受け身 must be cleaned。' },
     ],
   },
+  {
+    id: 'exam-fix-63',
+    title: '入試の誤文訂正〈63〉（TOEFL・IELTS の書き言葉：名詞の数と冠詞）',
+    points: ['research・evidence・information・advice・equipment は数えられない名詞（複数形にせず a もつけない）、a number of ＋複数名詞は複数あつかい・the number of ～ は単数あつかい、one of the ＋複数名詞、総称の the ＋単数名詞など、論文やエッセイでよく問われる名詞と冠詞のきまり。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Recent research suggests that sleep improves memory.', ja: '最近の研究は、睡眠が記憶をよくすることを示している。' }],
+    questions: [
+      { sentence: 'Recent [researches suggest] that sleep improves memory.', choices: ['research suggests', 'researches suggests', 'a research suggest', 'research suggest'], answer: 0, why: 'research は数えられない名詞なので複数形にせず、動詞は単数あつかいの suggests。' },
+      { sentence: 'There is little [evidences] that the drug works.', choices: ['evidence', 'evidences of', 'an evidence', 'the evidences'], answer: 0, why: 'evidence は数えられない名詞。little ＋数えられない名詞で「ほとんど～ない」。' },
+      { sentence: 'The website provides [an information] about local bus routes.', choices: ['information', 'informations', 'a informations', 'many information'], answer: 0, why: 'information は数えられない名詞なので a をつけず、複数形にもしない。' },
+      { sentence: 'She gave me [a useful advice] about studying abroad.', choices: ['some useful advice', 'a useful advices', 'useful advices', 'many useful advice'], answer: 0, why: 'advice は数えられない名詞。数えるなら a piece of advice、ふつうは some advice。' },
+      { sentence: '[A number of students has] chosen to study online.', choices: ['A number of students have', 'A number of student has', 'The number of students have', 'A number of student have'], answer: 0, why: 'a number of ＋複数名詞「多くの～」は複数あつかいなので have。' },
+      { sentence: 'The number of tourists [have increased] sharply since 2020.', choices: ['has increased', 'have been increased', 'are increasing to', 'increase'], answer: 0, why: 'the number of ～「～の数」は主語の中心が number なので単数あつかい：has increased。' },
+      { sentence: 'Tokyo is one of the largest [city] in the world.', choices: ['cities', 'city of', 'a city', 'citys'], answer: 0, why: 'one of the ＋最上級＋複数名詞「最も～な…のひとつ」。city の複数形は cities。' },
+      { sentence: 'The lab bought [new equipments] for the experiment.', choices: ['new equipment', 'a new equipments', 'many new equipment', 'new equipment pieces of'], answer: 0, why: 'equipment は数えられない名詞なので複数形にしない。' },
+      { sentence: '[Computer] has changed the way people work.', choices: ['The computer', 'A computers', 'Computers has', 'The computers has'], answer: 0, why: '「コンピューターというもの」を表す総称は the ＋単数名詞（または無冠詞の複数形 Computers have）。単数名詞を冠詞なしで主語にはできない。' },
+      { sentence: 'Each of the participants [were] given a short survey.', choices: ['was', 'have been', 'are', 'being'], answer: 0, why: 'each of ～ は単数あつかいなので was。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
