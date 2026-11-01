@@ -22387,6 +22387,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Is Local Food Always Greener?', 'How to Grow Tomatoes', 'The History of Supermarkets', 'Why Airplanes Are Fast'], answer: 0, why: '全体として、地元の食べ物がいつも環境にやさしいのかを、フードマイルの考え方の限界から論じている。' },
   },
   {
+    id: 'kyotsu-leafcutter-ants',
+    title: 'The First Farmers',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Humans began farming about ten thousand years ago, and this change transformed our way of life. Yet we were not the first farmers on Earth. In the forests of Central and South America, leafcutter ants have been growing their own food for millions of years. Their colonies, which can contain several million individuals, are among the most complex societies in the animal world, and studying them has taught scientists a great deal about cooperation.",
+      "Despite their name, leafcutter ants do not actually eat the leaves ( A ) they cut. Instead, worker ants carry pieces of leaves, often much larger than their own bodies, back to their underground nests. There, other workers chew the leaves into a soft paste and use it to grow a special type of fungus. The fungus breaks down the tough plant material, and the ants feed on parts of the fungus that are rich in nutrients. In this way, the ants and the fungus depend on each other completely.",
+      "A leafcutter colony works through a careful division of labor. Ants of different sizes perform different jobs. The largest ants act as soldiers and defend the nest, medium-sized ants cut and carry leaves, and the smallest ants care for the fungus gardens and the young. Some very small ants even ride on top of the leaf pieces as they are carried, protecting the larger workers from flies ( B ) try to lay eggs on them. No single ant directs this activity, yet the colony functions smoothly as a whole.",
+      "Like human farmers, leafcutter ants must also deal with pests and disease. Their fungus gardens can be attacked by a harmful mold, which could destroy the colony's food supply. To protect their crops, the ants carry bacteria on their bodies that produce natural chemicals able to kill the mold. Some scientists are now studying these chemicals in the hope of finding new medicines, since many of the antibiotics used by doctors today were originally discovered in bacteria.",
+      "Leafcutter ants also have a strong influence on their environment. By cutting leaves, they act like gardeners that trim the forest, and by moving large amounts of soil and plant material underground, they help to recycle nutrients. Although they can sometimes damage crops on farms, they play an important role in the health of tropical forests. These tiny insects remind us that complex achievements such as farming do not always require large brains, and that cooperation can produce results ( C ) no individual could achieve alone.",
+    ],
+    ja: [
+      '人間は約1万年前に農業を始め、この変化は私たちの生き方を大きく変えた。しかし、私たちは地球で最初の農民ではなかった。中央アメリカと南アメリカの森では、ハキリアリが何百万年も前から自分たちの食べ物を育ててきた。その巣は何百万びきもの個体をふくむこともあり、動物の世界で最も複雑な社会のひとつである。ハキリアリを研究することで、科学者たちは協力について多くのことを学んできた。',
+      'その名前にもかかわらず、ハキリアリは自分たちが切った葉を実際には食べない。そのかわりに、働きアリは、しばしば自分の体よりずっと大きな葉のかけらを地下の巣に運ぶ。そこでほかの働きアリが葉をかんでやわらかいペーストにし、それを使って特別な種類の菌を育てる。菌はかたい植物を分解し、アリは菌のうち栄養の多い部分を食べる。このように、アリと菌はおたがいに完全にたよりあっている。',
+      'ハキリアリの巣は、ていねいな分業によって動いている。大きさのちがうアリが、ちがう仕事をする。最も大きなアリは兵隊として巣を守り、中くらいのアリは葉を切って運び、最も小さなアリは菌の畑と幼虫の世話をする。とても小さなアリの中には、運ばれる葉のかけらの上に乗って、大きな働きアリにたまごをうみつけようとするハエから守るものさえいる。この活動を指示する1ぴきのアリはいないのに、巣は全体としてなめらかに動いている。',
+      '人間の農民と同じように、ハキリアリも害虫や病気に対処しなければならない。菌の畑は有害なカビにおそわれることがあり、それによって巣の食料がだめになるおそれがある。作物を守るために、アリはカビを殺せる天然の化学物質を作る細菌を体にのせて運んでいる。今日医者が使う抗生物質の多くはもともと細菌から見つかったものなので、新しい薬が見つかることを願って、こうした化学物質を研究している科学者もいる。',
+      'ハキリアリは、まわりの環境にも強い影響をあたえている。葉を切ることで森を刈りこむ庭師のような働きをし、大量の土や植物を地下に運ぶことで、栄養の循環を助けている。農場の作物を傷つけることもあるが、熱帯の森の健康に大切な役割を果たしている。この小さな虫は、農業のような複雑なことを成しとげるのに大きな脳がいつも必要なわけではなく、協力すれば、どの個体もひとりでは成しとげられない結果を生み出せることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the leaves を受け、cut の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 flies（ハエ）を受け、try の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 results を受け、achieve の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'ハキリアリは、人間より前から食べ物を育ててきた。', answer: true, why: '第1段落 leafcutter ants have been growing their own food for millions of years。' },
+      { statement: 'ハキリアリは、切った葉をそのまま食べる。', answer: false, why: '第2段落 leafcutter ants do not actually eat the leaves that they cut。' },
+      { statement: '巣の仕事は、1ぴきのリーダーのアリが指示している。', answer: false, why: '第3段落 No single ant directs this activity。' },
+      { statement: 'ハキリアリは、カビを殺す化学物質を作る細菌を体にのせている。', answer: true, why: '第4段落 the ants carry bacteria on their bodies that produce natural chemicals able to kill the mold。' },
+    ],
+    qa: [
+      { q: 'What do the smallest ants do?', choices: ['They care for the fungus gardens and the young.', 'They defend the nest as soldiers.', 'They cut the largest leaves.', 'They search for new forests.'], answer: 0, why: '第3段落 the smallest ants care for the fungus gardens and the young。' },
+      { q: 'Why are some scientists studying the chemicals made by the bacteria?', choices: ['They hope to find new medicines.', 'They want to grow larger ants.', 'They want to destroy tropical forests.', 'They hope to make leaves taste better.'], answer: 0, why: '第4段落 Some scientists are now studying these chemicals in the hope of finding new medicines。' },
+    ],
+    gist: [
+      { para: 1, choices: ['葉を使って菌を育て、それを食べるしくみ', '葉の色の変化', '地下の水の流れ', 'アリの寿命'], answer: 0, why: '第2段落は、切った葉で菌を育てて食べるという、アリと菌の関係を述べている。' },
+      { para: 2, choices: ['大きさによる仕事の分担', '巣の大きさのはかり方', 'ハエの一生', '森の地図'], answer: 0, why: '第3段落は、兵隊・葉の運び手・畑の世話など、大きさによる分業を述べている。' },
+    ],
+    titleQ: { choices: ['The First Farmers', 'How to Grow Mushrooms at Home', 'Why Leaves Turn Red', 'The Biggest Forests on Earth'], answer: 0, why: '全体として、人間より前から農業をしてきたハキリアリの社会と協力のしくみを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
