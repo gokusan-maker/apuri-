@@ -684,6 +684,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               👯 相棒とおそろい！
             </p>
           )}
+          {!result.mystery && boostColor && result.kind.name === boostColor && (
+            // デザイン200：出た子が今日のおすすめ色（ラッキーカラー）
+            <p className="gacha-new-type gacha-twin" role="status">
+              🍀 今日のラッキーカラー！
+            </p>
+          )}
           {!result.mystery && result.kind.id !== 'normal' && partnerKind === result.kind.id && (
             // デザイン193：出た子が相棒と同じ色ちがい
             <p className="gacha-new-type gacha-twin" role="status">

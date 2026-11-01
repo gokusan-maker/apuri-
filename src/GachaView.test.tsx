@@ -802,3 +802,15 @@ it('デザイン193：出た子が相棒と同じ色ちがいなら「相棒と�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByText(/🎨 相棒と同じ/)).toBeNull()
 })
+
+it('デザイン200：出た子が今日のおすすめ色なら「🍀 今日のラッキーカラー！」が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} boostColor={kindOf('umi').name} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('🍀 今日のラッキーカラー！')).toBeInTheDocument()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} boostColor={kindOf('umi').name} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByText('🍀 今日のラッキーカラー！')).toBeNull()
+})
