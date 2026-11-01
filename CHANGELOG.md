@@ -3510,3 +3510,4 @@
 - 2026-11-01: デザイン：ガチャの結果に、出た子の今日のチャレンジ（英→日など）を出すようにした
 - 2026-11-01: 文法：入試の正誤問題〈66〉（結論・まとめの表現：In conclusion・To sum up・All in all・On the whole・these reasons・should act・lies in・can be concluded・must protect・discuss）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「もどってくるロケット（再使用ロケット）」（科学・宇宙・but／非制限の which／this の空所）
+- 2026-11-01: キャラクター：ノスリの「ノスリン」を追加（とくぎ：みはりのガード）

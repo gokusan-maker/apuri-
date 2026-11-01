@@ -1194,6 +1194,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 50 Q16 40 6 46 M70 50 Q84 40 94 46" fill="none" stroke="#3f2a0a" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'buzzard')
+    return (
+      <g>
+        {/* むねのまだらもよう */}
+        <circle cx="46" cy="62" r="2" fill="#451a03" />
+        <circle cx="54" cy="64" r="2" fill="#451a03" />
+        <circle cx="50" cy="68" r="2" fill="#451a03" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
