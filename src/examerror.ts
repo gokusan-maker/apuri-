@@ -2880,6 +2880,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There [is] several ways to solve this problem.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'there is / are はうしろの名詞に合わせる。several ways は複数なので There are。' },
     ],
   },
+  {
+    id: 'exam-fix-66',
+    title: '入試の誤文訂正〈66〉（共通テストレベル：比較の慣用表現）',
+    points: ['the 比較級 ～, the 比較級 …（～すればするほど…）、比較級 and 比較級（ますます）、no more than（たった）、less ＋原級 ＋ than、not so much A as B（A というより B）、as ～ as possible、倍数 ＋ as ～ as、would rather A than B など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、上手になる。' }],
+    questions: [
+      { sentence: 'The more you practice, [the best] you become.', choices: ['the better', 'the more good', 'better', 'the most'], answer: 0, why: 'the 比較級 ～, the 比較級 …「～すればするほど…」。good の比較級は better。' },
+      { sentence: 'It is getting [cold and cold] these days.', choices: ['colder and colder', 'more cold and cold', 'coldest and coldest', 'cold and colder'], answer: 0, why: '比較級 and 比較級「ますます～」：colder and colder。' },
+      { sentence: 'Learning English is becoming [importanter and importanter].', choices: ['more and more important', 'most and most important', 'more important and important', 'important and important'], answer: 0, why: '長い形容詞の「ますます～」は more and more ＋原級：more and more important。' },
+      { sentence: 'I have [no more as] 500 yen with me now.', choices: ['no more than', 'no much than', 'not more as', 'no most than'], answer: 0, why: 'no more than ～「たった～しか」（＝only）。than を使う。' },
+      { sentence: 'He is not so much a teacher [than] a friend to his students.', choices: ['as', 'but', 'that', 'like'], answer: 0, why: 'not so much A as B「A というより B」。than ではなく as。' },
+      { sentence: 'Please come home as [early as you possible].', choices: ['early as possible', 'earlier as possible', 'early than possible', 'earliest as possible'], answer: 0, why: 'as ～ as possible「できるだけ～」。原級を使う：as early as possible（＝as early as you can）。' },
+      { sentence: 'This room is [three times larger as] that one.', choices: ['three times as large as', 'three times as larger as', 'three as large times as', 'three times so large than'], answer: 0, why: '倍数 ＋ as ～ as：three times as large as。' },
+      { sentence: 'I would rather stay home [as] go out in this rain.', choices: ['than', 'to', 'for', 'of'], answer: 0, why: 'would rather A than B「B するより A したい」。' },
+      { sentence: 'No other student in the class is [tallest] than Ken.', choices: ['taller', 'tall', 'more tall', 'the tallest'], answer: 0, why: 'No other ～ is 比較級 than …「…ほど～なものはない」：taller。' },
+      { sentence: 'This bag is [less expensive as] that one.', choices: ['less expensive than', 'less expensiver than', 'least expensive as', 'not less expensive as'], answer: 0, why: 'less ＋原級 ＋ than「…ほど～でない」。as ではなく than。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
