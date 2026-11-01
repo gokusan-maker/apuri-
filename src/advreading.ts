@@ -24064,6 +24064,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Seat for Everyone', 'How to Build a Chair', 'The History of Parks', 'Why Buses Are Late'], answer: 0, why: '全体として、ありふれたベンチが、だれもが居場所を感じられる都市づくりにかかわっていることを述べている。' },
   },
   {
+    id: 'kyotsu-sea-turtles',
+    title: 'The Long Way Home',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On certain summer nights, female sea turtles crawl slowly out of the ocean onto sandy beaches. Using their back flippers, they dig deep holes in the sand and lay around a hundred eggs before covering them and returning to the sea. About two months later, the baby turtles hatch, dig their way to the surface, and rush toward the water. This ancient ritual has been repeated for millions of years, but today sea turtles face more dangers than ever before.",
+      "One of the most remarkable facts about sea turtles is that many females return to lay their eggs on the same beach ( A ) they themselves hatched, sometimes after traveling thousands of kilometers across the ocean. Scientists believe that young turtles learn the unique magnetic signature of their home beach, a pattern in the Earth's magnetic field, and later use this information to find their way back. Smell and the position of the sun may also help them navigate.",
+      "Life is extremely difficult for baby turtles. Only a small fraction of hatchlings survive to become adults. On the beach, they are eaten by birds and crabs, and in the sea, by fish. The survivors spend years drifting with ocean currents before they become large enough to be safe from most predators. Because sea turtles take many years to mature, a decline in their numbers can take decades to recover.",
+      "Human activities have added new threats. Beaches ( B ) turtles have used for generations are being developed for hotels and houses. Bright lights near the shore can confuse hatchlings, which naturally move toward the brightest horizon, usually the moonlit sea. Instead, they may crawl toward roads and buildings. Turtles are also caught accidentally in fishing nets, and many swallow plastic bags, which can look like jellyfish, one of their foods. Rising temperatures are another concern, because the temperature of the sand determines whether baby turtles become male or female. Warmer sand produces more females.",
+      "Fortunately, many people are working to protect sea turtles. Volunteers in some regions patrol beaches at night to protect nests, and some towns turn off or shade lights near the shore during the nesting season. Fishing nets with special escape openings allow turtles to swim free. Reducing plastic waste also helps. Protecting sea turtles requires cooperation between countries, since the turtles travel across borders. Their long journeys remind us that the ocean is a single connected system, and that our actions on land can affect creatures ( C ) live far out at sea.",
+    ],
+    ja: [
+      'ある夏の夜、メスのウミガメがゆっくりと海からはい上がり、砂浜にやってくる。後ろのひれを使って砂に深いあなをほり、100個ほどのたまごをうむと、それをうめて海へもどっていく。約2か月後、子ガメがたまごからかえり、砂をほって表に出て、水へと急いで向かう。この古くからの営みは何百万年もくり返されてきたが、今日ウミガメはこれまでになく多くの危険に直面している。',
+      'ウミガメについての最もおどろくべき事実のひとつは、多くのメスが、ときには海を何千キロメートルも旅したあとで、自分がうまれたのと同じ浜辺にたまごをうみにもどってくることである。科学者たちは、子ガメが生まれた浜辺の地磁気の特有のもよう、つまり地球の磁場のパターンを覚え、のちにこの情報を使って帰り道を見つけていると考えている。においや太陽の位置も、道を見つけるのに役立っているのかもしれない。',
+      '子ガメにとって生きることはきわめてきびしい。たまごからかえった子ガメのうち、おとなになるまで生きのびるのはごく一部である。浜辺では鳥やカニに、海では魚に食べられる。生きのこったカメは、たいていの天敵から安全な大きさになるまで、何年も海流にのってただよってすごす。ウミガメはおとなになるまでに長い年月がかかるので、数がへると、もとにもどるまでに何十年もかかることがある。',
+      '人間の活動は新しい危険を加えている。カメが何世代も使ってきた浜辺は、ホテルや家のために開発されている。海岸の近くの明るい光は子ガメをまどわせることがある。子ガメは生まれつきいちばん明るい地平線、ふつうは月に照らされた海のほうへ進むからである。そのかわりに、道路や建物のほうへはっていってしまうかもしれない。カメは漁網にも誤ってかかり、えさのひとつであるクラゲのように見えるビニール袋を飲みこんでしまうカメも多い。気温の上昇も心配のひとつである。砂の温度によって子ガメがオスになるかメスになるかが決まり、あたたかい砂ほどメスが多く生まれるからである。',
+      'さいわい、多くの人がウミガメを守るために活動している。地域によっては、ボランティアが夜に浜辺を見回って巣を守り、産卵の時期には海岸近くの明かりを消したりおおったりする町もある。特別なにげ口のある漁網なら、カメは自由に泳いで出られる。プラスチックのごみをへらすことも役に立つ。カメは国境をこえて旅するので、ウミガメを守るには国どうしの協力が必要である。カメの長い旅は、海がひとつにつながったしくみであり、陸での私たちの行動が、はるか沖にすむ生き物に影響しうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the same beach（場所）で、うしろの they themselves hatched は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 Beaches を受け、have used の目的語になる関係代名詞 that。うしろに目的語がないので where は使えない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 creatures を受け、live の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'メスのウミガメは、一度に100個ほどのたまごをうむ。', answer: true, why: '第1段落 lay around a hundred eggs。' },
+      { statement: 'たまごからかえった子ガメのほとんどが、おとなまで生きのびる。', answer: false, why: '第3段落 Only a small fraction of hatchlings survive to become adults。' },
+      { statement: '子ガメは、いちばん明るい地平線のほうへ進む性質がある。', answer: true, why: '第4段落 hatchlings, which naturally move toward the brightest horizon。' },
+      { statement: 'あたたかい砂ほど、オスの子ガメが多く生まれる。', answer: false, why: '第4段落 Warmer sand produces more females。' },
+    ],
+    qa: [
+      { q: 'How do scientists believe sea turtles find their home beach?', choices: ['By learning the magnetic signature of the beach.', 'By following ships.', 'By listening to people.', 'By reading the stars only.'], answer: 0, why: '第2段落 young turtles learn the unique magnetic signature of their home beach。' },
+      { q: 'Why do some turtles swallow plastic bags?', choices: ['The bags can look like jellyfish, one of their foods.', 'The bags taste sweet.', 'They want to build nests.', 'The bags help them float.'], answer: 0, why: '第4段落 plastic bags, which can look like jellyfish, one of their foods。' },
+    ],
+    gist: [
+      { para: 1, choices: ['生まれた浜辺にもどってくるふしぎ', '砂浜の作り方', '太陽の動き', 'においの種類'], answer: 0, why: '第2段落は、メスが生まれた浜辺にもどる力と、そのしくみを述べている。' },
+      { para: 3, choices: ['人間の活動による新しい危険', 'ホテルの値段', '月の満ち欠け', 'クラゲの一生'], answer: 0, why: '第4段落は、開発、明かり、漁網、プラスチック、気温上昇などの危険を述べている。' },
+    ],
+    titleQ: { choices: ['The Long Way Home', 'How to Build a Sand Castle', 'The Life of Jellyfish', 'Why the Moon Shines'], answer: 0, why: '全体として、生まれた浜辺へ長い旅をしてもどるウミガメと、その危機と保護を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
