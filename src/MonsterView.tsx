@@ -1290,6 +1290,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="58" cy="46" r="2.5" fill="#facc15" />
       </g>
     )
+  if (species === 'guillemot')
+    return (
+      <g>
+        {/* 白いおなかと、目の後ろの細い線 */}
+        <path d="M40 62 Q50 80 60 62" fill="#f8fafc" stroke="#0c0a09" strokeWidth="1.2" />
+        <path d="M58 40 L66 38" fill="none" stroke="#f8fafc" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
