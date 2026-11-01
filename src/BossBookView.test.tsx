@@ -464,3 +464,18 @@ it('デザイン182：ボス図鑑で、ランクSまであと何ランクかを
   expect(screen.getByLabelText('ランクSまであと2ランク')).toBeInTheDocument()
   expect(screen.getAllByLabelText(/ランクSまであと/)).toHaveLength(2)
 })
+
+it('デザイン185：とくぎの種類ごとに、ランクSで勝った数を出す', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES, BOSS_TRAITS, traitOf } = await import('./boss')
+  localStorage.clear()
+  const [a, b] = Object.values(BOSSES)
+  saveBook({
+    [a.name]: { wins: 1, best: 'S', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 1, best: 'A', look: b, first: '2026-10-02' },
+  })
+  render(<BossBook />)
+  const t = traitOf(a.name)
+  expect(screen.getByLabelText(`${BOSS_TRAITS[t].name}のボスにランクS 1体`).textContent).toBe('（S1）')
+  expect(screen.getAllByLabelText(/のボスにランクS/)).toHaveLength(1)
+})

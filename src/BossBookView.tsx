@@ -134,6 +134,12 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
             <button key={t} className="list-link" aria-pressed={only === t} aria-label={`${BOSS_TRAITS[t].name}のボスだけ見る`} onClick={() => setOnly(only === t ? null : t)} style={{ padding: '0 0.25rem' }}>
               {BOSS_TRAITS[t].icon}
               {all.filter((b) => book[b.name] && traitOf(b.name) === t).length}
+              {/* デザイン185：そのとくぎのボスにランクSで勝った数 */}
+              {all.some((b) => book[b.name]?.best === 'S' && traitOf(b.name) === t) && (
+                <small className="trait-rank-s" aria-label={`${BOSS_TRAITS[t].name}のボスにランクS ${all.filter((b) => book[b.name]?.best === 'S' && traitOf(b.name) === t).length}体`}>
+                  （S{all.filter((b) => book[b.name]?.best === 'S' && traitOf(b.name) === t).length}）
+                </small>
+              )}
             </button>
           ))}
         </p>
