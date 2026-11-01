@@ -22036,6 +22036,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Words Carried by Whistles', 'How Birds Learn to Sing', 'The Fastest Trains in Spain', 'Why Valleys Are Deep'], answer: 0, why: '全体として、口笛でことばを伝える口笛言語のしくみ・危機・守る努力を述べている。' },
   },
   {
+    id: 'kyotsu-space-telescopes',
+    title: 'Eyes Above the Sky',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For thousands of years, people could study the night sky only with their own eyes. The invention of the telescope in the early seventeenth century changed this completely, revealing mountains on the Moon and moons around Jupiter. Today, some of the most powerful telescopes are not on the ground at all. They travel around the Earth or even farther away in space, and they have greatly expanded our knowledge of the universe.",
+      "Why do scientists go to the trouble and expense of sending telescopes into space? The main reason is the Earth's atmosphere. Although the air is necessary for life, it causes problems for astronomers. Moving air makes starlight appear to shake, which is why stars seem to twinkle, and this blurs the images taken by telescopes. In addition, the atmosphere blocks certain kinds of light, such as much of the infrared and ultraviolet light ( A ) distant objects give off.",
+      "A telescope in space avoids these problems. Above the atmosphere, the view is clear and steady, so even faint and distant galaxies can be photographed in great detail. Space telescopes have helped scientists measure how fast the universe is expanding, observe stars as they are being born inside clouds of gas and dust, and discover thousands of planets ( B ) circle stars other than our Sun. Some of these planets are about the same size as the Earth, which has made people wonder whether life might exist elsewhere.",
+      "Of course, space telescopes have disadvantages as well. They are extremely expensive to build and launch, and a single project can take many years or even decades to complete. Once a telescope is in space, repairing it is very difficult. One famous telescope had a problem with its main mirror that made its first pictures blurry, and astronauts had to travel to it on a special mission to fix it. Newer telescopes are often placed so far from the Earth that such repairs are impossible, so every part must work perfectly from the start.",
+      "Despite these challenges, many countries continue to work together on new space telescopes, sharing the costs and the scientific results. Each new telescope allows us to see farther and more clearly than before, and some can even detect light that began its journey billions of years ago, giving us a picture of the universe when it was young. In this sense, space telescopes act like time machines, and they will continue to change the way ( C ) we understand our place in the universe.",
+    ],
+    ja: [
+      '何千年もの間、人々は自分の目だけで夜空を調べることしかできなかった。17世紀のはじめに望遠鏡が発明されると、これは一変し、月の山や木星のまわりの衛星が明らかになった。今日、最も強力な望遠鏡のいくつかは地上にはまったくない。それらは地球のまわりや、さらに遠くの宇宙を進んでおり、宇宙についての私たちの知識を大きく広げてきた。',
+      'なぜ科学者は、手間と費用をかけて望遠鏡を宇宙に送るのだろうか。おもな理由は地球の大気である。空気は生命に必要だが、天文学者にとっては問題をひき起こす。動く空気は星の光をゆれているように見せ、そのために星はまたたいて見えるのだが、これが望遠鏡でとった画像をぼやけさせる。さらに大気は、遠くの天体が出す赤外線や紫外線の多くのような、ある種の光をさえぎってしまう。',
+      '宇宙の望遠鏡なら、こうした問題をさけられる。大気の上では見え方がはっきりと安定しているので、暗くて遠い銀河でさえくわしく写すことができる。宇宙望遠鏡は、科学者が宇宙の広がる速さをはかったり、ガスやちりの雲の中で星が生まれるようすを観察したり、太陽以外の星のまわりを回る何千もの惑星を発見したりするのに役立ってきた。そうした惑星の中には地球とほぼ同じ大きさのものもあり、人々はほかの場所に生命がいるのではないかと考えるようになった。',
+      'もちろん、宇宙望遠鏡には欠点もある。作って打ち上げるのにきわめてお金がかかり、ひとつの計画を完成させるのに何年も、何十年もかかることさえある。いったん宇宙に出ると、修理はとてもむずかしい。ある有名な望遠鏡は主鏡に問題があって最初の写真がぼやけ、宇宙飛行士が特別な任務でそこまで行って直さなければならなかった。新しい望遠鏡は地球からとても遠くに置かれることが多く、そうした修理はできないので、すべての部品が最初から完全に動かなければならない。',
+      'こうした課題があるにもかかわらず、多くの国が費用と科学の成果を分かち合いながら、協力して新しい宇宙望遠鏡にとり組み続けている。新しい望遠鏡ができるたびに、私たちは以前より遠くまで、よりはっきりと見られるようになり、何十億年も前に旅を始めた光をとらえて、若いころの宇宙のすがたを見せてくれるものもある。この意味で宇宙望遠鏡はタイムマシンのような働きをしており、宇宙の中での私たちの位置についての理解のしかたを、これからも変え続けるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 light を受け、give off の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 planets を受け、circle の主語になる関係代名詞 that。where はうしろが完全な文のときに使う。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'the way that ＋完全な文で「～するしかた」。the way how とは言わない。what は先行詞をとらず、which は前置詞なしではうしろが完全な文になれない。' },
+    ],
+    tf: [
+      { statement: '望遠鏡が発明されて、月の山や木星の衛星が見つかった。', answer: true, why: '第1段落 revealing mountains on the Moon and moons around Jupiter。' },
+      { statement: '地球の大気は、すべての種類の光をそのまま通す。', answer: false, why: '第2段落 the atmosphere blocks certain kinds of light。' },
+      { statement: '宇宙望遠鏡は、太陽以外の星のまわりを回る惑星を何千も見つけてきた。', answer: true, why: '第3段落 discover thousands of planets that circle stars other than our Sun。' },
+      { statement: '新しい宇宙望遠鏡は、こわれてもいつでもかんたんに修理できる。', answer: false, why: '第4段落 Newer telescopes are often placed so far from the Earth that such repairs are impossible。' },
+    ],
+    qa: [
+      { q: 'Why do stars seem to twinkle?', choices: ['Moving air makes starlight appear to shake.', 'Stars turn on and off.', 'Telescopes are too small.', 'The Moon blocks the light.'], answer: 0, why: '第2段落 Moving air makes starlight appear to shake, which is why stars seem to twinkle。' },
+      { q: 'Why does the author compare space telescopes to time machines?', choices: ['They detect light that began its journey billions of years ago.', 'They can travel into the future.', 'They were built a long time ago.', 'They measure time very exactly.'], answer: 0, why: '第5段落 some can even detect light that began its journey billions of years ago, giving us a picture of the universe when it was young。' },
+    ],
+    gist: [
+      { para: 1, choices: ['望遠鏡を宇宙に送る理由（大気の問題）', '空気の成分', '星の名前の決め方', '天気予報のしくみ'], answer: 0, why: '第2段落は、大気が星の光をゆらし、ある種の光をさえぎるという問題を述べている。' },
+      { para: 3, choices: ['宇宙望遠鏡の欠点', '宇宙飛行士の訓練', '鏡の作り方', 'ロケットの燃料'], answer: 0, why: '第4段落は、費用・年月・修理のむずかしさという欠点を述べている。' },
+    ],
+    titleQ: { choices: ['Eyes Above the Sky', 'How to Make a Mirror', 'Why the Moon Shines', 'The Weather on Jupiter'], answer: 0, why: '全体として、空の上から宇宙を見る宇宙望遠鏡の利点・欠点・意義を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
