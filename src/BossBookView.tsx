@@ -78,6 +78,8 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               ：{BOSS_TRAITS[t].desc}
               <small>（{all.filter((b) => traitOf(b.name) === t).length}体）</small>
               {(sealT[t] ?? 0) > 0 && <span className="trait-sealed">🔒×{sealT[t]}</span>}
+              {/* デザイン202：封じて勝った回数がいちばん多いとくぎ */}
+              {(sealT[t] ?? 0) > 0 && (sealT[t] ?? 0) === Math.max(...Object.values(sealT)) && <span aria-label="いちばん封じたとくぎ"> 👑</span>}
               <span className="trait-tip">🔑 封じのコツ：{BOSS_TRAITS[t].tip}</span>
             </li>
           ))}

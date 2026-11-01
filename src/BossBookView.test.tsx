@@ -528,3 +528,16 @@ it('デザイン197：ボス図鑑で、ランクSで勝ったボスの名前に
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')?.querySelector('.badge-name')?.textContent).toBe(a.name)
 })
+
+it('デザイン202：封じて勝った回数がいちばん多いとくぎに 👑 がつく', async () => {
+  const { addSealTraits, BOSS_TRAITS } = await import('./boss')
+  localStorage.clear()
+  const [t1, t2] = Object.keys(BOSS_TRAITS) as (keyof typeof BOSS_TRAITS)[]
+  addSealTraits([t1])
+  addSealTraits([t1])
+  addSealTraits([t2])
+  render(<BossBook />)
+  const marks = screen.getAllByLabelText('いちばん封じたとくぎ')
+  expect(marks).toHaveLength(1)
+  expect(marks[0].closest('li')?.textContent).toContain(BOSS_TRAITS[t1].name)
+})
