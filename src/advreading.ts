@@ -23245,6 +23245,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['More Than a Place to Wash', 'How to Build a Chimney', 'The History of Mount Fuji', 'Why Water Is Expensive'], answer: 0, why: '全体として、銭湯がただあらう場所ではなく、人々がつながる場所であったことと、その未来を述べている。' },
   },
   {
+    id: 'kyotsu-allergies',
+    title: 'When the Body Makes a Mistake',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every spring, many people in Japan suffer from sneezing, runny noses, and itchy eyes caused by pollen from cedar trees. Others react strongly to foods such as eggs, milk, or peanuts. These reactions are known as allergies, and in many countries the number of people who have them has increased greatly over the past several decades. Scientists are still trying to understand exactly why, but their research has revealed a great deal about how our bodies defend themselves.",
+      "An allergy is a mistake made by the immune system. Normally, the immune system protects us by recognizing and attacking harmful invaders such as bacteria and viruses. In people with allergies, however, the immune system treats harmless substances, such as pollen or certain foods, as if they were dangerous. It produces special antibodies against them, and the next time the person meets the same substance, these antibodies trigger the release of chemicals that cause swelling, itching, and other symptoms. In rare cases, the reaction can be so severe that it becomes life-threatening.",
+      "Why have allergies become more common? One famous idea is known as the hygiene hypothesis. According to this theory, children ( A ) grow up in very clean environments have fewer chances to meet a wide variety of bacteria and other microorganisms. As a result, their immune systems may not learn to tell the difference between real threats and harmless substances. Supporting this idea, some studies have found that children who grow up on farms, surrounded by animals, tend to have fewer allergies than children in cities.",
+      "However, scientists now believe that the explanation is more complex. Changes in diet, air pollution, and the amount of time children spend outdoors may also play a role. Genes matter too: a child whose parents have allergies is more likely to develop them. Interestingly, recent research on food allergies has suggested that introducing certain foods, such as peanuts, to babies early, under a doctor's guidance, may actually lower the risk of developing an allergy to them later. This is the opposite of the advice ( B ) many parents were given in the past.",
+      "Although there is no complete cure for most allergies, there are effective ways to manage them. Medicines can reduce symptoms, and some patients receive treatment in which they are given very small, gradually increasing amounts of the substance ( C ) causes their allergy, so that their immune system slowly learns to tolerate it. Understanding allergies better will not only help millions of people live more comfortably but also deepen our knowledge of the remarkable system that protects our bodies every day.",
+    ],
+    ja: [
+      '毎年春になると、日本では多くの人がスギの花粉によるくしゃみや鼻水、目のかゆみに苦しむ。たまごや牛乳やピーナッツのような食べ物に強く反応する人もいる。こうした反応はアレルギーとよばれ、多くの国で、アレルギーのある人の数はここ数十年で大きくふえている。科学者たちはその理由を正確に理解しようとまだ努力しているが、その研究によって、私たちの体が自分をどう守っているかについて多くのことがわかってきた。',
+      'アレルギーは免疫のしくみのまちがいである。ふつう免疫のしくみは、細菌やウイルスのような有害な侵入者を見つけて攻撃することで私たちを守っている。しかしアレルギーのある人では、免疫のしくみが、花粉やある種の食べ物のような無害なものを、まるで危険なもののようにあつかってしまう。それに対して特別な抗体を作り、次に同じものに出会うと、この抗体が、はれやかゆみなどの症状を起こす化学物質を出させる。まれに、反応がとても強く、命にかかわることもある。',
+      'なぜアレルギーはふえたのだろうか。有名な考えのひとつは衛生仮説として知られている。この説によれば、とても清潔な環境で育つ子どもは、さまざまな細菌やほかの微生物に出会う機会が少ない。その結果、免疫のしくみが、本当の危険と無害なものとを見分けることを学べないのかもしれない。この考えを支えるように、動物にかこまれた農場で育つ子どもは、都市の子どもよりアレルギーが少ない傾向があるとわかった研究もある。',
+      'しかし科学者たちは今、説明はもっと複雑だと考えている。食生活の変化、大気汚染、子どもが外ですごす時間の長さも関係しているかもしれない。遺伝子も大切で、親にアレルギーがある子どもはアレルギーになりやすい。おもしろいことに、食物アレルギーについての最近の研究では、ピーナッツのようなある種の食べ物を、医者の指導のもとで早めに赤ちゃんにあたえると、あとでその食べ物のアレルギーになる危険が実はへるかもしれないとわかってきた。これは、多くの親が昔受けた助言と反対である。',
+      'ほとんどのアレルギーには完全な治療法はないが、うまくつき合う効果的な方法はある。薬は症状をへらすことができ、アレルギーの原因となるものをごく少しずつ量をふやしながらあたえ、免疫のしくみがゆっくりそれになれるようにする治療を受ける患者もいる。アレルギーをよりよく理解することは、何百万もの人がより楽にくらせるようにするだけでなく、毎日私たちの体を守っているすばらしいしくみについての知識を深めることにもなるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 children（人）を受け、grow up の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the advice を受け、were given の目的語にあたる関係代名詞 that（many parents were given the advice）。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the substance を受け、causes の主語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '多くの国で、アレルギーのある人はここ数十年でふえている。', answer: true, why: '第1段落 the number of people who have them has increased greatly over the past several decades。' },
+      { statement: 'アレルギーは、免疫のしくみが有害な細菌を見のがすことで起きる。', answer: false, why: '第2段落 the immune system treats harmless substances ... as if they were dangerous。' },
+      { statement: '農場で育つ子どもは、都市の子どもよりアレルギーが少ない傾向がある。', answer: true, why: '第3段落 children who grow up on farms ... tend to have fewer allergies than children in cities。' },
+      { statement: 'アレルギーがふえた理由は、衛生仮説だけで完全に説明できる。', answer: false, why: '第4段落 scientists now believe that the explanation is more complex。' },
+    ],
+    qa: [
+      { q: 'What does the hygiene hypothesis suggest?', choices: ['Very clean environments give children fewer chances to meet many microorganisms.', 'Washing hands causes allergies directly.', 'Farm animals carry pollen.', 'Children in cities eat more peanuts.'], answer: 0, why: '第3段落 children who grow up in very clean environments have fewer chances to meet a wide variety of bacteria and other microorganisms。' },
+      { q: 'What has recent research suggested about peanuts?', choices: ['Introducing them early, under a doctor\'s guidance, may lower the risk of allergy.', 'Babies should never eat them.', 'They cure all allergies.', 'They cause pollen allergies.'], answer: 0, why: '第4段落 introducing certain foods, such as peanuts, to babies early, under a doctor\'s guidance, may actually lower the risk。' },
+    ],
+    gist: [
+      { para: 1, choices: ['アレルギーが起きるしくみ', 'ウイルスの種類', '目薬の作り方', '花粉の飛び方'], answer: 0, why: '第2段落は、免疫のしくみが無害なものを危険とまちがえて反応するしくみを述べている。' },
+      { para: 4, choices: ['アレルギーとのつき合い方と研究の意義', '薬の値段', '病院の場所', '体温のはかり方'], answer: 0, why: '第5段落は、薬や少しずつなれさせる治療と、アレルギーを理解する意義を述べている。' },
+    ],
+    titleQ: { choices: ['When the Body Makes a Mistake', 'How to Grow Cedar Trees', 'The History of Peanuts', 'Why Farms Are Noisy'], answer: 0, why: '全体として、体のまちがいであるアレルギーのしくみ・ふえた理由・つき合い方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
