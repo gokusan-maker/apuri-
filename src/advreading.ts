@@ -21763,6 +21763,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Quiet Green Carpet', 'How to Build a Temple', 'The History of Gardening Tools', 'Why Rocks Are Gray'], answer: 0, why: '全体として、コケの特徴と強さ、環境への役割、日本での価値を述べている。' },
   },
   {
+    id: 'kyotsu-robots',
+    title: 'Working with Robots',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Robots are no longer found only in science fiction or in large factories. Today, they clean floors in homes, carry dishes in restaurants, and help nurses in hospitals. As robots become cheaper and more capable, they are entering more areas of daily life. This raises an important question: how will robots change the way we live and work?",
+      "In many countries, one major reason for using robots is a shortage of workers. As populations age, there are fewer young people to do physically demanding jobs, such as lifting heavy objects in warehouses or caring for elderly people. Robots can help by taking over some of these tasks. For example, some care homes use robots ( A ) help staff lift residents safely, reducing the risk of back injuries for workers.",
+      "Robots can also do jobs that are dangerous or unpleasant for humans. They can inspect damaged buildings after earthquakes, explore the deep sea, and handle harmful chemicals. In agriculture, robots are being developed to pick fruit and remove weeds, which could reduce the need for chemical sprays. In these ways, robots can make work safer and more efficient.",
+      "However, the spread of robots also raises concerns. Some people worry that robots will replace human workers and cause unemployment. History shows that new technologies have often changed the kinds of jobs available rather than simply reducing their number, but the change can still be difficult for workers whose skills are no longer needed. Others point out that in jobs such as caring for people, human warmth and understanding cannot easily be replaced by machines, ( B ) robots may be very useful as helpers.",
+      "Many experts believe that the most successful future will be one in which humans and robots work together, each doing what they do best. Robots can handle repetitive, heavy, or dangerous tasks, while humans focus on work that requires creativity, judgment, and kindness. To prepare for this future, schools and companies will need to help people learn new skills. The question is not whether robots will become part of our lives, but ( C ) we can use them in ways that truly benefit society.",
+    ],
+    ja: [
+      'ロボットはもうSFや大きな工場の中だけのものではない。今日、ロボットは家のゆかをそうじし、レストランで料理を運び、病院で看護師を助けている。ロボットが安く、できることがふえるにつれ、毎日の生活のより多くの場面に入ってきている。このことは大切な問いを生む。ロボットは私たちのくらし方や働き方をどのように変えるのだろうか。',
+      '多くの国で、ロボットを使う大きな理由の1つは働き手の不足である。人口が高齢化するにつれ、倉庫で重い物を持ち上げたり、お年よりの世話をしたりする体力の必要な仕事をする若い人が少なくなっている。ロボットはこうした作業の一部を引き受けることで手助けができる。たとえば、職員が入居者を安全にだき上げるのを助けるロボットを使い、働く人がこしをいためる危険をへらしている介護施設もある。',
+      'ロボットは、人間にとって危険だったりいやだったりする仕事もできる。地震のあとにこわれた建物を点検したり、深い海を探検したり、有害な薬品をあつかったりできる。農業では、果物をつんだり雑草をぬいたりするロボットが開発されており、それは薬をまく必要をへらすかもしれない。このようにして、ロボットは仕事をより安全で効率的にすることができる。',
+      'しかし、ロボットが広まることは心配も生んでいる。ロボットが人間の働き手にとってかわり、失業を生むのではないかと心配する人もいる。歴史は、新しい技術は仕事の数をただへらすというより、手に入る仕事の種類を変えてきたことが多いと示しているが、その変化は、技能がもう必要とされなくなった働き手にとってはやはりつらいことがある。また、人の世話をする仕事のように、人間のあたたかさや理解は機械にかんたんにはおきかえられないと指摘する人もいる。ただし、ロボットは助け手としてはとても役に立つかもしれない。',
+      '多くの専門家は、最もうまくいく未来は、人間とロボットがそれぞれ得意なことをしながらいっしょに働く未来だと考えている。ロボットはくり返しの作業や重い作業や危険な作業を引き受け、人間は創造性や判断や思いやりの必要な仕事に集中する。この未来に備えるために、学校や会社は人々が新しい技能を身につけるのを助ける必要があるだろう。問題は、ロボットが私たちの生活の一部になるかどうかではなく、どのようにすれば本当に社会のためになる使い方ができるかである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 robots を受け、help の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['although', 'because', 'unless', 'so that'], answer: 0, why: '「機械にはおきかえられない」が「助け手としては役に立つかもしれない」という逆の内容を加えるので although「～だけれども」。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'whom'], answer: 0, why: '前の whether と対になって「どのように～か」：how we can use them。' },
+    ],
+    tf: [
+      { statement: '多くの国で、働き手の不足がロボットを使う大きな理由の1つになっている。', answer: true, why: '第2段落 one major reason for using robots is a shortage of workers。' },
+      { statement: 'ロボットは、こわれた建物の点検には使えない。', answer: false, why: '第3段落 They can inspect damaged buildings after earthquakes。' },
+      { statement: '歴史によると、新しい技術は仕事の種類を変えてきたことが多い。', answer: true, why: '第4段落 new technologies have often changed the kinds of jobs available。' },
+      { statement: '筆者は、人間はロボットと働くべきではないと考えている。', answer: false, why: '第5段落 humans and robots work together。' },
+    ],
+    qa: [
+      { q: 'How might farming robots help the environment?', choices: ['They could reduce the need for chemical sprays.', 'They use more water.', 'They plant more weeds.', 'They make fruit grow faster.'], answer: 0, why: '第3段落 which could reduce the need for chemical sprays。' },
+      { q: 'What do many experts believe about the most successful future?', choices: ['Humans and robots will work together, each doing what they do best.', 'Robots will do all jobs.', 'Humans will stop using robots.', 'Only factories will use robots.'], answer: 0, why: '第5段落 the most successful future will be one in which humans and robots work together, each doing what they do best。' },
+    ],
+    gist: [
+      { para: 1, choices: ['働き手の不足とロボットの手助け', '倉庫の作り方', '介護の歴史', '若い人の仕事'], answer: 0, why: '第2段落は、高齢化による働き手の不足と、それを助けるロボットを述べている。' },
+      { para: 3, choices: ['ロボットが広まることへの心配', '失業の歴史', '機械の値段', '看護師の仕事'], answer: 0, why: '第4段落は、失業への心配と、人のあたたかさがおきかえられないことを述べている。' },
+    ],
+    titleQ: { choices: ['Working with Robots', 'How to Build a Robot', 'The History of Factories', 'Why Fruit Is Sweet'], answer: 0, why: '全体として、ロボットが生活や仕事に入る理由と利点、心配、人とロボットの協力を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
