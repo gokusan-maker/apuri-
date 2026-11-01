@@ -860,3 +860,15 @@ it('デザイン211：ガチャのボタンの近くに、今日ガチャを引�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('今日ガチャを引いた回数').textContent).toBe('🎰 今日 2回 引いたよ')
 })
+
+it('デザイン214：UR が出たときだけ小さな花火が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('niji'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText('UR の花火')).toBeInTheDocument()
+  unmount()
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={2} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.queryByLabelText('UR の花火')).toBeNull()
+})

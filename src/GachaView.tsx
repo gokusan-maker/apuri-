@@ -584,6 +584,13 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             </span>
           )}
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
+          {/* デザイン214：UR が出たら画面のはしに小さな花火 */}
+          {!result.mystery && result.kind.rarity === 'UR' && (
+            <span className="gacha-fireworks" aria-label="UR の花火">
+              <i>🎆</i>
+              <i>🎇</i>
+            </span>
+          )}
           <span className={`gacha-capsule${result.mystery ? ' mystery' : ''}`} aria-hidden="true" style={result.mystery ? undefined : result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
           {!result.mystery && gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
           {/* タマゴのまわりに、そのキャラクターの色の光（オーナーの依頼：デザインを高める） */}
