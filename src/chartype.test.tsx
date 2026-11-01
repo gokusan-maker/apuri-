@@ -217,3 +217,12 @@ it('デザイン174：キャラ図鑑に、なかまのタイプの割合が小�
   expect(bar.querySelector(`[aria-label="${typeOf('fox').name} 75%"]`)).not.toBeNull()
   expect(bar.querySelector(`[aria-label="${typeOf('penguin').name} 25%"]`)).not.toBeNull()
 })
+
+it('デザイン179：キャラ図鑑で、まだ会っていない子が10体以下になると、のこりのシルエットが少し明るくなる', () => {
+  const most = SPECIES.slice(0, SPECIES.length - 5).map((sp) => sp.id)
+  const { unmount } = render(<Gacha partnerName="モチ" coins={0} members={most.length} pityLeft={10} onDraw={() => null} ownedSpecies={most} />)
+  expect(document.querySelectorAll('.char-book-list li.locked.near-complete')).toHaveLength(5)
+  unmount()
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  expect(document.querySelectorAll('.char-book-list li.near-complete')).toHaveLength(0)
+})

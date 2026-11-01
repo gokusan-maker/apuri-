@@ -829,7 +829,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
           const ok = got.has(sp.id)
           const t = typeOf(sp.id)
           return (
-            <li key={sp.id} className={`${ok ? 'got' : 'locked'}${pick === sp.id ? ' picked' : ''}${ok && fresh === sp.id ? ' fresh' : ''}`}>
+            <li key={sp.id} className={`${ok ? 'got' : 'locked'}${pick === sp.id ? ' picked' : ''}${ok && fresh === sp.id ? ' fresh' : ''}${!ok && SPECIES.length - n <= 10 ? ' near-complete' : ''}`} style={!ok && SPECIES.length - n <= 10 ? { filter: 'brightness(1.35)' } : undefined}>
               <button className="char-book-pick" aria-label={ok ? `${sp.name}（${t.name}）` : 'まだ会っていないキャラクター'} onClick={() => setPick(pick === sp.id ? null : sp.id)}>
                 <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
