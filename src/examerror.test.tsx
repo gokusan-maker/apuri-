@@ -862,3 +862,10 @@ it('誤文訂正〈58〉：前置詞をふくむ熟語の総まとめの単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('of')
 })
+
+it('正誤問題〈65〉：前置詞をふくむ熟語の総まとめの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-prepidiom')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) proud about')
+})

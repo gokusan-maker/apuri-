@@ -1514,6 +1514,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He (A) left the house (B) just now, so he (C) must (D) be at home.', choices: ['(A) left the house', '(B) just now, so he', '(C) must', '(D) be at home'], answer: 2, why: '「家にいるはずがない」は can’t be at home。' },
     ],
   },
+  {
+    id: 'exam-error-prepidiom',
+    title: '入試の正誤問題〈65〉（私学難関レベル：前置詞をふくむ熟語の総まとめ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be proud of、be tired of、be afraid of、be full of、be famous for、look forward to、belong to、depend on、be responsible for、be filled with など、前置詞が決まっている熟語。',
+    ],
+    examples: [
+      { en: 'He became famous for his novels.', ja: '彼は小説で有名になった。' },
+      { en: 'The village depends on the river for its water.', ja: 'その村は水を川にたよっている。' },
+    ],
+    questions: [
+      { sentence: 'He (A) is (B) proud about (C) his son’s (D) success.', choices: ['(A) is', '(B) proud about', '(C) his son’s', '(D) success'], answer: 1, why: 'be proud of ～：proud of。' },
+      { sentence: 'I (A) am tired (B) from eating (C) the same food (D) every day.', choices: ['(A) am tired', '(B) from eating', '(C) the same food', '(D) every day'], answer: 1, why: '「～にあきている」は be tired of：tired of eating。' },
+      { sentence: 'She (A) has been (B) afraid from (C) big dogs (D) since childhood.', choices: ['(A) has been', '(B) afraid from', '(C) big dogs', '(D) since childhood'], answer: 1, why: 'be afraid of ～。' },
+      { sentence: 'The bus (A) was (B) full (C) with (D) people.', choices: ['(A) was', '(B) full', '(C) with', '(D) people'], answer: 2, why: 'be full of ～（または be filled with）。' },
+      { sentence: 'He (A) became (B) famous (C) of (D) his novels.', choices: ['(A) became', '(B) famous', '(C) of', '(D) his novels'], answer: 2, why: 'be famous for ～。' },
+      { sentence: 'I’m (A) looking (B) forward (C) for (D) the school trip.', choices: ['(A) looking', '(B) forward', '(C) for', '(D) the school trip'], answer: 2, why: 'look forward to ～。' },
+      { sentence: 'This bag (A) belongs (B) with (C) my sister, (D) not me.', choices: ['(A) belongs', '(B) with', '(C) my sister', '(D) not me'], answer: 1, why: 'belong to ～。' },
+      { sentence: 'The village (A) depends (B) on the river (C) for (D) its waters.', choices: ['(A) depends', '(B) on the river', '(C) for', '(D) its waters'], answer: 3, why: 'water は数えられない名詞：for its water。' },
+      { sentence: 'She (A) is responsible (B) of (C) the new (D) project.', choices: ['(A) is responsible', '(B) of', '(C) the new', '(D) project'], answer: 1, why: 'be responsible for ～。' },
+      { sentence: '(A) The room was filled of (B) smoke (C) after (D) the fire.', choices: ['(A) The room was filled of', '(B) smoke', '(C) after', '(D) the fire'], answer: 0, why: 'be filled with ～：was filled with smoke。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

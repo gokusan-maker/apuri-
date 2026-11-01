@@ -3502,3 +3502,4 @@
 - 2026-11-01: 文法：入試の誤文訂正〈58〉（私学難関レベル：proud of・tired of・afraid of・full of・famous for・look forward to・belong to・depend on・responsible for・filled with）10問
 - 2026-11-01: 長文：共通テストの評論を本番の長さで「通りの食べ物（屋台）」（文化・食・who／非制限の which／what の空所）
 - 2026-11-01: デザイン：ボス図鑑で、とくぎごとの勝った数をタップすると、そのとくぎのボスだけにしぼれるようにした
+- 2026-11-01: 文法：入試の正誤問題〈65〉（私学難関レベル：前置詞をふくむ熟語の総まとめ：proud of・tired of・afraid of・full of・famous for・look forward to・belong to・water・responsible for・filled with）10問
