@@ -57,6 +57,8 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         {clean > 0 && <span className="fold-meta" aria-label={`ノーミス ${clean}体`}>✨{clean}</span>}
         {clean > 0 && <span className="fold-meta" aria-label={`ノーミス率 ${Math.round((clean / beaten) * 100)}%`}>（{Math.round((clean / beaten) * 100)}%）</span>} {/* デザイン135 */}
         {rankS > 0 && <span className="fold-meta" aria-label={`ランクS ${rankS}体`}>🏅 S {rankS}体</span>}
+        {/* デザイン205：ボスに勝った回数の合計 */}
+        {beaten > 0 && <span className="fold-meta" aria-label={`のべ ${Object.values(book).reduce((n, e) => n + e.wins, 0)}勝`}>⚔のべ{Object.values(book).reduce((n, e) => n + e.wins, 0)}勝</span>}
         <span className="fold-meta" aria-label={`ボス図鑑 ${beaten} / ${all.length}体`}>
           {beaten}/{all.length}
         </span>

@@ -541,3 +541,16 @@ it('デザイン202：封じて勝った回数がいちばん多いとくぎに 
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')?.textContent).toContain(BOSS_TRAITS[t1].name)
 })
+
+it('デザイン205：ボス図鑑の見出しに、勝った回数の合計（のべ○勝）を出す', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const [a, b] = Object.values(BOSSES)
+  saveBook({
+    [a.name]: { wins: 3, best: 'S', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 2, best: 'A', look: b, first: '2026-10-02' },
+  })
+  render(<BossBook />)
+  expect(screen.getByLabelText('のべ 5勝').textContent).toBe('⚔のべ5勝')
+})
