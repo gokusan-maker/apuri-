@@ -1306,6 +1306,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 64 L26 60 M82 64 L74 60" fill="none" stroke="#0f172a" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'tropicbird')
+    return (
+      <g>
+        {/* 長い2本の尾羽と、赤いくちばし */}
+        <path d="M46 86 Q40 100 34 112 M54 86 Q60 100 66 112" fill="none" stroke="#e2e8f0" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M58 42 L72 45 L58 47" fill="#ef4444" stroke="#1e293b" strokeWidth="1.2" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

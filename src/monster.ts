@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'tropicbird', name: 'ネッタイン', egg: 'みなみのしまのながおタマゴ', token: 'ネッタ', bigToken: 'ネッタイン', color: '#ffffff', line: '#1e293b', rate: 0.02, desc: '体より長い2本の白い尾羽をなびかせて飛ぶ南の海の鳥、ネッタイチョウ。高い空から海にとびこんで、魚やイカをつかまえる。' },
   { id: 'kittiwake', name: 'ミツユビン', egg: 'うみかぜのみつゆびタマゴ', token: 'ミツユ', bigToken: 'ミツユビン', color: '#f1f5f9', line: '#334155', rate: 0.02, desc: '後ろのゆびがほとんどなく、前の3本のゆびでがけにとまるカモメ、ミツユビカモメ。外洋でくらし、黒い足と黄色いくちばしがめじるし。' },
   { id: 'guillemot', name: 'ウミガラン', egg: 'がけっぷちのとんがりタマゴ', token: 'ウミガ', bigToken: 'ウミガラン', color: '#292524', line: '#0c0a09', rate: 0.02, desc: 'がけの細いたなに、なかまとぎっしりならんで子育てする海鳥、ウミガラス。タマゴは片方がとがっていて、ころがっても落ちにくい形をしている。' },
   { id: 'cormorant', name: 'ウミウン', egg: 'いわばのせんすいタマゴ', token: 'ウミウ', bigToken: 'ウミウン', color: '#0f172a', line: '#020617', rate: 0.02, desc: '水にもぐって魚をとるのが得意な黒い海鳥、ウミウ。もぐったあとは、岩の上で翼を広げてかわかす。日本では鵜飼いでも知られる。' },
