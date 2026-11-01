@@ -1066,3 +1066,17 @@ it('デザイン199：この勝利でステージのボスがぜんぶそろう�
   play()
   expect(screen.queryByLabelText('ステージのボスをぜんぶたおした')).toBeNull() // 2回目からは出ない
 })
+
+it('デザイン217：今日ぜんぶのボスに勝った回数が3回目などの節目なら「🔥 今日○勝目！」が出る', async () => {
+  localStorage.clear()
+  const { recordTodayWin } = await import('./bossbook')
+  const { dayKey } = await import('./srs')
+  recordTodayWin('ほかのボスA', dayKey())
+  recordTodayWin('ほかのボスB', dayKey())
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('今日のボスの勝利の節目').textContent).toBe('🔥 今日3勝目！')
+})
