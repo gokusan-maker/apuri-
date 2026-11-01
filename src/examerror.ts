@@ -4182,6 +4182,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It took her [a hour] to finish the essay.', choices: ['an hour', 'the hours', 'hour', 'an hours'], answer: 0, why: 'hour の h は発音しないので母音で始まる。an hour。' },
     ],
   },
+  {
+    id: 'exam-fix-97',
+    title: '入試の誤文訂正〈97〉（共通テストレベル：まぎらわしい動詞）',
+    points: ['lie（横になる：lie-lay-lain）／lay（横にする：lay-laid-laid）、rise（上がる・自動詞）／raise（上げる・他動詞）、borrow（借りる）／lend（貸す）、rob 人 of 物／steal 物、say／tell、fit／suit など、意味や形の似た動詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He lay on the sofa and fell asleep.', ja: '彼はソファに横になって、ねむってしまった。' }],
+    questions: [
+      { sentence: 'I was so tired that I [laid] on the bed as soon as I got home.', choices: ['lay', 'lied', 'layed', 'lain'], answer: 0, why: '「横になった」は自動詞 lie の過去形 lay。laid は他動詞 lay（横にする）の過去形。' },
+      { sentence: 'She [lay] the baby gently on the bed.', choices: ['laid', 'lied', 'lain', 'lying'], answer: 0, why: '「赤ちゃんを寝かせた」は目的語をとる他動詞 lay の過去形 laid。' },
+      { sentence: 'The sun [raises] in the east.', choices: ['rises', 'is raised', 'raised', 'rose up it'], answer: 0, why: '「太陽がのぼる」は自動詞 rise。raise は「〜を上げる」で目的語が必要。' },
+      { sentence: 'If you have a question, please [rise] your hand.', choices: ['raise', 'rises', 'arise', 'risen'], answer: 0, why: '「手を上げる」は他動詞 raise ＋ 目的語。' },
+      { sentence: 'Could you [borrow] me your dictionary for a minute?', choices: ['lend', 'rent from', 'borrow to', 'loan from'], answer: 0, why: '「人に〜を貸す」は lend 人 物。borrow は「借りる」。' },
+      { sentence: 'May I [lend] your pen? I left mine at home.', choices: ['borrow', 'rent to', 'lend from', 'give back'], answer: 0, why: '「あなたのペンを借りてもいいですか」は borrow。' },
+      { sentence: 'Someone [robbed] my bicycle while I was in the library.', choices: ['stole', 'robbed of', 'robs', 'stolen'], answer: 0, why: '「物をぬすむ」は steal 物。rob は rob 人 of 物 の形。' },
+      { sentence: 'Two men [stole] the old man of his wallet.', choices: ['robbed', 'stolen', 'steal', 'robbed from'], answer: 0, why: 'rob 人 of 物 で「人から物をうばう」。stole は人を目的語にとらない。' },
+      { sentence: 'He [said] me that the meeting had been canceled.', choices: ['told', 'said to', 'spoke', 'talked'], answer: 0, why: '「人に〜と言う」は tell 人 that ～。say は人を直接目的語にとらない。' },
+      { sentence: 'That red jacket really [fits] you. The color is perfect.', choices: ['suits', 'fits to', 'matches with', 'is fit'], answer: 0, why: '色やデザインが「似合う」は suit。fit は大きさ・サイズが「合う」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
