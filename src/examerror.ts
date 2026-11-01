@@ -2922,6 +2922,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This bag is [less expensive as] that one.', choices: ['less expensive than', 'less expensiver than', 'least expensive as', 'not less expensive as'], answer: 0, why: 'less ＋原級 ＋ than「…ほど～でない」。as ではなく than。' },
     ],
   },
+  {
+    id: 'exam-fix-67',
+    title: '入試の誤文訂正〈67〉（TOEFL・IELTS の書き言葉：つなぎのことば）',
+    points: ['although・because・while は接続詞（あとに主語＋動詞）、despite・because of・due to は前置詞（あとに名詞）、however・therefore・moreover は副詞なので文と文をつなぐときはピリオドやセミコロンで区切る、など。エッセイでよく問われるつなぎのことばの使い分け。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Despite the rain, the event was a success.', ja: '雨にもかかわらず、その行事は成功した。' }],
+    questions: [
+      { sentence: '[Although] the heavy rain, the event was a great success.', choices: ['Despite', 'Even though', 'However', 'Because'], answer: 0, why: 'あとが名詞（the heavy rain）なので前置詞 Despite。although は接続詞であとに主語＋動詞が必要。' },
+      { sentence: '[Despite] it was cold, we went swimming in the sea.', choices: ['Although', 'In spite of', 'However', 'Because of'], answer: 0, why: 'あとが主語＋動詞（it was cold）なので接続詞 Although。' },
+      { sentence: 'The train was delayed [because] the storm.', choices: ['because of', 'because that', 'since of', 'so'], answer: 0, why: 'あとが名詞（the storm）なので because of。because は接続詞。' },
+      { sentence: 'The plan was expensive, [however] it was approved.', choices: ['but', 'despite', 'therefore', 'because of'], answer: 0, why: 'however は副詞なので、カンマだけで2つの文をつなげない。接続詞 but を使う（または ; however,）。' },
+      { sentence: 'He studied very hard. [Because], he passed the exam.', choices: ['Therefore', 'Although', 'Despite', 'However'], answer: 0, why: '前の文の結果を表すので「それゆえ」Therefore。' },
+      { sentence: 'The new phone is cheap. [Although], it has many useful features.', choices: ['Moreover', 'Because', 'Despite', 'Unless'], answer: 0, why: '「安い」にプラスの情報を加えるので「さらに」Moreover。although は接続詞なので文頭で単独では使えない。' },
+      { sentence: '[Because of] the weather was nice, we had lunch outside.', choices: ['Because', 'Due to', 'Despite', 'In spite of'], answer: 0, why: 'あとが主語＋動詞（the weather was nice）なので接続詞 Because。because of は前置詞。' },
+      { sentence: 'The flight was canceled [due to] the pilot was sick.', choices: ['because', 'due', 'despite', 'in spite'], answer: 0, why: 'あとが主語＋動詞（the pilot was sick）なので接続詞 because。due to は前置詞。' },
+      { sentence: '[In spite] the difficulties, they finished the project on time.', choices: ['In spite of', 'Although', 'In spite that', 'Even'], answer: 0, why: '「～にもかかわらず」の前置詞は in spite of（of をわすれない）。' },
+      { sentence: 'Prices have risen sharply. [Despite], many people still shop at this store.', choices: ['However', 'Although', 'Because', 'Therefore'], answer: 0, why: '前の文と反対の内容を続けるので副詞 However。despite は前置詞なので単独では使えない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
