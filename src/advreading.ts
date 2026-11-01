@@ -23011,6 +23011,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Keeping Food Before Refrigerators', 'How to Build a Refrigerator', 'The Best Cheese in the World', 'Why Sailors Love the Sea'], answer: 0, why: '全体として、冷蔵庫がなかった時代からの食べ物の保存方法と、その知恵を述べている。' },
   },
   {
+    id: 'kyotsu-intergenerational',
+    title: 'Bringing Generations Together',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the past, it was common for children, parents, and grandparents to live under the same roof or in the same neighborhood. Children grew up hearing stories from older relatives, and older people stayed connected to the daily lives of younger generations. Today, however, many families live far apart, and young and old people often spend most of their time with others of their own age. Some communities are now trying to rebuild these connections through programs that bring different generations together.",
+      "One well-known approach is to combine a nursery school and a care home for older adults in the same building. In such facilities, small children and elderly residents meet regularly to sing songs, read books, do crafts, or simply eat lunch together. Staff members have observed that residents ( A ) rarely spoke to anyone often begin to smile and talk more when the children visit. Some residents say that the visits give them a reason to get up in the morning and a sense that they are still useful.",
+      "The children benefit as well. By spending time with older people, they learn patience and kindness, and they become more comfortable with people who move slowly or use wheelchairs. Teachers report that children in these programs are more likely to help others and less likely to be afraid of aging. For children ( B ) grandparents live far away, the residents can become a kind of extended family.",
+      "Similar programs are appearing in other forms. In some cities, university students live in homes for older adults and pay little or no rent in exchange for spending time with the residents. In others, retired people volunteer at schools, helping children with reading or sharing skills such as cooking, gardening, or woodworking. These activities allow knowledge and experience to be passed on while also reducing loneliness, which health experts now see as a serious risk to both mental and physical health.",
+      "Of course, such programs require careful planning. Staff must make sure that activities are safe and enjoyable for everyone, and not all older people or children want to take part. Still, the results so far suggest that bringing generations together can benefit an entire community. As societies age, finding ways for people of all ages to support one another may become one of the most important challenges ( C ) we face.",
+    ],
+    ja: [
+      '昔は、子どもと親と祖父母がひとつ屋根の下や同じ近所でくらすことがふつうだった。子どもは年上の親せきから話を聞いて育ち、お年寄りは若い世代の日々のくらしとつながっていた。しかし今日では、多くの家族がはなれてくらし、若い人とお年寄りは、たいてい同じ年ごろの人とばかりすごしている。いくつかの地域では今、ちがう世代を結びつける取り組みによって、こうしたつながりをとりもどそうとしている。',
+      'よく知られたやり方のひとつは、保育園とお年寄りの介護施設を同じ建物にまとめることである。そのような施設では、小さな子どもとお年寄りの入居者が定期的に会い、歌を歌ったり、本を読んだり、工作をしたり、ただいっしょにお昼を食べたりする。職員は、めったにだれとも話さなかった入居者が、子どもたちが来るとほほえみ、よく話すようになることが多いと気づいている。子どもたちの訪問が朝起きる理由になり、自分はまだ役に立っていると感じられると言う入居者もいる。',
+      '子どもたちにも利点がある。お年寄りとすごすことで、子どもはがまん強さややさしさを学び、ゆっくり動く人や車いすを使う人といっしょにいることになれる。先生たちの話では、こうした取り組みに参加する子どもは、ほかの人を助けやすく、年をとることをこわがりにくい。祖父母が遠くに住んでいる子どもにとって、入居者は大家族のような存在になることもある。',
+      '似た取り組みはほかの形でもあらわれている。いくつかの都市では、大学生がお年寄りの住まいにくらし、入居者といっしょにすごすかわりに、家賃をほとんど、あるいはまったくはらわない。ほかの都市では、引退した人が学校でボランティアをして、子どもの読書を手伝ったり、料理や園芸や木工のような技術を伝えたりしている。こうした活動は、知識や経験を受けつがせると同時に、孤独をへらしてくれる。健康の専門家は今、孤独を心と体の両方の健康にとって深刻な危険だと考えている。',
+      'もちろん、こうした取り組みにはていねいな計画が必要である。職員は活動がだれにとっても安全で楽しいものになるようにしなければならず、すべてのお年寄りや子どもが参加したがるわけではない。それでも、これまでの結果は、世代を結びつけることが地域全体のためになりうることを示している。社会の高齢化が進む中で、あらゆる年齢の人がささえ合う方法を見つけることは、私たちが直面する最も大切な課題のひとつになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 residents（人）を受け、spoke の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['whose', 'who', 'which', 'where'], answer: 0, why: '「その祖父母が遠くに住んでいる子ども」と所有を表すので whose。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the most important challenges を受け、face の目的語になる関係代名詞 that（最上級がつく先行詞は that がよく使われる）。' },
+    ],
+    tf: [
+      { statement: '今日、若い人とお年寄りは同じ年ごろの人とすごすことが多い。', answer: true, why: '第1段落 young and old people often spend most of their time with others of their own age。' },
+      { statement: '子どもたちが来ても、入居者のようすは変わらなかった。', answer: false, why: '第2段落 residents who rarely spoke to anyone often begin to smile and talk more when the children visit。' },
+      { statement: '大学生がお年寄りの住まいにくらし、家賃を安くしてもらう取り組みがある。', answer: true, why: '第4段落 university students live in homes for older adults and pay little or no rent。' },
+      { statement: 'すべてのお年寄りと子どもが、こうした取り組みに参加したがっている。', answer: false, why: '第5段落 not all older people or children want to take part。' },
+    ],
+    qa: [
+      { q: 'What do children learn by spending time with older people?', choices: ['Patience and kindness.', 'How to drive a car.', 'How to build a school.', 'How to cook only sweets.'], answer: 0, why: '第3段落 they learn patience and kindness。' },
+      { q: 'Why do health experts care about reducing loneliness?', choices: ['It is a serious risk to mental and physical health.', 'It makes people too busy.', 'It increases rent.', 'It makes children study less.'], answer: 0, why: '第4段落 loneliness, which health experts now see as a serious risk to both mental and physical health。' },
+    ],
+    gist: [
+      { para: 1, choices: ['保育園と介護施設をいっしょにする取り組み', '歌の作り方', '昼食のメニュー', '建物の設計'], answer: 0, why: '第2段落は、同じ建物で子どもとお年寄りが交流する施設と、その効果を述べている。' },
+      { para: 3, choices: ['世代をつなぐほかの形の取り組み', '大学の入試', '木工の道具', '家賃の決め方'], answer: 0, why: '第4段落は、大学生の同居や引退した人の学校ボランティアなどを述べている。' },
+    ],
+    titleQ: { choices: ['Bringing Generations Together', 'How to Run a Nursery School', 'The History of Wheelchairs', 'Why Students Pay Rent'], answer: 0, why: '全体として、ちがう世代を結びつける取り組みとその効果を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
