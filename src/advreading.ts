@@ -24103,6 +24103,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Long Way Home', 'How to Build a Sand Castle', 'The Life of Jellyfish', 'Why the Moon Shines'], answer: 0, why: '全体として、生まれた浜辺へ長い旅をしてもどるウミガメと、その危機と保護を述べている。' },
   },
   {
+    id: 'kyotsu-tofu',
+    title: 'The Journey of Tofu',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Tofu is one of the most familiar foods in Japan. It appears in miso soup, hot pots, salads, and countless other dishes, and it can be soft and smooth or firm enough to grill. In recent decades, tofu has also become popular in many other countries, where it is often sold in supermarkets as a healthy alternative to meat. The story of this simple white food reflects both the history of East Asia and the changing eating habits of the modern world.",
+      "Tofu is made from soybeans, which have been grown in East Asia for thousands of years. To make it, soybeans are soaked in water, ground, and boiled to produce soy milk. A substance called a coagulant is then added, causing the proteins in the milk to form soft curds. Finally, the curds are pressed into blocks. The process is similar in some ways to making cheese from cow's milk, which is why tofu is sometimes described as bean curd.",
+      "Tofu is believed to have originated in China, and it was introduced to Japan many centuries ago, possibly by Buddhist monks. Because many Buddhists avoided eating meat, tofu became an important source of protein in temple cooking. Over time, it spread from temples to the general public. During the Edo period, a famous cookbook described one hundred different ways to prepare tofu, showing how creative cooks had become with this ingredient.",
+      "Nutritionally, tofu has many advantages. It is rich in protein and contains important minerals such as calcium and iron, while being relatively low in fat and calories. Producing soybeans also generally requires less land and water than raising animals for meat, so some people choose tofu for environmental as well as health reasons. As interest in plant-based diets has grown, food companies have developed new tofu products, including snacks, desserts, and even tofu \"burgers\" for people ( A ) want to eat less meat.",
+      "Not everyone outside Asia found tofu appealing at first. Some people thought it had little flavor, while others did not know how to cook it. Today, however, chefs around the world are experimenting with it, using its mild taste to absorb sauces and spices. The global success of tofu shows how a traditional food can find new life when people discover new ways ( B ) to enjoy it, and how food can connect cultures that are thousands of kilometers apart. It is a reminder that the dishes ( C ) we eat every day often carry long and surprising histories.",
+    ],
+    ja: [
+      'とうふは日本で最も身近な食べ物のひとつである。みそしるやなべもの、サラダなど数えきれないほどの料理に使われ、やわらかくなめらかなものもあれば、焼けるほどかたいものもある。ここ数十年で、とうふはほかの多くの国でも人気になり、肉にかわる健康的な食べ物としてスーパーマーケットで売られていることが多い。この単純な白い食べ物の話は、東アジアの歴史と、現代の世界の食習慣の変化の両方を映している。',
+      'とうふは大豆から作られ、大豆は東アジアで何千年も前から育てられてきた。とうふを作るには、大豆を水にひたし、すりつぶし、煮て豆乳を作る。そこに凝固剤とよばれるものを加えると、豆乳の中のたんぱく質がやわらかなかたまりになる。最後に、そのかたまりをおしかためて四角くする。この作り方はある点で牛乳からチーズを作るのに似ていて、そのためとうふは「豆のカード（ビーンカード）」とよばれることもある。',
+      'とうふは中国で生まれたと考えられており、何世紀も前に、おそらく仏教の僧によって日本に伝えられた。多くの仏教徒は肉を食べるのをさけていたので、とうふは寺の料理で大切なたんぱく質の源になった。時がたつにつれて、とうふは寺から一般の人々へと広まった。江戸時代には、ある有名な料理本がとうふの百通りの料理法を紹介しており、料理人がこの食材をどれほど工夫して使うようになっていたかがわかる。',
+      '栄養の面でも、とうふには多くの利点がある。たんぱく質が多く、カルシウムや鉄のような大切なミネラルをふくむ一方、脂肪やカロリーは比較的少ない。大豆を育てるのは、ふつう肉のために動物を育てるより少ない土地と水ですむので、健康だけでなく環境のためにとうふを選ぶ人もいる。植物性の食事への関心が高まるにつれて、食品会社は、肉を食べる量をへらしたい人のために、おかしやデザート、さらにはとうふの「バーガー」など、新しいとうふの製品を開発してきた。',
+      'アジアの外のすべての人が、最初からとうふを魅力的だと思ったわけではない。味がほとんどないと思う人もいれば、料理のしかたがわからない人もいた。しかし今日、世界中のシェフがとうふを使ってさまざまにためしており、そのおだやかな味を生かしてソースやスパイスをしみこませている。とうふの世界での成功は、人々が新しい楽しみ方を見つけると、伝統的な食べ物が新しい命を得られること、そして食べ物が何千キロメートルもはなれた文化をつなぎうることを示している。それは、私たちが毎日食べる料理が、長くおどろくべき歴史をもっていることが多いのだと思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 people（人）を受け、want の主語になる関係代名詞 who。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: 'new ways in which to enjoy it「それを楽しむ新しい方法」。「前置詞＋which ＋ to 不定詞」の形で、which だけでは使えない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the dishes を受け、eat の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'とうふは大豆から作られる。', answer: true, why: '第2段落 Tofu is made from soybeans。' },
+      { statement: 'とうふは日本で生まれ、のちに中国に伝わった。', answer: false, why: '第3段落 Tofu is believed to have originated in China, and it was introduced to Japan。' },
+      { statement: '江戸時代には、とうふの百通りの料理法を紹介する料理本があった。', answer: true, why: '第3段落 a famous cookbook described one hundred different ways to prepare tofu。' },
+      { statement: 'アジアの外の人々は、最初からとうふをとても気に入った。', answer: false, why: '第5段落 Not everyone outside Asia found tofu appealing at first。' },
+    ],
+    qa: [
+      { q: 'Why did tofu become important in temple cooking?', choices: ['Many Buddhists avoided eating meat.', 'It was very expensive.', 'Monks grew soybeans for sale.', 'It could be kept for years.'], answer: 0, why: '第3段落 Because many Buddhists avoided eating meat, tofu became an important source of protein in temple cooking。' },
+      { q: 'Why do some people choose tofu for environmental reasons?', choices: ['Producing soybeans generally requires less land and water than raising animals.', 'Tofu grows on trees.', 'Tofu does not need to be cooked.', 'Tofu is always made by hand.'], answer: 0, why: '第4段落 Producing soybeans also generally requires less land and water than raising animals for meat。' },
+    ],
+    gist: [
+      { para: 1, choices: ['とうふの作り方', 'チーズの歴史', '牛乳の栄養', '大豆の育て方'], answer: 0, why: '第2段落は、豆乳を作り、凝固剤でかためるとうふの作り方を述べている。' },
+      { para: 3, choices: ['とうふの栄養と新しい製品', 'バーガーの店', '肉の値段', '野菜の種類'], answer: 0, why: '第4段落は、とうふの栄養や環境面の利点、新しい製品の開発を述べている。' },
+    ],
+    titleQ: { choices: ['The Journey of Tofu', 'How to Make Cheese', 'The History of Buddhism', 'Why Soup Is Hot'], answer: 0, why: '全体として、とうふが東アジアから世界へ広まった旅とその魅力を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
