@@ -1345,3 +1345,10 @@ it('正誤問題〈99〉：不定詞の意味上の主語と完了不定詞の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) of me')
 })
+
+it('誤文訂正〈93〉：書き言葉のまとめ問題①の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-93')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('research shows')
+})

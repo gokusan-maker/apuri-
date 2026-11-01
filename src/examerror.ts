@@ -4014,6 +4014,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was very kind [to] you to help me with my bags.', choices: ['of', 'for', 'with', 'by'], answer: 0, why: 'kind は人の性質なので of 人：kind of you。' },
     ],
   },
+  {
+    id: 'exam-fix-93',
+    title: '入試の誤文訂正〈93〉（TOEFL・IELTS の書き言葉：まとめ問題①）',
+    points: ['これまでの書き言葉のまちがい（数えられない名詞、主語と動詞の一致、並列、語の形、つなぎのことば、代名詞の一致、前置詞のつく動詞、比較の言い方）をまぜた総まとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Recent research shows that regular exercise improves memory.', ja: '最近の研究は、定期的な運動が記憶をよくすることを示している。' }],
+    questions: [
+      { sentence: 'Recent [researches show] that regular exercise improves memory.', choices: ['research shows', 'researches shows', 'research show', 'a research shows'], answer: 0, why: 'research は数えられない名詞なので単数あつかい：research shows。' },
+      { sentence: 'The results of the survey [was] surprising to many experts.', choices: ['were', 'is', 'has been', 'being'], answer: 0, why: '主語の中心は results（複数）なので were。' },
+      { sentence: 'The program helps students read faster, think critically, and [writing] clearly.', choices: ['write', 'to writing', 'written', 'writes'], answer: 0, why: 'read・think とそろえて原形 write（並列）。' },
+      { sentence: 'The country is facing serious [economical] problems.', choices: ['economic', 'economy', 'economically', 'economist'], answer: 0, why: '「経済の」は economic。economical は「むだのない」。' },
+      { sentence: '[Despite] the price was high, many people bought the product.', choices: ['Although', 'In spite of', 'Because of', 'However'], answer: 0, why: 'あとが主語＋動詞なので接続詞 Although。despite は前置詞。' },
+      { sentence: 'The company announced [their] new policy yesterday.', choices: ['its', 'it', 'theirs', 'it is'], answer: 0, why: 'the company は単数あつかいなので its。' },
+      { sentence: 'The success of the project depends [of] good teamwork.', choices: ['on', 'in', 'to', 'from'], answer: 0, why: '「～による」は depend on。' },
+      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka is', 'it of Osaka'], answer: 0, why: '人口どうしを比べるので that of Osaka。' },
+      { sentence: 'There [is] several reasons for this change.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'there is / are はうしろの名詞に合わせる。several reasons は複数なので are。' },
+      { sentence: 'We [discussed about] the problem for two hours.', choices: ['discussed', 'discussed on', 'discussed of', 'discussed with'], answer: 0, why: 'discuss は前置詞なしで目的語をとる：discussed the problem。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
