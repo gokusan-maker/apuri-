@@ -2796,6 +2796,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Each of the participants [were] given a short survey.', choices: ['was', 'have been', 'are', 'being'], answer: 0, why: 'each of ～ は単数あつかいなので was。' },
     ],
   },
+  {
+    id: 'exam-fix-64',
+    title: '入試の誤文訂正〈64〉（共通テストレベル：分詞の形容詞用法）',
+    points: ['boring（人をたいくつさせる）と bored（人がたいくつした）のような感情の分詞、名詞を後ろからかざる分詞（a boy playing ～・a car made in ～）、名詞の前におく分詞（a broken window・a sleeping baby）など。「する」側なら -ing、「される」側なら過去分詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The movie was so boring that I fell asleep.', ja: 'その映画はとてもたいくつだったので、私はねむってしまった。' }],
+    questions: [
+      { sentence: 'The lecture was so [bored] that many students fell asleep.', choices: ['boring', 'bore', 'to bore', 'being bored'], answer: 0, why: '講義は人を「たいくつさせる」側なので boring。' },
+      { sentence: 'I was [exciting] to hear the news about the concert.', choices: ['excited', 'excite', 'excitement', 'to excite'], answer: 0, why: '人が「わくわくさせられた」ので過去分詞 excited。' },
+      { sentence: 'The boy [plays] the guitar over there is my brother.', choices: ['playing', 'played', 'to play', 'is playing'], answer: 0, why: '「ギターをひいている少年」は名詞を後ろからかざる現在分詞 playing。' },
+      { sentence: 'This is a car [making] in Germany.', choices: ['made', 'make', 'to make', 'was made'], answer: 0, why: '車は「作られた」側なので過去分詞 made が後ろからかざる。' },
+      { sentence: 'Be careful of the [breaking] glass on the floor.', choices: ['broken', 'break', 'broke', 'to break'], answer: 0, why: 'ガラスは「わられた」側なので broken glass。' },
+      { sentence: 'Don\'t wake the [slept] baby.', choices: ['sleeping', 'sleep', 'sleepy to', 'asleep'], answer: 0, why: '「ねむっている赤ちゃん」は現在分詞 sleeping。asleep は名詞の前におけない。' },
+      { sentence: 'The results of the survey were very [surprised].', choices: ['surprising', 'surprise', 'to surprise', 'surprisingly'], answer: 0, why: '結果は人を「おどろかせる」側なので surprising。' },
+      { sentence: 'Most of the people [invite] to the party were her classmates.', choices: ['invited', 'inviting', 'to invite', 'were invited'], answer: 0, why: '人は「招待された」側なので過去分詞 invited が後ろからかざる。' },
+      { sentence: 'She felt [tiring] after the long walk.', choices: ['tired', 'tire', 'tiredly', 'to tire'], answer: 0, why: '人が「つかれた」ので過去分詞 tired。' },
+      { sentence: 'There are many languages [speaking] in India.', choices: ['spoken', 'speak', 'spoke', 'are spoken'], answer: 0, why: '言語は「話される」側なので過去分詞 spoken が後ろからかざる。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
