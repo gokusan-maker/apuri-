@@ -1994,6 +1994,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'You (A) must finish (B) the test (C) until (D) 30 minutes.', choices: ['(A) must finish', '(B) the test', '(C) until', '(D) 30 minutes'], answer: 2, why: '「30分以内に」は within 30 minutes。' },
     ],
   },
+  {
+    id: 'exam-error-inversion2',
+    title: '入試の正誤問題〈85〉（TOEFL・IELTS の書き言葉：倒置）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '否定語（Never・Rarely・Seldom・Little・Not only・No sooner・Hardly）や Only ＋副詞句が文頭に出ると疑問文の語順になる。So ／ Neither ＋助動詞＋主語、No sooner ～ than・Hardly ～ when の組み合わせなど。',
+    ],
+    examples: [
+      { en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。' },
+      { en: 'No sooner had I arrived than it began to rain.', ja: '着いたとたんに雨がふり出した。' },
+    ],
+    questions: [
+      { sentence: 'Never (A) I have (B) seen (C) such a beautiful (D) sunset.', choices: ['(A) I have', '(B) seen', '(C) such a beautiful', '(D) sunset'], answer: 0, why: 'Never が文頭なので倒置：Never have I seen。' },
+      { sentence: 'Not only (A) she speaks English, (B) but she (C) also speaks (D) Chinese.', choices: ['(A) she speaks English,', '(B) but she', '(C) also speaks', '(D) Chinese'], answer: 0, why: 'Not only が文頭なので倒置：Not only does she speak。' },
+      { sentence: 'Rarely (A) do we (B) going out (C) to eat (D) on weekdays.', choices: ['(A) do we', '(B) going out', '(C) to eat', '(D) on weekdays'], answer: 1, why: '助動詞 do のあとは原形：do we go out。' },
+      { sentence: 'Only after (A) the meeting (B) I realized (C) my (D) mistake.', choices: ['(A) the meeting', '(B) I realized', '(C) my', '(D) mistake'], answer: 1, why: 'Only ＋副詞句が文頭なので倒置：did I realize。' },
+      { sentence: 'Little (A) did he (B) knew that (C) his life was (D) about to change.', choices: ['(A) did he', '(B) knew that', '(C) his life was', '(D) about to change'], answer: 1, why: 'did のあとは原形：did he know。' },
+      { sentence: 'No sooner (A) had I (B) arrived (C) when it (D) began to rain.', choices: ['(A) had I', '(B) arrived', '(C) when it', '(D) began to rain'], answer: 2, why: 'No sooner ～ than …：than it began。' },
+      { sentence: 'I (A) like jazz, (B) and so (C) my sister does (D) too.', choices: ['(A) like jazz,', '(B) and so', '(C) my sister does', '(D) too'], answer: 2, why: '「～もそうだ」は so ＋助動詞＋主語：so does my sister（too は不要）。' },
+      { sentence: 'Ken (A) can not swim, and (B) so can (C) his (D) brother.', choices: ['(A) can not swim, and', '(B) so can', '(C) his', '(D) brother'], answer: 1, why: '否定の「～もそうではない」は neither can。' },
+      { sentence: 'Hardly (A) had she (B) left (C) the house (D) than the phone rang.', choices: ['(A) had she', '(B) left', '(C) the house', '(D) than the phone rang'], answer: 3, why: 'Hardly ～ when …：when the phone rang。' },
+      { sentence: 'Seldom (A) does the city (B) is (C) this quiet (D) on a Saturday night.', choices: ['(A) does the city', '(B) is', '(C) this quiet', '(D) on a Saturday night'], answer: 1, why: 'be 動詞の文なので does は不要：Seldom is the city this quiet。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
