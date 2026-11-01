@@ -1874,6 +1874,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'You can (A) pay (B) either by cash (C) or (D) using a credit card.', choices: ['(A) pay', '(B) either by cash', '(C) or', '(D) using a credit card'], answer: 3, why: 'either by A or by B とそろえる：or by credit card。' },
     ],
   },
+  {
+    id: 'exam-error-infger2',
+    title: '入試の正誤問題〈80〉（共通テストレベル：不定詞と動名詞の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'enjoy・finish・mind のあとは動名詞、want・decide・refuse のあとは不定詞、stop ～ing／stop to ～、remember to ～／remember ～ing、前置詞・look forward to のあとは動名詞、主語になる動名詞など。',
+    ],
+    examples: [
+      { en: 'He stopped smoking for his health.', ja: '彼は健康のためにたばこをやめた。' },
+      { en: 'I am looking forward to seeing you again.', ja: 'またあなたに会えるのを楽しみにしている。' },
+    ],
+    questions: [
+      { sentence: 'I (A) really enjoyed (B) to talk (C) with my old friends (D) at the party.', choices: ['(A) really enjoyed', '(B) to talk', '(C) with my old friends', '(D) at the party'], answer: 1, why: 'enjoy のあとは動名詞：enjoyed talking。' },
+      { sentence: 'She (A) decided (B) studying (C) abroad (D) next year.', choices: ['(A) decided', '(B) studying', '(C) abroad', '(D) next year'], answer: 1, why: 'decide のあとは不定詞：decided to study。' },
+      { sentence: 'He (A) stopped (B) to smoke (C) for his health and (D) has not smoked since.', choices: ['(A) stopped', '(B) to smoke', '(C) for his health and', '(D) has not smoked since'], answer: 1, why: '「たばこをやめた」は stopped smoking。' },
+      { sentence: 'Please (A) remember (B) locking the door (C) when (D) you leave.', choices: ['(A) remember', '(B) locking the door', '(C) when', '(D) you leave'], answer: 1, why: 'これからすることは remember to ～：remember to lock。' },
+      { sentence: 'I (A) am looking forward (B) to (C) see you (D) again soon.', choices: ['(A) am looking forward', '(B) to', '(C) see you', '(D) again soon'], answer: 2, why: 'look forward to の to は前置詞なので seeing。' },
+      { sentence: '(A) Would you (B) mind (C) to open (D) the window?', choices: ['(A) Would you', '(B) mind', '(C) to open', '(D) the window?'], answer: 2, why: 'mind のあとは動名詞：mind opening。' },
+      { sentence: 'He (A) refused (B) answering (C) the question (D) at the meeting.', choices: ['(A) refused', '(B) answering', '(C) the question', '(D) at the meeting'], answer: 1, why: 'refuse のあとは不定詞：refused to answer。' },
+      { sentence: 'She (A) is good (B) at (C) draw (D) pictures of animals.', choices: ['(A) is good', '(B) at', '(C) draw', '(D) pictures of animals'], answer: 2, why: '前置詞 at のあとは動名詞：drawing。' },
+      { sentence: 'We (A) finished (B) cleaning the classroom (C) before (D) to eat lunch.', choices: ['(A) finished', '(B) cleaning the classroom', '(C) before', '(D) to eat lunch'], answer: 3, why: '前置詞 before のあとは動名詞：before eating lunch。' },
+      { sentence: '(A) Swim in the river (B) can be (C) dangerous (D) after heavy rain.', choices: ['(A) Swim in the river', '(B) can be', '(C) dangerous', '(D) after heavy rain'], answer: 0, why: '主語になるので動名詞 Swimming（または To swim）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
