@@ -1219,3 +1219,10 @@ it('正誤問題〈90〉：数量の表し方の単元が10問ある', async () 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) much people')
 })
+
+it('誤文訂正〈84〉：接続詞の使い分けの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-84')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('unless')
+})

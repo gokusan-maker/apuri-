@@ -3636,6 +3636,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She has read [a lot] books about space.', choices: ['a lot of', 'much', 'a little', 'an amount of'], answer: 0, why: '名詞の前は a lot of（of をわすれない）。' },
     ],
   },
+  {
+    id: 'exam-fix-84',
+    title: '入試の誤文訂正〈84〉（共通テストレベル：接続詞の使い分け）',
+    points: ['unless（～しないかぎり）、as long as（～するかぎり：条件）、in case（～するといけないから）、even if（たとえ～しても）、once（いったん～すると）、by the time（～するまでには）、時や条件を表す節の中では未来のことも現在形にする、など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Take an umbrella in case it rains.', ja: '雨がふるといけないから、かさを持っていきなさい。' }],
+    questions: [
+      { sentence: 'You will miss the bus [if] you hurry.', choices: ['unless', 'because', 'so that', 'as soon as'], answer: 0, why: '「急がないかぎり乗りおくれる」なので unless（＝if ～ not）。' },
+      { sentence: 'Take an umbrella [unless] it rains.', choices: ['in case', 'so', 'until', 'although'], answer: 0, why: '「雨がふるといけないから」は in case。' },
+      { sentence: 'You can borrow my bike [unless] you bring it back by six.', choices: ['as long as', 'even if', 'in case', 'before'], answer: 0, why: '「6時までに返すかぎり（という条件なら）」は as long as。' },
+      { sentence: 'I will go to the beach [as long as] it rains, because I love the sea.', choices: ['even if', 'unless', 'in case', 'so that'], answer: 0, why: '「たとえ雨がふっても」は even if。' },
+      { sentence: 'Call me as soon as you [will arrive] at the station.', choices: ['arrive', 'arrived', 'will have arrived', 'arriving'], answer: 0, why: '時を表す節（as soon as ～）の中では未来のことも現在形：arrive。' },
+      { sentence: 'If it [will be] sunny tomorrow, we will have a picnic.', choices: ['is', 'was', 'will', 'has been'], answer: 0, why: '条件を表す if 節の中では未来のことも現在形：is。' },
+      { sentence: '[Until] the time we arrived, the movie had already started.', choices: ['By', 'Since', 'While', 'Unless'], answer: 0, why: '「～するまでには」は by the time。until は「～までずっと」。' },
+      { sentence: '[Unless] you learn the rules, the game is very easy to play.', choices: ['Once', 'Until', 'Even if not', 'Before'], answer: 0, why: '「いったんきまりを覚えれば」は Once。' },
+      { sentence: 'I could not sleep [because of] the room was too hot.', choices: ['because', 'due to', 'despite', 'so'], answer: 0, why: 'あとが主語＋動詞なので接続詞 because。because of は前置詞。' },
+      { sentence: 'She studied hard [so that] she failed the exam.', choices: ['but', 'so', 'because', 'in order to'], answer: 0, why: '「がんばったが落ちた」と逆接なので but。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
