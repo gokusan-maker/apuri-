@@ -24181,6 +24181,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['A Few Yen for a Bag', 'How to Make Cotton Bags', 'The History of Supermarkets', 'Why Oceans Are Salty'], answer: 0, why: '全体として、数円のレジ袋の料金がもつ意味と、その効果・限界を述べている。' },
   },
   {
+    id: 'kyotsu-planning-fallacy',
+    title: 'Why Everything Takes Longer',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Have you ever planned to finish your homework in one hour, only to find that it took three? Or expected a trip to the station to take ten minutes, and then arrived late? If so, you are not alone. Psychologists have found that people consistently underestimate how long tasks will take, even when they have done similar tasks many times before. This tendency is known as the planning fallacy.",
+      "The planning fallacy was first described by psychologists in the late 1970s, and it has since been observed in many situations. In one well-known study, university students were asked to predict when they would finish an important assignment. Most students finished later than they had predicted, and many finished later than even their most pessimistic estimates. The same pattern appears in much larger projects. Buildings, bridges, and computer systems often take far longer and cost much more than originally planned.",
+      "Why do we make this mistake again and again? One reason is that when we plan, we tend to imagine the best possible situation. We picture ourselves working smoothly without interruptions, and we forget about the unexpected problems ( A ) usually appear, such as a friend calling, a computer crashing, or simply feeling tired. Another reason is that we focus on the specific task in front of us and ignore our past experience. Even if our last three essays all took longer than planned, we believe that this time will be different.",
+      "Interestingly, people are much better at predicting how long other people's tasks will take. When we think about someone else's project, we are more likely to remember that problems often occur. This suggests that the planning fallacy is not caused by a lack of information but by the way we think about our own plans, ( B ) are often colored by hope and confidence.",
+      "Fortunately, there are ways to reduce the planning fallacy. One effective method is to look at how long similar tasks have taken in the past, rather than imagining the ideal case. Another is to break a large task into smaller steps and estimate each one separately, which makes hidden difficulties easier to notice. Some people also add extra time to every plan as a buffer. By recognizing this common tendency, we can make plans ( C ) are more realistic, and reduce the stress of always running late.",
+    ],
+    ja: [
+      '宿題を1時間で終えるつもりが、3時間かかってしまったことはないだろうか。あるいは、駅まで10分で行けると思っていたのに、おくれて着いたことは？もしそうなら、あなただけではない。心理学者たちは、人は似た作業を何度もしたことがあっても、作業にかかる時間をいつも少なく見積もってしまうことを発見した。この傾向は「計画の誤謬（ごびゅう）」として知られている。',
+      '計画の誤謬は1970年代の終わりに心理学者によってはじめて説明され、それ以来、多くの場面で見られてきた。よく知られたある研究では、大学生たちが大切な課題をいつ終えるかを予想するよう求められた。ほとんどの学生は予想よりおそく終え、多くは自分のいちばん悲観的な見積もりよりもさらにおそく終えた。同じパターンは、もっとずっと大きな計画にもあらわれる。建物や橋やコンピューターのシステムは、最初の計画よりはるかに長い時間がかかり、ずっと多くのお金がかかることが多い。',
+      'なぜ私たちはこのまちがいを何度もくり返すのだろうか。ひとつの理由は、計画を立てるとき、私たちは最もうまくいく場合を想像しがちだということである。じゃまされずにすらすら作業する自分を思いうかべ、友だちから電話がかかってきたり、コンピューターが止まったり、ただつかれたりするような、たいてい起こる思いがけない問題をわすれてしまう。もうひとつの理由は、目の前のその作業に注目して、過去の経験を無視してしまうことである。前の3つの作文がどれも計画より長くかかったとしても、今度はちがうと信じてしまうのである。',
+      'おもしろいことに、人はほかの人の作業にどれだけ時間がかかるかは、ずっと上手に予想できる。ほかの人の計画について考えるときは、問題がよく起こることを思い出しやすいのである。このことは、計画の誤謬が情報の不足によるのではなく、自分の計画についての考え方によって起こることを示している。自分の計画は、希望や自信によっていろどられていることが多いのである。',
+      'さいわい、計画の誤謬をへらす方法がある。効果的な方法のひとつは、理想的な場合を想像するのではなく、似た作業が過去にどれだけかかったかを見ることである。もうひとつは、大きな作業を小さな段階に分けて、それぞれを別々に見積もることで、そうするとかくれたむずかしさに気づきやすくなる。どの計画にもゆとりとして時間を足しておく人もいる。このよくある傾向に気づけば、私たちはより現実的な計画を立て、いつもおくれてしまうストレスをへらすことができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the unexpected problems を受け、appear の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'where'], answer: 0, why: 'カンマのあと（非制限用法）で先行詞 our own plans を受け、are colored の主語になるので which。カンマのあとに that は使えない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 plans を受け、are の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '人は、似た作業を何度もしたことがあっても、かかる時間を少なく見積もりがちである。', answer: true, why: '第1段落 people consistently underestimate how long tasks will take, even when they have done similar tasks many times before。' },
+      { statement: '研究では、ほとんどの学生が予想より早く課題を終えた。', answer: false, why: '第2段落 Most students finished later than they had predicted。' },
+      { statement: '人は、ほかの人の作業時間のほうが上手に予想できる。', answer: true, why: '第4段落 people are much better at predicting how long other people\'s tasks will take。' },
+      { statement: '計画の誤謬は、情報が足りないことがおもな原因である。', answer: false, why: '第4段落 the planning fallacy is not caused by a lack of information but by the way we think about our own plans。' },
+    ],
+    qa: [
+      { q: 'What do people tend to imagine when they plan?', choices: ['The best possible situation without interruptions.', 'The worst possible situation.', 'Other people working for them.', 'A very long deadline.'], answer: 0, why: '第3段落 when we plan, we tend to imagine the best possible situation。' },
+      { q: 'Which is one way to reduce the planning fallacy?', choices: ['Breaking a large task into smaller steps.', 'Imagining the ideal case only.', 'Ignoring past experience.', 'Working without any plan.'], answer: 0, why: '第5段落 Another is to break a large task into smaller steps and estimate each one separately。' },
+    ],
+    gist: [
+      { para: 1, choices: ['計画の誤謬を示す研究と例', '橋の作り方', '大学の授業料', 'コンピューターの値段'], answer: 0, why: '第2段落は、学生の課題の研究や、大きな計画がおくれる例を述べている。' },
+      { para: 2, choices: ['まちがいをくり返す理由', '電話のかけ方', '作文の書き方', 'ねむり方'], answer: 0, why: '第3段落は、最もうまくいく場合を想像し、過去の経験を無視するという理由を述べている。' },
+    ],
+    titleQ: { choices: ['Why Everything Takes Longer', 'How to Build a Bridge', 'The Fastest Way to the Station', 'Why Students Dislike Homework'], answer: 0, why: '全体として、作業がいつも予想より長くかかる「計画の誤謬」の理由と対策を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
