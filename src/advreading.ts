@@ -22153,6 +22153,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Box That Changed the World', 'How to Become a Truck Driver', 'The History of Shoes', 'Why Ships Float'], answer: 0, why: '全体として、輸送用コンテナが品物の運び方と世界経済を変えたことと、その問題点を述べている。' },
   },
   {
+    id: 'kyotsu-carnivorous-plants',
+    title: 'Plants That Eat Insects',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "We usually think of plants as quiet living things that are eaten by animals, not the other way around. However, there are more than six hundred species of plants that catch and digest small animals, mostly insects. These carnivorous plants have fascinated people for centuries, and the famous naturalist Charles Darwin spent many years studying them. Their unusual way of life raises an interesting question: why would a plant need to eat animals at all?",
+      "The answer lies in the places ( A ) these plants usually grow. Most carnivorous plants live in wet, sunny environments such as bogs and swamps, where the soil is very poor in nutrients like nitrogen. Ordinary plants absorb these nutrients through their roots, but in such soil there is simply not enough to support healthy growth. By catching insects, carnivorous plants obtain the extra nutrients they need. They still produce their own food from sunlight, just as other plants do, so insects work more like a vitamin supplement than a main meal.",
+      "Carnivorous plants have developed a remarkable variety of traps. The Venus flytrap, perhaps the best-known example, has leaves that snap shut when an insect touches tiny hairs on their surface. Interestingly, the trap usually closes only if the hairs are touched twice within a short time, which helps the plant avoid wasting energy on raindrops or falling leaves. Pitcher plants, by contrast, have deep, tube-shaped leaves filled with liquid. Insects ( B ) are attracted by sweet smells or bright colors land on the slippery edge, fall inside, and cannot climb out.",
+      "Other species use sticky surfaces. Sundews, for example, are covered with hairs that produce shining drops of a glue-like substance. To an insect, these drops may look like water or nectar, but once it lands, it becomes stuck. The leaf then slowly curls around the insect, and special chemicals break its body down so that the plant can absorb the nutrients.",
+      "Today, many carnivorous plants are in danger because the wetlands where they live are being drained for farming and building. Some species are also collected illegally because they are popular with gardeners. Protecting their habitats is important not only for the plants themselves but also for the many other species ( C ) share these special environments. Carnivorous plants show us how living things can adapt in surprising ways to survive in difficult conditions.",
+    ],
+    ja: [
+      '私たちはふつう、植物は動物に食べられる静かな生き物で、その逆ではないと考えている。しかし、小さな動物、おもに虫をつかまえて消化する植物は600種以上ある。こうした食虫植物は何世紀にもわたって人々を引きつけてきており、有名な博物学者チャールズ・ダーウィンも長年それを研究した。そのめずらしい生き方は、興味深い疑問を生む。そもそも、なぜ植物が動物を食べる必要があるのだろうか。',
+      'その答えは、こうした植物がふつう育つ場所にある。ほとんどの食虫植物は、湿原や沼地のような、しめっていて日当たりのよい環境にすんでおり、そこでは土にちっ素のような栄養がとても少ない。ふつうの植物はこうした栄養を根から吸収するが、そのような土では元気に育つのに十分な量がない。虫をつかまえることで、食虫植物は必要な追加の栄養を手に入れる。食虫植物もほかの植物と同じように日光から自分の養分を作っているので、虫はおもな食事というより、ビタミンのおぎないのような働きをしている。',
+      '食虫植物は、おどろくほどさまざまなわなを発達させてきた。最もよく知られた例であるハエトリグサは、虫が葉の表面の小さな毛にふれると、ぱちんととじる葉をもっている。おもしろいことに、わなはふつう、短い時間に毛が2回さわられたときだけとじる。これは、雨つぶや落ち葉にむだなエネルギーを使わないのに役立っている。これに対してウツボカズラは、液体で満たされた深い筒の形の葉をもっている。あまいにおいや明るい色に引きよせられた虫は、すべりやすいふちにとまって中に落ち、はい上がれなくなる。',
+      'ほかには、ねばねばした表面を使う種もある。たとえばモウセンゴケは、光るのりのような液のしずくを出す毛におおわれている。虫にとってこのしずくは水やみつに見えるかもしれないが、いったんとまると、くっついてしまう。そして葉がゆっくりと虫をつつむように丸まり、特別な化学物質が虫の体を分解して、植物が栄養を吸収できるようにする。',
+      '今日、多くの食虫植物は、すみかである湿地が農業や建設のために干拓されているため、危機にある。園芸家に人気があるので、違法に集められる種もある。そのすみかを守ることは、植物自身のためだけでなく、こうした特別な環境を分かち合うほかの多くの生き物のためにも大切である。食虫植物は、生き物がきびしい条件の中で生きのびるために、おどろくような方法で適応できることを教えてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the places（場所）で、うしろの these plants usually grow は完全な文なので関係副詞 where。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 Insects を受け、are attracted の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 the many other species を受け、share の主語になる関係代名詞 that。うしろに主語がないので where は使えない。' },
+    ],
+    tf: [
+      { statement: '虫をつかまえて消化する植物は600種以上ある。', answer: true, why: '第1段落 there are more than six hundred species of plants that catch and digest small animals。' },
+      { statement: '食虫植物は、日光から養分を作ることができない。', answer: false, why: '第2段落 They still produce their own food from sunlight, just as other plants do。' },
+      { statement: 'ハエトリグサのわなは、ふつう毛が短い時間に2回さわられたときにとじる。', answer: true, why: '第3段落 the trap usually closes only if the hairs are touched twice within a short time。' },
+      { statement: '食虫植物のすみかである湿地は、近年ふえている。', answer: false, why: '第5段落 the wetlands where they live are being drained for farming and building。' },
+    ],
+    qa: [
+      { q: 'Why do carnivorous plants catch insects?', choices: ['To obtain nutrients that are lacking in the soil where they grow.', 'Because they cannot use sunlight.', 'To protect themselves from rain.', 'Because insects damage their roots.'], answer: 0, why: '第2段落 the soil is very poor in nutrients ... By catching insects, carnivorous plants obtain the extra nutrients they need。' },
+      { q: 'How do sundews catch insects?', choices: ['With sticky drops that look like water or nectar.', 'With leaves that snap shut.', 'With deep tubes full of liquid.', 'With sharp thorns.'], answer: 0, why: '第4段落 hairs that produce shining drops of a glue-like substance ... once it lands, it becomes stuck。' },
+    ],
+    gist: [
+      { para: 1, choices: ['植物が虫を食べる理由（栄養の少ない土）', '湿原の天気', 'ビタミンの種類', 'ダーウィンの一生'], answer: 0, why: '第2段落は、栄養の少ない土で育つため、虫から栄養をおぎなうことを述べている。' },
+      { para: 2, choices: ['ハエトリグサとウツボカズラのわな', '雨つぶの大きさ', '花のにおいの作り方', '虫の飛び方'], answer: 0, why: '第3段落は、とじる葉のわなと、液体の入った筒のわなを述べている。' },
+    ],
+    titleQ: { choices: ['Plants That Eat Insects', 'How Insects Find Flowers', 'The Life of Charles Darwin', 'Growing Vegetables at Home'], answer: 0, why: '全体として、虫を食べる食虫植物の理由・わなのしくみ・保護を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
