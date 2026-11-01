@@ -1477,6 +1477,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="62" cy="43" rx="4" ry="3" fill="#facc15" stroke="#030712" strokeWidth="1" />
       </g>
     )
+  if (species === 'garganey')
+    return (
+      <g>
+        {/* 目の上の白い長いまゆげもよう */}
+        <path d="M44 36 Q54 32 64 40" fill="none" stroke="#f8fafc" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
