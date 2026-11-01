@@ -2282,6 +2282,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Prices (A) in this area (B) are (C) highest (D) than in the city.', choices: ['(A) in this area', '(B) are', '(C) highest', '(D) than in the city'], answer: 2, why: 'than があるので比較級 higher。' },
     ],
   },
+  {
+    id: 'exam-error-subj4',
+    title: '入試の正誤問題〈97〉（共通テストレベル：仮定法の発展）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'if を省略した倒置（Were I ～・Had I known ～・Should you ～）、If it were not for ～／had not been for ～、But for ～、混合仮定法、It is time ＋過去形、as if ＋過去完了など。',
+    ],
+    examples: [
+      { en: 'Were I you, I would accept the offer.', ja: 'もし私があなたなら、その申し出を受けるだろう。' },
+      { en: 'Had I known the truth, I would have told you.', ja: 'もし本当のことを知っていたら、あなたに話していただろう。' },
+    ],
+    questions: [
+      { sentence: '(A) I were you, (B) I would (C) accept (D) the offer.', choices: ['(A) I were you,', '(B) I would', '(C) accept', '(D) the offer'], answer: 0, why: 'if を省略すると倒置：Were I you。' },
+      { sentence: '(A) I had known (B) the truth, I (C) would have told (D) you.', choices: ['(A) I had known', '(B) the truth, I', '(C) would have told', '(D) you'], answer: 0, why: 'if を省略した倒置：Had I known。' },
+      { sentence: 'If it (A) was not (B) for your advice, I (C) would (D) be lost.', choices: ['(A) was not', '(B) for your advice, I', '(C) would', '(D) be lost'], answer: 0, why: 'If it were not for ～。' },
+      { sentence: 'If it (A) had not (B) be for the rain, we (C) would have (D) gone hiking.', choices: ['(A) had not', '(B) be for the rain, we', '(C) would have', '(D) gone hiking'], answer: 1, why: 'If it had not been for ～：been。' },
+      { sentence: 'If I (A) had studied (B) harder, I (C) would have been (D) a doctor now.', choices: ['(A) had studied', '(B) harder, I', '(C) would have been', '(D) a doctor now'], answer: 2, why: 'now があるので混合仮定法：would be。' },
+      { sentence: 'It (A) is high time (B) we (C) leave (D) for the airport.', choices: ['(A) is high time', '(B) we', '(C) leave', '(D) for the airport'], answer: 2, why: 'It is high time ＋過去形：left。' },
+      { sentence: 'She talks (A) as if she (B) has seen (C) the accident, but (D) she was not there.', choices: ['(A) as if she', '(B) has seen', '(C) the accident, but', '(D) she was not there'], answer: 1, why: '過去の事実と反対は as if ＋過去完了：had seen。' },
+      { sentence: 'But (A) of (B) your support, we (C) would have (D) failed.', choices: ['(A) of', '(B) your support, we', '(C) would have', '(D) failed'], answer: 1, why: 'But for ～「～がなければ」。' },
+      { sentence: '(A) Should you (B) need any help, (C) please (D) calling me.', choices: ['(A) Should you', '(B) need any help,', '(C) please', '(D) calling me'], answer: 3, why: '命令文は動詞の原形：please call me。' },
+      { sentence: 'I (A) wish I (B) can (C) fly (D) like a bird.', choices: ['(A) wish I', '(B) can', '(C) fly', '(D) like a bird'], answer: 1, why: '今の事実と反対の願いは I wish ＋過去形：could。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
