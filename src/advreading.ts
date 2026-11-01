@@ -22504,6 +22504,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Machine That Lifted Cities', 'How to Climb Stairs Faster', 'The Tallest Mountains in the World', 'Why Ropes Break'], answer: 0, why: '全体として、エレベーターが建物と都市のすがたを変えてきたことを述べている。' },
   },
   {
+    id: 'kyotsu-school-recess',
+    title: 'Why Breaks Help Us Learn',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many schools around the world, the time children spend on breaks has been getting shorter. Faced with pressure to raise test scores, some schools have reduced recess, the free time between lessons, in order to add more hours of study. At first glance, this seems reasonable: if children spend more time in class, surely they will learn more. A growing body of research, however, suggests that the opposite may be true.",
+      "One reason is that the human brain is not designed to concentrate for long periods without rest. Studies have shown that children's attention tends to decline steadily during long lessons. After a break, especially one ( A ) includes physical activity, they often return to class more focused and better able to remember what they are taught. In some experiments, students who had short breaks between lessons performed better on tests than students who studied for the same total time without breaks.",
+      "Breaks also play an important role in children's social development. During recess, children are free to choose their own games, make their own rules, and settle their own disagreements. These experiences help them learn skills such as cooperation, negotiation, and patience, which are difficult to teach directly in a classroom. Teachers often notice that children ( B ) have had time to play together are calmer and get along better during lessons.",
+      "In addition, recess is good for children's physical health. In many countries, children spend more time sitting than ever before, both at school and at home in front of screens. Recess offers a valuable chance for them to run, jump, and move freely. Some doctors argue that regular active breaks during the school day could help to reduce health problems related to a lack of exercise.",
+      "For these reasons, some schools have begun to bring recess back or even to increase it. In Finland, for example, it is common for students to take a fifteen-minute break after every forty-five minutes of lessons, and the country's schools are often praised for their results. Of course, simply adding breaks will not solve every problem in education. Still, the evidence suggests that giving children time to rest and play is not a waste of school time but an investment ( C ) can help them learn more effectively.",
+    ],
+    ja: [
+      '世界中の多くの学校で、子どもたちが休み時間にすごす時間は短くなってきている。テストの点数を上げなければならないというプレッシャーから、授業と授業の間の自由な時間である休み時間をへらして、勉強の時間をふやした学校もある。一見すると、これは筋が通っているように思える。子どもが授業でより多くの時間をすごせば、きっともっと学ぶだろう。しかし、ますます多くの研究が、その反対が正しいかもしれないと示している。',
+      'ひとつの理由は、人間の脳は休まずに長い間集中できるようにはできていないということである。研究によれば、子どもの注意力は長い授業の間にしだいに下がっていく傾向がある。休み時間のあと、とくに体を動かす休み時間のあとでは、子どもたちはより集中し、教わったことをよく覚えられる状態で教室にもどることが多い。いくつかの実験では、授業の間に短い休み時間をとった生徒は、同じ合計時間を休みなしで勉強した生徒よりテストの成績がよかった。',
+      '休み時間は、子どもの社会性の発達にも大切な役割を果たす。休み時間には、子どもは自由に自分たちの遊びを選び、自分たちのきまりを作り、自分たちで争いを解決する。こうした経験は、協力や話し合い、がまんのような、教室で直接教えるのがむずかしい力を身につける助けになる。先生はよく、いっしょに遊ぶ時間があった子どもは、授業中もより落ち着いていて、仲よくできることに気づく。',
+      'さらに、休み時間は子どもの体の健康によい。多くの国で、子どもは学校でも家の画面の前でも、これまでになく長い時間すわってすごしている。休み時間は、走ったりとんだり自由に動いたりする貴重な機会になる。学校の一日の中で定期的に体を動かす休み時間をとれば、運動不足に関係する健康問題をへらせるかもしれないと主張する医者もいる。',
+      'こうした理由から、休み時間をもとにもどしたり、ふやしたりしはじめた学校もある。たとえばフィンランドでは、45分の授業のあとに15分休むのがふつうで、この国の学校はその成果でよくほめられる。もちろん、ただ休み時間をふやすだけで教育のすべての問題が解決するわけではない。それでも証拠によれば、子どもに休んで遊ぶ時間をあたえることは、学校の時間のむだではなく、より効果的に学ぶのを助ける投資なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 one（＝a break）を受け、includes の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 children（人）を受け、have had の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 an investment を受け、can help の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'テストの点数を上げるために、休み時間をへらした学校がある。', answer: true, why: '第1段落 some schools have reduced recess ... in order to add more hours of study。' },
+      { statement: '研究によれば、子どもの注意力は長い授業の間ずっと高いままである。', answer: false, why: '第2段落 children\'s attention tends to decline steadily during long lessons。' },
+      { statement: '休み時間には、子どもが自分たちで争いを解決する経験ができる。', answer: true, why: '第3段落 children are free to ... settle their own disagreements。' },
+      { statement: '筆者は、休み時間をふやせば教育のすべての問題が解決すると考えている。', answer: false, why: '第5段落 simply adding breaks will not solve every problem in education。' },
+    ],
+    qa: [
+      { q: 'What happened in some experiments mentioned in the passage?', choices: ['Students with short breaks did better on tests than those without breaks.', 'Students without breaks always did better.', 'Breaks made students forget their lessons.', 'Students refused to return to class.'], answer: 0, why: '第2段落 students who had short breaks between lessons performed better on tests than students who studied ... without breaks。' },
+      { q: 'What is common in schools in Finland?', choices: ['A fifteen-minute break after every forty-five minutes of lessons.', 'No breaks during the day.', 'Lessons that last three hours.', 'Tests every morning.'], answer: 0, why: '第5段落 it is common for students to take a fifteen-minute break after every forty-five minutes of lessons。' },
+    ],
+    gist: [
+      { para: 2, choices: ['休み時間が社会性を育てること', '先生の給料', 'ゲームの作り方', '教室のそうじ'], answer: 0, why: '第3段落は、遊びの中で協力や話し合いの力が育つことを述べている。' },
+      { para: 3, choices: ['休み時間が体の健康によいこと', '画面の大きさ', '医者の仕事', 'スポーツの大会'], answer: 0, why: '第4段落は、すわりすぎの子どもにとって、体を動かす機会になることを述べている。' },
+    ],
+    titleQ: { choices: ['Why Breaks Help Us Learn', 'How to Get Perfect Test Scores', 'The History of Finland', 'Games for Rainy Days'], answer: 0, why: '全体として、休み時間が学習・社会性・健康に役立つことを論じている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
