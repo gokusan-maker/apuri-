@@ -23362,6 +23362,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['When the Wolves Came Back', 'How to Build a Dam', 'The Biggest Parks in Canada', 'Why Elk Run Fast'], answer: 0, why: '全体として、オオカミをもどしたことで生態系が大きく変わったイエローストーンの話を述べている。' },
   },
   {
+    id: 'kyotsu-gig-work',
+    title: 'Freedom or Security?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In the past, many people expected to work for one company for most of their lives. They had fixed hours, a regular salary, and benefits such as health insurance and paid holidays. In recent years, however, a different way of working has spread rapidly. Thanks to smartphone apps and websites, people can now find short jobs one at a time, such as delivering food, driving passengers, or designing a logo for a client on the other side of the world. This kind of work is often called gig work.",
+      "For many workers, the greatest attraction of gig work is freedom. They can choose when, where, and how much they work. A student can deliver food between classes, a parent can work while their children are at school, and a retired person can earn extra income without committing to a full-time job. Some people also enjoy the variety of working on many different projects rather than doing the same tasks every day. For companies, gig workers offer flexibility, because they can hire people only when there is work ( A ) needs to be done.",
+      "However, this freedom comes with risks. Gig workers usually are not treated as employees, so they often do not receive benefits such as paid sick leave, health insurance, or pensions. Their income can also be unpredictable. On some days there may be plenty of work, while on others there may be almost none. Because pay is often decided by the app, workers may have little power to negotiate. Some workers also report feeling pressure to accept every job, worrying that refusing could lower their rating in the system.",
+      "These problems have led to debates in many countries about how gig work should be regulated. Some governments and courts have ruled that certain gig workers should be treated as employees, with the protections ( B ) come with that status. Others argue that such rules could reduce the flexibility that makes gig work attractive in the first place. Companies, workers, and governments are still searching for a balance between freedom and security.",
+      "Whatever the outcome of these debates, gig work is likely to remain an important part of the economy. For young people thinking about their future careers, it is worth understanding both its advantages and its disadvantages. Gig work can be a useful way to gain experience and earn money, but it may not provide the stability ( C ) many people need over the long term. Making informed choices about how we work is becoming an essential skill in the modern world.",
+    ],
+    ja: [
+      '昔は、多くの人が一生の大部分をひとつの会社で働くと考えていた。決まった勤務時間、決まった給料があり、健康保険や有給休暇のような手当もあった。しかし近年、ちがう働き方が急速に広まっている。スマートフォンのアプリやウェブサイトのおかげで、人々は今、食べ物の配達や乗客を乗せる運転、世界の反対側にいる客のためのロゴのデザインのような短い仕事を、ひとつずつ見つけられるようになった。こうした仕事はよく、ギグワークとよばれる。',
+      '多くの働き手にとって、ギグワークの最大の魅力は自由さである。いつ、どこで、どれだけ働くかを自分で選べる。学生は授業の合間に食べ物を配達でき、親は子どもが学校にいる間に働け、引退した人はフルタイムの仕事をせずに収入を得られる。毎日同じ作業をするより、いろいろな仕事にとり組む変化を楽しむ人もいる。会社にとっても、ギグワーカーは柔軟さをもたらす。しなければならない仕事があるときだけ人をやとえるからである。',
+      'しかし、この自由には危険もともなう。ギグワーカーはふつう従業員としてあつかわれないので、病気のときの有給休暇や健康保険、年金のような手当を受けられないことが多い。収入も予想しにくい。仕事がたくさんある日もあれば、ほとんどない日もある。報酬はアプリで決められることが多いので、働き手は交渉する力をほとんどもたないかもしれない。ことわるとシステムの中の評価が下がるのではないかと心配して、どの仕事も引き受けなければというプレッシャーを感じると言う働き手もいる。',
+      'こうした問題から、多くの国でギグワークをどう規制すべきかについて議論が起きている。ある種のギグワーカーは従業員としてあつかわれ、その立場にともなう保護を受けるべきだと判断した政府や裁判所もある。一方、そのようなきまりはギグワークをそもそも魅力的にしている柔軟さをへらしかねないと主張する人もいる。会社と働き手と政府は、自由と安定のつり合いをまださがしている。',
+      'こうした議論の結果がどうであれ、ギグワークは経済の大切な一部であり続けるだろう。将来の仕事について考えている若い人にとって、その利点と欠点の両方を理解しておく価値はある。ギグワークは経験を積みお金をかせぐ役に立つ方法になりうるが、多くの人が長い目で必要とする安定はあたえてくれないかもしれない。どう働くかについて、よく知ったうえで選ぶことは、現代の世界で欠かせない力になりつつある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 work を受け、needs の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 the protections を受け、come の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the stability を受け、need の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'ギグワークでは、働く時間や場所を自分で選べる。', answer: true, why: '第2段落 They can choose when, where, and how much they work。' },
+      { statement: 'ギグワーカーは、ふつう健康保険や年金をすべて受けられる。', answer: false, why: '第3段落 they often do not receive benefits such as paid sick leave, health insurance, or pensions。' },
+      { statement: 'ギグワーカーの収入は、毎日ほぼ同じである。', answer: false, why: '第3段落 Their income can also be unpredictable。' },
+      { statement: 'ある種のギグワーカーは従業員としてあつかうべきだと判断した裁判所がある。', answer: true, why: '第4段落 Some governments and courts have ruled that certain gig workers should be treated as employees。' },
+    ],
+    qa: [
+      { q: 'Why might gig workers feel pressure to accept every job?', choices: ['They worry that refusing could lower their rating.', 'They are paid more for refusing.', 'They cannot use smartphones.', 'They are not allowed to choose their hours.'], answer: 0, why: '第3段落 worrying that refusing could lower their rating in the system。' },
+      { q: 'What do some people argue about rules treating gig workers as employees?', choices: ['They could reduce the flexibility that makes gig work attractive.', 'They would make work more fun.', 'They would remove all apps.', 'They would raise every salary.'], answer: 0, why: '第4段落 such rules could reduce the flexibility that makes gig work attractive in the first place。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ギグワークの魅力（自由さ）', 'ロゴのデザインの方法', '学校の時間割', '引退の年齢'], answer: 0, why: '第2段落は、働く時間や場所を選べる自由さなど、ギグワークの魅力を述べている。' },
+      { para: 2, choices: ['ギグワークの危険（手当や収入の不安定）', 'アプリの作り方', '病院の場所', '年金の計算'], answer: 0, why: '第3段落は、手当がない、収入が不安定、交渉力が弱いなどの危険を述べている。' },
+    ],
+    titleQ: { choices: ['Freedom or Security?', 'How to Deliver Food Faster', 'The History of Smartphones', 'Why Companies Need Logos'], answer: 0, why: '全体として、ギグワークがもつ自由と、失われがちな安定との間の問題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
