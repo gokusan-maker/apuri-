@@ -128,10 +128,11 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         // デザイン144：とくぎの種類ごとに、勝ったボスの数
         <p className="boss-trait-counts" aria-label="とくぎごとに勝ったボスの数">
           {(Object.keys(BOSS_TRAITS) as (keyof typeof BOSS_TRAITS)[]).map((t) => (
-            <span key={t}>
+            // デザイン175：タップするとそのとくぎのボスだけにしぼる
+            <button key={t} className="list-link" aria-pressed={only === t} aria-label={`${BOSS_TRAITS[t].name}のボスだけ見る`} onClick={() => setOnly(only === t ? null : t)} style={{ padding: '0 0.25rem' }}>
               {BOSS_TRAITS[t].icon}
               {all.filter((b) => book[b.name] && traitOf(b.name) === t).length}
-            </span>
+            </button>
           ))}
         </p>
       )}

@@ -412,3 +412,20 @@ it('デザイン170：ボス図鑑で、いちばん最初にたおしたボス�
   const mark = screen.getByLabelText('いちばん最初にたおしたボス')
   expect(mark.closest('li')!.querySelector('.badge-name')!.textContent).toBe(looks[1].name)
 })
+
+it('デザイン175：ボス図鑑で、とくぎごとの勝った数をタップすると、そのとくぎのボスだけになる', async () => {
+  localStorage.clear()
+  const { BOSSES } = await import('./boss')
+  const { recordWin, saveBook } = await import('./bossbook')
+  const looks = Object.values(BOSSES)
+  const t0 = traitOf(looks[0].name)
+  const other = looks.find((l) => traitOf(l.name) !== t0)!
+  let b = recordWin({}, looks[0], 'A', '2026-10-01')
+  b = recordWin(b, other, 'A', '2026-10-02')
+  saveBook(b)
+  render(<BossBook />)
+  expect(document.querySelectorAll('.boss-book-list li.got')).toHaveLength(2)
+  fireEvent.click(screen.getByRole('button', { name: `${BOSS_TRAITS[t0].name}のボスだけ見る` }))
+  const got = [...document.querySelectorAll('.boss-book-list li.got .badge-name')].map((e) => e.textContent)
+  expect(got).toEqual([looks[0].name])
+})
