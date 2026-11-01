@@ -1970,6 +1970,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'May I (A) lend (B) your dictionary (C) for (D) a moment?', choices: ['(A) lend', '(B) your dictionary', '(C) for', '(D) a moment?'], answer: 0, why: '「借りる」は borrow：May I borrow。' },
     ],
   },
+  {
+    id: 'exam-error-prep3',
+    title: '入試の正誤問題〈84〉（共通テストレベル：まぎらわしい前置詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'by（期限）／until（継続）、for（期間の長さ）／during（特定の期間）、within（以内に）、時刻は at・日付や曜日は on・月や年は in、by bus（冠詞なし）など。',
+    ],
+    examples: [
+      { en: 'Please hand in the report by Friday.', ja: '金曜日までにレポートを出してください。' },
+      { en: 'I waited for her until six.', ja: '私は6時まで彼女を待った。' },
+    ],
+    questions: [
+      { sentence: 'Please (A) hand in (B) the report (C) until (D) Friday.', choices: ['(A) hand in', '(B) the report', '(C) until', '(D) Friday'], answer: 2, why: '期限「金曜日までに」は by。' },
+      { sentence: 'I (A) waited (B) for her (C) by (D) six, but she never came.', choices: ['(A) waited', '(B) for her', '(C) by', '(D) six, but she never came'], answer: 2, why: '継続「6時までずっと」は until。' },
+      { sentence: 'He (A) stayed (B) in London (C) during (D) three weeks.', choices: ['(A) stayed', '(B) in London', '(C) during', '(D) three weeks'], answer: 2, why: '期間の長さには for：for three weeks。' },
+      { sentence: 'We (A) visited (B) our aunt (C) for (D) the summer vacation.', choices: ['(A) visited', '(B) our aunt', '(C) for', '(D) the summer vacation'], answer: 2, why: '特定の期間の間は during the summer vacation。' },
+      { sentence: 'The meeting (A) starts (B) on (C) 3 p.m. (D) tomorrow.', choices: ['(A) starts', '(B) on', '(C) 3 p.m', '(D) tomorrow'], answer: 1, why: '時刻には at：at 3 p.m.。' },
+      { sentence: '(A) My birthday (B) is (C) in (D) May 5.', choices: ['(A) My birthday', '(B) is', '(C) in', '(D) May 5'], answer: 2, why: '日付には on：on May 5。' },
+      { sentence: 'She (A) was born (B) on (C) 2010 (D) in Osaka.', choices: ['(A) was born', '(B) on', '(C) 2010', '(D) in Osaka'], answer: 1, why: '年には in：in 2010。' },
+      { sentence: 'I (A) usually (B) go to school (C) by (D) a bus.', choices: ['(A) usually', '(B) go to school', '(C) by', '(D) a bus'], answer: 3, why: '交通手段の by には冠詞をつけない：by bus。' },
+      { sentence: '(A) In Monday morning, we (B) had (C) a test (D) in math.', choices: ['(A) In Monday morning, we', '(B) had', '(C) a test', '(D) in math'], answer: 0, why: '曜日のついた朝には on：On Monday morning。' },
+      { sentence: 'You (A) must finish (B) the test (C) until (D) 30 minutes.', choices: ['(A) must finish', '(B) the test', '(C) until', '(D) 30 minutes'], answer: 2, why: '「30分以内に」は within 30 minutes。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
