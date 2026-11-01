@@ -3426,6 +3426,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Seldom [the city is] this quiet on a Saturday night.', choices: ['is the city', 'the city was being', 'does the city', 'the city does be'], answer: 0, why: 'Seldom が文頭に出ると倒置。be 動詞の文は be 動詞＋主語：Seldom is the city。' },
     ],
   },
+  {
+    id: 'exam-fix-79',
+    title: '入試の誤文訂正〈79〉（共通テストレベル：使役動詞と知覚動詞）',
+    points: ['make・let・have 人 ＋動詞の原形（～させる）、get 人 to ～、have 物 ＋過去分詞（～してもらう）、see・hear・watch・feel 人 ＋原形（～するのを見る）／＋～ing（～しているところを見る）、受け身では be made to ～（to が必要）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' }],
+    questions: [
+      { sentence: 'My mother made me [to clean] my room.', choices: ['clean', 'cleaning', 'cleaned', 'to cleaning'], answer: 0, why: 'make 人 ＋動詞の原形：made me clean。' },
+      { sentence: 'My father let me [to use] his camera.', choices: ['use', 'using', 'used', 'uses'], answer: 0, why: 'let 人 ＋動詞の原形：let me use。' },
+      { sentence: 'I had my brother [to carry] the heavy box.', choices: ['carry', 'carried', 'carrying to', 'carries'], answer: 0, why: 'have 人 ＋動詞の原形：had my brother carry。' },
+      { sentence: 'I got my friend [help] me with my homework.', choices: ['to help', 'helped', 'helping to', 'helps'], answer: 0, why: 'get 人 ＋ to 不定詞：got my friend to help。' },
+      { sentence: 'I had my hair [cutting] by a famous stylist.', choices: ['cut', 'to cut', 'cutted', 'to be cutting'], answer: 0, why: 'have 物 ＋過去分詞「物を～してもらう」：had my hair cut。cut の過去分詞は cut。' },
+      { sentence: 'I had my bike [repair] at the shop yesterday.', choices: ['repaired', 'repairing', 'to repair', 'repairs'], answer: 0, why: 'have 物 ＋過去分詞「物を～してもらう」：had my bike repaired。' },
+      { sentence: 'I saw a man [to enter] the building.', choices: ['enter', 'entered', 'to entering', 'enters'], answer: 0, why: 'see 人 ＋動詞の原形「人が～するのを見る」：saw a man enter。' },
+      { sentence: 'I heard someone [to call] my name.', choices: ['call', 'to calling', 'called to', 'calls'], answer: 0, why: 'hear 人 ＋動詞の原形（または ～ing）：heard someone call。' },
+      { sentence: 'He was made [clean] the classroom by the teacher.', choices: ['to clean', 'cleaning', 'cleaned', 'clean to'], answer: 0, why: '使役の make を受け身にすると to が必要：was made to clean。' },
+      { sentence: 'I felt the ground [to shake] during the earthquake.', choices: ['shake', 'shaken', 'to shaking', 'shakes'], answer: 0, why: 'feel 物 ＋動詞の原形（または ～ing）：felt the ground shake。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
