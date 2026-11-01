@@ -3132,6 +3132,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She said that she [can] swim when she was five.', choices: ['could', 'can be', 'will', 'may'], answer: 0, why: '主節が過去なので can は could にずらす。' },
     ],
   },
+  {
+    id: 'exam-fix-72',
+    title: '入試の誤文訂正〈72〉（TOEFL・IELTS の書き言葉：並列）',
+    points: ['and・or・but や both A and B・not only A but also B・either A or B でつなぐものは、同じ形（名詞なら名詞、動名詞なら動名詞、to 不定詞なら to 不定詞）にそろえる。エッセイでよく問われる並列のきまり。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She likes reading, swimming, and cooking.', ja: '彼女は読書と水泳と料理が好きだ。' }],
+    questions: [
+      { sentence: 'She likes reading, swimming, and [to cook].', choices: ['cooking', 'cook', 'cooked', 'cooks'], answer: 0, why: 'reading・swimming と同じ動名詞にそろえて cooking。' },
+      { sentence: 'The job requires patience, creativity, and [being honest].', choices: ['honesty', 'honest', 'to be honesty', 'honestly'], answer: 0, why: 'patience・creativity と同じ名詞にそろえて honesty。' },
+      { sentence: 'He wants to travel abroad and [learning] a new language.', choices: ['learn', 'learned', 'to learning', 'learns'], answer: 0, why: 'to travel と並べるので（to）learn。to のあとの原形にそろえる。' },
+      { sentence: 'The city is famous not only for its food but also [its] history.', choices: ['for its', 'by its', 'its own', 'with its'], answer: 0, why: 'not only for A but also for B と、前置詞 for もそろえる。' },
+      { sentence: 'You can pay either by cash or [credit card].', choices: ['by credit card', 'credit carding', 'with credit cards of', 'to credit card'], answer: 0, why: 'either by A or by B と、by もそろえる。' },
+      { sentence: 'The new system is faster, cheaper, and [more easy] to use.', choices: ['easier', 'easy', 'most easy', 'more easier'], answer: 0, why: 'faster・cheaper と同じ比較級にそろえる。easy の比較級は easier。' },
+      { sentence: 'Students should read carefully, think critically, and [writing] clearly.', choices: ['write', 'to writing', 'written', 'writes'], answer: 0, why: 'should のあとの read・think と同じ原形にそろえて write。' },
+      { sentence: 'Exercise is good both for the body and [the mind].', choices: ['for the mind', 'to the mind', 'mind of', 'the minds for'], answer: 0, why: 'both for A and for B と、前置詞 for をそろえる。' },
+      { sentence: 'I prefer walking to work rather than [to drive].', choices: ['driving', 'drive', 'drove', 'to driving'], answer: 0, why: 'walking と同じ動名詞にそろえて rather than driving。' },
+      { sentence: 'The report was long, detailed, and [it was interesting].', choices: ['interesting', 'interest', 'interestingly', 'it interested'], answer: 0, why: 'long・detailed と同じ形容詞にそろえて interesting。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
