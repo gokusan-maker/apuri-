@@ -24220,6 +24220,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Why Everything Takes Longer', 'How to Build a Bridge', 'The Fastest Way to the Station', 'Why Students Dislike Homework'], answer: 0, why: '全体として、作業がいつも予想より長くかかる「計画の誤謬」の理由と対策を述べている。' },
   },
   {
+    id: 'kyotsu-shinkansen',
+    title: 'The Train That Changed Travel',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In October 1964, just before the Tokyo Olympic Games opened, a new kind of train began running between Tokyo and Osaka. Called the Shinkansen, it could travel at more than 200 kilometers per hour, making it the fastest train in the world at the time. The journey, which had previously taken more than six hours, was cut to about four. Today, high-speed rail networks connect cities in many countries, but the Shinkansen is still regarded as one of the most important transport innovations of the twentieth century.",
+      "The decision to build the line was not easy. In the 1950s, many experts believed that railways had no future. In countries such as the United States, cars and airplanes were rapidly replacing trains, and some people in Japan argued that the money should be spent on highways instead. Supporters of the project, however, pointed out that the route between Tokyo and Osaka was one of the most crowded in the world, and that a fast, reliable train could carry far more passengers than roads or airports in such a densely populated region.",
+      "Building the line required solving many technical problems. To allow trains to run safely at high speed, engineers built a new track with gentle curves and no level crossings, so that cars and people could never block the way. They also developed a system ( A ) automatically controlled the speed of trains and stopped them if necessary. Because Japan has frequent earthquakes, later improvements included sensors that detect early signs of shaking and cut the power to the trains within seconds.",
+      "The Shinkansen quickly became known not only for its speed but also for its safety and punctuality. In its long history, no passenger has been killed in an accident caused by a train crash on the line. Trains usually arrive within a minute of the scheduled time, and cleaning crews can prepare a train for its next trip in just a few minutes. These achievements depend on careful maintenance and on workers ( B ) take great pride in their jobs.",
+      "The success of the Shinkansen influenced the world. Countries in Europe and Asia studied the Japanese system as they built their own high-speed networks. Today, as people search for ways to travel that produce less carbon dioxide than airplanes and cars, high-speed rail is attracting new attention. The story of the Shinkansen shows how a bold decision, supported by careful engineering, can shape the way people live and travel for generations, even at a time ( C ) many people doubted it would succeed.",
+    ],
+    ja: [
+      '1964年10月、東京オリンピックが開幕する直前に、新しい種類の列車が東京と大阪の間を走りはじめた。新幹線とよばれたその列車は時速200キロメートル以上で走ることができ、当時世界で最も速い列車だった。それまで6時間以上かかっていた旅は、約4時間にちぢまった。今日、高速鉄道の路線網は多くの国の都市を結んでいるが、新幹線は今でも20世紀の最も大切な交通の革新のひとつとみなされている。',
+      'この路線を作るという決定はかんたんではなかった。1950年代、多くの専門家は鉄道に未来はないと考えていた。アメリカのような国では車や飛行機がどんどん列車にとってかわっており、日本でも、そのお金はかわりに高速道路に使うべきだと主張する人がいた。しかし計画を支持する人々は、東京と大阪の間は世界で最も混み合う区間のひとつであり、これほど人口の密集した地域では、速くて信頼できる列車なら道路や空港よりはるかに多くの乗客を運べると指摘した。',
+      '路線を作るには、多くの技術的な問題を解決する必要があった。列車が高速で安全に走れるよう、技術者たちはゆるやかなカーブで踏切のない新しい線路を作り、車や人が決して道をふさがないようにした。また、列車の速度を自動で制御し、必要なら止めるしくみも開発した。日本は地震が多いので、のちの改良では、ゆれの初期のきざしを感知して数秒のうちに列車への電気を止めるセンサーも取り入れられた。',
+      '新幹線はすぐに、速さだけでなく安全さと時間の正確さでも知られるようになった。その長い歴史の中で、この路線では列車の衝突による事故で亡くなった乗客は一人もいない。列車はふつう予定時刻の1分以内に到着し、清掃のスタッフはほんの数分で列車を次の運行に向けて準備できる。こうした成果は、ていねいな整備と、自分の仕事に大きなほこりをもつ働き手たちにささえられている。',
+      '新幹線の成功は世界に影響をあたえた。ヨーロッパやアジアの国々は、自分たちの高速鉄道網を作るときに日本のしくみを研究した。今日、人々が飛行機や車より二酸化炭素を出さない移動の方法をさがす中で、高速鉄道は新たに注目を集めている。新幹線の話は、多くの人が成功を疑っていた時代でさえ、ていねいな技術にささえられた大たんな決定が、何世代にもわたって人々のくらしと移動のしかたを形づくりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a system を受け、controlled の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '先行詞 workers（人）を受け、take の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['when', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a time（時）で、うしろの many people doubted it would succeed は完全な文なので関係副詞 when。' },
+    ],
+    tf: [
+      { statement: '新幹線は、東京オリンピックの直前に走りはじめた。', answer: true, why: '第1段落 In October 1964, just before the Tokyo Olympic Games opened, a new kind of train began running。' },
+      { statement: '1950年代には、ほとんどの専門家が鉄道に明るい未来があると考えていた。', answer: false, why: '第2段落 many experts believed that railways had no future。' },
+      { statement: '新幹線の線路には踏切がない。', answer: true, why: '第3段落 a new track with gentle curves and no level crossings。' },
+      { statement: '新幹線の列車は、予定よりおくれて着くことがほとんどである。', answer: false, why: '第4段落 Trains usually arrive within a minute of the scheduled time。' },
+    ],
+    qa: [
+      { q: 'Why did supporters believe a fast train was needed between Tokyo and Osaka?', choices: ['The route was very crowded and a train could carry many more passengers.', 'There were no roads between the cities.', 'Airplanes were not allowed in Japan.', 'Trains were cheaper to build than bicycles.'], answer: 0, why: '第2段落 the route between Tokyo and Osaka was one of the most crowded in the world, and that a fast, reliable train could carry far more passengers。' },
+      { q: 'What do sensors on the Shinkansen do?', choices: ['Detect early signs of earthquakes and cut the power to trains.', 'Count the number of passengers.', 'Clean the trains automatically.', 'Play music for passengers.'], answer: 0, why: '第3段落 sensors that detect early signs of shaking and cut the power to the trains within seconds。' },
+    ],
+    gist: [
+      { para: 1, choices: ['新幹線を作るという決定をめぐる議論', '高速道路の作り方', 'アメリカの車の歴史', '空港の大きさ'], answer: 0, why: '第2段落は、鉄道に未来はないという意見と、計画を支持する意見を述べている。' },
+      { para: 3, choices: ['安全さと時間の正確さ', '清掃の道具', '切符の値段', '駅弁の種類'], answer: 0, why: '第4段落は、死亡事故がなく、時間に正確で、働き手のほこりにささえられていることを述べている。' },
+    ],
+    titleQ: { choices: ['The Train That Changed Travel', 'How to Build a Highway', 'The History of the Olympics', 'Why Airplanes Fly'], answer: 0, why: '全体として、移動のしかたを変えた新幹線の誕生とその成功・影響を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
