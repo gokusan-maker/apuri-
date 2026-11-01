@@ -22738,6 +22738,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Invisible Shield', 'How to Make a Compass', 'The Coldest Place on Earth', 'Why the Sun Is Hot'], answer: 0, why: '全体として、地球を守る目に見えない盾である磁場のしくみと働きを述べている。' },
   },
   {
+    id: 'kyotsu-endangered-languages',
+    title: 'When a Language Falls Silent',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "There are roughly seven thousand languages spoken in the world today, but they are not evenly shared. A small number of major languages, such as English, Chinese, and Spanish, are used by billions of people, while thousands of others have only a few speakers each. Linguists warn that a large proportion of the world's languages may disappear by the end of this century. When the last speaker of a language dies, a unique way of understanding the world disappears with them.",
+      "Why do languages become endangered? In most cases, the cause is not a sudden event but a gradual change across generations. When a community comes into contact with a larger and more powerful group, parents may decide that their children will have better opportunities if they speak the major language. Schools, television, and the internet often use only a few widely spoken languages, so young people grow up hearing their grandparents' language less and less. Eventually, a generation appears ( A ) can understand the old language but no longer speaks it.",
+      "Some people argue that the loss of small languages is not a serious problem, because a world with fewer languages would make communication easier. However, many linguists disagree. Each language contains knowledge ( B ) has been built up over centuries, including words for local plants, animals, and natural events. Some languages, for example, have detailed terms for different kinds of snow, sea ice, or medicinal plants, and this knowledge may be lost if the language disappears. Languages also carry stories, songs, and ways of thinking that are central to a community's identity.",
+      "Fortunately, there are signs of hope. In several parts of the world, communities have successfully revived languages that were close to disappearing. One well-known example is Hawaiian. By the 1980s, very few children spoke it, but parents and teachers started preschools in which young children were taught entirely in Hawaiian. Today, thousands of people can speak the language, and it is once again heard in schools and on the radio.",
+      "Technology can also help. Recordings, online dictionaries, and language-learning apps allow people to study endangered languages even if they live far from the communities ( C ) the languages are spoken. Still, experts agree that the most important factor is whether families and communities choose to use the language in everyday life. A language survives not because it is written down, but because people continue to speak it, sing in it, and pass it on to the next generation.",
+    ],
+    ja: [
+      '今日、世界ではおよそ7千の言語が話されているが、それは平等に分かち合われているわけではない。英語や中国語やスペイン語のような少数の大きな言語は何十億もの人に使われる一方、何千もの言語にはそれぞれ数人しか話し手がいない。言語学者は、世界の言語の大部分が今世紀の終わりまでに消えてしまうかもしれないと警告している。ある言語の最後の話し手が亡くなると、世界を理解するひとつだけの見方もいっしょに消えてしまう。',
+      'なぜ言語は消えそうになるのだろうか。ほとんどの場合、その原因は急なできごとではなく、世代をこえたゆるやかな変化である。ある地域の人々がより大きく力のある集団と接すると、親は、子どもが大きな言語を話せばよりよい機会をつかめると考えるかもしれない。学校やテレビやインターネットは、広く話される少数の言語しか使わないことが多いので、若い人は祖父母の言語を聞くことがどんどん少なくなっていく。やがて、古い言語を理解はできても、もう話さない世代があらわれる。',
+      '小さな言語が失われるのは深刻な問題ではない、言語が少ない世界のほうが伝え合いはかんたんになるからだ、と主張する人もいる。しかし多くの言語学者はそれに反対している。それぞれの言語には、何世紀もかけてきずかれてきた知識がふくまれており、その中には地元の植物や動物や自然のできごとを表すことばもある。たとえば、さまざまな種類の雪や海の氷や薬草をくわしく表すことばをもつ言語もあり、言語が消えればこうした知識も失われるかもしれない。言語はまた、地域の人々の個性の中心にある物語や歌や考え方も運んでいる。',
+      'さいわい、希望のきざしもある。世界のいくつかの場所では、消えかけていた言語を地域の人々がよみがえらせることに成功している。よく知られた例のひとつがハワイ語である。1980年代には、ハワイ語を話す子どもはごくわずかだったが、親と先生たちは、小さな子どもにすべてハワイ語で教える幼稚園を始めた。今では何千人もの人がこの言語を話せるようになり、学校やラジオでふたたび聞かれるようになった。',
+      '技術も役に立つ。録音やオンラインの辞書や語学アプリによって、人々はその言語が話されている地域から遠くに住んでいても、消えそうな言語を学ぶことができる。それでも専門家たちは、最も大切なのは、家族や地域が日々のくらしでその言語を使うことを選ぶかどうかだという点で意見が一致している。言語が生きのこるのは、書き残されるからではなく、人々が話し続け、その言語で歌い、次の世代に伝えていくからなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a generation を受け、can understand の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 knowledge を受け、has been built up の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the communities（場所）で、うしろの the languages are spoken は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '世界の言語は、話し手の数がほぼ同じである。', answer: false, why: '第1段落 they are not evenly shared。' },
+      { statement: '言語が消えそうになる原因は、多くの場合、世代をこえたゆるやかな変化である。', answer: true, why: '第2段落 the cause is not a sudden event but a gradual change across generations。' },
+      { statement: 'ハワイ語は、1980年代から話す人がさらにへり続けている。', answer: false, why: '第4段落 Today, thousands of people can speak the language。' },
+      { statement: '専門家は、言語が生きのこるには日々のくらしで使われることが最も大切だと考えている。', answer: true, why: '第5段落 the most important factor is whether families and communities choose to use the language in everyday life。' },
+    ],
+    qa: [
+      { q: 'Why might parents choose not to teach their children the old language?', choices: ['They think the major language will give their children better opportunities.', 'The old language is too easy.', 'Schools ban all languages.', 'Children cannot learn two languages.'], answer: 0, why: '第2段落 parents may decide that their children will have better opportunities if they speak the major language。' },
+      { q: 'How was Hawaiian revived?', choices: ['Preschools taught young children entirely in Hawaiian.', 'The government banned English.', 'Only old people used it on television.', 'It was written in a new alphabet.'], answer: 0, why: '第4段落 parents and teachers started preschools in which young children were taught entirely in Hawaiian。' },
+    ],
+    gist: [
+      { para: 2, choices: ['小さな言語にふくまれる知識と文化の価値', '雪のふり方', '薬の作り方', '地図の読み方'], answer: 0, why: '第3段落は、言語には地元の知識や物語や考え方がふくまれていることを述べている。' },
+      { para: 4, choices: ['言語が生きのこるために本当に必要なこと', 'アプリの値段', '辞書の作り方', 'ラジオの歴史'], answer: 0, why: '第5段落は、技術も役立つが、日々使われ伝えられることが最も大切だと述べている。' },
+    ],
+    titleQ: { choices: ['When a Language Falls Silent', 'How to Learn English Fast', 'The History of Hawaii', 'Why Snow Is White'], answer: 0, why: '全体として、言語が消えていく理由とその損失、よみがえらせる取り組みを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
