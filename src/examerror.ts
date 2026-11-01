@@ -3930,6 +3930,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She talks as if she [has seen] the accident herself, but she was not there.', choices: ['had seen', 'sees', 'will see', 'is seeing'], answer: 0, why: '過去の事実と反対のことを「まるで～したかのように」：as if ＋過去完了 had seen。' },
     ],
   },
+  {
+    id: 'exam-fix-91',
+    title: '入試の誤文訂正〈91〉（TOEFL・IELTS の書き言葉：前置詞のつく動詞）',
+    points: ['depend on（～による）、consist of（～からなる）、result in（～という結果になる）／result from（～から生じる）、account for（～を説明する・～をしめる）、contribute to（～に貢献する）、focus on、rely on、belong to など、エッセイでよく使う動詞と前置詞の組み合わせ。逆に discuss・reach・enter・approach は前置詞をつけない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The team consists of five members.', ja: 'そのチームは5人のメンバーからなる。' }],
+    questions: [
+      { sentence: 'The price depends [of] the size of the room.', choices: ['on', 'in', 'from', 'to'], answer: 0, why: '「～による」は depend on ～。' },
+      { sentence: 'The team consists [in] five members.', choices: ['of', 'on', 'with', 'by'], answer: 0, why: '「～からなる」は consist of ～。' },
+      { sentence: 'The heavy rain resulted [to] serious flooding.', choices: ['in', 'from', 'on', 'with'], answer: 0, why: '「～という結果になる」は result in ～。' },
+      { sentence: 'Many health problems result [in] a lack of sleep.', choices: ['from', 'to', 'of', 'at'], answer: 0, why: '原因「～から生じる」は result from ～。' },
+      { sentence: 'Young people account [to] about 20 percent of the population.', choices: ['for', 'of', 'in', 'on'], answer: 0, why: '「～をしめる」は account for ～。' },
+      { sentence: 'Her research contributed [for] the development of a new medicine.', choices: ['to', 'in', 'with', 'at'], answer: 0, why: '「～に貢献する」は contribute to ～。' },
+      { sentence: 'We discussed [about the problem] for an hour.', choices: ['the problem', 'on the problem', 'of the problem', 'with the problem'], answer: 0, why: 'discuss は他動詞なので前置詞をつけない：discussed the problem。' },
+      { sentence: 'The train reached [at Osaka] at noon.', choices: ['Osaka', 'to Osaka', 'in Osaka', 'for Osaka'], answer: 0, why: 'reach は他動詞なので前置詞をつけない：reached Osaka。' },
+      { sentence: 'This bag belongs [for] my sister.', choices: ['to', 'with', 'of', 'at'], answer: 0, why: '「～のものである」は belong to ～。' },
+      { sentence: 'Many students rely [to] their phones to check the time.', choices: ['on', 'in', 'with', 'from'], answer: 0, why: '「～にたよる」は rely on ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

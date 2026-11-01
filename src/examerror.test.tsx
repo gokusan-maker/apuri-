@@ -1317,3 +1317,10 @@ it('正誤問題〈97〉：仮定法の発展の単元が10問ある', async () 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) I were you,')
 })
+
+it('誤文訂正〈91〉：前置詞のつく動詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-91')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('on')
+})
