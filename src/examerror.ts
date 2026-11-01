@@ -2354,6 +2354,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The question (A) was easy (B) enough for (C) children (D) answering.', choices: ['(A) was easy', '(B) enough for', '(C) children', '(D) answering'], answer: 3, why: '～ enough for 人 to …：to answer。' },
     ],
   },
+  {
+    id: 'exam-error-review1',
+    title: '入試の正誤問題〈100〉（TOEFL・IELTS の書き言葉：まとめ問題②）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'これまでの書き言葉のまちがい（数えられない名詞、主語と動詞の一致、並列、語の形、つなぎのことば、代名詞の一致、前置詞のつく動詞、比較の言い方）をまぜた総まとめ。',
+    ],
+    examples: [
+      { en: 'Recent research shows that exercise improves memory.', ja: '最近の研究は、運動が記憶をよくすることを示している。' },
+      { en: 'The success of the project depends on good teamwork.', ja: '計画の成功はよいチームワークにかかっている。' },
+    ],
+    questions: [
+      { sentence: 'Recent (A) researches (B) show that (C) regular exercise (D) improves memory.', choices: ['(A) researches', '(B) show that', '(C) regular exercise', '(D) improves memory'], answer: 0, why: 'research は数えられない名詞：Recent research shows。' },
+      { sentence: 'The results (A) of the survey (B) was (C) surprising (D) to many experts.', choices: ['(A) of the survey', '(B) was', '(C) surprising', '(D) to many experts'], answer: 1, why: '主語の中心は results なので were。' },
+      { sentence: 'The program helps students (A) read faster, (B) think critically, and (C) writing (D) clearly.', choices: ['(A) read faster,', '(B) think critically, and', '(C) writing', '(D) clearly'], answer: 2, why: '並列なので write。' },
+      { sentence: 'The country (A) is facing (B) serious (C) economical (D) problems.', choices: ['(A) is facing', '(B) serious', '(C) economical', '(D) problems'], answer: 2, why: '「経済の」は economic。' },
+      { sentence: '(A) Despite the price (B) was high, (C) many people (D) bought it.', choices: ['(A) Despite the price', '(B) was high,', '(C) many people', '(D) bought it'], answer: 0, why: 'あとが主語＋動詞なので Although。' },
+      { sentence: 'The company (A) announced (B) their new policy (C) at the meeting (D) yesterday.', choices: ['(A) announced', '(B) their new policy', '(C) at the meeting', '(D) yesterday'], answer: 1, why: 'the company は単数：its new policy。' },
+      { sentence: 'The success (A) of the project (B) depends (C) of (D) good teamwork.', choices: ['(A) of the project', '(B) depends', '(C) of', '(D) good teamwork'], answer: 2, why: 'depend on。' },
+      { sentence: 'The population (A) of Tokyo (B) is larger (C) than (D) Osaka.', choices: ['(A) of Tokyo', '(B) is larger', '(C) than', '(D) Osaka'], answer: 3, why: 'than that of Osaka。' },
+      { sentence: 'There (A) is (B) several reasons (C) for (D) this change.', choices: ['(A) is', '(B) several reasons', '(C) for', '(D) this change'], answer: 0, why: 'several reasons は複数なので There are。' },
+      { sentence: 'We (A) discussed (B) about the problem (C) for (D) two hours.', choices: ['(A) discussed', '(B) about the problem', '(C) for', '(D) two hours'], answer: 1, why: 'discuss は前置詞なし：discussed the problem。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
