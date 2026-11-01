@@ -448,3 +448,19 @@ it('デザイン180：ランクSのボスがいなければ出さない', () => 
   render(<BossBook />)
   expect(screen.queryByLabelText(/ランクS/)).toBeNull()
 })
+
+it('デザイン182：ボス図鑑で、ランクSまであと何ランクかを出す', async () => {
+  const { saveBook } = await import('./bossbook')
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  const [a, b, c] = Object.values(BOSSES)
+  saveBook({
+    [a.name]: { wins: 1, best: 'S', look: a, first: '2026-10-01' },
+    [b.name]: { wins: 1, best: 'A', look: b, first: '2026-10-02' },
+    [c.name]: { wins: 1, best: 'B', look: c, first: '2026-10-03' },
+  })
+  render(<BossBook />)
+  expect(screen.getByLabelText('ランクSまであと1ランク').textContent).toBe('（Sまであと1ランク）')
+  expect(screen.getByLabelText('ランクSまであと2ランク')).toBeInTheDocument()
+  expect(screen.getAllByLabelText(/ランクSまであと/)).toHaveLength(2)
+})

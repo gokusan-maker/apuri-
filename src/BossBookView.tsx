@@ -151,6 +151,8 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               {e && (
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
+                  {/* デザイン182：ランクSまであと何ランクか */}
+                  {e.best !== 'S' && <span className="boss-book-to-s" aria-label={`ランクSまであと${e.best === 'A' ? 1 : 2}ランク`}>（Sまであと{e.best === 'A' ? 1 : 2}ランク）</span>}
                   {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}{times[b.name] < 60 && <strong className="speed-clear"> ⚡ スピードクリア</strong>}</>}
                   {fastest === b.name && <strong className="speed-clear" aria-label="いちばん早くたおしたボス"> ⚡最速</strong>}
                   {noMiss.includes(b.name) && <strong className="speed-clear"> ✨ ノーミス</strong>}
