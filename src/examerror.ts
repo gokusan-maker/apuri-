@@ -3174,6 +3174,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The report was long, detailed, and [it was interesting].', choices: ['interesting', 'interest', 'interestingly', 'it interested'], answer: 0, why: 'long・detailed と同じ形容詞にそろえて interesting。' },
     ],
   },
+  {
+    id: 'exam-fix-73',
+    title: '入試の誤文訂正〈73〉（共通テストレベル：不定詞と動名詞の使い分け）',
+    points: ['enjoy・finish・avoid・mind・give up のあとは動名詞、want・decide・hope・plan・refuse のあとは不定詞。stop ～ing（～するのをやめる）／stop to ～（～するために立ち止まる）、remember ～ing（～したのを覚えている）／remember to ～（わすれずに～する）、forget・try も意味が変わる。前置詞のあと・look forward to のあとは動名詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Remember to lock the door when you leave.', ja: '出かけるときはわすれずにドアのかぎをかけてね。' }],
+    questions: [
+      { sentence: 'I enjoyed [to talk] with my friends at the party.', choices: ['talking', 'talk', 'to talking', 'talked'], answer: 0, why: 'enjoy のあとは動名詞：enjoyed talking。' },
+      { sentence: 'She decided [studying] abroad next year.', choices: ['to study', 'study', 'studied', 'to studying'], answer: 0, why: 'decide のあとは不定詞：decided to study。' },
+      { sentence: 'He stopped [to smoke] for his health, and he has not smoked since.', choices: ['smoking', 'smoke', 'smoked', 'to smoking'], answer: 0, why: 'たばこを「やめた」のは stop ～ing。stop to ～ は「～するために立ち止まる」。' },
+      { sentence: 'Please remember [locking] the door when you leave.', choices: ['to lock', 'lock', 'locked', 'to locking'], answer: 0, why: 'これからすることを「わすれずに～する」は remember to ～。' },
+      { sentence: 'I will never forget [to meet] you for the first time in Kyoto.', choices: ['meeting', 'meet', 'met', 'to meeting'], answer: 0, why: '過去にしたことを「～したことをわすれない」は forget ～ing。' },
+      { sentence: 'I am looking forward to [see] you again.', choices: ['seeing', 'saw', 'be seen', 'have seen'], answer: 0, why: 'look forward to の to は前置詞なので動名詞：seeing。' },
+      { sentence: 'Would you mind [to open] the window?', choices: ['opening', 'open', 'opened', 'to opening'], answer: 0, why: 'mind のあとは動名詞：mind opening。' },
+      { sentence: 'He refused [answering] the question.', choices: ['to answer', 'answer', 'answered', 'to answering'], answer: 0, why: 'refuse のあとは不定詞：refused to answer。' },
+      { sentence: 'She is good at [draw] pictures of animals.', choices: ['drawing', 'drew', 'to draw', 'drawn'], answer: 0, why: '前置詞 at のあとは動名詞：good at drawing。' },
+      { sentence: 'We finished [to clean] the classroom before lunch.', choices: ['cleaning', 'clean', 'cleaned', 'to cleaning'], answer: 0, why: 'finish のあとは動名詞：finished cleaning。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
