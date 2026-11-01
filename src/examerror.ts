@@ -2628,6 +2628,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This essay has [discussed about] three main points.', choices: ['discussed', 'discussed on', 'discussing about', 'discuss about'], answer: 0, why: 'discuss は他動詞なので前置詞なしで目的語をとる：has discussed three main points。' },
     ],
   },
+  {
+    id: 'exam-fix-60',
+    title: '入試の誤文訂正〈60〉（国公立レベル：比較の総まとめ）',
+    points: ['最上級・比較級の正しい形（more や most と -er・-est を重ねない）、as ～ as、副詞の最上級 the fastest、fewer（数）と less（量）、the best ～ I have ever ～、比べるものをそろえる（mine）、one of the ＋最上級＋複数名詞など、比較のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Kyoto is one of the oldest cities in Japan.', ja: '京都は日本で最も古い都市の1つだ。' }],
+    questions: [
+      { sentence: 'This is the [most tallest] building in the city.', choices: ['tallest', 'more tall', 'most tall', 'tallest of'], answer: 0, why: 'tall の最上級は the tallest。most と -est を重ねない。' },
+      { sentence: 'She is [more smarter] than her brother.', choices: ['smarter', 'much smart', 'most smart', 'smartest'], answer: 0, why: 'smart の比較級は smarter。more と -er を重ねない。' },
+      { sentence: 'My bag is [heavy] than yours.', choices: ['heavier', 'more heavy', 'heaviest', 'the heavier'], answer: 0, why: 'than があるので比較級 heavier（y を i にかえて -er）。' },
+      { sentence: 'Tom is [so tall than] Ken.', choices: ['as tall as', 'as taller as', 'so taller than', 'tall as'], answer: 0, why: '「同じくらい～」は as ＋原級＋ as：as tall as。' },
+      { sentence: 'Of all the students, she runs [fast].', choices: ['the fastest', 'faster', 'more fast', 'fastly'], answer: 0, why: 'Of all ～（全員の中で）なので最上級 the fastest。' },
+      { sentence: 'This problem is [more easier] than that one.', choices: ['easier', 'much easy', 'easiest', 'the easier'], answer: 0, why: 'easy の比較級は easier。more と -er を重ねない。' },
+      { sentence: 'He has [less] friends than I do.', choices: ['fewer', 'little', 'lesser', 'few'], answer: 0, why: '数えられる名詞（friends）が「より少ない」ときは fewer。' },
+      { sentence: 'This is [the better] movie I have ever seen.', choices: ['the best', 'better', 'the most good', 'best of'], answer: 0, why: '「今まで見た中で最もよい」は the best ～ I have ever seen。' },
+      { sentence: 'Her English is better than [me].', choices: ['mine', 'I', 'my', 'myself'], answer: 0, why: '比べるのは「彼女の英語」と「私の英語」なので mine（= my English）。' },
+      { sentence: 'Kyoto is one of the oldest [city] in Japan.', choices: ['cities', 'city of', 'citys', 'of cities'], answer: 0, why: 'one of the ＋最上級＋複数名詞：one of the oldest cities。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
