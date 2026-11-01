@@ -24142,6 +24142,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Journey of Tofu', 'How to Make Cheese', 'The History of Buddhism', 'Why Soup Is Hot'], answer: 0, why: '全体として、とうふが東アジアから世界へ広まった旅とその魅力を述べている。' },
   },
   {
+    id: 'kyotsu-bag-fees',
+    title: 'A Few Yen for a Bag',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In 2020, stores in Japan began charging customers for plastic shopping bags. Before that, most supermarkets and convenience stores gave them away for free, and many people collected large numbers of bags at home. The new rule asked shoppers to pay a few yen for each bag. The amount was small, but the change was designed to encourage people to bring their own reusable bags and to think more carefully about the waste ( A ) they produce in daily life.",
+      "Japan was not the first country to introduce such a rule. Many countries in Europe, Africa, and Asia had already placed charges or bans on plastic bags. In some places, the effects were dramatic. After one country introduced a small fee, the number of plastic bags used dropped by more than eighty percent within a few years. Researchers explain that even a very small charge can change behavior, because it makes people stop and ask themselves whether they really need a bag.",
+      "Why are plastic bags considered such a problem? They are light and convenient, but most are used only once, often for just a few minutes. Afterward, many are thrown away, and some end up in rivers and oceans. Because plastic takes a very long time to break down, these bags can harm sea animals ( B ) mistake them for food or become trapped in them. Even when plastic bags are burned or buried, they add to the waste ( C ) cities must manage.",
+      "However, some experts point out that plastic bags are only a small part of the total plastic waste. Bottles, food packaging, and other single-use products make up a much larger share. They also note that alternatives are not always better for the environment. A cotton bag, for example, requires a large amount of water and energy to produce, so it must be reused many times before it becomes more environmentally friendly than a plastic bag. In other words, the real benefit comes not from the type of bag but from how often it is used.",
+      "For these reasons, many people see bag charges not as a complete solution but as a first step. By making people more aware of their habits, a small fee may lead them to reduce other kinds of waste as well, such as refusing unnecessary packaging or carrying their own water bottles. Changing a society's habits is never easy, but small changes in daily behavior, repeated by millions of people, can add up to a significant difference for the environment.",
+    ],
+    ja: [
+      '2020年、日本の店は客にレジ袋の代金を求めるようになった。それまでは、ほとんどのスーパーやコンビニがレジ袋を無料でくばっていて、家にたくさんの袋をためている人も多かった。新しいきまりでは、買い物客は袋1枚につき数円をはらうことになった。金額はわずかだったが、この変化は、人々が自分のくり返し使える袋を持ってきて、日々のくらしで出すごみについてよく考えるようにうながすことをねらっていた。',
+      'このようなきまりを取り入れたのは日本が最初ではなかった。ヨーロッパやアフリカやアジアの多くの国は、すでにレジ袋に料金をかけたり、禁止したりしていた。場所によっては、その効果はとても大きかった。ある国が少しの料金を取り入れたあと、使われるレジ袋の数は数年のうちに8割以上へった。研究者たちは、ごく少しの料金でも行動を変えうると説明している。料金があると、人は立ち止まって、本当に袋が必要かどうかを自分に問いかけるからである。',
+      'なぜレジ袋はそれほど問題だと考えられているのだろうか。レジ袋は軽くて便利だが、ほとんどは1回だけ、それもほんの数分しか使われない。そのあと多くはすてられ、川や海にたどり着くものもある。プラスチックは分解されるのにとても長い時間がかかるので、これらの袋は、えさとまちがえたり袋にからまったりする海の動物を傷つけることがある。レジ袋は燃やしたりうめたりしても、都市が処理しなければならないごみをふやすことになる。',
+      'しかし、レジ袋はプラスチックごみ全体のほんの一部にすぎないと指摘する専門家もいる。ペットボトルや食品の包装、そのほかの使いすての製品のほうがずっと大きな割合をしめている。また、かわりのものがいつも環境にやさしいとはかぎらないとも言う。たとえば、綿の袋は作るのに多くの水とエネルギーが必要なので、レジ袋より環境にやさしくなるまでには何度もくり返し使わなければならない。言いかえれば、本当の効果は袋の種類からではなく、どれだけ何度も使うかから生まれるのである。',
+      'こうした理由から、多くの人は、レジ袋の有料化を完全な解決策ではなく、最初の一歩と見ている。少しの料金で自分の習慣に気づくようになれば、いらない包装をことわったり、自分の水とうを持ち歩いたりするなど、ほかの種類のごみもへらすようになるかもしれない。社会の習慣を変えるのは決してかんたんではないが、何百万人もがくり返す日々の小さな行動の変化は、環境にとって大きなちがいにつながりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the waste を受け、produce の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'whose'], answer: 0, why: '先行詞 sea animals を受け、mistake の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the waste を受け、manage の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '2020年から、日本の店はレジ袋の代金を求めるようになった。', answer: true, why: '第1段落 In 2020, stores in Japan began charging customers for plastic shopping bags。' },
+      { statement: 'レジ袋に料金をかけたのは、日本が世界で最初だった。', answer: false, why: '第2段落 Japan was not the first country to introduce such a rule。' },
+      { statement: 'レジ袋の多くは、ほんの数分しか使われない。', answer: true, why: '第3段落 most are used only once, often for just a few minutes。' },
+      { statement: '綿の袋は、1回使うだけでレジ袋より環境にやさしい。', answer: false, why: '第4段落 it must be reused many times before it becomes more environmentally friendly than a plastic bag。' },
+    ],
+    qa: [
+      { q: 'Why can even a very small charge change behavior?', choices: ['It makes people stop and ask whether they really need a bag.', 'It makes bags much heavier.', 'It makes stores close earlier.', 'It makes bags disappear from stores.'], answer: 0, why: '第2段落 it makes people stop and ask themselves whether they really need a bag。' },
+      { q: 'According to the passage, where does the real benefit come from?', choices: ['How often a bag is used.', 'The color of the bag.', 'The price of the bag.', 'The size of the store.'], answer: 0, why: '第4段落 the real benefit comes not from the type of bag but from how often it is used。' },
+    ],
+    gist: [
+      { para: 2, choices: ['レジ袋が問題とされる理由', '海の動物の種類', '都市の大きさ', 'ごみ収集の日'], answer: 0, why: '第3段落は、1回だけ使われて海を汚し、ごみをふやすレジ袋の問題を述べている。' },
+      { para: 3, choices: ['ほかの見方（レジ袋は一部にすぎないこと）', '綿の育て方', '包装のデザイン', 'ペットボトルの歴史'], answer: 0, why: '第4段落は、レジ袋はプラスチックごみの一部で、かわりの袋もいつもよいとはかぎらないという見方を述べている。' },
+    ],
+    titleQ: { choices: ['A Few Yen for a Bag', 'How to Make Cotton Bags', 'The History of Supermarkets', 'Why Oceans Are Salty'], answer: 0, why: '全体として、数円のレジ袋の料金がもつ意味と、その効果・限界を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
