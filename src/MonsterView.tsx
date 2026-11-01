@@ -1492,6 +1492,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="36" cy="68" rx="5" ry="7" fill="#c2410c" opacity="0.85" />
       </g>
     )
+  if (species === 'nuthatch')
+    return (
+      <g>
+        {/* 黒い目すじと、白いおなか */}
+        <path d="M38 40 L56 40" fill="none" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" />
+        <ellipse cx="50" cy="66" rx="9" ry="7" fill="#f8fafc" opacity="0.85" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
