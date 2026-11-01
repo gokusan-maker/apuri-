@@ -2210,6 +2210,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The idea (B) of students should (C) wear uniforms (D) is old-fashioned.', choices: ['(A) The idea', '(B) of students should', '(C) wear uniforms', '(D) is old-fashioned'], answer: 1, why: 'あとが完全な文なので同格の that：that students should。' },
     ],
   },
+  {
+    id: 'exam-error-passive5',
+    title: '入試の正誤問題〈94〉（TOEFL・IELTS の書き言葉：受け身の書き言葉）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'It is believed／said／thought that ～、be said to ～／be said to have ＋過去分詞、be expected to ～、be considered ～、be known for／as ～ など、書き言葉でよく使う受け身。',
+    ],
+    examples: [
+      { en: 'It is believed that the castle was built in the 1500s.', ja: 'その城は1500年代に建てられたと信じられている。' },
+      { en: 'The city is said to be the oldest in the country.', ja: 'その都市は国でいちばん古いと言われている。' },
+    ],
+    questions: [
+      { sentence: 'It (A) believes (B) that (C) the castle (D) was built in the 1500s.', choices: ['(A) believes', '(B) that', '(C) the castle', '(D) was built in the 1500s'], answer: 0, why: '「～と信じられている」は It is believed that。' },
+      { sentence: 'The city (A) says (B) to be (C) the oldest (D) in the country.', choices: ['(A) says', '(B) to be', '(C) the oldest', '(D) in the country'], answer: 0, why: '「～と言われている」は is said to be。' },
+      { sentence: 'The tower (A) is said (B) to be built (C) about (D) 500 years ago.', choices: ['(A) is said', '(B) to be built', '(C) about', '(D) 500 years ago'], answer: 1, why: '過去のことなので to have been built。' },
+      { sentence: 'The new bridge (A) is expected (B) opening (C) next (D) spring.', choices: ['(A) is expected', '(B) opening', '(C) next', '(D) spring'], answer: 1, why: 'be expected to ～：to open。' },
+      { sentence: 'Kyoto (A) is (B) known (C) by (D) its many old temples.', choices: ['(A) is', '(B) known', '(C) by', '(D) its many old temples'], answer: 2, why: '「～で有名だ」は be known for。' },
+      { sentence: 'He (A) is (B) known (C) for a great scientist (D) all over the world.', choices: ['(A) is', '(B) known', '(C) for a great scientist', '(D) all over the world'], answer: 2, why: '「～として知られている」は known as a great scientist。' },
+      { sentence: 'Exercise (A) is (B) considering (C) good for (D) both body and mind.', choices: ['(A) is', '(B) considering', '(C) good for', '(D) both body and mind'], answer: 1, why: 'be considered ～「～と考えられている」：considered。' },
+      { sentence: 'Many old buildings (A) were (B) destroying (C) by (D) the earthquake.', choices: ['(A) were', '(B) destroying', '(C) by', '(D) the earthquake'], answer: 1, why: '受け身は be ＋過去分詞：destroyed。' },
+      { sentence: 'The results (A) will (B) announce (C) next week (D) on the website.', choices: ['(A) will', '(B) announce', '(C) next week', '(D) on the website'], answer: 1, why: '未来の受け身：will be announced。' },
+      { sentence: 'It (A) is thought (B) that sleep (C) helps us (D) remembering what we learned.', choices: ['(A) is thought', '(B) that sleep', '(C) helps us', '(D) remembering what we learned'], answer: 3, why: 'help 人 ＋原形：helps us remember。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
