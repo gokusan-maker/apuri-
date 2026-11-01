@@ -24571,6 +24571,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How to Wear a Kimono Correctly', 'The History of Japanese Factories', 'Fireworks Festivals in Summer', 'From Everyday Clothing to Special Wear'], answer: 3, why: '全体として、ふだんの服だった着物が特別な機会の服になり、今も形を変えて受けつがれていることを述べている。' },
   },
   {
+    id: 'kyotsu-microscope',
+    title: 'Seeing the Invisible',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "A drop of pond water looks clear and empty to the naked eye. Under a microscope, however, it turns into a busy world full of tiny creatures swimming, eating, and dividing. The microscope has allowed humans to see things that are far too small to notice in daily life, and in doing so, it has changed our understanding of living things, disease, and even the materials around us.",
+      "The first microscopes appeared in Europe around the end of the sixteenth century, when lens makers discovered that combining two lenses in a tube could make objects look much larger. In 1665, the English scientist Robert Hooke published a book full of detailed drawings of what he had seen through his microscope. When he looked at a thin slice of cork, he noticed many small boxes and called them \"cells,\" a word ( A ) is still used in biology today.",
+      "Not long afterward, a Dutch shopkeeper named Antonie van Leeuwenhoek made his own microscopes with a single, carefully shaped lens. His instruments were small but surprisingly powerful, and he became one of the first people to observe bacteria and other microorganisms. At first, many scholars found his reports hard to believe. Over time, however, the idea that the world is filled with invisible living things became widely accepted.",
+      "This discovery eventually had enormous effects on medicine. In the nineteenth century, scientists used improved microscopes to show that many diseases are caused by microorganisms. This knowledge led to better hygiene in hospitals, the development of vaccines, and later the use of antibiotics. Without the microscope, doctors might still believe that illness was caused by bad air ( B ) by an imbalance of fluids in the body.",
+      "Ordinary microscopes, which use light, have a limit. Because of the nature of light, they cannot clearly show objects much smaller than about one five-thousandth of a millimeter. To go beyond this limit, scientists in the 1930s developed the electron microscope, which uses a beam of electrons instead of light. Modern electron microscopes can show the shapes of viruses and even individual atoms. ( C ), researchers can now study the structure of new materials and medicines in remarkable detail. From a simple tube with two lenses to machines that reveal atoms, the microscope shows how a single invention can open up an entirely new view of the world.",
+    ],
+    ja: [
+      '池の水の1しずくは、肉眼ではすきとおっていて何もないように見える。しかし顕微鏡で見ると、それは、泳いだり食べたり分裂したりする小さな生き物でいっぱいの、にぎやかな世界に変わる。顕微鏡のおかげで、人間はふだんの生活では気づくにはあまりに小さいものを見られるようになった。そしてそうすることで、顕微鏡は、生き物や病気、さらには身のまわりの物質についての私たちの理解を変えてきたのである。',
+      '最初の顕微鏡は16世紀の終わりごろにヨーロッパにあらわれた。レンズ職人たちが、2枚のレンズを筒の中で組み合わせると物をずっと大きく見せられることを発見したのである。1665年、イギリスの科学者ロバート・フックは、顕微鏡で見たものをくわしくえがいた絵でいっぱいの本を出版した。コルクのうすい切れはしを見たとき、彼はたくさんの小さな箱に気づき、それを「細胞（セル）」とよんだ。この言葉は今でも生物学で使われている。',
+      'それからまもなく、アントニ・ファン・レーウェンフックというオランダの商人が、ていねいにみがいた1枚のレンズで自分の顕微鏡を作った。彼の道具は小さかったがおどろくほど性能がよく、彼は細菌などの微生物を観察した最初の人々のひとりになった。はじめのうち、多くの学者は彼の報告を信じがたいと思った。しかしやがて、世界は目に見えない生き物でいっぱいだという考えが広く受け入れられるようになった。',
+      'この発見は、やがて医学にとても大きな影響をあたえた。19世紀には、科学者たちが改良された顕微鏡を使って、多くの病気が微生物によって引き起こされることを示した。この知識は、病院での衛生の改善やワクチンの開発、そしてのちには抗生物質の使用につながった。顕微鏡がなければ、医者たちは今でも、病気は悪い空気や体の中の液体のつり合いのくずれによって起こると信じていたかもしれない。',
+      '光を使うふつうの顕微鏡には限界がある。光の性質のために、およそ5000分の1ミリメートルよりずっと小さいものははっきりと見せることができないのである。この限界をこえるために、1930年代に科学者たちは、光のかわりに電子のビームを使う電子顕微鏡を開発した。現代の電子顕微鏡は、ウイルスの形や、1つ1つの原子さえも見せることができる。その結果、研究者たちは今、新しい物質や薬のつくりをおどろくほどくわしく調べることができる。2枚のレンズを入れたかんたんな筒から原子を見せる機械まで、顕微鏡は、たった1つの発明が世界のまったく新しい見方を開きうることを示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'where', 'that', 'whose'], answer: 2, why: '先行詞 a word を受け、is used の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['or', 'so', 'but', 'nor'], answer: 0, why: 'by bad air と by an imbalance of fluids を「または」で並べるので or。' },
+      { id: 'C', choices: ['However', 'As a result', 'In the past', 'On the contrary'], answer: 1, why: '原子まで見られるようになった結果として、新しい物質や薬をくわしく調べられるので As a result。' },
+    ],
+    tf: [
+      { statement: '「細胞（セル）」という言葉は、フックがコルクを観察して使った。', answer: true, why: '第2段落 When he looked at a thin slice of cork ... called them "cells"。' },
+      { statement: 'レーウェンフックの報告は、はじめからすべての学者に信じられた。', answer: false, why: '第3段落 At first, many scholars found his reports hard to believe。' },
+      { statement: '19世紀には、多くの病気が微生物によって起こることが示された。', answer: true, why: '第4段落 scientists used improved microscopes to show that many diseases are caused by microorganisms。' },
+      { statement: '光を使う顕微鏡では、1つ1つの原子をはっきり見ることができる。', answer: false, why: '第5段落 光の顕微鏡には限界があり、原子を見せるのは電子顕微鏡。' },
+    ],
+    qa: [
+      { q: 'What did Leeuwenhoek use to make his microscopes?', choices: ['Two lenses in a long tube.', 'A beam of electrons.', 'A single, carefully shaped lens.', 'Thin slices of cork.'], answer: 2, why: '第3段落 made his own microscopes with a single, carefully shaped lens。' },
+      { q: 'Why was the electron microscope developed?', choices: ['To see objects smaller than light microscopes can show.', 'To make lenses cheaper.', 'To draw pictures of cork.', 'To clean hospitals.'], answer: 0, why: '第5段落 To go beyond this limit, scientists in the 1930s developed the electron microscope。' },
+    ],
+    gist: [
+      { para: 1, choices: ['最初の顕微鏡とフックの観察', 'イギリスの歴史', 'コルクの作り方', '本の売り方'], answer: 0, why: '第2段落は、最初の顕微鏡の誕生と、フックが「細胞」と名づけた観察を述べている。' },
+      { para: 3, choices: ['薬の値段', '病院の建て方', '顕微鏡が医学にあたえた影響', '空気のよごれ'], answer: 2, why: '第4段落は、微生物が病気の原因とわかり、衛生・ワクチン・抗生物質につながったことを述べている。' },
+    ],
+    titleQ: { choices: ['Seeing the Invisible', 'The Life of a Shopkeeper', 'How to Clean Pond Water', 'The History of Glass Bottles'], answer: 0, why: '全体として、目に見えないものを見せる顕微鏡の発展と、それが科学と医学を変えたことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
