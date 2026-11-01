@@ -1361,6 +1361,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="58" cy="44" r="2" fill="#fde047" />
       </g>
     )
+  if (species === 'merganser')
+    return (
+      <g>
+        {/* 頭のうしろのぼさぼさの羽と、赤く細いくちばし */}
+        <path d="M36 30 L28 24 M38 28 L32 20 M40 28 L38 18" fill="none" stroke="#052e16" strokeWidth="2" strokeLinecap="round" />
+        <path d="M58 44 L76 46" fill="none" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
