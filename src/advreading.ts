@@ -21490,6 +21490,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living Together', 'How to Buy a House', 'The History of Apartments', 'Why Rent Is Cheap'], answer: 0, why: '全体として、シェアハウスの利点と努力の必要、住まいについての考え方の変化を述べている。' },
   },
   {
+    id: 'kyotsu-carbon-footprint',
+    title: 'Our Carbon Footprints',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Almost everything we do in daily life uses energy, and much of that energy still comes from burning coal, oil, and gas. When these fuels are burned, they release carbon dioxide, a gas that traps heat in the atmosphere and contributes to climate change. The total amount of such gases produced by a person’s activities is often called their carbon footprint. Learning about it can help us understand how our everyday choices affect the planet.",
+      "A carbon footprint comes from many different sources. Transportation is one of the largest for many people, especially those who drive long distances or fly often. The energy used to heat, cool, and light our homes also adds to it. Less obviously, the things we buy have footprints of their own, because energy is needed to produce, package, and transport them. A product that travels thousands of kilometers before reaching a store, for example, may have a larger footprint than one ( A ) is made nearby.",
+      "Food is another important part of the picture. Some foods require much more energy, land, and water to produce than others. Studies suggest that producing beef, for instance, generally creates far more greenhouse gases than producing vegetables or grains. Wasting food also adds to our footprint, since all the energy used to grow and transport it is lost when it is thrown away.",
+      "The good news is that there are many ways to reduce our carbon footprints. Walking, cycling, or using public transportation instead of driving can make a significant difference. At home, turning off lights and devices when they are not in use, and choosing energy-efficient appliances, can save both energy and money. Eating more plant-based meals and buying only as much food as we need are other simple steps ( B ) many people can take.",
+      "Of course, individuals cannot solve climate change alone. Governments and companies also need to shift to cleaner sources of energy and design products that use less of it. Still, individual actions matter, both because they reduce emissions directly and because they can influence others. When many people change their habits, businesses and governments are more likely to respond. Understanding our carbon footprints is therefore a useful first step toward ( C ) the planet for future generations.",
+    ],
+    ja: [
+      '毎日の生活で私たちがすることのほとんどすべてはエネルギーを使い、そのエネルギーの多くは今も石炭や石油やガスを燃やすことから得られている。これらの燃料を燃やすと二酸化炭素が出る。それは大気の中に熱をとじこめ、気候変動の原因となる気体である。ある人の活動によって出るこうした気体の全体の量は、しばしばその人のカーボンフットプリントとよばれる。それについて学ぶことは、毎日の選択が地球にどう影響するかを理解するのに役立つ。',
+      'カーボンフットプリントは、さまざまな原因から生まれる。多くの人にとって、交通はその最も大きなものの1つであり、とくに長い距離を運転したり、よく飛行機に乗ったりする人はそうである。家をあたためたり冷やしたり照らしたりするのに使うエネルギーもそれを大きくする。あまり目立たないが、私たちが買う物にもそれぞれのフットプリントがある。それをつくり、包み、運ぶのにエネルギーが必要だからである。たとえば、店にとどくまでに何千キロも旅をする商品は、近くでつくられた商品よりもフットプリントが大きいかもしれない。',
+      '食べ物も大切な一部である。食べ物の中には、ほかのものよりつくるのにずっと多くのエネルギーや土地や水を必要とするものがある。研究によると、たとえば牛肉をつくると、ふつう野菜や穀物をつくるよりはるかに多くの温室効果ガスが出る。食べ物をむだにすることもフットプリントを大きくする。それを育てて運ぶのに使ったすべてのエネルギーが、すてられるときに失われるからである。',
+      'よい知らせは、カーボンフットプリントをへらす方法がたくさんあることである。車を運転するかわりに歩いたり、自転車に乗ったり、公共交通を使ったりすると、大きなちがいが生まれる。家では、使っていないときに電気や機器を消したり、省エネの家電を選んだりすると、エネルギーとお金の両方を節約できる。植物中心の食事をふやしたり、必要な分だけの食べ物を買ったりすることも、多くの人ができるかんたんな一歩である。',
+      'もちろん、個人だけで気候変動を解決することはできない。政府や会社も、よりきれいなエネルギー源に切りかえ、エネルギーをあまり使わない製品を設計する必要がある。それでも、個人の行動は大切である。排出を直接へらすからであり、またほかの人に影響をあたえうるからでもある。多くの人が習慣を変えれば、会社や政府もそれにこたえやすくなる。だから、自分のカーボンフットプリントを理解することは、将来の世代のために地球を守ることへの役に立つ第一歩なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '代名詞 one（= a product）を先行詞として受け、is made の主語になる関係代名詞 that。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 simple steps を受け、take の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'C', choices: ['protecting', 'protect', 'protected', 'to protecting'], answer: 0, why: 'toward は前置詞なので、うしろは動名詞 protecting。' },
+    ],
+    tf: [
+      { statement: '石炭や石油やガスを燃やすと、二酸化炭素が出る。', answer: true, why: '第1段落 When these fuels are burned, they release carbon dioxide。' },
+      { statement: '私たちが買う物には、カーボンフットプリントはない。', answer: false, why: '第2段落 the things we buy have footprints of their own。' },
+      { statement: '研究によると、牛肉をつくると、野菜をつくるよりふつう多くの温室効果ガスが出る。', answer: true, why: '第3段落 producing beef ... generally creates far more greenhouse gases than producing vegetables or grains。' },
+      { statement: '筆者は、個人の行動には意味がないと述べている。', answer: false, why: '第5段落 Still, individual actions matter。' },
+    ],
+    qa: [
+      { q: 'Why does wasting food add to our carbon footprint?', choices: ['The energy used to grow and transport it is lost.', 'Food produces gas in the refrigerator.', 'Waste makes stores sell more.', 'People eat less meat.'], answer: 0, why: '第3段落 all the energy used to grow and transport it is lost when it is thrown away。' },
+      { q: 'Why are businesses and governments more likely to respond, according to the author?', choices: ['Many people change their habits.', 'Food becomes cheaper.', 'People stop buying anything.', 'Cars become faster.'], answer: 0, why: '第5段落 When many people change their habits, businesses and governments are more likely to respond。' },
+    ],
+    gist: [
+      { para: 1, choices: ['カーボンフットプリントの原因', '飛行機の歴史', '商品の値段', '店の場所'], answer: 0, why: '第2段落は、交通、家庭のエネルギー、買う物というフットプリントの原因を述べている。' },
+      { para: 3, choices: ['フットプリントをへらす方法', '電気代のはらい方', '自転車の選び方', '家電の作り方'], answer: 0, why: '第4段落は、交通・家庭・食事でできる具体的なへらし方を述べている。' },
+    ],
+    titleQ: { choices: ['Our Carbon Footprints', 'How to Drive Safely', 'The History of Coal', 'Why Beef Is Popular'], answer: 0, why: '全体として、カーボンフットプリントとは何か、その原因、へらす方法と個人の行動の意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
