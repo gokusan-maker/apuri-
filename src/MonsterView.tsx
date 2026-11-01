@@ -1337,6 +1337,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 42 L70 42 M58 46 L78 48" fill="none" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'petrel')
+    return (
+      <g>
+        {/* こしの白いもようと、水をける細い足 */}
+        <path d="M40 74 Q50 80 60 74" fill="none" stroke="#f8fafc" strokeWidth="3" strokeLinecap="round" />
+        <path d="M46 88 L44 98 M54 88 L56 98" fill="none" stroke="#0c0a09" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
