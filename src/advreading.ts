@@ -23557,6 +23557,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Learning Beyond the Classroom', 'How to Paint a Picture', 'The History of Dinosaurs', 'Why Tests Are Important'], answer: 0, why: '全体として、教室の外で学ぶ校外学習の効果と、その意義を述べている。' },
   },
   {
+    id: 'kyotsu-animal-tools',
+    title: 'Clever Tool Users',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For a long time, the use of tools was considered one of the features that made humans unique. People believed that only our species had the intelligence to shape objects and use them to solve problems. In the 1960s, however, a young researcher studying chimpanzees in Africa observed something remarkable. A chimpanzee picked up a thin stick, removed its leaves, and pushed it into a termite mound. When it pulled the stick out, it was covered with termites, which the chimpanzee happily ate.",
+      "This observation shocked many scientists, because it showed that chimpanzees not only used tools but also made them. Since then, researchers have discovered tool use in a surprising variety of animals. Some chimpanzees use stones as hammers to crack open hard nuts, placing the nut on a flat rock and hitting it carefully. Young chimpanzees learn this skill by watching older members of their group, and it can take them several years to master it.",
+      "Tool use is not limited to animals ( A ) are closely related to humans. Sea otters float on their backs and use stones to break open shellfish on their chests. Some dolphins in Australia carry sea sponges on their noses to protect them while they search for food on the rough sea floor. Certain crows can bend pieces of wire into hooks to pull food out of narrow spaces, and in experiments, some have even solved puzzles ( B ) required using several tools in the correct order.",
+      "These discoveries have changed the way scientists think about intelligence. Instead of seeing intelligence as something that only humans possess, many researchers now believe that different species have developed different kinds of intelligence to suit their environments. A crow does not have a large brain like a chimpanzee, but it may be just as clever at solving certain kinds of problems. This suggests that intelligence can evolve in many different ways.",
+      "Studying tool use in animals also raises questions about culture. In some chimpanzee groups, individuals use sticks to catch termites, while in others they do not, even though termites are available. Because these differences are passed on from one generation to the next through learning, some scientists describe them as a form of animal culture. Unfortunately, as forests disappear and animal populations shrink, these local traditions may be lost forever. Protecting wild animals, then, also means protecting the knowledge ( C ) they have built up over many generations.",
+    ],
+    ja: [
+      '長い間、道具を使うことは人間を特別なものにしている特徴のひとつだと考えられていた。物を形づくり、それを使って問題を解決する知能をもっているのは私たちの種だけだと信じられていたのである。しかし1960年代、アフリカでチンパンジーを研究していた若い研究者が、おどろくべきことを目にした。1頭のチンパンジーが細い枝をひろい、葉を取りのぞいて、シロアリの塚におしこんだのである。枝を引きぬくと、そこにはシロアリがいっぱいついていて、チンパンジーはそれをうれしそうに食べた。',
+      'この観察は多くの科学者に衝撃をあたえた。チンパンジーが道具を使うだけでなく、作ってもいることを示したからである。それ以来、研究者たちはおどろくほどさまざまな動物で道具の使用を発見してきた。かたい木の実をわるのに石をハンマーとして使うチンパンジーもいて、木の実を平らな岩にのせ、注意深くたたく。若いチンパンジーは群れの年上のなかまを見てこの技を学び、身につけるまでに何年もかかることがある。',
+      '道具の使用は、人間に近いなかまの動物だけに限られるわけではない。ラッコはあおむけにうかび、胸の上で石を使って貝をわる。オーストラリアのイルカの中には、ざらざらした海底でえさをさがす間、鼻を守るために海綿を鼻にのせて運ぶものもいる。ある種のカラスは針金を曲げてかぎにし、せまいすきまから食べ物を引き出すことができ、実験では、いくつかの道具を正しい順番で使う必要のあるパズルを解いたカラスさえいた。',
+      'こうした発見は、科学者の知能についての考え方を変えてきた。知能を人間だけがもつものと見るのではなく、多くの研究者は今、ちがう種がそれぞれの環境に合ったちがう種類の知能を発達させてきたと考えている。カラスはチンパンジーのような大きな脳をもっていないが、ある種の問題を解くことにかけては同じくらいかしこいかもしれない。これは、知能がさまざまな形で進化しうることを示している。',
+      '動物の道具の使用を研究すると、文化についての疑問も生まれる。チンパンジーの群れの中には、シロアリをとるのに枝を使う群れもあれば、シロアリがいても使わない群れもある。こうしたちがいは学習を通じて世代から世代へ受けつがれるので、それを動物の文化の一種だと考える科学者もいる。残念なことに、森が消え、動物の数がへるにつれて、こうした地域の伝統は永遠に失われるかもしれない。だから、野生の動物を守ることは、彼らが何世代にもわたってきずいてきた知恵を守ることでもあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 animals を受け、are の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 puzzles を受け、required の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the knowledge を受け、have built up の目的語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '1960年代、チンパンジーが枝を使ってシロアリをとるのが観察された。', answer: true, why: '第1段落 A chimpanzee picked up a thin stick ... pushed it into a termite mound。' },
+      { statement: '若いチンパンジーは、木の実をわる技をすぐに身につける。', answer: false, why: '第2段落 it can take them several years to master it。' },
+      { statement: 'ラッコは胸の上で石を使って貝をわる。', answer: true, why: '第3段落 Sea otters ... use stones to break open shellfish on their chests。' },
+      { statement: 'チンパンジーのすべての群れが、シロアリをとるのに枝を使う。', answer: false, why: '第5段落 In some chimpanzee groups, individuals use sticks to catch termites, while in others they do not。' },
+    ],
+    qa: [
+      { q: 'Why do some dolphins carry sea sponges on their noses?', choices: ['To protect them while searching for food on the rough sea floor.', 'To catch more fish at once.', 'To play with other dolphins.', 'To clean the water.'], answer: 0, why: '第3段落 carry sea sponges on their noses to protect them while they search for food on the rough sea floor。' },
+      { q: 'Why do some scientists describe differences between chimpanzee groups as culture?', choices: ['They are passed on through learning from one generation to the next.', 'They are caused by the weather.', 'They depend on the size of the brain.', 'They happen only once.'], answer: 0, why: '第5段落 Because these differences are passed on from one generation to the next through learning。' },
+    ],
+    gist: [
+      { para: 2, choices: ['いろいろな動物の道具の使い方', 'カラスの巣', '海の深さ', '針金の作り方'], answer: 0, why: '第3段落は、ラッコ・イルカ・カラスなど、さまざまな動物の道具の使用を述べている。' },
+      { para: 3, choices: ['知能についての考え方の変化', '脳の重さ', '人間の歴史', '学校の成績'], answer: 0, why: '第4段落は、種ごとにちがう知能が進化してきたという新しい考え方を述べている。' },
+    ],
+    titleQ: { choices: ['Clever Tool Users', 'How to Build a Hammer', 'The Life of Termites', 'Why Otters Sleep on Water'], answer: 0, why: '全体として、道具を使う動物の発見と、それが知能や文化の考え方を変えたことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
