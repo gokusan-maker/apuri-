@@ -24337,6 +24337,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Reading Just for Fun', 'How to Pass a Reading Test', 'The History of Libraries', 'Why Comics Are Bad'], answer: 0, why: '全体として、楽しみのための読書の利点と、それを育てる取り組みを述べている。' },
   },
   {
+    id: 'kyotsu-asteroid-defense',
+    title: 'Protecting the Earth from Space Rocks',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "About 66 million years ago, a huge rock from space struck the Earth near what is now Mexico. The impact caused fires, giant waves, and a long period of darkness and cold, and it is widely believed to have contributed to the extinction of the dinosaurs. Such large impacts are extremely rare, but smaller asteroids still pass close to our planet, and some scientists believe that it is only a matter of time before another dangerous object comes our way.",
+      "Asteroids are rocky objects that orbit the Sun, most of them in a region between Mars and Jupiter. Some, however, travel on paths that bring them near the Earth. Astronomers call these near-Earth objects, and they have been searching for them with telescopes for decades. Thousands have now been found and tracked. Fortunately, none of the large ones ( A ) have been discovered so far is expected to hit the Earth in the next hundred years, but many smaller objects remain undetected.",
+      "What could people do if a dangerous asteroid were found on a collision course? One idea is to push it slightly off its path. Because space is so large, even a very small change in an asteroid's speed, if made early enough, could cause it to miss the Earth completely. In 2022, a spacecraft launched by NASA deliberately crashed into a small asteroid to test this idea. Measurements afterward showed that the impact had changed the asteroid's orbit more than scientists had expected, proving that this kind of defense might really work.",
+      "Other methods have also been proposed. Some scientists have suggested using the gentle pull of gravity from a spacecraft flying alongside an asteroid for many years, or heating part of its surface so that escaping gas pushes it in a new direction. Each method has advantages and limits, and all of them depend on discovering the danger years or even decades in advance. For this reason, many experts believe that the most important task is to improve our ability to find objects ( B ) could threaten the Earth.",
+      "Planetary defense, as this field is called, is a rare example of a problem ( C ) affects every country equally. No nation could solve it alone, and international organizations now share information about near-Earth objects and plan how they would respond. While the chance of a major impact in our lifetime is very small, the possible consequences are so serious that preparing for them is a reasonable investment. In this sense, studying asteroids is not only about understanding the universe but also about protecting our future.",
+    ],
+    ja: [
+      '約6600万年前、宇宙から来た巨大な岩が、今のメキシコの近くで地球にぶつかった。その衝突は火事や巨大な波、そして長い暗くて寒い期間をひき起こし、恐竜の絶滅の原因のひとつになったと広く考えられている。このような大きな衝突はきわめてまれだが、もっと小さな小惑星は今でも地球の近くを通りすぎており、また危険な天体がやってくるのは時間の問題だと考える科学者もいる。',
+      '小惑星は太陽のまわりを回る岩の天体で、そのほとんどは火星と木星の間の領域にある。しかし中には、地球の近くにやってくる道すじを通るものもある。天文学者はこれらを地球近傍天体とよび、何十年も望遠鏡でさがし続けてきた。今では何千個も見つかり、追跡されている。さいわい、これまでに見つかった大きなもので、今後100年の間に地球にぶつかると予想されるものはないが、まだ見つかっていない小さな天体はたくさん残っている。',
+      'もし危険な小惑星が地球にぶつかる道すじで見つかったら、人間に何ができるだろうか。ひとつの考えは、小惑星を道すじから少しだけおしやることである。宇宙はとても広いので、小惑星の速さをほんの少し変えるだけでも、十分早く行えば、地球にまったく当たらないようにできるかもしれない。2022年、NASAが打ち上げた探査機が、この考えをためすためにわざと小さな小惑星にぶつかった。そのあとの測定で、衝突が科学者の予想より大きく小惑星の軌道を変えたことがわかり、この種の防衛が本当にうまくいくかもしれないことが示された。',
+      'ほかの方法も提案されている。何年もの間、小惑星のそばを飛ぶ探査機の弱い重力の引っぱりを使ったり、表面の一部を熱してにげ出すガスで新しい向きにおしたりすることを提案した科学者もいる。どの方法にも長所と限界があり、どれも何年も、あるいは何十年も前に危険を見つけられるかどうかにかかっている。そのため、多くの専門家は、最も大切な仕事は、地球をおびやかすかもしれない天体を見つける力を高めることだと考えている。',
+      'この分野は「惑星防衛」とよばれ、すべての国に同じように影響するめずらしい問題の例である。どの国もひとりでは解決できず、今では国際的な組織が地球近傍天体についての情報を分かち合い、どう対応するかを計画している。私たちが生きている間に大きな衝突が起こる可能性はとても小さいが、起こりうる結果がきわめて深刻なので、それにそなえることは理にかなった投資である。この意味で、小惑星を研究することは、宇宙を理解することだけでなく、私たちの未来を守ることでもあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the large ones を受け、have been discovered の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 objects を受け、could threaten の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a problem を受け、affects の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '約6600万年前の小惑星の衝突は、恐竜の絶滅の原因のひとつと考えられている。', answer: true, why: '第1段落 it is widely believed to have contributed to the extinction of the dinosaurs。' },
+      { statement: '小惑星のほとんどは、地球と月の間にある。', answer: false, why: '第2段落 most of them in a region between Mars and Jupiter。' },
+      { statement: '2022年の実験で、探査機の衝突は小惑星の軌道を変えた。', answer: true, why: '第3段落 the impact had changed the asteroid\'s orbit more than scientists had expected。' },
+      { statement: '惑星防衛は、ひとつの国だけで解決できる問題である。', answer: false, why: '第5段落 No nation could solve it alone。' },
+    ],
+    qa: [
+      { q: 'Why could a small change in an asteroid\'s speed be enough?', choices: ['Because space is so large that, if made early, the asteroid could miss the Earth.', 'Because asteroids are very light.', 'Because the Earth would move away.', 'Because the Sun would pull it away.'], answer: 0, why: '第3段落 Because space is so large, even a very small change in an asteroid\'s speed, if made early enough, could cause it to miss the Earth completely。' },
+      { q: 'What do many experts believe is the most important task?', choices: ['Improving our ability to find dangerous objects.', 'Building bigger rockets only.', 'Moving people to Mars.', 'Stopping all space research.'], answer: 0, why: '第4段落 the most important task is to improve our ability to find objects that could threaten the Earth。' },
+    ],
+    gist: [
+      { para: 2, choices: ['小惑星をそらす方法とその実験', '恐竜の種類', 'メキシコの歴史', '望遠鏡の値段'], answer: 0, why: '第3段落は、小惑星を道すじからそらす考えと、2022年の実験を述べている。' },
+      { para: 4, choices: ['国際的な協力と惑星防衛の意義', '宇宙旅行の楽しみ', '星座の見つけ方', '天気予報'], answer: 0, why: '第5段落は、すべての国にかかわる問題として協力が必要なことと、そなえる意義を述べている。' },
+    ],
+    titleQ: { choices: ['Protecting the Earth from Space Rocks', 'How Dinosaurs Lived', 'The Brightest Stars in the Sky', 'Why Mars Is Red'], answer: 0, why: '全体として、宇宙から来る小惑星から地球を守る惑星防衛について述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
