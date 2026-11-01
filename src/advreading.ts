@@ -21997,6 +21997,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Living Borders', 'How to Build a Stone Wall', 'The Life of a Hedgehog', 'Farming with Big Machines'], answer: 0, why: '全体として、畑を区切る「生きた境界」ヘッジロウの役割と、それが失われ取りもどされつつあることを述べている。' },
   },
   {
+    id: 'kyotsu-whistled-languages',
+    title: 'Words Carried by Whistles',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we think of human language, we usually imagine words that are spoken with the voice or written on paper. However, in a few mountainous regions of the world, people have developed a remarkable alternative: whistled languages. In these systems, speakers turn the sounds of an ordinary spoken language into whistles, allowing them to send detailed messages across valleys and hillsides without shouting.",
+      "One of the best-known examples is found on La Gomera, one of the Canary Islands off the coast of Africa. The island is covered with deep valleys, and walking from one village to another can take hours. Long ago, farmers and shepherds discovered that a loud whistle could travel several kilometers, much farther than a shout. They developed a way of whistling Spanish ( A ) they could use to ask questions, give warnings, and share news with people on the other side of a valley.",
+      "Whistled languages are not simple codes like those used by ships or trains. Instead, they copy the patterns of real speech, especially the changes in pitch and the rhythm of words. Skilled whistlers can therefore express almost anything that can be said in the spoken language, although some words that sound alike may be confused. Researchers who have studied the brains of whistlers have found that the areas used to understand whistled speech overlap with those used for ordinary language, which suggests that the brain treats whistling as real communication.",
+      "Sadly, most whistled languages are in danger of disappearing. Roads, cars, and mobile phones have made it much easier to communicate over long distances, so young people have fewer reasons to learn them. In many places, only a small number of elderly speakers remain, and once they are gone, the knowledge ( B ) they carry may be lost forever.",
+      "Nevertheless, some communities are making efforts to keep these traditions alive. On La Gomera, whistling has been taught in schools since the late 1990s, and every child now has the chance to learn the basics. Such efforts remind us that language is not only a tool for passing on information but also an important part of a community's identity and history. A whistled message echoing across a valley is a reminder of how creative people can be when they adapt to the places ( C ) they live.",
+    ],
+    ja: [
+      '人間の言語というと、ふつうは声で話されたり紙に書かれたりすることばを思いうかべる。しかし世界のいくつかの山の多い地域では、人々がおどろくべきもうひとつの方法を生み出してきた。口笛言語である。こうしたしくみでは、話し手はふつうの話しことばの音を口笛に変え、さけばなくても谷や山の斜面をこえてくわしい伝言を送ることができる。',
+      '最もよく知られた例のひとつは、アフリカの沖にあるカナリア諸島のひとつ、ラ・ゴメラ島で見られる。島は深い谷におおわれ、村から村へ歩くと何時間もかかることがある。昔、農家や羊飼いは、大きな口笛はさけび声よりずっと遠く、数キロメートルもとどくことに気づいた。彼らは、質問したり、危険を知らせたり、谷の向こう側の人と知らせを分かち合ったりするのに使える、スペイン語を口笛でふく方法を生み出した。',
+      '口笛言語は、船や列車が使うような単純な合図ではない。そうではなく、実際の話しことば、とくに音の高さの変化やことばのリズムをまねている。そのため、熟練した口笛の話し手は、話しことばで言えることのほとんどすべてを表すことができる。ただし、似た音のことばはまちがえられることもある。口笛の話し手の脳を調べた研究者は、口笛のことばを理解するのに使われる部分が、ふつうの言語に使われる部分と重なっていることを発見した。これは、脳が口笛を本当の伝え合いとしてあつかっていることを示している。',
+      '残念なことに、ほとんどの口笛言語は消えてしまうおそれがある。道路や車や携帯電話によって、遠くの人と伝え合うのがずっとかんたんになったので、若い人がそれを学ぶ理由は少なくなった。多くの場所では、ごく少数のお年寄りの話し手しか残っておらず、その人たちがいなくなれば、彼らのもつ知識は永遠に失われるかもしれない。',
+      'それでも、こうした伝統を守ろうと努力している地域もある。ラ・ゴメラ島では1990年代の終わりから学校で口笛が教えられていて、今ではすべての子どもが基本を学ぶ機会をもっている。こうした努力は、言語が情報を伝える道具であるだけでなく、地域の個性と歴史の大切な一部でもあることを思い出させてくれる。谷にひびきわたる口笛の伝言は、人々がくらす土地に合わせて工夫するとき、どれほど創造的になれるかを思い出させるものである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a way of whistling Spanish を受け、use の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the knowledge を受け、carry の目的語になる関係代名詞 that。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the places（場所）で、うしろの they live は完全な文なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: 'ラ・ゴメラ島では、大きな口笛はさけび声より遠くまでとどくことがわかった。', answer: true, why: '第2段落 a loud whistle could travel several kilometers, much farther than a shout。' },
+      { statement: '口笛言語は、船や列車の合図と同じ単純な合図である。', answer: false, why: '第3段落 Whistled languages are not simple codes like those used by ships or trains。' },
+      { statement: '口笛のことばを理解する脳の部分は、ふつうの言語に使われる部分と重なっている。', answer: true, why: '第3段落 the areas used to understand whistled speech overlap with those used for ordinary language。' },
+      { statement: 'ラ・ゴメラ島では、口笛は学校で教えられていない。', answer: false, why: '第5段落 whistling has been taught in schools since the late 1990s。' },
+    ],
+    qa: [
+      { q: 'Why are young people less likely to learn whistled languages?', choices: ['Roads, cars, and mobile phones have made long-distance communication easier.', 'Whistling is too loud for villages.', 'The languages have no words.', 'Schools have banned whistling everywhere.'], answer: 0, why: '第4段落 Roads, cars, and mobile phones have made it much easier to communicate over long distances。' },
+      { q: 'What do whistled languages copy?', choices: ['The pitch changes and rhythm of real speech.', 'The sounds of birds.', 'The signals used by trains.', 'The letters of the alphabet.'], answer: 0, why: '第3段落 they copy the patterns of real speech, especially the changes in pitch and the rhythm of words。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ラ・ゴメラ島で口笛言語が生まれたわけ', '島の観光地', 'スペイン語の文法', '羊の育て方'], answer: 0, why: '第2段落は、深い谷のある島で、遠くにとどく口笛のことばが生まれたことを述べている。' },
+      { para: 3, choices: ['口笛言語が消えてしまうおそれ', '携帯電話の歴史', '道路の工事', 'お年寄りの健康'], answer: 0, why: '第4段落は、伝える手段がふえて若い人が学ばなくなり、口笛言語が消えるおそれがあることを述べている。' },
+    ],
+    titleQ: { choices: ['Words Carried by Whistles', 'How Birds Learn to Sing', 'The Fastest Trains in Spain', 'Why Valleys Are Deep'], answer: 0, why: '全体として、口笛でことばを伝える口笛言語のしくみ・危機・守る努力を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
