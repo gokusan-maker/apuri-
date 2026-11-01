@@ -261,3 +261,13 @@ it('デザイン201：キャラ図鑑で、前に相棒だった子に 💕 が�
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.querySelector('.char-book-name')!.textContent).toBe('コンコン')
 })
+
+it('デザイン216：キャラ図鑑で、まだ会っていない子が1体だけのタイプに「あと1体！」が出る', () => {
+  const t = CHAR_TYPES.attack
+  const all = SPECIES.filter((sp) => typeOf(sp.id).id === t.id).map((sp) => sp.id)
+  const { unmount } = render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', ...all.slice(0, -2)]} />)
+  expect(screen.queryByLabelText(`${t.name}あと1体`)).toBeNull()
+  unmount()
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', ...all.slice(0, -1)]} />)
+  expect(screen.getByLabelText(`${t.name}あと1体`)).toBeInTheDocument()
+})

@@ -891,6 +891,12 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
               {' '}
               {SPECIES.filter((sp) => typeOf(sp.id).id === ty.id && got.has(sp.id)).length}/{SPECIES.filter((sp) => typeOf(sp.id).id === ty.id).length}
             </small>
+            {/* デザイン216：そのタイプで、まだ会っていない子があと1体だけ */}
+            {SPECIES.filter((sp) => typeOf(sp.id).id === ty.id && !got.has(sp.id)).length === 1 && (
+              <span className="gacha-kind-new" aria-label={`${ty.name}あと1体`}>
+                {' '}あと1体！
+              </span>
+            )}
             {/* デザイン164：そのタイプの子がぜんぶそろった */}
             {SPECIES.filter((sp) => typeOf(sp.id).id === ty.id).every((sp) => got.has(sp.id)) && <span aria-label={`${ty.name}コンプリート`}> ✔</span>}
           </button>
