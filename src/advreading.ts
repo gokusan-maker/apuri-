@@ -21529,6 +21529,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Our Carbon Footprints', 'How to Drive Safely', 'The History of Coal', 'Why Beef Is Popular'], answer: 0, why: '全体として、カーボンフットプリントとは何か、その原因、へらす方法と個人の行動の意味を述べている。' },
   },
   {
+    id: 'kyotsu-street-food',
+    title: 'Food on the Street',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In cities around the world, some of the most delicious and memorable meals are not served in restaurants but sold on the street. From grilled meat on sticks to sweet pancakes and noodle soups, street food is an important part of daily life in many countries. For travelers, trying local street food is often one of the best ways to experience a new culture.",
+      "Street food has a long history. In many ancient cities, people who lived in small homes without kitchens bought ready-made meals from sellers in the streets and markets. Even today, street food remains popular because it is quick, affordable, and convenient. Workers can grab a meal on their way to the office, and students can buy a snack after school without spending much money.",
+      "Street food also reflects the history and geography of a place. The ingredients that sellers use often come from nearby farms and seas, and recipes are passed down from one generation to the next. In port cities, street food may show the influence of traders and immigrants ( A ) brought new spices and cooking methods from other lands. In this way, a simple dish sold on a street corner can tell a story about the people who have lived in a city over hundreds of years.",
+      "Beyond food itself, street food stalls play a social role. They are places where people from different backgrounds stand side by side, chat with sellers, and share tables. For many sellers, running a stall is also an important source of income, and some family businesses have operated in the same spot for decades. Night markets in some Asian cities attract both local residents and tourists, ( B ) helps to support the local economy.",
+      "However, street food faces challenges. Some cities have introduced strict rules about hygiene and the use of public space, and in some places rising rents and new developments have pushed sellers out. Supporters argue that, with proper safety standards, street food should be protected as part of a city’s cultural heritage. They believe that losing it would mean losing not only good food but also an important part of ( C ) makes each city unique.",
+    ],
+    ja: [
+      '世界中の都市で、最もおいしく思い出に残る食事のいくつかは、レストランで出されるのではなく、通りで売られている。くしにさした焼き肉からあまいパンケーキ、めんのスープまで、屋台の食べ物は多くの国で毎日の生活の大切な一部である。旅行者にとって、地元の屋台の食べ物をためすことは、新しい文化を体験する最もよい方法の1つであることが多い。',
+      '屋台の食べ物には長い歴史がある。多くの古代の都市では、台所のない小さな家に住む人々が、通りや市場の売り手からできあがった食事を買っていた。今日でも、屋台の食べ物が人気なのは、早くて安くて便利だからである。働く人は会社へ行くとちゅうで食事をさっと買え、生徒は学校のあとにあまりお金をかけずにおやつを買える。',
+      '屋台の食べ物は、その場所の歴史や地理も映し出している。売り手が使う材料は近くの畑や海からとれることが多く、作り方は世代から世代へと受けつがれる。港町では、屋台の食べ物に、ほかの土地から新しい香辛料や料理法を持ちこんだ商人や移民の影響が見られることもある。このようにして、街角で売られるかんたんな料理が、何百年にもわたってその都市に住んできた人々についての物語を語ることがある。',
+      '食べ物そのもの以外にも、屋台は社会的な役割をはたしている。ちがう背景をもつ人々がならんで立ち、売り手とおしゃべりし、テーブルを分け合う場所である。多くの売り手にとって、屋台を営むことは大切な収入源でもあり、何十年も同じ場所で営業してきた家族の店もある。アジアのいくつかの都市の夜市は地元の住民と観光客の両方を引きつけ、それが地域の経済をささえるのに役立っている。',
+      'しかし、屋台の食べ物は課題にも直面している。衛生や公共の場所の使い方についてきびしいきまりを取り入れた都市もあり、家賃の上昇や新しい開発によって売り手が追い出された場所もある。支持する人は、きちんとした安全の基準があれば、屋台の食べ物は都市の文化遺産の一部として守られるべきだと主張する。それを失うことは、おいしい食べ物だけでなく、それぞれの都市を特別なものにしているものの大切な一部を失うことになると、彼らは考えている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は traders and immigrants（人）で、brought の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで前の内容（人を引きつけること）を受け、helps の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'how'], answer: 0, why: '前置詞 of のあとで「～するもの」となり、makes の主語になる what（what makes each city unique）。' },
+    ],
+    tf: [
+      { statement: '古代の都市では、台所のない家に住む人が屋台の食べ物を買っていた。', answer: true, why: '第2段落 people who lived in small homes without kitchens bought ready-made meals。' },
+      { statement: '屋台の食べ物は、高くて時間がかかるので人気がない。', answer: false, why: '第2段落 street food remains popular because it is quick, affordable, and convenient。' },
+      { statement: '何十年も同じ場所で営業してきた家族の店もある。', answer: true, why: '第4段落 some family businesses have operated in the same spot for decades。' },
+      { statement: '屋台の食べ物を守ることに賛成する人はいない。', answer: false, why: '第5段落 Supporters argue that ... street food should be protected。' },
+    ],
+    qa: [
+      { q: 'What may street food in port cities show?', choices: ['The influence of traders and immigrants.', 'Only the cooking of one family.', 'The newest cooking machines.', 'Food from space.'], answer: 0, why: '第3段落 street food may show the influence of traders and immigrants。' },
+      { q: 'What problems do street food sellers face?', choices: ['Strict rules, rising rents, and new developments.', 'Too many customers.', 'Too little food.', 'Bad weather only.'], answer: 0, why: '第5段落 strict rules ... rising rents and new developments have pushed sellers out。' },
+    ],
+    gist: [
+      { para: 2, choices: ['屋台の食べ物が場所の歴史や地理を映すこと', '香辛料の作り方', '港の地図', '畑の育て方'], answer: 0, why: '第3段落は、地元の材料、受けつがれる作り方、港町での移民の影響を述べている。' },
+      { para: 3, choices: ['屋台の社会的な役割', '夜市の歴史', 'テーブルの並べ方', '観光地の選び方'], answer: 0, why: '第4段落は、人々が交流する場、売り手の収入、地域経済への役割を述べている。' },
+    ],
+    titleQ: { choices: ['Food on the Street', 'How to Open a Restaurant', 'The History of Spices', 'Why Tourists Travel'], answer: 0, why: '全体として、屋台の食べ物の歴史、文化を映す面、社会的な役割、課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
