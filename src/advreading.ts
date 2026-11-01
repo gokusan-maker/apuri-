@@ -23440,6 +23440,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Learning from Nature', 'How to Build a Train', 'The Life of a Kingfisher', 'Why Seeds Are Small'], answer: 0, why: '全体として、自然から学ぶバイオミミクリーの例と、自然を守る大切さを述べている。' },
   },
   {
+    id: 'kyotsu-manga',
+    title: 'More Than Pictures',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Japanese manga are now read by millions of people around the world. Bookstores in many countries have entire sections devoted to them, and popular series are translated into dozens of languages. Yet for a long time, comics in many places were seen as entertainment only for children, or even as something that might harm their education. The global success of manga raises an interesting question: what makes this art form so powerful?",
+      "One reason is its unique visual language. Manga artists use a wide range of techniques to show movement, emotion, and time. Speed lines suggest that a character is running or moving quickly, and special symbols, such as a drop of sweat or a vein on the forehead, express feelings like nervousness or anger. The size and shape of the panels also matter. A large panel can make a dramatic moment feel important, while a series of small panels can slow the story down, almost like a film ( A ) is shown frame by frame.",
+      "Another reason is the wide range of subjects. In addition to adventure and fantasy, there are manga about sports, cooking, history, medicine, music, and everyday school life. Some series explore serious topics such as war, illness, or the meaning of work. Because manga are aimed at readers of all ages, from young children to adults, people can continue reading them throughout their lives. Many readers say that a story they read as teenagers helped them through a difficult time or inspired their choice of career.",
+      "Manga have also become a tool for education. Some publishers produce manga versions of famous novels, historical events, or scientific ideas, making difficult subjects easier to approach. Teachers in some countries use manga to encourage students who do not enjoy reading to try longer stories. Researchers have found that combining pictures and words can help readers understand and remember information, especially when the subject is unfamiliar.",
+      "Of course, not every manga is suitable for every reader, and some critics worry that heavy reliance on images may discourage people from reading books without pictures. Still, the growing respect for manga around the world shows how attitudes toward comics have changed. Museums now hold exhibitions of original manga drawings, and universities offer courses ( B ) study their history and techniques. What was once seen as simple entertainment is now recognized by many as a serious art form ( C ) can move, teach, and connect readers across cultures.",
+    ],
+    ja: [
+      '日本のマンガは今、世界中で何百万人もの人に読まれている。多くの国の書店にはマンガだけの売り場があり、人気のシリーズは何十もの言語に翻訳されている。しかし長い間、多くの場所でマンガは子どもだけの娯楽、あるいは教育に悪いかもしれないものとさえ見られていた。マンガが世界で成功していることは、興味深い疑問を生む。何がこの芸術の形をこれほど力強くしているのだろうか。',
+      'ひとつの理由は、その独特な見せ方である。マンガ家は、動きや感情や時間を表すために、はば広い技法を使う。スピード線は登場人物が走っていたりすばやく動いたりしていることを示し、汗のしずくやひたいの青すじのような特別な記号は、緊張や怒りのような気持ちを表す。コマの大きさや形も大切である。大きなコマはドラマチックな場面を大切なものに感じさせ、小さなコマを続けると、まるで1コマずつ見せる映画のように話の進みがゆっくりになる。',
+      'もうひとつの理由は、題材の多さである。冒険やファンタジーのほかに、スポーツ、料理、歴史、医療、音楽、ふだんの学校生活についてのマンガもある。戦争や病気や働く意味のような重いテーマにとり組むシリーズもある。マンガは小さな子どもからおとなまで、あらゆる年齢の読者に向けて作られているので、人は一生を通じて読み続けることができる。多くの読者が、10代のころに読んだ話がつらい時期をのりこえる助けになったとか、仕事を選ぶきっかけになったとか言う。',
+      'マンガは教育の道具にもなっている。有名な小説や歴史のできごと、科学の考えをマンガにして、むずかしい分野に近づきやすくしている出版社もある。いくつかの国の先生は、読書が好きでない生徒が長い物語を読んでみるきっかけとしてマンガを使っている。研究者たちは、絵とことばを組み合わせると、とくに見なれない分野のとき、読者が情報を理解し覚えるのに役立つことを見つけている。',
+      'もちろん、すべてのマンガがすべての読者に向いているわけではなく、絵にたよりすぎると、絵のない本を読まなくなるのではないかと心配する批評家もいる。それでも、世界中でマンガへの評価が高まっていることは、マンガに対する考え方がどれほど変わったかを示している。今では美術館がマンガの原画の展示を開き、大学はその歴史や技法を学ぶ講座を開いている。かつてはただの娯楽と見られていたものが、今では多くの人に、文化をこえて読者を感動させ、教え、つなぐことのできる本格的な芸術としてみとめられているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a film を受け、is shown の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'where', 'what', 'who'], answer: 0, why: '先行詞 courses を受け、study の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a serious art form を受け、can move の主語になる関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '長い間、マンガは子どもだけの娯楽と見られていた。', answer: true, why: '第1段落 comics in many places were seen as entertainment only for children。' },
+      { statement: 'マンガのコマの大きさや形は、話の感じ方に関係ない。', answer: false, why: '第2段落 The size and shape of the panels also matter。' },
+      { statement: 'マンガには、戦争や病気のような重いテーマをあつかうものもある。', answer: true, why: '第3段落 Some series explore serious topics such as war, illness, or the meaning of work。' },
+      { statement: '今では、大学でマンガについて学ぶ講座はまったくない。', answer: false, why: '第5段落 universities offer courses that study their history and techniques。' },
+    ],
+    qa: [
+      { q: 'What do speed lines in manga suggest?', choices: ['That a character is moving quickly.', 'That a character is sleeping.', 'That it is raining.', 'That the story has ended.'], answer: 0, why: '第2段落 Speed lines suggest that a character is running or moving quickly。' },
+      { q: 'How do some teachers use manga?', choices: ['To encourage students who do not enjoy reading to try longer stories.', 'To replace all textbooks.', 'To teach drawing only.', 'To punish students.'], answer: 0, why: '第4段落 to encourage students who do not enjoy reading to try longer stories。' },
+    ],
+    gist: [
+      { para: 1, choices: ['マンガの独特な見せ方の技法', 'ペンの選び方', '映画館の歴史', '汗のかき方'], answer: 0, why: '第2段落は、スピード線や記号、コマの大きさなど、マンガの表現の技法を述べている。' },
+      { para: 3, choices: ['教育の道具としてのマンガ', '出版社の数', '小説の書き方', 'テストの点数'], answer: 0, why: '第4段落は、むずかしい分野を学ぶ助けや読書のきっかけとしてマンガが使われることを述べている。' },
+    ],
+    titleQ: { choices: ['More Than Pictures', 'How to Draw a Cat', 'The History of Films', 'Why Children Like Candy'], answer: 0, why: '全体として、マンガが絵以上の力をもつ芸術としてみとめられるようになったことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
