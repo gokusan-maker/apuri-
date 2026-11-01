@@ -1500,6 +1500,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="66" rx="9" ry="7" fill="#f8fafc" opacity="0.85" />
       </g>
     )
+  if (species === 'dipper')
+    return (
+      <g>
+        {/* 白いまぶたと、こげ茶の羽 */}
+        <ellipse cx="42" cy="40" rx="3" ry="2" fill="#f8fafc" />
+        <path d="M30 62 Q40 70 52 64" fill="none" stroke="#2b1d14" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
