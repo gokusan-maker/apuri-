@@ -5400,6 +5400,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We should avoid [to make] the same mistake again.', choices: ['making', 'make', 'to making', 'made'], answer: 0, why: 'avoid のあとは動名詞。making。' },
     ],
   },
+  {
+    id: 'exam-fix-126',
+    title: '入試の誤文訂正〈126〉（東大レベル：英作文の語法）',
+    points: ['自由英作文・和文英訳で多いまちがい。discuss・mention・marry・enter・approach・resemble・reach は他動詞なので前置詞をつけない（discuss about は誤り）。suggest・propose・insist・demand・recommend＋that S（should）＋原形。explain は explain＋もの＋to 人（explain me は誤り）。suggest も suggest to 人 that ～ の形で、suggest 人 to do は誤り。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'We discussed the problem for an hour.', ja: '私たちは1時間その問題について話し合った。' }],
+    questions: [
+      { sentence: 'We [discussed about] the problem for more than an hour.', choices: ['discussed', 'discussed on', 'talked', 'discussed of'], answer: 0, why: 'discuss は他動詞なので about は不要。discussed the problem。（talked だけでは目的語がとれない）' },
+      { sentence: 'She did not [mention about] the accident in her letter.', choices: ['mention', 'mention of', 'tell about', 'speak'], answer: 0, why: 'mention は他動詞なので前置詞不要。mention the accident。' },
+      { sentence: 'He [married with] a woman he had met in Canada.', choices: ['married', 'married to', 'got married', 'was marry'], answer: 0, why: 'marry は他動詞。married a woman（be married to ～ の形なら to を使う）。' },
+      { sentence: 'The teacher [entered into] the classroom with a smile.', choices: ['entered', 'entered to', 'went', 'came to'], answer: 0, why: '「部屋に入る」の enter は他動詞。entered the classroom（enter into は「（交渉などを）始める」）。' },
+      { sentence: 'The doctor suggested that he [stopped] smoking at once.', choices: ['stop', 'stops', 'had stopped', 'would stop'], answer: 0, why: 'suggest that S（should）＋原形。stop。' },
+      { sentence: 'My father insisted that I [went] to the meeting with him.', choices: ['go', 'goes', 'had gone', 'will go'], answer: 0, why: 'insist that S（should）＋原形。go。' },
+      { sentence: 'Could you [explain me] how this machine works?', choices: ['explain to me', 'explain me about', 'explain for me of', 'explaining me'], answer: 0, why: 'explain は人を直接目的語にとらない。explain to me how ～。' },
+      { sentence: 'My friend [suggested me to join] the club.', choices: ['suggested that I join', 'suggested me joining', 'suggested to me to join', 'suggested me join'], answer: 0, why: 'suggest は suggest 人 to do の形をとらない。suggested that I (should) join。' },
+      { sentence: 'The girl [resembles to] her mother very much.', choices: ['resembles', 'resembles with', 'is resembling', 'resemble to'], answer: 0, why: 'resemble は他動詞で前置詞不要。進行形にもしない。resembles her mother。' },
+      { sentence: 'We [reached to] the top of the mountain before noon.', choices: ['reached', 'reached at', 'arrived', 'got'], answer: 0, why: 'reach は他動詞。reached the top（arrive なら arrive at、get なら get to が必要）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

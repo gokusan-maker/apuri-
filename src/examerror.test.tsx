@@ -1807,3 +1807,10 @@ it('正誤問題〈132〉：国公立レベル 不定詞と動名詞の単元が
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) see')
 })
+
+it('誤文訂正〈126〉：東大レベル 英作文の語法の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-126')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('discussed')
+})
