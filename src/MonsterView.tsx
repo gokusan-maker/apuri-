@@ -2001,6 +2001,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M37 41 L46 39" fill="none" stroke="#f8fafc" strokeWidth="1.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'asianbrownflycatcher')
+    return (
+      <g>
+        {/* 大きな黒い目と白いアイリング */}
+        <circle cx="42" cy="44" r="4" fill="none" stroke="#f8fafc" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
