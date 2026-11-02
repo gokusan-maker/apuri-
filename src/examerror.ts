@@ -2570,6 +2570,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The committee (A) demanded (B) that the report (C) is rewritten (D) before the next meeting.', choices: ['(A) demanded', '(B) that the report', '(C) is rewritten', '(D) before the next meeting'], answer: 2, why: 'demand that のあとは動詞の原形（仮定法現在）。be rewritten。' },
     ],
   },
+  {
+    id: 'exam-error-adverbs',
+    title: '入試の正誤問題〈109〉（共通テストレベル：まぎらわしい副詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'hard／hardly・late／lately・near／nearly・most／almost・high／highly の使い分けと、hardly ever（never といっしょに使わない）。',
+    ],
+    examples: [
+      { en: 'He worked hard, but he could hardly finish the work.', ja: '彼は一生けんめい働いたが、仕事をほとんど終えられなかった。' },
+      { en: 'Have you seen her lately?', ja: '最近、彼女に会った？' },
+    ],
+    questions: [
+      { sentence: 'He (A) worked (B) hardly all night (C) to finish (D) the report.', choices: ['(A) worked', '(B) hardly all night', '(C) to finish', '(D) the report'], answer: 1, why: '「一生けんめい働いた」は worked hard。hardly は「ほとんど～ない」。' },
+      { sentence: '(A) The fog was so thick (B) that we could (C) hard see (D) the road.', choices: ['(A) The fog was so thick', '(B) that we could', '(C) hard see', '(D) the road'], answer: 2, why: '「ほとんど見えなかった」は could hardly see。' },
+      { sentence: '(A) Have you (B) talked to (C) your grandmother (D) late?', choices: ['(A) Have you', '(B) talked to', '(C) your grandmother', '(D) late?'], answer: 3, why: '「最近」は lately。' },
+      { sentence: '(A) The train arrived (B) lately (C) because of (D) the heavy snow.', choices: ['(A) The train arrived', '(B) lately', '(C) because of', '(D) the heavy snow'], answer: 1, why: '「おくれて着いた」は arrived late。lately は「最近」。' },
+      { sentence: '(A) The work (B) is near (C) finished, so (D) we can go home soon.', choices: ['(A) The work', '(B) is near', '(C) finished, so', '(D) we can go home soon'], answer: 1, why: '「ほとんど終わっている」は is nearly finished。' },
+      { sentence: '(A) Almost students (B) in this school (C) walk (D) to school.', choices: ['(A) Almost students', '(B) in this school', '(C) walk', '(D) to school'], answer: 0, why: 'almost は名詞を直接修飾しない。Most students（Almost all students）。' },
+      { sentence: 'Her (A) novels are (B) high (C) praised by (D) critics around the world.', choices: ['(A) novels are', '(B) high', '(C) praised by', '(D) critics around the world'], answer: 1, why: '「大いにほめられている」は highly praised。' },
+      { sentence: '(A) The eagle (B) flew (C) highly (D) over the mountains.', choices: ['(A) The eagle', '(B) flew', '(C) highly', '(D) over the mountains'], answer: 2, why: '物理的に「高く飛んだ」は flew high。' },
+      { sentence: '(A) There is (B) a small park (C) nearly (D) the station.', choices: ['(A) There is', '(B) a small park', '(C) nearly', '(D) the station'], answer: 2, why: '「駅の近くに」は前置詞 near the station。nearly は「ほとんど」。' },
+      { sentence: 'I (A) have (B) hardly (C) never (D) seen such a beautiful sunset.', choices: ['(A) have', '(B) hardly', '(C) never', '(D) seen such a beautiful sunset'], answer: 2, why: 'hardly はそれ自体が否定の意味なので never といっしょに使わない。have hardly ever seen。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
