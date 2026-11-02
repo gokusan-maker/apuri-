@@ -1882,6 +1882,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 50 L60 52 L44 54 Z" fill="#e7e5e4" />
       </g>
     )
+  if (species === 'copperpheasant')
+    return (
+      <g>
+        {/* 長い尾と、目のまわりの赤 */}
+        <path d="M30 66 L10 80" fill="none" stroke="#92400e" strokeWidth="4" strokeLinecap="round" />
+        <circle cx="42" cy="44" r="3" fill="#dc2626" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

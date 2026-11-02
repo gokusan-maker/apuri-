@@ -47,3 +47,11 @@ it('キャラクターごとに返しセリフがある', async () => {
   for (const sp of SPECIES) expect(PARTNER_REPLIES[sp.id], sp.id).toBeDefined()
   expect(replyOf(undefined).ja).toBe('ぼくたちは負けないよ！')
 })
+
+it('とくぎの説明が、とくぎの中身（id）と合っている', () => {
+  const words: Record<string, string> = { guard: 'ハートを守る', cheer: 'ゲージ', claw: '会心', revive: 'ハート1', fire: 'ダメージ' }
+  for (const [species, sk] of Object.entries(PARTNER_SKILLS)) {
+    const w = words[sk.id]
+    if (w) expect(`${species}: ${sk.desc}`).toContain(w)
+  }
+})
