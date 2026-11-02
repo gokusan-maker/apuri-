@@ -27050,6 +27050,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-imagination',
+    title: 'Imagination and Reality',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagination is often associated with childhood, with fairy tales, and with the arts, and it is sometimes contrasted with the sober reasoning that adults are expected to practice. A person described as imaginative may be admired for creativity, but may also be suspected of being unrealistic, someone whose thoughts drift away from the facts. Yet this contrast between imagination and reality is misleading. Far from being opposed to an accurate understanding of the world, imagination may be one of the capacities that make such understanding possible, and the habit of treating the two as rivals may weaken both.",
+      "Consider what is involved in understanding even a simple statement about the past. To grasp that a city was once destroyed by fire, we must picture streets we have never seen, people we will never meet, and events that are no longer present. Historians, in particular, depend on this capacity: the documents they study are fragments, and to make sense of them they must imagine the circumstances in which they were produced. The same is true of scientists who propose hypotheses about processes that cannot be observed directly, such as the formation of stars or the behavior of particles too small to be seen. In each case, imagination does not replace evidence but gives it a shape, allowing scattered observations to be connected into a coherent picture.",
+      "Imagination also plays a central role in moral life. To recognize that an action would harm someone, we must be able to imagine the situation from that person's point of view. People who lack this capacity, or who refuse to exercise it, may cause suffering without noticing it, simply because they cannot picture what their actions mean to others. Many of the great moral advances in history have involved an expansion of imagination, as people came to see that those whom they had regarded as strangers or inferiors had lives and feelings as real as their own. Laws and institutions may protect such progress, but they often follow, rather than lead, the slow work of imagining others differently.",
+      "This is not to say that imagination is always a reliable guide. It can mislead as well as illuminate. We may imagine dangers that do not exist, or picture other people according to stereotypes that distort rather than reveal who they are. Imagination that is not disciplined by evidence and by attention to particular facts can produce fantasies that are comforting but false. ( A ) imagination is essential to understanding, it must be combined with careful observation and a willingness to revise our pictures when they turn out to be wrong. The scientist who falls in love with a hypothesis and the person who clings to a prejudice may, in this respect, make the same mistake.",
+      "The education of imagination therefore deserves more attention than it usually receives. Schools often treat imagination as something to be encouraged in art classes or creative writing but largely ignored elsewhere. Yet history, science, and ethics all require students to picture what is absent and to consider possibilities beyond their immediate experience. Reading literature, studying other cultures, and engaging with unfamiliar ideas can strengthen this capacity, not by allowing students to escape from reality, but by enabling them to grasp more of it.",
+      "Seen in this light, imagination is less a departure from the real world than a means of reaching parts of it that would otherwise remain hidden. The past, the future, the inner lives of other people, and the invisible structures of nature are all, in a sense, beyond the reach of direct perception. To understand them at all, we must imagine them, and then test what we imagine against whatever evidence is available. A mind without imagination would not be more realistic; it would simply be confined to a much smaller world.",
+    ],
+    ja: [
+      '想像力はしばしば子ども時代やおとぎ話や芸術と結びつけられ、ときには大人が行うことを期待される冷静な推論と対比される。想像力豊かだと言われる人は、創造性をほめられることもあるが、非現実的で、事実から考えがはなれていく人ではないかと疑われることもある。しかし、この想像と現実の対比は誤解をまねくものである。世界の正確な理解と対立するどころか、想像力はそうした理解を可能にする能力の1つなのかもしれない。そして、この2つを競争相手として扱う習慣は、その両方を弱めてしまうかもしれない。',
+      '過去についてのかんたんな文を理解するのにさえ、何が必要かを考えてみよう。ある都市がかつて火事でほろびたことを理解するには、見たことのない通りや、決して会うことのない人々や、もはや存在しないできごとを思い描かなければならない。とくに歴史家はこの能力にたよっている。彼らが研究する文書は断片であり、それを理解するには、それが書かれた状況を想像しなければならない。同じことは、星のでき方や、小さすぎて見えない粒子のふるまいのように、直接は観察できない過程についての仮説を立てる科学者にもあてはまる。どの場合も、想像力は証拠の代わりになるのではなく、証拠に形を与え、ばらばらの観察を筋の通った像へと結びつけるのである。',
+      '想像力は道徳的な生活でも中心的な役割を果たしている。ある行為がだれかを傷つけることを認めるには、その状況をその人の立場から想像できなければならない。この能力を欠いている人や、それを使おうとしない人は、自分の行為が他人にとって何を意味するかを思い描けないというだけで、気づかないうちに苦しみをもたらすかもしれない。歴史上の偉大な道徳的進歩の多くは、想像力の広がりをともなっていた。人々は、見知らぬ者や劣った者とみなしていた人々にも、自分と同じように現実の生活や感情があることがわかるようになったのである。法律や制度はそうした進歩を守るかもしれないが、それらはしばしば、他者をちがう形で想像するというゆっくりとした営みを導くのではなく、そのあとを追うのである。',
+      'だからといって、想像力がいつも信頼できる案内役だというわけではない。それは明らかにするのと同じくらい、誤らせることもある。私たちは存在しない危険を想像したり、他人をその人が何者であるかを明らかにするのではなくゆがめるような固定観念にしたがって思い描いたりすることがある。証拠や特定の事実への注意によってきたえられていない想像力は、心地よいが誤った空想を生むことがある。想像力は理解に欠かせないが、注意深い観察と、思い描いたものがまちがいだとわかったときにそれを改める姿勢と組み合わせられなければならないのである。仮説にほれこんでしまう科学者と、偏見にしがみつく人は、この点で同じまちがいをおかしているのかもしれない。',
+      'したがって、想像力の教育はふつう受けている以上の注意に値する。学校はしばしば、想像力を美術の授業や創作の授業では励ますべきものとしながら、ほかではほとんど無視している。しかし歴史も科学も倫理も、ここにないものを思い描き、すぐ目の前の経験をこえた可能性を考えることを生徒に求めている。文学を読み、ほかの文化を学び、なじみのない考えに取り組むことは、この能力を強めることができる。それは生徒が現実から逃げるのを許すことによってではなく、現実のより多くをつかめるようにすることによってである。',
+      'このように見ると、想像力は現実の世界からはなれることというより、そうでなければかくれたままになる世界の部分に届くための手段である。過去、未来、他人の内面の生活、自然の目に見えない構造は、ある意味ですべて直接の知覚の届かないところにある。それらをいくらかでも理解するには、私たちはそれを想像し、そして想像したものを手に入るかぎりの証拠と照らし合わせなければならない。想像力のない心は、より現実的になるのではない。ただ、ずっと小さな世界に閉じこめられるだけなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「想像力は理解に欠かせないが、観察と組み合わせなければならない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者は、想像と現実の対比は誤解をまねくと考えている。', answer: true, why: '第1段落 this contrast between imagination and reality is misleading。' },
+      { statement: '筆者によれば、歴史家は文書を理解するのに想像力を必要としない。', answer: false, why: '第2段落 to make sense of them they must imagine the circumstances。' },
+      { statement: '筆者によれば、想像力はいつも信頼できる案内役である。', answer: false, why: '第4段落 This is not to say that imagination is always a reliable guide。' },
+      { statement: '筆者によれば、学校は想像力を美術や創作の授業以外ではほとんど無視している。', answer: true, why: '第5段落 largely ignored elsewhere。' },
+    ],
+    qa: [
+      { q: 'Why is imagination important in moral life, according to the third paragraph?', choices: ['We must imagine a situation from another person\'s point of view to recognize harm.', 'It allows us to escape from our responsibilities.', 'It makes us forget other people\'s feelings.', 'It is only useful for writing stories.'], answer: 0, why: '第3段落 we must be able to imagine the situation from that person\'s point of view。' },
+      { q: 'What would a mind without imagination be like, according to the last paragraph?', choices: ['It would be confined to a much smaller world.', 'It would be more realistic.', 'It would understand the past better.', 'It would be more creative.'], answer: 0, why: '第6段落 it would simply be confined to a much smaller world。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
