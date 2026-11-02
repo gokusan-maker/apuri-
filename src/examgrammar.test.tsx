@@ -54,8 +54,8 @@ it('東大の文法：長い主語・挿入・仮定法の発展など本番レ�
   }
 })
 
-it('国公立大の文法：長い文の中で文法を見ぬく本番レベルの問題（平均15語以上・高2レベルの決まり文句は出さない）', () => {
-  const u = EXAM_GRAMMAR.find((x) => x.id === 'exam-kokkoritsu')!
+it.each(['exam-kokkoritsu', 'exam-kyutei'])('国公立大・旧帝大の文法：長い文の中で文法を見ぬく本番レベルの問題（平均15語以上・高2レベルの決まり文句は出さない）：%s', (id) => {
+  const u = EXAM_GRAMMAR.find((x) => x.id === id)!
   expect(u.questions).toHaveLength(30)
   const words = u.questions.map((q) => q.sentence.split(/\s+/).length)
   expect(words.reduce((a, b) => a + b, 0) / words.length).toBeGreaterThanOrEqual(15)
