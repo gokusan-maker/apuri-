@@ -2522,6 +2522,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) All the (B) passengers on the bus (C) paid their (D) fees to the driver.', choices: ['(A) All the', '(B) passengers on the bus', '(C) paid their', '(D) fees to the driver'], answer: 3, why: 'バスの運賃は fares。' },
     ],
   },
+  {
+    id: 'exam-error-kyodai',
+    title: '入試の正誤問題〈107〉（京大レベル：長い文の構造）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '京大の長い文で、倒置（Only after・So ～ ・Not until）、同格の that、仮定法過去完了、挿入をはさんだ主語と動詞の一致、the 比較級 ～, the 比較級 … 、非制限用法の which を見ぬく。',
+    ],
+    examples: [
+      { en: 'Only after the committee had examined the evidence was it announced that the results could not be reproduced.', ja: '委員会が証拠を調べてはじめて、その結果は再現できないと発表された。' },
+      { en: 'The villagers, most of whom had never seen a computer, were surprised.', ja: '村人たちは、そのほとんどがコンピューターを見たことがなかったので、おどろいた。' },
+    ],
+    questions: [
+      { sentence: 'Only after the committee had examined all the evidence (A) it was announced (B) that the original results (C) could not be (D) reproduced.', choices: ['(A) it was announced', '(B) that the original results', '(C) could not be', '(D) reproduced'], answer: 0, why: 'Only after ～ が文頭に出ると、主節は倒置。was it announced。' },
+      { sentence: 'The belief (A) which hard work alone guarantees success, (B) though widely held, (C) ignores the role (D) that chance plays in most careers.', choices: ['(A) which hard work alone guarantees success,', '(B) though widely held,', '(C) ignores the role', '(D) that chance plays in most careers'], answer: 0, why: 'うしろが完全な文なので同格の that。The belief that ～。' },
+      { sentence: '(A) Had the bridge been inspected (B) more carefully, the accident (C) might be prevented, (D) as several engineers later admitted.', choices: ['(A) Had the bridge been inspected', '(B) more carefully, the accident', '(C) might be prevented,', '(D) as several engineers later admitted'], answer: 2, why: 'Had S 過去分詞 の仮定法過去完了なので、帰結は might have been prevented。' },
+      { sentence: 'The villagers, (A) most of whom had never (B) seen a computer, (C) was surprised by how quickly (D) the children learned to use it.', choices: ['(A) most of whom had never', '(B) seen a computer,', '(C) was surprised by how quickly', '(D) the children learned to use it'], answer: 2, why: '主語は The villagers（複数）。挿入の most of whom … computer をとばして were surprised。' },
+      { sentence: 'So complex (A) the problem was (B) that even the most experienced researchers (C) needed several years (D) to understand it fully.', choices: ['(A) the problem was', '(B) that even the most experienced researchers', '(C) needed several years', '(D) to understand it fully'], answer: 0, why: 'So ＋形容詞 が文頭に出た倒置。So complex was the problem that ～。' },
+      { sentence: 'Many of the customs (A) that we regard as ancient (B) were in fact invented (C) less than two centuries ago, (D) which surprise most visitors.', choices: ['(A) that we regard as ancient', '(B) were in fact invented', '(C) less than two centuries ago,', '(D) which surprise most visitors'], answer: 3, why: 'コンマのあとの which は前の文全体（慣習が最近作られたこと）を受けるので単数あつかい。which surprises。' },
+      { sentence: '(A) What the author seems to suggest (B) in the final chapter (C) are that (D) memory is a kind of storytelling.', choices: ['(A) What the author seems to suggest', '(B) in the final chapter', '(C) are that', '(D) memory is a kind of storytelling'], answer: 2, why: '主語は What the author seems to suggest（名詞節）で単数。is that ～。' },
+      { sentence: 'The more (A) closely one studies the history of science, (B) more clearly one sees (C) how often progress (D) depended on chance.', choices: ['(A) closely one studies the history of science,', '(B) more clearly one sees', '(C) how often progress', '(D) depended on chance'], answer: 1, why: 'The 比較級 ～, the 比較級 … 。the more clearly。' },
+      { sentence: '(A) Not until the late twentieth century (B) did most historians (C) recognized the importance (D) of ordinary daily life.', choices: ['(A) Not until the late twentieth century', '(B) did most historians', '(C) recognized the importance', '(D) of ordinary daily life'], answer: 2, why: '倒置の did のあとは原形。did most historians recognize。' },
+      { sentence: 'The results (A) of the survey, which (B) was conducted over three years, (C) shows a steady (D) decline in the number of young readers.', choices: ['(A) of the survey, which', '(B) was conducted over three years,', '(C) shows a steady', '(D) decline in the number of young readers'], answer: 2, why: '主語は The results（複数）。which … years は survey を説明する挿入なので、動詞は show。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
