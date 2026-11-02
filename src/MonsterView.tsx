@@ -1612,6 +1612,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 82 Q30 76 36 82 Q30 86 24 82" fill="#c2410c" opacity="0.8" />
       </g>
     )
+  if (species === 'rosefinch')
+    return (
+      <g>
+        {/* つばさの白いもようと、ばら色のほお */}
+        <path d="M30 60 L38 58 M30 66 L38 64" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="40" cy="46" r="4" fill="#db2777" opacity="0.6" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
