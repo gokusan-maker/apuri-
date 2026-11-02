@@ -26518,6 +26518,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-slowness',
+    title: 'The Value of Slowness',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern societies place great value on speed. Faster trains, faster computers, and faster delivery services are generally regarded as improvements, and individuals are praised for working quickly, reading quickly, and making decisions without delay. In many areas of life this preference is entirely reasonable: few people would wish to return to a time when letters took weeks to arrive or when a simple calculation required hours of effort. Yet the assumption that faster is always better deserves closer examination, for some of the most valuable human activities seem to resist acceleration. To ask why this is so is to ask what kind of value such activities possess, and whether it can be measured by the standards we usually apply to machines.",
+      "Consider the process of understanding. Information can now be transmitted almost instantly, but understanding is not the same as receiving information. To understand a difficult idea, a person usually needs time to consider it from several angles, to connect it with what he or she already knows, and to notice where it raises further questions. This process cannot be hurried without loss. A student who memorizes the main points of a book in an evening may be able to repeat them, but is unlikely to have grasped the reasoning that makes them persuasive. Ideas absorbed too quickly also tend to be forgotten quickly, because they have not been woven into the larger fabric of a person's thinking.",
+      "The same is true of many forms of craft and art. A carpenter who takes time to study the grain of a piece of wood, or a musician who practices a single passage until its phrasing feels natural, is engaged in a kind of attention that cannot be replaced by efficiency. The quality of the work depends precisely on the willingness to slow down, to notice small details, and to correct mistakes patiently. When such activities are judged mainly by how quickly they can be completed, something essential to them is lost. A meal prepared in haste may satisfy hunger, but it rarely offers the pleasure of one in which care has been taken at every stage.",
+      "Human relationships, too, develop according to their own rhythm. Trust between people is built gradually through shared experiences, and friendships that matter deeply are rarely formed in a single meeting. Communication technologies allow us to stay in contact with many people at once, but they may also encourage us to treat conversations as tasks to be dealt with as rapidly as possible. ( A ) we respond instantly to every message, we may find that we have less time and patience for the slower, more demanding conversations through which mutual understanding grows. Listening well, after all, requires the patience to let another person finish a thought, and sometimes to wait while that person searches for the right words.",
+      "None of this means that speed should be rejected. The point is rather that different activities have different appropriate tempos, and that a culture which knows only one tempo, the fastest possible, risks distorting those activities that require another. The ability to move quickly when speed is useful and to slow down when slowness is necessary may be more valuable than speed itself. Such an ability depends on judgment, on the capacity to recognize what a particular situation demands.",
+      "Cultivating this judgment is not easy in an environment designed to capture attention and to reward immediate responses. It may require deliberate choices: setting aside time for reading without interruption, allowing pauses in conversation, or resisting the pressure to produce results before they are ready. Such choices can seem inefficient in the short term. In the long term, however, they may be what allows people to think deeply, to work well, and to sustain relationships that give their lives meaning. Slowness, in this sense, is not the opposite of progress but one of its hidden conditions.",
+    ],
+    ja: [
+      '現代の社会はスピードに大きな価値を置いている。より速い列車、より速いコンピューター、より速い配達サービスはふつう進歩とみなされ、人は速く働き、速く読み、ためらわずに決断することでほめられる。生活の多くの分野で、この好みはまったく理にかなっている。手紙が届くのに何週間もかかったり、かんたんな計算に何時間もの手間がかかったりした時代にもどりたいと思う人はほとんどいないだろう。しかし、速いほうがつねによいという前提は、もっとよく検討する必要がある。人間の最も価値ある活動のいくつかは、速くすることにあらがうように思えるからである。なぜそうなのかを問うことは、こうした活動がどんな種類の価値をもっているのか、そしてそれが私たちがふつう機械にあてはめる基準ではかれるのかを問うことである。',
+      '理解するという過程を考えてみよう。今では情報はほとんど一瞬で伝えられるが、理解することは情報を受け取ることと同じではない。むずかしい考えを理解するには、ふつう、それをいくつかの角度から考え、すでに知っていることと結びつけ、それがどこでさらに問いを生むかに気づくための時間が必要である。この過程は、何かを失わずに急がせることはできない。一晩で本の要点を暗記した学生は、それをくり返すことはできるかもしれないが、その要点を説得力あるものにしている筋道をつかんでいることはまずないだろう。あまりに速く取りこまれた考えは、その人の考えのより大きな織物に織りこまれていないので、すぐに忘れられてしまいがちでもある。',
+      '同じことは、多くの種類の手仕事や芸術についても言える。1枚の木の木目を時間をかけて調べる大工や、1つのフレーズを、その表情が自然に感じられるまで練習する音楽家は、効率では代わりになれない種類の注意を向けている。作品の質は、まさに、ゆっくり進み、小さな細部に気づき、根気よくまちがいを直そうとする姿勢にかかっている。こうした活動が主にどれだけ速く終えられるかで判断されると、それにとって本質的な何かが失われるのである。急いで作った食事は空腹を満たすかもしれないが、あらゆる段階で心をこめて作られた食事のような楽しみを与えてくれることはめったにない。',
+      '人間関係もまた、それ自身のリズムにしたがって育つ。人と人とのあいだの信頼は、ともにした経験を通じて少しずつ築かれ、深く大切な友情が一度の出会いで生まれることはめったにない。通信技術によって、私たちは多くの人と同時に連絡を取り続けることができるが、それはまた、会話をできるだけ速く片づけるべき作業として扱うよう私たちを促すかもしれない。あらゆるメッセージにすぐに返事をしていると、たがいの理解が育つ、よりゆっくりした、より手間のかかる会話のための時間と忍耐が少なくなっていることに気づくかもしれない。結局のところ、よく聞くには、相手が考えを最後まで言い終えるのを待ち、ときにはその人がぴったりの言葉をさがすあいだ待つ忍耐が必要なのである。',
+      'こうしたことは、スピードをこばむべきだということではない。むしろ要点は、活動が異なればふさわしいテンポも異なり、ただ1つのテンポ、つまりできるかぎり最も速いテンポしか知らない文化は、別のテンポを必要とする活動をゆがめてしまうおそれがある、ということである。スピードが役に立つときにはすばやく動き、ゆっくりさが必要なときにはゆっくり進む力は、スピードそのものよりも価値があるかもしれない。そうした力は判断力、つまりある状況が何を求めているかを見分ける能力にかかっている。',
+      '注意を引きつけ、すぐの反応に報いるように作られた環境のなかで、この判断力を育てるのはかんたんではない。それには意識的な選択が必要かもしれない。じゃまされずに読書する時間を取っておくこと、会話に間をもたせること、まだ準備ができていないうちに結果を出せという圧力にあらがうこと、などである。こうした選択は、短期的には効率が悪く見えるかもしれない。しかし長期的には、それこそが、人が深く考え、よく働き、人生に意味を与えてくれる関係を保つことを可能にするのかもしれない。この意味で、ゆっくりさは進歩の反対ではなく、その隠れた条件の1つなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Before'], answer: 0, why: '「あらゆるメッセージにすぐ返事をしていると（もし～なら）」という条件の If。' },
+    ],
+    tf: [
+      { statement: '筆者は、生活のすべての分野で速さを好むのはまちがいだと考えている。', answer: false, why: '第1段落 In many areas of life this preference is entirely reasonable。' },
+      { statement: '筆者によれば、理解することは情報を受け取ることと同じではない。', answer: true, why: '第2段落 understanding is not the same as receiving information。' },
+      { statement: '筆者によれば、深く大切な友情はたいてい一度の出会いで生まれる。', answer: false, why: '第4段落 friendships that matter deeply are rarely formed in a single meeting。' },
+      { statement: '筆者によれば、状況に合わせて速さとゆっくりさを使い分ける力は、スピードそのものより価値があるかもしれない。', answer: true, why: '第5段落 may be more valuable than speed itself。' },
+    ],
+    qa: [
+      { q: 'Why does the writer mention a carpenter and a musician in the third paragraph?', choices: ['To show that the quality of some work depends on a willingness to slow down and notice details.', 'To show that craft is less important than science.', 'To show that machines can replace human skill.', 'To show that music should be played quickly.'], answer: 0, why: '第3段落 The quality of the work depends precisely on the willingness to slow down, to notice small details。' },
+      { q: 'How does the writer describe slowness at the end of the passage?', choices: ['As one of the hidden conditions of progress.', 'As the opposite of progress.', 'As a luxury for wealthy people.', 'As a sign of laziness.'], answer: 0, why: '第6段落 Slowness, in this sense, is not the opposite of progress but one of its hidden conditions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
