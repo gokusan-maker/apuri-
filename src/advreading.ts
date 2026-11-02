@@ -25548,6 +25548,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-language-learning',
+    title: 'Why Learn Languages Now?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, travelers who wished to communicate in a foreign country had little choice but to learn at least some of the local language or to rely on human interpreters. Today, a smartphone can translate spoken conversations almost instantly, and written texts in dozens of languages can be rendered into one's own in seconds. These developments have led some people to ask a question that would once have seemed absurd: if machines can translate for us, is it still worth spending years learning a foreign language? The answer, many educators argue, is yes, but the reasons are worth examining carefully.",
+      "The most obvious argument for continuing to learn languages concerns the limits of current technology. Machine translation has improved dramatically, but it still struggles with humor, irony, regional expressions, and the subtle shifts in meaning that depend on context. In casual conversation, a slightly inaccurate translation may cause only minor confusion; in medical, legal, or diplomatic settings, the same error could have serious consequences. For these reasons, skilled human translators and interpreters remain in demand, and it seems likely that they will continue to be needed for some time.",
+      "Yet even if machines eventually became perfect translators, there would remain reasons to learn languages. Communication is not only an exchange of information but also a way of building relationships. Speaking to someone in his or her own language, even imperfectly, shows a willingness to make an effort and to meet the other person halfway. Many people who have lived abroad report that their relationships with local residents changed profoundly once they could talk without a device between them, and that small jokes and casual remarks played a large part in this change.",
+      "Learning a language also offers access to ways of thinking that are difficult to reach through translation. Every language divides experience in its own way, with words for feelings, relationships, or objects that have no exact equivalent elsewhere. A learner who encounters these differences directly may come to see that the categories of his or her own language are not the only natural ones. In this sense, studying a foreign language is also a way of seeing one's own language, and one's own assumptions, from the outside.",
+      "There is, in addition, evidence that the process of learning a language benefits the mind in more general ways. Studies have suggested that people who use more than one language regularly may become better at shifting attention between tasks, although researchers continue to debate how large and how reliable such effects are. Whatever the precise findings, it is clear that learning a language requires memory, patience, and the willingness to tolerate mistakes, all of which are valuable qualities in many areas of life.",
+      "None of this means that translation technology should be rejected. For many purposes, such as reading a menu, checking a train timetable, or understanding the general content of a news article, automatic translation is extremely useful, and it allows people to access information that would otherwise be unavailable to them. Teachers may even find ways to use these tools in the classroom, encouraging students to compare machine translations with their own and to discuss where and why the machine has gone wrong. Such exercises can make learners more aware of the choices involved in translation and more confident in their own judgment.",
+      "Perhaps the real question, then, is not whether people should learn languages but why they choose to do so. If the goal is simply to exchange basic information, technology may increasingly serve that purpose. ( A ) the goal is to understand other people deeply, to build lasting relationships, and to see the world from more than one perspective, there is still no substitute for the slow and rewarding work of learning to speak another language.",
+    ],
+    ja: [
+      '少し前まで、外国で意思を伝えたい旅行者には、少なくともその土地の言葉をいくらか学ぶか、人間の通訳にたよるかのほかに、ほとんど選択肢がなかった。今日では、スマートフォンが話した会話をほとんどすぐに訳すことができ、何十もの言語で書かれた文章を数秒で自分の言語に移すことができる。こうした発展によって、かつてならばかげているように思えたであろう問いを投げかける人もいる。機械が訳してくれるなら、何年もかけて外国語を学ぶ価値はまだあるのだろうか、という問いである。多くの教育者はその答えはイエスだと主張するが、その理由はくわしく調べる価値がある。',
+      '言語を学び続けるべき最も明らかな理由は、今の技術の限界にかかわる。機械翻訳はおどろくほど進歩したが、ユーモアや皮肉、地方の言い回し、文脈によって変わる微妙な意味のずれには、まだ苦労している。気軽な会話では、少し不正確な訳はちょっとした混乱を起こすだけかもしれないが、医療や法律や外交の場では、同じまちがいが深刻な結果をもたらしうる。こうした理由から、腕のよい翻訳者や通訳者は今も求められており、しばらくは必要とされ続けると思われる。',
+      'しかし、たとえ機械がやがて完全な翻訳者になったとしても、言語を学ぶ理由は残るだろう。意思の伝え合いは、情報のやりとりであるだけでなく、関係を築く方法でもある。相手の言語で話しかけることは、たとえ不完全でも、努力しようとする気持ちと、相手に歩み寄ろうとする気持ちを示す。外国で暮らしたことのある多くの人は、機械をあいだにはさまずに話せるようになったとたん、地元の人々との関係が大きく変わり、ちょっとしたじょうだんや何気ない言葉がその変化に大きな役割をはたしたと語る。',
+      '言語を学ぶことはまた、翻訳を通じてはたどり着きにくい考え方にふれる道をひらいてくれる。どの言語も独自のしかたで経験を区切っており、ほかの言語にはぴったりの言葉がない感情や関係や物を表す語をもっている。こうしたちがいに直接出会う学習者は、自分の言語の区切り方が唯一の自然なものではないと気づくようになるかもしれない。この意味で、外国語を学ぶことは、自分の言語や自分の前提を外から見る方法でもあるのである。',
+      'さらに、言語を学ぶ過程が、より一般的なしかたで頭のためになるという証拠もある。2つ以上の言語を日常的に使う人は、課題と課題の間で注意を切りかえるのが上手になるかもしれないと示す研究もあるが、そうした効果がどれほど大きく、どれほど確かなのかについて、研究者たちは今も議論を続けている。正確な結果がどうであれ、言語を学ぶには記憶力と忍耐とまちがいにたえる気持ちが必要であることははっきりしており、それらはどれも、人生の多くの場面で価値のある性質である。',
+      'こうしたことは、翻訳の技術をしりぞけるべきだという意味ではない。メニューを読んだり、電車の時刻表を確かめたり、ニュース記事の大まかな内容を理解したりといった多くの目的には、自動翻訳はとても役に立ち、そうでなければ手の届かない情報に人々がふれることを可能にしている。先生たちは、授業でこうした道具を使う方法を見つけることさえできるかもしれない。生徒に機械の訳と自分の訳をくらべさせ、機械がどこでなぜまちがえたのかを話し合わせるのである。こうした練習によって、学習者は翻訳にふくまれる選択をより意識し、自分の判断により自信をもてるようになるかもしれない。',
+      'だとすれば、本当の問いは、人々が言語を学ぶべきかどうかではなく、なぜ学ぶことを選ぶのかということなのかもしれない。目的が基本的な情報をやりとりすることだけなら、技術がますますその目的にかなうかもしれない。しかし、目的が他人を深く理解し、長く続く関係を築き、2つ以上の見方から世界を見ることであるなら、別の言語を話せるようになるという、時間がかかるが実りの多い取り組みに代わるものは、今もないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If, however,', 'Unless', 'Because', 'Even so,'], answer: 0, why: '前の文（目的が基本的な情報のやりとりなら）と対比して「しかし、目的が～なら」と条件を示すので If, however,。' },
+    ],
+    summary: {
+      text: 'Although machine translation has become very powerful, it still has ( 1 ), especially with humor and context. Even a perfect translator would not replace the role of language in building ( 2 ), and learning a language gives access to other ways of ( 3 ). Translation tools are useful for basic information, but they cannot replace the work of learning another language.',
+      blanks: [
+        { choices: ['limits', 'customers', 'rules', 'colors'], answer: 0, why: '第2段落 the limits of current technology ... still struggles with humor, irony ～。' },
+        { choices: ['relationships', 'machines', 'roads', 'schools'], answer: 0, why: '第3段落 Communication is ... also a way of building relationships。' },
+        { choices: ['thinking', 'traveling', 'shopping', 'sleeping'], answer: 0, why: '第4段落 Learning a language also offers access to ways of thinking ～。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、機械翻訳はユーモアや皮肉の訳にまだ苦労している。', answer: true, why: '第2段落 it still struggles with humor, irony, regional expressions ～。' },
+      { statement: '筆者は、機械が完全な翻訳者になれば、言語を学ぶ理由はなくなると考えている。', answer: false, why: '第3段落 even if machines eventually became perfect translators, there would remain reasons to learn languages。' },
+      { statement: '筆者によれば、2つの言語を使う効果の大きさについて、研究者は今も議論している。', answer: true, why: '第5段落 researchers continue to debate how large and how reliable such effects are。' },
+      { statement: '筆者は、翻訳の技術は授業で使うべきではないと述べている。', answer: false, why: '第6段落 Teachers may even find ways to use these tools in the classroom。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, what does speaking to someone in his or her own language show?', choices: ['A willingness to make an effort and meet the other person halfway.', 'That machines are no longer useful.', 'That the speaker is a professional interpreter.', 'That small jokes are unimportant.'], answer: 0, why: '第3段落 shows a willingness to make an effort and to meet the other person halfway。' },
+      { q: 'In what sense is studying a foreign language "a way of seeing one\'s own language ... from the outside"?', choices: ['Learners discover that the categories of their own language are not the only natural ones.', 'Learners forget their own language completely.', 'Learners only read translated books.', 'Learners stop thinking about language at all.'], answer: 0, why: '第4段落 may come to see that the categories of his or her own language are not the only natural ones。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
