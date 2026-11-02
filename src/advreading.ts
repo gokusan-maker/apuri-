@@ -25201,6 +25201,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-habit-freedom',
+    title: 'Habit and Freedom',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often speak of habits as if they were the opposite of freedom. A person who acts out of habit, we assume, is not really choosing but simply repeating what he or she has done before, like a machine following a program. On this view, the free individual is someone who examines each situation afresh and decides how to respond, unconstrained by the patterns of the past. It is an attractive picture, and it has deep roots in modern thought. Yet when we look closely at how human beings actually live, it becomes clear that the relationship between habit and freedom is far more intimate than this picture suggests.",
+      "Consider how much of an ordinary day depends on actions performed without deliberate thought. We walk, speak, tie our shoes, and find our way to familiar places without having to decide, at each moment, what to do next. If every one of these actions required conscious attention, we would be exhausted long before noon, and we would have little energy left for the decisions that genuinely matter. Habit, in this sense, does not replace choice but makes room for it, freeing the mind to concentrate on what is new or difficult. Anyone who has moved to a foreign country knows how tiring it can be when even simple tasks, such as buying a ticket or greeting a neighbor, must be worked out consciously each time.",
+      "The same is true of skills. A pianist who can play a difficult piece with apparent ease has not escaped from habit but has trained it to an extraordinary degree. Thousands of hours of practice have made movements automatic ( A ) once required intense concentration, and it is precisely this automatic foundation that allows the musician to attend to expression, to listen to other players, and to respond to the mood of an audience. Without well-formed habits, the freedom to interpret the music in a personal way would simply not exist.",
+      "Habits also shape character. Philosophers since ancient times have argued that we become honest by repeatedly telling the truth, and generous by repeatedly giving to others. A virtue, on this account, is not a single decision but a settled disposition formed through practice. The person of good character does not need to struggle with temptation on every occasion, because the right response has become, in a sense, second nature. Far from limiting such a person's freedom, these habits express the kind of person he or she has chosen to become.",
+      "This does not mean that every habit is beneficial. Some patterns of behavior, once established, work against our own interests, and changing them can be extremely difficult. The same mechanism that allows a pianist to play without thinking also allows a smoker to reach for a cigarette before noticing the desire. The challenge, then, is not to eliminate habit but to cultivate good habits and to remain capable of reflecting on the ones we already have. Freedom lies less in the absence of habit than in our ability to question and, when necessary, to reshape it. Such reshaping rarely happens through a single act of will; it usually requires replacing an old pattern with a new one and repeating the new one until it, too, becomes a habit.",
+      "Seen in this way, the opposition between habit and freedom begins to dissolve. ( B ) we imagine a self that stands entirely outside its own patterns of behavior, choosing each action from nothing, we are imagining something that no human being has ever been. Real freedom is perhaps better understood as the capacity to take responsibility for the habits that make us who we are, to shape them over time, and to rely on them so that our attention is available for what is genuinely new.",
+    ],
+    ja: [
+      '私たちはしばしば、習慣を自由の反対であるかのように語る。習慣から行動する人は、本当は選んでいるのではなく、プログラムにしたがう機械のように、以前にしたことをただくり返しているだけだと考えるのである。この見方によれば、自由な個人とは、過去のパターンにしばられずに、それぞれの状況を新たに調べ、どうこたえるかを決める人である。それは魅力的な描き方であり、近代の思想に深い根をもっている。しかし、人間が実際にどのように生きているかをよく見ると、習慣と自由の関係は、この描き方が示すよりもはるかに密接であることがはっきりしてくる。',
+      'ふつうの1日が、どれほど多く、意識して考えずに行う行動にたよっているかを考えてみよう。私たちは、次に何をするかを一瞬ごとに決めなくても、歩き、話し、くつのひもを結び、なじみの場所へ行く道を見つける。こうした行動のひとつひとつに意識的な注意が必要だったら、私たちは昼よりずっと前にくたくたになり、本当に大切な決定のための力はほとんど残らないだろう。この意味で、習慣は選択に取ってかわるのではなく、選択のための余地をつくり、頭が新しいことやむずかしいことに集中できるようにしてくれるのである。外国に移り住んだことのある人なら、切符を買うことや近所の人にあいさつすることのようなかんたんなことでさえ、毎回意識して考えなければならないときに、どれほどつかれるかを知っているだろう。',
+      '同じことは技能にもあてはまる。むずかしい曲を見たところ楽々とひきこなすピアニストは、習慣からのがれたのではなく、習慣をおどろくほどの程度まで鍛え上げたのである。何千時間もの練習が、かつては強い集中を必要とした動きを自動的なものにした。そしてまさにこの自動的な土台があるからこそ、音楽家は表現に注意をはらい、ほかの演奏者に耳をかたむけ、聴衆の雰囲気にこたえることができる。よく形づくられた習慣がなければ、音楽を自分なりに解釈する自由は、そもそも存在しないだろう。',
+      '習慣はまた人格も形づくる。古代以来の哲学者たちは、私たちはくり返し真実を語ることで正直になり、くり返し人にあたえることで気前よくなると論じてきた。この説明によれば、徳とはたった1回の決定ではなく、実践を通じて形づくられた落ち着いた性向である。よい人格の人は、毎回誘惑と戦う必要はない。正しいこたえ方が、ある意味で第二の天性になっているからである。そうした習慣は、その人の自由をせばめるどころか、その人が自ら選んでなってきた人間のあり方を表しているのである。',
+      'このことは、あらゆる習慣が有益だという意味ではない。いったん定着すると自分の利益に反して働くふるまいのパターンもあり、それを変えるのはきわめてむずかしいことがある。ピアニストが考えずにひけるようにしてくれるのと同じしくみが、たばこを吸う人が、吸いたい気持ちに気づく前にたばこに手をのばすことも可能にしてしまう。したがって課題は、習慣をなくすことではなく、よい習慣を育て、すでにもっている習慣について考え直す力を保つことである。自由は、習慣がないことよりも、むしろそれを問い、必要なときにはつくり変える力にあるのである。そうしたつくり変えは、たった1回の意志の力で起こることはめったにない。ふつうそれには、古いパターンを新しいパターンに置きかえ、それもまた習慣になるまで、新しいパターンをくり返すことが必要なのである。',
+      'このように見ると、習慣と自由の対立はとけはじめる。自分自身のふるまいのパターンの完全に外に立ち、無から1つ1つの行動を選ぶ自己を思いえがくとき、私たちは、どんな人間も一度もそうであったことのない何かを思いえがいているのである。本当の自由は、むしろ、私たちを今の私たちにしている習慣に責任をもち、時間をかけてそれを形づくり、それにたよることで、本当に新しいことに注意を向けられるようにする力として理解したほうがよいのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 movements を受け、required の主語になる関係代名詞 that。what は先行詞をとらない。' },
+      { id: 'B', choices: ['When', 'Unless', 'Although', 'Until'], answer: 0, why: '「～な自己を思いえがくとき、私たちは…を思いえがいている」なので When。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、近代の思想には、習慣を自由の反対とみなす考えが根づいている。', answer: true, why: '第1段落 It is an attractive picture, and it has deep roots in modern thought。' },
+      { statement: '筆者は、習慣は選択に取ってかわってしまうと述べている。', answer: false, why: '第2段落 Habit, in this sense, does not replace choice but makes room for it。' },
+      { statement: '筆者によれば、哲学者たちは、徳は実践を通じて形づくられると論じてきた。', answer: true, why: '第4段落 a settled disposition formed through practice。' },
+      { statement: '筆者は、あらゆる習慣をなくすべきだと考えている。', answer: false, why: '第5段落 The challenge, then, is not to eliminate habit but to cultivate good habits。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, what allows a pianist to attend to expression and to other players?', choices: ['An automatic foundation built through thousands of hours of practice.', 'The complete absence of habit.', 'Reading the music for the first time.', 'Ignoring the mood of the audience.'], answer: 0, why: '第3段落 it is precisely this automatic foundation that allows the musician to attend to expression。' },
+      { q: 'Where does the writer say freedom lies?', choices: ['In our ability to question and reshape our habits.', 'In having no habits at all.', 'In repeating what we did before.', 'In avoiding all difficult decisions.'], answer: 0, why: '第5段落 Freedom lies less in the absence of habit than in our ability to question and ... to reshape it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
