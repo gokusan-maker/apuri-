@@ -4308,6 +4308,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The [cost] of this shirt is written on the tag, but it is 20% off today.', choices: ['price', 'fee', 'fare', 'charge of'], answer: 0, why: '品物につけられた「値段」は price。cost は「（作る・する）のにかかる費用」。' },
     ],
   },
+  {
+    id: 'exam-fix-100',
+    title: '入試の誤文訂正〈100〉（京大レベル：長い文の中の一致・挿入・遠い先行詞）',
+    points: ['京大の英文は1文が長く、主語と動詞の間に関係詞節・分詞・挿入句が入る。文の骨組み（主語はどれか・その動詞はどれか・関係詞の先行詞はどれか）を見ぬいてから、一致や形を確かめる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The idea that children learn best when they are free to explore, which many teachers now accept, was once considered radical.', ja: '子どもは自由に探索できるときにいちばんよく学ぶという考えは、今では多くの教師が受け入れているが、かつては過激だと考えられていた。' }],
+    questions: [
+      { sentence: 'The ability of young children to learn several languages at once, which has been confirmed by many studies, [suggest] that the brain is far more flexible than once believed.', choices: ['suggests', 'suggesting', 'are suggesting', 'have suggested'], answer: 0, why: '主語は The ability（単数）。of … at once と which … studies をとばすと、動詞は suggests。' },
+      { sentence: 'What the researchers found most surprising, after years of observing the birds in the wild, [were] how quickly they learned to use new tools.', choices: ['was', 'have been', 'being', 'are'], answer: 0, why: '主語は What the researchers found most surprising（名詞節）で単数あつかい。was。' },
+      { sentence: 'Among the many problems that the new government will have to address [are a shortage] of affordable housing in the capital.', choices: ['is a shortage', 'are shortages', 'is shortages', 'being a shortage'], answer: 0, why: 'Among ～ が文頭に出た倒置で、本当の主語はうしろの a shortage（単数）。is a shortage。' },
+      { sentence: 'The novelist, whose books [has been] translated into more than thirty languages, rarely gives interviews.', choices: ['have been', 'has', 'is being', 'was'], answer: 0, why: '関係詞節の主語は whose books（複数）。have been translated。' },
+      { sentence: 'Scientists have long debated whether the changes in climate that occurred thousands of years ago [was] caused mainly by the sun.', choices: ['were', 'had', 'being', 'has been'], answer: 0, why: 'whether 節の主語は the changes（複数）。that … ago は changes を修飾。were caused。' },
+      { sentence: 'It is the small daily habits, rather than the occasional dramatic decision, [that determines] the shape of a life.', choices: ['that determine', 'which determines', 'what determine', 'they determine'], answer: 0, why: 'It is ～ that … の強調構文。強調されているのは the small daily habits（複数）なので that determine。' },
+      { sentence: 'Neither the advantages of the new system nor its cost [have] been explained clearly to the people who will use it.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: 'Neither A nor B の動詞は B（its cost・単数）に合わせて has been explained。' },
+      { sentence: 'The extent to which modern cities depend on systems that most residents never [see them] is rarely appreciated.', choices: ['see', 'see it', 'seeing', 'are seen'], answer: 0, why: 'systems that most residents never see の that は see の目的語。目的語をくり返す them は不要。' },
+      { sentence: 'There [seem] to be little agreement among experts about how the ancient city was finally abandoned.', choices: ['seems', 'seeming', 'are seeming', 'have seemed'], answer: 0, why: 'There seem(s) to be のあとの主語は little agreement（数えられない名詞・単数）なので seems。' },
+      { sentence: 'Each of the theories proposed in the past century, however convincing it appeared at the time, [have] eventually been challenged.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: '主語は Each（単数）。proposed … century と however … time をとばすと、動詞は has been challenged。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

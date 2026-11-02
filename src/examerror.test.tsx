@@ -1443,3 +1443,10 @@ it('正誤問題〈106〉：まぎらわしい名詞の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) price from Tokyo')
 })
+
+it('誤文訂正〈100〉：京大レベルの長い文の一致の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-100')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('suggests')
+})
