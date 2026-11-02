@@ -26780,6 +26780,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-recommendations',
+    title: 'Chosen for You',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When people open a music service, a video platform, or an online bookstore today, they are usually greeted not by a neutral list of everything available but by a selection chosen especially for them. Recommendation systems analyze what users have watched, listened to, or bought in the past, compare these choices with those of millions of other people, and predict what each person is likely to enjoy next. These systems have become so common that many users rarely search for something new on their own; instead, they simply accept what is offered. In this sense, the systems do not merely respond to our preferences but increasingly stand between us and the cultural world as a whole.",
+      "The benefits of such systems are real. The amount of music, film, and writing available online is far greater than any person could explore in a lifetime, and without some form of guidance, finding something enjoyable could take a great deal of time. Recommendations can introduce people to artists or authors they would never have discovered otherwise, and they can help small creators reach audiences who share their interests. For many users, the experience of receiving a well-chosen suggestion is genuinely pleasant, much like receiving advice from a friend who seems to know exactly what we like.",
+      "Critics, however, worry about the long-term effects of relying on these systems. Because recommendations are based on past behavior, they tend to offer more of what a person has already shown interest in. A listener who enjoys one style of music may be offered more and more of that style, while other kinds of music gradually disappear from view. Over time, this may narrow people's tastes rather than broaden them, creating a comfortable but limited cultural world in which surprise becomes increasingly rare. The danger is not that people will be forced to consume certain things, but that they may slowly lose the habit of looking beyond what is placed in front of them.",
+      "There are also questions about whose interests the systems serve. Companies that operate recommendation services generally aim to keep users on their platforms for as long as possible, since this increases advertising income or subscription renewals. A recommendation that keeps a person watching may not be the same as one that the person would, on reflection, consider most valuable. Content that provokes strong emotions, for instance, may be promoted because it holds attention, even if it leaves viewers feeling worse afterward. In such cases, what the system measures as success, namely time spent on the platform, may differ sharply from what users themselves would regard as a good use of their time.",
+      "Some observers argue that these concerns are exaggerated. People have always relied on others to guide their choices, whether friends, critics, shop assistants, or radio presenters, and such guides also shaped tastes in particular directions. Moreover, users are not passive: they can ignore recommendations, search for unfamiliar works, and seek advice from human sources. ( A ) algorithms influence what we encounter, the argument goes, they do not determine it completely, and many people continue to find their own way through the vast space of available culture.",
+      "Still, the scale and invisibility of algorithmic recommendation make it different from earlier forms of guidance. A friend who recommends a book can explain why, and we can judge that explanation; an algorithm usually offers no reasons at all. Perhaps the most useful response is not to reject such systems but to use them consciously, treating their suggestions as one possibility among many and occasionally choosing something that no system would have predicted. Taste, after all, is not only something that is satisfied but also something that can grow, and growth often begins with the unexpected.",
+    ],
+    ja: [
+      '今日、人が音楽サービスや動画サイトやネット書店を開くと、たいてい、手に入るあらゆるものの中立的な一覧ではなく、その人のために特別に選ばれたものが出迎える。おすすめのしくみは、利用者が過去に見たり聞いたり買ったりしたものを分析し、それを何百万というほかの人々の選択と比べて、一人ひとりが次に何を楽しみそうかを予測する。こうしたしくみはあまりに一般的になったので、多くの利用者は自分で新しいものをさがすことがめったになく、代わりに、すすめられたものをただ受け入れている。この意味で、こうしたしくみは私たちの好みに応えるだけでなく、ますます私たちと文化の世界全体とのあいだに立つようになっている。',
+      'こうしたしくみの利点は現実のものである。ネットで手に入る音楽や映画や文章の量は、だれも一生かかっても探りきれないほど多く、何らかの案内がなければ、楽しめるものを見つけるのにとても時間がかかりうる。おすすめは、ほかの方法では決して出会わなかったはずの芸術家や作家に人々を引き合わせ、小さな作り手が同じ関心をもつ観客に届く助けにもなる。多くの利用者にとって、よく選ばれた提案を受け取る経験は本当に楽しいものである。それは、私たちの好きなものをよくわかっているように見える友人から助言をもらうのに似ている。',
+      'しかし批判する人々は、こうしたしくみにたよることの長期的な影響を心配している。おすすめは過去のふるまいにもとづいているので、その人がすでに関心を示したものをもっと提供しがちである。ある種類の音楽を楽しむ聞き手には、その種類がますます多く提供される一方で、ほかの種類の音楽はしだいに見えなくなっていくかもしれない。時がたつにつれて、これは人々の好みを広げるどころかせばめ、おどろきがますますまれになる、居心地はよいが限られた文化の世界を作り出すかもしれない。危険なのは、人々が特定のものを無理やり消費させられることではなく、目の前に置かれたものの向こうを見る習慣を、少しずつ失っていくかもしれないことである。',
+      'そのしくみがだれの利益に役立っているのかという問いもある。おすすめのサービスを運営する会社は、ふつう利用者をできるだけ長くサイトにとどめようとする。そのほうが広告収入や定額サービスの更新がふえるからである。人に見続けさせるおすすめは、その人がよく考えたときに最も価値があると思うものと同じとは限らない。たとえば、強い感情をかき立てる内容は、たとえ見たあとで気分が悪くなるとしても、注意を引きつけるという理由で、おしすすめられるかもしれない。そうした場合、しくみが成功としてはかるもの、つまりサイトで過ごす時間は、利用者自身が時間のよい使い方と考えるものと大きく異なるかもしれない。',
+      'こうした懸念は大げさだと論じる人もいる。人々は昔から、友人や批評家や店員やラジオの司会者など、他人にたよって選んできたし、そうした案内役もまた、好みを特定の方向に形づくってきた。さらに、利用者は受け身ではない。おすすめを無視したり、なじみのない作品をさがしたり、人間に助言を求めたりすることができる。アルゴリズムは私たちが出会うものに影響を与えるとしても、それを完全に決めるわけではなく、多くの人は、手に入る文化の広大な空間の中で自分なりの道を見つけ続けている、というのがその議論である。',
+      'それでも、アルゴリズムによるおすすめの規模と見えにくさは、それをそれ以前の案内とはちがうものにしている。本をすすめる友人はその理由を説明でき、私たちはその説明を判断できるが、アルゴリズムはふつう理由をまったく示さない。おそらく最も役に立つ対応は、こうしたしくみをこばむことではなく、意識して使うこと、つまりその提案を多くの可能性のうちの1つとして扱い、ときにはどんなしくみも予測しなかったようなものを選ぶことである。結局のところ、好みは満たされるものであるだけでなく、育ちうるものでもあり、成長はしばしば予想外のものから始まるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「影響を与えるとしても、完全に決めるわけではない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Recommendation systems predict what users will enjoy and can help them find new works. However, because they are based on past behavior, they may ( 1 ) people\'s tastes, and companies may promote content that keeps users watching rather than what is most ( 2 ). The writer suggests using such systems ( 3 ) and sometimes choosing something unexpected.',
+      blanks: [
+        { choices: ['narrow', 'broaden', 'record', 'protect'], answer: 0, why: '第3段落 this may narrow people\'s tastes rather than broaden them。' },
+        { choices: ['valuable', 'popular', 'expensive', 'recent'], answer: 0, why: '第4段落 one that the person would, on reflection, consider most valuable。' },
+        { choices: ['consciously', 'rarely', 'secretly', 'quickly'], answer: 0, why: '第6段落 to use them consciously。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、おすすめのしくみは小さな作り手が観客に届く助けにもなる。', answer: true, why: '第2段落 they can help small creators reach audiences who share their interests。' },
+      { statement: '筆者によれば、おすすめは過去のふるまいとは関係なく、ランダムに選ばれる。', answer: false, why: '第3段落 Because recommendations are based on past behavior。' },
+      { statement: '懸念は大げさだと論じる人々は、利用者は受け身ではないと考えている。', answer: true, why: '第5段落 users are not passive。' },
+      { statement: '筆者によれば、アルゴリズムはふつう、おすすめの理由をくわしく説明する。', answer: false, why: '第6段落 an algorithm usually offers no reasons at all。' },
+    ],
+    qa: [
+      { q: 'Why might companies promote content that provokes strong emotions?', choices: ['Because it holds attention and keeps users on the platform.', 'Because users always prefer calm content.', 'Because it is cheaper to produce.', 'Because the law requires it.'], answer: 0, why: '第4段落 may be promoted because it holds attention。' },
+      { q: 'How is a friend who recommends a book different from an algorithm, according to the writer?', choices: ['A friend can explain why, and we can judge that explanation.', 'A friend always recommends popular books.', 'A friend knows more about our past purchases.', 'A friend never influences our tastes.'], answer: 0, why: '第6段落 A friend who recommends a book can explain why, and we can judge that explanation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
