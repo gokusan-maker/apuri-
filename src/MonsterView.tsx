@@ -1976,6 +1976,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 60 Q44 57 48 60 M50 60 Q54 57 58 60 M44 66 Q48 63 52 66" fill="none" stroke="#1c1917" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'japanesethrush')
+    return (
+      <g>
+        {/* 黄色いくちばしと、白いおなかの黒い点々 */}
+        <path d="M44 50 L55 52 L44 54 Z" fill="#facc15" />
+        <ellipse cx="50" cy="64" rx="9" ry="6" fill="#f8fafc" />
+        <circle cx="47" cy="63" r="1.3" fill="#030712" />
+        <circle cx="53" cy="65" r="1.3" fill="#030712" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
