@@ -26130,6 +26130,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-categories',
+    title: 'The Use and Limits of Categories',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Human beings are, by nature, classifiers. From early childhood we learn to sort the world into groups: animals and plants, friends and strangers, things that are safe and things that are dangerous. Without such categories, the world would appear as an overwhelming stream of unique objects and events, each demanding to be understood on its own terms. Classification allows us to recognize patterns, to apply what we learned in one situation to another, and to communicate efficiently with others who share our system of names. In this sense, categories are not obstacles to understanding but among its most basic conditions, and a mind without them would hardly be able to think at all.",
+      "Yet the very usefulness of categories can make us forget that they are, to a considerable degree, our own creations. Nature does not come labeled. The boundaries we draw between colors, for example, vary from language to language; a range of shades that one culture regards as a single color may be divided into two or three in another. Even in biology, where classification might seem to reflect objective facts, scientists have repeatedly revised their systems as new evidence has emerged, and some living things stubbornly refuse to fit into any of the existing groups. The history of science is in part a history of such revisions, in which apparently obvious divisions turned out to depend on assumptions that later generations could no longer accept.",
+      "This does not mean that categories are arbitrary or that all ways of dividing the world are equally good. Some classifications capture real similarities and allow accurate predictions; others are based on superficial features and lead us astray. ( A ) a category is a tool, its value depends on the purpose for which it is used. A system that is excellent for one task may be useless or even harmful for another. A cook and a botanist, for instance, may classify the same tomato quite differently, and neither of them is simply wrong. The question to ask of a category, therefore, is not only whether it is true but also what it helps us to see and what it may lead us to ignore.",
+      "Problems arise when we treat our categories as if they were fixed features of reality rather than instruments of thought. Once a thing has been given a name, we tend to notice the features that match the name and to overlook those that do not. A person described as shy may be seen as shy in every situation, even when he or she behaves quite confidently. In this way, labels can shape not only how we see others but also how they come to see themselves, and the category may gradually produce the very qualities it was supposed merely to describe.",
+      "The danger is greatest when categories are applied to people. Throughout history, classifications based on origin, appearance, or social position have been used to justify unequal treatment, and their supporters have often claimed that these divisions were natural and unchangeable. Recognizing that such categories are human constructions does not by itself remove injustice, but it opens the possibility of questioning them. What has been made by people can, at least in principle, be remade by people. It is for this reason that many movements for social change have begun not with new laws but with new ways of naming and describing human experience.",
+      "None of this suggests that we should, or could, abandon classification altogether. To think at all is to group things together and to distinguish them from one another. What is required is rather a certain lightness in the way we hold our categories: a willingness to use them while remembering that they are provisional, and an alertness to the cases that do not fit. Such cases are not merely annoying exceptions. They are often the points at which our understanding can grow, because they show us the limits of the concepts we have been using and invite us to imagine new ones.",
+    ],
+    ja: [
+      '人間は生まれつき分類する存在である。幼いころから、私たちは世界をいくつかの集まりに分けることを学ぶ。動物と植物、友人と見知らぬ人、安全なものと危険なもの。こうした区分がなければ、世界は、それぞれがそれ自体として理解されることを求める、一つひとつちがったものやできごとの圧倒的な流れとして現れるだろう。分類によって、私たちはパターンに気づき、ある状況で学んだことを別の状況にあてはめ、同じ名前の体系を共有する他者と効率よく意思を伝え合うことができる。この意味で、区分は理解のさまたげではなく、その最も基本的な条件の1つであり、区分をもたない心はほとんど考えることさえできないだろう。',
+      'しかし、区分がまさに役に立つことによって、私たちは、それがかなりの程度まで自分たち自身の作ったものであることを忘れてしまうことがある。自然にはラベルがついていない。たとえば、色と色のあいだに私たちが引く境界は言語によって異なる。ある文化が1つの色とみなす色合いの幅が、別の文化では2つや3つに分けられることもある。分類が客観的な事実を反映しているように見える生物学においてさえ、新しい証拠が出てくるたびに科学者たちはその体系を何度も改めてきたし、既存のどの集まりにもどうしてもあてはまらない生き物もいる。科学の歴史は、ある面ではこうした改訂の歴史であり、そこでは一見明らかな区別が、後の世代がもはや受け入れられない前提にもとづいていたとわかったのである。',
+      'だからといって、区分が恣意的であるとか、世界のあらゆる分け方が同じくらいよいということにはならない。現実の類似をとらえ、正確な予測を可能にする分類もあれば、表面的な特徴にもとづいていて私たちを誤らせる分類もある。区分は道具であるから、その価値はそれが使われる目的によって決まる。ある仕事にとってすぐれた体系が、別の仕事には役に立たないどころか有害でさえあることもある。たとえば料理人と植物学者は、同じトマトをまったく異なる形で分類するかもしれないが、どちらも単にまちがっているわけではない。したがって、ある区分について問うべきなのは、それが正しいかどうかだけでなく、それが私たちに何を見せてくれ、何を見落とさせるかもしれないか、ということである。',
+      '問題が生じるのは、区分を思考の道具としてではなく、現実の固定した特徴であるかのように扱うときである。いったんものに名前がつけられると、私たちはその名前に合う特徴に気づき、合わない特徴を見落としがちになる。内気だと言われた人は、かなり自信をもってふるまっているときでさえ、あらゆる場面で内気だと見られるかもしれない。このようにして、ラベルは私たちが他者をどう見るかだけでなく、その人たちが自分自身をどう見るようになるかも形づくり、区分は、本来ただ記述するはずだった性質そのものをしだいに生み出してしまうことがある。',
+      '危険が最も大きいのは、区分が人に向けられるときである。歴史を通じて、出身や外見や社会的な地位にもとづく分類は不平等なあつかいを正当化するために使われてきたし、それを支持する人々は、こうした区別は自然で変えられないものだとしばしば主張してきた。そうした区分が人間の作ったものだと認めることは、それだけで不正をなくすわけではないが、それを問い直す可能性を開く。人が作ったものは、少なくとも原理的には、人が作り直すことができるのである。多くの社会変革の運動が、新しい法律からではなく、人間の経験を名づけ、表す新しいしかたから始まってきたのは、このためである。',
+      'こうしたことは、私たちが分類をまったくやめるべきだとか、やめられるとかいうことを意味しない。そもそも考えるということは、ものをまとめ、たがいに区別することなのである。むしろ必要なのは、区分をもつときのある種の軽やかさである。つまり、それが仮のものだと覚えておきながら使う心がまえと、あてはまらない場合への注意深さである。そうした場合は単にわずらわしい例外ではない。それらはしばしば、私たちの理解が成長しうる地点である。なぜなら、それらは私たちが使ってきた概念の限界を示し、新しい概念を思い描くよう誘ってくれるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「区分は道具であるから、その価値は目的によって決まる」という理由の Because。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、色と色の境界の引き方は、言語によって異なる。', answer: true, why: '第2段落 The boundaries we draw between colors ... vary from language to language。' },
+      { statement: '筆者によれば、区分は人間が作ったものなので、どんな分け方も同じくらいよい。', answer: false, why: '第3段落 This does not mean that ... all ways of dividing the world are equally good。' },
+      { statement: '筆者によれば、ラベルは、その人が自分自身をどう見るかにも影響しうる。', answer: true, why: '第4段落 labels can shape ... also how they come to see themselves。' },
+      { statement: '筆者は、私たちは分類をまったくやめるべきだと主張している。', answer: false, why: '第6段落 None of this suggests that we should, or could, abandon classification altogether。' },
+    ],
+    qa: [
+      { q: 'Why does the writer mention a cook and a botanist in the third paragraph?', choices: ['To show that the value of a classification depends on its purpose.', 'To show that cooks know more about plants than botanists.', 'To show that tomatoes cannot be classified.', 'To show that one of them is simply wrong.'], answer: 0, why: '第3段落 its value depends on the purpose for which it is used の具体例。' },
+      { q: 'According to the last paragraph, why are cases that do not fit valuable?', choices: ['They show the limits of our concepts and invite us to imagine new ones.', 'They prove that all categories are useless.', 'They are rare and can be safely ignored.', 'They make classification faster and easier.'], answer: 0, why: '第6段落 they show us the limits of the concepts we have been using and invite us to imagine new ones。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
