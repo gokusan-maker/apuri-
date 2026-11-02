@@ -62,7 +62,8 @@ export function passagesFor(level: ReadLevel): LongPassage[] {
       // 京大専用の長文（kyodai-）をいちばん先に
       return upper().filter((p) => words(p) >= LONG_WORDS.top && !p.id.startsWith('todai-')).sort((a, b) => Number(b.id.startsWith('kyodai-')) - Number(a.id.startsWith('kyodai-')))
     case '東大':
-      return upper().filter((p) => words(p) >= LONG_WORDS.top && !p.id.startsWith('kyodai-')).reverse()
+      // 東大専用の長文（todai-）をいちばん先に
+      return upper().filter((p) => words(p) >= LONG_WORDS.top && !p.id.startsWith('kyodai-')).reverse().sort((a, b) => Number(b.id.startsWith('todai-')) - Number(a.id.startsWith('todai-')))
     case 'TOEIC':
       return [...univ.filter(biz), ...LONG_PASSAGES.filter((p) => head(p).startsWith('中3') && /メール|お知らせ/.test(p.level))]
     case 'TOEFL・IELTS':

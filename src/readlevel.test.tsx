@@ -165,3 +165,14 @@ it('京大専用の長文⑤「制限が生む創造性」：京大の下限600�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
 })
+
+it('東大専用の長文①「なぜ贈り物をするのか」：600語以上・1文18語以上で、東大のいちばんはじめ（要約の設問つき）。京大・旧帝大には出ない', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('東大')[0]
+  expect(p.id).toBe('todai-gifts')
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect((p.qa ?? []).some((q) => q.q.includes('要約'))).toBe(true)
+  expect(passagesFor('京大').some((x) => x.id === p.id)).toBe(false)
+  expect(passagesFor('旧帝大').some((x) => x.id === p.id)).toBe(false)
+})
