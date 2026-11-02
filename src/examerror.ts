@@ -4602,6 +4602,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The rapid growth of the city [has led on] serious problems with traffic and housing.', choices: ['has led to', 'has led', 'has led for', 'has leading to'], answer: 0, why: 'lead to ～ で「～につながる・～をまねく」。' },
     ],
   },
+  {
+    id: 'exam-fix-107',
+    title: '入試の誤文訂正〈107〉（東大レベル：要約・英作文の接続語）',
+    points: ['要約や英作文で論理をつなぐ語は、うしろが「S＋V」か「名詞」かで使い分ける。although／because／while（接続詞）＋S V、despite／because of／during（前置詞）＋名詞。however・therefore は副詞なので、2つの文をコンマだけでつなげない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Although the plan was expensive, the city decided to carry it out.', ja: 'その計画は費用がかかったが、市は実行することに決めた。' }],
+    questions: [
+      { sentence: '[Despite] the experiment failed several times, the researchers did not give up.', choices: ['Although', 'In spite of', 'Because of', 'During'], answer: 0, why: 'うしろが S＋V（the experiment failed）なので接続詞 Although。Despite のうしろは名詞。' },
+      { sentence: '[Although] the heavy rain, the match was played as planned.', choices: ['Despite', 'Even though', 'Because', 'While'], answer: 0, why: 'うしろが名詞（the heavy rain）なので前置詞 Despite。' },
+      { sentence: 'Many flights were canceled [because] the strong winds.', choices: ['because of', 'since', 'so', 'due'], answer: 0, why: 'うしろが名詞なので because of。due だけでは前置詞にならない（due to）。' },
+      { sentence: 'The project was delayed [because of] the company could not find enough workers.', choices: ['because', 'due to', 'owing to', 'thanks to'], answer: 0, why: 'うしろが S＋V なので接続詞 because。' },
+      { sentence: 'Nobody spoke [while] the ceremony, which lasted almost two hours.', choices: ['during', 'when', 'as', 'whereas'], answer: 0, why: 'うしろが名詞（the ceremony）なので前置詞 during。while は接続詞。' },
+      { sentence: 'Prices rose sharply, [however] wages remained almost the same.', choices: ['while', 'despite', 'during', 'in spite'], answer: 0, why: 'however は副詞なので、コンマだけで2つの文をつなげない。対比の接続詞 while（一方で）。' },
+      { sentence: 'The theory is elegant. [Although], it does not explain the latest observations.', choices: ['However', 'Despite', 'Because', 'In spite'], answer: 0, why: '文頭で前の文と逆のことを述べる副詞は However。Although は接続詞で、うしろに S V が必要。' },
+      { sentence: 'The population is ageing; [because], the government must change its pension system.', choices: ['therefore', 'because of', 'although', 'despite'], answer: 0, why: 'セミコロンのあとで「したがって」と結論を述べる副詞 therefore。' },
+      { sentence: '[In spite] its small size, the country has a strong influence on world trade.', choices: ['In spite of', 'Although', 'Even if', 'Despite of'], answer: 0, why: '「～にもかかわらず」は In spite of ＋名詞（Despite ＋名詞でも可。Despite of とは言わない）。' },
+      { sentence: '[Whereas of] some experts welcome the change, others fear it will harm local businesses.', choices: ['Whereas', 'Despite', 'However', 'Because of'], answer: 0, why: 'うしろが S＋V で対比を表す接続詞 Whereas（～である一方）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

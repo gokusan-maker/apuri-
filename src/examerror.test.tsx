@@ -1541,3 +1541,10 @@ it('正誤問題〈113〉：自動詞と他動詞の単元が10問ある', async
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) We discussed about the plan')
 })
+
+it('誤文訂正〈107〉：東大レベルの要約・英作文の接続語の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-107')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Although')
+})
