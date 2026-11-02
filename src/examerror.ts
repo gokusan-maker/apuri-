@@ -2690,6 +2690,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Last night, (B) many people (C) attended at (D) the meeting.', choices: ['(A) Last night,', '(B) many people', '(C) attended at', '(D) the meeting'], answer: 2, why: 'attend（出席する）は他動詞。attended the meeting。' },
     ],
   },
+  {
+    id: 'exam-error-connectives',
+    title: '入試の正誤問題〈114〉（東大レベル：要約・英作文の接続語）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '接続詞 although／because／while／whereas ＋ S V と、前置詞 despite／in spite of／because of／during ＋名詞の使い分け。however・therefore は副詞なので文をつなげない。',
+    ],
+    examples: [
+      { en: 'Although the team practiced hard, they lost the final.', ja: 'チームは一生けんめい練習したが、決勝で負けた。' },
+      { en: 'Despite the snow, the trains were running on time.', ja: '雪にもかかわらず、電車は時間どおりに走っていた。' },
+    ],
+    questions: [
+      { sentence: '(A) Despite the team practiced hard, (B) they lost (C) the final match (D) by one point.', choices: ['(A) Despite the team practiced hard,', '(B) they lost', '(C) the final match', '(D) by one point'], answer: 0, why: 'うしろが S＋V なので Although the team practiced hard。' },
+      { sentence: '(A) Although the snow, (B) the trains (C) were running (D) on time.', choices: ['(A) Although the snow,', '(B) the trains', '(C) were running', '(D) on time'], answer: 0, why: 'うしろが名詞なので Despite the snow。' },
+      { sentence: 'The event (A) was canceled (B) because (C) the typhoon (D) approaching the city.', choices: ['(A) was canceled', '(B) because', '(C) the typhoon', '(D) approaching the city'], answer: 1, why: 'うしろが名詞句なので because of the typhoon approaching the city。' },
+      { sentence: '(A) Nobody (B) left the hall (C) while (D) the long speech.', choices: ['(A) Nobody', '(B) left the hall', '(C) while', '(D) the long speech'], answer: 2, why: 'うしろが名詞なので during the long speech。' },
+      { sentence: 'Sales (A) increased (B) in Asia, (C) however (D) they fell in Europe.', choices: ['(A) increased', '(B) in Asia,', '(C) however', '(D) they fell in Europe'], answer: 2, why: 'however は副詞なので2つの文をつなげない。while（一方で）。' },
+      { sentence: 'The plan (A) was approved. (B) Although, (C) many members (D) still had doubts.', choices: ['(A) was approved', '(B) Although,', '(C) many members', '(D) still had doubts'], answer: 1, why: '文頭で前の文と逆のことを言う副詞は However。' },
+      { sentence: '(A) In spite (B) its age, (C) the bridge (D) is still safe to use.', choices: ['(A) In spite', '(B) its age,', '(C) the bridge', '(D) is still safe to use'], answer: 0, why: 'In spite of its age。of が必要。' },
+      { sentence: 'The city (A) has a growing population; (B) because, (C) it needs (D) more schools.', choices: ['(A) has a growing population;', '(B) because,', '(C) it needs', '(D) more schools'], answer: 1, why: '結論を述べる副詞 therefore。because は接続詞。' },
+      { sentence: '(A) Whereas (B) some people (C) prefer cities, others (D) choosing to live in the countryside.', choices: ['(A) Whereas', '(B) some people', '(C) prefer cities, others', '(D) choosing to live in the countryside'], answer: 3, why: 'Whereas の対比の後半にも動詞が必要。others choose to live。' },
+      { sentence: '(A) Because of (B) the price (C) was too high, (D) we decided not to buy the car.', choices: ['(A) Because of', '(B) the price', '(C) was too high,', '(D) we decided not to buy the car'], answer: 0, why: 'うしろが S＋V なので Because the price was too high。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
