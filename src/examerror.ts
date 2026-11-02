@@ -2834,6 +2834,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) She is (B) good at (C) speaking English and (D) to write it.', choices: ['(A) She is', '(B) good at', '(C) speaking English and', '(D) to write it'], answer: 3, why: 'good at のあとは動名詞をならべる。speaking English and writing it。' },
     ],
   },
+  {
+    id: 'exam-error-toing',
+    title: '入試の正誤問題〈120〉（国公立レベル：不定詞と動名詞の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'stop／remember／forget／try／regret ＋ to と ～ing の意味のちがい。enjoy・finish・mind・avoid は動名詞、decide・hope・plan・refuse は不定詞。',
+    ],
+    examples: [
+      { en: 'Remember to lock the door when you leave.', ja: '出かけるときは忘れずにかぎをかけてね。' },
+      { en: 'I still remember visiting Kyoto as a child.', ja: '子どものころ京都をおとずれたのを今もおぼえている。' },
+    ],
+    questions: [
+      { sentence: 'My grandfather (A) stopped (B) to drink coffee (C) because the doctor (D) told him to.', choices: ['(A) stopped', '(B) to drink coffee', '(C) because the doctor', '(D) told him to'], answer: 1, why: '「コーヒーを飲むのをやめた」は stopped drinking coffee。' },
+      { sentence: '(A) Remember (B) locking the door (C) when you (D) leave the house.', choices: ['(A) Remember', '(B) locking the door', '(C) when you', '(D) leave the house'], answer: 1, why: '「忘れずに～する（これから）」は Remember to lock。' },
+      { sentence: 'I (A) still remember (B) to visit (C) Kyoto (D) with my parents as a child.', choices: ['(A) still remember', '(B) to visit', '(C) Kyoto', '(D) with my parents as a child'], answer: 1, why: '「（過去に）～したのをおぼえている」は remember visiting。' },
+      { sentence: '(A) Do not forget bringing (B) your passport (C) to the airport (D) tomorrow.', choices: ['(A) Do not forget bringing', '(B) your passport', '(C) to the airport', '(D) tomorrow'], answer: 0, why: '「忘れずに持ってくる（これから）」は forget to bring の否定。Do not forget to bring。' },
+      { sentence: '(A) If you cannot sleep, (B) try (C) to drink warm milk (D) before bed.', choices: ['(A) If you cannot sleep,', '(B) try', '(C) to drink warm milk', '(D) before bed'], answer: 2, why: '「ためしに～してみる」は try drinking。' },
+      { sentence: '(A) I regret (B) to say (C) such a rude thing (D) to her yesterday.', choices: ['(A) I regret', '(B) to say', '(C) such a rude thing', '(D) to her yesterday'], answer: 1, why: '「（昨日）言ったことを後悔している」は regret saying。' },
+      { sentence: '(A) We (B) enjoyed (C) to swim (D) in the warm sea.', choices: ['(A) We', '(B) enjoyed', '(C) to swim', '(D) in the warm sea'], answer: 2, why: 'enjoy は動名詞。enjoyed swimming。' },
+      { sentence: '(A) She (B) decided (C) going abroad (D) after graduation.', choices: ['(A) She', '(B) decided', '(C) going abroad', '(D) after graduation'], answer: 2, why: 'decide は不定詞。decided to go abroad。' },
+      { sentence: '(A) Would you mind (B) to close (C) the door (D) behind you?', choices: ['(A) Would you mind', '(B) to close', '(C) the door', '(D) behind you?'], answer: 1, why: 'mind は動名詞。mind closing。' },
+      { sentence: '(A) After finishing (B) the report, (C) she tried to avoid (D) to make any more mistakes.', choices: ['(A) After finishing', '(B) the report,', '(C) she tried to avoid', '(D) to make any more mistakes'], answer: 3, why: 'avoid は動名詞。avoid making。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

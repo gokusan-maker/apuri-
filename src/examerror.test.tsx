@@ -1632,3 +1632,10 @@ it('誤文訂正〈113〉：不定詞と動名詞の使い分けの単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('smoking')
 })
+
+it('正誤問題〈120〉：不定詞と動名詞の使い分けの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-toing')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) to drink coffee')
+})
