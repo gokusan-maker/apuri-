@@ -1834,6 +1834,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 50 L60 52 L44 55 Z" fill="#dc2626" />
       </g>
     )
+  if (species === 'japanesegrosbeak')
+    return (
+      <g>
+        {/* 太くて黄色いくちばしと、黒い頭 */}
+        <path d="M44 50 L58 52 L44 56 Z" fill="#facc15" />
+        <ellipse cx="50" cy="34" rx="12" ry="7" fill="#0f172a" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
