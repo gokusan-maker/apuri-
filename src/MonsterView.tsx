@@ -1993,6 +1993,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M35 41 L49 38" fill="none" stroke="#f8fafc" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'brownheadedthrush')
+    return (
+      <g>
+        {/* オレンジ色のむねと、白いまゆ */}
+        <ellipse cx="50" cy="62" rx="10" ry="7" fill="#fb923c" />
+        <path d="M37 41 L46 39" fill="none" stroke="#f8fafc" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
