@@ -25355,6 +25355,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-play',
+    title: 'The Seriousness of Play',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most modern societies, play is regarded as the opposite of serious activity. Children play, we assume, because they are not yet ready for the responsibilities of adult life, and adults who play are thought to be taking a break from the work that really matters. Play is something we allow ourselves when the important tasks have been completed. Yet philosophers, historians, and biologists have long suggested that this view underestimates play, and that it may be one of the most important activities in which human beings, and many other animals, engage.",
+      "Biologists have observed that play is remarkably widespread in the animal kingdom. Young mammals of many species chase one another, wrestle, and perform movements that serve no immediate purpose. Such behavior consumes energy and can even expose animals to danger, so it is unlikely to have survived the pressures of evolution unless it brought real benefits. One widely accepted explanation is that play allows young animals to practice skills they will later need, such as hunting, escaping, or negotiating their place within a group, in situations where mistakes have no serious consequences.",
+      "Among human beings, play appears to serve similar functions, but it also does something more. When children pretend that a stick is a horse or that a box is a ship, they are practicing the ability to treat one thing as standing for another, which lies at the heart of language, art, and abstract thought. Games with rules teach them to accept limits that they have agreed upon, to take turns, and to deal with both victory and defeat. In this sense, play is not a distraction from learning but one of the main ways ( A ) learning takes place.",
+      "The historian Johan Huizinga went further, arguing that many of the central institutions of civilization, including law, poetry, and even war, grew out of forms of play. Whether or not one accepts this bold claim, it draws attention to an important feature of play: it creates a space set apart from ordinary life, with its own rules and its own sense of time. Within that space, people can try out roles, ideas, and ways of behaving that would be too risky or simply impossible elsewhere. Theater, sport, and festivals all depend on this shared agreement to treat a special space and time as different from everyday reality.",
+      "If play is so valuable, why do modern societies often treat it as a luxury? Part of the answer may lie in the pressures of economic life, which encourage us to judge every activity by its measurable results. Children's free time is increasingly filled with organized lessons, and adults who have time to spare may feel guilty if they spend it on something with no obvious purpose. ( B ) such pressures are understandable, they risk depriving people of an activity that supports creativity, cooperation, and the capacity to imagine alternatives. Some researchers have also suggested that children who have little opportunity for unstructured play may find it harder to manage their emotions and to cooperate with others, although the evidence on this point is still being debated.",
+      "Taking play seriously does not mean abandoning work or discipline. It means recognizing that the freedom to explore without fear of failure is itself a condition of many achievements, and that the boundaries between play and serious activity are less fixed than we usually suppose. A scientist testing a strange idea, a writer experimenting with form, and a child building a castle out of sand may all be engaged in something more similar than it first appears. Each is exploring what might be possible, following rules while testing their limits, and accepting that many attempts will fail before one succeeds.",
+    ],
+    ja: [
+      '現代の社会のほとんどで、遊びはまじめな活動の反対とみなされている。子どもが遊ぶのは、まだおとなの生活の責任を引き受ける準備ができていないからだと私たちは考え、遊ぶおとなは、本当に大切な仕事から一休みしていると思われる。遊びは、大切な仕事が終わったときに自分にゆるすものなのである。しかし、哲学者や歴史家や生物学者は、この見方は遊びを低く見つもっており、遊びは人間や、ほかの多くの動物が行う最も大切な活動の1つかもしれないと、長い間主張してきた。',
+      '生物学者たちは、遊びが動物の世界におどろくほど広く見られることを観察してきた。多くの種の若いほ乳類は、たがいに追いかけ合い、取っ組み合い、すぐには何の役にも立たない動きをする。こうした行動はエネルギーを使い、ときには動物を危険にさらしさえするので、本当の利益をもたらすのでなければ、進化の圧力のもとで生き残ってきたとは考えにくい。広く受け入れられている1つの説明は、遊びによって若い動物が、狩り、にげること、あるいは群れの中での自分の地位をめぐるかけひきのような、のちに必要になる技能を、失敗しても深刻な結果にならない状況で練習できるということである。',
+      '人間の場合も、遊びは同じような働きをしているようだが、それ以上のこともしている。子どもが棒を馬に、箱を船に見立てるとき、彼らは、ある物を別の物の代わりとしてあつかう力を練習している。それは言語や芸術や抽象的な思考の中心にある力である。規則のあるゲームは、自分たちが同意した制限を受け入れること、順番を守ること、そして勝ちと負けの両方に向き合うことを教える。この意味で、遊びは学ぶことのじゃまではなく、学ぶことが起こる主な方法の1つなのである。',
+      '歴史家ヨハン・ホイジンガはさらに進んで、法や詩や、さらには戦争をもふくむ文明の中心的な制度の多くが、遊びの形から生まれたと論じた。この大胆な主張を受け入れるかどうかにかかわらず、それは遊びの大切な特徴に注意を向けさせる。遊びは、独自の規則と独自の時間の感覚をもった、ふだんの生活から切りはなされた空間をつくり出すのである。その空間の中で、人々は、ほかの場所ではあまりに危険であったり、そもそも不可能であったりする役割や考えやふるまい方を、ためしてみることができる。演劇もスポーツも祭りも、特別な空間と時間を日常の現実とはちがうものとしてあつかうという、この共有された約束にたよっているのである。',
+      '遊びがそれほど価値あるものなら、なぜ現代の社会はしばしばそれをぜいたく品のようにあつかうのだろうか。答えの一部は、あらゆる活動をはかれる結果で判断するよう私たちをうながす、経済生活の圧力にあるのかもしれない。子どもの自由な時間はますます習いごとでうめられ、時間に余裕のあるおとなも、それを明らかな目的のないことに使うと、うしろめたく感じるかもしれない。こうした圧力は理解できるものだが、それは、創造性や協力や、ほかのあり方を思いえがく力を支える活動を、人々からうばってしまうおそれがある。また、決まった形のない遊びの機会が少ない子どもは、自分の感情をおさえたり、人と協力したりするのがむずかしくなるかもしれないと示す研究者もいる。ただし、この点についての証拠はまだ議論されている。',
+      '遊びを真剣に受けとめることは、仕事や規律を捨てることではない。それは、失敗をおそれずに探ってみる自由そのものが多くの業績の条件であり、遊びとまじめな活動の境目はふつう考えられているほど決まったものではないと認めることである。奇妙な考えをためしている科学者、形式を実験している作家、砂で城を作っている子どもは、みな、最初に見えるよりも似たことをしているのかもしれない。どの人も、何が可能かを探り、規則にしたがいながらその限界をためし、1つが成功するまでに多くのこころみが失敗することを受け入れているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: 'うしろの learning takes place は欠けたところのない文。in the ways の前置詞＋関係代名詞 in which。' },
+      { id: 'B', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「こうした圧力は理解できるが、～をうばうおそれがある」という逆接なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、多くの社会で、遊びはまじめな活動の反対とみなされている。', answer: true, why: '第1段落 play is regarded as the opposite of serious activity。' },
+      { statement: '筆者によれば、動物の遊びはエネルギーを使わず、危険もない。', answer: false, why: '第2段落 Such behavior consumes energy and can even expose animals to danger。' },
+      { statement: '筆者は、子どもの見立て遊びは、言語や抽象的な思考の中心にある力の練習になると述べている。', answer: true, why: '第3段落 the ability to treat one thing as standing for another, which lies at the heart of language, art, and abstract thought。' },
+      { statement: '筆者は、遊びを真剣に受けとめるには仕事や規律を捨てる必要があると考えている。', answer: false, why: '第6段落 Taking play seriously does not mean abandoning work or discipline。' },
+    ],
+    qa: [
+      { q: 'According to the second paragraph, what is one widely accepted explanation for play among animals?', choices: ['It lets young animals practice skills in situations where mistakes are not serious.', 'It helps animals save energy for the winter.', 'It allows animals to avoid all danger.', 'It is a way of finding food more quickly.'], answer: 0, why: '第2段落 play allows young animals to practice skills they will later need ... in situations where mistakes have no serious consequences。' },
+      { q: 'What feature of play does the fourth paragraph emphasize?', choices: ['It creates a space set apart from ordinary life, with its own rules.', 'It always follows the rules of law.', 'It is the same as war.', 'It can only take place in childhood.'], answer: 0, why: '第4段落 it creates a space set apart from ordinary life, with its own rules and its own sense of time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
