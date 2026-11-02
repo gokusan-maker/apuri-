@@ -5064,6 +5064,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He [has been] a teacher before he became a writer.', choices: ['was', 'has been being', 'is', 'had been being'], answer: 0, why: 'before he became a writer（作家になる前、過去）のことなので過去形 was（had been も可だが選択肢では was）。' },
     ],
   },
+  {
+    id: 'exam-fix-118',
+    title: '入試の誤文訂正〈118〉（東大レベル：英作文の冠詞 a／the／無冠詞・総称の言い方）',
+    points: ['自由英作文・和文英訳で減点されやすいのが冠詞。数えられる名詞の単数形は a／the などがないと使えない。「～というもの（総称）」は無冠詞の複数形（Dogs are ～）が最もふつう。数えられない名詞（information・advice・furniture・evidence など）には a をつけず、複数形にもしない。話の中ですでに出たもの・1つに決まるもの（the sun・the world・the first ～・最上級）には the。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Smartphones have changed the way people communicate.', ja: 'スマートフォンは人々の意思疎通のしかたを変えた。' }],
+    questions: [
+      { sentence: '[Smartphone has] changed the way young people spend their free time.', choices: ['Smartphones have', 'The smartphones has', 'A smartphones have', 'Smartphone have'], answer: 0, why: '「スマートフォンというもの」の総称は無冠詞の複数形 Smartphones（動詞は have）。数えられる名詞の単数形を冠詞なしで使うのは誤り。' },
+      { sentence: 'The teacher gave me [an useful advice] about my essay.', choices: ['a useful piece of advice', 'useful advices', 'an useful advices', 'a useful advice'], answer: 0, why: 'advice は数えられない名詞なので a をつけず複数形にもしない。1つなら a piece of advice。' },
+      { sentence: 'We need [more informations] before we make a final decision.', choices: ['more information', 'more an information', 'many informations', 'a more information'], answer: 0, why: 'information は数えられない名詞。複数形にせず more information。' },
+      { sentence: 'In my opinion, [the education is] the most powerful tool for changing society.', choices: ['education is', 'an education are', 'educations are', 'the educations is'], answer: 0, why: '「教育というもの」一般をいうときは無冠詞の education。the をつけると特定の教育になる。' },
+      { sentence: 'Many people believe that [internet] has made the world smaller.', choices: ['the Internet', 'an Internet', 'Internets', 'a internet'], answer: 0, why: 'インターネットは世界に1つと決まっているので the Internet。' },
+      { sentence: 'This is [most important] problem that our generation must solve.', choices: ['the most important', 'a most important', 'most importantly', 'an important most'], answer: 0, why: '最上級で「最も重要な問題」と1つに決まるので the most important。' },
+      { sentence: 'My family bought [a new furniture] for the living room.', choices: ['some new furniture', 'new furnitures', 'a new furnitures', 'an new furniture'], answer: 0, why: 'furniture は数えられない名詞。a をつけず、量は some で表す。' },
+      { sentence: 'There is [a strong evidence] that regular exercise improves memory.', choices: ['strong evidence', 'strong evidences', 'a strong evidences', 'the strong evidences'], answer: 0, why: 'evidence は数えられない名詞なので a をつけない。strong evidence。' },
+      { sentence: 'I read an article about climate change. [An article] said that sea levels are rising quickly.', choices: ['The article', 'A article', 'Article', 'Articles'], answer: 0, why: '前の文ですでに出た記事を指すので the article。' },
+      { sentence: 'She plays [the tennis] with her friends every weekend.', choices: ['tennis', 'a tennis', 'the tennises', 'tennises'], answer: 0, why: 'スポーツの名前には冠詞をつけない。play tennis（楽器は play the piano）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

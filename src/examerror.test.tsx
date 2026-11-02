@@ -1695,3 +1695,10 @@ it('正誤問題〈124〉：時制 現在完了と過去の単元が10問ある'
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) I have visited')
 })
+
+it('誤文訂正〈118〉：東大レベル 英作文の冠詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-118')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Smartphones have')
+})
