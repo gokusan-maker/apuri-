@@ -5358,6 +5358,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was my grandmother [which] taught me how to cook.', choices: ['who', 'whom', 'what', 'whose'], answer: 0, why: '強調構文で人を強調するときは that か who。which は人に使えない。' },
     ],
   },
+  {
+    id: 'exam-fix-125',
+    title: '入試の誤文訂正〈125〉（国公立レベル：不定詞と動名詞）',
+    points: ['remember／forget＋to do は「（これから）～することを覚えている／忘れる」、＋-ing は「（すでに）～したことを覚えている／忘れる」。stop＋-ing は「～するのをやめる」、stop＋to do は「～するために立ち止まる」。enjoy・finish・mind・avoid・give up などのあとは動名詞、want・hope・decide・plan などのあとは不定詞。look forward to・be used to・object to の to は前置詞なので後ろは -ing。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I look forward to seeing you again.', ja: 'またお会いできるのを楽しみにしています。' }],
+    questions: [
+      { sentence: 'I look forward to [see] you again soon.', choices: ['seeing', 'saw', 'have seen', 'be seen'], answer: 0, why: 'look forward to の to は前置詞なので動名詞 seeing。' },
+      { sentence: 'Please remember [locking] the door when you leave.', choices: ['to lock', 'having locked', 'locked', 'lock'], answer: 0, why: 'これから「忘れずに～する」は remember to do。' },
+      { sentence: 'I remember [to visit] this temple when I was a child.', choices: ['visiting', 'to have visit', 'visit', 'to visiting'], answer: 0, why: '子どものころに「～したことを覚えている」は remember -ing。' },
+      { sentence: 'He stopped [to smoke] because his doctor told him to.', choices: ['smoking', 'to smoking', 'smoke', 'smoked'], answer: 0, why: '「たばこをやめた」は stop -ing。stop to smoke は「たばこを吸うために立ち止まる」。' },
+      { sentence: 'Have you finished [to write] your report?', choices: ['writing', 'write', 'to writing', 'wrote'], answer: 0, why: 'finish のあとは動名詞。writing。' },
+      { sentence: 'Would you mind [to open] the window?', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind のあとは動名詞。opening。' },
+      { sentence: 'She decided [studying] abroad after graduation.', choices: ['to study', 'study', 'studied', 'to studying'], answer: 0, why: 'decide のあとは不定詞。to study。' },
+      { sentence: 'I am not used to [get] up so early.', choices: ['getting', 'got', 'be getting', 'have got'], answer: 0, why: 'be used to（～に慣れている）の to は前置詞なので getting。' },
+      { sentence: 'Do not forget [sending] me an e-mail when you arrive.', choices: ['to send', 'having sent', 'sent', 'send'], answer: 0, why: 'これから「忘れずに～する」は forget to do の否定。to send。' },
+      { sentence: 'We should avoid [to make] the same mistake again.', choices: ['making', 'make', 'to making', 'made'], answer: 0, why: 'avoid のあとは動名詞。making。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
