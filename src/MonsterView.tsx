@@ -1930,6 +1930,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="48" cy="66" r="2" fill="#3f2a0a" />
       </g>
     )
+  if (species === 'whitebelliedgreenpigeon')
+    return (
+      <g>
+        {/* 黄色っぽいむねと、赤むらさきのかた */}
+        <ellipse cx="50" cy="60" rx="9" ry="6" fill="#fde047" />
+        <ellipse cx="34" cy="56" rx="5" ry="3" fill="#9d174d" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
