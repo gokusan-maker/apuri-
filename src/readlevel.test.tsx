@@ -176,3 +176,10 @@ it('東大専用の長文①「なぜ贈り物をするのか」：600語以上�
   expect(passagesFor('京大').some((x) => x.id === p.id)).toBe(false)
   expect(passagesFor('旧帝大').some((x) => x.id === p.id)).toBe(false)
 })
+
+it('京大専用の長文⑥「なぜ本物が大切なのか」：京大の下限600語以上・1文18語以上で、京大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-originals')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
