@@ -1858,6 +1858,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 51 L60 52 L44 54 Z" fill="#475569" />
       </g>
     )
+  if (species === 'hawfinch')
+    return (
+      <g>
+        {/* 太いくちばしと、目のまわりの黒いもよう */}
+        <path d="M44 49 L57 52 L44 56 Z" fill="#cbd5e1" />
+        <path d="M40 46 L46 50" fill="none" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
