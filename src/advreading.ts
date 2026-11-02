@@ -25978,6 +25978,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-history-memory',
+    title: 'Memory and History',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every society tells stories about its past. Monuments are built, anniversaries are celebrated, and children learn in school about the events and people that are considered important. These shared memories help to give a community a sense of identity and continuity, linking the present generation to those who came before. Yet the relationship between such collective memory and history, understood as the careful study of the past based on evidence, is far from simple. The two often support each other, but they can also come into sharp conflict. Understanding the difference between them may help to explain why debates about the past so often become debates about the present.",
+      "Collective memory tends to select and simplify. A nation may remember its victories more vividly than its defeats, and its heroes more clearly than its victims. Complicated events are reduced to stories with clear beginnings and endings, in which the roles of good and evil are easy to recognize. Such simplification is not necessarily dishonest; it may be the only way in which large numbers of people can share a common understanding of their past. But it means that collective memory is shaped as much by the needs of the present as by what actually happened. When circumstances change, the stories a society tells about its past often change too, so that the same event may be remembered quite differently by different generations.",
+      "History, by contrast, aims at a more complete and more critical account. Historians examine documents, compare different testimonies, and try to understand the perspectives of all those involved, including people whose voices were ignored at the time. The results of such work are often uncomfortable. They may reveal that a celebrated leader made serious mistakes, that a supposedly united nation was deeply divided, or that events remembered as glorious involved great suffering for others. In this sense, history can be a corrective to memory, challenging the comforting stories a society tells about itself.",
+      "This tension becomes especially visible when historical research questions widely cherished beliefs. Debates about how to describe the colonial past, how to remember wars, or whether to remove statues of controversial figures have arisen in many countries. In such debates, some people feel that their identity is under attack, while others argue that a society cannot be honest with itself unless it acknowledges the full truth about its past. Both reactions reflect the fact that the past is never simply over; it continues to shape how people understand their place in the world.",
+      "It would be a mistake, however, to imagine that history can replace memory entirely. Historians themselves are members of societies and are influenced by the questions of their own time, and every account of the past involves choices about what to include and what to emphasize. Moreover, communities need shared stories, and a purely critical approach that offered nothing to remember with pride or affection might leave people without a sense of connection to those who came before them. Even the most careful historians, after all, write in the hope that their work will help people to understand and care about the past, not merely to doubt it.",
+      "Perhaps the most promising approach is to regard memory and history as partners in an ongoing conversation. Memory supplies the questions that matter to people, while history tests the answers against evidence and adds the perspectives that memory has left out. ( A ) the two are allowed to influence each other, a society may develop an understanding of its past that is both meaningful and honest, one that can be passed on to future generations without either glorifying or erasing what came before.",
+    ],
+    ja: [
+      'どの社会も、自らの過去についての物語を語る。記念碑が建てられ、記念日が祝われ、子どもたちは大切だとされる出来事や人物について学校で学ぶ。こうした共有された記憶は、共同体に自分らしさと連続の感覚をあたえ、今の世代をそれより前の世代と結びつける手助けをする。しかし、こうした集団の記憶と、証拠にもとづいて過去を注意深く研究するものと理解される歴史との関係は、まったく単純ではない。両者はしばしばたがいを支え合うが、はげしく対立することもある。両者のちがいを理解することは、過去についての議論がなぜこれほどしばしば現在についての議論になるのかを説明する助けになるかもしれない。',
+      '集団の記憶は、選びとり、単純にする傾向がある。国は敗北よりも勝利を、犠牲者よりも英雄を、よりはっきりとおぼえているかもしれない。複雑な出来事は、はっきりした始まりと終わりがあり、善と悪の役割がわかりやすい物語にまとめられる。こうした単純化は必ずしも不正直なわけではない。それは、多くの人々が過去について共通の理解を分かち合える唯一の方法なのかもしれない。しかしそれは、集団の記憶が、実際に起こったことと同じくらい、現在の必要によって形づくられることを意味している。状況が変われば、社会が過去について語る物語もしばしば変わるので、同じ出来事が世代によってまったくちがうふうに記憶されることもある。',
+      'これに対して歴史は、より完全で、より批判的な説明を目ざす。歴史家は文書を調べ、ちがう証言をくらべ、当時は声を無視された人々もふくめて、かかわったすべての人の見方を理解しようとする。そうした仕事の結果は、しばしば居心地の悪いものになる。たたえられている指導者が重大なあやまちをおかしていたこと、団結していたとされる国が深く分かれていたこと、あるいは栄光として記憶されている出来事がほかの人々に大きな苦しみをもたらしていたことを明らかにすることもある。この意味で、歴史は記憶を正すものとなり、社会が自らについて語る心地よい物語に疑問を投げかけることができるのである。',
+      'この緊張は、歴史の研究が広く大切にされてきた信念に疑問を投げかけるとき、とくにはっきり見えてくる。植民地の過去をどう表すか、戦争をどう記憶するか、議論の的となる人物の像を撤去すべきかどうかについての議論が、多くの国で起こってきた。そうした議論の中で、自分の自分らしさが攻撃されていると感じる人もいれば、社会は過去についての真実のすべてを認めなければ自らにすなおになれないと主張する人もいる。どちらの反応も、過去は決して単に終わったものではなく、人々が世界の中での自分の位置をどう理解するかを形づくり続けているという事実を反映している。',
+      'しかし、歴史が記憶に完全に取ってかわれると考えるのはまちがいだろう。歴史家自身も社会の一員であり、自分の時代の問いに影響されている。そして過去についてのどの説明も、何をふくめ、何を強調するかについての選択をともなう。さらに、共同体には共有された物語が必要であり、ほこりや愛情をもって思い出すものを何もあたえない、純粋に批判的なやり方は、人々に、前の世代とのつながりの感覚を失わせてしまうかもしれない。結局のところ、最も注意深い歴史家でさえ、自分の仕事が人々に過去を疑わせるだけでなく、過去を理解し大切に思わせる助けになることを願って書いているのである。',
+      'おそらく最も有望なやり方は、記憶と歴史を、たえず続く対話の相手どうしとみなすことである。記憶は人々にとって大切な問いをあたえ、歴史はその答えを証拠に照らして確かめ、記憶がとりこぼしてきた見方を加える。両者がたがいに影響し合うことがゆるされるなら、社会は、意味があり、かつすなおでもある自らの過去の理解を育てることができるかもしれない。それは、前にあったものを美化することも消すこともなく、未来の世代に受けわたせる理解なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「両者がたがいに影響し合うことがゆるされるなら、～できるかもしれない」という条件なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、集団の記憶と歴史は、いつもたがいを支え合う。', answer: false, why: '第1段落 The two often support each other, but they can also come into sharp conflict。' },
+      { statement: '筆者は、集団の記憶の単純化は必ずしも不正直なわけではないと述べている。', answer: true, why: '第2段落 Such simplification is not necessarily dishonest。' },
+      { statement: '筆者によれば、歴史は、当時声を無視された人々の見方も理解しようとする。', answer: true, why: '第3段落 including people whose voices were ignored at the time。' },
+      { statement: '筆者は、歴史が記憶に完全に取ってかわるべきだと考えている。', answer: false, why: '第5段落 It would be a mistake, however, to imagine that history can replace memory entirely。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, in what sense can history be "a corrective to memory"?', choices: ['It can challenge the comforting stories a society tells about itself.', 'It always confirms what people already believe.', 'It removes all monuments from public places.', 'It tells only stories about victories.'], answer: 0, why: '第3段落 history can be a corrective to memory, challenging the comforting stories a society tells about itself。' },
+      { q: 'How does the writer suggest memory and history should be regarded?', choices: ['As partners in an ongoing conversation.', 'As enemies that can never agree.', 'As the same thing under different names.', 'As subjects that only experts should discuss.'], answer: 0, why: '第6段落 regard memory and history as partners in an ongoing conversation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
