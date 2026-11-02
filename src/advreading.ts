@@ -25390,6 +25390,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-queues',
+    title: 'The Fairness of Queues',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Waiting in line is one of the most ordinary experiences of modern life. We queue at supermarket checkouts, bus stops, ticket offices, and hospital reception desks, often without giving the matter much thought. Yet the queue is a surprisingly complex social institution. It depends on a shared understanding of fairness, on the willingness of strangers to cooperate without any formal authority, and on a set of unwritten rules that most people learn in childhood and rarely question. Examining why queues work, and why they sometimes fail, reveals a great deal about how societies organize themselves.",
+      "The basic principle of the queue is simple: those who arrive first are served first. This rule has an obvious appeal because it treats everyone equally, regardless of wealth, status, or strength. A wealthy person and a poor person who join the same line are expected to wait their turn in the same way. For this reason, many observers have described the queue as a small model of democratic equality, in which the only thing that matters is the order of arrival rather than who a person happens to be. Of course, the rule is not always applied strictly; hospitals, for example, treat the most urgent cases first, and most people accept such exceptions because they are based on need rather than on privilege.",
+      "What is remarkable is how strongly people react when this principle is violated. Experiments in which researchers deliberately pushed into lines have found that those already waiting often protest, even when the intrusion costs them only a few seconds. The anger seems to be directed less at the loss of time than at the breaking of a rule that everyone is expected to respect. People who stand in a queue are not merely waiting for a service; they are participating in a shared agreement, and those who ignore it are seen as treating the others with disrespect. Interestingly, people are often more tolerant when the person who pushes in asks permission first, which suggests that what matters is the acknowledgment of the rule as much as the rule itself.",
+      "Queues also vary from culture to culture. In some places, people form neat single lines and maintain a careful distance from one another; in others, waiting takes the form of a loose crowd in which each person keeps track of who arrived before him or her. Neither arrangement is necessarily less fair, but each depends on different expectations, and visitors who do not understand the local customs may cause offense without intending to. What counts as polite waiting, in other words, is learned rather than natural. Children absorb these expectations gradually, by watching the adults around them and by being corrected when they push ahead, long before they could explain the rules in words.",
+      "In recent years, the principle of first come, first served has been challenged by systems that allow people to pay for faster service. Theme parks sell tickets that let visitors skip lines, airlines offer priority boarding, and some services charge extra for appointments without delay. Defenders argue that such systems give people a choice and make efficient use of resources. Critics reply that they turn waiting into another advantage that money can buy, weakening the sense of equality that the traditional queue represented.",
+      "Technology has also changed the way people wait. Numbered tickets, online reservations, and apps that show waiting times allow people to hold their place without standing in a physical line. These innovations can reduce frustration, but they also make the rules of waiting less visible, and therefore harder to enforce through ordinary social pressure. ( A ) the queue continues to change, the question of how to wait fairly will remain one that every society must answer in its own way.",
+    ],
+    ja: [
+      '列に並んで待つことは、現代の生活で最もありふれた経験の1つである。私たちはスーパーのレジ、バス停、切符売り場、病院の受付で並び、しばしばそのことについてあまり考えもしない。しかし、行列はおどろくほど複雑な社会のしくみである。それは、公平さについての共通の理解、正式な権威がなくても知らない人どうしが協力しようとする気持ち、そしてほとんどの人が子どものころに学び、めったに疑うことのない書かれていない決まりにたよっている。行列がなぜうまくいき、なぜときにうまくいかないのかを調べることは、社会がどのように自らを組み立てているかについて、多くのことを明らかにしてくれる。',
+      '行列の基本の原則は単純である。先に来た人が先にサービスを受けるのである。この決まりは、富や地位や力に関係なく、すべての人を平等にあつかうので、明らかな魅力がある。同じ列に並んだお金持ちと貧しい人は、同じように順番を待つことが期待される。このため、多くの観察者は、行列を民主的な平等の小さな模型と表現してきた。そこで大切なのは、その人がたまたまだれであるかではなく、着いた順番だけなのである。もちろん、この決まりがいつもきびしく適用されるわけではない。たとえば病院では最も急を要する人から手当てをするが、ほとんどの人はそうした例外を受け入れる。それが特権ではなく必要にもとづいているからである。',
+      'おどろくべきなのは、この原則がやぶられたとき、人々がどれほど強く反応するかである。研究者がわざと列に割りこむ実験では、すでに待っていた人々が、割りこみによって数秒しか失わない場合でさえ、しばしば抗議することがわかった。その怒りは、時間を失うことよりも、だれもが守るべき決まりがやぶられたことに向けられているようである。行列に並ぶ人々は、単にサービスを待っているのではなく、共有された約束に参加しているのであり、それを無視する人は、ほかの人々を軽んじているとみなされるのである。おもしろいことに、割りこむ人が先に許可を求めると、人々はしばしばより寛容になる。このことは、大切なのは決まりそのものと同じくらい、決まりがあることを認める態度であることを示している。',
+      '行列は文化によってもちがう。人々がきちんと1列になり、たがいの間に注意深く距離をとる場所もあれば、待つことが、それぞれの人がだれが自分より先に来たかをおぼえておく、ゆるい人だかりの形をとる場所もある。どちらのやり方も必ずしも公平さで劣るわけではないが、それぞれちがう期待にもとづいており、その土地の習慣を理解していない訪問者は、そのつもりがなくても人を不快にさせてしまうことがある。言いかえれば、何が礼儀正しい待ち方とされるかは、生まれつきではなく学ばれるものなのである。子どもたちは、言葉で決まりを説明できるようになるずっと前から、まわりのおとなを見たり、前に割りこんだときに注意されたりすることで、こうした期待を少しずつ身につけていく。',
+      'ここ数年、先着順という原則は、お金をはらって早くサービスを受けられるしくみによって、ゆさぶられてきた。テーマパークは列をとばせる券を売り、航空会社は優先搭乗を用意し、待ち時間なしの予約に追加料金をとるサービスもある。こうしたしくみを擁護する人は、それが人々に選択肢をあたえ、資源を効率よく使うと主張する。批判する人は、それが待つことを、お金で買えるもう1つの有利さに変え、伝統的な行列が表していた平等の感覚を弱めると反論する。',
+      '科学技術もまた、人の待ち方を変えてきた。番号札、インターネットでの予約、待ち時間を表示するアプリのおかげで、人々は実際の列に立たずに自分の順番を確保できる。こうした新しい工夫はいらだちをへらすことができるが、待つことの決まりを見えにくくし、そのため、ふつうの社会的な圧力によって守らせることをむずかしくもする。行列が変わり続けるにつれて、どうすれば公平に待てるかという問いは、どの社会もそれぞれのやり方で答えなければならない問いであり続けるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As', 'Unless', 'Before', 'Although'], answer: 0, why: '「行列が変わり続けるにつれて」という比例・同時進行の as。' },
+    ],
+    summary: {
+      text: 'The queue is a social institution based on a shared sense of ( 1 ): those who arrive first are served first. People react strongly when someone breaks this rule, and the ways of waiting differ from culture to culture. Today, paying for faster service and new ( 2 ) are changing how people wait, which may weaken the ( 3 ) that the traditional queue represented.',
+      blanks: [
+        { choices: ['fairness', 'wealth', 'speed', 'fear'], answer: 0, why: '第1段落 It depends on a shared understanding of fairness。' },
+        { choices: ['technology', 'laws', 'buildings', 'languages'], answer: 0, why: '第6段落 Technology has also changed the way people wait。' },
+        { choices: ['equality', 'danger', 'profit', 'silence'], answer: 0, why: '第5段落 weakening the sense of equality that the traditional queue represented。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、行列では富や地位に関係なく、全員が同じように順番を待つことが期待される。', answer: true, why: '第2段落 it treats everyone equally, regardless of wealth, status, or strength。' },
+      { statement: '実験によれば、割りこみで数秒しか失わないなら、待っている人はまったく気にしない。', answer: false, why: '第3段落 those already waiting often protest, even when the intrusion costs them only a few seconds。' },
+      { statement: '筆者は、礼儀正しい待ち方は生まれつき身についていると述べている。', answer: false, why: '第4段落 What counts as polite waiting ... is learned rather than natural。' },
+      { statement: '筆者によれば、お金で早くサービスを受けられるしくみを批判する人がいる。', answer: true, why: '第5段落 Critics reply that they turn waiting into another advantage that money can buy。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, what does the anger at people who push into lines seem to be directed at?', choices: ['The breaking of a rule that everyone is expected to respect.', 'The loss of a large amount of time.', 'The price of the service.', 'The rudeness of the staff.'], answer: 0, why: '第3段落 The anger seems to be directed less at the loss of time than at the breaking of a rule。' },
+      { q: 'Why might new technologies make the rules of waiting harder to enforce?', choices: ['They make the rules less visible, so ordinary social pressure works less well.', 'They make lines much longer than before.', 'They force everyone to pay extra money.', 'They ban people from waiting in lines.'], answer: 0, why: '第6段落 they also make the rules of waiting less visible, and therefore harder to enforce through ordinary social pressure。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
