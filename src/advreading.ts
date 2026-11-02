@@ -25705,6 +25705,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sharing-economy',
+    title: 'The Sharing Economy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Over the past two decades, a new kind of economic activity has spread rapidly in many parts of the world. People rent out spare rooms to travelers, share rides with strangers going in the same direction, and borrow tools, cars, and even clothing instead of buying them. These activities, often grouped together under the label of the sharing economy, are usually organized through online platforms that connect those who have something to offer with those who need it. Supporters describe them as a more efficient and more sociable way of using resources; critics see them as something rather different.",
+      "The basic idea behind sharing is hardly new. Neighbors have always lent one another ladders, and travelers have long stayed in the homes of local families. What has changed is the scale on which such exchanges can take place. Digital platforms allow millions of people who have never met to find one another, agree on a price, and judge each other's reliability through ratings and reviews. In this way, technology has turned informal practices that once depended on personal relationships into markets that can operate across entire cities and countries.",
+      "Advocates point to several benefits. Many of the things people own, from cars to power drills, sit unused for most of their lives, and sharing them can reduce waste and the need to manufacture new goods. Sharing can also provide additional income for those who have spare resources and lower costs for those who need them only occasionally. Some users value the social side of the experience, enjoying the chance to meet people they would not otherwise encounter and to see a city from the perspective of its residents.",
+      "The picture, however, is more complicated than these claims suggest. As the largest platforms have grown, many of their users have become not occasional sharers but full-time providers, renting out entire apartments or driving for many hours a day. In some cities, the conversion of homes into short-term rentals has been blamed for reducing the supply of housing available to local residents and pushing up rents. Workers who earn their living through such platforms may also lack the protections, such as minimum wages or sick pay, that ordinary employees enjoy.",
+      "There is also a question about what kind of trust the sharing economy relies on. In traditional forms of sharing, people lent things to neighbors and friends whom they knew personally. On large platforms, trust is created instead by systems of ratings, which allow users to judge strangers on the basis of their past behavior. These systems can work remarkably well, but they can also be unfair: a single bad review may damage a provider's income, and research has suggested that ratings may sometimes reflect the prejudices of customers rather than the quality of the service.",
+      "Governments have responded in different ways. Some cities have limited the number of days that homes may be rented to tourists, while others have required platforms to share data or to ensure that drivers have appropriate insurance. Such measures attempt to preserve the benefits of sharing while reducing its costs, although they are often criticized by both sides, by platforms for being too strict and by residents for being too weak.",
+      "Whether the sharing economy ultimately lives up to its name may depend less on technology than on the rules societies choose to make. Questions about who benefits, who bears the risks, and who decides the terms of exchange are, after all, political questions as much as technical ones. ( A ) it is organized so that its benefits are widely distributed, it may help to create more efficient and connected communities; if not, it may simply become another way of turning everyday life into a business.",
+    ],
+    ja: [
+      'ここ20年ほどの間に、新しい種類の経済活動が世界の多くの地域で急速に広まった。人々は空いている部屋を旅行者に貸し、同じ方向へ向かう知らない人と車に乗り合わせ、道具や車、さらには服まで、買うかわりに借りる。こうした活動は、しばしばシェアリング・エコノミーという名のもとにまとめられ、ふつうは、何かを提供できる人とそれを必要とする人を結びつけるインターネット上の仕組みを通じて組み立てられている。支持する人々は、それを資源を使うより効率的で、より人とのつながりのあるやり方だと言うが、批判する人々は、それをかなりちがうものと見ている。',
+      '分け合うことの基本の考えは、ほとんど新しいものではない。近所の人どうしはいつもはしごを貸し合ってきたし、旅行者は昔から地元の家族の家に泊まってきた。変わったのは、そうしたやりとりが行われうる規模である。デジタルの仕組みのおかげで、会ったこともない何百万もの人々がたがいを見つけ、値段に合意し、評価やレビューを通じて相手が信頼できるかどうかを判断できるようになった。このようにして、技術は、かつては個人的な関係にたよっていた非公式な習慣を、都市や国全体で動く市場に変えたのである。',
+      '支持する人々はいくつかの利点をあげる。車から電動ドリルまで、人が持っている物の多くは、その一生のほとんどの間使われずに置かれており、それを分け合えば、むだや新しい品物を作る必要をへらすことができる。分け合うことはまた、余った資源をもつ人には追加の収入を、ときどきしか必要としない人には安い費用をもたらしうる。この経験の社会的な面を大切にする利用者もいる。そうでなければ出会わない人々に会い、そこに住む人の目から町を見る機会を楽しむのである。',
+      'しかし、実際の姿はこうした主張が示すより複雑である。最も大きな仕組みが成長するにつれて、利用者の多くは、ときどき分け合う人ではなく、アパート全体を貸したり1日に何時間も運転したりする、専業の提供者になってきた。いくつかの都市では、家を短期の貸し部屋に変えることが、地元の住民が使える住宅をへらし、家賃をおし上げていると非難されてきた。こうした仕組みを通じて生計を立てる働き手には、最低賃金や病気のときの手当のような、ふつうの従業員が受けられる保護がないこともある。',
+      'シェアリング・エコノミーがどんな信頼にたよっているのかという問題もある。伝統的な形の分け合いでは、人々は個人的に知っている近所の人や友人に物を貸した。大きな仕組みの上では、そのかわりに評価のしくみによって信頼がつくられ、利用者は知らない人を過去のふるまいにもとづいて判断できる。こうしたしくみはおどろくほどうまく働くこともあるが、不公平なこともある。たった1つの悪いレビューが提供者の収入をそこなうことがあるし、評価が、サービスの質ではなく客の偏見を反映していることもあると示す研究もある。',
+      '政府はさまざまなしかたでこれにこたえてきた。家を旅行者に貸せる日数を制限した都市もあれば、仕組みにデータを共有させたり、運転手に適切な保険をかけさせたりすることを求めた都市もある。こうした対策は、分け合うことの利点を保ちつつ代償をへらそうとするものだが、仕組みの側からはきびしすぎると、住民の側からはゆるすぎると、両方から批判されることが多い。',
+      'シェアリング・エコノミーが最終的にその名にふさわしいものになるかどうかは、技術よりも、社会が作ることを選ぶ規則にかかっているのかもしれない。だれが得をし、だれが危険を負い、だれがやりとりの条件を決めるのかという問いは、結局のところ、技術の問いであるのと同じくらい政治の問いなのである。その利点が広く行きわたるように組み立てられれば、それはより効率的でつながりのある共同体をつくる助けになるかもしれない。そうでなければ、それは、ふだんの生活を商売に変えるもう1つの方法になるだけかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '後半の if not（そうでなければ）と対になる条件なので If。' },
+    ],
+    summary: {
+      text: 'Online platforms have turned informal sharing into large ( 1 ). Sharing can reduce waste and provide extra income, but it has also raised housing costs in some cities and left many workers without ( 2 ). Its trust depends on ( 3 ), which can be unfair, so its future may depend on the rules societies make.',
+      blanks: [
+        { choices: ['markets', 'families', 'schools', 'museums'], answer: 0, why: '第2段落 into markets that can operate across entire cities and countries。' },
+        { choices: ['protections', 'customers', 'computers', 'friends'], answer: 0, why: '第4段落 may also lack the protections, such as minimum wages or sick pay。' },
+        { choices: ['ratings', 'laws', 'neighbors', 'prices'], answer: 0, why: '第5段落 trust is created instead by systems of ratings。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、分け合うことの基本の考えは新しいものである。', answer: false, why: '第2段落 The basic idea behind sharing is hardly new。' },
+      { statement: '筆者によれば、人が持っている物の多くは、ほとんどの間使われていない。', answer: true, why: '第3段落 Many of the things people own ... sit unused for most of their lives。' },
+      { statement: '筆者によれば、短期の貸し部屋が地元の家賃をおし上げていると非難されている都市がある。', answer: true, why: '第4段落 has been blamed for reducing the supply of housing ... and pushing up rents。' },
+      { statement: '筆者によれば、政府の対策は、仕組みの側からも住民の側からも支持されている。', answer: false, why: '第6段落 they are often criticized by both sides。' },
+    ],
+    qa: [
+      { q: 'What has changed about sharing, according to the second paragraph?', choices: ['The scale on which such exchanges can take place.', 'The idea that neighbors should help each other.', 'The price of ladders and tools.', 'The number of families who host travelers.'], answer: 0, why: '第2段落 What has changed is the scale on which such exchanges can take place。' },
+      { q: 'Why can rating systems be unfair?', choices: ['A single bad review may damage income, and ratings may reflect prejudice.', 'Ratings are always kept secret.', 'Only governments can write reviews.', 'Ratings never affect income.'], answer: 0, why: '第5段落 a single bad review may damage a provider\'s income ... ratings may sometimes reflect the prejudices of customers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
