@@ -1588,6 +1588,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="42" cy="40" r="3.5" fill="none" stroke="#eab308" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'dunlin')
+    return (
+      <g>
+        {/* 少し下にまがったくちばしと、おなかの黒いもよう */}
+        <path d="M56 44 Q63 46 66 52" fill="none" stroke="#1c1917" strokeWidth="2" strokeLinecap="round" />
+        <ellipse cx="50" cy="66" rx="7" ry="4" fill="#1c1917" opacity="0.7" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
