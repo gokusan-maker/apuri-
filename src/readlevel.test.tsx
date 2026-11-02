@@ -104,15 +104,14 @@ describe('高校入試レベルの追加読解', () => {
   })
 })
 
-describe('東大レベル専用の長文', () => {
-  it('東大のいちばんはじめに東大専用の長文（todai-）があり、旧帝大には入らない', () => {
-    expect(passagesFor('東大')[0].id).toBe('todai-dialects')
-    expect(passagesFor('旧帝大').some((p) => p.id.startsWith('todai-'))).toBe(false)
-  })
-})
-
-it('京大のいちばんはじめに京大専用の長文（kyodai-）、和訳の問題つき', () => {
-  expect(passagesFor('京大')[0].id).toBe('kyodai-ruins')
+it('旧帝大・京大・東大は本番の長さの長文だけ（京大・東大は600語以上、旧帝大は450語以上）。短い長文は国公立に回る', async () => {
+  const { passageStats } = await import('./examtier')
+  for (const l of ['京大', '東大'] as const) for (const p of passagesFor(l)) expect(passageStats(p).words, p.id).toBeGreaterThanOrEqual(600)
+  for (const p of passagesFor('旧帝大')) expect(passageStats(p).words, p.id).toBeGreaterThanOrEqual(450)
+  expect(passagesFor('京大').some((p) => p.id === 'kyodai-ruins')).toBe(false)
+  expect(passagesFor('国公立').some((p) => p.id === 'kyodai-ruins')).toBe(true)
+  expect(passagesFor('国公立').some((p) => p.id === 'todai-dialects')).toBe(true)
+  // 京大は和訳の問題つき
   expect(passagesFor('京大')[0].gistKind).toBe('transl')
 })
 

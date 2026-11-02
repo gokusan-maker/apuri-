@@ -2,7 +2,7 @@
 import { ADV_PASSAGES } from './advreading'
 import { PASSAGES } from './reading'
 import { LONG_PASSAGES, type LongPassage, type LongRecord } from './longreading'
-import { tierOf, withTranslation } from './examtier'
+import { passageStats, tierOf, withTranslation } from './examtier'
 
 // 単語・文法と同じ15レベル（中1 は短い読解、ほかは長文）
 export type ReadLevel = '中1' | '中2' | '中3' | '高1' | '高2' | '高3' | '私学' | '私学難関' | '国公立' | '旧帝大' | '京大' | '東大' | 'TOEIC' | 'TOEFL・IELTS' | 'ネイティブ'
@@ -31,6 +31,11 @@ const todai = (p: LongPassage) => /^(todai|kyodai|native)-/.test(p.id) // 東大
 const biz = (p: LongPassage) => /メール|お知らせ/.test(p.level) // TOEIC のメール・お知らせ
 const tier = (...ts: string[]) => univ.filter((p) => !todai(p) && !biz(p) && ts.includes(tierOf(p))).map((p) => withTranslation(p, univ))
 
+// 旧帝大・京大・東大は本番の長さ（1題600〜1,000語）に近い長文だけを出す（オーナーの依頼：レベルに対して簡単すぎる問題をなくす）
+// 京大・東大は600語以上、旧帝大は450語以上。とどかない長文は国公立に回す
+export const LONG_WORDS = { kyutei: 450, top: 600 }
+const words = (p: LongPassage) => passageStats(p).words
+const upper = () => [...tier('kyutei', 'kokuritsu-med'), ...univ.filter((p) => /^(todai|kyodai)-/.test(p.id)).map((p) => withTranslation(p, univ))]
 // レベルごとの長文（中1 は短い読解なので空）
 export function passagesFor(level: ReadLevel): LongPassage[] {
   switch (level) {
@@ -50,13 +55,13 @@ export function passagesFor(level: ReadLevel): LongPassage[] {
     case '私学難関':
       return tier('shiritsu-med')
     case '国公立':
-      return tier('kokkoritsu')
+      return [...tier('kokkoritsu'), ...upper().filter((p) => words(p) < LONG_WORDS.kyutei)]
     case '旧帝大':
-      return tier('kyutei')
+      return upper().filter((p) => words(p) >= LONG_WORDS.kyutei)
     case '京大':
-      return [...univ.filter((p) => p.id.startsWith('kyodai-')).map((p) => withTranslation(p, univ)), ...tier('kokuritsu-med')]
+      return upper().filter((p) => words(p) >= LONG_WORDS.top)
     case '東大':
-      return [...univ.filter((p) => p.id.startsWith('todai-')).map((p) => withTranslation(p, univ)), ...tier('kyutei', 'kokuritsu-med')]
+      return upper().filter((p) => words(p) >= LONG_WORDS.top).reverse()
     case 'TOEIC':
       return [...univ.filter(biz), ...LONG_PASSAGES.filter((p) => head(p).startsWith('中3') && /メール|お知らせ/.test(p.level))]
     case 'TOEFL・IELTS':
