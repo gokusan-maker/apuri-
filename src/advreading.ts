@@ -26932,6 +26932,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-family-meals',
+    title: 'Around the Table',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many societies, the shared family meal has long been regarded as a central part of domestic life. Gathering around a table at the end of the day, parents and children would eat the same food, talk about what had happened at school or work, and, in the process, reinforce their sense of belonging to one another. In recent decades, however, observers in many countries have noted that such meals are becoming less common. Longer working hours, busy after-school schedules, and the availability of convenient prepared food have all made it easier for family members to eat at different times and in different places.",
+      "Researchers have taken a considerable interest in whether this change matters. A number of studies have found that children and teenagers who eat regularly with their families tend to have healthier diets, perform better at school, and report fewer emotional problems than those who rarely do so. Such findings have often been reported in the media as evidence that family meals themselves produce these benefits, and they have encouraged campaigns urging parents to make shared meals a priority. Some schools and public health organizations have even produced guides suggesting how often families should eat together.",
+      "The interpretation of these findings, however, is not straightforward. Families who eat together frequently may differ from other families in many ways. They may have more stable incomes, more flexible working hours, or closer relationships to begin with, and any of these factors could explain the better outcomes of their children. When researchers try to take such differences into account, the apparent effect of family meals sometimes becomes much smaller. This does not mean that shared meals are unimportant, but it suggests that their value may lie less in the act of eating together than in what that act reflects and makes possible. Correlation, as statisticians often remind us, is not the same as causation.",
+      "What, then, might shared meals contribute? One possibility is that they provide a regular occasion for conversation in a life that otherwise offers few opportunities for it. Even a short meal can give parents a chance to notice how their children are feeling and to discuss problems before they become serious. Meals can also pass on habits and values, such as table manners, attitudes toward food, and ways of listening to others. ( A ) these benefits depend on the quality of interaction, a meal eaten in silence in front of a television may offer far less than one in which people genuinely talk. In other words, it is not the table itself but what happens around it that seems to matter.",
+      "It is also important to recognize that the ideal of the family dinner is not equally achievable for everyone. Parents who work evening shifts, single parents with several jobs, and families living in crowded housing may find regular shared meals extremely difficult to arrange. Campaigns that present the family dinner as a simple solution to children's problems risk making such parents feel guilty for circumstances they cannot easily change. In some cases, other forms of connection, such as a shared breakfast, a weekend outing, or a regular conversation at bedtime, may serve similar purposes. What matters may be less a particular ritual than the steady sense that someone is paying attention.",
+      "The debate over family meals thus reflects a broader question about how families maintain closeness in changing conditions. The specific form of shared time may matter less than its regularity and its quality: the presence of moments in which family members pay attention to one another without distraction. Seen in this way, the decline of the traditional family dinner need not mean the decline of family connection, provided that families, and the societies that support them, find other ways of making time to be together.",
+    ],
+    ja: [
+      '多くの社会で、家族そろっての食事は長いあいだ家庭生活の中心的な一部とみなされてきた。一日の終わりにテーブルを囲み、親と子どもは同じものを食べ、学校や職場で起きたことを話し、そのなかで、たがいに属し合っているという感覚を強めてきた。しかしここ数十年、多くの国の観察者たちは、こうした食事が少なくなりつつあることに気づいてきた。労働時間の長さ、放課後の忙しい予定、手軽な調理済み食品が手に入ることが、どれも家族がちがう時間にちがう場所で食べることをよりかんたんにしてきたのである。',
+      '研究者たちは、この変化が重要なのかどうかにかなりの関心を寄せてきた。いくつかの研究によれば、家族と定期的に食事をする子どもや10代の若者は、めったにそうしない人よりも、食生活が健康的で、学校の成績がよく、感情的な問題が少ないと報告する傾向がある。こうした発見はしばしば、家族の食事そのものがこうした利益を生む証拠としてメディアで報じられ、親に家族での食事を優先するよう呼びかける運動を後押ししてきた。学校や公衆衛生の団体のなかには、家族がどれくらいの頻度でいっしょに食事をすべきかをすすめる手引きを作ったところさえある。',
+      'しかし、こうした発見の解釈はかんたんではない。よくいっしょに食事をする家族は、ほかの家族と多くの点でちがっているかもしれない。より安定した収入や、より融通のきく労働時間、あるいはもともとより親密な関係をもっているかもしれず、こうした要因のどれもが、子どもたちのよりよい結果を説明しうる。研究者がそうしたちがいを考えに入れようとすると、家族の食事の見かけの効果は、ずっと小さくなることがある。これは家族での食事が重要でないということではないが、その価値は、いっしょに食べるという行為そのものより、その行為が何を反映し、何を可能にしているかにあるのかもしれないことを示している。統計学者がよく思い出させてくれるように、相関関係は因果関係と同じではないのである。',
+      'では、家族での食事は何に貢献しうるのだろうか。1つの可能性は、ほかには会話の機会がほとんどない生活のなかで、それが定期的な会話の場を与えてくれるということである。短い食事でも、親が子どもの気持ちに気づき、問題が深刻になる前に話し合う機会になりうる。食事はまた、テーブルマナーや食べ物への態度、他人の話の聞き方といった習慣や価値観を伝えることもできる。こうした利益はふれ合いの質にかかっているので、テレビの前でだまって食べる食事は、人々が本当に話をする食事よりもずっと少ないものしか与えないかもしれない。言いかえれば、大切なのはテーブルそのものではなく、その周りで起きることのようである。',
+      'また、家族の夕食という理想が、だれにとっても同じように実現できるわけではないことも認めておくことが大切である。夜のシフトで働く親や、いくつもの仕事をかけもちするひとり親、せまい住まいに暮らす家族にとっては、定期的な家族での食事を整えることはきわめてむずかしいかもしれない。家族の夕食を子どもの問題へのかんたんな解決策として示す運動は、そうした親に、かんたんには変えられない状況について罪悪感をもたせてしまうおそれがある。場合によっては、いっしょの朝食や週末の外出、寝る前の決まった会話といったほかの形のつながりが、同じような役目を果たすかもしれない。大切なのは、特定の習慣よりも、だれかが自分に注意を向けてくれているという変わらない感覚なのかもしれない。',
+      'したがって、家族の食事をめぐる議論は、変わりゆく状況のなかで家族がどのように親密さを保つのかという、より広い問いを反映している。ともに過ごす時間の具体的な形は、その規則正しさや質、つまり家族が気を散らすことなくたがいに注意を向け合う瞬間があることほど重要ではないのかもしれない。このように見れば、昔ながらの家族の夕食がへったからといって、家族のつながりがおとろえるとは限らない。ただしそれは、家族と、家族を支える社会が、ともに過ごす時間をつくるほかの方法を見つけるならばの話である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Before'], answer: 0, why: '「こうした利益はふれ合いの質にかかっているので」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Shared family meals are becoming less common. Studies link them to better outcomes for children, but families who eat together may ( 1 ) from others in many ways, so the effect may be smaller than it seems. The value of meals may lie in the ( 2 ) they allow, and since not all families can eat together, the regularity and ( 3 ) of shared time may matter more than its form.',
+      blanks: [
+        { choices: ['differ', 'learn', 'escape', 'recover'], answer: 0, why: '第3段落 Families who eat together frequently may differ from other families in many ways。' },
+        { choices: ['conversation', 'food', 'money', 'silence'], answer: 0, why: '第4段落 they provide a regular occasion for conversation。' },
+        { choices: ['quality', 'price', 'length', 'location'], answer: 0, why: '第6段落 may matter less than its regularity and its quality。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、家族そろっての食事は多くの国で少なくなりつつある。', answer: true, why: '第1段落 such meals are becoming less common。' },
+      { statement: '筆者によれば、研究者がほかの要因を考えに入れると、家族の食事の効果はいつも大きくなる。', answer: false, why: '第3段落 the apparent effect of family meals sometimes becomes much smaller。' },
+      { statement: '筆者によれば、テレビの前でだまって食べる食事は、会話のある食事と同じくらい多くを与える。', answer: false, why: '第4段落 may offer far less than one in which people genuinely talk。' },
+      { statement: '筆者によれば、寝る前の決まった会話が、家族の食事と同じような役目を果たすこともある。', answer: true, why: '第5段落 a regular conversation at bedtime, may serve similar purposes。' },
+    ],
+    qa: [
+      { q: 'What risk do campaigns that promote family dinners carry, according to the fifth paragraph?', choices: ['They may make some parents feel guilty about circumstances they cannot easily change.', 'They may make food more expensive.', 'They may encourage children to eat alone.', 'They may reduce working hours.'], answer: 0, why: '第5段落 risk making such parents feel guilty for circumstances they cannot easily change。' },
+      { q: 'According to the last paragraph, does the decline of the family dinner necessarily mean the decline of family connection?', choices: ['No, not if families find other ways of making time to be together.', 'Yes, always.', 'Yes, unless children cook for themselves.', 'No, because families no longer need connection.'], answer: 0, why: '第6段落 need not mean the decline of family connection, provided that families ... find other ways of making time to be together。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
