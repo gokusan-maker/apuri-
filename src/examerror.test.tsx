@@ -1527,3 +1527,10 @@ it('正誤問題〈112〉：国公立レベルの関係詞の発展の単元が1
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) That')
 })
+
+it('誤文訂正〈106〉：京大レベルの無生物主語・名詞構文の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-106')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('from reaching')
+})

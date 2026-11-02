@@ -4560,6 +4560,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This is the method [by that] scientists measure the age of ancient rocks.', choices: ['by which', 'which', 'that', 'what'], answer: 0, why: '前置詞のあとに that は置けない。by which（その方法によって）。' },
     ],
   },
+  {
+    id: 'exam-fix-106',
+    title: '入試の誤文訂正〈106〉（京大レベル：無生物主語・名詞構文）',
+    points: ['京大の英文に多い無生物主語（The storm prevented us from ～／This medicine will make you ～／A short walk brought me to ～）と、動詞を名詞にした名詞構文（his arrival＝he arrived・the discovery of ～）。動詞の語法（prevent A from ～ing・enable A to ～・cost A B・remind A of B）と、名詞のあとの前置詞を確かめる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The heavy snow prevented the train from arriving on time.', ja: '大雪のせいで、電車は時間どおりに着けなかった。' }],
+    questions: [
+      { sentence: 'The sudden storm prevented the climbers [to reach] the summit before dark.', choices: ['from reaching', 'reaching', 'to reaching', 'for reaching'], answer: 0, why: 'prevent A from ～ing で「A が～するのをさまたげる」。' },
+      { sentence: 'The new scholarship will enable many students [studying] abroad for a year.', choices: ['to study', 'study', 'from studying', 'for studying'], answer: 0, why: 'enable A to ～ で「A が～できるようにする」。' },
+      { sentence: 'This photograph always reminds me [about] the summer we spent by the sea.', choices: ['of', 'to', 'with', 'for'], answer: 0, why: 'remind A of B で「A に B を思い出させる」。' },
+      { sentence: 'A ten-minute walk [brought us at] a small temple hidden among the trees.', choices: ['brought us to', 'brought to us', 'took us at', 'made us at'], answer: 0, why: '無生物主語 bring A to ～ で「～して A は…に着いた」。' },
+      { sentence: 'The mistake [cost to the company] a great deal of money and several important clients.', choices: ['cost the company', 'cost for the company', 'was cost to the company', 'costed the company'], answer: 0, why: 'cost A B で「A に B（費用・損失）をかけさせる」。to は不要で、過去形は cost。' },
+      { sentence: 'His [arrive] at the conference surprised everyone, since he had said he was too busy to come.', choices: ['arrival', 'arriving to', 'arrived', 'to arrive'], answer: 0, why: '所有格 His のあとは名詞。名詞構文 his arrival（彼が着いたこと）。' },
+      { sentence: 'The [discover of] penicillin changed the treatment of infections forever.', choices: ['discovery of', 'discovering of', 'discovered', 'discovery for'], answer: 0, why: '名詞構文 the discovery of ～（～を発見したこと）。discover は動詞。' },
+      { sentence: 'Her [refusal of accepting] the award was widely reported in the newspapers.', choices: ['refusal to accept', 'refusal accepting', 'refuse of accepting', 'refusing of accept'], answer: 0, why: 'refuse to ～ の名詞形は refusal to ～（～することをこばむこと）。' },
+      { sentence: 'What [made her to decide] to become a doctor was the illness of her younger brother.', choices: ['made her decide', 'made her deciding', 'made to her decide', 'made her decided'], answer: 0, why: '使役の make A 原形 で「A に～させる」。to は入らない。' },
+      { sentence: 'The rapid growth of the city [has led on] serious problems with traffic and housing.', choices: ['has led to', 'has led', 'has led for', 'has leading to'], answer: 0, why: 'lead to ～ で「～につながる・～をまねく」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
