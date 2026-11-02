@@ -2978,6 +2978,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Dog is (B) a loyal animal (C) and (D) easy to train.', choices: ['(A) Dog is', '(B) a loyal animal', '(C) and', '(D) easy to train'], answer: 0, why: '総称は Dogs are（または A dog is）。Dog is は誤り。' },
     ],
   },
+  {
+    id: 'exam-error-compare-idiom',
+    title: '入試の正誤問題〈126〉（旧帝大レベル：比較の慣用表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'The＋比較級 ～, the＋比較級（両方に the）。比較級を強めるのは much・far・even。2つのうちは the＋比較級。倍数は ～ times as＋原級＋as。同じ集まりの中は any other＋単数名詞。比べるものをそろえる（that of ～）。',
+    ],
+    examples: [
+      { en: 'The more you practice, the better you will become.', ja: '練習すればするほど、うまくなる。' },
+      { en: 'Of the two sisters, Emi is the taller.', ja: '2人の姉妹のうちで、エミのほうが背が高い。' },
+    ],
+    questions: [
+      { sentence: '(A) More you practice, (B) the better (C) you will (D) become.', choices: ['(A) More you practice,', '(B) the better', '(C) you will', '(D) become'], answer: 0, why: 'The＋比較級 ～, the＋比較級。The more you practice。' },
+      { sentence: 'The (A) longer we waited, (B) more nervous (C) we (D) became.', choices: ['(A) longer we waited,', '(B) more nervous', '(C) we', '(D) became'], answer: 1, why: '後半にも the が必要。the more nervous。' },
+      { sentence: 'This question is (A) very (B) easier (C) than (D) the last one.', choices: ['(A) very', '(B) easier', '(C) than', '(D) the last one'], answer: 0, why: '比較級を強めるのは much・far・even。much easier。' },
+      { sentence: '(A) Of the two sisters, (B) Emi is (C) the tallest (D) one.', choices: ['(A) Of the two sisters,', '(B) Emi is', '(C) the tallest', '(D) one'], answer: 2, why: '2つのうちで～なほうは the＋比較級。the taller。' },
+      { sentence: 'My new phone (A) is (B) three times (C) as (D) lighter as my old one.', choices: ['(A) is', '(B) three times', '(C) as', '(D) lighter as my old one'], answer: 3, why: '倍数は as＋原級＋as。as light as。' },
+      { sentence: 'Mt. Fuji is (A) higher (B) than (C) any (D) mountain in Japan.', choices: ['(A) higher', '(B) than', '(C) any', '(D) mountain in Japan'], answer: 3, why: '同じ国の中で比べるので any other mountain。' },
+      { sentence: 'She is (A) less (B) taller (C) than (D) her brother.', choices: ['(A) less', '(B) taller', '(C) than', '(D) her brother'], answer: 1, why: 'less のあとは原級。less tall。' },
+      { sentence: 'The climate (A) of Tokyo (B) is milder (C) than (D) Sapporo.', choices: ['(A) of Tokyo', '(B) is milder', '(C) than', '(D) Sapporo'], answer: 3, why: '気候どうしを比べるので than that of Sapporo。' },
+      { sentence: '(A) This is (B) the most (C) interesting book (D) than I have ever read.', choices: ['(A) This is', '(B) the most', '(C) interesting book', '(D) than I have ever read'], answer: 3, why: '最上級＋I have ever read。than は不要で that I have ever read。' },
+      { sentence: '(A) He is (B) not so (C) tall (D) than his father.', choices: ['(A) He is', '(B) not so', '(C) tall', '(D) than his father'], answer: 3, why: 'not so＋原級＋as。than ではなく as his father。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
