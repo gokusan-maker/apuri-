@@ -25749,6 +25749,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-attention',
+    title: 'The Practice of Attention',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually think of attention as a mental resource, something that can be directed, divided, or wasted, much as money can be spent wisely or foolishly. In an age of constant notifications and endless streams of information, it has become common to speak of an attention economy, in which companies compete to capture as much of our attention as possible. This way of speaking captures something real, but it also hides an older and perhaps more important idea: that attention is not only a resource to be managed but a way of relating to the world and to other people, and that the quality of our attention shapes the quality of our lives.",
+      "Consider what it means to pay full attention to another person. When we listen to a friend without checking our phones or planning what we will say next, we communicate that the friend matters to us. Many people report that the experience of being truly listened to is rare and deeply valuable, and that it can be more comforting than any advice. In this sense, attention is a form of care. It is something we give, and the act of giving it changes both the giver and the receiver. Doctors, teachers, and counselors often say that the most important part of their work is not the information they provide but the attention they give, because people who feel heard are more willing to trust and to change.",
+      "Attention also shapes what we are able to perceive. A walker who hurries through a forest while thinking about work may notice almost nothing, whereas one who moves slowly and looks carefully may discover the variety of plants, the movement of insects, and the changing patterns of light. Scientists, artists, and naturalists have often described their work as beginning with a long period of careful looking, during which they learned to see details that others overlooked. What we attend to, in other words, determines in large part what kind of world we inhabit. Two people walking side by side through the same street may, in this sense, be living in quite different places.",
+      "Modern technology presents a particular challenge to this kind of attention. Devices designed to alert us to every new message encourage a habit of constant switching, in which no single activity receives our undivided focus for long. Research on multitasking suggests that people who frequently shift between tasks often perform each of them less well than they believe, and that the habit of interruption can make it harder to concentrate even when no interruptions occur. The danger is not simply that we waste time, but that we gradually lose the capacity for sustained attention ( A ) so many valuable experiences depend.",
+      "It would be unfair, however, to blame technology alone. The difficulty of attending carefully is an old human problem, and philosophers and religious teachers in many traditions have described practices designed to train the mind to remain focused. What has changed is the environment in which we live, which now offers more temptations to distraction than ever before. The ability to pay attention may therefore need to be cultivated deliberately, much as people now cultivate physical fitness in societies where daily life no longer requires much physical effort.",
+      "To treat attention as a practice rather than merely a resource is to recognize that we are partly responsible for the shape of our own experience. ( B ) we choose to give our attention to people, places, and tasks that matter to us, we may find that ordinary life contains far more richness than we had noticed. The question is not only how to protect our attention from those who wish to capture it, but what we wish to attend to in the first place.",
+    ],
+    ja: [
+      '私たちはふつう、注意を心の資源、つまり、お金がかしこく使われたりおろかに使われたりするのと同じように、向けられたり、分けられたり、むだにされたりしうるものと考える。たえまない通知と終わりのない情報の流れの時代には、企業ができるだけ多くの私たちの注意をとらえようと競い合う「注意の経済」について語ることがふつうになった。この言い方は本当の何かをとらえているが、同時に、もっと古く、おそらくもっと大切な考えをかくしている。注意は管理すべき資源であるだけでなく、世界やほかの人々とかかわる1つのしかたであり、私たちの注意の質が私たちの生活の質を形づくるという考えである。',
+      'ほかの人に十分な注意をはらうとはどういうことかを考えてみよう。電話を確かめたり、次に何を言おうかと考えたりせずに友人の話を聞くとき、私たちはその友人が自分にとって大切だということを伝えている。本当に話を聞いてもらえる経験はまれで、とても価値があり、どんな助言よりもなぐさめになることがあると、多くの人が語る。この意味で、注意は思いやりの1つの形である。それは私たちがあたえるものであり、それをあたえる行為は、あたえる人と受ける人の両方を変えるのである。医者や教師やカウンセラーは、自分の仕事で最も大切なのはあたえる情報ではなく、はらう注意だとよく言う。話を聞いてもらえたと感じる人は、より信頼し、より変わろうとするからである。',
+      '注意はまた、私たちが何を感じとれるかも形づくる。仕事のことを考えながら森をいそいで通りぬける人はほとんど何にも気づかないかもしれないが、ゆっくり動き注意深く見る人は、植物の多様さや虫の動き、変わっていく光の模様を発見するかもしれない。科学者や芸術家や博物学者は、自分の仕事が長い間注意深く見ることから始まり、その間にほかの人が見落とす細部を見ることを学んだと、しばしば語ってきた。言いかえれば、私たちが何に注意を向けるかが、私たちがどんな世界に住むのかを大きく決めるのである。この意味で、同じ通りをならんで歩く2人が、まったくちがう場所に生きていることもありうる。',
+      '現代の技術は、こうした注意に特別な難題をつきつけている。新しいメッセージが来るたびに知らせるように作られた機械は、たえず切りかえる習慣をうながし、その中ではどの活動も長くは集中して向き合ってもらえない。マルチタスクについての研究は、課題の間をよく切りかえる人は、自分で思っているよりもどの課題もうまくこなせていないことが多く、中断の習慣は、中断が起きていないときでさえ集中しにくくすることがあると示している。危険なのは、単に時間をむだにすることではなく、とても多くの価値ある経験がたよっている、持続した注意の力をしだいに失ってしまうことなのである。',
+      'しかし、技術だけを責めるのは不公平だろう。注意深くあることのむずかしさは人間の古い問題であり、多くの伝統の哲学者や宗教の教師たちは、心が集中し続けるよう訓練するための修行について語ってきた。変わったのは私たちが暮らす環境であり、それは今ではかつてないほど多くの気をちらす誘惑をあたえている。したがって、注意をはらう力は、ふだんの生活がもうあまり体を使うことを必要としない社会で、人々が今では体力を意識してきたえているのと同じように、意識して育てる必要があるのかもしれない。',
+      '注意を単なる資源ではなく実践としてあつかうことは、自分自身の経験の形に、私たちが部分的には責任をもっていると認めることである。自分にとって大切な人や場所や仕事に注意を向けることを選べば、ふだんの生活には、気づいていたよりもはるかに多くの豊かさがあることがわかるかもしれない。問いは、注意をとらえようとする人々からどうやってそれを守るかということだけではなく、そもそも私たちが何に注意を向けたいのかということなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['on which', 'which', 'what', 'whose'], answer: 0, why: 'depend on ～ の on が前に出た前置詞＋関係代名詞 on which（それにたよっている）。' },
+      { id: 'B', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「注意を向けることを選べば、～がわかるかもしれない」という条件なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、注意は管理すべき資源であるだけでなく、世界とかかわるしかたでもある。', answer: true, why: '第1段落 attention is not only a resource to be managed but a way of relating to the world。' },
+      { statement: '筆者は、本当に話を聞いてもらえる経験はよくあることだと述べている。', answer: false, why: '第2段落 the experience of being truly listened to is rare and deeply valuable。' },
+      { statement: '研究によれば、課題をよく切りかえる人は、自分で思うよりうまくこなせていないことが多い。', answer: true, why: '第4段落 often perform each of them less well than they believe。' },
+      { statement: '筆者は、注意のむずかしさは技術だけが原因だと考えている。', answer: false, why: '第5段落 It would be unfair, however, to blame technology alone。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, what determines in large part what kind of world we inhabit?', choices: ['What we attend to.', 'How much money we have.', 'How fast we walk through a forest.', 'Which devices we own.'], answer: 0, why: '第3段落 What we attend to ... determines in large part what kind of world we inhabit。' },
+      { q: 'What comparison does the writer make in the fifth paragraph?', choices: ['Cultivating attention is like cultivating physical fitness.', 'Attention is like a forest full of insects.', 'Technology is like a religious teacher.', 'Listening is like spending money.'], answer: 0, why: '第5段落 much as people now cultivate physical fitness in societies where daily life no longer requires much physical effort。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
