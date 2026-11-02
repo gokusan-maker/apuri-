@@ -25045,6 +25045,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wilderness',
+    title: 'The Myth of Untouched Nature',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people imagine nature as a place untouched by human hands: a forest where no trees have ever been cut, a river that flows as it has always flowed, a landscape that existed long before us and would continue unchanged if we disappeared. This image has inspired poets and painters, and it has played an important role in movements to protect the environment. Yet scientists who study the history of landscapes have increasingly questioned whether such untouched nature exists anywhere on the planet, and whether the ideal of wilderness may in some ways mislead us.",
+      "Consider first the evidence from history and archaeology. Many areas that early European travelers described as pristine wilderness had in fact been shaped by human activity for thousands of years. Indigenous peoples in various parts of the world managed forests with controlled fires, cultivated useful plants, and altered the populations of animals through hunting. In parts of the Amazon basin, for example, researchers have found areas of unusually fertile dark soil that appear to have been created deliberately by people who lived there long ago, and patches of forest rich in useful trees may likewise reflect centuries of planting and care rather than chance. What appeared to newcomers as a natural landscape was often, at least in part, the product of long and careful human management, ( A ) the newcomers themselves failed to recognize.",
+      "Even in places that people rarely visit, human influence can now be detected. Chemicals produced in factories have been found in the bodies of animals living near the poles, and tiny particles of plastic have reached the deepest parts of the ocean. The climate itself is changing as a result of human activity, which means that no forest, glacier, or coral reef on Earth remains entirely beyond our reach. In this sense, the question is no longer whether nature has been affected by humans, but how, and to what degree.",
+      "If this is so, the idea of wilderness as something entirely separate from humanity may need to be revised. Some critics argue that the ideal can even be harmful. By defining true nature as a place where people are absent, it encourages us to overlook the plants and animals that live in cities, farms, and gardens, as if these were somehow less valuable or less real. It can also lead to policies that remove local communities from land they have cared for over many generations, on the mistaken assumption that nature will flourish only once people are gone.",
+      "This does not mean that the protection of relatively wild places has no value. Large areas with little human disturbance provide habitats for species that cannot survive elsewhere, and they allow ecological processes to continue on a scale that smaller spaces cannot support. Many people also find in such places a sense of awe and perspective that is difficult to experience in ordinary life. The point is rather that the boundary between the human and the natural is less sharp than the traditional image suggests, and that our decisions about the environment should reflect this complexity.",
+      "A more useful way of thinking may be to regard humans not as visitors to nature but as one of its participants. On this view, the important question is not how to keep people away from the natural world, but what kind of relationship with it we wish to have. Some human activities destroy the conditions on which other living things depend; others, like certain traditional methods of farming and forest management, can sustain or even increase biological diversity. ( B ) we recognize that we are already part of the landscapes we hope to protect, we may be better able to take responsibility for the ways in which we shape them.",
+    ],
+    ja: [
+      '多くの人は、自然を、人の手がふれていない場所として思いえがく。一度も木が切られたことのない森、いつも流れてきたとおりに流れる川、私たちよりずっと前から存在し、たとえ私たちがいなくなっても変わらずに続いていくであろう風景である。このイメージは詩人や画家に霊感をあたえ、環境を守る運動の中で大切な役割をはたしてきた。しかし、風景の歴史を研究する科学者たちは、そうした手つかずの自然が地球上のどこかに存在するのかどうか、そして原生自然という理想がある意味で私たちを誤らせているのではないかと、しだいに疑問を投げかけるようになってきた。',
+      'まず、歴史学と考古学の証拠を考えてみよう。初期のヨーロッパの旅行者たちが手つかずの原生自然として描いた地域の多くは、実際には何千年にもわたって人間の活動によって形づくられていた。世界のさまざまな地域の先住民は、管理された火で森を手入れし、役に立つ植物を育て、狩りを通じて動物の数を変えてきた。たとえばアマゾン川流域の一部では、研究者たちが、ずっと昔にそこに住んでいた人々が意図的に作ったと思われる、とりわけ肥えた黒い土の地域を見つけている。役に立つ木の多い森の一画も、同じように、偶然ではなく何百年にもわたる植えつけと手入れを反映しているのかもしれない。新しく来た人々の目に自然の風景として映ったものは、しばしば、少なくとも部分的には、長くていねいな人間の管理の産物であった。そして新しく来た人々自身は、そのことに気づかなかったのである。',
+      '人がめったにおとずれない場所でさえ、今では人間の影響を見つけることができる。工場で作られた化学物質が極地の近くにすむ動物の体から見つかり、プラスチックの小さなつぶは海のいちばん深いところにまで届いている。気候そのものが人間の活動の結果として変わりつつあり、それは、地球上のどの森も氷河もサンゴ礁も、もはや完全には私たちの手のとどかないところにはないということを意味している。この意味で、問題はもはや自然が人間の影響を受けたかどうかではなく、どのように、そしてどの程度受けたかなのである。',
+      'もしそうなら、人類から完全に切りはなされたものとしての原生自然という考えは、見直す必要があるかもしれない。この理想は有害でさえありうると主張する批評家もいる。本当の自然を人のいない場所と定義することで、都市や農場や庭にすむ動植物を、まるでそれらが何かしら価値が低いか、本物でないかのように見すごすよう私たちをうながしてしまう。また、人がいなくなりさえすれば自然は栄えるという誤った思いこみのもとに、何世代にもわたって世話をしてきた土地から地元の共同体を追い出す政策につながることもある。',
+      'このことは、比較的野生の残る場所を守ることに価値がないという意味ではない。人による乱れの少ない広い地域は、ほかでは生きられない種にすみかをあたえ、小さな空間では支えられない規模で生態系のはたらきが続くことを可能にする。また多くの人は、そうした場所で、ふだんの生活では味わいにくい畏敬の念や広い視野を見いだす。大切なのはむしろ、人間的なものと自然的なものの境目は伝統的なイメージが示すほどはっきりしておらず、環境についての私たちの決定は、この複雑さを反映すべきだということなのである。',
+      'もっと役に立つ考え方は、人間を自然への訪問者ではなく、その参加者の1つとみなすことかもしれない。この見方によれば、大切な問いは、どうすれば人を自然界から遠ざけておけるかではなく、自然とどのような関係をもちたいのかということである。人間の活動の中には、ほかの生き物がたよっている条件をこわすものもあれば、ある種の伝統的な農業や森の管理のように、生物の多様性を保ったり、ふやしたりさえできるものもある。私たちが、守りたいと願う風景の一部にすでになっていることを認めれば、それを形づくる自分たちのやり方に、よりよく責任をもてるようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['a fact which', 'what', 'that', 'where'], answer: 0, why: 'コンマのあとで前の内容全体を説明し、recognize の目的語になる a fact which（そのことを～）。what は先行詞をとらず、that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「すでに風景の一部だと認めれば、責任をもてるかもしれない」という条件なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、初期のヨーロッパの旅行者が原生自然と描いた地域の多くは、人間に形づくられていた。', answer: true, why: '第2段落 had in fact been shaped by human activity for thousands of years。' },
+      { statement: '筆者は、海のいちばん深いところには人間の影響はまったく届いていないと述べている。', answer: false, why: '第3段落 tiny particles of plastic have reached the deepest parts of the ocean。' },
+      { statement: '筆者は、比較的野生の残る場所を守ることには価値がないと考えている。', answer: false, why: '第5段落 This does not mean that the protection of relatively wild places has no value。' },
+      { statement: '筆者によれば、ある種の伝統的な農業は、生物の多様性をふやすことさえできる。', answer: true, why: '第6段落 certain traditional methods of farming ... can sustain or even increase biological diversity。' },
+    ],
+    qa: [
+      { q: 'According to the fourth paragraph, why might the ideal of wilderness be harmful?', choices: ['It leads us to overlook nature in cities and farms and may remove local communities from their land.', 'It makes people visit wild places too often.', 'It encourages factories to produce more chemicals.', 'It makes forests grow too quickly.'], answer: 0, why: '第4段落 it encourages us to overlook the plants and animals that live in cities, farms, and gardens ... It can also lead to policies that remove local communities。' },
+      { q: 'What view of humans does the writer recommend in the last paragraph?', choices: ['Humans should be seen as participants in nature rather than visitors to it.', 'Humans should leave all natural areas completely.', 'Humans are the only important part of nature.', 'Humans cannot affect nature in any way.'], answer: 0, why: '第6段落 regard humans not as visitors to nature but as one of its participants。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
