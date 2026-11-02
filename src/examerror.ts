@@ -3218,6 +3218,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She asked me (A) what (B) time (C) it (D) is.', choices: ['(A) what', '(B) time', '(C) it', '(D) is'], answer: 3, why: '主節が asked（過去）なので what time it was。' },
     ],
   },
+  {
+    id: 'exam-error-prep-koku',
+    title: '入試の正誤問題〈136〉（国公立レベル：前置詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '時刻は at、曜日・日付は on、月・年・季節は in。by は期限、until は継続。for は期間の長さ、during は特定の期間。現在完了の「～以来」は since。',
+    ],
+    examples: [
+      { en: 'You must hand in your essay by next Monday.', ja: '来週の月曜日までに作文を出さなければならない。' },
+      { en: 'I will wait here until you come back.', ja: 'あなたがもどるまでここで待っています。' },
+    ],
+    questions: [
+      { sentence: 'The meeting (A) starts (B) on (C) 3:30 (D) today.', choices: ['(A) starts', '(B) on', '(C) 3:30', '(D) today'], answer: 1, why: '時刻には at。' },
+      { sentence: 'My birthday (A) is (B) in (C) May 5, (D) so I will have a party.', choices: ['(A) is', '(B) in', '(C) May 5,', '(D) so I will have a party'], answer: 1, why: '日付には on。' },
+      { sentence: '(A) We went skiing (B) on winter (C) with (D) our friends.', choices: ['(A) We went skiing', '(B) on winter', '(C) with', '(D) our friends'], answer: 1, why: '季節には in。in winter。' },
+      { sentence: 'I will (A) wait (B) here (C) by (D) you come back.', choices: ['(A) wait', '(B) here', '(C) by', '(D) you come back'], answer: 2, why: '「もどるまでずっと」は until。' },
+      { sentence: 'You must (A) hand in (B) your essay (C) until (D) next Monday.', choices: ['(A) hand in', '(B) your essay', '(C) until', '(D) next Monday'], answer: 2, why: '期限「～までに」は by。' },
+      { sentence: 'She (A) stayed (B) in London (C) during (D) three weeks.', choices: ['(A) stayed', '(B) in London', '(C) during', '(D) three weeks'], answer: 2, why: '期間の長さは for。' },
+      { sentence: '(A) In (B) Sunday morning, (C) I usually (D) go jogging.', choices: ['(A) In', '(B) Sunday morning,', '(C) I usually', '(D) go jogging'], answer: 0, why: '曜日がつくと On Sunday morning。' },
+      { sentence: 'We (A) have lived (B) here (C) from (D) 2015.', choices: ['(A) have lived', '(B) here', '(C) from', '(D) 2015'], answer: 2, why: '現在完了で「～以来」は since。' },
+      { sentence: 'I (A) fell asleep (B) for (C) the movie (D) last night.', choices: ['(A) fell asleep', '(B) for', '(C) the movie', '(D) last night'], answer: 1, why: '特定の期間「～のあいだに」は during。' },
+      { sentence: 'She (A) was born (B) in Kyoto (C) in 2008 and moved to Tokyo (D) on 2015.', choices: ['(A) was born', '(B) in Kyoto', '(C) in 2008 and moved to Tokyo', '(D) on 2015'], answer: 3, why: '年には in。in 2015。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
