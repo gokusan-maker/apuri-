@@ -3194,6 +3194,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Little (B) people (C) know (D) the truth.', choices: ['(A) Little', '(B) people', '(C) know', '(D) the truth'], answer: 0, why: 'people（数えられる）は Few。' },
     ],
   },
+  {
+    id: 'exam-error-speech-kyodai',
+    title: '入試の正誤問題〈135〉（京大レベル：時制の一致と話法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主節が過去なら that 節も過去・過去完了・would・could にそろえる。間接疑問は 疑問詞（if）＋S＋V の語順。tell 人 (not) to do。say to 人／tell 人（said me・told to me は誤り）。',
+    ],
+    examples: [
+      { en: 'He said that he was hungry.', ja: '彼はおなかがすいていると言った。' },
+      { en: 'She asked me what time it was.', ja: '彼女は私に何時かとたずねた。' },
+    ],
+    questions: [
+      { sentence: 'He (A) said (B) that he (C) is (D) hungry.', choices: ['(A) said', '(B) that he', '(C) is', '(D) hungry'], answer: 2, why: '主節が said（過去）なので was。' },
+      { sentence: 'She (A) told me (B) that she (C) lost her bag (D) the day before.', choices: ['(A) told me', '(B) that she', '(C) lost her bag', '(D) the day before'], answer: 2, why: '言ったときより前なので had lost。' },
+      { sentence: 'I (A) thought (B) that it (C) will (D) snow.', choices: ['(A) thought', '(B) that it', '(C) will', '(D) snow'], answer: 2, why: '主節が過去なので would。' },
+      { sentence: '(A) He asked me (B) where did I (C) live (D) then.', choices: ['(A) He asked me', '(B) where did I', '(C) live', '(D) then'], answer: 1, why: '間接疑問はふつうの語順。where I lived。' },
+      { sentence: 'She (A) asked me (B) that (C) I could (D) help her.', choices: ['(A) asked me', '(B) that', '(C) I could', '(D) help her'], answer: 1, why: 'Yes／No の間接疑問は if（whether）。' },
+      { sentence: 'The doctor (A) said me (B) to get (C) more (D) sleep.', choices: ['(A) said me', '(B) to get', '(C) more', '(D) sleep'], answer: 0, why: 'tell 人 to do。told me。' },
+      { sentence: 'My mother (A) told me (B) not stay (C) up (D) late.', choices: ['(A) told me', '(B) not stay', '(C) up', '(D) late'], answer: 1, why: 'tell 人 not to do。not to stay。' },
+      { sentence: '(A) He (B) told to me (C) that he (D) would be late.', choices: ['(A) He', '(B) told to me', '(C) that he', '(D) would be late'], answer: 1, why: 'tell は tell 人 that ～。told me。' },
+      { sentence: 'I did not (A) know (B) that she (C) can (D) speak French.', choices: ['(A) know', '(B) that she', '(C) can', '(D) speak French'], answer: 2, why: '主節が過去なので could。' },
+      { sentence: 'She asked me (A) what (B) time (C) it (D) is.', choices: ['(A) what', '(B) time', '(C) it', '(D) is'], answer: 3, why: '主節が asked（過去）なので what time it was。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
