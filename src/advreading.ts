@@ -26054,6 +26054,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fiction',
+    title: 'Why Read Fiction?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an age that values practical knowledge, reading novels and short stories can seem like an indulgence. Fiction, after all, describes events that never happened and people who never existed. A student preparing for a career might reasonably ask why time should be spent on imaginary lives when there is so much real information to learn. Yet many thinkers have argued that fiction offers something that factual writing cannot easily provide, and that its value lies precisely in the fact that it invites us to enter lives other than our own. To understand why, it helps to consider what actually happens in the mind of a reader who becomes absorbed in a story.",
+      "One frequently cited benefit is the development of empathy. When we read a novel, we follow the thoughts and feelings of characters from the inside, sometimes for hundreds of pages. We see how a situation appears to someone of a different age, background, or temperament, and we may come to understand motives that would puzzle us in real life. Some psychological studies have suggested that people who read fiction regularly perform slightly better on tests that measure the ability to understand the mental states of others, although researchers continue to debate how strong and lasting such effects are.",
+      "Fiction also allows us to explore situations that we would not wish to experience directly. Through stories, readers can imagine what it would be like to face war, injustice, grief, or moral dilemmas, and they can consider how they might respond without bearing the real consequences. In this sense, a novel functions somewhat like a flight simulator for the mind, a safe space in which to rehearse difficult experiences and to test our values against circumstances that ordinary life may never present. A young reader who has followed a character through the loss of a parent, for example, may be better prepared to understand a friend who faces a similar loss in real life.",
+      "There is, in addition, the pleasure of language itself. Good fiction uses words with a precision and richness that everyday communication rarely requires. Readers encounter new vocabulary, unusual sentence structures, and images that can change the way they see familiar things. A single well-chosen phrase may stay in the memory for years, offering a way of describing an experience that we had previously been unable to put into words. Writers often say that reading widely is the best preparation for writing well, and the same may be true of thinking well.",
+      "It would be naive, however, to assume that reading fiction automatically makes people better. History offers many examples of individuals who loved literature and nevertheless behaved cruelly, and a story can just as easily reinforce prejudice as challenge it. The benefits of fiction depend on how it is read: whether readers are willing to be unsettled by perspectives unlike their own, and whether they reflect on what they have read rather than simply consuming it as entertainment. Fiction offers opportunities, not guarantees.",
+      "Perhaps the deepest value of fiction is that it reminds us of the complexity of human life. Real people rarely fit neatly into categories, and good stories show characters who are neither wholly good nor wholly bad, whose choices are shaped by circumstances they did not choose. ( A ) we spend more and more of our time with information that is brief, simplified, and designed to provoke quick reactions, the slow and patient attention that fiction demands may be more valuable than ever. In learning to stay with a long and complicated story, readers may also be learning to stay with the long and complicated stories of the people around them.",
+    ],
+    ja: [
+      '実用的な知識が重んじられる時代には、小説や短編を読むことはぜいたくのように思えるかもしれない。結局のところ、フィクションは、起こらなかった出来事や存在しなかった人々を描くものである。職業に向けて準備している学生が、学ぶべき本当の情報がこれほどあるのに、なぜ想像上の人生に時間を使わなければならないのかと問うのはもっともだろう。しかし多くの思想家は、フィクションは事実を書いた文章ではかんたんにはあたえられない何かをあたえてくれ、その価値は、まさに自分以外の人生に入りこむよう誘ってくれる点にあると論じてきた。その理由を理解するには、物語に夢中になった読者の頭の中で実際に何が起きているのかを考えてみるとよい。',
+      'よく引き合いに出される利点の1つは、共感する力が育つことである。小説を読むとき、私たちは登場人物の考えや気持ちを、ときには何百ページにもわたって内側からたどる。年れいや背景や気質のちがう人に、ある状況がどう見えるのかを知り、現実の生活ではとまどってしまうような動機を理解するようになることもある。いくつかの心理学の研究は、フィクションをいつも読む人は、他人の心の状態を理解する力をはかるテストで少しよい成績をとることを示しているが、そうした効果がどれほど強く長続きするのかについて、研究者たちは今も議論している。',
+      'フィクションはまた、直接は経験したくない状況を探ることも可能にしてくれる。物語を通じて、読者は戦争や不正や悲しみや道徳的なジレンマに向き合うとはどういうことかを想像し、本当の結果を負うことなく、自分ならどうこたえるかを考えることができる。この意味で、小説は、心のためのフライト・シミュレーターのような働きをする。むずかしい経験を練習し、ふだんの生活では決してあらわれないかもしれない状況に照らして自分の価値観をためす、安全な場なのである。たとえば、登場人物が親を失う過程をたどったことのある若い読者は、現実の生活で同じような喪失に向き合う友人を、よりよく理解する準備ができているかもしれない。',
+      'さらに、言葉そのものの楽しさもある。すぐれたフィクションは、ふだんのやりとりではめったに必要とされない正確さと豊かさで言葉を使う。読者は新しい語彙や変わった文の組み立て、なじみのあるものの見方を変えてしまうようなイメージに出会う。よく選ばれたたった1つの言い回しが何年も記憶に残り、それまで言葉にできなかった経験を表す方法をあたえてくれることもある。作家たちは、幅広く読むことがうまく書くための最もよい準備だとよく言うが、同じことはうまく考えることにもあてはまるのかもしれない。',
+      'しかし、フィクションを読めば自動的に人がよくなると考えるのは世間知らずだろう。歴史には、文学を愛しながら残酷にふるまった人々の例がたくさんあるし、物語は偏見に疑問を投げかけるのと同じくらいたやすく偏見を強めることもある。フィクションの利点は、それがどう読まれるかにかかっている。読者が自分とはちがう見方にゆさぶられることをいとわないかどうか、そして読んだものをただ娯楽として消費するのではなく、それについて考えるかどうかである。フィクションがあたえるのは機会であって、保証ではない。',
+      'おそらくフィクションの最も深い価値は、人間の生活の複雑さを思い出させてくれることだろう。現実の人々がきちんと分類にあてはまることはめったになく、すぐれた物語は、まったくの善人でもまったくの悪人でもなく、自分で選んだのではない境遇によって選択を形づくられる登場人物を描く。短く、単純にされ、すばやい反応を引き出すように作られた情報とともに過ごす時間がますます長くなるにつれて、フィクションが求めるゆっくりとした根気のいる注意は、これまで以上に価値あるものになっているのかもしれない。長く複雑な物語につき合うことを学ぶ中で、読者は、まわりの人々の長く複雑な人生の物語につき合うことも学んでいるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As', 'Unless', 'Although', 'Before'], answer: 0, why: '「時間がますます長くなるにつれて」という比例の as。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、フィクションの価値は、自分以外の人生に入りこむよう誘ってくれる点にある。', answer: true, why: '第1段落 its value lies precisely in the fact that it invites us to enter lives other than our own。' },
+      { statement: '研究によれば、フィクションを読む効果の強さについて、研究者の意見は完全に一致している。', answer: false, why: '第2段落 researchers continue to debate how strong and lasting such effects are。' },
+      { statement: '筆者は、小説を心のためのフライト・シミュレーターにたとえている。', answer: true, why: '第3段落 a novel functions somewhat like a flight simulator for the mind。' },
+      { statement: '筆者は、フィクションを読めば必ず人がよくなると考えている。', answer: false, why: '第5段落 It would be naive, however, to assume that reading fiction automatically makes people better。' },
+    ],
+    qa: [
+      { q: 'According to the fifth paragraph, what do the benefits of fiction depend on?', choices: ['How it is read, including whether readers reflect on it.', 'How many pages the book has.', 'Whether the story is about real events.', 'How expensive the book is.'], answer: 0, why: '第5段落 The benefits of fiction depend on how it is read ～。' },
+      { q: 'What does good fiction show about characters, according to the last paragraph?', choices: ['They are neither wholly good nor wholly bad.', 'They always make the right choices.', 'They fit neatly into categories.', 'They never face difficult circumstances.'], answer: 0, why: '第6段落 characters who are neither wholly good nor wholly bad。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
