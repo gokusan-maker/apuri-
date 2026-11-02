@@ -3146,6 +3146,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) To swimming (B) in the sea (C) is (D) fun.', choices: ['(A) To swimming', '(B) in the sea', '(C) is', '(D) fun'], answer: 0, why: '主語は to swim か swimming。To swimming は誤り。' },
     ],
   },
+  {
+    id: 'exam-error-usage-todai2',
+    title: '入試の正誤問題〈133〉（東大レベル：英作文の語法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'discuss・mention・marry・enter・reach・resemble は他動詞で前置詞をつけない。suggest・insist・demand＋that S（should）＋原形。explain は explain＋もの＋to 人。suggest 人 to do の形はない。',
+    ],
+    examples: [
+      { en: 'We discussed the plan yesterday.', ja: '私たちはきのうその計画について話し合った。' },
+      { en: 'The doctor suggested that he take a rest.', ja: '医者は彼に休むよう提案した。' },
+    ],
+    questions: [
+      { sentence: 'We (A) discussed (B) about (C) the plan (D) yesterday.', choices: ['(A) discussed', '(B) about', '(C) the plan', '(D) yesterday'], answer: 1, why: 'discuss は他動詞なので about は不要。' },
+      { sentence: 'She (A) did not (B) mention about (C) her trip (D) at all.', choices: ['(A) did not', '(B) mention about', '(C) her trip', '(D) at all'], answer: 1, why: 'mention は他動詞。mention her trip。' },
+      { sentence: '(A) He (B) married with (C) his classmate (D) last year.', choices: ['(A) He', '(B) married with', '(C) his classmate', '(D) last year'], answer: 1, why: 'marry は他動詞。married his classmate。' },
+      { sentence: 'The doctor (A) suggested (B) that (C) he (D) took a rest.', choices: ['(A) suggested', '(B) that', '(C) he', '(D) took a rest'], answer: 3, why: 'suggest that S（should）＋原形。take a rest。' },
+      { sentence: 'Could you (A) explain (B) me (C) the meaning (D) of this word?', choices: ['(A) explain', '(B) me', '(C) the meaning', '(D) of this word?'], answer: 1, why: 'explain は人を直接目的語にとらない。explain the meaning of this word to me。' },
+      { sentence: '(A) My mother (B) insisted (C) that I (D) went to bed early.', choices: ['(A) My mother', '(B) insisted', '(C) that I', '(D) went to bed early'], answer: 3, why: 'insist that S（should）＋原形。go to bed。' },
+      { sentence: 'We (A) arrived (B) at the station and (C) reached to (D) the platform.', choices: ['(A) arrived', '(B) at the station and', '(C) reached to', '(D) the platform'], answer: 2, why: 'reach は他動詞。reached the platform。' },
+      { sentence: 'The boy (A) looks (B) like his father and (C) resembles to (D) him in character.', choices: ['(A) looks', '(B) like his father and', '(C) resembles to', '(D) him in character'], answer: 2, why: 'resemble は他動詞。resembles him。' },
+      { sentence: '(A) Discussing about (B) the plan (C) took (D) two hours.', choices: ['(A) Discussing about', '(B) the plan', '(C) took', '(D) two hours'], answer: 0, why: 'discuss は他動詞。Discussing the plan。' },
+      { sentence: 'My friend (A) suggested (B) me (C) to join (D) the team.', choices: ['(A) suggested', '(B) me', '(C) to join', '(D) the team'], answer: 1, why: 'suggest 人 to do の形はない。suggested that I (should) join the team。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
