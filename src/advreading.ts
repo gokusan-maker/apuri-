@@ -26358,6 +26358,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-rankings',
+    title: 'Reading Rankings with Care',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Rankings have become a familiar part of modern life. Universities are listed in order of their supposed quality, cities are compared according to how pleasant they are to live in, and restaurants, hotels, and even hospitals are given scores by experts or by the public. Such lists are attractive because they seem to turn complex information into a simple and easily understood form. Faced with dozens of possible choices, a person can glance at a ranking and immediately see which options are considered the best, without having to investigate each one in detail. In a world overflowing with information, this saving of time and effort is a real advantage.",
+      "Yet the simplicity of rankings is also their greatest weakness. Any attempt to place very different institutions on a single scale requires decisions about what to measure and how much weight to give to each factor. A university ranking, for example, might combine research output, the opinions of academics, the ratio of students to teachers, and the proportion of international staff. Each of these factors captures something real, but the choice of which ones to include, and how to combine them, is to a large extent arbitrary. A small change in the method can move an institution many places up or down the list.",
+      "Moreover, rankings tend to measure what can be counted easily ( A ) what matters most. The quality of teaching, the atmosphere of a campus, or the extent to which students develop as individuals are difficult to express in numbers, and so they are often ignored or represented only indirectly. As a result, a ranking may reward institutions for being large, wealthy, or famous, qualities that do not necessarily correspond to the experience of a typical student. A university with excellent teaching but little research, for instance, may appear far lower on the list than its students would expect from their own experience.",
+      "Perhaps the most significant effect of rankings, however, is the way they change the behavior of those who are ranked. Once a list becomes influential, institutions have strong reasons to improve their position, and they may do so by focusing on the specific factors that the ranking measures. Some universities have been accused of hiring researchers mainly to raise their citation numbers, or of directing resources toward activities that look impressive in the statistics rather than toward the needs of students. In this way, rankings that were intended to describe quality can end up reshaping institutions according to their own narrow definitions of it. Economists have long observed that when a measure becomes a target, it often ceases to be a good measure, and rankings provide a clear example of this principle.",
+      "This does not mean that rankings are useless. They can draw attention to genuine differences, encourage institutions to be more transparent, and provide a starting point for people who know little about the options available to them. The problem arises when rankings are treated not as one source of information among many but as an objective and final judgment. A student who chooses a university only because it appears near the top of a list may overlook a smaller institution that would suit his or her interests far better. Rankings work best, in other words, as an invitation to ask further questions rather than as a substitute for asking them.",
+      "The lesson, then, is not to abandon rankings but to read them with care. Users should ask what a particular ranking actually measures, who produced it, and for what purpose. They should also remember that the best choice for one person may not be the best for another, since needs and goals differ. A ranking can offer a useful summary of certain features, but it cannot tell us what we ourselves value, and that question must ultimately be answered by each person individually.",
+    ],
+    ja: [
+      'ランキングは現代の生活のなじみ深い一部になった。大学はその質とされるものの順に並べられ、都市は住みやすさによって比べられ、レストランやホテル、さらには病院までもが、専門家や一般の人々から点数をつけられる。こうしたリストが魅力的なのは、複雑な情報を単純でわかりやすい形に変えてくれるように思えるからである。何十もの選択肢を前にして、人はランキングをちらりと見れば、どの選択肢が最もよいと考えられているかがすぐにわかり、1つひとつをくわしく調べる必要がない。情報があふれる世界では、この時間と手間の節約は本当の利点である。',
+      'しかし、ランキングの単純さは、その最大の弱点でもある。非常に異なる機関を1つの尺度の上に並べようとすれば、何をはかるか、それぞれの要因にどれだけの重みを与えるかを決めなければならない。たとえば大学のランキングは、研究の成果、研究者の意見、教員1人あたりの学生数、外国人職員の割合を組み合わせるかもしれない。これらの要因はそれぞれ現実の何かをとらえているが、どれをふくめるか、どう組み合わせるかの選択は、かなりの程度まで恣意的である。方法を少し変えるだけで、ある機関がリストの上や下へ何位も動くことがある。',
+      'さらに、ランキングは最も大切なものよりも、かんたんに数えられるものをはかる傾向がある。授業の質、キャンパスの雰囲気、学生が個人としてどれだけ成長するかは数で表すのがむずかしく、そのためしばしば無視されたり、間接的にしか表されなかったりする。その結果、ランキングは、大きいこと、豊かなこと、有名なことに対して機関に報いるかもしれないが、そうした性質はふつうの学生の経験と必ずしも対応しない。たとえば、授業はすばらしいが研究の少ない大学は、学生が自分の経験から思うよりもずっと下位に表示されるかもしれない。',
+      'しかし、ランキングのおそらく最も重要な影響は、順位をつけられる側のふるまいを変えてしまうことである。あるリストが影響力をもつようになると、機関には順位を上げる強い理由が生まれ、ランキングがはかる特定の要因に集中することでそうするかもしれない。主に引用数を上げるために研究者を雇ったとか、学生の必要よりも統計上見ばえのよい活動に資源を向けたとかいって非難された大学もある。このようにして、質を記述するためのものだったランキングが、結局は、質についての自分自身のせまい定義にしたがって機関を作り変えてしまうことがある。経済学者たちは昔から、ある指標が目標になると、それはしばしばよい指標ではなくなると指摘してきたが、ランキングはこの原則のはっきりした例である。',
+      'これは、ランキングが役に立たないということではない。ランキングは本当のちがいに注意を向けさせ、機関に情報をよりオープンにするよう促し、自分に与えられた選択肢についてほとんど知らない人々に出発点を与えてくれる。問題が生じるのは、ランキングが多くの情報源のうちの1つとしてではなく、客観的で最終的な判断として扱われるときである。リストの上位にあるという理由だけで大学を選ぶ学生は、自分の関心にずっとよく合う、もっと小さな大学を見落とすかもしれない。言いかえれば、ランキングは、問いを立てることの代わりとしてではなく、さらに問いを立てるきっかけとして使うときに最もよくはたらくのである。',
+      'したがって教訓は、ランキングを捨てることではなく、注意深く読むことである。利用する人は、そのランキングが実際に何をはかっているのか、だれが作ったのか、何のために作ったのかを問うべきである。また、必要や目標は人によって異なるので、ある人にとって最良の選択が別の人にとって最良とは限らないことも覚えておくべきである。ランキングはある特徴の便利な要約を与えてくれるが、私たち自身が何を大切にしているかを教えてはくれない。その問いには、最終的には一人ひとりが答えなければならないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'as well as', 'because of', 'instead of being'], answer: 0, why: '「最も大切なものよりも、かんたんに数えられるもの」という対比なので rather than。' },
+    ],
+    summary: {
+      text: 'Rankings turn complex information into a simple form, but the choice of what to measure is largely ( 1 ), and they tend to measure what is easy to count. Institutions may also change their ( 2 ) to improve their position. Rankings are useful as one source of information, but people should read them with ( 3 ) and decide for themselves what they value.',
+      blanks: [
+        { choices: ['arbitrary', 'scientific', 'secret', 'permanent'], answer: 0, why: '第2段落 is to a large extent arbitrary。' },
+        { choices: ['behavior', 'names', 'locations', 'prices'], answer: 0, why: '第4段落 the way they change the behavior of those who are ranked。' },
+        { choices: ['care', 'speed', 'anger', 'envy'], answer: 0, why: '第6段落 to read them with care。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、ランキングの方法を少し変えるだけで、順位が大きく動くことがある。', answer: true, why: '第2段落 A small change in the method can move an institution many places up or down the list。' },
+      { statement: '筆者によれば、授業の質はランキングで正確に数で表されている。', answer: false, why: '第3段落 The quality of teaching ... are difficult to express in numbers。' },
+      { statement: '筆者は、ランキングはまったく役に立たないと考えている。', answer: false, why: '第5段落 This does not mean that rankings are useless。' },
+      { statement: '筆者によれば、ある人にとって最良の選択が、別の人にとって最良とは限らない。', answer: true, why: '第6段落 the best choice for one person may not be the best for another。' },
+    ],
+    qa: [
+      { q: 'How can rankings end up reshaping institutions, according to the fourth paragraph?', choices: ['Institutions focus on the specific factors that the ranking measures in order to rise on the list.', 'Rankings force institutions to close.', 'Rankings are written by the institutions themselves.', 'Students refuse to attend highly ranked universities.'], answer: 0, why: '第4段落 they may do so by focusing on the specific factors that the ranking measures。' },
+      { q: 'What might a student who chooses a university only by its ranking overlook?', choices: ['A smaller institution that would suit his or her interests far better.', 'The cost of living in large cities.', 'The opinions of famous researchers.', 'The number of international staff.'], answer: 0, why: '第5段落 may overlook a smaller institution that would suit his or her interests far better。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
