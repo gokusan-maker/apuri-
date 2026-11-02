@@ -2906,6 +2906,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The more (B) you read, (C) the best (D) you understand.', choices: ['(A) The more', '(B) you read,', '(C) the best', '(D) you understand'], answer: 2, why: 'The 比較級 ～, the 比較級 … 。the better。' },
     ],
   },
+  {
+    id: 'exam-error-what',
+    title: '入試の正誤問題〈123〉（京大レベル：what の慣用表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'what we call／what is called（いわゆる）、what S was（昔の S）、A is to B what C is to D、what little ＋名詞、what is more、what は先行詞をふくみ単数あつかい。',
+    ],
+    examples: [
+      { en: 'Water is to fish what air is to human beings.', ja: '魚にとっての水は、人間にとっての空気と同じだ。' },
+      { en: 'The village is no longer what it was fifty years ago.', ja: 'その村はもう50年前の村ではない。' },
+    ],
+    questions: [
+      { sentence: '(A) She is (B) that we call (C) a genius (D) in mathematics.', choices: ['(A) She is', '(B) that we call', '(C) a genius', '(D) in mathematics'], answer: 1, why: '「いわゆる」は what we call。' },
+      { sentence: '(A) The village (B) is no longer (C) which it was (D) fifty years ago.', choices: ['(A) The village', '(B) is no longer', '(C) which it was', '(D) fifty years ago'], answer: 2, why: '「昔の村の姿」は what it was。' },
+      { sentence: '(A) Water (B) is to fish (C) that air is (D) to human beings.', choices: ['(A) Water', '(B) is to fish', '(C) that air is', '(D) to human beings'], answer: 2, why: 'A is to B what C is to D。what air is。' },
+      { sentence: '(A) He spent (B) what little money which (C) he had (D) on books.', choices: ['(A) He spent', '(B) what little money which', '(C) he had', '(D) on books'], answer: 1, why: 'what little ＋名詞 ＋ S V。which は不要。' },
+      { sentence: 'The house (A) was old, and, (B) which is more, (C) it was far (D) from the station.', choices: ['(A) was old, and,', '(B) which is more,', '(C) it was far', '(D) from the station'], answer: 1, why: '「さらに」は what is more。' },
+      { sentence: 'Please (A) tell me (B) the thing what (C) you saw (D) last night.', choices: ['(A) tell me', '(B) the thing what', '(C) you saw', '(D) last night'], answer: 1, why: 'what は先行詞をふくむ。what you saw（the thing that you saw）。' },
+      { sentence: '(A) What (B) surprised (C) me most (D) were his kindness.', choices: ['(A) What', '(B) surprised', '(C) me most', '(D) were his kindness'], answer: 3, why: 'What の名詞節は単数あつかい。was his kindness。' },
+      { sentence: '(A) This is (B) what is called as (C) a black hole (D) in astronomy.', choices: ['(A) This is', '(B) what is called as', '(C) a black hole', '(D) in astronomy'], answer: 1, why: '「いわゆる」は what is called。as は不要。' },
+      { sentence: '(A) The worth of a person (B) lies not in what he has (C) but in that (D) he is.', choices: ['(A) The worth of a person', '(B) lies not in what he has', '(C) but in that', '(D) he is'], answer: 2, why: 'what he has と what he is の対比。in what he is。' },
+      { sentence: '(A) That (B) she said (C) at the meeting (D) made everyone angry.', choices: ['(A) That', '(B) she said', '(C) at the meeting', '(D) made everyone angry'], answer: 0, why: '主語の「彼女が言ったこと」は What she said。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
