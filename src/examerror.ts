@@ -3170,6 +3170,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'My friend (A) suggested (B) me (C) to join (D) the team.', choices: ['(A) suggested', '(B) me', '(C) to join', '(D) the team'], answer: 1, why: 'suggest 人 to do の形はない。suggested that I (should) join the team。' },
     ],
   },
+  {
+    id: 'exam-error-quantity-kyutei',
+    title: '入試の正誤問題〈134〉（旧帝大レベル：数量の言い方）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'many・few・a few・a number of は数えられる名詞、much・little・a little・an amount of は数えられない名詞に。time・money・water・milk・homework・equipment は数えられない名詞で複数形にしない。',
+    ],
+    examples: [
+      { en: 'We do not have much time.', ja: '私たちにはあまり時間がない。' },
+      { en: 'Few people know the truth.', ja: '本当のことを知る人はほとんどいない。' },
+    ],
+    questions: [
+      { sentence: 'We (A) have (B) many (C) time (D) to relax.', choices: ['(A) have', '(B) many', '(C) time', '(D) to relax'], answer: 1, why: 'time は数えられない名詞。much time。' },
+      { sentence: '(A) There were (B) much (C) people (D) in the park.', choices: ['(A) There were', '(B) much', '(C) people', '(D) in the park'], answer: 1, why: 'people は複数あつかい。many people。' },
+      { sentence: 'I (A) have (B) a few (C) money (D) left.', choices: ['(A) have', '(B) a few', '(C) money', '(D) left'], answer: 1, why: 'money は数えられない名詞。a little money。' },
+      { sentence: '(A) The teacher (B) gave us (C) many homeworks (D) today.', choices: ['(A) The teacher', '(B) gave us', '(C) many homeworks', '(D) today'], answer: 2, why: 'homework は数えられない名詞。a lot of homework。' },
+      { sentence: 'She (A) has (B) little (C) friends (D) at her new school.', choices: ['(A) has', '(B) little', '(C) friends', '(D) at her new school'], answer: 1, why: 'friends（数えられる）は few。' },
+      { sentence: 'There is (A) only (B) a little (C) milks (D) in the fridge.', choices: ['(A) only', '(B) a little', '(C) milks', '(D) in the fridge'], answer: 2, why: 'milk は数えられない名詞で複数形にしない。milk。' },
+      { sentence: '(A) A large number of (B) water (C) is wasted (D) every day.', choices: ['(A) A large number of', '(B) water', '(C) is wasted', '(D) every day'], answer: 0, why: 'water は数えられない名詞。A large amount of。' },
+      { sentence: 'We (A) bought (B) some (C) new (D) equipments.', choices: ['(A) bought', '(B) some', '(C) new', '(D) equipments'], answer: 3, why: 'equipment は数えられない名詞で複数形にしない。equipment。' },
+      { sentence: '(A) Few students (B) passed, so (C) the teacher (D) were disappointed.', choices: ['(A) Few students', '(B) passed, so', '(C) the teacher', '(D) were disappointed'], answer: 3, why: 'the teacher は単数。was disappointed。' },
+      { sentence: '(A) Little (B) people (C) know (D) the truth.', choices: ['(A) Little', '(B) people', '(C) know', '(D) the truth'], answer: 0, why: 'people（数えられる）は Few。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
