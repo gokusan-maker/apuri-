@@ -1819,6 +1819,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="65" rx="9" ry="6" fill="#ecfccb" />
       </g>
     )
+  if (species === 'reedwarbler')
+    return (
+      <g>
+        {/* 赤い口の中と、白っぽいまゆ */}
+        <path d="M36 41 L47 39" fill="none" stroke="#f5f5f4" strokeWidth="2" strokeLinecap="round" />
+        <path d="M46 52 L54 52 L50 56 Z" fill="#ef4444" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
