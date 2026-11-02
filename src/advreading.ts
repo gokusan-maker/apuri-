@@ -26552,6 +26552,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-urban-wildlife',
+    title: 'Wild Neighbors in the City',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Cities are often imagined as places from which nature has been removed. Concrete, asphalt, and glass replace forests and fields, and the animals that once lived there are assumed to have disappeared. In reality, however, many wild species have not only survived in urban areas but have actually thrived. Foxes hunt in the gardens of London, crows search for food in the streets of Tokyo, and in some cities in North America, coyotes and even bears have been seen wandering through residential neighborhoods. Biologists are increasingly interested in understanding how these animals have adapted to life among people.",
+      "Cities offer wild animals several advantages. Food is often plentiful, thanks to garbage, bird feeders, and the fruit trees planted in parks and gardens. Temperatures in urban areas are usually higher than in the surrounding countryside, which can help animals survive cold winters. Predators are also less common, and hunting is generally prohibited. For species able to tolerate noise, light, and the constant presence of humans, a city can therefore provide a surprisingly comfortable home. Species that need large areas of undisturbed habitat or that are easily frightened, by contrast, have largely vanished from urban areas.",
+      "Living in cities, however, also requires animals to change. Researchers have found that some urban birds sing at a higher pitch than their rural relatives, apparently so that their songs can be heard above the low rumble of traffic. Other species have become more active at night, when fewer people are around, or have grown bolder in approaching humans. In a few cases, scientists have even suggested that urban populations are beginning to differ genetically from those in the countryside, raising the possibility that cities are shaping the evolution of the species that live in them. If so, the city may be one of the most interesting natural laboratories available for the study of rapid evolutionary change.",
+      "The presence of wild animals in cities is not always welcome. Crows and pigeons can scatter garbage and leave droppings on buildings, monkeys and wild boars have entered houses and damaged crops at the edges of towns, and larger animals can pose real dangers to people and pets. As cities expand into surrounding forests and hills, encounters of this kind are likely to become more frequent, and local governments must decide how to respond. Some choose to remove or kill animals that cause trouble, while others try to reduce conflicts by changing human behavior, for instance by securing garbage bins. Experience suggests that the second approach is often more effective in the long run, since removing animals rarely solves the problem if the food that attracted them remains available.",
+      "At the same time, urban wildlife can bring considerable benefits. For many city residents, especially children, the sight of a bird building a nest or a fox crossing a park may be one of their few direct experiences of wild nature. Such encounters can encourage curiosity about the natural world and support for conservation. In addition, urban green spaces that support wildlife, such as parks, rivers, and rooftop gardens, can also help to cool cities, absorb rainwater, and improve the mental health of the people who use them.",
+      "Learning to live with urban wildlife therefore requires a change in how we think about cities. Rather than seeing them as purely human environments from which nature should be excluded, planners and residents may need to recognize them as shared spaces in which people and animals both have a place. This does not mean that every conflict can be avoided, but it suggests that the goal should be coexistence ( A ) control. Cities designed with wildlife in mind may turn out to be better places not only for animals, but for the people who live in them as well.",
+    ],
+    ja: [
+      '都市はしばしば、自然が取りのぞかれた場所として思い描かれる。コンクリートやアスファルトやガラスが森や野原に取って代わり、かつてそこに住んでいた動物たちは消えてしまったと考えられている。しかし実際には、多くの野生の種が都市部で生き残っているだけでなく、むしろさかえてきた。ロンドンではキツネが庭で狩りをし、東京ではカラスが通りで食べ物をさがし、北アメリカのいくつかの都市では、コヨーテやクマまでもが住宅地を歩きまわる姿が見られている。生物学者たちは、こうした動物が人間のあいだでの生活にどのように適応してきたのかを理解することに、ますます関心をもつようになっている。',
+      '都市は野生動物にいくつかの利点を与える。ごみや鳥のえさ台、公園や庭に植えられた果物の木のおかげで、食べ物はしばしばたくさんある。都市部の気温はふつう周りのいなかより高く、それは動物が寒い冬を生きのびる助けになりうる。天敵も少なく、狩りもたいてい禁止されている。したがって、騒音や明かりや人間がいつもいることにたえられる種にとって、都市はおどろくほど快適なすみかになりうるのである。それに対して、手つかずの広いすみかを必要とする種や、おびえやすい種は、都市部からほとんど姿を消している。',
+      'しかし、都市で暮らすには、動物の側も変わる必要がある。研究者たちは、都市の鳥のなかには、いなかの仲間より高い音でさえずるものがいることを発見した。どうやら、交通の低いとどろきの上でも歌が聞こえるようにするためらしい。ほかの種は、人の少ない夜により活発になったり、人間に近づくことにより大胆になったりしている。いくつかの例では、都市の集団がいなかの集団と遺伝的にちがいはじめていると示唆する科学者さえおり、都市がそこに住む種の進化を形づくっている可能性が出てきている。もしそうなら、都市は、急速な進化の変化を研究するために使える、最も興味深い自然の実験室の1つなのかもしれない。',
+      '都市に野生動物がいることは、いつも歓迎されるわけではない。カラスやハトはごみをちらかし、建物にふんを落とすことがあり、サルやイノシシは町のはずれで家に入りこんだり作物をあらしたりしてきたし、より大きな動物は人やペットに本当の危険をもたらしうる。都市が周りの森や丘へと広がるにつれて、この種の出会いはさらにふえそうであり、地方自治体はどう対応するかを決めなければならない。問題を起こす動物を取りのぞいたり殺したりすることを選ぶところもあれば、たとえばごみ箱をしっかり閉めるなど、人間のふるまいを変えることで衝突をへらそうとするところもある。経験からすると、長い目で見れば後者のやり方のほうが効果的なことが多い。動物を引きつけた食べ物が手に入るままなら、動物を取りのぞいても問題はめったに解決しないからである。',
+      '同時に、都市の野生動物はかなりの利益をもたらしうる。多くの都市の住民、とくに子どもにとって、鳥が巣を作るのを見たり、キツネが公園を横切るのを見たりすることは、野生の自然を直接経験する数少ない機会の1つかもしれない。こうした出会いは、自然界への好奇心や自然保護への支持を促しうる。さらに、公園や川や屋上庭園など、野生動物を支える都市の緑地は、都市を冷やし、雨水を吸収し、それを利用する人々の心の健康を高める助けにもなりうる。',
+      'したがって、都市の野生動物とともに暮らすことを学ぶには、私たちの都市についての考え方を変える必要がある。都市を、自然を締め出すべき純粋に人間のための環境と見るのではなく、計画家や住民は、それを人と動物の両方に居場所がある共有の空間として認める必要があるかもしれない。これは、あらゆる衝突を避けられるということではないが、目標は管理ではなく共存であるべきだということを示している。野生動物のことを考えて設計された都市は、動物にとってだけでなく、そこに住む人々にとってもよりよい場所になるかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'as well as', 'because of', 'in spite of'], answer: 0, why: '「管理ではなく共存」という対比なので rather than。' },
+    ],
+    summary: {
+      text: 'Many wild animals have thrived in cities, which offer plentiful food, warmer temperatures, and fewer ( 1 ). Living there has led some species to change their behavior and perhaps even their genes. Urban wildlife can cause problems, but it also brings benefits, and the writer argues that cities should be seen as ( 2 ) spaces where the goal is ( 3 ) rather than control.',
+      blanks: [
+        { choices: ['predators', 'people', 'buildings', 'roads'], answer: 0, why: '第2段落 Predators are also less common。' },
+        { choices: ['shared', 'empty', 'private', 'dangerous'], answer: 0, why: '第6段落 recognize them as shared spaces。' },
+        { choices: ['coexistence', 'removal', 'profit', 'silence'], answer: 0, why: '第6段落 the goal should be coexistence rather than control。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、都市部の気温はふつう周りのいなかより低い。', answer: false, why: '第2段落 Temperatures in urban areas are usually higher than in the surrounding countryside。' },
+      { statement: '研究によれば、都市の鳥のなかには、いなかの仲間より高い音でさえずるものがいる。', answer: true, why: '第3段落 some urban birds sing at a higher pitch than their rural relatives。' },
+      { statement: '筆者によれば、すべての地方自治体が問題を起こす動物を殺すことを選んでいる。', answer: false, why: '第4段落 Some choose to remove or kill ..., while others try to reduce conflicts by changing human behavior。' },
+      { statement: '筆者によれば、都市の緑地は人々の心の健康を高める助けにもなりうる。', answer: true, why: '第5段落 improve the mental health of the people who use them。' },
+    ],
+    qa: [
+      { q: 'Why might some urban birds sing at a higher pitch, according to the third paragraph?', choices: ['So that their songs can be heard above the low noise of traffic.', 'Because they are smaller than rural birds.', 'Because they want to attract humans.', 'Because the air in cities is warmer.'], answer: 0, why: '第3段落 apparently so that their songs can be heard above the low rumble of traffic。' },
+      { q: 'What benefit of urban wildlife does the writer mention for children?', choices: ['It may give them one of their few direct experiences of wild nature.', 'It teaches them how to hunt.', 'It keeps them away from parks.', 'It makes cities quieter at night.'], answer: 0, why: '第5段落 may be one of their few direct experiences of wild nature。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
