@@ -5526,6 +5526,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I did not know that she [can] speak five languages.', choices: ['could', 'can have', 'is able', 'will can'], answer: 0, why: '主節が過去なので can は could に。' },
     ],
   },
+  {
+    id: 'exam-fix-129',
+    title: '入試の誤文訂正〈129〉（国公立レベル：前置詞）',
+    points: ['時刻は at、曜日・日付は on、月・年・季節は in（in the morning でも on Sunday morning）。by は「～までに（期限）」、until は「～まで（ずっと）」。for は「（期間の長さ）～のあいだ」、during は「（特定の期間）の間に」。in ～ は「（今から）～後に」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Please finish the report by Friday.', ja: '金曜日までにレポートを仕上げてください。' }],
+    questions: [
+      { sentence: 'The meeting starts [on] 3:30 this afternoon.', choices: ['at', 'in', 'by', 'for'], answer: 0, why: '時刻には at。' },
+      { sentence: 'My birthday is [in] May 5.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '日付には on。' },
+      { sentence: 'We went skiing [on] winter.', choices: ['in', 'at', 'by', 'for'], answer: 0, why: '季節には in。' },
+      { sentence: 'I will wait here [by] you come back.', choices: ['until', 'for', 'during', 'since'], answer: 0, why: '「もどるまでずっと待つ」は継続の until。by は期限。' },
+      { sentence: 'You must hand in your essay [until] next Monday.', choices: ['by', 'for', 'during', 'since'], answer: 0, why: '「月曜日までに（期限）」は by。' },
+      { sentence: 'She stayed in London [during] three weeks.', choices: ['for', 'by', 'until', 'since'], answer: 0, why: '期間の長さ（3週間）は for。during のあとは特定の期間（the summer など）。' },
+      { sentence: 'I fell asleep [for] the movie.', choices: ['during', 'by', 'since', 'until'], answer: 0, why: '「映画のあいだに」と特定の期間は during。' },
+      { sentence: 'The train will arrive [after] ten minutes.', choices: ['in', 'by', 'for', 'during'], answer: 0, why: '「（今から）10分後に」は in ten minutes。' },
+      { sentence: 'We have lived here [from] 2015.', choices: ['since', 'for', 'during', 'until'], answer: 0, why: '現在完了で「2015年以来」は since。' },
+      { sentence: 'I usually go jogging [in] Sunday morning.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '曜日がつくと on（on Sunday morning）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
