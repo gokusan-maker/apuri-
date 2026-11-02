@@ -2546,6 +2546,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The results (A) of the survey, which (B) was conducted over three years, (C) shows a steady (D) decline in the number of young readers.', choices: ['(A) of the survey, which', '(B) was conducted over three years,', '(C) shows a steady', '(D) decline in the number of young readers'], answer: 2, why: '主語は The results（複数）。which … years は survey を説明する挿入なので、動詞は show。' },
     ],
   },
+  {
+    id: 'exam-error-todai',
+    title: '入試の正誤問題〈108〉（東大レベル：長い文の時制・仮定法・譲歩）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '東大の長い文で、仮定法（過去完了・仮定法現在・It is high time・as if）、時制の一致、未来完了進行形、譲歩（However ＋形容詞）、自動詞の受け身のまちがいを見ぬく。',
+    ],
+    examples: [
+      { en: 'If the scientists had shared their data earlier, the disease might have been controlled sooner.', ja: '科学者たちがもっと早くデータを共有していたら、その病気はもっと早くおさえられていたかもしれない。' },
+      { en: 'The committee demanded that the report be rewritten.', ja: '委員会は報告書を書き直すよう求めた。' },
+    ],
+    questions: [
+      { sentence: '(A) If the scientists would have (B) shared their data earlier, (C) the disease might have been (D) controlled much sooner.', choices: ['(A) If the scientists would have', '(B) shared their data earlier,', '(C) the disease might have been', '(D) controlled much sooner'], answer: 0, why: '過去の事実の反対の if 節は過去完了。If the scientists had shared。' },
+      { sentence: 'The professor insisted (A) that every student (B) submits the essay (C) before the end of the month, (D) without exception.', choices: ['(A) that every student', '(B) submits the essay', '(C) before the end of the month,', '(D) without exception'], answer: 1, why: 'insist that のあとの「～すべきだ」は動詞の原形（仮定法現在）。submit。' },
+      { sentence: '(A) However the plan may seem attractive (B) at first, (C) it would cost far more (D) than the city can afford.', choices: ['(A) However the plan may seem attractive', '(B) at first,', '(C) it would cost far more', '(D) than the city can afford'], answer: 0, why: 'However ＋形容詞 ＋ S V の語順。However attractive the plan may seem。' },
+      { sentence: 'The author claimed that she (A) has never met (B) the politician (C) whose life (D) she described in such detail.', choices: ['(A) has never met', '(B) the politician', '(C) whose life', '(D) she described in such detail'], answer: 0, why: '主節が過去（claimed）なので、それまでの経験は過去完了 had never met。' },
+      { sentence: '(A) No matter how (B) carefully the experiment (C) is designed, some errors (D) are always occurred.', choices: ['(A) No matter how', '(B) carefully the experiment', '(C) is designed, some errors', '(D) are always occurred'], answer: 3, why: 'occur は自動詞なので受け身にできない。some errors always occur。' },
+      { sentence: 'It is high time (A) that governments (B) take serious action (C) to reduce (D) the amount of plastic waste.', choices: ['(A) that governments', '(B) take serious action', '(C) to reduce', '(D) the amount of plastic waste'], answer: 1, why: 'It is high time (that) ＋仮定法過去。governments took serious action。' },
+      { sentence: 'By the end of next year, (A) the company (B) will be operating (C) in this region (D) for half a century.', choices: ['(A) the company', '(B) will be operating', '(C) in this region', '(D) for half a century'], answer: 1, why: '未来のある時点までの継続は未来完了進行形。will have been operating。' },
+      { sentence: '(A) Whatever difficult (B) the negotiations become, (C) both sides (D) must keep talking.', choices: ['(A) Whatever difficult', '(B) the negotiations become,', '(C) both sides', '(D) must keep talking'], answer: 0, why: '形容詞と組むのは However（No matter how）。However difficult the negotiations become。' },
+      { sentence: 'She (A) talks about the war (B) as if she (C) experiences it herself, (D) although she was born long after it ended.', choices: ['(A) talks about the war', '(B) as if she', '(C) experiences it herself,', '(D) although she was born long after it ended'], answer: 2, why: '過去の事実と反対のことは as if ＋仮定法過去完了。had experienced。' },
+      { sentence: 'The committee (A) demanded (B) that the report (C) is rewritten (D) before the next meeting.', choices: ['(A) demanded', '(B) that the report', '(C) is rewritten', '(D) before the next meeting'], answer: 2, why: 'demand that のあとは動詞の原形（仮定法現在）。be rewritten。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
