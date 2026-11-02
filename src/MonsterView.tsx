@@ -1953,6 +1953,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 48 L62 46 M58 51 L62 49" fill="none" stroke="#1e3a8a" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'blackwoodpigeon')
+    return (
+      <g>
+        {/* 首のまわりの緑とむらさきのかがやき */}
+        <path d="M56 46 Q60 50 56 54" fill="none" stroke="#22c55e" strokeWidth="2" />
+        <path d="M58 46 Q62 50 58 54" fill="none" stroke="#a855f7" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
