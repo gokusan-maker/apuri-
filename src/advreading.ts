@@ -25826,6 +25826,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-home',
+    title: 'The Meaning of Home',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few words carry as much emotional weight as the word home. We use it to describe the house in which we live, the town in which we grew up, the country of our birth, and sometimes simply a feeling of comfort and belonging. A person may say that he or she feels at home with certain friends, or that a foreign city has become home after many years. These varied uses suggest that home is not merely a place but a relationship between a person and a place, one that develops over time and that can be lost, regained, or transformed.",
+      "For most of human history, the question of where one's home lay rarely arose. People were born, lived, and died within a small area, surrounded by the same landscapes and the same families. Home was simply the place one came from and to which one belonged. Modern life has changed this situation profoundly. Many people now move several times during their lives, for education, work, or marriage, and millions have left their countries altogether, whether by choice or because war, poverty, or persecution forced them to go. For such people, the simple question of where they come from may have no simple answer.",
+      "Such movement raises the question of whether home can be made rather than inherited. Many migrants describe a long process in which an unfamiliar place gradually becomes their own: they learn its streets, form friendships, develop routines, and accumulate memories. At the same time, they often continue to feel attached to the places they left, so that home becomes divided between two or more locations. Some speak of feeling at home everywhere and nowhere, an experience that can be both liberating and painful. Their children, raised between cultures, may face the question in yet another form, belonging fully neither to the place of their parents' memories nor to the place in which they are growing up.",
+      "Psychologists have suggested that the feeling of home depends on several elements. One is familiarity: the sense of knowing how things work and what to expect. Another is control, the freedom to arrange one's surroundings and to decide who may enter. A third is connection with other people, since a house in which one lives entirely alone may feel less like a home than a crowded apartment shared with people one loves. ( A ) these elements are missing, even a comfortable and expensive dwelling may fail to give its occupants the sense of being at home.",
+      "This understanding has practical consequences. Housing policies that focus only on the number of buildings constructed may overlook the importance of stability, community, and the ability of residents to shape their own environments. Elderly people who are moved into care facilities, for example, often adjust better when they are allowed to bring familiar objects with them and to maintain contact with friends and neighbors. Similarly, refugees who are given opportunities to work, learn the local language, and take part in community life tend to develop a stronger sense of belonging than those who are kept apart.",
+      "In an age of mobility, then, home may be less a fixed point than an ongoing achievement. It is something that people build through their relationships, habits, and memories, and that they must sometimes rebuild after loss. Recognizing this does not make the loss of home any less painful, but it suggests that the capacity to make a home is one of the most important human abilities, and one that societies should do more to support. A community that welcomes newcomers, protects the stability of its residents, and values the places people care about is, in the deepest sense, helping its members to feel at home.",
+    ],
+    ja: [
+      '「ホーム（家・故郷）」という言葉ほど、感情の重みをになっている言葉はほとんどない。私たちはそれを、住んでいる家、育った町、生まれた国、そしてときには単に心地よさと帰属の感覚を表すのに使う。ある友人たちといるとくつろげると言ったり、外国の町が長い年月のうちに自分のホームになったと言ったりすることもある。こうしたさまざまな使い方は、ホームが単なる場所ではなく、人と場所との関係であることを示している。それは時間をかけて育ち、失われたり、取りもどされたり、変わったりしうる関係なのである。',
+      '人類の歴史の大部分において、自分のホームがどこにあるのかという問いが生まれることはめったになかった。人々は同じ景色と同じ家族にかこまれて、せまい地域の中で生まれ、生き、死んでいった。ホームとは単に、自分がそこから来て、そこに属している場所だった。現代の生活はこの状況を大きく変えた。今では多くの人が、教育や仕事や結婚のために一生のうちに何度も引っこしをし、何百万もの人々が、自ら選んで、あるいは戦争や貧困や迫害のためにやむをえず、自分の国をすっかりはなれてきた。そうした人々にとって、出身はどこかという単純な問いには、単純な答えがないかもしれない。',
+      'こうした移動は、ホームは受けつぐものではなく作れるものなのか、という問いを投げかける。多くの移住者は、なじみのない場所がしだいに自分のものになっていく長い過程を語る。通りをおぼえ、友情を結び、決まった習慣を身につけ、思い出を積み重ねていくのである。同時に、彼らはしばしばはなれてきた場所にも愛着をもち続けるので、ホームは2つ以上の場所に分かれることになる。どこにいてもくつろげるが、どこにもくつろげないと語る人もおり、それは解放的でもあり、つらくもある経験である。文化のはざまで育つその子どもたちは、また別の形でこの問いに向き合うことがある。親の記憶の中の場所にも、自分が育っている場所にも、完全には属していないのである。',
+      '心理学者たちは、ホームの感覚はいくつかの要素にかかっていると示してきた。1つはなじみ、つまり物事がどう動き、何が起こるかを知っているという感覚である。もう1つは自分で決められること、つまりまわりを自分で整え、だれが入ってよいかを決める自由である。3つ目はほかの人とのつながりである。まったくひとりで住む家は、愛する人々と分け合う混み合ったアパートよりも、ホームらしく感じられないことがあるからである。こうした要素が欠けていると、快適で高価な住まいでさえ、住む人にくつろいでいる感覚をあたえられないことがある。',
+      'この理解は実際的な影響をもつ。建てられる建物の数だけに注目する住宅政策は、安定や共同体、そして住民が自分の環境を形づくれることの大切さを見落とすかもしれない。たとえば、介護施設に移る高齢者は、なじみのある物を持っていくことや、友人や近所の人との連絡を保つことをゆるされると、よりよくなじむことが多い。同じように、働く機会や地元の言葉を学ぶ機会、地域の生活に加わる機会をあたえられた難民は、はなれて置かれた人々よりも強い帰属の感覚を育てる傾向がある。',
+      'だとすれば、移動の時代には、ホームは決まった地点というよりも、たえず続いていく達成なのかもしれない。それは人々が人間関係や習慣や思い出を通じて築くものであり、失ったあとにはときに築き直さなければならないものである。このことを認めても、ホームを失うことのつらさが少しも軽くなるわけではない。しかし、それは、ホームを作る力が人間の最も大切な能力の1つであり、社会がもっと支えるべき能力であることを示しているのである。新しく来た人を歓迎し、住民の暮らしの安定を守り、人々が大切にする場所を尊重する共同体は、最も深い意味で、その一員たちがくつろげるよう手助けしているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['When', 'Unless', 'Although', 'Before'], answer: 0, why: '「こうした要素が欠けているときには、～でさえ…できないことがある」なので When。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ホームは単なる場所ではなく、人と場所との関係である。', answer: true, why: '第1段落 home is not merely a place but a relationship between a person and a place。' },
+      { statement: '筆者によれば、人類の歴史を通じて、ホームがどこかという問いはいつも大きな問題だった。', answer: false, why: '第2段落 the question of where one\'s home lay rarely arose。' },
+      { statement: '筆者によれば、移住者のホームは2つ以上の場所に分かれることがある。', answer: true, why: '第3段落 home becomes divided between two or more locations。' },
+      { statement: '筆者は、建物の数をふやせばホームの問題はすべて解決すると考えている。', answer: false, why: '第5段落 Housing policies that focus only on the number of buildings constructed may overlook ～。' },
+    ],
+    qa: [
+      { q: 'Which of the following is one of the elements of the feeling of home mentioned in the fourth paragraph?', choices: ['Familiarity with how things work.', 'The price of the house.', 'The size of the town.', 'The distance from the sea.'], answer: 0, why: '第4段落 One is familiarity: the sense of knowing how things work。' },
+      { q: 'How does the writer describe home in the last paragraph?', choices: ['As an ongoing achievement rather than a fixed point.', 'As something that can never be lost.', 'As a building with many rooms.', 'As the place where one was born and nowhere else.'], answer: 0, why: '第6段落 home may be less a fixed point than an ongoing achievement。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
