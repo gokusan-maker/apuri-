@@ -136,3 +136,11 @@ it('京大専用の長文①「知らないことの価値」：650語以上・1
   expect(passagesFor('旧帝大').some((x) => x.id === p.id)).toBe(false)
   expect(passagesFor('東大').some((x) => x.id === p.id)).toBe(false)
 })
+
+it('京大専用の長文②「便利さがうばうもの」：650語以上・1文18語以上で、京大に出る（旧帝大・東大には出ない）', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-convenience')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(650)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(passagesFor('旧帝大').some((x) => x.id === p.id)).toBe(false)
+})
