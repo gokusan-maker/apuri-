@@ -2954,6 +2954,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) My father (B) has been (C) a soccer player (D) when he was young.', choices: ['(A) My father', '(B) has been', '(C) a soccer player', '(D) when he was young'], answer: 1, why: 'when he was young（過去）なので was。' },
     ],
   },
+  {
+    id: 'exam-error-article-todai',
+    title: '入試の正誤問題〈125〉（東大レベル：英作文の冠詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '総称は無冠詞の複数形（Dogs are ～）。advice・information・furniture・evidence は数えられない名詞で a をつけず複数形にもしない。前に出たものには the。スポーツ名や「健康」「教育」一般は無冠詞。',
+    ],
+    examples: [
+      { en: 'Dogs are loyal animals.', ja: '犬は忠実な動物だ。' },
+      { en: 'She gave me some useful advice.', ja: '彼女は私に役立つ助言をくれた。' },
+    ],
+    questions: [
+      { sentence: '(A) Smartphone (B) has changed (C) the way (D) people communicate.', choices: ['(A) Smartphone', '(B) has changed', '(C) the way', '(D) people communicate'], answer: 0, why: '総称は無冠詞の複数形。Smartphones have changed。' },
+      { sentence: 'My teacher (A) gave me (B) an advice (C) about (D) my speech.', choices: ['(A) gave me', '(B) an advice', '(C) about', '(D) my speech'], answer: 1, why: 'advice は数えられない名詞。some advice / a piece of advice。' },
+      { sentence: 'We (A) need (B) more (C) informations (D) about the plan.', choices: ['(A) need', '(B) more', '(C) informations', '(D) about the plan'], answer: 2, why: 'information は数えられない名詞で複数形にしない。more information。' },
+      { sentence: 'In my opinion, (A) the most (B) important thing (C) in life is (D) the health.', choices: ['(A) the most', '(B) important thing', '(C) in life is', '(D) the health'], answer: 3, why: '健康一般は無冠詞。is health。' },
+      { sentence: '(A) The internet (B) has made (C) it easy to (D) find a informations.', choices: ['(A) The internet', '(B) has made', '(C) it easy to', '(D) find a informations'], answer: 3, why: 'information は数えられない名詞で a もつかない。find information。' },
+      { sentence: '(A) My family (B) bought (C) a new furniture (D) last month.', choices: ['(A) My family', '(B) bought', '(C) a new furniture', '(D) last month'], answer: 2, why: 'furniture は数えられない名詞。some new furniture。' },
+      { sentence: 'There is (A) a strong evidence (B) that sleep (C) helps (D) memory.', choices: ['(A) a strong evidence', '(B) that sleep', '(C) helps', '(D) memory'], answer: 0, why: 'evidence は数えられない名詞。strong evidence。' },
+      { sentence: 'I (A) read an article yesterday. (B) An article (C) said that (D) prices are rising.', choices: ['(A) read an article yesterday', '(B) An article', '(C) said that', '(D) prices are rising'], answer: 1, why: '前に出た記事を指すので The article。' },
+      { sentence: 'She (A) plays (B) the tennis (C) with her friends (D) every Sunday.', choices: ['(A) plays', '(B) the tennis', '(C) with her friends', '(D) every Sunday'], answer: 1, why: 'スポーツには冠詞をつけない。plays tennis。' },
+      { sentence: '(A) Dog is (B) a loyal animal (C) and (D) easy to train.', choices: ['(A) Dog is', '(B) a loyal animal', '(C) and', '(D) easy to train'], answer: 0, why: '総称は Dogs are（または A dog is）。Dog is は誤り。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
