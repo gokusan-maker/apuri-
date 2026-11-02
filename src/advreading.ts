@@ -25080,6 +25080,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-cities',
+    title: 'Why People Move to Cities',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For the first time in human history, more than half of the world's population now lives in cities, and the proportion is expected to keep rising for decades. This shift is often described in negative terms. Cities are associated with crowding, pollution, high rents, and the loneliness of living among strangers. Yet people continue to move to them in enormous numbers, often at considerable personal cost. To understand why, it is necessary to look beyond the obvious disadvantages of urban life and consider what cities offer that smaller communities cannot.",
+      "The most familiar explanation is economic. Cities concentrate employers and workers in a small area, which makes it easier for companies to find the skills they need and for workers to find jobs that suit them. When one business closes, its employees can often find work nearby without having to move. This density also supports a wider range of services, from specialized hospitals to small shops selling unusual goods, that would not survive in places where customers are few and far between.",
+      "Economists have pointed to a less visible advantage as well: the exchange of ideas. When people with different kinds of knowledge live and work close together, they meet one another in offices, cafés, and public spaces, and these encounters, whether planned or accidental, allow information to spread quickly. A new technique developed in one company may be adopted by another within months, simply because employees of the two firms happen to talk. Studies of patents and scientific papers have found that innovation tends to cluster in large cities to an extent that cannot be explained by population alone.",
+      "This pattern is not new. Throughout history, many of the periods ( A ) human culture changed most rapidly were centered on particular cities, from the philosophers who gathered in ancient Athens to the artists and bankers of Renaissance Florence. In each case, a relatively small area brought together people of different backgrounds, along with the wealth needed to support them, and the result was an extraordinary concentration of new ideas. Historians may disagree about the precise causes of these flowerings, but few would deny that the crowded conditions of urban life played an important part.",
+      "Cities can also offer a kind of personal freedom that smaller communities sometimes do not. In a village where everyone knows everyone else, people may feel pressure to follow local customs and expectations. The anonymity of a large city, though it can be isolating, also allows individuals to experiment with new ways of living, to find others who share unusual interests, and to escape judgments that would follow them at home. For many migrants, this freedom is as important a reason for moving as the prospect of higher wages.",
+      "None of these advantages comes without cost. The same density that encourages innovation also raises the price of land, so that housing in successful cities can become unaffordable for ordinary workers. Traffic, noise, and air pollution affect health, and the gap between rich and poor is often more visible in cities than anywhere else. If these problems are not addressed, the people who would benefit most from urban opportunities may be the very ones who are excluded from them.",
+      "The challenge for the coming decades, therefore, is not to choose between cities and the countryside but to make urban growth work for more people. This may involve building more housing near places of work, investing in public transport so that residents can reach jobs without depending on cars, and protecting the public spaces where chance encounters take place. Cities have always been places of both opportunity and difficulty; whether the balance tips toward the former will depend largely on the choices that societies make about how cities are planned and governed.",
+    ],
+    ja: [
+      '人類の歴史ではじめて、今では世界の人口の半分以上が都市に住んでおり、その割合はこの先何十年も上がり続けると予想されている。この変化は、しばしば否定的な言葉で語られる。都市は、混雑、汚染、高い家賃、そして知らない人々にかこまれて暮らすさびしさと結びつけられている。それでも人々は、しばしばかなりの個人的な犠牲をはらいながら、ばくだいな数で都市へ移り続けている。その理由を理解するには、都市生活の明らかな不利な点の先を見て、小さな共同体にはあたえられないものを都市が何あたえているのかを考える必要がある。',
+      '最もおなじみの説明は経済的なものである。都市は雇い主と働き手をせまい地域に集めるので、会社は必要な技能をもつ人を見つけやすくなり、働き手は自分に合った仕事を見つけやすくなる。ある会社が閉じても、その社員たちはしばしば引っこさずに近くで仕事を見つけられる。この密集はまた、専門的な病院から変わった品物を売る小さな店まで、客が少なくまばらな場所では生き残れないような、より幅広いサービスを支える。',
+      '経済学者たちは、もっと目に見えにくい利点も指摘してきた。考えのやりとりである。ちがう種類の知識をもつ人々が近くに住み、近くで働くと、彼らはオフィスやカフェや公共の場で出会う。そしてこうした出会いは、計画されたものであれ偶然のものであれ、情報をすばやく広める。ある会社で開発された新しい技術が、2つの会社の社員がたまたま話をするというだけで、数か月のうちに別の会社に取り入れられることもある。特許や科学論文の研究から、技術革新は、人口だけでは説明できないほど大都市に集まる傾向があることがわかっている。',
+      'このパターンは新しいものではない。歴史を通じて、人間の文化が最も急速に変わった時期の多くは、古代アテネに集まった哲学者たちからルネサンス期のフィレンツェの芸術家や銀行家まで、特定の都市を中心としていた。どの場合も、比較的せまい地域が、ちがう背景をもつ人々と、彼らを支えるのに必要な富とを集め、その結果、新しい考えがおどろくほど集中したのである。歴史家たちは、こうした開花の正確な原因については意見が分かれるかもしれないが、都市生活の混み合った状況が大切な役割をはたしたことを否定する人はほとんどいないだろう。',
+      '都市はまた、小さな共同体がときにあたえてくれない種類の個人の自由をあたえることもある。だれもがおたがいを知っている村では、人々は地元の慣習や期待にしたがうよう圧力を感じることがある。大都市の匿名性は、孤立をまねくこともあるが、個人が新しい生き方をためしたり、変わった興味を共有する人を見つけたり、故郷ではついてまわるであろう評価からのがれたりすることもゆるしてくれる。多くの移住者にとって、この自由は、より高い賃金の見込みと同じくらい大切な、移る理由なのである。',
+      'こうした利点は、どれも代償なしには得られない。技術革新をうながすその同じ密集が土地の値段も上げるので、成功している都市の住宅は、ふつうの働き手には手が届かなくなることがある。交通や騒音や大気汚染は健康に影響し、豊かな人と貧しい人の差は、しばしばほかのどこよりも都市ではっきり見える。こうした問題に取り組まなければ、都市の機会から最も得をするはずの人々こそが、そこからしめ出されてしまうかもしれない。',
+      'したがって、これからの何十年かの課題は、都市と地方のどちらかを選ぶことではなく、都市の成長をより多くの人のために役立てることである。それには、職場の近くにもっと住宅を建てること、住民が車にたよらずに仕事に行けるよう公共交通に投資すること、そして偶然の出会いが生まれる公共の場を守ることがふくまれるかもしれない。都市はいつも、機会と困難の両方の場所であった。そのつり合いが前者にかたむくかどうかは、社会が都市をどのように計画し、治めるかについての選択に、大きくかかっているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in which', 'which', 'what', 'where in'], answer: 0, why: 'うしろの human culture changed most rapidly は欠けたところのない文。in the periods の前置詞＋関係代名詞 in which（その時期に）。' },
+    ],
+    summary: {
+      text: 'Although cities are often linked with problems such as crowding and pollution, people keep moving to them because they offer jobs, a rapid exchange of ( 1 ), and personal ( 2 ). However, high housing costs and inequality may ( 3 ) the people who would benefit most, so cities must be planned to serve more people.',
+      blanks: [
+        { choices: ['ideas', 'goods', 'money', 'land'], answer: 0, why: '第3段落 a less visible advantage as well: the exchange of ideas。' },
+        { choices: ['freedom', 'wealth', 'safety', 'silence'], answer: 0, why: '第5段落 Cities can also offer a kind of personal freedom。' },
+        { choices: ['exclude', 'attract', 'employ', 'protect'], answer: 0, why: '第6段落 may be the very ones who are excluded from them。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、今では世界の人口の半分以上が都市に住んでいる。', answer: true, why: '第1段落 more than half of the world\'s population now lives in cities。' },
+      { statement: '筆者は、技術革新が大都市に集まるのは人口が多いことだけで説明できると述べている。', answer: false, why: '第3段落 to an extent that cannot be explained by population alone。' },
+      { statement: '筆者によれば、大都市の匿名性は、新しい生き方をためすことをゆるしてくれる。', answer: true, why: '第5段落 allows individuals to experiment with new ways of living。' },
+      { statement: '筆者は、これからの課題は都市と地方のどちらかを選ぶことだと考えている。', answer: false, why: '第7段落 the challenge ... is not to choose between cities and the countryside。' },
+    ],
+    qa: [
+      { q: 'According to the second paragraph, how does density help workers?', choices: ['They can often find new work nearby when a business closes.', 'They can buy land more cheaply.', 'They can avoid meeting other people.', 'They can work without any special skills.'], answer: 0, why: '第2段落 When one business closes, its employees can often find work nearby without having to move。' },
+      { q: 'Which measure does the writer mention for making urban growth work for more people?', choices: ['Investing in public transport.', 'Moving all companies to the countryside.', 'Reducing the number of public spaces.', 'Raising the price of land.'], answer: 0, why: '第7段落 investing in public transport so that residents can reach jobs without depending on cars。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
