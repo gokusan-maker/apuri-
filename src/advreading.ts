@@ -24836,7 +24836,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、どんな制限も創造性を高めると考えている。', answer: false, why: '第6段落 It would be a mistake ... to conclude that every restriction is helpful。' },
     ],
     qa: [
-      { q: 'According to the fourth paragraph, why do people tend to choose conventional ideas when a task has almost no boundaries?', choices: ['Because the number of possible approaches is so large that they fall back on the first idea.', 'Because they are afraid of breaking the rules.', 'Because conventional ideas are always the best ones.', 'Because they do not have enough time to think.'], answer: 0, why: '第5段落 the number of possible approaches is so large that we tend to fall back on the first idea that comes to mind。' },
+      { q: 'According to the fifth paragraph, why do people tend to choose conventional ideas when a task has almost no boundaries?', choices: ['Because the number of possible approaches is so large that they fall back on the first idea.', 'Because they are afraid of breaking the rules.', 'Because conventional ideas are always the best ones.', 'Because they do not have enough time to think.'], answer: 0, why: '第5段落 the number of possible approaches is so large that we tend to fall back on the first idea that comes to mind。' },
       { q: 'What kind of constraint does the writer think stimulates creativity?', choices: ['One that gives a task a clear shape while leaving room for choice.', 'One that is imposed from outside without any purpose.', 'One that makes the task impossible to complete.', 'One that tells people exactly what to do at every step.'], answer: 0, why: '第6段落 those that give a task a clear shape while still leaving room for choice。' },
     ],
   },
