@@ -3026,6 +3026,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) There are (B) some things (C) what (D) money cannot buy.', choices: ['(A) There are', '(B) some things', '(C) what', '(D) money cannot buy'], answer: 2, why: '先行詞 some things があるので that。' },
     ],
   },
+  {
+    id: 'exam-error-participle-kyodai',
+    title: '入試の正誤問題〈128〉（京大レベル：分詞構文）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文の意味上の主語は主節の主語と同じ（ちがえば分詞の前に置く独立分詞構文）。「～される」なら過去分詞、主節より前なら Having＋過去分詞、否定は Not＋分詞。with＋名詞＋分詞、weather permitting・all things considered などの慣用表現にも注意。',
+    ],
+    examples: [
+      { en: 'Seen from the top of the hill, the town looked beautiful.', ja: '丘の上から見ると、町は美しく見えた。' },
+      { en: 'Weather permitting, we will go hiking tomorrow.', ja: '天気がよければ、明日ハイキングに行く。' },
+    ],
+    questions: [
+      { sentence: '(A) Seeing from (B) the top of the hill, (C) the town (D) looked beautiful.', choices: ['(A) Seeing from', '(B) the top of the hill,', '(C) the town', '(D) looked beautiful'], answer: 0, why: '町は「見られる」側なので Seen from。' },
+      { sentence: '(A) Being sunny, (B) we decided (C) to go (D) for a walk.', choices: ['(A) Being sunny,', '(B) we decided', '(C) to go', '(D) for a walk'], answer: 0, why: '天気の主語は we ではないので独立分詞構文 It being sunny。' },
+      { sentence: '(A) Finishing my homework (B) last night, (C) I am free (D) today.', choices: ['(A) Finishing my homework', '(B) last night,', '(C) I am free', '(D) today'], answer: 0, why: '昨夜（主節より前）のことなので Having finished。' },
+      { sentence: '(A) Knowing not (B) what to do, (C) he (D) called his mother.', choices: ['(A) Knowing not', '(B) what to do,', '(C) he', '(D) called his mother'], answer: 0, why: '分詞構文の否定は Not を前に置く。Not knowing。' },
+      { sentence: 'She (A) listened to (B) the music (C) with her eyes (D) closing.', choices: ['(A) listened to', '(B) the music', '(C) with her eyes', '(D) closing'], answer: 3, why: '目は「閉じられている」ので with her eyes closed。' },
+      { sentence: '(A) Written in (B) easy English, (C) this book (D) are popular with children.', choices: ['(A) Written in', '(B) easy English,', '(C) this book', '(D) are popular with children'], answer: 3, why: '主語 this book は単数。is popular。' },
+      { sentence: '(A) Walking (B) along the street, (C) my hat (D) was blown off.', choices: ['(A) Walking', '(B) along the street,', '(C) my hat', '(D) was blown off'], answer: 2, why: '歩いていたのは帽子ではなく私。I had my hat blown off など主語を I にする。' },
+      { sentence: '(A) All things (B) considering, (C) the plan (D) was a success.', choices: ['(A) All things', '(B) considering,', '(C) the plan', '(D) was a success'], answer: 1, why: '慣用表現 all things considered（すべてを考えると）。considered。' },
+      { sentence: '(A) The weather (B) permitted, (C) we will (D) go hiking tomorrow.', choices: ['(A) The weather', '(B) permitted,', '(C) we will', '(D) go hiking tomorrow'], answer: 1, why: '独立分詞構文 weather permitting（天気がよければ）。permitting。' },
+      { sentence: 'The dog (A) came running (B) toward me (C) with its tail (D) wagged.', choices: ['(A) came running', '(B) toward me', '(C) with its tail', '(D) wagged'], answer: 3, why: 'しっぽは自分から動いているので wagging。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
