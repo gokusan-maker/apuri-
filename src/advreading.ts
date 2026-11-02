@@ -25936,6 +25936,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-eating-meat',
+    title: 'The Question of Meat',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many parts of the world, meat has long been a symbol of prosperity. As incomes rise, people tend to eat more of it, and global meat production has increased several times over during the past half century. In recent years, however, a growing number of scientists, doctors, and environmental groups have argued that current levels of meat consumption, especially in wealthy countries, carry costs that are not reflected in the price people pay at the supermarket. The debate about whether, and how, we should eat less meat has become one of the most widely discussed issues connected with food. It brings together questions from science, medicine, economics, and ethics, and it touches on choices that almost everyone makes several times a day.",
+      "The environmental argument is perhaps the most frequently cited. Raising animals for food requires large amounts of land, both for grazing and for growing the crops used as animal feed. In some regions, forests have been cleared to make room for pasture or for fields of soybeans destined for livestock. Animals such as cattle also produce methane, a powerful greenhouse gas, as part of their digestion. Studies have estimated that livestock farming is responsible for a significant share of the greenhouse gases produced by human activity, although the precise figure depends on how the calculations are made.",
+      "Health researchers have added further arguments. Diets that contain large amounts of processed meat, such as sausages and bacon, have been associated with higher risks of certain diseases, and many public health organizations advise limiting their consumption. ( A ), meat is an important source of protein, iron, and other nutrients, and in many poorer communities people eat too little of it rather than too much. The health question, in other words, depends greatly on the amount and type of meat eaten and on the rest of a person's diet.",
+      "Ethical concerns form a third strand of the debate. Many people are troubled by the conditions in which animals are raised on large industrial farms, where they may be kept in crowded spaces with little opportunity to move. Some conclude that eating meat is wrong in itself; others argue that it can be acceptable if animals are raised humanely and killed without unnecessary suffering. These positions reflect deeper disagreements about the moral status of animals that are unlikely to be settled by scientific evidence alone. Even so, research on animal behavior, which has revealed that many farm animals are capable of complex emotions, has influenced how some people think about these questions.",
+      "Changing eating habits is far from simple. Food is closely connected with culture, family traditions, and personal identity, and people often resist being told what to eat. For this reason, many experts favor gradual approaches rather than dramatic restrictions. These include encouraging people to eat smaller portions of meat, promoting plant-based dishes that are tasty and affordable, and improving the information available to consumers. The development of new products, such as plant-based alternatives that imitate the taste and texture of meat, may also make change easier for those who enjoy familiar foods.",
+      "Whether such measures will be enough remains uncertain. What seems clear is that the question of meat is not only a matter of individual taste but also one that involves the environment, public health, and our responsibilities toward animals. Decisions made at the dinner table, multiplied across billions of people, can have consequences far beyond the plate, and societies are increasingly being asked to consider those consequences more carefully. The answers they reach may differ from one culture to another, but the question itself is unlikely to go away.",
+    ],
+    ja: [
+      '世界の多くの地域で、肉は長い間豊かさの象徴であった。収入が上がるにつれて、人々はより多くの肉を食べるようになりがちで、世界の肉の生産量はこの半世紀の間に何倍にもふえた。しかしここ数年、科学者や医者や環境団体の中で、とくに豊かな国での今の肉の消費量には、人々がスーパーではらう値段には反映されていない代償があると主張する人がふえてきた。肉を食べる量をへらすべきかどうか、そしてどうへらすべきかという議論は、食べ物にかかわる問題の中で最も広く論じられているものの1つになっている。それは科学、医学、経済学、倫理学からの問いを結びつけ、ほとんどだれもが1日に何度も行う選択にかかわっている。',
+      '環境の面からの主張は、おそらく最もよく引き合いに出される。食べるために動物を育てるには、放牧のためにも、えさにする作物を育てるためにも、広い土地が必要である。地域によっては、牧草地や家畜のえさになる大豆の畑をつくるために森が切りひらかれてきた。また、牛のような動物は消化の一部として、強力な温室効果ガスであるメタンを出す。研究によれば、家畜の飼育は人間の活動が生み出す温室効果ガスの大きな割合をしめているが、正確な数字は計算のしかたによって変わる。',
+      '健康の研究者たちは、さらに別の主張を加えてきた。ソーセージやベーコンのような加工肉を多くふくむ食事は、ある種の病気の危険の高さと結びつけられており、多くの公衆衛生の組織はその消費をひかえるよう助言している。同時に、肉はたんぱく質や鉄分などの栄養の大切な源であり、多くの貧しい地域では、人々は肉を食べすぎているのではなく、少なすぎるのである。言いかえれば、健康の問題は、食べる肉の量と種類、そしてその人の食事のほかの部分に大きく左右されるのである。',
+      '倫理の心配が、この議論の3つ目の柱をなしている。多くの人は、大規模な工場のような農場で動物が育てられる状態、つまりほとんど動く機会のない混み合った場所に入れられていることに心を痛めている。肉を食べること自体がまちがっていると結論づける人もいれば、動物が人道的に育てられ、不必要な苦しみなく殺されるのであれば受け入れられると主張する人もいる。こうした立場は、動物の道徳的な地位についてのより深い意見のちがいを反映しており、科学的な証拠だけで決着がつくとは考えにくい。それでも、多くの家畜が複雑な感情をもちうることを明らかにした動物の行動の研究は、こうした問いについての一部の人々の考え方に影響をあたえてきた。',
+      '食べる習慣を変えるのは、まったくかんたんではない。食べ物は文化や家族の伝統や自分らしさと深く結びついており、人々はしばしば何を食べるべきかを指図されることに反発する。このため、多くの専門家は、急激な制限よりも段階的なやり方を支持している。それには、肉の量を少なめにするよう人々にすすめること、おいしくて手ごろな植物性の料理を広めること、そして消費者が得られる情報をよりよくすることがふくまれる。肉の味や食感をまねた植物性の代わりの食品のような新しい製品の開発も、なじみの食べ物を楽しむ人々にとって変化をより楽にするかもしれない。',
+      'こうした対策で十分かどうかは、まだわからない。はっきりしていると思われるのは、肉の問題は個人の好みの問題であるだけでなく、環境や公衆衛生や動物に対する私たちの責任にもかかわる問題だということである。食卓での決定は、何十億もの人々にかけ合わされると、皿をはるかにこえた結果をもたらしうる。そして社会は、そうした結果をもっと注意深く考えるよう、ますます求められているのである。たどり着く答えは文化によってちがうかもしれないが、問いそのものがなくなることはないだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['At the same time', 'As a result', 'For this reason', 'In other words'], answer: 0, why: '加工肉の危険（前の文）と、肉が大切な栄養源でもあることを、同時に成り立つ別の面としてならべるので At the same time（一方で）。' },
+    ],
+    summary: {
+      text: 'Many people argue that current meat consumption carries hidden costs. Livestock farming uses large areas of land and produces greenhouse ( 1 ), large amounts of processed meat may harm health, and industrial farms raise ( 2 ) concerns. Because food is tied to culture, experts favor ( 3 ) approaches such as smaller portions and attractive plant-based dishes.',
+      blanks: [
+        { choices: ['gases', 'crops', 'forests', 'prices'], answer: 0, why: '第2段落 Animals such as cattle also produce methane, a powerful greenhouse gas ～。' },
+        { choices: ['ethical', 'economic', 'scientific', 'musical'], answer: 0, why: '第4段落 Ethical concerns form a third strand of the debate。' },
+        { choices: ['gradual', 'sudden', 'expensive', 'secret'], answer: 0, why: '第5段落 many experts favor gradual approaches rather than dramatic restrictions。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、収入が上がると、人々は肉を多く食べるようになりがちである。', answer: true, why: '第1段落 As incomes rise, people tend to eat more of it。' },
+      { statement: '筆者によれば、家畜の温室効果ガスの正確な数字は、計算のしかたに関係なく決まっている。', answer: false, why: '第2段落 the precise figure depends on how the calculations are made。' },
+      { statement: '筆者によれば、多くの貧しい地域では、人々は肉を食べすぎている。', answer: false, why: '第3段落 in many poorer communities people eat too little of it rather than too much。' },
+      { statement: '筆者によれば、人々は何を食べるべきかを指図されることに反発することが多い。', answer: true, why: '第5段落 people often resist being told what to eat。' },
+    ],
+    qa: [
+      { q: 'Why does the writer say the ethical disagreement is unlikely to be settled by science alone?', choices: ['It reflects deeper disagreements about the moral status of animals.', 'Scientists have never studied animals.', 'All farms treat animals in the same way.', 'Meat contains no nutrients.'], answer: 0, why: '第4段落 These positions reflect deeper disagreements about the moral status of animals ～。' },
+      { q: 'Which of the following is mentioned as a gradual approach?', choices: ['Promoting tasty and affordable plant-based dishes.', 'Banning meat completely.', 'Raising the price of all vegetables.', 'Closing every supermarket.'], answer: 0, why: '第5段落 promoting plant-based dishes that are tasty and affordable。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
