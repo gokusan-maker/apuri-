@@ -2930,6 +2930,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) That (B) she said (C) at the meeting (D) made everyone angry.', choices: ['(A) That', '(B) she said', '(C) at the meeting', '(D) made everyone angry'], answer: 0, why: '主語の「彼女が言ったこと」は What she said。' },
     ],
   },
+  {
+    id: 'exam-error-tense5',
+    title: '入試の正誤問題〈124〉（共通テストレベル：時制 現在完了と過去）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'はっきりした過去（yesterday・last ～・～ ago・When）は過去形。since・for・yet・ever は現在完了。時・条件の副詞節（when・if・until）の中は現在形。',
+    ],
+    examples: [
+      { en: 'We have known each other since we were children.', ja: '私たちは子どものころからの知り合いだ。' },
+      { en: 'Please wait here until I come back.', ja: '私がもどるまでここで待っていてください。' },
+    ],
+    questions: [
+      { sentence: '(A) I have visited (B) my grandparents (C) in Osaka (D) last weekend.', choices: ['(A) I have visited', '(B) my grandparents', '(C) in Osaka', '(D) last weekend'], answer: 0, why: 'last weekend（過去）なので I visited。' },
+      { sentence: '(A) The train (B) has left (C) the station (D) ten minutes ago.', choices: ['(A) The train', '(B) has left', '(C) the station', '(D) ten minutes ago'], answer: 1, why: '～ ago は過去形。The train left。' },
+      { sentence: 'When (A) have you (B) bought (C) this jacket? (D) It looks new.', choices: ['(A) have you', '(B) bought', '(C) this jacket?', '(D) It looks new'], answer: 0, why: 'When は過去形と使う。When did you buy。' },
+      { sentence: '(A) Ken and I (B) are close friends; (C) we know each other (D) since we were children.', choices: ['(A) Ken and I', '(B) are close friends;', '(C) we know each other', '(D) since we were children'], answer: 2, why: 'since ～ の継続は現在完了。we have known each other。' },
+      { sentence: 'She (A) works (B) at this hospital (C) for (D) twenty years.', choices: ['(A) works', '(B) at this hospital', '(C) for', '(D) twenty years'], answer: 0, why: 'for twenty years（今までの継続）は現在完了。She has worked。' },
+      { sentence: '(A) Did you ever (B) eat (C) Thai food (D) before?', choices: ['(A) Did you ever', '(B) eat', '(C) Thai food', '(D) before?'], answer: 0, why: '経験は現在完了。Have you ever eaten。' },
+      { sentence: 'Please (A) wait (B) here (C) until I (D) will come back.', choices: ['(A) wait', '(B) here', '(C) until I', '(D) will come back'], answer: 3, why: '時の副詞節の中は現在形。until I come back。' },
+      { sentence: '(A) If it (B) will be sunny (C) tomorrow, (D) we will go to the beach.', choices: ['(A) If it', '(B) will be sunny', '(C) tomorrow,', '(D) we will go to the beach'], answer: 1, why: '条件の副詞節の中は現在形。If it is sunny。' },
+      { sentence: 'I (A) did not (B) read (C) the book (D) yet.', choices: ['(A) did not', '(B) read', '(C) the book', '(D) yet'], answer: 0, why: 'yet は現在完了の否定と使う。I have not read。' },
+      { sentence: '(A) My father (B) has been (C) a soccer player (D) when he was young.', choices: ['(A) My father', '(B) has been', '(C) a soccer player', '(D) when he was young'], answer: 1, why: 'when he was young（過去）なので was。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

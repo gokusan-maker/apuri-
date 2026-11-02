@@ -1688,3 +1688,10 @@ it('誤文訂正〈117〉：時制 現在完了と過去の単元が10問ある'
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('visited')
 })
+
+it('正誤問題〈124〉：時制 現在完了と過去の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-tense5')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) I have visited')
+})
