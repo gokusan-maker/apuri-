@@ -5568,6 +5568,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I usually go jogging [in] Sunday morning.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '曜日がつくと on（on Sunday morning）。' },
     ],
   },
+  {
+    id: 'exam-fix-130',
+    title: '入試の誤文訂正〈130〉（東大レベル：まぎらわしい動詞）',
+    points: ['make は「作る・生み出す」（make a mistake／make a decision／make progress／make an effort）、do は「行う・こなす」（do homework／do the dishes／do research／do your best）。say は言葉そのもの、tell は 人＋内容（tell a lie／tell the truth）、talk は会話（talk to 人／talk about）、speak は言語・話す行為（speak English）。see は自然に目に入る、look at は意識して見る、watch は動くものをじっと見る。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I made a mistake, so I did the exercise again.', ja: 'まちがえたので、その練習問題をやり直した。' }],
+    questions: [
+      { sentence: 'I [did] a big mistake on the test yesterday.', choices: ['made', 'took', 'got', 'had'], answer: 0, why: 'make a mistake（まちがえる）。' },
+      { sentence: 'Have you [made] your homework yet?', choices: ['done', 'taken', 'got', 'had'], answer: 0, why: 'do your homework（宿題をする）。' },
+      { sentence: 'We need to [do] a decision by tomorrow.', choices: ['make', 'take on', 'get', 'have on'], answer: 0, why: 'make a decision（決定する）。' },
+      { sentence: 'Scientists are [making] research on this disease.', choices: ['doing', 'taking', 'getting', 'having'], answer: 0, why: 'do research（研究する）。' },
+      { sentence: 'He [said] me that he was leaving.', choices: ['told', 'spoke', 'talked', 'said to'], answer: 0, why: '人を目的語にとるのは tell。told me that ～。（said to me that ～ も可だが選択肢 said to は後ろに me が必要なので不可）' },
+      { sentence: 'She always [says] the truth.', choices: ['tells', 'speaks', 'talks', 'says to'], answer: 0, why: 'tell the truth（本当のことを言う）。' },
+      { sentence: 'Can you [talk] Spanish?', choices: ['speak', 'tell', 'say', 'talk in'], answer: 0, why: '言語を話すのは speak。' },
+      { sentence: 'I want to [speak] with you about the plan.', choices: ['talk', 'say', 'tell', 'speak to'], answer: 0, why: '会話として話し合うのは talk with（to）you about ～。' },
+      { sentence: 'We [saw] a soccer game on TV last night.', choices: ['watched', 'looked', 'looked at', 'seen'], answer: 0, why: 'テレビで動くものをじっと見るのは watch。' },
+      { sentence: '[Watch] this picture. Is it beautiful?', choices: ['Look at', 'See at', 'Watch at', 'Look'], answer: 0, why: '止まっているものを意識して見るのは look at。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
