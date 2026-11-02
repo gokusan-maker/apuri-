@@ -1660,6 +1660,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="66" rx="9" ry="7" fill="#fb923c" />
       </g>
     )
+  if (species === 'bluetail')
+    return (
+      <g>
+        {/* わきのだいだい色と、目の上の白いまゆ */}
+        <ellipse cx="34" cy="64" rx="4" ry="6" fill="#f97316" />
+        <path d="M37 37 L46 36" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
