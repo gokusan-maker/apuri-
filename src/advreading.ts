@@ -25159,6 +25159,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-online-writing',
+    title: 'Is the Internet Ruining Language?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every new technology of communication has been accused of damaging language. When printing spread across Europe, some scholars complained that it would fill the world with careless writing; when the telephone became common, critics predicted that people would lose the habit of writing letters altogether. Today, similar fears surround the internet. Short messages, abbreviations, and symbols such as emoji are often said to be eroding young people's ability to write correctly. Yet linguists who have studied online communication in detail tend to reach a more complicated, and in some ways more hopeful, conclusion.",
+      "One of their central observations is that much online writing is not really a degraded form of formal writing but a new kind of written conversation. In the past, informal exchanges between friends took place mainly in speech, where tone of voice, facial expression, and gesture helped to convey meaning. When people began to carry on such exchanges in text, they needed ways to express what the voice and face had previously supplied. Punctuation marks, capital letters, repeated letters, and emoji came to serve these functions, indicating, for example, whether a remark was meant seriously or as a joke.",
+      "Seen in this light, many features that look like errors are in fact signs of a developing system. Researchers have found that users of messaging apps often follow subtle conventions that outsiders may not notice. A message that ends with a period, for instance, can seem cold or even angry to some younger writers, because in casual exchanges the period has come to suggest finality rather than simply marking the end of a sentence. In some groups, even the choice between a single exclamation mark and several can signal different degrees of warmth or enthusiasm. Such conventions are learned, shared, and enforced within communities, much as the rules of spoken language are.",
+      "This does not mean that concerns about writing skills are baseless. Formal writing, of the kind required in essays, reports, and official documents, depends on abilities that informal messaging does little to develop: organizing an argument, sustaining it over several paragraphs, and choosing words precisely for readers who share little context with the writer. Students who write a great deal online may become fluent in one style while remaining inexperienced in another, and teachers are right to insist that both deserve attention. Writing for a stranger is, in this sense, a skill of imagination as well as of grammar: the writer must anticipate questions that cannot be asked and supply explanations that a friend would never need.",
+      "What studies generally do not support, ( A ), is the claim that informal writing directly damages formal writing. Several investigations have found little evidence that frequent use of abbreviations leads to more mistakes in school essays, and some have even found that young people who enjoy playing with language online show greater awareness of how language works. The ability to move between different styles depending on the situation, which linguists sometimes call register awareness, may in fact be strengthened by regular experience of writing in more than one way.",
+      "The more useful question, then, is not whether the internet is ruining language but how education can help people use the full range of styles now available to them. Neither style is simply better than the other; each is suited to particular purposes, and a skilled writer is one who knows which to use and when. Language has always changed, and each generation has tended to view the habits of the next with suspicion. A more balanced view recognizes online writing as a genuine, if informal, form of literacy, while also ensuring that young people learn the conventions they will need when they write for unfamiliar readers in more formal settings.",
+    ],
+    ja: [
+      '新しい通信技術はどれも、言語をそこなうと非難されてきた。印刷がヨーロッパに広まったとき、一部の学者は、世の中がいいかげんな文章であふれるだろうと不満を言った。電話が一般的になったときには、批評家たちは、人々は手紙を書く習慣をすっかりなくしてしまうだろうと予言した。今日、同じような心配がインターネットをとりまいている。短いメッセージ、略語、絵文字のような記号が、若者の正しく書く力をむしばんでいるとよく言われる。しかし、インターネット上のやりとりをくわしく研究してきた言語学者たちは、もっと複雑で、ある意味ではもっと希望のもてる結論にいたることが多い。',
+      '彼らの中心的な観察の1つは、インターネット上の文章の多くは、改まった文章が劣化した形なのではなく、新しい種類の「書かれた会話」だということである。かつて、友人どうしのくだけたやりとりは主に話し言葉で行われ、声の調子や表情や身ぶりが意味を伝える助けになっていた。人々がそうしたやりとりを文字で行うようになると、それまで声や顔がおぎなっていたものを表す方法が必要になった。句読点、大文字、文字のくり返し、そして絵文字が、こうした働きをするようになった。たとえば、ある発言が本気なのかじょうだんなのかを示すのである。',
+      'このように見ると、まちがいのように見える特徴の多くは、実は発達しつつあるしくみのしるしである。研究者たちは、メッセージアプリの利用者が、外の人には気づかれないような微妙な決まりにしたがっていることが多いことを見いだしてきた。たとえば、ピリオドで終わるメッセージは、若い書き手の一部には、冷たく、あるいは怒っているようにさえ感じられることがある。くだけたやりとりの中では、ピリオドは単に文の終わりを示すのではなく、「これで終わり」という感じを示すようになってきたからである。グループによっては、感嘆符を1つにするかいくつも重ねるかの選びかたでさえ、親しみや熱意の度合いのちがいを示すことがある。こうした決まりは、話し言葉の規則とほとんど同じように、共同体の中で学ばれ、共有され、守らされている。',
+      'このことは、書く力についての心配に根拠がないという意味ではない。作文や報告書や公式の文書で求められるような改まった文章は、くだけたメッセージのやりとりではほとんどのびない力にたよっている。議論を組み立て、それを何段落にもわたって保ち、書き手と共有するものが少ない読者のために言葉を正確に選ぶ力である。インターネットでたくさん書く生徒は、1つの文体にはなれても、別の文体には不なれなままかもしれず、両方に注意をはらうべきだと先生が主張するのは正しい。この意味で、知らない人のために書くことは、文法の技術であると同時に想像力の技術でもある。書き手は、たずねることのできない質問を予想し、友人なら決して必要としない説明をおぎなわなければならないのである。',
+      'しかし、研究が一般に支持していないのは、くだけた文章が改まった文章を直接そこなうという主張である。いくつかの調査では、略語をよく使うことが学校の作文のまちがいをふやすという証拠はほとんど見つからず、インターネットで言葉遊びを楽しむ若者のほうが、言語のしくみをよく意識していることを見いだした調査さえある。場面に応じてちがう文体を行き来する力は、言語学者がときに「使用域の意識」とよぶものであり、それはむしろ、2つ以上のやり方で書くことを日ごろ経験することで強まるのかもしれない。',
+      'だとすれば、もっと役に立つ問いは、インターネットが言語をだめにしているかどうかではなく、今では使えるようになったさまざまな文体を人々がすべて使いこなせるよう、教育がどう手助けできるかということである。どちらの文体も一方が単純にすぐれているわけではない。それぞれが特定の目的に合っており、すぐれた書き手とは、どちらをいつ使えばよいかを知っている人である。言語はいつも変わってきたし、どの世代も次の世代の習慣を疑いの目で見がちだった。よりつり合いのとれた見方は、インターネット上の文章を、くだけてはいても本物の読み書きの1つの形として認めつつ、若者が、改まった場面で知らない読者に向けて書くときに必要な決まりも身につけられるようにするものである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['however', 'therefore', 'for example', 'in addition'], answer: 0, why: '前の段落（書く力の心配には根拠がある）と、「しかし研究が支持しないのは～」を対比するので however。' },
+    ],
+    summary: {
+      text: 'Much online writing is best seen not as bad formal writing but as a written form of ( 1 ), with its own shared conventions. It does not develop every skill needed for formal writing, but studies find little evidence that it ( 2 ) formal writing, and moving between styles may even increase ( 3 ) of how language works.',
+      blanks: [
+        { choices: ['conversation', 'poetry', 'grammar', 'printing'], answer: 0, why: '第2段落 a new kind of written conversation。' },
+        { choices: ['damages', 'improves', 'replaces', 'copies'], answer: 0, why: '第5段落 the claim that informal writing directly damages formal writing（研究は支持していない）。' },
+        { choices: ['awareness', 'fear', 'speed', 'cost'], answer: 0, why: '第5段落 show greater awareness of how language works。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、電話が広まったとき、人々は手紙を書く習慣をなくすだろうと予言した批評家がいた。', answer: true, why: '第1段落 critics predicted that people would lose the habit of writing letters altogether。' },
+      { statement: '筆者は、絵文字などには意味を伝える働きはまったくないと述べている。', answer: false, why: '第2段落 Punctuation marks ... and emoji came to serve these functions。' },
+      { statement: '筆者によれば、ピリオドで終わるメッセージが冷たく感じられる若い書き手もいる。', answer: true, why: '第3段落 A message that ends with a period ... can seem cold or even angry to some younger writers。' },
+      { statement: '筆者は、くだけた文章を書けば、改まった文章の力も自然に身につくと考えている。', answer: false, why: '第4段落 Formal writing ... depends on abilities that informal messaging does little to develop。' },
+    ],
+    qa: [
+      { q: 'Why did people begin to use punctuation marks and emoji in new ways, according to the second paragraph?', choices: ['To express in text what tone of voice and facial expression used to convey.', 'To make their messages shorter and cheaper.', 'To follow the rules of formal writing more closely.', 'To hide their meaning from their friends.'], answer: 0, why: '第2段落 they needed ways to express what the voice and face had previously supplied。' },
+      { q: 'What does the writer suggest education should do?', choices: ['Help people use the full range of styles, including formal conventions.', 'Ban the use of messaging apps by students.', 'Teach only informal online writing.', 'Return to writing letters by hand.'], answer: 0, why: '第6段落 how education can help people use the full range of styles now available to them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
