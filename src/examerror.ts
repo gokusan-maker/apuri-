@@ -5022,6 +5022,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[That] surprised me most was the kindness of the local people.', choices: ['What', 'Which', 'It', 'As'], answer: 0, why: '先行詞がなく主語になる「～したこと」は What。' },
     ],
   },
+  {
+    id: 'exam-fix-117',
+    title: '入試の誤文訂正〈117〉（共通テストレベル：時制 現在完了と過去）',
+    points: ['yesterday・last ～・～ ago・When ～? などはっきり過去を表す語とは現在完了を使わず過去形。since ～（～以来）・for ～（～の間）・already・yet・ever・never は現在完了と相性がよい。時・条件の副詞節（when・if・until・as soon as）の中では、未来のことも現在形で表す。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I have lived in this town since I was ten.', ja: '私は10歳のときからこの町に住んでいる。' }],
+    questions: [
+      { sentence: 'I [have visited] Kyoto with my family last summer.', choices: ['visited', 'have been visiting', 'had visited', 'visit'], answer: 0, why: 'last summer（はっきりした過去）なので過去形 visited。現在完了は使えない。' },
+      { sentence: 'She [has left] for London three days ago.', choices: ['left', 'has been leaving', 'leaves', 'had left'], answer: 0, why: '～ ago は過去形といっしょに使う。left。' },
+      { sentence: 'When [have you finished] your homework?', choices: ['did you finish', 'have you been finishing', 'do you finish', 'had you finished'], answer: 0, why: '疑問詞 When は過去の一時点をたずねるので、現在完了ではなく過去形。' },
+      { sentence: 'We [know] each other since we were in elementary school.', choices: ['have known', 'knew', 'are knowing', 'had been know'], answer: 0, why: 'since ～ と継続を表すので現在完了 have known。' },
+      { sentence: 'My grandfather [lives] in this house for fifty years.', choices: ['has lived', 'lived since', 'is living since', 'lives for'], answer: 0, why: 'for fifty years（今までの50年間）の継続なので has lived。' },
+      { sentence: '[Did you ever see] a shooting star in your life?', choices: ['Have you ever seen', 'Did you ever seen', 'Have you ever saw', 'Do you ever see'], answer: 0, why: '「今までに～したことがあるか」という経験は現在完了 Have you ever seen。' },
+      { sentence: 'I will call you as soon as I [will arrive] at the airport.', choices: ['arrive', 'arrived', 'will have arrived', 'am going to arrive'], answer: 0, why: '時の副詞節（as soon as）の中では、未来のことも現在形 arrive。' },
+      { sentence: 'If it [will rain] tomorrow, the game will be canceled.', choices: ['rains', 'rained', 'will be raining', 'would rain'], answer: 0, why: '条件の副詞節（if）の中では、未来のことも現在形 rains。' },
+      { sentence: 'I [did not finish] my report yet, so I cannot go out tonight.', choices: ['have not finished', 'had not finished', 'do not finish', 'was not finishing'], answer: 0, why: 'yet（まだ）は現在完了の否定と使う。have not finished。' },
+      { sentence: 'He [has been] a teacher before he became a writer.', choices: ['was', 'has been being', 'is', 'had been being'], answer: 0, why: 'before he became a writer（作家になる前、過去）のことなので過去形 was（had been も可だが選択肢では was）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
