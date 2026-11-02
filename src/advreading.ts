@@ -25860,6 +25860,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-pets',
+    title: 'Why We Keep Pets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many wealthy countries, a large proportion of households now share their homes with animals. Dogs and cats are the most common companions, but people also keep rabbits, birds, fish, reptiles, and many other creatures. Owners often spend considerable sums on food, medical care, and toys for their pets, and many describe their animals as members of the family. From an evolutionary point of view, this behavior is puzzling: caring for another species brings no obvious reproductive advantage, yet it is found in cultures across the world and has a history that stretches back thousands of years. Understanding why people form such bonds may tell us something important about human nature itself.",
+      "The origins of pet keeping are closely linked with the domestication of animals. Dogs, the first species to be domesticated, were probably valued at first for their usefulness in hunting and guarding. Over time, however, the relationship between humans and dogs came to include affection as well as practical benefit, and archaeologists have found ancient burials in which dogs were placed beside their owners. Cats, which may have been attracted to early farming settlements by the rodents that fed on stored grain, followed a similar path from useful neighbor to cherished companion.",
+      "Researchers have proposed several explanations for why people keep pets today, when most animals no longer perform practical tasks. One emphasizes the emotional benefits of companionship. Many owners report that their pets reduce feelings of loneliness and stress, and some studies have found that interacting with animals can lower blood pressure and heart rate. Pets also provide a reason to maintain routines, such as daily walks, which may improve physical health. For elderly people living alone, an animal can offer both company and a sense of being needed. Some hospitals and care homes have therefore introduced visits by trained animals, and staff often report that patients become more relaxed and communicative after such visits.",
+      "A second explanation concerns the human tendency to care for creatures that resemble infants. Many popular pets have large eyes, round faces, and soft bodies, features that tend to trigger protective feelings in humans. According to this view, pet keeping may be partly a side effect of instincts that evolved to ensure that parents look after their children. This would help to explain why people often speak to their pets in the same high-pitched voice that they use with babies. The explanation is not complete, however, since people also keep animals such as fish and reptiles that look nothing like human infants.",
+      "Pet keeping is not without problems. Some animals are kept in conditions that do not meet their needs, either because owners lack knowledge or because the animals were bred for appearance rather than health. Certain dog breeds, for instance, have been selected for flat faces that cause serious breathing difficulties. Large numbers of pets are also abandoned each year when owners find them more demanding than expected. In addition, cats allowed to roam freely can have a significant impact on populations of wild birds and small mammals. Exotic pets raise further concerns, because the trade in rare animals can threaten species in the wild and introduce diseases or invasive species when animals escape or are released.",
+      "These issues have led to growing discussion about responsible ownership. Some countries require owners to register their animals or to complete basic training, and there are increasing calls to restrict the breeding of animals with inherited health problems. ( A ) such measures, the relationship between humans and their pets is likely to remain one of the most widespread and meaningful bonds that people form with other species, a bond that reveals as much about human needs as it does about the animals themselves.",
+    ],
+    ja: [
+      '多くの豊かな国では、今では大きな割合の家庭が動物と家をともにしている。犬と猫が最もふつうの仲間だが、人々はウサギや鳥や魚や爬虫類など、ほかの多くの生き物も飼っている。飼い主はしばしばペットの食べ物や医療やおもちゃにかなりのお金を使い、多くの人が自分の動物を家族の一員だと語る。進化の観点から見ると、この行動はふしぎである。別の種の世話をしても、子孫を残すうえで明らかな利点はないのに、それは世界中の文化に見られ、何千年もさかのぼる歴史をもっているからである。人々がなぜそうしたきずなを結ぶのかを理解することは、人間の本性そのものについて大切なことを教えてくれるかもしれない。',
+      'ペットを飼う習慣の起源は、動物の家畜化と深く結びついている。最初に家畜化された種である犬は、はじめはおそらく狩りや見張りに役立つことで大切にされた。しかし時がたつにつれて、人と犬の関係には実際的な利益だけでなく愛情もふくまれるようになり、考古学者たちは、犬が飼い主のそばに葬られた古い墓を見つけている。たくわえられた穀物を食べるネズミにひかれて、初期の農耕の集落にやってきたのかもしれない猫も、役に立つ隣人から大切な仲間へと、同じような道をたどった。',
+      '研究者たちは、ほとんどの動物がもう実際的な仕事をしない今日、なぜ人々がペットを飼うのかについて、いくつかの説明を示してきた。1つは、仲間がいることの感情的な利点を強調する。多くの飼い主は、ペットがさびしさやストレスをへらしてくれると語り、動物とふれ合うことで血圧や心拍数が下がりうることを見いだした研究もある。ペットはまた、毎日の散歩のような習慣を続ける理由をあたえ、それが体の健康をよくするかもしれない。ひとりで暮らす高齢者にとって、動物は話し相手にもなり、必要とされている感覚もあたえてくれる。そのため、訓練された動物の訪問を取り入れた病院や介護施設もあり、職員たちは、そうした訪問のあと患者がよりくつろぎ、よく話すようになるとしばしば語っている。',
+      '2つ目の説明は、赤ちゃんに似た生き物の世話をしたくなる人間の傾向にかかわる。人気のあるペットの多くは、大きな目、まるい顔、やわらかい体をもっており、こうした特徴は人間に守ってあげたい気持ちを起こさせやすい。この見方によれば、ペットを飼うことは、親が子どもの世話をするよう進化した本能の、部分的には副産物なのかもしれない。このことは、人々がなぜしばしば赤ちゃんに話しかけるときと同じ高い声でペットに話しかけるのかを説明する助けになるだろう。ただし、人々は魚や爬虫類のように人間の赤ちゃんにはまったく似ていない動物も飼うので、この説明は完全ではない。',
+      'ペットを飼うことに問題がないわけではない。飼い主に知識がなかったり、動物が健康ではなく見た目のために交配されたりしたせいで、必要を満たさない状態で飼われている動物もいる。たとえばある犬種は、ひどい呼吸の困難を引き起こす平らな顔になるように選ばれてきた。また、飼い主が思っていたより手がかかるとわかったときに、毎年多くのペットがすてられている。さらに、自由に外を歩き回らせている猫は、野生の鳥や小さなほ乳類の数に大きな影響をあたえることがある。めずらしい外国の動物のペットにはさらに心配がある。めずらしい動物の取引は野生の種をおびやかし、動物がにげたり放されたりすると、病気や外来種を持ちこむことがあるからである。',
+      'こうした問題から、責任ある飼い方についての議論が高まっている。動物の登録や基本的な訓練を飼い主に求める国もあり、遺伝する健康上の問題をもつ動物の交配を制限すべきだという声も高まっている。こうした対策とともに、人とペットの関係は、人々がほかの種と結ぶ最も広く見られ、最も意味のあるきずなの1つであり続けるだろう。それは、動物そのものについてと同じくらい、人間の必要について多くを明らかにしてくれるきずなである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Along with', 'Instead of', 'Because of', 'In spite of'], answer: 0, why: '「こうした対策とともに、人とペットの関係は大切なきずなであり続けるだろう」なので Along with（～とともに）。' },
+    ],
+    summary: {
+      text: 'Keeping pets began with the ( 1 ) of animals that were useful to humans. Today people keep pets mainly for emotional benefits, and perhaps because animals that resemble ( 2 ) trigger protective feelings. However, poor conditions, abandonment, and harm to wildlife have led to discussion about ( 3 ) ownership.',
+      blanks: [
+        { choices: ['domestication', 'hunting', 'protection', 'sale'], answer: 0, why: '第2段落 The origins of pet keeping are closely linked with the domestication of animals。' },
+        { choices: ['infants', 'adults', 'rodents', 'birds'], answer: 0, why: '第4段落 the human tendency to care for creatures that resemble infants。' },
+        { choices: ['responsible', 'expensive', 'temporary', 'secret'], answer: 0, why: '第6段落 growing discussion about responsible ownership。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、犬は最初に家畜化された種である。', answer: true, why: '第2段落 Dogs, the first species to be domesticated ～。' },
+      { statement: '筆者によれば、動物とふれ合うと血圧が上がることがわかっている。', answer: false, why: '第3段落 interacting with animals can lower blood pressure and heart rate。' },
+      { statement: '筆者は、人々がペットに赤ちゃんに話すときと同じ高い声で話しかけることがあると述べている。', answer: true, why: '第4段落 the same high-pitched voice that they use with babies。' },
+      { statement: '筆者によれば、外を自由に歩き回る猫は野生の動物に影響をあたえない。', answer: false, why: '第5段落 cats allowed to roam freely can have a significant impact on populations of wild birds。' },
+    ],
+    qa: [
+      { q: 'How may cats have come to live near humans, according to the second paragraph?', choices: ['They may have been attracted by rodents feeding on stored grain.', 'They were used for hunting large animals.', 'They were brought by travelers from the sea.', 'They were bred to guard houses.'], answer: 0, why: '第2段落 Cats, which may have been attracted to early farming settlements by the rodents that fed on stored grain ～。' },
+      { q: 'Why have some dog breeds developed serious breathing difficulties?', choices: ['They were selected for flat faces.', 'They were kept outside in winter.', 'They were fed too little food.', 'They were not given enough exercise.'], answer: 0, why: '第5段落 Certain dog breeds ... have been selected for flat faces that cause serious breathing difficulties。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
