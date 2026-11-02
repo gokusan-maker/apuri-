@@ -26974,6 +26974,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-promises',
+    title: 'Why Promises Bind Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A promise is a curious kind of act. By saying a few words, a person creates an obligation that did not exist a moment before, binding his or her future self to a particular course of action. Before the promise, keeping one's word was not required; after it, failing to do so becomes a kind of wrong. Philosophers have long been fascinated by this power of language to change the moral situation simply by being spoken, and by the question of why promises should bind us at all. After all, the person who made the promise and the person who must keep it are, in a sense, not quite the same, since circumstances and desires may have changed in the meantime.",
+      "One common answer appeals to the expectations that promises create. When I promise to help a friend move house on Saturday, my friend begins to rely on me, perhaps declining other offers of help or making plans that depend on my presence. If I then fail to appear, I have not only disappointed my friend but caused real harm by leading them to act on a false belief. On this view, the wrongness of breaking a promise lies in the damage done to those who trusted us. The more someone has arranged their life around our word, the greater the wrong we commit by failing to keep it.",
+      "This account captures something important, but it does not seem to explain everything. Imagine that I promise something to a person who, as it happens, never relies on my promise at all, and who would suffer no harm if I broke it. Most of us would still feel that I had done something wrong in failing to keep my word. This suggests that the obligation of a promise does not depend solely on its consequences. There seems to be something about the act of promising itself, about committing oneself freely to another, that creates a duty independent of whether anyone is harmed.",
+      "Another perspective focuses on the role that promising plays in human relationships. Promises allow people to coordinate their actions over time and to build trust in situations where the future is uncertain. Without the practice of promising, cooperation would be much more difficult, since no one could count on others to do what they had said. ( A ) the practice depends on people generally keeping their promises, each broken promise weakens, however slightly, an institution on which everyone relies. A society in which promises were routinely broken would be one in which people hesitated to depend on one another at all.",
+      "Yet the binding force of promises is not unlimited. Circumstances may change in ways that no one could have foreseen when the promise was made, and keeping it might then cause serious harm. Few people would think that a promise to meet a friend for lunch must be kept if doing so meant ignoring someone in urgent need of help. In such cases, we recognize that the obligation created by a promise must be weighed against other moral considerations. A good person is not one who keeps every promise mechanically, but one who takes promises seriously while exercising judgment about when they may be set aside.",
+      "The study of promises thus reveals something about the nature of moral life more generally. Our obligations are not all given to us from outside; some of them are created by our own choices, through acts of commitment that shape who we become. To make a promise is to extend oneself into the future and to offer another person a part of one's freedom. Perhaps this is why broken promises can feel so painful: they suggest that the person who made them did not fully understand, or did not fully mean, what it was they were giving.",
+    ],
+    ja: [
+      '約束は奇妙な種類の行為である。いくつかの言葉を言うことで、人はほんの一瞬前には存在しなかった義務を生み出し、未来の自分を特定の行動に結びつける。約束の前には、言ったことを守る必要はなかったが、約束のあとでは、それを守らないことは一種の悪になる。哲学者たちは昔から、口にされるだけで道徳的な状況を変える言葉のこの力に、そしてそもそもなぜ約束が私たちをしばるのかという問いに魅了されてきた。結局のところ、約束をした人とそれを守らなければならない人は、ある意味でまったく同じではない。そのあいだに状況や欲求が変わっているかもしれないからである。',
+      'よくある答えの1つは、約束が生み出す期待にうったえるものである。土曜日に友人の引っこしを手伝うと約束すると、友人は私をあてにしはじめ、ほかの手伝いの申し出をことわったり、私がいることを前提にした計画を立てたりするかもしれない。もしそのあと私が現れなければ、私は友人をがっかりさせただけでなく、誤った思いこみにもとづいて行動させることで、現実の害をあたえたことになる。この見方では、約束をやぶることの悪さは、私たちを信頼した人々に与えた損害にある。だれかが私たちの言葉を前提に生活を組み立てていればいるほど、それを守らないことで私たちが犯す悪は大きくなる。',
+      'この説明は重要なことをとらえているが、すべてを説明しているようには思えない。私がある人に何かを約束したが、その人はたまたま私の約束にまったくたよっておらず、私がそれをやぶっても何の害も受けないとしよう。それでも私たちのほとんどは、私が言ったことを守らなかったのは悪いことをしたと感じるだろう。これは、約束の義務がその結果だけにかかっているのではないことを示している。約束するという行為そのもの、つまり自由に自分を他者にゆだねることには、だれかが害を受けるかどうかとは関係なく、義務を生み出す何かがあるように思われる。',
+      '別の見方は、約束が人間関係のなかで果たす役割に注目する。約束によって、人々は時間をこえて行動を調整し、未来が不確かな状況でも信頼を築くことができる。約束するという慣習がなければ、だれも他人が言ったとおりにしてくれるとあてにできないので、協力ははるかにむずかしくなるだろう。この慣習は人々がふつう約束を守ることにかかっているので、やぶられる約束の1つひとつが、どんなにわずかであれ、すべての人がたよっている制度を弱めるのである。約束がいつもやぶられる社会では、人々はそもそもたがいにたよることをためらうようになるだろう。',
+      'しかし、約束のしばる力にも限りがある。約束をしたときにはだれも予見できなかった形で状況が変わり、そのときにそれを守ると深刻な害をもたらすかもしれない。友人と昼食をとる約束を守ることが、急いで助けを必要としている人を無視することを意味するなら、それでも守らなければならないと考える人はほとんどいないだろう。そうした場合、私たちは、約束が生む義務をほかの道徳的な考慮と比べてはからなければならないと認める。よい人とは、あらゆる約束を機械的に守る人ではなく、約束を真剣に受け止めながら、いつそれをわきに置いてよいかについて判断をはたらかせる人なのである。',
+      'このように約束の研究は、道徳的な生活のあり方についてより広く何かを明らかにする。私たちの義務は、すべてが外から与えられるわけではない。その一部は、私たちが何者になるかを形づくる、ゆだねるという行為を通じて、自分自身の選択によって生み出される。約束をするとは、自分を未来へとのばし、他者に自分の自由の一部をさし出すことである。おそらくだからこそ、やぶられた約束はあれほど痛く感じられるのだろう。それは、約束した人が、自分が与えていたものが何だったのかを十分に理解していなかった、あるいは本気でそう思っていなかったことをほのめかすからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「この慣習は人々が約束を守ることにかかっているので」という理由の Because。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、約束は、それまで存在しなかった義務を生み出す。', answer: true, why: '第1段落 a person creates an obligation that did not exist a moment before。' },
+      { statement: '筆者によれば、約束の義務は、すべてその結果によって説明できる。', answer: false, why: '第3段落 the obligation of a promise does not depend solely on its consequences。' },
+      { statement: '筆者によれば、約束という慣習がなければ、協力ははるかにむずかしくなる。', answer: true, why: '第4段落 Without the practice of promising, cooperation would be much more difficult。' },
+      { statement: '筆者は、よい人とはどんな状況でもあらゆる約束を機械的に守る人だと考えている。', answer: false, why: '第5段落 A good person is not one who keeps every promise mechanically。' },
+    ],
+    qa: [
+      { q: 'Why does the writer imagine a person who never relies on a promise?', choices: ['To show that breaking a promise can be wrong even when no one is harmed.', 'To show that promises are always harmful.', 'To show that friends should not help each other move.', 'To show that promises are only about expectations.'], answer: 0, why: '第3段落 Most of us would still feel that I had done something wrong ... the obligation ... does not depend solely on its consequences。' },
+      { q: 'What does it mean to make a promise, according to the last paragraph?', choices: ['To extend oneself into the future and offer another person a part of one\'s freedom.', 'To give up all of one\'s freedom forever.', 'To make a legal contract.', 'To avoid responsibility for the future.'], answer: 0, why: '第6段落 To make a promise is to extend oneself into the future and to offer another person a part of one\'s freedom。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
