@@ -1938,6 +1938,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="34" cy="56" rx="5" ry="3" fill="#9d174d" />
       </g>
     )
+  if (species === 'siberianrubythroat')
+    return (
+      <g>
+        {/* 赤いのどと、白いまゆ */}
+        <ellipse cx="50" cy="56" rx="6" ry="4" fill="#dc2626" />
+        <path d="M37 41 L47 39" fill="none" stroke="#f8fafc" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
