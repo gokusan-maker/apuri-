@@ -4980,6 +4980,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The more you practice, [the best] you will become.', choices: ['the better', 'better', 'the more good', 'best'], answer: 0, why: 'The 比較級 ～, the 比較級 … 。the better。' },
     ],
   },
+  {
+    id: 'exam-fix-116',
+    title: '入試の誤文訂正〈116〉（京大レベル：what の慣用表現）',
+    points: ['京大の和訳でよく出る what の慣用表現。what is called／what we call（いわゆる）、what S is（今の S）／what S was（昔の S）、A is to B what C is to D（A と B の関係は C と D の関係と同じ）、what little ＋名詞（わずかながらすべての）、what is more（さらに）、what は先行詞をふくむので、前に名詞を置かない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He is not what he was ten years ago.', ja: '彼は10年前の彼ではない。' }],
+    questions: [
+      { sentence: 'She is [that we call] a walking dictionary; she seems to know every word.', choices: ['what we call', 'which we call', 'who we call', 'as we call it'], answer: 0, why: 'what we call ～ で「いわゆる～」。' },
+      { sentence: 'Thanks to his hard work, the town is very different from [that it was] twenty years ago.', choices: ['what it was', 'which it was', 'that was it', 'it was what'], answer: 0, why: 'what S was で「昔の S（の姿）」。' },
+      { sentence: 'Reading is to the mind [that] exercise is to the body.', choices: ['what', 'which', 'as', 'like'], answer: 0, why: 'A is to B what C is to D の形。' },
+      { sentence: 'He gave the poor family [what little money which] he had.', choices: ['what little money', 'what little money that', 'the little money what', 'little what money'], answer: 0, why: 'what little ＋名詞 ＋ S V で「わずかながらすべての～」。which は不要。' },
+      { sentence: 'The hotel was cheap, and, [which is more], it was close to the station.', choices: ['what is more', 'that is more', 'more is what', 'what more is'], answer: 0, why: 'what is more で「さらに・その上」。' },
+      { sentence: 'After the long illness, he is no longer [that he used to be].', choices: ['what he used to be', 'which he used to be', 'he used to be what', 'that used he to be'], answer: 0, why: 'what S used to be で「以前の S（の姿）」。' },
+      { sentence: 'Please show me [the thing what] you bought at the market.', choices: ['what', 'the thing that what', 'which', 'that what'], answer: 0, why: 'what は先行詞をふくむので、the thing と重ねない。what（または the thing that）。' },
+      { sentence: 'Do not judge a person by [which] he has, but by what he is.', choices: ['what', 'that', 'how', 'whom'], answer: 0, why: 'what he has（その人がもっているもの）と what he is（その人の人柄）の対比。' },
+      { sentence: 'This is [what is called as] the greenhouse effect.', choices: ['what is called', 'what calls', 'which is called as', 'that is called'], answer: 0, why: 'what is called ～ で「いわゆる～」。as は不要。' },
+      { sentence: '[That] surprised me most was the kindness of the local people.', choices: ['What', 'Which', 'It', 'As'], answer: 0, why: '先行詞がなく主語になる「～したこと」は What。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

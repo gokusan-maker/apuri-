@@ -1667,3 +1667,10 @@ it('正誤問題〈122〉：比較の発展の単元が10問ある', async () =>
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) possibly')
 })
+
+it('誤文訂正〈116〉：京大レベルの what の慣用表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-116')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('what we call')
+})
