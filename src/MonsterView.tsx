@@ -1676,6 +1676,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 52 L50 74" fill="none" stroke="#0f172a" strokeWidth="4" strokeLinecap="round" />
       </g>
     )
+  if (species === 'bulbul')
+    return (
+      <g>
+        {/* ほおの茶色い点と、ぼさっとした頭 */}
+        <circle cx="44" cy="46" r="4" fill="#92400e" opacity="0.8" />
+        <path d="M42 28 L46 22 L50 28 L54 22 L56 28" fill="none" stroke="#1f2937" strokeWidth="2" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
