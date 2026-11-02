@@ -2882,6 +2882,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Had I known (B) the truth at that time, (C) I would (D) tell you about it.', choices: ['(A) Had I known', '(B) the truth at that time,', '(C) I would', '(D) tell you about it'], answer: 3, why: 'Had I known ～ は過去の事実の反対（仮定法過去完了）。I would have told you。' },
     ],
   },
+  {
+    id: 'exam-error-compare9',
+    title: '入試の正誤問題〈122〉（共通テストレベル：比較の発展）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'as ～ as possible、the 最上級 ＋ in／of、any other ＋単数名詞、No other ＋単数名詞、倍数 ＋ as ～ as、much ＋比較級、the 比較級 of the two、prefer A to B、one of the 最上級 ＋複数名詞。',
+    ],
+    examples: [
+      { en: 'Mt. Fuji is higher than any other mountain in Japan.', ja: '富士山は日本のほかのどの山よりも高い。' },
+      { en: 'I prefer walking to driving.', ja: '私は車より歩くほうが好きだ。' },
+    ],
+    questions: [
+      { sentence: 'Please (A) come (B) as soon as (C) possibly (D) after school.', choices: ['(A) come', '(B) as soon as', '(C) possibly', '(D) after school'], answer: 2, why: 'as soon as possible（できるだけ早く）。possibly ではなく possible。' },
+      { sentence: 'This is (A) the oldest temple (B) of (C) this city, (D) built over 1,000 years ago.', choices: ['(A) the oldest temple', '(B) of', '(C) this city,', '(D) built over 1,000 years ago'], answer: 1, why: '場所の中で「いちばん～」は in this city。' },
+      { sentence: 'Mt. Fuji (A) is higher (B) than any other (C) mountains (D) in Japan.', choices: ['(A) is higher', '(B) than any other', '(C) mountains', '(D) in Japan'], answer: 2, why: 'any other のあとは単数名詞。mountain。' },
+      { sentence: '(A) No other (B) students (C) in our school (D) runs as fast as Yumi.', choices: ['(A) No other', '(B) students', '(C) in our school', '(D) runs as fast as Yumi'], answer: 1, why: 'No other ＋単数名詞（runs と一致）。No other student。' },
+      { sentence: 'This bag (A) is (B) twice (C) heavier as (D) that one.', choices: ['(A) is', '(B) twice', '(C) heavier as', '(D) that one'], answer: 2, why: '倍数 ＋ as 原級 as。twice as heavy as。' },
+      { sentence: 'The new model (A) is (B) very (C) faster than (D) the old one.', choices: ['(A) is', '(B) very', '(C) faster than', '(D) the old one'], answer: 1, why: '比較級を強めるのは much／far。much faster。' },
+      { sentence: 'Of the (A) two sisters, (B) Emi is (C) the tallest (D) one.', choices: ['(A) two sisters,', '(B) Emi is', '(C) the tallest', '(D) one'], answer: 2, why: '2人のうちの背の高いほうは the taller。' },
+      { sentence: '(A) I prefer walking than (B) driving (C) to work because (D) it is healthier.', choices: ['(A) I prefer walking than', '(B) driving', '(C) to work because', '(D) it is healthier'], answer: 0, why: 'prefer A to B。I prefer walking to driving。' },
+      { sentence: 'He is (A) one of (B) the most (C) popular (D) singer in Japan.', choices: ['(A) one of', '(B) the most', '(C) popular', '(D) singer in Japan'], answer: 3, why: 'one of the 最上級 ＋ 複数名詞。singers。' },
+      { sentence: '(A) The more (B) you read, (C) the best (D) you understand.', choices: ['(A) The more', '(B) you read,', '(C) the best', '(D) you understand'], answer: 2, why: 'The 比較級 ～, the 比較級 … 。the better。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
