@@ -1771,6 +1771,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M28 58 L40 56 M28 64 L40 62 M28 70 L40 68" fill="none" stroke="#292524" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'paradiseflycatcher')
+    return (
+      <g>
+        {/* 目のまわりの青いリングと、とても長い尾 */}
+        <circle cx="42" cy="40" r="4.5" fill="none" stroke="#38bdf8" strokeWidth="2.5" />
+        <path d="M66 66 Q84 76 96 92" fill="none" stroke="#1e1b4b" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
