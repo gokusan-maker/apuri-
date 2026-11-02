@@ -26164,6 +26164,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-rewards-motivation',
+    title: 'Can Motivation Be Bought?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Parents and teachers have long used rewards to encourage children to behave well and to work hard. A sticker for finishing homework, money for good grades, or extra playing time for tidying a room all seem like sensible ways of motivating young people. The logic is simple: if an activity is followed by something pleasant, children will be more likely to repeat it. Yet over the past several decades, psychologists have discovered that the relationship between rewards and motivation is far more complicated than this simple logic suggests, and that rewards which work well in the short term may sometimes produce quite different effects over a longer period.",
+      "In a well-known type of experiment, children who already enjoyed drawing were divided into groups. Some were told in advance that they would receive a prize for their drawings, while others were not. Later, when the children were observed during free time, those who had expected a reward spent less time drawing than those who had not. Researchers concluded that the promise of a reward had changed the way the children understood the activity. What had once been done for its own sake had become a means of obtaining something else, and when the reward disappeared, so did much of the interest. Similar results have since been reported in studies of older students and even of adults at work, although the size of the effect varies considerably from one study to another.",
+      "Psychologists distinguish between two kinds of motivation. Intrinsic motivation refers to doing something because it is interesting or satisfying in itself, while extrinsic motivation refers to doing something in order to gain a reward or avoid a punishment. The experiments suggest that, under certain conditions, extrinsic rewards can weaken intrinsic motivation. This effect appears to be strongest when the reward is expected, when it depends simply on taking part rather than on the quality of the work, and when the activity was already enjoyable to begin with. In such cases, the reward may send an unintended message: that the activity is not worth doing unless one is paid for it.",
+      "This does not mean that rewards are always harmful. For tasks that are dull or repetitive, and that children would not choose to do on their own, rewards may help them get started and develop useful habits. Moreover, rewards that are unexpected, or that provide information about how well a person has performed, seem to have much less damaging effects. A word of specific praise for careful work, for instance, can tell a child what he or she has done well without suggesting that the work was valuable only because of the praise.",
+      "The way praise is given also matters. Several studies have suggested that praising children for their intelligence, by telling them that they are clever, may make them more anxious about failure and less willing to try difficult tasks, since a mistake might seem to show that they are not clever after all. Praising effort and strategy, ( A ), appears to encourage children to see ability as something that can grow through practice. Children who receive this kind of praise are more likely to persist when they encounter problems, and they tend to describe their mistakes not as proof of a lack of ability but as information about what to try next.",
+      "What these findings suggest is that motivation cannot be simply bought. Adults who wish to encourage a lasting love of learning may do better to create conditions in which children feel capable, have some choice about what they do, and experience a sense of connection with others. In such conditions, children are more likely to discover for themselves the satisfaction that comes from understanding something new, a satisfaction that no sticker or prize can fully replace.",
+    ],
+    ja: [
+      '親や教師は長いあいだ、子どもがよくふるまい、熱心に取り組むよう励ますために、ごほうびを使ってきた。宿題を終えたらシール、よい成績にはお金、部屋を片づけたら遊ぶ時間を増やす。どれも若い人のやる気を引き出す理にかなった方法に思える。その理屈は単純である。ある活動のあとに楽しいことが続けば、子どもはそれをくり返しやすくなる、というものだ。しかし過去数十年のあいだに、心理学者たちは、ごほうびとやる気の関係がこの単純な理屈が示すよりはるかに複雑であること、そして短期的にはうまくいくごほうびが、長い期間では大きく異なる効果を生むことがあることを明らかにしてきた。',
+      'よく知られたタイプの実験では、もともと絵をかくのが好きな子どもたちがいくつかの集団に分けられた。ある子どもたちは、絵をかけば賞品がもらえると前もって知らされ、ほかの子どもたちは知らされなかった。その後、自由時間に子どもたちを観察すると、ごほうびを期待していた子どもは、期待していなかった子どもよりも絵をかく時間が短かった。研究者たちは、ごほうびの約束が、子どもたちのその活動の受け止め方を変えてしまったと結論づけた。かつてはそれ自体のためにしていたことが、別の何かを手に入れる手段になり、ごほうびがなくなると、興味の多くも消えてしまったのである。その後、同じような結果は年長の学生や、さらには職場の大人を対象にした研究でも報告されているが、効果の大きさは研究によってかなり異なる。',
+      '心理学者は2種類のやる気を区別する。内発的動機づけとは、それ自体がおもしろかったり満足を与えてくれたりするから何かをすることであり、外発的動機づけとは、ごほうびを得るため、あるいは罰をさけるために何かをすることである。実験は、ある条件のもとでは、外からのごほうびが内発的動機づけを弱めうることを示している。この効果が最も強く現れるのは、ごほうびが予期されているとき、ごほうびが仕事の質ではなく単に参加したことによって与えられるとき、そしてその活動がもともと楽しいものだったときであるようだ。そうした場合、ごほうびは意図しないメッセージを送ってしまうかもしれない。つまり、その活動はお金をもらえないならする価値がない、というメッセージである。',
+      'これは、ごほうびがいつも有害だということではない。退屈でくり返しの多い、子どもが自分からは選ばないような作業では、ごほうびは取りかかるきっかけになり、役に立つ習慣を身につける助けになるかもしれない。さらに、予期していないごほうびや、どれだけうまくできたかについての情報を与えるごほうびは、害がずっと少ないようである。たとえば、ていねいな仕事に対する具体的なほめ言葉は、その仕事がほめられたからこそ価値があったとほのめかすことなく、子どもに何がよくできたかを伝えることができる。',
+      'ほめ方も重要である。いくつかの研究によれば、子どもを頭のよさでほめる、つまり「かしこいね」と言うと、失敗をより不安に思い、むずかしい課題に挑戦したがらなくなるかもしれない。まちがえると、結局自分はかしこくないと示されてしまうように思えるからである。それに対して、努力ややり方をほめると、子どもは能力を練習によってのびるものと考えるようになるらしい。こうしたほめ方をされた子どもは、問題にぶつかったときにも粘り強く取り組みやすく、自分のまちがいを能力がないことの証拠ではなく、次に何を試すべきかについての情報として語る傾向がある。',
+      'これらの発見が示しているのは、やる気は単純にお金で買えるものではない、ということである。学ぶことへの長続きする愛情を育てたいと願う大人は、子どもが自分にはできると感じ、何をするかについてある程度選ぶことができ、他者とのつながりを感じられるような条件をつくるほうがよいかもしれない。そうした条件のもとでは、子どもは何か新しいことを理解することから生まれる満足を、自分自身で見つけやすくなる。それは、どんなシールや賞品も完全には代わりになれない満足なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by contrast', 'for example', 'as a result', 'in addition'], answer: 0, why: '頭のよさをほめる場合と、努力ややり方をほめる場合を対比しているので by contrast。' },
+    ],
+    summary: {
+      text: 'Rewards may seem a simple way to motivate children, but experiments show that expected rewards can weaken ( 1 ) motivation, especially for activities children already enjoy. Rewards are less harmful when they are unexpected or give ( 2 ) about performance, and praising effort rather than intelligence helps children ( 3 ) when they face problems.',
+      blanks: [
+        { choices: ['intrinsic', 'extrinsic', 'financial', 'physical'], answer: 0, why: '第3段落 extrinsic rewards can weaken intrinsic motivation。' },
+        { choices: ['information', 'money', 'permission', 'punishment'], answer: 0, why: '第4段落 rewards ... that provide information about how well a person has performed。' },
+        { choices: ['persist', 'quit', 'complain', 'cheat'], answer: 0, why: '第5段落 more likely to persist when they encounter problems。' },
+      ],
+    },
+    tf: [
+      { statement: '実験では、ごほうびを期待していた子どもは、自由時間に絵をかく時間がより長かった。', answer: false, why: '第2段落 those who had expected a reward spent less time drawing（短かった）。' },
+      { statement: '筆者によれば、ごほうびが仕事の質ではなく参加だけで与えられるとき、悪い効果が強く出やすい。', answer: true, why: '第3段落 when it depends simply on taking part rather than on the quality of the work。' },
+      { statement: '筆者は、ごほうびはどんな場合でも害になると考えている。', answer: false, why: '第4段落 This does not mean that rewards are always harmful。' },
+      { statement: '筆者によれば、頭のよさをほめられた子どもは、むずかしい課題に挑戦したがらなくなることがある。', answer: true, why: '第5段落 less willing to try difficult tasks。' },
+    ],
+    qa: [
+      { q: 'Why did the children who expected a reward lose interest in drawing, according to the researchers?', choices: ['Drawing had become a means of obtaining something else rather than something done for its own sake.', 'They were too tired after drawing for the prize.', 'They did not like the prizes they received.', 'Their drawings were judged to be poor.'], answer: 0, why: '第2段落 What had once been done for its own sake had become a means of obtaining something else。' },
+      { q: 'What does the writer recommend in the last paragraph?', choices: ['Creating conditions in which children feel capable, have some choice, and feel connected with others.', 'Giving larger prizes so that children stay interested.', 'Removing all praise from schools.', 'Letting children decide their own grades.'], answer: 0, why: '第6段落 create conditions in which children feel capable, have some choice ..., and experience a sense of connection with others。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
