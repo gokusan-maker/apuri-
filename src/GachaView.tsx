@@ -541,6 +541,15 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🆕×{multi.list.filter((k) => k.newKind || k.newSpecies).length}
             </p>
           )}
+          {/* デザイン220：連続ガチャで同じ種類の子が2体以上 */}
+          {(() => {
+            const n = Math.max(0, ...[...new Set(multi.list.map((k) => k.species.id))].map((id) => multi.list.filter((k) => k.species.id === id).length))
+            return n >= 2 ? (
+              <p className="gacha-omen" aria-label="同じ種類がそろった">
+                {n >= 3 ? `👯 ${n}つご！` : '👯 ふたご！'}
+              </p>
+            ) : null
+          })()}
           <ul>
             {multi.list.map((k, i) => (
               <li key={i} className={`r-${k.kind.rarity}`} style={{ animationDelay: `${i * 0.25}s` }}>

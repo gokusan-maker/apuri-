@@ -901,3 +901,25 @@ it('デザイン219：キャラ図鑑で、30日以上いっしょの相棒に�
   expect(screen.queryByLabelText(/日いっしょの長いつきあい/)).toBeNull()
   expect(JSON.parse(localStorage.getItem('eitan:partner-since')!).species).toBe('mochi')
 })
+
+it('デザイン220：連続ガチャで同じ種類が2体なら「👯 ふたご！」、3体なら「👯 3つご！」、ばらばらなら出ない', () => {
+  localStorage.clear()
+  const two = [
+    { kind: kindOf('normal'), species: speciesOf('fox') },
+    { kind: kindOf('kin'), species: speciesOf('fox') },
+    { kind: kindOf('umi'), species: speciesOf('mochi') },
+  ]
+  const { unmount } = render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={() => two} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  expect(screen.getByLabelText('同じ種類がそろった').textContent).toBe('👯 ふたご！')
+  unmount()
+  const three = two.map((k) => ({ ...k, species: speciesOf('cat') }))
+  const r2 = render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={() => three} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  expect(screen.getByLabelText('同じ種類がそろった').textContent).toBe('👯 3つご！')
+  r2.unmount()
+  const none = [two[0], two[2]]
+  render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={() => none} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  expect(screen.queryByLabelText('同じ種類がそろった')).toBeNull()
+})
