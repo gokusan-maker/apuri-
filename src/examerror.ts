@@ -4476,6 +4476,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Generally [spoken], people in this region are very welcoming to visitors from abroad.', choices: ['speaking', 'speak', 'to speak', 'having been spoken'], answer: 0, why: '慣用的な分詞構文 Generally speaking（一般的に言えば）。意味上の主語は話し手で、spoken（言われた）ではない。' },
     ],
   },
+  {
+    id: 'exam-fix-104',
+    title: '入試の誤文訂正〈104〉（共通テストレベル：時と場所の前置詞）',
+    points: ['時：at（時刻）／on（日付・曜日・特定の日の朝）／in（月・年・季節・朝昼晩）。by（～までに・期限）／until（～までずっと・継続）。for（期間の長さ）／during（特定の期間の間）。場所：at（地点）／on（面の上）／in（中・広い場所）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Please finish the report by Friday; I will be here until six.', ja: '金曜日までに報告書を仕上げてください。私は6時までここにいます。' }],
+    questions: [
+      { sentence: 'The concert starts [on] seven thirty, so please arrive early.', choices: ['at', 'in', 'by', 'during'], answer: 0, why: '時刻には at。' },
+      { sentence: 'My sister was born [in] the morning of May 5.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: 'in the morning だが、「特定の日の朝」は on the morning of ～。' },
+      { sentence: 'The museum was built [on] 1925 and is still popular today.', choices: ['in', 'at', 'for', 'during'], answer: 0, why: '年には in。' },
+      { sentence: 'You must hand in the application form [until] next Monday.', choices: ['by', 'for', 'in', 'during'], answer: 0, why: '「～までに（期限）」は by。until は「～までずっと（継続）」。' },
+      { sentence: 'We waited for the bus [by] ten o\'clock, but it never came.', choices: ['until', 'for', 'at', 'during'], answer: 0, why: '「10時までずっと待った」と継続を表すので until。' },
+      { sentence: 'I stayed with my grandparents [during] two weeks last summer.', choices: ['for', 'in', 'by', 'since'], answer: 0, why: '期間の長さ（2週間）は for。during のあとは特定の期間（the summer など）。' },
+      { sentence: 'Someone called me [for] the meeting, but I could not answer.', choices: ['during', 'by', 'until', 'since'], answer: 0, why: '「会議の間に」は特定の期間なので during。' },
+      { sentence: 'Let\'s meet [in] the entrance of the station at noon.', choices: ['at', 'on', 'by', 'during'], answer: 0, why: '待ち合わせの「地点」には at。' },
+      { sentence: 'There is a beautiful picture [in] the wall of the classroom.', choices: ['on', 'at', 'by', 'into'], answer: 0, why: '壁の「面に接して」いるので on。' },
+      { sentence: 'Many people go skiing [on] winter in this area.', choices: ['in', 'at', 'by', 'for'], answer: 0, why: '季節には in。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
