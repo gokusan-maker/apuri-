@@ -1755,6 +1755,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="40" cy="56" r="2" fill="#ffffff" /><circle cx="48" cy="62" r="2" fill="#ffffff" /><circle cx="56" cy="56" r="2" fill="#ffffff" /><circle cx="44" cy="68" r="2" fill="#ffffff" /><circle cx="54" cy="68" r="2" fill="#ffffff" />
       </g>
     )
+  if (species === 'variedtit')
+    return (
+      <g>
+        {/* 頭の白いもようと、足でおさえた木の実 */}
+        <path d="M40 38 Q50 34 60 38" fill="none" stroke="#fafaf9" strokeWidth="3" strokeLinecap="round" />
+        <ellipse cx="50" cy="84" rx="5" ry="4" fill="#92400e" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
