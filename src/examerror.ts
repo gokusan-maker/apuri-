@@ -4350,6 +4350,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Each of the theories proposed in the past century, however convincing it appeared at the time, [have] eventually been challenged.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: '主語は Each（単数）。proposed … century と however … time をとばすと、動詞は has been challenged。' },
     ],
   },
+  {
+    id: 'exam-fix-101',
+    title: '入試の誤文訂正〈101〉（東大レベル：長い文の時制・仮定法・譲歩）',
+    points: ['東大の要約・英作文では、長い文の中で時制の一致・仮定法（過去・過去完了・仮定法現在）・譲歩（however／whatever／no matter）を正しく使えるかが問われる。主節と従属節の時の関係を確かめる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'If the government had acted sooner, fewer people would be living in poverty today.', ja: '政府がもっと早く手を打っていたら、今日、貧困の中で暮らす人はもっと少なかっただろう。' }],
+    questions: [
+      { sentence: 'The historian argued that the empire [has begun] to decline long before the famous battle that is usually blamed for its fall.', choices: ['had begun', 'begins', 'is beginning', 'will have begun'], answer: 0, why: '主節が過去（argued）で、それより前のこと（long before the battle）なので過去完了 had begun。' },
+      { sentence: 'If the researchers [would have checked] their data more carefully, they would have noticed the error before the paper was published.', choices: ['had checked', 'checked', 'have checked', 'would check'], answer: 0, why: '過去の事実の反対なので、if 節は過去完了 had checked。if 節に would have は使わない。' },
+      { sentence: 'Had the city invested in public transport twenty years ago, traffic [would not have been] so heavy today.', choices: ['would not be', 'will not be', 'had not been', 'would not have'], answer: 0, why: '条件は過去（twenty years ago）、結果は現在（today）の「ねじれ」の仮定法。帰結は would not be。' },
+      { sentence: 'The committee recommended that every new building [is] equipped with solar panels by the end of the decade.', choices: ['be', 'was', 'will be', 'being'], answer: 0, why: 'recommend・suggest・demand などのあとの that 節は動詞の原形（仮定法現在）。be equipped。' },
+      { sentence: '[However the problem may seem complicated], it can be broken down into a few simple questions.', choices: ['However complicated the problem may seem', 'However may the problem seem complicated', 'Whatever complicated the problem may seem', 'Although complicated may the problem seem'], answer: 0, why: 'However ＋形容詞 ＋ S ＋ V で「どれほど～でも」。形容詞 complicated を However のすぐあとに置く。' },
+      { sentence: 'It is time that we [stop] treating the environment as a resource that will never run out.', choices: ['stopped', 'will stop', 'have stopped', 'had stopped'], answer: 0, why: 'It is time (that) ＋仮定法過去 で「もう～してもいいころだ」。stopped。' },
+      { sentence: 'She spoke about the ancient city as if she [has lived] there herself, though she had only read about it in books.', choices: ['had lived', 'lives', 'has been living', 'would live'], answer: 0, why: 'as if のあとで、過去の事実と反対のことは仮定法過去完了 had lived。' },
+      { sentence: 'By the time the new policy takes effect next year, many of the small farms in the region [will close].', choices: ['will have closed', 'have closed', 'closed', 'had closed'], answer: 0, why: '未来のある時点（next year）までに完了していることなので未来完了 will have closed。' },
+      { sentence: 'I wish the organizers [told] us about the change in schedule before we bought our tickets.', choices: ['had told', 'would tell', 'tell', 'have told'], answer: 0, why: 'I wish ＋仮定法過去完了 で、過去の事実と反対の願い（教えてくれていたらよかったのに）。had told。' },
+      { sentence: '[Whatever difficult the task is], we must complete it before the deadline.', choices: ['However difficult the task is', 'Whatever the task is difficult', 'However the task is difficult', 'No matter what difficult the task is'], answer: 0, why: '形容詞 difficult と組むのは However（No matter how）。Whatever のあとに形容詞だけを置くことはできない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
