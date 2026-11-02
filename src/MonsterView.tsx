@@ -1684,6 +1684,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M42 28 L46 22 L50 28 L54 22 L56 28" fill="none" stroke="#1f2937" strokeWidth="2" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'goshawk')
+    return (
+      <g>
+        {/* 白いまゆと、むねの細かいしま */}
+        <path d="M36 37 Q44 33 50 37" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M42 60 L58 60 M42 64 L58 64 M44 68 L56 68" fill="none" stroke="#475569" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
