@@ -1969,6 +1969,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M32 58 L42 54 M34 64 L44 60" fill="none" stroke="#cbd5e1" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'scalythrush')
+    return (
+      <g>
+        {/* うろこのような黒いもよう */}
+        <path d="M40 60 Q44 57 48 60 M50 60 Q54 57 58 60 M44 66 Q48 63 52 66" fill="none" stroke="#1c1917" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
