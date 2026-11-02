@@ -26670,6 +26670,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-true-self',
+    title: 'Being Yourself or Becoming Yourself?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few pieces of advice are repeated as often today as the encouragement to be yourself. Advertisements urge us to express our true identity through the products we buy, and popular books promise that happiness lies in discovering who we really are. Behind such messages lies a particular picture of the self: the idea that each person possesses a hidden, authentic core that exists before and apart from social roles, and that the task of life is to uncover this core and live in accordance with it. On this view, social life is something like a mask, and the authentic person is the one who has learned to take it off.",
+      "This picture has considerable appeal. It reflects a reasonable dislike of hypocrisy and of pressure to conform, and it has encouraged many people to resist expectations that did not suit them. Yet it also raises difficult questions. If the true self is hidden, how can we know when we have found it? And if it exists apart from all social influences, where does it come from? The language we think in, the values we hold, and even the desires we regard as most personal have been shaped by the families, communities, and cultures in which we have grown up. A self entirely free of such influences would be difficult even to imagine, let alone to discover.",
+      "An alternative view holds that the self is not so much discovered as made. On this account, a person becomes who he or she is through a long process of acting, choosing, and responding to others. Our characters are formed by the commitments we keep, the skills we develop, and the relationships we sustain. Rather than lying beneath our social lives, the self is constructed within them, much as a path is created by the repeated footsteps of those who walk along it. Who we are, on this view, is less a secret waiting to be revealed than a story that is still being written.",
+      "This second view has the advantage of explaining why people can change. If the self were a fixed inner essence, then any significant change in character would amount to a kind of betrayal, a departure from who one really is. But if the self is made through action, then growth and transformation are part of its nature. A shy person who gradually learns to speak in public is not abandoning a true self but developing a new one. ( A ) the self is built over time, it can also be rebuilt, and this possibility offers hope to anyone who is dissatisfied with the person he or she has so far become.",
+      "The constructive view does not, however, imply that anything goes. Not every self that a person might construct is equally admirable, and the materials with which we work are not unlimited. We cannot simply decide to become anyone we like. Our temperaments, our histories, and the circumstances in which we find ourselves set limits on what is possible, and some choices close off others. The making of a self is therefore less like designing a building from nothing than like renovating an old house, in which the existing structure must be respected even as it is changed.",
+      "Seen in this light, the advice to be yourself may be better replaced by the advice to become yourself. Such a formulation acknowledges that identity is not a finished possession but an ongoing task, one that involves both continuity and change. It also suggests that the self is not something to be guarded in isolation but something shaped in the company of others. To become oneself, in this sense, is not to withdraw from the world in search of a hidden essence, but to take part in it thoughtfully, with an awareness of the many influences that make us who we are.",
+    ],
+    ja: [
+      '今日、「自分らしくあれ」という励ましほどくり返される助言はほとんどない。広告は、買う製品を通じて本当のアイデンティティを表現するようすすめ、人気のある本は、幸せは本当の自分を見つけることにあると約束する。こうしたメッセージの背後には、自己についての特定の像がある。つまり、人はそれぞれ、社会的な役割より前に、それとは別に存在する、かくれた本物の核をもっており、人生の課題はこの核を明らかにし、それにしたがって生きることだ、という考えである。この見方では、社会生活は仮面のようなものであり、本物の人とはそれを外すことを学んだ人のことなのである。',
+      'この像にはかなりの魅力がある。それは偽善や周りに合わせろという圧力へのもっともな嫌悪を反映しており、多くの人が自分に合わない期待にあらがうのを励ましてきた。しかし、それはむずかしい問いも生む。本当の自己がかくれているなら、それを見つけたときに、どうしてそうだとわかるのか。そしてそれがあらゆる社会的な影響と無関係に存在するなら、それはどこから来るのか。私たちが考えるときの言語、私たちのもつ価値観、そして最も個人的だとみなしている欲求でさえ、私たちが育ってきた家族や共同体や文化によって形づくられてきたのである。こうした影響からまったく自由な自己は、見つけることはおろか、想像することさえむずかしいだろう。',
+      'もう1つの見方は、自己は見つけられるというより作られるものだと考える。この説明によれば、人は行動し、選び、他者に応えるという長い過程を通じて、その人になっていく。私たちの性格は、守る約束、身につける技能、保ち続ける関係によって形づくられる。自己は社会生活の下にかくれているのではなく、その中で組み立てられるのであり、それはちょうど、道がそこを歩く人々のくり返しの足あとによって作られるのと同じようなものである。この見方では、私たちが何者であるかは、明かされるのを待っている秘密というより、まだ書かれている途中の物語なのである。',
+      'この2つ目の見方には、なぜ人が変わりうるのかを説明できるという利点がある。もし自己が固定した内なる本質であるなら、性格の大きな変化はどれも一種の裏切り、つまり本当の自分からはずれることになってしまうだろう。しかし自己が行動を通じて作られるなら、成長や変化はその本性の一部である。人前で話すことを少しずつ身につける内気な人は、本当の自己を捨てているのではなく、新しい自己を育てているのである。自己は時間をかけて築かれるのだから、築き直すこともできるのであり、この可能性は、これまでになってきた自分に満足していないすべての人に希望を与えてくれる。',
+      'しかし、この組み立てるという見方は、何でもありということを意味しない。人が組み立てうるすべての自己が同じくらい立派なわけではなく、私たちが使う材料にも限りがある。私たちは、好きなだれにでもなろうと単に決めることはできない。気質や経歴や置かれた状況が、何が可能かに限界を設け、ある選択はほかの選択を閉ざしてしまう。したがって、自己を作ることは、何もないところから建物を設計することよりも、古い家を改修することに近い。そこでは、変えながらも、すでにある構造を尊重しなければならないのである。',
+      'このように見ると、「自分らしくあれ」という助言は、「自分になっていけ」という助言に置きかえたほうがよいのかもしれない。そうした言い方は、アイデンティティが完成した持ち物ではなく、続いていく課題であり、連続と変化の両方をふくむものだと認めている。それはまた、自己がひとりで守るべきものではなく、他者とともにいる中で形づくられるものであることも示している。この意味で自分になるとは、かくれた本質を求めて世界から身を引くことではなく、私たちを今の私たちにしている多くの影響に気づきながら、思慮深く世界に加わることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「時間をかけて築かれるのだから、築き直すこともできる」という理由の Because。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、「自分らしくあれ」という像は、多くの人が合わない期待にあらがう助けになってきた。', answer: true, why: '第2段落 it has encouraged many people to resist expectations that did not suit them。' },
+      { statement: '筆者によれば、最も個人的な欲求は、社会や文化の影響をまったく受けていない。', answer: false, why: '第2段落 even the desires we regard as most personal have been shaped by the families, communities, and cultures。' },
+      { statement: '筆者によれば、組み立てる見方では、人は好きなだれにでもなれる。', answer: false, why: '第5段落 We cannot simply decide to become anyone we like。' },
+      { statement: '筆者は、自己を作ることを古い家の改修にたとえている。', answer: true, why: '第5段落 less like designing a building from nothing than like renovating an old house。' },
+    ],
+    qa: [
+      { q: 'What advantage does the view that the self is made have, according to the fourth paragraph?', choices: ['It explains why people can change and grow.', 'It proves that everyone has a hidden core.', 'It shows that change is a kind of betrayal.', 'It makes people less shy.'], answer: 0, why: '第4段落 This second view has the advantage of explaining why people can change。' },
+      { q: 'What does the writer suggest replacing the advice to be yourself with?', choices: ['The advice to become yourself.', 'The advice to copy others.', 'The advice to withdraw from the world.', 'The advice to buy new products.'], answer: 0, why: '第6段落 may be better replaced by the advice to become yourself。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
