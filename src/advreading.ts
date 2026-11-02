@@ -26088,6 +26088,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-shrinking-towns',
+    title: 'Learning to Shrink Well',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of the twentieth century, planners in industrialized countries assumed that towns and cities would continue to grow, and population growth was treated almost as a law of nature. Roads, schools, and water systems were designed with expansion in mind, and a declining population was regarded as a sign of failure. Today, however, many places are facing the opposite situation. In parts of Japan, Europe, and North America, low birth rates and the movement of young people to large cities have left smaller towns with fewer residents each year. Learning how to manage this decline has become one of the most pressing challenges for local governments. Because the old assumptions were built into laws, budgets, and the expectations of residents, changing them has proved far more difficult than many people expected.",
+      "The effects of shrinking populations are visible in many ways. Shops close because there are not enough customers, schools merge or shut down, and bus routes are reduced or abandoned. Houses stand empty, sometimes for years, because their owners have died or moved away and no buyers can be found. As the number of working-age residents falls, so does the tax revenue needed to maintain roads, pipes, and public buildings, many of which were built for a much larger population. The result can be a downward spiral in which reduced services encourage even more people to leave.",
+      "Older residents are often the most affected. Many of them have spent their entire lives in these communities and have strong attachments to the land, the local culture, and their neighbors. Yet as services disappear, daily life becomes more difficult, especially for those who cannot drive. Reaching a hospital or a supermarket may require a long journey, and the gradual loss of friends and neighbors can lead to isolation. Volunteer groups and neighborhood associations, which once organized festivals and helped those in need, also struggle to find new members as their members grow older. For these residents, population decline is not an abstract statistic but a change in the texture of everyday life.",
+      "Some towns have tried to reverse the trend by attracting new residents. They offer financial support to young families, cheap or free houses, or help for people who wish to start businesses. Advances in communication technology have made it possible for some workers to do their jobs remotely, and a number of people have moved from large cities in search of more space and a slower pace of life. Such efforts have had some success, but in most cases they are unlikely to bring populations back to their former levels. Moreover, when many towns compete for the same small number of newcomers, the success of one community may simply come at the expense of another.",
+      "For this reason, a growing number of planners argue that the goal should not be to restore growth but to shrink well. This approach accepts that the population will continue to fall and seeks to maintain a good quality of life for those who remain. It may involve concentrating services in a compact town center, converting unused buildings to new purposes, and using empty land for parks or farming. ( A ) spreading limited resources thinly across a wide area, such towns try to create places that are smaller but still vibrant. Some towns have even found that a smaller population allows closer cooperation among residents and a stronger sense of shared responsibility for their community.",
+      "Shrinking well is not easy. Decisions about which services to keep and which areas to develop can be painful, and residents may feel that their communities are being abandoned. Successful approaches therefore depend on involving local people in planning and on recognizing that a town's value lies not only in its size but also in the relationships, traditions, and landscapes it contains. In a world where many societies will grow older and smaller, the experiences of these communities may offer valuable lessons for others.",
+    ],
+    ja: [
+      '20世紀の大部分を通じて、工業化された国の都市計画家たちは、町や都市は成長し続けると考えていた。人口の増加は、ほとんど自然の法則のように扱われていた。道路や学校や水道のしくみは拡大を念頭に置いて設計され、人口の減少は失敗のしるしとみなされた。しかし今日、多くの場所がその逆の状況に直面している。日本やヨーロッパや北アメリカの一部では、出生率の低さと若者の大都市への移動によって、小さな町の住民は年々少なくなっている。この減少をどう管理するかを学ぶことは、地方自治体にとって最も差しせまった課題の1つになっている。古い前提は法律や予算や住民の期待に組みこまれていたため、それを変えることは多くの人が予想したよりはるかにむずかしいとわかってきた。',
+      '人口減少の影響は、さまざまな形で目に見える。客が足りないので店が閉まり、学校は統合されたり閉じられたりし、バスの路線はへらされたり、なくされたりする。持ち主が亡くなったり引っこしたりして、買い手が見つからないので、家が何年も空き家のまま残ることもある。働く年れいの住民がへるにつれて、道路や水道管や公共の建物を維持するのに必要な税収もへる。しかもその多くは、ずっと多い人口のために建てられたものである。その結果、サービスがへることでさらに多くの人が出ていく、という悪循環が生まれることがある。',
+      '高齢の住民が最も影響を受けることが多い。彼らの多くはこうした共同体で一生を過ごしてきており、土地や地元の文化や近所の人々に強い愛着をもっている。しかしサービスが消えていくにつれて、とくに車を運転できない人にとって、毎日の生活はよりむずかしくなる。病院やスーパーに行くのに長い道のりが必要になることもあり、友人や近所の人がしだいにいなくなることは、孤立につながりうる。かつて祭りを開き、困っている人を助けていたボランティア団体や町内会も、会員が年をとるにつれて新しい会員を見つけるのに苦労している。こうした住民にとって、人口減少は抽象的な統計ではなく、ふだんの生活の手ざわりの変化なのである。',
+      '新しい住民を呼びこむことで、この流れを逆にしようとしてきた町もある。若い家族へのお金の支援や、安い、あるいは無料の家、商売を始めたい人への手助けを用意するのである。通信技術の進歩によって、一部の働き手は仕事を遠くからできるようになり、より広い空間とゆったりした暮らしを求めて大都市から移ってきた人もいる。こうした取り組みはいくらか成功してきたが、ほとんどの場合、人口をもとの水準までもどすことはできそうにない。さらに、多くの町が同じ少ない数の移住者を取り合うと、ある共同体の成功は、単に別の共同体の犠牲の上に成り立つだけかもしれない。',
+      'このため、目標は成長を取りもどすことではなく、うまく縮むことであるべきだと主張する計画家がふえている。このやり方は、人口が減り続けることを受け入れ、残る人々のよい暮らしの質を保とうとするものである。それには、サービスをこぢんまりとした町の中心に集めること、使われていない建物を新しい目的に作り変えること、空いた土地を公園や農業に使うことがふくまれるかもしれない。限られた資源を広い地域にうすく広げるのではなく、こうした町は、小さくてもいきいきとした場所をつくろうとしているのである。人口が少ないほうが、住民どうしのより密接な協力と、共同体への責任を分かち合うより強い意識が生まれることに気づいた町さえある。',
+      'うまく縮むことはかんたんではない。どのサービスを残し、どの地域を整えるかという決定はつらいことがあり、住民は自分たちの共同体が見すてられつつあると感じるかもしれない。したがって、うまくいくやり方は、地元の人々を計画に加えること、そして町の価値はその大きさだけでなく、そこにふくまれる人間関係や伝統や景色にもあると認めることにかかっている。多くの社会がより高齢になり、より小さくなっていく世界で、こうした共同体の経験は、ほかの場所にとって価値ある教訓をあたえてくれるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Rather than', 'Because of', 'In addition to', 'As well as'], answer: 0, why: '「うすく広げるのではなく、小さくてもいきいきとした場所をつくる」という対比なので Rather than。' },
+    ],
+    summary: {
+      text: 'Many small towns are losing population, which leads to closed shops and reduced services in a downward ( 1 ). Older residents are especially affected. Attracting new residents has had limited success, so many planners now argue that towns should ( 2 ) well by concentrating services and reusing land, while ( 3 ) local people in planning.',
+      blanks: [
+        { choices: ['spiral', 'road', 'price', 'season'], answer: 0, why: '第2段落 The result can be a downward spiral ～。' },
+        { choices: ['shrink', 'grow', 'move', 'hide'], answer: 0, why: '第5段落 the goal should not be to restore growth but to shrink well。' },
+        { choices: ['involving', 'ignoring', 'removing', 'taxing'], answer: 0, why: '第6段落 depend on involving local people in planning。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、20世紀の都市計画家は、町は成長し続けると考えていた。', answer: true, why: '第1段落 planners ... assumed that towns and cities would continue to grow。' },
+      { statement: '筆者によれば、人口がへっても税収は変わらない。', answer: false, why: '第2段落 so does the tax revenue needed to maintain roads, pipes, and public buildings（へる）。' },
+      { statement: '筆者によれば、新しい住民を呼びこむ取り組みで、ほとんどの町は人口をもとにもどせた。', answer: false, why: '第4段落 in most cases they are unlikely to bring populations back to their former levels。' },
+      { statement: '筆者によれば、うまく縮むやり方には、使われていない建物を作り変えることがふくまれうる。', answer: true, why: '第5段落 converting unused buildings to new purposes。' },
+    ],
+    qa: [
+      { q: 'Why are older residents often the most affected, according to the third paragraph?', choices: ['As services disappear, daily life becomes harder, especially for those who cannot drive.', 'They are the first to move to large cities.', 'They pay the most taxes.', 'They prefer to live alone.'], answer: 0, why: '第3段落 as services disappear, daily life becomes more difficult, especially for those who cannot drive。' },
+      { q: 'Where does the writer say a town\'s value lies, according to the last paragraph?', choices: ['Not only in its size but also in its relationships, traditions, and landscapes.', 'Only in the number of its residents.', 'Only in the size of its shopping center.', 'In the speed of its growth.'], answer: 0, why: '第6段落 a town\'s value lies not only in its size but also in the relationships, traditions, and landscapes it contains。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
