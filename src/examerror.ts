@@ -2810,6 +2810,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Please (B) let me (C) knowing (D) when you arrive.', choices: ['(A) Please', '(B) let me', '(C) knowing', '(D) when you arrive'], answer: 2, why: 'let ＋ O ＋ 原形。let me know。' },
     ],
   },
+  {
+    id: 'exam-error-usage-todai',
+    title: '入試の正誤問題〈119〉（東大レベル：英作文でまちがえやすい語法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'suggest／recommend that S 原形、explain A to 人、hope that ～／wish（仮定法）、lend／borrow、make it possible for 人 to ～、look forward to ～ing、discuss（他動詞）、It is ～ for 人 to … 。',
+    ],
+    examples: [
+      { en: 'The doctor suggested that I take a short walk every day.', ja: '医者は私に毎日少し散歩するようすすめた。' },
+      { en: 'We are looking forward to seeing you again.', ja: 'またお会いできるのを楽しみにしています。' },
+    ],
+    questions: [
+      { sentence: 'The doctor (A) suggested me (B) to take (C) a short walk (D) every day.', choices: ['(A) suggested me', '(B) to take', '(C) a short walk', '(D) every day'], answer: 0, why: 'suggest は人を目的語にとらない。suggested that I take a short walk。' },
+      { sentence: '(A) Could you (B) explain me (C) the meaning (D) of this word?', choices: ['(A) Could you', '(B) explain me', '(C) the meaning', '(D) of this word?'], answer: 1, why: 'explain は人を直接目的語にとらない。explain to me the meaning ／ explain the meaning to me。' },
+      { sentence: 'We (A) hope (B) you (C) to have a wonderful (D) time in Japan.', choices: ['(A) hope', '(B) you', '(C) to have a wonderful', '(D) time in Japan'], answer: 2, why: 'hope 人 to ～ の形はない。We hope (that) you have a wonderful time。' },
+      { sentence: '(A) I hope (B) I were (C) taller (D) like my brother.', choices: ['(A) I hope', '(B) I were', '(C) taller', '(D) like my brother'], answer: 0, why: '現実とちがう願いは wish。I wish I were taller。' },
+      { sentence: '(A) Can I (B) lend (C) your pen (D) for a moment?', choices: ['(A) Can I', '(B) lend', '(C) your pen', '(D) for a moment?'], answer: 1, why: '「借りる」は borrow。Can I borrow your pen?' },
+      { sentence: 'The internet (A) has made (B) possible (C) for people (D) to work from home.', choices: ['(A) has made', '(B) possible', '(C) for people', '(D) to work from home'], answer: 1, why: '形式目的語 it が必要。has made it possible for people to ～。' },
+      { sentence: 'We (A) are looking forward (B) to see (C) you again (D) next summer.', choices: ['(A) are looking forward', '(B) to see', '(C) you again', '(D) next summer'], answer: 1, why: 'look forward to ～ing。to seeing。' },
+      { sentence: '(A) The committee (B) discussed (C) about the budget (D) for three hours.', choices: ['(A) The committee', '(B) discussed', '(C) about the budget', '(D) for three hours'], answer: 2, why: 'discuss は他動詞。discussed the budget。' },
+      { sentence: 'It is (A) necessary (B) for us (C) understanding (D) other cultures.', choices: ['(A) necessary', '(B) for us', '(C) understanding', '(D) other cultures'], answer: 2, why: 'It is ～ for 人 to … 。for us to understand。' },
+      { sentence: '(A) She is (B) good at (C) speaking English and (D) to write it.', choices: ['(A) She is', '(B) good at', '(C) speaking English and', '(D) to write it'], answer: 3, why: 'good at のあとは動名詞をならべる。speaking English and writing it。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
