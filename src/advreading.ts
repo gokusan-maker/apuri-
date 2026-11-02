@@ -26704,6 +26704,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-effective-giving',
+    title: 'Giving with the Head and the Heart',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every year, people around the world give enormous sums of money to charity. They donate to organizations that fight disease, protect the environment, support the arts, or help victims of natural disasters. Most donors give because they are moved by a particular cause, often one connected to their own experiences: a person whose parent died of cancer may support cancer research, while someone who loves animals may give to an animal shelter. In recent years, however, a movement sometimes called effective altruism has challenged this approach, arguing that donors should think much more carefully about where their money can do the most good. The movement has provoked lively debate, not only about charity itself but also about what it means to live a good life.",
+      "The central idea of this movement is simple. Because resources are limited, supporters argue, we should try to direct them to the causes and organizations that produce the greatest benefit for each unit of money spent. Research suggests that the effectiveness of charities can vary enormously. Some programs, such as distributing nets that protect against mosquitoes carrying malaria, appear to save lives at a relatively low cost, while others achieve far less with the same resources. If this is true, then a donor who chooses carefully might accomplish many times more good than one who gives without investigating. From this perspective, choosing a charity carelessly is not a harmless matter of taste, since the lives that could have been saved by a better choice are real, even if the donor never sees them.",
+      "This way of thinking has attracted considerable support, especially among young professionals. Some have chosen careers partly on the basis of how much money they could earn and then donate, and organizations have been established to evaluate charities and recommend those that seem most effective. Supporters claim that the approach simply applies reason and evidence to an area where emotion has traditionally dominated. Giving, they suggest, should be guided by the head as well as the heart. Feelings may tell us that we ought to help, but only careful thought can tell us how to help well.",
+      "Critics, however, have raised a number of objections. One concerns the difficulty of measuring benefit. It may be relatively easy to count the number of lives saved by a health program, but much harder to measure the value of supporting a local library, preserving a language, or promoting human rights. A focus on what can be measured may therefore lead donors to neglect causes whose benefits are real but difficult to express in numbers. Another objection is that the approach can seem cold, treating the relationships and loyalties that motivate much giving as mere biases to be overcome.",
+      "There are also concerns about power. When large sums of money are directed according to the judgments of a small group of evaluators or wealthy donors, important decisions about which problems deserve attention may be made without the participation of the communities affected. Some critics argue that charity, ( A ), cannot replace political action to address the underlying causes of poverty and injustice, and that an emphasis on individual giving may distract from the need for such action. A well-funded program that treats the symptoms of a problem, they suggest, may even reduce the pressure on governments to deal with its causes.",
+      "Despite these disagreements, the debate has been valuable in encouraging donors to reflect on their choices. Few would argue that it does not matter whether a donation achieves its goals, and many traditional charities have responded by becoming more transparent about their results. At the same time, the criticisms are a reminder that doing good involves more than calculation. A thoughtful approach to giving may combine attention to evidence with respect for values that cannot easily be measured, and with humility about the limits of any single person's knowledge.",
+    ],
+    ja: [
+      '毎年、世界じゅうの人々が慈善活動に莫大なお金を寄付している。彼らは、病気とたたかい、環境を守り、芸術を支え、自然災害の被災者を助ける団体に寄付する。たいていの寄付者は、特定の目的に心を動かされて寄付する。それはしばしば自分自身の経験に結びついたものであり、親をがんで亡くした人はがんの研究を支え、動物が大好きな人は動物保護施設に寄付するかもしれない。しかし近年、効果的な利他主義とよばれることもある運動がこのやり方に異議をとなえ、寄付者は自分のお金がどこで最も多くのよいことをなしうるかを、もっとずっと注意深く考えるべきだと論じている。この運動は、慈善活動そのものについてだけでなく、よい人生を送るとはどういうことかについても、活発な議論を引き起こしてきた。',
+      'この運動の中心となる考えは単純である。資源には限りがあるのだから、使うお金の単位あたりで最大の利益を生む目的や団体にそれを向けるようにすべきだ、と支持者たちは主張する。研究によれば、慈善団体の効果は大きく異なりうる。マラリアを運ぶ蚊を防ぐ蚊帳を配るといった計画は、比較的少ない費用で命を救うように見えるが、同じ資源でもずっと少ない成果しか上げない計画もある。もしこれが正しいなら、注意深く選ぶ寄付者は、調べずに寄付する人の何倍もよいことをなしとげられるかもしれない。この見方からすれば、不注意に慈善団体を選ぶことは無害な好みの問題ではない。よりよい選択によって救えたはずの命は、寄付者がそれを目にすることはなくても、現実のものだからである。',
+      'この考え方は、とくに若い専門職の人々のあいだでかなりの支持を集めてきた。どれだけのお金をかせいで寄付できるかを1つの理由に職業を選んだ人もおり、慈善団体を評価し、最も効果的と思われる団体をすすめる組織も設立されてきた。支持者たちは、このやり方は、伝統的に感情が支配してきた分野に、理性と証拠をあてはめているだけだと主張する。寄付は、心だけでなく頭によっても導かれるべきだ、と彼らは言うのである。感情は助けるべきだと教えてくれるかもしれないが、どうすればうまく助けられるかを教えてくれるのは、注意深い思考だけなのである。',
+      'しかし、批判する人々はいくつかの反論をあげてきた。1つは利益をはかることのむずかしさに関するものである。健康計画によって救われた命の数を数えるのは比較的かんたんかもしれないが、地元の図書館を支えることや、ある言語を守ること、人権を広めることの価値をはかるのはずっとむずかしい。したがって、はかれるものに注目すると、寄付者は、利益が現実にあるのに数で表しにくい目的をおろそかにしてしまうかもしれない。もう1つの反論は、このやり方が冷たく思えることがある、というものである。多くの寄付の動機となっている人とのつながりや忠誠心を、乗りこえるべき単なる偏りとして扱ってしまうからである。',
+      '力についての懸念もある。大きな額のお金が、少数の評価者や裕福な寄付者の判断にしたがって向けられると、どの問題が注目に値するかについての重要な決定が、影響を受ける地域の人々が参加しないまま下されるかもしれない。批判する人々のなかには、慈善活動は、どんなに善意からであっても、貧困や不正の根本的な原因に取り組む政治的な行動の代わりにはなれず、個人の寄付を強調することは、そうした行動の必要から注意をそらしてしまうかもしれない、と論じる人もいる。問題の症状に対処する資金の豊かな計画は、その原因に取り組むよう政府にかかる圧力を、むしろ弱めてしまうことさえあるかもしれない、と彼らは言う。',
+      'こうした意見のちがいはあるが、この議論は、寄付者が自分の選択をふり返るよう促したという点で価値があった。寄付がその目標を達成するかどうかはどうでもよいと論じる人はほとんどおらず、多くの昔ながらの慈善団体は、その成果についてより情報を公開することで応えてきた。同時に、批判は、よいことをするには計算以上のものが必要だということを思い出させてくれる。寄付への思慮深いやり方は、証拠への注意と、かんたんにははかれない価値への敬意、そしてどんな1人の人間の知識にも限界があるという謙虚さとを組み合わせるものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['however well intended', 'because it is cheap', 'as soon as possible', 'by all means'], answer: 0, why: '「どんなに善意からであっても」と譲歩を表すので however well intended。' },
+    ],
+    summary: {
+      text: 'Most people give to charity because they are moved by a cause, but the effective altruism movement argues that donors should choose the organizations that do the most good for the money. Critics reply that some benefits are hard to ( 1 ), that the approach can seem ( 2 ), and that it gives power to a small group. Still, the debate has encouraged donors to ( 3 ) on their choices.',
+      blanks: [
+        { choices: ['measure', 'enjoy', 'share', 'hide'], answer: 0, why: '第4段落 One concerns the difficulty of measuring benefit。' },
+        { choices: ['cold', 'expensive', 'old-fashioned', 'dangerous'], answer: 0, why: '第4段落 the approach can seem cold。' },
+        { choices: ['reflect', 'spend', 'insist', 'depend'], answer: 0, why: '第6段落 encouraging donors to reflect on their choices。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、たいていの寄付者は、特定の目的に心を動かされて寄付する。', answer: true, why: '第1段落 Most donors give because they are moved by a particular cause。' },
+      { statement: '研究によれば、慈善団体の効果にはほとんどちがいがない。', answer: false, why: '第2段落 the effectiveness of charities can vary enormously。' },
+      { statement: '批判する人々によれば、人権を広めることの価値は、救われた命の数より数えやすい。', answer: false, why: '第4段落 much harder to measure the value of ... promoting human rights。' },
+      { statement: '筆者によれば、多くの昔ながらの慈善団体は、成果についての情報をより公開するようになった。', answer: true, why: '第6段落 many traditional charities have responded by becoming more transparent about their results。' },
+    ],
+    qa: [
+      { q: 'What is the central idea of effective altruism, according to the second paragraph?', choices: ['Resources should be directed to the causes that produce the greatest benefit for each unit of money.', 'People should only give to causes connected to their own experiences.', 'Charity should be replaced by political action.', 'Donors should give as little as possible.'], answer: 0, why: '第2段落 direct them to the causes and organizations that produce the greatest benefit for each unit of money spent。' },
+      { q: 'What concern about power do critics raise in the fifth paragraph?', choices: ['Important decisions may be made without the participation of the communities affected.', 'Charities may become too small.', 'Donors may lose interest in giving.', 'Governments may ban charities.'], answer: 0, why: '第5段落 may be made without the participation of the communities affected。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
