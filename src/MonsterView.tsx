@@ -1596,6 +1596,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="66" rx="7" ry="4" fill="#1c1917" opacity="0.7" />
       </g>
     )
+  if (species === 'waxwing')
+    return (
+      <g>
+        {/* とがった冠羽と、尾の先の黄色い帯 */}
+        <path d="M44 28 L52 16 L54 28" fill="#d6b48a" stroke="#57351a" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M70 70 L80 74" fill="none" stroke="#facc15" strokeWidth="3.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
