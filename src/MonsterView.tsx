@@ -1580,6 +1580,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 58 L44 60 M50 56 L54 58 M44 66 L48 68" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'orientalcuckoo')
+    return (
+      <g>
+        {/* おなかのしまもようと、黄色い目のふち */}
+        <path d="M42 60 L58 60 M42 65 L58 65 M44 70 L56 70" fill="none" stroke="#334155" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="42" cy="40" r="3.5" fill="none" stroke="#eab308" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
