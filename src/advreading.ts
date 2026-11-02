@@ -25784,6 +25784,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-child-advertising',
+    title: 'Advertising and Children',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Children today encounter advertising almost from the moment they can watch a screen. Brightly colored characters promote breakfast cereals, toys appear in videos made to look like ordinary entertainment, and games played on phones are often interrupted by invitations to buy new items. Because children spend a growing share of their time online, companies have strong reasons to reach them, both as consumers in their own right and as people who influence what their parents buy. The question of whether, and how, such advertising should be regulated has therefore become an important issue in many countries. It touches on questions about freedom of expression, the role of parents, and the responsibilities of businesses, and different societies have answered them in strikingly different ways.",
+      "Those who call for strict limits often begin with the argument that young children cannot understand what advertising is. Research in developmental psychology suggests that before a certain age, many children are unable to distinguish clearly between a commercial and a program, and that even older children may not fully grasp that an advertisement is designed to persuade rather than to inform. If children cannot recognize the purpose of a message, it seems unfair to treat them as if they were capable of making free and informed choices about it.",
+      "A second concern relates to health. Many of the products most heavily advertised to children, such as sweets, fast food, and sugary drinks, are associated with poor diets and rising rates of childhood obesity. Several studies have found that exposure to food advertising increases children's preference for the products shown and, in some cases, the amount they eat. For this reason, some governments have restricted the advertising of unhealthy foods during programs that large numbers of children watch. Supporters of these rules point out that children cannot be expected to resist messages that many adults also find difficult to ignore.",
+      "The growth of online media has made these issues more complicated. On video-sharing platforms, the line between entertainment and advertising is often blurred, as popular creators are paid to feature products in videos that appear to be personal recommendations. Games may encourage players to spend small amounts of money repeatedly, using techniques that critics compare to gambling. Because such content is delivered through personal devices, parents may find it much harder to know what their children are seeing than in the days when the family watched television together.",
+      "Opponents of strict regulation raise several objections. They argue that advertising pays for much of the free content children enjoy, and that banning it could reduce the variety of programs and services available. Some also claim that the responsibility for guiding children lies mainly with parents, who are better placed than governments to decide what is appropriate for their own families. Others suggest that, ( A ) trying to shield children entirely from commercial messages, schools should teach them to recognize and question advertising, an approach often described as media literacy.",
+      "In practice, many societies have tried to combine these approaches. Rules may prohibit certain kinds of advertising aimed at very young children, require clear labels when content has been paid for, and limit the collection of personal data from minors, while schools introduce lessons on how advertising works. Such measures cannot remove commercial influence from children's lives, but they reflect a growing recognition that children are not simply small adults and that the methods used to persuade them deserve special attention. The debate is likely to continue as new forms of media appear, each bringing fresh opportunities for companies and fresh challenges for those who wish to protect the young.",
+    ],
+    ja: [
+      '今日の子どもたちは、画面を見られるようになったほとんどその瞬間から広告にふれる。あざやかな色のキャラクターが朝食のシリアルを宣伝し、おもちゃはふつうの娯楽に見えるように作られた動画に登場し、スマートフォンで遊ぶゲームはしばしば新しいアイテムを買うよう誘う案内で中断される。子どもたちがインターネットで過ごす時間がふえているので、企業には、子どもたちそのものを消費者として、また親が何を買うかに影響をあたえる存在として、子どもに届こうとする強い理由がある。したがって、こうした広告を規制すべきかどうか、そしてどのように規制すべきかという問題は、多くの国で大切な問題になっている。それは表現の自由、親の役割、企業の責任についての問いにかかわっており、社会によっておどろくほどちがった答えが出されてきた。',
+      'きびしい制限を求める人々は、幼い子どもは広告とは何かを理解できないという主張から始めることが多い。発達心理学の研究によれば、ある年れいより前には、多くの子どもはコマーシャルと番組をはっきり区別できず、年上の子どもでさえ、広告が情報をあたえるためではなく説得するために作られていることを十分に理解していないかもしれない。子どもがメッセージの目的を見ぬけないのなら、それについて自由で十分な情報にもとづく選択ができるかのように子どもをあつかうのは不公平に思える。',
+      '2つ目の心配は健康にかかわる。おかしやファストフードや甘い飲み物のように、子どもに向けて最もさかんに広告される製品の多くは、かたよった食事や子どもの肥満の増加と結びついている。いくつかの研究から、食べ物の広告にふれると、子どもが示された製品を好むようになり、場合によっては食べる量もふえることがわかっている。このため、多くの子どもが見る番組の間に、健康によくない食べ物の広告を制限した政府もある。こうした規則を支持する人々は、多くのおとなでさえ無視するのがむずかしいメッセージに子どもが抵抗できるとは期待できないと指摘する。',
+      'インターネットのメディアの広がりは、こうした問題をより複雑にしてきた。動画共有の場では、人気のある作り手がお金をもらって、個人的なおすすめのように見える動画の中で製品を紹介するので、娯楽と広告の境目がしばしばあいまいになっている。ゲームは、批判する人々がかけごとにたとえるような手法を使って、少しずつのお金をくり返し使うよう遊ぶ人をうながすことがある。こうした内容は個人の機械を通じて届けられるので、家族でいっしょにテレビを見ていたころにくらべて、親は子どもが何を見ているのかを知るのがずっとむずかしくなっているかもしれない。',
+      'きびしい規制に反対する人々は、いくつかの反論をあげる。広告は子どもが楽しむ無料の内容の多くをまかなっており、それを禁止すれば、利用できる番組やサービスの種類がへるかもしれないと彼らは主張する。また、子どもを導く責任は主に親にあり、親のほうが政府よりも、自分の家族に何がふさわしいかを決めるのに適した立場にあると主張する人もいる。さらに、子どもを商業的なメッセージから完全に守ろうとするのではなく、学校が子どもに広告を見ぬき、それに疑問をもつことを教えるべきだと示す人もいる。これはしばしばメディア・リテラシーとよばれるやり方である。',
+      '実際には、多くの社会がこうしたやり方を組み合わせようとしてきた。規則によって、とても幼い子どもに向けたある種の広告を禁じ、お金をもらって作られた内容にははっきりした表示を求め、未成年からの個人情報の収集を制限する一方で、学校は広告のしくみについての授業を取り入れることがある。こうした対策で子どもの生活から商業的な影響を取りのぞくことはできないが、それは、子どもは単に小さなおとなではなく、子どもを説得するために使われる方法には特別な注意がはらわれるべきだという認識が高まっていることを反映している。新しい形のメディアがあらわれるたびに、企業には新しい機会が、若者を守りたい人々には新しい難題がもたらされるので、この議論はこれからも続いていくだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'because of', 'as well as', 'in spite of'], answer: 0, why: '「子どもを完全に守ろうとするのではなく、学校が教えるべきだ」という対比なので rather than（～ではなく）。' },
+    ],
+    summary: {
+      text: 'Some people want strict limits on advertising to children because young children cannot understand its ( 1 ) and because much of it promotes unhealthy food. Online media have made the line between entertainment and advertising less ( 2 ). Others argue for parental responsibility and media ( 3 ), and many societies now combine rules with education.',
+      blanks: [
+        { choices: ['purpose', 'price', 'color', 'length'], answer: 0, why: '第2段落 If children cannot recognize the purpose of a message ～。' },
+        { choices: ['clear', 'expensive', 'popular', 'long'], answer: 0, why: '第4段落 the line between entertainment and advertising is often blurred（はっきりしない）。' },
+        { choices: ['literacy', 'companies', 'games', 'laws'], answer: 0, why: '第5段落 an approach often described as media literacy。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、ある年れいより前の多くの子どもは、コマーシャルと番組をはっきり区別できない。', answer: true, why: '第2段落 many children are unable to distinguish clearly between a commercial and a program。' },
+      { statement: '筆者によれば、子どもに向けて最もさかんに広告される製品は、ほとんどが健康によい食べ物である。', answer: false, why: '第3段落 such as sweets, fast food, and sugary drinks, are associated with poor diets。' },
+      { statement: '筆者によれば、個人の機械で内容が届くので、親は子どもが何を見ているかを知りにくくなっている。', answer: true, why: '第4段落 parents may find it much harder to know what their children are seeing。' },
+      { statement: '筆者は、規制によって子どもの生活から商業的な影響を完全に取りのぞけると述べている。', answer: false, why: '第6段落 Such measures cannot remove commercial influence from children\'s lives。' },
+    ],
+    qa: [
+      { q: 'What objection do opponents of strict regulation raise in the fifth paragraph?', choices: ['Advertising pays for much of the free content children enjoy.', 'Children always understand advertising perfectly.', 'Unhealthy food is good for children.', 'Schools should never teach about advertising.'], answer: 0, why: '第5段落 advertising pays for much of the free content children enjoy。' },
+      { q: 'Why might online videos blur the line between entertainment and advertising?', choices: ['Creators are paid to feature products in videos that look like personal recommendations.', 'Videos never contain any products.', 'Television programs are no longer made.', 'Parents always watch videos with their children.'], answer: 0, why: '第4段落 popular creators are paid to feature products in videos that appear to be personal recommendations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
