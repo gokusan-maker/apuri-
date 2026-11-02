@@ -2786,6 +2786,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) If necessary so, (B) we (C) can change (D) the schedule.', choices: ['(A) If necessary so,', '(B) we', '(C) can change', '(D) the schedule'], answer: 0, why: 'if necessary（必要なら）は if (it is) necessary の省略。so は不要。' },
     ],
   },
+  {
+    id: 'exam-error-causative3',
+    title: '入試の正誤問題〈118〉（共通テストレベル：使役動詞・知覚動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'make／let／have ＋ O ＋ 原形、get ＋ O ＋ to 不定詞、have ＋ O ＋ 過去分詞、知覚動詞 ＋ O ＋ 原形／～ing／過去分詞、make の受け身 be made to ～。',
+    ],
+    examples: [
+      { en: 'The coach made the players run around the field.', ja: 'コーチは選手たちにグラウンドを走らせた。' },
+      { en: 'He heard his name called in the crowd.', ja: '彼は人ごみの中で自分の名前がよばれるのを聞いた。' },
+    ],
+    questions: [
+      { sentence: 'The coach (A) made the players (B) to run (C) around the field (D) ten times.', choices: ['(A) made the players', '(B) to run', '(C) around the field', '(D) ten times'], answer: 1, why: '使役の make ＋ O ＋ 原形。made the players run。' },
+      { sentence: '(A) My father (B) let me (C) to use (D) his camera.', choices: ['(A) My father', '(B) let me', '(C) to use', '(D) his camera'], answer: 2, why: 'let ＋ O ＋ 原形。let me use。' },
+      { sentence: 'The teacher (A) had the students (B) read the story (C) and then (D) wrote a summary.', choices: ['(A) had the students', '(B) read the story', '(C) and then', '(D) wrote a summary'], answer: 3, why: 'had the students read ... and then write a summary。使役の have ＋ O ＋ 原形が2つならぶので write（原形）。' },
+      { sentence: '(A) I had (B) my bicycle (C) repair (D) at the shop.', choices: ['(A) I had', '(B) my bicycle', '(C) repair', '(D) at the shop'], answer: 2, why: '自転車は「直される」側なので have ＋ O ＋ 過去分詞。had my bicycle repaired。' },
+      { sentence: '(A) She saw (B) the boy (C) to cross (D) the street.', choices: ['(A) She saw', '(B) the boy', '(C) to cross', '(D) the street'], answer: 2, why: '知覚動詞 see ＋ O ＋ 原形。saw the boy cross。' },
+      { sentence: '(A) Let me to explain (B) the rules (C) before (D) we start the game.', choices: ['(A) Let me to explain', '(B) the rules', '(C) before', '(D) we start the game'], answer: 0, why: 'let ＋ O ＋ 原形。Let me explain。' },
+      { sentence: 'He (A) heard (B) his name (C) calling (D) in the crowd.', choices: ['(A) heard', '(B) his name', '(C) calling', '(D) in the crowd'], answer: 2, why: '名前は「よばれる」側なので heard his name called。' },
+      { sentence: 'The students (A) were made (B) stay (C) after school (D) for an hour.', choices: ['(A) were made', '(B) stay', '(C) after school', '(D) for an hour'], answer: 1, why: 'make の受け身は be made to ～。were made to stay。' },
+      { sentence: '(A) I felt (B) something (C) touched (D) my shoulder.', choices: ['(A) I felt', '(B) something', '(C) touched', '(D) my shoulder'], answer: 2, why: '何かが「さわる」のを感じたので feel ＋ O ＋ 原形。felt something touch。' },
+      { sentence: '(A) Please (B) let me (C) knowing (D) when you arrive.', choices: ['(A) Please', '(B) let me', '(C) knowing', '(D) when you arrive'], answer: 2, why: 'let ＋ O ＋ 原形。let me know。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
