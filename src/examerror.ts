@@ -5484,6 +5484,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[A large number of] water is wasted every day.', choices: ['A large amount of', 'Many', 'A few', 'A number of'], answer: 0, why: 'water は数えられない名詞。a large amount of water。' },
     ],
   },
+  {
+    id: 'exam-fix-128',
+    title: '入試の誤文訂正〈128〉（京大レベル：時制の一致と話法）',
+    points: ['主節が過去形なら、that 節の動詞もふつう過去形（同じとき）・過去完了（それより前）・would（それよりあと）にそろえる。ただし不変の真理や今も続く習慣は現在形のまま。間接話法の疑問文は ask if／whether S＋V、ask 疑問詞＋S＋V（語順はふつうの文）。命令は tell 人 to do、依頼は ask 人 to do。say は say to 人、tell は tell 人（said me は誤り）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She told me that she had lost her key.', ja: '彼女は鍵をなくしたと私に言った。' }],
+    questions: [
+      { sentence: 'He said that he [is] tired after the long trip.', choices: ['was', 'has been', 'will be', 'be'], answer: 0, why: '主節が said（過去）で、同じときのことなので was。' },
+      { sentence: 'She told me that she [lost] her key the day before.', choices: ['had lost', 'loses', 'has lost', 'would lose'], answer: 0, why: '言ったときよりさらに前のことなので過去完了 had lost。' },
+      { sentence: 'I thought that it [will] rain, so I took an umbrella.', choices: ['would', 'will have', 'is going', 'shall'], answer: 0, why: '主節が過去なので、未来のことは would。' },
+      { sentence: 'Our teacher said that the earth [went] around the sun.', choices: ['goes', 'had gone', 'would go', 'was going'], answer: 0, why: '不変の真理は時制の一致を受けず現在形 goes。' },
+      { sentence: 'He asked me [where did I live].', choices: ['where I lived', 'where do I live', 'where I did live', 'that where I lived'], answer: 0, why: '間接疑問の語順は 疑問詞＋S＋V。where I lived。' },
+      { sentence: 'She asked me [that] I could help her with her homework.', choices: ['if', 'what', 'which', 'that if'], answer: 0, why: 'Yes／No でこたえる疑問文の間接話法は ask if（whether）。' },
+      { sentence: 'The doctor [said me] to get more sleep.', choices: ['told me', 'said to me', 'spoke me', 'talked me'], answer: 0, why: '「人に～するように言う」は tell 人 to do。said me は誤り。' },
+      { sentence: 'My mother told me [not stay] up too late.', choices: ['not to stay', 'to not staying', 'do not stay', 'not staying'], answer: 0, why: '否定の命令の間接話法は tell 人 not to do。' },
+      { sentence: 'He [told to me] that he would be late.', choices: ['told me', 'said me', 'told for me', 'spoke to me'], answer: 0, why: 'tell は tell 人 that ～ の形で、to は不要（say なら said to me）。' },
+      { sentence: 'I did not know that she [can] speak five languages.', choices: ['could', 'can have', 'is able', 'will can'], answer: 0, why: '主節が過去なので can は could に。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
