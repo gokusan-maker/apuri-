@@ -25236,6 +25236,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-returning-objects',
+    title: 'Who Owns the Past?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Walk through the galleries of any major museum in Europe or North America, and you will find objects that were made thousands of kilometers away: carved masks, bronze sculptures, ancient manuscripts, and religious statues. Many of these objects arrived in the museum during the nineteenth and early twentieth centuries, a period when powerful countries controlled large parts of the world. In recent years, the question of whether such objects should be returned to the places where they were created has moved from the margins of academic debate to the center of public discussion.",
+      "Those who call for the return of these objects often begin by pointing to how they were acquired. Some were taken by force during military campaigns, others were removed by officials who governed colonies, and still others were purchased under conditions in which the sellers had little real choice. From this perspective, the presence of such objects in foreign museums is a continuing reminder of injustice, and returning them is a way of acknowledging that history. For many communities, the objects are not merely works of art but parts of living traditions, ( A ) absence is felt as a loss.",
+      "Museums that hold such collections have offered a number of responses. Some have argued that their institutions preserve objects that might otherwise have been damaged or destroyed, and that they make them available to millions of visitors from many countries. Others point out that the legal ownership of an object acquired long ago can be difficult to establish, and that returning one item could create pressure to return thousands of others. There is also the claim that great museums serve as places where the cultures of the whole world can be seen side by side, encouraging understanding across borders.",
+      "Critics of these arguments respond that they often reflect the interests of the institutions that make them. The claim that objects are safer in foreign museums, for instance, assumes that the countries of origin are unable to care for their own heritage, an assumption that many find insulting and that is increasingly contradicted by the existence of well-equipped museums around the world. As for the idea of a universal museum, they ask why the cultures of the world should be displayed mainly in a small number of wealthy cities, far from the people whose ancestors made the objects.",
+      "In practice, the debate has begun to produce change. A number of museums have returned items to their countries of origin, sometimes after long negotiations, and some governments have established procedures for examining claims. Other institutions have chosen intermediate solutions, such as long-term loans, joint exhibitions, or partnerships that allow researchers and communities from the countries of origin to study and interpret the objects. These arrangements suggest that the choice need not always be between keeping everything and returning everything. Digital technology has added further possibilities, since detailed three-dimensional scans can allow people in many places to examine an object closely, although few would claim that a digital copy can fully replace the original.",
+      "Beneath the practical questions lies a deeper one: who has the right to tell the story of an object? For much of the past two centuries, that right belonged largely to the museums and scholars of the countries that held the collections. Today, many people believe that the communities connected to the objects should play a central role in deciding how they are displayed, explained, and, in some cases, used in ceremonies. However the debate is resolved in particular cases, it is changing the way museums understand their own purpose. Increasingly, they are seen not as owners of the past but as its temporary guardians, responsible to the communities from which their collections came.",
+    ],
+    ja: [
+      'ヨーロッパや北アメリカのどこかの大きな美術館・博物館の展示室を歩けば、何千キロもはなれた場所で作られた品々に出会うだろう。彫刻された仮面、青銅の彫像、古い写本、宗教の像である。こうした品々の多くは、19世紀から20世紀のはじめにかけて、つまり力の強い国々が世界の広い地域を支配していた時期に、その館にやってきた。ここ数年、こうした品々を作られた場所に返すべきかどうかという問いは、学問の議論のすみから、公の議論の中心へと移ってきた。',
+      'こうした品々の返還を求める人々は、まずそれがどのように手に入れられたかを指摘することが多い。軍事作戦の間に力ずくで奪われたものもあれば、植民地を治めた役人によって持ち出されたものもあり、さらには売り手にほとんど本当の選択肢がない条件のもとで買われたものもある。この見方からすれば、外国の館にそうした品々があることは不正をたえず思い出させるものであり、それを返すことはその歴史を認める1つの方法である。多くの共同体にとって、その品々は単なる芸術作品ではなく、生きている伝統の一部であり、それがないことは損失として感じられるのである。',
+      'こうした所蔵品をもつ館は、いくつかのこたえを示してきた。自分たちの施設が、そうでなければいたんだりこわされたりしたかもしれない品々を保存し、多くの国からの何百万人もの訪問者が見られるようにしていると主張する館もある。ずっと昔に手に入れた品の法的な所有権を確かめるのはむずかしいことがあり、1つの品を返せば、何千ものほかの品を返す圧力が生まれかねないと指摘する館もある。また、すぐれた館は世界じゅうの文化をならべて見られる場所として働き、国境をこえた理解をうながしているという主張もある。',
+      'こうした主張を批判する人々は、それがしばしば、それを唱える施設の利益を反映していると反論する。たとえば、品々は外国の館にあるほうが安全だという主張は、元の国々が自分たちの遺産を世話できないことを前提にしている。その前提を侮辱的だと感じる人は多く、また世界中に設備のととのった館があることによって、その前提はますます否定されている。世界的な館という考えについては、なぜ世界の文化が、その品を作った人々の子孫から遠くはなれた、少数の豊かな都市で主に展示されなければならないのか、と彼らは問う。',
+      '実際には、この議論は変化を生みはじめている。いくつもの館が、ときには長い交渉のあとで、品々を元の国に返してきたし、返還の求めを調べる手続きをもうけた政府もある。ほかの施設は、長期の貸し出し、共同の展覧会、あるいは元の国の研究者や共同体がその品を調べ、解釈できるようにする協力関係のような、中間的な解決策を選んできた。こうした取り決めは、選択が必ずしもすべてを持ち続けるかすべてを返すかの二つに一つである必要はないことを示している。デジタル技術はさらなる可能性を加えた。くわしい立体のスキャンによって、多くの場所の人々がある品を細かく調べられるようになったのである。ただし、デジタルの写しが本物に完全に取ってかわれると主張する人はほとんどいないだろう。',
+      '実際的な問題の下には、もっと深い問いがある。ある品の物語を語る権利はだれにあるのか、という問いである。過去2世紀の大部分にわたって、その権利は主に、所蔵品をもつ国々の館や学者のものだった。今日では、その品々とつながりのある共同体こそが、それをどう展示し、説明し、場合によっては儀式で使うかを決めるうえで中心的な役割をはたすべきだと考える人が多い。個々の場合に議論がどう決着するにせよ、それは館が自らの目的を理解するしかたを変えつつあるのである。館はますます、過去の所有者ではなく、所蔵品がやってきた共同体に対して責任を負う、過去の一時的な守り手とみなされるようになっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'which', 'that', 'what'], answer: 0, why: 'うしろに名詞 absence が続き「その伝統がないこと」なので所有格の関係代名詞 whose。' },
+    ],
+    summary: {
+      text: 'Many objects in Western museums were acquired during a period of ( 1 ) control, and some people argue they should be returned. Museums claim they ( 2 ) the objects and share them with many visitors, but critics reject these claims. In practice, some objects have been returned, and ( 3 ) solutions such as loans and partnerships are also being tried.',
+      blanks: [
+        { choices: ['colonial', 'scientific', 'religious', 'economic'], answer: 0, why: '第1段落 a period when powerful countries controlled large parts of the world、第2段落 officials who governed colonies。' },
+        { choices: ['preserve', 'sell', 'copy', 'destroy'], answer: 0, why: '第3段落 their institutions preserve objects that might otherwise have been damaged or destroyed。' },
+        { choices: ['intermediate', 'violent', 'expensive', 'secret'], answer: 0, why: '第5段落 Other institutions have chosen intermediate solutions, such as long-term loans ～。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、返還の問いは、今では公の議論の中心になっている。', answer: true, why: '第1段落 has moved from the margins of academic debate to the center of public discussion。' },
+      { statement: '筆者によれば、すべての品は公正な条件で買われたものである。', answer: false, why: '第2段落 Some were taken by force ... others were purchased under conditions in which the sellers had little real choice。' },
+      { statement: '批判する人々は、元の国々は自分たちの遺産を世話できないという前提に同意している。', answer: false, why: '第4段落 an assumption that many find insulting。' },
+      { statement: '筆者によれば、すべてを持ち続けるかすべてを返すか以外の選択肢もある。', answer: true, why: '第5段落 the choice need not always be between keeping everything and returning everything。' },
+    ],
+    qa: [
+      { q: 'What deeper question does the writer identify in the last paragraph?', choices: ['Who has the right to tell the story of an object.', 'How much money each object is worth.', 'Which museum has the largest collection.', 'Whether visitors enjoy foreign objects.'], answer: 0, why: '第6段落 who has the right to tell the story of an object?' },
+      { q: 'Why do some museums worry about returning a single object?', choices: ['It could create pressure to return thousands of others.', 'It would make the museum more popular.', 'It is always against international law.', 'The object would no longer exist.'], answer: 0, why: '第3段落 returning one item could create pressure to return thousands of others。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
