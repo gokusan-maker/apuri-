@@ -1905,6 +1905,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="34" cy="62" r="3" fill="#f8fafc" />
       </g>
     )
+  if (species === 'lessercuckoo')
+    return (
+      <g>
+        {/* しまもようのおなかと、黄色いアイリング */}
+        <path d="M42 62 L58 62 M42 66 L58 66" fill="none" stroke="#1e293b" strokeWidth="1.5" />
+        <circle cx="42" cy="44" r="3.5" fill="none" stroke="#facc15" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
