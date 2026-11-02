@@ -167,3 +167,24 @@ export function recordDayBest(name: string, todayWins: number): boolean {
   }
   return todayWins >= 2 && prev >= 1
 }
+
+// デザイン223：ボスごとに、何日続けて勝っているかをおぼえる（同じ日の2回目は数えない・1日あくと1からやりなおし）
+const WIN_DAYS_KEY = 'eitan:boss-win-days'
+export function recordWinDay(name: string, day: string): number {
+  let v: Record<string, { last: string; streak: number }> = {}
+  try {
+    const raw = JSON.parse(localStorage.getItem(WIN_DAYS_KEY) ?? '{}') as unknown
+    if (raw && typeof raw === 'object' && !Array.isArray(raw)) v = raw as typeof v
+  } catch {
+    // こわれたデータは捨てる
+  }
+  const prev = v[name]
+  const gap = prev && typeof prev.last === 'string' ? Math.round((Date.parse(day) - Date.parse(prev.last)) / 86400000) : NaN
+  const streak = gap === 0 ? prev.streak : gap === 1 ? (prev.streak ?? 0) + 1 : 1
+  try {
+    localStorage.setItem(WIN_DAYS_KEY, JSON.stringify({ ...v, [name]: { last: day, streak } }))
+  } catch {
+    // 保存できなくても進める
+  }
+  return streak
+}

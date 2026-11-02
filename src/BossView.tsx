@@ -16,7 +16,7 @@ import { isNight } from './daytime'
 import { ChestTicketContext } from './castle'
 import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
-import { isWinMilestone, loadBook, markLost, recordDayBest, recordWin, recordTodayWin, todayWinsTotal, REVENGE_COINS, saveBook, saveLastBoss, takeRevenge } from './bossbook'
+import { isWinMilestone, loadBook, markLost, recordDayBest, recordWinDay, recordWin, recordTodayWin, todayWinsTotal, REVENGE_COINS, saveBook, saveLastBoss, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
 import { addSealTraits, addSealWin, answersToWin, arenaSeasonOf, attackElemOf, battleRank, BIG_COMBO, BOSS_HP, BOSS_QUESTIONS, BOSS_TRAITS, bossBgOf, BOSSES, bossQuestions, bossTraits, CHARGE_HIT, CHARGE_STUN, cheerOnLose, CONTINUE_COST, countBattle, COUNTER_DMG, counterTarget, CRIT_MS, critDamage, damage, defeatLineOf, DRAIN_HEAL, formatSec, fullTeamHp, GAUGE_MAX, gaugeAfter, GOLDEN_COINS, goldenLook, HEAL_COST, HEARTS, hitMember, hitTarget, hurtLineOf, introLineOf, isAsleep, isChance, isCharge, isCloseLoss, isComeback, isCounterTurn, isCritical, isEnraged, isTeamCombo, levelAttack, loadBossTimes, loadMaxHit, loadNoMissBosses, MEMBER_HIT, MEMBER_HP, MINION_COINS, QUICK_RATE, RANK_S_COINS, recordBossTime, recordBossCombo, recordHit, recordNoMissBoss, reviveOne, SEAL_COINS, SEAL_TICKET_EVERY, shinyLook, SPECIAL_DAMAGE, sRouletteOf, TEAM_COMBO_DAMAGE, TEAM_ORDER, teamBossQuestions, traitAfterHit, type BossLook, type BossRecord, type BossTrait, type TeamHp, type TeamRole } from './boss'
@@ -338,6 +338,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [todayWins, setTodayWins] = useState(0) // デザイン160：今日このボスに勝った回数
   const [todayTotal, setTodayTotal] = useState(0) // デザイン217：今日ぜんぶのボスに勝った回数
   const [dayBest, setDayBest] = useState(false) // デザイン213：1日の勝利回数の自己ベストを更新した
+  const [winStreakDays, setWinStreakDays] = useState(0) // デザイン223：同じボスに何日続けて勝ったか（3日以上・その日はじめての勝利のとき）
   const [stageDone, setStageDone] = useState(false) // デザイン199：この勝利でステージのボスをぜんぶたおした
   const [noMissNth, setNoMissNth] = useState(0) // デザイン148：はじめてノーミスでたおしたとき、ノーミスで何体目か
   const [skillUsed, setSkillUsed] = useState(0) // デザイン121：この戦いで相棒のとくぎが出た回数
@@ -577,6 +578,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const tw = recordTodayWin(look.name, dayKey())
       setTodayWins(tw)
       setDayBest(recordDayBest(look.name, tw))
+      const sd = recordWinDay(look.name, dayKey())
+      setWinStreakDays(tw === 1 && sd >= 3 ? sd : 0)
       setTodayTotal(todayWinsTotal(dayKey()))
       setWinCount(nb[look.name].wins)
     }
@@ -913,6 +916,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {todayWins >= 2 && <span aria-label="今日このボスに勝った回数">📅 今日{todayWins}回目の勝利</span>} {/* デザイン160 */}
             {[3, 5, 10, 20].includes(todayTotal) && <span aria-label="今日のボスの勝利の節目">🔥 今日{todayTotal}勝目！</span>}
             {dayBest && <span aria-label="1日の勝利回数の新記録">📈 今日の新記録（1日{todayWins}勝）</span>}
+            {winStreakDays >= 3 && <span aria-label="同じボスに続けて勝った日数">📆 {winStreakDays}日連続！</span>}
             {stageDone && <span aria-label="ステージのボスをぜんぶたおした">👑 ステージのボスをぜんぶたおした！</span>}
             {corrects >= 10 && <strong className="game-best" style={{ fontSize: '1.15em' }} aria-label="正解した問題の数">📚 {corrects}問正解！</strong>} {/* デザイン163 */}
             {hearts >= HEARTS && <span className="game-best" aria-label="ハート満タンで勝利">❤️ ハート満タンで勝利！</span>} {/* デザイン169 */}

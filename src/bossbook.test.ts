@@ -52,3 +52,14 @@ it('デザイン213：1日の勝利回数の自己ベストをこえたときだ
   expect(recordDayBest('X', 2)).toBe(false) // 記録と同じ
   expect(recordDayBest('X', 3)).toBe(true) // 記録をこえた
 })
+
+it('デザイン223：同じボスに何日続けて勝ったかを数える（同じ日は数えない・1日あくとやりなおし）', async () => {
+  localStorage.clear()
+  const { recordWinDay } = await import('./bossbook')
+  expect(recordWinDay('ドラゴン', '2026-11-01')).toBe(1)
+  expect(recordWinDay('ドラゴン', '2026-11-01')).toBe(1)
+  expect(recordWinDay('ドラゴン', '2026-11-02')).toBe(2)
+  expect(recordWinDay('ドラゴン', '2026-11-03')).toBe(3)
+  expect(recordWinDay('ゴースト', '2026-11-03')).toBe(1)
+  expect(recordWinDay('ドラゴン', '2026-11-05')).toBe(1)
+})
