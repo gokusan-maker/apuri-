@@ -1625,3 +1625,10 @@ it('正誤問題〈119〉：東大レベルの英作文の語法の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) suggested me')
 })
+
+it('誤文訂正〈113〉：不定詞と動名詞の使い分けの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-113')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('smoking')
+})

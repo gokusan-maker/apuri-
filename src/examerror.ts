@@ -4854,6 +4854,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It is important [for us understanding] different cultures.', choices: ['for us to understand', 'that us understand', 'us to understand', 'for understanding us'], answer: 0, why: 'It is ～ for 人 to … の形。for us to understand。' },
     ],
   },
+  {
+    id: 'exam-fix-113',
+    title: '入試の誤文訂正〈113〉（国公立レベル：不定詞と動名詞の使い分け）',
+    points: ['stop ～ing（～するのをやめる）／stop to ～（～するために立ち止まる）、remember ～ing（～したのをおぼえている）／remember to ～（忘れずに～する）、forget ～ing／forget to ～、try ～ing（ためしに～する）／try to ～（～しようと努める）、regret ～ing（～したことを後悔する）／regret to ～（残念ながら～する）。enjoy・finish・mind・avoid は動名詞、decide・hope・plan・refuse は不定詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Remember to lock the door when you leave.', ja: '出かけるときは忘れずにドアのかぎをかけてね。' }],
+    questions: [
+      { sentence: 'My father stopped [to smoke] ten years ago and has felt much healthier since then.', choices: ['smoking', 'smoke', 'to smoking', 'smoked'], answer: 0, why: '「たばこをやめた」は stop ～ing。stop to smoke だと「たばこを吸うために立ち止まる」。' },
+      { sentence: 'Please remember [sending] this letter before the post office closes.', choices: ['to send', 'send', 'sent', 'having sent'], answer: 0, why: '「忘れずに～する（これからのこと）」は remember to ～。' },
+      { sentence: 'I clearly remember [to meet] her at the station years ago.', choices: ['meeting', 'meet', 'to have meet', 'met'], answer: 0, why: '「～したのをおぼえている（過去のこと）」は remember ～ing。' },
+      { sentence: 'I will never forget [to see] the beautiful view from the top of the mountain.', choices: ['seeing', 'see', 'to seeing', 'seen'], answer: 0, why: '「見たことを忘れない（過去）」は forget ～ing。' },
+      { sentence: 'Do not forget [turning off] the lights when you leave the room.', choices: ['to turn off', 'turn off', 'turned off', 'to turning off'], answer: 0, why: '「忘れずに消す（これから）」は forget to ～ の否定。' },
+      { sentence: 'If the door will not open, try [to push] it a little harder; it sometimes sticks.', choices: ['pushing', 'push', 'pushed', 'to pushing'], answer: 0, why: '「ためしに押してみる」は try ～ing。try to ～ は「～しようと努める」。' },
+      { sentence: 'I regret [to tell] him the secret last week; now everyone knows it.', choices: ['telling', 'tell', 'to have tell', 'told'], answer: 0, why: '「（過去に）言ったことを後悔している」は regret ～ing。regret to ～ は「残念ながら～する」。' },
+      { sentence: 'We enjoyed [to talk] with the students from Australia.', choices: ['talking', 'talk', 'to talking', 'talked'], answer: 0, why: 'enjoy は動名詞を目的語にとる。' },
+      { sentence: 'She decided [studying] medicine at university.', choices: ['to study', 'study', 'studied', 'to studying'], answer: 0, why: 'decide は不定詞を目的語にとる。' },
+      { sentence: 'Would you mind [to open] the window? It is very hot in here.', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind は動名詞を目的語にとる。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
