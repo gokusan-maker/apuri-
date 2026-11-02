@@ -25628,6 +25628,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-collecting',
+    title: 'Why We Collect',
+    level: '難関大（評論）',
+    paragraphs: [
+      "People collect an astonishing variety of things. Some gather stamps, coins, or rare books; others accumulate seashells, train tickets, bottle caps, or the small toys that come with breakfast cereal. Collections can be worth a fortune or nothing at all, and they can fill an entire house or a single drawer. Although collecting may seem a trivial hobby, it is so widespread across cultures and periods of history that psychologists and historians have long wondered what deeper needs it might satisfy. The answers they have proposed reveal a good deal about how human beings relate to objects and to one another.",
+      "One explanation emphasizes the pleasure of order. A collection is not simply a pile of objects but a set arranged according to some principle, whether by date, by type, or by country of origin. Building such a set allows collectors to impose structure on a small part of the world, and the gaps in a collection, the items still missing, provide clear goals to pursue. For many people, the search itself is as rewarding as the possession of the objects, and the moment of finding a long-sought item can produce intense satisfaction. Some researchers compare this feeling to the satisfaction of completing a puzzle, in which each new piece makes the overall pattern clearer and brings the final goal a little closer.",
+      "A second explanation concerns memory and identity. Objects can serve as reminders of places visited, people known, and periods of one's own life. A collection of concert tickets, for instance, is also a record of experiences, and looking through it can bring back memories that might otherwise fade. In this sense, collections help people to construct a story about who they are, and some collectors describe their collections as an extension of themselves. Losing a collection, through fire or theft, can therefore feel like losing part of one's past.",
+      "Collecting is also, perhaps surprisingly, a social activity. Collectors often belong to clubs, exchange information, and trade items with one another, and many friendships have been built around a shared interest in objects ( A ) outsiders might consider uninteresting. The knowledge that collectors accumulate about their chosen field can be remarkably detailed, and it is frequently shared generously with newcomers. Museums themselves began, in many cases, as the private collections of wealthy individuals who wished to display their discoveries and their learning to visitors.",
+      "There is, however, a less positive side to collecting. For some people, the desire to acquire becomes a source of anxiety rather than pleasure, and the collection grows beyond the space or money available to it. In extreme cases, psychologists distinguish collecting from hoarding, a condition in which people accumulate objects without order or purpose and find it extremely difficult to throw anything away. The difference lies not so much in the number of objects as in whether the person remains in control of the activity or is controlled by it.",
+      "In an age when music, books, and photographs increasingly exist as digital files rather than physical objects, one might expect collecting to decline. In fact, interest in physical collections, from vinyl records to printed books, appears in some areas to be growing. This suggests that people value not only the information or entertainment that objects provide but also their physical presence: the weight of a book in the hand, the act of arranging items on a shelf, and the sense of ownership that a digital file rarely provides. Collecting, it seems, answers needs that are as old as human culture, and it is likely to continue in some form however much the objects themselves may change.",
+    ],
+    ja: [
+      '人々はおどろくほどさまざまな物を集める。切手や硬貨や珍しい本を集める人もいれば、貝がらや電車の切符や瓶のふたや、朝食のシリアルについてくる小さなおもちゃをためこむ人もいる。コレクションはひと財産の値打ちがあることもあれば、まったく値打ちがないこともあり、家全体をうめつくすこともあれば、引き出し1つにおさまることもある。物を集めることはささいな趣味に見えるかもしれないが、文化や歴史の時代をこえて広く見られるので、心理学者や歴史家は長い間、それがどんなより深い必要を満たしているのかと考えてきた。彼らが示してきた答えは、人間が物とどう、そしておたがいとどうかかわっているかについて、多くのことを明らかにしている。',
+      '1つの説明は、秩序の楽しさを強調する。コレクションは単なる物の山ではなく、年代や種類や生産国など、何らかの原則にしたがってならべられたひとそろいである。そうしたひとそろいを築くことで、集める人は世界の小さな一部に秩序をあたえることができ、コレクションのすき間、つまりまだ足りない物が、追い求めるはっきりした目標をあたえてくれる。多くの人にとって、探すこと自体が物を手に入れることと同じくらい楽しく、長く探していた物を見つけた瞬間は、強い満足をもたらすことがある。この気持ちを、パズルを完成させる満足にたとえる研究者もいる。新しいピースが1つ加わるたびに全体の模様がはっきりし、最後の目標が少し近づくのである。',
+      '2つ目の説明は、記憶と自分らしさにかかわる。物は、おとずれた場所や知り合った人々や、自分の人生のある時期を思い出させるものになりうる。たとえば、コンサートの切符のコレクションは、経験の記録でもあり、それを見返すことで、そうでなければうすれていくであろう記憶がよみがえることがある。この意味で、コレクションは人々が自分はだれなのかという物語を組み立てる助けになり、自分のコレクションを自分自身の延長と表現する人もいる。したがって、火事や盗難でコレクションを失うことは、自分の過去の一部を失うように感じられることがある。',
+      '物を集めることは、意外かもしれないが、社会的な活動でもある。集める人はしばしばクラブに入り、情報を交換し、おたがいに品物を交換する。外の人にはおもしろくないと思われるかもしれない物への共通の関心を中心に、多くの友情が築かれてきた。集める人が自分の選んだ分野について積み重ねる知識はおどろくほどくわしいことがあり、新しく始めた人に気前よく分けあたえられることも多い。博物館そのものも、多くの場合、自分の発見と学識を訪問者に見せたいと願った裕福な個人の私的なコレクションとして始まったのである。',
+      'しかし、物を集めることには、あまりよくない面もある。人によっては、手に入れたいという欲求が楽しさではなく不安の源になり、コレクションが使える場所やお金をこえてふくらんでいく。極端な場合、心理学者は収集とため込みを区別する。ため込みとは、人が秩序も目的もなく物をためこみ、何かをすてることがきわめてむずかしくなる状態である。そのちがいは、物の数というよりも、その人が活動をおさえられているのか、それとも活動におさえられているのかにある。',
+      '音楽や本や写真がますます物ではなくデジタルのファイルとして存在するようになった時代には、物を集めることはおとろえると予想されるかもしれない。実際には、レコードから印刷された本まで、物のコレクションへの関心は、分野によっては高まっているようである。このことは、人々が物があたえてくれる情報や楽しみだけでなく、その物としての存在も大切にしていることを示している。手にしたときの本の重さ、品物を棚にならべる行為、そしてデジタルのファイルではめったに得られない所有の感覚である。物を集めることは人間の文化と同じくらい古い必要にこたえているようであり、集める物そのものがどれほど変わっても、何らかの形で続いていくだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 objects を受け、consider の目的語になる関係代名詞 that。what は先行詞をとらない。' },
+    ],
+    summary: {
+      text: 'Collecting satisfies several needs: the pleasure of creating ( 1 ), the wish to preserve memories and a sense of who one is, and the chance to share an interest with others. It can, however, become ( 2 ) when people lose control of it. Even in a digital age, many people still value the physical ( 3 ) of objects.',
+      blanks: [
+        { choices: ['order', 'noise', 'profit', 'danger'], answer: 0, why: '第2段落 One explanation emphasizes the pleasure of order。' },
+        { choices: ['hoarding', 'teaching', 'trading', 'traveling'], answer: 0, why: '第5段落 psychologists distinguish collecting from hoarding。' },
+        { choices: ['presence', 'price', 'color', 'size'], answer: 0, why: '第6段落 but also their physical presence。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、多くの人にとって、探すこと自体が物を手に入れることと同じくらい楽しい。', answer: true, why: '第2段落 the search itself is as rewarding as the possession of the objects。' },
+      { statement: '筆者は、コレクションを失っても、人は何も感じないと述べている。', answer: false, why: '第3段落 Losing a collection ... can therefore feel like losing part of one\'s past。' },
+      { statement: '筆者によれば、博物館の多くは、裕福な個人の私的なコレクションとして始まった。', answer: true, why: '第4段落 Museums themselves began, in many cases, as the private collections of wealthy individuals。' },
+      { statement: '筆者によれば、デジタルの時代になって、物のコレクションへの関心はどの分野でもなくなった。', answer: false, why: '第6段落 interest in physical collections ... appears in some areas to be growing。' },
+    ],
+    qa: [
+      { q: 'According to the fifth paragraph, what is the main difference between collecting and hoarding?', choices: ['Whether the person remains in control of the activity.', 'The number of objects a person owns.', 'The price of the objects.', 'Whether the objects are old or new.'], answer: 0, why: '第5段落 The difference lies not so much in the number of objects as in whether the person remains in control of the activity。' },
+      { q: 'How is collecting described as a social activity?', choices: ['Collectors join clubs, exchange information, and trade items.', 'Collectors always keep their collections secret.', 'Collectors never talk to newcomers.', 'Collectors only buy items online.'], answer: 0, why: '第4段落 Collectors often belong to clubs, exchange information, and trade items with one another。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
