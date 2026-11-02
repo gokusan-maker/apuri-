@@ -26442,6 +26442,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-useless-knowledge',
+    title: 'In Defense of Useless Knowledge',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In discussions of education and research, the word useful carries enormous authority. Subjects are often justified by the jobs they lead to, and research projects by the products or policies they are expected to produce. Against this background, it can seem almost embarrassing to defend knowledge that has no obvious application. Why, people ask, should public money be spent on the study of ancient languages, distant galaxies, or the habits of obscure insects, when there are so many urgent practical problems to be solved? The question is a reasonable one, and those who defend such studies owe it a serious answer.",
+      "One answer is that the distinction between useful and useless knowledge is much less clear than it appears. History offers many examples of discoveries that seemed entirely without practical value when they were made, but later turned out to be essential. Mathematical ideas developed purely out of curiosity have become the foundations of modern computing and communication; investigations into the behavior of light and atoms, pursued with no thought of profit, eventually made possible technologies on which everyday life now depends. The researchers involved could not have predicted these consequences, and if they had been required to justify their work by its immediate usefulness, much of it might never have been done.",
+      "This argument is powerful, but it has a weakness. It defends useless knowledge only by promising that it will one day become useful, and thus accepts the very standard it seeks to challenge. If the value of curiosity-driven inquiry lies solely in the unexpected benefits it may eventually bring, then we are still judging knowledge by its applications, merely over a longer period. A more radical defense would hold that some forms of understanding are worth pursuing for their own sake, whether or not they ever lead to anything else. Such a claim is harder to prove, but it may come closer to the reasons that actually motivate many scholars and scientists.",
+      "What might such value consist of? Part of the answer lies in the experience of understanding itself. To grasp why the seasons change, how a poem achieves its effect, or what a society long ago believed about the world is to see one's surroundings, and oneself, in a new light. Such understanding enlarges the range of what a person can notice and appreciate. ( A ) a walk through a forest is different for someone who knows the names and histories of the plants, so life as a whole is different for someone whose mind has been furnished by wide and varied knowledge.",
+      "There is also a social dimension to this argument. A society that values only what is immediately useful tends to narrow its sense of what is possible. Questions about meaning, beauty, and justice cannot be answered by technical expertise alone, and a culture that neglects the humanities and the more abstract sciences may find itself well equipped to achieve its goals but poorly equipped to ask whether those goals are worth pursuing. In this sense, apparently useless knowledge serves as a reservoir of perspectives from which a society can criticize and renew itself, much as a varied gene pool allows a species to adapt to conditions that no one could have foreseen.",
+      "None of this implies that practical concerns are unimportant or that every line of inquiry deserves unlimited support. Resources are finite, and choices must be made. But when those choices are made, it is worth remembering that usefulness is not the only measure of value, and that a life, or a civilization, concerned exclusively with means may lose sight of the ends that give those means their point. The freedom to pursue knowledge without knowing where it will lead is not a luxury that a serious society can easily afford to abandon.",
+    ],
+    ja: [
+      '教育や研究についての議論では、「役に立つ」という言葉が大きな権威をもっている。科目はしばしば、それが結びつく仕事によって正当化され、研究計画は、それが生み出すと期待される製品や政策によって正当化される。こうした背景のもとでは、はっきりした応用のない知識を擁護することは、ほとんど気はずかしいことのように思えるかもしれない。解決すべき差しせまった実際の問題がこれほど多いのに、なぜ古代の言語や遠くの銀河やあまり知られていない虫の習性の研究に公のお金を使うべきなのか、と人々は問う。これはもっともな問いであり、そうした研究を擁護する人々は、それにまじめに答える責任がある。',
+      '1つの答えは、役に立つ知識と役に立たない知識の区別は、見かけよりはるかにあいまいだということである。歴史には、なされた当時はまったく実用的な価値がないように思えたが、のちに不可欠だとわかった発見の例がたくさんある。純粋に好奇心から発展した数学の考えは現代の計算や通信の土台となり、もうけをまったく考えずに進められた光や原子のふるまいの研究は、ついには今日の日常生活がたよっている技術を可能にした。かかわった研究者たちはこうした結果を予測できなかっただろうし、もし自分の研究をすぐに役立つかどうかで正当化するよう求められていたら、その多くはなされなかったかもしれない。',
+      'この議論は説得力があるが、弱点もある。それは、役に立たない知識を、いつか役に立つようになると約束することによってのみ擁護しており、そのため、まさに問い直そうとしている基準そのものを受け入れてしまっているのである。好奇心にもとづく探究の価値が、それがやがてもたらすかもしれない予期しない利益だけにあるのなら、私たちはやはり、単により長い期間で、知識をその応用によって判断していることになる。より根本的な擁護は、ある種の理解は、それがほかの何かにつながるかどうかにかかわらず、それ自体のために追求する価値がある、と主張するだろう。そうした主張は証明するのがよりむずかしいが、多くの学者や科学者を実際に動かしている理由により近いかもしれない。',
+      'そうした価値は何から成るのだろうか。答えの一部は、理解するという経験そのものにある。なぜ季節が変わるのか、詩がどのようにその効果を生むのか、はるか昔の社会が世界について何を信じていたのかを理解することは、自分の周りと自分自身を新しい光のもとで見ることである。そうした理解は、人が気づき、味わうことのできる範囲を広げる。植物の名前や歴史を知っている人にとって森の散歩がちがったものになるように、幅広くさまざまな知識によって心がととのえられた人にとっては、人生全体がちがったものになるのである。',
+      'この議論には社会的な面もある。すぐに役に立つものだけを大切にする社会は、何が可能かについての感覚をせばめがちである。意味や美や正義についての問いは技術的な専門知識だけでは答えられず、人文学やより抽象的な科学をおろそかにする文化は、自分の目標を達成するための備えは十分でも、その目標が追求する価値のあるものかどうかを問うための備えは乏しいことに気づくかもしれない。この意味で、一見役に立たない知識は、社会がみずからを批判し、新たにするための視点のたくわえとしてはたらくのである。それはちょうど、多様な遺伝子のたくわえによって、生物の種がだれも予見できなかった条件に適応できるのと同じようなものである。',
+      'こうしたことは、実際的な関心が重要でないとか、あらゆる探究が限りない支援に値するとかいうことを意味しない。資源には限りがあり、選択はなされなければならない。しかし、その選択をするとき、役に立つことだけが価値の尺度ではないこと、そしてもっぱら手段にだけ関心をもつ人生や文明は、その手段に意味を与える目的を見失うかもしれないことを覚えておく価値がある。どこへつながるかわからないまま知識を追い求める自由は、まじめな社会がかんたんに捨ててしまえるぜいたくではないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Just as', 'Even if', 'Unless', 'So that'], answer: 0, why: '後半の so life as a whole is different と組になる Just as ～, so …（～と同じように…）。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、当時は役に立たないと思われた発見が、のちに不可欠になった例が歴史にはたくさんある。', answer: true, why: '第2段落 History offers many examples of discoveries that seemed entirely without practical value ... but later turned out to be essential。' },
+      { statement: '筆者は、第2段落の議論には弱点がまったくないと考えている。', answer: false, why: '第3段落 This argument is powerful, but it has a weakness。' },
+      { statement: '筆者によれば、意味や美や正義についての問いは、技術的な専門知識だけで答えられる。', answer: false, why: '第5段落 cannot be answered by technical expertise alone。' },
+      { statement: '筆者は、資源には限りがあり、選択はなされなければならないと認めている。', answer: true, why: '第6段落 Resources are finite, and choices must be made。' },
+    ],
+    qa: [
+      { q: 'What is the weakness of the argument in the second paragraph, according to the writer?', choices: ['It defends useless knowledge only by promising that it will become useful, accepting the standard it challenges.', 'It is based on false historical examples.', 'It ignores the cost of modern computing.', 'It claims that all research is useless.'], answer: 0, why: '第3段落 It defends useless knowledge only by promising that it will one day become useful, and thus accepts the very standard it seeks to challenge。' },
+      { q: 'How does apparently useless knowledge serve society, according to the fifth paragraph?', choices: ['As a reservoir of perspectives from which a society can criticize and renew itself.', 'As a way to produce new products quickly.', 'As entertainment for wealthy people.', 'As a replacement for technical expertise.'], answer: 0, why: '第5段落 apparently useless knowledge serves as a reservoir of perspectives from which a society can criticize and renew itself。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
