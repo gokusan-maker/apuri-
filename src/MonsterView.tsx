@@ -1708,6 +1708,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="44" cy="62" r="2" fill="#292524" /><circle cx="52" cy="64" r="2" fill="#292524" /><circle cx="48" cy="70" r="2" fill="#292524" />
       </g>
     )
+  if (species === 'bunting')
+    return (
+      <g>
+        {/* 黄色いおなかと、灰緑色の顔 */}
+        <ellipse cx="50" cy="66" rx="9" ry="7" fill="#facc15" />
+        <path d="M36 40 Q46 46 56 40" fill="#65745a" opacity="0.7" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
