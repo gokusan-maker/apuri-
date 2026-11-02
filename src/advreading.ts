@@ -26240,6 +26240,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-online-fame',
+    title: 'Fame in the Age of Social Media',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, fame was rare and slow to arrive. A person might become widely known through military victory, royal birth, or exceptional artistic achievement, but such recognition usually took years to build and was limited to a relatively small number of people. The development of newspapers, radio, film, and television in the nineteenth and twentieth centuries greatly expanded the scale of fame, creating stars whose faces were recognized by millions. Even then, however, access to these media was controlled by a small number of editors, producers, and companies, who decided whose stories would be told. To become famous, in other words, a person usually had to be chosen by someone else.",
+      "The arrival of social media has changed this situation dramatically. Today, anyone with a smartphone can publish videos, photographs, and opinions that may, in principle, reach an audience of millions within hours. Some ordinary people have become famous almost overnight because a single post happened to catch the attention of a large number of viewers. Others have built careers by gradually attracting followers who are interested in their daily lives, their hobbies, or their views on particular topics. In this sense, fame has become more democratic: the gatekeepers who once decided who deserved attention have lost much of their power.",
+      "Yet this new form of fame has its own characteristics and problems. Because attention is the main currency of social media, people who seek recognition are under constant pressure to produce content that will attract views and reactions. This can encourage them to present an exaggerated or carefully edited version of their lives, or to adopt more extreme positions than they actually hold. The line between a person and the image that person presents to the public becomes increasingly difficult to draw, both for the audience and, in some cases, for the person concerned. Some online personalities have described the strange experience of feeling that they must continue to perform a character they no longer recognize as themselves.",
+      "Fame obtained in this way is also often fragile. An audience that gathers quickly may disappear just as quickly when its interest moves elsewhere, and a single careless remark can lead to widespread criticism. For young people in particular, the experience of sudden attention followed by sudden rejection can be deeply distressing. ( A ) the stars of earlier generations, who were usually supported by agents and studios, many people who become famous online must manage these pressures on their own, often without any preparation.",
+      "The changing nature of fame also affects those who are not famous at all. When the lives of celebrities were presented mainly through films and magazines, they seemed distant from the experience of ordinary people. Now that online stars often appear to be people much like their audience, it becomes easier for viewers to compare themselves with them and to feel that their own lives are dull or unsuccessful. Some researchers have suggested that such comparisons may contribute to feelings of dissatisfaction, especially among teenagers who spend many hours on social media. The comparison is rarely fair, since viewers see only the most attractive moments of other lives while experiencing every ordinary moment of their own.",
+      "None of this means that the spread of fame is entirely negative. Social media has allowed people from groups that were once ignored by traditional media to share their experiences, and it has given many talented individuals a chance to reach audiences they could never otherwise have found. The challenge for individuals and societies is to enjoy these opportunities while remaining aware of their costs. Understanding that online images are often constructed, and that attention is not the same as value, may help people of all ages to keep a healthier relationship with the visible lives of others.",
+    ],
+    ja: [
+      '人類の歴史の大部分において、名声はまれで、手に入るのに時間がかかるものだった。人は戦いでの勝利や王家の生まれ、あるいは並はずれた芸術上の業績によって広く知られるようになることもあったが、そうした評価を築くにはたいてい何年もかかり、比較的少数の人に限られていた。19世紀と20世紀に新聞やラジオや映画やテレビが発達すると、名声の規模は大きく広がり、何百万人に顔を知られるスターが生まれた。しかしそのときでさえ、こうしたメディアに出られるかどうかは少数の編集者や制作者や企業がにぎっており、だれの物語が語られるかを彼らが決めていた。言いかえれば、有名になるには、ふつうだれか別の人に選ばれなければならなかったのである。',
+      'ソーシャルメディアの登場は、この状況を劇的に変えた。今日では、スマートフォンをもつだれもが、原理的には数時間のうちに何百万人の観客に届きうる動画や写真や意見を発信できる。ふつうの人のなかには、たった1つの投稿がたまたま多くの人の目にとまったために、ほとんど一夜にして有名になった人もいる。また、自分の日々の生活や趣味や特定の話題についての考えに関心をもつフォロワーを少しずつ集めて、仕事を築いた人もいる。この意味で、名声はより民主的になった。だれが注目に値するかをかつて決めていた門番たちは、その力の多くを失ったのである。',
+      'しかし、この新しい形の名声には、それ独自の特徴と問題がある。ソーシャルメディアでは注目が主な通貨なので、評価を求める人々は、再生数や反応を集める投稿をつくるよう、たえず圧力を受けている。そのため、自分の生活を大げさに、あるいは念入りに編集して見せたり、実際にもっているよりも極端な立場をとったりするよう促されることがある。ある人と、その人が人々に見せるイメージとのあいだに線を引くことは、観客にとっても、場合によっては本人にとっても、ますますむずかしくなっていく。ネットの有名人のなかには、もはや自分自身だとは思えないキャラクターを演じ続けなければならないと感じる、という奇妙な経験を語った人もいる。',
+      'このようにして得られた名声は、しばしばもろくもある。すばやく集まった観客は、関心がほかへ移るとすぐに消えてしまうかもしれないし、たった1つの不注意な発言が広い批判をまねくこともある。とくに若い人にとって、急に注目を浴び、そのあと急に拒絶される経験は、深く苦しいものになりうる。たいてい代理人や映画会社に支えられていた以前の世代のスターとちがって、ネットで有名になった人の多くは、何の準備もないまま、こうした圧力に自分ひとりで対処しなければならない。',
+      '名声の性質の変化は、まったく有名でない人々にも影響する。有名人の生活が主に映画や雑誌を通じて示されていたころ、それはふつうの人の経験から遠いものに思えた。ネットのスターがしばしば観客とよく似た人のように見える今、見る人は自分を彼らと比べ、自分の生活は退屈だとか、うまくいっていないとか感じやすくなる。こうした比較が、とくにソーシャルメディアに何時間も費やす10代のあいだで、不満の気持ちにつながっているかもしれないと示唆する研究者もいる。この比較が公平であることはめったにない。見る人は他人の生活の最も魅力的な瞬間だけを見る一方で、自分の生活については、ありふれた瞬間のすべてを経験しているからである。',
+      'こうしたことは、名声が広がることがまったく悪いということではない。ソーシャルメディアによって、かつて従来のメディアに無視されていた集団の人々が自分の経験を伝えられるようになったし、多くの才能ある人々が、ほかの方法ではとても見つけられなかった観客に届く機会を得た。個人と社会にとっての課題は、こうした機会を楽しみながら、その代償にも気づいていることである。ネット上のイメージはしばしば作られたものであり、注目は価値と同じではないと理解することが、あらゆる年れいの人々が、他人の目に見える生活と健全な関係を保つ助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unlike', 'Like', 'Because of', 'Thanks to'], answer: 0, why: '「以前のスターとちがって、ネットの有名人はひとりで対処しなければならない」という対比なので Unlike。' },
+    ],
+    summary: {
+      text: 'In the past, fame was rare and controlled by a few media companies. Social media has made fame more ( 1 ), since anyone can now reach a large audience. However, the constant need for ( 2 ) can lead people to present edited images of themselves, and online fame is often ( 3 ). It may also make ordinary viewers feel dissatisfied with their own lives.',
+      blanks: [
+        { choices: ['democratic', 'expensive', 'traditional', 'permanent'], answer: 0, why: '第2段落 fame has become more democratic。' },
+        { choices: ['attention', 'silence', 'money', 'education'], answer: 0, why: '第3段落 attention is the main currency of social media。' },
+        { choices: ['fragile', 'reliable', 'private', 'dull'], answer: 0, why: '第4段落 Fame obtained in this way is also often fragile。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、20世紀には、だれの物語が語られるかを少数の編集者や企業が決めていた。', answer: true, why: '第1段落 access to these media was controlled by a small number of editors, producers, and companies。' },
+      { statement: '筆者によれば、ソーシャルメディアで有名になる人は、みな長い時間をかけて有名になる。', answer: false, why: '第2段落 Some ordinary people have become famous almost overnight。' },
+      { statement: '筆者によれば、ネットで有名になった人の多くは、代理人や会社に支えられている。', answer: false, why: '第4段落 many people who become famous online must manage these pressures on their own。' },
+      { statement: '筆者は、名声が広がることには良い面もあると考えている。', answer: true, why: '第6段落 None of this means that the spread of fame is entirely negative。' },
+    ],
+    qa: [
+      { q: 'Why might viewers feel that their own lives are dull, according to the fifth paragraph?', choices: ['Online stars seem similar to them, so it is easier to compare themselves with them.', 'They cannot afford smartphones.', 'Films and magazines no longer exist.', 'Online stars refuse to share their lives.'], answer: 0, why: '第5段落 online stars often appear to be people much like their audience, it becomes easier for viewers to compare themselves with them。' },
+      { q: 'What does the writer suggest may help people keep a healthier relationship with the lives of others?', choices: ['Understanding that online images are often constructed and that attention is not the same as value.', 'Stopping the use of all media.', 'Trying to become famous themselves.', 'Only following people from traditional media.'], answer: 0, why: '第6段落 Understanding that online images are often constructed, and that attention is not the same as value。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
