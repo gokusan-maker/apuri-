@@ -1716,6 +1716,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 40 Q46 46 56 40" fill="#65745a" opacity="0.7" />
       </g>
     )
+  if (species === 'goldcrest')
+    return (
+      <g>
+        {/* 頭のてっぺんの黄色い羽 */}
+        <path d="M42 26 Q50 18 58 26" fill="#facc15" stroke="#ca8a04" strokeWidth="1.5" />
+        <path d="M40 30 L60 30" fill="none" stroke="#1c1917" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
