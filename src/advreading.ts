@@ -25432,6 +25432,43 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-classics',
+    title: 'Why Read Old Books?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every year, thousands of new books are published, many of them offering the latest research, the most recent opinions, and information that was unavailable to earlier generations. In such a world, it might seem strange that schools and universities continue to ask students to read works written centuries ago, by authors who knew nothing of modern science or technology. Why should a busy person spend time on an old book when so much that is new and apparently more useful competes for attention? The question deserves a serious answer, because the habit of reading old books is easily lost once its purpose is forgotten.",
+      "One answer is that old books offer a perspective from outside our own time. Every age has its characteristic assumptions, beliefs so widely shared that people hardly notice them. Because we live within these assumptions, it is difficult to see them clearly, and the books of our own time, however excellent, tend to share them. A book written in a different century, by contrast, was shaped by different assumptions, and reading it can make us aware of ideas we had taken for granted. We may not agree with the old author, but the disagreement itself helps us to see our own beliefs more clearly.",
+      "A second answer concerns the process by which certain books come to be called classics. Most books are forgotten within a few years of their publication. Those that continue to be read after centuries have survived a long process of testing, in which generations of readers with very different concerns have found something of value in them. This does not guarantee that every classic will speak to every reader, but it does suggest that such books contain something more than the passing interests of the moment in which they were written.",
+      "It is also worth noting that old books often address questions that never become obsolete. How should one live? What do we owe to others? How should we face loss, injustice, or death? Modern research can tell us a great deal about the brain and about society, but it does not settle these questions, and the writers of earlier centuries thought about them with a seriousness and depth that remain impressive. ( A ) their circumstances were very different from ours, their struggles with such questions can still illuminate our own.",
+      "None of this means that old books should be treated with uncritical reverence. Many contain views about race, gender, or social class that we now rightly reject, and reading them well requires the ability to recognize such limitations. Indeed, part of the value of reading old books lies in learning to engage with them critically: to admire what deserves admiration, to question what deserves questioning, and to understand why intelligent people in the past believed things that now seem plainly mistaken.",
+      "There is a practical difficulty as well. Old books can be hard to read. Their language may be unfamiliar, their references obscure, and their pace slower than that of modern writing. Yet this difficulty is not entirely a disadvantage. The effort required to understand a demanding text can strengthen the very capacities, such as patience, attention, and the willingness to tolerate uncertainty, that a culture of rapid information makes increasingly rare.",
+      "Perhaps the best reason to read old books, then, is not that they are better than new ones, but that they are different. ( B ) we read only the books of our own time, we risk mistaking the opinions of the present for permanent truths. A mind that moves between the old and the new is better equipped to judge both, and less likely to be carried along by whatever happens to be fashionable.",
+    ],
+    ja: [
+      '毎年、何千冊もの新しい本が出版され、その多くは最新の研究や最近の意見、そして以前の世代には手に入らなかった情報を提供している。そうした世界で、学校や大学が、現代の科学や技術について何も知らなかった著者たちが何世紀も前に書いた作品を、学生に読ませ続けているのは奇妙に思えるかもしれない。新しくて一見もっと役に立つものがこれほど多く注意をうばい合っているのに、なぜいそがしい人が古い本に時間を使わなければならないのだろうか。この問いには真剣な答えが必要である。古い本を読む習慣は、その目的が忘れられると、たやすく失われてしまうからである。',
+      '1つの答えは、古い本は私たち自身の時代の外からの見方をあたえてくれるということである。どの時代にも、特有の前提、つまりあまりに広く共有されているので人々がほとんど気づかない信念がある。私たちはこうした前提の中で生きているので、それをはっきり見るのはむずかしく、私たちの時代の本は、どれほどすぐれていても、その前提を共有しがちである。これに対して、ちがう世紀に書かれた本はちがう前提によって形づくられており、それを読むことで、当然だと思っていた考えに気づくことがある。古い著者に賛成しないかもしれないが、その意見のちがいそのものが、自分自身の信念をよりはっきり見る助けになるのである。',
+      '2つ目の答えは、ある本が古典とよばれるようになる過程にかかわる。ほとんどの本は出版されて数年のうちに忘れられる。何世紀たっても読まれ続けている本は、まったくちがう関心をもつ何世代もの読者が、そこに価値ある何かを見いだしてきた長いためしの過程を生きのびてきたのである。このことは、どの古典もすべての読者に語りかけることを保証するわけではないが、そうした本には、それが書かれた時代の一時的な関心以上の何かがふくまれていることを示している。',
+      'また、古い本がしばしば決して古びることのない問いを取り上げていることも注目に値する。人はどう生きるべきか。私たちは他人に何を負っているのか。喪失や不正や死にどう向き合うべきか。現代の研究は脳や社会について多くのことを教えてくれるが、こうした問いに決着をつけるわけではない。そして以前の時代の書き手たちは、今もなお感銘をあたえる真剣さと深さで、これらの問いについて考えた。彼らの境遇は私たちのものとはまったくちがっていたが、そうした問いとの彼らの格闘は、今も私たち自身の格闘を照らし出してくれるのである。',
+      'こうしたことは、古い本を無批判にあがめるべきだという意味ではない。多くの古い本には、人種や性別や社会階級について、今では私たちが正しくもしりぞける見方がふくまれており、それをよく読むには、そうした限界を見ぬく力が必要である。実際、古い本を読むことの価値の一部は、それに批判的に向き合うことを学ぶ点にある。たたえるに値するものをたたえ、問うに値するものを問い、なぜ過去の聡明な人々が、今では明らかにまちがいに思えることを信じていたのかを理解することである。',
+      '実際的なむずかしさもある。古い本は読みにくいことがある。その言葉はなじみがなく、引用やほのめかしはわかりにくく、進み方は現代の文章よりおそいかもしれない。しかし、このむずかしさはまったくの不利というわけではない。むずかしい文章を理解するのに必要な努力は、忍耐や注意力や不確かさにたえる気持ちのような、すばやく情報が行きかう文化ではますますまれになっている力そのものを強めてくれるのである。',
+      'だとすれば、古い本を読む最もよい理由は、それが新しい本よりすぐれているからではなく、ちがっているからなのかもしれない。自分の時代の本しか読まなければ、私たちは現在の意見を永遠の真理ととりちがえる危険をおかす。古いものと新しいものの間を行き来する頭は、その両方を判断する準備がよりととのっており、たまたまはやっているものに流されることも少ないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「境遇はまったくちがっていたが、今も照らし出してくれる」という逆接なので Although。' },
+      { id: 'B', choices: ['If', 'Although', 'Until', 'Whether'], answer: 0, why: '「自分の時代の本しか読まなければ、～の危険をおかす」という条件なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、どの時代にも、人々がほとんど気づかない共有された前提がある。', answer: true, why: '第2段落 Every age has its characteristic assumptions, beliefs so widely shared that people hardly notice them。' },
+      { statement: '筆者は、古典はどれもすべての読者に必ず語りかけると述べている。', answer: false, why: '第3段落 This does not guarantee that every classic will speak to every reader。' },
+      { statement: '筆者は、古い本を無批判にあがめるべきだと考えている。', answer: false, why: '第5段落 None of this means that old books should be treated with uncritical reverence。' },
+      { statement: '筆者によれば、むずかしい文章を理解する努力は、忍耐や注意力を強めることがある。', answer: true, why: '第6段落 The effort required to understand a demanding text can strengthen the very capacities, such as patience, attention ～。' },
+    ],
+    qa: [
+      { q: 'According to the second paragraph, how can reading an old book help us?', choices: ['It can make us aware of assumptions we had taken for granted.', 'It gives us the latest scientific information.', 'It always confirms what we already believe.', 'It is easier to read than modern books.'], answer: 0, why: '第2段落 reading it can make us aware of ideas we had taken for granted。' },
+      { q: 'What does the writer suggest is the best reason to read old books?', choices: ['They are different from new ones and help us judge the present.', 'They are always better than new books.', 'They contain no mistaken views.', 'They are required by every school.'], answer: 0, why: '第7段落 not that they are better than new ones, but that they are different ... better equipped to judge both。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
