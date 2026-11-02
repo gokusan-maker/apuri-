@@ -3098,6 +3098,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The news (A) about the accident (B) was (C) shocking, and it (D) were reported everywhere.', choices: ['(A) about the accident', '(B) was', '(C) shocking, and it', '(D) were reported everywhere'], answer: 3, why: 'it（the news）は単数。was reported。' },
     ],
   },
+  {
+    id: 'exam-error-inversion-kyodai',
+    title: '入試の正誤問題〈131〉（京大レベル：強調構文と倒置）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '強調構文は It is ～ that …（人なら who も可、what・which は不可）。Never・Little・Rarely・Only then・Not until ～・So＋形容詞が文頭にくると倒置。Hardly had S＋過去分詞 when ～。倒置の do／does／did のあとは原形。',
+    ],
+    examples: [
+      { en: 'Never have I seen such a beautiful view.', ja: 'こんなに美しいながめは見たことがない。' },
+      { en: 'It was my uncle who taught me to swim.', ja: '私に泳ぎを教えてくれたのはおじだった。' },
+    ],
+    questions: [
+      { sentence: 'Never (A) I have (B) seen (C) such a (D) beautiful view.', choices: ['(A) I have', '(B) seen', '(C) such a', '(D) beautiful view'], answer: 0, why: 'Never が文頭なので倒置。have I seen。' },
+      { sentence: 'Not until (A) I lost my wallet (B) I realized (C) how careless (D) I had been.', choices: ['(A) I lost my wallet', '(B) I realized', '(C) how careless', '(D) I had been'], answer: 1, why: 'Not until ～ が文頭なので倒置。did I realize。' },
+      { sentence: 'It was (A) my uncle (B) which (C) taught me (D) to swim.', choices: ['(A) my uncle', '(B) which', '(C) taught me', '(D) to swim'], answer: 1, why: '強調構文で人を強調するときは who か that。' },
+      { sentence: 'Little (A) she knew (B) that (C) her life (D) would change.', choices: ['(A) she knew', '(B) that', '(C) her life', '(D) would change'], answer: 0, why: 'Little が文頭なので倒置。did she know。' },
+      { sentence: 'Only then (A) did (B) we (C) understood (D) the truth.', choices: ['(A) did', '(B) we', '(C) understood', '(D) the truth'], answer: 2, why: 'did のあとは原形。understand。' },
+      { sentence: 'Hardly (A) had I (B) arrived (C) than (D) it began to rain.', choices: ['(A) had I', '(B) arrived', '(C) than', '(D) it began to rain'], answer: 2, why: 'Hardly had S＋過去分詞 when ～。than ではなく when。' },
+      { sentence: 'So (A) difficult (B) the test was (C) that few (D) passed it.', choices: ['(A) difficult', '(B) the test was', '(C) that few', '(D) passed it'], answer: 1, why: 'So＋形容詞が文頭なので倒置。was the test。' },
+      { sentence: 'Rarely (A) does (B) he (C) complains (D) about his job.', choices: ['(A) does', '(B) he', '(C) complains', '(D) about his job'], answer: 2, why: 'does のあとは原形。complain。' },
+      { sentence: 'It is (A) not money (B) what (C) makes people (D) happy.', choices: ['(A) not money', '(B) what', '(C) makes people', '(D) happy'], answer: 1, why: '強調構文 It is ～ that …。what ではなく that。' },
+      { sentence: '(A) It was (B) yesterday (C) that I (D) have met him.', choices: ['(A) It was', '(B) yesterday', '(C) that I', '(D) have met him'], answer: 3, why: 'yesterday（過去）なので met。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
