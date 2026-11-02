@@ -1471,3 +1471,10 @@ it('正誤問題〈108〉：東大レベルの時制・仮定法・譲歩の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) If the scientists would have')
 })
+
+it('誤文訂正〈102〉：まぎらわしい副詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-102')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('hard')
+})

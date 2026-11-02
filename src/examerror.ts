@@ -4392,6 +4392,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Whatever difficult the task is], we must complete it before the deadline.', choices: ['However difficult the task is', 'Whatever the task is difficult', 'However the task is difficult', 'No matter what difficult the task is'], answer: 0, why: '形容詞 difficult と組むのは However（No matter how）。Whatever のあとに形容詞だけを置くことはできない。' },
     ],
   },
+  {
+    id: 'exam-fix-102',
+    title: '入試の誤文訂正〈102〉（共通テストレベル：まぎらわしい副詞）',
+    points: ['hard（熱心に）／hardly（ほとんど～ない）、late（おそく）／lately（最近）、near（近くに）／nearly（ほとんど・もう少しで）、most（大部分の）／almost（ほとんど・副詞）、high（高く）／highly（大いに）など、-ly がつくと意味が変わる副詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She worked hard, but she could hardly finish the report on time.', ja: '彼女は一生けんめい働いたが、報告書を時間内にほとんど終えられなかった。' }],
+    questions: [
+      { sentence: 'He studied [hardly] for the exam and finally passed it.', choices: ['hard', 'harder than', 'hardness', 'the hardest of'], answer: 0, why: '「熱心に勉強した」は hard。hardly は「ほとんど～ない」で意味が逆になる。' },
+      { sentence: 'It was so dark that I could [hard] see the road in front of me.', choices: ['hardly', 'hardest', 'harder', 'not hardly'], answer: 0, why: '「ほとんど見えなかった」は hardly。not hardly は二重否定になる。' },
+      { sentence: 'Have you seen any good movies [late]?', choices: ['lately', 'later', 'latest', 'lateness'], answer: 0, why: '「最近」は lately（現在完了と使う）。late は「おそく」。' },
+      { sentence: 'I am sorry I arrived [lately]; the train was delayed by the snow.', choices: ['late', 'later on', 'lateness', 'the latest'], answer: 0, why: '「おくれて着いた」は late。lately は「最近」。' },
+      { sentence: 'The new bridge is [near] finished, so it will open next month.', choices: ['nearly', 'nearby', 'nearer', 'nearest'], answer: 0, why: '「ほとんど完成している」は nearly。near は「近くに」。' },
+      { sentence: '[Almost] students in the class have smartphones.', choices: ['Most', 'Almost of', 'The most', 'Mostly'], answer: 0, why: '「大部分の生徒」は Most students（または Almost all students）。almost は副詞なので名詞を直接修飾しない。' },
+      { sentence: '[Most of all] the members agreed with the plan, but two people did not.', choices: ['Almost all', 'Mostly all', 'The most', 'Most all'], answer: 0, why: '「ほとんど全員が」は Almost all。Most of all は「何よりも」の意味になる。' },
+      { sentence: 'The professor is [high] respected by both students and colleagues.', choices: ['highly', 'highest', 'height', 'higher than'], answer: 0, why: '「大いに尊敬されている」は highly。high は「高く」（物理的な高さ）。' },
+      { sentence: 'The kite flew [highly] above the trees.', choices: ['high', 'height', 'highness', 'highest of'], answer: 0, why: '「高く飛んだ」は物理的な高さなので high。highly は「大いに・非常に」。' },
+      { sentence: 'There is a convenience store [nearly] my house, so shopping is easy.', choices: ['near', 'nearby to', 'nearer', 'nearest'], answer: 0, why: '「私の家の近くに」は前置詞 near。nearly は「ほとんど」で名詞をとらない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
