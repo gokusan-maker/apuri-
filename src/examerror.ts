@@ -5232,6 +5232,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Judged] from his accent, he must be from Osaka.', choices: ['Judging', 'Having judged', 'Be judged', 'Judge from'], answer: 0, why: '慣用的な分詞構文 judging from ～（～から判断すると）。意味上の主語は一般の人なので現在分詞。' },
     ],
   },
+  {
+    id: 'exam-fix-122',
+    title: '入試の誤文訂正〈122〉（東大レベル：仮定法 if の省略・without／but for・I wish・It is time）',
+    points: ['現在の事実の反対は If S＋過去形, S would＋原形。過去の事実の反対は If S had＋過去分詞, S would have＋過去分詞。if を省略すると倒置（Were I ～／Had S＋過去分詞 ～／Should S ～）。without ～／but for ～ は「～がなければ（なかったら）」。I wish のあとは過去形（今）・had＋過去分詞（過去）。It is (high) time S＋過去形 は「もう～してよいころだ」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Had I known the truth, I would have told you.', ja: 'もし本当のことを知っていたら、あなたに話していただろう。' }],
+    questions: [
+      { sentence: 'If I [know] her address, I would write to her.', choices: ['knew', 'had known', 'will know', 'have known'], answer: 0, why: '主節が would write（現在の事実の反対）なので if 節は過去形 knew。' },
+      { sentence: 'If he had left earlier, he [would catch] the last train yesterday.', choices: ['would have caught', 'will catch', 'would be catching', 'had caught'], answer: 0, why: 'yesterday（過去の事実の反対）なので would have＋過去分詞。' },
+      { sentence: '[I had known] about the meeting, I would have attended it.', choices: ['Had I known', 'If I knew', 'Did I know', 'I knew'], answer: 0, why: 'if を省略すると倒置になる。Had I known（＝If I had known）。' },
+      { sentence: '[If I am] in your position, I would accept the offer.', choices: ['Were I', 'If I will be', 'Was I being', 'I were'], answer: 0, why: '現在の事実の反対で if を省略した倒置 Were I（＝If I were）。' },
+      { sentence: '[But] your help, I could not have finished the work.', choices: ['But for', 'Unless', 'Except', 'If not'], answer: 0, why: '「～がなかったら」は But for ～（＝Without ～）。後ろが名詞なので、接続詞の Unless・If not は使えない。' },
+      { sentence: 'I wish I [can speak] French as well as you.', choices: ['could speak', 'can have spoken', 'will speak', 'am able to speak'], answer: 0, why: 'I wish のあとで今の願望は過去形。could speak。' },
+      { sentence: 'I wish I [studied] harder when I was in high school.', choices: ['had studied', 'study', 'would study', 'have studied'], answer: 0, why: 'when I was in high school（過去）のことなので had＋過去分詞。' },
+      { sentence: 'It is high time you [go] to bed.', choices: ['went', 'will go', 'have gone', 'are going'], answer: 0, why: 'It is (high) time S＋過去形。went。' },
+      { sentence: 'If it [is not] for water, no living thing could survive.', choices: ['were not', 'is not being', 'has not been', 'will not be'], answer: 0, why: '主節が could survive（現在の事実の反対）なので If it were not for ～（もし～がなければ）。' },
+      { sentence: 'He talks as if he [has seen] the accident with his own eyes, but he was not there.', choices: ['had seen', 'sees', 'will see', 'would see'], answer: 0, why: '実際には見ていない過去のことなので as if＋had＋過去分詞。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
