@@ -25124,6 +25124,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-happiness',
+    title: 'Can Happiness Be Measured?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Governments have long measured the success of their countries mainly in economic terms, using figures such as national income to judge whether life is getting better. In recent decades, however, a growing number of researchers and policymakers have argued that such figures capture only part of what matters to people. A country may become richer while its citizens feel more anxious, more isolated, or less satisfied with their lives. This has led to an increasing interest in measuring happiness directly, usually by asking large numbers of people how satisfied they are with their lives as a whole.",
+      "At first sight, the idea seems both sensible and humane. If the purpose of public policy is to improve people's lives, it appears reasonable to ask them how their lives are going rather than to rely on indirect indicators. Surveys of this kind have produced some striking findings. Beyond a certain level, for example, additional income seems to raise reported satisfaction only modestly, while factors such as health, secure employment, and the quality of personal relationships appear to matter a great deal. Such results, ( A ) they are confirmed, could encourage governments to pay more attention to areas of life that economic statistics tend to neglect.",
+      "Nevertheless, the attempt to measure happiness raises difficult questions. The first concerns the meaning of the answers themselves. When a person rates his or her life on a scale from zero to ten, it is far from clear what the number represents. People from different cultures may interpret the question differently, and even within a single society, individuals may compare their lives with very different standards. A modest score might reflect genuine hardship, or it might reflect a cultural habit of describing one's situation with restraint. Moreover, the way a question is asked can influence the answer: people who are first asked about their social life, for instance, may respond to the general question differently from those who are first asked about their income, which suggests that the numbers are sensitive to small details of how a survey is designed.",
+      "A second difficulty is that people adapt to their circumstances. Studies suggest that those who experience major changes, whether good or bad, often return over time to a level of satisfaction close to their previous one. This capacity for adaptation is in many ways fortunate, but it means that reported happiness may remain stable even when conditions change considerably. A population that has grown used to poor conditions might report reasonable satisfaction, and a government that relied only on such reports could conclude that no improvement was needed.",
+      "There is also a deeper philosophical concern. Happiness, at least as measured by surveys, is a feeling, and many thinkers have argued that a good life consists of more than feeling satisfied. A life may include meaningful work, the pursuit of knowledge, or commitment to other people, even when these involve frustration and sacrifice. If public policy aimed only at increasing reported satisfaction, it might neglect values that people themselves regard as more important than comfort, ( B ) it might encourage a kind of contentment that discourages people from seeking change.",
+      "None of these objections means that measures of happiness are useless. They can draw attention to suffering that would otherwise go unnoticed and remind policymakers that economic growth is a means rather than an end. The lesson is rather that such measures should be treated as one source of information among many, interpreted with care and combined with other evidence about health, freedom, and opportunity. Used in this way, they can enrich public debate about what a good society should provide, rather than replacing that debate with a single number. Happiness may be what most people want, but a society that tried to manage it directly would risk misunderstanding both its citizens and the complexity of a good life.",
+    ],
+    ja: [
+      '政府は長い間、国の成功を主に経済の面ではかり、国民所得のような数字を使って、生活がよくなっているかどうかを判断してきた。しかしここ数十年、こうした数字は人々にとって大切なことの一部しかとらえていないと主張する研究者や政策立案者がふえてきた。国が豊かになりながら、国民がより不安になったり、孤立したり、自分の生活に満足しなくなったりすることもありうる。このことから、幸福を直接はかることへの関心が高まってきた。ふつうそれは、とても多くの人に、自分の人生全体にどれほど満足しているかをたずねることで行われる。',
+      '一見すると、この考えは理にかなっていて、人間味もあるように見える。公共の政策の目的が人々の生活をよくすることなら、間接的な指標にたよるよりも、人生がどうなっているかを本人にたずねるほうが筋が通っているように思える。この種の調査からは、いくつかの目を引く発見が生まれてきた。たとえば、ある水準をこえると、収入がふえても答えられる満足度はわずかにしか上がらないようだが、健康や安定した雇用や人間関係の質のような要因は、とても大きな意味をもつようである。こうした結果は、それが確かめられれば、経済統計が見落としがちな生活の分野に、政府がもっと目を向けるようはげますかもしれない。',
+      'それでも、幸福をはかろうとする試みは、むずかしい問いを投げかける。1つ目は、答えそのものの意味にかかわる。人が自分の人生を0から10の尺度で評価するとき、その数字が何を表しているのかはまったく明らかではない。ちがう文化の人々はその質問をちがうふうに解釈するかもしれないし、1つの社会の中でさえ、個人はまったくちがう基準と自分の人生をくらべるかもしれない。控えめな点数は、本当の苦しみを反映しているのかもしれないし、自分の状況をひかえめに語る文化的な習慣を反映しているのかもしれない。さらに、質問のしかたが答えに影響することもある。たとえば、まず人づき合いについてたずねられた人は、まず収入についてたずねられた人とはちがうふうに全体の質問に答えるかもしれない。このことは、その数字が、調査の作り方の小さな細部に左右されやすいことを示している。',
+      '2つ目のむずかしさは、人が自分の境遇に慣れるということである。研究によれば、よいことであれ悪いことであれ大きな変化を経験した人は、時がたつと、しばしば以前に近い満足度にもどっていく。この適応する力は多くの点で幸運なことだが、それは、条件がかなり変わっても、答えられる幸福度は安定したままでありうるということを意味する。悪い条件に慣れてしまった人々は、そこそこの満足を答えるかもしれず、そうした答えだけにたよる政府は、改善の必要はないと結論づけてしまうかもしれない。',
+      'もっと深い哲学的な心配もある。幸福は、少なくとも調査ではかられるかぎり、1つの感情である。そして多くの思想家は、よい人生とは満足を感じること以上のものだと論じてきた。人生には、いらだちや犠牲をともなうとしても、意味のある仕事や知識の追求や他人への献身がふくまれうる。公共の政策が、答えられる満足度を上げることだけを目ざせば、人々自身が快適さより大切だとみなす価値を見落としてしまうかもしれないし、人々が変化を求めることをためらわせるような満足をうながしてしまうかもしれない。',
+      'こうした反論のどれも、幸福のものさしが役に立たないという意味ではない。それは、そうでなければ気づかれないであろう苦しみに注意を向けさせ、経済成長が目的ではなく手段であることを政策立案者に思い出させることができる。教訓はむしろ、そうしたものさしは多くの情報源の1つとしてあつかい、注意深く解釈し、健康や自由や機会についてのほかの証拠と組み合わせるべきだということである。このように使えば、それは、よい社会が何をあたえるべきかについての公の議論を、たった1つの数字に置きかえるのではなく、豊かにすることができる。幸福は多くの人が望むものかもしれないが、それを直接管理しようとする社会は、国民と、よい人生の複雑さの両方を誤解する危険をおかすことになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['if', 'unless', 'though', 'because'], answer: 0, why: '「それが確かめられれば」という条件の挿入なので if。unless だと意味が逆になる。' },
+      { id: 'B', choices: ['or', 'but', 'so', 'for'], answer: 0, why: '「価値を見落とすかもしれない」と「変化をためらわせる満足をうながすかもしれない」という2つの危険をならべるので or（あるいは）。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、国が豊かになっても、国民の満足が下がることがありうる。', answer: true, why: '第1段落 A country may become richer while its citizens feel more anxious, more isolated, or less satisfied。' },
+      { statement: '調査によれば、収入がふえるほど、満足度はいつも大きく上がり続ける。', answer: false, why: '第2段落 additional income seems to raise reported satisfaction only modestly。' },
+      { statement: '筆者によれば、大きな変化を経験した人は、時がたつと以前に近い満足度にもどることが多い。', answer: true, why: '第4段落 often return over time to a level of satisfaction close to their previous one。' },
+      { statement: '筆者は、幸福のものさしはまったく役に立たないと結論づけている。', answer: false, why: '第6段落 None of these objections means that measures of happiness are useless。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, why is it unclear what a happiness score represents?', choices: ['People may interpret the question and compare their lives in very different ways.', 'Most people refuse to answer such questions.', 'The scale from zero to ten is too small.', 'Governments change the answers after the surveys.'], answer: 0, why: '第3段落 People from different cultures may interpret the question differently ... individuals may compare their lives with very different standards。' },
+      { q: 'What deeper concern does the writer raise in the fifth paragraph?', choices: ['A good life may involve more than feeling satisfied.', 'Happiness surveys are too expensive to carry out.', 'People never adapt to their circumstances.', 'Economic growth is the only true measure of success.'], answer: 0, why: '第5段落 many thinkers have argued that a good life consists of more than feeling satisfied。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
