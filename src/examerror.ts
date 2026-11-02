@@ -2498,6 +2498,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'This is (A) the (B) most (C) interesting book (D) I have never read.', choices: ['(A) the', '(B) most', '(C) interesting book', '(D) I have never read'], answer: 3, why: '最上級 ＋ 現在完了の経験は I have ever read。' },
     ],
   },
+  {
+    id: 'exam-error-nouns',
+    title: '入試の正誤問題〈106〉（共通テストレベル：まぎらわしい名詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'price／fare／fee・customer／guest／audience／passenger・reservation／appointment・habit／custom・scenery（数えられない）の使い分け。',
+    ],
+    examples: [
+      { en: 'The bus fare has gone up again.', ja: 'バスの運賃がまた上がった。' },
+      { en: 'Bowing is a common custom in Japan.', ja: 'おじぎは日本でよく見られる慣習だ。' },
+    ],
+    questions: [
+      { sentence: 'The train (A) price from Tokyo (B) to Osaka (C) has gone up (D) again this year.', choices: ['(A) price from Tokyo', '(B) to Osaka', '(C) has gone up', '(D) again this year'], answer: 0, why: '乗り物の運賃は fare。The train fare。' },
+      { sentence: '(A) The entrance (B) fare for the museum (C) is free (D) for children.', choices: ['(A) The entrance', '(B) fare for the museum', '(C) is free', '(D) for children'], answer: 1, why: '入場料は fee。The entrance fee。' },
+      { sentence: 'The hotel (A) welcomed (B) its customers (C) with tea (D) and sweets.', choices: ['(A) welcomed', '(B) its customers', '(C) with tea', '(D) and sweets'], answer: 1, why: 'ホテルの宿泊客は guests。' },
+      { sentence: '(A) The large (B) audiences (C) cheered (D) loudly at the end of the play.', choices: ['(A) The large', '(B) audiences', '(C) cheered', '(D) loudly at the end of the play'], answer: 1, why: '1つの劇の観客は集合名詞 audience。The large audience。' },
+      { sentence: 'I (A) have (B) a reservation (C) with my dentist (D) at three.', choices: ['(A) have', '(B) a reservation', '(C) with my dentist', '(D) at three'], answer: 2, why: '人と会う予約は appointment。a reservation with my dentist は不自然で、an appointment with my dentist。' },
+      { sentence: '(A) Bowing (B) when people meet (C) is a common (D) habit in Japan.', choices: ['(A) Bowing', '(B) when people meet', '(C) is a common', '(D) habit in Japan'], answer: 3, why: '社会の慣習は custom。a common custom。' },
+      { sentence: 'We stopped (A) the car (B) to enjoy (C) the beautiful sceneries (D) of the coast.', choices: ['(A) the car', '(B) to enjoy', '(C) the beautiful sceneries', '(D) of the coast'], answer: 2, why: 'scenery は数えられない名詞。the beautiful scenery。' },
+      { sentence: '(A) The cost (B) of this jacket (C) is printed (D) on the tag.', choices: ['(A) The cost', '(B) of this jacket', '(C) is printed', '(D) on the tag'], answer: 0, why: '品物につけられた値段は price。The price。' },
+      { sentence: 'My (A) uncle has (B) a custom (C) of jogging (D) every morning.', choices: ['(A) uncle has', '(B) a custom', '(C) of jogging', '(D) every morning'], answer: 1, why: '個人の習慣は habit。a habit。' },
+      { sentence: '(A) All the (B) passengers on the bus (C) paid their (D) fees to the driver.', choices: ['(A) All the', '(B) passengers on the bus', '(C) paid their', '(D) fees to the driver'], answer: 3, why: 'バスの運賃は fares。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
