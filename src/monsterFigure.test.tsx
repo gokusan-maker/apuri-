@@ -103,10 +103,10 @@ it('図鑑にキャラクター（モチ・コンコン・ペンペン・ドラ�
   const { Zukan } = await import('./MonsterView')
   const { screen } = await import('@testing-library/react')
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon' }]} />)
-  expect(screen.getByText(/キャラクター 2 \/ 260/)).toBeInTheDocument()
+  expect(screen.getByText(/キャラクター 2 \/ 261/)).toBeInTheDocument()
   expect(document.querySelectorAll('.zukan-pick.sp-card').length).toBeGreaterThan(0) // カードのふちはキャラクターの色
   expect(screen.getByLabelText(/^ドラコ：/)).toBeInTheDocument()
-  expect(screen.getByLabelText("まだ出会っていないキャラクター 258").textContent).toBe("？×258")
+  expect(screen.getByLabelText("まだ出会っていないキャラクター 259").textContent).toBe("？×259")
 })
 
 it('図鑑のキャラクターをタップすると説明とチャレンジの種類が出る', async () => {
@@ -133,8 +133,8 @@ it('コレクション表：キャラクター×色ちがいの持っている�
   const { Zukan } = await import('./MonsterView')
   const { screen } = await import('@testing-library/react')
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon', kind: 'kin' }]} />)
-  expect(screen.getByLabelText('コレクション表 2 / 2080・コンプリート率 0%').textContent).toBe('2/2080')
-  expect(screen.getByRole('progressbar', { name: 'コンプリート率' })).toHaveAttribute('aria-valuenow', '0') // 2/2080 は1%未満（切り捨て）
+  expect(screen.getByLabelText('コレクション表 2 / 2088・コンプリート率 0%').textContent).toBe('2/2088')
+  expect(screen.getByRole('progressbar', { name: 'コンプリート率' })).toHaveAttribute('aria-valuenow', '0') // 2/2088 は1%未満（切り捨て）
   expect(screen.getByLabelText('ドラコ・きんいろ（持っている）')).toBeInTheDocument()
   expect(screen.getByLabelText('ドラコ・にじいろ（まだ）')).toBeInTheDocument()
 })

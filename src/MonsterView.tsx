@@ -1961,6 +1961,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 46 Q62 50 58 54" fill="none" stroke="#a855f7" strokeWidth="2" />
       </g>
     )
+  if (species === 'striatedheron')
+    return (
+      <g>
+        {/* 黒い頭と、笹の葉のようなつばさのもよう */}
+        <ellipse cx="50" cy="32" rx="9" ry="5" fill="#0f172a" />
+        <path d="M32 58 L42 54 M34 64 L44 60" fill="none" stroke="#cbd5e1" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
