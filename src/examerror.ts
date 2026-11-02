@@ -4657,7 +4657,7 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was in Kyoto [where] I first met my future wife.', choices: ['that', 'which', 'what', 'when'], answer: 0, why: '強調構文 It was ～ that …。強調されているのは in Kyoto（前置詞句）なので that。where は使わない。' },
       { sentence: 'It was not until he lost his job [when] he understood the value of money.', choices: ['that', 'which', 'then', 'what'], answer: 0, why: 'It is not until ～ that … の強調構文。' },
       { sentence: '[That is] important to keep a record of every experiment you carry out.', choices: ['It is', 'This is', 'There is', 'What is'], answer: 0, why: '形式主語 It is ～ to …。本当の主語は to keep a record ～。' },
-      { sentence: 'It is surprising [what] so many people still believe the rumor.', choices: ['that', 'which', 'whether', 'how'], answer: 0, why: '形式主語 It is ～ that S V（～ということは…だ）。what は先行詞をふくむ関係代名詞で、ここでは使えない。' },
+      { sentence: 'It is surprising [what] so many people still believe the rumor.', choices: ['that', 'which', 'whether', 'who'], answer: 0, why: '形式主語 It is ～ that S V（～ということは…だ）。what は先行詞をふくむ関係代名詞で、ここでは使えない。' },
       { sentence: 'Little [he knew] that the letter would change his life completely.', choices: ['did he know', 'he did know', 'knew he', 'he had known'], answer: 0, why: '否定の副詞 Little が文頭に出た倒置。did he know。' },
       { sentence: 'Such [the noise was] that we could not hear each other speak.', choices: ['was the noise', 'the noise is', 'did the noise', 'noise was'], answer: 0, why: 'Such が文頭に出た倒置 Such was S that ～（S があまりに大きいので～）。' },
     ],
