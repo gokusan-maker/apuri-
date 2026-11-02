@@ -1827,6 +1827,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M46 52 L54 52 L50 56 Z" fill="#ef4444" />
       </g>
     )
+  if (species === 'ruddykingfisher')
+    return (
+      <g>
+        {/* 大きな赤いくちばし */}
+        <path d="M44 50 L60 52 L44 55 Z" fill="#dc2626" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
