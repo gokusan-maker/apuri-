@@ -27008,6 +27008,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-local-news',
+    title: 'When the Local Paper Closes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, local newspapers played a central role in the life of towns and cities. They reported on council meetings, school events, court cases, and the activities of local businesses, and they gave residents a shared source of information about the place where they lived. In recent decades, however, many local papers have closed or reduced their staff dramatically. In some regions, entire communities now have no professional journalist regularly reporting on local affairs, a situation that researchers have begun to describe as a news desert. The term suggests not merely a shortage of information but a landscape in which something necessary for civic life has dried up.",
+      "The main cause of this decline is economic. Local newspapers traditionally relied on advertising, especially classified advertisements for jobs, homes, and used goods. When these advertisements moved to websites that were cheaper and easier to search, newspapers lost a large share of their income. At the same time, readers increasingly turned to free online sources for news, and few were willing to pay for subscriptions. Large technology platforms captured much of the advertising money that remained, leaving many local publishers without a sustainable way to fund their work. Newspapers that survived often did so by cutting staff, reducing the number of pages, or merging with other publications, which in turn made them less able to cover local events in depth.",
+      "The disappearance of local news may seem a minor loss compared with the abundance of information available online. Yet researchers have found evidence that it has significant consequences. In places where local newspapers have closed, fewer candidates tend to run in local elections, and voter turnout may decline. Some studies have suggested that the costs of local government borrowing rise after a newspaper closes, possibly because officials are subject to less scrutiny. Without journalists attending meetings and examining public records, mistakes and wrongdoing are less likely to be discovered. The mere presence of a reporter in the room, many observers believe, encourages officials to behave more carefully.",
+      "Local news also contributes to a sense of community. When residents read about the same events, they share a common picture of what is happening around them, even if they disagree about how to respond. National news and social media, by contrast, tend to focus on issues that divide people along political lines. ( A ) local reporting declines, people may come to understand their own neighborhoods mainly through the lens of national controversies, which can increase polarization and make cooperation on practical local problems more difficult. A dispute about a new road or a school closure, which might once have been discussed as a practical matter, can then turn into another battle in a wider cultural war.",
+      "Various efforts are being made to address these problems. Some communities have established non-profit news organizations funded by donations and foundations, while others experiment with models in which readers become members who support journalism they value. Universities have sometimes encouraged journalism students to report on underserved areas, and some governments have considered public funding for local news, though this raises concerns about independence. None of these approaches has yet proved capable of replacing the role that local newspapers once played on a large scale, and many of them depend on the continued generosity of a small number of supporters.",
+      "The decline of local journalism thus raises a question that goes beyond the fate of a particular industry. Information about the places where people live is a kind of public good: it benefits everyone, but no individual has a strong incentive to pay for it. If societies value informed communities and accountable local government, they may need to find new ways of supporting the work of gathering and reporting local news, rather than assuming that the market will provide it on its own.",
+    ],
+    ja: [
+      '20世紀の大部分を通じて、地方新聞は町や都市の生活の中心的な役割を果たしていた。議会の会合や学校の行事、裁判、地元の商店の活動を報じ、住民に自分たちが住む場所についての共通の情報源を与えていた。しかしここ数十年、多くの地方紙が廃刊したり、記者の数を大きくへらしたりしてきた。地域によっては、地元のことを定期的に報じるプロの記者が1人もいない共同体まるごとがあり、研究者たちはこうした状況を「ニュース砂漠」とよびはじめている。この言葉は、単に情報が足りないことではなく、市民生活に必要な何かがかれてしまった風景をほのめかしている。',
+      'この衰退の主な原因は経済的なものである。地方新聞は伝統的に広告、とくに仕事や住まいや中古品の案内広告にたよっていた。こうした広告が、より安くさがしやすいウェブサイトへ移ると、新聞は収入の大きな部分を失った。同時に、読者はますますニュースを無料のネットの情報源に求めるようになり、購読料を払おうとする人はほとんどいなくなった。残った広告費の多くは大きな技術系の企業が手に入れ、多くの地方の発行者には、その仕事をまかなう持続可能な方法が残されなかった。生き残った新聞も、しばしば記者をへらし、ページ数をへらし、ほかの新聞と合併することでそうしたのであり、そのためかえって地元のできごとを深く報じる力が弱まった。',
+      '地方のニュースが消えることは、ネットで手に入る豊富な情報に比べれば小さな損失に思えるかもしれない。しかし研究者たちは、それが重大な結果をもたらしている証拠を見いだしてきた。地方新聞が廃刊した場所では、地方選挙に立候補する人が少なくなる傾向があり、投票率も下がるかもしれない。新聞が廃刊したあと、地方自治体の借金の費用が上がることを示唆する研究もある。おそらく役人が見張られることが少なくなるからだろう。記者が会合に出て公文書を調べなければ、まちがいや不正は見つかりにくくなる。多くの観察者は、記者がその場にいるだけで、役人がより注意深くふるまうよう促されると考えている。',
+      '地方のニュースは共同体の感覚にも貢献している。住民が同じできごとについて読むと、どう対応するかについて意見が分かれても、周りで起きていることについての共通の像をもつことになる。それに対して全国ニュースやソーシャルメディアは、政治的な立場で人々を分ける問題に注目しがちである。地方の報道がおとろえると、人々は自分の住む地域を、主に全国的な論争というレンズを通して理解するようになるかもしれない。それは対立を深め、地域の実際的な問題での協力をよりむずかしくしうる。そうなると、かつては実際的な問題として話し合われたかもしれない新しい道路や学校の閉鎖をめぐる争いが、より広い文化的な戦いのもう1つの戦場になってしまうことがある。',
+      'こうした問題に取り組むためのさまざまな努力が行われている。寄付や財団の資金でまかなわれる非営利の報道機関を設立した共同体もあれば、読者が会員となって自分が価値を認める報道を支えるしくみを試しているところもある。大学がジャーナリズムを学ぶ学生に、報道の行き届かない地域を取材するよう促すこともあり、地方のニュースに公的な資金を出すことを検討した政府もあるが、これは独立性についての懸念を生む。これらのやり方のどれも、地方新聞がかつて果たしていた役割を大きな規模で代われることを、まだ証明してはいない。しかもその多くは、少数の支援者の気前のよさが続くことにたよっているのである。',
+      'したがって地方ジャーナリズムの衰退は、ある特定の産業の運命をこえた問いを投げかけている。人々が住む場所についての情報は一種の公共財である。それはすべての人の利益になるが、どの個人にもそれにお金を払う強い動機がない。社会が、情報をもった共同体や説明責任を果たす地方自治体を大切にするなら、市場がひとりでにそれを提供すると考えるのではなく、地方のニュースを集めて報じる仕事を支える新しい方法を見つける必要があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As', 'Unless', 'Although', 'Before'], answer: 0, why: '「地方の報道がおとろえるにつれて（おとろえると）」という as。' },
+    ],
+    summary: {
+      text: 'Many local newspapers have closed, mainly because they lost ( 1 ) income to websites and technology platforms. Their disappearance can reduce participation in local elections and allow officials to face less ( 2 ). Local news also builds a sense of community. Because local information is a kind of public ( 3 ), societies may need new ways to support it.',
+      blanks: [
+        { choices: ['advertising', 'tax', 'travel', 'printing'], answer: 0, why: '第2段落 Local newspapers traditionally relied on advertising ... newspapers lost a large share of their income。' },
+        { choices: ['scrutiny', 'pressure', 'support', 'competition'], answer: 0, why: '第3段落 officials are subject to less scrutiny。' },
+        { choices: ['good', 'problem', 'service', 'opinion'], answer: 0, why: '第6段落 Information about the places where people live is a kind of public good。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、地元のことを報じる記者がいない地域は「ニュース砂漠」とよばれはじめている。', answer: true, why: '第1段落 a situation that researchers have begun to describe as a news desert。' },
+      { statement: '筆者によれば、地方新聞の衰退の主な原因は、記者の能力が下がったことである。', answer: false, why: '第2段落 The main cause of this decline is economic。' },
+      { statement: '筆者によれば、全国ニュースやソーシャルメディアは、人々を分ける問題に注目しがちである。', answer: true, why: '第4段落 tend to focus on issues that divide people along political lines。' },
+      { statement: '筆者によれば、非営利の報道機関は、すでに地方新聞の役割を大きな規模で代わっている。', answer: false, why: '第5段落 None of these approaches has yet proved capable of replacing the role ... on a large scale。' },
+    ],
+    qa: [
+      { q: 'Why might the costs of local government borrowing rise after a newspaper closes?', choices: ['Officials may be subject to less scrutiny.', 'Taxes are cut immediately.', 'More candidates run for office.', 'Residents read more national news.'], answer: 0, why: '第3段落 possibly because officials are subject to less scrutiny。' },
+      { q: 'What concern does public funding for local news raise, according to the fifth paragraph?', choices: ['Concerns about independence.', 'Concerns about printing costs.', 'Concerns about too many journalists.', 'Concerns about advertising.'], answer: 0, why: '第5段落 though this raises concerns about independence。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
