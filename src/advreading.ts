@@ -26316,6 +26316,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-care-robots',
+    title: 'Can Robots Care?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As populations age, many countries face a growing shortage of people to care for the elderly. The number of older adults who need help with daily activities is rising, while the number of younger workers available to provide that help is falling. Care work is physically demanding, often poorly paid, and emotionally exhausting, and many care facilities struggle to recruit and keep enough staff. In response to this situation, engineers and policymakers have increasingly turned their attention to robots as a possible way of supporting, or even partly replacing, human caregivers. Japan, which has one of the oldest populations in the world, has been particularly active in developing and testing such machines.",
+      "Some of these machines are designed to perform physical tasks. Robotic devices can help lift patients from beds into wheelchairs, reducing the risk of back injuries among care workers, while other systems monitor residents at night and alert staff if someone falls or leaves their room. Such technologies are relatively uncontroversial, since they take over tasks that are difficult or dangerous for people and allow human workers to spend more time on other aspects of care. Many caregivers welcome them, at least when they are reliable and easy to use, although some complain that poorly designed devices can take longer to operate than simply doing the task by hand.",
+      "More controversial are robots designed to provide companionship. These include machines shaped like animals that respond to touch and voice, as well as humanoid robots that can hold simple conversations, remind people to take their medicine, or lead group exercises. Some studies have reported that interacting with such robots can reduce loneliness and anxiety among older people, especially those living with dementia. Residents who rarely speak to others may smile, talk, or stroke a robotic pet, and family members sometimes say that their relatives seem calmer and happier. For people who can no longer care for a living animal, a robotic pet may offer some of the comfort of companionship without the responsibilities.",
+      "Critics, however, raise serious ethical concerns. One worry is that companion robots involve a kind of deception: an elderly person may come to believe that a machine genuinely understands or cares about them, when in fact it is only following a program. Another concern is that the introduction of robots might be used as an excuse to reduce human contact. If a machine can keep a resident occupied, a facility under financial pressure might decide that fewer staff are needed, leaving older people more isolated than before, even if they are surrounded by technology.",
+      "Supporters respond that these risks are not inevitable. They argue that robots should be seen as tools that supplement human care ( A ) as substitutes for it, and that their use should be guided by the needs and wishes of the people being cared for. An older person who enjoys talking with a robot is not necessarily being deceived, they suggest, any more than a child who loves a stuffed animal. What matters is whether the technology improves the person's quality of life and whether it is introduced with their consent and with respect for their dignity.",
+      "The debate over care robots ultimately raises a broader question about what we mean by care. If care is understood simply as the completion of a set of tasks, then machines may one day perform many of them more efficiently than people. But if care also involves attention, recognition, and the experience of being valued by another person, then there may be limits to what technology can provide. Societies that adopt these machines will therefore need to decide not only what robots can do, but also what kinds of relationships they wish to preserve as people grow old.",
+    ],
+    ja: [
+      '人口の高齢化にともない、多くの国が、高齢者の世話をする人の不足の拡大に直面している。日々の活動に助けを必要とする高齢者の数はふえている一方で、その助けを提供できる若い働き手の数はへっている。介護の仕事は体力的にきびしく、しばしば給料が低く、精神的にも疲れるものであり、多くの介護施設は十分な職員を集め、とどめておくのに苦労している。こうした状況に対応して、技術者や政策立案者は、人間の介護者を支えたり、一部を代わりさえしたりする方法として、ますますロボットに注目するようになっている。世界で最も高齢化が進んだ国の1つである日本は、こうした機械の開発と試験にとくに積極的である。',
+      'こうした機械のなかには、体を使う作業をするよう設計されたものもある。ロボットの装置は、患者をベッドから車いすに移すのを手伝って介護職員が腰を痛める危険をへらすことができ、ほかのしくみは夜間に入居者を見守り、だれかが転んだり部屋を出たりすると職員に知らせる。こうした技術には比較的反対が少ない。人にとってむずかしかったり危険だったりする作業を引き受け、人間の働き手が介護のほかの面により多くの時間を使えるようにしてくれるからである。多くの介護者は、少なくともそれが信頼でき使いやすい場合には、それを歓迎しているが、うまく設計されていない装置は、単に手で作業をするよりも操作に時間がかかることがあると不満を言う人もいる。',
+      'より議論をよぶのは、話し相手になるよう設計されたロボットである。これには、ふれたり声をかけたりすると反応する動物の形をした機械や、かんたんな会話をしたり、薬を飲むよう思い出させたり、みんなでする体操を指導したりできる人型ロボットがふくまれる。こうしたロボットとふれ合うことで、とくに認知症とともに暮らす高齢者のさびしさや不安がへりうると報告した研究もある。めったに他人と話さない入居者が、ロボットのペットにほほえんだり、話しかけたり、なでたりすることがあり、家族は、身内がより落ち着き、幸せそうに見えると言うこともある。もはや生きた動物の世話ができない人々にとって、ロボットのペットは、責任を負わずに、ともにいることのなぐさめの一部を与えてくれるかもしれない。',
+      'しかし、批判する人々は深刻な倫理上の懸念をあげる。1つの心配は、話し相手のロボットにはある種のだましがふくまれるということである。高齢者は、機械が本当に自分を理解し、気にかけてくれていると信じるようになるかもしれないが、実際にはそれはプログラムにしたがっているだけである。もう1つの懸念は、ロボットの導入が人とのふれ合いをへらす言いわけに使われるかもしれないということである。機械が入居者の相手をしていられるなら、お金の圧力を受けている施設は職員が少なくてすむと判断するかもしれず、そうなれば高齢者は、技術に囲まれていても、以前より孤立してしまうだろう。',
+      '支持する人々は、こうした危険は避けられないものではないと答える。彼らは、ロボットは人間の介護の代わりではなくそれを補う道具とみなされるべきであり、その使い方は世話を受ける人々の必要と希望にしたがうべきだと主張する。ロボットと話すのを楽しむ高齢者は、ぬいぐるみが大好きな子どもと同じように、必ずしもだまされているわけではない、と彼らは言う。大切なのは、その技術がその人の生活の質を高めるかどうか、そしてそれが本人の同意のもとで、その人の尊厳を尊重して導入されるかどうかなのである。',
+      '介護ロボットをめぐる議論は、結局のところ、私たちが介護ということで何を意味しているのかという、より広い問いを投げかける。介護を単に一連の作業をこなすことと理解するなら、いつか機械はその多くを人より効率よく行うようになるかもしれない。しかし、介護に、注意を向けること、認めること、そして他者から大切にされているという経験もふくまれるなら、技術が与えられるものには限界があるかもしれない。したがって、こうした機械を取り入れる社会は、ロボットに何ができるかだけでなく、人が年をとっていくなかでどんな関係を守りたいのかも決める必要があるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'as well as', 'because of', 'in spite of'], answer: 0, why: '「代わりとしてではなく、補う道具として」という対比なので rather than。' },
+    ],
+    summary: {
+      text: 'Because of a shortage of caregivers, robots are being introduced into care for the elderly. Robots that perform physical tasks are relatively ( 1 ), but companion robots raise concerns about deception and reduced human ( 2 ). Supporters argue that robots should ( 3 ) human care, and the debate raises a broader question about what care really means.',
+      blanks: [
+        { choices: ['uncontroversial', 'dangerous', 'expensive', 'unpopular'], answer: 0, why: '第2段落 Such technologies are relatively uncontroversial。' },
+        { choices: ['contact', 'income', 'medicine', 'exercise'], answer: 0, why: '第4段落 might be used as an excuse to reduce human contact。' },
+        { choices: ['supplement', 'replace', 'prevent', 'ignore'], answer: 0, why: '第5段落 tools that supplement human care rather than as substitutes for it。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、介護を必要とする高齢者がふえる一方で、若い働き手はへっている。', answer: true, why: '第1段落 The number of older adults ... is rising, while the number of younger workers ... is falling。' },
+      { statement: '筆者によれば、体を使う作業をするロボットは、多くの介護者に反対されている。', answer: false, why: '第2段落 Many caregivers welcome them。' },
+      { statement: '筆者によれば、話し相手のロボットが高齢者のさびしさをへらしうると報告した研究がある。', answer: true, why: '第3段落 Some studies have reported that interacting with such robots can reduce loneliness。' },
+      { statement: '支持する人々は、ロボットと話すのを楽しむ高齢者は必ずだまされていると考えている。', answer: false, why: '第5段落 is not necessarily being deceived。' },
+    ],
+    qa: [
+      { q: 'What is one concern about companion robots, according to the fourth paragraph?', choices: ['A facility might use them as a reason to employ fewer staff, leaving older people more isolated.', 'They are too heavy to move.', 'They cannot remind people to take medicine.', 'Older people never enjoy using them.'], answer: 0, why: '第4段落 a facility under financial pressure might decide that fewer staff are needed, leaving older people more isolated。' },
+      { q: 'According to the last paragraph, when might there be limits to what technology can provide?', choices: ['When care is understood to include attention, recognition, and being valued by another person.', 'When care is only a set of tasks.', 'When robots become cheaper.', 'When there are enough human workers.'], answer: 0, why: '第6段落 if care also involves attention, recognition, and the experience of being valued by another person, then there may be limits。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
