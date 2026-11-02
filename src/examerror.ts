@@ -2594,6 +2594,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) have (B) hardly (C) never (D) seen such a beautiful sunset.', choices: ['(A) have', '(B) hardly', '(C) never', '(D) seen such a beautiful sunset'], answer: 2, why: 'hardly はそれ自体が否定の意味なので never といっしょに使わない。have hardly ever seen。' },
     ],
   },
+  {
+    id: 'exam-error-participle5',
+    title: '入試の正誤問題〈110〉（旧帝大レベル：分詞構文）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文の能動・受け身、完了形（Having done）、独立分詞構文（There being ～）、with ＋ O ＋ 分詞、意味上の主語のずれ（懸垂分詞）、Frankly speaking などの慣用表現。',
+    ],
+    examples: [
+      { en: 'Written in simple language, the guidebook is popular.', ja: 'やさしい言葉で書かれているので、そのガイドブックは人気がある。' },
+      { en: 'There being no trains after midnight, we took a taxi home.', ja: '真夜中すぎは電車がなかったので、私たちはタクシーで帰った。' },
+    ],
+    questions: [
+      { sentence: '(A) Writing in simple language, (B) the guidebook (C) is popular (D) among young travelers.', choices: ['(A) Writing in simple language,', '(B) the guidebook', '(C) is popular', '(D) among young travelers'], answer: 0, why: 'ガイドブックは「書かれた」側なので Written in simple language。' },
+      { sentence: '(A) Having been finished (B) the report, (C) she handed it (D) to her manager.', choices: ['(A) Having been finished', '(B) the report,', '(C) she handed it', '(D) to her manager'], answer: 0, why: '彼女が報告書を「終えた」ので能動の完了形 Having finished the report。' },
+      { sentence: '(A) It being (B) no trains after midnight, (C) we (D) took a taxi home.', choices: ['(A) It being', '(B) no trains after midnight,', '(C) we', '(D) took a taxi home'], answer: 0, why: 'There are no trains → 独立分詞構文 There being no trains。' },
+      { sentence: 'He (A) sat (B) on the sofa (C) with his arms (D) folding.', choices: ['(A) sat', '(B) on the sofa', '(C) with his arms', '(D) folding'], answer: 3, why: 'with ＋ O ＋ 分詞。腕は「組まれた」状態なので with his arms folded。' },
+      { sentence: '(A) The weather (B) was fine, (C) we decided (D) to go hiking.', choices: ['(A) The weather', '(B) was fine,', '(C) we decided', '(D) to go hiking'], answer: 1, why: '文と文をつなぐ接続詞がない。独立分詞構文 The weather being fine にするか、接続詞を入れる。' },
+      { sentence: 'The cat (A) was sleeping (B) in the sun (C) with its tail (D) wrapping around its body.', choices: ['(A) was sleeping', '(B) in the sun', '(C) with its tail', '(D) wrapping around its body'], answer: 3, why: 'しっぽは「巻きつけられた」状態なので with its tail wrapped around its body。' },
+      { sentence: '(A) Frankly (B) spoken, (C) I do not think (D) the plan will work.', choices: ['(A) Frankly', '(B) spoken,', '(C) I do not think', '(D) the plan will work'], answer: 1, why: '慣用表現 Frankly speaking（率直に言えば）。' },
+      { sentence: '(A) Arriving at the station, (B) the train (C) had already left (D) by then.', choices: ['(A) Arriving at the station,', '(B) the train', '(C) had already left', '(D) by then'], answer: 0, why: '分詞構文の意味上の主語が主節（the train）とちがう。When we arrived at the station のように主語を入れる。' },
+      { sentence: '(A) Exhausted (B) after the long trip, (C) she fall asleep (D) immediately.', choices: ['(A) Exhausted', '(B) after the long trip,', '(C) she fall asleep', '(D) immediately'], answer: 2, why: '主節の動詞は過去形。she fell asleep。Exhausted after the long trip は分詞構文で正しい。' },
+      { sentence: '(A) Generally (B) speaking, Japanese trains (C) is very (D) punctual.', choices: ['(A) Generally', '(B) speaking, Japanese trains', '(C) is very', '(D) punctual'], answer: 2, why: '主語は Japanese trains（複数）なので are very punctual。Generally speaking は正しい慣用表現。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
