@@ -1779,6 +1779,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M66 66 Q84 76 96 92" fill="none" stroke="#1e1b4b" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'stonechat')
+    return (
+      <g>
+        {/* 黒い頭と、オレンジ色のむね */}
+        <path d="M34 36 Q50 24 64 36 L60 46 Q50 50 40 46 Z" fill="#1c1917" />
+        <ellipse cx="50" cy="60" rx="8" ry="6" fill="#fb923c" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
