@@ -1590,3 +1590,10 @@ it('誤文訂正〈110〉：京大レベルの省略と代用の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('to')
 })
+
+it('正誤問題〈117〉：京大レベルの省略と代用の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-ellipsis')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) to it')
+})

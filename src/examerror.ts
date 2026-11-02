@@ -2762,6 +2762,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The school (B) bought (C) some (D) equipments for the science room.', choices: ['(A) The school', '(B) bought', '(C) some', '(D) equipments for the science room'], answer: 3, why: 'equipment は数えられない名詞。some equipment。' },
     ],
   },
+  {
+    id: 'exam-error-ellipsis',
+    title: '入試の正誤問題〈117〉（京大レベル：省略と代用）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '代不定詞 to、I hope so／not、do so、代動詞 do／did、one（不特定の1つ）と that／those（the ＋名詞のくり返し）、When asked・While waiting・if necessary などの省略。',
+    ],
+    examples: [
+      { en: 'You may leave early if you want to.', ja: 'そうしたければ早く帰ってもいいよ。' },
+      { en: 'When asked about the plan, the mayor refused to comment.', ja: '計画についてたずねられると、市長はコメントをこばんだ。' },
+    ],
+    questions: [
+      { sentence: 'You (A) may leave (B) early (C) if you want (D) to it.', choices: ['(A) may leave', '(B) early', '(C) if you want', '(D) to it'], answer: 3, why: '代不定詞は to だけ。if you want to。' },
+      { sentence: '(A) Will the weather (B) be fine? (C) I hope (D) it so.', choices: ['(A) Will the weather', '(B) be fine?', '(C) I hope', '(D) it so'], answer: 3, why: '「そうだといいな」は I hope so。' },
+      { sentence: 'She told him (A) to apologize, (B) but he (C) refused (D) to do it so.', choices: ['(A) to apologize,', '(B) but he', '(C) refused', '(D) to do it so'], answer: 3, why: '前の動詞句の代わりは do so。refused to do so。' },
+      { sentence: 'My phone (A) broke, (B) so I (C) bought a new (D) it.', choices: ['(A) broke,', '(B) so I', '(C) bought a new', '(D) it'], answer: 3, why: '同じ種類の不特定の1つは one。a new one。' },
+      { sentence: 'The population (A) of Tokyo (B) is larger (C) than one (D) of Osaka.', choices: ['(A) of Tokyo', '(B) is larger', '(C) than one', '(D) of Osaka'], answer: 2, why: 'the population のくり返しは that。than that of Osaka。' },
+      { sentence: 'The houses (A) in this town (B) are older (C) than that (D) in the next town.', choices: ['(A) in this town', '(B) are older', '(C) than that', '(D) in the next town'], answer: 2, why: '複数の the houses のくり返しは those。than those in the next town。' },
+      { sentence: '(A) When asking (B) about the plan, (C) the mayor (D) refused to comment.', choices: ['(A) When asking', '(B) about the plan,', '(C) the mayor', '(D) refused to comment'], answer: 0, why: 'When (he was) asked の省略。市長は「たずねられた」側なので When asked。' },
+      { sentence: 'He (A) promised (B) to help us, (C) but he (D) did not so.', choices: ['(A) promised', '(B) to help us,', '(C) but he', '(D) did not so'], answer: 3, why: '代動詞は did not（= did not help us）。did not so とは言わない。' },
+      { sentence: '(A) While (B) waiting for being the bus, (C) I read (D) a book on my phone.', choices: ['(A) While', '(B) waiting for being the bus,', '(C) I read', '(D) a book on my phone'], answer: 1, why: 'While (I was) waiting の省略。waiting for the bus。being は不要。' },
+      { sentence: '(A) If necessary so, (B) we (C) can change (D) the schedule.', choices: ['(A) If necessary so,', '(B) we', '(C) can change', '(D) the schedule'], answer: 0, why: 'if necessary（必要なら）は if (it is) necessary の省略。so は不要。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
