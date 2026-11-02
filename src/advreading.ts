@@ -26476,6 +26476,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-third-places',
+    title: 'The Places in Between',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people divide their daily lives between two main settings: the home, where they live with their families, and the workplace or school, where they spend much of the day. Sociologists have long argued, however, that healthy communities also depend on a third kind of place. Cafés, barbershops, neighborhood bars, public libraries, and small local shops can serve as informal gathering spots where people meet regularly without any particular purpose. Such third places, as they are sometimes called, have played an important role in social life in many cultures, even though they are rarely planned or discussed. Their importance often becomes visible only when they are gone.",
+      "What makes a third place valuable is not the service it provides but the kind of interaction it allows. In a café that people visit often, customers come to recognize one another and the staff, and casual conversations develop naturally. ( A ) the home, a third place brings together people from different backgrounds; unlike the workplace, it does not require them to perform particular roles or to achieve specific goals. People can come and go as they please, stay as long as they like, and take part in conversation or simply enjoy the presence of others. This combination of freedom and familiarity is difficult to find elsewhere.",
+      "Researchers have suggested that third places contribute to communities in several ways. They help people form weak ties, the loose connections with acquaintances that can provide information, support, and a sense of belonging. They also give residents opportunities to discuss local issues and to learn about the concerns of others, which can strengthen participation in civic life. For older people living alone, a regular visit to a familiar café or shop may be one of the few remaining sources of daily social contact, and its loss can make isolation considerably worse. The owner of a small shop who notices that a regular customer has not appeared for several days may even be the first to realize that something is wrong.",
+      "In recent decades, many traditional third places have disappeared. Small independent shops have often been replaced by large chain stores or by online shopping, and the spread of cars has encouraged people to drive to distant shopping centers rather than walk to local businesses. Rising rents in city centers have forced many family-run cafés and bookshops to close. At the same time, more people now spend their free time at home, watching entertainment on screens or communicating through social media, which offers a form of connection but rarely the face-to-face encounters that third places provide.",
+      "Some observers argue that online communities have become the third places of the digital age. Discussion forums and social networks allow people to meet others who share their interests, regardless of distance, and for some users they provide genuine friendship and support. Yet critics point out that online spaces tend to bring together people who already think alike, and that they lack the physical presence and chance encounters that make local places so valuable. One rarely meets a neighbor of a different generation or a very different background simply by scrolling through a screen.",
+      "Recognizing the value of third places has encouraged some towns and cities to support them actively. Libraries have been redesigned as community centers with comfortable seating and spaces for events, and local governments have provided assistance to small businesses that serve as meeting points. Planners have also begun to pay more attention to benches, squares, and pedestrian streets that encourage people to linger. Such efforts reflect a growing understanding that the strength of a community depends not only on its homes and workplaces, but also on the ordinary places in between where people simply meet. A town without such places may function efficiently, but it is unlikely to feel like a community.",
+    ],
+    ja: [
+      'たいていの人は、毎日の生活を主に2つの場所に分けている。家族といっしょに暮らす家と、一日の多くを過ごす職場や学校である。しかし社会学者たちは昔から、健全な共同体は3つ目の種類の場所にもかかっていると論じてきた。喫茶店、床屋、近所の酒場、公共図書館、地元の小さな店は、人々が特に目的もなく定期的に会う、気がるな集まりの場になりうる。こうした、ときにサードプレイス（第3の場所）とよばれる場所は、めったに計画されたり話題にされたりしないにもかかわらず、多くの文化で社会生活に重要な役割を果たしてきた。その大切さは、なくなってはじめて見えてくることが多い。',
+      'サードプレイスを価値あるものにしているのは、そこが提供するサービスではなく、そこで可能になるふれ合いのあり方である。人々がよく訪れる喫茶店では、客はたがいや店員の顔を覚えるようになり、何気ない会話が自然に生まれる。家とちがって、サードプレイスはさまざまな背景をもつ人々を集め、職場とちがって、特定の役割を演じたり特定の目標を達成したりすることを求めない。人々は好きなときに来て帰り、好きなだけいて、会話に加わることも、ただ他人がいることを楽しむこともできる。この自由さとなじみ深さの組み合わせは、ほかの場所ではなかなか見つからない。',
+      '研究者たちは、サードプレイスがいくつかの形で共同体に貢献していると示唆してきた。それは人々が弱いつながり、つまり情報や支えや居場所の感覚を与えてくれる知り合いとのゆるやかな関係を作る助けになる。また、住民が地域の問題について話し合い、ほかの人の心配ごとを知る機会を与え、それによって市民生活への参加を強めることもある。ひとりで暮らす高齢者にとって、なじみの喫茶店や店に定期的に行くことは、毎日の人とのふれ合いの数少ない残された源の1つかもしれず、それを失うと孤立がかなりひどくなりうる。常連客が何日も来ないことに気づいた小さな店の主人が、何かがおかしいと最初に気づく人になることさえある。',
+      'ここ数十年のあいだに、多くの昔ながらのサードプレイスが姿を消した。小さな個人商店はしばしば大きなチェーン店やネット通販に取って代わられ、車の普及によって、人々は近所の店に歩いて行くのではなく、遠くのショッピングセンターに車で行くようになった。都心の家賃が上がり、家族経営の喫茶店や本屋の多くが閉店に追いこまれた。同時に、画面で娯楽を見たり、ソーシャルメディアでやりとりしたりして、自由な時間を家で過ごす人がふえている。それは一種のつながりを与えてはくれるが、サードプレイスがもたらす顔を合わせた出会いを与えてくれることはめったにない。',
+      'ネット上の共同体がデジタル時代のサードプレイスになったと論じる人もいる。掲示板やソーシャルネットワークによって、人々は距離に関係なく同じ関心をもつ他者と出会うことができ、一部の利用者にとっては本当の友情や支えを与えてくれる。しかし批判する人々は、ネット上の場はもともと同じように考える人々を集めがちであり、地元の場所をこれほど価値あるものにしている、からだがそこにあることや偶然の出会いが欠けていると指摘する。画面をスクロールしているだけで、ちがう世代や大きく異なる背景をもつ近所の人に出会うことはめったにない。',
+      'サードプレイスの価値が認められるにつれて、それを積極的に支えようとする町や都市も出てきた。図書館は、すわり心地のよい席や催しのための空間をもつ地域の拠点として作り直され、地方自治体は、集まりの場となっている小さな商売を支援してきた。都市計画家もまた、人々がゆっくりとどまりたくなるようなベンチや広場や歩行者用の通りに、より多くの注意を払いはじめている。こうした取り組みは、共同体の強さが家と職場だけでなく、人々がただ出会う、そのあいだにあるありふれた場所にもかかっているという理解が広がっていることを表しているのである。そうした場所のない町は効率よく機能するかもしれないが、共同体だと感じられることはまずないだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unlike', 'Like', 'Because of', 'Instead of'], answer: 0, why: '「家とちがって」「職場とちがって」と対比しているので Unlike。' },
+    ],
+    summary: {
+      text: 'Besides homes and workplaces, communities depend on informal gathering spots called third places. They allow people to form weak ( 1 ) and to discuss local issues, and they are especially important for older people living ( 2 ). Many such places have disappeared, and online spaces cannot fully ( 3 ) them, so some towns now support them actively.',
+      blanks: [
+        { choices: ['ties', 'rules', 'prices', 'roads'], answer: 0, why: '第3段落 They help people form weak ties。' },
+        { choices: ['alone', 'abroad', 'together', 'nearby'], answer: 0, why: '第3段落 For older people living alone。' },
+        { choices: ['replace', 'visit', 'close', 'protect'], answer: 0, why: '第5段落 online spaces ... lack the physical presence and chance encounters（代わりにはなれない）。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、サードプレイスはたいてい注意深く計画されてつくられる。', answer: false, why: '第1段落 even though they are rarely planned or discussed。' },
+      { statement: '筆者によれば、サードプレイスでは特定の役割を演じることを求められない。', answer: true, why: '第2段落 it does not require them to perform particular roles。' },
+      { statement: '筆者によれば、都心の家賃が上がったことで、家族経営の喫茶店や本屋の多くが閉店した。', answer: true, why: '第4段落 Rising rents in city centers have forced many family-run cafés and bookshops to close。' },
+      { statement: '批判する人々は、ネット上の場はさまざまな考えの人々を集めやすいと考えている。', answer: false, why: '第5段落 online spaces tend to bring together people who already think alike。' },
+    ],
+    qa: [
+      { q: 'What makes a third place valuable, according to the second paragraph?', choices: ['The kind of interaction it allows, combining freedom and familiarity.', 'The low price of the food it serves.', 'The fact that only close friends can enter.', 'The specific goals that visitors must achieve.'], answer: 0, why: '第2段落 not the service it provides but the kind of interaction it allows ... This combination of freedom and familiarity。' },
+      { q: 'How have some libraries changed, according to the last paragraph?', choices: ['They have been redesigned as community centers with comfortable seating and event spaces.', 'They have stopped lending books.', 'They have moved entirely online.', 'They have been turned into chain stores.'], answer: 0, why: '第6段落 Libraries have been redesigned as community centers with comfortable seating and spaces for events。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
