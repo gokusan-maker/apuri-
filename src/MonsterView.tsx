@@ -1787,6 +1787,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="60" rx="8" ry="6" fill="#fb923c" />
       </g>
     )
+  if (species === 'pitta')
+    return (
+      <g>
+        {/* つばさの青いもようと、おなかの赤 */}
+        <path d="M30 58 L42 56" fill="none" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" />
+        <ellipse cx="52" cy="72" rx="6" ry="4" fill="#ef4444" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
