@@ -4518,6 +4518,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Many people go skiing [on] winter in this area.', choices: ['in', 'at', 'by', 'for'], answer: 0, why: '季節には in。' },
     ],
   },
+  {
+    id: 'exam-fix-105',
+    title: '入試の誤文訂正〈105〉（国公立レベル：関係詞の発展）',
+    points: ['what（～すること・もの）は先行詞をふくむ。whatever は「～するものは何でも」。前置詞＋関係代名詞（in which・to whom）のうしろは完全な文。関係副詞 where／when／why のうしろも完全な文で、which のうしろは名詞が欠けた文。コンマのあとに that は使えない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the house in which the poet spent her last years.', ja: 'これはその詩人が晩年を過ごした家だ。' }],
+    questions: [
+      { sentence: '[That] surprised the researchers most was how quickly the birds learned the new song.', choices: ['What', 'Which', 'It', 'Whose'], answer: 0, why: '先行詞がなく、surprised の主語になる「～したこと」なので What。' },
+      { sentence: 'This is the village [which] the famous writer was born.', choices: ['where', 'what', 'whose', 'that which'], answer: 0, why: 'the famous writer was born は欠けたところのない文なので関係副詞 where（= in which）。' },
+      { sentence: 'The friend [to who] I lent my bicycle has not returned it yet.', choices: ['to whom', 'whose', 'to which', 'what'], answer: 0, why: '前置詞のあとの関係代名詞は目的格 whom（人）。to whom I lent my bicycle。' },
+      { sentence: 'You may take [whichever thing what] you like from this box.', choices: ['whatever', 'that', 'which', 'whom'], answer: 0, why: '「好きなものは何でも」は whatever（= anything that）。' },
+      { sentence: 'The company hired a new manager, [that] had worked abroad for ten years.', choices: ['who', 'what', 'which', 'whose'], answer: 0, why: 'コンマのあとの非制限用法に that は使えない。人なので who。' },
+      { sentence: 'I still remember the day [which] we first met at the station.', choices: ['when', 'what', 'whose', 'where'], answer: 0, why: 'we first met at the station は欠けたところのない文。時を表す関係副詞 when。' },
+      { sentence: 'There are some questions [what] nobody can answer, even with modern technology.', choices: ['that', 'whose', 'where', 'who'], answer: 0, why: '先行詞 some questions があり、answer の目的語が欠けているので関係代名詞 that（which）。what は先行詞をとらない。' },
+      { sentence: 'The house [which roof] was damaged in the storm has finally been repaired.', choices: ['whose roof', 'which the roof', 'that roof', 'what roof'], answer: 0, why: '「その家の屋根が」は所有格の関係代名詞 whose。whose roof。' },
+      { sentence: 'He showed me [the thing what] he had bought in Paris.', choices: ['what', 'that what', 'which', 'the thing which what'], answer: 0, why: 'what は先行詞をふくむので、the thing と重ねて使わない。what（または the thing that／which）。' },
+      { sentence: 'This is the method [by that] scientists measure the age of ancient rocks.', choices: ['by which', 'which', 'that', 'what'], answer: 0, why: '前置詞のあとに that は置けない。by which（その方法によって）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

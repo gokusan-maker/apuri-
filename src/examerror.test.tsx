@@ -1513,3 +1513,10 @@ it('正誤問題〈111〉：時と場所の前置詞の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) on three')
 })
+
+it('誤文訂正〈105〉：国公立レベルの関係詞の発展の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-105')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('What')
+})
