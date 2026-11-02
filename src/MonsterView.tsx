@@ -1652,6 +1652,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 44 L66 44" fill="none" stroke="#292524" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'redstart')
+    return (
+      <g>
+        {/* つばさの白い紋と、だいだい色のおなか */}
+        <circle cx="34" cy="60" r="3.5" fill="#ffffff" />
+        <ellipse cx="50" cy="66" rx="9" ry="7" fill="#fb923c" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
