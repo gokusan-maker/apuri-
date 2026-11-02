@@ -25001,6 +25001,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-trust',
+    title: 'Trusting Strangers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, most of us place our trust in people we have never met. We eat food prepared by unknown cooks, take medicine produced in distant factories, and travel in vehicles driven by strangers. We deposit money in banks whose employees we will never see and follow directions from maps created by people whose names we do not know. Modern life would be impossible without this kind of trust, yet it is so ordinary that we rarely stop to consider how remarkable it is, or how it came to exist.",
+      "For most of human history, trust was based on personal knowledge. People lived in small communities in which nearly everyone knew everyone else, and a person's reputation was built through years of face-to-face contact. Someone who cheated a neighbor could expect the news to spread quickly, and the cost of losing one's good name was high. In such settings, trust did not need to be extended very far, because most important exchanges took place among people who were already connected by family ties or long acquaintance.",
+      "As societies grew larger and more complex, this personal form of trust was no longer sufficient. Trade between distant regions, the growth of cities, and the rise of large organizations all required people to cooperate with others they could not know personally. To make this possible, societies developed new institutions: written contracts, courts that could enforce them, professional standards, systems of licensing, and, more recently, inspection agencies and consumer protection laws. These institutions did not eliminate the need for trust, but they changed its object. Instead of trusting a particular individual, people learned to trust the system ( A ) stood behind that individual.",
+      "This shift has had profound consequences. Institutional trust allows cooperation on a scale that personal trust alone could never support, and researchers have found that societies in which people generally trust strangers and public institutions tend to be more prosperous and more stable. When citizens believe that officials are honest and that rules are applied fairly, they are more willing to pay taxes, follow regulations, and invest in the future. Where such trust is weak, by contrast, people often fall back on narrow networks of family and friends, and economic activity remains limited.",
+      "Social scientists often measure this kind of trust by asking a simple question in large surveys: whether most people can be trusted, or whether one cannot be too careful in dealing with others. The answers vary widely from country to country and change only slowly over time. Interestingly, the level of trust people report does not seem to depend mainly on their personal experience of being cheated. It appears to reflect, to a large extent, their impressions of how fairly their society as a whole is organized, which is one reason why trust and institutions are so closely linked.",
+      "Institutional trust is, however, fragile in its own way. Because it depends on the belief that systems work fairly, it can be damaged quickly by scandals, corruption, or the sense that rules apply differently to the powerful. Once lost, it is difficult to rebuild, since people who have been disappointed tend to interpret new information with suspicion. Some observers worry that in many countries today, trust in governments, newspapers, and experts has been declining, partly because of the speed with which stories of misconduct now spread through online media.",
+      "Interestingly, digital technology has also produced new forms of trust. Online marketplaces and ride-sharing services allow strangers to do business with one another on the basis of ratings and reviews left by previous users. In a sense, these systems revive the old reliance on reputation, but on a vastly larger scale. Whether such mechanisms can replace traditional institutions remains uncertain, since ratings can be manipulated and may reflect prejudice as much as genuine experience. What seems clear is that the question of how strangers come to trust one another will remain central to the future of social life.",
+    ],
+    ja: [
+      '毎日、私たちのほとんどは、会ったこともない人々を信頼している。知らない料理人が作った食べ物を食べ、遠くの工場で作られた薬を飲み、知らない人が運転する乗り物で移動する。行員に会うこともない銀行にお金を預け、名前も知らない人が作った地図の道案内にしたがう。こうした信頼がなければ現代の生活は成り立たないが、それはあまりにありふれているので、それがどれほどおどろくべきことなのか、またどのようにして生まれたのかを、私たちが立ち止まって考えることはめったにない。',
+      '人類の歴史の大部分において、信頼は個人的な知り合いにもとづいていた。人々はほとんどだれもがおたがいを知っている小さな共同体で暮らし、人の評判は何年にもわたる顔を合わせたつき合いを通じて築かれた。近所の人をだました人は、うわさがすぐに広まることを覚悟しなければならず、よい評判を失う代償は大きかった。そうした環境では、信頼をあまり遠くまで広げる必要はなかった。大切なやりとりのほとんどは、すでに家族のつながりや長いつき合いで結ばれた人々の間で行われたからである。',
+      '社会が大きく複雑になるにつれて、この個人的な形の信頼ではもはや十分ではなくなった。遠い地域どうしの交易、都市の成長、大きな組織の台頭は、どれも、個人的には知ることのできない相手と協力することを人々に求めた。これを可能にするために、社会は新しい制度を発達させた。書かれた契約、それを守らせることのできる裁判所、職業上の基準、免許の制度、そしてもっと最近では、検査機関や消費者を守る法律である。こうした制度は信頼の必要をなくしたわけではないが、その対象を変えた。人々は、特定の個人を信頼するかわりに、その個人の背後にあるしくみを信頼することを学んだのである。',
+      'この変化は深い影響をもたらしてきた。制度への信頼は、個人的な信頼だけでは決して支えられない規模の協力を可能にする。そして研究者たちは、人々が一般に知らない人や公的な制度を信頼している社会ほど、より豊かで安定している傾向があることを見いだしてきた。市民が、役人は正直で規則は公平に適用されると信じていれば、税をはらい、規則にしたがい、将来に投資しようという気持ちが強くなる。これに対して、そうした信頼が弱いところでは、人々はしばしば家族や友人のせまいつながりにたより、経済活動は限られたままになる。',
+      '社会科学者たちは、こうした信頼を、大規模な調査で単純な質問をすることでよくはかる。たいていの人は信頼できるか、それとも人とつき合うときはいくら用心してもしすぎることはないか、という質問である。その答えは国によって大きくちがい、時がたってもゆっくりとしか変わらない。おもしろいことに、人々が答える信頼の度合いは、主に自分がだまされた個人的な経験にたよっているわけではないようである。それは大部分において、自分の社会全体がどれほど公平に組み立てられているかについての印象を反映しているように思われる。このことは、信頼と制度がこれほど強く結びついている理由の1つである。',
+      'しかし、制度への信頼には、それなりのもろさがある。それはしくみが公平に働いているという考えにたよっているので、不祥事や汚職、あるいは規則が権力のある人には別のあつかいをされるという感覚によって、すぐにそこなわれることがある。いったん失われると、それを立て直すのはむずかしい。失望させられた人々は、新しい情報を疑いの目で解釈しがちだからである。今日、多くの国で政府や新聞や専門家への信頼が低下しつつあるのではないかと心配する人もいる。その理由の一部は、不正の話が今ではインターネットのメディアを通じてあっというまに広がることにある。',
+      'おもしろいことに、デジタル技術は新しい形の信頼も生み出してきた。インターネット上の市場や相乗りのサービスでは、知らない人どうしが、以前の利用者が残した評価やレビューをもとに取引することができる。ある意味で、こうしたしくみは、評判にたよる昔のやり方を、はるかに大きな規模でよみがえらせている。こうしたしくみが伝統的な制度に取ってかわれるかどうかは、まだわからない。評価は操作されることがあり、本当の経験と同じくらい偏見を反映しているかもしれないからである。はっきりしていると思われるのは、知らない人どうしがどのようにしてたがいを信頼するようになるのかという問いが、これからの社会生活の中心であり続けるだろうということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whom'], answer: 0, why: '先行詞 the system を受け、stood behind の主語になる関係代名詞 that。' },
+    ],
+    summary: {
+      text: 'In small traditional communities, trust was based on personal ( 1 ). As societies grew, people came to rely instead on ( 2 ) such as contracts and courts. This kind of trust supports cooperation on a large scale, but it is ( 3 ), because scandals and unfair treatment can damage it quickly.',
+      blanks: [
+        { choices: ['knowledge', 'wealth', 'technology', 'education'], answer: 0, why: '第2段落 For most of human history, trust was based on personal knowledge。' },
+        { choices: ['institutions', 'families', 'neighbors', 'ratings'], answer: 0, why: '第3段落 societies developed new institutions: written contracts, courts ～。' },
+        { choices: ['fragile', 'permanent', 'unnecessary', 'expensive'], answer: 0, why: '第6段落 Institutional trust is, however, fragile in its own way。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、小さな共同体では、人をだますとうわさがすぐに広まった。', answer: true, why: '第2段落 Someone who cheated a neighbor could expect the news to spread quickly。' },
+      { statement: '筆者は、新しい制度が信頼の必要を完全になくしたと述べている。', answer: false, why: '第3段落 These institutions did not eliminate the need for trust, but they changed its object。' },
+      { statement: '筆者によれば、知らない人や制度を信頼する社会ほど、豊かで安定している傾向がある。', answer: true, why: '第4段落 societies in which people generally trust strangers and public institutions tend to be more prosperous and more stable。' },
+      { statement: '筆者は、インターネット上の評価は必ず本当の経験だけを反映すると考えている。', answer: false, why: '第7段落 ratings can be manipulated and may reflect prejudice as much as genuine experience。' },
+    ],
+    qa: [
+      { q: 'Why is institutional trust difficult to rebuild once it is lost?', choices: ['People who have been disappointed tend to interpret new information with suspicion.', 'There are no longer any courts or contracts.', 'Small communities refuse to cooperate with cities.', 'Online ratings are always accurate.'], answer: 0, why: '第6段落 people who have been disappointed tend to interpret new information with suspicion。' },
+      { q: 'In what sense do online ratings "revive the old reliance on reputation"?', choices: ['Like small communities, they let people judge strangers by what others say about them.', 'They force people to meet face to face before doing business.', 'They replace courts and contracts completely.', 'They only work among family members.'], answer: 0, why: '第7段落 strangers ... do business ... on the basis of ratings and reviews left by previous users。評判にもとづく点が昔の共同体と同じ。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
