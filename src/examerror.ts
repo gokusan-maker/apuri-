@@ -3002,6 +3002,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) He is (B) not so (C) tall (D) than his father.', choices: ['(A) He is', '(B) not so', '(C) tall', '(D) than his father'], answer: 3, why: 'not so＋原級＋as。than ではなく as his father。' },
     ],
   },
+  {
+    id: 'exam-error-relative-koku',
+    title: '入試の正誤問題〈127〉（国公立レベル：関係詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '先行詞があれば what は使えない。前置詞のあとは whom／which。非制限用法（コンマのあと）に that は使えない。関係代名詞のあとは名詞が1つ欠けた文、完全な文なら関係副詞 where／when／why。',
+    ],
+    examples: [
+      { en: 'This is the village in which my mother grew up.', ja: 'これは母が育った村だ。' },
+      { en: 'What she told me turned out to be true.', ja: '彼女が私に言ったことは本当だとわかった。' },
+    ],
+    questions: [
+      { sentence: '(A) This is (B) the bike (C) what my uncle (D) gave me.', choices: ['(A) This is', '(B) the bike', '(C) what my uncle', '(D) gave me'], answer: 2, why: '先行詞 the bike があるので what は使えない。which my uncle。' },
+      { sentence: '(A) That she told me (B) yesterday (C) turned out (D) to be true.', choices: ['(A) That she told me', '(B) yesterday', '(C) turned out', '(D) to be true'], answer: 0, why: '「彼女が言ったこと」は先行詞をふくむ what。What she told me。' },
+      { sentence: 'The village (A) which (B) my mother (C) grew up (D) is near the sea.', choices: ['(A) which', '(B) my mother', '(C) grew up', '(D) is near the sea'], answer: 0, why: 'grow up は自動詞。in which（または where）が必要。' },
+      { sentence: 'The man (A) with who (B) I (C) shared a taxi (D) was very kind.', choices: ['(A) with who', '(B) I', '(C) shared a taxi', '(D) was very kind'], answer: 0, why: '前置詞のあとは whom。with whom。' },
+      { sentence: 'My sister, (A) that (B) works (C) at a bank, (D) is good at math.', choices: ['(A) that', '(B) works', '(C) at a bank,', '(D) is good at math'], answer: 0, why: '非制限用法に that は使えない。who works。' },
+      { sentence: 'This is (A) the park (B) where (C) I told you (D) about yesterday.', choices: ['(A) the park', '(B) where', '(C) I told you', '(D) about yesterday'], answer: 1, why: 'about の目的語が欠けているので which（または that）。' },
+      { sentence: 'Nara is (A) a city (B) which (C) you can see (D) many old temples.', choices: ['(A) a city', '(B) which', '(C) you can see', '(D) many old temples'], answer: 1, why: 'あとの文が完全なので where（または in which）。' },
+      { sentence: 'I (A) found the key (B) which (C) I had lost (D) it last week.', choices: ['(A) found the key', '(B) which', '(C) I had lost', '(D) it last week'], answer: 3, why: 'which が目的語なので it は不要。I had lost last week。' },
+      { sentence: '(A) Tell me (B) the reason (C) which (D) you were late.', choices: ['(A) Tell me', '(B) the reason', '(C) which', '(D) you were late'], answer: 2, why: 'the reason のあとに完全な文が続くので why。' },
+      { sentence: '(A) There are (B) some things (C) what (D) money cannot buy.', choices: ['(A) There are', '(B) some things', '(C) what', '(D) money cannot buy'], answer: 2, why: '先行詞 some things があるので that。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
