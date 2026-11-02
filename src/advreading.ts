@@ -26400,6 +26400,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-hundred-year-life',
+    title: 'Planning for a Hundred-Year Life',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, the life of a typical person in an industrialized country followed a predictable pattern. People spent their early years in education, then worked for several decades, often for a single employer, and finally retired, living on a pension for a relatively short period before the end of their lives. This three-stage model shaped not only individual expectations but also the organization of schools, companies, and welfare systems. It made sense in a world where most people did not live much beyond their sixties or early seventies, and in which the skills needed for most jobs changed only slowly from one generation to the next.",
+      "That world is changing. Average life expectancy has risen steadily in many countries, and a child born today in a wealthy society has a reasonable chance of living to the age of one hundred. If the three-stage model remains unchanged, such a person might spend thirty or more years in retirement, a period that would be extremely difficult to finance through savings and pensions earned during a working life of perhaps forty years. Governments are already struggling with the cost of supporting growing numbers of older citizens with the taxes paid by a shrinking working population. Individuals, too, may find that a long retirement without purpose or social contact brings loneliness rather than the rest they had hoped for.",
+      "One obvious response is simply to work longer, and many countries have raised the age at which people can receive a public pension. But extending the working stage is not merely a matter of adding years to the end of a career. Skills learned in one's twenties are unlikely to remain useful for fifty years, especially at a time of rapid technological change. A person who expects to work into his or her seventies will probably need to learn new skills, change occupations, and perhaps return to formal education several times along the way. Employers, for their part, will have to rethink the common assumption that older workers are less able to learn or less worth training.",
+      "For this reason, some researchers argue that the three-stage model should give way to a multi-stage life. In such a life, periods of work might alternate with periods of study, travel, caring for family members, or exploring new interests. A person might leave a job at forty to retrain in a different field, start a business at fifty, and work part-time while volunteering in later years. ( A ) moving in a straight line from school to retirement, life would become a series of transitions, each requiring a degree of planning and flexibility. In such a life, the familiar boundaries between youth, middle age, and old age would become far less clear than they are today.",
+      "Such a change would bring both opportunities and risks. On the positive side, a longer life could allow people to pursue a wider range of activities and to correct earlier choices that turned out to be mistaken. Yet transitions are often difficult, and not everyone has the financial resources, the health, or the social support needed to make them successfully. Without careful planning by governments and employers, a multi-stage life might become a privilege of the educated and wealthy, while others are left with insecure work and little chance to retrain.",
+      "Adapting to longer lives, therefore, will require changes not only in individual attitudes but also in institutions. Education systems may need to serve adults of all ages, not just the young, and companies may need to offer more flexible careers that allow employees to step away and return. Above all, societies will need to abandon the assumption that age alone determines what a person can do. If these changes are made, a longer life could be not simply more years of existence, but more years of growth, learning, and contribution.",
+    ],
+    ja: [
+      '20世紀の大部分を通じて、工業化された国のふつうの人の一生は、予測できる型にしたがっていた。人々は若いころを教育に費やし、それから数十年、しばしば1つの会社で働き、最後に引退して、一生の終わりまでの比較的短い期間を年金で暮らした。この3段階の型は、個人の期待だけでなく、学校や会社や福祉制度のしくみも形づくった。それは、ほとんどの人が60代や70代の初めをあまりこえて生きない世界では理にかなっていた。そこでは、ほとんどの仕事に必要な技能も、世代から世代へとゆっくりとしか変わらなかったのである。',
+      'その世界は変わりつつある。多くの国で平均寿命は着実にのびており、今日豊かな社会に生まれた子どもは、100歳まで生きる可能性がかなりある。3段階の型が変わらないままなら、そうした人は30年以上を引退後に過ごすかもしれないが、それは、おそらく40年ほどの働く期間に得た貯金と年金でまかなうことがきわめてむずかしい期間である。政府はすでに、ふえていく高齢の市民を、へっていく働く人口が払う税金で支える費用に苦しんでいる。個人もまた、目的や人とのつながりのない長い引退生活が、望んでいた休息ではなく、さびしさをもたらすと気づくかもしれない。',
+      '1つのわかりやすい対応は、単に長く働くことであり、多くの国は公的年金を受け取れる年れいを引き上げてきた。しかし、働く段階をのばすことは、単に仕事の終わりに年数を足すということではない。20代で身につけた技能が50年間役に立ち続けることはまずない。とくに技術が急速に変化する時代にはそうである。70代まで働くつもりの人は、そのとちゅうで、おそらく新しい技能を身につけ、職業を変え、もしかすると何度か正式な教育にもどる必要があるだろう。雇い主の側も、年長の働き手は学ぶ力が低い、あるいは訓練する価値が低いという、よくある思いこみを考え直さなければならないだろう。',
+      'このため、3段階の型は多段階の人生に道をゆずるべきだと主張する研究者もいる。そうした人生では、働く期間が、勉強や旅行や家族の世話、新しい関心を探ることの期間と交互にくるかもしれない。人は40歳で仕事をやめて別の分野で学び直し、50歳で事業を始め、晩年にはボランティアをしながらパートで働くかもしれない。学校から引退までまっすぐに進むのではなく、人生は一連の移行となり、そのそれぞれがある程度の計画と柔軟さを必要とするのである。そうした人生では、若さと中年と老年のあいだのなじみ深い境界は、今日よりずっとあいまいになるだろう。',
+      'このような変化は、機会と危険の両方をもたらすだろう。よい面としては、長い人生によって、人々はより幅広い活動に取り組み、あとでまちがいだとわかった以前の選択を正すことができるかもしれない。しかし移行はしばしばむずかしく、だれもがそれをうまくやりとげるのに必要なお金や健康や社会的な支えをもっているわけではない。政府や雇い主による注意深い計画がなければ、多段階の人生は教育のある豊かな人々の特権になり、ほかの人々は不安定な仕事と学び直すわずかな機会しか残されないかもしれない。',
+      'したがって、より長い人生に適応するには、個人の考え方だけでなく制度も変える必要があるだろう。教育制度は若者だけでなくあらゆる年れいの大人に役立つ必要があるかもしれず、会社は、社員がいったん離れてまたもどってこられる、より柔軟な働き方を用意する必要があるかもしれない。何よりも、社会は、年れいだけで人に何ができるかが決まるという前提を捨てる必要があるだろう。こうした変化がなされるなら、長い人生は、単に生きる年数が多いということではなく、成長し、学び、貢献する年数が多いということになりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Rather than', 'In addition to', 'As a result of', 'Instead'], answer: 0, why: '「まっすぐに進むのではなく、一連の移行となる」という対比なので Rather than（あとに moving が続く）。' },
+    ],
+    summary: {
+      text: 'The traditional three-stage life of education, work, and retirement made sense when people did not live very long. As life ( 1 ) rises, simply working longer is not enough, because skills soon become out of date. Some researchers propose a multi-stage life with repeated ( 2 ), but this requires support from governments and employers so that it does not become a ( 3 ) of the wealthy.',
+      blanks: [
+        { choices: ['expectancy', 'insurance', 'quality', 'style'], answer: 0, why: '第2段落 Average life expectancy has risen steadily。' },
+        { choices: ['transitions', 'holidays', 'illnesses', 'promotions'], answer: 0, why: '第4段落 life would become a series of transitions。' },
+        { choices: ['privilege', 'problem', 'duty', 'habit'], answer: 0, why: '第5段落 might become a privilege of the educated and wealthy。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、3段階の型は学校や会社や福祉制度のしくみにも影響した。', answer: true, why: '第1段落 shaped not only individual expectations but also the organization of schools, companies, and welfare systems。' },
+      { statement: '筆者によれば、20代で身につけた技能は50年間役に立ち続けるのがふつうである。', answer: false, why: '第3段落 Skills learned in one\'s twenties are unlikely to remain useful for fifty years。' },
+      { statement: '筆者によれば、だれもが移行をうまくやりとげるのに必要なものをもっているわけではない。', answer: true, why: '第5段落 not everyone has the financial resources, the health, or the social support needed。' },
+      { statement: '筆者は、年れいによって人にできることが決まるという前提を守るべきだと考えている。', answer: false, why: '第6段落 societies will need to abandon the assumption that age alone determines what a person can do。' },
+    ],
+    qa: [
+      { q: 'Why is a thirty-year retirement difficult, according to the second paragraph?', choices: ['It would be very hard to pay for it with savings and pensions from about forty years of work.', 'Most people do not want to stop working.', 'Pensions are no longer paid by any government.', 'Older people are not allowed to travel.'], answer: 0, why: '第2段落 a period that would be extremely difficult to finance through savings and pensions earned during a working life of perhaps forty years。' },
+      { q: 'What might education systems need to do, according to the last paragraph?', choices: ['Serve adults of all ages, not just the young.', 'Shorten the time children spend at school.', 'Teach only technological skills.', 'Close universities for older people.'], answer: 0, why: '第6段落 Education systems may need to serve adults of all ages, not just the young。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
