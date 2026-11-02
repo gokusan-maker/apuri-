@@ -1540,6 +1540,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M37 37 L47 36" fill="none" stroke="#fafaf9" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'nightjar')
+    return (
+      <g>
+        {/* 木の皮のようなもようと、白い首の点 */}
+        <path d="M38 58 L44 62 M50 56 L56 60 M42 68 L48 72" fill="none" stroke="#292524" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="50" cy="50" r="2.5" fill="#fafaf9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
