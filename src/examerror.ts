@@ -3122,6 +3122,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It was (B) yesterday (C) that I (D) have met him.', choices: ['(A) It was', '(B) yesterday', '(C) that I', '(D) have met him'], answer: 3, why: 'yesterday（過去）なので met。' },
     ],
   },
+  {
+    id: 'exam-error-gerund-koku',
+    title: '入試の正誤問題〈132〉（国公立レベル：不定詞と動名詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'remember／forget＋to do は「これから～すること」、＋-ing は「すでに～したこと」。stop -ing は「～をやめる」。finish・mind・avoid・give up は動名詞、decide・hope・want は不定詞。look forward to・be used to の to は前置詞。',
+    ],
+    examples: [
+      { en: 'I am looking forward to seeing you.', ja: 'あなたに会えるのを楽しみにしています。' },
+      { en: 'Please remember to turn off the lights.', ja: '忘れずに電気を消してください。' },
+    ],
+    questions: [
+      { sentence: 'I am (A) looking forward (B) to (C) see (D) you.', choices: ['(A) looking forward', '(B) to', '(C) see', '(D) you'], answer: 2, why: 'look forward to の to は前置詞。seeing。' },
+      { sentence: 'Please (A) remember (B) turning off (C) the lights (D) before you leave.', choices: ['(A) remember', '(B) turning off', '(C) the lights', '(D) before you leave'], answer: 1, why: 'これから忘れずにすることは remember to do。to turn off。' },
+      { sentence: 'I (A) remember (B) to meet (C) him (D) once in Paris.', choices: ['(A) remember', '(B) to meet', '(C) him', '(D) once in Paris'], answer: 1, why: '過去に～したことを覚えているのは remember -ing。meeting。' },
+      { sentence: '(A) He stopped (B) to smoke (C) for his health (D) last year.', choices: ['(A) He stopped', '(B) to smoke', '(C) for his health', '(D) last year'], answer: 1, why: 'たばこをやめたのは stop -ing。smoking。' },
+      { sentence: '(A) She has (B) finished (C) to clean (D) her room.', choices: ['(A) She has', '(B) finished', '(C) to clean', '(D) her room'], answer: 2, why: 'finish のあとは動名詞。cleaning。' },
+      { sentence: 'Would you (A) mind (B) to close (C) the door (D) behind you?', choices: ['(A) mind', '(B) to close', '(C) the door', '(D) behind you?'], answer: 1, why: 'mind のあとは動名詞。closing。' },
+      { sentence: 'They (A) gave up (B) trying (C) and decided (D) going home.', choices: ['(A) gave up', '(B) trying', '(C) and decided', '(D) going home'], answer: 3, why: 'decide のあとは不定詞。to go home。' },
+      { sentence: '(A) I am used (B) to (C) get up (D) early.', choices: ['(A) I am used', '(B) to', '(C) get up', '(D) early'], answer: 2, why: 'be used to の to は前置詞。getting up。' },
+      { sentence: '(A) Do not forget (B) bringing (C) your passport (D) tomorrow.', choices: ['(A) Do not forget', '(B) bringing', '(C) your passport', '(D) tomorrow'], answer: 1, why: 'これから忘れずにすることは forget to do。to bring。' },
+      { sentence: '(A) To swimming (B) in the sea (C) is (D) fun.', choices: ['(A) To swimming', '(B) in the sea', '(C) is', '(D) fun'], answer: 0, why: '主語は to swim か swimming。To swimming は誤り。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
