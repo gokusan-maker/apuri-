@@ -41,3 +41,15 @@ it('京大の文法：長い文の骨組みを見ぬく本番レベルの問題�
     expect(new Set(q.choices).size).toBe(4)
   }
 })
+
+it('東大の文法：長い主語・挿入・仮定法の発展など本番レベルの問題（平均15語以上・高校基礎の短い文は出さない）', async () => {
+  const { LEVEL_GRAMMAR } = await import('./examgrammar2')
+  const u = LEVEL_GRAMMAR.find((x) => x.id === 'exam-todai')!
+  expect(u.questions).toHaveLength(25)
+  const words = u.questions.map((q) => q.sentence.split(/\s+/).length)
+  expect(words.reduce((a, b) => a + b, 0) / words.length).toBeGreaterThanOrEqual(15)
+  for (const q of u.questions) {
+    expect(q.sentence).not.toMatch(/It is high time we|All you have to do|I have no idea ___ to do/)
+    expect(new Set(q.choices).size).toBe(4)
+  }
+})

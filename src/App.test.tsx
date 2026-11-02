@@ -1856,7 +1856,7 @@ it('文法ページは城と今日の課題と「単元をえらんで自由に�
   const lv = screen.getByRole('tablist', { name: 'レベル' })
   expect(within(lv).getByRole('tab', { name: '中1' })).toHaveAttribute('aria-selected', 'true')
   fireEvent.click(within(lv).getByRole('tab', { name: '東大' }))
-  expect(within(screen.getByRole('list', { name: '東大の単元' })).getByRole('button', { name: '東大の文法（要約・英作文：時制の一致・譲歩・強調）' })).toBeInTheDocument()
+  expect(within(screen.getByRole('list', { name: '東大の単元' })).getByRole('button', { name: '東大の文法（要約・英作文：長い文の時制・譲歩・強調・仮定法の発展）' })).toBeInTheDocument()
   expect(document.querySelector('.smap')).toBeNull()
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(document.querySelector('.smap')).not.toBeNull()
