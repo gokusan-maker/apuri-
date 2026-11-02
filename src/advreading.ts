@@ -26594,6 +26594,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-metaphor',
+    title: 'Metaphors We Think With',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Metaphor is often regarded as a decoration of language, a device that poets and speechwriters use to make their words more vivid. When we say that time is running out or that an argument has a weak foundation, we seem merely to be adding color to statements that could be expressed more plainly. Over the past few decades, however, linguists and philosophers have argued that metaphor plays a far more fundamental role. According to this view, metaphors are not only ways of speaking but ways of thinking, and they shape how we understand much of our experience, often without our being aware of it.",
+      "Consider how often we describe abstract matters in terms of physical ones. We speak of ideas being grasped, of prices rising and falling, of feelings running deep, and of relationships growing closer or more distant. In each case, something that cannot be seen or touched is understood by comparison with something concrete. Such expressions are so common that we rarely notice them as metaphors at all. Yet they suggest that much of our reasoning about abstract topics may depend on patterns borrowed from our bodily experience of space, movement, and force. Our thinking, in other words, may be shaped by the fact that we are creatures with bodies that move through a physical world.",
+      "If this is true, then the choice of metaphor can have important consequences. A metaphor highlights certain features of a situation while hiding others. To describe an argument as a war, for example, encourages us to think of the other person as an opponent to be defeated, and to regard conceding a point as a loss. To describe it instead as a joint search for truth, or as a kind of dance in which both partners must cooperate, invites a very different attitude. The same disagreement may be experienced quite differently depending on which picture guides our understanding of it. Even the outcome of the disagreement may depend on whether those involved see themselves as fighting or as working together.",
+      "Public debates provide many examples of this effect. Experiments have suggested that people who read a description of crime as a beast attacking a city tend to favor stronger police measures, whereas those who read a description of crime as a virus infecting a city are more likely to support efforts to address its underlying causes. ( A ) the factual information in both descriptions was identical, the metaphor appeared to influence the solutions that readers considered appropriate. Those who frame a public issue, therefore, may shape the range of responses that seem reasonable to their audience, often without either side noticing that a choice of language has been made.",
+      "Recognizing the power of metaphor need not make us suspicious of all figurative language. Metaphors are indispensable tools for thought, allowing us to extend our understanding into areas where direct experience is impossible. Scientists, too, have relied on them, describing the atom as a miniature solar system or the brain as a computer, and such comparisons have often stimulated fruitful research. The danger lies not in using metaphors but in forgetting that we are using them, and thus mistaking a helpful comparison for a complete description of reality.",
+      "The practical lesson is to treat metaphors as provisional lenses rather than as fixed truths. When a particular way of speaking about a problem seems to lead nowhere, it may help to ask what metaphor lies beneath it and whether a different one might reveal possibilities that had been overlooked. Learning a foreign language can encourage this kind of reflection, since other languages often rely on different metaphors for the same experiences. In becoming aware of the pictures that guide our thinking, we gain a measure of freedom to choose among them.",
+    ],
+    ja: [
+      '比喩はしばしば言葉のかざり、つまり詩人や演説の書き手が言葉をより生き生きとさせるために使う工夫とみなされる。「時間がなくなりかけている」とか「ある議論の土台が弱い」とか言うとき、私たちは、もっとあっさり表現できることに色をそえているだけのように思える。しかしここ数十年のあいだに、言語学者や哲学者たちは、比喩ははるかに根本的な役割を果たしていると論じてきた。この見方によれば、比喩は話し方であるだけでなく考え方でもあり、私たちが経験の多くをどう理解するかを形づくっているのである。しかもそれは、しばしば私たちが気づかないうちに行われている。',
+      '私たちがどれほどしばしば抽象的なことを物理的なことによって表しているかを考えてみよう。私たちは、考えを「つかむ」、物価が「上がったり下がったり」する、気持ちが「深い」、関係が「近く」なったり「遠く」なったりする、と言う。どの場合も、見たりさわったりできないものが、具体的なものとの比較によって理解されている。こうした表現はあまりにありふれているので、私たちはそれを比喩だと気づくことさえめったにない。しかしそれらは、抽象的な話題についての私たちの推論の多くが、空間や動きや力についての身体的な経験から借りた型にたよっているのかもしれないことを示している。言いかえれば、私たちの思考は、私たちが物理的な世界の中を動く身体をもった生き物であるという事実によって形づくられているのかもしれない。',
+      'もしこれが正しいなら、どの比喩を選ぶかは重要な結果をもたらしうる。比喩はある状況のある特徴を目立たせ、ほかの特徴をかくす。たとえば議論を戦争として表すと、相手を打ち負かすべき敵と考え、ある点をゆずることを負けとみなすよう促される。それを、真理をともにさがすこととして、あるいは2人がともに協力しなければならないダンスのようなものとして表せば、まったくちがう態度が生まれる。同じ意見のちがいでも、どんな絵がその理解を導くかによって、まったくちがって経験されうるのである。意見のちがいの結末でさえ、かかわる人々が自分たちを戦っていると見るか、協力していると見るかによって決まるかもしれない。',
+      '公の議論はこうした効果の例を多く与えてくれる。実験によれば、犯罪を町を襲うけものとして描いた文章を読んだ人は、より強い警察の対策を支持する傾向があるのに対し、犯罪を町に感染するウイルスとして描いた文章を読んだ人は、その根本的な原因に取り組む努力を支持しやすいことが示唆されている。両方の文章の事実の情報は同じだったにもかかわらず、比喩が、読者が適切と考える解決策に影響したように見えたのである。したがって、公の問題をどう枠づけるかを決める人々は、聞き手にとってもっともらしく思える対応の範囲を形づくっているのかもしれない。しかも多くの場合、どちらの側も、言葉の選択がなされたことに気づかないままなのである。',
+      '比喩の力を認めることで、あらゆる比喩的な言葉を疑うようになる必要はない。比喩は思考にとって欠かせない道具であり、直接の経験が不可能な領域にまで理解を広げることを可能にしてくれる。科学者もまた比喩にたより、原子を小さな太陽系として、脳をコンピューターとして描いてきたし、そうした比較はしばしば実りある研究を促してきた。危険は比喩を使うことにあるのではなく、それを使っていることを忘れ、そのため便利な比較を現実の完全な記述ととりちがえることにあるのである。',
+      '実際的な教訓は、比喩を固定した真理としてではなく、仮のレンズとして扱うことである。ある問題についての特定の話し方がどこにもつながらないように思えるとき、その下にどんな比喩があるのか、別の比喩なら見落とされていた可能性が見えてくるのではないかと問うことが役に立つかもしれない。外国語を学ぶことは、この種のふり返りを促してくれる。ほかの言語は同じ経験に対してしばしばちがう比喩を使うからである。自分の考えを導いている絵に気づくことで、私たちはそのなかから選ぶある程度の自由を得るのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「事実の情報は同じだったにもかかわらず、比喩が影響した」という逆接なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、比喩は単なる言葉のかざりにすぎないと考える学者が近年ふえている。', answer: false, why: '第1段落 linguists and philosophers have argued that metaphor plays a far more fundamental role。' },
+      { statement: '筆者によれば、私たちは抽象的なことをしばしば物理的なことによって表している。', answer: true, why: '第2段落 how often we describe abstract matters in terms of physical ones。' },
+      { statement: '実験では、犯罪をウイルスとして描いた文章を読んだ人は、強い警察の対策を支持しやすかった。', answer: false, why: '第4段落 those who read ... as a virus ... are more likely to support efforts to address its underlying causes。' },
+      { statement: '筆者によれば、危険は比喩を使うことではなく、使っていることを忘れることにある。', answer: true, why: '第5段落 The danger lies not in using metaphors but in forgetting that we are using them。' },
+    ],
+    qa: [
+      { q: 'What does describing an argument as a war encourage, according to the third paragraph?', choices: ['Thinking of the other person as an opponent and regarding conceding a point as a loss.', 'Cooperating with the other person like dance partners.', 'Searching for the truth together.', 'Avoiding all disagreements.'], answer: 0, why: '第3段落 encourages us to think of the other person as an opponent to be defeated, and to regard conceding a point as a loss。' },
+      { q: 'Why can learning a foreign language encourage reflection on metaphors?', choices: ['Other languages often use different metaphors for the same experiences.', 'Foreign languages have no metaphors.', 'It makes people forget their first language.', 'It replaces metaphors with numbers.'], answer: 0, why: '第6段落 other languages often rely on different metaphors for the same experiences。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
