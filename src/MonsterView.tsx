@@ -1763,6 +1763,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="84" rx="5" ry="4" fill="#92400e" />
       </g>
     )
+  if (species === 'hawkeagle')
+    return (
+      <g>
+        {/* 頭のうしろの冠羽と、つばさのしま */}
+        <path d="M58 30 L66 24 L62 34" fill="#292524" />
+        <path d="M28 58 L40 56 M28 64 L40 62 M28 70 L40 68" fill="none" stroke="#292524" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
