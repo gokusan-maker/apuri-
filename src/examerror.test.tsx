@@ -1597,3 +1597,10 @@ it('正誤問題〈117〉：京大レベルの省略と代用の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) to it')
 })
+
+it('誤文訂正〈111〉：使役動詞・知覚動詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-111')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('write')
+})

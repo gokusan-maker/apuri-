@@ -4770,6 +4770,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He promised to call me, but he [did not so].', choices: ['did not', 'not did', 'did not so do', 'was not'], answer: 0, why: '前の動詞（call me）を受ける代動詞 did not（= did not call me）。did not so とは言わない。' },
     ],
   },
+  {
+    id: 'exam-fix-111',
+    title: '入試の誤文訂正〈111〉（共通テストレベル：使役動詞・知覚動詞）',
+    points: ['使役動詞 make／let／have ＋ O ＋ 原形（get は get O to ～）。O が「される」側なら have／get ＋ O ＋ 過去分詞。知覚動詞 see／hear／watch／feel ＋ O ＋ 原形（全部）／～ing（している途中）／過去分詞（される）。make の受け身は be made to ～。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'My mother made me clean my room before dinner.', ja: '母は夕食の前に私に部屋をそうじさせた。' }],
+    questions: [
+      { sentence: 'The teacher made us [to write] the essay again.', choices: ['write', 'writing', 'written', 'wrote'], answer: 0, why: '使役の make ＋ O ＋ 原形。to は不要。' },
+      { sentence: 'My parents let me [to go] to the concert with my friends.', choices: ['go', 'going', 'gone', 'went'], answer: 0, why: 'let ＋ O ＋ 原形で「O に～させてやる」。' },
+      { sentence: 'I got my brother [help] me with my homework.', choices: ['to help', 'helped', 'helps', 'be helped'], answer: 0, why: 'get ＋ O ＋ to 不定詞で「O に～してもらう」。' },
+      { sentence: 'I had my hair [cut it] at a new salon yesterday.', choices: ['cut', 'cutting', 'to cut', 'be cut'], answer: 0, why: 'have ＋ O ＋ 過去分詞で「O を～してもらう」。髪は「切られる」側なので cut（過去分詞）。' },
+      { sentence: 'She had her bag [steal] on the train.', choices: ['stolen', 'stealing', 'to steal', 'stole'], answer: 0, why: 'have ＋ O ＋ 過去分詞で「O を～される（被害）」。stolen。' },
+      { sentence: 'I saw a man [to enter] the building late at night.', choices: ['enter', 'entered', 'to be entering', 'enters'], answer: 0, why: '知覚動詞 see ＋ O ＋ 原形（入るところを全部見た）。to は不要。' },
+      { sentence: 'We heard the children [to sing] in the next room.', choices: ['singing', 'sung', 'to singing', 'sang'], answer: 0, why: '知覚動詞 hear ＋ O ＋ ～ing（歌っている途中を聞いた）。' },
+      { sentence: 'He heard his name [calling] from behind.', choices: ['called', 'call', 'to call', 'calls'], answer: 0, why: '名前は「よばれる」側なので hear ＋ O ＋ 過去分詞 called。' },
+      { sentence: 'The students were made [clean] the classroom after school.', choices: ['to clean', 'cleaning', 'cleaned', 'be cleaning'], answer: 0, why: 'make O 原形 の受け身は be made to ～。to が必要になる。' },
+      { sentence: 'I felt the ground [to shake] during the earthquake.', choices: ['shake', 'shaken', 'to be shaking', 'shook'], answer: 0, why: '知覚動詞 feel ＋ O ＋ 原形（～ing も可）。to は不要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
