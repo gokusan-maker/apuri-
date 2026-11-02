@@ -4266,6 +4266,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Car use is [less commoner] in big cities than in rural areas.', choices: ['less common', 'least common', 'more commoner', 'lesser common'], answer: 0, why: '「〜ほど一般的でない」は less ＋ 原級 ＋ than。less common。' },
     ],
   },
+  {
+    id: 'exam-fix-99',
+    title: '入試の誤文訂正〈99〉（共通テストレベル：まぎらわしい名詞）',
+    points: ['price（値段）／cost（費用）／fare（運賃）／fee（料金・謝礼）、customer（店の客）／guest（招待客・宿泊客）／audience（聴衆）／passenger（乗客）、reservation（予約）／appointment（面会の約束）、habit（個人の習慣）／custom（社会の慣習）、scenery（景色・数えられない）／view（ながめ）など、意味の近い名詞の使い分け。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I have an appointment with the dentist at three.', ja: '3時に歯医者の予約がある。' }],
+    questions: [
+      { sentence: 'The bus [price] from the station to the airport has gone up again.', choices: ['fare', 'fee', 'cost of', 'charge for it'], answer: 0, why: '乗り物の「運賃」は fare。price は品物の値段。' },
+      { sentence: 'The [fare] for joining the tennis club is 3,000 yen a month.', choices: ['fee', 'price of', 'toll', 'pay'], answer: 0, why: 'クラブの入会金・会費など「サービスへの料金」は fee。fare は運賃。' },
+      { sentence: 'The shop gave a small gift to every [guest] who spent more than 5,000 yen.', choices: ['customer', 'audience', 'passenger', 'visitor of'], answer: 0, why: '店で買い物をする「客」は customer。guest は招待客・宿泊客。' },
+      { sentence: 'The [customers] at the concert stood up and clapped for ten minutes.', choices: ['audience', 'spectator', 'passengers', 'clients'], answer: 0, why: 'コンサートの「聴衆」は audience（集合名詞）。' },
+      { sentence: 'I made a [promise] with the doctor for next Tuesday afternoon.', choices: ['an appointment', 'a reservation', 'an engagement of', 'a booking with'], answer: 0, why: '医者・人と会う「予約・約束」は make an appointment with ～。a promise は「約束（すること）」で、時間を決めて会う約束には使わない。' },
+      { sentence: 'We made an [appointment] for a table by the window at the restaurant.', choices: ['reservation', 'promise', 'meeting', 'engagement'], answer: 0, why: 'レストランの席・ホテルの部屋などの「予約」は reservation。' },
+      { sentence: 'Giving gifts at the end of the year is an old [habit] in this country.', choices: ['custom', 'manner', 'practice of', 'use'], answer: 0, why: '社会の「慣習・風習」は custom。habit は個人のくせ・習慣。' },
+      { sentence: 'My father has a [custom] of reading the newspaper before breakfast.', choices: ['habit', 'tradition', 'manner', 'convention'], answer: 0, why: '個人の「習慣」は habit。have a habit of ～ing。' },
+      { sentence: 'We enjoyed the beautiful [sceneries] of the mountains from the train.', choices: ['scenery', 'a scenery', 'scene of', 'sceneries of'], answer: 0, why: 'scenery は数えられない名詞なので複数形も a もつかない。' },
+      { sentence: 'The [cost] of this shirt is written on the tag, but it is 20% off today.', choices: ['price', 'fee', 'fare', 'charge of'], answer: 0, why: '品物につけられた「値段」は price。cost は「（作る・する）のにかかる費用」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
