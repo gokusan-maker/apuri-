@@ -25278,6 +25278,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-progress',
+    title: 'The Idea of Progress',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few ideas have shaped the modern world as deeply as the idea of progress. The belief that human life is gradually improving, that each generation can know more, live longer, and enjoy greater freedom than the one before, has inspired scientists, reformers, and ordinary people for several centuries. It is so familiar that we rarely notice it as an idea at all; it seems simply to describe the way things are. Yet the belief in progress has a history, and examining that history may help us to understand both its strengths and its dangers.",
+      "For much of human history, many societies did not regard time as moving steadily forward toward a better future. Some imagined history as a cycle in which periods of prosperity and decline followed one another endlessly; others looked back to a golden age from which the present had fallen away. The idea that the future would be better than the past became widely accepted in Europe only from the seventeenth and eighteenth centuries, when advances in science and technology seemed to show that human knowledge could grow without limit and that this knowledge could be used to improve the conditions of life.",
+      "There is no doubt that the belief has been, in many respects, justified. Over the past two hundred years, average life expectancy has risen dramatically in most parts of the world, and diseases that once killed millions have been controlled or eliminated. Literacy has spread, and the proportion of people living in extreme poverty has fallen considerably. Anyone who doubts that progress is possible need only consider how much the ordinary conditions of life have changed within a few generations. Tasks that once required days of exhausting labor can now be completed in minutes, and information that was once available only to a small educated minority can be found by almost anyone with access to a library or the internet.",
+      "However, the belief in progress has also carried risks. When improvement is regarded as inevitable, it becomes easy to overlook the costs that accompany it, ( A ) the damage to the natural environment caused by industrial growth or the suffering of people whose traditional ways of life were destroyed in the name of development. The confidence that history is moving in the right direction can even be used to justify actions that would otherwise be recognized as harmful, on the grounds that they serve a better future.",
+      "A further problem is that progress in one area does not guarantee progress in another. Technical knowledge may advance rapidly while moral understanding, political institutions, or the capacity for wise judgment change much more slowly. Powerful technologies placed in the hands of societies that have not learned to use them responsibly may create new dangers rather than eliminating old ones. The twentieth century, which saw both remarkable scientific achievements and destructive wars on an unprecedented scale, provides ample evidence of this imbalance. The same discoveries in physics and chemistry that made possible new medicines and sources of energy also made possible weapons capable of destroying entire cities, and the question of how to control them remains unresolved.",
+      "None of this means that we should abandon the hope of improvement. The point is rather that progress is not a law of history but an achievement, something that must be deliberately pursued and can be lost if it is neglected. ( B ) progress is understood in this way, the question is no longer whether the world is getting better on its own, but what we must do, and what we must avoid doing, if the lives of future generations are to be better than our own.",
+    ],
+    ja: [
+      '進歩という考えほど、現代の世界を深く形づくってきた考えはほとんどない。人間の生活はしだいによくなっていく、つまりどの世代も前の世代より多くを知り、長く生き、大きな自由を楽しむことができるという信念は、何世紀にもわたって、科学者や改革者やふつうの人々をはげましてきた。それはあまりになじみ深いので、私たちはそれを1つの考えとして意識することさえめったにない。それはただ物事のありのままを述べているように思えるのである。しかし、進歩への信念には歴史があり、その歴史を調べることは、その強さと危うさの両方を理解する助けになるかもしれない。',
+      '人類の歴史の大部分において、多くの社会は、時間がよりよい未来へ向かって着実に進んでいるとはみなしていなかった。繁栄と衰退の時期がかぎりなくくり返される循環として歴史を思いえがいた社会もあれば、現在がそこから落ちてきた黄金時代をふり返る社会もあった。未来は過去よりよくなるという考えがヨーロッパで広く受け入れられるようになったのは、17世紀から18世紀になってからのことにすぎない。そのころ、科学と技術の進歩が、人間の知識はかぎりなく増えることができ、その知識を生活の条件をよくするために使えることを示しているように思えたのである。',
+      'この信念が、多くの点で正しかったことはまちがいない。この200年の間に、世界のほとんどの地域で平均寿命はおどろくほどのび、かつて何百万人もの命をうばった病気は、おさえられるか、なくされてきた。読み書きできる人は広がり、ひどい貧困の中で暮らす人の割合もかなり下がった。進歩が可能だということを疑う人は、生活のふつうの条件がわずか数世代のうちにどれほど変わったかを考えてみさえすればよい。かつては何日もの骨の折れる労働を必要とした仕事が、今では数分で終えられるし、かつては教育を受けた少数の人しか手に入れられなかった情報を、図書館やインターネットを使えるほとんどだれもが見つけられるのである。',
+      'しかし、進歩への信念は危うさもともなってきた。改善が避けられないものとみなされると、それにともなう代償を見落としやすくなる。たとえば、産業の成長が引き起こした自然環境へのダメージや、開発の名のもとに伝統的な暮らし方をこわされた人々の苦しみである。歴史が正しい方向に進んでいるという自信は、よりよい未来に役立つという理由で、そうでなければ有害だと認められるであろう行動を正当化するために使われることさえある。',
+      'さらなる問題は、ある分野での進歩が、別の分野での進歩を保証しないことである。技術の知識は急速に進むかもしれないが、道徳の理解や政治の制度や賢明に判断する力は、もっとずっとゆっくりしか変わらない。それを責任をもって使うことを学んでいない社会の手にわたった強力な技術は、古い危険をなくすどころか、新しい危険を生むかもしれない。おどろくべき科学の業績と、かつてない規模の破壊的な戦争の両方を見た20世紀は、この不つり合いの十分な証拠となっている。新しい薬やエネルギー源を可能にした物理学や化学の同じ発見が、都市全体を破壊できる兵器も可能にした。そしてそれをどうおさえるかという問題は、今も解決されていないのである。',
+      'こうしたことは、改善への希望を捨てるべきだという意味ではない。むしろ大切なのは、進歩は歴史の法則ではなく、達成されるものだということである。つまり、意図して追い求めなければならず、おろそかにすれば失われうるものなのである。進歩をこのように理解すれば、問いはもはや、世界がひとりでによくなっているかどうかではなくなる。未来の世代の生活が私たちの生活よりよくなるためには、私たちは何をしなければならず、何をしてはならないのか、が問いになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['such as', 'so that', 'as if', 'even though'], answer: 0, why: 'うしろに代償の具体例（環境へのダメージ・人々の苦しみ）が名詞で続くので such as（たとえば～のような）。' },
+      { id: 'B', choices: ['Once', 'Unless', 'Although', 'Before'], answer: 0, why: '「いったん進歩をこのように理解すれば」という条件なので Once。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、歴史を循環としてとらえる社会もあった。', answer: true, why: '第2段落 Some imagined history as a cycle。' },
+      { statement: '筆者によれば、未来は過去よりよくなるという考えは、古代からヨーロッパで広く受け入れられていた。', answer: false, why: '第2段落 became widely accepted in Europe only from the seventeenth and eighteenth centuries。' },
+      { statement: '筆者は、この200年で平均寿命が大きくのびたと述べている。', answer: true, why: '第3段落 average life expectancy has risen dramatically。' },
+      { statement: '筆者は、技術の進歩はつねに道徳の理解の進歩をともなうと考えている。', answer: false, why: '第5段落 progress in one area does not guarantee progress in another。' },
+    ],
+    qa: [
+      { q: 'According to the fourth paragraph, what danger comes from regarding improvement as inevitable?', choices: ['People may overlook the costs that accompany it.', 'People may stop studying science.', 'Diseases may return more quickly.', 'History may begin to move in a cycle.'], answer: 0, why: '第4段落 it becomes easy to overlook the costs that accompany it。' },
+      { q: 'How does the writer understand progress in the last paragraph?', choices: ['As an achievement that must be deliberately pursued.', 'As a law of history that happens automatically.', 'As an idea that should be abandoned.', 'As something that only scientists can produce.'], answer: 0, why: '第6段落 progress is not a law of history but an achievement, something that must be deliberately pursued。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
