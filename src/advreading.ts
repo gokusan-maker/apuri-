@@ -26206,6 +26206,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-luck',
+    title: 'The Hidden Role of Luck',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When people explain their own success, they tend to emphasize effort and ability. A businessperson describes the long hours spent building a company; an athlete recalls years of training; a student points to the nights devoted to study. These accounts are rarely false, since hard work and talent usually do play an important part. What they often leave out, however, is the role of luck: the many circumstances, beyond any individual's control, that made the effort possible and allowed it to bear fruit. The omission is understandable, because luck is by its nature invisible: it consists largely of misfortunes that did not happen and obstacles that never appeared.",
+      "Consider the conditions into which a person is born. No one chooses their parents, their country, or the period of history in which they live, yet these factors have an enormous influence on the opportunities available to them. A child who grows up in a peaceful society with good schools and access to books has advantages that a child born in a time of war or poverty does not. Even personal qualities that we usually regard as our own achievements, such as the ability to concentrate or the habit of working hard, are shaped in part by upbringing and early experience, which we did not select.",
+      "Luck also operates in less obvious ways. A chance meeting with a helpful teacher, a job advertisement noticed at the right moment, or an economic boom that happens to coincide with the launch of a product can make the difference between success and failure. Because such events are easily forgotten, or are reinterpreted afterwards as the natural result of good judgment, they seldom appear in the stories people tell about their lives. Looking back, we are inclined to see a straight path where there was in fact a series of uncertain turns. Psychologists sometimes call this tendency hindsight bias, the habit of believing, once we know how events turned out, that the outcome was predictable all along.",
+      "Why do people find it so difficult to acknowledge the role of luck? One reason is that believing our success is deserved gives us a sense of control and dignity. If outcomes depend largely on chance, it may seem that our efforts do not matter, a conclusion that many find discouraging. Another reason is that societies often justify differences in wealth and status by appealing to merit. ( A ) the rewards people receive are thought to reflect their contributions, it becomes uncomfortable to admit that chance plays a significant part in who receives them.",
+      "Yet recognizing luck need not lead to the belief that effort is pointless. Effort and luck are not opposites; they work together. Hard work increases the likelihood that a person will be able to take advantage of fortunate opportunities when they arise, while good fortune often determines whether hard work is rewarded at all. To acknowledge luck is simply to see the full picture, in which individual effort is one important factor among many rather than the sole cause of what happens to us. The same is true of failure, which may result as much from misfortune as from any lack of effort or ability on the part of the person concerned.",
+      "This fuller picture has moral consequences. People who recognize that their own position depends partly on fortune may feel more gratitude and less pride, and they may be more willing to help those whose luck has been worse. Some researchers have even suggested that reflecting on the role of chance makes people more generous. Seen in this light, the acknowledgement of luck is not a denial of personal responsibility but an expression of humility, a reminder that none of us succeeds entirely on our own and that the advantages we enjoy carry obligations toward others.",
+    ],
+    ja: [
+      '人は自分の成功を説明するとき、努力と能力を強調しがちである。実業家は会社を築くのに費やした長い時間を語り、運動選手は何年もの練習を思い起こし、学生は勉強にささげた夜を指さす。こうした説明が誤りであることはめったにない。努力と才能はたいてい重要な役割を果たしているからである。しかし、そこでしばしば抜け落ちているのは、運の役割、つまりどんな個人にも左右できない多くの状況、努力を可能にし、それが実を結ぶのを許した状況である。この抜け落ちは無理もない。運はその性質上目に見えないからである。運の多くは、起こらなかった不運や、決して現れなかった障害から成っているのだ。',
+      '人が生まれてくる条件を考えてみよう。だれも自分の親や国や生きる時代を選ぶことはできないが、こうした要因は、その人に与えられる機会に大きな影響をおよぼす。よい学校があり本を手にできる平和な社会で育つ子どもには、戦争や貧困の時代に生まれた子どもにはない有利さがある。集中する力や熱心に働く習慣のように、ふつう自分自身の成果とみなしている個人の資質でさえ、自分で選んだのではない育ち方や幼いころの経験によって、ある程度形づくられているのである。',
+      '運はまた、もっと目立たない形でもはたらく。親切な先生との偶然の出会い、ちょうどよいときに目にとまった求人広告、製品の発売とたまたま重なった好景気などが、成功と失敗の分かれ目になることがある。こうしたできごとは忘れられやすかったり、あとになってよい判断の自然な結果として解釈し直されたりするので、人が自分の人生について語る物語に出てくることはめったにない。ふり返ると、私たちは、実際には不確かな曲がり角の連続だったところに、まっすぐな道を見てしまいがちなのである。心理学者はこの傾向を後知恵バイアスとよぶことがある。できごとがどうなったかを知ると、その結果ははじめから予測できたと信じてしまう習性である。',
+      'なぜ人は運の役割を認めるのがこれほどむずかしいのだろうか。1つの理由は、自分の成功が当然の報いだと信じることが、自分で物事を左右できるという感覚と尊厳を与えてくれることである。結果が大きく偶然に左右されるなら、自分の努力は意味がないように思えるかもしれず、それは多くの人にとってやる気をくじく結論である。もう1つの理由は、社会がしばしば、富や地位の差を能力や功績によって正当化することである。人が受け取る報酬はその人の貢献を反映していると考えられているので、だれがそれを受け取るかに偶然が大きな役割を果たしていると認めるのは、居心地が悪くなるのである。',
+      'しかし、運を認めることが、努力は無意味だという考えにつながる必要はない。努力と運は対立するものではなく、ともにはたらくものである。熱心に取り組むことは、幸運な機会が訪れたときにそれを生かせる可能性を高め、一方で幸運は、そもそも努力が報われるかどうかをしばしば決める。運を認めるとは、単に全体像を見ることであり、そこでは個人の努力は、私たちに起こることの唯一の原因ではなく、多くの要因のうちの重要な1つなのである。同じことは失敗についても言える。失敗は、当人の努力や能力の不足からと同じくらい、不運から生じることもあるのだ。',
+      'このより完全な全体像には、道徳的な意味がある。自分の立場が一部は幸運によるものだと認める人は、より多くの感謝とより少ない誇りを感じるかもしれず、運がもっと悪かった人を助けようという気持ちが強くなるかもしれない。偶然の役割をふり返ることで人がより気前よくなると示唆する研究者さえいる。このように見れば、運を認めることは個人の責任を否定することではなく、謙虚さの表れである。それは、私たちのだれもまったく自分だけの力で成功するわけではなく、自分が享受している有利さには他者への責任がともなうことを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Since', 'Unless', 'Although', 'Before'], answer: 0, why: '「報酬は貢献を反映していると考えられているので、～は居心地が悪い」という理由の Since。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、人が自分の成功について語る説明は、たいてい誤りである。', answer: false, why: '第1段落 These accounts are rarely false。' },
+      { statement: '筆者によれば、熱心に働く習慣のような資質も、育ち方によってある程度形づくられている。', answer: true, why: '第2段落 are shaped in part by upbringing and early experience。' },
+      { statement: '筆者は、運を認めれば努力は無意味だと考えるべきだと述べている。', answer: false, why: '第5段落 recognizing luck need not lead to the belief that effort is pointless。' },
+      { statement: '筆者によれば、偶然の役割をふり返ると人がより気前よくなると示唆する研究者もいる。', answer: true, why: '第6段落 reflecting on the role of chance makes people more generous。' },
+    ],
+    qa: [
+      { q: 'Why do lucky events seldom appear in the stories people tell about their lives?', choices: ['They are easily forgotten or later reinterpreted as the result of good judgment.', 'People are not allowed to talk about them.', 'They happen only to famous people.', 'They are always unpleasant to remember.'], answer: 0, why: '第3段落 Because such events are easily forgotten, or are reinterpreted afterwards as the natural result of good judgment。' },
+      { q: 'How does the writer describe the relationship between effort and luck?', choices: ['They are not opposites but work together.', 'Luck always matters more than effort.', 'Effort can completely replace luck.', 'They have nothing to do with each other.'], answer: 0, why: '第5段落 Effort and luck are not opposites; they work together。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
