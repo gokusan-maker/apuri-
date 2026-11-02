@@ -125,3 +125,14 @@ it('ネイティブのいちばんはじめに、くだけた言い方の多い�
   expect(passagesFor('ネイティブ')[0].id).toBe('native-small-talk')
   expect(passagesFor('国公立').some((p) => p.id.startsWith('native-'))).toBe(false)
 })
+
+it('京大専用の長文①「知らないことの価値」：650語以上・1文18語以上で、京大のいちばんはじめ（和訳の問題つき）。旧帝大・東大には出ない', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大')[0]
+  expect(p.id).toBe('kyodai-not-knowing')
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(650)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(p.gistKind).toBe('transl')
+  expect(passagesFor('旧帝大').some((x) => x.id === p.id)).toBe(false)
+  expect(passagesFor('東大').some((x) => x.id === p.id)).toBe(false)
+})
