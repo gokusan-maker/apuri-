@@ -26856,6 +26856,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-global-english',
+    title: 'Whose Language Is English?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "English is today the most widely used language for international communication. It is the main language of science, international business, air traffic control, and much of the internet, and hundreds of millions of people around the world study it as a second or foreign language. In many countries, ability in English is regarded as an essential skill for success in education and employment. Yet the global spread of English, which would have been difficult to predict a few centuries ago, raises important questions about fairness, identity, and the future of other languages. These questions concern not only linguists but anyone who uses English to communicate across borders.",
+      "The rise of English was not the result of any special quality of the language itself. English is neither particularly simple nor particularly logical; its spelling is notoriously irregular, and its vocabulary is full of exceptions. Its spread was instead the product of historical circumstances, including the expansion of the British Empire and, later, the economic, military, and cultural influence of the United States. Once English had become established as a common language in important fields, its usefulness encouraged still more people to learn it, creating a cycle that has continued to the present day. Had history taken a different course, another language might easily have occupied the position that English holds now.",
+      "A shared language brings obvious advantages. Scientists from different countries can read one another's work and collaborate more easily, travelers can make themselves understood in many places, and people with different first languages can communicate without the need for translation. For individuals, learning English can open the door to educational opportunities, international careers, and a vast amount of information and entertainment that would otherwise be inaccessible. It is hardly surprising, then, that families and governments invest heavily in English education.",
+      "These advantages, however, are not equally distributed. Native speakers of English enjoy a considerable benefit, since they can participate in international activities without the years of study that others must invest. Researchers who write in a second language may find it harder to publish their work in leading journals, and their ideas may receive less attention than those expressed fluently by native speakers. In this way, the dominance of a single language can reinforce existing inequalities between countries and between individuals. Even in international meetings, those who speak most fluently may dominate discussion, while others with equally valuable ideas remain silent because they lack confidence in their English.",
+      "There are also concerns about the effect of English on other languages. When English is seen as the language of opportunity, parents may encourage their children to use it in place of their own language, and local languages may come to be associated with tradition rather than with the future. Some linguists warn that the spread of English contributes to the decline of smaller languages, each of which represents a unique way of understanding the world. Others argue that people can and do maintain their own languages while learning English, and that bilingualism, ( A ) replacement, is the more common outcome.",
+      "Perhaps the most important change of recent decades is that English no longer belongs only to its native speakers. Most conversations in English today take place between people for whom it is a second language, and they often develop their own ways of using it that differ from those of Britain or the United States. Seen in this light, English is becoming less a national language than a shared global resource. The challenge is to use it in ways that promote communication without diminishing the value of the many other languages through which people express who they are. Learning English, in this view, should mean adding a language rather than replacing one.",
+    ],
+    ja: [
+      '英語は今日、国際的なやりとりに最も広く使われている言語である。それは科学、国際ビジネス、航空管制、そしてインターネットの多くの主な言語であり、世界じゅうの何億もの人々が第2言語や外国語としてそれを学んでいる。多くの国で、英語の力は教育や仕事で成功するのに欠かせない技能とみなされている。しかし、数世紀前には予測しにくかったであろう英語の世界的な広がりは、公平さやアイデンティティや、ほかの言語の未来について重要な問いを投げかけている。こうした問いは言語学者だけでなく、国境をこえてやりとりするために英語を使うすべての人にかかわるものである。',
+      '英語が広がったのは、その言語そのものに何か特別な性質があったからではない。英語はとくに単純でも、とくに論理的でもない。そのつづりは不規則なことで知られ、語彙は例外だらけである。その広がりはむしろ、大英帝国の拡大や、のちのアメリカ合衆国の経済的・軍事的・文化的な影響力をふくむ歴史的な状況の産物であった。英語がいったん重要な分野で共通語として定着すると、その便利さがさらに多くの人に学ぶよう促し、今日まで続く循環が生まれたのである。もし歴史がちがう道をたどっていたら、別の言語が、今英語が占めている地位にかんたんについていたかもしれない。',
+      '共通の言語には明らかな利点がある。ちがう国の科学者がたがいの研究を読み、より容易に協力できるし、旅行者は多くの場所で言いたいことを伝えられるし、第1言語のちがう人々が翻訳なしにやりとりできる。個人にとっては、英語を学ぶことで、教育の機会や国際的な仕事、そしてそうでなければ手の届かない膨大な情報や娯楽への扉が開かれうる。だから、家族や政府が英語教育に多くを投資するのは少しもおどろくことではない。',
+      'しかし、こうした利点は平等に分けられているわけではない。英語の母語話者はかなりの得をしている。ほかの人々がつぎこまなければならない何年もの勉強なしに、国際的な活動に加わることができるからである。第2言語で書く研究者は、一流の学術誌に研究を発表するのがよりむずかしいと感じるかもしれず、その考えは、母語話者がなめらかに表現した考えよりも注目されにくいかもしれない。このようにして、1つの言語が支配的であることは、国と国、個人と個人のあいだにすでにある不平等を強めうるのである。国際的な会議でさえ、最もなめらかに話す人が議論を支配し、同じくらい価値ある考えをもつほかの人々は、英語に自信がないためにだまったままでいるかもしれない。',
+      '英語がほかの言語におよぼす影響についての懸念もある。英語が機会の言語とみなされると、親は子どもに自分たちの言語の代わりに英語を使うよう促すかもしれず、地元の言語は未来よりも伝統と結びつけられるようになるかもしれない。英語の広がりは小さな言語の衰退の一因になっており、その1つひとつが世界を理解する独自のしかたを表している、と警告する言語学者もいる。一方で、人々は英語を学びながら自分の言語を保つことができ、実際にそうしており、置きかえではなく2言語使用のほうがよくある結果だと論じる人もいる。',
+      'おそらくここ数十年で最も重要な変化は、英語がもはや母語話者だけのものではなくなったことである。今日の英語の会話のほとんどは、英語を第2言語とする人どうしで行われており、彼らはしばしば、イギリスやアメリカのものとはちがう独自の使い方を育てている。このように見れば、英語は国の言語というより、共有された世界的な資源になりつつある。課題は、人々が自分が何者であるかを表すほかの多くの言語の価値をそこなうことなく、やりとりを促すような形で英語を使うことである。この見方では、英語を学ぶことは、言語を置きかえることではなく、言語を1つ加えることを意味するべきなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'as well as', 'because of', 'instead of being'], answer: 0, why: '「置きかえではなく2言語使用」という対比なので rather than。' },
+    ],
+    summary: {
+      text: 'English spread because of historical ( 1 ), not because of any special quality of the language. A shared language has clear advantages, but native speakers benefit ( 2 ) than others, and some fear the decline of smaller languages. Today most English conversations involve second-language speakers, so English is becoming a shared global ( 3 ).',
+      blanks: [
+        { choices: ['circumstances', 'accidents', 'rules', 'mistakes'], answer: 0, why: '第2段落 Its spread was instead the product of historical circumstances。' },
+        { choices: ['more', 'less', 'later', 'never'], answer: 0, why: '第4段落 Native speakers of English enjoy a considerable benefit。' },
+        { choices: ['resource', 'problem', 'secret', 'law'], answer: 0, why: '第6段落 less a national language than a shared global resource。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、英語が広がったのは、英語がとくに単純で論理的だからである。', answer: false, why: '第2段落 English is neither particularly simple nor particularly logical。' },
+      { statement: '筆者によれば、英語の母語話者は国際的な活動でかなりの得をしている。', answer: true, why: '第4段落 Native speakers of English enjoy a considerable benefit。' },
+      { statement: '筆者によれば、すべての言語学者が、英語の広がりは小さな言語を衰退させると考えている。', answer: false, why: '第5段落 Others argue that people can and do maintain their own languages。' },
+      { statement: '筆者によれば、今日の英語の会話のほとんどは、英語を第2言語とする人どうしで行われている。', answer: true, why: '第6段落 Most conversations in English today take place between people for whom it is a second language。' },
+    ],
+    qa: [
+      { q: 'How did the usefulness of English contribute to its spread, according to the second paragraph?', choices: ['It encouraged more people to learn it, creating a cycle that continues today.', 'It made English spelling more regular.', 'It forced other countries to stop teaching their languages.', 'It reduced the number of native speakers.'], answer: 0, why: '第2段落 its usefulness encouraged still more people to learn it, creating a cycle。' },
+      { q: 'What is the challenge mentioned in the last paragraph?', choices: ['To use English in ways that promote communication without diminishing the value of other languages.', 'To make everyone a native speaker of English.', 'To stop using English in science.', 'To return English to Britain and the United States.'], answer: 0, why: '第6段落 The challenge is to use it in ways that promote communication without diminishing the value of the many other languages。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
