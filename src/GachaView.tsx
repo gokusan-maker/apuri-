@@ -8,7 +8,7 @@ import { STICKERS, STICKER_TICKETS } from './stickers'
 import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
 import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
-import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, multi5Off, multi5Price, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, markMonthSpecies, rememberPartner, partnerDays, LONG_PARTNER_DAYS, PARTY_MAX, pushGachaLog } from './gacha'
+import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, multi5Off, multi5Price, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, markMonthSpecies, monthSpeciesCount, rememberPartner, partnerDays, LONG_PARTNER_DAYS, PARTY_MAX, pushGachaLog } from './gacha'
 import { CHAR_TYPES, typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
 import { baseRate, FORMS, kindOf, levelsToNextStage, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
@@ -863,6 +863,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
   const [pastPartners] = useState(() => rememberPartner(partner ?? 'mochi')) // デザイン201：相棒にしたことのある子
   const [withDays] = useState(() => partnerDays(partner ?? 'mochi', new Date().toISOString().slice(0, 10))) // デザイン219：今の相棒と何日いっしょか
   const [byCount, setByCount] = useState(false) // デザイン131：なかまにいる数の多い順
+  const [monthN] = useState(() => monthSpeciesCount(new Date().toISOString().slice(0, 7))) // デザイン222：今月出会った種類
   const countOf = (id: string) => owned.filter((x) => x === id).length
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
   // デザイン161：いちばんレベルの高い子（Lv2 以上のときだけ。同じなら図鑑の番号が先の子）
@@ -886,6 +887,11 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
           </span>
         )}
       </summary>
+      {monthN > 0 && (
+        <p className="gacha-odds-note" aria-label="今月出会った種類">
+          🗓 今月 {monthN}種類
+        </p>
+      )}
       {n < SPECIES.length && (
         <button className="list-link pill-btn book-filter" aria-pressed={onlyNew} onClick={() => setOnlyNew(!onlyNew)}>
           {onlyNew ? '📖 ぜんぶ見る' : '❓ まだ会っていない子だけ見る'}

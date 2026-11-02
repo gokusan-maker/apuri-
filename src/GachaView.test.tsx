@@ -923,3 +923,17 @@ it('デザイン220：連続ガチャで同じ種類が2体なら「👯 ふた�
   fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
   expect(screen.queryByLabelText('同じ種類がそろった')).toBeNull()
 })
+
+it('デザイン222：キャラ図鑑に、今月出会った種類の数「🗓 今月 ○種類」が出る（先月の記録では出ない）', () => {
+  localStorage.clear()
+  const month = new Date().toISOString().slice(0, 7)
+  localStorage.setItem('eitan:gacha-month-species', JSON.stringify({ month, species: ['fox', 'cat', 'fox'] }))
+  const { unmount } = render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.getByLabelText('今月出会った種類').textContent).toBe('🗓 今月 2種類')
+  unmount()
+  localStorage.setItem('eitan:gacha-month-species', JSON.stringify({ month: '2000-01', species: ['fox'] }))
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.queryByLabelText('今月出会った種類')).toBeNull()
+})

@@ -83,6 +83,16 @@ export function markMonthSpecies(species: string, month: string): boolean {
   return true
 }
 
+// デザイン222：今月出会った種類の数（markMonthSpecies の記録を読むだけ）
+export function monthSpeciesCount(month: string): number {
+  try {
+    const raw = JSON.parse(localStorage.getItem(MONTH_SPECIES_KEY) ?? 'null') as { month?: unknown; species?: unknown } | null
+    return raw && raw.month === month && Array.isArray(raw.species) ? new Set(raw.species.filter((x) => typeof x === 'string')).size : 0
+  } catch {
+    return 0
+  }
+}
+
 export type GachaLog = { day: string; kind: string; species: string }[]
 const LOG_KEY = 'eitan:gacha-log'
 
