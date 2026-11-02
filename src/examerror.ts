@@ -5442,6 +5442,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We [reached to] the top of the mountain before noon.', choices: ['reached', 'reached at', 'arrived', 'got'], answer: 0, why: 'reach は他動詞。reached the top（arrive なら arrive at、get なら get to が必要）。' },
     ],
   },
+  {
+    id: 'exam-fix-127',
+    title: '入試の誤文訂正〈127〉（旧帝大レベル：数量の言い方）',
+    points: ['many・a few・few・a number of は数えられる名詞（複数形）に、much・a little・little・an amount of は数えられない名詞に使う。a lot of・some・any・plenty of はどちらにも使える。few／little は「ほとんどない」、a few／a little は「少しある」。homework・baggage・equipment・scenery・money は数えられない名詞。「たくさんの人」は many people（peoples は「民族」）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I have a little money, so I can buy lunch.', ja: '少しお金があるので、昼食を買える。' }],
+    questions: [
+      { sentence: 'We do not have [many] time before the train leaves.', choices: ['much', 'a few', 'few', 'a number of'], answer: 0, why: 'time（時間）は数えられない名詞。much time。' },
+      { sentence: 'There were [much] people at the concert last night.', choices: ['many', 'a little', 'little', 'an amount of'], answer: 0, why: 'people は複数あつかい。many people。' },
+      { sentence: 'I have [a few] money, so I can buy a sandwich.', choices: ['a little', 'few', 'many', 'a number of'], answer: 0, why: 'money は数えられない名詞。「少しある」は a little。' },
+      { sentence: 'The teacher gave us [many homeworks] for the holidays.', choices: ['a lot of homework', 'many homework', 'a homework', 'much homeworks'], answer: 0, why: 'homework は数えられない名詞で複数形にしない。a lot of homework。' },
+      { sentence: 'She has [little] friends, so she often feels lonely.', choices: ['few', 'a little', 'much', 'less'], answer: 0, why: 'friends（数えられる）に「ほとんどいない」は few。' },
+      { sentence: 'There is [few] milk left in the bottle.', choices: ['little', 'a few', 'many', 'fewer'], answer: 0, why: 'milk は数えられない名詞。「ほとんどない」は little。' },
+      { sentence: 'How [many baggages] do you have?', choices: ['much baggage', 'many baggage', 'much baggages', 'a lot baggages'], answer: 0, why: 'baggage は数えられない名詞。How much baggage。' },
+      { sentence: 'The lab bought [new equipments] for the experiment.', choices: ['some new equipment', 'a new equipment', 'many new equipment', 'new equipmentes'], answer: 0, why: 'equipment は数えられない名詞。some new equipment。' },
+      { sentence: 'We enjoyed the beautiful [sceneries] of the mountains.', choices: ['scenery', 'a scenery', 'sceneries of', 'scenes of scenery'], answer: 0, why: 'scenery（景色全体）は数えられない名詞。the beautiful scenery。' },
+      { sentence: '[A large number of] water is wasted every day.', choices: ['A large amount of', 'Many', 'A few', 'A number of'], answer: 0, why: 'water は数えられない名詞。a large amount of water。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

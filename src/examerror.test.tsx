@@ -1821,3 +1821,10 @@ it('正誤問題〈133〉：東大レベル 英作文の語法の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) about')
 })
+
+it('誤文訂正〈127〉：旧帝大レベル 数量の言い方の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-127')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('much')
+})
