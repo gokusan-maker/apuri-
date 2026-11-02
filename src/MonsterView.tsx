@@ -1946,6 +1946,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M37 41 L47 39" fill="none" stroke="#f8fafc" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'orientalturtledove')
+    return (
+      <g>
+        {/* 首の青と黒のしま */}
+        <path d="M58 48 L62 46 M58 51 L62 49" fill="none" stroke="#1e3a8a" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
