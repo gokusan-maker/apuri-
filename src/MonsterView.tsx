@@ -1890,6 +1890,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="42" cy="44" r="3" fill="#dc2626" />
       </g>
     )
+  if (species === 'bamboopartridge')
+    return (
+      <g>
+        {/* だいだい色の顔 */}
+        <ellipse cx="50" cy="44" rx="10" ry="6" fill="#fb923c" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
