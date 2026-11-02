@@ -4812,6 +4812,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I felt the ground [to shake] during the earthquake.', choices: ['shake', 'shaken', 'to be shaking', 'shook'], answer: 0, why: '知覚動詞 feel ＋ O ＋ 原形（～ing も可）。to は不要。' },
     ],
   },
+  {
+    id: 'exam-fix-112',
+    title: '入試の誤文訂正〈112〉（東大レベル：英作文でまちがえやすい語法）',
+    points: ['東大の英作文で減点されやすい語法。suggest／recommend は人を目的語にとらず、suggest that S (should) 原形 か suggest ～ing。explain は explain A to 人。hope は hope to ～／hope that ～（hope 人 to は不可）、wish は仮定法。lend は人に貸す、borrow は借りる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The doctor suggested that I get more sleep.', ja: '医者は私にもっと眠るようすすめた。' }],
+    questions: [
+      { sentence: 'My teacher [suggested me to read] more English newspapers.', choices: ['suggested that I read', 'suggested me reading', 'suggested to me read', 'suggested me read'], answer: 0, why: 'suggest は人を目的語にとらない。suggest that S (should) 原形。' },
+      { sentence: 'The guide [recommended us to visit] the old temple in the morning.', choices: ['recommended that we visit', 'recommended us visiting', 'recommended to visit us', 'recommended us visit'], answer: 0, why: 'recommend も suggest と同じく recommend that S (should) 原形 が基本。' },
+      { sentence: 'Could you [explain me] how this machine works?', choices: ['explain to me', 'explain me about', 'explain for me', 'explaining me'], answer: 0, why: 'explain は人を直接目的語にとらない。explain to me how ～。' },
+      { sentence: 'I [hope you to enjoy] your stay in Kyoto.', choices: ['hope that you enjoy', 'hope you enjoying', 'hope for you enjoy', 'hope you to enjoying'], answer: 0, why: 'hope 人 to ～ の形はない。hope that you enjoy（hope you enjoy）。' },
+      { sentence: 'I [hope] I could speak English as fluently as you do.', choices: ['wish', 'want', 'expect', 'think'], answer: 0, why: '現実とちがうことを願う仮定法は wish（I wish I could ～）。hope は実現しうることに使う。' },
+      { sentence: 'Could you [borrow] me your notebook until tomorrow?', choices: ['lend', 'rent', 'borrow to', 'lend to'], answer: 0, why: '人に貸すのは lend 人 物。borrow は借りる。' },
+      { sentence: 'The new rule [made possible for students] to use the library at night.', choices: ['made it possible for students', 'made possible students', 'made students possible', 'made it possibly for students'], answer: 0, why: 'make it possible for 人 to ～（形式目的語 it）。it が必要。' },
+      { sentence: 'I am looking forward to [hear] from you soon.', choices: ['hearing', 'heard', 'be hearing', 'have heard'], answer: 0, why: 'look forward to ～ing の to は前置詞。hearing。' },
+      { sentence: 'We should [discuss about] this problem more seriously.', choices: ['discuss', 'discuss on', 'discuss with', 'discussing'], answer: 0, why: 'discuss は他動詞で前置詞は不要。' },
+      { sentence: 'It is important [for us understanding] different cultures.', choices: ['for us to understand', 'that us understand', 'us to understand', 'for understanding us'], answer: 0, why: 'It is ～ for 人 to … の形。for us to understand。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -1611,3 +1611,10 @@ it('正誤問題〈118〉：使役動詞・知覚動詞の単元が10問ある',
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) to run')
 })
+
+it('誤文訂正〈112〉：東大レベルの英作文の語法の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-112')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('suggested that I read')
+})
