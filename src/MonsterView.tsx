@@ -1572,6 +1572,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="66" rx="9" ry="7" fill="#f8fafc" />
       </g>
     )
+  if (species === 'crestedkingfisher')
+    return (
+      <g>
+        {/* ぼさぼさの冠羽と、まだらもよう */}
+        <path d="M40 26 L44 18 L48 26 L52 17 L56 26" fill="none" stroke="#111827" strokeWidth="2.5" strokeLinejoin="round" />
+        <path d="M40 58 L44 60 M50 56 L54 58 M44 66 L48 68" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
