@@ -1921,6 +1921,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 44 L48 46" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'lathamssnipe')
+    return (
+      <g>
+        {/* 長いくちばしと、まだらもよう */}
+        <path d="M44 51 L66 53 L44 54 Z" fill="#78350f" />
+        <circle cx="40" cy="62" r="2" fill="#3f2a0a" />
+        <circle cx="48" cy="66" r="2" fill="#3f2a0a" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
