@@ -1700,6 +1700,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 44 L64 46 L58 48 Z" fill="#f9a8d4" />
       </g>
     )
+  if (species === 'duskythrush')
+    return (
+      <g>
+        {/* 白いまゆと、むねの黒い点々 */}
+        <path d="M36 37 L46 35" fill="none" stroke="#fef3c7" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="44" cy="62" r="2" fill="#292524" /><circle cx="52" cy="64" r="2" fill="#292524" /><circle cx="48" cy="70" r="2" fill="#292524" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
