@@ -2738,6 +2738,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Not (A) only did (B) the plan fail, (C) but it also cost (D) to the company a lot of money.', choices: ['(A) only did', '(B) the plan fail,', '(C) but it also cost', '(D) to the company a lot of money'], answer: 3, why: 'cost は cost A B の形で to は不要。cost the company a lot of money。' },
     ],
   },
+  {
+    id: 'exam-error-countable',
+    title: '入試の正誤問題〈116〉（共通テストレベル：数えられる名詞・数えられない名詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'advice・furniture・news・homework・baggage・information・equipment は数えられない名詞。many／few は数えられる名詞、much／little は数えられない名詞につく。',
+    ],
+    examples: [
+      { en: 'She gave me some useful advice.', ja: '彼女は私に役に立つ助言をくれた。' },
+      { en: 'There were many people at the festival.', ja: '祭りにはたくさんの人がいた。' },
+    ],
+    questions: [
+      { sentence: '(A) She gave me (B) an useful advice (C) about (D) studying abroad.', choices: ['(A) She gave me', '(B) an useful advice', '(C) about', '(D) studying abroad'], answer: 1, why: 'advice は数えられない名詞。some useful advice（a useful piece of advice）。' },
+      { sentence: '(A) We need (B) to buy (C) some new furnitures (D) for the office.', choices: ['(A) We need', '(B) to buy', '(C) some new furnitures', '(D) for the office'], answer: 2, why: 'furniture は数えられない名詞なので複数形にしない。some new furniture。' },
+      { sentence: '(A) The news (B) were (C) shocking (D) to everyone.', choices: ['(A) The news', '(B) were', '(C) shocking', '(D) to everyone'], answer: 1, why: 'news は単数あつかい。The news was shocking。' },
+      { sentence: '(A) How many homework (B) did the teacher (C) give you (D) today?', choices: ['(A) How many homework', '(B) did the teacher', '(C) give you', '(D) today?'], answer: 0, why: 'homework は数えられない名詞。How much homework。' },
+      { sentence: 'There (A) were (B) much people (C) at the festival (D) last night.', choices: ['(A) were', '(B) much people', '(C) at the festival', '(D) last night'], answer: 1, why: 'people は数えられる名詞。many people。' },
+      { sentence: 'I (A) have (B) very few money, (C) so I cannot (D) go shopping.', choices: ['(A) have', '(B) very few money,', '(C) so I cannot', '(D) go shopping'], answer: 1, why: 'money は数えられない名詞。very little money。' },
+      { sentence: '(A) A little (B) students (C) were absent (D) because of the snow.', choices: ['(A) A little', '(B) students', '(C) were absent', '(D) because of the snow'], answer: 0, why: 'students は数えられる名詞。A few students。' },
+      { sentence: '(A) Please (B) put your (C) baggages (D) on the shelf.', choices: ['(A) Please', '(B) put your', '(C) baggages', '(D) on the shelf'], answer: 2, why: 'baggage は数えられない名詞。your baggage。' },
+      { sentence: 'The website (A) offers (B) a lot of (C) useful (D) informations.', choices: ['(A) offers', '(B) a lot of', '(C) useful', '(D) informations'], answer: 3, why: 'information は数えられない名詞なので複数形にしない。useful information。' },
+      { sentence: '(A) The school (B) bought (C) some (D) equipments for the science room.', choices: ['(A) The school', '(B) bought', '(C) some', '(D) equipments for the science room'], answer: 3, why: 'equipment は数えられない名詞。some equipment。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
