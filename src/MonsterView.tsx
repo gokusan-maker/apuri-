@@ -1644,6 +1644,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M70 66 L92 74" fill="none" stroke="#1e293b" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pygmywoodpecker')
+    return (
+      <g>
+        {/* せなかのしまもようと、小さなくちばし */}
+        <path d="M30 56 L40 56 M30 62 L40 62 M30 68 L40 68" fill="none" stroke="#fafaf9" strokeWidth="2" strokeLinecap="round" />
+        <path d="M58 44 L66 44" fill="none" stroke="#292524" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
