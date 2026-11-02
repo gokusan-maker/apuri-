@@ -4434,6 +4434,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There is a convenience store [nearly] my house, so shopping is easy.', choices: ['near', 'nearby to', 'nearer', 'nearest'], answer: 0, why: '「私の家の近くに」は前置詞 near。nearly は「ほとんど」で名詞をとらない。' },
     ],
   },
+  {
+    id: 'exam-fix-103',
+    title: '入試の誤文訂正〈103〉（旧帝大レベル：分詞構文・独立分詞構文）',
+    points: ['分詞構文の意味上の主語は、ふつう主節の主語と同じ。ちがうときは独立分詞構文（The weather being fine, ～）にする。主語が「する」側なら現在分詞、「される」側なら過去分詞。前のことは完了形（Having done）。with ＋ O ＋ 分詞 は O と分詞の関係で形を決める。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Written in plain English, the report was easy to understand.', ja: 'わかりやすい英語で書かれていたので、その報告書は理解しやすかった。' }],
+    questions: [
+      { sentence: '[Writing] in plain English, the report was easy for most readers to understand.', choices: ['Written', 'Having written', 'To write', 'Being writing'], answer: 0, why: '報告書は「書かれた」側なので過去分詞 Written。Writing だと報告書が何かを書くことになる。' },
+      { sentence: '[Having been finished] the experiment, the researchers began to analyze the data.', choices: ['Having finished', 'Finished', 'Being finished', 'To have finished'], answer: 0, why: '研究者たちが実験を「終えた」（主節より前）ので、能動の完了形 Having finished。' },
+      { sentence: '[It being] no buses running after midnight, we had to walk all the way home.', choices: ['There being', 'Being', 'It was', 'There were'], answer: 0, why: '主節の主語（we）とちがうので独立分詞構文。There are no buses → There being no buses。' },
+      { sentence: '[Seeing] from the top of the tower, the city looks like a model made of toy blocks.', choices: ['Seen', 'Having seen', 'To see', 'Seeing it'], answer: 0, why: '町は「見られる」側なので過去分詞 Seen。' },
+      { sentence: 'She listened to the lecture with her eyes [closing], trying to remember every detail.', choices: ['closed', 'close', 'to close', 'being closing'], answer: 0, why: 'with ＋ O ＋ 分詞。目は「閉じられた」状態なので過去分詞 closed。' },
+      { sentence: '[Not knowing not] what to say, he remained silent for the rest of the meeting.', choices: ['Not knowing', 'Knowing not', 'Not known', 'Do not knowing'], answer: 0, why: '分詞構文の否定は not を分詞の前に置く。Not knowing what to say。' },
+      { sentence: '[The weather was fine], the festival was held in the park as planned.', choices: ['The weather being fine', 'Being fine', 'The weather fine was', 'It being fine weather was'], answer: 0, why: '主節の主語（the festival）とちがうので、意味上の主語を残した独立分詞構文 The weather being fine。The weather was fine だと文と文をつなぐ接続詞がない。' },
+      { sentence: '[Judged] from his accent, he must have grown up in the north of the country.', choices: ['Judging', 'Judge', 'To be judged', 'Having been judged'], answer: 0, why: '慣用的な分詞構文 Judging from ～（～から判断すると）。' },
+      { sentence: 'The old man sat on the bench with his dog [lay] at his feet.', choices: ['lying', 'laid', 'lie', 'lain'], answer: 0, why: 'with ＋ O ＋ 分詞。犬が「横たわっている」（自動詞 lie）ので現在分詞 lying。' },
+      { sentence: 'Generally [spoken], people in this region are very welcoming to visitors from abroad.', choices: ['speaking', 'speak', 'to speak', 'having been spoken'], answer: 0, why: '慣用的な分詞構文 Generally speaking（一般的に言えば）。意味上の主語は話し手で、spoken（言われた）ではない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
