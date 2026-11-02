@@ -25592,6 +25592,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-expertise',
+    title: 'Trusting Experts',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In modern societies, almost everyone depends on the knowledge of experts. We trust doctors to diagnose our illnesses, engineers to design safe bridges, and scientists to tell us about the climate, even though few of us could check their conclusions for ourselves. This dependence is not a sign of weakness but a consequence of the enormous growth of knowledge, which has made it impossible for any individual to understand more than a tiny fraction of what is known. Yet trust in experts has become a matter of fierce debate, and the question of when and why we should rely on them has rarely seemed more urgent.",
+      "It is worth asking first what makes someone an expert. Expertise is usually understood as a combination of knowledge, training, and experience in a particular field, recognized by others who are themselves competent to judge. A doctor's authority rests not on personal charm but on years of study and practice, and on the fact that his or her work is subject to the scrutiny of colleagues. In this sense, the trust we place in an individual expert is really a trust in the system of education, examination, and criticism that has produced and continues to check that person.",
+      "This system is far from perfect. Experts make mistakes, sometimes serious ones, and the history of science contains many examples of theories that were confidently held by authorities and later abandoned. Professional communities can also be influenced by fashion, by the interests of those who fund their research, or by a reluctance to challenge established views. Critics are therefore right to insist that expert opinion should not be accepted blindly, and that experts themselves should be open about the limits of what they know.",
+      "Nevertheless, the fact that experts can be wrong does not mean that their judgments are no better than anyone else's. The relevant question is not whether an expert is infallible but whether his or her opinion is more likely to be reliable than the alternatives. In most cases, the conclusions reached by people who have studied a problem carefully, and whose work has been examined by others, deserve more weight than the intuitions of those who have not. To reject expertise entirely because it is imperfect would be like refusing to use maps because some of them contain errors.",
+      "The difficulty is that non-experts often lack the knowledge needed to tell good expertise from bad. How can an ordinary citizen decide whom to believe when experts appear to disagree? Philosophers who have studied this problem suggest several indirect signs. One can ask whether a claim is supported by a broad consensus among qualified specialists, whether those making it have relevant training, whether they have a record of reliable judgments, and whether they stand to gain personally from what they say. None of these tests is foolproof, but together they can help to distinguish genuine expertise from mere confidence.",
+      "Experts, for their part, have a responsibility to communicate in ways that deserve trust. This includes explaining not only what they believe but how strongly they believe it and why, admitting uncertainty where it exists, and acknowledging when earlier advice has proved mistaken. ( A ) experts present provisional findings as certain truths, they risk losing public confidence when those findings are later revised, as they often must be in a field that is still developing.",
+      "In the end, a healthy relationship between experts and the public is neither one of blind obedience nor one of automatic suspicion. It is a relationship in which citizens are willing to rely on specialized knowledge while retaining the right to question it, and in which experts accept that their authority depends on remaining honest about its limits.",
+    ],
+    ja: [
+      '現代の社会では、ほとんどだれもが専門家の知識にたよっている。私たちは、医者が病気を診断し、技術者が安全な橋を設計し、科学者が気候について教えてくれると信頼している。ただし、その結論を自分で確かめられる人はほとんどいない。このようにたよることは弱さのしるしではなく、知識がばくだいに増えた結果である。そのせいで、どんな個人も、知られていることのごく一部しか理解できなくなったのである。しかし、専門家への信頼ははげしい議論の的になっており、いつ、なぜ専門家にたよるべきなのかという問いが、これほど切実に思えたことはめったにない。',
+      'まず、何がある人を専門家にするのかを問う価値がある。専門性はふつう、ある分野での知識と訓練と経験の組み合わせであり、それを判断する力をもつほかの人々によって認められたものと理解されている。医者の権威は、個人的な魅力ではなく、何年もの勉強と実践、そしてその仕事が同僚のきびしい目にさらされているという事実にもとづいている。この意味で、私たちが1人の専門家にいだく信頼は、実はその人を生み出し、今も確かめ続けている教育と試験と批判のしくみへの信頼なのである。',
+      'このしくみは完全とはほど遠い。専門家はまちがいをするし、ときには重大なまちがいをする。科学の歴史には、権威ある人々が自信をもって支持し、のちに捨てられた理論の例がたくさんある。専門家の共同体は、はやりや、研究に資金を出す人々の利益や、確立した見方に異をとなえることへのためらいに左右されることもある。したがって、専門家の意見を盲目的に受け入れるべきではなく、専門家自身も自分の知識の限界についてすなおであるべきだと批判する人々が主張するのは正しい。',
+      'それでも、専門家がまちがいうるという事実は、その判断がほかのだれの判断よりもよくないということを意味しない。大切な問いは、専門家がまちがえないかどうかではなく、その意見がほかの選択肢よりも信頼できそうかどうかである。たいていの場合、ある問題を注意深く研究し、その仕事をほかの人々に調べられてきた人々が出した結論は、そうしていない人々の直感よりも重く見られるべきである。不完全だからといって専門性を完全にこばむことは、まちがいをふくむ地図もあるからといって地図を使うのをこばむようなものだろう。',
+      'むずかしいのは、専門家でない人々には、よい専門性と悪い専門性を見分けるのに必要な知識が欠けていることが多いという点である。専門家どうしの意見が分かれているように見えるとき、ふつうの市民はだれを信じればよいのかをどう決められるだろうか。この問題を研究してきた哲学者たちは、いくつかの間接的なしるしを示している。ある主張が資格のある専門家の広い合意に支えられているか、それを唱える人が関連する訓練を受けているか、信頼できる判断をしてきた実績があるか、そして自分の言うことから個人的に得をする立場にないか、を問うことができるのである。どの見分け方も完全ではないが、組み合わせれば、本物の専門性を単なる自信から区別する助けになる。',
+      '専門家の側にも、信頼に値するしかたで伝える責任がある。それには、何を信じているかだけでなく、どれほど強く、なぜ信じているかを説明すること、不確かさがあるところではそれを認めること、そして以前の助言がまちがいだとわかったときにはそれを認めることがふくまれる。専門家が暫定的な発見を確かな真理として示せば、まだ発展しつつある分野ではしばしばそうならざるをえないように、その発見がのちに見直されたとき、人々の信頼を失う危険をおかすことになる。',
+      '結局のところ、専門家と市民の健全な関係は、盲目的な服従でも、自動的な疑いでもない。それは、市民が専門的な知識にたよりながらもそれを問う権利をもち続け、専門家が、自分の権威はその限界についてすなおであり続けることにかかっていると受け入れる関係なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「暫定的な発見を確かな真理として示せば、信頼を失う危険をおかす」という条件なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、専門家にたよることは弱さのしるしである。', answer: false, why: '第1段落 This dependence is not a sign of weakness but a consequence of the enormous growth of knowledge。' },
+      { statement: '筆者によれば、1人の専門家への信頼は、その人を生み出し確かめるしくみへの信頼でもある。', answer: true, why: '第2段落 the trust we place in an individual expert is really a trust in the system ～。' },
+      { statement: '筆者は、専門家がまちがいうるなら、その判断はほかのだれの判断とも変わらないと考えている。', answer: false, why: '第4段落 the fact that experts can be wrong does not mean that their judgments are no better than anyone else\'s。' },
+      { statement: '筆者によれば、専門家は不確かさがあるところではそれを認めるべきである。', answer: true, why: '第6段落 admitting uncertainty where it exists。' },
+    ],
+    qa: [
+      { q: 'Which of the following is one of the indirect signs mentioned in the fifth paragraph?', choices: ['Whether a claim is supported by a broad consensus among qualified specialists.', 'Whether the expert is popular on social media.', 'Whether the expert speaks confidently.', 'Whether the claim agrees with our own intuitions.'], answer: 0, why: '第5段落 whether a claim is supported by a broad consensus among qualified specialists。' },
+      { q: 'What does the writer compare rejecting expertise entirely to?', choices: ['Refusing to use maps because some contain errors.', 'Building a bridge without an engineer.', 'Visiting a doctor too often.', 'Reading only one book.'], answer: 0, why: '第4段落 would be like refusing to use maps because some of them contain errors。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
