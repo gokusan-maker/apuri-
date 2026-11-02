@@ -2846,7 +2846,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { en: 'I still remember visiting Kyoto as a child.', ja: '子どものころ京都をおとずれたのを今もおぼえている。' },
     ],
     questions: [
-      { sentence: 'My grandfather (A) stopped (B) to drink coffee (C) because the doctor (D) told him to.', choices: ['(A) stopped', '(B) to drink coffee', '(C) because the doctor', '(D) told him to'], answer: 1, why: '「コーヒーを飲むのをやめた」は stopped drinking coffee。' },
+      { sentence: 'My grandfather (A) stopped (B) to drink coffee (C) ten years ago, and (D) he has not had a cup since.', choices: ['(A) stopped', '(B) to drink coffee', '(C) ten years ago, and', '(D) he has not had a cup since'], answer: 1, why: '「コーヒーを飲むのをやめた」は stopped drinking coffee。' },
       { sentence: '(A) Remember (B) locking the door (C) when you (D) leave the house.', choices: ['(A) Remember', '(B) locking the door', '(C) when you', '(D) leave the house'], answer: 1, why: '「忘れずに～する（これから）」は Remember to lock。' },
       { sentence: 'I (A) still remember (B) to visit (C) Kyoto (D) with my parents as a child.', choices: ['(A) still remember', '(B) to visit', '(C) Kyoto', '(D) with my parents as a child'], answer: 1, why: '「（過去に）～したのをおぼえている」は remember visiting。' },
       { sentence: '(A) Do not forget bringing (B) your passport (C) to the airport (D) tomorrow.', choices: ['(A) Do not forget bringing', '(B) your passport', '(C) to the airport', '(D) tomorrow'], answer: 0, why: '「忘れずに持ってくる（これから）」は forget to bring の否定。Do not forget to bring。' },
