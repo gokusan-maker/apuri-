@@ -1986,6 +1986,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="53" cy="65" r="1.3" fill="#030712" />
       </g>
     )
+  if (species === 'siberianthrush')
+    return (
+      <g>
+        {/* くっきりした白いまゆ */}
+        <path d="M35 41 L49 38" fill="none" stroke="#f8fafc" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
