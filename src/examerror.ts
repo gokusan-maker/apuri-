@@ -4686,6 +4686,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Such [the noise was] that we could not hear each other speak.', choices: ['was the noise', 'the noise is', 'did the noise', 'noise was'], answer: 0, why: 'Such が文頭に出た倒置 Such was S that ～（S があまりに大きいので～）。' },
     ],
   },
+  {
+    id: 'exam-fix-109',
+    title: '入試の誤文訂正〈109〉（共通テストレベル：数えられる名詞・数えられない名詞）',
+    points: ['advice・information・furniture・news・homework・baggage（luggage）・equipment は数えられない名詞で、a をつけず複数形にもしない。数えるときは a piece of ～。many／few は数えられる名詞、much／little は数えられない名詞につく。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She gave me a useful piece of advice.', ja: '彼女は私に役に立つ助言を1つくれた。' }],
+    questions: [
+      { sentence: 'My teacher gave me [an advice] about how to prepare for the exam.', choices: ['some advice', 'advices', 'many advice', 'an advices'], answer: 0, why: 'advice は数えられない名詞。some advice（a piece of advice）。' },
+      { sentence: 'We bought some new [furnitures] for our living room.', choices: ['furniture', 'a furniture', 'furnitures of', 'many furniture'], answer: 0, why: 'furniture は数えられない名詞なので複数形にしない。' },
+      { sentence: 'The [news are] spreading quickly through the town.', choices: ['news is', 'news were', 'newses are', 'a news is'], answer: 0, why: 'news は数えられない名詞で単数あつかい。The news is spreading。' },
+      { sentence: 'How [many homework] do you have to do tonight?', choices: ['much homework', 'many homeworks', 'much homeworks', 'a homework'], answer: 0, why: 'homework は数えられない名詞なので much。How much homework。' },
+      { sentence: 'There were [much people] waiting outside the stadium.', choices: ['many people', 'much peoples', 'a lot people', 'many peoples of'], answer: 0, why: 'people は数えられる名詞（複数）なので many people。' },
+      { sentence: 'I have [few] money left, so I cannot buy a new bag.', choices: ['little', 'a few', 'many', 'fewer'], answer: 0, why: 'money は数えられない名詞なので little（ほとんどない）。' },
+      { sentence: 'Only [a little] students came to the meeting because of the rain.', choices: ['a few', 'a little of', 'much', 'little'], answer: 0, why: 'students は数えられる名詞なので a few（少しの）。' },
+      { sentence: 'Please check your [baggages] before you leave the plane.', choices: ['baggage', 'a baggage', 'baggages of', 'many baggage'], answer: 0, why: 'baggage は数えられない名詞なので複数形にしない。' },
+      { sentence: 'Can you give me [an information] about the train schedule?', choices: ['some information', 'informations', 'an informations', 'many information'], answer: 0, why: 'information は数えられない名詞。some information。' },
+      { sentence: 'The laboratory needs [a new equipment] for the experiment.', choices: ['new equipment', 'new equipments', 'a new equipments', 'many new equipment'], answer: 0, why: 'equipment は数えられない名詞。a をつけず複数形にもしない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
