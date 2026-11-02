@@ -887,3 +887,17 @@ it('デザイン218：今月はじめて出た種類なら「🗓 今月はじ�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.queryByLabelText('今月はじめて出た種類')).toBeNull()
 })
+
+it('デザイン219：キャラ図鑑で、30日以上いっしょの相棒に「🌳 長いつきあい」が出る（相棒がかわると数えなおし）', () => {
+  localStorage.clear()
+  const old = new Date(Date.now() - 40 * 86400000).toISOString().slice(0, 10)
+  localStorage.setItem('eitan:partner-since', JSON.stringify({ species: 'fox', day: old }))
+  const { unmount } = render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} partnerSpecies="fox" onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.getByLabelText(/日いっしょの長いつきあい/).closest('li')!.textContent).toContain(speciesOf('fox').name)
+  unmount()
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} partnerSpecies="mochi" onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.queryByLabelText(/日いっしょの長いつきあい/)).toBeNull()
+  expect(JSON.parse(localStorage.getItem('eitan:partner-since')!).species).toBe('mochi')
+})

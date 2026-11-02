@@ -8,7 +8,7 @@ import { STICKERS, STICKER_TICKETS } from './stickers'
 import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
 import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
-import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, multi5Off, multi5Price, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, markMonthSpecies, rememberPartner, PARTY_MAX, pushGachaLog } from './gacha'
+import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, multi5Off, multi5Price, SLOT_COINS, loadGachaLog, loadGachaStats, markSrToday, markMonthSpecies, rememberPartner, partnerDays, LONG_PARTNER_DAYS, PARTY_MAX, pushGachaLog } from './gacha'
 import { CHAR_TYPES, typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
 import { baseRate, FORMS, kindOf, levelsToNextStage, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
@@ -852,6 +852,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
   const [onlyNew, setOnlyNew] = useState(false) // まだ会っていない子だけ見る
   const [typeOnly, setTypeOnly] = useState('') // デザイン119：タイプでしぼりこむ
   const [pastPartners] = useState(() => rememberPartner(partner ?? 'mochi')) // デザイン201：相棒にしたことのある子
+  const [withDays] = useState(() => partnerDays(partner ?? 'mochi', new Date().toISOString().slice(0, 10))) // デザイン219：今の相棒と何日いっしょか
   const [byCount, setByCount] = useState(false) // デザイン131：なかまにいる数の多い順
   const countOf = (id: string) => owned.filter((x) => x === id).length
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
@@ -942,6 +943,7 @@ function CharBook({ owned, fresh = '', levels, partner, today = [] }: { owned: s
                 <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
                 {ok && (partner ?? 'mochi') === sp.id && <span className="char-book-partner" aria-label="今の相棒">⭐相棒</span>}
+                {ok && (partner ?? 'mochi') === sp.id && withDays >= LONG_PARTNER_DAYS && <span className="char-book-sprout" aria-label={`${withDays}日いっしょの長いつきあい`}>🌳</span>} {/* デザイン219 */}
                 {ok && (partner ?? 'mochi') !== sp.id && pastPartners.includes(sp.id) && <span className="char-book-sprout" aria-label="前に相棒だった子">💕</span>}
                 {ok && levels?.[sp.id] === 1 && (partner ?? 'mochi') !== sp.id && <span className="char-book-sprout" aria-label="まだ育てていない">🌱</span>} {/* デザイン122 */}
                 {ok && today.includes(sp.id) && <span className="char-book-sprout" aria-label="今日出会った">☀今日</span>} {/* デザイン137 */}

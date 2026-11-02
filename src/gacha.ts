@@ -434,6 +434,22 @@ export const castleLuck = (castles: number) => Math.min(CASTLE_LUCK_MAX, Math.ma
 export const luckyRoll = (r: number, castles: number) => (r < 0.6 ? Math.min(0.899, r + castleLuck(castles)) : r)
 
 // デザイン201：相棒にしたことのある子の種類をおぼえておく（図鑑で 💕 を出す）
+// デザイン219：今の相棒になった日をおぼえ、何日つきあっているかを返す（相棒がかわると0日からやりなおし）
+const PARTNER_SINCE_KEY = 'eitan:partner-since'
+export const LONG_PARTNER_DAYS = 30
+export function partnerDays(species: string, today: string): number {
+  try {
+    const v = JSON.parse(localStorage.getItem(PARTNER_SINCE_KEY) ?? 'null') as { species?: unknown; day?: unknown } | null
+    if (v && v.species === species && typeof v.day === 'string') {
+      const d = Math.floor((Date.parse(today) - Date.parse(v.day)) / 86400000)
+      if (Number.isFinite(d)) return Math.max(0, d)
+    }
+    localStorage.setItem(PARTNER_SINCE_KEY, JSON.stringify({ species, day: today }))
+  } catch {
+    // ストレージが使えないときは数えない
+  }
+  return 0
+}
 const PARTNER_HISTORY_KEY = 'eitan:partner-history'
 export function rememberPartner(species: string | undefined): string[] {
   let list: string[] = []
