@@ -25513,6 +25513,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-solitude',
+    title: 'Loneliness and Solitude',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Loneliness is now widely described as a public health problem, and with good reason. Studies have linked prolonged social isolation to a range of physical and mental illnesses, and several governments have appointed officials whose task is to reduce it. Yet in the rush to treat loneliness as a disease to be cured, an important distinction is in danger of being lost: the distinction between loneliness, which is painful, and solitude, which many thinkers have regarded as one of the conditions of a full human life. Being alone and feeling alone, in other words, are not the same thing.",
+      "Loneliness may be defined as the painful sense that one's relationships with others are fewer or less meaningful than one would wish. It is possible to feel lonely in a crowded room, or even within a marriage, and it is equally possible to spend long periods alone without feeling lonely at all. Solitude, by contrast, is a state of being alone that is chosen, or at least accepted, and that offers something of value: an opportunity to think, to rest, or to attend to experiences that are difficult to notice in the company of others.",
+      "Many of the activities that human beings value most seem to require such solitude. Writers, scientists, and artists have often described the need for long stretches of uninterrupted time in which ideas can develop slowly. Religious traditions in many parts of the world have encouraged periods of withdrawal from ordinary social life as a means of reflection. Even in everyday life, people frequently report that a solitary walk or a quiet hour without conversation allows them to understand their own feelings more clearly than they could while surrounded by others. Psychologists who study creativity have similarly observed that new ideas often arise not during intense effort but in quiet moments of rest, when the mind is free to wander without the pressure of responding to anyone else.",
+      "The capacity for solitude may also be connected with the quality of our relationships. A person who is unable to be alone may seek company not because he or she values particular people but because silence has become unbearable. Such relationships can easily become a means of escape rather than a genuine meeting between individuals. ( A ), someone who is comfortable in his or her own company may be freer to choose friends for who they are, rather than simply for the relief they provide from being alone.",
+      "Modern technology has made solitude in this positive sense harder to achieve. With a phone in every pocket, we are rarely without the possibility of contact, and many people find it difficult to resist checking messages even during moments that could be spent in quiet thought. Paradoxically, this constant connection does not seem to have reduced loneliness; some researchers suggest that it may even increase it, by replacing deep relationships with a large number of shallow ones and by leaving little room for the reflection that helps people understand what they truly need from others.",
+      "None of this means that loneliness should be ignored or romanticized. For many people, especially the elderly, the sick, and those who have lost partners or friends, isolation is imposed rather than chosen, and it causes real suffering that deserves attention and support. Communities that create opportunities for regular contact, such as shared meals, clubs, or simple visits from neighbors, can do a great deal to relieve it. The point is that the remedy for such suffering is not simply to ensure that no one is ever alone. ( B ) we wish to help, we may need to pay attention both to the quality of people's relationships and to their freedom to enjoy the kind of solitude that nourishes rather than harms.",
+    ],
+    ja: [
+      '孤独感は今では公衆衛生の問題として広く語られており、それには十分な理由がある。研究によって、長く続く社会的な孤立がさまざまな体と心の病気と結びつけられており、それをへらすことを仕事とする担当者を任命した政府もいくつかある。しかし、孤独感を治すべき病気としてあつかおうと急ぐあまり、大切な区別が失われる危険がある。つらいものである孤独感と、多くの思想家が充実した人間の生活の条件の1つとみなしてきた、ひとりの時間との区別である。言いかえれば、ひとりでいることと、ひとりだと感じることは同じではないのである。',
+      '孤独感とは、他人との関係が、自分が望むよりも少なかったり意味がうすかったりするというつらい感覚と定義できるかもしれない。こみ合った部屋の中でも、結婚生活の中でさえ孤独を感じることはありうるし、まったく孤独を感じずに長い間ひとりで過ごすことも同じようにありうる。これに対して、ひとりの時間とは、自分で選んだ、あるいは少なくとも受け入れた、ひとりでいる状態であり、価値あるものをあたえてくれる。考えたり、休んだり、ほかの人といっしょではなかなか気づけない経験に注意を向けたりする機会である。',
+      '人間が最も大切にする活動の多くは、そうしたひとりの時間を必要とするようである。作家や科学者や芸術家は、考えがゆっくり育っていける、じゃまの入らない長い時間が必要だとしばしば語ってきた。世界の多くの地域の宗教の伝統は、内省の手段として、ふだんの社会生活から一時的にはなれることをすすめてきた。日常生活でさえ、ひとりでの散歩や会話のない静かな1時間によって、人にかこまれているときよりも自分の気持ちをはっきり理解できると、人々はよく語る。創造性を研究する心理学者たちも同じように、新しい考えは、はげしい努力の最中ではなく、だれかにこたえなければならない重圧なしに心が自由にさまよえる、静かな休息のひとときに生まれることが多いと観察している。',
+      'ひとりでいる力は、人間関係の質ともつながっているのかもしれない。ひとりでいられない人は、特定の人を大切に思うからではなく、静けさがたえられなくなったために、人といっしょにいることを求めるかもしれない。そうした関係は、個人と個人の本当の出会いではなく、たやすく逃避の手段になってしまう。これに対して、自分ひとりでいることに心地よさを感じる人は、ひとりでいることからの安らぎをあたえてくれるからではなく、その人がその人であるという理由で、友人を自由に選べるのかもしれない。',
+      '現代の技術は、このよい意味でのひとりの時間をもつことをむずかしくしてきた。だれもがポケットに電話を入れているので、私たちが連絡の可能性なしにいることはめったになく、静かに考えることに使えるはずの瞬間でさえ、メッセージを確かめたくなる気持ちにさからうのがむずかしいと感じる人は多い。逆説的なことに、このたえまないつながりは孤独感をへらしてはいないようである。深い関係を数多くの浅い関係に置きかえ、自分が他人から本当に何を必要としているのかを理解する助けとなる内省の余地をほとんど残さないことで、それはむしろ孤独感をふやしているのかもしれない、と示す研究者もいる。',
+      'こうしたことは、孤独感を無視したり美化したりすべきだという意味ではない。多くの人々、とくに高齢者や病気の人、伴侶や友人を失った人々にとって、孤立は選んだものではなくおしつけられたものであり、注意と支援に値する本当の苦しみを引き起こしている。いっしょに食事をしたり、クラブ活動をしたり、近所の人がちょっと訪ねてきたりするような、定期的にふれ合う機会をつくる共同体は、それをやわらげるのに大きな役割をはたせる。大切なのは、そうした苦しみをいやす方法は、だれも決してひとりにならないようにすることだけではないということである。助けたいと願うなら、人々の人間関係の質と、心を害するのではなく養ってくれるような、ひとりの時間を楽しむ自由の両方に目を向ける必要があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['By contrast', 'For example', 'As a result', 'In addition'], answer: 0, why: 'ひとりでいられない人（前の文）と、ひとりに心地よさを感じる人を対比するので By contrast。' },
+      { id: 'B', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「助けたいと願うなら、～に目を向ける必要がある」という条件なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、こみ合った部屋の中でも孤独を感じることがありうる。', answer: true, why: '第2段落 It is possible to feel lonely in a crowded room。' },
+      { statement: '筆者は、ひとりでいることとひとりだと感じることは同じだと述べている。', answer: false, why: '第1段落 Being alone and feeling alone ... are not the same thing。' },
+      { statement: '筆者によれば、たえまないつながりは孤独感を大きくへらしてきた。', answer: false, why: '第5段落 this constant connection does not seem to have reduced loneliness。' },
+      { statement: '筆者は、孤立がおしつけられた人々の苦しみは支援に値すると考えている。', answer: true, why: '第6段落 it causes real suffering that deserves attention and support。' },
+    ],
+    qa: [
+      { q: 'According to the fourth paragraph, why might a person who cannot be alone form relationships that are not genuine?', choices: ['They may seek company mainly to escape silence rather than because they value particular people.', 'They are too busy to meet anyone.', 'They prefer to communicate only online.', 'They always choose friends for who they are.'], answer: 0, why: '第4段落 may seek company not because he or she values particular people but because silence has become unbearable。' },
+      { q: 'What distinction does the writer consider important?', choices: ['The distinction between painful loneliness and valuable solitude.', 'The distinction between young people and old people.', 'The distinction between phones and computers.', 'The distinction between writers and scientists.'], answer: 0, why: '第1段落 the distinction between loneliness, which is painful, and solitude ～。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
