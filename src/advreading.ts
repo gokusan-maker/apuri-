@@ -26282,6 +26282,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tradition',
+    title: 'How Traditions Are Made',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often speak of traditions as if they were inherited unchanged from a distant past. A festival, a style of dress, or a way of preparing food is valued precisely because it seems to connect the present generation with its ancestors. To call a practice traditional is to suggest that it has lasted for a long time and that it expresses something essential about a community. For this reason, traditions are frequently invoked to resist change: what has always been done, people argue, should continue to be done, and to abandon it would be to lose a part of who we are.",
+      "Historians, however, have shown that many practices regarded as ancient are in fact surprisingly recent. Customs that are now thought to represent the timeless character of a nation were sometimes created, or greatly transformed, within the last two centuries, often at moments when societies were undergoing rapid change. As industrialization and the growth of cities weakened older forms of community life, people looked for symbols that could give them a sense of continuity and shared identity. New ceremonies, songs, and costumes were introduced and soon came to be regarded as if they had existed for centuries. Within a few generations, their recent origins were largely forgotten, and they were defended as faithfully as any genuinely ancient custom.",
+      "To point this out is not necessarily to criticize such traditions or to claim that they are false. A practice does not need to be ancient in order to be meaningful. What the historical evidence reveals is rather that traditions are not simply given to us by the past; they are continually selected, interpreted, and reshaped by people in the present. Every generation decides, consciously or not, which elements of its inheritance to preserve, which to modify, and which to forget, and these decisions reflect its own needs and values.",
+      "Even traditions with a genuinely long history have rarely remained unchanged. The materials used in crafts, the music played at festivals, and the roles that men and women take in ceremonies have often shifted over time in response to new technologies, economic conditions, and social attitudes. ( A ) a tradition seems stable, it may be because these changes happened slowly enough that each generation experienced them as natural. Looking closely, we usually find that what appears to be a single continuous practice is in reality a series of adaptations, each of which was once regarded by someone as a departure from the proper way of doing things.",
+      "Recognizing the changing nature of tradition has important consequences for contemporary debates. When some people insist that a custom must be preserved exactly as it is, while others argue that it should be revised to fit modern values, both sides may be drawing on an image of the past that is simpler than the reality. If traditions have always changed, then the question is not whether to change them but how, and according to what principles. Such a question cannot be answered by appealing to the past alone; it requires careful thought about what we value in the present.",
+      "Understood in this way, tradition is less a fixed object to be guarded than a conversation carried on across generations. Those who take part in it receive something from their predecessors, add their own contributions, and pass the result on to those who follow. The vitality of a tradition depends not on its freedom from change but on the continued willingness of people to care about it, to argue over its meaning, and to find in it resources for living. A tradition that no one is allowed to question may survive for a while, but it risks becoming an empty form, admired from a distance and no longer understood.",
+    ],
+    ja: [
+      '私たちはしばしば、伝統を、遠い過去から変わることなく受けつがれたものであるかのように語る。祭りや服装のしかた、食べ物の調理法が大切にされるのは、まさにそれが今の世代を先祖とつないでいるように思えるからである。ある慣習を伝統的とよぶことは、それが長く続いてきたこと、そしてそれが共同体の本質的な何かを表していることをほのめかすことである。このため、伝統は変化に抵抗するためにしばしば持ち出される。いつもしてきたことは、これからもするべきだ、それを捨てることは自分たちが何者であるかの一部を失うことだ、と人々は主張するのである。',
+      'しかし歴史家たちは、古いとみなされている慣習の多くが、実はおどろくほど新しいことを明らかにしてきた。今では国の時代をこえた性格を表すと考えられている習慣が、ここ2世紀のあいだに、しばしば社会が急速に変化していた時期に、作られたり大きく変えられたりしたこともある。工業化と都市の成長によって古い形の共同体生活が弱まるなかで、人々は連続性と共有されたアイデンティティの感覚を与えてくれる象徴を求めた。新しい儀式や歌や衣装が取り入れられ、まもなく何世紀も前からあったかのようにみなされるようになったのである。数世代のうちに、それらが最近生まれたことはほとんど忘れられ、本当に古い習慣と同じくらい忠実に守られるようになった。',
+      'このことを指摘するのは、必ずしもそうした伝統を批判したり、それがにせものだと主張したりすることではない。慣習が意味をもつのに古い必要はないのである。歴史の証拠が明らかにしているのは、むしろ、伝統は単に過去から与えられるのではなく、現在の人々によってたえず選ばれ、解釈され、作り直されているということである。どの世代も、意識してかどうかはともかく、受けついだもののどの要素を残し、どれを変え、どれを忘れるかを決めており、こうした決定はその世代自身の必要と価値観を反映している。',
+      '本当に長い歴史をもつ伝統でさえ、変わらずに残ってきたことはめったにない。工芸に使われる材料、祭りで演奏される音楽、儀式で男性と女性が果たす役割は、新しい技術や経済の状況や社会の考え方に応じて、時とともにしばしば変わってきた。ある伝統が安定しているように見えるとしても、それは、こうした変化がゆっくり起こったので、どの世代もそれを自然なものとして経験したからかもしれない。よく見てみると、1つの連続した慣習に見えるものが、実際には適応の連続であることがたいていわかる。そしてその1つひとつが、かつてはだれかによって、物事の正しいやり方からはずれたものとみなされていたのである。',
+      '伝統が変わりゆくものだと認めることは、現代の議論にとって重要な意味をもつ。ある習慣はそのまま正確に守られなければならないと主張する人々がいる一方で、現代の価値観に合うように改めるべきだと論じる人々がいるとき、両者とも、現実より単純な過去のイメージにたよっているのかもしれない。伝統がいつも変わってきたのなら、問題はそれを変えるかどうかではなく、どのように、どんな原則にしたがって変えるかである。そうした問いには過去を持ち出すだけでは答えられない。それには、現在の私たちが何を大切にしているかについての注意深い思考が必要なのである。',
+      'このように理解すると、伝統は守るべき固定した物というより、世代をこえて続けられる対話である。それに加わる人々は、先人から何かを受け取り、自分自身の貢献を加え、その結果を後に続く人々に手わたす。伝統の活力は、変化がないことではなく、人々がそれを大切に思い、その意味について議論し、そこに生きるための手がかりを見いだそうとし続けることにかかっている。だれも問い直すことを許されない伝統は、しばらくは生き残るかもしれないが、遠くからあがめられるだけで、もはや理解されない空っぽの形になってしまうおそれがある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Because', 'Until'], answer: 0, why: '「伝統が安定しているように見えるとしても、それは～だからかもしれない」なので If。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、伝統はしばしば変化に抵抗するために持ち出される。', answer: true, why: '第1段落 traditions are frequently invoked to resist change。' },
+      { statement: '筆者によれば、古いとみなされている慣習は、すべて何世紀も前から続いている。', answer: false, why: '第2段落 many practices regarded as ancient are in fact surprisingly recent。' },
+      { statement: '筆者は、新しい伝統には意味がないと考えている。', answer: false, why: '第3段落 A practice does not need to be ancient in order to be meaningful。' },
+      { statement: '筆者によれば、伝統を変えるかどうかではなく、どのように変えるかが問題である。', answer: true, why: '第5段落 the question is not whether to change them but how。' },
+    ],
+    qa: [
+      { q: 'Why did people create new ceremonies and songs, according to the second paragraph?', choices: ['To gain a sense of continuity and shared identity as older community life weakened.', 'To attract tourists from other countries.', 'To replace religion completely.', 'Because older customs were forbidden by law.'], answer: 0, why: '第2段落 people looked for symbols that could give them a sense of continuity and shared identity。' },
+      { q: 'How does the writer describe tradition in the last paragraph?', choices: ['As a conversation carried on across generations.', 'As a fixed object that must be guarded.', 'As an empty form with no meaning.', 'As something given to us unchanged by the past.'], answer: 0, why: '第6段落 tradition is less a fixed object to be guarded than a conversation carried on across generations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
