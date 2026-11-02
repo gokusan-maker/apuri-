@@ -1583,3 +1583,10 @@ it('正誤問題〈116〉：数えられる名詞・数えられない名詞の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) an useful advice')
 })
+
+it('誤文訂正〈110〉：京大レベルの省略と代用の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-110')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('to')
+})

@@ -4728,6 +4728,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The laboratory needs [a new equipment] for the experiment.', choices: ['new equipment', 'new equipments', 'a new equipments', 'many new equipment'], answer: 0, why: 'equipment は数えられない名詞。a をつけず複数形にもしない。' },
     ],
   },
+  {
+    id: 'exam-fix-110',
+    title: '入試の誤文訂正〈110〉（京大レベル：省略と代用）',
+    points: ['英語はくり返しをきらい、前に出た語句を省略したり代わりの語で受けたりする。代不定詞 to（want to のあとの動詞を省く）、I think so／I hope not、do so（前の動詞句の代わり）、one（同じ種類の不特定の1つ）と that（the ＋名詞のくり返し）。京大の和訳では、省略された部分をおぎなって訳す。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I wanted to join the team, but my parents did not allow me to.', ja: '私はそのチームに入りたかったが、両親は（入ることを）ゆるしてくれなかった。' }],
+    questions: [
+      { sentence: 'You can borrow my car if you want [to borrow it to].', choices: ['to', 'it', 'to it', 'so'], answer: 0, why: '代不定詞 to。if you want to (borrow it) の borrow it を省く。' },
+      { sentence: '"Will it rain tomorrow?" "I hope [not it]."', choices: ['not', 'no', 'not so', 'it not'], answer: 0, why: '「そうならないといいな」は I hope not（= I hope it will not rain）。' },
+      { sentence: '"Is she coming to the party?" "I think [it]."', choices: ['so', 'that', 'it so', 'yes'], answer: 0, why: '前の内容を受けて「そう思う」は I think so。' },
+      { sentence: 'The doctor told him to rest, but he refused to [do it so].', choices: ['do so', 'do', 'so do', 'doing so'], answer: 0, why: '前の動詞句（rest）の代わりは do so。refused to do so。' },
+      { sentence: 'I lost my umbrella, so I have to buy [it].', choices: ['one', 'that', 'them', 'the one'], answer: 0, why: '同じ種類の不特定の1本（新しいかさ）は one。it だとなくしたかさそのものになる。' },
+      { sentence: 'The climate of Japan is milder than [one] of Canada.', choices: ['that', 'it', 'those', 'this'], answer: 0, why: 'the climate のくり返しは that（of 句が続く）。one は数えられる名詞の代わり。' },
+      { sentence: 'The streets in this city are wider than [that] in my hometown.', choices: ['those', 'it', 'one', 'these'], answer: 0, why: '複数の the streets のくり返しは those。' },
+      { sentence: 'When [being asked] about the accident, he refused to answer.', choices: ['asked', 'asking', 'he asking', 'to ask'], answer: 0, why: 'When (he was) asked の省略。主語と be 動詞を省いて過去分詞 asked。' },
+      { sentence: 'Some students prefer to study in the morning; others [prefer to it] at night.', choices: ['prefer to study', 'prefer it to', 'prefer to it study', 'prefers to'], answer: 0, why: 'others prefer to study at night。to のあとに it は置けない。' },
+      { sentence: 'He promised to call me, but he [did not so].', choices: ['did not', 'not did', 'did not so do', 'was not'], answer: 0, why: '前の動詞（call me）を受ける代動詞 did not（= did not call me）。did not so とは言わない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
