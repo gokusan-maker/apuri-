@@ -3903,3 +3903,4 @@
 - 2026-11-02: 正誤問題〈130〉：旧帝大レベル 主語と動詞の一致（the number of・each・either A or B・as well as・mathematics／news）10問
 - 2026-11-02: 東大専用の長文㉔「都市の野生動物」（約630語・要約の空所補充つき）を追加
 - 2026-11-02: キャラクター追加244：ブッポウソウン（空中で虫をとるブッポウソウ・文法が得意）
+- 2026-11-02: 誤文訂正〈124〉：京大レベル 強調構文と倒置（It is ～ that・Never／Little／Only then・Not until・Hardly ～ when・So＋形容詞）10問

@@ -5316,6 +5316,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Every boy and girl in the class [have] a tablet.', choices: ['has', 'are having', 'have been', 'having'], answer: 0, why: 'every A and B は単数あつかい。has。' },
     ],
   },
+  {
+    id: 'exam-fix-124',
+    title: '入試の誤文訂正〈124〉（京大レベル：強調構文と倒置）',
+    points: ['強調構文は It is ～ that …（人なら who も可）。否定の語（Never・Rarely・Little・Not until ～・Only then など）が文頭にくると、疑問文と同じ語順の倒置（助動詞＋S＋動詞）になる。Not until A did S ～（A してはじめて～した）。So＋形容詞 is S that ～、Hardly had S＋過去分詞 when ～ もよく出る。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。' }],
+    questions: [
+      { sentence: 'Never [I have seen] such a beautiful sunset.', choices: ['have I seen', 'I saw', 'I had seen', 'did I have seen'], answer: 0, why: '否定の語 Never が文頭なので倒置。have I seen。' },
+      { sentence: 'Not until I lost my health [I realized] how important it was.', choices: ['did I realize', 'I did realize', 'realized I', 'had I realize'], answer: 0, why: 'Not until ～ が文頭なので倒置。did I realize。' },
+      { sentence: 'Little [she knew] that her life was about to change.', choices: ['did she know', 'she did know', 'knew she does', 'she has known'], answer: 0, why: 'Little（少しも～ない）が文頭なので倒置。did she know。' },
+      { sentence: 'Only then [we understood] what he had meant.', choices: ['did we understand', 'we did understand', 'understood we did', 'we had understand'], answer: 0, why: 'Only then が文頭なので倒置。did we understand。' },
+      { sentence: 'It was in Kyoto [where] I first met my wife.', choices: ['that', 'which', 'what', 'when'], answer: 0, why: '強調構文 It is ～ that …。強調する部分が場所でも that を使う。' },
+      { sentence: 'It is not money [what] makes people truly happy.', choices: ['that', 'it', 'which is', 'so'], answer: 0, why: '強調構文 It is ～ that …。what は使えない。' },
+      { sentence: 'Hardly [I had arrived] at the station when the train left.', choices: ['had I arrived', 'I arrived', 'did I arrived', 'I have arrived'], answer: 0, why: 'Hardly had S＋過去分詞 when ～（～するとすぐに）。倒置で had I arrived。' },
+      { sentence: 'So difficult [the exam was] that few students passed it.', choices: ['was the exam', 'the exam is', 'is the exam was', 'the exam being'], answer: 0, why: 'So＋形容詞が文頭にくると倒置。was the exam。' },
+      { sentence: 'Rarely [he complains] about his work.', choices: ['does he complain', 'he does complain', 'complains he', 'he complained'], answer: 0, why: 'Rarely（めったに～ない）が文頭なので倒置。does he complain。' },
+      { sentence: 'It was my grandmother [which] taught me how to cook.', choices: ['who', 'whom', 'what', 'whose'], answer: 0, why: '強調構文で人を強調するときは that か who。which は人に使えない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

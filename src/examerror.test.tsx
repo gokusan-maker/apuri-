@@ -1779,3 +1779,10 @@ it('正誤問題〈130〉：旧帝大レベル 主語と動詞の一致の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) are')
 })
+
+it('誤文訂正〈124〉：京大レベル 強調構文と倒置の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-124')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('have I seen')
+})
