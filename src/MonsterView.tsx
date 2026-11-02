@@ -1913,6 +1913,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="42" cy="44" r="3.5" fill="none" stroke="#facc15" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'ashyminivet')
+    return (
+      <g>
+        {/* 白いおでこと、黒い目すじ */}
+        <ellipse cx="50" cy="36" rx="9" ry="4" fill="#f8fafc" />
+        <path d="M38 44 L48 46" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
