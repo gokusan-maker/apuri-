@@ -5274,6 +5274,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He talks as if he [has seen] the accident with his own eyes, but he was not there.', choices: ['had seen', 'sees', 'will see', 'would see'], answer: 0, why: '実際には見ていない過去のことなので as if＋had＋過去分詞。' },
     ],
   },
+  {
+    id: 'exam-fix-123',
+    title: '入試の誤文訂正〈123〉（旧帝大レベル：主語と動詞の一致）',
+    points: ['the number of ～（～の数）は単数あつかい、a number of ～（たくさんの～）は複数あつかい。each・every・either・neither（単独）は単数。either A or B・neither A nor B・not only A but also B は動詞に近い B に合わせる。A as well as B は A に合わせる。主語と動詞のあいだに長い修飾語（前置詞句・関係詞節）があっても、動詞は本当の主語に合わせる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The number of students who study abroad is increasing.', ja: '留学する学生の数はふえている。' }],
+    questions: [
+      { sentence: 'The number of foreign tourists [are] increasing every year.', choices: ['is', 'have been', 'were', 'be'], answer: 0, why: 'the number of ～（～の数）は単数あつかい。is。' },
+      { sentence: 'A number of students [was] absent because of the flu.', choices: ['were', 'was being', 'has been', 'is'], answer: 0, why: 'a number of ～（たくさんの～）は複数あつかい。were。' },
+      { sentence: 'Each of the players [have] a different role on the team.', choices: ['has', 'have been', 'are having', 'having'], answer: 0, why: 'each of ～ は単数あつかい。has。' },
+      { sentence: 'Either you or your brother [have] to clean the room.', choices: ['has', 'are', 'were', 'having'], answer: 0, why: 'either A or B は動詞に近い B（your brother）に合わせる。has。' },
+      { sentence: 'Neither my parents nor my sister [know] about the plan.', choices: ['knows', 'are knowing', 'have known', 'were know'], answer: 0, why: 'neither A nor B は B（my sister）に合わせる。knows。' },
+      { sentence: 'Not only the teacher but also the students [was] surprised at the news.', choices: ['were', 'was being', 'has been', 'is'], answer: 0, why: 'not only A but also B は B（the students）に合わせる。were。' },
+      { sentence: 'The teacher, as well as her students, [are] looking forward to the trip.', choices: ['is', 'were', 'have been', 'be'], answer: 0, why: 'A as well as B は A（The teacher）に合わせる。is。' },
+      { sentence: 'The books on the top shelf of the library [is] very old.', choices: ['are', 'was', 'has been', 'being'], answer: 0, why: '本当の主語は The books（複数）。on the top shelf of the library は修飾語。are。' },
+      { sentence: 'The man who lives next to my grandparents [work] at a hospital.', choices: ['works', 'are working', 'have worked', 'working'], answer: 0, why: '本当の主語は The man（単数）。関係詞節は修飾語。works。' },
+      { sentence: 'Every boy and girl in the class [have] a tablet.', choices: ['has', 'are having', 'have been', 'having'], answer: 0, why: 'every A and B は単数あつかい。has。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
