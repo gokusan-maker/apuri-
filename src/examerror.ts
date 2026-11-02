@@ -4896,6 +4896,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Would you mind [to open] the window? It is very hot in here.', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind は動名詞を目的語にとる。' },
     ],
   },
+  {
+    id: 'exam-fix-114',
+    title: '入試の誤文訂正〈114〉（旧帝大レベル：仮定法の発展）',
+    points: ['If it were not for ～（今～がなければ）／If it had not been for ～（あのとき～がなかったら）、But for ～／Without ～、Otherwise（そうでなければ）、Suppose（Supposing）S V（もし～なら）、It is time S 過去形、If only S 過去形（～でさえあればなあ）、as if。帰結の形（would ＋原形／would have ＋過去分詞）を時に合わせる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'If it were not for water, no living thing could survive.', ja: 'もし水がなければ、どんな生き物も生きられないだろう。' }],
+    questions: [
+      { sentence: 'If it [is] not for the internet, our work would be much harder.', choices: ['were', 'has been', 'will be', 'was being'], answer: 0, why: '今の事実の反対は If it were not for ～（仮定法過去）。帰結 would be と合う。' },
+      { sentence: 'If it had not been for his help, I [would fail] the exam last year.', choices: ['would have failed', 'will fail', 'had failed', 'would be failing'], answer: 0, why: '過去の事実の反対（last year）なので帰結は would have ＋過去分詞。' },
+      { sentence: 'But for your advice, I [will make] a serious mistake yesterday.', choices: ['would have made', 'made', 'had made', 'will have made'], answer: 0, why: 'But for ～（～がなかったら）。yesterday の過去の反対なので would have made。' },
+      { sentence: 'I took a taxi; [however], I would have missed the last train.', choices: ['otherwise', 'therefore', 'because', 'moreover'], answer: 0, why: '「そうでなければ～しただろう」は otherwise。前の事実（タクシーに乗った）の反対を仮定する。' },
+      { sentence: '[Suppose you win] a million yen, what would you do with it?', choices: ['Suppose you won', 'Suppose you will win', 'Supposed you win', 'Suppose you had won'], answer: 0, why: 'あまりありえない仮定は Suppose ＋仮定法過去 won。帰結 would do と合う。' },
+      { sentence: 'It is time you [go] to bed; it is already midnight.', choices: ['went', 'will go', 'have gone', 'going'], answer: 0, why: 'It is time S 過去形 で「もう～してもいいころだ」。went。' },
+      { sentence: 'If only I [have] more time to read books!', choices: ['had', 'will have', 'am having', 'have had'], answer: 0, why: 'If only ＋仮定法過去で「～でさえあればなあ」。had。' },
+      { sentence: 'Without the map, we [would get] lost in the forest last summer.', choices: ['would have got', 'will get', 'had got', 'get'], answer: 0, why: 'Without ～ ＝ If it had not been for ～（過去）。帰結は would have ＋過去分詞。' },
+      { sentence: 'He spoke to me as if he [knows] everything about my family.', choices: ['knew', 'has known', 'will know', 'is knowing'], answer: 0, why: 'as if ＋仮定法過去 knew（本当は知らないのに）。' },
+      { sentence: 'Were it not for the bridge, the villagers [would have had to] cross the river by boat every day now.', choices: ['would have to', 'will have to', 'had had to', 'have to'], answer: 0, why: 'Were it not for ～ は今の事実の反対（仮定法過去）。now と合わせて帰結は would have to ＋原形。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
