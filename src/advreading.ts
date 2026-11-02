@@ -26012,6 +26012,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-water-scarcity',
+    title: 'A Shortage of Fresh Water',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Water covers most of the surface of the Earth, yet fresh water that people can actually use is surprisingly scarce. Most of the planet's water is salty, and much of the fresh water that exists is locked in ice or stored deep underground. What remains in rivers, lakes, and accessible groundwater must meet the needs of billions of people as well as those of agriculture, industry, and natural ecosystems. As populations grow and climates change, many experts warn that shortages of fresh water may become one of the most serious challenges of the coming decades. Unlike many other resources, water has no substitute, which makes careful management of it all the more essential.",
+      "Agriculture is by far the largest user of fresh water in most countries. Growing crops, especially in dry regions, often depends on irrigation, and some of the methods used are highly inefficient, losing large amounts of water through evaporation or leakage. In several parts of the world, farmers have pumped groundwater faster than rain can replace it, causing water tables to fall year after year. When wells must be dug deeper and deeper, the cost of farming rises, and in some places the supply may eventually run out altogether. Because the effects of such overuse appear gradually, they are easy to ignore until the damage has already been done.",
+      "Cities face their own difficulties. Rapid urban growth can overwhelm water systems that were designed for much smaller populations, and old pipes in many cities lose a significant portion of the water they carry before it reaches homes. During droughts, some large cities have come close to running out of water entirely, forcing residents to accept strict limits on their daily use. Such episodes have shown that water security cannot be taken for granted, even in wealthy societies with modern infrastructure. They have also encouraged some cities to invest in long-term planning, including new reservoirs and campaigns to reduce household consumption.",
+      "Climate change is likely to make these problems worse in many regions. Rising temperatures increase evaporation, and changing patterns of rainfall may bring longer droughts to some areas and more intense floods to others. Mountain glaciers, which act as natural reservoirs by releasing water slowly during warm seasons, are shrinking in many parts of the world, threatening the rivers that depend on them. These changes may affect not only the amount of water available but also its timing, which matters greatly for farmers who rely on predictable seasons.",
+      "( A ), there are reasons for cautious optimism. More efficient irrigation techniques, such as systems that deliver water directly to the roots of plants, can reduce the amount needed for farming. Repairing leaking pipes, recycling wastewater, and collecting rainwater can increase the supply available to cities. In some coastal areas, desalination plants that remove salt from seawater provide an additional source, although they require large amounts of energy. Equally important are policies that encourage people and businesses to value water more carefully, for example by pricing it in ways that discourage waste.",
+      "Water also raises difficult questions of fairness. Rivers often cross national borders, and the decisions made by one country, such as building a dam, can affect the supply available to its neighbors downstream. Within countries, too, poorer communities are frequently the last to receive reliable access to clean water. Managing this shared resource wisely will therefore require not only technical solutions but also cooperation and a commitment to ensuring that everyone's basic needs are met. Access to clean water is, after all, not merely an economic matter but a condition of health and dignity for every human being.",
+    ],
+    ja: [
+      '水は地球の表面の大部分をおおっているが、人々が実際に使える淡水はおどろくほど少ない。地球の水のほとんどは塩水であり、存在する淡水の多くは氷の中にとじこめられているか、地下深くにたくわえられている。川や湖や手の届く地下水に残っている水は、農業や工業や自然の生態系の必要だけでなく、何十億もの人々の必要も満たさなければならない。人口がふえ、気候が変わるにつれて、淡水の不足はこれからの何十年かで最も深刻な課題の1つになるかもしれないと、多くの専門家が警告している。ほかの多くの資源とちがって、水には代わりになるものがないので、それを注意深く管理することがなおさら欠かせないのである。',
+      'ほとんどの国で、農業はとびぬけて大量の淡水を使っている。とくに乾いた地域では、作物を育てるのはしばしばかんがいにたよっており、使われる方法の中には、蒸発やもれによって大量の水を失う、とても効率の悪いものもある。世界のいくつかの地域では、農家が雨でおぎなわれるより速く地下水をくみ上げてきたため、地下水の水位が年々下がっている。井戸をどんどん深く掘らなければならなくなると、農業の費用は上がり、場所によっては、いつか水がすっかりつきてしまうかもしれない。こうした使いすぎの影響は少しずつあらわれるので、すでに被害が出てしまうまで、見すごされやすいのである。',
+      '都市には都市のむずかしさがある。都市の急速な成長は、ずっと少ない人口のために設計された水道のしくみの限界をこえてしまうことがあり、多くの都市の古い水道管は、運ぶ水のかなりの部分を、家に届く前に失っている。干ばつの間には、大都市の中にも水がすっかりなくなる寸前までいき、住民に毎日の使用量のきびしい制限を受け入れさせたところがある。こうした出来事は、近代的な設備をもつ豊かな社会でさえ、水を確保できることを当然と考えてはいけないことを示している。こうした出来事をきっかけに、新しい貯水池や家庭での使用量をへらす運動をふくむ、長期の計画に投資するようになった都市もある。',
+      '気候変動は、多くの地域でこうした問題を悪化させそうである。気温が上がると蒸発がふえ、雨の降り方の変化によって、ある地域ではより長い干ばつが、別の地域ではより激しい洪水がもたらされるかもしれない。暖かい季節にゆっくり水を流すことで自然の貯水池の役割をはたしている山の氷河は、世界の多くの場所で小さくなっており、それにたよる川をおびやかしている。こうした変化は、使える水の量だけでなく、その時期にも影響するかもしれない。それは、予測できる季節にたよる農家にとってとても大切なことである。',
+      'こうした課題があっても、ひかえめに楽観できる理由はある。植物の根もとに直接水をとどけるしくみのような、より効率のよいかんがいの技術は、農業に必要な水の量をへらすことができる。もれる水道管を直したり、使った水を再利用したり、雨水を集めたりすれば、都市が使える水の量をふやせる。海ぞいの地域の中には、海水から塩分を取りのぞく淡水化の施設が新たな水源になっているところもあるが、それには大量のエネルギーが必要である。同じくらい大切なのは、たとえばむだを防ぐような値段のつけ方をすることで、人々や企業に水をより大切に使うようにうながす政策である。',
+      '水はまた、公平さについてのむずかしい問いも投げかける。川はしばしば国境をこえて流れており、ある国がダムを建てるといった決定は、下流の隣国が使える水の量に影響することがある。国の中でも、貧しい地域ほど、安全な水を確実に得られるようになるのが最後になることが多い。したがって、この共有の資源をかしこく管理するには、技術的な解決策だけでなく、協力と、すべての人の基本的な必要が満たされるようにするという決意が必要なのである。結局のところ、安全な水を得られることは、単なる経済の問題ではなく、すべての人間にとっての健康と尊厳の条件なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Despite these challenges', 'Because of these challenges', 'Instead of these challenges', 'Without these challenges'], answer: 0, why: '前の段落の深刻な課題に対して、「それでも楽観できる理由がある」という逆接なので Despite these challenges。' },
+    ],
+    summary: {
+      text: 'Usable fresh water is scarce, and agriculture uses most of it, sometimes pumping ( 1 ) faster than it can be replaced. Cities lose water through old pipes, and climate change may bring longer droughts and shrinking ( 2 ). Efficient irrigation, recycling, and better policies can help, but managing water also requires ( 3 ) among countries and communities.',
+      blanks: [
+        { choices: ['groundwater', 'seawater', 'rainwater', 'ice'], answer: 0, why: '第2段落 farmers have pumped groundwater faster than rain can replace it。' },
+        { choices: ['glaciers', 'cities', 'farms', 'pipes'], answer: 0, why: '第4段落 Mountain glaciers ... are shrinking in many parts of the world。' },
+        { choices: ['cooperation', 'competition', 'silence', 'luck'], answer: 0, why: '第6段落 will therefore require not only technical solutions but also cooperation ～。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、地球の水のほとんどは塩水である。', answer: true, why: '第1段落 Most of the planet\'s water is salty。' },
+      { statement: '筆者によれば、ほとんどの国で、淡水を最も多く使っているのは工業である。', answer: false, why: '第2段落 Agriculture is by far the largest user of fresh water in most countries。' },
+      { statement: '筆者によれば、豊かな社会でも水の確保を当然と考えてはいけない。', answer: true, why: '第3段落 water security cannot be taken for granted, even in wealthy societies。' },
+      { statement: '筆者によれば、淡水化の施設はエネルギーをほとんど使わない。', answer: false, why: '第5段落 although they require large amounts of energy。' },
+    ],
+    qa: [
+      { q: 'Why does the shrinking of glaciers matter, according to the fourth paragraph?', choices: ['Glaciers act as natural reservoirs that release water slowly during warm seasons.', 'Glaciers make the sea less salty.', 'Glaciers are used to build dams.', 'Glaciers cause floods in cities.'], answer: 0, why: '第4段落 Mountain glaciers, which act as natural reservoirs by releasing water slowly during warm seasons ～。' },
+      { q: 'What question of fairness does the last paragraph raise?', choices: ['A dam built by one country can affect the water supply of its neighbors downstream.', 'Rich people use less water than poor people.', 'Farmers should stop growing crops.', 'Cities should not use any rainwater.'], answer: 0, why: '第6段落 the decisions made by one country, such as building a dam, can affect the supply available to its neighbors downstream。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
