@@ -3050,6 +3050,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The dog (A) came running (B) toward me (C) with its tail (D) wagged.', choices: ['(A) came running', '(B) toward me', '(C) with its tail', '(D) wagged'], answer: 3, why: 'しっぽは自分から動いているので wagging。' },
     ],
   },
+  {
+    id: 'exam-error-subjunctive-todai',
+    title: '入試の正誤問題〈129〉（東大レベル：仮定法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '現在の事実の反対は If S＋過去形, S would＋原形、過去の反対は If S had＋過去分詞, S would have＋過去分詞。if の省略は倒置（Had I known）。I wish・as if のあとは過去形（今）／had＋過去分詞（過去）。It is high time S＋過去形。But for／If it were not for ～。',
+    ],
+    examples: [
+      { en: 'Had I known the truth, I would have helped him.', ja: 'もし本当のことを知っていたら、彼を助けていただろう。' },
+      { en: 'I wish I could play the piano like you.', ja: 'あなたのようにピアノがひけたらいいのに。' },
+    ],
+    questions: [
+      { sentence: 'If I (A) know (B) the answer, (C) I would (D) tell you.', choices: ['(A) know', '(B) the answer,', '(C) I would', '(D) tell you'], answer: 0, why: '主節が would tell（現在の事実の反対）なので knew。' },
+      { sentence: 'If you (A) had taken (B) a taxi, (C) you would arrive (D) on time yesterday.', choices: ['(A) had taken', '(B) a taxi,', '(C) you would arrive', '(D) on time yesterday'], answer: 2, why: '過去の事実の反対なので would have arrived。' },
+      { sentence: '(A) I had known (B) the truth, (C) I would have (D) helped him.', choices: ['(A) I had known', '(B) the truth,', '(C) I would have', '(D) helped him'], answer: 0, why: 'if を省略した倒置 Had I known。' },
+      { sentence: 'I wish (A) I (B) can (C) play the piano (D) like you.', choices: ['(A) I', '(B) can', '(C) play the piano', '(D) like you'], answer: 1, why: 'I wish のあとで今の願望は could。' },
+      { sentence: 'It is (A) high time (B) we (C) start (D) our homework.', choices: ['(A) high time', '(B) we', '(C) start', '(D) our homework'], answer: 2, why: 'It is high time S＋過去形。started。' },
+      { sentence: 'He (A) speaks (B) as if (C) he knows (D) everything, but he does not.', choices: ['(A) speaks', '(B) as if', '(C) he knows', '(D) everything, but he does not'], answer: 2, why: '事実ではないので as if＋過去形。knew。' },
+      { sentence: '(A) But for (B) your advice, (C) I would fail (D) the exam last year.', choices: ['(A) But for', '(B) your advice,', '(C) I would fail', '(D) the exam last year'], answer: 2, why: 'last year（過去の事実の反対）なので would have failed。' },
+      { sentence: 'If it (A) is not (B) for (C) the sun, (D) nothing could live.', choices: ['(A) is not', '(B) for', '(C) the sun,', '(D) nothing could live'], answer: 0, why: 'If it were not for ～（もし～がなければ）。were not。' },
+      { sentence: 'I wish I (A) studied (B) harder (C) when I was (D) a student.', choices: ['(A) studied', '(B) harder', '(C) when I was', '(D) a student'], answer: 0, why: '過去のことへの願望は had studied。' },
+      { sentence: '(A) If I (B) were you, (C) I would (D) apologized to her.', choices: ['(A) If I', '(B) were you,', '(C) I would', '(D) apologized to her'], answer: 3, why: 'would のあとは原形。apologize。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
