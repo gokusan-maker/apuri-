@@ -2666,6 +2666,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'There are (A) many problems (B) what (C) the new government (D) must solve.', choices: ['(A) many problems', '(B) what', '(C) the new government', '(D) must solve'], answer: 1, why: '先行詞 many problems があるので that（which）。' },
     ],
   },
+  {
+    id: 'exam-error-transitive',
+    title: '入試の正誤問題〈113〉（共通テストレベル：自動詞と他動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'discuss・marry・enter・reach・mention・approach・resemble・attend は他動詞で前置詞をつけない。explain は人を直接目的語にとらない。rise（自動詞）／raise（他動詞）。',
+    ],
+    examples: [
+      { en: 'We discussed the plan for two hours.', ja: '私たちはその計画について2時間話し合った。' },
+      { en: 'The climbers finally reached the top.', ja: '登山者たちはついに頂上に着いた。' },
+    ],
+    questions: [
+      { sentence: '(A) We discussed about the plan (B) for two hours (C) in the meeting room (D) yesterday.', choices: ['(A) We discussed about the plan', '(B) for two hours', '(C) in the meeting room', '(D) yesterday'], answer: 0, why: 'discuss は他動詞。We discussed the plan。' },
+      { sentence: 'She (A) married with (B) a doctor (C) she had met (D) at university.', choices: ['(A) married with', '(B) a doctor', '(C) she had met', '(D) at university'], answer: 0, why: 'marry は他動詞。married a doctor。' },
+      { sentence: 'Please (A) knock (B) on the door before you (C) enter into (D) the room.', choices: ['(A) knock', '(B) on the door before you', '(C) enter into', '(D) the room'], answer: 2, why: '「部屋に入る」の enter は他動詞。enter the room。' },
+      { sentence: 'The climbers (A) were tired, (B) but they (C) finally reached to (D) the top.', choices: ['(A) were tired,', '(B) but they', '(C) finally reached to', '(D) the top'], answer: 2, why: 'reach は他動詞。finally reached the top。' },
+      { sentence: '(A) During dinner, (B) he (C) did not (D) mention about his new job.', choices: ['(A) During dinner,', '(B) he', '(C) did not', '(D) mention about his new job'], answer: 3, why: 'mention は他動詞。mention his new job。' },
+      { sentence: '(A) As the train (B) slowed down, (C) it (D) approached to the station.', choices: ['(A) As the train', '(B) slowed down,', '(C) it', '(D) approached to the station'], answer: 3, why: 'approach は他動詞。approached the station。' },
+      { sentence: '(A) The teacher (B) explained us (C) the meaning (D) of the poem.', choices: ['(A) The teacher', '(B) explained us', '(C) the meaning', '(D) of the poem'], answer: 1, why: 'explain は人を直接目的語にとらない。explained the meaning of the poem to us。' },
+      { sentence: '(A) Prices (B) have raised (C) a lot (D) since last year.', choices: ['(A) Prices', '(B) have raised', '(C) a lot', '(D) since last year'], answer: 1, why: '「上がる」は自動詞 rise。have risen。' },
+      { sentence: 'My brother (A) resembles (B) to our grandfather (C) in many (D) ways.', choices: ['(A) resembles', '(B) to our grandfather', '(C) in many', '(D) ways'], answer: 1, why: 'resemble は他動詞。resembles our grandfather。' },
+      { sentence: '(A) Last night, (B) many people (C) attended at (D) the meeting.', choices: ['(A) Last night,', '(B) many people', '(C) attended at', '(D) the meeting'], answer: 2, why: 'attend（出席する）は他動詞。attended the meeting。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
