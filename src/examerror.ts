@@ -5190,6 +5190,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There are many things [what] money cannot buy.', choices: ['that', 'what they', 'whose', 'where'], answer: 0, why: '先行詞 many things があるので what は使えない。things のあとは that がふつう。' },
     ],
   },
+  {
+    id: 'exam-fix-121',
+    title: '入試の誤文訂正〈121〉（京大レベル：分詞構文 意味上の主語・having＋過去分詞・with＋名詞＋分詞）',
+    points: ['分詞構文の意味上の主語は、ふつう主節の主語と同じ。ちがうときは分詞の前に主語を置く（独立分詞構文：The weather being fine, ～）。主語が「～される」側なら過去分詞（Seen from ～）。主節より前のことは Having＋過去分詞。否定は Not を分詞の前に置く。with＋名詞＋分詞は、名詞が「～している」なら現在分詞、「～されている」なら過去分詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Having finished his homework, he went out to play.', ja: '宿題を終えてから、彼は遊びに出かけた。' }],
+    questions: [
+      { sentence: '[Seeing] from the plane, the island looked like a small green leaf.', choices: ['Seen', 'Having seen', 'To see', 'Being seeing'], answer: 0, why: '島は「見られる」側なので過去分詞 Seen（＝When it was seen）。' },
+      { sentence: '[Being fine], we went on a picnic.', choices: ['The weather being fine', 'Being the weather fine', 'It was fine being', 'Fine being'], answer: 0, why: '「天気がよかった」の主語は we ではないので、意味上の主語を前に置く独立分詞構文 The weather being fine。' },
+      { sentence: '[Finishing] the report last night, I have nothing to do today.', choices: ['Having finished', 'Finished', 'Being finished', 'To finish'], answer: 0, why: '昨夜（主節より前）のことなので Having＋過去分詞。' },
+      { sentence: '[Knowing not] what to say, she remained silent.', choices: ['Not knowing', 'Knowing no', 'Not known', 'Knew not'], answer: 0, why: '分詞構文の否定は Not を分詞の前に置く。Not knowing。' },
+      { sentence: 'He was sitting on the sofa with his eyes [closing].', choices: ['closed', 'close', 'to close', 'having closing'], answer: 0, why: '目は「閉じられている」ので with＋名詞＋過去分詞 closed。' },
+      { sentence: 'The dog ran toward me with its tail [wagged].', choices: ['wagging', 'to wag', 'wags', 'being wag'], answer: 0, why: 'しっぽは自分から「ふっている（動いている）」ので with＋名詞＋現在分詞 wagging。' },
+      { sentence: '[Writing] in simple English, this book is easy to read.', choices: ['Written', 'Having writing', 'Being writing', 'To write'], answer: 0, why: '本は「書かれている」側なので過去分詞 Written。' },
+      { sentence: '[Being no bus service], we had to walk to the station.', choices: ['There being no bus service', 'Being there no bus service', 'It being no bus', 'No being bus service'], answer: 0, why: 'There is ～ の分詞構文は There being ～。' },
+      { sentence: '[Having born] in Kyoto, he knows the city very well.', choices: ['Born', 'Bearing', 'Having bear', 'Being bearing'], answer: 0, why: '「生まれる」は be born（受け身）。分詞構文では Born（＝Having been born）。' },
+      { sentence: '[Judged] from his accent, he must be from Osaka.', choices: ['Judging', 'Having judged', 'Be judged', 'Judge from'], answer: 0, why: '慣用的な分詞構文 judging from ～（～から判断すると）。意味上の主語は一般の人なので現在分詞。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
