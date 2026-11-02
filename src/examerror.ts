@@ -2714,6 +2714,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Because of (B) the price (C) was too high, (D) we decided not to buy the car.', choices: ['(A) Because of', '(B) the price', '(C) was too high,', '(D) we decided not to buy the car'], answer: 0, why: 'うしろが S＋V なので Because the price was too high。' },
     ],
   },
+  {
+    id: 'exam-error-inversion3',
+    title: '入試の正誤問題〈115〉（旧帝大レベル：倒置・強調構文・形式主語）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '否定語・Only ～・So ～・Such が文頭に出たときの倒置、強調構文 It is ～ that …（where・when にしない）、形式主語 It is ～ to／that …。',
+    ],
+    examples: [
+      { en: 'Never have I felt so nervous.', ja: 'こんなに緊張したことは一度もない。' },
+      { en: 'It was in this room that the novel was written.', ja: 'その小説が書かれたのは、この部屋でだった。' },
+    ],
+    questions: [
+      { sentence: '(A) Never I have (B) felt so nervous (C) as on the day (D) of my first exam.', choices: ['(A) Never I have', '(B) felt so nervous', '(C) as on the day', '(D) of my first exam'], answer: 0, why: '否定の副詞 Never が文頭に出ると倒置。Never have I felt。' },
+      { sentence: '(A) Only after (B) the meeting ended (C) we noticed (D) that the door had been locked.', choices: ['(A) Only after', '(B) the meeting ended', '(C) we noticed', '(D) that the door had been locked'], answer: 2, why: 'Only after ～ が文頭に出ると主節は倒置。did we notice。' },
+      { sentence: '(A) So tired (B) the runners were (C) that several (D) could not finish the race.', choices: ['(A) So tired', '(B) the runners were', '(C) that several', '(D) could not finish the race'], answer: 1, why: 'So ＋形容詞 が文頭に出た倒置。So tired were the runners。' },
+      { sentence: 'It was (A) in this small room (B) where the famous novel (C) was written (D) more than a century ago.', choices: ['(A) in this small room', '(B) where the famous novel', '(C) was written', '(D) more than a century ago'], answer: 1, why: '強調構文 It was ～ that …。where ではなく that。' },
+      { sentence: '(A) It is not until (B) we are ill (C) when we realize (D) the value of health.', choices: ['(A) It is not until', '(B) we are ill', '(C) when we realize', '(D) the value of health'], answer: 2, why: 'It is not until ～ that … の強調構文。that we realize。' },
+      { sentence: '(A) That is (B) necessary (C) to check the data (D) before publishing the results.', choices: ['(A) That is', '(B) necessary', '(C) to check the data', '(D) before publishing the results'], answer: 0, why: '形式主語 It is necessary to ～。' },
+      { sentence: 'It is (A) surprising (B) what few people (C) noticed (D) the mistake.', choices: ['(A) surprising', '(B) what few people', '(C) noticed', '(D) the mistake'], answer: 1, why: '形式主語 It is ～ that S V。that few people noticed。' },
+      { sentence: '(A) Little (B) she realized (C) how much her words (D) had hurt him.', choices: ['(A) Little', '(B) she realized', '(C) how much her words', '(D) had hurt him'], answer: 1, why: '否定の副詞 Little が文頭に出た倒置。Little did she realize。' },
+      { sentence: '(A) Such (B) the heat was (C) that the roads (D) began to melt.', choices: ['(A) Such', '(B) the heat was', '(C) that the roads', '(D) began to melt'], answer: 1, why: 'Such が文頭に出た倒置。Such was the heat that ～。' },
+      { sentence: 'Not (A) only did (B) the plan fail, (C) but it also cost (D) to the company a lot of money.', choices: ['(A) only did', '(B) the plan fail,', '(C) but it also cost', '(D) to the company a lot of money'], answer: 3, why: 'cost は cost A B の形で to は不要。cost the company a lot of money。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
