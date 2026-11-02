@@ -1620,6 +1620,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="40" cy="46" r="4" fill="#db2777" opacity="0.6" />
       </g>
     )
+  if (species === 'bullfinch')
+    return (
+      <g>
+        {/* 黒いぼうしと、赤いほお */}
+        <path d="M34 34 Q50 22 64 34" fill="#1e293b" />
+        <circle cx="42" cy="48" r="5" fill="#e11d48" opacity="0.75" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
