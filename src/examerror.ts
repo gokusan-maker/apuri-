@@ -2618,6 +2618,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Generally (B) speaking, Japanese trains (C) is very (D) punctual.', choices: ['(A) Generally', '(B) speaking, Japanese trains', '(C) is very', '(D) punctual'], answer: 2, why: '主語は Japanese trains（複数）なので are very punctual。Generally speaking は正しい慣用表現。' },
     ],
   },
+  {
+    id: 'exam-error-timeprep',
+    title: '入試の正誤問題〈111〉（共通テストレベル：時と場所の前置詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '時の前置詞 at（時刻）／on（日付・特定の日の朝夕）／in（年・月・季節）、by（期限）／until（継続）、for（期間の長さ）／during（特定の期間）、場所の前置詞 at（地点）／on（面）／in（中）。',
+    ],
+    examples: [
+      { en: 'Please return the books by Friday.', ja: '金曜日までに本を返してください。' },
+      { en: 'She lived in Canada for three years.', ja: '彼女は3年間カナダに住んでいた。' },
+    ],
+    questions: [
+      { sentence: 'The meeting (A) will start (B) on three (C) in the afternoon (D) tomorrow.', choices: ['(A) will start', '(B) on three', '(C) in the afternoon', '(D) tomorrow'], answer: 1, why: '時刻には at。at three。' },
+      { sentence: '(A) We visited (B) our uncle (C) in the evening (D) of New Year Day.', choices: ['(A) We visited', '(B) our uncle', '(C) in the evening', '(D) of New Year Day'], answer: 2, why: '特定の日の夕方は on the evening of ～。' },
+      { sentence: 'This temple (A) was built (B) at 1650 (C) by a famous (D) carpenter.', choices: ['(A) was built', '(B) at 1650', '(C) by a famous', '(D) carpenter'], answer: 1, why: '年には in。in 1650。' },
+      { sentence: 'Please (A) return (B) these books (C) to the library (D) until Friday.', choices: ['(A) return', '(B) these books', '(C) to the library', '(D) until Friday'], answer: 3, why: '「～までに（期限）」は by Friday。' },
+      { sentence: '(A) I studied (B) in the library (C) by nine (D) last night.', choices: ['(A) I studied', '(B) in the library', '(C) by nine', '(D) last night'], answer: 2, why: '「9時までずっと」と継続を表すので until nine。' },
+      { sentence: 'She (A) lived (B) in Canada (C) during three years (D) when she was a child.', choices: ['(A) lived', '(B) in Canada', '(C) during three years', '(D) when she was a child'], answer: 2, why: '期間の長さは for three years。' },
+      { sentence: '(A) Nobody (B) spoke (C) for the ceremony, (D) so it was very quiet.', choices: ['(A) Nobody', '(B) spoke', '(C) for the ceremony,', '(D) so it was very quiet'], answer: 2, why: '「式の間」は特定の期間なので during the ceremony。' },
+      { sentence: '(A) In the bus stop, (B) many people (C) were waiting (D) for the first bus.', choices: ['(A) In the bus stop,', '(B) many people', '(C) were waiting', '(D) for the first bus'], answer: 0, why: 'バス停という「地点」には at。At the bus stop。' },
+      { sentence: '(A) There is (B) a map (C) in the wall (D) of our classroom.', choices: ['(A) There is', '(B) a map', '(C) in the wall', '(D) of our classroom'], answer: 2, why: '壁の面に接しているので on the wall。' },
+      { sentence: '(A) In winter, (B) we often go (C) skating (D) in the lake.', choices: ['(A) In winter,', '(B) we often go', '(C) skating', '(D) in the lake'], answer: 3, why: 'こおった湖の「上で」すべるので on the lake。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
