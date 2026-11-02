@@ -26822,6 +26822,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-awe',
+    title: 'The Experience of Awe',
+    level: '難関大（評論）',
+    paragraphs: [
+      "There are moments when the ordinary flow of experience is suddenly interrupted. Standing at the edge of a vast canyon, looking up at a sky full of stars, or listening to a piece of music of extraordinary beauty, a person may feel small and yet strangely enlarged, overwhelmed and at the same time deeply calm. Such experiences are often described as awe. Although they have been discussed for centuries by poets and religious thinkers, they have only recently begun to attract the attention of psychologists, who are trying to understand what awe is and what it does to us.",
+      "Researchers have suggested that awe involves two central features. The first is a sense of vastness, the perception that something is far larger, more powerful, or more complex than oneself. This vastness need not be physical; it may also be found in a brilliant idea, an act of extraordinary courage, or the sheer scale of human history. The second feature is a need for accommodation, the feeling that one's existing ways of understanding the world are not adequate to what one is experiencing, and that they must somehow be stretched or revised. Without this second feature, an experience might be impressive without being truly awe-inspiring.",
+      "This combination helps to explain why awe can be both uncomfortable and valuable. To encounter something that does not fit our usual categories is unsettling, and some experiences of vastness, such as a violent storm, can produce fear as well as wonder. Yet the very challenge to our understanding can also be a source of growth. When we are forced to recognize the limits of what we know, we may become more open to new ideas and more willing to question assumptions that we had previously taken for granted. Awe, in this sense, is a kind of intellectual humility experienced not as a conclusion but as a feeling.",
+      "Studies have also suggested that awe can change the way people relate to others. In several experiments, participants who had just experienced awe, for instance by looking up at tall trees or watching videos of natural wonders, behaved more generously and showed greater concern for the welfare of others than those who had not. One possible explanation is that awe diminishes the sense of self. ( A ) our individual concerns appear smaller against the background of something vast, we may become more aware of our connection to a larger whole, including other people. Experiences that seem private and inward may thus have quiet effects on social life.",
+      "If awe is beneficial, it is worth asking whether modern life provides enough opportunities to experience it. Many people now live in cities where the night sky is hidden by artificial light, spend much of their time looking at small screens, and move through schedules so busy that there is little room for the unhurried attention that awe seems to require. It would be too simple to blame technology alone, since images and recordings can also inspire wonder. But the habit of constant distraction may make it harder to remain still long enough for vastness to be felt, since awe rarely arrives while our attention is divided among a dozen small tasks.",
+      "Cultivating awe does not necessarily require dramatic journeys or rare events. Many people report feeling it in ordinary circumstances: watching a child learn to speak, noticing the intricate structure of a leaf, or reflecting on the long chain of human effort behind a simple object. What seems to matter is less the object itself than the quality of attention we bring to it. In this sense, awe is not only something that happens to us but also something we can prepare for, by slowing down, looking carefully, and allowing ourselves to be surprised by a world that is larger than our ideas about it.",
+    ],
+    ja: [
+      'ふだんの経験の流れが、とつぜんとぎれる瞬間がある。広大な峡谷のふちに立ったり、星でいっぱいの空を見上げたり、並はずれて美しい音楽を聞いたりしているとき、人は自分が小さいと感じながら、同時にふしぎと大きくなったように感じ、圧倒されながら、同時に深く落ち着いていることがある。こうした経験はしばしば畏敬の念とよばれる。それは何世紀ものあいだ詩人や宗教思想家によって論じられてきたが、心理学者の注目を集めはじめたのはごく最近のことであり、彼らは畏敬の念とは何か、それが私たちに何をもたらすかを理解しようとしている。',
+      '研究者たちは、畏敬の念には2つの中心的な特徴があると示唆してきた。1つ目は広大さの感覚、つまり何かが自分よりはるかに大きく、力強く、複雑であるという知覚である。この広大さは物理的なものである必要はなく、すばらしい考えや並はずれた勇気ある行為、あるいは人類の歴史のとほうもない規模のなかに見いだされることもある。2つ目の特徴は調整の必要、つまり世界を理解する自分のこれまでのやり方が、今経験していることには十分でなく、それを何とかしてのばしたり改めたりしなければならないという感覚である。この2つ目の特徴がなければ、ある経験は、印象的ではあっても、本当に畏敬の念をよびおこすものにはならないかもしれない。',
+      'この組み合わせは、なぜ畏敬の念が居心地悪くもあり、価値あるものでもありうるのかを説明する助けになる。いつもの区分にあてはまらないものに出会うことは落ち着かないものであり、はげしい嵐のような広大さの経験は、おどろきだけでなく恐怖も生みうる。しかし、まさに理解への挑戦こそが、成長の源にもなりうる。自分が知っていることの限界を認めざるをえないとき、私たちは新しい考えにより開かれ、それまで当然と思っていた前提をより問い直そうとするようになるかもしれない。この意味で、畏敬の念とは、結論としてではなく感情として経験される、一種の知的な謙虚さなのである。',
+      '研究はまた、畏敬の念が人と他者との関係のあり方を変えうることも示唆している。いくつかの実験では、たとえば高い木を見上げたり、自然のおどろくべき光景の映像を見たりして畏敬の念を経験したばかりの参加者は、そうでない人よりも気前よくふるまい、他者の幸せをより気づかった。考えられる説明の1つは、畏敬の念が自己の感覚を小さくするということである。広大な何かを背景にすると個人的な心配ごとが小さく見えるので、私たちは、他の人々をふくむより大きな全体とのつながりをより意識するようになるのかもしれない。こうして、個人的で内面的に思える経験が、社会生活に静かな影響をおよぼしうるのである。',
+      '畏敬の念が有益であるなら、現代の生活がそれを経験する機会を十分に与えているかどうかを問う価値がある。今では多くの人が、人工の明かりで夜空がかくされた都市に住み、時間の多くを小さな画面を見て過ごし、畏敬の念が必要とするように思われるゆったりした注意の余地がほとんどないほど忙しい予定の中を動いている。技術だけを責めるのは単純すぎるだろう。画像や録音もおどろきの念をかき立てうるからである。しかし、たえず気が散る習慣は、広大さが感じられるほど長くじっとしていることを、よりむずかしくしているのかもしれない。注意がたくさんの小さな作業に分かれているあいだに、畏敬の念が訪れることはめったにないからである。',
+      '畏敬の念を育てるのに、必ずしも劇的な旅やまれなできごとが必要なわけではない。多くの人が、ありふれた状況でそれを感じると語っている。子どもが話せるようになるのを見守るとき、1枚の葉の入り組んだつくりに気づくとき、かんたんな道具の背後にある人間の努力の長いつながりに思いをはせるとき、などである。大切なのは、対象そのものよりも、私たちがそれに向ける注意の質であるようだ。この意味で、畏敬の念は私たちに起こるものであるだけでなく、私たちが準備できるものでもある。ゆっくりと進み、注意深く見て、自分の考えよりも大きな世界におどろかされるのを自分に許すことによって。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As', 'Unless', 'Although', 'Before'], answer: 0, why: '「個人的な心配ごとが小さく見えるので」という理由の As。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、畏敬の念は昔から心理学者によってくわしく研究されてきた。', answer: false, why: '第1段落 they have only recently begun to attract the attention of psychologists。' },
+      { statement: '筆者によれば、畏敬の念を生む広大さは、物理的なものである必要はない。', answer: true, why: '第2段落 This vastness need not be physical。' },
+      { statement: '実験では、畏敬の念を経験した参加者は、より気前よくふるまった。', answer: true, why: '第4段落 behaved more generously。' },
+      { statement: '筆者は、畏敬の念を感じにくくなった原因はすべて技術にあると考えている。', answer: false, why: '第5段落 It would be too simple to blame technology alone。' },
+    ],
+    qa: [
+      { q: 'What is the second central feature of awe, according to the second paragraph?', choices: ['A need for accommodation, the feeling that one\'s ways of understanding must be stretched or revised.', 'A feeling of fear that never goes away.', 'A wish to travel to distant places.', 'A desire to become famous.'], answer: 0, why: '第2段落 The second feature is a need for accommodation。' },
+      { q: 'What seems to matter most in experiencing awe, according to the last paragraph?', choices: ['The quality of attention we bring to an object.', 'The size of the object.', 'The cost of the journey.', 'The number of people present.'], answer: 0, why: '第6段落 What seems to matter is less the object itself than the quality of attention we bring to it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
