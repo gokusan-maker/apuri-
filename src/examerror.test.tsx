@@ -1555,3 +1555,10 @@ it('正誤問題〈114〉：東大レベルの接続語の単元が10問ある',
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Despite the team practiced hard,')
 })
+
+it('誤文訂正〈108〉：旧帝大レベルの倒置・強調構文の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-108')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('have I seen')
+})

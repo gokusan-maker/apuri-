@@ -4644,6 +4644,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Whereas of] some experts welcome the change, others fear it will harm local businesses.', choices: ['Whereas', 'Despite', 'However', 'Because of'], answer: 0, why: 'うしろが S＋V で対比を表す接続詞 Whereas（～である一方）。' },
     ],
   },
+  {
+    id: 'exam-fix-108',
+    title: '入試の誤文訂正〈108〉（旧帝大レベル：倒置・強調構文・形式主語）',
+    points: ['否定語（Never・Rarely・Little・Not until・Only when）や So ～／Such が文頭に出ると、うしろは疑問文の語順の倒置。強調構文 It is ～ that … は、It is と that をとっても文が成り立つ。形式主語 It is ～ that／to … では、うしろの節・不定詞が本当の主語。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Never have I seen such a beautiful view.', ja: 'こんなに美しいながめは一度も見たことがない。' }],
+    questions: [
+      { sentence: 'Never [I have seen] such a crowded station as on that holiday morning.', choices: ['have I seen', 'I saw', 'I did see', 'seen I have'], answer: 0, why: '否定の副詞 Never が文頭に出ると倒置。have I seen。' },
+      { sentence: 'Only when the lights went out [we realized] how late it had become.', choices: ['did we realize', 'we did realize', 'realized we', 'we had realized'], answer: 0, why: 'Only when ～ が文頭に出ると、主節は倒置。did we realize。' },
+      { sentence: 'So difficult [the question was] that nobody in the class could answer it.', choices: ['was the question', 'the question is', 'did the question', 'it was the question'], answer: 0, why: 'So ＋形容詞 が文頭に出た倒置。So difficult was the question that ～。' },
+      { sentence: 'Not until the war ended [they could return] to their home town.', choices: ['could they return', 'they returned', 'they could returning', 'returned they'], answer: 0, why: 'Not until ～ が文頭に出ると倒置。could they return。' },
+      { sentence: 'It was in Kyoto [where] I first met my future wife.', choices: ['that', 'which', 'what', 'when'], answer: 0, why: '強調構文 It was ～ that …。強調されているのは in Kyoto（前置詞句）なので that。where は使わない。' },
+      { sentence: 'It was not until he lost his job [when] he understood the value of money.', choices: ['that', 'which', 'then', 'what'], answer: 0, why: 'It is not until ～ that … の強調構文。' },
+      { sentence: '[That is] important to keep a record of every experiment you carry out.', choices: ['It is', 'This is', 'There is', 'What is'], answer: 0, why: '形式主語 It is ～ to …。本当の主語は to keep a record ～。' },
+      { sentence: 'It is surprising [what] so many people still believe the rumor.', choices: ['that', 'which', 'whether', 'how'], answer: 0, why: '形式主語 It is ～ that S V（～ということは…だ）。what は先行詞をふくむ関係代名詞で、ここでは使えない。' },
+      { sentence: 'Little [he knew] that the letter would change his life completely.', choices: ['did he know', 'he did know', 'knew he', 'he had known'], answer: 0, why: '否定の副詞 Little が文頭に出た倒置。did he know。' },
+      { sentence: 'Such [the noise was] that we could not hear each other speak.', choices: ['was the noise', 'the noise is', 'did the noise', 'noise was'], answer: 0, why: 'Such が文頭に出た倒置 Such was S that ～（S があまりに大きいので～）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
