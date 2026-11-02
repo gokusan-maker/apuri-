@@ -5148,6 +5148,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The population of this city is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka has', 'Osaka of that'], answer: 0, why: '「人口」と「大阪」は比べられない。人口どうしを比べるので that of Osaka（the population of Osaka のくり返しをさける。単数なので that）。' },
     ],
   },
+  {
+    id: 'exam-fix-120',
+    title: '入試の誤文訂正〈120〉（国公立レベル：関係詞 what／which／that・前置詞＋関係代名詞）',
+    points: ['what は先行詞をふくむ関係代名詞（＝the thing(s) which）なので、前に名詞（先行詞）があるときは使えない。前置詞＋関係代名詞は whom／which を使い、that や who は前置詞のあとに置けない。コンマのあと（非制限用法）に that は使えない。関係代名詞のあとは、名詞が1つ欠けた文になる（欠けていなければ関係副詞 where／when や前置詞＋which）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the house in which my grandfather was born.', ja: 'これは祖父が生まれた家だ。' }],
+    questions: [
+      { sentence: 'This is the book [what] I bought yesterday.', choices: ['which', 'what it', 'where', 'whose'], answer: 0, why: '先行詞 the book があるので what は使えない。目的格の which（that も可）。' },
+      { sentence: '[That] he said at the meeting surprised everyone.', choices: ['What', 'Which', 'It', 'This'], answer: 0, why: '「彼が言ったこと」は先行詞をふくむ what。That he said では said の目的語が欠けたままになる。' },
+      { sentence: 'The town [which I grew up] has changed a lot.', choices: ['in which I grew up', 'which I grew up in it', 'what I grew up', 'that I grew up there'], answer: 0, why: 'grow up は自動詞で目的語をとらないので、前置詞が必要。in which I grew up（where I grew up も可）。' },
+      { sentence: 'The woman [with who] I talked was a famous writer.', choices: ['with whom', 'with that', 'with which', 'whom with'], answer: 0, why: '前置詞のあとの関係代名詞は whom（人）。who・that は前置詞のあとに置けない。' },
+      { sentence: 'My brother, [that] lives in Osaka, is a doctor.', choices: ['who', 'whom', 'what', 'which'], answer: 0, why: 'コンマのあとの非制限用法に that は使えない。人なので who。' },
+      { sentence: 'I visited the museum [where] I had read about in a magazine.', choices: ['which', 'in which', 'where it', 'what'], answer: 0, why: 'read about の about の目的語が欠けているので、関係副詞 where ではなく関係代名詞 which。' },
+      { sentence: 'Kyoto is a city [which] many temples can be seen.', choices: ['where', 'what', 'that', 'whose'], answer: 0, why: 'あとの文（many temples can be seen）は名詞が欠けていない完全な文なので、関係副詞 where（in which も可）。' },
+      { sentence: 'She lost the pen [which her father had given it] to her.', choices: ['which her father had given', 'what her father had given', 'that her father had given it', 'where her father had given'], answer: 0, why: '関係代名詞 which が目的語の役目をするので、it は不要。' },
+      { sentence: 'Do you know the reason [which] she was absent yesterday?', choices: ['why', 'what', 'where', 'whose'], answer: 0, why: '理由を表す先行詞 the reason のあとで完全な文が続くので、関係副詞 why（for which も可）。' },
+      { sentence: 'There are many things [what] money cannot buy.', choices: ['that', 'what they', 'whose', 'where'], answer: 0, why: '先行詞 many things があるので what は使えない。things のあとは that がふつう。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
