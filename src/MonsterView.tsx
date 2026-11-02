@@ -1724,6 +1724,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 30 L60 30" fill="none" stroke="#1c1917" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'nightheron')
+    return (
+      <g>
+        {/* 赤い目と、頭のうしろの白い飾り羽 */}
+        <circle cx="44" cy="40" r="3" fill="#dc2626" />
+        <path d="M60 32 Q72 36 80 46" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
