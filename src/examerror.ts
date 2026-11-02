@@ -5106,6 +5106,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She plays [the tennis] with her friends every weekend.', choices: ['tennis', 'a tennis', 'the tennises', 'tennises'], answer: 0, why: 'スポーツの名前には冠詞をつけない。play tennis（楽器は play the piano）。' },
     ],
   },
+  {
+    id: 'exam-fix-119',
+    title: '入試の誤文訂正〈119〉（旧帝大レベル：比較の慣用表現）',
+    points: ['no more than ～＝「たった～（only）」、not more than ～＝「多くても～（at most）」、no less than ～＝「～も（as many/much as）」、not less than ～＝「少なくとも～（at least）」。「～すればするほど…」は The＋比較級 ～, the＋比較級 …（両方に the）。比較級を強めるのは much・far・even（very は使えない）。「2つのうちで～なほう」は the＋比較級 of the two。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、うまくなる。' }],
+    questions: [
+      { sentence: '[More you read], the wider your vocabulary becomes.', choices: ['The more you read', 'The most you read', 'More than you read', 'As more you read'], answer: 0, why: '「～すればするほど」は The＋比較級 ～, the＋比較級。前半にも The が必要。' },
+      { sentence: 'The higher we climbed, [colder it became].', choices: ['the colder it became', 'the coldest it became', 'it became colder', 'more cold it became'], answer: 0, why: 'The＋比較級 ～, the＋比較級 … の形。後半も the colder it became。' },
+      { sentence: 'This problem is [very more difficult] than the last one.', choices: ['much more difficult', 'very most difficult', 'so more difficult', 'too more difficult'], answer: 0, why: '比較級を強めるのは much・far・even。very は比較級を強められない。' },
+      { sentence: 'Of the two plans, the second one is [the best].', choices: ['the better', 'better than', 'the most best', 'best of'], answer: 0, why: '「2つのうちで～なほう」は the＋比較級。the better。' },
+      { sentence: 'He had [no more than] five dollars, so he could buy at least three books.', choices: ['no less than', 'no more than one', 'not more than', 'nothing but'], answer: 0, why: '「少なくとも3冊買える」と多さを強調しているので、「5ドルも」の no less than。no more than は「たった5ドル」。' },
+      { sentence: 'The ticket costs [no less than] ten dollars, so it is cheap enough for students.', choices: ['no more than', 'not less than', 'no fewer than', 'as much as'], answer: 0, why: '「学生にも安い」と少なさを強調しているので、「たった10ドル（only）」の no more than。' },
+      { sentence: 'This bag is [twice as heavier as] that one.', choices: ['twice as heavy as', 'twice heavier as', 'two times as heavier than', 'twice as heavy than'], answer: 0, why: '倍数は twice as＋原級＋as。heavier にしない。' },
+      { sentence: 'Tokyo is larger than [any city] in Japan.', choices: ['any other city', 'all cities', 'any cities', 'other any city'], answer: 0, why: '同じ国の中で比べるときは自分をのぞくので any other＋単数名詞。' },
+      { sentence: 'She is [less taller] than her sister.', choices: ['less tall', 'less taller as', 'little taller', 'least tall'], answer: 0, why: 'less のあとは原級。less tall（～ほど背が高くない）。' },
+      { sentence: 'The population of this city is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka has', 'Osaka of that'], answer: 0, why: '「人口」と「大阪」は比べられない。人口どうしを比べるので that of Osaka（the population of Osaka のくり返しをさける。単数なので that）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
