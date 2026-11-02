@@ -1870,3 +1870,10 @@ it('誤文訂正〈130〉：東大レベル まぎらわしい動詞の単元が
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('made')
 })
+
+it('正誤問題〈137〉：東大レベル まぎらわしい動詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-verbs-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) did')
+})

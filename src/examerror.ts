@@ -3242,6 +3242,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She (A) was born (B) in Kyoto (C) in 2008 and moved to Tokyo (D) on 2015.', choices: ['(A) was born', '(B) in Kyoto', '(C) in 2008 and moved to Tokyo', '(D) on 2015'], answer: 3, why: '年には in。in 2015。' },
     ],
   },
+  {
+    id: 'exam-error-verbs-todai',
+    title: '入試の正誤問題〈137〉（東大レベル：まぎらわしい動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'make a mistake／a decision、do homework／research。tell 人・tell the truth、speak＋言語、talk to 人 about ～。テレビやスポーツは watch、止まっているものは look at。',
+    ],
+    examples: [
+      { en: 'I made a mistake, so I did the exercise again.', ja: 'まちがえたので、その練習問題をやり直した。' },
+      { en: 'He told me the truth.', ja: '彼は私に本当のことを話した。' },
+    ],
+    questions: [
+      { sentence: 'I (A) did (B) a mistake (C) on (D) the test.', choices: ['(A) did', '(B) a mistake', '(C) on', '(D) the test'], answer: 0, why: 'make a mistake。made。' },
+      { sentence: 'Have you (A) made (B) your homework (C) yet, (D) Ken?', choices: ['(A) made', '(B) your homework', '(C) yet,', '(D) Ken?'], answer: 0, why: 'do your homework。done。' },
+      { sentence: 'We (A) must (B) do (C) a decision (D) soon.', choices: ['(A) must', '(B) do', '(C) a decision', '(D) soon'], answer: 1, why: 'make a decision。make。' },
+      { sentence: 'The scientists (A) are (B) studying whales and (C) making research (D) on their songs.', choices: ['(A) are', '(B) studying whales and', '(C) making research', '(D) on their songs'], answer: 2, why: 'do research。doing research。' },
+      { sentence: 'He (A) said (B) me (C) that he (D) was busy.', choices: ['(A) said', '(B) me', '(C) that he', '(D) was busy'], answer: 1, why: '人を目的語にとるのは tell。told me。' },
+      { sentence: 'She (A) never (B) tells (C) lies, and she always (D) says the truth.', choices: ['(A) never', '(B) tells', '(C) lies, and she always', '(D) says the truth'], answer: 3, why: 'tell the truth。tells the truth。' },
+      { sentence: 'Can (A) you (B) talk (C) French (D) well?', choices: ['(A) you', '(B) talk', '(C) French', '(D) well?'], answer: 1, why: '言語を話すのは speak。' },
+      { sentence: 'We (A) saw (B) a baseball game (C) on TV (D) last night.', choices: ['(A) saw', '(B) a baseball game', '(C) on TV', '(D) last night'], answer: 0, why: 'テレビで動くものを見るのは watch。watched。' },
+      { sentence: 'Please (A) watch (B) this map (C) and (D) find the station.', choices: ['(A) watch', '(B) this map', '(C) and', '(D) find the station'], answer: 0, why: '止まっているものを見るのは look at。' },
+      { sentence: 'I (A) want to (B) talk (C) to you (D) of the plan.', choices: ['(A) want to', '(B) talk', '(C) to you', '(D) of the plan'], answer: 3, why: 'talk to 人 about ～。about the plan。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
