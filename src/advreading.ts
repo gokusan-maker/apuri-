@@ -26746,6 +26746,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-forgiveness',
+    title: 'What Forgiveness Changes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Forgiveness is widely regarded as a virtue, yet it is surprisingly difficult to say exactly what it involves. To forgive someone is clearly not the same as forgetting what they have done, since we can only forgive a wrong that we remember. Nor is it simply a matter of excusing the wrongdoer, for to excuse an action is to claim that it was not really wrong, or that the person was not really responsible. Forgiveness, by contrast, seems to presuppose both that a real wrong was done and that the person who did it is to blame. It is precisely this combination that makes forgiveness both valuable and puzzling.",
+      "What, then, does forgiveness change? One influential answer is that it concerns the feelings of the person who has been wronged. When we are treated unjustly, we naturally feel resentment, an emotion that expresses our sense that we deserve better treatment. To forgive, on this view, is to give up this resentment, not because we have decided that the wrong did not matter, but because we choose to stop allowing it to shape our relationship with the wrongdoer. The wrong is acknowledged, but its power over the future is reduced. Forgiveness, in other words, looks backward in order to make a different kind of forward movement possible.",
+      "This understanding helps to explain why forgiveness is often described as a gift. No one can be required to forgive, and a person who has been seriously harmed is not failing in any duty if he or she is unable to do so. Resentment, after all, is not irrational; it reflects a proper sense of one's own worth. Indeed, some philosophers have argued that forgiving too quickly can be a mistake, since it may suggest that the wrong was unimportant or that the victim does not take his or her own dignity seriously. Forgiveness that is given freely, after the wrong has been fully recognized, may therefore be more meaningful than forgiveness that is offered at once.",
+      "Under what conditions, then, is forgiveness appropriate? Many people believe that it becomes easier, and perhaps more fitting, when the wrongdoer acknowledges the harm, expresses genuine regret, and tries to make amends. In such cases, forgiveness responds to a change in the other person and helps to restore a damaged relationship. Yet forgiveness can also be offered to those who show no remorse, or even to those who have died. ( A ) it cannot repair the relationship in such cases, it may still free the person who forgives from a burden that has weighed on them for years.",
+      "The effects of forgiveness on the forgiver have attracted the attention of psychologists. Studies suggest that people who are able to let go of resentment tend to experience less stress and fewer symptoms of anxiety and depression than those who continue to dwell on past injuries. Such findings should be interpreted with care, since they do not show that forgiveness is always possible or always wise. But they do suggest that holding on to resentment can carry costs for the person who has been wronged, in addition to the harm already suffered. To forgive, in such cases, may be as much an act of care for oneself as an act of generosity toward another.",
+      "Forgiveness also has a social dimension. Communities and nations that have experienced violence often face difficult questions about how to live together afterwards. Here forgiveness cannot be imposed from above, and it must not become a way of ignoring injustice or protecting those responsible from accountability. Yet without some willingness to move beyond resentment, it may be impossible to build a shared future. In this sense, forgiveness is not the opposite of justice but, at its best, a companion to it: an act that acknowledges the past fully while refusing to let it determine everything that follows.",
+    ],
+    ja: [
+      'ゆるしは美徳として広く認められているが、それが何をふくむのかを正確に言うのはおどろくほどむずかしい。だれかをゆるすことは、その人がしたことを忘れることと明らかに同じではない。私たちは覚えている悪しかゆるせないからである。また、それは単に悪いことをした人の言いわけを認めることでもない。行為の言いわけを認めるとは、それが本当は悪くなかった、あるいはその人には本当は責任がなかったと主張することだからである。それに対してゆるしは、本当の悪がなされたこと、そしてそれをした人に責任があることの両方を前提としているように思われる。まさにこの組み合わせこそが、ゆるしを価値あるものにすると同時に、不思議なものにしているのである。',
+      'では、ゆるしは何を変えるのだろうか。影響力のある1つの答えは、それが不当なあつかいを受けた人の気持ちにかかわるというものである。不当にあつかわれると、私たちは自然に憤りを感じる。それは、自分はもっとよいあつかいを受けるに値するという感覚を表す感情である。この見方によれば、ゆるすとはこの憤りを手放すことである。それは、その悪がどうでもよかったと決めたからではなく、それが悪いことをした人との関係を形づくり続けるのをやめると選ぶからである。悪は認められるが、未来に対するその力は弱められるのである。言いかえれば、ゆるしは、ちがう種類の前進を可能にするために、うしろをふり返るのである。',
+      'この理解は、なぜゆるしがしばしば贈り物として語られるのかを説明する助けになる。だれもゆるすことを求められはしないし、深刻な害を受けた人がゆるせなくても、何かの義務を果たしていないわけではない。結局のところ、憤りは不合理なものではなく、自分自身の価値についての正しい感覚を反映しているのである。実際、あまりに早くゆるすことはまちがいでありうると論じてきた哲学者もいる。それは、その悪が重要ではなかったとか、被害者が自分自身の尊厳を真剣に受け止めていないとかいうことをほのめかしかねないからである。したがって、悪が十分に認められたあとで自由に与えられるゆるしは、すぐに与えられるゆるしよりも意味深いものになりうる。',
+      'では、ゆるしはどのような条件のもとでふさわしいのだろうか。多くの人は、悪いことをした人が害を認め、心からの後悔を表し、つぐなおうとするとき、ゆるしはよりかんたんに、そしておそらくよりふさわしくなると考えている。そうした場合、ゆるしは相手の変化に応え、そこなわれた関係を修復する助けになる。しかしゆるしは、まったく反省を示さない人や、すでに亡くなった人にさえ与えられることもある。そうした場合にゆるしが関係を修復することはできないとしても、それはゆるす人を、何年も重くのしかかってきた重荷から解放するかもしれない。',
+      'ゆるしがゆるす人におよぼす影響は、心理学者たちの注目を集めてきた。研究によれば、憤りを手放すことのできる人は、過去の傷にこだわり続ける人よりも、ストレスが少なく、不安やうつの症状も少ない傾向がある。こうした発見は注意深く解釈されるべきである。それは、ゆるしがつねに可能だとか、つねに賢明だとかいうことを示しているわけではないからである。しかしそれは、憤りを持ち続けることが、すでに受けた害に加えて、不当なあつかいを受けた人に代償をもたらしうることを示している。そうした場合、ゆるすことは、他者への寛大さの行為であると同じくらい、自分自身をいたわる行為でもあるのかもしれない。',
+      'ゆるしには社会的な面もある。暴力を経験した共同体や国は、その後どのようにともに暮らすかについて、むずかしい問いにしばしば直面する。ここでゆるしを上から押しつけることはできず、それが不正を無視したり、責任ある人々を責任追及から守ったりする手段になってはならない。しかし、憤りをこえて進もうとするいくらかの意思がなければ、共有された未来を築くことはできないかもしれない。この意味で、ゆるしは正義の反対ではなく、最もよい場合には正義の友である。それは、過去を完全に認めながらも、過去にその後のすべてを決めさせることをこばむ行為なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「関係を修復することはできないとしても、重荷から解放するかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ゆるすことは、相手がしたことを忘れることと同じである。', answer: false, why: '第1段落 To forgive someone is clearly not the same as forgetting what they have done。' },
+      { statement: '筆者によれば、憤りは自分自身の価値についての正しい感覚を反映している。', answer: true, why: '第3段落 it reflects a proper sense of one\'s own worth。' },
+      { statement: '筆者によれば、ゆるしはすでに亡くなった人に与えられることもある。', answer: true, why: '第4段落 or even to those who have died。' },
+      { statement: '筆者は、ゆるしは上から押しつけるべきだと考えている。', answer: false, why: '第6段落 forgiveness cannot be imposed from above。' },
+    ],
+    qa: [
+      { q: 'Why might forgiving too quickly be a mistake, according to some philosophers?', choices: ['It may suggest that the wrong was unimportant or that the victim does not take his or her dignity seriously.', 'It always makes the wrongdoer angry.', 'It is forbidden by law in many countries.', 'It causes the victim to forget the wrong.'], answer: 0, why: '第3段落 it may suggest that the wrong was unimportant or that the victim does not take his or her own dignity seriously。' },
+      { q: 'How does the writer describe the relationship between forgiveness and justice?', choices: ['Forgiveness, at its best, is a companion to justice.', 'Forgiveness is the opposite of justice.', 'Forgiveness makes justice unnecessary.', 'Justice always comes after forgiveness.'], answer: 0, why: '第6段落 forgiveness is not the opposite of justice but, at its best, a companion to it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
