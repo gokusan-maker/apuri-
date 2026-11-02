@@ -3074,6 +3074,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) If I (B) were you, (C) I would (D) apologized to her.', choices: ['(A) If I', '(B) were you,', '(C) I would', '(D) apologized to her'], answer: 3, why: 'would のあとは原形。apologize。' },
     ],
   },
+  {
+    id: 'exam-error-agreement-kyutei',
+    title: '入試の正誤問題〈130〉（旧帝大レベル：主語と動詞の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the number of ～ は単数、a number of ～ は複数。each・every は単数。either A or B・not only A but also B は B に、A as well as B は A に合わせる。長い修飾語があっても本当の主語に合わせる。mathematics・news は単数あつかい。',
+    ],
+    examples: [
+      { en: 'The number of cars in this city is increasing.', ja: 'この町の車の数はふえている。' },
+      { en: 'A number of people were waiting outside the shop.', ja: 'たくさんの人が店の外で待っていた。' },
+    ],
+    questions: [
+      { sentence: '(A) The number of cars (B) in this city (C) are (D) increasing.', choices: ['(A) The number of cars', '(B) in this city', '(C) are', '(D) increasing'], answer: 2, why: 'the number of ～ は単数あつかい。is increasing。' },
+      { sentence: '(A) A number of people (B) was (C) waiting (D) outside the shop.', choices: ['(A) A number of people', '(B) was', '(C) waiting', '(D) outside the shop'], answer: 1, why: 'a number of ～ は複数あつかい。were。' },
+      { sentence: '(A) Each of the students (B) have (C) a locker (D) in the hall.', choices: ['(A) Each of the students', '(B) have', '(C) a locker', '(D) in the hall'], answer: 1, why: 'each of ～ は単数あつかい。has。' },
+      { sentence: '(A) Either you or your sister (B) have to (C) clean (D) the kitchen.', choices: ['(A) Either you or your sister', '(B) have to', '(C) clean', '(D) the kitchen'], answer: 1, why: 'either A or B は B（your sister）に合わせる。has to。' },
+      { sentence: 'Not only the coach (A) but also (B) the players (C) was (D) happy with the result.', choices: ['(A) but also', '(B) the players', '(C) was', '(D) happy with the result'], answer: 2, why: 'not only A but also B は B（the players）に合わせる。were。' },
+      { sentence: '(A) The teacher, as well as the students, (B) are (C) excited (D) about the trip.', choices: ['(A) The teacher, as well as the students,', '(B) are', '(C) excited', '(D) about the trip'], answer: 1, why: 'A as well as B は A（The teacher）に合わせる。is。' },
+      { sentence: 'The books (A) that I (B) bought yesterday (C) is (D) very interesting.', choices: ['(A) that I', '(B) bought yesterday', '(C) is', '(D) very interesting'], answer: 2, why: '本当の主語は The books（複数）。are。' },
+      { sentence: 'The man (A) who (B) live next door (C) works (D) at a bank.', choices: ['(A) who', '(B) live next door', '(C) works', '(D) at a bank'], answer: 1, why: '関係詞節の主語 who の先行詞は The man（単数）。lives。' },
+      { sentence: 'Mathematics (A) are (B) my (C) favorite (D) subject.', choices: ['(A) are', '(B) my', '(C) favorite', '(D) subject'], answer: 0, why: 'mathematics（数学）は -s で終わるが単数あつかい。is。' },
+      { sentence: 'The news (A) about the accident (B) was (C) shocking, and it (D) were reported everywhere.', choices: ['(A) about the accident', '(B) was', '(C) shocking, and it', '(D) were reported everywhere'], answer: 3, why: 'it（the news）は単数。was reported。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
