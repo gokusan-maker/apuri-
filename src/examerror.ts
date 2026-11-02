@@ -2642,6 +2642,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) In winter, (B) we often go (C) skating (D) in the lake.', choices: ['(A) In winter,', '(B) we often go', '(C) skating', '(D) in the lake'], answer: 3, why: 'こおった湖の「上で」すべるので on the lake。' },
     ],
   },
+  {
+    id: 'exam-error-rel5',
+    title: '入試の正誤問題〈112〉（国公立レベル：関係詞の発展）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'what（先行詞をふくむ）・whatever、前置詞＋関係代名詞（to whom・by which）、関係副詞 where／when、所有格 whose、非制限用法に that は使えないこと。',
+    ],
+    examples: [
+      { en: 'What impressed the judges most was the originality of her design.', ja: '審査員たちをいちばん感心させたのは、彼女のデザインの独創性だった。' },
+      { en: 'This is the tool by which farmers measure the moisture in the soil.', ja: 'これは農家が土の水分をはかる道具だ。' },
+    ],
+    questions: [
+      { sentence: '(A) That (B) impressed the judges most (C) was the originality (D) of her design.', choices: ['(A) That', '(B) impressed the judges most', '(C) was the originality', '(D) of her design'], answer: 0, why: '先行詞がなく主語になる「～したこと」なので What impressed the judges most。' },
+      { sentence: 'This is (A) the town (B) which my grandfather (C) was born (D) in 1940.', choices: ['(A) the town', '(B) which my grandfather', '(C) was born', '(D) in 1940'], answer: 1, why: 'my grandfather was born は完全な文なので where（in which）。' },
+      { sentence: 'The student (A) to who (B) I gave the prize (C) thanked me (D) warmly.', choices: ['(A) to who', '(B) I gave the prize', '(C) thanked me', '(D) warmly'], answer: 0, why: '前置詞のあとは目的格 whom。to whom。' },
+      { sentence: 'The museum (A) hired (B) a new guide, (C) that speaks (D) four languages.', choices: ['(A) hired', '(B) a new guide,', '(C) that speaks', '(D) four languages'], answer: 2, why: 'コンマのあとの非制限用法に that は使えない。who speaks。' },
+      { sentence: 'I will (A) never forget (B) the day (C) which (D) my son was born.', choices: ['(A) never forget', '(B) the day', '(C) which', '(D) my son was born'], answer: 2, why: 'my son was born は完全な文なので時の関係副詞 when。' },
+      { sentence: 'The building (A) which walls (B) are covered with ivy (C) is (D) over a hundred years old.', choices: ['(A) which walls', '(B) are covered with ivy', '(C) is', '(D) over a hundred years old'], answer: 0, why: '「その建物の壁が」は所有格 whose walls。' },
+      { sentence: 'She (A) showed us (B) the thing what (C) she had made (D) in her art class.', choices: ['(A) showed us', '(B) the thing what', '(C) she had made', '(D) in her art class'], answer: 1, why: 'what は先行詞をふくむので the thing と重ねない。what（または the thing that）。' },
+      { sentence: 'This is the tool (A) by that (B) farmers in the region (C) measure (D) the moisture in the soil.', choices: ['(A) by that', '(B) farmers in the region', '(C) measure', '(D) the moisture in the soil'], answer: 0, why: '前置詞のあとに that は置けない。by which。' },
+      { sentence: '(A) Whatever (B) you decide, (C) I will always support (D) to you.', choices: ['(A) Whatever', '(B) you decide,', '(C) I will always support', '(D) to you'], answer: 3, why: 'support は他動詞なので to は不要。support you。Whatever you decide（何を決めても）は正しい。' },
+      { sentence: 'There are (A) many problems (B) what (C) the new government (D) must solve.', choices: ['(A) many problems', '(B) what', '(C) the new government', '(D) must solve'], answer: 1, why: '先行詞 many problems があるので that（which）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
