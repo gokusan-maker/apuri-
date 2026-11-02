@@ -25670,6 +25670,41 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rituals',
+    title: 'Why Rituals Remain',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern societies like to think of themselves as rational. We pride ourselves on making decisions according to evidence and efficiency, and we tend to regard rituals, the repeated and often symbolic actions found in religious and traditional communities, as relics of a less enlightened past. Yet a moment's observation of everyday life reveals that rituals have hardly disappeared. People still celebrate birthdays with candles and songs, shake hands to seal agreements, gather for graduation ceremonies, and follow carefully prescribed procedures at weddings and funerals. The persistence of such practices suggests that rituals meet needs that rational calculation alone cannot satisfy.",
+      "One of these needs is the management of uncertainty. Anthropologists have long observed that rituals tend to be most elaborate in situations whose outcome is important but beyond human control, such as sailing in dangerous waters or waiting for a harvest. Psychological studies point in a similar direction: people who perform a fixed sequence of actions before a stressful task, such as an athlete who always prepares for a match in exactly the same way, often report feeling calmer and more confident. Whether or not the ritual changes the result, it gives people a sense of order at a moment when they might otherwise feel helpless.",
+      "Rituals also mark transitions in life. Birth, coming of age, marriage, and death all involve changes in a person's status and relationships, and such changes can be difficult to absorb. A ceremony gives the change a clear beginning and end, allows others to recognize it publicly, and provides a script for behavior at a time when people may not know what to do or say. A funeral, for instance, offers mourners a structure within which grief can be expressed and shared, ( A ) might otherwise leave them isolated and uncertain.",
+      "Perhaps the most important function of ritual, however, is social. When people perform the same actions together, at the same time and in the same way, they create and reinforce a sense of belonging. Singing a national anthem, eating a special meal with family on a holiday, or observing a moment of silence for the victims of a disaster all express the idea that the participants share something that goes beyond their individual concerns. Research has suggested that synchronized activity, such as singing or moving together, can increase feelings of trust and cooperation among those who take part. Sports fans who chant in unison and colleagues who share a regular end-of-year celebration may experience a smaller version of the same effect.",
+      "Critics sometimes argue that rituals are empty forms, repeated without understanding or genuine feeling. There is some truth in this; a ceremony performed mechanically may mean little to those who attend it. But the same could be said of many valuable activities, and the fact that a form can become empty does not show that it must. Indeed, part of the power of ritual lies in the fact that it does not depend entirely on the feelings of the moment. A person who attends a ceremony out of duty may still find, to his or her own surprise, that it gives shape to emotions that had previously been confused.",
+      "In a world that values novelty and efficiency, rituals offer something different: continuity, repetition, and a sense of connection with others and with the past. New rituals, moreover, continue to emerge, as communities invent ways of marking events that their ancestors never experienced. ( B ) we may no longer believe that a ritual can change the weather or guarantee a good harvest, we may still recognize that the human need for meaning, order, and community has not disappeared simply because our explanations of the world have changed.",
+    ],
+    ja: [
+      '現代の社会は、自らを合理的だと考えるのを好む。私たちは証拠と効率にもとづいて決定することをほこりに思い、宗教や伝統的な共同体に見られる、くり返される、しばしば象徴的な行為である儀式を、あまり啓蒙されていなかった過去の名残とみなしがちである。しかし、ふだんの生活を少し観察すれば、儀式がほとんど消えていないことがわかる。人々は今もろうそくと歌で誕生日を祝い、合意を確かなものにするためにあく手をし、卒業式に集まり、結婚式や葬儀では注意深く決められた手順にしたがう。こうした習慣が続いていることは、儀式が、合理的な計算だけでは満たせない必要を満たしていることを示している。',
+      'そうした必要の1つは、不確かさをあつかうことである。人類学者たちは長い間、儀式は、結果が大切なのに人の力ではどうにもならない状況、たとえば危険な海を航海することや収穫を待つことにおいて、最も手のこんだものになりやすいことを観察してきた。心理学の研究も同じ方向を示している。試合の前にいつもまったく同じしかたで準備をする選手のように、ストレスのかかる課題の前に決まった一連の動作をする人は、より落ち着き、自信がもてると語ることが多い。儀式が結果を変えるかどうかにかかわらず、それは、そうでなければ無力に感じるかもしれない瞬間に、秩序の感覚をあたえてくれるのである。',
+      '儀式はまた、人生の節目をしるす。誕生、成人、結婚、死は、どれも人の立場や関係の変化をともない、そうした変化を受け入れるのはむずかしいことがある。儀式は変化にはっきりした始まりと終わりをあたえ、ほかの人々がそれを公に認められるようにし、何をすべきか、何を言うべきかわからないかもしれない時に、ふるまいの台本をあたえてくれる。たとえば葬儀は、悲しみを表し分かち合うことのできる枠組みを、なげき悲しむ人々にあたえる。そうした悲しみは、そうでなければ彼らを孤立させ、とまどわせるかもしれないのである。',
+      'しかし、儀式の最も大切な働きは、おそらく社会的なものである。人々が同じ行為を、同じ時に同じしかたでいっしょに行うと、帰属の感覚が生まれ、強められる。国歌を歌うこと、祝日に家族と特別な食事をとること、災害の犠牲者のために黙とうをささげることは、どれも、参加者が個人の関心をこえた何かを共有しているという考えを表している。いっしょに歌ったり動いたりするような、そろった活動は、参加する人々の間の信頼と協力の気持ちを高めうることが、研究から示されている。声をそろえて応援するスポーツのファンや、年末に決まって祝いの会をする同僚たちも、同じ効果を小さな形で経験しているのかもしれない。',
+      '儀式は理解も本当の感情もないままくり返される空っぽの形式だと批判する人もいる。それにはいくらか真実がある。機械的に行われる儀式は、出席する人にとってほとんど意味がないかもしれない。しかし同じことは多くの価値ある活動についても言えるし、形式が空っぽになりうるという事実は、そうならなければならないことを示すわけではない。実際、儀式の力の一部は、それがその場の気持ちに完全にはたよらないことにある。義務感から儀式に出席した人が、それがそれまで混乱していた感情に形をあたえてくれることに、自分でもおどろきながら気づくこともあるのである。',
+      '新しさと効率を重んじる世界で、儀式はちがうものをあたえてくれる。連続性、くり返し、そしてほかの人々や過去とのつながりの感覚である。さらに、共同体が祖先の経験しなかった出来事をしるす方法を生み出すにつれて、新しい儀式も生まれ続けている。儀式が天気を変えたり、よい収穫を約束したりできるとはもう信じていないとしても、意味と秩序と共同体を求める人間の必要は、世界についての説明が変わったというだけで消えてしまったわけではないと、私たちは認めることができるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'that', 'what', 'where'], answer: 0, why: 'コンマのあとで先行詞 grief を説明し、might leave の主語になる非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「もう信じていないとしても、～と認めることができる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、現代の生活でも儀式はほとんど消えていない。', answer: true, why: '第1段落 rituals have hardly disappeared。' },
+      { statement: '人類学者によれば、儀式は結果が人の力でどうにでもなる状況で最も手がこんでいる。', answer: false, why: '第2段落 situations whose outcome is important but beyond human control。' },
+      { statement: '筆者によれば、そろった活動は参加者の信頼と協力の気持ちを高めうる。', answer: true, why: '第4段落 synchronized activity ... can increase feelings of trust and cooperation。' },
+      { statement: '筆者は、形式が空っぽになりうるなら、儀式は必ず空っぽになると考えている。', answer: false, why: '第5段落 the fact that a form can become empty does not show that it must。' },
+    ],
+    qa: [
+      { q: 'According to the third paragraph, what does a ceremony provide at times of transition?', choices: ['A clear structure and a script for behavior.', 'A guarantee that the change will not happen.', 'A way to avoid meeting other people.', 'An explanation of the scientific causes of change.'], answer: 0, why: '第3段落 A ceremony gives the change a clear beginning and end ... and provides a script for behavior。' },
+      { q: 'What does the writer say part of the power of ritual lies in?', choices: ['It does not depend entirely on the feelings of the moment.', 'It always changes the result of events.', 'It is performed only by religious people.', 'It must be new every time.'], answer: 0, why: '第5段落 part of the power of ritual lies in the fact that it does not depend entirely on the feelings of the moment。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
