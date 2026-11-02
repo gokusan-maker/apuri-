@@ -2858,6 +2858,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) After finishing (B) the report, (C) she tried to avoid (D) to make any more mistakes.', choices: ['(A) After finishing', '(B) the report,', '(C) she tried to avoid', '(D) to make any more mistakes'], answer: 3, why: 'avoid は動名詞。avoid making。' },
     ],
   },
+  {
+    id: 'exam-error-subj5',
+    title: '入試の正誤問題〈121〉（旧帝大レベル：仮定法の発展）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'If it were not for／had not been for、But for・Without、otherwise、Suppose ＋仮定法過去、It is time S 過去形、If only、as if、倒置 Had I known ～ 。帰結の形を時に合わせる。',
+    ],
+    examples: [
+      { en: 'If it were not for my family, I could not study abroad.', ja: '家族がいなければ、私は留学できないだろう。' },
+      { en: 'Had I known the truth, I would have told you.', ja: '本当のことを知っていたら、あなたに話していただろう。' },
+    ],
+    questions: [
+      { sentence: 'If it (A) is not for (B) the support of my family, (C) I would not be (D) able to study abroad.', choices: ['(A) is not for', '(B) the support of my family,', '(C) I would not be', '(D) able to study abroad'], answer: 0, why: '今の事実の反対は If it were not for ～。' },
+      { sentence: 'If it (A) had not been for (B) the rain, (C) we would go (D) hiking yesterday.', choices: ['(A) had not been for', '(B) the rain,', '(C) we would go', '(D) hiking yesterday'], answer: 2, why: '過去の事実の反対なので would have gone。' },
+      { sentence: 'But for (A) his quick action, (B) the fire (C) will spread (D) to the next house.', choices: ['(A) his quick action,', '(B) the fire', '(C) will spread', '(D) to the next house'], answer: 2, why: 'But for ～（～がなかったら）は仮定法。would have spread（過去）。' },
+      { sentence: 'I (A) left home early; (B) however, (C) I would have (D) missed the bus.', choices: ['(A) left home early;', '(B) however,', '(C) I would have', '(D) missed the bus'], answer: 1, why: '「そうでなければ」は otherwise。' },
+      { sentence: '(A) Suppose you (B) will lose (C) your passport, what (D) would you do?', choices: ['(A) Suppose you', '(B) will lose', '(C) your passport, what', '(D) would you do?'], answer: 1, why: 'あまりありえない仮定は Suppose ＋仮定法過去。Suppose you lost。' },
+      { sentence: 'It is (A) high time (B) the government (C) takes action (D) on climate change.', choices: ['(A) high time', '(B) the government', '(C) takes action', '(D) on climate change'], answer: 2, why: 'It is (high) time S 過去形。took action。' },
+      { sentence: '(A) If only (B) I know (C) her phone number, (D) I could call her now.', choices: ['(A) If only', '(B) I know', '(C) her phone number,', '(D) I could call her now'], answer: 1, why: 'If only ＋仮定法過去。If only I knew。' },
+      { sentence: 'Without (A) your help, (B) I (C) could not finish (D) the project last month.', choices: ['(A) your help,', '(B) I', '(C) could not finish', '(D) the project last month'], answer: 2, why: '過去（last month）の反対なので could not have finished。' },
+      { sentence: 'She (A) talks (B) as if she (C) is (D) the boss of the company.', choices: ['(A) talks', '(B) as if she', '(C) is', '(D) the boss of the company'], answer: 2, why: 'as if ＋仮定法過去。as if she were the boss。' },
+      { sentence: '(A) Had I known (B) the truth at that time, (C) I would (D) tell you about it.', choices: ['(A) Had I known', '(B) the truth at that time,', '(C) I would', '(D) tell you about it'], answer: 3, why: 'Had I known ～ は過去の事実の反対（仮定法過去完了）。I would have told you。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

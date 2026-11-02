@@ -1646,3 +1646,10 @@ it('誤文訂正〈114〉：旧帝大レベルの仮定法の発展の単元が1
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('were')
 })
+
+it('正誤問題〈121〉：旧帝大レベルの仮定法の発展の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-subj5')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) is not for')
+})
