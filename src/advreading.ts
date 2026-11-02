@@ -26628,6 +26628,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-surveillance',
+    title: 'Watched in Public',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities around the world, security cameras have become an ordinary feature of public space. They watch over train stations, shopping streets, parking lots, and the entrances of apartment buildings, and in some places a person walking through the city center may be recorded dozens of times in a single day. Supporters argue that these cameras make cities safer by discouraging crime and helping the police to identify offenders. Critics, however, worry that the spread of surveillance is changing the nature of public life in ways that are rarely discussed, and that decisions about cameras are often made without the people being watched having any say.",
+      "The evidence on whether cameras actually reduce crime is mixed. Studies have found that they can be effective in certain settings, such as parking lots, where thefts from cars have sometimes fallen after cameras were installed. In other places, such as busy city centers, the effect appears to be smaller, and some crimes may simply move to areas that are not being watched. Cameras do seem to be useful after a crime has been committed, since recordings can help investigators reconstruct events and find suspects. Yet this is a different benefit from preventing crime in the first place. A city that solves more crimes is not necessarily a city in which fewer crimes occur.",
+      "Concerns about surveillance have grown with the development of new technologies. Early camera systems produced recordings that had to be watched by human operators, which limited how much information could actually be used. Modern systems, ( A ), can be connected to software that recognizes faces, reads car license plates, and tracks the movements of individuals across a city. Such capabilities make it possible, at least in principle, to build a detailed record of where a particular person has been and with whom he or she has met, without that person ever knowing. What was once a collection of separate images can become, in effect, a continuous record of a life.",
+      "Defenders of these technologies often say that people who have done nothing wrong have nothing to fear. But this argument overlooks the value of privacy in public. Even when we walk down a busy street, we usually expect to remain relatively anonymous, noticed by others only briefly and then forgotten. This expectation allows us to attend a political meeting, visit a doctor, or meet a friend without having to explain ourselves to anyone. If every movement is recorded and stored, that freedom may gradually disappear, and people may become more cautious about what they do and where they go. A society in which people feel constantly observed may be orderly, but it is unlikely to be one in which they feel truly free.",
+      "There are also questions about who controls the information that cameras collect. Recordings may be held by police, local governments, or private companies, and the rules governing their use vary widely from one country to another. Without clear limits on how long data can be kept, who can see it, and for what purposes, there is a risk that information gathered for one reason will later be used for another. Mistakes are also possible: facial recognition systems have sometimes identified the wrong people, and errors of this kind can have serious consequences for those affected.",
+      "None of this means that all cameras should be removed. In some situations they serve legitimate purposes, and many residents feel reassured by their presence. What is needed is a public discussion about the balance between security and privacy, and about the rules that should govern surveillance. Such decisions should not be left to technical experts or to companies that sell the equipment. In a democratic society, the question of how much we are willing to be watched is one that citizens themselves must have the opportunity to answer.",
+    ],
+    ja: [
+      '世界の多くの都市で、防犯カメラは公共の空間のありふれた一部になった。それは駅や商店街や駐車場やマンションの入り口を見張り、場所によっては、都心を歩く人が1日に何十回も記録されることもある。支持する人々は、こうしたカメラは犯罪を思いとどまらせ、警察が犯人を特定する助けになることで、都市をより安全にすると主張する。しかし批判する人々は、監視が広がることで、めったに議論されない形で公共の生活のあり方が変わりつつあると心配している。しかも、カメラについての決定は、見張られる人々が何も言えないまま下されることが多いのである。',
+      'カメラが実際に犯罪をへらすかどうかについての証拠はまちまちである。研究によれば、駐車場のように、カメラが設置されたあとで車上荒らしがへったこともある特定の場所では、効果がありうる。にぎやかな都心のようなほかの場所では、効果はもっと小さいようであり、犯罪のなかには、見張られていない地域に移るだけのものもあるかもしれない。カメラは、犯罪が起きたあとには役に立つようである。録画によって、捜査する人ができごとを組み立て直し、容疑者を見つける助けになるからである。しかしこれは、そもそも犯罪を防ぐこととは別の利点である。より多くの犯罪を解決する都市が、必ずしもより少ない犯罪しか起こらない都市であるとは限らない。',
+      '監視についての懸念は、新しい技術の発達とともに大きくなってきた。初期のカメラのしくみは、人間の担当者が見なければならない録画を作るだけで、そのため実際に使える情報の量には限りがあった。それに対して現代のしくみは、顔を認識し、車のナンバープレートを読み取り、都市じゅうで個人の動きを追う、ソフトウェアにつなぐことができる。こうした能力によって、少なくとも原理的には、ある人がどこにいて、だれと会ったかのくわしい記録を、本人がまったく知らないうちに作ることが可能になる。かつては別々の画像の集まりだったものが、事実上、ある人の生活の切れ目のない記録になりうるのである。',
+      'こうした技術を擁護する人々は、何も悪いことをしていない人は何もおそれることはない、としばしば言う。しかしこの議論は、公共の場でのプライバシーの価値を見落としている。にぎやかな通りを歩くときでさえ、私たちはふつう、比較的だれだかわからないまま、他人にはほんの少し気づかれ、そして忘れられると思っている。この期待があるからこそ、私たちはだれにも説明することなく、政治の集会に出たり、医者に行ったり、友人に会ったりできる。あらゆる動きが記録され保存されるなら、その自由はしだいに消えていき、人々は自分が何をし、どこへ行くかについて、より用心深くなるかもしれない。人々がいつも見られていると感じる社会は秩序正しいかもしれないが、本当に自由だと感じられる社会になることはまずないだろう。',
+      'カメラが集める情報をだれが管理するのかという問題もある。録画は警察や地方自治体や民間企業がもっているかもしれず、その使い方を定める決まりは国によって大きく異なる。データをどれだけ長く保存できるか、だれが見られるか、何の目的でかについてのはっきりした制限がなければ、ある理由で集められた情報が、あとで別の目的に使われるおそれがある。まちがいも起こりうる。顔認識のしくみがちがう人を特定してしまったこともあり、こうした誤りは、影響を受けた人々に深刻な結果をもたらしうる。',
+      'こうしたことは、すべてのカメラを取りのぞくべきだということではない。正当な目的に役立つ場面もあり、多くの住民はカメラがあることで安心している。必要なのは、安全とプライバシーのつり合いについて、そして監視を定めるべき決まりについての公の議論である。そうした決定は、技術の専門家や、その機器を売る会社にまかせるべきではない。民主的な社会では、私たちがどれだけ見張られることを受け入れるかという問いは、市民自身が答える機会をもたなければならない問いなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by contrast', 'for example', 'as a result', 'in short'], answer: 0, why: '初期のしくみと現代のしくみを対比しているので by contrast。' },
+    ],
+    summary: {
+      text: 'Security cameras are common in cities, but evidence that they ( 1 ) crime is mixed, although recordings help after crimes occur. New technologies such as facial recognition raise concerns, because people value being relatively ( 2 ) in public. The writer argues that citizens, not only experts or companies, should take part in deciding the ( 3 ) between security and privacy.',
+      blanks: [
+        { choices: ['reduce', 'cause', 'report', 'hide'], answer: 0, why: '第2段落 The evidence on whether cameras actually reduce crime is mixed。' },
+        { choices: ['anonymous', 'famous', 'active', 'careful'], answer: 0, why: '第4段落 we usually expect to remain relatively anonymous。' },
+        { choices: ['balance', 'price', 'distance', 'speed'], answer: 0, why: '第6段落 a public discussion about the balance between security and privacy。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、駐車場ではカメラの設置後に車上荒らしがへったこともある。', answer: true, why: '第2段落 parking lots, where thefts from cars have sometimes fallen after cameras were installed。' },
+      { statement: '筆者によれば、初期のカメラのしくみでも、顔を認識して個人の動きを追うことができた。', answer: false, why: '第3段落 Early camera systems produced recordings that had to be watched by human operators。' },
+      { statement: '筆者は、何も悪いことをしていない人は何もおそれる必要がないという議論に賛成している。', answer: false, why: '第4段落 But this argument overlooks the value of privacy in public。' },
+      { statement: '筆者によれば、顔認識のしくみがちがう人を特定してしまったことがある。', answer: true, why: '第5段落 facial recognition systems have sometimes identified the wrong people。' },
+    ],
+    qa: [
+      { q: 'Why might people become more cautious if every movement is recorded, according to the fourth paragraph?', choices: ['They would lose the freedom that comes from remaining relatively anonymous in public.', 'They would have to pay for the cameras.', 'They would be arrested more often.', 'They would no longer be able to walk in the city.'], answer: 0, why: '第4段落 If every movement is recorded and stored, that freedom may gradually disappear。' },
+      { q: 'Who should decide how much people are willing to be watched, according to the writer?', choices: ['Citizens themselves.', 'Only technical experts.', 'The companies that sell cameras.', 'Only the police.'], answer: 0, why: '第6段落 is one that citizens themselves must have the opportunity to answer。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
