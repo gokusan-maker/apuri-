@@ -25313,6 +25313,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-animal-minds',
+    title: 'Measuring Animal Minds',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For a long time, scientists who studied animal intelligence tended to ask a single question: how closely does a particular species resemble human beings? Animals were tested on tasks designed with human abilities in mind, such as recognizing symbols, solving puzzles with their hands, or learning words, and those that performed well were described as intelligent. Species that failed such tests were often assumed to be limited in their mental abilities. In recent decades, however, many researchers have come to regard this approach as seriously misleading.",
+      "The difficulty lies in the design of the tests themselves. A task that is easy for a creature with hands and good eyesight may be impossible for one that relies mainly on smell or hearing, ( A ) how clever it is. Asking a dog to identify shapes on a screen, for example, may tell us more about the dog's eyesight than about its ability to think. To judge an animal's intelligence fairly, researchers increasingly argue, we must design tasks that match the senses, bodies, and ways of life of the species in question.",
+      "When tests are adjusted in this way, the results can be remarkable. Some birds that were once dismissed as simple creatures have been shown to store thousands of seeds in different places and to remember the locations months later. Certain species of crows can make tools from twigs and leaves, and some appear able to plan for future needs. Octopuses, whose nervous systems are organized very differently from ours, can escape from containers, recognize individual humans, and solve problems that require trying several approaches in turn. Such abilities had gone largely unnoticed, not because the animals lacked them, but because earlier experiments had not given them a suitable opportunity to show what they could do.",
+      "These findings suggest that intelligence is not a single ladder on which every species can be placed above or below another. Instead, it may be better understood as a collection of abilities, each shaped by the particular challenges a species has faced over the course of its evolution. A bird that must remember where it has hidden food, a social animal that must keep track of relationships within a large group, and a predator that must anticipate the movements of its prey may all have developed forms of intelligence suited to their own circumstances. Comparing them on a single scale may be as unhelpful as asking whether a hammer is better than a saw without first asking what job needs to be done.",
+      "This change in perspective has practical as well as scientific consequences. If animals possess richer mental lives than was once believed, questions arise about how they should be treated in farms, laboratories, and zoos. Some countries have begun to recognize in law that certain animals are capable of feeling pain and distress, and some scientists argue that the evidence of complex thought in species such as octopuses should lead us to reconsider practices that cause them suffering. Knowledge about animal minds, in other words, is not merely a matter of curiosity; it may change the moral choices that societies make about the creatures with which they share the planet.",
+      "At the same time, researchers warn against the opposite error of assuming that animals think in exactly the same way as people. Describing an animal's behavior in human terms can make it easier to understand, but it can also lead us to imagine thoughts and feelings that are not really there. The challenge is to take animal abilities seriously without either underestimating them or reading our own minds into them, an approach that requires both careful experiments and a willingness to imagine forms of intelligence quite unlike our own.",
+    ],
+    ja: [
+      '長い間、動物の知能を研究する科学者たちは、ある1つの問いを立てがちだった。ある種が、どれほど人間に似ているか、という問いである。動物は、記号を見分ける、手でパズルを解く、言葉をおぼえるといった、人間の能力を念頭に置いて作られた課題でテストされ、よくできた動物が知能が高いと言われた。そうしたテストに失敗した種は、心の能力が限られていると思われることが多かった。しかしここ数十年、多くの研究者は、このやり方が大きく誤解をまねくものだと考えるようになってきた。',
+      'むずかしさはテストの作り方そのものにある。手があり目がよい生き物にとってかんたんな課題も、主ににおいや音にたよる生き物には、どれほどかしこくても不可能かもしれない。たとえば、犬に画面上の形を見分けさせることは、犬の考える力よりも、犬の視力について多くを教えてくれるかもしれない。動物の知能を公平に判断するには、その種の感覚や体や暮らし方に合った課題を作らなければならない、と研究者たちはますます主張するようになっている。',
+      'テストがこのように調整されると、その結果はおどろくべきものになりうる。かつては単純な生き物として片づけられていた鳥の中には、何千もの種をちがう場所にたくわえ、数か月後にその場所を思い出せるものがいることがわかっている。ある種のカラスは小枝や葉から道具を作ることができ、中には将来の必要にそなえて計画を立てられるように見えるものもいる。神経系が私たちとはまったくちがうしくみになっているタコは、容器からぬけ出し、人間を1人1人見分け、いくつかのやり方を順にためす必要のある問題を解くことができる。こうした能力がほとんど気づかれずにきたのは、動物にそれがなかったからではなく、以前の実験が、動物にできることを示すのにふさわしい機会をあたえていなかったからである。',
+      'こうした発見は、知能とは、すべての種を上か下に位置づけられるたった1本のはしごではないことを示している。むしろ知能は、それぞれの種が進化の過程で直面してきた特定の課題によって形づくられた、能力の集まりとして理解したほうがよいのかもしれない。食べ物をかくした場所をおぼえていなければならない鳥、大きな群れの中の関係を把握していなければならない社会的な動物、えものの動きを予測しなければならない捕食者は、どれも自分の状況に合った形の知能を発達させてきたのかもしれない。それらを1つの尺度でくらべることは、どんな仕事をするのかを先にたずねずに、金づちとのこぎりのどちらがすぐれているかをたずねるのと同じくらい、役に立たないのかもしれない。',
+      'この見方の変化は、科学的な影響だけでなく実際的な影響ももっている。動物がかつて信じられていたより豊かな心の生活をもっているなら、農場や研究所や動物園で動物をどうあつかうべきかという問いが生まれる。ある種の動物が痛みや苦しみを感じられることを法律で認めはじめた国もあり、タコのような種に複雑な思考の証拠があることから、彼らに苦しみをあたえる慣行を考え直すべきだと主張する科学者もいる。言いかえれば、動物の心についての知識は、単なる好奇心の問題ではないのである。それは、社会がともに地球に暮らす生き物について行う道徳的な選択を変えるかもしれない。',
+      '同時に、研究者たちは、動物が人間とまったく同じように考えると思いこむ、逆のあやまちにも注意をうながしている。動物の行動を人間の言葉で説明すれば理解しやすくなるかもしれないが、本当はそこにない考えや感情を思いえがかせてしまうこともある。課題は、動物の能力を低く見つもることも、自分の心を動物に読みこむこともなく、真剣に受けとめることである。そのやり方には、注意深い実験と、私たちのものとはまったくちがう形の知能を思いえがこうとする気持ちの両方が必要なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['regardless of', 'because of', 'instead of', 'in addition to'], answer: 0, why: '「どれほどかしこくても（かしこさに関係なく）不可能かもしれない」なので regardless of（～に関係なく）。' },
+    ],
+    summary: {
+      text: 'Animal intelligence used to be judged by how closely animals ( 1 ) humans. Researchers now design tests that suit each species, and the results suggest that intelligence is not a single ladder but a ( 2 ) of abilities shaped by evolution. This has practical consequences for how animals are treated, although we must also avoid assuming they think exactly as we ( 3 ).',
+      blanks: [
+        { choices: ['resemble', 'avoid', 'fear', 'feed'], answer: 0, why: '第1段落 how closely does a particular species resemble human beings?' },
+        { choices: ['collection', 'shortage', 'danger', 'copy'], answer: 0, why: '第4段落 it may be better understood as a collection of abilities。' },
+        { choices: ['do', 'are', 'have', 'did'], answer: 0, why: 'think exactly as we do（私たちが考えるのとまったく同じように）。第6段落 assuming that animals think in exactly the same way as people。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、かつて動物は人間の能力を念頭に置いた課題でテストされていた。', answer: true, why: '第1段落 Animals were tested on tasks designed with human abilities in mind。' },
+      { statement: '筆者は、犬に画面上の形を見分けさせれば、犬の考える力が正確にわかると述べている。', answer: false, why: '第2段落 may tell us more about the dog\'s eyesight than about its ability to think。' },
+      { statement: '筆者によれば、タコは人間を1人1人見分けることができる。', answer: true, why: '第3段落 Octopuses ... recognize individual humans。' },
+      { statement: '筆者は、動物の行動はいつも人間の言葉で説明するのがよいと考えている。', answer: false, why: '第6段落 it can also lead us to imagine thoughts and feelings that are not really there。' },
+    ],
+    qa: [
+      { q: 'Why does the writer say the old approach to testing animals was misleading?', choices: ['The tests were designed for human abilities, not for the senses and bodies of each species.', 'Animals refused to take part in the tests.', 'The tests were too easy for most animals.', 'Scientists did not record the results carefully.'], answer: 0, why: '第2段落 we must design tasks that match the senses, bodies, and ways of life of the species in question。' },
+      { q: 'What practical consequence of the research does the writer mention?', choices: ['Some countries have recognized in law that certain animals can feel pain.', 'Zoos have been closed in every country.', 'Octopuses are now kept as pets everywhere.', 'Farms no longer keep any animals.'], answer: 0, why: '第5段落 Some countries have begun to recognize in law that certain animals are capable of feeling pain and distress。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
