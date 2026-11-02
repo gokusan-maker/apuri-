@@ -119,6 +119,7 @@ export const CHIRP_STYLE: Record<string, { pitch: number; steps: number[] }> = {
   hummingbird: { pitch: 2.2, steps: [1, 1.1, 1.2, 1.3] }, // ぶーん
   ostrich: { pitch: 0.75, steps: [1, 1.2, 0.9] }, // ぶおっ
   woodpecker: { pitch: 1.5, steps: [1, 1, 1, 1] }, // コンコンコンコン
+  sandpiper: { pitch: 1.9, steps: [1, 1.15, 1.3] }, // ちーりーりー
   wagtail: { pitch: 1.8, steps: [1, 1.2, 1] }, // ちちん
   cuckoo: { pitch: 1.0, steps: [1.2, 0.95] }, // かっこう
   ptarmigan: { pitch: 1.1, steps: [1, 0.9, 1.1] }, // ぐぁっぐぁっ
