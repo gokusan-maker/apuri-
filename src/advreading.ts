@@ -27084,6 +27084,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-video-games',
+    title: 'What Games Teach',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few forms of entertainment have provoked as much concern as video games. Since they first became popular, parents, teachers, and public officials have worried that games waste children's time, encourage aggressive behavior, and draw young people away from reading, exercise, and face-to-face friendship. More recently, however, a growing body of research has begun to present a more complicated picture. Some scholars now argue that games, far from being merely a distraction, may teach skills that are difficult to acquire in other ways. The debate has become more important as games have spread from children's bedrooms to the phones of people of every age.",
+      "One area of research concerns visual and spatial abilities. Studies have found that people who regularly play fast-paced action games tend to perform better on tests that measure the ability to track several moving objects at once, to notice details in a cluttered scene, and to switch attention quickly between tasks. In some experiments, people who had rarely played games were asked to practice them for several weeks, and their performance on such tests improved, suggesting that the games themselves may have contributed to the change. Such findings are of interest not only to psychologists but also to those who design training for surgeons and pilots, whose work depends on rapid visual judgment.",
+      "Other researchers have focused on the ways in which games encourage learning. Many games present players with problems that are difficult but not impossible, provide immediate feedback on their attempts, and allow them to try again after failure without serious consequences. These are features that educational psychologists have long associated with effective learning. ( A ) players often spend hours mastering a challenging level, some educators have asked whether schools might learn from the design of games in order to make classroom tasks more engaging. A student who gives up quickly on a difficult mathematics problem may, after all, spend an entire evening trying to overcome an obstacle in a game.",
+      "Yet it would be a mistake to conclude that all games are beneficial or that more play is always better. The skills developed by one kind of game do not necessarily transfer to other areas of life, and improvements in a laboratory test do not guarantee better performance in school or at work. Moreover, the time spent playing games is time not spent on other activities, and for a minority of players, gaming can become a compulsive habit that interferes with sleep, study, and relationships. Games designed to maximize the time and money players spend may deliberately exploit this tendency, for instance by offering rewards at unpredictable intervals or by making progress depend on repeated purchases.",
+      "The question of violence has been especially controversial. Some studies have reported that playing violent games is associated with small increases in aggressive thoughts or behavior, while others have found little or no effect, and researchers continue to disagree about how such findings should be interpreted. Part of the difficulty is that aggression is hard to measure, and that young people who are already inclined to aggression may be more likely to choose violent games in the first place. Most researchers now agree that games alone are unlikely to be a major cause of serious violence.",
+      "What emerges from this research is not a simple verdict but a call for more careful thinking. Video games are not a single activity but a vast and varied medium, ranging from puzzles and simulations to cooperative adventures and competitive sports. Their effects depend on the type of game, the amount of time spent playing, and the context in which play takes place. Rather than asking whether games are good or bad, parents and educators may find it more useful to ask which games, played in what ways, can support the development of young people.",
+    ],
+    ja: [
+      'テレビゲームほど多くの懸念を引き起こしてきた娯楽はほとんどない。ゲームが広まりはじめてから、親や教師や役人は、ゲームは子どもの時間をむだにし、攻撃的なふるまいを促し、若者を読書や運動や顔を合わせた友情から遠ざけると心配してきた。しかし近年、ふえつつある研究が、より複雑な像を示しはじめている。ゲームは単なる気晴らしどころか、ほかの方法では身につけにくい技能を教えてくれるかもしれない、と論じる学者もいる。ゲームが子ども部屋からあらゆる年れいの人のスマートフォンへと広がるにつれて、この議論はより重要になってきた。',
+      '研究の1つの分野は、視覚や空間の能力に関するものである。研究によれば、テンポの速いアクションゲームを定期的にする人は、いくつもの動くものを同時に追う力や、ごちゃごちゃした場面の細部に気づく力、作業から作業へとすばやく注意を切りかえる力をはかるテストで、よい成績をとる傾向がある。いくつかの実験では、ほとんどゲームをしたことのない人に数週間ゲームの練習をしてもらったところ、そうしたテストの成績が上がった。これは、ゲームそのものがその変化に貢献したのかもしれないことを示唆している。こうした発見は、心理学者だけでなく、すばやい視覚的な判断に仕事がかかっている外科医やパイロットのための訓練を考える人々にとっても興味深い。',
+      'ほかの研究者たちは、ゲームが学習を促すしくみに注目してきた。多くのゲームは、むずかしいが不可能ではない問題を出し、挑戦にすぐ反応を返し、失敗しても深刻な結果なしにもう一度挑戦させてくれる。これらは、教育心理学者が昔から効果的な学習と結びつけてきた特徴である。プレーヤーはむずかしいステージをきわめるのにしばしば何時間も費やすので、学校は授業の課題をもっと夢中になれるものにするために、ゲームの設計から学べるのではないかと問う教育者もいる。結局のところ、むずかしい数学の問題をすぐにあきらめる生徒が、ゲームの障害を乗りこえようとしてひと晩じゅう費やすこともあるのだ。',
+      'しかし、すべてのゲームが有益だとか、たくさん遊ぶほどよいとか結論づけるのはまちがいだろう。ある種類のゲームで身につく技能は、生活のほかの面に必ずしも応用できるわけではなく、実験室のテストでの向上が、学校や職場でのよりよい成績を保証するわけでもない。さらに、ゲームに費やされる時間は、ほかの活動に費やされない時間であり、少数のプレーヤーにとっては、ゲームが睡眠や勉強や人間関係をさまたげる、やめられない習慣になりうる。プレーヤーが費やす時間やお金をできるだけふやすよう設計されたゲームは、この傾向を意図的に利用しているかもしれない。たとえば、予測できない間隔でごほうびを与えたり、進むためにくり返し課金させたりすることによってである。',
+      '暴力の問題は、とくに議論をよんできた。暴力的なゲームをすることが、攻撃的な考えやふるまいのわずかな増加と関係していると報告する研究もあれば、ほとんど、あるいはまったく効果がないとする研究もあり、研究者たちはそうした発見をどう解釈すべきかについて意見が分かれ続けている。むずかしさの一部は、攻撃性をはかるのがむずかしいこと、そしてもともと攻撃的な傾向のある若者が、そもそも暴力的なゲームを選びやすいかもしれないことにある。今ではほとんどの研究者が、ゲームだけが深刻な暴力の主な原因になることはまずないという点で一致している。',
+      'この研究から見えてくるのは、単純な判定ではなく、より注意深く考えることの呼びかけである。テレビゲームは1つの活動ではなく、パズルやシミュレーションから、協力型の冒険や対戦型のスポーツまでにわたる、広大で多様な表現手段である。その影響は、ゲームの種類や遊ぶ時間の長さ、遊ぶ状況によって変わる。ゲームがよいか悪いかを問うより、親や教育者にとっては、どのゲームを、どのように遊べば、若者の成長を支えられるのかを問うほうが役に立つかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「プレーヤーは何時間も費やすので、学校は学べるのではないか」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Video games have long caused concern, but research suggests that some games improve visual and spatial abilities and use features linked to effective ( 1 ). However, skills may not ( 2 ) to other areas of life, and gaming can become compulsive. Research on violence is mixed, so rather than judging games as good or bad, we should ask which games, played in what ways, support young people\'s ( 3 ).',
+      blanks: [
+        { choices: ['learning', 'sleeping', 'shopping', 'traveling'], answer: 0, why: '第3段落 features that educational psychologists have long associated with effective learning。' },
+        { choices: ['transfer', 'belong', 'return', 'listen'], answer: 0, why: '第4段落 do not necessarily transfer to other areas of life。' },
+        { choices: ['development', 'income', 'appearance', 'memory'], answer: 0, why: '第6段落 can support the development of young people。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、アクションゲームをする人は、いくつもの動くものを同時に追うテストでよい成績をとる傾向がある。', answer: true, why: '第2段落 tend to perform better on tests that measure the ability to track several moving objects at once。' },
+      { statement: '筆者によれば、実験室のテストでの向上は、学校での成績向上を必ず保証する。', answer: false, why: '第4段落 improvements in a laboratory test do not guarantee better performance in school or at work。' },
+      { statement: '筆者によれば、暴力的なゲームの影響について、研究者の意見は完全に一致している。', answer: false, why: '第5段落 researchers continue to disagree about how such findings should be interpreted。' },
+      { statement: '筆者によれば、テレビゲームは広大で多様な表現手段である。', answer: true, why: '第6段落 Video games are not a single activity but a vast and varied medium。' },
+    ],
+    qa: [
+      { q: 'Which features of games are associated with effective learning, according to the third paragraph?', choices: ['Difficult but possible problems, immediate feedback, and the chance to try again after failure.', 'Bright colors and loud music.', 'Long stories and many characters.', 'High prices and online shopping.'], answer: 0, why: '第3段落 problems that are difficult but not impossible, provide immediate feedback ..., and allow them to try again after failure。' },
+      { q: 'Why is the effect of violent games hard to study, according to the fifth paragraph?', choices: ['Aggression is hard to measure, and aggressive young people may choose violent games in the first place.', 'There are no violent games.', 'Researchers are not allowed to study games.', 'Players always tell the truth about their behavior.'], answer: 0, why: '第5段落 aggression is hard to measure, and that young people who are already inclined to aggression may be more likely to choose violent games。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
