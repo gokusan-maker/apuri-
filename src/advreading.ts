@@ -25469,6 +25469,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sport-nation',
+    title: 'Sport and the Nation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When a national team plays in an international tournament, millions of people who have never met one another may experience the same hopes and disappointments at the same moment. Streets fall silent during important matches, and a victory can bring strangers together in celebration. Few other activities in modern life can create such a powerful sense of shared identity so quickly. It is therefore not surprising that governments, businesses, and the media have long recognized sport as one of the most effective ways of expressing, and sometimes shaping, what it means to belong to a nation.",
+      "The connection between sport and national identity is, historically speaking, fairly recent. Many of the games played today were standardized in the nineteenth century, at roughly the same time that modern nation-states were consolidating their power. International competitions such as the modern Olympic Games, first held in 1896, offered countries a peaceful arena in which to compare themselves with one another. Success in sport came to be seen as evidence of a nation's vitality, discipline, and modernity, and athletes were increasingly presented as representatives of their entire people.",
+      "For many citizens, supporting a national team is a pleasure that does little harm. It offers a sense of community in societies where traditional sources of belonging, such as religion or local neighborhoods, may have weakened. It also allows people of different backgrounds to share an experience that has nothing to do with their social class or political opinions. In this respect, sport can serve as a kind of common language, one that is understood far more widely than the formal symbols of national identity.",
+      "Yet the same features that make sport so effective in creating unity can also be used to exclude. Rivalries between nations can turn into hostility, and history offers examples of matches that worsened tensions between countries or provoked violence among supporters. Within nations, too, questions of who truly belongs can become painfully visible when athletes from immigrant families are celebrated after a victory but criticized, sometimes in openly prejudiced terms, after a defeat.",
+      "Governments have often tried to use sport for political purposes. Hosting a major international event can be a way of displaying national achievement to the world, and some states have invested enormous sums in training athletes in the hope of winning medals that will enhance their prestige. Critics argue that such investments may divert resources from more urgent needs and that they encourage the public to judge a nation's worth by its performance in games rather than by the well-being of its citizens.",
+      "At the same time, sport has frequently challenged the boundaries of national identity rather than simply reinforcing them. Professional leagues now include players from dozens of countries, and fans regularly support clubs whose stars come from the other side of the world. Athletes who have spoken out against injustice have used their visibility to raise questions that their nations might have preferred to ignore. In such cases, sport becomes not merely a mirror of national identity but a place where that identity is debated.",
+      "The relationship between sport and the nation, then, is neither entirely positive nor entirely negative. Sport can bring people together and give them a shared story, but it can also be used to divide them or to distract them from other concerns. A society that understands this double character is better placed to enjoy the pleasures of sport while remaining alert to the ways in which it can be misused by those seeking power or profit. ( A ) role it plays depends less on the games themselves than on the choices made by the people who organize, report on, and watch them.",
+    ],
+    ja: [
+      '国の代表チームが国際大会で試合をするとき、たがいに会ったこともない何百万もの人々が、同じ瞬間に同じ希望と失望を味わうことがある。大事な試合の間は通りが静まりかえり、勝利は知らない人どうしを祝福でひとつにすることもある。現代の生活で、これほどすばやく、これほど強い共有された一体感を生み出せる活動はほかにほとんどない。したがって、政府や企業やメディアが、国に属するとはどういうことかを表し、ときにはそれを形づくる最も効果的な方法の1つとして、スポーツを長く認めてきたのはおどろくにあたらない。',
+      'スポーツと国民の一体感の結びつきは、歴史的に言えば比較的新しい。今日行われている競技の多くは19世紀に規則が統一された。それは近代の国民国家が力を固めていたのとほぼ同じ時期である。1896年にはじめて開かれた近代オリンピックのような国際大会は、国々が平和的にたがいをくらべる場をあたえた。スポーツでの成功は、国の活力や規律や近代性の証拠とみなされるようになり、選手たちはしだいに国民全体の代表として示されるようになった。',
+      '多くの市民にとって、代表チームを応援することは、ほとんど害のない楽しみである。それは、宗教や地元の近所のような伝統的な帰属の源が弱まったかもしれない社会で、共同体の感覚をあたえてくれる。また、ちがう背景をもつ人々が、社会階級や政治的な意見とは何の関係もない経験を共有することもできる。この点で、スポーツは一種の共通語として働きうる。それは国の正式な象徴よりもはるかに広く理解される言葉なのである。',
+      'しかし、スポーツを団結を生むのにこれほど効果的にしているのと同じ特徴が、人をしめ出すのに使われることもある。国どうしの対抗意識は敵意に変わることがあり、歴史には、試合が国どうしの緊張を悪化させたり、応援する人々の間の暴力を引き起こしたりした例がある。国の中でも、移民の家庭出身の選手が、勝利のあとにはたたえられるのに、敗北のあとにはときにあからさまな偏見をこめて批判されるとき、だれが本当に属しているのかという問いが、痛々しいほどはっきりと見えることがある。',
+      '政府はしばしば、スポーツを政治的な目的に使おうとしてきた。大きな国際大会を開くことは、世界に国の業績を見せる1つの方法になりうるし、国の威信を高めるメダルを取ることを願って、選手の育成にばくだいな額を投じてきた国もある。批判する人々は、そうした投資は、より差しせまった必要から資源をそらすかもしれず、国の価値を国民の幸福ではなく試合の成績で判断するよう人々をうながすと主張する。',
+      '同時に、スポーツはしばしば、国民の一体感の境界を単に強めるのではなく、それに疑問を投げかけてきた。プロのリーグには今では何十もの国の選手がおり、ファンは世界の反対側から来たスター選手のいるクラブを応援するのがふつうである。不正に反対して声を上げた選手たちは、自分の注目度を使って、国が無視したかったかもしれない問いを投げかけてきた。こうした場合、スポーツは単に国民の一体感を映す鏡ではなく、その一体感が議論される場となるのである。',
+      'だとすれば、スポーツと国の関係は、まったくよいものでもまったく悪いものでもない。スポーツは人々をひとつにし、共有された物語をあたえることができるが、人々を分断したり、ほかの関心からそらしたりするのに使われることもある。この二つの面を理解している社会は、スポーツの楽しみを味わいながらも、権力や利益を求める人々によってそれがどのように悪用されうるかに、注意をはらい続けることができる。それがどんな役割をはたすかは、競技そのものよりも、それを運営し、報じ、見る人々の選択にかかっているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['What', 'That', 'Which of', 'How'], answer: 0, why: 'What role it plays で「それがどんな役割をはたすか」という名詞節（主語）。What ＋名詞 ＋ S V。' },
+    ],
+    summary: {
+      text: 'Sport creates a strong sense of shared ( 1 ) and has been linked with national identity since the nineteenth century. It can bring people of different backgrounds together, but it can also be used to ( 2 ) people or for political purposes. Sport can even become a place where national identity is ( 3 ).',
+      blanks: [
+        { choices: ['identity', 'wealth', 'danger', 'language'], answer: 0, why: '第1段落 such a powerful sense of shared identity。' },
+        { choices: ['exclude', 'employ', 'teach', 'feed'], answer: 0, why: '第4段落 can also be used to exclude。' },
+        { choices: ['debated', 'forgotten', 'sold', 'hidden'], answer: 0, why: '第6段落 a place where that identity is debated。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、近代オリンピックは1896年にはじめて開かれた。', answer: true, why: '第2段落 the modern Olympic Games, first held in 1896。' },
+      { statement: '筆者は、代表チームの応援はいつも大きな害をもたらすと述べている。', answer: false, why: '第3段落 supporting a national team is a pleasure that does little harm。' },
+      { statement: '筆者によれば、移民の家庭出身の選手が、敗北のあとに偏見をこめて批判されることがある。', answer: true, why: '第4段落 criticized, sometimes in openly prejudiced terms, after a defeat。' },
+      { statement: '筆者は、スポーツと国の関係はまったくよいものだと結論づけている。', answer: false, why: '第7段落 neither entirely positive nor entirely negative。' },
+    ],
+    qa: [
+      { q: 'Why do critics object to large government investments in sport?', choices: ['They may divert resources from more urgent needs.', 'They make athletes less famous.', 'They reduce the number of international events.', 'They prevent fans from watching games.'], answer: 0, why: '第5段落 such investments may divert resources from more urgent needs。' },
+      { q: 'How has sport challenged the boundaries of national identity, according to the sixth paragraph?', choices: ['Fans support clubs with foreign stars, and athletes speak out against injustice.', 'Governments have banned international players.', 'Every team now plays only at home.', 'Athletes refuse to represent any country.'], answer: 0, why: '第6段落 fans regularly support clubs whose stars come from the other side of the world. Athletes who have spoken out against injustice ～。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
