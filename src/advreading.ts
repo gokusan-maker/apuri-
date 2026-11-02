@@ -25902,6 +25902,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-hope',
+    title: 'The Work of Hope',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hope is often treated as a pleasant but somewhat naive feeling, the kind of optimism that ignores difficult facts. A hopeful person, on this view, is someone who expects things to turn out well without good reason, and who may therefore be less prepared than a realist for disappointment. Yet many philosophers and psychologists have argued that this picture misunderstands what hope actually is. Hope, they suggest, is not the same as optimism, and far from being a comfortable illusion, it may be one of the most demanding and important attitudes a person can adopt. Understanding why requires distinguishing carefully between several attitudes toward the future that ordinary language tends to treat as the same.",
+      "The difference between hope and optimism becomes clear when we consider situations of genuine uncertainty. An optimist believes that a good outcome is likely; a hopeful person may believe only that it is possible, while recognizing that it may well not occur. People often hope most intensely in circumstances where the odds are against them, such as during a serious illness or a long struggle for justice. In such cases, hope does not deny the facts but refuses to treat them as the final word. It keeps open the possibility of a better future without pretending that the future is guaranteed.",
+      "Hope also has a practical dimension. Psychologists who study it have found that hopeful people tend not only to desire good outcomes but also to imagine concrete ways of reaching them and to believe in their own ability to follow those paths. When one route is blocked, they are more likely to search for another. In this sense, hope is less a passive feeling than an active orientation toward the future, one that motivates effort and persistence in the face of obstacles. Studies of students and patients have suggested that this kind of hope can predict how well people cope with difficulties, even when their abilities or circumstances are taken into account, although researchers continue to debate how such effects should be measured.",
+      "There are, of course, dangers in hope. It can be exploited by those who promise easy solutions, and it can lead people to wait for change rather than working to bring it about. A hope that is never tested against reality may become a form of escape. For this reason, some thinkers distinguish between hope that is grounded in an honest assessment of one's situation and wishful thinking that simply avoids unpleasant truths. The former can sustain action; the latter may prevent it.",
+      "Hope matters not only for individuals but also for societies. Communities facing economic decline, environmental damage, or political conflict need some shared sense that improvement is possible if their members are to cooperate in pursuing it. Where hope disappears, people may withdraw from public life, concluding that nothing they do can make a difference. Political leaders and social movements have therefore often sought to inspire hope, although the most lasting forms of it tend to arise not from speeches but from small, visible signs that change is actually occurring. A repaired playground, a reopened shop, or a successful local project can do more to restore a community's confidence than any number of promises.",
+      "Understood in this way, hope is neither foolish nor easy. It requires the courage to acknowledge how difficult a situation is while still committing oneself to the possibility of something better. ( A ) despair may seem more realistic, it often rests on a certainty about the future that is no more justified than blind optimism. Hope, by contrast, accepts uncertainty and chooses to act within it, which may be why so many people have found in it the strength to endure what once seemed unbearable.",
+    ],
+    ja: [
+      '希望は、しばしば、心地よいがいくらか世間知らずな気持ち、つまりむずかしい事実を無視する楽観のようなものとしてあつかわれる。この見方によれば、希望をもつ人とは、十分な理由もなく物事がうまくいくと期待し、そのため現実主義者よりも失望への備えが足りないかもしれない人である。しかし、多くの哲学者や心理学者は、この描き方は希望が実際に何なのかを誤解していると論じてきた。彼らによれば、希望は楽観と同じではなく、心地よい幻想であるどころか、人がとりうる最も骨の折れる、最も大切な態度の1つなのかもしれない。その理由を理解するには、ふだんの言葉が同じものとしてあつかいがちな、未来へのいくつかの態度を注意深く区別する必要がある。',
+      '希望と楽観のちがいは、本当に不確かな状況を考えるとはっきりする。楽観的な人は、よい結果が起こりそうだと信じる。希望をもつ人は、それが起こらない可能性も十分にあると認めながら、ただそれが可能だと信じるだけかもしれない。人々は、重い病気のときや、正義を求める長いたたかいのように、状況が不利なときにこそ、最も強く希望をいだくことが多い。そうした場合、希望は事実を否定するのではなく、事実を最後の言葉としてあつかうことをこばむのである。それは、未来が約束されているふりをすることなく、よりよい未来の可能性を開いたままにしておく。',
+      '希望にはまた実際的な面もある。希望を研究する心理学者たちは、希望をもつ人は、よい結果を望むだけでなく、そこにたどり着く具体的な道を思いえがき、その道をたどる自分の力を信じる傾向があることを見いだしてきた。ある道がふさがれると、彼らは別の道を探しやすい。この意味で、希望は受け身の気持ちというよりも、障害を前にした努力とねばり強さをうながす、未来への能動的な向き合い方なのである。学生や患者についての研究から、この種の希望は、その人の能力や境遇を考えに入れても、人々がむずかしさにどれほどうまく対処するかを予測できることが示されている。ただし、そうした効果をどうはかるべきかについては、研究者たちは今も議論している。',
+      'もちろん、希望には危険もある。かんたんな解決策を約束する人々に利用されることもあるし、人々が変化を起こそうと働くかわりに、変化を待つようにさせてしまうこともある。現実とつき合わされることのない希望は、一種の逃避になるかもしれない。このため、自分の状況をすなおに見つめることにもとづいた希望と、不愉快な真実をただ避ける願望的な思考とを区別する思想家もいる。前者は行動を支えうるが、後者は行動をさまたげるかもしれない。',
+      '希望は個人にとってだけでなく、社会にとっても大切である。経済の衰退や環境の破壊や政治の対立に直面する共同体は、その一員たちが改善を追い求めて協力するためには、改善が可能だという何らかの共有された感覚を必要とする。希望が消えたところでは、人々は自分が何をしても変わらないと結論づけ、公の生活から身を引いてしまうかもしれない。そのため政治の指導者や社会運動は、しばしば希望を呼び起こそうとしてきたが、最も長続きする希望は、演説からではなく、変化が実際に起こっているという小さな目に見えるしるしから生まれることが多い。直された遊び場、ふたたび開いた店、うまくいった地域の取り組みは、どれほど多くの約束よりも、共同体の自信を取りもどすのに役立つことがある。',
+      'このように理解すれば、希望はおろかでも、かんたんでもない。それには、状況がどれほどむずかしいかを認めながらも、よりよい何かの可能性に身をささげる勇気が必要である。絶望のほうが現実的に見えるかもしれないが、それはしばしば、やみくもな楽観と同じくらい根拠のない、未来についての確信にもとづいている。これに対して希望は、不確かさを受け入れ、その中で行動することを選ぶ。それこそが、かつてはたえがたく思えたことにたえる力を、これほど多くの人が希望の中に見いだしてきた理由なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「絶望のほうが現実的に見えるかもしれないが、～」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、希望と楽観は同じものではない。', answer: true, why: '第1段落 Hope ... is not the same as optimism。' },
+      { statement: '筆者によれば、希望をもつ人は、よい結果が必ず起こると信じている。', answer: false, why: '第2段落 a hopeful person may believe only that it is possible, while recognizing that it may well not occur。' },
+      { statement: '心理学者によれば、希望をもつ人は、ある道がふさがれると別の道を探しやすい。', answer: true, why: '第3段落 When one route is blocked, they are more likely to search for another。' },
+      { statement: '筆者は、希望にはまったく危険がないと述べている。', answer: false, why: '第4段落 There are, of course, dangers in hope。' },
+    ],
+    qa: [
+      { q: 'According to the fifth paragraph, where do the most lasting forms of hope tend to come from?', choices: ['Small, visible signs that change is actually occurring.', 'Long speeches by political leaders.', 'Promises of easy solutions.', 'Ignoring difficult facts.'], answer: 0, why: '第5段落 the most lasting forms of it tend to arise not from speeches but from small, visible signs that change is actually occurring。' },
+      { q: 'What does the writer say about despair in the last paragraph?', choices: ['It often rests on a certainty about the future that is no better justified than blind optimism.', 'It is always more realistic than hope.', 'It gives people the strength to act.', 'It accepts uncertainty about the future.'], answer: 0, why: '第6段落 it often rests on a certainty about the future that is no more justified than blind optimism。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
