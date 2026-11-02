@@ -26898,6 +26898,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-leisure',
+    title: 'The Freedom of Leisure',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people today feel that they have too little free time, yet when they do have time to spare, they often fill it immediately with some form of activity. A few minutes spent waiting for a train are used to check messages; an evening without plans becomes an opportunity to catch up on work or to watch another episode of a series. Idleness, the state of doing nothing in particular, is frequently regarded with suspicion, as if time not used productively were time wasted. Yet many thinkers in the past regarded leisure not as the absence of work but as one of the highest goods of human life. Their view may help us to see what the modern habit of constant activity leaves out.",
+      "For the philosophers of ancient Greece, leisure was not simply rest from labor. It was the condition in which people could engage in the activities they considered most fully human, such as reflection, conversation, and the pursuit of understanding for its own sake. Work, in this view, was necessary in order to make leisure possible, not the other way round. Such a view was, of course, connected with a society in which much of the necessary labor was performed by others, and it would be wrong to idealize it. But the underlying idea, that some of the most valuable human activities are not means to anything else, remains worth considering.",
+      "In modern industrial societies, this relationship has often been reversed. Free time has increasingly come to be seen as a period for recovering from work so that one can return to it refreshed, or as an opportunity for consumption, filled with products and services designed to occupy attention. Even hobbies can take on the character of work when they are pursued with the aim of self-improvement, measured by goals, or shared online in the hope of approval. What is lost in such cases is the sense of an activity done simply because it is enjoyable or meaningful in itself.",
+      "There are also reasons to think that genuine idleness has value of its own. Psychologists have found that when the mind is not focused on a particular task, it often wanders in ways that support creativity, allowing distant ideas to come together and problems to be seen from new angles. Many people report that their best ideas come to them not while they are working hard but while they are walking, bathing, or lying awake. ( A ) such moments seem unproductive, they may in fact be essential to the kind of thinking that cannot be forced. A mind that is never allowed to wander may become efficient at solving familiar problems while losing the capacity to imagine new ones.",
+      "To value leisure in this way is not to reject work, which can itself be a source of meaning and satisfaction. Nor is it to ignore the fact that many people have little free time because of economic pressures beyond their control. Indeed, the unequal distribution of leisure is itself a serious social issue. The point is rather that a society which recognizes only productive activity as valuable may neglect an important dimension of human well-being, and may come to regard people chiefly as instruments for producing results. Such a society might be rich in output and yet poor in the kinds of experience that make output worth having.",
+      "Recovering a fuller understanding of leisure may require both individual and collective changes. Individuals may need to resist the habit of filling every spare moment and to allow themselves periods of unstructured time. Societies may need to consider how working hours, education, and public spaces can support activities that are valued for their own sake. Leisure, understood in this sense, is not idleness in the sense of laziness, but a kind of freedom: the freedom to attend to what matters without asking at every moment what it is for.",
+    ],
+    ja: [
+      '今日、多くの人は自由な時間が少なすぎると感じているが、時間に余裕ができると、しばしばすぐに何らかの活動でそれをうめてしまう。電車を待つ数分間はメッセージを確認するのに使われ、予定のない夜は、仕事の遅れを取りもどしたり、連続ドラマをもう1話見たりする機会になる。何もしていない状態である怠惰は、しばしば疑いの目で見られる。まるで生産的に使われなかった時間はむだにされた時間であるかのように。しかし過去の多くの思想家は、余暇を仕事がないことではなく、人間の生活の最も高い善の1つとみなしていた。彼らの見方は、たえず活動し続けるという現代の習慣が何を見落としているのかを理解する助けになるかもしれない。',
+      '古代ギリシアの哲学者たちにとって、余暇は単に労働からの休息ではなかった。それは、人々が最も人間らしいと考える活動、たとえば思索や対話、それ自体のための理解の追求に取り組むことのできる状態であった。この見方では、仕事は余暇を可能にするために必要なのであって、その逆ではなかった。こうした見方は、もちろん、必要な労働の多くをほかの人々が担っていた社会と結びついており、それを理想化するのはまちがいだろう。しかし、最も価値ある人間の活動のいくつかはほかの何かのための手段ではない、という根底にある考えは、今でも考えてみる価値がある。',
+      '現代の工業化された社会では、この関係はしばしば逆転してきた。自由な時間はますます、元気になって仕事にもどれるよう仕事から回復するための期間として、あるいは注意を引きつけるよう作られた製品やサービスで満たされた、消費の機会として見られるようになってきた。趣味でさえ、自分を高めることを目的に取り組まれたり、目標ではかられたり、認められることを期待してネットで共有されたりすると、仕事のような性格を帯びることがある。そうした場合に失われるのは、ただそれ自体が楽しかったり意味があったりするからする活動という感覚である。',
+      '本当の怠惰にもそれ自体の価値があると考える理由もある。心理学者たちは、心が特定の作業に集中していないとき、しばしば創造性を支えるような形でさまよい、遠くはなれた考えどうしを結びつけ、問題を新しい角度から見られるようにすることを発見してきた。多くの人が、最もよい考えは懸命に働いているときではなく、歩いたり、入浴したり、眠れずに横になったりしているときに浮かぶと語っている。そうした瞬間は生産的でないように見えても、実は無理に生み出すことのできない種類の思考にとって欠かせないのかもしれない。決してさまようことを許されない心は、なじみのある問題を解くのは効率よくなっても、新しい問題を思い描く力を失ってしまうかもしれない。',
+      'このように余暇を大切にすることは、仕事をこばむことではない。仕事はそれ自体が意味や満足の源になりうる。また、多くの人が自分では左右できない経済的な圧力のために自由な時間がほとんどないという事実を無視することでもない。実際、余暇が不平等に分けられていること自体が深刻な社会問題である。要点はむしろ、生産的な活動だけを価値あるものと認める社会は、人間の幸福の重要な面をおろそかにし、人々を主に結果を生み出すための道具とみなすようになるかもしれない、ということである。そうした社会は、生み出すものは豊かでも、生み出すものに価値を与える種類の経験には乏しいかもしれない。',
+      '余暇についてのより豊かな理解を取りもどすには、個人と社会の両方の変化が必要かもしれない。個人は、あらゆる空き時間をうめる習慣にあらがい、決められていない時間を自分に許す必要があるかもしれない。社会は、労働時間や教育や公共の空間が、それ自体のために大切にされる活動をどのように支えられるかを考える必要があるかもしれない。この意味で理解された余暇は、なまけという意味での怠惰ではなく、一種の自由である。つまり、それが何のためにあるのかをたえず問うことなく、大切なことに心を向ける自由なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「生産的でないように見えても、実は欠かせないのかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、古代ギリシアの哲学者にとって、余暇は単に労働からの休息だった。', answer: false, why: '第2段落 leisure was not simply rest from labor。' },
+      { statement: '筆者は、古代ギリシアの社会を理想化するのはまちがいだと考えている。', answer: true, why: '第2段落 it would be wrong to idealize it。' },
+      { statement: '筆者によれば、心がさまようことは創造性を支えることがある。', answer: true, why: '第4段落 it often wanders in ways that support creativity。' },
+      { statement: '筆者は、余暇を大切にするためには仕事をこばむべきだと主張している。', answer: false, why: '第5段落 To value leisure in this way is not to reject work。' },
+    ],
+    qa: [
+      { q: 'How has free time come to be seen in modern industrial societies?', choices: ['As a period for recovering from work or an opportunity for consumption.', 'As the highest good of human life.', 'As time for reflection and conversation only.', 'As something that no longer exists.'], answer: 0, why: '第3段落 a period for recovering from work ... or as an opportunity for consumption。' },
+      { q: 'How does the writer describe leisure at the end of the passage?', choices: ['As a kind of freedom to attend to what matters.', 'As laziness that should be avoided.', 'As a reward for hard work.', 'As a waste of valuable time.'], answer: 0, why: '第6段落 Leisure ... is not idleness in the sense of laziness, but a kind of freedom。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
