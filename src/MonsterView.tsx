@@ -1740,6 +1740,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 44 L68 46" fill="none" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'yellowthroat')
+    return (
+      <g>
+        {/* 黒い冠羽と、黄色いのど */}
+        <path d="M44 28 L50 16 L54 28" fill="#1c1917" />
+        <ellipse cx="50" cy="52" rx="7" ry="5" fill="#facc15" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
