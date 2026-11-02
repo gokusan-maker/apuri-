@@ -168,8 +168,8 @@ it('京大専用の長文⑤「制限が生む創造性」：京大の下限600�
 
 it('東大専用の長文①「なぜ贈り物をするのか」：600語以上・1文18語以上で、東大のいちばんはじめ（要約の設問つき）。京大・旧帝大には出ない', async () => {
   const { passageStats } = await import('./examtier')
-  const p = passagesFor('東大')[0]
-  expect(p.id).toBe('todai-gifts')
+  expect(passagesFor('東大')[0].id.startsWith('todai-')).toBe(true)
+  const p = passagesFor('東大').find((x) => x.id === 'todai-gifts')!
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect((p.qa ?? []).some((q) => q.q.includes('要約'))).toBe(true)
@@ -182,4 +182,13 @@ it('京大専用の長文⑥「なぜ本物が大切なのか」：京大の下�
   const p = passagesFor('京大').find((x) => x.id === 'kyodai-originals')!
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
+
+it('東大専用の長文②「お仕事は何ですか」：600語以上・1文18語以上で、要約の空所補充（3つ）つき。東大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('東大').find((x) => x.id === 'todai-work-identity')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(p.summary?.blanks).toHaveLength(3)
+  expect(passagesFor('京大').some((x) => x.id === p.id)).toBe(false)
 })

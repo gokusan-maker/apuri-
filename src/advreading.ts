@@ -24917,6 +24917,52 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-work-identity',
+    title: 'What Do You Do?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When two strangers meet at a party in many industrialized countries, one of the first questions they are likely to ask each other is, \"What do you do?\" The question appears innocent, but it reveals a powerful assumption: that a person's occupation tells us something essential about who he or she is. For much of the twentieth century, this assumption seemed natural. People often stayed in the same field, and sometimes with the same employer, for most of their working lives, and their jobs provided not only an income but also a clear social identity.",
+      "Historically, however, the close link between work and identity is relatively recent. In many traditional societies, people were identified first by their family, their village, or their religious community, and the tasks they performed changed with the seasons and with the needs of the household. It was only with the growth of industrial economies, ( A ) large numbers of people were employed full time in specialized roles, that the job title became one of the main ways of answering the question of who someone is.",
+      "Today, this link is being loosened by several developments at once. Careers are becoming less predictable, and many people change not only employers but entire professions several times. A growing number work part time, on short contracts, or for several clients at the same time, so ( B ) no single job defines them. At the same time, technology has made it possible to pursue serious interests outside paid work, from writing and music to volunteering, and for some people these activities have become a more important source of meaning than their employment.",
+      "These changes have both advantages and costs. On the positive side, a weaker connection between work and identity may free people from the pressure to judge their own worth entirely by professional success. Someone who loses a job, or who chooses a less prestigious career in order to have more time for family, need not feel that he or she has lost a place in society. A more varied sense of self can also make people more resilient, since the failure of one part of life does not necessarily destroy the whole.",
+      "On the negative side, the loss of a stable occupational identity can be disorienting. Jobs used to provide not only a role but also a community of colleagues, a set of shared skills, and a story about one's future. When work becomes fragmented and temporary, these benefits may disappear, and people may find themselves without a clear answer to the question of what they are working toward. Research on unemployment has long shown that the loss of work affects well-being far more than the loss of income alone would predict, which suggests that work meets needs that are not purely economic.",
+      "It is worth noting that the effects of these changes are not distributed evenly. Highly skilled professionals who can choose among many opportunities may experience flexibility as a form of freedom, moving between projects that interest them and building a varied identity by choice. For workers with fewer options, however, the same flexibility may mean insecurity: irregular hours, uncertain income, and little chance of developing the long-term relationships with colleagues that once made work a source of belonging. Any discussion of the future of work must therefore ask not only what is changing but for whom.",
+      "Societies are only beginning to respond to these changes. Some suggest that education should prepare young people not for a single career but for a lifetime of learning and adaptation. Others argue that public policy should give greater recognition to forms of activity, such as caring for relatives or contributing to local communities, that are valuable but unpaid. ( C ) the solution, it seems likely that the question \"What do you do?\" will gradually lose its power to sum up a person, and that we will need new ways of describing who we are.",
+    ],
+    ja: [
+      '多くの工業化された国では、パーティーで知らない2人が出会うと、最初にたがいにたずねそうな質問の1つは「お仕事は何ですか」である。この質問は無邪気に見えるが、ある強い前提を明らかにしている。それは、人の職業が、その人がだれなのかについて何か本質的なことを教えてくれるという前提である。20世紀の大部分にわたって、この前提は自然なものに思えた。人々はしばしば、働く人生のほとんどの間、同じ分野に、ときには同じ雇い主のもとにとどまり、仕事は収入だけでなく、はっきりした社会的な自己像もあたえてくれたからである。',
+      'しかし歴史的に見ると、仕事と自己像の強い結びつきは比較的新しいものである。多くの伝統的な社会では、人々はまず家族や村や宗教の共同体によって見分けられ、行う仕事は季節や家の必要に応じて変わった。仕事の肩書きが、ある人がだれなのかという問いに答える主な方法の1つになったのは、多くの人々が専門化された役割でフルタイムに雇われる工業経済が成長してからのことにすぎない。',
+      '今日、この結びつきは、いくつかの変化が同時に起こることでゆるみつつある。職業の道すじは予測しにくくなり、多くの人が雇い主だけでなく職業そのものを何度も変える。パートタイムや短期の契約で働いたり、同時にいくつもの依頼主のために働いたりする人がふえており、1つの仕事がその人を決めることはない。同時に、科学技術のおかげで、書くことや音楽からボランティアまで、お金をもらう仕事の外で本格的な関心を追い求めることが可能になり、一部の人にとっては、こうした活動が仕事よりも大切な生きがいになっている。',
+      'こうした変化には、利点と代償の両方がある。よい面としては、仕事と自己像の結びつきが弱まることで、人々は自分の価値を仕事での成功だけで判断しなければならないという重圧から解放されるかもしれない。仕事を失った人や、家族との時間をふやすために評価の低い職業を選んだ人が、社会の中での居場所を失ったと感じる必要はない。より多様な自己像は、人々をより立ち直りやすくもする。人生のある部分の失敗が、必ずしも全体をこわしてしまうわけではないからである。',
+      '悪い面としては、安定した職業上の自己像を失うことは、人をとまどわせることがある。仕事はかつて、役割だけでなく、同僚の共同体や共有された技能、そして自分の将来についての物語をあたえてくれた。仕事がばらばらで一時的なものになると、こうした利点は消えてしまうかもしれず、人々は、自分が何に向かって働いているのかという問いに、はっきりした答えをもてなくなるかもしれない。失業についての研究は、仕事を失うことが、収入を失うことだけから予想されるよりもはるかに大きく幸福に影響することを長く示してきた。このことは、仕事が純粋に経済的ではない必要を満たしていることを示している。',
+      'これらの変化の影響が平等に分かれているわけではないことに注意する価値がある。多くの機会の中から選べる高い技能をもつ専門家は、柔軟さを自由の1つの形として経験するかもしれない。興味のある仕事から仕事へと移り、自分で選んで多様な自己像を築いていくのである。しかし、選択肢の少ない働き手にとっては、同じ柔軟さが不安定さを意味するかもしれない。不規則な勤務時間、先の見えない収入、そして、かつて仕事を居場所の源にしていた同僚との長いつき合いを築く機会のとぼしさである。したがって、仕事の未来についての議論はどれも、何が変わっているのかだけでなく、だれにとって変わっているのかを問わなければならない。',
+      '社会はこうした変化にこたえはじめたばかりである。教育は若者を1つの職業のためではなく、一生学び、適応し続けるために準備させるべきだと言う人もいる。また、親族の世話をしたり地域の共同体に貢献したりするような、価値はあるがお金にならない活動を、公共の政策がもっと認めるべきだと主張する人もいる。解決策が何であれ、「お仕事は何ですか」という質問は、人を言い表す力をしだいに失っていき、私たちは自分がだれなのかを語る新しい方法を必要とするようになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in which', 'which', 'where in', 'what'], answer: 0, why: 'うしろの large numbers of people were employed は欠けたところのない文。in the economies の前置詞＋関係代名詞 in which。' },
+      { id: 'B', choices: ['that', 'what', 'as', 'than'], answer: 0, why: 'so that ～ で「その結果～」。1つの仕事がその人を決めることはない、という結果を表す。' },
+      { id: 'C', choices: ['Whatever', 'However', 'Whichever way', 'Wherever'], answer: 0, why: 'Whatever the solution (is / may be) で「解決策が何であれ」。However は形容詞・副詞と組む。' },
+    ],
+    summary: {
+      text: 'The idea that a job tells us who a person is became common only with the rise of ( 1 ) economies. Today, as careers become less ( 2 ), this link is weakening. This may free people from judging themselves only by professional success, but it may also take away the ( 3 ) and sense of direction that stable work used to provide.',
+      blanks: [
+        { choices: ['industrial', 'traditional', 'agricultural', 'local'], answer: 0, why: '第2段落 It was only with the growth of industrial economies ～。' },
+        { choices: ['predictable', 'expensive', 'difficult', 'popular'], answer: 0, why: '第3段落 Careers are becoming less predictable。' },
+        { choices: ['community', 'income', 'technology', 'education'], answer: 0, why: '第5段落 Jobs used to provide not only a role but also a community of colleagues ～。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、仕事と自己像の強い結びつきは、人類の歴史を通じてずっと続いてきた。', answer: false, why: '第2段落 Historically, however, the close link between work and identity is relatively recent。' },
+      { statement: '筆者によれば、職業そのものを何度も変える人が多くなっている。', answer: true, why: '第3段落 many people change not only employers but entire professions several times。' },
+      { statement: '筆者は、より多様な自己像は人を立ち直りやすくすると述べている。', answer: true, why: '第4段落 A more varied sense of self can also make people more resilient。' },
+      { statement: '筆者によれば、失業の影響は、収入を失うことだけで十分に説明できる。', answer: false, why: '第5段落 the loss of work affects well-being far more than the loss of income alone would predict。' },
+    ],
+    qa: [
+      { q: 'Which of the following best summarizes the passage?', choices: ['The link between job and identity, a product of industrial economies, is weakening, which brings both freedom and a risk of losing community and direction.', 'People should always choose jobs that give them the highest income.', 'Traditional societies valued work more than modern societies do.', 'Technology has made it impossible to find meaning outside paid work.'], answer: 0, why: '第2段落（結びつきは工業経済の産物）、第3段落（ゆるみつつある）、第4・5段落（利点と代償）をまとめたもの。' },
+      { q: 'What does research on unemployment suggest, according to the fifth paragraph?', choices: ['Work meets needs that are not purely economic.', 'Losing income is the only serious effect of losing a job.', 'Unemployed people are happier than workers.', 'Colleagues are less important than money.'], answer: 0, why: '第5段落 which suggests that work meets needs that are not purely economic。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
