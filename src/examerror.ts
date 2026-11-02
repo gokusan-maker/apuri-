@@ -4938,6 +4938,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Were it not for the bridge, the villagers [would have had to] cross the river by boat every day now.', choices: ['would have to', 'will have to', 'had had to', 'have to'], answer: 0, why: 'Were it not for ～ は今の事実の反対（仮定法過去）。now と合わせて帰結は would have to ＋原形。' },
     ],
   },
+  {
+    id: 'exam-fix-115',
+    title: '入試の誤文訂正〈115〉（共通テストレベル：比較の発展）',
+    points: ['as ～ as possible（できるだけ～）、the 最上級 ＋ of／in、比較級 than any other ＋単数名詞、No other ＋単数名詞 ～ 比較級 than、倍数 ＋ as ～ as、much ＋比較級、the 比較級 of the two（2つのうちの～なほう）、prefer A to B。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Mt. Fuji is higher than any other mountain in Japan.', ja: '富士山は日本のほかのどの山よりも高い。' }],
+    questions: [
+      { sentence: 'Please answer the questions as [quick as possibly].', choices: ['quickly as possible', 'quicker as possible', 'quickly as possibly', 'quick as possible'], answer: 0, why: 'answer を修飾する副詞 quickly と、as ～ as possible（できるだけ～）。' },
+      { sentence: 'This is the tallest building [of] the city.', choices: ['in', 'than', 'at', 'among of'], answer: 0, why: '場所・集団の中で「いちばん～」は in（数をくらべるときは of）。' },
+      { sentence: 'Tokyo is larger than any other [cities] in Japan.', choices: ['city', 'the cities', 'of the cities', 'a city'], answer: 0, why: 'than any other のあとは単数名詞。any other city。' },
+      { sentence: 'No other [students] in the class is as tall as Ken.', choices: ['student', 'the students', 'of the students', 'a student'], answer: 0, why: 'No other ＋単数名詞（is と一致）。No other student。' },
+      { sentence: 'This box is three times [heavier as] that one.', choices: ['as heavy as', 'heavy as', 'more heavier than', 'as heavier as'], answer: 0, why: '倍数 ＋ as 原級 as。three times as heavy as（three times heavier than も可）。' },
+      { sentence: 'The new phone is [very] cheaper than the old model.', choices: ['much', 'more', 'so', 'too'], answer: 0, why: '比較級を強めるのは much／far。very は使えない。' },
+      { sentence: 'Of the two brothers, Tom is [the tallest].', choices: ['the taller', 'taller than', 'the most tall', 'tallest'], answer: 0, why: '2人のうちの「背の高いほう」は the ＋比較級 of the two。the taller。' },
+      { sentence: 'I prefer tea [than] coffee in the morning.', choices: ['to', 'rather', 'from', 'over than'], answer: 0, why: 'prefer A to B（B より A を好む）。than は使わない。' },
+      { sentence: 'She is one of the [most famous singer] in the country.', choices: ['most famous singers', 'more famous singers', 'most famous singer of', 'famousest singers'], answer: 0, why: 'one of the 最上級 ＋ 複数名詞。' },
+      { sentence: 'The more you practice, [the best] you will become.', choices: ['the better', 'better', 'the more good', 'best'], answer: 0, why: 'The 比較級 ～, the 比較級 … 。the better。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
