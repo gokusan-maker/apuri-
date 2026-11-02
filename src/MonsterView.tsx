@@ -1803,6 +1803,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 44 L48 46" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'narcissusflycatcher')
+    return (
+      <g>
+        {/* 黄色いのどと、黄色いまゆ */}
+        <ellipse cx="50" cy="62" rx="10" ry="7" fill="#facc15" />
+        <path d="M37 40 L46 38" fill="none" stroke="#facc15" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
