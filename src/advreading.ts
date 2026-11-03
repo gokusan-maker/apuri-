@@ -29902,6 +29902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-imitation',
+    title: 'Imitation and Originality',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We tend to admire originality and to look down on imitation. A painter who copies the style of another, a writer whose phrases echo a famous author, or a student who repeats the opinions of a teacher is often thought to lack something essential, as though the worth of a person's work depended on its being entirely his or her own. Yet this attitude, however natural it may seem to us, is relatively recent in human history, and it may conceal the extent to which all creative achievement rests on the imitation of others.",
+      "Consider how any skill is first acquired. A child learns to speak not by inventing a language but by copying the sounds, words, and expressions of the people around it. Apprentices in traditional crafts spent years reproducing the techniques of their masters before they were permitted to work independently, and students of painting once filled notebooks with careful copies of earlier works. In each case, imitation was not regarded as a failure of creativity but as the necessary path toward it, the means by which a learner absorbed the accumulated knowledge of a tradition.",
+      "Even those whom we celebrate as great innovators did not create from nothing. The most original scientists built upon the theories of their predecessors, and the most daring artists began by mastering the conventions they would later break. ( A ) they eventually departed from the models they had studied, it was their deep familiarity with those models that allowed them to see what had not yet been done. Originality, from this perspective, is not the opposite of imitation but something that grows out of it, much as a tree grows from soil it did not itself produce.",
+      "Why, then, has imitation acquired such a poor reputation? Part of the answer lies in a modern conception of the individual as a unique self whose value lies in what distinguishes it from others. If what matters most about a person is what is peculiar to him or her, then whatever is borrowed seems to diminish that person's worth. Legal ideas of intellectual property, which treat ideas and expressions as things that can be owned, have reinforced this view by encouraging us to see copying primarily as a kind of theft.",
+      "This is not to say that every form of imitation deserves praise. To present another person's work as one's own is a form of dishonesty, and to repeat the opinions of others without ever examining them is a failure of thought. The difference lies not in whether one imitates but in how. Mechanical copying, which reproduces the surface of a model without understanding it, leaves the imitator unchanged. Thoughtful imitation, by contrast, requires the learner to grasp why a model works as it does, and in doing so transforms the learner's own abilities.",
+      "There is, moreover, a sense in which imitation is a form of respect and even of conversation across time. When a poet adopts the form used by an earlier poet, or a composer develops a theme invented by another, the new work enters into a dialogue with the old, honoring it while also responding to it. Traditions survive precisely because each generation imitates the one before it, not slavishly but with the small variations that gradually move a culture forward. Without imitation there could be no tradition, and without tradition there would be little for originality to work upon.",
+      "Perhaps, then, our admiration for originality should be balanced by a greater appreciation of the role that imitation plays in all learning and creation. To recognize that we are shaped by those who came before us need not diminish our sense of individuality; it may instead deepen it, by reminding us that individuality is achieved through a long engagement with others rather than in isolation from them. The question worth asking is not whether a work borrows from others, since all works do, but whether it has made what it borrowed into something that speaks in a voice of its own.",
+    ],
+    ja: [
+      '私たちは独創性を称賛し、模倣を見下しがちである。他人の画風をまねる画家や、言いまわしが有名な作家を思わせる書き手や、先生の意見をくり返す生徒は、何か本質的なものを欠いていると思われることが多い。まるで人の作品の価値が、それが完全にその人自身のものであることにかかっているかのようである。しかしこの態度は、私たちにはどれほど自然に思われようとも、人類の歴史では比較的新しいものであり、あらゆる創造的な業績がどれほど他者の模倣にもとづいているかをおおいかくしているのかもしれない。',
+      'どんな技能もまずどのように身につけられるかを考えてみよう。子どもは言語を発明することによってではなく、まわりの人々の音やことばや表現をまねることによって話すことを学ぶ。伝統的な手仕事の徒弟は、ひとりで仕事をすることがゆるされる前に、何年も親方の技術を再現してすごし、絵を学ぶ者はかつて以前の作品の念入りな模写でノートをうめた。どの場合も、模倣は創造性の失敗とはみなされず、創造性へ向かう必要な道、つまり学ぶ者が伝統に積み重ねられた知識を吸収する手段とみなされていた。',
+      '偉大な革新者としてたたえられる人々でさえ、無から創造したわけではない。最も独創的な科学者は先人の理論の上にきずき、最も大胆な芸術家は、のちに破ることになる約束ごとを身につけることから始めた。彼らは最終的には学んだ手本からはなれたが、まだなされていないことを見ることを可能にしたのは、その手本を深く知っていたことであった。この見方からすれば、独創性は模倣の反対ではなく、それから育つものであり、それはちょうど木が自分で作ったのではない土から育つようなものである。',
+      'それなら、なぜ模倣はこれほど評判が悪くなったのか。答えの一部は、個人を、他者と区別されるものに価値がある唯一の自己とみなす近代的な考え方にある。人について最も重要なのがその人に特有のものであるなら、借りたものは何であれその人の価値をへらすように思われる。考えや表現を所有できるものとしてあつかう知的財産の法的な考え方は、模倣を主に一種の盗みとみなすよう私たちをうながすことで、この見方を強めてきた。',
+      'これは、あらゆる形の模倣が称賛に値すると言っているのではない。他人の作品を自分のものとして示すことは一種の不正直であり、他人の意見を一度も吟味せずにくり返すことは考えることの失敗である。ちがいは、模倣するかどうかではなく、どう模倣するかにある。手本を理解せずにその表面を再現する機械的な模倣は、模倣する者を変えないままにする。それに対して、考えぬかれた模倣は、学ぶ者に手本がなぜそのようにうまくいくのかをつかむことを求め、そうすることで学ぶ者自身の力を変えるのである。',
+      'そのうえ、模倣が一種の敬意であり、時をこえた対話でさえあるという意味もある。詩人が以前の詩人の用いた形式をとり入れたり、作曲家が他人の考えた主題を発展させたりするとき、新しい作品は古い作品との対話に入り、それに敬意を表すと同時にそれに応答する。伝統が生きのびるのは、まさに各世代が前の世代を、奴隷のようにではなく、文化を少しずつ前へ進める小さな変化をともないながら模倣するからである。模倣がなければ伝統はありえず、伝統がなければ独創性がはたらきかけるものはほとんどないだろう。',
+      'それなら、独創性への称賛は、あらゆる学びと創造において模倣が果たす役割をもっと認めることでつりあいをとるべきなのかもしれない。私たちが先人に形づくられていると認めることは、自分の個性の感覚をへらす必要はない。むしろそれは、個性が他者から切りはなされることによってではなく、他者との長いかかわりを通じて達成されることを思い出させることで、その感覚を深めるかもしれない。問う価値があるのは、作品が他者から借りているかどうかではなく（すべての作品は借りているのだから）、借りたものを自分自身の声で語る何かに変えたかどうかなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「最終的には手本からはなれたが、それを可能にしたのは手本を深く知っていたことだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、独創性を称賛し模倣を見下す態度は、人類の歴史では比較的新しい。', answer: true, why: '第1段落 is relatively recent in human history。' },
+      { statement: '筆者によれば、伝統的な手仕事の徒弟は、最初からひとりで仕事をすることがゆるされていた。', answer: false, why: '第2段落 before they were permitted to work independently。' },
+      { statement: '筆者は、あらゆる形の模倣が称賛に値すると主張している。', answer: false, why: '第5段落 This is not to say that every form of imitation deserves praise。' },
+      { statement: '筆者によれば、模倣がなければ伝統はありえない。', answer: true, why: '第6段落 Without imitation there could be no tradition。' },
+    ],
+    qa: [
+      { q: 'How does a child learn to speak, according to the second paragraph?', choices: ['By copying the people around it.', 'By inventing a new language.', 'By reading grammar books.', 'By staying silent for years.'], answer: 0, why: '第2段落 by copying the sounds, words, and expressions of the people around it。' },
+      { q: 'What distinguishes thoughtful imitation from mechanical copying?', choices: ['It requires grasping why a model works.', 'It reproduces only the surface.', 'It is always faster.', 'It never changes the learner.'], answer: 0, why: '第5段落 requires the learner to grasp why a model works as it does。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
