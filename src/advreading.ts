@@ -28060,6 +28060,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-boredom',
+    title: 'What Boredom Tells Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few experiences are as universally disliked as boredom. We speak of being bored to death, and we go to considerable lengths to avoid the condition, filling waiting rooms with screens, carrying devices that can entertain us at any moment, and treating any period without stimulation as time wasted. In one well-known psychological experiment, many participants who were left alone in an empty room for a short time chose to give themselves mild electric shocks rather than sit quietly with their own thoughts. Yet the very strength of our aversion to boredom suggests that it may be worth asking what boredom actually is and whether it serves any purpose.",
+      "Boredom is often described as the feeling that arises when we have nothing to do, but this description is not quite accurate. People can be bored while busy, as when they perform a repetitive task at work, and they can be content while doing nothing at all, as when they rest after a long walk. Boredom seems to arise not from the absence of activity but from the absence of meaning, from a sense that what we are doing, or failing to do, does not engage our interests or connect with anything that matters to us.",
+      "If this is correct, then boredom may function as a kind of signal, comparable to the pain that warns us of physical injury. ( A ) pain tells us that something is wrong with the body, boredom may tell us that something is wrong with the way we are spending our time, urging us to seek activities that are more challenging or more meaningful. Seen in this light, the discomfort of boredom is not simply an evil to be eliminated but an invitation to change direction.",
+      "This interpretation helps to explain why some thinkers have regarded boredom as a source of creativity. When the mind is not occupied by external demands, it begins to generate its own material, wandering among memories, possibilities, and half-formed ideas. Children who are left with nothing to do often invent games of remarkable complexity, and adults who allow themselves periods of idleness sometimes find that solutions to problems appear without being sought. The empty time that boredom creates may thus be the space in which new ideas take shape.",
+      "The danger of modern life, from this perspective, is not that we are too often bored but that we have become too skilled at escaping boredom before it can do its work. A person who reaches for a phone at the first sign of restlessness never discovers what the restlessness might have led to. The constant availability of entertainment may relieve the discomfort of boredom while depriving us of its benefits, much as a medicine that removed all pain would leave us unable to notice when we had been injured.",
+      "It would be romantic, however, to claim that boredom is always productive. Prolonged boredom, especially when people have no power to change their circumstances, can lead to despair, and it has been linked to harmful behaviors among those who feel trapped in lives without purpose. Boredom can serve as a useful signal only when people have the freedom and the resources to respond to it, and a society that leaves many of its members without meaningful work or activity cannot simply advise them to find value in their boredom.",
+      "The lesson, then, is not that we should seek boredom for its own sake but that we should be slower to flee from it. To tolerate a period of emptiness, to listen to what it suggests about our desires and our way of life, may be one of the less obvious skills that a meaningful life requires.",
+    ],
+    ja: [
+      'たいくつほど、だれからもきらわれる経験はほとんどない。私たちは死ぬほどたいくつだと言い、その状態をさけるためにかなりの手間をかける。待合室を画面でうめ、いつでも楽しませてくれる機器を持ち歩き、刺激のない時間はむだな時間としてあつかうのである。よく知られたある心理学の実験では、短い時間何もない部屋に一人で残された参加者の多くが、自分の考えとともに静かにすわっているよりも、自分に弱い電気ショックをあたえるほうを選んだ。しかし、たいくつへの私たちの反感のまさにその強さは、たいくつとは実際何であり、それが何かの役に立っているのかを問う価値があることを示している。',
+      'たいくつはしばしば、することが何もないときに生じる感情だと説明されるが、この説明は正確とは言えない。人は仕事でくり返しの作業をするときのように、いそがしくてもたいくつすることがあるし、長い散歩のあとで休むときのように、何もしていなくても満ち足りていることがある。たいくつは活動がないことからではなく、意味がないことから生じるように思われる。つまり、自分がしていること、あるいはしそこねていることが、自分の興味をひかず、自分にとって大切な何ともつながっていないという感覚から生じるのである。',
+      'もしこれが正しければ、たいくつは一種の信号として、体のけがを知らせる痛みにくらべられるようなものとしてはたらいているのかもしれない。痛みが体の何かがおかしいことを教えるのと同じように、たいくつは時間のすごし方の何かがおかしいことを教え、もっとやりがいのある、あるいはもっと意味のある活動を求めるようせき立てているのかもしれない。このように見れば、たいくつの不快さは単に取りのぞくべき悪ではなく、方向を変えるようにという招待なのである。',
+      'この解釈は、なぜたいくつを創造性の源とみなした思想家がいたのかを説明するのに役立つ。心が外からの要求にしめられていないとき、心は記憶や可能性や生まれかけの考えのあいだをさまよいながら、自分で材料を生み出しはじめる。することが何もないまま残された子どもは、しばしばおどろくほど複雑な遊びを考え出すし、ぼんやりする時間を自分にゆるす大人は、問題の解決策が求めもしないのにうかぶことに気づくことがある。このように、たいくつが作り出す空白の時間は、新しい考えが形をとる空間なのかもしれない。',
+      'この見方からすれば、現代の生活の危険は、私たちがあまりにたびたびたいくつすることではなく、たいくつがそのはたらきをする前に、それからのがれるのがあまりにうまくなってしまったことにある。落ち着かなさのきざしが見えたとたんに電話に手をのばす人は、その落ち着かなさが何につながったかもしれないかを決して知らない。いつでも楽しみが手に入ることは、たいくつの不快さをやわらげながら、その恩恵を私たちからうばっているのかもしれない。それは、すべての痛みを取りのぞく薬が、けがをしたときに気づけなくしてしまうのとよく似ている。',
+      'しかし、たいくつはいつも生産的だと主張するのは、ロマンチックにすぎるだろう。長引くたいくつは、とくに人々が自分の状況を変える力をもたないときには絶望につながることがあり、目的のない生活に閉じこめられていると感じる人々のあいだでは、害のある行動と結びつけられてきた。たいくつが役に立つ信号になりうるのは、人々がそれにこたえる自由と手段をもっているときだけであり、多くの構成員を意味のある仕事や活動のないままにしている社会は、彼らにたいくつの中に価値を見いだせと助言するだけですませることはできない。',
+      'それゆえ教訓は、たいくつをそれ自体のために求めるべきだということではなく、それからのがれるのをもっとゆっくりにすべきだということである。空白の時間にたえ、それが自分の欲求や生き方について示していることに耳をかたむけることは、意味のある人生が必要とする、目立たない技能の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Just as', 'Unless', 'Although', 'Until'], answer: 0, why: '「痛みが体の異常を教えるのと同じように、たいくつは時間のすごし方の異常を教える」という Just as。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、人はいそがしくてもたいくつすることがある。', answer: true, why: '第2段落 People can be bored while busy。' },
+      { statement: '筆者によれば、たいくつは活動がないことから生じる。', answer: false, why: '第2段落 not from the absence of activity but from the absence of meaning。' },
+      { statement: '筆者によれば、現代の危険は、たいくつがはたらく前にそれからのがれてしまうことにある。', answer: true, why: '第5段落 we have become too skilled at escaping boredom before it can do its work。' },
+      { statement: '筆者は、たいくつはいつも生産的だと考えている。', answer: false, why: '第6段落 It would be romantic, however, to claim that boredom is always productive。' },
+    ],
+    qa: [
+      { q: 'What did many participants in the experiment choose to do?', choices: ['Give themselves mild electric shocks rather than sit quietly.', 'Leave the room immediately.', 'Read a book they had brought.', 'Talk to the researchers.'], answer: 0, why: '第1段落 chose to give themselves mild electric shocks rather than sit quietly with their own thoughts。' },
+      { q: 'When can boredom serve as a useful signal, according to the sixth paragraph?', choices: ['Only when people have the freedom and resources to respond to it.', 'Only when people are very busy.', 'Whenever people use their phones.', 'Only in childhood.'], answer: 0, why: '第6段落 only when people have the freedom and the resources to respond to it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
