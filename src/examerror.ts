@@ -3746,6 +3746,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It was (B) because the rain (C) that (D) the game was cancelled.', choices: ['(A) It was', '(B) because the rain', '(C) that', '(D) the game was cancelled'], answer: 1, why: '後ろが名詞なので because of the rain。' },
     ],
   },
+  {
+    id: 'exam-error-asas-todai',
+    title: '入試の正誤問題〈158〉（東大レベル：英作文の原級比較と倍数表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'as ～ as … の間は原級（形容詞・副詞のもとの形）。倍数は twice／three times／half＋as ～ as …（than とまぜない）。not so（as）～ as …「…ほど～ない」。as ～ as possible「できるだけ～」。the same ～ as …（like ではない）。比べるものをそろえる（the population of Tokyo と that of this town）。',
+    ],
+    examples: [
+      { en: 'This box is twice as heavy as that one.', ja: 'この箱はあの箱の2倍重い。' },
+      { en: 'This river is not so long as that one.', ja: 'この川はあの川ほど長くない。' },
+    ],
+    questions: [
+      { sentence: 'This box is (A) twice (B) as heavy (C) than (D) that one.', choices: ['(A) twice', '(B) as heavy', '(C) than', '(D) that one'], answer: 2, why: '倍数表現は twice as ～ as …。than ではなく as。' },
+      { sentence: 'My room is (A) three times (B) larger as (C) yours (D) is.', choices: ['(A) three times', '(B) larger as', '(C) yours', '(D) is'], answer: 1, why: 'three times as large as（または three times larger than）。larger as はない。' },
+      { sentence: 'She has (A) as (B) many books (C) as (D) me have.', choices: ['(A) as', '(B) many books', '(C) as', '(D) me have'], answer: 3, why: 'as のあとに主語＋動詞を続けるなら I have。' },
+      { sentence: 'This river is (A) not so (B) longer (C) as (D) that one.', choices: ['(A) not so', '(B) longer', '(C) as', '(D) that one'], answer: 1, why: 'not so ～ as の間は原級。long。' },
+      { sentence: '(A) He runs (B) as fast (C) as (D) possibly.', choices: ['(A) He runs', '(B) as fast', '(C) as', '(D) possibly'], answer: 3, why: 'as ～ as possible「できるだけ～」。possible。' },
+      { sentence: 'The population of Tokyo is (A) about ten times (B) as large as (C) those of (D) this town.', choices: ['(A) about ten times', '(B) as large as', '(C) those of', '(D) this town'], answer: 2, why: 'population は単数なので that of。' },
+      { sentence: '(A) Twice as more people (B) came (C) to the party (D) as last year.', choices: ['(A) Twice as more people', '(B) came', '(C) to the party', '(D) as last year'], answer: 0, why: '倍数表現の間は原級。Twice as many people。' },
+      { sentence: 'I have (A) half (B) as (C) much money (D) than you.', choices: ['(A) half', '(B) as', '(C) much money', '(D) than you'], answer: 3, why: 'half as ～ as …。than ではなく as you。' },
+      { sentence: '(A) Her bag is (B) the same color (C) like (D) mine.', choices: ['(A) Her bag is', '(B) the same color', '(C) like', '(D) mine'], answer: 2, why: 'the same ～ as …。like ではなく as。' },
+      { sentence: '(A) No so many (B) students (C) came as (D) we expected.', choices: ['(A) No so many', '(B) students', '(C) came as', '(D) we expected'], answer: 0, why: 'not so ～ as …「…ほど～ない」。Not so many。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
