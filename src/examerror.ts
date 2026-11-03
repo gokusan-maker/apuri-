@@ -6282,6 +6282,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The children were [confusing] by the rules.', choices: ['confused', 'confuse', 'confuses', 'confusingly'], answer: 0, why: '子どもたちは混乱させられた側なので confused。by があるのも手がかり。' },
     ],
   },
+  {
+    id: 'exam-fix-147',
+    title: '入試の誤文訂正〈147〉（東大レベル：英作文の自動詞と他動詞）',
+    points: ['discuss（～について話し合う）・reach（～に着く）・marry（～と結婚する）・mention（～について言う）・enter（～に入る）・approach（～に近づく）・resemble（～に似ている）・answer（～に答える）は他動詞なので、すぐ後ろに目的語を置き、about・to・with・into などの前置詞をつけない。反対に arrive は自動詞なので arrive at／in ～、explain は「人に」説明するとき explain to 人。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'We discussed the plan and reached the station at noon.', ja: '私たちは計画について話し合い、正午に駅に着いた。' }],
+    questions: [
+      { sentence: 'We [discussed about] the plan for hours.', choices: ['discussed', 'talked', 'discussed on', 'spoke'], answer: 0, why: 'discuss は他動詞なので about は要らない。discussed the plan。' },
+      { sentence: 'We [reached to] the station at noon.', choices: ['reached', 'arrived', 'got', 'came'], answer: 0, why: 'reach は他動詞なので to は要らない。arrive・get・come なら at／to が必要。' },
+      { sentence: 'She [married with] a doctor.', choices: ['married', 'got married', 'married to', 'marry with'], answer: 0, why: 'marry は他動詞。married a doctor（got married to a doctor も可）。' },
+      { sentence: 'He [mentioned about] the problem.', choices: ['mentioned', 'talked', 'mentioned of', 'referred'], answer: 0, why: 'mention は他動詞なので about は要らない。' },
+      { sentence: 'Please [enter into] the room quietly.', choices: ['enter', 'go', 'come', 'get'], answer: 0, why: '「部屋に入る」は enter the room。into は要らない。' },
+      { sentence: 'Let me [explain you] the rules.', choices: ['explain to you', 'tell to you', 'say you', 'speak you'], answer: 0, why: 'explain は「人に」を直接とれない。explain the rules to you／explain to you the rules。' },
+      { sentence: 'We [approached to] the castle.', choices: ['approached', 'arrived', 'came', 'got'], answer: 0, why: 'approach は他動詞なので to は要らない。' },
+      { sentence: 'He [resembles to] his father.', choices: ['resembles', 'looks', 'is resembling', 'resemble'], answer: 0, why: 'resemble は他動詞で、進行形にもしない。resembles his father。' },
+      { sentence: 'Please [answer to] my question.', choices: ['answer', 'reply', 'respond', 'say'], answer: 0, why: 'answer は他動詞。reply・respond なら to が必要。' },
+      { sentence: 'They [arrived] the airport late.', choices: ['arrived at', 'reached at', 'got', 'arrived to'], answer: 0, why: 'arrive は自動詞なので arrive at（場所）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
