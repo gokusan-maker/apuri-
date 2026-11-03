@@ -28578,6 +28578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-free-university',
+    title: 'Who Should Pay for University?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, university education is free or nearly free for students, while in others students pay substantial fees and often graduate with large debts. The question of who should pay for higher education has become one of the most contested issues in educational policy, because it touches on fundamental questions about fairness, opportunity, and the purpose of universities themselves. Should higher education be treated as a public good, paid for by society as a whole, or as a private investment, paid for mainly by those who benefit from it?",
+      "The case for free university education rests largely on the principle of equal opportunity. If students must pay high fees, those from wealthy families can attend university with little difficulty, while talented students from poorer backgrounds may be discouraged by the prospect of debt. A society that allows access to higher education to depend on family wealth, supporters argue, wastes the abilities of many of its young people and reinforces existing inequalities from one generation to the next.",
+      "Supporters also point out that the benefits of higher education are not limited to the individuals who receive it. Societies need doctors, teachers, engineers, and scientists, and well-educated citizens tend to contribute more in taxes, participate more actively in civic life, and rely less on public assistance. Since everyone gains from a well-educated population, it seems reasonable that everyone should share the cost through general taxation.",
+      "Critics, however, argue that free tuition may not achieve its intended goals. Research in several countries suggests that the main obstacles preventing students from poorer families from attending university are not fees alone but differences in academic preparation that begin much earlier, in primary and secondary school. ( A ) these earlier inequalities are addressed, removing fees may mainly benefit students from middle- and upper-income families, who would have attended university in any case and who now receive their education at public expense.",
+      "There is also the question of cost. Providing free education to every student requires large amounts of public money, which must come either from higher taxes or from reductions in other services. Some critics worry that governments facing financial pressure may respond by limiting the number of places available or by allowing the quality of teaching to decline, so that free education becomes less valuable than the education it replaced.",
+      "Between these positions lie various compromises. Some countries charge fees but allow students to repay them only after graduation, and only if their income exceeds a certain level, so that no one is required to pay before they can afford to. Others provide free tuition but limit the number of places or require students to meet academic standards. Still others offer generous grants to students from low-income families while charging fees to those who can afford them. Such mixed systems attempt to keep the door open to everyone while ensuring that public money is directed to those who need it most, although they can be complicated to administer and may discourage students who do not understand how the rules work.",
+      "Each of these arrangements reflects a different balance between competing values: equality of access, efficient use of public money, and the recognition that higher education benefits both individuals and society. There is no single correct answer, but the debate forces societies to consider what they believe universities are for, and who should bear responsibility for ensuring that their benefits are widely shared. As economies change and an increasing proportion of jobs require advanced skills, these questions are likely to become more pressing rather than less, and the choices societies make about paying for universities may shape the opportunities available to young people for decades to come.",
+    ],
+    ja: [
+      'ある国々では大学教育は学生にとって無料かほぼ無料だが、別の国々では学生はかなりの学費をはらい、しばしば多額の借金をかかえて卒業する。高等教育の費用をだれがはらうべきかという問題は、教育政策で最も意見の分かれる問題の一つになった。それは公平さや機会や、大学そのものの目的についての根本的な問いにかかわるからである。高等教育は、社会全体がはらう公共の財としてあつかわれるべきか、それとも主にその恩恵を受ける人がはらう個人の投資としてあつかわれるべきなのか。',
+      '大学教育を無料にすべきだという主張は、主に機会の平等という原則にもとづいている。学生が高い学費をはらわなければならないなら、豊かな家庭の学生はほとんど苦労なく大学に通えるが、貧しい環境の才能ある学生は借金の見通しのために意欲をくじかれるかもしれない。高等教育を受けられるかどうかが家庭の富しだいである社会は、多くの若者の能力をむだにし、すでにある不平等をある世代から次の世代へと強めてしまう、と支持する人々は主張する。',
+      '支持する人々はまた、高等教育の恩恵はそれを受ける個人に限られないと指摘する。社会には医師や教師や技術者や科学者が必要であり、よく教育を受けた市民は、より多くの税金をはらい、市民生活により積極的に参加し、公的な援助にたよることが少ない傾向がある。よく教育を受けた人々からだれもが恩恵を受けるのだから、一般の税を通してだれもが費用を分け合うのは筋が通っているように思われる。',
+      'しかし批判する人々は、学費の無料化は意図した目標を達成しないかもしれないと主張する。いくつかの国の研究によれば、貧しい家庭の学生が大学に通うのをさまたげている主な障害は、学費だけではなく、ずっと早く、小学校や中学・高校で始まる学力の準備のちがいである。こうしたより早い時期の不平等に対処しないかぎり、学費をなくすことは主に、どのみち大学に通っていたであろう中・高所得の家庭の学生のためになり、彼らが公の費用で教育を受けることになるかもしれない。',
+      '費用の問題もある。すべての学生に無料の教育を提供するには大量の公的資金が必要であり、それは増税か、ほかのサービスの削減によってまかなわなければならない。財政の圧迫に直面した政府が、入学できる人数を制限したり、授業の質が落ちるのを放っておいたりすることで対応し、無料の教育が、それが取って代わった教育よりも価値の低いものになってしまうことを心配する批判者もいる。',
+      'これらの立場のあいだには、さまざまな妥協案がある。学費をとるが、卒業後に、しかも収入が一定の水準をこえた場合にだけ返済すればよいことにして、だれもはらえるようになる前にはらう必要がないようにしている国もある。学費を無料にするが、人数を制限したり、学生に学力の基準を満たすよう求めたりする国もある。さらに、収入の少ない家庭の学生には手厚い給付をしつつ、はらう余裕のある人からは学費をとる国もある。こうした組み合わせの仕組みは、公的資金が最も必要とする人々に向けられるようにしながら、すべての人に門を開いておこうとするものだが、運用が複雑になりうるし、決まりのしくみを理解していない学生の意欲をくじいてしまうかもしれない。',
+      'これらの仕組みはそれぞれ、対立する価値のあいだのちがったつりあいを反映している。つまり、教育を受ける機会の平等、公的資金の効率的な使い方、そして高等教育が個人と社会の両方に恩恵をもたらすという認識である。ただ一つの正しい答えはないが、この議論は、社会に、大学は何のためにあると考えているのか、そしてその恩恵が広く分かち合われるようにする責任をだれが負うべきかを考えさせるのである。経済が変わり、高度な技能を必要とする仕事の割合がふえるにつれて、こうした問いはさらに差しせまったものになりそうであり、社会が大学の費用をどうはらうかについて下す選択は、これから何十年も若者に開かれる機会を形づくるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Since', 'Once'], answer: 0, why: '「より早い時期の不平等に対処しないかぎり、学費をなくすことは主に中・高所得の学生のためになる」という条件の Unless。' },
+    ],
+    summary: {
+      text: 'Supporters of free university argue that it ensures equal ( 1 ) and that society as a whole benefits from educated citizens. Critics say the main obstacles begin earlier in school, and that free tuition is very ( 2 ). Many countries use compromises, such as repaying fees only when income is high enough or giving ( 3 ) to low-income students.',
+      blanks: [
+        { choices: ['opportunity', 'salaries', 'holidays', 'weather'], answer: 0, why: '第2段落 rests largely on the principle of equal opportunity。' },
+        { choices: ['costly', 'popular', 'simple', 'old'], answer: 0, why: '第5段落 There is also the question of cost ... large amounts of public money。' },
+        { choices: ['grants', 'exams', 'fines', 'uniforms'], answer: 0, why: '第6段落 offer generous grants to students from low-income families。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によれば、高い学費は貧しい環境の才能ある学生の意欲をくじくかもしれない。', answer: true, why: '第2段落 talented students from poorer backgrounds may be discouraged by the prospect of debt。' },
+      { statement: '研究によれば、貧しい家庭の学生にとっての障害は学費だけである。', answer: false, why: '第4段落 are not fees alone but differences in academic preparation。' },
+      { statement: '卒業後に収入が一定以上になったときだけ学費を返済する仕組みの国がある。', answer: true, why: '第6段落 allow students to repay them only after graduation, and only if their income exceeds a certain level。' },
+      { statement: '筆者は、この問題にはただ一つの正しい答えがあると考えている。', answer: false, why: '第7段落 There is no single correct answer。' },
+    ],
+    qa: [
+      { q: 'Why do supporters say everyone should share the cost of higher education?', choices: ['Because everyone gains from a well-educated population.', 'Because only wealthy people attend university.', 'Because universities are too expensive to build.', 'Because students never pay taxes.'], answer: 0, why: '第3段落 Since everyone gains from a well-educated population ...。' },
+      { q: 'What might governments under financial pressure do, according to the fifth paragraph?', choices: ['Limit the number of places or allow teaching quality to decline.', 'Build many new universities.', 'Give every student a large salary.', 'Abolish all taxes.'], answer: 0, why: '第5段落 limiting the number of places available or by allowing the quality of teaching to decline。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
