@@ -2087,3 +2087,10 @@ it('正誤問題〈152〉：東大レベル 英作文の現在完了と過去形
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) have visited')
 })
+
+it('誤文訂正〈146〉：京大レベル 感情を表す分詞形容詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-146')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('interesting')
+})

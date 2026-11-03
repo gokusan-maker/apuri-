@@ -6240,6 +6240,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Life in the city is [much more busy] than in the country.', choices: ['much busier', 'much busy', 'more busier', 'very busier'], answer: 0, why: 'busy の比較級は busier。much で強める。' },
     ],
   },
+  {
+    id: 'exam-fix-146',
+    title: '入試の誤文訂正〈146〉（京大レベル：感情を表す分詞形容詞）',
+    points: ['感情を表す動詞（interest・surprise・bore・excite・disappoint・tire・amaze・shock・confuse）から作る形容詞は、「人の気持ちを～させる（もの・こと）」なら -ing（interesting・boring）、「人が～させられて（感じて）いる」なら -ed（interested・bored）。主語がものか人か、だけでなく「感じさせる側か、感じる側か」で決める。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The movie was interesting, so I was interested in it.', ja: 'その映画はおもしろかったので、私は興味をもった。' }],
+    questions: [
+      { sentence: 'The movie was very [interested].', choices: ['interesting', 'interest', 'interestedly', 'interests'], answer: 0, why: '映画は人に興味をもたせる側なので interesting。' },
+      { sentence: 'I was [surprising] at the news.', choices: ['surprised', 'surprise', 'surprisingly', 'surprises'], answer: 0, why: '私はおどろかされた側なので surprised。be surprised at。' },
+      { sentence: 'This book is [bored].', choices: ['boring', 'bore', 'boringly', 'bores'], answer: 0, why: '本は人をたいくつさせる側なので boring。' },
+      { sentence: 'She felt [exciting] about the trip.', choices: ['excited', 'excite', 'excitement', 'excitingly'], answer: 0, why: '彼女はわくわくさせられている側なので excited。' },
+      { sentence: 'The results were [disappointed].', choices: ['disappointing', 'disappoint', 'disappointment', 'disappoints'], answer: 0, why: '結果は人をがっかりさせる側なので disappointing。' },
+      { sentence: 'We were [tiring] after the long walk.', choices: ['tired', 'tire', 'tires', 'tiringly'], answer: 0, why: '私たちは疲れさせられた側なので tired。' },
+      { sentence: 'His speech was [amazed].', choices: ['amazing', 'amaze', 'amazes', 'amazement'], answer: 0, why: 'スピーチは人をおどろかせる側なので amazing。' },
+      { sentence: 'Are you [interesting] in science?', choices: ['interested', 'interest', 'interests', 'interestingly'], answer: 0, why: '「～に興味がある」は be interested in。' },
+      { sentence: 'It was a [shocked] experience.', choices: ['shocking', 'shock', 'shocks', 'shockingly'], answer: 0, why: '経験は人にショックをあたえる側なので shocking。' },
+      { sentence: 'The children were [confusing] by the rules.', choices: ['confused', 'confuse', 'confuses', 'confusingly'], answer: 0, why: '子どもたちは混乱させられた側なので confused。by があるのも手がかり。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
