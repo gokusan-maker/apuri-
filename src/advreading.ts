@@ -28016,6 +28016,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-online-reviews',
+    title: 'Can We Trust the Stars?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Before buying a product, booking a hotel, or choosing a restaurant, many people now consult the opinions of strangers. Online reviews and star ratings have become one of the most influential sources of information in modern economic life, and studies suggest that a small difference in a business's average rating can produce a large difference in its income. In principle, such reviews seem to offer an ideal solution to an old problem: how consumers can judge the quality of goods and services before they have experienced them for themselves.",
+      "Before the age of the internet, people relied mainly on advertising, on the advice of friends and family, and on the opinions of professional critics. Each of these sources had obvious limitations. Advertising was written by the sellers themselves and could hardly be trusted to point out weaknesses; friends could offer only a few personal experiences; and critics, however expert, might have tastes very different from those of ordinary customers. Online reviews appeared to combine the honesty of friends with the breadth of experience that no single person could possess.",
+      "In practice, however, the information provided by reviews is less reliable than it seems. One problem is that the people who write reviews are not a representative sample of all customers. Those who had an extremely good or extremely bad experience are much more likely to write about it than those whose experience was merely satisfactory, so that ratings tend to cluster at the extremes. ( A ) most customers remain silent, the picture created by reviews may exaggerate both the strengths and the weaknesses of what is being judged.",
+      "A more serious problem is deliberate deception. Because ratings have such a strong effect on sales, some businesses have been found to pay for positive reviews of their own products or negative reviews of their competitors. Platforms attempt to detect and remove such reviews, but the methods used by those who write them have become increasingly sophisticated, and it is often impossible for an ordinary reader to tell the difference between a genuine opinion and one that has been purchased.",
+      "Reviews may also affect the businesses they describe in ways that are not always beneficial. A restaurant that depends on its ratings may feel pressure to avoid anything unusual that might displease some customers, choosing safe and familiar dishes over experimental ones. Small businesses may suffer disproportionately from a few unfair reviews, while large companies with thousands of ratings are less affected by any single opinion. In this way, a system designed to reward quality may sometimes reward caution and size instead.",
+      "None of this means that online reviews are worthless. Taken together, a large number of reviews can still provide useful information, especially when readers pay attention not only to average ratings but also to the specific details that reviewers mention. A complaint that a hotel is noisy, repeated by many different guests, is more informative than a single angry comment, and a review that describes particular experiences is generally more trustworthy than one that offers only praise or blame.",
+      "The rise of online reviews thus illustrates a broader feature of life in the information age. We have access to more opinions than ever before, but the sheer quantity of information does not by itself make us better informed. What matters is our ability to judge where information comes from, why it was produced, and how far it can be trusted. In this sense, the skills needed to read online reviews wisely are the same skills needed to read news, advertisements, and political arguments, and learning to use reviews well may be a small but valuable part of learning to think for oneself in a world full of competing voices.",
+    ],
+    ja: [
+      '製品を買ったり、ホテルを予約したり、レストランを選んだりする前に、今では多くの人が知らない人々の意見を参考にする。ネットのレビューや星の評価は、現代の経済生活で最も影響力のある情報源の一つになり、研究によれば、店の平均評価のわずかなちがいが、その収入の大きなちがいを生むことがある。原理的には、こうしたレビューは昔からの問題、つまり消費者が自分で経験する前に商品やサービスの質をどう判断できるかという問題に、理想的な解決策をあたえるように思われる。',
+      'インターネットの時代より前は、人々は主に広告や、友人や家族の助言や、専門の批評家の意見にたよっていた。これらの情報源には、それぞれ明らかな限界があった。広告は売り手自身が書いたもので、弱点を指摘してくれるとはとても信じられなかった。友人は少しの個人的な経験しか伝えられなかった。そして批評家は、どれほど専門家であっても、ふつうの客とはまったくちがう好みをもっているかもしれなかった。ネットのレビューは、友人の正直さと、一人の人間にはもちえない経験の幅広さとを組み合わせたもののように思われた。',
+      'しかし実際には、レビューがあたえる情報は、見かけほど信頼できない。一つの問題は、レビューを書く人々が、客全体を代表する標本ではないということである。きわめてよい経験やきわめて悪い経験をした人は、経験がそこそこ満足できたにすぎない人よりもそれについて書く可能性がずっと高いので、評価は両極端に集まりやすい。ほとんどの客はだまっているので、レビューが作り出すすがたは、評価されているものの長所も短所も大げさに見せているかもしれない。',
+      'より深刻な問題は、意図的なごまかしである。評価が売り上げに強い影響をあたえるので、自社の製品のよいレビューや、競争相手の悪いレビューにお金をはらっていたことが発覚した会社もある。サイトはそうしたレビューを見つけて取りのぞこうとするが、それを書く人々の方法はますます巧妙になっており、ふつうの読み手には、本当の意見と買われた意見とのちがいを見分けるのが不可能なことも多い。',
+      'レビューはまた、それが評する店に、いつも有益とはかぎらないしかたで影響することもある。評価にたよるレストランは、一部の客をがっかりさせるかもしれない変わったことをさけるよう圧力を感じ、実験的な料理よりも無難でなじみのある料理を選ぶかもしれない。小さな店は少数の不当なレビューから不釣り合いに大きな打撃を受けるかもしれないが、何千もの評価をもつ大企業は、一つの意見にはあまり影響されない。このように、質にむくいるために作られた仕組みが、ときに慎重さと規模にむくいてしまうことがある。',
+      'このどれも、ネットのレビューに価値がないという意味ではない。まとめて見れば、たくさんのレビューは今でも役に立つ情報をあたえうる。とくに読み手が平均評価だけでなく、レビューを書いた人があげる具体的な細部にも注意をはらうときはそうである。ホテルがうるさいという不満が多くのちがう客からくり返されているなら、それは一つのおこったコメントよりも情報としての価値が高く、具体的な経験を述べたレビューは、ほめるかけなすかだけのレビューよりも、ふつうは信頼できる。',
+      'このようにネットのレビューの広まりは、情報の時代の生活のより広い特徴を示している。私たちはかつてないほど多くの意見にふれることができるが、情報の量そのものが私たちをよりよく知らされた状態にするわけではない。大切なのは、情報がどこから来たのか、なぜ作られたのか、そしてどこまで信頼できるのかを判断する力なのである。この意味で、ネットのレビューを賢く読むのに必要な技能は、ニュースや広告や政治的な議論を読むのに必要な技能と同じであり、レビューをうまく使えるようになることは、さまざまな声が競い合う世界で自分の頭で考えることを学ぶうえで、小さいけれども価値のある一部なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「ほとんどの客はだまっているので、レビューは大げさに見せているかもしれない」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Online reviews seem to solve the problem of judging quality in advance, but reviewers are not ( 1 ) of all customers, and some reviews are fake. Reviews may also push businesses toward ( 2 ) choices. Still, many reviews read carefully, with attention to specific ( 3 ), can be useful.',
+      blanks: [
+        { choices: ['representative', 'jealous', 'afraid', 'tired'], answer: 0, why: '第3段落 are not a representative sample of all customers。' },
+        { choices: ['safe', 'creative', 'dangerous', 'expensive'], answer: 0, why: '第5段落 choosing safe and familiar dishes over experimental ones。' },
+        { choices: ['details', 'prices', 'colors', 'names'], answer: 0, why: '第6段落 the specific details that reviewers mention。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、平均評価のわずかなちがいが店の収入の大きなちがいを生むことがある。', answer: true, why: '第1段落 a small difference in a business’s average rating can produce a large difference in its income。' },
+      { statement: '筆者によれば、経験がそこそこ満足できた人ほどレビューを書きやすい。', answer: false, why: '第3段落 Those who had an extremely good or extremely bad experience are much more likely to write about it。' },
+      { statement: '筆者によれば、少数の不当なレビューは大企業より小さな店に大きな打撃をあたえうる。', answer: true, why: '第5段落 Small businesses may suffer disproportionately from a few unfair reviews。' },
+      { statement: '筆者は、ネットのレビューにはまったく価値がないと考えている。', answer: false, why: '第6段落 None of this means that online reviews are worthless。' },
+    ],
+    qa: [
+      { q: 'What limitation of advertising does the second paragraph mention?', choices: ['It was written by the sellers and could hardly be trusted to point out weaknesses.', 'It was always too short.', 'It was written by ordinary customers.', 'It was too expensive to read.'], answer: 0, why: '第2段落 Advertising was written by the sellers themselves and could hardly be trusted to point out weaknesses。' },
+      { q: 'According to the last paragraph, what matters most in the information age?', choices: ['The ability to judge where information comes from and how far it can be trusted.', 'Reading as many opinions as possible.', 'Writing more reviews than other people.', 'Avoiding all information online.'], answer: 0, why: '第7段落 our ability to judge where information comes from, why it was produced, and how far it can be trusted。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
