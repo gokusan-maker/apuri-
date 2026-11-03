@@ -27616,6 +27616,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-historical-apologies',
+    title: 'Apologizing for the Past',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent decades, governments, universities, churches, and companies have increasingly offered public apologies for wrongs committed long ago, sometimes by people who died generations before the apology was made. A government may apologize for the unjust treatment of a minority group in the previous century, or a university may express regret for having profited from practices that are now regarded as deeply wrong. Such apologies are often welcomed as overdue acknowledgments of suffering, but they also provoke a puzzling question that is worth examining carefully: how can anyone sincerely apologize for something that he or she did not personally do?",
+      "The puzzle arises because an apology, in its ordinary sense, seems to require that the person apologizing be responsible for the wrong. When I apologize for breaking a friend's cup, I accept that I caused the harm, I express regret, and I implicitly promise to be more careful in the future. None of these elements appears to fit easily when the wrongdoers are long dead and the people apologizing were not even born at the time. Critics therefore argue that historical apologies are empty gestures, words that cost the speaker nothing and allow present institutions to appear virtuous without changing anything of substance.",
+      "Defenders of such apologies respond that institutions, unlike individuals, can persist across many generations. A nation or a university is not simply a collection of the people who happen to belong to it at a particular moment; it has a continuing identity, laws, property, and traditions that are handed down from one generation to the next. ( A ) present members of an institution inherit its reputation and its wealth, it seems reasonable that they should also inherit some responsibility for the injustices through which that wealth was sometimes obtained. On this view, the people who apologize do so not as private individuals but as representatives of an entity that really did commit the wrong.",
+      "A second argument focuses less on responsibility than on the effects of injustice that continue into the present. The descendants of people who were treated unjustly may still suffer disadvantages, such as poverty or exclusion, that can be traced to past policies. In such cases, an apology is not merely a statement about history but a recognition that the consequences of history are still being felt. Acknowledging this connection can be the first step toward policies designed to address present inequalities, and an apology that is not followed by such action may rightly be regarded with suspicion by those to whom it is addressed.",
+      "There is also a third, more subtle function that historical apologies may serve. Societies tell stories about themselves, and these stories shape how citizens understand who they are and what they value. A nation that recalls only its achievements while ignoring its injustices tells a story that is not only incomplete but potentially dangerous, because it encourages the belief that wrongs committed in the past could never happen again. By publicly acknowledging past wrongs, an institution revises its own story and commits itself, at least in principle, to values that were once betrayed.",
+      "None of this means that every historical apology is sincere or valuable. Some are offered reluctantly, under pressure, and in language so carefully chosen that it avoids admitting anything at all. Others are made by leaders seeking political advantage rather than reconciliation. The worth of an apology, therefore, depends less on its words than on what accompanies and follows them: whether those who were wronged were consulted, whether the apology names the wrong clearly, and whether it leads to any change in how the institution behaves.",
+      "Perhaps the deepest lesson of historical apologies is that responsibility is not always limited to what we have personally chosen to do. We are born into communities whose past we did not create but from which we nonetheless benefit, and recognizing this inheritance honestly may be one of the obligations that come with belonging. An apology for the distant past, when it is meant seriously, is less an admission of personal guilt than a promise about the kind of community its members wish to become.",
+    ],
+    ja: [
+      'ここ数十年、政府や大学や教会や企業が、ずっと昔に行われた不正について、ときにはその謝罪がなされる何世代も前に亡くなった人々による不正について、公に謝罪することが増えている。政府が前の世紀における少数派の集団への不当なあつかいを謝罪したり、大学が今ではきわめて不正と見なされている慣行から利益を得ていたことに遺憾の意を表したりすることがある。こうした謝罪は、苦しみをおそまきながら認めるものとしてしばしば歓迎されるが、注意深く考える価値のある、とまどわせる問いも引き起こす。自分自身がしていないことについて、人はどうして心から謝罪できるのか、という問いである。',
+      'この問題が生じるのは、ふつうの意味での謝罪は、謝罪する人がその不正に責任を負っていることを必要とするように思われるからである。友人のカップを割ったことを私が謝るとき、私は自分が害をあたえたことを認め、後悔を表し、これからはもっと気をつけると暗に約束している。不正をした人々がとうに亡くなり、謝罪する人々がその当時生まれてさえいなかった場合、これらの要素はどれもすんなりとは当てはまらないように思われる。それゆえ批判する人々は、歴史的な謝罪は中身のないしぐさであり、話し手に何の負担もかけず、現在の組織が実質的なことは何も変えずに善良に見えるようにするだけの言葉だと主張する。',
+      'こうした謝罪を擁護する人々は、組織は個人とちがって何世代にもわたって存続しうると答える。国家や大学は、ある時点でたまたまそこに属している人々の単なる集まりではない。それは続いていく同一性や、法や、財産や、世代から世代へと受けつがれる伝統をもっている。組織の現在の構成員はその評判と富を受けつぐのだから、その富がときに得られた手段である不正についての責任もいくらか受けつぐべきだというのは筋が通っているように思われる。この見方では、謝罪する人々は個人としてではなく、実際に不正を行った存在の代表として謝罪するのである。',
+      '第二の議論は、責任よりも、現在まで続いている不正の影響に注目する。不当なあつかいを受けた人々の子孫は、過去の政策にさかのぼることのできる貧困や排除のような不利を、今なおこうむっているかもしれない。そうした場合、謝罪は単に歴史についての発言ではなく、歴史の結果が今も感じられていることを認めるものである。このつながりを認めることは、現在の不平等に対処するための政策への第一歩になりうるし、そのような行動をともなわない謝罪は、それを向けられた人々から疑いの目で見られても当然であろう。',
+      '歴史的な謝罪が果たしうる、第三の、よりとらえにくいはたらきもある。社会は自分自身についての物語を語り、その物語は、市民が自分たちはだれで何を大切にしているかを理解するしかたを形づくる。自らの業績だけを思い出して不正を無視する国家は、不完全であるだけでなく、危険になりうる物語を語ることになる。なぜなら、それは過去に犯された不正がふたたび起こることはありえないという思いこみを助長するからである。過去の不正を公に認めることによって、組織は自らの物語を書き改め、少なくとも原則としては、かつて裏切られた価値に身をささげることを約束するのである。',
+      'このことは、すべての歴史的な謝罪が誠実で価値があるという意味ではない。いやいやながら、圧力を受けて、何も認めないようにきわめて注意深く選ばれた言葉で行われる謝罪もある。和解よりも政治的な利益を求める指導者によってなされる謝罪もある。したがって謝罪の価値は、その言葉よりも、それにともない、それに続くものにかかっている。つまり、不正を受けた人々の意見が聞かれたかどうか、謝罪が不正をはっきりと名指ししているかどうか、そしてそれが組織のふるまい方に何らかの変化をもたらすかどうかである。',
+      'おそらく歴史的な謝罪の最も深い教訓は、責任は必ずしも自分が個人として選んで行ったことに限られない、ということである。私たちは、自分が作ったわけではないが、それでも恩恵を受けている過去をもつ共同体に生まれてくる。この受けついだものを正直に認めることは、共同体に属することにともなう義務の一つなのかもしれない。遠い過去についての謝罪は、本気でなされるとき、個人の罪を認めることというより、その構成員がどのような共同体になりたいと願っているかについての約束なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Since', 'Unless', 'Although', 'Before'], answer: 0, why: '「現在の構成員は評判と富を受けつぐのだから、責任も受けつぐべきだ」という理由の Since。' },
+    ],
+    summary: {
+      text: 'Institutions now often apologize for wrongs committed long ago, which seems puzzling because an apology normally requires personal ( 1 ). Defenders argue that institutions persist across generations, that the effects of injustice continue, and that apologies revise the ( 2 ) societies tell about themselves. The value of an apology depends on the ( 3 ) that accompany and follow its words.',
+      blanks: [
+        { choices: ['responsibility', 'wealth', 'courage', 'education'], answer: 0, why: '第2段落 an apology ... seems to require that the person apologizing be responsible for the wrong。' },
+        { choices: ['stories', 'laws', 'taxes', 'songs'], answer: 0, why: '第5段落 Societies tell stories about themselves ... an institution revises its own story。' },
+        { choices: ['actions', 'apologies', 'prices', 'rumors'], answer: 0, why: '第6段落 depends less on its words than on what accompanies and follows them（相談・名指し・ふるまいの変化）。' },
+      ],
+    },
+    tf: [
+      { statement: '批判する人々は、歴史的な謝罪は話し手に何の負担もかけない、中身のないしぐさだと主張する。', answer: true, why: '第2段落 historical apologies are empty gestures, words that cost the speaker nothing。' },
+      { statement: '擁護する人々によれば、国家は、ある時点でそこに属している人々の単なる集まりにすぎない。', answer: false, why: '第3段落 A nation or a university is not simply a collection of the people ...。' },
+      { statement: '筆者は、行動をともなわない謝罪は疑われても当然だと述べている。', answer: true, why: '第4段落 an apology that is not followed by such action may rightly be regarded with suspicion。' },
+      { statement: '筆者は、すべての歴史的な謝罪は誠実で価値があると考えている。', answer: false, why: '第6段落 None of this means that every historical apology is sincere or valuable。' },
+    ],
+    qa: [
+      { q: 'Why does the author say a nation that recalls only its achievements tells a potentially dangerous story?', choices: ['It encourages the belief that past wrongs could never happen again.', 'It makes citizens too proud of their sports teams.', 'It forces institutions to pay too much money.', 'It makes history lessons too long.'], answer: 0, why: '第5段落 because it encourages the belief that wrongs committed in the past could never happen again。' },
+      { q: 'According to the last paragraph, what is a serious apology for the distant past mainly?', choices: ['A promise about the kind of community its members wish to become.', 'An admission of personal guilt by each citizen.', 'A way of forgetting the past completely.', 'A legal contract between two governments.'], answer: 0, why: '第7段落 less an admission of personal guilt than a promise about the kind of community its members wish to become。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
