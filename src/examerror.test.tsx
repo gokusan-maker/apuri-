@@ -2073,3 +2073,10 @@ it('正誤問題〈151〉：京大レベル 準否定と倒置の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) not')
 })
+
+it('誤文訂正〈145〉：国公立レベル 比較級の強めと the＋比較級の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-145')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('much')
+})

@@ -6198,6 +6198,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She is waiting [in] the bus stop.', choices: ['at', 'on', 'to', 'for'], answer: 0, why: 'バス停のような地点には at。' },
     ],
   },
+  {
+    id: 'exam-fix-145',
+    title: '入試の誤文訂正〈145〉（国公立レベル：比較級の強めと the＋比較級）',
+    points: ['比較級を強めるのは much・far・even・a lot（very は使えない）。比較級は -er か more のどちらか一方（more easier・more better は×）。「～すればするほど…」は the＋比較級 ～, the＋比較級 …（The more you practice, the better you become）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、上手になる。' }],
+    questions: [
+      { sentence: 'This book is [very] more interesting than that one.', choices: ['much', 'more', 'so', 'too'], answer: 0, why: '比較級を強めるのは much（far も可）。very は使えない。' },
+      { sentence: 'The more you practice, [better] you become.', choices: ['the better', 'more better', 'the best', 'best'], answer: 0, why: 'the＋比較級 ～, the＋比較級 …。the better。' },
+      { sentence: 'The [hard] you study, the more you learn.', choices: ['harder', 'hardest', 'more hard', 'hardly'], answer: 0, why: 'the のあとは比較級。harder。' },
+      { sentence: 'He is [very taller] than his brother.', choices: ['much taller', 'very tall', 'more taller', 'so taller'], answer: 0, why: '比較級を強めるのは much。much taller。' },
+      { sentence: 'Tokyo is [more large] than Osaka.', choices: ['larger', 'largest', 'most large', 'large'], answer: 0, why: 'large の比較級は larger。' },
+      { sentence: 'This problem is [more easier] than that one.', choices: ['easier', 'easily', 'easiest', 'most easy'], answer: 0, why: '-er と more は重ねない。easier。' },
+      { sentence: 'The sooner, [the good].', choices: ['the better', 'the best', 'better', 'good'], answer: 0, why: 'The sooner, the better.「早ければ早いほどよい」。' },
+      { sentence: 'Her English is [even more good] than mine.', choices: ['even better', 'even more well', 'more better', 'even best'], answer: 0, why: 'good の比較級は better。even で強める。' },
+      { sentence: 'The older he grew, the [wise] he became.', choices: ['wiser', 'wisest', 'wise more', 'wisely'], answer: 0, why: 'the のあとは比較級。wiser。' },
+      { sentence: 'Life in the city is [much more busy] than in the country.', choices: ['much busier', 'much busy', 'more busier', 'very busier'], answer: 0, why: 'busy の比較級は busier。much で強める。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
