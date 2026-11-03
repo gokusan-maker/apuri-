@@ -27312,6 +27312,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-foreign-workers',
+    title: 'More Than Workers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As populations age and birth rates fall, many wealthy countries face a growing shortage of workers. Factories, farms, hospitals, and care homes struggle to find enough staff, and some industries warn that they will not survive without help from abroad. In response, governments that once admitted relatively few foreign workers have begun to open their doors more widely. This shift raises practical questions about labor and the economy, but it also raises deeper questions about what kind of society a country wishes to become. Decisions made today about who may come, and on what terms, will shape communities for generations.",
+      "From an economic point of view, the case for admitting foreign workers can seem straightforward. Workers from other countries can fill positions that local residents are unable or unwilling to take, pay taxes that help support public services, and contribute to the overall productivity of the economy. In many places, foreign workers already play an essential role in industries such as agriculture, construction, and care, even if their presence is not always visible to the wider public. Without them, prices might rise and some services might become unavailable. Supporters also point out that many countries have long benefited from the skills and energy of people who arrived from elsewhere.",
+      "Yet treating migrants simply as a solution to a labor shortage can lead to problems. When workers are admitted only for limited periods and are not expected to settle, they may receive little support in learning the language or understanding local customs. Some have found themselves in jobs with poor conditions, unable to change employers and reluctant to complain for fear of losing their right to stay. A system that relies on foreign labor while denying workers the means to participate fully in society risks creating a group of people who are present but excluded. Such exclusion is harmful not only to the workers themselves but also to the wider society, which loses the contributions they might otherwise make.",
+      "The experiences of countries with longer histories of immigration suggest that integration does not happen automatically. Newcomers who are isolated by language barriers, discrimination, or segregated housing may find it difficult to build connections with their neighbors, and their children may grow up feeling that they belong neither to their parents' culture nor to the society around them. ( A ), when newcomers are given opportunities to learn the language, to have their qualifications recognized, and to take part in community life, the benefits of migration tend to be shared more widely. Schools often play a particularly important role, since they are among the first places where children of different backgrounds meet as equals.",
+      "Integration is not only the responsibility of newcomers. Host communities also need to adapt, whether by providing information in several languages, by training teachers to support children from diverse backgrounds, or simply by being open to the presence of people whose customs differ from their own. Such changes can be uncomfortable, and public debates about migration often reflect anxieties about identity, security, and competition for jobs. These concerns deserve to be taken seriously rather than dismissed, but they are best addressed through accurate information and honest discussion.",
+      "In the end, the question is not only how many workers a country needs but what relationship it wishes to have with those who come. People who move across borders bring not only their labor but also their families, their hopes, and their ways of seeing the world. A society that recognizes this may find that migration enriches it in ways that cannot be measured in economic terms alone, while one that sees migrants only as temporary tools may miss the chance to build a shared future with them. How a country treats its newest members may say a great deal about what it values most.",
+    ],
+    ja: [
+      '人口が高齢化し出生率が下がるにつれて、多くの豊かな国は働き手の不足の拡大に直面している。工場、農場、病院、介護施設は十分な職員を見つけるのに苦労し、海外からの助けがなければ生き残れないと警告する産業もある。これに対応して、かつては比較的少ない外国人労働者しか受け入れていなかった政府が、より広く門戸を開きはじめている。この変化は、労働や経済についての実際的な問いを投げかけるが、同時に、その国がどんな社会になりたいのかという、より深い問いも投げかけている。だれがどんな条件で来てよいかについて今日下される決定は、何世代にもわたって地域社会を形づくることになる。',
+      '経済の観点からは、外国人労働者を受け入れる理由はわかりやすいように見える。ほかの国からの働き手は、地元の住民が就けない、あるいは就きたがらない仕事をうめ、公共サービスを支える税金を払い、経済全体の生産性に貢献することができる。多くの場所で、外国人労働者はすでに農業や建設や介護などの産業で欠かせない役割を果たしているが、その存在がいつも広く一般の目に見えているとは限らない。彼らがいなければ、物価が上がり、利用できなくなるサービスもあるかもしれない。支持する人々はまた、多くの国がよそからやってきた人々の技能と活力から長く恩恵を受けてきたことも指摘する。',
+      'しかし、移民を単に人手不足の解決策として扱うと、問題が生じうる。働き手が限られた期間だけ受け入れられ、定住することを期待されていないと、言葉を学んだり地元の習慣を理解したりするための支援をほとんど受けられないかもしれない。条件の悪い仕事について、雇い主を変えることもできず、滞在する権利を失うことをおそれて不満を言うのもためらう、という状況に置かれた人もいる。外国人の労働にたよりながら、働き手が社会に十分に参加する手段をこばむしくみは、そこにいるのに締め出されている人々の集団を生み出すおそれがある。そうした締め出しは働き手自身にとってだけでなく、彼らがそうでなければもたらしたかもしれない貢献を失う、より広い社会にとっても有害である。',
+      '移民の歴史がより長い国々の経験は、統合がひとりでに起こるわけではないことを示している。言葉の壁や差別や分けられた住まいによって孤立した新しい住民は、近所の人々とつながりを築くのがむずかしいと感じるかもしれず、その子どもたちは、親の文化にも周りの社会にも属していないと感じながら育つかもしれない。それに対して、新しい住民が言葉を学び、資格を認めてもらい、地域の生活に加わる機会を与えられると、移民の利益はより広く分かち合われる傾向がある。学校はとくに重要な役割を果たすことが多い。ちがう背景の子どもたちが対等な立場で出会う最初の場所の1つだからである。',
+      '統合は新しい住民だけの責任ではない。受け入れる地域もまた、いくつもの言語で情報を提供したり、さまざまな背景をもつ子どもを支えられるよう教師を育てたり、あるいは単に自分たちとはちがう習慣をもつ人々がいることに開かれていたりすることで、適応する必要がある。こうした変化は居心地が悪いこともあり、移民をめぐる公の議論は、アイデンティティや安全や仕事の取り合いについての不安をしばしば反映している。こうした懸念は退けるのではなく真剣に受け止めるべきだが、正確な情報と誠実な話し合いを通じて取り組むのが最もよい。',
+      '結局のところ、問題はその国が何人の働き手を必要としているかだけでなく、やってくる人々とどんな関係をもちたいかである。国境をこえて移る人々は、労働だけでなく、家族や希望や世界の見方ももってくる。このことを認める社会は、移民が経済的な面だけでははかれない形で社会を豊かにすることに気づくかもしれないが、移民を一時的な道具としてしか見ない社会は、彼らとともに共有された未来を築く機会を逃してしまうかもしれない。ある国が最も新しい住民をどう扱うかは、その国が何を最も大切にしているかを多く物語るのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['By contrast', 'For example', 'As a result', 'In addition'], answer: 0, why: '孤立した場合と、機会を与えられた場合を対比しているので By contrast。' },
+    ],
+    summary: {
+      text: 'Many aging countries now admit more foreign workers to address labor ( 1 ). Economically this seems reasonable, but treating migrants only as temporary labor can leave them present but ( 2 ). Integration requires effort from both newcomers and host communities, and a society that sees migrants as more than tools may build a shared ( 3 ) with them.',
+      blanks: [
+        { choices: ['shortages', 'disputes', 'costs', 'laws'], answer: 0, why: '第1段落 many wealthy countries face a growing shortage of workers。' },
+        { choices: ['excluded', 'satisfied', 'wealthy', 'famous'], answer: 0, why: '第3段落 a group of people who are present but excluded。' },
+        { choices: ['future', 'language', 'factory', 'border'], answer: 0, why: '第6段落 the chance to build a shared future with them。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、外国人労働者はすでに農業や介護などで欠かせない役割を果たしている。', answer: true, why: '第2段落 foreign workers already play an essential role in industries such as agriculture, construction, and care。' },
+      { statement: '筆者によれば、移民の統合はひとりでに起こる。', answer: false, why: '第4段落 integration does not happen automatically。' },
+      { statement: '筆者によれば、統合は新しい住民だけの責任である。', answer: false, why: '第5段落 Integration is not only the responsibility of newcomers。' },
+      { statement: '筆者は、移民についての不安は真剣に受け止めるべきだと考えている。', answer: true, why: '第5段落 These concerns deserve to be taken seriously rather than dismissed。' },
+    ],
+    qa: [
+      { q: 'Why might some foreign workers be reluctant to complain, according to the third paragraph?', choices: ['They fear losing their right to stay.', 'They do not want to learn the language.', 'They earn more than local workers.', 'They plan to change jobs every week.'], answer: 0, why: '第3段落 reluctant to complain for fear of losing their right to stay。' },
+      { q: 'What do people who move across borders bring, according to the last paragraph?', choices: ['Not only their labor but also their families, hopes, and ways of seeing the world.', 'Only their labor.', 'Only money for investment.', 'Nothing but problems.'], answer: 0, why: '第6段落 bring not only their labor but also their families, their hopes, and their ways of seeing the world。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

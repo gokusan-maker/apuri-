@@ -650,3 +650,11 @@ it('京大専用の長文㊱「言葉にできない知識」：京大の下限6
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
 })
+
+it('東大専用の長文㉞「働き手以上の存在」：600語以上・1文18語以上で、要約の空所補充（3つ）つき。東大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('東大').find((x) => x.id === 'todai-foreign-workers')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(p.summary?.blanks).toHaveLength(3)
+})
