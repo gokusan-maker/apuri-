@@ -29458,6 +29458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-housing',
+    title: 'Who Can Afford the City?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many of the world's major cities, the cost of housing has risen far faster than incomes. Young people who grew up in these cities often find that they cannot afford to live in them as adults, and workers whose jobs are essential to urban life, such as nurses, teachers, and bus drivers, may be forced to commute long distances from cheaper areas. The question of why housing has become so expensive, and what should be done about it, has become one of the most pressing political issues of our time.",
+      "One common explanation is simple: there are not enough homes. When more people want to live in a city than there are places for them to live, prices rise. Many economists argue that the main cause of high housing costs is restrictions on building, such as zoning rules that limit the height of buildings or require large plots of land for each house. If more homes could be built, they suggest, prices would eventually fall, or at least rise more slowly.",
+      "Others argue that the problem is not only a shortage of homes but also the way housing is treated as an investment. In many cities, apartments are bought not to be lived in but to be rented out or simply held while their value increases. ( A ) housing is seen primarily as a way of accumulating wealth, those who already own property benefit from rising prices, while those who do not find it increasingly difficult to enter the market. Some cities have introduced taxes on empty homes or on purchases by foreign investors in an attempt to discourage such speculation.",
+      "A third approach focuses on the role of government in providing housing directly. In some cities, a large share of homes is owned by public authorities or non-profit organizations and rented at prices that ordinary workers can afford. Supporters argue that such housing protects residents from the pressures of the market and keeps communities mixed, so that people of different incomes can continue to live in the same neighborhoods. Critics respond that public housing can be expensive to build and maintain, and that poorly managed projects have sometimes become isolated and neglected.",
+      "Rent control is another frequently debated policy. Limiting how much landlords can raise rents may protect current tenants from sudden increases that would force them to move. Many economists, however, warn that strict rent control can discourage the construction of new homes and the maintenance of existing ones, since landlords have less incentive to invest. The policy may thus help those who already have homes while making it harder for newcomers to find one.",
+      "Each of these approaches addresses part of the problem, and many cities combine several of them. Building more homes may lower prices in the long run, while protections for tenants and public housing may be needed to help people in the meantime. The difficulty lies in balancing the interests of different groups: current homeowners who wish to protect the value of their property, renters who need security, and future residents who are not yet present to argue their case.",
+      "Ultimately, the debate over housing raises a basic question about what kind of cities we want. If housing is treated only as a commodity, cities may become places where only the wealthy can afford to live. If it is treated also as a basic need, societies must find ways to ensure that people who contribute to a city's life can also afford to make their homes there. A city that its own workers cannot afford to live in risks losing not only fairness but also the diversity and energy that made it attractive in the first place.",
+    ],
+    ja: [
+      '世界の多くの大都市で、住宅の費用は収入よりもはるかに速く上がってきた。そうした都市で育った若者は、大人になってそこに住む余裕がないことに気づくことが多く、看護師や教師やバスの運転手のように、仕事が都市の生活に欠かせない働き手も、より安い地域から長い距離を通勤せざるをえなくなるかもしれない。なぜ住宅がこれほど高くなったのか、そしてそれに対して何をすべきかという問題は、現代の最も差しせまった政治の問題の一つになった。',
+      'よくある一つの説明は単純である。家が足りないのである。住む場所の数よりも多くの人がある都市に住みたいと思えば、値段は上がる。多くの経済学者は、住宅の費用が高い主な原因は、建物の高さを制限したり、一軒ごとに広い土地を求めたりする用途地域の決まりのような、建てることへの制限だと主張する。もっと多くの家を建てられれば、値段はいずれ下がるか、少なくともよりゆっくり上がるだろう、と彼らは示唆する。',
+      '問題は家の不足だけでなく、住宅が投資としてあつかわれるしかたにもあると主張する人もいる。多くの都市で、マンションは住むためではなく、人に貸すため、あるいは価値が上がるあいだただ持っておくために買われている。住宅が主に富をたくわえる手段として見られるので、すでに不動産をもっている人々は値上がりから恩恵を受け、もっていない人々は市場に入るのがますますむずかしくなる。そうした投機をおさえようとして、空き家や外国の投資家による購入に税をかけた都市もある。',
+      '三つめの方法は、住宅を直接提供する政府の役割に注目する。いくつかの都市では、家の大きな割合が公的機関や非営利団体によって所有され、ふつうの働き手がはらえる値段で貸されている。支持する人々は、そうした住宅は住民を市場の圧力から守り、地域をさまざまな人がまじり合うものに保つので、ちがう収入の人々が同じ地域に住み続けられると主張する。批判する人々は、公営住宅は建てて維持するのにお金がかかり、管理の悪い計画がときに孤立し、放置されてきたと答える。',
+      '家賃の規制も、よく議論される政策である。家主が家賃をどれだけ上げられるかを制限すれば、今の借り手を、引っこしせざるをえなくなるような急な値上げから守れるかもしれない。しかし多くの経済学者は、きびしい家賃の規制は、家主が投資する動機がへるので、新しい家の建設や今ある家の維持をさまたげうると警告する。それゆえこの政策は、すでに家のある人々を助ける一方で、新しく来た人々が家を見つけるのをむずかしくするかもしれない。',
+      'これらの方法はそれぞれ問題の一部に取り組んでおり、多くの都市がいくつかを組み合わせている。もっと家を建てることは長い目で見れば値段を下げるかもしれないが、そのあいだ人々を助けるには、借り手の保護や公営住宅が必要かもしれない。むずかしいのは、ちがう集団の利益のつりあいをとることである。自分の不動産の価値を守りたい今の持ち主、安定を必要とする借り手、そしてまだそこにいないので自分の言い分を主張できない未来の住民である。',
+      '結局のところ、住宅をめぐる議論は、私たちがどんな都市を望んでいるのかという基本的な問いを生む。もし住宅が商品としてだけあつかわれるなら、都市は豊かな人しか住む余裕のない場所になるかもしれない。もし住宅が基本的な必要としてもあつかわれるなら、社会は、都市の生活に貢献する人々がそこに住まいをもつ余裕ももてるようにする方法を見つけなければならない。自分たちの働き手が住む余裕のない都市は、公平さだけでなく、そもそもその都市を魅力的にしていた多様さと活気も失うおそれがあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「住宅が主に富をたくわえる手段として見られるので、持つ人は恩恵を受け、持たない人は入りにくくなる」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Housing in many cities has become unaffordable. Some blame restrictions on ( 1 ), others the treatment of housing as an investment. Public housing and rent ( 2 ) may protect residents but have drawbacks. Cities must balance the interests of owners, renters, and ( 3 ) residents.',
+      blanks: [
+        { choices: ['building', 'driving', 'studying', 'farming'], answer: 0, why: '第2段落 the main cause of high housing costs is restrictions on building。' },
+        { choices: ['control', 'payment', 'festivals', 'gardens'], answer: 0, why: '第5段落 Rent control is another frequently debated policy。' },
+        { choices: ['future', 'former', 'famous', 'foreign'], answer: 0, why: '第6段落 future residents who are not yet present to argue their case。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの経済学者によれば、建てることへの制限が住宅費の高さの主な原因である。', answer: true, why: '第2段落 the main cause of high housing costs is restrictions on building。' },
+      { statement: '筆者によれば、マンションはいつも住むためだけに買われている。', answer: false, why: '第3段落 apartments are bought not to be lived in but to be rented out or simply held。' },
+      { statement: '多くの経済学者は、きびしい家賃の規制が新しい家の建設をさまたげうると警告している。', answer: true, why: '第5段落 strict rent control can discourage the construction of new homes。' },
+      { statement: '筆者によれば、どの都市もただ一つの方法だけを使っている。', answer: false, why: '第6段落 many cities combine several of them。' },
+    ],
+    qa: [
+      { q: 'What have some cities done to discourage speculation?', choices: ['Introduced taxes on empty homes or on purchases by foreign investors.', 'Banned all new buildings.', 'Lowered taxes on second homes.', 'Closed all banks.'], answer: 0, why: '第3段落 have introduced taxes on empty homes or on purchases by foreign investors。' },
+      { q: 'What do supporters say public housing helps to do?', choices: ['Keep communities mixed so people of different incomes can live together.', 'Make housing more expensive.', 'Remove all renters from cities.', 'Build only luxury apartments.'], answer: 0, why: '第4段落 keeps communities mixed, so that people of different incomes can continue to live in the same neighborhoods。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
