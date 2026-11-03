@@ -29298,6 +29298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-wearables',
+    title: 'Counting Every Step',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Millions of people now wear devices on their wrists that count their steps, measure their heart rate, track their sleep, and remind them to stand up when they have been sitting too long. These wearable devices promise to help people take control of their health by turning the body into a source of data that can be monitored, analyzed, and improved. Their popularity reflects a broader belief that what can be measured can be managed. Yet the spread of such devices also raises questions about how useful the data really are and how the habit of constant self-measurement affects the way people experience their own bodies.",
+      "Supporters point out that wearable devices can encourage healthier behavior. Seeing a daily step count may motivate people to walk more, and receiving feedback about sleep may lead them to go to bed earlier. For people with certain medical conditions, continuous monitoring can provide early warning of problems, allowing them or their doctors to respond before a situation becomes serious. In some cases, devices have detected irregular heart rhythms in users who had no idea that anything was wrong.",
+      "Critics, however, question whether the benefits are as great as they appear. Studies of people who use fitness trackers have produced mixed results; some users increase their activity at first but return to their previous habits within months, once the novelty of the device has worn off. Moreover, many of the numbers that devices provide are only rough estimates, and users may place more trust in them than they deserve. ( A ) a device reports that one has slept poorly, a person who felt rested may begin to feel tired, suggesting that the data can shape experience rather than simply describing it.",
+      "There is also concern about what happens to the information that wearable devices collect. Data about heart rate, sleep, and location can reveal a great deal about a person's health and daily life, and they may be shared with companies, insurers, or employers in ways that users do not fully understand. Some employers have offered workers incentives to wear fitness trackers, raising the possibility that workers who decline, or whose data suggest poor health, could be disadvantaged.",
+      "A further question concerns the relationship between measurement and wellbeing. For some people, tracking every step and every hour of sleep can become a source of anxiety rather than motivation, turning ordinary activities into tasks to be completed and scored. Walking may become less about enjoying the outdoors than about reaching a target, and rest may become something to be optimized rather than simply enjoyed. In such cases, the pursuit of health through data may undermine the very sense of ease that health is supposed to bring.",
+      "None of this means that wearable devices are without value. Used thoughtfully, they can provide useful information and encourage positive changes, particularly when people understand the limits of the data and treat them as one source of insight among many. The challenge is to use such tools without allowing them to replace attention to one's own feelings or the advice of medical professionals. A device can tell us how many steps we have taken, but only we can decide whether those steps were taken with pleasure.",
+      "The debate over wearable devices ultimately raises a question about how we understand ourselves. Our bodies can certainly be described in numbers, but they are also experienced from within, through sensations, moods, and intuitions that no device can fully capture. A healthy relationship with technology may depend on remembering that the numbers are a guide, not a judge. They can point us toward better habits, but the final judgment about how we feel and how we wish to live must remain our own.",
+    ],
+    ja: [
+      '今では何百万もの人々が、歩数を数え、心拍数をはかり、睡眠を記録し、長くすわりすぎていると立ち上がるよう知らせてくれる機器を手首につけている。こうした身につける機器は、体を、見張り、分析し、よくすることのできるデータの源に変えることで、人々が自分の健康を管理できるよう助けると約束している。その人気は、はかれるものは管理できるという、より広い信念を反映している。しかし、こうした機器の広まりは、そのデータが本当にどれだけ役に立つのか、そしてたえず自分をはかる習慣が、人々が自分の体を経験するしかたにどう影響するのかという問題も生んでいる。',
+      '支持する人々は、身につける機器がより健康的な行動をうながしうると指摘する。毎日の歩数を見ることで人々はもっと歩こうという気になるかもしれず、睡眠について知らせを受けることで早く寝るようになるかもしれない。ある種の病気をかかえる人々にとっては、たえまない見守りが問題の早い警告となり、状況が深刻になる前に本人や医師が対応できるようにする。場合によっては、何かがおかしいとはまったく思っていなかった利用者の不規則な心拍を、機器が見つけたこともある。',
+      'しかし批判する人々は、その恩恵が見かけほど大きいのかを疑う。フィットネストラッカーを使う人々の研究の結果はまちまちである。最初は活動をふやす利用者もいるが、機器のめずらしさがうすれると、数か月のうちに以前の習慣にもどってしまう。さらに、機器があたえる数値の多くは大まかな見積もりにすぎず、利用者はそれを必要以上に信じてしまうかもしれない。機器がよく眠れなかったと知らせると、休めたと感じていた人がつかれを感じはじめることがあり、このことはデータが経験をただ説明するのではなく、経験を形づくりうることを示している。',
+      '身につける機器が集める情報がどうなるのかという懸念もある。心拍数や睡眠や居場所についてのデータは、人の健康と日々の生活について多くのことを明らかにしうるし、利用者が十分に理解していないしかたで、企業や保険会社や雇い主と共有されるかもしれない。社員にフィットネストラッカーをつけるよう見返りをあたえた雇い主もおり、ことわった社員や、データが健康の悪さを示す社員が不利になる可能性が生まれている。',
+      'さらなる問題は、はかることと心身のよい状態との関係にかかわる。ある人々にとっては、一歩一歩、一時間一時間の睡眠を記録することが、意欲ではなく不安の源になり、ふつうの活動を、片づけて点数をつけるべき仕事に変えてしまう。歩くことは、外を楽しむことより目標に達することが目的になるかもしれず、休むことは、ただ楽しむものではなく最適化すべきものになるかもしれない。そうした場合、データを通して健康を追い求めることが、健康がもたらすはずの、まさにそのくつろぎの感覚をそこなってしまうかもしれない。',
+      'このどれも、身につける機器に価値がないという意味ではない。思慮深く使えば、それは役に立つ情報をあたえ、よい変化をうながしうる。とくに人々がデータの限界を理解し、それを多くの手がかりの一つとしてあつかうときはそうである。課題は、そうした道具が、自分自身の感覚への注意や医療の専門家の助言に取って代わることをゆるさずに、それを使うことである。機器は何歩歩いたかを教えてくれるが、その一歩一歩を楽しんで歩いたかどうかを決められるのは、私たちだけなのである。',
+      '身につける機器をめぐる議論は、結局のところ、私たちが自分自身をどう理解するのかという問いを生む。私たちの体はたしかに数字で表すことができるが、それはまた、どんな機器も完全にはとらえられない感覚や気分や直感を通して、内側から経験されてもいる。技術との健全な関係は、数字は道しるべであって裁判官ではないことを覚えておくことにかかっているのかもしれない。数字はよりよい習慣へと私たちをみちびいてくれるが、自分がどう感じ、どう生きたいかについての最終的な判断は、自分自身のものであり続けなければならない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['When', 'Unless', 'Although', 'Before'], answer: 0, why: '「機器がよく眠れなかったと知らせると、休めたと感じていた人もつかれを感じはじめる」という When。' },
+    ],
+    summary: {
+      text: 'Wearable devices can encourage exercise and give early ( 1 ) of health problems. However, many users return to old habits, and the numbers are often rough ( 2 ). Data may also be shared with employers or insurers, and constant tracking can cause ( 3 ). The numbers should be treated as a guide, not a judge.',
+      blanks: [
+        { choices: ['warning', 'payment', 'praise', 'punishment'], answer: 0, why: '第2段落 continuous monitoring can provide early warning of problems。' },
+        { choices: ['estimates', 'jokes', 'stories', 'orders'], answer: 0, why: '第3段落 many of the numbers that devices provide are only rough estimates。' },
+        { choices: ['anxiety', 'happiness', 'sleepiness', 'hunger'], answer: 0, why: '第5段落 can become a source of anxiety rather than motivation。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、機器が利用者の不規則な心拍を見つけたことがある。', answer: true, why: '第2段落 devices have detected irregular heart rhythms。' },
+      { statement: '研究によれば、トラッカーを使う人は必ず活動を長くふやし続ける。', answer: false, why: '第3段落 return to their previous habits within months。' },
+      { statement: '筆者によれば、データが雇い主や保険会社と共有されることがある。', answer: true, why: '第4段落 may be shared with companies, insurers, or employers。' },
+      { statement: '筆者は、身につける機器にはまったく価値がないと考えている。', answer: false, why: '第6段落 None of this means that wearable devices are without value。' },
+    ],
+    qa: [
+      { q: 'How might the data shape experience rather than simply describe it?', choices: ['A person who felt rested may feel tired after being told they slept poorly.', 'Devices make people sleep longer.', 'Data always changes the weather.', 'People stop feeling anything at all.'], answer: 0, why: '第3段落 a person who felt rested may begin to feel tired。' },
+      { q: 'What might happen to walking when every step is tracked?', choices: ['It may become more about reaching a target than enjoying the outdoors.', 'It may become impossible.', 'It may become a paid job.', 'It may stop being healthy.'], answer: 0, why: '第5段落 Walking may become less about enjoying the outdoors than about reaching a target。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
