@@ -27776,6 +27776,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-free-transport',
+    title: 'Should Buses Be Free?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the past two decades, a number of cities and even one entire country have made their buses, trams, or trains free for everyone to use. Passengers simply climb aboard without buying a ticket or touching a card, and the cost of running the system is paid for through taxes instead. The idea has attracted considerable attention, because it appears to promise solutions to several problems at once, from traffic jams and air pollution to the difficulties faced by people on low incomes. Yet experience suggests that the results of free public transport are more complicated than its enthusiastic supporters often claim.",
+      "The most common argument for removing fares concerns the environment. If public transport costs nothing, the reasoning goes, many people who now drive will leave their cars at home, and the city will enjoy cleaner air and less congestion. In practice, however, studies of cities that have abolished fares have found that the new passengers often come not from cars but from bicycles and walking. People who used to walk short distances begin to take the bus instead, which may increase the number of passengers without reducing the number of cars on the road at all.",
+      "The reason for this disappointing result is that price is only one of the factors that influence how people choose to travel. For many drivers, the cost of a ticket was never the main obstacle to using public transport; what kept them in their cars was the fact that buses were slow, infrequent, or did not go where they needed to go. ( A ) these problems are solved, making a slow and inconvenient service free may change very little, whereas a fast and reliable service may attract drivers even if passengers must pay for it.",
+      "A second argument is based on fairness rather than the environment. Transport costs take up a much larger share of the income of poor households than of wealthy ones, and for people with little money, the price of a ticket can limit their access to jobs, schools, and hospitals. Free transport, on this view, is less a policy about traffic than a way of guaranteeing that every resident can take part in the life of the city. Supporters also point out that collecting fares itself costs money, since ticket machines, inspectors, and payment systems must be maintained.",
+      "Critics respond that there are cheaper ways of helping those in need. Discounts for students, elderly people, and low-income residents can reduce the burden on those who need help most, while those who can afford to pay continue to contribute. Making transport free for everyone, by contrast, means that the city gives up a large source of income, including payments from wealthy commuters and tourists who would have been willing to pay. That lost income must be replaced through taxes, or else the service may gradually decline as the city struggles to fund new vehicles and routes.",
+      "The debate over free transport thus reveals a broader truth about public policy: a measure that sounds simple and attractive may produce effects quite different from those intended, depending on the circumstances in which it is introduced. Cities that have benefited most from free transport seem to be those that combined it with improvements to the service and with measures that made driving less convenient, such as fewer parking spaces in the city center. Free fares alone, it appears, are rarely enough.",
+      "Perhaps the most valuable lesson is that the question of whether transport should be free cannot be answered in the abstract. It depends on what a city is trying to achieve, whether reducing traffic, protecting the environment, or helping its poorest residents, and on whether other policies are pursued at the same time to support that goal.",
+    ],
+    ja: [
+      'この二十年ほどのあいだに、いくつかの都市や、ある国全体までもが、バスや路面電車や列車をだれでも無料で使えるようにした。乗客は切符を買ったりカードをかざしたりせずにただ乗りこみ、運行の費用は代わりに税金でまかなわれる。この考えはかなりの注目を集めてきた。交通渋滞や大気汚染から、収入の少ない人々がかかえる困難まで、いくつもの問題をいっぺんに解決すると約束するように見えるからである。しかし経験が示すところでは、公共交通の無料化の結果は、熱心な支持者がしばしば主張するよりも複雑である。',
+      '運賃をなくすことを支持する最もよくある議論は環境にかかわる。公共交通がただなら、今は車を運転している多くの人が車を家に置いていき、都市はよりきれいな空気と少ない渋滞を享受するだろう、という理屈である。しかし実際には、運賃を廃止した都市の研究で、新しい乗客は車からではなく、自転車や徒歩から来ることが多いとわかった。以前は短い距離を歩いていた人々が代わりにバスに乗るようになり、そのことで乗客の数はふえても、道路を走る車の数はまったくへらないことがある。',
+      'この期待はずれの結果の理由は、値段が、人々が移動の方法を選ぶのに影響する要因の一つにすぎないということにある。多くの運転者にとって、切符の値段が公共交通を使う主な障害だったことはなかった。彼らを車にとどめていたのは、バスがおそかったり、本数が少なかったり、行きたいところに行かなかったりすることだったのである。こうした問題が解決されないかぎり、おそくて不便なサービスを無料にしてもほとんど何も変わらないかもしれないが、速くて信頼できるサービスなら、乗客がお金をはらわなければならなくても運転者を引きつけるかもしれない。',
+      '第二の議論は、環境ではなく公平さにもとづいている。交通費は、豊かな世帯よりも貧しい世帯の収入のずっと大きな割合をしめ、お金の少ない人々にとっては、切符の値段が仕事や学校や病院へのアクセスを制限しうる。この見方では、無料の交通は、交通についての政策というより、すべての住民が都市の生活に参加できることを保証する方法なのである。支持者はまた、運賃を集めること自体にお金がかかることも指摘する。券売機や検札係や支払いの仕組みを維持しなければならないからである。',
+      '批判する人々は、困っている人々を助けるもっと安上がりな方法があると答える。学生やお年寄りや収入の少ない住民への割引は、最も助けを必要とする人々の負担をへらすことができ、そのあいだ、はらう余裕のある人々は負担し続ける。これに対して、交通をすべての人に無料にすることは、都市が大きな収入源を手放すことを意味する。その中には、はらってもよいと思っていたはずの豊かな通勤者や旅行者からの支払いもふくまれる。その失われた収入は税金でおぎなわなければならず、さもなければ、都市が新しい車両や路線の資金に苦しむにつれて、サービスは少しずつおとろえていくかもしれない。',
+      'このように無料の交通をめぐる議論は、公共政策についてのより広い真実を明らかにしている。つまり、単純で魅力的に聞こえる政策も、それが導入される状況によっては、意図したものとはかなりちがう結果を生みうるということである。無料の交通から最も恩恵を受けたらしい都市は、それをサービスの改善や、中心部の駐車場をへらすなど運転を不便にする対策と組み合わせた都市であるように思われる。運賃の無料化だけでは、十分であることはめったにないようだ。',
+      'おそらく最も価値のある教訓は、交通を無料にすべきかどうかという問いは、抽象的には答えられないということである。それは、都市が何をなしとげようとしているのか、つまり交通量をへらすことか、環境を守ることか、最も貧しい住民を助けることかによるし、その目標を支えるためにほかの政策も同時に進められるかどうかにもよるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Since', 'Once'], answer: 0, why: '「こうした問題が解決されないかぎり、無料にしてもほとんど変わらない」という条件の Unless。' },
+    ],
+    summary: {
+      text: 'Free public transport is said to reduce traffic, but new passengers often come from walking and ( 1 ) rather than from cars, because price is only one factor in how people travel. It can also help poor residents, though critics prefer targeted ( 2 ). Free fares work best when combined with better service and measures that make ( 3 ) less convenient.',
+      blanks: [
+        { choices: ['cycling', 'flying', 'shopping', 'driving'], answer: 0, why: '第2段落 the new passengers often come not from cars but from bicycles and walking。' },
+        { choices: ['discounts', 'taxes', 'fines', 'tickets'], answer: 0, why: '第5段落 Discounts for students, elderly people, and low-income residents。' },
+        { choices: ['driving', 'walking', 'studying', 'working'], answer: 0, why: '第6段落 measures that made driving less convenient。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、運賃を廃止した都市では、新しい乗客の多くは車から来ている。', answer: false, why: '第2段落 the new passengers often come not from cars but from bicycles and walking。' },
+      { statement: '筆者によれば、多くの運転者にとって切符の値段は主な障害ではなかった。', answer: true, why: '第3段落 the cost of a ticket was never the main obstacle to using public transport。' },
+      { statement: '支持者によれば、運賃を集めること自体にもお金がかかる。', answer: true, why: '第4段落 collecting fares itself costs money。' },
+      { statement: '筆者は、運賃の無料化だけで交通の問題はたいてい解決すると考えている。', answer: false, why: '第6段落 Free fares alone, it appears, are rarely enough。' },
+    ],
+    qa: [
+      { q: 'What kept many drivers in their cars, according to the third paragraph?', choices: ['Buses were slow, infrequent, or did not go where they needed to go.', 'Tickets were always too expensive.', 'Buses were too clean and quiet.', 'They enjoyed paying for parking.'], answer: 0, why: '第3段落 buses were slow, infrequent, or did not go where they needed to go。' },
+      { q: 'Why does the author say the question cannot be answered in the abstract?', choices: ['It depends on what a city is trying to achieve and on other policies.', 'Nobody has ever tried free transport.', 'Transport is too boring to discuss.', 'Every city has exactly the same needs.'], answer: 0, why: '第7段落 It depends on what a city is trying to achieve ... and on whether other policies are pursued。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
