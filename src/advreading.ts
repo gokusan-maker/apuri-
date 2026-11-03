@@ -27278,6 +27278,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tacit-knowledge',
+    title: 'Knowing More Than We Can Tell',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually think of knowledge as something that can be expressed in words. A person who knows the capital of a country, the date of a historical event, or the steps of a mathematical proof can state what he or she knows and pass it on to others. Yet much of what people know cannot be put into words in this way. A skilled cyclist cannot fully explain how she keeps her balance, and an experienced doctor may recognize that a patient is seriously ill before being able to say exactly what has given that impression. Such knowledge, which philosophers sometimes call tacit, is no less real for being difficult to articulate.",
+      "Tacit knowledge is acquired in a different way from explicit knowledge. It is rarely learned from books or lectures alone; instead, it develops through practice, imitation, and long exposure to particular situations. An apprentice carpenter learns not only rules about measuring and cutting but also a feel for the material, an awareness of how different kinds of wood respond to the tools. Much of this learning happens by watching and working alongside someone more experienced, and it may take years before the apprentice can do without conscious effort what the master does easily. The knowledge is passed on less through instruction than through shared work, which is one reason why traditional crafts are so easily lost when a generation of masters disappears.",
+      "The existence of tacit knowledge has important implications for how we think about expertise. If expert judgment depended entirely on explicit rules, it could in principle be written down and followed by anyone. But experts often cannot fully explain their own decisions, and when they try, the rules they describe may fail to capture what they actually do. ( A ) the most important parts of their skill lie below the level of conscious reasoning, attempts to replace experts with written procedures may lose precisely what made the experts valuable. A manual that records every rule of a craft may still fail to produce a craftsman.",
+      "This insight has become particularly relevant in an age of automation. Many tasks that once required human judgment are now performed by machines that follow explicit instructions or learn patterns from large amounts of data. Some of these systems are remarkably successful, but they also reveal how much of human competence was tacit. Engineers trying to build a robot that can fold laundry or a program that can understand a joke have discovered that activities people perform without thinking can be extraordinarily difficult to specify in advance. What seems simple to us is often simple only because we have absorbed, over many years, a vast amount of knowledge that we no longer notice.",
+      "At the same time, the idea of tacit knowledge can be misused. Experts may appeal to intuition in order to avoid explaining decisions that ought to be open to scrutiny, and a claim to special insight can conceal prejudice or error. Not everything that cannot be put into words is genuine knowledge; some of it may simply be habit or bias. A healthy respect for tacit knowledge must therefore be combined with a willingness to test intuitions against evidence and to make explicit, wherever possible, the reasons behind important judgments.",
+      "Recognizing the role of tacit knowledge may change how we value certain kinds of learning. Educational systems often emphasize what can be measured in written examinations, giving less attention to the slow acquisition of practical skill through experience. Yet many of the abilities that matter most in work and in life, from caring for a sick person to resolving a disagreement among colleagues, depend heavily on knowledge of this kind. Societies that neglect it may find that they have trained people to know a great deal about the world while leaving them unprepared to act well within it.",
+    ],
+    ja: [
+      '私たちはふつう、知識を言葉で表せるものだと考えている。ある国の首都や歴史上のできごとの年や数学の証明の手順を知っている人は、自分が知っていることを述べ、他人に伝えることができる。しかし人が知っていることの多くは、このように言葉にすることができない。上手に自転車に乗る人は、どうやってバランスを保っているのかを完全には説明できないし、経験を積んだ医者は、何がそういう印象を与えたのかを正確に言えるようになる前に、患者が重い病気だと気づくことがある。哲学者がときに暗黙知とよぶこうした知識は、言葉にしにくいからといって、現実性が劣るわけではない。',
+      '暗黙知は、明示的な知識とはちがう形で身につけられる。それが本や講義だけで学ばれることはめったになく、むしろ練習やまねや、特定の状況に長くふれることを通じて育つ。大工の見習いは、はかり方や切り方の決まりだけでなく、材料の感覚、つまり種類のちがう木が道具にどう反応するかへの気づきも学ぶ。この学びの多くは、より経験のある人を見たり、そのそばで働いたりすることで起こり、親方がかんたんにすることを見習いが意識的な努力なしにできるようになるまでに、何年もかかるかもしれない。この知識は、教えることよりも、ともに働くことを通じて伝えられる。親方の世代がいなくなると、伝統的な手仕事がかんたんに失われてしまうのは、1つにはこのためである。',
+      '暗黙知が存在することは、専門性についての考え方に重要な意味をもつ。専門家の判断がすべて明示的な決まりにかかっているなら、それは原理的には書き出され、だれにでもしたがえるはずである。しかし専門家は自分の決定を完全には説明できないことが多く、説明しようとしても、彼らが述べる決まりは実際にしていることをとらえきれないかもしれない。彼らの技能の最も重要な部分は意識的な推論の下にあるので、専門家を書かれた手順に置きかえようとする試みは、まさに専門家を価値あるものにしていたものを失ってしまうかもしれない。ある手仕事のあらゆる決まりを記録した手引きがあっても、それで職人が生まれるとは限らないのである。',
+      'この洞察は、自動化の時代にとくに重要になってきた。かつて人間の判断を必要とした多くの作業が、今では明示的な指示にしたがったり、大量のデータから型を学んだりする機械によって行われている。こうしたしくみのなかにはおどろくほどうまくいくものもあるが、それらはまた、人間の能力のどれほど多くが暗黙のものだったかを明らかにしている。洗濯物をたためるロボットや冗談を理解できるプログラムを作ろうとする技術者たちは、人が何も考えずに行う活動が、前もってくわしく指定するのはとてつもなくむずかしいことがあると気づいてきた。私たちにとってかんたんに思えることは、しばしば、何年もかけて、もはや気づかないほどの膨大な知識を吸収してきたからこそかんたんなのである。',
+      '同時に、暗黙知という考えは悪用されることもある。専門家は、検討にさらされるべき決定を説明するのをさけるために直感を持ち出すことがあり、特別な洞察があるという主張は、偏見や誤りをかくすこともある。言葉にできないものがすべて本当の知識だというわけではなく、その一部は単なる習慣や偏りかもしれない。したがって、暗黙知への健全な敬意は、直感を証拠と照らし合わせ、可能なかぎり重要な判断の背後にある理由を明示しようとする姿勢と組み合わせられなければならない。',
+      '暗黙知の役割を認めることは、ある種の学びをどう評価するかを変えるかもしれない。教育制度はしばしば筆記試験ではかれるものを重視し、経験を通じて実際的な技能をゆっくり身につけることにはあまり注意を向けない。しかし病人の世話をすることから同僚どうしの意見の対立を解決することまで、仕事や生活で最も大切な能力の多くは、この種の知識に大きくたよっている。それをおろそかにする社会は、世界について多くを知っているが、その中でうまく行動する準備のできていない人々を育ててしまったことに気づくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「技能の最も重要な部分は意識的な推論の下にあるので」という理由の Because。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、人が知っていることの多くは言葉にすることができない。', answer: true, why: '第1段落 much of what people know cannot be put into words in this way。' },
+      { statement: '筆者によれば、暗黙知は主に本や講義から学ばれる。', answer: false, why: '第2段落 It is rarely learned from books or lectures alone。' },
+      { statement: '筆者によれば、人が何も考えずに行う活動を機械に指定するのはかんたんである。', answer: false, why: '第4段落 can be extraordinarily difficult to specify in advance。' },
+      { statement: '筆者によれば、言葉にできないものの一部は、単なる習慣や偏りかもしれない。', answer: true, why: '第5段落 some of it may simply be habit or bias。' },
+    ],
+    qa: [
+      { q: 'How does an apprentice carpenter acquire tacit knowledge, according to the second paragraph?', choices: ['By watching and working alongside someone more experienced.', 'By reading books about carpentry only.', 'By listening to lectures at a university.', 'By memorizing rules in one day.'], answer: 0, why: '第2段落 Much of this learning happens by watching and working alongside someone more experienced。' },
+      { q: 'What must a healthy respect for tacit knowledge be combined with, according to the fifth paragraph?', choices: ['A willingness to test intuitions against evidence and make reasons explicit.', 'A complete rejection of all intuition.', 'Blind trust in every expert.', 'A refusal to explain any decision.'], answer: 0, why: '第5段落 combined with a willingness to test intuitions against evidence and to make explicit ... the reasons behind important judgments。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
