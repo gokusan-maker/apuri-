@@ -6030,6 +6030,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She [made] a deep breath before the speech.', choices: ['took', 'did', 'put', 'gave'], answer: 0, why: '「深呼吸する」は take a deep breath。' },
     ],
   },
+  {
+    id: 'exam-fix-141',
+    title: '入試の誤文訂正〈141〉（東大レベル：英作文の数えられない名詞）',
+    points: ['advice・information・furniture・homework・luggage（baggage）・progress・news・weather・traffic・paper（紙）は数えられない名詞。a／an や複数形の -s をつけず、many ではなく much／a lot of を使う。数えるときは a piece of advice・a sheet of paper のように言う。news は単数あつかい（The news is ～）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She gave me a lot of useful advice.', ja: '彼女は私にたくさんの役に立つ助言をくれた。' }],
+    questions: [
+      { sentence: 'She gave me [many advices].', choices: ['a lot of advice', 'many advice', 'an advice', 'a lot of advices'], answer: 0, why: 'advice は数えられない。a lot of advice。' },
+      { sentence: 'We need more [informations] about the plan.', choices: ['information', 'an information', 'informations of', 'the informations'], answer: 0, why: 'information は数えられないので -s をつけない。' },
+      { sentence: 'They bought [a new furniture] for the room.', choices: ['some new furniture', 'new furnitures', 'a new furnitures', 'many new furniture'], answer: 0, why: 'furniture は数えられない。some new furniture（a piece of furniture も可）。' },
+      { sentence: 'I have [a lot of homeworks] today.', choices: ['a lot of homework', 'many homework', 'a homework', 'many homeworks'], answer: 0, why: 'homework は数えられない。a lot of homework。' },
+      { sentence: 'How [many luggage] do you have?', choices: ['much luggage', 'many luggages', 'a luggage', 'few luggage'], answer: 0, why: 'luggage は数えられないので How much luggage。' },
+      { sentence: 'There [were] little traffic this morning.', choices: ['was', 'are', 'have', 'be'], answer: 0, why: 'traffic は数えられない名詞で単数あつかい。過去の話なので was。' },
+      { sentence: 'He made [great progresses] in English.', choices: ['great progress', 'a great progress', 'great progresses', 'many progress'], answer: 0, why: 'progress は数えられない。make great progress。' },
+      { sentence: 'The news [are] surprising.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: 'news は -s で終わるが単数あつかい。The news is ～。' },
+      { sentence: 'I need [a paper] to write on.', choices: ['a sheet of paper', 'a papers', 'many paper', 'papers piece'], answer: 0, why: '「紙」の paper は数えられない。a sheet of paper。（a paper は「新聞・論文」）' },
+      { sentence: 'We had [a fine weather] yesterday.', choices: ['fine weather', 'a fine weathers', 'fine weathers', 'the fine weathers'], answer: 0, why: 'weather は数えられないので a をつけない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
