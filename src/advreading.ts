@@ -29262,6 +29262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-generosity',
+    title: 'The Spirit of Giving',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Generosity is widely admired, yet it is surprisingly difficult to define. We call a person generous who gives money to those in need, who shares time with friends, or who forgives an injury without demanding apology. But we hesitate to call someone generous who gives only in order to be praised, or who gives away what he or she does not value. These hesitations suggest that generosity is not simply a matter of giving, but of giving in a particular spirit, and it is worth asking what that spirit is.",
+      "One feature of generosity is that it goes beyond what is required. If I repay a debt or fulfil a promise, I am being honest or reliable, but not generous, since I am doing only what I owe. Generosity begins where obligation ends: it consists in giving more than others could reasonably demand, whether in material goods, attention, patience, or understanding. For this reason, generosity cannot be enforced; a gift that is compelled is no longer a gift but a tax.",
+      "Another feature concerns motive. A generous act seems to require that the giver be moved, at least in part, by concern for the good of the recipient rather than by the hope of some return. ( A ) generous people may well benefit from their generosity, enjoying the gratitude of others or a sense of satisfaction, these benefits cannot be the main reason for their giving without changing the character of the act. A gift offered in order to create an obligation, or to display one's wealth, may resemble generosity on the surface while being something quite different underneath.",
+      "Generosity also involves a certain attitude toward one's own possessions. The generous person holds what he or she has lightly, recognizing that wealth, time, and talents are not merely private property to be guarded but resources that can be shared. This attitude does not require giving away everything; a person who neglects his or her own needs or responsibilities in order to give to others may be acting not generously but carelessly. Generosity, like other virtues, requires judgment about what to give, to whom, and when.",
+      "It is worth noticing that generosity is not only a matter of material gifts. Some of the most important forms of generosity concern how we interpret others. To assume the best about someone's intentions when the evidence is unclear, to listen patiently to a view one finds mistaken, or to allow someone the chance to change after a failure are all forms of generosity of spirit. Such generosity can be especially valuable in a world where people often rush to judge one another on the basis of limited information.",
+      "Generosity may also benefit the giver in ways that are less obvious than gratitude or reputation. Psychological research suggests that people who give to others often report greater happiness than those who spend the same resources on themselves. This finding does not turn generosity into a calculation of personal advantage, but it suggests that the boundary between caring for others and caring for oneself may be less sharp than we sometimes assume.",
+      "In the end, generosity reflects an understanding of human life as fundamentally shared. Those who give freely recognize that they have themselves received much that they did not earn, from the care of parents to the knowledge accumulated by earlier generations, and that passing on such gifts is part of what it means to live well among others. Generosity, in this light, is less a heroic sacrifice than a natural response to the recognition of how much we owe, and it may grow most readily in those who have learned to see their own lives as gifts.",
+    ],
+    ja: [
+      '気前のよさは広くほめられているが、意外にも定義するのがむずかしい。困っている人にお金をあたえる人や、友人と時間を分かち合う人や、謝罪を求めずに傷つけられたことをゆるす人を、私たちは気前がよいとよぶ。しかし、ほめられるためだけにあたえる人や、自分が大切に思っていないものを手放す人を気前がよいとよぶのはためらう。こうしたためらいは、気前のよさが単にあたえることの問題ではなく、ある特定の心であたえることの問題であることを示しており、その心とは何かを問う価値がある。',
+      '気前のよさの一つの特徴は、それが求められることをこえるということである。借りを返したり約束を果たしたりするとき、私は正直だったり信頼できたりするのであって、気前がよいのではない。自分が負っていることをしているだけだからである。気前のよさは義務が終わるところから始まる。それは、物であれ、注意であれ、しんぼう強さであれ、理解であれ、他人が当然求められる以上にあたえることにあるのである。このため、気前のよさは強制できない。強いられた贈り物は、もはや贈り物ではなく税金だからである。',
+      'もう一つの特徴は動機にかかわる。気前のよい行為には、あたえる人が、何かの見返りへの期待ではなく、少なくとも部分的には受け取る人のためを思う気持ちに動かされていることが必要なように思われる。気前のよい人は、他人の感謝や満足感を味わうなど、その気前のよさから恩恵を受けるかもしれないが、こうした恩恵があたえることの主な理由になれば、行為の性格が変わってしまう。義務を生むため、あるいは自分の富を見せびらかすためにさし出された贈り物は、表面では気前のよさに似ていても、その下はまったく別のものなのかもしれない。',
+      '気前のよさはまた、自分の持ち物に対するある態度をふくんでいる。気前のよい人は、自分のもっているものに執着しない。富や時間や才能が、守るべき単なる私有財産ではなく、分かち合える資源であると認めているのである。この態度は、すべてを手放すことを求めはしない。他人にあたえるために自分の必要や責任をおろそかにする人は、気前よくではなく、不注意にふるまっているのかもしれない。気前のよさは、ほかの徳と同じように、何を、だれに、いつあたえるかについての判断を必要とするのである。',
+      '気前のよさが物の贈り物だけの問題ではないことにも注意する価値がある。最も大切な形の気前のよさのいくつかは、他人をどう解釈するかにかかわる。証拠がはっきりしないときにだれかの意図を最もよいほうに考えることや、まちがっていると思う意見にしんぼう強く耳をかたむけることや、失敗のあとにだれかに変わる機会をあたえることは、どれも心の気前のよさの形である。そうした気前のよさは、人々が限られた情報にもとづいて急いでおたがいを判断しがちな世界では、とくに価値があるかもしれない。',
+      '気前のよさはまた、感謝や評判よりも目立たないしかたで、あたえる人のためにもなるかもしれない。心理学の研究によれば、他人にあたえる人は、同じ資源を自分のために使う人よりも大きな幸福を感じると報告することが多い。この発見は、気前のよさを個人的な得の計算に変えるものではないが、他人を気づかうことと自分を気づかうこととの境目は、私たちがときに思っているほどはっきりしていないかもしれないことを示している。',
+      '結局のところ、気前のよさは、人間の生活を根本的に分かち合われたものとして理解することを反映している。惜しみなくあたえる人は、親の世話からそれ以前の世代が積み重ねてきた知識まで、自分自身もかせいだわけではない多くのものを受け取ってきたこと、そしてそうした贈り物を手わたしていくことが、他人とともによく生きることの意味の一部であることを認めているのである。このように見れば、気前のよさは英雄的な犠牲というより、自分がどれほど多くを負っているかに気づいたことへの自然な反応であり、それは自分の人生を贈り物として見ることを学んだ人のうちで最もすなおに育つのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「気前のよい人は恩恵を受けるかもしれないが、それが主な理由になると行為の性格が変わる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、借りを返すことは気前のよさの例である。', answer: false, why: '第2段落 I am being honest or reliable, but not generous。' },
+      { statement: '筆者によれば、気前のよさは強制できない。', answer: true, why: '第2段落 generosity cannot be enforced。' },
+      { statement: '筆者によれば、気前のよさのためにはすべてを手放さなければならない。', answer: false, why: '第4段落 This attitude does not require giving away everything。' },
+      { statement: '研究によれば、他人にあたえる人は、自分に使う人より大きな幸福を感じると報告することが多い。', answer: true, why: '第6段落 people who give to others often report greater happiness。' },
+    ],
+    qa: [
+      { q: 'What is an example of generosity of spirit, according to the fifth paragraph?', choices: ['Assuming the best about someone’s intentions when the evidence is unclear.', 'Giving away things one does not value.', 'Repaying a debt on time.', 'Judging others quickly.'], answer: 0, why: '第5段落 To assume the best about someone’s intentions when the evidence is unclear。' },
+      { q: 'What do those who give freely recognize, according to the last paragraph?', choices: ['That they have received much that they did not earn.', 'That they will always be repaid.', 'That giving makes them famous.', 'That others owe them gratitude.'], answer: 0, why: '第7段落 they have themselves received much that they did not earn。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
