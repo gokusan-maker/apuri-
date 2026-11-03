@@ -3530,6 +3530,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Excuse (B) my (C) being (D) lately.', choices: ['(A) Excuse', '(B) my', '(C) being', '(D) lately'], answer: 3, why: '「おくれて」は late。lately は「最近」。' },
     ],
   },
+  {
+    id: 'exam-error-article2-todai',
+    title: '入試の正誤問題〈149〉（東大レベル：英作文の冠詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '一度出た名詞や、だれにもわかる特定のものは the（the sun・in the east・in the class）。スポーツ名・食事名・by＋交通手段・go to bed・last week は無冠詞。Mount ～ の山の名前は無冠詞。a／an は文字ではなく最初の音で決まる（a university・an hour）。',
+    ],
+    examples: [
+      { en: 'There is a cat on the sofa. The cat is sleeping.', ja: 'ソファーにネコがいる。そのネコは眠っている。' },
+      { en: 'We went there by train last Sunday.', ja: 'この前の日曜日に、私たちは電車でそこへ行った。' },
+    ],
+    questions: [
+      { sentence: 'I play the piano and my brother plays (A) the soccer (B) after (C) school (D) every day.', choices: ['(A) the soccer', '(B) after', '(C) school', '(D) every day'], answer: 0, why: 'スポーツ名には冠詞をつけない。plays soccer。' },
+      { sentence: 'There is (A) a (B) cat on the sofa. (C) A cat is (D) sleeping.', choices: ['(A) a', '(B) cat on the sofa', '(C) A cat is', '(D) sleeping'], answer: 2, why: '一度話に出たものは the。The cat is sleeping。' },
+      { sentence: '(A) The Mount Fuji is (B) the highest (C) mountain in (D) Japan.', choices: ['(A) The Mount Fuji is', '(B) the highest', '(C) mountain in', '(D) Japan'], answer: 0, why: 'Mount ～ の山の名前には the をつけない。Mount Fuji。' },
+      { sentence: 'She is (A) the (B) most (C) beautiful girl in (D) a class.', choices: ['(A) the', '(B) most', '(C) beautiful girl in', '(D) a class'], answer: 3, why: '「クラスで」は特定のクラスなので in the class（in her class）。' },
+      { sentence: 'I had (A) a breakfast (B) at (C) seven (D) this morning.', choices: ['(A) a breakfast', '(B) at', '(C) seven', '(D) this morning'], answer: 0, why: '食事名にはふつう冠詞をつけない。had breakfast。' },
+      { sentence: '(A) The sun (B) rises in (C) an east and sets in (D) the west.', choices: ['(A) The sun', '(B) rises in', '(C) an east and sets in', '(D) the west'], answer: 2, why: '方角には the をつける。in the east。' },
+      { sentence: 'We went there (A) by (B) a train (C) last (D) Sunday.', choices: ['(A) by', '(B) a train', '(C) last', '(D) Sunday'], answer: 1, why: '交通手段の by のあとは無冠詞。by train。' },
+      { sentence: 'She is (A) a doctor, and her husband is (B) an (C) university (D) teacher.', choices: ['(A) a doctor, and her husband is', '(B) an', '(C) university', '(D) teacher'], answer: 1, why: 'university は「ユ」の音で始まるので a university。' },
+      { sentence: 'I usually go (A) to the bed (B) at eleven and (C) get up (D) at six.', choices: ['(A) to the bed', '(B) at eleven and', '(C) get up', '(D) at six'], answer: 0, why: '「寝る」は go to bed（無冠詞）。' },
+      { sentence: 'This is (A) the (B) book I told you about (C) the last (D) week.', choices: ['(A) the', '(B) book I told you about', '(C) the last', '(D) week'], answer: 2, why: '「先週」は last week（the をつけない）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
