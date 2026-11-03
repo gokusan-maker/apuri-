@@ -2321,6 +2321,18 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 50 L24 46 M28 62 L21 62 M30 74 L24 78 M70 50 L76 46 M72 62 L79 62 M70 74 L76 78 M50 86 L50 93" fill="none" stroke="#78350f" strokeWidth="1.8" strokeLinecap="round" />
       </g>
     )
+  if (species === 'whaleshark')
+    return (
+      <g>
+        {/* 背中の白い点もようと、横の線 */}
+        <circle cx="40" cy="58" r="2" fill="#f8fafc" />
+        <circle cx="50" cy="54" r="2" fill="#f8fafc" />
+        <circle cx="60" cy="58" r="2" fill="#f8fafc" />
+        <circle cx="45" cy="66" r="2" fill="#f8fafc" />
+        <circle cx="55" cy="66" r="2" fill="#f8fafc" />
+        <path d="M34 72 Q50 76 66 72" fill="none" stroke="#e2e8f0" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
