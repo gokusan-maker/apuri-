@@ -28460,6 +28460,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ambition',
+    title: 'Two Kinds of Ambition',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Ambition occupies an uncertain place in our moral vocabulary. We encourage children to be ambitious, praise people who set high goals and work hard to reach them, and often regard a lack of ambition as a kind of failure. Yet we also speak disapprovingly of people who are too ambitious, suggesting that ambition can become a vice that drives people to neglect their families, betray their friends, or pursue success at any cost. The same quality that we admire in one person we may condemn in another, which suggests that the value of ambition depends on something other than ambition itself.",
+      "Part of the difficulty is that ambition describes a form rather than a content. To be ambitious is to desire to achieve something difficult or distinguished, but the word tells us nothing about what is desired or why. A doctor who hopes to discover a cure for a disease and a politician who hopes to gain power for its own sake may both be described as ambitious, yet we evaluate them very differently. The moral character of ambition seems to depend largely on the goals toward which it is directed and on the means by which those goals are pursued.",
+      "It is also worth distinguishing between ambition directed at achievement and ambition directed at recognition. Some people wish to do excellent work, to create, discover, or build something of lasting value, and they care about the work itself. Others wish primarily to be seen as successful, to win prizes, titles, or admiration, and they care about the work mainly as a means to these rewards. ( A ) the two forms of ambition often appear together and may be difficult to separate in practice, they lead to quite different experiences. A person who loves the work can find satisfaction even when success is not recognized, while a person who seeks only recognition may remain dissatisfied however much is achieved.",
+      "Ambition of the second kind has a further difficulty: it is inherently comparative. Recognition is valuable largely because it is scarce, and to be recognized as outstanding is to be placed above others. Such ambition therefore tends to generate competition and anxiety, since one person's success may appear as another's failure, and there is always someone more successful with whom to compare oneself. A society that encourages this form of ambition may produce remarkable achievements, but it may also produce a great deal of unhappiness among those who fall short.",
+      "None of this means that the desire for recognition is entirely bad. Human beings are social creatures, and the wish to be valued by others is a natural part of our nature. Recognition can also serve useful purposes, encouraging people to develop their talents and rewarding contributions that benefit the community. The problem arises when recognition becomes the only measure of worth, so that people lose the ability to value their own work independently of the judgments of others.",
+      "A healthy ambition, then, might be one that is directed toward goods worth achieving, pursued by means that respect others, and balanced by a capacity to find meaning in the work itself rather than only in its rewards. Such ambition does not require the abandonment of high goals, but it does require a certain freedom from the constant comparison that makes success so restless.",
+      "Perhaps the best test of an ambition is to ask what would remain if no one else ever learned of our achievements. If the answer is that something of value would still remain, then our ambition may be of the kind that enriches a life rather than consumes it.",
+    ],
+    ja: [
+      '野心は、私たちの道徳の語彙の中で不確かな位置をしめている。私たちは子どもに野心をもつようはげまし、高い目標を立ててそれに向かって努力する人をほめ、野心がないことをしばしば一種の失敗とみなす。しかし私たちはまた、野心がありすぎる人について非難をこめて語り、野心が、人に家族をおろそかにさせたり、友人を裏切らせたり、どんな代償をはらっても成功を追い求めさせたりする悪徳になりうることをほのめかす。ある人のうちにほめる同じ性質を、別の人のうちには非難するかもしれないのであり、このことは、野心の価値が野心そのもの以外の何かによることを示している。',
+      '困難の一部は、野心が中身ではなく形を表しているということにある。野心があるとは、何かむずかしいことやすぐれたことをなしとげたいと望むことだが、この言葉は、何がなぜ望まれているのかについては何も教えてくれない。ある病気の治療法を発見したいと願う医師も、権力そのもののために権力を得たいと願う政治家も、どちらも野心的と言われるかもしれないが、私たちは両者をまったくちがうように評価する。野心の道徳的な性格は、主にそれが向けられる目標と、その目標を追い求める手段によるように思われる。',
+      'また、達成に向けられた野心と、評価に向けられた野心とを区別する価値もある。すぐれた仕事をしたい、つまり長く価値をもつ何かを創り出したり、発見したり、築いたりしたいと願い、仕事そのものを大切にする人もいる。主に成功していると見られたい、つまり賞や肩書きや称賛を得たいと願い、仕事を主にこうしたほうびのための手段として大切にする人もいる。この二つの形の野心はしばしばいっしょに現れ、実際には分けるのがむずかしいかもしれないが、それらはまったくちがう経験につながる。仕事を愛する人は、成功が認められないときでも満足を見いだせるが、評価だけを求める人は、どれほど多くをなしとげても満たされないままかもしれない。',
+      '第二の種類の野心には、さらなる困難がある。それは本来的に比較にもとづいているのである。評価が価値をもつのは主にそれがとぼしいからであり、際立っていると認められることは、他人の上に置かれることである。それゆえそうした野心は、競争と不安を生みがちである。ある人の成功が別の人の失敗のように見えるかもしれず、自分と比べるもっと成功した人がいつもいるからである。この形の野心をはげます社会は、めざましい業績を生むかもしれないが、とどかなかった人々のあいだに多くの不幸も生むかもしれない。',
+      'このどれも、評価を求める気持ちがまったく悪いという意味ではない。人間は社会的な生き物であり、他人に大切にされたいという願いは、私たちの本性の自然な一部である。評価はまた、人々が才能をのばすようはげまし、共同体のためになる貢献にむくいるという役に立つ目的も果たしうる。問題が生じるのは、評価が価値の唯一のものさしになり、人々が他人の判断とは別に自分の仕事を大切にする力を失ってしまうときである。',
+      'それゆえ健全な野心とは、なしとげる価値のあるものに向けられ、他人を尊重する手段で追い求められ、ほうびだけでなく仕事そのものに意味を見いだす力によってつりあいがとれている野心なのかもしれない。そうした野心は高い目標を捨てることを求めはしないが、成功をあれほど落ち着かないものにしている、たえまない比較からのある種の自由を求めるのである。',
+      'おそらく野心を試す最もよい方法は、だれもが自分の業績を知ることが決してなかったとしたら何が残るかを問うことである。もしそれでも何か価値あるものが残ると答えられるなら、私たちの野心は、人生を食いつくすのではなく豊かにする種類のものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「二つの野心はいっしょに現れ分けにくいかもしれないが、まったくちがう経験につながる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、野心という言葉は何が望まれているのかについて何も教えてくれない。', answer: true, why: '第2段落 the word tells us nothing about what is desired or why。' },
+      { statement: '筆者によれば、評価だけを求める人は、成功が認められなくても満足できる。', answer: false, why: '第3段落 a person who seeks only recognition may remain dissatisfied。' },
+      { statement: '筆者によれば、評価を求める野心は競争と不安を生みがちである。', answer: true, why: '第4段落 such ambition therefore tends to generate competition and anxiety。' },
+      { statement: '筆者は、評価を求める気持ちはまったく悪いと考えている。', answer: false, why: '第5段落 None of this means that the desire for recognition is entirely bad。' },
+    ],
+    qa: [
+      { q: 'Why is ambition directed at recognition described as inherently comparative?', choices: ['Recognition is valuable because it is scarce and places one above others.', 'It always involves comparing prices.', 'It is only found in sports.', 'It never involves other people.'], answer: 0, why: '第4段落 Recognition is valuable largely because it is scarce, and to be recognized as outstanding is to be placed above others。' },
+      { q: 'What is the best test of an ambition, according to the last paragraph?', choices: ['Asking what would remain if no one else ever learned of our achievements.', 'Counting the prizes we have won.', 'Comparing our salary with others.', 'Asking how famous we have become.'], answer: 0, why: '第7段落 to ask what would remain if no one else ever learned of our achievements。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
