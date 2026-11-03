@@ -2256,6 +2256,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 54 Q42 60 48 56 M64 54 Q58 60 52 56" fill="none" stroke="#f5f5f4" strokeWidth="2" />
       </g>
     )
+  if (species === 'asianblackbear')
+    return (
+      <g>
+        {/* むねの三日月もよう */}
+        <path d="M38 64 Q50 74 62 64 Q50 70 38 64 Z" fill="#fafaf9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
