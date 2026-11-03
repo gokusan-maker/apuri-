@@ -27126,6 +27126,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-objectivity',
+    title: 'Objectivity Without a View from Nowhere',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often praise judgments for being objective, meaning that they are based on facts rather than on personal feelings or interests. A scientist, a judge, or a journalist is expected to set aside his or her own preferences and to describe things as they really are. Yet the ideal of objectivity has also been criticized. Every observer, it is argued, sees the world from a particular position, shaped by language, culture, and experience, and no one can step entirely outside that position to view things from nowhere. If this is so, what can objectivity mean? The question is not merely academic, since public trust in science, law, and the press depends in large part on how it is answered.",
+      "One response is to abandon the ideal altogether, concluding that all knowledge is merely a matter of perspective and that no view is better than any other. This conclusion, however, is difficult to accept. We do not regard the claim that the earth is flat as simply one perspective among many, nor do we think that a court should treat an accusation without evidence in the same way as one supported by careful investigation. In practice, we constantly distinguish between judgments that are well grounded and those that are not, and we would be unable to live without making such distinctions. A complete rejection of objectivity would leave us unable to explain why some beliefs deserve more confidence than others.",
+      "A more promising approach is to understand objectivity not as the absence of perspective but as a particular way of dealing with perspectives. On this view, a judgment becomes more objective when it has been exposed to criticism from people with different points of view, when its reasoning has been made explicit so that others can examine it, and when it has survived attempts to show that it is wrong. Objectivity is then less a quality of individual minds than a property of communities and procedures that bring many perspectives into contact. It is something that people achieve together, rather than something that a single person possesses alone.",
+      "Science offers a clear example of this idea. Individual scientists are no less subject to bias than anyone else; they may be attached to their own theories, influenced by funding, or blind to possibilities that do not fit their expectations. What makes science relatively reliable is not that scientists are free from such influences, but that their claims are tested by others, published for scrutiny, and revised in the light of new evidence. ( A ) no single observer can see everything, the combination of many observers, each checking the work of others, can correct errors that any one of them might miss. The history of science contains many cases in which an error was corrected only when someone from outside the established community raised an unwelcome question.",
+      "This understanding has implications beyond science. It suggests that diversity of perspectives is not an obstacle to objectivity but one of its conditions. A group in which everyone shares the same background and assumptions may reach agreement easily, yet the agreement may reflect shared blind spots rather than truth. By contrast, a group that includes people who see the world differently is more likely to notice what others have overlooked, provided that its members are willing to listen to one another and to change their minds.",
+      "Objectivity, then, is not a view from nowhere but an achievement that must be worked for. It requires humility about the limits of one's own position, openness to the criticism of others, and a commitment to evidence that goes beyond the wish to be proved right. Understood in this way, the ideal remains valuable even after we have accepted that every observer stands somewhere. Indeed, it is precisely because we cannot escape our own perspectives that we need one another in the search for truth.",
+    ],
+    ja: [
+      '私たちはしばしば、判断を客観的だとほめる。それは、個人的な感情や利害ではなく事実にもとづいているという意味である。科学者や裁判官や記者は、自分の好みをわきに置き、物事をありのままに述べることを期待されている。しかし客観性という理想は批判もされてきた。どんな観察者も、言語や文化や経験によって形づくられた特定の位置から世界を見ており、だれもその位置から完全に外へ出て、どこでもない場所から物事を見ることはできない、と論じられるのである。もしそうなら、客観性とは何を意味しうるのだろうか。この問いは単に学問上のものではない。科学や法や報道への人々の信頼は、それにどう答えるかに大きくかかっているからである。',
+      '1つの対応は、理想そのものを捨て、あらゆる知識は単なる見方の問題であり、どの見方もほかの見方よりよいことはないと結論づけることである。しかし、この結論は受け入れがたい。私たちは、地球は平らだという主張を多くの見方のうちの1つにすぎないとはみなさないし、裁判所が証拠のない告発を注意深い調査に支えられた告発と同じように扱うべきだとも考えない。実際には、私たちはいつも、十分な根拠のある判断とそうでない判断を区別しており、そうした区別をせずに生きることはできないだろう。客観性を完全に否定すれば、なぜある信念がほかの信念より信頼に値するのかを説明できなくなってしまうだろう。',
+      'より見こみのあるやり方は、客観性を見方がないことではなく、見方の特定の扱い方として理解することである。この見方では、ある判断は、ちがう視点をもつ人々からの批判にさらされ、その推論が他者に調べられるよう明示され、それがまちがっていることを示そうとする試みにたえぬいたとき、より客観的になる。そうなると客観性は、個人の心の性質というより、多くの見方をふれ合わせる共同体や手続きの性質なのである。それは、1人の人間がひとりでもっているものではなく、人々がともになしとげるものなのである。',
+      '科学はこの考えのはっきりした例を示している。個々の科学者は、ほかのだれとも同じように偏りを受ける。自分の理論に愛着をもったり、研究資金に影響されたり、自分の予想に合わない可能性に気づかなかったりするかもしれない。科学を比較的信頼できるものにしているのは、科学者がそうした影響から自由であることではなく、その主張がほかの人々によって試され、検討のために発表され、新しい証拠に照らして改められることである。1人の観察者ではすべてを見ることはできないので、多くの観察者がたがいの仕事を確かめ合う組み合わせによって、そのだれか1人が見落とすかもしれない誤りを正すことができるのである。科学の歴史には、確立した共同体の外にいるだれかが歓迎されない問いを投げかけてはじめて誤りが正された例がたくさんある。',
+      'この理解は科学をこえた意味をもつ。それは、見方の多様性が客観性のさまたげではなく、その条件の1つであることを示している。だれもが同じ背景と前提をもつ集団はかんたんに合意に達するかもしれないが、その合意は真理ではなく、共有された盲点を反映しているのかもしれない。それに対して、世界をちがう形で見る人々をふくむ集団は、そのメンバーがたがいの話に耳をかたむけ、考えを変える意思をもっているかぎり、ほかの人が見落としたものに気づきやすい。',
+      'したがって客観性とは、どこでもない場所からの見方ではなく、努力して勝ち取らなければならない成果である。それには、自分の位置の限界についての謙虚さ、他者の批判への開かれた態度、そして自分が正しいと証明されたいという願いをこえた、証拠への誠実さが必要である。このように理解すれば、この理想は、どんな観察者もどこかに立っていると認めたあとでも価値を失わない。実際、私たちが自分の見方から逃れられないからこそ、真理を求めるうえで私たちはたがいを必要とするのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Before'], answer: 0, why: '「1人ではすべてを見ることはできないので」という理由の Because。' },
+    ],
+    tf: [
+      { statement: '筆者は、どの見方もほかの見方よりよいことはないという結論は受け入れがたいと考えている。', answer: true, why: '第2段落 This conclusion, however, is difficult to accept。' },
+      { statement: '筆者によれば、個々の科学者はほかの人より偏りを受けにくい。', answer: false, why: '第4段落 Individual scientists are no less subject to bias than anyone else。' },
+      { statement: '筆者によれば、見方の多様性は客観性のさまたげである。', answer: false, why: '第5段落 diversity of perspectives is not an obstacle to objectivity but one of its conditions。' },
+      { statement: '筆者によれば、客観性は努力して勝ち取らなければならない成果である。', answer: true, why: '第6段落 an achievement that must be worked for。' },
+    ],
+    qa: [
+      { q: 'How does the writer suggest understanding objectivity in the third paragraph?', choices: ['As a particular way of dealing with perspectives, through criticism and open reasoning.', 'As the complete absence of any perspective.', 'As the opinion of the most powerful person.', 'As something that only individuals can possess.'], answer: 0, why: '第3段落 objectivity not as the absence of perspective but as a particular way of dealing with perspectives。' },
+      { q: 'Why might a group in which everyone shares the same background reach a false agreement?', choices: ['Its agreement may reflect shared blind spots rather than truth.', 'Its members never talk to each other.', 'It always includes too many people.', 'It refuses to look at any evidence.'], answer: 0, why: '第5段落 the agreement may reflect shared blind spots rather than truth。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
