@@ -2053,6 +2053,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 60 L56 60 M44 64 L56 64" fill="none" stroke="#c2410c" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'eurasiansparrowhawk')
+    return (
+      <g>
+        {/* むねの細かいしまもようと、黄色い目 */}
+        <path d="M44 58 L56 58 M44 61 L56 61 M44 64 L56 64" fill="none" stroke="#9a3412" strokeWidth="1" />
+        <circle cx="42" cy="44" r="3" fill="#facc15" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
