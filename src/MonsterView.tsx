@@ -2216,6 +2216,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 82 L50 98" fill="none" stroke="#44403c" strokeWidth="1.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'eagleowl')
+    return (
+      <g>
+        {/* 頭の羽角と、顔のまわりのふち */}
+        <path d="M36 26 L32 12 L42 22 M64 26 L68 12 L58 22" fill="#a16207" stroke="#422006" strokeWidth="1.5" strokeLinejoin="round" />
+        <circle cx="42" cy="42" r="7" fill="none" stroke="#fde68a" strokeWidth="1.5" />
+        <circle cx="58" cy="42" r="7" fill="none" stroke="#fde68a" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
