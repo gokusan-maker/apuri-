@@ -6408,6 +6408,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Reading is to the mind [that] exercise is to the body.', choices: ['what', 'which', 'who', 'whose'], answer: 0, why: 'A is to B what C is to D「A と B の関係は C と D の関係と同じ」。' },
     ],
   },
+  {
+    id: 'exam-fix-150',
+    title: '入試の誤文訂正〈150〉（東大レベル：英作文の時の前置詞 by／until・in／within・for／during）',
+    points: ['by は「～までに（しめきり）」、until は「～までずっと（継続）」。in は「（今から）～後に」、within は「～以内に」。for は「～のあいだ（期間の長さ・数字）」、during は「～のあいだに（特定の期間・名詞）」。since は「～以来（時点）」なので期間の長さには使わない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Please finish the report by Friday. I will wait here until 5 p.m.', ja: '金曜日までに報告書を仕上げてください。私は午後5時までここで待ちます。' }],
+    questions: [
+      { sentence: 'Please finish the report [until] Friday.', choices: ['by', 'in', 'for', 'since'], answer: 0, why: 'しめきりの「～までに」は by。' },
+      { sentence: 'I will wait here [by] 5 p.m.', choices: ['until', 'in', 'within', 'for'], answer: 0, why: '「～までずっと待つ」は継続なので until。' },
+      { sentence: 'He slept [during] eight hours.', choices: ['for', 'in', 'by', 'since'], answer: 0, why: '期間の長さ（数字）には for。' },
+      { sentence: 'It rained [for] the night.', choices: ['during', 'by', 'since', 'at'], answer: 0, why: '特定の期間（the night）のあいだは during。' },
+      { sentence: 'You must return the book [until] next Monday.', choices: ['by', 'for', 'since', 'during'], answer: 0, why: '返すしめきりなので by。' },
+      { sentence: 'The train will arrive [after] ten minutes.', choices: ['in', 'for', 'by', 'since'], answer: 0, why: '「（今から）10分後に」は in ten minutes。' },
+      { sentence: 'You must hand in your essay [until] a week.', choices: ['within', 'by', 'since', 'at'], answer: 0, why: '「1週間以内に」は within a week。' },
+      { sentence: 'I have lived here [since] ten years.', choices: ['for', 'during', 'by', 'in'], answer: 0, why: '期間の長さには for。since は時点に使う。' },
+      { sentence: 'She visited Paris [while] the summer vacation.', choices: ['during', 'while in', 'since', 'at'], answer: 0, why: 'while は接続詞。名詞の前は前置詞 during。' },
+      { sentence: 'We will be back [until] noon.', choices: ['by', 'for', 'since', 'during'], answer: 0, why: '「正午までにもどる」はしめきりなので by。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
