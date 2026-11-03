@@ -3977,3 +3977,4 @@
 - 2026-11-03: 誤文訂正〈136〉：京大レベル 無生物主語の構文（prevent／keep 人 from -ing・remind 人 of・make it possible for・enable／cause／allow 人 to do）10問
 - 2026-11-03: 京大専用の長文㊴「人はなぜ笑うのか」（ユーモア・約630語・抽象的な評論）を追加
 - 2026-11-03: キャラクター追加269：ヤブサメン（虫のような高い声のヤブサメ・リスニングが得意）
+- 2026-11-03: 正誤問題〈143〉：京大レベル 無生物主語の構文（prevent 人 from・remind 人 of・make it possible・enable／cause／allow 人 to do）10問。文法の次の3項目（281〜283）を追加

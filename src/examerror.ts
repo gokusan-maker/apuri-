@@ -3386,6 +3386,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) had my bike (B) repaired (C) at the shop and (D) got it painting.', choices: ['(A) had my bike', '(B) repaired', '(C) at the shop and', '(D) got it painting'], answer: 3, why: '自転車は「ぬられる」側なので get＋もの＋過去分詞。got it painted。' },
     ],
   },
+  {
+    id: 'exam-error-inanimate-kyodai',
+    title: '入試の正誤問題〈143〉（京大レベル：無生物主語の構文）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'prevent／keep 人 from -ing、remind 人 of、make it possible for 人 to do、enable／cause／allow 人 to do、take 人 to 場所。疑問詞が主語の疑問文は do を使わない（What made you ～?）。',
+    ],
+    examples: [
+      { en: 'The rain prevented us from playing outside.', ja: '雨のせいで、私たちは外で遊べなかった。' },
+      { en: 'This photo reminds me of my trip.', ja: 'この写真を見ると旅行を思い出す。' },
+    ],
+    questions: [
+      { sentence: 'The rain (A) prevented (B) us (C) to play (D) outside.', choices: ['(A) prevented', '(B) us', '(C) to play', '(D) outside'], answer: 2, why: 'prevent 人 from -ing。from playing。' },
+      { sentence: 'This photo (A) reminds (B) me (C) about (D) my trip.', choices: ['(A) reminds', '(B) me', '(C) about', '(D) my trip'], answer: 2, why: 'remind 人 of ～。of。' },
+      { sentence: 'The new road (A) made (B) possible (C) for us (D) to travel faster.', choices: ['(A) made', '(B) possible', '(C) for us', '(D) to travel faster'], answer: 1, why: 'make it possible for 人 to do。made it possible。' },
+      { sentence: 'The money (A) enabled (B) him (C) buying (D) a house.', choices: ['(A) enabled', '(B) him', '(C) buying', '(D) a house'], answer: 2, why: 'enable 人 to do。to buy。' },
+      { sentence: 'The noise (A) kept (B) me (C) awake and (D) prevent me from studying.', choices: ['(A) kept', '(B) me', '(C) awake and', '(D) prevent me from studying'], answer: 3, why: '過去の話なので prevented。' },
+      { sentence: 'A short walk (A) will (B) take (C) you (D) at the museum.', choices: ['(A) will', '(B) take', '(C) you', '(D) at the museum'], answer: 3, why: 'take 人 to 場所。to the museum。' },
+      { sentence: 'The storm (A) caused (B) the flight (C) delay (D) for hours.', choices: ['(A) caused', '(B) the flight', '(C) delay', '(D) for hours'], answer: 2, why: 'cause もの to do。to be delayed。' },
+      { sentence: 'The app (A) allows (B) users (C) sharing (D) music.', choices: ['(A) allows', '(B) users', '(C) sharing', '(D) music'], answer: 2, why: 'allow 人 to do。to share。' },
+      { sentence: '(A) What did make (B) you (C) so (D) angry?', choices: ['(A) What did make', '(B) you', '(C) so', '(D) angry?'], answer: 0, why: '疑問詞が主語なので What made you ～?。' },
+      { sentence: '(A) This book (B) made (C) me (D) to cry.', choices: ['(A) This book', '(B) made', '(C) me', '(D) to cry'], answer: 3, why: 'make＋人＋原形。cry。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
