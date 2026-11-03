@@ -29422,6 +29422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-nostalgia',
+    title: 'Looking Back Without Getting Lost',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The word nostalgia was coined in the seventeenth century by a physician who used it to describe a dangerous illness. Soldiers serving far from home, he observed, sometimes fell into a deep longing for their native places, losing their appetite and their will to live. For a long time afterward, nostalgia continued to be regarded as a disorder, a kind of homesickness that weakened the body and the mind. Today, however, the word usually refers to a gentler and more common feeling: a bittersweet longing for the past, often for a time in our own lives that seems, in memory, simpler or happier than the present.",
+      "Nostalgia is often criticized as a form of escape. Those who dwell on the past, critics argue, may fail to engage with the challenges of the present, and they may idealize earlier times in ways that distort history. A society gripped by nostalgia may long to return to a golden age that never really existed, forgetting the injustices and hardships that accompanied it. Political movements sometimes exploit this longing, promising to restore a lost greatness while offering little real understanding of what was lost or why.",
+      "Yet psychologists who study nostalgia have found that it often serves positive functions. People who recall meaningful memories from their past frequently report feeling more connected to others, more confident about themselves, and more optimistic about the future. ( A ) nostalgia looks backward, its effects can point forward, reminding people of relationships and experiences that gave their lives meaning and encouraging them to seek such meaning again.",
+      "One explanation for these effects is that nostalgia helps to preserve a sense of continuity in a life that is constantly changing. As we move through different stages of life, change jobs, move to new places, and lose people we love, we may begin to feel that our lives lack coherence. Nostalgic memories connect the person we are now with the person we once were, reassuring us that despite all the changes, we remain recognizably ourselves. In this sense, nostalgia may be less a flight from the present than a way of carrying the past into it.",
+      "Nostalgia also seems to arise most often in moments of difficulty. People tend to feel nostalgic when they are lonely, anxious, or facing uncertainty, as though the mind turns to the past for comfort when the present seems threatening. This suggests that nostalgia may function as a kind of emotional resource, one that people draw upon to restore their sense of security and belonging when these are challenged. It is perhaps no accident that people often turn to old songs, familiar foods, or photographs of loved ones at moments of crisis, seeking in them a reminder of who they are.",
+      "The distinction between healthy and unhealthy nostalgia may therefore depend on how the past is used. Nostalgia becomes harmful when it leads people to reject the present entirely or to insist that the past was perfect. It can be beneficial when it allows people to recognize what they valued in earlier times and to carry those values into new circumstances, adapting rather than simply repeating what came before.",
+      "Understood in this way, nostalgia is neither a disease nor a mere indulgence. It is part of the way human beings make sense of their lives over time, a reminder that who we are depends not only on where we are going but also on where we have been. The challenge is to look back without becoming lost, allowing memory to enrich the present rather than replace it. Those who manage this may find that the past, rather than holding them back, offers a store of meaning from which they can draw as they move forward into an uncertain future.",
+    ],
+    ja: [
+      'ノスタルジアという言葉は、十七世紀に、ある医師が危険な病気を表すために作ったものである。故郷から遠くはなれて務める兵士たちが、ときに生まれた土地へのはげしい思いにおちいり、食欲と生きる意欲を失うことに、彼は気づいたのである。その後長いあいだ、ノスタルジアは体と心を弱らせる一種のホームシック、つまり病気とみなされ続けた。しかし今日、この言葉はふつう、もっとおだやかでよくある感情を指す。過去への、ほろ苦いあこがれであり、しばしば記憶の中で今よりも単純で幸せだったように思える、自分の人生のある時期へのあこがれである。',
+      'ノスタルジアはしばしば、一種の逃避として批判される。過去にとらわれる人々は、今の課題に取り組みそこねるかもしれず、歴史をゆがめるようなしかたで昔の時代を理想化するかもしれない、と批判する人々は主張する。ノスタルジアにとらわれた社会は、本当は存在しなかった黄金時代にもどりたいとあこがれ、それにともなっていた不正や苦難を忘れてしまうかもしれない。政治運動はときにこのあこがれを利用し、何が失われ、なぜ失われたのかについての本当の理解はほとんど示さないまま、失われた偉大さを取りもどすと約束する。',
+      'しかしノスタルジアを研究する心理学者たちは、それがしばしばよいはたらきを果たしていることを見いだしてきた。自分の過去の意味のある記憶を思い出す人々は、他人とよりつながっていると感じ、自分自身についてより自信をもち、未来についてより楽観的になると報告することが多い。ノスタルジアはうしろをふり返るものだが、その効果は前を指しうるのであり、人々に、自分の人生に意味をあたえてくれた関係や経験を思い出させ、そうした意味をふたたび求めるようはげますのである。',
+      'こうした効果の一つの説明は、ノスタルジアが、たえず変わり続ける人生の中で連続性の感覚を保つのを助けるというものである。人生のさまざまな段階を進み、仕事を変え、新しい場所に移り、愛する人を失うにつれて、私たちは自分の人生にまとまりがないと感じはじめるかもしれない。ノスタルジアの記憶は今の自分とかつての自分とを結びつけ、あらゆる変化にもかかわらず、自分がそれとわかる自分であり続けていると安心させてくれる。この意味で、ノスタルジアは今からの逃避というより、過去を今へとたずさえていくしかたなのかもしれない。',
+      'ノスタルジアはまた、困難なときに最もよく生じるように思われる。人はさびしいときや、不安なときや、不確かさに直面しているときにノスタルジアを感じやすい。まるで今がおびやかされているように思えるとき、心がなぐさめを求めて過去に向かうかのようである。このことは、ノスタルジアが一種の感情の資源としてはたらいているかもしれないことを示している。安心感や居場所の感覚がおびやかされたときに、それを取りもどすために人々が引き出す資源である。人々が危機のときに、昔の歌やなじみの食べ物や愛する人の写真にしばしば向かい、そこに自分がだれであるかを思い出させてくれるものを求めるのは、おそらく偶然ではないのだろう。',
+      'それゆえ健全なノスタルジアと不健全なノスタルジアとの区別は、過去がどう使われるかによるのかもしれない。ノスタルジアが害になるのは、それによって人々が今を完全にこばんだり、過去は完ぺきだったと言い張ったりするときである。それが役に立つのは、人々が昔の時代に大切にしていたものに気づき、前にあったものをただくり返すのではなく、新しい状況に合わせながら、その価値を新しい状況へとたずさえていけるときである。',
+      'このように理解すれば、ノスタルジアは病気でも、単なるわがままでもない。それは、人間が時間を通じて自分の人生の意味をつかむしかたの一部であり、自分がだれであるかは、どこへ向かっているかだけでなく、どこにいたかにもよることを思い出させてくれる。課題は、迷子にならずにふり返り、記憶が今に取って代わるのではなく、今を豊かにするようにすることなのである。それができる人は、過去が自分を引きとめるのではなく、不確かな未来へと進んでいくときに引き出せる意味のたくわえをあたえてくれることに気づくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ノスタルジアはうしろをふり返るものだが、その効果は前を指しうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ノスタルジアという言葉は、もとは病気を表すために作られた。', answer: true, why: '第1段落 used it to describe a dangerous illness。' },
+      { statement: '心理学者によれば、意味のある記憶を思い出すと、人は未来についてより悲観的になる。', answer: false, why: '第3段落 more optimistic about the future。' },
+      { statement: '筆者によれば、ノスタルジアは困難なときに最もよく生じるように思われる。', answer: true, why: '第5段落 Nostalgia also seems to arise most often in moments of difficulty。' },
+      { statement: '筆者は、ノスタルジアは病気だと結論している。', answer: false, why: '第7段落 nostalgia is neither a disease nor a mere indulgence。' },
+    ],
+    qa: [
+      { q: 'How do some political movements exploit nostalgia?', choices: ['By promising to restore a lost greatness without real understanding of the past.', 'By banning all memories.', 'By teaching accurate history.', 'By building new schools.'], answer: 0, why: '第2段落 promising to restore a lost greatness while offering little real understanding。' },
+      { q: 'When can nostalgia be beneficial, according to the sixth paragraph?', choices: ['When people carry the values of the past into new circumstances.', 'When people reject the present entirely.', 'When people insist the past was perfect.', 'When people forget their childhood.'], answer: 0, why: '第6段落 carry those values into new circumstances, adapting rather than simply repeating。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
