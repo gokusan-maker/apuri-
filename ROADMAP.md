@@ -685,7 +685,7 @@
   - [x] 284 正誤問題〈145〉（京大レベル：譲歩の表現 however・whatever・no matter）10問
   - [x] 285 誤文訂正〈139〉（国公立レベル：動名詞を目的語にとる動詞 enjoy・avoid・mind・finish）10問
   - [x] 286 正誤問題〈146〉（東大レベル：付帯状況の with）10問
-  - [ ] 287 誤文訂正〈140〉（京大レベル：名詞構文 have a look・make a decision・pay attention）10問
+  - [x] 287 誤文訂正〈140〉（京大レベル：名詞構文 have a look・make a decision・pay attention）10問
   - [ ] 288 正誤問題〈147〉（国公立レベル：形容詞の語順と叙述用法 alive・asleep・afraid）10問
   - [ ] 289 誤文訂正〈141〉（東大レベル：英作文の可算・不可算 advice・information・furniture）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

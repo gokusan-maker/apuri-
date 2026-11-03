@@ -5988,6 +5988,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The baby stopped [to cry] when her mother picked her up.', choices: ['crying', 'cry', 'to crying', 'cried'], answer: 0, why: '「泣くのをやめた」は stop -ing。stopped to cry だと「泣くために立ち止まった」になる。' },
     ],
   },
+  {
+    id: 'exam-fix-140',
+    title: '入試の誤文訂正〈140〉（京大レベル：名詞構文）',
+    points: ['動詞＋名詞のセット（名詞構文）は、組み合わせる動詞が決まっている。have／take a look（見る）・make a decision（決める）・make a mistake（まちがえる）・pay attention to（注意をはらう、attention は数えられない）・take a walk（散歩する）・take a breath（息をする）・have a dream（夢を見る）・give 人 advice（助言する）・ask 人 a question（質問する）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'We have to make a decision by Friday.', ja: '金曜日までに決めなければならない。' }],
+    questions: [
+      { sentence: 'Please [do] a look at this map.', choices: ['have', 'make', 'give', 'put'], answer: 0, why: '「見る」は have a look（take a look も可）。' },
+      { sentence: 'We have to [do] a decision by Friday.', choices: ['make', 'get', 'put', 'bring'], answer: 0, why: '「決める」は make a decision。' },
+      { sentence: 'You should pay [an attention] to the teacher.', choices: ['attention', 'attentions', 'the attentions', 'attentive'], answer: 0, why: 'attention は数えられない名詞。pay attention to。' },
+      { sentence: 'Let us [make] a walk in the park.', choices: ['take', 'do', 'put', 'bring'], answer: 0, why: '「散歩する」は take a walk。' },
+      { sentence: 'She [did] a mistake in the test.', choices: ['made', 'took', 'gave', 'put'], answer: 0, why: '「まちがえる」は make a mistake。' },
+      { sentence: 'I [took] a strange dream last night.', choices: ['had', 'made', 'did', 'got'], answer: 0, why: '「夢を見る」は have a dream。' },
+      { sentence: 'The doctor [did] me some advice.', choices: ['gave', 'made', 'took', 'said'], answer: 0, why: '「人に助言する」は give 人 advice。' },
+      { sentence: 'He made a [decide] to study abroad.', choices: ['decision', 'deciding', 'decide to', 'decided'], answer: 0, why: 'make の目的語なので名詞 decision。' },
+      { sentence: 'Can I [make] you a question?', choices: ['ask', 'do', 'give', 'say'], answer: 0, why: '「人に質問する」は ask 人 a question。' },
+      { sentence: 'She [made] a deep breath before the speech.', choices: ['took', 'did', 'put', 'gave'], answer: 0, why: '「深呼吸する」は take a deep breath。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
