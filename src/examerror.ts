@@ -6324,6 +6324,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'They [arrived] the airport late.', choices: ['arrived at', 'reached at', 'got', 'arrived to'], answer: 0, why: 'arrive は自動詞なので arrive at（場所）。' },
     ],
   },
+  {
+    id: 'exam-fix-148',
+    title: '入試の誤文訂正〈148〉（国公立レベル：不定詞の意味上の主語 for／of）',
+    points: ['It is ＋形容詞＋for 人＋to do が基本（difficult・easy・necessary・important・hard）。kind・nice・careless・wise・rude・foolish など「人の性質・人がらをほめたりけなしたりする」形容詞のときは of 人 を使う（It is kind of you to help me）。見分け方：「人 is 形容詞」と言えるなら of（You are kind → of you）。too ～ to do の主語も for 人。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It is kind of you to help me, but it is difficult for me to accept.', ja: '手伝ってくれるのは親切だが、私には受け入れるのがむずかしい。' }],
+    questions: [
+      { sentence: 'It is kind [for] you to help me.', choices: ['of', 'to', 'with', 'by'], answer: 0, why: 'kind は人の性質をほめる形容詞なので of you。' },
+      { sentence: 'It is difficult [of] me to answer the question.', choices: ['for', 'to', 'with', 'by'], answer: 0, why: 'difficult は人の性質ではないので for me。' },
+      { sentence: 'It was careless [for] him to lose the key.', choices: ['of', 'to', 'with', 'by'], answer: 0, why: 'careless は人の性質（不注意）なので of him。' },
+      { sentence: 'It is necessary [of] us to leave now.', choices: ['for', 'to', 'with', 'by'], answer: 0, why: 'necessary は人の性質ではないので for us。' },
+      { sentence: 'It is important [of] students to sleep well.', choices: ['for', 'to', 'with', 'by'], answer: 0, why: 'important は人の性質ではないので for students。' },
+      { sentence: 'It was nice [for] you to come all this way.', choices: ['of', 'to', 'with', 'by'], answer: 0, why: '「わざわざ来てくれてありがとう」の nice は人をほめる意味なので of you。' },
+      { sentence: 'It is [easy of] him to swim across the river.', choices: ['easy for', 'easily for', 'easy to', 'easily of'], answer: 0, why: 'easy は人の性質ではないので for him。' },
+      { sentence: 'It is very [wise for] you to save money.', choices: ['wise of', 'wisely for', 'wise to', 'wisely of'], answer: 0, why: 'wise は人の性質（賢い）なので of you。' },
+      { sentence: 'This book is too difficult [of me] to read.', choices: ['for me', 'to me', 'of my', 'for my'], answer: 0, why: 'too ～ to do の不定詞の主語は for 人。' },
+      { sentence: 'It was [rude for] him to say that.', choices: ['rude of', 'rudely of', 'rude to', 'rudely for'], answer: 0, why: 'rude は人の性質（失礼）なので of him。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

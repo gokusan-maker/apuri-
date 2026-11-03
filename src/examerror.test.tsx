@@ -2115,3 +2115,10 @@ it('正誤問題〈154〉：京大レベル 仮定法の if の省略と倒置�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) know')
 })
+
+it('誤文訂正〈148〉：国公立レベル 不定詞の意味上の主語 for／ofの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-148')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('of')
+})
