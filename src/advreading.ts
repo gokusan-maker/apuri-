@@ -27856,6 +27856,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-light-pollution',
+    title: 'Losing the Night',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the night sky was one of the most familiar sights in the world. On any clear evening, people could look up and see thousands of stars, as well as the faint band of light that we call the Milky Way. Today, however, a large proportion of the world's population lives under skies so brightened by artificial light that the Milky Way is no longer visible at all, and many children grow up without ever having seen it. This change has happened gradually and quietly, and perhaps for that reason it has received far less attention than other forms of environmental damage.",
+      "The cause of this change is what scientists call light pollution: the excessive or poorly directed use of artificial light at night. Street lamps that shine upward rather than toward the ground, advertising signs that remain lit all night, and buildings that are illuminated long after everyone has gone home all send light into the sky, where it is scattered by particles in the air and creates a glow that can be seen from many kilometers away. Much of this light serves no useful purpose, since it falls on places where no one needs it or at times when no one is present.",
+      "The loss of the starry sky might seem to be merely a matter of beauty, of interest mainly to astronomers and people who enjoy looking at the stars. But researchers have found that artificial light at night also affects living things in ways that are only beginning to be understood. Many animals depend on the natural pattern of light and darkness to find food, to migrate, and to reproduce. Young sea turtles, for example, which hatch on beaches and normally find the sea by moving toward the brighter horizon over the water, can be confused by lights on land and crawl away from the ocean instead.",
+      "Human beings, too, may be affected. Our bodies have internal clocks that are regulated in part by exposure to light, and light at night can interfere with the production of a hormone that helps us to sleep. ( A ) the research is still developing and the effects on health are not yet fully clear, some scientists have suggested that constant exposure to artificial light may contribute to sleep problems and other health difficulties in modern societies.",
+      "What makes light pollution unusual among environmental problems is that it is relatively easy to solve. Unlike pollution of the air or water, it does not remain in the environment once its source has been removed; when a light is switched off, the darkness returns immediately. Many solutions are inexpensive: lamps can be shielded so that they shine only downward, lights can be dimmed or turned off when they are not needed, and warmer colors of light, which scatter less and disturb animals less, can be chosen instead of harsh white ones. Some towns that have adopted such measures have not only recovered their view of the stars but also reduced their energy costs.",
+      "Why, then, has so little been done? Part of the answer is that many people associate bright light with safety and progress. A well-lit street feels safer than a dark one, even though research on whether brighter lighting actually reduces crime has produced mixed results. Another part of the answer is that the loss of darkness is easy to overlook, precisely because it has happened slowly and because few people remember what the night sky looked like before.",
+      "Protecting the darkness of the night, then, may require a change not only in technology but in attitudes. It means recognizing that darkness is not simply the absence of something valuable but a natural condition that has its own value, both for other living things and for human beings who might once again look up and see the stars.",
+    ],
+    ja: [
+      '人類の歴史の大部分において、夜空は世界で最もなじみ深い光景の一つだった。晴れた夕方ならいつでも、人々は見上げて何千もの星を、そして私たちが天の川とよぶかすかな光の帯を見ることができた。しかし今日では、世界の人口のかなりの割合が、人工の光で明るくなりすぎて天の川がまったく見えない空の下で暮らしており、多くの子どもは一度もそれを見ないまま育つ。この変化は少しずつ静かに起こってきたので、おそらくそのために、ほかの形の環境破壊よりもずっと注目されてこなかった。',
+      'この変化の原因は、科学者が光害とよぶもの、つまり夜の人工の光の使いすぎや、向きのよくない使い方である。地面ではなく上に向かって照らす街灯や、一晩中ともったままの広告の看板や、みんなが帰ったずっとあとまで照らされている建物は、どれも光を空に送り、そこで光は空気中の粒子に散らばって、何キロもはなれたところから見えるほどの明るみを作る。この光の多くは何の役にも立っていない。だれもそれを必要としない場所や、だれもいない時間に照らされているからである。',
+      '星空が失われることは、主に天文学者や星をながめるのが好きな人々にとって関心のある、単なる美しさの問題に思えるかもしれない。しかし研究者たちは、夜の人工の光が、まだ理解されはじめたばかりのしかたで生き物にも影響していることを見いだしてきた。多くの動物は、食べ物を見つけたり、移動したり、子をふやしたりするのに、光と暗やみの自然な型にたよっている。たとえばウミガメの子どもは、浜辺でかえり、ふつうは海の上のより明るい水平線に向かって進むことで海を見つけるが、陸の明かりにまどわされて、海とは反対の方向へはっていってしまうことがある。',
+      '人間もまた影響を受けているかもしれない。私たちの体には、光を浴びることによって部分的に調節される体内時計があり、夜の光は、眠りを助けるホルモンが作られるのをさまたげることがある。研究はまだ発展の途中で、健康への影響もまだ完全には明らかでないが、人工の光をたえず浴びることが、現代社会の睡眠の問題やほかの健康上の困難の一因になっているかもしれないと示唆する科学者もいる。',
+      '光害を環境問題のなかで変わったものにしているのは、それが比較的解決しやすいということである。空気や水の汚染とちがって、光害はその原因が取りのぞかれれば環境に残らない。明かりを消せば、暗やみはすぐにもどってくるのである。多くの解決策は安上がりである。下だけを照らすように街灯におおいをつけたり、必要のないときに明かりを暗くしたり消したりしたり、強い白い光の代わりに、散らばりにくく動物をあまりさまたげない暖かい色の光を選んだりできる。そうした対策を取り入れたいくつかの町は、星空を取りもどしただけでなく、エネルギーの費用もへらした。',
+      'では、なぜこれほど少ししか対策がとられてこなかったのか。答えの一部は、多くの人が明るい光を安全や進歩と結びつけていることにある。明るさをふやすことが実際に犯罪をへらすかどうかについての研究の結果はまちまちであるにもかかわらず、明るい通りは暗い通りよりも安全に感じられる。答えのもう一部は、暗やみが失われたことは見過ごしやすいということである。まさにそれがゆっくりと起こり、以前の夜空がどんなようすだったかを覚えている人がほとんどいないからである。',
+      'それゆえ夜の暗さを守るには、技術だけでなく考え方の変化も必要かもしれない。それは、暗やみが単に価値あるものが欠けている状態ではなく、ほかの生き物にとっても、ふたたび見上げて星を見るかもしれない人間にとっても、それ自体の価値をもつ自然な状態だと認めることを意味するのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「研究はまだ途中で影響は明らかでないが、示唆する科学者もいる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Artificial light has hidden the Milky Way from much of the world. This light pollution affects not only beauty but also ( 1 ), such as sea turtles, and possibly human ( 2 ). Unlike other pollution, it is relatively easy to solve, yet little has been done partly because people link bright light with ( 3 ).',
+      blanks: [
+        { choices: ['animals', 'machines', 'oceans', 'cities'], answer: 0, why: '第3段落 Many animals depend on the natural pattern of light and darkness。' },
+        { choices: ['sleep', 'height', 'language', 'wealth'], answer: 0, why: '第4段落 interfere with the production of a hormone that helps us to sleep。' },
+        { choices: ['safety', 'danger', 'silence', 'poverty'], answer: 0, why: '第6段落 many people associate bright light with safety and progress。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、夜空に放たれる光の多くは何の役にも立っていない。', answer: true, why: '第2段落 Much of this light serves no useful purpose。' },
+      { statement: '筆者によれば、ウミガメの子どもは陸の明かりにまどわされることがある。', answer: true, why: '第3段落 can be confused by lights on land and crawl away from the ocean。' },
+      { statement: '筆者によれば、光害は空気や水の汚染と同じように、原因を取りのぞいても長く環境に残る。', answer: false, why: '第5段落 Unlike pollution of the air or water, it does not remain in the environment。' },
+      { statement: '筆者によれば、明るさをふやすと必ず犯罪がへることが研究で証明されている。', answer: false, why: '第6段落 research ... has produced mixed results。' },
+    ],
+    qa: [
+      { q: 'Why has light pollution received less attention than other environmental damage, according to the first paragraph?', choices: ['It has happened gradually and quietly.', 'It is too expensive to study.', 'It only affects astronomers.', 'It happened suddenly last year.'], answer: 0, why: '第1段落 This change has happened gradually and quietly, and perhaps for that reason ...。' },
+      { q: 'What benefit besides seeing the stars did some towns gain from reducing light?', choices: ['They reduced their energy costs.', 'They attracted more advertising.', 'They built more street lamps.', 'They increased crime.'], answer: 0, why: '第5段落 but also reduced their energy costs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
