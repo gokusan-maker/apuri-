@@ -29742,6 +29742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fairness',
+    title: 'What Is Fair?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Children learn to protest that something is not fair long before they can explain what fairness means. A child who receives a smaller piece of cake than a brother or sister, or who is punished for something that others were allowed to do, feels a strong sense of injustice. This early sensitivity suggests that the concern for fairness is deeply rooted in human nature. Yet when adults try to agree on what fairness requires in particular cases, they often find that their intuitions point in different directions, and that the simple idea of treating everyone fairly conceals a number of competing principles.",
+      "One principle holds that fairness means equality: everyone should receive the same share. This principle has an obvious appeal, since it seems to respect the equal worth of every person and leaves no room for favoritism. When a cake is divided among children who have done nothing to earn it, equal shares seem clearly fair. But in many situations, strict equality appears to produce results that most people would regard as unfair, because it ignores important differences between people and their circumstances.",
+      "A second principle holds that fairness means rewarding effort or merit. On this view, those who work harder or contribute more deserve more, and it would be unfair to give the same reward to someone who worked diligently and someone who did nothing. ( A ) this principle captures an important intuition, it raises difficult questions of its own. Effort and talent are themselves influenced by factors beyond a person's control, such as health, upbringing, and opportunity, so that rewarding merit may in part reward good fortune.",
+      "A third principle holds that fairness means responding to need. Those who need more, because they are ill, poor, or otherwise disadvantaged, should receive more, even if they have not earned it. This principle underlies many forms of social support, from public health care to assistance for people with disabilities. Yet a system that distributed resources entirely according to need might seem to neglect the claims of those who have worked hard and might weaken the incentive to contribute.",
+      "These principles are not merely abstract. They appear in everyday disputes about how to divide household chores, how to grade students, how to set salaries, and how to design tax systems. In each case, people tend to emphasize the principle that supports their own position, and disagreements about fairness are often disagreements about which principle should apply in a particular situation. Recognizing this can turn a heated argument into a more productive discussion.",
+      "Some philosophers have argued that no single principle can capture all of fairness, and that a fair decision requires judgment about which considerations matter most in a given context. Equality may be the appropriate starting point when nothing distinguishes the people involved, merit may matter most in competitions designed to recognize achievement, and need may take priority when people's basic well-being is at stake. The difficulty is that the same situation can often be described in different ways, so that people disagree not only about which principle matters most but also about what kind of situation they are in.",
+      "Recognizing this complexity does not make fairness meaningless. On the contrary, it may help people to understand why others disagree with them and to search for solutions that respect more than one principle. A sense of fairness that is aware of its own complexity may be less certain than a child's simple protest, but it is also more capable of guiding wise and humane decisions. It invites us to approach disputes not as battles between those who are right and those who are wrong, but as occasions for weighing several legitimate claims against one another and for explaining our reasons openly to those who see the matter differently.",
+    ],
+    ja: [
+      '子どもは、公平とは何を意味するかを説明できるずっと前から、それはずるいと言いはじめる。きょうだいより小さいケーキを受け取ったり、ほかの子がゆるされたことで罰せられたりした子どもは、強い不公平の感覚をいだく。この早い時期の敏感さは、公平さへの関心が人間の本性に深く根ざしていることを示している。しかし大人が個々の場合に公平さが何を求めるかについて合意しようとすると、しばしば直感がちがう方向を指していること、そしてすべての人を公平にあつかうという単純な考えが、いくつもの対立する原則をかくしていることに気づく。',
+      '一つの原則は、公平さとは平等であり、だれもが同じ分け前を受け取るべきだとする。この原則には明らかな魅力がある。それはすべての人の等しい価値を尊重し、ひいきの入る余地を残さないように思われるからである。何もしていない子どもたちのあいだでケーキを分けるときは、同じ分け前がはっきり公平に思える。しかし多くの状況では、厳密な平等は、人々とその状況のあいだの大切なちがいを無視するので、ほとんどの人が不公平とみなすであろう結果を生むように見える。',
+      '第二の原則は、公平さとは努力や功績にむくいることだとする。この見方では、よりいっしょうけんめい働いたり、より多く貢献したりする人はより多くに値し、まじめに働いた人と何もしなかった人に同じほうびをあたえるのは不公平だということになる。この原則は大切な直感をとらえているが、それ自体のむずかしい問いも生む。努力や才能そのものが、健康や育ちや機会のような、本人にはどうにもできない要因に影響されているので、功績にむくいることは部分的には幸運にむくいることになるかもしれないのである。',
+      '第三の原則は、公平さとは必要にこたえることだとする。病気だったり貧しかったり、ほかの点で不利だったりして、より多くを必要とする人は、それをかせいでいなくても、より多くを受け取るべきだというのである。この原則は、公的な医療から障害のある人への援助まで、多くの形の社会的な支えの土台になっている。しかし資源を完全に必要に応じて分ける仕組みは、いっしょうけんめい働いた人々の言い分をおろそかにし、貢献する意欲を弱めてしまうように思われるかもしれない。',
+      'これらの原則は単に抽象的なものではない。それは、家事をどう分けるか、生徒をどう評価するか、給料をどう決めるか、税の仕組みをどう作るかについての日々の言い争いに現れる。どの場合も、人々は自分の立場を支える原則を強調しがちであり、公平さをめぐる意見のちがいは、しばしばある状況でどの原則が当てはまるべきかについての意見のちがいなのである。このことに気づけば、はげしい言い争いを、より実りのある話し合いに変えることができる。',
+      '一部の哲学者は、どんな一つの原則も公平さのすべてをとらえることはできず、公平な決定には、ある状況でどの考慮が最も大切かについての判断が必要だと論じてきた。かかわる人々を何も区別しないときには平等が適切な出発点かもしれず、業績を認めるために作られた競争では功績が最も大切かもしれず、人々の基本的な幸せがかかっているときには必要が優先されるかもしれない。むずかしいのは、同じ状況がしばしばちがうしかたで説明されうることであり、そのため人々はどの原則が最も大切かだけでなく、自分たちがどんな種類の状況にいるのかについても意見が分かれるのである。',
+      'この複雑さを認めることは、公平さを意味のないものにするわけではない。それどころか、それは人々が、なぜ他人が自分と意見がちがうのかを理解し、一つ以上の原則を尊重する解決策を探す助けになるかもしれない。自分自身の複雑さを自覚した公平さの感覚は、子どもの単純な抗議ほど確信に満ちてはいないかもしれないが、賢明で人間らしい決定をみちびく力はより大きいのである。それは私たちに、争いを正しい人とまちがった人との戦いとしてではなく、いくつかの正当な言い分をはかりくらべ、ちがう見方をする人々に自分の理由をおおやけに説明する機会としてとらえるようさそうのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この原則は大切な直感をとらえているが、それ自体のむずかしい問いも生む」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、公平さへの関心は人間の本性に深く根ざしているようである。', answer: true, why: '第1段落 the concern for fairness is deeply rooted in human nature。' },
+      { statement: '筆者によれば、厳密な平等はどんな状況でも公平な結果を生む。', answer: false, why: '第2段落 strict equality appears to produce results that most people would regard as unfair。' },
+      { statement: '筆者によれば、努力や才能は本人にどうにもできない要因に影響されている。', answer: true, why: '第3段落 Effort and talent are themselves influenced by factors beyond a person’s control。' },
+      { statement: '筆者は、一つの原則だけで公平さのすべてをとらえられると考えている。', answer: false, why: '第6段落 no single principle can capture all of fairness。' },
+    ],
+    qa: [
+      { q: 'What form of social support is based on the principle of need?', choices: ['Public health care and assistance for people with disabilities.', 'Prizes for the best athletes.', 'Higher salaries for managers.', 'Equal shares of cake.'], answer: 0, why: '第4段落 from public health care to assistance for people with disabilities。' },
+      { q: 'Why do people often disagree about fairness, according to the fifth paragraph?', choices: ['They tend to emphasize the principle that supports their own position.', 'They do not care about fairness.', 'They all use the same principle.', 'They have never thought about it.'], answer: 0, why: '第5段落 people tend to emphasize the principle that supports their own position。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
