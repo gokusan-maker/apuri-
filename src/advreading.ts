@@ -28416,6 +28416,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-fast-fashion',
+    title: 'The True Cost of Cheap Clothes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Clothing has never been cheaper or more plentiful than it is today. Large retailers now introduce new designs every few weeks rather than every season, and garments that once would have been treated as long-term possessions are bought, worn a few times, and thrown away. This system, often called fast fashion, has made fashionable clothing available to people who could not previously afford it, but it has also attracted growing criticism for its effects on the environment and on the people who make the clothes.",
+      "The environmental costs are considerable. Producing textiles requires large quantities of water and energy, and the dyes and chemicals used in manufacturing can pollute rivers in the regions where factories are located. Many cheap garments are made from synthetic fibers derived from oil, which release tiny particles of plastic when they are washed and do not decompose when they are thrown away. Because clothes are now discarded so quickly, enormous amounts of textile waste end up in landfills or are shipped to poorer countries, where much of it cannot be reused.",
+      "The human costs are equally troubling. To keep prices low, companies often rely on factories in countries where wages are very low and labor laws are weakly enforced. Workers, many of them young women, may work long hours in unsafe conditions for pay that is barely enough to live on. ( A ) consumers in wealthy countries rarely see the conditions under which their clothes are made, it is easy for them to overlook these costs, and the low prices they pay may conceal suffering that would be unacceptable if it occurred closer to home.",
+      "Defenders of the industry point out that it provides jobs to millions of people in developing countries, and that for many of these workers, factory employment, however difficult, is better than the alternatives available to them. They also argue that cheap clothing benefits consumers with low incomes, who can now dress well at little cost. From this perspective, the solution is not to abandon fast fashion but to improve working conditions and environmental standards within it.",
+      "Some companies have responded to criticism by promising to use more sustainable materials, to collect old clothes for recycling, or to monitor conditions in their suppliers' factories. Critics, however, warn that such measures may serve mainly to improve a company's image while leaving the basic business model unchanged. As long as profits depend on persuading consumers to buy ever larger quantities of clothing, they argue, no amount of recycling can make the system genuinely sustainable.",
+      "Consumers, too, face difficult choices. Buying fewer but better-made clothes, repairing garments rather than replacing them, and purchasing second-hand items can all reduce waste, but such choices are not equally available to everyone. Well-made clothing is often more expensive, and people with little money or time may find it hard to change their habits. Placing the entire responsibility on individual shoppers may therefore be both unfair and ineffective.",
+      "The debate over fast fashion raises a broader question about what we mean by cheap. A garment may cost little at the checkout, but its true cost includes the resources consumed in making it, the pollution it causes, and the lives of those who produce it. Making these hidden costs visible, through clearer information, stronger regulation, and a change in attitudes toward clothing, may be essential if the industry is to become fairer and more sustainable. Only when those who buy clothes understand what their purchases really involve can they make choices that reflect their values, and only when companies are held responsible for the full consequences of their products will they have reason to change the way those products are made.",
+    ],
+    ja: [
+      '服がこれほど安く豊富だったことはかつてない。大手の小売業者は今や、季節ごとではなく数週間ごとに新しいデザインを出し、かつてなら長く持つものとしてあつかわれたであろう服が、買われ、何回か着られ、捨てられる。ファストファッションとよばれることの多いこの仕組みは、以前ならおしゃれな服を買う余裕のなかった人々にもそれを手に入れられるようにしたが、環境と、服を作る人々への影響のために、ますます批判を集めてもいる。',
+      '環境への費用はかなりのものである。布を作るには大量の水とエネルギーが必要であり、製造に使われる染料や化学物質は、工場がある地域の川を汚すことがある。多くの安い服は石油から作られる合成繊維でできており、それは洗われるときに小さなプラスチックの粒を出し、捨てられても分解されない。今では服がとても早く捨てられるので、ばく大な量の布のごみが埋め立て地に行くか、より貧しい国に送られ、その多くは再利用できない。',
+      '人間への費用も同じくらい心配なものである。値段を低く保つため、企業はしばしば、賃金がとても低く労働法がきちんと守られていない国の工場にたよる。働き手は、その多くが若い女性で、生きていくのがやっとの給料で、安全でない環境のもと長時間働くことがある。豊かな国の消費者は自分の服が作られる状況をめったに目にしないので、こうした費用を見落としやすく、彼らがはらう安い値段は、もっと身近で起きていれば受け入れられないような苦しみをかくしているのかもしれない。',
+      'この産業を擁護する人々は、それが発展途上国の何百万もの人々に仕事をあたえており、これらの働き手の多くにとって、工場での仕事は、どれほどつらくても、ほかに選べる道よりはよいのだと指摘する。彼らはまた、安い服は収入の少ない消費者のためになり、今では少ない費用でよい身なりができると主張する。この見方からすれば、解決策はファストファッションを捨てることではなく、その中で労働条件と環境の基準を改善することなのである。',
+      '批判にこたえて、より持続可能な素材を使うことや、リサイクルのために古着を回収することや、仕入れ先の工場の状況を見張ることを約束した企業もある。しかし批判する人々は、そうした対策は主に企業のイメージをよくするのに役立つだけで、基本的な商売のやり方を変えないままにするかもしれないと警告する。利益が、消費者にますます多くの服を買わせることにかかっているかぎり、どれだけリサイクルしてもこの仕組みを本当に持続可能にすることはできない、と彼らは主張するのである。',
+      '消費者もまた、むずかしい選択に直面している。少なめでもよく作られた服を買うことや、服を買いかえるのではなく直すことや、古着を買うことは、どれもごみをへらしうるが、そうした選択はだれにでも同じように開かれているわけではない。よく作られた服はしばしばより高く、お金や時間の少ない人々は習慣を変えるのがむずかしいと感じるかもしれない。それゆえ、責任をすべて一人一人の買い物客に負わせることは、不公平でもあり、効果もないかもしれない。',
+      'ファストファッションをめぐる議論は、安いとはどういう意味かについてのより広い問いを生む。服はレジではほとんどお金がかからないかもしれないが、その本当の費用には、それを作るのに使われた資源や、それが引き起こす汚染や、それを作る人々の生活がふくまれている。よりわかりやすい情報や、より強い規制や、服に対する態度の変化を通して、こうした隠れた費用を目に見えるようにすることが、この産業がより公正で持続可能になるためには欠かせないのかもしれない。服を買う人々が自分の買い物が本当は何をともなっているのかを理解したときにはじめて、自分の価値観を反映した選択ができるのであり、企業が自らの製品のすべての結果に責任を問われたときにはじめて、その製品の作り方を変える理由をもつのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「消費者は服が作られる状況をめったに見ないので、費用を見落としやすい」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Fast fashion makes clothing cheap, but it uses large amounts of water and energy and creates much ( 1 ). Workers who make the clothes often face low pay and unsafe ( 2 ). Defenders say the industry provides jobs, while critics doubt that recycling can make it sustainable. The true cost of clothing includes ( 3 ) costs that should be made visible.',
+      blanks: [
+        { choices: ['waste', 'music', 'money', 'rain'], answer: 0, why: '第2段落 enormous amounts of textile waste end up in landfills。' },
+        { choices: ['conditions', 'holidays', 'uniforms', 'machines'], answer: 0, why: '第3段落 work long hours in unsafe conditions。' },
+        { choices: ['hidden', 'shipping', 'repair', 'cheap'], answer: 0, why: '第7段落 Making these hidden costs visible。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、合成繊維の服は洗うと小さなプラスチックの粒を出す。', answer: true, why: '第2段落 release tiny particles of plastic when they are washed。' },
+      { statement: '擁護する人々は、工場での仕事は働き手にとってほかの道より悪いと考えている。', answer: false, why: '第4段落 factory employment, however difficult, is better than the alternatives。' },
+      { statement: '批判する人々は、企業の対策はイメージをよくするだけかもしれないと警告する。', answer: true, why: '第5段落 such measures may serve mainly to improve a company’s image。' },
+      { statement: '筆者は、責任をすべて一人一人の買い物客に負わせるべきだと考えている。', answer: false, why: '第6段落 Placing the entire responsibility on individual shoppers may therefore be both unfair and ineffective。' },
+    ],
+    qa: [
+      { q: 'How has the pace of new designs changed, according to the first paragraph?', choices: ['Retailers now introduce new designs every few weeks rather than every season.', 'New designs appear only once a year.', 'Retailers have stopped making new designs.', 'Designs change every ten years.'], answer: 0, why: '第1段落 introduce new designs every few weeks rather than every season。' },
+      { q: 'Why might buying better-made clothes not be possible for everyone?', choices: ['Well-made clothing is often more expensive, and some people have little money or time.', 'Well-made clothing is never sold in shops.', 'Everyone already buys too little clothing.', 'Second-hand clothes are always more expensive.'], answer: 0, why: '第6段落 Well-made clothing is often more expensive, and people with little money or time ...。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
