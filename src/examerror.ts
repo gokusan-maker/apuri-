@@ -3266,6 +3266,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) want to (B) talk (C) to you (D) of the plan.', choices: ['(A) want to', '(B) talk', '(C) to you', '(D) of the plan'], answer: 3, why: 'talk to 人 about ～。about the plan。' },
     ],
   },
+  {
+    id: 'exam-error-pronoun-kyutei',
+    title: '入試の正誤問題〈138〉（旧帝大レベル：代名詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'one は同じ種類の別のもの、it はそのもの。くり返しをさけるのは that of（単数）／those of（複数）。talk to each other。主語と同じなら -self。2つの残りは the other、Some ～, others …。',
+    ],
+    examples: [
+      { en: 'I lost my pen and bought a new one.', ja: 'ペンをなくして、新しいのを買った。' },
+      { en: 'The climate of Japan is milder than that of Canada.', ja: '日本の気候はカナダの気候よりおだやかだ。' },
+    ],
+    questions: [
+      { sentence: 'I lost my pen and (A) bought (B) a new (C) it (D) today.', choices: ['(A) bought', '(B) a new', '(C) it', '(D) today'], answer: 2, why: '同じ種類の別のもの（a new pen）なので one。' },
+      { sentence: 'Please make (A) you (B) at home (C) and (D) relax.', choices: ['(A) you', '(B) at home', '(C) and', '(D) relax'], answer: 0, why: 'make yourself at home。yourself。' },
+      { sentence: 'The cars (A) made in Japan are more popular than (B) that (C) made in (D) other countries.', choices: ['(A) made in Japan are more popular than', '(B) that', '(C) made in', '(D) other countries'], answer: 1, why: '複数名詞 the cars のくり返しは those。' },
+      { sentence: 'They (A) often talk (B) each other (C) on the phone (D) at night.', choices: ['(A) often talk', '(B) each other', '(C) on the phone', '(D) at night'], answer: 1, why: 'talk to each other。to が必要。' },
+      { sentence: 'He hurt (A) him (B) while (C) he was (D) cooking.', choices: ['(A) him', '(B) while', '(C) he was', '(D) cooking'], answer: 0, why: '主語と同じ人なので himself。' },
+      { sentence: 'I have two sisters. (A) One is a nurse, and (B) another (C) is (D) a teacher.', choices: ['(A) One is a nurse, and', '(B) another', '(C) is', '(D) a teacher'], answer: 1, why: '2人のうち残りの1人は the other。' },
+      { sentence: 'Some people like tea, and (A) other (B) like (C) coffee (D) better.', choices: ['(A) other', '(B) like', '(C) coffee', '(D) better'], answer: 0, why: 'Some ～, others …。others。' },
+      { sentence: 'This shirt is (A) too small. (B) Do you have (C) a bigger (D) it?', choices: ['(A) too small', '(B) Do you have', '(C) a bigger', '(D) it?'], answer: 3, why: '同じ種類の別のものなので one。' },
+      { sentence: 'The climate (A) of Japan (B) is milder (C) than (D) Canada.', choices: ['(A) of Japan', '(B) is milder', '(C) than', '(D) Canada'], answer: 3, why: '気候どうしを比べるので than that of Canada。' },
+      { sentence: '(A) I bought a new bike, and (B) I ride (C) one (D) every day.', choices: ['(A) I bought a new bike, and', '(B) I ride', '(C) one', '(D) every day'], answer: 2, why: '買ったその自転車を指すので it。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
