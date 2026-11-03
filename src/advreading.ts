@@ -27388,6 +27388,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-space-spending',
+    title: 'Is Space Worth the Cost?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every few years, a new achievement in space captures public attention. A spacecraft lands on a distant moon, a telescope sends back images of galaxies formed shortly after the beginning of the universe, or a private company launches tourists beyond the atmosphere. Such events inspire admiration, but they also provoke a familiar question. With poverty, disease, and climate change still unsolved on Earth, can the enormous sums spent on space exploration really be justified? The question has been asked since the earliest days of space travel, and it has become more pressing as the costs and ambitions of space programs have grown.",
+      "Critics of space spending make a serious argument. Large space programs can cost billions of dollars, and that money could instead be used to build schools, improve health care, or develop clean energy. From this perspective, sending robots to Mars while millions of people lack clean water seems to reflect a strange set of priorities. The critics also point out that the benefits of space exploration are often uncertain and distant, while the needs they wish to address are urgent and concrete. A child who needs medicine today, they argue, cannot wait for the uncertain rewards of research that may take decades to bear fruit.",
+      "Supporters respond that the comparison is less straightforward than it appears. Space programs typically account for a small fraction of national budgets, far less than spending on defense or social welfare, and cutting them would not by itself solve the problems critics mention. Moreover, research carried out for space missions has produced many technologies that are now part of everyday life, from improvements in weather forecasting and satellite communication to advances in medical imaging and materials science. Satellites that observe the Earth are also essential tools for monitoring climate change, deforestation, and natural disasters. Without them, our understanding of how the planet is changing would be far less complete.",
+      "There are, in addition, arguments that go beyond practical benefits. Exploring space can expand human knowledge about the origins of the universe and the possibility of life elsewhere, questions that have fascinated people for thousands of years. Space missions can also inspire young people to study science and engineering, and international projects can bring together countries that might otherwise have little reason to cooperate. ( A ) such benefits are difficult to measure, many people regard them as among the most important reasons for exploring space. Curiosity about what lies beyond our world, they suggest, is part of what makes us human, and a civilization that stopped asking such questions would be poorer for it.",
+      "The growing role of private companies has added new dimensions to the debate. Businesses now build rockets, launch satellites, and plan commercial trips into orbit, and some of their founders speak of establishing human settlements on other planets. Supporters argue that competition has reduced costs and accelerated innovation. Critics worry that space is becoming a playground for the wealthy, that the increasing number of satellites is creating dangerous debris and interfering with astronomical observation, and that the question of who has the right to use resources beyond the Earth has not been adequately addressed. International agreements written decades ago may not be adequate for an era in which private companies, rather than governments, are the main actors.",
+      "Perhaps the most reasonable conclusion is that the choice is not simply between space and Earth. A society can invest in exploration while also addressing urgent needs at home, and many of the tools developed for space can help to solve terrestrial problems. What matters is that decisions about space are made openly, with careful attention to their costs, their benefits, and their consequences for future generations. Space belongs, in the end, to all of humanity, and how it is used should reflect values that are widely shared rather than the interests of a few.",
+    ],
+    ja: [
+      '数年ごとに、宇宙での新しい偉業が人々の注目を集める。宇宙船が遠くの衛星に着陸したり、望遠鏡が宇宙の始まりの直後にできた銀河の画像を送ってきたり、民間企業が観光客を大気圏の外へ打ち上げたりする。こうしたできごとは称賛をよぶが、同時になじみのある問いも引き起こす。地球上で貧困や病気や気候変動がまだ解決されていないのに、宇宙探査に費やされる莫大なお金は本当に正当化できるのだろうか。この問いは宇宙旅行のごく初期から問われてきたものであり、宇宙計画の費用と野心が大きくなるにつれて、より切実になってきた。',
+      '宇宙への支出を批判する人々は、まじめな議論をしている。大きな宇宙計画には何十億ドルもかかることがあり、そのお金は代わりに学校を建てたり、医療を改善したり、クリーンなエネルギーを開発したりするのに使えるはずである。この見方からすれば、何百万もの人が安全な水を手にできないでいるのに火星にロボットを送るのは、奇妙な優先順位を反映しているように思える。批判する人々はまた、宇宙探査の利益はしばしば不確かで遠い先のものである一方、彼らが取り組みたい必要は差しせまった具体的なものだと指摘する。今日薬を必要としている子どもは、実を結ぶのに何十年もかかるかもしれない研究の不確かな見返りを待つことはできない、と彼らは主張するのである。',
+      '支持する人々は、その比較は見かけほど単純ではないと答える。宇宙計画はふつう国の予算のごく一部しか占めておらず、防衛や社会福祉への支出よりはるかに少ない。それを削っても、それだけで批判者があげる問題が解決するわけではない。さらに、宇宙計画のために行われた研究は、天気予報や衛星通信の改善から医療画像や材料科学の進歩まで、今では日常生活の一部となっている多くの技術を生み出してきた。地球を観測する人工衛星はまた、気候変動や森林破壊や自然災害を見守るのに欠かせない道具でもある。それがなければ、地球がどのように変わりつつあるかについての私たちの理解は、はるかに不完全なものになるだろう。',
+      'さらに、実用的な利益をこえた議論もある。宇宙を探査することで、宇宙の起源や地球以外の生命の可能性についての人類の知識が広がりうる。それらは何千年ものあいだ人々を魅了してきた問いである。宇宙計画はまた、若者が科学や工学を学ぶよう励ますことができ、国際的な計画は、そうでなければ協力する理由がほとんどない国々を結びつけることもできる。こうした利益ははかるのがむずかしいが、多くの人はそれを宇宙を探査する最も重要な理由の1つとみなしている。私たちの世界の向こうに何があるのかという好奇心は、人間を人間たらしめているものの一部であり、そうした問いをやめた文明はそれだけ貧しくなるだろう、と彼らは言う。',
+      '民間企業の役割が大きくなったことで、議論に新しい面が加わった。今では企業がロケットを作り、人工衛星を打ち上げ、軌道への商業旅行を計画しており、その創業者のなかにはほかの惑星に人の住む場所をつくると語る者もいる。支持する人々は、競争によって費用が下がり、革新が速まったと主張する。批判する人々は、宇宙が裕福な人々の遊び場になりつつあること、人工衛星の増加が危険な宇宙ごみを生み、天体観測をさまたげていること、そして地球の外の資源をだれが使う権利をもつのかという問題が十分に話し合われていないことを心配している。何十年も前に書かれた国際的な取り決めは、政府ではなく民間企業が主な担い手となる時代には十分でないかもしれない。',
+      'おそらく最も理にかなった結論は、選択が単に宇宙か地球かということではないということだろう。社会は探査に投資しながら、同時に国内の差しせまった必要に取り組むこともでき、宇宙のために開発された道具の多くは地球上の問題の解決にも役立ちうる。大切なのは、宇宙についての決定が、その費用と利益と将来の世代への影響に注意深く目を向けながら、開かれた形で下されることである。結局のところ、宇宙は人類全体のものであり、その使い方は少数の人々の利益ではなく、広く共有された価値観を反映すべきなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「こうした利益ははかりにくいが、最も重要な理由とみなされている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that money spent on space could address urgent problems on Earth. Supporters reply that space programs take only a small ( 1 ) of budgets and have produced useful technologies, as well as expanding knowledge and inspiring young people. The rise of private companies raises new ( 2 ), and the writer concludes that decisions about space should be made ( 3 ), reflecting widely shared values.',
+      blanks: [
+        { choices: ['fraction', 'majority', 'risk', 'number'], answer: 0, why: '第3段落 Space programs typically account for a small fraction of national budgets。' },
+        { choices: ['concerns', 'profits', 'planets', 'rockets'], answer: 0, why: '第5段落 Critics worry that space is becoming a playground for the wealthy ...。' },
+        { choices: ['openly', 'secretly', 'quickly', 'rarely'], answer: 0, why: '第6段落 decisions about space are made openly。' },
+      ],
+    },
+    tf: [
+      { statement: '批判する人々によれば、宇宙探査の利益は差しせまった具体的なものである。', answer: false, why: '第2段落 the benefits of space exploration are often uncertain and distant。' },
+      { statement: '筆者によれば、宇宙計画は防衛や社会福祉への支出よりはるかに少ない。', answer: true, why: '第3段落 far less than spending on defense or social welfare。' },
+      { statement: '筆者によれば、宇宙計画は若者が科学を学ぶよう励ますことができる。', answer: true, why: '第4段落 Space missions can also inspire young people to study science and engineering。' },
+      { statement: '筆者は、選択は単に宇宙か地球かのどちらかだと考えている。', answer: false, why: '第6段落 the choice is not simply between space and Earth。' },
+    ],
+    qa: [
+      { q: 'How do Earth-observing satellites help, according to the third paragraph?', choices: ['They are essential for monitoring climate change, deforestation, and natural disasters.', 'They reduce the cost of schools.', 'They make space tourism cheaper.', 'They replace weather forecasters.'], answer: 0, why: '第3段落 Satellites that observe the Earth are also essential tools for monitoring climate change, deforestation, and natural disasters。' },
+      { q: 'What do critics worry about regarding private companies in space?', choices: ['Space may become a playground for the wealthy, and debris may increase.', 'Rockets have become too expensive.', 'Companies refuse to launch satellites.', 'No one wants to travel to space.'], answer: 0, why: '第5段落 space is becoming a playground for the wealthy, that the increasing number of satellites is creating dangerous debris。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
