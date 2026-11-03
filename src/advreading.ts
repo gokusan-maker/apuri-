@@ -27430,6 +27430,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-competition',
+    title: 'The Two Faces of Competition',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Competition is often presented as the engine of progress. Businesses compete for customers and are thereby driven to improve their products; athletes compete for victory and push the limits of human performance; students compete for places at universities and are motivated to work harder. In each case, the desire to win seems to bring out the best in people. Yet a closer look suggests that competition is a more ambiguous force than this picture implies, capable of fostering excellence in some circumstances while undermining it in others. Understanding the difference between these circumstances is essential if we are to make good use of competition rather than simply accepting or rejecting it.",
+      "One reason is that competition tends to focus attention on relative rather than absolute performance. What matters is not how well one does but whether one does better than others. This can be motivating when the standards of comparison are clear and the rewards are fairly distributed. But it can also encourage behavior that has little to do with genuine achievement. A student who cares only about ranking above classmates may be tempted to withhold useful information from them, and a company that cares only about defeating rivals may invest more in advertising than in improving what it sells. In such cases, competition rewards the appearance of success rather than the substance, and everyone may end up worse off than if they had cooperated.",
+      "Competition can also affect the quality of motivation itself. Psychologists have observed that when people are absorbed in an activity for its own sake, they often perform with greater creativity and persistence than when they are chiefly concerned with outcomes. Intense competition may shift attention from the activity to the prize, so that the activity becomes merely a means to an end. ( A ) the prize is removed, the interest may disappear with it, leaving behind a person who has learned to win but not to care about what winning required. Teachers sometimes observe this pattern in students who stop reading for pleasure once reading becomes a contest for the highest scores.",
+      "None of this means that competition should be abolished. Many people find it exhilarating, and the presence of worthy rivals can reveal capacities that would otherwise remain hidden. In sport, in particular, competition is not merely a means to some further goal but part of what makes the activity meaningful. The best competitors often describe their opponents not as enemies but as partners in a shared pursuit of excellence, without whom their own achievements would be impossible. Many athletes say that their greatest rival was also their greatest teacher, the person who showed them what they still needed to learn.",
+      "This last observation points toward a way of understanding competition at its best. When competitors share a commitment to the standards of their activity, rivalry becomes a form of cooperation. Each pushes the other to improve, and the result is a raising of the level for everyone. Scientists racing to solve the same problem, for example, may compete fiercely while relying on one another's published work and accepting common rules about evidence and honesty. The competition is healthy precisely because it takes place within a framework that all participants respect. When that framework breaks down, as when scientists falsify data in order to be first, the competition quickly becomes harmful to everyone involved.",
+      "The challenge, then, is not to choose between competition and cooperation but to design institutions in which competition serves shared goals rather than undermining them. Schools, workplaces, and markets can be arranged so that success depends on genuine contribution rather than on harming others, and so that those who lose are not excluded from future opportunities. Where such conditions are absent, competition can become a destructive struggle; where they are present, it can be one of the most powerful forms of human collaboration.",
+    ],
+    ja: [
+      '競争はしばしば進歩の原動力として示される。企業は客をめぐって競い、それによって製品をよくするよう駆り立てられる。運動選手は勝利をめぐって競い、人間の能力の限界をおし広げる。生徒は大学の席をめぐって競い、もっと熱心に取り組もうという意欲をもつ。どの場合も、勝ちたいという願いが人の最もよいところを引き出すように思える。しかしよく見ると、競争はこの像がほのめかすよりもあいまいな力であり、ある状況ではすぐれた成果を育てながら、別の状況ではそれをそこなうことがあるとわかる。こうした状況のちがいを理解することは、競争を単に受け入れたりこばんだりするのではなく、うまく生かそうとするなら欠かせない。',
+      '1つの理由は、競争が絶対的な成果ではなく相対的な成果に注意を集めがちだということである。大切なのは、どれだけうまくやるかではなく、他人よりうまくやるかどうかである。これは、比べる基準がはっきりしていて、報酬が公平に分けられているときには意欲を高めうる。しかしそれはまた、本当の達成とはほとんど関係のないふるまいを促すこともある。同級生より上の順位になることだけを気にする生徒は、彼らに役に立つ情報を教えないでおきたくなるかもしれないし、ライバルを打ち負かすことだけを気にする会社は、売るものをよくするよりも広告に多く投資するかもしれない。そうした場合、競争は中身ではなく成功の見かけに報いることになり、協力していた場合よりもすべての人が悪い結果になってしまうかもしれない。',
+      '競争はまた、やる気の質そのものにも影響しうる。心理学者たちは、人がある活動にそれ自体のために夢中になっているとき、主に結果を気にしているときよりも、しばしばより創造的に、より粘り強く取り組むことに気づいてきた。はげしい競争は、注意を活動から賞品へと移し、その結果、活動は目的のための単なる手段になってしまうかもしれない。賞品が取りのぞかれると、興味もいっしょに消えてしまい、勝つことは学んだが、勝つために何が必要だったかを大切に思うことは学ばなかった人が残されるかもしれない。教師は、読書が最高点を取るための競争になったとたんに、楽しみのための読書をやめてしまう生徒に、この型を見ることがある。',
+      'こうしたことは、競争をなくすべきだということではない。多くの人は競争に胸が高鳴るのを感じ、ふさわしいライバルがいることで、そうでなければかくれたままだったはずの能力が明らかになることもある。とくにスポーツでは、競争は何かほかの目的のための手段であるだけでなく、その活動を意味あるものにしているものの一部である。最もすぐれた競技者は、相手を敵ではなく、すぐれたものをともに追い求める仲間として語ることが多く、相手がいなければ自分の成果もありえなかったと言うのである。多くの選手が、最大のライバルは最大の先生でもあり、自分がまだ何を学ぶ必要があるかを示してくれた人だったと語る。',
+      'この最後の観察は、最もよい形の競争を理解する1つの方法を示している。競争する者どうしがその活動の基準を大切にしているとき、競い合うことは協力の一形態になる。それぞれが相手に向上を促し、その結果、すべての人の水準が上がる。たとえば、同じ問題を解こうと競う科学者たちは、はげしく競いながらも、たがいの発表した研究にたより、証拠と誠実さについての共通の決まりを受け入れているかもしれない。その競争が健全なのは、まさにすべての参加者が尊重する枠組みの中で行われているからである。その枠組みがこわれると、たとえば科学者がいちばんになるためにデータをねつ造するようなとき、競争はたちまちかかわるすべての人にとって有害なものになる。',
+      'したがって課題は、競争と協力のどちらかを選ぶことではなく、競争が共有された目標をそこなうのではなく、それに役立つような制度を設計することである。学校や職場や市場は、成功が他人を傷つけることではなく本当の貢献にかかるように、そして負けた人が将来の機会から締め出されないように整えることができる。そうした条件がないところでは、競争は破壊的な争いになりうるが、それがあるところでは、競争は人間の協力の最も力強い形の1つになりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['When', 'Unless', 'Although', 'Before'], answer: 0, why: '「賞品が取りのぞかれると（取りのぞかれたとき）」という When。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、競争は絶対的な成果よりも相対的な成果に注意を集めがちである。', answer: true, why: '第2段落 competition tends to focus attention on relative rather than absolute performance。' },
+      { statement: '筆者によれば、はげしい競争は、つねに活動そのものへの興味を高める。', answer: false, why: '第3段落 Intense competition may shift attention from the activity to the prize。' },
+      { statement: '筆者は、競争はなくすべきだと主張している。', answer: false, why: '第4段落 None of this means that competition should be abolished。' },
+      { statement: '筆者によれば、最もすぐれた競技者は相手を仲間として語ることが多い。', answer: true, why: '第4段落 describe their opponents not as enemies but as partners。' },
+    ],
+    qa: [
+      { q: 'Why might a student who cares only about ranking behave badly, according to the second paragraph?', choices: ['They may be tempted to withhold useful information from classmates.', 'They may study too hard.', 'They may help others too much.', 'They may forget their own name.'], answer: 0, why: '第2段落 may be tempted to withhold useful information from them。' },
+      { q: 'When does competition become a form of cooperation, according to the fifth paragraph?', choices: ['When competitors share a commitment to the standards of their activity.', 'When there are no rules at all.', 'When only one person can win.', 'When competitors hide their work from each other.'], answer: 0, why: '第5段落 When competitors share a commitment to the standards of their activity, rivalry becomes a form of cooperation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
