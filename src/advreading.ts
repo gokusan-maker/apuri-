@@ -27202,6 +27202,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-changing-minds',
+    title: 'The Courage to Change One\'s Mind',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In public life, changing one's mind is often treated as a sign of weakness. Politicians who alter their positions are accused of inconsistency, and in ordinary arguments, conceding a point can feel like a defeat. People tend to admire those who stand firm, who know what they believe and do not waver under pressure. Yet a moment's reflection suggests that this attitude is puzzling. If our beliefs are meant to track the truth, then we should welcome any evidence that shows them to be mistaken, since it gives us the opportunity to replace a false belief with a better one.",
+      "Why, then, is it so difficult to change our minds? Part of the answer lies in the way beliefs become connected to our sense of identity. Opinions about politics, religion, or even matters of taste are rarely held in isolation; they link us to communities of people who share them and distinguish us from those who do not. To abandon such a belief may therefore feel like betraying one's friends or losing a part of oneself. Under these conditions, evidence that challenges a belief is experienced not as useful information but as a threat. The stronger our attachment to a group, the more painful it can be to admit that the group might be wrong.",
+      "Psychologists have documented many ways in which people protect their existing beliefs. We tend to seek out information that confirms what we already think, to interpret ambiguous evidence in our own favor, and to subject opposing arguments to much stricter scrutiny than those we find agreeable. Remarkably, intelligence offers little protection against these tendencies; highly educated people may simply be more skilled at constructing reasons for what they already wished to believe. The problem, in other words, is less a lack of reasoning ability than the purposes for which that ability is used. A sharp mind in the service of self-defense can become a very effective obstacle to learning.",
+      "This does not mean that we should change our minds whenever someone presents an argument we cannot immediately answer. A belief that has been carefully formed on the basis of substantial evidence should not be abandoned lightly, and a person who is persuaded by every clever argument may end up believing nothing at all. ( A ) stubbornness is a vice, so is excessive readiness to be swayed. The virtue we need lies somewhere between these extremes: a willingness to take opposing views seriously combined with a careful judgment about when they are strong enough to justify a change.",
+      "Cultivating this virtue may require changes in both individual habits and social expectations. Individuals can practice stating opposing views in their strongest form before criticizing them, and can learn to separate their sense of self-worth from the correctness of any particular opinion. Communities, for their part, can make it easier to change one's mind by treating such changes not as embarrassing reversals but as signs of honesty and intellectual courage. In science, at least in principle, revising a theory in the light of new evidence is regarded as a success rather than a failure. Other areas of life might benefit from adopting a similar attitude, rewarding people who update their views rather than those who refuse to move.",
+      "Perhaps the deepest reason to value the ability to change one's mind is that it reflects a certain humility about the limits of our knowledge. None of us sees the whole truth, and many of the beliefs we hold most confidently today may one day appear mistaken. To remain open to correction is not to lack conviction but to hold our convictions in the right way: firmly enough to act on them, yet lightly enough to let them go when the evidence requires it. A mind that cannot change is not strong but closed.",
+    ],
+    ja: [
+      '公の場では、考えを変えることはしばしば弱さのしるしとして扱われる。立場を変える政治家は一貫性がないと非難され、ふだんの議論でも、ある点をゆずることは負けのように感じられることがある。人は、しっかりと立ち、自分が何を信じているかを知り、圧力を受けてもゆらがない人をほめがちである。しかし少し考えてみると、この態度は不可解であることがわかる。私たちの信念が真理を追うためのものなら、それがまちがっていることを示す証拠は歓迎すべきである。それは誤った信念をよりよい信念に置きかえる機会を与えてくれるからである。',
+      'では、なぜ考えを変えるのはこれほどむずかしいのだろうか。答えの一部は、信念が私たちのアイデンティティの感覚と結びつくしかたにある。政治や宗教や、好みの問題についての意見でさえ、それだけで孤立してもたれることはめったにない。それは私たちを同じ意見をもつ人々の共同体に結びつけ、そうでない人々から区別する。そのため、そうした信念を捨てることは、友人を裏切ることや自分の一部を失うことのように感じられるかもしれない。こうした状況では、信念に異をとなえる証拠は、役に立つ情報としてではなく、おびやかすものとして経験されるのである。集団への愛着が強ければ強いほど、その集団がまちがっているかもしれないと認めるのはつらくなりうる。',
+      '心理学者たちは、人が今もっている信念を守るさまざまなやり方を記録してきた。私たちは、すでに考えていることを裏づける情報をさがし、あいまいな証拠を自分に有利に解釈し、反対の議論を、気に入った議論よりもはるかにきびしく調べる傾向がある。おどろくべきことに、知能はこうした傾向をほとんど防いでくれない。高い教育を受けた人は、すでに信じたいと思っていたことのための理由を組み立てるのが、単により上手なだけかもしれないのである。言いかえれば、問題は推論する力が足りないことよりも、その力が何のために使われるかにある。自分を守るために使われる鋭い頭脳は、学ぶことへのとても効果的な障害になりうるのである。',
+      'だからといって、すぐには答えられない議論をだれかが示すたびに、考えを変えるべきだということではない。多くの証拠にもとづいて注意深く形づくられた信念は軽々しく捨てるべきではないし、どんな巧みな議論にも説得される人は、最後には何も信じなくなってしまうかもしれない。がんこさが悪徳であるのと同じように、あまりにすぐ心を動かされることも悪徳である。私たちに必要な美徳は、この両極端のあいだのどこかにある。つまり、反対の見方を真剣に受け止める姿勢と、それが考えを変えることを正当化するほど強いのはいつかについての注意深い判断との組み合わせである。',
+      'この美徳を育てるには、個人の習慣と社会の期待の両方を変えることが必要かもしれない。個人は、反対の見方を批判する前に、それを最も強い形で述べる練習をし、自分の価値の感覚を特定の意見の正しさから切りはなすことを学べる。共同体の側も、考えを変えることを、はずかしい逆転としてではなく、誠実さと知的な勇気のしるしとして扱うことで、考えを変えやすくすることができる。科学では、少なくとも原則として、新しい証拠に照らして理論を改めることは失敗ではなく成功とみなされている。生活のほかの分野も、似た態度を取り入れることで得るものがあるかもしれない。動こうとしない人ではなく、自分の見方を新しくする人に報いるのである。',
+      '考えを変える力を大切にするおそらく最も深い理由は、それが自分の知識の限界についてのある種の謙虚さを反映していることである。私たちのだれも真理の全体を見てはおらず、今日最も自信をもっている信念の多くも、いつかまちがいに見えるかもしれない。正されることに開かれていることは、信念がないことではなく、信念を正しい形でもつことである。つまり、それにもとづいて行動できるほどしっかりと、しかし証拠が求めるときには手放せるほど軽く。変わることのできない心は強いのではなく、閉じているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Just as', 'Even if', 'Unless', 'So that'], answer: 0, why: '後半の so is excessive readiness to be swayed と組になる Just as ～, so …（～と同じように…も）。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、信念がまちがっていることを示す証拠は歓迎すべきである。', answer: true, why: '第1段落 we should welcome any evidence that shows them to be mistaken。' },
+      { statement: '筆者によれば、知能が高い人ほど、自分の信念を守る傾向にとらわれにくい。', answer: false, why: '第3段落 intelligence offers little protection against these tendencies。' },
+      { statement: '筆者は、すぐに答えられない議論を示されたら、いつも考えを変えるべきだと考えている。', answer: false, why: '第4段落 This does not mean that we should change our minds whenever someone presents an argument we cannot immediately answer。' },
+      { statement: '筆者によれば、科学では原則として、理論を改めることは成功とみなされる。', answer: true, why: '第5段落 revising a theory ... is regarded as a success rather than a failure。' },
+    ],
+    qa: [
+      { q: 'Why can evidence that challenges a belief feel like a threat, according to the second paragraph?', choices: ['Because beliefs are connected to our identity and our communities.', 'Because evidence is always false.', 'Because people never read evidence.', 'Because beliefs have nothing to do with friends.'], answer: 0, why: '第2段落 beliefs become connected to our sense of identity ... they link us to communities of people who share them。' },
+      { q: 'How does the writer describe a mind that cannot change?', choices: ['Not strong but closed.', 'Strong and admirable.', 'Wise and humble.', 'Free from all bias.'], answer: 0, why: '第6段落 A mind that cannot change is not strong but closed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
