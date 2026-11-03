@@ -28702,6 +28702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-regret',
+    title: 'Living with Regret',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Popular wisdom often advises us to live without regret. We are told that the past cannot be changed, that dwelling on mistakes is a waste of energy, and that a healthy person looks forward rather than backward. There is obvious sense in this advice, since excessive regret can paralyze a person, filling the mind with painful thoughts about what might have been and leaving little room for action in the present. Yet the ideal of a life entirely free from regret may be neither possible nor desirable, and it is worth asking what regret actually does for us.",
+      "Regret is a peculiar emotion, because it depends on the ability to imagine alternatives. To regret a decision is to compare what actually happened with what might have happened if one had chosen differently. Animals may feel pain at a bad outcome, but regret in the full sense seems to require the capacity to construct an imagined world in which things went otherwise and to recognize that the difference was due, at least in part, to one's own choice. Regret is thus closely connected with our sense of ourselves as agents who are responsible for what we do.",
+      "This connection suggests that regret can serve an important purpose. By making us feel the consequences of our choices, regret encourages us to learn from experience and to choose more wisely in the future. A person who never felt regret might repeat the same mistakes indefinitely, since nothing would prompt reflection on what went wrong. ( A ) regret is painful, its pain may be the price we pay for being able to improve, much as physical pain, though unpleasant, protects us from further injury.",
+      "Regret also has a moral dimension. When we have harmed someone, regret is part of the process through which we acknowledge the harm, take responsibility for it, and seek to make amends. A person who wronged another and felt no regret would strike us as morally deficient, and an apology offered without any sign of regret would seem empty. In such cases, regret is not simply a private feeling but a way of recognizing the reality and importance of the other person.",
+      "Not all regret, however, is useful. Some regrets concern choices that were reasonable at the time, given what the person knew, and that turned out badly only because of circumstances beyond anyone's control. Regretting such choices may reflect a mistaken belief that we could have foreseen the unforeseeable. Other regrets become so consuming that they prevent a person from living in the present, turning a lesson into a burden that is carried long after it has anything left to teach.",
+      "Interestingly, research suggests that people tend to regret different things over different periods of time. In the short term, people often regret actions they took that turned out badly, but over the course of a lifetime, they are more likely to regret things they failed to do: opportunities they did not pursue, words they did not say, risks they did not take. This pattern may suggest that the fear of regret, which often makes people cautious, can itself become a source of the deepest regrets.",
+      "Living well, then, may require not the absence of regret but a wise relationship with it. Such a relationship would allow us to feel regret when it is deserved, to learn what it has to teach, and then to let it go, carrying forward the lesson without the weight of endless self-reproach. In this sense, regret resembles a teacher whose lessons are valuable but who should not be allowed to stay forever, and the art of living may lie partly in knowing when the lesson has been learned.",
+    ],
+    ja: [
+      '世間の知恵はしばしば、後悔せずに生きるよう私たちに助言する。過去は変えられない、まちがいをくよくよ考えるのはエネルギーのむだだ、健全な人はうしろではなく前を見るものだ、と私たちは言われる。この助言には明らかな分別がある。後悔しすぎると人は身動きがとれなくなり、心がこうだったかもしれないという苦しい考えで満たされ、今行動する余地がほとんど残らなくなるからである。しかし、後悔のまったくない人生という理想は、可能でも望ましくもないかもしれず、後悔が実際に私たちに何をしてくれているのかを問う価値がある。',
+      '後悔は風変わりな感情である。それはほかの可能性を想像する能力にかかっているからである。ある決定を後悔するとは、実際に起きたことと、ちがう選び方をしていたら起きたかもしれないこととを比べることである。動物は悪い結果に痛みを感じるかもしれないが、本当の意味での後悔には、ものごとがちがうように進んだ想像上の世界を組み立て、そのちがいが少なくとも部分的には自分の選択によるものだと認める能力が必要なように思われる。それゆえ後悔は、自分のすることに責任を負う行為者としての自己の感覚と深く結びついているのである。',
+      'この結びつきは、後悔が大切な目的を果たしうることを示している。自分の選択の結果を感じさせることで、後悔は私たちが経験から学び、これからはもっと賢く選ぶようはげます。後悔を一度も感じない人は、何がまちがっていたかをふり返るきっかけが何もないので、同じまちがいを限りなくくり返すかもしれない。後悔は苦しいが、その苦しみは、よくなれるために私たちがはらう代償なのかもしれない。ちょうど体の痛みが、不快ではあっても、さらなるけがから私たちを守っているのと同じように。',
+      '後悔にはまた道徳的な面もある。だれかを傷つけたとき、後悔は、その害を認め、責任を負い、つぐないをしようとする過程の一部である。他人に不正をして何の後悔も感じない人は道徳的に欠けているように思えるし、後悔のしるしがまったくないままなされた謝罪は中身のないものに思えるだろう。そうした場合、後悔は単なる個人的な感情ではなく、相手が実在し大切な存在であることを認めるしかたなのである。',
+      'しかし、すべての後悔が役に立つわけではない。ある後悔は、その人が知っていたことからすればそのときは筋の通っていた選択で、だれにもどうにもできない状況のせいでうまくいかなかっただけのものにかかわる。そうした選択を後悔することは、予見できないことを予見できたはずだというまちがった思いこみを反映しているのかもしれない。また、ある後悔はあまりにも心をうばうので、人が今を生きるのをさまたげ、教訓を、もう教えることが何も残っていないずっとあとまで背負い続ける重荷に変えてしまう。',
+      '興味深いことに、研究によれば、人は時期によってちがうことを後悔する傾向がある。短い期間では、人はしばしば自分がとって悪い結果になった行動を後悔するが、一生を通じて見ると、しなかったこと、つまり追い求めなかった機会や、言わなかった言葉や、とらなかった危険を後悔する可能性のほうが高い。この傾向は、しばしば人を慎重にさせる後悔への恐れそのものが、最も深い後悔の源になりうることを示しているのかもしれない。',
+      'それゆえよく生きるには、後悔がないことではなく、後悔との賢い関係が必要なのかもしれない。そうした関係があれば、私たちは後悔がふさわしいときにはそれを感じ、それが教えてくれることを学び、そして終わりのない自分責めの重みなしに教訓をたずさえて、後悔を手放すことができるだろう。この意味で、後悔は、その教えは価値があるが、いつまでもいすわらせるべきではない教師に似ており、生きる技術の一部は、教訓がいつ学ばれたのかを知ることにあるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「後悔は苦しいが、その苦しみはよくなれるための代償かもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、後悔にはほかの可能性を想像する能力が必要である。', answer: true, why: '第2段落 it depends on the ability to imagine alternatives。' },
+      { statement: '筆者によれば、後悔を一度も感じない人は、まちがいから学びやすい。', answer: false, why: '第3段落 might repeat the same mistakes indefinitely。' },
+      { statement: '研究によれば、一生を通じて見ると、人はしなかったことを後悔しやすい。', answer: true, why: '第6段落 they are more likely to regret things they failed to do。' },
+      { statement: '筆者は、よく生きるには後悔がまったくないことが必要だと考えている。', answer: false, why: '第7段落 may require not the absence of regret but a wise relationship with it。' },
+    ],
+    qa: [
+      { q: 'What role does regret play when we have harmed someone, according to the fourth paragraph?', choices: ['It is part of acknowledging the harm and seeking to make amends.', 'It prevents us from apologizing.', 'It makes us forget the other person.', 'It has no role at all.'], answer: 0, why: '第4段落 regret is part of the process through which we acknowledge the harm, take responsibility for it, and seek to make amends。' },
+      { q: 'Why might regretting some reasonable choices be mistaken?', choices: ['It may reflect a belief that we could have foreseen the unforeseeable.', 'Such choices always turn out well.', 'Reasonable choices cannot be remembered.', 'Other people made those choices for us.'], answer: 0, why: '第5段落 a mistaken belief that we could have foreseen the unforeseeable。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
