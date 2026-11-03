@@ -29778,6 +29778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-school-meals',
+    title: 'Should School Lunch Be Free?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, schools provide meals to their students, but the extent to which these meals are free, healthy, and available to everyone varies enormously. Some governments offer free lunches to all children regardless of their family income, while others provide free meals only to those whose families can prove that they are poor, and still others leave the matter largely to parents. The question of whether all students should receive free school meals has become a lively subject of debate, touching on health, education, fairness, and the proper role of the state.",
+      "Supporters of universal free meals begin with a simple observation: hungry children find it difficult to learn. A student who arrives at school without breakfast or who has no lunch may struggle to concentrate, behave poorly, and fall behind in class. Studies in several countries have found that providing nutritious meals at school can improve attendance and performance, particularly among children from low-income families, for whom a school lunch may be the most substantial meal of the day.",
+      "Why, then, not simply provide free meals to poor children and let others pay? Supporters of universal provision point out that systems targeted at the poor often fail to reach many of the children who need help. Some families do not apply because the process is complicated or because they do not know they are eligible. ( A ) receiving a free meal can mark a child as poor in front of classmates, some families avoid the program altogether out of embarrassment, and children may refuse meals to avoid being teased. Providing meals to everyone removes this stigma, since no one can tell who would otherwise have qualified.",
+      "Critics raise questions about cost. Providing free meals to every student requires substantial public spending, and some argue that it is wasteful to subsidize the lunches of children from wealthy families who could easily pay. The same money, they suggest, might do more good if it were spent on other educational priorities, such as hiring more teachers or improving school buildings, or if it were concentrated on the families who most need help.",
+      "There are also concerns about the quality of the food. School meals have sometimes been criticized for being unhealthy, relying on processed foods high in fat, sugar, and salt. A program that provides free meals but does not improve their nutritional value may do little to promote children's health, and could even contribute to poor eating habits. Supporters respond that school meals can be an opportunity to teach children about healthy eating, especially if they are prepared with fresh ingredients and accompanied by lessons about food and nutrition.",
+      "School meals also have a social dimension that is sometimes overlooked. Eating together can teach children manners, encourage conversation, and create a sense of community among students from different backgrounds. In some countries, students help to serve meals and clean up afterward, learning responsibility and cooperation. From this perspective, school meals are not merely a way of feeding children but part of their education. Some schools even grow vegetables in their own gardens, allowing children to see how food is produced and encouraging them to try dishes they might otherwise refuse.",
+      "The debate over free school meals ultimately reflects broader views about the responsibilities that societies owe to children. Whether meals are provided to all or only to some, the decision involves balancing cost against benefit, and efficiency against dignity. What seems clear is that few investments touch so directly on children's ability to learn and grow as the food they eat each day. A society that ensures every child can eat well at school is not only investing in their health and learning but also expressing a belief that every child, whatever the circumstances of his or her family, deserves an equal chance to succeed.",
+    ],
+    ja: [
+      '多くの国で学校は生徒に給食を出しているが、その給食がどれほど無料で、健康的で、だれでも食べられるものなのかは大きくちがう。家庭の収入にかかわらずすべての子どもに無料の昼食を出す政府もあれば、家庭が貧しいことを証明できる子どもにだけ無料の食事を出す政府もあり、さらにこのことを主に親にまかせている政府もある。すべての生徒が無料の給食を受けるべきかどうかという問いは、健康や教育や公平さや国家の適切な役割にかかわる、活発な議論の的になっている。',
+      'すべての子どもへの無料給食を支持する人々は、単純な観察から始める。おなかをすかせた子どもは学びにくいということである。朝食をとらずに学校に来たり、昼食がなかったりする生徒は、集中するのに苦労し、行儀が悪くなり、授業についていけなくなるかもしれない。いくつかの国の研究で、学校で栄養のある食事を出すことが、とくに学校の昼食が一日で最もしっかりした食事かもしれない収入の少ない家庭の子どものあいだで、出席と成績をよくしうることがわかった。',
+      'それなら、なぜ単に貧しい子どもに無料の食事を出し、ほかの子どもにははらってもらわないのか。すべての子どもへの提供を支持する人々は、貧しい人を対象にした仕組みは、助けを必要とする子どもの多くにとどかないことが多いと指摘する。手続きが複雑だったり、自分が対象だと知らなかったりするために申しこまない家庭もある。無料の食事を受けることが同級生の前で子どもを貧しいと示してしまうので、はずかしさから制度をまったくさける家庭もあり、子どもはからかわれるのをさけるために食事をことわることもある。すべての人に食事を出せば、ほかの場合にだれが対象になったはずかわからないので、このはずかしめはなくなる。',
+      '批判する人々は費用についての疑問をあげる。すべての生徒に無料の食事を出すにはかなりの公的な支出が必要であり、かんたんにはらえる豊かな家庭の子どもの昼食にお金を出すのはむだだと主張する人もいる。同じお金は、もっと先生を雇ったり校舎をよくしたりするような、ほかの教育の優先事項に使われたり、最も助けを必要とする家庭に集中されたりしたほうが、もっと役に立つかもしれない、と彼らは示唆する。',
+      '食べ物の質についての懸念もある。給食は、脂肪や砂糖や塩の多い加工食品にたよった、健康によくないものだとときに批判されてきた。無料の食事を出しても、その栄養の価値をよくしない制度は、子どもの健康をうながすのにほとんど役立たないかもしれず、悪い食習慣の一因にさえなりうる。支持する人々は、給食は、とくに新鮮な材料で作られ、食べ物と栄養についての授業がともなえば、子どもに健康的な食べ方を教える機会になりうると答える。',
+      '給食にはまた、ときに見落とされる社会的な面もある。いっしょに食べることは子どもに行儀を教え、会話をうながし、ちがう背景をもつ生徒のあいだに共同体の感覚を生みうる。いくつかの国では、生徒が給食を配ったり、あとかたづけをしたりするのを手伝い、責任と協力を学ぶ。この見方からすれば、給食は単に子どもに食べさせる方法ではなく、子どもの教育の一部なのである。自分たちの畑で野菜を育て、子どもに食べ物がどう作られるかを見せ、ほかの場合なら食べようとしない料理にも挑戦するようはげましている学校さえある。',
+      '無料給食をめぐる議論は、結局のところ、社会が子どもに負っている責任についてのより広い見方を反映している。食事をすべての子どもに出すにせよ一部の子どもにだけ出すにせよ、その決定には、費用と恩恵、効率と尊厳とをつりあわせることがふくまれる。はっきりしているように思われるのは、子どもが毎日食べる食べ物ほど、子どもが学び育つ力に直接かかわる投資はほとんどないということである。すべての子どもが学校でしっかり食べられるようにする社会は、子どもの健康と学びに投資しているだけでなく、家庭の事情がどうであれ、すべての子どもが成功する平等な機会に値するという信念を表しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「無料の食事を受けることが子どもを貧しいと示してしまうので、制度をさける家庭もある」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Supporters of free school meals for all say hungry children find it hard to learn, and that targeted programs miss many children and carry a ( 1 ). Critics worry about the ( 2 ) and say the money could be used elsewhere. The quality of the food also matters, and meals can have a ( 3 ) value as well.',
+      blanks: [
+        { choices: ['stigma', 'prize', 'flavor', 'uniform'], answer: 0, why: '第3段落 Providing meals to everyone removes this stigma。' },
+        { choices: ['cost', 'taste', 'weather', 'noise'], answer: 0, why: '第4段落 Critics raise questions about cost。' },
+        { choices: ['social', 'military', 'legal', 'artistic'], answer: 0, why: '第6段落 School meals also have a social dimension。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、学校で栄養のある食事を出すと出席と成績がよくなりうる。', answer: true, why: '第2段落 can improve attendance and performance。' },
+      { statement: '筆者によれば、貧しい人を対象にした仕組みは、必要な子どもに必ずとどく。', answer: false, why: '第3段落 often fail to reach many of the children who need help。' },
+      { statement: '給食は、加工食品にたよって健康によくないと批判されたことがある。', answer: true, why: '第5段落 have sometimes been criticized for being unhealthy, relying on processed foods。' },
+      { statement: '筆者によれば、給食は子どもに食べさせる方法にすぎない。', answer: false, why: '第6段落 not merely a way of feeding children but part of their education。' },
+    ],
+    qa: [
+      { q: 'Why do some families not apply for free meals, according to the third paragraph?', choices: ['The process is complicated or they do not know they are eligible.', 'The meals are too expensive.', 'Schools refuse all applications.', 'Children prefer to cook at school.'], answer: 0, why: '第3段落 because the process is complicated or because they do not know they are eligible。' },
+      { q: 'What can students learn by helping to serve meals?', choices: ['Responsibility and cooperation.', 'How to run a restaurant.', 'Advanced mathematics.', 'How to avoid vegetables.'], answer: 0, why: '第6段落 learning responsibility and cooperation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
