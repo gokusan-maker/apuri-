@@ -2248,6 +2248,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="72" r="5" fill="#92400e" stroke="#451a03" strokeWidth="1.2" />
       </g>
     )
+  if (species === 'japaneseserow')
+    return (
+      <g>
+        {/* 短い角と、ほおの白い毛 */}
+        <path d="M42 22 L40 12 M58 22 L60 12" fill="none" stroke="#292524" strokeWidth="3" strokeLinecap="round" />
+        <path d="M36 54 Q42 60 48 56 M64 54 Q58 60 52 56" fill="none" stroke="#f5f5f4" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
