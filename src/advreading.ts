@@ -27820,6 +27820,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-distance',
+    title: 'The Uses of Distance',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually assume that understanding requires closeness. To know a place well, we think, we must live in it; to understand a person, we must spend time with him or her; and to grasp a problem, we must examine it in detail. There is obviously much truth in this assumption, since knowledge gained from a distance is often shallow and easily mistaken. Yet there are also kinds of understanding that seem to become possible only when we step back, as though some things could be seen clearly only when we were no longer standing in the middle of them.",
+      "Consider the experience of returning home after a long stay abroad. Customs that once seemed natural, such as the way people greet one another, the food served at meals, or the unspoken rules about how loudly one may speak in public, suddenly appear strange and even arbitrary. Nothing about these customs has changed; what has changed is the observer, who has acquired, through the experience of living elsewhere, the distance necessary to notice what had previously been invisible precisely because it was so familiar.",
+      "The same principle applies to our understanding of time. People who live through a historical period rarely understand its significance as clearly as those who look back on it decades later. While events are unfolding, it is difficult to distinguish what is important from what is merely noisy, and the consequences of decisions have not yet become visible. ( A ) historians cannot experience the past as those who lived through it did, they enjoy an advantage that those people lacked: they know how the story turned out, and can therefore see patterns that were hidden from participants.",
+      "Distance also plays a role in our relationships with ourselves. A person who is overwhelmed by anger or grief often cannot think clearly about the situation that caused these feelings, and well-meaning friends may advise him or her to wait before making any important decision. Writing about one's experiences in a diary, or imagining how one would advise a friend in the same situation, can create a small distance between the self who feels and the self who reflects, and this distance may allow a calmer and wiser judgment to emerge.",
+      "It would be a mistake, however, to conclude that distance always improves understanding. The historian who knows how the story ended may be tempted to believe that it could not have ended otherwise, forgetting the uncertainty and the real choices faced by those who lived through it. The traveler who returns home may judge familiar customs too harshly, mistaking unfamiliarity for insight. And a person who always steps back from his or her own feelings may lose touch with them altogether, becoming an observer of a life rather than its participant.",
+      "What seems to be needed, then, is not simply distance or closeness but the ability to move between them. The most perceptive observers are often those who have both lived inside a situation and stepped outside it, and who can compare what each position reveals. A person who has never left home cannot see its customs clearly, but a person who has never belonged anywhere may see everything clearly and understand nothing deeply.",
+      "Understanding, on this view, is less a fixed position than a kind of movement, a repeated approach and withdrawal in which each perspective corrects the limitations of the other. We draw close in order to feel the weight and texture of a situation, and we step back in order to see its shape and its place among other things. Neither movement is complete by itself, and the person who learns to make both, at the right moments, may come to understand places, periods, and even himself or herself more fully than either the insider or the outsider alone.",
+    ],
+    ja: [
+      '私たちはふつう、理解には近さが必要だと考えている。ある場所をよく知るにはそこに住まなければならず、人を理解するにはその人と時間をすごさなければならず、問題をつかむにはそれをくわしく調べなければならない、と私たちは思う。遠くから得た知識はしばしば浅く、まちがいやすいのだから、この考えに多くの真実があるのは明らかである。しかし、私たちが一歩下がったときにはじめて可能になるように思われる種類の理解もある。まるで、あるものごとはその真ん中に立つのをやめたときにはじめてはっきり見えるかのようである。',
+      '外国に長く滞在したあとで家に帰る経験を考えてみよう。人々があいさつし合うしかたや、食事に出される料理や、人前でどれくらいの大きさの声で話してよいかについての暗黙の決まりなど、かつては自然に思えた習慣が、とつぜん奇妙で、勝手なものにさえ見える。これらの習慣は何も変わっていない。変わったのは観察者であり、その人はほかの場所に住んだ経験を通して、あまりになじみ深いからこそそれまで見えなかったものに気づくのに必要な距離を得たのである。',
+      '同じ原理は、時間についての私たちの理解にも当てはまる。ある歴史の時代を生きる人々が、何十年もあとにそれをふり返る人々ほどはっきりとその意味を理解することはめったにない。出来事が進んでいるあいだは、大切なものとただ騒がしいだけのものとを区別するのはむずかしく、決定の結果もまだ見えていない。歴史家は過去を、それを生きた人々と同じように経験することはできないが、その人々にはなかった有利さをもっている。物語がどう終わったかを知っており、それゆえ当事者には隠されていた型を見ることができるのである。',
+      '距離はまた、自分自身との関係においても役割を果たす。怒りや悲しみに圧倒されている人は、その感情を引き起こした状況についてはっきり考えられないことが多く、善意の友人は大事な決定をする前に待つようすすめるかもしれない。自分の経験を日記に書いたり、同じ状況にいる友人にどう助言するかを想像したりすることは、感じる自分とふり返る自分とのあいだに小さな距離を作ることができ、この距離によって、より落ち着いた賢明な判断が生まれるかもしれない。',
+      'しかし、距離がいつも理解をよくすると結論づけるのはまちがいだろう。物語がどう終わったかを知っている歴史家は、それはほかの終わり方をしえなかったと信じたくなり、それを生きた人々が直面した不確かさや本当の選択を忘れてしまうかもしれない。家に帰った旅行者は、なじみのなさを洞察ととりちがえて、なじみ深い習慣をきびしく判断しすぎるかもしれない。そして、いつも自分の感情から一歩下がっている人は、感情とのつながりをすっかり失い、人生の参加者ではなく観察者になってしまうかもしれない。',
+      'それゆえ必要とされているように思われるのは、単なる距離でも近さでもなく、そのあいだを行き来する能力である。最も鋭い観察者は、ある状況の内側で生き、その外側にも出たことがあり、それぞれの立場が明らかにするものを比べることのできる人であることが多い。一度も家をはなれたことのない人はその習慣をはっきり見ることができないが、どこにも属したことのない人は、すべてをはっきり見ても、何一つ深くは理解しないかもしれない。',
+      'この見方では、理解とは固定した位置というより一種の動きであり、それぞれの見方がもう一方の限界を正すような、近づいてははなれることのくり返しなのである。私たちは状況の重みや手ざわりを感じるために近づき、その形やほかのものとのあいだでの位置を見るために一歩下がる。どちらの動きもそれだけでは完全ではなく、両方を適切なときに行えるようになった人は、場所や時代や、自分自身さえも、内側の人や外側の人のどちらか一方よりも、もっと十分に理解するようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「歴史家は過去を同じように経験できないが、有利さをもっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、外国から帰ると、なじみの習慣が奇妙に見えることがあるのは、習慣そのものが変わったからである。', answer: false, why: '第2段落 Nothing about these customs has changed; what has changed is the observer。' },
+      { statement: '筆者によれば、歴史家は物語がどう終わったかを知っているという有利さをもつ。', answer: true, why: '第3段落 they know how the story turned out。' },
+      { statement: '筆者によれば、日記を書くことは感じる自分とふり返る自分のあいだに距離を作りうる。', answer: true, why: '第4段落 Writing about ... in a diary ... can create a small distance。' },
+      { statement: '筆者は、距離はいつも理解をよくすると考えている。', answer: false, why: '第5段落 It would be a mistake, however, to conclude that distance always improves understanding。' },
+    ],
+    qa: [
+      { q: 'What danger does the author mention for a historian who knows how the story ended?', choices: ['Believing that it could not have ended otherwise.', 'Forgetting the dates of important events.', 'Refusing to read old documents.', 'Becoming too emotional about the past.'], answer: 0, why: '第5段落 may be tempted to believe that it could not have ended otherwise。' },
+      { q: 'According to the author, who are the most perceptive observers often?', choices: ['Those who have both lived inside a situation and stepped outside it.', 'Those who have never left home.', 'Those who have never belonged anywhere.', 'Those who avoid all strong feelings.'], answer: 0, why: '第6段落 those who have both lived inside a situation and stepped outside it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
