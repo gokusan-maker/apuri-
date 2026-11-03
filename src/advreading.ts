@@ -28942,6 +28942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-hospitality',
+    title: 'Welcoming the Stranger',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many traditional societies, the duty to welcome strangers was regarded as one of the most sacred obligations. A traveler who arrived at a house, even one whose name and origins were unknown, could expect to be offered food, water, and a place to sleep, and to be protected from harm while he or she remained. Stories from many cultures warn of the terrible consequences that follow when this duty is neglected, and praise those who share what little they have with a guest. Today, when most travelers stay in hotels and few people would invite an unknown visitor into their homes, it is worth asking what this ancient ideal of hospitality meant and whether it still has anything to teach us.",
+      "Hospitality in its traditional form was more than a matter of politeness. In a world without hotels, restaurants, or reliable police, a traveler far from home was extremely vulnerable, and the willingness of strangers to offer shelter could mean the difference between life and death. Hospitality thus served as a kind of informal social insurance: those who welcomed travelers today might themselves need welcome tomorrow, and a community in which everyone honored the obligation was safer for all.",
+      "Yet hospitality was never simply a practical arrangement. It also expressed a recognition that the stranger, however unfamiliar, was a fellow human being with needs and dignity equal to one's own. ( A ) the host had no obligation to the guest based on kinship or previous acquaintance, the act of welcome rested on something more fundamental: the shared vulnerability of all people who must at some point depend on the kindness of others.",
+      "At the same time, traditional hospitality was bounded by rules that protected both host and guest. The guest was expected to respect the customs of the household, to avoid causing harm, and often to leave after a certain period. The host, in turn, was expected to provide for the guest without asking intrusive questions or demanding payment. These conventions made it possible for people who did not know or trust each other to meet safely, creating a temporary relationship governed by mutual obligation.",
+      "In modern societies, much of what hospitality once provided has been taken over by commercial and public institutions. Hotels offer shelter for a price, restaurants provide food, and the state guarantees, at least in principle, the safety of travelers. This shift has brought obvious benefits, making travel easier and less dependent on the goodwill of individuals. But it may also have weakened the sense that we owe something to strangers simply because they are human, replacing a relationship of obligation with one of exchange.",
+      "The question of hospitality has nevertheless returned in new forms. The arrival of refugees and migrants in many countries raises, on a national scale, the old question of how to receive strangers who arrive in need. Debates over immigration are complex and involve many practical considerations, but they also touch on the ancient intuition that a community may be judged by how it treats those who come to it from outside.",
+      "Hospitality, then, is not merely an old custom but an enduring ethical question. It asks how far our concern for others should extend beyond the circle of those we already know, and it reminds us that the line between host and guest is never permanent, since any of us may one day find ourselves far from home and dependent on the welcome of strangers. To practice hospitality, even in small ways, such as giving directions to a lost visitor or making a newcomer feel at home, is to keep alive a tradition that recognizes our common humanity across the boundaries that usually divide us.",
+    ],
+    ja: [
+      '多くの伝統的な社会では、見知らぬ人をむかえ入れる義務は、最も神聖な務めの一つとみなされていた。ある家にたどり着いた旅人は、たとえ名前も生まれもわからない人であっても、食べ物と水と眠る場所を差し出され、とどまっているあいだは危害から守られることを期待できた。多くの文化の物語は、この義務がおろそかにされたときに続くおそろしい結果を警告し、わずかなものしかなくても客と分かち合う人々をたたえている。ほとんどの旅人がホテルにとまり、知らない訪問者を家にまねく人がほとんどいない今日、この古くからのもてなしの理想が何を意味していたのか、そしてそれがまだ私たちに教えてくれることがあるのかを問う価値がある。',
+      '伝統的な形のもてなしは、礼儀の問題以上のものだった。ホテルもレストランもたよりになる警察もない世界では、家から遠くはなれた旅人はきわめて弱い立場にあり、見知らぬ人が宿を差し出してくれるかどうかが、生死を分けることもありえた。それゆえもてなしは一種の非公式の社会保険としてはたらいていた。今日旅人をむかえ入れる人は、明日は自分がむかえ入れてもらう必要があるかもしれず、だれもがその務めを守る共同体は、すべての人にとってより安全だったのである。',
+      'しかし、もてなしは単なる実用的な取り決めだったことは一度もない。それはまた、見知らぬ人がどれほどなじみがなくても、自分と同じ必要と尊厳をもつ同じ人間であるという認識を表していた。主人には、血のつながりや以前からの知り合いにもとづく客への義務はなかったが、むかえ入れる行為はもっと根本的なもの、つまりいつかは他人の親切にたよらなければならないすべての人が分かち合う弱さにもとづいていたのである。',
+      '同時に、伝統的なもてなしは、主人と客の両方を守る決まりによって範囲が定められていた。客はその家の習慣を尊重し、害をあたえるのをさけ、しばしば一定の期間のあとには立ち去ることを期待された。主人のほうは、立ち入った質問をしたり支払いを求めたりせずに客の世話をすることを期待された。こうした決まりによって、たがいを知らず信頼してもいない人々が安全に出会うことができ、相互の義務に支配された一時的な関係が生まれたのである。',
+      '現代の社会では、かつてもてなしがあたえていたものの多くが、商業的な機関や公的な機関に取って代わられてきた。ホテルはお金と引きかえに宿をあたえ、レストランは食べ物を出し、国家は、少なくとも原則としては、旅人の安全を保証している。この変化は明らかな恩恵をもたらし、旅を楽にし、個人の善意にたよらなくてすむようにした。しかしそれはまた、相手が人間であるというだけで見知らぬ人に何かを負っているという感覚を弱め、義務の関係を交換の関係に置きかえてしまったのかもしれない。',
+      'それでも、もてなしの問題は新しい形でもどってきた。多くの国に難民や移民がやって来ることは、困って到着する見知らぬ人をどうむかえ入れるかという古い問いを、国の規模で引き起こしている。移民をめぐる議論は複雑で、多くの実際的な考慮をふくんでいるが、それはまた、共同体は外からやって来る人々をどうあつかうかで判断されうるという古くからの直感にもふれているのである。',
+      'それゆえ、もてなしは単なる古い習慣ではなく、なくなることのない倫理的な問いである。それは、他人への気づかいが、すでに知っている人々の輪をこえてどこまで広がるべきかを問い、主人と客との境目は決して永遠ではないことを思い出させてくれる。私たちのだれもが、いつか家から遠くはなれ、見知らぬ人のもてなしにたよることになるかもしれないのだから。道にまよった訪問者に道を教えたり、新しく来た人をくつろがせたりするような小さなしかたでも、もてなしを実践することは、ふだん私たちを分けている境界をこえて共通の人間らしさを認める伝統を生かし続けることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「主人には血のつながりにもとづく義務はなかったが、むかえ入れる行為はもっと根本的なものにもとづいていた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、伝統的なもてなしは一種の非公式の社会保険としてはたらいていた。', answer: true, why: '第2段落 Hospitality thus served as a kind of informal social insurance。' },
+      { statement: '伝統的なもてなしでは、主人は客に支払いを求めることが期待された。', answer: false, why: '第4段落 without asking intrusive questions or demanding payment。' },
+      { statement: '筆者によれば、現代ではもてなしの多くが商業的・公的な機関に取って代わられた。', answer: true, why: '第5段落 much of what hospitality once provided has been taken over by commercial and public institutions。' },
+      { statement: '筆者は、主人と客との境目は永遠に変わらないと考えている。', answer: false, why: '第7段落 the line between host and guest is never permanent。' },
+    ],
+    qa: [
+      { q: 'What did the guest owe the host in traditional hospitality?', choices: ['To respect the customs of the household and avoid causing harm.', 'To pay a large amount of money.', 'To stay forever.', 'To answer every question about their past.'], answer: 0, why: '第4段落 The guest was expected to respect the customs of the household, to avoid causing harm。' },
+      { q: 'How has the question of hospitality returned in new forms?', choices: ['Through debates about receiving refugees and migrants.', 'Through the building of new hotels.', 'Through cooking competitions.', 'Through the end of all travel.'], answer: 0, why: '第6段落 The arrival of refugees and migrants in many countries raises ... the old question of how to receive strangers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
