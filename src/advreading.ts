@@ -29858,6 +29858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tipping',
+    title: 'Should Tipping Be Abolished?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, leaving a tip for a waiter, a taxi driver, or a hotel worker is almost a social obligation, and customers who fail to do so may be regarded as rude. In others, tipping is unusual or even considered slightly insulting, as though the worker were being treated as a servant who depends on charity. Travelers who move between these cultures often feel confused about what is expected of them. Behind this confusion lies a more serious question: is tipping a sensible way of rewarding good service, or a custom that should be abandoned?",
+      "Defenders of tipping argue that it gives workers an incentive to provide excellent service. A waiter who knows that his or her income depends partly on the satisfaction of customers will, they claim, be more attentive, friendly, and efficient. Tipping also allows customers to express gratitude directly to the person who served them, and to reward exceptional effort in a way that a fixed price cannot. For some workers, tips make up a large share of their income, and a sudden end to the custom could leave them considerably poorer.",
+      "Research, however, casts doubt on the claim that tips closely reflect the quality of service. Studies of restaurants have found that the size of a tip depends only weakly on how well customers were served, and much more on factors that have little to do with effort, such as the size of the bill, the weather, the mood of the customer, or whether the server introduced himself or herself by name. Some studies have even found that the appearance, age, or ethnic background of the worker influences how much customers leave, which suggests that tipping can reward prejudice rather than performance.",
+      "Critics also point out that tipping makes workers' incomes unpredictable. ( A ) a waiter may earn a great deal on a busy weekend evening, he or she may earn very little on a quiet weekday afternoon, and this uncertainty makes it difficult to plan for the future. In places where employers are permitted to pay tipped workers a lower basic wage, tipping effectively shifts part of the responsibility for paying staff from the business to the customer, who may not realize that the worker depends on the tip simply to earn a reasonable living.",
+      "Some restaurants have experimented with abolishing tips and raising their prices instead, so that workers can be paid a stable and fair wage. The results have been mixed. Some customers welcome the clarity of a single price, and some workers appreciate the security of a predictable income. Yet other customers react badly to the higher prices on the menu, even when the total cost of the meal is no greater than before, and some experienced servers, who earned more under the old system, have left for restaurants where tipping continues.",
+      "These experiments reveal how deeply customs can shape our expectations. In countries where tipping is not practiced, workers in restaurants and hotels are generally paid a wage that does not depend on the generosity of customers, and service is not obviously worse as a result. This suggests that good service can be encouraged in other ways, such as training, fair pay, and a sense of professional pride. It also suggests that what seems natural in one society may simply be the result of historical habit.",
+      "The debate over tipping thus raises broader questions about how work should be valued and who should bear the responsibility for paying fairly for it. A system that depends on the goodwill of strangers can be generous to some workers and unfair to others, while a system of fixed wages offers security but may reduce the personal connection between customer and worker. Whatever the outcome, it seems reasonable to ask whether a person's income should depend so heavily on the mood of the people he or she serves, rather than on the value of the work itself.",
+    ],
+    ja: [
+      'ウェイターやタクシーの運転手やホテルの従業員にチップをわたすことが、ほとんど社会的な義務であり、そうしない客は失礼だと思われかねない国もある。ほかの国では、チップは一般的ではなく、まるで従業員が施しにたよる召使いのようにあつかわれているかのように、少し失礼だとさえ考えられている。こうした文化のあいだを行き来する旅行者は、自分に何が期待されているのかとまどうことが多い。このとまどいの背後には、より重大な問いがある。チップはよいサービスにむくいる賢明な方法なのか、それともやめるべき習慣なのか、という問いである。',
+      'チップを擁護する人々は、チップは従業員にすばらしいサービスをする動機をあたえると主張する。自分の収入の一部が客の満足にかかっていると知っているウェイターは、より気を配り、親しみやすく、手際よくなるだろう、と彼らは言う。チップはまた、客が自分にサービスしてくれた人に直接感謝を表し、決まった値段にはできない形で、なみはずれた努力にむくいることも可能にする。チップが収入の大きな部分をしめる従業員もおり、この習慣が急になくなれば、彼らはかなり貧しくなるかもしれない。',
+      'しかし研究は、チップがサービスの質を正確に反映しているという主張に疑問を投げかけている。レストランの研究で、チップの額は客がどれほどよくサービスを受けたかにはわずかにしか左右されず、会計の額や天気や客の機嫌や、給仕係が名前を名乗ったかどうかといった、努力とはほとんど関係のない要因にずっと大きく左右されることがわかった。従業員の外見や年齢や民族的な背景が、客が置いていく額に影響することを見いだした研究さえあり、これはチップが仕事ぶりではなく偏見にむくいることがありうることを示している。',
+      '批判する人々はまた、チップは従業員の収入を予測できないものにすると指摘する。ウェイターはいそがしい週末の夜には多くかせぐかもしれないが、静かな平日の午後にはほとんどかせげないかもしれず、この不確かさが将来の計画を立てるのをむずかしくする。チップを受ける従業員により低い基本給をはらうことが雇い主にゆるされている場所では、チップは事実上、従業員に給料をはらう責任の一部を店から客にうつしており、客は、従業員がそれなりの生活をするためだけにチップにたよっていることに気づいていないかもしれない。',
+      'チップをやめて、そのかわりに値段を上げ、従業員に安定した公正な賃金をはらえるようにする試みをしたレストランもある。結果はさまざまだった。一つの値段のわかりやすさを歓迎する客もいれば、予測できる収入の安心を喜ぶ従業員もいる。しかし、食事の合計の費用が以前より高くないときでさえ、メニューの高い値段にいやな反応をする客もおり、古い仕組みのもとでもっとかせいでいた経験のある給仕係の中には、チップが続いているレストランへうつった人もいる。',
+      'こうした試みは、習慣がどれほど深く私たちの期待を形づくりうるかを明らかにしている。チップの習慣のない国では、レストランやホテルの従業員はふつう客の気前のよさにかかわらない賃金をはらわれており、その結果サービスがはっきり悪くなっているわけではない。これは、よいサービスは、研修や公正な給料や職業上の誇りといったほかの方法でうながせることを示している。それはまた、ある社会で自然に思われることが、単に歴史的な習慣の結果にすぎないかもしれないことも示している。',
+      'このようにチップをめぐる議論は、仕事がどう評価されるべきか、そしてそれに公正にはらう責任をだれが負うべきかについての、より広い問いを投げかける。見知らぬ人の善意にたよる仕組みは、ある従業員には気前がよく、ほかの従業員には不公平になりうる一方、決まった賃金の仕組みは安心をあたえるが、客と従業員の個人的なつながりを弱めるかもしれない。結果がどうであれ、人の収入が、仕事そのものの価値ではなく、その人がサービスする人々の機嫌にこれほど大きくかかっているべきなのかと問うのは、もっともなことに思われる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Since'], answer: 0, why: '「いそがしい夜には多くかせぐかもしれない一方で、静かな午後にはほとんどかせげない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Defenders of tipping say it encourages good service, but research shows that tips depend only weakly on its ( 1 ) and can even reward prejudice. Tipping also makes incomes ( 2 ). In countries without tipping, service is not obviously worse, which suggests the custom is largely a matter of historical ( 3 ).',
+      blanks: [
+        { choices: ['quality', 'price', 'speed', 'location'], answer: 0, why: '第3段落 cast doubt on the claim that tips closely reflect the quality of service。' },
+        { choices: ['unpredictable', 'enormous', 'illegal', 'fixed'], answer: 0, why: '第4段落 tipping makes workers\u2019 incomes unpredictable。' },
+        { choices: ['habit', 'law', 'science', 'weather'], answer: 0, why: '第6段落 may simply be the result of historical habit。' },
+      ],
+    },
+    tf: [
+      { statement: '国によっては、チップは少し失礼だと考えられている。', answer: true, why: '第1段落 considered slightly insulting。' },
+      { statement: '研究によれば、チップの額はサービスのよさにほぼ完全に左右される。', answer: false, why: '第3段落 depends only weakly on how well customers were served。' },
+      { statement: 'チップをやめたレストランでは、すべての客と従業員がそれを歓迎した。', answer: false, why: '第5段落 The results have been mixed。' },
+      { statement: 'チップのない国でも、サービスがはっきり悪くなっているわけではない。', answer: true, why: '第6段落 service is not obviously worse as a result。' },
+    ],
+    qa: [
+      { q: 'Which factor, according to the third paragraph, influences the size of a tip?', choices: ['The weather.', 'The number of chairs.', 'The color of the menu.', 'The age of the building.'], answer: 0, why: '第3段落 such as the size of the bill, the weather, the mood of the customer。' },
+      { q: 'Why did some experienced servers leave restaurants that abolished tips?', choices: ['They had earned more under the old system.', 'The restaurants closed.', 'They disliked the food.', 'Customers stopped coming entirely.'], answer: 0, why: '第5段落 who earned more under the old system, have left。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
