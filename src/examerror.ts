@@ -3458,6 +3458,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Even (B) he is busy, (C) he always (D) helps his friends.', choices: ['(A) Even', '(B) he is busy,', '(C) he always', '(D) helps his friends'], answer: 0, why: 'even は接続詞ではない。Even if／Even though。' },
     ],
   },
+  {
+    id: 'exam-error-with-todai',
+    title: '入試の正誤問題〈146〉（東大レベル：付帯状況の with）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '付帯状況の with は「with＋名詞＋分詞・形容詞・副詞・前置詞句」で「～を…したまま・…の状態で」。名詞が「する」側なら現在分詞（with night coming on）、「される」側なら過去分詞（with his eyes closed）。with の後ろに動詞の過去形や is は置けない。',
+    ],
+    examples: [
+      { en: 'He was sitting with his eyes closed.', ja: '彼は目を閉じてすわっていた。' },
+      { en: 'With night coming on, we hurried home.', ja: '夜になってきたので、私たちは家へ急いだ。' },
+    ],
+    questions: [
+      { sentence: 'He was sitting (A) with his eyes (B) closing, (C) listening (D) to music.', choices: ['(A) with his eyes', '(B) closing,', '(C) listening', '(D) to music'], answer: 1, why: '目は「閉じられた」状態なので過去分詞。with his eyes closed。' },
+      { sentence: 'You should not speak (A) with (B) your mouth (C) fully (D) of food.', choices: ['(A) with', '(B) your mouth', '(C) fully', '(D) of food'], answer: 2, why: 'with＋名詞＋形容詞。full of food。' },
+      { sentence: 'He fell asleep (A) with (B) the TV (C) turning on (D) last night.', choices: ['(A) with', '(B) the TV', '(C) turning on', '(D) last night'], answer: 2, why: 'テレビは「つけられた」状態。with the TV on／turned on。' },
+      { sentence: '(A) With night (B) came on, (C) we (D) hurried home.', choices: ['(A) With night', '(B) came on,', '(C) we', '(D) hurried home'], answer: 1, why: 'with＋名詞＋分詞。動詞の came は置けない。coming on。' },
+      { sentence: 'The girl ran (A) with her hair (B) waving (C) in (D) wind.', choices: ['(A) with her hair', '(B) waving', '(C) in', '(D) wind'], answer: 3, why: '「風の中で」は in the wind。' },
+      { sentence: '(A) With so many people (B) watching, I (C) felt (D) nervously.', choices: ['(A) With so many people', '(B) watching, I', '(C) felt', '(D) nervously'], answer: 3, why: 'feel＋形容詞。felt nervous。' },
+      { sentence: 'He sat (A) with crossing (B) his legs (C) on (D) the sofa.', choices: ['(A) with crossing', '(B) his legs', '(C) on', '(D) the sofa'], answer: 0, why: 'with＋名詞＋分詞の語順。with his legs crossed。' },
+      { sentence: '(A) With (B) the exam (C) is over, we can (D) relax.', choices: ['(A) With', '(B) the exam', '(C) is over, we can', '(D) relax'], answer: 2, why: 'with の後ろに動詞は置けない。with the exam over。' },
+      { sentence: 'She walked away (A) without (B) say (C) a word (D) to us.', choices: ['(A) without', '(B) say', '(C) a word', '(D) to us'], answer: 1, why: '前置詞 without のあとは動名詞。saying。' },
+      { sentence: 'He answered the question (A) with a smile (B) at (C) his (D) face.', choices: ['(A) with a smile', '(B) at', '(C) his', '(D) face'], answer: 1, why: '「顔に笑みを浮かべて」は with a smile on his face。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
