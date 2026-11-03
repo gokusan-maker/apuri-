@@ -2008,6 +2008,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="42" cy="44" r="4" fill="none" stroke="#f8fafc" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'greystreakedflycatcher')
+    return (
+      <g>
+        {/* 白いむねの黒いたてじま */}
+        <path d="M46 58 L46 66 M50 58 L50 67 M54 58 L54 66" fill="none" stroke="#1e293b" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
