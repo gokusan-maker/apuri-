@@ -27696,6 +27696,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-required-service',
+    title: 'Can Service Be Required?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a growing number of countries, schools now require students to complete a certain number of hours of community service before they can graduate. Students may help at a food bank, clean a local park, read to children in a library, or assist elderly residents in a care home. Supporters of such programs believe that they teach young people the value of contributing to society, while critics argue that the very idea of compulsory volunteering contains a contradiction, since an act performed because one is required to perform it can hardly be called voluntary at all.",
+      "The argument in favor of required service begins with an observation about how habits are formed. Many people who volunteer as adults first did so because someone else encouraged or even pressured them to try it, and only later came to value the experience for its own sake. Just as students are required to study mathematics or history whether or not they initially enjoy these subjects, they can be required to take part in community service in the hope that the experience will open their eyes to needs they had never noticed and to abilities they did not know they had.",
+      "There is also an argument from fairness. Students from families with time and money often have many opportunities to take part in volunteer activities, which can later strengthen their applications to universities and employers. Students from less fortunate backgrounds may have to spend their free time working or caring for younger brothers and sisters, and so they may never have such opportunities. ( A ) service is built into the school day and organized by the school, every student, regardless of background, has the chance to gain the experience and the confidence that it can bring.",
+      "Critics, however, raise several serious objections. The first is that compulsion may undermine the very motivation that such programs hope to develop. Psychologists have found that when people are rewarded or required to do something they might otherwise have enjoyed, they often come to see the activity as a task to be completed rather than as something worth doing for its own sake. A student who counts the hours until the requirement is fulfilled may learn not generosity but the habit of doing the minimum necessary to satisfy an authority.",
+      "A second objection concerns the people who are supposed to benefit. Volunteers who do not want to be present may perform their work carelessly, and in some settings, such as care homes or programs for young children, an unwilling helper may do more harm than good. Organizations that depend on volunteers sometimes complain that required service creates extra work for their staff, who must supervise students whose main interest is obtaining a signature on a form.",
+      "Whether these problems outweigh the benefits seems to depend largely on how programs are designed. Research suggests that service is most valuable when students have some choice about where and how they contribute, when the work is meaningful rather than merely busy, and when students are given the opportunity to reflect on what they have experienced, for example by discussing it in class or writing about it. Under these conditions, a requirement may function less as a command than as an invitation that students would not otherwise have received.",
+      "The debate over compulsory service ultimately reflects a broader question about the purpose of education. If schools exist only to transmit knowledge and skills, then service may seem like a distraction from their main task. But if education also aims to prepare young people to live as responsible members of a community, then giving them experience of that community, even through a requirement, may be one of the most important lessons a school can offer.",
+    ],
+    ja: [
+      'ますます多くの国で、学校は生徒に、卒業する前に一定の時間の地域奉仕を終えることを求めるようになっている。生徒はフードバンクを手伝ったり、地元の公園を掃除したり、図書館で子どもに本を読んだり、介護施設でお年寄りの手助けをしたりする。こうした制度を支持する人々は、それが若者に社会に貢献することの価値を教えると考える。一方、批判する人々は、強制されたボランティアという考えそのものが矛盾をふくんでいると主張する。求められているからする行為は、とても自発的とは呼べないからである。',
+      '義務の奉仕を支持する議論は、習慣がどのように作られるかについての観察から始まる。大人になってボランティアをする人の多くは、最初はだれかにすすめられたり、圧力をかけられたりしてやってみたのであり、あとになってはじめてその経験をそれ自体のために大切に思うようになった。最初に楽しいかどうかにかかわらず、生徒が数学や歴史を学ぶことを求められるのと同じように、地域奉仕に参加することも求めることができる。その経験によって、それまで気づかなかった必要や、もっているとは知らなかった能力に目が開かれることを期待してである。',
+      '公平さにもとづく議論もある。時間とお金のある家庭の生徒は、ボランティア活動に参加する機会が多いことが多く、それはのちに大学や雇い主への応募を有利にすることがある。あまりめぐまれない環境の生徒は、空いた時間を働いたり、弟や妹の世話をしたりして過ごさなければならないかもしれず、そうした機会を一度も得られないかもしれない。奉仕が学校の一日に組みこまれ、学校によって準備されるなら、どの生徒も、生い立ちに関係なく、その経験とそれがもたらしうる自信を得る機会をもつことになる。',
+      'しかし批判する人々は、いくつかの重大な反論をあげる。一つめは、強制が、こうした制度が育てたいと願っているまさにその意欲をそこなうかもしれないということである。心理学者たちは、ほかの場合なら楽しんだかもしれないことに対してほうびをあたえられたり、それを求められたりすると、人はしばしばその活動を、それ自体のためにする価値のあることとしてではなく、片づけるべき仕事として見るようになることを見いだしてきた。義務が果たされるまで時間を数える生徒は、思いやりではなく、権威を満足させるのに必要な最小限のことだけをする習慣を学ぶかもしれない。',
+      '二つめの反論は、恩恵を受けるはずの人々にかかわる。その場にいたくないボランティアは仕事をいいかげんにするかもしれず、介護施設や幼い子どものための活動のような場では、気の進まない手伝いは役に立つより害になることさえある。ボランティアにたよる団体は、義務の奉仕が職員の仕事をふやすとこぼすことがある。職員は、主な関心が用紙に署名をもらうことである生徒たちを監督しなければならないからである。',
+      'こうした問題が利点を上回るかどうかは、主に制度がどう作られているかによるように思われる。研究によれば、奉仕が最も価値をもつのは、生徒がどこでどのように貢献するかをいくらか選べるとき、仕事がただいそがしいだけでなく意味のあるものであるとき、そして、たとえば授業で話し合ったり書いたりして、経験したことをふり返る機会があたえられるときである。こうした条件のもとでは、義務は命令というより、生徒がほかの方法では受け取れなかった招待としてはたらくかもしれない。',
+      '義務の奉仕をめぐる議論は、結局のところ、教育の目的についてのより広い問いを反映している。もし学校が知識と技能を伝えるためだけにあるのなら、奉仕は主な仕事からそれるものに見えるかもしれない。しかし、教育が若者を共同体の責任ある一員として生きられるよう準備することもめざしているなら、たとえ義務によってであっても、その共同体を経験させることは、学校があたえられる最も大切な教えの一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「奉仕が学校の一日に組みこまれるなら、どの生徒も機会をもつ」という条件の If。' },
+    ],
+    summary: {
+      text: 'Some schools require community service before graduation. Supporters say it can form good habits and give every student, regardless of background, an equal ( 1 ). Critics argue that compulsion may weaken ( 2 ) and burden the organizations involved. Programs seem to work best when students have choice, meaningful work, and chances to ( 3 ) on their experience.',
+      blanks: [
+        { choices: ['opportunity', 'salary', 'examination', 'holiday'], answer: 0, why: '第3段落 every student, regardless of background, has the chance ...（機会の公平さ）。' },
+        { choices: ['motivation', 'traffic', 'memory', 'competition'], answer: 0, why: '第4段落 compulsion may undermine the very motivation。' },
+        { choices: ['reflect', 'spend', 'insist', 'depend'], answer: 0, why: '第6段落 the opportunity to reflect on what they have experienced。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、大人になってボランティアをする人の多くは、最初はだれかにすすめられてやってみた。', answer: true, why: '第2段落 first did so because someone else encouraged or even pressured them to try it。' },
+      { statement: '筆者によれば、めぐまれない環境の生徒ほど、ボランティアの機会が多い。', answer: false, why: '第3段落 Students from less fortunate backgrounds ... may never have such opportunities。' },
+      { statement: '筆者によれば、気の進まない手伝いは、場合によっては役に立つより害になる。', answer: true, why: '第5段落 an unwilling helper may do more harm than good。' },
+      { statement: '筆者は、義務の奉仕はどんな作り方でも必ず失敗すると考えている。', answer: false, why: '第6段落 depend largely on how programs are designed（条件しだいで価値をもつ）。' },
+    ],
+    qa: [
+      { q: 'What contradiction do critics see in compulsory volunteering?', choices: ['An act one is required to perform can hardly be called voluntary.', 'Volunteering costs schools too much money.', 'Students already volunteer too much.', 'Community service is against the law.'], answer: 0, why: '第1段落 an act performed because one is required to perform it can hardly be called voluntary at all。' },
+      { q: 'According to the last paragraph, when may service be one of the most important lessons a school can offer?', choices: ['When education also aims to prepare young people to live as responsible members of a community.', 'When schools exist only to transmit knowledge.', 'When students can avoid it completely.', 'When it replaces mathematics and history.'], answer: 0, why: '第7段落 if education also aims to prepare young people to live as responsible members of a community。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
