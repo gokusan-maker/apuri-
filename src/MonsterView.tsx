@@ -2158,6 +2158,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 70 Q50 74 62 70 M40 77 Q50 80 60 77" fill="none" stroke="#be123c" strokeWidth="1.2" />
       </g>
     )
+  if (species === 'firenewt')
+    return (
+      <g>
+        {/* 赤いおなかのまだらもよう */}
+        <ellipse cx="50" cy="70" rx="12" ry="8" fill="#dc2626" />
+        <circle cx="46" cy="68" r="1.8" fill="#1c1917" />
+        <circle cx="54" cy="72" r="1.8" fill="#1c1917" />
+        <circle cx="50" cy="66" r="1.4" fill="#1c1917" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
