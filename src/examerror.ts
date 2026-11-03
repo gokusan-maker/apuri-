@@ -3410,6 +3410,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) This book (B) made (C) me (D) to cry.', choices: ['(A) This book', '(B) made', '(C) me', '(D) to cry'], answer: 3, why: 'make＋人＋原形。cry。' },
     ],
   },
+  {
+    id: 'exam-error-reladverb-kokkoritsu',
+    title: '入試の正誤問題〈144〉（国公立レベル：関係副詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係副詞 where／when／why の後ろは完全な文（前置詞や目的語は残らない）。後ろに目的語が欠けていれば関係代名詞 which／that。the way how とは言わない。in which のように前置詞を前に出したら、後ろにはもう置かない。',
+    ],
+    examples: [
+      { en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' },
+      { en: 'Kyoto is a city which many tourists visit every year.', ja: '京都は毎年多くの旅行者がおとずれる都市だ。' },
+    ],
+    questions: [
+      { sentence: 'This is the town (A) where (B) I (C) was born (D) at.', choices: ['(A) where', '(B) I', '(C) was born', '(D) at'], answer: 3, why: '関係副詞 where のあとに前置詞は要らない。at を取る。' },
+      { sentence: 'This is (A) the way how (B) he (C) solved (D) the problem.', choices: ['(A) the way how', '(B) he', '(C) solved', '(D) the problem'], answer: 0, why: 'the way how とは言わない。the way か how のどちらか一方。' },
+      { sentence: 'Kyoto is a city (A) where (B) many tourists (C) visit (D) every year.', choices: ['(A) where', '(B) many tourists', '(C) visit', '(D) every year'], answer: 1, why: 'visit は目的語が要る他動詞なので、関係代名詞 which／that。' },
+      { sentence: 'I will never forget the day (A) which (B) my son (C) was (D) born.', choices: ['(A) which', '(B) my son', '(C) was', '(D) born'], answer: 0, why: '時を表す先行詞で、後ろが完全な文なので when（＝on which）。' },
+      { sentence: 'That is (A) the reason (B) because (C) I (D) left early.', choices: ['(A) the reason', '(B) because', '(C) I', '(D) left early'], answer: 1, why: 'the reason why ～「～する理由」。because は使えない。' },
+      { sentence: 'The house (A) in which (B) he (C) lives in (D) is old.', choices: ['(A) in which', '(B) he', '(C) lives in', '(D) is old'], answer: 2, why: 'in which の in がすでにあるので、lives の後ろの in は要らない。' },
+      { sentence: 'We went to Nara, (A) where (B) we (C) saw (D) there many deer.', choices: ['(A) where', '(B) we', '(C) saw', '(D) there many deer'], answer: 3, why: 'where（＝and there）があるので there は要らない。' },
+      { sentence: 'The library is a place (A) where (B) students (C) can study (D) in it quietly.', choices: ['(A) where', '(B) students', '(C) can study', '(D) in it quietly'], answer: 3, why: 'where（＝in which）があるので in it は要らない。' },
+      { sentence: 'I visited the house (A) where (B) the writer (C) had lived in (D) as a child.', choices: ['(A) where', '(B) the writer', '(C) had lived in', '(D) as a child'], answer: 2, why: 'where のあとに前置詞 in は要らない。had lived。' },
+      { sentence: 'Winter is the season (A) when (B) I like (C) best of (D) all the seasons.', choices: ['(A) when', '(B) I like', '(C) best of', '(D) all the seasons'], answer: 0, why: 'like の目的語が欠けているので、関係代名詞 which／that。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
