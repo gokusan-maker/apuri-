@@ -3362,6 +3362,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The bus (A) came (B) lately (C) because of (D) the heavy rain.', choices: ['(A) came', '(B) lately', '(C) because of', '(D) the heavy rain'], answer: 1, why: '「おくれて」は late。lately は「最近」。' },
     ],
   },
+  {
+    id: 'exam-error-causative-kyutei',
+    title: '入試の正誤問題〈142〉（旧帝大レベル：使役動詞と知覚動詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'make／let／have＋人＋原形、get＋人＋to do、have＋もの＋過去分詞（～してもらう・～される）。be made to do。see・hear・watch＋目的語＋原形／-ing。目的語が「される」側なら過去分詞。',
+    ],
+    examples: [
+      { en: 'The coach made us run around the field.', ja: 'コーチは私たちにグラウンドを走らせた。' },
+      { en: 'I had my hair cut yesterday.', ja: '私はきのう髪を切ってもらった。' },
+    ],
+    questions: [
+      { sentence: 'The coach (A) made us (B) to run (C) around (D) the field.', choices: ['(A) made us', '(B) to run', '(C) around', '(D) the field'], answer: 1, why: 'make＋人＋原形。run。' },
+      { sentence: 'My mother (A) let me (B) going (C) to (D) the party.', choices: ['(A) let me', '(B) going', '(C) to', '(D) the party'], answer: 1, why: 'let＋人＋原形。go。' },
+      { sentence: 'I (A) got my sister (B) clean (C) the room (D) for me.', choices: ['(A) got my sister', '(B) clean', '(C) the room', '(D) for me'], answer: 1, why: 'get＋人＋to do。to clean。' },
+      { sentence: 'I (A) had (B) my hair (C) cutting (D) yesterday.', choices: ['(A) had', '(B) my hair', '(C) cutting', '(D) yesterday'], answer: 2, why: 'have＋もの＋過去分詞。cut。' },
+      { sentence: 'He (A) was made (B) wait (C) for (D) an hour.', choices: ['(A) was made', '(B) wait', '(C) for', '(D) an hour'], answer: 1, why: 'make の受け身は be made to do。to wait。' },
+      { sentence: 'I (A) saw (B) him (C) to cross (D) the street.', choices: ['(A) saw', '(B) him', '(C) to cross', '(D) the street'], answer: 2, why: 'see＋人＋原形。cross。' },
+      { sentence: '(A) I heard (B) my name (C) call (D) in the hall.', choices: ['(A) I heard', '(B) my name', '(C) call', '(D) in the hall'], answer: 2, why: '名前は「呼ばれる」側なので called。' },
+      { sentence: 'She (A) had her wallet (B) steal (C) on (D) the bus.', choices: ['(A) had her wallet', '(B) steal', '(C) on', '(D) the bus'], answer: 1, why: '「ぬすまれた」は have＋もの＋過去分詞。stolen。' },
+      { sentence: '(A) Seen (B) the bird (C) fly away, (D) the boy cried.', choices: ['(A) Seen', '(B) the bird', '(C) fly away,', '(D) the boy cried'], answer: 0, why: '少年が鳥を「見た」ので Seeing。' },
+      { sentence: 'I (A) had my bike (B) repaired (C) at the shop and (D) got it painting.', choices: ['(A) had my bike', '(B) repaired', '(C) at the shop and', '(D) got it painting'], answer: 3, why: '自転車は「ぬられる」側なので get＋もの＋過去分詞。got it painted。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

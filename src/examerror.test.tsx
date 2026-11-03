@@ -1940,3 +1940,10 @@ it('誤文訂正〈135〉：旧帝大レベル 使役動詞と知覚動詞の単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('write')
 })
+
+it('正誤問題〈142〉：旧帝大レベル 使役動詞と知覚動詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-causative-kyutei')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) to run')
+})
