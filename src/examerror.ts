@@ -3314,6 +3314,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) In case (B) of rain, (C) the game (D) will cancel.', choices: ['(A) In case', '(B) of rain,', '(C) the game', '(D) will cancel'], answer: 3, why: '試合は「中止される」側なので will be canceled。' },
     ],
   },
+  {
+    id: 'exam-error-passive-koku',
+    title: '入試の正誤問題〈140〉（国公立レベル：受動態）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be made of（材料）／from（原料）。be known for（～で有名）／to（～に知られている）。be covered with・be filled with・be surprised at。助動詞の受動態は 助動詞＋be＋過去分詞。',
+    ],
+    examples: [
+      { en: 'Butter is made from milk.', ja: 'バターは牛乳から作られる。' },
+      { en: 'Nara is known for its deer.', ja: '奈良はシカで有名だ。' },
+    ],
+    questions: [
+      { sentence: 'This table (A) is made (B) from (C) wood (D) from Hokkaido.', choices: ['(A) is made', '(B) from', '(C) wood', '(D) from Hokkaido'], answer: 1, why: '材料が見てわかるので be made of。' },
+      { sentence: '(A) Butter (B) is made (C) of (D) milk.', choices: ['(A) Butter', '(B) is made', '(C) of', '(D) milk'], answer: 2, why: '原料が変化しているので be made from。' },
+      { sentence: 'Nara (A) is known (B) by (C) its deer (D) in the park.', choices: ['(A) is known', '(B) by', '(C) its deer', '(D) in the park'], answer: 1, why: '「～で有名だ」は be known for。' },
+      { sentence: 'His songs (A) are known (B) for (C) young people (D) all over Japan.', choices: ['(A) are known', '(B) for', '(C) young people', '(D) all over Japan'], answer: 2, why: '「～に知られている」は be known to。' },
+      { sentence: 'The ground (A) was covered (B) by (C) snow (D) this morning.', choices: ['(A) was covered', '(B) by', '(C) snow', '(D) this morning'], answer: 1, why: 'be covered with。' },
+      { sentence: '(A) I was (B) surprised (C) of (D) the result.', choices: ['(A) I was', '(B) surprised', '(C) of', '(D) the result'], answer: 2, why: 'be surprised at。' },
+      { sentence: '(A) Make of glass, (B) this vase (C) is very (D) fragile.', choices: ['(A) Make of glass,', '(B) this vase', '(C) is very', '(D) fragile'], answer: 0, why: '花びんは「作られる」側なので Made of glass。' },
+      { sentence: 'The report (A) must (B) finish (C) by (D) Friday.', choices: ['(A) must', '(B) finish', '(C) by', '(D) Friday'], answer: 1, why: '報告書は「仕上げられる」側なので must be finished。' },
+      { sentence: 'This letter (A) was (B) written (C) by (D) she.', choices: ['(A) was', '(B) written', '(C) by', '(D) she'], answer: 3, why: '前置詞のあとは目的格。by her。' },
+      { sentence: 'The bottle (A) was (B) filled (C) by (D) water.', choices: ['(A) was', '(B) filled', '(C) by', '(D) water'], answer: 2, why: 'be filled with。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
