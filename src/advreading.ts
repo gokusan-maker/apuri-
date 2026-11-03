@@ -29102,6 +29102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-humility',
+    title: 'What Humility Is',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Humility is a virtue that seems to undermine itself. A person who announces that he or she is humble immediately casts doubt on the claim, and a person who works hard to become humble risks becoming proud of the achievement. Moreover, in societies that reward self-promotion and confidence, humility can appear to be a disadvantage, a habit of underestimating oneself that prevents talented people from receiving the recognition they deserve. It is therefore worth asking what humility actually is, and whether it remains a virtue in a world that seems to value its opposite.",
+      "One common view holds that humility consists in having a low opinion of oneself. On this view, the humble person thinks less of his or her abilities and achievements than they deserve. But this account faces an obvious difficulty: if humility requires holding false beliefs about oneself, it is hard to see why it should be considered a virtue at all, since virtues are usually thought to involve seeing the world accurately rather than distorting it. A brilliant scientist who sincerely believes that her work is mediocre is not admirable but mistaken.",
+      "A more promising account understands humility not as a low opinion of oneself but as a certain kind of attention, one that is directed outward rather than inward. The humble person is not preoccupied with his or her own importance; he or she is more interested in the task at hand, in other people, and in the truth than in how he or she appears. ( A ) the proud person constantly measures events by their effect on his or her own status, the humble person is free to notice what is actually there, including the contributions of others and the limits of his or her own understanding.",
+      "Understood in this way, humility is closely connected with the ability to learn. A person who is anxious to appear knowledgeable may find it difficult to admit ignorance or to ask questions, and may therefore miss opportunities to understand. A humble person, by contrast, can acknowledge mistakes without feeling that his or her worth is threatened, and can take seriously the possibility that someone else, even someone of lower status, knows something that he or she does not. In science, scholarship, and many practical fields, this openness is not a weakness but a condition of progress.",
+      "Humility also matters in relationships between people. Those who are convinced of their own superiority tend to dismiss others' views, to dominate conversations, and to treat disagreement as a sign of the other person's foolishness. Humility makes genuine dialogue possible, since it allows each person to approach the other as a potential source of insight rather than as an audience to be persuaded or an obstacle to be overcome.",
+      "None of this requires a person to hide genuine abilities or to refuse credit for real achievements. A humble person may recognize accurately that he or she is skilled, and may speak with confidence about matters he or she understands well. What distinguishes humility is not the denial of one's strengths but a sense of proportion about them: an awareness that one's abilities were developed with the help of others, that they are limited, and that they do not make one more valuable as a human being than anyone else.",
+      "In a culture that often equates success with self-assertion, humility may seem old-fashioned. Yet it may be precisely what allows people to learn from one another, to cooperate across differences, and to see the world as it is rather than as a mirror reflecting their own importance. Far from being a form of weakness, humility may turn out to be one of the conditions of genuine strength, since it allows people to grow, to correct their errors, and to build relationships based on mutual respect rather than on the constant struggle for superiority.",
+    ],
+    ja: [
+      'けんきょさは、それ自体をくずしてしまうように思われる徳である。自分はけんきょだと告げる人は、すぐさまその主張に疑いをいだかせるし、けんきょになろうと努力する人は、それをなしとげたことをほこりに思ってしまう危険がある。さらに、自分を売りこむことや自信がむくわれる社会では、けんきょさは不利なもの、つまり才能ある人が当然受けるべき評価を受けられなくなる、自分を低く見積もる習慣のように見えることがある。それゆえ、けんきょさとは実際何であり、その反対を大切にしているように見える世界でも、それはまだ徳であり続けるのかを問う価値がある。',
+      'よくある一つの見方は、けんきょさとは自分を低く評価することだとする。この見方では、けんきょな人は自分の能力や業績を、それが値するよりも低く考える。しかしこの説明は明らかな困難に直面する。もしけんきょさが自分自身についてまちがった信念をもつことを必要とするなら、なぜそれがそもそも徳とみなされるべきなのかわかりにくい。徳とはふつう、世界をゆがめるのではなく正確に見ることをふくむと考えられているからである。自分の研究が平凡だと本気で信じているすぐれた科学者は、ほめられるべきではなく、まちがっているのである。',
+      'もっと見こみのある説明は、けんきょさを、自分を低く評価することではなく、ある種の注意、つまり内側ではなく外側に向けられた注意として理解するものである。けんきょな人は自分の重要さで頭がいっぱいになってはいない。自分がどう見えるかよりも、目の前の仕事や、他人や、真実のほうに関心がある。ほこり高い人はたえず出来事を自分の地位への影響ではかるが、けんきょな人は、他人の貢献や自分の理解の限界をふくめ、実際にそこにあるものに自由に気づくことができるのである。',
+      'このように理解すれば、けんきょさは学ぶ力と深く結びついている。物知りに見られたがっている人は、知らないことを認めたり質問したりするのがむずかしいと感じ、そのため理解する機会をのがしてしまうかもしれない。これに対してけんきょな人は、自分の価値がおびやかされると感じることなくまちがいを認めることができ、ほかのだれか、たとえ地位の低い人であっても、自分の知らないことを知っているかもしれないという可能性を真剣に受けとめることができる。科学や学問や多くの実践的な分野では、この開かれた心は弱さではなく、進歩の条件なのである。',
+      'けんきょさは人と人との関係においても大切である。自分がすぐれていると思いこんでいる人は、他人の意見を相手にせず、会話を支配し、意見のちがいを相手がおろかであるしるしとしてあつかいがちである。けんきょさは本当の対話を可能にする。それによって、それぞれが相手を、説得すべき聞き手やのりこえるべき障害としてではなく、ものの見方をあたえてくれるかもしれない存在として向き合えるようになるからである。',
+      'このどれも、人に本当の能力をかくしたり、本当の業績の手柄をこばんだりすることを求めはしない。けんきょな人は、自分が熟練していることを正確に認めてもよいし、よく理解していることについては自信をもって話してもよい。けんきょさを特徴づけるのは、自分の長所を否定することではなく、それについての釣り合いの感覚である。つまり、自分の能力は他人の助けを借りて育てられたものであり、限りがあり、それによって自分がほかのだれよりも人間として価値があるわけではないという自覚なのである。',
+      '成功を自己主張と同じものとみなしがちな文化では、けんきょさは古くさく思えるかもしれない。しかし、人々がおたがいから学び、ちがいをこえて協力し、世界を自分の重要さを映す鏡としてではなく、ありのままに見ることを可能にしているのは、まさにけんきょさなのかもしれない。弱さの一つの形であるどころか、けんきょさは本当の強さの条件の一つであることがわかるかもしれない。それによって人は成長し、まちがいを正し、すぐれていようとするたえまない争いではなく、たがいへの敬意にもとづく関係を築くことができるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「ほこり高い人は出来事を自分の地位への影響ではかるが、けんきょな人は自由に気づける」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、自分はけんきょだと告げる人は、その主張に疑いをいだかせる。', answer: true, why: '第1段落 immediately casts doubt on the claim。' },
+      { statement: '筆者は、けんきょさとは自分を実際より低く評価することだという見方を支持している。', answer: false, why: '第2段落 this account faces an obvious difficulty ... is not admirable but mistaken。' },
+      { statement: '筆者によれば、けんきょな人は自分の価値がおびやかされると感じずにまちがいを認められる。', answer: true, why: '第4段落 can acknowledge mistakes without feeling that his or her worth is threatened。' },
+      { statement: '筆者によれば、けんきょな人は本当の能力をかくさなければならない。', answer: false, why: '第6段落 None of this requires a person to hide genuine abilities。' },
+    ],
+    qa: [
+      { q: 'How does humility make genuine dialogue possible, according to the fifth paragraph?', choices: ['It allows each person to approach the other as a potential source of insight.', 'It makes people agree with everything.', 'It prevents people from speaking.', 'It makes conversations shorter.'], answer: 0, why: '第5段落 allows each person to approach the other as a potential source of insight。' },
+      { q: 'What distinguishes humility, according to the sixth paragraph?', choices: ['A sense of proportion about one’s strengths.', 'The denial of one’s strengths.', 'Refusing all credit for achievements.', 'Speaking only about others.'], answer: 0, why: '第6段落 not the denial of one’s strengths but a sense of proportion about them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
