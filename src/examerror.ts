@@ -3650,6 +3650,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The match was cancelled (A) because (B) of the storm, (C) and the players (D) was disappointed.', choices: ['(A) because', '(B) of the storm,', '(C) and the players', '(D) was disappointed'], answer: 3, why: 'the players は複数なので were。' },
     ],
   },
+  {
+    id: 'exam-error-inversion-if-kyodai',
+    title: '入試の正誤問題〈154〉（京大レベル：仮定法の if の省略と倒置）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'if を省略すると倒置になる：Had I known（＝If I had known）・Were I you（＝If I were you）・Should you need（＝If you should need）・Had it not been for（＝If it had not been for）。仮定法過去の主節は would／could＋原形、仮定法過去完了の主節は would／could have＋過去分詞。I wish のあとも仮定法。',
+    ],
+    examples: [
+      { en: 'Had I known the truth, I would have told you.', ja: '本当のことを知っていたら、あなたに話していたのに。' },
+      { en: 'Were it not for water, nothing could live.', ja: '水がなければ、何も生きられないだろう。' },
+    ],
+    questions: [
+      { sentence: '(A) Had I (B) know (C) the truth, I would have (D) told you.', choices: ['(A) Had I', '(B) know', '(C) the truth, I would have', '(D) told you'], answer: 1, why: 'Had I known（＝If I had known）。had のあとは過去分詞。' },
+      { sentence: '(A) Were it not (B) for your help, I (C) will (D) fail.', choices: ['(A) Were it not', '(B) for your help, I', '(C) will', '(D) fail'], answer: 2, why: '仮定法過去なので主節は would。I would fail。' },
+      { sentence: '(A) If I had (B) been there, I (C) could help (D) you yesterday.', choices: ['(A) If I had', '(B) been there, I', '(C) could help', '(D) you yesterday'], answer: 2, why: '過去の事実に反する仮定なので could have helped。' },
+      { sentence: '(A) Should you (B) will need help, (C) please (D) call me.', choices: ['(A) Should you', '(B) will need help,', '(C) please', '(D) call me'], answer: 1, why: 'Should you need（＝If you should need）。should のあとは原形。' },
+      { sentence: '(A) Were I (B) you, I (C) would not (D) to go.', choices: ['(A) Were I', '(B) you, I', '(C) would not', '(D) to go'], answer: 3, why: 'would not のあとは原形。go。' },
+      { sentence: '(A) Had not it (B) been for the map, (C) we would have (D) got lost.', choices: ['(A) Had not it', '(B) been for the map,', '(C) we would have', '(D) got lost'], answer: 0, why: '倒置の語順は Had it not been for ～。' },
+      { sentence: '(A) I wish (B) I (C) can speak (D) English well.', choices: ['(A) I wish', '(B) I', '(C) can speak', '(D) English well'], answer: 2, why: 'I wish のあとは仮定法過去。could speak。' },
+      { sentence: '(A) If it (B) were not for (C) water, nothing (D) can live.', choices: ['(A) If it', '(B) were not for', '(C) water, nothing', '(D) can live'], answer: 3, why: '仮定法過去なので主節は could。nothing could live。' },
+      { sentence: '(A) Without (B) your advice, I (C) would have (D) make a mistake.', choices: ['(A) Without', '(B) your advice, I', '(C) would have', '(D) make a mistake'], answer: 3, why: 'would have のあとは過去分詞。made。' },
+      { sentence: '(A) Should it (B) rains tomorrow, (C) the game (D) will be cancelled.', choices: ['(A) Should it', '(B) rains tomorrow,', '(C) the game', '(D) will be cancelled'], answer: 1, why: 'should のあとは原形。Should it rain。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
