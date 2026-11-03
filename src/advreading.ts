@@ -29058,6 +29058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-social-media-age',
+    title: 'Too Young for Social Media?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Social media platforms have become a central part of the lives of many young people. Teenagers use them to stay in touch with friends, share their interests, follow news and entertainment, and express themselves to an audience far larger than any previous generation could reach. Yet concern about the effects of these platforms on young users has grown steadily, and several governments have begun to consider, or have already introduced, laws that would prevent children below a certain age from opening social media accounts.",
+      "Supporters of such restrictions point to evidence linking heavy social media use with anxiety, depression, poor sleep, and low self-esteem among adolescents, particularly girls. Platforms are designed to capture as much of their users' attention as possible, using features such as endless scrolling, notifications, and public counts of likes and followers that encourage constant checking and comparison. Adults may struggle to resist these features; it seems unreasonable, supporters argue, to expect young teenagers, whose capacity for self-control is still developing, to do so.",
+      "Critics of age limits, however, raise several objections. The first is practical: verifying the age of users online is difficult, and many children already lie about their age to join platforms that officially require users to be at least thirteen. Stricter verification might require users to submit identification documents or facial images, raising new concerns about privacy and data security, not only for children but for adults as well.",
+      "A second objection is that the research on social media's effects is less conclusive than headlines often suggest. Many studies find associations between heavy use and poor mental health, but it is difficult to determine whether social media causes these problems or whether young people who are already struggling are more likely to spend long hours online. ( A ) the evidence remains uncertain, critics argue, sweeping bans may be premature, and they may deprive young people of genuine benefits, such as support from online communities for those who feel isolated in their schools or towns.",
+      "There is also a concern that bans may shift responsibility away from the companies that design the platforms. If young people are simply excluded until a certain age, the platforms may have little incentive to make their products safer, and teenagers who reach the permitted age may encounter the same harmful features without having developed the skills to manage them. Some therefore argue that regulation should focus less on who may use social media and more on how it is designed, requiring, for example, that accounts for young users have certain features disabled by default.",
+      "Education is another part of the answer. Teaching young people how platforms work, how they are designed to hold attention, and how to recognize the effects of their own use on their mood and sleep may help them develop healthier habits. Parents, too, play an important role, though many feel uncertain about how to guide children through a world that did not exist when they themselves were young. Conversations at home about what children see and feel online may be more effective than strict rules imposed without explanation, since they help young people to understand the reasons behind the limits.",
+      "The debate over age limits ultimately reflects a broader question about how societies should respond to new technologies whose long-term effects are not yet fully understood. Waiting for complete evidence may allow harm to continue, while acting too quickly may produce rules that are ineffective or that create new problems. Finding the right balance requires both caution and a willingness to adjust policies as understanding improves. Above all, it requires listening to young people themselves, whose experiences of these platforms are often more varied and more thoughtful than the debates conducted by adults might suggest.",
+    ],
+    ja: [
+      'SNSは多くの若者の生活の中心的な一部になった。十代の若者はそれを使って友人と連絡をとり、興味を分かち合い、ニュースや娯楽を追い、それ以前のどの世代がとどきえたよりもはるかに多くの人々に向けて自分を表現する。しかし、こうした場が若い利用者にあたえる影響への懸念は着実に高まっており、いくつかの政府は、一定の年齢より下の子どもがSNSのアカウントを作れないようにする法律を検討しはじめたり、すでに取り入れたりしている。',
+      'そうした制限を支持する人々は、SNSを長時間使うことと、十代、とくに女子の不安やうつや睡眠不足や自己評価の低さとを結びつける証拠をあげる。こうした場は、終わりのないスクロールや通知や、「いいね」やフォロワーの数を公に表示することなど、たえず確かめたり比べたりすることをうながす機能を使って、利用者の注意をできるだけ多くとらえるように作られている。大人でもこうした機能にあらがうのはむずかしいかもしれないのに、自制する力がまだ発達の途中である幼い十代にそれを期待するのは無理がある、と支持する人々は主張する。',
+      'しかし年齢制限を批判する人々は、いくつかの反論をあげる。一つめは実際的なものである。ネット上で利用者の年齢を確かめるのはむずかしく、公式には利用者が少なくとも十三歳であることを求めている場に参加するために、多くの子どもがすでに年齢をいつわっている。より厳しい確認のためには、利用者に身分証明書や顔の画像を出させる必要があるかもしれず、子どもだけでなく大人にとっても、プライバシーとデータの安全についての新しい懸念を生む。',
+      '二つめの反論は、SNSの影響についての研究は、見出しがしばしばほのめかすほど決定的ではないということである。多くの研究が長時間の利用と心の健康の悪さとの結びつきを見いだしているが、SNSがこうした問題を引き起こしているのか、それともすでに苦しんでいる若者のほうが長時間ネットですごしやすいのかを判断するのはむずかしい。証拠がまだ不確かなので、全面的な禁止は早すぎるかもしれず、学校や町で孤立していると感じている人々へのネット上の仲間からの支えのような本物の恩恵を若者からうばってしまうかもしれない、と批判する人々は主張する。',
+      '禁止によって、場を作っている企業から責任がそらされてしまうという懸念もある。若者がある年齢までただしめ出されるだけなら、場の側には製品をより安全にする動機がほとんどないかもしれず、ゆるされる年齢に達した十代は、それに対処する力を身につけないまま同じ害のある機能に出会うかもしれない。そのため、規制はだれがSNSを使ってよいかよりも、それがどう作られているかに重点を置くべきであり、たとえば若い利用者のアカウントでは、ある機能が最初から使えないようにすることを求めるべきだと主張する人もいる。',
+      '教育も答えのもう一つの部分である。場がどのようにはたらき、注意をとらえ続けるようにどう作られているのか、そして自分の利用が気分や睡眠にどう影響しているかに気づく方法を若者に教えることは、より健康的な習慣を育てるのに役立つかもしれない。親もまた大切な役割を果たすが、自分が若かったころには存在しなかった世界で子どもをどうみちびけばよいのかわからないと感じている親は多い。子どもがネットで何を見て何を感じているかについての家庭での会話は、説明なしにおしつけられる厳しい決まりよりも効果があるかもしれない。それは、若者が制限の背後にある理由を理解する助けになるからである。',
+      '年齢制限をめぐる議論は、結局のところ、長期的な影響がまだ十分にわかっていない新しい技術に社会がどうこたえるべきかという、より広い問いを反映している。完全な証拠を待てば害が続くのをゆるしてしまうかもしれず、急いで動きすぎれば、効果のない、あるいは新しい問題を生む決まりができてしまうかもしれない。正しいつりあいを見つけるには、慎重さと、理解が深まるにつれて政策を調整しようとする心がまえの両方が必要なのである。何よりも、それには若者自身の声に耳をかたむけることが必要である。こうした場についての彼らの経験は、大人が行う議論が思わせるよりも、しばしばさまざまで、思慮深いものだからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「証拠がまだ不確かなので、全面的な禁止は早すぎるかもしれない」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Some governments want to ban social media for children because heavy use is linked to anxiety and poor ( 1 ). Critics say age is hard to ( 2 ) online and that the research is not conclusive. Others argue that regulation should focus on how platforms are ( 3 ), and that education and parents also matter.',
+      blanks: [
+        { choices: ['sleep', 'eyesight', 'grades', 'diet'], answer: 0, why: '第2段落 anxiety, depression, poor sleep, and low self-esteem。' },
+        { choices: ['verify', 'increase', 'forget', 'celebrate'], answer: 0, why: '第3段落 verifying the age of users online is difficult。' },
+        { choices: ['designed', 'priced', 'named', 'advertised'], answer: 0, why: '第5段落 more on how it is designed。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、多くの子どもはすでに年齢をいつわってSNSに参加している。', answer: true, why: '第3段落 many children already lie about their age。' },
+      { statement: '筆者によれば、SNSが心の問題を引き起こしていることは研究で完全に証明されている。', answer: false, why: '第4段落 it is difficult to determine whether social media causes these problems。' },
+      { statement: '一部の人々は、若い利用者のアカウントではある機能を最初から使えなくするべきだと主張している。', answer: true, why: '第5段落 accounts for young users have certain features disabled by default。' },
+      { statement: '筆者は、完全な証拠を待つことには何の危険もないと考えている。', answer: false, why: '第7段落 Waiting for complete evidence may allow harm to continue。' },
+    ],
+    qa: [
+      { q: 'Why might stricter age verification raise new concerns?', choices: ['It might require identification documents or facial images, threatening privacy.', 'It would make platforms free.', 'It would allow younger children to join.', 'It would delete all accounts.'], answer: 0, why: '第3段落 might require users to submit identification documents or facial images, raising new concerns about privacy。' },
+      { q: 'What benefit of social media do critics of bans mention?', choices: ['Support from online communities for young people who feel isolated.', 'Higher test scores for everyone.', 'More time for sleep.', 'Free gifts from companies.'], answer: 0, why: '第4段落 support from online communities for those who feel isolated。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
