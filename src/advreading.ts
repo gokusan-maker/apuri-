@@ -29698,6 +29698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-voluntourism',
+    title: 'Who Really Benefits from Helping?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every year, large numbers of young people from wealthy countries travel abroad to spend a few weeks volunteering in poorer regions. They may help build schools, teach English, care for children in orphanages, or assist with conservation projects. This combination of travel and volunteering, sometimes called voluntourism, has grown into a substantial industry, with organizations charging participants considerable fees for the opportunity to help. Supporters see it as a way of combining personal growth with practical assistance, but critics have raised serious doubts about who actually benefits.",
+      "The experience can certainly be valuable for the volunteers themselves. Living for a time in an unfamiliar culture may broaden their understanding of the world, challenge their assumptions, and encourage a lasting commitment to social justice. Many former volunteers report that their experiences abroad shaped their later choices of study and career, leading some to devote their lives to international development or public health.",
+      "The benefits for host communities, however, are less certain. Volunteers who stay only a few weeks often lack the skills, language ability, and local knowledge needed to make a meaningful contribution. A school built by inexperienced volunteers may need to be repaired or even rebuilt by local workers, and the money spent on travel and fees might have done more good if it had been used to employ local people directly. ( A ) communities may welcome the attention and the funds that volunteers bring, some have found that hosting a constant stream of short-term visitors takes time and energy away from their own priorities.",
+      "The most serious concerns involve programs in which volunteers work with children. Children in orphanages who form attachments to a succession of volunteers, each of whom leaves after a few weeks, may suffer from repeated experiences of loss. Investigations in several countries have also found that the demand from foreign volunteers has encouraged the growth of orphanages, some of which house children who in fact have living parents but have been separated from them in order to attract visitors and donations. Many child-welfare organizations now advise strongly against short-term volunteering in such institutions.",
+      "Critics also point to a deeper problem in the way voluntourism frames the relationship between rich and poor. Programs are often marketed with images of grateful local people receiving help from foreign visitors, reinforcing the idea that problems in poorer countries are best solved by outsiders. This image can obscure the knowledge and abilities of local communities and the structural causes of poverty, such as unfair trade rules or the legacy of historical injustice, which short visits do nothing to address.",
+      "None of this means that international volunteering should be abandoned. Programs that are designed in partnership with local organizations, that match volunteers' skills to real needs, and that involve longer commitments can make genuine contributions. Volunteers with professional training, such as doctors or engineers, may be particularly valuable when their work supports local institutions rather than replacing them. The key question is whether a program is shaped by the needs of the host community or by the desires of the visitors. Organizations that answer this question honestly, and that are open about how fees are spent, are more likely to offer experiences that benefit everyone involved.",
+      "For young people who wish to help, the most useful approach may be to begin by learning: about the places they hope to visit, about the organizations that work there, and about the forms of assistance that communities themselves request. Good intentions are valuable, but they are most effective when they are guided by humility and by a willingness to listen. Sometimes the most helpful thing a visitor can do is not to act at once but to understand, so that any help that follows responds to what people actually need rather than to what outsiders imagine they need.",
+    ],
+    ja: [
+      '毎年、豊かな国の多くの若者が、貧しい地域で数週間ボランティアをするために外国へ旅をする。彼らは学校を建てるのを手伝ったり、英語を教えたり、孤児院で子どもの世話をしたり、自然保護の活動を手伝ったりする。旅行とボランティアのこの組み合わせは、ボランツーリズムとよばれることもあり、大きな産業へと成長し、団体は助ける機会と引きかえに参加者からかなりの料金をとっている。支持する人々はそれを、個人の成長と実際の手助けを組み合わせる方法と見ているが、批判する人々は、実際にだれが恩恵を受けているのかについて深刻な疑問を投げかけてきた。',
+      'その経験は、ボランティア自身にとってはたしかに価値のあるものになりうる。なじみのない文化の中でしばらく暮らすことは、世界への理解を広げ、思いこみをゆさぶり、社会正義への長く続く関わりをうながすかもしれない。多くの元ボランティアは、外国での経験がその後の学問や職業の選択を形づくったと報告しており、中には国際開発や公衆衛生に一生をささげるようになった人もいる。',
+      'しかし、受け入れる地域にとっての恩恵はそれほど確かではない。数週間しかとどまらないボランティアには、意味のある貢献をするのに必要な技術や言葉の力や地元の知識が欠けていることが多い。経験のないボランティアが建てた学校は、地元の働き手が直したり、建て直したりしなければならないことさえあり、旅費や料金に使われたお金は、地元の人々を直接雇うのに使われていたら、もっと役に立ったかもしれない。地域はボランティアがもたらす注目と資金を歓迎するかもしれないが、短い期間の訪問者がたえず流れこむのを受け入れることが、自分たちの優先すべきことから時間とエネルギーをうばっていると気づいた地域もある。',
+      '最も深刻な懸念は、ボランティアが子どもとかかわる活動にかかわる。次々とやって来るボランティアに愛着をもち、そのだれもが数週間で去っていく孤児院の子どもたちは、くり返し失う経験に苦しむかもしれない。いくつかの国の調査では、外国のボランティアの需要が孤児院の増加をうながしてきたこともわかった。その中には、実は親が生きているのに、訪問者や寄付を集めるために親から引きはなされた子どもを住まわせているところもある。今では多くの子どもの福祉団体が、そうした施設での短期のボランティアをしないよう強くすすめている。',
+      '批判する人々はまた、ボランツーリズムが豊かな人と貧しい人の関係をとらえるしかたにひそむ、より深い問題も指摘する。活動はしばしば、外国からの訪問者に助けられて感謝する地元の人々の画像で宣伝され、貧しい国の問題は外部の人によって最もよく解決されるという考えを強めている。この画像は、地元の地域の知識と能力や、不公平な貿易の決まりや歴史的な不正の遺産のような、短い訪問では何も対処できない貧困の構造的な原因を見えなくしてしまうことがある。',
+      'このどれも、国際的なボランティアをやめるべきだという意味ではない。地元の団体と協力して作られ、ボランティアの技術を本当の必要に合わせ、長い期間の関わりをふくむ活動は、本物の貢献をすることができる。医師や技術者のように専門の訓練を受けたボランティアは、その仕事が地元の機関に取って代わるのではなく、それを支えるとき、とくに価値があるかもしれない。大切な問いは、ある活動が、受け入れる地域の必要によって形づくられているのか、それとも訪問者の願いによって形づくられているのかということである。この問いに正直に答え、料金がどう使われているかを公開している団体のほうが、かかわるすべての人のためになる経験を提供しやすいのである。',
+      '助けたいと願う若者にとって、最も役に立つ方法は、まず学ぶことから始めることかもしれない。おとずれたい場所について、そこで活動している団体について、そして地域自身が求めている手助けの形について学ぶのである。善意には価値があるが、それはけんきょさと耳をかたむける心がまえにみちびかれるとき、最も効果を発揮するのである。訪問者にできる最も役に立つことは、すぐに行動することではなく理解することである場合もある。そうすれば、そのあとに続くどんな手助けも、外部の人が必要だと思いこんでいることではなく、人々が実際に必要としていることにこたえるものになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「地域は注目と資金を歓迎するかもしれないが、時間とエネルギーをうばわれていると気づいた地域もある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Voluntourism can broaden volunteers’ understanding, but short-term volunteers often lack the ( 1 ) to help, and the money might be better spent employing local people. Volunteering in orphanages can harm ( 2 ). The best programs are shaped by the needs of the host ( 3 ) rather than the desires of visitors.',
+      blanks: [
+        { choices: ['skills', 'money', 'time', 'luggage'], answer: 0, why: '第3段落 often lack the skills, language ability, and local knowledge。' },
+        { choices: ['children', 'tourists', 'buildings', 'animals'], answer: 0, why: '第4段落 Children in orphanages ... may suffer from repeated experiences of loss。' },
+        { choices: ['community', 'country', 'company', 'school'], answer: 0, why: '第6段落 shaped by the needs of the host community。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、外国での経験がその後の職業の選択を形づくった元ボランティアもいる。', answer: true, why: '第2段落 their experiences abroad shaped their later choices of study and career。' },
+      { statement: '筆者によれば、経験のないボランティアが建てた学校は、建て直す必要があることもある。', answer: true, why: '第3段落 may need to be repaired or even rebuilt by local workers。' },
+      { statement: '多くの子どもの福祉団体は、孤児院での短期ボランティアを強くすすめている。', answer: false, why: '第4段落 advise strongly against short-term volunteering in such institutions。' },
+      { statement: '筆者は、国際的なボランティアはすべてやめるべきだと考えている。', answer: false, why: '第6段落 None of this means that international volunteering should be abandoned。' },
+    ],
+    qa: [
+      { q: 'What deeper problem do critics see in how voluntourism is marketed?', choices: ['It suggests problems in poorer countries are best solved by outsiders.', 'It shows too many pictures of buildings.', 'It makes travel too cheap.', 'It ignores the volunteers’ feelings.'], answer: 0, why: '第5段落 reinforcing the idea that problems in poorer countries are best solved by outsiders。' },
+      { q: 'What does the author recommend for young people who wish to help?', choices: ['To begin by learning about the places, organizations, and needs.', 'To travel as quickly as possible.', 'To avoid all foreign countries.', 'To build schools without local help.'], answer: 0, why: '第7段落 the most useful approach may be to begin by learning。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
