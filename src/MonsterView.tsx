@@ -2099,6 +2099,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M37 41 L48 39" fill="none" stroke="#fef3c7" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'easterncrownedwarbler')
+    return (
+      <g>
+        {/* 頭の中央の白っぽいすじと、白いまゆ */}
+        <path d="M50 26 L50 34" fill="none" stroke="#ecfccb" strokeWidth="2" />
+        <path d="M37 41 L47 39" fill="none" stroke="#f7fee7" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
