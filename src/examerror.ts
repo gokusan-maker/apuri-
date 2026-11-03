@@ -3338,6 +3338,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The bottle (A) was (B) filled (C) by (D) water.', choices: ['(A) was', '(B) filled', '(C) by', '(D) water'], answer: 2, why: 'be filled with。' },
     ],
   },
+  {
+    id: 'exam-error-adverb-todai',
+    title: '入試の正誤問題〈141〉（東大レベル：形容詞と副詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'hard（熱心に）／hardly（ほとんど～ない）、late（おくれて）／lately（最近）、near（近くに）／nearly（ほとんど）。動詞は副詞でくわしくし、look・taste などのあとは形容詞。enough は形容詞のあと。friendly は形容詞。',
+    ],
+    examples: [
+      { en: 'She studied hard, but she could hardly sleep.', ja: '彼女は熱心に勉強したが、ほとんど眠れなかった。' },
+      { en: 'Nearly all the students passed the test.', ja: 'ほとんどすべての生徒がテストに合格した。' },
+    ],
+    questions: [
+      { sentence: 'She (A) studied (B) hardly (C) for (D) the test.', choices: ['(A) studied', '(B) hardly', '(C) for', '(D) the test'], answer: 1, why: '「熱心に」は hard。hardly は「ほとんど～ない」。' },
+      { sentence: 'I (A) could (B) hard (C) understand (D) his accent.', choices: ['(A) could', '(B) hard', '(C) understand', '(D) his accent'], answer: 1, why: '「ほとんど～できなかった」は hardly。' },
+      { sentence: '(A) Near (B) all the students (C) passed (D) the test.', choices: ['(A) Near', '(B) all the students', '(C) passed', '(D) the test'], answer: 0, why: '「ほとんどすべての」は Nearly all。' },
+      { sentence: 'It (A) is (B) near (C) midnight, (D) so we should go home.', choices: ['(A) is', '(B) near', '(C) midnight,', '(D) so we should go home'], answer: 2, why: '「もうすぐ真夜中」は nearly midnight。' },
+      { sentence: 'Please (A) speak (B) more (C) slow (D) for the children.', choices: ['(A) speak', '(B) more', '(C) slow', '(D) for the children'], answer: 2, why: '動詞をくわしくするのは副詞。more slowly。' },
+      { sentence: 'This (A) soup (B) tastes (C) well (D) today.', choices: ['(A) soup', '(B) tastes', '(C) well', '(D) today'], answer: 2, why: 'taste のあとは形容詞。tastes good。' },
+      { sentence: '(A) Sadly, he (B) failed the exam (C) because he did not (D) study hardly.', choices: ['(A) Sadly, he', '(B) failed the exam', '(C) because he did not', '(D) study hardly'], answer: 3, why: '「熱心に勉強する」は study hard。' },
+      { sentence: 'He (A) is (B) enough old (C) to drive (D) a car.', choices: ['(A) is', '(B) enough old', '(C) to drive', '(D) a car'], answer: 1, why: 'enough は形容詞のあと。old enough。' },
+      { sentence: 'The staff (A) were (B) very (C) friendlily (D) to us.', choices: ['(A) were', '(B) very', '(C) friendlily', '(D) to us'], answer: 2, why: 'friendly は形容詞。were very friendly。' },
+      { sentence: 'The bus (A) came (B) lately (C) because of (D) the heavy rain.', choices: ['(A) came', '(B) lately', '(C) because of', '(D) the heavy rain'], answer: 1, why: '「おくれて」は late。lately は「最近」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

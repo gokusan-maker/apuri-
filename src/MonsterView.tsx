@@ -2061,6 +2061,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="42" cy="44" r="3" fill="#facc15" />
       </g>
     )
+  if (species === 'eurasianhobby')
+    return (
+      <g>
+        {/* 黒いほおのもようと、赤茶色の足のはね */}
+        <path d="M42 46 L40 54" fill="none" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" />
+        <ellipse cx="50" cy="74" rx="8" ry="3" fill="#b45309" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
