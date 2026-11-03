@@ -2272,6 +2272,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 94 Q30 90 42 94 Q54 98 66 94 Q78 90 86 94" fill="none" stroke="#7dd3fc" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'seaturtle')
+    return (
+      <g>
+        {/* こうらのもようと、ひれ */}
+        <path d="M40 58 L50 52 L60 58 L60 70 L50 76 L40 70 Z" fill="none" stroke="#1a2e05" strokeWidth="1.5" />
+        <path d="M30 62 Q20 58 18 66 M70 62 Q80 58 82 66" fill="none" stroke="#1a2e05" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
