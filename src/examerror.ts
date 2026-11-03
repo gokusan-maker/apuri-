@@ -3578,6 +3578,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He drinks (A) too (B) many (C) coffee (D) every day.', choices: ['(A) too', '(B) many', '(C) coffee', '(D) every day'], answer: 1, why: 'coffee は数えられないので too much。' },
     ],
   },
+  {
+    id: 'exam-error-negation-kyodai',
+    title: '入試の正誤問題〈151〉（京大レベル：準否定と倒置）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'hardly・scarcely・seldom・rarely はそれ自体が否定の意味なので not と重ねない。否定の副詞（Never・Hardly・Little・Seldom・Only＋副詞句・Not only）が文頭に来ると、疑問文の語順に倒置する（Never have I seen）。Hardly／Scarcely ～ when …、No sooner ～ than … の組み合わせに注意。',
+    ],
+    examples: [
+      { en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。' },
+      { en: 'No sooner had she sat down than the bell rang.', ja: '彼女がすわるとすぐにベルが鳴った。' },
+    ],
+    questions: [
+      { sentence: 'I (A) can hardly (B) not (C) believe (D) it.', choices: ['(A) can hardly', '(B) not', '(C) believe', '(D) it'], answer: 1, why: 'hardly 自体に否定の意味があるので not は要らない。' },
+      { sentence: '(A) Hardly (B) I had (C) arrived (D) when it began to rain.', choices: ['(A) Hardly', '(B) I had', '(C) arrived', '(D) when it began to rain'], answer: 1, why: '否定の副詞が文頭に来ると倒置。Hardly had I arrived。' },
+      { sentence: '(A) Never (B) have (C) I saw (D) such a sunset.', choices: ['(A) Never', '(B) have', '(C) I saw', '(D) such a sunset'], answer: 2, why: '現在完了なので過去分詞。have I seen。' },
+      { sentence: '(A) Scarcely (B) had he left (C) than (D) the phone rang.', choices: ['(A) Scarcely', '(B) had he left', '(C) than', '(D) the phone rang'], answer: 2, why: 'Scarcely ～ when …「～するとすぐに…」。than は no sooner と組む。' },
+      { sentence: '(A) Little did she (B) knew (C) about (D) the plan.', choices: ['(A) Little did she', '(B) knew', '(C) about', '(D) the plan'], answer: 1, why: 'did のあとは原形。know。' },
+      { sentence: '(A) Rarely we (B) eat (C) out (D) these days.', choices: ['(A) Rarely we', '(B) eat', '(C) out', '(D) these days'], answer: 0, why: '否定の副詞が文頭なので倒置。Rarely do we eat。' },
+      { sentence: 'Not only (A) did he (B) win the race, (C) but he also (D) breaks the record.', choices: ['(A) did he', '(B) win the race,', '(C) but he also', '(D) breaks the record'], answer: 3, why: '過去の話なので broke。' },
+      { sentence: '(A) No sooner (B) had she (C) sat down (D) when the bell rang.', choices: ['(A) No sooner', '(B) had she', '(C) sat down', '(D) when the bell rang'], answer: 3, why: 'No sooner ～ than …。when ではなく than。' },
+      { sentence: '(A) Seldom (B) does (C) he (D) speaks in class.', choices: ['(A) Seldom', '(B) does', '(C) he', '(D) speaks in class'], answer: 3, why: 'does のあとは原形。speak。' },
+      { sentence: '(A) Only (B) after the test (C) I realized (D) my mistake.', choices: ['(A) Only', '(B) after the test', '(C) I realized', '(D) my mistake'], answer: 2, why: 'Only＋副詞句が文頭なので倒置。did I realize。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
