@@ -28818,6 +28818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-zoos',
+    title: 'Do Zoos Still Have a Place?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Zoos are among the most popular attractions in the world, visited by hundreds of millions of people every year. For many children, a trip to the zoo provides their first encounter with animals such as elephants, lions, and giraffes, creatures they would otherwise know only from pictures and films. Yet zoos have also become the subject of intense ethical debate. Critics argue that keeping wild animals in captivity for human entertainment is difficult to justify, while defenders insist that modern zoos play an essential role in education and in the conservation of endangered species.",
+      "Zoos have changed considerably over the past century. Early zoos often displayed animals in small, bare cages, treating them mainly as curiosities to be viewed. Many modern zoos, by contrast, house animals in larger enclosures designed to resemble their natural habitats, and they employ scientists and veterinarians who study animal behavior and health. Some zoos now describe their main purpose not as entertainment but as the protection of wildlife, and they participate in breeding programs designed to preserve species that are threatened in the wild.",
+      "Supporters point to cases in which such programs have saved species from extinction. Several animals that had disappeared from the wild have been bred in zoos and later released into protected areas, where their populations have gradually recovered. Zoos also fund conservation projects in the animals' native regions and conduct research that would be difficult to carry out in the wild. ( A ) many wild habitats are being destroyed by human activity, zoos may provide a kind of insurance, preserving species until conditions improve enough for them to return.",
+      "Critics respond that these successes, though real, involve only a small fraction of the animals kept in zoos. Many popular zoo animals are not endangered, and their presence reflects their appeal to visitors rather than any conservation need. Moreover, some species seem poorly suited to captivity. Animals that naturally travel long distances, such as elephants and certain large predators, may show signs of stress in even the most carefully designed enclosures, such as repetitive pacing or swaying, which suggests that their needs are not being fully met.",
+      "There is also debate about the educational value of zoos. Supporters claim that seeing animals in person inspires people, especially children, to care about wildlife and to support its protection. Critics question whether a brief visit actually changes attitudes or behavior, and they argue that watching animals in artificial surroundings may teach visitors little about how those animals really live. Documentaries and well-designed online resources, they suggest, may offer a more accurate picture of animal life without requiring captivity.",
+      "Between complete defense and outright rejection lie several intermediate positions. Some argue that zoos should continue to exist but should keep only species for which they can provide genuinely suitable conditions, gradually phasing out animals that suffer in captivity. Others propose that zoos should transform themselves into sanctuaries and research centers, focusing on animals that cannot survive in the wild rather than on attracting visitors.",
+      "The debate over zoos ultimately reflects broader questions about the relationship between human beings and other animals. How much weight should be given to the welfare of individual animals compared with the survival of their species? And to what extent is it acceptable to use animals for human purposes, even purposes as worthy as education and conservation? These questions have no easy answers, but they deserve careful consideration from anyone who enjoys a visit to the zoo. Perhaps the most honest position is to recognize that zoos are neither simply prisons nor simply arks, but institutions whose value depends on how well they serve the animals in their care.",
+    ],
+    ja: [
+      '動物園は世界で最も人気のある行楽地の一つであり、毎年何億もの人々がおとずれる。多くの子どもにとって、動物園への遠足は、ゾウやライオンやキリンのような、そうでなければ写真や映画でしか知らなかったであろう動物と初めて出会う機会になる。しかし動物園はまた、はげしい倫理的な議論の的にもなってきた。批判する人々は、人間の楽しみのために野生動物をとらえておくことは正当化しにくいと主張し、擁護する人々は、現代の動物園は教育と絶滅危惧種の保護に欠かせない役割を果たしていると言い張る。',
+      '動物園はこの一世紀のあいだに大きく変わった。初期の動物園はしばしば動物を小さく何もないおりに展示し、主に見るためのめずらしいものとしてあつかった。これに対して多くの現代の動物園は、自然のすみかに似せて作られたより広い場所で動物を飼い、動物の行動や健康を研究する科学者や獣医を雇っている。今では主な目的を楽しみではなく野生動物の保護だと述べる動物園もあり、野生で絶滅のおそれのある種を守るための繁殖計画に参加している。',
+      '支持する人々は、そうした計画が種を絶滅から救った例をあげる。野生から姿を消していたいくつかの動物が動物園で繁殖され、のちに保護区に放されて、その数が少しずつ回復してきた。動物園はまた、動物のもとの生息地での保護活動に資金を出し、野生ではおこなうのがむずかしい研究をしている。多くの野生のすみかが人間の活動によってこわされつつあるので、動物園は一種の保険となり、種がもどれるほど状況がよくなるまで種を守っているのかもしれない。',
+      '批判する人々は、こうした成功は本物だが、動物園で飼われている動物のごく一部にしかかかわらないと答える。動物園の人気のある動物の多くは絶滅のおそれがなく、それらがいるのは保護の必要からではなく、客を引きつけるからである。さらに、とらわれの生活にあまり向いていないように見える種もある。ゾウやある種の大型の肉食動物のように、本来長い距離を移動する動物は、どれほど注意深く作られた場所でも、同じところを行ったり来たりしたり体をゆらしたりするなど、ストレスのしるしを見せることがあり、それはその必要が十分に満たされていないことを示している。',
+      '動物園の教育的な価値についても議論がある。支持する人々は、動物をじかに見ることが、人々、とくに子どもに野生動物を大切に思い、その保護を支えるよう心を動かすと主張する。批判する人々は、短いおとずれが実際に態度や行動を変えるのかを疑い、人工的な環境で動物を見ても、その動物が本当はどう生きているのかについてはほとんど学べないかもしれないと主張する。ドキュメンタリーやよく作られたオンラインの資料のほうが、とらえておく必要なしに、動物の生活をより正確に見せてくれるかもしれない、と彼らは示唆する。',
+      '全面的な擁護と完全な否定のあいだには、いくつかの中間の立場がある。動物園は存在し続けるべきだが、本当にふさわしい条件をあたえられる種だけを飼い、とらわれの生活で苦しむ動物は少しずつへらしていくべきだと主張する人もいる。また、動物園は客を集めることよりも、野生では生きられない動物に重点を置く保護施設や研究所に生まれ変わるべきだと提案する人もいる。',
+      '動物園をめぐる議論は、結局のところ、人間とほかの動物との関係についてのより広い問いを反映している。一匹一匹の動物の幸せは、その種の存続と比べてどれほど重く見られるべきなのか。そして、教育や保護のような立派な目的のためであっても、人間の目的のために動物を使うことはどこまで許されるのか。これらの問いにかんたんな答えはないが、動物園へのおとずれを楽しむだれもが、注意深く考えるに値する問いなのである。おそらく最も正直な立場は、動物園が単なる牢屋でも単なる箱舟でもなく、世話をしている動物にどれだけよくつくしているかによって価値が決まる施設だと認めることなのだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「多くの野生のすみかがこわされつつあるので、動物園は一種の保険になりうる」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Modern zoos claim to support education and ( 1 ), and breeding programs have saved some species. Critics reply that most zoo animals are not endangered and that some species, such as elephants, show signs of ( 2 ) in captivity. Some suggest that zoos should keep only suitable species or become ( 3 ) and research centers.',
+      blanks: [
+        { choices: ['conservation', 'advertising', 'farming', 'tourism'], answer: 0, why: '第2段落 the protection of wildlife ... breeding programs。' },
+        { choices: ['stress', 'joy', 'hunger', 'growth'], answer: 0, why: '第4段落 may show signs of stress。' },
+        { choices: ['sanctuaries', 'restaurants', 'stadiums', 'factories'], answer: 0, why: '第6段落 transform themselves into sanctuaries and research centers。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、初期の動物園は動物を自然のすみかに似せた広い場所で飼っていた。', answer: false, why: '第2段落 Early zoos often displayed animals in small, bare cages。' },
+      { statement: '支持する人々によれば、動物園で繁殖されて野生にもどされた動物もいる。', answer: true, why: '第3段落 have been bred in zoos and later released into protected areas。' },
+      { statement: '批判する人々によれば、動物園の人気のある動物の多くは絶滅のおそれがない。', answer: true, why: '第4段落 Many popular zoo animals are not endangered。' },
+      { statement: '筆者は、動物園をめぐる問いにはかんたんな答えがあると考えている。', answer: false, why: '第7段落 These questions have no easy answers。' },
+    ],
+    qa: [
+      { q: 'What signs suggest that some animals’ needs are not being fully met in zoos?', choices: ['Repetitive pacing or swaying.', 'Eating more food than usual.', 'Sleeping during the day.', 'Playing with visitors.'], answer: 0, why: '第4段落 such as repetitive pacing or swaying。' },
+      { q: 'What alternative to zoos for education do critics suggest?', choices: ['Documentaries and well-designed online resources.', 'Keeping animals at home.', 'Building larger cages in cities.', 'Closing all schools.'], answer: 0, why: '第5段落 Documentaries and well-designed online resources ... may offer a more accurate picture。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
