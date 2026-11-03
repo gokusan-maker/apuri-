@@ -2131,6 +2131,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 80 L50 94" fill="none" stroke="#3f3f46" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'seaslug')
+    return (
+      <g>
+        {/* 頭の2本の角と、背中の水玉もよう */}
+        <path d="M42 24 L39 14 M58 24 L61 14" fill="none" stroke="#581c87" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="40" cy="66" r="3" fill="#fde047" />
+        <circle cx="60" cy="66" r="3" fill="#fde047" />
+        <circle cx="50" cy="74" r="3" fill="#fb923c" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
