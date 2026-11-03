@@ -28658,6 +28658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-dna-tests',
+    title: 'What Our Genes Can Tell Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For a modest fee, anyone can now send a small sample of saliva to a company and receive, a few weeks later, a report describing his or her genetic ancestry and, in some cases, an estimate of the risk of developing certain diseases. Millions of people have taken such tests, often out of simple curiosity about where their ancestors came from. Yet the spread of consumer genetic testing raises questions that go far beyond curiosity, touching on privacy, family relationships, and the way people understand their own identity and health.",
+      "The most obvious concern is privacy. Unlike a password, which can be changed if it is stolen, a person's genetic information cannot be replaced, and it reveals information not only about the person tested but also about his or her relatives, who never agreed to take part. Some testing companies have shared genetic data with researchers or with law enforcement agencies, and while this has helped to solve serious crimes, it has also alarmed people who had assumed that their information would remain confidential.",
+      "A second set of concerns relates to the accuracy and interpretation of the results. Estimates of ancestry are based on comparisons with reference groups, and they can change as companies collect more data, so that a person told one year that his or her ancestors came largely from one region may be told something different the next. Health reports raise even more delicate issues. ( A ) most common diseases are influenced by many genes as well as by environment and lifestyle, a report indicating a slightly increased risk may cause unnecessary anxiety, while a report indicating low risk may give false reassurance and discourage healthy behavior.",
+      "Genetic tests can also produce surprises that change family relationships. Some people have discovered that a parent was not their biological parent, or that they have brothers or sisters they never knew existed. Such discoveries can bring joy, as when separated relatives are reunited, but they can also cause great pain, revealing secrets that had been kept for decades and forcing people to reconsider their understanding of their own past.",
+      "Supporters of consumer testing argue that people have a right to information about their own bodies and origins, and that access to such information should not be controlled by doctors or governments. They point out that testing has helped some people to discover serious inherited conditions early enough to take preventive action, and that the large databases created by testing companies have contributed to medical research.",
+      "Critics respond that the right to information must be balanced against the risks of misunderstanding and misuse. They argue for clearer rules about how genetic data may be stored and shared, for better explanations of what results do and do not mean, and for access to professional advice for people who receive troubling health information. Without such protections, they warn, a technology that promises to empower individuals may instead leave them confused, anxious, or exposed to uses of their data that they never anticipated.",
+      "Perhaps the deepest question raised by genetic testing concerns identity. Many people take tests hoping to learn who they really are, as though the answer were written in their DNA. Yet identity is shaped not only by biological inheritance but also by upbringing, culture, relationships, and choices. A genetic report can tell us something about where our ancestors lived, but it cannot tell us what kind of person to become, and treating it as the final truth about ourselves may obscure the many other influences that make us who we are. Used wisely, genetic testing can add to our understanding of ourselves; used carelessly, it may narrow that understanding to a single, misleading story.",
+    ],
+    ja: [
+      '今ではわずかな料金で、だれでも少量のだ液を会社に送り、数週間後に、自分の遺伝的な祖先や、場合によってはある種の病気になる危険の見積もりを記したレポートを受け取ることができる。何百万もの人々が、しばしば自分の祖先がどこから来たのかという単純な好奇心から、こうした検査を受けてきた。しかし消費者向けの遺伝子検査の広まりは、好奇心をはるかにこえる問題を引き起こし、プライバシーや家族の関係や、人々が自分自身のアイデンティティと健康をどう理解するかにかかわっている。',
+      '最も明らかな懸念はプライバシーである。ぬすまれたら変えられるパスワードとちがって、人の遺伝情報は取りかえることができず、それは検査を受けた人だけでなく、参加に同意したことのない親族についての情報も明らかにする。遺伝データを研究者や警察と共有した検査会社もあり、これは重大な犯罪の解決に役立った一方で、自分の情報は秘密にされると思いこんでいた人々を不安にさせた。',
+      '第二の懸念は、結果の正確さと解釈にかかわる。祖先の見積もりは基準となる集団との比較にもとづいており、会社がより多くのデータを集めるにつれて変わることがある。そのため、ある年に祖先は主にある地域から来たと言われた人が、翌年にはちがうことを言われるかもしれない。健康のレポートは、さらに微妙な問題を生む。よくある病気のほとんどは、多くの遺伝子と環境や生活習慣の影響を受けるので、危険がわずかに高いことを示すレポートは不要な不安を引き起こすかもしれず、危険が低いことを示すレポートは、まちがった安心をあたえて健康的な行動の意欲をくじくかもしれない。',
+      '遺伝子検査はまた、家族の関係を変えるような意外な事実を明らかにすることもある。親が生物学的な親ではなかったことや、存在を知らなかったきょうだいがいることを発見した人もいる。そうした発見は、はなればなれだった親族が再会するときのように喜びをもたらすこともあるが、何十年も守られてきた秘密を明らかにし、自分自身の過去についての理解を考え直すよう人々にせまり、大きな苦しみを引き起こすこともある。',
+      '消費者向け検査を支持する人々は、人には自分の体と生まれについての情報を得る権利があり、そうした情報にふれることは医師や政府によって管理されるべきではないと主張する。彼らは、検査によって、予防の手を打てるほど早く深刻な遺伝性の病気を発見できた人もいることや、検査会社が作った大きなデータベースが医学研究に貢献してきたことを指摘する。',
+      '批判する人々は、情報を得る権利は、誤解や悪用の危険とつりあわせなければならないと答える。彼らは、遺伝データの保存と共有のしかたについてのよりはっきりした決まりや、結果が何を意味し何を意味しないのかについてのよりよい説明や、気がかりな健康情報を受け取った人が専門家の助言を受けられることを求めている。そうした保護がなければ、個人に力をあたえると約束する技術が、かえって人々を混乱させたり、不安にさせたり、思いもよらなかったデータの使われ方にさらしたりするかもしれない、と彼らは警告する。',
+      '遺伝子検査が引き起こす最も深い問いは、おそらくアイデンティティにかかわるものである。多くの人が、まるで答えがDNAに書かれているかのように、自分が本当はだれなのかを知りたいと願って検査を受ける。しかしアイデンティティは、生物学的に受けついだものだけでなく、育ち方や文化や人間関係や選択によっても形づくられる。遺伝子のレポートは、祖先がどこに住んでいたかについては何かを教えてくれるが、どんな人間になるべきかは教えてくれない。それを自分自身についての最終的な真実としてあつかうことは、私たちを今の私たちにしているほかの多くの影響を見えなくしてしまうかもしれない。賢く使えば、遺伝子検査は自分自身についての理解をふやしてくれるが、不注意に使えば、その理解を一つの誤解をまねく物語にせばめてしまうかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「よくある病気は多くの要因の影響を受けるので、レポートは不安や誤った安心を生むかもしれない」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Consumer genetic tests raise concerns about ( 1 ), since genetic data also reveal information about relatives. Results about ancestry can change, and health reports may cause needless anxiety or false reassurance. Tests can also reveal family ( 2 ). Finally, identity depends not only on genes but also on ( 3 ), culture, and choices.',
+      blanks: [
+        { choices: ['privacy', 'transport', 'weather', 'sports'], answer: 0, why: '第2段落 The most obvious concern is privacy。' },
+        { choices: ['secrets', 'recipes', 'debts', 'holidays'], answer: 0, why: '第4段落 revealing secrets that had been kept for decades。' },
+        { choices: ['upbringing', 'height', 'income', 'luck'], answer: 0, why: '第7段落 shaped not only by biological inheritance but also by upbringing, culture ...。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、遺伝情報はパスワードのように、ぬすまれたら変えることができる。', answer: false, why: '第2段落 Unlike a password ... a person’s genetic information cannot be replaced。' },
+      { statement: '筆者によれば、祖先の見積もりは会社がデータを集めるにつれて変わることがある。', answer: true, why: '第3段落 they can change as companies collect more data。' },
+      { statement: '支持する人々によれば、検査によって遺伝性の病気を早く発見できた人もいる。', answer: true, why: '第5段落 testing has helped some people to discover serious inherited conditions early。' },
+      { statement: '筆者は、遺伝子のレポートがどんな人間になるべきかを教えてくれると考えている。', answer: false, why: '第7段落 it cannot tell us what kind of person to become。' },
+    ],
+    qa: [
+      { q: 'Why does genetic information raise special privacy concerns for relatives?', choices: ['It reveals information about relatives who never agreed to take part.', 'Relatives must pay for the test.', 'Relatives always take the same test.', 'It contains their passwords.'], answer: 0, why: '第2段落 it reveals information not only about the person tested but also about his or her relatives, who never agreed to take part。' },
+      { q: 'What do critics call for, according to the sixth paragraph?', choices: ['Clearer rules about storing and sharing genetic data.', 'A complete ban on all medical research.', 'Higher prices for tests.', 'Keeping all results secret from the person tested.'], answer: 0, why: '第6段落 clearer rules about how genetic data may be stored and shared。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
