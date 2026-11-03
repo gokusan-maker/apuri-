@@ -6450,6 +6450,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We will be back [until] noon.', choices: ['by', 'for', 'since', 'during'], answer: 0, why: '「正午までにもどる」はしめきりなので by。' },
     ],
   },
+  {
+    id: 'exam-fix-151',
+    title: '入試の誤文訂正〈151〉（国公立レベル：使役動詞 make／let／have と get）',
+    points: ['make・let・have＋人＋原形（to はつけない）。make は「むりに～させる」、let は「～させてやる（許可）」、have は「～してもらう」。get＋人＋to 不定詞は「（説得して）～してもらう」。make の受け身は be made to do（to が必要）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'My mother made me clean my room, but she let me go out later.', ja: '母は私に部屋をそうじさせたが、あとで出かけさせてくれた。' }],
+    questions: [
+      { sentence: 'My mother made me [to clean] my room.', choices: ['clean', 'cleaning', 'cleaned', 'cleans'], answer: 0, why: 'make＋人＋原形。clean。' },
+      { sentence: 'Please let me [to know] your answer.', choices: ['know', 'knowing', 'known', 'knows'], answer: 0, why: 'let＋人＋原形。let me know。' },
+      { sentence: 'I had my brother [to fix] my bike.', choices: ['fix', 'fixing', 'fixes', 'fixed to'], answer: 0, why: 'have＋人＋原形「人に～してもらう」。fix。' },
+      { sentence: 'I got my sister [help] me with my homework.', choices: ['to help', 'helped', 'helps', 'help to'], answer: 0, why: 'get＋人＋to 不定詞。to help。' },
+      { sentence: 'The teacher made us [writing] an essay.', choices: ['write', 'to write', 'written', 'wrote'], answer: 0, why: 'make＋人＋原形。write。' },
+      { sentence: 'My parents let me [went] to the concert.', choices: ['go', 'to go', 'going', 'gone'], answer: 0, why: 'let＋人＋原形。go。' },
+      { sentence: 'She was made [clean] the room by her mother.', choices: ['to clean', 'clean', 'cleaning', 'cleaned'], answer: 0, why: 'make の受け身は be made to do。to が必要。' },
+      { sentence: 'I will have him [calls] you back.', choices: ['call', 'to call', 'calls to', 'called'], answer: 0, why: 'have＋人＋原形。call。' },
+      { sentence: 'Do not let the children [playing] near the river.', choices: ['play', 'to play', 'played', 'plays'], answer: 0, why: 'let＋人＋原形。play。' },
+      { sentence: 'What made you [to change] your mind?', choices: ['change', 'changing', 'changed', 'changes'], answer: 0, why: 'make＋人＋原形。What made you change ～?「なぜ～したの」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
