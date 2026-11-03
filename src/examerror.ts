@@ -6366,6 +6366,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was [rude for] him to say that.', choices: ['rude of', 'rudely of', 'rude to', 'rudely for'], answer: 0, why: 'rude は人の性質（失礼）なので of him。' },
     ],
   },
+  {
+    id: 'exam-fix-149',
+    title: '入試の誤文訂正〈149〉（京大レベル：関係代名詞 what と that・which）',
+    points: ['what は先行詞をふくむ関係代名詞で「～すること・もの」（＝the thing(s) which）。前に先行詞（名詞）があるときは what ではなく which・that を使う。all・anything・everything のあとは that。what を使う慣用表現：what I can（できること）・what she used to be（以前の彼女）・A is to B what C is to D（A と B の関係は C と D の関係と同じ）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is what I wanted. The book which I bought is interesting.', ja: 'これは私がほしかったものだ。私が買った本はおもしろい。' }],
+    questions: [
+      { sentence: 'This is [that] I wanted.', choices: ['what', 'which', 'who', 'whose'], answer: 0, why: '先行詞がないので what（＝the thing which）。' },
+      { sentence: 'The book [what] I bought yesterday is interesting.', choices: ['which', 'who', 'whose', 'where'], answer: 0, why: '先行詞 the book があるので which（that も可）。' },
+      { sentence: '[That] he said was true.', choices: ['What', 'Which', 'Who', 'Whose'], answer: 0, why: '「彼が言ったこと」は What he said。' },
+      { sentence: 'I will do [that] I can to help you.', choices: ['what', 'which', 'whose', 'where'], answer: 0, why: '「できること（は何でも）」は what I can。' },
+      { sentence: 'Is there anything [what] I can do?', choices: ['that', 'who', 'whose', 'where'], answer: 0, why: 'anything のあとは that。' },
+      { sentence: 'She is not [that] she used to be.', choices: ['what', 'which', 'whose', 'whom'], answer: 0, why: 'what she used to be「以前の彼女」。' },
+      { sentence: 'Tell me [which] you know about him.', choices: ['what', 'whose', 'where', 'whom'], answer: 0, why: '先行詞がないので what。「知っていること」。' },
+      { sentence: 'This is the house [what] my uncle built.', choices: ['which', 'who', 'whose', 'where'], answer: 0, why: '先行詞 the house があり、built の目的語が欠けているので which（that も可）。' },
+      { sentence: 'All [what] you need is love.', choices: ['that', 'whose', 'where', 'who'], answer: 0, why: 'all のあとは that。' },
+      { sentence: 'Reading is to the mind [that] exercise is to the body.', choices: ['what', 'which', 'who', 'whose'], answer: 0, why: 'A is to B what C is to D「A と B の関係は C と D の関係と同じ」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
