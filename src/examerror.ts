@@ -3770,6 +3770,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) No so many (B) students (C) came as (D) we expected.', choices: ['(A) No so many', '(B) students', '(C) came as', '(D) we expected'], answer: 0, why: 'not so ～ as …「…ほど～ない」。Not so many。' },
     ],
   },
+  {
+    id: 'exam-error-ittakes-kokuritsu',
+    title: '入試の正誤問題〈159〉（国公立レベル：It takes 人 時間 to do・It costs 人 お金 to do）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'It takes（人）時間 to do「（人が）～するのに時間がかかる」。It costs（人）お金 to do「（人が）～するのにお金がかかる」。人は動詞のすぐあと（to をつけない）、そのあとは to＋動詞の原形。cost は cost-cost-cost。時間には take、お金には cost を使う。「長い時間」は a long time。',
+    ],
+    examples: [
+      { en: 'It took me three hours to finish the report.', ja: '私はその報告書を仕上げるのに3時間かかった。' },
+      { en: 'It cost me ten thousand yen to fix the bike.', ja: '自転車を直すのに1万円かかった。' },
+    ],
+    questions: [
+      { sentence: '(A) It took (B) me three hours (C) finishing (D) the report.', choices: ['(A) It took', '(B) me three hours', '(C) finishing', '(D) the report'], answer: 2, why: 'It takes 人 時間 to do。finishing ではなく to finish。' },
+      { sentence: '(A) It cost (B) to me (C) ten thousand yen (D) to fix the bike.', choices: ['(A) It cost', '(B) to me', '(C) ten thousand yen', '(D) to fix the bike'], answer: 1, why: 'It costs 人 お金 to do。人の前に to はつけない。It cost me。' },
+      { sentence: '(A) How long (B) does it takes (C) to get (D) to the airport?', choices: ['(A) How long', '(B) does it takes', '(C) to get', '(D) to the airport?'], answer: 1, why: 'does のあとは動詞の原形。does it take。' },
+      { sentence: '(A) How much (B) did it cost (C) you (D) buy that car?', choices: ['(A) How much', '(B) did it cost', '(C) you', '(D) buy that car?'], answer: 3, why: 'It costs 人 お金 to do。to buy。' },
+      { sentence: '(A) It takes (B) a lot of courage (C) to admitting (D) your mistakes.', choices: ['(A) It takes', '(B) a lot of courage', '(C) to admitting', '(D) your mistakes'], answer: 2, why: 'to のあとは動詞の原形。to admit。' },
+      { sentence: '(A) It costed (B) us (C) a fortune (D) to rebuild the house.', choices: ['(A) It costed', '(B) us', '(C) a fortune', '(D) to rebuild the house'], answer: 0, why: 'cost は cost-cost-cost と変化する。It cost。' },
+      { sentence: '(A) How much time (B) will it take (C) you (D) to finishing the work?', choices: ['(A) How much time', '(B) will it take', '(C) you', '(D) to finishing the work?'], answer: 3, why: 'to のあとは動詞の原形。to finish the work。' },
+      { sentence: '(A) It needs (B) two hours (C) to drive (D) to the lake.', choices: ['(A) It needs', '(B) two hours', '(C) to drive', '(D) to the lake'], answer: 0, why: '「（時間が）かかる」は It takes。It takes two hours。' },
+      { sentence: '(A) That cost (B) me (C) three days (D) to read the book.', choices: ['(A) That cost', '(B) me', '(C) three days', '(D) to read the book'], answer: 0, why: '時間がかかるときは take、お金がかかるときは cost。That took。' },
+      { sentence: '(A) It will take (B) long time (C) to repair (D) the bridge.', choices: ['(A) It will take', '(B) long time', '(C) to repair', '(D) the bridge'], answer: 1, why: '「長い時間」は a long time。a が必要。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
