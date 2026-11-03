@@ -2200,6 +2200,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="62" rx="8" ry="4" fill="#fed7aa" />
       </g>
     )
+  if (species === 'maskedcivet')
+    return (
+      <g>
+        {/* 顔の真ん中の白いすじと、目のまわりの白 */}
+        <path d="M50 22 L50 50" fill="none" stroke="#fafaf9" strokeWidth="4" strokeLinecap="round" />
+        <path d="M38 40 Q42 36 46 40 M54 40 Q58 36 62 40" fill="none" stroke="#e7e5e4" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
