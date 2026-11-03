@@ -28096,6 +28096,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-voting-age',
+    title: 'Should Sixteen-Year-Olds Vote?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most democratic countries, citizens gain the right to vote at the age of eighteen, but in recent years several countries have lowered this age to sixteen for some or all elections, and proposals to do the same have been debated in many others. The question may appear to be a minor technical matter, a difference of only two years, but it raises fundamental issues about what voting requires, who should be counted as a full member of a political community, and how young people can best be prepared for the responsibilities of citizenship.",
+      "Those who favor lowering the voting age often begin by pointing out that sixteen-year-olds are already treated as responsible in many areas of life. In many places they can work, pay taxes, leave school, and in some cases even marry, and it seems inconsistent to expect them to obey laws and contribute to public funds while denying them any voice in deciding how those laws are made and how those funds are spent. Moreover, decisions taken today about the environment, public debt, and education will affect young people for far longer than they will affect the older citizens who currently dominate elections.",
+      "A second argument concerns the formation of habits. Research suggests that people who vote in the first election for which they are eligible are more likely to continue voting throughout their lives, while those who fail to vote at first often remain non-voters. At eighteen, many young people are moving away from home to attend university or begin work, and in this period of change they may neglect to register or may feel no connection to their new communities. ( A ) sixteen-year-olds usually still live with their families and attend local schools, they could be introduced to voting in a more stable setting, where teachers can explain the process and families can encourage participation.",
+      "Opponents, however, raise several concerns. The most common is that sixteen-year-olds lack the maturity and knowledge needed to make informed political judgments, and that they may be easily influenced by parents, teachers, or persuasive messages on social media. Some also worry that political campaigns would begin to target schools, bringing partisan conflict into classrooms that should be places of open inquiry rather than recruitment.",
+      "Supporters respond that these objections apply equally to many adult voters. Research comparing sixteen- and seventeen-year-olds with older voters has found that, on average, their political knowledge and their ability to connect their views to political choices are not dramatically different. Adults, too, are influenced by family traditions and by misleading information, and no one proposes that adults should be tested on their knowledge before being allowed to vote. The right to vote in a democracy has never depended on passing an examination.",
+      "Experience in countries that have lowered the voting age offers some evidence, though it is not conclusive. In several cases, sixteen- and seventeen-year-olds have voted at higher rates than voters in their early twenties, perhaps because they were reached through schools, but the long-term effects on participation are still being studied. What seems clear is that lowering the voting age is most likely to succeed when it is accompanied by serious political education that teaches young people how to evaluate arguments and evidence rather than what conclusions to reach.",
+      "The debate over the voting age, then, is ultimately a debate about how democracy reproduces itself from one generation to the next. Whatever age a society chooses, the deeper challenge is to ensure that young people arrive at it with the knowledge, the habits, and the confidence that meaningful participation requires. A democracy that neglects this task may find that lowering the voting age changes very little, while one that takes it seriously may discover that young citizens have far more to contribute than their elders had assumed.",
+    ],
+    ja: [
+      'ほとんどの民主主義の国では、市民は十八歳で投票する権利を得るが、近年いくつかの国は、一部またはすべての選挙でこの年齢を十六歳に引き下げ、ほかの多くの国でも同じことをする提案が議論されてきた。この問題は、わずか二年のちがいにすぎない、ささいな技術的な事がらに見えるかもしれない。しかしそれは、投票には何が必要なのか、だれを政治共同体の完全な一員として数えるべきか、そして若者を市民としての責任にどうすれば最もよく備えさせられるかについての、根本的な問題を引き起こす。',
+      '投票年齢の引き下げに賛成する人々は、しばしば、十六歳はすでに生活の多くの分野で責任ある者としてあつかわれていると指摘することから始める。多くの場所で、彼らは働き、税金をはらい、学校をやめることができ、場合によっては結婚さえできる。法律に従い、公の資金に貢献することを期待しながら、その法律がどう作られ、その資金がどう使われるかを決めることに何の発言権もあたえないのは、一貫していないように思われる。さらに、環境や国の借金や教育について今日下される決定は、現在選挙で大きな力をもつ年上の市民よりも、はるかに長く若者に影響をあたえる。',
+      '第二の議論は、習慣が作られることにかかわる。研究によれば、投票資格を得て最初の選挙で投票した人は生涯を通じて投票し続ける可能性が高く、最初に投票しなかった人はそのまま投票しない人であり続けることが多い。十八歳では、多くの若者が大学に通ったり働きはじめたりするために家をはなれつつあり、この変化の時期に、登録するのをおこたったり、新しい地域とのつながりを感じなかったりするかもしれない。十六歳はふつうまだ家族と暮らし、地元の学校に通っているので、先生が手続きを説明し、家族が参加をうながせる、より安定した環境で投票に導かれうるだろう。',
+      'しかし反対する人々は、いくつかの懸念をあげる。最もよくあるのは、十六歳には情報にもとづいた政治的判断を下すのに必要な成熟さや知識が欠けており、親や先生やSNSの説得力のあるメッセージにたやすく影響されるかもしれないというものである。また、選挙運動が学校をねらいはじめ、勧誘の場ではなく自由な探究の場であるべき教室に党派の対立を持ちこむのではないかと心配する人もいる。',
+      '支持する人々は、こうした反論は多くの大人の有権者にも同じように当てはまると答える。十六歳・十七歳と年上の有権者を比べた研究では、平均すると、政治の知識や、自分の考えを政治的な選択に結びつける力は、それほど大きくはちがわないことがわかった。大人もまた家族の伝統や誤った情報に影響されるが、大人が投票をゆるされる前に知識を試されるべきだと提案する人はいない。民主主義における投票の権利は、試験に合格することにかかっていたことは一度もない。',
+      '投票年齢を引き下げた国々での経験は、決定的ではないものの、いくらかの証拠をあたえてくれる。いくつかの例では、十六歳・十七歳は、おそらく学校を通じて働きかけられたために、二十代前半の有権者よりも高い割合で投票したが、参加への長期的な影響はまだ研究されているところである。はっきりしているように思われるのは、投票年齢の引き下げが最も成功しやすいのは、若者にどんな結論に達するべきかではなく、議論や証拠をどう評価するかを教える、本格的な政治教育がともなうときだということである。',
+      'それゆえ投票年齢をめぐる議論は、結局のところ、民主主義がある世代から次の世代へとどのように自らを受けついでいくかについての議論である。社会がどの年齢を選ぶにせよ、より深い課題は、若者が意味のある参加に必要な知識と習慣と自信をもってその年齢をむかえられるようにすることなのである。この課題をおろそかにする民主主義は、投票年齢を引き下げてもほとんど何も変わらないことに気づくかもしれないが、それに真剣に取り組む民主主義は、若い市民が年上の人々の思っていたよりはるかに多くのものを提供できることを知るかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「十六歳はまだ家族と暮らし地元の学校に通っているので、安定した環境で導かれうる」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Some countries have lowered the voting age to sixteen. Supporters say sixteen-year-olds already have many ( 1 ), and that voting first while still at home helps form lasting ( 2 ). Opponents doubt their maturity, but research finds their political knowledge is similar to that of adults. Lowering the age works best with serious political ( 3 ).',
+      blanks: [
+        { choices: ['responsibilities', 'vacations', 'cars', 'secrets'], answer: 0, why: '第2段落 sixteen-year-olds are already treated as responsible in many areas of life。' },
+        { choices: ['habits', 'debts', 'injuries', 'rumors'], answer: 0, why: '第3段落 A second argument concerns the formation of habits。' },
+        { choices: ['education', 'advertising', 'competition', 'punishment'], answer: 0, why: '第6段落 accompanied by serious political education。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、最初の選挙で投票した人は生涯投票し続ける可能性が高い。', answer: true, why: '第3段落 people who vote in the first election ... are more likely to continue voting throughout their lives。' },
+      { statement: '反対する人々は、選挙運動が学校に党派の対立を持ちこむことを心配している。', answer: true, why: '第4段落 bringing partisan conflict into classrooms。' },
+      { statement: '研究によれば、十六歳・十七歳の政治の知識は大人よりはるかにおとっている。', answer: false, why: '第5段落 are not dramatically different。' },
+      { statement: '筆者によれば、投票年齢の引き下げの長期的な影響はすでに完全にわかっている。', answer: false, why: '第6段落 the long-term effects on participation are still being studied。' },
+    ],
+    qa: [
+      { q: 'Why might eighteen-year-olds fail to vote, according to the third paragraph?', choices: ['They are moving away from home and may feel no connection to their new communities.', 'They are not allowed to register.', 'They are too busy studying for examinations.', 'They have already voted many times.'], answer: 0, why: '第3段落 many young people are moving away from home ... may feel no connection to their new communities。' },
+      { q: 'What kind of political education does the author recommend?', choices: ['One that teaches how to evaluate arguments and evidence rather than what conclusions to reach.', 'One that tells students which party to support.', 'One that avoids politics completely.', 'One that only teaches the history of elections.'], answer: 0, why: '第6段落 teaches young people how to evaluate arguments and evidence rather than what conclusions to reach。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
