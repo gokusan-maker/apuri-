@@ -27740,6 +27740,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-envy',
+    title: 'Listening to Envy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the emotions that human beings experience, envy is perhaps the one that people are least willing to admit. We may confess without much embarrassment that we are angry, afraid, or even jealous in love, but to say that we envy a friend's success seems to reveal something mean and small about ourselves. Moral traditions in many cultures have condemned envy as a vice, and yet it appears to be almost universal, which suggests that it deserves to be understood rather than simply denounced.",
+      "Envy is commonly defined as the painful feeling that arises when we see another person possess something that we desire and lack, whether it is wealth, talent, beauty, or recognition. What distinguishes envy from simple desire is that it is directed not only at the thing itself but at the person who has it. A person who merely wants a larger house can be satisfied by acquiring one, but an envious person may feel that the neighbor's house is an insult, so that even the loss of that house by the neighbor would bring a kind of relief.",
+      "It is this hostile element that has earned envy its bad reputation. Envy can lead people to belittle the achievements of others, to spread rumors, or to take satisfaction in the misfortunes of those they envy. In its most extreme forms, it has motivated acts of cruelty and destruction, and even in milder forms it poisons friendships, since it is difficult to rejoice wholeheartedly in a friend's good fortune while secretly wishing that it had been one's own.",
+      "( A ) envy is often harmful, some thinkers have argued that it also contains information worth attending to. We rarely envy people whose lives have nothing in common with our own; a student is unlikely to envy a famous film star, but may feel a sharp pain on learning that a classmate has won a prize. Envy thus tends to arise among people who regard themselves as comparable, and it reveals, sometimes more honestly than our stated beliefs, what we actually value and what we believe we ought to have achieved.",
+      "Psychologists have accordingly drawn a distinction between two forms of envy. In the hostile form, the envious person wishes to bring the other person down to his or her own level. In what has been called benign envy, by contrast, the person feels the same pain of comparison but responds by trying to rise to the level of the other, working harder or learning from the example of the person who is envied. Whether envy becomes destructive or productive may depend less on the feeling itself than on whether the person believes that improvement is possible.",
+      "This point has implications that go beyond individual psychology. In societies where people believe that success is distributed by luck or by unfair advantage, envy is more likely to take its hostile form, since there seems to be no way of improving one's own position except by damaging the position of others. Where opportunities are genuinely open, envy may instead become a spur to effort. In this sense, the forms of envy that are common in a society may tell us something about how fair its members believe it to be.",
+      "None of this makes envy pleasant, and there is wisdom in the traditional advice to resist its hostile impulses. But an emotion that is so widespread is unlikely to be eliminated by condemnation alone. Perhaps the more useful task is to listen to what envy tells us about our desires, and then to ask whether those desires are truly our own or merely the product of endless comparison with others.",
+    ],
+    ja: [
+      '人間が経験するすべての感情のうちで、ねたみはおそらく人が最も認めたがらないものである。怒っていることや、こわがっていることや、恋愛でやきもちをやいていることさえ、私たちはさほどはずかしがらずに打ち明けるかもしれないが、友人の成功をねたんでいると言うことは、自分の中の何かいやしく小さいものをさらけ出すように思われる。多くの文化の道徳の伝統はねたみを悪徳として非難してきたが、それでもねたみはほとんどどこにでもあるように見える。このことは、ねたみは単に非難するよりも、理解するに値することを示している。',
+      'ねたみはふつう、富であれ才能であれ美しさであれ評価であれ、自分がほしいのにもっていないものを他人がもっているのを見たときに生じる、苦しい感情と定義される。ねたみを単なる欲求から区別するのは、それがもの自体だけでなく、それをもっている人に向けられるという点である。もっと大きな家がほしいだけの人は、それを手に入れれば満足できるが、ねたむ人は、となりの人の家を侮辱のように感じるかもしれず、そのためとなりの人がその家を失うことさえ、一種の安心をもたらすのである。',
+      'ねたみが悪い評判を得てきたのは、この敵意の要素のためである。ねたみは、人に他人の業績をけなさせたり、うわさを広めさせたり、ねたむ相手の不幸に満足を覚えさせたりすることがある。最もはげしい形では、ねたみは残酷さや破壊の行為を引き起こしてきたし、よりおだやかな形でも友情をむしばむ。心ひそかにそれが自分のものだったらよかったのにと願いながら、友人の幸運を心から喜ぶのはむずかしいからである。',
+      'ねたみはしばしば害をもたらすが、そこには注意を向ける価値のある情報もふくまれていると論じた思想家もいる。私たちは、自分の生活と何の共通点もない人をねたむことはめったにない。生徒が有名な映画スターをねたむことはまずないが、同級生が賞を取ったと知ると、するどい痛みを感じるかもしれない。このように、ねたみは自分たちを比べられると考える人々のあいだで生じやすく、それは、ときには私たちが口にする信念よりも正直に、私たちが実際に何を大切にし、何をなしとげているべきだったと考えているかを明らかにするのである。',
+      'そこで心理学者たちは、二つの形のねたみを区別してきた。敵意のある形では、ねたむ人は相手を自分の水準まで引きずり下ろしたいと願う。これに対して、良性のねたみとよばれるものでは、人は同じ比較の痛みを感じるが、相手の水準まで上がろうとすることで反応する。もっと努力したり、ねたむ相手のお手本から学んだりするのである。ねたみが破壊的になるか生産的になるかは、感情そのものよりも、その人が向上は可能だと信じているかどうかによるのかもしれない。',
+      'この点は、個人の心理をこえた意味をもつ。成功が運や不当な有利さによって配分されると人々が信じている社会では、ねたみは敵意のある形をとりやすい。他人の立場をそこなう以外に、自分の立場をよくする方法がないように思われるからである。機会が本当に開かれているところでは、ねたみはむしろ努力へのはげみになるかもしれない。この意味で、ある社会でよく見られるねたみの形は、その社会の人々が社会をどれほど公正だと信じているかについて、何かを教えてくれるのかもしれない。',
+      'これらのどれも、ねたみを心地よいものにするわけではないし、その敵意ある衝動に抵抗せよという伝統的な忠告には知恵がある。しかし、これほど広く見られる感情が、非難だけで取りのぞかれることはまずない。おそらくより役に立つ仕事は、ねたみが私たちの欲求について教えてくれることに耳をかたむけ、そのうえで、その欲求が本当に自分自身のものなのか、それとも他人との果てしない比較から生まれたものにすぎないのかを問うことである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ねたみはしばしば害をもたらすが、注意を向ける価値のある情報もふくむ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ねたみは人が最も認めたがらない感情かもしれない。', answer: true, why: '第1段落 envy is perhaps the one that people are least willing to admit。' },
+      { statement: '筆者によれば、ねたみはもの自体にだけ向けられ、それをもつ人には向けられない。', answer: false, why: '第2段落 it is directed not only at the thing itself but at the person who has it。' },
+      { statement: '筆者によれば、私たちは自分と比べられると考える人をねたみやすい。', answer: true, why: '第4段落 envy thus tends to arise among people who regard themselves as comparable。' },
+      { statement: '筆者は、ねたみは非難するだけで取りのぞけると考えている。', answer: false, why: '第7段落 is unlikely to be eliminated by condemnation alone。' },
+    ],
+    qa: [
+      { q: 'How does a person with benign envy respond, according to the fifth paragraph?', choices: ['By trying to rise to the level of the person who is envied.', 'By trying to bring the other person down.', 'By spreading rumors about the other person.', 'By pretending not to care at all.'], answer: 0, why: '第5段落 responds by trying to rise to the level of the other。' },
+      { q: 'In what kind of society is envy more likely to take its hostile form?', choices: ['One where people believe success depends on luck or unfair advantage.', 'One where opportunities are genuinely open.', 'One where no one compares themselves with others.', 'One where everyone is famous.'], answer: 0, why: '第6段落 In societies where people believe that success is distributed by luck or by unfair advantage ...。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
