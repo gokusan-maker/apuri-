@@ -2092,6 +2092,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 40 L50 56" fill="none" stroke="#f5f5f4" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'asianstubtail')
+    return (
+      <g>
+        {/* 白っぽいまゆと、とても短い尾 */}
+        <path d="M37 41 L48 39" fill="none" stroke="#fef3c7" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
