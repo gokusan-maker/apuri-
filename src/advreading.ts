@@ -29822,6 +29822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mortality',
+    title: 'Living with the Knowledge of Death',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few facts about human life are as certain as the fact that it will end, yet few are as rarely discussed. In many modern societies, death has been moved out of ordinary experience: people die mainly in hospitals rather than at home, funerals are handled by professionals, and conversation about mortality is often regarded as gloomy or inappropriate. This avoidance is understandable, since the thought of one's own death can provoke deep anxiety. Yet thinkers in many traditions have argued that an awareness of mortality, far from being merely depressing, can give life much of its meaning and direction.",
+      "One reason for this view is that limits create value. If we had unlimited time, no particular moment would be precious, since there would always be more moments to come. It is precisely because our time is finite that we must choose how to spend it, and these choices express what we care about most. A person who knows that he or she has only a few years left may suddenly see clearly which relationships and activities truly matter, and which have merely occupied space. Awareness of mortality, in this sense, can serve as a kind of clarifying lens.",
+      "This clarifying effect is often reported by people who have faced serious illness or survived accidents. Many describe a new appreciation for ordinary experiences, a reduced concern with trivial worries, and a stronger desire to express love and gratitude to those around them. ( A ) such experiences are often painful and frightening, they can also bring a sense of freedom, releasing people from ambitions and anxieties that no longer seem important in the light of what remains.",
+      "Some philosophers have gone further, suggesting that it is only in facing death that a person can live authentically. Most of the time, they argue, we follow the routines and expectations of those around us without asking whether they reflect our own values. The recognition that our lives belong to us alone, and will end, calls us to take responsibility for how we live, rather than drifting through life as though there were always more time to decide.",
+      "This does not mean that one should think about death constantly. A mind preoccupied with mortality may become paralyzed by fear or sadness, unable to enjoy the present. The aim is rather to allow awareness of mortality to inform one's choices without dominating one's thoughts, much as a traveler who knows that a journey will end may enjoy each stage of it more fully.",
+      "Cultures have developed many ways of maintaining this balance. Some traditions encourage people to reflect regularly on the brevity of life, through rituals, festivals for remembering the dead, or simple daily reminders. Others emphasize the continuity between generations, presenting individual death as part of a larger story in which each person receives life from those who came before and passes something on to those who follow. In such traditions, remembering the dead is not merely a way of mourning but also a way of keeping their influence alive in the present.",
+      "Perhaps the deepest lesson of mortality is that it connects us to one another. Every human being, whatever his or her wealth, status, or achievements, shares the same fundamental condition. Recognizing this shared fate may encourage compassion, reminding us that the people around us are also living limited lives, with hopes and fears much like our own, and that the time we spend with them is a gift that will not last forever. To live with this knowledge is not to live in sorrow, but to live with a heightened sense of the value of each day and of each person we are fortunate enough to share it with. Mortality, understood in this way, is not only the end of life but also one of the sources of its depth.",
+    ],
+    ja: [
+      '人間の生活についての事実のうち、それがいつか終わるという事実ほど確かなものはほとんどないが、これほどめったに話題にされないものもほとんどない。多くの現代社会では、死はふつうの経験の外に移されてきた。人々は主に家ではなく病院で亡くなり、葬儀は専門家によってとり行われ、死についての会話はしばしば暗い、あるいはふさわしくないものとみなされる。この回避は理解できる。自分自身の死について考えることは深い不安を引き起こしうるからである。しかし多くの伝統の思想家たちは、死への自覚は、単に気をめいらせるものであるどころか、人生にその意味と方向の多くをあたえうると論じてきた。',
+      'この見方の一つの理由は、限りが価値を生むということである。もし時間が限りなくあれば、どの瞬間も貴重ではないだろう。いつでもこれから来る瞬間がもっとあるからである。時間が有限であるからこそ、私たちはそれをどうすごすかを選ばなければならず、そうした選択は私たちが最も大切にしているものを表している。残りが数年しかないと知った人は、どの関係や活動が本当に大切で、どれがただ場所をしめていただけなのかを、とつぜんはっきりと見るかもしれない。この意味で、死への自覚は一種の、ものごとをはっきり見せるレンズとしてはたらきうるのである。',
+      'このはっきり見せる効果は、重い病気に直面した人や事故から生きのびた人によってしばしば語られる。多くの人が、ふつうの経験への新しい感謝や、ささいな心配へのこだわりがへったことや、まわりの人に愛と感謝を表したいという強い願いについて述べている。そうした経験はしばしばつらく恐ろしいものだが、それはまた一種の自由ももたらしうる。残されたものに照らすともはや大切に思えない野心や不安から、人々を解き放つのである。',
+      'さらに一歩進んで、人は死に向き合ってはじめて自分らしく生きられると示唆した哲学者もいる。たいていのとき、私たちはまわりの人々の決まりごとや期待に、それが自分自身の価値観を反映しているかどうかを問わずに従っている、と彼らは主張する。自分の人生は自分だけのものであり、いつか終わるという認識は、決めるための時間がいつでももっとあるかのように人生をただよって進むのではなく、どう生きるかに責任を負うよう私たちに呼びかけるのである。',
+      'これは、たえず死について考えるべきだという意味ではない。死で頭がいっぱいの心は、恐れや悲しみで動けなくなり、今を楽しめなくなるかもしれない。めざすのはむしろ、死への自覚が考えを支配することなく選択に影響をあたえるようにすることである。ちょうど旅がいつか終わると知っている旅人が、その一つ一つの区間をより十分に楽しめるのと同じように。',
+      '文化はこのつりあいを保つための多くの方法を育ててきた。儀式や亡くなった人をしのぶ祭りや、毎日のささやかな思い出させるものを通して、人生の短さについて定期的にふり返るよう人々にすすめる伝統もある。また、世代と世代のつながりを強調し、個人の死を、一人一人が先に来た人々から命を受け取り、後に続く人々に何かを手わたしていく、より大きな物語の一部として示す伝統もある。そうした伝統では、亡くなった人をしのぶことは単に悲しむ方法ではなく、その人の影響を今に生かし続ける方法でもあるのである。',
+      'おそらく死の最も深い教訓は、それが私たちをたがいに結びつけるということである。どんな人間も、富や地位や業績がどうであれ、同じ根本的な条件を分かち合っている。この共通の運命を認めることは、思いやりをうながすかもしれない。まわりの人々もまた、自分とよく似た希望と恐れをもって限られた人生を生きていること、そして彼らとすごす時間は永遠には続かない贈り物であることを、思い出させてくれるからである。この知識とともに生きるとは、悲しみの中で生きることではなく、一日一日と、それを分かち合える幸運にめぐまれた一人一人の価値を、より強く感じながら生きることである。このように理解すれば、死は人生の終わりであるだけでなく、その深さの源の一つでもあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした経験はつらく恐ろしいものだが、一種の自由ももたらしうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、多くの現代社会では人々は主に家で亡くなる。', answer: false, why: '第1段落 people die mainly in hospitals rather than at home。' },
+      { statement: '筆者によれば、時間が有限であるからこそ、それをどうすごすかを選ばなければならない。', answer: true, why: '第2段落 It is precisely because our time is finite that we must choose how to spend it。' },
+      { statement: '筆者は、たえず死について考えるべきだと主張している。', answer: false, why: '第5段落 This does not mean that one should think about death constantly。' },
+      { statement: '筆者によれば、共通の運命を認めることは思いやりをうながすかもしれない。', answer: true, why: '第7段落 Recognizing this shared fate may encourage compassion。' },
+    ],
+    qa: [
+      { q: 'What do people who have faced serious illness often report?', choices: ['A new appreciation for ordinary experiences.', 'More concern with trivial worries.', 'Less desire to express love.', 'No change in their feelings.'], answer: 0, why: '第3段落 a new appreciation for ordinary experiences。' },
+      { q: 'How do some traditions present individual death, according to the sixth paragraph?', choices: ['As part of a larger story connecting generations.', 'As something never to be mentioned.', 'As the end of all meaning.', 'As a punishment.'], answer: 0, why: '第6段落 presenting individual death as part of a larger story。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
