@@ -2077,6 +2077,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="44" cy="46" rx="4" ry="3" fill="#f8fafc" />
       </g>
     )
+  if (species === 'willowtit')
+    return (
+      <g>
+        {/* 黒いぼうしと黒いあご */}
+        <ellipse cx="50" cy="32" rx="11" ry="6" fill="#0c0a09" />
+        <ellipse cx="50" cy="55" rx="4" ry="3" fill="#0c0a09" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
