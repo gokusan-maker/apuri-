@@ -27660,6 +27660,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-gratitude',
+    title: 'The Weight of Gratitude',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Gratitude is usually praised as one of the simplest and most agreeable of virtues, something that parents teach small children when they remind them to say thank you after receiving a present. Yet when we look at gratitude more closely, it turns out to be a surprisingly complicated emotion, one that involves not only pleasure at having received something good but also an awareness of depending on others, and that awareness is not always comfortable. To feel grateful is to admit that we did not achieve everything by ourselves, and for people who value independence, this admission can feel almost like a defeat.",
+      "The discomfort becomes clearer if we consider why people sometimes refuse help that would genuinely benefit them. A person who accepts a favor may feel that he or she has entered into a kind of debt, an obligation to return the kindness at some point in the future, and the sense of owing something can weigh more heavily than the original need. In many societies, elaborate customs exist for returning gifts of roughly equal value, as though the purpose of such customs were to cancel the debt as quickly as possible and restore a relationship in which neither side owes anything to the other.",
+      "( A ) these customs help to maintain balance in social life, they also reveal a misunderstanding about what gratitude really is. If gratitude were simply a feeling of debt, then the ideal situation would be one in which all debts had been repaid and no one needed to feel grateful any longer. But a world in which everyone had repaid everyone else exactly would be a strangely cold one, in which relationships consisted of nothing more than a series of completed exchanges. The deepest forms of gratitude seem to arise precisely when repayment is impossible, as when we think of what we have received from parents, teachers, or people who died long before we were born.",
+      "Consider the language we speak, the knowledge we inherit, and the institutions that protect us. None of these was created by us, and most of the people who built them are unknown to us and can never be thanked in person. We cannot repay them in any ordinary sense, because they are no longer here to receive anything. What we can do, however, is pass on what we have received to those who come after us, so that gratitude takes the form not of returning a gift to its giver but of continuing a chain of giving that extends far beyond any single relationship.",
+      "This view suggests that gratitude is less a feeling about the past than an orientation toward the future. A grateful person does not merely remember what others have done; he or she is moved to act in ways that keep alive the goods that were received. In this sense, gratitude is closely connected to responsibility, for to recognize that one's advantages depend on the efforts of others is also to recognize that one's own efforts may matter to people one will never meet.",
+      "There is, of course, a danger that talk of gratitude can be used to silence legitimate complaints. People who are told that they should be thankful for what they have may be discouraged from pointing out injustices, as though any criticism of a society were a sign of ingratitude toward it. Genuine gratitude, however, does not require us to pretend that what we received was perfect. On the contrary, it is often because we value what we have inherited that we wish to improve it, just as a person who loves an old house will repair it rather than simply admire it.",
+      "Gratitude, then, is neither a simple politeness nor a debt waiting to be cleared. It is a way of understanding ourselves as part of a larger story, one in which we are both receivers and givers, indebted to those who came before and responsible to those who will follow.",
+    ],
+    ja: [
+      '感謝は、ふつう最も単純で心地よい徳の一つとしてほめられ、親はおさない子どもにプレゼントをもらったらありがとうと言うように教える。しかし、感謝をもっとよく見ると、それは意外にも複雑な感情であることがわかる。そこには、よいものを受け取った喜びだけでなく、他人にたよっているという自覚もふくまれており、その自覚はいつも心地よいとはかぎらない。感謝を感じることは、すべてを自分一人でなしとげたのではないと認めることであり、自立を大切にする人々にとって、この承認はほとんど敗北のように感じられることもある。',
+      'この居心地の悪さは、人々がなぜ、本当に自分のためになる助けをときにことわるのかを考えると、よりはっきりする。好意を受け入れる人は、一種の借りを負ったと感じるかもしれない。つまり、いつか将来その親切を返す義務を負ったと感じるのであり、何かを負っているという感覚は、もとの必要よりも重くのしかかることがある。多くの社会には、おおよそ同じ価値の贈り物を返すための手のこんだ習慣があるが、それはまるで、そうした習慣の目的が、借りをできるだけ早く帳消しにし、どちらの側も相手に何も負っていない関係を取りもどすことであるかのようである。',
+      'こうした習慣は社会生活のつりあいを保つのに役立つが、感謝とは本当は何であるかについての誤解も明らかにしている。もし感謝が単に借りの感覚にすぎないのなら、理想的な状態とは、すべての借りが返され、もはやだれも感謝を感じる必要がない状態であろう。しかし、だれもがほかのすべての人にきっちり返し終えた世界は、関係が完了した交換の連続にすぎないような、奇妙に冷たい世界であろう。最も深い形の感謝は、まさに返すことが不可能なときに生じるように思われる。たとえば、親や先生や、私たちが生まれるずっと前に亡くなった人々から受け取ったものについて考えるときである。',
+      '私たちが話す言語や、受けつぐ知識や、私たちを守る制度について考えてみよう。これらのどれも私たちが作ったものではなく、それを築いた人々のほとんどは私たちの知らない人であり、直接お礼を言うことは決してできない。彼らはもう何かを受け取るためにここにいないのだから、私たちはふつうの意味で彼らに返すことはできない。しかし私たちにできるのは、受け取ったものを後から来る人々に手わたすことである。そうすれば感謝は、贈り物をくれた人に返すという形ではなく、どの一つの関係もはるかにこえて広がる、贈ることのつながりを続けるという形をとるのである。',
+      'この見方は、感謝が過去についての感情というより、未来へ向かう姿勢であることを示している。感謝する人は、他人がしてくれたことをただ思い出すだけではない。受け取ったよいものを生かし続けるようなしかたで行動するよう、心を動かされるのである。この意味で、感謝は責任と深く結びついている。自分の有利な点が他人の努力にたよっていると認めることは、自分自身の努力が、決して会うことのない人々にとって大切かもしれないと認めることでもあるからだ。',
+      'もちろん、感謝の話が、正当な不満をだまらせるために使われるおそれもある。今あるものに感謝すべきだと言われる人々は、不正を指摘する気持ちをくじかれるかもしれない。まるで社会へのどんな批判もその社会への恩知らずのしるしであるかのように、である。しかし、本当の感謝は、受け取ったものが完全だったふりをすることを求めはしない。それどころか、受けついだものを大切に思うからこそ、それをよくしたいと願うことが多いのである。古い家を愛する人が、ただながめるのではなく修理するのと同じように。',
+      'それゆえ感謝は、単なる礼儀でも、清算されるのを待つ借りでもない。それは、自分をより大きな物語の一部として理解するしかたであり、その物語の中で私たちは受け取る者でも与える者でもあり、先に来た人々に恩を受け、後に続く人々に責任を負っているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「こうした習慣はつりあいを保つのに役立つが、誤解も明らかにする」という対比・譲歩の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、感謝には他人にたよっているという自覚がふくまれ、それはいつも心地よいとはかぎらない。', answer: true, why: '第1段落 an awareness of depending on others, and that awareness is not always comfortable。' },
+      { statement: '筆者によれば、だれもがきっちり返し終えた世界は、あたたかい理想の世界である。', answer: false, why: '第3段落 would be a strangely cold one。' },
+      { statement: '筆者によれば、受け取ったものを後の人々に手わたすことが、感謝の一つの形になる。', answer: true, why: '第4段落 pass on what we have received to those who come after us。' },
+      { statement: '筆者は、本当の感謝のためには、受け取ったものが完全だったふりをする必要があると考えている。', answer: false, why: '第6段落 Genuine gratitude ... does not require us to pretend that what we received was perfect。' },
+    ],
+    qa: [
+      { q: 'Why might a person refuse help that would genuinely benefit him or her, according to the second paragraph?', choices: ['Accepting a favor can feel like entering into a debt.', 'The help is always too expensive.', 'Other people never offer real help.', 'Accepting help is forbidden by custom.'], answer: 0, why: '第2段落 he or she has entered into a kind of debt ... the sense of owing something can weigh more heavily than the original need。' },
+      { q: 'What does the comparison with a person who loves an old house show?', choices: ['Valuing what we inherited can make us wish to improve it.', 'Old houses should never be repaired.', 'Gratitude means accepting everything as it is.', 'People should buy new houses instead.'], answer: 0, why: '第6段落 it is often because we value what we have inherited that we wish to improve it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
