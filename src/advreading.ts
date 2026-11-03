@@ -28220,6 +28220,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-friendship',
+    title: 'Why Friends Matter',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Friendship occupies a curious position among human relationships. Unlike family ties, it is not given to us by birth, and unlike marriage or employment, it is usually not established by any formal agreement or ceremony. Friends choose one another freely and may drift apart without anyone announcing that the friendship has ended. Yet many people regard their friendships as among the most valuable things in their lives, and philosophers since ancient times have considered friendship to be essential to a good human life.",
+      "One influential ancient account distinguished between three kinds of friendship. Some friendships are based on usefulness, as when colleagues or business partners help one another; others are based on pleasure, as when people enjoy each other's company in sport or conversation. These friendships are genuine, but they tend to be fragile, since they last only as long as the usefulness or the pleasure continues. The highest kind of friendship, according to this account, is one in which each person values the other for his or her own sake, for the kind of person the other is, rather than for any benefit that the relationship provides.",
+      "This distinction raises an interesting puzzle. If I value my friend for his or her own sake, it seems that I must value certain qualities in that person, such as kindness, intelligence, or humor. But if another person possessed the same qualities to a greater degree, would I then have reason to prefer that person to my friend? Most of us feel that the answer is clearly no, and that a friend who could be replaced by anyone with better qualities would not really be a friend at all. ( A ) friendship begins with an appreciation of qualities, it seems to develop into something more particular, an attachment to this specific person with whom one shares a history.",
+      "Shared history may indeed be one of the most important features of friendship. Friends accumulate memories, jokes, and understandings that no one else possesses, and through these shared experiences they come to know each other in ways that cannot be easily transferred to a new relationship. This is perhaps why the loss of an old friend can be so painful even when new friends are available: what is lost is not merely a person with certain qualities but a part of one's own past that only that person shared.",
+      "Modern life presents friendship with new opportunities and new challenges. Communication technologies make it possible to maintain contact with friends across great distances, and social media allow people to have hundreds or even thousands of connections. Yet some observers worry that this abundance of connections may come at the cost of depth. Close friendship requires time, attention, and a willingness to be vulnerable, and these may be harder to sustain when attention is divided among many relationships and when much communication takes the form of brief messages rather than extended conversation.",
+      "Friendship also has a moral dimension that is easy to overlook. A good friend is not someone who always agrees with us or flatters us but someone who cares enough to tell us difficult truths and to encourage us to become better than we are. In this sense, friendship is not only a source of comfort but also a kind of moral education, through which people learn to see themselves more clearly and to consider the interests of another as seriously as their own.",
+      "Perhaps this is why friendship has been valued so highly despite its informality. Precisely because no law or contract holds friends together, the continuation of a friendship is a repeated free choice, renewed each time friends make the effort to remain in each other's lives. In a world that increasingly measures relationships by their usefulness, such freely chosen bonds may remind us that some of the most important things in life are those we pursue for their own sake.",
+    ],
+    ja: [
+      '友情は、人間の関係のなかで奇妙な位置をしめている。家族のきずなとちがって、それは生まれによってあたえられるものではなく、結婚や雇用とちがって、ふつうは正式な取り決めや儀式によって結ばれるものでもない。友人はたがいを自由に選び、だれも友情が終わったと告げることなく、はなれていくこともある。しかし多くの人は友情を人生で最も価値あるものの一つとみなしており、古代以来の哲学者たちは、友情をよい人生に欠かせないものと考えてきた。',
+      '影響力のある古代のある説明は、三種類の友情を区別した。ある友情は有用さにもとづいている。同僚や仕事の相手がたがいに助け合うような場合である。別の友情は楽しさにもとづいている。スポーツや会話で人々がたがいといっしょにいるのを楽しむような場合である。これらの友情は本物だが、もろくなりがちである。有用さや楽しさが続くあいだしか続かないからである。この説明によれば、最も高い種類の友情とは、それぞれが相手を、関係があたえてくれる利益のためではなく、相手自身のために、つまり相手がどういう人であるかのために大切にするものである。',
+      'この区別は興味深い難問を生む。もし私が友人をその人自身のために大切にするのなら、私はその人のある性質、たとえばやさしさや知性やユーモアを大切にしているにちがいないように思われる。しかし、もし別の人が同じ性質をもっと多くもっていたら、私には友人よりもその人を好む理由があることになるのだろうか。私たちのほとんどは、答えは明らかにいいえであり、もっとよい性質をもつだれとでも取りかえられるような友人は、本当の友人ではまったくないだろうと感じる。友情は性質を認めることから始まるかもしれないが、それはもっと個別的なもの、つまり歴史を分かち合ってきたこの特定の人への愛着へと育っていくように思われる。',
+      '分かち合った歴史は、実際に友情の最も大切な特徴の一つかもしれない。友人どうしは、ほかのだれももっていない思い出や冗談や了解をためていき、こうした共通の経験を通して、新しい関係にはたやすく移せないしかたでおたがいを知るようになる。新しい友人ができる場合でも、古い友人を失うことがあれほどつらいのは、おそらくこのためである。失われるのは、ある性質をもった人だけでなく、その人だけが分かち合っていた自分自身の過去の一部なのである。',
+      '現代の生活は、友情に新しい機会と新しい課題をもたらしている。通信技術によって、遠くはなれた友人と連絡を保つことができるようになり、SNSによって、人々は何百、あるいは何千ものつながりをもてるようになった。しかし、このつながりの豊かさが深さを犠牲にしているかもしれないと心配する観察者もいる。親しい友情には時間と注意と、弱さを見せる心がまえが必要であり、注意が多くの関係に分かれ、多くのやりとりが長い会話ではなく短いメッセージの形をとるとき、これらは保ちにくくなるかもしれない。',
+      '友情にはまた、見落とされやすい道徳的な面もある。よい友人とは、いつも私たちに賛成したり、おせじを言ったりする人ではなく、むずかしい真実を伝え、今よりよい人間になるようはげましてくれるほど気にかけてくれる人である。この意味で、友情はなぐさめの源であるだけでなく、一種の道徳教育でもあり、それを通して人々は、自分自身をよりはっきり見ること、そして他人の利益を自分の利益と同じくらい真剣に考えることを学ぶのである。',
+      'おそらくこれが、友情が形式ばらないものであるにもかかわらず、これほど高く評価されてきた理由である。まさにどんな法律も契約も友人どうしを結びつけていないからこそ、友情が続くことはくり返される自由な選択であり、友人がおたがいの人生にとどまろうと努力するたびに新たにされるのである。関係をますますその有用さではかる世界で、こうした自由に選ばれたきずなは、人生で最も大切なものの中には、それ自体のために追い求めるものがあることを思い出させてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「友情は性質を認めることから始まるかもしれないが、もっと個別的なものへ育つ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、友情はふつう正式な取り決めや儀式によって結ばれる。', answer: false, why: '第1段落 it is usually not established by any formal agreement or ceremony。' },
+      { statement: '古代の説明によれば、有用さや楽しさにもとづく友情はもろくなりがちである。', answer: true, why: '第2段落 they tend to be fragile。' },
+      { statement: '筆者によれば、古い友人を失うと、自分の過去の一部も失われる。', answer: true, why: '第4段落 a part of one’s own past that only that person shared。' },
+      { statement: '筆者によれば、よい友人とはいつも私たちに賛成してくれる人である。', answer: false, why: '第6段落 A good friend is not someone who always agrees with us。' },
+    ],
+    qa: [
+      { q: 'What worry do some observers have about social media and friendship?', choices: ['The abundance of connections may come at the cost of depth.', 'People will have too few friends.', 'Friends will live too close together.', 'Messages will become too long.'], answer: 0, why: '第5段落 this abundance of connections may come at the cost of depth。' },
+      { q: 'Why is the continuation of a friendship described as a repeated free choice?', choices: ['Because no law or contract holds friends together.', 'Because friends sign a new contract every year.', 'Because friendship is required by law.', 'Because families choose our friends.'], answer: 0, why: '第7段落 Precisely because no law or contract holds friends together ...。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
