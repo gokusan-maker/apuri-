@@ -28176,6 +28176,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-food-waste',
+    title: 'The Food We Throw Away',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A remarkable proportion of the food produced in the world is never eaten. Estimates vary, but many studies suggest that roughly one third of all food is lost or thrown away at some stage between the farm and the plate, while at the same time hundreds of millions of people do not have enough to eat. Food waste also has serious environmental consequences, since the land, water, and energy used to produce food that no one consumes are wasted along with it, and food that rots in landfills releases gases that contribute to climate change.",
+      "It is tempting to blame this problem on careless consumers, and households in wealthy countries do throw away large amounts of food. People buy more than they need, misunderstand the dates printed on packages, or discard vegetables that are slightly damaged but perfectly safe to eat. Yet waste occurs at every stage of the food system, and in poorer countries much of the loss happens before food ever reaches a shop, because farmers lack proper storage facilities, refrigeration, or roads on which to transport their crops to market before they spoil.",
+      "Retailers and manufacturers also play a significant role. Supermarkets often reject fruit and vegetables that do not meet strict standards of size and appearance, so that perfectly good produce is left in fields or sold cheaply for animal feed. Shops that wish to appear well stocked may keep shelves full until closing time, knowing that some items will have to be thrown away. ( A ) consumers have come to expect perfect-looking food and full shelves, businesses have little incentive to change these practices, and waste becomes built into the system.",
+      "Because the causes of food waste are so varied, no single solution can address all of them. In poorer regions, investment in storage, transport, and simple preservation techniques may prevent large losses after harvest. In wealthier countries, clearer labeling could help consumers distinguish between dates that indicate safety and those that merely indicate quality, and campaigns encouraging people to plan meals and use leftovers have achieved some success. Some governments have also introduced laws requiring large supermarkets to donate unsold food to charities rather than destroy it.",
+      "Such measures, however, raise their own questions. Donating surplus food to people in need may seem an obvious good, but critics point out that it can turn charities into a convenient means for businesses to dispose of waste, without addressing the reasons why so much surplus is produced in the first place. Moreover, relying on donated leftovers to feed the poor may allow societies to avoid the harder question of why some people cannot afford to buy food at all.",
+      "Technology offers further possibilities. Applications that allow restaurants and shops to sell surplus food cheaply at the end of the day, sensors that monitor the freshness of products, and better methods of predicting demand may all reduce waste. Yet technology alone is unlikely to be sufficient, since much waste results from habits and expectations rather than from a lack of information.",
+      "Ultimately, reducing food waste may require a change in how we value food itself. When food is cheap and plentiful, it is easy to treat it as disposable, but every item that is thrown away represents the labor of farmers, the use of limited natural resources, and a missed opportunity to feed someone who is hungry. Recognizing these hidden costs may be the first step toward a food system that wastes less. Such a change would not require people to return to the scarcity of the past, but only to treat what they eat with the care that its true value deserves, buying with thought, cooking with imagination, and sharing what they cannot use.",
+    ],
+    ja: [
+      '世界で生産される食べ物のおどろくほど大きな割合が、決して食べられることがない。推定はまちまちだが、多くの研究によれば、すべての食べ物のおよそ三分の一が、畑から皿までのどこかの段階で失われたり捨てられたりしている。その一方で、何億もの人々が十分に食べられずにいる。食品ロスはまた深刻な環境への影響ももつ。だれも食べない食べ物を作るのに使われた土地や水やエネルギーも、それとともにむだになり、埋め立て地でくさる食べ物は、気候変動の一因となる気体を出すからである。',
+      'この問題を不注意な消費者のせいにしたくなるし、豊かな国の家庭はたしかに大量の食べ物を捨てている。人々は必要以上に買ったり、包装に印刷された日付を誤解したり、少しいたんでいるだけで食べてもまったく安全な野菜を捨てたりする。しかし、むだは食料の仕組みのあらゆる段階で起きており、貧しい国では、損失の多くは食べ物が店にとどく前に起きている。農家に、作物がいたむ前に市場へ運ぶための適切な保管場所や冷蔵設備や道路がないからである。',
+      '小売業者や製造業者もまた大きな役割を果たしている。スーパーマーケットは、大きさや見た目のきびしい基準を満たさない果物や野菜をしばしば受け取らないので、まったく問題のない農産物が畑に残されたり、家畜のえさとして安く売られたりする。品ぞろえが豊富に見えるようにしたい店は、いくつかの商品は捨てなければならないとわかっていながら、閉店時間まで棚をいっぱいにしておくことがある。消費者が完ぺきな見た目の食べ物といっぱいの棚を期待するようになっているので、企業にはこうしたやり方を変える動機がほとんどなく、むだは仕組みの中に組みこまれてしまう。',
+      '食品ロスの原因はこれほどさまざまなので、どんな一つの解決策もそのすべてに対処することはできない。貧しい地域では、保管や輸送や簡単な保存技術への投資が、収穫後の大きな損失を防ぐかもしれない。豊かな国では、よりわかりやすい表示が、消費者が安全を示す日付と単に品質を示す日付とを区別するのを助けうるし、食事を計画し残り物を使うよう人々にすすめる運動は、いくらかの成功をおさめてきた。また、大きなスーパーマーケットに、売れ残った食べ物を捨てるのではなく慈善団体に寄付するよう求める法律を取り入れた政府もある。',
+      'しかし、そうした対策はそれ自体の問題を生む。余った食べ物を困っている人々に寄付することは明らかによいことに思えるかもしれないが、批判する人々は、それによって慈善団体が、企業にとって、そもそもなぜそれほど多くの余りが生まれるのかという理由に取り組まずにごみを処分する便利な手段になってしまいうると指摘する。さらに、貧しい人々を食べさせるのに寄付された残り物にたよることは、なぜ食べ物を買う余裕さえない人々がいるのかという、よりむずかしい問いを社会がさけることを可能にしてしまうかもしれない。',
+      '技術はさらなる可能性をあたえる。レストランや店が一日の終わりに余った食べ物を安く売れるようにするアプリや、製品の新鮮さを見張るセンサーや、需要を予測するよりよい方法は、どれもむだをへらすかもしれない。しかし、むだの多くは情報の不足からではなく、習慣や期待から生じるので、技術だけで十分になることはまずないだろう。',
+      '結局のところ、食品ロスをへらすには、食べ物そのものをどう大切にするかを変えることが必要なのかもしれない。食べ物が安くて豊富なとき、それを使い捨てのものとしてあつかうのはたやすいが、捨てられる一つ一つの品は、農家の労働と、限りある天然資源の使用と、おなかをすかせただれかを食べさせる機会の喪失とを表している。こうした隠れた費用を認めることが、むだの少ない食料の仕組みへの第一歩なのかもしれない。そうした変化は、人々に過去の食料不足にもどることを求めるものではない。ただ、考えて買い、工夫して料理し、使いきれないものは分け合うことで、食べるものを、その本当の価値にふさわしい注意をもってあつかうことを求めるだけなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「消費者が完ぺきな見た目と満杯の棚を期待するようになっているので、企業には変える動機がない」という理由の Because。' },
+    ],
+    summary: {
+      text: 'About one third of food is lost or wasted. In poorer countries much is lost before reaching shops because farmers lack ( 1 ) and transport, while in richer countries consumers and retailers waste a great deal. Solutions such as clearer labels and ( 2 ) to charities help, but may not address why so much ( 3 ) is produced.',
+      blanks: [
+        { choices: ['storage', 'money', 'land', 'seeds'], answer: 0, why: '第2段落 farmers lack proper storage facilities, refrigeration, or roads。' },
+        { choices: ['donations', 'taxes', 'fines', 'loans'], answer: 0, why: '第4段落 laws requiring large supermarkets to donate unsold food to charities。' },
+        { choices: ['surplus', 'hunger', 'packaging', 'rain'], answer: 0, why: '第5段落 the reasons why so much surplus is produced in the first place。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、貧しい国では損失の多くが食べ物が店にとどく前に起きている。', answer: true, why: '第2段落 much of the loss happens before food ever reaches a shop。' },
+      { statement: '筆者によれば、スーパーマーケットは見た目の悪い野菜も喜んで受け取る。', answer: false, why: '第3段落 Supermarkets often reject fruit and vegetables that do not meet strict standards。' },
+      { statement: '批判する人々は、寄付がむだの根本の原因に取り組まないことを指摘する。', answer: true, why: '第5段落 without addressing the reasons why so much surplus is produced。' },
+      { statement: '筆者は、技術だけで食品ロスの問題は解決できると考えている。', answer: false, why: '第6段落 technology alone is unlikely to be sufficient。' },
+    ],
+    qa: [
+      { q: 'Why does food waste harm the environment, according to the first paragraph?', choices: ['Resources used to produce it are wasted and rotting food releases harmful gases.', 'It makes farmers grow fewer crops.', 'It uses too much plastic packaging.', 'It causes floods in cities.'], answer: 0, why: '第1段落 the land, water, and energy ... are wasted along with it, and food that rots in landfills releases gases。' },
+      { q: 'What may be the first step toward a food system that wastes less?', choices: ['Recognizing the hidden costs of the food that is thrown away.', 'Making food more expensive for everyone.', 'Producing much more food.', 'Closing all supermarkets.'], answer: 0, why: '第7段落 Recognizing these hidden costs may be the first step。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
