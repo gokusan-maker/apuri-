@@ -5610,6 +5610,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Watch] this picture. Is it beautiful?', choices: ['Look at', 'See at', 'Watch at', 'Look'], answer: 0, why: '止まっているものを意識して見るのは look at。' },
     ],
   },
+  {
+    id: 'exam-fix-131',
+    title: '入試の誤文訂正〈131〉（旧帝大レベル：代名詞）',
+    points: ['one は「同じ種類の別のもの（a＋名詞）」、it は「まさにそのもの（the＋名詞）」。比べる名詞のくり返しをさけるときは、単数なら that of ～、複数なら those of ～。each other は「おたがい」で副詞ではないので前置詞が必要なことがある（talk to each other）。主語と同じものを目的語にするときは再帰代名詞（-self）。「2つのうち一方は one、もう一方は the other」「3つ以上の残り全部は the others」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I lost my umbrella, so I bought a new one.', ja: '傘をなくしたので、新しいのを買った。' }],
+    questions: [
+      { sentence: 'I lost my umbrella, so I need to buy [it].', choices: ['one', 'that', 'them', 'this one of'], answer: 0, why: 'なくした傘そのものではなく「別の傘（a umbrella）」なので one。' },
+      { sentence: 'I bought a new bike yesterday, and I love [one].', choices: ['it', 'ones', 'that one of', 'them'], answer: 0, why: '買った自転車そのもの（the bike）を指すので it。' },
+      { sentence: 'The climate of Japan is milder than [the one of] Canada.', choices: ['that of', 'those of', 'it of', 'this of'], answer: 0, why: '単数名詞 the climate のくり返しをさけるので that of。' },
+      { sentence: 'The prices in this store are lower than [that] in the department store.', choices: ['those', 'it', 'this', 'one'], answer: 0, why: '複数名詞 the prices のくり返しなので those。' },
+      { sentence: 'The two students often talk [each other] on the phone.', choices: ['to each other', 'each other to', 'themselves', 'the other'], answer: 0, why: 'each other は代名詞なので、talk のあとには前置詞 to が必要。talk to each other。' },
+      { sentence: 'Please make [you] at home.', choices: ['yourself', 'your', 'yours', 'you self'], answer: 0, why: 'make oneself at home（くつろぐ）。主語と同じなので再帰代名詞 yourself。' },
+      { sentence: 'He hurt [him] while he was playing soccer.', choices: ['himself', 'his', 'he', 'his self'], answer: 0, why: '主語と同じ人を目的語にするので himself。' },
+      { sentence: 'I have two brothers. One lives in Tokyo, and [another] lives in Osaka.', choices: ['the other', 'other', 'the another', 'others'], answer: 0, why: '2人のうち残りの1人は the other。' },
+      { sentence: 'Some students like math, and [other] like English.', choices: ['others', 'the another', 'another', 'other one'], answer: 0, why: '「～な人もいれば、…な人もいる」は Some ～, others …。' },
+      { sentence: 'This bag is too small. Do you have a bigger [it]?', choices: ['one', 'them', 'that', 'ones'], answer: 0, why: '同じ種類の別のもの（a bigger bag）なので one。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

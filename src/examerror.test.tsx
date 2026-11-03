@@ -1877,3 +1877,10 @@ it('正誤問題〈137〉：東大レベル まぎらわしい動詞の単元が
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) did')
 })
+
+it('誤文訂正〈131〉：旧帝大レベル 代名詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-131')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('one')
+})
