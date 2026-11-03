@@ -28496,6 +28496,52 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-plastic',
+    title: 'Beyond the Plastic Bag',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Plastic has transformed modern life. It is light, strong, cheap, and can be shaped into almost any form, and these qualities have made it indispensable in fields ranging from medicine to food storage. Yet the same durability that makes plastic so useful also makes it a serious environmental problem. A plastic bag may be used for only a few minutes, but it can remain in the environment for hundreds of years, and much of the plastic that has ever been produced still exists somewhere on the planet, often in the oceans, where it harms wildlife and breaks down into tiny fragments that enter the food chain.",
+      "In response, many governments have introduced measures to reduce the use of single-use plastics, such as bags, straws, cups, and food containers. Some have banned certain items altogether, while others have required shops to charge customers for plastic bags. The results of the charges have often been striking: in several countries, the number of bags used fell dramatically within months, suggesting that even a small price can change habits that had seemed deeply rooted.",
+      "Critics of these policies, however, point out that the alternatives to plastic are not always better for the environment. Paper bags, for instance, require more energy and water to produce than plastic ones, and cotton bags must be reused many times before their total environmental impact becomes smaller than that of the plastic bags they replace. ( A ) people actually reuse the alternatives frequently, switching from plastic may simply exchange one environmental problem for another, such as greater emissions of greenhouse gases.",
+      "Others argue that the focus on everyday items like bags and straws distracts attention from larger sources of plastic pollution. A great deal of the plastic in the oceans comes from fishing equipment and from regions that lack effective systems for collecting and processing waste. From this perspective, banning straws in wealthy countries may make consumers feel that they are doing their part while having relatively little effect on the overall problem.",
+      "Supporters respond that these criticisms, while valid, do not justify inaction. Reducing single-use plastics is one of many necessary steps, and the visible change in everyday behavior may help to build public support for more ambitious measures. Moreover, policies on bags and straws have encouraged businesses to develop new materials and designs, and have prompted wider discussion about the culture of convenience that produces so much waste in the first place.",
+      "Education and infrastructure matter as well. In many cities, recycling systems are confusing, and people who wish to dispose of plastic responsibly are unsure which items can be recycled and which cannot. As a result, a significant proportion of the plastic placed in recycling bins is contaminated or unsuitable and ends up being burned or buried anyway. Clear rules, reliable collection, and honest information about what actually happens to recycled materials may therefore be as important as restrictions on what people can buy.",
+      "There is also growing recognition that responsibility should not fall on consumers alone. Some countries now require manufacturers to take responsibility for the packaging they produce, paying for its collection and recycling. Such policies give companies a reason to design products that use less material or that can be more easily reused, shifting attention from the moment of disposal to the moment of design.",
+      "The problem of plastic thus illustrates how difficult it is to solve environmental problems through simple rules. Every material has costs, and the most effective policies are likely to be those that consider the entire life of a product, from its manufacture to its disposal, rather than focusing only on the most visible stage. What matters in the end is not merely which materials we use but how much we consume and how carefully we use what we have.",
+    ],
+    ja: [
+      'プラスチックは現代の生活を一変させた。それは軽く、じょうぶで、安く、ほとんどどんな形にもできるので、こうした性質によって、医療から食品の保存まで幅広い分野で欠かせないものになった。しかし、プラスチックをこれほど便利にしているそのじょうぶさが、それを深刻な環境問題にもしている。レジ袋はほんの数分しか使われないかもしれないが、何百年も環境に残りうるし、これまでに作られたプラスチックの多くは今も地球上のどこか、しばしば海の中にあり、そこで野生の生き物に害をあたえ、食物連鎖に入りこむ小さなかけらにくだけていく。',
+      'これにこたえて、多くの政府が、袋やストローやカップや食品の容器のような使い捨てプラスチックの使用をへらす対策を取り入れてきた。ある品目を全面的に禁止した国もあれば、店に客からレジ袋の代金をとるよう求めた国もある。有料化の結果はしばしばめざましく、いくつかの国では、使われる袋の数が数か月のうちに大きくへった。このことは、わずかな値段でさえ、深く根づいているように思われた習慣を変えうることを示している。',
+      'しかし、こうした政策を批判する人々は、プラスチックの代わりのものが環境にとっていつもよいとはかぎらないと指摘する。たとえば紙袋は、プラスチックの袋よりも作るのに多くのエネルギーと水を必要とし、綿の袋は、その環境への影響の合計が、代わりにしたプラスチックの袋より小さくなるまでに、何度も再利用されなければならない。人々が実際に代わりのものをひんぱんに再利用しないかぎり、プラスチックから切りかえることは、ある環境問題を、温室効果ガスのより多い排出のような別の問題と取りかえるだけかもしれない。',
+      '袋やストローのような身近な品目に注目することは、プラスチック汚染のより大きな原因から注意をそらすと主張する人もいる。海のプラスチックの多くは、漁具や、ごみを集めて処理する効果的な仕組みがない地域から来ている。この見方からすれば、豊かな国でストローを禁止することは、消費者に自分の役目を果たしていると感じさせながら、問題全体には比較的小さな効果しかもたないかもしれない。',
+      '支持する人々は、こうした批判はもっともだが、何もしないことを正当化しはしないと答える。使い捨てプラスチックをへらすことは多くの必要な段階の一つであり、日々の行動に目に見える変化が起きることは、もっと大がかりな対策への人々の支持を築くのに役立つかもしれない。さらに、袋やストローについての政策は、企業に新しい素材やデザインを開発するよううながし、そもそもこれほど多くのごみを生んでいる便利さの文化について、より広い議論を引き起こしてきた。',
+      '教育と社会の仕組みもまた大切である。多くの都市ではリサイクルの仕組みがわかりにくく、プラスチックを責任をもって処分したいと思っている人々も、どの品目がリサイクルでき、どれができないのかわからない。その結果、リサイクル用の箱に入れられたプラスチックのかなりの割合がよごれていたり、適していなかったりして、結局は燃やされるか埋められてしまう。それゆえ、わかりやすい決まりや、たよりになる回収や、リサイクルされた素材に実際に何が起きているのかについての正直な情報は、人々が買えるものの制限と同じくらい大切なのかもしれない。',
+      'また、責任が消費者だけに負わされるべきではないという認識も広まっている。今では、製造業者に自らが作る包装の責任を負わせ、その回収とリサイクルの費用をはらうよう求める国もある。そうした政策は、企業に、使う素材が少なかったり、より再利用しやすかったりする製品を設計する理由をあたえ、注意を捨てる瞬間から設計の瞬間へと移すのである。',
+      'このようにプラスチックの問題は、単純な決まりで環境問題を解決するのがいかにむずかしいかを示している。どんな素材にも費用があり、最も効果的な政策は、最も目につく段階だけに注目するのではなく、製造から廃棄まで製品の一生全体を考えるものであろう。結局のところ大切なのは、どの素材を使うかだけでなく、どれだけ消費し、手にしているものをどれだけ大切に使うかなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Since', 'Once'], answer: 0, why: '「人々が実際にひんぱんに再利用しないかぎり、別の問題と取りかえるだけかもしれない」という条件の Unless。' },
+    ],
+    summary: {
+      text: 'Plastic is useful but lasts for centuries in the environment. Charges for plastic bags have sharply reduced their use, but alternatives such as paper and cotton bags must be ( 1 ) many times to be better. Critics also say bans distract from larger sources such as fishing ( 2 ). Effective policies consider a product’s whole life, including its ( 3 ).',
+      blanks: [
+        { choices: ['reused', 'burned', 'sold', 'hidden'], answer: 0, why: '第3段落 cotton bags must be reused many times。' },
+        { choices: ['equipment', 'boats', 'competitions', 'seasons'], answer: 0, why: '第4段落 comes from fishing equipment。' },
+        { choices: ['design', 'color', 'price', 'name'], answer: 0, why: '第7段落 shifting attention from the moment of disposal to the moment of design。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、レジ袋の有料化によって、使われる袋の数が大きくへった国がある。', answer: true, why: '第2段落 the number of bags used fell dramatically within months。' },
+      { statement: '筆者によれば、紙袋はプラスチックの袋より少ないエネルギーで作れる。', answer: false, why: '第3段落 Paper bags ... require more energy and water to produce。' },
+      { statement: '一部の国は、製造業者に包装の回収とリサイクルの費用をはらうよう求めている。', answer: true, why: '第7段落 Some countries now require manufacturers to take responsibility for the packaging。' },
+      { statement: '筆者は、環境問題は単純な決まりでたやすく解決できると考えている。', answer: false, why: '第8段落 how difficult it is to solve environmental problems through simple rules。' },
+    ],
+    qa: [
+      { q: 'Why may banning straws in wealthy countries have relatively little effect?', choices: ['Much ocean plastic comes from fishing equipment and regions without good waste systems.', 'Nobody in wealthy countries uses straws.', 'Straws are made of paper.', 'Oceans contain no plastic.'], answer: 0, why: '第4段落 A great deal of the plastic in the oceans comes from fishing equipment and from regions that lack effective systems。' },
+      { q: 'What matters in the end, according to the last paragraph?', choices: ['How much we consume and how carefully we use what we have.', 'Using only paper products.', 'Banning all materials.', 'Making plastic more expensive than gold.'], answer: 0, why: '第8段落 how much we consume and how carefully we use what we have。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
