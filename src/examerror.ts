@@ -3482,6 +3482,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He answered the question (A) with a smile (B) at (C) his (D) face.', choices: ['(A) with a smile', '(B) at', '(C) his', '(D) face'], answer: 1, why: '「顔に笑みを浮かべて」は with a smile on his face。' },
     ],
   },
+  {
+    id: 'exam-error-adjective-kokkoritsu',
+    title: '入試の正誤問題〈147〉（国公立レベル：形容詞の叙述用法と後置）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'alive・asleep・awake・afraid・alike・aware などの a- で始まる形容詞は、名詞の前に置けず補語として使う（the sleeping baby／The baby is asleep）。名詞の前では live・living・similar などを使う。something・anything など -thing の語は形容詞を後ろに置く（something cold）。be afraid of・be aware of の前置詞にも注意。',
+    ],
+    examples: [
+      { en: 'The fish was still alive.', ja: 'その魚はまだ生きていた。' },
+      { en: 'I want something cold to drink.', ja: '何か冷たい飲み物がほしい。' },
+    ],
+    questions: [
+      { sentence: 'The (A) asleep (B) baby (C) was lying (D) in the bed.', choices: ['(A) asleep', '(B) baby', '(C) was lying', '(D) in the bed'], answer: 0, why: 'asleep は名詞の前に置けない（叙述用法だけ）。The sleeping baby。' },
+      { sentence: 'We found the fish (A) still (B) live (C) in (D) the net.', choices: ['(A) still', '(B) live', '(C) in', '(D) the net'], answer: 1, why: '「生きている」を補語で言うときは alive。still alive。' },
+      { sentence: 'Many children are (A) afraid (B) of (C) to (D) the dark.', choices: ['(A) afraid', '(B) of', '(C) to', '(D) the dark'], answer: 2, why: 'be afraid of ～。to は要らない。' },
+      { sentence: 'There are (A) alive (B) fish (C) in (D) this tank.', choices: ['(A) alive', '(B) fish', '(C) in', '(D) this tank'], answer: 0, why: 'alive は名詞の前に置けない。live fish／living fish。' },
+      { sentence: 'He was (A) sound (B) sleep, so he (C) did not (D) hear the phone.', choices: ['(A) sound', '(B) sleep, so he', '(C) did not', '(D) hear the phone'], answer: 1, why: '「ぐっすり眠って」は sound asleep（fast asleep）。' },
+      { sentence: 'I want (A) cold something (B) to drink (C) after (D) the game.', choices: ['(A) cold something', '(B) to drink', '(C) after', '(D) the game'], answer: 0, why: '-thing の語は形容詞を後ろに置く。something cold。' },
+      { sentence: 'Did you (A) see (B) new anything (C) at (D) the zoo?', choices: ['(A) see', '(B) new anything', '(C) at', '(D) the zoo?'], answer: 1, why: 'anything new。-thing の語は後ろから形容詞で修飾。' },
+      { sentence: 'The two (A) alike (B) sisters (C) wore (D) the same dress.', choices: ['(A) alike', '(B) sisters', '(C) wore', '(D) the same dress'], answer: 0, why: 'alike は名詞の前に置けない。The two similar sisters。' },
+      { sentence: 'Are you (A) aware (B) about (C) the danger (D) ahead?', choices: ['(A) aware', '(B) about', '(C) the danger', '(D) ahead?'], answer: 1, why: 'be aware of ～。about ではない。' },
+      { sentence: 'The children were (A) awake (B) all night, so they (C) were (D) sleep in class.', choices: ['(A) awake', '(B) all night, so they', '(C) were', '(D) sleep in class'], answer: 3, why: 'be のあとの補語は形容詞。sleepy。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
