@@ -2183,6 +2183,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 50 L22 40 L26 34 M66 50 L78 40 L74 34" fill="none" stroke="#3f2a14" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'divingbeetle')
+    return (
+      <g>
+        {/* はねのふちの黄色い線と、空気のあわ */}
+        <path d="M32 46 Q50 34 68 46" fill="none" stroke="#facc15" strokeWidth="2" />
+        <circle cx="72" cy="30" r="3" fill="none" stroke="#bae6fd" strokeWidth="1.5" />
+        <circle cx="78" cy="22" r="2" fill="none" stroke="#bae6fd" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
