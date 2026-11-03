@@ -27354,6 +27354,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-names',
+    title: 'What Is in a Name?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Names seem at first to be the simplest of words. A name merely points to a particular person, place, or thing, without describing its qualities, and it might appear that any name would serve as well as any other. A child called Hana is not more like a flower than a child with a different name, and a town is not made older by being called Old Town. Yet people care deeply about names, choose them with great deliberation, and feel hurt when their own names are forgotten or mispronounced. This attachment suggests that names do more than simply identify. They seem to carry something of the person or place they name, as if the word and the thing were bound together in a way that ordinary words are not.",
+      "One reason is that names connect individuals to histories larger than themselves. A name may be inherited from a grandparent, chosen to honor a respected figure, or drawn from a religious or literary tradition. In receiving such a name, a child is placed within a web of relationships and expectations that existed before he or she was born. Even names chosen for their sound alone carry associations, reflecting the tastes of a particular time and place. To learn a person's name is, in a small way, to learn something about the world from which that person comes. In many cultures, the choice of a name is treated as a matter of great importance, sometimes involving the whole family or even the wider community.",
+      "Names also shape how others perceive us. Studies have suggested that people sometimes form impressions of strangers on the basis of their names alone, guessing at their age, background, or character before they have met. In some cases, such impressions have had unfortunate consequences, as when job applicants with names associated with particular ethnic groups have received fewer responses than others with identical qualifications. ( A ) a name tells us nothing directly about a person's abilities, it can influence the opportunities that person receives. A name, in other words, may become a kind of invisible label that others read before they have had any chance to know the person behind it.",
+      "The act of naming carries a kind of power. To give a name is to claim the authority to decide how something will be known, and this authority has often been exercised in unequal ways. Explorers and colonizers frequently renamed places that already had names given by the people who lived there, and these new names sometimes erased histories that the original names had preserved. In recent decades, many communities have sought to restore older names, seeing this not as a minor change of labels but as an act of recognition and repair.",
+      "Names matter in less political ways as well. When we learn the names of plants, birds, or stars, our perception of the world often becomes sharper. A walk through a forest is a different experience for someone who can distinguish and name the trees, since names help us to notice differences that we might otherwise overlook. In this sense, naming is not only a way of labeling what we already see but also a way of learning to see more. A child who learns the names of the stars begins to find patterns in a sky that once seemed merely full of scattered lights.",
+      "Perhaps this is why the loss of a name can feel like a loss of something more. When languages disappear, the names they contained for local places, plants, and practices often disappear with them, and with those names may go knowledge that was never written down. To care about names, then, is not mere sentimentality. It is to recognize that the words by which we call people and things are bound up with memory, identity, and understanding, and that how we name the world shapes the world we are able to perceive.",
+    ],
+    ja: [
+      '名前は一見、最も単純な言葉のように思える。名前は特定の人や場所やものを指すだけで、その性質を述べるわけではなく、どんな名前もほかの名前と同じように役に立つように見えるかもしれない。ハナという名前の子どもが、ちがう名前の子どもより花に似ているわけではないし、町は「古町」とよばれることで古くなるわけではない。しかし人々は名前を深く気にかけ、とても慎重に選び、自分の名前が忘れられたり発音をまちがえられたりすると傷つく。この愛着は、名前が単に区別する以上のことをしていることを示している。名前は、まるで言葉ともののあいだに、ふつうの言葉にはない結びつきがあるかのように、名づけられる人や場所の何かをになっているように思われる。',
+      '1つの理由は、名前が個人を自分より大きな歴史に結びつけることである。名前は祖父母から受けつがれたり、尊敬される人物をたたえて選ばれたり、宗教や文学の伝統から取られたりする。そうした名前を受け取ることで、子どもは、自分が生まれる前から存在していた関係と期待の網の目の中に置かれる。音だけで選ばれた名前でさえ、特定の時代と場所の好みを反映して、連想をともなっている。ある人の名前を知ることは、ささやかな形で、その人がやってきた世界について何かを知ることなのである。多くの文化で、名前を選ぶことは非常に大切なこととされ、ときには家族全体や、さらに広い地域社会がかかわることもある。',
+      '名前はまた、他人が私たちをどう見るかを形づくる。研究によれば、人はときに名前だけをもとに見知らぬ人についての印象をつくり、会う前からその人の年れいや背景や性格を推測することがある。場合によっては、こうした印象が不幸な結果をまねいてきた。たとえば、特定の民族集団と結びつけられる名前の求職者が、同じ資格をもつほかの人よりも返事を受け取る数が少なかったことがある。名前はその人の能力について直接には何も教えてくれないが、その人が受け取る機会には影響しうるのである。言いかえれば、名前は、他人がその背後にいる人を知る機会をもつ前に読んでしまう、一種の見えないラベルになりうるのである。',
+      '名づけるという行為には、ある種の力がともなう。名前を与えることは、あるものがどのように知られるかを決める権威を主張することであり、この権威はしばしば不平等な形で行使されてきた。探検家や植民者は、そこに住む人々がすでに名前をつけていた場所をしばしば名前をつけ直し、こうした新しい名前は、もとの名前が守っていた歴史を消してしまうこともあった。ここ数十年、多くの地域社会が古い名前を取りもどそうとしてきたが、それは小さなラベルの変更ではなく、承認とつぐないの行為とみなされているのである。',
+      '名前は、政治的でない形でも重要である。植物や鳥や星の名前を学ぶと、私たちの世界の見え方はしばしばよりくっきりとする。木を見分けて名前を言える人にとって、森の散歩はちがう経験になる。名前は、そうでなければ見落としてしまうかもしれないちがいに気づく助けになるからである。この意味で、名づけることは、すでに見ているものにラベルをはる方法であるだけでなく、より多くを見ることを学ぶ方法でもある。星の名前を学ぶ子どもは、かつてはちらばった光で満ちているだけに見えた空に、型を見いだしはじめるのである。',
+      'おそらくだからこそ、名前を失うことは、それ以上の何かを失うことのように感じられるのだろう。言語が消えると、それがもっていた地元の場所や植物や習慣の名前もしばしばともに消え、その名前とともに、書きとめられることのなかった知識も失われるかもしれない。したがって、名前を大切にすることは、単なる感傷ではない。それは、人やものをよぶ言葉が記憶やアイデンティティや理解と結びついていること、そして私たちが世界をどう名づけるかが、私たちが知覚できる世界を形づくっていることを認めることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「名前は能力について何も教えないが、機会には影響しうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、人々は名前を深く気にかけ、慎重に選ぶ。', answer: true, why: '第1段落 people care deeply about names, choose them with great deliberation。' },
+      { statement: '筆者によれば、音だけで選ばれた名前には、どんな連想もともなわない。', answer: false, why: '第2段落 Even names chosen for their sound alone carry associations。' },
+      { statement: '筆者によれば、古い名前を取りもどすことは、単なる小さなラベルの変更とみなされている。', answer: false, why: '第4段落 seeing this not as a minor change of labels but as an act of recognition and repair。' },
+      { statement: '筆者によれば、名前を学ぶと、ちがいに気づきやすくなる。', answer: true, why: '第5段落 names help us to notice differences that we might otherwise overlook。' },
+    ],
+    qa: [
+      { q: 'What unfortunate consequence of names does the writer mention in the third paragraph?', choices: ['Job applicants with certain names received fewer responses despite identical qualifications.', 'People forgot their own names.', 'Towns became older because of their names.', 'Children refused to use their names.'], answer: 0, why: '第3段落 job applicants with names associated with particular ethnic groups have received fewer responses。' },
+      { q: 'What may be lost when languages disappear, according to the last paragraph?', choices: ['Names for local places, plants, and practices, and knowledge that was never written down.', 'Only the grammar rules of those languages.', 'The names of famous people.', 'Nothing important.'], answer: 0, why: '第6段落 the names they contained for local places, plants, and practices often disappear with them, and with those names may go knowledge that was never written down。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
