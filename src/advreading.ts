@@ -27464,6 +27464,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-online-learning',
+    title: 'Learning Through a Screen',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, the idea that a student could take a university course without ever entering a classroom seemed unusual. Today, online lectures, digital textbooks, and video lessons are available to anyone with an internet connection, and many schools and universities offer at least part of their teaching in this form. When schools around the world were forced to close their buildings for long periods, online learning suddenly became the only option for hundreds of millions of students. That experience revealed both the promise of digital education and its limits, and it has prompted educators to reconsider what schools are really for.",
+      "The advantages of online learning are considerable. Students can study at their own pace, pausing and replaying lectures until they understand difficult points. People who live far from universities, who work full-time, or who have family responsibilities can gain access to courses that would otherwise be out of reach. High-quality materials prepared by leading teachers can be shared with learners around the world at very little additional cost, raising the hope that good education might no longer be limited to those who can afford to attend elite institutions. For adults who wish to learn new skills in the middle of their careers, such flexibility can make the difference between continuing their education and abandoning it.",
+      "Yet the experience of the school closures also showed that access to online learning is far from equal. Students without reliable internet connections, suitable devices, or a quiet place to study often fell behind, and the gap between advantaged and disadvantaged students appears to have widened in many countries. Younger children, in particular, found it difficult to concentrate in front of a screen for long periods without the presence of a teacher, and many parents struggled to supervise their children's learning while also working. Teachers, too, had to adapt their methods almost overnight, often with little training or support.",
+      "There are also questions about what online learning can and cannot provide. Education involves more than the transmission of information. In a classroom, students learn from one another, ask spontaneous questions, and receive immediate responses from teachers who can notice when they are confused or discouraged. They also develop social skills and friendships that are difficult to form through a screen. ( A ) online courses can deliver content efficiently, they may struggle to reproduce the relationships and shared experiences through which much learning actually takes place. A discussion in which students build on one another's ideas, for instance, is far harder to sustain when participants appear only as small images on a screen.",
+      "Completion rates offer one indication of these difficulties. Many free online courses attract large numbers of participants at the start, but only a small proportion of them finish. Learners who study alone may lose motivation, especially when no one notices whether they are keeping up. By contrast, courses that combine online materials with regular contact, whether through small discussion groups, mentors, or occasional face-to-face meetings, tend to achieve better results, suggesting that human connection remains an important ingredient of successful learning. Even the most carefully designed digital course seems to work best when learners feel that someone is paying attention to their progress.",
+      "The most promising approach may therefore be not a choice between online and traditional education but a thoughtful combination of the two. Digital tools can make information more widely available and allow teaching to be adapted to individual needs, while classrooms and personal contact can provide motivation, community, and the kind of guidance that responds to each learner. The challenge for educators is to use technology in ways that extend, rather than replace, the human relationships at the heart of education. A screen can bring a lesson into any home, but it cannot by itself make a learner feel that he or she belongs.",
+    ],
+    ja: [
+      '少し前までは、教室に一度も入らずに大学の授業を受けられるという考えは、めずらしいものに思えた。今日では、インターネットにつながる人ならだれでもネットの講義やデジタル教科書や動画の授業を利用でき、多くの学校や大学が授業の少なくとも一部をこの形で提供している。世界じゅうの学校が長いあいだ建物を閉めざるをえなかったとき、オンライン学習は突然、何億もの生徒にとって唯一の選択肢になった。その経験は、デジタル教育の可能性と限界の両方を明らかにした。そしてそれは、学校が本当は何のためにあるのかを、教育者が考え直すきっかけにもなった。',
+      'オンライン学習の利点はかなり大きい。生徒は自分のペースで学び、むずかしいところがわかるまで講義を止めたりくり返し再生したりできる。大学から遠くに住んでいる人や、フルタイムで働いている人や、家族の責任をかかえている人も、そうでなければ手の届かない授業を受けられるようになる。一流の教師が用意した質の高い教材を、ほとんど追加の費用なしに世界じゅうの学習者と共有でき、よい教育がもはや一流の学校に通える余裕のある人だけに限られなくなるかもしれない、という希望が生まれている。仕事のとちゅうで新しい技能を学びたい大人にとって、こうした柔軟さは、学び続けるかあきらめるかの分かれ目になりうる。',
+      'しかし学校閉鎖の経験は、オンライン学習を利用できるかどうかが決して平等ではないことも示した。安定したインターネット接続や適した機器や静かに勉強できる場所のない生徒はしばしば取り残され、多くの国で恵まれた生徒とそうでない生徒の差は広がったようである。とくに年少の子どもたちは、教師がそばにいないまま長い時間画面の前で集中するのがむずかしく、多くの親は働きながら子どもの学習を見守るのに苦労した。教師もまた、しばしばほとんど研修や支援もないまま、ほぼ一夜にして教え方を変えなければならなかった。',
+      'オンライン学習が何を提供でき、何を提供できないのかという問いもある。教育は情報を伝えること以上のものである。教室では、生徒はおたがいから学び、その場で思いついた質問をし、自分がとまどっていたりやる気を失っていたりすることに気づいてくれる教師からすぐに反応を受け取る。また、画面を通しては築きにくい社会的な技能や友情も育つ。オンラインの授業は内容を効率よく届けることができるが、実際に多くの学びが起こる関係やともにする経験を再現するのには苦労するかもしれない。たとえば、生徒がたがいの考えを積み重ねていく話し合いは、参加者が画面の小さな映像としてしか現れないと、続けるのがはるかにむずかしい。',
+      '修了率は、こうしたむずかしさを示す1つの手がかりである。多くの無料のオンライン講座は、はじめのうちは多くの参加者を集めるが、最後までやりとげるのはそのごく一部にすぎない。ひとりで学ぶ学習者は、とくについてきているかどうかをだれも気にかけてくれないと、やる気を失うかもしれない。それに対して、少人数の話し合いのグループや指導役や時おりの対面の集まりを通じて、オンラインの教材と定期的なふれ合いを組み合わせた講座は、よりよい結果を上げる傾向があり、人とのつながりがうまくいく学びの大切な要素であり続けていることを示している。最も注意深く設計されたデジタルの講座でさえ、学習者がだれかが自分の進み具合に目を向けてくれていると感じるときに、最もうまくいくようである。',
+      'したがって、最も見こみのあるやり方は、オンラインか従来の教育かを選ぶことではなく、その2つを思慮深く組み合わせることなのかもしれない。デジタルの道具は情報をより広く手に入るものにし、授業を一人ひとりの必要に合わせられるようにする一方で、教室や個人的なふれ合いは、やる気や仲間や、一人ひとりの学習者に応える種類の手引きを与えることができる。教育者にとっての課題は、教育の中心にある人間関係を置きかえるのではなく、それを広げるような形で技術を使うことである。画面は授業をどんな家にも届けられるが、それだけでは、学習者に自分がその場の一員だと感じさせることはできないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「内容を効率よく届けられるが、関係を再現するのには苦労する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Online learning lets students study at their own pace and gives ( 1 ) to courses that were once out of reach. However, school closures showed that this access is unequal, and screens cannot easily reproduce the ( 2 ) through which much learning happens. Courses that include regular human contact achieve better results, so the best approach may be a thoughtful ( 3 ) of online and traditional teaching.',
+      blanks: [
+        { choices: ['access', 'pressure', 'money', 'homework'], answer: 0, why: '第2段落 can gain access to courses that would otherwise be out of reach。' },
+        { choices: ['relationships', 'textbooks', 'exams', 'devices'], answer: 0, why: '第4段落 the relationships and shared experiences through which much learning actually takes place。' },
+        { choices: ['combination', 'rejection', 'replacement', 'comparison'], answer: 0, why: '第6段落 a thoughtful combination of the two。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、オンライン学習では講義を止めたりくり返し再生したりできる。', answer: true, why: '第2段落 pausing and replaying lectures until they understand difficult points。' },
+      { statement: '筆者によれば、学校閉鎖のあいだ、すべての生徒が同じようにオンライン学習を利用できた。', answer: false, why: '第3段落 access to online learning is far from equal。' },
+      { statement: '筆者によれば、多くの無料のオンライン講座では、参加者のほとんどが最後までやりとげる。', answer: false, why: '第5段落 only a small proportion of them finish。' },
+      { statement: '筆者は、技術は人間関係を置きかえるのではなく広げるように使うべきだと考えている。', answer: true, why: '第6段落 use technology in ways that extend, rather than replace, the human relationships。' },
+    ],
+    qa: [
+      { q: 'What can students do in a classroom that is difficult online, according to the fourth paragraph?', choices: ['Learn from one another and receive immediate responses from teachers who notice their confusion.', 'Watch lectures again and again.', 'Study at any time of day.', 'Avoid speaking to anyone.'], answer: 0, why: '第4段落 students learn from one another, ask spontaneous questions, and receive immediate responses from teachers。' },
+      { q: 'Which courses tend to achieve better results, according to the fifth paragraph?', choices: ['Those that combine online materials with regular human contact.', 'Those that are completely free.', 'Those with the most participants.', 'Those that students take alone.'], answer: 0, why: '第5段落 courses that combine online materials with regular contact ... tend to achieve better results。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
