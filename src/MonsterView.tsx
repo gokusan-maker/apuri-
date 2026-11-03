@@ -2141,6 +2141,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="74" r="3" fill="#fb923c" />
       </g>
     )
+  if (species === 'bagworm')
+    return (
+      <g>
+        {/* みのの小枝と、ぶらさがる糸 */}
+        <path d="M50 8 L50 22" fill="none" stroke="#e7e5e4" strokeWidth="1.2" />
+        <path d="M34 50 L44 56 M66 50 L56 56 M36 66 L46 70 M64 66 L54 70" fill="none" stroke="#713f12" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
