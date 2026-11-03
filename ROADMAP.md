@@ -694,7 +694,7 @@
   - [x] 287 誤文訂正〈140〉（京大レベル：名詞構文 have a look・make a decision・pay attention）10問
   - [x] 288 正誤問題〈147〉（国公立レベル：形容詞の語順と叙述用法 alive・asleep・afraid）10問
   - [x] 289 誤文訂正〈141〉（東大レベル：英作文の可算・不可算 advice・information・furniture）10問
-  - [ ] 290 正誤問題〈148〉（京大レベル：動名詞の意味上の主語と完了形 his coming・having done）10問
+  - [x] 290 正誤問題〈148〉（京大レベル：動名詞の意味上の主語と完了形 his coming・having done）10問
   - [ ] 291 誤文訂正〈142〉（国公立レベル：再帰代名詞と熟語 enjoy oneself・by oneself・help oneself）10問
   - [ ] 292 正誤問題〈149〉（東大レベル：英作文の冠詞 a／the／無冠詞の使い分け）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

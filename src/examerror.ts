@@ -3506,6 +3506,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The children were (A) awake (B) all night, so they (C) were (D) sleep in class.', choices: ['(A) awake', '(B) all night, so they', '(C) were', '(D) sleep in class'], answer: 3, why: 'be のあとの補語は形容詞。sleepy。' },
     ],
   },
+  {
+    id: 'exam-error-gerund-kyodai',
+    title: '入試の正誤問題〈148〉（京大レベル：動名詞の意味上の主語と完了形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '前置詞のあとは動名詞（of being）。動名詞の意味上の主語は所有格か目的格（his coming／my going）。述語動詞より前のことは完了形の動名詞 having＋過去分詞（He denied having stolen it）。deny・mind・insist on は動名詞をとる。remember -ing は「（過去に）～したことを覚えている」。',
+    ],
+    examples: [
+      { en: 'I am proud of being a member of this team.', ja: '私はこのチームの一員であることをほこりに思う。' },
+      { en: 'He denied having stolen the money.', ja: '彼はお金をぬすんだことを否定した。' },
+    ],
+    questions: [
+      { sentence: 'I am proud (A) of (B) be (C) a member (D) of this team.', choices: ['(A) of', '(B) be', '(C) a member', '(D) of this team'], answer: 1, why: '前置詞 of のあとは動名詞。being。' },
+      { sentence: 'She (A) regrets (B) not having studied (C) more hard (D) in high school.', choices: ['(A) regrets', '(B) not having studied', '(C) more hard', '(D) in high school'], answer: 2, why: 'hard の比較級は harder。' },
+      { sentence: 'Do you mind (A) me (B) to open (C) the window (D) a little?', choices: ['(A) me', '(B) to open', '(C) the window', '(D) a little?'], answer: 1, why: 'mind は動名詞をとる。Do you mind my（me）opening ～?' },
+      { sentence: 'I am sure (A) of (B) his (C) win the game (D) tomorrow.', choices: ['(A) of', '(B) his', '(C) win the game', '(D) tomorrow'], answer: 2, why: '動名詞の意味上の主語は所有格。his winning the game。' },
+      { sentence: 'He denied (A) to have (B) stolen (C) the money (D) from the shop.', choices: ['(A) to have', '(B) stolen', '(C) the money', '(D) from the shop'], answer: 0, why: 'deny は動名詞をとる。過去のことなので having stolen。' },
+      { sentence: 'There is no (A) chance of (B) him to come (C) to the party (D) tonight.', choices: ['(A) chance of', '(B) him to come', '(C) to the party', '(D) tonight'], answer: 1, why: '前置詞 of のあとは動名詞。his coming。' },
+      { sentence: 'My mother insisted (A) on (B) me (C) to go (D) to the doctor.', choices: ['(A) on', '(B) me', '(C) to go', '(D) to the doctor'], answer: 2, why: 'insist on のあとは動名詞。my going（me going）。' },
+      { sentence: 'I remember (A) to see (B) her (C) at the station (D) last year.', choices: ['(A) to see', '(B) her', '(C) at the station', '(D) last year'], answer: 0, why: '過去にしたことを覚えているのは remember -ing。seeing。' },
+      { sentence: 'She is proud of her son (A) having (B) won (C) the prize (D) last years.', choices: ['(A) having', '(B) won', '(C) the prize', '(D) last years'], answer: 3, why: '「去年」は last year。' },
+      { sentence: '(A) Excuse (B) my (C) being (D) lately.', choices: ['(A) Excuse', '(B) my', '(C) being', '(D) lately'], answer: 3, why: '「おくれて」は late。lately は「最近」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
