@@ -2150,3 +2150,10 @@ it('誤文訂正〈150〉：東大レベル 英作文の時の前置詞の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('by')
 })
+
+it('正誤問題〈157〉：京大レベル 強調構文と形式主語の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-cleft-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) which')
+})

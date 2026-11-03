@@ -3722,6 +3722,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) must have (B) dropped (C) my wallet (D) when I will run.', choices: ['(A) must have', '(B) dropped', '(C) my wallet', '(D) when I will run'], answer: 3, why: '過去のことなので when I ran。' },
     ],
   },
+  {
+    id: 'exam-error-cleft-kyodai',
+    title: '入試の正誤問題〈157〉（京大レベル：強調構文と形式主語）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '強調構文は It is／was ＋強調する語句＋that ～（人なら who も可）。強調するものが複数でも It is／was のまま。副詞句を強調するときは which・when は使わず that。It was not until ～ that …「～してはじめて…」。形式主語の It は It is ＋形容詞＋that 節／for 人 to do／of 人 to do。見分け方：It is と that を取りさって文が成り立てば強調構文。',
+    ],
+    examples: [
+      { en: 'It was in 2010 that I first visited Kyoto.', ja: '私が初めて京都をおとずれたのは2010年だった。' },
+      { en: 'It is important that we protect the environment.', ja: '私たちが環境を守ることは大切だ。' },
+    ],
+    questions: [
+      { sentence: '(A) It was (B) in 2010 (C) which (D) I first visited Kyoto.', choices: ['(A) It was', '(B) in 2010', '(C) which', '(D) I first visited Kyoto'], answer: 2, why: '強調構文で副詞句（in 2010）を強調するときは that。which は使えない。' },
+      { sentence: 'It (A) were (B) my parents (C) who (D) supported me.', choices: ['(A) were', '(B) my parents', '(C) who', '(D) supported me'], answer: 0, why: '強調構文は強調するものが複数でも It was。' },
+      { sentence: '(A) It is (B) important (C) that we (D) to protect the environment.', choices: ['(A) It is', '(B) important', '(C) that we', '(D) to protect the environment'], answer: 3, why: '形式主語の It … that 節。that のあとは主語＋動詞。we protect（should protect）。' },
+      { sentence: '(A) It was (B) not until he came home (C) when he (D) noticed the mistake.', choices: ['(A) It was', '(B) not until he came home', '(C) when he', '(D) noticed the mistake'], answer: 2, why: 'It was not until ～ that …「～してはじめて…」。that を使う。' },
+      { sentence: '(A) It is (B) necessary (C) for you (D) attending the meeting.', choices: ['(A) It is', '(B) necessary', '(C) for you', '(D) attending the meeting'], answer: 3, why: '形式主語 It … for 人 to do。to attend。' },
+      { sentence: '(A) It was in this room (B) that (C) the treaty (D) signed.', choices: ['(A) It was in this room', '(B) that', '(C) the treaty', '(D) signed'], answer: 3, why: '条約は「署名された」ので受け身 was signed。' },
+      { sentence: '(A) It is (B) said (C) what (D) he is very rich.', choices: ['(A) It is', '(B) said', '(C) what', '(D) he is very rich'], answer: 2, why: 'It is said that ～「～と言われている」。what ではなく that。' },
+      { sentence: '(A) This was Tom (B) that (C) won (D) the prize.', choices: ['(A) This was Tom', '(B) that', '(C) won', '(D) the prize'], answer: 0, why: '強調構文は It was ～ that。This ではない。' },
+      { sentence: '(A) It is (B) kindly of you (C) to (D) help me.', choices: ['(A) It is', '(B) kindly of you', '(C) to', '(D) help me'], answer: 1, why: 'It is＋形容詞＋of 人＋to do。副詞 kindly ではなく形容詞 kind。' },
+      { sentence: '(A) It was (B) because the rain (C) that (D) the game was cancelled.', choices: ['(A) It was', '(B) because the rain', '(C) that', '(D) the game was cancelled'], answer: 1, why: '後ろが名詞なので because of the rain。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
