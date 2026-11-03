@@ -2022,6 +2022,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 41 L48 39" fill="none" stroke="#f8fafc" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'greywagtail')
+    return (
+      <g>
+        {/* 黄色いおなかと、白いまゆ */}
+        <ellipse cx="50" cy="64" rx="10" ry="7" fill="#fde047" />
+        <path d="M37 41 L47 39" fill="none" stroke="#f8fafc" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
