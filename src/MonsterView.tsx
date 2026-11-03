@@ -2107,6 +2107,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M37 41 L47 39" fill="none" stroke="#f7fee7" strokeWidth="1.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'seaotter')
+    return (
+      <g>
+        {/* おなかの上の石と、白っぽい顔のひげ */}
+        <ellipse cx="50" cy="68" rx="7" ry="5" fill="#78716c" stroke="#44403c" strokeWidth="1.5" />
+        <path d="M36 50 L28 48 M36 53 L28 54 M64 50 L72 48 M64 53 L72 54" fill="none" stroke="#f5f5f4" strokeWidth="1.2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
