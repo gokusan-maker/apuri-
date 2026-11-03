@@ -3951,3 +3951,4 @@
 - 2026-11-03: 正誤問題〈138〉：旧帝大レベル 代名詞（one／it・that of／those of・each other・-self・the other／others）10問。デプロイ節約のため push は1回の開発の最後にまとめる決まりに変更（CLAUDE.md）
 - 2026-11-03: 東大専用の長文㉜「気候への責任はだれにあるか」（約630語・要約の空所補充つき）を追加
 - 2026-11-03: キャラクター追加260：キセキレイン（谷川のキセキレイ・リスニングが得意）
+- 2026-11-03: 誤文訂正〈132〉：京大レベル 接続詞（unless・in case・as long as／as far as・even if／even though・whether or not・because of）10問。文法の次の3項目（272〜274）を追加

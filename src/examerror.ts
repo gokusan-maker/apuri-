@@ -5652,6 +5652,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This bag is too small. Do you have a bigger [it]?', choices: ['one', 'them', 'that', 'ones'], answer: 0, why: '同じ種類の別のもの（a bigger bag）なので one。' },
     ],
   },
+  {
+    id: 'exam-fix-132',
+    title: '入試の誤文訂正〈132〉（京大レベル：接続詞）',
+    points: ['unless は「～しない限り（＝if not）」なので、さらに not をつけない。in case は「～するといけないから（念のため）」、as long as は「～する限り（条件）」、as far as は「～する範囲では」。even if は「たとえ～でも（仮定）」、even though は「～なのに（事実）」。whether A or B は「A であろうと B であろうと」。because は理由の節、because of は名詞の前。although と but を同じ文で両方使わない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Take an umbrella in case it rains.', ja: '雨が降るといけないから、傘を持っていきなさい。' }],
+    questions: [
+      { sentence: 'You will miss the bus [unless you do not hurry].', choices: ['unless you hurry', 'if you hurry', 'in case you hurry', 'as long as you hurry'], answer: 0, why: 'unless（～しない限り）には否定の意味がふくまれるので not は不要。unless you hurry。' },
+      { sentence: 'Take a map [as long as] you get lost.', choices: ['in case', 'unless', 'even if', 'as far as'], answer: 0, why: '「迷うといけないから（念のため）」は in case。' },
+      { sentence: 'You can use my car [in case] you drive carefully.', choices: ['as long as', 'unless', 'even though', 'whether'], answer: 0, why: '「注意して運転する限り（条件）」は as long as。' },
+      { sentence: '[As long as] I know, he has never been late.', choices: ['As far as', 'In case', 'Unless', 'Even if'], answer: 0, why: '「私の知る範囲では」は as far as I know。' },
+      { sentence: 'I will go out [even though] it rains tomorrow.', choices: ['even if', 'because', 'unless', 'as far as'], answer: 0, why: '明日のこと（まだ起きていない仮定）なので even if。even though は事実に使う。' },
+      { sentence: '[Even if] he is rich, he lives in a small apartment.', choices: ['Even though', 'In case', 'Unless', 'As long as'], answer: 0, why: '「金持ちなのに（事実）」は even though。' },
+      { sentence: '[Whether] you like it, you have to do your homework.', choices: ['Whether or not', 'Unless', 'In case', 'As far as'], answer: 0, why: '「好きであろうとなかろうと」は whether or not（whether you like it or not）。' },
+      { sentence: 'The game was canceled [because] the heavy rain.', choices: ['because of', 'since', 'although', 'so'], answer: 0, why: 'あとが名詞（the heavy rain）なので because of。' },
+      { sentence: '[Although she was tired, but] she kept working.', choices: ['Although she was tired,', 'Because she was tired, but', 'In case she was tired,', 'Unless she was tired,'], answer: 0, why: 'although と but を1つの文で両方使わない。Although she was tired, she kept working.（つかれていたが、働き続けた）' },
+      { sentence: 'I will wait here [until when] you come back.', choices: ['until', 'by', 'in case of', 'unless'], answer: 0, why: '「もどるまでずっと」は until。when は不要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
