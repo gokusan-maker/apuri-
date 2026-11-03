@@ -28380,6 +28380,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-childhood',
+    title: 'The Invention of Childhood',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We tend to think of childhood as a natural stage of life, defined by biology and essentially the same in every society. Children are small, dependent, and still developing, and these facts seem to determine how they should be treated. Yet historians have argued that the way in which societies understand childhood has changed considerably over time, and that many of our assumptions about what children are and what they need are not simply facts of nature but products of particular historical circumstances.",
+      "In many societies of the past, children took part in the work of their families from an early age. They looked after younger brothers and sisters, helped in the fields, or learned a trade by working alongside adults, and the boundary between childhood and adulthood was less sharply drawn than it is today. This does not mean that parents in earlier times did not love their children, as some writers once claimed, but it does suggest that the idea of childhood as a protected period devoted mainly to play and education is relatively recent and far from universal.",
+      "The modern idea of childhood developed alongside a number of social changes, including the spread of compulsory schooling, laws restricting child labor, and a decline in the number of children per family. As families had fewer children and as those children were more likely to survive, parents were able to invest more time and resources in each of them. ( A ) children came to be seen less as contributors to the household economy than as individuals whose development required careful attention, the period of childhood itself was extended and given special value.",
+      "This change brought enormous benefits. Children who might once have worked long hours in dangerous conditions were given the opportunity to learn, to play, and to develop their abilities, and the recognition that children have rights of their own has protected many from exploitation and abuse. Few people would wish to return to a world in which young children routinely labored in mines and factories.",
+      "Some observers, however, have begun to ask whether the modern conception of childhood has gone too far in certain respects. In wealthy societies, children are increasingly supervised at every moment, and the time they spend in unstructured play, exploring their surroundings without adult direction, has declined sharply. Parents who fear for their children's safety may prevent them from walking to school alone or playing outside without supervision, even when the actual risks are small. The intention is protective, but the result may be that children have fewer opportunities to develop independence, judgment, and the ability to cope with minor difficulties.",
+      "There is also a tension between the desire to protect children and the desire to prepare them for adult life. Childhood is valued as a time of innocence and freedom from responsibility, yet children are also expected to become capable adults, and capability is developed through gradually increasing responsibility. A childhood that is entirely sheltered may leave young people poorly equipped for the challenges they will eventually face, while one that imposes adult burdens too early may deprive them of experiences that are valuable in themselves.",
+      "Recognizing that childhood is shaped by history does not mean that anything goes, or that children have no real needs. It means, rather, that our ideas about childhood deserve to be examined rather than simply assumed. Each society must decide, in light of its own circumstances and values, how to balance protection with freedom, and those decisions will shape not only the lives of children but the kind of adults they become. To ask what childhood should be is, in the end, to ask what kind of people we hope the next generation will be, and what kind of society we hope they will build.",
+    ],
+    ja: [
+      '私たちは子ども時代を、生物学によって定められ、どの社会でも本質的に同じである、自然な人生の段階として考えがちである。子どもは小さく、人にたよっており、まだ発達の途中であり、これらの事実が子どもをどうあつかうべきかを決めているように思われる。しかし歴史家たちは、社会が子ども時代を理解するしかたは時代とともにかなり変わってきたのであり、子どもとは何であり、何を必要としているかについての私たちの思いこみの多くは、単なる自然の事実ではなく、特定の歴史的な状況の産物なのだと論じてきた。',
+      '過去の多くの社会では、子どもは幼いころから家族の仕事に参加していた。弟や妹の世話をしたり、畑を手伝ったり、大人とならんで働くことで仕事をおぼえたりしたのであり、子ども時代と大人時代の境目は今日ほどはっきり引かれていなかった。これは、かつて一部の書き手が主張したように、昔の親が子どもを愛していなかったという意味ではない。しかしそれは、主に遊びと教育にささげられる守られた時期としての子ども時代という考えが、比較的新しく、決して普遍的なものではないことを示している。',
+      '現代の子ども時代という考えは、義務教育の広まりや、子どもの労働を制限する法律や、一家族あたりの子どもの数の減少など、いくつかの社会の変化とともに発展した。家族の子どもの数が少なくなり、その子どもたちが生きのびる可能性が高くなるにつれ、親は一人一人により多くの時間と資源をかけることができるようになった。子どもが、家計への貢献者というより、その発達に注意深い配慮が必要な個人として見られるようになるにつれて、子ども時代という時期そのものが長くなり、特別な価値をあたえられたのである。',
+      'この変化は大きな恩恵をもたらした。かつてなら危険な環境で長時間働いていたかもしれない子どもたちが、学び、遊び、能力をのばす機会をあたえられ、子どもにも自分自身の権利があると認められたことで、多くの子どもが搾取や虐待から守られてきた。幼い子どもが鉱山や工場でふつうに働いていた世界にもどりたいと願う人は、ほとんどいないだろう。',
+      'しかし、現代の子ども時代の考え方は、ある点では行きすぎてしまったのではないかと問いはじめた観察者もいる。豊かな社会では、子どもはますます四六時中見守られるようになり、大人の指示なしにまわりを探検する、決まった形のない遊びにすごす時間は大きくへった。子どもの安全を心配する親は、実際の危険は小さいときでも、子どもが一人で歩いて学校に行ったり、見守りなしに外で遊んだりするのを止めるかもしれない。その意図は子どもを守ることだが、その結果、子どもが自立心や判断力や、小さな困難に対処する力を育てる機会が少なくなるかもしれない。',
+      '子どもを守りたいという願いと、子どもを大人の生活に備えさせたいという願いのあいだにも緊張がある。子ども時代は無邪気さと責任からの自由の時期として大切にされるが、子どもはまた有能な大人になることも期待されており、有能さは少しずつふえていく責任を通して育つ。完全に守られた子ども時代は、若者がいずれ直面する課題にうまく備えられないままにするかもしれず、大人の重荷を早すぎる時期に負わせる子ども時代は、それ自体価値のある経験を子どもからうばうかもしれない。',
+      '子ども時代が歴史によって形づくられていると認めることは、何でもありだという意味でも、子どもに本当の必要がないという意味でもない。それはむしろ、子ども時代についての私たちの考えは、ただ当然とされるのではなく、吟味されるに値するということを意味する。それぞれの社会は、自らの状況と価値観に照らして、保護と自由をどうつりあわせるかを決めなければならず、そうした決定は、子どもたちの生活だけでなく、彼らがどんな大人になるかも形づくるのである。子ども時代がどうあるべきかを問うことは、結局のところ、次の世代がどんな人々になり、どんな社会を築いてほしいと私たちが願っているかを問うことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As', 'Unless', 'Although', 'Before'], answer: 0, why: '「子どもが…として見られるようになるにつれて、子ども時代が長くなった」という比例の As（～につれて）。' },
+    ],
+    tf: [
+      { statement: '歴史家たちによれば、子ども時代の理解のしかたは時代とともに変わってきた。', answer: true, why: '第1段落 the way in which societies understand childhood has changed considerably over time。' },
+      { statement: '筆者によれば、昔の親は子どもを愛していなかった。', answer: false, why: '第2段落 This does not mean that parents in earlier times did not love their children。' },
+      { statement: '筆者によれば、豊かな社会では子どもの決まった形のない遊びの時間が大きくへった。', answer: true, why: '第5段落 the time they spend in unstructured play ... has declined sharply。' },
+      { statement: '筆者は、子どもには本当の必要など何もないと考えている。', answer: false, why: '第7段落 does not mean that anything goes, or that children have no real needs。' },
+    ],
+    qa: [
+      { q: 'Which social change helped the modern idea of childhood develop, according to the third paragraph?', choices: ['The spread of compulsory schooling.', 'An increase in the number of children per family.', 'The disappearance of all schools.', 'Longer working hours for children.'], answer: 0, why: '第3段落 the spread of compulsory schooling, laws restricting child labor ...。' },
+      { q: 'What tension does the sixth paragraph describe?', choices: ['Between protecting children and preparing them for adult life.', 'Between rich and poor families.', 'Between teachers and parents.', 'Between cities and villages.'], answer: 0, why: '第6段落 a tension between the desire to protect children and the desire to prepare them for adult life。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
