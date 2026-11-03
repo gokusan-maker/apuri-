@@ -5694,6 +5694,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I will wait here [until when] you come back.', choices: ['until', 'by', 'in case of', 'unless'], answer: 0, why: '「もどるまでずっと」は until。when は不要。' },
     ],
   },
+  {
+    id: 'exam-fix-133',
+    title: '入試の誤文訂正〈133〉（国公立レベル：受動態と by 以外の前置詞）',
+    points: ['be made of ～ は「（材料が見てわかる）～でできている」、be made from ～ は「（原料が変化して）～から作られる」。be known to ～ は「～に知られている」、be known for ～ は「～で有名だ」、be known as ～ は「～として知られている」。be covered with・be filled with・be interested in・be surprised at・be pleased with など、by 以外の前置詞をとる受動態に注意。助動詞の受動態は 助動詞＋be＋過去分詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This desk is made of wood, but paper is made from wood.', ja: 'この机は木でできているが、紙は木から作られる。' }],
+    questions: [
+      { sentence: 'This chair is made [from] wood.', choices: ['of', 'by', 'in', 'with'], answer: 0, why: '見て材料（木）がわかるので be made of。' },
+      { sentence: 'Cheese is made [of] milk.', choices: ['from', 'by', 'into', 'with'], answer: 0, why: '原料（牛乳）が変化しているので be made from。' },
+      { sentence: 'Kyoto is known [by] its old temples.', choices: ['for', 'to', 'as', 'with'], answer: 0, why: '「～で有名だ」は be known for。' },
+      { sentence: 'His name is known [for] everyone in the town.', choices: ['to', 'by', 'as', 'of'], answer: 0, why: '「～に知られている」は be known to。' },
+      { sentence: 'The mountain was covered [by] snow.', choices: ['with', 'of', 'at', 'for'], answer: 0, why: 'be covered with（～でおおわれている）。' },
+      { sentence: 'I was surprised [of] the news.', choices: ['at', 'with', 'for', 'to'], answer: 0, why: 'be surprised at（～におどろく）。' },
+      { sentence: 'She is interested [about] Japanese history.', choices: ['in', 'at', 'for', 'with'], answer: 0, why: 'be interested in（～に興味がある）。' },
+      { sentence: 'The box was filled [of] old letters.', choices: ['with', 'by', 'at', 'in'], answer: 0, why: 'be filled with（～でいっぱいだ）。' },
+      { sentence: 'This work must [finish] by tomorrow.', choices: ['be finished', 'finished', 'be finishing', 'have finish'], answer: 0, why: '仕事は「終えられる」側なので 助動詞＋be＋過去分詞。must be finished。' },
+      { sentence: 'The new bridge [is building] now.', choices: ['is being built', 'is built', 'has building', 'was build'], answer: 0, why: '「今建設中である」は進行形の受動態 is being built。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
