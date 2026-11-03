@@ -2333,6 +2333,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 72 Q50 76 66 72" fill="none" stroke="#e2e8f0" strokeWidth="1.2" />
       </g>
     )
+  if (species === 'spidercrab')
+    return (
+      <g>
+        {/* とても長いあし */}
+        <path d="M34 58 L14 44 L8 60 M34 66 L12 72 L10 88 M66 58 L86 44 L92 60 M66 66 L88 72 L90 88" fill="none" stroke="#7c2d12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
