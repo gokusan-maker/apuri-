@@ -29342,6 +29342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-white-lies',
+    title: 'The Problem of Kind Lies',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people would say that lying is wrong, yet almost everyone tells small lies from time to time. We tell a friend that we love the gift we secretly dislike, assure a nervous performer that the speech went perfectly, or claim to be busy in order to avoid an invitation without causing offense. Such falsehoods, often called white lies, seem to occupy a peculiar moral position: they are lies, and yet many people regard them not merely as harmless but as kind. The question of whether white lies are permissible reveals a deep tension between two values that we usually take for granted, honesty and kindness.",
+      "Defenders of white lies argue that their purpose is to spare others unnecessary pain. A strict commitment to telling the truth in every circumstance, they suggest, would make social life harsh and unpleasant, since it would require us to inform people of every unflattering opinion we hold about them. In many situations, the truth would serve no useful purpose; telling a friend that his new haircut looks unattractive, after he has already had it cut, would only hurt him without allowing him to change anything. From this perspective, a white lie is a small act of consideration, a way of showing that we value the other person's feelings.",
+      "Critics, however, argue that even small lies carry hidden costs. Every lie, however kind its intention, treats the other person as someone to be managed rather than as an equal who is entitled to the truth. ( A ) the liar may believe that he or she is protecting the other person, the decision to withhold the truth is made without that person's consent, and it assumes that he or she cannot cope with reality. Moreover, white lies can accumulate, and a person who discovers that he or she has been told many comforting falsehoods may begin to doubt everything that others say.",
+      "There is also a question of whether white lies really serve the interests of those who receive them. A writer who is told that a weak draft is excellent may lose the opportunity to improve it, and a person whose friends always praise his or her decisions may never learn of mistakes that could be corrected. In such cases, what appears to be kindness may actually be a form of neglect, a way of avoiding the discomfort of honest conversation at the expense of the other person's genuine good.",
+      "Some philosophers have suggested that the choice is not simply between brutal honesty and comforting falsehood. It is often possible to be both truthful and kind, by choosing what to emphasize, how to phrase a difficult truth, and when to remain silent. Instead of declaring that a gift is wonderful, one might thank the giver sincerely for the thought behind it; instead of praising a weak performance, one might point to what was genuinely good in it. Such responses require more effort and imagination than either a lie or a blunt criticism, but they respect both the truth and the feelings of others.",
+      "Cultural expectations also play a role. In some societies, indirect speech and polite fictions are understood by everyone as part of social ritual, and no one is deceived by them. In others, directness is valued, and the same polite fictions might be regarded as dishonest. Whether a particular statement counts as a lie may therefore depend partly on what both speaker and listener understand to be happening.",
+      "The debate over white lies suggests that honesty and kindness are not always in conflict, but that reconciling them requires skill. The most admirable response is often neither the comforting lie nor the harsh truth, but a careful honesty that is offered with care for the person who hears it.",
+    ],
+    ja: [
+      'ほとんどの人はうそをつくのは悪いことだと言うだろうが、ほとんどだれもがときどき小さなうそをつく。私たちは、心の中では好きでない贈り物を大好きだと友人に言ったり、緊張している発表者にスピーチは完ぺきだったと請け合ったり、気を悪くさせずにさそいを断るためにいそがしいと言ったりする。しばしば「白いうそ」とよばれるそうしたいつわりは、道徳的に奇妙な位置をしめているように思われる。それはうそなのに、多くの人はそれを単に害がないだけでなく、親切なものとみなしているのである。白いうそがゆるされるかどうかという問いは、私たちがふつう当然だと思っている二つの価値、つまり正直さと親切さのあいだの深い緊張を明らかにする。',
+      '白いうそを擁護する人々は、その目的は他人を不要な痛みから守ることだと主張する。どんな状況でも真実を言うことに厳格にこだわれば、社会生活はきびしく不快なものになるだろう、と彼らは示唆する。他人についていだいている、ほめられたものでない意見をすべて伝えなければならなくなるからである。多くの状況で、真実は何の役にも立たない。新しい髪型が似合っていないと、すでに切ってしまったあとの友人に言うことは、何も変えられないまま彼を傷つけるだけだろう。この見方からすれば、白いうそは小さな思いやりの行為であり、相手の気持ちを大切にしていることを示すしかたなのである。',
+      'しかし批判する人々は、小さなうそでさえ隠れた代償をともなうと主張する。どんなうそも、その意図がどれほど親切であっても、相手を、真実を知る権利のある対等な人としてではなく、うまくあつかうべき人としてあつかう。うそをつく人は相手を守っていると信じているかもしれないが、真実を伝えないという決定はその人の同意なしになされ、その人は現実に向き合えないと決めつけている。さらに、白いうそは積み重なりうるのであり、自分が多くのなぐさめのいつわりを聞かされてきたと気づいた人は、他人の言うことをすべて疑いはじめるかもしれない。',
+      '白いうそが本当にそれを受け取る人のためになっているのかという問題もある。弱い下書きをすばらしいと言われた書き手は、それをよくする機会を失うかもしれないし、友人がいつも自分の決定をほめてくれる人は、直せたはずのまちがいを知ることが一度もないかもしれない。そうした場合、親切に見えるものは、実は一種のなおざりであり、相手の本当のためを犠牲にして、正直な会話の気まずさをさけるしかたなのかもしれない。',
+      '一部の哲学者は、選択は単に容赦のない正直さとなぐさめのいつわりのあいだにあるのではないと示唆してきた。何を強調するか、むずかしい真実をどう言い表すか、そしていつだまっているかを選ぶことによって、正直でありながら親切であることがしばしば可能なのである。贈り物がすばらしいと言うのではなく、その背後にある心づかいに心から感謝することもできるし、弱い演技をほめるのではなく、その中で本当によかったところを指摘することもできる。そうした答え方は、うそやぶっきらぼうな批判よりも多くの努力と想像力を必要とするが、真実と他人の気持ちの両方を尊重するのである。',
+      '文化的な期待もまた役割を果たす。ある社会では、遠回しな言い方や礼儀上の作りごとは、だれもが社会的な儀式の一部として理解しており、それにだまされる人はいない。別の社会では率直さが大切にされ、同じ礼儀上の作りごとが不正直とみなされるかもしれない。それゆえ、ある発言がうそにあたるかどうかは、話し手と聞き手の両方が何が起きていると理解しているかに部分的にかかっているのかもしれない。',
+      '白いうそをめぐる議論は、正直さと親切さがいつも対立するわけではないが、それらを両立させるには技術が必要であることを示している。最もほめられるべき答えは、しばしば、なぐさめのうそでもきびしい真実でもなく、それを聞く人への思いやりとともにさし出される、注意深い正直さなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「うそをつく人は相手を守っていると信じているかもしれないが、その決定は同意なしになされる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '擁護する人々によれば、白いうその目的は他人を不要な痛みから守ることである。', answer: true, why: '第2段落 their purpose is to spare others unnecessary pain。' },
+      { statement: '批判する人々によれば、白いうそは相手を対等な人としてあつかっている。', answer: false, why: '第3段落 treats the other person as someone to be managed rather than as an equal。' },
+      { statement: '筆者によれば、弱い下書きをほめられた書き手は、よくする機会を失うかもしれない。', answer: true, why: '第4段落 may lose the opportunity to improve it。' },
+      { statement: '筆者によれば、正直でありながら親切であることは決してできない。', answer: false, why: '第5段落 It is often possible to be both truthful and kind。' },
+    ],
+    qa: [
+      { q: 'What might a person who discovers many comforting falsehoods begin to do?', choices: ['Doubt everything that others say.', 'Tell more white lies.', 'Trust others even more.', 'Stop giving gifts.'], answer: 0, why: '第3段落 may begin to doubt everything that others say。' },
+      { q: 'Why might a statement count as a lie in one culture but not in another?', choices: ['It depends partly on what speaker and listener understand to be happening.', 'Some languages have no word for truth.', 'Lies are illegal in some countries.', 'People in some cultures never speak.'], answer: 0, why: '第6段落 may therefore depend partly on what both speaker and listener understand to be happening。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
