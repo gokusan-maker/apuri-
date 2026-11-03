@@ -27540,6 +27540,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-ai-writing',
+    title: 'When Machines Can Write',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Within a remarkably short time, computer programs capable of producing fluent written text have become widely available. A student can now ask such a program to summarize a book, draft an essay, or answer a homework question, and receive a response within seconds that would once have required hours of effort. These tools have been welcomed by many as powerful aids to learning and work, but they have also caused considerable anxiety among teachers, who wonder what it means to assign written work when a machine can produce it on demand. The debate touches not only on schooling but on the value of human effort in an age of increasingly capable machines.",
+      "The most immediate concern is dishonesty. If students submit text produced by a program as their own, teachers can no longer be confident that the work they are grading reflects what the students actually know. Some schools have responded by banning such tools, while others have returned to handwritten examinations taken in the classroom. Detecting machine-generated writing is difficult, however, and programs designed for this purpose have sometimes wrongly accused students of cheating, raising questions of fairness. A policy that relies on suspicion may also damage the trust between teachers and students on which good education depends.",
+      "A deeper concern relates to the purpose of writing in education. Writing is not merely a way of displaying knowledge that already exists in the mind; it is also a way of developing thought. In the effort to put ideas into words, students discover gaps in their understanding, make connections they had not noticed, and learn to construct arguments step by step. ( A ) a machine can produce a polished essay instantly, a student who relies on it may miss precisely the struggle through which thinking improves. It is a little like hiring someone else to go to the gym on one's behalf: the result may look impressive, but the benefit of the exercise is lost.",
+      "Yet it would be a mistake to see these tools only as threats. Used thoughtfully, they can support learning in several ways. A student who is unsure how to begin can ask for examples of how an argument might be structured; a learner of a foreign language can receive suggestions for more natural expressions; and a writer can use a program to identify weaknesses in a draft. In such cases, the tool functions less like a substitute for the student's work than like a patient tutor available at any hour. For students who lack access to private tutors, such help could even reduce some of the inequalities that have long existed in education.",
+      "The difference between these uses lies largely in who remains responsible for the thinking. When students use a program to avoid engaging with a task, they learn little; when they use it to question, revise, and improve their own work, they may learn a great deal. This suggests that the most important skill in an age of writing machines may be the ability to evaluate what such machines produce, recognizing errors, judging whether arguments are convincing, and deciding what one actually believes. A program can offer a convincing answer, but it cannot decide for the student whether that answer is true or worth defending.",
+      "Schools may therefore need to rethink how they teach and assess writing. Assignments that ask students to reflect on their own experiences, to explain their reasoning aloud, or to show how a draft developed over time are harder to complete with a machine alone. More fundamentally, educators may need to explain more clearly why writing matters, so that students see it not as a product to be delivered but as a process through which they come to understand the world and themselves.",
+    ],
+    ja: [
+      'おどろくほど短いあいだに、なめらかな文章を作り出せるコンピュータープログラムが広く使えるようになった。今では生徒がそうしたプログラムに本の要約や作文の下書きや宿題の答えをたのむと、かつては何時間もの努力が必要だったような答えを数秒のうちに受け取ることができる。こうした道具は、学びや仕事の強力な助けとして多くの人に歓迎されてきたが、教師たちのあいだにはかなりの不安も引き起こしてきた。機械が求めに応じて文章を作り出せるのに、文章の課題を出すことにどんな意味があるのか、と彼らは考えるのである。この議論は学校教育だけでなく、ますます有能になる機械の時代における人間の努力の価値にもかかわっている。',
+      '最も差しせまった懸念は不正である。生徒がプログラムの作った文章を自分のものとして出すなら、教師は採点している作品が生徒が実際に知っていることを反映していると、もはや確信できない。こうした道具を禁止することで対応した学校もあれば、教室で行う手書きの試験にもどった学校もある。しかし、機械が作った文章を見分けるのはむずかしく、そのために作られたプログラムが、生徒を不正をしたとまちがって責めたこともあり、公平さについての問題を生んでいる。疑いにたよる方針は、よい教育のよりどころである教師と生徒の信頼をそこなうおそれもある。',
+      'より深い懸念は、教育における書くことの目的にかかわる。書くことは、すでに頭の中にある知識を示す方法であるだけでなく、思考を育てる方法でもある。考えを言葉にしようと努力するなかで、生徒は自分の理解の穴に気づき、それまで気づかなかったつながりを見つけ、議論を一歩ずつ組み立てることを学ぶ。機械はみがかれた作文を一瞬で作り出せるので、それにたよる生徒は、まさに思考がよくなっていく苦労を経験しそこねるかもしれない。それは、自分の代わりにだれかにジムに通ってもらうようなものである。結果は見ばえがよくても、運動の効果は失われてしまう。',
+      'しかし、こうした道具を脅威としてだけ見るのはまちがいだろう。思慮深く使えば、それはいくつかの形で学びを支えることができる。どう書きはじめればよいかわからない生徒は、議論をどう組み立てられるかの例をたずねることができるし、外国語の学習者はより自然な表現の提案を受け取ることができるし、書き手は下書きの弱点を見つけるのにプログラムを使うこともできる。そうした場合、その道具は生徒の作業の代わりというより、いつでも相手をしてくれるしんぼう強い家庭教師のようにはたらくのである。家庭教師をつけられない生徒にとっては、こうした手助けは、教育に長くあった不平等のいくらかをへらすことさえできるかもしれない。',
+      'これらの使い方のちがいは、主にだれが考える責任をもち続けるかにある。生徒が課題に取り組むのをさけるためにプログラムを使うなら、ほとんど何も学ばないが、自分の作品を問い直し、書き直し、よくするために使うなら、多くを学ぶかもしれない。このことは、書く機械の時代に最も大切な技能は、そうした機械が作り出すものを評価する力、つまり誤りに気づき、議論が説得力をもつかどうかを判断し、自分が本当に何を信じているかを決める力なのかもしれないことを示している。プログラムは説得力のある答えを示せるが、その答えが正しいか、守る価値があるかを、生徒に代わって決めることはできないのである。',
+      'したがって学校は、書くことの教え方と評価のしかたを考え直す必要があるかもしれない。自分自身の経験をふり返ったり、自分の推論を声に出して説明したり、下書きが時間とともにどう発展したかを示したりするよう生徒に求める課題は、機械だけで仕上げるのがよりむずかしい。より根本的には、教育者は、なぜ書くことが大切なのかをもっとはっきり説明する必要があるかもしれない。そうすれば生徒は、書くことを、届けるべき製品としてではなく、世界と自分自身を理解するようになる過程として見るようになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「機械はみがかれた作文を一瞬で作れるので、それにたよる生徒は苦労を経験しそこねる」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Programs that write fluent text raise concerns about ( 1 ) and about the purpose of writing, which helps students develop their thinking. Yet used thoughtfully, these tools can act like a patient ( 2 ). What matters is who remains responsible for the thinking, and the key skill may be the ability to ( 3 ) what machines produce.',
+      blanks: [
+        { choices: ['dishonesty', 'spelling', 'speed', 'price'], answer: 0, why: '第2段落 The most immediate concern is dishonesty。' },
+        { choices: ['tutor', 'judge', 'parent', 'rival'], answer: 0, why: '第4段落 like a patient tutor available at any hour。' },
+        { choices: ['evaluate', 'copy', 'ignore', 'sell'], answer: 0, why: '第5段落 the ability to evaluate what such machines produce。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、機械が作った文章を見分けるのはかんたんである。', answer: false, why: '第2段落 Detecting machine-generated writing is difficult。' },
+      { statement: '筆者によれば、書くことは思考を育てる方法でもある。', answer: true, why: '第3段落 it is also a way of developing thought。' },
+      { statement: '筆者は、こうした道具は脅威でしかないと考えている。', answer: false, why: '第4段落 it would be a mistake to see these tools only as threats。' },
+      { statement: '筆者によれば、自分の経験をふり返る課題は、機械だけで仕上げるのがよりむずかしい。', answer: true, why: '第6段落 Assignments that ask students to reflect on their own experiences ... are harder to complete with a machine alone。' },
+    ],
+    qa: [
+      { q: 'Why have some programs designed to detect machine writing raised questions of fairness?', choices: ['They have sometimes wrongly accused students of cheating.', 'They are too expensive for schools.', 'They only work in English.', 'They help students cheat.'], answer: 0, why: '第2段落 have sometimes wrongly accused students of cheating, raising questions of fairness。' },
+      { q: 'When might students learn a great deal from using writing programs, according to the fifth paragraph?', choices: ['When they use them to question, revise, and improve their own work.', 'When they use them to avoid the task.', 'When they copy the answers exactly.', 'When they never read the results.'], answer: 0, why: '第5段落 when they use it to question, revise, and improve their own work, they may learn a great deal。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
