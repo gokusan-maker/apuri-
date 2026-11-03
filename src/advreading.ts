@@ -28336,6 +28336,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sugar-tax',
+    title: 'Taxing Sugar',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, a growing number of governments have introduced taxes on sugary drinks such as soda, sweetened juices, and energy drinks. The reasoning behind these taxes is straightforward: consuming large amounts of sugar is associated with obesity, tooth decay, and diseases such as diabetes, and these conditions impose heavy costs not only on the people who suffer from them but also on public health systems. By making sugary drinks more expensive, governments hope to discourage their consumption and to raise money that can be spent on health and education.",
+      "Evidence from several countries suggests that such taxes can indeed change behavior. After their introduction, sales of the taxed drinks have often fallen, sometimes considerably, and in some cases manufacturers have responded by reducing the amount of sugar in their products in order to avoid the tax altogether. This second effect may be especially important, since it changes what is available to all consumers, including those who would not have changed their habits in response to higher prices alone.",
+      "Critics, however, raise a number of objections. One is that the taxes fall most heavily on people with low incomes, who spend a larger share of their money on food and drink and are therefore more affected by any increase in prices. A tax that takes a greater proportion of income from the poor than from the rich is generally regarded as unfair. Supporters reply that people with low incomes also suffer disproportionately from diseases linked to sugar, so that they may gain the most from reduced consumption, especially if the money raised is spent on services that benefit them.",
+      "A second objection concerns personal freedom. Adults, it is argued, should be free to decide what they eat and drink, and it is not the business of governments to use taxes to steer their choices. ( A ) this argument has considerable force, it is weakened by the fact that many food choices are already shaped by forces that have little to do with free and informed decision, such as advertising, the placement of products in shops, and the low cost of sugary foods compared with healthier alternatives. A tax may thus be seen not as an interference with free choice but as a correction of influences that already distort it.",
+      "Others question whether the taxes address the real problem. Sugary drinks are only one source of sugar in modern diets, and people who drink less soda may simply consume more sweets or other unhealthy foods instead. Obesity and related diseases have many causes, including lack of exercise, stress, and the design of cities that discourage walking, and no single tax can address all of them. From this point of view, a sugar tax may give the impression that action is being taken while leaving deeper causes untouched.",
+      "The debate over sugar taxes illustrates a broader tension in public policy between respecting individual choice and protecting public health. Few people would deny that governments have some responsibility for the health of their citizens, but there is widespread disagreement about how far that responsibility extends and which methods are acceptable. A sugar tax is a relatively mild intervention compared with outright bans, but it nevertheless represents a decision by the state to treat certain choices as less desirable than others.",
+      "Perhaps the most reasonable conclusion is that a sugar tax can be a useful tool but not a complete solution. Its effects depend on how it is designed, how its revenue is used, and whether it is combined with other measures, such as education and better access to healthy food, that make healthy choices easier for everyone.",
+    ],
+    ja: [
+      '近年、炭酸飲料や甘いジュースやエナジードリンクのような砂糖入りの飲み物に税をかける政府がふえている。この税の背後にある理屈は単純である。大量の砂糖をとることは肥満や虫歯や糖尿病のような病気と結びついており、こうした状態は、それに苦しむ人々だけでなく公の医療制度にも重い費用を負わせる。砂糖入りの飲み物を高くすることで、政府はその消費をへらし、健康や教育に使えるお金を集めたいと考えているのである。',
+      'いくつかの国からの証拠は、そうした税が実際に行動を変えうることを示している。導入後、課税された飲み物の売り上げはしばしば、ときにはかなり落ち、場合によっては、製造業者が税をまったくさけるために製品の砂糖の量をへらすことで対応した。この第二の効果はとくに重要かもしれない。それは、値上がりだけでは習慣を変えなかったであろう人々をふくめ、すべての消費者が手に入れられるものを変えるからである。',
+      'しかし批判する人々は、いくつかの反論をあげる。一つは、この税は収入の少ない人々に最も重くのしかかるということである。彼らはお金のより大きな割合を飲食に使っているので、どんな値上がりからもより大きな影響を受ける。豊かな人よりも貧しい人から収入のより大きな割合をとる税は、ふつう不公平とみなされる。支持する人々は、収入の少ない人々は砂糖に結びついた病気にも不釣り合いに苦しんでいるので、とくに集めたお金が彼らのためになるサービスに使われるなら、消費がへることから最も多くを得るかもしれないと答える。',
+      '第二の反論は個人の自由にかかわる。大人は何を食べ、何を飲むかを自由に決められるべきであり、税を使って人々の選択をあやつるのは政府の仕事ではない、と主張されるのである。この議論にはかなりの説得力があるが、それは、多くの食べ物の選択がすでに、広告や店での商品の置き方や、健康的なものに比べて甘い食べ物が安いことのような、自由で情報にもとづいた決定とはほとんど関係のない力によって形づくられているという事実によって弱められる。それゆえ税は、自由な選択への干渉ではなく、すでにそれをゆがめている影響を正すものとして見ることもできる。',
+      'この税が本当の問題に取り組んでいるのかを疑う人もいる。砂糖入りの飲み物は現代の食生活における砂糖の源の一つにすぎず、炭酸飲料を飲まなくなった人々は、代わりにお菓子やほかの不健康な食べ物を多くとるだけかもしれない。肥満と関連する病気には、運動不足やストレスや、歩くことを不便にする都市の作りなど、多くの原因があり、どんな一つの税もそのすべてに対処することはできない。この見方からすれば、砂糖税は、より深い原因に手をつけないまま、対策がとられているという印象をあたえるだけかもしれない。',
+      '砂糖税をめぐる議論は、個人の選択を尊重することと公衆の健康を守ることとのあいだの、公共政策におけるより広い緊張を示している。政府が市民の健康にいくらかの責任をもつことを否定する人はほとんどいないだろうが、その責任がどこまで及び、どの方法なら受け入れられるのかについては、意見が大きく分かれている。砂糖税は全面的な禁止に比べれば比較的おだやかな介入だが、それでも、ある選択をほかの選択より望ましくないものとしてあつかうという国家の決定を表しているのである。',
+      'おそらく最も筋の通った結論は、砂糖税は役に立つ道具になりうるが、完全な解決策ではないということである。その効果は、それがどう作られるか、その収入がどう使われるか、そして教育や健康的な食べ物を手に入れやすくすることのように、だれにとっても健康的な選択をしやすくするほかの対策と組み合わされるかどうかによるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この議論にはかなりの説得力があるが、ある事実によって弱められる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Taxes on sugary drinks aim to reduce consumption and raise money for health. They have lowered sales and led manufacturers to cut ( 1 ). Critics say the taxes are unfair to the ( 2 ) and limit freedom, and that they ignore other causes of obesity. A sugar tax may be useful but works best when ( 3 ) with other measures.',
+      blanks: [
+        { choices: ['sugar', 'prices', 'jobs', 'advertising'], answer: 0, why: '第2段落 manufacturers have responded by reducing the amount of sugar in their products。' },
+        { choices: ['poor', 'young', 'famous', 'healthy'], answer: 0, why: '第3段落 the taxes fall most heavily on people with low incomes。' },
+        { choices: ['combined', 'compared', 'competing', 'confused'], answer: 0, why: '第7段落 whether it is combined with other measures。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、砂糖税の導入後、課税された飲み物の売り上げが落ちることが多い。', answer: true, why: '第2段落 sales of the taxed drinks have often fallen。' },
+      { statement: '支持する人々は、収入の少ない人々は砂糖税から何も得ないと考えている。', answer: false, why: '第3段落 they may gain the most from reduced consumption。' },
+      { statement: '筆者によれば、多くの食べ物の選択はすでに広告などの力によって形づくられている。', answer: true, why: '第4段落 many food choices are already shaped by forces ... such as advertising。' },
+      { statement: '筆者は、砂糖税は肥満の問題の完全な解決策だと考えている。', answer: false, why: '第7段落 a sugar tax can be a useful tool but not a complete solution。' },
+    ],
+    qa: [
+      { q: 'Why may the reduction of sugar by manufacturers be especially important?', choices: ['It changes what is available to all consumers.', 'It makes drinks more expensive.', 'It increases tax revenue.', 'It removes all drinks from shops.'], answer: 0, why: '第2段落 it changes what is available to all consumers。' },
+      { q: 'What doubt do some people have about whether sugar taxes address the real problem?', choices: ['People may simply eat more sweets or other unhealthy foods instead.', 'Sugary drinks contain no sugar.', 'Everyone already exercises enough.', 'Taxes always increase consumption.'], answer: 0, why: '第5段落 people who drink less soda may simply consume more sweets or other unhealthy foods instead。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
