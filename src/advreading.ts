@@ -28738,6 +28738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-four-day-week',
+    title: 'Four Days a Week?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of the past century, the standard working week in many industrialized countries has consisted of five days, a pattern that was itself the result of earlier campaigns to shorten working hours. In recent years, however, a growing number of companies and even some governments have experimented with a four-day week, in which employees work fewer days without any reduction in pay. Supporters see this as the next stage in a long history of progress, while skeptics doubt that it can work outside a limited range of occupations.",
+      "The results of several trials have been encouraging. Many participating companies reported that productivity remained stable or even increased, as employees found ways to work more efficiently, cutting unnecessary meetings and reducing time spent on distractions. Workers, for their part, reported less stress, better sleep, and more time for family, exercise, and personal interests. Some companies also found it easier to attract and keep talented staff, which reduced the costs of recruitment and training.",
+      "Supporters argue that these findings reflect a basic truth about human work: the number of hours spent at a desk is a poor measure of what is actually achieved. Beyond a certain point, longer hours lead to fatigue and mistakes rather than to greater output. ( A ) people are given more time to rest and recover, they may return to work with greater energy and concentration, so that a shorter week need not mean less work done.",
+      "Skeptics, however, point out that the trials have mostly involved office-based companies that volunteered to take part, and that such companies may not be representative. In hospitals, schools, shops, and factories, much of the work depends on people being physically present for a fixed number of hours, and reducing those hours may require hiring additional staff, which increases costs. There is also a risk that some employees, rather than becoming more efficient, will simply try to complete five days of work in four, leading to longer and more exhausting days.",
+      "Another concern is fairness. If the four-day week spreads mainly among well-paid professionals whose work can be reorganized easily, it may widen the gap between them and workers in sectors where such flexibility is impossible. Critics argue that policies to improve working life should benefit everyone, not just those who already enjoy relatively comfortable conditions. They also point out that workers in insecure or part-time jobs may face reduced pay rather than reduced hours if employers adopt shorter weeks without guaranteeing wages, so that a reform intended to improve lives could, if poorly designed, make some lives harder.",
+      "History may offer some perspective on these debates. When the five-day week was first proposed, many employers predicted that it would ruin their businesses, and similar warnings were heard when limits on daily working hours were introduced. In many cases, these fears proved exaggerated, as productivity rose and businesses adapted. This does not prove that a four-day week will succeed everywhere, but it suggests that our current arrangements are not a law of nature but the result of choices that can be revised.",
+      "The debate over the four-day week ultimately raises a question about what we want from economic progress. Increases in productivity can be used to produce more goods, to increase wages, or to give people more free time. For much of recent history, societies have chosen mainly the first two. Whether they will now choose to devote more of their gains to time for living may be one of the most important questions of the coming decades. The answer will depend not only on economics but also on what societies value, and on whether they come to see free time not as a luxury but as an essential part of a good life.",
+    ],
+    ja: [
+      '過去一世紀の大部分のあいだ、多くの工業国のふつうの労働週は五日から成っており、その形自体が、労働時間をへらすためのそれ以前の運動の結果だった。しかし近年、ますます多くの企業や、いくつかの政府までもが、社員が給料をへらされることなく働く日数をへらす週四日労働を試してきた。支持する人々はこれを長い進歩の歴史における次の段階と見ているが、疑う人々は、それが限られた種類の職業の外でうまくいくのかを疑問に思っている。',
+      'いくつかの試みの結果は希望のもてるものだった。参加した多くの企業は、社員が不要な会議をへらしたり、気が散ることにすごす時間をへらしたりして、より効率よく働く方法を見つけたため、生産性が変わらないか、むしろ上がったと報告した。働き手の側は、ストレスがへり、よく眠れるようになり、家族や運動や個人の趣味のための時間がふえたと報告した。また、有能な社員を集めて引きとめやすくなり、採用と研修の費用がへった企業もあった。',
+      '支持する人々は、こうした結果は人間の仕事についての基本的な真実を反映していると主張する。つまり、机の前ですごす時間の長さは、実際になしとげられたことをはかるものさしとしては不十分だということである。ある点をこえると、長時間働くことは、より多くの成果ではなく、疲れとまちがいにつながる。人々が休んで回復する時間をより多くあたえられれば、より多くの元気と集中力をもって仕事にもどってくるかもしれず、そのため週が短くなっても、なされる仕事が少なくなるとはかぎらないのである。',
+      'しかし疑う人々は、これまでの試みは主に、自ら参加を申し出た事務職中心の企業が対象であり、そうした企業は全体を代表していないかもしれないと指摘する。病院や学校や店や工場では、仕事の多くが決まった時間だけ人がその場にいることにかかっており、その時間をへらすには人を余分に雇う必要があるかもしれず、それは費用をふやす。また、一部の社員が、より効率的になるどころか、五日分の仕事を四日でこなそうとするだけで、より長く疲れる一日になってしまうおそれもある。',
+      'もう一つの懸念は公平さである。もし週四日労働が、仕事を組み直しやすい高給の専門職のあいだで主に広まるなら、そうした柔軟さが不可能な分野の働き手とのあいだの格差を広げるかもしれない。働く生活をよくするための政策は、すでに比較的めぐまれた条件にある人々だけでなく、すべての人のためになるべきだ、と批判する人々は主張する。彼らはまた、雇い主が賃金を保証せずに週を短くすれば、不安定な仕事やパートタイムの働き手は、労働時間がへるのではなく給料がへることになるかもしれないと指摘する。そうなれば、生活をよくするための改革が、うまく作られていなければ、かえって一部の人々の生活を苦しくするかもしれないのである。',
+      '歴史は、こうした議論にいくらかの見通しをあたえてくれるかもしれない。週五日労働がはじめて提案されたとき、多くの雇い主はそれが商売をだめにすると予言したし、一日の労働時間に制限が設けられたときにも同じような警告が聞かれた。多くの場合、生産性が上がり企業が適応したので、こうした恐れは大げさだったことがわかった。このことは週四日労働がどこでも成功することを証明するわけではないが、今の働き方が自然の法則ではなく、見直すことのできる選択の結果であることを示している。',
+      '週四日労働をめぐる議論は、結局のところ、私たちが経済の進歩に何を求めるのかという問いを生む。生産性の向上は、より多くの品物を作るためにも、賃金を上げるためにも、人々により多くの自由な時間をあたえるためにも使うことができる。近年の歴史の大部分において、社会は主に最初の二つを選んできた。これからは得たもののより多くを生きるための時間にあてることを選ぶのかどうかが、これからの数十年の最も大切な問いの一つになるかもしれない。その答えは経済だけでなく、社会が何を大切にするか、そして自由な時間をぜいたくではなく、よい人生に欠かせない一部として見るようになるかどうかにもよるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「人々が休む時間をより多くあたえられれば、元気と集中力をもってもどる」という条件の If。' },
+    ],
+    summary: {
+      text: 'Trials of a four-day week found that productivity often stayed the same while workers felt less ( 1 ). Supporters say hours are a poor measure of output, but skeptics note that the trials involved mainly ( 2 ) companies and that other sectors need people present. History suggests that fears about shorter hours are often ( 3 ).',
+      blanks: [
+        { choices: ['stress', 'hunger', 'pride', 'joy'], answer: 0, why: '第2段落 Workers ... reported less stress。' },
+        { choices: ['office-based', 'farming', 'fishing', 'military'], answer: 0, why: '第4段落 the trials have mostly involved office-based companies。' },
+        { choices: ['exaggerated', 'correct', 'secret', 'recent'], answer: 0, why: '第6段落 these fears proved exaggerated。' },
+      ],
+    },
+    tf: [
+      { statement: '試みに参加した多くの企業は、生産性が変わらないか上がったと報告した。', answer: true, why: '第2段落 productivity remained stable or even increased。' },
+      { statement: '支持する人々によれば、長く働けば働くほど成果はいつもふえる。', answer: false, why: '第3段落 Beyond a certain point, longer hours lead to fatigue and mistakes。' },
+      { statement: '批判する人々は、週四日労働が働き手のあいだの格差を広げるかもしれないと心配している。', answer: true, why: '第5段落 it may widen the gap between them and workers in sectors where such flexibility is impossible。' },
+      { statement: '筆者によれば、今の働き方は変えることのできない自然の法則である。', answer: false, why: '第6段落 our current arrangements are not a law of nature。' },
+    ],
+    qa: [
+      { q: 'What risk do skeptics mention about some employees?', choices: ['They may try to complete five days of work in four, leading to exhausting days.', 'They may stop working completely.', 'They may ask for lower pay.', 'They may refuse to take holidays.'], answer: 0, why: '第4段落 will simply try to complete five days of work in four, leading to longer and more exhausting days。' },
+      { q: 'How can increases in productivity be used, according to the last paragraph?', choices: ['To produce more goods, increase wages, or give people more free time.', 'Only to build larger offices.', 'Only to reduce the number of workers.', 'To make working hours longer.'], answer: 0, why: '第7段落 can be used to produce more goods, to increase wages, or to give people more free time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
