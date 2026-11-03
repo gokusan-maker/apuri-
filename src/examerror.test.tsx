@@ -2122,3 +2122,10 @@ it('誤文訂正〈148〉：国公立レベル 不定詞の意味上の主語 fo
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('of')
 })
+
+it('正誤問題〈155〉：東大レベル 英作文の名詞の数と主語の一致の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-agreement-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) my friend')
+})

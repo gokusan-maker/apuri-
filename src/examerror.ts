@@ -3674,6 +3674,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Should it (B) rains tomorrow, (C) the game (D) will be cancelled.', choices: ['(A) Should it', '(B) rains tomorrow,', '(C) the game', '(D) will be cancelled'], answer: 1, why: 'should のあとは原形。Should it rain。' },
     ],
   },
+  {
+    id: 'exam-error-agreement-todai',
+    title: '入試の正誤問題〈155〉（東大レベル：英作文の名詞の数と主語の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'one of the＋複数名詞（動詞は単数）。each・every・everyone は単数あつかい（every のあとも単数名詞）。the number of ～「～の数」は単数、a number of ～「たくさんの～」は複数。mathematics・news などの -s で終わる単数名詞、ひとまとまりの期間（ten years）は単数あつかい。',
+    ],
+    examples: [
+      { en: 'One of my friends lives in Osaka.', ja: '友だちの一人は大阪に住んでいる。' },
+      { en: 'The number of tourists has increased.', ja: '旅行者の数がふえた。' },
+    ],
+    questions: [
+      { sentence: 'One of (A) my friend (B) lives (C) in (D) Osaka.', choices: ['(A) my friend', '(B) lives', '(C) in', '(D) Osaka'], answer: 0, why: 'one of のあとは複数名詞。my friends。' },
+      { sentence: 'Each (A) of the students (B) have (C) a (D) locker.', choices: ['(A) of the students', '(B) have', '(C) a', '(D) locker'], answer: 1, why: 'each of ～ は単数あつかい。has。' },
+      { sentence: 'Every (A) students (B) in the class (C) passed (D) the exam.', choices: ['(A) students', '(B) in the class', '(C) passed', '(D) the exam'], answer: 0, why: 'every のあとは単数名詞。student。' },
+      { sentence: 'The number (A) of tourists (B) have (C) increased (D) this year.', choices: ['(A) of tourists', '(B) have', '(C) increased', '(D) this year'], answer: 1, why: 'the number of ～「～の数」は単数あつかい。has。' },
+      { sentence: '(A) A number of people (B) were waiting outside (C) in (D) a long lines.', choices: ['(A) A number of people', '(B) were waiting outside', '(C) in', '(D) a long lines'], answer: 3, why: 'a のあとは単数。a long line。' },
+      { sentence: 'Ten (A) years (B) are (C) a long time (D) to wait.', choices: ['(A) years', '(B) are', '(C) a long time', '(D) to wait'], answer: 1, why: '期間をひとまとまりと考えるときは単数あつかい。is。' },
+      { sentence: 'Mathematics (A) are (B) my favorite (C) subject (D) at school.', choices: ['(A) are', '(B) my favorite', '(C) subject', '(D) at school'], answer: 0, why: '学問名の mathematics は -s で終わるが単数あつかい。is。' },
+      { sentence: 'There (A) are many books on the shelf, (B) and (C) each of them (D) are interesting.', choices: ['(A) are many books on the shelf,', '(B) and', '(C) each of them', '(D) are interesting'], answer: 3, why: 'each of them は単数あつかい。is。' },
+      { sentence: 'My family (A) are all (B) early risers, and (C) everyone (D) get up at six.', choices: ['(A) are all', '(B) early risers, and', '(C) everyone', '(D) get up at six'], answer: 3, why: 'everyone は単数あつかい。gets。' },
+      { sentence: 'Both of my parents (A) work (B) at (C) a hospitals (D) in the city.', choices: ['(A) work', '(B) at', '(C) a hospitals', '(D) in the city'], answer: 2, why: 'a のあとは単数。a hospital。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
