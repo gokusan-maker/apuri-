@@ -2045,3 +2045,10 @@ it('正誤問題〈149〉：東大レベル 英作文の冠詞の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) the soccer')
 })
+
+it('誤文訂正〈143〉：京大レベル 使役 have／get と受け身の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-143')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('cut')
+})

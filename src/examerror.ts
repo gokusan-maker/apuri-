@@ -6114,6 +6114,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He talked to [him] quietly, trying to stay calm.', choices: ['himself', 'his', 'he', 'hisself'], answer: 0, why: '「ひとりごとを言う」は talk to oneself。himself。' },
     ],
   },
+  {
+    id: 'exam-fix-143',
+    title: '入試の誤文訂正〈143〉（京大レベル：使役 have／get と受け身）',
+    points: ['have／get＋物＋過去分詞は「物を～してもらう・～される」（have my hair cut・get my watch repaired・have my bag stolen）。have＋人＋原形、get＋人＋to 不定詞は「人に～してもらう」。もの が主語で「～される」は be＋過去分詞（The house was built）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I had my hair cut yesterday.', ja: '私はきのう髪を切ってもらった。' }],
+    questions: [
+      { sentence: 'I had my hair [cutting] yesterday.', choices: ['cut', 'to cut', 'cuts', 'been cut'], answer: 0, why: '髪は「切られる」側なので過去分詞 cut。have my hair cut。' },
+      { sentence: 'She got her bag [steal] on the train.', choices: ['stolen', 'steal to', 'stealing', 'to steal'], answer: 0, why: 'かばんは「ぬすまれる」側。get＋物＋過去分詞で stolen。' },
+      { sentence: 'I must get my watch [repair].', choices: ['repaired', 'repairing', 'to repairing', 'repairs'], answer: 0, why: '時計は「修理される」側。get my watch repaired。' },
+      { sentence: 'He had his car [wash] by his son.', choices: ['washed', 'washing', 'to wash', 'washes'], answer: 0, why: '車は「洗われる」側。have＋物＋過去分詞で washed。' },
+      { sentence: 'I had my brother [to help] me with my homework.', choices: ['help', 'helped', 'helps', 'to helping'], answer: 0, why: 'have＋人＋原形「人に～してもらう」。help。' },
+      { sentence: 'She got her friend [carry] the box.', choices: ['to carry', 'carried', 'carries', 'carry to'], answer: 0, why: 'get＋人＋to 不定詞「人に～してもらう」。to carry。' },
+      { sentence: 'We had the roof [fix] after the storm.', choices: ['fixed', 'fixing', 'to fix', 'fixes'], answer: 0, why: '屋根は「直される」側。had the roof fixed。' },
+      { sentence: 'The house [built] in 1990.', choices: ['was built', 'was building', 'has built', 'building'], answer: 0, why: '家は「建てられた」ので受け身 was built。' },
+      { sentence: 'This letter [wrote] by my grandfather.', choices: ['was written', 'was wrote', 'is writing', 'had wrote'], answer: 0, why: '手紙は「書かれた」ので受け身 was written。write の過去分詞は written。' },
+      { sentence: 'You should have your eyes [check] regularly.', choices: ['checked', 'checking', 'to check', 'checks'], answer: 0, why: '目は「検査される」側。have your eyes checked。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
