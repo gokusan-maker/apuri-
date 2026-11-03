@@ -6072,6 +6072,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We had [a fine weather] yesterday.', choices: ['fine weather', 'a fine weathers', 'fine weathers', 'the fine weathers'], answer: 0, why: 'weather は数えられないので a をつけない。' },
     ],
   },
+  {
+    id: 'exam-fix-142',
+    title: '入試の誤文訂正〈142〉（国公立レベル：再帰代名詞と熟語）',
+    points: ['主語と目的語が同じ人・ものなら再帰代名詞（myself・yourself／yourselves・himself・herself・itself・ourselves・themselves）を使う。enjoy oneself（楽しむ）・help oneself to（自由に取って食べる）・by oneself（ひとりで）・hurt oneself（けがをする）・teach oneself（独学する）・behave oneself（行儀よくする）・talk to oneself（ひとりごとを言う）。複数の相手には yourselves。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'We enjoyed ourselves at the party.', ja: '私たちはパーティーで楽しんだ。' }],
+    questions: [
+      { sentence: 'We enjoyed [us] at the party.', choices: ['ourselves', 'ourself', 'ours', 'our'], answer: 0, why: '主語 We と目的語が同じなので ourselves。enjoy oneself。' },
+      { sentence: 'Please help [you] to some cake.', choices: ['yourself', 'your', 'yours', 'you self'], answer: 0, why: 'help oneself to ～「～を自由に取って食べる」。yourself。' },
+      { sentence: 'She lives [by her].', choices: ['by herself', 'by hers', 'for her', 'with she'], answer: 0, why: '「ひとりで」は by oneself。by herself。' },
+      { sentence: 'He hurt [him] while playing soccer.', choices: ['himself', 'his', 'hisself', 'he'], answer: 0, why: '「けがをする」は hurt oneself。himself。' },
+      { sentence: 'The children dressed [theirselves] quickly.', choices: ['themselves', 'themself', 'theirs', 'their self'], answer: 0, why: 'they の再帰代名詞は themselves。theirselves という形はない。' },
+      { sentence: 'I taught [me] English.', choices: ['myself', 'mine', 'my', 'me self'], answer: 0, why: '「独学する」は teach oneself。myself。' },
+      { sentence: 'The door opened [by it].', choices: ['by itself', 'by its', 'for its', 'of it'], answer: 0, why: '「ひとりでに」は by itself。' },
+      { sentence: 'Behave [you], children!', choices: ['yourselves', 'yourself', 'your', 'yours'], answer: 0, why: '相手が複数（children）なので yourselves。behave oneself。' },
+      { sentence: 'She looked at [her] in the mirror.', choices: ['herself', 'hers', 'she', 'her self'], answer: 0, why: '自分自身を見ているので herself。' },
+      { sentence: 'He talked to [him] quietly, trying to stay calm.', choices: ['himself', 'his', 'he', 'hisself'], answer: 0, why: '「ひとりごとを言う」は talk to oneself。himself。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
