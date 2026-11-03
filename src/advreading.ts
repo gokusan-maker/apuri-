@@ -29618,6 +29618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-ai-art',
+    title: 'Who Made This Picture?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, computer programs have become capable of producing images, music, and poems in response to a few words typed by a user. A person who asks for a painting of a city at night in the style of a famous artist can receive a convincing result within seconds, without any training in drawing or painting. These tools have delighted many people, who see them as a new way of expressing ideas, but they have also provoked anxiety and anger among artists and raised difficult questions about creativity, ownership, and the value of human skill.",
+      "One of the most pressing concerns involves the material on which these programs are trained. To learn how to produce images, a program must first analyze millions of existing works, many of them created by living artists who were never asked for permission and receive no payment. Artists argue that their work has been used to build systems that may now compete with them for jobs, and some have taken legal action. Supporters of the technology reply that human artists have always learned by studying the work of others, and that a program learning from existing images is not fundamentally different.",
+      "This comparison, however, may be misleading. A human student who studies the paintings of earlier masters absorbs their influence slowly, through years of practice, and ultimately develops a personal style shaped by his or her own experiences. ( A ) a program can analyze millions of images in a short time and reproduce the characteristic features of a particular artist on demand, the scale and speed of its learning differ so greatly from human learning that the comparison may obscure more than it reveals.",
+      "There is also the question of whether the output of such programs can be called art at all. Some argue that art requires intention, the desire of a person to express something, and that a program which merely combines patterns from its training data has no such intention. Others point out that the person who writes the instructions and selects among the results may exercise real creative judgment, so that the program functions more like a tool, comparable to a camera, than like an independent artist.",
+      "The history of photography offers an interesting parallel. When cameras first appeared, some painters feared that they would make painting obsolete, and critics debated whether photographs could ever be considered art. Over time, photography came to be recognized as an art form in its own right, while painting changed in response, moving away from realistic representation toward new styles that cameras could not easily reproduce. Some observers suggest that a similar process may occur with image-generating programs, which could push human artists to explore forms of expression that machines cannot imitate.",
+      "Yet the comparison with photography has limits. Photography still required a person to be present, to choose a subject, and to frame an image, whereas image-generating programs can produce finished works with very little human effort. This raises concerns that the market for illustration, design, and other creative work could shrink dramatically, making it harder for young artists to earn a living while they develop their skills.",
+      "How societies respond to these technologies will depend on decisions about law, payment, and transparency. Some propose that artists should be able to prevent their work from being used in training, or should be paid when it is. Others call for clear labels indicating when an image has been produced by a machine. Whatever rules are adopted, the debate forces us to consider what we value in art: the finished object alone, or also the human effort, intention, and experience that produced it. The answer we give may shape not only the future of art but also how we understand the worth of human creativity in an age of capable machines.",
+    ],
+    ja: [
+      '近年、コンピューターのプログラムは、利用者が打ちこんだいくつかの言葉にこたえて、絵や音楽や詩を作り出せるようになった。有名な画家の作風で夜の都市の絵をたのむ人は、絵をかく訓練をまったく受けていなくても、数秒のうちにそれらしい結果を受け取ることができる。こうした道具は、それを考えを表す新しい方法と見る多くの人々を喜ばせてきたが、芸術家のあいだに不安と怒りも引き起こし、創造性や所有権や人間の技術の価値についてのむずかしい問いを生んでいる。',
+      '最も差しせまった懸念の一つは、こうしたプログラムが学ぶ材料にかかわる。絵の作り方を学ぶために、プログラムはまず何百万もの既存の作品を分析しなければならず、その多くは、許可を求められたこともなく、お金も受け取っていない、生きている芸術家によって作られたものである。芸術家たちは、自分の作品が、今や仕事をめぐって自分と競争するかもしれない仕組みを作るのに使われたと主張し、法的な手段をとった人もいる。この技術を支持する人々は、人間の芸術家もいつも他人の作品を研究することで学んできたのであり、プログラムが既存の絵から学ぶことは根本的にはちがわないと答える。',
+      'しかし、この比較は誤解をまねくかもしれない。昔の巨匠の絵を研究する人間の学生は、何年もの練習を通してゆっくりとその影響を吸収し、最終的には自分自身の経験によって形づくられた個人の作風を育てる。プログラムは何百万もの絵を短い時間で分析し、ある芸術家の特徴を求めに応じて再現できるので、その学びの規模と速さは人間の学びとあまりにちがっており、この比較は明らかにするものより見えなくするもののほうが多いかもしれない。',
+      'そうしたプログラムが作り出したものをそもそも芸術とよべるのかという問題もある。芸術には意図、つまり何かを表したいという人の願いが必要であり、学んだデータの型を組み合わせるだけのプログラムにはそうした意図はないと主張する人もいる。一方で、指示を書き、結果の中から選ぶ人は本当の創造的な判断を行っているかもしれず、そのためプログラムは独立した芸術家というより、カメラにくらべられるような道具としてはたらいているのだと指摘する人もいる。',
+      '写真の歴史は興味深い似た例をあたえてくれる。カメラが初めて現れたとき、一部の画家はそれが絵画を時代おくれにしてしまうとおそれ、批評家たちは写真がいつか芸術とみなされうるのかを議論した。時がたつにつれて、写真はそれ自体一つの芸術の形として認められるようになり、一方で絵画もそれにこたえて変わり、写実的な表現からはなれて、カメラにはかんたんにまねできない新しい作風へと向かった。同じような過程が絵を作るプログラムでも起こるかもしれず、それが人間の芸術家を、機械にはまねできない表現の形を探るよううながすかもしれない、と示唆する観察者もいる。',
+      'しかし写真との比較には限界がある。写真ではやはり人がその場にいて、対象を選び、画面を決める必要があったが、絵を作るプログラムはごくわずかな人間の努力で完成した作品を作り出せる。このことは、挿絵やデザインやほかの創作の仕事の市場が大きくちぢみ、若い芸術家が技術をみがくあいだに生計を立てるのがむずかしくなるかもしれないという懸念を生んでいる。',
+      '社会がこうした技術にどうこたえるかは、法律や支払いや透明性についての決定によるだろう。芸術家は自分の作品が学習に使われるのを止められるべきだ、あるいは使われたときには支払いを受けるべきだと提案する人もいる。また、ある絵が機械によって作られたときにはそれを示すはっきりした表示を求める人もいる。どんな決まりが取り入れられるにせよ、この議論は、私たちが芸術の何を大切にしているのか、つまり完成したものだけなのか、それともそれを生み出した人間の努力や意図や経験もなのかを考えさせるのである。私たちが出す答えは、芸術の未来だけでなく、有能な機械の時代に人間の創造性の価値をどう理解するかも形づくるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「プログラムは短時間で何百万もの絵を分析できるので、学びの規模と速さが人間とあまりにちがう」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Programs that generate images are trained on existing works, often without the artists’ ( 1 ). Supporters compare this to human learning, but the scale is very different. Some say such images lack the ( 2 ) that art requires, and others compare the programs to cameras. Artists fear the market for creative work may ( 3 ).',
+      blanks: [
+        { choices: ['permission', 'brushes', 'friends', 'names'], answer: 0, why: '第2段落 who were never asked for permission and receive no payment。' },
+        { choices: ['intention', 'color', 'size', 'speed'], answer: 0, why: '第4段落 art requires intention。' },
+        { choices: ['shrink', 'grow', 'move', 'freeze'], answer: 0, why: '第6段落 the market for illustration, design, and other creative work could shrink dramatically。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、絵を作るプログラムは既存の作品を分析して学ぶ。', answer: true, why: '第2段落 a program must first analyze millions of existing works。' },
+      { statement: '筆者によれば、プログラムの学びの規模と速さは人間の学びとほとんど同じである。', answer: false, why: '第3段落 the scale and speed of its learning differ so greatly from human learning。' },
+      { statement: '筆者によれば、写真はやがてそれ自体一つの芸術の形として認められた。', answer: true, why: '第5段落 photography came to be recognized as an art form in its own right。' },
+      { statement: '筆者によれば、写真と絵を作るプログラムの比較には限界がない。', answer: false, why: '第6段落 the comparison with photography has limits。' },
+    ],
+    qa: [
+      { q: 'How did painting respond to the appearance of cameras, according to the fifth paragraph?', choices: ['It moved toward new styles that cameras could not easily reproduce.', 'It disappeared completely.', 'It became more realistic.', 'It started using cameras only.'], answer: 0, why: '第5段落 moving away from realistic representation toward new styles that cameras could not easily reproduce。' },
+      { q: 'What do some people propose to protect artists?', choices: ['That artists can prevent their work from being used in training or be paid when it is.', 'That all art should be made by machines.', 'That cameras should be banned.', 'That art should be free for everyone.'], answer: 0, why: '第7段落 artists should be able to prevent their work from being used in training, or should be paid when it is。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
