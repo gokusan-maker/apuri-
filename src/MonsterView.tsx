@@ -2280,6 +2280,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 62 Q20 58 18 66 M70 62 Q80 58 82 66" fill="none" stroke="#1a2e05" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'ratsnake')
+    return (
+      <g>
+        {/* 体のうろこもようと、ちょろっと出た舌 */}
+        <path d="M36 64 Q50 70 64 64 M38 72 Q50 78 62 72" fill="none" stroke="#365314" strokeWidth="1.5" />
+        <path d="M50 58 L50 64 L47 67 M50 64 L53 67" fill="none" stroke="#dc2626" strokeWidth="1.2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
