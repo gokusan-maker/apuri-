@@ -5778,6 +5778,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The train arrived [lately] because of the snow.', choices: ['late', 'later than', 'latest', 'lateness'], answer: 0, why: '「おくれて着いた」は late（副詞）。lately は「最近」。' },
     ],
   },
+  {
+    id: 'exam-fix-135',
+    title: '入試の誤文訂正〈135〉（旧帝大レベル：使役動詞と知覚動詞）',
+    points: ['使役の make／let／have は 目的語＋動詞の原形（make him wait）。get は get 人 to do。受け身にすると make は be made to do（to が必要）。have／get＋もの＋過去分詞は「～してもらう・～される」（have my hair cut）。知覚動詞 see・hear・watch・feel は 目的語＋原形（全部を見る）か -ing（～しているところを見る）。help は help 人 (to) do。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'My mother made me clean my room, and I had my bike repaired.', ja: '母は私に部屋をそうじさせ、私は自転車を修理してもらった。' }],
+    questions: [
+      { sentence: 'The teacher made us [to write] the essay again.', choices: ['write', 'writing', 'written', 'wrote'], answer: 0, why: 'make＋人＋原形。make us write。' },
+      { sentence: 'My parents let me [to go] to the concert.', choices: ['go', 'going', 'gone', 'went'], answer: 0, why: 'let＋人＋原形。let me go。' },
+      { sentence: 'I got my brother [help] me with my homework.', choices: ['to help', 'helped', 'helping of', 'helps'], answer: 0, why: 'get＋人＋to do。get my brother to help。' },
+      { sentence: 'I had my hair [cutting] yesterday.', choices: ['cut', 'to cut', 'cuts', 'be cut'], answer: 0, why: '「髪を切ってもらった」は have＋もの＋過去分詞。have my hair cut（cut の過去分詞は cut）。' },
+      { sentence: 'He was made [wait] for two hours.', choices: ['to wait', 'waiting', 'waited', 'waits'], answer: 0, why: 'make の受け身は be made to do。to が必要。' },
+      { sentence: 'I saw a man [to enter] the building.', choices: ['enter', 'entered', 'to entering', 'enters'], answer: 0, why: '知覚動詞 see＋人＋原形（入るのを最後まで見た）。to は不要。' },
+      { sentence: 'I heard someone [called] my name.', choices: ['call', 'to call', 'calls', 'to be called'], answer: 0, why: 'hear＋人＋原形（または -ing）。call（呼ぶ）。called だと「呼ばれる」側になってしまう。' },
+      { sentence: 'She had her bag [steal] on the train.', choices: ['stolen', 'to steal', 'stealing', 'stole'], answer: 0, why: '「かばんをぬすまれた」は have＋もの＋過去分詞。stolen。' },
+      { sentence: 'We watched the children [to play] in the park.', choices: ['playing', 'to playing', 'played', 'plays'], answer: 0, why: '知覚動詞 watch＋人＋-ing（遊んでいるところを見た）。to は不要。' },
+      { sentence: 'Could you help me [carrying] these boxes?', choices: ['carry', 'carried', 'carries', 'for carry'], answer: 0, why: 'help＋人＋(to) 原形。help me carry。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
