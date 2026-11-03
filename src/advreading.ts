@@ -29582,6 +29582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-conversation',
+    title: 'The Art of Conversation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Conversation is so ordinary a part of human life that we rarely think about it as an art. We talk with family members over meals, exchange greetings with neighbors, and discuss problems with colleagues, often without paying much attention to how these exchanges unfold. Yet anyone who has experienced a truly good conversation, one in which ideas developed in unexpected directions and both participants left feeling understood, knows that such conversations are relatively rare. It is worth asking what distinguishes them from the countless exchanges that leave little impression.",
+      "A good conversation differs in important ways from other forms of communication. Unlike a lecture, it is not a transfer of information from one person who knows to another who does not. Unlike a debate, it is not a contest in which each side tries to defeat the other. Instead, it is a shared activity in which both participants contribute to something neither could have produced alone. The direction of a good conversation cannot be fully planned in advance; it emerges from the interaction itself, as each remark opens possibilities that the other person may take up or redirect.",
+      "For such a conversation to occur, certain conditions seem necessary. Perhaps the most important is genuine listening. Many people, while appearing to listen, are in fact merely waiting for their turn to speak, preparing their own responses while the other person is still talking. ( A ) they hear the words that are spoken, they miss much of what is meant, and the conversation becomes a series of parallel speeches rather than a real exchange. Genuine listening requires attention to the other person's meaning, a willingness to ask questions, and a readiness to be surprised.",
+      "Another condition is a certain balance between speaking and listening, and between agreement and disagreement. A conversation in which one person dominates becomes a monologue, while one in which both participants simply agree with everything becomes empty. Some disagreement can make a conversation lively, provided that it is offered in a spirit of inquiry rather than hostility, and that each person remains open to the possibility that the other has seen something important.",
+      "Modern forms of communication have changed the conditions under which conversation takes place. Messages sent by phone are often brief and fragmented, and they can be answered at leisure, removing some of the spontaneity and attentiveness that face-to-face conversation requires. Online discussions frequently become polarized, as participants address large audiences rather than individual partners and are tempted to perform rather than to listen. Some observers worry that these changes are making the skills of conversation less familiar, particularly among young people who have grown up with them.",
+      "Yet the desire for good conversation has not disappeared. People continue to value friends with whom they can talk freely, teachers who engage with their questions, and colleagues who listen to their ideas. These experiences suggest that conversation is not merely a means of exchanging information but a way of being with others, in which people come to know one another and, sometimes, to know themselves more clearly. A good conversation can change the way we see a problem, remind us of something we had forgotten, or give us the courage to say what we had been afraid to admit.",
+      "Like any art, conversation can be cultivated. It requires practice, attention, and a willingness to take the other person seriously. In return, it offers one of the deepest pleasures of human life: the experience of thinking together, and of discovering through another person something that one could not have found alone. In an age of endless messages and constant talk, the patient, attentive conversation may be more precious than ever, precisely because it has become harder to find.",
+    ],
+    ja: [
+      '会話は人間の生活のあまりにふつうの一部なので、私たちはそれを技術として考えることはめったにない。私たちは食事をしながら家族と話し、近所の人とあいさつを交わし、同僚と問題について話し合うが、そうしたやりとりがどう進むのかにあまり注意をはらわないことが多い。しかし、本当によい会話、つまり考えが思いがけない方向に発展し、両方が理解されたと感じてその場をあとにするような会話を経験したことのある人ならだれでも、そうした会話が比較的まれであることを知っている。何がそれを、ほとんど印象を残さない数えきれないやりとりから区別しているのかを問う価値がある。',
+      'よい会話は、ほかの形のコミュニケーションとは大切な点でちがっている。講義とちがって、それは知っている人から知らない人への情報の受けわたしではない。討論とちがって、それはそれぞれの側が相手を打ち負かそうとする競争でもない。そうではなく、それは両方が、どちらも一人では生み出せなかった何かに貢献する、共同の活動なのである。よい会話の方向は前もって完全に計画することはできない。それはやりとりそのものから生まれ、一つ一つの発言が、相手が取り上げたり向きを変えたりするかもしれない可能性を開いていくのである。',
+      'そうした会話が起こるには、ある条件が必要なように思われる。おそらく最も大切なのは本当に聞くことである。多くの人は、聞いているように見えながら、実はただ自分が話す番を待っているだけで、相手がまだ話しているあいだに自分の返事を準備している。そうした人は話された言葉は聞いているが、意味されていることの多くを聞きのがし、会話は本当のやりとりではなく、ならんだ演説の連続になってしまう。本当に聞くには、相手の言わんとすることへの注意と、質問しようとする気持ちと、おどろかされる心がまえが必要なのである。',
+      'もう一つの条件は、話すことと聞くこと、そして賛成と反対とのあいだのある種のつりあいである。一人が支配する会話は独り言になり、両方がすべてにただ賛成するだけの会話は中身のないものになる。いくらかの意見のちがいは会話を生き生きとさせうる。ただしそれは、敵意ではなく探究の心でさし出され、それぞれが、相手が何か大切なものを見ているかもしれない可能性に心を開いている場合にかぎられる。',
+      '現代のコミュニケーションの形は、会話が行われる条件を変えてきた。電話で送られるメッセージはしばしば短く、とぎれとぎれで、好きなときに返事ができるので、顔を合わせた会話が必要とする自然さや注意深さの一部を取りのぞいてしまう。ネット上の議論はしばしば両極に分かれる。参加者が一人一人の相手ではなく大勢の聴衆に向けて話し、聞くよりも演じたくなるからである。こうした変化によって、とくにそれとともに育ってきた若者のあいだで、会話の技能がなじみの薄いものになっているのではないかと心配する観察者もいる。',
+      'しかし、よい会話への願いは消えてはいない。人々は今も、自由に話せる友人や、自分の質問に向き合ってくれる先生や、自分の考えに耳をかたむけてくれる同僚を大切にしている。こうした経験は、会話が単に情報を交換する手段ではなく、他人とともにあるしかたであり、そこで人々はたがいを知り、ときには自分自身をよりはっきり知るようになることを示している。よい会話は、問題の見方を変えたり、忘れていたことを思い出させたり、認めるのがこわかったことを言う勇気をあたえたりしてくれる。',
+      'どんな技術とも同じように、会話は育てることができる。それには練習と注意と、相手を真剣に受けとめる心がまえが必要である。そのかわりに、それは人間の生活の最も深い喜びの一つをあたえてくれる。いっしょに考える経験、そして一人では見つけられなかった何かを、ほかの人を通して発見する経験である。終わりのないメッセージとたえまないおしゃべりの時代には、しんぼう強く注意深い会話は、まさにそれを見つけるのがむずかしくなったからこそ、かつてないほど貴重なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした人は言葉は聞いているが、意味されていることの多くを聞きのがす」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、よい会話は講義のような情報の受けわたしである。', answer: false, why: '第2段落 Unlike a lecture, it is not a transfer of information。' },
+      { statement: '筆者によれば、多くの人は聞いているように見えて、実は自分が話す番を待っているだけである。', answer: true, why: '第3段落 are in fact merely waiting for their turn to speak。' },
+      { statement: '筆者によれば、いくらかの意見のちがいは会話を生き生きとさせうる。', answer: true, why: '第4段落 Some disagreement can make a conversation lively。' },
+      { statement: '筆者によれば、よい会話への願いはもう消えてしまった。', answer: false, why: '第6段落 the desire for good conversation has not disappeared。' },
+    ],
+    qa: [
+      { q: 'Why can the direction of a good conversation not be fully planned?', choices: ['It emerges from the interaction itself.', 'People forget what they want to say.', 'There are too many rules.', 'One person always decides.'], answer: 0, why: '第2段落 it emerges from the interaction itself。' },
+      { q: 'Why do online discussions often become polarized, according to the fifth paragraph?', choices: ['Participants address large audiences and are tempted to perform rather than listen.', 'People type too slowly.', 'There are too few participants.', 'Everyone always agrees online.'], answer: 0, why: '第5段落 participants address large audiences ... and are tempted to perform rather than to listen。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
