@@ -27506,6 +27506,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-humor',
+    title: 'Why Do We Laugh?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Humor is so familiar a part of daily life that we seldom stop to ask what it is or why it exists. People laugh together at jokes, at unexpected events, and at their own mistakes, and the capacity to make others laugh is widely admired. Yet humor has often been treated as a trivial matter, unworthy of serious attention. Philosophers who have examined it, however, have found it surprisingly difficult to explain, and the attempt to understand humor reveals something about the way human beings think and relate to one another. Indeed, the fact that a good joke is so hard to explain may itself be a clue to its nature.",
+      "One of the oldest theories holds that we laugh at others because we feel superior to them. When someone slips on a banana skin or makes a foolish remark, our laughter expresses a sudden sense of our own advantage. This theory captures something real, since much humor does involve mockery, but it cannot explain all cases. People laugh at clever wordplay, at absurd situations in which no one is harmed, and at themselves, none of which seems to involve a feeling of superiority over anyone else. A theory that reduces all laughter to cruelty, in other words, leaves out much of what makes humor delightful.",
+      "A more influential account emphasizes incongruity. On this view, humor arises when our expectations are suddenly overturned in a way that makes sense on reflection. A joke leads us to anticipate one interpretation and then reveals another, and the pleasure lies partly in recognizing the unexpected connection. ( A ) this theory explains a great deal, it raises a further question: why should the experience of incongruity be pleasant rather than confusing or frightening? Not every surprise makes us laugh, and the same unexpected event may amuse one person while alarming another. It seems that we laugh at incongruity only when we feel safe enough to enjoy it, when the surprise poses no real threat.",
+      "Part of the answer may lie in the social nature of humor. Laughter is far more common in company than in solitude, and people often laugh not because something is especially funny but because they wish to signal friendliness or agreement. Shared humor can strengthen bonds between members of a group, ease tension in awkward situations, and allow difficult truths to be expressed in a form that others can accept. A joke can criticize authority, for example, while preserving the appearance of harmlessness. In societies where open criticism is dangerous, humor has often served as one of the few ways in which people can express dissent.",
+      "Humor can also be a means of coping with hardship. People facing illness, loss, or danger sometimes find relief in laughter, not because their situation is less serious than it seems but because humor allows them to step back from it for a moment. By seeing the absurd side of a painful experience, they may regain a sense of control and perspective. This is not to say that humor is always appropriate; jokes can wound, exclude, and trivialize suffering, and the line between healing and harmful humor is not always easy to draw. Whether a joke heals or harms often depends on who tells it, to whom, and for what purpose.",
+      "What emerges from these reflections is a picture of humor as a complex human capacity that combines intellectual, emotional, and social elements. To appreciate a joke, we must understand the expectations it plays with, feel the pleasure of surprise, and recognize the social context in which it is offered. Far from being trivial, humor may be one of the clearest expressions of our ability to see the world from more than one angle at once, and of our need to share that ability with others.",
+    ],
+    ja: [
+      'ユーモアは日々の生活のあまりになじみ深い一部なので、それが何であり、なぜ存在するのかを立ち止まって問うことはめったにない。人々は冗談や思いがけないできごとや自分のまちがいにいっしょに笑い、他人を笑わせる力は広く称賛される。しかしユーモアはしばしば、真剣に注目するに値しない、ささいな事柄として扱われてきた。しかし、それを検討した哲学者たちは、ユーモアがおどろくほど説明しにくいことに気づいてきた。そしてユーモアを理解しようとする試みは、人間がどのように考え、たがいにかかわっているかについて何かを明らかにする。実際、よい冗談を説明するのがこれほどむずかしいということ自体が、その本質を知る手がかりなのかもしれない。',
+      '最も古い理論の1つは、私たちが他人を笑うのは、自分がまさっていると感じるからだと考える。だれかがバナナの皮ですべったり、ばかなことを言ったりすると、私たちの笑いは、自分が有利であるという突然の感覚を表している。多くのユーモアはたしかにあざけりをふくんでいるので、この理論は現実の何かをとらえているが、すべての場合を説明することはできない。人々は巧みなしゃれや、だれも傷つかないばかげた状況や、自分自身に笑うが、そのどれもが、だれかに対してまさっているという感情をふくんでいるようには見えない。言いかえれば、あらゆる笑いを残酷さに還元する理論は、ユーモアを楽しいものにしている多くのものを見落としているのである。',
+      'より影響力のある説明は、不一致を強調する。この見方では、ユーモアは、私たちの予想がとつぜんくつがえされ、それがふり返ってみると筋が通っているときに生まれる。冗談は私たちにある解釈を予想させ、それから別の解釈を明かす。そして楽しみの一部は、その思いがけないつながりに気づくことにある。この理論は多くのことを説明するが、さらなる問いを生む。なぜ不一致の経験が、とまどいや恐怖ではなく、楽しいものになるのだろうか。すべてのおどろきが私たちを笑わせるわけではなく、同じ思いがけないできごとが、ある人をおもしろがらせ、別の人をおびえさせることもある。私たちが不一致に笑うのは、それを楽しめるほど安全だと感じるとき、つまりそのおどろきが本当の脅威にならないときだけのようである。',
+      '答えの一部は、ユーモアの社会的な性質にあるのかもしれない。笑いはひとりでいるときより人といっしょにいるときのほうがはるかに多く、人々はしばしば、何かがとくにおもしろいからではなく、親しみや同意を示したいから笑う。共有されたユーモアは集団のメンバーどうしのきずなを強め、気まずい状況の緊張をやわらげ、むずかしい真実を他人が受け入れられる形で表すことを可能にする。たとえば冗談は、害のない見かけを保ちながら権威を批判することができる。公然と批判することが危険な社会では、ユーモアはしばしば、人々が異議を表すことのできる数少ない方法の1つとなってきた。',
+      'ユーモアはまた、困難に対処する手段にもなりうる。病気や喪失や危険に直面している人々は、ときに笑いのなかに救いを見いだす。それは、状況が見かけほど深刻でないからではなく、ユーモアによって一瞬そこから距離を置くことができるからである。つらい経験のばかばかしい面を見ることで、彼らは自分で物事を左右している感覚や広い視野を取りもどすかもしれない。だからといって、ユーモアがいつもふさわしいというわけではない。冗談は傷つけ、締め出し、苦しみを軽んじることもあり、いやすユーモアと害をなすユーモアの境目は、いつも引きやすいわけではない。ある冗談がいやすか害をなすかは、しばしば、だれが、だれに、何のためにそれを言うかにかかっている。',
+      'こうした考察から見えてくるのは、知的、感情的、社会的な要素を組み合わせた複雑な人間の能力としてのユーモアの像である。冗談を味わうには、それが利用している予想を理解し、おどろきの楽しさを感じ、それが差し出される社会的な文脈を認める必要がある。ささいなものどころか、ユーモアは、世界を同時に2つ以上の角度から見る私たちの能力と、その能力を他人と分かち合いたいという私たちの欲求の、最もはっきりした表れの1つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「多くを説明するが、さらなる問いを生む」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ユーモアを検討した哲学者たちは、それがかんたんに説明できることに気づいた。', answer: false, why: '第1段落 have found it surprisingly difficult to explain。' },
+      { statement: '筆者によれば、まさっていると感じる理論では、自分自身に笑うことを説明できない。', answer: true, why: '第2段落 People laugh ... at themselves, none of which seems to involve a feeling of superiority。' },
+      { statement: '筆者によれば、笑いはひとりでいるときのほうが多い。', answer: false, why: '第4段落 Laughter is far more common in company than in solitude。' },
+      { statement: '筆者によれば、冗談は人を傷つけることもある。', answer: true, why: '第5段落 jokes can wound, exclude, and trivialize suffering。' },
+    ],
+    qa: [
+      { q: 'According to the incongruity theory, when does humor arise?', choices: ['When expectations are suddenly overturned in a way that makes sense on reflection.', 'When we feel superior to others.', 'When we are alone.', 'When nothing surprising happens.'], answer: 0, why: '第3段落 humor arises when our expectations are suddenly overturned in a way that makes sense on reflection。' },
+      { q: 'How can humor help people facing hardship, according to the fifth paragraph?', choices: ['It allows them to step back from their situation and regain perspective.', 'It makes their problems disappear.', 'It proves their situation is not serious.', 'It keeps them away from other people.'], answer: 0, why: '第5段落 humor allows them to step back from it for a moment ... they may regain a sense of control and perspective。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
