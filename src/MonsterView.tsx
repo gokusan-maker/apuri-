@@ -2232,6 +2232,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 50 Q18 64 30 76 M70 50 Q82 64 70 76" fill="none" stroke="#451a03" strokeWidth="2" />
       </g>
     )
+  if (species === 'harvestmouse')
+    return (
+      <g>
+        {/* 草のくきと、巻きつけたしっぽ */}
+        <path d="M80 96 L80 30" fill="none" stroke="#65a30d" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M64 74 Q76 78 80 70 Q84 64 78 62" fill="none" stroke="#78350f" strokeWidth="1.8" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
