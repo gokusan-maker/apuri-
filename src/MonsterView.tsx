@@ -2288,6 +2288,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 58 L50 64 L47 67 M50 64 L53 67" fill="none" stroke="#dc2626" strokeWidth="1.2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pondturtle')
+    return (
+      <g>
+        {/* こうらのもようと、すわっている石 */}
+        <path d="M40 60 L50 54 L60 60 L60 70 L50 76 L40 70 Z" fill="none" stroke="#422006" strokeWidth="1.5" />
+        <ellipse cx="50" cy="92" rx="22" ry="4" fill="#a8a29e" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
