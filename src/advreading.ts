@@ -28978,6 +28978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-retirement-age',
+    title: 'When Should We Stop Working?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, people are living longer and healthier lives than ever before, while the number of young people entering the workforce is declining. As a result, governments face growing pressure to reconsider the age at which people stop working and begin to receive public pensions. Several countries have already raised the official retirement age, and others are debating whether to do so. The question is not merely financial; it touches on what we believe a good life looks like in its later stages and on how the burdens of an ageing society should be shared.",
+      "The financial argument for raising the retirement age is straightforward. Public pension systems in many countries are funded largely by the contributions of current workers, so that the pensions of retired people are paid by those who are still working. When the proportion of retired people rises and the proportion of workers falls, the system comes under strain: either contributions must increase, pensions must be reduced, or people must work longer. Of these options, raising the retirement age is often presented as the least painful.",
+      "Supporters also argue that longer working lives can benefit older people themselves. Work provides not only income but also social contact, a sense of purpose, and mental stimulation, and some research suggests that people who remain active in later life enjoy better health. Moreover, many older workers possess knowledge and experience that are valuable to their employers and to younger colleagues, and forcing them to retire at a fixed age may waste these resources.",
+      "Critics, however, point out that the ability to keep working is not equally distributed. A university professor or an office worker may be able to continue working comfortably into his or her late sixties, but a construction worker or a nurse whose job involves heavy physical labor may find this impossible. ( A ) people in physically demanding jobs often have shorter life expectancies as well, a single retirement age for everyone may force those who have worked hardest to receive their pensions for the shortest time.",
+      "There is also the question of whether suitable jobs will be available. Older workers sometimes face discrimination in hiring, and those who lose their jobs in their fifties or sixties may find it difficult to obtain new employment. Raising the retirement age without addressing these obstacles may simply leave more older people unemployed and without pensions, rather than allowing them to continue working productively.",
+      "Some countries have tried to address these concerns through more flexible arrangements. Instead of a single age at which everyone must stop working, they allow people to choose when to retire, receiving smaller pensions if they retire early and larger ones if they continue working. Others provide special provisions for people in physically demanding occupations, or encourage employers to offer part-time positions that allow older workers to reduce their hours gradually rather than stopping all at once. Such approaches recognize that people age in different ways and that a single rule may be too rigid for the variety of lives it is meant to govern.",
+      "The debate over the retirement age thus reflects a broader challenge facing ageing societies: how to adapt institutions designed for a world in which most people died soon after they stopped working to a world in which retirement may last for decades. Meeting this challenge will require not only financial calculation but also careful attention to fairness, so that the costs of longer lives are not borne mainly by those least able to bear them. It may also require a change in attitudes, so that older people are seen not as a burden to be supported but as members of society who can continue to contribute in many different ways, whether through paid work, volunteering, or the care of family and community.",
+    ],
+    ja: [
+      '多くの国で、人々はかつてないほど長く健康に生きるようになり、その一方で働きはじめる若者の数はへっている。その結果、政府は、人々が働くのをやめて公的年金を受け取りはじめる年齢を考え直すよう、ますます強い圧力を受けている。いくつかの国はすでに公式の退職年齢を引き上げ、ほかの国々もそうすべきかを議論している。この問題は単にお金の問題ではない。それは、人生の後半のよい生き方とはどのようなものだと私たちが考えているか、そして高齢化する社会の負担をどう分け合うべきかにかかわっている。',
+      '退職年齢を引き上げるべきだというお金の面での議論は単純である。多くの国の公的年金制度は、主に今働いている人々の保険料でまかなわれており、退職した人々の年金は、まだ働いている人々によってはらわれている。退職した人の割合が上がり、働く人の割合が下がると、この仕組みは苦しくなる。保険料を上げるか、年金をへらすか、人々がより長く働くかしなければならない。これらの選択肢のうち、退職年齢の引き上げは、最も痛みの少ないものとしてしばしば示される。',
+      '支持する人々はまた、働く期間が長くなることが年配の人々自身のためにもなりうると主張する。仕事は収入だけでなく、人とのつながりや、目的意識や、頭への刺激もあたえてくれる。そして、人生の後半も活動的であり続ける人はより健康であることを示す研究もある。さらに、多くの年配の働き手は、雇い主や若い同僚にとって価値のある知識と経験をもっており、決まった年齢で退職させることは、こうした資源をむだにするかもしれない。',
+      'しかし批判する人々は、働き続ける力は平等に分けあたえられていないと指摘する。大学教授や事務職の人は六十代後半まで無理なく働き続けられるかもしれないが、仕事が重い肉体労働をともなう建設作業員や看護師には、それは不可能かもしれない。肉体的にきつい仕事の人々は平均寿命が短いことも多いので、すべての人に同じ退職年齢を定めることは、最もきびしく働いてきた人々が最も短いあいだしか年金を受け取れないようにしてしまうかもしれない。',
+      'ふさわしい仕事があるかどうかという問題もある。年配の働き手は採用で差別を受けることがあり、五十代や六十代で仕事を失った人は、新しい職を得るのがむずかしいと感じるかもしれない。こうした障害に取り組まずに退職年齢を引き上げることは、年配の人々が生産的に働き続けられるようにするどころか、仕事も年金もない年配の人々をふやすだけかもしれない。',
+      'いくつかの国は、より柔軟な仕組みによってこうした懸念に対処しようとしてきた。すべての人が働くのをやめなければならない一つの年齢を定める代わりに、人々がいつ退職するかを選べるようにし、早く退職すれば年金が少なく、働き続ければ年金が多くなるようにしているのである。ほかには、肉体的にきつい職業の人々のための特別な定めを設けたり、年配の働き手が一度にやめるのではなく少しずつ労働時間をへらせるよう、パートタイムの職を用意するよう雇い主にすすめたりしている国もある。こうした方法は、人の年のとり方はさまざまであり、一つの決まりでは、それが治めようとする生活の多様さに対してかたすぎるかもしれないと認めているのである。',
+      'このように退職年齢をめぐる議論は、高齢化する社会が直面するより広い課題を反映している。つまり、ほとんどの人が働くのをやめてまもなく亡くなった世界のために作られた制度を、退職後の生活が何十年も続くかもしれない世界にどう合わせるかという課題である。この課題にこたえるには、お金の計算だけでなく、長生きの費用が、それを負う力の最も少ない人々に主に負わされないよう、公平さに注意深く気をくばることが必要になるだろう。それにはまた、年配の人々を、支えるべき重荷としてではなく、有給の仕事やボランティアや家族と地域の世話を通して、さまざまなしかたで貢献し続けられる社会の一員として見るような、考え方の変化も必要かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「肉体的にきつい仕事の人は平均寿命が短いことも多いので、同じ退職年齢は不公平になりうる」という理由の Because。' },
+    ],
+    summary: {
+      text: 'As societies age, pension systems come under strain, so many governments consider raising the retirement age. Supporters say work offers older people purpose and ( 1 ) contact. Critics note that people in physically ( 2 ) jobs may be unable to work longer, and that older workers face discrimination. Some countries use more ( 3 ) arrangements.',
+      blanks: [
+        { choices: ['social', 'military', 'financial', 'legal'], answer: 0, why: '第3段落 Work provides not only income but also social contact。' },
+        { choices: ['demanding', 'boring', 'creative', 'easy'], answer: 0, why: '第4段落 people in physically demanding jobs。' },
+        { choices: ['flexible', 'expensive', 'strict', 'secret'], answer: 0, why: '第6段落 more flexible arrangements。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、多くの国の公的年金は主に今働いている人々の保険料でまかなわれている。', answer: true, why: '第2段落 funded largely by the contributions of current workers。' },
+      { statement: '支持する人々によれば、仕事は年配の人々に収入しかあたえない。', answer: false, why: '第3段落 not only income but also social contact, a sense of purpose, and mental stimulation。' },
+      { statement: '筆者によれば、年配の働き手は採用で差別を受けることがある。', answer: true, why: '第5段落 Older workers sometimes face discrimination in hiring。' },
+      { statement: '筆者は、この課題にはお金の計算だけで十分だと考えている。', answer: false, why: '第7段落 will require not only financial calculation but also careful attention to fairness。' },
+    ],
+    qa: [
+      { q: 'What might happen if the retirement age is raised without addressing obstacles to employment?', choices: ['More older people may be left unemployed and without pensions.', 'All older people will find new jobs easily.', 'Pensions will become much larger.', 'Young people will stop working.'], answer: 0, why: '第5段落 may simply leave more older people unemployed and without pensions。' },
+      { q: 'How do some flexible arrangements work, according to the sixth paragraph?', choices: ['People choose when to retire, with smaller pensions if they retire early.', 'Everyone must retire at exactly sixty.', 'Pensions are abolished completely.', 'Only young people receive pensions.'], answer: 0, why: '第6段落 allow people to choose when to retire, receiving smaller pensions if they retire early。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
