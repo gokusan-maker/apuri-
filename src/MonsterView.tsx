@@ -2296,6 +2296,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="92" rx="22" ry="4" fill="#a8a29e" />
       </g>
     )
+  if (species === 'flapjackoctopus')
+    return (
+      <g>
+        {/* 頭の上の耳のようなひれ */}
+        <ellipse cx="36" cy="26" rx="6" ry="4" fill="#fb923c" stroke="#9a3412" strokeWidth="1.2" />
+        <ellipse cx="64" cy="26" rx="6" ry="4" fill="#fb923c" stroke="#9a3412" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
