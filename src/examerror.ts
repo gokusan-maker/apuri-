@@ -5904,6 +5904,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I visited the school [when] my father once taught.', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '場所（学校）が先行詞で、あとの文が完全なので where。' },
     ],
   },
+  {
+    id: 'exam-fix-138',
+    title: '入試の誤文訂正〈138〉（東大レベル：英作文の数と時の表現）',
+    points: ['for the first time は「（生まれて）初めて」、at first は「最初のうちは（あとで変わる）」。ago は「今から～前」で過去形といっしょに使い、過去のある時から「～前」は before（had＋過去分詞と使うことが多い）。last は「最後の・この前の」、latest は「最新の」。期間は for ～、時点からは since ～。「～するのは初めてだ」は the first time＋主語＋完了形。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'At first I did not like natto, but now I love it.', ja: '最初は納豆が好きではなかったが、今は大好きだ。' }],
+    questions: [
+      { sentence: 'I visited Kyoto [at first] last year, and I loved it.', choices: ['for the first time', 'first time', 'at the first', 'in first'], answer: 0, why: '「初めて訪れた」は for the first time。at first は「最初のうちは」。' },
+      { sentence: '[For the first time], I did not like natto, but now I love it.', choices: ['At first', 'In the first', 'On first', 'By first'], answer: 0, why: 'あとで気持ちが変わったので「最初のうちは」の At first。' },
+      { sentence: 'She left Japan three years [before].', choices: ['ago', 'after', 'since', 'later'], answer: 0, why: '今から三年前なので ago。' },
+      { sentence: 'He said that he had met her two years [ago].', choices: ['before', 'ago before', 'since', 'after'], answer: 0, why: '過去のある時（言った時）から見て「二年前」なので before。' },
+      { sentence: 'Have you read his [last] novel? It came out only yesterday.', choices: ['latest', 'lastly', 'late', 'lately'], answer: 0, why: '昨日出たばかりの「最新の」小説なので latest。' },
+      { sentence: 'This is the [latest] time I will ask you.', choices: ['last', 'lately', 'later', 'late'], answer: 0, why: '「これが最後」は the last time。' },
+      { sentence: 'I have known him [since five years].', choices: ['for five years', 'five years ago', 'during five years', 'before five years'], answer: 0, why: '期間は for。since のあとには時点がくる。' },
+      { sentence: 'I saw that movie [before three days].', choices: ['three days ago', 'since three days', 'ago three days', 'three days since'], answer: 0, why: '「今から三日前」は three days ago。数のあとに ago を置く。' },
+      { sentence: 'She has been to London [three time].', choices: ['three times', 'three timing', 'third times', 'the three time'], answer: 0, why: '回数の time は数えられる名詞なので three times。' },
+      { sentence: 'It was the [first time for me to see] snow.', choices: ['first time I had seen', 'first time to see for me', 'first that I see', 'first of seeing'], answer: 0, why: '「～するのは初めて」は the first time＋主語＋完了形。過去の話なので I had seen。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
