@@ -3290,6 +3290,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I bought a new bike, and (B) I ride (C) one (D) every day.', choices: ['(A) I bought a new bike, and', '(B) I ride', '(C) one', '(D) every day'], answer: 2, why: '買ったその自転車を指すので it。' },
     ],
   },
+  {
+    id: 'exam-error-conj-kyodai',
+    title: '入試の正誤問題〈139〉（京大レベル：接続詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'unless（＝if not）に not をつけない。in case は「念のため」、as long as は「～する限り（条件）」、as far as は「～する範囲では」。even if は仮定、even though は事実。because of＋名詞。although と but は同時に使わない。',
+    ],
+    examples: [
+      { en: 'Take an umbrella in case it rains.', ja: '雨が降るといけないから、傘を持っていきなさい。' },
+      { en: 'As far as I know, she has never lied.', ja: '私の知る限り、彼女はうそをついたことがない。' },
+    ],
+    questions: [
+      { sentence: 'You (A) will be late (B) unless (C) you do not (D) leave now.', choices: ['(A) will be late', '(B) unless', '(C) you do not', '(D) leave now'], answer: 2, why: 'unless に否定の意味があるので not は不要。unless you leave now。' },
+      { sentence: 'Take (A) an umbrella (B) as long as (C) it (D) rains.', choices: ['(A) an umbrella', '(B) as long as', '(C) it', '(D) rains'], answer: 1, why: '「雨が降るといけないから」は in case。' },
+      { sentence: 'You (A) can borrow (B) my bike (C) in case (D) you return it by Friday.', choices: ['(A) can borrow', '(B) my bike', '(C) in case', '(D) you return it by Friday'], answer: 2, why: '「金曜日までに返す限り（条件）」は as long as。' },
+      { sentence: '(A) As long as (B) I know, (C) she (D) has never lied.', choices: ['(A) As long as', '(B) I know,', '(C) she', '(D) has never lied'], answer: 0, why: '「私の知る範囲では」は As far as I know。' },
+      { sentence: 'I will (A) go (B) even though (C) it (D) rains tomorrow.', choices: ['(A) go', '(B) even though', '(C) it', '(D) rains tomorrow'], answer: 1, why: '明日のこと（仮定）なので even if。' },
+      { sentence: '(A) Because (B) the heavy snow, (C) the train (D) was late.', choices: ['(A) Because', '(B) the heavy snow,', '(C) the train', '(D) was late'], answer: 0, why: 'あとが名詞なので Because of。' },
+      { sentence: '(A) Although (B) she was sick, (C) but she (D) went to school.', choices: ['(A) Although', '(B) she was sick,', '(C) but she', '(D) went to school'], answer: 2, why: 'although と but は同時に使わない。she went to school。' },
+      { sentence: 'I (A) will wait (B) here (C) until when (D) you come back.', choices: ['(A) will wait', '(B) here', '(C) until when', '(D) you come back'], answer: 2, why: '「～するまで」は until だけ。when は不要。' },
+      { sentence: 'Whether you like it (A) or not, (B) you (C) must (D) doing it.', choices: ['(A) or not,', '(B) you', '(C) must', '(D) doing it'], answer: 3, why: 'must のあとは原形。do it。' },
+      { sentence: '(A) In case (B) of rain, (C) the game (D) will cancel.', choices: ['(A) In case', '(B) of rain,', '(C) the game', '(D) will cancel'], answer: 3, why: '試合は「中止される」側なので will be canceled。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

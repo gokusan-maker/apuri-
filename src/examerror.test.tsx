@@ -1898,3 +1898,10 @@ it('誤文訂正〈132〉：京大レベル 接続詞の単元が10問ある', a
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('unless you hurry')
 })
+
+it('正誤問題〈139〉：京大レベル 接続詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-conj-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) you do not')
+})

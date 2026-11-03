@@ -3954,3 +3954,4 @@
 - 2026-11-03: 誤文訂正〈132〉：京大レベル 接続詞（unless・in case・as long as／as far as・even if／even though・whether or not・because of）10問。文法の次の3項目（272〜274）を追加
 - 2026-11-03: 京大専用の長文㉟「考えを変える勇気」（約640語・抽象的な評論）を追加
 - 2026-11-03: キャラクター追加261：ハクセキレイン（町でよく見るハクセキレイ・文法が得意）
+- 2026-11-03: 正誤問題〈139〉：京大レベル 接続詞（unless・in case・as long as／as far as・even if・because of・although と but）10問
