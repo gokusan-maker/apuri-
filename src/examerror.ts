@@ -5862,6 +5862,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'What [did make] you change your mind?', choices: ['made', 'did made', 'makes did', 'make did'], answer: 0, why: '疑問詞 What が主語なので do を使わず What made you ～?（何があなたに考えを変えさせたのか）。' },
     ],
   },
+  {
+    id: 'exam-fix-137',
+    title: '入試の誤文訂正〈137〉（国公立レベル：関係副詞）',
+    points: ['関係副詞 where（場所）・when（時）・why（理由）・how（方法）のあとは、名詞が欠けていない完全な文がくる。前置詞＋which に言いかえられる（where＝in which）。how と the way はいっしょに使わない（the way I did it か how I did it）。先行詞が場所でも、あとの文に目的語が欠けていれば関係代名詞 which／that を使う。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' }],
+    questions: [
+      { sentence: 'This is the house [which] my grandfather was born.', choices: ['where', 'what', 'whose', 'that it'], answer: 0, why: 'あとの文が完全なので関係副詞 where（in which も可）。' },
+      { sentence: 'I still remember the day [which] we first met.', choices: ['when', 'what', 'where', 'whose'], answer: 0, why: '時の先行詞のあとに完全な文が続くので when（on which も可）。' },
+      { sentence: 'Tell me the reason [which] you were absent.', choices: ['why', 'what', 'where', 'how'], answer: 0, why: '理由の先行詞のあとに完全な文が続くので why。' },
+      { sentence: 'This is [the way how] I solved the problem.', choices: ['the way', 'the way which', 'that how', 'the how'], answer: 0, why: 'the way と how はいっしょに使わない。the way I solved（または how I solved）。' },
+      { sentence: 'Kyoto is a city [where] many tourists visit every year.', choices: ['which', 'where it', 'in where', 'when'], answer: 0, why: 'visit の目的語が欠けているので関係代名詞 which（that も可）。where は使えない。' },
+      { sentence: 'The park [which] we played as children has disappeared.', choices: ['where', 'when', 'what', 'whose'], answer: 0, why: 'あとの文（we played as children）は完全な文なので where。' },
+      { sentence: 'Summer is the season [where] many people go to the beach.', choices: ['when', 'which', 'what', 'how'], answer: 0, why: '季節（時）が先行詞なので when。' },
+      { sentence: 'That is [why for] she got angry.', choices: ['why', 'the why', 'for why', 'what for'], answer: 0, why: 'That is why ～（そういうわけで～）。for は不要。' },
+      { sentence: 'The hotel [where we stayed at] was very comfortable.', choices: ['where we stayed', 'which we stayed', 'where we stayed in', 'when we stayed at'], answer: 0, why: 'where には前置詞の意味がふくまれるので at は不要。where we stayed（which we stayed at も可）。' },
+      { sentence: 'I visited the school [when] my father once taught.', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '場所（学校）が先行詞で、あとの文が完全なので where。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
