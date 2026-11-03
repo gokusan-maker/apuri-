@@ -3626,6 +3626,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Ten years (A) have passed (B) since (C) he (D) has died.', choices: ['(A) have passed', '(B) since', '(C) he', '(D) has died'], answer: 3, why: 'since のあとは過去の一時点なので過去形。died。' },
     ],
   },
+  {
+    id: 'exam-error-conj-kokkoritsu',
+    title: '入試の正誤問題〈153〉（国公立レベル：接続詞と前置詞の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '後ろに主語＋動詞の文がくるなら接続詞（because・although・while）、名詞だけなら前置詞（because of・despite／in spite of・during）。despite に of はつけない。in spite of の of は落とさない。although と but はいっしょに使わない。',
+    ],
+    examples: [
+      { en: 'We stayed home because it was raining.', ja: '雨がふっていたので、私たちは家にいた。' },
+      { en: 'We stayed home because of the rain.', ja: '雨のせいで、私たちは家にいた。' },
+    ],
+    questions: [
+      { sentence: 'We stayed home (A) because of (B) it (C) was (D) raining.', choices: ['(A) because of', '(B) it', '(C) was', '(D) raining'], answer: 0, why: '後ろが主語＋動詞の文なので接続詞 because。because of のあとは名詞。' },
+      { sentence: 'It was cold, (A) but we (B) went swimming (C) despite of (D) the weather.', choices: ['(A) but we', '(B) went swimming', '(C) despite of', '(D) the weather'], answer: 2, why: 'despite は前置詞なので of は要らない（in spite of とまちがえやすい）。' },
+      { sentence: 'I (A) fell asleep (B) while the movie, (C) so I (D) missed the ending.', choices: ['(A) fell asleep', '(B) while the movie,', '(C) so I', '(D) missed the ending'], answer: 1, why: '後ろが名詞だけなので前置詞 during。during the movie。' },
+      { sentence: 'She called me (A) during (B) I (C) was (D) taking a bath.', choices: ['(A) during', '(B) I', '(C) was', '(D) taking a bath'], answer: 0, why: '後ろが主語＋動詞の文なので接続詞 while。' },
+      { sentence: 'The trains (A) were stopped (B) because (C) the heavy snow (D) last night.', choices: ['(A) were stopped', '(B) because', '(C) the heavy snow', '(D) last night'], answer: 1, why: '後ろが名詞なので because of。' },
+      { sentence: '(A) Although (B) he was tired, (C) but he (D) kept working.', choices: ['(A) Although', '(B) he was tired,', '(C) but he', '(D) kept working'], answer: 2, why: 'although と but はいっしょに使わない。he kept working。' },
+      { sentence: '(A) In spite (B) the rain, (C) the game (D) was held.', choices: ['(A) In spite', '(B) the rain,', '(C) the game', '(D) was held'], answer: 0, why: 'in spite of ～。of がぬけている。' },
+      { sentence: 'We (A) talked a lot (B) while (C) the trip (D) to Kyoto.', choices: ['(A) talked a lot', '(B) while', '(C) the trip', '(D) to Kyoto'], answer: 1, why: '後ろが名詞なので during。during the trip。' },
+      { sentence: 'She passed the exam (A) because (B) she studied hard, (C) despite (D) she was sick.', choices: ['(A) because', '(B) she studied hard,', '(C) despite', '(D) she was sick'], answer: 2, why: '後ろが主語＋動詞の文なので接続詞 although（though）。' },
+      { sentence: 'The match was cancelled (A) because (B) of the storm, (C) and the players (D) was disappointed.', choices: ['(A) because', '(B) of the storm,', '(C) and the players', '(D) was disappointed'], answer: 3, why: 'the players は複数なので were。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

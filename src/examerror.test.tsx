@@ -2094,3 +2094,10 @@ it('誤文訂正〈146〉：京大レベル 感情を表す分詞形容詞の単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('interesting')
 })
+
+it('正誤問題〈153〉：国公立レベル 接続詞と前置詞の使い分けの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-conj-kokkoritsu')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) because of')
+})

@@ -724,7 +724,7 @@
   - [x] 297 誤文訂正〈145〉（国公立レベル：比較級の強め much・far と the＋比較級, the＋比較級）10問
   - [x] 298 正誤問題〈152〉（東大レベル：英作文の時制 現在完了と過去形の使い分け）10問
   - [x] 299 誤文訂正〈146〉（京大レベル：分詞の形容詞用法 interesting／interested・surprising／surprised）10問
-  - [ ] 300 正誤問題〈153〉（国公立レベル：接続詞 because／because of・although／despite・during／while）10問
+  - [x] 300 正誤問題〈153〉（国公立レベル：接続詞 because／because of・although／despite・during／while）10問
   - [ ] 301 誤文訂正〈147〉（東大レベル：英作文の自動詞と他動詞 discuss・reach・marry・mention）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
