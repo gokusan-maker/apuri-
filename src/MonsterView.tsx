@@ -2037,6 +2037,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M37 44 L47 45" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'greyfacedbuzzard')
+    return (
+      <g>
+        {/* 白いのどと黒いたてすじ */}
+        <ellipse cx="50" cy="55" rx="5" ry="4" fill="#f8fafc" />
+        <path d="M50 52 L50 59" fill="none" stroke="#1c1917" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
