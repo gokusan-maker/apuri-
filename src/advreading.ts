@@ -29502,6 +29502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-place',
+    title: 'A Sense of Place',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an age of easy travel and constant communication, it might seem that the places where we live matter less than they once did. We can work from almost anywhere, buy the same goods in almost every city, and keep in touch with friends on the other side of the world. Many people move several times during their lives, and some feel equally at home, or equally out of place, wherever they go. Yet the attachment that human beings feel to particular places has not disappeared, and its persistence suggests that a sense of place answers needs that mobility alone cannot satisfy.",
+      "A place, in the sense that matters here, is not simply a location on a map. It is a space that has acquired meaning through human experience: a neighborhood where one grew up, a landscape one has walked through in every season, a town whose streets carry memories of particular people and events. The same physical space can be a mere location for one person and a place full of meaning for another, depending on the relationship each has formed with it.",
+      "Such attachment develops slowly. It depends on repeated encounters, on noticing how a place changes with the seasons, on learning its history and its stories, and on forming relationships with the people who live there. ( A ) a tourist may admire a landscape after a single visit, a person who has lived in a place for many years knows it in a different way, sensing its moods and recognizing its small details. This kind of knowledge cannot be acquired quickly, and it is easily lost when people move frequently.",
+      "A sense of place also shapes identity. People often describe themselves in terms of where they come from, and the landscapes of childhood can influence lifelong tastes, habits, and ways of seeing. For many, returning to a familiar place after a long absence brings a powerful mixture of recognition and change, as they discover both how much the place has remained the same and how much they themselves have altered.",
+      "Modern life places this kind of attachment under pressure. The standardization of buildings and shops can make towns increasingly similar, so that one high street resembles another and local character fades. Economic pressures may force people to leave the places where they grew up in search of work, and rapid development can transform familiar neighborhoods beyond recognition within a few years. Those who experience such changes may feel a sense of loss that is difficult to express, as though a part of themselves had been removed.",
+      "At the same time, a strong attachment to place can have a darker side. It can become a source of exclusion, leading people to regard newcomers as intruders who threaten a valued way of life. A healthy sense of place, by contrast, may be one that is open to change and welcomes others, recognizing that places have always been shaped by the arrival of new people and new ideas. Such a sense of place does not require that everything stay the same; it asks only that change be made with an awareness of what a place has meant to those who have loved it.",
+      "Perhaps the deepest value of a sense of place is that it teaches care. People who feel attached to a place are more likely to look after it, to notice when it is threatened, and to work for its improvement. In a world facing environmental challenges, such care for particular places may be one of the most important foundations for caring about the planet as a whole. Global problems can feel abstract and overwhelming, but a river one has swum in, a forest one has walked through, or a street one has lived on gives such problems a concrete and personal meaning, turning distant concerns into matters close to the heart.",
+    ],
+    ja: [
+      '旅がかんたんになり、たえず連絡をとり合える時代には、私たちが住む場所はかつてほど大切でなくなったように思えるかもしれない。私たちはほとんどどこからでも働けるし、ほとんどどの都市でも同じ品物を買えるし、世界の反対側にいる友人とも連絡を保てる。多くの人は一生のうちに何度か引っこし、どこへ行っても同じようにくつろげる、あるいは同じように落ち着かないと感じる人もいる。しかし、人間が特定の場所に感じる愛着は消えてはおらず、それが続いていることは、場所の感覚が、移動しやすさだけでは満たせない必要にこたえていることを示している。',
+      'ここで問題にしている意味での場所とは、単に地図の上の位置ではない。それは人間の経験を通して意味を得た空間である。自分が育った地域や、あらゆる季節に歩いてきた風景や、通りが特定の人や出来事の思い出をのせている町である。同じ物理的な空間でも、それぞれがそこと結んだ関係によって、ある人にとっては単なる位置であり、別の人にとっては意味に満ちた場所でありうる。',
+      'そうした愛着はゆっくりと育つ。それは、くり返し出会うことや、季節によって場所がどう変わるかに気づくことや、その歴史と物語を知ることや、そこに住む人々と関係を結ぶことにかかっている。旅行者は一度おとずれただけで風景をほめるかもしれないが、何年もある場所に住んできた人は、その気分を感じとり、小さな細部に気づきながら、ちがったしかたでそこを知っている。この種の知識はすばやく得ることはできず、人々がひんぱんに移動すると、たやすく失われてしまう。',
+      '場所の感覚はまたアイデンティティを形づくる。人々はしばしば自分がどこの出身かによって自分を説明し、子ども時代の風景は、一生の好みや習慣やものの見方に影響をあたえうる。多くの人にとって、長いあいだはなれていたあとでなじみの場所にもどることは、見覚えと変化のはげしいまじり合いをもたらす。場所がどれほど変わらずにいたか、そして自分自身がどれほど変わったかの両方に気づくからである。',
+      '現代の生活は、この種の愛着に圧力をかけている。建物や店が画一化されると、町はますます似かよったものになり、ある大通りが別の大通りに似て、その土地らしさがうすれていく。経済的な圧力によって、人々は仕事を求めて育った場所をはなれざるをえなくなるかもしれず、急速な開発は、なじみの地域を数年のうちに見分けがつかないほど変えてしまうことがある。そうした変化を経験する人々は、まるで自分の一部が取りのぞかれたかのように、言葉にしにくい喪失感をいだくかもしれない。',
+      '同時に、場所への強い愛着には暗い面もありうる。それは排除の源になり、新しく来た人々を、大切な暮らし方をおびやかす侵入者とみなすよう人々をみちびくことがある。これに対して健全な場所の感覚とは、変化に開かれ、他人をむかえ入れ、場所はいつも新しい人々や新しい考えがやって来ることによって形づくられてきたと認めるものなのかもしれない。そうした場所の感覚は、すべてが同じままであることを求めはしない。それが求めるのはただ、場所がそこを愛してきた人々にとって何を意味してきたのかを自覚しながら変化がなされることだけである。',
+      'おそらく場所の感覚の最も深い価値は、それが大切にすることを教えてくれる点にある。ある場所に愛着を感じる人は、そこを守り、それがおびやかされたときに気づき、それをよくするために働く可能性が高い。環境の課題に直面する世界では、特定の場所へのそうした心くばりが、地球全体を大切に思うことの最も大切な土台の一つなのかもしれない。地球規模の問題は抽象的で、手に負えないように感じられることがあるが、泳いだことのある川や、歩いたことのある森や、住んだことのある通りは、そうした問題に具体的で個人的な意味をあたえ、遠い懸念を心に近い事がらに変えてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「旅行者は一度で風景をほめるかもしれないが、長く住む人はちがうしかたで知っている」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、場所とは単に地図の上の位置である。', answer: false, why: '第2段落 A place ... is not simply a location on a map。' },
+      { statement: '筆者によれば、場所への愛着はゆっくりと育つ。', answer: true, why: '第3段落 Such attachment develops slowly。' },
+      { statement: '筆者によれば、建物や店の画一化は町を似かよったものにする。', answer: true, why: '第5段落 The standardization of buildings and shops can make towns increasingly similar。' },
+      { statement: '筆者は、場所への強い愛着にはよい面しかないと考えている。', answer: false, why: '第6段落 a strong attachment to place can have a darker side。' },
+    ],
+    qa: [
+      { q: 'What can returning to a familiar place after a long absence bring?', choices: ['A mixture of recognition and change.', 'Complete forgetting of the past.', 'Only sadness.', 'A new identity unrelated to the past.'], answer: 0, why: '第4段落 a powerful mixture of recognition and change。' },
+      { q: 'Why might care for particular places be important today?', choices: ['It may be a foundation for caring about the planet as a whole.', 'It makes travel cheaper.', 'It stops people from moving.', 'It makes all towns the same.'], answer: 0, why: '第7段落 may be one of the most important foundations for caring about the planet as a whole。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
