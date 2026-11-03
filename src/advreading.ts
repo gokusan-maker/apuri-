@@ -28140,6 +28140,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-politeness',
+    title: 'The Point of Politeness',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Politeness is often dismissed as a matter of mere surface, a set of conventional phrases and gestures that conceal rather than express what people really feel. We say thank you when we are not especially grateful, we apologize for small inconveniences we did not cause, and we praise gifts we do not like. From this point of view, politeness seems to be a kind of organized insincerity, and some people take pride in being blunt, as though honesty required the abandonment of courtesy. Such people often claim that they are simply saying what everyone else is thinking, and that the polite majority is guilty of a kind of quiet deception.",
+      "Yet this view rests on a misunderstanding of what politeness is for. The conventions of polite behavior are not primarily statements about our inner feelings; they are ways of acknowledging the presence and the dignity of other people. When I hold a door open for a stranger or thank a shop assistant, I am not claiming to feel a deep emotion. I am recognizing that the other person is someone whose comfort and self-respect matter, even though we have no personal relationship and may never meet again.",
+      "Seen in this way, politeness performs an important social function. Human beings who live in close proximity inevitably get in one another's way, disagree, and make demands on one another. Without shared conventions for softening these frictions, ordinary interactions would be filled with tension, and small conflicts would more easily grow into large ones. ( A ) a polite request leaves the other person free to refuse without losing face, a blunt command may provoke resistance even when what is asked is perfectly reasonable.",
+      "It is also worth noticing that politeness can create the very feelings it is sometimes accused of faking. A person who habitually expresses gratitude may gradually become more aware of what others do for him or her, and a person who regularly acknowledges others may come to feel a genuine respect for them. Our outward actions do not merely reflect our inner states; they also shape them, so that the practice of courtesy can be a training in the virtues it represents.",
+      "This is not to say that politeness is always admirable. Conventions of courtesy can be used to exclude those who do not know them, marking outsiders as rude and reinforcing differences of class or culture. Politeness can also become a means of avoiding necessary conflict, as when people refrain from criticizing an injustice because doing so would seem impolite. A society in which no one ever said anything unwelcome would not be harmonious but dishonest, and in such a society serious problems might never be addressed.",
+      "The challenge, then, is to distinguish between politeness that respects others and politeness that silences them. Genuine courtesy does not require us to hide every disagreement; it requires us to express disagreement in ways that acknowledge the other person's dignity. It is possible to tell someone that he or she is wrong while still treating him or her as a person worthy of respect, and this combination of honesty and courtesy may be more difficult, but also more valuable, than either bluntness or empty politeness alone.",
+      "Politeness, understood in this way, is neither a mask nor a cage. It is a shared language through which strangers can live together, imperfect and sometimes misused, but indispensable to any community that hopes to combine freedom with mutual respect. Like any language, it must be learned, it varies from place to place, and it changes over time, but the need it serves, the need to live alongside others whom we neither know nor choose, is as old and as permanent as human society itself.",
+    ],
+    ja: [
+      '礼儀正しさはしばしば、単なる表面の問題、つまり人が本当に感じていることを表すよりもむしろかくす、決まり文句やしぐさの集まりとして片づけられる。私たちはとくに感謝していないときにもありがとうと言い、自分が引き起こしたのではない小さな不便についてあやまり、好きでもない贈り物をほめる。この見方からすれば、礼儀正しさは一種の組織化された不誠実であるように思われ、正直さのためには礼儀を捨てなければならないかのように、ぶっきらぼうであることをほこりにする人もいる。そうした人々はしばしば、自分はほかのみんなが考えていることを言っているだけで、礼儀正しい多数派こそ一種の静かなごまかしをしているのだと主張する。',
+      'しかしこの見方は、礼儀正しさが何のためにあるのかについての誤解にもとづいている。礼儀正しいふるまいの決まりは、主として自分の内なる感情についての言明ではない。それは、他人がそこにいることとその尊厳を認める方法なのである。知らない人のためにドアを押さえたり、店員にお礼を言ったりするとき、私は深い感情をいだいていると主張しているのではない。たとえ個人的な関係がなく、二度と会わないかもしれなくても、相手がその心地よさや自尊心が大切な人であると認めているのである。',
+      'このように見れば、礼儀正しさは大切な社会的なはたらきを果たしている。近くに住む人間は、どうしてもおたがいのじゃまになり、意見が合わず、おたがいに要求をする。こうしたあつれきをやわらげる共通の決まりがなければ、ふつうのやりとりは緊張に満ち、小さな対立がもっとたやすく大きな対立に育つだろう。ていねいなたのみ方は、相手が面目を失わずにことわる自由を残すが、ぶっきらぼうな命令は、たのんでいることがまったく筋の通ったものであっても、反発を引き起こすことがある。',
+      'また、礼儀正しさは、ときにいつわっていると非難されるまさにその感情を生み出しうることにも注意する価値がある。いつも感謝を表している人は、他人が自分のためにしてくれることに少しずつ気づくようになるかもしれないし、いつも他人を認めている人は、その人々に本当の敬意を感じるようになるかもしれない。私たちの外に表れる行動は、内なる状態を映すだけではない。それを形づくりもするのであり、そのため礼儀を実践することは、それが表している徳の訓練になりうるのである。',
+      'これは、礼儀正しさがいつもほめられるべきものだという意味ではない。礼儀の決まりは、それを知らない人々をしめ出すのに使われることがあり、よそ者を無作法だと決めつけ、階級や文化のちがいを強めることがある。礼儀正しさはまた、必要な対立をさける手段になることもある。たとえば、不正を批判するのは失礼に思えるからといって、人々がそれをひかえるときである。だれも決して歓迎されないことを言わない社会は、調和しているのではなく不正直なのであり、そうした社会では深刻な問題が決して取り上げられないかもしれない。',
+      'それゆえ課題は、他人を尊重する礼儀正しさと、他人をだまらせる礼儀正しさとを区別することである。本当の礼儀は、あらゆる意見のちがいをかくすことを求めはしない。それは、相手の尊厳を認めるしかたで意見のちがいを表すことを求めるのである。だれかにあなたはまちがっていると伝えながら、なお相手を敬意に値する人としてあつかうことは可能であり、この正直さと礼儀の組み合わせは、ぶっきらぼうさや中身のない礼儀正しさのどちらか一方よりもむずかしいが、より価値もあるのかもしれない。',
+      'このように理解すれば、礼儀正しさは仮面でもおりでもない。それは、知らない人どうしがともに暮らすための共通の言葉であり、不完全で、ときにまちがって使われるが、自由と相互の敬意とを両立させたいと願うどんな共同体にとっても欠かせないものなのである。どんな言葉とも同じように、それは学ばなければならず、場所によってちがい、時とともに変わるが、それが満たしている必要、つまり知りもせず選んでもいない他人とならんで暮らす必要は、人間の社会そのものと同じくらい古く、なくなることのないものなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「ていねいなたのみ方は自由を残すが、ぶっきらぼうな命令は反発を引き起こす」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、礼儀の決まりは主として内なる感情についての言明である。', answer: false, why: '第2段落 are not primarily statements about our inner feelings。' },
+      { statement: '筆者によれば、いつも感謝を表している人は、他人がしてくれることに気づくようになるかもしれない。', answer: true, why: '第4段落 A person who habitually expresses gratitude may gradually become more aware ...。' },
+      { statement: '筆者によれば、礼儀の決まりはよそ者をしめ出すのに使われることがある。', answer: true, why: '第5段落 Conventions of courtesy can be used to exclude those who do not know them。' },
+      { statement: '筆者は、本当の礼儀のためにはあらゆる意見のちがいをかくさなければならないと考えている。', answer: false, why: '第6段落 Genuine courtesy does not require us to hide every disagreement。' },
+    ],
+    qa: [
+      { q: 'What am I doing when I thank a shop assistant, according to the second paragraph?', choices: ['Recognizing that the other person is someone whose comfort and self-respect matter.', 'Claiming to feel a deep emotion.', 'Hiding my true opinion of the shop.', 'Asking for a discount.'], answer: 0, why: '第2段落 I am recognizing that the other person is someone whose comfort and self-respect matter。' },
+      { q: 'Why would a society in which no one said anything unwelcome be a problem?', choices: ['It would be dishonest, and serious problems might never be addressed.', 'It would be too noisy.', 'It would have too many rules.', 'It would make everyone rude.'], answer: 0, why: '第5段落 would not be harmonious but dishonest ... serious problems might never be addressed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
