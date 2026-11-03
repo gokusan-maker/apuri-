@@ -29218,6 +29218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-fast-delivery',
+    title: 'The Price of Speed',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, buying something meant traveling to a shop, choosing from the goods available there, and carrying them home. Today, many people can order almost anything from a phone and receive it within a day, or in some cities within hours. The convenience of fast delivery has transformed shopping habits and created enormous companies, but it has also raised questions about its hidden costs for workers, for communities, and for the environment.",
+      "The appeal of fast delivery is easy to understand. It saves time, particularly for people with busy schedules, and it can be a genuine help to those who find it difficult to travel to shops, such as elderly people, people with disabilities, and residents of areas with few stores. Online retailers can also offer a much wider range of products than any physical shop, allowing customers to find exactly what they want and to compare prices with ease.",
+      "Yet the speed of delivery depends on a complex and demanding system. Goods must be stored in huge warehouses, picked and packed rapidly, and transported by vast numbers of drivers. Workers in these warehouses and delivery services often face intense pressure to meet targets, with their movements tracked and timed by software. ( A ) customers see only the package arriving at their door, it is easy for them to overlook the physical strain and insecurity experienced by those who make such speed possible.",
+      "Fast delivery also affects local communities. As more purchases move online, many small shops struggle to survive, and the closure of such shops can change the character of town centers, reducing the places where people meet and interact. Some critics argue that the convenience enjoyed by individual consumers may come at the cost of shared public life, since a street of empty shops offers little reason for people to gather.",
+      "The environmental effects are more complicated than they might first appear. In some cases, delivering goods to many households in a single trip may produce fewer emissions than each customer driving separately to a shop. However, the demand for very fast delivery often means that vehicles travel with half-empty loads, and the ease of ordering encourages people to buy more and to return items frequently, adding to packaging waste and transport. The environmental impact thus depends heavily on how delivery systems are organized and how consumers use them.",
+      "Some companies and governments have begun to respond to these concerns. Certain retailers offer customers the option of slower delivery, sometimes with a small reward, so that orders can be grouped more efficiently. Some cities have introduced rules on delivery vehicles or encouraged the use of bicycles and electric vans. Labor organizations, meanwhile, have campaigned for better pay and working conditions for warehouse and delivery workers. In several countries, courts and governments have also begun to examine whether delivery drivers who are treated as independent contractors should instead receive the protections given to ordinary employees, such as minimum wages and paid holidays.",
+      "The question of fast delivery ultimately invites consumers to reflect on their own expectations. Few people genuinely need most of their purchases to arrive within hours, yet the availability of such speed can make waiting seem unacceptable. Recognizing the costs behind convenience does not require abandoning online shopping, but it may encourage more thoughtful choices about when speed is truly worth its price. A package that arrives next week instead of tomorrow may make little difference to the buyer, yet multiplied across millions of orders, such patience could reduce pressure on workers, allow deliveries to be organized more efficiently, and leave room for the local shops that give neighborhoods much of their life.",
+    ],
+    ja: [
+      '少し前まで、ものを買うとは、店まで出かけ、そこにある品物から選び、それを持って帰ることを意味した。今日では、多くの人が電話からほとんど何でも注文し、一日以内に、都市によっては数時間以内に受け取ることができる。速い配達の便利さは買い物の習慣を一変させ、巨大な企業を生み出したが、働く人々や地域や環境にとっての隠れた費用についての問題も生んでいる。',
+      '速い配達の魅力はわかりやすい。それは、とくにいそがしい人々の時間を節約するし、お年寄りや障害のある人や店の少ない地域の住民のように、店まで行くのがむずかしい人々にとって本当の助けになりうる。ネットの小売業者はまた、どの実際の店よりもはるかに幅広い品物を提供でき、客はほしいものをぴったり見つけ、値段をかんたんに比べることができる。',
+      'しかし配達の速さは、複雑できびしい仕組みにかかっている。品物は巨大な倉庫に保管され、すばやく取り出され、包まれ、ばく大な数の運転手によって運ばれなければならない。こうした倉庫や配達の仕事で働く人々は、しばしば目標を達成するよう強い圧力を受け、その動きはソフトウェアによって追跡され、時間をはかられている。客には自分の家のドアにとどく荷物しか見えないので、そうした速さを可能にしている人々が経験している体の負担や不安定さを見落としやすいのである。',
+      '速い配達は地域にも影響をあたえる。より多くの買い物がネットに移るにつれて、多くの小さな店が生き残るのに苦しみ、そうした店が閉じることは、町の中心部の性格を変え、人々が出会い、ふれあう場所をへらしうる。空き店舗の並ぶ通りには人々が集まる理由がほとんどないので、一人一人の消費者が楽しむ便利さは、共有の公共生活という代償のうえに成り立っているのかもしれない、と主張する批判者もいる。',
+      '環境への影響は、最初に思えるよりも複雑である。場合によっては、一回の移動で多くの家庭に品物を配達するほうが、客一人一人が別々に車で店に行くよりも排出が少ないかもしれない。しかし、とても速い配達の需要のために、車が半分空のまま走ることが多く、注文のしやすさが、人々により多く買わせ、ひんぱんに返品させ、包装のごみと輸送をふやしている。それゆえ環境への影響は、配達の仕組みがどう組み立てられ、消費者がそれをどう使うかに大きくよるのである。',
+      'いくつかの企業や政府は、こうした懸念にこたえはじめている。注文をより効率よくまとめられるよう、ときには小さなほうびをつけて、客にゆっくりした配達を選べるようにしている小売業者もある。配達の車についての決まりを設けたり、自転車や電気のバンの利用をすすめたりしている都市もある。一方、労働組合は、倉庫や配達の働き手のよりよい給料と労働条件を求めて運動してきた。いくつかの国では、裁判所や政府が、個人事業主としてあつかわれている配達の運転手に、最低賃金や有給休暇のような、ふつうの従業員にあたえられる保護をあたえるべきかどうかを検討しはじめている。',
+      '速い配達の問題は、結局のところ、消費者に自分自身の期待をふり返るよううながしている。買うもののほとんどが数時間以内にとどく必要が本当にある人はほとんどいないが、そうした速さが手に入ると、待つことががまんできないものに思えてしまう。便利さの背後にある費用を認めることは、ネットでの買い物をやめることを求めはしないが、速さが本当にその代償に値するのはいつなのかについて、より考えた選択をうながすかもしれない。明日ではなく来週とどく荷物は、買う人にとってはほとんど変わらないかもしれないが、何百万もの注文に重ね合わせれば、そうした待つ心が、働き手への圧力をへらし、配達をより効率よく組み立てられるようにし、地域に多くの活気をあたえている地元の店のための余地を残すかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「客にはとどく荷物しか見えないので、働き手の負担を見落としやすい」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Fast delivery saves time and helps people who find it hard to reach shops, but it depends on workers under intense ( 1 ). It may also harm small local shops and shared public ( 2 ). Its environmental effects depend on how deliveries are organized, and some retailers now reward customers who choose ( 3 ) delivery.',
+      blanks: [
+        { choices: ['pressure', 'protection', 'silence', 'comfort'], answer: 0, why: '第3段落 often face intense pressure to meet targets。' },
+        { choices: ['life', 'debt', 'traffic', 'noise'], answer: 0, why: '第4段落 may come at the cost of shared public life。' },
+        { choices: ['slower', 'faster', 'cheaper', 'louder'], answer: 0, why: '第6段落 the option of slower delivery, sometimes with a small reward。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、速い配達は店まで行くのがむずかしい人の助けになりうる。', answer: true, why: '第2段落 it can be a genuine help to those who find it difficult to travel to shops。' },
+      { statement: '筆者によれば、倉庫の働き手の動きはソフトウェアで追跡されることがある。', answer: true, why: '第3段落 their movements tracked and timed by software。' },
+      { statement: '筆者によれば、配達はいつも客が自分で店に行くより環境に悪い。', answer: false, why: '第5段落 In some cases ... may produce fewer emissions。' },
+      { statement: '筆者は、ネットでの買い物をすべてやめるべきだと考えている。', answer: false, why: '第7段落 does not require abandoning online shopping。' },
+    ],
+    qa: [
+      { q: 'Why can very fast delivery be bad for the environment?', choices: ['Vehicles often travel half-empty, and people buy and return more.', 'Delivery vehicles never use fuel.', 'Packages are always made of glass.', 'Warehouses are built in forests.'], answer: 0, why: '第5段落 vehicles travel with half-empty loads ... buy more and to return items frequently。' },
+      { q: 'What have labor organizations campaigned for?', choices: ['Better pay and working conditions for warehouse and delivery workers.', 'Faster delivery for customers.', 'Closing all small shops.', 'More packaging for products.'], answer: 0, why: '第6段落 campaigned for better pay and working conditions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
