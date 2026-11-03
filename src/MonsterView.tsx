@@ -2208,6 +2208,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 40 Q42 36 46 40 M54 40 Q58 36 62 40" fill="none" stroke="#e7e5e4" strokeWidth="2" />
       </g>
     )
+  if (species === 'waterscorpion')
+    return (
+      <g>
+        {/* かまの前あしと、おしりの長い呼吸管 */}
+        <path d="M34 48 L24 36 L28 32 M66 48 L76 36 L72 32" fill="none" stroke="#44403c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M50 82 L50 98" fill="none" stroke="#44403c" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
