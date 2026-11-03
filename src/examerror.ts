@@ -5946,6 +5946,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was the [first time for me to see] snow.', choices: ['first time I had seen', 'first time to see for me', 'first that I see', 'first of seeing'], answer: 0, why: '「～するのは初めて」は the first time＋主語＋完了形。過去の話なので I had seen。' },
     ],
   },
+  {
+    id: 'exam-fix-139',
+    title: '入試の誤文訂正〈139〉（国公立レベル：動名詞を目的語にとる動詞）',
+    points: ['enjoy・avoid・mind・finish・give up・stop・practice・consider・suggest・put off などは、目的語に to 不定詞ではなく動名詞（-ing）をとる。Would you mind -ing? は「～していただけますか」。stop to do は「～するために立ち止まる」で、stop -ing「～するのをやめる」と意味がちがう。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'We enjoyed swimming in the lake.', ja: '私たちは湖で泳ぐのを楽しんだ。' }],
+    questions: [
+      { sentence: 'We enjoyed [to swim] in the lake.', choices: ['swimming', 'swim', 'to swimming', 'swam'], answer: 0, why: 'enjoy は動名詞をとる。enjoyed swimming。' },
+      { sentence: 'You should avoid [to eat] too much sugar.', choices: ['eating', 'eat', 'to eating', 'ate'], answer: 0, why: 'avoid は動名詞をとる。avoid eating。' },
+      { sentence: 'Would you mind [to open] the window?', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind は動名詞をとる。Would you mind opening ～?' },
+      { sentence: 'Have you finished [to write] the report?', choices: ['writing', 'write', 'to writing', 'wrote'], answer: 0, why: 'finish は動名詞をとる。finished writing。' },
+      { sentence: 'My father gave up [to smoke] last year.', choices: ['smoking', 'smoke', 'to smoking', 'smoked'], answer: 0, why: 'give up は動名詞をとる。gave up smoking。' },
+      { sentence: 'She practices [to play] the piano every day.', choices: ['playing', 'play', 'to playing', 'played'], answer: 0, why: 'practice は動名詞をとる。practices playing。' },
+      { sentence: 'I am considering [to study] abroad next year.', choices: ['studying', 'study', 'to studying', 'studied'], answer: 0, why: 'consider は動名詞をとる。considering studying。' },
+      { sentence: 'He suggested [to go] to the beach.', choices: ['going', 'go', 'to going', 'gone'], answer: 0, why: 'suggest は動名詞をとる。suggested going（that we go も可）。' },
+      { sentence: 'Do not put off [to do] your homework.', choices: ['doing', 'do', 'to doing', 'done'], answer: 0, why: 'put off（延期する）は動名詞をとる。put off doing。' },
+      { sentence: 'The baby stopped [to cry] when her mother picked her up.', choices: ['crying', 'cry', 'to crying', 'cried'], answer: 0, why: '「泣くのをやめた」は stop -ing。stopped to cry だと「泣くために立ち止まった」になる。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
