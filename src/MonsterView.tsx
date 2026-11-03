@@ -2115,6 +2115,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 50 L28 48 M36 53 L28 54 M64 50 L72 48 M64 53 L72 54" fill="none" stroke="#f5f5f4" strokeWidth="1.2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pallascat')
+    return (
+      <g>
+        {/* ひたいの点もようと、ほおの黒いしま */}
+        <path d="M44 28 L44 30 M50 27 L50 29 M56 28 L56 30" fill="none" stroke="#57534e" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M33 48 L39 50 M33 52 L39 53 M67 48 L61 50 M67 52 L61 53" fill="none" stroke="#44403c" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
