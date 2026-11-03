@@ -27900,6 +27900,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rules',
+    title: 'Rules and Judgment',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every society relies on rules, and much of what we call fairness consists in applying the same rules to everyone. A teacher who grades one student more generously than another for the same work, or a referee who ignores a foul committed by a favored team, violates our sense of justice precisely because a rule has been applied unequally. Yet anyone who has spent time inside an institution knows that rules, however carefully written, cannot anticipate every situation, and that a person who follows them without exception may sometimes act in ways that are absurd or even cruel.",
+      "The difficulty arises from the nature of rules themselves. A rule is a general statement designed to cover many particular cases, and it achieves its usefulness by ignoring differences between those cases that its authors judged to be unimportant. A rule forbidding vehicles in a park, for example, is intended to keep the park quiet and safe for people on foot. But does it forbid a child's toy car, a wheelchair, or an ambulance responding to an emergency? The words of the rule do not answer these questions, and whoever applies it must decide what its purpose requires.",
+      "It might seem, then, that the solution is to replace rigid rules with good judgment, allowing officials to decide each case according to its particular circumstances. ( A ) this proposal has obvious attractions, it also carries serious dangers. Judgment that is not constrained by rules can easily become arbitrary, depending on the mood, the prejudices, or the personal interests of whoever is making the decision. Rules protect us not only from the stupidity of officials who apply them mechanically but also from the unfairness of officials who would otherwise treat people according to their own preferences.",
+      "Rules also make it possible for people to plan their lives. If I know in advance what the rules are, I can predict how others will respond to my actions and arrange my affairs accordingly. A system in which every case was decided entirely on its merits would leave people uncertain about what was expected of them, and this uncertainty would itself be a kind of injustice, since those with the most power and influence would be best placed to persuade decision makers to rule in their favor.",
+      "The relationship between rules and judgment is therefore not one of simple opposition. Rules require judgment in order to be applied sensibly, and judgment requires rules in order to remain fair and predictable. The skilled practitioner in any field, whether a judge, a doctor, or a teacher, is not someone who has abandoned rules but someone who understands them so thoroughly, including the purposes they serve, that he or she can recognize the rare cases in which following the letter of a rule would defeat its spirit.",
+      "Such understanding cannot itself be reduced to a further rule, since any rule telling us when to make exceptions would face the same difficulty as the original one. It is acquired instead through experience, through exposure to many cases and to the reasoning of those who have handled them well. This is perhaps why many professions train their members not only by teaching them principles but also by asking them to study examples, in the hope that they will develop a sense of when and how general principles apply.",
+      "The tension between rules and judgment can never be fully resolved, and perhaps it should not be. A society that relied only on rules would be rigid and sometimes heartless, while one that relied only on judgment would be unpredictable and open to abuse. The best we can hope for is a continuing balance, maintained by people who respect rules without worshipping them.",
+    ],
+    ja: [
+      'どの社会も決まりにたよっており、私たちが公平さとよぶものの多くは、同じ決まりをすべての人に当てはめることにある。同じ答案に対してある生徒を別の生徒よりあまく採点する先生や、ひいきのチームの反則を見のがす審判は、まさに決まりが不平等に当てはめられたからこそ、私たちの正義の感覚にそむく。しかし、組織の中ですごしたことのある人ならだれでも知っているように、決まりは、どれほど注意深く書かれていても、あらゆる状況を予想することはできず、例外なくそれに従う人は、ときにばかげた、あるいは残酷でさえあるふるまいをしてしまうことがある。',
+      'この困難は、決まりそのものの性質から生じる。決まりは多くの個々の場合を対象とするように作られた一般的な言明であり、作った人々が重要でないと判断した、それらの場合のあいだのちがいを無視することで役に立つのである。たとえば公園への乗り物の乗り入れを禁じる決まりは、公園を歩く人々にとって静かで安全にしておくためのものである。しかし、それは子どものおもちゃの車や、車いすや、緊急の呼び出しにこたえる救急車を禁じるのだろうか。決まりの言葉はこれらの問いに答えてはくれず、それを当てはめる人はだれでも、その目的が何を求めているかを決めなければならない。',
+      'それなら解決策は、かたい決まりを良い判断に置きかえ、担当者がそれぞれの場合をその個別の事情に応じて決められるようにすることのように思われるかもしれない。この提案には明らかな魅力があるが、重大な危険もともなう。決まりにしばられない判断は、決定する人の気分や偏見や個人的な利益しだいで、たやすく恣意的になりうる。決まりは、それを機械的に当てはめる担当者のおろかさからだけでなく、決まりがなければ自分の好みに従って人をあつかうであろう担当者の不公平さからも、私たちを守っているのである。',
+      '決まりはまた、人々が自分の生活の計画を立てることを可能にする。決まりが何であるかを前もって知っていれば、私は自分の行動に他人がどう反応するかを予測し、それに応じて自分のことを整えることができる。どの場合もまったくその事情だけで決められる仕組みでは、人々は自分に何が期待されているのかわからないままになるだろう。そしてこの不確かさは、それ自体一種の不正となるだろう。最も力と影響力をもつ人々が、決定する人を自分に有利な判断をするよう説得するのに最もよい立場にいることになるからである。',
+      'それゆえ決まりと判断の関係は、単純な対立ではない。決まりは分別をもって当てはめられるために判断を必要とし、判断は公平で予測可能であり続けるために決まりを必要とする。裁判官であれ医師であれ教師であれ、どの分野でも熟練した実践者とは、決まりを捨てた人ではなく、決まりを、それが果たす目的までふくめてきわめて深く理解しているために、決まりの文字どおりに従えばその精神をそこなってしまうようなまれな場合を見分けられる人なのである。',
+      'そうした理解は、それ自体がさらなる決まりに還元されることはできない。いつ例外を作るべきかを教えるどんな決まりも、もとの決まりと同じ困難に直面するからである。その理解は代わりに、経験を通して、つまり多くの事例や、それをうまくあつかった人々の推論にふれることを通して身につけられる。おそらくこれが、多くの職業がその構成員を、原則を教えるだけでなく事例を学ばせることによっても訓練する理由である。一般的な原則がいつどのように当てはまるかの感覚を育ててほしいと願ってのことである。',
+      '決まりと判断のあいだの緊張は、決して完全には解消されえないし、おそらく解消されるべきでもない。決まりだけにたよる社会はかたくなで、ときに冷たいものになり、判断だけにたよる社会は予測できず、乱用されやすいものになるだろう。私たちが望みうる最善のものは、決まりを尊重しつつもそれをあがめはしない人々によって保たれる、たえまないつりあいなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この提案には明らかな魅力があるが、重大な危険もともなう」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、決まりはどれほど注意深く書かれても、あらゆる状況を予想することはできない。', answer: true, why: '第1段落 rules, however carefully written, cannot anticipate every situation。' },
+      { statement: '筆者によれば、公園の乗り物の決まりの言葉は、救急車が入れるかどうかにはっきり答えている。', answer: false, why: '第2段落 The words of the rule do not answer these questions。' },
+      { statement: '筆者によれば、決まりは人々が自分の生活の計画を立てることを可能にする。', answer: true, why: '第4段落 Rules also make it possible for people to plan their lives。' },
+      { statement: '筆者は、決まりと判断の緊張は完全に解消されるべきだと考えている。', answer: false, why: '第7段落 can never be fully resolved, and perhaps it should not be。' },
+    ],
+    qa: [
+      { q: 'What danger of judgment without rules does the author mention?', choices: ['It can easily become arbitrary, depending on the mood or prejudices of the decision maker.', 'It always takes too much time.', 'It makes every official stupid.', 'It forbids all exceptions.'], answer: 0, why: '第3段落 Judgment that is not constrained by rules can easily become arbitrary。' },
+      { q: 'How is the understanding needed to recognize exceptions acquired, according to the sixth paragraph?', choices: ['Through experience and exposure to many cases.', 'By memorizing a further rule.', 'By ignoring the purposes of rules.', 'By avoiding difficult cases.'], answer: 0, why: '第6段落 It is acquired instead through experience, through exposure to many cases。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
