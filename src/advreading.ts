@@ -29138,6 +29138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-car-free-cities',
+    title: 'Whom Are Streets For?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, cities were redesigned around the private car. Wide roads, parking lots, and highways cutting through neighborhoods were built on the assumption that most people would travel by car and that the free movement of traffic was essential to economic life. In recent years, however, a growing number of cities have begun to move in the opposite direction, closing central streets to cars, reducing parking spaces, and giving more room to pedestrians, cyclists, and public transport. Such policies are often controversial, but they reflect a significant change in how people think about the purpose of urban space.",
+      "Supporters of car-free areas point to a range of benefits. Fewer cars mean less air pollution and noise, which can improve the health of residents, and streets without heavy traffic are safer, especially for children and older people. Space once occupied by moving and parked cars can be used for trees, benches, markets, and outdoor cafes, making city centers more pleasant places to spend time. Some studies suggest that shops in pedestrian areas attract more visitors, since people who walk tend to stop and browse more often than those who drive past.",
+      "Opponents, however, raise serious concerns. Shop owners sometimes fear that customers who arrive by car will go elsewhere, particularly to large shopping centers on the edge of the city where parking is easy. People with disabilities, elderly residents, and parents with young children may find it harder to reach the city center without a car, and workers who must carry heavy equipment, such as builders and electricians, may face real difficulties. ( A ) these concerns are addressed through careful planning, car-free policies may benefit some groups at the expense of others.",
+      "The success of such policies seems to depend heavily on the alternatives available. In cities with frequent, reliable public transport and safe routes for cycling, removing cars from the center can be relatively painless, since people have convenient ways of getting around. In cities where public transport is poor and distances are long, the same policy may simply make life harder for residents without offering any real substitute. Restricting cars, in other words, works best not as an isolated measure but as part of a broader transformation of how people travel.",
+      "There are also questions of fairness between different parts of a city. Wealthier residents who live in attractive central neighborhoods may benefit most from quieter, greener streets, while traffic may be diverted into poorer areas on the edges of the car-free zone. Rising property values in improved neighborhoods may also push out long-term residents who can no longer afford to live there. Planners increasingly recognize that improvements in one area should not come at the cost of worsening conditions in another.",
+      "Experience in several cities suggests that public opinion often changes after car-free policies are introduced. Proposals that met strong opposition at first have sometimes become popular once residents experienced the quieter streets and new public spaces. This pattern suggests that people may find it difficult to imagine the benefits of a change before they have experienced it, and that some degree of experimentation may be necessary to discover what works.",
+      "The debate over cars in cities thus raises a fundamental question: whom are cities for? If streets are seen primarily as channels for moving vehicles, then any restriction on cars appears as a loss. If they are seen as public spaces belonging to everyone, then reclaiming them from traffic may be understood not as a restriction but as a return of shared space to the people who live there. How a city answers this question will shape not only how its residents travel but also how they meet, play, and live together.",
+    ],
+    ja: [
+      '二十世紀の大部分のあいだ、都市は自家用車を中心に作り直された。ほとんどの人が車で移動し、交通が自由に流れることが経済生活に欠かせないという考えのもとに、広い道路や駐車場や、地域を切りさく高速道路が作られた。しかし近年、ますます多くの都市が反対の方向に動きはじめ、中心部の通りを車に対して閉ざし、駐車場をへらし、歩く人や自転車や公共交通にもっと場所をあたえている。そうした政策はしばしば議論を呼ぶが、それは都市の空間が何のためにあるのかについての人々の考え方の大きな変化を反映している。',
+      '車のない地区を支持する人々は、さまざまな恩恵をあげる。車が少なくなれば大気汚染と騒音がへり、住民の健康がよくなりうるし、交通量の多くない通りは、とくに子どもやお年寄りにとってより安全である。かつて走る車や止まっている車にしめられていた空間は、木やベンチや市場や屋外のカフェのために使うことができ、都市の中心部をすごしやすい場所にする。歩く人は車で通りすぎる人よりも、立ち止まって見てまわることが多いので、歩行者の地区の店はより多くの客を引きつけることを示す研究もある。',
+      'しかし反対する人々は、深刻な懸念をあげる。店主たちは、車で来る客が、駐車がかんたんな都市のはずれの大きなショッピングセンターなど、ほかの場所へ行ってしまうことをおそれることがある。障害のある人や年配の住民や小さな子どもを連れた親は、車なしで中心部に行くのがむずかしくなるかもしれず、建設作業員や電気工のように重い道具を運ばなければならない働き手は、本当の困難に直面するかもしれない。こうした懸念に注意深い計画によって対処しないかぎり、車のない政策は、ある人々のためになる一方で、ほかの人々を犠牲にしてしまうかもしれない。',
+      'こうした政策が成功するかどうかは、ほかの手段がどれだけあるかに大きくよるように思われる。本数が多くたよりになる公共交通と、自転車のための安全な道がある都市では、中心部から車をなくすことは比較的痛みが少ない。人々には便利な移動の手段があるからである。公共交通が不十分で距離の長い都市では、同じ政策は本当の代わりを何もあたえずに、住民の生活を苦しくするだけかもしれない。言いかえれば、車を制限することは、それだけ切りはなされた対策としてではなく、人々の移動のしかたのより広い変化の一部としてのときに最もうまくいくのである。',
+      '都市のちがう部分のあいだの公平さという問題もある。魅力的な中心部の地域に住む豊かな住民は、静かで緑の多い通りから最も多くの恩恵を受けるかもしれないが、交通は車のない地区のはずれにある貧しい地域へと流れていくかもしれない。また、よくなった地域で不動産の値段が上がると、もうそこに住む余裕のない長年の住民が追い出されるかもしれない。計画を立てる人々は、ある地域の改善が、別の地域の状況を悪くする代償のうえに成り立つべきではないことを、ますます認識するようになっている。',
+      'いくつかの都市での経験は、車のない政策が導入されたあと、世論がしばしば変わることを示している。最初は強い反対にあった提案が、住民が静かな通りと新しい公共の空間を経験すると、人気になったことがある。この傾向は、人々が変化の恩恵を経験する前に想像するのはむずかしく、何がうまくいくのかを見つけるには、ある程度の試みが必要かもしれないことを示している。',
+      'このように都市の車をめぐる議論は、根本的な問いを生む。都市はだれのためにあるのか、という問いである。もし通りが主に車を動かすための通り道と見られるなら、車へのどんな制限も損失に見える。もし通りがすべての人に属する公共の空間と見られるなら、それを交通から取りもどすことは、制限ではなく、そこに住む人々に共有の空間を返すことと理解されうるのである。都市がこの問いにどう答えるかは、住民の移動のしかただけでなく、彼らがどう出会い、遊び、ともに暮らすかも形づくるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Since', 'Once'], answer: 0, why: '「懸念に注意深い計画で対処しないかぎり、ある人々を犠牲にしてしまうかもしれない」という条件の Unless。' },
+    ],
+    summary: {
+      text: 'Many cities now limit cars in their centers, which reduces pollution and noise and creates public ( 1 ). Opponents worry about shops and about people who depend on cars, such as those with ( 2 ). Such policies work best when good public transport exists, and opinion often becomes more ( 3 ) after people experience the change.',
+      blanks: [
+        { choices: ['space', 'debt', 'traffic', 'noise'], answer: 0, why: '第2段落 Space once occupied by ... cars can be used for trees, benches, markets ...。' },
+        { choices: ['disabilities', 'bicycles', 'gardens', 'pets'], answer: 0, why: '第3段落 People with disabilities, elderly residents ...。' },
+        { choices: ['favorable', 'hostile', 'confused', 'silent'], answer: 0, why: '第6段落 have sometimes become popular once residents experienced ...。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、歩行者の地区の店はより多くの客を引きつけることがある。', answer: true, why: '第2段落 shops in pedestrian areas attract more visitors。' },
+      { statement: '筆者によれば、公共交通が不十分な都市でも、車をなくす政策は必ず痛みが少ない。', answer: false, why: '第4段落 may simply make life harder for residents。' },
+      { statement: '筆者によれば、車のない地区のはずれの貧しい地域に交通が流れることがある。', answer: true, why: '第5段落 traffic may be diverted into poorer areas。' },
+      { statement: '筆者によれば、最初に反対された提案は、その後もずっと不人気である。', answer: false, why: '第6段落 have sometimes become popular。' },
+    ],
+    qa: [
+      { q: 'What fear do some shop owners have about car-free areas?', choices: ['Customers who arrive by car may go to shopping centers elsewhere.', 'Too many customers will come by bicycle.', 'Trees will block their shops.', 'Rents will fall too much.'], answer: 0, why: '第3段落 customers who arrive by car will go elsewhere, particularly to large shopping centers。' },
+      { q: 'According to the last paragraph, how might reclaiming streets from traffic be understood?', choices: ['As a return of shared space to the people who live there.', 'As a loss for everyone.', 'As a way to build more highways.', 'As a punishment for drivers.'], answer: 0, why: '第7段落 as a return of shared space to the people who live there。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
