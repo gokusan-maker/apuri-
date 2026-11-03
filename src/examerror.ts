@@ -3698,6 +3698,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Both of my parents (A) work (B) at (C) a hospitals (D) in the city.', choices: ['(A) work', '(B) at', '(C) a hospitals', '(D) in the city'], answer: 2, why: 'a のあとは単数。a hospital。' },
     ],
   },
+  {
+    id: 'exam-error-modal-have-kokkoritsu',
+    title: '入試の正誤問題〈156〉（国公立レベル：助動詞＋have＋過去分詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '助動詞＋have＋過去分詞は過去のことについての推量・後悔。should have done「～すべきだったのに」・must have done「～したにちがいない」・cannot have done「～したはずがない」・may have done「～したかもしれない」・need not have done「～する必要はなかったのに」。助動詞のあとは have（has ではない）、have のあとは過去分詞。',
+    ],
+    examples: [
+      { en: 'You should have come earlier.', ja: 'もっと早く来るべきだったのに。' },
+      { en: 'He cannot have written this letter.', ja: '彼がこの手紙を書いたはずがない。' },
+    ],
+    questions: [
+      { sentence: 'You (A) should (B) have (C) came (D) earlier.', choices: ['(A) should', '(B) have', '(C) came', '(D) earlier'], answer: 2, why: '助動詞＋have のあとは過去分詞。come。' },
+      { sentence: 'She (A) cannot (B) has (C) said (D) such a thing.', choices: ['(A) cannot', '(B) has', '(C) said', '(D) such a thing'], answer: 1, why: '助動詞のあとは原形 have。cannot have said。' },
+      { sentence: 'You (A) need not (B) to have (C) bought (D) the tickets.', choices: ['(A) need not', '(B) to have', '(C) bought', '(D) the tickets'], answer: 1, why: 'need not have＋過去分詞「～する必要はなかったのに」。to は要らない。' },
+      { sentence: '(A) It must (B) have rained (C) last night, (D) because the road is dry.', choices: ['(A) It must', '(B) have rained', '(C) last night,', '(D) because the road is dry'], answer: 3, why: '雨がふったと推測する理由なので、道路は wet（ぬれている）。' },
+      { sentence: 'I (A) may (B) have left (C) my umbrella (D) on the train tomorrow.', choices: ['(A) may', '(B) have left', '(C) my umbrella', '(D) on the train tomorrow'], answer: 3, why: 'may have＋過去分詞は過去の推量。tomorrow ではなく yesterday など。' },
+      { sentence: '(A) You must have be (B) surprised (C) at the news (D) yesterday.', choices: ['(A) You must have be', '(B) surprised', '(C) at the news', '(D) yesterday'], answer: 0, why: 'must have のあとは過去分詞。must have been。' },
+      { sentence: 'You (A) should (B) not have (C) eat (D) so much cake.', choices: ['(A) should', '(B) not have', '(C) eat', '(D) so much cake'], answer: 2, why: 'should not have のあとは過去分詞。eaten。' },
+      { sentence: 'They (A) could (B) have won (C) the game if they (D) have practiced more.', choices: ['(A) could', '(B) have won', '(C) the game if they', '(D) have practiced more'], answer: 3, why: '仮定法過去完了なので if 節は had practiced。' },
+      { sentence: 'He (A) cannot (B) have (C) wrote (D) this letter.', choices: ['(A) cannot', '(B) have', '(C) wrote', '(D) this letter'], answer: 2, why: 'cannot have のあとは過去分詞。written。' },
+      { sentence: 'I (A) must have (B) dropped (C) my wallet (D) when I will run.', choices: ['(A) must have', '(B) dropped', '(C) my wallet', '(D) when I will run'], answer: 3, why: '過去のことなので when I ran。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
