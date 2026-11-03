@@ -29022,6 +29022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-courage',
+    title: 'The Many Faces of Courage',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we think of courage, we usually imagine dramatic acts: a soldier advancing under fire, a firefighter entering a burning building, a person who risks his or her own life to save a stranger from drowning. Such acts deserve our admiration, and it is no accident that courage has been celebrated in the stories and histories of almost every culture. Yet if courage were found only in moments of physical danger, most people would rarely have occasion to display it, and it would hardly deserve the central place it has often been given among the virtues.",
+      "A closer look suggests that courage is better understood as a disposition to act well in the face of fear, whatever its source. Fear arises not only from threats to our bodies but also from threats to our reputation, our relationships, our security, and our sense of who we are. Speaking honestly to a friend who may be offended, admitting a mistake before colleagues, or defending an unpopular opinion may require no physical risk at all, yet each can demand a kind of bravery that many people find difficult to summon.",
+      "It is important to distinguish courage from the mere absence of fear. A person who feels no fear because he or she fails to recognize a genuine danger is not courageous but reckless, and such a person may endanger both himself or herself and others. ( A ) the reckless person acts without understanding what is at stake, the courageous person understands the risk, feels the fear that it naturally provokes, and acts nevertheless because something more important is at stake. Courage, in this sense, is not the absence of fear but the mastery of it in the service of what one values.",
+      "This account helps to explain why courage is so closely connected with other virtues. Courage alone does not tell us what is worth risking ourselves for; a person may show great bravery in pursuing an unjust cause. Courage becomes admirable when it is guided by good judgment about what deserves to be defended, and when it serves values such as honesty, justice, or loyalty. In this way, courage might be described as the virtue that makes the other virtues effective, since good intentions that collapse at the first sign of difficulty accomplish little.",
+      "Courage may also be needed in less visible forms. Living with chronic illness, caring for a family member through a long decline, or continuing to hope in circumstances that seem to offer little reason for hope may require a quiet endurance that rarely attracts attention. Such courage does not consist in a single decisive act but in a steady willingness to face difficulty day after day, and it may be among the most demanding forms of all.",
+      "Can courage be learned? Many thinkers have suggested that it can, not through instruction alone but through practice. Just as physical strength grows through repeated exercise, the capacity to act despite fear may develop through repeated small acts of bravery, each of which makes the next a little easier. A person who habitually avoids every uncomfortable conversation may find that fear grows stronger, while one who practices facing small fears may gradually become capable of facing larger ones.",
+      "Understood in this way, courage is not reserved for heroes. It is a quality that ordinary people need and exercise in countless everyday situations, and the opportunities to develop it are present in almost every life. Each time we tell an uncomfortable truth, admit that we were wrong, or continue patiently through a difficult period, we are not only acting bravely in that moment but also shaping the kind of person we will be when greater tests arrive.",
+    ],
+    ja: [
+      '勇気について考えるとき、私たちはふつう劇的な行為を思いうかべる。銃撃の中を進む兵士や、燃えている建物に入る消防士や、自分の命をかけて知らない人がおぼれるのを助ける人である。そうした行為は称賛に値し、勇気がほとんどすべての文化の物語や歴史の中でたたえられてきたのも偶然ではない。しかし、もし勇気が体の危険のある瞬間にしか見いだされないのなら、ほとんどの人はそれを示す機会がめったになく、勇気がしばしば徳の中であたえられてきた中心的な位置に値するとはとても言えないだろう。',
+      'もっとよく見ると、勇気は、その源が何であれ、恐れに直面してよく行動しようとする心の傾きとして理解するほうがよいことがわかる。恐れは、体への脅威からだけでなく、評判や人間関係や安定や、自分がだれであるかという感覚への脅威からも生じる。気を悪くするかもしれない友人に正直に話すことや、同僚の前でまちがいを認めることや、人気のない意見を守ることは、体の危険はまったくないかもしれないが、どれも多くの人がふるい起こすのをむずかしいと感じる種類の勇気を求めうるのである。',
+      '勇気を、単に恐れがないことと区別するのは大切である。本当の危険に気づかないために恐れを感じない人は、勇気があるのではなく向こう見ずなのであり、そうした人は自分も他人も危険にさらすかもしれない。向こう見ずな人は何がかかっているかを理解せずに行動するが、勇気ある人は危険を理解し、それが自然に引き起こす恐れを感じ、それでも、もっと大切なものがかかっているから行動するのである。この意味で、勇気とは恐れがないことではなく、自分が大切にしているもののために恐れを乗りこなすことなのである。',
+      'この説明は、なぜ勇気がほかの徳とこれほど深く結びついているのかを説明するのに役立つ。勇気だけでは、何のために自分を危険にさらす価値があるのかはわからない。人は不正な目的を追い求めることに大きな勇気を示すこともありうる。勇気がほめられるべきものになるのは、何が守られるに値するかについてのよい判断にみちびかれ、正直さや正義や忠実さのような価値に役立つときである。このように、勇気はほかの徳を有効にする徳と言えるかもしれない。困難のきざしが見えたとたんにくずれる善意は、ほとんど何もなしとげないからである。',
+      '勇気はまた、より目立たない形でも必要とされるかもしれない。慢性の病気とともに生きることや、長くおとろえていく家族を世話することや、希望をもつ理由がほとんどないように思える状況で希望をもち続けることには、めったに注目されない静かな忍耐が必要かもしれない。そうした勇気は一回の決定的な行為にあるのではなく、毎日毎日困難に向き合おうとする着実な心がまえにあるのであり、それはあらゆる形の中で最も多くを求めるものの一つかもしれない。',
+      '勇気は学べるのだろうか。多くの思想家は、教えられるだけでなく実践を通して、学べると示唆してきた。体の力がくり返しの運動によってのびるのと同じように、恐れにもかかわらず行動する力も、小さな勇気ある行為をくり返すことで育つかもしれない。その一つ一つが、次の行為を少しだけやさしくするのである。気まずい会話をいつもさけている人は恐れがますます強くなることに気づくかもしれないが、小さな恐れに向き合う練習をする人は、少しずつより大きな恐れにも向き合えるようになるかもしれない。',
+      'このように理解すれば、勇気は英雄だけのものではない。それはふつうの人々が数えきれないほどの日常の場面で必要とし、発揮している性質であり、それを育てる機会はほとんどすべての人生の中にあるのである。気まずい真実を伝えたり、自分がまちがっていたと認めたり、困難な時期をねばり強く乗りこえたりするたびに、私たちはその瞬間に勇気をもって行動しているだけでなく、より大きな試練がおとずれたときに自分がどんな人間であるかを形づくってもいるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「向こう見ずな人は理解せずに行動するが、勇気ある人は危険を理解し…」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、恐れは体への脅威からしか生じない。', answer: false, why: '第2段落 Fear arises not only from threats to our bodies but also from threats to our reputation ...。' },
+      { statement: '筆者によれば、本当の危険に気づかずに恐れを感じない人は向こう見ずである。', answer: true, why: '第3段落 is not courageous but reckless。' },
+      { statement: '筆者によれば、勇気だけでは何のために危険をおかす価値があるのかはわからない。', answer: true, why: '第4段落 Courage alone does not tell us what is worth risking ourselves for。' },
+      { statement: '筆者は、勇気は英雄だけのものだと結論している。', answer: false, why: '第7段落 courage is not reserved for heroes。' },
+    ],
+    qa: [
+      { q: 'How might courage be learned, according to the sixth paragraph?', choices: ['Through repeated small acts of bravery.', 'Only by reading about heroes.', 'By avoiding every uncomfortable situation.', 'It cannot be learned at all.'], answer: 0, why: '第6段落 may develop through repeated small acts of bravery。' },
+      { q: 'What kind of courage does the fifth paragraph describe?', choices: ['A quiet endurance in facing difficulty day after day.', 'A single dramatic act in battle.', 'The courage to win a sports match.', 'The courage to spend money.'], answer: 0, why: '第5段落 a steady willingness to face difficulty day after day。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
