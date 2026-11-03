@@ -28862,6 +28862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ordinary',
+    title: 'The Value of Ordinary Days',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Much of human life consists of activities that are repeated so often that we hardly notice them. We wake, wash, prepare meals, travel to work or school, clean our homes, and go to sleep, and then we do the same things again the next day. Compared with the dramatic events that fill novels and films, such routines seem unremarkable, even dull, and many people regard them as obstacles to be cleared away so that real life, with its achievements and adventures, can begin. Yet this attitude may rest on a mistaken view of where the value of a life is to be found.",
+      "One reason we tend to overlook ordinary life is that it does not lend itself to stories. A story requires change, conflict, and resolution, and the repeated activities of daily life provide none of these. When we tell others about our lives, we naturally emphasize the turning points: the move to a new city, the beginning of a relationship, the loss of a loved one. The countless hours spent cooking, walking, or talking with family members are rarely mentioned, not because they are unimportant but because they do not fit the shape of a narrative.",
+      "Yet if we consider how our days are actually spent, it becomes clear that ordinary activities make up the greater part of any life. A person who finds meaning only in exceptional moments will therefore experience most of his or her life as meaningless, as mere waiting for something else. ( A ) the ordinary is so pervasive, learning to value it may be one of the most important conditions for a satisfying life, rather than a mere consolation for those who lack more exciting opportunities.",
+      "Several traditions of thought have emphasized the dignity of everyday tasks. In some religious traditions, ordinary work such as sweeping a floor or preparing food is treated as a form of spiritual practice, to be performed with full attention and care. Some philosophers have argued that the meaning of human life is found less in extraordinary achievements than in the quality of attention we bring to familiar things, and that a person who learns to see the ordinary clearly may find in it a depth that had previously gone unnoticed.",
+      "Ordinary life also has a social dimension that is easily overlooked. The routines of daily life are largely shared with others: meals eaten together, conversations over small matters, the care of children and elderly relatives. These activities rarely make headlines, yet they are the means by which relationships are sustained and communities held together. Much of the work involved, traditionally performed without pay and often by women, has been undervalued precisely because it belongs to the realm of the everyday.",
+      "This is not to romanticize routine. Some ordinary tasks are genuinely tedious or exhausting, and many people are burdened with more of them than they can reasonably bear. The point is not that every routine is meaningful in itself, but that the division between ordinary and significant life is less sharp than we often assume, and that much of what makes life worth living may be found within the ordinary rather than beyond it.",
+      "To value ordinary life, then, may require a change not in what we do but in how we see. The same daily activities that seem empty when regarded as mere preparation for something else may appear rich and meaningful when we attend to them as the substance of life itself. A life well lived, on this view, is not one that escapes the ordinary but one that learns to inhabit it fully, finding in familiar routines and shared tasks the quiet foundation on which everything else is built.",
+    ],
+    ja: [
+      '人間の生活の多くは、あまりにもしばしばくり返されるので私たちがほとんど気づかない活動から成り立っている。私たちは目覚め、顔を洗い、食事を用意し、仕事や学校へ行き、家を掃除し、眠りにつき、そして翌日また同じことをする。小説や映画を満たす劇的な出来事と比べると、そうした日課は目立たず、たいくつでさえあるように見え、多くの人は、業績や冒険のある本当の生活が始まるように片づけるべき障害とみなしている。しかし、この態度は、人生の価値がどこに見いだされるかについてのまちがった見方にもとづいているのかもしれない。',
+      '私たちがふつうの生活を見落としがちな理由の一つは、それが物語に向かないということである。物語には変化と対立と解決が必要だが、日々のくり返しの活動はそのどれもあたえてくれない。他人に自分の人生について話すとき、私たちは自然と転機を強調する。新しい町への引っこしや、ある関係の始まりや、愛する人の死である。料理をしたり、歩いたり、家族と話したりしてすごした数えきれない時間は、めったに語られない。それが大切でないからではなく、物語の形に合わないからである。',
+      'しかし、私たちの毎日が実際にどうすごされているかを考えれば、ふつうの活動がどんな人生でも大部分をしめていることは明らかになる。それゆえ、特別な瞬間にしか意味を見いださない人は、自分の人生の大部分を意味のないもの、つまりほかの何かをただ待っている時間として経験することになる。ふつうのことはこれほどすみずみまで行きわたっているので、それを大切にすることを学ぶのは、もっとわくわくする機会のない人々のための単なるなぐさめではなく、満ち足りた人生の最も大切な条件の一つなのかもしれない。',
+      'いくつかの思想の伝統は、日々の仕事の尊さを強調してきた。ある宗教の伝統では、床をはいたり食事を用意したりするようなふつうの仕事が、精神的な修行の一つの形としてあつかわれ、十分な注意と心くばりをもって行われるべきものとされる。人生の意味は、特別な業績よりも、なじみのあるものに向ける注意の質のうちに見いだされるのであり、ふつうのものをはっきり見ることを学んだ人は、そこにそれまで気づかれなかった深さを見つけるかもしれない、と論じた哲学者もいる。',
+      'ふつうの生活にはまた、見落とされやすい社会的な面もある。日々の生活の日課は、その多くが他人と分かち合われている。いっしょに食べる食事や、ささいなことについての会話や、子どもや年老いた親族の世話である。こうした活動がニュースになることはめったにないが、それは関係が保たれ、共同体がまとまるための手段である。そこにふくまれる仕事の多くは、伝統的に給料なしに、しばしば女性によって行われてきたが、まさにそれが日常の領域に属しているために、低く評価されてきたのである。',
+      'これは日課を美化することではない。ふつうの仕事の中には本当にたいくつだったり疲れたりするものもあり、多くの人は、無理なく負える以上の量の仕事をかかえている。言いたいのは、あらゆる日課がそれ自体意味があるということではなく、ふつうの生活と意味のある生活との区別は私たちがしばしば思いこむほどはっきりしておらず、人生を生きる価値のあるものにしているものの多くは、ふつうのことをこえたところではなく、その中に見いだされるかもしれないということである。',
+      'それゆえふつうの生活を大切にするには、することではなく、見方を変えることが必要なのかもしれない。ほかの何かのための単なる準備とみなすとからっぽに思える同じ日々の活動も、人生そのものの中身としてそれに注意を向けるとき、豊かで意味のあるものに見えるかもしれないのである。この見方では、よく生きられた人生とは、ふつうのことからのがれる人生ではなく、その中に十分に住まうことを学び、なじみの日課や分かち合う仕事の中に、ほかのすべてがその上に築かれる静かな土台を見いだす人生なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「ふつうのことはこれほど行きわたっているので、それを大切にするのは大切な条件かもしれない」という理由の Because。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、日々のくり返しの活動は物語に向かない。', answer: true, why: '第2段落 it does not lend itself to stories。' },
+      { statement: '筆者によれば、特別な瞬間にしか意味を見いださない人は、人生の大部分を意味のないものとして経験する。', answer: true, why: '第3段落 will therefore experience most of his or her life as meaningless。' },
+      { statement: '筆者によれば、家庭の仕事は日常に属しているために高く評価されてきた。', answer: false, why: '第5段落 has been undervalued precisely because it belongs to the realm of the everyday。' },
+      { statement: '筆者は、あらゆる日課はそれ自体意味があると主張している。', answer: false, why: '第6段落 The point is not that every routine is meaningful in itself。' },
+    ],
+    qa: [
+      { q: 'How do some religious traditions treat ordinary work such as sweeping a floor?', choices: ['As a form of spiritual practice to be performed with full attention.', 'As a waste of time.', 'As work only for children.', 'As something to be avoided.'], answer: 0, why: '第4段落 is treated as a form of spiritual practice, to be performed with full attention and care。' },
+      { q: 'What may valuing ordinary life require, according to the last paragraph?', choices: ['A change not in what we do but in how we see.', 'Moving to a new city.', 'Doing fewer daily activities.', 'Writing a novel about one’s life.'], answer: 0, why: '第7段落 may require a change not in what we do but in how we see。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
