@@ -29938,6 +29938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-uniforms',
+    title: 'Should Schools Require Uniforms?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many parts of the world, students wear uniforms to school, often consisting of a jacket, a shirt, and trousers or a skirt in a particular color chosen by the school. In other places, students are free to wear whatever they like, within broad limits of decency and safety. Each system tends to seem normal to those who have grown up with it, and strange to those who have not. Yet the question of whether schools should require uniforms has long been debated, and the arguments on both sides reveal different ideas about the purpose of education and the meaning of individual freedom.",
+      "Supporters of uniforms often begin by pointing to their effect on equality. When every student wears the same clothes, differences in family wealth become less visible, and children from poorer families are less likely to be teased or excluded because they cannot afford fashionable clothing. Uniforms, it is argued, reduce the pressure on students to compete with one another through their appearance, and they spare parents the expense of keeping up with changing fashions. In this sense, a uniform can be seen as a symbol of the idea that every student enters the school on equal terms.",
+      "Supporters also claim that uniforms improve discipline and concentration. Wearing a uniform, they suggest, helps students to separate school from leisure and to adopt a more serious attitude when they enter the classroom. Uniforms may also strengthen a sense of belonging, making students feel that they are part of a community with shared values. Some teachers report that the atmosphere of their schools became calmer after uniforms were introduced, although it is difficult to know whether this change was caused by the uniforms themselves or by other policies introduced at the same time.",
+      "Critics, however, question whether uniforms really produce these benefits. Research on the subject has produced mixed results, with some studies finding small improvements in behavior and others finding no clear effect on attendance or academic performance. ( A ) uniforms hide differences in clothing, critics add, they do little to hide other signs of inequality, such as the quality of students' shoes and bags, the places they go on holiday, or the electronic devices they carry. Children are skilled at detecting differences in status, and a uniform may simply move the competition to other areas.",
+      "Cost is another point of disagreement. Although uniforms are often defended as a way of saving money, they can be surprisingly expensive, especially when they must be bought from a single approved supplier. For families with several children, the price of uniforms, together with the need to replace them as children grow, may be a significant burden. Some schools have responded by allowing cheaper versions of the uniform to be bought from ordinary shops, or by running programs through which families can exchange used uniforms.",
+      "Perhaps the deepest objection to uniforms concerns freedom of expression. Clothing is one of the ways in which young people explore and express their identities, and critics argue that requiring all students to dress alike teaches them that conformity is more important than individuality. Rules about uniforms have also been criticized when they require girls and boys to wear different clothes, or when they fail to accommodate religious dress, since such rules may make some students feel that they do not fully belong. In response, some schools have revised their rules to offer students a choice among several styles.",
+      "The debate over uniforms thus reflects a broader tension in education between the goal of creating a shared community and the goal of respecting individual differences. Neither goal can be entirely abandoned: schools must give students a sense of belonging, but they must also help them to become independent adults who can think for themselves. The most reasonable approach may be one that keeps the benefits of uniforms while allowing flexibility, and that involves students and parents in deciding what rules their school should follow. Whatever the decision, it is worth remembering that what students learn depends far more on what happens in the classroom than on what they wear.",
+    ],
+    ja: [
+      '世界の多くの地域では、生徒は制服を着て学校に行き、制服はたいてい学校が選んだ特定の色の上着とシャツとズボンまたはスカートからなる。ほかの場所では、生徒は、品位と安全のゆるやかな範囲内で、好きなものを自由に着られる。どちらの仕組みも、それとともに育った人には当たり前に思われ、そうでない人には奇妙に思われがちである。しかし学校が制服を義務づけるべきかどうかという問いは長く議論されており、双方の主張は、教育の目的と個人の自由の意味についてのちがう考えを明らかにしている。',
+      '制服を支持する人々は、しばしば平等への効果を指摘することから始める。すべての生徒が同じ服を着れば、家庭の豊かさのちがいは見えにくくなり、貧しい家庭の子どもが、流行の服を買えないためにからかわれたり仲間はずれにされたりすることが少なくなる。制服は、見た目でたがいに競いあうよう生徒にかかる圧力をへらし、親が移り変わる流行についていく出費をはぶく、と主張される。この意味で、制服は、すべての生徒が対等な条件で学校に入るという考えの象徴とみなすことができる。',
+      '支持する人々はまた、制服は規律と集中をよくすると主張する。制服を着ることは、生徒が学校を余暇と区別し、教室に入るときにより真剣な態度をとるのを助ける、と彼らは示唆する。制服はまた、帰属の感覚を強め、生徒に自分たちが価値を共有する共同体の一員だと感じさせるかもしれない。制服が導入されたあと学校の雰囲気が落ち着いたと報告する先生もいるが、この変化が制服そのものによるものなのか、同時に導入されたほかの方針によるものなのかを知るのはむずかしい。',
+      'しかし批判する人々は、制服が本当にこうした利益を生むのか疑問を投げかける。この問題についての研究の結果はさまざまで、行動がわずかによくなったと見いだした研究もあれば、出席や成績にはっきりした効果がないと見いだした研究もある。制服は服のちがいをかくすが、生徒の靴やかばんの質や、休みに行く場所や、持っている電子機器といった、不平等のほかのしるしをかくすのにはほとんど役立たない、と批判する人々はつけ加える。子どもは地位のちがいを見ぬくのがうまく、制服は単に競争をほかの分野にうつすだけかもしれない。',
+      '費用も意見が分かれる点である。制服はしばしばお金を節約する方法として擁護されるが、とくに一つの認められた業者からしか買えないときには、意外に高くつくことがある。子どもが何人もいる家庭にとっては、子どもが成長するにつれて買いかえる必要があることとあわせて、制服の値段は大きな負担になりうる。それに応えて、制服のより安いものをふつうの店で買えるようにしたり、家庭が使い古した制服を交換できる取り組みを行ったりする学校もある。',
+      '制服へのおそらく最も根本的な反対は、表現の自由にかかわるものである。服は若者が自分のアイデンティティをさぐり表現する方法の一つであり、すべての生徒に同じ服装を義務づけることは、個性よりも同調のほうが大事だと教えることになる、と批判する人々は主張する。制服についての規則は、女子と男子にちがう服を着るよう求めたり、宗教的な服装に配慮しなかったりするときにも批判されてきた。そうした規則は、一部の生徒に自分は完全にはその一員ではないと感じさせるかもしれないからである。これに応えて、いくつかの型から生徒が選べるように規則を見直した学校もある。',
+      'このように制服をめぐる議論は、共有された共同体を作るという目標と、個人のちがいを尊重するという目標とのあいだの、教育における、より広い緊張を反映している。どちらの目標も完全にすてることはできない。学校は生徒に帰属の感覚をあたえなければならないが、生徒が自分で考えられる自立したおとなになるのを助けなければならない。最も理にかなったやり方は、柔軟さをゆるしながら制服の利益を保ち、自分の学校がどんな規則に従うべきかを決めることに生徒と親を参加させるものかもしれない。どんな決定であれ、生徒が学ぶことは、何を着るかよりも、教室で何が起こるかにはるかに大きくかかっていることを覚えておく価値がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「制服は服のちがいをかくすが、不平等のほかのしるしはかくせない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters say uniforms promote ( 1 ) by hiding differences in wealth, and improve discipline. Critics reply that research results are ( 2 ), that uniforms can be expensive, and that requiring everyone to dress alike limits freedom of ( 3 ).',
+      blanks: [
+        { choices: ['equality', 'competition', 'fashion', 'profit'], answer: 0, why: '第2段落 Supporters of uniforms often begin by pointing to their effect on equality。' },
+        { choices: ['mixed', 'perfect', 'secret', 'unanimous'], answer: 0, why: '第4段落 Research on the subject has produced mixed results。' },
+        { choices: ['expression', 'movement', 'trade', 'traffic'], answer: 0, why: '第6段落 the deepest objection to uniforms concerns freedom of expression。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、制服を義務づける仕組みはどこでも当たり前に思われている。', answer: false, why: '第1段落 normal to those who have grown up with it, and strange to those who have not。' },
+      { statement: '学校の雰囲気が落ち着いた原因が制服なのかどうかはわかりにくい。', answer: true, why: '第3段落 it is difficult to know whether this change was caused by the uniforms themselves。' },
+      { statement: '筆者によれば、制服は一つの業者からしか買えないとき高くつくことがある。', answer: true, why: '第5段落 especially when they must be bought from a single approved supplier。' },
+      { statement: '筆者は、生徒が学ぶことは何を着るかに最も大きくかかっていると述べている。', answer: false, why: '第7段落 depends far more on what happens in the classroom than on what they wear。' },
+    ],
+    qa: [
+      { q: 'According to critics, what may a uniform simply do?', choices: ['Move the competition to other areas.', 'End all competition among students.', 'Make shoes unnecessary.', 'Raise test scores greatly.'], answer: 0, why: '第4段落 a uniform may simply move the competition to other areas。' },
+      { q: 'How have some schools responded to concerns about freedom of expression?', choices: ['By offering a choice among several styles.', 'By banning all clothing rules for teachers.', 'By closing on holidays.', 'By making uniforms more expensive.'], answer: 0, why: '第6段落 offer students a choice among several styles。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
