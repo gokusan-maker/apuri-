@@ -2340,6 +2340,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 58 L14 44 L8 60 M34 66 L12 72 L10 88 M66 58 L86 44 L92 60 M66 66 L88 72 L90 88" fill="none" stroke="#7c2d12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'oarfish')
+    return (
+      <g>
+        {/* 頭の赤いひれと長い背びれ */}
+        <path d="M40 30 Q36 14 30 8 M46 28 Q46 12 44 4 M52 30 Q58 18 64 34 Q70 50 76 66" fill="none" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
