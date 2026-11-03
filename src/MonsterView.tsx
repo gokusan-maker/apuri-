@@ -2123,6 +2123,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M33 48 L39 50 M33 52 L39 53 M67 48 L61 50 M67 52 L61 53" fill="none" stroke="#44403c" strokeWidth="1.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'horseshoecrab')
+    return (
+      <g>
+        {/* こうらのふちと、長い尾 */}
+        <path d="M30 40 Q50 22 70 40" fill="none" stroke="#3f3f46" strokeWidth="2" />
+        <path d="M50 80 L50 94" fill="none" stroke="#3f3f46" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
