@@ -29662,6 +29662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-patience',
+    title: 'The Strength of Patience',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Patience is often described as the ability to wait calmly, and in this sense it might seem to be a modest virtue, useful in queues and traffic jams but of little importance in the larger questions of life. Modern technology, moreover, appears to have made it less necessary than ever. We can obtain information instantly, communicate across the world in seconds, and have goods delivered within hours, so that situations requiring long periods of waiting have become increasingly rare. Yet a closer examination suggests that patience is not merely a matter of tolerating delay but a fundamental attitude toward time, effort, and other people.",
+      "Consider the role of patience in learning. Mastering a musical instrument, a foreign language, or a scientific discipline requires years of effort, during which progress is often slow and sometimes invisible. A learner who expects rapid results is likely to become discouraged and abandon the attempt, while one who accepts that understanding develops gradually is more likely to persist through periods of frustration. In this sense, patience is closely connected with the capacity to pursue long-term goals whose rewards cannot be obtained immediately.",
+      "Patience is also essential in relationships with others. People change slowly, misunderstandings take time to resolve, and trust develops through repeated experiences over many months or years. ( A ) we often wish that others would immediately understand us or change their behavior, insisting on such quick results can damage the very relationships we hope to improve. A patient person allows others the time they need, accepting that growth and reconciliation follow their own rhythms rather than ours.",
+      "It is important, however, to distinguish patience from mere passivity. A person who tolerates injustice indefinitely, or who waits for problems to solve themselves without taking any action, is not displaying patience but resignation. Genuine patience is compatible with, and often requires, persistent effort. The patient gardener does not simply wait for plants to grow; he or she waters them, protects them from pests, and tends them carefully, while accepting that growth cannot be forced.",
+      "Some thinkers have suggested that impatience reflects a desire to control what cannot be controlled. When we become impatient, we often act as though the world should conform to our schedules and wishes, and we experience delay as a kind of personal injury. Patience, by contrast, involves recognizing the limits of our control and accepting that many important processes, from the healing of a wound to the development of a child, unfold according to their own logic. This recognition need not be a source of frustration; it may instead bring a kind of peace.",
+      "The conditions of modern life may make patience more difficult to cultivate, precisely because so many of our wishes can now be satisfied immediately. When instant results become normal, ordinary delays may come to seem intolerable, and the habit of waiting calmly may weaken through lack of practice. Some psychologists have suggested that this may affect our ability to pursue goals that require sustained effort, from education to the maintenance of health. If this is true, the ability to wait may need to be deliberately practiced, much as a muscle that is rarely used must be exercised to regain its strength.",
+      "Patience, then, is not a minor virtue but a quality that shapes how we learn, how we relate to others, and how we respond to the many things in life that cannot be hurried. To cultivate it in an age of speed may require deliberate effort, but the reward may be a life that is less anxious and more deeply rooted. In learning to wait well, we may also learn to notice what is happening while we wait, discovering that the time between desire and fulfillment need not be empty but can be filled with attention, growth, and quiet satisfaction.",
+    ],
+    ja: [
+      'しんぼう強さはしばしば、落ち着いて待つ力と説明される。この意味では、それは行列や渋滞では役に立つが、人生のより大きな問題にはあまり大切でない、ひかえめな徳のように思えるかもしれない。さらに現代の技術は、それをかつてないほど必要のないものにしたように見える。私たちは情報をすぐに手に入れ、数秒で世界中と連絡をとり、品物を数時間のうちに届けてもらえるので、長く待つことを必要とする状況はますますまれになった。しかしもっとよく見ると、しんぼう強さは単におくれにたえることではなく、時間や努力や他人に対する根本的な態度であることがわかる。',
+      '学ぶことにおけるしんぼう強さの役割を考えてみよう。楽器や外国語や科学の分野を身につけるには何年もの努力が必要であり、そのあいだ進歩はしばしばおそく、ときには目に見えない。すぐに結果が出ると期待する学習者は、くじけて試みをあきらめやすいが、理解は少しずつ育つものだと受け入れる学習者は、いらだつ時期を乗りこえて続けやすい。この意味で、しんぼう強さは、すぐには恩恵を得られない長期的な目標を追い求める力と深く結びついているのである。',
+      'しんぼう強さはまた、他人との関係にも欠かせない。人はゆっくりとしか変わらず、誤解をとくには時間がかかり、信頼は何か月も何年もかけたくり返しの経験を通して育つ。私たちはしばしば、他人がすぐに自分を理解したり、ふるまいを変えたりしてくれればと願うが、そうしたすばやい結果を求めることは、よくしたいと願っているまさにその関係をそこなうことがある。しんぼう強い人は他人に必要な時間をあたえ、成長や和解が自分のリズムではなく、それ自体のリズムに従うことを受け入れるのである。',
+      'しかし、しんぼう強さを単なる受け身と区別することが大切である。不正をいつまでもがまんしたり、何も行動せずに問題がひとりでに解決するのを待ったりする人は、しんぼう強さではなくあきらめを示しているのである。本当のしんぼう強さは、ねばり強い努力と両立し、しばしばそれを必要とする。しんぼう強い庭師は、ただ植物が育つのを待つのではない。成長は無理に早められないと受け入れながら、水をやり、虫から守り、注意深く世話をするのである。',
+      '一部の思想家は、短気はどうにもできないものをあやつりたいという願いを反映していると示唆してきた。いらいらするとき、私たちはしばしば、世界が自分の予定と願いに合わせるべきであるかのようにふるまい、おくれを一種の個人的な損害として経験する。これに対してしんぼう強さは、自分があやつれるものの限界を認め、傷が治ることから子どもが育つことまで、多くの大切な過程がそれ自体の筋道に従って進むことを受け入れることをふくんでいる。この認識はいらだちの源である必要はなく、かえって一種のやすらぎをもたらすかもしれない。',
+      '現代の生活の条件は、しんぼう強さを育てるのをよりむずかしくしているかもしれない。まさに私たちの願いの多くが今ではすぐに満たされるからである。すぐに結果が出ることがふつうになると、ふつうのおくれががまんできないものに思えてくるかもしれず、落ち着いて待つ習慣は練習不足で弱まるかもしれない。このことは、教育から健康の維持まで、たえまない努力を必要とする目標を追い求める力に影響しうると示唆する心理学者もいる。もしそうなら、待つ力は、めったに使われない筋肉が力を取りもどすためにきたえなければならないのと同じように、意識して練習する必要があるのかもしれない。',
+      'それゆえしんぼう強さは小さな徳ではなく、私たちがどう学び、他人とどうかかわり、人生の中で急がせることのできない多くのことにどうこたえるかを形づくる性質である。速さの時代にそれを育てるには意識的な努力が必要かもしれないが、そのむくいは、不安が少なく、より深く根をはった人生なのかもしれない。よく待つことを学ぶなかで、私たちは待っているあいだに起きていることに気づくことも学ぶかもしれない。そして願いと実現とのあいだの時間が、からっぽである必要はなく、注意と成長と静かな満足で満たせることを発見するかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「私たちは他人がすぐ変わればと願うが、それを求めると関係をそこなうことがある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、しんぼう強さは単におくれにたえることにすぎない。', answer: false, why: '第1段落 patience is not merely a matter of tolerating delay but a fundamental attitude。' },
+      { statement: '筆者によれば、理解は少しずつ育つと受け入れる学習者は、続けやすい。', answer: true, why: '第2段落 one who accepts that understanding develops gradually is more likely to persist。' },
+      { statement: '筆者によれば、不正をいつまでもがまんすることは本当のしんぼう強さである。', answer: false, why: '第4段落 is not displaying patience but resignation。' },
+      { statement: '筆者によれば、自分があやつれるものの限界を認めることはやすらぎをもたらすかもしれない。', answer: true, why: '第5段落 it may instead bring a kind of peace。' },
+    ],
+    qa: [
+      { q: 'What does the example of the patient gardener show?', choices: ['Patience is compatible with persistent effort.', 'Patience means doing nothing.', 'Plants grow faster if we hurry them.', 'Gardening requires no patience.'], answer: 0, why: '第4段落 Genuine patience is compatible with, and often requires, persistent effort。' },
+      { q: 'Why might modern life make patience harder to cultivate?', choices: ['Many wishes can now be satisfied immediately.', 'People have more free time.', 'Technology has become slower.', 'Nobody needs to learn anything.'], answer: 0, why: '第6段落 precisely because so many of our wishes can now be satisfied immediately。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
