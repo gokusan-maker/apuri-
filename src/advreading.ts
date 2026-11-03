@@ -29182,6 +29182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-time-sense',
+    title: 'The Time We Feel',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Almost everyone has noticed that time does not always seem to pass at the same speed. An hour spent waiting for important news can feel endless, while an afternoon with close friends seems to vanish in moments. Many adults also report that the years seem to pass more quickly as they grow older, so that the long summers of childhood give way to seasons that rush by almost unnoticed. These experiences suggest that the time we feel is not identical to the time measured by clocks, and that our sense of duration is shaped by the mind as much as by the world.",
+      "One explanation for the apparent acceleration of time with age points to the role of novelty. Childhood is full of first experiences: the first day at school, the first visit to the sea, the first friendship. Each of these new experiences leaves a rich and distinct memory, and when we look back on a period filled with such memories, it seems long. In adulthood, by contrast, many days follow familiar routines, and since routine experiences leave few distinct traces in memory, periods dominated by them seem short when we recall them later.",
+      "This explanation helps to account for a curious paradox. While we are bored, time seems to pass slowly, yet a period of boredom often seems brief when we remember it, because little happened that was worth recording. Conversely, an exciting holiday may seem to fly by while we are enjoying it, yet in memory it may expand to fill far more space than its actual length. ( A ) the experience of time in the moment depends largely on attention, our later judgment of how long a period lasted depends largely on how much we remember of it.",
+      "If this account is correct, it carries a practical implication. People who feel that their lives are passing too quickly might slow the apparent passage of time not by doing less but by doing more that is new: traveling to unfamiliar places, learning new skills, meeting new people, or simply paying closer attention to the details of ordinary days. Such experiences would not add hours to a life, but they might make the hours that remain feel fuller and longer in retrospect.",
+      "Our sense of time is also shaped by culture. Some societies organize life around precise schedules, valuing punctuality and treating time as a resource that can be saved, spent, or wasted. Others adopt a more flexible attitude, in which events begin when people are ready rather than at a fixed hour. These differences are not merely matters of custom; they reflect different assumptions about what time is and how human life should relate to it, and travelers who move between such cultures often find their own sense of time challenged.",
+      "Underlying these variations is a deeper question about the relationship between subjective and objective time. Clocks measure a time that is the same for everyone, uniform and indifferent to our concerns. But the time we live is uneven, stretched and compressed by attention, emotion, memory, and expectation. Neither form of time is simply false; each captures something real. Yet it is the second, lived time that gives our experience its shape and meaning.",
+      "Understanding how we experience time may not allow us to control it, but it can change how we approach the days we are given. If the felt length of a life depends partly on how attentively it is lived, then the quality of our attention may matter as much as the number of our years. A long life lived inattentively may, in the end, feel shorter than a briefer one in which each day was noticed, valued, and remembered.",
+    ],
+    ja: [
+      'ほとんどだれもが、時間がいつも同じ速さで流れているようには思えないことに気づいている。大事な知らせを待つ一時間は終わりがないように感じられるのに、親しい友人とすごす午後はあっという間に消えてしまうように思える。また多くの大人は、年をとるにつれて年月が速くすぎるように思えると言い、子ども時代の長い夏が、ほとんど気づかないうちにかけぬけていく季節に変わっていく。こうした経験は、私たちが感じる時間は時計ではかられる時間と同じではなく、私たちの持続の感覚は、世界によってと同じくらい心によって形づくられていることを示している。',
+      '年をとると時間が速く流れるように見えることについての一つの説明は、新しさの役割に注目する。子ども時代は初めての経験に満ちている。学校の最初の日、初めての海、初めての友情である。こうした新しい経験の一つ一つは豊かではっきりとした記憶を残し、そうした記憶に満ちた時期をふり返ると、それは長く思える。これに対して大人になると、多くの日々がなじみの日課に従い、日課どおりの経験は記憶にはっきりしたあとをほとんど残さないので、それにしめられた時期は、あとで思い出すと短く思えるのである。',
+      'この説明は、奇妙な逆説を説明するのに役立つ。たいくつしているあいだは時間がゆっくり流れるように思えるが、たいくつな時期は、思い出すとしばしば短く思える。記録する価値のあることがほとんど起きなかったからである。反対に、わくわくする休暇は楽しんでいるあいだはあっという間にすぎるように思えるかもしれないが、記憶の中では実際の長さよりもはるかに大きな場所をしめるように広がるかもしれない。その瞬間の時間の経験は主に注意によって決まるが、ある時期がどれだけ続いたかについてのあとからの判断は、主にそれをどれだけ覚えているかによって決まるのである。',
+      'もしこの説明が正しければ、それは実際的な意味をもつ。人生があまりに速くすぎていくと感じる人は、することをへらすのではなく、新しいことをもっとすることによって、時間の見かけの流れをゆっくりにできるかもしれない。なじみのない場所へ旅したり、新しい技能を学んだり、新しい人と出会ったり、あるいは単にふつうの日々の細部にもっと注意を向けたりすることである。そうした経験は人生に時間をふやしはしないが、残された時間を、ふり返ったときにより満ちた長いものに感じさせるかもしれない。',
+      '時間の感覚はまた文化によっても形づくられる。正確な予定を中心に生活を組み立て、時間を守ることを大切にし、時間を節約したり使ったりむだにしたりできる資源としてあつかう社会もある。決まった時刻ではなく、人々の準備ができたときに物事が始まる、もっと柔軟な態度をとる社会もある。こうしたちがいは単なる習慣の問題ではない。それは時間とは何であり、人間の生活がそれとどうかかわるべきかについてのちがった前提を反映しており、そうした文化のあいだを行き来する旅行者は、しばしば自分の時間の感覚がゆさぶられることに気づく。',
+      'こうしたさまざまなちがいの根底には、主観的な時間と客観的な時間との関係についてのより深い問いがある。時計は、だれにとっても同じで、一様で、私たちの関心には無関心な時間をはかる。しかし私たちが生きる時間はでこぼこしており、注意や感情や記憶や期待によってのばされたりちぢめられたりする。どちらの形の時間も単にまちがっているわけではなく、それぞれが何か本物のものをとらえている。しかし、私たちの経験に形と意味をあたえているのは、二つめの、生きられた時間なのである。',
+      '私たちが時間をどう経験するかを理解しても、時間をあやつれるようにはならないかもしれないが、あたえられた日々への向き合い方を変えることはできる。もし人生の感じられる長さが、部分的にはそれがどれだけ注意深く生きられるかによるのなら、私たちの注意の質は、年数と同じくらい大切なのかもしれない。注意をはらわずに生きられた長い人生は、結局のところ、一日一日が気づかれ、大切にされ、記憶された短い人生よりも短く感じられるかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「その瞬間の時間の経験は注意によるが、あとからの判断は記憶による」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、子ども時代は初めての経験に満ちている。', answer: true, why: '第2段落 Childhood is full of first experiences。' },
+      { statement: '筆者によれば、たいくつな時期は思い出すと長く思える。', answer: false, why: '第3段落 a period of boredom often seems brief when we remember it。' },
+      { statement: '筆者によれば、新しいことをすると、時間の見かけの流れをゆっくりにできるかもしれない。', answer: true, why: '第4段落 might slow the apparent passage of time ... by doing more that is new。' },
+      { statement: '筆者は、時計の時間だけが本物で、生きられた時間はまちがいだと考えている。', answer: false, why: '第6段落 Neither form of time is simply false。' },
+    ],
+    qa: [
+      { q: 'Why do routine periods seem short when we recall them later?', choices: ['Routine experiences leave few distinct traces in memory.', 'Routines always last only a few minutes.', 'We forget everything from childhood.', 'Clocks run faster during routines.'], answer: 0, why: '第2段落 routine experiences leave few distinct traces in memory。' },
+      { q: 'How do some societies treat time, according to the fifth paragraph?', choices: ['As a resource that can be saved, spent, or wasted.', 'As something that does not exist.', 'As a kind of food.', 'As a game for children.'], answer: 0, why: '第5段落 treating time as a resource that can be saved, spent, or wasted。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
