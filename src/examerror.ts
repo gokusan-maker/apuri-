@@ -3434,6 +3434,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Winter is the season (A) when (B) I like (C) best of (D) all the seasons.', choices: ['(A) when', '(B) I like', '(C) best of', '(D) all the seasons'], answer: 0, why: 'like の目的語が欠けているので、関係代名詞 which／that。' },
     ],
   },
+  {
+    id: 'exam-error-concession-kyodai',
+    title: '入試の正誤問題〈145〉（京大レベル：譲歩の表現）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'however／no matter how は「＋形容詞・副詞＋主語＋動詞」の語順（However tired you are）。whatever／whoever／whichever／wherever／whenever の節は、未来のことでも現在形。although と but はいっしょに使わない。even だけでは接続詞にならない（even if／even though）。',
+    ],
+    examples: [
+      { en: 'However tired you are, you must finish your homework.', ja: 'どんなにつかれていても、宿題は終えなければならない。' },
+      { en: 'No matter what happens, I will be on your side.', ja: '何が起きても、私はあなたの味方だ。' },
+    ],
+    questions: [
+      { sentence: '(A) However you are (B) tired, (C) you must (D) finish your homework.', choices: ['(A) However you are', '(B) tired,', '(C) you must', '(D) finish your homework'], answer: 0, why: 'however＋形容詞＋主語＋動詞の語順。However tired you are。' },
+      { sentence: '(A) Whatever (B) you say, (C) I will not (D) to change my mind.', choices: ['(A) Whatever', '(B) you say,', '(C) I will not', '(D) to change my mind'], answer: 3, why: '助動詞 will のあとは原形。change。' },
+      { sentence: '(A) No matter (B) how (C) rich is he, (D) he is never satisfied.', choices: ['(A) No matter', '(B) how', '(C) rich is he,', '(D) he is never satisfied'], answer: 2, why: 'no matter how のあとはふつうの語順。rich he is。' },
+      { sentence: '(A) Wherever (B) you go, (C) you will (D) find people kindly.', choices: ['(A) Wherever', '(B) you go,', '(C) you will', '(D) find people kindly'], answer: 3, why: 'find＋人＋形容詞。kind。' },
+      { sentence: '(A) Whoever (B) break the rule (C) will be (D) punished.', choices: ['(A) Whoever', '(B) break the rule', '(C) will be', '(D) punished'], answer: 1, why: 'whoever は三人称単数あつかい。breaks。' },
+      { sentence: '(A) Whenever (B) I (C) will visit him, (D) he is reading a book.', choices: ['(A) Whenever', '(B) I', '(C) will visit him,', '(D) he is reading a book'], answer: 2, why: '時の副詞節の中は未来のことでも現在形。visit。' },
+      { sentence: '(A) Whichever (B) you choose, (C) you (D) will satisfy with it.', choices: ['(A) Whichever', '(B) you choose,', '(C) you', '(D) will satisfy with it'], answer: 3, why: 'satisfy は「満足させる」。be satisfied with。' },
+      { sentence: '(A) No matter (B) what (C) difficult the task is, (D) do your best.', choices: ['(A) No matter', '(B) what', '(C) difficult the task is,', '(D) do your best'], answer: 1, why: '形容詞の前なので how。no matter how difficult。' },
+      { sentence: '(A) Although (B) it was raining, (C) but we (D) went out.', choices: ['(A) Although', '(B) it was raining,', '(C) but we', '(D) went out'], answer: 2, why: 'although と but はいっしょに使わない。we。' },
+      { sentence: '(A) Even (B) he is busy, (C) he always (D) helps his friends.', choices: ['(A) Even', '(B) he is busy,', '(C) he always', '(D) helps his friends'], answer: 0, why: 'even は接続詞ではない。Even if／Even though。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
