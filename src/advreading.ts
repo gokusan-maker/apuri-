@@ -29378,6 +29378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-e-scooters',
+    title: 'Scooters on the Pavement',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities around the world, a new kind of vehicle has appeared on the streets in recent years: the shared electric scooter. Users locate a scooter through an application on their phones, unlock it, ride it to their destination, and leave it there for the next user. Supporters see these scooters as a convenient and environmentally friendly way of making short journeys, while critics complain that they clutter pavements, endanger pedestrians, and offer fewer benefits than their promoters claim. The debate over scooters illustrates the difficulties that cities face when new technologies arrive faster than the rules needed to govern them.",
+      "The appeal of shared scooters is easy to see. Many urban journeys are too long to walk comfortably but too short to justify taking a car or waiting for a bus. Scooters can fill this gap, allowing people to travel a few kilometers quickly and cheaply without the effort of cycling. Because they are electric, they produce no exhaust while being ridden, and supporters argue that if they replace car journeys, they could reduce congestion and pollution in crowded city centers.",
+      "Research has complicated this picture, however. Studies in several cities have found that many scooter journeys replace walking or public transport rather than car trips, which means that their overall environmental benefit may be small. Moreover, shared scooters have often had short working lives, being damaged or worn out within months, and the energy and materials used to manufacture, charge, and collect them must be counted when assessing their impact. ( A ) scooters are designed to last longer and are used to replace car journeys, their claim to be a green form of transport may be weaker than it first appears.",
+      "Safety is another major concern. Riders of scooters often travel at speeds that make falls dangerous, and many cities lack suitable lanes, forcing riders to choose between busy roads and crowded pavements. Pedestrians, particularly elderly people and those with visual impairments, have complained of being frightened or injured by scooters ridden on pavements or left lying across walkways. Hospitals in some cities have reported significant numbers of injuries related to scooter accidents.",
+      "Cities have responded in a variety of ways. Some have banned shared scooters altogether, while others have introduced rules limiting their speed, requiring them to be parked in designated areas, or restricting the number of companies allowed to operate. Several cities have also invested in protected lanes that can be used by both bicycles and scooters, recognizing that the safety of such vehicles depends largely on the infrastructure available to them.",
+      "The experience with scooters reflects a recurring pattern in the relationship between technology and urban life. New services are often introduced by private companies that seek to grow quickly, sometimes before cities have had time to consider how the services should be regulated. The costs of rapid introduction, such as cluttered streets and injuries, are borne partly by the public, while the benefits are shared between users and companies. Cities are increasingly insisting that such services meet clear standards before they are allowed to operate.",
+      "Shared scooters may yet find a useful place in urban transport, particularly if they are integrated with public transport and supported by safe infrastructure. But their story suggests that the value of a new technology depends not only on what it can do but also on how carefully it is introduced into the shared spaces of a city. Streets belong to everyone who uses them, and any new vehicle that claims a place on them must also accept responsibility for the safety and comfort of those who walk, cycle, and live alongside it.",
+    ],
+    ja: [
+      '近年、世界の多くの都市の通りに、新しい種類の乗り物が現れた。シェアの電動キックボードである。利用者は電話のアプリでキックボードを見つけ、ロックを外し、目的地まで乗り、次の利用者のためにそこに置いていく。支持する人々はこれを短い移動のための便利で環境にやさしい方法と見ているが、批判する人々は、それが歩道をちらかし、歩く人を危険にさらし、広める人々が主張するほどの恩恵はないと不満を言う。キックボードをめぐる議論は、新しい技術が、それを治めるのに必要な決まりよりも速くやって来るとき、都市が直面する困難を示している。',
+      'シェアのキックボードの魅力はわかりやすい。都市の移動の多くは、無理なく歩くには長すぎるが、車を使ったりバスを待ったりするほどではない短さである。キックボードはこのすきまをうめ、人々が自転車をこぐ手間なく、数キロをすばやく安く移動できるようにする。電動なので乗っているあいだは排気ガスを出さず、もし車での移動に取って代わるなら、混雑した都市の中心部の渋滞と汚染をへらせるかもしれない、と支持する人々は主張する。',
+      'しかし研究は、このすがたを複雑にしてきた。いくつかの都市の研究で、キックボードでの移動の多くが、車での移動ではなく、歩くことや公共交通に取って代わっていることがわかった。これは、全体としての環境への恩恵が小さいかもしれないことを意味する。さらに、シェアのキックボードは使える期間が短いことが多く、数か月のうちにこわれたり、すりへったりしており、影響を評価するときには、それを作り、充電し、回収するのに使われるエネルギーと材料も数に入れなければならない。キックボードがより長持ちするように作られ、車での移動に取って代わるように使われないかぎり、環境にやさしい交通手段だというその主張は、最初に思えるより弱いかもしれない。',
+      '安全もまた大きな懸念である。キックボードに乗る人はしばしば転ぶと危険な速さで走り、多くの都市にはふさわしい専用の道がないので、乗る人は交通量の多い車道とこみあった歩道のどちらかを選ばざるをえない。歩く人、とくにお年寄りや目の不自由な人々は、歩道を走るキックボードや、通路をふさいでたおれているキックボードにこわい思いをしたり、けがをさせられたりしたと不満をうったえている。いくつかの都市の病院は、キックボードの事故に関係するけがの数がかなり多いと報告している。',
+      '都市はさまざまなしかたでこたえてきた。シェアのキックボードを全面的に禁止した都市もあれば、速さを制限したり、決められた場所に止めるよう求めたり、営業をゆるす会社の数を制限したりする決まりを取り入れた都市もある。いくつかの都市はまた、自転車とキックボードの両方が使える、守られた専用の道に投資してきた。そうした乗り物の安全は、使える道路の仕組みに大きくよっていると認めているのである。',
+      'キックボードの経験は、技術と都市の生活との関係にくり返し現れる型を反映している。新しいサービスは、すばやく成長しようとする民間企業によって、ときには都市がそのサービスをどう規制すべきかを考える時間をもつ前に導入されることが多い。ちらかった通りやけがのような急な導入の代償は一部が公共によって負われ、一方で恩恵は利用者と企業のあいだで分けられる。都市は、そうしたサービスが営業をゆるされる前に、はっきりした基準を満たすことをますます求めるようになっている。',
+      'シェアのキックボードは、とくに公共交通と結びつけられ、安全な道路の仕組みに支えられれば、これから都市の交通の中で役に立つ居場所を見つけるかもしれない。しかしその物語は、新しい技術の価値が、それに何ができるかだけでなく、それがどれだけ注意深く都市の共有の空間に取り入れられるかにもよることを示しているのである。通りはそれを使うすべての人のものであり、そこに居場所を求める新しい乗り物は、そのそばを歩き、自転車に乗り、暮らす人々の安全と心地よさへの責任も引き受けなければならないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Since', 'Once'], answer: 0, why: '「長持ちするように作られ、車に取って代わるように使われないかぎり、主張は弱いかもしれない」という条件の Unless。' },
+    ],
+    summary: {
+      text: 'Shared electric scooters fill the gap between walking and driving, but research shows they often replace walking or public ( 1 ), and they wear out quickly. They also raise ( 2 ) concerns for riders and pedestrians. Cities have responded with bans, rules, and protected lanes, and they increasingly demand clear ( 3 ) before such services operate.',
+      blanks: [
+        { choices: ['transport', 'gardens', 'schools', 'markets'], answer: 0, why: '第3段落 replace walking or public transport rather than car trips。' },
+        { choices: ['safety', 'fashion', 'music', 'language'], answer: 0, why: '第4段落 Safety is another major concern。' },
+        { choices: ['standards', 'prices', 'colors', 'songs'], answer: 0, why: '第6段落 meet clear standards before they are allowed to operate。' },
+      ],
+    },
+    tf: [
+      { statement: '研究によれば、キックボードでの移動の多くは車での移動に取って代わっている。', answer: false, why: '第3段落 replace walking or public transport rather than car trips。' },
+      { statement: '筆者によれば、シェアのキックボードは使える期間が短いことが多い。', answer: true, why: '第3段落 shared scooters have often had short working lives。' },
+      { statement: 'いくつかの都市は、シェアのキックボードを全面的に禁止した。', answer: true, why: '第5段落 Some have banned shared scooters altogether。' },
+      { statement: '筆者によれば、新しい技術の価値はそれに何ができるかだけで決まる。', answer: false, why: '第7段落 depends not only on what it can do but also on how carefully it is introduced。' },
+    ],
+    qa: [
+      { q: 'Why do pedestrians complain about scooters?', choices: ['They are frightened or injured by scooters on pavements or left across walkways.', 'Scooters are too slow.', 'Scooters make too much exhaust.', 'Scooters are too expensive to ride.'], answer: 0, why: '第4段落 complained of being frightened or injured by scooters ridden on pavements or left lying across walkways。' },
+      { q: 'Who bears part of the costs of the rapid introduction of new services?', choices: ['The public.', 'Only the companies.', 'Only the users.', 'No one at all.'], answer: 0, why: '第6段落 are borne partly by the public。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
