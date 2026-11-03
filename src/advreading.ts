@@ -28300,6 +28300,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-beauty',
+    title: 'Is Beauty Only in the Eye?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "It is often said that beauty is in the eye of the beholder, by which people usually mean that judgments of beauty are merely personal preferences, no more open to argument than a preference for one flavor of ice cream over another. This view has obvious appeal in a world that values tolerance and suspects any attempt to impose one person's tastes on others. Yet when we examine how people actually talk about beauty, the matter turns out to be more complicated, and the claim that beauty is purely subjective becomes difficult to maintain.",
+      "Consider what happens when someone describes a painting, a piece of music, or a landscape as beautiful. Unlike a person who simply says that he or she likes chocolate, the person who calls something beautiful seems to expect others to agree, or at least to think that they would agree if they looked carefully enough. If a friend dismisses a piece of music that we find deeply moving, we do not usually respond by saying that tastes differ; we try to point out features of the music that the friend may have missed, as though there were something in the work itself that deserved recognition.",
+      "This expectation of agreement does not mean that judgments of beauty can be proved in the way that mathematical statements can. No rule or formula can tell us with certainty whether a work is beautiful, and attempts to define beauty by fixed proportions or simple principles have repeatedly failed. ( A ) beauty cannot be demonstrated by argument, it can nevertheless be shown, by directing attention to particular qualities, by comparing one work with another, and by helping others to see what we have seen. Judgments of beauty, in this sense, occupy a space between private preference and objective fact.",
+      "Cultural differences seem at first to support the subjective view. Standards of beauty in clothing, architecture, and the human body have varied enormously across times and places, and what one generation admires the next may find ridiculous. Yet variation alone does not prove that beauty is arbitrary. People in different cultures also disagree about many factual and moral questions without anyone concluding that there is nothing to disagree about. Moreover, some forms of beauty, such as the appeal of certain natural scenes or the pleasure of harmony in sound, appear to be recognized across a surprisingly wide range of cultures.",
+      "Our capacity to perceive beauty can also be developed. A person who has listened to a great deal of music hears structures and relationships that a beginner misses, and a person who has studied painting notices qualities of color and composition that are invisible to an untrained eye. Such education does not simply teach people to like what experts like; it enlarges what they are able to perceive. This suggests that beauty is not merely projected onto objects by the viewer but is, at least in part, discovered in them through attention and experience.",
+      "Why does it matter whether beauty is subjective? One reason is that the answer affects how we treat the things that others find beautiful. If beauty were merely a matter of personal taste, there would be no reason to preserve old buildings, protect natural landscapes, or support the arts beyond the preferences of those who happen to enjoy them. If, however, beauty is something that can be recognized and shared, then the loss of beautiful things is a loss for everyone, including those who have not yet learned to appreciate them.",
+      "Perhaps the most accurate view is that beauty depends on both the object and the observer. It requires qualities in the world and a mind capable of responding to them, and it grows richer as that capacity is cultivated. To call something beautiful is therefore not simply to report a feeling but to invite others to look again, in the hope that they too will see what we have seen.",
+    ],
+    ja: [
+      '美しさは見る人の目の中にある、とよく言われる。これによって人々はふつう、美しさの判断は単なる個人の好みにすぎず、あるアイスクリームの味を別の味より好むことと同じように議論の余地はない、という意味で言っている。この見方は、寛容さを大切にし、ある人の好みを他人におしつけようとするどんな試みも疑う世界では、明らかに魅力がある。しかし、人々が実際に美しさについてどう話すかを調べてみると、問題はもっと複雑であることがわかり、美しさは純粋に主観的だという主張を保つのはむずかしくなる。',
+      'だれかが絵や音楽や風景を美しいと言うとき、何が起きているかを考えてみよう。ただチョコレートが好きだと言う人とちがって、何かを美しいと言う人は、他人が賛成することを、あるいは少なくとも十分注意深く見れば賛成するだろうと期待しているように思われる。私たちが深く感動する音楽を友人が相手にしないとき、私たちはふつう好みは人それぞれだと答えたりはしない。まるで作品そのものの中に認められるべき何かがあるかのように、友人が聞きのがしたかもしれない音楽の特徴を指摘しようとするのである。',
+      'この賛成への期待は、美しさの判断が数学の命題のように証明できるという意味ではない。どんな規則も公式も、ある作品が美しいかどうかを確実に教えてはくれないし、美しさを決まった比率や単純な原理で定義しようとする試みはくり返し失敗してきた。美しさは議論によって証明することはできないが、それでも示すことはできる。特定の性質に注意を向けさせたり、ある作品を別の作品と比べたり、自分が見たものを他人が見る手助けをしたりすることによってである。この意味で、美しさの判断は、個人の好みと客観的な事実とのあいだの領域をしめているのである。',
+      '文化のちがいは、一見すると主観的な見方を支えるように思われる。服や建築や人間の体の美しさの基準は、時代や場所によって大きく変わってきたし、ある世代がほめたたえるものを、次の世代はばかげていると思うかもしれない。しかし、ちがいがあるというだけでは、美しさが勝手なものだという証明にはならない。ちがう文化の人々は、多くの事実や道徳の問題についても意見が合わないが、だからといって意見の分かれる対象など何もないと結論する人はいない。さらに、ある種の自然の風景の魅力や、音の調和の喜びのように、ある形の美しさは、おどろくほど広い範囲の文化で認められているように思われる。',
+      '美しさを感じとる私たちの能力は、育てることもできる。たくさんの音楽を聞いてきた人には、初心者が聞きのがす構造や関係が聞こえ、絵を学んできた人は、訓練されていない目には見えない色や構図の性質に気づく。そうした教育は、単に専門家が好きなものを好きになるよう人々に教えるのではない。それは人々が感じとれるものを広げるのである。このことは、美しさが見る人によって対象に投げかけられるだけのものではなく、少なくとも部分的には、注意と経験を通して対象の中に発見されるものであることを示している。',
+      '美しさが主観的かどうかは、なぜ問題になるのか。一つの理由は、その答えが、他人が美しいと思うものを私たちがどうあつかうかに影響することである。もし美しさが単に個人の好みの問題なら、たまたまそれを楽しむ人々の好み以上に、古い建物を残したり、自然の風景を守ったり、芸術を支えたりする理由はないだろう。しかし、もし美しさが認められ、分かち合われうるものなら、美しいものが失われることは、まだそれを味わうことを学んでいない人々をふくめ、すべての人にとっての損失なのである。',
+      'おそらく最も正確な見方は、美しさは対象と見る人の両方によるというものである。それには世界の中の性質と、それにこたえることのできる心が必要であり、その能力が育てられるにつれて、より豊かになる。それゆえ何かを美しいと言うことは、単に感情を報告することではなく、他人も自分が見たものを見てくれることを願って、もう一度見るようさそうことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「美しさは議論で証明できないが、それでも示すことはできる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、何かを美しいと言う人は、他人が賛成することを期待しているように思われる。', answer: true, why: '第2段落 seems to expect others to agree。' },
+      { statement: '筆者によれば、美しさは決まった比率で定義することに成功してきた。', answer: false, why: '第3段落 attempts to define beauty by fixed proportions ... have repeatedly failed。' },
+      { statement: '筆者によれば、ある形の美しさは広い範囲の文化で認められているように思われる。', answer: true, why: '第4段落 appear to be recognized across a surprisingly wide range of cultures。' },
+      { statement: '筆者は、美しさは見る人だけによって決まると結論している。', answer: false, why: '第7段落 beauty depends on both the object and the observer。' },
+    ],
+    qa: [
+      { q: 'What does education in music or painting do, according to the fifth paragraph?', choices: ['It enlarges what people are able to perceive.', 'It only teaches people to like what experts like.', 'It makes people stop enjoying art.', 'It proves that beauty is a formula.'], answer: 0, why: '第5段落 it enlarges what they are able to perceive。' },
+      { q: 'Why does it matter whether beauty is subjective, according to the sixth paragraph?', choices: ['It affects how we treat things such as old buildings and natural landscapes.', 'It decides the price of ice cream.', 'It changes the rules of mathematics.', 'It determines which language we speak.'], answer: 0, why: '第6段落 the answer affects how we treat the things that others find beautiful ... preserve old buildings, protect natural landscapes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
