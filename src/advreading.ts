@@ -27582,6 +27582,40 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ownership',
+    title: 'What It Means to Own',
+    level: '難関大（評論）',
+    paragraphs: [
+      "To own something seems at first to be a simple relationship between a person and an object. I own a book if I have bought it, if I may keep it on my shelf, and if I can lend it, sell it, or even throw it away as I wish. Yet on closer examination, ownership turns out to be less a relationship between a person and a thing than a relationship between people. To say that the book is mine is to say that others must respect my decisions about it, and this obligation exists only because a community recognizes and enforces it. A person alone on an island might use whatever he or she found, but the idea of owning it would have little meaning.",
+      "Seen in this light, ownership is not a natural fact but a social arrangement, and like all such arrangements it has varied greatly across history and cultures. In some societies, land could not be bought or sold at all, but was held in common by a community or passed down within families according to custom. In others, the idea that a person might own the water in a river or the knowledge contained in a song would have seemed strange. What can be owned, by whom, and with what rights, are questions that each society has answered in its own way, and the answers have often changed as economies and technologies have developed.",
+      "These answers matter because ownership shapes how resources are used and who benefits from them. Defenders of private property argue that people take better care of what belongs to them and are more willing to invest effort when they can enjoy the results. A farmer who owns a field has a reason to improve its soil, while a field that belongs to no one may be overused. ( A ) this argument has considerable force, it does not settle every question, since the benefits of ownership may be distributed very unequally and some goods seem ill suited to private control. Clean air, for instance, benefits everyone, yet it would be strange to speak of anyone owning it.",
+      "New technologies have made these questions more pressing. Digital music, books, and films are often not owned in the traditional sense but licensed, so that the person who has paid for them may lose access if a company changes its policies. At the same time, information about individuals, such as their location, preferences, and habits, is collected and sold, raising the question of whether people should own data about themselves. In such cases, older ideas of ownership, developed for physical objects, may not fit well. New forms of ownership, or new limits on it, may be needed to protect both individual freedom and the public interest.",
+      "Ownership also affects the way people experience the objects in their lives. Possessions can become extensions of the self, carrying memories and expressing identity, and losing them may feel like losing a part of oneself. Yet the desire to own can become a burden. People sometimes find that the more they possess, the more time and anxiety they must devote to maintaining, protecting, and organizing their belongings. Movements that encourage sharing, borrowing, and simpler living reflect a growing sense that ownership is not always the best way to enjoy what we value.",
+      "Thinking about ownership, then, leads us to questions about what kind of relationships we want with one another and with the world. The rules of property are not fixed by nature but chosen by societies, and they can be changed when they no longer serve the common good. To ask what should be owned, and how, is ultimately to ask how we wish to live together, and what we owe to one another in the use of the things on which our lives depend.",
+    ],
+    ja: [
+      '何かを所有することは、一見、人とものとのあいだの単純な関係に思える。私がある本を所有しているのは、それを買い、本だなに置いておくことができ、好きなように貸したり、売ったり、捨てたりさえできるからである。しかしよく調べてみると、所有とは人とものとの関係というより、人と人との関係であることがわかる。その本が私のものだと言うことは、ほかの人々がそれについての私の決定を尊重しなければならないと言うことであり、この義務は、ある共同体がそれを認め、守らせているからこそ存在するのである。島にひとりでいる人は見つけたものを何でも使えるかもしれないが、それを所有するという考えにはほとんど意味がないだろう。',
+      'このように見ると、所有は自然の事実ではなく社会的な取り決めであり、そうした取り決めがすべてそうであるように、歴史や文化によって大きく異なってきた。ある社会では、土地はまったく売り買いできず、共同体で共有されるか、習慣にしたがって家族のなかで受けつがれた。別の社会では、人が川の水や歌にふくまれる知識を所有しうるという考えは奇妙に思えただろう。何が、だれによって、どんな権利とともに所有されうるかは、それぞれの社会がそれぞれのしかたで答えてきた問いなのである。そしてその答えは、経済や技術が発達するにつれて、しばしば変わってきた。',
+      'こうした答えが重要なのは、所有が資源の使われ方と、だれがそこから利益を得るかを形づくるからである。私有財産を擁護する人々は、人は自分のものをよりよく手入れし、結果を楽しめるときにはより進んで努力をつぎこむと主張する。畑を所有する農家にはその土をよくする理由があるが、だれのものでもない畑は使われすぎるかもしれない。この議論にはかなりの説得力があるが、すべての問いに決着をつけるわけではない。所有の利益は非常に不平等に分けられることがあり、私的な管理にあまり向かないように思われる財もあるからである。たとえばきれいな空気はすべての人の利益になるが、だれかがそれを所有していると言うのは奇妙だろう。',
+      '新しい技術は、こうした問いをより切実なものにしてきた。デジタルの音楽や本や映画は、しばしば伝統的な意味で所有されるのではなく使用を許可されているだけであり、お金を払った人も、企業が方針を変えれば利用できなくなることがある。同時に、居場所や好みや習慣など、個人についての情報が集められ売られており、人は自分自身についてのデータを所有すべきではないかという問いを生んでいる。こうした場合、物理的なもののために発達した古い所有の考えは、うまく合わないかもしれない。個人の自由と公共の利益の両方を守るために、新しい形の所有や、所有への新しい制限が必要になるかもしれない。',
+      '所有はまた、人が生活のなかのものをどう経験するかにも影響する。持ち物は自己の延長となり、思い出をになったりアイデンティティを表したりすることがあり、それを失うことは自分の一部を失うことのように感じられるかもしれない。しかし、所有したいという欲求は重荷になることもある。人はときに、持てば持つほど、持ち物を手入れし、守り、整理するのにより多くの時間と不安をささげなければならないことに気づく。分け合ったり、借りたり、よりシンプルに暮らしたりすることを促す運動は、所有がいつも大切なものを楽しむ最もよい方法だとは限らない、という感覚が広がっていることを反映している。',
+      'したがって、所有について考えることは、私たちがたがいに、そして世界とどんな関係をもちたいのかという問いへとつながる。財産の決まりは自然によって固定されているのではなく、社会によって選ばれており、それが共通の利益に役立たなくなったときには変えることができる。何をどのように所有すべきかを問うことは、結局のところ、私たちがどのようにともに暮らしたいのか、そして私たちの生活がたよっているものを使うにあたって、たがいに何を負っているのかを問うことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「かなりの説得力があるが、すべてに決着をつけるわけではない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、所有は人とものとの関係というより、人と人との関係である。', answer: true, why: '第1段落 ownership turns out to be less a relationship between a person and a thing than a relationship between people。' },
+      { statement: '筆者によれば、どの社会でも土地は自由に売り買いできた。', answer: false, why: '第2段落 In some societies, land could not be bought or sold at all。' },
+      { statement: '筆者によれば、デジタルの音楽や本は、しばしば使用を許可されているだけである。', answer: true, why: '第4段落 are often not owned in the traditional sense but licensed。' },
+      { statement: '筆者は、財産の決まりは自然によって固定されていると考えている。', answer: false, why: '第6段落 The rules of property are not fixed by nature but chosen by societies。' },
+    ],
+    qa: [
+      { q: 'What do defenders of private property argue, according to the third paragraph?', choices: ['People take better care of what belongs to them and invest more effort.', 'No one should own anything.', 'Fields should belong to no one.', 'Ownership always benefits everyone equally.'], answer: 0, why: '第3段落 people take better care of what belongs to them and are more willing to invest effort。' },
+      { q: 'How can the desire to own become a burden, according to the fifth paragraph?', choices: ['The more people possess, the more time and anxiety they must devote to their belongings.', 'People can never buy enough things.', 'Possessions always lose their value.', 'Owning things is against the law.'], answer: 0, why: '第5段落 the more they possess, the more time and anxiety they must devote to maintaining, protecting, and organizing their belongings。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
