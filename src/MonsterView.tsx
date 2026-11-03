@@ -2240,6 +2240,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M64 74 Q76 78 80 70 Q84 64 78 62" fill="none" stroke="#78350f" strokeWidth="1.8" strokeLinecap="round" />
       </g>
     )
+  if (species === 'japanesesquirrel')
+    return (
+      <g>
+        {/* 耳の先の房毛と、木の実 */}
+        <path d="M38 22 L36 14 M62 22 L64 14" fill="none" stroke="#451a03" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="50" cy="72" r="5" fill="#92400e" stroke="#451a03" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
