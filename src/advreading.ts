@@ -28782,6 +28782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-imperfection',
+    title: 'In Praise of Imperfection',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern technology has given us an unprecedented ability to eliminate imperfection. Photographs can be edited until every blemish disappears, recorded music can be corrected so that no note is ever out of tune, and manufactured objects can be produced in identical copies without the slightest variation. In many respects, this is a remarkable achievement, since it has made reliable products available to millions of people and freed us from many inconveniences. Yet it is worth asking whether something is lost when imperfection disappears, and whether our pursuit of flawlessness may sometimes work against the very qualities we value most.",
+      "Consider the difference between a handmade bowl and one produced by a machine. The machine-made bowl may be perfectly symmetrical and smooth, but it is also anonymous; it could have been made anywhere, by no one in particular, and countless identical copies exist. The handmade bowl, by contrast, bears the traces of the person who made it, slight irregularities in its shape or glaze that record the movement of a particular pair of hands at a particular moment. For many people, these irregularities are not defects but the source of the bowl's character and warmth.",
+      "A similar point can be made about human performance. A recording of a live concert, with its occasional wrong notes and audible breaths, may move listeners more deeply than a studio recording that has been corrected to perfection. ( A ) the corrected version is technically superior, the live recording conveys a sense of risk and presence, the knowledge that real people were attempting something difficult in real time. What touches us, it seems, is not flawlessness itself but the evidence of human effort and vulnerability.",
+      "The pursuit of perfection can also affect how we see ourselves. When images of perfectly edited faces and bodies surround us, ordinary features may come to seem like failures, and many people, especially the young, report feeling dissatisfied with their appearance. A standard that no real person can meet becomes a constant source of comparison and disappointment. In this way, technologies designed to improve images may end up damaging the self-respect of those who view them.",
+      "Several cultural traditions have recognized the value of imperfection. Some aesthetic traditions find beauty in things that are worn, asymmetrical, or incomplete, seeing in them an expression of the transience of all things. Others deliberately include a small flaw in a work of art as a reminder that only the divine is perfect. Such traditions suggest that imperfection need not be merely tolerated; it can be appreciated as a source of meaning. They invite us to look at a cracked cup or a weathered wall not as something that has failed to be perfect but as something that has lived, carrying in its marks the history of its use and of the hands that have touched it.",
+      "This is not an argument against excellence or care. A bridge with structural flaws is dangerous, and a medicine with impurities may be harmful; in many fields, the elimination of errors is essential and admirable. The point is rather that perfection is not always the highest value, and that in matters of art, craft, and human relationships, the marks of imperfection may be inseparable from what makes something genuine and alive.",
+      "Learning to value imperfection, then, may be less about lowering our standards than about understanding what our standards are for. A world in which everything is flawless might be efficient, but it might also be strangely empty, lacking the traces of individual effort that connect objects and performances to the people who created them. To accept imperfection in the things we make, and in ourselves, may therefore be a way of acknowledging that we are finite beings, and that much of what gives life its texture and meaning arises precisely from this finitude rather than in spite of it.",
+    ],
+    ja: [
+      '現代の技術は、不完全さを取りのぞくかつてない力を私たちにあたえた。写真はあらゆるきずが消えるまで修正でき、録音された音楽はどの音も音程がずれないように直すことができ、工業製品はほんのわずかなちがいもない同じものとして作ることができる。多くの点で、これはめざましい成果である。何百万もの人々がたよりになる製品を手に入れられるようになり、多くの不便から解放されたからである。しかし、不完全さが消えるとき何かが失われるのではないか、そして完ぺきさの追求が、ときに私たちが最も大切にしている性質そのものにさからってはたらくのではないかを問う価値がある。',
+      '手作りの器と機械で作られた器のちがいを考えてみよう。機械で作られた器は完ぺきに左右対称でなめらかかもしれないが、だれが作ったかもわからない。それはどこででも、だれでもない人によって作られえたものであり、同じものが数えきれないほどある。これに対して手作りの器には、それを作った人のあとが残っている。形やうわぐすりのわずかなゆがみが、ある時点でのある人の手の動きを記録しているのである。多くの人にとって、こうしたゆがみは欠点ではなく、その器の個性とあたたかさの源なのである。',
+      '同じことは人間の演奏についても言える。ときどきまちがった音や聞こえる息つぎのある生演奏の録音は、完ぺきに修正されたスタジオ録音よりも深く聞き手の心を動かすことがある。修正された版のほうが技術的にはすぐれているが、生演奏の録音は、危うさとその場にいる感じ、つまり本物の人間がむずかしいことに今まさに挑んでいたという感覚を伝える。私たちの心にふれるのは、完ぺきさそのものではなく、人間の努力ともろさのあかしであるように思われる。',
+      '完ぺきさの追求は、私たちが自分自身をどう見るかにも影響しうる。完ぺきに修正された顔や体の画像にかこまれると、ふつうの特徴が失敗のように思えてくるかもしれず、多くの人、とくに若い人々が、自分の見た目に不満を感じると言っている。現実のだれも満たせない基準は、たえまない比較と失望の源になる。このように、画像をよくするために作られた技術が、それを見る人々の自尊心を傷つけてしまうことがある。',
+      'いくつかの文化の伝統は、不完全さの価値を認めてきた。古びたもの、左右非対称なもの、未完成なものに美しさを見いだし、そこにすべてのもののうつろいやすさの表れを見る美の伝統もある。また、完全なのは神だけだということを思い出させるために、芸術作品にわざと小さな欠点を入れる伝統もある。こうした伝統は、不完全さは単にがまんされるべきものである必要はなく、意味の源として味わうことができることを示している。それらは、ひびの入った茶わんや風雨にさらされたかべを、完ぺきになりそこねたものとしてではなく、生きてきたもの、つまりそのあとに、使われてきた歴史とそれにふれてきた手の歴史をたずさえているものとして見るよう私たちをさそうのである。',
+      'これは、すぐれていることや注意深さに反対する議論ではない。構造に欠陥のある橋は危険であり、不純物をふくむ薬は害になるかもしれない。多くの分野で、まちがいを取りのぞくことは欠かせず、ほめられるべきことである。言いたいのはむしろ、完ぺきさがいつも最高の価値というわけではなく、芸術や工芸や人間関係にかかわることでは、不完全さのあとが、何かを本物で生き生きとしたものにしているものと切りはなせないかもしれないということである。',
+      'それゆえ不完全さを大切にすることを学ぶとは、基準を下げることというより、自分たちの基準が何のためにあるのかを理解することなのかもしれない。すべてが完ぺきな世界は効率的かもしれないが、ものや演奏をそれを生み出した人々に結びつける、一人一人の努力のあとが欠けた、奇妙にからっぽな世界でもあるかもしれない。それゆえ、自分たちが作るものや自分自身の不完全さを受け入れることは、私たちが有限な存在であり、人生に手ざわりと意味をあたえているものの多くが、この有限さにもかかわらずではなく、まさにそこから生まれていると認めるしかたなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「修正された版のほうが技術的にすぐれているが、生演奏は危うさと臨場感を伝える」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、手作りの器のゆがみは、多くの人にとって個性とあたたかさの源である。', answer: true, why: '第2段落 these irregularities are not defects but the source of the bowl’s character and warmth。' },
+      { statement: '筆者によれば、修正されたスタジオ録音はいつも生演奏より深く心を動かす。', answer: false, why: '第3段落 may move listeners more deeply than a studio recording。' },
+      { statement: '筆者によれば、完ぺきに修正された画像は、見る人の自尊心を傷つけることがある。', answer: true, why: '第4段落 may end up damaging the self-respect of those who view them。' },
+      { statement: '筆者は、橋や薬でもまちがいを取りのぞく必要はないと考えている。', answer: false, why: '第6段落 in many fields, the elimination of errors is essential and admirable。' },
+    ],
+    qa: [
+      { q: 'What touches us in a live recording, according to the third paragraph?', choices: ['The evidence of human effort and vulnerability.', 'Its technical perfection.', 'Its low price.', 'The absence of any mistakes.'], answer: 0, why: '第3段落 What touches us ... is not flawlessness itself but the evidence of human effort and vulnerability。' },
+      { q: 'Why do some traditions deliberately include a small flaw in a work of art?', choices: ['As a reminder that only the divine is perfect.', 'To make the work cheaper.', 'Because the artists were careless.', 'To make the work look new.'], answer: 0, why: '第5段落 as a reminder that only the divine is perfect。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
