@@ -27236,6 +27236,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-standardized-tests',
+    title: 'A Door or a Wall?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, standardized examinations play a decisive role in young people's lives. Scores on a single test, taken over a few hours, may determine which school or university a student can enter and, through that, which careers become possible. Supporters of such examinations argue that they provide a fair and transparent way of selecting candidates, since everyone answers the same questions under the same conditions. Critics, however, claim that the pressure they create distorts education and that they measure only a narrow range of abilities. The debate is especially intense in societies where examination results are seen as a measure not only of knowledge but of a person's worth.",
+      "The case for standardized tests rests largely on the value of impartiality. Before such tests were widely used, admission to prestigious institutions often depended on family connections, wealth, or the personal judgment of those in charge, which could be influenced by prejudice. A common examination, marked without knowledge of the candidate's background, offered talented students from ordinary families a chance to compete on equal terms. For many people in the past, an examination was not a barrier but a door to opportunities that would otherwise have been closed. Even today, defenders point out that a test score is harder to manipulate than a letter of recommendation written by a well-connected teacher.",
+      "Yet the fairness of tests is more limited than it may appear. Students from wealthier families can afford private tutoring, practice materials, and preparatory schools, all of which can raise their scores. Children who grow up in homes with many books, or whose parents have themselves succeeded in education, often begin with advantages that the test does not reveal. As a result, examination results may partly reflect differences in opportunity rather than differences in ability, and the appearance of equal treatment can conceal real inequality. A test that treats every candidate identically is not necessarily fair if the candidates have arrived at the examination hall by very different roads.",
+      "There is also concern about the effect of high-stakes tests on what happens in classrooms. When scores matter so much, teachers and students naturally focus on the kinds of questions that appear on the examination. Skills that are difficult to test, such as creativity, cooperation, or the ability to pursue a long project, may receive less attention. ( A ) the examination was intended to measure learning, it can end up shaping learning in its own image, encouraging students to master techniques for answering questions rather than to develop a deeper understanding of the subjects they study. In extreme cases, entire years of schooling may be organized around preparation for a single day.",
+      "Various alternatives have been proposed. Some universities consider a wider range of evidence, including school records, essays, interviews, and achievements outside the classroom. Such holistic approaches can recognize qualities that tests overlook, but they also have weaknesses. They are more difficult to apply consistently, and they may favor applicants who know how to present themselves in ways that admissions officers find attractive, a skill that is itself unevenly distributed. In trying to escape the narrowness of tests, institutions may reintroduce some of the subjectivity that tests were designed to remove.",
+      "The debate over examinations thus involves a difficult balance between competing values. Standardized tests offer a degree of objectivity and comparability that other methods find hard to match, but they capture only part of what matters in education and can reinforce the advantages of those who are already privileged. Perhaps the most reasonable approach is to treat test scores as one important piece of evidence among several, while working to reduce the inequalities in preparation that affect them, so that the examination can serve once again as a door rather than a wall.",
+    ],
+    ja: [
+      '多くの国で、統一試験は若者の人生に決定的な役割を果たしている。数時間で受けるたった1つの試験の点数が、生徒が入れる学校や大学を決め、それを通じてどんな職業が可能になるかを決めることもある。こうした試験を支持する人々は、だれもが同じ条件で同じ問題に答えるので、それは候補者を選ぶ公平でわかりやすい方法だと主張する。しかし批判する人々は、それが生む圧力が教育をゆがめ、限られた範囲の能力しかはかっていないと主張する。試験の結果が知識だけでなく人の価値をはかるものと見られている社会では、この議論はとくにはげしい。',
+      '統一試験を支持する根拠は、主に公平さの価値にある。こうした試験が広く使われる前は、一流の機関に入れるかどうかは、しばしば家のつながりや富や、担当者の個人的な判断にかかっており、それは偏見に左右されることもあった。受験者の背景を知らずに採点される共通の試験は、ふつうの家庭の才能ある生徒に、対等な条件で競う機会を与えた。過去の多くの人にとって、試験は障壁ではなく、そうでなければ閉ざされていたはずの機会への扉だったのである。今日でも擁護する人々は、試験の点数は、顔の広い先生が書いた推薦状よりも操作しにくいと指摘する。',
+      'しかし、試験の公平さは見かけほど大きくはない。より裕福な家庭の生徒は、個別指導や練習用の教材や予備校にお金を払うことができ、それらはどれも点数を上げうる。本がたくさんある家で育った子どもや、親自身が教育で成功してきた子どもは、試験にはあらわれない有利さをもってスタートすることが多い。その結果、試験の結果は、能力のちがいではなく機会のちがいを部分的に反映しているのかもしれず、平等なあつかいという見かけが、現実の不平等をかくしてしまうこともある。受験者が試験会場にまったくちがう道をたどってたどり着いたのなら、すべての受験者を同じように扱う試験が必ずしも公平だとは限らない。',
+      '結果が重大な試験が教室で起きることにおよぼす影響についての懸念もある。点数がこれほど重要になると、教師も生徒も当然、試験に出る種類の問題に集中する。創造性や協力する力、長い課題に取り組む力のような、試験ではかりにくい技能には、あまり注意が向けられないかもしれない。試験は学習をはかるためのものだったのに、結局は学習を自分の姿に合わせて形づくってしまうことがあり、生徒は、学ぶ教科をより深く理解することよりも、問題に答える技術を身につけるよう促されるのである。極端な場合には、学校生活の何年もが、たった1日のための準備を中心に組み立てられることもある。',
+      'さまざまな代わりの方法が提案されてきた。学校の成績や作文や面接や、教室の外での実績など、より幅広い証拠を考慮する大学もある。こうした総合的なやり方は、試験が見落とす資質を認めることができるが、弱点もある。一貫してあてはめることがよりむずかしく、入試担当者が魅力的だと思う形で自分を見せる方法を知っている志願者に有利になるかもしれない。そしてその技能自体が、不平等に分け与えられているのである。試験のせまさから逃れようとして、大学は、試験が取りのぞくためにつくられた主観性の一部を、ふたたび持ちこんでしまうかもしれない。',
+      'したがって、試験をめぐる議論は、対立する価値のあいだのむずかしいつり合いをふくんでいる。統一試験は、ほかの方法ではなかなかかなわないある程度の客観性と比較のしやすさを与えるが、教育で大切なことの一部しかとらえず、すでに恵まれている人々の有利さを強めることもある。おそらく最も理にかなったやり方は、試験の点数をいくつかある重要な証拠の1つとして扱いながら、点数に影響する準備の不平等をへらす努力をすることだろう。そうすれば、試験はふたたび壁ではなく扉の役目を果たせるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「学習をはかるためのものだったのに、学習を形づくってしまう」という逆接なので Although。' },
+    ],
+    summary: {
+      text: 'Standardized tests were valued for their ( 1 ), giving talented students from ordinary families a chance to compete. However, wealthier students can afford more preparation, so scores may reflect differences in ( 2 ), and high-stakes tests can narrow what is taught. Holistic methods have their own weaknesses, so test scores should be treated as one piece of ( 3 ) among several.',
+      blanks: [
+        { choices: ['impartiality', 'difficulty', 'length', 'popularity'], answer: 0, why: '第2段落 The case for standardized tests rests largely on the value of impartiality。' },
+        { choices: ['opportunity', 'age', 'height', 'language'], answer: 0, why: '第3段落 may partly reflect differences in opportunity rather than differences in ability。' },
+        { choices: ['evidence', 'luck', 'advice', 'pressure'], answer: 0, why: '第6段落 treat test scores as one important piece of evidence among several。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、統一試験が広まる前は、家のつながりや富が入学に影響することがあった。', answer: true, why: '第2段落 admission ... often depended on family connections, wealth, or the personal judgment of those in charge。' },
+      { statement: '筆者によれば、統一試験の結果は、家庭の環境とはまったく関係がない。', answer: false, why: '第3段落 Students from wealthier families can afford private tutoring ... all of which can raise their scores。' },
+      { statement: '筆者によれば、創造性や協力する力は、試験ではかりにくい。', answer: true, why: '第4段落 Skills that are difficult to test, such as creativity, cooperation。' },
+      { statement: '筆者によれば、総合的な選考には弱点がない。', answer: false, why: '第5段落 but they also have weaknesses。' },
+    ],
+    qa: [
+      { q: 'What did a common examination offer in the past, according to the second paragraph?', choices: ['A chance for talented students from ordinary families to compete on equal terms.', 'A way for rich families to buy places.', 'An easy path to every university.', 'A test of physical strength.'], answer: 0, why: '第2段落 offered talented students from ordinary families a chance to compete on equal terms。' },
+      { q: 'What risk do holistic admissions carry, according to the fifth paragraph?', choices: ['They may reintroduce some of the subjectivity that tests were designed to remove.', 'They are always cheaper than tests.', 'They ignore school records completely.', 'They make all applicants equal.'], answer: 0, why: '第5段落 institutions may reintroduce some of the subjectivity that tests were designed to remove。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
