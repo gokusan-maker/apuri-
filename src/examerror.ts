@@ -3554,6 +3554,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'This is (A) the (B) book I told you about (C) the last (D) week.', choices: ['(A) the', '(B) book I told you about', '(C) the last', '(D) week'], answer: 2, why: '「先週」は last week（the をつけない）。' },
     ],
   },
+  {
+    id: 'exam-error-quantity-kokkoritsu',
+    title: '入試の正誤問題〈150〉（国公立レベル：数量形容詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '数えられる名詞（friends・students）には many／few／a few、数えられない名詞（water・money・information・time・coffee）には much／little／a little。few・little は「ほとんどない」、a few・a little は「少しある」。a few of the students は複数あつかい。',
+    ],
+    examples: [
+      { en: 'There is little water in the bottle.', ja: 'びんの中には水がほとんどない。' },
+      { en: 'I have a few friends at my new school.', ja: '新しい学校に友だちが少しいる。' },
+    ],
+    questions: [
+      { sentence: 'There (A) is (B) few (C) water (D) in the bottle.', choices: ['(A) is', '(B) few', '(C) water', '(D) in the bottle'], answer: 1, why: 'water は数えられないので little。' },
+      { sentence: 'I have (A) a few (B) money, so I (C) can buy (D) lunch.', choices: ['(A) a few', '(B) money, so I', '(C) can buy', '(D) lunch'], answer: 0, why: 'money は数えられないので a little。' },
+      { sentence: '(A) Many (B) information (C) is available (D) online.', choices: ['(A) Many', '(B) information', '(C) is available', '(D) online'], answer: 0, why: 'information は数えられないので Much。' },
+      { sentence: 'She has (A) very (B) little (C) friends (D) at her new school.', choices: ['(A) very', '(B) little', '(C) friends', '(D) at her new school'], answer: 1, why: 'friends は数えられるので few。' },
+      { sentence: 'We had (A) much (B) rains (C) last (D) month.', choices: ['(A) much', '(B) rains', '(C) last', '(D) month'], answer: 1, why: 'rain はふつう数えられないので much rain。' },
+      { sentence: 'Only (A) a little (B) students (C) passed (D) the test.', choices: ['(A) a little', '(B) students', '(C) passed', '(D) the test'], answer: 0, why: 'students は数えられるので a few。' },
+      { sentence: 'There were (A) so many people (B) at (C) the concert, (D) and it was crowd.', choices: ['(A) so many people', '(B) at', '(C) the concert,', '(D) and it was crowd'], answer: 3, why: 'be のあとは形容詞 crowded。' },
+      { sentence: 'I have (A) not (B) many (C) time (D) today.', choices: ['(A) not', '(B) many', '(C) time', '(D) today'], answer: 2, why: 'time（時間）は数えられないので much time。' },
+      { sentence: '(A) A few of (B) the students (C) was (D) late.', choices: ['(A) A few of', '(B) the students', '(C) was', '(D) late'], answer: 2, why: 'a few of the students は複数なので were。' },
+      { sentence: 'He drinks (A) too (B) many (C) coffee (D) every day.', choices: ['(A) too', '(B) many', '(C) coffee', '(D) every day'], answer: 1, why: 'coffee は数えられないので too much。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
