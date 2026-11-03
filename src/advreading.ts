@@ -28256,6 +28256,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-remote-work',
+    title: 'Working Without an Office',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, going to work meant traveling to a particular place, such as a factory, a shop, or an office, and spending the working day there in the company of colleagues. Advances in communication technology gradually made it possible for some kinds of work to be done from home, but it was only when a global health crisis forced millions of people to stay away from their workplaces that remote work became common on a large scale. Many organizations discovered that work they had assumed required physical presence could in fact be done from almost anywhere.",
+      "For many workers, the advantages were immediately obvious. Without the need to commute, they saved time and money, and some found that they could concentrate better at home, free from the interruptions of a busy office. Parents could more easily arrange their work around the needs of their children, and people who lived far from major cities could take jobs that would previously have required them to move. Employers, for their part, found that they could reduce the cost of office space and recruit talented employees from a much wider area.",
+      "Yet remote work also revealed costs that had not been fully appreciated. Many workers reported feeling isolated, and the boundary between work and private life became harder to maintain when the kitchen table served as both a desk and a dining table. Younger employees in particular often found it difficult to learn their jobs, since much of what newcomers learn in a workplace is acquired not through formal training but by observing more experienced colleagues and asking casual questions. ( A ) such informal learning is hard to arrange through a screen, remote work may disadvantage precisely those workers who most need guidance.",
+      "There are also questions about creativity and cooperation. Some researchers have found that remote teams tend to communicate mainly with people they already know, while chance encounters with colleagues from other departments, which can lead to unexpected ideas, become rare. Others argue that these effects depend largely on how organizations manage remote work, and that deliberate efforts to create opportunities for interaction can compensate for the loss of spontaneous contact.",
+      "The benefits of remote work are also unevenly distributed. It is available mainly to people whose work involves information rather than physical objects, such as office workers, programmers, and designers, while those who work in hospitals, factories, shops, and transport must still be present in person. Remote work may therefore widen the gap between different groups of workers, giving greater freedom and flexibility to those who already tend to be better paid.",
+      "As a result, many organizations have moved toward hybrid arrangements, in which employees divide their time between home and the workplace. Such arrangements attempt to combine the flexibility of remote work with the social and educational benefits of shared presence, but they raise their own difficulties, such as deciding which days people should come to the office and ensuring that those who are absent are not overlooked when important decisions are made.",
+      "The experience of remote work has thus changed not only where people work but how they think about work itself. It has prompted employers and employees alike to ask which aspects of a job truly require people to be together and which do not, a question that has no single answer but that is likely to shape working life for many years to come. Whatever arrangements eventually become standard, the experience has shown that the office is not simply a place where work happens but also a place where people learn from one another, form relationships, and come to feel part of a shared enterprise.",
+    ],
+    ja: [
+      '二十世紀の大部分において、仕事に行くとは、工場や店や事務所のような決まった場所へ移動し、そこで同僚とともに働く一日をすごすことを意味した。通信技術の進歩によって、ある種の仕事は少しずつ家からできるようになったが、在宅勤務が大規模に広まったのは、世界的な健康の危機によって何百万もの人々が職場からはなれていることを強いられたときになってはじめてだった。多くの組織は、その場にいることが必要だと思いこんでいた仕事が、実はほとんどどこからでもできることに気づいた。',
+      '多くの働き手にとって、その利点はすぐに明らかだった。通勤する必要がないので、時間とお金を節約でき、いそがしい事務所のじゃまから解放されて、家のほうが集中できると感じた人もいた。親は子どもの必要に合わせて仕事を調整しやすくなり、大都市から遠くはなれて住む人々も、以前なら引っこしが必要だった仕事につけるようになった。雇う側も、事務所のスペースの費用をへらし、ずっと広い地域から有能な社員を採用できることに気づいた。',
+      'しかし在宅勤務は、十分に理解されていなかった費用も明らかにした。多くの働き手が孤独を感じていると報告し、台所のテーブルが机と食卓の両方の役をするようになると、仕事と私生活の境目を保つのはむずかしくなった。とくに若い社員は、仕事をおぼえるのがむずかしいと感じることが多かった。職場で新人が学ぶことの多くは、正式な研修ではなく、経験のある同僚を見たり、気軽に質問したりすることで身につけられるからである。そうした形式ばらない学びは画面を通しては準備しにくいので、在宅勤務は、まさに最も手引きを必要とする働き手を不利にするかもしれない。',
+      '創造性と協力についての問題もある。在宅のチームは主にすでに知っている人とやりとりする傾向があり、ほかの部署の同僚との偶然の出会い、つまり思いがけない考えにつながりうる出会いがまれになることを見いだした研究者もいる。一方で、こうした影響は主に組織が在宅勤務をどう管理するかによるのであり、やりとりの機会を作るための意図的な努力によって、自然なふれあいが失われることをおぎなえると主張する人もいる。',
+      '在宅勤務の恩恵はまた、平等に分けあたえられてはいない。それは主に、事務職やプログラマーやデザイナーのように、ものではなく情報をあつかう仕事の人々が利用できるものであり、病院や工場や店や交通機関で働く人々は、今もその場にいなければならない。それゆえ在宅勤務は、ちがう働き手の集団のあいだの格差を広げ、もともと給料が高い傾向にある人々に、より大きな自由と柔軟さをあたえることになるかもしれない。',
+      'その結果、多くの組織は、社員が時間を家と職場とで分けるハイブリッドな働き方へと移ってきた。そうした働き方は、在宅勤務の柔軟さと、その場をともにすることの社会的・教育的な恩恵とを組み合わせようとするものだが、それ自体の困難も生む。たとえば、人々がどの日に事務所に来るべきかを決めることや、大事な決定がなされるときに、その場にいない人々が見落とされないようにすることである。',
+      'このように在宅勤務の経験は、人々がどこで働くかだけでなく、仕事そのものをどう考えるかも変えてきた。それは雇う側にも雇われる側にも、仕事のどの部分が本当に人々がいっしょにいることを必要とし、どの部分がそうでないのかを問うよううながしてきた。それはただ一つの答えのない問いだが、これから何年にもわたって働く生活を形づくっていくことになりそうである。最終的にどんな働き方が標準になるにせよ、この経験は、事務所が単に仕事が行われる場所ではなく、人々がおたがいから学び、関係を作り、共通の事業の一員だと感じるようになる場所でもあることを示したのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Unless', 'Although', 'Until'], answer: 0, why: '「形式ばらない学びは画面を通しては準備しにくいので、不利にするかもしれない」という理由の Because。' },
+    ],
+    summary: {
+      text: 'Remote work spread widely during a health crisis. It saves commuting time and widens ( 1 ) for employers, but it can cause isolation and make it hard for young workers to ( 2 ) their jobs. Its benefits are also unevenly distributed, so many organizations now use ( 3 ) arrangements.',
+      blanks: [
+        { choices: ['recruitment', 'traffic', 'taxes', 'noise'], answer: 0, why: '第2段落 recruit talented employees from a much wider area。' },
+        { choices: ['learn', 'leave', 'sell', 'hide'], answer: 0, why: '第3段落 Younger employees in particular often found it difficult to learn their jobs。' },
+        { choices: ['hybrid', 'secret', 'military', 'seasonal'], answer: 0, why: '第6段落 many organizations have moved toward hybrid arrangements。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、在宅勤務が大規模に広まったのは世界的な健康の危機のときである。', answer: true, why: '第1段落 it was only when a global health crisis forced millions of people to stay away ...。' },
+      { statement: '筆者によれば、新人は仕事の多くを正式な研修だけで身につける。', answer: false, why: '第3段落 not through formal training but by observing more experienced colleagues。' },
+      { statement: '筆者によれば、病院や工場で働く人々は在宅勤務を利用しにくい。', answer: true, why: '第5段落 those who work in hospitals, factories, shops, and transport must still be present in person。' },
+      { statement: '筆者によれば、ハイブリッドな働き方には困難がまったくない。', answer: false, why: '第6段落 they raise their own difficulties。' },
+    ],
+    qa: [
+      { q: 'What may become rare in remote teams, according to the fourth paragraph?', choices: ['Chance encounters with colleagues from other departments.', 'Meetings with people they already know.', 'Long working hours.', 'Emails from managers.'], answer: 0, why: '第4段落 chance encounters with colleagues from other departments ... become rare。' },
+      { q: 'What question has remote work prompted employers and employees to ask?', choices: ['Which aspects of a job truly require people to be together.', 'How to make offices larger.', 'Whether computers should be banned.', 'How to stop people from working at all.'], answer: 0, why: '第7段落 which aspects of a job truly require people to be together and which do not。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
