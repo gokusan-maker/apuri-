@@ -2168,6 +2168,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="66" r="1.4" fill="#1c1917" />
       </g>
     )
+  if (species === 'waterstrider')
+    return (
+      <g>
+        {/* 長いあしと、水面の波紋 */}
+        <path d="M34 58 L18 50 M34 66 L16 72 M66 58 L82 50 M66 66 L84 72" fill="none" stroke="#292524" strokeWidth="1.8" strokeLinecap="round" />
+        <ellipse cx="50" cy="90" rx="26" ry="3.5" fill="none" stroke="#7dd3fc" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
