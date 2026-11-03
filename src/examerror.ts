@@ -3602,6 +3602,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Only (B) after the test (C) I realized (D) my mistake.', choices: ['(A) Only', '(B) after the test', '(C) I realized', '(D) my mistake'], answer: 2, why: 'Only＋副詞句が文頭なので倒置。did I realize。' },
     ],
   },
+  {
+    id: 'exam-error-perfect-todai',
+    title: '入試の正誤問題〈152〉（東大レベル：英作文の現在完了と過去形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '現在完了（have＋過去分詞）は今とつながる経験・完了・継続。last year・ago・When ～? のような過去の時点をはっきり表す語とは過去形を使う。since のあとは過去の時点（過去形）、for のあとは期間。経験の「行ったことがある」は have been to、has gone は「行ってしまった（今いない）」。',
+    ],
+    examples: [
+      { en: 'I visited Kyoto last year.', ja: '私は去年京都をおとずれた。' },
+      { en: 'We have known each other since we were children.', ja: '私たちは子どものころからの知り合いだ。' },
+    ],
+    questions: [
+      { sentence: 'I (A) have visited (B) Kyoto (C) last year (D) with my family.', choices: ['(A) have visited', '(B) Kyoto', '(C) last year', '(D) with my family'], answer: 0, why: 'last year のような過去をはっきり表す語とは過去形。visited。' },
+      { sentence: 'She (A) has lived (B) here (C) since (D) five years.', choices: ['(A) has lived', '(B) here', '(C) since', '(D) five years'], answer: 2, why: '期間は for。since のあとは時点。' },
+      { sentence: '(A) When (B) have you (C) arrived (D) in Tokyo?', choices: ['(A) When', '(B) have you', '(C) arrived', '(D) in Tokyo?'], answer: 1, why: 'When で過去の時点をたずねるときは過去形。When did you arrive。' },
+      { sentence: 'I (A) have (B) never (C) saw (D) such a big fish.', choices: ['(A) have', '(B) never', '(C) saw', '(D) such a big fish'], answer: 2, why: '現在完了は have＋過去分詞。seen。' },
+      { sentence: 'We (A) have known (B) each other (C) since we (D) have been children.', choices: ['(A) have known', '(B) each other', '(C) since we', '(D) have been children'], answer: 3, why: 'since のあとは過去の時点なので過去形。were。' },
+      { sentence: 'My father (A) has gone (B) to London (C) three times (D) so far.', choices: ['(A) has gone', '(B) to London', '(C) three times', '(D) so far'], answer: 0, why: '経験（～へ行ったことがある）は has been to。has gone は「行ってしまった」。' },
+      { sentence: 'How long (A) did you (B) live (C) in this town (D) so far?', choices: ['(A) did you', '(B) live', '(C) in this town', '(D) so far?'], answer: 0, why: '今まで続いている期間をたずねるので現在完了。have you lived。' },
+      { sentence: 'The train (A) has (B) just (C) leave (D) the station.', choices: ['(A) has', '(B) just', '(C) leave', '(D) the station'], answer: 2, why: '現在完了は has＋過去分詞。left。' },
+      { sentence: 'I (A) went (B) to the bank (C) an hour ago (D) to got money.', choices: ['(A) went', '(B) to the bank', '(C) an hour ago', '(D) to got money'], answer: 3, why: 'to のあとは原形。to get。' },
+      { sentence: 'Ten years (A) have passed (B) since (C) he (D) has died.', choices: ['(A) have passed', '(B) since', '(C) he', '(D) has died'], answer: 3, why: 'since のあとは過去の一時点なので過去形。died。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
