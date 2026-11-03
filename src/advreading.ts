@@ -28542,6 +28542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wisdom',
+    title: 'Knowing and Being Wise',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We live in an age of unprecedented access to knowledge. A question that once would have required a visit to a library, or a conversation with an expert, can now be answered in seconds by anyone with a phone, and the total amount of information available to ordinary people has grown beyond anything that earlier generations could have imagined. Yet it is far from obvious that we have become wiser as a result, and the gap between how much we know and how well we live raises the question of what wisdom is and how it differs from knowledge.",
+      "Knowledge, in the ordinary sense, consists of information that is true and that we have good reason to believe. We know the date of a historical event, the boiling point of water, or the rules of a game. Such knowledge can be stored, transmitted, and accumulated, and it can be tested by checking whether it corresponds to the facts. Wisdom, by contrast, seems to concern not what is the case but what matters and how to act. A wise person is not necessarily someone who knows many facts but someone who understands which facts are important, how they bear on a particular situation, and what should be done in light of them.",
+      "This difference helps to explain why wisdom cannot simply be looked up. A search engine can tell us the side effects of a medicine, the statistics on a disease, or the opinions of experts, but it cannot tell us whether a particular person, with particular values and circumstances, should accept a risky treatment. ( A ) knowledge provides the materials for such decisions, the decision itself requires a capacity to weigh competing considerations, to recognize what is at stake, and to see the situation from more than one perspective.",
+      "Traditionally, wisdom has been associated with age and experience, and there is some truth in this association. People who have lived through many situations, made mistakes, and observed the consequences of their own and others' choices may develop a sense of proportion that younger people lack. They may be less easily carried away by enthusiasm or panic, and more aware that most situations are more complicated than they first appear. Yet age alone does not guarantee wisdom; experience teaches only those who reflect on it, and some people grow older without growing wiser.",
+      "Wisdom also seems to require a particular attitude toward one's own knowledge. Paradoxically, those who are wisest are often the most aware of the limits of what they know. They hold their beliefs with a certain humility, remain open to evidence that they may be mistaken, and are cautious about applying general rules to situations that may be exceptional. Overconfidence, by contrast, can make even highly knowledgeable people act foolishly, since it prevents them from noticing when their knowledge does not apply.",
+      "If this account is correct, the abundance of information in modern life may be a mixed blessing. On the one hand, it gives us more materials with which to think. On the other hand, it can create the illusion that having access to information is the same as understanding, and the sheer quantity of what is available may leave little time for the slow reflection through which wisdom develops. A person who is constantly absorbing new information may never pause long enough to consider what it means.",
+      "Wisdom, then, is not a larger quantity of knowledge but a different relationship to it, one in which knowledge is held with humility, weighed with judgment, and put to the service of living well. It cannot be downloaded, but it can be cultivated, through experience, reflection, and conversation with others who see the world differently from ourselves.",
+    ],
+    ja: [
+      '私たちはかつてないほど知識にふれられる時代に生きている。かつてなら図書館に行ったり専門家と話したりする必要があったであろう問いに、今では電話を持っているだれもが数秒で答えを得ることができ、ふつうの人々が手にできる情報の総量は、それ以前の世代が想像できたどんなものもこえるほどにふえた。しかし、その結果として私たちがより賢くなったかどうかは決して明らかではなく、私たちがどれだけ知っているかと、どれだけよく生きているかとのへだたりは、知恵とは何であり、それが知識とどうちがうのかという問いを生む。',
+      '知識とは、ふつうの意味では、真実であり、信じるのに十分な理由がある情報から成り立っている。私たちは歴史上の出来事の日付や、水がふっとうする温度や、ゲームのルールを知っている。そうした知識はたくわえ、伝え、積み重ねることができ、事実と合っているかどうかを確かめることで試すことができる。これに対して知恵は、何がそうであるかではなく、何が大切であり、どう行動すべきかにかかわるように思われる。賢い人とは、必ずしも多くの事実を知っている人ではなく、どの事実が重要か、それらがある状況にどうかかわるか、そしてそれらに照らして何をすべきかを理解している人なのである。',
+      'このちがいは、なぜ知恵はただ調べることができないのかを説明するのに役立つ。検索エンジンは、薬の副作用や、病気の統計や、専門家の意見を教えてくれるが、特定の価値観と状況をもつ特定の人が、危険をともなう治療を受け入れるべきかどうかは教えてくれない。知識はそうした決定の材料をあたえるが、決定そのものには、対立する考慮をはかりにかけ、何がかかっているかを見ぬき、状況を一つ以上の見方から見る力が必要なのである。',
+      '伝統的に、知恵は年齢と経験と結びつけられてきたし、この結びつきにはいくらかの真実がある。多くの状況を生きぬき、まちがいをおかし、自分や他人の選択の結果を見てきた人々は、若い人々にはない釣り合いの感覚を育てるかもしれない。彼らは熱狂やパニックにそれほどたやすく流されず、たいていの状況は最初に見えるよりも複雑であることをよく知っているかもしれない。しかし年齢だけで知恵が保証されるわけではない。経験は、それについてふり返る人にしか教えてくれないのであり、賢くならないまま年をとる人もいるのである。',
+      '知恵はまた、自分自身の知識に対するある特定の態度を必要とするように思われる。逆説的なことに、最も賢い人々は、しばしば自分の知っていることの限界を最もよく自覚している。彼らはある種のけんきょさをもって信念をいだき、自分がまちがっているかもしれないという証拠に心を開いたままで、例外かもしれない状況に一般的な決まりを当てはめることに慎重である。これに対して、うぬぼれは、とても知識のある人々にさえおろかなふるまいをさせることがある。自分の知識が当てはまらないときに気づくのをさまたげるからである。',
+      'もしこの説明が正しければ、現代の生活における情報の豊かさは、よいことばかりではないのかもしれない。一方でそれは、考えるためのより多くの材料をあたえてくれる。他方でそれは、情報にふれられることが理解していることと同じだという錯覚を生みうるし、手に入るものの量の多さそのものが、知恵が育つゆっくりとしたふり返りのための時間をほとんど残さないかもしれない。たえず新しい情報を吸収している人は、それが何を意味するかを考えるのに十分なだけ立ち止まることが一度もないかもしれない。',
+      'それゆえ知恵とは、より多くの量の知識ではなく、知識とのちがった関係である。つまり知識がけんきょさをもっていだかれ、判断力をもってはかられ、よく生きることのために役立てられる関係なのである。それはダウンロードすることはできないが、経験やふり返りや、自分とはちがうように世界を見る他人との会話を通して、育てることはできるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「知識は決定の材料をあたえるが、決定そのものには別の力が必要」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、知識はたくわえ、伝え、積み重ねることができる。', answer: true, why: '第2段落 Such knowledge can be stored, transmitted, and accumulated。' },
+      { statement: '筆者によれば、検索エンジンは、ある人が危険な治療を受け入れるべきかを教えてくれる。', answer: false, why: '第3段落 it cannot tell us whether a particular person ... should accept a risky treatment。' },
+      { statement: '筆者によれば、年をとれば必ず賢くなる。', answer: false, why: '第4段落 age alone does not guarantee wisdom。' },
+      { statement: '筆者によれば、最も賢い人々はしばしば自分の知識の限界をよく自覚している。', answer: true, why: '第5段落 those who are wisest are often the most aware of the limits of what they know。' },
+    ],
+    qa: [
+      { q: 'How does overconfidence affect knowledgeable people, according to the fifth paragraph?', choices: ['It prevents them from noticing when their knowledge does not apply.', 'It makes them forget all their knowledge.', 'It makes them more humble.', 'It helps them make better decisions.'], answer: 0, why: '第5段落 it prevents them from noticing when their knowledge does not apply。' },
+      { q: 'What illusion can the abundance of information create?', choices: ['That having access to information is the same as understanding.', 'That information is always false.', 'That libraries are better than phones.', 'That no one needs to learn anything.'], answer: 0, why: '第6段落 the illusion that having access to information is the same as understanding。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
