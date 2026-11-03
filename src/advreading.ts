@@ -29538,6 +29538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-lab-meat',
+    title: 'Meat Without Animals?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Scientists can now grow meat from animal cells in laboratories, without raising and slaughtering animals. A small sample of cells is taken from a living animal and placed in a nutrient-rich solution, where the cells multiply and form muscle tissue that can be processed into products resembling ordinary meat. Several companies have already begun selling such products in a small but growing number of countries, and supporters believe that cultivated meat could transform the way human beings obtain one of their most important sources of food.",
+      "The arguments in favor of cultivated meat are considerable. Conventional livestock farming uses enormous amounts of land and water, contributes significantly to greenhouse gas emissions, and is a major cause of deforestation in some regions. It also raises serious ethical concerns, since billions of animals are raised in crowded conditions and killed each year. If meat could be produced from cells instead, supporters argue, it might be possible to satisfy the growing global demand for meat while greatly reducing both environmental damage and animal suffering.",
+      "However, the technology faces significant obstacles. Producing cultivated meat on a large scale remains extremely expensive, and the facilities required are complex and consume large amounts of energy. ( A ) this energy comes from renewable sources, the environmental advantages of cultivated meat over some forms of conventional farming may be smaller than its supporters hope. Moreover, the nutrient solutions in which cells are grown have in the past relied on substances derived from animals, though companies are working to develop alternatives.",
+      "Consumer attitudes present another challenge. Many people feel uneasy about eating food produced in laboratories, regarding it as unnatural or uncertain in its long-term effects on health. Food is closely bound up with tradition, culture, and identity, and changing what people eat has historically proved difficult even when the arguments for change seem strong. Some surveys suggest that while many consumers are curious about cultivated meat, fewer are willing to make it a regular part of their diet.",
+      "There are also economic and social questions. Livestock farming supports the livelihoods of millions of people around the world, many of them in rural communities with few other sources of income. A rapid shift toward cultivated meat could threaten these livelihoods, and critics argue that any transition should take account of the farmers and workers whose ways of life would be affected. Others worry that the production of cultivated meat could become concentrated in the hands of a few large companies, giving them considerable control over the food supply.",
+      "Some observers suggest that cultivated meat should be seen as one option among many rather than as a complete solution. Reducing meat consumption, improving the efficiency and welfare standards of conventional farming, and developing plant-based alternatives may all contribute to a more sustainable food system. Cultivated meat may find a place within this system, particularly if its costs fall and public confidence grows. Governments, meanwhile, will need to develop clear rules for testing and labeling such products, so that consumers can make informed choices and trust that what they eat is safe.",
+      "The debate over cultivated meat thus raises fundamental questions about the relationship between technology, nature, and human values. It forces us to consider not only what we can produce but also what we are willing to eat, and how the benefits and costs of changing our food systems should be shared. Whatever role cultivated meat eventually plays, the discussion it has provoked may itself be valuable, encouraging people to think more carefully about where their food comes from, what its production costs the planet, and what responsibilities they bear as consumers.",
+    ],
+    ja: [
+      '今では科学者たちは、動物を育てて殺すことなく、研究所で動物の細胞から肉を育てることができる。生きている動物から細胞の小さな試料をとり、栄養の豊富な液に入れると、細胞はふえて筋肉の組織を作り、それをふつうの肉に似た製品に加工することができる。いくつかの会社はすでに数か国でそうした製品を売りはじめており、支持する人々は、培養肉が、人間が最も大切な食料源の一つを手に入れるしかたを一変させうると考えている。',
+      '培養肉を支持する議論はかなりのものである。ふつうの畜産は、ばく大な量の土地と水を使い、温室効果ガスの排出に大きく関わり、地域によっては森林破壊の主な原因になっている。それはまた深刻な倫理的な懸念も生む。毎年何十億もの動物がこみあった環境で育てられ、殺されているからである。もし肉を代わりに細胞から作れるなら、環境への害と動物の苦しみの両方を大きくへらしながら、世界で高まる肉の需要を満たすことができるかもしれない、と支持する人々は主張する。',
+      'しかし、この技術は大きな障害に直面している。培養肉を大規模に作ることは今もきわめて費用がかかり、必要な施設は複雑で、大量のエネルギーを使う。このエネルギーが再生可能な源から得られないかぎり、ある種のふつうの畜産に対する培養肉の環境面での利点は、支持する人々が期待するより小さいかもしれない。さらに、細胞を育てる栄養液は、かつては動物由来の物質にたよっていた。会社は代わりのものを開発しようとしているが。',
+      '消費者の態度も別の課題をもたらしている。多くの人は研究所で作られた食べ物を食べることに不安を感じ、それを不自然なもの、あるいは健康への長期的な影響がはっきりしないものとみなしている。食べ物は伝統や文化やアイデンティティと深く結びついており、変化を支持する議論が強力に見えるときでさえ、人々が食べるものを変えることは歴史的にむずかしいとわかってきた。多くの消費者は培養肉に興味をもっているが、それをふだんの食事の一部にしようとする人はもっと少ないことを示す調査もある。',
+      '経済的・社会的な問題もある。畜産は世界中の何百万もの人々の生活を支えており、その多くはほかに収入源の少ない農村の地域の人々である。培養肉への急な移行はこうした生活をおびやかしうるのであり、どんな移行も、暮らし方に影響を受ける農家や働き手のことを考えに入れるべきだと批判する人々は主張する。また、培養肉の生産が少数の大企業の手に集中し、彼らが食料の供給に大きな支配力をもつようになるのではないかと心配する人もいる。',
+      '培養肉は、完全な解決策としてではなく、多くの選択肢の一つとして見るべきだと示唆する観察者もいる。肉の消費をへらすことや、ふつうの畜産の効率と動物の福祉の基準をよくすることや、植物由来の代わりのものを開発することは、どれもより持続可能な食料の仕組みに貢献しうる。培養肉は、とくに費用が下がり、人々の信頼が高まれば、この仕組みの中に居場所を見つけるかもしれない。その一方で政府は、消費者が情報にもとづいた選択をし、自分の食べるものが安全だと信じられるよう、そうした製品の検査と表示についてのはっきりした決まりを作る必要があるだろう。',
+      'このように培養肉をめぐる議論は、技術と自然と人間の価値観との関係についての根本的な問いを生む。それは私たちに、何を作れるかだけでなく、何を食べる気があるのか、そして食料の仕組みを変えることの恩恵と費用をどう分け合うべきかを考えさせるのである。培養肉が最終的にどんな役割を果たすにせよ、それが引き起こした議論そのものに価値があるかもしれない。それは人々に、自分の食べ物がどこから来るのか、その生産が地球にどれほどの負担をかけているのか、そして消費者としてどんな責任を負っているのかを、より注意深く考えるようはげますからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Since', 'Once'], answer: 0, why: '「エネルギーが再生可能な源から得られないかぎり、利点は小さいかもしれない」という条件の Unless。' },
+    ],
+    summary: {
+      text: 'Cultivated meat could reduce environmental damage and animal ( 1 ). However, it is expensive and uses much ( 2 ), many consumers feel uneasy about it, and a rapid shift could threaten farmers’ livelihoods. It may best be seen as one ( 3 ) among many for a sustainable food system.',
+      blanks: [
+        { choices: ['suffering', 'feeding', 'travel', 'growth'], answer: 0, why: '第2段落 greatly reducing both environmental damage and animal suffering。' },
+        { choices: ['energy', 'water', 'land', 'salt'], answer: 0, why: '第3段落 consume large amounts of energy。' },
+        { choices: ['option', 'problem', 'law', 'disease'], answer: 0, why: '第6段落 should be seen as one option among many。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、ふつうの畜産は温室効果ガスの排出に大きく関わっている。', answer: true, why: '第2段落 contributes significantly to greenhouse gas emissions。' },
+      { statement: '筆者によれば、培養肉を大規模に作ることはすでに安くなっている。', answer: false, why: '第3段落 remains extremely expensive。' },
+      { statement: '調査によれば、培養肉をふだんの食事にしようとする人は、興味をもつ人より少ない。', answer: true, why: '第4段落 fewer are willing to make it a regular part of their diet。' },
+      { statement: '筆者は、培養肉だけで食料の問題は完全に解決すると考えている。', answer: false, why: '第6段落 rather than as a complete solution。' },
+    ],
+    qa: [
+      { q: 'Why is changing what people eat difficult, according to the fourth paragraph?', choices: ['Food is closely bound up with tradition, culture, and identity.', 'People never eat meat.', 'Laboratories are too far away.', 'Food prices never change.'], answer: 0, why: '第4段落 Food is closely bound up with tradition, culture, and identity。' },
+      { q: 'What worry do some people have about the production of cultivated meat?', choices: ['It could become concentrated in the hands of a few large companies.', 'It will make farms larger.', 'It will use too little energy.', 'It will be too cheap.'], answer: 0, why: '第5段落 could become concentrated in the hands of a few large companies。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
