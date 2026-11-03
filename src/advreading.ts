@@ -27160,6 +27160,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-climate-responsibility',
+    title: 'Who Is Responsible for the Climate?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When people think about how to respond to climate change, they often begin with their own behavior. They may try to fly less, eat less meat, use public transport, or switch off lights when they leave a room. Such actions are widely encouraged by governments and environmental groups, and many people feel a genuine sense of responsibility for their personal contribution to the problem. Yet some observers have begun to question whether this emphasis on individual choices is the most effective way of addressing a challenge of such enormous scale. The question matters because the way a problem is framed shapes the solutions that people consider.",
+      "The difficulty is partly one of numbers. The emissions of greenhouse gases that drive climate change come from billions of people and millions of businesses, power stations, and vehicles. The actions of any single person, however sincere, have an almost imperceptible effect on the total. Moreover, many of the largest sources of emissions, such as the way electricity is generated, the design of cities, and the methods of industrial production, are not under the direct control of individuals at all. A person who wishes to live without a car may find this impossible in a town designed around driving, where shops, schools, and workplaces are far apart and buses run only a few times a day.",
+      "For this reason, some critics argue that the focus on personal responsibility can be a distraction, or even a deliberate strategy by those who wish to avoid more fundamental change. If climate change is presented mainly as a matter of individual consumption, attention may be drawn away from the policies, investments, and regulations that would have the greatest impact. It is worth noting, for example, that the idea of a personal carbon footprint was popularized in part through advertising campaigns funded by an oil company. Whatever the intentions behind such campaigns, they had the effect of placing the burden of action on consumers rather than on producers.",
+      "Others reply that individual and collective action are not opposed but connected. Personal choices can influence social norms: when people see their neighbors installing solar panels or choosing to cycle, such behavior begins to seem normal rather than eccentric. Consumers who change their habits can also create markets for new technologies, encouraging companies to invest in them. ( A ) individual efforts alone cannot solve the problem, they may help to build the political support needed for larger changes, since people who have made sacrifices themselves are more likely to demand that others do the same. Personal commitment, in this view, is not an alternative to political change but one of its foundations.",
+      "There is also a question of fairness. The responsibility for climate change is not evenly distributed. Wealthy individuals and nations have contributed far more to emissions than poorer ones, both historically and today, while many of the people most vulnerable to rising seas, droughts, and extreme weather have done little to cause them. Any serious response must therefore consider not only how to reduce emissions but also how to share the costs of doing so in a just way, both within and between countries. Asking a poor family to bear the same costs as a wealthy one would be neither just nor likely to succeed.",
+      "Perhaps the most useful conclusion is that responsibility for climate change exists at several levels at once. Individuals can make choices that reduce their own impact and signal their values to others; communities and businesses can change the systems within which those choices are made; and governments can create the conditions that make sustainable living easier and more affordable for everyone. Focusing on only one of these levels risks neglecting the others, and it is in their combination that the best hope for meaningful progress may lie.",
+    ],
+    ja: [
+      '気候変動にどう対応するかを考えるとき、人はしばしば自分自身のふるまいから始める。飛行機に乗るのをへらしたり、肉を食べるのをへらしたり、公共交通機関を使ったり、部屋を出るときに電気を消したりしようとするかもしれない。こうした行動は政府や環境団体から広くすすめられており、多くの人はその問題への自分の寄与について本当に責任を感じている。しかし、このように個人の選択を強調することが、これほど大きな規模の課題に取り組む最も効果的な方法なのかどうかを、問い直しはじめる人もいる。問題をどう枠づけるかが、人々が考える解決策を形づくるので、この問いは重要である。',
+      'むずかしさの一部は数の問題である。気候変動を引き起こす温室効果ガスの排出は、何十億もの人々と、何百万もの企業や発電所や車から生じている。どんなに誠実であっても、1人の人間の行動が全体におよぼす影響はほとんど感じられないほど小さい。さらに、電気のつくり方や都市の設計や工業生産の方法など、最大の排出源の多くは、そもそも個人が直接左右できるものではない。車なしで暮らしたいと思う人も、車を前提に設計された町ではそれが不可能だと気づくかもしれない。そこでは店や学校や職場が遠くはなれ、バスは1日に数本しか走っていないのである。',
+      'このため、個人の責任に注目することは気をそらすことになりうるし、より根本的な変化をさけたい人々による意図的な作戦でさえありうる、と論じる批判者もいる。気候変動が主に個人の消費の問題として示されると、最も大きな影響をもつはずの政策や投資や規制から注意がそらされるかもしれない。たとえば、個人のカーボンフットプリントという考えが広まったのは、ある石油会社が資金を出した広告運動を通じてでもあったことは注目に値する。そうした運動の背後にどんな意図があったにせよ、それは行動の負担を生産者ではなく消費者に負わせる効果をもった。',
+      '一方で、個人の行動と集団の行動は対立するのではなく結びついていると答える人もいる。個人の選択は社会の規範に影響しうる。近所の人が太陽光パネルを取りつけたり、自転車を選んだりするのを見ると、そうしたふるまいは風変わりなものではなく、ふつうのことに思えはじめる。習慣を変える消費者はまた、新しい技術の市場をつくり、企業にそこへ投資するよう促すこともできる。個人の努力だけでは問題を解決できないとしても、それはより大きな変化に必要な政治的支持を築く助けになるかもしれない。自分で犠牲をはらった人は、ほかの人にも同じことを求めやすいからである。この見方では、個人の取り組みは政治的な変化の代わりではなく、その土台の1つなのである。',
+      '公平さの問題もある。気候変動への責任は均等に分かれてはいない。裕福な個人や国は、過去においても今日においても、貧しい人々や国よりはるかに多くの排出をしてきたが、海面上昇や干ばつや異常気象に最も弱い人々の多くは、その原因をほとんどつくっていない。したがって、本気の対応は、排出をどうへらすかだけでなく、そのための費用を、国の中でも国と国のあいだでも、どうすれば公正に分かち合えるかも考えなければならない。貧しい家庭に裕福な家庭と同じ費用を負わせることは、公正でもなく、うまくいきそうにもない。',
+      'おそらく最も役に立つ結論は、気候変動への責任は同時にいくつもの段階に存在するということである。個人は、自分の影響をへらし、自分の価値観を他者に示す選択をすることができる。共同体や企業は、そうした選択がなされるしくみを変えることができる。そして政府は、持続可能な暮らしをすべての人にとってより容易で手ごろなものにする条件をつくることができる。これらの段階の1つだけに注目すると、ほかの段階をおろそかにするおそれがあり、意味のある前進への最もよい希望は、それらの組み合わせのなかにあるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「個人の努力だけでは解決できないとしても、助けになるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Many people respond to climate change by changing their own behavior, but individual actions have a tiny effect, and many large sources of emissions are beyond individual ( 1 ). Some critics see the focus on personal responsibility as a ( 2 ), while others argue that individual choices can change social norms. Since responsibility is unevenly shared, the response must be ( 3 ), combining action at several levels.',
+      blanks: [
+        { choices: ['control', 'interest', 'memory', 'reach'], answer: 0, why: '第2段落 are not under the direct control of individuals at all。' },
+        { choices: ['distraction', 'solution', 'tradition', 'pleasure'], answer: 0, why: '第3段落 the focus on personal responsibility can be a distraction。' },
+        { choices: ['fair', 'quick', 'cheap', 'secret'], answer: 0, why: '第5段落 how to share the costs of doing so in a just way。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、1人の人間の行動が排出全体におよぼす影響はほとんど感じられないほど小さい。', answer: true, why: '第2段落 have an almost imperceptible effect on the total。' },
+      { statement: '筆者によれば、個人のカーボンフットプリントという考えは、環境団体だけによって広められた。', answer: false, why: '第3段落 popularized in part through advertising campaigns funded by an oil company。' },
+      { statement: '筆者によれば、近所の人のふるまいは、社会の規範に影響しうる。', answer: true, why: '第4段落 Personal choices can influence social norms。' },
+      { statement: '筆者によれば、気候変動の影響に最も弱い人々が、排出の大部分をつくってきた。', answer: false, why: '第5段落 many of the people most vulnerable ... have done little to cause them。' },
+    ],
+    qa: [
+      { q: 'Why might a person find it impossible to live without a car, according to the second paragraph?', choices: ['Their town may be designed around driving.', 'Cars are cheaper than bicycles.', 'Public transport is always free.', 'The law requires everyone to own a car.'], answer: 0, why: '第2段落 in a town designed around driving。' },
+      { q: 'What is the writer\'s main conclusion in the last paragraph?', choices: ['Responsibility exists at several levels, and progress depends on combining them.', 'Only governments are responsible.', 'Only individuals are responsible.', 'Nothing can be done about climate change.'], answer: 0, why: '第6段落 responsibility for climate change exists at several levels at once ... in their combination that the best hope ... may lie。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
