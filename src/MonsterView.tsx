@@ -2149,6 +2149,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 50 L44 56 M66 50 L56 56 M36 66 L46 70 M64 66 L54 70" fill="none" stroke="#713f12" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'molerat')
+    return (
+      <g>
+        {/* 大きな前歯と、しわ */}
+        <rect x="46" y="54" width="3.5" height="8" rx="1" fill="#fefce8" stroke="#9f1239" strokeWidth="1" />
+        <rect x="50.5" y="54" width="3.5" height="8" rx="1" fill="#fefce8" stroke="#9f1239" strokeWidth="1" />
+        <path d="M38 70 Q50 74 62 70 M40 77 Q50 80 60 77" fill="none" stroke="#be123c" strokeWidth="1.2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
