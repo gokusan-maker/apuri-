@@ -2304,6 +2304,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="64" cy="26" rx="6" ry="4" fill="#fb923c" stroke="#9a3412" strokeWidth="1.2" />
       </g>
     )
+  if (species === 'gardeneel')
+    return (
+      <g>
+        {/* 体の黒い点もようと、足元の砂 */}
+        <circle cx="46" cy="60" r="1.6" fill="#1c1917" />
+        <circle cx="54" cy="68" r="1.6" fill="#1c1917" />
+        <circle cx="48" cy="76" r="1.6" fill="#1c1917" />
+        <ellipse cx="50" cy="92" rx="26" ry="5" fill="#fde68a" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
