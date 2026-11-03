@@ -27936,6 +27936,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-handwriting',
+    title: 'Does Handwriting Still Matter?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For centuries, learning to write by hand was considered one of the basic purposes of schooling, and children spent many hours practicing the shapes of letters until they could produce them quickly and clearly. In recent years, however, keyboards and touch screens have replaced pens and paper in much of daily life, and some schools have reduced the time devoted to handwriting or stopped teaching certain styles of it altogether. To many people this change seems natural, since it appears pointless to train children in a skill that they will rarely need as adults.",
+      "Supporters of this change point out that typing has clear practical advantages. Most people can type faster than they can write by hand, and typed text is easier to read, to correct, to store, and to share with others. In workplaces, almost all documents are now produced on computers, and examinations in many countries are increasingly taken on screens. Time spent perfecting handwriting, they argue, could be better used to teach skills that are more relevant to the modern world, such as programming or the critical evaluation of information found online.",
+      "Yet research in psychology suggests that handwriting may offer benefits that are not obvious at first. In several studies, students who took notes by hand during lectures remembered the material better than students who typed their notes on laptops. One explanation is that, because writing by hand is slower, students cannot record every word and must therefore decide what is important and express it in their own words. Typing, by contrast, allows students to copy a lecture almost word for word without thinking deeply about its meaning.",
+      "Other researchers have studied young children who are learning to read. ( A ) children practice forming letters with their own hands, they appear to recognize those letters more easily than children who learn them only by pressing keys. The physical effort of drawing each shape seems to help the brain build a stronger memory of it. If this is correct, handwriting is not merely a way of recording language but part of the process through which children come to understand written language in the first place.",
+      "None of this means that schools should reject keyboards or return to the methods of the past. Children who grow up today will certainly need to type well, and for some students, such as those who find writing by hand physically difficult, digital tools can remove barriers that once prevented them from expressing their ideas. The question is not whether to choose handwriting or typing but how to combine them, recognizing that each may be suited to different purposes.",
+      "A sensible approach might be to treat handwriting less as a skill to be perfected for its own sake and more as a tool for thinking. Students might be encouraged to plan essays, solve problems, or take notes by hand, while using keyboards to produce final versions that others will read. In this way, schools could preserve the advantages of handwriting for learning and memory without asking students to give up the efficiency of digital tools.",
+      "The debate over handwriting is a reminder that new technologies rarely replace old ones completely without cost. Before abandoning a familiar practice, it is worth asking what it accomplished beyond its obvious function, and whether something valuable might be lost along with it. Handwriting was once taught simply because there was no other way to write, and its effects on memory and understanding went largely unnoticed. Now that an alternative exists, those hidden effects have become visible for the first time, and the choice that schools face is therefore a genuinely new one, which deserves to be made carefully rather than by default.",
+    ],
+    ja: [
+      '何世紀ものあいだ、手で字を書くことを学ぶのは学校教育の基本的な目的の一つと考えられ、子どもたちは文字をすばやくはっきり書けるようになるまで、何時間も文字の形を練習した。しかし近年、日常生活の多くの場面でキーボードやタッチスクリーンがペンと紙に取って代わり、手書きにあてる時間をへらしたり、ある種の書き方を教えるのをすっかりやめたりした学校もある。多くの人には、この変化は自然なことに思える。大人になってほとんど必要としない技能を子どもに訓練するのは意味がないように思われるからである。',
+      'この変化を支持する人々は、タイピングには明らかな実用上の利点があると指摘する。ほとんどの人は手で書くよりも速く打つことができ、打ちこんだ文章は読みやすく、直しやすく、保存しやすく、ほかの人と共有しやすい。職場ではほとんどすべての文書が今やコンピューターで作られ、多くの国で試験もますます画面で受けるようになっている。手書きをみがくのに使う時間は、プログラミングやネットで見つけた情報を批判的に評価することのような、現代の世界にもっと関係のある技能を教えるのに使ったほうがよい、と彼らは主張する。',
+      'しかし心理学の研究は、手書きには最初は明らかでない利点があるかもしれないことを示している。いくつかの研究で、講義中に手でノートをとった学生は、ノートパソコンでノートを打った学生よりも内容をよく覚えていた。一つの説明は、手で書くのはおそいので、学生はすべての言葉を記録することができず、それゆえ何が大切かを決めて、それを自分の言葉で表さなければならないというものである。これに対してタイピングでは、学生は内容の意味を深く考えずに、講義をほとんど一語一語写すことができる。',
+      'ほかの研究者たちは、読むことを学んでいる幼い子どもを研究してきた。子どもが自分の手で文字を形づくる練習をすると、キーを押すことだけで文字を学ぶ子どもよりも、その文字をより簡単に見分けられるようになるようである。それぞれの形をかく体の努力が、脳がそれをより強く記憶するのを助けるらしい。もしこれが正しければ、手書きは単に言葉を記録する方法ではなく、子どもがそもそも書き言葉を理解するようになる過程の一部なのである。',
+      'このどれも、学校がキーボードをこばんだり、昔の方法にもどったりすべきだということを意味しない。今日育つ子どもたちは、まちがいなく上手に打てる必要があるし、手で書くのが体の面でむずかしい生徒のような一部の生徒にとっては、デジタルの道具は、かつて自分の考えを表すのをさまたげていた障壁を取りのぞくことができる。問題は手書きかタイピングかを選ぶことではなく、それぞれがちがう目的に向いているかもしれないと認めて、どう組み合わせるかなのである。',
+      '分別のある方法は、手書きを、それ自体のためにみがくべき技能というより、考えるための道具としてあつかうことかもしれない。生徒には、作文の計画を立てたり、問題を解いたり、ノートをとったりするのは手で行い、ほかの人が読む完成版を作るのにはキーボードを使うようすすめることができるだろう。このようにすれば、学校は、生徒にデジタルの道具の効率をあきらめさせることなく、学びと記憶にとっての手書きの利点を守ることができるだろう。',
+      '手書きをめぐる議論は、新しい技術が古い技術を何の犠牲もなく完全に置きかえることはめったにないことを思い出させてくれる。なじみのある習慣を捨てる前に、それが明らかなはたらき以外に何をなしとげていたのか、そしてそれとともに何か価値あるものが失われるかもしれないかどうかを問う価値があるのである。手書きはかつて、ほかに書く方法がなかったから教えられていたにすぎず、記憶や理解へのその効果はほとんど気づかれなかった。別の方法ができた今、そうした隠れた効果がはじめて見えるようになったのであり、それゆえ学校が直面している選択は本当に新しいものであって、なりゆきにまかせるのではなく、注意深く行われるべきなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['When', 'Unless', 'Although', 'Until'], answer: 0, why: '「子どもが自分の手で文字を形づくる練習をすると、より簡単に見分けられる」という時・条件の When。' },
+    ],
+    summary: {
+      text: 'Many schools now spend less time on handwriting because typing is faster and more ( 1 ). However, research suggests that taking notes by hand helps students ( 2 ) material better, and that forming letters helps children recognize them. Schools might therefore treat handwriting as a tool for ( 3 ) while using keyboards for final versions.',
+      blanks: [
+        { choices: ['practical', 'beautiful', 'difficult', 'expensive'], answer: 0, why: '第2段落 typing has clear practical advantages。' },
+        { choices: ['remember', 'forget', 'sell', 'avoid'], answer: 0, why: '第3段落 remembered the material better。' },
+        { choices: ['thinking', 'decoration', 'shopping', 'sleeping'], answer: 0, why: '第6段落 more as a tool for thinking。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によれば、打ちこんだ文章は保存しやすく、共有しやすい。', answer: true, why: '第2段落 typed text is easier to read, to correct, to store, and to share。' },
+      { statement: '研究によれば、ノートパソコンでノートを打った学生のほうが内容をよく覚えていた。', answer: false, why: '第3段落 students who took notes by hand ... remembered the material better。' },
+      { statement: '筆者によれば、手で書くのがむずかしい生徒にとって、デジタルの道具は障壁を取りのぞくことができる。', answer: true, why: '第5段落 digital tools can remove barriers。' },
+      { statement: '筆者は、学校はキーボードをやめて昔の方法にもどるべきだと考えている。', answer: false, why: '第5段落 None of this means that schools should reject keyboards or return to the methods of the past。' },
+    ],
+    qa: [
+      { q: 'Why might writing notes by hand help students learn, according to the third paragraph?', choices: ['They must decide what is important and use their own words.', 'They can copy every word of the lecture.', 'Handwriting is always faster than typing.', 'Teachers give them higher grades.'], answer: 0, why: '第3段落 must therefore decide what is important and express it in their own words。' },
+      { q: 'What does the debate over handwriting remind us of, according to the last paragraph?', choices: ['New technologies rarely replace old ones completely without cost.', 'Old technologies are always better.', 'Children no longer need to learn anything.', 'Keyboards will soon disappear.'], answer: 0, why: '第7段落 new technologies rarely replace old ones completely without cost。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
