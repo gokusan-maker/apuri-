@@ -28622,6 +28622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-anger',
+    title: 'The Uses of Anger',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Anger has a poor reputation. Moral traditions in many cultures have warned against it, describing it as a temporary madness that clouds judgment, damages relationships, and leads people to say and do things they later regret. Modern advice on mental health often treats anger as a problem to be managed, something to be calmed by breathing exercises or released harmlessly before it causes trouble. Yet there is reason to think that this negative view, while containing much truth, overlooks the important role that anger can play in both personal and social life.",
+      "To understand this role, it helps to consider what anger is about. Unlike fear, which responds to danger, or sadness, which responds to loss, anger typically responds to a perceived wrong: the sense that someone has treated us or others unjustly, has disregarded our dignity, or has violated a standard that ought to have been respected. Anger, in other words, contains a judgment. To be angry is not merely to feel agitated but to believe that something has been done that should not have been done.",
+      "This connection between anger and judgment explains why anger can be appropriate or inappropriate, justified or unjustified, in a way that a headache cannot. If my anger rests on a mistaken belief, for example, if I am furious with a colleague for an error that was in fact my own, then my anger is misplaced, and recognizing the mistake should cause it to fade. ( A ) anger rests on an accurate perception of genuine wrongdoing, it may be not only understandable but fitting, an expression of the fact that we care about justice and about the people who have been harmed.",
+      "Indeed, the complete absence of anger in the face of serious injustice can itself be a moral failing. A person who witnesses cruelty and feels nothing may be showing not admirable calm but indifference. Historically, anger at oppression has often provided the energy that drove movements for social reform, giving people the courage to challenge powerful institutions and to persist in the face of opposition. Without such anger, many injustices might have been accepted as simply the way things are.",
+      "None of this means that anger is always beneficial even when it is justified. Anger tends to narrow attention, focusing it on the wrong that has been done and on the person who did it, and this narrowing can make it difficult to see the situation in its full complexity. It can also slide easily into a desire for revenge, in which the aim is no longer to correct the injustice but to make the wrongdoer suffer. When this happens, anger may produce new wrongs rather than remedying old ones.",
+      "The challenge, then, is not to eliminate anger but to direct it wisely. Some philosophers have suggested that the most valuable form of anger is one that quickly turns from the past toward the future, asking not how the wrongdoer can be punished but how the situation can be improved and similar wrongs prevented. Such anger retains the moral seriousness of the original response while avoiding its most destructive tendencies.",
+      "Anger, understood in this way, is neither a disease to be cured nor a force to be unleashed without restraint. It is a moral emotion, a sign that we take certain standards seriously, and like any powerful emotion, it requires judgment, self-knowledge, and a sense of proportion if it is to serve rather than undermine the values it expresses. Learning to be angry at the right things, to the right degree, and in the right way may be among the most difficult tasks of moral life, but it is also among the most important.",
+    ],
+    ja: [
+      '怒りは評判が悪い。多くの文化の道徳の伝統は怒りをいましめ、判断をくもらせ、関係をそこない、あとで後悔するようなことを人に言わせたりさせたりする一時的な狂気だと述べてきた。心の健康についての現代の助言も、しばしば怒りを管理すべき問題、つまり問題を起こす前に呼吸法でしずめたり、害のない形で発散したりすべきものとしてあつかう。しかし、この否定的な見方は多くの真実をふくんでいるものの、怒りが個人の生活と社会の生活の両方で果たしうる大切な役割を見落としていると考える理由がある。',
+      'この役割を理解するには、怒りが何についてのものなのかを考えるのが役に立つ。危険にこたえる恐れや、喪失にこたえる悲しみとちがって、怒りはふつう、不正と受けとられたものにこたえる。つまり、だれかが自分や他人を不当にあつかった、尊厳を無視した、あるいは尊重されるべきだった基準をふみにじったという感覚である。言いかえれば、怒りには判断がふくまれている。怒っているとは、単に心が乱れていると感じることではなく、されるべきでなかったことがなされたと信じることなのである。',
+      '怒りと判断とのこの結びつきは、頭痛とはちがって、怒りが適切であったりなかったり、正当であったりなかったりしうる理由を説明する。もし私の怒りがまちがった思いこみにもとづいているなら、たとえば実は自分のまちがいだった誤りについて同僚にひどく腹を立てているなら、私の怒りは見当ちがいであり、まちがいに気づけば怒りは消えていくはずである。怒りが本当の不正の正確な認識にもとづいているとき、それは理解できるだけでなくふさわしいものでもありうる。つまり、私たちが正義と、害を受けた人々を大切に思っていることの表れなのである。',
+      '実際、深刻な不正を前にして怒りがまったくないことは、それ自体が道徳的な欠点になりうる。残酷なことを目にして何も感じない人は、ほめられるべき落ち着きではなく、無関心を示しているのかもしれない。歴史的に、抑圧への怒りは、しばしば社会改革の運動を動かすエネルギーとなり、人々に力のある組織に立ち向かい、反対に直面してもねばり強く続ける勇気をあたえてきた。そうした怒りがなければ、多くの不正はただ世の中とはそういうものだとして受け入れられていたかもしれない。',
+      'このどれも、怒りは正当なときにはいつも役に立つという意味ではない。怒りは注意をせばめ、なされた不正とそれをした人に集中させがちであり、このせばまりのために、状況をその複雑さのまま見るのがむずかしくなることがある。怒りはまた、たやすく復讐の願いへとすべり落ちることもある。そこでは、目的はもはや不正を正すことではなく、不正をした人を苦しめることになる。そうなると、怒りは古い不正をいやすのではなく、新しい不正を生み出すかもしれない。',
+      'それゆえ課題は、怒りをなくすことではなく、それを賢く向けることである。最も価値のある形の怒りとは、すぐに過去から未来へと向きを変え、不正をした人をどう罰するかではなく、状況をどうよくし、同じような不正をどう防げるかを問う怒りだと示唆した哲学者もいる。そうした怒りは、もとの反応の道徳的な真剣さを保ちつつ、その最も破壊的な傾向をさけるのである。',
+      'このように理解すれば、怒りは治すべき病気でも、おさえることなく解き放つべき力でもない。それは道徳的な感情であり、私たちがある基準を真剣に受けとめているしるしである。そしてどんな強い感情とも同じように、それが表している価値をそこなうのではなく、それに役立つためには、判断力と自己理解と釣り合いの感覚を必要とするのである。正しいことに、正しい程度で、正しいしかたで怒ることを学ぶのは、道徳的な生活の最もむずかしい課題の一つかもしれないが、最も大切な課題の一つでもある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['When', 'Unless', 'Although', 'Before'], answer: 0, why: '「怒りが本当の不正の正確な認識にもとづいているとき、ふさわしいものでありうる」という When。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、怒りはふつう、不正と受けとられたものにこたえる。', answer: true, why: '第2段落 anger typically responds to a perceived wrong。' },
+      { statement: '筆者によれば、怒りには判断がふくまれていない。', answer: false, why: '第2段落 Anger, in other words, contains a judgment。' },
+      { statement: '筆者によれば、深刻な不正を前にして怒りがまったくないことは、道徳的な欠点になりうる。', answer: true, why: '第4段落 the complete absence of anger in the face of serious injustice can itself be a moral failing。' },
+      { statement: '筆者は、怒りはなくすべきものだと結論している。', answer: false, why: '第6段落 The challenge, then, is not to eliminate anger but to direct it wisely。' },
+    ],
+    qa: [
+      { q: 'What should happen when anger rests on a mistaken belief?', choices: ['Recognizing the mistake should cause it to fade.', 'It should grow stronger.', 'It should turn into fear.', 'It should be hidden from others.'], answer: 0, why: '第3段落 recognizing the mistake should cause it to fade。' },
+      { q: 'What is the most valuable form of anger, according to some philosophers?', choices: ['One that turns toward the future and asks how the situation can be improved.', 'One that seeks revenge on the wrongdoer.', 'One that is never expressed at all.', 'One that lasts for many years.'], answer: 0, why: '第6段落 one that quickly turns from the past toward the future ... how the situation can be improved。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
