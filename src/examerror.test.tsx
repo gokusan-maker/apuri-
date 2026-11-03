@@ -1947,3 +1947,10 @@ it('正誤問題〈142〉：旧帝大レベル 使役動詞と知覚動詞の単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) to run')
 })
+
+it('誤文訂正〈136〉：京大レベル 無生物主語の構文の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-136')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('from going')
+})

@@ -5820,6 +5820,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Could you help me [carrying] these boxes?', choices: ['carry', 'carried', 'carries', 'for carry'], answer: 0, why: 'help＋人＋(to) 原形。help me carry。' },
     ],
   },
+  {
+    id: 'exam-fix-136',
+    title: '入試の誤文訂正〈136〉（京大レベル：無生物主語の構文）',
+    points: ['英語では「もの・こと」を主語にした文がよく使われる。make it possible for 人 to do（～が…するのを可能にする）、prevent／keep／stop 人 from -ing（～が…するのをさまたげる）、remind 人 of ～（～に…を思い出させる）、enable 人 to do、cause 人 to do、allow 人 to do、take 人 to 場所（～を…へ連れていく）。前置詞・不定詞の形をまちがえやすい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The heavy rain prevented us from going out.', ja: '大雨のせいで、私たちは外出できなかった。' }],
+    questions: [
+      { sentence: 'The heavy snow prevented us [to go] out.', choices: ['from going', 'going', 'to going', 'for going'], answer: 0, why: 'prevent 人 from -ing。from going。' },
+      { sentence: 'This song reminds me [about] my school days.', choices: ['of', 'for', 'to', 'with'], answer: 0, why: 'remind 人 of ～（～に…を思い出させる）。' },
+      { sentence: 'The new bridge made [possible for us] to cross the river easily.', choices: ['it possible for us', 'possible us', 'us possible', 'it possibly for us'], answer: 0, why: 'make it possible for 人 to do。形式目的語 it が必要。' },
+      { sentence: 'The scholarship enabled her [studying] abroad.', choices: ['to study', 'study', 'studied', 'for studying'], answer: 0, why: 'enable 人 to do。to study。' },
+      { sentence: 'The noise kept me [to sleep] all night.', choices: ['from sleeping', 'sleep', 'to sleeping', 'for sleeping'], answer: 0, why: 'keep 人 from -ing（～が…するのをさまたげる）。' },
+      { sentence: 'A ten-minute walk will take you [at] the station.', choices: ['to', 'in', 'for', 'on'], answer: 0, why: 'take 人 to 場所（～を…へ連れていく）。' },
+      { sentence: 'The accident caused the train [stop] suddenly.', choices: ['to stop', 'stopping', 'stopped', 'stops'], answer: 0, why: 'cause 人・もの to do。to stop。' },
+      { sentence: 'This app allows users [share] photos easily.', choices: ['to share', 'sharing', 'shared', 'for share'], answer: 0, why: 'allow 人 to do。to share。' },
+      { sentence: 'The photo reminded her [that] her grandmother.', choices: ['of', 'with', 'to', 'about that'], answer: 0, why: 'remind 人 of＋名詞。that は節が続くときだけ。' },
+      { sentence: 'What [did make] you change your mind?', choices: ['made', 'did made', 'makes did', 'make did'], answer: 0, why: '疑問詞 What が主語なので do を使わず What made you ～?（何があなたに考えを変えさせたのか）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
