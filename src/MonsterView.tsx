@@ -2263,6 +2263,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 64 Q50 74 62 64 Q50 70 38 64 Z" fill="#fafaf9" />
       </g>
     )
+  if (species === 'kajikafrog')
+    return (
+      <g>
+        {/* 指先の吸ばんと、流れる水 */}
+        <circle cx="32" cy="84" r="2.5" fill="#d6d3d1" />
+        <circle cx="68" cy="84" r="2.5" fill="#d6d3d1" />
+        <path d="M18 94 Q30 90 42 94 Q54 98 66 94 Q78 90 86 94" fill="none" stroke="#7dd3fc" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
