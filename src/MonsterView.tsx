@@ -2192,6 +2192,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="78" cy="22" r="2" fill="none" stroke="#bae6fd" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'mountainfrog')
+    return (
+      <g>
+        {/* 目の後ろの黒いもようと、のどのふくらみ */}
+        <path d="M34 38 L42 42 M66 38 L58 42" fill="none" stroke="#431407" strokeWidth="3" strokeLinecap="round" />
+        <ellipse cx="50" cy="62" rx="8" ry="4" fill="#fed7aa" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
