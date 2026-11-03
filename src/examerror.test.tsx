@@ -2171,3 +2171,10 @@ it('正誤問題〈158〉：東大レベル 英作文の原級比較と倍数表
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) than')
 })
+
+it('誤文訂正〈152〉：京大レベル 分詞構文の完了形・否定・受け身の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-152')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Not knowing')
+})

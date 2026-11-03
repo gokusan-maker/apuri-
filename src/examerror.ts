@@ -6492,6 +6492,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'What made you [to change] your mind?', choices: ['change', 'changing', 'changed', 'changes'], answer: 0, why: 'make＋人＋原形。What made you change ～?「なぜ～したの」。' },
     ],
   },
+  {
+    id: 'exam-fix-152',
+    title: '入試の誤文訂正〈152〉（京大レベル：分詞構文の完了形・否定・受け身）',
+    points: ['主節より前のことは完了形の分詞構文 Having＋過去分詞（Having lost my wallet）。否定は分詞の前に not を置く（Not knowing・Not having eaten）。主語が「される」側なら過去分詞から始める（Seen from the hill・Born in Kyoto）。主節と主語がちがうときは独立分詞構文（It being sunny）。慣用表現 Judging from ～・Compared with ～。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Not knowing what to say, she kept silent.', ja: '何と言えばよいかわからなかったので、彼女はだまっていた。' }],
+    questions: [
+      { sentence: '[Knowing not] what to say, she kept silent.', choices: ['Not knowing', 'Knowing no', 'Not known', 'No knowing'], answer: 0, why: '分詞構文の否定は not を分詞の前に置く。Not knowing。' },
+      { sentence: '[Having not] eaten anything, I felt hungry.', choices: ['Not having', 'Having no', 'Not have', 'Had not'], answer: 0, why: '完了形の分詞構文の否定は Not having＋過去分詞。' },
+      { sentence: '[Written] the letter, she went to the post office.', choices: ['Having written', 'Writing it', 'Wrote', 'Be written'], answer: 0, why: '手紙を書いたのは出かけるより前なので Having written。' },
+      { sentence: '[Seeing] from the hill, the town looks beautiful.', choices: ['Seen', 'Having seen', 'To see', 'Saw'], answer: 0, why: '町は「見られる」側なので過去分詞 Seen。' },
+      { sentence: '[Bearing] in Kyoto, she knows a lot about temples.', choices: ['Born', 'Having bore', 'Bear', 'Bore'], answer: 0, why: '「京都で生まれたので」は受け身の Born。' },
+      { sentence: '[Lost] my wallet, I had to walk home.', choices: ['Having lost', 'Losing it', 'Been lost', 'Lose'], answer: 0, why: 'さいふをなくしたのは歩いて帰るより前なので Having lost。' },
+      { sentence: '[Being] sunny, we went on a picnic.', choices: ['It being', 'Been', 'Be', 'It is being'], answer: 0, why: '天気（it）と主節の主語（we）がちがうので独立分詞構文 It being sunny。' },
+      { sentence: '[Comparing] with his brother, he is quiet.', choices: ['Compared', 'Having compared', 'Compare', 'To comparing'], answer: 0, why: '「～と比べると」は Compared with ～。' },
+      { sentence: '[Judged] from his accent, he is from Osaka.', choices: ['Judging', 'Judge', 'Having judged', 'Judgment'], answer: 0, why: '慣用表現 Judging from ～「～から判断すると」。' },
+      { sentence: '[Not been] invited, I stayed home.', choices: ['Not having been', 'Having not', 'Not have been', 'Been not'], answer: 0, why: '招かれなかったのが先なので完了形の受け身 Not having been invited。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
