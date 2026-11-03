@@ -5736,6 +5736,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The new bridge [is building] now.', choices: ['is being built', 'is built', 'has building', 'was build'], answer: 0, why: '「今建設中である」は進行形の受動態 is being built。' },
     ],
   },
+  {
+    id: 'exam-fix-134',
+    title: '入試の誤文訂正〈134〉（東大レベル：形容詞と副詞）',
+    points: ['hard（熱心に）と hardly（ほとんど～ない）、late（おそく）と lately（最近）、near（近くに）と nearly（ほとんど）は意味がまったくちがう。動詞をくわしくするのは副詞（speak clearly）、be動詞や look・sound・feel・taste・smell のあとは形容詞（look happy）。friendly・lovely・lonely は -ly で終わるが形容詞。enough は形容詞・副詞のあとに置く（old enough）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He worked hard, but he could hardly finish the job.', ja: '彼は熱心に働いたが、その仕事をほとんど終えられなかった。' }],
+    questions: [
+      { sentence: 'She studied [hardly] for the exam, so she passed easily.', choices: ['hard', 'hardness', 'more hardly', 'harder than'], answer: 0, why: '「熱心に勉強した」は study hard。hardly は「ほとんど～ない」。' },
+      { sentence: 'I could [hard] hear what he was saying because of the noise.', choices: ['hardly', 'hardest', 'harder', 'hard to'], answer: 0, why: '「ほとんど聞こえなかった」は hardly。' },
+      { sentence: 'Have you seen any good movies [late]?', choices: ['lately', 'later', 'latest', 'lateness'], answer: 0, why: '「最近」は lately（現在完了とよく使う）。' },
+      { sentence: 'It is [near] midnight, so we should go home.', choices: ['nearly', 'nearer', 'nearest', 'nearby to'], answer: 0, why: '「ほとんど真夜中（もうすぐ真夜中）」は nearly。near は「近くに」。' },
+      { sentence: 'Please speak more [clear] so that everyone can hear you.', choices: ['clearly', 'clearness', 'clearer than', 'clears'], answer: 0, why: '動詞 speak をくわしくするのは副詞。more clearly。' },
+      { sentence: 'The soup tastes [well]. Who made it?', choices: ['good', 'goodly', 'better than', 'goodness'], answer: 0, why: 'taste のあとは形容詞。tastes good。' },
+      { sentence: 'You look [happily] today. Did something good happen?', choices: ['happy', 'happiness', 'more happily', 'happier than'], answer: 0, why: 'look（～に見える）のあとは形容詞。look happy。' },
+      { sentence: 'He is [enough old] to drive a car.', choices: ['old enough', 'enough older', 'too old enough', 'oldly enough'], answer: 0, why: 'enough は形容詞のあとに置く。old enough。' },
+      { sentence: 'The staff at the hotel were very [friendlily].', choices: ['friendly', 'friend', 'friendship', 'friendliness'], answer: 0, why: 'friendly は -ly で終わる形容詞。were very friendly。' },
+      { sentence: 'The train arrived [lately] because of the snow.', choices: ['late', 'later than', 'latest', 'lateness'], answer: 0, why: '「おくれて着いた」は late（副詞）。lately は「最近」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
