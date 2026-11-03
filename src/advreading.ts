@@ -27980,6 +27980,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-silence',
+    title: 'The Meaning of Silence',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern life is filled with sound to a degree that would have astonished earlier generations. Traffic, machines, music in shops and restaurants, and the constant notifications of electronic devices accompany us from the moment we wake until we fall asleep, and many people now find complete silence uncomfortable, even frightening. Yet silence has been valued in many traditions as a condition for thought, prayer, and genuine attention to others, which raises the question of what we lose when we fill every quiet moment with noise.",
+      "It is tempting to think of silence simply as the absence of sound, a kind of emptiness that has no value in itself. But this view overlooks the role that silence plays in communication. In conversation, the pauses between words are as important as the words themselves; a pause can signal that a speaker is thinking, that a remark has been understood, or that something difficult is about to be said. A person who is never silent, who fills every gap in a conversation with talk, may be heard but is rarely listened to, because he or she leaves no room for the other person to respond.",
+      "Silence also has a role in the formation of thought. Many writers, scientists, and artists have reported that their most important ideas came to them not while they were working hard but during moments of quiet reflection, when the mind was free to wander. ( A ) constant stimulation keeps the mind occupied with whatever is presented to it, silence allows thoughts to arise that are not simply reactions to the outside world. In this sense, silence is not an empty space but a space in which something new can appear.",
+      "Different cultures, however, interpret silence in very different ways. In some societies, a long pause in conversation is regarded as awkward or even rude, a sign that the relationship has failed in some way, and people hurry to fill it. In others, silence is a sign of respect, of careful thought, or of a closeness so deep that words are unnecessary. These differences can lead to misunderstanding when people from different backgrounds meet, since the same silence may be read as hostility by one person and as courtesy by another.",
+      "Silence can also be used as a weapon. Refusing to speak to someone can be a way of punishing or excluding him or her, and institutions may keep silent about their failures in order to avoid responsibility. Those who are pressured into silence about injustice are not enjoying a peaceful quiet but suffering a kind of oppression. Any defense of silence must therefore distinguish between the silence that people choose freely and the silence that is imposed upon them by others.",
+      "Perhaps the most valuable kind of silence is the one that makes listening possible. To listen genuinely to another person, we must quiet not only our voices but also the inner noise of our own opinions and judgments, at least for a moment. This kind of silence is not passive; it requires effort and discipline, and it is a form of respect, since it acknowledges that the other person may have something to say that we do not already know.",
+      "In a world that rewards those who speak loudly and often, the ability to be silent at the right moments may seem old-fashioned. Yet it may be precisely this ability that allows us to think clearly, to understand others, and to hear what would otherwise be lost in the noise. Learning to value silence does not mean withdrawing from the world or refusing to speak; it means recognizing that speech gains much of its meaning from the quiet that surrounds it, just as music depends on the rests between its notes.",
+    ],
+    ja: [
+      '現代の生活は、それ以前の世代をおどろかせたであろうほど、音に満ちている。交通や機械、店やレストランの音楽、電子機器のたえまない通知が、目覚めた瞬間から眠りにつくまで私たちにつきまとい、今では多くの人が完全な静けさを居心地悪く、こわいとさえ感じる。しかし沈黙は、多くの伝統において、考えることや祈ることや他人に本当に注意を向けることの条件として大切にされてきた。そのことは、静かなひとときをすべて騒音でうめるとき、私たちが何を失っているのかという問いを生む。',
+      '沈黙を単に音がないこと、それ自体には何の価値もない一種の空っぽとして考えたくなる。しかしこの見方は、沈黙がコミュニケーションで果たす役割を見落としている。会話では、言葉と言葉のあいだの間は、言葉そのものと同じくらい大切である。間は、話し手が考えていることや、ある発言が理解されたことや、何かむずかしいことがこれから言われることを示しうる。決してだまらず、会話のすきまをすべておしゃべりでうめる人は、声は聞こえても、耳をかたむけてもらえることはめったにない。相手が答える余地を残さないからである。',
+      '沈黙は思考が形づくられることにも役割をもつ。多くの作家や科学者や芸術家は、最も大切な考えが、いっしょうけんめい働いているあいだではなく、心が自由にさまよう静かなふり返りのひとときにうかんだと語ってきた。たえまない刺激は、心をあたえられるものに何であれかかりきりにさせるが、沈黙は、単に外の世界への反応ではない考えが生まれることを可能にする。この意味で、沈黙は空っぽの空間ではなく、何か新しいものが現れうる空間なのである。',
+      'しかし、文化によって沈黙の受け取り方は大きくちがう。ある社会では、会話の長い間は気まずい、あるいは失礼でさえあるものとみなされ、関係が何らかの形でうまくいかなかったしるしとされて、人々は急いでそれをうめようとする。別の社会では、沈黙は敬意や、注意深い思考や、言葉がいらないほど深い親しさのしるしである。こうしたちがいは、ちがう背景をもつ人々が出会うとき誤解を生みうる。同じ沈黙が、ある人には敵意と、別の人には礼儀と読まれるかもしれないからである。',
+      '沈黙はまた武器として使われることもある。だれかと口をきかないことは、その人を罰したり仲間はずれにしたりする方法になりうるし、組織は責任をさけるために自らの失敗についてだまっていることがある。不正についてだまるよう圧力をかけられた人々は、おだやかな静けさを楽しんでいるのではなく、一種の抑圧に苦しんでいるのである。それゆえ沈黙を擁護するときは、人々が自由に選ぶ沈黙と、他人によっておしつけられる沈黙とを区別しなければならない。',
+      'おそらく最も価値のある種類の沈黙は、聞くことを可能にする沈黙である。他人の話に本当に耳をかたむけるには、私たちは声だけでなく、少なくとも一瞬は、自分自身の意見や判断という内なる騒音もしずめなければならない。この種の沈黙は受け身のものではない。それには努力と自制が必要であり、それは敬意の一つの形である。相手が、私たちのまだ知らない何かを言うかもしれないと認めることだからである。',
+      '大きな声でたびたび話す人がむくわれる世界では、ふさわしいときにだまっていられる能力は古くさく思えるかもしれない。しかし、私たちがはっきり考え、他人を理解し、そうでなければ騒音の中で失われてしまうものを聞くことを可能にしているのは、まさにこの能力なのかもしれない。沈黙を大切にすることを学ぶとは、世界から身を引いたり話すのをこばんだりすることではない。それは、音楽が音と音のあいだの休符にたよっているのと同じように、言葉がその意味の多くを、それを取りまく静けさから得ていると認めることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「たえまない刺激は心をかかりきりにさせるが、沈黙は新しい考えを可能にする」という対比の While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、会話の間は言葉そのものと同じくらい大切である。', answer: true, why: '第2段落 the pauses between words are as important as the words themselves。' },
+      { statement: '筆者によれば、どの文化でも会話の長い間は失礼とみなされる。', answer: false, why: '第4段落 In others, silence is a sign of respect ...（文化によってちがう）。' },
+      { statement: '筆者によれば、沈黙は人を罰したり仲間はずれにしたりするのに使われることもある。', answer: true, why: '第5段落 Silence can also be used as a weapon。' },
+      { statement: '筆者によれば、本当に聞くための沈黙は受け身で、努力はいらない。', answer: false, why: '第6段落 This kind of silence is not passive; it requires effort and discipline。' },
+    ],
+    qa: [
+      { q: 'Why may a person who is never silent rarely be listened to?', choices: ['He or she leaves no room for the other person to respond.', 'He or she speaks too quietly.', 'He or she only talks about the weather.', 'He or she always agrees with others.'], answer: 0, why: '第2段落 because he or she leaves no room for the other person to respond。' },
+      { q: 'What must a defense of silence distinguish, according to the fifth paragraph?', choices: ['Silence chosen freely and silence imposed by others.', 'Loud silence and quiet silence.', 'Silence in cities and silence in the country.', 'Silence of children and silence of adults.'], answer: 0, why: '第5段落 distinguish between the silence that people choose freely and the silence that is imposed upon them by others。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
