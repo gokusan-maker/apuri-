@@ -28898,6 +28898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-referees',
+    title: 'Should Machines Referee?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of the history of organized sport, the decisions of referees and umpires were final. A referee who missed a foul or wrongly judged a ball to be out might change the result of an important match, but such errors were accepted as part of the game. In recent decades, however, many sports have introduced technology to assist officials, from cameras that track the path of a ball to video systems that allow referees to review disputed decisions. These innovations have been welcomed by many as a way of making sport fairer, but they have also provoked debate about what sport is for and what might be lost when human judgment is replaced by machines.",
+      "The case for technology seems strong. In professional sport, enormous amounts of money and prestige may depend on a single decision, and television replays often reveal within seconds that an official has made a mistake that everyone watching at home can see. It seems absurd to allow an obvious error to determine the outcome of a championship when the means to correct it are readily available. Supporters argue that players, who devote years of effort to their sport, deserve to win or lose on the basis of their performance rather than the limitations of human eyesight.",
+      "Yet the introduction of technology has not been free of problems. Video reviews can interrupt the flow of a game, sometimes for several minutes, frustrating spectators and changing the rhythm that gives many sports their excitement. Moreover, technology does not eliminate judgment as completely as might be supposed. Deciding whether contact between two players was a foul, for example, often requires interpretation, and even after watching a replay several times, officials and viewers may disagree. ( A ) technology can settle questions of fact, such as whether a ball crossed a line, it is less helpful with questions that depend on interpretation and context.",
+      "Some critics also worry that the pursuit of perfect accuracy changes the character of sport. Part of the drama of a match, they suggest, lies in its uncertainty, including the possibility of human error, and the arguments that follow a controversial decision have long been part of the culture surrounding sport. A game in which every decision is checked and corrected may be more just, but it may also become more mechanical and less emotionally engaging.",
+      "There is also a question of fairness between different levels of sport. Expensive technology is available mainly at the highest professional levels, while amateur and youth competitions continue to rely entirely on human officials. As a result, the same sport may be played under different conditions depending on where and by whom it is played, and young players may grow up expecting a kind of accuracy that their own games cannot provide.",
+      "Many sports have tried to find a balance by limiting the use of technology to clear and obvious errors, or by allowing teams to request only a small number of reviews in each match. Such compromises attempt to preserve the flow and character of the game while preventing the most serious injustices. They reflect a recognition that the goal is not perfect accuracy at any cost but a game that players and spectators can regard as both fair and enjoyable.",
+      "The debate over technology in sport thus raises a broader question that appears in many areas of modern life: when machines can make judgments more accurately than people, should we always let them? The answer may depend on what we value in a particular activity, and in sport, accuracy is only one of those values. Others, such as excitement, tradition, and the shared experience of arguing over a close call, may be just as important to the people who play and watch.",
+    ],
+    ja: [
+      '組織化されたスポーツの歴史の大部分において、審判の判定は最終的なものだった。反則を見のがしたり、ボールがアウトだとまちがって判定したりした審判は、大切な試合の結果を変えてしまうこともあったが、そうした誤りは競技の一部として受け入れられていた。しかしここ数十年、多くのスポーツが、ボールの軌道を追うカメラから、審判が問題のある判定を見直せるビデオの仕組みまで、審判を助けるための技術を取り入れてきた。こうした新しいくふうは、スポーツをより公平にする方法として多くの人に歓迎されたが、スポーツとは何のためにあるのか、人間の判断が機械に取って代わられるとき何が失われるかもしれないのかについての議論も引き起こした。',
+      '技術を支持する主張は強力に見える。プロのスポーツでは、一つの判定にばく大なお金と名声がかかることがあり、テレビのリプレーは、家で見ているだれもがわかるまちがいを審判がしたことを、しばしば数秒のうちに明らかにする。それを正す手段がすぐ手に入るのに、明らかな誤りが選手権の結果を決めてしまうのを許すのはばかげているように思われる。支持する人々は、何年もの努力をスポーツにささげる選手は、人間の視力の限界ではなく、自分のプレーにもとづいて勝ったり負けたりするに値すると主張する。',
+      'しかし、技術の導入には問題がなかったわけではない。ビデオによる見直しは、ときに数分間も試合の流れを中断させ、観客をいらだたせ、多くのスポーツにわくわくする感じをあたえているリズムを変えてしまう。さらに技術は、思われているほど完全に判断をなくすわけではない。たとえば二人の選手のあいだの接触が反則かどうかを決めるには、しばしば解釈が必要であり、リプレーを何度か見たあとでも、審判と見る人とで意見が分かれることがある。技術は、ボールが線をこえたかどうかのような事実の問題には決着をつけられるが、解釈や状況によって決まる問題にはあまり役に立たないのである。',
+      'また、完ぺきな正確さを追い求めることがスポーツの性格を変えてしまうと心配する批判者もいる。試合のドラマの一部は、人間の誤りの可能性をふくめた不確かさにあり、議論を呼ぶ判定のあとに続く言い合いは、長いあいだスポーツを取りまく文化の一部だった、と彼らは示唆する。あらゆる判定が確かめられ、正される試合は、より公正かもしれないが、より機械的で、心をゆさぶらないものになるかもしれない。',
+      'スポーツのちがう水準のあいだの公平さという問題もある。高価な技術が使えるのは主に最高のプロの水準であり、アマチュアや若者の大会は今も完全に人間の審判にたよっている。その結果、同じスポーツが、どこでだれによって行われるかによってちがう条件のもとで行われることになり、若い選手は、自分の試合ではあたえられない種類の正確さを期待しながら育つかもしれない。',
+      '多くのスポーツは、技術の使用を明らかな誤りに限ったり、チームが一試合で求められる見直しの回数を少なくしたりすることで、つりあいを見つけようとしてきた。そうした妥協は、最も深刻な不公正を防ぎながら、競技の流れと性格を守ろうとするものである。それらは、目標がどんな代償をはらってでもの完ぺきな正確さではなく、選手も観客も公平で楽しいと思える試合であるという認識を反映している。',
+      'このように、スポーツにおける技術をめぐる議論は、現代の生活の多くの場面に現れるより広い問いを生む。機械が人間よりも正確に判断できるとき、私たちはいつも機械にまかせるべきなのだろうか。その答えは、ある活動において私たちが何を大切にしているかによるのかもしれず、スポーツにおいては、正確さはそうした価値の一つにすぎないのである。わくわくする感じや、伝統や、きわどい判定についていっしょに言い合う経験のようなほかの価値も、プレーする人や見る人にとっては同じくらい大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Unless', 'Because', 'Until'], answer: 0, why: '「技術は事実の問題には決着をつけられるが、解釈の問題には役に立たない」という対比の While。' },
+    ],
+    summary: {
+      text: 'Many sports now use technology to help referees, since obvious errors can be seen on replays. However, reviews can interrupt the ( 1 ) of a game, and some decisions still require ( 2 ). Critics also fear that sport may become more mechanical, and expensive technology is not available at ( 3 ) levels.',
+      blanks: [
+        { choices: ['flow', 'price', 'length', 'noise'], answer: 0, why: '第3段落 Video reviews can interrupt the flow of a game。' },
+        { choices: ['interpretation', 'money', 'training', 'luck'], answer: 0, why: '第3段落 often requires interpretation。' },
+        { choices: ['amateur', 'professional', 'national', 'international'], answer: 0, why: '第5段落 amateur and youth competitions continue to rely entirely on human officials。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、かつては審判の誤りは競技の一部として受け入れられていた。', answer: true, why: '第1段落 such errors were accepted as part of the game。' },
+      { statement: '筆者によれば、技術を使えば判断はすべてなくなる。', answer: false, why: '第3段落 technology does not eliminate judgment as completely as might be supposed。' },
+      { statement: '批判する人々によれば、試合のドラマの一部は不確かさにある。', answer: true, why: '第4段落 Part of the drama of a match ... lies in its uncertainty。' },
+      { statement: '筆者によれば、多くのスポーツはどんな代償をはらっても完ぺきな正確さを目標にしている。', answer: false, why: '第6段落 the goal is not perfect accuracy at any cost。' },
+    ],
+    qa: [
+      { q: 'Why do supporters think technology should be used in sport?', choices: ['Players deserve to win or lose on the basis of their performance, not officials’ errors.', 'Technology makes games longer.', 'Referees no longer want to work.', 'Spectators prefer watching replays.'], answer: 0, why: '第2段落 deserve to win or lose on the basis of their performance rather than the limitations of human eyesight。' },
+      { q: 'How have many sports tried to find a balance?', choices: ['By limiting technology to clear errors or limiting the number of reviews.', 'By removing all referees.', 'By banning television cameras.', 'By making every match shorter.'], answer: 0, why: '第6段落 limiting the use of technology to clear and obvious errors, or by allowing teams to request only a small number of reviews。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
