@@ -31022,6 +31022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-doubt',
+    title: 'The Uses of Doubt',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Doubt has an uncertain reputation. On the one hand, it is celebrated as the engine of inquiry: the scientist who doubts an accepted theory may discover something new, and the citizen who doubts official claims may expose a deception. On the other hand, doubt is often experienced as a burden, a source of anxiety and indecision that prevents us from acting. The person who doubts everything may never commit to anything, and a society in which no claim is trusted may find it impossible to cooperate. Doubt, it seems, can either liberate or paralyze.",
+      "Part of the difficulty is that doubt is not a single attitude but a family of attitudes. There is the methodical doubt of the philosopher, who deliberately questions every belief in order to discover which ones can withstand examination. There is the practical doubt of the careful person, who checks the facts before making an important decision. And there is a more corrosive kind of doubt, which refuses to accept any evidence as sufficient and treats every claim with equal suspicion, regardless of how well it is supported.",
+      "The first two kinds of doubt are essential to the growth of knowledge. Every advance in understanding begins with a question about something that was previously taken for granted. Yet doubt of this kind is always limited and purposeful: it questions particular beliefs while relying on others, and it aims at reaching a better conclusion rather than at remaining in uncertainty. ( A ) the scientist may doubt a particular theory, he or she must trust the instruments, the methods, and the results of earlier research in order to test it. Doubt that questioned everything at once would have nowhere to stand.",
+      "The corrosive kind of doubt, by contrast, often presents itself as a form of independent thinking while actually avoiding the work of judgment. To say that nothing can be known for certain is, in a trivial sense, true, but it does not follow that all claims are equally uncertain. The evidence that the earth orbits the sun is vastly stronger than the evidence for many claims that people readily accept. A person who treats both as equally doubtful has not achieved a higher level of skepticism but has abandoned the effort to distinguish good reasons from bad ones.",
+      "This distinction has become especially important in an age of abundant information. When anyone can find sources that seem to support almost any claim, it is tempting either to believe whatever confirms what one already thinks or to dismiss all sources as equally unreliable. Both responses are, in a sense, ways of escaping the demands of careful judgment. Genuine critical thinking requires something more difficult: the willingness to weigh evidence, to recognize degrees of reliability, and to accept conclusions that are well supported even when they are unwelcome.",
+      "Doubt also has an important place in moral and personal life. The person who never doubts his or her own judgments may become arrogant or cruel, unable to recognize when he or she has caused harm. A measure of self-doubt can be a sign of humility and an openness to correction. Yet too much self-doubt can prevent a person from acting on convictions that are sound, or from defending others who are being treated unjustly. Here, as elsewhere, the value of doubt depends on its proportion and its purpose.",
+      "Perhaps, then, the wise use of doubt lies in knowing when to doubt and when to stop doubting. Doubt is a tool for testing beliefs, not a permanent dwelling place. Used well, it clears away errors and opens the way to firmer understanding; used badly, it dissolves every conviction and leaves nothing in its place. The goal is not to eliminate doubt, nor to embrace it without limit, but to cultivate the judgment that allows us to doubt in the right way, about the right things, and to the right degree.",
+    ],
+    ja: [
+      '疑いの評判は定まっていない。一方で、それは探究の原動力としてたたえられる。受け入れられた理論を疑う科学者は新しいことを発見するかもしれず、公式の主張を疑う市民はごまかしをあばくかもしれない。他方で、疑いはしばしば重荷として、つまり行動するのをさまたげる不安と決断できなさのみなもととして経験される。すべてを疑う人は何にもかかわることがないかもしれず、どんな主張も信頼されない社会は、協力することが不可能になるかもしれない。疑いは、解放することも麻痺させることもありうるように思われる。',
+      'むずかしさの一部は、疑いが一つの態度ではなく、態度の一族だということにある。どの信念が吟味にたえられるかを見つけるために、わざとあらゆる信念を問い直す哲学者の方法的な疑いがある。重要な決定をする前に事実を確かめる、注意深い人の実際的な疑いがある。そして、どんな証拠も十分だと認めることをこばみ、どれほどよくささえられているかにかかわらず、あらゆる主張を等しく疑う、よりむしばむ種類の疑いがある。',
+      'はじめの二種類の疑いは、知識の成長に欠かせない。理解のあらゆる進歩は、それまで当たり前だと思われていた何かについての問いから始まる。しかしこの種の疑いはいつもかぎられ、目的をもっている。それはほかの信念にたよりながら特定の信念を問い直し、不確かさの中にとどまることではなく、よりよい結論に達することを目指している。科学者はある特定の理論を疑うかもしれないが、それを試すためには、器具や方法や以前の研究の結果を信頼しなければならない。すべてを一度に問い直す疑いには、立つ場所がないだろう。',
+      'それに対して、むしばむ種類の疑いは、しばしば独立した思考の一形態として現れながら、実際には判断という仕事をさけている。何も確実には知りえないと言うことは、つまらない意味では正しいが、だからといってあらゆる主張が等しく不確かだということにはならない。地球が太陽のまわりを回っているという証拠は、人々がたやすく受け入れる多くの主張の証拠よりもはるかに強い。両方を等しく疑わしいものとしてあつかう人は、より高い水準の懐疑に達したのではなく、よい理由と悪い理由を区別する努力を放棄したのである。',
+      'この区別は、情報があふれる時代にとくに重要になっている。だれでもほとんどどんな主張でもささえるように見える情報源を見つけられるとき、すでに考えていることを確かめてくれるものを何でも信じるか、あらゆる情報源を等しく信頼できないとして退けるか、どちらかにしたくなる。どちらの反応も、ある意味で、注意深い判断の求めから逃げる方法である。本当の批判的思考には、より困難なことが必要である。証拠をはかり、信頼性の程度を認め、たとえ歓迎できない結論でも、よくささえられた結論を受け入れようとする気持ちである。',
+      '疑いは、道徳的・個人的な生活でも大切な位置をしめている。自分の判断をけっして疑わない人は、ごうまんになったり残酷になったりし、自分が害をあたえたときにそれに気づけないかもしれない。ある程度の自分への疑いは、謙虚さと、正されることへの開かれた心のしるしになりうる。しかし自分を疑いすぎると、正しい確信にもとづいて行動したり、不当にあつかわれている人を守ったりすることができなくなるかもしれない。ここでも、ほかの場合と同じように、疑いの価値はそのつりあいと目的にかかっている。',
+      'それなら、疑いの賢明な使い方は、いつ疑い、いつ疑うのをやめるべきかを知ることにあるのかもしれない。疑いは信念を試すための道具であって、ずっと住み続ける場所ではない。うまく使えば、それはまちがいをとりのぞき、より確かな理解への道を開く。まずく使えば、それはあらゆる確信をとかし、そのあとに何も残さない。目標は疑いをなくすことでも、かぎりなく受け入れることでもなく、正しいやり方で、正しいことについて、正しい程度に疑うことを可能にする判断力を育てることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「科学者はある理論を疑うかもしれないが、器具や方法を信頼しなければならない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、疑いは一つの態度ではなく、態度の一族である。', answer: true, why: '第2段落 doubt is not a single attitude but a family of attitudes。' },
+      { statement: '筆者によれば、知識の成長に役立つ疑いは、すべてを一度に問い直す。', answer: false, why: '第3段落 it questions particular beliefs while relying on others。' },
+      { statement: '筆者によれば、何も確実に知りえないなら、すべての主張は等しく不確かである。', answer: false, why: '第4段落 it does not follow that all claims are equally uncertain。' },
+      { statement: '筆者によれば、ある程度の自分への疑いは謙虚さのしるしになりうる。', answer: true, why: '第6段落 A measure of self-doubt can be a sign of humility。' },
+    ],
+    qa: [
+      { q: 'What does genuine critical thinking require, according to the fifth paragraph?', choices: ['Weighing evidence and recognizing degrees of reliability.', 'Believing whatever confirms our views.', 'Dismissing all sources.', 'Avoiding all conclusions.'], answer: 0, why: '第5段落 the willingness to weigh evidence, to recognize degrees of reliability。' },
+      { q: 'How does the author describe doubt in the last paragraph?', choices: ['As a tool for testing beliefs, not a permanent dwelling place.', 'As something to eliminate.', 'As the goal of all thinking.', 'As useless in daily life.'], answer: 0, why: '第7段落 Doubt is a tool for testing beliefs, not a permanent dwelling place。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
