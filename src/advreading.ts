@@ -33822,6 +33822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-citizenship',
+    title: 'What Makes a Good Citizen?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the simplest sense, a citizen is a person who legally belongs to a particular state, possessing certain rights and obligations defined by law. Yet when we speak of a good citizen, we usually mean something more than legal membership. We think of someone who takes an interest in public affairs, respects others, contributes to the community, and participates in the decisions that shape common life. What exactly this involves, however, has been understood very differently in different times and places, and the question remains important for any society that hopes to govern itself.",
+      "One influential tradition emphasizes active participation. In this view, citizenship is not merely a status but an activity: a good citizen votes, attends public meetings, discusses political questions with others, and perhaps serves in public office. Self-government depends on such engagement, since a democracy in which few people take part may come to be controlled by a small and unrepresentative group. Participation is also thought to develop the citizen's own capacities, encouraging people to look beyond private interests and to consider the good of the community as a whole.",
+      "A different tradition places greater emphasis on rights and personal freedom. Here the primary role of the state is to protect individuals so that they can pursue their own goals, and the obligations of citizens are relatively limited: obeying the law, paying taxes, and respecting the rights of others. ( A ) this view may seem less demanding, its defenders argue that it better respects the variety of human lives, since not everyone wishes to devote time to politics, and a good life can be found in many other activities.",
+      "Both traditions capture something important, and modern societies often combine elements of each. Yet they also face new challenges. Many people today feel distant from political institutions, doubting that their participation makes any difference. Others belong to communities that cross national borders, through migration, international work, or online networks, so that their sense of belonging does not fit neatly within the boundaries of a single state. These developments raise the question of whether traditional ideas of citizenship remain adequate, or whether they must be extended to reflect the ways in which people now live and connect.",
+      "Some thinkers have argued that good citizenship today requires certain habits of mind rather than particular activities. These include the willingness to listen to people with different views, to evaluate information critically, to accept decisions one disagrees with when they have been reached fairly, and to work with others to solve common problems. Such habits are needed not only in formal politics but also in schools, workplaces, and neighborhoods, where much of the practical work of living together takes place.",
+      "Education is often seen as the key to developing such habits. Schools can teach students how political institutions work, but they can also give them experience of cooperation, debate, and responsibility, for example through student councils or community projects. Yet there is disagreement about how far schools should go. Some fear that civic education may become a means of encouraging particular political opinions, while others argue that a society that does not teach its young people how to participate cannot expect them to do so.",
+      "Perhaps the deepest question concerns the relationship between citizenship and belonging. To be a good citizen is, in part, to care about a community larger than oneself, and to accept some responsibility for its future. Yet communities are diverse, and their members disagree about many things. The challenge for modern societies is to cultivate a shared commitment to common institutions while respecting differences, so that citizenship becomes not a demand for uniformity but an invitation to take part in a continuing conversation about how to live together.",
+    ],
+    ja: [
+      '最も単純な意味では、市民とは特定の国家に法的に属し、法律で定められたある権利と義務をもつ人のことである。しかし、よい市民について語るとき、私たちはふつう法的な成員であること以上のものを意味している。公の事がらに関心をもち、他人を尊重し、共同体に貢献し、共通の生活を形づくる決定に参加する人を思いうかべるのである。しかし、これが正確に何をふくむのかは、時代や場所によってまったくちがって理解されてきており、この問いは、自分たちで自分たちを治めたいと願うどんな社会にとっても大切なままである。',
+      '影響力のある一つの伝統は、積極的な参加を強調する。この見方では、市民であることは単なる身分ではなく活動である。よい市民は投票し、公の集会に出席し、ほかの人々と政治の問題を話し合い、ひょっとすると公職につく。自治はそのような関与に頼っている。ほとんどの人が参加しない民主主義は、小さく代表的でない集団に支配されるようになるかもしれないからである。参加はまた、市民自身の能力を育て、人々が私的な利益をこえて、共同体全体の善を考えるようはげますとも考えられている。',
+      '別の伝統は、権利と個人の自由により大きな重きを置く。ここでは国家の主な役割は、個人が自分の目標を追い求められるように守ることであり、市民の義務は比較的限られている。法律を守り、税をはらい、他人の権利を尊重することである。この見方はそれほど多くを求めないように思えるかもしれないが、すべての人が政治に時間をささげたいと思うわけではなく、よい人生はほかの多くの活動の中にも見いだせるのだから、この見方のほうが人間の生活の多様さをよりよく尊重していると擁護する人々は主張する。',
+      'どちらの伝統も大切な何かをとらえており、現代の社会はしばしば両方の要素を組み合わせている。しかし、それらは新しい課題にも直面している。今日、多くの人々は政治の制度から遠いと感じ、自分の参加が何かちがいを生むのかを疑っている。また、移住や国際的な仕事やネット上のつながりを通じて国境をこえる共同体に属し、その所属の感覚が一つの国家の境界の中にきちんとおさまらない人々もいる。こうした変化は、伝統的な市民の考え方が今も十分なのかという問いを提起している。あるいは、人々が今暮らし、つながっているしかたを反映するように広げられなければならないのか、という問いである。',
+      '今日のよい市民であることには、特定の活動よりも、ある種の心の習慣が必要だと主張する思想家もいる。そこには、ちがう意見をもつ人々に耳をかたむけ、情報を批判的に評価し、公正に下された決定には賛成できなくても受け入れ、共通の問題を解決するためにほかの人々と協力しようとする気持ちがふくまれる。そうした習慣は、正式な政治の場だけでなく、ともに生きるための実際的な仕事の多くが行われる学校や職場や地域でも必要である。',
+      '教育はしばしば、そうした習慣を育てるかぎだと考えられている。学校は政治の制度がどうはたらくかを生徒に教えることができるが、たとえば生徒会や地域の取り組みを通じて、協力や討論や責任の経験をあたえることもできる。しかし、学校がどこまで行うべきかについては意見が分かれている。市民教育が特定の政治的な意見をうながす手段になるのではないかとおそれる人もいれば、若者に参加のしかたを教えない社会は、彼らが参加することを期待できないと主張する人もいる。',
+      'おそらく最も深い問いは、市民であることと所属することとの関係にかかわっている。よい市民であるとは、一部には、自分より大きな共同体を気にかけ、その未来にある程度の責任を引き受けることである。しかし共同体は多様であり、その成員は多くのことについて意見がちがう。現代の社会の課題は、ちがいを尊重しながら共通の制度への共有されたかかわりを育て、市民であることが画一性の要求ではなく、どうともに生きるかについての続いていく会話への参加の誘いになるようにすることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この見方はそれほど多くを求めないように思えるかもしれないが、多様さをよりよく尊重している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '積極的な参加を強調する伝統では、市民であることは単なる身分ではなく活動である。', answer: true, why: '第2段落 citizenship is not merely a status but an activity。' },
+      { statement: '権利を強調する伝統では、市民の義務はとても多い。', answer: false, why: '第3段落 the obligations of citizens are relatively limited。' },
+      { statement: '今日、多くの人々は政治の制度から遠いと感じている。', answer: true, why: '第4段落 Many people today feel distant from political institutions。' },
+      { statement: '学校がどこまで市民教育を行うべきかについて、全員の意見が一致している。', answer: false, why: '第6段落 there is disagreement about how far schools should go。' },
+    ],
+    qa: [
+      { q: 'Why does self-government depend on active participation?', choices: ['A democracy with little participation may be controlled by a small group.', 'Participation is required by law everywhere.', 'Only experts can vote.', 'Politics is a form of entertainment.'], answer: 0, why: '第2段落 a democracy in which few people take part may come to be controlled by a small and unrepresentative group。' },
+      { q: 'What do some thinkers say good citizenship requires today?', choices: ['Certain habits of mind such as listening and evaluating information critically.', 'Living in only one country.', 'Avoiding all disagreement.', 'Holding public office.'], answer: 0, why: '第5段落 requires certain habits of mind rather than particular activities。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
