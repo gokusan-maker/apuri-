@@ -2575,6 +2575,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M14 50 Q10 56 16 60 L24 56 Z" fill="#e0f2fe" stroke="#164e63" strokeWidth="2" />
       </g>
     )
+  if (species === 'shrimpfish')
+    return (
+      <g>
+        {/* さかだちの体の黒いすじ */}
+        <path d="M40 16 L40 84" stroke="#78350f" strokeWidth="3" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
