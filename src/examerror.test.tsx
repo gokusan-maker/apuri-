@@ -2521,3 +2521,10 @@ it('正誤問題〈183〉：京大レベル seem to と完了不定詞の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) being')
 })
+
+it('誤文訂正〈177〉：東大レベル 目的表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-177')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('so that she could catch')
+})

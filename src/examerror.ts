@@ -7542,6 +7542,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The room was [enough large] for twenty people.', choices: ['large enough', 'too large enough', 'enough largely', 'so large enough'], answer: 0, why: 'enough は形容詞のあと。large enough for twenty people。' },
     ],
   },
+  {
+    id: 'exam-fix-177',
+    title: '入試の誤文訂正〈177〉（東大レベル：英作文の目的表現 so that・in order to・so as not to）',
+    points: ['「～するために」は in order to do・so as to do・so that S can（will）do。否定の目的「～しないように」は in order not to do・so as not to do・so that S will not do（for fear of ～ing・lest S should do も書き言葉で使う）。not の位置は to の前（not to do）。so that のあとは主語＋助動詞（can・will・may）＋動詞の原形がふつう。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She left early so that she could catch the first train.', ja: '彼女は始発に乗れるように早く出た。' }],
+    questions: [
+      { sentence: 'She left early [so that catch] the first train.', choices: ['so that she could catch', 'so as catching', 'in order that catch', 'so to catch'], answer: 0, why: 'so that のあとは主語＋助動詞＋原形。so that she could catch。' },
+      { sentence: 'I studied hard [in order to not fail] the exam.', choices: ['in order not to fail', 'in order to failing not', 'not in order to fail', 'in order to fail not'], answer: 0, why: '否定の目的は not を to の前に置く。in order not to fail。' },
+      { sentence: 'He spoke quietly [so as to not wake] the baby.', choices: ['so as not to wake', 'so not as to wake', 'so as to wake not', 'not so as to wake'], answer: 0, why: 'so as not to do「～しないように」。' },
+      { sentence: 'We took a taxi [in order that] get there on time.', choices: ['in order to', 'so that to', 'for to', 'in order for'], answer: 0, why: 'あとに動詞の原形が続くので in order to。in order that なら主語＋動詞が必要。' },
+      { sentence: 'Write it down [so that you not forget] it.', choices: ['so that you will not forget', 'so that not forget', 'in order that not to forget', 'so you not to forget'], answer: 0, why: 'so that ＋主語＋will not ＋原形。' },
+      { sentence: 'She saved money [for buy] a new bicycle.', choices: ['to buy', 'for buying it', 'so buy', 'in order buy'], answer: 0, why: '目的は to 不定詞。to buy。for のあとに動詞の原形は来ない。' },
+      { sentence: 'He hurried [so that he can catch] the bus yesterday.', choices: ['so that he could catch', 'so that he catches', 'in order that he can', 'so as he could catch'], answer: 0, why: '過去の話なので so that he could catch。' },
+      { sentence: 'Turn off the light [in order for saving] energy.', choices: ['in order to save', 'for to save', 'so that saving', 'in order saving'], answer: 0, why: 'in order to ＋原形。in order to save energy。' },
+      { sentence: 'I wore a coat [so as not catching] a cold.', choices: ['so as not to catch', 'so as to not catching', 'not so as to catch', 'so that not catch'], answer: 0, why: 'so as not to ＋原形。' },
+      { sentence: 'They whispered [so that nobody hear] them.', choices: ['so that nobody would hear', 'in order nobody to hear', 'so as nobody hear', 'for nobody hearing'], answer: 0, why: 'so that のあとは主語＋助動詞＋原形。過去の話なので would hear。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
