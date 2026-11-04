@@ -32942,6 +32942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-indifference',
+    title: 'The Problem of Indifference',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We are often moved by the suffering of a single person whose story we hear in detail, yet we may remain strangely unmoved by reports of disasters that affect thousands or even millions. A photograph of one child in danger can inspire a flood of donations, while statistics describing far greater suffering pass almost unnoticed. This pattern suggests that our capacity for concern is not simply proportional to the scale of a problem. Understanding why we become indifferent, and whether such indifference is excusable, is a question of both psychological and moral importance.",
+      "One explanation lies in the way human attention and emotion work. Our feelings respond most strongly to what is concrete, close, and personal. A named individual with a face and a history engages our imagination in a way that an abstract number cannot. As the number of victims increases, our ability to picture their suffering does not increase with it; instead, the individuals seem to dissolve into a mass, and our emotional response may even weaken. In this sense, indifference may be less a sign of cruelty than a limitation of the human mind.",
+      "Distance also plays a role. People tend to feel stronger obligations toward family, friends, and members of their own community than toward strangers in distant lands. Some philosophers regard this tendency as natural and even appropriate, since close relationships involve special responsibilities. Others argue that the suffering of a stranger is no less real than that of a neighbor, and that geographical distance cannot by itself justify ignoring it. ( A ) we cannot feel equally for everyone, they insist, we can still recognize that everyone's suffering matters equally.",
+      "Indifference can also arise from a sense of helplessness. When problems seem enormous and complex, individuals may conclude that nothing they do could make a difference, and so they turn away. This reaction is understandable, but it can become self-fulfilling: if everyone believes that their efforts are useless, few efforts will be made, and the problem will indeed remain unsolved. Psychologists have found that people are more likely to help when they are shown a specific action they can take and the concrete effect it will have.",
+      "Modern communication presents a paradox in this respect. We now receive more information about distant suffering than any previous generation, yet the constant flow of distressing news may lead not to greater concern but to a kind of emotional fatigue. Faced with endless images of crisis, people may protect themselves by ceasing to pay attention. The very abundance of information that could make us more aware may thus make us more indifferent, unless we learn to receive it in ways that leave room for reflection and response.",
+      "Is indifference, then, a moral failing? It would be unreasonable to expect anyone to feel intense concern for every person who suffers, since such a burden would be impossible to bear. Yet this does not mean that we are free to ignore suffering altogether. Moral responsibility may depend less on the strength of our feelings than on our willingness to act on what we know, even when our emotions are weak. Reason can sometimes correct the limitations of feeling, reminding us of obligations that our emotions fail to register.",
+      "Perhaps the most practical response to indifference is to build habits and institutions that do not depend entirely on moments of strong emotion. Regular giving, support for organizations that work on large problems, and political decisions that take the interests of distant people into account can all help to address suffering that our feelings alone would overlook. Recognizing the limits of our sympathy is not a reason for despair, but an invitation to find other ways of caring for those whom we will never meet.",
+    ],
+    ja: [
+      '私たちは、くわしく話を聞いたひとりの人の苦しみにはしばしば心を動かされるが、何千人、さらには何百万人もの人々に影響する災害の報告には奇妙なほど心を動かされないままでいることがある。危険にさらされたひとりの子どもの写真は寄付をあふれるほど集めうるが、はるかに大きな苦しみを表す統計はほとんど気づかれずに過ぎていく。この型は、私たちの関心をいだく能力が、問題の規模に単純に比例しているわけではないことを示している。私たちがなぜ無関心になるのか、そしてそのような無関心は許されるのかを理解することは、心理学的にも道徳的にも重要な問いである。',
+      '一つの説明は、人間の注意と感情のはたらき方にある。私たちの感情は、具体的で、近くて、個人的なものに最も強く反応する。顔と過去をもつ名前のあるひとりの人は、抽象的な数にはできないしかたで私たちの想像力をかき立てる。犠牲者の数がふえても、その苦しみを思いえがく私たちの能力はそれとともにふえはしない。むしろ、一人ひとりがかたまりの中にとけてしまうように思われ、私たちの感情の反応は弱まりさえするかもしれない。この意味で、無関心は残酷さのしるしというよりも、人間の心の限界なのかもしれない。',
+      '距離も一つの役割を果たしている。人々は、遠い国の見知らぬ人々よりも、家族や友人や自分の共同体の成員に対して強い義務を感じる傾向がある。親しい関係には特別な責任がともなうので、この傾向を自然であり、ふさわしくさえあるとみなす哲学者もいる。ほかの哲学者は、見知らぬ人の苦しみは隣人の苦しみと同じように現実のものであり、地理的な距離だけではそれを無視することを正当化できないと主張する。すべての人に同じように感じることはできなくても、すべての人の苦しみが同じように大切だと認めることはできると、彼らは強く主張する。',
+      '無関心は、無力感から生じることもある。問題が巨大で複雑に思われるとき、個人は自分のすることは何のちがいも生まないと結論して、目をそむけるかもしれない。この反応は理解できるが、それは自己成就的になりうる。だれもが自分の努力はむだだと信じれば、努力はほとんどなされず、問題は本当に解決されないままになるだろう。心理学者たちは、自分にとれる具体的な行動とそれがもつ具体的な効果を示されると、人々は助けようとしやすくなることを見いだしている。',
+      'この点で、現代のコミュニケーションは逆説を示している。私たちは今、遠くの苦しみについて、これまでのどの世代よりも多くの情報を受けとっているが、苦しいニュースの絶え間ない流れは、より大きな関心ではなく、一種の感情の疲れにつながるかもしれない。危機の映像が終わりなく続くのを前にして、人々は注意を向けるのをやめることで自分を守るかもしれない。こうして、私たちをより敏感にしうるはずの情報のあふれるほどの多さそのものが、私たちをより無関心にするのかもしれない。ふり返りとこたえる余地を残すような受けとり方を学ばないかぎりは。',
+      'それでは、無関心は道徳的な欠点なのだろうか。そのような重荷は耐えられないだろうから、苦しむすべての人に強い関心を感じることをだれかに期待するのは無理だろう。しかし、それは私たちが苦しみをまったく無視してよいということではない。道徳的な責任は、感情の強さよりも、感情が弱いときでさえ、知っていることにもとづいて行動しようとする気持ちにかかっているのかもしれない。理性は時に感情の限界を正し、感情が気づきそこなう義務を思い出させてくれる。',
+      'おそらく無関心への最も実際的なこたえは、強い感情の瞬間に全面的には頼らない習慣や制度を作ることだろう。定期的な寄付、大きな問題に取り組む団体へのささえ、そして遠くの人々の利益を考えに入れる政治的な決定は、どれも、感情だけでは見落としてしまう苦しみに取り組む助けになりうる。自分の同情の限界を認めることは絶望の理由ではなく、けっして会うことのない人々を気づかうほかの方法を見つけるようにという誘いなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「すべての人に同じように感じることはできなくても、苦しみが同じように大切だと認められる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、私たちの関心は問題の規模に単純に比例している。', answer: false, why: '第1段落 our capacity for concern is not simply proportional to the scale of a problem。' },
+      { statement: '私たちの感情は、具体的で近くて個人的なものに最も強く反応する。', answer: true, why: '第2段落 Our feelings respond most strongly to what is concrete, close, and personal。' },
+      { statement: '具体的な行動を示されると、人々は助けようとしやすくなる。', answer: true, why: '第4段落 people are more likely to help when they are shown a specific action。' },
+      { statement: '筆者によれば、苦しむすべての人に強い関心を感じることを期待するのは当然である。', answer: false, why: '第6段落 It would be unreasonable to expect anyone to feel intense concern for every person。' },
+    ],
+    qa: [
+      { q: 'What may the constant flow of distressing news lead to?', choices: ['A kind of emotional fatigue.', 'Greater concern for everyone.', 'More donations every day.', 'The end of all crises.'], answer: 0, why: '第5段落 may lead not to greater concern but to a kind of emotional fatigue。' },
+      { q: 'What does the author suggest as a practical response to indifference?', choices: ['Building habits and institutions that do not depend on strong emotion.', 'Avoiding all news.', 'Caring only for family.', 'Waiting for strong feelings.'], answer: 0, why: '第7段落 build habits and institutions that do not depend entirely on moments of strong emotion。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
