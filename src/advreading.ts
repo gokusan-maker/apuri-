@@ -32622,6 +32622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-comparison',
+    title: 'The Habit of Comparison',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few habits of mind are as natural, or as troublesome, as the habit of comparing ourselves with others. We judge our income against that of our neighbors, our appearance against that of people we see in advertisements, and our achievements against those of former classmates. Such comparisons often take place almost automatically, before we have consciously decided to make them. Yet the conclusions we draw from them can shape our happiness, our ambitions, and our sense of who we are to a remarkable degree.",
+      "Psychologists have long argued that comparison serves an important purpose. In many areas of life, there is no objective standard by which we can measure our abilities or opinions. We may wonder, for example, how good a singer we really are, or whether our view of a difficult political question is reasonable. In the absence of clear measures, we look to others to find out where we stand. Comparison, in this sense, is a way of gaining information about ourselves, and without it we might have little idea of our own strengths and weaknesses.",
+      "The direction of comparison, however, makes a great difference. When we compare ourselves with those who seem better off, we may feel inspired to improve, but we may also feel inadequate and resentful. When we compare ourselves with those who seem worse off, we may feel grateful or reassured, but we may also become complacent or even contemptuous. ( A ) comparison can motivate us, its emotional effects are unpredictable, and they depend heavily on whom we choose as the standard. The same person may feel proud in one group and ashamed in another, although nothing about him or her has changed.",
+      "One of the most striking findings about comparison is that it can make people unhappy even when their circumstances improve. A person who receives a large raise may feel satisfied until he or she learns that a colleague received a larger one. Studies of happiness across societies suggest that once basic needs are met, people's satisfaction depends less on how much they have than on how much they have relative to others. If everyone becomes richer at the same rate, no one may feel any happier. This helps to explain why economic growth alone has often failed to make wealthy societies noticeably more content.",
+      "Modern life has greatly multiplied the opportunities for comparison. In small communities of the past, people compared themselves mainly with neighbors whose lives were broadly similar to their own. Today, through television and social media, we are constantly exposed to images of people who appear more successful, more beautiful, and more fortunate than we are. Since these images are often carefully selected and edited, the comparisons they invite are not only frequent but also distorted, making our own lives seem dull by contrast.",
+      "How, then, should we deal with this habit? It would be neither possible nor desirable to stop comparing altogether, since comparison is part of how we learn and grow. But we may be able to choose our comparisons more wisely. Comparing ourselves with our own past selves, rather than with others, can reveal genuine progress without encouraging envy. Recognizing that what we see of other people's lives is only a small and often flattering part of the whole can also reduce the sting of unfavorable comparisons.",
+      "Perhaps the deepest response to the problem of comparison lies in clarifying what we ourselves value. A person who knows what makes his or her own life meaningful is less likely to be disturbed by the achievements of others, because those achievements are measured against different goals. Comparison will always be with us, but it need not rule us. By understanding why we compare and choosing carefully what we compare, we may turn a source of anxiety into a means of self-understanding.",
+    ],
+    ja: [
+      '自分を他人とくらべる習慣ほど、自然で、しかもやっかいな心の習慣はほとんどない。私たちは、自分の収入を近所の人々の収入と、自分の見た目を広告で目にする人々の見た目と、自分の成果をかつての同級生の成果とくらべて判断する。こうした比較は、意識してそうしようと決める前に、ほとんど自動的に行われることが多い。しかし、そこから引き出す結論は、私たちの幸福や野心や、自分がだれであるかという感覚を、おどろくほど形づくりうる。',
+      '心理学者たちは長いあいだ、比較は大切な目的に役立っていると主張してきた。人生の多くの分野では、自分の能力や意見をはかる客観的な基準がない。たとえば、自分は本当はどれくらい歌がうまいのか、あるむずかしい政治の問題についての自分の見方は理にかなっているのか、と思うことがあるかもしれない。はっきりした基準がないとき、私たちは自分がどこに立っているかを知るために他人に目を向ける。この意味で、比較は自分についての情報を得る方法であり、それがなければ、私たちは自分の長所や短所についてほとんどわからないかもしれない。',
+      'しかし、比較の方向は大きなちがいを生む。自分よりめぐまれているように見える人々と自分をくらべると、向上しようとはげまされるかもしれないが、自分が不十分だと感じたり、うらんだりするかもしれない。自分よりめぐまれていないように見える人々とくらべると、感謝したり安心したりするかもしれないが、満足しきったり、相手を見下したりさえするかもしれない。比較は私たちをやる気にさせることもあるが、その感情への影響は予測できず、だれを基準に選ぶかに大きく左右される。同じ人が、その人自身は何も変わっていないのに、ある集団では誇らしく感じ、別の集団でははずかしく感じることもある。',
+      '比較についての最もおどろくべき発見の一つは、状況がよくなっているときでさえ、比較が人々を不幸にしうるということである。大きな昇給を受けた人は、同僚がもっと大きな昇給を受けたと知るまでは満足しているかもしれない。さまざまな社会の幸福についての研究は、基本的な必要が満たされると、人々の満足は、どれだけもっているかよりも、他人にくらべてどれだけもっているかにかかっていることを示している。全員が同じ割合で豊かになれば、だれも少しも幸せに感じないかもしれない。このことは、経済成長だけでは、豊かな社会がはっきりと満足するようにならないことが多かった理由を説明する助けになる。',
+      '現代の生活は、比較の機会を大きくふやした。昔の小さな共同体では、人々はおもに、生活が自分とだいたい似ている近所の人々と自分をくらべていた。今日では、テレビやソーシャルメディアを通じて、私たちは、自分より成功し、美しく、めぐまれているように見える人々の姿にたえずさらされている。こうした姿はしばしば注意深く選ばれ、手を加えられているので、それがうながす比較はひんぱんであるだけでなくゆがんでもおり、対照的に自分の生活を退屈に見せてしまう。',
+      'それでは、この習慣にどう対処すればよいのだろうか。比較することをまったくやめるのは、可能でもなく望ましくもないだろう。比較は私たちが学び成長するしかたの一部だからである。しかし、比較をもっと賢く選ぶことはできるかもしれない。他人とではなく過去の自分とくらべることは、ねたみをうながすことなく本当の進歩を明らかにしうる。他人の生活について私たちが見ているのは、全体のうちの小さな、しばしば見ばえのよい一部にすぎないと認めることも、不利な比較の痛みをやわらげうる。',
+      'おそらく比較の問題への最も深いこたえは、自分自身が何を大切にしているかをはっきりさせることにある。何が自分の人生を意味あるものにしているかを知っている人は、他人の成果に心を乱されにくい。それらの成果はちがう目標に照らしてはかられているからである。比較はいつも私たちとともにあるだろうが、それに支配される必要はない。なぜ比較するのかを理解し、何をくらべるかを注意深く選ぶことで、私たちは不安の源を自己理解の手段に変えられるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「比較はやる気にさせることもあるが、感情への影響は予測できない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、比較はほとんど自動的に行われることが多い。', answer: true, why: '第1段落 Such comparisons often take place almost automatically。' },
+      { statement: '心理学者たちは、比較には何の目的もないと主張してきた。', answer: false, why: '第2段落 comparison serves an important purpose。' },
+      { statement: '研究によれば、基本的な必要が満たされると、満足は他人にくらべてどれだけもっているかにかかっている。', answer: true, why: '第4段落 on how much they have relative to others。' },
+      { statement: '筆者は、比較することをまったくやめるべきだと主張している。', answer: false, why: '第6段落 It would be neither possible nor desirable to stop comparing altogether。' },
+    ],
+    qa: [
+      { q: 'Why are comparisons in modern media often distorted?', choices: ['The images are often carefully selected and edited.', 'People never look at the media.', 'The images are always old.', 'The media shows only ordinary people.'], answer: 0, why: '第5段落 these images are often carefully selected and edited。' },
+      { q: 'What kind of comparison can reveal genuine progress without encouraging envy?', choices: ['Comparing ourselves with our own past selves.', 'Comparing ourselves with famous people.', 'Comparing ourselves with our neighbors.', 'Comparing ourselves with advertisements.'], answer: 0, why: '第6段落 Comparing ourselves with our own past selves。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
