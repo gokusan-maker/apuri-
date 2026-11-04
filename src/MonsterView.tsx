@@ -2703,6 +2703,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 52 L8 56" stroke="#3f2a06" strokeWidth="4" strokeLinecap="round" />
       </g>
     )
+  if (species === 'potoroo')
+    return (
+      <g>
+        {/* 小さなキノコ */}
+        <path d="M70 80 Q76 70 82 80 Z" fill="#f87171" stroke="#4a2f1a" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
