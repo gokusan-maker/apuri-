@@ -2606,6 +2606,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="31" cy="34" r="3" fill="#365314" />
       </g>
     )
+  if (species === 'lanternfish')
+    return (
+      <g>
+        {/* 体にならぶ光る点 */}
+        <circle cx="30" cy="62" r="2.5" fill="#7dd3fc" />
+        <circle cx="40" cy="64" r="2.5" fill="#7dd3fc" />
+        <circle cx="50" cy="64" r="2.5" fill="#7dd3fc" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
