@@ -33218,6 +33218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-content-moderation',
+    title: 'Who Decides What Can Be Said Online?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, billions of messages, images, and videos are posted on social media platforms. Most of this content is harmless, but a portion of it is false, hateful, or dangerous, ranging from rumors about public health to threats of violence. Platforms have responded by developing rules about what users may post and by removing content that breaks those rules, using a combination of computer programs and human reviewers. These decisions, often called content moderation, have become one of the most controversial issues of the digital age, raising difficult questions about freedom of expression and responsibility.",
+      "Supporters of active moderation argue that platforms have a duty to limit the harm caused by what they distribute. False information about medical treatments, for example, may lead people to make dangerous choices, while campaigns of harassment can drive individuals away from public life. Since platforms design the systems that decide which posts are shown to millions of people, supporters say, they cannot claim to be neutral channels. They should therefore take responsibility for removing or limiting content that clearly causes harm.",
+      "Critics, however, worry that moderation gives private companies enormous power over public debate. A small number of firms now control the spaces in which much political discussion takes place, and their decisions about what to remove are often made quickly, with little explanation and limited opportunity for appeal. ( A ) platforms may act with good intentions, critics argue that it is dangerous for unelected companies to decide which opinions may be heard, especially when the boundaries between false information, honest mistakes, and unpopular views are not always clear.",
+      "The difficulty is increased by the sheer scale of the task. No company can review every post by hand, so much moderation is carried out by automated systems that search for prohibited words or images. Such systems can process vast quantities of material, but they often fail to understand context, irony, or cultural differences. As a result, they may remove harmless content, such as news reports about violence or jokes among friends, while missing harmful posts that are written in ways the systems do not recognize.",
+      "Governments in several countries have begun to introduce laws that require platforms to remove illegal content within a certain time or to explain their moderation rules more clearly. Supporters see such laws as a way to make platforms accountable to the public rather than only to their shareholders. Yet critics warn that government involvement carries its own risks. In some countries, laws described as protecting citizens from harmful content have been used to silence journalists and political opponents, showing how easily the language of safety can serve the purposes of censorship.",
+      "Some observers suggest that the debate should focus less on removing content and more on how platforms promote it. Much of the harm associated with social media arises not from the existence of harmful posts but from systems that spread them widely because they attract attention. Changing these systems, for instance by reducing the visibility of sensational content or giving users more control over what they see, might reduce harm without requiring platforms to decide in every case what is true or acceptable.",
+      "There is no simple solution to the problem of content moderation. Too little moderation may allow harm to spread, while too much may restrict legitimate expression and concentrate power in the hands of a few. What seems essential is that decisions be made according to clear rules, that those affected be able to challenge them, and that the public have some way to understand and influence how these powerful systems work. The question of who decides what can be said online is, in the end, a question about the kind of public sphere a democratic society needs.",
+    ],
+    ja: [
+      '毎日、何十億ものメッセージや画像や動画がソーシャルメディアのサービスに投稿されている。その大部分は害がないが、一部は、公衆衛生についてのうわさから暴力のおどしにいたるまで、うそだったり、憎しみに満ちていたり、危険だったりする。サービスの運営会社は、利用者が投稿してよいものについての規則を作り、コンピュータのプログラムと人間の審査員を組み合わせて、その規則に反する投稿を削除することで対応してきた。しばしばコンテンツ・モデレーションと呼ばれるこうした判断は、表現の自由と責任についてのむずかしい問いを引き起こし、デジタル時代の最も議論の多い問題の一つになっている。',
+      '積極的なモデレーションを支持する人々は、運営会社には自分が広めるものが引き起こす害を限る義務があると主張する。たとえば、医療についてのうその情報は人々を危険な選択に導くかもしれず、いやがらせの運動は個人を公の生活から追い出しうる。運営会社はどの投稿を何百万もの人々に見せるかを決める仕組みを設計しているのだから、中立な通り道だと主張することはできないと支持する人々は言う。したがって、明らかに害をもたらす投稿を削除したり制限したりする責任を負うべきなのである。',
+      'しかし批判する人々は、モデレーションが私企業に公の議論に対するばく大な力をあたえることを心配する。今ではごく少数の企業が、多くの政治的な議論が行われる空間を支配しており、何を削除するかについての判断は、しばしばすばやく、ほとんど説明なしに、不服を申し立てる機会もかぎられたまま下される。運営会社はよい意図で行動しているかもしれないが、とくにうその情報と正直なまちがいと人気のない意見との境界がいつもはっきりしているわけではないときに、選挙で選ばれていない企業がどの意見を聞かせてよいかを決めるのは危険だと批判する人々は主張する。',
+      'このむずかしさは、仕事の規模の大きさによっていっそう増している。どの会社もすべての投稿を手で審査することはできないので、モデレーションの多くは、禁止されたことばや画像を探す自動化された仕組みによって行われている。そうした仕組みはばく大な量の素材を処理できるが、しばしば文脈や皮肉や文化のちがいを理解できない。その結果、暴力についてのニュースの報道や友人どうしの冗談のような害のない投稿を削除する一方で、仕組みが認識できない書き方をした有害な投稿を見のがすことがある。',
+      'いくつかの国の政府は、運営会社に一定の時間内に違法な投稿を削除させたり、モデレーションの規則をよりはっきり説明させたりする法律を取り入れ始めている。支持する人々は、こうした法律を、運営会社を株主だけでなく一般の人々に対して責任を負うようにする方法とみなしている。しかし批判する人々は、政府がかかわることにもそれなりの危険があると警告する。いくつかの国では、有害な投稿から市民を守ると説明された法律が、記者や政治的な反対者をだまらせるために使われてきた。安全ということばがいかにかんたんに検閲の目的に役立ちうるかを示しているのである。',
+      '議論は、投稿を削除することよりも、運営会社がそれをどう広めているかに焦点を当てるべきだと示唆する観察者もいる。ソーシャルメディアに結びつけられる害の多くは、有害な投稿があることからではなく、注目を集めるという理由でそれを広く広める仕組みから生じている。たとえば、扇情的な投稿を目立たなくしたり、利用者が見るものをもっと自分で決められるようにしたりしてこうした仕組みを変えれば、運営会社が何が真実で何が受け入れられるかを一つひとつ決めなくても、害を減らせるかもしれない。',
+      'コンテンツ・モデレーションの問題に単純な解決はない。モデレーションが少なすぎれば害が広がるかもしれず、多すぎれば正当な表現を制限し、少数の手に力を集中させるかもしれない。大切に思われるのは、判断がはっきりした規則にしたがって下されること、影響を受けた人々がそれに異をとなえられること、そして一般の人々がこうした強力な仕組みのはたらきを理解し、それに影響をあたえる何らかの方法をもつことである。ネット上で何を言ってよいかをだれが決めるのかという問いは、結局のところ、民主的な社会にどんな公共の場が必要かという問いなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「運営会社はよい意図で行動しているかもしれないが、危険だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that platforms have a duty to limit the ( 1 ) caused by what they distribute. Critics worry that moderation gives private companies too much power and that automated systems often fail to understand ( 2 ). Some suggest focusing less on removing content and more on how platforms ( 3 ) it.',
+      blanks: [
+        { choices: ['harm', 'profit', 'speed', 'cost'], answer: 0, why: '第2段落 a duty to limit the harm caused by what they distribute。' },
+        { choices: ['context', 'numbers', 'colors', 'music'], answer: 0, why: '第4段落 they often fail to understand context, irony, or cultural differences。' },
+        { choices: ['promote', 'delete', 'translate', 'sell'], answer: 0, why: '第6段落 more on how platforms promote it。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によれば、運営会社は中立な通り道だと主張できる。', answer: false, why: '第2段落 they cannot claim to be neutral channels。' },
+      { statement: '削除の判断は、しばしばほとんど説明なしに下される。', answer: true, why: '第3段落 often made quickly, with little explanation。' },
+      { statement: '自動化された仕組みは、害のない投稿を削除することがある。', answer: true, why: '第4段落 they may remove harmless content。' },
+      { statement: '筆者によれば、コンテンツ・モデレーションの問題には単純な解決がある。', answer: false, why: '第7段落 There is no simple solution to the problem of content moderation。' },
+    ],
+    qa: [
+      { q: 'What risk do critics see in government involvement?', choices: ['Laws may be used to silence journalists and opponents.', 'Governments may close all platforms.', 'Platforms may become cheaper.', 'Users may post more often.'], answer: 0, why: '第5段落 have been used to silence journalists and political opponents。' },
+      { q: 'Where does much of the harm associated with social media arise, according to some observers?', choices: ['From systems that spread harmful posts widely.', 'From the cost of smartphones.', 'From the number of users.', 'From laws about free speech.'], answer: 0, why: '第6段落 from systems that spread them widely because they attract attention。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
