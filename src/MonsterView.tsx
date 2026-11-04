@@ -2499,6 +2499,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 52 Q14 46 16 62 Q24 64 30 58 M70 52 Q86 46 84 62 Q76 64 70 58" fill="#e5e5e5" stroke="#525252" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'eggcowry')
+    return (
+      <g>
+        {/* 貝がらをつつむ黒い外とう膜 */}
+        <path d="M28 60 Q50 76 72 60" fill="none" stroke="#292524" strokeWidth="4" strokeLinecap="round" />
+        <path d="M40 66 L38 72 M50 68 L50 76 M60 66 L62 72" fill="none" stroke="#292524" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
