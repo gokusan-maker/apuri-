@@ -30258,6 +30258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-teacher-evaluations',
+    title: 'Should Students Grade Their Teachers?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "At the end of a course, many universities ask students to complete a short questionnaire about their teachers. Students rate how clearly the material was explained, how well the teacher organized the course, and whether they would recommend it to others. In some institutions, these ratings play a significant role in decisions about which teachers are promoted, which receive permanent positions, and which are asked to leave. The practice has spread to many secondary schools as well. Yet although student evaluations are now common, their value remains a subject of intense debate among researchers, teachers, and students themselves.",
+      "Supporters argue that students are in a unique position to judge teaching. They attend every class, experience the teacher's explanations directly, and know whether they have understood the material. A teacher who speaks too quickly, who rarely answers questions, or who returns assignments months late may never be observed doing so by colleagues, but students will notice at once. Evaluations, in this view, give students a voice in their own education and provide teachers with feedback that can help them to improve, while also making institutions more accountable to those whom they are supposed to serve.",
+      "Critics, however, point to a growing body of research suggesting that student ratings measure many things besides the quality of teaching. Studies have found that students tend to give higher ratings to courses in which they expect to receive good grades, to teachers whom they find entertaining or physically attractive, and to classes held at convenient times. Some research has even found that ratings are only weakly related to how much students actually learn, as measured by their performance in later courses. If this is so, using evaluations to judge teachers may reward popularity rather than effective instruction.",
+      "More troubling still are findings that ratings can reflect prejudice. Several studies have reported that female teachers and teachers from minority backgrounds receive lower ratings than their colleagues, even when the content and quality of their teaching are the same. In one kind of experiment, students in online courses rated an instructor more highly when they believed the instructor was a man than when they believed she was a woman, although the instructor was in fact the same person. ( A ) such results do not prove that every evaluation is biased, they raise serious doubts about relying on ratings when making decisions about people's careers.",
+      "There is also concern that evaluations can change teaching for the worse. Teachers who know that their careers depend partly on student satisfaction may be tempted to make their courses easier, to grade more generously, or to avoid challenging material that students find uncomfortable. Over time, such pressures could lower academic standards and discourage the kind of demanding teaching that, although unpopular at the moment, students may later come to value. Learning, critics observe, is sometimes difficult, and a good teacher is not always the one who makes students feel most comfortable.",
+      "Supporters do not deny these problems, but they argue that the solution is to improve evaluations rather than to abandon them. Questionnaires can be redesigned to focus on specific, observable behaviors, such as whether feedback was returned promptly, rather than on general impressions. Ratings can be combined with other forms of evidence, including observation by colleagues and examples of students' work, so that no single measure determines a teacher's future. Institutions can also be made aware of known biases and take them into account when interpreting the results.",
+      "The debate over student evaluations reflects a broader difficulty in measuring the quality of any complex human activity. Teaching involves not only the transmission of information but also the encouragement of curiosity, the setting of high standards, and the slow development of skills whose benefits may not be visible for years. No simple questionnaire can capture all of this. Yet the opinions of students, if gathered carefully and interpreted with caution, remain a valuable source of insight. The challenge is to listen to them without allowing them to become the only measure of what good teaching is.",
+    ],
+    ja: [
+      '授業の終わりに、多くの大学は学生に先生についての短いアンケートに答えるよう求める。学生は、内容がどれほどわかりやすく説明されたか、先生がどれほどうまく授業を組み立てたか、その授業をほかの人にすすめるかどうかを評価する。いくつかの機関では、こうした評価は、どの先生が昇進し、どの先生が終身の地位を得て、どの先生がやめるよう求められるかの決定に大きな役割を果たす。この習慣は多くの中学・高校にも広がった。しかし、学生による評価は今では一般的になっているものの、その価値は研究者や先生や学生自身のあいだで、はげしい議論の的であり続けている。',
+      '支持する人々は、学生は授業を判断するのに特別な立場にいると主張する。学生はすべての授業に出席し、先生の説明を直接経験し、自分が内容を理解したかどうかを知っている。話すのが速すぎたり、質問にめったに答えなかったり、課題を何か月もおくれて返したりする先生は、同僚にそうしているところを見られることはないかもしれないが、学生はすぐに気づくだろう。この見方では、評価は学生に自分の教育について発言権をあたえ、先生に向上の助けとなる意見をあたえ、同時に機関を、仕えるはずの人々に対してより責任あるものにするのである。',
+      'しかし批判する人々は、学生の評価が授業の質以外の多くのものをはかっていることを示す研究がふえていることを指摘する。研究によれば、学生は、よい成績がもらえそうな授業や、おもしろいと思ったり見た目が魅力的だと思ったりする先生や、都合のよい時間に行われる授業に、より高い評価をつける傾向がある。評価は、のちの授業での成績ではかった、学生が実際にどれほど学んだかとわずかにしか関係していないことを見いだした研究さえある。もしそうなら、評価を使って先生を判断することは、効果的な教え方ではなく人気にむくいることになるかもしれない。',
+      'さらに気がかりなのは、評価が偏見を反映しうるという発見である。いくつかの研究は、授業の内容と質が同じであっても、女性の先生や少数派の背景をもつ先生は、同僚より低い評価を受けると報告している。ある種の実験では、オンライン授業の学生は、講師が男性だと思ったときのほうが、女性だと思ったときよりも高く評価したが、講師は実際には同じ人物だった。こうした結果は、すべての評価にかたよりがあることを証明するわけではないが、人の職業についての決定をするときに評価にたよることに、深刻な疑いを投げかける。',
+      '評価が授業を悪い方向に変えうるという懸念もある。自分の職業が学生の満足に一部かかっていると知っている先生は、授業をやさしくしたり、成績を甘くつけたり、学生が居心地悪く感じるむずかしい内容をさけたりしたくなるかもしれない。時がたつにつれて、そうした圧力は学問の水準を下げ、その時は人気がなくても学生があとになって価値を認めるようになるかもしれない、きびしい授業をしにくくするかもしれない。学ぶことはときにむずかしく、よい先生がいつも学生を最も居心地よくさせる先生だとはかぎらない、と批判する人々は述べる。',
+      '支持する人々はこうした問題を否定しないが、解決策は評価をやめることではなく、よくすることだと主張する。アンケートは、全体的な印象ではなく、意見がすぐに返されたかどうかのような、具体的で観察できる行動に焦点を当てるよう作り直せる。評価は、同僚による観察や学生の作品の例など、ほかの形の証拠と組み合わせることができ、そうすればただ一つの尺度が先生の将来を決めることはなくなる。機関はまた、知られているかたよりを知らされ、結果を解釈するときにそれを考えに入れることもできる。',
+      '学生による評価をめぐる議論は、どんな複雑な人間の活動であれ、その質をはかることのより広いむずかしさを反映している。教えることには、情報を伝えることだけでなく、好奇心をはげますことや、高い水準を設けることや、その恩恵が何年も目に見えないかもしれない技能をゆっくりのばすことがふくまれる。どんな単純なアンケートも、このすべてをとらえることはできない。しかし学生の意見は、注意深く集められ、慎重に解釈されるなら、価値ある洞察のみなもとであり続ける。課題は、それがよい授業とは何かを決める唯一の尺度にならないようにしながら、それに耳をかたむけることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「すべての評価にかたよりがあることを証明するわけではないが、深刻な疑いを投げかける」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say students are well placed to judge teaching and that evaluations give them a ( 1 ). Critics reply that ratings reflect expected grades and even ( 2 ), and may push teachers to make courses easier. Supporters propose combining ratings with other ( 3 ) such as observation by colleagues.',
+      blanks: [
+        { choices: ['voice', 'salary', 'holiday', 'grade'], answer: 0, why: '第2段落 Evaluations ... give students a voice in their own education。' },
+        { choices: ['prejudice', 'kindness', 'weather', 'silence'], answer: 0, why: '第4段落 findings that ratings can reflect prejudice。' },
+        { choices: ['evidence', 'rumors', 'prizes', 'rules'], answer: 0, why: '第6段落 Ratings can be combined with other forms of evidence。' },
+      ],
+    },
+    tf: [
+      { statement: '学生による評価は、昇進などの決定に大きな役割を果たすことがある。', answer: true, why: '第1段落 these ratings play a significant role in decisions about which teachers are promoted。' },
+      { statement: '研究によれば、評価は学生が実際に学んだ量と強く結びついている。', answer: false, why: '第3段落 ratings are only weakly related to how much students actually learn。' },
+      { statement: 'ある実験では、同じ講師が男性だと思われたときのほうが高く評価された。', answer: true, why: '第4段落 rated an instructor more highly when they believed the instructor was a man。' },
+      { statement: '支持する人々は、評価をやめるべきだと主張している。', answer: false, why: '第6段落 the solution is to improve evaluations rather than to abandon them。' },
+    ],
+    qa: [
+      { q: 'What might teachers be tempted to do if their careers depend on student satisfaction?', choices: ['Make their courses easier.', 'Give more difficult tests.', 'Stop grading entirely.', 'Teach only at night.'], answer: 0, why: '第5段落 may be tempted to make their courses easier。' },
+      { q: 'What kind of questions do supporters suggest questionnaires should focus on?', choices: ['Specific, observable behaviors.', 'General impressions only.', 'The teacher\u2019s appearance.', 'The time of the class.'], answer: 0, why: '第6段落 focus on specific, observable behaviors。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
