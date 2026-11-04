@@ -33538,6 +33538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-campaign-funding',
+    title: 'Should the Public Pay for Election Campaigns?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Running for public office has become increasingly expensive in many democracies. Candidates must pay for advertising, travel, staff, and events, and in some countries the total cost of a national election campaign reaches enormous sums. Most of this money comes from private donations, whether from individuals, companies, or organized groups. Critics argue that this dependence on private money gives wealthy donors excessive influence over politics, and some have proposed that campaigns should instead be funded mainly by the public, through taxes. The proposal raises fundamental questions about fairness, freedom, and the health of democratic institutions.",
+      "Supporters of public funding argue first that it would reduce the influence of wealthy interests. When politicians depend on donations to win elections, they may feel obliged to listen more carefully to those who can give large amounts than to ordinary voters. Even if no explicit promises are made, the need to raise money may shape which issues candidates emphasize and which they avoid. Public funding, supporters say, would allow elected officials to focus on the needs of all citizens rather than those of their financial backers. It might also reduce the time politicians spend asking for money, time that could instead be spent studying problems and meeting voters.",
+      "Supporters also emphasize the effect on who can run for office. Under a system based on private donations, candidates with wealthy friends or personal fortunes have a large advantage, while talented people without such connections may never be able to compete. ( A ) public funding would cost taxpayers money, supporters argue that it would widen the range of people who can take part in politics, making elected bodies more representative of the society they serve.",
+      "Critics, however, raise several objections. Some argue that it is wrong to force taxpayers to fund candidates whose views they oppose. Others worry about how public money would be distributed. If funding is based on past election results, established parties may be favored over new movements; if it is given equally to all candidates, the system may encourage people with little real support to run simply to receive money. Designing rules that are fair to all may be extremely difficult. Any system would also need to be protected against misuse, which itself requires money and careful supervision.",
+      "There is also a question of whether public funding would actually reduce the influence of money. In many countries, groups that are not officially connected with candidates may still spend large sums on advertising for or against them. If public funding limited only the spending of candidates, private money might simply move to these other channels, which are often less transparent. Critics argue that, in such cases, public funding could make the influence of money harder to see without making it any weaker.",
+      "Several countries have adopted mixed systems that try to combine the advantages of both approaches. Some provide public funds that match small private donations, encouraging candidates to seek support from many ordinary citizens rather than a few wealthy donors. Others set limits on the size of private contributions and require that all donations be publicly reported. Evidence from these systems suggests that design matters a great deal: the same principle can produce very different results depending on the details of how it is applied.",
+      "The debate over campaign funding ultimately concerns the relationship between economic power and political equality. In a democracy, each citizen is supposed to have an equal voice, yet the ability to contribute money is distributed very unequally. Whether public funding is the best answer may be debated, but the question encourages citizens to consider how elections can remain contests of ideas and values rather than competitions to raise money, and what reforms might bring political influence closer to the democratic ideal.",
+    ],
+    ja: [
+      '多くの民主主義国で、公職に立候補することはますます費用のかかるものになっている。候補者は広告や移動やスタッフや催しのためにお金をはらわなければならず、国によっては全国的な選挙運動の総費用がばく大な額にのぼる。このお金のほとんどは、個人や会社や組織された集団からの、民間の寄付から来ている。批判する人々は、民間のお金へのこの依存が裕福な寄付者に政治への過度の影響力をあたえていると主張し、選挙運動はかわりに、おもに税金を通じて公の費用でまかなわれるべきだと提案する人々もいる。この提案は、公平さや自由や、民主的な制度の健全さについての根本的な問いを提起している。',
+      '公的な資金を支持する人々は、まずそれが裕福な利害関係者の影響力を減らすと主張する。政治家が選挙に勝つために寄付に頼っているとき、ふつうの有権者よりも、多額を寄付できる人々の言うことをよく聞かなければならないと感じるかもしれない。はっきりした約束がされなくても、お金を集める必要のために、候補者がどの問題を強調しどの問題をさけるかが形づくられるかもしれない。公的な資金があれば、選ばれた公職者は、資金を出す人々の必要ではなく、すべての市民の必要に集中できるだろうと支持する人々は言う。それはまた、政治家がお金を頼むのに使う時間を減らすかもしれず、その時間はかわりに問題を研究したり有権者に会ったりするのに使えるだろう。',
+      '支持する人々はまた、だれが立候補できるかへの影響を強調する。民間の寄付にもとづく制度のもとでは、裕福な友人や個人の財産をもつ候補者が大きく有利であり、そのようなつながりのない才能ある人々はけっして競えないかもしれない。公的な資金は納税者のお金を使うが、政治に参加できる人々の幅を広げ、選ばれた機関を、それが仕える社会をよりよく代表するものにするだろうと支持する人々は主張する。',
+      'しかし批判する人々は、いくつかの反対をあげる。納税者に、自分が反対する意見をもつ候補者の資金を出させるのはまちがいだと主張する人もいる。公のお金がどう配られるのかを心配する人もいる。資金が過去の選挙結果にもとづくなら、既存の政党が新しい運動より有利になるかもしれず、すべての候補者に同じようにあたえられるなら、本当のささえがほとんどない人がお金を受けとるためだけに立候補するのをうながすかもしれない。すべての人に公平な規則を作るのはきわめてむずかしいかもしれない。また、どんな制度も悪用から守られる必要があり、そのこと自体にお金と注意深い監督が必要になる。',
+      '公的な資金が本当にお金の影響を減らすのかという疑問もある。多くの国では、候補者と公式にはつながっていない集団が、候補者を支持したり反対したりする広告に多額を使うことができる。公的な資金が候補者の支出だけを制限するなら、民間のお金は単に、しばしば透明性の低いこうした別の通り道に移るだけかもしれない。そのような場合、公的な資金はお金の影響を少しも弱めずに、それを見えにくくするだけかもしれないと批判する人々は主張する。',
+      'いくつかの国は、両方のやり方の利点を組み合わせようとする混合の制度を取り入れている。少額の民間の寄付に合わせて公的な資金を出し、候補者が少数の裕福な寄付者ではなく多くのふつうの市民からささえを求めるようはげます国もある。民間の寄付の大きさに上限を設け、すべての寄付を公に報告することを求める国もある。こうした制度からの証拠は、設計がとても大切であることを示している。同じ原則でも、それがどう適用されるかの細部によって、まったくちがう結果を生みうるのである。',
+      '選挙資金をめぐる議論は、結局のところ、経済的な力と政治的な平等との関係にかかわっている。民主主義では、それぞれの市民が平等な声をもつはずだが、お金を出す能力はとても不平等に配られている。公的な資金が最もよい答えかどうかは議論されるかもしれないが、この問いは市民に、選挙がお金を集める競争ではなく、考えと価値観の競い合いであり続けるにはどうすればよいか、そしてどんな改革が政治的な影響力を民主主義の理想に近づけるかを考えるようはげましてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「公的な資金は納税者のお金を使うが、参加できる人の幅を広げる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that public funding would reduce the influence of wealthy ( 1 ) and allow more kinds of people to run for office. Critics worry about forcing taxpayers to fund views they oppose and about how money would be ( 2 ). Evidence from mixed systems suggests that the ( 3 ) of a system matters a great deal.',
+      blanks: [
+        { choices: ['donors', 'voters', 'students', 'workers'], answer: 0, why: '第1段落 gives wealthy donors excessive influence over politics。' },
+        { choices: ['distributed', 'printed', 'saved', 'borrowed'], answer: 0, why: '第4段落 Others worry about how public money would be distributed。' },
+        { choices: ['design', 'name', 'age', 'color'], answer: 0, why: '第6段落 design matters a great deal。' },
+      ],
+    },
+    tf: [
+      { statement: '選挙運動のお金のほとんどは民間の寄付から来ている。', answer: true, why: '第1段落 Most of this money comes from private donations。' },
+      { statement: '支持する人々によれば、寄付の制度のもとでは裕福なつながりのない人がかならず有利である。', answer: false, why: '第3段落 candidates with wealthy friends or personal fortunes have a large advantage。' },
+      { statement: '公的な資金は、民間のお金を透明性の低い通り道に移すだけかもしれない。', answer: true, why: '第5段落 private money might simply move to these other channels, which are often less transparent。' },
+      { statement: 'どの国も民間の寄付の大きさに上限を設けていない。', answer: false, why: '第6段落 Others set limits on the size of private contributions。' },
+    ],
+    qa: [
+      { q: 'What might happen if public funds were given equally to all candidates?', choices: ['People with little support might run just to receive money.', 'No one would run for office.', 'Elections would be cancelled.', 'Taxes would disappear.'], answer: 0, why: '第4段落 may encourage people with little real support to run simply to receive money。' },
+      { q: 'How do some systems encourage candidates to seek support from many ordinary citizens?', choices: ['By providing public funds that match small donations.', 'By banning all donations.', 'By paying voters.', 'By limiting the number of candidates.'], answer: 0, why: '第6段落 provide public funds that match small private donations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
