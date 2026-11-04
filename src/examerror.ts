@@ -3938,6 +3938,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The company, (A) whose (B) president (C) resigned, (D) are in trouble.', choices: ['(A) whose', '(B) president', '(C) resigned,', '(D) are in trouble'], answer: 3, why: '主語は The company（単数）なので is in trouble。' },
     ],
   },
+  {
+    id: 'exam-error-dangling-kyodai',
+    title: '入試の正誤問題〈166〉（京大レベル：分詞構文の意味上の主語のずれ（懸垂分詞）と独立分詞構文）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文の意味上の主語は、ふつう主節の主語と同じ。ずれる（懸垂分詞）とまちがい（Walking along the street, a noise was heard は×）。主語がちがうときは分詞の前に主語を置く独立分詞構文（It being a rainy day・The sun having set・There being no bus）。主語が「される」側なら過去分詞（Seen from the plane・all things considered）。慣用表現 generally speaking・judging from ～・weather permitting。',
+    ],
+    examples: [
+      { en: 'Walking along the street, I heard a strange noise.', ja: '通りを歩いていると、奇妙な音が聞こえた。' },
+      { en: 'The sun having set, the children went home.', ja: '日が沈んだので、子どもたちは家に帰った。' },
+    ],
+    questions: [
+      { sentence: '(A) Walking along the street, (B) a strange noise (C) was heard (D) by me.', choices: ['(A) Walking along the street,', '(B) a strange noise', '(C) was heard', '(D) by me'], answer: 1, why: '歩いていたのは「私」なので、主節の主語は I（I heard a strange noise）。分詞構文の主語と主節の主語をそろえる。' },
+      { sentence: '(A) Being a rainy day, (B) we (C) stayed (D) at home.', choices: ['(A) Being a rainy day,', '(B) we', '(C) stayed', '(D) at home'], answer: 0, why: '雨の日なのは we ではなく天気なので、独立分詞構文 It being a rainy day。' },
+      { sentence: '(A) Having finished the work, (B) he (C) turning on (D) the TV.', choices: ['(A) Having finished the work,', '(B) he', '(C) turning on', '(D) the TV'], answer: 2, why: '主節には文の動詞が必要。he turned on the TV。' },
+      { sentence: 'Weather (A) permitted, (B) we (C) will go (D) hiking tomorrow.', choices: ['(A) permitted,', '(B) we', '(C) will go', '(D) hiking tomorrow'], answer: 0, why: '慣用表現 weather permitting「天気がよければ」。' },
+      { sentence: '(A) All things (B) considering, (C) the plan (D) was a success.', choices: ['(A) All things', '(B) considering,', '(C) the plan', '(D) was a success'], answer: 1, why: '「すべてのことが考慮されると」なので過去分詞 all things considered。' },
+      { sentence: '(A) There being (B) no bus, (C) us (D) walked home.', choices: ['(A) There being', '(B) no bus,', '(C) us', '(D) walked home'], answer: 2, why: '主節の主語なので主格 we。' },
+      { sentence: '(A) Generally (B) spoken, (C) Japanese people (D) are polite.', choices: ['(A) Generally', '(B) spoken,', '(C) Japanese people', '(D) are polite'], answer: 1, why: '慣用表現 generally speaking「一般的に言えば」。' },
+      { sentence: '(A) Seeing from the plane, (B) the island (C) looks (D) like a heart.', choices: ['(A) Seeing from the plane,', '(B) the island', '(C) looks', '(D) like a heart'], answer: 0, why: '島は「見られる」側なので過去分詞 Seen from the plane。' },
+      { sentence: '(A) The sun (B) set, (C) the children (D) went home.', choices: ['(A) The sun', '(B) set,', '(C) the children', '(D) went home'], answer: 1, why: '独立分詞構文にするので The sun having set。set のままだと2つの文がコンマでつながってしまう。' },
+      { sentence: '(A) Judging from (B) his face, (C) he (D) must be angry yesterday.', choices: ['(A) Judging from', '(B) his face,', '(C) he', '(D) must be angry yesterday'], answer: 3, why: 'yesterday の過去のことを推量するので must have been angry。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
