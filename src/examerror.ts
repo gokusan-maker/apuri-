@@ -7332,6 +7332,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Television has a strong influence [to] children.', choices: ['on', 'for', 'at', 'of'], answer: 0, why: 'influence on ～「～への影響」。' },
     ],
   },
+  {
+    id: 'exam-fix-172',
+    title: '入試の誤文訂正〈172〉（京大レベル：不定詞の形容詞的用法と前置詞 a house to live in）',
+    points: ['名詞のあとに置いて「～するための・～すべき」と説明する不定詞（形容詞的用法）では、もとの文で必要な前置詞を最後に残す。live in a house → a house to live in・write with a pen → a pen to write with・talk to a friend → a friend to talk to・sit on a chair → a chair to sit on。名詞が不定詞の目的語になる場合は前置詞は不要（a book to read）。something to drink・nothing to do のように -thing のあとにも置ける。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'They are looking for a house to live in.', ja: '彼らは住む家を探している。' }],
+    questions: [
+      { sentence: 'They are looking for a house [to live].', choices: ['to live in', 'to live it', 'living to', 'to be lived'], answer: 0, why: 'live in a house なので a house to live in。' },
+      { sentence: 'Please lend me a pen [to write].', choices: ['to write with', 'to write it', 'writing with', 'for writing it'], answer: 0, why: 'write with a pen「ペンで書く」なので a pen to write with。' },
+      { sentence: 'I have no friends [to talk].', choices: ['to talk to', 'to talk them', 'talking', 'to be talked'], answer: 0, why: 'talk to a friend なので friends to talk to（with も可）。' },
+      { sentence: 'There are no chairs [to sit].', choices: ['to sit on', 'to sit them', 'sitting', 'to be sat'], answer: 0, why: 'sit on a chair なので chairs to sit on。' },
+      { sentence: 'I need a book [to read it] on the train.', choices: ['to read', 'to read in', 'reading it', 'for read'], answer: 0, why: 'a book は read の目的語なので it はいらない。a book to read。' },
+      { sentence: 'Would you like something cold [drinking]?', choices: ['to drink', 'to drink it', 'drink', 'drunk'], answer: 0, why: '-thing ＋形容詞＋to 不定詞。something cold to drink。' },
+      { sentence: 'She has nothing [to worry].', choices: ['to worry about', 'worrying', 'to worry it', 'worry about'], answer: 0, why: 'worry about ～「～を心配する」なので nothing to worry about。' },
+      { sentence: 'He needs a knife [to cut the meat].', choices: ['to cut the meat with', 'cutting the meat with it', 'to cut with the meat', 'cut the meat'], answer: 0, why: 'cut the meat with a knife なので a knife to cut the meat with。' },
+      { sentence: 'This is a good place [to play].', choices: ['to play in', 'to play it', 'playing at it', 'to be played'], answer: 0, why: 'play in a place なので a good place to play in（in を省くことも多いが、試験では in を残す形が正解）。' },
+      { sentence: 'Give me a sheet of paper [to write].', choices: ['to write on', 'to write it', 'writing in', 'to be written'], answer: 0, why: 'write on paper「紙に書く」なので a sheet of paper to write on。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
