@@ -31182,6 +31182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-maturity',
+    title: 'What Does It Mean to Grow Up?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many societies, the passage from childhood to adulthood was once marked by clear events. A young person might leave school, begin work, marry, and set up a household within a few years, and ceremonies publicly announced that he or she had become an adult. Today these markers have become blurred. Education lasts longer, careers begin later, and many people live with their parents well into their twenties or thirties. The age at which the law recognizes adulthood may say little about whether a person feels, or is regarded by others as, truly grown up. What, then, does it mean to become an adult?",
+      "One common answer emphasizes independence. To be an adult, on this view, is to support oneself financially, to make one's own decisions, and to take responsibility for their consequences. There is much to this answer, but it is incomplete. Independence in the narrow sense of not relying on others is neither possible nor desirable for anyone; even the most self-sufficient adult depends on countless other people for food, safety, and companionship. A person who boasted of needing no one would seem not mature but strangely deluded.",
+      "A more promising answer focuses on responsibility. The child is cared for by others; the adult takes on the care of others and of shared concerns. Becoming an adult, in this sense, means moving from being primarily a recipient of care to being also a giver of it, whether as a parent, a colleague, a citizen, or a friend. ( A ) this transition may be marked by external events, such as the birth of a child or the first job, it is ultimately a change in how a person understands his or her place among others.",
+      "Maturity also involves a particular relationship with one's own emotions and desires. Children often act on their immediate feelings, while adults are expected to be able to delay satisfaction, to consider the interests of others, and to act according to long-term purposes rather than momentary impulses. Yet maturity does not mean the suppression of feeling. An adult who has lost the capacity for enthusiasm, wonder, or spontaneous joy may be controlled, but he or she is not necessarily mature. The goal is not to stop feeling but to understand one's feelings and to act wisely in light of them.",
+      "Another dimension of adulthood is the acceptance of limits. Young people often imagine that every possibility remains open, that they might become anything and live any kind of life. Growing up involves recognizing that choices exclude other choices, that time is finite, and that some hopes will not be fulfilled. This recognition can be painful, but it also brings a kind of freedom: by committing to particular paths and people, adults can achieve a depth of experience that is impossible for someone who keeps every option open.",
+      "It would be a mistake, however, to think of adulthood as a final state that, once reached, never changes. People continue to develop throughout their lives, and each stage brings new challenges that require new kinds of maturity. The person who becomes a parent, faces serious illness, or cares for an aging relative may discover capacities and limitations that he or she had never suspected. In this sense, growing up is less a single event than a lifelong process of learning how to live well with others and with oneself.",
+      "Perhaps, then, the blurring of traditional markers of adulthood is not entirely a loss. When adulthood was defined chiefly by external events, it was easy to assume that anyone who had passed through them was mature, and that anyone who had not was still a child. Without such markers, we are forced to ask more carefully what maturity actually involves. The answer may be that it lies not in any particular achievement but in a way of being: responsible without being rigid, independent without being isolated, and realistic without having lost the capacity for hope.",
+    ],
+    ja: [
+      '多くの社会で、子ども時代からおとなへの移行は、かつてははっきりしたできごとによってしるされていた。若者は数年のうちに学校を出て、働きはじめ、結婚し、家庭をもつかもしれず、儀式がその人がおとなになったことを公に告げた。今日、こうした目じるしはあいまいになっている。教育はより長く続き、仕事はより遅く始まり、多くの人が20代や30代になってもずっと親と暮らしている。法律がおとなと認める年齢は、その人が本当におとなになったと感じているかどうか、あるいはほかの人からそうみなされているかどうかについて、ほとんど何も語らないかもしれない。それなら、おとなになるとはどういうことなのだろうか。',
+      'よくある答えの一つは自立を強調する。この見方では、おとなであるとは、お金の面で自分をささえ、自分で決定をし、その結果に責任をとることである。この答えには多くの真実があるが、不完全である。他人にたよらないというせまい意味での自立は、だれにとっても可能でも望ましくもない。最も自給自足しているおとなでさえ、食べ物や安全や仲間を数えきれない他人にたよっている。だれも必要としないと自慢する人は、成熟しているのではなく、奇妙に思いちがいをしているように思われるだろう。',
+      'より見こみのある答えは責任に注目する。子どもは他人に世話をされる。おとなは他人と共有された関心事の世話を引き受ける。この意味でおとなになるとは、親として、同僚として、市民として、あるいは友人として、主に世話を受ける者から、世話をあたえる者にもなることへとうつることである。この移行は、子どもの誕生や最初の仕事のような外のできごとによってしるされるかもしれないが、結局のところ、それはその人が他人の中での自分の位置をどう理解するかの変化なのである。',
+      '成熟はまた、自分の感情や欲望との特定のかかわり方をふくんでいる。子どもはしばしば目の前の感情のままに行動するが、おとなは満足を先にのばし、他人の利益を考え、一時の衝動ではなく長い目で見た目的に従って行動できることを期待される。しかし成熟は感情をおさえつけることを意味しない。熱意や驚きや自然な喜びを感じる力を失ったおとなは、自分をおさえてはいるかもしれないが、かならずしも成熟しているわけではない。目標は感じるのをやめることではなく、自分の感情を理解し、それをふまえて賢明に行動することである。',
+      'おとなであることのもう一つの面は、限界を受け入れることである。若者はしばしば、あらゆる可能性が開かれたままで、何にでもなれ、どんな生き方でもできると想像する。成長することは、ある選択がほかの選択をしめ出すこと、時間はかぎられていること、そしてかなわない望みもあることを認めることをふくむ。この認識はつらいこともあるが、一種の自由ももたらす。特定の道や人にかかわることで、おとなは、あらゆる選択肢を開いたままにしておく人には不可能な、経験の深さに達することができるのである。',
+      'しかし、おとなであることを、いったん達すればけっして変わらない最終的な状態と考えるのはまちがいだろう。人は生涯を通じて成長し続け、それぞれの段階が新しい種類の成熟を必要とする新しい課題をもたらす。親になったり、重い病気に直面したり、年老いた親族の世話をしたりする人は、思ってもみなかった力と限界を見いだすかもしれない。この意味で、成長することは一つのできごとというよりも、他人や自分自身とうまく生きる方法を学ぶ、生涯にわたる過程なのである。',
+      'それなら、おとなであることの伝統的な目じるしがあいまいになったことは、まったくの損失ではないのかもしれない。おとなであることが主に外のできごとで定義されていたときには、それを通りぬけた人はだれでも成熟しており、通りぬけていない人はまだ子どもだと思いこむのはたやすかった。そうした目じるしがなければ、私たちは成熟が実際に何をふくむのかをより注意深く問わざるをえない。その答えは、それが何か特定の業績にあるのではなく、一つのあり方にあるということかもしれない。かたくなになることなく責任をもち、孤立することなく自立し、希望をもつ力を失わずに現実的であるというあり方である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「外のできごとでしるされるかもしれないが、結局は自分の位置の理解の変化だ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、今日おとなになる目じるしはあいまいになっている。', answer: true, why: '第1段落 Today these markers have become blurred。' },
+      { statement: '筆者によれば、他人にまったくたよらない自立はだれにとっても望ましい。', answer: false, why: '第2段落 is neither possible nor desirable for anyone。' },
+      { statement: '筆者によれば、成熟とは感情をおさえつけることである。', answer: false, why: '第4段落 maturity does not mean the suppression of feeling。' },
+      { statement: '筆者によれば、成長することは生涯にわたる過程である。', answer: true, why: '第6段落 a lifelong process of learning how to live well。' },
+    ],
+    qa: [
+      { q: 'What does the acceptance of limits bring, according to the fifth paragraph?', choices: ['A kind of freedom and depth of experience.', 'Endless possibilities.', 'Complete independence.', 'The end of all hope.'], answer: 0, why: '第5段落 it also brings a kind of freedom ... a depth of experience。' },
+      { q: 'Where does maturity lie, according to the last paragraph?', choices: ['In a way of being.', 'In a particular achievement.', 'In reaching a certain age.', 'In leaving one\u2019s parents.'], answer: 0, why: '第7段落 it lies not in any particular achievement but in a way of being。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
