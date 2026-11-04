@@ -31342,6 +31342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-anticipation',
+    title: 'The Pleasure of Looking Forward',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually think of happiness as something that happens in the present: the pleasure of a good meal, the excitement of a journey, the warmth of an evening with friends. Yet a surprising amount of human happiness lies not in experiences themselves but in looking forward to them. A child counting the days until a holiday, a traveler planning a long-awaited trip, or a student imagining life after graduation may enjoy the anticipation as much as, or even more than, the event when it finally arrives. Anticipation, in other words, is not merely a waiting room for happiness but a form of happiness in its own right.",
+      "Psychological research has offered some support for this idea. Studies have suggested that people often report more pleasure while planning a holiday than they do afterward, and that the period of anticipation can raise their mood for weeks. Part of the reason may be that imagination is free from the small disappointments of reality. In the mind, the weather is always fine, the trains run on time, and no one quarrels. The actual experience, however delightful, inevitably includes delays, discomforts, and moments of boredom that the imagination conveniently omits.",
+      "This might suggest that anticipation is a kind of illusion, a pleasure built on expectations that reality cannot fulfill. But such a conclusion would be too simple. Anticipation does not only imagine the future; it also shapes how we experience the present. ( A ) the event itself may be brief, the period of looking forward to it can give structure and meaning to many ordinary days, lending them a sense of direction. A dull week at work may feel quite different when it is understood as the time before a long-planned celebration.",
+      "Anticipation also deepens the eventual experience. Those who have prepared for a journey by reading about the places they will visit, learning a few words of the local language, or imagining what they will see often notice more and understand more when they arrive. The time spent looking forward has prepared them to receive what the experience offers. By contrast, pleasures that arrive instantly, without any period of waiting or preparation, may be enjoyed less fully, since they have not been given the chance to grow in the mind.",
+      "Modern life, with its emphasis on immediate satisfaction, may be eroding this capacity. When almost anything can be ordered and delivered within a day, watched at once, or downloaded in seconds, the space for anticipation shrinks. We gain convenience but may lose something valuable in the process: the slow pleasure of waiting, the imaginative work of looking forward, and the sense that good things are worth the time it takes to reach them. Some people have begun deliberately to delay small pleasures in order to recover this experience.",
+      "Anticipation has its darker side as well. The same capacity that allows us to look forward to good things can lead us to dread bad ones, and anxious anticipation can cause suffering far greater than the feared event itself. People may spend weeks worrying about an examination, a medical procedure, or a difficult conversation, only to find that the reality was less painful than their imagination. The power of anticipation, then, works in both directions, and learning to direct it wisely is part of the art of living.",
+      "Perhaps the lesson is that happiness is not located only in particular moments but is spread across time, in memory and in expectation as well as in present experience. To live well is not only to enjoy what is happening now, but also to cultivate hopes worth looking forward to and to recall with gratitude what has passed. In this sense, anticipation reminds us that human beings live not in a single instant but in a stretch of time, and that the shape of our hopes may matter as much as the events that fulfill them.",
+    ],
+    ja: [
+      '私たちはふつう、幸せを今起こっているものと考える。おいしい食事の喜び、旅のわくわく、友人とすごす夜のあたたかさである。しかし人間の幸せのおどろくほど多くは、経験そのものではなく、それを楽しみに待つことにある。休みまでの日を数える子どもや、長く待ち望んだ旅の計画を立てる旅行者や、卒業後の生活を想像する生徒は、その期待を、ついにそのできごとがやってきたときと同じくらい、あるいはそれ以上に楽しむかもしれない。言いかえれば、期待は単に幸せの待合室なのではなく、それ自体で一つの幸せの形なのである。',
+      '心理学の研究は、この考えをいくらかささえている。研究によれば、人はしばしば休暇のあとよりも、休暇の計画を立てているあいだのほうが多くの喜びを感じると報告し、期待している期間は何週間も気分を高めうる。理由の一部は、想像が現実の小さな失望から自由であることかもしれない。心の中では、天気はいつもよく、電車は時間どおりに走り、だれもけんかしない。実際の経験は、どれほど楽しくても、想像がつごうよく省いてしまう遅れや不快さや退屈な瞬間を、かならずふくんでいる。',
+      'このことは、期待が一種の幻想、つまり現実が満たせない期待の上にきずかれた喜びであることを示しているように思われるかもしれない。しかしそのような結論は単純すぎるだろう。期待は未来を想像するだけではない。それは私たちが今をどう経験するかも形づくる。できごとそのものは短いかもしれないが、それを楽しみに待つ期間は、多くのふつうの日々に構造と意味をあたえ、方向の感覚をもたらしうる。仕事の退屈な一週間も、長く計画してきたお祝いの前の時間として理解されると、まったくちがって感じられるかもしれない。',
+      '期待はまた、最終的な経験を深める。おとずれる場所について読んだり、その土地の言語をいくつか学んだり、何を見るかを想像したりして旅の準備をした人は、着いたときにより多くに気づき、より多くを理解することが多い。楽しみに待ってすごした時間が、経験があたえてくれるものを受けとるそなえをさせたのである。それに対して、待つ期間や準備の期間がまったくなく、すぐにやってくる楽しみは、心の中で育つ機会をあたえられていないので、十分には味わわれないかもしれない。',
+      'すぐに満足することを重んじる現代の生活は、この力をむしばんでいるのかもしれない。ほとんど何でも一日のうちに注文して届けてもらえ、すぐに見られ、数秒でダウンロードできるとき、期待のための余地はちぢむ。私たちは便利さを得るが、その過程で何か価値あるものを失うかもしれない。待つことのゆっくりとした楽しみ、楽しみに待つという想像の仕事、そしてよいものはそこにたどりつくのにかかる時間に値するという感覚である。この経験を取りもどすために、小さな楽しみをわざと先にのばしはじめた人もいる。',
+      '期待には暗い面もある。よいことを楽しみに待つことを可能にするのと同じ力が、悪いことをおそれさせることもあり、不安な予期は、おそれていたできごとそのものよりもはるかに大きな苦しみを引き起こしうる。人は試験や医療の処置やむずかしい話し合いについて何週間も心配してすごし、結局、現実は想像よりもつらくなかったと気づくことがある。それなら期待の力は両方の方向にはたらくのであり、それを賢明に向けることを学ぶのは、生きる技術の一部なのである。',
+      'おそらく教訓は、幸せが特定の瞬間だけにあるのではなく、今の経験だけでなく記憶や期待の中にも、時間を通じて広がっているということである。よく生きるとは、今起こっていることを楽しむだけでなく、楽しみに待つ価値のある希望を育て、すぎたことを感謝とともに思い出すことでもある。この意味で、期待は、人間がただ一つの瞬間ではなく時間の広がりの中に生きていること、そして自分の希望の形が、それをかなえるできごとと同じくらい大切かもしれないことを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「できごとそのものは短いかもしれないが、待つ期間は日々に意味をあたえうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '研究によれば、人は休暇のあとより計画中のほうが喜びを感じることが多い。', answer: true, why: '第2段落 people often report more pleasure while planning a holiday than they do afterward。' },
+      { statement: '筆者は、期待は単なる幻想にすぎないと結論している。', answer: false, why: '第3段落 But such a conclusion would be too simple。' },
+      { statement: '筆者によれば、すぐにやってくる楽しみは十分に味わわれないかもしれない。', answer: true, why: '第4段落 may be enjoyed less fully。' },
+      { statement: '筆者によれば、期待の力はよい方向にしかはたらかない。', answer: false, why: '第6段落 The power of anticipation, then, works in both directions。' },
+    ],
+    qa: [
+      { q: 'Why may imagination be more pleasant than reality, according to the second paragraph?', choices: ['It is free from the small disappointments of reality.', 'It is always more exciting.', 'It costs more money.', 'It lasts only a moment.'], answer: 0, why: '第2段落 imagination is free from the small disappointments of reality。' },
+      { q: 'What have some people begun to do to recover the experience of anticipation?', choices: ['Deliberately delay small pleasures.', 'Order everything instantly.', 'Stop making plans.', 'Avoid all holidays.'], answer: 0, why: '第5段落 Some people have begun deliberately to delay small pleasures。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
