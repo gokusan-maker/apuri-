@@ -3962,6 +3962,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Judging from (B) his face, (C) he (D) must be angry yesterday.', choices: ['(A) Judging from', '(B) his face,', '(C) he', '(D) must be angry yesterday'], answer: 3, why: 'yesterday の過去のことを推量するので must have been angry。' },
     ],
   },
+  {
+    id: 'exam-error-articles-todai',
+    title: '入試の正誤問題〈167〉（東大レベル：英作文の冠詞 a・the・無冠詞の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'a（an）ははじめて出てくる数えられる名詞1つ。an は母音の「音」の前（an honest man・a university）。the は一度出たもの・ただ一つのもの（the world・the sun）・方角（in the east）・楽器（play the piano）。冠詞をつけないもの：スポーツ（play tennis）・食事（have breakfast）・交通手段の by（by bus）・本来の目的で使う場所（go to school・go to bed）・一般的な意味の数えられない名詞（Life is ～）。',
+    ],
+    examples: [
+      { en: 'She plays the piano and tennis.', ja: '彼女はピアノとテニスをする。' },
+      { en: 'We stayed at a hotel. The hotel was very clean.', ja: '私たちはホテルにとまった。そのホテルはとても清潔だった。' },
+    ],
+    questions: [
+      { sentence: 'She plays (A) the piano (B) and (C) the tennis (D) every week.', choices: ['(A) the piano', '(B) and', '(C) the tennis', '(D) every week'], answer: 2, why: '楽器には the をつけるが、スポーツには冠詞をつけない。plays tennis。' },
+      { sentence: 'I go to (A) school (B) by (C) a bus (D) every day.', choices: ['(A) school', '(B) by', '(C) a bus', '(D) every day'], answer: 2, why: '交通手段の by のあとは冠詞をつけない。by bus。' },
+      { sentence: '(A) The sun (B) rises in (C) east (D) every morning.', choices: ['(A) The sun', '(B) rises in', '(C) east', '(D) every morning'], answer: 2, why: '方角には the をつける。in the east。' },
+      { sentence: 'He is (A) a honest man (B) and (C) a university student (D) in Kyoto.', choices: ['(A) a honest man', '(B) and', '(C) a university student', '(D) in Kyoto'], answer: 0, why: 'honest は母音の音で始まるので an honest man。university は「ユ」の音なので a のまま。' },
+      { sentence: '(A) The life (B) is (C) full of (D) surprises.', choices: ['(A) The life', '(B) is', '(C) full of', '(D) surprises'], answer: 0, why: '一般的な「人生」は冠詞をつけない。Life is full of surprises。' },
+      { sentence: 'I had (A) a breakfast (B) at seven (C) and left (D) home at eight.', choices: ['(A) a breakfast', '(B) at seven', '(C) and left', '(D) home at eight'], answer: 0, why: '食事の名前にはふつう冠詞をつけない。had breakfast。' },
+      { sentence: 'She is (A) the most (B) popular singer (C) in (D) a world.', choices: ['(A) the most', '(B) popular singer', '(C) in', '(D) a world'], answer: 3, why: 'ただ一つしかないものには the。in the world。' },
+      { sentence: 'We stayed at (A) a hotel. (B) A hotel (C) was (D) very clean.', choices: ['(A) a hotel', '(B) A hotel', '(C) was', '(D) very clean'], answer: 1, why: '一度出てきたものを指すときは the。The hotel was very clean。' },
+      { sentence: '(A) An information (B) you gave me (C) was (D) very useful.', choices: ['(A) An information', '(B) you gave me', '(C) was', '(D) very useful'], answer: 0, why: 'information は数えられないので an はつけない。特定のものなので The information。' },
+      { sentence: '(A) Twice (B) a week, (C) I go to (D) the bed early.', choices: ['(A) Twice', '(B) a week,', '(C) I go to', '(D) the bed early'], answer: 3, why: '「寝る」は go to bed。本来の目的で使う場所には冠詞をつけない。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
