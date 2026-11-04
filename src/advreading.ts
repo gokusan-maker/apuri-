@@ -31742,6 +31742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-craft',
+    title: 'The Meaning of Craft',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an age of mass production, the handmade object occupies a curious position. Almost anything we need can be manufactured more cheaply and more quickly by machines, and the factory-made bowl or chair is often more uniform, more durable, and more convenient than one made by hand. Yet many people continue to value craftsmanship, paying more for objects made slowly by skilled hands, or spending their own time learning to make things that they could easily buy. What is it about craft that continues to attract us when its practical advantages seem to have disappeared?",
+      "Part of the answer lies in the relationship between the maker and the material. A craftsman does not simply impose a design on wood, clay, or metal; he or she responds to the particular qualities of each piece, noticing the direction of the grain, the moisture of the clay, or the way a metal bends under heat. The finished object bears the marks of this dialogue. Its small irregularities are not defects but traces of attention, evidence that a human being was present and responsive at every stage of its making.",
+      "Craft also involves a particular kind of knowledge, one that cannot be fully expressed in words. A skilled potter knows how much pressure to apply to the spinning clay, but this knowledge resides in the hands rather than in a set of instructions. It is acquired slowly, through years of practice and many failures, and it is often passed from teacher to apprentice by example rather than explanation. ( A ) machines can reproduce the outward form of a handmade object, they cannot reproduce this embodied understanding, which exists only in the person who has developed it.",
+      "For the maker, craft offers a form of satisfaction that much modern work lacks. In many jobs, people perform small parts of large processes and rarely see the results of their efforts. The craftsman, by contrast, follows a project from beginning to end and can judge its quality directly. This experience of seeing one's work take shape, of being responsible for its success or failure, may explain why so many people take up crafts as hobbies, even when their main occupations have nothing to do with making things.",
+      "There is also an ethical dimension to craft. The careful maker takes pride in doing a job well, even in parts of an object that no one will see. This commitment to quality for its own sake reflects a respect for the work, for the materials, and for the people who will use what is made. In a culture that often values speed and quantity above all, the craftsman's patience and care may serve as a reminder that some things are worth doing slowly and properly, regardless of whether anyone notices.",
+      "It would be romantic, however, to suggest that handmade objects are always superior or that mass production is simply a loss. Manufactured goods have made comfort and convenience available to millions of people who could never have afforded handmade items, and many craft traditions were once associated with hard labor and poverty. The point is not to reject industry but to recognize that something is gained when people engage directly and attentively with materials, and that this experience may be valuable even when it is not economically necessary.",
+      "Perhaps, then, the continuing appeal of craft lies less in the objects it produces than in the way of working it represents. Craft embodies an ideal of attention, patience, and responsibility that can be applied far beyond the workshop. A teacher who prepares a lesson with care, a writer who revises a sentence until it is exactly right, or a cook who adjusts a recipe to the ingredients at hand may all be practicing a kind of craft. In this sense, craftsmanship is not merely a matter of making things but a way of being present in whatever one does.",
+    ],
+    ja: [
+      '大量生産の時代に、手作りの品は奇妙な位置をしめている。私たちが必要とするほとんどあらゆるものは機械でより安く、より速く作ることができ、工場で作られたおわんやいすは、手で作られたものよりもそろっていて、じょうぶで、便利なことが多い。しかし多くの人々は職人の技を大切にし続けている。熟練した手でゆっくり作られた品により多くのお金をはらったり、かんたんに買えるものを作る方法を学ぶのに自分の時間を使ったりするのである。実際的な利点が消えてしまったように見えるのに、手仕事の何がなお私たちを引きつけるのだろうか。',
+      '答えの一部は、作り手と材料との関係にある。職人は木や粘土や金属に単に設計をおしつけるのではない。木目の向きや粘土のしめり気や、熱で金属がどう曲がるかに気づきながら、一つ一つの材料の特定の性質に応えるのである。できあがった品には、この対話のあとが残っている。その小さなふぞろいは欠点ではなく注意のあとであり、作るあらゆる段階に人間がいて応えていたことのしるしなのである。',
+      '手仕事はまた、ことばでは完全には表せない特定の種類の知識をふくんでいる。熟練した陶工は、回っている粘土にどれだけの力を加えればよいかを知っているが、この知識は一連の指示ではなく手の中にある。それは何年もの練習と多くの失敗を通じてゆっくりと身につけられ、しばしば説明ではなく手本によって師から弟子へと受けわたされる。機械は手作りの品の外の形を再現することはできるが、この体にきざまれた理解を再現することはできない。それはそれを身につけた人の中にしか存在しないからである。',
+      '作り手にとって、手仕事は、現代の仕事の多くに欠けている種類の満足をあたえてくれる。多くの仕事では、人々は大きな過程の小さな部分を受けもち、自分の努力の結果を見ることはめったにない。それに対して職人は、計画を始めから終わりまで追い、その質を直接判断することができる。自分の仕事が形になっていくのを見て、その成功や失敗に責任をもつこの経験は、なぜこれほど多くの人々が、本業が物を作ることとまったく関係ないときでさえ、趣味として手仕事を始めるのかを説明するかもしれない。',
+      '手仕事には倫理的な面もある。注意深い作り手は、だれも見ない品の部分でさえ、仕事をうまくすることに誇りをもつ。質そのもののためのこのかかわりは、仕事や材料や、作られたものを使う人々への敬意を反映している。速さと量を何よりも重んじることの多い文化の中で、職人の辛抱強さと心配りは、だれかが気づくかどうかにかかわらず、ゆっくりきちんとする価値のあることもあると思い出させてくれるかもしれない。',
+      'しかし、手作りの品がいつもすぐれているとか、大量生産は単なる損失だとか言うのは、ロマンチックすぎるだろう。工業製品は、手作りの品をけっして買えなかった何百万もの人々に快適さと便利さをもたらし、多くの手仕事の伝統はかつてつらい労働や貧しさと結びついていた。要点は工業をこばむことではなく、人々が材料に直接、注意深くかかわるときに何かが得られること、そしてこの経験は経済的に必要でないときでさえ価値をもちうることを認めることである。',
+      'それなら、手仕事がなお人を引きつけるのは、それが生み出す品よりも、それが表す働き方にあるのかもしれない。手仕事は、工房をはるかにこえて当てはめられる、注意と辛抱強さと責任の理想を体現している。心をこめて授業を準備する先生、ぴったりになるまで一文を書き直す作家、手もとの材料に合わせて作り方を調整する料理人は、みな一種の手仕事を実践しているのかもしれない。この意味で、職人の技は単に物を作ることではなく、何をするにせよ、そこに心をこめてかかわる一つのあり方なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「機械は外の形を再現できるが、体にきざまれた理解は再現できない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、手作りの品の小さなふぞろいは注意のあとである。', answer: true, why: '第2段落 Its small irregularities are not defects but traces of attention。' },
+      { statement: '筆者によれば、陶工の知識はことばの指示で完全に伝えられる。', answer: false, why: '第3段落 cannot be fully expressed in words ... resides in the hands。' },
+      { statement: '筆者によれば、職人は計画を始めから終わりまで追うことができる。', answer: true, why: '第4段落 The craftsman ... follows a project from beginning to end。' },
+      { statement: '筆者は、大量生産は単なる損失だと述べている。', answer: false, why: '第6段落 It would be romantic, however, to suggest ... that mass production is simply a loss。' },
+    ],
+    qa: [
+      { q: 'How is craft knowledge often passed on, according to the third paragraph?', choices: ['From teacher to apprentice by example.', 'Through written manuals only.', 'Through machines.', 'It is never passed on.'], answer: 0, why: '第3段落 passed from teacher to apprentice by example rather than explanation。' },
+      { q: 'Who may also be practicing a kind of craft, according to the last paragraph?', choices: ['A teacher who prepares a lesson with care.', 'A machine in a factory.', 'A customer in a shop.', 'Someone who works carelessly.'], answer: 0, why: '第7段落 A teacher who prepares a lesson with care ... may all be practicing a kind of craft。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
