@@ -2368,6 +2368,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 70 Q30 82 34 90 M64 70 Q70 82 66 90 M44 74 Q42 86 46 92 M56 74 Q58 86 54 92" fill="none" stroke="#172554" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'orca')
+    return (
+      <g>
+        {/* 白いもようと高い背びれ */}
+        <path d="M50 14 L46 34 L56 34 Z" fill="#111827" />
+        <ellipse cx="38" cy="46" rx="6" ry="3" fill="#ffffff" />
+        <ellipse cx="62" cy="46" rx="6" ry="3" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
