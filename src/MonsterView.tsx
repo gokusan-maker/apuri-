@@ -2688,6 +2688,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 30 L36 22 M44 28 L46 20 M54 30 L56 22" stroke="#1f2937" strokeWidth="2" />
       </g>
     )
+  if (species === 'bilby')
+    return (
+      <g>
+        {/* 長い耳 */}
+        <ellipse cx="38" cy="16" rx="5" ry="14" fill="#cbd5e1" stroke="#334155" strokeWidth="2" />
+        <ellipse cx="58" cy="16" rx="5" ry="14" fill="#cbd5e1" stroke="#334155" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
