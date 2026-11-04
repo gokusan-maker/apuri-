@@ -2361,6 +2361,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M78 66 Q90 58 96 50 M78 66 Q90 74 96 82" fill="none" stroke="#57534e" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'coelacanth')
+    return (
+      <g>
+        {/* あしのような太いひれ */}
+        <path d="M36 70 Q30 82 34 90 M64 70 Q70 82 66 90 M44 74 Q42 86 46 92 M56 74 Q58 86 54 92" fill="none" stroke="#172554" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
