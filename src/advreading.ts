@@ -30818,6 +30818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-free-museums',
+    title: 'Should Museums Be Free?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, the great national museums are free to enter, and anyone may walk in from the street to look at ancient sculptures, famous paintings, or the skeletons of dinosaurs without paying anything. In others, visitors must buy a ticket, which may cost as much as a meal in a restaurant. Both systems have their defenders, and the question of whether museums should charge for admission touches on wider issues about the purpose of public institutions, the value of culture, and who should pay for it.",
+      "Supporters of free admission argue that museums hold collections that belong, in an important sense, to everyone. Many of the objects they display were acquired with public money or donated for the benefit of the nation, and it seems wrong, supporters say, to require people to pay to see what is already theirs. Free admission also encourages people to visit more often and for shorter periods, perhaps stopping for half an hour to look at a single room, rather than feeling that they must stay all day to justify the cost of a ticket.",
+      "There is evidence that removing admission charges can increase the number of visitors substantially. When some national museums abolished their fees, attendance rose sharply, and the museums reported that they were attracting more young people, families, and visitors from neighborhoods that had rarely used them before. For supporters, these figures show that cost is a real barrier, and that free admission helps museums to fulfill their role as places of education and enjoyment for the whole society rather than for a privileged few. Schools, too, find it easier to organize class visits when they do not have to collect money from every pupil.",
+      "Critics, however, question whether free admission really changes who visits. Some studies suggest that, although the total number of visits increases, many of the additional visits are made by the same kinds of people who already visited museums, often educated and relatively wealthy. ( A ) cost may discourage some people, critics argue, other barriers, such as a feeling that museums are not intended for people like them, may be more important, and these cannot be removed simply by abolishing fees.",
+      "Critics also point to the financial consequences. Museums are expensive to run: buildings must be maintained, collections conserved, and staff employed. If visitors do not pay, the money must come from somewhere else, usually from taxes or from private donors. When public budgets are reduced, museums that depend entirely on government funding may be forced to cut opening hours, reduce staff, or postpone the care of their collections. Charging visitors, in this view, ensures that those who benefit directly contribute to the cost.",
+      "Some museums have adopted a middle path. They keep their permanent collections free while charging for special exhibitions, or they offer free entry on certain days or to certain groups, such as children, students, and local residents. Others invite visitors to make a voluntary donation, allowing those who can afford it to contribute while ensuring that no one is turned away for lack of money. Such approaches attempt to combine accessibility with financial stability, although they can create confusion about what visitors are expected to pay.",
+      "The debate over museum admission ultimately reflects different ideas about what museums are for. If they are seen as public services, like libraries or parks, then charging for entry may seem contrary to their purpose. If they are seen as cultural attractions that compete for visitors' time and money, charging may seem natural. Most people would probably agree that museums should be open to all, but there is less agreement about how that openness should be achieved and paid for. Whatever the answer, the question reminds us that access to culture is never simply a matter of opening a door.",
+    ],
+    ja: [
+      'ある国々では、大きな国立博物館は入館無料で、だれでも通りから入ってきて、何もはらわずに古代の彫刻や有名な絵画や恐竜の骨格を見ることができる。ほかの国々では、来館者はチケットを買わなければならず、それはレストランの食事と同じくらいの値段になることもある。どちらの仕組みにも擁護する人々がおり、博物館が入館料をとるべきかどうかという問いは、公的な機関の目的や、文化の価値や、それをだれがはらうべきかについての、より広い問題にふれている。',
+      '入館無料を支持する人々は、博物館は、ある大切な意味で、すべての人のものであるコレクションをもっていると主張する。展示されている品々の多くは、公のお金で手に入れられたか、国の利益のために寄付されたものであり、すでに自分たちのものであるものを見るのに人々にお金をはらわせるのはまちがっているように思われる、と支持する人々は言う。入館無料はまた、チケット代に見合うよう一日じゅういなければならないと感じるのではなく、たとえば30分だけ立ちよって一つの部屋を見るといった形で、人々がより頻繁に、より短い時間おとずれることをうながす。',
+      '入館料をなくすと来館者の数が大きくふえうるという証拠がある。いくつかの国立博物館が入館料を廃止したとき、来館者数は急にふえ、博物館は、若者や家族や、それまでめったに利用しなかった地域からの来館者をより多く引きつけていると報告した。支持する人々にとって、こうした数字は、費用が現実の障壁であり、入館無料が、博物館が恵まれた少数の人のためではなく社会全体のための教育と楽しみの場としての役割を果たす助けになることを示している。学校もまた、生徒一人ひとりからお金を集めなくてよければ、授業での見学を計画しやすくなる。',
+      'しかし批判する人々は、入館無料が本当にだれがおとずれるかを変えるのか疑問を投げかける。いくつかの研究によれば、来館の総数はふえるものの、ふえた来館の多くは、すでに博物館をおとずれていたのと同じ種類の人々、しばしば教育を受けた比較的豊かな人々によるものである。費用が一部の人をためらわせることはあるかもしれないが、博物館は自分のような人のためのものではないという感覚のような、ほかの障壁のほうが重要かもしれず、それは入館料をなくすだけでは取りのぞけない、と批判する人々は主張する。',
+      '批判する人々はまた、お金の面での結果も指摘する。博物館の運営には費用がかかる。建物を維持し、コレクションを保存し、職員を雇わなければならない。来館者がはらわないなら、そのお金はどこかほかから、ふつうは税金か個人の寄付者から来なければならない。公の予算が削られると、政府の資金に完全にたよっている博物館は、開館時間を短くしたり、職員をへらしたり、コレクションの手入れを先のばしにしたりせざるをえなくなるかもしれない。この見方では、来館者にお金をはらってもらうことは、直接恩恵を受ける人がその費用に貢献することを保証するのである。',
+      '中間の道をとった博物館もある。常設のコレクションは無料にしたまま特別展には料金をとったり、ある日や、子どもや学生や地元の住民のようなある人々には無料で入れるようにしたりしている。ほかの博物館は、来館者に任意の寄付をしてもらい、余裕のある人が貢献できるようにしつつ、お金がないために入れない人がだれもいないようにしている。こうしたやり方は、入りやすさとお金の安定を組み合わせようとするものだが、来館者がいくらはらうことを期待されているのかについて混乱を生むこともある。',
+      '博物館の入館料をめぐる議論は、結局のところ、博物館が何のためにあるのかについてのちがう考えを反映している。博物館が図書館や公園のような公共サービスとみなされるなら、入館料をとることはその目的に反するように思われるかもしれない。来館者の時間とお金を競いあう文化的な名所とみなされるなら、料金をとるのは当然に思われるかもしれない。博物館はすべての人に開かれているべきだということには、おそらくほとんどの人が同意するだろうが、その開かれ方をどう実現し、どうまかなうべきかについては、あまり意見が一致していない。答えがどうであれ、この問いは、文化に近づけるようにすることが、けっして単に扉を開けるだけのことではないことを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「費用が一部の人をためらわせるかもしれないが、ほかの障壁のほうが重要かもしれない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters of free admission say museum collections belong to ( 1 ) and point to large increases in visitors. Critics reply that the additional visitors are often the same kinds of people and that museums need ( 2 ) to run. Some museums combine free entry with charges for special ( 3 ).',
+      blanks: [
+        { choices: ['everyone', 'nobody', 'artists', 'tourists'], answer: 0, why: '第2段落 museums hold collections that belong, in an important sense, to everyone。' },
+        { choices: ['money', 'silence', 'darkness', 'weapons'], answer: 0, why: '第5段落 Museums are expensive to run。' },
+        { choices: ['exhibitions', 'meals', 'buses', 'holidays'], answer: 0, why: '第6段落 while charging for special exhibitions。' },
+      ],
+    },
+    tf: [
+      { statement: '入館無料は、短い時間でも頻繁におとずれることをうながす。', answer: true, why: '第2段落 encourages people to visit more often and for shorter periods。' },
+      { statement: '入館料を廃止した博物館では、来館者数がへった。', answer: false, why: '第3段落 attendance rose sharply。' },
+      { statement: '批判する人々によれば、入館料をなくせばすべての障壁がなくなる。', answer: false, why: '第4段落 these cannot be removed simply by abolishing fees。' },
+      { statement: '任意の寄付のやり方は、いくらはらうべきかの混乱を生むことがある。', answer: true, why: '第6段落 they can create confusion about what visitors are expected to pay。' },
+    ],
+    qa: [
+      { q: 'What may museums that depend entirely on government funding be forced to do when budgets are cut?', choices: ['Cut opening hours or reduce staff.', 'Buy more paintings.', 'Build new museums.', 'Raise government taxes.'], answer: 0, why: '第5段落 may be forced to cut opening hours, reduce staff。' },
+      { q: 'If museums are seen as public services, what may charging for entry seem?', choices: ['Contrary to their purpose.', 'Natural.', 'Necessary for all.', 'Required by law.'], answer: 0, why: '第7段落 charging for entry may seem contrary to their purpose。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
