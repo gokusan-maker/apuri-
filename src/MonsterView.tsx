@@ -2384,6 +2384,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 44 Q50 38 70 44 M28 54 Q50 48 72 54 M30 64 Q50 58 70 64" fill="none" stroke="#3f3f46" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'napoleonfish')
+    return (
+      <g>
+        {/* もり上がったおでこと、めがねもよう */}
+        <path d="M34 30 Q50 14 66 30" fill="none" stroke="#134e4a" strokeWidth="3" strokeLinecap="round" />
+        <path d="M30 44 L40 40 M60 40 L70 44" fill="none" stroke="#134e4a" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
