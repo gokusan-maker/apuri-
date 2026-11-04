@@ -32702,6 +32702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tolerance',
+    title: 'The Limits of Tolerance',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Tolerance is widely regarded as one of the essential virtues of a free society. In a world where people hold very different beliefs about religion, morality, and the good life, the willingness to accept views and practices that we ourselves reject seems necessary for peaceful coexistence. Yet the idea of tolerance contains a puzzle that philosophers have long debated. If we tolerate everything, including the views of those who would destroy tolerance itself, we may undermine the very conditions that make a tolerant society possible.",
+      "It is worth noticing, first, that tolerance is not the same as approval or indifference. We do not tolerate what we like, nor what we do not care about; we tolerate what we disapprove of but choose not to suppress. A person who tolerates a neighbor's religion may believe that religion to be mistaken, yet still respect the neighbor's right to practice it. Tolerance, in this sense, involves a kind of tension: it requires us to hold our convictions firmly while restraining the desire to impose them on others.",
+      "Why should we accept this tension? One traditional answer appeals to the limits of human knowledge. Since we can never be completely certain that our own beliefs are correct, it would be arrogant to force them on others. Another answer emphasizes the value of individual freedom: people have a right to live according to their own understanding of what is good, even when others think they are wrong. ( A ) these arguments differ, both suggest that respecting disagreement is a condition of living together as equals.",
+      "The difficulty arises when tolerance meets intolerance. Suppose that a group uses the freedom provided by a tolerant society to spread hatred against others or to work for the abolition of others' rights. Should such a group also be tolerated? Some argue that a tolerant society must be willing to defend itself, and that toleration cannot be extended to those who would use it to destroy the freedom of others. Others warn that this reasoning is dangerous, since those in power may label any unwelcome opinion as intolerant in order to suppress it.",
+      "One way of addressing this problem is to distinguish between opinions and actions. A society might tolerate the expression of almost any view, however offensive, while refusing to tolerate actions that directly harm others, such as violence or threats. This distinction preserves a wide space for free discussion, which is valuable in itself, while protecting people from concrete dangers. Yet the line between words and actions is not always clear, and speech that encourages hatred may contribute to harm even when it does not directly cause it.",
+      "Tolerance also has a psychological dimension that is often overlooked. Living with people whose beliefs we find wrong, or even offensive, can be uncomfortable, and it is tempting to avoid them or to seek a world in which everyone agrees with us. Genuine tolerance therefore requires not only legal protections but also personal qualities, such as patience, self-restraint, and the willingness to listen. These qualities are developed through experience, and they may weaken in societies where people increasingly live among those who think as they do.",
+      "Perhaps tolerance should be understood not as a fixed rule but as an ongoing practice that requires judgment. There may be no formula that tells us exactly where its limits lie, and any answer will be open to dispute. What seems essential is that the limits be drawn cautiously, in ways that can be publicly justified, and with an awareness of how easily the language of protecting tolerance can be used to defend intolerance of a different kind. Tolerance, understood in this way, is less a comfortable possession than a demanding task that each generation must take up again.",
+    ],
+    ja: [
+      '寛容は、自由な社会に欠かせない美徳の一つだと広く考えられている。人々が宗教や道徳やよい生き方についてまったくちがう信念をもつ世界では、自分自身がしりぞける考えや習慣を受け入れようとする気持ちが、平和に共存するために必要に思われる。しかし寛容という考えには、哲学者たちが長く議論してきたなぞがふくまれている。寛容そのものをこわそうとする人々の考えまでふくめて、すべてに寛容であれば、寛容な社会を可能にしている条件そのものをくずしてしまうかもしれないのである。',
+      'まず注意しておく価値があるのは、寛容が承認や無関心と同じではないということである。私たちは好きなものに寛容なのでも、どうでもよいものに寛容なのでもない。認めないがおさえつけないことを選ぶものに寛容なのである。隣人の宗教に寛容な人は、その宗教がまちがっていると信じていても、それを信仰する隣人の権利を尊重するかもしれない。この意味で、寛容にはある種の緊張がともなう。自分の信念をしっかりともちながら、それを他人におしつけたいという気持ちをおさえることが求められるのである。',
+      'なぜこの緊張を受け入れるべきなのだろうか。伝統的な一つの答えは、人間の知識の限界にうったえる。自分の信念が正しいと完全に確信することはけっしてできないのだから、それを他人に強いるのはごうまんだろう。もう一つの答えは、個人の自由の価値を強調する。人々は、他人がまちがっていると思うときでさえ、何がよいかについての自分の理解にしたがって生きる権利をもっている。これらの議論はちがうが、どちらも、意見のちがいを尊重することが対等な者としてともに生きる条件であることを示している。',
+      'むずかしさは、寛容が不寛容に出会うときに生じる。ある集団が、寛容な社会のあたえる自由を使って、他人への憎しみを広めたり、他人の権利をなくそうとしたりするとしよう。そのような集団もまた寛容にあつかわれるべきなのだろうか。寛容な社会は自分を守る気持ちをもたなければならず、寛容を他人の自由をこわすために使う人々にまで寛容を広げることはできないと主張する人々もいる。ほかの人々は、権力をもつ者が都合の悪い意見をおさえつけるために、それを不寛容だと決めつけるかもしれないので、この理屈は危険だと警告する。',
+      'この問題に取り組む一つの方法は、意見と行動とを区別することである。社会は、どれほど不快であっても、ほとんどどんな考えを表すことにも寛容でありながら、暴力やおどしのような、他人を直接傷つける行動には寛容でないことができるだろう。この区別は、それ自体価値のある自由な議論のための広い空間を守りながら、人々を具体的な危険から守る。しかし、ことばと行動のあいだの線はいつもはっきりしているわけではなく、憎しみをあおる発言は、直接害を引き起こさないときでさえ、害に手を貸すことがありうる。',
+      '寛容には、見落とされがちな心理的な面もある。自分がまちがっている、あるいは不快だとさえ思う信念をもつ人々とともに暮らすことは居心地が悪いことがあり、彼らをさけたり、だれもが自分に賛成する世界を求めたりしたくなる。したがって、本当の寛容には、法的な保護だけでなく、忍耐や自制や耳をかたむけようとする気持ちのような個人的な資質も必要である。こうした資質は経験を通じて育つものであり、人々が自分と同じように考える人々のあいだでますます暮らすようになった社会では弱まるかもしれない。',
+      'おそらく寛容は、決まった規則としてではなく、判断を必要とする続いていく実践として理解されるべきなのだろう。その限界がどこにあるかを正確に教えてくれる公式はないかもしれず、どんな答えにも異論の余地があるだろう。大切に思われるのは、その限界が、慎重に、公に正当化できるしかたで、そして寛容を守るということばが別の種類の不寛容を守るためにいかにかんたんに使われうるかを意識しながら引かれることである。このように理解された寛容は、居心地のよい所有物というよりも、どの世代もあらためて引き受けなければならない骨の折れる務めなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「これらの議論はちがうが、どちらも意見のちがいの尊重が条件だと示している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、寛容は承認や無関心と同じではない。', answer: true, why: '第2段落 tolerance is not the same as approval or indifference。' },
+      { statement: '筆者によれば、私たちは好きなものに対して寛容である。', answer: false, why: '第2段落 We do not tolerate what we like。' },
+      { statement: '意見と行動を区別すれば、ことばと行動の線はいつもはっきりする。', answer: false, why: '第5段落 the line between words and actions is not always clear。' },
+      { statement: '本当の寛容には、忍耐や自制のような個人的な資質も必要である。', answer: true, why: '第6段落 requires not only legal protections but also personal qualities, such as patience, self-restraint。' },
+    ],
+    qa: [
+      { q: 'What is one traditional answer to why we should accept the tension of tolerance?', choices: ['We can never be completely certain that our beliefs are correct.', 'All beliefs are equally true.', 'The government requires it.', 'Disagreement never causes problems.'], answer: 0, why: '第3段落 we can never be completely certain that our own beliefs are correct。' },
+      { q: 'Why do some warn that refusing to tolerate the intolerant is dangerous?', choices: ['Those in power may label unwelcome opinions as intolerant to suppress them.', 'Intolerant groups are always small.', 'It makes society too peaceful.', 'It costs too much money.'], answer: 0, why: '第4段落 those in power may label any unwelcome opinion as intolerant in order to suppress it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
