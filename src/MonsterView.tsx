@@ -2538,6 +2538,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 32 L34 74 M62 32 L66 74" fill="none" stroke="#1c1917" strokeWidth="5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'emperorangel')
+    return (
+      <g>
+        {/* 黄色いしまもよう */}
+        <path d="M30 40 Q50 34 70 40 M28 50 Q50 44 72 50 M30 60 Q50 54 70 60" fill="none" stroke="#facc15" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
