@@ -32818,6 +32818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-gene-editing',
+    title: 'Should We Edit Human Genes?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, scientists have developed tools that allow them to change the genes of living organisms with remarkable precision. Using these techniques, researchers can cut a section of DNA at a chosen point and remove, repair, or replace it. The technology has already been used to develop new crops and to study diseases in the laboratory, and early medical trials have shown promising results for people with certain inherited conditions. Yet the possibility of editing human genes has also raised some of the most difficult ethical questions of our time.",
+      "It is important to distinguish between two kinds of gene editing. The first changes the genes in the cells of a particular patient, for example to treat a blood disorder, and these changes are not passed on to the patient's children. The second changes the genes of embryos, eggs, or sperm, so that the changes are inherited by future generations. Most scientists regard the first kind as similar to other medical treatments, while the second raises far more serious concerns. Much of the public debate, therefore, focuses on whether inherited changes should ever be permitted, and if so, under what conditions.",
+      "Supporters of gene editing emphasize its potential to reduce suffering. Thousands of diseases are caused by changes in a single gene, and many of them have no effective treatment. If it became possible to correct these errors safely, families affected by serious inherited conditions might be spared great pain. ( A ) the technology is still developing, supporters argue that it would be wrong to abandon a tool that could one day prevent so many illnesses, especially when the people who would benefit have often waited many years for help.",
+      "Critics, however, warn that the risks are not yet fully understood. Editing a gene may have unintended effects on other parts of the DNA, and these effects might not become apparent until years later. When changes are inherited, any mistakes would be passed on to future generations who never had the opportunity to agree to them. Critics argue that, given the uncertainty, it would be irresponsible to make permanent changes to the human genome before the long-term consequences can be studied carefully.",
+      "There are also concerns about the boundary between treatment and enhancement. If gene editing can be used to prevent disease, it might also be used to select characteristics such as height, intelligence, or athletic ability. Critics fear that this could lead to a society in which wealthy parents purchase advantages for their children, widening existing inequalities. Others worry that it might change the way people regard disability and difference, encouraging the belief that some kinds of human life are less valuable than others. Such concerns show that gene editing touches not only on medicine but also on our deepest beliefs about human worth.",
+      "Because these questions affect humanity as a whole, many scientists and governments have called for international rules. Some countries have banned inherited gene editing, while others allow research under strict conditions. Scientific organizations have proposed that such editing should be considered only for serious diseases, only when no reasonable alternative exists, and only after broad public discussion. Yet rules differ from country to country, and it is difficult to prevent individuals or companies from carrying out experiments where regulation is weak.",
+      "The debate over gene editing is ultimately about more than science. It asks what kind of control human beings should have over their own biology, and who should decide how that control is used. Answering these questions will require not only scientific knowledge but also careful reflection on values such as safety, fairness, and respect for human diversity. Whatever decisions are made, they should be reached openly, with the participation of the many people whose lives, and whose descendants' lives, they may affect.",
+    ],
+    ja: [
+      '近年、科学者たちは、生き物の遺伝子をおどろくほど正確に変えられる道具を開発した。こうした技術を使えば、研究者はDNAの一部を選んだ場所で切り、取りのぞいたり、修復したり、置きかえたりできる。この技術はすでに新しい作物を開発したり、実験室で病気を研究したりするのに使われており、初期の医学的な試験では、ある種の遺伝性の病気をもつ人々に有望な結果が示されている。しかし、人間の遺伝子を編集する可能性は、現代の最もむずかしい倫理的な問いのいくつかも引き起こしている。',
+      '遺伝子編集の二つの種類を区別することが大切である。一つ目は、たとえば血液の病気を治すために、特定の患者の細胞の遺伝子を変えるもので、この変化は患者の子どもには受けつがれない。二つ目は、胚や卵子や精子の遺伝子を変えるもので、その変化は未来の世代に受けつがれる。ほとんどの科学者は一つ目の種類をほかの医学的な治療に似たものとみなしているが、二つ目ははるかに深刻な心配を引き起こす。そのため、公の議論の多くは、受けつがれる変化をそもそも認めるべきか、認めるならどんな条件のもとでか、に集まっている。',
+      '遺伝子編集を支持する人々は、苦しみを減らすその可能性を強調する。何千もの病気が一つの遺伝子の変化によって引き起こされ、その多くには効果的な治療がない。こうした誤りを安全に正せるようになれば、重い遺伝性の病気に苦しむ家族は大きな痛みをまぬがれるかもしれない。この技術はまだ発展の途中だが、とくに恩恵を受けるはずの人々がしばしば何年も助けを待ってきたことを考えれば、いつか多くの病気を防げるかもしれない道具を手放すのはまちがいだろうと支持する人々は主張する。',
+      'しかし批判する人々は、危険はまだ十分に理解されていないと警告する。遺伝子を編集すると、DNAのほかの部分に意図しない影響が出るかもしれず、その影響は何年もあとになるまで現れないかもしれない。変化が受けつがれる場合、どんなまちがいも、それに同意する機会をもたなかった未来の世代に伝わることになる。不確かさを考えれば、長期的な結果を注意深く研究できるようになる前に人間のゲノムに永久的な変化を加えるのは無責任だろうと、批判する人々は主張する。',
+      '治療と能力の強化との境界についての心配もある。遺伝子編集が病気を防ぐために使えるなら、身長や知能や運動能力のような特徴を選ぶためにも使えるかもしれない。批判する人々は、これが、裕福な親が子どものために有利さを買い、すでにある不平等を広げる社会につながりうるとおそれている。また、それが人々の障害やちがいの見方を変え、ある種の人間の生命はほかより価値が低いという考えをうながすかもしれないと心配する人々もいる。こうした心配は、遺伝子編集が医学だけでなく、人間の価値についての私たちの最も深い信念にもふれることを示している。',
+      'こうした問いは人類全体にかかわるので、多くの科学者や政府が国際的な規則を求めている。受けつがれる遺伝子編集を禁止した国もあれば、厳しい条件のもとで研究を認めている国もある。科学の団体は、そのような編集は、重い病気についてだけ、ほかに合理的な方法がないときにだけ、そして広い公の議論のあとにだけ考えるべきだと提案している。しかし規則は国によってちがい、規制が弱いところで個人や会社が実験を行うのを防ぐのはむずかしい。',
+      '遺伝子編集をめぐる議論は、結局のところ科学以上のものにかかわっている。それは、人間が自分自身の生物学にどれほどの支配をもつべきか、そしてその支配がどう使われるかをだれが決めるべきかを問うている。こうした問いに答えるには、科学的な知識だけでなく、安全や公平や人間の多様性の尊重といった価値についての注意深いふり返りも必要だろう。どんな決定がなされるにせよ、それは公開のかたちで、その決定が生活に、そして子孫の生活に影響しうる多くの人々の参加とともに下されるべきである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「技術はまだ発展の途中だが、手放すのはまちがいだ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Gene editing could reduce the ( 1 ) caused by inherited diseases, but critics warn that changes passed on to future generations carry unknown risks. There are also fears that editing might be used for enhancement and widen ( 2 ). Decisions about the technology should be made openly and with broad public ( 3 ).',
+      blanks: [
+        { choices: ['suffering', 'income', 'traffic', 'noise'], answer: 0, why: '第3段落 its potential to reduce suffering。' },
+        { choices: ['inequalities', 'roads', 'forests', 'markets'], answer: 0, why: '第5段落 widening existing inequalities。' },
+        { choices: ['participation', 'silence', 'payment', 'competition'], answer: 0, why: '第7段落 with the participation of the many people。' },
+      ],
+    },
+    tf: [
+      { statement: '特定の患者の細胞の遺伝子を変える編集では、変化は子どもに受けつがれない。', answer: true, why: '第2段落 these changes are not passed on to the patient\'s children。' },
+      { statement: 'ほとんどの科学者は、受けつがれる編集をほかの治療と同じものとみなしている。', answer: false, why: '第2段落 the second raises far more serious concerns。' },
+      { statement: '遺伝子編集の意図しない影響は、何年もあとになるまで現れないかもしれない。', answer: true, why: '第4段落 might not become apparent until years later。' },
+      { statement: '規則はどの国でも同じである。', answer: false, why: '第6段落 rules differ from country to country。' },
+    ],
+    qa: [
+      { q: 'What do critics fear wealthy parents might do?', choices: ['Purchase advantages for their children.', 'Refuse all medical treatment.', 'Move to other countries.', 'Stop having children.'], answer: 0, why: '第5段落 wealthy parents purchase advantages for their children。' },
+      { q: 'When have scientific organizations proposed that inherited editing be considered?', choices: ['Only for serious diseases when no reasonable alternative exists.', 'Whenever parents want it.', 'Only for improving athletic ability.', 'Never under any conditions.'], answer: 0, why: '第6段落 only for serious diseases, only when no reasonable alternative exists。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
