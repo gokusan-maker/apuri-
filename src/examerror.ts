@@ -7080,6 +7080,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There are [less] cars on the road today than yesterday.', choices: ['fewer', 'little', 'a little', 'few of'], answer: 0, why: 'cars は数えられる名詞なので fewer。' },
     ],
   },
+  {
+    id: 'exam-fix-166',
+    title: '入試の誤文訂正〈166〉（国公立レベル：付加疑問文の形）',
+    points: ['付加疑問文「～ですよね」は、前が肯定なら否定、前が否定なら肯定にする。be 動詞・助動詞はそのまま使い（can → can’t he?）、一般動詞は do・does・did で受ける。完了形は have・has。主語は代名詞に（Tom → he）。There is ～ は isn’t there?。never・hardly は否定なので肯定の付加疑問。Let’s ～ は shall we?、命令文は will you?。I’m ～ は aren’t I?。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'You are a student, aren’t you?', ja: 'きみは学生だよね。' }],
+    questions: [
+      { sentence: 'You are a student, [aren’t I]?', choices: ['aren’t you', 'are you', 'don’t you', 'isn’t it'], answer: 0, why: '主語 You を受けて、肯定文なので否定の aren’t you。' },
+      { sentence: 'She likes cats, [isn’t she]?', choices: ['doesn’t she', 'does she', 'isn’t it', 'won’t she'], answer: 0, why: '一般動詞 likes なので does で受ける。doesn’t she。' },
+      { sentence: 'They didn’t come, [didn’t they]?', choices: ['did they', 'do they', 'were they', 'weren’t they'], answer: 0, why: '前が否定なので付加疑問は肯定。did they。' },
+      { sentence: 'Let’s go shopping, [will you]?', choices: ['shall we', 'won’t you', 'do we', 'are we'], answer: 0, why: 'Let’s ～ の付加疑問は shall we?。' },
+      { sentence: 'Open the window, [shall we]?', choices: ['will you', 'shall I', 'do you', 'are you'], answer: 0, why: '命令文の付加疑問は will you?。' },
+      { sentence: 'Tom can swim, [doesn’t he]?', choices: ['can’t he', 'can he', 'isn’t he', 'won’t he'], answer: 0, why: '助動詞 can はそのまま使う。can’t he。' },
+      { sentence: 'There is a bank near here, [isn’t it]?', choices: ['isn’t there', 'is there', 'doesn’t it', 'aren’t they'], answer: 0, why: 'There is ～ の付加疑問は isn’t there?。' },
+      { sentence: 'You have finished your homework, [don’t you]?', choices: ['haven’t you', 'have you', 'didn’t you', 'aren’t you'], answer: 0, why: '現在完了の have をそのまま使う。haven’t you。' },
+      { sentence: 'He never eats meat, [doesn’t he]?', choices: ['does he', 'isn’t he', 'did he', 'won’t he'], answer: 0, why: 'never があるので否定の文。付加疑問は肯定の does he。' },
+      { sentence: 'I’m late, [amn’t I]?', choices: ['aren’t I', 'am not I', 'don’t I', 'isn’t it'], answer: 0, why: 'I’m ～ の付加疑問は aren’t I?。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

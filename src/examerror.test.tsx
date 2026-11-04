@@ -2367,3 +2367,10 @@ it('正誤問題〈172〉：京大レベル 同格の that と関係代名詞の
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) which')
 })
+
+it('誤文訂正〈166〉：国公立レベル 付加疑問文の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-166')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('aren’t you')
+})
