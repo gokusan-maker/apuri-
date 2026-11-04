@@ -4010,6 +4010,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'It is not good for your health (A) to stay (B) in bed (C) all day or (D) to lay on the sofa.', choices: ['(A) to stay', '(B) in bed', '(C) all day or', '(D) to lay on the sofa'], answer: 3, why: '「横になる」は自動詞 lie。to lie on the sofa。' },
     ],
   },
+  {
+    id: 'exam-error-mixedif-kyodai',
+    title: '入試の正誤問題〈169〉（京大レベル：仮定法過去完了と混合仮定法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '過去の事実とちがうことは仮定法過去完了：If＋主語＋had＋過去分詞, 主語＋would（could・might）have＋過去分詞。if 節に would は使わない。if を省くと Had I known ～ と倒置。過去の条件が今に影響するときは混合仮定法：If＋had＋過去分詞（過去）, would＋動詞の原形（今・now）。Without ～ も過去のことなら would have＋過去分詞。yesterday・last week・now など時のことばを手がかりにする。',
+    ],
+    examples: [
+      { en: 'If I had studied harder, I would have passed the exam.', ja: 'もっと勉強していたら、試験に受かっていただろう。' },
+      { en: 'If she had taken the medicine, she would be healthy now.', ja: 'もしその薬を飲んでいたら、彼女は今元気だろうに。' },
+    ],
+    questions: [
+      { sentence: 'If I (A) had studied (B) harder, I (C) would pass (D) the exam last year.', choices: ['(A) had studied', '(B) harder, I', '(C) would pass', '(D) the exam last year'], answer: 2, why: '過去の事実とちがうことなので、主節も would have passed。' },
+      { sentence: 'If she (A) took (B) the medicine yesterday, she (C) would be (D) healthy now.', choices: ['(A) took', '(B) the medicine yesterday, she', '(C) would be', '(D) healthy now'], answer: 0, why: 'yesterday の過去のことなので if 節は過去完了 had taken（混合仮定法）。' },
+      { sentence: '(A) If I (B) would have known (C) the truth, I (D) would have told you.', choices: ['(A) If I', '(B) would have known', '(C) the truth, I', '(D) would have told you'], answer: 1, why: 'if 節には would を使わない。If I had known。' },
+      { sentence: 'If he (A) had left (B) earlier, he (C) would not miss (D) the train yesterday.', choices: ['(A) had left', '(B) earlier, he', '(C) would not miss', '(D) the train yesterday'], answer: 2, why: 'yesterday の過去のことなので would not have missed。' },
+      { sentence: '(A) Had I (B) known (C) about it, I (D) will have helped you.', choices: ['(A) Had I', '(B) known', '(C) about it, I', '(D) will have helped you'], answer: 3, why: '仮定法の主節は will ではなく would。would have helped。' },
+      { sentence: 'If it (A) did not rain (B) yesterday, the ground (C) would not be (D) wet now.', choices: ['(A) did not rain', '(B) yesterday, the ground', '(C) would not be', '(D) wet now'], answer: 0, why: '昨日のことなので過去完了 had not rained、今のことは would not be（混合仮定法）。' },
+      { sentence: '(A) Without your help, I (B) would fail (C) the test (D) last week.', choices: ['(A) Without your help, I', '(B) would fail', '(C) the test', '(D) last week'], answer: 1, why: 'last week の過去のことなので would have failed。' },
+      { sentence: 'If he (A) had been (B) more careful, the accident (C) would not happen (D) at that time.', choices: ['(A) had been', '(B) more careful, the accident', '(C) would not happen', '(D) at that time'], answer: 2, why: 'at that time の過去のことなので would not have happened。' },
+      { sentence: 'If we (A) had bought (B) the house ten years ago, we (C) would have lived (D) in it now.', choices: ['(A) had bought', '(B) the house ten years ago, we', '(C) would have lived', '(D) in it now'], answer: 2, why: 'now の今のことなので主節は would be living（混合仮定法）。' },
+      { sentence: '(A) If I (B) have not (C) eaten so much, I (D) would not feel sick now.', choices: ['(A) If I', '(B) have not', '(C) eaten so much, I', '(D) would not feel sick now'], answer: 1, why: '過去の事実とちがうことなので過去完了 had not eaten。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
