@@ -31698,6 +31698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-flying-less',
+    title: 'Should We Fly Less?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Air travel has transformed the modern world. Journeys that once took weeks by ship can now be completed in a few hours, allowing people to visit distant relatives, do business across continents, and experience cultures far from their own. Yet flying is also one of the most carbon-intensive activities that an individual can undertake. A single long-distance return flight can produce more greenhouse gas emissions per passenger than many people in poorer countries produce in an entire year. As concern about climate change grows, a difficult question has emerged: should people fly less, and should governments discourage them from flying?",
+      "Supporters of reducing air travel point out that aviation's share of global emissions is likely to increase. Other sectors, such as electricity generation and road transport, have practical alternatives to fossil fuels, including solar power and electric vehicles. Aircraft, however, are much harder to decarbonize, since batteries are too heavy for long flights and cleaner fuels remain expensive and scarce. If air travel continues to grow at its current rate, supporters argue, it could consume a large part of the remaining carbon budget that the world can afford.",
+      "Some supporters propose taxes that rise with the number of flights a person takes each year. Under such a system, a family taking one holiday flight would pay little or nothing, while frequent flyers, who are often wealthy and responsible for a large share of all flights, would pay much more. ( A ) such a tax would make flying more expensive for some people, supporters argue, it would be fairer than a flat tax on every ticket, which would burden occasional travelers and those visiting family abroad as heavily as those who fly for pleasure many times a year.",
+      "Critics, however, raise several objections. Many people depend on air travel for reasons that are not trivial: migrants visiting families in their home countries, students studying abroad, and workers whose jobs require international contact. For countries that rely heavily on tourism, a reduction in air travel could cause serious economic harm, particularly in developing regions where tourism provides many jobs. Critics also point out that individuals' choices about flying are only a small part of the climate problem, and that focusing on them may distract attention from the larger changes needed in energy and industry.",
+      "There are also questions about alternatives. In some regions, high-speed trains offer a practical replacement for short flights, and several governments have encouraged travelers to choose rail instead of air for journeys that can be completed in a few hours. For longer distances, however, there are few realistic alternatives, and travel by sea is slow and often impractical. Investing in better rail networks and cleaner aircraft technology, many experts suggest, may achieve more than simply asking people to stay at home.",
+      "Some people have chosen to reduce their flying voluntarily, motivated by a sense of personal responsibility. They argue that individual actions matter not only because of their direct effects but also because they can influence social norms, encouraging others to reconsider their habits and showing politicians that citizens are willing to accept change. Others worry that such choices may create feelings of guilt without achieving much, and that responsibility should lie mainly with governments and companies rather than with individuals.",
+      "The debate over flying reflects a broader tension in responses to climate change, between the freedom to travel and the need to reduce emissions. Few people would wish to return to a world in which international travel was available only to the very rich. At the same time, it is difficult to justify unlimited growth in an activity that contributes so heavily to a global problem. Finding a fair balance will likely require a combination of technological innovation, better alternatives, and policies that ask those who fly most to contribute the most to reducing its impact.",
+    ],
+    ja: [
+      '飛行機の旅は現代の世界を一変させた。かつて船で何週間もかかった旅が今では数時間ですみ、人々は遠くの親族をたずね、大陸をこえて仕事をし、自分の文化から遠くはなれた文化を経験できるようになった。しかし飛行機に乗ることは、個人がする活動の中で最も多くの炭素を出すものの一つでもある。たった一回の長距離の往復飛行で、乗客一人あたり、貧しい国の多くの人々が一年間に出すよりも多くの温室効果ガスが出ることがある。気候変動への懸念が高まるにつれ、むずかしい問いが生まれている。人々は飛行機に乗るのをへらすべきか、そして政府はそれを思いとどまらせるべきか、という問いである。',
+      '飛行機の旅をへらすことを支持する人々は、世界の排出量にしめる航空の割合はふえそうだと指摘する。発電や道路交通のようなほかの分野には、太陽光発電や電気自動車をふくむ、化石燃料にかわる現実的な手段がある。しかし航空機は、長い飛行には電池が重すぎ、よりきれいな燃料は高く手に入りにくいままなので、脱炭素化がはるかにむずかしい。飛行機の旅が今の割合で成長し続ければ、世界が許容できる残りの炭素の予算の大きな部分を使ってしまいかねない、と支持する人々は主張する。',
+      '一人が一年に乗る飛行機の回数に応じて上がる税を提案する支持者もいる。そうした仕組みのもとでは、休みに一度飛行機に乗る家族はほとんど、あるいはまったくはらわないが、しばしば豊かで、すべての飛行の大きな割合に責任がある、よく飛行機に乗る人々は、はるかに多くはらうことになる。そうした税は一部の人にとって飛行機に乗ることを高くするが、すべての航空券に一律にかける税よりは公平だろう、と支持する人々は主張する。一律の税は、たまに旅をする人や外国の家族をたずねる人に、楽しみのために一年に何度も飛ぶ人と同じくらい重い負担をかけるからである。',
+      'しかし批判する人々は、いくつかの反対をあげる。多くの人は、ささいではない理由で飛行機の旅にたよっている。母国の家族をたずねる移民や、外国で学ぶ学生や、仕事で国際的なやりとりが必要な働く人である。観光に大きくたよっている国にとって、飛行機の旅がへることは、とくに観光が多くの仕事をあたえている発展途上の地域で、深刻な経済的な害をもたらしうる。批判する人々はまた、飛行機に乗るかどうかについての個人の選択は気候の問題のほんの一部にすぎず、それに注目すると、エネルギーや産業で必要なより大きな変化から注意がそれてしまうかもしれないと指摘する。',
+      '代わりの手段についての問いもある。地域によっては、高速鉄道が短い飛行の現実的なかわりになり、いくつかの政府は、数時間ですむ旅には飛行機ではなく鉄道を選ぶよう旅行者にすすめてきた。しかしより長い距離では、現実的な代わりの手段はほとんどなく、船の旅はおそく、しばしば実際的ではない。多くの専門家は、単に人々に家にいるよう求めるよりも、よりよい鉄道網やよりきれいな航空機の技術に投資するほうが多くをなしとげるかもしれないと示唆する。',
+      '個人的な責任の感覚から、自分から飛行機に乗るのをへらすことを選んだ人々もいる。個人の行動は、その直接の効果のためだけでなく、社会の規範に影響し、ほかの人に習慣を考え直すようはげまし、市民が変化を受け入れる気持ちがあることを政治家に示すことができるからこそ大事なのだ、と彼らは主張する。ほかの人々は、そうした選択はあまり多くをなしとげないまま罪悪感を生むかもしれず、責任は主に個人ではなく政府や企業にあるべきだと心配している。',
+      '飛行機の旅をめぐる議論は、気候変動への対応における、旅をする自由と排出をへらす必要とのあいだの、より広い緊張を反映している。国際的な旅がごく豊かな人々にしかできなかった世界にもどりたいと思う人はほとんどいないだろう。同時に、地球規模の問題にこれほど大きく関わる活動のかぎりない成長を正当化するのはむずかしい。公平なつりあいを見つけるには、おそらく技術の革新と、よりよい代わりの手段と、最もよく飛行機に乗る人々にその影響をへらすことに最も多く貢献するよう求める政策との組み合わせが必要になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「そうした税は飛行機に乗ることを高くするが、一律の税より公平だろう」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Aviation is hard to ( 1 ) because batteries are too heavy for long flights. Some propose taxes that rise with the number of flights, targeting ( 2 ) flyers. Critics point to the needs of migrants and tourism-dependent countries, and many experts favor investing in better rail and cleaner ( 3 ).',
+      blanks: [
+        { choices: ['decarbonize', 'advertise', 'measure', 'repair'], answer: 0, why: '第2段落 Aircraft, however, are much harder to decarbonize。' },
+        { choices: ['frequent', 'young', 'nervous', 'foreign'], answer: 0, why: '第3段落 frequent flyers ... would pay much more。' },
+        { choices: ['aircraft', 'clothing', 'houses', 'food'], answer: 0, why: '第5段落 better rail networks and cleaner aircraft technology。' },
+      ],
+    },
+    tf: [
+      { statement: 'たった一回の長距離の往復飛行で、多くの人が一年に出すより多くの排出が出ることがある。', answer: true, why: '第1段落 can produce more greenhouse gas emissions per passenger than many people in poorer countries produce in an entire year。' },
+      { statement: '支持する人々によれば、航空機は脱炭素化がかんたんである。', answer: false, why: '第2段落 are much harder to decarbonize。' },
+      { statement: '長い距離では、飛行機にかわる現実的な手段はほとんどない。', answer: true, why: '第5段落 For longer distances, however, there are few realistic alternatives。' },
+      { statement: '筆者は、国際的な旅を豊かな人だけのものにすべきだと述べている。', answer: false, why: '第7段落 Few people would wish to return to a world in which international travel was available only to the very rich。' },
+    ],
+    qa: [
+      { q: 'Who depends on air travel for reasons that are not trivial, according to critics?', choices: ['Migrants, students abroad, and international workers.', 'Only wealthy tourists.', 'Nobody at all.', 'Only airline employees.'], answer: 0, why: '第4段落 migrants visiting families ... students studying abroad, and workers whose jobs require international contact。' },
+      { q: 'Why do some people argue that individual actions matter?', choices: ['They can influence social norms.', 'They cost nothing.', 'They solve climate change alone.', 'They are required by law.'], answer: 0, why: '第6段落 they can influence social norms。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
