@@ -31778,6 +31778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-solar-roofs',
+    title: 'Should Every New Roof Have Solar Panels?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As countries try to reduce their dependence on fossil fuels, the roofs of buildings have attracted increasing attention. Every day, enormous amounts of sunlight fall on houses, schools, offices, and factories, and much of this energy could be captured by solar panels. Some governments and cities have therefore introduced rules requiring that new buildings be equipped with solar panels, and others are considering similar measures. Supporters see such rules as a simple and effective way to accelerate the transition to clean energy; critics question whether they are fair, efficient, or appropriate for every situation.",
+      "Supporters argue that rooftop solar panels make use of space that would otherwise be wasted. Unlike large solar farms, which may require clearing land that could be used for agriculture or nature, panels on roofs occupy surfaces that already exist. Electricity generated on a roof can be used directly in the building below, reducing the amount that must be transmitted over long distances and lowering losses in the grid. Over the lifetime of a building, supporters add, the savings on electricity bills can be considerably greater than the initial cost of the panels.",
+      "Requiring panels on new buildings, rather than relying on voluntary installation, may also help to overcome a common problem. Many people recognize that solar power would save them money in the long run, but they hesitate because of the upfront cost, the effort of arranging installation, or uncertainty about how long they will remain in their homes. ( A ) these obstacles may seem small to individuals, they add up to a large barrier across society, and a requirement for new buildings ensures that panels are installed when it is easiest and cheapest to do so, during construction.",
+      "Critics, however, point out that not every roof is suitable for solar panels. Buildings in shaded areas, on narrow streets, or with roofs facing away from the sun may produce little electricity, and in such cases the cost of the panels may never be recovered. A uniform requirement, critics argue, may force builders to install equipment that delivers little benefit, raising the price of new housing at a time when many people already struggle to afford a home. They suggest that money spent in this way might achieve more if it were invested in large solar farms located where sunlight is strongest.",
+      "There are also concerns about the electricity grid. Solar panels produce power only when the sun is shining, and much of the electricity they generate is produced in the middle of the day, when demand may be relatively low. If large numbers of buildings feed electricity into the grid at the same time, it can become difficult to manage, and without sufficient storage, some of the energy may be wasted. Supporters respond that batteries are becoming cheaper and that smart systems can shift some electricity use to sunny hours, but critics note that these solutions also require investment.",
+      "Some cities have adopted more flexible approaches. Rather than requiring solar panels on every new building, they allow builders to choose among several options, such as installing panels, using other forms of renewable energy, or contributing to community energy projects. Others provide financial support to help homeowners install panels on existing buildings, which make up the great majority of the housing stock and will remain in use for decades. Such policies try to combine the benefits of a requirement with the flexibility needed to account for local conditions.",
+      "The debate over rooftop solar thus reflects a broader question about how societies should pursue climate goals: through firm rules that guarantee action, or through flexible incentives that allow people to choose the most efficient solutions. Both approaches have strengths and weaknesses. What seems clear is that the transition to clean energy will require using many available resources, and that the roofs above our heads, long overlooked, may become an important part of how we power our lives.",
+    ],
+    ja: [
+      '国々が化石燃料へのたよりをへらそうとするにつれて、建物の屋根がますます注目を集めている。毎日、家や学校や事務所や工場にばくだいな量の日光がふりそそいでおり、このエネルギーの多くは太陽光パネルでとらえることができるだろう。そのため、新しい建物に太陽光パネルを取りつけることを求める規則を導入した政府や都市もあり、同じような手段を検討しているところもある。支持する人々はそうした規則を、きれいなエネルギーへの移行を速める単純で効果的な方法とみなし、批判する人々は、それが公平で効率的で、あらゆる状況にふさわしいのかを疑問視している。',
+      '支持する人々は、屋根の太陽光パネルは、ほかの場合ならむだになる空間を利用すると主張する。農業や自然のために使えたかもしれない土地を切りひらく必要があるかもしれない大規模な太陽光発電所とちがって、屋根のパネルはすでにある表面をしめる。屋根で作られた電気はその下の建物で直接使えるので、長い距離をおくらなければならない量がへり、送電網での損失が少なくなる。建物が使われる期間全体で見れば、電気代の節約はパネルのはじめの費用よりかなり大きくなりうる、と支持する人々はつけ加える。',
+      '自分から取りつけるのにまかせるのではなく、新しい建物にパネルを求めることは、よくある問題を乗りこえる助けにもなるかもしれない。多くの人は、太陽光発電が長い目で見ればお金の節約になると認めているが、はじめの費用や、取りつけの手配の手間や、どれだけ長くその家に住むかわからないことのためにためらう。こうした障害は個人にとっては小さく思われるかもしれないが、社会全体では大きな壁になる。新しい建物への義務づけは、パネルを取りつけるのが最もかんたんで安いとき、つまり建設中に取りつけられることを保証するのである。',
+      'しかし批判する人々は、すべての屋根が太陽光パネルに向いているわけではないと指摘する。かげになる場所や、せまい通りにある建物や、屋根が太陽と反対を向いている建物はほとんど電気を作らないかもしれず、そうした場合パネルの費用はけっして取りもどせないかもしれない。一律の義務づけは、建てる人にほとんど恩恵をもたらさない設備を取りつけさせ、多くの人がすでに家を買うのに苦労している時期に、新しい住まいの値段を上げかねない、と批判する人々は主張する。彼らは、このように使われるお金は、日光が最も強い場所にある大規模な太陽光発電所に投資したほうが、より多くをなしとげるかもしれないと示唆する。',
+      '送電網についての懸念もある。太陽光パネルは日が照っているときにしか電気を作らず、それが作る電気の多くは、需要が比較的少ないかもしれない昼の中ごろに作られる。多くの建物が同時に送電網に電気を送りこむと、管理がむずかしくなり、十分な蓄電がなければ、エネルギーの一部はむだになるかもしれない。支持する人々は、電池は安くなりつつあり、かしこい仕組みで電気の使用の一部を晴れた時間にうつすことができると答えるが、批判する人々は、こうした解決にも投資が必要だと指摘する。',
+      'より柔軟なやり方をとった都市もある。すべての新しい建物に太陽光パネルを求めるのではなく、パネルを取りつけたり、ほかの形の再生可能エネルギーを使ったり、地域のエネルギー事業に出資したりするといった、いくつかの選択肢から建てる人が選べるようにしているのである。すでにある建物にパネルを取りつけるのを助けるために家の持ち主にお金の支援をする都市もある。すでにある建物は住まいの大部分をしめ、これから何十年も使われ続けるからである。そうした政策は、義務づけの利点と、地域の事情を考えに入れるのに必要な柔軟さとを組み合わせようとしている。',
+      'このように屋根の太陽光発電をめぐる議論は、社会が気候の目標をどう追い求めるべきかという、より広い問いを反映している。行動を保証するかたい規則によってか、人々が最も効率的な解決を選べるようにする柔軟なはげましによってか、という問いである。どちらのやり方にも強みと弱みがある。はっきりしているように思われるのは、きれいなエネルギーへの移行には手に入る多くの資源を使う必要があり、長く見落とされてきた私たちの頭の上の屋根が、私たちの生活の動力をどうまかなうかの大切な一部になるかもしれないということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「障害は個人には小さく思われるかもしれないが、社会全体では大きな壁になる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say rooftop panels use space that would otherwise be ( 1 ) and that requiring them during construction overcomes the obstacle of upfront cost. Critics point out that not every roof is ( 2 ) and that the grid may struggle with midday power. Some cities offer more ( 3 ) options instead.',
+      blanks: [
+        { choices: ['wasted', 'crowded', 'rented', 'painted'], answer: 0, why: '第2段落 make use of space that would otherwise be wasted。' },
+        { choices: ['suitable', 'expensive', 'visible', 'new'], answer: 0, why: '第4段落 not every roof is suitable for solar panels。' },
+        { choices: ['flexible', 'expensive', 'secret', 'dangerous'], answer: 0, why: '第6段落 Some cities have adopted more flexible approaches。' },
+      ],
+    },
+    tf: [
+      { statement: '大規模な太陽光発電所は、土地を切りひらく必要があるかもしれない。', answer: true, why: '第2段落 large solar farms, which may require clearing land。' },
+      { statement: '批判する人々によれば、すべての屋根で多くの電気が作られる。', answer: false, why: '第4段落 may produce little electricity。' },
+      { statement: '支持する人々によれば、電池は安くなりつつある。', answer: true, why: '第5段落 batteries are becoming cheaper。' },
+      { statement: 'すでにある建物は住まいのごく一部にすぎない。', answer: false, why: '第6段落 existing buildings, which make up the great majority of the housing stock。' },
+    ],
+    qa: [
+      { q: 'Why do many people hesitate to install solar panels, according to the third paragraph?', choices: ['Because of the upfront cost and uncertainty.', 'Because panels are illegal.', 'Because sunlight is weak everywhere.', 'Because electricity is free.'], answer: 0, why: '第3段落 because of the upfront cost, the effort of arranging installation, or uncertainty。' },
+      { q: 'What problem may arise if many buildings feed electricity into the grid at once?', choices: ['It can become difficult to manage.', 'Electricity becomes more expensive at night.', 'Panels stop working.', 'Buildings become colder.'], answer: 0, why: '第5段落 it can become difficult to manage。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
