@@ -4178,6 +4178,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Compared (B) with his brother, (C) Tom (D) is more taller.', choices: ['(A) Compared', '(B) with his brother,', '(C) Tom', '(D) is more taller'], answer: 3, why: 'taller はすでに比較級なので more は不要。is taller。' },
     ],
   },
+  {
+    id: 'exam-error-wish-asif-todai',
+    title: '入試の正誤問題〈176〉（東大レベル：仮定法 I wish・as if の時制）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'I wish・If only・as if（as though）のあとは、現在の事実に反することなら過去形（be は were）、過去の事実に反することなら過去完了（had＋過去分詞）。主節の時制が変わっても、あとの形は「主節と同じ時か、それより前か」で決まる。I wish のあとに will は使わない（実現しそうなら I hope）。It is high time ＋過去形「もう～するころだ」。',
+    ],
+    examples: [
+      { en: 'I wish I could speak French as well as you.', ja: 'あなたと同じくらいフランス語が話せたらいいのに。' },
+      { en: 'He looked as if he had seen a ghost.', ja: '彼はまるで幽霊を見たかのような顔をしていた。' },
+    ],
+    questions: [
+      { sentence: 'I wish (A) I (B) can speak (C) French (D) as well as you.', choices: ['(A) I', '(B) can speak', '(C) French', '(D) as well as you'], answer: 1, why: 'I wish のあとの現在の事実に反する願望は過去形。could speak。' },
+      { sentence: '(A) She talks (B) as if she (C) knows (D) everything.', choices: ['(A) She talks', '(B) as if she', '(C) knows', '(D) everything'], answer: 2, why: 'as if のあとの現在の事実に反することは過去形。knew。' },
+      { sentence: 'I wish (A) I (B) had studied (C) harder (D) when I am young.', choices: ['(A) I', '(B) had studied', '(C) harder', '(D) when I am young'], answer: 3, why: '「若かったとき」は過去なので when I was young。' },
+      { sentence: '(A) He looked (B) as if he (C) has seen (D) a ghost.', choices: ['(A) He looked', '(B) as if he', '(C) has seen', '(D) a ghost'], answer: 2, why: '主節より前のことで事実に反するなら過去完了。had seen。' },
+      { sentence: '(A) I wish (B) it (C) will stop (D) raining soon.', choices: ['(A) I wish', '(B) it', '(C) will stop', '(D) raining soon'], answer: 2, why: 'I wish のあとに will は使わない。実現しそうな願いなら I hope it will stop、事実に反する願いなら I wish it would stop。' },
+      { sentence: '(A) If only (B) I (C) have known (D) the truth then.', choices: ['(A) If only', '(B) I', '(C) have known', '(D) the truth then'], answer: 2, why: '過去の事実に反する願望は If only ＋過去完了。had known。' },
+      { sentence: '(A) It is (B) high time (C) we go (D) home.', choices: ['(A) It is', '(B) high time', '(C) we go', '(D) home'], answer: 2, why: 'It is high time ＋過去形「もう～してもよいころだ」。we went home。' },
+      { sentence: '(A) He spoke (B) to me (C) as though (D) I am a child.', choices: ['(A) He spoke', '(B) to me', '(C) as though', '(D) I am a child'], answer: 3, why: 'as though のあとの事実に反することは過去形。I were a child。' },
+      { sentence: 'I wish (A) you (B) are (C) here (D) with us now.', choices: ['(A) you', '(B) are', '(C) here', '(D) with us now'], answer: 1, why: '現在の事実に反する願望は過去形（be は were）。you were here。' },
+      { sentence: '(A) I hope (B) I were (C) rich enough (D) to buy that house.', choices: ['(A) I hope', '(B) I were', '(C) rich enough', '(D) to buy that house'], answer: 0, why: '事実に反する願望で were を使うなら I wish。I wish I were rich enough。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
