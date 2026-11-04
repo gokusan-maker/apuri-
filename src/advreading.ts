@@ -33502,6 +33502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-self-control',
+    title: 'Rethinking Self-Control',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few qualities are praised as consistently as self-control. Parents encourage children to wait patiently, teachers reward students who resist distraction, and adults struggle against the temptation to eat too much, spend too much, or put off difficult tasks. Psychological studies have suggested that people who show greater self-control in childhood tend to have better health, higher incomes, and more stable relationships later in life. Yet the nature of self-control is less clear than its value. What exactly happens when we resist temptation, and why do we sometimes succeed and sometimes fail?",
+      "A traditional picture describes self-control as a struggle between two parts of the self. One part, governed by reason, recognizes what is good for us in the long run; the other, driven by desire, seeks immediate pleasure. Self-control, in this view, is the victory of reason over desire, a kind of inner strength that some people possess more of than others. This picture has a long history in philosophy and religion, and it remains influential in everyday thinking about willpower, which often treats failure as a sign of weak character.",
+      "Some psychologists have suggested that self-control works like a muscle that can become tired. According to this idea, resisting one temptation uses up a limited supply of mental energy, making it harder to resist the next one. Although this theory attracted wide attention, later attempts to repeat the original experiments have produced mixed results, and many researchers now doubt that willpower is a simple resource that runs out. ( A ) the theory may be incomplete, it drew attention to the fact that self-control is not constant but varies with circumstances.",
+      "Another line of research suggests that people who appear to have strong self-control may simply be better at avoiding situations in which temptation arises. Rather than resisting the desire to eat sweets, they keep sweets out of the house; rather than forcing themselves to concentrate, they work in quiet places without distractions. In this view, self-control depends less on heroic acts of willpower than on the skillful arrangement of one's environment and habits, so that good choices become easy and bad ones difficult.",
+      "The social environment also plays a role. Studies of children asked to wait for a reward have found that their willingness to wait depends partly on whether they trust the adult who promised it. A child who has learned from experience that promises are often broken may reasonably choose the immediate reward. What looks like a lack of self-control may therefore be a rational response to an unreliable world, which suggests that encouraging self-control requires not only training individuals but also creating conditions in which patience is rewarded.",
+      "Moreover, self-control is not always a virtue. A person who controls every impulse may become rigid, anxious, or unable to enjoy life, and excessive self-denial can be as harmful as excessive indulgence. Some impulses, such as the desire to help someone in need or to express affection, may be worth following without hesitation. The challenge is not to suppress all desires but to distinguish between those that serve our deeper goals and those that undermine them, and to give each its proper place in a well-ordered life.",
+      "Perhaps, then, self-control is best understood not as a constant battle against ourselves but as a form of practical wisdom. It involves knowing what we truly value, recognizing the situations in which we are likely to act against those values, and arranging our lives so that we can act well with less struggle. Such wisdom develops gradually, through experience and reflection, and it depends partly on the support of others. Understood in this way, self-control is less a matter of iron will than of thoughtful living, carried out patiently day by day.",
+    ],
+    ja: [
+      '自制心ほど一貫してほめられる性質はほとんどない。親は子どもにしんぼう強く待つようはげまし、先生は気が散るのにあらがう生徒をほめ、大人は食べすぎたり、使いすぎたり、むずかしい仕事を先のばしにしたりする誘惑とたたかう。心理学の研究は、子どものころに自制心を多く示した人は、のちの人生でより健康で、収入が高く、人間関係が安定している傾向があることを示唆している。しかし自制心の性質は、その価値ほどはっきりしていない。私たちが誘惑にあらがうとき、いったい何が起きているのか、そしてなぜ成功するときと失敗するときがあるのだろうか。',
+      '伝統的な見方は、自制心を自分の中の二つの部分のたたかいとしてえがく。理性に支配された一方の部分は、長い目で見て何が自分のためになるかを認め、欲望に動かされたもう一方の部分は、すぐの楽しみを求める。この見方では、自制心とは理性が欲望に勝つことであり、ある人々がほかの人々より多くもっている、一種の内なる強さなのである。この見方は哲学や宗教で長い歴史をもち、意志の力についての日常の考え方に今も影響をあたえており、そうした考え方はしばしば失敗を性格の弱さのしるしとしてあつかう。',
+      '自制心は疲れることのある筋肉のようにはたらくと示唆した心理学者もいる。この考えによれば、一つの誘惑にあらがうと限られた心のエネルギーを使ってしまい、次の誘惑にあらがうのがむずかしくなる。この理論は広く注目を集めたが、のちにもとの実験をくり返そうとした試みはまちまちの結果を出しており、多くの研究者は今では、意志の力がなくなっていく単純な資源だということを疑っている。この理論は不完全かもしれないが、自制心が一定ではなく、状況によって変わるという事実に注意を向けさせた。',
+      '別の研究の流れは、強い自制心をもっているように見える人々は、単に誘惑が生じる状況をさけるのが上手なだけかもしれないと示唆している。あまいものを食べたいという気持ちにあらがうかわりに、あまいものを家に置かない。むりに集中しようとするかわりに、気が散るもののない静かな場所で仕事をする。この見方では、自制心は、意志の力の英雄的な行為よりも、よい選択がかんたんになり悪い選択がむずかしくなるように、自分の環境や習慣を上手に整えることにかかっているのである。',
+      '社会的な環境も役割を果たしている。ほうびを待つよう求められた子どもの研究では、子どもが待とうとするかどうかは、一部は、それを約束した大人を信頼しているかどうかにかかっていることがわかった。約束はしばしば破られると経験から学んだ子どもは、すぐのほうびを選ぶのが理にかなっているかもしれない。したがって、自制心の欠如に見えるものは、あてにならない世界への合理的な反応なのかもしれず、自制心をうながすには、個人を訓練するだけでなく、しんぼう強さが報われる条件を作ることも必要だということを示唆している。',
+      'さらに、自制心がいつも美徳だとはかぎらない。あらゆる衝動をおさえる人は、かたくなになったり、不安になったり、人生を楽しめなくなったりするかもしれず、度をこした自己否定は、度をこした甘えと同じくらい有害になりうる。困っている人を助けたいという気持ちや愛情を表したいという気持ちのように、ためらわずにしたがう価値のある衝動もある。むずかしいのは、すべての欲望をおさえることではなく、より深い目標に役立つ欲望と、それをくずす欲望とを区別し、よく整えられた生活の中でそれぞれにふさわしい場所をあたえることである。',
+      'それなら、自制心は、自分自身とのたえまないたたかいとしてではなく、一種の実践的な知恵として理解するのがよいのかもしれない。それには、自分が本当に何を大切にしているかを知り、その価値に反して行動しやすい状況に気づき、より少ないたたかいでよく行動できるように生活を整えることがふくまれる。そのような知恵は、経験とふり返りを通じて少しずつ育ち、一部はほかの人々のささえにかかっている。このように理解すれば、自制心は鉄の意志の問題というよりも、思慮深い生き方の問題であり、それは毎日しんぼう強く続けられるものなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「理論は不完全かもしれないが、大切な事実に注意を向けさせた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '伝統的な見方では、自制心は理性が欲望に勝つことである。', answer: true, why: '第2段落 Self-control, in this view, is the victory of reason over desire。' },
+      { statement: '多くの研究者は今、意志の力がなくなっていく単純な資源だと確信している。', answer: false, why: '第3段落 many researchers now doubt that willpower is a simple resource that runs out。' },
+      { statement: '子どもが待とうとするかどうかは、一部は約束した大人を信頼しているかにかかっている。', answer: true, why: '第5段落 depends partly on whether they trust the adult who promised it。' },
+      { statement: '筆者によれば、自制心はいつも美徳である。', answer: false, why: '第6段落 self-control is not always a virtue。' },
+    ],
+    qa: [
+      { q: 'How might people with strong self-control actually succeed?', choices: ['By avoiding situations in which temptation arises.', 'By never feeling any desires.', 'By punishing themselves.', 'By working in noisy places.'], answer: 0, why: '第4段落 better at avoiding situations in which temptation arises。' },
+      { q: 'How does the author finally describe self-control?', choices: ['As a form of practical wisdom.', 'As a fixed amount of energy.', 'As a constant battle.', 'As a talent given at birth.'], answer: 0, why: '第7段落 as a form of practical wisdom。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
