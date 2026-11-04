@@ -31822,6 +31822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-simplicity',
+    title: 'The Two Kinds of Simplicity',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Simplicity is widely admired. We praise a simple explanation, a simple design, or a simple way of life, and we often feel that complexity is a sign of confusion or excess. Scientists prefer the simplest theory that fits the evidence, designers remove unnecessary decoration, and many people dream of escaping the complications of modern life by living with fewer possessions and obligations. Yet simplicity is a more puzzling ideal than it first appears. What exactly makes something simple, and why should simplicity be valued at all?",
+      "One difficulty is that simplicity is often the result of great effort. A simple explanation of a complex phenomenon may require years of study to achieve, and a design that appears effortless may be the product of countless revisions. The simplicity that we admire is rarely the simplicity of ignorance, which sees only a few features of a situation because it does not notice the rest. It is rather the simplicity that comes after complexity has been understood, when the essential has been distinguished from the inessential. Such simplicity does not deny complexity; it organizes it, revealing a pattern that was there all along but had been hidden by detail.",
+      "This distinction matters because the two kinds of simplicity can look alike. A person who offers a simple solution to a difficult social problem may be either someone who has grasped its essence or someone who has not understood it at all. ( A ) both may use the same clear and confident language, the first has passed through the complexity of the problem, while the second has avoided it. The danger of admiring simplicity uncritically is that we may be attracted to answers that are easy rather than true.",
+      "Simplicity in one's way of life raises similar questions. Reducing possessions, commitments, and distractions can bring a sense of freedom and clarity, allowing people to focus on what they care about most. But a simple life is not necessarily an easy one. Choosing to live with less requires deciding what is truly important, resisting the constant pressure to acquire more, and accepting the inconveniences that come with having fewer resources. Simplicity, in this sense, is not a withdrawal from life but a demanding form of engagement with it.",
+      "There is also a risk that the pursuit of simplicity becomes a new kind of complication. When simple living is turned into a fashion, it may come with its own products to buy, its own rules to follow, and its own forms of social competition. People may feel anxious about not being simple enough, or judge others for owning too much. What began as a release from the pressures of consumption can thus become another way of measuring oneself against others. The original aim, a calmer and more attentive life, may then be lost behind a new set of anxieties.",
+      "Perhaps the most valuable form of simplicity lies not in the external features of a theory, a design, or a way of life, but in an inner attitude: a clarity about what matters and a willingness to let go of what does not. Such an attitude can coexist with a complex world and even a complicated life. A doctor who must master enormous amounts of information may still approach each patient with a simple and direct attention; a parent who manages many responsibilities may still keep a clear sense of what is most important.",
+      "In this light, simplicity is less a destination than a discipline, something that must be practiced continually rather than achieved once and for all. The world will always present us with more information, more choices, and more demands than we can handle. To live and think simply, in the best sense, is not to ignore this complexity but to meet it with discernment, choosing again and again what deserves our attention and setting aside the rest.",
+    ],
+    ja: [
+      '単純さは広く称賛されている。私たちは単純な説明や単純な設計や単純な生き方をほめ、複雑さは混乱やゆきすぎのしるしだと感じることが多い。科学者は証拠に合う最も単純な理論を好み、デザイナーは不要なかざりをとりのぞき、多くの人々は、より少ない持ち物と義務で暮らすことで現代生活の複雑さから逃れることを夢みる。しかし単純さは、最初に見えるよりもなぞめいた理想である。いったい何が何かを単純にするのか、そしてそもそもなぜ単純さは大切にされるべきなのか。',
+      '一つのむずかしさは、単純さがしばしば大きな努力の結果だということである。複雑な現象の単純な説明は、達成するのに何年もの研究を必要とするかもしれず、苦もなく作られたように見える設計は、数えきれない手直しの産物かもしれない。私たちが称賛する単純さは、めったに無知の単純さではない。無知は、残りに気づかないために状況のいくつかの特徴しか見ないのである。それはむしろ、複雑さが理解され、本質的なものが本質的でないものから区別されたあとに来る単純さである。そのような単純さは複雑さを否定するのではなく、それを整理し、ずっとそこにあったのに細部にかくれていた型を明らかにするのである。',
+      'この区別が大事なのは、二種類の単純さが似て見えることがあるからである。むずかしい社会問題に単純な解決を差し出す人は、その本質をつかんだ人かもしれないし、それをまったく理解していない人かもしれない。両者は同じはっきりとした自信のあることばを使うかもしれないが、前者は問題の複雑さを通りぬけてきたのに対し、後者はそれをさけてきたのである。単純さを無批判に称賛することの危険は、正しい答えではなく、かんたんな答えに引きつけられてしまうかもしれないことである。',
+      '生き方の単純さも、同じような問いを投げかける。持ち物やかかわりや気をちらすものをへらすことは、自由とはっきりした感覚をもたらし、人々が最も大切に思うことに集中できるようにしてくれる。しかし単純な生活はかならずしも楽な生活ではない。より少ないもので暮らすことを選ぶには、何が本当に大切かを決め、もっと手に入れるようにというたえまない圧力にあらがい、より少ない資源しかもたないことにともなう不便を受け入れなければならない。この意味で、単純さは人生からのしりぞきではなく、人生へのきびしいかかわり方なのである。',
+      '単純さを追い求めることが新しい種類の複雑さになってしまう危険もある。単純な暮らしが流行になると、それには買うべき独自の製品や、従うべき独自の規則や、独自の形の社会的な競争がついてくるかもしれない。人々は自分が十分に単純でないことに不安を感じたり、多く持ちすぎている他人を判断したりするかもしれない。こうして、消費の圧力からの解放として始まったものが、他人と自分を比べるもう一つの方法になってしまうこともある。そうなると、より落ち着いた、より注意深い生活というもとの目的は、新しい不安のかげに見失われてしまうかもしれない。',
+      'おそらく最も価値ある形の単純さは、理論や設計や生き方の外の特徴にではなく、内面の態度にある。何が大事かについてのはっきりした理解と、そうでないものを手放そうとする気持ちである。そのような態度は、複雑な世界とも、さらには入り組んだ生活とも共存できる。ばくだいな量の情報を身につけなければならない医者も、一人ひとりの患者に単純でまっすぐな注意を向けることができ、多くの責任をかかえる親も、何が最も大切かについてのはっきりした感覚を保つことができる。',
+      'この光のもとで見ると、単純さは目的地というよりも修練であり、一度で達成されるのではなく、たえず実践されなければならないものである。世界はいつも、私たちが手に負える以上の情報と選択と要求を差し出してくるだろう。最もよい意味で単純に生き、考えるとは、この複雑さを無視することではなく、見きわめる力でそれに向かい合い、何が注意に値するかを何度も何度も選び、残りをわきに置くことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「両者は同じことばを使うかもしれないが、前者は複雑さを通りぬけ、後者はさけた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、単純さはしばしば大きな努力の結果である。', answer: true, why: '第2段落 simplicity is often the result of great effort。' },
+      { statement: '筆者によれば、私たちが称賛する単純さはふつう無知の単純さである。', answer: false, why: '第2段落 is rarely the simplicity of ignorance。' },
+      { statement: '筆者によれば、単純な生活はかならずしも楽な生活ではない。', answer: true, why: '第4段落 a simple life is not necessarily an easy one。' },
+      { statement: '筆者によれば、単純さは一度で達成されるものである。', answer: false, why: '第7段落 must be practiced continually rather than achieved once and for all。' },
+    ],
+    qa: [
+      { q: 'What is the danger of admiring simplicity uncritically?', choices: ['Being attracted to answers that are easy rather than true.', 'Becoming too scientific.', 'Owning too few things.', 'Ignoring all designs.'], answer: 0, why: '第3段落 we may be attracted to answers that are easy rather than true。' },
+      { q: 'What can happen when simple living becomes a fashion?', choices: ['It may bring its own products and forms of competition.', 'It becomes impossible to practice.', 'Everyone becomes equally happy.', 'Possessions disappear completely.'], answer: 0, why: '第5段落 it may come with its own products to buy ... and its own forms of social competition。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
