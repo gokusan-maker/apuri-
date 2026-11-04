@@ -3794,6 +3794,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It will take (B) long time (C) to repair (D) the bridge.', choices: ['(A) It will take', '(B) long time', '(C) to repair', '(D) the bridge'], answer: 1, why: '「長い時間」は a long time。a が必要。' },
     ],
   },
+  {
+    id: 'exam-error-relwhere-kyodai',
+    title: '入試の正誤問題〈160〉（京大レベル：関係副詞 where・when と 前置詞＋which）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係副詞は、うしろの文に「そこで・そのとき・その理由で」の意味が欠けているときに使う：場所 where、時 when、理由 why。where＝in（at）which。前置詞のあとに関係副詞は置かない（in where は×）。うしろの動詞が目的語をとる（visit・spend など）なら関係代名詞 which。the way と how は重ねない。前置詞を which の前に出したら文の最後にくり返さない。',
+    ],
+    examples: [
+      { en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' },
+      { en: 'Kyoto is a city which many tourists visit every year.', ja: '京都は毎年多くの観光客がおとずれる都市だ。' },
+    ],
+    questions: [
+      { sentence: 'This is the town (A) which (B) I was born (C) twenty years (D) ago.', choices: ['(A) which', '(B) I was born', '(C) twenty years', '(D) ago'], answer: 0, why: '「その町で生まれた」は場所を表すので関係副詞 where（または in which）。' },
+      { sentence: '(A) I still remember (B) the day (C) where (D) we first met.', choices: ['(A) I still remember', '(B) the day', '(C) where', '(D) we first met'], answer: 2, why: '時を表す the day のあとは when。' },
+      { sentence: 'The house (A) in where (B) he lives (C) is (D) very old.', choices: ['(A) in where', '(B) he lives', '(C) is', '(D) very old'], answer: 0, why: '前置詞のあとに関係副詞は置けない。in which または where。' },
+      { sentence: 'This is (A) the restaurant (B) where (C) I want (D) to go to.', choices: ['(A) the restaurant', '(B) where', '(C) I want', '(D) to go to'], answer: 3, why: 'where は「そこへ」の意味をふくむので to はいらない。to go。' },
+      { sentence: 'Kyoto is a city (A) where (B) many tourists (C) visit (D) every year.', choices: ['(A) where', '(B) many tourists', '(C) visit', '(D) every year'], answer: 0, why: 'visit は目的語をとる動詞なので、目的語になる関係代名詞 which（または that）。' },
+      { sentence: '(A) Do you know (B) the reason (C) which (D) she left early?', choices: ['(A) Do you know', '(B) the reason', '(C) which', '(D) she left early?'], answer: 2, why: '理由を表す the reason のあとは why（または for which）。' },
+      { sentence: '(A) The office (B) which I work (C) is near (D) the station.', choices: ['(A) The office', '(B) which I work', '(C) is near', '(D) the station'], answer: 1, why: 'work は目的語をとらないので where I work（または in which I work）。' },
+      { sentence: '(A) This is (B) the way how (C) he solved (D) the problem.', choices: ['(A) This is', '(B) the way how', '(C) he solved', '(D) the problem'], answer: 1, why: 'the way と how はいっしょに使わない。the way または how。' },
+      { sentence: 'Tell me (A) the name (B) of the shop (C) at which (D) you bought it at.', choices: ['(A) the name', '(B) of the shop', '(C) at which', '(D) you bought it at'], answer: 3, why: '前置詞 at はすでに which の前にあるので、最後の at はいらない。' },
+      { sentence: '(A) Spring is (B) the season (C) where (D) flowers bloom.', choices: ['(A) Spring is', '(B) the season', '(C) where', '(D) flowers bloom'], answer: 2, why: '季節は時を表すので when。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
