@@ -4274,6 +4274,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The majority of (B) people (C) in the town (D) agrees with the plan.', choices: ['(A) The majority of', '(B) people', '(C) in the town', '(D) agrees with the plan'], answer: 3, why: 'the majority of ＋複数名詞は複数扱いがふつう。agree。' },
     ],
   },
+  {
+    id: 'exam-error-whatever-kyodai',
+    title: '入試の正誤問題〈180〉（京大レベル：複合関係詞 whatever・whoever・no matter how）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '複合関係詞：whatever「何でも・何が～しようとも」、whoever「だれでも・だれが～しようとも」（単数扱い）、whichever「どちらでも」、wherever「どこへでも」、whenever「いつでも」、however ＋形容詞・副詞「どんなに～でも」。譲歩の意味では no matter what・who・how と言いかえられる。節の中は平叙文の語順（whatever you like）。主節の時制・主語との一致にも注意する。',
+    ],
+    examples: [
+      { en: 'Whatever happens, I will support you.', ja: '何が起ころうとも、私はあなたをささえる。' },
+      { en: 'However tired you are, you must finish it.', ja: 'どんなに疲れていても、それを終わらせなければならない。' },
+    ],
+    questions: [
+      { sentence: '(A) Whatever (B) you do, (C) do it (D) careful.', choices: ['(A) Whatever', '(B) you do,', '(C) do it', '(D) careful'], answer: 3, why: '動詞 do を修飾するのは副詞。do it carefully。' },
+      { sentence: '(A) Whoever (B) want to join (C) the club (D) is welcome.', choices: ['(A) Whoever', '(B) want to join', '(C) the club', '(D) is welcome'], answer: 1, why: 'whoever は単数扱い。whoever wants to join。' },
+      { sentence: '(A) No matter how (B) hard (C) he tried, (D) he can not open the door.', choices: ['(A) No matter how', '(B) hard', '(C) he tried,', '(D) he can not open the door'], answer: 3, why: '主節は過去の話なので could not open。' },
+      { sentence: '(A) However (B) tired you are, (C) you must (D) finishing your homework.', choices: ['(A) However', '(B) tired you are,', '(C) you must', '(D) finishing your homework'], answer: 3, why: 'must のあとは動詞の原形。must finish。' },
+      { sentence: '(A) What (B) happens, (C) I will (D) always support you.', choices: ['(A) What', '(B) happens,', '(C) I will', '(D) always support you'], answer: 0, why: '「何が起ころうとも」は Whatever happens（＝No matter what happens）。' },
+      { sentence: '(A) You can (B) invite (C) whomever (D) do you like.', choices: ['(A) You can', '(B) invite', '(C) whomever', '(D) do you like'], answer: 3, why: '複合関係詞の節は平叙文の語順。whomever you like。' },
+      { sentence: '(A) Wherever (B) you go, (C) you will find (D) kindly people.', choices: ['(A) Wherever', '(B) you go,', '(C) you will find', '(D) kindly people'], answer: 3, why: '名詞 people を修飾するのは形容詞。kind people。' },
+      { sentence: '(A) You may (B) choose (C) what ever (D) you like.', choices: ['(A) You may', '(B) choose', '(C) what ever', '(D) you like'], answer: 2, why: '「何でも」の複合関係詞は一語で whatever。' },
+      { sentence: '(A) Whichever (B) road you take, (C) it (D) lead to the station.', choices: ['(A) Whichever', '(B) road you take,', '(C) it', '(D) lead to the station'], answer: 3, why: '主語 it は三人称単数。it leads。' },
+      { sentence: '(A) However (B) much money (C) he has, (D) he never seem happy.', choices: ['(A) However', '(B) much money', '(C) he has,', '(D) he never seem happy'], answer: 3, why: '主語 he は三人称単数。he never seems happy。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
