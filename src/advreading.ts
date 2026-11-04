@@ -33138,6 +33138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-prisons',
+    title: 'What Are Prisons For?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every society must decide how to respond to people who break its laws. For serious crimes, the most common response in modern societies is imprisonment, which removes offenders from the community for a period of time. Yet there is long-standing disagreement about what prisons are for. Some believe that their main purpose is to punish wrongdoing and to protect the public, while others argue that prisons should above all help offenders change their lives, so that they do not commit further crimes after release. The balance between these aims has important consequences for prisoners, victims, and society as a whole.",
+      "Those who emphasize punishment argue that justice requires offenders to suffer consequences in proportion to the harm they have caused. Victims and their families, in this view, deserve to see that wrongdoing is taken seriously, and a society that treats serious crimes lightly may lose the trust of its citizens. Punishment may also deter others from committing similar crimes, since people who know that they will face severe consequences may think twice before breaking the law. From this perspective, a prison that is too comfortable would fail both the victims of crime and the wider public.",
+      "Supporters of rehabilitation, however, point to evidence that harsh prison conditions often fail to reduce crime. Many prisoners are released after a few years, and if they have learned nothing during their time inside except how to survive in a violent environment, they may be more likely to offend again. Programs that provide education, job training, and treatment for addiction or mental illness, by contrast, can help prisoners build lives in which crime is no longer attractive. ( A ) such programs cost money, supporters argue that they are cheaper in the long run than repeated imprisonment.",
+      "Some countries have gone a long way in this direction. In certain prisons, inmates live in small units that resemble ordinary homes, cook their own meals, and work or study during the day. Staff are trained to build relationships with prisoners rather than simply to control them. Supporters point out that rates of reoffending in some of these countries are much lower than in countries with harsher systems, although they admit that many other social factors may also contribute to the difference.",
+      "Critics of this approach worry that it may seem unfair to victims and to law-abiding citizens. If prison conditions are comfortable, they ask, does imprisonment still express society's condemnation of serious crime? Some also fear that public support for the justice system could weaken if people believe that offenders are treated too gently. Moreover, rehabilitation programs do not succeed with everyone, and some offenders may remain dangerous despite every effort to help them change.",
+      "Many experts suggest that punishment and rehabilitation need not be seen as opposites. A prison sentence can express society's judgment that a crime was wrong while still providing opportunities for offenders to change. The loss of freedom itself, they argue, is the punishment; making prison conditions worse than necessary adds little to justice and may increase the risk of future harm. What matters is that the response to crime is fair, that it takes victims seriously, and that it reduces the likelihood of further offending.",
+      "The debate over the purpose of prisons ultimately reflects different views of human nature and of what a just society requires. Those who believe that people can change are more likely to support rehabilitation, while those who emphasize individual responsibility may stress punishment. Whatever balance a society chooses, it is worth remembering that most prisoners will one day return to the community. How they are treated while they are inside will shape not only their own futures, but also the safety of the neighborhoods to which they return.",
+    ],
+    ja: [
+      'どの社会も、法律を破る人々にどう対応するかを決めなければならない。重大な犯罪に対して、現代の社会で最もふつうの対応は投獄であり、それは罪をおかした人を一定の期間、地域社会から引きはなす。しかし、刑務所が何のためにあるのかについては、長いあいだ意見が分かれてきた。その主な目的は悪事を罰し、一般の人々を守ることだと信じる人々もいれば、刑務所は何よりも、罪をおかした人が人生を変え、釈放されたあとにさらに罪をおかさないよう助けるべきだと主張する人々もいる。これらの目的のつりあいは、受刑者や被害者や社会全体にとって大切な結果をもたらす。',
+      '罰を強調する人々は、正義のためには、罪をおかした人が自分のあたえた害に見合った結果を受けることが必要だと主張する。この見方では、被害者とその家族は悪事が真剣に受けとめられているのを見るに値し、重大な犯罪を軽くあつかう社会は市民の信頼を失うかもしれない。重い結果に直面すると知っている人々は法律を破る前によく考えるかもしれないので、罰はほかの人々が同じような罪をおかすのを思いとどまらせるかもしれない。この観点からは、快適すぎる刑務所は、犯罪の被害者と広く一般の人々の両方を裏切ることになるだろう。',
+      'しかし更生を支持する人々は、厳しい刑務所の環境はしばしば犯罪を減らせないという証拠をあげる。多くの受刑者は数年後に釈放されるが、中にいるあいだに暴力的な環境で生きのびる方法以外に何も学ばなかったなら、ふたたび罪をおかしやすくなるかもしれない。対照的に、教育や職業訓練や、依存症や心の病の治療をあたえる取り組みは、受刑者が、犯罪がもはや魅力的でない生活を築く助けになりうる。そうした取り組みにはお金がかかるが、長い目で見ればくり返しの投獄より安いと支持する人々は主張する。',
+      'この方向へ大きく進んだ国もある。ある刑務所では、受刑者はふつうの家に似た小さな単位で暮らし、自分で食事を作り、昼間は働いたり学んだりする。職員は受刑者を単に管理するのではなく、受刑者と関係を築くよう訓練されている。支持する人々は、こうした国のいくつかでは再犯の割合がより厳しい制度をもつ国よりずっと低いと指摘するが、ほかの多くの社会的な要因もそのちがいに関係しているかもしれないことは認めている。',
+      'このやり方を批判する人々は、それが被害者や法律を守る市民には不公平に見えるかもしれないと心配する。刑務所の環境が快適なら、投獄はなお重大な犯罪に対する社会の非難を表しているのか、と彼らは問う。罪をおかした人があまりにやさしくあつかわれていると人々が信じれば、司法制度への国民のささえが弱まるかもしれないとおそれる人もいる。さらに、更生の取り組みはすべての人に成功するわけではなく、変わるのを助けようとするあらゆる努力にもかかわらず、危険なままの人もいるかもしれない。',
+      '多くの専門家は、罰と更生を正反対のものとみなす必要はないと示唆している。刑務所での刑は、犯罪がまちがっていたという社会の判断を表しながら、罪をおかした人に変わる機会をあたえることもできる。自由を失うことそのものが罰であり、刑務所の環境を必要以上に悪くしても正義にはほとんど加わらず、将来の害の危険をふやすかもしれないと彼らは主張する。大切なのは、犯罪への対応が公正であり、被害者を真剣に受けとめ、さらなる罪の可能性を減らすことである。',
+      '刑務所の目的をめぐる議論は、結局のところ、人間の本性と、正しい社会に何が必要かについてのちがう見方を反映している。人は変われると信じる人々は更生をささえやすく、個人の責任を強調する人々は罰を強調するかもしれない。社会がどんなつりあいを選ぶにせよ、ほとんどの受刑者がいつか地域社会にもどってくることを覚えておく価値がある。中にいるあいだに彼らがどうあつかわれるかは、彼ら自身の将来だけでなく、彼らがもどっていく地域の安全も形づくるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「取り組みにはお金がかかるが、長い目で見れば安い」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Some believe that prisons should mainly punish offenders and deter others, while others argue that they should help offenders change through ( 1 ) and training. Critics fear that comfortable prisons may seem unfair to ( 2 ). Many experts argue that the loss of ( 3 ) itself is the punishment, and that punishment and rehabilitation need not be opposites.',
+      blanks: [
+        { choices: ['education', 'violence', 'isolation', 'entertainment'], answer: 0, why: '第3段落 Programs that provide education, job training。' },
+        { choices: ['victims', 'guards', 'tourists', 'lawyers'], answer: 0, why: '第5段落 it may seem unfair to victims and to law-abiding citizens。' },
+        { choices: ['freedom', 'money', 'property', 'health'], answer: 0, why: '第6段落 The loss of freedom itself ... is the punishment。' },
+      ],
+    },
+    tf: [
+      { statement: '罰を強調する人々によれば、罰はほかの人々が罪をおかすのを思いとどまらせるかもしれない。', answer: true, why: '第2段落 Punishment may also deter others。' },
+      { statement: '更生を支持する人々によれば、厳しい刑務所の環境はかならず犯罪を減らす。', answer: false, why: '第3段落 harsh prison conditions often fail to reduce crime。' },
+      { statement: 'ある刑務所では、受刑者は自分で食事を作る。', answer: true, why: '第4段落 cook their own meals。' },
+      { statement: '更生の取り組みはすべての人に成功する。', answer: false, why: '第5段落 rehabilitation programs do not succeed with everyone。' },
+    ],
+    qa: [
+      { q: 'What do supporters admit about the low reoffending rates in some countries?', choices: ['Many other social factors may also contribute.', 'The figures are completely false.', 'Prisons there are very harsh.', 'There are no prisons in those countries.'], answer: 0, why: '第4段落 many other social factors may also contribute to the difference。' },
+      { q: 'Why is it worth remembering that most prisoners will return to the community?', choices: ['How they are treated will affect the safety of neighborhoods.', 'They will all become police officers.', 'They will never commit crimes again.', 'Prisons will soon close.'], answer: 0, why: '第7段落 will shape ... the safety of the neighborhoods to which they return。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
