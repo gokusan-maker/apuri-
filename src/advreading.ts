@@ -32462,6 +32462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-gossip',
+    title: 'The Social Function of Gossip',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Gossip has a poor reputation. It is usually described as idle, unkind, or even dangerous, and most of us would hesitate to admit how much time we spend talking about people who are not present. Yet studies of everyday conversation suggest that a large proportion of what people say to one another concerns the behavior, relationships, and reputations of others. If gossip is so widely condemned, why is it so universal? Its persistence suggests that it may serve purposes that are not immediately obvious.",
+      "One influential explanation holds that gossip plays a role in human societies similar to the role that grooming plays among other primates. Monkeys and apes spend long hours cleaning one another's fur, an activity that builds and maintains social bonds. As human groups grew larger, it became impossible to maintain relationships with everyone through physical contact alone, and language, according to this view, allowed people to exchange information about many others at once. Talking about third parties became a way of learning who could be trusted and of strengthening ties with those who shared the information.",
+      "Gossip can also serve as a means of enforcing social norms. When people talk about someone who has broken a promise, cheated a friend, or behaved selfishly, they spread a warning that may protect others from similar treatment. The knowledge that one's actions may be discussed by others can encourage people to behave fairly even when no formal rule requires it. ( A ) gossip may seem trivial, it can thus function as an informal system of justice, rewarding cooperation and punishing those who take advantage of others.",
+      "Yet the same features that make gossip useful also make it dangerous. Information passed from person to person is easily distorted, and a story that was only partly true may become wholly false by the time it reaches its final listener. People who are discussed in their absence have no opportunity to correct mistakes or to explain their side of the story. Gossip can damage reputations unfairly, exclude individuals from groups, and create an atmosphere of suspicion in which people become afraid to speak openly.",
+      "Moreover, gossip is not always motivated by a desire to protect the community. People may spread stories in order to raise their own status, to harm rivals, or simply to enjoy the pleasure of sharing secrets. Such gossip may strengthen the bond between the speaker and the listener precisely by excluding someone else, creating a sense of belonging that depends on shared hostility. In this form, gossip reinforces divisions rather than encouraging fairness. It may even make the listener wonder, uneasily, what the speaker says about him or her when he or she is not present.",
+      "Modern technology has greatly expanded the reach of gossip. Rumors that once circulated within a village or workplace can now spread to millions of people in a matter of hours through social media. In such conditions, the informal checks that once limited gossip, such as personal knowledge of the people involved or the need to face them the next day, have largely disappeared. A single careless remark can now have consequences far beyond what its speaker ever intended. Once a rumor has spread online, it may be almost impossible to correct or remove, even after it has been shown to be false.",
+      "How, then, should we think about gossip? It may be a mistake to condemn it entirely, since talking about others seems to be a deep part of how human beings learn about their social world and maintain their relationships. But it is equally important to recognize its potential for harm. Perhaps the best approach is to ask, before passing on a story, whether it is true, whether it is fair to the person concerned, and whether sharing it serves any purpose beyond our own momentary pleasure.",
+    ],
+    ja: [
+      'うわさ話は評判がよくない。ふつう、むだだとか、不親切だとか、さらには危険だとさえ言われ、私たちのほとんどは、その場にいない人々について話すのにどれほど時間を使っているかを認めるのをためらうだろう。しかし、日常の会話の研究は、人々がたがいに話すことの大きな割合が、他人のふるまいや人間関係や評判にかかわっていることを示している。うわさ話がこれほど広く非難されているのなら、なぜそれはこれほど普遍的なのだろうか。そのしぶとさは、うわさ話がすぐには明らかでない目的に役立っているのかもしれないことを示している。',
+      '影響力のある一つの説明によれば、うわさ話は人間の社会で、毛づくろいがほかの霊長類のあいだで果たしているのと似た役割を果たしている。サルや類人猿は長い時間をかけておたがいの毛をきれいにするが、この行動は社会的なきずなを築き、保つ。この見方によれば、人間の集団が大きくなるにつれて、体のふれあいだけで全員との関係を保つことは不可能になり、ことばが、多くの他人についての情報を一度に交換することを可能にした。第三者について話すことは、だれが信頼できるかを知り、その情報を共有した人々とのつながりを強める方法になったのである。',
+      'うわさ話は、社会の規範を守らせる手段にもなりうる。人々が、約束を破ったり、友人をだましたり、自分勝手にふるまったりした人について話すとき、ほかの人々を同じようなあつかいから守るかもしれない警告を広めているのである。自分の行動が他人に話題にされるかもしれないと知っていることは、正式な規則が求めていないときでさえ、人々が公正にふるまうようはげますことがある。このように、うわさ話はささいなことに思えるかもしれないが、協力に報い、他人を利用する人を罰する、非公式の正義の仕組みとしてはたらきうるのである。',
+      'しかし、うわさ話を役に立つものにしている同じ特徴が、それを危険なものにもしている。人から人へと伝えられる情報はゆがみやすく、一部だけ本当だった話が、最後の聞き手にとどくころにはまったくのうそになっているかもしれない。いないところで話題にされる人には、まちがいを正したり、自分の言い分を説明したりする機会がない。うわさ話は評判を不当にそこない、個人を集団からしめ出し、人々が率直に話すのをこわがるような疑いの雰囲気を生み出すことがある。',
+      'さらに、うわさ話はいつも共同体を守りたいという気持ちから生まれるわけではない。人々は、自分の地位を高めるため、ライバルを傷つけるため、あるいは単に秘密を共有する楽しみを味わうために話を広めるかもしれない。そのようなうわさ話は、まさにほかのだれかをしめ出すことによって話し手と聞き手のきずなを強め、共有された敵意にもとづく仲間意識を生み出すかもしれない。この形では、うわさ話は公正さをうながすのではなく、分断を強めるのである。それは聞き手に、自分がいないときに話し手が自分について何を言っているのかと、不安に思わせることさえあるかもしれない。',
+      '現代の技術は、うわさ話のとどく範囲を大きく広げた。かつては村や職場の中で広まっていたうわさが、今ではソーシャルメディアを通じて数時間のうちに何百万人もの人々に広がりうる。そのような状況では、かかわる人々を個人的に知っていることや、次の日にその人と顔を合わせなければならないことのような、かつてうわさ話をおさえていた非公式の歯止めは、ほとんど消えてしまった。たった一つの不注意な発言が、今では話し手が意図したことをはるかにこえる結果をもたらしうる。いったんネット上に広まったうわさは、うそだと示されたあとでさえ、正したり消したりすることがほとんど不可能かもしれない。',
+      'それでは、うわさ話をどう考えればよいのだろうか。他人について話すことは、人間が自分の社会の世界について学び、人間関係を保つしかたの深い一部であるように思われるので、それを完全に非難するのはまちがいかもしれない。しかし、その害をおよぼす可能性を認めることも同じように大切である。おそらく最もよい態度は、話を伝える前に、それが本当か、かかわる人にとって公正か、そしてそれを共有することが自分のその場かぎりの楽しみ以上の目的に役立つのかを問うことだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「うわさ話はささいに思えるかもしれないが、非公式の正義の仕組みとしてはたらく」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '研究によれば、人々の会話の大きな割合は他人についてのものである。', answer: true, why: '第1段落 a large proportion of what people say to one another concerns the behavior ... of others。' },
+      { statement: 'ある説明によれば、うわさ話はほかの霊長類の毛づくろいに似た役割を果たす。', answer: true, why: '第2段落 a role ... similar to the role that grooming plays among other primates。' },
+      { statement: '筆者によれば、うわさ話はいつも共同体を守りたい気持ちから生まれる。', answer: false, why: '第5段落 gossip is not always motivated by a desire to protect the community。' },
+      { statement: '筆者は、うわさ話を完全に非難すべきだと結論している。', answer: false, why: '第7段落 It may be a mistake to condemn it entirely。' },
+    ],
+    qa: [
+      { q: 'Why is gossip dangerous, according to the fourth paragraph?', choices: ['Information passed from person to person is easily distorted.', 'It always takes too much time.', 'It is forbidden by law.', 'It makes people forget their friends.'], answer: 0, why: '第4段落 Information passed from person to person is easily distorted。' },
+      { q: 'What has modern technology done to gossip?', choices: ['Greatly expanded its reach.', 'Ended it completely.', 'Made it always true.', 'Limited it to villages.'], answer: 0, why: '第6段落 Modern technology has greatly expanded the reach of gossip。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
