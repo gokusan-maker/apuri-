@@ -30542,6 +30542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-secrets',
+    title: 'The Value of Secrets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We live in an age that celebrates openness. Transparency is demanded of governments and corporations, people share details of their lives with large audiences online, and the keeping of secrets is often regarded as a sign that something shameful is being hidden. \"If you have nothing to hide,\" it is sometimes said, \"you have nothing to fear.\" Yet this attitude overlooks the important role that secrets have always played in human life. The capacity to keep certain things to oneself may be not a weakness to be overcome but a condition of having a self at all.",
+      "Consider how the ability to keep secrets develops in childhood. Young children often assume that adults can see into their minds, and the discovery that one's thoughts are private, that others cannot know them unless one chooses to reveal them, marks an important stage in development. With this discovery comes a new kind of independence. The child learns that he or she possesses an inner life that belongs to him or her alone, and that sharing it is an act of choice rather than something that happens automatically.",
+      "Secrets also make intimacy possible. To confide in a friend is to offer something that one does not offer to everyone, and the value of that offering depends on the fact that it is not universal. If everything about us were known to everyone, there would be nothing special to share with those we love. ( A ) complete openness might seem to bring people closer together, it may in fact erase the distinctions on which close relationships depend, the difference between what we tell our friends and what we tell strangers.",
+      "There are, of course, secrets that do great harm. The concealment of wrongdoing, whether by individuals, institutions, or governments, allows injustice to continue and prevents those who have been harmed from seeking redress. Secrets kept within families can burden children with knowledge they are too young to bear, or isolate members who are excluded from what others know. The demand for transparency in public life is, in large part, a response to the real damage that such secrecy has caused.",
+      "The difficulty, then, is to distinguish between secrets that protect and secrets that conceal harm. One useful distinction is between privacy and secrecy in the narrower sense. Privacy concerns those aspects of our lives that are properly our own business, such as our thoughts, our feelings, and many of our personal relationships, and that others have no right to know. Secrecy in the harmful sense involves hiding information that others do have a legitimate interest in knowing, because it affects their safety, their rights, or their ability to make informed decisions.",
+      "The modern erosion of privacy makes this distinction more urgent. When personal information is collected, stored, and analyzed on a vast scale, often without our full awareness, the space in which we can think and act without being observed grows smaller. People who know that they are being watched tend to behave differently, avoiding unusual opinions and conforming to what they believe is expected. A society without privacy might thus become not more honest but more cautious and uniform, as people learn to hide their true selves even more carefully than before.",
+      "Perhaps, then, the value of secrets lies not in what they hide but in the freedom they preserve. To have a part of one's life that is not exposed to the judgment of others is to have room to experiment, to doubt, to change one's mind, and to develop thoughts that are not yet ready to be shared. A healthy society will demand openness where openness serves justice, while protecting the private spaces in which individuals can become themselves. The goal is not to eliminate secrets but to understand which of them deserve to be kept.",
+    ],
+    ja: [
+      '私たちは開かれていることをたたえる時代に生きている。政府や企業には透明性が求められ、人々はオンラインで大勢の観客に自分の生活のくわしいことを分かちあい、秘密をもつことは、何かはずかしいことがかくされているしるしだとみなされることが多い。「かくすことが何もなければ、おそれることは何もない」とときに言われる。しかしこの態度は、秘密が人間の生活でいつも果たしてきた重要な役割を見落としている。あることを自分の胸にしまっておく力は、乗りこえるべき弱さではなく、そもそも自己をもつことの条件なのかもしれない。',
+      '秘密をもつ力が子ども時代にどう育つかを考えてみよう。幼い子どもはしばしば、おとなが自分の心の中を見ることができると思いこんでおり、自分の考えは自分だけのものであり、自分が明かすことを選ばなければ他人はそれを知ることができないと気づくことは、発達の大切な段階をしるす。この発見とともに、新しい種類の自立がやってくる。子どもは、自分だけのものである内面の生活をもっていること、そしてそれを分かちあうことは自動的に起こることではなく選択の行為であることを学ぶのである。',
+      '秘密はまた、親密さを可能にする。友人に打ち明けることは、だれにでも差し出すわけではない何かを差し出すことであり、その差し出すものの価値は、それがだれにでもあたえられるものではないという事実にかかっている。私たちについてのすべてがだれにでも知られているなら、愛する人と分かちあう特別なものは何もないだろう。完全に開かれていることは人々をより近づけるように思われるかもしれないが、実際には、親しい関係がたよっている区別、つまり友人に話すことと見知らぬ人に話すこととのちがいを消してしまうかもしれない。',
+      'もちろん、大きな害をなす秘密もある。個人によるにせよ、機関や政府によるにせよ、あやまちをかくすことは、不正を続けさせ、害を受けた人々がつぐないを求めるのをさまたげる。家族の中で守られる秘密は、子どもにまだたえられない知識を負わせたり、ほかの人が知っていることから除かれた家族を孤立させたりしうる。公の生活での透明性の要求は、大部分が、そうした秘密が引き起こしてきた現実の害への反応なのである。',
+      'それなら、むずかしいのは、守る秘密と害をかくす秘密とを区別することである。役に立つ区別の一つは、プライバシーと、せまい意味での秘密とのあいだのものである。プライバシーは、私たちの考えや感情や個人的な関係の多くのように、私たちの生活のうち、当然自分自身のことであり、他人が知る権利をもたない面にかかわる。害のある意味での秘密は、他人の安全や権利や、情報にもとづいて決定する力に影響するので、他人が知ることに正当な利害をもつ情報をかくすことをふくむ。',
+      '現代におけるプライバシーのむしばまれは、この区別をより差しせまったものにしている。個人の情報が、しばしば私たちが十分に気づかないうちに、ばくだいな規模で集められ、たくわえられ、分析されると、見られずに考え行動できる空間はせまくなる。見られていると知っている人々は、ちがうふるまいをする傾向があり、ふつうでない意見をさけ、期待されていると思うことに合わせる。こうして、プライバシーのない社会は、より正直になるのではなく、人々が以前よりもさらに注意深く本当の自分をかくすことを学ぶので、より用心深く画一的になるかもしれない。',
+      'それなら、秘密の価値は、それがかくすものではなく、それが守る自由にあるのかもしれない。他人の判断にさらされない生活の一部をもつことは、試し、疑い、考えを変え、まだ分かちあう準備のできていない考えをのばす余地をもつことである。健全な社会は、開かれていることが正義に役立つところでは開かれていることを求めつつ、個人が自分自身になれる私的な空間を守るだろう。目標は秘密をなくすことではなく、どの秘密が守られるに値するかを理解することなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「完全に開かれていることは人々を近づけるように思われるかもしれないが、実際には区別を消してしまうかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、自分の考えが自分だけのものだと気づくことは、発達の大切な段階である。', answer: true, why: '第2段落 marks an important stage in development。' },
+      { statement: '筆者によれば、すべてがだれにでも知られていれば、親密さはより深まる。', answer: false, why: '第3段落 there would be nothing special to share with those we love。' },
+      { statement: '筆者は、あらゆる秘密は害がないと述べている。', answer: false, why: '第4段落 There are, of course, secrets that do great harm。' },
+      { statement: '筆者によれば、見られていると知っている人々は、ふつうでない意見をさける傾向がある。', answer: true, why: '第6段落 avoiding unusual opinions and conforming。' },
+    ],
+    qa: [
+      { q: 'What does privacy concern, according to the fifth paragraph?', choices: ['Aspects of our lives that are properly our own business.', 'Information others need for their safety.', 'Government decisions.', 'Crimes committed by institutions.'], answer: 0, why: '第5段落 Privacy concerns those aspects of our lives that are properly our own business。' },
+      { q: 'What is the goal, according to the last paragraph?', choices: ['To understand which secrets deserve to be kept.', 'To eliminate all secrets.', 'To make everything public.', 'To hide our true selves.'], answer: 0, why: '第7段落 The goal is not to eliminate secrets but to understand which of them deserve to be kept。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
