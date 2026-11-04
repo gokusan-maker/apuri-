@@ -31378,6 +31378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-right-to-disconnect',
+    title: 'The Right to Disconnect',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many workers, the working day no longer ends when they leave the office. Smartphones and laptops allow employers and colleagues to send messages at any hour, and many employees feel obliged to read and answer them in the evening, at weekends, and even on holiday. In response, some countries have introduced laws giving workers a \"right to disconnect,\" meaning that they cannot be required to respond to work communications outside their working hours. Supporters see such laws as a necessary protection; critics worry that they are too rigid for the modern economy.",
+      "Supporters argue that constant connection harms workers' health and family life. When people are always expected to be available, they may never fully relax, and the boundary between work and rest gradually disappears. Studies have linked long working hours and frequent after-hours messages to stress, poor sleep, and burnout. Parents may find it difficult to give their full attention to their children if they are repeatedly checking their phones, and friendships and hobbies may suffer when evenings are interrupted by urgent requests that could easily have waited until the morning.",
+      "Supporters also point out that individual workers often find it difficult to refuse such demands on their own. An employee who does not reply to an evening message may fear being seen as less committed than colleagues who answer immediately, especially if his or her job is insecure. A legal right to disconnect, in this view, protects workers by changing the expectations of the whole workplace, so that no one is disadvantaged for choosing to rest. Some companies have gone further, configuring their email systems so that messages sent at night are delivered only the following morning.",
+      "Critics, however, argue that a single rule cannot suit every kind of work. Many jobs require flexibility: doctors, journalists, and engineers responsible for essential systems may need to be reachable at short notice. Businesses that operate across different time zones may need employees to communicate outside normal hours simply because their partners are awake when they are not. ( A ) a right to disconnect may protect some workers, critics say, it may create difficulties for others who prefer to organize their own time more freely.",
+      "Indeed, some workers value the flexibility that technology provides. A parent may prefer to leave work early to collect a child from school and then answer messages later in the evening, and an employee with a long commute may find it convenient to work partly from home. For such people, strict rules about when they may communicate could reduce rather than increase their freedom. The challenge is to protect people from pressure to be always available without preventing those who wish to work flexibly from doing so.",
+      "Many experts suggest that the solution lies less in laws than in workplace culture. Managers can set an example by not sending messages late at night, by making clear that replies are not expected outside working hours, and by planning work so that urgent requests are rare. Teams can agree on rules about when and how to contact one another. Laws may help by encouraging such discussions, but they cannot by themselves change the habits and expectations that lead people to feel they must always be connected.",
+      "The debate over the right to disconnect reflects a broader question about the place of work in human life. Technology has made it possible to work almost anywhere and at any time, but it has not answered the question of how much of our lives work should occupy. Protecting time for rest, family, and personal interests is not merely a matter of individual well-being; it may also make people more creative and productive when they do work. A society that values both effort and rest may need to find new ways of drawing the line between them.",
+    ],
+    ja: [
+      '多くの働く人にとって、仕事の一日はもはや会社を出たときに終わらない。スマートフォンやノートパソコンのおかげで、雇い主や同僚はいつでもメッセージを送ることができ、多くの従業員は夜や週末や休暇中でさえ、それを読んで返事をしなければならないと感じている。これに応えて、働く人に「つながらない権利」、つまり勤務時間外に仕事の連絡に応じることを求められない権利をあたえる法律を導入した国もある。支持する人々はそうした法律を必要な保護とみなし、批判する人々は現代の経済にはかたすぎるのではないかと心配している。',
+      '支持する人々は、たえずつながっていることは働く人の健康と家庭生活をそこなうと主張する。いつでも対応できることを期待されると、人は完全に休むことができず、仕事と休息のさかい目が少しずつ消えていく。研究は、長い労働時間や勤務時間外のひんぱんなメッセージを、ストレスや睡眠不足や燃えつきと結びつけてきた。親は何度も電話を確かめていると子どもに十分な注意を向けるのがむずかしいと感じるかもしれず、朝まで待てたはずの急ぎの頼みで夜が中断されると、友情や趣味もそこなわれるかもしれない。',
+      '支持する人々はまた、働く人がひとりでそうした求めをことわるのはむずかしいことが多いと指摘する。夜のメッセージに返事をしない従業員は、とくに仕事が不安定な場合、すぐに答える同僚より熱心でないと見られることをおそれるかもしれない。この見方では、つながらない法的な権利は、職場全体の期待を変えることで働く人を守り、休むことを選んだためにだれも不利にならないようにするのである。さらに進んで、夜に送られたメッセージが翌朝にだけ届くようにメールの仕組みを設定した会社もある。',
+      'しかし批判する人々は、一つの規則がすべての種類の仕事に合うことはありえないと主張する。多くの仕事には柔軟さが必要である。医者や記者や、欠かせない仕組みに責任をもつ技術者は、急に連絡がとれる必要があるかもしれない。ちがう時間帯にまたがって営業する企業は、相手が起きているときに自分たちは起きていないというだけの理由で、従業員にふつうの時間外に連絡をとってもらう必要があるかもしれない。つながらない権利は一部の働く人を守るかもしれないが、自分の時間をもっと自由に組み立てたいと思うほかの人に困難を生むかもしれない、と批判する人々は言う。',
+      '実際、技術があたえてくれる柔軟さを大切にしている働く人もいる。子どもを学校にむかえに行くために早く職場を出て、夜にメッセージに返事をするほうがよいと思う親もいるかもしれず、通勤時間の長い従業員は、一部を家で働くのが便利だと思うかもしれない。そうした人々にとって、いつ連絡をとってよいかについてのきびしい規則は、自由をふやすのではなくへらすかもしれない。課題は、柔軟に働きたい人がそうするのをさまたげずに、いつでも対応できるようにという圧力から人々を守ることである。',
+      '多くの専門家は、解決は法律よりも職場の文化にあると示唆する。管理職は、夜おそくにメッセージを送らないことや、勤務時間外には返事を期待していないとはっきりさせることや、急ぎの頼みがめったにないように仕事を計画することで手本を示せる。チームは、いつどのようにたがいに連絡をとるかについての規則を決めることができる。法律はそうした話し合いをうながすことで役に立つかもしれないが、それだけでは、人々にいつもつながっていなければならないと感じさせる習慣や期待を変えることはできない。',
+      'つながらない権利をめぐる議論は、人間の生活の中での仕事の位置についての、より広い問いを反映している。技術は、ほとんどどこでもいつでも働くことを可能にしたが、仕事が私たちの生活のどれだけをしめるべきかという問いには答えていない。休息や家族や個人的な興味のための時間を守ることは、単に個人の幸せの問題ではない。それはまた、人々が実際に働くときに、より創造的で生産的にするかもしれない。努力と休息の両方を大切にする社会は、その二つのあいだに線を引く新しい方法を見つける必要があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「一部の働く人を守るかもしれない一方で、ほかの人に困難を生むかもしれない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters of a right to disconnect say constant connection harms health and family life, and that individual workers find it hard to ( 1 ) such demands alone. Critics argue that many jobs require ( 2 ). Many experts believe that changing workplace ( 3 ) matters more than passing laws.',
+      blanks: [
+        { choices: ['refuse', 'repeat', 'record', 'reward'], answer: 0, why: '第3段落 individual workers often find it difficult to refuse such demands on their own。' },
+        { choices: ['flexibility', 'silence', 'uniforms', 'travel'], answer: 0, why: '第4段落 Many jobs require flexibility。' },
+        { choices: ['culture', 'buildings', 'salaries', 'machines'], answer: 0, why: '第6段落 the solution lies less in laws than in workplace culture。' },
+      ],
+    },
+    tf: [
+      { statement: '研究は、勤務時間外のひんぱんなメッセージをストレスや睡眠不足と結びつけてきた。', answer: true, why: '第2段落 Studies have linked ... frequent after-hours messages to stress, poor sleep, and burnout。' },
+      { statement: '夜のメッセージを翌朝にだけ届くようにした会社はない。', answer: false, why: '第3段落 Some companies have ... configuring their email systems so that messages sent at night are delivered only the following morning。' },
+      { statement: '技術があたえる柔軟さを大切にしている働く人もいる。', answer: true, why: '第5段落 some workers value the flexibility that technology provides。' },
+      { statement: '筆者によれば、法律だけで習慣や期待を変えることができる。', answer: false, why: '第6段落 they cannot by themselves change the habits and expectations。' },
+    ],
+    qa: [
+      { q: 'Why might an employee be afraid not to reply to an evening message?', choices: ['He or she may be seen as less committed.', 'The message might be lost.', 'The phone might break.', 'It would cost money.'], answer: 0, why: '第3段落 may fear being seen as less committed than colleagues。' },
+      { q: 'How can managers set an example, according to the sixth paragraph?', choices: ['By not sending messages late at night.', 'By working longer hours.', 'By banning all phones.', 'By answering every message at once.'], answer: 0, why: '第6段落 Managers can set an example by not sending messages late at night。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
