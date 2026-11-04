@@ -30942,6 +30942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-endings',
+    title: 'The Art of Endings',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Everything that begins must end. Books reach their final pages, journeys arrive at their destinations, friendships fade or are broken, and lives themselves come to a close. Endings are among the most universal of human experiences, and yet we often treat them as interruptions to be regretted rather than as parts of experience that deserve attention in their own right. We celebrate beginnings with ceremonies and good wishes, but we tend to pass through endings quickly, as though the less we dwelt on them, the less they would hurt.",
+      "Yet endings play a crucial role in giving shape and meaning to what precedes them. A story without an ending would not be a richer story but an incomplete one; it is the final chapter that allows us to understand the significance of earlier events, revealing which details mattered and which did not. The same is true, in a more uncertain way, of periods in our own lives. It is often only when a stage of life has ended, when we have left a school, a city, or a job, that we are able to see what it meant to us and how it changed us.",
+      "Endings also intensify our experience of the present. The knowledge that a holiday will soon be over can make its final days especially precious, and the awareness that a friend is about to move away may lead us to say things that we had left unsaid for years. ( A ) we often wish that good things could last forever, it is partly their limited duration that makes us value them. A pleasure that could be enjoyed endlessly might soon lose its power to delight, becoming merely one more part of the background of ordinary life.",
+      "This does not mean that every ending is welcome or that loss should be denied. Some endings are imposed on us against our will, and they may leave grief that lasts for a very long time. To insist that every loss has a hidden benefit can be a way of refusing to take suffering seriously. The point is rather that endings, even painful ones, are not simply empty spaces where something used to be. They are themselves events, with their own character, and the way we meet them can shape what follows.",
+      "Different cultures have developed rituals for marking endings: farewell gatherings, graduation ceremonies, funerals, and the many small customs with which people close a day, a season, or a year. Such rituals help people to acknowledge that something has finished, to express what it meant, and to begin the process of moving on. In societies where such rituals have weakened, people may find it harder to accept endings, carrying unfinished feelings into new situations because they were never given an opportunity to say goodbye.",
+      "Learning to end things well may also be a skill. A teacher who finishes a course by helping students reflect on what they have learned, a leader who hands over responsibility gracefully, or a friend who parts without bitterness all show that an ending can be handled with care. By contrast, endings that are avoided, rushed, or denied tend to leave behind confusion and regret. To end well is not to pretend that nothing has been lost, but to recognize what was valuable and to carry it forward into whatever comes next.",
+      "Perhaps, then, we should think of endings not as the opposite of beginnings but as their necessary companions. Every new stage of life requires the closing of an earlier one, and the capacity to let go is as important as the capacity to begin. To live fully is to accept that all things pass, and to allow that acceptance to deepen rather than diminish our attention to what is present. In this sense, the art of ending may turn out to be inseparable from the art of living.",
+    ],
+    ja: [
+      '始まるものはすべて終わらなければならない。本は最後のページに達し、旅は目的地に着き、友情はうすれたりこわれたりし、人生そのものも終わりをむかえる。終わりは人間の経験の中で最も普遍的なものの一つであるが、私たちはしばしばそれを、それ自体として注意に値する経験の一部としてではなく、残念がるべき中断としてあつかう。私たちは始まりを儀式やよい願いで祝うが、終わりは、まるでそれについて考えなければ考えないほど痛みが少なくなるかのように、すばやく通りすぎがちである。',
+      'しかし終わりは、それより前にあったものに形と意味をあたえるのに決定的な役割を果たす。終わりのない物語は、より豊かな物語ではなく、不完全な物語であろう。それまでのできごとの意味を理解させ、どの細部が大事でどれがそうでなかったかを明らかにするのは、最後の章なのである。同じことは、より不確かな形ではあるが、私たち自身の人生のある時期にも当てはまる。学校や町や仕事をはなれたときのように、人生のある段階が終わったときになってはじめて、それが自分にとって何を意味し、自分をどう変えたのかが見えることが多いのである。',
+      '終わりはまた、今の経験を強める。休暇がまもなく終わると知っていると、最後の数日がとりわけ大切に感じられることがあり、友人がもうすぐ引っこすと気づくと、何年も言わずにいたことを言うようになるかもしれない。私たちはしばしばよいものがずっと続けばいいのにと願うが、それを大切に思わせるのは、一つにはそれが続く時間がかぎられていることなのである。かぎりなく楽しめる楽しみは、すぐに喜ばせる力を失い、ふつうの生活の背景の一部にすぎなくなってしまうかもしれない。',
+      'これは、あらゆる終わりが歓迎すべきものだとか、失うことを否定すべきだということを意味しない。意思に反しておしつけられる終わりもあり、それはとても長く続く悲しみを残すかもしれない。あらゆる喪失にかくれた利益があると言いはることは、苦しみを真剣に受けとめるのをこばむ一つの方法になりうる。要点はむしろ、終わりは、たとえつらいものであっても、かつて何かがあった単なる空っぽの場所ではないということである。それはそれ自体で、それ自身の性格をもつできごとであり、それをどうむかえるかが、そのあとに来るものを形づくりうるのである。',
+      'さまざまな文化は、終わりをしるすための儀式を発達させてきた。送別の集まり、卒業式、葬式、そして人々が一日や季節や一年をしめくくる多くの小さな習慣である。そうした儀式は、人々が何かが終わったことを認め、それが何を意味したかを表し、前に進む過程を始めるのを助ける。そうした儀式が弱まった社会では、人々は終わりを受け入れるのがよりむずかしくなり、さよならを言う機会がなかったために、終わっていない気持ちを新しい状況にもちこむことになるかもしれない。',
+      '物事をうまく終える方法を学ぶことも、一つの技術なのかもしれない。生徒が学んだことをふり返るのを助けて授業を終える先生や、責任を優雅に引きつぐ指導者や、うらみなく別れる友人は、みな、終わりが心をこめてあつかわれうることを示している。それに対して、さけられたり、急がれたり、否定されたりした終わりは、混乱と後悔をあとに残しがちである。うまく終えることは、何も失われなかったふりをすることではなく、何が価値あるものだったかを認め、それを次に来るものへと運んでいくことである。',
+      'それなら、私たちは終わりを始まりの反対ではなく、その必要な道づれとして考えるべきなのかもしれない。人生のあらゆる新しい段階は、それ以前の段階を閉じることを必要とし、手放す力は始める力と同じくらい大切である。十分に生きるとは、すべてのものがすぎていくことを受け入れ、その受け入れが、今あるものへの注意を弱めるのではなく深めるようにすることである。この意味で、終わる技術は、生きる技術と切りはなせないものであるとわかるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「よいものがずっと続けばいいと願うが、それを大切に思わせるのは時間がかぎられていることだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、私たちは始まりを祝うが、終わりはすばやく通りすぎがちである。', answer: true, why: '第1段落 We celebrate beginnings ... but we tend to pass through endings quickly。' },
+      { statement: '筆者によれば、終わりのない物語はより豊かな物語である。', answer: false, why: '第2段落 would not be a richer story but an incomplete one。' },
+      { statement: '筆者は、あらゆる喪失にかくれた利益があると主張している。', answer: false, why: '第4段落 To insist that every loss has a hidden benefit can be a way of refusing to take suffering seriously。' },
+      { statement: '筆者によれば、うまく終えることは何が価値あるものだったかを認めることである。', answer: true, why: '第6段落 to recognize what was valuable and to carry it forward。' },
+    ],
+    qa: [
+      { q: 'What do rituals for marking endings help people to do, according to the fifth paragraph?', choices: ['Acknowledge that something has finished and begin moving on.', 'Forget the past completely.', 'Avoid all goodbyes.', 'Make pleasures last forever.'], answer: 0, why: '第5段落 help people to acknowledge that something has finished ... and to begin the process of moving on。' },
+      { q: 'How does the author describe endings in relation to beginnings at the end?', choices: ['As their necessary companions.', 'As their opposites.', 'As unimportant.', 'As always unwelcome.'], answer: 0, why: '第7段落 not as the opposite of beginnings but as their necessary companions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
