@@ -6576,6 +6576,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She speaks English well, [moreover she can] speak Chinese too.', choices: ['and she can', 'moreover she can', 'however she can', 'therefore she can'], answer: 0, why: 'moreover は副詞なのでコンマで文をつなげない。追加の接続詞 and。' },
     ],
   },
+  {
+    id: 'exam-fix-154',
+    title: '入試の誤文訂正〈154〉（国公立レベル：使役動詞 make・let・have・get の形）',
+    points: ['使役動詞の形：make＋人＋動詞の原形「（むりに）～させる」、let＋人＋動詞の原形「（したいように）～させる」、have＋人＋動詞の原形「（たのんで）～してもらう」、get＋人＋to＋動詞の原形。物が「される」ときは have（get）＋物＋過去分詞（have my hair cut・had her bag stolen）。受け身では to が出る（be made to do）。make oneself understood「自分の言うことを通じさせる」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' }],
+    questions: [
+      { sentence: 'My mother made me [to clean] my room.', choices: ['clean', 'cleaning', 'cleaned', 'be cleaning'], answer: 0, why: 'make＋人＋動詞の原形。to はつけない。' },
+      { sentence: 'Her parents let her [to go] to the concert.', choices: ['go', 'going', 'gone', 'went'], answer: 0, why: 'let＋人＋動詞の原形。to はつけない。' },
+      { sentence: 'I had my hair [cutting] yesterday.', choices: ['cut', 'to cut', 'be cut', 'cuts'], answer: 0, why: '髪は「切られる」側なので have＋物＋過去分詞。cut。' },
+      { sentence: 'I got my brother [help] me with my homework.', choices: ['to help', 'helped', 'helps', 'be helping'], answer: 0, why: 'get＋人＋to＋動詞の原形。to help。' },
+      { sentence: 'I had the mechanic [to check] the engine.', choices: ['check', 'checking it', 'checked by', 'be checked'], answer: 0, why: 'have＋人＋動詞の原形「～してもらう」。check。' },
+      { sentence: 'She had her bag [steal] on the train.', choices: ['stolen', 'stealing', 'to steal', 'stole'], answer: 0, why: 'かばんは「ぬすまれる」側なので過去分詞 stolen（被害）。' },
+      { sentence: 'The teacher made us [writing] the essay again.', choices: ['write', 'to write', 'written', 'wrote'], answer: 0, why: 'make＋人＋動詞の原形。write。' },
+      { sentence: 'He was made [clean] the floor.', choices: ['to clean', 'cleaning', 'cleaned', 'cleans'], answer: 0, why: 'make の受け身では to が必要。was made to clean。' },
+      { sentence: 'Please let me [knowing] your plans.', choices: ['know', 'to know', 'known', 'knew'], answer: 0, why: 'let＋人＋動詞の原形。let me know「知らせて」。' },
+      { sentence: 'I couldn’t make myself [understand] in English.', choices: ['understood', 'understanding', 'to understand', 'understands'], answer: 0, why: '自分（の言うこと）が「理解される」ので過去分詞。make oneself understood。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
