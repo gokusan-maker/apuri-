@@ -33662,6 +33662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-luxury',
+    title: 'What Counts as Luxury?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The idea of luxury seems simple at first. A luxury is something we do not strictly need: an expensive watch, a meal at a famous restaurant, a large house with more rooms than its owners use. Yet when we look more closely, the boundary between luxury and necessity proves surprisingly unstable. Things that were once regarded as luxuries, such as hot running water, refrigerators, or mobile phones, have become ordinary features of daily life in many societies. What counts as luxury, it seems, depends less on the objects themselves than on the expectations of the people who use them.",
+      "Throughout history, luxury has provoked moral suspicion. Philosophers and religious teachers have often warned that the pursuit of luxury corrupts character, encouraging vanity, greed, and indifference to the needs of others. Some societies passed laws limiting what people of different ranks could wear or eat, partly to preserve social order and partly from a belief that excessive consumption was harmful in itself. In this tradition, simplicity and moderation were virtues, and luxury was a sign of moral weakness. Admiring a person for living simply, even when he or she could afford more, was a common theme in stories and sermons.",
+      "Others, however, defended luxury as a source of progress. Some economists argued that the desire for luxuries encourages people to work harder, stimulates trade, and supports the development of new skills and industries. ( A ) a single person's desire for fine goods might seem selfish, they suggested, the combined effect of such desires could increase the wealth of an entire society, providing employment and eventually making once-rare goods available to many.",
+      "There is truth in both views. The history of luxury shows how desires that began among the wealthy have often spread more widely, turning privileges into ordinary comforts. At the same time, the pursuit of luxury can intensify competition for status, in which people seek goods not for their usefulness or beauty but because they signal superiority over others. When this happens, the satisfaction that luxury provides may be short-lived, since each new possession is soon matched by others, and the race begins again. Luxury of this kind may leave people feeling poorer, even as they own more.",
+      "The environmental crisis has added a new dimension to these debates. Many luxuries, from frequent air travel to large cars and constantly changing fashions, consume significant resources and contribute to pollution and climate change. If everyone in the world adopted the consumption patterns of the wealthiest societies, the planet could not support them. This raises the question of whether some forms of luxury are compatible with a fair and sustainable future, and whether the meaning of luxury itself might need to change.",
+      "Some thinkers have suggested that the deepest luxuries may not be material at all. Time to spend with friends and family, quiet places in which to think, freedom from constant hurry, and work that is meaningful rather than merely necessary are, for many people, rarer and more valuable than expensive goods. These forms of luxury are less visible than designer clothes or fast cars, but they may contribute more to a satisfying life, and they need not consume large quantities of natural resources.",
+      "Perhaps, then, reflecting on luxury can help us clarify what we truly value. Asking why we want certain things, whether for their own sake, for the comfort they provide, or for the impression they create, may reveal how much of our desire is shaped by the expectations of others. Such reflection need not lead to a rejection of all pleasure or beauty. It may instead help us to distinguish between luxuries that enrich our lives and those that merely keep us running in a race we did not choose.",
+    ],
+    ja: [
+      'ぜいたくという考えは、最初は単純に思われる。ぜいたく品とは厳密には必要でないもののことである。高価な時計、有名なレストランでの食事、持ち主が使うよりも多くの部屋がある大きな家。しかしよく見ると、ぜいたくと必需品との境界はおどろくほど不安定であることがわかる。給湯や冷蔵庫や携帯電話のように、かつてはぜいたく品とみなされていたものが、多くの社会で日常生活のふつうの一部になっている。何がぜいたくに数えられるかは、物そのものよりも、それを使う人々の期待にかかっているようである。',
+      '歴史を通じて、ぜいたくは道徳的な疑いを引き起こしてきた。哲学者や宗教の教師たちはしばしば、ぜいたくを追い求めることは人がらをそこない、見えや欲ばりや他人の必要への無関心をうながすと警告してきた。ある社会は、ちがう身分の人々が何を着て何を食べてよいかを制限する法律を作った。それは一部には社会の秩序を保つためであり、一部には度をこした消費はそれ自体が有害だという信念からだった。この伝統では、質素と節度が美徳であり、ぜいたくは道徳的な弱さのしるしだった。もっとお金を使えるのに質素に暮らす人を賞賛することは、物語や説教によく見られる主題だった。',
+      'しかし、ぜいたくを進歩の源として擁護する人々もいた。ぜいたく品を求める気持ちは人々をもっと働かせ、商売を活発にし、新しい技術や産業の発展をささえると主張した経済学者もいた。ひとりの人がすばらしい品物を求める気持ちは自分勝手に思えるかもしれないが、そうした欲望を合わせた効果は社会全体の富をふやし、仕事を生み出し、やがてかつてはめずらしかった品物を多くの人の手に届くものにしうる、と彼らは示唆した。',
+      'どちらの見方にも真理がある。ぜいたくの歴史は、裕福な人々のあいだで始まった欲望がしばしばより広く広まり、特権をふつうの快適さに変えてきたことを示している。同時に、ぜいたくの追求は地位をめぐる競争をはげしくすることもある。そこでは人々は、品物を役に立つからでも美しいからでもなく、他人より上であることを示すから求める。そうなると、ぜいたくがあたえる満足は長続きしないかもしれない。新しい持ち物はやがてほかの人々にも追いつかれ、競争がまた始まるからである。この種のぜいたくは、多くをもつようになっても、人々をより貧しく感じさせるかもしれない。',
+      '環境の危機は、こうした議論に新しい面を加えた。ひんぱんな飛行機の旅から大きな車や絶えず変わる流行まで、多くのぜいたくはかなりの資源を消費し、汚染や気候変動の一因になっている。世界のだれもが最も豊かな社会の消費のしかたを取り入れたら、地球はそれをささえられないだろう。このことは、ある形のぜいたくは公平で持続可能な未来と両立できるのか、そしてぜいたくの意味そのものが変わる必要があるのではないか、という問いを提起している。',
+      '最も深いぜいたくは、まったく物質的なものではないのかもしれないと示唆する思想家もいる。友人や家族とすごす時間、考えるための静かな場所、絶え間ないあわただしさからの自由、単に必要なだけでなく意味のある仕事は、多くの人々にとって、高価な品物よりめずらしく価値がある。こうした形のぜいたくはブランドの服や速い車より目に見えにくいが、満ちたりた人生により多く役立つかもしれず、大量の天然資源を消費する必要もない。',
+      'それなら、ぜいたくについてふり返ることは、私たちが本当に何を大切にしているかをはっきりさせる助けになるのかもしれない。なぜあるものを欲しがるのか、それ自体のためか、それがあたえる快適さのためか、それとも人にあたえる印象のためかを問うことは、私たちの欲望のどれほどが他人の期待によって形づくられているかを明らかにするかもしれない。そのようなふり返りは、すべての楽しみや美しさを拒むことにつながる必要はない。むしろ、人生を豊かにするぜいたくと、自分で選んだのではない競争の中で私たちを走らせ続けるだけのぜいたくとを区別する助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ひとりの欲望は自分勝手に思えるかもしれないが、合わせた効果は社会の富をふやしうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'かつてぜいたく品とみなされていたものが、今では日常のふつうの一部になっている。', answer: true, why: '第1段落 have become ordinary features of daily life。' },
+      { statement: 'ある社会は、身分によって何を着てよいかを制限する法律を作った。', answer: true, why: '第2段落 Some societies passed laws limiting what people of different ranks could wear or eat。' },
+      { statement: '筆者によれば、地位をめぐる競争の中のぜいたくの満足は長く続く。', answer: false, why: '第4段落 the satisfaction that luxury provides may be short-lived。' },
+      { statement: '筆者は、すべての楽しみや美しさを拒むべきだと結論している。', answer: false, why: '第7段落 Such reflection need not lead to a rejection of all pleasure or beauty。' },
+    ],
+    qa: [
+      { q: 'How did some economists defend luxury?', choices: ['The desire for luxuries stimulates trade and new industries.', 'Luxury makes people work less.', 'Luxury protects the environment.', 'Luxury is always cheap.'], answer: 0, why: '第3段落 encourages people to work harder, stimulates trade, and supports the development of new skills and industries。' },
+      { q: 'What do some thinkers consider the deepest luxuries?', choices: ['Non-material things such as time and meaningful work.', 'Designer clothes.', 'Fast cars.', 'Large houses.'], answer: 0, why: '第6段落 the deepest luxuries may not be material at all。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
