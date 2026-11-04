@@ -2710,6 +2710,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M70 80 Q76 70 82 80 Z" fill="#f87171" stroke="#4a2f1a" strokeWidth="2" />
       </g>
     )
+  if (species === 'rockhopper')
+    return (
+      <g>
+        {/* 目の上の黄色いかざり羽 */}
+        <path d="M30 30 Q24 24 18 26 M30 32 Q22 30 16 34" fill="none" stroke="#facc15" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
