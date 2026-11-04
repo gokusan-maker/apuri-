@@ -33422,6 +33422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-talent',
+    title: 'Talent and Effort',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we admire an outstanding musician, athlete, or scientist, we often explain their achievement by saying that they have a special talent. The word suggests a natural gift, present from birth, that sets certain people apart from the rest of us. Yet research on expertise has increasingly emphasized the role of effort, practice, and opportunity in the development of exceptional abilities. The relationship between talent and effort is therefore more complicated than our everyday language suggests, and the way we understand it has important consequences for how we educate children and judge ourselves.",
+      "Studies of experts in many fields have found that high levels of performance are usually preceded by years of intensive practice. A famous violinist or chess master has typically spent thousands of hours not merely repeating familiar tasks but working deliberately on weaknesses, seeking feedback, and pushing beyond current limits. Such findings have led some researchers to argue that what we call talent is largely the product of accumulated practice, and that almost anyone could reach a high level with enough of the right kind of effort.",
+      "This view, however, has been criticized as too simple. People differ in physical characteristics, such as height or the structure of their muscles, that affect their potential in certain sports. They may also differ in the speed with which they learn, in their memory, or in their sensitivity to sound or color. ( A ) practice is essential, critics argue, it cannot fully explain why some people progress much faster than others who practice just as hard, or why only a few reach the very highest levels.",
+      "Perhaps the most reasonable conclusion is that talent and effort interact rather than compete. A small initial advantage may attract encouragement from parents and teachers, leading a child to practice more, which in turn increases the advantage. Conversely, a child who struggles at first may become discouraged and stop practicing, so that an early difference becomes a large one. What appears to be natural talent may thus be partly the result of a process that began with small differences and was amplified by experience.",
+      "The way we think about talent can itself influence performance. Psychologists have found that students who believe that ability is fixed tend to avoid challenges, since failure seems to reveal a permanent lack. Those who believe that ability can grow through effort are more likely to persist after setbacks, treating mistakes as opportunities to learn. Praising children for being clever, rather than for working hard, may therefore have the unintended effect of making them less willing to attempt difficult tasks, for fear of losing the label that has been given to them.",
+      "Yet an excessive emphasis on effort carries its own risks. If success is believed to depend entirely on hard work, those who fail may be blamed for not trying enough, even when their circumstances gave them little chance. Opportunities to practice are not distributed equally: access to good teachers, equipment, time, and encouragement depends heavily on family wealth and social background. A society that celebrates effort while ignoring these inequalities may judge people unfairly, mistaking advantages of birth and circumstance for virtues of character.",
+      "A balanced view would recognize both the importance of effort and the reality of differences among individuals, while paying attention to the conditions that allow abilities to develop. Rather than asking whether someone is talented, we might ask what kinds of support and opportunity would allow each person to grow. Such a perspective does not deny that some achievements are extraordinary, but it reminds us that excellence is rarely the work of an individual alone, and that the abilities we admire are shaped by the lives that people have been given the chance to live.",
+    ],
+    ja: [
+      'すぐれた音楽家や運動選手や科学者を賞賛するとき、私たちはしばしば、その人には特別な才能があると言ってその成果を説明する。このことばは、生まれたときからある自然のおくりものが、ある人々をそれ以外の私たちから区別していることを示唆している。しかし熟達についての研究は、並外れた能力の発達における努力や練習や機会の役割をますます強調するようになっている。したがって才能と努力の関係は、日常のことばが示唆するよりも複雑であり、それをどう理解するかは、子どもをどう教育し、自分をどう判断するかにとって大切な結果をもたらす。',
+      '多くの分野の熟達者の研究によって、高い水準の成績には、ふつう何年もの集中的な練習が先立っていることがわかっている。有名なバイオリン奏者やチェスの名人は、たいてい、なれた作業を単にくり返すのではなく、弱点にじっくり取り組み、助言を求め、今の限界をこえようと努めることに何千時間も費やしている。こうした発見から、才能と呼ばれるものは大部分が積み重ねられた練習の産物であり、正しい種類の努力を十分にすればほとんどだれでも高い水準に達しうると主張する研究者もいる。',
+      'しかし、この見方は単純すぎると批判されてきた。人々は、身長や筋肉の構造のように、ある種のスポーツでの可能性に影響する体の特徴がちがう。学ぶ速さや記憶力や、音や色への感受性もちがうかもしれない。練習は欠かせないが、同じくらい熱心に練習するほかの人々よりずっと速く進歩する人がいる理由や、ごく少数だけが最高の水準に達する理由を完全には説明できないと批判する人々は主張する。',
+      'おそらく最も理にかなった結論は、才能と努力は競い合うのではなく、たがいに作用し合うということである。最初の小さな有利さが親や先生のはげましを引きよせ、子どもがもっと練習するようになり、それがさらに有利さを大きくするかもしれない。逆に、最初につまずいた子どもはやる気を失って練習をやめるかもしれず、早い時期の小さなちがいが大きなちがいになってしまう。こうして、生まれつきの才能に見えるものは、一部は、小さなちがいから始まり経験によって増幅された過程の結果なのかもしれない。',
+      '才能についての考え方そのものが成績に影響することもある。心理学者たちは、能力は決まっていると信じる生徒は挑戦をさけがちであることを見いだした。失敗が永久的な欠如を明らかにするように思われるからである。能力は努力によってのびると信じる生徒は、まちがいを学ぶ機会としてあつかい、つまずいたあとも続けやすい。したがって、子どもを努力したことではなく頭がよいことでほめると、むずかしい課題に取り組もうとする気持ちを弱めてしまうという、意図しない効果をもつかもしれない。自分にあたえられたレッテルを失うのを恐れるからである。',
+      'しかし、努力を強調しすぎることにもそれなりの危険がある。成功がすべて努力にかかっていると信じられれば、失敗した人は、状況がほとんど機会をあたえなかったときでさえ、努力が足りなかったと責められるかもしれない。練習の機会は平等に配られてはいない。よい先生や道具や時間やはげましを得られるかどうかは、家庭の豊かさや社会的な背景に大きく左右される。こうした不平等を無視しながら努力をたたえる社会は、人々を不公平に判断するかもしれない。生まれや境遇による有利さを、人がらの美徳ととりちがえてしまうのである。',
+      'つりあいのとれた見方とは、努力の大切さと個人のちがいの現実の両方を認め、能力をのばすことを可能にする条件に注意をはらうものだろう。だれかに才能があるかどうかを問うかわりに、どんなささえと機会があれば一人ひとりが成長できるかを問うことができる。そのような見方は、ある成果が並外れたものであることを否定しないが、すぐれた成果がひとりだけの仕事であることはめったになく、私たちが賞賛する能力は、人々が生きる機会をあたえられてきた人生によって形づくられていることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「練習は欠かせないが、すべては説明できない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '熟達者の高い成績には、ふつう何年もの集中的な練習が先立っている。', answer: true, why: '第2段落 high levels of performance are usually preceded by years of intensive practice。' },
+      { statement: '筆者によれば、才能と努力はたがいに競い合うものである。', answer: false, why: '第4段落 talent and effort interact rather than compete。' },
+      { statement: '能力は決まっていると信じる生徒は、挑戦をさけがちである。', answer: true, why: '第5段落 students who believe that ability is fixed tend to avoid challenges。' },
+      { statement: '練習の機会はすべての人に平等に配られている。', answer: false, why: '第6段落 Opportunities to practice are not distributed equally。' },
+    ],
+    qa: [
+      { q: 'How can a small initial advantage grow larger?', choices: ['It attracts encouragement, leading to more practice.', 'It disappears with age.', 'It is ignored by teachers.', 'It stops all practice.'], answer: 0, why: '第4段落 A small initial advantage may attract encouragement ... leading a child to practice more。' },
+      { q: 'What might be the effect of praising children for being clever?', choices: ['They may become less willing to attempt difficult tasks.', 'They will always work harder.', 'They will become more creative.', 'They will stop making mistakes.'], answer: 0, why: '第5段落 making them less willing to attempt difficult tasks。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
