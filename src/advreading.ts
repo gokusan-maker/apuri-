@@ -32542,6 +32542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-lotteries',
+    title: 'Deciding by Lot',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When a decision must be made among people who all have an equal claim, we sometimes resort to drawing lots. Children decide who goes first in a game by tossing a coin, and in some countries places in popular schools or public housing are allocated by lottery when there are more applicants than places. At first sight, leaving important matters to chance may seem irrational, even irresponsible. Yet the use of lotteries has a long history, and it reflects ideas about fairness that deserve careful consideration.",
+      "In ancient Athens, many public officials were chosen not by election but by lot. Citizens who volunteered were placed in a pool, and a special device was used to select names at random. The Athenians believed that this method was more democratic than elections, which tended to favor the wealthy, the famous, and the skilled speakers. Selection by lot, by contrast, gave every eligible citizen an equal chance to serve, and it made it difficult for powerful groups to control who held office. Because officials served only for short periods, many citizens also gained direct experience of governing, which strengthened their understanding of public affairs.",
+      "The central appeal of a lottery lies in its impartiality. A lottery cannot be bribed, flattered, or influenced by personal connections, and it does not judge applicants according to criteria that might be disputed or hidden. When there is no reasonable way to decide who deserves a scarce good more than others, a lottery treats everyone as equals and spares decision makers the burden of making distinctions they cannot justify. ( A ) its results may disappoint many people, nobody can claim to have been treated unfairly by the procedure itself.",
+      "Lotteries can also protect people from a subtle kind of harm. When a decision is based on merit or need, those who are rejected may feel that they have been judged inferior or less worthy. A lottery, in contrast, carries no such message: the person who loses has simply been unlucky. In this way, random selection may preserve the dignity of those who are disappointed, and it may reduce the anxious competition that arises when people believe that every advantage must be earned. Those who win, likewise, have less reason to feel proud or superior, since they know that their success was not a reward for their own qualities.",
+      "Nevertheless, lotteries have obvious limitations. In many situations, there are good reasons to prefer some candidates to others. We would not want surgeons, pilots, or judges to be chosen at random, since their work requires knowledge and skill that not everyone possesses. Using a lottery where relevant differences exist would ignore the effort people have made and could lead to poor results. The question, therefore, is not whether lotteries are better than judgment in general, but in which circumstances they are appropriate.",
+      "Some thinkers have suggested that lotteries are most suitable when they are combined with other methods. A university might first identify all applicants who meet a certain standard and then select among them by lot, recognizing that fine distinctions among qualified candidates are often unreliable. Similarly, several countries have experimented with citizens' assemblies whose members are chosen at random to discuss difficult political questions, combining the impartiality of the lottery with careful deliberation and expert advice.",
+      "Our discomfort with lotteries may reveal something about our attitudes toward chance. We like to believe that outcomes reflect what people deserve, and we are reluctant to admit how much of life is shaped by luck. Yet a lottery openly acknowledges the role of chance rather than hiding it behind the appearance of careful judgment. Perhaps, then, the value of the lottery lies partly in its honesty, reminding us that where we cannot decide fairly, it may be better to admit our limits than to pretend to a precision we do not have.",
+    ],
+    ja: [
+      'みなが等しい権利をもつ人々のあいだで決定をしなければならないとき、私たちは時にくじびきに頼る。子どもたちはコインを投げてゲームでだれが先に始めるかを決めるし、いくつかの国では、人気のある学校や公営住宅の場所が、定員より応募者が多いときにくじで割り当てられる。一見すると、大切な事がらを偶然にゆだねるのは不合理で、無責任でさえあるように思われるかもしれない。しかし、くじの利用には長い歴史があり、注意深く考える価値のある公正さについての考えを反映している。',
+      '古代アテネでは、多くの公職者が選挙ではなくくじで選ばれた。志願した市民は候補の集まりに入れられ、特別な装置を使って名前が無作為に選ばれた。アテネの人々は、この方法のほうが、裕福な人や有名な人や話のうまい人を有利にしがちな選挙よりも民主的だと信じていた。対照的に、くじによる選出は、資格のあるすべての市民に役につく等しい機会をあたえ、力のある集団がだれが職につくかを支配するのをむずかしくした。公職者は短い期間しかつとめなかったので、多くの市民が統治の直接の経験も得て、それが公の事がらについての理解を強めた。',
+      'くじの中心的な魅力は、その公平さにある。くじはわいろを受けとることも、おだてられることも、個人的なつながりに影響されることもなく、議論の余地があったりかくされていたりするかもしれない基準によって応募者を判断することもない。だれがほかの人より乏しいものを受けるにふさわしいかを決める合理的な方法がないとき、くじは全員を対等にあつかい、決定する人々を、正当化できない区別をする重荷から解放する。くじの結果は多くの人々を失望させるかもしれないが、手続きそのものによって不公平にあつかわれたと主張できる人はいない。',
+      'くじはまた、人々をとらえにくい種類の害から守ることもできる。決定が能力や必要にもとづくとき、選ばれなかった人々は、自分が劣っている、あるいは値打ちが低いと判断されたと感じるかもしれない。対照的に、くじにはそのようなメッセージはない。負けた人は単に運が悪かっただけなのである。このように、無作為の選出は失望した人々の尊厳を守るかもしれず、あらゆる有利さは自分で勝ちとらなければならないと人々が信じるときに生じる、不安な競争を減らすかもしれない。同じように、勝った人も、自分の成功が自分の資質へのほうびではなかったと知っているので、誇ったり優越感をもったりする理由が少ない。',
+      'それでも、くじには明らかな限界がある。多くの状況では、ある候補者をほかの候補者より選ぶべきよい理由がある。外科医やパイロットや裁判官が無作為に選ばれることを私たちは望まないだろう。その仕事には、だれもがもっているわけではない知識と技術が必要だからである。関係のあるちがいがあるところでくじを使えば、人々のしてきた努力を無視することになり、悪い結果につながりうる。したがって問題は、くじが一般に判断よりすぐれているかどうかではなく、どのような状況でくじがふさわしいかなのである。',
+      'くじはほかの方法と組み合わされるときに最もふさわしいと示唆する思想家もいる。大学は、まずある基準を満たすすべての応募者を見きわめ、それから、資格のある候補者のあいだの細かい区別はしばしばあてにならないと認めて、その中からくじで選ぶかもしれない。同じように、いくつかの国では、むずかしい政治の問題を話し合うために、無作為に選ばれた市民で構成される市民会議を試しており、くじの公平さと、注意深い熟議や専門家の助言とを組み合わせている。',
+      'くじに対する私たちの居心地の悪さは、偶然に対する私たちの態度について何かを明らかにしているのかもしれない。私たちは、結果は人々がふさわしいものを反映していると信じたがり、人生のどれほど多くが運によって形づくられているかを認めたがらない。しかしくじは、注意深い判断の見かけの後ろに偶然の役割をかくすのではなく、それを公然と認める。それなら、くじの価値の一部はその正直さにあるのかもしれない。公正に決められないところでは、もっていない正確さをもっているふりをするより、自分の限界を認めるほうがよいかもしれないと、くじは思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「結果は多くの人を失望させるかもしれないが、手続きによって不公平にあつかわれたと主張できる人はいない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '古代アテネでは、多くの公職者がくじで選ばれた。', answer: true, why: '第2段落 many public officials were chosen not by election but by lot。' },
+      { statement: 'アテネの人々は、選挙のほうがくじより民主的だと信じていた。', answer: false, why: '第2段落 this method was more democratic than elections。' },
+      { statement: '筆者によれば、くじで負けた人は単に運が悪かっただけである。', answer: true, why: '第4段落 the person who loses has simply been unlucky。' },
+      { statement: '筆者によれば、外科医やパイロットもくじで選ぶべきである。', answer: false, why: '第5段落 We would not want surgeons, pilots, or judges to be chosen at random。' },
+    ],
+    qa: [
+      { q: 'What is the central appeal of a lottery?', choices: ['Its impartiality.', 'Its speed.', 'Its low cost.', 'Its popularity with experts.'], answer: 0, why: '第3段落 The central appeal of a lottery lies in its impartiality。' },
+      { q: 'How might a university combine a lottery with other methods?', choices: ['By selecting by lot among applicants who meet a certain standard.', 'By choosing all students at random.', 'By letting students choose their own grades.', 'By rejecting all applicants.'], answer: 0, why: '第6段落 first identify all applicants who meet a certain standard and then select among them by lot。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
