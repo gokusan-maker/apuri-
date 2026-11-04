@@ -2568,6 +2568,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M78 56 L86 52" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'parrotfish')
+    return (
+      <g>
+        {/* オウムのくちばしのような口 */}
+        <path d="M14 50 Q10 56 16 60 L24 56 Z" fill="#e0f2fe" stroke="#164e63" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
