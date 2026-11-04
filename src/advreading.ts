@@ -33182,6 +33182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-grief',
+    title: 'What Grief Asks of Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Grief is among the most universal of human experiences. Sooner or later, almost everyone loses someone they love, and the pain that follows can be overwhelming. Yet despite its universality, grief is often poorly understood. Modern societies, which tend to value productivity, efficiency, and optimism, sometimes treat grief as a problem to be solved as quickly as possible, encouraging those who mourn to return to normal life after a short period. This attitude may reflect a deeper discomfort with loss, and it raises the question of what grief really is and what it asks of us.",
+      "For much of the twentieth century, a popular view held that grief proceeds through a fixed series of stages, beginning with denial and ending with acceptance. This idea offered comfort to many people, since it suggested that their pain had a shape and a direction. More recent research, however, suggests that grief rarely follows such a neat pattern. People may move back and forth between different feelings, experience sudden waves of sorrow long after a loss, and find that some forms of grief never entirely disappear. For such people, the expectation that they should have \"moved on\" by a certain time can add a further burden of guilt or confusion to their sorrow.",
+      "Some researchers have also challenged the belief that healthy mourning requires people to let go of the dead completely. In many cultures, maintaining a continuing bond with those who have died is regarded as natural and even valuable. People speak to the dead, keep their possessions, visit their graves, or remember them on special days. ( A ) such practices may seem strange to some observers, they can help mourners integrate the loss into their lives rather than trying to erase it.",
+      "Grief also reveals something important about love. The pain of loss is, in a sense, the other side of attachment: we grieve deeply because we have cared deeply. To wish never to feel grief would be, in effect, to wish never to love anyone so much that losing them would hurt. Seen in this way, grief is not simply a misfortune to be avoided, but an expression of the value that another person has had in our lives.",
+      "Nevertheless, grief can become harmful when it overwhelms a person for a very long time, preventing him or her from functioning or finding any meaning in life. In such cases, professional support may be helpful. The difficulty lies in distinguishing between grief that is painful but natural and grief that has become destructive, since the boundary between them is not always clear, and since cultures differ widely in what they consider an appropriate way and time to mourn.",
+      "Communities play an important role in how grief is experienced. Rituals such as funerals and memorial services give mourners a structure within which to express their sorrow and allow others to share in it. When such shared practices weaken, as some observers believe they have in modern societies, mourners may feel isolated, unsure how to behave or what others expect of them. Friends and colleagues, uncomfortable with loss, may avoid mentioning it altogether, leaving the grieving person even more alone. A simple acknowledgment of the loss, however awkward, is often more helpful than silence.",
+      "Perhaps the most valuable thing we can learn from grief is that some experiences should not be hurried. Mourning takes time, and it may change us in ways that cannot be reversed. Rather than asking how quickly people can recover, we might ask how we can accompany them through their sorrow, listening without trying to fix what cannot be fixed. In doing so, we may also come to understand that the capacity to grieve is part of what makes our lives, and our relationships, deeply human.",
+    ],
+    ja: [
+      '悲嘆は、人間の経験のうちで最も普遍的なものの一つである。遅かれ早かれ、ほとんどだれもが愛する人を失い、そのあとに続く痛みは圧倒的なものになりうる。しかし、その普遍性にもかかわらず、悲嘆はしばしばよく理解されていない。生産性や効率や楽観を重んじがちな現代の社会は、時に悲嘆をできるだけ早く解決すべき問題としてあつかい、喪に服する人々に短い期間のあとでふつうの生活にもどるよううながす。この態度は喪失に対するより深い居心地の悪さを反映しているのかもしれず、悲嘆とは本当は何であり、それが私たちに何を求めるのかという問いを提起している。',
+      '二十世紀の多くの期間、悲嘆は否認に始まり受容に終わる決まった一連の段階を進むという考えが広く受け入れられていた。この考えは、自分の痛みには形と方向があることを示唆したので、多くの人々に慰めをあたえた。しかし、より最近の研究は、悲嘆がそのようにきちんとした型をたどることはめったにないことを示している。人々はさまざまな感情のあいだを行ったり来たりし、喪失からずっとたったあとにとつぜん悲しみの波を経験し、ある形の悲嘆はけっして完全には消えないと気づくこともある。そのような人々にとっては、ある時期までに「立ち直って」いるべきだという期待が、悲しみにさらに罪悪感や混乱という重荷を加えることがある。',
+      '健全な喪の作業には死者を完全に手放すことが必要だという考えに異をとなえる研究者もいる。多くの文化では、亡くなった人とのつながりを保ち続けることは自然であり、価値があるとさえみなされている。人々は死者に話しかけ、その持ち物をとっておき、墓を訪れ、特別な日に思い出す。そうした慣習は一部の観察者には奇妙に見えるかもしれないが、喪に服する人が喪失を消そうとするのではなく、それを自分の人生に組みこむ助けになりうる。',
+      '悲嘆はまた、愛について大切なことを明らかにする。喪失の痛みは、ある意味で愛着の裏側である。私たちは深く気にかけてきたからこそ深く悲しむのである。悲嘆をけっして感じたくないと願うことは、実際には、失えば傷つくほどだれかを愛することをけっしてしたくないと願うことになるだろう。このように見れば、悲嘆は単にさけるべき不幸ではなく、ほかの人が私たちの人生でもってきた価値の表れなのである。',
+      'それでも、悲嘆がとても長いあいだ人を圧倒し、ふつうに生活したり人生に意味を見いだしたりするのをさまたげるときには、有害になりうる。そのような場合には、専門家のささえが役に立つかもしれない。むずかしいのは、つらいが自然な悲嘆と、破壊的になった悲嘆とを区別することである。その境界はいつもはっきりしているわけではなく、また、どのようなしかたとどれほどの期間で喪に服するのがふさわしいかについての考えは、文化によって大きくちがうからである。',
+      '悲嘆がどう経験されるかには、共同体が大切な役割を果たす。葬儀や追悼式のような儀式は、喪に服する人々に悲しみを表すための枠組みをあたえ、ほかの人々がそれを分かち合えるようにする。一部の観察者が現代の社会で起きていると考えるように、こうした共有された慣習が弱まると、喪に服する人々は孤立していると感じ、どうふるまえばよいのか、ほかの人々が何を期待しているのかがわからなくなるかもしれない。喪失に居心地の悪さを感じる友人や同僚は、そのことにまったくふれないようにするかもしれず、悲しむ人をさらにひとりにしてしまう。どれほどぎこちなくても、喪失を一言認めることは、だまっているよりも助けになることが多い。',
+      'おそらく悲嘆から学べる最も価値あることは、急がせるべきではない経験もあるということである。喪には時間がかかり、それは元にもどせないしかたで私たちを変えるかもしれない。人々がどれほど早く立ち直れるかを問うかわりに、どうすれば彼らの悲しみに寄りそえるかを問い、直せないものを直そうとせずに耳をかたむけることができるだろう。そうすることで、悲しむ能力が、私たちの人生と人間関係を深く人間的なものにしているものの一部であることも理解するようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「慣習は奇妙に見えるかもしれないが、喪失を人生に組みこむ助けになる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '最近の研究によれば、悲嘆はかならず決まった段階を順にたどる。', answer: false, why: '第2段落 grief rarely follows such a neat pattern。' },
+      { statement: '多くの文化では、亡くなった人とのつながりを保ち続けることは自然だとみなされている。', answer: true, why: '第3段落 maintaining a continuing bond with those who have died is regarded as natural。' },
+      { statement: '筆者によれば、私たちは深く気にかけてきたからこそ深く悲しむ。', answer: true, why: '第4段落 we grieve deeply because we have cared deeply。' },
+      { statement: '喪に服すのにふさわしい期間についての考えは、どの文化でも同じである。', answer: false, why: '第5段落 cultures differ widely in what they consider an appropriate way and time to mourn。' },
+    ],
+    qa: [
+      { q: 'How do modern societies sometimes treat grief?', choices: ['As a problem to be solved as quickly as possible.', 'As a celebration.', 'As something to be ignored forever.', 'As a sign of weakness to be punished.'], answer: 0, why: '第1段落 treat grief as a problem to be solved as quickly as possible。' },
+      { q: 'What do rituals such as funerals give mourners?', choices: ['A structure within which to express their sorrow.', 'A way to forget the dead.', 'Money to pay their bills.', 'A reason to stop working.'], answer: 0, why: '第6段落 give mourners a structure within which to express their sorrow。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
