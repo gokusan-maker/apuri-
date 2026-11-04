@@ -2696,6 +2696,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="58" cy="16" rx="5" ry="14" fill="#cbd5e1" stroke="#334155" strokeWidth="2" />
       </g>
     )
+  if (species === 'solenodon')
+    return (
+      <g>
+        {/* 長い鼻 */}
+        <path d="M24 52 L8 56" stroke="#3f2a06" strokeWidth="4" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
