@@ -2651,6 +2651,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M14 50 Q30 70 50 66 Q70 70 86 50" fill="none" stroke="#292524" strokeWidth="2" />
       </g>
     )
+  if (species === 'quoll')
+    return (
+      <g>
+        {/* 白い水玉もよう */}
+        <circle cx="38" cy="56" r="3" fill="#ffffff" />
+        <circle cx="52" cy="50" r="3" fill="#ffffff" />
+        <circle cx="62" cy="60" r="3" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
