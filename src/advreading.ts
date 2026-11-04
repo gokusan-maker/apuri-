@@ -32302,6 +32302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-self-deception',
+    title: 'The Puzzle of Self-Deception',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Lying to others is widely condemned, but lying to ourselves is a stranger and more puzzling phenomenon. How can a person both know something and not know it at the same time? Yet self-deception seems to be a common feature of human life. People convince themselves that a failing relationship is healthy, that an unhealthy habit is harmless, or that their own mistakes were someone else's fault. In each case, they seem to hold a belief that the evidence does not support, while somehow avoiding the evidence that would undermine it. Such beliefs are rarely chosen consciously; they seem instead to grow quietly, almost without our noticing.",
+      "One explanation is that self-deception works not by believing a direct falsehood but by managing attention. The self-deceived person does not deliberately tell himself or herself a lie; rather, he or she avoids looking too closely at uncomfortable facts, interprets ambiguous information in the most favorable way, and seeks out evidence that confirms what he or she wishes to believe. Over time, this selective attention can produce a belief that feels sincere, even though it rests on a carefully avoided truth.",
+      "Why should human beings be prone to such a strange habit? Part of the answer may be that self-deception serves certain purposes. Believing that we are more capable, more attractive, or more virtuous than we really are can protect our self-esteem and give us the confidence to act. ( A ) such illusions may be comfortable, and even useful in moderation, they can also lead us to ignore problems until it is too late to solve them, or to treat others unfairly while believing ourselves to be just.",
+      "Self-deception also has social dimensions. Groups, institutions, and even whole societies may deceive themselves about uncomfortable realities, such as injustices from which they benefit or dangers they would prefer not to face. Collective self-deception can be especially difficult to overcome, since each member's illusion is reinforced by the agreement of others. Those who point out the uncomfortable truth may be ignored, criticized, or excluded, precisely because they threaten a shared and comforting belief. History offers many examples of communities that refused to see what later generations found obvious.",
+      "If self-deception is so common and so powerful, how can it be resisted? One important step is to cultivate the habit of seeking out evidence that might prove us wrong, rather than only evidence that confirms our views. Another is to listen seriously to people who see things differently, particularly those who have nothing to gain from flattering us. Honest friends, critical colleagues, and even opponents can sometimes see what we have hidden from ourselves. Writing down our predictions and checking them later can also reveal how often our wishes shape our expectations.",
+      "Yet complete freedom from self-deception may be neither possible nor entirely desirable. Human beings may need a measure of hope that goes beyond the evidence, a willingness to believe that things can improve even when the odds seem poor. The difference between healthy hope and harmful self-deception may lie in whether we remain open to correction. Hope that can acknowledge reality while still aiming beyond it is a form of courage; belief that refuses to look at reality at all is a form of blindness.",
+      "Perhaps, then, the struggle against self-deception is less a single victory than a lifelong practice of honesty. It requires the courage to face uncomfortable truths about ourselves and our communities, and the humility to accept that we may be wrong about things we care about deeply. Such honesty is difficult, but it is also a form of freedom, for a person who can see himself or herself clearly is less likely to be controlled by fears and wishes that he or she does not understand.",
+    ],
+    ja: [
+      '他人にうそをつくことは広く非難されるが、自分にうそをつくことは、より奇妙でなぞめいた現象である。人はどうして何かを知っていると同時に知らないでいられるのだろうか。しかし自己欺瞞は人間の生活によくある特徴のようである。人々は、うまくいっていない関係を健全だと、健康によくない習慣を無害だと、あるいは自分のまちがいを他人のせいだと自分に思いこませる。どの場合も、人は証拠がささえていない信念をもちながら、どうにかしてそれをくずすような証拠をさけているように思われる。そうした信念が意識的に選ばれることはめったにない。むしろ、ほとんど気づかないうちに静かに育つようである。',
+      '一つの説明は、自己欺瞞は直接のうそを信じることによってではなく、注意を管理することによってはたらくというものである。自己欺瞞におちいっている人は、意図的に自分にうそをつくのではない。むしろ、居心地の悪い事実をあまりよく見ないようにし、あいまいな情報を最もつごうのよいように解釈し、信じたいことを確かめてくれる証拠を探すのである。時がたつにつれて、この選択的な注意は、注意深くさけられた真実の上に成り立っているにもかかわらず、本気だと感じられる信念を生み出しうる。',
+      '人間はなぜこのような奇妙な習慣におちいりやすいのだろうか。答えの一部は、自己欺瞞がある目的に役立っているということかもしれない。自分は実際より有能で、魅力的で、徳があると信じることは、自尊心を守り、行動する自信をあたえてくれる。そうした幻想は居心地がよく、ほどほどなら役に立つことさえあるかもしれないが、手遅れになるまで問題を無視させたり、自分は公正だと信じながら他人を不公平にあつかわせたりすることもある。',
+      '自己欺瞞には社会的な面もある。集団や制度や、さらには社会全体が、自分たちが利益を得ている不正や、向き合いたくない危険のような、居心地の悪い現実について自分をあざむくことがある。集団の自己欺瞞はとくに乗りこえにくい。それぞれの成員の幻想が、ほかの成員の同意によって強められるからである。居心地の悪い真実を指摘する人は、まさに共有された心地よい信念をおびやかすがゆえに、無視されたり、批判されたり、しめ出されたりするかもしれない。歴史には、後の世代には明らかに思えたことを見ようとしなかった共同体の例が数多くある。',
+      '自己欺瞞がそれほどよくあり、それほど強力なら、どうすればそれにあらがえるのだろうか。大切な一歩の一つは、自分の考えを確かめてくれる証拠だけでなく、自分がまちがっていることを示すかもしれない証拠を探す習慣を育てることである。もう一つは、ちがう見方をする人々、とくに私たちにへつらって得るものが何もない人々の言うことに真剣に耳をかたむけることである。正直な友人や批判的な同僚や、さらには反対者でさえ、私たちが自分からかくしてきたものを見ることがある。自分の予測を書き留めて後で確かめることも、私たちの願いがどれほどしばしば期待を形づくっているかを明らかにしてくれる。',
+      'しかし、自己欺瞞から完全に自由になることは、可能でもなく、まったく望ましくもないかもしれない。人間には、証拠をこえるある程度の希望、つまり見こみが低く思われるときでさえ物事がよくなりうると信じようとする気持ちが必要なのかもしれない。健全な希望と有害な自己欺瞞とのちがいは、私たちが正されることに開かれたままでいるかどうかにあるのかもしれない。現実を認めながらそれをこえて目指す希望は一種の勇気であり、現実をまったく見ようとしない信念は一種の盲目である。',
+      'それなら、自己欺瞞とのたたかいは、一度の勝利というよりも、正直さの生涯にわたる実践なのかもしれない。それには、自分自身や自分の共同体についての居心地の悪い真実に向き合う勇気と、深く大切に思っていることについて自分がまちがっているかもしれないと受け入れる謙虚さが必要である。そのような正直さはむずかしいが、一種の自由でもある。自分自身をはっきり見ることのできる人は、自分の理解していない恐れや願いに支配されにくいからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「幻想は居心地がよく役に立つこともあるかもしれないが、問題を無視させることもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、自己欺瞞は人間の生活によくある特徴のようである。', answer: true, why: '第1段落 self-deception seems to be a common feature of human life。' },
+      { statement: '筆者によれば、自己欺瞞におちいっている人は意図的に自分にうそをつく。', answer: false, why: '第2段落 does not deliberately tell himself or herself a lie。' },
+      { statement: '筆者によれば、集団の自己欺瞞はとくに乗りこえにくい。', answer: true, why: '第4段落 Collective self-deception can be especially difficult to overcome。' },
+      { statement: '筆者によれば、自己欺瞞から完全に自由になることはかならず望ましい。', answer: false, why: '第6段落 may be neither possible nor entirely desirable。' },
+    ],
+    qa: [
+      { q: 'How does self-deception work, according to the second paragraph?', choices: ['By managing attention.', 'By telling direct lies.', 'By forgetting everything.', 'By trusting others completely.'], answer: 0, why: '第2段落 self-deception works not by believing a direct falsehood but by managing attention。' },
+      { q: 'What is one important step in resisting self-deception?', choices: ['Seeking out evidence that might prove us wrong.', 'Listening only to those who agree.', 'Avoiding all criticism.', 'Ignoring uncomfortable facts.'], answer: 0, why: '第5段落 to cultivate the habit of seeking out evidence that might prove us wrong。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
