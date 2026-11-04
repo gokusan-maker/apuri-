@@ -7248,6 +7248,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This car costs [half as much] that one.', choices: ['half as much as', 'as half much as', 'half much as', 'half as more as'], answer: 0, why: '「半分の値段」は half as much as。' },
     ],
   },
+  {
+    id: 'exam-fix-170',
+    title: '入試の誤文訂正〈170〉（京大レベル：関係副詞 where・when と関係代名詞 which の使い分け）',
+    points: ['先行詞が場所・時でも、関係詞のあとの文に主語や目的語が欠けていれば関係代名詞 which（that）、主語も目的語もそろっていて「そこで・そのとき」の意味なら関係副詞 where・when を使う。This is the town which I visited.（visit の目的語が欠けている）／This is the town where I was born.（文がそろっている）。where＝in which・at which、when＝on which・in which。先行詞が case・situation・point でも where を使えることがある。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the town where I was born, and that is the museum which I visited yesterday.', ja: 'ここは私が生まれた町で、あれは私がきのう訪れた博物館だ。' }],
+    questions: [
+      { sentence: 'This is the city [where] I visited last summer.', choices: ['which', 'when', 'in which', 'what'], answer: 0, why: 'visit の目的語が欠けているので関係代名詞 which。' },
+      { sentence: 'I remember the day [which] we first met.', choices: ['when', 'where', 'what', 'who'], answer: 0, why: 'we first met は文がそろっていて「その日に」なので when（＝on which）。' },
+      { sentence: 'The hotel [which] we stayed was very clean.', choices: ['where', 'when', 'what', 'whose'], answer: 0, why: 'stay は自動詞で目的語は欠けていない。「そこに」泊まったので where（＝at which）。' },
+      { sentence: 'Kyoto is a city [where] attracts many tourists.', choices: ['which', 'when', 'in which', 'whom'], answer: 0, why: 'attracts の主語が欠けているので which。' },
+      { sentence: 'Spring is the season [which] flowers bloom.', choices: ['when', 'where', 'what', 'whose'], answer: 0, why: 'flowers bloom は文がそろっていて「その季節に」なので when。' },
+      { sentence: 'The year [when] I spent in London was unforgettable.', choices: ['which', 'where', 'in which', 'what'], answer: 0, why: 'spend の目的語（the year）が欠けているので which（that）。' },
+      { sentence: 'This is the house [where] my father built.', choices: ['which', 'when', 'in which', 'whose'], answer: 0, why: 'built の目的語が欠けているので which。' },
+      { sentence: 'There are cases [which] this rule does not apply.', choices: ['where', 'when', 'what', 'whom'], answer: 0, why: 'apply は自動詞で文がそろっている。case を先行詞にして where（＝in which）。' },
+      { sentence: 'The park [in where] we played as children has gone.', choices: ['in which', 'which in', 'in that', 'where in'], answer: 0, why: '前置詞のあとは which。in which（＝where）。' },
+      { sentence: 'Do you know the reason [where] she left?', choices: ['why', 'when', 'what', 'which'], answer: 0, why: '先行詞が reason なので why（＝for which）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
