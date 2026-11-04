@@ -30782,6 +30782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-maps',
+    title: 'The Map and the Territory',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every map is a simplification. A map of a city does not show every stone in its streets, every tree in its parks, or every person walking along its pavements; if it did, it would be as large and as complicated as the city itself, and therefore useless. The value of a map lies precisely in what it leaves out. By selecting a few features and ignoring the rest, it allows us to grasp at a glance relationships that would be impossible to see from the ground. Yet this very selectivity carries a danger: we may forget that the map is not the place it represents.",
+      "The same is true of the mental maps through which we understand the world. Concepts, theories, and categories are all ways of simplifying reality so that we can think about it. When we describe a person as an introvert, a country as developed, or an economy as efficient, we are drawing a map that highlights certain features and leaves others out. Without such maps, we would be overwhelmed by the infinite detail of experience. With them, we can reason, predict, and act. But we can also mistake our descriptions for the things they describe.",
+      "This mistake can take several forms. One is to treat a useful simplification as though it were a complete account. A model of the economy that ignores unpaid work, for instance, may be helpful for some purposes, but if we forget what it omits, we may conclude that such work has no value. Another form is to treat the categories of a map as though they were fixed features of the world. ( A ) the borders on a political map are drawn as precise lines, the cultures and languages of the people who live near them often blend gradually into one another, and the lines may tell us more about history and power than about the land itself.",
+      "Maps also reflect the purposes and perspectives of those who make them. A map designed for drivers will emphasize roads, while one made for hikers will show paths and contours. Neither is wrong, but each answers a particular question. Problems arise when one map is presented as the only possible view, concealing the choices that went into making it. Historically, maps have sometimes been used to claim territory, to erase the presence of those who already lived there, or to make some regions appear more important than others.",
+      "None of this means that we should distrust maps. A traveler without a map is not freer but more likely to become lost, and a mind without concepts cannot think at all. The point is rather that maps must be used with awareness of their limits. A good mapmaker knows what has been left out and why, and a good user of maps remains alert to the differences between the map and the terrain. When the two disagree, it is the terrain that must be trusted, and the map that must be corrected.",
+      "This attitude has implications for how we learn. Education often consists of acquiring maps: the frameworks of science, history, and other disciplines that allow us to organize what we know. These frameworks are immensely valuable, but students who learn them without understanding how they were made may treat them as final truths rather than as tools. A deeper education teaches not only the maps themselves but also the art of making them, including the recognition that every map can be improved, and that new discoveries may require old maps to be redrawn.",
+      "Perhaps the greatest danger of maps is that they can become so familiar that we no longer see them as maps at all. We look through them rather than at them, and the world comes to seem exactly as our concepts describe it. To remember that our understanding is always a kind of map is not to fall into doubt, but to keep open the possibility of seeing more. The world is always richer than any representation of it, and the recognition of this gap is the beginning of both humility and curiosity.",
+    ],
+    ja: [
+      'あらゆる地図は単純化である。町の地図は、通りのすべての石や、公園のすべての木や、歩道を歩くすべての人を示しはしない。もし示せば、それは町そのものと同じくらい大きく複雑になり、したがって役に立たないだろう。地図の価値は、まさにそれが省くものにある。いくつかの特徴を選び、残りを無視することで、地図は、地上からは見ることのできない関係をひと目でつかめるようにしてくれる。しかしまさにこの選択性は危険をともなう。私たちは、地図がそれの表す場所そのものではないことを忘れてしまうかもしれないのである。',
+      '同じことは、私たちが世界を理解するための心の地図にも当てはまる。概念や理論や分類は、すべて現実について考えられるように単純化する方法である。ある人を内向的だと、ある国を先進的だと、ある経済を効率的だと描くとき、私たちは、ある特徴を強調し、ほかを省く地図をかいている。そうした地図がなければ、私たちは経験の無限の細部に圧倒されてしまうだろう。地図があれば、推論し、予測し、行動することができる。しかしまた、自分の描写を、それが描くものととりちがえてしまうこともありうる。',
+      'このとりちがえにはいくつかの形がある。一つは、役に立つ単純化を、まるで完全な説明であるかのようにあつかうことである。たとえば、お金にならない仕事を無視する経済のモデルは、ある目的には役に立つかもしれないが、それが何を省いているかを忘れれば、そうした仕事には価値がないと結論してしまうかもしれない。もう一つの形は、地図の区分を、まるで世界の固定した特徴であるかのようにあつかうことである。政治地図の国境は正確な線としてかかれているが、その近くに住む人々の文化や言語は、しばしば少しずつたがいにとけあっており、その線は土地そのものよりも歴史や権力について多くを語っているのかもしれない。',
+      '地図はまた、それを作る人の目的と視点を反映している。運転する人のために作られた地図は道路を強調し、山歩きをする人のために作られた地図は小道や等高線を示すだろう。どちらもまちがってはいないが、それぞれが特定の問いに答えている。問題が生じるのは、ある地図がただ一つの可能な見方として示され、それを作るときになされた選択がかくされるときである。歴史的に、地図はときに、領土を主張したり、すでにそこに住んでいた人々の存在を消したり、ある地域をほかより重要に見せたりするために使われてきた。',
+      'このどれも、地図を信用すべきでないということを意味しない。地図をもたない旅人はより自由なのではなく、より道に迷いやすいのであり、概念をもたない心はまったく考えることができない。要点はむしろ、地図はその限界を自覚して使わなければならないということである。よい地図の作り手は、何が省かれ、なぜ省かれたのかを知っており、よい地図の使い手は、地図と実際の土地とのちがいに注意をはらい続ける。二つが一致しないとき、信頼すべきなのは土地のほうであり、正すべきなのは地図のほうなのである。',
+      'この態度は、私たちの学び方にもかかわっている。教育はしばしば地図を手に入れることからなる。つまり、知っていることを整理できるようにしてくれる、科学や歴史やほかの学問の枠組みである。こうした枠組みははかりしれない価値をもつが、それがどう作られたのかを理解せずに学ぶ生徒は、それを道具としてではなく、最終的な真理としてあつかってしまうかもしれない。より深い教育は、地図そのものだけでなく、地図を作る技術も教える。そこには、あらゆる地図はよりよくできること、そして新しい発見が古い地図のかき直しを求めるかもしれないことを認めることもふくまれる。',
+      'おそらく地図の最大の危険は、それがあまりになじみ深くなり、もはやそれを地図とはまったく思わなくなることである。私たちはそれを見るのではなく、それを通して見るようになり、世界はまさに自分の概念が描くとおりのものに思われてくる。自分の理解はいつも一種の地図だと覚えておくことは、疑いにおちいることではなく、より多くを見る可能性を開いておくことである。世界はいつも、それのどんな表現よりも豊かであり、このへだたりを認めることが、謙虚さと好奇心の両方の始まりなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「国境は正確な線としてかかれているが、文化や言語は少しずつとけあっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、地図の価値はそれが省くものにある。', answer: true, why: '第1段落 The value of a map lies precisely in what it leaves out。' },
+      { statement: '筆者によれば、概念がなくても心は考えることができる。', answer: false, why: '第5段落 a mind without concepts cannot think at all。' },
+      { statement: '筆者によれば、地図と土地が一致しないときは地図を信頼すべきである。', answer: false, why: '第5段落 it is the terrain that must be trusted, and the map that must be corrected。' },
+      { statement: '筆者によれば、より深い教育は地図を作る技術も教える。', answer: true, why: '第6段落 A deeper education teaches not only the maps themselves but also the art of making them。' },
+    ],
+    qa: [
+      { q: 'What example of a misleading simplification is given in the third paragraph?', choices: ['An economic model that ignores unpaid work.', 'A road map for drivers.', 'A map of a city park.', 'A hiking map with contours.'], answer: 0, why: '第3段落 A model of the economy that ignores unpaid work。' },
+      { q: 'What does the recognition of the gap between the world and its representations begin, according to the last paragraph?', choices: ['Both humility and curiosity.', 'Complete doubt.', 'The end of learning.', 'Distrust of all maps.'], answer: 0, why: '第7段落 the recognition of this gap is the beginning of both humility and curiosity。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
