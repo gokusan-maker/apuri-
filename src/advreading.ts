@@ -33262,6 +33262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-heroes',
+    title: 'What Makes a Hero?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every culture tells stories about heroes. Ancient legends describe warriors who defeated monsters, religious traditions honor saints who sacrificed themselves for others, and modern societies celebrate firefighters, doctors, and ordinary people who act bravely in emergencies. The figures change from age to age, yet the impulse to admire certain individuals as heroes seems remarkably persistent. What is it that we admire in a hero, and what does our choice of heroes reveal about ourselves and the values of the society in which we live?",
+      "One common answer is that heroes display courage in the face of danger. A hero is someone who acts when others hesitate, risking injury, loss, or even death for the sake of something greater than personal safety. Yet courage alone does not seem sufficient. A person who takes great risks for a selfish or harmful purpose may be bold, but we rarely call him or her a hero. Heroism appears to require not only courage but also a worthy aim, such as protecting the vulnerable, defending justice, or advancing human knowledge.",
+      "The heroes a society chooses can therefore tell us a great deal about what it values. Societies that admired military conquest celebrated generals and soldiers, while those that prized learning honored scholars and inventors. ( A ) these choices may reflect admirable ideals, they can also reveal prejudices, since the people who are remembered as heroes are often those whose achievements were recognized by the powerful, while others who acted with equal courage, such as women or members of minority groups, were forgotten.",
+      "In recent times, the idea of heroism has been extended to include ordinary people in everyday situations. Nurses who care for patients during an epidemic, volunteers who rescue strangers after a disaster, or individuals who speak out against injustice at work may all be described as heroes. This broader understanding has an important democratic quality: it suggests that heroism is not reserved for a few extraordinary people but is a possibility open to anyone who chooses to act well when it matters.",
+      "Some critics, however, worry that the word hero is now used too freely, losing much of its meaning. If everyone who does a difficult job is a hero, the term may no longer distinguish exceptional acts from ordinary duties. Others argue that calling people heroes can sometimes serve as a substitute for giving them real support. Praising workers as heroes, for example, may distract attention from poor pay, dangerous conditions, or the failure of institutions to protect them. Admiration, in such cases, may cost the admirers nothing while asking a great deal of those who are admired.",
+      "There is also a risk in the way we treat heroes once we have chosen them. Admiration can easily turn into idealization, in which heroes are imagined as perfect beings without faults or doubts. When the flaws of such figures are later revealed, the disappointment can be intense, and some people may conclude that heroism itself was an illusion. A more mature attitude might recognize that heroes are human beings who acted well in particular moments, without being admirable in every respect. Such an attitude allows us to honor what was good in their actions while learning honestly from their mistakes.",
+      "Perhaps the deepest value of heroes lies not in the figures themselves but in what they inspire in others. A story of courage can remind us of possibilities that we might otherwise overlook, encouraging us to act with greater integrity in our own lives. Heroes, in this sense, are less objects of worship than invitations. They show us what human beings are capable of, and they ask us, quietly, what we would do if we were faced with a similar choice, and whether we are ready to answer.",
+    ],
+    ja: [
+      'どの文化も英雄についての物語を語る。古代の伝説は怪物を打ち負かした戦士をえがき、宗教の伝統は他人のために自分を犠牲にした聖人をたたえ、現代の社会は消防士や医師や、緊急のときに勇敢に行動したふつうの人々をたたえる。人物は時代ごとに変わるが、ある個人を英雄として賞賛しようとする衝動はおどろくほど根強いようである。私たちは英雄の何を賞賛するのか、そして英雄の選び方は、私たち自身と、私たちが暮らす社会の価値観について何を明らかにするのだろうか。',
+      'よくある一つの答えは、英雄は危険を前にして勇気を示すというものである。英雄とは、ほかの人々がためらうときに行動し、自分の安全より大きな何かのために、けがや損失や死さえも危険にさらす人である。しかし勇気だけでは十分ではないようである。自分勝手な目的や有害な目的のために大きな危険をおかす人は、大胆ではあるかもしれないが、英雄と呼ばれることはめったにない。英雄であるには、勇気だけでなく、弱い者を守ること、正義を守ること、人間の知識を前進させることのような、価値ある目的も必要なようである。',
+      'したがって、社会が選ぶ英雄は、その社会が何を大切にしているかについて多くを語りうる。軍事的な征服を賞賛した社会は将軍や兵士をたたえ、学問を重んじた社会は学者や発明家をたたえた。こうした選択は賞賛すべき理想を反映しているかもしれないが、偏見を明らかにすることもある。英雄として記憶されるのは、しばしば力のある人々にその成果を認められた人々であり、女性や少数派の人々のように、同じ勇気をもって行動したほかの人々は忘れられてきたからである。',
+      '近年、英雄という考えは、日常の状況にいるふつうの人々もふくむように広げられてきた。感染症の流行のあいだに患者の世話をする看護師、災害のあとで見知らぬ人々を救う志願者、職場で不正に対して声をあげる個人は、どれも英雄と呼ばれることがある。このより広い理解には大切な民主的な性質がある。それは、英雄であることが少数の並外れた人々にかぎられたものではなく、大切なときによく行動することを選ぶだれにでも開かれた可能性であることを示唆している。',
+      'しかし批判する人々の中には、英雄ということばが今ではあまりに気軽に使われ、その意味の多くを失っていると心配する人もいる。むずかしい仕事をする人がみな英雄なら、この語はもはや並外れた行為をふつうの義務から区別しないかもしれない。また、人々を英雄と呼ぶことが、時に本当のささえをあたえるかわりになってしまうと主張する人もいる。たとえば、働き手を英雄としてほめることは、低い賃金や危険な労働条件や、彼らを守れない制度の失敗から注意をそらすかもしれない。そのような場合、賞賛は賞賛する側には何の負担もなく、賞賛される側に多くを求めるものになりうる。',
+      '英雄をいったん選んだあとの私たちのあつかい方にも危険がある。賞賛はたやすく理想化に変わり、英雄は欠点も迷いもない完ぺきな存在として想像されるようになる。のちにそうした人物の欠点が明らかになると、失望ははげしいものになりえ、英雄であることそのものが幻想だったと結論する人もいるかもしれない。より成熟した態度は、英雄とは、あらゆる点で賞賛に値するわけではないが、特定の瞬間によく行動した人間であると認めることかもしれない。そのような態度をとれば、彼らのまちがいから正直に学びながら、その行動のよかった点をたたえることができる。',
+      'おそらく英雄の最も深い価値は、人物そのものにではなく、それがほかの人々の中に呼び起こすものにある。勇気の物語は、そうでなければ見落とすかもしれない可能性を思い出させ、私たちが自分の生活でより誠実に行動するようはげますことができる。この意味で、英雄は崇拝の対象というよりも誘いなのである。英雄は人間に何ができるかを私たちに示し、もし似た選択を前にしたらどうするかを、静かに私たちに問いかけ、そして私たちにこたえる準備があるかを問うのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「選択は理想を反映しているかもしれないが、偏見を明らかにすることもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、勇気だけで英雄になるには十分である。', answer: false, why: '第2段落 courage alone does not seem sufficient。' },
+      { statement: '同じ勇気をもって行動したのに忘れられてきた人々もいる。', answer: true, why: '第3段落 others who acted with equal courage ... were forgotten。' },
+      { statement: '働き手を英雄としてほめることは、低い賃金から注意をそらすかもしれない。', answer: true, why: '第5段落 may distract attention from poor pay。' },
+      { statement: '筆者は、英雄はあらゆる点で完ぺきだと考えるべきだと述べている。', answer: false, why: '第6段落 without being admirable in every respect。' },
+    ],
+    qa: [
+      { q: 'What democratic quality does the broader understanding of heroism have?', choices: ['It suggests heroism is open to anyone.', 'It limits heroism to soldiers.', 'It makes heroes richer.', 'It ends all admiration.'], answer: 0, why: '第4段落 a possibility open to anyone who chooses to act well。' },
+      { q: 'How does the author describe heroes in the last paragraph?', choices: ['As invitations rather than objects of worship.', 'As perfect beings.', 'As people to be forgotten.', 'As symbols of power.'], answer: 0, why: '第7段落 Heroes, in this sense, are less objects of worship than invitations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
