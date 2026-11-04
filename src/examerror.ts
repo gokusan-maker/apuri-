@@ -3914,6 +3914,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Much (B) people (C) visit (D) Kyoto every year.', choices: ['(A) Much', '(B) people', '(C) visit', '(D) Kyoto every year'], answer: 0, why: 'people は数えられる名詞（複数あつかい）なので Many people。' },
     ],
   },
+  {
+    id: 'exam-error-whose-kokuritsu',
+    title: '入試の正誤問題〈165〉（国公立レベル：所有格の関係代名詞 whose と of which）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「その～の…」と所有を表す関係代名詞は whose（人にも物にも使える）。whose のあとの名詞には a・the をつけない（whose roof）。物の場合は the ～ of which も使える（the top of which）。who・which・that には所有の意味はない。whose＋名詞が節の主語なら動詞はその名詞に合わせ、文全体の動詞は先行詞に合わせる。whose＋名詞が目的語なら、うしろに it などをくり返さない。',
+    ],
+    examples: [
+      { en: 'I have a friend whose father is a doctor.', ja: '私には父親が医者の友人がいる。' },
+      { en: 'Look at the mountain whose top is covered with snow.', ja: '頂上が雪におおわれたあの山を見て。' },
+    ],
+    questions: [
+      { sentence: 'I have a friend (A) who (B) father (C) is (D) a doctor.', choices: ['(A) who', '(B) father', '(C) is', '(D) a doctor'], answer: 0, why: '「その友人の父」と所有を表すので whose。whose father。' },
+      { sentence: 'This is the house (A) whose (B) the roof (C) is (D) red.', choices: ['(A) whose', '(B) the roof', '(C) is', '(D) red'], answer: 1, why: 'whose のあとの名詞には the をつけない。whose roof。' },
+      { sentence: 'The man (A) whom (B) car (C) was stolen (D) called the police.', choices: ['(A) whom', '(B) car', '(C) was stolen', '(D) called the police'], answer: 0, why: '「その男性の車」なので所有格 whose。' },
+      { sentence: 'She is a writer (A) whose (B) books (C) is (D) popular.', choices: ['(A) whose', '(B) books', '(C) is', '(D) popular'], answer: 2, why: 'whose books が主語で複数なので are。' },
+      { sentence: 'Look at the mountain (A) the top (B) of whom (C) is (D) covered with snow.', choices: ['(A) the top', '(B) of whom', '(C) is', '(D) covered with snow'], answer: 1, why: '物の所有は whose か the ～ of which。人ではないので of whom は使えない。' },
+      { sentence: 'I met a girl (A) whose (B) name (C) I (D) didn’t know it.', choices: ['(A) whose', '(B) name', '(C) I', '(D) didn’t know it'], answer: 3, why: 'whose name が know の目的語なので it はいらない。' },
+      { sentence: '(A) The student (B) whose (C) essay won (D) the prize are my friend.', choices: ['(A) The student', '(B) whose', '(C) essay won', '(D) the prize are my friend'], answer: 3, why: '主語は The student（単数）なので is my friend。' },
+      { sentence: 'We visited a village (A) which (B) people (C) were (D) very kind.', choices: ['(A) which', '(B) people', '(C) were', '(D) very kind'], answer: 0, why: '「その村の人々」なので所有格 whose people。' },
+      { sentence: 'This is the book (A) that cover (B) is (C) torn (D) badly.', choices: ['(A) that cover', '(B) is', '(C) torn', '(D) badly'], answer: 0, why: '「その本の表紙」なので whose cover。that に所有格の用法はない。' },
+      { sentence: 'The company, (A) whose (B) president (C) resigned, (D) are in trouble.', choices: ['(A) whose', '(B) president', '(C) resigned,', '(D) are in trouble'], answer: 3, why: '主語は The company（単数）なので is in trouble。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
