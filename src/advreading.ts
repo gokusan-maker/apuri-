@@ -32498,6 +32498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-olympic-host',
+    title: 'Is Hosting the Olympics Worth It?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every few years, cities around the world compete for the right to host the Olympic Games. Winning the competition is often celebrated as a great national achievement, promising international attention, new facilities, and a lasting boost to the local economy. In recent decades, however, the number of cities willing to bid has declined sharply, and in several places citizens have voted against plans to host the Games. This change raises a question that once seemed hardly worth asking: is hosting the Olympics actually good for a city? The answer, as the experience of many host cities shows, is far less certain than the celebrations might suggest.",
+      "Supporters point first to the economic benefits. Preparing for the Games requires new transport links, housing, and sports facilities, and the construction itself creates jobs. During the event, hundreds of thousands of visitors spend money in hotels, restaurants, and shops, while billions of people around the world watch the host city on television. Supporters argue that this exposure can attract tourists and investors for years afterward, putting a city on the global map in a way that no advertising campaign could achieve.",
+      "Supporters also emphasize benefits that cannot easily be measured in money. The Games can inspire young people to take up sports, bring residents together in a shared sense of pride, and give a city a reason to complete improvements that might otherwise have been delayed for decades. ( A ) the costs are high, they argue, the Olympics can serve as a powerful deadline that forces governments to invest in infrastructure that the city will use long after the athletes have gone home.",
+      "Critics, however, argue that these promises are rarely fulfilled. Studies of past Games have found that costs almost always exceed the original budget, often by a large margin, and that the expected economic benefits frequently fail to appear. Visitors attracted by the Games may be balanced by ordinary tourists who stay away to avoid crowds and high prices. Much of the money spent comes from public funds, which might have been used for schools, hospitals, or housing that would benefit residents more directly.",
+      "Another problem concerns the facilities themselves. Stadiums and arenas built for a few weeks of competition may be far larger than the city needs afterward, and some have stood almost empty for years, costing large sums to maintain. In addition, preparations for the Games have sometimes involved removing poorer residents from their homes to make room for new construction, raising serious questions about who really benefits from the event and who pays its hidden costs. Such experiences have made many residents of potential host cities deeply suspicious of official promises.",
+      "In response to such criticism, the organizers of the Games have begun to encourage a different approach. Cities are now urged to use existing facilities where possible, to build temporary venues that can be removed afterward, and to share events with other cities or even other countries. Some observers have gone further, proposing that the Games be held permanently in one place, or rotated among a small number of cities that already have the necessary facilities, so that no new city must bear the full cost.",
+      "Whether hosting the Olympics is worthwhile may depend less on the Games themselves than on how a city plans for them. A city that treats the event as part of a long-term strategy, building only what it will truly need, may gain lasting benefits, while one that pursues prestige at any cost may be left with debts and empty stadiums. The debate encourages citizens to ask not only whether they want the excitement of the Games, but also what kind of city they want to have when the excitement is over.",
+    ],
+    ja: [
+      '数年ごとに、世界中の都市がオリンピックを開催する権利を求めて競い合う。その競争に勝つことは、国際的な注目、新しい施設、そして地元経済の長く続く後押しを約束する、国の大きな成果としてしばしば祝われる。しかしここ数十年で、立候補しようとする都市の数は急に減っており、いくつかの場所では市民がオリンピックを開催する計画に反対の票を投じた。この変化は、かつてはほとんど問う価値もないように思われた問いを提起している。オリンピックを開催することは本当に都市のためになるのだろうか。多くの開催都市の経験が示すように、その答えは、祝賀の様子から思われるよりはるかに不確かである。',
+      '支持する人々は、まず経済的な利益をあげる。オリンピックの準備には新しい交通網や住宅やスポーツ施設が必要であり、その建設そのものが仕事を生み出す。大会のあいだ、何十万人もの訪問者がホテルやレストランや店でお金を使い、世界中の何十億もの人々が開催都市をテレビで見る。支持する人々は、こうして注目を浴びることで、何年ものちまで観光客や投資家を引きよせることができ、どんな広告の宣伝活動にもできないしかたで都市を世界の地図にのせることができると主張する。',
+      '支持する人々はまた、お金ではかんたんにはかれない利益も強調する。オリンピックは若者にスポーツを始めるよう刺激し、住民を共有された誇りの感覚で結びつけ、そうでなければ何十年もおくれていたかもしれない改善を都市が仕上げる理由をあたえうる。費用は高いが、オリンピックは、選手たちが帰ったずっとあとまで都市が使う社会基盤に政府が投資せざるをえなくする、強力なしめきりとしての役割を果たしうると彼らは主張する。',
+      'しかし批判する人々は、こうした約束はめったに果たされないと主張する。過去の大会の研究では、費用はほとんどいつも当初の予算をこえ、しかもしばしば大はばにこえること、そして期待された経済的な利益はしばしば現れないことがわかっている。大会に引きよせられた訪問者の分は、混雑や高い値段をさけて来なくなるふつうの観光客によって相殺されるかもしれない。使われるお金の多くは公的な資金から出ており、それは住民にもっと直接役立つ学校や病院や住宅に使えたかもしれない。',
+      'もう一つの問題は施設そのものにかかわる。数週間の競技のために建てられたスタジアムやアリーナは、その後に都市が必要とするよりはるかに大きいかもしれず、何年もほとんど空っぽのまま、維持に大きな費用がかかっているものもある。さらに、大会の準備では、新しい建設の場所を空けるために、まずしい住民を家から立ちのかせたこともあり、だれが本当に大会から利益を得て、だれがそのかくれた費用をはらうのかについて、深刻な問いを投げかけている。こうした経験のために、開催候補となる都市の多くの住民が、公式の約束を深く疑うようになった。',
+      'こうした批判にこたえて、大会の主催者は別のやり方をすすめ始めている。都市は今、できるところでは既存の施設を使い、あとで取りこわせる仮設の会場を建て、競技をほかの都市や、さらにはほかの国と分け合うよううながされている。さらに進んで、どの新しい都市も費用をすべて負担しなくてすむように、オリンピックを一か所で常に開くか、必要な施設をすでにもつ少数の都市のあいだで持ち回りにすることを提案する観察者もいる。',
+      'オリンピックを開催する価値があるかどうかは、大会そのものよりも、都市がそれに向けてどう計画するかにかかっているのかもしれない。大会を長期的な戦略の一部としてあつかい、本当に必要なものだけを建てる都市は、長く続く利益を得るかもしれないが、どんな犠牲をはらっても名声を追い求める都市は、借金と空っぽのスタジアムを残されるかもしれない。この議論は市民に、大会の興奮を望むかどうかだけでなく、興奮が終わったときにどんな都市をもっていたいのかも問うようはげましてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「費用は高いが、強力なしめきりとしての役割を果たしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say that hosting the Olympics brings economic benefits and forces governments to invest in ( 1 ). Critics argue that costs almost always exceed the original ( 2 ) and that facilities may stand empty afterward. Whether hosting is worthwhile may depend on how a city ( 3 ) for the Games.',
+      blanks: [
+        { choices: ['infrastructure', 'weapons', 'fashion', 'advertising'], answer: 0, why: '第3段落 forces governments to invest in infrastructure。' },
+        { choices: ['budget', 'design', 'schedule', 'audience'], answer: 0, why: '第4段落 costs almost always exceed the original budget。' },
+        { choices: ['plans', 'votes', 'pays', 'competes'], answer: 0, why: '第7段落 on how a city plans for them。' },
+      ],
+    },
+    tf: [
+      { statement: 'ここ数十年で、オリンピックに立候補しようとする都市の数は急に減った。', answer: true, why: '第1段落 the number of cities willing to bid has declined sharply。' },
+      { statement: '批判する人々によれば、期待された経済的な利益はいつもかならず現れる。', answer: false, why: '第4段落 the expected economic benefits frequently fail to appear。' },
+      { statement: '大会のために建てられたスタジアムの中には、何年もほとんど空っぽのものもある。', answer: true, why: '第5段落 some have stood almost empty for years。' },
+      { statement: '主催者は今、すべての競技のために新しい施設を建てるよう都市にすすめている。', answer: false, why: '第6段落 Cities are now urged to use existing facilities where possible。' },
+    ],
+    qa: [
+      { q: 'Why might the number of tourists not increase during the Games?', choices: ['Ordinary tourists may stay away to avoid crowds and high prices.', 'Hotels are closed during the Games.', 'Visitors are not allowed to enter the city.', 'The Games are not shown on television.'], answer: 0, why: '第4段落 ordinary tourists who stay away to avoid crowds and high prices。' },
+      { q: 'What have some observers proposed?', choices: ['Holding the Games permanently in one place.', 'Ending the Games completely.', 'Holding the Games every year.', 'Building larger stadiums.'], answer: 0, why: '第6段落 proposing that the Games be held permanently in one place。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
