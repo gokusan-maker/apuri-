@@ -2491,6 +2491,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="70" cy="50" r="3" fill="#a8a29e" />
       </g>
     )
+  if (species === 'seamoth')
+    return (
+      <g>
+        {/* 天狗の鼻のような口先と、羽のようなむなびれ */}
+        <path d="M50 30 L50 10" fill="none" stroke="#525252" strokeWidth="4" strokeLinecap="round" />
+        <path d="M30 52 Q14 46 16 62 Q24 64 30 58 M70 52 Q86 46 84 62 Q76 64 70 58" fill="#e5e5e5" stroke="#525252" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
