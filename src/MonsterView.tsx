@@ -2425,6 +2425,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 54 Q50 48 60 54 M40 62 Q50 56 60 62" fill="none" stroke="#f472b6" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'bluedragon')
+    return (
+      <g>
+        {/* つばさのようなとげ */}
+        <path d="M30 50 L16 42 M30 56 L14 56 M30 62 L16 70 M70 50 L84 42 M70 56 L86 56 M70 62 L84 70" fill="none" stroke="#1e3a8a" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
