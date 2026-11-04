@@ -6870,6 +6870,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The faster you drive, [the dangerouser] it becomes.', choices: ['the more dangerous', 'the most dangerous', 'more dangerous', 'the dangerousest'], answer: 0, why: '長い形容詞の比較級は more dangerous。the more dangerous。' },
     ],
   },
+  {
+    id: 'exam-fix-161',
+    title: '入試の誤文訂正〈161〉（京大レベル：関係代名詞 what と which・that の使い分け）',
+    points: ['what は先行詞をふくむ関係代名詞で「～すること・もの」（＝the thing(s) which）。先行詞があるときは what を使わず which・that（everything・the only thing・all など のあとはふつう that）。先行詞がないのに which・that を使うのもまちがい。コンマのあとで前の文全体を受けるのは which（what・that は×）。what を使った表現：what he said・What surprised me・what she used to be「昔の彼女」・Do what you can。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is what I wanted.', ja: 'これが私のほしかったものだ。' }],
+    questions: [
+      { sentence: 'This is [which] I wanted.', choices: ['what', 'that', 'who', 'whose'], answer: 0, why: '先行詞がないので「～するもの」の what。' },
+      { sentence: 'I can’t believe [that] he said.', choices: ['what', 'which', 'whom', 'whose'], answer: 0, why: 'said の目的語がなく先行詞もないので what。' },
+      { sentence: 'The book [what] I bought yesterday is interesting.', choices: ['that', 'what it', 'whose', 'where'], answer: 0, why: '先行詞 The book があるので what は使えない。that（または which）。' },
+      { sentence: 'He gave me everything [what] I needed.', choices: ['that', 'which what', 'whose', 'where'], answer: 0, why: '先行詞 everything のあとはふつう that。' },
+      { sentence: '[That] surprised me most was his kindness.', choices: ['What', 'Which', 'It', 'Whose'], answer: 0, why: '「私を最もおどろかせたこと」は What surprised me most。' },
+      { sentence: 'She is not [that] she used to be.', choices: ['what', 'which', 'who', 'whom'], answer: 0, why: 'what she used to be「昔の彼女」。' },
+      { sentence: 'Tell me [which] you think about the plan.', choices: ['what', 'that', 'how', 'whose'], answer: 0, why: 'think の目的語になる「何を」なので what。' },
+      { sentence: 'The only thing [what] matters is your health.', choices: ['that', 'which what', 'whose', 'where'], answer: 0, why: '先行詞 the only thing があるので that。' },
+      { sentence: 'He missed the bus, [what] made him late.', choices: ['which', 'that', 'what it', 'whose'], answer: 0, why: 'コンマのあとで前の文全体を受けるのは which。' },
+      { sentence: 'Do [that] you can to help them.', choices: ['what', 'which', 'whose', 'whom'], answer: 0, why: 'Do what you can「できることをしなさい」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

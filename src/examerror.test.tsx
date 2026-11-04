@@ -2297,3 +2297,10 @@ it('正誤問題〈167〉：東大レベル 冠詞の使い分けの単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) the tennis')
 })
+
+it('誤文訂正〈161〉：京大レベル 関係代名詞 what と which・that の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-161')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('what')
+})
