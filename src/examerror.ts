@@ -6828,6 +6828,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I remember [to meet] him at the party last year.', choices: ['meeting', 'meet', 'to meeting', 'met'], answer: 0, why: 'last year の過去のことを覚えているので remember doing。' },
     ],
   },
+  {
+    id: 'exam-fix-160',
+    title: '入試の誤文訂正〈160〉（国公立レベル：the＋比較級, the＋比較級「～すればするほど…」）',
+    points: ['The＋比較級 ～, the＋比較級 …「～すればするほど…」。両方の部分に the をつけ、最上級ではなく比較級を使う（the better・the wiser・the earlier）。長い形容詞は the more＋原級（the more dangerous）。数えられる名詞の「より少ない」は the fewer、数えられない名詞や形容詞は the less。比較級のあとはふつうの語順（主語＋動詞）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、うまくなる。' }],
+    questions: [
+      { sentence: 'The more you practice, [better you become].', choices: ['the better you become', 'the better become you', 'better become you', 'the best you become'], answer: 0, why: 'うしろの部分にも the＋比較級。the better you become。' },
+      { sentence: '[More] you read, the more you learn.', choices: ['The more', 'Most', 'The most', 'Much'], answer: 0, why: '前の部分も The＋比較級。The more you read。' },
+      { sentence: 'The older he grew, [the wise he became].', choices: ['the wiser he became', 'the wisest he became', 'wiser he became', 'the more wise became he'], answer: 0, why: '比較級 wiser を使う。the wiser he became。' },
+      { sentence: 'The sooner you start, [the earliest] you will finish.', choices: ['the earlier', 'the early', 'earlier', 'the more early'], answer: 0, why: '最上級ではなく比較級。the earlier。' },
+      { sentence: 'The harder she studied, [the much] she understood.', choices: ['the more', 'the most', 'the many', 'much more'], answer: 0, why: 'much の比較級は more。the more she understood。' },
+      { sentence: 'The more money he earned, [the less happier] he felt.', choices: ['the less happy', 'the less happiest', 'less happy', 'the fewer happy'], answer: 0, why: 'less のあとは原級。the less happy。' },
+      { sentence: 'The higher we climbed, [the cold it got].', choices: ['the colder it got', 'colder it got', 'the coldest it got', 'the more cold got it'], answer: 0, why: '比較級 colder を使う。the colder it got。' },
+      { sentence: 'The more careful you are, [the less mistakes] you make.', choices: ['the fewer mistakes', 'the least mistakes', 'fewer the mistakes', 'the little mistakes'], answer: 0, why: 'mistakes は数えられる名詞なので the fewer。' },
+      { sentence: 'The more I learn, [less I seem] to know.', choices: ['the less I seem', 'the least I seem', 'less seem I', 'the fewer I seem'], answer: 0, why: 'うしろの部分にも the。the less I seem to know。' },
+      { sentence: 'The faster you drive, [the dangerouser] it becomes.', choices: ['the more dangerous', 'the most dangerous', 'more dangerous', 'the dangerousest'], answer: 0, why: '長い形容詞の比較級は more dangerous。the more dangerous。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

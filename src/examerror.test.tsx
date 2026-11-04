@@ -2283,3 +2283,10 @@ it('正誤問題〈166〉：京大レベル 懸垂分詞と独立分詞構文の
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) a strange noise')
 })
+
+it('誤文訂正〈160〉：国公立レベル the＋比較級, the＋比較級 の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-160')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('the better you become')
+})
