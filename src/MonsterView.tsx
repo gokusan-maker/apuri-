@@ -2347,6 +2347,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 30 Q36 14 30 8 M46 28 Q46 12 44 4 M52 30 Q58 18 64 34 Q70 50 76 66" fill="none" stroke="#dc2626" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'giantsquid')
+    return (
+      <g>
+        {/* 長いうで */}
+        <path d="M38 70 Q30 88 20 94 M46 72 Q44 90 38 98 M54 72 Q56 90 62 98 M62 70 Q70 88 80 94" fill="none" stroke="#4c0519" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
