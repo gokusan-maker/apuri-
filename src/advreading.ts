@@ -30738,6 +30738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-summer-break',
+    title: 'Is the Long Summer Break Still Needed?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the school year includes a long summer break, often lasting six weeks or more. For generations of children, these weeks have been associated with freedom: days spent playing outdoors, visiting relatives, traveling with family, or simply doing nothing in particular. The long break originated partly in an era when children were needed to help with farm work during the summer, and partly because school buildings without air conditioning became uncomfortably hot. Today, neither reason applies in most places, and some educators have begun to ask whether the long summer break still makes sense.",
+      "Critics of the long break point to a phenomenon sometimes called \"summer learning loss.\" Studies in several countries have suggested that students forget some of what they learned during the school year while they are away from school, particularly in mathematics. Teachers often spend the first weeks of a new school year reviewing material that students had already studied, time that could otherwise be used to teach new content. Shorter but more frequent breaks spread throughout the year, critics argue, would reduce this loss and allow learning to continue more steadily.",
+      "The effects of the long break may also fall unequally on different students. Children from wealthier families often spend their summers in ways that support learning, such as attending camps, traveling, visiting museums, or reading books at home. Children from poorer families may have fewer such opportunities, and some may lose access to the meals that school would otherwise provide. ( A ) all children may forget some material over the summer, research suggests that the gap between advantaged and disadvantaged students tends to widen during the break, and that this widening accumulates year after year.",
+      "Defenders of the long break, however, argue that its value cannot be measured only in terms of academic performance. Long, unstructured periods of free time allow children to rest, to pursue their own interests, and to develop independence and creativity. In a world in which children's lives are increasingly organized and supervised, the summer break may be one of the few times when they can explore, play, and discover what they enjoy without the pressure of grades. Some psychologists warn that reducing this freedom could increase stress and harm children's well-being.",
+      "There are practical objections as well. Many families plan their holidays around the long summer break, and industries such as tourism depend on it. Teachers, too, use the break to rest, prepare lessons, and attend training. Changing the calendar would require careful coordination among schools, families, and employers, and parents with children at different schools might find themselves dealing with different schedules. In places where summer temperatures are extremely high, keeping schools open during the hottest months could also require expensive improvements to buildings.",
+      "Some schools have tried compromise solutions. Rather than eliminating the summer break, they have shortened it slightly and added additional breaks in autumn and spring, keeping the total number of school days the same. Others have offered optional summer programs, focused on reading or mathematics, for students who would benefit from extra support, while leaving the break itself unchanged for everyone else. Evidence about which approach works best is still limited, and results seem to depend greatly on how well the programs are designed and on whether families can actually take part in them.",
+      "The debate over the summer break thus reflects different views of what childhood and education are for. If school is seen chiefly as a means of building knowledge and skills, then reducing learning loss seems an obvious priority. If, however, childhood is valued for its own sake, then protecting time for rest and free play may seem just as important. The best solution may not be to choose one view over the other, but to find ways of ensuring that every child, whatever his or her family's circumstances, has both the chance to learn and the chance to simply be a child.",
+    ],
+    ja: [
+      '多くの国で、学校の一年には長い夏休みがふくまれ、それは6週間以上続くことも多い。何世代もの子どもにとって、この数週間は自由と結びついてきた。外で遊んだり、親戚をたずねたり、家族と旅行したり、ただ特に何もしなかったりしてすごす日々である。長い休みは、一つには子どもが夏のあいだ農作業を手伝う必要があった時代に、もう一つには冷房のない校舎が不快なほど暑くなったために始まった。今日、ほとんどの場所ではどちらの理由も当てはまらず、長い夏休みにまだ意味があるのかと問いはじめた教育者もいる。',
+      '長い休みを批判する人々は、「夏の学力低下」とよばれることもある現象を指摘する。いくつかの国の研究では、生徒は学校からはなれているあいだに、一年のあいだに学んだことの一部を、とくに数学で忘れてしまうことが示されている。先生は新しい学年の最初の数週間を、生徒がすでに学んだ内容の復習についやすことが多いが、その時間はほかの場合なら新しい内容を教えるのに使えたはずである。一年を通じてちらばった、より短く回数の多い休みにすれば、この低下がへり、学びがより着実に続くだろう、と批判する人々は主張する。',
+      '長い休みの影響は、生徒によって不平等にふりかかるかもしれない。豊かな家庭の子どもは、キャンプに参加したり、旅行したり、博物館をおとずれたり、家で本を読んだりするような、学びをささえる形で夏をすごすことが多い。貧しい家庭の子どもにはそうした機会が少ないかもしれず、学校があればもらえたはずの給食が食べられなくなる子どももいるかもしれない。すべての子どもが夏のあいだに学んだことの一部を忘れるかもしれないが、研究によれば、恵まれた生徒と恵まれない生徒との差は休みのあいだに広がる傾向があり、この広がりは年ごとに積み重なっていく。',
+      'しかし長い休みを擁護する人々は、その価値は学力の点だけではかることはできないと主張する。長い、決まった予定のない自由な時間は、子どもに休み、自分の興味を追い、自立心と創造性をのばすことを可能にする。子どもの生活がますます組み立てられ、見守られるようになっている世界では、夏休みは、子どもが成績の圧力なしに探検し、遊び、自分が何を楽しむかを見つけられる数少ない時間の一つかもしれない。この自由をへらすことはストレスをふやし、子どもの幸せをそこないかねないと警告する心理学者もいる。',
+      '実際的な反対もある。多くの家庭は長い夏休みに合わせて休暇の計画を立てており、観光のような産業はそれにたよっている。先生もまた、休みを使って休んだり、授業の準備をしたり、研修に参加したりする。暦を変えるには、学校と家庭と雇い主のあいだの注意深い調整が必要であり、ちがう学校に子どもを通わせている親は、ちがう予定に対応しなければならなくなるかもしれない。夏の気温がきわめて高い場所では、最も暑い月に学校を開けておくには、建物に費用のかかる改善をする必要もあるかもしれない。',
+      '妥協の解決策を試した学校もある。夏休みをなくすのではなく、少しだけ短くし、秋と春に休みを加え、授業の日数の合計は同じに保ったのである。ほかの学校は、休みそのものはほかのすべての人にとって変えずに、助けがあると役に立つ生徒のために、読書や数学に焦点を当てた希望者向けの夏の講座を用意した。どのやり方が最もうまくいくかについての証拠はまだかぎられており、結果は、講座がどれほどうまく作られているか、そして家庭が実際にそれに参加できるかどうかに大きくかかっているようである。',
+      'このように夏休みをめぐる議論は、子ども時代と教育が何のためにあるのかについてのちがう見方を反映している。学校が主に知識と技能をきずく手段とみなされるなら、学力の低下をへらすことは当然の優先事項に思われる。しかし子ども時代がそれ自体のために大切にされるなら、休みと自由な遊びのための時間を守ることも、同じくらい大切に思われるかもしれない。最善の解決策は、一方の見方を他方より選ぶことではなく、家庭の事情がどうであれ、すべての子どもが、学ぶ機会と、ただ子どもでいる機会の両方をもてるようにする方法を見つけることかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「すべての子どもが忘れるかもしれないが、差は休みのあいだに広がる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics say the long summer break causes learning ( 1 ) and widens the gap between rich and poor students. Defenders reply that free time supports rest, independence, and ( 2 ), and point to practical problems such as family holidays. Some schools have adopted ( 3 ) solutions, such as adding shorter breaks.',
+      blanks: [
+        { choices: ['loss', 'speed', 'profit', 'pride'], answer: 0, why: '第2段落 summer learning loss。' },
+        { choices: ['creativity', 'obedience', 'competition', 'debt'], answer: 0, why: '第4段落 to develop independence and creativity。' },
+        { choices: ['compromise', 'military', 'expensive', 'secret'], answer: 0, why: '第6段落 Some schools have tried compromise solutions。' },
+      ],
+    },
+    tf: [
+      { statement: '長い夏休みは、一つには子どもが農作業を手伝う必要があった時代に始まった。', answer: true, why: '第1段落 when children were needed to help with farm work during the summer。' },
+      { statement: '研究によれば、恵まれた生徒と恵まれない生徒の差は夏休みのあいだにちぢまる。', answer: false, why: '第3段落 the gap ... tends to widen during the break。' },
+      { statement: '先生も夏休みを研修に使う。', answer: true, why: '第5段落 use the break to rest, prepare lessons, and attend training。' },
+      { statement: '筆者は、一方の見方をはっきり選ぶべきだと主張している。', answer: false, why: '第7段落 The best solution may not be to choose one view over the other。' },
+    ],
+    qa: [
+      { q: 'What do teachers often spend the first weeks of a new school year doing?', choices: ['Reviewing material students had already studied.', 'Taking holidays.', 'Building new schools.', 'Grading summer homework only.'], answer: 0, why: '第2段落 reviewing material that students had already studied。' },
+      { q: 'What might keeping schools open in very hot months require?', choices: ['Expensive improvements to buildings.', 'Fewer teachers.', 'Longer lunch breaks.', 'New textbooks.'], answer: 0, why: '第5段落 could also require expensive improvements to buildings。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
