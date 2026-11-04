@@ -32862,6 +32862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-dignity',
+    title: 'What Is Human Dignity?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The idea of human dignity occupies a central place in modern moral and political thought. Constitutions declare it to be inviolable, international agreements describe it as the foundation of human rights, and people appeal to it when they protest against torture, humiliation, or extreme poverty. Yet despite its importance, the concept is surprisingly difficult to define. What exactly is dignity, why should every human being possess it, and what does it require of us in practice? These questions have no simple answers, but they deserve careful thought.",
+      "Historically, the word dignity was often associated with rank. A person of dignity was someone of high status, such as a noble, an official, or a religious leader, and dignity was something that distinguished a few people from the many. The modern idea reverses this meaning. It holds that dignity belongs not to particular individuals because of their position, but to every human being simply because he or she is human. This shift, from dignity as privilege to dignity as a universal possession, is one of the most important moral changes in human history.",
+      "Philosophers have offered various explanations of why all human beings possess dignity. Some point to our capacity for reason and moral choice, arguing that the ability to set our own goals and to act according to principles gives us a worth that cannot be measured in terms of usefulness. Others ground dignity in religious belief or in our ability to experience joy and suffering. ( A ) these explanations differ, they share the conviction that a human being must never be treated merely as an object or a tool for the purposes of others.",
+      "This conviction has practical consequences. It suggests that some ways of treating people are wrong even if they produce good results. Torturing a prisoner to obtain information, for example, might in some cases prevent harm, yet many believe it violates the dignity of the prisoner in a way that no benefit can justify. Similarly, a society that leaves people without food, shelter, or the means to participate in public life may be failing to respect their dignity, even if no one has intended to harm them.",
+      "Yet the concept of dignity is also open to criticism. Some argue that it is so vague that it can be used to support almost any position. In debates about medical treatment at the end of life, for example, both those who favor allowing people to choose the time of their death and those who oppose it appeal to dignity. If a concept can justify opposite conclusions, critics ask, does it really help us decide what to do, or does it merely add emotional force to positions held for other reasons?",
+      "A possible response is that dignity is less a precise rule than a reminder of what is at stake in moral decisions. It directs our attention to the worth of each person and warns us against treating anyone as if he or she did not matter. Such a reminder may not settle every difficult question, but it can shape the way we approach them, encouraging us to listen to those affected, to take their experiences seriously, and to resist arguments that would sacrifice individuals too easily for the sake of collective goals.",
+      "Perhaps the most important feature of dignity is that it is not earned and cannot be lost. A person who is poor, ill, or disgraced retains the same fundamental worth as anyone else. This idea challenges a common tendency to value people according to their achievements, wealth, or usefulness. To take dignity seriously is to accept that every human being deserves respect not because of what he or she has done or can do, but simply because of who he or she is.",
+    ],
+    ja: [
+      '人間の尊厳という考えは、現代の道徳と政治の思想の中心的な位置をしめている。憲法はそれを侵してはならないものと宣言し、国際的な取り決めはそれを人権の土台と述べ、人々は拷問や屈辱や極度の貧困に抗議するときにそれにうったえる。しかし、その重要さにもかかわらず、この概念はおどろくほど定義しにくい。尊厳とはいったい何であり、なぜすべての人間がそれをもつべきなのか、そして実際にそれは私たちに何を求めるのか。こうした問いには単純な答えはないが、注意深く考える価値がある。',
+      '歴史的には、尊厳ということばはしばしば身分と結びつけられていた。尊厳のある人とは、貴族や役人や宗教の指導者のような高い地位の人であり、尊厳は少数の人々を多くの人々から区別するものだった。現代の考えはこの意味を逆転させる。それは、尊厳は地位のために特定の個人に属するのではなく、単に人間であるというだけですべての人間に属すると考える。特権としての尊厳から、だれもがもつものとしての尊厳へのこの変化は、人類の歴史で最も重要な道徳上の変化の一つである。',
+      '哲学者たちは、なぜすべての人間が尊厳をもつのかについてさまざまな説明をしてきた。理性と道徳的な選択の能力をあげ、自分自身の目標を定め、原則にしたがって行動する能力が、役に立つかどうかではかることのできない価値を私たちにあたえると主張する人々もいる。宗教的な信念や、喜びや苦しみを経験する能力に尊厳の根拠を置く人々もいる。これらの説明はちがうが、人間はけっして単に他人の目的のための物や道具としてあつかわれてはならないという確信を共有している。',
+      'この確信には実際的な結果がある。それは、よい結果を生むとしても、ある種の人のあつかい方はまちがっていることを示唆する。たとえば、情報を得るために囚人を拷問することは、場合によっては害を防ぐかもしれないが、多くの人は、それがどんな利益によっても正当化できないしかたで囚人の尊厳を侵すと信じている。同じように、人々を食べ物や住まいや、公の生活に参加する手段のないままにしておく社会は、だれも人々を傷つけるつもりがなかったとしても、その尊厳を尊重しそこなっているのかもしれない。',
+      'しかし、尊厳という概念は批判にも開かれている。それはあまりにあいまいなので、ほとんどどんな立場をささえるのにも使えると主張する人々もいる。たとえば、人生の終わりの医療についての議論では、人々が死ぬ時を選ぶことを認めるのに賛成する人々も、それに反対する人々も、どちらも尊厳にうったえる。ある概念が反対の結論を正当化できるのなら、それは本当に何をすべきかを決める助けになるのか、それともほかの理由でもたれている立場に感情的な力を加えるだけなのか、と批判する人々は問う。',
+      '考えられる一つのこたえは、尊厳は正確な規則というよりも、道徳的な判断で何がかかっているかを思い出させるものだということである。それは私たちの注意を一人ひとりの価値に向けさせ、だれかをまるで問題ではないかのようにあつかうことに対して警告する。そのような思い出させるものは、すべてのむずかしい問いを解決しないかもしれないが、私たちがそれに取り組むしかたを形づくることはできる。影響を受ける人々に耳をかたむけ、その経験を真剣に受けとめ、集団の目標のために個人をかんたんに犠牲にしすぎる議論にあらがうようはげますのである。',
+      'おそらく尊厳の最も大切な特徴は、それが勝ちとるものではなく、失われることもないということである。まずしい人も、病気の人も、名誉を失った人も、ほかのだれとも同じ根本的な価値をもち続ける。この考えは、人々をその成果や富や役に立つかどうかによって評価するという、よくある傾向に異をとなえる。尊厳を真剣に受けとめるとは、すべての人間が、その人が何をしてきたか、何ができるかのためではなく、単にその人がその人であるというだけで尊重に値すると受け入れることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「説明はちがうが、同じ確信を共有している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '歴史的には、尊厳ということばはしばしば身分と結びつけられていた。', answer: true, why: '第2段落 the word dignity was often associated with rank。' },
+      { statement: '現代の考えでは、尊厳は高い地位の人だけに属する。', answer: false, why: '第2段落 belongs ... to every human being simply because he or she is human。' },
+      { statement: '人生の終わりの医療についての議論では、対立する両方の側が尊厳にうったえる。', answer: true, why: '第5段落 both those who favor ... and those who oppose it appeal to dignity。' },
+      { statement: '筆者によれば、尊厳は成果によって勝ちとるものである。', answer: false, why: '第7段落 it is not earned and cannot be lost。' },
+    ],
+    qa: [
+      { q: 'What conviction do the different explanations of dignity share?', choices: ['A human being must never be treated merely as a tool.', 'Only reason matters.', 'Religion is unnecessary.', 'Usefulness determines worth.'], answer: 0, why: '第3段落 a human being must never be treated merely as an object or a tool。' },
+      { q: 'What criticism is made of the concept of dignity?', choices: ['It is so vague that it can support almost any position.', 'It is too precise.', 'It is used only by scientists.', 'It has never been written in constitutions.'], answer: 0, why: '第5段落 it is so vague that it can be used to support almost any position。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
