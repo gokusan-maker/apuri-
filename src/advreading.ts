@@ -31058,6 +31058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-digital-textbooks',
+    title: 'Paper or Screens in the Classroom?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many schools, the heavy bag full of textbooks is gradually being replaced by a single tablet computer. Digital textbooks can be updated instantly, contain videos and interactive exercises, and allow students to search for information within seconds. Some governments have announced plans to replace printed textbooks entirely within a few years, arguing that digital materials are cheaper, more flexible, and better suited to the way young people now read. Yet this transition has also provoked concern among teachers, parents, and researchers, who question whether reading on a screen is really as effective as reading on paper.",
+      "Supporters of digital textbooks emphasize their practical advantages. A printed textbook may take years to revise, while a digital one can be corrected or expanded as soon as new information becomes available. Digital materials can include animations that show how a chemical reaction takes place or how the heart pumps blood, making abstract ideas easier to understand. They can also be adapted to individual students, offering larger text for those with poor eyesight, audio for those who struggle to read, and additional exercises for those who need more practice.",
+      "Cost is another argument. Printing and distributing millions of textbooks every year requires enormous amounts of paper and money, and books are often damaged or lost. Once schools have invested in devices, supporters argue, digital materials can be provided to every student at a fraction of the cost. They also point out that young people will spend much of their adult lives reading on screens, and that schools should help them to develop the skills needed to read digital texts carefully.",
+      "Critics, however, point to a growing body of research suggesting that people often understand and remember less when they read on screens than when they read on paper, particularly when the texts are long or complex. ( A ) the reasons are not fully understood, researchers suggest that screens encourage a faster, more superficial style of reading, in which readers skim for key words rather than following an argument closely. The physical experience of a printed book, in which readers can feel how far they have progressed and remember where on the page something appeared, may also help memory.",
+      "There are also concerns about distraction. A tablet that contains a textbook also provides access to games, messages, and the internet, and even students who intend to study may find it difficult to resist these temptations. Teachers report that it can be hard to know whether students are reading their lessons or doing something else. In addition, long periods of looking at screens may cause eye strain, and some parents worry that children who already spend many hours on devices outside school should not spend even more time on them in the classroom.",
+      "Equity is a further issue. Not all families have reliable internet access at home, and devices can break, run out of battery, or be stolen. If schools rely entirely on digital materials, students without good access may fall behind. Critics also note that the cost savings promised by supporters may be smaller than expected, since devices must be replaced regularly, software must be licensed, and technical support must be provided. Printed books, by contrast, require no electricity and can be used for many years.",
+      "Many educators therefore suggest that the choice need not be between paper and screens. Digital materials may be ideal for some purposes, such as practicing exercises, watching demonstrations, or searching for information, while printed books may remain better for sustained reading and careful study. The important question is not which format is more modern, but which helps students to learn most effectively in a particular situation. Schools that use both thoughtfully may be able to combine the advantages of each while avoiding the weaknesses of relying on either alone.",
+    ],
+    ja: [
+      '多くの学校で、教科書でいっぱいの重いかばんが、少しずつ一台のタブレット端末におきかえられている。デジタル教科書はすぐに更新でき、動画や対話型の練習問題をふくみ、生徒が数秒で情報を検索できるようにしてくれる。デジタルの教材のほうが安く、柔軟で、若者が今読んでいるやり方に合っていると主張し、数年のうちに紙の教科書を完全におきかえる計画を発表した政府もある。しかしこの移行は、画面で読むことが本当に紙で読むことと同じくらい効果的なのかを疑問視する先生や親や研究者の懸念も呼び起こしてきた。',
+      'デジタル教科書を支持する人々は、その実際的な利点を強調する。紙の教科書は改訂に何年もかかるかもしれないが、デジタルの教科書は新しい情報が手に入りしだい直したり広げたりできる。デジタルの教材には、化学反応がどう起こるかや心臓がどう血液を送り出すかを示すアニメーションを入れることができ、抽象的な考えを理解しやすくする。それはまた、目の悪い生徒には大きな文字を、読むのに苦労する生徒には音声を、もっと練習が必要な生徒には追加の練習問題をというように、一人ひとりの生徒に合わせることもできる。',
+      '費用ももう一つの主張である。毎年何百万冊もの教科書を印刷して配るには、ばくだいな量の紙とお金が必要であり、本はしばしばいたんだりなくなったりする。学校がいったん端末に投資すれば、デジタルの教材はわずかな費用ですべての生徒に提供できる、と支持する人々は主張する。彼らはまた、若者はおとなになってからの生活の多くを画面で読んですごすのだから、学校はデジタルの文章を注意深く読むのに必要な技能をのばす手助けをすべきだと指摘する。',
+      'しかし批判する人々は、とくに文章が長かったり複雑だったりするとき、人は紙で読むときよりも画面で読むときのほうが理解し覚えることが少ないことが多いと示す研究がふえていることを指摘する。理由は十分にはわかっていないが、画面は、読み手が議論を注意深く追うのではなく重要なことばを求めて流し読みする、より速くより表面的な読み方をうながすのではないかと研究者は示唆する。読み手がどこまで進んだかを感じとり、ページのどこに何があったかを覚えていられる紙の本の物理的な経験も、記憶を助けているのかもしれない。',
+      '気が散ることについての懸念もある。教科書の入ったタブレットは、ゲームやメッセージやインターネットにもつながっており、勉強するつもりの生徒でさえ、こうした誘惑にあらがうのはむずかしいかもしれない。先生は、生徒が授業の内容を読んでいるのか、ほかのことをしているのかを知るのはむずかしいと報告している。そのうえ、長い時間画面を見ていると目が疲れるかもしれず、学校の外ですでに何時間も端末を使っている子どもが、教室でさらに長い時間それを使うべきではないと心配する親もいる。',
+      '公平さもさらなる問題である。すべての家庭が家で安定したインターネット接続をもっているわけではなく、端末はこわれたり、電池が切れたり、ぬすまれたりすることがある。学校がデジタルの教材に完全にたよれば、十分に接続できない生徒は取り残されるかもしれない。批判する人々はまた、端末は定期的に買いかえなければならず、ソフトウェアは使用料をはらわなければならず、技術的な支援もしなければならないので、支持する人々が約束する費用の節約は思ったより小さいかもしれないと指摘する。それに対して紙の本は、電気を必要とせず、何年も使うことができる。',
+      'そのため多くの教育者は、紙と画面のどちらかを選ぶ必要はないと示唆する。デジタルの教材は、練習問題をしたり、実演を見たり、情報を検索したりするような目的には理想的かもしれず、一方で紙の本は、じっくり読んだり注意深く学んだりするのにより向いたままかもしれない。大切な問いは、どちらの形がより現代的かではなく、ある状況でどちらが生徒の最も効果的な学びを助けるかである。両方を思慮深く使う学校は、どちらか一方だけにたよる弱点をさけながら、それぞれの利点を組み合わせることができるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「理由は十分にはわかっていないが、研究者は示唆する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say digital textbooks can be ( 1 ) quickly, include animations, and cost less. Critics point to research showing that people often understand less when reading on screens, and worry about ( 2 ) and unequal internet access. Many educators recommend using both formats ( 3 ).',
+      blanks: [
+        { choices: ['updated', 'printed', 'forgotten', 'banned'], answer: 0, why: '第1段落 Digital textbooks can be updated instantly。' },
+        { choices: ['distraction', 'weight', 'silence', 'uniforms'], answer: 0, why: '第5段落 There are also concerns about distraction。' },
+        { choices: ['thoughtfully', 'rarely', 'secretly', 'carelessly'], answer: 0, why: '第7段落 Schools that use both thoughtfully。' },
+      ],
+    },
+    tf: [
+      { statement: 'デジタル教材は一人ひとりの生徒に合わせることができる。', answer: true, why: '第2段落 They can also be adapted to individual students。' },
+      { statement: '研究によれば、長く複雑な文章は画面で読むほうがよく理解できる。', answer: false, why: '第4段落 people often understand and remember less when they read on screens。' },
+      { statement: '先生は、生徒が授業の内容を読んでいるかどうかを知るのはむずかしいと報告している。', answer: true, why: '第5段落 it can be hard to know whether students are reading their lessons。' },
+      { statement: '筆者は、紙の本を完全にやめるべきだと主張している。', answer: false, why: '第7段落 the choice need not be between paper and screens。' },
+    ],
+    qa: [
+      { q: 'What may help memory when reading a printed book, according to the fourth paragraph?', choices: ['Feeling how far one has progressed.', 'Watching animations.', 'Searching for key words.', 'Reading faster.'], answer: 0, why: '第4段落 readers can feel how far they have progressed and remember where on the page something appeared。' },
+      { q: 'Why might the cost savings of digital textbooks be smaller than expected?', choices: ['Devices must be replaced and software licensed.', 'Paper is becoming free.', 'Students refuse to use tablets.', 'Teachers demand higher pay.'], answer: 0, why: '第6段落 devices must be replaced regularly, software must be licensed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
