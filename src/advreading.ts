@@ -31662,6 +31662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-inheritance',
+    title: 'What We Inherit',
+    level: '難関大（評論）',
+    paragraphs: [
+      "No one begins life from nothing. Each of us is born into a language we did not invent, a culture we did not design, and a world shaped by the choices of people who lived long before us. We inherit not only physical traits from our parents but also habits of thought, ways of speaking, beliefs about what is valuable, and even many of our fears and hopes. Much of what we consider most personal about ourselves turns out, on closer examination, to have been received from others. This raises a question that every generation must face: what should we do with what we have inherited?",
+      "One response is gratitude. The language that allows us to think, the knowledge that allows us to understand the world, and the institutions that allow us to live together in relative peace are gifts that no single person could have created. To recognize this is to see oneself as part of a long chain of human effort, indebted to countless people whose names are forgotten. Such recognition can be a source of humility, reminding us that our achievements rest on foundations laid by others.",
+      "Yet not everything we inherit deserves gratitude. Along with knowledge and beauty, every generation passes on prejudices, injustices, and problems it has failed to solve. Children may inherit not only the wisdom of their ancestors but also their hatreds, and societies may inherit not only great works of art but also structures of inequality that were built long ago. ( A ) these inheritances may feel natural because they have always been present, they are not inevitable, and each generation has the opportunity, and perhaps the responsibility, to examine and change them.",
+      "This suggests that the proper attitude toward inheritance is neither blind acceptance nor complete rejection, but critical engagement. To accept everything we have received without question is to become a mere vehicle for the past, repeating its errors along with its insights. To reject everything is to cut ourselves off from the resources we need to think and act at all, since even the tools of criticism, such as language and reason, are themselves inherited. The task is to distinguish what deserves to be preserved from what needs to be changed.",
+      "Inheritance also creates obligations toward the future. Just as we have received the world from those who came before us, we will pass it on to those who come after. The choices we make about the environment, about public institutions, and about the values we teach our children will shape the inheritance of generations not yet born. This responsibility is unusual, since those to whom we owe it cannot yet speak for themselves and cannot hold us accountable. It depends entirely on our willingness to imagine their needs and to care about them.",
+      "Some thinkers have suggested that we should regard ourselves not as owners of the world but as trustees, people entrusted with something valuable that belongs to others as much as to ourselves. A trustee is expected to care for what has been entrusted, to use it wisely, and to hand it on in at least as good a condition as it was received. Applied to culture and nature, this idea suggests that each generation has the right to enjoy and improve its inheritance, but not to exhaust or destroy it.",
+      "Perhaps, then, the deepest way of honoring what we have inherited is to add something of value to it. A tradition remains alive not when it is merely preserved, like an object in a museum, but when each generation takes it up, questions it, and passes it on enriched by its own contributions. In this sense, inheritance is not a burden that fixes us to the past but an invitation to take part in a conversation that began long before us and will continue long after we are gone.",
+    ],
+    ja: [
+      'だれも無から人生を始めはしない。私たちはそれぞれ、自分が発明したのではない言語や、自分が設計したのではない文化や、ずっと前に生きた人々の選択によって形づくられた世界の中に生まれてくる。私たちは親から体の特徴を受けつぐだけでなく、考え方の習慣や、話し方や、何が価値あるものかについての信念や、さらにはおそれや望みの多くまで受けついでいる。自分について最も個人的だと思っているものの多くも、よく調べてみると、他人から受けとったものだとわかる。このことは、あらゆる世代が直面しなければならない問いを投げかける。受けついだものをどうすべきなのか。',
+      '一つの応え方は感謝である。考えることを可能にしてくれる言語、世界を理解することを可能にしてくれる知識、比較的平和にいっしょに生きることを可能にしてくれる制度は、どんな一人の人間も作り出すことのできなかったおくりものである。これを認めることは、自分を人間の努力の長い鎖の一部とみなし、名前の忘れられた数えきれない人々に恩を受けていると見ることである。そうした認識は謙虚さのみなもとになりうる。私たちの業績は、他人が置いた土台の上にあることを思い出させてくれるからである。',
+      'しかし、受けつぐものすべてが感謝に値するわけではない。知識や美とともに、あらゆる世代は偏見や不正や、解決できなかった問題も受けわたしていく。子どもは祖先の知恵だけでなく憎しみも受けつぐかもしれず、社会は偉大な芸術作品だけでなく、ずっと前にきずかれた不平等の構造も受けつぐかもしれない。こうした受けつがれたものは、いつもそこにあったので自然に感じられるかもしれないが、さけられないものではなく、それぞれの世代には、それを吟味し変える機会が、そしておそらく責任がある。',
+      'このことは、受けついだものへのふさわしい態度は、盲目的な受け入れでも完全な拒絶でもなく、批判的なかかわりであることを示している。受けとったすべてを疑わずに受け入れることは、単なる過去の乗り物になり、その洞察とともにそのまちがいもくり返すことである。すべてをこばむことは、そもそも考え行動するのに必要な資源から自分を切りはなすことである。言語や理性のような批判の道具でさえ、それ自体受けつがれたものだからである。課題は、守られるに値するものと変えられる必要のあるものを区別することである。',
+      '受けつぐことはまた、未来への義務を生む。私たちが先人から世界を受けとったのと同じように、私たちはそれをあとに来る人々に受けわたしていく。環境や公共の制度や、子どもに教える価値について私たちがする選択は、まだ生まれていない世代が受けつぐものを形づくるだろう。この責任は特別である。私たちがその責任を負っている相手は、まだ自分で声を上げることができず、私たちに責任を問うこともできないからである。それはすべて、彼らの必要を想像し、それを大切に思う私たちの気持ちにかかっている。',
+      '私たちは自分を世界の持ち主ではなく、受託者、つまり自分と同じくらい他人のものでもある価値あるものをまかされた者とみなすべきだと示唆した思想家もいる。受託者は、まかされたものを大切にし、それを賢明に使い、受けとったときと少なくとも同じくらいよい状態で引きわたすことを期待される。文化と自然に当てはめると、この考えは、それぞれの世代には受けついだものを楽しみ、よくする権利はあるが、それを使いつくしたりこわしたりする権利はないことを示している。',
+      'それなら、受けついだものを尊ぶ最も深い方法は、それに何か価値あるものをつけ加えることなのかもしれない。伝統が生き続けるのは、博物館の品物のように単に保存されるときではなく、それぞれの世代がそれを取り上げ、問い直し、自分たちの貢献で豊かにして受けわたすときである。この意味で、受けつぐことは私たちを過去にしばりつける重荷ではなく、私たちよりずっと前に始まり、私たちがいなくなってからもずっと続いていく対話に加わるようにという誘いなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「自然に感じられるかもしれないが、さけられないものではない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、自分について最も個人的だと思っているものの多くは他人から受けとったものである。', answer: true, why: '第1段落 turns out ... to have been received from others。' },
+      { statement: '筆者によれば、受けつぐものはすべて感謝に値する。', answer: false, why: '第3段落 not everything we inherit deserves gratitude。' },
+      { statement: '筆者によれば、批判の道具である言語や理性もまた受けつがれたものである。', answer: true, why: '第4段落 even the tools of criticism, such as language and reason, are themselves inherited。' },
+      { statement: '筆者によれば、受託者は受けとったものを使いつくしてよい。', answer: false, why: '第6段落 but not to exhaust or destroy it。' },
+    ],
+    qa: [
+      { q: 'Why is the responsibility toward future generations unusual, according to the fifth paragraph?', choices: ['They cannot yet speak for themselves.', 'They will be richer than us.', 'They do not need anything.', 'They will forget us.'], answer: 0, why: '第5段落 those to whom we owe it cannot yet speak for themselves。' },
+      { q: 'When does a tradition remain alive, according to the last paragraph?', choices: ['When each generation questions it and adds to it.', 'When it is preserved like a museum object.', 'When it is never changed.', 'When it is forgotten.'], answer: 0, why: '第7段落 when each generation takes it up, questions it, and passes it on enriched。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
