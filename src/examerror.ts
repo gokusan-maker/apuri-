@@ -3986,6 +3986,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Twice (B) a week, (C) I go to (D) the bed early.', choices: ['(A) Twice', '(B) a week,', '(C) I go to', '(D) the bed early'], answer: 3, why: '「寝る」は go to bed。本来の目的で使う場所には冠詞をつけない。' },
     ],
   },
+  {
+    id: 'exam-error-lielay-kokuritsu',
+    title: '入試の正誤問題〈168〉（国公立レベル：まぎらわしい自動詞と他動詞 lie・lay／rise・raise）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '自動詞（目的語をとらない）と他動詞（目的語をとる）のまぎらわしい組。lie「横になる・ある」lie-lay-lain／lay「置く・（卵を）産む」lay-laid-laid。rise「上がる・のぼる」rise-rose-risen／raise「上げる・育てる」raise-raised-raised。うしろに目的語（the book・his hand・taxes）があれば他動詞 lay・raise、なければ自動詞 lie・rise。lie の過去形 lay と、lay の原形を取りちがえないこと。',
+    ],
+    examples: [
+      { en: 'She lay down on the sofa and laid the book on the table.', ja: '彼女はソファに横になり、本をテーブルに置いた。' },
+      { en: 'Prices have risen, so the shop raised its prices too.', ja: '物価が上がったので、その店も値段を上げた。' },
+    ],
+    questions: [
+      { sentence: 'She (A) laid (B) down on the sofa (C) because she (D) was tired.', choices: ['(A) laid', '(B) down on the sofa', '(C) because she', '(D) was tired'], answer: 0, why: '「横になる」は自動詞 lie（lie-lay-lain）。過去形は lay。laid は lay「置く」の過去形。' },
+      { sentence: 'Prices (A) have raised (B) sharply (C) over (D) the past year.', choices: ['(A) have raised', '(B) sharply', '(C) over', '(D) the past year'], answer: 0, why: '「上がる」は自動詞 rise（rise-rose-risen）。have risen。' },
+      { sentence: 'Please (A) put away your bag and (B) lie (C) the book (D) on the table.', choices: ['(A) put away your bag and', '(B) lie', '(C) the book', '(D) on the table'], answer: 1, why: '「（物を）置く」は他動詞 lay。lay the book。' },
+      { sentence: '(A) Every morning (B) the sun (C) raises (D) in the east.', choices: ['(A) Every morning', '(B) the sun', '(C) raises', '(D) in the east'], answer: 2, why: '「（太陽が）のぼる」は自動詞 rise。rises。' },
+      { sentence: 'He (A) suddenly (B) rose (C) his hand (D) to ask a question.', choices: ['(A) suddenly', '(B) rose', '(C) his hand', '(D) to ask a question'], answer: 1, why: '「（手を）上げる」は他動詞 raise。raised his hand。' },
+      { sentence: '(A) Our hen (B) has lain (C) three eggs (D) since this morning.', choices: ['(A) Our hen', '(B) has lain', '(C) three eggs', '(D) since this morning'], answer: 1, why: '「（卵を）産む」は他動詞 lay（lay-laid-laid）。has laid。' },
+      { sentence: 'The town (A) lays (B) at the foot (C) of (D) the mountain.', choices: ['(A) lays', '(B) at the foot', '(C) of', '(D) the mountain'], answer: 0, why: '「（場所に）ある・横たわる」は自動詞 lie。lies。' },
+      { sentence: 'I (A) can’t remember (B) where I (C) lay (D) my keys yesterday.', choices: ['(A) can’t remember', '(B) where I', '(C) lay', '(D) my keys yesterday'], answer: 2, why: '「（かぎを）置いた」は他動詞 lay の過去形 laid。' },
+      { sentence: 'The government plans to (A) rise (B) taxes (C) next (D) year.', choices: ['(A) rise', '(B) taxes', '(C) next', '(D) year'], answer: 0, why: '「（税金を）上げる」は他動詞 raise。to raise taxes。' },
+      { sentence: 'It is not good for your health (A) to stay (B) in bed (C) all day or (D) to lay on the sofa.', choices: ['(A) to stay', '(B) in bed', '(C) all day or', '(D) to lay on the sofa'], answer: 3, why: '「横になる」は自動詞 lie。to lie on the sofa。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

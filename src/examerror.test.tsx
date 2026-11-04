@@ -2304,3 +2304,10 @@ it('誤文訂正〈161〉：京大レベル 関係代名詞 what と which・tha
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('what')
 })
+
+it('正誤問題〈168〉：国公立レベル lie・lay／rise・raise の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-lielay-kokuritsu')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) laid')
+})
