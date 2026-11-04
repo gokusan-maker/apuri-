@@ -32658,6 +32658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-phone-ban',
+    title: 'Should Schools Ban Smartphones?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the space of little more than a decade, the smartphone has become an almost universal companion for teenagers in many countries. Students use their phones to communicate with friends, to search for information, and to entertain themselves during every spare moment. In response, a growing number of schools and governments have introduced rules that ban or strictly limit the use of phones during the school day. These policies have been welcomed by many parents and teachers, but they have also provoked a lively debate about their effectiveness and fairness.",
+      "Supporters of bans argue first that phones are a major source of distraction. Even when a phone is silent and kept in a bag, the mere awareness that a message may be waiting can draw a student's attention away from the lesson. Teachers report that students who are allowed to keep their phones often check them repeatedly, and some studies have found that test results improve after schools introduce restrictions, particularly among students who had previously struggled. For these students, removing a constant source of temptation may make it easier to concentrate on difficult tasks for longer periods.",
+      "Supporters also emphasize the social benefits of a phone-free school day. Without screens to look at, students may be more likely to talk with one another during breaks, to play games together, or simply to rest their minds. ( A ) the effect is difficult to measure precisely, many teachers believe that bans reduce cyberbullying during school hours and help students develop the face-to-face social skills that will be important throughout their lives. Some schools have also noticed that students become more active and spend more time outdoors when phones are not available.",
+      "Critics, however, question whether bans address the real problem. Students who are forbidden to use phones at school may simply use them more intensely once the school day ends, and the habits that cause concern may continue unchanged. Critics argue that schools should instead teach students how to use technology responsibly, since young people will have to manage these devices for the rest of their lives, and a ban may postpone, rather than solve, the challenge of learning self-control.",
+      "There are also practical and ethical concerns. Many parents want to be able to contact their children in an emergency, and some students rely on their phones for medical reasons or to manage difficult family situations. Enforcing a ban can take up teachers' time and create conflict between staff and students. Moreover, phones can be valuable learning tools, allowing students to look up information, record experiments, or use educational applications, and a complete ban may deprive classrooms of these benefits. Some critics also point out that a ban treats all students as if they were unable to control themselves, which may seem unfair to those who use their phones sensibly.",
+      "The evidence from schools that have introduced restrictions remains mixed. Some report clear improvements in concentration and behavior, while others find little difference, or discover that students simply find ways to break the rules. Much seems to depend on how a policy is introduced. Rules that are explained clearly, applied consistently, and developed with the participation of students and parents appear to work better than those imposed suddenly from above.",
+      "Perhaps the most useful way to think about the issue is not as a choice between total freedom and total prohibition, but as a question of balance. Schools might, for example, allow phones in certain lessons for specific purposes while keeping other times free of screens. Whatever approach is chosen, the goal should be not only to protect students from distraction but also to help them understand their own habits, so that they can make wise decisions about technology long after they have left school.",
+    ],
+    ja: [
+      'わずか十年あまりのあいだに、スマートフォンは多くの国で十代の若者にとってほとんど全員がもつ相棒になった。生徒は、友だちと連絡をとるため、情報を調べるため、そしてあらゆるすき間の時間に楽しむために電話を使う。これにこたえて、ますます多くの学校や政府が、学校のある時間の電話の使用を禁止したり厳しく制限したりする規則を取り入れている。こうした方針は多くの親や教師に歓迎されているが、その効果と公平さについての活発な議論も引き起こしている。',
+      '禁止を支持する人々は、まず電話が気を散らす大きな原因だと主張する。電話が音を消してかばんにしまわれているときでさえ、メッセージが待っているかもしれないと意識するだけで、生徒の注意が授業からそれてしまうことがある。電話をもつことを許された生徒はくりかえしそれを確かめることが多いと教師たちは報告しており、学校が制限を取り入れたあとに、とくにそれまで苦労していた生徒のあいだで、テストの結果がよくなったことを見いだした研究もある。こうした生徒にとっては、たえず誘惑する原因を取りのぞくことで、むずかしい課題により長く集中しやすくなるのかもしれない。',
+      '支持する人々はまた、電話のない学校生活の社会的な利点も強調する。見る画面がなければ、生徒は休み時間におたがいに話したり、いっしょに遊んだり、単に頭を休めたりしやすくなるかもしれない。その効果を正確にはかるのはむずかしいが、禁止は学校の時間中のネット上のいじめを減らし、生徒が一生を通じて大切になる対面での社会的な技能を育てる助けになると、多くの教師は信じている。電話が使えないと生徒がより活動的になり、外ですごす時間がふえることに気づいた学校もある。',
+      'しかし批判する人々は、禁止が本当の問題に取り組んでいるのかを疑う。学校で電話を使うことを禁じられた生徒は、学校が終わったとたんに、より熱心にそれを使うだけかもしれず、心配の種になっている習慣は変わらずに続くかもしれない。若者はこの先ずっとこうした機器を扱わなければならないのだから、学校はむしろ技術を責任をもって使う方法を生徒に教えるべきであり、禁止は自制心を学ぶという課題を解決するのではなく先のばしにするかもしれないと批判する人々は主張する。',
+      '実際的な心配や倫理的な心配もある。多くの親は緊急のときに子どもと連絡をとれるようにしたいと思っており、医療上の理由や、むずかしい家庭の事情に対処するために電話に頼っている生徒もいる。禁止を守らせることは教師の時間をうばい、職員と生徒のあいだに対立を生みうる。さらに、電話は、情報を調べたり、実験を記録したり、学習用のアプリを使ったりできる価値ある学習の道具になりうるのであり、全面的な禁止は教室からこうした利点をうばうかもしれない。また、禁止はすべての生徒を自分をおさえられないかのようにあつかうものであり、電話を分別をもって使っている生徒には不公平に思えるかもしれないと指摘する批判者もいる。',
+      '制限を取り入れた学校から得られた証拠は、まだまちまちである。集中力やふるまいがはっきりよくなったと報告する学校もあれば、ほとんどちがいがない、あるいは生徒が規則を破る方法を見つけるだけだとわかった学校もある。多くは方針がどのように取り入れられるかにかかっているように思われる。はっきり説明され、一貫して適用され、生徒や親の参加とともに作られた規則のほうが、上からとつぜんおしつけられた規則よりうまくはたらくようである。',
+      'おそらくこの問題について考える最も役に立つ方法は、完全な自由か完全な禁止かの選択としてではなく、つりあいの問題として考えることだろう。学校は、たとえば、ある授業では特定の目的のために電話を認めながら、ほかの時間は画面のないままにしておくことができるかもしれない。どんなやり方を選ぶにせよ、目標は生徒を気を散らすものから守ることだけでなく、生徒が自分の習慣を理解する助けをすることでもあるべきだ。そうすれば、学校を出たずっとあとでも、技術について賢い判断ができるようになるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「効果を正確にはかるのはむずかしいが、教師は禁止がいじめを減らすと信じている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of phone bans argue that phones are a major source of ( 1 ) and that phone-free schools encourage face-to-face interaction. Critics say that bans may only postpone the challenge of learning ( 2 ) and may remove useful learning tools. The best approach may be a matter of ( 3 ) rather than total prohibition.',
+      blanks: [
+        { choices: ['distraction', 'income', 'exercise', 'sleep'], answer: 0, why: '第2段落 phones are a major source of distraction。' },
+        { choices: ['self-control', 'history', 'music', 'cooking'], answer: 0, why: '第4段落 the challenge of learning self-control。' },
+        { choices: ['balance', 'luck', 'money', 'speed'], answer: 0, why: '第7段落 as a question of balance。' },
+      ],
+    },
+    tf: [
+      { statement: '電話が音を消してかばんにしまわれていても、生徒の注意がそれることがある。', answer: true, why: '第2段落 Even when a phone is silent and kept in a bag ... can draw a student\'s attention away。' },
+      { statement: '批判する人々によれば、禁止は電話の習慣をかならず変える。', answer: false, why: '第4段落 the habits that cause concern may continue unchanged。' },
+      { statement: '医療上の理由で電話に頼っている生徒もいる。', answer: true, why: '第5段落 some students rely on their phones for medical reasons。' },
+      { statement: '筆者によれば、上からとつぜんおしつけられた規則が最もうまくはたらく。', answer: false, why: '第6段落 appear to work better than those imposed suddenly from above。' },
+    ],
+    qa: [
+      { q: 'What have some studies found after schools introduce restrictions?', choices: ['Test results improve, especially among students who had struggled.', 'Students stop using phones at home.', 'Teachers leave the school.', 'Students become less social.'], answer: 0, why: '第2段落 test results improve ... particularly among students who had previously struggled。' },
+      { q: 'What kind of rules appear to work better?', choices: ['Rules developed with the participation of students and parents.', 'Rules that change every week.', 'Rules that are kept secret.', 'Rules made only by the government.'], answer: 0, why: '第6段落 developed with the participation of students and parents appear to work better。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
