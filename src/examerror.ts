@@ -6618,6 +6618,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I couldn’t make myself [understand] in English.', choices: ['understood', 'understanding', 'to understand', 'understands'], answer: 0, why: '自分（の言うこと）が「理解される」ので過去分詞。make oneself understood。' },
     ],
   },
+  {
+    id: 'exam-fix-155',
+    title: '入試の誤文訂正〈155〉（京大レベル：仮定法 I wish・If only・as if の時制）',
+    points: ['仮定法は「事実とちがうこと」を時制を1つ過去にずらして表す。今のことは過去形（I wish I were・If only I knew・as if he knew）、過去のことは過去完了（I wish I had studied・as if she had seen）。be 動詞は were がふつう。「～してくれたらいいのに」は I wish you would ～。can は could に。It’s time ＋過去形「もう～する時間だ」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I wish I had studied harder when I was in high school.', ja: '高校のときもっと勉強していればよかった。' }],
+    questions: [
+      { sentence: 'I wish I [am] taller.', choices: ['were', 'will be', 'have been', 'being'], answer: 0, why: '今の事実とちがう願いは仮定法過去。I wish I were。' },
+      { sentence: 'If only I [know] his phone number now!', choices: ['knew', 'will know', 'had known', 'am knowing'], answer: 0, why: '今のことなので仮定法過去 knew。' },
+      { sentence: 'I wish I [studied] harder when I was in high school.', choices: ['had studied', 'study', 'would study', 'have studied'], answer: 0, why: '過去の事実とちがう願いは仮定法過去完了 had studied。' },
+      { sentence: 'He talks as if he [knows] everything, but he doesn’t.', choices: ['knew', 'will know', 'has known', 'is knowing'], answer: 0, why: '実際には知らないので as if＋仮定法過去 knew。' },
+      { sentence: 'She looked as if she [has seen] a ghost.', choices: ['had seen', 'sees', 'would see', 'is seeing'], answer: 0, why: '見えた時より前のことなので as if＋過去完了 had seen。' },
+      { sentence: 'I wish you [will stop] making that noise.', choices: ['would stop', 'stop', 'stopped to', 'are stopping'], answer: 0, why: '「～してくれたらいいのに」は I wish you would ～。' },
+      { sentence: 'If only I [didn’t say] such a thing to her yesterday!', choices: ['hadn’t said', 'don’t say', 'won’t say', 'haven’t said'], answer: 0, why: 'yesterday の過去のことなので過去完了 hadn’t said。' },
+      { sentence: 'It’s time you [go] to bed.', choices: ['went', 'will go', 'have gone', 'going'], answer: 0, why: 'It’s time＋主語＋過去形「もう～する時間だ」。went。' },
+      { sentence: 'I wish I [can] speak French.', choices: ['could', 'will', 'may', 'have'], answer: 0, why: '仮定法では can を過去形 could に。' },
+      { sentence: 'He behaved as though nothing [happens].', choices: ['had happened', 'happens now', 'will happen', 'is happening'], answer: 0, why: 'ふるまった時より前のことなので as though＋過去完了 had happened。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
