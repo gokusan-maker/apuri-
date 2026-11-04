@@ -2465,6 +2465,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 26 L38 14 M50 24 L50 10 M60 26 L62 14" fill="none" stroke="#7f1d1d" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'coconutcrab')
+    return (
+      <g>
+        {/* 大きなはさみ */}
+        <path d="M24 50 Q10 42 12 56 Q20 62 28 56 M76 50 Q90 42 88 56 Q80 62 72 56" fill="#d97706" stroke="#451a03" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
