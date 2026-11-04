@@ -7290,6 +7290,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Do you know the reason [where] she left?', choices: ['why', 'when', 'what', 'which'], answer: 0, why: '先行詞が reason なので why（＝for which）。' },
     ],
   },
+  {
+    id: 'exam-fix-171',
+    title: '入試の誤文訂正〈171〉（東大レベル：英作文の名詞＋前置詞の結びつき）',
+    points: ['英作文では名詞とあとの前置詞の結びつきが決まっていることが多い。interest in ～「～への興味」・effect（influence）on ～「～への影響」・reason for ～「～の理由」・solution（answer・key）to ～「～の解決策・答え・かぎ」・demand for ～「～の需要」・increase（decrease）in ～「～の増加（減少）」・attitude toward ～「～への態度」・difficulty in ～ing「～するむずかしさ」。日本語の「の」にひっぱられて of を使わないよう注意する。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Smartphones have a great effect on our daily lives.', ja: 'スマートフォンは私たちの日常生活に大きな影響をあたえている。' }],
+    questions: [
+      { sentence: 'Smartphones have a great effect [of] our daily lives.', choices: ['on', 'at', 'for', 'with'], answer: 0, why: 'effect on ～「～への影響」。' },
+      { sentence: 'She has a strong interest [about] history.', choices: ['in', 'on', 'of', 'to'], answer: 0, why: 'interest in ～「～への興味」。' },
+      { sentence: 'What is the reason [of] his absence?', choices: ['for', 'to', 'in', 'on'], answer: 0, why: 'reason for ～「～の理由」。' },
+      { sentence: 'There is no easy solution [for] this problem.', choices: ['to', 'of', 'at', 'with'], answer: 0, why: 'solution to ～「～の解決策」。' },
+      { sentence: 'Hard work is the key [of] success.', choices: ['to', 'in', 'on', 'from'], answer: 0, why: 'the key to ～「～へのかぎ」。' },
+      { sentence: 'There has been an increase [of] the number of tourists.', choices: ['in', 'at', 'to', 'by'], answer: 0, why: 'increase in ～「～の増加」。' },
+      { sentence: 'The demand [of] electric cars is growing.', choices: ['for', 'in', 'to', 'at'], answer: 0, why: 'demand for ～「～の需要」。' },
+      { sentence: 'His attitude [for] his work has changed.', choices: ['toward', 'of', 'in', 'at'], answer: 0, why: 'attitude toward（to）～「～への態度」。' },
+      { sentence: 'I had difficulty [to find] his house.', choices: ['finding', 'find', 'to finding', 'found'], answer: 0, why: 'have difficulty (in) ～ing「～するのに苦労する」。' },
+      { sentence: 'Television has a strong influence [to] children.', choices: ['on', 'for', 'at', 'of'], answer: 0, why: 'influence on ～「～への影響」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
