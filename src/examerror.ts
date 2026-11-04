@@ -4202,6 +4202,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I hope (B) I were (C) rich enough (D) to buy that house.', choices: ['(A) I hope', '(B) I were', '(C) rich enough', '(D) to buy that house'], answer: 0, why: '事実に反する願望で were を使うなら I wish。I wish I were rich enough。' },
     ],
   },
+  {
+    id: 'exam-error-modal-idioms-kyodai',
+    title: '入試の正誤問題〈177〉（京大レベル：助動詞の慣用表現 may well・might as well・cannot help ～ing）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '助動詞の慣用表現：may well ＋原形「～するのももっともだ・たぶん～だろう」、might as well ＋原形「～したほうがましだ」（might as well A as B「B するくらいなら A したほうがましだ」）、cannot help ～ing「～せずにいられない」、cannot ～ too ...「いくら…してもしすぎることはない」、had better (not) ＋原形、would rather A than B、used to ＋原形、need not ＋原形。助動詞のあとはいつも動詞の原形で、to はつけない（used to・ought to をのぞく）。',
+    ],
+    examples: [
+      { en: 'You may well be angry with him.', ja: '君が彼に怒るのももっともだ。' },
+      { en: 'I cannot help laughing at his jokes.', ja: '彼の冗談には笑わずにいられない。' },
+    ],
+    questions: [
+      { sentence: '(A) You may well (B) to be (C) angry (D) with him.', choices: ['(A) You may well', '(B) to be', '(C) angry', '(D) with him'], answer: 1, why: 'may well のあとは動詞の原形。may well be angry「怒るのももっともだ」。' },
+      { sentence: '(A) I cannot help laugh (B) at (C) his jokes (D) every time.', choices: ['(A) I cannot help laugh', '(B) at', '(C) his jokes', '(D) every time'], answer: 0, why: 'cannot help のあとは動名詞。cannot help laughing「笑わずにいられない」。' },
+      { sentence: '(A) We might as well (B) waiting (C) for the next bus (D) as walk.', choices: ['(A) We might as well', '(B) waiting', '(C) for the next bus', '(D) as walk'], answer: 1, why: 'might as well のあとは動詞の原形。might as well wait。' },
+      { sentence: '(A) You had better (B) not to go (C) out (D) tonight.', choices: ['(A) You had better', '(B) not to go', '(C) out', '(D) tonight'], answer: 1, why: 'had better の否定は had better not ＋原形。had better not go。' },
+      { sentence: '(A) You cannot (B) be too careful (C) when you (D) will drive.', choices: ['(A) You cannot', '(B) be too careful', '(C) when you', '(D) will drive'], answer: 3, why: '時を表す when 節の中は未来のことでも現在形。when you drive。' },
+      { sentence: '(A) I would rather (B) to stay (C) home (D) than go out.', choices: ['(A) I would rather', '(B) to stay', '(C) home', '(D) than go out'], answer: 1, why: 'would rather のあとは動詞の原形。would rather stay。' },
+      { sentence: 'She (A) used to living (B) in Kyoto (C) when she (D) was young.', choices: ['(A) used to living', '(B) in Kyoto', '(C) when she', '(D) was young'], answer: 0, why: 'used to「以前は～したものだ」のあとは原形。used to live。' },
+      { sentence: '(A) He (B) need not (C) to worry (D) about the result.', choices: ['(A) He', '(B) need not', '(C) to worry', '(D) about the result'], answer: 2, why: '助動詞の need not のあとは原形。need not worry。' },
+      { sentence: '(A) Must you (B) leave (C) so soon? (D) Yes, I must not.', choices: ['(A) Must you', '(B) leave', '(C) so soon?', '(D) Yes, I must not'], answer: 3, why: 'Must ～? に「はい、行かなければならない」と答えるなら Yes, I must。' },
+      { sentence: '(A) It is (B) natural that he (C) should (D) gets angry.', choices: ['(A) It is', '(B) natural that he', '(C) should', '(D) gets angry'], answer: 3, why: 'should のあとは動詞の原形。should get angry。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
