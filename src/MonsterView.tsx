@@ -2408,6 +2408,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 60 Q50 52 76 60" fill="none" stroke="#facc15" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'blueringed')
+    return (
+      <g>
+        {/* 青いわっかのもよう */}
+        <circle cx="38" cy="48" r="4" fill="none" stroke="#1d4ed8" strokeWidth="2" />
+        <circle cx="62" cy="48" r="4" fill="none" stroke="#1d4ed8" strokeWidth="2" />
+        <circle cx="50" cy="62" r="4" fill="none" stroke="#1d4ed8" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
