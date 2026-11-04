@@ -2530,6 +2530,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 34 L36 72 M60 34 L64 72" fill="none" stroke="#1c1917" strokeWidth="4" strokeLinecap="round" />
       </g>
     )
+  if (species === 'moorishidol')
+    return (
+      <g>
+        {/* むちのようにのびた背びれと黒いしま */}
+        <path d="M50 26 Q60 8 80 6" fill="none" stroke="#1c1917" strokeWidth="2" strokeLinecap="round" />
+        <path d="M38 32 L34 74 M62 32 L66 74" fill="none" stroke="#1c1917" strokeWidth="5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
