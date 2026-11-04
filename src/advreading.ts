@@ -31138,6 +31138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-older-drivers',
+    title: 'Should Older Drivers Be Tested?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As populations age, the number of older people who drive is rising rapidly in many countries. For many of them, driving is not a luxury but a necessity, especially in rural areas where public transport is limited and shops, hospitals, and friends may be many kilometers away. At the same time, a series of widely reported accidents involving elderly drivers has led to calls for stricter rules, such as compulsory driving tests at a certain age or limits on when and where older people may drive. The question of how to balance safety with independence has become increasingly difficult to avoid.",
+      "Those who favor stricter rules point to the physical changes that often accompany aging. Eyesight may weaken, reaction times may slow, and conditions such as dementia may affect a person's ability to judge distances or remember routes. Some older drivers may not be aware of these changes, or may be reluctant to admit them. Regular testing, supporters argue, would identify those who are no longer able to drive safely before they cause an accident, protecting not only other road users but also the drivers themselves, who are more likely to be seriously injured in a crash.",
+      "Opponents, however, argue that age alone is a poor indicator of driving ability. Many people in their seventies and eighties drive carefully and safely, often more cautiously than younger drivers, who are statistically responsible for a large share of serious accidents. ( A ) older drivers may be involved in certain types of accidents more often, opponents point out, the overall risk they pose to others is not necessarily higher than that of young people, whom no one suggests banning from the roads. Rules based on age, in this view, unfairly treat a diverse group of people as though they were all the same.",
+      "There is also the question of what happens to those who lose their licenses. For an older person living in the countryside, giving up driving may mean losing the ability to shop, visit a doctor, or see friends without depending on others. Studies have suggested that older people who stop driving are more likely to become isolated and to experience a decline in physical and mental health. A policy that improves road safety but leaves many older people trapped at home may solve one problem only by creating another.",
+      "Some countries have tried to find a middle path. Rather than testing everyone above a certain age, they encourage regular health checks and allow doctors to recommend limits when necessary. Some offer restricted licenses that permit driving only during the day, only within a certain distance of home, or only on familiar roads. Others provide training courses that help older drivers to refresh their skills and adapt to changes in their abilities, and some encourage the use of vehicles equipped with safety technology, such as automatic braking systems.",
+      "Ultimately, however, the problem cannot be solved by driving rules alone. Many older people continue to drive not because they want to but because they have no alternative. Improving public transport, providing community buses or shared taxi services, and designing towns where shops and services are within walking distance would allow older people to give up driving without losing their independence. In this sense, the debate about older drivers is also a debate about how communities are planned and whether they meet the needs of people of all ages.",
+      "The challenge, then, is to protect public safety while respecting the dignity and freedom of older citizens. Simple rules based on age are easy to apply but may be unfair; individual assessments are fairer but more complicated and costly. Whatever approach is chosen, it should recognize that the ability to move freely is an essential part of a full life, and that a society that asks older people to stop driving has a responsibility to offer them other ways of remaining active, connected, and independent.",
+    ],
+    ja: [
+      '人口が高齢化するにつれて、多くの国で車を運転する高齢者の数が急速にふえている。その多くにとって、運転はぜいたくではなく必要なことであり、とくに公共交通がかぎられ、店や病院や友人が何キロもはなれているかもしれない地方ではそうである。同時に、高齢の運転者がかかわる事故が次々と広く報じられたことで、ある年齢での運転テストの義務づけや、高齢者がいつどこで運転してよいかの制限のような、よりきびしい規則を求める声が上がっている。安全と自立をどうつりあわせるかという問いは、ますますさけて通れないものになっている。',
+      'よりきびしい規則に賛成する人々は、年をとるにつれてしばしば起こる体の変化を指摘する。視力が弱まり、反応時間がおそくなり、認知症のような状態が、距離を判断したり道順を覚えたりする力に影響するかもしれない。高齢の運転者の中には、こうした変化に気づいていなかったり、それを認めたがらなかったりする人もいるかもしれない。定期的なテストをすれば、もはや安全に運転できない人を事故を起こす前に見つけ出し、ほかの道路の利用者だけでなく、事故で重いけがをする可能性が高い運転者自身も守ることができる、と支持する人々は主張する。',
+      'しかし反対する人々は、年齢だけでは運転の力をはかるまずい目安だと主張する。70代や80代の多くの人は注意深く安全に運転しており、しばしば若い運転者より慎重である。若い運転者は統計的に重大な事故の大きな割合に責任がある。高齢の運転者はある種の事故により多くかかわるかもしれないが、彼らがほかの人にあたえる全体的な危険は、だれも道路から追い出すことを提案しない若者の危険よりかならずしも高いわけではない、と反対する人々は指摘する。この見方では、年齢にもとづく規則は、さまざまな人々からなる集団を、まるでみな同じであるかのように不公平にあつかっているのである。',
+      '免許を失った人々に何が起こるかという問題もある。地方に住む高齢者にとって、運転をやめることは、ほかの人にたよらずに買い物をしたり、医者にかかったり、友人に会ったりする力を失うことを意味するかもしれない。研究によれば、運転をやめた高齢者は孤立しやすく、心身の健康がおとろえやすい。道路の安全をよくしても多くの高齢者を家に閉じこめてしまう政策は、ある問題を別の問題を生むことでしか解決しないのかもしれない。',
+      '中間の道を見つけようとした国もある。ある年齢以上のすべての人をテストするのではなく、定期的な健康診断をすすめ、必要なときには医者が制限をすすめられるようにしている。昼間だけ、家から一定の距離の範囲だけ、あるいはなれた道路だけで運転をゆるす、限定つきの免許を出す国もある。高齢の運転者が技能を見直し、自分の力の変化に合わせるのを助ける講習を用意する国もあれば、自動ブレーキの仕組みのような安全技術をそなえた車の利用をすすめる国もある。',
+      'しかし結局のところ、この問題は運転の規則だけでは解決できない。多くの高齢者は、運転したいからではなく、ほかに手段がないから運転し続けている。公共交通をよくし、地域のバスや乗り合いタクシーを用意し、店やサービスが歩いて行ける距離にある町を設計すれば、高齢者は自立を失わずに運転をやめられるだろう。この意味で、高齢の運転者についての議論は、地域がどう計画され、それがあらゆる年齢の人々の必要に応えているかどうかについての議論でもある。',
+      'それなら課題は、高齢の市民の尊厳と自由を尊重しながら公共の安全を守ることである。年齢にもとづく単純な規則は当てはめるのはかんたんだが不公平かもしれず、一人ひとりの評価はより公平だが、より複雑で費用がかかる。どんなやり方を選ぶにせよ、それは、自由に動き回れることが充実した生活の欠かせない一部であり、高齢者に運転をやめるよう求める社会には、彼らが活動的で、人とつながり、自立したままでいられるほかの方法を差し出す責任があることを認めるべきである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「高齢の運転者はある種の事故に多くかかわるかもしれないが、全体の危険はかならずしも高くない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of stricter rules for older drivers point to weaker eyesight and slower ( 1 ) times. Opponents argue that age alone is a poor indicator of ability and that losing a license can lead to ( 2 ). Better public ( 3 ) would let older people stop driving without losing independence.',
+      blanks: [
+        { choices: ['reaction', 'sleeping', 'cooking', 'working'], answer: 0, why: '第2段落 reaction times may slow。' },
+        { choices: ['isolation', 'wealth', 'fame', 'speed'], answer: 0, why: '第4段落 more likely to become isolated。' },
+        { choices: ['transport', 'opinion', 'holidays', 'schools'], answer: 0, why: '第6段落 Improving public transport ... would allow older people to give up driving without losing their independence。' },
+      ],
+    },
+    tf: [
+      { statement: '地方では、運転は高齢者にとって必要なことが多い。', answer: true, why: '第1段落 driving is not a luxury but a necessity, especially in rural areas。' },
+      { statement: '反対する人々によれば、若い運転者は重大な事故にほとんどかかわらない。', answer: false, why: '第3段落 younger drivers, who are statistically responsible for a large share of serious accidents。' },
+      { statement: '昼間だけ運転をゆるす限定つきの免許を出す国もある。', answer: true, why: '第5段落 restricted licenses that permit driving only during the day。' },
+      { statement: '筆者によれば、この問題は運転の規則だけで解決できる。', answer: false, why: '第6段落 the problem cannot be solved by driving rules alone。' },
+    ],
+    qa: [
+      { q: 'What are older people who stop driving more likely to experience, according to studies?', choices: ['A decline in physical and mental health.', 'More free time for travel.', 'Higher incomes.', 'Fewer visits from family.'], answer: 0, why: '第4段落 to experience a decline in physical and mental health。' },
+      { q: 'What kind of safety technology is mentioned in the fifth paragraph?', choices: ['Automatic braking systems.', 'Self-cleaning windows.', 'Electric seats.', 'Larger mirrors.'], answer: 0, why: '第5段落 such as automatic braking systems。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
