@@ -2311,3 +2311,10 @@ it('正誤問題〈168〉：国公立レベル lie・lay／rise・raise の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) laid')
 })
+
+it('誤文訂正〈162〉：東大レベル 時と場所の前置詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-162')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('in')
+})

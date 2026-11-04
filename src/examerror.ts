@@ -6912,6 +6912,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Do [that] you can to help them.', choices: ['what', 'which', 'whose', 'whom'], answer: 0, why: 'Do what you can「できることをしなさい」。' },
     ],
   },
+  {
+    id: 'exam-fix-162',
+    title: '入試の誤文訂正〈162〉（東大レベル：英作文の時と場所の前置詞 in・on・at）',
+    points: ['時の前置詞：at は時刻・一点（at 3 p.m.・at noon）、on は曜日・日付・特定の日（on Sunday・on May 5・on Christmas Eve）、in は月・季節・年・午前／午後（in May・in 2008・in the morning）。場所の前置詞：at は地点（at the airport・arrive at）、in は広がりのある空間・都市や国（in Tokyo）、on は表面にくっついている（on the wall）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I was born in Kyoto on May 5, 2008, at six in the morning.', ja: '私は2008年5月5日の朝6時に京都で生まれた。' }],
+    questions: [
+      { sentence: 'I was born [at] 2008.', choices: ['in', 'on', 'by', 'for'], answer: 0, why: '年には in。in 2008。' },
+      { sentence: 'The meeting starts [in] 3 p.m.', choices: ['at', 'on', 'by', 'for'], answer: 0, why: '時刻には at。at 3 p.m.。' },
+      { sentence: 'We have no school [in] Sunday.', choices: ['on', 'at', 'for', 'by'], answer: 0, why: '曜日には on。on Sunday。' },
+      { sentence: 'She arrived [on] the airport late.', choices: ['at', 'in', 'to', 'for'], answer: 0, why: '空港のような地点に着くのは arrive at。' },
+      { sentence: 'My birthday is [in] May 5.', choices: ['on', 'at', 'for', 'by'], answer: 0, why: '日付には on。on May 5。' },
+      { sentence: 'He lives [at] Tokyo.', choices: ['in', 'on', 'by', 'to'], answer: 0, why: '都市のように広がりのある場所には in。in Tokyo。' },
+      { sentence: 'I usually study [at] the morning.', choices: ['in', 'on', 'by', 'for'], answer: 0, why: '午前・午後・夜（evening）には in。in the morning。' },
+      { sentence: 'There is a picture [in] the wall.', choices: ['on', 'at', 'by', 'to'], answer: 0, why: 'かべの表面にくっついているので on。' },
+      { sentence: 'Let’s meet [on] noon.', choices: ['at', 'in', 'by', 'for'], answer: 0, why: '正午のような時の一点には at。at noon。' },
+      { sentence: 'I’ll see you [in] Christmas Eve.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '特定の日には on。on Christmas Eve。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
