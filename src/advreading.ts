@@ -33378,6 +33378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-school-philosophy',
+    title: 'Should Schools Teach Philosophy?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Philosophy is usually thought of as a subject for universities, where students read difficult texts by famous thinkers and debate abstract questions about knowledge, morality, and existence. In recent decades, however, a number of educators have argued that philosophy should also be taught in primary and secondary schools. In some countries, programs have been developed in which children as young as six discuss questions such as \"What makes something fair?\" or \"Can we ever be sure of anything?\" Supporters believe that such discussions can benefit children in many ways, while skeptics doubt whether schools have the time or the expertise to teach philosophy well.",
+      "Supporters argue first that philosophy develops the ability to think clearly and critically. When children are asked to give reasons for their opinions, to consider objections, and to distinguish between strong and weak arguments, they practice skills that are useful in every subject and in everyday life. Some studies have reported that students who took part in regular philosophical discussions made greater progress in reading and mathematics than those who did not, although researchers caution that such results need to be confirmed by further studies. Even so, the possibility that thinking skills developed in one subject might transfer to others has attracted considerable interest.",
+      "Supporters also emphasize the social and moral benefits. Philosophical discussion requires students to listen carefully to others, to respond respectfully to views they disagree with, and to change their minds when they meet a better argument. ( A ) these habits may seem modest, supporters argue that they are essential for citizens in a democratic society, where people with different beliefs must find ways to live together and make decisions through discussion rather than force.",
+      "Critics, however, raise practical concerns. School timetables are already crowded with subjects that are considered essential, and adding philosophy might reduce the time available for reading, mathematics, or science. Many teachers have no training in philosophy, and leading a good discussion is more difficult than it appears, since it requires the ability to recognize interesting questions, to keep conversations focused, and to challenge weak reasoning without discouraging students. Without such skills, a discussion may easily become either a lecture by the teacher or a series of unconnected opinions.",
+      "Some critics also question whether young children are ready for philosophical thinking. Abstract questions about truth or justice may seem too difficult for students who are still learning basic skills. Supporters reply that children often ask philosophical questions naturally, wondering why things are as they are and whether rules are fair, and that philosophy in schools simply gives these questions a structured place. The aim is not to teach children the theories of famous philosophers but to help them think more carefully about questions they already care about.",
+      "There are also concerns about the content of discussions. Some parents worry that philosophical questions about religion, morality, or society might lead teachers to promote particular views, or might unsettle beliefs that families wish to pass on. Supporters respond that good philosophical teaching does not tell students what to think but helps them reason for themselves, and that learning to examine one's own beliefs is valuable even for those who ultimately keep them. Yet ensuring that teachers remain neutral in practice can be difficult.",
+      "Whether philosophy deserves a place in schools may depend less on the subject's name than on what schools hope to achieve. If education aims only to transmit knowledge, philosophy may seem unnecessary. If it also aims to develop independent thinkers who can reason, listen, and question, then something like philosophical discussion may be difficult to do without. The debate thus invites us to reconsider not only the curriculum but also the purpose of schooling itself, and the kind of people we hope our children will become.",
+    ],
+    ja: [
+      '哲学はふつう大学の科目と考えられており、そこでは学生が有名な思想家のむずかしい書物を読み、知識や道徳や存在についての抽象的な問いを議論する。しかしここ数十年、何人もの教育者が、哲学は小学校や中学校・高校でも教えるべきだと主張してきた。いくつかの国では、六歳ほどの子どもが「何があるものを公平にするのか」や「何かを確かだと言えることはあるのか」といった問いを話し合う取り組みが作られている。支持する人々はこうした話し合いが子どもにさまざまな面で役立つと信じているが、懐疑的な人々は、学校に哲学をうまく教える時間や専門知識があるのかを疑っている。',
+      '支持する人々は、まず哲学が明確に批判的に考える力を育てると主張する。子どもが自分の意見の理由を示し、反論を考え、強い議論と弱い議論を区別するよう求められるとき、どの教科でも日常生活でも役に立つ技能を練習していることになる。定期的な哲学的な話し合いに参加した生徒は、参加しなかった生徒より読解や数学で大きく進歩したと報告した研究もあるが、研究者たちは、そうした結果はさらなる研究で確かめる必要があると注意している。それでも、ある教科で育てられた考える力がほかの教科にも生かされるかもしれないという可能性は、かなりの関心を集めている。',
+      '支持する人々はまた、社会的・道徳的な利点を強調する。哲学的な話し合いでは、生徒はほかの人の話を注意深く聞き、賛成できない意見にも敬意をもってこたえ、よりよい議論に出会ったら考えを変えることが求められる。こうした習慣はささやかに思えるかもしれないが、ちがう信念をもつ人々がともに暮らし、力ではなく話し合いによって決定を下す方法を見つけなければならない民主的な社会の市民には欠かせないと支持する人々は主張する。',
+      'しかし批判する人々は、実際的な心配をあげる。学校の時間割はすでに欠かせないとされる教科でいっぱいであり、哲学を加えれば、読解や数学や理科に使える時間が減るかもしれない。多くの先生は哲学の訓練を受けておらず、よい話し合いを導くことは見かけよりむずかしい。興味深い問いに気づき、会話を焦点からそらさず、生徒のやる気をそぐことなく弱い理屈に異をとなえる能力が必要だからである。そうした技能がなければ、話し合いはたやすく先生の講義になるか、ばらばらの意見の羅列になってしまうかもしれない。',
+      '幼い子どもが哲学的に考える準備ができているのかを疑う批判者もいる。真理や正義についての抽象的な問いは、まだ基本的な技能を学んでいる生徒にはむずかしすぎるように思われるかもしれない。支持する人々は、子どもはしばしば、物事がなぜそうなっているのか、規則は公平なのかと自然に哲学的な問いをいだくのであり、学校の哲学は単にこうした問いに組み立てられた場所をあたえるだけだとこたえる。目的は有名な哲学者の理論を教えることではなく、子どもがすでに気にかけている問いについてより注意深く考えるのを助けることなのである。',
+      '話し合いの内容についての心配もある。宗教や道徳や社会についての哲学的な問いのために、先生が特定の見方をすすめたり、家族が受けつがせたいと願う信念をゆるがしたりするのではないかと心配する親もいる。支持する人々は、よい哲学の授業は生徒に何を考えるべきかを教えるのではなく、自分で考えるのを助けるのであり、最終的に信念をもち続ける人にとってさえ、自分の信念を吟味することを学ぶのは価値があるとこたえる。しかし、実際に先生が中立であり続けるようにするのはむずかしいことがある。',
+      '哲学が学校で場所をもつに値するかどうかは、科目の名前よりも、学校が何を達成したいと願っているかにかかっているのかもしれない。教育が知識を伝えることだけを目指すなら、哲学は不要に思えるかもしれない。もし理屈を立て、耳をかたむけ、問いを発することのできる自立した考え手を育てることも目指すなら、哲学的な話し合いのようなものなしですませるのはむずかしいかもしれない。こうしてこの議論は、教育課程だけでなく、学校教育そのものの目的を考え直すよう私たちを誘っているのである。そして、子どもたちにどんな人になってほしいと願うのかも。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「習慣はささやかに思えるかもしれないが、民主的な社会の市民には欠かせない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that philosophy helps children think clearly and ( 1 ), and teaches habits needed in a democratic society. Critics worry about crowded timetables and teachers without ( 2 ) in philosophy. Whether philosophy belongs in schools may depend on what we see as the ( 3 ) of schooling.',
+      blanks: [
+        { choices: ['critically', 'quickly', 'quietly', 'loudly'], answer: 0, why: '第2段落 the ability to think clearly and critically。' },
+        { choices: ['training', 'money', 'time', 'interest'], answer: 0, why: '第4段落 Many teachers have no training in philosophy。' },
+        { choices: ['purpose', 'cost', 'length', 'location'], answer: 0, why: '第7段落 the purpose of schooling itself。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの国では、六歳ほどの子どもが哲学的な問いを話し合っている。', answer: true, why: '第1段落 children as young as six discuss questions。' },
+      { statement: '研究者たちは、哲学の効果はすでに完全に証明されたと述べている。', answer: false, why: '第2段落 such results need to be confirmed by further studies。' },
+      { statement: '支持する人々によれば、子どもはしばしば自然に哲学的な問いをいだく。', answer: true, why: '第5段落 children often ask philosophical questions naturally。' },
+      { statement: '学校の哲学の目的は、有名な哲学者の理論を教えることである。', answer: false, why: '第5段落 The aim is not to teach children the theories of famous philosophers。' },
+    ],
+    qa: [
+      { q: 'Why is leading a good philosophical discussion difficult?', choices: ['It requires the ability to keep conversations focused and challenge weak reasoning.', 'Children never speak.', 'It requires expensive equipment.', 'It must be done in a foreign language.'], answer: 0, why: '第4段落 requires the ability to recognize interesting questions, to keep conversations focused, and to challenge weak reasoning。' },
+      { q: 'What do some parents worry about?', choices: ['That teachers might promote particular views.', 'That children will become too quiet.', 'That schools will close.', 'That homework will disappear.'], answer: 0, why: '第6段落 might lead teachers to promote particular views。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
