@@ -2500,3 +2500,10 @@ it('誤文訂正〈175〉：京大レベル 比較の慣用の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('no more than')
 })
+
+it('正誤問題〈182〉：東大レベル It is said that と be said to の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-said-to-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) being')
+})

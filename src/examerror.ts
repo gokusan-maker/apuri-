@@ -4322,6 +4322,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Tokyo, (B) that is (C) the capital of Japan, (D) has many museums.', choices: ['(A) Tokyo,', '(B) that is', '(C) the capital of Japan,', '(D) has many museums'], answer: 1, why: '非制限用法では that は使えない。which is。' },
     ],
   },
+  {
+    id: 'exam-error-said-to-todai',
+    title: '入試の正誤問題〈182〉（東大レベル：英作文の It is said that と be said to の書きかえ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「～と言われている」は It is said that S＋V と S is said to do の二通りに書ける（believe・think・report なども同じ）。that 節が主節より前のことなら、to 不定詞は完了形 to have ＋過去分詞（He is said to have lived in Paris.）。受け身の内容なら to be ＋過去分詞・to have been ＋過去分詞。人が主語なら that 節は続けない（They are said that ～ は誤り）。',
+    ],
+    examples: [
+      { en: 'He is said to be a great cook.', ja: '彼はすばらしい料理人だと言われている。' },
+      { en: 'The castle is said to have been built in the 16th century.', ja: 'その城は16世紀に建てられたと言われている。' },
+    ],
+    questions: [
+      { sentence: '(A) He (B) is said (C) being (D) a great cook.', choices: ['(A) He', '(B) is said', '(C) being', '(D) a great cook'], answer: 2, why: 'be said to ＋原形。is said to be。' },
+      { sentence: '(A) It is said (B) that (C) she to speak (D) five languages.', choices: ['(A) It is said', '(B) that', '(C) she to speak', '(D) five languages'], answer: 2, why: 'that のあとは主語＋動詞。she speaks。' },
+      { sentence: '(A) The castle (B) is said (C) to build (D) in the 16th century.', choices: ['(A) The castle', '(B) is said', '(C) to build', '(D) in the 16th century'], answer: 2, why: '城は「建てられた」側で、しかも過去のこと。to have been built。' },
+      { sentence: '(A) She (B) is said (C) to be (D) lived in Paris when young.', choices: ['(A) She', '(B) is said', '(C) to be', '(D) lived in Paris when young'], answer: 3, why: '過去のことは完了不定詞。to have lived。' },
+      { sentence: '(A) It (B) says that (C) the river (D) is very deep.', choices: ['(A) It', '(B) says that', '(C) the river', '(D) is very deep'], answer: 1, why: '「～と言われている」は It is said that。' },
+      { sentence: '(A) They are said (B) that they (C) are (D) very rich.', choices: ['(A) They are said', '(B) that they', '(C) are', '(D) very rich'], answer: 0, why: '人が主語なら They are said to be very rich、it が主語なら It is said that they are very rich。They are said that は誤り。' },
+      { sentence: '(A) It is believed (B) that the man (C) has (D) escaped last night.', choices: ['(A) It is believed', '(B) that the man', '(C) has', '(D) escaped last night'], answer: 2, why: 'last night は過去のはっきりした時なので現在完了は使えない。escaped。' },
+      { sentence: '(A) He (B) is thought (C) to have (D) stole the money.', choices: ['(A) He', '(B) is thought', '(C) to have', '(D) stole the money'], answer: 3, why: 'to have のあとは過去分詞。to have stolen。' },
+      { sentence: '(A) It was (B) reported (C) that the plane (D) land safely.', choices: ['(A) It was', '(B) reported', '(C) that the plane', '(D) land safely'], answer: 3, why: '主節が過去なので that 節も過去形。landed。' },
+      { sentence: '(A) This tree (B) is said (C) be (D) over 1,000 years old.', choices: ['(A) This tree', '(B) is said', '(C) be', '(D) over 1,000 years old'], answer: 2, why: 'be said のあとは to 不定詞。to be。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
