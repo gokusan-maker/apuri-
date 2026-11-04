@@ -30702,6 +30702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-pride',
+    title: 'Two Kinds of Pride',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Pride has long been regarded with ambivalence. In many religious and philosophical traditions, it has been counted among the most serious of faults, the attitude of a person who places himself or herself above others and refuses to acknowledge any limits. Yet in ordinary speech we also speak approvingly of pride: we tell children that they should be proud of their work, we encourage communities to take pride in their history, and we regard a lack of self-respect as a misfortune rather than a virtue. The same word seems to name both a vice and something that human beings genuinely need.",
+      "One way to resolve this puzzle is to distinguish between two kinds of pride. The first is the satisfaction we feel when we have done something well, when our efforts have produced a result that meets a standard we respect. This kind of pride is directed at achievements, and it depends on a judgment that can, in principle, be checked: we are proud because the work really is good. The second kind is a general sense of superiority, a conviction that one is more important or more deserving than others, which does not depend on any particular achievement and is not easily corrected by evidence.",
+      "The first kind of pride seems not only harmless but valuable. It encourages people to take care over their work, to finish what they have begun, and to hold themselves to high standards. A craftsman who takes pride in his or her work will not be content with something that merely appears adequate, and a student who is proud of an essay will want it to be genuinely good rather than simply acceptable. ( A ) this pride can sometimes become excessive, it is closely connected with the sense of responsibility that leads people to do things properly.",
+      "The second kind of pride, by contrast, tends to damage both the proud person and those around him or her. Someone who is convinced of his or her own superiority finds it difficult to learn from others, to admit mistakes, or to accept criticism, since each of these would threaten the image on which his or her self-esteem depends. Such pride isolates people, making genuine relationships difficult, because relationships require a willingness to treat others as equals and to recognize that they, too, have something to offer.",
+      "Interestingly, the second kind of pride often conceals a hidden insecurity. A person who must constantly assert his or her importance may do so precisely because he or she does not feel secure in it. Genuine self-respect, on the other hand, does not need to be displayed or defended at every moment. The person who is quietly confident in his or her own worth can afford to admit faults, to praise others generously, and to laugh at himself or herself, because his or her sense of value does not depend on winning every comparison.",
+      "Pride also has a collective dimension. Groups that have been treated with contempt, whether because of their ethnicity, their religion, or their way of life, have often found in pride a source of strength, a way of refusing the low estimate that others have placed upon them. In such cases, pride is not a claim to superiority but a demand for equal dignity. The danger arises when collective pride turns into a belief that one's own group is better than others, a belief that has fueled many of the worst conflicts in history.",
+      "Perhaps, then, the question is not whether we should be proud but of what and in what way. Pride that is grounded in real achievement, that coexists with humility about what one has not achieved, and that is compatible with respect for others may be one of the healthiest of human attitudes. Pride that rests on a sense of superiority, by contrast, closes the mind and divides people from one another. The task is to cultivate the first kind while remaining alert to the ease with which it can turn into the second.",
+    ],
+    ja: [
+      'プライドは長いあいだ、相反する気持ちで見られてきた。多くの宗教的・哲学的な伝統では、それは最も重大な欠点の一つ、つまり自分を他人の上に置き、どんな限界も認めようとしない人の態度とみなされてきた。しかしふだんのことばでは、私たちはプライドについて肯定的にも語る。子どもに自分の作品に誇りをもちなさいと言い、地域の人々に自分たちの歴史に誇りをもつようはげまし、自尊心がないことを美徳ではなく不幸とみなす。同じことばが、悪徳と、人間が本当に必要としている何かの両方を名ざしているように思われるのである。',
+      'このなぞを解く一つの方法は、二種類のプライドを区別することである。一つめは、何かをうまくなしとげたとき、自分の努力が自分の尊重する基準を満たす結果を生んだときに感じる満足である。この種のプライドは業績に向けられており、原則として確かめることのできる判断にもとづいている。私たちが誇りに思うのは、その仕事が本当によいからである。二つめは、一般的な優越感、つまり自分は他人より重要だ、あるいはより値うちがあるという確信であり、それはどんな特定の業績にもよらず、証拠によってかんたんに正されることもない。',
+      '一つめの種類のプライドは、害がないだけでなく価値があるように思われる。それは人々に、仕事に気を配り、始めたことをやりとげ、自分に高い基準を課すようにうながす。自分の仕事に誇りをもつ職人は、単にそれなりに見えるだけのものには満足しないだろうし、自分の作文を誇りに思う生徒は、それが単に受け入れられるだけでなく、本当によいものであってほしいと思うだろう。このプライドはときに度をこすこともあるが、人々に物事をきちんとさせる責任感と深く結びついている。',
+      '二つめの種類のプライドは、それに対して、プライドをもつ本人とまわりの人々の両方を傷つけがちである。自分が優れていると確信している人は、他人から学んだり、まちがいを認めたり、批判を受け入れたりするのがむずかしい。そのどれもが、自尊心がたよっている自己像をおびやかすからである。そのようなプライドは人々を孤立させ、本物の関係をむずかしくする。関係には、他人を対等にあつかい、彼らにもまた差し出せる何かがあると認める気持ちが必要だからである。',
+      '興味深いことに、二つめの種類のプライドは、かくれた不安をおおいかくしていることが多い。たえず自分の重要さを主張しなければならない人は、まさにそれに安心していないからこそそうするのかもしれない。それに対して、本物の自尊心は、いつも見せびらかしたり守ったりする必要がない。自分の価値に静かに自信をもっている人は、欠点を認め、他人を気前よくほめ、自分自身を笑うことができる。その人の価値の感覚は、あらゆる比較に勝つことにかかっていないからである。',
+      'プライドには集団としての面もある。民族や宗教や生き方のために軽蔑されてきた集団は、しばしばプライドの中に力のみなもと、つまり他人が自分たちにつけた低い評価をこばむ方法を見いだしてきた。そうした場合、プライドは優越の主張ではなく、等しい尊厳の要求である。危険が生じるのは、集団のプライドが、自分の集団はほかより優れているという信念に変わるときであり、その信念は歴史上の最悪の争いの多くをあおってきた。',
+      'それなら、問題は誇りをもつべきかどうかではなく、何に、どのように誇りをもつべきかなのかもしれない。本当の業績にもとづき、なしとげていないことについての謙虚さと共存し、他人への敬意と両立するプライドは、人間の態度の中で最も健全なものの一つかもしれない。それに対して、優越感にもとづくプライドは、心を閉ざし、人々をたがいに分断する。課題は、一つめの種類を育てつつ、それがいかにたやすく二つめの種類に変わりうるかに気をつけていることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「このプライドはときに度をこすこともあるが、責任感と深く結びついている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、一つめの種類のプライドは業績に向けられている。', answer: true, why: '第2段落 This kind of pride is directed at achievements。' },
+      { statement: '筆者によれば、二つめの種類のプライドは証拠によってかんたんに正される。', answer: false, why: '第2段落 is not easily corrected by evidence。' },
+      { statement: '筆者によれば、優越感としてのプライドはかくれた不安をおおいかくしていることが多い。', answer: true, why: '第5段落 the second kind of pride often conceals a hidden insecurity。' },
+      { statement: '筆者は、集団のプライドはいつも危険だと述べている。', answer: false, why: '第6段落 In such cases, pride is not a claim to superiority but a demand for equal dignity。' },
+    ],
+    qa: [
+      { q: 'Why does a person convinced of his or her superiority find it hard to admit mistakes?', choices: ['It would threaten the image on which self-esteem depends.', 'Mistakes never happen to such people.', 'Others never point them out.', 'Admitting mistakes is illegal.'], answer: 0, why: '第4段落 each of these would threaten the image on which his or her self-esteem depends。' },
+      { q: 'What can a quietly confident person afford to do?', choices: ['Admit faults and praise others generously.', 'Avoid all relationships.', 'Win every comparison.', 'Display his or her importance constantly.'], answer: 0, why: '第5段落 can afford to admit faults, to praise others generously。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
