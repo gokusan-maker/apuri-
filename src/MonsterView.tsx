@@ -2447,6 +2447,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 54 Q22 52 20 56" fill="none" stroke="#7f1d1d" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'seafirefly')
+    return (
+      <g>
+        {/* 青い光のつぶ */}
+        <circle cx="22" cy="40" r="3" fill="#7dd3fc" />
+        <circle cx="80" cy="36" r="2.5" fill="#7dd3fc" />
+        <circle cx="76" cy="74" r="3" fill="#7dd3fc" />
+        <circle cx="24" cy="72" r="2" fill="#7dd3fc" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
