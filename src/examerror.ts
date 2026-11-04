@@ -7164,6 +7164,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The city [which I want to go] is Paris.', choices: ['to which I want to go', 'where I want to go to', 'that I want to go in', 'which I want to go it'], answer: 0, why: 'go to a city なので to which I want to go。' },
     ],
   },
+  {
+    id: 'exam-fix-168',
+    title: '入試の誤文訂正〈168〉（東大レベル：英作文の再帰代名詞と each other）',
+    points: ['再帰代名詞（myself・himself・themselves など）は、主語と目的語が同じ人のときに使う（He hurt himself.）。主語とちがう人なら him・her など。enjoy oneself「楽しむ」・help oneself to ～「～を自由にとって食べる」・by oneself「ひとりで」・introduce oneself「自己紹介する」は決まった形。each other・one another は「おたがい」で、代名詞なので前置詞が必要な動詞ではそれをつける（talk to each other）。each other は主語には使えない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'They looked at each other and smiled.', ja: '彼らはおたがいを見てほほえんだ。' }],
+    questions: [
+      { sentence: 'He cut [him] while cooking dinner.', choices: ['himself', 'his', 'he', 'his own'], answer: 0, why: '主語 He と目的語が同じ人なので himself。' },
+      { sentence: 'We enjoyed [us] at the party.', choices: ['ourselves', 'our', 'we', 'each other'], answer: 0, why: 'enjoy oneself「楽しむ」。主語 We なので ourselves。' },
+      { sentence: 'Please help [you] to the cake.', choices: ['yourself', 'your', 'you own', 'yourselves to it'], answer: 0, why: 'help oneself to ～「～を自由にとって食べる」。相手1人なので yourself。' },
+      { sentence: 'The two girls wrote to [themselves] every week.', choices: ['each other', 'them', 'theirs', 'each another'], answer: 0, why: '「おたがいに手紙を書いた」なので each other。themselves だと「自分自身に」になる。' },
+      { sentence: 'She lives [by her] in a small apartment.', choices: ['by herself', 'by she', 'with herself', 'of herself'], answer: 0, why: 'by oneself「ひとりで」。by herself。' },
+      { sentence: 'I asked my brother to wake [myself] up at six.', choices: ['me', 'mine', 'my', 'I'], answer: 0, why: '起こすのは兄で、起こされるのは私（主語の I とは別の文の中の目的語）なので me。' },
+      { sentence: 'Let me introduce [me]. I am Ken.', choices: ['myself', 'mine', 'my', 'I'], answer: 0, why: 'introduce oneself「自己紹介する」。主語は me（話し手）なので myself。' },
+      { sentence: 'The students talked [each other] about the plan.', choices: ['with each other', 'each others', 'themselves', 'one other'], answer: 0, why: 'talk は自動詞なので with（to）が必要。talked with each other。' },
+      { sentence: '[Each other helped] when the storm came.', choices: ['They helped each other', 'Each others', 'Themselves', 'One another they'], answer: 0, why: 'each other は主語には使えない。They helped each other。' },
+      { sentence: 'Ken and I know [ourselves] well because we were classmates.', choices: ['each other', 'us', 'ours', 'themselves'], answer: 0, why: '「おたがいをよく知っている」なので each other。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
