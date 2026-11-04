@@ -32098,6 +32098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-robot-tax',
+    title: 'Should Robots Pay Taxes?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As robots and artificial intelligence take over tasks once performed by human workers, a provocative idea has entered public debate: should companies pay a tax when they replace employees with machines? Supporters of a so-called robot tax argue that it could slow the loss of jobs, raise money to support workers who are displaced, and ensure that the benefits of automation are shared more widely. Critics respond that such a tax would discourage innovation, harm economic growth, and prove almost impossible to define in practice. The debate reflects growing anxiety about the future of work in an age of intelligent machines.",
+      "The argument for a robot tax begins with the observation that much of the public revenue in many countries comes from taxes on wages. When a worker is replaced by a machine, the government loses the income tax and social contributions that the worker would have paid, while the company that owns the machine may pay less in tax than before. If automation spreads widely, supporters warn, governments could find themselves with less money just as more people need help to retrain or to find new jobs. A tax on robots, they argue, would help to fill this gap.",
+      "Supporters also emphasize fairness. The gains from automation tend to flow to the owners of companies and to highly skilled workers, while those whose jobs disappear may face long periods of unemployment or be forced into lower-paid work. ( A ) automation may increase the overall wealth of a society, supporters point out, it can also widen inequality, and a robot tax could provide funds for training programs, income support, or public services that help those who are left behind.",
+      "Critics, however, argue that taxing robots would be economically harmful. Automation has historically been one of the main sources of rising productivity, allowing societies to produce more goods and services with less effort. Taxing it, critics say, would make companies less willing to invest in new technology, slowing growth and possibly causing businesses to move to countries without such taxes. In the long run, this could reduce the number of jobs rather than protect them, since companies that fail to modernize may lose out to foreign competitors.",
+      "There is also the problem of definition. A robot tax sounds simple, but in practice it is very difficult to decide what counts as a robot. Is a dishwasher a robot? A computer program that sorts emails? An automatic checkout machine in a supermarket? Modern technology rarely replaces workers in a single, clearly identifiable step; more often, it changes how tasks are done, making some jobs disappear while creating others. Any attempt to tax robots specifically might therefore be either too narrow to matter or so broad that it taxes ordinary investment.",
+      "For these reasons, many economists suggest that the goals of a robot tax could be better achieved in other ways. Governments could rely more on taxes on profits or on wealth, which would capture some of the gains from automation without targeting technology directly. They could also invest in education and training to help workers adapt, strengthen social safety nets, or reduce taxes on labor so that hiring people becomes relatively more attractive. Such measures might address the same concerns without discouraging innovation.",
+      "The debate over a robot tax ultimately concerns how societies should share the benefits and burdens of technological change. Few people would wish to stop progress altogether, but many worry that its gains will be concentrated in the hands of a few while its costs fall on those least able to bear them. Whether or not robots are ever taxed directly, the discussion has drawn attention to an important question: how to ensure that a future shaped by intelligent machines is one in which prosperity is widely shared.",
+    ],
+    ja: [
+      'ロボットや人工知能が、かつて人間の働き手がしていた仕事を引き受けるにつれて、刺激的な考えが公の議論に入ってきた。企業は従業員を機械におきかえるときに税をはらうべきか、というものである。いわゆるロボット税を支持する人々は、それが仕事の喪失をおくらせ、仕事を失った働き手をささえるお金を集め、自動化の恩恵がより広く分かちあわれるようにしうると主張する。批判する人々は、そうした税は革新をくじき、経済の成長をそこない、実際には定めることがほとんど不可能だとわかるだろうと答える。この議論は、かしこい機械の時代における仕事の未来についての不安の高まりを反映している。',
+      'ロボット税の主張は、多くの国で公の収入の多くが賃金にかかる税から来ているという観察から始まる。働き手が機械におきかえられると、政府はその働き手がはらうはずだった所得税や社会保険料を失い、一方で機械をもつ企業は以前よりも税をはらわなくなるかもしれない。自動化が広く広がれば、政府は、学び直したり新しい仕事を見つけたりするために助けを必要とする人がふえるまさにそのときに、使えるお金がへってしまうかもしれない、と支持する人々は警告する。ロボットへの税は、このすきまを埋める助けになるだろう、と彼らは主張する。',
+      '支持する人々はまた公平さを強調する。自動化による利益は企業の持ち主や高い技能をもつ働き手に流れる傾向があり、一方で仕事がなくなった人々は長い失業の期間に直面したり、より賃金の低い仕事をよぎなくされたりするかもしれない。自動化は社会全体の豊かさをふやすかもしれないが、不平等を広げることもあり、ロボット税は、取り残された人々を助ける研修や所得の支援や公共サービスのための資金をあたえうる、と支持する人々は指摘する。',
+      'しかし批判する人々は、ロボットに税をかけることは経済的に有害だと主張する。自動化は歴史的に生産性の向上の主なみなもとの一つであり、社会がより少ない労力でより多くの品物やサービスを生み出すことを可能にしてきた。それに税をかけることは、企業に新しい技術への投資をためらわせ、成長をおくらせ、場合によってはそうした税のない国へ事業がうつることを引き起こすだろう、と批判する人々は言う。長い目で見れば、近代化に失敗した企業は外国の競争相手に負けるかもしれないので、これは仕事を守るどころか仕事の数をへらしうる。',
+      '定義の問題もある。ロボット税は単純に聞こえるが、実際には何がロボットにあたるのかを決めるのはとてもむずかしい。食器洗い機はロボットだろうか。メールを仕分けるコンピューターのプログラムは。スーパーマーケットの自動レジは。現代の技術が働き手を一つのはっきり見分けられる段階でおきかえることはめったになく、より多くの場合、それは仕事のやり方を変え、ある仕事をなくす一方でほかの仕事を生み出す。したがって、ロボットに特に税をかけようとする試みは、せますぎて意味がないか、広すぎてふつうの投資にまで税をかけることになるかのどちらかかもしれない。',
+      'これらの理由で、多くの経済学者は、ロボット税の目標はほかの方法でよりよく達成できると示唆する。政府は利益や富への税により多くたよることができ、それは技術を直接ねらわずに自動化による利益の一部をとらえるだろう。また、働き手が適応するのを助ける教育と研修に投資したり、社会の安全網を強めたり、労働にかかる税をへらして人を雇うことが比較的魅力的になるようにしたりすることもできる。そうした手段は、革新をくじかずに同じ懸念に取り組めるかもしれない。',
+      'ロボット税をめぐる議論は、結局のところ、社会が技術の変化の恩恵と負担をどう分けあうべきかにかかわっている。進歩を完全に止めたいと思う人はほとんどいないだろうが、多くの人は、その利益が少数の人の手に集まり、その代償がそれを負う力の最も弱い人々にふりかかるのではないかと心配している。ロボットがいつか直接税をかけられるにせよかけられないにせよ、この議論は大切な問いに注意を向けさせてきた。かしこい機械に形づくられた未来を、繁栄が広く分かちあわれる未来にするにはどうすればよいのか、という問いである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「自動化は豊かさをふやすかもしれないが、不平等を広げることもある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of a robot tax argue that automation reduces tax revenue from ( 1 ) and widens inequality. Critics say it would discourage innovation and that it is hard to ( 2 ) what counts as a robot. Many economists prefer taxes on profits or wealth and investment in ( 3 ).',
+      blanks: [
+        { choices: ['wages', 'imports', 'tourism', 'land'], answer: 0, why: '第2段落 much of the public revenue in many countries comes from taxes on wages。' },
+        { choices: ['define', 'build', 'repair', 'sell'], answer: 0, why: '第5段落 it is very difficult to decide what counts as a robot。' },
+        { choices: ['training', 'weapons', 'advertising', 'luxury'], answer: 0, why: '第6段落 invest in education and training to help workers adapt。' },
+      ],
+    },
+    tf: [
+      { statement: '働き手が機械におきかえられると、政府は所得税を失う。', answer: true, why: '第2段落 the government loses the income tax and social contributions。' },
+      { statement: '批判する人々によれば、自動化は生産性をほとんど向上させてこなかった。', answer: false, why: '第4段落 Automation has historically been one of the main sources of rising productivity。' },
+      { statement: '現代の技術は、ある仕事をなくす一方でほかの仕事を生み出すことが多い。', answer: true, why: '第5段落 making some jobs disappear while creating others。' },
+      { statement: 'ほとんどの人は進歩を完全に止めたいと思っている。', answer: false, why: '第7段落 Few people would wish to stop progress altogether。' },
+    ],
+    qa: [
+      { q: 'What might happen if companies were taxed for using robots, according to critics?', choices: ['Businesses might move to countries without such taxes.', 'Wages would rise immediately.', 'Robots would become cheaper.', 'All jobs would be protected.'], answer: 0, why: '第4段落 possibly causing businesses to move to countries without such taxes。' },
+      { q: 'Which example is NOT given as a possible robot in the fifth paragraph?', choices: ['A school bus.', 'A dishwasher.', 'A program that sorts emails.', 'An automatic checkout machine.'], answer: 0, why: '第5段落 にあげられているのは食器洗い機・メールの仕分けプログラム・自動レジで、スクールバスはない。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
