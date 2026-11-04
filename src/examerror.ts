@@ -4058,6 +4058,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The new model is better than the old (A) it (B) in (C) many (D) ways.', choices: ['(A) it', '(B) in', '(C) many', '(D) ways'], answer: 0, why: '「古いもの」は形容詞＋one。the old one。' },
     ],
   },
+  {
+    id: 'exam-error-conj-unless-kokuritsu',
+    title: '入試の正誤問題〈171〉（国公立レベル：接続詞 unless・once・as long as・in case の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'unless「～しないかぎり」（否定の意味をふくむので not をつけない）、once「いったん～すると」、as long as「～するかぎり・～しさえすれば」、in case「～するといけないから・～する場合にそなえて」。時や条件を表すこれらの接続詞のあとは、未来のことでも現在形（in case it rains・once you start）。in case of のあとは名詞（in case of fire）。',
+    ],
+    examples: [
+      { en: 'Take an umbrella in case it rains.', ja: '雨がふるといけないから、かさを持っていきなさい。' },
+      { en: 'You will miss the bus unless you hurry.', ja: '急がないとバスに乗りおくれるよ。' },
+    ],
+    questions: [
+      { sentence: '(A) Unless you (B) do not hurry, (C) you will (D) miss the bus.', choices: ['(A) Unless you', '(B) do not hurry,', '(C) you will', '(D) miss the bus'], answer: 1, why: 'unless は「～しないかぎり」で否定の意味をふくむので not はいらない。Unless you hurry。' },
+      { sentence: 'Take an umbrella (A) in case (B) it will rain (C) later (D) today.', choices: ['(A) in case', '(B) it will rain', '(C) later', '(D) today'], answer: 1, why: 'in case「～するといけないから」のあとは未来のことでも現在形。it rains。' },
+      { sentence: '(A) Once you (B) will start, (C) you must (D) finish.', choices: ['(A) Once you', '(B) will start,', '(C) you must', '(D) finish'], answer: 1, why: 'once「いったん～すると」のあとは未来のことでも現在形。Once you start。' },
+      { sentence: 'You can stay here (A) as long as (B) you (C) will be (D) quiet.', choices: ['(A) as long as', '(B) you', '(C) will be', '(D) quiet'], answer: 2, why: 'as long as「～するかぎり」のあとは現在形。you are quiet。' },
+      { sentence: '(A) If not you study, (B) you (C) will fail (D) the test.', choices: ['(A) If not you study,', '(B) you', '(C) will fail', '(D) the test'], answer: 0, why: '「勉強しなければ」は Unless you study（または If you don’t study）。' },
+      { sentence: '(A) As long as (B) it doesn’t rain, (C) we (D) will going to the beach.', choices: ['(A) As long as', '(B) it doesn’t rain,', '(C) we', '(D) will going to the beach'], answer: 3, why: 'will のあとは動詞の原形。will go。' },
+      { sentence: 'I’ll lend you the book (A) in case of (B) you (C) need it (D) for your report.', choices: ['(A) in case of', '(B) you', '(C) need it', '(D) for your report'], answer: 0, why: 'in case of のあとは名詞。文が続くときは in case。' },
+      { sentence: '(A) Once she arrives, (B) we can (C) starting (D) the meeting.', choices: ['(A) Once she arrives,', '(B) we can', '(C) starting', '(D) the meeting'], answer: 2, why: 'can のあとは動詞の原形。start。' },
+      { sentence: '(A) In case (B) you get lost, (C) call (D) to me.', choices: ['(A) In case', '(B) you get lost,', '(C) call', '(D) to me'], answer: 3, why: 'call は「～に電話する」で目的語を直接とる。call me。' },
+      { sentence: 'You won’t pass (A) unless (B) you (C) don’t practice (D) every day.', choices: ['(A) unless', '(B) you', '(C) don’t practice', '(D) every day'], answer: 2, why: 'unless に否定の意味がふくまれるので practice。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

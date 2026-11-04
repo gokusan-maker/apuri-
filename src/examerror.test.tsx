@@ -2346,3 +2346,10 @@ it('誤文訂正〈164〉：京大レベル 相関接続詞の動詞の一致の
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('was')
 })
+
+it('正誤問題〈171〉：国公立レベル 接続詞 unless・once・as long as・in case の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-conj-unless-kokuritsu')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) do not hurry,')
+})
