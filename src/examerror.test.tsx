@@ -2381,3 +2381,10 @@ it('正誤問題〈173〉：東大レベル 比較の対象をそろえる単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) Japan')
 })
+
+it('誤文訂正〈167〉：京大レベル 前置詞＋関係代名詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-167')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('in which')
+})

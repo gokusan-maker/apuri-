@@ -7122,6 +7122,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I’m late, [amn’t I]?', choices: ['aren’t I', 'am not I', 'don’t I', 'isn’t it'], answer: 0, why: 'I’m ～ の付加疑問は aren’t I?。' },
     ],
   },
+  {
+    id: 'exam-fix-167',
+    title: '入試の誤文訂正〈167〉（京大レベル：前置詞＋関係代名詞 on which・with whom の前置詞の選び方）',
+    points: ['前置詞＋関係代名詞（in which・with whom・on which）は、もとの文で使う前置詞を関係代名詞の前に出したもの。I was born in the house → the house in which I was born。人なら whom、物なら which（前置詞のあとに that・who・where・when は使わない）。前置詞は動詞や名詞との結びつき（depend on・talk about・write with・the reason for）で決まる。前に出したら文の最後に前置詞をくり返さない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This is the house in which I was born.', ja: 'これは私が生まれた家だ。' }],
+    questions: [
+      { sentence: 'This is the house [in that] I was born.', choices: ['in which', 'in where', 'which in', 'that in'], answer: 0, why: '前置詞のあとに that は使えない。in which。' },
+      { sentence: 'The man [with who] I spoke was kind.', choices: ['with whom', 'with that', 'whom with', 'who with'], answer: 0, why: '前置詞のあとの人を表す関係代名詞は whom。' },
+      { sentence: 'The pen [which I wrote] the letter was red.', choices: ['with which I wrote', 'which I wrote by', 'that I wrote with it', 'in which I wrote'], answer: 0, why: 'write with a pen「ペンで書く」なので with which I wrote。' },
+      { sentence: 'The day [on when] we met was rainy.', choices: ['on which', 'in which', 'at when', 'on that'], answer: 0, why: 'on the day「その日に」なので on which。前置詞のあとに when は使わない。' },
+      { sentence: 'The topic [which we talked] was interesting.', choices: ['about which we talked', 'which we talked to', 'that we talked it', 'on that we talked'], answer: 0, why: 'talk about ～「～について話す」なので about which we talked。' },
+      { sentence: 'The friend [whom I depend] is Ken.', choices: ['on whom I depend', 'whom I depend at', 'who I depend for', 'that I depend on him'], answer: 0, why: 'depend on ～「～にたよる」なので on whom I depend。' },
+      { sentence: 'This is the reason [of which] he left.', choices: ['for which', 'by which', 'in which', 'to which'], answer: 0, why: 'the reason for ～「～の理由」なので for which（＝why）。' },
+      { sentence: 'The chair [on that] he sat was broken.', choices: ['on which', 'which on', 'in that', 'that on'], answer: 0, why: '前置詞のあとに that は使えない。sit on a chair なので on which。' },
+      { sentence: 'The person [to who] I sent the letter lives in Osaka.', choices: ['to whom', 'to that', 'whom to', 'who to it'], answer: 0, why: '前置詞のあとの人は whom。to whom。' },
+      { sentence: 'The city [which I want to go] is Paris.', choices: ['to which I want to go', 'where I want to go to', 'that I want to go in', 'which I want to go it'], answer: 0, why: 'go to a city なので to which I want to go。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
