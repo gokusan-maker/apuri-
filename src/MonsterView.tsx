@@ -2590,6 +2590,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="56" r="3" fill="#713f12" />
       </g>
     )
+  if (species === 'triggerfish')
+    return (
+      <g>
+        {/* 白い水玉もよう */}
+        <circle cx="36" cy="60" r="4" fill="#ffffff" />
+        <circle cx="48" cy="66" r="4" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
