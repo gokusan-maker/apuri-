@@ -32418,6 +32418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-street-art',
+    title: 'Should Cities Welcome Street Art?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On the walls of many modern cities, large and colorful paintings now cover surfaces that were once gray and empty. Some of these works have been commissioned by local governments or businesses, while others have appeared without permission, painted overnight by artists who prefer to remain anonymous. Street art, which ranges from simple signatures sprayed on walls to elaborate murals that take weeks to complete, has become a familiar part of urban life, and cities around the world are now debating how they should respond to it.",
+      "Supporters argue that street art can transform neglected neighborhoods. A striking mural can turn an ugly wall into a landmark, attract visitors, and give residents a sense of pride in the place where they live. In several cities, districts that were once associated with crime and decline have become popular destinations precisely because of the art on their walls, bringing new customers to local shops and cafes. For supporters, such examples show that public art need not be confined to museums, where many people never go. Art on the street, they say, belongs to the whole community rather than to a small group of collectors.",
+      "Supporters also emphasize the democratic character of street art. Unlike paintings in galleries, which are often selected by experts and viewed mainly by those who choose to visit, street art is seen by everyone who passes by, whether they are interested in art or not. It can give a voice to young people, minorities, and others who are rarely represented in official culture, and it often comments directly on social and political issues. ( A ) its messages may sometimes be uncomfortable, they can encourage public discussion about matters that might otherwise be ignored.",
+      "Critics, however, point out that much street art is created without the consent of property owners. For the owner of a building, an unwanted painting is not a gift but damage that must be cleaned or covered at considerable expense. Even when the work is skillful, critics argue, it is unfair for artists to impose their own tastes on spaces that belong to others, and on residents who never asked to see it. Moreover, illegal painting may encourage further vandalism, since a wall that has been painted once often attracts more.",
+      "There are also concerns about what happens when street art becomes popular. As neighborhoods gain a reputation for their murals, property prices may rise, and the residents and small businesses that gave the area its character may be forced to leave. In some cases, works that began as protests against commercial culture have been removed from walls and sold for large sums, or copied on products in shops. Critics see an irony in a form of expression that criticizes inequality while sometimes contributing to it.",
+      "Many cities have tried to find a middle path. Some have created legal walls where artists may paint freely, while others organize festivals in which property owners volunteer their walls for commissioned murals. Such programs can reduce conflict and give artists more time to produce ambitious works, but some artists feel that permission removes the spontaneity and independence that made street art meaningful in the first place. Officially approved art, they argue, risks becoming just another form of decoration or advertising.",
+      "The debate over street art ultimately raises questions about who has the right to shape public space. Walls, streets, and squares are shared by many people with different tastes and interests, and decisions about their appearance affect everyone who lives in or passes through them. Whether street art is welcomed, regulated, or removed, the discussion encourages citizens to consider what kind of cities they want to live in, and how the voices of ordinary people can be heard in the places they share.",
+    ],
+    ja: [
+      '多くの現代都市の壁では、かつては灰色で何もなかった面を、大きく色あざやかな絵がおおうようになっている。こうした作品には、地方自治体や企業から依頼されたものもあれば、名前をかくしたがる描き手によって一晩で描かれた、許可なく現れたものもある。壁にスプレーで吹きつけた簡単なサインから、完成に何週間もかかる手のこんだ壁画にまでおよぶストリートアートは、都市生活のおなじみの一部になっており、世界中の都市が今、それにどう対応すべきかを議論している。',
+      '支持する人々は、ストリートアートは見すてられた地区を変えうると主張する。目を引く壁画は、みにくい壁を目印に変え、訪問者を引きよせ、住民に自分の住む場所への誇りをあたえうる。いくつかの都市では、かつて犯罪やおとろえと結びつけられていた地区が、まさに壁の芸術のおかげで人気の行き先になり、地元の店やカフェに新しい客をもたらしている。支持する人々にとって、こうした例は、公共の芸術が、多くの人々がけっして行かない美術館の中にとじこめられる必要はないことを示している。路上の芸術は、少数の収集家ではなく地域社会全体のものだと彼らは言う。',
+      '支持する人々はまた、ストリートアートの民主的な性格を強調する。専門家によって選ばれ、おもに訪れることを選んだ人々に見られることの多い画廊の絵とはちがい、ストリートアートは、芸術に興味があろうとなかろうと、そばを通るすべての人に見られる。それは、若者や少数派など、公式の文化にめったに表されない人々に声をあたえることができ、社会や政治の問題について直接意見を述べることも多い。そのメッセージは時に居心地の悪いものかもしれないが、それがなければ無視されるかもしれない事がらについての公の議論をうながしうる。',
+      'しかし批判する人々は、多くのストリートアートが建物の持ち主の同意なしに作られていると指摘する。建物の持ち主にとって、望まない絵は贈り物ではなく、かなりの費用をかけて消すかおおうかしなければならない損害である。作品が上手なものであっても、他人のものである空間や、見たいと頼んだこともない住民に、描き手が自分の好みをおしつけるのは不公平だと批判する人々は主張する。さらに、一度描かれた壁はさらに多くの落書きを引きよせることが多いので、違法な描画はさらなる破壊行為をうながすかもしれない。',
+      'ストリートアートが人気になったときに何が起きるかについての心配もある。地区が壁画で評判になるにつれて、不動産の価格が上がり、その地区に個性をあたえていた住民や小さな商店が出ていかざるをえなくなるかもしれない。商業文化への抗議として始まった作品が壁からはがされて高額で売られたり、店の商品に複製されたりしたこともある。批判する人々は、不平等を批判する表現の形が、時にそれに手を貸しているという皮肉を見ている。',
+      '多くの都市は中間の道を見つけようとしてきた。描き手が自由に描いてよい合法の壁を作った都市もあれば、建物の持ち主が依頼された壁画のために自分の壁を自発的に提供する祭りを開く都市もある。こうした取り組みは対立を減らし、描き手により野心的な作品を作る時間をあたえうるが、そもそもストリートアートを意味あるものにしていた自発性や独立性を、許可がうばってしまうと感じる描き手もいる。公認された芸術は、ただの装飾や広告の一形態になってしまうおそれがあると彼らは主張する。',
+      'ストリートアートをめぐる議論は、結局のところ、だれが公共の空間を形づくる権利をもつのかという問いを提起している。壁や通りや広場は、さまざまな好みや利害をもつ多くの人々に共有されており、その見た目についての決定は、そこに住んだり通ったりするすべての人に影響する。ストリートアートが歓迎されるにせよ、規制されるにせよ、取り除かれるにせよ、この議論は、市民が、自分たちはどんな都市に住みたいのか、そして共有する場所でふつうの人々の声がどうすれば聞かれるのかを考えるようはげましてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「メッセージは居心地が悪いかもしれないが、公の議論をうながしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say that street art can transform neglected ( 1 ) and gives a voice to people rarely represented in official culture. Critics point out that it is often made without the ( 2 ) of property owners and may push out local residents as prices rise. The debate raises the question of who has the right to shape public ( 3 ).',
+      blanks: [
+        { choices: ['neighborhoods', 'museums', 'schools', 'factories'], answer: 0, why: '第2段落 street art can transform neglected neighborhoods。' },
+        { choices: ['consent', 'money', 'paint', 'skill'], answer: 0, why: '第4段落 created without the consent of property owners。' },
+        { choices: ['space', 'opinion', 'transport', 'health'], answer: 0, why: '第7段落 who has the right to shape public space。' },
+      ],
+    },
+    tf: [
+      { statement: 'ストリートアートの中には、地方自治体や企業から依頼されたものもある。', answer: true, why: '第1段落 Some of these works have been commissioned by local governments or businesses。' },
+      { statement: '筆者によれば、ストリートアートは芸術に興味がある人にしか見られない。', answer: false, why: '第3段落 is seen by everyone who passes by, whether they are interested in art or not。' },
+      { statement: '一度描かれた壁は、さらに多くの落書きを引きよせることが多い。', answer: true, why: '第4段落 a wall that has been painted once often attracts more。' },
+      { statement: '描き手はみな、合法の壁で描くことを歓迎している。', answer: false, why: '第6段落 some artists feel that permission removes the spontaneity and independence。' },
+    ],
+    qa: [
+      { q: 'What may happen as neighborhoods gain a reputation for their murals?', choices: ['Property prices may rise and residents may be forced to leave.', 'All the murals may be painted over.', 'Crime may disappear completely.', 'Museums may close.'], answer: 0, why: '第5段落 property prices may rise, and the residents and small businesses ... may be forced to leave。' },
+      { q: 'What do some artists fear officially approved art may become?', choices: ['Just another form of decoration or advertising.', 'More expensive than gallery art.', 'Illegal in every city.', 'Too difficult to understand.'], answer: 0, why: '第6段落 risks becoming just another form of decoration or advertising。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
