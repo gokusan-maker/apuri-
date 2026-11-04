@@ -2392,6 +2392,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 44 L40 40 M60 40 L70 44" fill="none" stroke="#134e4a" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'searobin')
+    return (
+      <g>
+        {/* 青緑のむなびれと、あしのようなひれ */}
+        <path d="M30 50 Q16 40 14 58 Q22 60 30 56 M70 50 Q84 40 86 58 Q78 60 70 56" fill="#14b8a6" stroke="#9a3412" strokeWidth="1.5" />
+        <path d="M40 72 L36 84 M46 74 L44 86 M54 74 L56 86 M60 72 L64 84" fill="none" stroke="#9a3412" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
