@@ -4226,6 +4226,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It is (B) natural that he (C) should (D) gets angry.', choices: ['(A) It is', '(B) natural that he', '(C) should', '(D) gets angry'], answer: 3, why: 'should のあとは動詞の原形。should get angry。' },
     ],
   },
+  {
+    id: 'exam-error-adj-prep-kokuritsu',
+    title: '入試の正誤問題〈178〉（国公立レベル：形容詞＋前置詞 be famous for・be proud of・be different from）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '形容詞とあとの前置詞の結びつきは決まっている：be famous for ～・be proud of ～・be different from ～・be good at ～・be full of ～（＝be filled with ～）・be afraid of ～・be kind to ～・be interested in ～・be satisfied with ～・be similar to ～。人の気持ちを表すときは -ed の形（interested・satisfied）。',
+    ],
+    examples: [
+      { en: 'Kyoto is famous for its old temples.', ja: '京都は古い寺で有名だ。' },
+      { en: 'My opinion is different from yours.', ja: '私の意見はあなたの意見とちがう。' },
+    ],
+    questions: [
+      { sentence: '(A) Kyoto (B) is famous (C) by (D) its old temples.', choices: ['(A) Kyoto', '(B) is famous', '(C) by', '(D) its old temples'], answer: 2, why: 'be famous for ～「～で有名だ」。famous for。' },
+      { sentence: '(A) She is (B) proud (C) for (D) her son.', choices: ['(A) She is', '(B) proud', '(C) for', '(D) her son'], answer: 2, why: 'be proud of ～「～をほこりに思う」。proud of。' },
+      { sentence: '(A) My opinion (B) is different (C) to yours (D) in many ways.', choices: ['(A) My opinion', '(B) is different', '(C) to yours', '(D) in many ways'], answer: 2, why: 'be different from ～「～とちがう」。from yours。' },
+      { sentence: '(A) He is (B) good (C) in (D) playing the piano.', choices: ['(A) He is', '(B) good', '(C) in', '(D) playing the piano'], answer: 2, why: 'be good at ～「～が得意だ」。good at。' },
+      { sentence: '(A) This bag (B) is full (C) with (D) old books.', choices: ['(A) This bag', '(B) is full', '(C) with', '(D) old books'], answer: 2, why: 'be full of ～「～でいっぱいだ」。full of（be filled with ならよい）。' },
+      { sentence: '(A) I am (B) interesting (C) in (D) Japanese history.', choices: ['(A) I am', '(B) interesting', '(C) in', '(D) Japanese history'], answer: 1, why: '人が「興味をもっている」は interested。be interested in。' },
+      { sentence: '(A) He is (B) always (C) gentle and (D) kind with animals.', choices: ['(A) He is', '(B) always', '(C) gentle and', '(D) kind with animals'], answer: 3, why: 'be kind to ～「～に親切だ・やさしい」。kind to animals。' },
+      { sentence: '(A) Are you (B) afraid (C) for (D) dogs?', choices: ['(A) Are you', '(B) afraid', '(C) for', '(D) dogs?'], answer: 2, why: 'be afraid of ～「～がこわい」。afraid of。' },
+      { sentence: '(A) Be kind (B) for (C) your classmates, (D) please.', choices: ['(A) Be kind', '(B) for', '(C) your classmates,', '(D) please'], answer: 1, why: 'be kind to ～「～に親切だ」。kind to。' },
+      { sentence: '(A) Satisfying (B) with (C) the result, (D) he smiled.', choices: ['(A) Satisfying', '(B) with', '(C) the result,', '(D) he smiled'], answer: 0, why: '人の気持ちは過去分詞。be satisfied with ～「～に満足している」なので Satisfied with。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
