@@ -33298,6 +33298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-drug-patents',
+    title: 'Should Medicines Be Protected by Patents?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Developing a new medicine is a long, risky, and expensive process. Researchers may test thousands of chemical compounds before finding one that shows promise, and most candidates fail during clinical trials because they are unsafe or ineffective. To encourage companies to invest in this uncertain work, most countries grant patents on new drugs, giving the inventor the exclusive right to make and sell the medicine for a limited period, usually around twenty years. During this time, the company can charge high prices to recover its costs. Yet the patent system has also been criticized for making essential medicines unaffordable for many people.",
+      "Supporters argue that patents are the engine of medical progress. Without the prospect of exclusive profits, they say, few companies would be willing to spend the enormous sums needed to bring a new drug to market. Many of the treatments that have transformed modern medicine, from antibiotics to drugs for cancer and heart disease, were developed by companies that expected to earn returns protected by patents. Weakening this protection, supporters warn, could slow the discovery of new treatments, harming the very patients whom critics wish to help.",
+      "Critics, however, point out that high prices can prevent patients from receiving treatments that already exist. In poorer countries, and even among people without good insurance in wealthy ones, a medicine protected by a patent may cost far more than patients can pay. ( A ) the costs of research are real, critics argue that the prices of some drugs are much higher than necessary to cover them, and that a system that allows people to die for lack of medicines that could be produced cheaply is difficult to defend. They note, too, that companies often spend more on marketing than on research.",
+      "Critics also question whether the patent system directs research toward the most important problems. Companies naturally focus on diseases that affect large numbers of people who can afford expensive treatment, while illnesses that mainly affect poor populations may receive little attention. Some argue that this explains why progress has been slow in developing treatments for certain tropical diseases, even though they cause great suffering. A system based on expected profits, in this view, rewards what is commercially attractive rather than what is medically most urgent.",
+      "Several measures have been proposed or tried to address these problems. International agreements allow governments, in emergencies, to authorize the production of cheaper versions of patented medicines. Some companies offer reduced prices in poorer countries, while public and charitable organizations fund research into neglected diseases. Others have suggested that governments could offer large prizes for the development of important medicines, after which the drugs would be made available at low cost, separating the reward for innovation from the price of the product.",
+      "Each of these proposals has advantages and difficulties. Allowing cheaper copies may improve access, but if used too widely it could reduce incentives for future research. Prize systems might encourage work on neglected problems, but determining the value of a new medicine in advance is extremely difficult. Moreover, the costs of research are not borne only by private companies: much of the basic science on which new medicines depend is funded by governments and universities, which raises the question of whether the public should share more fully in the benefits.",
+      "The debate over drug patents reflects a tension between two important goals: encouraging the development of new treatments and ensuring that people can obtain the treatments that already exist. Neither goal can simply be abandoned, and finding a balance between them may require combining several approaches rather than relying on a single system. Whatever solutions are chosen, the question reminds us that medicines are not ordinary products, since access to them can determine whether people live or die.",
+    ],
+    ja: [
+      '新しい薬を開発するのは、長く、危険が大きく、費用のかかる過程である。研究者は有望なものを一つ見つけるまでに何千もの化合物を試すことがあり、ほとんどの候補は、安全でないか効果がないために臨床試験の途中で失敗する。この不確かな仕事に会社が投資するようはげますために、ほとんどの国は新しい薬に特許をあたえ、発明者に、限られた期間、ふつうは約二十年のあいだ、その薬を作り売る独占的な権利をあたえている。この期間、会社は費用を取りもどすために高い値段をつけることができる。しかし特許制度は、多くの人々にとって欠かせない薬を手の届かないものにしていると批判されてもきた。',
+      '支持する人々は、特許は医学の進歩の原動力だと主張する。独占的な利益の見こみがなければ、新しい薬を市場に出すのに必要なばく大なお金を使おうとする会社はほとんどないだろうと彼らは言う。抗生物質からがんや心臓病の薬まで、現代の医学を一変させた治療の多くは、特許に守られた利益を得られると期待した会社によって開発された。この保護を弱めれば、新しい治療の発見がおくれ、批判する人々が助けたいと願っているまさにその患者を傷つけることになるかもしれないと、支持する人々は警告する。',
+      'しかし批判する人々は、高い値段のために、患者がすでにある治療を受けられないことがあると指摘する。まずしい国や、豊かな国でもよい保険をもたない人々のあいだでは、特許に守られた薬は患者がはらえるよりはるかに高いことがある。研究の費用は現実のものだが、ある薬の値段はそれをまかなうのに必要なよりずっと高く、安く作れるはずの薬がないために人々が死ぬのを許す制度は弁護しがたいと批判する人々は主張する。また、会社はしばしば研究より宣伝に多くのお金を使っているとも彼らは指摘する。',
+      '批判する人々はまた、特許制度が研究を最も重要な問題へ向けているのかを疑う。会社は当然、高い治療費をはらえる多くの人々がかかる病気に集中し、おもにまずしい人々がかかる病気にはあまり注意が向けられないかもしれない。ある熱帯の病気が大きな苦しみをもたらしているのに、その治療の開発の進歩がおそいのはこのためだと主張する人々もいる。この見方では、期待される利益にもとづく制度は、医学的に最も急を要するものではなく、商売として魅力的なものに報いるのである。',
+      'こうした問題に取り組むために、いくつかの方法が提案されたり試されたりしてきた。国際的な取り決めは、緊急のときに、政府が特許に守られた薬のより安い版の生産を認めることを許している。まずしい国では値段を下げる会社もあり、公的な団体や慈善団体は見すごされてきた病気の研究に資金を出している。また、政府が大切な薬の開発に大きな賞金を出し、そのあとで薬を安く手に入るようにすることで、技術革新への報酬を製品の値段から切りはなすことを提案する人々もいる。',
+      'これらの提案には、それぞれ利点とむずかしさがある。より安い複製を認めれば手に入りやすくなるかもしれないが、広く使いすぎれば将来の研究への動機を減らしうる。賞金の制度は見すごされてきた問題への取り組みをうながすかもしれないが、新しい薬の価値を前もって決めるのはきわめてむずかしい。さらに、研究の費用を負担しているのは私企業だけではない。新しい薬が頼っている基礎科学の多くは政府や大学によって資金を出されており、一般の人々がその利益をもっと十分に分かち合うべきではないかという問いを引き起こしている。',
+      '薬の特許をめぐる議論は、新しい治療の開発をうながすことと、すでにある治療を人々が手に入れられるようにすることという、二つの大切な目標のあいだの緊張を反映している。どちらの目標も単に捨てることはできず、そのつりあいを見つけるには、一つの制度に頼るのではなく、いくつかの方法を組み合わせることが必要かもしれない。どんな解決策が選ばれるにせよ、この問いは、薬がふつうの製品ではないことを思い出させてくれる。それが手に入るかどうかで、人々が生きるか死ぬかが決まりうるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「研究の費用は現実のものだが、値段は必要以上に高い」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that patents encourage companies to invest in developing new ( 1 ). Critics reply that high prices prevent many patients from receiving existing treatments and that research ignores diseases affecting the ( 2 ). Solutions may require combining several approaches to balance innovation and ( 3 ).',
+      blanks: [
+        { choices: ['medicines', 'buildings', 'weapons', 'games'], answer: 0, why: '第2段落 Without the prospect of exclusive profits ... few companies would be willing to spend。' },
+        { choices: ['poor', 'young', 'famous', 'strong'], answer: 0, why: '第4段落 illnesses that mainly affect poor populations may receive little attention。' },
+        { choices: ['access', 'advertising', 'secrecy', 'competition'], answer: 0, why: '第7段落 ensuring that people can obtain the treatments that already exist。' },
+      ],
+    },
+    tf: [
+      { statement: 'ほとんどの薬の候補は、臨床試験の途中で失敗する。', answer: true, why: '第1段落 most candidates fail during clinical trials。' },
+      { statement: '批判する人々によれば、特許制度は研究をかならず最も急を要する問題に向ける。', answer: false, why: '第4段落 rewards what is commercially attractive rather than what is medically most urgent。' },
+      { statement: '国際的な取り決めは、緊急のときに特許薬のより安い版の生産を認めることを許している。', answer: true, why: '第5段落 International agreements allow governments, in emergencies, to authorize the production of cheaper versions。' },
+      { statement: '研究の費用は私企業だけが負担している。', answer: false, why: '第6段落 the costs of research are not borne only by private companies。' },
+    ],
+    qa: [
+      { q: 'How long do drug patents usually last?', choices: ['Around twenty years.', 'About two years.', 'Forever.', 'Only until the first sale.'], answer: 0, why: '第1段落 usually around twenty years。' },
+      { q: 'What is one difficulty with prize systems?', choices: ['Determining the value of a new medicine in advance is very difficult.', 'They make medicines more expensive.', 'They are forbidden by law.', 'They only reward old medicines.'], answer: 0, why: '第6段落 determining the value of a new medicine in advance is extremely difficult。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
