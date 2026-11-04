@@ -31218,6 +31218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-screen-time',
+    title: 'Should Parents Limit Screen Time?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Children today grow up surrounded by screens. Smartphones, tablets, televisions, and computers offer games, videos, messages, and lessons at any hour of the day, and many children spend several hours each day looking at one device or another. Parents, teachers, and doctors have increasingly asked whether this is harmful, and some governments have issued guidelines recommending strict limits on how much time children should spend in front of screens. Yet the question of whether, and how, parents should limit screen time turns out to be more complicated than it first appears.",
+      "Those who favor strict limits point to research linking heavy screen use with a range of problems. Children who spend long hours on devices may sleep less, especially if they use screens late at night, and lack of sleep can affect their mood, concentration, and learning. Time spent sitting in front of a screen may also replace physical activity, contributing to poor fitness and weight gain. Some studies have found associations between heavy use of social media and anxiety or low self-esteem, particularly among teenagers who compare themselves with the carefully edited images they see online.",
+      "Supporters of limits also worry about what screens may displace. Every hour spent watching videos is an hour not spent reading, playing outdoors, talking with family, or simply being bored, an experience that may encourage creativity and imagination. Young children in particular learn language and social skills through face-to-face interaction, and some researchers fear that excessive screen use during the early years may slow their development. In this view, limiting screen time is less about the screens themselves than about protecting the activities that children need in order to grow.",
+      "Critics of strict limits, however, argue that the evidence is less clear than is often claimed. Many studies show only weak associations between screen time and problems, and it is often difficult to tell whether screens cause difficulties or whether children who already have difficulties tend to use screens more. ( A ) some uses of screens may be harmful, critics point out, others may be valuable: children may use devices to read, to learn languages, to create music or art, or to stay in touch with friends and relatives who live far away.",
+      "For this reason, many experts now argue that the content and context of screen use matter more than the number of hours. An hour spent video-chatting with a grandparent or working on a creative project is very different from an hour spent scrolling through advertisements. Watching a program together with a parent who talks about it may support learning, while watching alone may not. Rules that count only minutes may therefore miss what is most important, and may even discourage beneficial uses along with harmful ones.",
+      "There are also practical difficulties. Screens are now part of schoolwork, social life, and even family routines, and it can be hard for parents to enforce limits when they themselves spend much of the day on their phones. Children may feel excluded if they are not allowed to use the same apps as their friends, and strict bans may simply encourage them to use devices secretly. Some parents have found it more effective to agree on rules together with their children, such as keeping phones out of bedrooms at night or turning them off during meals.",
+      "The debate over screen time thus reflects broader questions about how families can adapt to rapid technological change. There is no simple number of hours that is right for every child. What seems most important is that parents pay attention to how their children use screens, encourage a balance of activities, and set an example through their own behavior. Screens are neither simply harmful nor simply beneficial; like most tools, their effects depend largely on how they are used, and helping children to use them wisely may be more valuable than merely restricting them.",
+    ],
+    ja: [
+      '今日の子どもは画面に囲まれて育つ。スマートフォンやタブレットやテレビやコンピューターは、一日のどの時間にもゲームや動画やメッセージや授業を差し出し、多くの子どもは毎日数時間、あれこれの機器を見てすごしている。親や先生や医者は、これが害になるのではないかとますます問うようになり、子どもが画面の前ですごす時間をきびしく制限するようすすめる指針を出した政府もある。しかし親が画面を見る時間を制限すべきかどうか、そしてどう制限すべきかという問いは、最初に見えるよりも複雑であることがわかる。',
+      'きびしい制限に賛成する人々は、画面を長く使うことをさまざまな問題と結びつける研究を指摘する。機器を長時間使う子どもは、とくに夜おそく画面を使うと睡眠が少なくなるかもしれず、睡眠不足は気分や集中や学びに影響しうる。画面の前にすわってすごす時間は、体を動かす活動にとってかわり、体力の低下や体重の増加の一因になるかもしれない。いくつかの研究では、ソーシャルメディアを多く使うことと不安や自尊心の低さとの結びつきが見いだされており、とくにオンラインで見る念入りに編集された画像と自分を比べる十代の若者のあいだでそうである。',
+      '制限を支持する人々はまた、画面が何をおしのけるかも心配している。動画を見てすごす1時間は、本を読んだり、外で遊んだり、家族と話したり、ただ退屈したりしない1時間であり、退屈は創造性と想像力をうながすかもしれない経験である。とくに幼い子どもは顔をつきあわせたやりとりを通じてことばや社会的な技能を学ぶので、幼い時期の画面の使いすぎが発達をおくらせるかもしれないとおそれる研究者もいる。この見方では、画面を見る時間を制限することは、画面そのものよりも、子どもが成長するのに必要な活動を守ることにかかわっているのである。',
+      'しかし、きびしい制限を批判する人々は、証拠はしばしば言われるほどはっきりしていないと主張する。多くの研究は画面を見る時間と問題とのあいだにわずかな結びつきしか示しておらず、画面が困難を引き起こすのか、すでに困難をかかえている子どもが画面をより多く使う傾向があるのかを見分けるのはむずかしいことが多い。画面の使い方の中には害になるものもあるかもしれないが、価値のあるものもある、と批判する人々は指摘する。子どもは機器を使って読書をしたり、言語を学んだり、音楽や絵を作ったり、遠くに住む友人や親族と連絡をとりあったりするかもしれないのである。',
+      'このため、多くの専門家は今、時間の長さよりも、画面の使い方の内容と状況のほうが大事だと主張している。祖父母とビデオ通話をしたり創造的な作品に取り組んだりしてすごす1時間は、広告を次々とながめてすごす1時間とはまったくちがう。それについて話してくれる親といっしょに番組を見ることは学びをささえるかもしれないが、ひとりで見るのはそうでないかもしれない。したがって分数だけを数える規則は最も大切なことを見のがすかもしれず、害になる使い方といっしょに有益な使い方までくじいてしまうことさえあるかもしれない。',
+      '実際的なむずかしさもある。画面は今や宿題や友だちづきあいや、家族の日課の一部にさえなっており、親自身が一日の多くを電話を見てすごしているときに、制限を守らせるのはむずかしいことがある。子どもは友だちと同じアプリを使うのをゆるされなければ仲間はずれにされたと感じるかもしれず、きびしい禁止は単に子どもにこっそり機器を使わせるだけかもしれない。夜は寝室に電話を持ちこまないとか、食事中は電源を切るとかいった規則を子どもといっしょに決めるほうが効果的だと気づいた親もいる。',
+      'このように画面を見る時間をめぐる議論は、家族が急速な技術の変化にどう適応できるかについての、より広い問いを反映している。すべての子どもにとって正しい単純な時間の長さはない。最も大切だと思われるのは、親が子どもの画面の使い方に注意をはらい、活動のつりあいをうながし、自分自身のふるまいで手本を示すことである。画面は単に有害なのでも単に有益なのでもない。たいていの道具と同じように、その影響は主にどう使われるかにかかっており、子どもがそれを賢明に使うのを助けることは、単に制限することよりも価値があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「害になる使い方もあるかもしれない一方で、価値のある使い方もある」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters of strict limits link heavy screen use to less ( 1 ), less physical activity, and anxiety. Critics reply that the evidence is unclear and that some uses are valuable. Many experts now argue that the ( 2 ) of screen use matters more than the number of hours, and that parents should set an ( 3 ).',
+      blanks: [
+        { choices: ['sleep', 'money', 'noise', 'homework'], answer: 0, why: '第2段落 Children who spend long hours on devices may sleep less。' },
+        { choices: ['content', 'price', 'color', 'weight'], answer: 0, why: '第5段落 the content and context of screen use matter more than the number of hours。' },
+        { choices: ['example', 'alarm', 'exam', 'order'], answer: 0, why: '第7段落 set an example through their own behavior。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によれば、退屈は創造性をうながすかもしれない経験である。', answer: true, why: '第3段落 being bored, an experience that may encourage creativity and imagination。' },
+      { statement: '批判する人々によれば、画面が問題を引き起こすことは明らかに証明されている。', answer: false, why: '第4段落 it is often difficult to tell whether screens cause difficulties。' },
+      { statement: 'きびしい禁止は、子どもにこっそり機器を使わせることがある。', answer: true, why: '第6段落 strict bans may simply encourage them to use devices secretly。' },
+      { statement: '筆者によれば、すべての子どもに正しい時間の長さがある。', answer: false, why: '第7段落 There is no simple number of hours that is right for every child。' },
+    ],
+    qa: [
+      { q: 'How do young children learn language and social skills, according to the third paragraph?', choices: ['Through face-to-face interaction.', 'Only through videos.', 'By playing games alone.', 'By reading advertisements.'], answer: 0, why: '第3段落 through face-to-face interaction。' },
+      { q: 'What rule have some parents found effective?', choices: ['Keeping phones out of bedrooms at night.', 'Banning all devices forever.', 'Allowing unlimited use.', 'Using phones during meals.'], answer: 0, why: '第6段落 such as keeping phones out of bedrooms at night。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
