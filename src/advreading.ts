@@ -30062,6 +30062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-trust',
+    title: 'Between Knowledge and Faith: On Trust',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day we rely on people whom we do not know and whose actions we cannot check. We eat food prepared by strangers, take medicines whose ingredients we cannot analyze, cross bridges designed by engineers we will never meet, and accept as true countless statements about the world that we have no way of verifying for ourselves. Without trust, ordinary life would become impossible, for no individual could personally confirm more than a tiny fraction of what he or she needs to know. Trust, in this sense, is not an occasional choice but a permanent condition of social existence.",
+      "Yet trust is often described as though it were a kind of calculation. On this view, we trust someone when we have good reason to believe that he or she will act as expected, and the more evidence we have of a person's reliability, the more reasonable our trust becomes. There is much truth in this account. We are right to trust a doctor whose qualifications are recognized, or a friend who has kept his or her promises in the past, and we would be foolish to place the same confidence in someone whose record suggests dishonesty.",
+      "But trust cannot be reduced entirely to the weighing of evidence. If we trusted others only when we had sufficient proof of their reliability, we would hardly be trusting at all; we would simply be predicting. Genuine trust involves a willingness to depend on another person in circumstances where we cannot be certain how he or she will act, and therefore an acceptance of vulnerability. ( A ) this vulnerability can be dangerous, it is also what gives trust its moral significance, since to trust someone is to offer him or her an opportunity to prove worthy of our confidence.",
+      "This helps to explain why trust can change the very people who receive it. A child who is trusted with a small responsibility may rise to meet it, and an employee whose judgment is respected may become more careful and conscientious. Trust, in other words, does not merely respond to trustworthiness; it can also help to create it. Conversely, constant suspicion can produce the very behavior it fears, for those who are never trusted may come to feel that they have little reason to behave well.",
+      "None of this means that trust should be given without limit. Blind trust, which ignores clear signs that it is being abused, is not a virtue but a form of carelessness, and it can expose both the one who trusts and others to serious harm. Wise trust is responsive: it is offered with openness but withdrawn when it is betrayed, and it is proportionate to what is at stake. We may trust a stranger to give us directions while being far more cautious about trusting him or her with our savings.",
+      "In modern societies, trust in individuals is increasingly supplemented, and sometimes replaced, by trust in institutions and systems. We trust a medicine not because we know the person who made it but because we believe in the system of regulation that tests it. This kind of trust allows cooperation on a vast scale, but it is also fragile, for when institutions fail or are perceived as dishonest, trust in them can collapse quickly and may take a long time to rebuild. A society in which people no longer trust their institutions may find it difficult to act together even when cooperation is urgently needed.",
+      "Trust, then, occupies a curious position between knowledge and faith. It is not blind, since it responds to evidence and can be withdrawn, but neither is it simply a conclusion drawn from evidence, since it always extends somewhat beyond what can be proven. To live among others is to accept that we cannot control or fully understand them, and to decide, again and again, to rely on them nonetheless. In making that decision wisely, we not only protect ourselves but also help to sustain the network of mutual confidence on which every community depends.",
+    ],
+    ja: [
+      '毎日私たちは、知らない人々や、その行動を確かめることのできない人々にたよっている。見知らぬ人が用意した食べ物を食べ、成分を分析できない薬を飲み、会うこともない技術者が設計した橋をわたり、自分では確かめようのない世界についての数えきれない言明を真実として受け入れている。信頼がなければ、ふつうの生活は不可能になるだろう。どんな個人も、知る必要のあることのごくわずかな部分しか自分で確かめられないからである。この意味で、信頼はときどきする選択ではなく、社会的な存在であることのたえまない条件なのである。',
+      'しかし信頼は、まるで一種の計算であるかのように語られることが多い。この見方では、私たちは、ある人が期待どおりに行動すると信じるよい理由があるときにその人を信頼し、その人が信頼できるという証拠が多いほど、信頼はより理にかなったものになる。この説明には多くの真実がある。資格が認められている医者や、過去に約束を守ってきた友人を信頼するのは正しく、記録が不正直を示している人に同じ信頼を置くのは愚かだろう。',
+      'しかし信頼を、証拠をはかることにすべて還元することはできない。もし他人を、その人が信頼できるという十分な証明があるときにしか信頼しないなら、私たちはほとんど信頼していないことになるだろう。単に予測しているだけである。本物の信頼には、相手がどう行動するか確信できない状況で、その人にたよろうとする気持ち、したがって傷つきやすさを受け入れることがふくまれる。この傷つきやすさは危険でありうるが、それこそが信頼に道徳的な意味をあたえるものでもある。人を信頼することは、その人に、私たちの信頼に値することを示す機会をあたえることだからである。',
+      'このことは、なぜ信頼がそれを受ける人そのものを変えうるのかを説明するのに役立つ。小さな責任をまかされた子どもはそれに応えようとするかもしれず、判断を尊重される従業員はより注意深く誠実になるかもしれない。言いかえれば、信頼は信頼に値することに応えるだけではない。それを生み出す助けにもなりうるのである。反対に、たえまない疑いは、まさにそれがおそれている行動を生み出しうる。けっして信頼されない人は、よくふるまう理由がほとんどないと感じるようになるかもしれないからである。',
+      'このどれも、信頼をかぎりなくあたえるべきだということを意味しない。悪用されているというはっきりしたしるしを無視する盲目的な信頼は、美徳ではなく一種の不注意であり、信頼する人とほかの人々をともに深刻な害にさらしうる。賢明な信頼は応答的である。それは開かれた心であたえられるが、裏切られればとりさげられ、何がかかっているかにつりあっている。見知らぬ人に道をたずねて信用することはあっても、貯金をあずけることにはずっと慎重になるだろう。',
+      '現代社会では、個人への信頼は、制度や仕組みへの信頼によってますますおぎなわれ、ときにはとってかわられている。私たちが薬を信頼するのは、それを作った人を知っているからではなく、それを検査する規制の仕組みを信じているからである。この種の信頼は大規模な協力を可能にするが、もろくもある。制度が失敗したり不正直だと受けとめられたりすると、それへの信頼はすぐにくずれ、立て直すのに長い時間がかかるかもしれないからである。人々がもはや制度を信頼しない社会は、協力が急いで必要なときでさえ、ともに行動するのがむずかしくなるかもしれない。',
+      'このように信頼は、知識と信仰とのあいだの奇妙な位置をしめている。それは盲目ではない。証拠に応じ、とりさげることができるからである。しかしまた、単に証拠から引き出される結論でもない。いつも証明できることを少しこえて広がるからである。他人の中で生きるとは、他人をおさえたり完全に理解したりできないことを受け入れ、それでもなお、何度も何度も、他人にたよることを決めることである。その決定を賢明に行うことで、私たちは自分を守るだけでなく、あらゆる共同体がたよっている、たがいの信頼の網を保つ助けにもなるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この傷つきやすさは危険でありうるが、信頼に道徳的な意味をあたえるものでもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、信頼がなければふつうの生活は不可能になる。', answer: true, why: '第1段落 Without trust, ordinary life would become impossible。' },
+      { statement: '筆者によれば、十分な証明があるときだけ信頼するのが本物の信頼である。', answer: false, why: '第3段落 we would hardly be trusting at all; we would simply be predicting。' },
+      { statement: '筆者によれば、信頼はそれを受ける人を変えることがある。', answer: true, why: '第4段落 trust can change the very people who receive it。' },
+      { statement: '筆者は、盲目的な信頼は美徳だと述べている。', answer: false, why: '第5段落 Blind trust ... is not a virtue but a form of carelessness。' },
+    ],
+    qa: [
+      { q: 'Why do we trust a medicine, according to the sixth paragraph?', choices: ['We believe in the system of regulation that tests it.', 'We know the person who made it.', 'We have analyzed its ingredients.', 'It is always cheap.'], answer: 0, why: '第6段落 because we believe in the system of regulation that tests it。' },
+      { q: 'What can constant suspicion produce?', choices: ['The very behavior it fears.', 'Perfect honesty.', 'Stronger institutions.', 'More careful employees.'], answer: 0, why: '第4段落 constant suspicion can produce the very behavior it fears。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
