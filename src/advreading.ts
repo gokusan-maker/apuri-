@@ -30578,6 +30578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-online-voting',
+    title: 'Should We Vote Online?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most democracies, voting still requires citizens to go in person to a polling station, wait in line, and mark a paper ballot, or else to send their vote by post well in advance of election day. In an age when people bank, shop, and communicate online, this process can seem strangely old-fashioned. It is therefore not surprising that many have asked whether citizens should be allowed to vote over the internet, using their computers or smartphones. A few countries have already introduced online voting, while many others have considered it and decided, at least for now, against it.",
+      "Supporters argue that online voting would make participation easier and therefore increase turnout. People who are busy with work or childcare, who live far from a polling station, who are traveling or living abroad, or who have disabilities that make it difficult to leave their homes would all find it easier to vote if they could do so from wherever they happened to be. Young people in particular, who are accustomed to doing almost everything online and who tend to vote less often than older citizens, might be more likely to participate if voting were as simple as sending a message.",
+      "Online voting might also reduce the cost and complexity of running elections. Paper ballots must be printed, transported, counted by hand, and stored securely, and polling stations must be staffed by large numbers of officials. Electronic votes could be counted almost instantly, reducing the possibility of human error and allowing results to be announced more quickly. Supporters add that a secure online system could also make it easier to hold more frequent consultations, allowing citizens to express their views on specific issues between elections.",
+      "Critics, however, consider these advantages far outweighed by the risks. The most serious concern is security. An online voting system would be an attractive target for hackers, including those working on behalf of foreign governments, who might attempt to alter results, delete votes, or simply cause enough disruption to make the public doubt the outcome. ( A ) online banking faces similar threats, critics point out, there is a crucial difference: a bank can detect and correct fraud because each transaction is linked to an identified customer, whereas a vote must remain secret.",
+      "This tension between verification and secrecy lies at the heart of the problem. In a traditional election, the secrecy of the ballot is protected by the physical privacy of the voting booth, and the accuracy of the count can be checked by observers who watch the paper ballots being counted. In an online system, it is much harder to guarantee both that each vote has been recorded correctly and that no one can discover how a particular person voted. Critics also worry that voting at home could expose people to pressure from family members or employers who wish to see how they vote.",
+      "There is also the question of public trust. An election is valuable not only because it produces a result but because citizens, including those who supported the losing side, accept that result as legitimate. Paper ballots, for all their inconvenience, can be recounted and examined by anyone, whereas the workings of an electronic system are understood only by specialists. Even if an online system were in fact secure, the mere suspicion that it might have been manipulated could damage confidence in democracy itself, particularly in societies where political divisions are already deep.",
+      "The debate over online voting thus illustrates a recurring dilemma in the use of technology: convenience and efficiency must be weighed against security, privacy, and trust. Some experts believe that future advances may solve the technical problems, while others doubt that a system can ever be both fully verifiable and fully secret. In the meantime, many countries have chosen to expand other ways of making voting easier, such as postal voting and longer voting periods. Whatever methods are used, the essential goal remains the same: elections that are accessible to all and trusted by all.",
+    ],
+    ja: [
+      'ほとんどの民主主義国では、投票にはまだ、市民が自分で投票所に行き、列にならんで紙の投票用紙に記入するか、さもなければ選挙の日よりずっと前に郵便で票を送ることが必要である。人々がオンラインで銀行の取り引きをし、買い物をし、連絡をとりあう時代には、この手続きは奇妙に古くさく思われることがある。だから、市民がコンピューターやスマートフォンを使ってインターネットで投票することをゆるされるべきかどうかと多くの人が問うてきたのはおどろくにあたらない。すでにオンライン投票を導入した国もいくつかあるが、ほかの多くの国はそれを検討したうえで、少なくとも今のところは導入しないと決めた。',
+      '支持する人々は、オンライン投票は参加をしやすくし、したがって投票率を上げるだろうと主張する。仕事や子育てでいそがしい人、投票所から遠くに住んでいる人、旅行中や外国に住んでいる人、家を出るのがむずかしい障害のある人は、どこにいても投票できれば、みな投票しやすくなるだろう。とくに、ほとんど何でもオンラインでするのになれており、年配の市民よりも投票する回数が少ない傾向のある若者は、投票がメッセージを送るのと同じくらいかんたんなら、参加しやすくなるかもしれない。',
+      'オンライン投票はまた、選挙を運営する費用と手間をへらすかもしれない。紙の投票用紙は印刷され、運ばれ、手で数えられ、安全に保管されなければならず、投票所には大勢の係員を配置しなければならない。電子の票はほとんど一瞬で数えられ、人のまちがいの可能性をへらし、結果をより早く発表できるだろう。支持する人々は、安全なオンラインの仕組みがあれば、選挙と選挙のあいだに市民が特定の問題について意見を表せるよう、より頻繁に意見を聞くこともしやすくなるだろうとつけ加える。',
+      'しかし批判する人々は、こうした利点は危険によってはるかに上回られると考えている。最も深刻な懸念は安全性である。オンライン投票の仕組みは、外国政府のために動く者をふくむハッカーにとって魅力的な標的になり、彼らは結果を書きかえたり、票を消したり、単に人々が結果を疑うほどの混乱を引き起こしたりしようとするかもしれない。オンラインの銀行も同じようなおびやかしに直面しているが、決定的なちがいがある、と批判する人々は指摘する。銀行はそれぞれの取り引きが特定された客と結びついているので不正を見つけて正すことができるが、票は秘密のままでなければならないのである。',
+      '確認と秘密とのあいだのこの緊張が、問題の核心にある。伝統的な選挙では、投票の秘密は記入台の物理的なプライバシーによって守られ、集計の正確さは紙の投票用紙が数えられるのを見守る立会人によって確かめることができる。オンラインの仕組みでは、それぞれの票が正しく記録されたことと、ある人がどう投票したかをだれも知ることができないことの両方を保証するのは、ずっとむずかしい。批判する人々はまた、家で投票すると、その人がどう投票するかを見たがる家族や雇い主からの圧力に人々がさらされかねないと心配している。',
+      '公の信頼の問題もある。選挙が価値をもつのは、それが結果を生むからだけでなく、負けた側を支持した人をふくむ市民が、その結果を正当なものとして受け入れるからである。紙の投票用紙は、不便ではあっても、だれでも数え直したり調べたりできるが、電子の仕組みのはたらきは専門家にしか理解されない。たとえオンラインの仕組みが実際には安全だったとしても、それが操作されたかもしれないという疑いだけで、とくに政治的な分断がすでに深い社会では、民主主義そのものへの信頼がそこなわれかねない。',
+      'このようにオンライン投票をめぐる議論は、技術の利用でくり返し生じるジレンマを示している。便利さと効率を、安全とプライバシーと信頼に対してはからなければならないというジレンマである。将来の進歩が技術的な問題を解決するかもしれないと信じる専門家もいれば、ある仕組みが完全に確認でき、しかも完全に秘密であることがありうるのか疑う専門家もいる。そのあいだ、多くの国は、郵便投票や投票期間の延長のような、投票をしやすくするほかの方法を広げることを選んできた。どんな方法が使われるにせよ、根本的な目標は同じである。すべての人が参加でき、すべての人に信頼される選挙である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「オンラインの銀行も同じおびやかしに直面しているが、決定的なちがいがある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say online voting would raise ( 1 ) and reduce the cost of elections. Critics fear hacking and point out that it is hard to guarantee both accurate counting and the ( 2 ) of each vote. Even a secure system might damage public ( 3 ) if people suspected manipulation.',
+      blanks: [
+        { choices: ['turnout', 'taxes', 'prices', 'crime'], answer: 0, why: '第2段落 would make participation easier and therefore increase turnout。' },
+        { choices: ['secrecy', 'color', 'length', 'price'], answer: 0, why: '第5段落 This tension between verification and secrecy。' },
+        { choices: ['trust', 'transport', 'health', 'weather'], answer: 0, why: '第6段落 There is also the question of public trust。' },
+      ],
+    },
+    tf: [
+      { statement: 'すでにオンライン投票を導入した国もいくつかある。', answer: true, why: '第1段落 A few countries have already introduced online voting。' },
+      { statement: '若者は年配の市民よりも投票する回数が多い傾向がある。', answer: false, why: '第2段落 who tend to vote less often than older citizens。' },
+      { statement: '批判する人々によれば、銀行とちがって票は特定の人と結びつけられない。', answer: true, why: '第4段落 whereas a vote must remain secret。' },
+      { statement: '筆者によれば、すべての専門家が将来の技術で問題が解決すると信じている。', answer: false, why: '第7段落 while others doubt that a system can ever be both fully verifiable and fully secret。' },
+    ],
+    qa: [
+      { q: 'What might voting at home expose people to, according to critics?', choices: ['Pressure from family members or employers.', 'Longer lines at polling stations.', 'Higher taxes.', 'Bad weather.'], answer: 0, why: '第5段落 could expose people to pressure from family members or employers。' },
+      { q: 'What have many countries chosen to do in the meantime?', choices: ['Expand other ways such as postal voting.', 'Abolish elections.', 'Introduce online voting everywhere.', 'Ban paper ballots.'], answer: 0, why: '第7段落 expand other ways of making voting easier, such as postal voting。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
