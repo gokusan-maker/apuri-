@@ -30142,6 +30142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wonder',
+    title: 'Wonder and Knowledge',
+    level: '難関大（評論）',
+    paragraphs: [
+      "There are moments when the ordinary world suddenly appears extraordinary. We look up at a night sky filled with stars, watch a seed grow into a plant, or realize for the first time how a familiar machine actually works, and we are struck by the strangeness of something we had always taken for granted. This experience, which we call wonder, has been regarded by many philosophers as the origin of thought itself. To wonder is to be surprised that things are as they are, and from that surprise arises the desire to understand why.",
+      "Yet wonder is a curiously fragile experience. It tends to be strongest in childhood, when nearly everything is new, and to fade as we grow older and become accustomed to the world. The adult who has seen thousands of sunsets may no longer pause to notice one, and the scientist who has explained a phenomenon may feel that there is nothing left about it to marvel at. Familiarity, it seems, is the enemy of wonder, and knowledge, which wonder first inspires, may eventually destroy the very feeling that gave rise to it.",
+      "This apparent conflict between wonder and knowledge is, however, less straightforward than it seems. It is true that explanation can remove a certain kind of surprise: once we know how a rainbow is formed, we are no longer puzzled by its appearance. But understanding can also reveal new grounds for wonder that were invisible before. ( A ) a child may marvel at the colors of a rainbow, a physicist who understands the behavior of light may marvel even more deeply at the simple laws that produce such beauty, and at the fact that the universe should be intelligible at all.",
+      "Wonder, then, need not be the opposite of knowledge; it may instead be a particular attitude toward what we know. The same fact can be met with indifference or with astonishment, depending on whether we regard it as something to be filed away or as something that continues to call for reflection. In this sense, the capacity for wonder is not simply a gift of childhood that inevitably disappears, but something that can be preserved and even cultivated by those who resist the temptation to treat the world as already fully explained.",
+      "What threatens wonder in modern life is perhaps not knowledge itself but a certain way of relating to it. When information is constantly available and every question seems to have an immediate answer, it becomes easy to assume that nothing is genuinely mysterious, and that whatever we do not understand could be looked up if we cared to do so. The danger is not that we know too much, but that we mistake the possession of information for understanding, and so lose the sense that the world exceeds our grasp.",
+      "There is also a moral dimension to wonder. To wonder at something is to recognize that it has a reality and a value independent of our purposes, that it is not merely a resource to be used or an obstacle to be removed. People who are capable of wonder at the natural world may be more inclined to protect it, and those who can wonder at the complexity of other human beings may be less inclined to reduce them to simple categories. Wonder, in this way, can be a source of humility and respect as well as of curiosity.",
+      "Perhaps the task, then, is not to choose between wonder and knowledge, but to learn how to hold them together. An education that fills students with facts but never invites them to marvel at those facts may produce people who are well informed but strangely unmoved by the world they live in. An education that encourages wonder without discipline, on the other hand, may leave them with feelings but little understanding. The deepest kind of learning may be that in which each new piece of knowledge renews, rather than exhausts, our astonishment that there is a world at all.",
+    ],
+    ja: [
+      'ふつうの世界が急にふつうでないものに見える瞬間がある。星でいっぱいの夜空を見上げたり、種が植物に育つのを見たり、身近な機械が実際にどう動いているのかをはじめてわかったりするとき、私たちは、いつも当たり前だと思っていたものの不思議さに打たれる。私たちが驚異とよぶこの経験は、多くの哲学者に、思考そのものの起源とみなされてきた。驚異するとは、物事がそのようにあることにおどろくことであり、そのおどろきから、なぜなのかを理解したいという欲求が生まれるのである。',
+      'しかし驚異は、奇妙にもろい経験である。それはほとんどすべてが新しい子ども時代に最も強く、私たちが成長して世界になれるにつれてうすれていく傾向がある。何千回も夕日を見てきたおとなは、もはや立ち止まってそれに気づかないかもしれず、ある現象を説明した科学者は、それについておどろくべきことはもう何も残っていないと感じるかもしれない。なれは驚異の敵であるように思われ、驚異がはじめに呼び起こす知識が、最後にはそれを生んだ感情そのものをこわしてしまうかもしれない。',
+      'しかし、驚異と知識とのあいだのこの見かけ上の対立は、見かけほど単純ではない。説明がある種のおどろきを取りのぞきうるのは確かである。にじがどのようにできるかを知れば、私たちはもうその出現に首をかしげはしない。しかし理解はまた、以前には見えなかった驚異の新しい理由を明らかにしうる。子どもはにじの色におどろくかもしれないが、光のふるまいを理解している物理学者は、そのような美しさを生む単純な法則に、そしてそもそも宇宙が理解できるものであるという事実に、さらに深くおどろくかもしれない。',
+      'それなら驚異は知識の反対である必要はない。むしろそれは、私たちが知っていることに対する特定の態度なのかもしれない。同じ事実でも、それをしまいこんでおくべきものとみなすか、考えることを求め続けるものとみなすかによって、無関心で受けとめられることもあれば、おどろきで受けとめられることもある。この意味で、驚異する力は、いずれかならず消えていく子ども時代のおくりものにすぎないのではなく、世界をすでに完全に説明されたものとしてあつかう誘惑にあらがう人々によって保たれ、育てられさえするものなのである。',
+      '現代の生活で驚異をおびやかしているのは、おそらく知識そのものではなく、知識とのある種のかかわり方である。情報がいつも手に入り、あらゆる問いにすぐ答えがあるように思われるとき、本当に不思議なものは何もなく、理解していないことは何であれ、その気になれば調べられるだろうと思いこむのはたやすくなる。危険なのは、私たちが知りすぎることではなく、情報をもっていることを理解ととりちがえ、そのために世界が自分の手にあまるという感覚を失うことなのである。',
+      '驚異には道徳的な面もある。何かに驚異することは、それが私たちの目的から独立した現実と価値をもっていること、それが単に使うべき資源やとりのぞくべき障害ではないことを認めることである。自然界に驚異できる人々は、それを守ろうとする気持ちが強いかもしれず、ほかの人間の複雑さに驚異できる人々は、その人を単純な分類に切りつめようとする気持ちが弱いかもしれない。このように驚異は、好奇心だけでなく謙虚さと敬意のみなもとにもなりうるのである。',
+      'それなら、課題は驚異と知識のどちらかを選ぶことではなく、その両方をあわせもつ方法を学ぶことなのかもしれない。生徒に事実をつめこむが、その事実におどろくよう一度も誘わない教育は、情報は十分にもっているが、自分が生きている世界に奇妙に心を動かされない人々を生み出すかもしれない。一方、規律のない驚異をうながす教育は、彼らに感情は残しても理解はほとんど残さないかもしれない。最も深い種類の学びとは、新しい知識の一つ一つが、そもそも世界があるということへのおどろきを、つきさせるのではなく新たにするような学びなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Once'], answer: 0, why: '「子どもはにじの色におどろくかもしれない一方で、物理学者はさらに深くおどろくかもしれない」という対比なので While。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、多くの哲学者は驚異を思考の起源とみなしてきた。', answer: true, why: '第1段落 has been regarded by many philosophers as the origin of thought itself。' },
+      { statement: '筆者によれば、驚異は年をとるにつれて強くなる傾向がある。', answer: false, why: '第2段落 to fade as we grow older。' },
+      { statement: '筆者によれば、理解は驚異の新しい理由を明らかにしうる。', answer: true, why: '第3段落 understanding can also reveal new grounds for wonder。' },
+      { statement: '筆者は、現代の危険は私たちが知りすぎることだと述べている。', answer: false, why: '第5段落 The danger is not that we know too much。' },
+    ],
+    qa: [
+      { q: 'What may people who can wonder at the natural world be more inclined to do?', choices: ['Protect it.', 'Ignore it.', 'Sell it.', 'Explain it away.'], answer: 0, why: '第6段落 may be more inclined to protect it。' },
+      { q: 'What may an education that fills students with facts but never invites wonder produce?', choices: ['People who are well informed but unmoved by the world.', 'People with feelings but no knowledge.', 'People who refuse to learn.', 'Better scientists in every case.'], answer: 0, why: '第7段落 well informed but strangely unmoved by the world they live in。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
