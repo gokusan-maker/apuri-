@@ -32978,6 +32978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-wealth-tax',
+    title: 'Should the Very Rich Pay a Wealth Tax?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the gap between the richest people and everyone else has grown considerably over recent decades. A small number of individuals now own a remarkably large share of national wealth, often in the form of company shares, property, and other investments whose value has risen far faster than ordinary wages. In response, some economists and politicians have proposed a tax not on income but on wealth itself, requiring the very richest people to pay a small percentage of their total assets each year. The proposal has provoked intense debate.",
+      "Supporters argue first that a wealth tax would make the tax system fairer. Much of the income of the very rich comes from increases in the value of assets rather than from salaries, and such gains are often taxed lightly or only when the assets are sold. As a result, some of the wealthiest people pay a smaller share of their income in tax than ordinary workers do. A modest annual tax on very large fortunes, supporters say, would correct this imbalance and ensure that those who have benefited most from the economy contribute their fair share.",
+      "Supporters also emphasize the social and political effects of extreme inequality. When wealth is highly concentrated, those who possess it may gain disproportionate influence over politics, the media, and public debate. ( A ) a wealth tax would affect only a small number of people, supporters argue that it could raise substantial revenue for education, health care, and other public services, while also limiting the concentration of power that threatens democratic equality.",
+      "Critics, however, raise practical objections. Unlike income, which can be measured relatively easily, wealth takes many forms, and the value of assets such as private companies, works of art, or land may be difficult to determine. Calculating and checking these values every year would require a large and costly administrative system. Critics also point out that several countries that once had wealth taxes later abolished them, partly because they raised less money than expected and were expensive to manage. In some of these cases, the burden fell not only on the very rich but also on families who owned valuable property but had modest incomes.",
+      "Another concern is that the rich may simply move their money, or themselves, elsewhere. In a world where capital can cross borders easily, wealthy individuals may transfer assets to countries with lower taxes or use complex legal arrangements to hide them. If this happens, a wealth tax might raise little revenue while encouraging the very people whose investment supports jobs and growth to leave. Some critics also argue that taxing savings and investment, rather than spending, discourages the activities that make an economy more productive.",
+      "Defenders of the tax reply that these problems can be reduced through careful design. A tax that applies only to extremely large fortunes, with few exemptions, would be simpler to administer and harder to avoid. International cooperation, including the sharing of information about bank accounts and assets between countries, has already made it more difficult to hide wealth abroad. Some propose that a person who leaves the country should pay a final tax on his or her wealth, so that moving abroad offers less advantage. Such measures, they argue, show that the obstacles are political rather than technical.",
+      "The debate over a wealth tax reflects a deeper disagreement about what a fair society requires. Some believe that people who have built or inherited great fortunes should be free to keep them, provided they obey the law, while others believe that extreme concentrations of wealth are harmful in themselves and should be limited. Whatever position one takes, the question encourages citizens to consider not only how much revenue governments need, but also what degree of inequality a democratic society can accept.",
+    ],
+    ja: [
+      '多くの国で、最も裕福な人々とそれ以外のすべての人々との差は、ここ数十年でかなり広がった。今ではごく少数の個人が、国の富のおどろくほど大きな割合を、しばしば会社の株や不動産や、ふつうの賃金よりはるかに速く価値が上がったほかの投資の形でもっている。これにこたえて、一部の経済学者や政治家は、所得ではなく富そのものに税をかけ、ごく一部の最も裕福な人々に毎年資産全体の小さな割合をはらわせることを提案してきた。この提案ははげしい議論を引き起こしている。',
+      '支持する人々は、まず富裕税が税の仕組みをより公平にすると主張する。ごく裕福な人々の収入の多くは給料からではなく資産の価値の上昇から来ており、そうした利益はしばしば軽くしか課税されないか、資産が売られたときにしか課税されない。その結果、最も裕福な人々の中には、ふつうの働き手より収入のうち小さな割合しか税をはらっていない人もいる。ごく大きな財産にかける毎年のささやかな税は、この不つりあいを正し、経済から最も利益を得た人々が公平な分をはらうようにするだろうと支持する人々は言う。',
+      '支持する人々はまた、極端な不平等の社会的・政治的な影響を強調する。富がひどく集中すると、それをもつ人々が政治やメディアや公の議論に不つりあいな影響力をもつかもしれない。富裕税は少数の人々にしか影響しないが、教育や医療やほかの公共サービスのための多くの税収を生み、同時に民主的な平等をおびやかす権力の集中をおさえることができると支持する人々は主張する。',
+      'しかし批判する人々は、実際的な反対をあげる。比較的かんたんにはかれる所得とちがって、富はさまざまな形をとり、非公開の会社や美術品や土地のような資産の価値は決めにくいかもしれない。こうした価値を毎年計算し確かめるには、大きく費用のかかる行政の仕組みが必要になるだろう。批判する人々はまた、かつて富裕税をもっていたいくつかの国が、一部には期待より税収が少なく管理に費用がかかったために、のちにそれを廃止したことも指摘する。そうした例の中には、負担がごく裕福な人々だけでなく、価値のある不動産をもちながら収入はそれほど多くない家族にもかかったものもあった。',
+      'もう一つの心配は、裕福な人々が単にお金を、あるいは自分自身をよそへ移すかもしれないということである。資本がかんたんに国境をこえる世界では、裕福な個人は資産を税の低い国へ移したり、複雑な法的な仕組みを使ってそれをかくしたりするかもしれない。そうなれば、富裕税はほとんど税収を生まず、その投資が仕事や成長をささえているまさにその人々が出ていくのをうながしてしまうかもしれない。支出ではなく貯蓄や投資に課税することは、経済をより生産的にする活動をさまたげると主張する批判者もいる。',
+      'この税を擁護する人々は、こうした問題は注意深い設計によって減らせるとこたえる。ごく大きな財産だけに、例外を少なくしてかける税なら、管理しやすく、のがれにくいだろう。国々のあいだで銀行口座や資産についての情報を共有することをふくむ国際的な協力によって、富を外国にかくすことはすでにむずかしくなっている。国を出る人には富に対して最後の税をはらわせ、外国に移ってもあまり得にならないようにすることを提案する人々もいる。こうした方法は、障害が技術的なものではなく政治的なものであることを示していると彼らは主張する。',
+      '富裕税をめぐる議論は、公平な社会に何が必要かについてのより深い意見のちがいを反映している。大きな財産を築いたり受けついだりした人は、法律を守るかぎりそれをもち続ける自由があるべきだと信じる人々もいれば、富の極端な集中はそれ自体が有害であり、制限されるべきだと信じる人々もいる。どんな立場をとるにせよ、この問いは市民に、政府にどれだけの税収が必要かだけでなく、民主的な社会がどの程度の不平等を受け入れられるのかも考えるようはげましてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「富裕税は少数の人にしか影響しないが、多くの税収を生みうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a wealth tax would make the tax system fairer and limit the ( 1 ) of power. Critics reply that wealth is difficult to ( 2 ) and that the rich may move their money abroad. Defenders say such problems can be reduced through careful ( 3 ) and international cooperation.',
+      blanks: [
+        { choices: ['concentration', 'education', 'transport', 'weather'], answer: 0, why: '第3段落 limiting the concentration of power。' },
+        { choices: ['measure', 'spend', 'inherit', 'enjoy'], answer: 0, why: '第4段落 Unlike income, which can be measured relatively easily。' },
+        { choices: ['design', 'luck', 'silence', 'advertising'], answer: 0, why: '第6段落 these problems can be reduced through careful design。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によれば、最も裕福な人々の中にはふつうの働き手より小さな割合しか税をはらっていない人もいる。', answer: true, why: '第2段落 pay a smaller share of their income in tax than ordinary workers do。' },
+      { statement: '筆者によれば、富は所得と同じようにかんたんにはかれる。', answer: false, why: '第4段落 Unlike income ... wealth takes many forms。' },
+      { statement: 'かつて富裕税をもっていた国の中には、のちにそれを廃止した国もある。', answer: true, why: '第4段落 several countries that once had wealth taxes later abolished them。' },
+      { statement: '国際的な協力によって、富を外国にかくすことはかんたんになった。', answer: false, why: '第6段落 has already made it more difficult to hide wealth abroad。' },
+    ],
+    qa: [
+      { q: 'Where does much of the income of the very rich come from?', choices: ['Increases in the value of assets.', 'Salaries alone.', 'Government support.', 'Lottery prizes.'], answer: 0, why: '第2段落 comes from increases in the value of assets rather than from salaries。' },
+      { q: 'What do some propose for people who leave the country?', choices: ['That they pay a final tax on their wealth.', 'That they never return.', 'That they pay no tax at all.', 'That they give up their citizenship.'], answer: 0, why: '第6段落 should pay a final tax on his or her wealth。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
