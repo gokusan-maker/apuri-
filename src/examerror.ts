@@ -4298,6 +4298,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) However (B) much money (C) he has, (D) he never seem happy.', choices: ['(A) However', '(B) much money', '(C) he has,', '(D) he never seem happy'], answer: 3, why: '主語 he は三人称単数。he never seems happy。' },
     ],
   },
+  {
+    id: 'exam-error-nonrestrictive-kokuritsu',
+    title: '入試の正誤問題〈181〉（国公立レベル：関係代名詞の非制限用法 , which・, who）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'カンマのあとに関係詞を置く非制限用法は、先行詞に情報を「付け足す」用法。人は , who（目的格 , whom）、物は , which、場所は , where、時は , when。非制限用法では that は使えない。, which は前の文全体を受けることもできる（She said nothing, which made him angry.）。関係詞が目的語なら it・him などをくり返さない。前置詞のあとは whom・which（both of whom）。',
+    ],
+    examples: [
+      { en: 'My brother, who lives in Osaka, is a doctor.', ja: '私の兄は大阪に住んでいて、医者だ。' },
+      { en: 'She said nothing, which made him angry.', ja: '彼女は何も言わず、それが彼をおこらせた。' },
+    ],
+    questions: [
+      { sentence: '(A) My brother, (B) that lives (C) in Osaka, (D) is a doctor.', choices: ['(A) My brother,', '(B) that lives', '(C) in Osaka,', '(D) is a doctor'], answer: 1, why: 'カンマのあとの非制限用法では that は使えない。who lives。' },
+      { sentence: '(A) I visited Kyoto, (B) where (C) I met (D) an old friend there.', choices: ['(A) I visited Kyoto,', '(B) where', '(C) I met', '(D) an old friend there'], answer: 3, why: 'where がすでに「そこで」の意味をふくむので there は不要。' },
+      { sentence: '(A) She said nothing, (B) what (C) made (D) him angry.', choices: ['(A) She said nothing,', '(B) what', '(C) made', '(D) him angry'], answer: 1, why: '前の文全体を受ける非制限用法は which。which made him angry。' },
+      { sentence: '(A) This book, (B) which (C) I bought it yesterday, (D) is very interesting.', choices: ['(A) This book,', '(B) which', '(C) I bought it yesterday,', '(D) is very interesting'], answer: 2, why: 'which が bought の目的語なので it は不要。which I bought yesterday。' },
+      { sentence: '(A) Mr. Sato, (B) who (C) are our teacher, (D) is from Hokkaido.', choices: ['(A) Mr. Sato,', '(B) who', '(C) are our teacher,', '(D) is from Hokkaido'], answer: 2, why: '先行詞 Mr. Sato は単数なので who is。' },
+      { sentence: '(A) He has two sons, (B) both of who (C) are (D) doctors.', choices: ['(A) He has two sons,', '(B) both of who', '(C) are', '(D) doctors'], answer: 1, why: '前置詞のあとの人を表す関係代名詞は whom。both of whom。' },
+      { sentence: '(A) Which (B) is surprising, (C) he (D) passed the exam.', choices: ['(A) Which', '(B) is surprising,', '(C) he', '(D) passed the exam'], answer: 0, why: 'which は前に先行詞が必要。文頭で「おどろいたことに」は What is surprising（先行詞をふくむ what）。' },
+      { sentence: '(A) I have a friend, (B) whose (C) father (D) are a pilot.', choices: ['(A) I have a friend,', '(B) whose', '(C) father', '(D) are a pilot'], answer: 3, why: '主語 father は単数なので is a pilot。' },
+      { sentence: '(A) The train was late, (B) that (C) made us (D) miss the meeting.', choices: ['(A) The train was late,', '(B) that', '(C) made us', '(D) miss the meeting'], answer: 1, why: '前の文全体を受けるのは , which。that は非制限用法に使えない。' },
+      { sentence: '(A) Tokyo, (B) that is (C) the capital of Japan, (D) has many museums.', choices: ['(A) Tokyo,', '(B) that is', '(C) the capital of Japan,', '(D) has many museums'], answer: 1, why: '非制限用法では that は使えない。which is。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
