@@ -30382,6 +30382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-hypocrisy',
+    title: 'Ideals, Failure, and Hypocrisy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few accusations are as damaging as the charge of hypocrisy. When a politician who speaks of honesty is found to have lied, or a teacher who demands punctuality is regularly late, we feel not merely disappointed but betrayed, as though the gap between their words and their actions had exposed a deeper dishonesty. The hypocrite seems worse than someone who simply behaves badly, since he or she adds to the original fault the pretense of virtue. Yet the widespread contempt for hypocrisy raises a difficult question: is it always better to abandon one's ideals than to fail to live up to them?",
+      "Consider what it would mean to avoid hypocrisy entirely. One way would be to live perfectly according to one's principles, but this is a standard that no human being can meet. The other way would be to lower one's principles until they matched one's actual behavior, so that there would be no gap to expose. A person who believed in nothing, or who held only those values that he or she already practiced without effort, could never be accused of hypocrisy. But such a person would hardly be admirable. The absence of hypocrisy, in this case, would be purchased at the cost of the absence of aspiration.",
+      "This suggests that a certain gap between ideals and conduct is not only unavoidable but in some sense necessary. Ideals are, by their nature, things that exceed what we have already achieved; they point us toward what we might become rather than describing what we are. ( A ) the person who preaches generosity while sometimes acting selfishly may be open to criticism, he or she at least acknowledges a standard by which his or her conduct can be judged, and may be moved by that standard to improve.",
+      "It is important, however, to distinguish between different kinds of gap. There is a difference between the person who sincerely holds an ideal and struggles, often unsuccessfully, to live up to it, and the person who professes an ideal merely to gain the approval of others while making no effort to follow it. The first is engaged in the ordinary moral struggle of human life; the second uses the language of virtue as a disguise. It is chiefly the second, perhaps, that deserves the name of hypocrisy in its full sense.",
+      "The intensity of our contempt for hypocrisy may also reveal something about ourselves. Accusing others of hypocrisy can be a convenient way of dismissing what they say without considering whether it is true. A smoker who warns young people against smoking may be inconsistent, but the warning is not therefore wrong. To reject a sound argument because the person who makes it fails to follow it is to confuse the message with the messenger, and to excuse oneself from the demands that the argument makes.",
+      "Moreover, a society that punishes every inconsistency harshly may discourage people from expressing ideals at all. If speaking in favor of honesty, kindness, or environmental responsibility exposes one to ridicule whenever one falls short, many may decide that it is safer to remain silent. The result would not be a more honest society but a more cynical one, in which public life is emptied of moral language because no one dares to use it. Some tolerance for imperfection may thus be the price of keeping ideals alive.",
+      "None of this is a defense of the deliberate deceiver who uses noble words to conceal selfish purposes. It is, rather, a plea for a more careful judgment. Before condemning someone as a hypocrite, we might ask whether he or she is pretending to a virtue or striving for it, and whether our condemnation is a response to wrongdoing or an escape from uncomfortable truths. To live with ideals is always to live with a degree of failure, and the honest recognition of that failure may be closer to integrity than the comfortable consistency of those who aspire to nothing.",
+    ],
+    ja: [
+      '偽善だという非難ほど人を傷つけるものは少ない。正直さを語る政治家がうそをついていたとわかったり、時間を守るよう求める先生がいつも遅刻したりすると、私たちは単に失望するだけでなく、まるでことばと行動のへだたりがより深い不正直をあばいたかのように、裏切られたと感じる。偽善者は単に悪くふるまう人よりも悪いように思われる。もとの欠点に美徳のふりを加えているからである。しかし偽善への広く行きわたった軽蔑は、むずかしい問いを投げかける。理想にとどかないことよりも、理想をすててしまうほうがいつもよいのだろうか。',
+      '偽善を完全にさけるとはどういうことかを考えてみよう。一つの方法は、自分の原則に完全に従って生きることだが、これはどんな人間にも満たせない基準である。もう一つの方法は、自分の原則を実際のふるまいに合うところまで下げ、あばかれるへだたりがなくなるようにすることだろう。何も信じていない人や、すでに努力せずに実行している価値だけをもっている人は、けっして偽善だと非難されることはありえない。しかしそのような人はほとんど称賛に値しないだろう。この場合、偽善がないことは、向上心がないことと引きかえに手に入れられることになる。',
+      'このことは、理想とふるまいとのあいだのある程度のへだたりは、さけられないだけでなく、ある意味で必要でもあることを示している。理想とは、その性質上、私たちがすでに達成したものをこえるものである。それは私たちが何であるかを描くのではなく、何になりうるかへと私たちを向かわせる。ときに自分勝手にふるまいながら気前のよさを説く人は批判されうるが、少なくとも自分のふるまいを判断できる基準を認めており、その基準によって向上しようと動かされるかもしれない。',
+      'しかし、ちがう種類のへだたりを区別することが大切である。理想を心から大切にし、しばしばうまくいかないながらもそれにとどこうと苦闘する人と、他人の承認を得るためだけに理想を口にし、それに従う努力をまったくしない人とのあいだにはちがいがある。前者は人間の生活のふつうの道徳的な苦闘に取り組んでいる。後者は美徳のことばを変装として使っている。完全な意味で偽善の名に値するのは、おそらく主に後者なのである。',
+      '偽善への軽蔑のはげしさは、私たち自身について何かを明らかにしてもいるかもしれない。他人を偽善だと非難することは、その人の言うことが正しいかどうかを考えずに退ける便利な方法になりうる。たばこを吸う人が若者に喫煙をいましめるのは一貫していないかもしれないが、だからといってその警告がまちがっているわけではない。正しい議論を、それを述べる人がそれに従っていないからといって退けることは、伝えられる内容と伝える人とを混同し、その議論が求めることから自分を免除することである。',
+      'そのうえ、あらゆる不一致をきびしく罰する社会は、人々がそもそも理想を表明すること自体をためらわせるかもしれない。正直さや親切さや環境への責任を支持して語ると、とどかないたびにあざけりを受けるのなら、多くの人はだまっているほうが安全だと決めるかもしれない。その結果は、より正直な社会ではなく、よりひねくれた社会であろう。そこでは、だれも道徳的なことばを使おうとしないので、公の生活からそれが失われてしまう。こうして、不完全さへのある程度の寛容は、理想を生かし続けるための代価なのかもしれない。',
+      'このどれも、自分勝手な目的をかくすために気高いことばを使う、意図的にあざむく人を弁護するものではない。それはむしろ、より注意深い判断を求めるうったえである。人を偽善者として非難する前に、その人が美徳のふりをしているのか、それとも美徳を目指しているのか、そして自分の非難があやまちへの反応なのか、それとも居心地の悪い真実からの逃避なのかを問うてみてもよいだろう。理想とともに生きることは、いつもある程度の失敗とともに生きることであり、その失敗を正直に認めることは、何も目指さない人々の居心地のよい一貫性よりも、誠実さに近いのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「批判されうるが、少なくとも基準を認めている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、自分の原則に完全に従って生きることはだれにでもできる。', answer: false, why: '第2段落 this is a standard that no human being can meet。' },
+      { statement: '筆者によれば、理想とふるまいのへだたりはある意味で必要である。', answer: true, why: '第3段落 not only unavoidable but in some sense necessary。' },
+      { statement: '筆者によれば、警告を述べる人が一貫していなければ、その警告はまちがっている。', answer: false, why: '第5段落 the warning is not therefore wrong。' },
+      { statement: '筆者は、意図的にあざむく人を弁護していない。', answer: true, why: '第7段落 None of this is a defense of the deliberate deceiver。' },
+    ],
+    qa: [
+      { q: 'What kind of person deserves the name of hypocrisy in its full sense, according to the fourth paragraph?', choices: ['One who professes an ideal only to gain approval.', 'One who struggles to live up to an ideal.', 'One who has no ideals at all.', 'One who never speaks in public.'], answer: 0, why: '第4段落 the person who professes an ideal merely to gain the approval of others ... deserves the name of hypocrisy。' },
+      { q: 'What might a society that punishes every inconsistency become?', choices: ['A more cynical society.', 'A more honest society.', 'A society full of ideals.', 'A society without leaders.'], answer: 0, why: '第6段落 The result would not be a more honest society but a more cynical one。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
