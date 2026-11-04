@@ -2360,3 +2360,10 @@ it('誤文訂正〈165〉：東大レベル few・a few・little・a little の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('little')
 })
+
+it('正誤問題〈172〉：京大レベル 同格の that と関係代名詞の that の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-doukaku-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) which')
+})

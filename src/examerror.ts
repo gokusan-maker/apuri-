@@ -4082,6 +4082,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'You won’t pass (A) unless (B) you (C) don’t practice (D) every day.', choices: ['(A) unless', '(B) you', '(C) don’t practice', '(D) every day'], answer: 2, why: 'unless に否定の意味がふくまれるので practice。' },
     ],
   },
+  {
+    id: 'exam-error-doukaku-kyodai',
+    title: '入試の正誤問題〈172〉（京大レベル：同格の that と関係代名詞の that の見分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '同格の that は the news・the fact・the idea・a rumor・no doubt などのあとで「～という」と内容を説明し、うしろは欠けたところのない完全な文。which・what は使えない。関係代名詞の that は、うしろの文で主語や目的語が欠けているので、目的語の it などをくり返さない。見分け方：that 以下が完全な文なら同格、主語か目的語が欠けていれば関係代名詞。',
+    ],
+    examples: [
+      { en: 'The news that he had won the prize surprised everyone.', ja: '彼が賞をとったという知らせはみんなをおどろかせた。' },
+      { en: 'I believed the story that he told me.', ja: '私は彼が話してくれた話を信じた。' },
+    ],
+    questions: [
+      { sentence: 'The news (A) which (B) he had won the prize (C) surprised (D) everyone.', choices: ['(A) which', '(B) he had won the prize', '(C) surprised', '(D) everyone'], answer: 0, why: '「彼が賞をとったという知らせ」と内容を説明する同格の that。which は使えない。' },
+      { sentence: 'There is (A) a rumor (B) what (C) the shop will close (D) next month.', choices: ['(A) a rumor', '(B) what', '(C) the shop will close', '(D) next month'], answer: 1, why: '「店が閉まるといううわさ」は同格の that。what は先行詞をとらない。' },
+      { sentence: 'I believed the story (A) that (B) he told (C) it (D) to me.', choices: ['(A) that', '(B) he told', '(C) it', '(D) to me'], answer: 2, why: 'この that は told の目的語になる関係代名詞なので it はいらない。' },
+      { sentence: '(A) The idea (B) that (C) we should work less (D) are popular.', choices: ['(A) The idea', '(B) that', '(C) we should work less', '(D) are popular'], answer: 3, why: '主語は The idea（単数）なので is popular。' },
+      { sentence: 'The fact (A) of (B) she was absent (C) surprised (D) the teacher.', choices: ['(A) of', '(B) she was absent', '(C) surprised', '(D) the teacher'], answer: 0, why: 'うしろに文が続くので同格の that。The fact that ～。' },
+      { sentence: 'The book (A) that (B) I lent (C) you it (D) is mine.', choices: ['(A) that', '(B) I lent', '(C) you it', '(D) is mine'], answer: 2, why: '関係代名詞 that が lent の目的語なので it はいらない。lent you。' },
+      { sentence: '(A) There is (B) no doubt (C) which (D) he is honest.', choices: ['(A) There is', '(B) no doubt', '(C) which', '(D) he is honest'], answer: 2, why: 'There is no doubt that ～「～ということは疑いない」。同格の that。' },
+      { sentence: 'The plan (A) that he proposed (B) it (C) was rejected (D) by the board.', choices: ['(A) that he proposed', '(B) it', '(C) was rejected', '(D) by the board'], answer: 1, why: '関係代名詞 that が proposed の目的語なので it はいらない。' },
+      { sentence: 'She made (A) a promise (B) that (C) she will (D) come back soon.', choices: ['(A) a promise', '(B) that', '(C) she will', '(D) come back soon'], answer: 2, why: '主節が過去なので時制の一致で she would。' },
+      { sentence: 'The belief (A) that (B) hard work (C) always (D) pay off is common.', choices: ['(A) that', '(B) hard work', '(C) always', '(D) pay off is common'], answer: 3, why: '同格の that 節の主語は hard work（単数）なので pays off。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
