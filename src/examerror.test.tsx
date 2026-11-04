@@ -2458,3 +2458,10 @@ it('誤文訂正〈172〉：京大レベル 不定詞の形容詞的用法と前
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('to live in')
 })
+
+it('正誤問題〈179〉：東大レベル 数量表現の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-quantity-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) was absent')
+})

@@ -4250,6 +4250,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Satisfying (B) with (C) the result, (D) he smiled.', choices: ['(A) Satisfying', '(B) with', '(C) the result,', '(D) he smiled'], answer: 0, why: '人の気持ちは過去分詞。be satisfied with ～「～に満足している」なので Satisfied with。' },
     ],
   },
+  {
+    id: 'exam-error-quantity-todai',
+    title: '入試の正誤問題〈179〉（東大レベル：英作文の数量表現 a number of・the number of・most of）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '数量表現の単数・複数：a number of ＋複数名詞「多くの～」は複数扱い、the number of ＋複数名詞「～の数」は単数扱い。most of・all of・some of・分数＋of・percent of は of のあとの名詞に合わせる（数えられる複数なら複数、数えられない名詞や単数なら単数）。each・every・each of・neither of は単数扱い。almost は副詞なので almost all ＋名詞の形にする。',
+    ],
+    examples: [
+      { en: 'A number of students were absent.', ja: '多くの生徒が欠席した。' },
+      { en: 'The number of cars is increasing.', ja: '車の数がふえている。' },
+    ],
+    questions: [
+      { sentence: '(A) A number of (B) students (C) was absent (D) from school yesterday.', choices: ['(A) A number of', '(B) students', '(C) was absent', '(D) from school yesterday'], answer: 2, why: 'a number of ～「多くの～」は複数扱い。were absent。' },
+      { sentence: '(A) The number of (B) cars (C) are increasing (D) every year.', choices: ['(A) The number of', '(B) cars', '(C) are increasing', '(D) every year'], answer: 2, why: 'the number of ～「～の数」は単数扱い。is increasing。' },
+      { sentence: '(A) Most of (B) the student (C) in my class (D) like music.', choices: ['(A) Most of', '(B) the student', '(C) in my class', '(D) like music'], answer: 1, why: 'most of the ～ のあとは特定の複数名詞。the students。' },
+      { sentence: '(A) Most of (B) the water (C) in this river (D) are clean.', choices: ['(A) Most of', '(B) the water', '(C) in this river', '(D) are clean'], answer: 3, why: 'most of のあとが数えられない名詞なら単数扱い。is clean。' },
+      { sentence: '(A) Almost (B) students (C) passed (D) the exam.', choices: ['(A) Almost', '(B) students', '(C) passed', '(D) the exam'], answer: 0, why: 'almost は副詞なので名詞を直接修飾できない。Almost all students（または Most students）。' },
+      { sentence: '(A) Each of (B) the members (C) have (D) a different opinion.', choices: ['(A) Each of', '(B) the members', '(C) have', '(D) a different opinion'], answer: 2, why: 'each of ～ は単数扱い。has。' },
+      { sentence: '(A) Two thirds (B) of the cake (C) were (D) eaten by the children.', choices: ['(A) Two thirds', '(B) of the cake', '(C) were', '(D) eaten by the children'], answer: 2, why: '分数＋of のあとが単数名詞なら単数扱い。was eaten。' },
+      { sentence: '(A) Neither of (B) the answers (C) are correct, (D) I think.', choices: ['(A) Neither of', '(B) the answers', '(C) are correct,', '(D) I think'], answer: 2, why: 'neither of ～ は書き言葉ではふつう単数扱い。is correct。' },
+      { sentence: '(A) Every (B) students (C) has (D) a computer.', choices: ['(A) Every', '(B) students', '(C) has', '(D) a computer'], answer: 1, why: 'every のあとは単数名詞。Every student。' },
+      { sentence: '(A) The majority of (B) people (C) in the town (D) agrees with the plan.', choices: ['(A) The majority of', '(B) people', '(C) in the town', '(D) agrees with the plan'], answer: 3, why: 'the majority of ＋複数名詞は複数扱いがふつう。agree。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
