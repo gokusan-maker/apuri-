@@ -6744,6 +6744,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Are you [interesting] in Japanese history?', choices: ['interested', 'interest', 'interestingly', 'to interest'], answer: 0, why: '「～に興味がある」は be interested in ～。' },
     ],
   },
+  {
+    id: 'exam-fix-158',
+    title: '入試の誤文訂正〈158〉（京大レベル：否定語が文頭に出る倒置 Never have I・Only then did）',
+    points: ['否定や制限の語（Never・Little・Seldom・Rarely・Hardly・No sooner・Not until ～・Only then・Not only・Under no circumstances）が文頭に出ると、そのあとは疑問文と同じ語順（倒置）になる。一般動詞なら do（does・did）＋主語＋動詞の原形、完了形なら have（had）＋主語＋過去分詞、助動詞なら助動詞＋主語。Hardly（No sooner）had I ～ when（than）…「～するとすぐに…」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は一度も見たことがない。' }],
+    questions: [
+      { sentence: 'Never [I have seen] such a beautiful sunset.', choices: ['have I seen', 'I saw', 'I had seen', 'did I saw'], answer: 0, why: 'Never が文頭なので倒置。完了形は have I seen。' },
+      { sentence: 'Only then [I realized] my mistake.', choices: ['did I realize', 'I did realize', 'realized I', 'was I realize'], answer: 0, why: 'Only then が文頭なので倒置。一般動詞の過去は did I realize。' },
+      { sentence: 'Not until he left [I noticed] the problem.', choices: ['did I notice', 'I did notice', 'noticed I', 'I had noticed'], answer: 0, why: 'Not until ～ が文頭なので、主節は倒置 did I notice。' },
+      { sentence: 'Little [he knew] what was waiting for him.', choices: ['did he know', 'he did know', 'knew he', 'he has known'], answer: 0, why: 'Little「まったく～ない」が文頭なので倒置 did he know。' },
+      { sentence: 'Hardly [I had arrived] when it began to rain.', choices: ['had I arrived', 'I arrived', 'did I arrived', 'I have arrived'], answer: 0, why: 'Hardly had I ～ when …「～するとすぐに…」。' },
+      { sentence: 'No sooner [she had sat] down than the phone rang.', choices: ['had she sat', 'she sat', 'did she sat', 'she has sat'], answer: 0, why: 'No sooner had she ～ than …「～するとすぐに…」。' },
+      { sentence: 'Not only [he speaks] English, but he also speaks French.', choices: ['does he speak', 'he does speak', 'speaks he', 'he spoke'], answer: 0, why: 'Not only が文頭なので倒置 does he speak。' },
+      { sentence: 'Seldom [we see] such talent in young players.', choices: ['do we see', 'we do see', 'see we', 'we are seeing'], answer: 0, why: 'Seldom「めったに～ない」が文頭なので倒置 do we see。' },
+      { sentence: 'Under no circumstances [you should] open this door.', choices: ['should you', 'you would', 'you must not', 'should not you'], answer: 0, why: 'Under no circumstances「どんなことがあっても～ない」が文頭なので倒置 should you。' },
+      { sentence: 'Rarely [he has been] late for work.', choices: ['has he been', 'he was', 'he had been', 'was he being'], answer: 0, why: 'Rarely が文頭なので倒置。完了形は has he been。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
