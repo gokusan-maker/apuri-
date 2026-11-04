@@ -2417,6 +2417,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="62" r="4" fill="none" stroke="#1d4ed8" strokeWidth="2" />
       </g>
     )
+  if (species === 'cuttlefish')
+    return (
+      <g>
+        {/* 体のふちのひれと、色が変わるもよう */}
+        <path d="M26 40 Q22 56 26 72 M74 40 Q78 56 74 72" fill="none" stroke="#6b21a8" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M40 54 Q50 48 60 54 M40 62 Q50 56 60 62" fill="none" stroke="#f472b6" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
