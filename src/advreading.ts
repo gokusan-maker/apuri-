@@ -31982,6 +31982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-taste',
+    title: 'Is There No Disputing About Taste?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often say that there is no disputing about taste. One person loves a particular piece of music while another finds it tedious; one admires a painting that another considers ugly. Such differences seem to be matters of personal preference, like liking one flavor of ice cream more than another, and it would be strange to argue that someone is mistaken about what he or she enjoys. Yet we also speak as though some judgments of taste were better than others. We call certain people discerning, we value the opinions of critics, and we believe that our own taste can develop and improve over time.",
+      "This tension suggests that taste is neither purely subjective nor simply objective. On the one hand, a judgment of taste is rooted in personal experience: to find a poem beautiful, one must actually be moved by it, not merely be told that it is good. On the other hand, when we call something beautiful, we seem to claim more than that we happen to like it. We expect others to be able to see what we see, and we are disappointed, even puzzled, when they do not. Taste, in other words, seems to aim at a kind of agreement that it can never guarantee.",
+      "One way to resolve this puzzle is to think of taste as a capacity that can be cultivated. A person who has listened to a great deal of music, learned something about its history and structure, and paid close attention to many performances is likely to notice things that a casual listener misses. ( A ) such a person may still disagree with others who are equally experienced, his or her judgments are informed by a richer understanding, and they deserve to be taken seriously for that reason.",
+      "This view helps to explain why taste often changes as people grow older or learn more. A child may prefer simple melodies and bright colors, while an adult who has encountered a wider range of works may come to appreciate subtlety, complexity, and restraint. Such changes are not merely shifts in fashion. They often reflect a deepening of perception, a growing ability to notice and respond to qualities that were invisible before. The adult who now enjoys a quiet piece of music has not merely changed his or her mind; he or she has learned to hear something that was always there.",
+      "Yet the cultivation of taste carries its own dangers. Taste can become a marker of social status, used to distinguish those who are educated and refined from those who are not. People may pretend to admire works they do not understand in order to appear sophisticated, or dismiss popular forms of art simply because they are popular. When this happens, taste ceases to be a capacity for genuine appreciation and becomes a form of display. Genuine taste, by contrast, is willing to admit uncertainty and to find value in unexpected places.",
+      "There is also a risk that cultivated taste may lose touch with the immediate pleasures that first drew people to art. A critic who has studied a form for many years may become so focused on technique and context that he or she no longer feels the simple joy that a beginner experiences. The most valuable kind of taste may be one that combines knowledge with freshness, allowing a person to understand more deeply without ceasing to be moved.",
+      "Perhaps, then, taste is best understood not as a fixed set of preferences but as a way of paying attention. To develop one's taste is to become more open to what a work offers, more sensitive to its particular qualities, and more honest about one's own responses. Such taste does not require agreement with others, but it does require a willingness to look and listen carefully, and to remain curious about why others see what they see.",
+    ],
+    ja: [
+      '私たちはしばしば、好みについては議論の余地がないと言う。ある人はある曲を愛し、別の人はそれを退屈に思う。ある人が称賛する絵を、別の人はみにくいと考える。そうしたちがいは、あるアイスクリームの味を別の味より好むのと同じように、個人の好みの問題に思われ、だれかが自分の楽しむものについてまちがっていると論じるのは奇妙だろう。しかし私たちはまた、好みの判断のあるものがほかのものよりすぐれているかのように話しもする。ある人々を見る目があるとよび、批評家の意見を大切にし、自分自身の好みが時とともにのび、よくなりうると信じている。',
+      'この緊張は、好みが純粋に主観的でも、単に客観的でもないことを示している。一方で、好みの判断は個人的な経験に根ざしている。ある詩を美しいと思うには、それがよいと言われるだけでなく、実際にそれに心を動かされなければならない。他方で、何かを美しいとよぶとき、私たちはたまたまそれが好きだということ以上のことを主張しているように思われる。ほかの人にも自分が見ているものが見えるはずだと期待し、そうでないときには失望し、とまどいさえするのである。言いかえれば、好みはけっして保証できない一種の一致を目指しているように思われる。',
+      'このなぞを解く一つの方法は、好みを育てることのできる力と考えることである。多くの音楽を聞き、その歴史や構造について何かを学び、多くの演奏に注意深く耳をかたむけてきた人は、何気なく聞く人が見のがすことに気づく可能性が高い。そのような人も、同じくらい経験のあるほかの人と意見がちがうことはあるかもしれないが、その判断はより豊かな理解にもとづいており、その理由で真剣に受けとめられるに値する。',
+      'この見方は、なぜ人が年をとったり多くを学んだりするにつれて好みが変わることが多いのかを説明するのに役立つ。子どもは単純なメロディや明るい色を好むかもしれないが、より幅広い作品に出会ったおとなは、繊細さや複雑さやひかえめさを味わうようになるかもしれない。そうした変化は単なる流行のうつり変わりではない。それはしばしば知覚の深まり、つまり以前には見えなかった性質に気づき、応える力が育っていることを反映しているのである。今しずかな曲を楽しむおとなは、単に考えを変えたのではない。ずっとそこにあった何かを聞きとれるようになったのである。',
+      'しかし、好みを育てることにはそれ自体の危険もある。好みは社会的な地位のしるしになり、教育を受けて洗練された人とそうでない人とを区別するために使われることがある。人々は洗練されて見えるために、理解していない作品を称賛するふりをしたり、人気があるというだけの理由で大衆的な形の芸術を退けたりするかもしれない。そうなると、好みは本物の味わう力であることをやめ、見せびらかしの一形態になってしまう。それに対して本物の好みは、不確かさを認め、思いがけない場所に価値を見いだそうとする。',
+      '育てられた好みが、人々を最初に芸術に引きつけた直接の楽しみとのつながりを失ってしまう危険もある。何年もある形式を研究してきた批評家は、技術や背景にあまりに集中するようになり、初心者が経験する単純な喜びをもはや感じなくなるかもしれない。最も価値ある種類の好みとは、知識と新鮮さを組み合わせ、心を動かされることをやめずにより深く理解できるようにしてくれるものなのかもしれない。',
+      'それなら、好みは決まった好き嫌いの集まりとしてではなく、注意のはらい方として理解するのが最もよいのかもしれない。自分の好みをのばすとは、作品が差し出すものにより開かれ、その特定の性質により敏感になり、自分自身の反応により正直になることである。そのような好みは他人との一致を必要としないが、注意深く見て聞こうとする気持ちと、他人がなぜ自分の見ているものを見ているのかについて好奇心をもち続けることを必要とするのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「意見がちがうことはあるかもしれないが、その判断はより豊かな理解にもとづいている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、好みは純粋に主観的でも単に客観的でもない。', answer: true, why: '第2段落 taste is neither purely subjective nor simply objective。' },
+      { statement: '筆者によれば、好みの変化は単なる流行のうつり変わりにすぎない。', answer: false, why: '第4段落 Such changes are not merely shifts in fashion。' },
+      { statement: '筆者によれば、好みは社会的な地位のしるしとして使われることがある。', answer: true, why: '第5段落 Taste can become a marker of social status。' },
+      { statement: '筆者によれば、よい好みには他人との一致が必要である。', answer: false, why: '第7段落 Such taste does not require agreement with others。' },
+    ],
+    qa: [
+      { q: 'What must one do to find a poem beautiful, according to the second paragraph?', choices: ['Actually be moved by it.', 'Be told that it is good.', 'Know its author personally.', 'Memorize it.'], answer: 0, why: '第2段落 one must actually be moved by it, not merely be told that it is good。' },
+      { q: 'What may be the most valuable kind of taste?', choices: ['One that combines knowledge with freshness.', 'One focused only on technique.', 'One that rejects popular art.', 'One that never changes.'], answer: 0, why: '第6段落 one that combines knowledge with freshness。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
