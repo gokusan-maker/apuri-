@@ -30222,6 +30222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-shame',
+    title: 'The Uses and Dangers of Shame',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Shame is among the most painful of human emotions, and also among the least discussed. Unlike anger or sadness, which we can often express openly, shame tends to hide itself: the person who feels it wishes to disappear, to avoid the eyes of others, and to keep the feeling secret. Perhaps for this reason, modern societies have often regarded shame with suspicion, as an emotion that damages self-esteem and that ought to be overcome. Yet shame has also played an important role in human life, and to understand it we must consider both its dangers and its possible value.",
+      "Shame is often distinguished from guilt, though the two are closely related. Guilt concerns what we have done: we feel guilty when we recognize that a particular action was wrong, and the feeling directs our attention toward repairing the harm. Shame, by contrast, concerns who we are. When we feel ashamed, it is not merely an action that seems bad but ourselves, as though our failure had revealed something unworthy at the core of our being. This difference helps to explain why shame can be so much more devastating than guilt, and why it is more likely to lead to concealment than to repair.",
+      "Shame is also profoundly social. It arises from the imagined or actual gaze of others, from the sense that we have been seen in a way that we do not wish to be seen. Even when we are alone, we may feel ashamed by imagining how others would judge us if they knew what we had done. ( A ) this dependence on the opinions of others can make shame a tool of oppression, it also reflects a basic fact about human beings: we are creatures who care how we appear to those around us, and whose sense of self is formed in relationship with others.",
+      "It is this social character of shame that has made it so open to abuse. Communities have used shame to enforce rigid rules, to humiliate those who differ from the majority, and to punish people for things over which they had no control, such as their poverty, their appearance, or their origins. In such cases, shame does not correct wrongdoing but inflicts suffering on the innocent, and it may silence people who ought to be heard. The modern suspicion of shame is, in large part, a response to this history.",
+      "Yet it would be a mistake to conclude that shame has no value at all. A person who felt no shame whatever, who was entirely indifferent to how others regarded his or her conduct, would be not admirably free but strangely detached from the moral life of the community. The capacity for shame reflects the recognition that we are answerable to others, and that our actions can fall short of standards that we ourselves accept. In this sense, a certain sensitivity to shame may be a condition of having standards at all.",
+      "The question, then, is not whether shame should exist but how it should be directed. Shame is most harmful when it attaches to things that are not genuinely shameful, or when it is used to exclude people rather than to invite them back into the community. It may be least harmful, and perhaps even beneficial, when it arises from a person's own recognition that he or she has failed to live up to values that he or she sincerely holds, and when it is met by others with understanding rather than contempt.",
+      "Perhaps the most important task is to separate shame from the conclusion that one is worthless. To recognize that one has acted badly need not mean accepting that one is bad; it may instead be the beginning of change. Communities that allow people to acknowledge their failures without being permanently defined by them make it possible for shame to become a passage rather than a prison. In this way, an emotion that so often isolates us might instead remind us of the ties that bind us to one another, and of our shared capacity to become better than we have been.",
+    ],
+    ja: [
+      '恥は人間の感情の中で最もつらいものの一つであり、また最も語られないものの一つでもある。怒りや悲しみはしばしば率直に表せるのとちがい、恥は自分をかくそうとする。恥を感じる人は消えてしまいたい、他人の目をさけたい、その感情を秘密にしておきたいと願う。おそらくこの理由で、現代社会はしばしば恥を、自尊心をそこない、乗りこえるべき感情として疑いの目で見てきた。しかし恥は人間の生活で重要な役割も果たしてきたのであり、それを理解するには、その危険と、ありうる価値の両方を考えなければならない。',
+      '恥はしばしば罪の意識と区別されるが、二つは深く関係している。罪の意識は私たちがしたことにかかわる。私たちはある行動がまちがっていたと認めるときに罪の意識を感じ、その感情は害をつぐなうことへと注意を向けさせる。それに対して恥は、私たちがだれであるかにかかわる。恥を感じるとき、悪く思われるのは単に一つの行動ではなく、まるで自分の失敗が存在の核にある値うちのない何かを明らかにしたかのように、自分自身なのである。このちがいは、なぜ恥が罪の意識よりもはるかに打ちのめすものになりうるのか、そしてなぜつぐないよりもかくすことにつながりやすいのかを説明するのに役立つ。',
+      '恥はまた、きわめて社会的なものである。それは他人の想像上の、あるいは実際のまなざしから、見られたくない形で見られてしまったという感覚から生まれる。ひとりでいるときでさえ、自分のしたことを他人が知ったらどう判断するかを想像して、恥を感じることがある。他人の意見にたよるこの性質は恥を抑圧の道具にしうるが、それはまた、人間についての基本的な事実を反映してもいる。私たちは、まわりの人にどう見えるかを気にかける生き物であり、自己の感覚は他者とのかかわりの中で形づくられるのである。',
+      '恥がこれほど悪用されやすくなったのは、まさにこの社会的な性質のためである。共同体は恥を使って、きびしい規則を守らせ、多数派とちがう人々をはずかしめ、貧しさや見た目や生まれのような、本人にはどうにもならないことについて人々を罰してきた。そうした場合、恥はあやまちを正すのではなく罪のない人に苦しみをあたえ、声を聞かれるべき人々をだまらせるかもしれない。恥への現代の疑いは、大部分がこの歴史への反応なのである。',
+      'しかし、恥にはまったく価値がないと結論するのはまちがいだろう。まったく恥を感じず、自分のふるまいを他人がどう見るかにまったく無関心な人は、称賛すべきほど自由なのではなく、共同体の道徳的な生活から奇妙に切りはなされているのである。恥を感じる力は、私たちが他人に対して責任を負っていること、そして自分の行動が自分自身の受け入れている基準にとどかないことがあることを認めていることを反映している。この意味で、恥へのある程度の感受性は、そもそも基準をもつことの条件なのかもしれない。',
+      'それなら問題は、恥があるべきかどうかではなく、それをどう向けるべきかである。恥が最も害になるのは、本当ははずかしくないことに恥がつきまとうとき、あるいは人々を共同体にふたたびむかえ入れるためではなく、しめ出すために使われるときである。恥の害が最も小さく、おそらく益にさえなりうるのは、本人が心から大切にしている価値に自分がとどかなかったと自分で認めることから恥が生まれ、それに他人がけいべつではなく理解をもって応えるときであろう。',
+      'おそらく最も大切な課題は、恥を、自分には価値がないという結論から切りはなすことである。自分が悪い行動をしたと認めることは、自分が悪い人間だと受け入れることを意味する必要はない。それはむしろ変化の始まりになるかもしれない。人々が、失敗によってずっと決めつけられることなく、自分の失敗を認められるようにする共同体は、恥を牢獄ではなく通り道にすることを可能にする。このようにして、これほどしばしば私たちを孤立させる感情が、かえって私たちをたがいに結びつけているきずなと、これまでよりよい自分になれるという共通の力とを、思い出させてくれるかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「他人の意見にたよる性質は恥を抑圧の道具にしうるが、人間についての基本的な事実も反映している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、罪の意識は行動にかかわり、恥は自分がだれであるかにかかわる。', answer: true, why: '第2段落 Guilt concerns what we have done ... Shame, by contrast, concerns who we are。' },
+      { statement: '筆者によれば、ひとりでいるときには恥を感じることはない。', answer: false, why: '第3段落 Even when we are alone, we may feel ashamed。' },
+      { statement: '筆者は、恥にはまったく価値がないと結論している。', answer: false, why: '第5段落 it would be a mistake to conclude that shame has no value at all。' },
+      { statement: '筆者によれば、自分が悪い行動をしたと認めることは変化の始まりになりうる。', answer: true, why: '第7段落 it may instead be the beginning of change。' },
+    ],
+    qa: [
+      { q: 'For what kinds of things have communities used shame to punish people?', choices: ['Things they had no control over, such as poverty.', 'Only serious crimes.', 'Acts of kindness.', 'Winning competitions.'], answer: 0, why: '第4段落 things over which they had no control, such as their poverty, their appearance, or their origins。' },
+      { q: 'What can communities make shame become, according to the last paragraph?', choices: ['A passage rather than a prison.', 'A permanent label.', 'A reason for exclusion.', 'A secret weapon.'], answer: 0, why: '第7段落 make it possible for shame to become a passage rather than a prison。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
