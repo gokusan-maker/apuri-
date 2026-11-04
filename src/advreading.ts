@@ -30178,6 +30178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-financial-education',
+    title: 'Should Schools Teach About Money?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Young people today face financial decisions that are far more complex than those their grandparents faced. They may borrow large sums to pay for higher education, choose among dozens of mobile phone contracts, receive offers of instant credit online, and be expected to plan for their own retirement through savings and investments. Yet many leave school without understanding basic ideas such as interest, inflation, or the difference between saving and investing. This has led to growing calls for schools to make financial education a regular part of the curriculum, alongside subjects such as mathematics and history.",
+      "Supporters argue that financial knowledge is a basic life skill, as essential as the ability to read or to calculate. A person who does not understand how interest accumulates on a loan may borrow more than he or she can repay, and someone who is unaware of the effects of inflation may keep savings in a form that slowly loses its value. Mistakes of this kind can have consequences that last for decades. Teaching such knowledge at school, supporters claim, would give every student the tools needed to avoid them, regardless of whether their families are able to provide guidance at home.",
+      "This last point is central to the argument. Children from wealthy or well-educated families often learn about money informally, by listening to conversations at home, watching their parents manage budgets, or being encouraged to open savings accounts. Children from poorer families may have fewer such opportunities, and they may also be more vulnerable to expensive forms of borrowing. ( A ) schools cannot remove these inequalities entirely, supporters argue, they can at least ensure that every student has access to the same basic knowledge, which may help to reduce the gap.",
+      "Critics, however, question whether financial education actually changes behavior. Several studies have found that courses in personal finance improve students' knowledge in the short term, but have only modest effects on how people manage their money years later. Knowing that one should save, critics point out, is not the same as being able to save, especially for people whose incomes barely cover their basic needs. In their view, financial difficulties are often caused less by a lack of knowledge than by low wages, high living costs, and products that are deliberately designed to be confusing.",
+      "There are also practical concerns. The school timetable is already crowded, and adding a new subject may mean reducing the time available for others. Many teachers have received no training in finance and may feel unprepared to teach it, while materials provided free of charge by banks and other companies may promote their own products rather than offer neutral advice. Some critics worry that financial education could encourage students to see themselves primarily as consumers and investors, rather than as citizens who might question the economic system itself.",
+      "Supporters respond that these problems can be addressed through careful design. Financial topics can be integrated into existing subjects, such as mathematics, where students can practice calculating interest, or social studies, where they can discuss taxation and public spending. Teachers can be given training and independent materials, and lessons can focus on practical situations that students are likely to face soon, such as their first job or their first rental agreement, when the knowledge is most likely to be remembered and used.",
+      "The debate over financial education ultimately concerns the purpose of schooling. If schools exist chiefly to transmit academic knowledge, financial education may seem a distraction. If, however, they are meant to prepare young people for the challenges of adult life, then helping them to understand money seems an obvious responsibility. Even so, education alone cannot solve problems that arise from economic inequality, and it would be a mistake to blame individuals for financial hardship that reflects wider social conditions. The best approach may combine practical teaching in schools with fair rules that protect consumers from being misled.",
+    ],
+    ja: [
+      '今日の若者は、祖父母が直面したよりもはるかに複雑なお金の決定に直面している。高等教育の費用をはらうために多額のお金を借りたり、何十もの携帯電話の契約から選んだり、オンラインですぐ借りられる信用の申し出を受けたり、貯金や投資によって自分の老後の計画を立てることを期待されたりするかもしれない。しかし多くの若者は、利子やインフレや、貯金と投資のちがいといった基本的な考え方を理解しないまま学校を出る。このことから、数学や歴史のような科目とならんで、お金の教育を教育課程のふつうの一部にするよう学校に求める声が高まっている。',
+      '支持する人々は、お金についての知識は、読んだり計算したりする力と同じくらい欠かせない、基本的な生きる力だと主張する。借金に利子がどのように積み重なるかを理解していない人は、返せる以上に借りてしまうかもしれず、インフレの影響を知らない人は、少しずつ価値が下がる形で貯金をもっているかもしれない。この種のまちがいは、何十年も続く結果をもたらしうる。そうした知識を学校で教えれば、家庭が助言をあたえられるかどうかにかかわらず、すべての生徒に、まちがいをさけるのに必要な道具をあたえるだろう、と支持する人々は主張する。',
+      'この最後の点が議論の中心である。豊かな家庭や教育を受けた家庭の子どもは、家での会話を聞いたり、親が家計をやりくりするのを見たり、貯金口座を開くようすすめられたりして、お金について自然に学ぶことが多い。貧しい家庭の子どもには、そうした機会が少ないかもしれず、また高くつく形の借金の被害にもあいやすいかもしれない。学校はこうした不平等を完全になくすことはできないが、少なくともすべての生徒が同じ基本的な知識を得られるようにすることはでき、それが差をちぢめる助けになるかもしれない、と支持する人々は主張する。',
+      'しかし批判する人々は、お金の教育が本当に行動を変えるのか疑問を投げかける。いくつかの研究では、個人のお金についての授業は短期的には生徒の知識をふやすが、何年もあとに人々がお金をどう管理するかにはわずかな効果しかないことがわかった。貯金すべきだと知っていることは、とくに収入がぎりぎり最低限の必要をまかなう程度の人々にとっては、貯金できることと同じではない、と批判する人々は指摘する。彼らの見方では、お金の困難は、知識の不足よりも、低い賃金や高い生活費や、わざとわかりにくく作られた商品によって引き起こされることが多い。',
+      '実際的な懸念もある。学校の時間割はすでにいっぱいで、新しい科目を加えれば、ほかの科目に使える時間をへらすことになるかもしれない。多くの先生はお金についての研修を受けたことがなく、それを教える準備ができていないと感じるかもしれず、一方で銀行やほかの会社が無料で提供する教材は、中立的な助言をするよりも自社の商品を宣伝するかもしれない。お金の教育が、生徒に、経済の仕組みそのものに疑問をもちうる市民としてではなく、主に消費者や投資家として自分を見るようにうながしかねないと心配する批判者もいる。',
+      '支持する人々は、こうした問題は注意深い設計によって対処できると答える。お金の話題は、生徒が利子の計算を練習できる数学や、税金や公的支出について話し合える社会科のような、すでにある科目に組みこむことができる。先生には研修と独立した教材をあたえることができ、授業は、最初の仕事や最初の賃貸契約のような、生徒がもうすぐ直面しそうな実際の場面に焦点を当てることができる。そうしたときにこそ、知識は最も覚えられ、使われやすいのである。',
+      'お金の教育をめぐる議論は、結局のところ、学校教育の目的にかかわっている。学校が主に学問的な知識を伝えるためにあるなら、お金の教育は気をちらすものに思われるかもしれない。しかし学校が若者におとなの生活の課題にそなえさせるためのものなら、彼らがお金を理解するのを助けることは当然の責任に思われる。それでも、教育だけでは経済的な不平等から生じる問題を解決できず、より広い社会の状況を反映したお金の苦しみについて個人を責めるのはまちがいだろう。最善のやり方は、学校での実際的な授業と、消費者がだまされないよう守る公正な規則とを組み合わせることかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「不平等を完全になくすことはできないが、少なくとも同じ知識を得られるようにはできる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters see financial knowledge as a basic life ( 1 ) and argue that school lessons could reduce ( 2 ) between rich and poor families. Critics reply that courses have only ( 3 ) effects on later behavior and that hardship often comes from low wages rather than ignorance.',
+      blanks: [
+        { choices: ['skill', 'luxury', 'hobby', 'secret'], answer: 0, why: '第2段落 financial knowledge is a basic life skill。' },
+        { choices: ['inequalities', 'friendships', 'distances', 'holidays'], answer: 0, why: '第3段落 schools cannot remove these inequalities entirely ... help to reduce the gap。' },
+        { choices: ['modest', 'enormous', 'harmful', 'permanent'], answer: 0, why: '第4段落 have only modest effects on how people manage their money years later。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、多くの若者は利子やインフレの基本を理解しないまま学校を出る。', answer: true, why: '第1段落 many leave school without understanding basic ideas such as interest, inflation。' },
+      { statement: '研究によれば、お金の授業は何年もあとの行動を大きく変える。', answer: false, why: '第4段落 have only modest effects ... years later。' },
+      { statement: '銀行などが無料で提供する教材は、自社の商品を宣伝するかもしれない。', answer: true, why: '第5段落 may promote their own products rather than offer neutral advice。' },
+      { statement: '筆者は、お金の苦しみはすべて個人の責任だと述べている。', answer: false, why: '第7段落 it would be a mistake to blame individuals for financial hardship。' },
+    ],
+    qa: [
+      { q: 'How do children from wealthy families often learn about money, according to the third paragraph?', choices: ['Informally, by listening and watching at home.', 'Only through university courses.', 'By working in banks.', 'They never learn about it.'], answer: 0, why: '第3段落 learn about money informally, by listening to conversations at home。' },
+      { q: 'In which existing subject can students practice calculating interest?', choices: ['Mathematics.', 'Music.', 'Physical education.', 'Art.'], answer: 0, why: '第6段落 such as mathematics, where students can practice calculating interest。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
