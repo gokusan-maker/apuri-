@@ -30418,6 +30418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-basic-income',
+    title: 'Money for Everyone?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine a system in which every adult citizen receives a regular payment from the government, enough to cover basic needs, regardless of whether he or she works, how much he or she earns, or what he or she does with the money. This idea, known as a universal basic income, was once regarded as a utopian fantasy. In recent years, however, it has attracted serious attention from economists, politicians, and technology leaders, and several countries and cities have conducted experiments to test how it might work in practice.",
+      "Supporters offer several arguments in its favor. The first concerns poverty. Existing welfare systems, they point out, are often complicated, and many people who are entitled to help never receive it because they do not understand the rules or are discouraged by the process of applying. A payment given to everyone would be simple to administer and would ensure that no one fell below a minimum standard of living. It would also remove the stigma that sometimes attaches to receiving benefits, since everyone, rich and poor alike, would receive the same amount.",
+      "A second argument concerns the future of work. Many experts expect that advances in automation and artificial intelligence will eliminate large numbers of jobs, from driving trucks to processing documents. If this happens, a basic income could provide security for people whose work disappears, giving them time to retrain or to find new occupations. It could also allow people to spend more time on activities that are valuable but unpaid, such as caring for children or elderly relatives, volunteering in their communities, or developing creative projects.",
+      "Critics, however, raise serious objections. The most obvious is cost. Paying every adult enough to live on would require enormous public spending, which would have to be financed by much higher taxes or by cutting other services. Some critics also argue that it is wasteful to give money to people who do not need it, such as the wealthy, when the same funds could be targeted at those in genuine need. ( A ) supporters reply that much of the payment to the wealthy would be recovered through taxation, critics doubt that the arithmetic would work.",
+      "Another concern is that a basic income might reduce people's willingness to work. If people could live without working, critics suggest, many might choose not to, leaving essential jobs unfilled and weakening the economy. The evidence from experiments, however, is mixed. Several trials have found that recipients reduced their working hours only slightly, and that some used the money to search for better jobs, to start small businesses, or to return to education. Critics respond that short-term experiments, in which participants know the payments will end, cannot show how people would behave if the income were permanent.",
+      "There are also deeper questions about the meaning of work. For many people, a job provides not only income but also a sense of purpose, social contact, and a daily structure. Some critics worry that a society in which large numbers of people do not work could suffer from isolation and a loss of meaning, even if no one were poor. Supporters respond that people would still seek meaningful activity, and that freeing them from the pressure to accept any available job might allow them to find work that suits them better.",
+      "The debate over basic income thus touches on fundamental questions about what societies owe their members and what they expect in return. Whether or not a full basic income is ever introduced, the discussion has encouraged many governments to reconsider how their welfare systems work, and whether they could be made simpler, fairer, and more respectful of those who depend on them. In a world where the nature of work is changing rapidly, these questions are likely to become more pressing rather than less.",
+    ],
+    ja: [
+      '働いているかどうか、どれだけかせいでいるか、そのお金で何をするかにかかわらず、すべてのおとなの市民が、基本的な必要をまかなうのに十分な定期的な支払いを政府から受ける仕組みを想像してみよう。ユニバーサル・ベーシックインカムとして知られるこの考えは、かつては空想的な夢物語とみなされていた。しかし近年、それは経済学者や政治家や技術の指導者たちから真剣な注目を集めており、いくつかの国や都市が、実際にそれがどう機能しうるかを試す実験を行ってきた。',
+      '支持する人々は、それに賛成するいくつかの主張をする。一つめは貧困にかかわる。今ある福祉の仕組みは複雑なことが多く、助けを受ける権利がある多くの人々が、規則を理解していなかったり申しこむ手続きにやる気をなくしたりするために、けっしてそれを受けとらない、と彼らは指摘する。すべての人にあたえられる支払いは、運営が単純で、だれも最低限の生活水準を下回らないようにするだろう。それはまた、豊かな人も貧しい人も同じ額を受けとるので、給付を受けることにときどきつきまとう、はずかしめもなくすだろう。',
+      '二つめの主張は仕事の未来にかかわる。多くの専門家は、自動化や人工知能の進歩によって、トラックの運転から書類の処理まで、多くの仕事がなくなると予想している。もしそうなれば、ベーシックインカムは仕事がなくなった人々に安心をあたえ、学び直したり新しい職を見つけたりする時間をあたえることができる。それはまた、子どもや年老いた親族の世話をしたり、地域でボランティアをしたり、創造的な計画をのばしたりするような、価値はあるがお金にならない活動に、人々がもっと時間を使えるようにもするだろう。',
+      'しかし批判する人々は、重大な反対をあげる。最も明らかなのは費用である。すべてのおとなに生活できるだけの額をはらうには、ばくだいな公的支出が必要になり、それははるかに高い税金か、ほかのサービスを削ることでまかなわなければならないだろう。豊かな人のように、それを必要としない人にお金をあたえるのはむだであり、同じ資金を本当に必要としている人々に向けられるはずだ、と主張する批判者もいる。支持する人々は、豊かな人への支払いの多くは税によって取りもどされると答えるが、批判する人々は、その計算が成り立つのかを疑っている。',
+      'もう一つの懸念は、ベーシックインカムが人々の働く意欲をへらすかもしれないということである。働かなくても生活できるなら、多くの人が働かないことを選び、欠かせない仕事がうまらず、経済が弱まるかもしれない、と批判する人々は示唆する。しかし実験からの証拠はさまざまである。いくつかの試みでは、受けとった人々は労働時間をわずかしかへらさず、そのお金を使ってよりよい仕事を探したり、小さな事業を始めたり、学校にもどったりした人もいたことがわかった。批判する人々は、参加者が支払いがいずれ終わると知っている短期の実験では、その収入がずっと続くなら人々がどうふるまうかはわからないと答える。',
+      '仕事の意味についての、より深い問いもある。多くの人にとって、仕事は収入だけでなく、目的の感覚や社会的なつながりや毎日の決まった形もあたえてくれる。多くの人が働かない社会は、だれも貧しくなかったとしても、孤立と意味の喪失に苦しむかもしれないと心配する批判者もいる。支持する人々は、人々はそれでも意味のある活動を求めるだろうし、手に入るどんな仕事でも受け入れなければならないという圧力から解放されることで、自分により合った仕事を見つけられるかもしれないと答える。',
+      'このようにベーシックインカムをめぐる議論は、社会がその成員に何を負っており、そのかわりに何を期待するのかについての根本的な問いにふれている。完全なベーシックインカムがいつか導入されるにせよされないにせよ、この議論は多くの政府に、自国の福祉の仕組みがどう機能しているか、そしてそれをより単純で、より公平で、それにたよる人々をより尊重するものにできないかを考え直すようはげましてきた。仕事のあり方が急速に変わりつつある世界では、こうした問いはこれからますます差しせまったものになりそうである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「支持する人々は税で取りもどされると答えるが、批判する人々は計算が成り立つか疑っている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of a basic income say it would be simple to administer, reduce poverty, and provide security as ( 1 ) eliminates jobs. Critics point to its enormous ( 2 ) and fear that people might stop working, although experiments show only small reductions in working ( 3 ).',
+      blanks: [
+        { choices: ['automation', 'education', 'tourism', 'farming'], answer: 0, why: '第3段落 advances in automation and artificial intelligence will eliminate large numbers of jobs。' },
+        { choices: ['cost', 'beauty', 'speed', 'popularity'], answer: 0, why: '第4段落 The most obvious is cost。' },
+        { choices: ['hours', 'skills', 'clothes', 'friends'], answer: 0, why: '第5段落 recipients reduced their working hours only slightly。' },
+      ],
+    },
+    tf: [
+      { statement: '筆者によれば、ベーシックインカムはかつて空想的な夢物語とみなされていた。', answer: true, why: '第1段落 was once regarded as a utopian fantasy。' },
+      { statement: '支持する人々によれば、今の福祉の仕組みは単純でだれにでもわかりやすい。', answer: false, why: '第2段落 Existing welfare systems ... are often complicated。' },
+      { statement: 'いくつかの実験では、受けとった人の中に学校にもどった人もいた。', answer: true, why: '第5段落 or to return to education。' },
+      { statement: '筆者によれば、この問いは今後あまり重要でなくなるだろう。', answer: false, why: '第7段落 likely to become more pressing rather than less。' },
+    ],
+    qa: [
+      { q: 'Why do critics doubt the results of short-term experiments?', choices: ['Participants know the payments will end.', 'The payments were too large.', 'Nobody took part in them.', 'They were held only in rich cities.'], answer: 0, why: '第5段落 in which participants know the payments will end。' },
+      { q: 'What does a job provide besides income, according to the sixth paragraph?', choices: ['A sense of purpose, social contact, and a daily structure.', 'Free housing.', 'Political power.', 'Longer holidays.'], answer: 0, why: '第6段落 a sense of purpose, social contact, and a daily structure。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
