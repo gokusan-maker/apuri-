@@ -883,7 +883,7 @@
   - [x] 350 正誤問題〈178〉（国公立レベル：形容詞＋前置詞 be famous for・be proud of・be different from）10問
   - [x] 351 誤文訂正〈172〉（京大レベル：不定詞の形容詞的用法と前置詞 a house to live in）10問
   - [x] 352 正誤問題〈179〉（東大レベル：英作文の数量表現 a number of・the number of・most of）10問
-  - [ ] 353 誤文訂正〈173〉（国公立レベル：部分否定 not all・not always・not every）10問
+  - [x] 353 誤文訂正〈173〉（国公立レベル：部分否定 not all・not always・not every）10問
   - [ ] 354 正誤問題〈180〉（京大レベル：複合関係詞 whatever・whoever・no matter how）10問
   - [ ] 355 誤文訂正〈174〉（東大レベル：英作文の分数と割合 two thirds of・percent of）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

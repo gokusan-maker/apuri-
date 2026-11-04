@@ -7374,6 +7374,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Give me a sheet of paper [to write].', choices: ['to write on', 'to write it', 'writing in', 'to be written'], answer: 0, why: 'write on paper「紙に書く」なので a sheet of paper to write on。' },
     ],
   },
+  {
+    id: 'exam-fix-173',
+    title: '入試の誤文訂正〈173〉（国公立レベル：部分否定 not all・not always・not every）',
+    points: ['not と all・every・always・both・necessarily・completely がいっしょに使われると「すべてが～というわけではない」という部分否定になる。Not all students like math.「すべての生徒が数学を好きなわけではない」・He is not always busy.「いつもいそがしいわけではない」。「どれも～ない」という全部否定は none・no・never・neither を使う（None of the students like math.）。日本語の意味に合う形を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Not all students like math, and none of them likes tests.', ja: 'すべての生徒が数学を好きなわけではなく、テストが好きな生徒はひとりもいない。' }],
+    questions: [
+      { sentence: '［すべての生徒が数学を好きなわけではない］ [All students do not] like math.', choices: ['Not all students', 'No students', 'None students', 'All students never'], answer: 0, why: '部分否定は Not all ～ の形がはっきりする。No students だと「どの生徒も好きではない」。' },
+      { sentence: '［彼はいつもいそがしいわけではない］ He is [never] busy.', choices: ['not always', 'always not', 'not ever', 'no always'], answer: 0, why: '「いつも～というわけではない」は not always。never は「けっして～ない」。' },
+      { sentence: '［どの生徒もその問題に答えられなかった］ [Not all] the students could answer the question.', choices: ['None of', 'Not every', 'Not both', 'All not'], answer: 0, why: '全部否定は None of。Not all は部分否定になってしまう。' },
+      { sentence: '［金持ちがかならずしも幸せとはかぎらない］ The rich are [never] happy.', choices: ['not necessarily', 'necessarily not', 'not ever', 'no necessarily'], answer: 0, why: '「かならずしも～ではない」は not necessarily。' },
+      { sentence: '［私は両方の本を読んだわけではない］ I have [read neither] books.', choices: ['not read both', 'read not both', 'never read either', 'read none'], answer: 0, why: '「両方～というわけではない」は not ～ both。neither は「どちらも～ない」。' },
+      { sentence: '［彼の言うことがすべて正しいわけではない］ [Nothing] he says is true.', choices: ['Not everything', 'No everything', 'Everything not', 'None'], answer: 0, why: '部分否定は Not everything。Nothing だと「何も正しくない」。' },
+      { sentence: '［その計画は完全に失敗したわけではない］ The plan did [never] fail completely.', choices: ['not', 'no', 'none', 'neither'], answer: 0, why: 'not ～ completely「完全に～というわけではない」。did のあとは not。' },
+      { sentence: '［私の友だちはだれもそのことを知らなかった］ [Not all] my friends knew about it.', choices: ['None of', 'Not every', 'Not both', 'All of not'], answer: 0, why: '全部否定は None of my friends knew。' },
+      { sentence: '［すべての鳥が飛べるわけではない］ [Every bird cannot] fly.', choices: ['Not every bird can', 'No bird can', 'Every bird never', 'None bird can'], answer: 0, why: '部分否定は Not every bird can fly。No bird can だと「どの鳥も飛べない」。' },
+      { sentence: '［彼は両親のどちらにも似ていない］ He looks like [not both] his parents.', choices: ['neither of', 'not either', 'none both', 'both not'], answer: 0, why: '二者の全部否定は neither of。He looks like neither of his parents。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
