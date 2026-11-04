@@ -2615,6 +2615,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="64" r="2.5" fill="#7dd3fc" />
       </g>
     )
+  if (species === 'binturong')
+    return (
+      <g>
+        {/* もじゃもじゃの毛 */}
+        <path d="M24 30 L28 22 L32 30 L36 22 L40 30" fill="none" stroke="#1c1917" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
