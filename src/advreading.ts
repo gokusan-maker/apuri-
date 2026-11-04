@@ -30338,6 +30338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-open-book-exams',
+    title: 'Should Exams Be Open-Book?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For generations, students preparing for important examinations have spent long hours memorizing facts, formulas, and dates, knowing that they would be allowed to bring nothing into the examination room except a pen. In recent years, however, some teachers and universities have begun to experiment with a different kind of test, in which students may consult their textbooks, their notes, or even the internet while answering the questions. Such open-book examinations raise a fundamental question about the purpose of testing: should an examination measure what students can remember, or what they can do with information?",
+      "Supporters of open-book examinations argue that the traditional closed-book test reflects a world that no longer exists. Today, almost any fact can be found within seconds, and the ability to recall information without assistance has become less important than the ability to locate it, judge its reliability, and apply it to new problems. An examination that rewards memorization, they suggest, encourages students to cram information that they will forget soon afterward, rather than to develop the deeper understanding that will serve them throughout their lives.",
+      "Open-book examinations can also reduce the anxiety that many students feel before a test. When students know that they will have access to their notes, they may spend less time trying to memorize every detail and more time thinking about how the ideas they have studied are connected. Some teachers report that open-book examinations encourage them to write better questions, since questions that can be answered simply by looking up a fact in a book become pointless. Instead, the questions must require analysis, comparison, or the application of principles to unfamiliar situations.",
+      "Critics, however, warn that open-book examinations may be less demanding than they appear, or demanding in the wrong ways. Students who believe that they can look everything up may prepare less thoroughly, and then discover during the examination that they lack the time to find what they need. ( A ) access to information is useful, it cannot replace the basic knowledge that allows a person to think quickly and to recognize which information is relevant. A doctor who had to consult a textbook before diagnosing every common illness, critics point out, would be of little use in an emergency.",
+      "There are also concerns about fairness and honesty. When students are allowed to use the internet, it becomes difficult to ensure that they are not simply copying answers from others or receiving help from people outside the examination room. The growing availability of tools that can generate written answers automatically has made this problem even more serious. Some institutions have responded by designing questions that are personal or highly specific, while others have returned to closed-book examinations held under supervision.",
+      "Many educators argue that the choice between open-book and closed-book examinations need not be absolute. Different kinds of knowledge may call for different kinds of assessment. A closed-book test may be appropriate for checking whether students have mastered essential vocabulary or basic calculations, while an open-book test may be better suited to assessing their ability to construct an argument or solve a complex problem. Combining the two, they suggest, may provide a fuller picture of what students have learned. What matters most is that the form of each test matches the skills that teachers actually want their students to acquire.",
+      "The debate over open-book examinations ultimately concerns what we believe education is for. If its aim is to fill students' minds with information, closed-book tests will continue to seem natural. If its aim is to develop the ability to think, judge, and apply knowledge wisely, then examinations must reflect that aim, whatever form they take. Memory and understanding are not opposites: understanding depends on a foundation of knowledge, and knowledge becomes valuable only when it is understood. The challenge for teachers is to design tests that encourage both.",
+    ],
+    ja: [
+      '何世代にもわたって、大切な試験にそなえる生徒は、試験会場にはペン以外何も持ちこめないと知りながら、事実や公式や年号を暗記するのに長い時間をついやしてきた。しかし近年、問題に答えながら教科書やノートや、さらにはインターネットまで参照してよい、ちがう種類の試験を試みはじめた先生や大学もある。こうした持ちこみ可の試験は、試験の目的について根本的な問いを投げかける。試験は、生徒が何を覚えているかをはかるべきなのか、それとも情報を使って何ができるかをはかるべきなのか。',
+      '持ちこみ可の試験を支持する人々は、伝統的な持ちこみ不可の試験は、もはや存在しない世界を反映していると主張する。今日、ほとんどどんな事実も数秒で見つけることができ、助けなしに情報を思い出す力は、情報を見つけ、その信頼性を判断し、新しい問題に当てはめる力よりも重要ではなくなった。暗記にむくいる試験は、生涯にわたって役立つより深い理解をのばすことよりも、すぐに忘れてしまう情報をつめこむことを生徒にうながす、と彼らは示唆する。',
+      '持ちこみ可の試験はまた、多くの生徒が試験の前に感じる不安をへらしうる。ノートを見られるとわかっていれば、生徒はあらゆる細かいことを暗記しようとする時間をへらし、学んだ考えがどうつながっているかを考える時間をふやすかもしれない。持ちこみ可の試験は、本で事実を調べるだけで答えられる問題は意味がなくなるので、よりよい問題を作るようはげましてくれると報告する先生もいる。そのかわり、問題は分析や比較や、なじみのない場面への原理の応用を求めるものでなければならない。',
+      'しかし批判する人々は、持ちこみ可の試験は見かけほどきびしくないかもしれず、あるいはまちがった形できびしいかもしれないと警告する。何でも調べられると思っている生徒は準備を十分にしなくなり、試験中に必要なものを見つける時間がないことに気づくかもしれない。情報を得られることは役に立つが、すばやく考え、どの情報が関係あるかを見分けることを可能にする基本的な知識のかわりにはならない。よくある病気を診断するたびに教科書を調べなければならない医者は、緊急のときにはほとんど役に立たないだろう、と批判する人々は指摘する。',
+      '公平さと正直さについての懸念もある。生徒がインターネットを使うことをゆるされると、ほかの人から答えを写したり、試験会場の外の人から助けを得たりしていないことを確かめるのがむずかしくなる。書かれた答えを自動的に作り出せる道具が手に入りやすくなったことで、この問題はさらに深刻になった。個人的な問題やきわめて具体的な問題を作ることで対応した機関もあれば、監督のもとで行う持ちこみ不可の試験にもどった機関もある。',
+      '多くの教育者は、持ちこみ可と持ちこみ不可の試験のどちらかを絶対的に選ぶ必要はないと主張する。ちがう種類の知識には、ちがう種類の評価が必要かもしれない。持ちこみ不可の試験は、生徒が欠かせない語いや基本的な計算を身につけたかどうかを確かめるのに適しているかもしれず、一方で持ちこみ可の試験は、議論を組み立てたり複雑な問題を解いたりする力を評価するのにより向いているかもしれない。両方を組み合わせれば、生徒が学んだことのより完全な姿がわかるかもしれない、と彼らは示唆する。最も大切なのは、それぞれの試験の形が、先生が生徒に本当に身につけてほしい技能に合っていることである。',
+      '持ちこみ可の試験をめぐる議論は、結局のところ、教育が何のためにあると私たちが信じているかにかかわっている。その目的が生徒の頭を情報で満たすことなら、持ちこみ不可の試験は当たり前に思われ続けるだろう。その目的が、考え、判断し、知識を賢明に当てはめる力をのばすことなら、試験はどんな形をとるにせよ、その目的を反映しなければならない。記憶と理解は反対のものではない。理解は知識の土台にたよっており、知識は理解されたときにはじめて価値をもつ。先生にとっての課題は、その両方をうながす試験を作ることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「情報を得られることは役に立つが、基本的な知識のかわりにはならない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters argue that open-book exams reward the ability to find and ( 1 ) information rather than memorization, and that they reduce student ( 2 ). Critics warn that basic knowledge is still needed and that online access raises problems of ( 3 ). Many educators suggest combining both kinds of test.',
+      blanks: [
+        { choices: ['apply', 'forget', 'hide', 'sell'], answer: 0, why: '第2段落 the ability to locate it, judge its reliability, and apply it to new problems。' },
+        { choices: ['anxiety', 'income', 'height', 'loyalty'], answer: 0, why: '第3段落 can also reduce the anxiety that many students feel before a test。' },
+        { choices: ['honesty', 'weather', 'transport', 'diet'], answer: 0, why: '第5段落 There are also concerns about fairness and honesty。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によれば、暗記にむくいる試験は深い理解をうながす。', answer: false, why: '第2段落 encourages students to cram information that they will forget soon afterward。' },
+      { statement: '持ちこみ可の試験は、よりよい問題を作るよう先生をはげますことがある。', answer: true, why: '第3段落 encourage them to write better questions。' },
+      { statement: '書かれた答えを自動で作る道具は、正直さの問題をより深刻にした。', answer: true, why: '第5段落 has made this problem even more serious。' },
+      { statement: '筆者によれば、記憶と理解は反対のものである。', answer: false, why: '第7段落 Memory and understanding are not opposites。' },
+    ],
+    qa: [
+      { q: 'What example do critics give to show the importance of basic knowledge?', choices: ['A doctor who must consult a textbook for every common illness.', 'A teacher who writes better questions.', 'A student who uses the internet.', 'A university that returns to closed-book tests.'], answer: 0, why: '第4段落 A doctor who had to consult a textbook before diagnosing every common illness。' },
+      { q: 'For what may a closed-book test be appropriate, according to the sixth paragraph?', choices: ['Checking essential vocabulary or basic calculations.', 'Constructing a complex argument.', 'Solving unfamiliar problems with books.', 'Reducing anxiety.'], answer: 0, why: '第6段落 checking whether students have mastered essential vocabulary or basic calculations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
