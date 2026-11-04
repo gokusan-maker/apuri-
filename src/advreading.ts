@@ -30462,6 +30462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-dreams',
+    title: 'What Dreams May Tell Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every night, most of us enter a world that we did not choose and cannot control. In our dreams, we may fly over cities, speak with people who have long since died, or find ourselves unprepared for an examination we took decades ago. On waking, we often dismiss these experiences as meaningless, or forget them within minutes. Yet human beings have rarely been content to regard dreams as mere noise. In nearly every culture, dreams have been interpreted as messages, warnings, or glimpses of truths hidden from waking life, and the question of what dreams mean has occupied thinkers for thousands of years.",
+      "Modern science has offered several explanations for why we dream. Some researchers suggest that dreaming helps the brain to process and store memories, sorting the experiences of the day and connecting them with older knowledge. Others propose that dreams allow us to rehearse responses to threatening situations in a safe environment, or that they help to regulate emotions by replaying difficult experiences in altered forms. Still others argue that dreams are simply a by-product of the brain's activity during sleep, with no particular function of their own. These theories are not necessarily incompatible, and the truth may involve elements of several.",
+      "Whatever their biological purpose, dreams raise interesting philosophical questions. One of the oldest concerns the boundary between dreaming and waking. While we are dreaming, we usually accept even the strangest events without question, and only on waking do we recognize that they were not real. But if we can be so thoroughly deceived in dreams, how can we be certain that our waking experience is not also a kind of dream? ( A ) few people seriously doubt that the waking world is real, the question reminds us that our sense of reality depends on conditions that we rarely examine.",
+      "Dreams also reveal something about the nature of the self. In a dream, we often act in ways that would surprise or embarrass us in waking life, and we may experience emotions with an intensity that we seldom allow ourselves when awake. Some have seen in this evidence that the waking self is only one part of a larger and more complex mind, much of which operates beyond our conscious awareness. On this view, dreams are not foreign intrusions but expressions of aspects of ourselves that we do not usually acknowledge.",
+      "It would be a mistake, however, to treat every dream as a coded message waiting to be deciphered. Attempts to interpret dreams according to fixed systems of symbols, in which a particular image always has a particular meaning, have rarely survived careful examination. The same image may carry very different significance for different people, depending on their memories, their culture, and the circumstances of their lives. If dreams have meaning, it is likely to be personal and uncertain rather than universal and precise.",
+      "Perhaps the value of dreams lies less in what they tell us than in how they change our relationship to our own minds. To take dreams seriously, without either dismissing them or claiming to decode them completely, is to accept that the mind is larger than the part of it we control, and that some of our thoughts arise without our deliberate effort. Many artists and scientists have reported that ideas came to them in dreams or in the moments just after waking, as though the mind continued its work while conscious attention was at rest.",
+      "Dreams, then, occupy a curious place in human life. They are among the most private of experiences, yet they have been shared and discussed in every society. They seem meaningless and yet invite interpretation; they are produced by our own minds and yet appear to come from elsewhere. In this sense, dreams embody the mystery of consciousness itself, reminding us each night that even our most familiar possession, our own mind, remains in many ways unknown to us.",
+    ],
+    ja: [
+      '毎晩、私たちのほとんどは、自分で選んだのでもなく、おさえることもできない世界に入っていく。夢の中で、私たちは町の上を飛んだり、とうに亡くなった人と話したり、何十年も前に受けた試験の準備ができていない自分に気づいたりする。目がさめると、私たちはこうした経験を意味のないものとして退けたり、数分のうちに忘れたりすることが多い。しかし人間が、夢を単なる雑音とみなして満足したことはめったにない。ほとんどすべての文化で、夢はお告げや警告や、目ざめた生活からはかくされた真実をかいま見るものとして解釈されてきたのであり、夢が何を意味するのかという問いは、何千年ものあいだ思想家たちの頭をしめてきた。',
+      '現代の科学は、なぜ私たちが夢を見るのかについていくつかの説明をしてきた。夢を見ることは、一日の経験を整理し、それをより古い知識と結びつけることで、脳が記憶を処理しためるのを助けると示唆する研究者もいる。夢は、安全な環境でおびやかされる状況への反応を練習させてくれる、あるいはつらい経験を形を変えてくり返すことで感情を調整するのを助ける、と提案する研究者もいる。さらに、夢は単にねむっているあいだの脳の活動の副産物であり、それ自体には特別なはたらきはないと主張する研究者もいる。こうした説はかならずしもたがいに相いれないわけではなく、真実はいくつかの説の要素をふくんでいるのかもしれない。',
+      'その生物学的な目的が何であれ、夢は興味深い哲学的な問いを投げかける。最も古いものの一つは、夢と目ざめとのさかい目にかかわる。夢を見ているあいだ、私たちはふつう最も奇妙なできごとさえ疑わずに受け入れ、目がさめてはじめてそれが現実ではなかったと気づく。しかし夢の中でそれほど完全にだまされうるなら、目ざめているときの経験もまた一種の夢ではないと、どうして確信できるだろうか。目ざめた世界が現実であることを本気で疑う人はほとんどいないが、この問いは、私たちの現実の感覚が、めったに吟味しない条件にたよっていることを思い出させてくれる。',
+      '夢はまた、自己の性質について何かを明らかにする。夢の中で、私たちは目ざめた生活ではおどろいたりはずかしく思ったりするようなふるまいをすることが多く、目ざめているときにはめったに自分にゆるさないはげしさで感情を経験することもある。ここに、目ざめた自己はより大きく複雑な心の一部分にすぎず、その心の多くは意識の外ではたらいているという証拠を見た人々もいる。この見方では、夢は外から入りこんでくるものではなく、ふだん私たちが認めない自分自身の面の表れなのである。',
+      'しかし、あらゆる夢を、解読されるのを待っている暗号のメッセージとしてあつかうのはまちがいだろう。ある像がいつも特定の意味をもつという、決まった象徴の体系に従って夢を解釈しようとする試みは、注意深い吟味にたえることはめったになかった。同じ像でも、記憶や文化や生活の事情によって、人によってまったくちがう意味をもちうる。夢に意味があるとしても、それは普遍的で正確なものではなく、個人的で不確かなものである可能性が高い。',
+      'おそらく夢の価値は、それが何を教えてくれるかよりも、それが自分の心とのかかわり方をどう変えるかにある。夢を、退けるのでも完全に解読できると主張するのでもなく、真剣に受けとめることは、心が自分のおさえられる部分よりも大きく、思考の中には意図的な努力なしに生まれるものもあることを受け入れることである。多くの芸術家や科学者が、考えが夢の中や目ざめた直後の瞬間にうかんだと報告してきた。まるで意識の注意が休んでいるあいだも、心が仕事を続けていたかのようである。',
+      'このように夢は、人間の生活の中で奇妙な位置をしめている。それは最も個人的な経験の一つでありながら、あらゆる社会で分かちあわれ、語られてきた。それは意味がないように思われながら解釈を誘い、私たち自身の心が生み出すものでありながら、どこかほかから来るように見える。この意味で、夢は意識そのものの不思議を体現しており、私たちの最も身近な持ち物である自分自身の心でさえ、多くの点でいまだに知られていないことを、毎晩思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「本気で疑う人はほとんどいないが、この問いは思い出させてくれる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ほとんどすべての文化で夢はお告げや警告として解釈されてきた。', answer: true, why: '第1段落 In nearly every culture, dreams have been interpreted as messages, warnings。' },
+      { statement: '筆者によれば、夢についての科学の説はたがいにかならず相いれない。', answer: false, why: '第2段落 These theories are not necessarily incompatible。' },
+      { statement: '筆者によれば、同じ夢の像はだれにとっても同じ意味をもつ。', answer: false, why: '第5段落 The same image may carry very different significance for different people。' },
+      { statement: '多くの芸術家や科学者が、考えが夢の中でうかんだと報告している。', answer: true, why: '第6段落 ideas came to them in dreams。' },
+    ],
+    qa: [
+      { q: 'What do some see as evidence that the waking self is only part of a larger mind?', choices: ['The way we act and feel in dreams.', 'The fact that we forget dreams.', 'The length of our sleep.', 'The cost of dream research.'], answer: 0, why: '第4段落 Some have seen in this evidence that the waking self is only one part of a larger and more complex mind。' },
+      { q: 'What do dreams remind us of each night, according to the last paragraph?', choices: ['That our own mind remains in many ways unknown to us.', 'That dreams always predict the future.', 'That sleep is a waste of time.', 'That reality is only a dream.'], answer: 0, why: '第7段落 even our most familiar possession, our own mind, remains in many ways unknown to us。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
