@@ -32578,6 +32578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-self-driving',
+    title: 'Should Self-Driving Cars Share Our Roads?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For more than a century, driving a car has required a human being to watch the road, judge distances, and react to sudden dangers. Today, a growing number of vehicles are able to perform some or all of these tasks themselves, using cameras, radar, and computer programs that learn from vast amounts of driving data. In several cities, cars without a human driver already carry paying passengers. As the technology improves, societies must decide how far, and how quickly, they should allow self-driving vehicles onto public roads.",
+      "Supporters argue that the most important benefit is safety. The great majority of traffic accidents are caused by human error, such as speeding, drinking, fatigue, or a moment of distraction. A computer does not become tired or angry, and it can watch in every direction at once. If self-driving cars could reduce accidents even moderately, supporters say, they could save many thousands of lives each year, and it would be wrong to delay a technology that promises such a benefit. In their view, the question is not whether self-driving cars are perfect, but whether they are safer than the human drivers they would replace.",
+      "Supporters also point to wider social advantages. Self-driving vehicles could give independence to elderly people and people with disabilities who are unable to drive, allowing them to travel to shops, hospitals, and friends without depending on others. In rural areas where public transport is limited, they might provide a cheaper alternative to buses that run only a few times a day. ( A ) these benefits have not yet been fully demonstrated, they suggest that the technology could change daily life for many people who are currently left behind.",
+      "Critics, however, warn that the technology is not as reliable as its promoters claim. Self-driving systems can perform well in ordinary conditions but may struggle with heavy snow, unusual road works, or the unpredictable behavior of pedestrians and cyclists. Several accidents involving automated vehicles have shown that a system can fail in ways that a careful human driver would not. Critics argue that the public should not be used as test subjects for products whose risks are not yet fully understood. They also point out that a single serious failure could destroy public confidence in the technology for many years.",
+      "Another problem concerns responsibility. When a human driver causes an accident, the law has long-established ways of deciding who is to blame. When a self-driving car is involved, it is less clear whether responsibility lies with the passenger, the manufacturer, the programmer, or the company that operates the vehicle. Without clear rules, victims may find it difficult to obtain compensation, and companies may have little incentive to admit the weaknesses of their systems.",
+      "There are also concerns about the effects on employment and on the shape of cities. Millions of people earn their living by driving taxis, buses, and trucks, and many of these jobs could disappear if automation spreads widely. Some planners also worry that cheap and comfortable self-driving cars might encourage people to travel more by car rather than by train or bicycle, increasing traffic and making cities more dependent on roads, rather than less. In that case, the promised reduction in pollution and congestion might never be achieved.",
+      "The question, then, is not simply whether self-driving vehicles are good or bad, but under what conditions they should be introduced. Careful testing in limited areas, clear rules about responsibility, and support for workers whose jobs are affected may all be necessary. Above all, decisions about this technology should not be left to companies alone. Because it will change how everyone moves through shared public spaces, citizens and their governments have a right, and a duty, to shape how it is used.",
+    ],
+    ja: [
+      '百年以上のあいだ、車を運転するには、人間が道路を見て、距離を判断し、とつぜんの危険に反応することが必要だった。今日、カメラやレーダーや、ばく大な量の運転データから学ぶコンピュータのプログラムを使って、こうした作業の一部またはすべてを自分で行える車がふえている。いくつかの都市では、人間の運転手のいない車がすでにお金をはらう乗客を運んでいる。技術がよくなるにつれて、社会は、自動運転車を公道にどこまで、そしてどれほど早く認めるべきかを決めなければならない。',
+      '支持する人々は、最も大切な利点は安全だと主張する。交通事故の大多数は、スピードの出しすぎや飲酒や疲れや、一瞬の不注意のような人間のまちがいによって起こる。コンピュータは疲れたりおこったりせず、すべての方向を一度に見ることができる。自動運転車が事故を少しでも減らせるなら、毎年何千もの命を救えるかもしれず、それほどの利益を約束する技術をおくらせるのはまちがいだろうと支持する人々は言う。彼らの見方では、問題は自動運転車が完ぺきかどうかではなく、それがとってかわる人間の運転手より安全かどうかなのである。',
+      '支持する人々はまた、より広い社会的な利点もあげる。自動運転車は、運転できない高齢者や障害のある人々に自立をあたえ、他人に頼らずに店や病院や友人のところへ行けるようにするかもしれない。公共交通が限られた農村地域では、一日に数回しか走らないバスにかわる、より安い選択肢になるかもしれない。こうした利点はまだ十分に示されてはいないが、この技術が、今取り残されている多くの人々の日常生活を変えうることを示している。',
+      'しかし批判する人々は、この技術は推進する人々が言うほど信頼できないと警告する。自動運転の仕組みは、ふつうの状況ではよくはたらくが、大雪や見なれない道路工事や、歩行者や自転車に乗る人の予測できない行動には苦労するかもしれない。自動化された車がかかわったいくつかの事故は、注意深い人間の運転手ならしないようなしかたで仕組みが失敗しうることを示した。危険がまだ十分に理解されていない製品の実験台として、一般の人々を使うべきではないと批判する人々は主張する。また、一度の深刻な失敗が、何年にもわたってこの技術への国民の信頼をこわしうると彼らは指摘する。',
+      'もう一つの問題は責任にかかわる。人間の運転手が事故を起こしたとき、法律にはだれが悪いかを決める長く確立された方法がある。自動運転車がかかわるとき、責任が乗客にあるのか、製造会社にあるのか、プログラムを作った人にあるのか、それとも車を運行する会社にあるのかは、それほどはっきりしない。はっきりした規則がなければ、被害者は補償を得るのがむずかしいと感じるかもしれず、会社は自分の仕組みの弱点を認める動機をほとんどもたないかもしれない。',
+      '雇用や都市のかたちへの影響についての心配もある。何百万もの人々がタクシーやバスやトラックを運転して生計を立てており、自動化が広く広まれば、こうした仕事の多くはなくなるかもしれない。また、安くて快適な自動運転車が、人々に電車や自転車ではなく車でもっと移動するようにうながし、交通量をふやし、都市を道路にますます頼るものにしてしまうかもしれないと心配する都市計画の専門家もいる。そうなれば、約束された汚染や渋滞の減少はけっして実現しないかもしれない。',
+      'それなら問題は、単に自動運転車がよいか悪いかではなく、どのような条件のもとでそれを取り入れるべきかである。限られた地域での注意深い試験、責任についてのはっきりした規則、そして仕事に影響を受ける働き手へのささえが、どれも必要かもしれない。何よりも、この技術についての決定を会社だけにまかせるべきではない。それはだれもが共有された公共の空間を移動するしかたを変えるのだから、市民とその政府には、それがどう使われるかを形づくる権利と義務があるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「利点はまだ十分に示されていないが、日常生活を変えうることを示している」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that self-driving cars could greatly improve road ( 1 ) and give independence to people who cannot drive. Critics warn that the systems may fail in unusual conditions and that it is unclear who bears ( 2 ) for accidents. The real question is under what ( 3 ) the technology should be introduced.',
+      blanks: [
+        { choices: ['safety', 'beauty', 'width', 'noise'], answer: 0, why: '第2段落 the most important benefit is safety。' },
+        { choices: ['responsibility', 'fuel', 'luggage', 'speed'], answer: 0, why: '第5段落 Another problem concerns responsibility。' },
+        { choices: ['conditions', 'names', 'colors', 'prices'], answer: 0, why: '第7段落 under what conditions they should be introduced。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの都市では、人間の運転手のいない車がすでに乗客を運んでいる。', answer: true, why: '第1段落 cars without a human driver already carry paying passengers。' },
+      { statement: '筆者によれば、交通事故の大多数は機械の故障によって起こる。', answer: false, why: '第2段落 The great majority of traffic accidents are caused by human error。' },
+      { statement: '自動運転の仕組みは、大雪や見なれない道路工事に苦労するかもしれない。', answer: true, why: '第4段落 may struggle with heavy snow, unusual road works。' },
+      { statement: '筆者は、この技術についての決定は会社だけにまかせるべきだと考えている。', answer: false, why: '第7段落 decisions about this technology should not be left to companies alone。' },
+    ],
+    qa: [
+      { q: 'Who might self-driving vehicles give independence to?', choices: ['Elderly people and people with disabilities who cannot drive.', 'Professional racing drivers.', 'Police officers.', 'Car manufacturers.'], answer: 0, why: '第3段落 independence to elderly people and people with disabilities who are unable to drive。' },
+      { q: 'What do some planners worry cheap self-driving cars might do?', choices: ['Encourage people to travel more by car.', 'Make all roads disappear.', 'Increase the use of bicycles.', 'Lower the number of cars.'], answer: 0, why: '第6段落 might encourage people to travel more by car rather than by train or bicycle。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
