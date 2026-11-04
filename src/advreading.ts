@@ -31618,6 +31618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-minimum-wage',
+    title: 'How High Should the Minimum Wage Be?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the law sets a minimum wage, the lowest amount that employers are allowed to pay their workers per hour. The idea is simple: no one who works full time should earn so little that he or she cannot afford basic necessities. Yet the question of how high the minimum wage should be is among the most debated issues in economic policy. Some argue that it should be raised substantially, so that it provides a genuinely decent standard of living; others warn that large increases could harm the very workers they are intended to help.",
+      "Supporters of higher minimum wages emphasize fairness. In many places, the cost of housing, food, and transport has risen faster than the wages of low-paid workers, and people working long hours may still struggle to pay their rent. Raising the minimum wage, supporters argue, would reduce poverty, narrow the gap between rich and poor, and allow workers to live with greater dignity. They add that better-paid workers spend more money in local shops and businesses, which can stimulate the economy and benefit everyone. A higher wage floor may also reduce the amount of public money spent on support for working families.",
+      "Supporters also point to research suggesting that moderate increases in the minimum wage have not caused large losses of jobs. Some studies comparing neighboring regions with different minimum wages have found little difference in employment, perhaps because higher wages reduce the rate at which workers leave their jobs, saving employers the cost of hiring and training replacements. Workers who are paid more may also be more motivated and productive, offsetting some of the additional cost.",
+      "Critics, however, warn that the effects of very large increases may be different from those of moderate ones. ( A ) a small rise may be absorbed by employers without difficulty, a large rise could force some businesses, especially small ones with narrow profit margins, to reduce staff, cut working hours, or close altogether. In such cases, the workers who lose their jobs or hours would be worse off than before, even though those who keep their jobs would earn more. Young people and those with few qualifications, critics add, may find it harder to obtain their first job if employers become more selective.",
+      "Critics also argue that a single national minimum wage may not suit regions with very different costs of living. A wage that is reasonable in an expensive city may be difficult for businesses to pay in a rural area where prices and incomes are lower. Some countries have responded by allowing minimum wages to vary between regions, or by linking them to average wages so that they rise gradually as the economy grows. Others rely on independent commissions to recommend increases based on evidence rather than political pressure. Such commissions can consult both employers and workers before making their recommendations.",
+      "There are also alternative ways of supporting low-paid workers. Some governments provide tax credits or direct payments to families with low incomes, which can increase living standards without placing the full cost on employers. Others invest in training programs that help workers gain skills and move into better-paid jobs. Many economists suggest that the minimum wage works best as one part of a broader set of policies, rather than as the only tool for fighting poverty.",
+      "The debate over the minimum wage thus involves both economic evidence and moral judgments. Economists can estimate how different levels of the minimum wage might affect employment and prices, but they cannot decide by themselves what level of income a society should guarantee to those who work. That question depends on shared values about fairness, responsibility, and the kind of community people wish to build. Finding a balance that protects workers without destroying the jobs they depend on remains a challenge for every government.",
+    ],
+    ja: [
+      '多くの国では、法律が最低賃金、つまり雇い主が働く人に1時間あたりにはらってよい最も低い額を定めている。その考えは単純である。フルタイムで働く人はだれも、基本的な必需品も買えないほど少ない額しかかせげないようであってはならないということである。しかし最低賃金をどれほど高くすべきかという問いは、経済政策で最も議論されている問題の一つである。それが本当にまともな生活水準をあたえるように大きく引き上げるべきだと主張する人もいれば、大幅な引き上げは、それが助けようとしている働く人そのものを傷つけかねないと警告する人もいる。',
+      '最低賃金の引き上げを支持する人々は公平さを強調する。多くの場所で、住まいや食べ物や交通の費用は、低賃金の働く人の賃金よりも速く上がっており、長時間働く人でも家賃をはらうのに苦労しているかもしれない。最低賃金を上げれば、貧困がへり、豊かな人と貧しい人の差がちぢまり、働く人がより尊厳をもって暮らせるようになる、と支持する人々は主張する。彼らは、より多くはらわれる働く人は地元の店や事業でより多くのお金を使うので、それが経済を刺激し、みんなの得になりうるとつけ加える。賃金の下限が上がれば、働く家庭をささえるために使われる公のお金もへるかもしれない。',
+      '支持する人々はまた、最低賃金のほどほどの引き上げが大きな雇用の喪失を引き起こしてこなかったことを示す研究を指摘する。最低賃金のちがうとなりあった地域を比べたいくつかの研究では、雇用にほとんどちがいがないことがわかった。それはおそらく、賃金が上がると働く人が仕事をやめる割合がへり、雇い主がかわりの人を雇って研修する費用を節約できるからであろう。より多くはらわれる働く人は、やる気が出て生産性も上がり、追加の費用の一部を埋め合わせるかもしれない。',
+      'しかし批判する人々は、とても大きな引き上げの影響は、ほどほどの引き上げの影響とはちがうかもしれないと警告する。小さな引き上げは雇い主が苦もなく吸収できるかもしれないが、大きな引き上げは、一部の事業、とくに利益のはばがせまい小さな事業に、職員をへらしたり、労働時間を削ったり、店を完全に閉じたりすることを強いるかもしれない。そうした場合、仕事を守った人はより多くかせぐとしても、仕事や労働時間を失った人は以前より悪い状態になるだろう。雇い主がより選り好みするようになれば、若者や資格の少ない人は最初の仕事を得るのがより難しくなるかもしれない、と批判する人々はつけ加える。',
+      '批判する人々はまた、全国一律の最低賃金は、生活費が大きくちがう地域には合わないかもしれないと主張する。物価の高い都市では妥当な賃金も、物価と収入が低い地方では、事業にとってはらうのがむずかしいかもしれない。最低賃金を地域によって変えられるようにしたり、平均賃金と結びつけて経済が成長するにつれて少しずつ上がるようにしたりして対応した国もある。政治的な圧力ではなく証拠にもとづいて引き上げをすすめる、独立した委員会にたよる国もある。そうした委員会は、すすめる前に雇い主と働く人の両方の意見を聞くことができる。',
+      '低賃金の働く人をささえるほかの方法もある。収入の低い家庭に税の控除や直接の支払いをあたえ、全費用を雇い主に負わせずに生活水準を上げられるようにしている政府もある。働く人が技能を身につけ、より賃金の高い仕事にうつるのを助ける研修に投資している政府もある。多くの経済学者は、最低賃金は貧困とたたかう唯一の道具としてではなく、より幅広い政策の一部として最もうまくはたらくと示唆している。',
+      'このように最低賃金をめぐる議論には、経済的な証拠と道徳的な判断の両方がかかわっている。経済学者は、最低賃金のちがう水準が雇用や物価にどう影響しうるかを推定することはできるが、社会が働く人にどれほどの収入を保証すべきかを自分たちだけで決めることはできない。その問いは、公平さや責任や、人々がきずきたいと願う共同体のあり方についての共有された価値にかかっている。働く人が頼りにしている仕事をこわさずに働く人を守るつりあいを見つけることは、あらゆる政府にとって課題であり続けている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「小さな引き上げは吸収できるかもしれない一方で、大きな引き上げは事業に人員削減を強いるかもしれない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters of higher minimum wages emphasize ( 1 ) and point to research showing that moderate increases have not caused large job losses. Critics warn that very large increases could force small businesses to cut staff, and that one national rate may not suit different ( 2 ). Many economists see the minimum wage as one part of a broader set of ( 3 ).',
+      blanks: [
+        { choices: ['fairness', 'speed', 'tradition', 'secrecy'], answer: 0, why: '第2段落 Supporters of higher minimum wages emphasize fairness。' },
+        { choices: ['regions', 'languages', 'seasons', 'religions'], answer: 0, why: '第5段落 may not suit regions with very different costs of living。' },
+        { choices: ['policies', 'machines', 'holidays', 'buildings'], answer: 0, why: '第6段落 as one part of a broader set of policies。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの場所で、住まいや食べ物の費用は低賃金の働く人の賃金より速く上がっている。', answer: true, why: '第2段落 has risen faster than the wages of low-paid workers。' },
+      { statement: 'いくつかの研究では、ほどほどの引き上げで雇用が大きくへったことがわかった。', answer: false, why: '第3段落 have found little difference in employment。' },
+      { statement: '最低賃金を地域によって変えられるようにした国もある。', answer: true, why: '第5段落 allowing minimum wages to vary between regions。' },
+      { statement: '筆者によれば、経済学者だけで社会が保証すべき収入の水準を決められる。', answer: false, why: '第7段落 they cannot decide by themselves what level of income a society should guarantee。' },
+    ],
+    qa: [
+      { q: 'Why might higher wages save employers money, according to the third paragraph?', choices: ['Workers leave their jobs less often.', 'Taxes are lowered.', 'Prices fall immediately.', 'Fewer customers visit.'], answer: 0, why: '第3段落 higher wages reduce the rate at which workers leave their jobs。' },
+      { q: 'What alternative way of supporting low-paid workers is mentioned?', choices: ['Tax credits or direct payments to families.', 'Banning all part-time work.', 'Closing small businesses.', 'Reducing school hours.'], answer: 0, why: '第6段落 provide tax credits or direct payments to families with low incomes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
