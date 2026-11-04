@@ -3866,6 +3866,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The box was (B) too heavy (C) of me (D) to carry.', choices: ['(A) The box was', '(B) too heavy', '(C) of me', '(D) to carry'], answer: 2, why: 'too ～ for 人 to do。heavy は人の性質ではないので for me。' },
     ],
   },
+  {
+    id: 'exam-error-emphasis-kyodai',
+    title: '入試の正誤問題〈163〉（京大レベル：強調構文 It is ～ that と形式主語 It の見分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '強調構文 It is（was）～ that …：強調したい語句を ～ に入れ、残りを that のあとに置く。人なら who も使えるが、場所・時・理由の語句でも which・where・when・why ではなく that。It was not until ～ that …「～してはじめて…」。疑問詞の強調は What is it that ～? のあとをふつうの語順に。形式主語 It：It is important（clear）that ～・It is said that ～。that を取り去って文が成り立てば強調構文、成り立たなければ形式主語。',
+    ],
+    examples: [
+      { en: 'It was in this room that the meeting was held.', ja: '会議が開かれたのはこの部屋だった。' },
+      { en: 'It is important that we protect nature.', ja: '私たちが自然を守ることは大切だ。' },
+    ],
+    questions: [
+      { sentence: 'It was (A) in this room (B) which (C) the meeting (D) was held.', choices: ['(A) in this room', '(B) which', '(C) the meeting', '(D) was held'], answer: 1, why: '強調構文 It was ～ that …。強調するのが場所の語句なので which は使えない。that。' },
+      { sentence: 'It was (A) Tom (B) which (C) broke (D) the window.', choices: ['(A) Tom', '(B) which', '(C) broke', '(D) the window'], answer: 1, why: '強調するのが人なら who（または that）。which は使わない。' },
+      { sentence: 'It is important (A) that we (B) protects (C) nature (D) for the future.', choices: ['(A) that we', '(B) protects', '(C) nature', '(D) for the future'], answer: 1, why: '形式主語 It の that 節の主語は we なので protect。' },
+      { sentence: 'It was (A) not until (B) last year (C) when (D) I learned the truth.', choices: ['(A) not until', '(B) last year', '(C) when', '(D) I learned the truth'], answer: 2, why: 'It was not until ～ that …「～になってはじめて…」。when ではなく that。' },
+      { sentence: '(A) This is clear (B) that (C) he (D) is lying.', choices: ['(A) This is clear', '(B) that', '(C) he', '(D) is lying'], answer: 0, why: 'that 節を受ける形式主語は It。It is clear that ～。' },
+      { sentence: 'It was (A) yesterday (B) that (C) I (D) have met her.', choices: ['(A) yesterday', '(B) that', '(C) I', '(D) have met her'], answer: 3, why: '強調構文でも yesterday がある過去の文なので met her。現在完了は使えない。' },
+      { sentence: '(A) What is it (B) that (C) do you want (D) to say?', choices: ['(A) What is it', '(B) that', '(C) do you want', '(D) to say?'], answer: 2, why: '疑問詞＋is it that ～ のあとはふつうの語順。you want。' },
+      { sentence: 'It is (A) the students (B) who (C) is responsible (D) for the event.', choices: ['(A) the students', '(B) who', '(C) is responsible', '(D) for the event'], answer: 2, why: 'who の先行詞は the students（複数）なので are responsible。' },
+      { sentence: '(A) That is said (B) that (C) he (D) is a genius.', choices: ['(A) That is said', '(B) that', '(C) he', '(D) is a genius'], answer: 0, why: '「～と言われている」は It is said that ～。形式主語は It。' },
+      { sentence: '(A) It was (B) because he was ill (C) why (D) he was absent.', choices: ['(A) It was', '(B) because he was ill', '(C) why', '(D) he was absent'], answer: 2, why: '理由を強調する強調構文も It was ～ that …。why ではなく that。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
