@@ -2582,6 +2582,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 16 L40 84" stroke="#78350f" strokeWidth="3" />
       </g>
     )
+  if (species === 'boxfish')
+    return (
+      <g>
+        {/* 四角い体の点もよう */}
+        <circle cx="34" cy="44" r="3" fill="#713f12" />
+        <circle cx="50" cy="56" r="3" fill="#713f12" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
