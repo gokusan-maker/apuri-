@@ -33058,6 +33058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-homeschooling',
+    title: 'Should Children Be Educated at Home?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most countries, the great majority of children receive their education in schools run by the state or by private organizations. A growing number of families, however, have chosen to educate their children at home. Some parents do so for religious or philosophical reasons, others because their children have special needs or have been bullied, and still others because they believe they can provide a better education than local schools. In some countries homeschooling is widely accepted, while in others it is strictly limited or even forbidden. The practice raises important questions about the rights of parents, children, and society.",
+      "Supporters argue that homeschooling allows education to be adapted to the needs of each child. In a classroom of thirty or forty students, a teacher cannot easily adjust the pace of lessons for every individual, so some students become bored while others fall behind. At home, a child who learns quickly can move ahead, while one who needs more time can take it without embarrassment. Supporters also point out that homeschooled children can pursue their own interests in depth and learn through activities, visits, and projects that schools may have little time for.",
+      "Supporters further emphasize the rights of parents. Parents, they argue, know their children better than anyone else and bear the primary responsibility for their upbringing. If parents believe that the values or methods of local schools conflict with their own, they should be free to choose a different path. ( A ) homeschooling may not suit every family, supporters insist that a free society should respect the decisions of parents who are willing to devote the considerable time and effort it requires.",
+      "Critics, however, raise concerns about the quality of education. Not all parents have the knowledge or skill to teach advanced subjects such as mathematics, science, or foreign languages, and without regular checks it may be difficult to know whether children are learning what they need. Critics also worry that some children may be kept at home not for educational reasons but to hide neglect or abuse, since they are less likely to be seen regularly by teachers and other adults who might notice signs of trouble.",
+      "Another concern involves social development and the wider purposes of education. Schools are places not only for learning academic subjects but also for meeting people from different backgrounds, learning to cooperate, and coping with disagreement. Critics argue that children educated at home may have fewer opportunities to develop these abilities, and that a society in which many children grow up only among people who share their parents' views may become more divided. Supporters reply that many homeschooled children take part in sports clubs, community groups, and shared lessons with other families.",
+      "Research on the outcomes of homeschooling is limited and difficult to interpret. Some studies have found that homeschooled students perform as well as or better than their peers in tests and later education, but these studies often involve families who chose to participate and who may be unusually well educated or motivated. Less is known about families who homeschool with fewer resources, or about children whose education at home is poorly organized. The results, therefore, may say more about particular families than about homeschooling in general.",
+      "Perhaps the most reasonable approach is neither to forbid homeschooling nor to leave it entirely unregulated. Many observers suggest that families who educate their children at home should register with the authorities, follow a broad curriculum, and allow their children's progress to be checked from time to time. Such measures could protect children's right to a good education while respecting the freedom of parents. The debate reminds us that education concerns not only families but also the society in which children will one day take their place as citizens.",
+    ],
+    ja: [
+      'ほとんどの国で、子どもの大多数は、国や民間の団体が運営する学校で教育を受けている。しかし、子どもを家で教育することを選ぶ家族がふえている。宗教的・思想的な理由でそうする親もいれば、子どもに特別な支援が必要だったり、いじめを受けたりしたためにそうする親もおり、さらには地元の学校よりよい教育をあたえられると信じているためにそうする親もいる。ホームスクールが広く受け入れられている国もあれば、厳しく制限されたり禁じられたりさえしている国もある。この慣行は、親と子どもと社会の権利についての大切な問いを提起している。',
+      '支持する人々は、ホームスクールは教育を一人ひとりの子どもの必要に合わせることを可能にすると主張する。三十人や四十人の生徒がいる教室では、先生は授業の速さを一人ひとりに合わせてかんたんに調整できないので、退屈する生徒もいれば、おくれる生徒もいる。家では、学ぶのが速い子どもは先に進むことができ、もっと時間が必要な子どもははずかしい思いをせずに時間をかけられる。支持する人々はまた、ホームスクールの子どもは自分の興味を深く追い求め、学校にはあまり時間のないかもしれない活動や見学や課題を通じて学べると指摘する。',
+      '支持する人々はさらに、親の権利を強調する。親はだれよりも自分の子どもをよく知っており、その子育てに主たる責任をもっていると彼らは主張する。地元の学校の価値観や方法が自分のものと対立すると親が信じるなら、別の道を選ぶ自由があるべきだ。ホームスクールはすべての家族に合うわけではないかもしれないが、自由な社会は、それが求めるかなりの時間と努力をささげようとする親の決定を尊重すべきだと支持する人々は強く主張する。',
+      'しかし批判する人々は、教育の質についての心配をあげる。すべての親が数学や理科や外国語のような高度な教科を教える知識や技術をもっているわけではなく、定期的な確認がなければ、子どもが必要なことを学んでいるかどうかを知るのはむずかしいかもしれない。また、問題のしるしに気づくかもしれない先生やほかの大人に定期的に見られる機会が少ないので、教育上の理由ではなく、放置や虐待をかくすために家に置かれる子どももいるかもしれないと批判する人々は心配している。',
+      'もう一つの心配は、社会的な発達と教育のより広い目的にかかわる。学校は、教科を学ぶ場であるだけでなく、さまざまな背景をもつ人々と出会い、協力することを学び、意見のちがいに対処する場でもある。家で教育を受ける子どもは、こうした能力を育てる機会が少ないかもしれず、多くの子どもが親と同じ考えをもつ人々の中だけで育つ社会は、より分断されるかもしれないと批判する人々は主張する。支持する人々は、ホームスクールの子どもの多くが、スポーツクラブや地域の集まりや、ほかの家族との合同の授業に参加しているとこたえる。',
+      'ホームスクールの成果についての研究は限られており、解釈がむずかしい。ホームスクールの生徒がテストやその後の教育で同年代の生徒と同じくらいか、それ以上の成績をあげることを見いだした研究もあるが、こうした研究にはしばしば、参加することを選び、とくに教育を受けていたり意欲があったりするかもしれない家族がかかわっている。資源の少ない中でホームスクールをする家族や、家での教育がうまく組み立てられていない子どもについては、あまりわかっていない。したがって、その結果は、ホームスクール一般についてよりも、特定の家族について多くを語っているのかもしれない。',
+      'おそらく最も理にかなった方法は、ホームスクールを禁止することでも、まったく規制しないままにすることでもないだろう。多くの観察者は、子どもを家で教育する家族は当局に登録し、幅広い教育課程にしたがい、子どもの進歩をときどき確かめさせるべきだと提案している。こうした方法は、親の自由を尊重しながら、よい教育を受ける子どもの権利を守ることができるだろう。この議論は、教育が家族だけでなく、子どもがいつか市民としての位置をしめる社会にもかかわることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「すべての家族に合うわけではないかもしれないが、親の決定を尊重すべきだ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say homeschooling allows education to be adapted to each child and respects the rights of ( 1 ). Critics worry about the quality of teaching, the risk that neglect may be hidden, and children having fewer chances to meet people from different ( 2 ). Many suggest that homeschooling should be neither forbidden nor left entirely ( 3 ).',
+      blanks: [
+        { choices: ['parents', 'teachers', 'governments', 'companies'], answer: 0, why: '第3段落 Supporters further emphasize the rights of parents。' },
+        { choices: ['backgrounds', 'schools', 'countries', 'languages'], answer: 0, why: '第5段落 meeting people from different backgrounds。' },
+        { choices: ['unregulated', 'unknown', 'unpaid', 'unpopular'], answer: 0, why: '第7段落 nor to leave it entirely unregulated。' },
+      ],
+    },
+    tf: [
+      { statement: 'ホームスクールが厳しく制限されたり禁じられたりしている国もある。', answer: true, why: '第1段落 in others it is strictly limited or even forbidden。' },
+      { statement: '筆者によれば、すべての親は高度な教科を教える知識をもっている。', answer: false, why: '第4段落 Not all parents have the knowledge or skill to teach advanced subjects。' },
+      { statement: 'ホームスクールの子どもの多くは、スポーツクラブや地域の集まりに参加していると支持する人々はこたえる。', answer: true, why: '第5段落 many homeschooled children take part in sports clubs, community groups。' },
+      { statement: '研究によれば、ホームスクールの成果はすべての家族について十分にわかっている。', answer: false, why: '第6段落 Less is known about families who homeschool with fewer resources。' },
+    ],
+    qa: [
+      { q: 'Why might some studies of homeschooling give an unusually positive picture?', choices: ['They often involve families who are well educated or motivated.', 'They are always written by teachers.', 'They only study failing schools.', 'They ignore test results.'], answer: 0, why: '第6段落 families who chose to participate and who may be unusually well educated or motivated。' },
+      { q: 'What do many observers suggest families who homeschool should do?', choices: ['Register with the authorities and allow progress to be checked.', 'Stop teaching mathematics.', 'Move to another country.', 'Hire many private teachers.'], answer: 0, why: '第7段落 should register with the authorities ... and allow their children\'s progress to be checked。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
