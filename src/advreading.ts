@@ -33618,6 +33618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-insect-food',
+    title: 'Should We Eat Insects?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many parts of the world, insects have been eaten for thousands of years. Grasshoppers, caterpillars, ants, and beetle larvae are valued foods in regions of Asia, Africa, and Latin America, and in parts of Japan, dishes made from insects have long been part of local tradition. In recent years, however, insects have attracted attention in countries where eating them is unfamiliar, as scientists and international organizations have suggested that they could help feed a growing global population while reducing environmental damage. The idea remains controversial, and it raises questions about nutrition, sustainability, and culture.",
+      "Supporters point first to the environmental advantages. Raising cattle and other livestock requires large amounts of land, water, and feed, and it produces significant greenhouse gas emissions. Many insects, by contrast, convert feed into body weight much more efficiently, can be raised in small spaces, and produce far fewer emissions. Some species can even be fed on food waste or agricultural by-products. If people replaced part of their meat consumption with insects, supporters argue, the pressure on forests, water supplies, and the climate could be substantially reduced. Since insects are also cold-blooded, they do not need to use energy to keep their bodies warm, which is one reason for their efficiency.",
+      "Supporters also emphasize nutritional benefits. Many edible insects are rich in protein and contain useful amounts of vitamins, minerals, and healthy fats. ( A ) the nutritional value varies from species to species, insects could provide an affordable source of high-quality food, particularly in regions where people struggle to obtain enough protein. Ground into flour, they can be added to bread, pasta, or snacks, making them easier to accept for people who might not want to eat whole insects.",
+      "Critics, however, raise several concerns. The most obvious is the strong feeling of disgust that many people experience at the idea of eating insects. Such reactions are not easily changed by information about nutrition or the environment, and companies that have tried to sell insect products in some countries have struggled to find customers. Critics argue that a food that most people refuse to eat cannot make a large contribution to global food supplies, however efficient it may be in principle. They also note that insect products are often more expensive than familiar foods, since production methods are still being developed.",
+      "There are also questions about safety and welfare. Some people are allergic to insects, particularly those who react to shellfish, and products containing insects must be clearly labeled. Large-scale insect farming is still relatively new, and scientists are studying how to prevent the spread of disease and contamination. In addition, some have asked whether insects can feel pain, and whether raising and killing billions of them raises ethical issues that have so far received little attention.",
+      "Cultural attitudes toward food, however, have changed many times in history. Foods that were once considered strange or unpleasant in a particular country, such as raw fish or certain kinds of seaweed, have later become popular there. Supporters suggest that insects might follow a similar path, especially if they are first introduced in familiar forms or used as feed for fish and poultry, which would reduce the environmental cost of other foods without requiring people to change their diets directly.",
+      "Whether insects become an important part of the human diet may depend less on their nutritional or environmental qualities than on culture, price, and taste. Yet the debate is valuable even for those who never eat an insect. It encourages us to reflect on why we regard some foods as normal and others as unthinkable, and on how our habits of eating affect the planet. In a world facing growing demands for food and serious environmental challenges, such reflection may be more important than ever.",
+    ],
+    ja: [
+      '世界の多くの地域で、昆虫は何千年も食べられてきた。バッタやイモムシやアリや甲虫の幼虫は、アジアやアフリカや中南米の地域で大切な食べ物とされ、日本の一部でも、昆虫を使った料理が長く地元の伝統の一部になってきた。しかし近年、昆虫は、それを食べることがなじみのない国でも注目を集めている。科学者や国際機関が、昆虫は環境への害を減らしながら、ふえ続ける世界の人口を養う助けになりうると示唆したからである。この考えはなお議論をよんでおり、栄養や持続可能性や文化についての問いを提起している。',
+      '支持する人々は、まず環境上の利点をあげる。牛やほかの家畜を育てるには多くの土地や水やえさが必要であり、かなりの温室効果ガスを出す。対照的に、多くの昆虫は、えさをはるかに効率よく体重に変え、せまい場所で育てられ、ずっと少ない排出しか出さない。食べ残しや農業の副産物をえさにできる種類さえある。人々が肉の消費の一部を昆虫に置きかえれば、森や水資源や気候への圧力を大きく減らせるかもしれないと支持する人々は主張する。また、昆虫は変温動物なので、体を温かく保つためにエネルギーを使う必要がなく、それが効率のよさの理由の一つになっている。',
+      '支持する人々はまた、栄養上の利点を強調する。食べられる昆虫の多くはたんぱく質が豊富で、役に立つ量のビタミンやミネラルや健康によい脂肪をふくんでいる。栄養価は種類によってちがうが、とくに十分なたんぱく質を得るのに苦労している地域では、昆虫は安くて質の高い食べ物の源になりうる。粉にひけばパンやパスタやおかしに加えることができ、昆虫をそのまま食べたくないかもしれない人々にも受け入れやすくなる。',
+      'しかし批判する人々は、いくつかの心配をあげる。最も明らかなのは、昆虫を食べると考えただけで多くの人々が感じる強い嫌悪感である。そうした反応は栄養や環境についての情報ではかんたんには変わらず、いくつかの国で昆虫の製品を売ろうとした会社は客を見つけるのに苦労してきた。原理的にどれほど効率がよくても、ほとんどの人が食べるのを拒む食べ物は、世界の食料供給に大きく貢献することはできないと批判する人々は主張する。また、生産の方法がまだ開発の途中なので、昆虫の製品はなじみのある食べ物よりしばしば高いとも指摘する。',
+      '安全と動物の福祉についての疑問もある。昆虫にアレルギーをもつ人、とくに甲殻類に反応する人もおり、昆虫をふくむ製品ははっきり表示されなければならない。大規模な昆虫の養殖はまだ比較的新しく、科学者たちは病気や汚染の広がりを防ぐ方法を研究している。さらに、昆虫は痛みを感じるのか、何十億匹も育てて殺すことは、これまでほとんど注意を向けられてこなかった倫理的な問題を引き起こすのではないか、と問う人々もいる。',
+      'しかし、食べ物に対する文化的な態度は、歴史の中で何度も変わってきた。生の魚やある種の海藻のように、ある国でかつて奇妙で不快だと思われていた食べ物が、のちにその国で人気になったこともある。支持する人々は、昆虫も、とくにまずなじみのある形で取り入れられたり、魚や鶏のえさとして使われたりすれば、似た道をたどるかもしれないと示唆する。後者なら、人々が直接食生活を変えなくても、ほかの食べ物の環境上の負担を減らせるだろう。',
+      '昆虫が人間の食事の大切な一部になるかどうかは、栄養や環境上の性質よりも、文化や値段や味にかかっているのかもしれない。しかしこの議論は、昆虫を一度も食べない人にとってさえ価値がある。それは、私たちがなぜある食べ物をふつうと考え、別の食べ物を考えられないものと考えるのか、そして私たちの食習慣が地球にどう影響しているのかをふり返るようはげましてくれる。食料への需要がふえ、深刻な環境の課題に直面している世界では、そうしたふり返りはこれまで以上に大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「栄養価は種類によってちがうが、質の高い食べ物の源になりうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that insects could reduce environmental damage because they convert feed into body weight very ( 1 ) and are rich in protein. Critics point to strong feelings of ( 2 ) and to questions of safety and welfare. Cultural attitudes toward food have often ( 3 ) in the past, so insects might one day become more accepted.',
+      blanks: [
+        { choices: ['efficiently', 'slowly', 'rarely', 'expensively'], answer: 0, why: '第2段落 convert feed into body weight much more efficiently。' },
+        { choices: ['disgust', 'pride', 'hunger', 'joy'], answer: 0, why: '第4段落 the strong feeling of disgust。' },
+        { choices: ['changed', 'disappeared', 'stopped', 'failed'], answer: 0, why: '第6段落 Cultural attitudes toward food ... have changed many times in history。' },
+      ],
+    },
+    tf: [
+      { statement: '日本の一部では、昆虫を使った料理が長く伝統の一部になってきた。', answer: true, why: '第1段落 in parts of Japan, dishes made from insects have long been part of local tradition。' },
+      { statement: '昆虫は家畜より多くの温室効果ガスを出す。', answer: false, why: '第2段落 produce far fewer emissions。' },
+      { statement: '甲殻類にアレルギーのある人は、昆虫にも反応することがある。', answer: true, why: '第5段落 Some people are allergic to insects, particularly those who react to shellfish。' },
+      { statement: '筆者によれば、この議論は昆虫を食べる人にとってだけ価値がある。', answer: false, why: '第7段落 the debate is valuable even for those who never eat an insect。' },
+    ],
+    qa: [
+      { q: 'How can insects be made easier to accept for some people?', choices: ['By grinding them into flour and adding them to other foods.', 'By making them more expensive.', 'By serving them alive.', 'By hiding them from labels.'], answer: 0, why: '第3段落 Ground into flour, they can be added to bread, pasta, or snacks。' },
+      { q: 'How could insects reduce environmental costs without people eating them directly?', choices: ['By being used as feed for fish and poultry.', 'By replacing all crops.', 'By being exported to other planets.', 'By being kept as pets.'], answer: 0, why: '第6段落 used as feed for fish and poultry。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
