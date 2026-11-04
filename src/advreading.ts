@@ -30098,6 +30098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-organ-donation',
+    title: 'Should Organ Donation Be the Default?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every year, many people die while waiting for an organ transplant, not because the medical techniques are lacking but because there are not enough donated organs. In most countries, people become organ donors after death only if they have actively agreed to do so, for example by carrying a donor card or registering their wishes. Surveys often show that a large majority of people support organ donation in principle, yet a much smaller proportion actually register as donors. This gap between attitude and action has led some governments to consider a different approach, known as an opt-out system.",
+      "Under an opt-out system, every adult is presumed to be willing to donate his or her organs after death unless he or she has formally registered an objection. The decision to donate thus becomes the default, and those who do not wish to donate must take action to refuse. Supporters argue that this simple change can save many lives. Most people, they point out, never get around to registering their wishes, not because they object to donation but because they are busy, uncomfortable thinking about death, or simply unaware of how to do so.",
+      "The idea draws on research in psychology showing that people tend to stick with whatever option is presented as the default. When employees are automatically enrolled in a pension plan, for example, far more of them remain in it than when they must choose to join. Supporters of opt-out donation argue that the same principle can be applied to organ donation, and they note that several countries with opt-out systems have relatively high rates of donation. A change in the default, in this view, respects people's freedom, since anyone can still refuse, while encouraging an outcome that most of them already support.",
+      "Critics, however, raise serious ethical concerns. ( A ) an opt-out system preserves the right to refuse, they argue, it treats silence as consent, and silence may reflect ignorance rather than agreement. Some people, particularly those who are poorly informed, do not read official notices, or do not speak the dominant language well, may never learn that the system exists, and their organs might be taken without their genuine approval. For critics, the body is so personal that its use after death should depend on an active decision rather than on a presumption.",
+      "There are also questions about whether opt-out systems actually increase donation as much as supporters claim. The countries with high donation rates often have other advantages, such as well-funded hospitals, specially trained staff who identify potential donors, and effective systems for transporting organs quickly. When these factors are taken into account, the effect of the opt-out rule itself may be smaller than it first appears. Some researchers argue that improving hospital organization would do more to save lives than changing the law.",
+      "The role of families further complicates the issue. In practice, even in countries with opt-out systems, doctors usually consult the family of the deceased before removing organs, and they rarely proceed if the family strongly objects. Supporters suggest that an opt-out system makes such conversations easier, since families can be told that donation is the normal expectation. Critics worry that grieving relatives may feel pressured at an extremely painful moment, and that trust in doctors could suffer if people come to believe that hospitals are more interested in their organs than in their care.",
+      "The debate over organ donation thus reflects a wider question about how societies should influence individual choices. Default rules are never neutral: whatever option is chosen as the default will shape what most people do. The challenge is to design systems that encourage beneficial outcomes while ensuring that people remain genuinely free and well informed. Whether a country adopts an opt-out system or not, efforts to explain the facts about donation clearly and to encourage families to discuss their wishes openly are likely to be essential if more lives are to be saved.",
+    ],
+    ja: [
+      '毎年、移植を待つあいだに多くの人が亡くなるが、それは医療技術が欠けているからではなく、提供される臓器が足りないからである。ほとんどの国では、人は、たとえばドナーカードを持ったり自分の意思を登録したりして、自分から同意した場合にだけ、死後に臓器提供者になる。調査では、大多数の人が原則として臓器提供を支持していることがよく示されるが、実際に提供者として登録する人の割合はずっと小さい。この態度と行動の差から、オプトアウト方式として知られるちがうやり方を検討する政府も出てきた。',
+      'オプトアウト方式のもとでは、正式に反対を登録していないかぎり、すべてのおとなは死後に臓器を提供する意思があるとみなされる。こうして提供するという決定が初期設定になり、提供したくない人がことわるために行動しなければならない。支持する人々は、この単純な変更で多くの命を救えると主張する。ほとんどの人は自分の意思をなかなか登録しないが、それは提供に反対しているからではなく、いそがしかったり、死について考えるのが気まずかったり、単にどうすればよいか知らなかったりするからだ、と彼らは指摘する。',
+      'この考えは、人は初期設定として示された選択肢にとどまる傾向があることを示す心理学の研究にもとづいている。たとえば、従業員が年金制度に自動的に加入させられると、自分で加入を選ばなければならないときよりもはるかに多くの人がそこにとどまる。オプトアウト方式の臓器提供を支持する人々は、同じ原則を臓器提供に当てはめられると主張し、オプトアウト方式をとるいくつかの国では提供の割合が比較的高いことに注目する。この見方では、初期設定の変更は、だれでもことわれるので人々の自由を尊重しつつ、ほとんどの人がすでに支持している結果をうながすのである。',
+      'しかし批判する人々は、重大な倫理的懸念をあげる。オプトアウト方式はことわる権利を保っているが、沈黙を同意とみなしており、沈黙は同意ではなく無知を反映しているかもしれない、と彼らは主張する。とくに情報が不十分だったり、公的な通知を読まなかったり、主な言語をよく話せなかったりする人の中には、その制度があることを知らないままの人もいるかもしれず、本当の同意なしにその人の臓器が取り出されるかもしれない。批判する人々にとって、体はとても個人的なものなので、死後のその使い方は、推定ではなく自分からの決定にもとづくべきなのである。',
+      'オプトアウト方式が支持する人々の言うほど本当に提供をふやすのかについても疑問がある。提供の割合が高い国には、資金の十分な病院や、提供者になりうる人を見つける特別な訓練を受けた職員や、臓器をすばやく運ぶ効果的な仕組みといった、ほかの強みがあることが多い。こうした要因を考えに入れると、オプトアウトの規則そのものの効果は、最初に見えるよりも小さいかもしれない。法律を変えるよりも病院の組織をよくするほうが、より多くの命を救うだろうと主張する研究者もいる。',
+      '家族の役割は、この問題をさらに複雑にする。実際には、オプトアウト方式の国でさえ、医者はふつう臓器を取り出す前に亡くなった人の家族に相談し、家族が強く反対すればめったに進めない。支持する人々は、提供がふつう期待されることだと家族に伝えられるので、オプトアウト方式はそうした話し合いをしやすくすると示唆する。批判する人々は、悲しみの中にある親族が、きわめてつらい時に圧力を感じるかもしれず、病院が自分たちの世話よりも臓器に関心があると人々が思うようになれば、医者への信頼がそこなわれるかもしれないと心配する。',
+      'このように臓器提供をめぐる議論は、社会が個人の選択にどう影響をあたえるべきかについての、より広い問いを反映している。初期設定の規則はけっして中立ではない。どの選択肢が初期設定に選ばれても、それがほとんどの人の行動を形づくるからである。課題は、人々が本当に自由で十分に情報をもったままであることを保証しつつ、有益な結果をうながす仕組みを設計することである。国がオプトアウト方式をとるにせよとらないにせよ、より多くの命を救うためには、提供についての事実をわかりやすく説明し、家族が自分の意思を率直に話し合うようはげます努力が欠かせないだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「ことわる権利は保っているが、沈黙を同意とみなしている」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Under an opt-out system, people are presumed to be donors unless they object, which makes donation the ( 1 ). Supporters say this saves lives, but critics argue that it treats ( 2 ) as consent. Others point out that well-organized ( 3 ) may matter more than the law itself.',
+      blanks: [
+        { choices: ['default', 'exception', 'punishment', 'secret'], answer: 0, why: '第2段落 The decision to donate thus becomes the default。' },
+        { choices: ['silence', 'anger', 'payment', 'illness'], answer: 0, why: '第4段落 it treats silence as consent。' },
+        { choices: ['hospitals', 'schools', 'markets', 'elections'], answer: 0, why: '第5段落 improving hospital organization would do more to save lives。' },
+      ],
+    },
+    tf: [
+      { statement: '調査では、大多数の人が原則として臓器提供を支持している。', answer: true, why: '第1段落 a large majority of people support organ donation in principle。' },
+      { statement: '筆者によれば、多くの人が登録しないのは主に提供に反対しているからである。', answer: false, why: '第2段落 not because they object to donation。' },
+      { statement: 'オプトアウト方式の国でも、医者はふつう家族に相談する。', answer: true, why: '第6段落 doctors usually consult the family of the deceased。' },
+      { statement: '筆者によれば、初期設定の規則は中立である。', answer: false, why: '第7段落 Default rules are never neutral。' },
+    ],
+    qa: [
+      { q: 'What example of default effects is given in the third paragraph?', choices: ['Automatic enrollment in a pension plan.', 'Choosing a school uniform.', 'Paying taxes online.', 'Voting in elections.'], answer: 0, why: '第3段落 When employees are automatically enrolled in a pension plan。' },
+      { q: 'What do critics fear may happen to trust in doctors?', choices: ['It could suffer if hospitals seem more interested in organs than care.', 'It would become stronger in every case.', 'It would no longer matter.', 'It would depend only on the law.'], answer: 0, why: '第6段落 trust in doctors could suffer if people come to believe that hospitals are more interested in their organs than in their care。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
