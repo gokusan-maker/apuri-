@@ -30658,6 +30658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-arts-funding',
+    title: 'Should Taxes Pay for the Arts?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, governments spend public money on the arts. They support national theaters and orchestras, fund museums and galleries, provide grants to individual writers and painters, and pay for music and art lessons in schools. In times of economic difficulty, however, such spending is often among the first to be questioned. When hospitals need equipment and roads need repair, it can seem hard to justify using taxpayers' money to support an opera company or a sculpture in a public square. The question of whether, and how much, governments should fund the arts has therefore been debated for a long time.",
+      "Those who oppose public funding often argue that the arts should be left to the market. If people value a concert or an exhibition, they will be willing to pay for it, and if they are not willing to pay, it is not clear why others should be forced to pay through their taxes. Public funding, critics add, often benefits wealthier and better-educated citizens, who are more likely to attend the opera or visit galleries, while the costs are shared by everyone. In this view, subsidizing the arts can amount to a transfer of money from the less advantaged to the more advantaged.",
+      "Supporters of public funding reply that the market alone cannot sustain many valuable forms of art. Some works, such as experimental music or new plays by unknown writers, may attract only small audiences at first, even though they may later come to be widely admired. A system that supports only what is immediately popular, supporters argue, would discourage risk and originality, and would leave future generations poorer. Public money can also preserve cultural heritage, such as historic buildings, traditional crafts, and collections of art, which belong to the whole society rather than to any individual buyer.",
+      "Supporters further point out that the arts bring benefits that extend beyond those who directly enjoy them. Cultural institutions attract tourists, create jobs, and help to revive declining neighborhoods. Studies have suggested that participation in the arts can improve children's learning, support mental health, and strengthen a sense of community. ( A ) such benefits are difficult to measure precisely, supporters argue, they are real, and the market, which responds only to what individuals are willing to pay, tends to undervalue them.",
+      "Critics, however, worry that public funding gives governments too much influence over culture. When officials decide which projects deserve support, they may favor works that please those in power, or avoid funding art that is controversial or critical of the government. Artists who depend on public money may feel pressure to avoid offending anyone. To reduce this danger, many countries have created independent bodies, separate from the government, to distribute funds according to artistic merit rather than political preference.",
+      "There are also questions about how funding should be shared. Should money go mainly to large national institutions, which can produce performances of the highest quality, or to small local groups, which may reach people who rarely encounter the arts? Should it support professional artists or encourage ordinary citizens to create art themselves? Different answers reflect different ideas about what the arts are for: whether they are chiefly a matter of excellence to be admired or of participation to be shared.",
+      "The debate over funding the arts ultimately concerns what kind of society people wish to live in. A society that measures the value of everything by its price may find it hard to justify supporting activities whose benefits are uncertain and long-term. Yet many of the works that people now regard as essential parts of their cultural inheritance were made possible by some form of support from outside the market. Deciding how to support the arts fairly, without letting them become either a luxury for the few or a tool of those in power, remains a difficult but important task for every democracy.",
+    ],
+    ja: [
+      '多くの国で、政府は芸術に公のお金を使っている。国立の劇場やオーケストラを支え、博物館や美術館に資金を出し、作家や画家個人に助成金をあたえ、学校の音楽や美術の授業の費用をはらっている。しかし経済が苦しい時期には、そうした支出はしばしば最初に疑問視されるものの一つになる。病院が設備を必要とし、道路が修理を必要としているときに、オペラの劇団や広場の彫刻を支えるために納税者のお金を使うことを正当化するのはむずかしく思われることがある。だから、政府が芸術に資金を出すべきかどうか、そしてどれほど出すべきかという問いは、長いあいだ議論されてきた。',
+      '公の資金に反対する人々は、しばしば芸術は市場にまかせるべきだと主張する。人々が演奏会や展覧会に価値を認めるなら、そのためにお金をはらおうとするだろうし、はらおうとしないなら、なぜほかの人が税金を通じてはらわされなければならないのかははっきりしない。公の資金は、オペラに行ったり美術館をおとずれたりする可能性の高い、より豊かでより教育を受けた市民の得になることが多いが、その費用はみんなで分けあうことになる、と批判する人々はつけ加える。この見方では、芸術への補助は、恵まれない人々から恵まれた人々へのお金のうつしかえになりかねない。',
+      '公の資金を支持する人々は、市場だけでは多くの価値ある芸術の形を保てないと答える。実験的な音楽や無名の作家の新しい劇のような作品は、のちに広く称賛されるようになるかもしれないとしても、はじめは少ない観客しか集めないかもしれない。すぐに人気が出るものだけを支える仕組みは、冒険と独創性をくじき、将来の世代をより貧しくするだろう、と支持する人々は主張する。公のお金はまた、歴史的な建物や伝統的な工芸や美術品のコレクションのような、個々の買い手ではなく社会全体に属する文化遺産を守ることもできる。',
+      '支持する人々はさらに、芸術は直接それを楽しむ人をこえて広がる恩恵をもたらすと指摘する。文化施設は観光客を引きつけ、仕事を生み、さびれつつある地区をよみがえらせる助けになる。研究によれば、芸術に参加することは、子どもの学びをよくし、心の健康をささえ、共同体の感覚を強めうる。そうした恩恵を正確にはかるのはむずかしいが、それは現実のものであり、個人がはらおうとするものにしか反応しない市場は、それを低く見つもりがちだ、と支持する人々は主張する。',
+      'しかし批判する人々は、公の資金が政府に文化へのあまりに大きな影響力をあたえることを心配する。どの計画が支援に値するかを役人が決めるとき、彼らは権力をもつ人々を喜ばせる作品をひいきしたり、論争をよぶ芸術や政府に批判的な芸術に資金を出すのをさけたりするかもしれない。公のお金にたよる芸術家は、だれの気分もそこねないようにという圧力を感じるかもしれない。この危険をへらすために、多くの国は、政治的な好みではなく芸術的な価値にもとづいて資金を配る、政府から独立した機関を作ってきた。',
+      '資金をどう分けるべきかについての問いもある。お金は主に、最高の質の公演を生み出せる大きな国立の機関に行くべきなのか、それとも、芸術にめったにふれない人々にとどくかもしれない小さな地域の団体に行くべきなのか。プロの芸術家を支えるべきなのか、それとも、ふつうの市民が自分で芸術を作るようはげますべきなのか。ちがう答えは、芸術が何のためにあるのか、つまりそれが主に称賛されるべき卓越さの問題なのか、分かちあわれるべき参加の問題なのかについての、ちがう考えを反映している。',
+      '芸術への資金をめぐる議論は、結局のところ、人々がどんな社会に住みたいと願っているかにかかわっている。あらゆるものの価値を値段ではかる社会は、恩恵が不確かで長期的な活動を支えることを正当化しにくいかもしれない。しかし、人々が今、自分たちの文化遺産の欠かせない一部とみなしている作品の多くは、市場の外からの何らかの支援によって可能になったのである。芸術を、少数の人のぜいたく品にも権力者の道具にもさせずに、どう公平に支えるかを決めることは、あらゆる民主主義にとって、むずかしいが大切な課題であり続けている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「恩恵を正確にはかるのはむずかしいが、それは現実のものだ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Opponents argue that the arts should be left to the ( 1 ) and that public funding mainly benefits the wealthy. Supporters reply that it protects risky new work and cultural ( 2 ), and brings wider benefits. Critics also fear government ( 3 ) over culture, which independent bodies try to reduce.',
+      blanks: [
+        { choices: ['market', 'army', 'weather', 'police'], answer: 0, why: '第2段落 the arts should be left to the market。' },
+        { choices: ['heritage', 'debt', 'traffic', 'crime'], answer: 0, why: '第3段落 Public money can also preserve cultural heritage。' },
+        { choices: ['influence', 'ignorance', 'poverty', 'silence'], answer: 0, why: '第5段落 public funding gives governments too much influence over culture。' },
+      ],
+    },
+    tf: [
+      { statement: '批判する人々によれば、公の資金はより豊かな市民の得になることが多い。', answer: true, why: '第2段落 often benefits wealthier and better-educated citizens。' },
+      { statement: '支持する人々によれば、実験的な作品ははじめから大勢の観客を集める。', answer: false, why: '第3段落 may attract only small audiences at first。' },
+      { statement: '多くの国は、政府から独立した機関を作って資金を配っている。', answer: true, why: '第5段落 many countries have created independent bodies, separate from the government。' },
+      { statement: '筆者によれば、今大切にされている作品は市場だけで生まれた。', answer: false, why: '第7段落 were made possible by some form of support from outside the market。' },
+    ],
+    qa: [
+      { q: 'What benefits of the arts are mentioned in the fourth paragraph?', choices: ['Attracting tourists and creating jobs.', 'Lowering taxes.', 'Reducing traffic.', 'Ending all poverty.'], answer: 0, why: '第4段落 Cultural institutions attract tourists, create jobs。' },
+      { q: 'What might artists who depend on public money feel, according to critics?', choices: ['Pressure to avoid offending anyone.', 'Free to criticize the government.', 'No need to work.', 'Richer than other citizens.'], answer: 0, why: '第5段落 may feel pressure to avoid offending anyone。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
