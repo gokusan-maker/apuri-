@@ -31262,6 +31262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-repetition',
+    title: 'In Praise of Repetition',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern culture places a high value on novelty. We seek new experiences, new products, and new ideas, and we tend to regard repetition as a sign of dullness or a lack of imagination. To do the same thing every day, to read the same book twice, or to return again and again to the same place may seem to waste opportunities that could be spent on something different. Yet a great deal of what human beings value most depends not on novelty but on repetition. To understand why, we must look more closely at what repetition actually does.",
+      "Consider first the role of repetition in learning. A musician who practices a difficult passage hundreds of times is not merely doing the same thing again; each repetition allows small adjustments, gradually transforming a clumsy effort into a fluent performance. The same is true of learning a language, mastering a sport, or acquiring any complex skill. What appears from the outside to be monotonous is, from the inside, a process of continual refinement, in which the learner notices details that were invisible at the beginning.",
+      "Repetition also deepens understanding. A book read for the second or third time often reveals meanings that were missed on the first reading, not because the text has changed but because the reader has. Knowing how the story ends, we can attend to how it is told; having lived longer, we may recognize experiences that we could not understand before. ( A ) the words on the page remain the same, the act of reading them is never quite repeated, since each reading takes place in a different moment of the reader's life.",
+      "In ritual and tradition, repetition takes on a further significance. Festivals celebrated every year, prayers spoken every day, and family customs passed down through generations derive much of their meaning from the fact that they have been repeated many times before. Each repetition connects the present to the past, linking the individual to those who performed the same actions long ago. Novelty, by contrast, cannot create this sense of continuity, since what is entirely new has no history to share.",
+      "Repetition can also provide a kind of stability that makes freedom possible. Daily routines, such as waking at the same hour, taking the same walk, or working at the same desk, free the mind from the need to make constant decisions, leaving energy for creative and demanding tasks. Many writers and artists have relied on strict routines precisely in order to free their imaginations. The predictable structure of the day becomes a container within which unpredictable thoughts can develop. Without such a framework, the effort of organizing each day anew might leave little energy for anything else.",
+      "This is not to say that repetition is always good. Repetition can become mechanical when it is performed without attention, and routines can harden into habits that prevent people from responding to changing circumstances. A person who repeats the same opinions without reflection, or who follows the same patterns of behavior even when they cause harm, is not deepening his or her experience but avoiding it. The value of repetition depends on the attitude with which it is performed.",
+      "Perhaps, then, the opposition between novelty and repetition is less absolute than it seems. Attentive repetition is itself a source of novelty, since it allows us to discover what we had not noticed before. The familiar path, walked with open eyes, reveals new details in every season; the well-known piece of music, played with care, is never performed exactly the same way twice. To appreciate repetition is not to reject the new, but to recognize that newness can be found not only in different things but also in a deeper encounter with the same ones. In this sense, learning to repeat well may be one of the quiet arts of living well.",
+    ],
+    ja: [
+      '現代の文化は目新しさに高い価値を置いている。私たちは新しい経験や新しい製品や新しい考えを求め、くり返しを退屈さや想像力の欠如のしるしとみなしがちである。毎日同じことをしたり、同じ本を二度読んだり、同じ場所に何度ももどったりすることは、ちがうことにあてられたはずの機会をむだにしているように思われるかもしれない。しかし人間が最も大切にしているものの多くは、目新しさではなくくり返しにかかっている。なぜかを理解するには、くり返しが実際に何をしているのかをもっとよく見なければならない。',
+      'まず、学びにおけるくり返しの役割を考えてみよう。むずかしい一節を何百回も練習する音楽家は、単に同じことをもう一度しているのではない。くり返すたびに小さな調整ができ、ぎこちない努力が少しずつなめらかな演奏に変わっていく。同じことは、言語を学んだり、スポーツを身につけたり、どんな複雑な技能を得たりするときにも当てはまる。外から見れば単調に見えるものが、内側からは、たえまない洗練の過程であり、そこで学ぶ者は最初には見えなかった細部に気づくのである。',
+      'くり返しはまた理解を深める。二度目や三度目に読む本は、最初に読んだときには見のがした意味を明らかにすることが多い。それは文章が変わったからではなく、読み手が変わったからである。物語がどう終わるかを知っていれば、それがどう語られているかに注意を向けることができ、より長く生きていれば、以前には理解できなかった経験に気づくかもしれない。ページの上のことばは同じままでも、それを読む行為はけっしてまったく同じにはくり返されない。それぞれの読書は、読み手の人生のちがう瞬間に行われるからである。',
+      '儀式や伝統では、くり返しはさらなる意味をおびる。毎年祝われる祭りや、毎日となえられる祈りや、世代から世代へと受けつがれる家族の習慣は、その意味の多くを、それが以前に何度もくり返されてきたという事実から得ている。くり返すたびに今は過去と結びつき、個人は、ずっと昔に同じ行為をした人々とつながる。それに対して、目新しさはこの連続の感覚を生み出すことができない。まったく新しいものには、分かちあう歴史がないからである。',
+      'くり返しはまた、自由を可能にする一種の安定をあたえることもある。同じ時刻に起きたり、同じ散歩をしたり、同じ机で働いたりするような毎日の決まりごとは、たえず決定をしなければならないことから心を解放し、創造的でむずかしい仕事のための力を残してくれる。多くの作家や芸術家が、まさに想像力を解き放つために、きびしい決まりごとにたよってきた。一日の予測できる構造が、予測できない考えが育つことのできる入れ物になるのである。そうした枠組みがなければ、毎日を新しく組み立てる努力に、ほかのことのための力がほとんど残らないかもしれない。',
+      'これは、くり返しがいつもよいということではない。くり返しは注意をはらわずに行われると機械的になり、決まりごとは、人々が変化する状況に応じるのをさまたげる習慣にかたまってしまうこともある。考えもせずに同じ意見をくり返す人や、害をもたらしているときでさえ同じふるまいのくせに従う人は、自分の経験を深めているのではなく、経験をさけているのである。くり返しの価値は、それを行う態度にかかっている。',
+      'それなら、目新しさとくり返しとの対立は、見かけほど絶対的なものではないのかもしれない。注意深いくり返しはそれ自体が目新しさのみなもとである。それによって、以前には気づかなかったことを発見できるからである。なじみの道も、目を開いて歩けば、季節ごとに新しい細部を見せてくれる。よく知られた曲も、心をこめて演奏すれば、けっして二度とまったく同じには演奏されない。くり返しを味わうことは、新しいものをこばむことではなく、新しさが、ちがうものの中だけでなく、同じものとのより深い出会いの中にも見いだされうることを認めることなのである。この意味で、うまくくり返すことを学ぶのは、よく生きるためのひかえめな技術の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ことばは同じままでも、読む行為はけっして同じにはくり返されない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、現代の文化は目新しさに高い価値を置いている。', answer: true, why: '第1段落 Modern culture places a high value on novelty。' },
+      { statement: '筆者によれば、二度目に読んで新しい意味が見つかるのは、文章が変わったからである。', answer: false, why: '第3段落 not because the text has changed but because the reader has。' },
+      { statement: '多くの作家や芸術家は、想像力を解き放つためにきびしい決まりごとにたよってきた。', answer: true, why: '第5段落 Many writers and artists have relied on strict routines precisely in order to free their imaginations。' },
+      { statement: '筆者は、くり返しはいつもよいと述べている。', answer: false, why: '第6段落 This is not to say that repetition is always good。' },
+    ],
+    qa: [
+      { q: 'What does each repetition allow a musician to do, according to the second paragraph?', choices: ['Make small adjustments.', 'Play exactly the same way.', 'Stop practicing.', 'Learn a new instrument.'], answer: 0, why: '第2段落 each repetition allows small adjustments。' },
+      { q: 'Why can novelty not create a sense of continuity?', choices: ['What is entirely new has no history to share.', 'It is too expensive.', 'People dislike change.', 'It happens too slowly.'], answer: 0, why: '第4段落 since what is entirely new has no history to share。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
