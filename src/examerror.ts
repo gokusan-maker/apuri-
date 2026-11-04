@@ -3842,6 +3842,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She (A) said that (B) she had met him (C) two days ago (D) in the library.', choices: ['(A) said that', '(B) she had met him', '(C) two days ago', '(D) in the library'], answer: 2, why: '話法を書きかえると ago は before になる。two days before。' },
     ],
   },
+  {
+    id: 'exam-error-forof-kokuritsu',
+    title: '入試の正誤問題〈162〉（国公立レベル：不定詞の意味上の主語 for 人・of 人）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '不定詞の「だれが」は for 人 で表す（It is difficult for me to answer）。ただし kind・nice・careless・wise・foolish・rude など人の性質を表す形容詞のときは of 人（It is kind of you to help me）。for 人・of 人 のあとは to＋動詞の原形。否定は not to do。too ～ for 人 to do で主語が目的語にあたるとき、目的語の it はつけない。',
+    ],
+    examples: [
+      { en: 'It is difficult for me to answer this question.', ja: '私がこの質問に答えるのはむずかしい。' },
+      { en: 'It is very kind of you to help me.', ja: '手伝ってくださって、ご親切にありがとうございます。' },
+    ],
+    questions: [
+      { sentence: 'It is (A) very kind (B) for you (C) to help (D) me.', choices: ['(A) very kind', '(B) for you', '(C) to help', '(D) me'], answer: 1, why: 'kind（親切な）のように人の性質を表す形容詞のときは of 人。of you。' },
+      { sentence: '(A) It is difficult (B) for me (C) answering (D) this question.', choices: ['(A) It is difficult', '(B) for me', '(C) answering', '(D) this question'], answer: 2, why: 'It is ～ for 人 to do。answering ではなく to answer。' },
+      { sentence: '(A) It was careless for him (B) to leave (C) the door (D) open.', choices: ['(A) It was careless for him', '(B) to leave', '(C) the door', '(D) open'], answer: 0, why: 'careless（不注意な）は人の性質なので of him。It was careless of him。' },
+      { sentence: 'This book is (A) too difficult (B) for (C) me to read (D) it.', choices: ['(A) too difficult', '(B) for', '(C) me to read', '(D) it'], answer: 3, why: 'too ～ for 人 to do では、主語 this book が read の目的語なので it はいらない。' },
+      { sentence: 'It is necessary (A) for (B) us (C) protect (D) the environment.', choices: ['(A) for', '(B) us', '(C) protect', '(D) the environment'], answer: 2, why: 'for 人 のあとは to＋動詞の原形。to protect。' },
+      { sentence: '(A) How (B) nice (C) for you (D) to come all this way!', choices: ['(A) How', '(B) nice', '(C) for you', '(D) to come all this way!'], answer: 2, why: 'nice（親切な）は人の性質を表すので of you。How nice of you to ～!' },
+      { sentence: 'It is (A) important (B) for (C) children (D) eating vegetables.', choices: ['(A) important', '(B) for', '(C) children', '(D) eating vegetables'], answer: 3, why: 'It is ～ for 人 to do。to eat vegetables。' },
+      { sentence: '(A) It is impossible (B) of anyone (C) to finish (D) this in a day.', choices: ['(A) It is impossible', '(B) of anyone', '(C) to finish', '(D) this in a day'], answer: 1, why: 'impossible は人の性質ではないので for anyone。' },
+      { sentence: 'It was (A) wise (B) of her (C) not (D) to accepting the offer.', choices: ['(A) wise', '(B) of her', '(C) not', '(D) to accepting the offer'], answer: 3, why: '不定詞の否定は not to＋動詞の原形。not to accept。' },
+      { sentence: '(A) The box was (B) too heavy (C) of me (D) to carry.', choices: ['(A) The box was', '(B) too heavy', '(C) of me', '(D) to carry'], answer: 2, why: 'too ～ for 人 to do。heavy は人の性質ではないので for me。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
