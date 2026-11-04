@@ -31938,6 +31938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-online-anonymity',
+    title: 'Should We Be Anonymous Online?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On many online platforms, people can post comments, share opinions, and join discussions without revealing their real names. This anonymity has been part of internet culture from the beginning, and many users regard it as essential. Yet as online harassment, the spread of false information, and abusive comments have become serious problems, some governments and companies have proposed requiring users to verify their identities before they can post. The debate over online anonymity raises difficult questions about freedom, responsibility, and the kind of public discussion that democratic societies need.",
+      "Supporters of identity verification argue that anonymity encourages people to behave badly. When users know that their words cannot be traced back to them, some feel free to insult, threaten, or spread rumors about others without fear of consequences. Victims of online harassment often find it impossible to discover who is attacking them, and platforms may struggle to stop the same people from creating new accounts after they have been banned. Requiring real names, supporters say, would make people more accountable for what they write and could make online spaces safer and more civil. Some countries already require identity checks for certain services, such as online banking, and supporters see no reason why social media should be treated differently.",
+      "Supporters also point to the problem of coordinated campaigns, in which large numbers of fake accounts are used to spread misleading information or to create a false impression of public opinion. If every account had to be linked to a real person, such campaigns would become much more difficult to organize. Verification might also help to protect children, by making it easier to enforce age limits and to identify adults who try to contact young people for harmful purposes.",
+      "Critics, however, argue that anonymity serves important purposes that would be lost under a real-name system. People who live under repressive governments may be able to criticize the authorities only if their identities are hidden. Victims of domestic violence, members of persecuted minorities, and people seeking help with sensitive personal problems may also depend on anonymity to speak safely. ( A ) a real-name rule might discourage some abusive behavior, critics say, it would also silence many of the people who most need to be heard.",
+      "There is also evidence that requiring real names does not always reduce abuse. Some studies have found that people continue to post offensive comments under their own names, especially when they believe that others in their community share their views. Moreover, collecting and storing identity information creates new risks: data can be stolen by criminals, misused by companies, or demanded by governments seeking to monitor their critics. A system designed to increase safety could therefore end up exposing users to new dangers.",
+      "Some experts suggest that the choice need not be between complete anonymity and full identification. Platforms could verify users' identities privately, without displaying their names publicly, so that people could be held responsible for serious wrongdoing while still being able to speak under pseudonyms. Others argue that the most effective way to reduce abuse is not to change the rules about identity but to improve moderation, design platforms that discourage hostility, and give users better tools to protect themselves. Clear rules, applied consistently and quickly, may do more to change behavior than any requirement to reveal one’s name.",
+      "The debate over online anonymity reflects a broader tension between freedom of expression and protection from harm. Anonymity can shield the vulnerable and allow unpopular truths to be spoken, but it can also shield those who wish to harm others. No single rule is likely to resolve this tension perfectly. What is needed is a thoughtful balance that recognizes both the value of being able to speak without fear and the importance of ensuring that online spaces remain places where people can participate without being abused.",
+    ],
+    ja: [
+      '多くのオンラインの場では、人々は本名を明かさずにコメントを書きこみ、意見を分かちあい、議論に加わることができる。この匿名性ははじめからインターネットの文化の一部であり、多くの利用者はそれを欠かせないものとみなしている。しかしオンラインでのいやがらせや、まちがった情報の拡散や、ひどいコメントが深刻な問題になるにつれて、書きこむ前に利用者に本人確認を求めることを提案した政府や企業もある。オンラインの匿名性をめぐる議論は、自由や責任や、民主的な社会が必要とする公の議論のあり方について、むずかしい問いを投げかける。',
+      '本人確認を支持する人々は、匿名性が人々に悪いふるまいをうながすと主張する。利用者が自分のことばが自分にたどりつかれないと知っていると、結果をおそれずに他人を侮辱したり、おどしたり、うわさを広めたりしてよいと感じる人もいる。オンラインのいやがらせの被害者は、だれが自分を攻撃しているのかを知ることができないことが多く、場の運営者は、同じ人々が追放されたあとに新しいアカウントを作るのを止めるのに苦労するかもしれない。本名を求めれば、人々は自分が書くことにより責任をもつようになり、オンラインの場はより安全で礼儀正しくなりうる、と支持する人々は言う。オンラインの銀行のように、すでに一部のサービスで本人確認を求めている国もあり、支持する人々は、ソーシャルメディアをちがうようにあつかう理由はないと考えている。',
+      '支持する人々はまた、組織的な運動の問題も指摘する。そこでは、大量のにせのアカウントが、誤解をまねく情報を広めたり、世論についての誤った印象を作り出したりするために使われる。すべてのアカウントが実在の人と結びついていなければならないなら、そうした運動はずっと組織しにくくなるだろう。本人確認はまた、年齢制限を守らせたり、害をあたえる目的で若者に近づこうとするおとなを特定したりしやすくすることで、子どもを守る助けにもなるかもしれない。',
+      'しかし批判する人々は、匿名性には、本名の仕組みのもとでは失われてしまう大切な役割があると主張する。抑圧的な政府のもとで暮らす人々は、自分の身元がかくされているときにしか当局を批判できないかもしれない。家庭内暴力の被害者や、迫害されている少数派の人々や、人に知られたくない個人的な問題について助けを求める人々も、安全に話すために匿名性にたよっているかもしれない。本名の規則はひどいふるまいの一部を思いとどまらせるかもしれないが、最も声を聞かれる必要のある人々の多くをだまらせてしまうだろう、と批判する人々は言う。',
+      '本名を求めてもいつもいやがらせがへるわけではないという証拠もある。いくつかの研究では、とくに自分の地域のほかの人々が同じ考えをもっていると信じているとき、人々は自分の名前で不快なコメントを書きこみ続けることがわかった。そのうえ、身元の情報を集めて保管することは新しい危険を生む。データは犯罪者にぬすまれたり、企業に悪用されたり、批判者を監視しようとする政府に求められたりするかもしれない。したがって、安全をふやすために作られた仕組みが、結局は利用者を新しい危険にさらしてしまうかもしれない。',
+      '選択は完全な匿名と完全な身元の公開のどちらかである必要はないと示唆する専門家もいる。運営者は、名前を公に表示せずに、ひそかに利用者の身元を確認することができ、そうすれば人々は仮の名前で話し続けながら、重大なあやまちについては責任を問われるようにできるだろう。ほかの人々は、いやがらせをへらす最も効果的な方法は、身元についての規則を変えることではなく、監視をよくし、敵意をくじくように場を設計し、利用者が自分を守るよりよい道具をあたえることだと主張する。一貫してすばやく当てはめられるはっきりした規則のほうが、名前を明かすようにという求めよりも、ふるまいを変えるのに役立つかもしれない。',
+      'オンラインの匿名性をめぐる議論は、表現の自由と害からの保護とのあいだの、より広い緊張を反映している。匿名性は弱い立場の人々を守り、人気のない真実を語らせることができるが、他人を傷つけたいと思う人々を守ることもある。どんな一つの規則もこの緊張を完全に解決しそうにはない。必要なのは、おそれずに話せることの価値と、オンラインの場が人々がいやがらせを受けずに参加できる場所であり続けるようにすることの大切さの両方を認める、思慮深いつりあいである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「本名の規則はひどいふるまいを思いとどまらせるかもしれない一方で、声を聞かれる必要のある人々をだまらせる」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters of identity verification argue that anonymity encourages abuse and fake ( 1 ). Critics reply that anonymity protects people under repressive governments and other vulnerable groups, and that storing identity data creates new ( 2 ). Some suggest verifying identities ( 3 ) while allowing pseudonyms.',
+      blanks: [
+        { choices: ['accounts', 'prices', 'schools', 'holidays'], answer: 0, why: '第3段落 large numbers of fake accounts are used。' },
+        { choices: ['risks', 'friends', 'jobs', 'rules'], answer: 0, why: '第5段落 collecting and storing identity information creates new risks。' },
+        { choices: ['privately', 'publicly', 'loudly', 'rarely'], answer: 0, why: '第6段落 Platforms could verify users\u2019 identities privately。' },
+      ],
+    },
+    tf: [
+      { statement: '匿名性ははじめからインターネットの文化の一部である。', answer: true, why: '第1段落 This anonymity has been part of internet culture from the beginning。' },
+      { statement: '批判する人々によれば、匿名性にはまったく役割がない。', answer: false, why: '第4段落 anonymity serves important purposes。' },
+      { statement: '研究によれば、本名でも不快なコメントを書く人がいる。', answer: true, why: '第5段落 people continue to post offensive comments under their own names。' },
+      { statement: '筆者によれば、一つの規則でこの緊張は完全に解決できる。', answer: false, why: '第7段落 No single rule is likely to resolve this tension perfectly。' },
+    ],
+    qa: [
+      { q: 'How might verification help protect children, according to the third paragraph?', choices: ['By making it easier to enforce age limits.', 'By banning all children from the internet.', 'By hiding adults\u2019 names.', 'By lowering prices.'], answer: 0, why: '第3段落 by making it easier to enforce age limits。' },
+      { q: 'What do some argue is the most effective way to reduce abuse?', choices: ['Improving moderation and platform design.', 'Requiring everyone\u2019s address.', 'Closing all platforms.', 'Allowing unlimited accounts.'], answer: 0, why: '第6段落 improve moderation, design platforms that discourage hostility。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
