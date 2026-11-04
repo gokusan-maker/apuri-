@@ -29982,6 +29982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-curiosity',
+    title: 'The Two Faces of Curiosity',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Curiosity is usually praised as one of the most valuable of human qualities. We admire the scientist who asks why the sky is blue, the traveler who wants to understand a foreign culture, and the child who will not stop asking questions. Yet curiosity has not always enjoyed such a good reputation. In many older traditions, the desire to know more than one needed was regarded with suspicion, as a source of distraction, pride, or even danger, and stories warned of the misfortunes that awaited those who looked into matters that were better left alone.",
+      "What, then, is curiosity, and why should it provoke such different judgments? At its simplest, curiosity is a desire to close a gap between what one knows and what one wishes to know. It is aroused not by complete ignorance, since we cannot be curious about something of which we have no idea at all, nor by complete knowledge, since there is nothing left to discover, but by the awareness that something lies just beyond our present understanding. In this sense, curiosity depends on a certain amount of knowledge: the more we know, the more we become aware of what we do not know.",
+      "This feature of curiosity helps to explain why it can grow rather than diminish as we learn. A student who has read nothing about history may find the subject dull, while one who has learned a little may become eager to learn more, because each new piece of knowledge reveals further questions. ( A ) curiosity is often thought of as a natural gift that some people possess and others lack, it may be better understood as something that is cultivated, encouraged by experiences that show us how much there is to discover and discouraged by experiences that teach us that questions are unwelcome.",
+      "Yet not every form of curiosity deserves admiration. There is a kind of curiosity that seeks knowledge for its own sake and that is willing to endure difficulty and uncertainty in order to understand. There is also a restless curiosity that moves from one novelty to another, seeking the pleasure of the new without ever pausing to understand anything deeply. The older suspicion of curiosity may have been directed chiefly at this second kind, which scatters attention rather than concentrating it and which treats the world as a series of entertainments rather than as something to be understood.",
+      "Modern technology has made the second kind of curiosity easier to satisfy than ever before. With a few touches of a screen, we can learn the answer to almost any factual question, follow an endless stream of news and images, and move instantly from one topic to the next. This abundance of information can feed genuine inquiry, but it can also replace it, since the speed with which questions are answered may leave little room for the slow, patient effort that real understanding requires. A question that is answered immediately is often forgotten just as quickly.",
+      "There is also an ethical dimension to curiosity that is easily overlooked. Curiosity about other people can lead to sympathy and understanding, but it can also become intrusive, treating others' private lives as objects of entertainment. Scientific curiosity has produced extraordinary benefits, yet it has sometimes led researchers to pursue knowledge without sufficient regard for the harm their methods might cause. The value of curiosity, it seems, depends not only on its intensity but also on its object and on the respect with which it treats what it seeks to know.",
+      "Perhaps, then, curiosity should be regarded not as a virtue in itself but as a powerful force that becomes valuable when it is guided by patience, humility, and care. The curious mind is open to the world, willing to admit that it does not yet understand. When that openness is combined with the discipline to pursue questions seriously and the sensitivity to recognize when a question should not be asked, curiosity becomes one of the deepest expressions of our humanity, a way of taking the world seriously and of acknowledging how much more there always is to learn.",
+    ],
+    ja: [
+      '好奇心はふつう、人間の最も価値ある性質の一つとしてほめたたえられる。私たちは、なぜ空は青いのかと問う科学者や、外国の文化を理解したいと思う旅人や、質問することをやめない子どもを称賛する。しかし好奇心はいつもこのように評判がよかったわけではない。多くの古い伝統では、必要以上に知りたいという欲求は、気をちらすもの、思い上がり、あるいは危険のもとでさえあるとして疑いの目で見られ、物語は、そっとしておいたほうがよかったことをのぞきこんだ者を待つ不幸をいましめた。',
+      'それなら、好奇心とは何であり、なぜそれほどちがう評価を呼び起こすのか。最も単純に言えば、好奇心とは、知っていることと知りたいこととのすきまをうめたいという欲求である。それは完全な無知によって呼び起こされるのではない。まったく思いもよらないものについて好奇心をもつことはできないからである。また完全な知識によってでもない。発見すべきものが何も残っていないからである。そうではなく、何かが今の理解のすぐむこうにあると気づくことによって呼び起こされる。この意味で、好奇心はある程度の知識にたよっている。知れば知るほど、私たちは自分が知らないことに気づくようになるのである。',
+      '好奇心のこの特徴は、なぜそれが学ぶにつれてへるのではなく育ちうるのかを説明するのに役立つ。歴史について何も読んだことのない生徒はその科目を退屈だと思うかもしれないが、少し学んだ生徒は、新しい知識の一つ一つがさらなる問いを明らかにするので、もっと学びたいと熱心になるかもしれない。好奇心は、ある人がもち、ほかの人が欠いている生まれつきの才能だと考えられることが多いが、むしろ育てられるものとして理解したほうがよいかもしれない。発見すべきものがどれほど多いかを示してくれる経験によってうながされ、問いは歓迎されないと教える経験によってくじかれるものとして、である。',
+      'しかし、あらゆる形の好奇心が称賛に値するわけではない。知識をそれ自体のために求め、理解するために困難や不確かさにたえようとする種類の好奇心がある。また、何かを深く理解するために立ち止まることは一度もなく、新しいものの楽しさを求めて一つの目新しいものから別のものへとうつる、落ち着きのない好奇心もある。好奇心への古い疑いは、主にこの第二の種類に向けられていたのかもしれない。それは注意を集中させるのではなくちらし、世界を理解すべきものとしてではなく、一続きの娯楽としてあつかうのである。',
+      '現代の技術は、第二の種類の好奇心をかつてないほど満たしやすくした。画面に何回かふれるだけで、ほとんどどんな事実についての問いの答えも知ることができ、ニュースや画像の終わりのない流れを追い、一つの話題から次の話題へと一瞬でうつることができる。この情報の豊かさは本物の探究をささえうるが、それにとってかわることもある。問いが答えられる速さが、本当の理解に必要なゆっくりとした辛抱強い努力の余地をほとんど残さないかもしれないからである。すぐに答えられた問いは、同じくらいすぐに忘れられることが多い。',
+      '好奇心には、見落とされやすい倫理的な面もある。他人への好奇心は共感と理解につながりうるが、他人の私生活を娯楽の対象としてあつかう、立ち入ったものになることもある。科学の好奇心はとてつもない恩恵を生んできたが、ときに研究者に、自分の方法が引き起こしうる害を十分に考えずに知識を追い求めさせてきた。好奇心の価値は、その強さだけでなく、その対象と、知ろうとするものをどれほど尊重してあつかうかにもかかっているようである。',
+      'それなら、好奇心はそれ自体が美徳とみなされるべきではなく、辛抱強さと謙虚さと配慮にみちびかれたときに価値をもつようになる強い力とみなされるべきなのかもしれない。好奇心のある心は世界に開かれており、自分はまだ理解していないと認めようとする。その開かれた心が、問いを真剣に追い求める規律と、ある問いは問うべきではないときを見きわめる感受性とに結びつくとき、好奇心は私たちの人間らしさの最も深い表れの一つとなる。それは世界を真剣に受けとめ、学ぶべきことがいつもどれほど多く残っているかを認める一つの方法なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「生まれつきの才能だと考えられることが多いが、育てられるものとして理解したほうがよい」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、多くの古い伝統では、必要以上に知りたいという欲求は疑いの目で見られた。', answer: true, why: '第1段落 was regarded with suspicion。' },
+      { statement: '筆者によれば、好奇心は完全な無知から最も強く生まれる。', answer: false, why: '第2段落 It is aroused not by complete ignorance。' },
+      { statement: '筆者は、あらゆる形の好奇心が称賛に値すると述べている。', answer: false, why: '第4段落 not every form of curiosity deserves admiration。' },
+      { statement: '筆者によれば、好奇心の価値はその対象と尊重のしかたにもかかっている。', answer: true, why: '第6段落 depends not only on its intensity but also on its object and on the respect。' },
+    ],
+    qa: [
+      { q: 'Why can curiosity grow as we learn, according to the third paragraph?', choices: ['Each new piece of knowledge reveals further questions.', 'Learning makes every subject dull.', 'Knowledge removes all questions.', 'Curiosity is fixed at birth.'], answer: 0, why: '第3段落 because each new piece of knowledge reveals further questions。' },
+      { q: 'What risk of modern technology does the author mention?', choices: ['Quick answers may leave little room for real understanding.', 'Screens make information impossible to find.', 'News has become too slow.', 'Technology has ended all curiosity.'], answer: 0, why: '第5段落 may leave little room for the slow, patient effort that real understanding requires。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
