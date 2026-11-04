@@ -6702,6 +6702,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Her letter [enabled me knowing] the truth.', choices: ['enabled me to know', 'enabled me know', 'enabled to me know', 'enabled me of knowing'], answer: 0, why: 'enable 人 to do「人が～できるようにする」。' },
     ],
   },
+  {
+    id: 'exam-fix-157',
+    title: '入試の誤文訂正〈157〉（国公立レベル：分詞形容詞 interesting・interested／surprising・surprised）',
+    points: ['感情を表す動詞から作った形容詞：-ing は「（物・こと・人が）～させる」、-ed は「（人が）～させられる＝～と感じる」。The movie was interesting（映画がおもしろい）／I was interested（私は興味をもった）。surprising／surprised、exciting／excited、boring／bored、confusing／confused、disappointing／disappointed、tiring／tired、satisfying／satisfied。「人が感じる」なら -ed、「感じさせる側」なら -ing。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I was surprised at the surprising news.', ja: '私はそのおどろくべき知らせにおどろいた。' }],
+    questions: [
+      { sentence: 'The movie was very [interested].', choices: ['interesting', 'interest', 'interestingly', 'being interested'], answer: 0, why: '映画は「興味をもたせる」側なので interesting。' },
+      { sentence: 'I was [surprising] at the news.', choices: ['surprised', 'surprise', 'surprisingly', 'to surprise'], answer: 0, why: '私は「おどろかされた」側なので surprised。' },
+      { sentence: 'The game was [excited] from start to finish.', choices: ['exciting', 'excitedly', 'excite', 'to excite'], answer: 0, why: '試合は「わくわくさせる」側なので exciting。' },
+      { sentence: 'She felt [boring] during the long lecture.', choices: ['bored', 'bore', 'boredom', 'to bore'], answer: 0, why: '彼女は「退屈させられた」側なので bored。' },
+      { sentence: 'His explanation was [confused], so nobody understood it.', choices: ['confusing', 'confusion', 'confusedly', 'to confuse'], answer: 0, why: '説明は「混乱させる」側なので confusing。' },
+      { sentence: 'We were [disappointing] with the results.', choices: ['disappointed', 'disappoint', 'disappointment', 'to disappoint'], answer: 0, why: '私たちは「がっかりさせられた」側なので disappointed。' },
+      { sentence: 'It was an [amazed] experience.', choices: ['amazing', 'amaze', 'amazement', 'amazedly'], answer: 0, why: '経験は「おどろかせる」側なので amazing。' },
+      { sentence: 'The children looked [tiring] after the trip.', choices: ['tired', 'tire', 'tiredly', 'to tire'], answer: 0, why: '子どもたちは「疲れさせられた」側なので tired。' },
+      { sentence: 'I find this book very [satisfied].', choices: ['satisfying', 'satisfaction', 'satisfy', 'satisfiedly'], answer: 0, why: 'find＋目的語＋形容詞。本は「満足させる」側なので satisfying。' },
+      { sentence: 'Are you [interesting] in Japanese history?', choices: ['interested', 'interest', 'interestingly', 'to interest'], answer: 0, why: '「～に興味がある」は be interested in ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
