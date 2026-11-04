@@ -7206,6 +7206,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Ken and I know [ourselves] well because we were classmates.', choices: ['each other', 'us', 'ours', 'themselves'], answer: 0, why: '「おたがいをよく知っている」なので each other。' },
     ],
   },
+  {
+    id: 'exam-fix-169',
+    title: '入試の誤文訂正〈169〉（国公立レベル：比較の as ～ as と倍数表現）',
+    points: ['as ＋原級＋as で「同じくらい～」。否定は not as（so）～ as「…ほど～ない」。倍数は「X times as ～ as」（twice・half・three times）の形で、倍数を as の前に置く。as many（much）＋名詞＋as のように、数えられる名詞は many、数えられない名詞は much。比べるものの形をそろえる（that of ～・those of ～）。as ～ as possible「できるだけ～」・as ～ as one can。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This room is three times as large as mine.', ja: 'この部屋は私の部屋の3倍の広さだ。' }],
+    questions: [
+      { sentence: 'My bag is [as heavier as] yours.', choices: ['as heavy as', 'as heaviest as', 'more heavy as', 'as heavy than'], answer: 0, why: 'as と as のあいだは原級。as heavy as。' },
+      { sentence: 'This box is [twice as large] that one.', choices: ['twice as large as', 'as twice large as', 'twice larger as', 'two times large as'], answer: 0, why: '倍数は as の前に置き、あとにも as が必要。twice as large as。' },
+      { sentence: 'He has [as much books] as I do.', choices: ['as many books', 'as more books', 'so much books', 'as books much'], answer: 0, why: 'books は数えられる名詞なので as many books as。' },
+      { sentence: 'We need [as many water] as possible.', choices: ['as much water', 'as more water', 'as water much', 'so many water'], answer: 0, why: 'water は数えられない名詞なので as much water as。' },
+      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka of that', 'it of Osaka'], answer: 0, why: '比べるのは人口どうしなので that of Osaka（＝the population of Osaka）。' },
+      { sentence: 'The ears of a rabbit are longer than [that of] a cat.', choices: ['those of', 'it of', 'this of', 'them of'], answer: 0, why: 'ears は複数なので those of。' },
+      { sentence: 'Please come [as soon as can].', choices: ['as soon as possible', 'as soon as possibly', 'so soon as can', 'as sooner as you can'], answer: 0, why: '「できるだけ早く」は as soon as possible（as soon as you can）。' },
+      { sentence: 'This bridge is [three times longer as] that one.', choices: ['three times as long as', 'as three times long as', 'three time as long as', 'three times as longer as'], answer: 0, why: '倍数＋as long as の形。three times as long as。' },
+      { sentence: 'She is not [as tall than] her sister.', choices: ['as tall as', 'so taller as', 'as tallest as', 'tall as'], answer: 0, why: 'not as ～ as「…ほど～ない」。than は使わない。' },
+      { sentence: 'This car costs [half as much] that one.', choices: ['half as much as', 'as half much as', 'half much as', 'half as more as'], answer: 0, why: '「半分の値段」は half as much as。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
