@@ -31298,6 +31298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-overfishing',
+    title: 'Can We Save the Fish?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the oceans seemed so vast that their resources appeared limitless. Fishing communities took what they needed, and the idea that the sea could run out of fish would have seemed absurd. Today, however, scientists estimate that a large share of the world's fish populations are being caught faster than they can reproduce, and some once-abundant species have declined dramatically. At the same time, fish remains an important source of protein for billions of people. The question of how to manage the world's fisheries has therefore become one of the most urgent environmental and economic issues of our time.",
+      "The causes of overfishing are not difficult to understand. Modern fishing fleets, equipped with powerful engines, enormous nets, and technology that can locate schools of fish precisely, can catch far more than traditional fishermen ever could. Because the open ocean belongs to no one, each fishing boat has an incentive to catch as much as possible before others do, even if this leaves too few fish to maintain the population. Economists call this situation a \"tragedy of the commons\": when a shared resource is freely available, individuals acting in their own interest may together destroy it.",
+      "Many governments have responded by setting limits on how many fish may be caught. When these limits are based on scientific advice and properly enforced, they can allow depleted populations to recover. Some fisheries that were close to collapse have rebuilt their stocks after years of strict management. ( A ) such successes show that recovery is possible, they also reveal how difficult it can be: limits often face strong opposition from fishing communities whose livelihoods depend on the catch, and politicians may be tempted to set quotas higher than scientists recommend.",
+      "Enforcement presents another challenge. Much fishing takes place far from shore, where it is difficult to monitor, and illegal fishing remains widespread in many parts of the world. Boats may catch more than permitted, fish in protected areas, or report false information about their catches. Some countries have begun to use satellite tracking and electronic monitoring to detect such activity, and international agreements have tried to prevent illegally caught fish from being sold, but progress has been uneven.",
+      "Another approach is the creation of marine protected areas, where fishing is restricted or banned altogether. Supporters argue that such areas allow fish to grow larger and reproduce, and that the resulting abundance can spill over into surrounding waters, eventually benefiting fishermen as well. Critics respond that protected areas may simply push fishing into other places, and that they can be difficult to enforce, particularly in poorer countries with limited resources. Moreover, communities that have fished in these areas for generations may feel that they have been unfairly excluded.",
+      "Consumers also have a role to play. Some organizations certify fish that has been caught in sustainable ways, allowing shoppers to choose products that do not contribute to overfishing. Others encourage people to eat a wider variety of species, reducing pressure on the most popular ones. Fish farming, or aquaculture, has grown rapidly and now supplies a large share of the fish people eat, although it brings its own problems, such as pollution and the need to feed farmed fish with smaller wild fish caught at sea.",
+      "The problem of overfishing illustrates how difficult it can be to protect resources that belong to everyone and no one at the same time. Solutions require cooperation among governments, scientific knowledge, effective enforcement, and the willingness of individuals and communities to accept short-term sacrifices for long-term benefits. The oceans are not limitless, but if they are managed wisely, they can continue to provide food and livelihoods for generations to come. Whether humanity is able to achieve this may be a test of its ability to manage the shared resources on which its future depends.",
+    ],
+    ja: [
+      '人類の歴史のほとんどのあいだ、海はとても広大に思われたので、その資源はかぎりがないように見えた。漁業の地域は必要なものをとり、海の魚がつきるかもしれないという考えはばかげたものに思われただろう。しかし今日、科学者は、世界の魚の数の大きな割合が、増えるよりも速くとられていると推定しており、かつて豊富だった種の中には劇的にへったものもある。同時に、魚は何十億もの人々にとって大切なたんぱく質のみなもとであり続けている。そのため、世界の漁業をどう管理するかという問いは、現代の最も急を要する環境と経済の問題の一つになっている。',
+      'とりすぎの原因を理解するのはむずかしくない。強力なエンジンや巨大な網や、魚の群れの位置を正確につきとめる技術をそなえた現代の漁船団は、伝統的な漁師がとれたよりもはるかに多くの魚をとることができる。外洋はだれのものでもないので、それぞれの漁船には、たとえそれによって魚の数を保つのに十分な魚が残らなくなるとしても、ほかの船より先にできるだけ多くとろうとする動機がある。経済学者はこの状況を「共有地の悲劇」とよぶ。共有の資源が自由に手に入るとき、自分の利益のために行動する個人が、いっしょになってそれをこわしてしまうかもしれないのである。',
+      '多くの政府は、とってよい魚の量に制限を設けることで対応してきた。そうした制限が科学的な助言にもとづき、きちんと守らせられれば、へった魚の数が回復することもある。崩壊寸前だった漁場の中には、何年ものきびしい管理のあとに資源を立て直したところもある。そうした成功は回復が可能であることを示しているが、それがいかにむずかしいかも明らかにしている。制限は、漁獲に生活がかかっている漁業の地域から強い反対を受けることが多く、政治家は、科学者がすすめるよりも漁獲枠を高く設定したくなるかもしれないのである。',
+      '取りしまりもまた課題である。漁業の多くは岸から遠くはなれた監視しにくい場所で行われ、違法な漁業は世界の多くの地域で広く行われ続けている。船はゆるされた以上にとったり、保護区域で漁をしたり、漁獲について偽りの情報を報告したりするかもしれない。人工衛星による追跡や電子的な監視を使ってそうした活動を見つけはじめた国もあり、国際的な取り決めは違法にとられた魚が売られるのをふせごうとしてきたが、進み方はまちまちである。',
+      'もう一つのやり方は、漁業が制限されるか完全に禁止される海洋保護区を作ることである。支持する人々は、そうした区域では魚が大きく育ち、増えることができ、その結果生まれる豊かさがまわりの海にもあふれ出て、最終的には漁師の得にもなると主張する。批判する人々は、保護区は単に漁業をほかの場所へおしやるだけかもしれず、とくに資源のかぎられた貧しい国では取りしまるのがむずかしいことがあると答える。そのうえ、何世代もその区域で漁をしてきた地域の人々は、不公平にしめ出されたと感じるかもしれない。',
+      '消費者にも果たすべき役割がある。持続可能な方法でとられた魚を認証し、買い物をする人がとりすぎの一因にならない商品を選べるようにしている団体もある。より多くの種類の魚を食べるよう人々にすすめ、最も人気のある種への負担をへらそうとしている団体もある。魚の養殖は急速に広がり、今では人々が食べる魚の大きな割合をまかなっているが、汚染や、養殖の魚にえさとして海でとった小さな天然の魚をあたえる必要といった、それ自体の問題もかかえている。',
+      'とりすぎの問題は、みんなのものであると同時にだれのものでもない資源を守ることが、どれほどむずかしいかを示している。解決には、政府どうしの協力や、科学的な知識や、効果的な取りしまりや、長い目で見た利益のために目先の犠牲を受け入れようとする個人と地域の気持ちが必要である。海はかぎりないわけではないが、賢明に管理されれば、これからの何世代にもわたって食べ物と生活の手段をあたえ続けることができる。人類がこれをなしとげられるかどうかは、自分の未来がたよっている共有の資源を管理する力が試されることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「回復が可能であることを示しているが、それがいかにむずかしいかも明らかにしている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Many fish populations are being caught faster than they can reproduce, partly because the open ocean is a shared resource that no one ( 1 ). Catch limits can help stocks recover but face opposition and are hard to ( 2 ). Protected areas, certification, and consumer choices may also help, although fish ( 3 ) brings its own problems.',
+      blanks: [
+        { choices: ['owns', 'visits', 'studies', 'fears'], answer: 0, why: '第2段落 Because the open ocean belongs to no one。' },
+        { choices: ['enforce', 'explain', 'measure', 'remember'], answer: 0, why: '第4段落 Enforcement presents another challenge。' },
+        { choices: ['farming', 'cooking', 'painting', 'racing'], answer: 0, why: '第6段落 Fish farming, or aquaculture ... brings its own problems。' },
+      ],
+    },
+    tf: [
+      { statement: '科学者によれば、世界の魚の数の大きな割合がとられすぎている。', answer: true, why: '第1段落 a large share of the world\u2019s fish populations are being caught faster than they can reproduce。' },
+      { statement: '崩壊寸前の漁場が回復した例はない。', answer: false, why: '第3段落 Some fisheries that were close to collapse have rebuilt their stocks。' },
+      { statement: '人工衛星による追跡を使って違法な漁業を見つけている国もある。', answer: true, why: '第4段落 Some countries have begun to use satellite tracking。' },
+      { statement: '筆者によれば、海の資源はかぎりがない。', answer: false, why: '第7段落 The oceans are not limitless。' },
+    ],
+    qa: [
+      { q: 'What do supporters say marine protected areas can do?', choices: ['Allow fish to grow and spill over into surrounding waters.', 'End all fishing forever.', 'Make fish more expensive.', 'Replace fish farming.'], answer: 0, why: '第5段落 the resulting abundance can spill over into surrounding waters。' },
+      { q: 'What problem of aquaculture is mentioned?', choices: ['Pollution and the need to feed farmed fish with wild fish.', 'It produces too little fish.', 'It is illegal everywhere.', 'It requires no feed at all.'], answer: 0, why: '第6段落 such as pollution and the need to feed farmed fish with smaller wild fish。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
