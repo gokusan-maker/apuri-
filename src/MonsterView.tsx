@@ -2439,6 +2439,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 46 Q42 40 46 46 Q42 52 36 50 M54 56 Q60 50 64 56 Q60 62 54 60" fill="none" stroke="#1e40af" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pistolshrimp')
+    return (
+      <g>
+        {/* 片方だけ大きなはさみ */}
+        <path d="M70 52 Q86 44 90 52 Q86 60 72 58" fill="#ef4444" stroke="#7f1d1d" strokeWidth="2" />
+        <path d="M30 54 Q22 52 20 56" fill="none" stroke="#7f1d1d" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
