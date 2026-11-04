@@ -32222,6 +32222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-comfort',
+    title: 'The Hidden Costs of Comfort',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few things are as widely desired as comfort. Much of modern technology has been devoted to making life easier: heating and air conditioning protect us from extremes of temperature, machines relieve us of physical labor, and countless devices spare us small inconveniences throughout the day. It would be difficult to argue that these developments are anything but good. Yet some thinkers have suggested that the pursuit of comfort, if it becomes the main goal of life, may carry hidden costs, and that a certain amount of discomfort may be necessary for human flourishing.",
+      "Consider how people develop strength and skill. Muscles grow stronger only when they are challenged, and abilities improve only through practice that is often difficult or frustrating. A student who avoids every hard problem, or an athlete who trains only when it feels pleasant, is unlikely to make much progress. Growth seems to require a willingness to endure discomfort for the sake of future benefits, and a life organized entirely around ease may leave people weaker than they might otherwise have been. Even the pleasure of rest depends partly on the effort that comes before it; a holiday feels sweetest after a period of hard work.",
+      "Discomfort also plays a role in learning to understand others. Encountering views that challenge our own, living among people whose customs differ from ours, or confronting painful truths about the world can be deeply uncomfortable. ( A ) it may be tempting to avoid such experiences, doing so can leave us with a narrow and comfortable picture of reality that does not match the world as it is. Much intellectual and moral growth begins precisely when our familiar assumptions are disturbed. A mind that is never unsettled may remain comfortable, but it is unlikely to grow.",
+      "Moreover, the constant removal of minor discomforts may make us less able to tolerate them. People accustomed to perfectly controlled temperatures may find ordinary weather intolerable; those used to instant answers may become impatient with any delay. As our tolerance for discomfort decreases, small difficulties come to feel like major problems, and we may become more anxious rather than more content. Comfort, pursued without limit, can thus undermine the very sense of well-being it promises. The more we are protected from difficulty, the more fragile our contentment may become.",
+      "None of this means that discomfort is good in itself or that suffering should be sought for its own sake. Much discomfort is simply harmful, and many people around the world suffer hardships that no one should have to endure. The point is rather that some kinds of difficulty are valuable because of what they make possible: the satisfaction of achievement, the deepening of understanding, the strengthening of character. The challenge is to distinguish discomfort that leads somewhere from discomfort that merely hurts, and to reduce the second while welcoming the first.",
+      "Some people deliberately introduce small challenges into their lives for this reason. They walk instead of driving, take cold showers, learn difficult skills, or spend time in nature without modern conveniences. Such practices are not attempts to reject comfort altogether, but ways of maintaining the capacity to cope with difficulty and of rediscovering the pleasures that comfort can hide, such as the warmth of a fire after a cold walk or the satisfaction of a meal earned by effort.",
+      "Perhaps, then, the wisest attitude toward comfort is one of appreciation without dependence. Comfort is a genuine good, and the technologies that provide it have relieved enormous suffering. But a life devoted solely to avoiding discomfort may be a smaller life than it could be. By accepting some difficulty as the price of growth, understanding, and achievement, we may find that the comforts we enjoy become richer and more meaningful, precisely because they are not the whole of what we seek.",
+    ],
+    ja: [
+      '快適さほど広く望まれているものは少ない。現代の技術の多くは、生活を楽にすることにささげられてきた。暖房や冷房は極端な気温から私たちを守り、機械は体を使う労働から私たちを解放し、数えきれない機器が一日を通じて小さな不便をはぶいてくれる。こうした発展がよいもの以外の何かだと論じるのはむずかしいだろう。しかし一部の思想家は、快適さの追求が人生の主な目標になると、かくれた代償をともなうかもしれず、ある程度の不快さは人間がよく生きるために必要なのかもしれないと示唆してきた。',
+      '人々がどのように力や技能をのばすかを考えてみよう。筋肉は負荷をかけられたときにしか強くならず、能力は、しばしばむずかしかったりもどかしかったりする練習を通じてしかのびない。あらゆるむずかしい問題をさける生徒や、気持ちのよいときにしか練習しない選手は、あまり進歩しそうにない。成長には、将来の利益のために不快さにたえようとする気持ちが必要なようであり、すべてが楽さを中心に組み立てられた人生は、ほかの場合よりも人を弱いままにしておくかもしれない。休むことの楽しみでさえ、一部はその前の努力にかかっている。休暇は、一生けんめい働いた期間のあとにこそ最も心地よく感じられるのである。',
+      '不快さはまた、他人を理解することを学ぶうえでも役割を果たす。自分の考えに挑む見方に出会ったり、習慣のちがう人々の中で暮らしたり、世界についてのつらい真実に向き合ったりすることは、深い不快さをともなうことがある。そうした経験をさけたくなるかもしれないが、そうすると、ありのままの世界とは合わない、せまく居心地のよい現実の姿しか残らないかもしれない。知的・道徳的な成長の多くは、まさになじみの思いこみがゆさぶられたときに始まるのである。けっしてゆさぶられない心は居心地がよいままかもしれないが、育つことはないだろう。',
+      'そのうえ、小さな不快さをたえずとりのぞくことは、それにたえる力を弱めるかもしれない。完全に管理された温度になれた人は、ふつうの天気をたえがたく感じるかもしれず、すぐに答えが得られることになれた人は、どんな遅れにもいらいらするようになるかもしれない。不快さにたえる力がへるにつれて、小さな困難が大きな問題のように感じられるようになり、私たちはより満足するどころか、より不安になるかもしれない。かぎりなく追い求められた快適さは、こうして、それが約束する幸せの感覚そのものをそこないうるのである。困難から守られれば守られるほど、私たちの満足はこわれやすくなるのかもしれない。',
+      'このどれも、不快さがそれ自体よいものだとか、苦しみをそれ自体のために求めるべきだということを意味しない。多くの不快さは単に有害であり、世界中の多くの人々が、だれもたえるべきではない苦難に苦しんでいる。要点はむしろ、ある種の困難はそれが可能にするもののために価値があるということである。なしとげることの満足、理解の深まり、人格の強まりである。課題は、どこかへつながる不快さと、ただ傷つけるだけの不快さとを区別し、前者を歓迎しつつ後者をへらすことである。',
+      'この理由で、わざと小さな挑戦を生活に取り入れる人もいる。車ではなく歩いたり、冷たいシャワーをあびたり、むずかしい技能を学んだり、現代の便利なものなしに自然の中ですごしたりするのである。そうした実践は快適さを完全にこばもうとする試みではなく、困難に対処する力を保ち、寒い散歩のあとのたき火のあたたかさや、努力によって得た食事の満足のような、快適さがかくしてしまうことのある楽しみを再発見する方法なのである。',
+      'それなら、快適さへの最も賢明な態度は、たよりきらずに味わうことなのかもしれない。快適さは本当によいものであり、それをもたらす技術はばくだいな苦しみをやわらげてきた。しかし、不快さをさけることだけにささげられた人生は、ありうるよりも小さな人生かもしれない。成長と理解となしとげることの代価としてある程度の困難を受け入れることで、私たちは、自分が楽しむ快適さが、まさに自分が求めるもののすべてではないからこそ、より豊かで意味のあるものになることに気づくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした経験をさけたくなるかもしれないが、せまい現実の姿しか残らない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、成長には不快さにたえる気持ちが必要なようである。', answer: true, why: '第2段落 Growth seems to require a willingness to endure discomfort。' },
+      { statement: '筆者によれば、小さな不快さをとりのぞくほど、それにたえる力は強くなる。', answer: false, why: '第4段落 may make us less able to tolerate them。' },
+      { statement: '筆者は、苦しみをそれ自体のために求めるべきだと述べている。', answer: false, why: '第5段落 None of this means ... that suffering should be sought for its own sake。' },
+      { statement: '筆者によれば、快適さは本当によいものである。', answer: true, why: '第7段落 Comfort is a genuine good。' },
+    ],
+    qa: [
+      { q: 'When does much intellectual and moral growth begin, according to the third paragraph?', choices: ['When our familiar assumptions are disturbed.', 'When life becomes completely comfortable.', 'When we avoid different views.', 'When we stop learning.'], answer: 0, why: '第3段落 begins precisely when our familiar assumptions are disturbed。' },
+      { q: 'Why do some people deliberately introduce small challenges into their lives?', choices: ['To maintain the capacity to cope with difficulty.', 'To reject comfort completely.', 'To save money only.', 'To avoid all effort.'], answer: 0, why: '第6段落 ways of maintaining the capacity to cope with difficulty。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
