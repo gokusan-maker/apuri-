@@ -33778,6 +33778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-right-to-repair',
+    title: 'Should We Have a Right to Repair?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When a smartphone, washing machine, or tractor breaks down, its owner may discover that repairing it is surprisingly difficult. Spare parts may be unavailable, repair manuals may be kept secret, and the device itself may be designed so that it cannot easily be opened. In some cases, manufacturers use software to prevent repairs by anyone other than their own authorized service centers. In response, a movement has grown in many countries demanding a legal right to repair, which would require companies to make parts, tools, and information available to owners and independent repair shops.",
+      "Supporters argue first that the right to repair would benefit consumers. When repairs can only be carried out by the manufacturer, prices tend to be high and waiting times long, and owners may be persuaded to replace a device that could have been fixed. Allowing independent shops to compete would lower costs and give consumers more choice. Supporters also point out that people who have paid for a product should be free to decide what to do with it, including opening it and fixing it themselves. Farmers, for example, have complained that they cannot fix their own expensive machinery during the busy harvest season without waiting for an authorized technician.",
+      "Environmental arguments are also central to the debate. Electronic waste is one of the fastest-growing kinds of waste in the world, and much of it contains valuable materials as well as harmful substances. Extending the life of devices through repair reduces the need to manufacture new ones, saving energy and raw materials. ( A ) recycling can recover some of these resources, supporters argue that repairing a product is almost always better for the environment than breaking it down and making a new one.",
+      "Manufacturers, however, raise several concerns. They argue that repairs carried out by untrained people may be unsafe, particularly for devices that contain powerful batteries or complex electrical systems. Poor repairs could damage the product, injure the user, or harm the company's reputation if the device later fails. Some manufacturers also worry that making detailed technical information public would allow competitors to copy their designs or expose weaknesses in security systems that protect users' personal data.",
+      "There are also questions about cost and design. Making products easier to repair may require changes to their design, such as using screws instead of glue or making batteries removable, which could make devices larger, heavier, or more expensive. Companies argue that consumers often prefer thin and light products, even if they are harder to fix. Critics of the industry reply that such design choices are frequently made not to satisfy consumers but to encourage them to buy new products more often.",
+      "Several governments have begun to act. Some have introduced laws requiring manufacturers of certain appliances to supply spare parts for a number of years after a product is sold. Others are developing labels that tell consumers how easy a product is to repair, so that they can take this into account when making purchases. These measures suggest that the right to repair is increasingly seen not as a minor consumer issue but as part of broader efforts to build a more sustainable economy. Supporters hope that such rules will gradually change the expectations of both companies and consumers, so that durability once again becomes a mark of quality.",
+      "The debate over the right to repair raises a fundamental question about ownership in an age of complex technology. When we buy a product, do we truly own it, or do we merely obtain permission to use it on the manufacturer's terms? How this question is answered will affect not only the price of repairs but also the amount of waste societies produce and the relationship between companies and the people who depend on their products.",
+    ],
+    ja: [
+      'スマートフォンや洗濯機やトラクターがこわれたとき、持ち主は修理がおどろくほどむずかしいことに気づくかもしれない。交換部品が手に入らなかったり、修理の手引きが秘密にされていたり、機器そのものがかんたんに開けられないように設計されていたりするかもしれない。場合によっては、製造会社がソフトウェアを使って、自社の認定修理センター以外のだれかによる修理をさまたげている。これにこたえて、多くの国で修理する権利を法律で認めるよう求める運動が広がっている。それは、会社に、部品や道具や情報を持ち主や独立した修理店が手に入れられるようにすることを求めるものである。',
+      '支持する人々は、まず修理する権利が消費者の利益になると主張する。修理が製造会社にしかできないと、値段は高く待ち時間は長くなりがちで、持ち主は直せたはずの機器を買いかえるよう説得されるかもしれない。独立した店に競争を認めれば、費用が下がり、消費者の選択肢が広がるだろう。支持する人々はまた、製品にお金をはらった人は、それを開けて自分で直すことをふくめて、それをどうするかを自由に決められるべきだと指摘する。たとえば農家は、いそがしい収穫の季節に、認定された技術者を待たなければ自分の高価な機械を直せないと不満を言ってきた。',
+      '環境についての議論も、この議論の中心にある。電子機器のごみは世界で最も急にふえているごみの一つであり、その多くは価値ある材料と有害な物質の両方をふくんでいる。修理によって機器の寿命をのばせば、新しいものを作る必要が減り、エネルギーと原料を節約できる。リサイクルによってこうした資源の一部を取りもどせるが、製品を修理するほうが、それを分解して新しいものを作るよりも、ほとんどいつも環境によいと支持する人々は主張する。',
+      'しかし製造会社は、いくつかの心配をあげる。訓練を受けていない人が行う修理は、とくに強力な電池や複雑な電気の仕組みをふくむ機器では、安全でないかもしれないと彼らは主張する。まずい修理は製品をこわしたり、使う人にけがをさせたり、あとで機器が故障すれば会社の評判を傷つけたりしうる。また、くわしい技術情報を公開すれば、競争相手に設計をまねされたり、利用者の個人情報を守る安全の仕組みの弱点が明らかになったりするのではないかと心配する製造会社もある。',
+      '費用と設計についての疑問もある。製品を修理しやすくするには、接着剤のかわりにねじを使ったり、電池を取り外せるようにしたりといった設計の変更が必要かもしれず、それによって機器が大きく、重く、高くなるかもしれない。会社は、消費者は直しにくくても、うすくて軽い製品を好むことが多いと主張する。業界を批判する人々は、そうした設計の選択は、消費者を満足させるためではなく、もっとひんぱんに新しい製品を買わせるためになされることが多いとこたえる。',
+      'いくつかの政府は行動を始めている。ある種の家電の製造会社に、製品が売られてから何年かのあいだ交換部品を供給するよう求める法律を取り入れた政府もある。製品がどれほど修理しやすいかを消費者に知らせる表示を作り、買い物のときにそれを考えに入れられるようにしている政府もある。こうした方法は、修理する権利が、ささいな消費者の問題ではなく、より持続可能な経済を築くための広い努力の一部としてますます見られるようになっていることを示している。支持する人々は、こうした規則が会社と消費者の両方の期待を少しずつ変え、長もちすることがふたたび品質のしるしになることを願っている。',
+      '修理する権利をめぐる議論は、複雑な技術の時代における所有についての根本的な問いを提起している。製品を買うとき、私たちは本当にそれを所有しているのか、それとも製造会社の条件でそれを使う許可を得ているにすぎないのか。この問いにどう答えるかは、修理の値段だけでなく、社会が生み出すごみの量や、会社とその製品に頼る人々との関係にも影響をあたえるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「リサイクルで資源の一部を取りもどせるが、修理のほうが環境によい」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a right to repair would lower costs for consumers and reduce electronic ( 1 ). Manufacturers worry about ( 2 ), the protection of their designs, and the cost of changing products. Several governments now require spare parts to be supplied, and the debate raises questions about what it means to ( 3 ) a product.',
+      blanks: [
+        { choices: ['waste', 'music', 'traffic', 'crime'], answer: 0, why: '第3段落 Electronic waste is one of the fastest-growing kinds of waste。' },
+        { choices: ['safety', 'fashion', 'weather', 'language'], answer: 0, why: '第4段落 repairs carried out by untrained people may be unsafe。' },
+        { choices: ['own', 'sell', 'design', 'advertise'], answer: 0, why: '第7段落 do we truly own it。' },
+      ],
+    },
+    tf: [
+      { statement: '製造会社の中には、ソフトウェアを使って修理をさまたげるところもある。', answer: true, why: '第1段落 manufacturers use software to prevent repairs。' },
+      { statement: '支持する人々によれば、リサイクルは修理よりいつも環境によい。', answer: false, why: '第3段落 repairing a product is almost always better for the environment。' },
+      { statement: '製造会社は、技術情報の公開が安全の仕組みの弱点を明らかにするかもしれないと心配している。', answer: true, why: '第4段落 expose weaknesses in security systems。' },
+      { statement: 'どの政府も、修理する権利についてまだ何も行動していない。', answer: false, why: '第6段落 Several governments have begun to act。' },
+    ],
+    qa: [
+      { q: 'Why might making products easier to repair raise their price?', choices: ['It may require design changes such as using screws instead of glue.', 'Repair shops would close.', 'Batteries would disappear.', 'Software would be banned.'], answer: 0, why: '第5段落 such as using screws instead of glue or making batteries removable。' },
+      { q: 'What do some governments use labels for?', choices: ['To tell consumers how easy a product is to repair.', 'To advertise new products.', 'To ban old products.', 'To show the price of repairs.'], answer: 0, why: '第6段落 labels that tell consumers how easy a product is to repair。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
