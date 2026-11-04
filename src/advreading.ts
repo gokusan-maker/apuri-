@@ -32738,6 +32738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-animal-research',
+    title: 'Should Animals Be Used in Medical Research?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many of the medicines and treatments that people rely on today were developed with the help of experiments on animals. Before a new drug is tested on human volunteers, it is usually given to mice, rats, or other animals to check whether it is safe and whether it has the intended effect. Supporters regard this practice as an unfortunate but necessary part of medical progress. Critics, however, argue that it causes great suffering and that its scientific value is often exaggerated. The debate raises difficult questions about science, ethics, and our relationship with other living things.",
+      "Supporters emphasize, first, the benefits that animal research has brought. Vaccines, surgical techniques, and treatments for many serious diseases were developed through studies that could not have been carried out on human beings. Since a living body is extremely complex, researchers argue, it is often impossible to predict how a new substance will affect the whole organism without testing it on a living creature. Abandoning animal research entirely, in their view, would slow the development of new treatments and put human patients at greater risk.",
+      "Supporters also point out that the use of animals in research is now strictly regulated in many countries. Researchers must usually show that their experiments are necessary, that no alternative method is available, and that the number of animals used and the pain they experience are kept to a minimum. ( A ) these rules do not eliminate suffering, they reflect a widely shared principle that animals should be used only when the expected benefits are significant and the harm is as small as possible.",
+      "Critics, however, question whether the benefits are as great as claimed. Animals differ from humans in many ways, and a drug that is safe for a mouse may be harmful to a person, while a substance that is dangerous to animals may be safe for humans. A large proportion of drugs that pass animal tests later fail when they are tried on people. For critics, these failures suggest that animal research is not only cruel but also an unreliable guide to human health. They argue that resources spent on such tests might be better used to develop methods based directly on human biology.",
+      "The ethical objection is even more fundamental. Many animals used in research are capable of feeling pain, fear, and distress, and some are kept for long periods in conditions that prevent them from behaving naturally. Critics argue that the ability to suffer, rather than intelligence or the ability to speak, is what gives a creature moral importance. If this is so, they ask, how can it be right to cause such suffering simply because the animals cannot defend themselves or agree to take part?",
+      "In recent years, new technologies have offered possible alternatives. Scientists can now grow human cells in the laboratory, create small structures that imitate the functions of human organs, and use computer models to predict how substances will behave in the body. These methods may in some cases be more accurate than animal tests, since they are based on human biology. Yet they cannot yet reproduce the full complexity of a living body, and most researchers believe that animal studies will remain necessary for some purposes for the foreseeable future.",
+      "The question, therefore, may not be whether animal research should end immediately, but how quickly and how far it can be reduced. Many scientists and policymakers now accept the goal of replacing animal experiments wherever possible, reducing the number of animals used, and refining methods to lessen suffering. Pursuing this goal seriously requires investment in new methods and honest discussion of the costs on both sides. In this way, the debate challenges societies to weigh the value of human health against the suffering of creatures who cannot speak for themselves.",
+    ],
+    ja: [
+      '今日人々が頼っている薬や治療の多くは、動物を使った実験の助けをかりて開発された。新しい薬は、人間の志願者で試される前に、ふつうマウスやラットやほかの動物にあたえられ、安全かどうか、期待した効果があるかどうかが確かめられる。支持する人々は、この慣行を医学の進歩のための、不幸だが必要な一部とみなしている。しかし批判する人々は、それが大きな苦しみを生み、その科学的な価値はしばしば大げさに言われていると主張する。この議論は、科学や倫理や、ほかの生き物と私たちとの関係についてのむずかしい問いを提起している。',
+      '支持する人々は、まず動物実験がもたらした利益を強調する。ワクチンや手術の技術や多くの重い病気の治療は、人間に対しては行えなかった研究を通じて開発された。生きた体はきわめて複雑なので、新しい物質が生物全体にどう影響するかを、生き物で試さずに予測することはしばしば不可能だと研究者たちは主張する。彼らの見方では、動物実験を完全にやめれば、新しい治療の開発がおくれ、人間の患者をより大きな危険にさらすことになるだろう。',
+      '支持する人々はまた、研究での動物の使用は今では多くの国で厳しく規制されていると指摘する。研究者はふつう、自分の実験が必要であること、ほかの方法がないこと、使われる動物の数と動物が感じる痛みが最小限におさえられていることを示さなければならない。こうした規則は苦しみをなくすわけではないが、期待される利益が大きく害ができるだけ小さいときにだけ動物を使うべきだという、広く共有された原則を反映している。',
+      'しかし批判する人々は、利益が言われるほど大きいのかを疑う。動物は多くの点で人間とちがっており、マウスに安全な薬が人間には有害かもしれず、動物に危険な物質が人間には安全かもしれない。動物実験に合格した薬の大きな割合が、あとで人間で試されると失敗する。批判する人々にとって、こうした失敗は、動物実験が残酷であるだけでなく、人間の健康を知るうえであてにならない手がかりであることを示している。そうした試験に使われる資源は、人間の生物学に直接もとづく方法を開発するのに使ったほうがよいかもしれないと彼らは主張する。',
+      '倫理的な反対は、さらに根本的である。研究に使われる多くの動物は、痛みや恐れや苦痛を感じることができ、自然にふるまうことのできない状態で長いあいだ飼われているものもいる。知能や話す能力ではなく、苦しむ能力こそが生き物に道徳的な重要さをあたえるのだと批判する人々は主張する。もしそうなら、動物が自分を守れず、参加に同意することもできないというだけの理由で、そのような苦しみをあたえることがどうして正しいのか、と彼らは問う。',
+      '近年、新しい技術が代わりになりうる方法を示している。科学者は今、人間の細胞を実験室で育て、人間の臓器のはたらきをまねる小さな構造を作り、物質が体の中でどうふるまうかを予測するためにコンピュータのモデルを使うことができる。これらの方法は人間の生物学にもとづいているので、場合によっては動物実験より正確かもしれない。しかし、それらはまだ生きた体の複雑さをすべて再現することはできず、ほとんどの研究者は、当分のあいだ、ある目的のためには動物の研究が必要であり続けると考えている。',
+      'したがって問題は、動物実験をすぐにやめるべきかどうかではなく、どれほど早く、どこまで減らせるかなのかもしれない。多くの科学者や政策を決める人々は今、できるところではどこでも動物実験を置きかえ、使われる動物の数を減らし、苦しみを軽くするよう方法を改善するという目標を受け入れている。この目標を真剣に追い求めるには、新しい方法への投資と、両方の側の代償についての正直な議論が必要である。このようにして、この議論は社会に、人間の健康の価値と、自分のために声をあげることのできない生き物の苦しみとをはかりにかけるよう求めているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「規則は苦しみをなくすわけではないが、広く共有された原則を反映している」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that animal research has produced vaccines and treatments and is now strictly ( 1 ). Critics reply that animals differ from humans and that the ability to ( 2 ) gives animals moral importance. New methods may reduce the need for animals, but the real question is how quickly experiments can be ( 3 ).',
+      blanks: [
+        { choices: ['regulated', 'hidden', 'paid', 'repeated'], answer: 0, why: '第3段落 is now strictly regulated in many countries。' },
+        { choices: ['suffer', 'speak', 'think', 'play'], answer: 0, why: '第5段落 the ability to suffer ... is what gives a creature moral importance。' },
+        { choices: ['reduced', 'doubled', 'forgotten', 'sold'], answer: 0, why: '第7段落 how quickly and how far it can be reduced。' },
+      ],
+    },
+    tf: [
+      { statement: '新しい薬は、ふつう人間で試される前に動物にあたえられる。', answer: true, why: '第1段落 Before a new drug is tested on human volunteers, it is usually given to mice, rats, or other animals。' },
+      { statement: '批判する人々によれば、動物実験に合格した薬は人間でもかならず成功する。', answer: false, why: '第4段落 A large proportion of drugs that pass animal tests later fail。' },
+      { statement: '新しい方法は、場合によっては動物実験より正確かもしれない。', answer: true, why: '第6段落 These methods may in some cases be more accurate than animal tests。' },
+      { statement: 'ほとんどの研究者は、動物の研究はもうまったく必要ないと考えている。', answer: false, why: '第6段落 animal studies will remain necessary for some purposes。' },
+    ],
+    qa: [
+      { q: 'What must researchers usually show before using animals?', choices: ['That no alternative method is available.', 'That the animals agree to take part.', 'That the experiment is cheap.', 'That the results will be published quickly.'], answer: 0, why: '第3段落 that no alternative method is available。' },
+      { q: 'What can scientists now grow in the laboratory?', choices: ['Human cells.', 'Whole animals.', 'New planets.', 'Computer chips.'], answer: 0, why: '第6段落 Scientists can now grow human cells in the laboratory。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
