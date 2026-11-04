@@ -6954,6 +6954,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I’ll see you [in] Christmas Eve.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '特定の日には on。on Christmas Eve。' },
     ],
   },
+  {
+    id: 'exam-fix-163',
+    title: '入試の誤文訂正〈163〉（国公立レベル：受動態で by 以外を使う表現 be interested in・be covered with）',
+    points: ['受動態でも by 以外の前置詞を使う決まった表現がある。be interested in ～・be covered with ～・be filled with ～・be crowded with ～・be satisfied with ～・be known to ～（～に知られている）・be surprised at ～・be caught in ～（にわか雨などにあう）。be made of ～（材料がそのまま：木の机）／be made from ～（材料が変化：牛乳からバター）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I am interested in Japanese history.', ja: '私は日本の歴史に興味がある。' }],
+    questions: [
+      { sentence: 'I am interested [about] Japanese history.', choices: ['in', 'on', 'with', 'at'], answer: 0, why: 'be interested in ～「～に興味がある」。' },
+      { sentence: 'The table was covered [of] dust.', choices: ['with', 'at', 'for', 'to'], answer: 0, why: 'be covered with ～「～でおおわれている」。' },
+      { sentence: 'He is known [by] everyone in the town.', choices: ['to', 'for', 'of', 'at'], answer: 0, why: '「～に知られている」は be known to ～。' },
+      { sentence: 'I was surprised [of] the news.', choices: ['at', 'for', 'to', 'in'], answer: 0, why: 'be surprised at ～「～におどろく」。' },
+      { sentence: 'Butter is made [of] milk.', choices: ['from', 'by', 'with', 'in'], answer: 0, why: '材料の牛乳が変化してバターになるので be made from。' },
+      { sentence: 'This desk is made [from] wood.', choices: ['of', 'by', 'with', 'at'], answer: 0, why: '木がそのまま材料として見えるので be made of。' },
+      { sentence: 'She is satisfied [about] her new job.', choices: ['with', 'to', 'for', 'at'], answer: 0, why: 'be satisfied with ～「～に満足している」。' },
+      { sentence: 'The street was crowded [by] tourists.', choices: ['with', 'at', 'in', 'for'], answer: 0, why: 'be crowded with ～「～でこみあっている」。' },
+      { sentence: 'We were caught [by] a shower on the way home.', choices: ['in', 'at', 'to', 'of'], answer: 0, why: 'be caught in a shower「にわか雨にあう」。' },
+      { sentence: 'The glass is filled [by] water.', choices: ['with', 'of', 'in', 'at'], answer: 0, why: 'be filled with ～「～でいっぱいである」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
