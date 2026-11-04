@@ -32018,6 +32018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-compulsory-voting',
+    title: 'Should Voting Be Compulsory?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most democracies, voting is a right but not a duty. Citizens may choose whether to take part in elections, and in many countries a large proportion of them choose not to. In some elections, fewer than half of those eligible actually vote. A small number of countries, however, have taken a different approach: they require citizens to vote, and those who fail to do so without a valid reason may have to pay a small fine. As concern about low turnout grows, some have suggested that other democracies should follow their example.",
+      "Supporters of compulsory voting argue that it produces a more representative result. When turnout is low, those who vote tend to be older, wealthier, and better educated than those who do not, and politicians naturally pay more attention to the concerns of the people who are likely to vote. If everyone were required to vote, supporters say, governments would have to consider the interests of the whole population, including young people and the poor, who are often underrepresented. The result would be policies that better reflect the needs of society as a whole.",
+      "Supporters also argue that voting is a civic duty comparable to other obligations that citizens accept, such as paying taxes or serving on juries. Democracy depends on the participation of its members, and a system in which only a minority takes part may gradually lose its legitimacy. Compulsory voting, they add, can reduce the influence of money and extreme views in politics, since parties no longer need to spend vast sums simply to persuade their supporters to turn up, and must instead appeal to a broad range of voters. Campaigns might then focus more on persuading the undecided than on mobilizing the already committed.",
+      "Critics, however, argue that forcing people to vote violates an important freedom. The right to vote, they say, should include the right not to vote, and abstaining can itself be a meaningful political statement, expressing dissatisfaction with all the available choices. ( A ) compulsory voting may increase turnout, critics add, it cannot make citizens more interested or better informed, and people who are forced to vote against their will may simply choose at random or vote for whichever name appears first on the ballot.",
+      "Supporters reply that most compulsory voting systems do not actually force anyone to choose a candidate. Voters are usually required only to attend the polling station or submit a ballot, and they may leave it blank or spoil it if they wish. In this sense, the obligation is less a requirement to support any party than a requirement to take part in the process. Some research suggests that once voting becomes a habit, people tend to become more interested in politics over time.",
+      "There are also practical questions. Enforcing compulsory voting requires a system for identifying those who fail to vote and collecting fines, which may be costly and unpopular. In countries where trust in government is low, such a requirement might be seen as an unwelcome intrusion. Some propose alternatives, such as making election day a public holiday, allowing voting by mail or online, or improving civic education, which may raise turnout without the need for compulsion. Such measures address the practical obstacles to voting while leaving the final choice to each citizen.",
+      "The debate over compulsory voting ultimately concerns the relationship between individual freedom and collective responsibility in a democracy. Those who favor it see voting as a shared obligation that strengthens democratic institutions; those who oppose it see the freedom to abstain as part of what makes those institutions free. Whatever their view, most people agree that a healthy democracy requires an engaged and informed citizenry, and that low turnout is a sign that something in the relationship between citizens and their governments needs attention.",
+    ],
+    ja: [
+      'ほとんどの民主主義国では、投票は権利であって義務ではない。市民は選挙に参加するかどうかを選ぶことができ、多くの国でそのかなりの割合が参加しないことを選ぶ。選挙によっては、投票する資格のある人の半分以下しか実際に投票しないこともある。しかし少数の国は、ちがうやり方をとってきた。市民に投票を義務づけ、正当な理由なく投票しなかった人は少額の罰金をはらわなければならないこともある。低い投票率への懸念が高まるにつれて、ほかの民主主義国もその例にならうべきだと示唆する人もいる。',
+      '投票の義務化を支持する人々は、それがより代表的な結果を生むと主張する。投票率が低いと、投票する人は投票しない人より年上で、豊かで、教育を受けている傾向があり、政治家は当然、投票しそうな人々の関心により注意をはらう。すべての人が投票を義務づけられれば、政府は、しばしば十分に代表されていない若者や貧しい人々をふくむ、国民全体の利益を考えなければならなくなるだろう、と支持する人々は言う。その結果、社会全体の必要をよりよく反映した政策が生まれるだろう。',
+      '支持する人々はまた、投票は、税金をはらったり陪審員をつとめたりするような、市民が受け入れているほかの義務にくらべられる市民の義務だと主張する。民主主義はその成員の参加にたよっており、少数しか参加しない仕組みは、少しずつその正当性を失っていくかもしれない。投票の義務化はまた、政治におけるお金と極端な考えの影響をへらしうる、と彼らはつけ加える。政党は支持者に投票所に来てもらうためだけにばくだいなお金を使う必要がなくなり、そのかわりに幅広い有権者にうったえなければならなくなるからである。そうなれば、選挙運動はすでに心を決めた人を動かすことよりも、まだ決めていない人を説得することに力を入れるようになるかもしれない。',
+      'しかし批判する人々は、人々に投票を強いることは大切な自由をおかすと主張する。投票する権利には投票しない権利もふくまれるべきであり、棄権することそれ自体が、すべての選択肢への不満を表す意味のある政治的な意思表示になりうる、と彼らは言う。投票の義務化は投票率を上げるかもしれないが、市民をより政治に関心をもたせたり、より多くの情報をもたせたりすることはできず、意に反して投票を強いられた人は、でたらめに選んだり、投票用紙の最初にのっている名前に投票したりするだけかもしれない、と批判する人々はつけ加える。',
+      '支持する人々は、投票を義務化しているほとんどの仕組みは、実際にはだれにも候補者を選ぶことを強いていないと答える。有権者はふつう投票所に行くか投票用紙を出すことを求められるだけで、望めば白紙のまま出したり無効にしたりしてもよい。この意味で、その義務はどれかの政党を支持することを求めるというよりも、過程に参加することを求めるものなのである。いくつかの研究によれば、投票がいったん習慣になると、人々は時がたつにつれて政治により関心をもつようになる傾向がある。',
+      '実際的な問いもある。投票の義務化を守らせるには、投票しなかった人を特定し罰金を集める仕組みが必要であり、それは費用がかかり人気もないかもしれない。政府への信頼が低い国では、そうした義務は歓迎されない立ち入りとみなされるかもしれない。選挙の日を祝日にしたり、郵便やオンラインでの投票をゆるしたり、市民教育をよくしたりするような、強制なしに投票率を上げられるかもしれない代わりの方法を提案する人もいる。そうした手段は、最終的な選択を一人ひとりの市民にまかせたまま、投票への実際的な障害に取り組むものである。',
+      '投票の義務化をめぐる議論は、結局のところ、民主主義における個人の自由と集団の責任との関係にかかわっている。それに賛成する人々は、投票を民主的な制度を強める共有された義務とみなし、反対する人々は、棄権する自由をそれらの制度を自由なものにしているものの一部とみなす。どちらの見方をとるにせよ、ほとんどの人は、健全な民主主義には関心をもち情報をもった市民が必要であり、低い投票率は市民と政府との関係の何かが注意を必要としているしるしだということに同意している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「義務化は投票率を上げるかもしれないが、市民を関心をもたせることはできない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of compulsory voting argue that it produces a more ( 1 ) result and is a civic duty. Critics say it violates the freedom to ( 2 ) and cannot make voters better informed. Supporters reply that voters may leave their ballots blank, and some propose ( 3 ) such as making election day a holiday.',
+      blanks: [
+        { choices: ['representative', 'expensive', 'secret', 'violent'], answer: 0, why: '第2段落 it produces a more representative result。' },
+        { choices: ['abstain', 'travel', 'complain', 'study'], answer: 0, why: '第4段落 abstaining can itself be a meaningful political statement。' },
+        { choices: ['alternatives', 'punishments', 'taxes', 'parties'], answer: 0, why: '第6段落 Some propose alternatives, such as making election day a public holiday。' },
+      ],
+    },
+    tf: [
+      { statement: '選挙によっては、資格のある人の半分以下しか投票しないこともある。', answer: true, why: '第1段落 fewer than half of those eligible actually vote。' },
+      { statement: '投票率が低いと、投票する人は投票しない人より若い傾向がある。', answer: false, why: '第2段落 those who vote tend to be older。' },
+      { statement: '多くの義務化の仕組みでは、白紙で投票用紙を出してもよい。', answer: true, why: '第5段落 they may leave it blank or spoil it if they wish。' },
+      { statement: '筆者によれば、低い投票率は何の問題もないしるしである。', answer: false, why: '第7段落 low turnout is a sign that something ... needs attention。' },
+    ],
+    qa: [
+      { q: 'Why might compulsory voting reduce the influence of money, according to supporters?', choices: ['Parties no longer need to spend vast sums to get supporters to vote.', 'Elections become free.', 'Politicians stop campaigning.', 'Taxes disappear.'], answer: 0, why: '第3段落 parties no longer need to spend vast sums simply to persuade their supporters to turn up。' },
+      { q: 'What does some research suggest happens once voting becomes a habit?', choices: ['People become more interested in politics over time.', 'People stop voting.', 'Turnout falls sharply.', 'Fines increase.'], answer: 0, why: '第5段落 people tend to become more interested in politics over time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
