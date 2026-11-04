@@ -31102,6 +31102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tools',
+    title: 'The Tools That Shape Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Human beings are often described as tool-using animals, and the description is apt. From the first sharpened stones to the most advanced computers, tools have extended our abilities far beyond what our bodies alone could achieve. With a hammer we strike harder, with a telescope we see farther, and with a calculator we compute faster. It is natural to think of tools as neutral instruments that simply serve our purposes, increasing our power without changing who we are. Yet the history of technology suggests a more complicated relationship, in which the tools we use also shape the people who use them.",
+      "Consider how a skilled craftsman relates to his or her tools. For an experienced carpenter, a chisel is not an object to be thought about but an extension of the hand, through which he or she feels the grain of the wood. The tool has become, in a sense, part of the body. This transformation does not happen automatically; it requires years of practice, during which the carpenter adapts to the tool as much as the tool serves the carpenter. The skill that results is neither purely in the person nor purely in the tool but in the relationship between them.",
+      "This mutual shaping applies to intellectual tools as well. Writing, for example, did not merely record thoughts that people already had; it changed the way they thought, making it possible to develop long and complex arguments that could not easily be held in memory. Maps changed how people imagined space, and clocks changed how they experienced time. ( A ) each of these tools was invented to solve a particular problem, its effects spread far beyond that problem, gradually altering habits of thought and ways of life.",
+      "If tools shape us, then the choice of tools is never entirely a technical matter. A tool that makes a task easier may also make it less meaningful, or may cause us to lose abilities that we once possessed. People who rely on navigation devices, for instance, may find that they no longer develop a sense of the places they travel through. Students who use calculators for every computation may never acquire an intuitive feeling for numbers. In such cases, the tool does not simply add to our abilities; it replaces some of them.",
+      "This is not an argument against tools. Losing one ability in exchange for a more valuable one may be a good bargain, and few people would wish to return to a world without writing or medicine. The point is rather that the bargain should be made consciously. Before adopting a new tool, we might ask not only what it allows us to do, but also what it may cause us to stop doing, and whether the abilities we lose are ones we can afford to give up.",
+      "The question becomes especially pressing as tools become more powerful and more autonomous. Earlier tools extended the reach of the hand or the eye; many modern tools extend, or even replace, the work of judgment itself. When software recommends what we should read, buy, or believe, it shapes not only our actions but also our preferences. A tool that thinks for us may gradually make us less practiced at thinking for ourselves, unless we deliberately use it in ways that support rather than substitute for our own understanding.",
+      "Perhaps, then, the wisest relationship with tools resembles that of the skilled craftsman: an intimate familiarity combined with an awareness of what the tool is for. The craftsman does not reject the chisel, but neither does he or she forget that it serves the work rather than defining it. In a world increasingly filled with powerful instruments, the challenge is to remain the authors of our own purposes, using tools to become more fully ourselves rather than allowing them to decide, without our noticing, who we will become.",
+    ],
+    ja: [
+      '人間はしばしば道具を使う動物と描かれ、その描写は的を射ている。最初にとがらせた石から最も進んだコンピューターまで、道具は私たちの力を、体だけでなしとげられるものをはるかにこえて広げてきた。かなづちがあればより強く打て、望遠鏡があればより遠くを見られ、計算機があればより速く計算できる。道具を、私たちが何者であるかを変えずに力をふやし、単に私たちの目的に役立つ中立的な道具と考えるのは自然なことである。しかし技術の歴史は、私たちが使う道具がそれを使う人々をも形づくるという、より複雑な関係を示している。',
+      '熟練した職人が自分の道具とどうかかわっているかを考えてみよう。経験を積んだ大工にとって、のみは考えるべき物ではなく、手ののびたものであり、それを通して木目を感じとるのである。その道具は、ある意味で体の一部になっている。この変化は自然に起こるのではない。それには何年もの練習が必要であり、そのあいだ、道具が大工に仕えるのと同じくらい、大工も道具に合わせていく。その結果生まれる技能は、純粋に人の中にあるのでも、純粋に道具の中にあるのでもなく、両者の関係の中にあるのである。',
+      'このたがいに形づくりあう関係は、知的な道具にも当てはまる。たとえば文字は、人々がすでにもっていた考えを記録しただけではない。それは人々の考え方を変え、記憶にかんたんにはとどめられない長く複雑な議論をのばすことを可能にした。地図は人々が空間を思いえがくやり方を変え、時計は時間の感じ方を変えた。こうした道具はそれぞれ特定の問題を解決するために発明されたが、その影響はその問題をはるかにこえて広がり、考え方の習慣や生き方を少しずつ変えていったのである。',
+      '道具が私たちを形づくるなら、道具を選ぶことはけっして単に技術的な問題ではない。ある作業をより楽にする道具は、それを意味の少ないものにしたり、かつてもっていた力を失わせたりするかもしれない。たとえば、道案内の機器にたよる人は、通りすぎる場所の感覚がもはや育たないことに気づくかもしれない。あらゆる計算に計算機を使う生徒は、数についての直感的な感覚をけっして身につけないかもしれない。そうした場合、道具は単に私たちの力に加わるのではなく、その一部にとってかわるのである。',
+      'これは道具に反対する主張ではない。一つの力を失うかわりにより価値ある力を得ることは、よい取り引きかもしれず、文字や医学のない世界にもどりたいと思う人はほとんどいないだろう。要点はむしろ、その取り引きは意識して行われるべきだということである。新しい道具を取り入れる前に、それが何をできるようにしてくれるかだけでなく、それによって何をしなくなるかもしれないか、そして失う力が手放してもかまわないものなのかを問うてもよいだろう。',
+      '道具がより強力に、より自律的になるにつれて、この問いはとくに差しせまったものになる。以前の道具は手や目のとどく範囲を広げた。現代の道具の多くは、判断という仕事そのものを広げ、あるいはとってかわりさえする。ソフトウェアが、私たちが何を読み、何を買い、何を信じるべきかをすすめるとき、それは私たちの行動だけでなく好みも形づくる。私たちのかわりに考える道具は、私たち自身の理解のかわりにするのではなく、それをささえる形で意識して使わないかぎり、少しずつ私たちを自分で考えることになれていない者にしてしまうかもしれない。',
+      'それなら、道具との最も賢明な関係は、熟練した職人の関係に似ているのかもしれない。道具が何のためにあるのかを自覚しつつ、それに深く親しむことである。職人はのみをこばみはしないが、それが仕事を決めるのではなく仕事に仕えるものだということも忘れない。強力な道具がますますあふれる世界で、課題は、自分の目的の作者であり続け、道具が私たちの気づかないうちに私たちが何者になるかを決めるのをゆるすのではなく、道具を使ってより十分に自分自身になることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「特定の問題を解決するために発明されたが、影響はその問題をこえて広がった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、技術の歴史は、道具がそれを使う人々をも形づくることを示している。', answer: true, why: '第1段落 the tools we use also shape the people who use them。' },
+      { statement: '筆者によれば、大工の技能は純粋に道具の中にある。', answer: false, why: '第2段落 neither purely in the person nor purely in the tool but in the relationship between them。' },
+      { statement: '筆者は、道具を使うべきではないと主張している。', answer: false, why: '第5段落 This is not an argument against tools。' },
+      { statement: '筆者によれば、現代の道具の多くは判断という仕事そのものにとってかわりうる。', answer: true, why: '第6段落 many modern tools extend, or even replace, the work of judgment itself。' },
+    ],
+    qa: [
+      { q: 'What did writing make possible, according to the third paragraph?', choices: ['Developing long and complex arguments.', 'Measuring time accurately.', 'Seeing farther.', 'Striking harder.'], answer: 0, why: '第3段落 making it possible to develop long and complex arguments。' },
+      { q: 'What example of losing an ability is given in the fourth paragraph?', choices: ['People who rely on navigation devices.', 'Carpenters who use chisels.', 'Writers who use paper.', 'Doctors who use medicine.'], answer: 0, why: '第4段落 People who rely on navigation devices ... may find that they no longer develop a sense of the places。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
