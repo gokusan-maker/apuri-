@@ -2185,3 +2185,10 @@ it('正誤問題〈159〉：国公立レベル It takes・It costs の単元が1
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) finishing')
 })
+
+it('誤文訂正〈153〉：東大レベル つなぎ語 however・therefore・moreover の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-153')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('however, the game was')
+})

@@ -6534,6 +6534,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Not been] invited, I stayed home.', choices: ['Not having been', 'Having not', 'Not have been', 'Been not'], answer: 0, why: '招かれなかったのが先なので完了形の受け身 Not having been invited。' },
     ],
   },
+  {
+    id: 'exam-fix-153',
+    title: '入試の誤文訂正〈153〉（東大レベル：英作文のつなぎ語 however・therefore・moreover）',
+    points: ['however・therefore・moreover は副詞なので、2つの文をコンマだけでつなげない（コンマでつなぐなら but・so・and を使う）。文頭や ; のあとに置くときは後ろにコンマ（However, ～）。however は「しかし」（逆接）、therefore は「だから」（結果）、moreover は「そのうえ」（追加）。意味の流れに合うものを選ぶ。However hard ～「どんなに～しても」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The hotel was cheap. Moreover, it was close to the station.', ja: 'そのホテルは安かった。そのうえ、駅に近かった。' }],
+    questions: [
+      { sentence: 'It was raining heavily; [however the game was] held as planned.', choices: ['however, the game was', 'however the game, was', 'therefore the game was', 'moreover the game was'], answer: 0, why: '; のあとの however は後ろにコンマを置く。意味は逆接。' },
+      { sentence: 'He studied very hard. [Therefore, he failed] the exam.', choices: ['However, he failed', 'Moreover, he failed', 'So he failed', 'As a result, he failed'], answer: 0, why: '「熱心に勉強した」→「不合格だった」は逆接なので However。' },
+      { sentence: 'The hotel was cheap. [However, it was also] close to the station, so we chose it.', choices: ['Moreover, it was', 'Therefore, it was', 'Although it was', 'However, it was not'], answer: 0, why: '「安い」に「駅に近い」をつけ足すので Moreover。' },
+      { sentence: 'She was tired, [however she] kept working.', choices: ['but she', 'however she', 'therefore she', 'moreover she'], answer: 0, why: 'however は接続詞ではないのでコンマで文をつなげない。but she。' },
+      { sentence: 'The road was closed, [therefore we had] to take another route.', choices: ['so we had', 'therefore we had', 'moreover we had', 'however we had'], answer: 0, why: 'therefore は副詞なのでコンマで文をつなげない。結果を表す接続詞 so。' },
+      { sentence: '[Even however] hard he tried, he could not open the door.', choices: ['However', 'Even therefore', 'Moreover', 'Although however'], answer: 0, why: '「どんなに～しても」は However hard ～。even はいらない。' },
+      { sentence: 'The plan is expensive. [In addition, moreover,] it would take years to complete.', choices: ['Moreover,', 'However,', 'Therefore,', 'Moreover, in addition,'], answer: 0, why: 'in addition と moreover は同じ意味なので重ねない。Moreover, だけ。' },
+      { sentence: 'I like the city; [therefore,] I would not want to live there.', choices: ['however,', 'moreover,', 'so that', 'as a result,'], answer: 0, why: '「その町は好きだ」→「住みたくはない」は逆接なので however,。' },
+      { sentence: 'Prices have risen sharply. [However, many families] are buying less food.', choices: ['Therefore, many families', 'Although many families', 'Moreover, but many families', 'However many families'], answer: 0, why: '「物価が急に上がった」→「買う量をへらしている」は結果なので Therefore。' },
+      { sentence: 'She speaks English well, [moreover she can] speak Chinese too.', choices: ['and she can', 'moreover she can', 'however she can', 'therefore she can'], answer: 0, why: 'moreover は副詞なのでコンマで文をつなげない。追加の接続詞 and。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
