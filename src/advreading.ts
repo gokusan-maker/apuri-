@@ -31902,6 +31902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-uncertainty',
+    title: 'Living with Uncertainty',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Human beings have always sought certainty. We want to know whether a plan will succeed, whether a relationship will last, whether a medical treatment will work, and whether the future will be safe. Much of the history of science and technology can be understood as an effort to reduce uncertainty, to replace guesswork with knowledge and chance with control. Yet however much we learn, uncertainty never disappears entirely. It seems to be a permanent feature of human life, and the question of how to live with it may be as important as the question of how to reduce it.",
+      "Uncertainty is often experienced as a source of anxiety. Not knowing what will happen can make it difficult to plan, to commit, or to rest, and people may go to great lengths to avoid it. Some cling to rigid beliefs that provide clear answers, even when the evidence does not support them. Others postpone decisions indefinitely, waiting for a certainty that never comes. In both cases, the desire for certainty can lead people to act less wisely than they would if they were able to accept that some things cannot be known in advance.",
+      "Yet uncertainty is also the condition of many things we value. A game whose outcome was known in advance would hold no excitement; a conversation in which every response was predictable would teach us nothing; a life whose course was fixed from the beginning would leave no room for choice. ( A ) uncertainty can be uncomfortable, it is precisely what makes freedom, discovery, and hope possible. Without it, there would be nothing to strive for and nothing to learn.",
+      "The sciences offer an instructive example of how uncertainty can be handled productively. Scientific knowledge is never absolutely certain; every theory remains open to revision in the light of new evidence. Far from weakening science, this openness is a source of its strength, since it allows errors to be corrected and understanding to grow. Scientists have developed ways of expressing degrees of confidence, distinguishing claims that are well established from those that are tentative, and acting reasonably even when the evidence is incomplete.",
+      "This approach can be applied more broadly. In ordinary life, too, we rarely have complete information, but we can still make reasonable judgments by weighing the available evidence, considering the likely consequences of our actions, and remaining willing to change course when we learn more. Such judgment does not eliminate the risk of being wrong, but it allows us to act thoughtfully rather than being paralyzed by doubt or misled by false confidence. Good judgment under uncertainty is less a matter of always being right than of being prepared to notice when one is wrong.",
+      "There is also an emotional skill involved in living with uncertainty. People who are able to tolerate not knowing tend to be more flexible, more open to new experiences, and better able to cope with change. This tolerance can be cultivated. It may involve accepting that some worries cannot be resolved, focusing on what can be controlled, and finding meaning in the process of acting rather than only in the outcome. Many traditions of thought have taught that peace of mind comes not from controlling the future but from accepting that it cannot be fully controlled.",
+      "Perhaps, then, the mature response to uncertainty is neither to deny it nor to be overwhelmed by it, but to recognize it as part of the shape of human existence. We cannot know everything, and we cannot guarantee that our choices will turn out well. But we can choose with care, learn from our mistakes, and remain open to what the future may bring. In this sense, uncertainty is not only a limit on what we can achieve but also an invitation to live with courage, humility, and curiosity.",
+    ],
+    ja: [
+      '人間はいつも確かさを求めてきた。私たちは、計画が成功するかどうか、関係が続くかどうか、治療が効くかどうか、未来が安全かどうかを知りたいと思う。科学と技術の歴史の多くは、不確かさをへらし、当てずっぽうを知識に、偶然を管理にかえようとする努力として理解できる。しかしどれほど多くを学んでも、不確かさがまったく消えることはない。それは人間の生活のずっと続く特徴であるように思われ、それとともにどう生きるかという問いは、それをどうへらすかという問いと同じくらい大切なのかもしれない。',
+      '不確かさはしばしば不安のみなもととして経験される。何が起こるかわからないと、計画を立てたり、かかわったり、休んだりするのがむずかしくなることがあり、人々はそれをさけるためにたいへんな努力をするかもしれない。証拠がささえていなくても、はっきりした答えをあたえてくれるかたい信念にしがみつく人もいる。けっしてやってこない確かさを待って、決定をいつまでも先のばしにする人もいる。どちらの場合も、確かさへの願いは、あることは前もって知ることができないと受け入れられる場合よりも、人々に賢明でない行動をとらせてしまうことがある。',
+      'しかし不確かさはまた、私たちが大切にしている多くのものの条件でもある。結果が前もってわかっている試合にはわくわくすることがなく、どの応答も予測できる会話からは何も学べず、最初から道筋が決まっている人生には選択の余地がないだろう。不確かさは居心地が悪いこともあるが、自由や発見や希望を可能にしているのは、まさにそれなのである。それがなければ、目指すものも学ぶものも何もないだろう。',
+      '科学は、不確かさをどう生産的にあつかえるかの参考になる例をあたえてくれる。科学の知識はけっして絶対に確かではなく、あらゆる理論は新しい証拠に照らして見直される可能性に開かれている。この開かれ方は、科学を弱めるどころか、その強さのみなもとである。それによってまちがいが正され、理解が育つからである。科学者は、確信の程度を表し、よく確立された主張と仮のものとを区別し、証拠が不完全なときでさえ理にかなった行動をとる方法をのばしてきた。',
+      'このやり方は、より広く当てはめることができる。ふだんの生活でも、私たちが完全な情報をもっていることはめったにないが、手に入る証拠をはかり、自分の行動のありそうな結果を考え、より多くを知ったときには進路を変えようとする気持ちを保つことで、理にかなった判断をすることはできる。そのような判断はまちがう危険をなくしはしないが、疑いに麻痺させられたり、まちがった自信にまどわされたりするのではなく、考えぬいて行動できるようにしてくれる。不確かさのもとでのよい判断とは、いつも正しいことというよりも、自分がまちがっているときに気づく準備ができていることなのである。',
+      '不確かさとともに生きることには、感情の技術もかかわっている。わからないことにたえられる人は、より柔軟で、新しい経験に開かれており、変化にうまく対処できる傾向がある。このたえる力は育てることができる。それには、解決できない心配もあると受け入れ、管理できることに集中し、結果だけでなく行動する過程の中に意味を見いだすことがふくまれるかもしれない。多くの思想の伝統は、心の平安は未来をおさえることからではなく、未来は完全にはおさえられないと受け入れることから来ると教えてきた。',
+      'それなら、不確かさへの成熟した応え方は、それを否定することでも、それに圧倒されることでもなく、それを人間の存在の形の一部として認めることなのかもしれない。私たちはすべてを知ることはできず、自分の選択がうまくいくことを保証することもできない。しかし私たちは、注意深く選び、まちがいから学び、未来がもたらすかもしれないものに開かれていることはできる。この意味で、不確かさは私たちがなしとげられることへの限界であるだけでなく、勇気と謙虚さと好奇心をもって生きるようにという誘いでもあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「不確かさは居心地が悪いこともあるが、自由や発見を可能にしている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、どれほど学んでも不確かさはまったく消えることはない。', answer: true, why: '第1段落 uncertainty never disappears entirely。' },
+      { statement: '筆者によれば、確かさへの願いはいつも人々に賢明な行動をとらせる。', answer: false, why: '第2段落 can lead people to act less wisely。' },
+      { statement: '筆者によれば、科学の知識はけっして絶対に確かではない。', answer: true, why: '第4段落 Scientific knowledge is never absolutely certain。' },
+      { statement: '筆者によれば、心の平安は未来を完全におさえることから来る。', answer: false, why: '第6段落 comes not from controlling the future but from accepting that it cannot be fully controlled。' },
+    ],
+    qa: [
+      { q: 'Why is the openness of science a source of its strength?', choices: ['It allows errors to be corrected.', 'It makes every theory certain.', 'It prevents new evidence.', 'It removes all doubt.'], answer: 0, why: '第4段落 it allows errors to be corrected and understanding to grow。' },
+      { q: 'What do people who can tolerate not knowing tend to be?', choices: ['More flexible and open to new experiences.', 'More anxious.', 'Less able to cope with change.', 'More rigid in their beliefs.'], answer: 0, why: '第6段落 tend to be more flexible, more open to new experiences。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
