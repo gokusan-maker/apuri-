@@ -31858,6 +31858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-short-term-rentals',
+    title: 'Homes or Hotels?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many popular tourist cities, apartments that were once homes for local residents are now rented to visitors for a few nights at a time. Online platforms have made it easy for property owners to advertise their homes to travelers around the world, and for many owners, renting to tourists is far more profitable than renting to long-term tenants. Visitors often welcome the chance to stay in a real neighborhood rather than a hotel. Yet in some cities, the rapid spread of short-term rentals has provoked protests from residents, and governments have begun to impose strict limits on them.",
+      "Supporters of short-term rentals emphasize their benefits for both owners and visitors. Homeowners can earn extra income by renting out a spare room or an apartment they use only occasionally, which may help them to pay their mortgages or support their families. Travelers gain access to a wider range of accommodation, often at lower prices than hotels, and may spend money in local shops and restaurants that tourists staying in central hotels rarely visit. In this way, supporters argue, short-term rentals can spread the economic benefits of tourism more widely across a city.",
+      "Critics, however, argue that these benefits come at a high cost to local communities. When many apartments in a neighborhood are converted into short-term rentals, fewer homes are available for people who live and work in the city, and rents may rise sharply as a result. Teachers, nurses, and young families may be forced to move to distant suburbs, while the neighborhoods they leave behind fill with visitors who stay only a few days. ( A ) tourists may bring money to a district, critics say, they cannot replace the residents who give it its character and sustain its schools, shops, and community life.",
+      "There are also concerns about the quality of life for those who remain. Residents in buildings with many short-term rentals often complain of noise late at night, strangers coming and going at all hours, and a sense that their homes have become part of a hotel. Small local shops that serve residents, such as bakeries and hardware stores, may be replaced by businesses catering to tourists, such as souvenir shops and luggage storage services. Over time, a neighborhood may lose the very qualities that attracted visitors in the first place.",
+      "Governments have responded in various ways. Some cities limit the number of nights per year that an entire home can be rented to visitors, while allowing residents to rent out rooms in the homes where they live. Others require owners to register their properties and pay tourist taxes, or ban short-term rentals entirely in certain districts. Enforcing these rules can be difficult, however, since many listings are not registered, and platforms may be reluctant to share information about their users.",
+      "Some critics of strict regulation argue that short-term rentals are a symptom rather than the cause of housing problems. In many cities, they point out, the deeper issue is that not enough housing has been built to meet demand. Limiting short-term rentals may help in the short run, but without new construction, rents may continue to rise. Others reply that both measures are necessary: cities need more housing, but they also need to ensure that existing homes are used by people who live there.",
+      "The debate over short-term rentals reflects a wider tension between the benefits of tourism and the needs of the people who call a city home. Tourism can bring prosperity and cultural exchange, but if it is not managed carefully, it can change cities in ways that make them less livable for their residents. Finding a balance requires recognizing that a city is not merely a destination to be visited but a community whose life depends on people being able to afford to live there.",
+    ],
+    ja: [
+      '人気のある多くの観光都市で、かつて地元の住民の住まいだった部屋が、今では観光客に数日ずつ貸し出されている。オンラインの仕組みのおかげで、物件の持ち主は世界中の旅行者に自分の住まいを宣伝しやすくなり、多くの持ち主にとって、観光客に貸すことは長く住む借り手に貸すよりはるかにもうかる。旅行者は、ホテルではなく本物の住宅街にとまる機会を歓迎することが多い。しかし一部の都市では、短期の貸し出しが急に広がったことで住民の抗議が起こり、政府がそれにきびしい制限をかけはじめている。',
+      '短期の貸し出しを支持する人々は、持ち主と旅行者の両方にとっての利点を強調する。家の持ち主は、あいている部屋や、たまにしか使わない部屋を貸し出すことで追加の収入を得られ、それは住宅ローンをはらったり家族をささえたりするのに役立つかもしれない。旅行者は、しばしばホテルより安い値段で、より幅広い宿泊先を選べるようになり、中心部のホテルにとまる観光客がめったにおとずれない地元の店やレストランでお金を使うかもしれない。このようにして、短期の貸し出しは観光の経済的な恩恵を都市のより広い範囲に広げうる、と支持する人々は主張する。',
+      'しかし批判する人々は、こうした恩恵は地域の共同体にとって高い代償をともなうと主張する。ある住宅街の多くの部屋が短期の貸し出し用に変えられると、その都市に住み働く人々のための住まいが少なくなり、その結果家賃が急に上がるかもしれない。先生や看護師や若い家族は遠い郊外への引っこしをよぎなくされるかもしれず、彼らが去った住宅街は数日しかとまらない観光客でいっぱいになる。観光客は地区にお金をもたらすかもしれないが、その地区に個性をあたえ、学校や店や地域の生活をささえる住民のかわりにはなれない、と批判する人々は言う。',
+      '残った人々の生活の質についての懸念もある。短期の貸し出しが多い建物の住民は、夜おそくの騒音や、いつでも出入りする見知らぬ人や、自分の家がホテルの一部になってしまったような感覚についてしばしば不満をうったえる。パン屋や金物屋のような住民向けの小さな地元の店が、みやげ物屋や荷物あずかり所のような観光客向けの店にとってかわられるかもしれない。時がたつにつれて、住宅街は、そもそも観光客を引きつけた性質そのものを失ってしまうかもしれない。',
+      '政府はさまざまな方法で対応してきた。住民が自分の住んでいる家の部屋を貸し出すことはゆるしつつ、家全体を観光客に貸せる日数を年に何日までと制限している都市もある。持ち主に物件の登録と観光税の支払いを求めたり、特定の地区では短期の貸し出しを完全に禁止したりしている都市もある。しかし、多くの物件が登録されておらず、仕組みを運営する会社が利用者についての情報を分けたがらないこともあるので、こうした規則を守らせるのはむずかしいことがある。',
+      'きびしい規制を批判する人の中には、短期の貸し出しは住まいの問題の原因ではなく症状だと主張する人もいる。多くの都市で、より根本的な問題は、需要に見合うだけの住まいが建てられていないことだ、と彼らは指摘する。短期の貸し出しを制限することは目先には役立つかもしれないが、新しい建設がなければ家賃は上がり続けるかもしれない。ほかの人々は、両方の手段が必要だと答える。都市にはもっと住まいが必要だが、すでにある住まいがそこに住む人々によって使われるようにすることも必要なのである。',
+      '短期の貸し出しをめぐる議論は、観光の恩恵と、都市を自分のふるさとと呼ぶ人々の必要とのあいだの、より広い緊張を反映している。観光は繁栄と文化の交流をもたらしうるが、注意深く管理されなければ、住民にとって住みにくくなるような形で都市を変えてしまうこともある。つりあいを見つけるには、都市が単におとずれられる目的地ではなく、人々がそこに住む余裕をもてることにその生活がかかっている共同体であることを認める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「観光客は地区にお金をもたらすかもしれない一方で、住民のかわりにはなれない」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Supporters say short-term rentals give owners extra ( 1 ) and spread the benefits of tourism. Critics argue that they reduce the homes available to residents and raise ( 2 ). Some argue that the deeper problem is a lack of new ( 3 ).',
+      blanks: [
+        { choices: ['income', 'noise', 'rules', 'traffic'], answer: 0, why: '第2段落 Homeowners can earn extra income。' },
+        { choices: ['rents', 'grades', 'voices', 'speeds'], answer: 0, why: '第3段落 rents may rise sharply as a result。' },
+        { choices: ['housing', 'museums', 'airports', 'parks'], answer: 0, why: '第6段落 not enough housing has been built to meet demand。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの持ち主にとって、観光客に貸すことは長く住む借り手に貸すよりもうかる。', answer: true, why: '第1段落 renting to tourists is far more profitable than renting to long-term tenants。' },
+      { statement: '批判する人々によれば、観光客は住民のかわりになれる。', answer: false, why: '第3段落 they cannot replace the residents。' },
+      { statement: '住民向けの小さな店が観光客向けの店にとってかわられることがある。', answer: true, why: '第4段落 may be replaced by businesses catering to tourists。' },
+      { statement: '短期の貸し出しの規則を守らせるのはいつもかんたんである。', answer: false, why: '第5段落 Enforcing these rules can be difficult。' },
+    ],
+    qa: [
+      { q: 'What do residents in buildings with many short-term rentals often complain about?', choices: ['Noise late at night and strangers coming and going.', 'Too many local bakeries.', 'Lower rents.', 'Quiet streets.'], answer: 0, why: '第4段落 complain of noise late at night, strangers coming and going at all hours。' },
+      { q: 'What do some cities allow residents to do?', choices: ['Rent out rooms in the homes where they live.', 'Rent entire homes all year.', 'Avoid all taxes.', 'Build hotels anywhere.'], answer: 0, why: '第5段落 while allowing residents to rent out rooms in the homes where they live。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
