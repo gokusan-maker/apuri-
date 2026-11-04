@@ -2377,6 +2377,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="62" cy="46" rx="6" ry="3" fill="#ffffff" />
       </g>
     )
+  if (species === 'giantisopod')
+    return (
+      <g>
+        {/* よろいのふし */}
+        <path d="M30 44 Q50 38 70 44 M28 54 Q50 48 72 54 M30 64 Q50 58 70 64" fill="none" stroke="#3f3f46" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
