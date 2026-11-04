@@ -6786,6 +6786,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Rarely [he has been] late for work.', choices: ['has he been', 'he was', 'he had been', 'was he being'], answer: 0, why: 'Rarely が文頭なので倒置。完了形は has he been。' },
     ],
   },
+  {
+    id: 'exam-fix-159',
+    title: '入試の誤文訂正〈159〉（東大レベル：英作文の動名詞をとる動詞と不定詞をとる動詞）',
+    points: ['動名詞（-ing）だけを目的語にとる動詞：enjoy・finish・avoid・mind・give up・stop（～するのをやめる）など。不定詞（to do）だけをとる動詞：decide・hope・want・agree・refuse・plan・promise など。remember・forget は意味が変わる：remember doing「～したのを覚えている」（過去）／remember to do「忘れずに～する」（これから）。forget to do「～するのを忘れる」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I enjoy playing tennis, and I hope to join a club.', ja: '私はテニスをするのが好きで、クラブに入りたいと思っている。' }],
+    questions: [
+      { sentence: 'I enjoy [to play] tennis on weekends.', choices: ['playing', 'play', 'played', 'to playing'], answer: 0, why: 'enjoy は動名詞を目的語にとる。enjoy playing。' },
+      { sentence: 'She decided [studying] abroad next year.', choices: ['to study', 'study', 'studied', 'to studying'], answer: 0, why: 'decide は不定詞を目的語にとる。decided to study。' },
+      { sentence: 'Have you finished [to write] the report?', choices: ['writing', 'write', 'to writing', 'wrote'], answer: 0, why: 'finish は動名詞をとる。finished writing。' },
+      { sentence: 'I hope [seeing] you again soon.', choices: ['to see', 'see', 'seen', 'to seeing'], answer: 0, why: 'hope は不定詞をとる。hope to see。' },
+      { sentence: 'He avoided [to answer] the question.', choices: ['answering', 'answer', 'to answering', 'answered'], answer: 0, why: 'avoid は動名詞をとる。avoided answering。' },
+      { sentence: 'We agreed [meeting] at the station.', choices: ['to meet', 'meet', 'met', 'to meeting'], answer: 0, why: 'agree は不定詞をとる。agreed to meet。' },
+      { sentence: 'Would you mind [to open] the window?', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind は動名詞をとる。Would you mind opening ～?「～していただけますか」。' },
+      { sentence: 'They refused [paying] the fee.', choices: ['to pay', 'pay', 'paid', 'to paying'], answer: 0, why: 'refuse は不定詞をとる。refused to pay。' },
+      { sentence: 'Don’t forget [locking] the door when you leave.', choices: ['to lock', 'lock', 'locked', 'to locking'], answer: 0, why: 'これからすることを忘れないように、なので forget to do。' },
+      { sentence: 'I remember [to meet] him at the party last year.', choices: ['meeting', 'meet', 'to meeting', 'met'], answer: 0, why: 'last year の過去のことを覚えているので remember doing。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
