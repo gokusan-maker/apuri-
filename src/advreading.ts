@@ -32382,6 +32382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-irony',
+    title: 'The Uses of Irony',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When someone looks out at a heavy storm and says, \"What lovely weather,\" nobody thinks that the speaker is mistaken about the weather. Everyone understands that the words mean something close to their opposite. This simple example shows a curious feature of human communication: we often say things we do not literally mean, and we expect others to understand not only what we say but also the attitude behind it. Irony, in its many forms, depends on this shared ability to read between the lines. Without that ability, much of everyday conversation, as well as a great deal of literature, would be impossible to follow.",
+      "Irony is more than a playful way of speaking. By saying the opposite of what is obvious, the ironic speaker draws attention to a gap between how things are and how they ought to be, or how people expected them to be. A remark such as \"Well, that went well\" after a disastrous meeting expresses disappointment more sharply than a direct complaint might, because it invites the listener to share the speaker's view of the distance between hope and reality. In this sense, irony is a way of thinking as well as a way of speaking.",
+      "Irony can also serve as a form of protection. People living under governments that punish open criticism have often relied on irony to express dissent while avoiding direct confrontation. A writer who praises a ruler in exaggerated terms may be understood by careful readers to be mocking that ruler, yet the words themselves contain nothing that could easily be used as evidence against the writer. ( A ) irony can be misunderstood, it allows people to say what cannot be said openly, and it creates a quiet community among those who understand.",
+      "Yet irony has its dangers. Because it depends on shared understanding, it can exclude those who do not grasp the hidden meaning, making them feel foolish or left out. In written communication, where tone of voice and facial expression are missing, irony is especially likely to be misread, sometimes causing offense where none was intended. Some critics also argue that a culture in which irony becomes a constant habit may lose the ability to speak sincerely, since every statement is suspected of meaning something other than what it says.",
+      "This concern has been raised particularly about modern media and entertainment, where an ironic distance from everything can become a way of avoiding commitment. If one never says anything seriously, one can never be accused of being naive or wrong. But such constant irony may also prevent people from expressing genuine admiration, hope, or grief, and from engaging seriously with the problems of their society. Detached mockery, in this view, can become a kind of defense against the risks of caring deeply about anything.",
+      "Others, however, defend irony as a sign of intellectual maturity. To understand irony, a person must be able to hold two meanings in mind at once and to recognize that words do not always mean what they appear to mean. This ability can make people more aware of the complexity of language and more skeptical of statements that seem too simple or too certain. Philosophers since ancient times have used irony to question accepted beliefs, pretending ignorance in order to reveal the confusion of those who claim to know.",
+      "Perhaps the value of irony lies in its balance with sincerity. Irony can sharpen our perception, protect our freedom, and remind us that reality is often more complicated than it seems. But it becomes empty if it is never accompanied by the willingness to say plainly what we believe and to take responsibility for it. The most thoughtful use of irony may be one that points, beneath its playful surface, toward something the speaker genuinely values and hopes others will value too.",
+    ],
+    ja: [
+      'だれかが激しい嵐を見て「なんてすてきな天気だろう」と言っても、その人が天気について思いちがいをしているとはだれも思わない。だれもが、そのことばがほとんど反対のことを意味していると理解する。この簡単な例は、人間のコミュニケーションの奇妙な特徴を示している。私たちはしばしば文字どおりには意味していないことを言い、他人が、私たちの言うことだけでなく、その背後にある態度も理解してくれると期待しているのである。さまざまな形をとる皮肉は、行間を読むというこの共有された能力に頼っている。その能力がなければ、日常の会話の多くも、たくさんの文学作品も、理解できなくなるだろう。',
+      '皮肉は、ふざけた話し方以上のものである。明らかなことの反対を言うことによって、皮肉を言う人は、物事のあり方と、あるべき姿や人々が予想していた姿とのずれに注意を向けさせる。散々な会議のあとの「まあ、うまくいったね」といった発言は、直接の不満よりもするどく失望を表すかもしれない。聞き手に、希望と現実のへだたりについての話し手の見方を共有するよう誘うからである。この意味で、皮肉は話し方であるとともに考え方でもある。',
+      '皮肉は、身を守る一つの形にもなりうる。公然の批判を罰する政府のもとで暮らす人々は、直接の対立をさけながら反対を表すために、しばしば皮肉に頼ってきた。支配者を大げさなことばでほめる書き手は、注意深い読者には、その支配者をあざけっていると理解されるかもしれないが、ことばそのものには、書き手に不利な証拠としてかんたんに使えるものは何もふくまれていない。皮肉は誤解されることもあるが、公然とは言えないことを人々が言えるようにし、理解する人々のあいだに静かな共同体を生み出す。',
+      'しかし皮肉には危険もある。共有された理解に頼っているため、かくれた意味をつかめない人々をしめ出し、ばかにされたように、あるいは仲間はずれにされたように感じさせることがある。声の調子や顔の表情がない書きことばのやりとりでは、皮肉はとくに読みちがえられやすく、そのつもりのないところで人を傷つけることもある。また、皮肉がいつもの習慣になった文化は、あらゆる発言が見かけとはちがうことを意味しているのではないかと疑われるため、誠実に話す能力を失うかもしれないと主張する批判者もいる。',
+      'この心配は、とくに現代のメディアや娯楽について提起されてきた。そこでは、あらゆるものから皮肉な距離をとることが、深くかかわるのをさける方法になりうる。何も真剣に言わなければ、世間知らずだとか、まちがっているとか責められることはけっしてない。しかし、そのような絶え間ない皮肉は、人々が本当の賞賛や希望や悲しみを表したり、自分の社会の問題に真剣に取り組んだりすることもさまたげるかもしれない。この見方では、冷めたあざけりは、何かを深く気にかけることの危険から身を守る一種の防御になりうるのである。',
+      'しかし、皮肉を知的な成熟のしるしとして擁護する人々もいる。皮肉を理解するには、二つの意味を同時に心にとどめ、ことばがかならずしも見かけどおりの意味をもつわけではないと気づくことができなければならない。この能力は、人々をことばの複雑さにより敏感にし、単純すぎたり確かすぎたりするように見える発言をより疑うようにすることができる。古代以来、哲学者たちは、知っていると主張する人々の混乱を明らかにするために無知をよそおい、受け入れられた信念を問うために皮肉を使ってきた。',
+      'おそらく皮肉の価値は、誠実さとのつりあいにある。皮肉は、私たちの認識をするどくし、自由を守り、現実はしばしば見かけより複雑だと思い出させてくれる。しかし、自分の信じていることをはっきり言い、それに責任をもとうとする気持ちがけっしてともなわないなら、皮肉は空っぽになってしまう。最も思慮深い皮肉の使い方とは、そのふざけた表面の下で、話し手が本当に大切にし、他人にも大切にしてほしいと願う何かを指し示すものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「皮肉は誤解されることもあるが、公然とは言えないことを言えるようにする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、皮肉は話し方であるとともに考え方でもある。', answer: true, why: '第2段落 irony is a way of thinking as well as a way of speaking。' },
+      { statement: '筆者によれば、書きことばでは皮肉はとくに正しく伝わりやすい。', answer: false, why: '第4段落 irony is especially likely to be misread。' },
+      { statement: '皮肉は、公然の批判を罰する政府のもとで反対を表すのに使われてきた。', answer: true, why: '第3段落 have often relied on irony to express dissent。' },
+      { statement: '筆者によれば、皮肉は誠実さをまったく必要としない。', answer: false, why: '第7段落 the value of irony lies in its balance with sincerity。' },
+    ],
+    qa: [
+      { q: 'What can constant irony become, according to the fifth paragraph?', choices: ['A way of avoiding commitment.', 'A way of making money.', 'A way of learning languages.', 'A way of ending all conflict.'], answer: 0, why: '第5段落 an ironic distance from everything can become a way of avoiding commitment。' },
+      { q: 'Why have philosophers used irony?', choices: ['To question accepted beliefs.', 'To hide their own knowledge forever.', 'To entertain kings.', 'To avoid all arguments.'], answer: 0, why: '第6段落 have used irony to question accepted beliefs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

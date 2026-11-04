@@ -1603,3 +1603,10 @@ it('東大専用の長文97「市民が刑事裁判を裁くべきか」：600�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(p.summary?.blanks).toHaveLength(3)
 })
+
+it('京大専用の長文100「皮肉の効用」：京大の下限600語以上・1文18語以上で、京大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-irony')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
