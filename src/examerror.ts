@@ -3818,6 +3818,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Spring is (B) the season (C) where (D) flowers bloom.', choices: ['(A) Spring is', '(B) the season', '(C) where', '(D) flowers bloom'], answer: 2, why: '季節は時を表すので when。' },
     ],
   },
+  {
+    id: 'exam-error-reported-todai',
+    title: '入試の正誤問題〈161〉（東大レベル：英作文の時制の一致と話法の書きかえ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主節が過去なら、that 節の動詞も1つ過去にずらす（is→was・will→would・can→could・現在完了→過去完了）。ただし変わらない真理は現在形のまま。話法を書きかえると時や場所のことばも変わる（yesterday→the day before・next week→the following week・ago→before・now→then）。say that ～／tell 人 that ～（say me・tell that は×）。間接疑問は〈疑問詞＋主語＋動詞〉の語順。命令は tell 人 (not) to do。',
+    ],
+    examples: [
+      { en: 'She said that she would visit Kyoto the following week.', ja: '彼女は、次の週に京都をおとずれるつもりだと言った。' },
+      { en: 'He asked me where I lived.', ja: '彼は私にどこに住んでいるのかたずねた。' },
+    ],
+    questions: [
+      { sentence: 'She said (A) that she (B) would visit (C) Kyoto (D) next week.', choices: ['(A) that she', '(B) would visit', '(C) Kyoto', '(D) next week'], answer: 3, why: '話法を書きかえると next week は the following week になる。' },
+      { sentence: 'He told me (A) that he (B) had lost (C) his key (D) yesterday.', choices: ['(A) that he', '(B) had lost', '(C) his key', '(D) yesterday'], answer: 3, why: '話法を書きかえると yesterday は the day before（the previous day）になる。' },
+      { sentence: 'She (A) told (B) that she (C) had finished (D) the work.', choices: ['(A) told', '(B) that she', '(C) had finished', '(D) the work'], answer: 0, why: 'told のあとには人が必要。said that ～ か told me that ～。' },
+      { sentence: 'He asked me (A) where (B) did I live (C) at (D) that time.', choices: ['(A) where', '(B) did I live', '(C) at', '(D) that time'], answer: 1, why: '間接疑問は〈疑問詞＋主語＋動詞〉の語順。where I lived。' },
+      { sentence: 'Our teacher (A) told us (B) that (C) water boiled (D) at 100 degrees.', choices: ['(A) told us', '(B) that', '(C) water boiled', '(D) at 100 degrees'], answer: 2, why: '変わらない真理は時制の一致を受けず現在形。water boils。' },
+      { sentence: 'She asked me (A) if (B) I (C) can help her (D) with her homework.', choices: ['(A) if', '(B) I', '(C) can help her', '(D) with her homework'], answer: 2, why: '主節が過去なので時制の一致で could help。' },
+      { sentence: '(A) Tom said (B) that he (C) has been (D) to Paris twice.', choices: ['(A) Tom said', '(B) that he', '(C) has been', '(D) to Paris twice'], answer: 2, why: '主節が過去なので現在完了は過去完了に。had been。' },
+      { sentence: 'My mother told me (A) not (B) to staying (C) out (D) late.', choices: ['(A) not', '(B) to staying', '(C) out', '(D) late'], answer: 1, why: 'tell 人 not to do。to のあとは動詞の原形 stay。' },
+      { sentence: 'He asked me (A) what time (B) would the train (C) leave (D) the next day.', choices: ['(A) what time', '(B) would the train', '(C) leave', '(D) the next day'], answer: 1, why: '間接疑問の語順は〈疑問詞＋主語＋動詞〉。what time the train would leave。' },
+      { sentence: 'She (A) said that (B) she had met him (C) two days ago (D) in the library.', choices: ['(A) said that', '(B) she had met him', '(C) two days ago', '(D) in the library'], answer: 2, why: '話法を書きかえると ago は before になる。two days before。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
