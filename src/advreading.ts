@@ -30018,6 +30018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-school-start',
+    title: 'Should School Start Later?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, secondary school students begin their lessons early in the morning, sometimes before eight o'clock, and many of them must wake up long before sunrise in order to travel to school. For generations, this schedule has been accepted as normal, and students who struggle to get up have often been told that they simply need to go to bed earlier. In recent years, however, a growing body of research has suggested that early start times may be poorly suited to the biology of teenagers, and some schools and governments have begun to consider whether the school day should start later.",
+      "The argument for later start times rests largely on scientific findings about sleep. During adolescence, the body's internal clock changes, so that teenagers naturally begin to feel sleepy later at night than younger children or adults do. A teenager who is unable to fall asleep before eleven o'clock but who must wake up at six will regularly get far less sleep than doctors recommend. This is not a matter of laziness or poor discipline, researchers argue, but of a biological shift that most teenagers cannot easily overcome by willpower alone.",
+      "The consequences of insufficient sleep are serious. Students who are chronically tired find it harder to concentrate, remember what they have learned, and control their emotions. Lack of sleep has been linked to lower academic performance, higher rates of depression and anxiety, and an increased risk of accidents, including car accidents among older students who drive to school. Some studies of schools that delayed their start times have reported improvements in attendance, alertness, and grades, as well as fewer cases of students falling asleep in class.",
+      "Yet changing the school schedule is far from simple. ( A ) a later start may benefit students' health, it can create difficulties for families and communities. Parents who must leave for work early may find it hard to arrange for their children to get to school, and younger siblings who attend schools with different schedules may need separate transport. A later finishing time can also reduce the hours available for sports, club activities, and part-time jobs, and may mean that students return home in the dark during the winter months.",
+      "Critics also question whether later start times would actually lead students to sleep more. If teenagers simply stay up later, they argue, the benefit would disappear. Much of the problem, in this view, lies not in school schedules but in the use of smartphones and other screens late at night, which can delay sleep by stimulating the mind and exposing the eyes to bright light. Supporters respond that both factors matter, and that research on schools that changed their schedules generally shows that students do gain additional sleep, even if they also go to bed slightly later.",
+      "Cost is another obstacle. In many areas, school buses serve several schools in turn, and changing the start time of one school may require additional vehicles and drivers. Teachers' working hours may need to be adjusted, and facilities shared with the wider community may become unavailable at the times when they are needed. For school districts with limited budgets, these practical difficulties can seem to outweigh the benefits, however well established those benefits may be.",
+      "The debate over school start times thus illustrates a common challenge in public policy: what research suggests would be best for one group may conflict with the needs and habits of others. Resolving such conflicts requires not only scientific evidence but also careful planning and a willingness to compromise. Some schools have adopted moderate changes, delaying their start by thirty or forty minutes rather than by several hours, while others allow older students to choose between earlier and later timetables. Whatever approach is taken, the growing evidence suggests that the question of when the school day begins deserves to be taken far more seriously than it has been in the past.",
+    ],
+    ja: [
+      '多くの国で、中学や高校の生徒は朝早く、ときに8時より前に授業を始め、その多くは学校へ通うために日の出よりずっと前に起きなければならない。何世代にもわたって、この時間割は当たり前のこととして受け入れられ、起きるのに苦労する生徒は、単にもっと早く寝ればよいと言われることが多かった。しかし近年、早い始業時刻は十代の生物学にあまり合っていないかもしれないことを示す研究がふえ、学校の一日をもっとおそく始めるべきかどうかを検討しはじめた学校や政府もある。',
+      '始業をおそくすることを支持する主張は、主に睡眠についての科学的な発見にもとづいている。思春期のあいだに体内時計が変化し、十代の若者は、年下の子どもやおとなよりも夜おそくなってから自然に眠気を感じはじめるようになる。11時より前に寝つけないのに6時に起きなければならない十代の若者は、医者がすすめるよりもずっと少ない睡眠しかいつもとれないことになる。これはなまけや規律のなさの問題ではなく、ほとんどの十代の若者が意志の力だけではかんたんに乗りこえられない生物学的な変化の問題である、と研究者たちは主張する。',
+      '睡眠不足の結果は深刻である。いつも疲れている生徒は、集中したり、学んだことを覚えたり、感情をおさえたりするのがむずかしくなる。睡眠不足は、成績の低下や、うつや不安の割合の高さや、車で通学する年上の生徒の自動車事故をふくむ事故の危険の増加と結びつけられてきた。始業時刻をおくらせた学校の研究の中には、出席や注意力や成績がよくなり、授業中にねむってしまう生徒も少なくなったと報告したものもある。',
+      'しかし学校の時間割を変えるのは、かんたんにはほど遠い。おそい始業は生徒の健康のためになるかもしれないが、家庭や地域社会に困難を生むこともある。朝早く仕事に出なければならない親は、子どもの通学の手はずを整えるのがむずかしくなるかもしれず、時間割のちがう学校に通う年下のきょうだいには別の送りむかえが必要になるかもしれない。終わる時刻がおそくなれば、スポーツや部活動やアルバイトに使える時間もへり、冬のあいだは生徒が暗くなってから帰宅することになるかもしれない。',
+      '批判する人々はまた、始業をおそくすれば本当に生徒がもっとねむるようになるのか疑問を投げかける。十代の若者が単にもっとおそくまで起きているなら、その利益は消えてしまうだろう、と彼らは主張する。この見方では、問題の多くは学校の時間割ではなく、夜おそくのスマートフォンやほかの画面の使用にある。それは頭を刺激し、目を明るい光にさらすことで、ねむりをおくらせうるからである。支持する人々は、どちらの要因も重要であり、時間割を変えた学校の研究は、生徒が少しおそく寝るようになったとしても、ふつうは睡眠をふやしていることを示していると答える。',
+      '費用ももう一つの障害である。多くの地域では、スクールバスがいくつもの学校を順に回っており、一つの学校の始業時刻を変えると、車や運転手をふやす必要が出るかもしれない。先生の勤務時間を調整する必要があるかもしれず、より広い地域社会と共有している施設が、必要なときに使えなくなるかもしれない。予算のかぎられた学区にとっては、こうした実際的な困難は、その利益がどれほど確かであっても、利益を上回るように思われることがある。',
+      'このように始業時刻をめぐる議論は、公共政策によくある課題を示している。研究がある集団にとって最善だと示すことが、ほかの人々の必要や習慣とぶつかることがあるという課題である。そうした対立を解決するには、科学的な証拠だけでなく、注意深い計画と歩みよる意志が必要である。始業を数時間ではなく30分か40分おくらせるという、ほどほどの変更を取り入れた学校もあれば、年上の生徒が早い時間割とおそい時間割から選べるようにした学校もある。どんなやり方をとるにせよ、ふえつつある証拠は、学校の一日がいつ始まるかという問いが、これまでよりもずっと真剣に受けとめられるべきだということを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['While', 'Because', 'Unless', 'Until'], answer: 0, why: '「生徒の健康のためになるかもしれないが、家庭や地域に困難を生む」という対比なので While。' },
+    ],
+    summary: {
+      text: 'Research shows that teenagers\u2019 internal clocks shift so that they feel sleepy ( 1 ) at night, and lack of sleep harms their learning and health. Later start times, however, create difficulties for families, and some critics blame the use of ( 2 ) instead. The ( 3 ) of extra buses and drivers is another obstacle.',
+      blanks: [
+        { choices: ['later', 'earlier', 'never', 'only'], answer: 0, why: '第2段落 teenagers naturally begin to feel sleepy later at night。' },
+        { choices: ['screens', 'textbooks', 'uniforms', 'buses'], answer: 0, why: '第5段落 the use of smartphones and other screens late at night。' },
+        { choices: ['cost', 'color', 'speed', 'size'], answer: 0, why: '第6段落 Cost is another obstacle。' },
+      ],
+    },
+    tf: [
+      { statement: '研究者によれば、十代の若者が早く寝つけないのは主になまけのせいである。', answer: false, why: '第2段落 This is not a matter of laziness or poor discipline。' },
+      { statement: '睡眠不足は、事故の危険の増加と結びつけられてきた。', answer: true, why: '第3段落 an increased risk of accidents。' },
+      { statement: '時間割を変えた学校の研究では、ふつう生徒の睡眠がふえている。', answer: true, why: '第5段落 students do gain additional sleep。' },
+      { statement: 'すべての学校が始業を数時間おくらせた。', answer: false, why: '第7段落 delaying their start by thirty or forty minutes rather than by several hours。' },
+    ],
+    qa: [
+      { q: 'What may happen to students during the winter if school finishes later?', choices: ['They may return home in the dark.', 'They may have more club activities.', 'They may sleep at school.', 'They may stop using buses.'], answer: 0, why: '第4段落 students return home in the dark during the winter months。' },
+      { q: 'What option have some schools offered to older students?', choices: ['A choice between earlier and later timetables.', 'Free smartphones.', 'No lessons in the morning at all.', 'Classes only on weekends.'], answer: 0, why: '第7段落 allow older students to choose between earlier and later timetables。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
