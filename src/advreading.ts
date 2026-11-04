@@ -30498,6 +30498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-nuclear-power',
+    title: 'Should We Rely on Nuclear Power?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few energy sources provoke such strong and contradictory feelings as nuclear power. For some, it represents a clean and reliable way of producing large amounts of electricity without contributing to climate change. For others, it is associated with catastrophic accidents, dangerous waste that remains harmful for thousands of years, and the threat of nuclear weapons. As governments around the world search for ways to reduce their emissions of greenhouse gases, the question of whether nuclear power should play a larger role in the future has returned to the center of public debate.",
+      "Supporters emphasize the urgency of the climate crisis. Burning coal, oil, and gas to generate electricity releases enormous quantities of carbon dioxide, and replacing these fuels is one of the most important steps societies can take to limit global warming. Nuclear power plants produce almost no carbon dioxide while operating, and unlike solar and wind power, they can generate electricity continuously, regardless of the weather or the time of day. Supporters argue that a reliable source of low-carbon electricity is essential if renewable energy is to replace fossil fuels entirely.",
+      "Supporters also point out that, measured by the number of deaths per unit of electricity produced, nuclear power has been one of the safest forms of energy. Air pollution from burning fossil fuels is estimated to cause millions of premature deaths each year, a toll that receives far less attention than the rare but dramatic accidents at nuclear plants. Fear of nuclear power, in this view, is understandable but disproportionate, shaped more by memorable disasters than by a careful comparison of risks.",
+      "Critics, however, argue that the consequences of a serious nuclear accident are so severe that they cannot be weighed simply in terms of average risk. A single accident can force tens of thousands of people to leave their homes, contaminate land for decades, and cause lasting damage to public trust. ( A ) such accidents are rare, critics say, their possibility can never be entirely eliminated, particularly in countries exposed to earthquakes, floods, or political instability. The question is not only how likely an accident is, but how much damage a society is willing to risk.",
+      "The problem of waste is another major concern. Spent nuclear fuel remains highly radioactive for thousands of years, and although it can be stored safely for long periods, few countries have succeeded in establishing permanent sites for its disposal. Communities are often unwilling to accept such sites near their homes, and the challenge of guaranteeing that waste will remain secure for a period longer than recorded human history raises difficult questions about our responsibilities to future generations. Those who will live with the waste will have had no say in the decision to produce it.",
+      "Cost and time are further obstacles. New nuclear plants are extremely expensive to build, and many recent projects have taken far longer and cost far more than originally planned. Critics argue that the same money could produce more low-carbon electricity if it were invested in solar and wind power, whose costs have fallen dramatically in recent years, together with improved systems for storing energy. Supporters respond that new designs, including smaller reactors that can be built in factories, may reduce costs in the future.",
+      "The debate over nuclear power thus involves not only technical questions but also judgments about risk, responsibility, and the kind of future societies wish to create. Some countries have decided to close their nuclear plants, while others are building new ones, and each choice reflects a different balance between the dangers of climate change and the dangers of nuclear technology. What seems certain is that no source of energy is entirely without costs, and that decisions about energy require citizens to weigh competing risks honestly rather than to choose one danger simply because it seems less frightening.",
+    ],
+    ja: [
+      '原子力ほど強くたがいに矛盾する感情を呼び起こすエネルギー源は少ない。ある人々にとって、それは気候変動の一因にならずに大量の電気を作り出す、きれいで信頼できる方法を表している。ほかの人々にとっては、それは壊滅的な事故や、何千年も有害であり続ける危険な廃棄物や、核兵器のおそれと結びついている。世界中の政府が温室効果ガスの排出をへらす方法を探す中で、原子力が将来より大きな役割を果たすべきかどうかという問いが、ふたたび公の議論の中心にもどってきた。',
+      '支持する人々は、気候の危機の切迫を強調する。電気を作るために石炭や石油やガスを燃やすと、ばくだいな量の二酸化炭素が出るので、こうした燃料をおきかえることは、社会が地球温暖化をおさえるためにとれる最も重要な手段の一つである。原子力発電所は運転中に二酸化炭素をほとんど出さず、太陽光や風力とちがって、天気や時間帯にかかわらず、たえず電気を作り出すことができる。再生可能エネルギーが化石燃料に完全にとってかわるためには、信頼できる低炭素の電気のみなもとが欠かせない、と支持する人々は主張する。',
+      '支持する人々はまた、作られる電気の量あたりの死者の数ではかると、原子力は最も安全なエネルギーの形の一つであったと指摘する。化石燃料を燃やすことによる大気汚染は、毎年何百万人もの早すぎる死を引き起こしていると推定されており、その犠牲は、原子力発電所でのまれだが劇的な事故よりもはるかに注目されていない。この見方では、原子力へのおそれは理解できるが、危険を注意深く比べることよりも記憶に残る災害によって形づくられた、つりあいのとれないものなのである。',
+      'しかし批判する人々は、深刻な原子力事故の結果はきわめて重大なので、単に平均的な危険という点からはかることはできないと主張する。たった一つの事故が何万人もの人々に家をはなれさせ、何十年も土地を汚染し、公の信頼に長く続く害をあたえうる。そうした事故はまれだが、とくに地震や洪水や政治的な不安定にさらされた国では、その可能性を完全になくすことはけっしてできない、と批判する人々は言う。問題は、事故がどれほど起こりそうかだけでなく、社会がどれほどの害を危険にさらす覚悟があるかである。',
+      '廃棄物の問題も大きな懸念である。使用ずみの核燃料は何千年も強い放射能をもち続け、長いあいだ安全に保管することはできるものの、その処分のための恒久的な場所を作ることに成功した国はほとんどない。地域の人々はそうした場所を自分の家の近くに受け入れたがらないことが多く、記録に残る人類の歴史よりも長い期間、廃棄物が安全であり続けることを保証するという課題は、将来の世代への私たちの責任について、むずかしい問いを投げかける。その廃棄物とともに生きることになる人々は、それを生み出すという決定に何の発言権ももたなかったことになるのである。',
+      '費用と時間もさらなる障害である。新しい原子力発電所を建てるにはきわめて費用がかかり、最近の計画の多くは、はじめの予定よりはるかに長い時間と費用がかかった。同じお金を、近年費用が劇的に下がった太陽光や風力に、よりよいエネルギーをためる仕組みとあわせて投資すれば、より多くの低炭素の電気を作り出せるだろう、と批判する人々は主張する。支持する人々は、工場で作ることのできる小型の原子炉をふくむ新しい設計が、将来費用を下げるかもしれないと答える。',
+      'このように原子力をめぐる議論には、技術的な問いだけでなく、危険や責任や、社会が作りたいと願う未来のあり方についての判断もふくまれている。原子力発電所を閉じると決めた国もあれば、新しく建てている国もあり、それぞれの選択は、気候変動の危険と原子力技術の危険とのあいだのちがうつりあいを反映している。確かに思われるのは、まったく代償のないエネルギー源はなく、エネルギーについての決定には、ある危険のほうがこわくないように思われるというだけでそれを選ぶのではなく、競いあう危険を正直にはかることが市民に求められるということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「事故はまれだが、その可能性を完全になくすことはできない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that nuclear power produces almost no carbon dioxide and can generate electricity ( 1 ), and that it has been relatively safe. Critics point to the severe consequences of accidents, the long-lasting problem of ( 2 ), and the high ( 3 ) of building new plants.',
+      blanks: [
+        { choices: ['continuously', 'rarely', 'cheaply', 'illegally'], answer: 0, why: '第2段落 they can generate electricity continuously。' },
+        { choices: ['waste', 'noise', 'traffic', 'tourism'], answer: 0, why: '第5段落 The problem of waste is another major concern。' },
+        { choices: ['cost', 'height', 'speed', 'beauty'], answer: 0, why: '第6段落 New nuclear plants are extremely expensive to build。' },
+      ],
+    },
+    tf: [
+      { statement: '原子力発電所は、運転中に二酸化炭素をほとんど出さない。', answer: true, why: '第2段落 produce almost no carbon dioxide while operating。' },
+      { statement: '支持する人々によれば、原子力へのおそれは危険を注意深く比べた結果である。', answer: false, why: '第3段落 shaped more by memorable disasters than by a careful comparison of risks。' },
+      { statement: '使用ずみの核燃料の恒久的な処分場を作れた国は多い。', answer: false, why: '第5段落 few countries have succeeded in establishing permanent sites。' },
+      { statement: '支持する人々は、小型の原子炉が将来費用を下げるかもしれないと答えている。', answer: true, why: '第6段落 smaller reactors that can be built in factories, may reduce costs。' },
+    ],
+    qa: [
+      { q: 'What is estimated to cause millions of premature deaths each year?', choices: ['Air pollution from burning fossil fuels.', 'Accidents at nuclear plants.', 'Wind power.', 'Solar panels.'], answer: 0, why: '第3段落 Air pollution from burning fossil fuels is estimated to cause millions of premature deaths。' },
+      { q: 'What does the author say decisions about energy require of citizens?', choices: ['Weighing competing risks honestly.', 'Choosing the least frightening danger.', 'Trusting only experts.', 'Avoiding all energy use.'], answer: 0, why: '第7段落 require citizens to weigh competing risks honestly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
