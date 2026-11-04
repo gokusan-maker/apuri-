@@ -33698,6 +33698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-free-childcare',
+    title: 'Should Childcare Be Free for Every Family?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many families, the cost of caring for young children is one of the largest expenses they face. In some countries, a place in a nursery can cost as much as a parent earns from a part-time job, forcing families to choose between paying high fees and having one parent, usually the mother, stay at home. In response, a number of governments have introduced free or heavily subsidized childcare for young children, and others are considering doing so. Supporters see such policies as an investment in children, families, and the economy, while critics question their cost and their effects.",
+      "Supporters argue first that free childcare allows more parents, especially mothers, to work. When childcare is expensive, many parents find that working brings little financial benefit once fees have been paid, and some leave their jobs entirely. Making childcare free can remove this obstacle, helping parents to continue their careers and increasing family incomes. Supporters add that the additional tax paid by working parents may cover a significant part of the cost of the policy, so that the net burden on public finances is smaller than it first appears.",
+      "Supporters also emphasize the benefits for children. High-quality early education can help young children develop language, social skills, and the ability to concentrate, and some studies suggest that these benefits are particularly large for children from disadvantaged families. ( A ) the long-term effects are still debated, supporters argue that giving every child access to good early education is one of the most effective ways to reduce inequality, since differences in ability between children from rich and poor families often appear before they start school.",
+      "Critics, however, point to the high cost of such programs. Providing free childcare for every family requires large sums of public money, which might otherwise be spent on schools, health care, or support for the poorest households. Some argue that it is unfair to use taxes to pay for childcare for wealthy families who could easily afford it themselves, and that support should instead be targeted at those who need it most. Others worry that the demand created by free places may exceed the supply of trained staff and suitable buildings.",
+      "There are also concerns about quality. If governments make childcare free but do not pay enough to cover its real cost, providers may be forced to employ fewer staff, pay low wages, or reduce the quality of care. Research suggests that poor-quality childcare brings few benefits and may even harm some children. Critics therefore argue that the goal should be not simply to make childcare free, but to ensure that it is good, which may require greater investment than many governments are prepared to make.",
+      "Some people also question the assumption that all young children are best cared for outside the home. Parents differ in their values and circumstances, and some prefer to care for their children themselves, or with the help of grandparents. They argue that policies which support only formal childcare may put pressure on families to follow one particular model, and suggest that support could instead take the form of payments that parents can use as they choose, whether for nursery fees or to allow one parent to stay at home.",
+      "The debate over free childcare reflects broader questions about the responsibilities of families and the state. Few would deny that the early years of life are important, or that parents need support in raising children. The difficult questions concern how that support should be provided, who should pay for it, and how the needs of children, parents, and society can be balanced. Whatever answers societies choose, they will shape not only family life but also the opportunities available to the next generation, and the kind of society they will inherit.",
+    ],
+    ja: [
+      '多くの家族にとって、幼い子どもの世話にかかる費用は、直面する最も大きな出費の一つである。国によっては、保育所の一つの席が、親がパートタイムの仕事でかせぐのと同じくらいの費用になることがあり、家族は高い料金をはらうか、親の一方、ふつうは母親が家にいるかを選ばざるをえなくなる。これにこたえて、いくつかの政府は幼い子どもの保育を無料にしたり大きく補助したりしており、そうすることを検討している政府もある。支持する人々はこうした政策を子どもや家族や経済への投資とみなしているが、批判する人々はその費用と効果を疑っている。',
+      '支持する人々は、まず無料の保育によって、より多くの親、とくに母親が働けるようになると主張する。保育が高いと、多くの親は、料金をはらったあとでは働いても経済的な利益がほとんどないと気づき、仕事をすっかりやめてしまう人もいる。保育を無料にすればこの障害を取りのぞき、親が仕事を続けられるようにして、家族の収入をふやせる。支持する人々は、働く親がはらう追加の税が政策の費用のかなりの部分をまかなうかもしれず、公的な財政への実際の負担は最初に思われるより小さいとつけ加える。',
+      '支持する人々はまた、子どもにとっての利益を強調する。質の高い幼児教育は、幼い子どもがことばや社会的な技能や集中する力を育てる助けになり、こうした利益はとくにめぐまれない家庭の子どもに大きいことを示唆する研究もある。長期的な効果はまだ議論されているが、豊かな家庭とまずしい家庭の子どものあいだの能力のちがいはしばしば学校に入る前に現れるので、すべての子どもによい幼児教育を受けられるようにすることは、不平等を減らす最も効果的な方法の一つだと支持する人々は主張する。',
+      'しかし批判する人々は、そうした取り組みの費用の高さをあげる。すべての家族に無料の保育をあたえるには多額の公的なお金が必要であり、それはそうでなければ学校や医療や最もまずしい世帯へのささえに使えるかもしれない。自分でかんたんにはらえる裕福な家族の保育に税金を使うのは不公平であり、ささえは最も必要とする人々にしぼるべきだと主張する人もいる。無料の席が生む需要が、訓練を受けた職員や適切な建物の供給をこえてしまうのではないかと心配する人もいる。',
+      '質についての心配もある。政府が保育を無料にしても、その本当の費用をまかなうのに十分なお金をはらわなければ、保育の事業者は職員を減らしたり、低い賃金をはらったり、保育の質を下げたりせざるをえなくなるかもしれない。研究は、質の低い保育はほとんど利益をもたらさず、一部の子どもにはむしろ害になりうることを示唆している。したがって、目標は単に保育を無料にすることではなく、それがよいものであるようにすることであるべきであり、それには多くの政府がしようとしているより大きな投資が必要かもしれないと批判する人々は主張する。',
+      'すべての幼い子どもが家の外で世話をされるのが最もよいという前提を疑う人々もいる。親は価値観も状況もさまざまであり、自分で、あるいは祖父母の助けをかりて子どもの世話をしたいと思う人もいる。正式な保育だけをささえる政策は家族に一つの型にしたがうよう圧力をかけるかもしれないと彼らは主張し、ささえはかわりに、保育料にでも親の一方が家にいられるようにするためにでも、親が自由に使える給付の形をとることもできると示唆する。',
+      '無料の保育をめぐる議論は、家族と国家の責任についてのより広い問いを反映している。人生の最初の数年が大切であることや、親が子育てにささえを必要としていることを否定する人はほとんどいないだろう。むずかしい問いは、そのささえをどう提供すべきか、だれがその費用をはらうべきか、そして子どもと親と社会の必要をどうつりあわせられるかにかかわっている。社会がどんな答えを選ぶにせよ、それは家族の生活だけでなく、次の世代が手にする機会をも形づくるだろう。そして、彼らが受けつぐ社会のあり方をも。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「長期的な効果はまだ議論されているが、不平等を減らす方法だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that free childcare allows more parents to ( 1 ) and helps children from disadvantaged families. Critics point to the high cost, question paying for wealthy families, and worry that the ( 2 ) of care may fall. Others suggest giving parents payments that they can use as they ( 3 ).',
+      blanks: [
+        { choices: ['work', 'travel', 'retire', 'study'], answer: 0, why: '第2段落 free childcare allows more parents, especially mothers, to work。' },
+        { choices: ['quality', 'price', 'size', 'speed'], answer: 0, why: '第5段落 There are also concerns about quality。' },
+        { choices: ['choose', 'must', 'remember', 'promise'], answer: 0, why: '第6段落 payments that parents can use as they choose。' },
+      ],
+    },
+    tf: [
+      { statement: '国によっては、保育所の費用がパートタイムの収入と同じくらいになることがある。', answer: true, why: '第1段落 can cost as much as a parent earns from a part-time job。' },
+      { statement: '支持する人々によれば、働く親がはらう追加の税は政策の費用をまったくまかなわない。', answer: false, why: '第2段落 may cover a significant part of the cost of the policy。' },
+      { statement: '研究によれば、質の低い保育は一部の子どもに害になりうる。', answer: true, why: '第5段落 may even harm some children。' },
+      { statement: 'すべての親が子どもを家の外で世話されることを望んでいる。', answer: false, why: '第6段落 some prefer to care for their children themselves。' },
+    ],
+    qa: [
+      { q: 'Why do some argue that support should be targeted?', choices: ['It is unfair to pay for childcare for wealthy families.', 'Poor families do not need childcare.', 'Childcare is always free.', 'Nurseries are too large.'], answer: 0, why: '第4段落 it is unfair to use taxes to pay for childcare for wealthy families。' },
+      { q: 'What may happen if governments do not pay enough to cover the real cost of childcare?', choices: ['Providers may reduce staff or quality.', 'Parents will earn more.', 'Children will learn faster.', 'Taxes will fall.'], answer: 0, why: '第5段落 providers may be forced to employ fewer staff, pay low wages, or reduce the quality of care。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
