@@ -2507,6 +2507,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 66 L38 72 M50 68 L50 76 M60 66 L62 72" fill="none" stroke="#292524" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'flatworm')
+    return (
+      <g>
+        {/* 波打つ体のふち */}
+        <path d="M20 60 Q28 52 36 60 Q44 68 52 60 Q60 52 68 60 Q76 68 84 60" fill="none" stroke="#7c2d12" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
