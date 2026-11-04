@@ -2552,6 +2552,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 30 Q50 4 58 30 M44 72 Q50 98 58 72" fill="#1c1917" stroke="#f97316" strokeWidth="2.5" />
       </g>
     )
+  if (species === 'stripedcatfish')
+    return (
+      <g>
+        {/* 黄色いすじと口のひげ */}
+        <path d="M24 46 Q50 40 76 46 M24 58 Q50 52 76 58" fill="none" stroke="#fde68a" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M30 66 L18 74 M34 68 L24 80 M66 68 L76 80 M70 66 L82 74" fill="none" stroke="#78350f" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
