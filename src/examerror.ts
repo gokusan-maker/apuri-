@@ -7458,6 +7458,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Two thirds of the apples [was] rotten.', choices: ['were', 'is', 'has', 'being'], answer: 0, why: 'of のあとが複数名詞 the apples なので複数扱い。were。' },
     ],
   },
+  {
+    id: 'exam-fix-175',
+    title: '入試の誤文訂正〈175〉（京大レベル：比較の慣用 no more than・no less than・not so much A as B）',
+    points: ['no more than ～「たった～（＝only）」・no less than ～「～も（＝as much as）」・not more than ～「多くても～（＝at most）」・not less than ～「少なくとも～（＝at least）」。not so much A as B「A というよりむしろ B」、A is no more B than C is D「A が B でないのは C が D でないのと同じ」（クジラの構文）。日本語の意味に合う形を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He is not so much a scholar as a writer.', ja: '彼は学者というよりむしろ作家だ。' }],
+    questions: [
+      { sentence: '［彼はたった千円しか持っていない］ He has [no less than] 1,000 yen.', choices: ['no more than', 'not less than', 'as much as', 'more than'], answer: 0, why: '「たった～」は no more than（＝only）。no less than は「～も」。' },
+      { sentence: '［その旅行には10万円もかかった］ The trip cost [no more than] 100,000 yen.', choices: ['no less than', 'not more than', 'only', 'at most'], answer: 0, why: '「～も（多いと感じて）」は no less than（＝as much as）。' },
+      { sentence: '［少なくとも3時間は勉強しなさい］ Study for [no more than] three hours.', choices: ['not less than', 'no less than', 'not more than', 'less than'], answer: 0, why: '「少なくとも」は not less than（＝at least）。' },
+      { sentence: '［そのホールには多くても50人しか入れない］ The hall holds [no less than] fifty people.', choices: ['not more than', 'no less than', 'not less than', 'more than'], answer: 0, why: '「多くても」は not more than（＝at most）。' },
+      { sentence: '［彼は学者というよりむしろ作家だ］ He is not [as much] a scholar as a writer.', choices: ['so much', 'more', 'much more', 'so many'], answer: 0, why: 'not so much A as B「A というよりむしろ B」。' },
+      { sentence: '［クジラが魚でないのは馬が魚でないのと同じだ］ A whale is [not more] a fish than a horse is.', choices: ['no more', 'no less', 'not less', 'any more'], answer: 0, why: 'クジラの構文 A is no more B than C is (D)。' },
+      { sentence: '［彼女は歌手というよりむしろ女優だ］ She is [not so much as] a singer as an actress.', choices: ['not so much', 'not so much more', 'no so much', 'not much so'], answer: 0, why: 'not so much A as B。as は A のあとに一つだけ。' },
+      { sentence: '［彼は姉に劣らず親切だ］ He is [no more] kind than his sister.', choices: ['no less', 'not more', 'not less', 'no much'], answer: 0, why: 'A is no less ～ than B「A は B に劣らず～だ」。' },
+      { sentence: '［その仕事はせいぜい1週間で終わる］ The job will take [no less than] a week.', choices: ['not more than', 'no less than', 'not less than', 'more than'], answer: 0, why: '「せいぜい・多くても」は not more than（＝at most）。' },
+      { sentence: '［その本は百ページしかない］ The book has [not less than] a hundred pages.', choices: ['no more than', 'no less than', 'more than', 'at least'], answer: 0, why: '「たった・～しかない」は no more than（＝only）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
