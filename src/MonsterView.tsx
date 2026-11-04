@@ -2522,6 +2522,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 42 Q50 36 62 44 Q56 56 40 58" fill="none" stroke="#172554" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'bannerfish')
+    return (
+      <g>
+        {/* 旗のようにのびた背びれと、黒いしま */}
+        <path d="M50 26 Q54 10 66 4" fill="none" stroke="#1c1917" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M40 34 L36 72 M60 34 L64 72" fill="none" stroke="#1c1917" strokeWidth="4" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
