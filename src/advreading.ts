@@ -32782,6 +32782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-authenticity',
+    title: 'The Search for Authenticity',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few ideals are more highly valued in modern culture than authenticity. We admire people who are \"true to themselves,\" we are urged to discover who we really are, and we often criticize behavior that seems fake or merely conventional. Advertising promises products that will allow us to express our authentic selves, and travelers seek experiences that feel genuine rather than staged for tourists. Yet the more closely we examine this ideal, the more puzzling it becomes. What exactly is the authentic self, and how could we ever know that we have found it?",
+      "The modern ideal of authenticity has a relatively recent history. In many traditional societies, a person's identity was largely defined by his or her place in a family, a community, or a social class, and living well meant fulfilling the duties attached to that place. The idea that each individual possesses an inner self, distinct from social roles and perhaps even opposed to them, gained influence only gradually. It suggested that society might distort or hide our true nature, and that we have a responsibility to resist such pressure in order to live according to our own inner sense of what matters.",
+      "This ideal has had important positive effects. It has encouraged people to question customs that limited their lives unfairly, to choose their own careers and partners, and to resist pressure to conform to expectations that did not suit them. ( A ) the ideal can be misused, it has given many people the courage to live in ways that earlier generations would have considered unthinkable, and it has supported movements that sought recognition for groups whose ways of life had been dismissed.",
+      "Yet the ideal of authenticity also raises serious difficulties. If the authentic self is something we discover within, how can we distinguish it from passing moods, desires shaped by advertising, or habits we have simply absorbed from those around us? Much of what we feel to be most deeply our own, such as our language, our tastes, and our values, was in fact learned from others. The idea of a pure inner self, untouched by society, may therefore be an illusion. Even the desire to be authentic is, in part, something our culture has taught us to want.",
+      "Some philosophers have suggested that authenticity should be understood not as discovering a hidden self but as creating one. On this view, we become authentic not by uncovering something already present but by taking responsibility for the choices we make and the commitments we form. A person who reflects carefully on the values he or she has inherited, keeping some and rejecting others, is authentic in a meaningful sense, even though those values came originally from outside.",
+      "This understanding also helps to explain why authenticity need not mean isolation. The self is formed through relationships, and many of the commitments that give life meaning, such as love, friendship, and loyalty to a community, involve other people. An authentic life, in this sense, is not one that rejects all outside influence, but one in which a person engages thoughtfully with others and makes their shared values his or her own. Authenticity and belonging may be less opposed than they first appear, and each may in fact depend on the other.",
+      "Perhaps the most valuable aspect of the ideal of authenticity is the question it encourages us to ask: are we living according to values we have genuinely examined, or merely following patterns we have never thought about? This question can be uncomfortable, and it has no final answer. But asking it seriously may be one way of taking our lives into our own hands, while recognizing that the self we shape will always bear the marks of the world in which it was formed.",
+    ],
+    ja: [
+      '現代の文化で、本物であること（真正性）ほど高く評価されている理想はほとんどない。私たちは「自分に正直な」人を賞賛し、自分が本当はだれなのかを見つけるようすすめられ、うそくさく見えたり、単に型どおりに見えたりするふるまいをしばしば批判する。広告は本当の自分を表現できるようにしてくれる製品を約束し、旅行者は観光客向けに演出されたものではなく本物だと感じられる体験を求める。しかし、この理想をよく調べれば調べるほど、それはなぞめいてくる。本当の自分とはいったい何であり、どうすればそれを見つけたと知ることができるのだろうか。',
+      '本物であることという現代の理想は、比較的新しい歴史しかもたない。多くの伝統的な社会では、人の自己は、家族や共同体や社会階級の中での位置によって大部分決められており、よく生きるとは、その位置にともなう義務を果たすことを意味していた。一人ひとりの個人が、社会的な役割とは別の、そしておそらくはそれに反しさえする内なる自己をもっているという考えは、少しずつ影響力を得ていったにすぎない。それは、社会が私たちの本当の性質をゆがめたりかくしたりするかもしれず、何が大切かについての自分の内なる感覚にしたがって生きるために、私たちにはそのような圧力にあらがう責任があることを示唆した。',
+      'この理想は大切なよい効果をもたらしてきた。それは、人々が自分の生活を不当に制限する習慣を問い直し、自分の職業や相手を自分で選び、自分に合わない期待に合わせよという圧力にあらがうようはげましてきた。この理想は誤用されることもあるが、多くの人々に、前の世代なら考えられないと思ったような生き方をする勇気をあたえ、生き方を軽んじられてきた集団の承認を求める運動をささえてきた。',
+      'しかし、本物であることという理想は深刻なむずかしさも引き起こす。本当の自分が内側に見いだされるものなら、それを、一時的な気分や、広告に形づくられた欲望や、まわりの人々から単に吸収した習慣とどう区別できるのだろうか。ことばや好みや価値観のように、私たちが最も深く自分のものだと感じるものの多くは、実際には他人から学んだものである。したがって、社会にふれられていない純粋な内なる自己という考えは、幻想なのかもしれない。本物でありたいという願いでさえ、一部は私たちの文化が望むよう教えてきたものなのである。',
+      '本物であることは、かくれた自己を見つけることではなく、それを作り出すこととして理解すべきだと示唆する哲学者もいる。この見方では、私たちは、すでにそこにある何かを掘り出すことによってではなく、自分のする選択と自分の結ぶかかわりに責任をもつことによって本物になる。受けついだ価値観を注意深くふり返り、あるものは残しあるものはしりぞける人は、それらの価値観がもともと外から来たものであっても、意味のある意味で本物なのである。',
+      'この理解は、本物であることがかならずしも孤立を意味しない理由を説明する助けにもなる。自己は人間関係を通じて形づくられ、愛や友情や共同体への忠誠のように、人生に意味をあたえるかかわりの多くは他人をふくんでいる。この意味で本物の人生とは、外からの影響をすべてしりぞける人生ではなく、他人と思慮深くかかわり、共有された価値観を自分のものにしていく人生である。本物であることと所属することは、最初に見えるほど対立していないのかもしれず、実はたがいに頼り合っているのかもしれない。',
+      'おそらく本物であることという理想の最も価値ある面は、それが私たちにうながす問いである。私たちは本当に吟味した価値観にしたがって生きているのか、それとも一度も考えたことのない型に単にしたがっているだけなのか。この問いは居心地が悪いこともあり、最終的な答えはない。しかし、それを真剣に問うことは、自分の形づくる自己がいつも、それが形づくられた世界のあとをとどめていることを認めながら、自分の人生を自分の手ににぎる一つの方法なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「理想は誤用されることもあるが、多くの人に勇気をあたえてきた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、本物であることという現代の理想は比較的新しい歴史しかもたない。', answer: true, why: '第2段落 The modern ideal of authenticity has a relatively recent history。' },
+      { statement: '筆者によれば、私たちが最も深く自分のものだと感じるものはすべて自分ひとりで生み出したものである。', answer: false, why: '第4段落 was in fact learned from others。' },
+      { statement: 'ある哲学者たちは、本物であることを自己を作り出すこととして理解すべきだと示唆している。', answer: true, why: '第5段落 should be understood not as discovering a hidden self but as creating one。' },
+      { statement: '筆者によれば、本物であることはかならず孤立を意味する。', answer: false, why: '第6段落 authenticity need not mean isolation。' },
+    ],
+    qa: [
+      { q: 'How was identity largely defined in many traditional societies?', choices: ['By a person\'s place in a family, community, or social class.', 'By personal choice alone.', 'By advertising.', 'By travel experiences.'], answer: 0, why: '第2段落 was largely defined by his or her place in a family, a community, or a social class。' },
+      { q: 'What question does the ideal of authenticity encourage us to ask?', choices: ['Whether we live according to values we have genuinely examined.', 'Whether we should travel more.', 'Whether we should buy new products.', 'Whether society should disappear.'], answer: 0, why: '第7段落 are we living according to values we have genuinely examined。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
