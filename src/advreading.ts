@@ -30862,6 +30862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-advice',
+    title: 'The Difficulty of Giving Advice',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few things are offered as freely, or received as reluctantly, as advice. We give it to friends who are facing difficult decisions, to children who are about to make mistakes, and to colleagues whose work we think could be improved. Yet advice, however well meant, is often ignored, resented, or forgotten. The person who receives it may feel patronized, misunderstood, or burdened, and the person who gives it may feel frustrated that his or her wisdom has gone unheeded. Why should something intended as help so often fail to help?",
+      "Part of the answer lies in the gap between general knowledge and particular situations. Advice usually takes the form of a rule drawn from experience: save money, be honest, do not trust first impressions. Such rules may be sound in general, but every situation has features that no rule can fully anticipate. The person receiving advice knows his or her own circumstances in a detail that the adviser cannot, and may rightly sense that the advice, though reasonable in the abstract, does not quite fit the case at hand.",
+      "Advice also carries an implicit message about the relationship between the two people. To advise someone is, in a sense, to claim a position of greater knowledge or experience, and the person advised may hear in it a suggestion that he or she is not capable of solving the problem alone. ( A ) the adviser may intend only to be helpful, the advice may therefore be experienced as a judgment, especially when it is offered without being requested. This is why unsolicited advice is so often unwelcome, even when it is correct.",
+      "Moreover, people often seek not advice but understanding. Someone who describes a problem to a friend may want, above all, to be listened to, to have his or her feelings acknowledged, and to feel less alone. A quick suggestion about what to do can cut this process short, implying that the problem is simpler than it feels. The friend who responds with careful questions, by contrast, may help the person to clarify his or her own thoughts and to arrive at a solution that is genuinely his or her own.",
+      "This suggests that the most useful advice is often less a matter of telling than of helping someone to see. Good advisers ask questions before offering answers, try to understand the situation as the other person experiences it, and present their suggestions as possibilities rather than instructions. They recognize that the decision belongs to the person who must live with its consequences, and that their role is to widen that person's view rather than to replace his or her judgment with their own.",
+      "There is also something to be learned about receiving advice. People who are quick to reject advice may miss the chance to benefit from the experience of others, and the feeling of being judged, though understandable, can prevent us from considering whether the advice might be right. To receive advice well is to separate the content of what is said from the way it is said, and to ask honestly whether it contains something we need to hear, even if it is uncomfortable. Some of the most valuable lessons we learn arrive in precisely this unwelcome form.",
+      "Perhaps, then, advice is best understood not as a transfer of wisdom from one person to another but as a form of conversation, in which both people bring their knowledge and both may learn. When advice is offered with humility and received with openness, it can become one of the most valuable things that human beings can share. When it is offered as a verdict and received as an insult, it helps no one. The difference lies not so much in the advice itself as in the relationship within which it is given.",
+    ],
+    ja: [
+      '助言ほど気前よく差し出され、しぶしぶ受けとられるものは少ない。私たちは、むずかしい決定に直面している友人や、まちがいをおかしそうな子どもや、仕事をもっとよくできると思う同僚に助言をする。しかし助言は、どれほど善意からのものでも、無視されたり、うとまれたり、忘れられたりすることが多い。受けとる人は、見下されている、わかってもらえていない、重荷を負わされたと感じるかもしれず、あたえる人は、自分の知恵が聞き入れられなかったことにいらだつかもしれない。助けのつもりのものが、なぜこれほどしばしば助けにならないのだろうか。',
+      '答えの一部は、一般的な知識と個別の状況とのへだたりにある。助言はふつう、経験から引き出された規則の形をとる。お金をためなさい、正直でいなさい、第一印象を信じるな、といったものである。そうした規則は一般には正しいかもしれないが、どんな状況にも、どんな規則も十分には予想できない特徴がある。助言を受ける人は、助言する人にはわからないほどくわしく自分の事情を知っており、その助言が抽象的には理にかなっていても、目の前の場合にはどうもぴったり合わないと、正しく感じとるかもしれない。',
+      '助言はまた、二人の関係についての暗黙のメッセージをふくんでいる。人に助言することは、ある意味で、より多くの知識や経験をもつ立場を主張することであり、助言される人はそこに、自分ひとりでは問題を解決できないというほのめかしを聞きとるかもしれない。助言する人は助けになろうとしているだけかもしれないが、とくに求められずに差し出されるとき、その助言は判定として受けとられることがある。だからこそ、求められていない助言は、たとえ正しくても、歓迎されないことがこれほど多いのである。',
+      'そのうえ、人々はしばしば助言ではなく理解を求めている。友人に問題を打ち明ける人は、何よりも話を聞いてもらい、自分の気持ちを認めてもらい、ひとりではないと感じたいのかもしれない。何をすべきかについてのすばやい提案は、この過程を打ち切り、問題が感じられるよりも単純だとほのめかしてしまうことがある。それに対して、注意深い質問で応える友人は、その人が自分の考えをはっきりさせ、本当に自分自身のものである解決にたどりつくのを助けるかもしれない。',
+      'このことは、最も役に立つ助言とは、しばしば教えることというよりも、相手が見えるように手助けすることだということを示している。よい助言者は、答えを差し出す前に質問し、相手が経験しているとおりに状況を理解しようとし、自分の提案を指示ではなく可能性として示す。彼らは、決定はその結果とともに生きなければならない人のものであり、自分の役割は相手の判断を自分の判断でおきかえることではなく、相手の見方を広げることだと認めているのである。',
+      '助言を受けることについても学ぶべきことがある。すぐに助言を退ける人は、他人の経験から得る機会をのがすかもしれず、判断されているという感覚は、理解できるものではあっても、その助言が正しいかもしれないと考えることをさまたげうる。助言をうまく受けとることは、言われたことの内容をその言い方から切りはなし、たとえ居心地が悪くても、そこに自分が聞く必要のある何かがふくまれていないかを正直に問うことである。私たちが学ぶ最も価値ある教訓のいくつかは、まさにこの歓迎されない形でやってくるのである。',
+      'それなら、助言は、ある人から別の人への知恵の受けわたしとしてではなく、両方が知識をもちより、両方が学びうる一種の対話として理解するのが最もよいのかもしれない。助言が謙虚に差し出され、開かれた心で受けとられるとき、それは人間が分かちあえる最も価値あるものの一つになりうる。それが判定として差し出され、侮辱として受けとられるとき、だれの助けにもならない。そのちがいは、助言そのものよりも、それがあたえられる関係にあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「助言する人は助けになろうとしているだけかもしれないが、判定として受けとられることがある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、助言はどれほど善意からでも無視されることが多い。', answer: true, why: '第1段落 Yet advice, however well meant, is often ignored。' },
+      { statement: '筆者によれば、助言する人は助言を受ける人よりくわしくその事情を知っている。', answer: false, why: '第2段落 The person receiving advice knows his or her own circumstances in a detail that the adviser cannot。' },
+      { statement: '筆者によれば、人々はしばしば助言ではなく理解を求めている。', answer: true, why: '第4段落 people often seek not advice but understanding。' },
+      { statement: '筆者によれば、よい助言者は自分の判断で相手の判断をおきかえる。', answer: false, why: '第5段落 rather than to replace his or her judgment with their own。' },
+    ],
+    qa: [
+      { q: 'Why is unsolicited advice often unwelcome, according to the third paragraph?', choices: ['It may be experienced as a judgment.', 'It is always wrong.', 'It is too short.', 'It costs money.'], answer: 0, why: '第3段落 the advice may therefore be experienced as a judgment。' },
+      { q: 'Where does the difference between helpful and unhelpful advice lie, according to the last paragraph?', choices: ['In the relationship within which it is given.', 'In the length of the advice.', 'In the age of the adviser.', 'In the number of rules used.'], answer: 0, why: '第7段落 The difference lies ... in the relationship within which it is given。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
