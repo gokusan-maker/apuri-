@@ -2432,6 +2432,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 50 L16 42 M30 56 L14 56 M30 62 L16 70 M70 50 L84 42 M70 56 L86 56 M70 62 L84 70" fill="none" stroke="#1e3a8a" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'mandarinfish')
+    return (
+      <g>
+        {/* うずまきもよう */}
+        <path d="M36 46 Q42 40 46 46 Q42 52 36 50 M54 56 Q60 50 64 56 Q60 62 54 60" fill="none" stroke="#1e40af" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
