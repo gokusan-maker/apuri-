@@ -3890,6 +3890,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It was (B) because he was ill (C) why (D) he was absent.', choices: ['(A) It was', '(B) because he was ill', '(C) why', '(D) he was absent'], answer: 2, why: '理由を強調する強調構文も It was ～ that …。why ではなく that。' },
     ],
   },
+  {
+    id: 'exam-error-uncountable-todai',
+    title: '入試の正誤問題〈164〉（東大レベル：英作文の数えられない名詞 information・advice・furniture）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '英語で数えられない名詞：information・advice・furniture・luggage（baggage）・homework・progress・traffic・news・paper（紙）・money など。a（an）をつけず、複数形にもしない。単数あつかい（The news was ～）。量は much・a little・some・a lot of で、数えるときは a piece of advice・two pieces of furniture。people・police は複数あつかいの数えられる名詞なので many people。',
+    ],
+    examples: [
+      { en: 'She gave me some useful advice.', ja: '彼女は私に役に立つ助言をいくつかくれた。' },
+      { en: 'The news was shocking to everyone.', ja: 'その知らせはみんなにとって衝撃的だった。' },
+    ],
+    questions: [
+      { sentence: 'She gave me (A) some (B) useful (C) advices (D) about my career.', choices: ['(A) some', '(B) useful', '(C) advices', '(D) about my career'], answer: 2, why: 'advice は数えられない名詞なので複数形にしない。advice。' },
+      { sentence: 'I need (A) an (B) information (C) about (D) the schedule.', choices: ['(A) an', '(B) information', '(C) about', '(D) the schedule'], answer: 0, why: 'information は数えられないので an はつけない（some information）。' },
+      { sentence: 'We bought (A) some (B) new furnitures (C) for (D) the living room.', choices: ['(A) some', '(B) new furnitures', '(C) for', '(D) the living room'], answer: 1, why: 'furniture は数えられない名詞。new furniture（数えるなら pieces of furniture）。' },
+      { sentence: '(A) How many (B) luggage (C) do you (D) have?', choices: ['(A) How many', '(B) luggage', '(C) do you', '(D) have?'], answer: 0, why: 'luggage は数えられないので How much luggage。' },
+      { sentence: 'There (A) are (B) a lot of (C) traffic (D) this morning.', choices: ['(A) are', '(B) a lot of', '(C) traffic', '(D) this morning'], answer: 0, why: 'traffic は数えられない名詞なので単数あつかい。There is。' },
+      { sentence: 'He has made (A) great (B) progresses (C) in (D) English.', choices: ['(A) great', '(B) progresses', '(C) in', '(D) English'], answer: 1, why: 'progress は数えられない名詞。great progress。' },
+      { sentence: '(A) The news (B) were (C) shocking (D) to everyone.', choices: ['(A) The news', '(B) were', '(C) shocking', '(D) to everyone'], answer: 1, why: 'news は -s で終わるが数えられない名詞で単数あつかい。was。' },
+      { sentence: 'I don’t have (A) much time, (B) but I can give you (C) a few (D) advices.', choices: ['(A) much time,', '(B) but I can give you', '(C) a few', '(D) advices'], answer: 3, why: 'advice は数えられないので a few advices ではなく a little advice（a few pieces of advice）。' },
+      { sentence: 'Could you give me (A) a (B) piece of (C) papers (D) to write on?', choices: ['(A) a', '(B) piece of', '(C) papers', '(D) to write on?'], answer: 2, why: '「紙」の paper は数えられないので a piece of paper。' },
+      { sentence: '(A) Much (B) people (C) visit (D) Kyoto every year.', choices: ['(A) Much', '(B) people', '(C) visit', '(D) Kyoto every year'], answer: 0, why: 'people は数えられる名詞（複数あつかい）なので Many people。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
