@@ -7038,6 +7038,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Not the price but the quality [matter] most.', choices: ['matters', 'matters to', 'mattering', 'are mattering'], answer: 0, why: 'not A but B は B（the quality＝単数）に合わせる。matters。' },
     ],
   },
+  {
+    id: 'exam-fix-165',
+    title: '入試の誤文訂正〈165〉（東大レベル：英作文の few・a few・little・a little）',
+    points: ['few・a few は数えられる名詞（複数形）、little・a little は数えられない名詞に使う。a がつくと「少しある」（肯定）、a がないと「ほとんどない」（否定）。quite a few「かなり多くの」。「より少ない」は数えられる名詞なら fewer、数えられない名詞なら less。advice・money・time・milk は数えられない名詞。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I have a few friends but little time.', ja: '友だちは少しいるが、時間はほとんどない。' }],
+    questions: [
+      { sentence: 'There is [few] milk left in the fridge.', choices: ['little', 'a few', 'many', 'fewer'], answer: 0, why: 'milk は数えられないので little。「ほとんどない」。' },
+      { sentence: 'I have [a little] friends in Tokyo, so I am never lonely.', choices: ['a few', 'few', 'a little of', 'little'], answer: 0, why: 'friends は数えられる名詞。「少しいる」なので a few。' },
+      { sentence: 'He has [little] books, so he often goes to the library.', choices: ['few', 'a little', 'much', 'less'], answer: 0, why: 'books は数えられる名詞。「ほとんどない」なので few。' },
+      { sentence: 'Could you give me [a few] advice?', choices: ['a little', 'few', 'many', 'several'], answer: 0, why: 'advice は数えられないので a little。' },
+      { sentence: 'Only [a little] students passed the exam.', choices: ['a few', 'little', 'much', 'less'], answer: 0, why: 'students は数えられる名詞なので only a few。' },
+      { sentence: 'There were [quite a little] people at the concert.', choices: ['quite a few', 'quite few', 'quite little', 'a quite few'], answer: 0, why: '「かなり多くの人」は quite a few people。' },
+      { sentence: 'We have [few] time before the train leaves; let’s hurry.', choices: ['little', 'a few', 'fewer', 'many'], answer: 0, why: 'time は数えられない名詞。「ほとんどない」なので little。' },
+      { sentence: 'She speaks [little] languages, including French and Chinese.', choices: ['a few', 'fewer', 'a little', 'much'], answer: 0, why: 'languages は数えられる名詞。いくつか話せるので a few。' },
+      { sentence: 'I had [a few] money, so I couldn’t buy lunch.', choices: ['little', 'few', 'a lot of', 'much more'], answer: 0, why: 'money は数えられない名詞。買えなかったので「ほとんどない」little。' },
+      { sentence: 'There are [less] cars on the road today than yesterday.', choices: ['fewer', 'little', 'a little', 'few of'], answer: 0, why: 'cars は数えられる名詞なので fewer。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
