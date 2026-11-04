@@ -32178,6 +32178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-cooking-classes',
+    title: 'Should Schools Teach Cooking?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, cooking was once taught in schools as a practical skill, often under the name of home economics. Over time, however, such lessons have been reduced or removed from the curriculum in many places, replaced by subjects considered more important for examinations and future careers. At the same time, the rise of ready-made meals, fast food, and delivery services has meant that many young people grow up without learning how to prepare even simple dishes. Some educators and health experts now argue that cooking should return to schools as a regular and compulsory subject.",
+      "Supporters point first to health. Diets high in processed food, sugar, and salt have been linked to rising rates of obesity, diabetes, and heart disease, and many people do not know how to prepare healthy meals from fresh ingredients. Teaching children to cook, supporters argue, would give them the knowledge and confidence to make better choices throughout their lives. Children who have prepared vegetables themselves may also be more willing to eat them, and a habit of cooking at home can reduce dependence on expensive and unhealthy convenience foods. Habits formed in childhood often last a lifetime, which is why supporters believe early lessons matter so much.",
+      "Cooking lessons can also teach a surprising range of other skills. Following a recipe requires reading carefully and measuring accurately, and adjusting quantities involves practical mathematics. Understanding why bread rises or why vegetables change color when they are boiled introduces basic science. ( A ) cooking is often regarded as a minor or domestic subject, supporters point out, it brings together knowledge from many fields in a way that students can see and taste, which may make abstract ideas easier to grasp.",
+      "Supporters further argue that cooking has cultural and social value. Food is closely connected with tradition, family, and identity, and learning to prepare dishes from one's own culture and from others can deepen understanding between people of different backgrounds. Cooking together in class also encourages cooperation, as students share tasks, solve problems, and enjoy the results of their work. For some students who struggle with traditional academic subjects, cooking may offer a rare opportunity to succeed and to feel proud of what they have made.",
+      "Critics, however, raise practical objections. Teaching cooking requires kitchens, equipment, ingredients, and trained teachers, all of which cost money that many schools do not have. Safety is also a concern, since knives and hot stoves can cause injuries if students are not carefully supervised. Critics add that the school day is already crowded, and that adding cooking would mean reducing time for other subjects that are important for students' academic progress. Some also worry that a single weekly lesson would be too short to teach anything meaningful.",
+      "Others question whether schools are the right place to teach cooking at all. Cooking, they argue, has traditionally been learned at home, from parents and grandparents, and schools should not be expected to take on every responsibility that families once fulfilled. Supporters reply that many families no longer have the time, knowledge, or resources to teach cooking, and that leaving it entirely to the home would mean that children from busier or poorer families miss out on an important life skill.",
+      "The debate over cooking in schools reflects a broader question about what education is for. If schools exist mainly to prepare students for examinations and careers, cooking may seem a luxury. If, however, their purpose includes preparing young people to live healthy, independent lives, then knowing how to feed oneself well may be as essential as any academic subject. Many educators suggest that even a modest program, taught well and connected with other subjects, could make a meaningful difference to students' health and well-being. The skills learned in such lessons may be among the few that students use every single day of their adult lives.",
+    ],
+    ja: [
+      '多くの国で、料理はかつて実際的な技能として、しばしば家庭科という名前で学校で教えられていた。しかし時がたつにつれて、そうした授業は多くの場所で教育課程から減らされたりなくされたりし、試験や将来の仕事により重要だと考えられる科目にとってかわられた。同時に、できあいの食事やファストフードや配達サービスの広がりによって、多くの若者がかんたんな料理さえ作り方を学ばないまま育つようになった。今、料理をふつうの必修科目として学校にもどすべきだと主張する教育者や健康の専門家もいる。',
+      '支持する人々は、まず健康を指摘する。加工食品や砂糖や塩の多い食事は、肥満や糖尿病や心臓病の増加と結びつけられてきており、多くの人は新鮮な材料から健康的な食事を作る方法を知らない。子どもに料理を教えれば、生涯を通じてよりよい選択をする知識と自信をあたえるだろう、と支持する人々は主張する。自分で野菜を調理した子どもは、それを食べようとする気持ちも強くなるかもしれず、家で料理する習慣は、高くて健康によくない手軽な食品へのたよりをへらしうる。子ども時代に身についた習慣はしばしば一生続くので、支持する人々は早いうちの授業がとても大事だと考えている。',
+      '料理の授業はまた、おどろくほど幅広いほかの技能も教えうる。作り方に従うには注意深く読み、正確にはかることが必要であり、量を調整するには実際的な算数がかかわる。なぜパンがふくらむのか、なぜ野菜がゆでると色が変わるのかを理解することは、基本的な理科を教えてくれる。料理はしばしばささいな、あるいは家庭的な科目とみなされるが、さまざまな分野の知識を、生徒が目で見て味わえる形で結びつけるので、抽象的な考えをつかみやすくするかもしれない、と支持する人々は指摘する。',
+      '支持する人々はさらに、料理には文化的・社会的な価値があると主張する。食べ物は伝統や家族やアイデンティティと深く結びついており、自分の文化やほかの文化の料理の作り方を学ぶことは、ちがう背景をもつ人々のあいだの理解を深めうる。授業でいっしょに料理することは、生徒が仕事を分担し、問題を解決し、自分たちの仕事の結果を楽しむので、協力もうながす。伝統的な学問の科目に苦労している生徒の中には、料理が成功し、自分の作ったものを誇りに思えるまれな機会になる生徒もいるかもしれない。',
+      'しかし批判する人々は、実際的な反対をあげる。料理を教えるには調理室や道具や材料や研修を受けた先生が必要であり、そのどれもが多くの学校にはないお金がかかる。生徒が注意深く見守られていなければ、包丁や熱いコンロがけがを引き起こしうるので、安全も懸念である。批判する人々は、学校の一日はすでにいっぱいであり、料理を加えれば、生徒の学業の進歩に大切なほかの科目のための時間をへらすことになるとつけ加える。週に一度の授業では、意味のあることを教えるには短すぎるだろうと心配する人もいる。',
+      'そもそも学校が料理を教えるのにふさわしい場所なのかを疑問視する人もいる。料理は伝統的に家で、親や祖父母から学ばれてきたのであり、学校は、かつて家庭が果たしていたあらゆる責任を引き受けることを期待されるべきではない、と彼らは主張する。支持する人々は、多くの家庭にはもはや料理を教える時間や知識や資源がなく、それを完全に家庭にまかせることは、よりいそがしい家庭や貧しい家庭の子どもが大切な生きる技能を身につけそこなうことを意味すると答える。',
+      '学校での料理をめぐる議論は、教育が何のためにあるのかという、より広い問いを反映している。学校が主に生徒に試験や仕事へのそなえをさせるためにあるなら、料理はぜいたくに思われるかもしれない。しかしその目的に、若者が健康で自立した生活を送れるようにすることがふくまれるなら、自分をうまく食べさせる方法を知ることは、どんな学問の科目とも同じくらい欠かせないかもしれない。多くの教育者は、ささやかなものでも、うまく教えられ、ほかの科目と結びつけられた取り組みなら、生徒の健康と幸せに意味のあるちがいをもたらしうると示唆している。そうした授業で学ぶ技能は、生徒がおとなになってから毎日使う数少ない技能の一つかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「料理はささいな科目とみなされるが、さまざまな分野の知識を結びつける」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of cooking classes argue that they would improve ( 1 ), teach skills such as mathematics and science, and have cultural value. Critics point to the ( 2 ) of kitchens and equipment and to safety concerns. Others ask whether cooking should be learned at ( 3 ) instead.',
+      blanks: [
+        { choices: ['health', 'traffic', 'fashion', 'sports'], answer: 0, why: '第2段落 Supporters point first to health。' },
+        { choices: ['cost', 'color', 'noise', 'size'], answer: 0, why: '第5段落 all of which cost money that many schools do not have。' },
+        { choices: ['home', 'work', 'night', 'random'], answer: 0, why: '第6段落 Cooking ... has traditionally been learned at home。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの場所で、料理の授業は教育課程から減らされたりなくされたりしてきた。', answer: true, why: '第1段落 such lessons have been reduced or removed from the curriculum in many places。' },
+      { statement: '支持する人々によれば、自分で野菜を調理した子どもは野菜を食べたがらなくなる。', answer: false, why: '第2段落 may also be more willing to eat them。' },
+      { statement: '料理の授業は協力をうながしうる。', answer: true, why: '第4段落 Cooking together in class also encourages cooperation。' },
+      { statement: '支持する人々によれば、すべての家庭に料理を教える時間がある。', answer: false, why: '第6段落 many families no longer have the time, knowledge, or resources to teach cooking。' },
+    ],
+    qa: [
+      { q: 'What science does cooking introduce, according to the third paragraph?', choices: ['Why bread rises or vegetables change color.', 'How planets move.', 'How computers work.', 'Why the sea is salty.'], answer: 0, why: '第3段落 Understanding why bread rises or why vegetables change color。' },
+      { q: 'What safety concern do critics mention?', choices: ['Knives and hot stoves can cause injuries.', 'Food is too expensive.', 'Recipes are hard to read.', 'Students eat too much.'], answer: 0, why: '第5段落 knives and hot stoves can cause injuries。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
