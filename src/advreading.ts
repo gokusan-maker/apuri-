@@ -30898,6 +30898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-no-grades',
+    title: 'Should Schools Abolish Grades?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most students, grades are an unavoidable part of school life. Tests, essays, and projects are marked with numbers or letters, and these marks are combined into reports that follow students from one school to the next and eventually influence their chances of entering university or finding a job. Yet a growing number of educators have begun to question whether grades actually help students to learn. Some schools have experimented with replacing traditional grades with written comments, and some universities have made the first year of study pass or fail. Should schools abolish grades altogether?",
+      "Critics of grading argue that it shifts students' attention from learning to performance. When students know that their work will be graded, they may focus on what will earn a high mark rather than on understanding the material, choosing easy tasks over challenging ones and avoiding risks that might lower their scores. Research on motivation suggests that external rewards, such as grades, can reduce the interest that people naturally take in an activity, so that students who once enjoyed reading or solving problems may come to see these activities merely as means to an end.",
+      "Grades can also discourage students who are struggling. A student who receives a low mark may conclude that he or she is simply not good at a subject, and may stop trying. Written feedback, critics argue, can be far more useful, since it explains what was done well, what needs improvement, and how to improve it. A single letter or number, by contrast, tells students where they stand compared with others but says little about how to make progress. ( A ) grades are efficient to record, they may communicate less than they appear to.",
+      "Defenders of grading, however, point out that grades serve important purposes. They provide a simple way of summarizing a student's performance that can be understood by parents, other schools, universities, and employers. Without grades, these groups would need some other means of comparing applicants, and the alternatives, such as standardized tests or interviews, have problems of their own. Grades also give students clear goals and can motivate those who might otherwise make little effort, particularly in subjects they do not find naturally interesting.",
+      "There are also concerns about fairness. Written comments, though potentially more informative, take far more time to produce, and teachers who are responsible for large classes may be unable to write detailed feedback for every student. Comments can also be vague or inconsistent, and they may be influenced by teachers' personal impressions in ways that are harder to detect than in numerical marks. Some research suggests that, without clear grades, students from families who understand how schools work may gain an advantage, since they know better how to interpret what teachers mean.",
+      "Many educators therefore favor reform rather than abolition. They suggest using grades less frequently, for example only at the end of a course rather than on every piece of work, and combining them with detailed feedback that helps students to improve. Some recommend allowing students to revise their work after receiving comments, so that grades reflect what students eventually learn rather than their first attempt. Others propose grading against clear standards rather than ranking students against one another, so that every student who masters the material can succeed.",
+      "The debate over grades ultimately concerns what schools are trying to achieve. If their main purpose is to sort students for future opportunities, grades may seem indispensable. If their purpose is to help every student learn as much as possible, then the way grades are used becomes crucial, since a system that discourages effort or rewards caution may undermine that goal. The challenge is to design forms of assessment that provide useful information without turning learning into a competition for marks, and that encourage students to value understanding for its own sake.",
+    ],
+    ja: [
+      'ほとんどの生徒にとって、成績は学校生活のさけられない一部である。テストや作文や課題には数字や文字で点がつけられ、その点はまとめられて通知表になり、学校から学校へと生徒についてまわり、最後には大学に入ったり仕事を見つけたりする可能性に影響する。しかし、成績が本当に生徒の学びを助けるのか疑問をもちはじめた教育者がふえている。伝統的な成績のかわりに書かれたコメントを使う試みをした学校もあれば、大学一年目を合格か不合格かだけにした大学もある。学校は成績を完全にやめるべきなのだろうか。',
+      '成績を批判する人々は、成績は生徒の注意を学ぶことから結果を出すことへうつしてしまうと主張する。自分の作品が採点されると知っていると、生徒は内容を理解することよりも高い点をとれることに集中し、むずかしい課題よりやさしい課題を選び、点を下げるかもしれない危険をさけるかもしれない。動機づけについての研究によれば、成績のような外からのほうびは、人が自然に活動に対していだく興味をへらしうるので、かつて読書や問題を解くことを楽しんでいた生徒が、こうした活動を単に目的のための手段とみなすようになるかもしれない。',
+      '成績はまた、苦労している生徒のやる気をなくさせることもある。低い点をもらった生徒は、自分はその科目が単に得意でないと結論し、努力するのをやめてしまうかもしれない。書かれた意見のほうがはるかに役に立ちうる、と批判する人々は主張する。それは、何がよくできたか、何をよくする必要があるか、どうすればよくなるかを説明するからである。それに対して、ただ一つの文字や数字は、ほかの人と比べて自分がどこにいるかは教えてくれても、どうすれば進歩できるかについてはほとんど語らない。成績は記録するのは効率的だが、見かけほど多くを伝えていないのかもしれない。',
+      'しかし成績を擁護する人々は、成績には大切な役割があると指摘する。成績は、親やほかの学校や大学や雇い主にわかる、生徒の成果をまとめる単純な方法をあたえる。成績がなければ、こうした人々は志願者を比べるのに何かほかの手段を必要とするだろうし、標準テストや面接のようなその代わりのものには、それ自体の問題がある。成績はまた、生徒にはっきりした目標をあたえ、とくに自然には興味をもてない科目で、そうでなければほとんど努力しないかもしれない生徒をやる気にさせうる。',
+      '公平さについての懸念もある。書かれたコメントは、より多くを伝えうるものの、作るのにはるかに多くの時間がかかり、大人数のクラスを受けもつ先生は、すべての生徒にくわしい意見を書くことができないかもしれない。コメントはまた、あいまいだったり一貫していなかったりすることがあり、数字の点よりも見つけにくい形で、先生の個人的な印象に左右されるかもしれない。はっきりした成績がないと、学校の仕組みをよく理解している家庭の生徒が、先生の言いたいことをどう解釈すればよいかをよりよく知っているので、有利になるかもしれないと示す研究もある。',
+      'そのため多くの教育者は、廃止よりも改革を好む。たとえば、すべての課題ではなく授業の終わりにだけ成績をつけるというように、成績をつける回数をへらし、生徒が向上するのを助けるくわしい意見と組み合わせることを提案する。コメントを受けたあとに生徒が作品を直せるようにして、成績が最初の試みではなく生徒が最終的に学んだことを反映するようにすることをすすめる人もいる。生徒どうしを順位づけるのではなく、はっきりした基準に照らして成績をつけ、内容を身につけたすべての生徒が成功できるようにすることを提案する人もいる。',
+      '成績をめぐる議論は、結局のところ、学校が何をなしとげようとしているのかにかかわっている。その主な目的が将来の機会に向けて生徒をふり分けることなら、成績は欠かせないものに思われるかもしれない。その目的がすべての生徒にできるだけ多く学ばせることなら、努力をくじいたり慎重さにむくいたりする仕組みはその目標をそこないうるので、成績の使い方がきわめて重要になる。課題は、学ぶことを点の競争に変えずに役に立つ情報をあたえ、生徒が理解そのものを大切にするようはげます評価の形を作ることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「成績は記録するのは効率的だが、見かけほど多くを伝えていないかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that grades shift attention from learning to ( 1 ) and can discourage struggling students, while written ( 2 ) may be more useful. Defenders reply that grades are easy for others to understand and give clear goals. Many educators favor ( 3 ) rather than abolition.',
+      blanks: [
+        { choices: ['performance', 'friendship', 'sleep', 'travel'], answer: 0, why: '第2段落 it shifts students\u2019 attention from learning to performance。' },
+        { choices: ['feedback', 'exams', 'rules', 'uniforms'], answer: 0, why: '第3段落 Written feedback, critics argue, can be far more useful。' },
+        { choices: ['reform', 'punishment', 'silence', 'competition'], answer: 0, why: '第6段落 Many educators therefore favor reform rather than abolition。' },
+      ],
+    },
+    tf: [
+      { statement: '大学一年目を合格か不合格かだけにした大学もある。', answer: true, why: '第1段落 some universities have made the first year of study pass or fail。' },
+      { statement: '研究によれば、成績のような外からのほうびは、いつも興味をふやす。', answer: false, why: '第2段落 can reduce the interest that people naturally take in an activity。' },
+      { statement: '書かれたコメントは、作るのに数字の点より時間がかかる。', answer: true, why: '第5段落 take far more time to produce。' },
+      { statement: '筆者は、成績はどんな使い方をしても同じだと述べている。', answer: false, why: '第7段落 the way grades are used becomes crucial。' },
+    ],
+    qa: [
+      { q: 'What might a student who receives a low mark conclude, according to the third paragraph?', choices: ['That he or she is simply not good at the subject.', 'That the teacher made a mistake.', 'That grades do not matter.', 'That the test was too easy.'], answer: 0, why: '第3段落 may conclude that he or she is simply not good at a subject。' },
+      { q: 'Why do some suggest allowing students to revise their work?', choices: ['So that grades reflect what students eventually learn.', 'So that teachers work less.', 'So that grades become higher for everyone.', 'So that tests can be removed.'], answer: 0, why: '第6段落 so that grades reflect what students eventually learn rather than their first attempt。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
