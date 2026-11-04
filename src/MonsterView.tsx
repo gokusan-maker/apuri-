@@ -2598,6 +2598,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="48" cy="66" r="4" fill="#ffffff" />
       </g>
     )
+  if (species === 'goby')
+    return (
+      <g>
+        {/* 見はりの大きな目 */}
+        <circle cx="30" cy="34" r="6" fill="#ffffff" stroke="#365314" strokeWidth="2" />
+        <circle cx="31" cy="34" r="3" fill="#365314" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
