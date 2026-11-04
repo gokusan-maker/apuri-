@@ -6660,6 +6660,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He behaved as though nothing [happens].', choices: ['had happened', 'happens now', 'will happen', 'is happening'], answer: 0, why: 'ふるまった時より前のことなので as though＋過去完了 had happened。' },
     ],
   },
+  {
+    id: 'exam-fix-156',
+    title: '入試の誤文訂正〈156〉（東大レベル：英作文の無生物主語）',
+    points: ['英語では「物・こと」を主語にして「（人に）～させる」と書くことが多い（無生物主語）。take（bring）人 to 場所「人を～へ連れていく」、make 人＋動詞の原形、cause（enable）人 to do、prevent（keep）人 from doing「人が～するのをさまたげる」、remind 人 of ～「人に～を思い出させる」。日本語に直すときは「～のおかげで」「～のせいで」と人を主語にするとよい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Heavy rain prevented us from going out.', ja: '大雨のせいで、私たちは外出できなかった。' }],
+    questions: [
+      { sentence: 'This bus [takes us at] the airport in thirty minutes.', choices: ['takes us to', 'brings at us', 'takes for us', 'is taking at'], answer: 0, why: 'take 人 to 場所「人を～へ連れていく」。at ではなく to。' },
+      { sentence: 'The news [made him to cry].', choices: ['made him cry', 'made him crying', 'made to cry him', 'was made him cry'], answer: 0, why: 'make 人＋動詞の原形。to はつけない。' },
+      { sentence: 'A few minutes’ walk [brought me at] the beach.', choices: ['brought me to', 'brought to me', 'was brought me', 'brought for me'], answer: 0, why: 'bring 人 to 場所。「数分歩くと海辺に着いた」。' },
+      { sentence: 'What [made you to change] your mind?', choices: ['made you change', 'made you changed', 'did make you to change', 'made to change you'], answer: 0, why: '「何があなたの気を変えさせたのか」。make 人＋動詞の原形。' },
+      { sentence: 'Heavy rain [prevented us to go] out.', choices: ['prevented us from going', 'prevented us going for', 'prevented from us going', 'prevented us of going'], answer: 0, why: 'prevent 人 from doing「人が～するのをさまたげる」。' },
+      { sentence: 'This medicine [will make you feeling] better.', choices: ['will make you feel', 'will make you to feel', 'will make feel you', 'will be made you feel'], answer: 0, why: 'make 人＋動詞の原形。feel。' },
+      { sentence: 'His illness [kept him to attend] the meeting.', choices: ['kept him from attending', 'kept him attending from', 'kept from him attending', 'kept him of attending'], answer: 0, why: 'keep 人 from doing「人が～できないようにする」。' },
+      { sentence: 'The photo [reminds me my] childhood.', choices: ['reminds me of my', 'reminds of me my', 'reminds to me my', 'reminds me about to my'], answer: 0, why: 'remind 人 of ～「人に～を思い出させる」。' },
+      { sentence: 'The heavy traffic [caused us arrive] late.', choices: ['caused us to arrive', 'caused us arriving', 'caused to us arrive', 'was caused us to arrive'], answer: 0, why: 'cause 人 to do「人に～させる（原因となる）」。to arrive。' },
+      { sentence: 'Her letter [enabled me knowing] the truth.', choices: ['enabled me to know', 'enabled me know', 'enabled to me know', 'enabled me of knowing'], answer: 0, why: 'enable 人 to do「人が～できるようにする」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
