@@ -33582,6 +33582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-respect',
+    title: 'Two Kinds of Respect',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often say that people deserve respect, but the word is used in strikingly different ways. We respect a skilled surgeon for her ability, an elderly neighbor for his experience, and a rival for the fairness with which she competes. At the same time, we speak of respecting the rights of strangers about whom we know nothing at all. These uses suggest that respect is not a single attitude but a family of related ones, and that understanding the differences among them may help to clarify some of the most important questions of social life.",
+      "One useful distinction separates respect that must be earned from respect that is owed to everyone. The first kind, sometimes called appraisal respect, is based on a person's qualities or achievements. We admire a musician's talent or a friend's honesty, and this admiration can grow or diminish depending on how the person behaves. The second kind, sometimes called recognition respect, does not depend on merit at all. It is owed to every person simply as a person, and it requires us to treat others in certain ways regardless of what we think of their abilities or character.",
+      "The idea that all people deserve recognition respect lies at the heart of many modern moral and political commitments. It explains why we believe that even those who have committed serious crimes should not be tortured or humiliated, and why laws should apply equally to rich and poor. ( A ) we may disapprove strongly of someone's actions, recognition respect forbids us to treat that person as if he or she did not count, since it is grounded in a dignity that no behavior can entirely remove.",
+      "Confusion between the two kinds of respect can cause serious problems. When people believe that respect must always be earned, they may come to treat those they consider unworthy, such as the poor, the unsuccessful, or members of unpopular groups, with contempt. Conversely, when people demand admiration as if it were owed to them automatically, they may feel insulted whenever others disagree with them or criticize their work. A healthy society requires both forms of respect, but it also requires that they not be mistaken for each other.",
+      "Respect also has a dimension that concerns how we treat ourselves. Self-respect involves a sense that one's own life and goals matter, and that one is entitled to be treated fairly by others. People who lack self-respect may accept mistreatment or fail to pursue their own aims. Self-respect is closely connected to the respect we receive from others: when people are consistently ignored or humiliated, it becomes difficult for them to maintain a sense of their own worth. Social conditions, in this sense, can either support or undermine self-respect.",
+      "In everyday life, respect is often expressed through small gestures: listening without interrupting, using a person's name correctly, or taking seriously a view with which one disagrees. Such gestures may seem trivial, but their absence can be deeply felt. People who are repeatedly overlooked or treated with condescension may experience a kind of injury that is harder to describe than physical harm but no less real. Many conflicts, both personal and political, arise not only from disagreements about material interests but from a sense of not being respected.",
+      "Perhaps, then, respect is best understood not as a feeling that we either have or lack, but as a practice that must be cultivated. Recognizing the worth of every person, while reserving admiration for what deserves it, requires judgment and self-awareness. It also requires attention to the ways in which institutions and customs may deny some people the recognition they are owed. In learning to respect others well, we may also come to understand more clearly what it means to be treated, and to treat ourselves, as persons of value.",
+    ],
+    ja: [
+      '私たちはよく人々は尊重に値すると言うが、このことばはおどろくほどちがうしかたで使われている。私たちは腕のよい外科医をその能力のために、年配の隣人をその経験のために、そしてライバルをその公正な競い方のために尊敬する。同時に、私たちは、まったく何も知らない見知らぬ人々の権利を尊重することについても語る。こうした使い方は、尊重が一つの態度ではなく、たがいに関連し合った態度の集まりであり、それらのちがいを理解することが社会生活の最も大切な問いのいくつかをはっきりさせる助けになるかもしれないことを示唆している。',
+      '役に立つ一つの区別は、勝ちとらなければならない尊重と、すべての人に当然あたえられるべき尊重とを分ける。一つ目の種類は、評価的尊重と呼ばれることもあり、人の資質や成果にもとづいている。私たちは音楽家の才能や友人の正直さを賞賛するが、この賞賛はその人のふるまいによって大きくなったり小さくなったりしうる。二つ目の種類は、承認的尊重と呼ばれることもあり、まったく値打ちにはよらない。それはすべての人に単に人としてあたえられるべきものであり、私たちに、他人の能力や人がらをどう思うかにかかわらず、他人をある決まったしかたであつかうことを求める。',
+      'すべての人が承認的尊重に値するという考えは、現代の多くの道徳的・政治的なかかわりの中心にある。それは、重大な罪をおかした人でさえ拷問されたり辱められたりすべきではないと私たちが信じる理由や、法律が富める者にもまずしい者にも平等に適用されるべきだと考える理由を説明する。私たちはだれかの行動を強く非難するかもしれないが、承認的尊重は、その人をまるで数に入らないかのようにあつかうことを禁じる。それは、どんなふるまいによっても完全には取り去ることのできない尊厳にもとづいているからである。',
+      '二つの種類の尊重を混同すると、深刻な問題が生じうる。尊重はいつも勝ちとらなければならないと人々が信じると、まずしい人や成功していない人や人気のない集団の人々のように、値打ちがないと考える人々を軽べつしてあつかうようになるかもしれない。逆に、人々が賞賛を自分に自動的にあたえられるべきもののように求めると、ほかの人が反対したり自分の仕事を批判したりするたびに、侮辱されたと感じるかもしれない。健全な社会には両方の形の尊重が必要だが、それらがたがいにとりちがえられないことも必要である。',
+      '尊重には、私たちが自分自身をどうあつかうかにかかわる面もある。自尊心には、自分の人生と目標が大切であり、他人から公正にあつかわれる資格があるという感覚がふくまれる。自尊心を欠く人は、不当なあつかいを受け入れたり、自分の目標を追い求めそこなったりするかもしれない。自尊心は他人から受ける尊重と深く結びついている。人々がいつも無視されたり辱められたりすると、自分の価値の感覚を保つのはむずかしくなる。この意味で、社会の状況は自尊心をささえることも、くずすこともできるのである。',
+      '日常生活では、尊重はしばしば小さなふるまいによって表される。口をはさまずに聞くこと、人の名前を正しく使うこと、賛成できない意見を真剣に受けとめることである。そうしたふるまいはささいに思えるかもしれないが、それがないことは深く感じられうる。くり返し見すごされたり見下したあつかいを受けたりする人々は、体の害よりも説明しにくいが、同じように現実的な一種の傷を経験するかもしれない。個人的なものも政治的なものも、多くの対立は、物質的な利害についての意見のちがいからだけでなく、尊重されていないという感覚から生じるのである。',
+      'それなら、尊重は、もっているかいないかのどちらかである感情としてではなく、育てなければならない実践として理解するのがよいのかもしれない。賞賛はそれに値するもののためにとっておきながら、すべての人の価値を認めるには、判断と自己認識が必要である。また、制度や慣習が一部の人々から当然受けるべき承認をうばっているかもしれないしかたへの注意も必要である。他人をよく尊重することを学ぶ中で、私たちは、価値ある人としてあつかわれ、また自分自身をあつかうとはどういうことかを、よりはっきりと理解するようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「行動を強く非難するかもしれないが、承認的尊重は数に入らないようなあつかいを禁じる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '評価的尊重は、人の資質や成果にもとづいている。', answer: true, why: '第2段落 appraisal respect, is based on a person\'s qualities or achievements。' },
+      { statement: '承認的尊重は、その人の値打ちによって大きく変わる。', answer: false, why: '第2段落 recognition respect, does not depend on merit at all。' },
+      { statement: '自尊心は、他人から受ける尊重と深く結びついている。', answer: true, why: '第5段落 Self-respect is closely connected to the respect we receive from others。' },
+      { statement: '筆者によれば、尊重されていないという感覚が対立を生むことはない。', answer: false, why: '第6段落 Many conflicts ... arise ... from a sense of not being respected。' },
+    ],
+    qa: [
+      { q: 'What problem can arise when people believe that respect must always be earned?', choices: ['They may treat those they consider unworthy with contempt.', 'They may admire everyone equally.', 'They may stop working.', 'They may forget their own names.'], answer: 0, why: '第4段落 they may come to treat those they consider unworthy ... with contempt。' },
+      { q: 'How is respect often expressed in everyday life?', choices: ['Through small gestures such as listening without interrupting.', 'Through expensive gifts.', 'Through loud praise.', 'Through avoiding all disagreement.'], answer: 0, why: '第6段落 through small gestures: listening without interrupting。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
