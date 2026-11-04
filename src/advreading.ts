@@ -30978,6 +30978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-coding',
+    title: 'Should Every Student Learn to Code?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, many governments have added computer programming to the school curriculum, in some cases making it compulsory from primary school onward. Children who once learned to read, write, and calculate now also learn to write simple instructions for computers, to build small games, or to control robots. Supporters see this change as essential preparation for a future shaped by digital technology. Critics wonder whether it is the best use of limited school time, and whether the skills being taught will still be relevant by the time today's children enter the workforce.",
+      "The case for teaching programming rests partly on economic arguments. Digital technology now plays a central role in almost every industry, and employers in many countries report a shortage of people with technical skills. A basic understanding of programming, supporters argue, will help students to find good jobs, and a country that produces skilled programmers will be better able to compete in the global economy. Teaching programming to every child, rather than only to those who choose it later, may also help to ensure that opportunities in the technology sector are not limited to those from privileged backgrounds.",
+      "Supporters also argue that programming teaches ways of thinking that are valuable well beyond computing. Writing a program requires breaking a complex problem into smaller steps, thinking logically about the order in which they must be carried out, and testing and correcting one's work when it does not behave as expected. These habits of mind, often called computational thinking, may help students in mathematics, science, and everyday problem solving. Learning to program can also give students a sense of agency, showing them that the technology around them is not magic but something that people design and can change.",
+      "Critics, however, question several of these claims. The programming languages and tools taught today may be obsolete within a decade, and advances in artificial intelligence may allow computers to write much of their own code in the future. ( A ) some knowledge of how computers work will remain useful, critics argue, it is not clear that every student needs to learn the details of writing programs, any more than every student needs to learn how to repair a car engine in order to drive.",
+      "There are also concerns about time and resources. Adding programming to the curriculum means either lengthening the school day or reducing time spent on other subjects, such as languages, the arts, or physical education, each of which has its own value. Many schools lack teachers with the necessary expertise, and teachers who are asked to teach programming with little training may struggle to do so effectively. In such conditions, lessons may become a matter of following instructions without real understanding, achieving little of what supporters hope for.",
+      "Some educators suggest that the goal should not be to turn every student into a programmer but to give all students a basic understanding of how digital technology shapes their lives. This would include not only simple programming but also knowledge of how data is collected and used, how algorithms influence what people see online, and what ethical questions arise from the use of technology. Such an education would prepare students to be thoughtful citizens in a digital society, whether or not they ever write code professionally.",
+      "The debate over teaching programming reflects a broader question about how schools should respond to technological change. Education must prepare students for the world they will live in, but that world is difficult to predict, and skills that seem essential today may soon become less important. Perhaps the most valuable preparation is not any particular technical skill but the ability to learn new things, to think clearly, and to understand both the possibilities and the limits of technology. Programming, taught well, may contribute to these abilities, but it is unlikely to be enough on its own.",
+    ],
+    ja: [
+      '近年、多くの政府が学校の教育課程にコンピューターのプログラミングを加え、場合によっては小学校から必修にしている。かつて読み書きと計算を学んでいた子どもたちは、今ではコンピューターへの簡単な命令を書いたり、小さなゲームを作ったり、ロボットを動かしたりすることも学ぶ。支持する人々は、この変化を、デジタル技術に形づくられる未来へのそなえとして欠かせないものとみなしている。批判する人々は、それがかぎられた授業時間の最善の使い方なのか、そして今教えられている技能が、今日の子どもたちが働きはじめるころにもまだ役に立つのかと疑っている。',
+      'プログラミングを教える根拠は、一つには経済的な主張にもとづいている。デジタル技術は今やほとんどあらゆる産業で中心的な役割を果たしており、多くの国の雇い主は、技術的な技能をもつ人が足りないと報告している。プログラミングの基本的な理解は生徒がよい仕事を見つけるのを助け、熟練したプログラマーを生み出す国は世界の経済でよりよく競争できるだろう、と支持する人々は主張する。のちにそれを選ぶ子どもだけでなく、すべての子どもにプログラミングを教えることは、技術の分野での機会が恵まれた家庭の出身者にかぎられないようにする助けにもなるかもしれない。',
+      '支持する人々はまた、プログラミングはコンピューターをはるかにこえて価値のある考え方を教えると主張する。プログラムを書くには、複雑な問題を小さな手順に分け、それを行わなければならない順序について論理的に考え、思ったとおりに動かないときには自分の作業を試して直すことが必要である。しばしば計算論的思考とよばれるこうした考え方の習慣は、数学や理科や日々の問題解決で生徒を助けるかもしれない。プログラミングを学ぶことはまた、生徒に、まわりの技術は魔法ではなく、人が設計し変えることのできるものだと示し、自分で動かせるという感覚をあたえることもできる。',
+      'しかし批判する人々は、こうした主張のいくつかに疑問を投げかける。今日教えられているプログラミング言語や道具は10年以内に時代おくれになるかもしれず、人工知能の進歩によって、将来コンピューターが自分のプログラムの多くを書けるようになるかもしれない。コンピューターがどう動くかについてのある程度の知識は役に立ち続けるだろうが、運転するためにすべての生徒が車のエンジンの直し方を学ぶ必要がないのと同じように、すべての生徒がプログラムを書く細かいことを学ぶ必要があるのかははっきりしない、と批判する人々は主張する。',
+      '時間と資源についての懸念もある。教育課程にプログラミングを加えることは、学校の一日を長くするか、言語や芸術や体育のような、それぞれそれ自体の価値をもつほかの科目にあてる時間をへらすかのどちらかを意味する。多くの学校には必要な専門知識をもつ先生がおらず、ほとんど研修を受けないままプログラミングを教えるよう求められた先生は、それを効果的に教えるのに苦労するかもしれない。そうした状況では、授業は本当の理解のないまま指示に従うだけのものになり、支持する人々が望むことはほとんど達成されないかもしれない。',
+      '目標はすべての生徒をプログラマーにすることではなく、すべての生徒に、デジタル技術が自分の生活をどう形づくっているかについての基本的な理解をあたえることであるべきだと示唆する教育者もいる。そこには、簡単なプログラミングだけでなく、データがどのように集められ使われるのか、アルゴリズムが人々がオンラインで見るものにどう影響するのか、技術の利用からどんな倫理的な問いが生じるのかについての知識もふくまれるだろう。そのような教育は、仕事としてプログラムを書くかどうかにかかわらず、生徒がデジタル社会で思慮深い市民になるそなえをさせるだろう。',
+      'プログラミングを教えることをめぐる議論は、学校が技術の変化にどう応えるべきかという、より広い問いを反映している。教育は生徒が生きることになる世界にそなえさせなければならないが、その世界は予測しにくく、今日欠かせないように思われる技能が、すぐにそれほど重要でなくなるかもしれない。おそらく最も価値あるそなえは、何か特定の技術的な技能ではなく、新しいことを学び、はっきり考え、技術の可能性と限界の両方を理解する力なのだろう。うまく教えられたプログラミングは、こうした力に貢献するかもしれないが、それだけで十分である可能性は低い。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ある程度の知識は役に立ち続けるだろうが、すべての生徒が細かいことを学ぶ必要があるかははっきりしない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that programming helps students find jobs and teaches ( 1 ) thinking. Critics reply that today\u2019s tools may soon be ( 2 ) and that schools lack time and trained teachers. Some educators propose a broader education about how digital technology shapes our ( 3 ).',
+      blanks: [
+        { choices: ['computational', 'emotional', 'musical', 'religious'], answer: 0, why: '第3段落 often called computational thinking。' },
+        { choices: ['obsolete', 'free', 'illegal', 'heavier'], answer: 0, why: '第4段落 may be obsolete within a decade。' },
+        { choices: ['lives', 'weather', 'bodies', 'holidays'], answer: 0, why: '第6段落 how digital technology shapes their lives。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国の雇い主は、技術的な技能をもつ人が足りないと報告している。', answer: true, why: '第2段落 employers in many countries report a shortage of people with technical skills。' },
+      { statement: '支持する人々によれば、プログラミングはコンピューター以外には役立たない。', answer: false, why: '第3段落 ways of thinking that are valuable well beyond computing。' },
+      { statement: '多くの学校には必要な専門知識をもつ先生がいない。', answer: true, why: '第5段落 Many schools lack teachers with the necessary expertise。' },
+      { statement: '筆者によれば、プログラミングだけで未来へのそなえは十分である。', answer: false, why: '第7段落 it is unlikely to be enough on its own。' },
+    ],
+    qa: [
+      { q: 'What comparison do critics make in the fourth paragraph?', choices: ['Learning to repair a car engine in order to drive.', 'Learning to cook in order to eat.', 'Learning music in order to sing.', 'Learning history in order to travel.'], answer: 0, why: '第4段落 any more than every student needs to learn how to repair a car engine in order to drive。' },
+      { q: 'What does the author suggest may be the most valuable preparation?', choices: ['The ability to learn new things and think clearly.', 'Knowledge of one programming language.', 'Skill in repairing robots.', 'Memorizing many facts.'], answer: 0, why: '第7段落 the ability to learn new things, to think clearly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
