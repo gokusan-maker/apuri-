@@ -2660,6 +2660,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="62" cy="60" r="3" fill="#ffffff" />
       </g>
     )
+  if (species === 'gerenuk')
+    return (
+      <g>
+        {/* 長い首 */}
+        <path d="M50 30 L50 10" stroke="#5c3d1e" strokeWidth="6" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
