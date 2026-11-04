@@ -32258,6 +32258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-high-speed-rail',
+    title: 'Is High-Speed Rail Worth It?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "High-speed trains, capable of traveling at more than three hundred kilometers per hour, have transformed travel in several countries. Journeys between major cities that once took most of a day can now be completed in a few hours, and in some regions trains have largely replaced short flights. Many governments are now considering whether to build new high-speed lines, often at enormous cost and with great political debate. Supporters see such projects as investments in a cleaner and more connected future; critics question whether the benefits justify the expense, especially when existing transport networks are in need of repair.",
+      "Supporters emphasize the environmental benefits. Electric trains produce far fewer greenhouse gas emissions per passenger than airplanes or cars, especially when the electricity comes from renewable sources. If high-speed rail can persuade travelers to choose the train instead of flying or driving, supporters argue, it could make a significant contribution to reducing emissions from transport, which is one of the fastest-growing sources of pollution in many countries. Trains can also carry large numbers of people using relatively little land, compared with the wide highways and large airports needed for the same number of travelers.",
+      "Supporters also point to economic and social benefits. Fast, reliable rail connections can bring distant regions closer to major cities, allowing people to live in smaller towns while working in urban centers, and encouraging businesses to locate outside crowded capitals. Stations can become centers of new development, and the construction itself creates many jobs. ( A ) these benefits are difficult to measure precisely, supporters argue, they can reshape the geography of a country, spreading opportunity more evenly between rich and poor regions.",
+      "Critics, however, warn that high-speed rail projects are often far more expensive than originally planned. Building tunnels, bridges, and new tracks requires vast sums of money and many years of work, and costs frequently rise well beyond early estimates. Critics argue that the same money might do more good if it were spent on improving existing railways, local buses, or roads, which are used by far more people for everyday journeys, such as traveling to work, school, or the hospital. A fast line between two major cities, they point out, does little for commuters who struggle with crowded and unreliable local services.",
+      "There are also doubts about whether the benefits will be shared as widely as supporters claim. Rather than spreading prosperity to smaller towns, new rail links may sometimes draw even more economic activity toward large cities, since it becomes easier for people and businesses to travel there. Towns along the route that do not have stations may experience the noise and disruption of construction without gaining any of the advantages. Environmental groups also note that building new lines can damage landscapes, forests, and wildlife habitats.",
+      "Much depends on the particular circumstances of each country. High-speed rail tends to be most successful where there are large cities at the right distance from one another, typically a few hundred kilometers apart, and where existing transport is congested. In such cases, trains can compete effectively with planes and cars. Where distances are very long or populations are scattered, the case is weaker, and other forms of investment may make more sense. Careful study of local conditions is therefore essential before any decision is made.",
+      "The debate over high-speed rail reflects a broader question about how societies should plan for the future. Large infrastructure projects require decisions that will shape life for decades, and they involve balancing immediate costs against long-term benefits that are uncertain. Whether or not a particular line is built, the discussion encourages people to think carefully about what kind of transport system they want, who will benefit from it, and how it can be made both efficient and fair.",
+    ],
+    ja: [
+      '時速300キロメートル以上で走ることのできる高速鉄道は、いくつかの国で旅を一変させた。かつてほぼ一日かかった大都市のあいだの旅が今では数時間ですみ、地域によっては列車が短い飛行機の便にほぼとってかわった。今、多くの政府が、しばしばばくだいな費用と大きな政治的議論をともなって新しい高速鉄道の路線を建設すべきかどうかを検討している。支持する人々はそうした計画を、よりきれいでよりつながった未来への投資とみなし、批判する人々は、とくにすでにある交通網が修理を必要としているときに、その恩恵が費用に見合うのかを疑問視している。',
+      '支持する人々は環境への恩恵を強調する。電車は、とくに電気が再生可能なみなもとから来ているとき、乗客一人あたりの温室効果ガスの排出が飛行機や車よりはるかに少ない。高速鉄道が、旅行者に飛行機や車ではなく列車を選ぶよう説得できれば、多くの国で最も急速にふえている汚染のみなもとの一つである交通からの排出をへらすことに大きく貢献しうる、と支持する人々は主張する。また、同じ数の旅行者に必要な広い高速道路や大きな空港とくらべて、列車は比較的少ない土地で多くの人を運ぶことができる。',
+      '支持する人々はまた、経済的・社会的な恩恵も指摘する。速くて信頼できる鉄道のつながりは、遠い地域を大都市に近づけ、人々が小さな町に住みながら都市の中心で働くことを可能にし、企業が混雑した首都の外に拠点を置くようにうながしうる。駅は新しい開発の中心になりうるし、建設そのものも多くの仕事を生み出す。こうした恩恵を正確にはかるのはむずかしいが、それは国の地理を作り変え、豊かな地域と貧しい地域のあいだに機会をより平等に広げうる、と支持する人々は主張する。',
+      'しかし批判する人々は、高速鉄道の計画はしばしばはじめの計画よりはるかに費用がかかると警告する。トンネルや橋や新しい線路を作るにはばくだいなお金と何年もの工事が必要であり、費用はしばしば最初の見積もりを大きくこえて上がる。同じお金を、通勤や通学や通院のような日々の移動にはるかに多くの人が使うすでにある鉄道や地域のバスや道路をよくすることに使ったほうが役に立つかもしれない、と批判する人々は主張する。二つの大都市のあいだの速い路線は、混雑して当てにならない地域の便に苦労している通勤者にはほとんど役立たない、と彼らは指摘する。',
+      '恩恵が支持する人々の言うほど広く分かちあわれるのかについての疑いもある。新しい鉄道のつながりは、小さな町に繁栄を広げるどころか、ときに人々や企業がそこへ移動しやすくなるので、さらに多くの経済活動を大都市に引きよせてしまうかもしれない。路線ぞいの駅のない町は、利点を何も得ないまま、工事の騒音や混乱を経験するかもしれない。環境団体はまた、新しい路線を作ることが景観や森林や野生生物のすみかをそこないうることにも注目している。',
+      '多くはそれぞれの国の特定の事情にかかっている。高速鉄道は、たがいにちょうどよい距離、ふつうは数百キロメートルはなれたところに大都市があり、すでにある交通が混雑している場所で最も成功する傾向がある。そうした場合、列車は飛行機や車と効果的に競争できる。距離がとても長かったり、人口がちらばっていたりする場所では、根拠はより弱く、ほかの形の投資のほうが理にかなっているかもしれない。したがって、どんな決定をする前にも、地域の事情を注意深く調べることが欠かせない。',
+      '高速鉄道をめぐる議論は、社会が未来のためにどう計画すべきかという、より広い問いを反映している。大きな社会基盤の計画には、何十年も生活を形づくる決定が必要であり、目先の費用と不確かな長期的な恩恵とをつりあわせることがかかわる。ある路線が建設されるにせよされないにせよ、この議論は、人々がどんな交通の仕組みを望むのか、だれがその恩恵を受けるのか、そしてそれをどうすれば効率的で公平なものにできるのかを注意深く考えるようはげましてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「恩恵を正確にはかるのはむずかしいが、国の地理を作り変えうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that high-speed rail reduces ( 1 ) and brings distant regions closer to cities. Critics warn that projects often cost far more than ( 2 ) and that the money could improve local services. Success depends on the ( 3 ) between cities and the state of existing transport.',
+      blanks: [
+        { choices: ['emissions', 'salaries', 'holidays', 'prices'], answer: 0, why: '第2段落 could make a significant contribution to reducing emissions from transport。' },
+        { choices: ['planned', 'needed', 'possible', 'remembered'], answer: 0, why: '第4段落 are often far more expensive than originally planned。' },
+        { choices: ['distance', 'weather', 'language', 'history'], answer: 0, why: '第6段落 large cities at the right distance from one another。' },
+      ],
+    },
+    tf: [
+      { statement: '地域によっては、列車が短い飛行機の便にほぼとってかわった。', answer: true, why: '第1段落 trains have largely replaced short flights。' },
+      { statement: '批判する人々によれば、高速鉄道は通勤者の毎日の移動を大きく助ける。', answer: false, why: '第4段落 does little for commuters who struggle with crowded and unreliable local services。' },
+      { statement: '新しい路線は、景観や野生生物のすみかをそこなうことがある。', answer: true, why: '第5段落 building new lines can damage landscapes, forests, and wildlife habitats。' },
+      { statement: '筆者によれば、高速鉄道はどの国でも同じように成功する。', answer: false, why: '第6段落 Much depends on the particular circumstances of each country。' },
+    ],
+    qa: [
+      { q: 'What might new rail links sometimes do instead of spreading prosperity?', choices: ['Draw more economic activity toward large cities.', 'Close all small towns.', 'Lower the price of land everywhere.', 'End all air travel.'], answer: 0, why: '第5段落 may sometimes draw even more economic activity toward large cities。' },
+      { q: 'Where is high-speed rail most successful, according to the sixth paragraph?', choices: ['Where large cities are a few hundred kilometers apart.', 'Where distances are very long.', 'Where populations are scattered.', 'Where there is no traffic.'], answer: 0, why: '第6段落 typically a few hundred kilometers apart。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
