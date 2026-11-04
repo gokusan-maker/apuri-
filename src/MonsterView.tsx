@@ -2622,6 +2622,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 30 L28 22 L32 30 L36 22 L40 30" fill="none" stroke="#1c1917" strokeWidth="2" />
       </g>
     )
+  if (species === 'kinkajou')
+    return (
+      <g>
+        {/* 長い舌 */}
+        <path d="M44 62 Q48 72 44 76" fill="none" stroke="#f472b6" strokeWidth="3" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
