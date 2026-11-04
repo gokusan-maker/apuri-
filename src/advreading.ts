@@ -31502,6 +31502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-belonging',
+    title: 'The Need to Belong',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The desire to belong is among the most powerful of human needs. From early childhood, people seek acceptance from family, friends, and the wider groups to which they are attached, and the experience of being excluded can cause pain as real as physical injury. Belonging gives us a sense of identity, a source of support in difficult times, and a feeling that our lives matter to others. Yet the same desire that draws people together can also divide them, for every group that includes some people must, in some sense, exclude others.",
+      "Consider how groups define themselves. A team, a school, a nation, or a religious community often understands its identity partly by contrast with those who are outside it. Shared customs, symbols, and ways of speaking strengthen the bond among members, but they also mark the boundary between insiders and outsiders. In mild forms, such boundaries are harmless and even enjoyable, as in the friendly rivalry between supporters of different sports teams. In more extreme forms, they can harden into hostility, leading members of one group to regard members of another as inferior or threatening.",
+      "The desire to belong can also make individuals reluctant to think for themselves. People who fear losing the acceptance of their group may hesitate to express disagreement, even when they believe the group is mistaken. ( A ) this conformity can help groups to act together, it can also allow errors and injustices to continue unchallenged, since those who notice them may remain silent rather than risk exclusion. History offers many examples of communities that went badly wrong because their members valued belonging more than truth.",
+      "None of this means that belonging is something to be avoided. A person who belongs nowhere is not free but isolated, and isolation is associated with unhappiness, poor health, and a loss of meaning. The question is not whether to belong but how. Some forms of belonging are open, welcoming newcomers and allowing members to keep their own judgment; others are closed, demanding complete loyalty and treating outsiders with suspicion. The difference between them has profound consequences for both individuals and societies.",
+      "One way of thinking about healthy belonging is to recognize that people can belong to many groups at once. A person may be a member of a family, a profession, a neighborhood, a nation, and a community of people who share a hobby or a belief. Each of these attachments matters, but none of them needs to define the person completely. Multiple belongings can protect against the dangers of any single one, since loyalty to one group can be balanced by commitments to others, and by a wider sense of shared humanity.",
+      "Modern societies, with their mobility and diversity, have made belonging both more complicated and more open. People move between cities and countries, encounter others whose backgrounds differ greatly from their own, and may feel at home in several places or in none. This can be disorienting, but it also creates opportunities for forms of belonging that are chosen rather than simply inherited, based on shared values and commitments rather than on birth alone. A neighborhood association, a volunteer group, or a circle of friends from many countries may provide a sense of home as strong as any inherited community.",
+      "Perhaps, then, the deepest form of belonging is one that does not require us to reject others. To belong in this sense is to be accepted for who we are, while extending the same acceptance to those who are different. Such belonging is harder to achieve than the comfortable sameness of a closed group, since it requires patience, curiosity, and a willingness to tolerate disagreement, and it must be renewed again and again rather than achieved once and for all. But it offers something more valuable: a place in the world that does not depend on keeping anyone else out.",
+    ],
+    ja: [
+      '属したいという願いは、人間の最も強い欲求の一つである。幼いころから、人は家族や友人や、自分が結びついているより広い集団に受け入れられることを求め、しめ出される経験は、体のけがと同じくらい現実の痛みを引き起こしうる。属していることは、私たちにアイデンティティの感覚と、苦しいときのささえと、自分の人生がほかの人にとって大事だという感覚をあたえてくれる。しかし人々を引きよせるのと同じ願いが、人々を分けることもある。ある人々をふくむあらゆる集団は、ある意味でほかの人々をしめ出さなければならないからである。',
+      '集団がどのように自分を定義するかを考えてみよう。チームや学校や国や宗教の共同体は、しばしばその外にいる人々との対比によって、一部自分のアイデンティティを理解している。共有された習慣や象徴や話し方は成員どうしのきずなを強めるが、内の者と外の者とのさかい目もしるす。おだやかな形なら、ちがうスポーツチームのファンどうしの友好的な対抗意識のように、そうしたさかい目は害がなく、楽しくさえある。より極端な形では、それは敵意にかたまり、ある集団の成員にほかの集団の成員を劣った者やおびやかす者とみなさせることもある。',
+      '属したいという願いはまた、個人に自分で考えることをためらわせることもある。集団に受け入れられなくなることをおそれる人々は、集団がまちがっていると思うときでさえ、反対の意見を表すのをためらうかもしれない。この同調は集団がいっしょに行動するのを助けうるが、まちがいや不正に気づいた人々がしめ出される危険をおかすよりもだまっていることを選ぶかもしれないので、それらがだれにも問われないまま続くこともゆるしてしまう。歴史には、成員が真実よりも属していることを大切にしたために、ひどくあやまった方向に進んだ共同体の例が多くある。',
+      'このどれも、属することをさけるべきだということを意味しない。どこにも属さない人は自由なのではなく孤立しているのであり、孤立は不幸や健康の悪さや意味の喪失と結びついている。問題は属するかどうかではなく、どのように属するかである。新しく来た人を歓迎し、成員が自分の判断を保つことをゆるす開かれた形の属し方もあれば、完全な忠誠を求め、外の者を疑いの目で見る閉ざされた形の属し方もある。その二つのちがいは、個人と社会の両方に深い結果をもたらす。',
+      '健全な属し方について考える一つの方法は、人は同時に多くの集団に属することができると認めることである。ある人は、家族や職業や近所や国や、趣味や信念を共有する人々の共同体の一員であるかもしれない。こうした結びつきはそれぞれ大事だが、そのどれもがその人を完全に定義する必要はない。多くの属し方は、どれか一つの属し方の危険から守ってくれるかもしれない。ある集団への忠誠は、ほかの集団へのかかわりや、より広い共通の人間性の感覚によってつりあいがとれるからである。',
+      '人の移動が多く、多様な現代の社会は、属することをより複雑にすると同時に、より開かれたものにした。人々は都市や国のあいだを行き来し、自分とは背景が大きくちがう人々と出会い、いくつもの場所に、あるいはどこにもいごこちのよさを感じるかもしれない。これはとまどいを生むこともあるが、生まれだけにもとづくのではなく、共有された価値やかかわりにもとづく、単に受けつがれたのではなく選ばれた属し方の機会も生み出す。町内の会や、ボランティアの団体や、さまざまな国から来た友人の輪は、受けつがれたどんな共同体にも負けないほど強い居場所の感覚をあたえてくれるかもしれない。',
+      'それなら、最も深い属し方とは、ほかの人々をこばむことを必要としないものなのかもしれない。この意味で属するとは、ありのままの自分を受け入れられ、同時にちがう人々にも同じ受け入れを広げることである。そのような属し方は、閉ざされた集団の居心地のよい同じさよりも達成しにくい。辛抱強さと好奇心と、意見のちがいにたえる気持ちを必要とし、一度で達成されるのではなく、何度も新たにされなければならないからである。しかしそれは、より価値あるものを差し出してくれる。だれかをしめ出しておくことにたよらない、世界の中の居場所である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「同調は集団がいっしょに行動するのを助けうるが、まちがいを続けさせることもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、しめ出される経験は体のけがと同じくらい現実の痛みを引き起こしうる。', answer: true, why: '第1段落 can cause pain as real as physical injury。' },
+      { statement: '筆者によれば、集団のさかい目はどんな形でもいつも有害である。', answer: false, why: '第2段落 In mild forms, such boundaries are harmless and even enjoyable。' },
+      { statement: '筆者によれば、どこにも属さない人は自由である。', answer: false, why: '第4段落 A person who belongs nowhere is not free but isolated。' },
+      { statement: '筆者によれば、人は同時に多くの集団に属することができる。', answer: true, why: '第5段落 people can belong to many groups at once。' },
+    ],
+    qa: [
+      { q: 'Why may people hesitate to express disagreement, according to the third paragraph?', choices: ['They fear losing the acceptance of their group.', 'They have no opinions.', 'They are always right.', 'They dislike talking.'], answer: 0, why: '第3段落 People who fear losing the acceptance of their group may hesitate to express disagreement。' },
+      { q: 'What does the deepest form of belonging offer, according to the last paragraph?', choices: ['A place in the world that does not depend on keeping anyone out.', 'Complete sameness.', 'Freedom from all groups.', 'Power over outsiders.'], answer: 0, why: '第7段落 a place in the world that does not depend on keeping anyone else out。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
