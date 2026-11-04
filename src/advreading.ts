@@ -33742,6 +33742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-travel',
+    title: 'What We Seek When We Travel',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Never before have so many people traveled so far. Each year, hundreds of millions of tourists cross national borders, visiting famous cities, beaches, and mountains, and sharing images of their journeys with friends around the world. Travel is widely regarded as one of life's great pleasures and as a means of personal growth. We speak of travel broadening the mind, and many people regard visits to distant places as an essential part of a full life. Yet it is worth asking what we actually seek when we travel, and whether modern travel delivers what it promises.",
+      "One traditional answer is that travel exposes us to the unfamiliar. By encountering different landscapes, languages, foods, and customs, we are forced to notice assumptions that we normally take for granted. What seemed natural at home may appear as merely one possibility among many. In this sense, travel can loosen the grip of habit and make us more aware of the variety of human life. Many writers have described how a journey abroad changed their understanding not only of other places but also of their own countries, revealing customs and values they had never before thought to question.",
+      "Yet modern tourism often seems designed to minimize precisely this encounter with the unfamiliar. Travelers may stay in international hotels that look the same everywhere, eat food adapted to their tastes, and visit attractions arranged for visitors rather than for local people. ( A ) such arrangements make travel comfortable and safe, they may also prevent travelers from experiencing the very differences that could change them. A journey that only confirms what we already expected may teach us little, however many miles it covers or however many photographs it produces.",
+      "Another motive for travel is the desire to see with our own eyes places we have long imagined. A famous building or painting that we have seen countless times in photographs may still move us when we stand before it. There is, it seems, something in direct experience that images cannot replace. Yet the same desire can turn travel into a kind of collecting, in which places are visited mainly so that they can be recorded and displayed, and the experience of the place itself becomes secondary to the image of having been there.",
+      "Travel also has consequences for the places that are visited. Popular destinations may become crowded, expensive, and dependent on tourism, while local residents find their neighborhoods transformed to serve visitors. Air travel contributes significantly to climate change. These costs do not mean that people should stop traveling, but they raise the question of whether the benefits we seek justify the burdens we impose, and whether we might travel less often but more thoughtfully.",
+      "Some thinkers have suggested that the qualities we value in travel can also be found closer to home. Curiosity, attention, and openness to the unfamiliar are attitudes rather than destinations. A person who walks through his or her own city with fresh eyes, noticing details previously overlooked, or who engages seriously with neighbors from different backgrounds, may experience something of what travel promises. Conversely, a person who travels the world without such attitudes may return unchanged, having seen a great deal while noticing very little.",
+      "Perhaps, then, the value of travel lies less in the distance covered than in the quality of attention we bring to it. Travel can indeed broaden the mind, but only if we are willing to be surprised, to feel uncomfortable, and to question our assumptions. Understood in this way, travel is not simply a form of consumption but a practice of learning, and its deepest rewards may be available to anyone prepared to look at the world, near or far, as if seeing it for the first time.",
+    ],
+    ja: [
+      'これほど多くの人々がこれほど遠くへ旅したことはこれまでなかった。毎年、何億人もの観光客が国境をこえ、有名な都市や浜辺や山々を訪れ、旅の映像を世界中の友人と共有している。旅は人生の大きな楽しみの一つであり、自分を成長させる手段だと広く考えられている。私たちは旅が視野を広げると言い、多くの人々は遠い場所を訪れることを充実した人生に欠かせない一部とみなしている。しかし、私たちが旅をするとき実際には何を求めているのか、そして現代の旅は約束するものをもたらしているのかを問う価値がある。',
+      '伝統的な一つの答えは、旅は私たちをなじみのないものにふれさせるというものである。ちがう風景や言語や食べ物や習慣に出会うことで、私たちはふだん当たり前と思っている前提に気づかざるをえなくなる。家では自然に思えたことが、多くの可能性の中の一つにすぎないように見えるかもしれない。この意味で、旅は習慣のしめつけをゆるめ、人間の生活の多様さにより気づかせてくれる。多くの作家が、外国への旅がほかの場所についてだけでなく、自分の国についての理解をどう変えたかを書いてきた。それまで疑おうとも思わなかった習慣や価値観が、明らかになったのである。',
+      'しかし現代の観光は、まさにこのなじみのないものとの出会いをできるだけ少なくするように作られていることが多いように思われる。旅行者は、どこでも同じように見える国際的なホテルに泊まり、自分の好みに合わせた食べ物を食べ、地元の人々のためではなく訪問者のために整えられた名所を訪れるかもしれない。こうした仕組みは旅を快適で安全なものにするが、旅行者を変えうるはずのまさにそのちがいを経験するのをさまたげるかもしれない。すでに予想していたことを確かめるだけの旅からは、ほとんど学ぶものがないかもしれない。その旅がどれほどの距離を進み、どれほどの写真を生んだとしても。',
+      '旅のもう一つの動機は、長く想像してきた場所を自分の目で見たいという願いである。写真で数えきれないほど見てきた有名な建物や絵も、その前に立てばなお心を動かすかもしれない。直接の経験には、映像では置きかえられない何かがあるようである。しかし同じ願いが、旅を一種の収集に変えてしまうこともある。場所はおもに記録して見せるために訪れられ、その場所の経験そのものは、そこに行ったという映像より二の次になってしまうのである。',
+      '旅は訪れられる場所にも影響をもたらす。人気の目的地は混雑し、物価が高くなり、観光に頼るようになるかもしれず、地元の住民は自分の地域が訪問者のために作り変えられていくのを目にする。飛行機の旅は気候変動に大きく関係している。こうした代償は人々が旅をやめるべきだという意味ではないが、私たちが求める利益は私たちが負わせる負担を正当化するのか、そして私たちはもっと少なく、しかしもっと思慮深く旅をすることができるのではないか、という問いを提起している。',
+      '旅で私たちが大切にする性質は、もっと身近なところでも見つけられると示唆する思想家もいる。好奇心や注意深さや、なじみのないものへの開かれた心は、行き先ではなく態度である。自分の町を新しい目で歩き、それまで見すごしていた細部に気づく人や、ちがう背景をもつ隣人と真剣にかかわる人は、旅が約束するものの一部を経験するかもしれない。逆に、そうした態度なしに世界中を旅する人は、変わらないまま帰ってくるかもしれない。多くを見ながら、ほとんど何にも気づかないまま。',
+      'それなら、旅の価値は、進んだ距離よりも、それにもちこむ注意の質にあるのかもしれない。旅は本当に視野を広げうるが、それは私たちがおどろき、居心地の悪さを感じ、自分の前提を問おうとするときにかぎられる。このように理解すれば、旅は単なる消費の一形態ではなく学びの実践であり、その最も深い報いは、近くでも遠くでも、世界をまるで初めて見るかのように見ようとするだれにでも得られるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「仕組みは旅を快適にするが、ちがいを経験するのをさまたげる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '伝統的な答えによれば、旅は私たちをなじみのないものにふれさせる。', answer: true, why: '第2段落 travel exposes us to the unfamiliar。' },
+      { statement: '現代の観光は、なじみのないものとの出会いをふやすように作られていることが多い。', answer: false, why: '第3段落 designed to minimize precisely this encounter with the unfamiliar。' },
+      { statement: '筆者によれば、旅の代償は人々が旅をやめるべきだという意味である。', answer: false, why: '第5段落 These costs do not mean that people should stop traveling。' },
+      { statement: '好奇心や開かれた心は、行き先ではなく態度である。', answer: true, why: '第6段落 Curiosity, attention, and openness to the unfamiliar are attitudes rather than destinations。' },
+    ],
+    qa: [
+      { q: 'What can the desire to see famous places turn travel into?', choices: ['A kind of collecting.', 'A form of exercise.', 'A way to save money.', 'A scientific study.'], answer: 0, why: '第4段落 turn travel into a kind of collecting。' },
+      { q: 'Where does the value of travel lie, according to the last paragraph?', choices: ['In the quality of attention we bring to it.', 'In the distance covered.', 'In the number of photographs taken.', 'In the price of the trip.'], answer: 0, why: '第7段落 lies less in the distance covered than in the quality of attention we bring to it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
