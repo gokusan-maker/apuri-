@@ -32142,6 +32142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fear',
+    title: 'What Fear Can Teach Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Fear is usually thought of as an emotion to be overcome. We admire people who act bravely in dangerous situations, we encourage children not to be afraid of the dark, and many modern approaches to well-being aim at reducing anxiety and worry. Yet fear has been part of human life for as long as there have been human beings, and it would be strange if an emotion so universal served no purpose at all. To understand fear properly, we must consider not only the suffering it causes but also the work it does.",
+      "In its simplest form, fear is a response to danger. When we encounter something that threatens us, our bodies prepare to fight or to flee: the heart beats faster, the muscles tense, and attention narrows to the source of the threat. This response evolved because it helped our ancestors to survive. A creature that felt no fear would walk carelessly into danger and would be unlikely to live long enough to pass on its characteristics. In this sense, fear is not a weakness but a form of intelligence, a rapid assessment of risk that operates faster than conscious thought.",
+      "The difficulty is that human fear is not always well matched to real dangers. We may be terrified of flying, which is statistically very safe, while feeling little fear of driving, which is far more dangerous. We may fear strangers more than the people we know, even though most harm is done by acquaintances. ( A ) fear evolved to protect us, it can be easily misdirected by vivid images, unfamiliar situations, and the stories that circulate in our communities, leading us to worry about the wrong things.",
+      "Fear can also be exploited. Those who wish to sell products, win elections, or gain power have often found that frightening people is an effective way of influencing them. A population that is afraid may be willing to accept restrictions on its freedom, to distrust outsiders, or to follow leaders who promise protection. Recognizing how fear can be manipulated is therefore an important part of thinking clearly about public life, as well as about our private decisions. A fear that has been deliberately inflamed is difficult to calm, even after the danger has passed.",
+      "Yet it would be a mistake to conclude that fear should simply be eliminated. Fear can be a source of moral seriousness: a person who fears hurting others may act more carefully, and a society that fears the consequences of environmental destruction may be moved to change its behavior. Fear can also be a sign of what we value. We fear losing those we love precisely because we love them, and a life without any fear might also be a life without deep attachment.",
+      "Courage, then, is not the absence of fear but the ability to act well in spite of it. The courageous person feels fear but does not allow it to determine his or her actions completely, judging instead what the situation requires. This judgment depends on understanding the fear itself: asking whether the danger is real, how serious it is, and what is worth risking for the sake of something more important. Courage without such understanding may become recklessness, while fear without courage may become paralysis.",
+      "Perhaps the wisest attitude toward fear is neither to deny it nor to be ruled by it, but to listen to it carefully. Fear can tell us that something matters, that a danger may be near, or that we are about to lose something we value. But it can also deceive us, exaggerating some risks and hiding others. The task is to learn from fear what it has to teach while refusing to let it narrow our lives, so that we can face the world with both caution and hope.",
+    ],
+    ja: [
+      '恐れはふつう、乗りこえるべき感情と考えられている。私たちは危険な状況で勇敢に行動する人々を称賛し、子どもに暗やみをこわがらないようはげまし、幸せについての現代の多くのやり方は不安や心配をへらすことを目指している。しかし恐れは人間が存在してきたのと同じくらい長く人間の生活の一部であり、これほど普遍的な感情がまったく何の役にも立っていないとしたら奇妙だろう。恐れを正しく理解するには、それが引き起こす苦しみだけでなく、それが果たしている仕事も考えなければならない。',
+      '最も単純な形では、恐れは危険への反応である。自分をおびやかすものに出会うと、体はたたかうか逃げるかの準備をする。心臓は速く打ち、筋肉はこわばり、注意はおびやかしのみなもとにしぼられる。この反応は祖先が生きのびるのを助けたので進化した。恐れを感じない生き物は不注意に危険に入りこみ、自分の特徴を伝えるほど長く生きる可能性は低いだろう。この意味で、恐れは弱さではなく一種の知性であり、意識的な思考よりも速くはたらく、危険のすばやい評価なのである。',
+      'むずかしいのは、人間の恐れがいつも本当の危険にうまく合っているわけではないことである。統計的にはとても安全な飛行機に乗ることをひどくこわがりながら、はるかに危険な車の運転にはほとんど恐れを感じないかもしれない。ほとんどの害は知り合いによってなされるにもかかわらず、知っている人よりも見知らぬ人をおそれるかもしれない。恐れは私たちを守るために進化したが、あざやかな映像や、なじみのない状況や、地域で広まる話によってたやすくまちがった方向に向けられ、まちがったことを心配させてしまうことがある。',
+      '恐れはまた利用されることもある。製品を売ったり、選挙に勝ったり、権力を得たりしたい人々は、人々をこわがらせることが影響をあたえる効果的な方法だとしばしば気づいてきた。おそれている人々は、自由の制限を受け入れたり、外の者を信用しなくなったり、守ると約束する指導者に従ったりするかもしれない。したがって、恐れがどう操作されうるかを認めることは、私的な決定だけでなく公の生活についてはっきり考えることの大切な一部なのである。意図的にあおられた恐れは、危険がすぎたあとでさえ、しずめるのがむずかしい。',
+      'しかし、恐れは単になくすべきだと結論するのはまちがいだろう。恐れは道徳的な真剣さのみなもとになりうる。他人を傷つけることをおそれる人はより注意深く行動するかもしれず、環境破壊の結果をおそれる社会はふるまいを変えるよう動かされるかもしれない。恐れはまた、私たちが何を大切にしているかのしるしにもなりうる。愛する人を失うことをおそれるのは、まさにその人を愛しているからであり、まったく恐れのない人生は、深い愛着のない人生でもあるかもしれない。',
+      'それなら、勇気とは恐れがないことではなく、恐れにもかかわらずうまく行動できる力である。勇気のある人は恐れを感じるが、それに自分の行動を完全に決めさせはせず、そのかわりに状況が何を求めているかを判断する。この判断は恐れそのものを理解することにかかっている。その危険は本当か、どれほど深刻か、より大切なもののために何を危険にさらす価値があるのかを問うことである。そうした理解のない勇気は向こう見ずになるかもしれず、勇気のない恐れは麻痺になるかもしれない。',
+      'おそらく恐れへの最も賢明な態度は、それを否定することでも、それに支配されることでもなく、注意深くそれに耳をかたむけることである。恐れは、何かが大事であること、危険が近くにあるかもしれないこと、あるいは大切にしている何かを失おうとしていることを教えてくれる。しかしそれはまた、ある危険を誇張し、ほかの危険をかくして、私たちをあざむくこともある。課題は、恐れが教えてくれることを学びながら、それに自分の生活をせばめさせず、用心と希望の両方をもって世界に向き合えるようにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「恐れは私たちを守るために進化したが、まちがった方向に向けられることがある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、恐れは一種の知性である。', answer: true, why: '第2段落 fear is not a weakness but a form of intelligence。' },
+      { statement: '筆者によれば、人間の恐れはいつも本当の危険にうまく合っている。', answer: false, why: '第3段落 human fear is not always well matched to real dangers。' },
+      { statement: '筆者によれば、恐れは道徳的な真剣さのみなもとになりうる。', answer: true, why: '第5段落 Fear can be a source of moral seriousness。' },
+      { statement: '筆者によれば、勇気とは恐れがないことである。', answer: false, why: '第6段落 Courage, then, is not the absence of fear。' },
+    ],
+    qa: [
+      { q: 'Why might frightening people be used by those seeking power?', choices: ['Frightened people may accept restrictions on their freedom.', 'Fear makes people happier.', 'Fear increases trust in outsiders.', 'Fear has no effect on behavior.'], answer: 0, why: '第4段落 A population that is afraid may be willing to accept restrictions on its freedom。' },
+      { q: 'What may courage without understanding become, according to the sixth paragraph?', choices: ['Recklessness.', 'Paralysis.', 'Wisdom.', 'Fear.'], answer: 0, why: '第6段落 Courage without such understanding may become recklessness。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
