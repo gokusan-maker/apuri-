@@ -31422,6 +31422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-sincerity',
+    title: 'What Does It Mean to Be Sincere?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Sincerity is generally regarded as a virtue. We value people who mean what they say, who do not pretend to feelings they do not have, and whose words and actions express their genuine convictions. The insincere person, by contrast, seems to wear a mask, presenting a face to the world that does not correspond to what lies beneath. Yet the ideal of sincerity is less simple than it appears. To be sincere, one must know what one truly feels and believes, and this self-knowledge is far harder to achieve than the ideal seems to assume.",
+      "Consider how often our feelings are mixed or uncertain. We may be glad and sad at the same time when a friend moves away to a better job, or both grateful and resentful toward a parent who made sacrifices for us. We may not know whether we really love a person or merely enjoy being admired by him or her. In such cases, what would it mean to express our true feelings? The demand for sincerity seems to presuppose a clear and stable inner self, waiting to be expressed, but human inner life is often far more complex and changeable.",
+      "Moreover, our feelings are partly shaped by the words we use to express them. When we tell someone that we are sorry, the act of apologizing may itself deepen our regret; when we express gratitude, we may become more aware of what we have received. ( A ) sincerity is often imagined as the accurate report of feelings that already exist, it may be better understood as a process in which feelings and their expression develop together. The words do not merely reveal what we feel; they help to make it what it is.",
+      "This suggests that some forms of social politeness, often dismissed as insincere, may have a more complicated relationship with sincerity than is usually assumed. A person who thanks a host for a meal he or she did not particularly enjoy is not simply lying. He or she is acknowledging the effort and kindness of the host, which may be genuinely appreciated even if the food was not. Conventions of politeness provide a shared language through which people can express respect and goodwill, even when their immediate feelings are mixed.",
+      "There are, of course, limits. Politeness that conceals contempt, or flattery designed to gain advantage, involves a real gap between what is said and what is intended, and such insincerity can damage trust, sometimes permanently, once it has been discovered. The difference lies in the purpose of the words. Words that aim to deceive others for one's own benefit are insincere in a harmful sense; words that express care and respect, even when they simplify complicated feelings, may be closer to sincerity than they first appear. What matters is not whether every word is literally exact, but whether it is offered in good faith.",
+      "The modern emphasis on authenticity has sometimes encouraged a narrow view of sincerity, in which being true to oneself means expressing every feeling openly, regardless of its effect on others. But a person who announces every passing irritation or criticism is not necessarily more sincere than one who exercises restraint. Restraint may reflect a deeper sincerity: a commitment to values, such as kindness and fairness, that one holds more firmly than one's momentary moods.",
+      "Perhaps, then, sincerity is best understood not as the exact correspondence between inner feeling and outward expression, but as a commitment to honesty in one's relationships with others and with oneself. It involves a willingness to examine one's feelings, to acknowledge their complexity, and to speak and act in ways that one can stand behind. Such sincerity does not require us to reveal everything, but it does require us not to pretend, and to take responsibility for the words through which we present ourselves to the world.",
+    ],
+    ja: [
+      '誠実さはふつう美徳とみなされている。私たちは、言うことを本気で言い、もっていない感情をもっているふりをせず、ことばと行動が本当の確信を表している人を大切にする。それに対して、誠実でない人は仮面をかぶり、その下にあるものと一致しない顔を世の中に見せているように思われる。しかし誠実さという理想は、見かけほど単純ではない。誠実であるためには、自分が本当に何を感じ、何を信じているかを知らなければならず、この自己理解は、その理想が前提としているように見えるよりもはるかに達成しにくいのである。',
+      '私たちの感情がどれほどしばしば入りまじっていたり不確かだったりするかを考えてみよう。友人がよりよい仕事のために遠くへ引っこすとき、私たちはうれしくも悲しくもあるかもしれず、自分のために犠牲をはらってくれた親に対して、感謝とうらみの両方をいだくかもしれない。ある人を本当に愛しているのか、その人に称賛されるのを楽しんでいるだけなのか、わからないかもしれない。そうした場合、本当の感情を表すとはどういうことだろうか。誠実さを求めることは、表されるのを待っている、はっきりとして安定した内面の自己を前提としているように思われるが、人間の内面の生活は、しばしばはるかに複雑で変わりやすい。',
+      'そのうえ、私たちの感情は、それを表すのに使うことばによって一部形づくられている。だれかにすみませんと言うとき、あやまる行為そのものが後悔を深めるかもしれず、感謝を表すとき、自分が受けとったものにより気づくようになるかもしれない。誠実さはしばしば、すでにある感情の正確な報告として思いえがかれるが、むしろ、感情とその表現がいっしょに育っていく過程として理解したほうがよいのかもしれない。ことばは単に私たちが感じていることを明らかにするのではなく、それをそのようなものにするのを助けるのである。',
+      'このことは、しばしば誠実でないとして退けられる社会的な礼儀のいくつかの形が、ふつう考えられているよりも複雑な関係を誠実さともっているかもしれないことを示している。とくにおいしいと思わなかった食事について主人に礼を言う人は、単にうそをついているのではない。その人は主人の努力と親切を認めているのであり、たとえ料理はそうでなくても、それは本当にありがたく思われているかもしれない。礼儀の約束ごとは、目の前の感情が入りまじっているときでさえ、人々が敬意と好意を表すことのできる共有されたことばをあたえてくれるのである。',
+      'もちろん限界はある。軽蔑をかくす礼儀や、有利になるためのおせじには、言われることと意図されることとのあいだに本当のへだたりがあり、そうした不誠実は、いったん見ぬかれると、ときにいつまでも信頼をそこないうる。ちがいはことばの目的にある。自分の利益のために他人をだまそうとすることばは、有害な意味で不誠実である。思いやりと敬意を表すことばは、複雑な感情を単純化するときでさえ、最初に見えるよりも誠実さに近いのかもしれない。大切なのは、すべてのことばが文字どおり正確かどうかではなく、それが善意から差し出されているかどうかである。',
+      '現代の本物らしさの重視は、ときに誠実さのせまい見方をうながしてきた。そこでは、自分に正直であるとは、ほかの人への影響にかかわらず、あらゆる感情を率直に表すことを意味する。しかし、通りすがりのいらだちや批判をすべて口にする人が、ひかえる人よりかならずしも誠実なわけではない。ひかえることは、より深い誠実さを反映しているのかもしれない。一時の気分よりもしっかりともっている、親切さや公平さのような価値へのかかわりである。',
+      'それなら、誠実さは、内面の感情と外への表現との正確な一致としてではなく、他人や自分自身とのかかわりにおいて正直であることへのかかわりとして理解するのが最もよいのかもしれない。それには、自分の感情を吟味し、その複雑さを認め、自分が責任をもてる形で話し行動しようとする気持ちがふくまれる。そのような誠実さは、私たちにすべてを明かすことを求めはしないが、ふりをしないこと、そして自分を世の中に示すことばに責任をもつことは求めるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「誠実さはしばしば正確な報告として思いえがかれるが、過程として理解したほうがよい」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、誠実であるには自分が本当に感じていることを知る必要がある。', answer: true, why: '第1段落 To be sincere, one must know what one truly feels and believes。' },
+      { statement: '筆者によれば、人間の内面の生活はいつもはっきりとして安定している。', answer: false, why: '第2段落 human inner life is often far more complex and changeable。' },
+      { statement: '筆者によれば、おいしくなかった食事に礼を言う人は単にうそをついている。', answer: false, why: '第4段落 is not simply lying。' },
+      { statement: '筆者によれば、ひかえることはより深い誠実さを反映しているかもしれない。', answer: true, why: '第6段落 Restraint may reflect a deeper sincerity。' },
+    ],
+    qa: [
+      { q: 'What may the act of apologizing do, according to the third paragraph?', choices: ['Deepen our regret.', 'Remove all feeling.', 'Make us forget.', 'Prove we are insincere.'], answer: 0, why: '第3段落 the act of apologizing may itself deepen our regret。' },
+      { q: 'What kind of words are insincere in a harmful sense?', choices: ['Words that aim to deceive others for one\u2019s own benefit.', 'Words that express care and respect.', 'Words of thanks to a host.', 'Words that simplify feelings.'], answer: 0, why: '第5段落 Words that aim to deceive others for one\u2019s own benefit are insincere in a harmful sense。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
