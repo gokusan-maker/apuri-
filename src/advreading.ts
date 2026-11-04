@@ -31458,6 +31458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-data-dividend',
+    title: 'Should We Be Paid for Our Data?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every time we search the internet, buy something online, or use an app on our phones, we leave behind traces of information about ourselves: what we like, where we go, whom we talk to, and how we spend our money. Technology companies collect this data and use it to sell advertising, to design new products, and to train artificial intelligence systems, earning enormous profits in the process. Much of this happens without users fully understanding what is being collected. Most users receive nothing in return except free access to services. Some economists and politicians have therefore proposed that people should be paid for the data they produce.",
+      "Supporters of this idea argue that personal data is a valuable resource and that those who create it deserve a share of its value. Just as workers are paid for their labor and landowners receive rent for their land, users who generate data through their everyday activities should be compensated for the wealth that it helps to produce. Paying people for their data, supporters say, would also make the value of that data visible, encouraging people to think more carefully about what information they share and with whom.",
+      "Some supporters go further, suggesting that payments for data could become a new source of income for ordinary citizens at a time when automation threatens many jobs. If artificial intelligence systems are trained on information produced by millions of people, it seems only fair that those people should benefit when the systems earn money. ( A ) the amounts paid to each individual might be small, supporters argue, the principle that people own the value they create would mark an important shift in the relationship between citizens and technology companies.",
+      "Critics, however, raise several objections. The first is practical: the value of a single person's data is usually very small, since data becomes useful mainly when it is combined with information from millions of others. A payment of a few coins per year would hardly change anyone's life, while the cost of measuring and distributing such payments could be considerable. Moreover, it is difficult to decide how much any particular piece of data is worth, since its value depends on how it is used and by whom.",
+      "A deeper objection concerns privacy. Critics worry that paying people for their data might encourage them to sell information they would otherwise keep private, especially if they are poor and need the money. Treating personal data as a commodity, in this view, could weaken the idea that privacy is a right that should not be bought or sold. Instead of paying people for their data, critics argue, governments should limit how much data companies are allowed to collect in the first place, and give people stronger control over how it is used.",
+      "Some propose a middle path, in which data would be managed collectively rather than individually. Organizations acting on behalf of large groups of users, sometimes called data trusts or cooperatives, could negotiate with companies over how data is used and what benefits users receive in return. Such benefits might take the form of money, but they might also include better privacy protections, a voice in decisions about how algorithms are designed, or contributions to public services funded by the profits of data-driven businesses.",
+      "The debate over paying for data reflects a broader question about who should benefit from the digital economy. The data that powers modern technology comes from ordinary people, but its value is currently captured mostly by a small number of large companies. Whether the solution lies in individual payments, collective bargaining, or stricter rules on data collection, the discussion has drawn attention to an important principle: that people should have a say in how information about their lives is used, and a share in the benefits it produces.",
+    ],
+    ja: [
+      'インターネットで検索したり、オンラインで買い物をしたり、スマートフォンのアプリを使ったりするたびに、私たちは自分についての情報のあとを残している。何が好きか、どこへ行くか、だれと話すか、お金をどう使うかである。技術企業はこのデータを集め、広告を売ったり、新しい製品を設計したり、人工知能の仕組みを訓練したりするのに使い、その過程でばくだいな利益を得ている。その多くは、何が集められているのかを利用者が十分に理解しないまま行われている。ほとんどの利用者は、サービスを無料で使えること以外、そのかわりに何も受けとっていない。そのため、人々は自分が生み出すデータについてお金をはらわれるべきだと提案した経済学者や政治家もいる。',
+      'この考えを支持する人々は、個人のデータは価値ある資源であり、それを生み出す人々はその価値の分け前を受ける資格があると主張する。働く人が労働に対して賃金をはらわれ、土地の持ち主が土地の地代を受けとるのと同じように、ふだんの活動を通じてデータを生み出す利用者は、それが生み出すのを助ける富に対してつぐなわれるべきだというのである。データにお金をはらうことは、そのデータの価値を目に見えるものにし、人々がどんな情報をだれと分かちあうかについてより注意深く考えるようはげますことにもなるだろう、と支持する人々は言う。',
+      'さらに進んで、自動化が多くの仕事をおびやかしている時代に、データへの支払いがふつうの市民の新しい収入のみなもとになりうると示唆する支持者もいる。人工知能の仕組みが何百万人もの人々が生み出した情報で訓練されているなら、その仕組みがお金をかせぐときにその人々が恩恵を受けるのは当然に思われる。一人ひとりにはらわれる額は小さいかもしれないが、人々は自分が生み出した価値を所有しているという原則は、市民と技術企業との関係における大切な転換をしるすだろう、と支持する人々は主張する。',
+      'しかし批判する人々は、いくつかの反対をあげる。一つめは実際的なものである。データはほかの何百万人もの情報と組み合わされたときに主に役立つものになるので、一人のデータの価値はふつうとても小さい。一年に小銭数枚の支払いでは、だれの生活もほとんど変わらないだろうし、そうした支払いをはかって配る費用はかなりのものになりうる。そのうえ、ある特定のデータがどれほどの価値をもつかを決めるのはむずかしい。その価値は、それがどのように、だれによって使われるかにかかっているからである。',
+      'より根本的な反対は、プライバシーにかかわる。データにお金をはらうことは、とくに貧しくてお金が必要な人々に、ふだんなら人に知られたくない情報を売るようにうながすかもしれない、と批判する人々は心配する。この見方では、個人のデータを商品としてあつかうことは、プライバシーは売り買いされるべきでない権利だという考えを弱めかねない。人々にデータの代金をはらうのではなく、政府はそもそも企業が集めてよいデータの量を制限し、それがどう使われるかについて人々により強い管理をあたえるべきだ、と批判する人々は主張する。',
+      'データを個人ではなく集団で管理する中間の道を提案する人もいる。データ信託や協同組合とよばれることもある、多くの利用者の集団にかわって行動する組織が、データがどう使われ、そのかわりに利用者がどんな恩恵を受けるかについて企業と交渉することができるだろう。そうした恩恵はお金の形をとるかもしれないが、より強いプライバシーの保護や、アルゴリズムの設計についての決定への発言権や、データを使う事業の利益によってまかなわれる公共サービスへの貢献をふくむかもしれない。',
+      'データへの支払いをめぐる議論は、デジタル経済からだれが恩恵を受けるべきかという、より広い問いを反映している。現代の技術を動かしているデータはふつうの人々から来ているが、その価値は今のところ主に少数の大企業によって手に入れられている。解決が個人への支払いにあるにせよ、集団での交渉にあるにせよ、データ収集へのよりきびしい規則にあるにせよ、この議論は大切な原則に注意を向けさせてきた。人々は、自分の生活についての情報がどう使われるかについて発言権をもち、それが生み出す恩恵の分け前を受けるべきだという原則である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「一人ひとりの額は小さいかもしれないが、原則は大切な転換をしるす」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that people who create data deserve a ( 1 ) of its value. Critics reply that individual data is worth very little and that paying for it could weaken ( 2 ) as a right. Some propose managing data ( 3 ) through trusts or cooperatives.',
+      blanks: [
+        { choices: ['share', 'fear', 'copy', 'test'], answer: 0, why: '第2段落 those who create it deserve a share of its value。' },
+        { choices: ['privacy', 'transport', 'education', 'weather'], answer: 0, why: '第5段落 could weaken the idea that privacy is a right。' },
+        { choices: ['collectively', 'secretly', 'quickly', 'cheaply'], answer: 0, why: '第6段落 data would be managed collectively rather than individually。' },
+      ],
+    },
+    tf: [
+      { statement: 'ほとんどの利用者は、データのかわりに無料のサービス以外何も受けとっていない。', answer: true, why: '第1段落 Most users receive nothing in return except free access to services。' },
+      { statement: '批判する人々によれば、一人のデータの価値はふつうとても大きい。', answer: false, why: '第4段落 the value of a single person\u2019s data is usually very small。' },
+      { statement: '批判する人々は、企業が集めてよいデータの量を制限すべきだと主張している。', answer: true, why: '第5段落 governments should limit how much data companies are allowed to collect。' },
+      { statement: '筆者によれば、データの価値は今、多くのふつうの人々に分けられている。', answer: false, why: '第7段落 its value is currently captured mostly by a small number of large companies。' },
+    ],
+    qa: [
+      { q: 'What comparison do supporters make in the second paragraph?', choices: ['Workers paid for labor and landowners receiving rent.', 'Students paying for school.', 'Doctors treating patients.', 'Farmers selling vegetables.'], answer: 0, why: '第2段落 Just as workers are paid for their labor and landowners receive rent for their land。' },
+      { q: 'What might data trusts negotiate with companies about?', choices: ['How data is used and what benefits users receive.', 'The price of smartphones.', 'Working hours of employees.', 'The design of offices.'], answer: 0, why: '第6段落 negotiate with companies over how data is used and what benefits users receive in return。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
