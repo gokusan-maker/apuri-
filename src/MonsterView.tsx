@@ -2354,6 +2354,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 70 Q30 88 20 94 M46 72 Q44 90 38 98 M54 72 Q56 90 62 98 M62 70 Q70 88 80 94" fill="none" stroke="#4c0519" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'dugong')
+    return (
+      <g>
+        {/* 三日月のしっぽ */}
+        <path d="M78 66 Q90 58 96 50 M78 66 Q90 74 96 82" fill="none" stroke="#57534e" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
