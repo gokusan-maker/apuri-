@@ -4106,6 +4106,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The belief (A) that (B) hard work (C) always (D) pay off is common.', choices: ['(A) that', '(B) hard work', '(C) always', '(D) pay off is common'], answer: 3, why: '同格の that 節の主語は hard work（単数）なので pays off。' },
     ],
   },
+  {
+    id: 'exam-error-compare-obj-todai',
+    title: '入試の正誤問題〈173〉（東大レベル：英作文の比較の対象をそろえる）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '比較では、比べるもの同士の種類と形をそろえる。「中国の人口」と比べるのは「日本の人口」なので than that of Japan（複数なら those of ～）。人の持ち物なら所有代名詞・所有格（mine・my brother’s）。動名詞は動名詞と（Living ～ than living ～）。the number（数）の大小は large・small。',
+    ],
+    examples: [
+      { en: 'The population of China is much larger than that of Japan.', ja: '中国の人口は日本の人口よりずっと多い。' },
+      { en: 'Her English is better than mine.', ja: '彼女の英語は私の英語よりうまい。' },
+    ],
+    questions: [
+      { sentence: 'The population of China (A) is (B) much larger (C) than (D) Japan.', choices: ['(A) is', '(B) much larger', '(C) than', '(D) Japan'], answer: 3, why: '比べるのは「人口」どうし。than that of Japan。' },
+      { sentence: 'My salary (A) is (B) lower than (C) my brother (D) these days.', choices: ['(A) is', '(B) lower than', '(C) my brother', '(D) these days'], answer: 2, why: '比べるのは「給料」どうし。my brother’s（兄の給料）。' },
+      { sentence: 'The climate here (A) is milder (B) than (C) Hokkaido (D) in winter.', choices: ['(A) is milder', '(B) than', '(C) Hokkaido', '(D) in winter'], answer: 2, why: '比べるのは「気候」どうし。that of Hokkaido。' },
+      { sentence: '(A) Her English (B) is better (C) than (D) me.', choices: ['(A) Her English', '(B) is better', '(C) than', '(D) me'], answer: 3, why: '比べるのは「英語」どうし。than mine（私の英語）。' },
+      { sentence: 'The rules of this game (A) is simpler (B) than those (C) of (D) chess.', choices: ['(A) is simpler', '(B) than those', '(C) of', '(D) chess'], answer: 0, why: '主語は The rules（複数）なので are simpler。' },
+      { sentence: '(A) To live in the city (B) costs more (C) than (D) living in the countryside.', choices: ['(A) To live in the city', '(B) costs more', '(C) than', '(D) living in the countryside'], answer: 0, why: '比べるものの形をそろえる。than living に合わせて Living in the city。' },
+      { sentence: '(A) Watch TV (B) is less interesting (C) than (D) reading books.', choices: ['(A) Watch TV', '(B) is less interesting', '(C) than', '(D) reading books'], answer: 0, why: '主語になるのは動名詞。Watching TV。reading books と形もそろう。' },
+      { sentence: '(A) The price of this car (B) is higher (C) than (D) that car.', choices: ['(A) The price of this car', '(B) is higher', '(C) than', '(D) that car'], answer: 3, why: '比べるのは「値段」どうし。than that of that car（または that car’s）。' },
+      { sentence: '(A) My room (B) is (C) as large as (D) you.', choices: ['(A) My room', '(B) is', '(C) as large as', '(D) you'], answer: 3, why: '比べるのは「部屋」どうし。as large as yours。' },
+      { sentence: 'The number of students this year (A) is (B) fewer (C) than that of (D) last year.', choices: ['(A) is', '(B) fewer', '(C) than that of', '(D) last year'], answer: 1, why: 'the number（数）の大小は large・small で表す。is smaller。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
