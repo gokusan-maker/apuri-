@@ -32898,6 +32898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-bike-lanes',
+    title: 'Should Cities Build More Bicycle Lanes?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities, the bicycle is enjoying a remarkable revival. Once regarded as a vehicle for children or for those who could not afford a car, it is now promoted by city governments as a clean, healthy, and efficient way of moving through crowded streets. To encourage cycling, many cities have built networks of protected lanes, separated from car traffic by curbs or barriers. These lanes have often been popular with cyclists, but they have also generated fierce local disputes, since the space they occupy usually comes from roads and parking places that were once used by cars.",
+      "Supporters argue that bicycle lanes bring a wide range of benefits. Cycling produces no exhaust gases, so a shift from cars to bicycles can reduce air pollution and greenhouse gas emissions. Regular cycling also improves physical health, lowering the risk of heart disease and other illnesses, which in turn may reduce the burden on public health systems. Since a bicycle takes up far less space than a car, supporters add, a city in which more people cycle can move more people through the same streets with less congestion.",
+      "Safety is another central argument. Many people say that they would like to cycle but are afraid of sharing the road with fast-moving cars and trucks. Protected lanes can reduce this fear and make cycling accessible to children, older people, and others who would never ride in heavy traffic. ( A ) building such lanes costs money, supporters argue that it is a cheap investment compared with new roads or railways, and that the number of cyclists often increases sharply once a safe network is in place.",
+      "Critics, however, raise several objections. Shop owners sometimes fear that the loss of parking spaces will drive away customers who arrive by car, particularly older shoppers or families carrying heavy goods. Drivers complain that narrower roads increase congestion, at least in the short term, and that delivery vehicles and emergency services may find it harder to move through the city. In some cases, critics argue, lanes have been built without sufficient consultation with the people who live and work along the affected streets. Such complaints show that the way a project is carried out can matter as much as the project itself.",
+      "There are also questions about whether bicycle lanes benefit everyone equally. In some cities, new lanes have first appeared in wealthy central districts, while poorer neighborhoods on the edge of the city, where residents may depend on cars because public transport is limited, have received fewer improvements. Moreover, cycling is not a practical option for everyone: people with certain disabilities, those who must travel long distances, and those who live in hilly areas or harsh climates may gain little from the changes.",
+      "Experience suggests that public attitudes often change after lanes are built. Proposals that meet strong opposition at first sometimes become widely accepted once residents see the results, such as quieter streets and more people walking and cycling. Studies in several cities have also found that shops on streets with good cycling facilities do not necessarily lose business, since cyclists and pedestrians tend to visit more often, even if they spend less on each visit. Yet such outcomes are not guaranteed, and much depends on how well the lanes are designed and connected.",
+      "The debate over bicycle lanes is ultimately a debate about how limited urban space should be shared. Streets serve many purposes, from transport and commerce to social life, and no single design can satisfy every group completely. Careful planning, honest consultation, and a willingness to adjust plans in response to experience may help cities find solutions that balance the needs of drivers, cyclists, pedestrians, and businesses, while moving gradually toward streets that are cleaner, safer, and more pleasant for everyone.",
+    ],
+    ja: [
+      '多くの都市で、自転車はめざましい復活をとげている。かつては子どもや車を買えない人の乗り物とみなされていた自転車は、今では混雑した通りを移動する、清潔で健康的で効率のよい方法として市の政府にすすめられている。自転車の利用をうながすために、多くの都市は、縁石や柵で車の交通から分けられた、保護された車線の網を作ってきた。こうした車線はしばしば自転車に乗る人々に人気があるが、それがしめる空間はふつう、かつて車が使っていた道路や駐車場所から来ているので、地元のはげしい争いも生んできた。',
+      '支持する人々は、自転車専用車線はさまざまな利益をもたらすと主張する。自転車は排気ガスを出さないので、車から自転車への移行は大気汚染や温室効果ガスの排出を減らしうる。定期的に自転車に乗ることは体の健康もよくし、心臓病やほかの病気の危険を下げるので、それが公的な医療制度の負担を減らすかもしれない。自転車は車よりはるかに少ない空間しかとらないので、より多くの人が自転車に乗る都市では、同じ通りでより多くの人を、より少ない渋滞で運べると支持する人々はつけ加える。',
+      '安全はもう一つの中心的な論点である。多くの人々は、自転車に乗りたいが、速く走る車やトラックと道路を分け合うのがこわいと言う。保護された車線はこの恐れを減らし、混んだ交通の中ではけっして乗らない子どもや高齢者などにも自転車を身近なものにしうる。そうした車線を作るにはお金がかかるが、新しい道路や鉄道にくらべれば安い投資であり、安全な網ができると自転車に乗る人の数はしばしば急にふえると支持する人々は主張する。',
+      'しかし批判する人々は、いくつかの反対をあげる。店の持ち主は、駐車場所が減ると、車で来る客、とくに高齢の買い物客や重い品物を運ぶ家族が来なくなるのではないかとおそれることがある。運転する人々は、道がせまくなると、少なくとも短期的には渋滞がふえ、配達の車や救急の車両が都市の中を動きにくくなるかもしれないと不満を言う。場合によっては、影響を受ける通りぞいに住み働く人々と十分に話し合わずに車線が作られたと批判する人々は主張する。こうした不満は、計画の進め方が計画そのものと同じくらい大切になりうることを示している。',
+      '自転車専用車線がすべての人に同じように利益をもたらすのかという疑問もある。いくつかの都市では、新しい車線はまず裕福な中心部に現れ、公共交通が限られているために住民が車に頼っているかもしれない都市のはずれのまずしい地区は、あまり改善を受けてこなかった。さらに、自転車はすべての人にとって実際的な選択肢ではない。ある種の障害をもつ人、長い距離を移動しなければならない人、坂の多い地域や厳しい気候の地域に住む人は、この変化からほとんど得るものがないかもしれない。',
+      '経験によれば、車線が作られたあとで人々の態度はしばしば変わる。最初は強い反対にあった提案が、静かな通りや歩いたり自転車に乗ったりする人がふえるといった結果を住民が目にすると、広く受け入れられるようになることもある。いくつかの都市の研究では、自転車の設備がととのった通りの店がかならずしも商売を失うわけではないこともわかっている。自転車に乗る人や歩く人は、一回に使うお金は少なくても、より頻繁に訪れる傾向があるからである。しかし、そうした結果が保証されているわけではなく、多くは車線がどれほどうまく設計され、つながっているかにかかっている。',
+      '自転車専用車線をめぐる議論は、結局のところ、限られた都市の空間をどう分け合うべきかについての議論である。通りは、交通や商売から社会生活まで多くの目的に役立っており、どんな一つの設計もすべての集団を完全に満足させることはできない。注意深い計画、正直な話し合い、そして経験にこたえて計画を調整しようとする気持ちが、運転する人、自転車に乗る人、歩く人、そして商売のそれぞれの必要のつりあいをとりながら、だれにとってもより清潔で安全で快適な通りへと少しずつ進む解決策を、都市が見つける助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「車線を作るにはお金がかかるが、安い投資だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say that bicycle lanes reduce pollution, improve health, and make cycling ( 1 ) for people afraid of traffic. Critics worry about lost parking, congestion, and whether the benefits are shared ( 2 ). Public attitudes often change after lanes are built, but success depends on how well they are ( 3 ).',
+      blanks: [
+        { choices: ['accessible', 'expensive', 'illegal', 'boring'], answer: 0, why: '第3段落 make cycling accessible to children, older people, and others。' },
+        { choices: ['equally', 'secretly', 'rarely', 'quickly'], answer: 0, why: '第5段落 whether bicycle lanes benefit everyone equally。' },
+        { choices: ['designed', 'painted', 'priced', 'named'], answer: 0, why: '第6段落 how well the lanes are designed and connected。' },
+      ],
+    },
+    tf: [
+      { statement: '保護された車線は、縁石や柵で車の交通から分けられている。', answer: true, why: '第1段落 separated from car traffic by curbs or barriers。' },
+      { statement: '支持する人々によれば、自転車は車より多くの空間をとる。', answer: false, why: '第2段落 a bicycle takes up far less space than a car。' },
+      { statement: 'いくつかの都市では、新しい車線はまず裕福な中心部に現れた。', answer: true, why: '第5段落 new lanes have first appeared in wealthy central districts。' },
+      { statement: '研究によれば、自転車の設備がある通りの店はかならず商売を失う。', answer: false, why: '第6段落 do not necessarily lose business。' },
+    ],
+    qa: [
+      { q: 'Why do some shop owners oppose bicycle lanes?', choices: ['They fear losing customers who arrive by car.', 'They want more bicycles in the street.', 'They dislike walking.', 'They want cheaper rent.'], answer: 0, why: '第4段落 the loss of parking spaces will drive away customers who arrive by car。' },
+      { q: 'Why do cyclists and pedestrians not necessarily hurt shops?', choices: ['They tend to visit more often.', 'They always spend more on each visit.', 'They never use cars.', 'They only shop online.'], answer: 0, why: '第6段落 cyclists and pedestrians tend to visit more often。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
