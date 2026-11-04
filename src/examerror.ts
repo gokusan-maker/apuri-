@@ -4130,6 +4130,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The number of students this year (A) is (B) fewer (C) than that of (D) last year.', choices: ['(A) is', '(B) fewer', '(C) than that of', '(D) last year'], answer: 1, why: 'the number（数）の大小は large・small で表す。is smaller。' },
     ],
   },
+  {
+    id: 'exam-error-passive-make-kokuritsu',
+    title: '入試の正誤問題〈174〉（国公立レベル：使役・知覚動詞の受け身 be made to do・be seen to do）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '能動態では make・see・hear のあとは動詞の原形（made him apologize・saw him enter）。受け身にすると to が出る（was made to wash・was seen to run・was heard to say）。let はふつう受け身にせず be allowed to do を使う。to のあとはいつも動詞の原形。',
+    ],
+    examples: [
+      { en: 'He was made to wash the dishes.', ja: '彼は皿を洗わされた。' },
+      { en: 'The thief was seen to run out of the shop.', ja: 'どろぼうが店から走り出るのが見られた。' },
+    ],
+    questions: [
+      { sentence: 'He (A) was made (B) wash (C) the dishes (D) by his mother.', choices: ['(A) was made', '(B) wash', '(C) the dishes', '(D) by his mother'], answer: 1, why: 'make の受け身では to が出る。was made to wash。' },
+      { sentence: '(A) The thief (B) was seen (C) run (D) out of the shop.', choices: ['(A) The thief', '(B) was seen', '(C) run', '(D) out of the shop'], answer: 2, why: '知覚動詞 see の受け身では to が出る。was seen to run。' },
+      { sentence: 'We (A) were made (B) to waiting (C) for an hour (D) at the station.', choices: ['(A) were made', '(B) to waiting', '(C) for an hour', '(D) at the station'], answer: 1, why: 'to のあとは動詞の原形。to wait。' },
+      { sentence: '(A) I was let (B) to go home (C) early (D) yesterday.', choices: ['(A) I was let', '(B) to go home', '(C) early', '(D) yesterday'], answer: 0, why: 'let はふつう受け身にしない。I was allowed to go home。' },
+      { sentence: 'The students (A) made to (B) clean (C) the classroom (D) every day.', choices: ['(A) made to', '(B) clean', '(C) the classroom', '(D) every day'], answer: 0, why: '「させられる」は受け身なので were made to。' },
+      { sentence: '(A) She (B) was heard (C) say (D) that she was tired.', choices: ['(A) She', '(B) was heard', '(C) say', '(D) that she was tired'], answer: 2, why: '知覚動詞 hear の受け身では to が出る。was heard to say。' },
+      { sentence: 'He (A) was seen (B) to crossing (C) the street (D) by a police officer.', choices: ['(A) was seen', '(B) to crossing', '(C) the street', '(D) by a police officer'], answer: 1, why: 'to のあとは動詞の原形。to cross。' },
+      { sentence: '(A) They made (B) him (C) to apologize (D) to the teacher.', choices: ['(A) They made', '(B) him', '(C) to apologize', '(D) to the teacher'], answer: 2, why: '能動態の make 人 のあとは原形。made him apologize。' },
+      { sentence: 'We (A) saw him (B) to enter (C) the room (D) quietly.', choices: ['(A) saw him', '(B) to enter', '(C) the room', '(D) quietly'], answer: 1, why: '能動態の see 人 のあとは原形（または -ing）。saw him enter。' },
+      { sentence: 'The children (A) were made (B) to stay (C) inside (D) because of rain heavily.', choices: ['(A) were made', '(B) to stay', '(C) inside', '(D) because of rain heavily'], answer: 3, why: 'because of のあとは名詞句。because of the heavy rain。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
