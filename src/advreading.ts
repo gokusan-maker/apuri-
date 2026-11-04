@@ -33022,6 +33022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-authority',
+    title: 'Why We Obey Authority',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every society depends on people following instructions from those in positions of authority. Students follow the directions of teachers, employees carry out the decisions of managers, and citizens obey laws made by governments. Without such cooperation, organized social life would be almost impossible. Yet history also offers terrible examples of ordinary people who committed cruel acts because they were ordered to do so. The question of why we obey authority, and when we should refuse, is therefore one of the most important problems in moral and political thought.",
+      "Psychological research has shown that the tendency to obey can be remarkably strong. In well-known experiments conducted in the twentieth century, many volunteers were willing to follow instructions to give what they believed were painful electric shocks to another person, simply because a scientist in a laboratory coat told them to continue. Although no shocks were actually given, the results surprised researchers and the public alike. They suggested that people who are not cruel by nature may nonetheless do cruel things when they feel that responsibility lies with someone else.",
+      "Several factors seem to encourage obedience. When an authority appears legitimate, wearing a uniform or speaking with confidence in an official setting, people are more inclined to trust its judgment. When orders are given gradually, beginning with small and harmless requests, it becomes harder to refuse later demands without admitting that earlier actions were wrong. ( A ) each step may seem minor, the accumulation of small acts of compliance can lead people to places they would never have chosen to go.",
+      "Obedience, however, is not simply a weakness. In many situations, following instructions is both reasonable and necessary. A patient who follows a doctor's advice, a passenger who obeys the instructions of a pilot during an emergency, or a citizen who respects traffic laws is behaving sensibly, since the authority in question possesses knowledge or responsibility that the individual lacks. A society in which everyone questioned every rule would be chaotic and dangerous, and trust in legitimate authority is part of what makes cooperation on a large scale possible.",
+      "The difficulty, then, is to distinguish between authority that deserves obedience and authority that does not. One traditional answer holds that authority is legitimate only when it serves the common good and respects basic moral limits. An order to harm innocent people, on this view, has no genuine authority, however official its source may appear. Yet applying this principle in practice can be difficult, since those who give harmful orders often present them as necessary, patriotic, or justified by circumstances that ordinary people cannot fully judge.",
+      "Research also offers some reasons for hope. In the same experiments that revealed the power of obedience, a significant minority of participants refused to continue, and refusal became much more common when participants saw another person refuse first. This finding suggests that resistance is contagious, and that a single act of courage can make it easier for others to follow their own conscience. It also suggests that the social conditions in which people find themselves matter as much as their individual character. People who feel isolated may obey, while those who know that others share their doubts may find the strength to resist.",
+      "Perhaps the most important lesson is that responsibility cannot be entirely handed over to others. Even when we follow instructions, we remain the authors of our own actions, and we must be prepared to ask whether what we are asked to do is right. Cultivating this habit of reflection, through education, open discussion, and institutions that protect those who refuse unjust orders, may be one of the best defenses a society can have against the abuse of authority, and against the quiet surrender of conscience that makes such abuse possible.",
+    ],
+    ja: [
+      'どの社会も、権威ある立場の人々からの指示に人々がしたがうことに頼っている。生徒は先生の指示にしたがい、従業員は上司の決定を実行し、市民は政府の作った法律に服従する。そのような協力がなければ、組織された社会生活はほとんど不可能だろう。しかし歴史は、命令されたからという理由で残酷な行為をおかしたふつうの人々の恐ろしい例も示している。したがって、なぜ私たちは権威にしたがうのか、そしていつ拒むべきなのかという問いは、道徳と政治の思想で最も重要な問題の一つである。',
+      '心理学の研究は、服従する傾向がおどろくほど強くなりうることを示してきた。二十世紀に行われたよく知られた実験では、多くの志願者が、白衣を着た実験室の科学者に続けるよう言われたというだけで、別の人に痛い電気ショックだと信じたものをあたえよという指示にしたがおうとした。実際にはショックはあたえられていなかったが、その結果は研究者も一般の人々もおどろかせた。それは、生まれつき残酷ではない人々でも、責任がほかのだれかにあると感じるときには残酷なことをしうることを示唆していた。',
+      '服従をうながすように思われる要因がいくつかある。権威が正当に見えるとき、つまり制服を着ていたり、公的な場で自信をもって話したりするとき、人々はその判断を信頼しやすくなる。命令が少しずつ、小さく害のない頼みから始めてあたえられるとき、前の行動がまちがっていたと認めずにあとの要求を拒むのはむずかしくなる。一つひとつの段階はささいに思えるかもしれないが、小さな服従の積み重ねは、人々を自分ならけっして選ばなかった場所へ連れていきうる。',
+      'しかし、服従は単なる弱さではない。多くの状況で、指示にしたがうことは理にかなっており、必要でもある。医師の助言にしたがう患者、緊急のときにパイロットの指示にしたがう乗客、交通法規を尊重する市民は、分別のあるふるまいをしている。その権威は、個人が欠いている知識や責任をもっているからである。だれもがあらゆる規則を疑う社会は混乱して危険であり、正当な権威への信頼は、大規模な協力を可能にしているものの一部なのである。',
+      'それなら、むずかしいのは、服従に値する権威とそうでない権威とを区別することである。伝統的な一つの答えは、権威は共通の善に役立ち、基本的な道徳の限界を尊重するときにだけ正当だとする。この見方では、罪のない人々を傷つけよという命令には、その出どころがどれほど公的に見えても、本当の権威はない。しかし、この原則を実際にあてはめるのはむずかしいことがある。害のある命令を出す人々は、しばしばそれを、必要なもの、愛国的なもの、あるいはふつうの人々には十分に判断できない状況によって正当化されるものとして示すからである。',
+      '研究は希望をもてる理由もいくつか示している。服従の力を明らかにしたのと同じ実験で、参加者の無視できない少数派が続けることを拒み、別の人が先に拒むのを見た参加者のあいだでは拒否がずっと多くなった。この発見は、抵抗は伝わりやすく、一つの勇気ある行為がほかの人々が自分の良心にしたがうのを容易にしうることを示唆している。それはまた、人々が置かれた社会的な状況が、個人の性格と同じくらい大切であることも示唆している。孤立していると感じる人は服従するかもしれないが、ほかの人も自分の疑いを共有していると知っている人は、抵抗する力を見いだすかもしれない。',
+      'おそらく最も大切な教訓は、責任を完全に他人にゆだねることはできないということである。指示にしたがうときでさえ、私たちは自分の行動の作り手であり続け、求められていることが正しいかどうかを問う覚悟をしていなければならない。教育や開かれた議論や、不正な命令を拒む人を守る制度を通じてこのふり返りの習慣を育てることは、社会が権威の乱用に対してもちうる最もよい守りの一つなのかもしれない。そして、そのような乱用を可能にする、良心の静かな放棄に対する守りでもあるのだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一つひとつの段階はささいに思えるかもしれないが、積み重ねは人を遠くへ連れていく」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '実験では、実際には電気ショックはあたえられていなかった。', answer: true, why: '第2段落 Although no shocks were actually given。' },
+      { statement: '筆者によれば、服従は単なる弱さにすぎない。', answer: false, why: '第4段落 Obedience, however, is not simply a weakness。' },
+      { statement: '別の人が先に拒むのを見ると、拒否はずっと多くなった。', answer: true, why: '第6段落 refusal became much more common when participants saw another person refuse first。' },
+      { statement: '筆者によれば、指示にしたがえば責任を完全に他人にゆだねられる。', answer: false, why: '第7段落 responsibility cannot be entirely handed over to others。' },
+    ],
+    qa: [
+      { q: 'What makes it harder to refuse later demands?', choices: ['Orders given gradually, beginning with small requests.', 'Orders given by friends.', 'Orders written on paper.', 'Orders that are very clear.'], answer: 0, why: '第3段落 When orders are given gradually, beginning with small and harmless requests。' },
+      { q: 'When is authority legitimate, according to one traditional answer?', choices: ['When it serves the common good and respects moral limits.', 'Whenever it is official.', 'When it is very old.', 'When it gives many orders.'], answer: 0, why: '第5段落 only when it serves the common good and respects basic moral limits。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
