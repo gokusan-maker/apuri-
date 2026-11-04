@@ -31538,6 +31538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-degrees',
+    title: 'Skills or Degrees?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For decades, a university degree has been regarded as the key to a good job. Many employers have required applicants to hold a degree even for positions in which the knowledge gained at university is rarely used, treating the qualification as a convenient signal of intelligence, discipline, and reliability. In recent years, however, a growing number of companies and governments have begun to remove degree requirements from job advertisements, choosing instead to assess candidates on the basis of their skills. This shift has prompted a lively debate about the value of higher education and the fairness of hiring practices.",
+      "Supporters of skills-based hiring argue that degree requirements exclude many capable people. Not everyone has the opportunity to attend university: the cost may be too high, family responsibilities may make study impossible, or a person may simply have chosen a different path. Many such people have developed valuable abilities through work experience, training courses, or independent learning. Requiring a degree, supporters say, prevents employers from discovering this talent and reinforces inequality, since the people most likely to hold degrees are often those from wealthier families.",
+      "Supporters also question whether degrees reliably indicate the skills that jobs actually require. A graduate in history may be an excellent writer but have no experience of managing a project, while a person without a degree may have spent years doing exactly that. Tests of practical ability, examples of previous work, and structured interviews, supporters argue, can provide a more accurate picture of what a candidate can do. Some companies that have dropped degree requirements report that they have found strong employees they would otherwise have overlooked.",
+      "Critics, however, warn that abandoning degree requirements may be less beneficial than it seems. Degrees, they argue, signal not only specific knowledge but also the ability to complete a long and demanding course of study, to meet deadlines, and to think critically. ( A ) these qualities can be developed in other ways, critics say, they are difficult to measure in a short interview or test, and employers may end up relying on less reliable impressions. There is also a risk that skills-based hiring will favor candidates who are good at presenting themselves rather than those who are genuinely capable.",
+      "Some research suggests that announcing the removal of degree requirements does not always change who is hired. Employers may continue to prefer graduates in practice, even when the formal rules have changed, because habits and assumptions are slow to shift. For skills-based hiring to work, companies must invest in new ways of evaluating applicants, train the people who make hiring decisions, and offer opportunities for employees without degrees to advance once they have been hired.",
+      "The debate also raises questions about the purpose of higher education itself. If degrees are no longer required for many jobs, will fewer young people choose to attend university? Some fear that this could weaken the broad education that universities provide, which aims not only to prepare students for work but also to develop their understanding of the world and their capacity for independent thought. Others argue that removing the pressure to obtain a degree simply for the sake of employment might allow universities to focus more clearly on these deeper goals.",
+      "Ultimately, the shift toward skills-based hiring reflects a desire to open opportunities to a wider range of people. Whether it succeeds will depend on whether employers can develop fair and effective ways of recognizing ability, and whether societies continue to value education for its own sake rather than merely as a ticket to a job. A degree and a set of skills need not be seen as rivals. The challenge is to build a system in which both can be recognized, and in which talent is not wasted simply because it was developed outside a university.",
+    ],
+    ja: [
+      '何十年ものあいだ、大学の学位はよい仕事へのかぎとみなされてきた。多くの雇い主は、大学で得た知識がめったに使われない職でさえ、志願者に学位を求め、その資格を知性と規律と信頼性の便利なしるしとしてあつかってきた。しかし近年、求人広告から学位の条件をとりのぞき、そのかわりに技能にもとづいて候補者を評価することを選ぶ企業や政府がふえている。この変化は、高等教育の価値と採用のやり方の公平さについて、活発な議論を引き起こしている。',
+      '技能にもとづく採用を支持する人々は、学位の条件が多くの有能な人々をしめ出していると主張する。だれもが大学に通う機会をもっているわけではない。費用が高すぎるかもしれず、家族への責任のために勉強ができないかもしれず、単にちがう道を選んだのかもしれない。そうした人々の多くは、仕事の経験や研修や独学を通じて価値ある力をのばしてきた。学位を求めることは、雇い主がこの才能を見つけるのをさまたげ、不平等を強める、と支持する人々は言う。学位をもつ可能性が最も高いのは、しばしばより豊かな家庭の出身者だからである。',
+      '支持する人々はまた、学位が仕事に実際に必要な技能を確かに示しているのか疑問を投げかける。歴史学の卒業生はすばらしい書き手かもしれないが、計画を管理した経験はないかもしれず、一方で学位のない人が、まさにそれを何年もしてきたかもしれない。実際的な力のテストや、以前の仕事の例や、組み立てられた面接は、候補者に何ができるかについて、より正確な姿をあたえてくれる、と支持する人々は主張する。学位の条件をなくした企業の中には、ほかの場合なら見落としていたかもしれないすぐれた従業員を見つけたと報告するところもある。',
+      'しかし批判する人々は、学位の条件をなくすことは見かけほど有益ではないかもしれないと警告する。学位は、特定の知識だけでなく、長くきびしい学業をやりとげ、しめきりを守り、批判的に考える力も示している、と彼らは主張する。こうした性質はほかの方法でものばせるが、短い面接やテストではかるのはむずかしく、雇い主は結局、より信頼できない印象にたよることになるかもしれない、と批判する人々は言う。技能にもとづく採用が、本当に有能な候補者よりも、自分を見せるのがうまい候補者をひいきする危険もある。',
+      '学位の条件をとりのぞくと発表しても、だれが採用されるかはいつも変わるわけではないことを示す研究もある。習慣や思いこみはなかなか変わらないので、正式な規則が変わったときでさえ、雇い主は実際には卒業生を好み続けるかもしれない。技能にもとづく採用がうまくいくためには、企業は志願者を評価する新しい方法に投資し、採用を決める人を研修し、学位のない従業員が採用されたあとに昇進できる機会を用意しなければならない。',
+      'この議論はまた、高等教育そのものの目的について問いを投げかける。多くの仕事に学位が必要でなくなれば、大学に進むことを選ぶ若者はへるのだろうか。これは、学生を仕事にそなえさせるだけでなく、世界についての理解と自分で考える力をのばすことも目指す、大学があたえる幅広い教育を弱めかねないとおそれる人もいる。ほかの人々は、就職のためだけに学位をとらなければならないという圧力をとりのぞけば、大学はこうしたより深い目標により明確に集中できるかもしれないと主張する。',
+      '結局のところ、技能にもとづく採用への変化は、より幅広い人々に機会を開きたいという願いを反映している。それが成功するかどうかは、雇い主が力を認める公正で効果的な方法をのばせるかどうか、そして社会が教育を単に仕事への切符としてではなく、それ自体のために大切にし続けるかどうかにかかっているだろう。学位と技能を競争相手とみなす必要はない。課題は、その両方が認められ、才能が大学の外でのばされたというだけの理由でむだにされない仕組みをきずくことである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「こうした性質はほかの方法でものばせるが、はかるのはむずかしい」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of skills-based hiring say degree requirements exclude capable people and reinforce ( 1 ). Critics argue that degrees signal the ability to complete demanding study. Research suggests that removing requirements does not always change who is ( 2 ), since habits are slow to shift, and the debate also raises questions about the ( 3 ) of higher education.',
+      blanks: [
+        { choices: ['inequality', 'friendship', 'safety', 'tradition'], answer: 0, why: '第2段落 reinforces inequality。' },
+        { choices: ['hired', 'paid', 'taught', 'promoted'], answer: 0, why: '第5段落 does not always change who is hired。' },
+        { choices: ['purpose', 'location', 'color', 'size'], answer: 0, why: '第6段落 questions about the purpose of higher education itself。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの雇い主は、大学の知識がめったに使われない職でも学位を求めてきた。', answer: true, why: '第1段落 even for positions in which the knowledge gained at university is rarely used。' },
+      { statement: '支持する人々によれば、学位は仕事に必要な技能をいつも確かに示している。', answer: false, why: '第3段落 Supporters also question whether degrees reliably indicate the skills。' },
+      { statement: '学位の条件をなくしても、雇い主は実際には卒業生を好み続けるかもしれない。', answer: true, why: '第5段落 Employers may continue to prefer graduates in practice。' },
+      { statement: '筆者によれば、学位と技能は競争相手とみなすべきである。', answer: false, why: '第7段落 A degree and a set of skills need not be seen as rivals。' },
+    ],
+    qa: [
+      { q: 'What do critics say degrees signal besides specific knowledge?', choices: ['The ability to complete a demanding course and meet deadlines.', 'Only family wealth.', 'Physical strength.', 'Good appearance.'], answer: 0, why: '第4段落 the ability to complete a long and demanding course of study, to meet deadlines。' },
+      { q: 'What must companies do for skills-based hiring to work?', choices: ['Invest in new ways of evaluating applicants.', 'Hire only graduates.', 'Stop all interviews.', 'Lower all salaries.'], answer: 0, why: '第5段落 companies must invest in new ways of evaluating applicants。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
