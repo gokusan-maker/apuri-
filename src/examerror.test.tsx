@@ -2332,3 +2332,10 @@ it('誤文訂正〈163〉：国公立レベル 受動態で by 以外を使う�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('in')
 })
+
+it('正誤問題〈170〉：東大レベル 代名詞 one・it・that の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-pronoun-one-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) it')
+})

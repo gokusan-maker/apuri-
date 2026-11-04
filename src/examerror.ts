@@ -4034,6 +4034,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) If I (B) have not (C) eaten so much, I (D) would not feel sick now.', choices: ['(A) If I', '(B) have not', '(C) eaten so much, I', '(D) would not feel sick now'], answer: 1, why: '過去の事実とちがうことなので過去完了 had not eaten。' },
     ],
   },
+  {
+    id: 'exam-error-pronoun-one-todai',
+    title: '入試の正誤問題〈170〉（東大レベル：英作文の代名詞 one・it・that の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'it は前に出たその「もの自体」を指す。one は同じ種類の「別の1つ」（a new one・the old one）、複数なら ones。the＋名詞＋of ～ のくり返しをさけるときは、単数なら that、複数なら those（that of Canada・those of a cat）。「～する人々」は those who ～。所有代名詞 mine・yours・hers のあとに名詞や one はつけない。another のあとは単数。',
+    ],
+    examples: [
+      { en: 'I lost my umbrella, so I bought a new one.', ja: 'かさをなくしたので、新しいのを買った。' },
+      { en: 'The climate of Japan is milder than that of Canada.', ja: '日本の気候はカナダの気候よりおだやかだ。' },
+    ],
+    questions: [
+      { sentence: 'I lost my umbrella, so I (A) bought (B) a new (C) it (D) yesterday.', choices: ['(A) bought', '(B) a new', '(C) it', '(D) yesterday'], answer: 2, why: '前に出た名詞と同じ種類の別のものは one。a new one。' },
+      { sentence: 'The climate of Japan (A) is milder (B) than (C) it (D) of Canada.', choices: ['(A) is milder', '(B) than', '(C) it', '(D) of Canada'], answer: 2, why: 'the climate のくり返しをさける単数の代名詞は that（that of Canada）。' },
+      { sentence: 'These shoes are too small. (A) Do you (B) have (C) bigger (D) one?', choices: ['(A) Do you', '(B) have', '(C) bigger', '(D) one?'], answer: 3, why: 'shoes は複数なので bigger ones。' },
+      { sentence: 'I have a car, and (A) one (B) is (C) very (D) old.', choices: ['(A) one', '(B) is', '(C) very', '(D) old'], answer: 0, why: '前に出たその車そのものを指すときは it。' },
+      { sentence: 'The population of Tokyo (A) is larger (B) than (C) those (D) of Osaka.', choices: ['(A) is larger', '(B) than', '(C) those', '(D) of Osaka'], answer: 2, why: 'population は単数なので that of Osaka。' },
+      { sentence: '(A) That (B) who (C) works hard (D) will succeed.', choices: ['(A) That', '(B) who', '(C) works hard', '(D) will succeed'], answer: 0, why: '「～する人々」は Those who ～。' },
+      { sentence: 'This bag is mine, and (A) that (B) one (C) is (D) her.', choices: ['(A) that', '(B) one', '(C) is', '(D) her'], answer: 3, why: '「彼女のもの」は所有代名詞 hers。' },
+      { sentence: 'I don’t like this tie. Show me (A) another (B) ones, (C) please, (D) if you have any.', choices: ['(A) another', '(B) ones,', '(C) please,', '(D) if you have any'], answer: 1, why: 'another のあとは単数。another one。' },
+      { sentence: 'If you need a pen, I (A) can lend (B) you (C) it (D) right now.', choices: ['(A) can lend', '(B) you', '(C) it', '(D) right now'], answer: 2, why: '特定のペンではなく「ペンを1本」なので one。' },
+      { sentence: 'The new model is better than the old (A) it (B) in (C) many (D) ways.', choices: ['(A) it', '(B) in', '(C) many', '(D) ways'], answer: 0, why: '「古いもの」は形容詞＋one。the old one。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
