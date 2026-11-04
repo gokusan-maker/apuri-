@@ -2507,3 +2507,10 @@ it('正誤問題〈182〉：東大レベル It is said that と be said to の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) being')
 })
+
+it('誤文訂正〈176〉：国公立レベル too ～ to と enough to の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-176')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('old enough')
+})

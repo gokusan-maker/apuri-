@@ -7500,6 +7500,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '［その本は百ページしかない］ The book has [not less than] a hundred pages.', choices: ['no more than', 'no less than', 'more than', 'at least'], answer: 0, why: '「たった・～しかない」は no more than（＝only）。' },
     ],
   },
+  {
+    id: 'exam-fix-176',
+    title: '入試の誤文訂正〈176〉（国公立レベル：too ～ to と ～ enough to）',
+    points: ['too ＋形容詞・副詞＋to do「～すぎて…できない」・形容詞・副詞＋enough to do「…するのに十分～」。enough は形容詞・副詞のあとに置く（old enough）が、名詞につくときは前に置く（enough money）。to do の意味上の主語は for ～ で表す（too difficult for me to solve）。to do の目的語が文の主語と同じなら、くり返さない（This box is too heavy to carry.）。so ～ that S can not … とも書きかえられる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This box is too heavy for me to carry.', ja: 'この箱は重すぎて私には運べない。' }],
+    questions: [
+      { sentence: 'He is [enough old] to drive a car.', choices: ['old enough', 'too old', 'so old', 'very old enough'], answer: 0, why: 'enough は形容詞のあとに置く。old enough to drive。' },
+      { sentence: 'This box is too heavy for me [to carry it].', choices: ['to carry', 'carrying it', 'to carry them', 'for carry'], answer: 0, why: 'carry の目的語は主語 this box と同じなので it はくり返さない。too heavy for me to carry。' },
+      { sentence: 'I do not have [money enough] to buy the car.', choices: ['enough money', 'too much money', 'money so', 'so much enough'], answer: 0, why: '名詞につくときは enough を前に置くのがふつう。enough money。' },
+      { sentence: 'The question was [too difficult that] I could not answer it.', choices: ['so difficult that', 'too difficult to', 'enough difficult that', 'very difficult to'], answer: 0, why: 'that 節が続くなら so ～ that。too ～ to なら that は使えない。' },
+      { sentence: 'She was [too tired for] walk any farther.', choices: ['too tired to', 'so tired to', 'tired enough for', 'too tired that'], answer: 0, why: 'too ～ to ＋動詞の原形。too tired to walk。' },
+      { sentence: 'The water is warm [enough for swim].', choices: ['enough to swim in', 'too to swim', 'enough swimming', 'to swim enough'], answer: 0, why: 'enough to ＋動詞の原形。swim in the water なので in を残す。' },
+      { sentence: 'This book is [too easy for him reading].', choices: ['too easy for him to read', 'too easy him to read', 'easy enough him reading', 'so easy for him to read it'], answer: 0, why: '意味上の主語は for ～、そのあとに to 不定詞。too easy for him to read。' },
+      { sentence: 'He ran [fast enough catching] the bus.', choices: ['fast enough to catch', 'enough fast to catch', 'too fast catching', 'so fast to catch'], answer: 0, why: '副詞＋enough to do。fast enough to catch。' },
+      { sentence: 'It is [too cold to not] go out.', choices: ['too cold to', 'so cold to', 'cold enough not', 'too cold not to'], answer: 0, why: '「寒すぎて外出できない」は too cold to go out。not は不要。' },
+      { sentence: 'The room was [enough large] for twenty people.', choices: ['large enough', 'too large enough', 'enough largely', 'so large enough'], answer: 0, why: 'enough は形容詞のあと。large enough for twenty people。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
