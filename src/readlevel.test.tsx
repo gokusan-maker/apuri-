@@ -1805,3 +1805,11 @@ it('京大専用の長文113「才能と努力」：京大の下限600語以上�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
 })
+
+it('東大専用の長文111「都心に入る車に料金を課すべきか」：600語以上・1文18語以上で、要約の空所補充（3つ）つき。東大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('東大').find((x) => x.id === 'todai-congestion-charge')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(p.summary?.blanks).toHaveLength(3)
+})

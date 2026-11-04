@@ -33458,6 +33458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-congestion-charge',
+    title: 'Should Drivers Pay to Enter City Centers?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Traffic congestion is one of the most frustrating features of modern city life. Drivers waste hours each week sitting in slow-moving traffic, buses are delayed, and the exhaust from idling engines pollutes the air. Building more roads has often failed to solve the problem, since new roads tend to attract additional traffic until they too become crowded. In response, several large cities have introduced congestion charges, requiring drivers to pay a fee to enter the busiest central areas during peak hours. These schemes have reduced traffic in some places, but they remain highly controversial, and many other cities are still debating whether to follow.",
+      "Supporters argue that congestion charges use a simple economic principle to solve a difficult problem. Road space in a city center is limited, yet when it is free to use, drivers have no reason to consider the delays they cause for others. By attaching a price to driving at the busiest times, a charge encourages some people to travel at different times, to use public transport, or to combine trips, leaving the roads clearer for those who most need them, such as delivery vehicles and emergency services.",
+      "Supporters also point to evidence from cities where charges have been introduced. In several cases, traffic in the charging zone fell significantly within a short time, journey times became more reliable, and air quality improved. The money raised has often been invested in buses, cycling routes, and pedestrian areas. ( A ) the schemes were unpopular at first, public support in some cities grew after residents experienced the benefits, and proposals to abolish the charges later met with little enthusiasm.",
+      "Critics, however, argue that congestion charges are unfair to people with lower incomes. A fee that is a minor inconvenience for a wealthy driver may be a serious burden for a worker who has no practical alternative to driving, perhaps because public transport is limited or because his or her job requires carrying tools or working at night. In this view, the charge allows the rich to buy access to the city while pushing others out, turning a public space into something that must be paid for.",
+      "Business owners in central areas have also expressed concern. Some fear that customers will avoid the charging zone and shop elsewhere, particularly in large shopping centers on the edge of the city where parking is free. Others worry about the cost to small firms that depend on vans and trucks for deliveries. Although studies in some cities found that the overall effect on business was small, the impact may vary greatly depending on the type of business and the design of the scheme. Shops that rely on passing pedestrians may even benefit from quieter streets.",
+      "The design of a scheme can address some of these concerns. Many cities offer discounts or exemptions for residents of the zone, for people with disabilities, and for certain essential vehicles. Charges can vary according to the time of day, encouraging drivers to avoid only the busiest periods. Perhaps most importantly, the success of a congestion charge seems to depend on the availability of good alternatives; a charge introduced without improvements in public transport is likely to seem like a punishment rather than an encouragement to change.",
+      "The debate over congestion charges reflects a broader question about how cities should manage scarce public space. Roads have traditionally been treated as free to use, but this does not mean that they cost nothing; the costs simply appear in other forms, such as delays, pollution, and accidents. Whether a charge is the right solution may depend on local conditions, yet the discussion encourages citizens to consider who currently bears these costs, and how the benefits of a less congested city could be shared more fairly.",
+    ],
+    ja: [
+      '交通渋滞は、現代の都市生活の最もいらだたしい特徴の一つである。運転する人々はゆっくりとしか進まない車の列の中で毎週何時間もむだにし、バスはおくれ、止まったままのエンジンの排気ガスが空気をよごす。新しい道路は、それもまた混雑するまで追加の交通を引きよせる傾向があるので、道路をふやしても問題はしばしば解決しなかった。これにこたえて、いくつかの大都市は、混雑する時間帯に最もにぎやかな中心部に入るには料金をはらうよう運転する人に求める、混雑課金を取り入れた。こうした制度はいくつかの場所で交通を減らしたが、なお大きな議論をよんでおり、ほかの多くの都市は、それにならうかどうかをまだ議論している。',
+      '支持する人々は、混雑課金はむずかしい問題を解決するために単純な経済の原理を使っていると主張する。都市の中心部の道路の空間は限られているが、無料で使えるとき、運転する人には自分がほかの人に引き起こすおくれを考える理由がない。最も混雑する時間の運転に値段をつけることで、課金は一部の人々に、ちがう時間に移動したり、公共交通を使ったり、用事をまとめたりするようはげまし、配達の車や救急の車両のように道路を最も必要とする人々のために道路を空けるのである。',
+      '支持する人々はまた、課金が取り入れられた都市からの証拠をあげる。いくつかの例では、短いあいだに課金区域の交通が大きく減り、移動時間がより確かになり、空気の質がよくなった。集められたお金は、しばしばバスや自転車の道や歩行者の区域に投資されてきた。制度は最初は人気がなかったが、いくつかの都市では、住民が利益を経験したあとで国民のささえがふえ、のちに課金を廃止しようという提案にはほとんど熱意が集まらなかった。',
+      'しかし批判する人々は、混雑課金は収入の低い人々に不公平だと主張する。裕福な運転者にはちょっとした不便にすぎない料金も、公共交通が限られていたり、仕事で道具を運んだり夜に働いたりしなければならなかったりして、運転以外に実際的な選択肢のない働き手には重い負担になりうる。この見方では、課金は裕福な人々が都市への出入りを買うことを許しながらほかの人々を追い出し、公共の空間をお金をはらわなければならないものに変えてしまう。',
+      '中心部の商売をする人々も心配を表している。客が課金区域をさけ、とくに駐車が無料の都市のはずれの大きなショッピングセンターなど、ほかの場所で買い物をするのではないかとおそれる人もいる。配達をバンやトラックに頼っている小さな会社への費用を心配する人もいる。いくつかの都市の研究では商売への全体の影響は小さかったが、その影響は商売の種類や制度の設計によって大きくちがうかもしれない。通りがかる歩行者に頼っている店は、静かになった通りからむしろ利益を得ることさえあるかもしれない。',
+      '制度の設計によって、こうした心配のいくつかに取り組むことができる。多くの都市は、区域の住民や障害のある人々や、ある種の欠かせない車両に割引や免除をあたえている。料金は時間帯によって変えることができ、運転する人が最も混雑する時間だけをさけるようはげますことができる。おそらく最も大切なのは、混雑課金の成功がよい代わりの手段があるかどうかにかかっているように思われることである。公共交通をよくせずに取り入れられた課金は、変わることへのはげましではなく罰のように思われやすいだろう。',
+      '混雑課金をめぐる議論は、都市が乏しい公共の空間をどう管理すべきかという、より広い問いを反映している。道路は伝統的に無料で使えるものとしてあつかわれてきたが、それは費用がかからないという意味ではない。費用は、おくれや汚染や事故のような別の形で現れているだけである。課金が正しい解決策かどうかは地域の状況によるかもしれないが、この議論は市民に、今だれがこうした費用を負担しているのか、そして混雑の少ない都市の利益をどうすればより公平に分かち合えるのかを考えるようはげましてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「制度は最初は人気がなかったが、のちにささえがふえた」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say congestion charges put a ( 1 ) on driving at busy times and have reduced traffic and pollution in several cities. Critics argue that the charges are unfair to people with lower ( 2 ) and may hurt local businesses. Success seems to depend on the availability of good ( 3 ), such as public transport.',
+      blanks: [
+        { choices: ['price', 'limit', 'ban', 'prize'], answer: 0, why: '第2段落 By attaching a price to driving at the busiest times。' },
+        { choices: ['incomes', 'speeds', 'ages', 'heights'], answer: 0, why: '第4段落 congestion charges are unfair to people with lower incomes。' },
+        { choices: ['alternatives', 'parking', 'roads', 'cars'], answer: 0, why: '第6段落 depend on the availability of good alternatives。' },
+      ],
+    },
+    tf: [
+      { statement: '新しい道路は、追加の交通を引きよせる傾向がある。', answer: true, why: '第1段落 new roads tend to attract additional traffic。' },
+      { statement: '課金を取り入れた都市では、交通はまったく減らなかった。', answer: false, why: '第3段落 traffic in the charging zone fell significantly。' },
+      { statement: '多くの都市は、区域の住民に割引や免除をあたえている。', answer: true, why: '第6段落 Many cities offer discounts or exemptions for residents of the zone。' },
+      { statement: '筆者によれば、無料の道路には費用がまったくかからない。', answer: false, why: '第7段落 this does not mean that they cost nothing。' },
+    ],
+    qa: [
+      { q: 'Where has the money raised by charges often been invested?', choices: ['In buses, cycling routes, and pedestrian areas.', 'In new parking lots.', 'In wider highways.', 'In car factories.'], answer: 0, why: '第3段落 invested in buses, cycling routes, and pedestrian areas。' },
+      { q: 'Why might a charge without better public transport seem like a punishment?', choices: ['People would have no good alternative to driving.', 'Buses would become free.', 'Roads would be closed.', 'Cars would become cheaper.'], answer: 0, why: '第6段落 a charge introduced without improvements in public transport is likely to seem like a punishment。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
