@@ -32062,6 +32062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ambiguity',
+    title: 'In Defense of Ambiguity',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually regard clarity as a virtue and ambiguity as a fault. A good instruction, a well-written law, or a precise scientific statement leaves no doubt about what it means, and when words can be understood in more than one way, confusion and misunderstanding often follow. Teachers correct ambiguous sentences in students' essays, and contracts are drafted with great care to avoid any uncertainty about their terms. Yet ambiguity is not always a defect. In many areas of human life, the capacity of words, images, and situations to carry more than one meaning is not a problem to be eliminated but a source of richness.",
+      "Consider poetry. A poem that could be understood in only one way would often be a poor poem. Much of the power of poetic language lies in its ability to suggest several meanings at once, to hold together ideas that ordinary prose would separate, and to invite readers to return again and again, finding something new each time. The ambiguity of a great poem is not carelessness but a deliberate richness, an invitation to the reader to take part in the making of meaning. Two readers may find quite different things in the same lines, and both may be right.",
+      "Ambiguity also plays an important role in human relationships. People rarely say exactly what they mean, and much social life depends on hints, suggestions, and unspoken understandings. ( A ) this indirectness can lead to misunderstanding, it also allows people to express feelings tactfully, to make requests without seeming demanding, and to leave room for others to respond without embarrassment. A world in which everyone spoke with complete directness might be clearer, but it might also be harsher.",
+      "Even in politics and law, a degree of ambiguity can be useful. Agreements between opposing groups are sometimes possible only because their language allows each side to interpret it in a way it can accept. Constitutions often express general principles, such as liberty or equality, whose precise meaning is left to be worked out over time. This openness allows laws to adapt to circumstances that their authors could not have foreseen, although it also leaves room for dispute about how they should be applied. Each generation, in effect, must decide again what these principles require in its own time.",
+      "Of course, ambiguity can also be misused. Politicians may speak vaguely in order to avoid commitment, advertisers may make claims that sound impressive but mean very little, and people may hide behind ambiguous language to escape responsibility for what they have said. In such cases, ambiguity serves not to enrich understanding but to obscure it. The difference lies in whether ambiguity opens up meaning or conceals it.",
+      "Learning to live with ambiguity is also a mark of intellectual maturity. Young children often want the world to be divided clearly into good and bad, true and false. As people grow older, they may come to recognize that many situations are complex, that people can have mixed motives, and that questions do not always have simple answers. The ability to tolerate ambiguity without anxiety, to hold several possibilities in mind at once, is closely connected with the capacity for careful judgment. Those who demand certainty in every case may end up accepting false certainties simply because they are comforting.",
+      "Perhaps, then, the task is not to eliminate ambiguity but to understand when it is valuable and when it is harmful. Where precision is essential, as in instructions for operating machinery or the dosage of a medicine, ambiguity should be avoided. Where richness and flexibility matter, as in art, conversation, and the interpretation of human life, ambiguity may be something to be cherished. Wisdom lies in knowing the difference, and in being able to speak clearly when clarity is needed while remaining open to the many meanings the world can hold.",
+    ],
+    ja: [
+      '私たちはふつう、明確さを美徳とみなし、あいまいさを欠点とみなす。よい指示や、うまく書かれた法律や、正確な科学の文は、何を意味しているのかについて疑いを残さず、ことばが二通り以上に理解できるときには、混乱や誤解が生じることが多い。先生は生徒の作文のあいまいな文を直し、契約書はその条件についてどんな不確かさもないよう、細心の注意をはらって作成される。しかし、あいまいさはいつも欠点なのではない。人間の生活の多くの分野で、ことばや像や状況が二つ以上の意味をもてることは、なくすべき問題ではなく、豊かさのみなもとなのである。',
+      '詩を考えてみよう。一通りにしか理解できない詩は、しばしばまずい詩であろう。詩のことばの力の多くは、いくつもの意味を同時に示唆し、ふつうの散文なら切りはなしてしまう考えを結びつけ、読者に何度もたちもどらせ、そのたびに何か新しいものを見つけさせる力にある。偉大な詩のあいまいさは不注意ではなく、意図された豊かさであり、意味を作ることに加わるようにという読者への誘いなのである。二人の読者が同じ詩句にまったくちがうものを見いだし、しかも両方とも正しいということもありうる。',
+      'あいまいさはまた、人間関係でも大切な役割を果たしている。人々は言いたいことをそのまま言うことはめったになく、社会生活の多くはほのめかしや示唆や口に出されない了解にたよっている。この遠回しさは誤解につながることもあるが、気持ちを気配りをもって表したり、要求がましく見えずに頼みごとをしたり、相手がはずかしい思いをせずに応えられる余地を残したりすることも可能にする。だれもが完全にまっすぐ話す世界はより明確かもしれないが、よりきびしい世界でもあるかもしれない。',
+      '政治や法律においてさえ、ある程度のあいまいさは役に立ちうる。対立する集団のあいだの合意は、そのことばがそれぞれの側に受け入れられる形で解釈できるからこそ可能になることがある。憲法はしばしば自由や平等のような一般的な原則を表しており、その正確な意味は時をかけて明らかにされるようにしてある。この開かれ方によって、法律は作った人々が予見できなかった状況に適応できるが、それをどう当てはめるべきかについての争いの余地も残すことになる。それぞれの世代は、事実上、これらの原則が自分の時代に何を求めるのかをあらためて決めなければならないのである。',
+      'もちろん、あいまいさは悪用されることもある。政治家はかかわりをさけるためにあいまいに話すかもしれず、広告は立派に聞こえるがほとんど何も意味しない主張をするかもしれず、人々は自分の言ったことの責任から逃れるためにあいまいなことばのかげにかくれるかもしれない。そうした場合、あいまいさは理解を豊かにするのではなく、それをおおいかくすのに役立っている。ちがいは、あいまいさが意味を開くのか、それともかくすのかにある。',
+      'あいまいさとともに生きることを学ぶのは、知的な成熟のしるしでもある。幼い子どもはしばしば、世界がよいものと悪いもの、本当のことと本当でないことにはっきり分けられていることを望む。人々は成長するにつれて、多くの状況が複雑であり、人がまじりあった動機をもちうること、そして問いにはいつも単純な答えがあるわけではないことを認めるようになるかもしれない。不安にならずにあいまいさにたえ、いくつもの可能性を同時に心にとどめておく力は、注意深い判断の力と深く結びついている。あらゆる場合に確かさを求める人は、心地よいというだけの理由で、まちがった確かさを受け入れてしまうことになるかもしれない。',
+      'それなら、課題はあいまいさをなくすことではなく、それがいつ価値があり、いつ有害なのかを理解することなのかもしれない。機械の操作の指示や薬の量のように、正確さが欠かせないところでは、あいまいさはさけるべきである。芸術や会話や人間の生活の解釈のように、豊かさと柔軟さが大事なところでは、あいまいさは大切にすべきものかもしれない。知恵とは、そのちがいを知り、明確さが必要なときにははっきり話しながら、世界がもちうる多くの意味に開かれていられることにあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「遠回しさは誤解につながることもあるが、気配りをもって表すことも可能にする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、あいまいさはいつも欠点である。', answer: false, why: '第1段落 Yet ambiguity is not always a defect。' },
+      { statement: '筆者によれば、偉大な詩のあいまいさは意図された豊かさである。', answer: true, why: '第2段落 is not carelessness but a deliberate richness。' },
+      { statement: '筆者によれば、あいまいなことばのおかげで合意が可能になることがある。', answer: true, why: '第4段落 Agreements ... are sometimes possible only because their language allows each side to interpret it。' },
+      { statement: '筆者によれば、薬の量の指示はあいまいでもかまわない。', answer: false, why: '第7段落 Where precision is essential ... ambiguity should be avoided。' },
+    ],
+    qa: [
+      { q: 'How can ambiguity be misused, according to the fifth paragraph?', choices: ['To escape responsibility for what one has said.', 'To write better poems.', 'To make agreements possible.', 'To express feelings tactfully.'], answer: 0, why: '第5段落 people may hide behind ambiguous language to escape responsibility。' },
+      { q: 'What is the ability to tolerate ambiguity connected with?', choices: ['The capacity for careful judgment.', 'Childish thinking.', 'Speaking very directly.', 'Avoiding all decisions.'], answer: 0, why: '第6段落 is closely connected with the capacity for careful judgment。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
