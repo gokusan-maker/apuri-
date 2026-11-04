@@ -2400,6 +2400,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 72 L36 84 M46 74 L44 86 M54 74 L56 86 M60 72 L64 84" fill="none" stroke="#9a3412" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'ribboneel')
+    return (
+      <g>
+        {/* 鼻先のひらひらと、長い背びれ */}
+        <path d="M42 26 Q38 16 44 12 M58 26 Q62 16 56 12" fill="none" stroke="#facc15" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M24 60 Q50 52 76 60" fill="none" stroke="#facc15" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
