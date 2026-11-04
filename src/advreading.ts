@@ -31582,6 +31582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mercy',
+    title: 'Justice and Mercy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Justice and mercy are both regarded as virtues, yet they seem to pull in opposite directions. Justice demands that people receive what they deserve: that wrongdoers be held responsible, that rules be applied consistently, and that similar cases be treated alike. Mercy, by contrast, asks us to give less punishment than is deserved, to forgive, to make exceptions, and to take into account circumstances that the rules do not recognize. If justice is a matter of giving each person his or her due, mercy appears to be a deliberate departure from it. How, then, can both be virtues at the same time?",
+      "One answer is that justice and mercy apply to different aspects of a situation. Justice looks at the act and asks what it deserves; mercy looks at the person and asks what he or she needs. A judge who sentences a young offender may recognize that the crime deserves a severe punishment, while also seeing that the offender, who has had a difficult life and shows genuine remorse, might be helped more by a lighter sentence that allows him or her to rebuild a life. Mercy, in this view, does not deny justice but supplements it with attention to the particular human being.",
+      "Yet this answer raises a difficulty. If mercy depends on the particular qualities of the person who is shown it, then two people who commit the same act may be treated differently, and this seems to violate the principle that similar cases should be treated alike. ( A ) mercy may be kind to the individual who receives it, it may seem unfair to others who were not shown the same consideration. A system in which punishment depended on the sympathy of judges would risk favoring those who are able to present themselves attractively, while others are treated harshly.",
+      "For this reason, some thinkers have argued that mercy has its proper place not in the formal institutions of law but in personal relationships. A parent may forgive a child, or a friend may overlook an injury, without anyone else having a claim to be treated in the same way. In such relationships, mercy expresses love and the desire to preserve a bond, rather than a judgment about what is deserved. The law, by contrast, must be impartial, and impartiality may leave little room for the personal generosity that mercy involves.",
+      "However, even within the law, there are reasons to believe that some room for mercy is necessary. Rules are written in general terms and cannot anticipate every situation. A law applied with perfect strictness may produce results that are clearly cruel or absurd in particular cases. The capacity to recognize such cases and to soften the application of the rule may be not a failure of justice but a part of it, since justice, properly understood, aims not merely at consistency but at treating people rightly.",
+      "Mercy also has value for the one who shows it. To forgive is to release oneself from resentment, and to refrain from punishment when one could inflict it is to recognize a shared vulnerability. Every human being makes mistakes, and every human being will at some point need the understanding of others. A person or a society that never shows mercy may become hard and unforgiving, unable to recognize the possibility of change in those who have done wrong.",
+      "Perhaps, then, justice and mercy are best understood not as opposites but as partners that correct each other's excesses. Justice without mercy risks becoming cold and mechanical, applying rules without regard for the human beings they affect. Mercy without justice risks becoming arbitrary, favoring some and neglecting others, and failing to take wrongdoing seriously. The wise person, and the wise society, will hold the two in tension, recognizing that both are necessary if people are to be treated not only fairly but also humanely.",
+    ],
+    ja: [
+      '正義と慈悲はどちらも美徳とみなされているが、反対の方向に引っぱりあっているように思われる。正義は人々が自分に値するものを受けとることを求める。悪いことをした者に責任をとらせ、規則を一貫して当てはめ、似た場合を同じようにあつかうことである。それに対して慈悲は、値するよりも軽い罰をあたえ、ゆるし、例外を作り、規則が認めない事情を考えに入れるよう私たちに求める。正義が各人にその人のふさわしい分をあたえることなら、慈悲はそこから意図的にはずれることのように見える。それなら、どうして両方が同時に美徳でありうるのだろうか。',
+      '一つの答えは、正義と慈悲は状況のちがう面に当てはまるというものである。正義は行為を見て、それが何に値するかを問う。慈悲は人を見て、その人が何を必要としているかを問う。若い犯罪者に判決を下す裁判官は、その罪が重い罰に値すると認めながら、苦しい人生を送り、本当に反省しているその者が、生活を立て直すことをゆるす軽い判決によって、より助けられるかもしれないことにも気づくかもしれない。この見方では、慈悲は正義を否定するのではなく、特定の人間への注意によってそれをおぎなうのである。',
+      'しかしこの答えはむずかしさを生む。慈悲がそれを示される人の特定の性質にかかっているなら、同じ行為をした二人がちがうあつかいを受けるかもしれず、これは似た場合を同じようにあつかうべきだという原則にそむくように思われる。慈悲はそれを受ける個人にはやさしいかもしれないが、同じ配慮を示されなかったほかの人々には不公平に思われるかもしれない。罰が裁判官の同情にかかっている仕組みは、自分をうまく見せられる人をひいきし、ほかの人をきびしくあつかう危険をおかすだろう。',
+      'このため、慈悲の本来の場所は法律という正式な制度の中ではなく、個人的な関係の中にあると主張した思想家もいる。親が子どもをゆるしたり、友人が受けた害を見のがしたりするとき、ほかのだれも同じようにあつかわれる権利を主張することはない。そうした関係では、慈悲は、何に値するかについての判断ではなく、愛と、きずなを保ちたいという願いを表している。それに対して法律は公平でなければならず、公平さは慈悲がふくむ個人的な気前のよさにほとんど余地を残さないかもしれない。',
+      'しかし、法律の中でさえ、慈悲のためのある程度の余地が必要だと信じる理由がある。規則は一般的なことばで書かれており、あらゆる状況を予想することはできない。完全にきびしく当てはめられた法律は、特定の場合に明らかに残酷だったりばかげていたりする結果を生むかもしれない。そうした場合を見分け、規則の当てはめをやわらげる力は、正義の失敗ではなく、その一部なのかもしれない。正しく理解された正義は、単に一貫性だけでなく、人々を正しくあつかうことを目指しているからである。',
+      '慈悲はまた、それを示す人にとっても価値がある。ゆるすことは自分をうらみから解き放つことであり、罰をあたえられるときにそれをひかえることは、共通の弱さを認めることである。すべての人間はまちがいをし、すべての人間はいつか他人の理解を必要とするだろう。けっして慈悲を示さない人や社会は、かたく、ゆるさないものになり、悪いことをした人々の中に変わる可能性を認めることができなくなるかもしれない。',
+      'それなら、正義と慈悲は反対のものとしてではなく、たがいの行きすぎを正しあうパートナーとして理解するのが最もよいのかもしれない。慈悲のない正義は、影響を受ける人間のことを考えずに規則を当てはめる、冷たく機械的なものになる危険がある。正義のない慈悲は、ある人をひいきしほかの人をなおざりにし、悪いことを真剣に受けとめない、気まぐれなものになる危険がある。賢明な人と賢明な社会は、人々が公平にだけでなく人間らしくもあつかわれるためには両方が必要だと認め、その二つを緊張のうちに保つだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「慈悲は受ける個人にはやさしいかもしれないが、ほかの人には不公平に思われるかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、正義は人々が自分に値するものを受けとることを求める。', answer: true, why: '第1段落 Justice demands that people receive what they deserve。' },
+      { statement: '筆者によれば、慈悲がある仕組みでは、同じ行為をした二人がいつも同じあつかいを受ける。', answer: false, why: '第3段落 two people who commit the same act may be treated differently。' },
+      { statement: '筆者によれば、完全にきびしく当てはめられた法律は残酷な結果を生むことがある。', answer: true, why: '第5段落 may produce results that are clearly cruel or absurd。' },
+      { statement: '筆者は、正義と慈悲は反対のものだと結論している。', answer: false, why: '第7段落 not as opposites but as partners。' },
+    ],
+    qa: [
+      { q: 'Where do some thinkers say mercy has its proper place?', choices: ['In personal relationships.', 'Only in courts of law.', 'In business contracts.', 'In scientific research.'], answer: 0, why: '第4段落 mercy has its proper place not in the formal institutions of law but in personal relationships。' },
+      { q: 'What risk does justice without mercy run, according to the last paragraph?', choices: ['Becoming cold and mechanical.', 'Becoming arbitrary.', 'Favoring some people.', 'Ignoring all rules.'], answer: 0, why: '第7段落 Justice without mercy risks becoming cold and mechanical。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
