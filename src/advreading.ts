@@ -33342,6 +33342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-privacy',
+    title: 'Why Privacy Matters',
+    level: '難関大（評論）',
+    paragraphs: [
+      "It is often said that people who have nothing to hide have nothing to fear. If we are not doing anything wrong, the argument goes, why should we mind if governments or companies collect information about our movements, purchases, and conversations? This reasoning has considerable appeal, especially when surveillance is presented as a means of preventing crime or improving services. Yet it rests on a narrow understanding of privacy, as if the only reason to keep something private were that it is shameful or illegal. A closer look suggests that privacy serves purposes far more important than concealing wrongdoing.",
+      "One of these purposes is the protection of personal freedom. When people know that they are being watched, they tend to behave differently, avoiding actions or opinions that might attract disapproval, even when those actions are perfectly lawful. Over time, the awareness of constant observation can produce a quiet form of conformity, in which people limit themselves not because they are forbidden to do certain things but because they fear how their behavior might be judged. Privacy, in this sense, creates a space in which individuals can think, experiment, and make mistakes without fear.",
+      "Privacy is also closely connected to our relationships with others. We share different aspects of ourselves with different people: we may tell a close friend things we would never tell a colleague, and reveal to a doctor information we would keep from our neighbors. ( A ) these distinctions may seem minor, they are essential to the variety of human relationships. If everyone knew everything about us, intimacy would lose much of its meaning, since trust depends partly on the choice to reveal ourselves to some people and not to others.",
+      "In the digital age, the threats to privacy have changed in character. Information is no longer gathered mainly by observing people directly but by collecting the traces they leave whenever they use their phones, computers, or bank cards. Each piece of data may seem trivial on its own, yet when combined and analyzed, such data can reveal a remarkable amount about a person's habits, health, beliefs, and relationships. Much of this information is gathered without people's full understanding, buried in agreements that few have time to read.",
+      "Defenders of data collection point out that it brings real benefits. Information about traffic patterns can reduce congestion, medical data can improve the treatment of diseases, and personalized services can save time and effort. Few people would wish to give up all of these advantages. The question, therefore, is not whether information should ever be collected, but who should control it, for what purposes it may be used, and how individuals can be protected against its misuse.",
+      "Answering these questions requires thinking of privacy not only as an individual preference but as a social value. Even people who are willing to share their own information may affect others, since data about one person often reveals information about family members, friends, and neighbors. Moreover, a society in which privacy has disappeared may become one in which those who hold information gain enormous power over those who do not. Protecting privacy may thus be necessary not only for individual freedom but also for maintaining a balance of power in society.",
+      "Perhaps the most important point is that privacy is not merely about hiding. It is about the ability to decide, to some extent, how we present ourselves to the world and who may know what about us. This ability is part of what allows us to develop as individuals and to form relationships based on trust. Losing it may not feel dramatic at any particular moment, but its gradual disappearance could change the character of social life in ways that would be difficult to reverse.",
+    ],
+    ja: [
+      'かくすものが何もない人には恐れるものも何もない、とよく言われる。何も悪いことをしていないなら、政府や会社が自分の移動や買い物や会話についての情報を集めても、なぜ気にする必要があるのか、というわけである。この理屈は、とくに監視が犯罪を防いだりサービスをよくしたりする手段として示されるとき、かなりの説得力をもつ。しかしそれは、何かを人に知られないようにしておく理由が、それがはずかしいか違法であることだけであるかのような、せまいプライバシーの理解にもとづいている。よく見ると、プライバシーは悪事をかくすことよりはるかに大切な目的に役立っていることがわかる。',
+      'そうした目的の一つは、個人の自由を守ることである。人々は見られていると知っていると、ふるまいを変える傾向があり、まったく合法的な行動や意見であっても、非難を招くかもしれないものはさけるようになる。時がたつにつれて、たえず観察されているという意識は、静かな形の画一化を生みうる。人々は、あることを禁じられているからではなく、自分のふるまいがどう判断されるかを恐れるために、自分を制限するようになるのである。この意味で、プライバシーは、個人が恐れずに考え、試し、まちがえることのできる空間を作り出す。',
+      'プライバシーはまた、他人との関係とも深く結びついている。私たちは、ちがう人にちがう面の自分を見せる。親しい友人には同僚にはけっして話さないことを話し、医者には近所の人々には知られないようにしておく情報を明かすかもしれない。こうした区別はささいに思えるかもしれないが、人間関係の多様さに欠かせない。だれもが私たちについてすべてを知っていたら、信頼は一部、ある人々には自分を明かし、ほかの人々には明かさないという選択にかかっているのだから、親密さはその意味の多くを失うだろう。',
+      'デジタル時代には、プライバシーへの脅威はその性格を変えた。情報はもはやおもに人々を直接観察することによってではなく、人々が電話やコンピュータや銀行のカードを使うたびに残す痕跡を集めることによって集められている。データの一つひとつはそれだけではささいに思えるかもしれないが、組み合わせて分析されると、人の習慣や健康や信念や人間関係についておどろくほど多くのことを明らかにしうる。この情報の多くは、ほとんどの人が読む時間のない取り決めの中にうもれたまま、人々が十分に理解しないうちに集められている。',
+      'データの収集を擁護する人々は、それが本当の利益をもたらすと指摘する。交通の流れについての情報は渋滞を減らし、医療のデータは病気の治療をよくし、一人ひとりに合わせたサービスは時間と手間を省くことができる。こうした利点をすべて手放したいと願う人はほとんどいないだろう。したがって問題は、情報をそもそも集めるべきかどうかではなく、だれがそれを管理すべきか、どんな目的のために使ってよいか、そして個人がその悪用からどうすれば守られるかなのである。',
+      'こうした問いに答えるには、プライバシーを個人の好みとしてだけでなく、社会的な価値として考える必要がある。自分の情報を共有してもよいと思っている人でさえ、ほかの人々に影響をあたえうる。ある人についてのデータは、しばしば家族や友人や近所の人々についての情報も明らかにするからである。さらに、プライバシーが消えた社会は、情報をもつ人々がもたない人々に対してばく大な力を得る社会になるかもしれない。したがって、プライバシーを守ることは、個人の自由のためだけでなく、社会の力のつりあいを保つためにも必要なのかもしれない。',
+      'おそらく最も大切な点は、プライバシーが単にかくすことではないということである。それは、自分を世界にどう見せるか、だれが自分について何を知ってよいかを、ある程度自分で決める能力にかかわっている。この能力は、私たちが個人として成長し、信頼にもとづく関係を結ぶことを可能にしているものの一部である。それを失うことは、どの瞬間にも劇的には感じられないかもしれないが、その少しずつの消失は、元にもどしにくいしかたで社会生活の性格を変えてしまうかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「区別はささいに思えるかもしれないが、人間関係の多様さに欠かせない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、プライバシーの目的は悪事をかくすことだけである。', answer: false, why: '第1段落 privacy serves purposes far more important than concealing wrongdoing。' },
+      { statement: '人々は見られていると知ると、ふるまいを変える傾向がある。', answer: true, why: '第2段落 When people know that they are being watched, they tend to behave differently。' },
+      { statement: 'データの一つひとつはささいでも、組み合わせると多くのことを明らかにしうる。', answer: true, why: '第4段落 when combined and analyzed, such data can reveal a remarkable amount。' },
+      { statement: '筆者は、情報はけっして集めるべきではないと主張している。', answer: false, why: '第5段落 The question, therefore, is not whether information should ever be collected。' },
+    ],
+    qa: [
+      { q: 'Why does the author call privacy a social value?', choices: ['Data about one person often reveals information about others.', 'Privacy is only a personal preference.', 'Everyone likes the same things.', 'Governments require it.'], answer: 0, why: '第6段落 data about one person often reveals information about family members, friends, and neighbors。' },
+      { q: 'What is privacy about, according to the last paragraph?', choices: ['The ability to decide how we present ourselves and who knows what about us.', 'Hiding crimes.', 'Avoiding all other people.', 'Collecting data about others.'], answer: 0, why: '第7段落 the ability to decide ... how we present ourselves to the world and who may know what about us。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
