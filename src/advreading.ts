@@ -30302,6 +30302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-praise',
+    title: 'The Art of Praise',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Praise is usually thought of as one of the simplest kindnesses we can offer another person. We praise children for their drawings, colleagues for their work, and friends for their achievements, and we assume that in doing so we are encouraging them and expressing our goodwill. Yet praise is a more complicated act than it first appears. It can inspire confidence or undermine it, strengthen a relationship or quietly distort it, and the same words of approval may have very different effects depending on how, when, and why they are spoken.",
+      "One difficulty is that praise always contains a judgment. To praise someone is to evaluate him or her, and to place oneself, at least for a moment, in the position of the one who decides what is worthy of approval. This is why praise from a person whose judgment we respect can mean so much, while praise from someone we do not respect may seem empty or even irritating. It is also why praise can create a subtle inequality: the one who praises assumes the authority to judge, and the one who is praised may come to depend on that judgment.",
+      "Psychologists have drawn attention to a further complication. Children who are frequently praised for being clever, some studies suggest, may become reluctant to attempt difficult tasks, since failure would threaten the identity for which they have been praised. Children who are praised instead for their effort or their strategies appear more willing to take on challenges and to persist when they encounter difficulty. ( A ) these findings have sometimes been simplified or exaggerated, they point to an important truth: praise teaches people what they are valued for, and so shapes what they think it is worth trying to become.",
+      "Praise can also become a substitute for genuine attention. It is easy to say \"Well done\" without having looked closely at what someone has done, and people are often quick to detect when praise is automatic rather than considered. Praise that is given indiscriminately loses its meaning, much as a currency loses its value when too much of it is printed. By contrast, praise that responds to specific qualities of a person's work shows that the work has actually been seen, and it is this recognition, rather than the approval itself, that people often value most.",
+      "There is, moreover, a danger that the desire for praise may displace the intrinsic satisfactions of an activity. A child who reads in order to be praised may stop reading when the praise stops, while one who reads for the pleasure of stories will continue regardless. Adults, too, may find that work done chiefly to win approval feels hollow, since its value seems to lie entirely in the opinions of others. Praise, in such cases, does not encourage the activity so much as transform it into a means to an end that lies outside it.",
+      "None of this means that we should stop praising one another. Human beings need to know that their efforts are noticed and that their achievements matter to others, and a world without praise would be colder and more discouraging. The question is how to praise well. Good praise is sincere, specific, and proportionate; it attends to what is genuinely admirable rather than to what will merely please; and it is offered in a spirit of shared appreciation rather than of superiority. Such praise invites the person praised to look at his or her own work with fresh eyes.",
+      "Perhaps, then, the best praise is less a verdict than an act of attention. When we tell someone precisely what we admire in what he or she has done, we are not merely rewarding the person but joining him or her in noticing something of value. In this way, praise can become a form of conversation rather than a pronouncement, a moment in which two people recognize together what is good. Understood in this way, praise is not a simple kindness after all, but a small art that requires honesty, care, and the willingness truly to see another person.",
+    ],
+    ja: [
+      'ほめることは、ふつう、私たちが他人にできる最も単純な親切の一つと考えられている。私たちは子どもの絵を、同僚の仕事を、友人の業績をほめ、そうすることで相手をはげまし、自分の好意を表していると思っている。しかしほめることは、最初に見えるよりも複雑な行為である。それは自信をあたえることもそこなうこともあり、関係を強めることもひそかにゆがめることもある。そして同じ賞賛のことばでも、どのように、いつ、なぜ語られるかによって、まったくちがう効果をもちうるのである。',
+      '一つのむずかしさは、ほめることにはいつも判断がふくまれているということである。人をほめることはその人を評価することであり、少なくとも一瞬は、何が賞賛に値するかを決める者の立場に自分を置くことである。だからこそ、判断を尊敬している人からの賞賛は大きな意味をもちうる一方で、尊敬していない人からの賞賛は空虚に、あるいはいらだたしくさえ思われることがある。またそれゆえに、ほめることはかすかな不平等を生みうる。ほめる者は判断する権威を引き受け、ほめられる者はその判断にたよるようになるかもしれないからである。',
+      '心理学者はさらなる複雑さに注意を向けてきた。いくつかの研究によれば、かしこいことでたびたびほめられる子どもは、失敗すれば自分がほめられてきたアイデンティティがおびやかされるので、むずかしい課題に挑戦したがらなくなるかもしれない。かわりに努力ややり方でほめられる子どもは、挑戦を引き受け、困難にぶつかってもねばり強く続けようとするようである。こうした発見はときに単純化されたり誇張されたりしてきたが、それは大切な真実を指し示している。ほめることは、人に自分が何によって評価されているかを教え、それによって、何になろうとすることに価値があると考えるかを形づくるのである。',
+      'ほめることはまた、本物の注意のかわりになってしまうこともある。人がしたことをよく見ないで「よくできたね」と言うのはたやすく、人は、賞賛が考えぬかれたものではなく機械的なものであるときに、すぐに気づくことが多い。だれかれかまわずあたえられる賞賛は、刷りすぎた通貨が価値を失うのと同じように、意味を失う。それに対して、人の仕事の具体的な性質に応える賞賛は、その仕事が実際に見られたことを示しており、人がしばしば最も大切にするのは、賞賛そのものよりも、この認められることなのである。',
+      'そのうえ、ほめられたいという欲求が、活動そのものの内側にある満足を追いやってしまう危険もある。ほめられるために本を読む子どもは、賞賛がやめば読むのをやめるかもしれないが、物語の楽しさのために読む子どもは、それにかかわらず読み続けるだろう。おとなもまた、主に承認を得るためにした仕事は、その価値がすべて他人の意見にあるように思われるので、むなしく感じるかもしれない。そうした場合、ほめることは活動をうながすというよりも、それを、その外にある目的のための手段に変えてしまうのである。',
+      'このどれも、私たちがたがいにほめるのをやめるべきだということを意味しない。人間は自分の努力が気づかれ、自分の業績が他人にとって意味があると知る必要があり、賞賛のない世界はより冷たく、よりやる気をなくさせるものになるだろう。問題は、どうすればよくほめられるかである。よい賞賛は誠実で、具体的で、つりあいがとれている。単に喜ばせることではなく本当に称賛すべきことに目を向け、優越の気持ちではなく、ともに価値を認める気持ちで差し出される。そのような賞賛は、ほめられた人に、自分の仕事を新しい目で見るよううながすのである。',
+      'それなら、最もよい賞賛とは、判定というよりも注意の行為なのかもしれない。相手がしたことの何を称賛しているのかを正確に伝えるとき、私たちは単にその人にむくいているのではなく、価値ある何かに気づくことにその人とともに加わっているのである。このようにして、ほめることは宣告ではなく一種の対話に、二人がともに何がよいものかを認める瞬間になりうる。このように理解すれば、ほめることは結局単純な親切ではなく、誠実さと配慮と、他人を本当に見ようとする気持ちを必要とする、小さな技術なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「こうした発見はときに単純化されてきたが、大切な真実を指し示している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ほめることにはいつも判断がふくまれている。', answer: true, why: '第2段落 praise always contains a judgment。' },
+      { statement: 'いくつかの研究によれば、かしこさでほめられる子どもはむずかしい課題に進んで挑戦する。', answer: false, why: '第3段落 may become reluctant to attempt difficult tasks。' },
+      { statement: '筆者によれば、だれかれかまわずあたえられる賞賛は意味を失う。', answer: true, why: '第4段落 Praise that is given indiscriminately loses its meaning。' },
+      { statement: '筆者は、たがいにほめるのをやめるべきだと主張している。', answer: false, why: '第6段落 None of this means that we should stop praising one another。' },
+    ],
+    qa: [
+      { q: 'What do people often value most in specific praise, according to the fourth paragraph?', choices: ['The recognition that their work has been seen.', 'The approval itself.', 'The number of words used.', 'A reward of money.'], answer: 0, why: '第4段落 it is this recognition, rather than the approval itself, that people often value most。' },
+      { q: 'What may happen to a child who reads only to be praised?', choices: ['The child may stop reading when the praise stops.', 'The child will read even more.', 'The child will become a writer.', 'Nothing will change.'], answer: 0, why: '第5段落 may stop reading when the praise stops。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
