@@ -32338,6 +32338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-lay-judges',
+    title: 'Should Citizens Judge Criminal Trials?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, ordinary citizens take part in deciding criminal trials, either as members of a jury or as lay judges who sit alongside professional judges. In 2009, Japan introduced a system in which six randomly selected citizens join three professional judges in serious criminal cases, deciding together both whether the accused is guilty and what punishment is appropriate. Since then, many thousands of people with no legal training have been asked to take on one of the heaviest responsibilities a society can give. The system has therefore become a useful case for examining the strengths and weaknesses of involving the public in justice.",
+      "Supporters argue that citizen participation makes justice more democratic. Courts exercise great power over people's lives, and it seems reasonable that the public should have a voice in how that power is used. When ordinary people help to decide cases, the reasoning of the court must be explained in language that non-specialists can understand, which may make the legal system more transparent and less distant from the society it serves. Participation may also increase public trust in the courts, since verdicts are no longer decided only by experts behind closed doors.",
+      "Supporters also claim that citizens bring valuable perspectives to the courtroom. Professional judges, who may hear similar cases year after year, can develop fixed habits of thinking, while lay participants may notice details or ask questions that experts have come to overlook. ( A ) citizens lack legal knowledge, they have experience of everyday life, of families, workplaces, and communities, that can help the court understand the circumstances in which a crime took place. A group that includes different ages, occupations, and backgrounds may also be less likely to share the same blind spots.",
+      "Critics, however, raise several concerns. Serving as a lay judge can be a heavy burden, both practically and emotionally. Participants must take time away from work and family, and they may be required to examine disturbing evidence, such as photographs of injuries or detailed descriptions of violent acts. Some people who have served report lasting stress, and they are often forbidden by law to discuss the details of their deliberations, which can make it harder to share and process their experiences with others.",
+      "There are also doubts about whether citizens can reach fair decisions. Untrained participants may be influenced by emotion, by the way the media has reported a case, or by the confident opinions of professional judges sitting beside them. Some critics worry that public participation could lead to harsher punishments, as citizens respond to the suffering of victims, while others fear that lay judges might simply follow the lead of the professionals, so that their participation becomes a formality rather than a genuine contribution. Both risks suggest that simply placing citizens in the courtroom is not enough to guarantee better decisions.",
+      "Research on these questions has produced mixed results. In some kinds of cases, the sentences given with the participation of citizens have tended to be somewhat heavier than before, while in others they have become lighter or more varied, as when lay judges show greater sympathy for defendants who acted under extreme pressure. Many former participants say that the experience was difficult but meaningful, and that it changed the way they think about crime, punishment, and their own responsibilities as members of society.",
+      "Whether citizen participation improves justice may therefore depend less on the principle itself than on how the system is designed and supported. Clear explanations of the law, careful protection of participants' well-being, and opportunities for lay judges to express independent opinions all seem important. Ultimately, the debate raises a basic question about democracy: whether the most serious decisions of a society should be left entirely to experts, or whether ordinary people, with all their limitations, should share responsibility for them.",
+    ],
+    ja: [
+      '多くの国で、ふつうの市民が、陪審員として、あるいは職業裁判官とならんですわる裁判員として、刑事裁判の判断に加わっている。2009年、日本は、無作為に選ばれた6人の市民が重大な刑事事件で3人の職業裁判官に加わり、被告人が有罪かどうかと、どんな刑罰が適切かの両方をいっしょに決める制度を取り入れた。それ以来、法律の訓練を受けていない何千人もの人々が、社会があたえうる最も重い責任の一つを引き受けるよう求められてきた。そのためこの制度は、司法に国民をかかわらせることの長所と短所を考えるうえで役に立つ例になっている。',
+      '支持する人々は、市民の参加が司法をより民主的にすると主張する。裁判所は人々の生活に大きな力をふるうのだから、その力の使われ方に一般の人々が声をもつのは理にかなっているように思われる。ふつうの人々が事件の判断を助けるとき、裁判所の理由づけは専門家でない人にもわかることばで説明されなければならず、そのことが司法制度をより透明にし、それが仕える社会から遠くないものにするかもしれない。判決がもはや専門家だけによって閉ざされた扉の向こうで決められるのではないので、参加は裁判所への国民の信頼を高めるかもしれない。',
+      '支持する人々はまた、市民が法廷に価値ある視点をもちこむと主張する。何年も似た事件を聞くかもしれない職業裁判官は、決まった考え方の習慣を身につけてしまうことがあるが、一般の参加者は、専門家が見落とすようになった細部に気づいたり、質問をしたりするかもしれない。市民は法律の知識を欠いているが、家族や職場や地域社会といった日常生活の経験をもっており、それは犯罪が起きた状況を裁判所が理解する助けになりうる。さまざまな年齢や職業や背景をもつ人々をふくむ集団は、同じ見落としを共有することも少ないかもしれない。',
+      'しかし批判する人々は、いくつかの心配をあげる。裁判員をつとめることは、実際の面でも感情の面でも重い負担になりうる。参加者は仕事や家族から時間をさかなければならず、けがの写真や暴力行為のくわしい説明のような、心をかき乱す証拠を調べることを求められるかもしれない。つとめた人の中には長く続くストレスを訴える人もおり、しかも評議のくわしい内容を話すことは法律でしばしば禁じられているので、その経験を他人と分かち合い、整理することがむずかしくなりうる。',
+      '市民が公正な判断にたどりつけるかどうかについても疑問がある。訓練を受けていない参加者は、感情や、メディアによる事件の報じ方や、となりにすわる職業裁判官の自信のある意見に影響されるかもしれない。市民が被害者の苦しみに反応して、国民の参加がより重い刑罰につながりうると心配する批判者もいれば、裁判員が単に専門家に従うだけで、その参加が本当の貢献ではなく形だけのものになってしまうことをおそれる人もいる。どちらの危険も、市民を法廷に置くだけではよりよい判断を保証するのに十分ではないことを示している。',
+      'こうした問いについての研究は、まちまちの結果を出している。ある種類の事件では、市民が参加して言い渡された刑は以前よりやや重くなる傾向があったが、ほかの事件では、極度の圧力の下で行動した被告人に裁判員がより大きな同情を示すときのように、軽くなったり、ばらつきが大きくなったりした。もと参加者の多くは、その経験はつらかったが意味があり、犯罪や刑罰や、社会の一員としての自分の責任についての考え方を変えたと言う。',
+      'したがって、市民の参加が司法をよりよくするかどうかは、原則そのものよりも、制度がどのように設計され、ささえられるかにかかっているのかもしれない。法律のわかりやすい説明、参加者の心身の健康の注意深い保護、そして裁判員が独立した意見を述べる機会は、どれも大切に思われる。結局のところ、この議論は民主主義についての基本的な問いを提起している。すなわち、社会の最も重大な判断はすべて専門家にまかせるべきなのか、それとも、さまざまな限界をもつふつうの人々も、その責任を分かち合うべきなのか、という問いである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「市民は法律の知識を欠いているが、日常生活の経験をもっている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say that citizen participation makes justice more ( 1 ) and brings fresh perspectives to the courtroom. Critics point to the heavy ( 2 ) on participants and doubt that untrained citizens can always decide fairly. Whether the system works may depend on how it is ( 3 ) and supported.',
+      blanks: [
+        { choices: ['democratic', 'expensive', 'secret', 'slow'], answer: 0, why: '第2段落 citizen participation makes justice more democratic。' },
+        { choices: ['burden', 'reward', 'salary', 'holiday'], answer: 0, why: '第4段落 Serving as a lay judge can be a heavy burden。' },
+        { choices: ['designed', 'forgotten', 'hidden', 'sold'], answer: 0, why: '第7段落 on how the system is designed and supported。' },
+      ],
+    },
+    tf: [
+      { statement: '日本の制度では、6人の市民が3人の職業裁判官とともに有罪かどうかと刑罰を決める。', answer: true, why: '第1段落 six randomly selected citizens join three professional judges。' },
+      { statement: '支持する人々によれば、市民の参加は裁判所の説明をよりわかりにくくする。', answer: false, why: '第2段落 must be explained in language that non-specialists can understand。' },
+      { statement: '裁判員は評議のくわしい内容を話すことを法律で禁じられていることが多い。', answer: true, why: '第4段落 they are often forbidden by law to discuss the details of their deliberations。' },
+      { statement: '研究によれば、市民が参加するとどの事件でも刑がかならず重くなった。', answer: false, why: '第6段落 in others they have become lighter or more varied。' },
+    ],
+    qa: [
+      { q: 'What do some critics fear lay judges might simply do?', choices: ['Follow the lead of the professionals.', 'Refuse to attend the trial.', 'Write new laws.', 'Ignore all evidence.'], answer: 0, why: '第5段落 lay judges might simply follow the lead of the professionals。' },
+      { q: 'What do many former participants say about the experience?', choices: ['It was difficult but meaningful.', 'It was easy and boring.', 'It was a waste of time.', 'It made them want to become lawyers.'], answer: 0, why: '第6段落 the experience was difficult but meaningful。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
