@@ -2514,6 +2514,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M20 60 Q28 52 36 60 Q44 68 52 60 Q60 52 68 60 Q76 68 84 60" fill="none" stroke="#7c2d12" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'bluetang')
+    return (
+      <g>
+        {/* 黄色いしっぽと黒いもよう */}
+        <path d="M78 50 L94 40 L94 68 Z" fill="#facc15" stroke="#172554" strokeWidth="1.5" />
+        <path d="M34 42 Q50 36 62 44 Q56 56 40 58" fill="none" stroke="#172554" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
