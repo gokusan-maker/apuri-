@@ -30622,6 +30622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-loyalty',
+    title: 'The Limits of Loyalty',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Loyalty occupies an uneasy place among the virtues. On the one hand, we admire the friend who stands by us in difficult times, the soldier who refuses to abandon his or her comrades, and the employee who remains with a company through periods of hardship. On the other hand, we are suspicious of loyalty when it leads people to defend those who have done wrong, to keep silent about injustice, or to place the interests of their own group above the claims of everyone else. The same quality that seems noble in one situation can appear dangerous in another.",
+      "Part of the difficulty is that loyalty is by its nature partial. To be loyal to someone is to give him or her a special place in one's concerns, to treat his or her interests as having a claim on us that the interests of strangers do not. This partiality seems to conflict with an important strand of moral thinking, according to which we should treat everyone impartially, giving equal weight to the interests of all. If morality requires impartiality, then loyalty, which is essentially a form of preference, may seem at best irrelevant to morality and at worst opposed to it.",
+      "Yet it is hard to imagine a good human life without loyalty. Friendship, family, and community all depend on the willingness of people to treat certain others as special, and a person who felt no particular attachment to anyone, who regarded his or her own friends exactly as he or she regarded strangers, would seem not admirably fair but strangely cold. ( A ) impartiality may be appropriate for a judge deciding a case, it would be a poor guide for a parent caring for a child or a friend comforting someone in distress.",
+      "The question, then, is not whether loyalty is good or bad, but what its proper limits are. One important distinction is between loyalty to persons and loyalty to their wrongdoing. A loyal friend does not abandon someone simply because he or she has made a mistake, but neither does true loyalty require us to assist in harming others or to pretend that a wrong is right. Indeed, the most loyal response to a friend who is behaving badly may be to tell him or her the truth, at the risk of displeasing him or her, rather than to offer the easy support of silence.",
+      "Loyalty to groups raises further complications. Loyalty to a nation, a company, or a political party can inspire great sacrifice and cooperation, but it can also lead people to excuse actions committed by their own side that they would condemn if committed by others. When loyalty becomes unconditional, it ceases to be a virtue and becomes a kind of blindness. The person who says \"my country, right or wrong\" has, in effect, given up the capacity to judge whether his or her country deserves support.",
+      "Some thinkers have suggested that loyalty is best understood as a commitment not merely to persons or groups but to the values they represent at their best. On this view, a loyal citizen is not one who supports every decision of the government, but one who cares enough about the country to criticize it when it fails to live up to its own ideals. Such loyalty may sometimes require dissent, and those who speak out against injustice within their own community may in fact be its most loyal members.",
+      "Loyalty, then, is neither simply a virtue nor simply a danger. It is a form of attachment that gives depth and meaning to human relationships, but that must be guided by a sense of what is right if it is not to become an excuse for wrongdoing. The challenge is to be faithful to those we care about without allowing that faithfulness to blind us to the claims of others. In meeting this challenge, we discover that loyalty and moral judgment are not enemies but partners, each needing the other in order to be complete.",
+    ],
+    ja: [
+      '忠誠は、美徳の中で落ち着かない位置をしめている。一方で、私たちは、困難なときにそばにいてくれる友人や、仲間を見捨てることをこばむ兵士や、苦しい時期にも会社にとどまる従業員を称賛する。他方で、忠誠が人々に、悪いことをした者を弁護させたり、不正についてだまらせたり、自分の集団の利益をほかのすべての人の要求よりも上に置かせたりするとき、私たちは忠誠を疑う。ある状況では気高く見える同じ性質が、別の状況では危険に見えることがあるのである。',
+      'むずかしさの一部は、忠誠がその性質上かたよったものだということにある。ある人に忠実であることは、その人に自分の関心の中で特別な場所をあたえ、見知らぬ人の利益にはない要求を自分に対してもつものとして、その人の利益をあつかうことである。このかたよりは、私たちはすべての人を公平にあつかい、すべての人の利益に等しい重みをあたえるべきだとする、道徳的な考え方の重要な流れとぶつかるように思われる。道徳が公平さを求めるなら、本質的に一種のひいきである忠誠は、よくても道徳とは無関係であり、悪ければ道徳に反するもののように思われるかもしれない。',
+      'しかし忠誠のないよい人間の生活を想像するのはむずかしい。友情や家族や共同体はみな、人々がある他者を特別なものとしてあつかおうとする気持ちにたよっており、だれにも特別な愛着を感じず、自分の友人を見知らぬ人とまったく同じように見る人は、称賛すべきほど公平なのではなく、奇妙に冷たく思われるだろう。公平さは事件を裁く裁判官にはふさわしいかもしれないが、子どもの世話をする親や、苦しんでいる人をなぐさめる友人にとっては、まずい道しるべになるだろう。',
+      'それなら問題は、忠誠がよいか悪いかではなく、その適切な限界がどこにあるかである。大切な区別の一つは、人への忠誠とその人のあやまちへの忠誠とのあいだにある。忠実な友人は、相手がまちがいをしたからといって見捨てはしないが、本当の忠誠は、他人を傷つけるのを手伝ったり、悪いことを正しいふりをしたりすることを求めもしない。実際、悪いふるまいをしている友人への最も忠実な応え方は、沈黙という楽な支えを差し出すことではなく、相手をいやな気持ちにさせる危険をおかしても、本当のことを言うことかもしれない。',
+      '集団への忠誠は、さらなる複雑さを生む。国や会社や政党への忠誠は、大きな犠牲と協力を呼び起こしうるが、ほかの側がすれば非難するような行動を、自分の側がしたときには人々に大目に見させることもある。忠誠が無条件になると、それは美徳であることをやめ、一種の盲目になる。「正しかろうがまちがっていようが、わが国だ」と言う人は、実質的に、自分の国が支持に値するかどうかを判断する力を手放してしまったのである。',
+      '忠誠は、単に人や集団へのかかわりではなく、それらが最もよい状態で表す価値へのかかわりとして理解するのが最もよいと示唆した思想家もいる。この見方では、忠実な市民とは政府のあらゆる決定を支持する人ではなく、国が自分自身の理想にとどかないときにそれを批判するほど国を大切に思う人である。そのような忠誠はときに反対を求めるかもしれず、自分の共同体の中で不正に反対して声を上げる人々こそ、実はその最も忠実な成員なのかもしれない。',
+      'このように忠誠は、単に美徳でもなければ、単に危険でもない。それは人間の関係に深さと意味をあたえる愛着の一つの形であるが、あやまちの言い訳にならないためには、何が正しいかという感覚にみちびかれなければならない。課題は、その誠実さによって他人の要求が見えなくならないようにしながら、自分が大切に思う人々に誠実であることである。この課題に取り組む中で、私たちは、忠誠と道徳的な判断が敵どうしではなくパートナーであり、それぞれが完全になるためにたがいを必要としていることに気づくのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「公平さは裁判官にはふさわしいかもしれないが、親や友人にはまずい道しるべになる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、忠誠はその性質上かたよったものである。', answer: true, why: '第2段落 loyalty is by its nature partial。' },
+      { statement: '筆者によれば、だれにも特別な愛着を感じない人は称賛すべきほど公平である。', answer: false, why: '第3段落 would seem not admirably fair but strangely cold。' },
+      { statement: '筆者によれば、本当の忠誠は悪いことを正しいふりをすることを求める。', answer: false, why: '第4段落 neither does true loyalty require us ... to pretend that a wrong is right。' },
+      { statement: '筆者によれば、不正に反対して声を上げる人こそ最も忠実な成員かもしれない。', answer: true, why: '第6段落 may in fact be its most loyal members。' },
+    ],
+    qa: [
+      { q: 'What happens when loyalty becomes unconditional, according to the fifth paragraph?', choices: ['It becomes a kind of blindness.', 'It becomes the highest virtue.', 'It disappears completely.', 'It turns into impartiality.'], answer: 0, why: '第5段落 it ceases to be a virtue and becomes a kind of blindness。' },
+      { q: 'How does the author describe loyalty and moral judgment at the end?', choices: ['As partners that need each other.', 'As enemies.', 'As the same thing.', 'As unrelated ideas.'], answer: 0, why: '第7段落 loyalty and moral judgment are not enemies but partners。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
