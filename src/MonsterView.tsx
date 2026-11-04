@@ -2457,6 +2457,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="24" cy="72" r="2" fill="#7dd3fc" />
       </g>
     )
+  if (species === 'lionfish')
+    return (
+      <g>
+        {/* ひらひらのむなびれと、背びれのとげ */}
+        <path d="M30 52 Q12 44 10 62 Q20 66 30 60 M70 52 Q88 44 90 62 Q80 66 70 60" fill="#fecaca" stroke="#7f1d1d" strokeWidth="1.5" />
+        <path d="M40 26 L38 14 M50 24 L50 10 M60 26 L62 14" fill="none" stroke="#7f1d1d" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
