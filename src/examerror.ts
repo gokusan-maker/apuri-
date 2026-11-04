@@ -6996,6 +6996,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The glass is filled [by] water.', choices: ['with', 'of', 'in', 'at'], answer: 0, why: 'be filled with ～「～でいっぱいである」。' },
     ],
   },
+  {
+    id: 'exam-fix-164',
+    title: '入試の誤文訂正〈164〉（京大レベル：not A but B・not only A but also B・either A or B の動詞の一致）',
+    points: ['相関接続詞の動詞は、動詞に近いほうの主語に合わせる：not A but B（B に合わせる）・not only A but also B（B）・either A or B（B）・neither A nor B（B）。A as well as B は A に合わせる。both A and B はいつも複数。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Not only the students but also the teacher was surprised.', ja: '生徒だけでなく先生もおどろいた。' }],
+    questions: [
+      { sentence: 'Not only the students but also the teacher [were] surprised.', choices: ['was', 'are', 'have been', 'being'], answer: 0, why: 'not only A but also B は B（the teacher）に合わせる。was。' },
+      { sentence: 'Either you or he [are] responsible.', choices: ['is', 'am', 'were', 'be'], answer: 0, why: 'either A or B は B（he）に合わせる。is。' },
+      { sentence: 'Neither my brother nor my parents [likes] cats.', choices: ['like', 'liking', 'is liking', 'has liked'], answer: 0, why: 'neither A nor B は B（my parents）に合わせる。like。' },
+      { sentence: 'Not you but I [are] to blame.', choices: ['am', 'is', 'are being', 'were'], answer: 0, why: 'not A but B は B（I）に合わせる。am。' },
+      { sentence: 'Both Tom and Mary [is] coming to the party.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'both A and B はいつも複数。are。' },
+      { sentence: 'The teacher, as well as the students, [were] excited.', choices: ['was', 'are', 'have been', 'be'], answer: 0, why: 'A as well as B は A（The teacher）に合わせる。was。' },
+      { sentence: 'Either the manager or his assistants [is] going to call you.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'either A or B は B（his assistants）に合わせる。are。' },
+      { sentence: 'Neither she nor I [is] ready yet.', choices: ['am', 'are', 'be', 'being'], answer: 0, why: 'neither A nor B は B（I）に合わせる。am。' },
+      { sentence: 'Not only I but also my sister [are] studying French.', choices: ['is', 'am', 'be', 'were'], answer: 0, why: 'not only A but also B は B（my sister）に合わせる。is。' },
+      { sentence: 'Not the price but the quality [matter] most.', choices: ['matters', 'matters to', 'mattering', 'are mattering'], answer: 0, why: 'not A but B は B（the quality＝単数）に合わせる。matters。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
