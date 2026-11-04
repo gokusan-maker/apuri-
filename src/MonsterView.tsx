@@ -2472,6 +2472,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 50 Q10 42 12 56 Q20 62 28 56 M76 50 Q90 42 88 56 Q80 62 72 56" fill="#d97706" stroke="#451a03" strokeWidth="2" />
       </g>
     )
+  if (species === 'harlequinshrimp')
+    return (
+      <g>
+        {/* ふりそでのようなはさみと水玉 */}
+        <path d="M28 46 Q12 36 14 54 Q22 58 30 52 M72 46 Q88 36 86 54 Q78 58 70 52" fill="#fbcfe8" stroke="#7e22ce" strokeWidth="1.5" />
+        <circle cx="40" cy="60" r="2.5" fill="#a855f7" />
+        <circle cx="58" cy="64" r="2.5" fill="#a855f7" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
