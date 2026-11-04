@@ -33102,6 +33102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-desire',
+    title: 'Where Our Desires Come From',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually think of our desires as belonging to us in the most intimate way. If I want a particular job, a new phone, or the respect of my colleagues, it seems obvious that this wanting comes from within me and expresses who I am. Yet a closer look suggests that desire is a more complicated and more social phenomenon than it first appears. Many of the things we want, and the intensity with which we want them, are shaped by forces of which we are only partly aware.",
+      "One influential idea holds that human beings often learn what to desire by observing the desires of others. A child shows little interest in a toy until another child picks it up, at which point the toy suddenly becomes highly attractive. Adults may behave in similar ways, wanting a certain style of clothing, a certain kind of house, or a certain career largely because people they admire or envy want these things too. In this view, desire is not simply a relationship between a person and an object, but a relationship that passes through other people.",
+      "This imitative character of desire can help to explain some puzzling features of social life. If people want things because others want them, competition and rivalry may arise even when there is no real shortage of goods. Fashions spread quickly and disappear just as fast, since the value of an object depends partly on how many others desire it. ( A ) imitation allows people to learn from one another, it can also produce cycles of envy and conflict in which the original object is almost forgotten.",
+      "Modern advertising seems to understand this mechanism well. Advertisements rarely describe only the practical features of a product; instead, they show attractive, successful, or happy people using it, inviting viewers to imagine themselves in their place. The message is not simply that the product is useful, but that possessing it will make us more like the people we wish to be. Social media has intensified this process, exposing us constantly to images of other people's possessions and experiences, and making it harder than ever to tell whether a desire began with us or with someone we were watching.",
+      "Recognizing the social nature of desire need not lead to the conclusion that our desires are false or worthless. Many of the most valuable things in life, such as language, art, and moral ideals, are learned from others, and the fact that we first encountered them through imitation does not make them any less our own. The question is not whether our desires are influenced by others, since they always are, but whether we have reflected on them and found them worth keeping, after asking honestly where they came from.",
+      "Philosophers in many traditions have advised people to examine their desires carefully. Some have suggested that much unhappiness arises from wanting things that cannot bring lasting satisfaction, or from wanting them simply because others do. By becoming aware of the sources of our desires, we may be able to distinguish between those that express our considered values and those that merely reflect passing pressures. Such awareness does not eliminate desire, but it can make us less vulnerable to its manipulation.",
+      "Perhaps, then, freedom lies not in having desires that are entirely our own, which may be impossible, but in our ability to step back from them and ask whether they deserve our commitment. This ability is never complete, and we will always be shaped by the people around us. Yet the effort to understand why we want what we want may be one of the most important ways in which we take responsibility for our lives, and for the kind of people we are becoming.",
+    ],
+    ja: [
+      '私たちはふつう、自分の欲望を最も親密なしかたで自分のものだと考えている。私がある仕事や新しい電話や同僚の尊敬を望むなら、この望みは私の内から来て、私がだれであるかを表しているのは明らかに思われる。しかし、よく見ると、欲望は最初に思われるより複雑で、より社会的な現象であることがわかる。私たちが望むものの多くや、それを望む強さは、私たちが部分的にしか気づいていない力によって形づくられているのである。',
+      '影響力のある一つの考えによれば、人間はしばしば他人の欲望を観察することによって何を望むべきかを学ぶ。子どもはおもちゃにほとんど興味を示さないが、ほかの子どもがそれを手にとると、そのおもちゃはとつぜんとても魅力的になる。大人も似たようにふるまうことがあり、ある服の型やある種の家やある職業を望むのは、おもに自分があこがれたりねたんだりする人々もそれを望んでいるからである。この見方では、欲望は単に人と物との関係ではなく、他人を通る関係なのである。',
+      '欲望のこのまねる性格は、社会生活のいくつかのなぞめいた特徴を説明する助けになる。人々がほかの人が望むからという理由で物を望むのなら、物が本当は不足していないときでさえ、競争や対抗意識が生じるかもしれない。流行は速く広がり、同じくらい速く消える。物の価値は、どれだけ多くの人がそれを望んでいるかに一部かかっているからである。まねることは人々がたがいから学ぶのを可能にするが、もとの物がほとんど忘れられてしまうような、ねたみと対立のくり返しを生むこともある。',
+      '現代の広告はこの仕組みをよく理解しているようである。広告が製品の実用的な特徴だけを説明することはめったにない。かわりに、魅力的で成功した、あるいは幸せそうな人々がそれを使っているところを見せ、見る人に自分をその人々の立場に置いて想像するよう誘う。そのメッセージは、単に製品が役に立つということではなく、それをもてば自分がなりたい人々にもっと近づけるということである。ソーシャルメディアはこの過程を強め、私たちを他人の持ち物や体験の映像にたえずさらしており、ある欲望が自分から始まったのか、見ていただれかから始まったのかを見分けるのを、これまでになくむずかしくしている。',
+      '欲望の社会的な性質を認めることは、私たちの欲望がにせものだとか価値がないという結論にかならずしもつながるわけではない。ことばや芸術や道徳的な理想のように、人生で最も価値あるものの多くは他人から学ばれるものであり、まねを通じて初めて出会ったからといって、それが少しでも自分のものでなくなるわけではない。問題は、私たちの欲望が他人に影響されているかどうかではなく（いつも影響されているのだから）、私たちがそれをふり返り、もち続ける価値があると思ったかどうかなのである。しかもそれが、どこから来たのかを正直に問うたうえでのことかどうかである。',
+      '多くの伝統の哲学者たちは、人々に自分の欲望を注意深く吟味するよう助言してきた。不幸の多くは、長続きする満足をもたらしえないものを望むことや、単に他人が望むからという理由でそれを望むことから生じると示唆した人々もいる。自分の欲望の源に気づくことで、私たちは、よく考えた価値観を表す欲望と、一時的な圧力を反映しているにすぎない欲望とを区別できるかもしれない。そのような気づきは欲望をなくしはしないが、欲望をあやつられることに対して私たちを弱くなくしてくれる。',
+      'それなら、自由とは、まったく自分だけの欲望をもつこと（それは不可能かもしれない）にあるのではなく、欲望から一歩下がり、それが自分のかかわりに値するかどうかを問う能力にあるのかもしれない。この能力はけっして完全ではなく、私たちはいつもまわりの人々に形づくられるだろう。しかし、なぜ自分が望むものを望むのかを理解しようとする努力は、私たちが自分の人生に、そして自分がなりつつある人間に責任をもつ最も大切な方法の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「まねることはたがいから学ぶのを可能にするが、ねたみと対立も生む」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ある考えによれば、人間はしばしば他人の欲望を観察して何を望むべきかを学ぶ。', answer: true, why: '第2段落 human beings often learn what to desire by observing the desires of others。' },
+      { statement: '広告はふつう製品の実用的な特徴だけを説明する。', answer: false, why: '第4段落 Advertisements rarely describe only the practical features of a product。' },
+      { statement: '筆者によれば、まねを通じて出会ったものは自分のものでなくなる。', answer: false, why: '第5段落 does not make them any less our own。' },
+      { statement: '欲望の源に気づくことは、欲望をあやつられることに対して私たちを弱くなくしうる。', answer: true, why: '第6段落 it can make us less vulnerable to its manipulation。' },
+    ],
+    qa: [
+      { q: 'Why do fashions spread and disappear quickly?', choices: ['The value of an object depends partly on how many others desire it.', 'Clothes are always cheap.', 'People never imitate others.', 'Shops change every day.'], answer: 0, why: '第3段落 the value of an object depends partly on how many others desire it。' },
+      { q: 'Where does freedom lie, according to the last paragraph?', choices: ['In our ability to step back from our desires and question them.', 'In having no desires at all.', 'In buying whatever we want.', 'In ignoring other people completely.'], answer: 0, why: '第7段落 in our ability to step back from them and ask whether they deserve our commitment。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
