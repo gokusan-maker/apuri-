@@ -7416,6 +7416,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '［彼は両親のどちらにも似ていない］ He looks like [not both] his parents.', choices: ['neither of', 'not either', 'none both', 'both not'], answer: 0, why: '二者の全部否定は neither of。He looks like neither of his parents。' },
     ],
   },
+  {
+    id: 'exam-fix-174',
+    title: '入試の誤文訂正〈174〉（東大レベル：英作文の分数と割合 two thirds of・percent of）',
+    points: ['英語の分数は「分子を基数、分母を序数」で表し、分子が2以上なら分母を複数形にする（one third・two thirds・three quarters）。half は a half ではなく half of ～ の形が多い。percent は数字のあとでも s をつけない（30 percent）。分数・percent・half のあとの of ～ が単数・数えられない名詞なら単数扱い、複数名詞なら複数扱い。「～の割合」は the percentage（proportion）of ～ で単数扱い。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Two thirds of the students live near the school.', ja: '生徒の3分の2が学校の近くに住んでいる。' }],
+    questions: [
+      { sentence: '[Two third] of the students live near the school.', choices: ['Two thirds', 'Two three', 'Second three', 'Twice third'], answer: 0, why: '分子が2以上なら分母の序数を複数形に。two thirds。' },
+      { sentence: 'About [30 percents] of the people agreed.', choices: ['30 percent', '30 percentage', '30 per cents', '30 of percent'], answer: 0, why: 'percent は複数でも s をつけない。' },
+      { sentence: 'Half of the cake [were] eaten.', choices: ['was', 'are', 'have', 'being'], answer: 0, why: 'half of のあとが単数名詞 the cake なので単数扱い。was。' },
+      { sentence: 'Half of the students [was] absent.', choices: ['were', 'is', 'has', 'being'], answer: 0, why: 'half of のあとが複数名詞なので複数扱い。were。' },
+      { sentence: '[Three fourth] of the earth is covered by water.', choices: ['Three quarters', 'Three four', 'Third fourths', 'Three of four'], answer: 0, why: '「4分の3」は three quarters（three fourths）。' },
+      { sentence: 'The percentage of young voters [are] rising.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: 'the percentage of ～「～の割合」は単数扱い。is。' },
+      { sentence: '[A one third] of the money was spent on food.', choices: ['One third', 'The one three', 'First three', 'A third of one'], answer: 0, why: '「3分の1」は one third（a third）。a one third とは言わない。' },
+      { sentence: 'Sixty percent of the water [are] used for farming.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: 'water は数えられない名詞なので単数扱い。is。' },
+      { sentence: 'Only [a half of] the seats were taken.', choices: ['half of', 'the half', 'halves of', 'a halves'], answer: 0, why: '「～の半分」はふつう half of ～（half the seats も可）。' },
+      { sentence: 'Two thirds of the apples [was] rotten.', choices: ['were', 'is', 'has', 'being'], answer: 0, why: 'of のあとが複数名詞 the apples なので複数扱い。were。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -2479,3 +2479,10 @@ it('正誤問題〈180〉：京大レベル 複合関係詞の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) careful')
 })
+
+it('誤文訂正〈174〉：東大レベル 分数と割合の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-174')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Two thirds')
+})
