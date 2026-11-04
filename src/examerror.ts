@@ -4154,6 +4154,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The children (A) were made (B) to stay (C) inside (D) because of rain heavily.', choices: ['(A) were made', '(B) to stay', '(C) inside', '(D) because of rain heavily'], answer: 3, why: 'because of のあとは名詞句。because of the heavy rain。' },
     ],
   },
+  {
+    id: 'exam-error-idiomatic-participle-kyodai',
+    title: '入試の正誤問題〈175〉（京大レベル：慣用的な分詞構文と独立分詞構文）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '慣用的な分詞構文は主節の主語と関係なく使える決まった形：frankly speaking「率直に言えば」・generally speaking「一般的に言えば」・judging from ～「～から判断すると」・compared with ～「～と比べると」・taking ～ into consideration「～を考慮すると」。主節とちがう主語は分詞の前に残す（独立分詞構文：The sun having set, ～・It being rainy, ～・Weather permitting, ～）。主語が「される」側なら過去分詞、否定は not を分詞の前に置く。',
+    ],
+    examples: [
+      { en: 'Seen from the hill, the town looks very small.', ja: '丘から見ると、町はとても小さく見える。' },
+      { en: 'The sun having set, we went home.', ja: '日が沈んだので、私たちは家に帰った。' },
+    ],
+    questions: [
+      { sentence: '(A) Frankly speak, (B) your plan (C) has (D) some problems.', choices: ['(A) Frankly speak,', '(B) your plan', '(C) has', '(D) some problems'], answer: 0, why: '「率直に言えば」は慣用の分詞構文 Frankly speaking。' },
+      { sentence: '(A) Seeing from the hill, (B) the town (C) looks (D) very small.', choices: ['(A) Seeing from the hill,', '(B) the town', '(C) looks', '(D) very small'], answer: 0, why: '町は「見られる」側なので過去分詞 Seen from the hill。' },
+      { sentence: '(A) Generally (B) spoke, (C) Japanese trains (D) run on time.', choices: ['(A) Generally', '(B) spoke,', '(C) Japanese trains', '(D) run on time'], answer: 1, why: '「一般的に言えば」は慣用の分詞構文 Generally speaking。' },
+      { sentence: '(A) Taking (B) everything (C) into consider, (D) the plan was a success.', choices: ['(A) Taking', '(B) everything', '(C) into consider,', '(D) the plan was a success'], answer: 2, why: 'take ～ into consideration「～を考慮に入れる」。into のあとは名詞 consideration。' },
+      { sentence: '(A) It being (B) rainy, (C) we (D) staying at home.', choices: ['(A) It being', '(B) rainy,', '(C) we', '(D) staying at home'], answer: 3, why: '主節には述語動詞が必要。we stayed at home。' },
+      { sentence: '(A) Weather permitting, (B) we (C) will go (D) to hiking tomorrow.', choices: ['(A) Weather permitting,', '(B) we', '(C) will go', '(D) to hiking tomorrow'], answer: 3, why: 'go ～ing「～しに行く」に to は不要。go hiking。' },
+      { sentence: '(A) Knowing not (B) what to say, (C) she (D) kept silent.', choices: ['(A) Knowing not', '(B) what to say,', '(C) she', '(D) kept silent'], answer: 0, why: '分詞構文の否定は not を分詞の前に置く。Not knowing。' },
+      { sentence: '(A) The sun (B) set, (C) we (D) went home.', choices: ['(A) The sun', '(B) set,', '(C) we', '(D) went home'], answer: 1, why: '主節の主語（we）とちがう主語 the sun を残す独立分詞構文。The sun having set（または The sun setting）。' },
+      { sentence: '(A) Judging (B) of his accent, (C) he (D) must be from Osaka.', choices: ['(A) Judging', '(B) of his accent,', '(C) he', '(D) must be from Osaka'], answer: 1, why: '「～から判断すると」は judging from ～。' },
+      { sentence: '(A) Compared (B) with his brother, (C) Tom (D) is more taller.', choices: ['(A) Compared', '(B) with his brother,', '(C) Tom', '(D) is more taller'], answer: 3, why: 'taller はすでに比較級なので more は不要。is taller。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
