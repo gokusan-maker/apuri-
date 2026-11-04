@@ -4346,6 +4346,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) This tree (B) is said (C) be (D) over 1,000 years old.', choices: ['(A) This tree', '(B) is said', '(C) be', '(D) over 1,000 years old'], answer: 2, why: 'be said のあとは to 不定詞。to be。' },
     ],
   },
+  {
+    id: 'exam-error-seem-to-kyodai',
+    title: '入試の正誤問題〈183〉（京大レベル：seem to・appear to と完了不定詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'S seem（appear）to do「S は～するようだ」＝ It seems（appears）that S＋V。seem と同じ時のことなら to do、seem より前のことなら完了不定詞 to have ＋過去分詞（She seems to have been ill.＝It seems that she was ill.）。進行中なら to be ～ing。to のあとはいつも原形。It seemed that ～ のように主節が過去なら that 節も時制を合わせる。',
+    ],
+    examples: [
+      { en: 'He seems to be tired.', ja: '彼は疲れているようだ。' },
+      { en: 'She seems to have been ill yesterday.', ja: '彼女はきのう病気だったようだ。' },
+    ],
+    questions: [
+      { sentence: '(A) He (B) seems (C) being (D) very tired today.', choices: ['(A) He', '(B) seems', '(C) being', '(D) very tired today'], answer: 2, why: 'seem のあとは to 不定詞。seems to be。' },
+      { sentence: '(A) She seems (B) to be (C) ill (D) yesterday.', choices: ['(A) She seems', '(B) to be', '(C) ill', '(D) yesterday'], answer: 1, why: 'yesterday の内容なので完了不定詞。seems to have been ill yesterday。' },
+      { sentence: '(A) It seems (B) that he (C) to know (D) the answer.', choices: ['(A) It seems', '(B) that he', '(C) to know', '(D) the answer'], answer: 2, why: 'that 節には主語＋動詞が必要。he knows。' },
+      { sentence: '(A) They appear (B) to have (C) lose (D) their way.', choices: ['(A) They appear', '(B) to have', '(C) lose', '(D) their way'], answer: 2, why: 'to have のあとは過去分詞。to have lost。' },
+      { sentence: '(A) The man seemed (B) to have been (C) waited (D) for a long time.', choices: ['(A) The man seemed', '(B) to have been', '(C) waited', '(D) for a long time'], answer: 2, why: '「待っていた」は能動。to have been waiting（または to have waited）。been waited は受け身で誤り。' },
+      { sentence: '(A) It seems (B) he (C) has (D) caught a cold last week.', choices: ['(A) It seems', '(B) he', '(C) has', '(D) caught a cold last week'], answer: 2, why: 'last week は過去のはっきりした時なので現在完了は使えない。caught。' },
+      { sentence: '(A) Seem (B) the students (C) to enjoy (D) the class.', choices: ['(A) Seem', '(B) the students', '(C) to enjoy', '(D) the class'], answer: 0, why: '疑問文なら Do the students seem to enjoy the class? の語順。' },
+      { sentence: '(A) She (B) appears (C) to (D) knowing the truth.', choices: ['(A) She', '(B) appears', '(C) to', '(D) knowing the truth'], answer: 3, why: 'to のあとは動詞の原形。to know。' },
+      { sentence: '(A) He (B) seems to (C) has finished (D) the work.', choices: ['(A) He', '(B) seems to', '(C) has finished', '(D) the work'], answer: 2, why: 'to のあとは原形。完了不定詞は to have finished。' },
+      { sentence: '(A) It (B) appeared (C) that she (D) is happy at the party.', choices: ['(A) It', '(B) appeared', '(C) that she', '(D) is happy at the party'], answer: 3, why: '主節が過去なので that 節も過去。she was happy。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
