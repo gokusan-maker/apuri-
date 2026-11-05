@@ -36258,6 +36258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-music-education',
+    title: 'Should Music Be Compulsory in Schools?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many schools, music has long been part of the curriculum, with students learning to sing, play simple instruments, and listen to works from different traditions. In recent years, however, pressure to improve results in subjects such as mathematics, science, and languages has led some schools to reduce the time devoted to music, or to make it optional for older students. This has prompted debate about whether music should remain a compulsory subject for all students, or whether limited school time should be focused on subjects considered more directly useful.",
+      "Supporters of compulsory music education argue that it offers benefits that extend far beyond the subject itself. Learning to play an instrument requires concentration, patience, and regular practice, qualities that can help students in other areas of study. Some research suggests that musical training may be associated with improvements in memory, attention, and language skills, although the strength of these effects remains a matter of debate. Music also gives students a means of expression that does not depend on words, which can be especially valuable for those who struggle in more academic subjects.",
+      "Supporters also emphasize the social and cultural value of music. Singing in a choir or playing in an orchestra teaches students to listen to one another, to cooperate, and to contribute to a shared result. ( A ) not every student will become a skilled musician, supporters argue, everyone can benefit from understanding music as part of human culture, and making it compulsory ensures that students from all backgrounds have this opportunity, rather than only those whose families can afford private lessons.",
+      "Critics, however, argue that school time is limited and that compulsory music may come at the expense of other important subjects. Students who have no interest in music may gain little from lessons they are required to attend, and their time might be better spent on subjects that are more relevant to their goals. Critics also point out that the quality of music education varies widely, and that poorly resourced lessons, without instruments or trained teachers, may do little to inspire students. In such cases, critics argue, a compulsory subject may leave students with a lasting dislike of music rather than a love of it.",
+      "Critics further suggest that musical activities may be more effective when they are chosen freely. Students who join a band or choir because they want to are likely to be more committed than those who are compelled to take part. In this view, schools should offer a wide range of optional musical activities, supported by good facilities and teachers, rather than requiring every student to study music regardless of interest. Such an approach, critics argue, would respect students' choices while still providing opportunities for those who wish to pursue music.",
+      "Between these positions, many educators propose a middle path. Music could remain compulsory in the early years of school, when students are discovering their interests, and become optional later, when they begin to specialize. Schools could also connect music with other subjects, for example by exploring the mathematics of rhythm, the physics of sound, or the history of musical traditions. Partnerships with local orchestras, community groups, and musicians can enrich lessons and show students how music forms part of life beyond the classroom.",
+      "The debate over music education reflects a broader question about the purpose of schooling. If schools exist mainly to prepare students for employment, then subjects with clear practical applications may seem most important. If, however, education also aims to develop well-rounded individuals who can appreciate and contribute to culture, then music and the other arts deserve a secure place in the curriculum. How societies answer this question will shape not only what students learn but also what kind of lives they are prepared to lead.",
+    ],
+    ja: [
+      '多くの学校で、音楽は長いあいだ教育課程の一部であり、生徒は歌ったり、かんたんな楽器をひいたり、さまざまな伝統の作品を聞いたりすることを学んできた。しかし近年、数学や理科や語学のような教科で成績を上げるよう求める重圧から、音楽にあてる時間をへらしたり、年上の生徒には選択にしたりした学校もある。このことをきっかけに、音楽はすべての生徒にとって必修の教科であり続けるべきか、それとも限られた学校の時間は、より直接に役立つと考えられる教科に集中させるべきかという議論が起こっている。',
+      '音楽の必修を支持する人々は、それが教科そのものをはるかにこえた利益をあたえると主張する。楽器をひけるようになるには、集中と根気と定期的な練習が必要であり、そうした性質はほかの勉強の分野でも生徒の助けになりうる。音楽の訓練が記憶や注意力や言語の技能の向上と結びついているかもしれないことを示す研究もあるが、その効果の強さは今も議論の的である。音楽はまた、ことばにたよらない表現の手段を生徒にあたえ、それはとくに勉強の教科で苦労している生徒にとって価値があるかもしれない。',
+      '支持する人々はまた、音楽の社会的・文化的な価値を強調する。合唱団で歌ったりオーケストラで演奏したりすることは、たがいの音を聞き、協力し、共通の成果に貢献することを生徒に教える。すべての生徒が上手な音楽家になるわけではないが、だれもが人間の文化の一部として音楽を理解することから益を得られ、必修にすれば、家族が個人レッスンの費用をはらえる生徒だけでなく、あらゆる背景の生徒がこの機会を得られると支持する人々は主張する。',
+      'しかし批判する人々は、学校の時間はかぎられており、音楽の必修はほかの大切な教科の犠牲の上に成り立つかもしれないと主張する。音楽に興味のない生徒は、出なければならない授業からほとんど何も得ないかもしれず、その時間は自分の目標により関係のある教科に使うほうがよいかもしれない。批判する人々はまた、音楽教育の質は大きくばらつき、楽器も訓練を受けた教師もない、資源のとぼしい授業では、生徒をふるい立たせることはほとんどできないかもしれないと指摘する。そうした場合、必修の教科は、生徒に音楽への愛ではなく、長く残る音楽ぎらいを残してしまうかもしれないと批判する人々は主張する。',
+      '批判する人々はさらに、音楽の活動は自由に選ばれたときのほうが効果的かもしれないと示す。自分がしたいからバンドや合唱団に入る生徒は、参加をしいられる生徒より打ちこむ可能性が高い。この見方では、学校は興味にかかわらずすべての生徒に音楽を学ばせるのではなく、よい設備と教師にささえられた、はば広い選択の音楽活動を用意すべきである。そうしたやり方は、音楽を追い求めたい生徒に機会をあたえつつ、生徒の選択を尊重することになると批判する人々は主張する。',
+      'これらの立場のあいだで、多くの教育者は中間の道を提案している。音楽は、生徒が自分の興味を見つけていく学校のはじめの数年は必修のままにし、専門を選びはじめるのちの段階では選択にできるだろう。学校はまた、リズムの数学や音の物理や音楽の伝統の歴史を探るなど、音楽をほかの教科と結びつけることもできる。地元のオーケストラや地域の団体や音楽家との協力は、授業をゆたかにし、音楽が教室の外の暮らしの一部になっていることを生徒に示すことができる。',
+      '音楽教育をめぐる議論は、学校教育の目的についての、より広い問いを反映している。学校が主に生徒を仕事にそなえさせるためにあるのなら、はっきりした実用のある教科がもっとも大切に見えるかもしれない。しかし教育が、文化を味わい、それに貢献できるはば広い人間を育てることも目指すのなら、音楽やほかの芸術は教育課程のなかに確かな居場所をもつに値する。社会がこの問いにどう答えるかは、生徒が何を学ぶかだけでなく、どのような人生を送るそなえができるかも形づくるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「すべての生徒が上手な音楽家になるわけではないが、だれもが益を得られる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that music develops concentration and patience and teaches students to ( 1 ). Critics argue that school time is limited and that musical activities may be more effective when chosen ( 2 ). Many educators propose making music compulsory in the early years and ( 3 ) later.',
+      blanks: [
+        { choices: ['cooperate', 'compete', 'travel', 'argue'], answer: 0, why: '第3段落 teaches students to listen to one another, to cooperate。' },
+        { choices: ['freely', 'quickly', 'cheaply', 'secretly'], answer: 0, why: '第5段落 musical activities may be more effective when they are chosen freely。' },
+        { choices: ['optional', 'difficult', 'expensive', 'forbidden'], answer: 0, why: '第6段落 and become optional later。' },
+      ],
+    },
+    tf: [
+      { statement: '音楽にあてる時間をへらした学校もある。', answer: true, why: '第1段落 has led some schools to reduce the time devoted to music。' },
+      { statement: '音楽の訓練が記憶をよくする効果の強さは、もうはっきり決まっている。', answer: false, why: '第2段落 the strength of these effects remains a matter of debate。' },
+      { statement: '資源のとぼしい授業では、生徒をふるい立たせることがほとんどできないかもしれない。', answer: true, why: '第4段落 poorly resourced lessons ... may do little to inspire students。' },
+      { statement: '筆者によれば、教育の目的が仕事のそなえだけなら、芸術がもっとも大切に見える。', answer: false, why: '第7段落 subjects with clear practical applications may seem most important。' },
+    ],
+    qa: [
+      { q: 'Why may music be especially valuable for some students, according to supporters?', choices: ['It offers a means of expression that does not depend on words.', 'It replaces all other subjects.', 'It requires no practice.', 'It is always easy.'], answer: 0, why: '第2段落 a means of expression that does not depend on words。' },
+      { q: 'How could schools connect music with other subjects?', choices: ['By exploring the mathematics of rhythm or the physics of sound.', 'By cancelling science lessons.', 'By banning instruments.', 'By shortening the school day.'], answer: 0, why: '第6段落 exploring the mathematics of rhythm, the physics of sound。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
