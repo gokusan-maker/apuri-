@@ -35858,6 +35858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-bottled-water',
+    title: 'Should Cities Discourage Bottled Water?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, bottled water has become one of the most widely consumed drinks, sold in shops, vending machines, and restaurants almost everywhere. Yet in places where public tap water is safe to drink, the popularity of bottled water has raised questions. Producing, transporting, and disposing of plastic bottles has significant environmental costs, and bottled water can cost hundreds of times more than water from the tap. Some cities have therefore begun to discourage bottled water and to promote tap water instead, while others believe that such decisions should be left to consumers.",
+      "Supporters of promoting tap water emphasize the environmental impact of bottled water. Manufacturing plastic bottles requires oil and energy, and transporting heavy bottles over long distances produces additional emissions. Although many bottles can be recycled, a large proportion are thrown away, ending up in landfills, rivers, and oceans, where they may take centuries to break down. Encouraging people to drink tap water, supporters argue, is a simple way of reducing plastic waste without requiring any sacrifice in health or comfort. Over a single year, a person who switches from bottled to tap water may avoid using hundreds of plastic bottles, a saving that becomes enormous when multiplied across a whole city.",
+      "Supporters also point out that tap water in many countries is tested regularly and must meet strict safety standards. ( A ) some people prefer the taste of bottled water or believe it to be purer, supporters argue, studies have often found little difference in quality between the two, and in some cases bottled water is simply tap water that has been filtered and packaged. Providing free drinking fountains in public places, they suggest, would allow everyone to stay hydrated without spending money or creating waste.",
+      "Critics, however, argue that restricting bottled water may limit consumer choice and harm businesses. People buy bottled water for many reasons, including convenience when traveling, concerns about old pipes in some buildings, and personal taste. Critics also note that if bottled water becomes harder to obtain, some consumers may turn to sugary soft drinks instead, which are sold in similar bottles and are worse for health. In their view, education about the benefits of tap water would be more effective than bans or restrictions.",
+      "Critics further point out that trust in tap water is not the same everywhere. In some communities, failures in water systems have damaged public confidence, and residents may have good reasons to prefer bottled water until the problems are fixed. For such people, discouraging bottled water without first ensuring that tap water is safe and trusted could seem unfair. Improving water infrastructure, critics argue, should come before efforts to change consumer habits. Replacing old pipes and improving testing may be expensive, but without such investment, campaigns in favor of tap water are unlikely to persuade those who have reason to doubt it.",
+      "Between these positions, many cities have adopted measures that make tap water more convenient without banning bottled water. These include installing drinking fountains and refill stations in parks, stations, and shopping streets, encouraging cafés and restaurants to offer free tap water, and supporting campaigns that encourage people to carry reusable bottles. Some cities have also published the results of water quality tests so that residents can see for themselves that their tap water is safe.",
+      "The debate over bottled water reflects a broader question about how small everyday choices add up to large environmental effects. A single plastic bottle may seem insignificant, but billions of them have a considerable impact. At the same time, changing habits requires trust, convenience, and clear information. By investing in safe public water systems and making tap water easy to access, societies may be able to reduce waste while respecting the needs and concerns of the people who drink the water.",
+    ],
+    ja: [
+      '多くの国で、ボトル入りの水は、店や自動販売機やレストランでほとんどどこでも売られる、もっとも広く飲まれる飲み物の一つになっている。しかし、公共の水道水を安全に飲める場所では、ボトル入りの水の人気が疑問を呼んでいる。プラスチックのボトルをつくり、運び、すてることには大きな環境の代償があり、ボトル入りの水は水道の水の何百倍もの値段になることがある。それゆえボトル入りの水をひかえさせ、代わりに水道水をすすめはじめた都市もあれば、そうした決定は消費者にまかせるべきだと考える都市もある。',
+      '水道水をすすめることを支持する人々は、ボトル入りの水の環境への影響を強調する。プラスチックのボトルをつくるには石油とエネルギーが必要であり、重いボトルを長い距離運ぶとさらに排出が生じる。多くのボトルはリサイクルできるが、その大きな割合はすてられ、うめ立て地や川や海に行きつき、そこで分解されるのに何世紀もかかるかもしれない。人々に水道水を飲むようすすめることは、健康や快適さを何も犠牲にせずにプラスチックのごみをへらす、かんたんな方法だと支持する人々は主張する。ボトル入りの水から水道水に切りかえた人は、1年で何百本ものプラスチックのボトルを使わずにすむかもしれず、その節約は都市全体でかけ合わせるととても大きくなる。',
+      '支持する人々はまた、多くの国の水道水は定期的に検査され、きびしい安全基準をみたさなければならないと指摘する。ボトル入りの水の味を好んだり、そのほうが純粋だと信じたりする人もいるが、研究ではしばしば両者の質にほとんどちがいがないことが見いだされており、ボトル入りの水が単にろ過してつめた水道水である場合もあると支持する人々は主張する。公共の場所に無料の水飲み場を用意すれば、だれもがお金を使ったりごみを出したりせずに水分をとれるようになると彼らは示す。',
+      'しかし批判する人々は、ボトル入りの水を制限すると消費者の選択がせばまり、商売が傷つくかもしれないと主張する。人々は、旅行中の便利さや、一部の建物の古い水道管への心配や、自分の好みなど、多くの理由でボトル入りの水を買う。批判する人々はまた、ボトル入りの水が手に入りにくくなれば、一部の消費者は代わりに甘い清涼飲料にたよるかもしれないと指摘する。それは同じようなボトルで売られ、健康にはもっと悪い。彼らの見方では、禁止や制限よりも、水道水の利点についての教育のほうが効果的だろう。',
+      '批判する人々はさらに、水道水への信頼はどこでも同じではないと指摘する。地域によっては、水道の仕組みの失敗が人々の信頼をそこない、問題が直されるまでボトル入りの水を好むもっともな理由が住民にあるかもしれない。そうした人々にとって、まず水道水が安全で信頼されるようにすることなくボトル入りの水をひかえさせるのは、不公平に思えるかもしれない。消費者の習慣を変える取り組みよりも先に、水道の設備をよくすべきだと批判する人々は主張する。古い水道管の取りかえや検査の改善には費用がかかるかもしれないが、そうした投資がなければ、水道水をすすめる運動は、それを疑う理由のある人々を説得できそうにない。',
+      'これらの立場のあいだで、多くの都市は、ボトル入りの水を禁止することなく水道水をより便利にする方法を取り入れてきた。それには、公園や駅や商店街に水飲み場や給水所を設けること、カフェやレストランに無料の水道水を出すようすすめること、くり返し使えるボトルを持ち歩くよう人々にうながす運動をささえることがふくまれる。住民が自分で水道水の安全をたしかめられるよう、水質検査の結果を公表した都市もある。',
+      'ボトル入りの水をめぐる議論は、日々の小さな選択が積み重なって大きな環境への影響になるあり方についての、より広い問いを反映している。プラスチックのボトル1本はとるに足りないように思えるかもしれないが、何十億本となればかなりの影響がある。同時に、習慣を変えるには、信頼と便利さとはっきりした情報が必要である。安全な公共の水道に投資し、水道水を手に入れやすくすることで、社会はその水を飲む人々の必要や心配を尊重しながら、ごみをへらすことができるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ボトル入りの水の味を好む人もいるが、質にほとんどちがいはない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of tap water emphasize the environmental impact of ( 1 ) bottles and the strict safety standards of tap water. Critics argue that restrictions limit consumer ( 2 ) and that trust in tap water varies. Many cities install drinking fountains and publish water ( 3 ) test results.',
+      blanks: [
+        { choices: ['plastic', 'glass', 'paper', 'metal'], answer: 0, why: '第2段落 Manufacturing plastic bottles requires oil and energy。' },
+        { choices: ['choice', 'health', 'income', 'safety'], answer: 0, why: '第4段落 restricting bottled water may limit consumer choice。' },
+        { choices: ['quality', 'price', 'color', 'speed'], answer: 0, why: '第6段落 published the results of water quality tests。' },
+      ],
+    },
+    tf: [
+      { statement: 'ボトル入りの水は、水道水の何百倍もの値段になることがある。', answer: true, why: '第1段落 can cost hundreds of times more than water from the tap。' },
+      { statement: '研究によれば、ボトル入りの水はいつも水道水よりずっと質が高い。', answer: false, why: '第3段落 studies have often found little difference in quality。' },
+      { statement: 'ボトル入りの水が手に入りにくくなると、甘い飲み物にたよる人が出るかもしれない。', answer: true, why: '第4段落 some consumers may turn to sugary soft drinks instead。' },
+      { statement: '多くの都市は、ボトル入りの水を完全に禁止した。', answer: false, why: '第6段落 without banning bottled water。' },
+    ],
+    qa: [
+      { q: 'Why might some communities have good reasons to prefer bottled water?', choices: ['Failures in water systems have damaged confidence.', 'Bottled water is always cheaper.', 'Tap water is illegal there.', 'They dislike fountains.'], answer: 0, why: '第5段落 failures in water systems have damaged public confidence。' },
+      { q: 'What should come before efforts to change consumer habits, according to critics?', choices: ['Improving water infrastructure.', 'Raising the price of soft drinks.', 'Closing restaurants.', 'Banning recycling.'], answer: 0, why: '第5段落 Improving water infrastructure ... should come before efforts to change consumer habits。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
