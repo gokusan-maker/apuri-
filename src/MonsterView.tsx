@@ -2796,6 +2796,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="56" cy="40" r="7" fill="#fef3c7" stroke="#451a03" strokeWidth="2" />
       </g>
     )
+  if (species === 'caracal')
+    return (
+      <g>
+        {/* 耳の先の黒いふさ */}
+        <path d="M30 16 L28 4 M62 16 L64 4" stroke="#111827" strokeWidth="3" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
