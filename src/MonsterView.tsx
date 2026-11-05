@@ -2925,6 +2925,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 58 q4 -4 8 0 q-4 4 -8 0 M54 62 q4 -4 8 0 q-4 4 -8 0" fill="#2b1d10" opacity="0.6" />
       </g>
     )
+  if (species === 'flatheadedcat')
+    return (
+      <g>
+        {/* 平たい頭のライン */}
+        <path d="M30 22 q18 -6 36 0" fill="none" stroke="#24180f" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
