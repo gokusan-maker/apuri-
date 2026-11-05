@@ -4682,6 +4682,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Generally (B) speak, (C) Japanese people (D) are polite.', choices: ['(A) Generally', '(B) speak,', '(C) Japanese people', '(D) are polite'], answer: 1, why: '慣用的な分詞構文 generally speaking「一般的に言えば」。' },
     ],
   },
+  {
+    id: 'exam-error-wish-todai',
+    title: '入試の正誤問題〈197〉（東大レベル：英作文の I wish・as if の仮定法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'I wish ＋過去形は「今～ならいいのに」、I wish ＋過去完了は「あのとき～だったらよかったのに」、I wish ＋ would は「（これから）～してくれたらいいのに」。as if（as though）＋過去形は「まるで～かのように」（同じ時）、as if ＋過去完了は「まるで～したかのように」（前の時）。If only ～! は I wish をさらに強めた言い方。It’s time ＋過去形は「もう～する時間だ」。現実とちがう願いには hope は使わない。',
+    ],
+    examples: [
+      { en: 'I wish I could speak French well.', ja: 'フランス語を上手に話せたらいいのに。' },
+      { en: 'She looked as if she had seen a ghost.', ja: '彼女はまるで幽霊を見たかのような顔をしていた。' },
+    ],
+    questions: [
+      { sentence: '(A) I wish (B) I (C) can speak (D) French well.', choices: ['(A) I wish', '(B) I', '(C) can speak', '(D) French well'], answer: 2, why: 'I wish のあとは仮定法過去で、今の願いは過去形。I could speak。' },
+      { sentence: '(A) She looked (B) as if she (C) has seen (D) a ghost.', choices: ['(A) She looked', '(B) as if she', '(C) has seen', '(D) a ghost'], answer: 2, why: '「（それより前に）見たかのよう」は as if ＋過去完了。as if she had seen。' },
+      { sentence: '(A) I wish (B) I (C) have studied harder (D) last year.', choices: ['(A) I wish', '(B) I', '(C) have studied harder', '(D) last year'], answer: 2, why: '過去のことへの後悔は I wish ＋過去完了。I had studied。' },
+      { sentence: '(A) I wish (B) you will (C) stay (D) a little longer.', choices: ['(A) I wish', '(B) you will', '(C) stay', '(D) a little longer'], answer: 1, why: '相手への願いは I wish you would ～。will は使わない。' },
+      { sentence: '(A) It’s time (B) you go (C) to bed, (D) children.', choices: ['(A) It’s time', '(B) you go', '(C) to bed,', '(D) children'], answer: 1, why: 'It’s time ＋仮定法過去「もう～する時間だ」。you went。' },
+      { sentence: '(A) I hope (B) I (C) had (D) a car.', choices: ['(A) I hope', '(B) I', '(C) had', '(D) a car'], answer: 0, why: '現実とちがうことへの願いは I wish。hope のあとは仮定法にならない。' },
+      { sentence: '(A) She speaks English (B) as if (C) she were (D) a native speakers.', choices: ['(A) She speaks English', '(B) as if', '(C) she were', '(D) a native speakers'], answer: 3, why: 'a のあとは単数。a native speaker。' },
+      { sentence: '(A) I wish (B) it (C) stopped raining (D) tomorrow.', choices: ['(A) I wish', '(B) it', '(C) stopped raining', '(D) tomorrow'], answer: 2, why: '未来についての願いは I wish ～ would。it would stop raining。' },
+      { sentence: '(A) He looked (B) as if (C) he had not slept (D) since days.', choices: ['(A) He looked', '(B) as if', '(C) he had not slept', '(D) since days'], answer: 3, why: '期間の長さは for。for days。' },
+      { sentence: '(A) Only if (B) I (C) had listened (D) to you then!', choices: ['(A) Only if', '(B) I', '(C) had listened', '(D) to you then!'], answer: 0, why: '「～でありさえすれば」は If only。If only I had listened。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
