@@ -34578,6 +34578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-mandatory-recycling',
+    title: 'Should Recycling Be Required by Law?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, households are encouraged to separate their waste into different categories, such as paper, plastic, glass, metal, and food scraps, so that materials can be recycled rather than buried or burned. In some places, recycling is voluntary, and residents who prefer to put everything into a single bin face no penalty. In others, it is required by law, and households that fail to separate their waste properly may receive warnings or fines. The question of whether recycling should be mandatory raises issues of environmental protection, personal responsibility, and the effectiveness of different policies.",
+      "Supporters of mandatory recycling argue that voluntary systems rarely achieve high participation. Many people intend to recycle but forget, find it inconvenient, or assume that their individual effort makes little difference. When recycling is required, participation tends to rise substantially, and the amount of waste sent to landfills or incinerators falls. Supporters point to cities and countries with mandatory programs that have achieved some of the highest recycling rates in the world, showing that clear rules can change behavior on a large scale. Over time, they add, sorting waste may become a habit that residents no longer think of as a burden.",
+      "Supporters also emphasize the environmental and economic benefits. Recycling reduces the need to extract new raw materials, saving energy and reducing pollution from mining and manufacturing. Landfills take up space, can release harmful gases, and may contaminate soil and water. ( A ) collecting and sorting recyclable materials costs money, supporters argue that the long-term savings, both financial and environmental, justify the effort, particularly as landfill space becomes scarcer and more expensive.",
+      "Critics, however, question whether mandatory recycling is the best approach. Enforcing rules may require inspectors to examine people's garbage, which some regard as an invasion of privacy. Fines may fall most heavily on people who are elderly, have disabilities, or live in crowded housing where sorting waste is difficult. Critics also note that the rules for what can be recycled are often confusing and vary from one area to another, making it unfair to punish people for honest mistakes. Clear information and convenient collection services, they suggest, may achieve better results than threats of punishment.",
+      "Another concern is that recycling may receive more attention than it deserves. Some materials, particularly certain types of plastic, are difficult and expensive to recycle, and much of what is collected may ultimately be burned, buried, or shipped abroad. Critics argue that focusing on recycling can distract from more effective ways of reducing waste, such as producing less packaging, designing products to last longer, and encouraging people to reuse items rather than throw them away. In their view, the best waste is the waste that is never created in the first place.",
+      "Some policymakers have therefore proposed placing greater responsibility on producers rather than households. Under such systems, manufacturers must pay for the collection and recycling of the packaging and products they sell, giving them a financial incentive to use less material and to design goods that are easier to recycle. Deposit systems, in which consumers pay a small amount when buying bottles or cans and receive it back when they return them, have also proved effective in many places.",
+      "The debate over mandatory recycling reflects a broader question about how to change behavior in the interest of the environment. Rules and penalties can produce rapid results, but they may also generate resentment, while voluntary approaches respect personal choice but may achieve less. Perhaps the most effective strategies combine clear expectations with convenient systems, fair treatment, and shared responsibility among households, businesses, and governments, so that reducing waste becomes a common goal rather than a burden imposed on a few, and something people feel proud to achieve together.",
+    ],
+    ja: [
+      '多くの国で、家庭は、ごみを紙やプラスチックやガラスや金属や生ごみといったさまざまな種類に分けるようすすめられている。そうすれば、材料を埋めたり燃やしたりせずにリサイクルできるからである。リサイクルが自由意思の場所もあり、すべてを一つのごみ箱に入れたい住民にも罰はない。法律で義務づけられている場所もあり、ごみをきちんと分けない家庭は警告や罰金を受けるかもしれない。リサイクルを義務にすべきかどうかという問いは、環境保護や個人の責任や、さまざまな政策の効果についての問題を提起している。',
+      'リサイクルの義務化を支持する人々は、自由意思の仕組みでは高い参加率はめったに達成できないと主張する。多くの人々はリサイクルするつもりでも忘れたり、不便だと感じたり、自分ひとりの努力はほとんどちがいを生まないと思いこんだりする。リサイクルが義務になると、参加はかなりふえる傾向があり、埋立地や焼却炉に送られるごみの量は減る。支持する人々は、義務的な取り組みによって世界で最も高いリサイクル率のいくつかを達成した都市や国をあげ、はっきりした規則が大規模にふるまいを変えうることを示している。時がたてば、ごみを分けることは、住民がもう重荷とは考えない習慣になるかもしれないと彼らはつけ加える。',
+      '支持する人々はまた、環境上・経済上の利益を強調する。リサイクルは新しい原料を掘り出す必要を減らし、エネルギーを節約し、採掘や製造による汚染を減らす。埋立地は場所をとり、有害なガスを出すことがあり、土や水を汚すかもしれない。リサイクルできる材料を集めて分けるにはお金がかかるが、とくに埋立地の場所がますます乏しく高くなるにつれて、経済的にも環境的にも長期的な節約はその努力を正当化すると支持する人々は主張する。',
+      'しかし批判する人々は、リサイクルの義務化が最もよい方法なのかを疑う。規則を守らせるには、検査員が人々のごみを調べる必要があるかもしれず、それをプライバシーの侵害とみなす人もいる。罰金は、高齢の人や障害のある人や、ごみを分けるのがむずかしい混み合った住宅に住む人に最も重くのしかかるかもしれない。批判する人々はまた、何がリサイクルできるかの規則はわかりにくいことが多く、地域によってちがうので、正直なまちがいで人々を罰するのは不公平だと指摘する。はっきりした情報と便利な回収のサービスのほうが、罰のおどしよりよい結果を生むかもしれないと彼らは示唆する。',
+      'もう一つの心配は、リサイクルが値する以上の注目を集めているかもしれないということである。いくつかの材料、とくにある種のプラスチックはリサイクルがむずかしく費用がかかり、集められたものの多くは結局燃やされたり、埋められたり、外国に送られたりするかもしれない。批判する人々は、リサイクルに集中すると、包装を少なくしたり、製品を長もちするように設計したり、物を捨てずに再利用するよう人々をうながしたりといった、ごみを減らすより効果的な方法から注意がそれてしまうかもしれないと主張する。彼らの見方では、最もよいごみとは、そもそも生み出されないごみなのである。',
+      'そのため、家庭よりも生産者により大きな責任を負わせることを提案した政策担当者もいる。そうした仕組みのもとでは、製造会社は自分が売る包装や製品の回収とリサイクルの費用をはらわなければならず、材料を減らし、リサイクルしやすい品物を設計する経済的な動機があたえられる。消費者がびんや缶を買うときに少額をはらい、それを返すとお金がもどってくる預かり金の仕組みも、多くの場所で効果的なことがわかっている。',
+      'リサイクルの義務化をめぐる議論は、環境のためにふるまいをどう変えるかという、より広い問いを反映している。規則と罰はすばやい結果を生みうるが、反感も生むかもしれず、自由意思のやり方は個人の選択を尊重するが、達成できることは少ないかもしれない。おそらく最も効果的な方法は、はっきりした期待と便利な仕組みと公平なあつかいとを、家庭と企業と政府のあいだで共有された責任と組み合わせることだろう。そうすれば、ごみを減らすことは、一部の人におしつけられる重荷ではなく、共通の目標になり、人々がいっしょに成しとげることをほこりに思えるものになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「集めて分けるにはお金がかかるが、長期的な節約が努力を正当化する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that mandatory recycling raises ( 1 ) and reduces waste sent to landfills. Critics worry about privacy, unfair fines, and confusing rules, and argue that reducing waste matters more than recycling. Some propose placing more responsibility on ( 2 ) and using deposit systems. Effective strategies may combine clear expectations with ( 3 ) responsibility.',
+      blanks: [
+        { choices: ['participation', 'prices', 'pollution', 'confusion'], answer: 0, why: '第2段落 participation tends to rise substantially。' },
+        { choices: ['producers', 'children', 'tourists', 'inspectors'], answer: 0, why: '第6段落 placing greater responsibility on producers rather than households。' },
+        { choices: ['shared', 'secret', 'single', 'foreign'], answer: 0, why: '第7段落 shared responsibility among households, businesses, and governments。' },
+      ],
+    },
+    tf: [
+      { statement: 'リサイクルが義務の場所では、きちんと分けない家庭は罰金を受けることがある。', answer: true, why: '第1段落 may receive warnings or fines。' },
+      { statement: '支持する人々によれば、自由意思の仕組みでもふつう高い参加率が達成される。', answer: false, why: '第2段落 voluntary systems rarely achieve high participation。' },
+      { statement: '集められたプラスチックの多くは、結局燃やされたり外国に送られたりするかもしれない。', answer: true, why: '第5段落 much of what is collected may ultimately be burned, buried, or shipped abroad。' },
+      { statement: '預かり金の仕組みは、どこでも効果がなかった。', answer: false, why: '第6段落 have also proved effective in many places。' },
+    ],
+    qa: [
+      { q: 'Why do some regard enforcing recycling rules as an invasion of privacy?', choices: ['Inspectors may need to examine people’s garbage.', 'Rules are written in secret.', 'Cameras are placed in homes.', 'People must report their income.'], answer: 0, why: '第4段落 may require inspectors to examine people\'s garbage。' },
+      { q: 'What incentive do producer-responsibility systems give manufacturers?', choices: ['To use less material and design goods easier to recycle.', 'To sell more packaging.', 'To raise prices.', 'To close factories.'], answer: 0, why: '第6段落 giving them a financial incentive to use less material and to design goods that are easier to recycle。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
