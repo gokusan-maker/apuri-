@@ -2738,3 +2738,10 @@ it('誤文訂正〈192〉：東大レベル so ～ that・such ～ that の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('such')
 })
+
+it('正誤問題〈199〉：京大レベル 関係副詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-rel-adverb-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) which')
+})

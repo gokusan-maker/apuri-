@@ -4730,6 +4730,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Could you give me (B) a (C) piece of (D) papers?', choices: ['(A) Could you give me', '(B) a', '(C) piece of', '(D) papers?'], answer: 3, why: '「紙」の paper は数えられない名詞。a piece of paper。' },
     ],
   },
+  {
+    id: 'exam-error-rel-adverb-kyodai',
+    title: '入試の正誤問題〈199〉（京大レベル：関係副詞 where・when・why・how）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係副詞は、先行詞が場所なら where、時なら when、理由（the reason）なら why、方法なら how。関係副詞は「前置詞＋ which」の代わりで（where ＝ in which）、うしろは主語も目的語もそろった完全な文になる。うしろに主語や目的語がぬけているなら関係代名詞（which・that）を使う。the way how とはいわず、the way か how のどちらかだけを使う。関係副詞の節のなかで in it などをくり返さない。',
+    ],
+    examples: [
+      { en: 'This is the house where I was born.', ja: 'これは私が生まれた家だ。' },
+      { en: 'I remember the day when we first met.', ja: '私たちが初めて会った日を覚えている。' },
+    ],
+    questions: [
+      { sentence: '(A) This is the house (B) which (C) I was born (D) in 2005.', choices: ['(A) This is the house', '(B) which', '(C) I was born', '(D) in 2005'], answer: 1, why: 'I was born in the house なので、場所を表す関係副詞 where（in which）。' },
+      { sentence: '(A) I remember (B) the day (C) where we first (D) met.', choices: ['(A) I remember', '(B) the day', '(C) where we first', '(D) met'], answer: 2, why: '先行詞 the day は時なので when。the day when we first met。' },
+      { sentence: '(A) Tell me (B) the way how (C) you solved (D) the problem.', choices: ['(A) Tell me', '(B) the way how', '(C) you solved', '(D) the problem'], answer: 1, why: 'the way と how はいっしょに使わない。the way you solved／how you solved。' },
+      { sentence: '(A) The reason (B) why (C) he was late (D) were the heavy snow.', choices: ['(A) The reason', '(B) why', '(C) he was late', '(D) were the heavy snow'], answer: 3, why: '主語は The reason（単数）なので was。' },
+      { sentence: '(A) Where (B) is the town (C) when (D) you grew up?', choices: ['(A) Where', '(B) is the town', '(C) when', '(D) you grew up?'], answer: 2, why: '先行詞 the town は場所なので where。the town where you grew up。' },
+      { sentence: '(A) Kyoto is a city (B) where (C) attracts (D) many tourists.', choices: ['(A) Kyoto is a city', '(B) where', '(C) attracts', '(D) many tourists'], answer: 1, why: 'attracts の主語が必要なので関係代名詞 which（that）。where は主語にならない。' },
+      { sentence: '(A) This is (B) the park (C) where we (D) played in it as children.', choices: ['(A) This is', '(B) the park', '(C) where we', '(D) played in it as children'], answer: 3, why: 'where が場所を表しているので in it は不要。where we played as children。' },
+      { sentence: '(A) Which (B) is the reason (C) why (D) she left?', choices: ['(A) Which', '(B) is the reason', '(C) why', '(D) she left?'], answer: 0, why: '「何が理由か」は What。What is the reason why she left?' },
+      { sentence: '(A) Do you know (B) the time (C) where (D) the train leaves?', choices: ['(A) Do you know', '(B) the time', '(C) where', '(D) the train leaves?'], answer: 2, why: '先行詞 the time は時なので when。' },
+      { sentence: '(A) There are (B) times (C) which (D) I feel lonely.', choices: ['(A) There are', '(B) times', '(C) which', '(D) I feel lonely'], answer: 2, why: 'I feel lonely at those times なので時の関係副詞 when。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
