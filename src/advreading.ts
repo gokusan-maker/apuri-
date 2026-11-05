@@ -36338,6 +36338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-parental-leave',
+    title: 'Should Parental Leave Be Expanded?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When a child is born, parents face the challenge of caring for a newborn while continuing to meet the demands of work. In many countries, laws give parents the right to take time off from their jobs, often with some form of pay, but the length of this leave and the amount of support provided vary widely. In some places, fathers are entitled to only a few days, while mothers receive several months. Whether governments should require employers to offer longer and better-paid leave to both parents has become an important question in debates about work, family, and equality.",
+      "Supporters of generous parental leave argue that it benefits children above all. The first months of life are a period of rapid development, and close contact with parents during this time may support a child's health and emotional security. Parents who are not forced to return to work too soon may also be better able to recover from childbirth, establish routines, and adjust to the responsibilities of caring for a baby. In this view, supporting parents during this period is an investment in the next generation.",
+      "Supporters also emphasize the importance of leave for fathers. When only mothers take extended leave, they may fall behind in their careers, contributing to the gap between men's and women's earnings. ( A ) many fathers would like to spend more time with their children, supporters argue, they often feel unable to take leave because of workplace expectations or financial pressures. Policies that reserve part of the leave specifically for fathers, so that it is lost if they do not use it, have been found in some countries to increase the number of fathers who take time off.",
+      "Critics, however, raise concerns about the costs of such policies. Paying employees who are not working places a financial burden on businesses or on governments, and small companies in particular may struggle to manage the absence of a key worker for several months. Some critics also worry that if employers must provide long leave, they may become reluctant to hire young people who seem likely to become parents, which could harm the very groups the policy is intended to help.",
+      "Critics further argue that families should be free to decide for themselves how to balance work and childcare. Some parents may prefer to return to work quickly, perhaps because they enjoy their jobs or need to maintain their professional skills, while others may wish to stay at home for longer. In this view, rigid rules may not fit the variety of family circumstances, and support might be better provided through flexible arrangements, such as part-time work or affordable childcare, rather than through extended leave alone.",
+      "Between these positions, many countries have tried to design policies that balance the needs of families and employers. Some share the cost of leave between governments and businesses, reducing the burden on small companies. Others allow parents to divide leave between them flexibly or to take it in several shorter periods rather than all at once. Encouraging workplaces to treat parental leave as normal for both men and women, rather than as an exception, may also help to reduce the stigma that discourages some parents from using it.",
+      "The debate over parental leave reflects a broader question about how societies value the work of caring for others. Raising children is essential to the future of any society, yet it is often treated as a private matter that families must manage on their own. Policies that support parents may require difficult choices about costs and priorities, but they also express a judgment about what kind of society people wish to build, one in which work and family life can be combined without forcing parents to sacrifice one for the other.",
+    ],
+    ja: [
+      '子どもが生まれると、親は仕事のもとめにこたえ続けながら新生児を世話するという課題に直面する。多くの国では、法律によって親に、しばしば何らかの給料つきで仕事を休む権利があたえられているが、その休みの長さとささえの大きさは大きく異なる。父親には数日しか認められないのに、母親は数か月を受けるという場所もある。政府が雇い主に、両方の親により長く給料のよい休みをあたえるよう求めるべきかどうかは、仕事と家族と平等をめぐる議論の大切な問いになっている。',
+      '手厚い育児休業を支持する人々は、それが何よりも子どもに益をもたらすと主張する。生まれてからの数か月は急速に成長する時期であり、この時期の親との密接なふれあいは、子どもの健康と心の安定をささえるかもしれない。早すぎる仕事への復帰をしいられない親はまた、出産から回復し、生活のリズムを整え、赤ちゃんを世話する責任になれていきやすいかもしれない。この見方では、この時期に親をささえることは、次の世代への投資なのである。',
+      '支持する人々はまた、父親の休みの大切さを強調する。母親だけが長い休みをとると、母親は仕事で取り残されるかもしれず、それが男女の収入の差の一因になる。多くの父親は子どもともっと時間をすごしたいと思っているが、職場の期待やお金の重圧のために休みをとれないと感じることが多いと支持する人々は主張する。休みの一部を父親専用にし、使わなければ失われるようにする政策は、いくつかの国で休みをとる父親の数をふやすことがわかっている。',
+      'しかし批判する人々は、そうした政策の費用についての心配をあげる。働いていない従業員に給料をはらうことは、会社や政府にお金の負担をかけ、とくに小さな会社は、大切な働き手が何か月もいないことに対処するのに苦労するかもしれない。また、雇い主が長い休みをあたえなければならないとなると、親になりそうに見える若い人をやとうのをためらうようになり、その政策が助けようとしているまさにその人々を傷つけかねないと心配する批判者もいる。',
+      '批判する人々はさらに、家族は仕事と子育てのつりあいを自分で決める自由をもつべきだと主張する。仕事を楽しんでいたり、専門の技能を保つ必要があったりして、早く仕事にもどりたい親もいれば、もっと長く家にいたい親もいる。この見方では、かたい規則は家族の事情の多様さに合わないかもしれず、ささえは長い休みだけでなく、短時間勤務や手ごろな保育のような柔軟な仕組みを通じてあたえるほうがよいかもしれない。',
+      'これらの立場のあいだで、多くの国は家族と雇い主の必要のつりあいをとる政策をつくろうとしてきた。休みの費用を政府と会社で分け合い、小さな会社の負担をへらす国もある。親が休みを柔軟に分け合ったり、一度にではなく何回かの短い期間に分けてとったりできるようにした国もある。育児休業を例外ではなく男女どちらにとってもふつうのこととしてあつかうよう職場にうながすことも、一部の親にそれを使うのをためらわせる偏見をへらす助けになるかもしれない。',
+      '育児休業をめぐる議論は、社会がほかの人を世話する仕事をどう評価するかという、より広い問いを反映している。子どもを育てることはどんな社会の未来にも欠かせないが、しばしば家族が自分たちでなんとかしなければならない個人的な問題としてあつかわれる。親をささえる政策は、費用と優先順位について難しい選択を求めるかもしれないが、それはまた、人々がどのような社会をきずきたいのかについての判断を表している。親が一方のためにもう一方を犠牲にしなくても、仕事と家庭生活を両立できる社会である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「多くの父親はもっと時間をすごしたいが、休みをとれないと感じる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that parental leave benefits children and that leave for ( 1 ) can reduce the earnings gap. Critics raise concerns about ( 2 ) for businesses and argue that families should decide for themselves. Some countries share the cost of leave between governments and ( 3 ).',
+      blanks: [
+        { choices: ['fathers', 'teachers', 'doctors', 'students'], answer: 0, why: '第3段落 Supporters also emphasize the importance of leave for fathers。' },
+        { choices: ['costs', 'holidays', 'uniforms', 'traffic'], answer: 0, why: '第4段落 Critics ... raise concerns about the costs of such policies。' },
+        { choices: ['businesses', 'schools', 'hospitals', 'families'], answer: 0, why: '第6段落 Some share the cost of leave between governments and businesses。' },
+      ],
+    },
+    tf: [
+      { statement: '育児休業の長さとささえの大きさは、国によって大きく異なる。', answer: true, why: '第1段落 vary widely。' },
+      { statement: '父親専用の休みは、休みをとる父親の数をへらすことがわかっている。', answer: false, why: '第3段落 have been found in some countries to increase the number of fathers who take time off。' },
+      { statement: '小さな会社は、働き手の長い不在に対処するのに苦労するかもしれない。', answer: true, why: '第4段落 small companies in particular may struggle。' },
+      { statement: '筆者によれば、子育てはいつも社会全体の問題としてあつかわれている。', answer: false, why: '第7段落 it is often treated as a private matter。' },
+    ],
+    qa: [
+      { q: 'Why might employers become reluctant to hire some young people, according to critics?', choices: ['They seem likely to become parents and take long leave.', 'They lack education.', 'They prefer part-time work.', 'They demand high salaries.'], answer: 0, why: '第4段落 reluctant to hire young people who seem likely to become parents。' },
+      { q: 'What might help reduce the stigma around parental leave?', choices: ['Treating it as normal for both men and women.', 'Making it shorter.', 'Allowing it only for mothers.', 'Keeping it secret.'], answer: 0, why: '第6段落 treat parental leave as normal for both men and women。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
