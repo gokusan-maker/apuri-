@@ -33858,6 +33858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-dual-citizenship',
+    title: 'Should People Be Allowed Two Citizenships?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As more people move between countries to study, work, and marry, an increasing number find that their lives are connected to more than one nation. A child may be born in one country to parents from another, or an adult may spend decades living abroad while maintaining close ties with family and friends at home. Some countries allow such people to hold two citizenships at once, while others require them to choose one and give up the other. The question of whether dual citizenship should be permitted touches on identity, loyalty, and the meaning of belonging to a nation.",
+      "Supporters argue that dual citizenship reflects the reality of modern life. Many people genuinely belong to two countries, speaking both languages, paying taxes in both, and caring about the future of both. Forcing them to give up one citizenship may feel like being asked to deny part of who they are. Supporters also point out that the requirement to choose can have serious practical consequences, such as losing the right to live, work, own property, or inherit in one of the countries concerned. For people who have lived abroad for many years, such losses may mean being cut off from elderly parents, family land, or the community in which they grew up.",
+      "Supporters further argue that dual citizenship can benefit the countries involved. People with connections to two nations often act as bridges between them, encouraging trade, investment, and cultural exchange. Countries with many citizens living abroad may find that allowing dual citizenship strengthens these citizens' ties to home, encouraging them to return or to invest. ( A ) the benefits are difficult to measure precisely, supporters believe that a more flexible approach to citizenship suits a world in which people and ideas move freely.",
+      "Critics, however, raise concerns about loyalty. Citizenship, in their view, involves a special commitment to a particular political community, including obligations such as obeying its laws and, in some countries, serving in its military. If a person is a citizen of two countries whose interests conflict, it may be unclear where his or her loyalty lies. Critics worry that dual citizenship weakens the sense that citizenship is a meaningful bond rather than simply a convenient set of rights. Some also fear that, in times of crisis, the ability to leave for another country may reduce people's willingness to share in the difficulties of the community.",
+      "There are also practical difficulties. People with two citizenships may be subject to two sets of laws concerning taxes, military service, and family matters, which can create confusion or conflict. Some critics argue that dual citizenship allows people to enjoy the benefits of membership in two countries while avoiding some of the responsibilities, for example by voting in a country where they do not live and whose decisions will not directly affect them. Such concerns are especially strong in small countries with large numbers of citizens abroad.",
+      "In practice, the trend in many parts of the world has been toward greater acceptance of dual citizenship, although rules vary widely. Some countries permit it freely, others allow it only in certain circumstances, such as for children born to parents of different nationalities, and still others forbid it. Some have tried to address concerns about voting by limiting the political rights of citizens who live abroad for a long time, while preserving their other rights.",
+      "The debate over dual citizenship reflects deeper changes in how people understand their identities. In the past, belonging to a nation was often seen as exclusive, like membership in a single family. Today, many people experience their identities as layered, combining attachments to several places and communities. Whether laws should recognize this complexity, or whether citizenship should remain a single and undivided commitment, is a question that each society must answer in light of its own history and values.",
+    ],
+    ja: [
+      '勉強や仕事や結婚のために国から国へ移る人がふえるにつれて、自分の生活が二つ以上の国とつながっていると気づく人がふえている。子どもがある国で別の国出身の両親のもとに生まれることもあれば、大人が何十年も外国で暮らしながら、母国の家族や友人と深いつながりを保ち続けることもある。そのような人が同時に二つの国籍をもつことを認める国もあれば、一つを選んでもう一つを放棄するよう求める国もある。二重国籍を認めるべきかどうかという問いは、自己意識や忠誠や、国に属することの意味にかかわっている。',
+      '支持する人々は、二重国籍は現代の生活の現実を反映していると主張する。多くの人々は本当に二つの国に属しており、両方のことばを話し、両方で税をはらい、両方の未来を気にかけている。国籍の一つを放棄させることは、自分の一部を否定するよう求められているように感じられるかもしれない。支持する人々はまた、選択を求めることは、かかわる国の一方で住む、働く、財産をもつ、相続する権利を失うといった、深刻な実際的な結果をもたらしうると指摘する。外国に長く住んできた人々にとって、そうした損失は、年老いた親や家族の土地や、自分が育った共同体から切りはなされることを意味するかもしれない。',
+      '支持する人々はさらに、二重国籍はかかわる国々の利益にもなりうると主張する。二つの国とつながりをもつ人々は、しばしばそのあいだの橋の役目を果たし、貿易や投資や文化の交流をうながす。外国に住む市民が多い国は、二重国籍を認めることでそうした市民と母国とのつながりが強まり、帰国や投資をうながせると気づくかもしれない。その利益を正確にはかるのはむずかしいが、人や考えが自由に移動する世界には、国籍へのより柔軟な考え方が合っていると支持する人々は信じている。',
+      'しかし批判する人々は、忠誠についての心配をあげる。彼らの見方では、国籍には特定の政治的な共同体への特別なかかわりがふくまれており、その法律を守ることや、国によっては軍に服務することのような義務がともなう。ある人が利害の対立する二つの国の国民であれば、その人の忠誠がどこにあるのかがはっきりしないかもしれない。批判する人々は、二重国籍が、国籍とは単に便利な権利の集まりではなく意味のあるきずなだという感覚を弱めることを心配している。また、危機のときに別の国へ去ることができると、共同体の苦しみを分かち合おうとする気持ちが弱まるのではないかとおそれる人もいる。',
+      '実際的なむずかしさもある。二つの国籍をもつ人は、税や兵役や家族の事がらについて二つの法律にしたがうことになるかもしれず、それが混乱や対立を生みうる。二重国籍によって、人々は二つの国の成員であることの利益を受けながら、責任の一部をさけることができると主張する批判者もいる。たとえば、住んでおらず、その決定が直接自分に影響しない国で投票することによってである。こうした心配は、外国に住む国民の数が多い小さな国でとくに強い。',
+      '実際には、規則は大きくちがうものの、世界の多くの地域では二重国籍をより受け入れる方向に進んできた。それを自由に認める国もあれば、ちがう国籍の両親のもとに生まれた子どもの場合のような、特定の状況でだけ認める国もあり、さらに禁じる国もある。投票についての心配に取り組むために、外国に長く住む市民のほかの権利は守りながら、その政治的な権利を制限しようとしている国もある。',
+      '二重国籍をめぐる議論は、人々が自分のあり方をどう理解するかについてのより深い変化を反映している。かつて、国に属することはしばしば、一つの家族の一員であることのように、ほかを排除するものとみなされていた。今日、多くの人々は、自分のあり方を、いくつかの場所や共同体への愛着を組み合わせた、層をなすものとして経験している。法律がこの複雑さを認めるべきか、それとも国籍は一つの分けられないかかわりであり続けるべきかは、それぞれの社会が自分の歴史と価値観に照らして答えなければならない問いである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「利益を正確にはかるのはむずかしいが、柔軟な考え方が合っている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that dual citizenship reflects the reality of people who belong to two countries and can act as ( 1 ) between nations. Critics worry about ( 2 ) and about people enjoying rights while avoiding responsibilities. The debate reflects a change toward seeing identities as ( 3 ) rather than exclusive.',
+      blanks: [
+        { choices: ['bridges', 'walls', 'judges', 'soldiers'], answer: 0, why: '第3段落 often act as bridges between them。' },
+        { choices: ['loyalty', 'weather', 'fashion', 'language'], answer: 0, why: '第4段落 Critics, however, raise concerns about loyalty。' },
+        { choices: ['layered', 'fixed', 'hidden', 'simple'], answer: 0, why: '第7段落 many people experience their identities as layered。' },
+      ],
+    },
+    tf: [
+      { statement: '二つの国籍を同時にもつことを認める国もある。', answer: true, why: '第1段落 Some countries allow such people to hold two citizenships at once。' },
+      { statement: '支持する人々によれば、国籍を選ばせることに実際的な結果はない。', answer: false, why: '第2段落 can have serious practical consequences。' },
+      { statement: '二重国籍の人は二つの法律にしたがうことになるかもしれない。', answer: true, why: '第5段落 may be subject to two sets of laws。' },
+      { statement: '世界の多くの地域では、二重国籍を禁じる方向に進んできた。', answer: false, why: '第6段落 toward greater acceptance of dual citizenship。' },
+    ],
+    qa: [
+      { q: 'What example of avoiding responsibility do some critics give?', choices: ['Voting in a country where one does not live.', 'Paying taxes in two countries.', 'Learning two languages.', 'Visiting family abroad.'], answer: 0, why: '第5段落 voting in a country where they do not live。' },
+      { q: 'How have some countries addressed concerns about voting?', choices: ['By limiting the political rights of citizens who live abroad for a long time.', 'By banning all elections.', 'By forcing everyone to vote.', 'By closing their borders.'], answer: 0, why: '第6段落 limiting the political rights of citizens who live abroad for a long time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
