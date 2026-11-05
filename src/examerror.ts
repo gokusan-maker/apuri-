@@ -4514,6 +4514,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Keeping (B) the room (C) cleanly (D) is important.', choices: ['(A) Keeping', '(B) the room', '(C) cleanly', '(D) is important'], answer: 2, why: 'keep O C の C には形容詞。keeping the room clean。' },
     ],
   },
+  {
+    id: 'exam-error-conditional-kyodai',
+    title: '入試の正誤問題〈190〉（京大レベル：条件の接続詞 provided・suppose・in case）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'provided（providing）that ～「～という条件で」、suppose（supposing）～「もし～としたら」、in case ～「～するといけないから・～の場合に備えて」は、if に近い条件の接続詞。時や条件の節なので、未来のことも現在形で表す（in case it rains）。suppose ＋過去形は仮定法で、主節は would になる。in case of のあとは名詞。',
+    ],
+    examples: [
+      { en: 'You can borrow my bike provided you return it by Friday.', ja: '金曜までに返すなら、私の自転車を借りてもいいよ。' },
+      { en: 'Take an umbrella in case it rains.', ja: '雨が降るといけないから、かさを持っていきなさい。' },
+    ],
+    questions: [
+      { sentence: '(A) You can borrow my bike (B) provided (C) you will return (D) it by Friday.', choices: ['(A) You can borrow my bike', '(B) provided', '(C) you will return', '(D) it by Friday'], answer: 2, why: '条件を表す provided の節では、未来のことも現在形で表す。provided you return it。' },
+      { sentence: '(A) Take an umbrella (B) in case (C) it will rain (D) this afternoon.', choices: ['(A) Take an umbrella', '(B) in case', '(C) it will rain', '(D) this afternoon'], answer: 2, why: 'in case「～するといけないから」の節では、未来のことも現在形。in case it rains。' },
+      { sentence: '(A) Suppose (B) you won the lottery, (C) what will (D) you do with the money?', choices: ['(A) Suppose', '(B) you won the lottery,', '(C) what will', '(D) you do with the money?'], answer: 2, why: 'suppose ＋過去形は仮定法なので、主節は would。what would you do。' },
+      { sentence: '(A) Providing (B) that the weather (C) is fine, (D) we will going hiking.', choices: ['(A) Providing', '(B) that the weather', '(C) is fine,', '(D) we will going hiking'], answer: 3, why: 'will のあとは動詞の原形。we will go hiking。' },
+      { sentence: '(A) In case of (B) it rains, (C) the game (D) will be put off.', choices: ['(A) In case of', '(B) it rains,', '(C) the game', '(D) will be put off'], answer: 0, why: 'in case of のあとは名詞。節が続くなら in case。In case it rains。' },
+      { sentence: '(A) I wrote down (B) her number (C) in case (D) I will forget it.', choices: ['(A) I wrote down', '(B) her number', '(C) in case', '(D) I will forget it'], answer: 3, why: '過去の文の in case 節は過去形。in case I forgot it。' },
+      { sentence: '(A) Supposing (B) your flight (C) is delayed, how (D) you will contact us?', choices: ['(A) Supposing', '(B) your flight', '(C) is delayed, how', '(D) you will contact us?'], answer: 3, why: '疑問詞のあとは疑問文の語順。how will you contact us。' },
+      { sentence: '(A) Provide (B) that everyone agrees, (C) we will (D) start the project tomorrow.', choices: ['(A) Provide', '(B) that everyone agrees,', '(C) we will', '(D) start the project tomorrow'], answer: 0, why: '「～という条件で」は provided（providing）that。Provided that everyone agrees。' },
+      { sentence: '(A) Suppose (B) it rain tomorrow, (C) what (D) shall we do?', choices: ['(A) Suppose', '(B) it rain tomorrow,', '(C) what', '(D) shall we do?'], answer: 1, why: '主語 it は3人称単数で、suppose の節は現在形で未来を表す。Suppose it rains tomorrow。' },
+      { sentence: '(A) I will lend you the money (B) provided (C) that you (D) paid me back next week.', choices: ['(A) I will lend you the money', '(B) provided', '(C) that you', '(D) paid me back next week'], answer: 3, why: 'provided の節は現在形で未来を表す。provided that you pay me back。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
