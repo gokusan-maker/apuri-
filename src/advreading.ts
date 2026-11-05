@@ -35662,6 +35662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-photographs',
+    title: 'Photographs and Memory',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Never before have so many photographs been taken. Where earlier generations might have owned a few albums containing pictures of weddings, holidays, and family gatherings, many people today carry thousands of images on their phones, and billions more are shared online every day. The act of taking a photograph has become so easy and so habitual that it often happens almost without thought. This abundance raises a question that earlier generations rarely had to consider. What is the relationship between photographing an experience and actually living it?",
+      "Photographs have long been valued as aids to memory. A picture of a childhood home or a departed relative can bring back details that would otherwise have faded, and looking at old photographs together can help families to share and preserve their history. In this sense, photography extends the reach of memory, allowing us to revisit moments that would otherwise be lost. It is hardly surprising that, when asked what they would save from a fire, many people mention their photographs. Such images seem to hold not only information about the past but also a sense of connection to the people and places we have loved.",
+      "Yet some research suggests that the act of photographing may, in certain circumstances, weaken rather than strengthen memory. When people take pictures of objects in a museum, for example, they sometimes remember those objects less well than people who simply looked at them. ( A ) the reasons for this effect are not fully understood, one possibility is that people rely on the camera to remember for them, and therefore pay less attention to the experience itself, as though the photograph could take the place of looking.",
+      "There is also a concern that photography can change the nature of the experience. A person who spends a concert or a sunset looking at a screen in order to capture it may be less fully present than one who simply watches and listens. The desire to record an event, and perhaps to share it with others, can turn experiences into material for display rather than moments to be enjoyed for their own sake. In such cases, the photograph may become more important than the experience it was meant to preserve.",
+      "It would be too simple, however, to conclude that taking photographs is harmful. Photography can also sharpen attention. A person who seeks to take a good picture must look carefully at light, composition, and detail, noticing aspects of the scene that a casual observer might miss. Many photographers describe their practice as a way of seeing the world more clearly, and some research suggests that people who photograph with deliberate attention may remember visual details better than those who do not.",
+      "The difference, then, may lie less in whether we take photographs than in how we take them. A photograph taken thoughtfully, as part of an effort to notice and appreciate, may deepen experience, while one taken automatically, as a substitute for attention, may weaken it. The sheer quantity of images we now produce also matters. A few carefully chosen photographs may be revisited and treasured, while thousands of unsorted images may never be looked at again, offering little help to memory despite their abundance.",
+      "Perhaps the lesson is that photography, like any tool, reflects the intentions of those who use it. Used with care, it can help us to see more clearly and to remember what matters. Used carelessly, it can distract us from the very experiences it claims to preserve. In an age when the camera is always within reach, the challenge is not to stop taking photographs but to remember that the purpose of looking is to see, and that some moments may be best preserved not on a screen but in the attention we give them.",
+    ],
+    ja: [
+      'これほど多くの写真がとられたことはかつてない。以前の世代なら、結婚式や休日や家族の集まりの写真をおさめたアルバムを何冊かもっていたかもしれないが、今日の多くの人は何千枚もの画像を電話に入れて持ち歩き、さらに何十億枚もが毎日ネットで共有されている。写真をとるという行為はあまりにかんたんで習慣的になったので、ほとんど考えずに行われることが多い。この豊富さは、以前の世代がめったに考える必要のなかった問いを投げかける。経験を写真にとることと、実際にそれを生きることとのあいだには、どのような関係があるのだろうか。',
+      '写真は長いあいだ、記憶を助けるものとして大切にされてきた。子どものころの家や亡くなった親せきの写真は、そうでなければうすれていたこまかなところを呼びもどすことができ、いっしょに古い写真を見ることは、家族が自分たちの歴史を分かち合い守る助けになる。この意味で、写真は記憶のとどく範囲を広げ、そうでなければ失われてしまう瞬間を再びおとずれられるようにする。火事のときに何を持ち出すかとたずねられて、多くの人が写真をあげるのも、ほとんどおどろくことではない。そうした画像は、過去についての情報だけでなく、私たちが愛した人々や場所とのつながりの感覚もおさめているように思われる。',
+      'しかし、ある研究によれば、写真をとるという行為は、ある状況では記憶を強めるのではなく弱めるかもしれない。たとえば、人々が博物館で物の写真をとると、ただそれを見ただけの人より、その物をよく覚えていないことがある。この効果の理由はすっかりはわかっていないが、一つの可能性は、人々が自分の代わりに覚えてくれるようカメラにたより、そのため写真が見ることの代わりになれるかのように、経験そのものにあまり注意をはらわないということである。',
+      '写真が経験の性質を変えてしまうのではないかという心配もある。コンサートや夕日を写しとるために画面を見てすごす人は、ただ見て聞く人ほど、その場に十分にいないかもしれない。出来事を記録し、もしかするとほかの人と共有したいという願いは、経験を、それ自体のために楽しむ瞬間ではなく、見せるための素材に変えてしまうことがある。そうした場合、写真は、それが守るはずだった経験よりも大切になってしまうかもしれない。',
+      'しかし、写真をとることは有害だと結論づけるのは単純すぎるだろう。写真は注意をするどくすることもできる。よい写真をとろうとする人は、光や構図やこまかなところを注意深く見なければならず、何気なく見る人が見のがすかもしれない場面の面に気づく。多くの写真家は、自分の営みを世界をよりはっきり見る方法だと語っており、意図的な注意をもって写真をとる人は、そうでない人より見たもののこまかなところをよく覚えているかもしれないと示す研究もある。',
+      'だとすれば、ちがいは、写真をとるかどうかよりも、どのようにとるかにあるのかもしれない。気づき味わおうとする努力の一部として考えてとられた写真は経験を深めるかもしれないが、注意の代わりとして機械的にとられた写真はそれを弱めるかもしれない。私たちが今生み出す画像のあまりの多さも問題である。よく選ばれた数枚の写真は見返され大切にされるかもしれないが、整理されない何千枚もの画像は二度と見られず、その多さにもかかわらず記憶の助けにはほとんどならないかもしれない。',
+      'おそらく教訓は、写真は、どんな道具とも同じように、それを使う人の意図を反映するということである。注意深く使えば、それは私たちがよりはっきり見て、大切なことを覚えておく助けになる。不注意に使えば、それは守ると言っているまさにその経験から私たちの気をそらしてしまう。カメラがいつも手のとどくところにある時代に、課題は写真をとるのをやめることではなく、見ることの目的は見えるようになることであり、ある瞬間は画面の上ではなく、私たちがそれにはらう注意のなかにこそもっともよく残されるのだと覚えておくことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「理由はすっかりはわかっていないが、一つの可能性は」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '火事のときに写真を持ち出すと答える人は多い。', answer: true, why: '第2段落 many people mention their photographs。' },
+      { statement: '博物館で物の写真をとった人は、ただ見た人よりその物をよく覚えていることが多い。', answer: false, why: '第3段落 they sometimes remember those objects less well。' },
+      { statement: 'よい写真をとろうとすると、注意がするどくなることがある。', answer: true, why: '第5段落 Photography can also sharpen attention。' },
+      { statement: '筆者は、写真をとるのをやめるべきだと主張している。', answer: false, why: '第7段落 the challenge is not to stop taking photographs。' },
+    ],
+    qa: [
+      { q: 'What is one possible reason why photographing may weaken memory?', choices: ['People rely on the camera and pay less attention.', 'Cameras are too heavy.', 'Museums are too dark.', 'Photographs are always blurry.'], answer: 0, why: '第3段落 people rely on the camera to remember for them。' },
+      { q: 'Why may thousands of unsorted images offer little help to memory?', choices: ['They may never be looked at again.', 'They are too small.', 'They are always deleted.', 'They are too expensive.'], answer: 0, why: '第6段落 may never be looked at again。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
