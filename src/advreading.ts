@@ -35582,6 +35582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-strangers',
+    title: 'The Kindness of Strangers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of the people we encounter in a lifetime are strangers. We pass them on the street, stand beside them on trains, and exchange a few words with them in shops, usually without learning their names or seeing them again. In many modern cities, children are taught from an early age to be cautious of strangers, and adults often avoid eye contact with those around them in public. Yet small acts of kindness between strangers, such as giving directions, helping someone carry a heavy bag, or returning a lost wallet, remain remarkably common, and they may tell us something important about human social life.",
+      "One striking feature of such kindness is that it usually offers no obvious reward. When we help a friend or relative, we may expect help in return at some future time, and our relationship gives us reasons to care about their well-being. A stranger, by contrast, may never be met again and cannot repay the favor. That people nevertheless help strangers suggests that human generosity is not entirely a matter of calculation, but reflects a broader willingness to respond to the needs of others simply because they are human beings like ourselves.",
+      "Kindness between strangers also plays a practical role in making societies function. A city in which no one would give directions, hold a door, or call for help in an emergency would be a far more difficult and frightening place to live. ( A ) such acts are individually small, together they create a background of trust that allows people to move through public spaces with confidence, assuming that, if something goes wrong, someone nearby will be willing to assist.",
+      "Research suggests that the experience of kindness from strangers can have effects that last well beyond the moment itself. People who receive unexpected help often report feeling more positive about others and more inclined to help someone else in turn. In this way, a single act of generosity may set off a chain of further kindness, spreading through a community in ways that no one can fully trace. Those who give help, too, frequently report a sense of satisfaction, suggesting that kindness benefits the giver as well as the receiver.",
+      "It must be acknowledged, however, that caution toward strangers is not without reason. Some strangers do intend harm, and teaching children to be careful is a sensible response to real dangers. Moreover, people are more likely to help those who seem similar to themselves, and less likely to help those who appear different in appearance, language, or background. Kindness to strangers, in other words, is not distributed equally, and its limits often reflect the prejudices and divisions of the wider society.",
+      "These observations suggest that the kindness of strangers is both fragile and worth cultivating. It depends on conditions that can be strengthened or weakened, such as the design of public spaces, the pace of urban life, and the degree to which people feel safe and connected to one another. Studies have found, for example, that people in a hurry are less likely to stop and help, which suggests that a faster and more crowded life may gradually erode the small courtesies on which public trust depends.",
+      "Perhaps, then, the kindness of strangers reveals a capacity that lies beneath the surface of everyday life, a readiness to recognize others as fellow members of a shared world. In an age when many interactions take place through screens and many neighbors remain unknown to one another, such moments of connection may matter more than ever. To offer help to someone we will never see again is a small act, but it affirms a larger truth: that we are not merely individuals pursuing our own ends, but participants in a common life.",
+    ],
+    ja: [
+      '一生のあいだに出会う人のほとんどは見知らぬ人である。私たちは通りで彼らとすれちがい、電車でとなりに立ち、店で少しことばをかわすが、たいていは名前を知ることも、再び会うこともない。多くの現代の都市では、子どもは幼いころから見知らぬ人に用心するよう教えられ、おとなは人前でまわりの人と目を合わせるのをしばしばさける。しかし、道を教えたり、重いかばんを運ぶのを手伝ったり、落とした財布をとどけたりするような、見知らぬ人どうしの小さな親切は今もおどろくほどよく見られ、それは人間の社会生活について何か大切なことを教えてくれるのかもしれない。',
+      'そうした親切のきわだった特徴の一つは、それがふつう、はっきりした見返りをもたらさないことである。友だちや親せきを助けるとき、私たちはいつか助けを返してもらえると期待するかもしれず、関係があるので相手の幸せを気にかける理由がある。対照的に、見知らぬ人は二度と会わないかもしれず、恩を返すこともできない。それでも人々が見知らぬ人を助けるということは、人間の気前のよさがすっかり計算の問題であるのではなく、相手が自分と同じ人間だというだけでその必要にこたえる、より広い気持ちを反映していることを示している。',
+      '見知らぬ人どうしの親切はまた、社会がうまく動くうえで実際的な役割もはたしている。だれも道を教えず、ドアをおさえず、非常時に助けを呼ばない都市は、暮らすのにはるかに難しく、おそろしい場所だろう。そうした行いは一つひとつは小さいが、合わさって信頼の背景をつくり、何かがうまくいかなければ近くのだれかが手を貸してくれるだろうと思って、人々が自信をもって公共の空間を行き来できるようにしている。',
+      '研究によれば、見知らぬ人から親切を受けた経験は、その瞬間をはるかにこえて続く影響をもちうる。思いがけない助けを受けた人々は、ほかの人をより前向きに感じ、今度は自分がだれかを助けたい気持ちになったとしばしば語る。こうして、一つの気前のよい行いが、さらなる親切のつらなりを引きおこし、だれにもすっかりはたどれないかたちで地域に広がっていくのかもしれない。助ける側もまたしばしば満足感を語っており、親切は受ける人だけでなくあたえる人にも益をもたらすことを示している。',
+      'しかし、見知らぬ人への用心に理由がないわけではないことは認めなければならない。害をあたえようとする見知らぬ人も実際におり、子どもに用心するよう教えるのは本当の危険への分別ある対応である。さらに、人々は自分に似ているように見える人を助けやすく、見た目やことばや背景がちがって見える人は助けにくい。言いかえれば、見知らぬ人への親切は平等に分けられているわけではなく、その限界はしばしば、より広い社会の偏見や分断を反映しているのである。',
+      'こうした観察は、見知らぬ人の親切がこわれやすく、かつ育てる価値のあるものだということを示している。それは、公共の空間の設計や都市生活の速さや、人々が安全でたがいにつながっていると感じる度合いのように、強めることも弱めることもできる条件にかかっている。たとえば、急いでいる人は立ち止まって助けにくいことが研究で見いだされており、より速く混みあった暮らしが、公共の信頼がよりどころとする小さな礼儀を少しずつむしばんでいくかもしれないことを示している。',
+      'だとすれば、見知らぬ人の親切は、日々の暮らしの表面の下にある力、つまりほかの人を共有の世界の仲間として認める心がまえを明らかにしているのかもしれない。多くのやりとりが画面を通じて行われ、多くの隣人がたがいを知らないままでいる時代には、そうしたつながりの瞬間はこれまで以上に大切なのかもしれない。二度と会わない人に手を貸すことは小さな行いだが、それはより大きな真実をたしかめる。私たちは単に自分の目的を追う個人ではなく、共通の暮らしに加わる者なのだということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一つひとつは小さいが、合わさって信頼の背景をつくる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '見知らぬ人どうしの小さな親切は、今もよく見られる。', answer: true, why: '第1段落 remain remarkably common。' },
+      { statement: '見知らぬ人を助けると、ふつうはっきりした見返りがある。', answer: false, why: '第2段落 it usually offers no obvious reward。' },
+      { statement: '親切を受けた人は、今度は自分がだれかを助けたくなることがある。', answer: true, why: '第4段落 more inclined to help someone else in turn。' },
+      { statement: '筆者によれば、見知らぬ人への親切はすべての人に平等にあたえられている。', answer: false, why: '第5段落 Kindness to strangers ... is not distributed equally。' },
+    ],
+    qa: [
+      { q: 'What did studies find about people in a hurry?', choices: ['They are less likely to stop and help.', 'They help more often.', 'They never use public transport.', 'They are always kind.'], answer: 0, why: '第6段落 people in a hurry are less likely to stop and help。' },
+      { q: 'What larger truth does helping a stranger affirm, according to the author?', choices: ['We are participants in a common life.', 'Strangers are dangerous.', 'Kindness always brings money.', 'We should avoid public spaces.'], answer: 0, why: '第7段落 participants in a common life。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -2203,3 +2203,10 @@ it('東大専用の長文137「学校で心の健康を教えるべきか」：6
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(p.summary?.blanks).toHaveLength(3)
 })
+
+it('京大専用の長文140「見知らぬ人の親切」：京大の下限600語以上・1文18語以上で、京大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-strangers')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
