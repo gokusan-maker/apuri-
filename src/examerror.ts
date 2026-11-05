@@ -7836,6 +7836,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He spent [much] hours on the project.', choices: ['many', 'a little', 'little', 'a much'], answer: 0, why: 'hours は数えられる複数名詞なので many。' },
     ],
   },
+  {
+    id: 'exam-fix-184',
+    title: '入試の誤文訂正〈184〉（国公立レベル：命令文＋and／or「そうすれば・さもないと」）',
+    points: ['「命令文, and ～」は「…しなさい、そうすれば～」、「命令文, or ～」は「…しなさい、さもないと～」。and のあとはよい結果、or のあとは悪い結果がくる。命令文は動詞の原形で始め、否定は Don’t ＋原形。うしろの文は未来のことなので will を使うことが多い。If 〜 で言いかえると、Hurry up, or you will be late. ＝ If you don’t hurry up, you will be late. ［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Study hard, and you will pass the exam.', ja: '一生けんめい勉強しなさい、そうすれば試験に受かるよ。' }],
+    questions: [
+      { sentence: 'Hurry up, [and] you will miss the bus.', choices: ['or', 'but', 'so', 'if'], answer: 0, why: 'バスに乗りおくれるのは悪い結果なので or「さもないと」。' },
+      { sentence: 'Turn left at the corner, [or] you will find the station.', choices: ['and', 'but', 'unless', 'so that'], answer: 0, why: '駅が見つかるのはよい結果なので and「そうすれば」。' },
+      { sentence: '[Studying] harder, and your grades will improve.', choices: ['Study', 'Studied', 'To studying', 'Studies'], answer: 0, why: '命令文は動詞の原形で始める。Study harder。' },
+      { sentence: 'Put on your coat, or you [catch] a cold.', choices: ['will catch', 'caught', 'catching', 'have caught'], answer: 0, why: 'or のあとは未来のことなので will catch。' },
+      { sentence: '[Not be] late, or the teacher will get angry.', choices: ['Don’t be', 'Be not to', 'No being', 'Not to be'], answer: 0, why: '否定の命令文は Don’t ＋原形。Don’t be late。' },
+      { sentence: 'Leave now, [and you won’t] get there in time.', choices: ['or you won’t', 'and you will not to', 'or you don’t', 'but you won’t'], answer: 0, why: '「間に合わない」は悪い結果なので or。or you won’t get there in time。' },
+      { sentence: 'One more step, [or] you will reach the top.', choices: ['and', 'but', 'so', 'unless'], answer: 0, why: '「名詞, and ～」でも「…すれば～」。頂上に着くのはよい結果なので and。' },
+      { sentence: '[Being] kind to others, and they will be kind to you.', choices: ['Be', 'Been', 'To be', 'Are'], answer: 0, why: '命令文は動詞の原形で始める。be 動詞の原形は Be。' },
+      { sentence: 'Take this medicine, and you [feel] better tomorrow.', choices: ['will feel', 'felt', 'have felt', 'feeling'], answer: 0, why: 'tomorrow の未来のことなので will feel。' },
+      { sentence: 'Write it down, [unless] you will forget it.', choices: ['or', 'and', 'if', 'so'], answer: 0, why: '忘れるのは悪い結果なので or「さもないと」。unless のあとに will は来ない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
