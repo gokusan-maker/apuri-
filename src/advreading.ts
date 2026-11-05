@@ -36382,6 +36382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-empathy',
+    title: 'The Limits of Empathy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Empathy, the capacity to feel what another person feels, is widely regarded as one of the foundations of moral life. We praise people who are sensitive to the suffering of others, and we often assume that a world with more empathy would be a kinder and more just place. Schools run programs to cultivate it, and leaders are criticized when they seem to lack it, sometimes more harshly than for any mistake in policy. Yet some philosophers and psychologists have begun to argue that empathy, for all its value, has important limits, and that relying on it too heavily may lead us astray.",
+      "One limitation concerns the narrowness of empathy. We find it easiest to share the feelings of people who are close to us, who resemble us, or whose stories are presented vividly. A single child whose suffering is described in detail may move us more than statistics describing the suffering of thousands. This tendency can distort our moral judgments, leading us to give generously to a cause that happens to capture our attention while neglecting problems that affect far more people but lack a memorable face.",
+      "Empathy can also be biased in ways that reinforce existing divisions. Because we tend to empathize more readily with members of our own group, empathy may strengthen loyalty to those we already favor while leaving us indifferent to outsiders. ( A ) empathy can motivate acts of great kindness, it can also be exploited, for example by those who tell stories of suffering within one group in order to provoke anger against another, turning a feeling that seems purely good into a source of conflict.",
+      "A further difficulty is that intense empathy can be exhausting. Doctors, nurses, and others who care for people in distress may find that constantly sharing the pain of those they help leads to fatigue and burnout. Some researchers distinguish between empathy, which involves feeling another's emotions, and compassion, which involves caring about another's well-being without necessarily sharing their distress. Compassion, they suggest, may be more sustainable and more effective, allowing people to help others without being overwhelmed.",
+      "None of this means that empathy is worthless. It plays an essential role in human relationships, helping us to understand those we love and to respond to their needs. It can also prompt us to take action when we might otherwise remain indifferent, and stories that awaken empathy have often played a part in movements for social change. The point is rather that empathy alone is not a sufficient guide to moral action, and that it must be supplemented by other capacities. Feeling moved by suffering is a valuable beginning, but deciding what to do about it requires something more.",
+      "Chief among these capacities is reasoning. To decide how best to help others, we often need to consider evidence, compare different courses of action, and think about the consequences of our choices for people we will never meet. Such reasoning can correct the biases of empathy, directing our concern toward where it is most needed rather than where it is most easily felt. A society that combines warm feelings with careful thought may be better able to act fairly than one that relies on feeling alone.",
+      "Perhaps, then, the lesson is not to reject empathy but to understand it more clearly. Empathy is a powerful source of moral motivation, but like any powerful force, it needs direction. By recognizing its limits, we can learn to extend our concern beyond those who happen to move us, to care without being consumed, and to act with both heart and mind. In this way, empathy can become not the whole of our moral life but one valuable part of a broader commitment to the well-being of others.",
+    ],
+    ja: [
+      '共感、つまりほかの人が感じていることを感じる力は、道徳的な生活の土台の一つとして広く見なされている。私たちはほかの人の苦しみに敏感な人をほめ、より多くの共感がある世界はより親切で正しい場所になるだろうとしばしば思いこむ。学校はそれを育てる取り組みを行い、指導者はそれが欠けているように見えると、ときには政策のどんなまちがいよりもきびしく批判される。しかし、共感にはその価値にもかかわらず大切な限界があり、それにたよりすぎると道をあやまるかもしれないと主張しはじめた哲学者や心理学者もいる。',
+      '一つの限界は、共感のせまさにかかわる。私たちがもっともかんたんに気持ちを分かち合えるのは、身近な人や自分に似た人や、その話があざやかに示される人である。苦しみがくわしく語られる一人の子どもは、何千人もの苦しみを表す統計よりも私たちの心をうごかすかもしれない。この傾向は道徳的な判断をゆがめることがあり、たまたま注意を引いた目的には気前よく寄付しながら、はるかに多くの人にかかわるが印象に残る顔をもたない問題をなおざりにさせてしまうのである。',
+      '共感はまた、今ある分断を強めるかたちでかたよることもある。私たちは自分の集団の人々にいっそう共感しやすいので、共感はすでにひいきしている人々への忠誠を強め、外の人々には無関心のままにさせるかもしれない。共感はすばらしい親切の行いをうながしうるが、利用されることもある。たとえば、ある集団のなかの苦しみの話をして別の集団への怒りをあおり、まったくよいものに見える感情を対立のみなもとに変える人々によってである。',
+      'さらなる難しさは、強い共感はつかれさせうるということである。苦しんでいる人を世話する医師や看護師などは、助ける相手の痛みをたえず分かち合うことがつかれと燃えつきにつながると気づくかもしれない。ほかの人の感情を感じることをふくむ共感と、必ずしも相手の苦しみを分かち合わずにその幸せを気にかけることをふくむ思いやりとを区別する研究者もいる。思いやりのほうが長続きし、より効果的で、人々が圧倒されることなくほかの人を助けられるようにするかもしれないと彼らは示している。',
+      'これは、共感に価値がないということではない。共感は人間関係で欠かせない役割をはたし、愛する人を理解し、その必要にこたえる助けになる。また、そうでなければ無関心なままかもしれないときに行動をうながすこともでき、共感を呼びおこす物語は、社会を変える運動でしばしば一役買ってきた。言いたいのはむしろ、共感だけでは道徳的な行動の導きとして十分ではなく、ほかの力によっておぎなわれなければならないということである。苦しみに心をうごかされることは価値あるはじまりだが、それについて何をすべきかを決めるには、それ以上のものが必要なのである。',
+      'そうした力のなかで第一のものは推論である。ほかの人をどう助けるのが最善かを決めるには、しばしば証拠を考え、さまざまな行動の道をくらべ、けっして会うことのない人々にとって自分の選択がどんな結果をもたらすかを考える必要がある。そうした推論は共感のかたよりを正し、私たちの関心を、もっともかんたんに感じられるところではなく、もっとも必要とされるところへ向けることができる。あたたかい感情と注意深い思考を組み合わせる社会は、感情だけにたよる社会よりも公平に行動できるかもしれない。',
+      'だとすれば、教訓は共感をこばむことではなく、それをよりはっきり理解することなのかもしれない。共感は道徳的な動機の強力なみなもとだが、どんな強力な力とも同じように方向づけが必要である。その限界を認めることで、私たちはたまたま心をうごかす人々をこえて関心を広げ、のみこまれることなく気にかけ、心と頭の両方で行動することを学べる。こうして共感は、私たちの道徳的な生活のすべてではなく、ほかの人の幸せへのより広い打ちこみの、価値ある一部になりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「共感は親切をうながしうるが、利用されることもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '苦しみがくわしく語られる一人の子どもは、統計より心をうごかすことがある。', answer: true, why: '第2段落 may move us more than statistics。' },
+      { statement: '共感は、いつも分断をへらすはたらきをする。', answer: false, why: '第3段落 Empathy can also be biased in ways that reinforce existing divisions。' },
+      { statement: '研究者のなかには、共感と思いやりを区別する人もいる。', answer: true, why: '第4段落 Some researchers distinguish between empathy ... and compassion。' },
+      { statement: '筆者は、共感には価値がないと考えている。', answer: false, why: '第5段落 None of this means that empathy is worthless。' },
+    ],
+    qa: [
+      { q: 'What can correct the biases of empathy, according to the author?', choices: ['Reasoning.', 'Stronger feelings.', 'Ignoring statistics.', 'Avoiding other people.'], answer: 0, why: '第6段落 Such reasoning can correct the biases of empathy。' },
+      { q: 'Why might compassion be more sustainable than empathy?', choices: ['It involves caring without necessarily sharing distress.', 'It requires feeling more pain.', 'It is only for doctors.', 'It ignores other people.'], answer: 0, why: '第4段落 compassion, which involves caring about another’s well-being without necessarily sharing their distress。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
