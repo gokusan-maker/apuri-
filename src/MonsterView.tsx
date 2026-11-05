@@ -2803,6 +2803,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 16 L28 4 M62 16 L64 4" stroke="#111827" strokeWidth="3" />
       </g>
     )
+  if (species === 'margay')
+    return (
+      <g>
+        {/* 大きな目のまわりの白いふち */}
+        <circle cx="38" cy="40" r="6" fill="none" stroke="#fef3c7" strokeWidth="2" />
+        <circle cx="58" cy="40" r="6" fill="none" stroke="#fef3c7" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
