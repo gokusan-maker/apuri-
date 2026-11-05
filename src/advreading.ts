@@ -35538,6 +35538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-mental-health-lessons',
+    title: 'Should Schools Teach Mental Health?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, concern about the mental health of young people has grown in many countries. Surveys suggest that a significant number of teenagers experience anxiety, low mood, or stress, and that many of them do not seek help, either because they do not recognize what they are experiencing or because they feel ashamed to talk about it. In response, some schools have begun to include lessons on mental health in their regular curriculum, teaching students about emotions, stress, and where to find support. Whether such lessons should be required in all schools has become a subject of debate.",
+      "Supporters argue that schools are well placed to reach young people who might otherwise receive no information at all. Almost every child attends school, and lessons can provide basic knowledge to students regardless of their family background. Learning to recognize signs of stress or anxiety in themselves and others, supporters claim, may help students to seek help earlier, before problems become serious. Lessons can also teach practical skills, such as managing difficult emotions, maintaining healthy sleep habits, and supporting friends who are struggling. Such skills, once learned, may continue to be useful long after students have left school, in university, at work, and in family life.",
+      "Supporters also emphasize the role of education in reducing stigma. When mental health is discussed openly in the classroom, students may come to see it as a normal part of health, comparable to physical fitness, rather than something to be hidden. ( A ) a single lesson cannot change attitudes overnight, supporters argue, regular and honest discussion over several years may gradually create a school culture in which students feel able to talk about their difficulties without fear of being judged or teased.",
+      "Critics, however, raise several concerns. Teachers are not trained psychologists, and some worry that lessons delivered without proper expertise may spread misleading information or encourage students to interpret ordinary sadness or nervousness as signs of illness. Critics also point out that discussing sensitive topics in a large class may be uncomfortable or even distressing for some students, particularly those who are already experiencing serious difficulties and may need individual support rather than general instruction.",
+      "Critics further argue that lessons alone cannot address the underlying causes of young people's distress. Pressure from examinations, problems at home, bullying, and the effects of social media may all contribute to poor mental health, and teaching students to cope with stress does little to reduce the stress itself. In their view, schools would do better to reduce excessive academic pressure and to provide access to trained counselors, rather than adding yet another subject to an already crowded timetable. Some also note that many schools have only one counselor for hundreds of students, a shortage that no amount of classroom teaching can make up for.",
+      "Between these positions, many educators suggest that lessons can be valuable if they form part of a broader approach. This might include training for teachers so that they can deliver lessons accurately and recognize students who need further help, close cooperation with school counselors and health services, and careful attention to the wider school environment, including workloads and relationships among students. Lessons, in this view, are most useful not as a substitute for professional support but as a way of helping students to know when and where to seek it.",
+      "The debate over mental health education reflects a growing recognition that schools are responsible not only for academic learning but also for the well-being of the young people in their care. How far this responsibility should extend, and how it should be balanced with other aims, remains a matter of disagreement. What seems clear is that helping students to understand and look after their own minds is an important goal, and that achieving it will require more than any single lesson can provide.",
+    ],
+    ja: [
+      '近年、多くの国で若者の心の健康への心配が高まっている。調査によれば、かなりの数の十代の若者が不安や気分の落ちこみやストレスを経験しており、その多くは、自分が経験していることに気づかないか、それについて話すのをはずかしく思うために、助けを求めていない。これにこたえて、ふだんの教育課程に心の健康についての授業を取り入れ、感情やストレスや、どこで支えを見つけられるかについて生徒に教えはじめた学校もある。そうした授業をすべての学校で必修にすべきかどうかが議論の的になっている。',
+      '支持する人々は、学校は、そうでなければ何の情報も受け取らないかもしれない若者にとどくのにふさわしい立場にあると主張する。ほとんどすべての子どもが学校にかよっており、授業は家庭の事情にかかわらず生徒に基本的な知識をあたえることができる。自分やほかの人のストレスや不安のしるしに気づけるようになれば、問題が深刻になる前に、生徒がより早く助けを求める助けになるかもしれないと支持する人々は主張する。授業はまた、難しい感情をあつかうこと、健やかな睡眠の習慣を保つこと、苦しんでいる友だちを支えることなど、実際的な技能も教えられる。そうした技能は、一度身につければ、生徒が学校を出てからも、大学や職場や家庭生活で長く役に立ち続けるかもしれない。',
+      '支持する人々はまた、偏見をへらすうえでの教育の役割を強調する。教室で心の健康が率直に話し合われると、生徒はそれをかくすべきものではなく、体の健康にくらべられる、健康のふつうの一部と見なすようになるかもしれない。一回の授業で考え方が一晩で変わることはないが、何年にもわたる定期的で正直な話し合いは、生徒が判断されたりからかわれたりするおそれなく自分の困りごとを話せると感じられる学校の文化を、少しずつつくるかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、いくつかの心配をあげる。教師は訓練を受けた心理学者ではなく、きちんとした専門知識なしに行われる授業は、誤解をまねく情報を広めたり、ふつうの悲しみや緊張を病気のしるしと受けとるよう生徒をうながしたりするかもしれないと心配する人もいる。批判する人々はまた、大きなクラスで繊細な話題を話し合うことは、一部の生徒、とくにすでに深刻な困難をかかえ、一般的な指導ではなく個別の支えを必要としているかもしれない生徒にとって、居心地が悪かったり、苦痛でさえあったりするかもしれないと指摘する。',
+      '批判する人々はさらに、授業だけでは若者の苦しみの根本的な原因に取り組めないと主張する。試験の重圧や家庭の問題やいじめやソーシャルメディアの影響は、どれも心の健康の悪化の一因になりうるのであり、ストレスに対処することを生徒に教えても、ストレスそのものをへらすことにはほとんどならない。彼らの見方では、学校は、すでにつまっている時間割にさらに教科をくわえるよりも、行きすぎた学業の重圧をへらし、訓練を受けたカウンセラーに相談できるようにするほうがよい。また、多くの学校では何百人もの生徒に対してカウンセラーが一人しかおらず、教室での授業をどれほどふやしてもその不足はおぎなえないと指摘する人もいる。',
+      'これらの立場のあいだで、多くの教育者は、より広い取り組みの一部になるなら授業は価値をもちうると示している。それには、教師が授業を正確に行い、さらなる助けを必要とする生徒に気づけるようにするための研修や、学校のカウンセラーや保健の機関との緊密な協力や、勉強の量や生徒どうしの関係をふくむ、学校の環境全体への注意深い配慮がふくまれるかもしれない。この見方では、授業がもっとも役に立つのは、専門家の支えの代わりとしてではなく、それをいつどこで求めればよいかを生徒が知る助けとしてである。',
+      '心の健康の教育をめぐる議論は、学校が学業だけでなく、あずかっている若者の健やかさにも責任をもつという認識が広がっていることを反映している。この責任がどこまでおよぶべきか、そしてそれをほかの目的とどうつりあわせるべきかは、今も意見が分かれている。はっきりしているように思えるのは、生徒が自分の心を理解し大切にするのを助けることは大切な目標であり、それをなしとげるには、どんな一回の授業があたえられるより多くのことが必要になるということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一回の授業で考え方は変わらないが、何年もの話し合いは文化をつくるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that mental health lessons can reach almost every child and reduce ( 1 ). Critics worry that teachers lack ( 2 ) and that lessons cannot address the underlying causes of distress. Many educators suggest that lessons help students know when to seek ( 3 ) support.',
+      blanks: [
+        { choices: ['stigma', 'homework', 'costs', 'noise'], answer: 0, why: '第3段落 the role of education in reducing stigma。' },
+        { choices: ['expertise', 'time', 'money', 'patience'], answer: 0, why: '第4段落 lessons delivered without proper expertise。' },
+        { choices: ['professional', 'financial', 'physical', 'legal'], answer: 0, why: '第6段落 not as a substitute for professional support。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの十代の若者は、心の不調があっても助けを求めていない。', answer: true, why: '第1段落 many of them do not seek help。' },
+      { statement: '支持する人々によれば、一回の授業で考え方がすぐに変わる。', answer: false, why: '第3段落 a single lesson cannot change attitudes overnight。' },
+      { statement: '批判する人々は、学業の重圧をへらすほうがよいと考えている。', answer: true, why: '第5段落 schools would do better to reduce excessive academic pressure。' },
+      { statement: '筆者によれば、一回の授業で生徒の心の健康の目標は十分になしとげられる。', answer: false, why: '第7段落 will require more than any single lesson can provide。' },
+    ],
+    qa: [
+      { q: 'Why might discussing sensitive topics in a large class be a problem?', choices: ['It may be distressing for students who need individual support.', 'Classes are too short.', 'Students already know everything.', 'Teachers refuse to speak.'], answer: 0, why: '第4段落 may be uncomfortable or even distressing for some students。' },
+      { q: 'What is one part of the broader approach many educators suggest?', choices: ['Training for teachers.', 'Longer examinations.', 'Fewer counselors.', 'Banning all discussion.'], answer: 0, why: '第6段落 This might include training for teachers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
