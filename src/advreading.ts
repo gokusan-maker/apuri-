@@ -34338,6 +34338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-carbon-tax',
+    title: 'Should Carbon Be Taxed?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most economists agree that climate change is driven in large part by the burning of fossil fuels, which releases carbon dioxide into the atmosphere. Many of them also agree on a particular policy for reducing these emissions: a tax on carbon. Under such a system, companies and consumers would pay a charge for every ton of carbon dioxide produced by the fuels they use. The idea is simple, yet carbon taxes have proved politically difficult to introduce, and in some countries attempts to impose them have provoked angry protests. The debate reveals tensions between economic efficiency, fairness, and public acceptance.",
+      "Supporters argue that a carbon tax is the most efficient way to reduce emissions. At present, the damage caused by carbon dioxide is not reflected in the prices of fuels, so people and businesses have little financial reason to consider it. A tax would correct this by making activities that produce emissions more expensive, encouraging everyone to find their own ways to reduce them. Some might drive less, others might insulate their homes, and companies might invest in cleaner technologies. Rather than requiring governments to decide every detail, the tax would let millions of individual choices add up to large reductions.",
+      "Supporters also point out that the money raised could be used in beneficial ways. Some proposals would return the revenue directly to citizens as equal payments, so that most households would receive more than they paid in higher prices. Others would use it to reduce other taxes, such as those on income or employment, or to fund public transport and renewable energy. ( A ) a carbon tax raises the cost of fuel, supporters argue that a well-designed system could leave most people better off while still reducing emissions.",
+      "Critics, however, raise concerns about fairness. Poorer households spend a larger share of their income on energy and transport, so a carbon tax can weigh more heavily on them than on the wealthy. People who live in rural areas, where public transport is limited and long distances must be traveled by car, may be particularly affected. Unless the revenue is carefully returned, critics warn, a carbon tax may deepen inequality and provoke resistance that undermines climate policy as a whole.",
+      "There are also concerns about competitiveness. If one country introduces a carbon tax while others do not, its industries may face higher costs than their foreign competitors, and some production might simply move abroad, where emissions continue unchecked. To address this risk, some governments have proposed charges on imported goods based on the emissions produced in making them. Such measures, however, are complex to design and may lead to disputes between trading partners. International agreement on carbon prices would avoid these problems, but such agreement has so far proved difficult to achieve.",
+      "Experience from countries that have introduced carbon taxes offers some lessons. In several cases, emissions have fallen without serious damage to economic growth, particularly where the tax was introduced gradually and the revenue was used visibly to benefit citizens. Where taxes were raised suddenly, without clear explanation or compensation, public anger has sometimes forced governments to retreat. These experiences suggest that the success of a carbon tax depends not only on its economic design but also on public trust and understanding.",
+      "The debate over carbon taxes reflects a broader challenge in responding to climate change. Effective policies often require people to accept costs today in return for benefits that are spread across the world and the future. Persuading citizens to accept such costs requires fairness, transparency, and a sense that everyone is contributing their share. Whether through a carbon tax or other measures, societies will need to find ways of sharing the burden of change that people regard as just.",
+    ],
+    ja: [
+      'ほとんどの経済学者は、気候変動がおもに化石燃料を燃やすことによって引き起こされ、それが大気中に二酸化炭素を放出することに同意している。その多くはまた、こうした排出を減らすためのある政策についても同意している。炭素への課税である。そのような仕組みのもとでは、会社や消費者は、使う燃料が出す二酸化炭素一トンごとに料金をはらうことになる。考えは単純だが、炭素税を取り入れるのは政治的にむずかしいことがわかっており、いくつかの国ではそれを課そうとする試みがはげしい抗議を引き起こした。この議論は、経済的な効率と公平さと国民の受け入れとのあいだの緊張を明らかにしている。',
+      '支持する人々は、炭素税は排出を減らす最も効率のよい方法だと主張する。今は二酸化炭素が引き起こす害が燃料の値段に反映されていないので、人々や会社にはそれを考える経済的な理由がほとんどない。税はこれを正し、排出を生む活動を高くすることで、だれもが自分なりの減らし方を見つけるようはげますだろう。車に乗る回数を減らす人もいれば、家の断熱をする人もいるだろうし、会社はよりきれいな技術に投資するかもしれない。政府にあらゆる細部を決めさせるのではなく、税は何百万もの個人の選択を積み重ねて大きな削減につなげるのである。',
+      '支持する人々はまた、集めたお金を役に立つしかたで使えると指摘する。税収を市民に平等な給付として直接返し、ほとんどの世帯が値上がりではらう分より多くを受けとれるようにする提案もある。所得や雇用にかかる税のようなほかの税を減らしたり、公共交通や再生可能エネルギーに資金を出したりするのに使う提案もある。炭素税は燃料の費用を上げるが、うまく設計された仕組みなら、排出を減らしながらほとんどの人をより豊かにできると支持する人々は主張する。',
+      'しかし批判する人々は、公平さについての心配をあげる。まずしい世帯は収入のより大きな割合をエネルギーや交通に使うので、炭素税は裕福な人々よりも彼らに重くのしかかりうる。公共交通が限られ、長い距離を車で移動しなければならない農村部に住む人々は、とくに影響を受けるかもしれない。税収が注意深く返されないかぎり、炭素税は不平等を深め、気候政策全体をくずすような抵抗を引き起こすかもしれないと批判する人々は警告する。',
+      '競争力についての心配もある。ある国が炭素税を取り入れ、ほかの国が取り入れなければ、その国の産業は外国の競争相手より高い費用に直面するかもしれず、生産の一部は単に外国に移り、そこで排出がおさえられないまま続くかもしれない。この危険に取り組むために、輸入品に、それを作るのに出された排出にもとづく料金をかけることを提案した政府もある。しかしそうした方法は設計が複雑で、貿易の相手国とのあらそいにつながるかもしれない。炭素の値段について国際的な合意があればこうした問題はさけられるが、そのような合意はこれまでのところむずかしいことがわかっている。',
+      '炭素税を取り入れた国々の経験は、いくつかの教訓をあたえている。いくつかの例では、とくに税が少しずつ取り入れられ、税収が市民の利益になるよう目に見えるかたちで使われたところで、経済成長に深刻な害をあたえずに排出が減った。はっきりした説明や補償なしに税がとつぜん上げられたところでは、国民の怒りによって政府が引き下がらざるをえなくなったこともある。こうした経験は、炭素税の成功が経済的な設計だけでなく、国民の信頼と理解にもかかっていることを示している。',
+      '炭素税をめぐる議論は、気候変動にこたえることのより広い課題を反映している。効果的な政策は、世界と未来に広く分かれる利益とひきかえに、人々に今日の費用を受け入れることを求めることが多い。市民にそうした費用を受け入れてもらうには、公平さと透明性と、だれもが自分の分を負担しているという感覚が必要である。炭素税によってであれ、ほかの方法によってであれ、社会は、人々が正しいと考える変化の負担の分かち合い方を見つける必要があるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「炭素税は燃料の費用を上げるが、うまく設計すればほとんどの人をより豊かにできる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a carbon tax is the most ( 1 ) way to reduce emissions and that its revenue could be returned to citizens. Critics worry that it may weigh heavily on poorer households and harm industries\' ( 2 ). Experience suggests that success depends on public ( 3 ) and understanding.',
+      blanks: [
+        { choices: ['efficient', 'expensive', 'popular', 'ancient'], answer: 0, why: '第2段落 a carbon tax is the most efficient way to reduce emissions。' },
+        { choices: ['competitiveness', 'history', 'beauty', 'safety'], answer: 0, why: '第5段落 There are also concerns about competitiveness。' },
+        { choices: ['trust', 'anger', 'silence', 'wealth'], answer: 0, why: '第6段落 depends ... also on public trust and understanding。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの国では、炭素税を課そうとする試みが抗議を引き起こした。', answer: true, why: '第1段落 attempts to impose them have provoked angry protests。' },
+      { statement: '今は二酸化炭素の害が燃料の値段に十分反映されている。', answer: false, why: '第2段落 the damage caused by carbon dioxide is not reflected in the prices of fuels。' },
+      { statement: 'まずしい世帯は収入のより大きな割合をエネルギーに使う。', answer: true, why: '第4段落 Poorer households spend a larger share of their income on energy。' },
+      { statement: '炭素税を取り入れた国では、かならず経済成長が大きく落ちた。', answer: false, why: '第6段落 emissions have fallen without serious damage to economic growth。' },
+    ],
+    qa: [
+      { q: 'What have some governments proposed to protect their industries?', choices: ['Charges on imported goods based on their emissions.', 'Banning all imports.', 'Closing factories.', 'Lowering fuel prices.'], answer: 0, why: '第5段落 charges on imported goods based on the emissions produced in making them。' },
+      { q: 'Where has public anger forced governments to retreat?', choices: ['Where taxes were raised suddenly without explanation or compensation.', 'Where taxes were introduced gradually.', 'Where revenue was returned to citizens.', 'Where there was no carbon tax.'], answer: 0, why: '第6段落 Where taxes were raised suddenly, without clear explanation or compensation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
