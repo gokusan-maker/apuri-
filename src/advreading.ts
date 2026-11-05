@@ -34658,6 +34658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-calorie-labels',
+    title: 'Should Menus Show Calories?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Rising rates of obesity and diet-related illness have led many governments to look for new ways of encouraging healthier eating. One measure that has been adopted in several countries is the requirement that restaurants, cafes, and fast-food chains display the number of calories in each item on their menus. The idea is that customers who can easily see how much energy a meal contains will be able to make better-informed choices. Yet the policy has been controversial, and evidence about its effects has been mixed, leading some to question whether it is worth the effort and expense it requires.",
+      "Supporters argue that calorie labels give consumers information they have a right to know. When people buy packaged food in supermarkets, they can usually check nutritional information on the label, but meals eaten outside the home have often been a mystery. Many people underestimate the calories in restaurant food, sometimes dramatically, and a dish that appears light may contain more energy than an entire day's recommended intake of certain nutrients. Providing clear information, supporters say, allows people to take responsibility for their own health. Labels may be especially helpful for people who must control their diet for medical reasons, such as those with diabetes.",
+      "Supporters also hope that labels will encourage restaurants to change their recipes. When the calorie content of a dish is displayed for all to see, businesses may be motivated to offer smaller portions or healthier options in order to attract health-conscious customers. ( A ) the effect on individual customers may be modest, supporters argue that even small changes, repeated across millions of meals, could make a meaningful difference to public health over time.",
+      "Critics, however, question whether calorie labels actually change behavior. Several studies have found that the average number of calories ordered falls only slightly after labels are introduced, and in some cases not at all. Many customers do not notice the labels, while others notice them but ignore them, choosing food on the basis of taste, price, or habit. Critics argue that the cost to businesses of calculating and displaying calorie information may not be justified by such small effects. They also point out that people who already pay attention to their health may be the ones most likely to use the labels, while those who most need to change their diets may simply ignore them.",
+      "There are also concerns that calorie counts give an incomplete picture of healthy eating. A meal low in calories is not necessarily nutritious, and some foods with high calorie counts, such as nuts or certain fish, may be valuable parts of a balanced diet. By focusing attention on a single number, critics warn, labels may encourage people to avoid healthy foods or to choose processed products marketed as low in calories. Some health professionals also worry that constant exposure to calorie numbers could harm people who struggle with eating disorders.",
+      "Smaller businesses face particular difficulties. Large chains can afford to analyze their recipes in laboratories and print new menus, but small independent restaurants, whose dishes may change daily according to the ingredients available, may find the requirement burdensome. For this reason, many laws apply only to businesses above a certain size, though this means that the information is available in some places but not others.",
+      "The debate over calorie labels illustrates a broader challenge in public health policy. Providing information respects people's freedom to choose, but information alone may not be enough to change deeply rooted habits. More effective approaches may combine labeling with other measures, such as improving the availability of healthy food, educating people about nutrition, and encouraging businesses to reformulate their products. Calorie labels may be most useful not as a complete solution but as one part of a wider effort to make healthy choices easier.",
+    ],
+    ja: [
+      '肥満や食事に関係する病気がふえていることから、多くの政府は健康的な食事をうながす新しい方法を探している。いくつかの国で取り入れられた方法の一つは、レストランやカフェやファストフードのチェーンに、メニューのそれぞれの品のカロリーを表示させる義務である。食事にどれだけのエネルギーがふくまれているかをかんたんに見ることができれば、客は情報にもとづいたよりよい選択ができるだろう、という考えである。しかしこの政策には議論があり、その効果についての証拠もまちまちであり、それが必要とする手間と費用に見合うのかを疑う人もいる。',
+      '支持する人々は、カロリーの表示は消費者が知る権利のある情報をあたえると主張する。スーパーで包装された食べ物を買うとき、人々はふつう表示で栄養の情報を確かめられるが、家の外で食べる食事はしばしばなぞだった。多くの人々はレストランの食べ物のカロリーを、ときには大きく、少なく見積もっており、軽そうに見える料理が、ある栄養素の一日の推奨量より多くのエネルギーをふくんでいることもある。はっきりした情報をあたえれば、人々は自分の健康に責任をもてるようになると支持する人々は言う。表示は、糖尿病の人のように、医学的な理由で食事を管理しなければならない人々にとってとくに役立つかもしれない。',
+      '支持する人々はまた、表示によってレストランがレシピを変えるようになることを期待している。料理のカロリーがだれにでも見えるように表示されれば、健康を気にする客を引きつけるために、店は量を少なくしたり、より健康的な品を出したりする気になるかもしれない。一人ひとりの客への効果はささやかかもしれないが、何百万もの食事でくり返されれば、小さな変化でも時とともに公衆衛生に意味のあるちがいを生みうると支持する人々は主張する。',
+      'しかし批判する人々は、カロリーの表示が本当にふるまいを変えるのかを疑う。いくつかの研究では、表示が取り入れられたあと、注文されるカロリーの平均はわずかしか下がらず、まったく下がらない例もあることがわかっている。多くの客は表示に気づかず、気づいても無視して、味や値段や習慣で食べ物を選ぶ人もいる。カロリーの情報を計算して表示する店の費用は、そのような小さな効果では正当化されないかもしれないと批判する人々は主張する。また、表示を最もよく使うのは、すでに健康に注意をはらっている人々かもしれず、食事を最も変える必要のある人々は単にそれを無視するかもしれないとも指摘する。',
+      'カロリーの数が健康的な食事について不完全な姿しか示さないという心配もある。カロリーの低い食事がかならずしも栄養があるわけではなく、ナッツやある種の魚のように、カロリーの高い食べ物の中にはバランスのよい食事の価値ある一部になるものもある。一つの数字に注意を集めることで、表示が人々に健康的な食べ物をさけさせたり、カロリーが低いと宣伝される加工食品を選ばせたりするかもしれないと批判する人々は警告する。また、カロリーの数にたえずさらされることが、摂食障害に苦しむ人々を傷つけるかもしれないと心配する医療の専門家もいる。',
+      '小さな店はとくにむずかしさに直面する。大きなチェーンはレシピを実験室で分析し、新しいメニューを印刷する余裕があるが、手に入る材料に応じて料理が毎日変わるかもしれない小さな個人のレストランには、この義務は重荷に感じられるかもしれない。そのため、多くの法律は一定の規模以上の店にだけあてはまるが、それは情報がある場所では手に入り、ほかの場所では手に入らないことを意味する。',
+      'カロリーの表示をめぐる議論は、公衆衛生の政策におけるより広い課題を示している。情報をあたえることは人々の選ぶ自由を尊重するが、情報だけでは深く根づいた習慣を変えるのに十分ではないかもしれない。より効果的なやり方は、表示を、健康的な食べ物を手に入りやすくすることや、栄養について人々に教えることや、店に製品の中身を見直すようはげますことのようなほかの方法と組み合わせることかもしれない。カロリーの表示は、完全な解決策としてではなく、健康的な選択をしやすくするより広い努力の一部として最も役に立つのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一人ひとりへの効果はささやかかもしれないが、くり返されれば意味のあるちがいを生む」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that calorie labels give consumers ( 1 ) they have a right to know and may encourage restaurants to change recipes. Critics say that the labels change behavior only ( 2 ) and give an incomplete picture of healthy eating. Labels may be most useful as one ( 3 ) of a wider effort.',
+      blanks: [
+        { choices: ['information', 'discounts', 'warnings', 'jobs'], answer: 0, why: '第2段落 calorie labels give consumers information they have a right to know。' },
+        { choices: ['slightly', 'greatly', 'quickly', 'forever'], answer: 0, why: '第4段落 falls only slightly after labels are introduced。' },
+        { choices: ['part', 'enemy', 'price', 'menu'], answer: 0, why: '第7段落 as one part of a wider effort。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの人々はレストランの食べ物のカロリーを少なく見積もっている。', answer: true, why: '第2段落 Many people underestimate the calories in restaurant food。' },
+      { statement: '研究によれば、表示のあと注文されるカロリーは大きく下がった。', answer: false, why: '第4段落 falls only slightly ... and in some cases not at all。' },
+      { statement: 'カロリーの高い食べ物の中には、バランスのよい食事の一部になるものもある。', answer: true, why: '第5段落 some foods with high calorie counts ... may be valuable parts of a balanced diet。' },
+      { statement: '多くの法律は、すべての規模の店にあてはまる。', answer: false, why: '第6段落 many laws apply only to businesses above a certain size。' },
+    ],
+    qa: [
+      { q: 'Why might small restaurants find the requirement burdensome?', choices: ['Their dishes may change daily according to available ingredients.', 'They have too many customers.', 'They do not use menus.', 'They only sell drinks.'], answer: 0, why: '第6段落 whose dishes may change daily according to the ingredients available。' },
+      { q: 'What do some health professionals worry about?', choices: ['Calorie numbers could harm people with eating disorders.', 'Food will become too cheap.', 'Restaurants will close.', 'People will eat too slowly.'], answer: 0, why: '第5段落 could harm people who struggle with eating disorders。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
