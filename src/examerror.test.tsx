@@ -2675,3 +2675,10 @@ it('正誤問題〈194〉：東大レベル no sooner／hardly の単元が10問
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) when')
 })
+
+it('誤文訂正〈188〉：京大レベル It is ～ that 強調構文の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-188')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('that')
+})

@@ -8004,6 +8004,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I could not make myself [understanding] in French.', choices: ['understood', 'understand', 'to understand', 'understands'], answer: 0, why: '自分（の言うこと）が「理解される」ので make oneself understood。' },
     ],
   },
+  {
+    id: 'exam-fix-188',
+    title: '入試の誤文訂正〈188〉（京大レベル：英作文の It is ～ that 強調構文）',
+    points: ['強調構文 It is（was）＋強調したい語句＋ that ～ は「～なのは…だ」。強調する部分が人なら that の代わりに who も使えるが、what や which は使わない。時や場所・理由の語句（in 2010・at the station・because ～）を強調するときも that を使う。時制は文に合わせて It is／It was。疑問詞を強調すると What was it that ～? の語順になる。It was not until ～ that …「～になってはじめて…」も強調構文。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was in Kyoto that I first met her.', ja: '私が彼女に初めて会ったのは京都だった。' }],
+    questions: [
+      { sentence: 'It was in 2010 [which] I first visited Kyoto.', choices: ['that', 'what', 'where it', 'when it'], answer: 0, why: '時の語句を強調する強調構文は that。It was in 2010 that ～。' },
+      { sentence: 'It is not money [what] makes people happy.', choices: ['that', 'who', 'it', 'where'], answer: 0, why: '強調構文では what は使わない。It is not money that makes ～。' },
+      { sentence: 'It was Tom [which] broke the window.', choices: ['who', 'what', 'whom it', 'where'], answer: 0, why: '強調されているのは人（Tom）で、broke の主語なので who（that も可）。' },
+      { sentence: 'It [is] yesterday that I met her.', choices: ['was', 'were', 'has been', 'will be'], answer: 0, why: 'yesterday の過去の話なので It was。' },
+      { sentence: 'It was [at the station where] I lost my wallet.', choices: ['at the station that', 'the station that at', 'at the station what', 'at station which'], answer: 0, why: '前置詞つきの場所の語句を強調するときは that。It was at the station that ～。' },
+      { sentence: 'It is you [who is] responsible for this.', choices: ['who are', 'who be', 'which is', 'what are'], answer: 0, why: 'who の先行詞 you に動詞を合わせるので are。' },
+      { sentence: '[What it was] that you said to him?', choices: ['What was it', 'What it is', 'Was what it', 'It was what'], answer: 0, why: '疑問詞を強調する疑問文は What was it that ～? の語順。' },
+      { sentence: 'It was [because he was sick why] he stayed home.', choices: ['because he was sick that', 'because of he was sick that', 'why he was sick that', 'since of his sickness that'], answer: 0, why: '理由の節を強調するときも that。It was because he was sick that ～。' },
+      { sentence: 'It is the first step [whom] is the hardest.', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '物（the first step）を強調しているので that。whom は人に使い、主語にはならない。' },
+      { sentence: 'It was not until midnight [when he came] home.', choices: ['that he came', 'he came that', 'when came he', 'which he came'], answer: 0, why: 'It was not until ～ that …「～になってはじめて…」。that he came home。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
