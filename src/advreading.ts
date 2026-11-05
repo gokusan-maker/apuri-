@@ -35342,6 +35342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-routine',
+    title: 'The Hidden Value of Routine',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Routine has a poor reputation in modern culture. To describe a life as routine is usually to suggest that it is dull, repetitive, and lacking in imagination, and much popular advice encourages people to break out of their habits, try new experiences, and avoid becoming trapped in the same patterns day after day. Yet this view may overlook the ways in which routine supports, rather than limits, the activities we value most, and the extent to which a well-ordered life can create the conditions for freedom and creativity.",
+      "One reason routine matters is that human attention and willpower are limited. Every decision we make, from what to eat for breakfast to when to begin work, requires a certain amount of mental effort. When many of these small decisions are settled in advance by habit, the mind is freed to concentrate on matters that genuinely require thought. In this sense, routine functions like a well-built road, allowing us to travel quickly and easily over familiar ground so that our energy can be saved for the unfamiliar territory ahead.",
+      "It is striking how many writers, artists, and scientists have relied on regular routines. Many have described rising at the same hour, working for fixed periods, and taking walks or rests at set times each day. ( A ) such schedules may seem rigid or even boring to an outside observer, they appear to have given their creators a stable framework within which the uncertain and difficult work of invention could take place. Inspiration, it seems, often arrives not in spite of routine but because of it.",
+      "Routine also offers psychological benefits. Regular patterns of sleep, meals, and activity help to regulate the body and can provide a sense of stability during periods of stress or change. People who have experienced illness, grief, or major upheavals in their lives often report that returning to simple daily routines helped them to recover a sense of control. In a world that frequently feels unpredictable, small rituals of order can offer a kind of shelter. A morning cup of tea or an evening walk may seem trivial, yet for many people such moments mark the boundaries of the day and give it a shape that can be relied upon.",
+      "There are, of course, dangers in routine. Habits that once served a purpose may continue long after they have ceased to be useful, and a life governed entirely by repetition may leave little room for growth or discovery. Routine can also become a way of avoiding difficult choices, allowing people to continue on a familiar path without asking whether it still leads where they wish to go. The value of routine therefore depends on whether it is chosen and examined, or simply accepted without thought.",
+      "This suggests that the relationship between routine and freedom is more complex than it first appears. Freedom is often imagined as the absence of constraint, the ability to do whatever one wishes at any moment. Yet a person who must decide everything afresh each day may find that freedom exhausting rather than liberating. A thoughtfully designed routine, by contrast, can be an expression of freedom, reflecting deliberate decisions about how one wishes to live and providing the structure within which those decisions can be carried out.",
+      "Perhaps, then, the question is not whether to have routines but what kind of routines to have. Good routines, like good tools, serve purposes beyond themselves; they support our work, our health, and our relationships, while leaving room for change when circumstances demand it. To value routine is not to reject novelty but to recognize that the unfamiliar is best explored from a stable base. A life well ordered in its ordinary details may be precisely the kind of life in which extraordinary things become possible.",
+    ],
+    ja: [
+      '現代の文化では、決まった習慣の評判はよくない。暮らしを型どおりだと言うことは、ふつう、それが退屈でくり返しばかりで想像力に欠けていると示すことであり、多くの世間の助言は、習慣からぬけ出し、新しい経験を試み、毎日同じ型にとらわれないよう人々をうながす。しかしこの見方は、決まった習慣が、私たちがもっとも大切にする活動を制限するのではなくささえるあり方や、よく整った暮らしが自由と創造のための条件をつくりうる度合いを見落としているのかもしれない。',
+      '決まった習慣が大切な理由の一つは、人間の注意力と意志の力がかぎられていることである。朝食に何を食べるかから、いつ仕事を始めるかまで、私たちがする決断はどれも、ある程度の心の努力を必要とする。こうした小さな決断の多くが習慣によって前もって決まっていれば、心は本当に考えを必要とする事がらに集中できるようになる。この意味で、決まった習慣はよくつくられた道路のようなはたらきをし、私たちがなじみの土地を速くかんたんに進めるようにして、その先の見知らぬ領域のために力をとっておけるようにするのである。',
+      '多くの作家や芸術家や科学者が規則正しい習慣にたよってきたことは目をひく。多くの人が、同じ時刻に起き、決まった時間働き、毎日決まった時刻に散歩や休息をとったと語っている。そうした予定は外から見る人にはかたく、退屈にさえ思えるかもしれないが、それをつくった人々に、不確かで難しい発明の仕事が行われうる安定した枠組みをあたえたようである。ひらめきは、どうやら、決まった習慣にもかかわらずではなく、それのおかげでおとずれることが多いようだ。',
+      '決まった習慣はまた、心理的な利益ももたらす。睡眠や食事や活動の規則正しい型は、体の調子を整える助けになり、ストレスや変化の時期に安定の感覚をあたえうる。病気や深い悲しみや暮らしの大きな激変を経験した人々は、かんたんな日々の習慣にもどることが、自分で物事をあやつれるという感覚を取りもどす助けになったとしばしば語る。しばしば予測できないと感じられる世界で、秩序の小さな儀式は一種の避難所をあたえてくれるのである。朝の一杯のお茶や夕方の散歩はささいなことに思えるかもしれないが、多くの人にとってそうした時間は一日の区切りとなり、たよりにできる形を一日にあたえてくれる。',
+      'もちろん、決まった習慣には危険もある。かつては目的をはたしていた習慣が、役に立たなくなってからも長く続くことがあり、くり返しだけに支配された暮らしは、成長や発見の余地をほとんど残さないかもしれない。決まった習慣はまた、難しい選択をさける方法にもなりうる。人々は、それがまだ自分の行きたい場所へ通じているかを問わずに、なじみの道を進み続けられるからである。それゆえ決まった習慣の価値は、それが選ばれ、ふり返られているのか、それとも考えなしにただ受け入れられているのかにかかっている。',
+      'このことは、決まった習慣と自由との関係が、はじめに思えるより複雑であることを示している。自由はしばしば、しばりがないこと、いつでも好きなことを何でもできることと思いえがかれる。しかし、毎日すべてを新たに決めなければならない人は、その自由を、ときはなつものではなくつかれさせるものと感じるかもしれない。対照的に、よく考えて設計された習慣は自由の表れになりうる。それは自分がどう生きたいかについての意図的な決断を反映し、その決断を実行するための構造をあたえるのである。',
+      'だとすれば、問題は習慣をもつかどうかではなく、どのような習慣をもつかなのかもしれない。よい習慣は、よい道具のように、それ自体をこえた目的に役立つ。それは仕事や健康や人間関係をささえつつ、状況が求めるときには変化の余地を残す。決まった習慣を大切にすることは、新しさをこばむことではなく、見なれないものは安定した足場から探るのがもっともよいと認めることである。日常のこまかなところでよく整った暮らしこそ、まさに並はずれたことが可能になる暮らしなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「予定は外から見るとかたく退屈に思えるかもしれないが、安定した枠組みをあたえた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '小さな決断を習慣で前もって決めておくと、心は大切なことに集中できる。', answer: true, why: '第2段落 the mind is freed to concentrate on matters that genuinely require thought。' },
+      { statement: '筆者によれば、ひらめきは決まった習慣にもかかわらずおとずれる。', answer: false, why: '第3段落 not in spite of routine but because of it。' },
+      { statement: '決まった習慣は、難しい選択をさける方法にもなりうる。', answer: true, why: '第5段落 Routine can also become a way of avoiding difficult choices。' },
+      { statement: '筆者は、決まった習慣を大切にすることは新しさをこばむことだと考えている。', answer: false, why: '第7段落 To value routine is not to reject novelty。' },
+    ],
+    qa: [
+      { q: 'What does the author compare routine to in the second paragraph?', choices: ['A well-built road.', 'A locked door.', 'A heavy chain.', 'A broken clock.'], answer: 0, why: '第2段落 routine functions like a well-built road。' },
+      { q: 'Why may a person who must decide everything afresh each day find freedom exhausting?', choices: ['Every decision requires mental effort.', 'They have no choices at all.', 'They follow strict rules.', 'They never make decisions.'], answer: 0, why: '第2段落 Every decision ... requires a certain amount of mental effort／第6段落 may find that freedom exhausting。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
