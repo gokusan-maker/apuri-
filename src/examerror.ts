@@ -8172,6 +8172,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '［私はいつもひまなわけではない］ I am [always not] free.', choices: ['not always', 'never', 'always never', 'not ever'], answer: 0, why: '部分否定は not を always の前に置く。I am not always free。' },
     ],
   },
+  {
+    id: 'exam-fix-192',
+    title: '入試の誤文訂正〈192〉（東大レベル：英作文の so ～ that・such ～ that）',
+    points: ['「とても～なので…」は so ＋形容詞・副詞＋ that ～、または such ＋（a）＋形容詞＋名詞＋ that ～。so のあとは形容詞・副詞（so tired・so fast）、such のあとは名詞のかたまり（such a hot day・such good news）。数えられる名詞の複数には so many、数えられない名詞には so much、少ないときは so few・so little を使う。that のあとは「主語＋動詞」で、to do は来ない。too ～ to do と混ぜない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was such a hot day that we went swimming.', ja: 'とても暑い日だったので、私たちは泳ぎに行った。' }],
+    questions: [
+      { sentence: 'It was [so] a hot day that we went swimming.', choices: ['such', 'so much', 'very', 'too'], answer: 0, why: 'a hot day という名詞のかたまりの前は such。such a hot day。' },
+      { sentence: 'She was [such] tired that she fell asleep at once.', choices: ['so', 'such a', 'very much', 'too much'], answer: 0, why: '形容詞 tired だけの前は so。so tired that ～。' },
+      { sentence: 'He is [a so kind man] that everyone likes him.', choices: ['such a kind man', 'so a kind man', 'a such kind man', 'very kind a man'], answer: 0, why: 'such ＋ a ＋形容詞＋名詞の語順。such a kind man。' },
+      { sentence: 'The box was so heavy [as] I couldn’t lift it.', choices: ['that', 'so', 'what', 'which'], answer: 0, why: 'so ～ that … の形。so heavy that I couldn’t lift it。' },
+      { sentence: 'There were [so much] people that we could not move.', choices: ['so many', 'such much', 'so a lot of', 'such many'], answer: 0, why: 'people は数えられる複数なので so many。' },
+      { sentence: 'It was [such a] good news that we cheered.', choices: ['such', 'so', 'so a', 'a such'], answer: 0, why: 'news は数えられない名詞なので a をつけない。such good news。' },
+      { sentence: 'He spoke [such] fast that nobody understood him.', choices: ['so', 'such a', 'too much', 'very much'], answer: 0, why: '副詞 fast の前は so。so fast that ～。' },
+      { sentence: 'I was [too] excited that I could not sleep.', choices: ['so', 'such', 'very', 'enough'], answer: 0, why: 'that と組むのは so。too は to do と組む（too excited to sleep）。' },
+      { sentence: 'She has [such] little money that she cannot travel.', choices: ['so', 'such a', 'too much', 'very'], answer: 0, why: 'little・few・much・many の前は such ではなく so。so little money。' },
+      { sentence: 'It was so cold [that we could not to] go out.', choices: ['that we could not', 'what we could not', 'as we could not', 'so we could not to'], answer: 0, why: 'that のあとは「主語＋動詞」で、to は不要。that we could not go out。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
