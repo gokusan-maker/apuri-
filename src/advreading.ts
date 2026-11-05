@@ -34862,6 +34862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-difficulty',
+    title: 'The Value of Difficulty',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Much of modern technology is designed to make life easier. Machines wash our clothes, software corrects our spelling, and maps on our phones guide us to places we have never visited. Few people would wish to return to a world without these conveniences, which have freed enormous amounts of time and energy for other purposes. Yet it is worth asking whether difficulty itself, which we so often try to remove, may have a value that is easily overlooked when we judge activities only by how quickly and smoothly they can be completed.",
+      "One reason difficulty matters is that it is closely connected with learning. Psychologists have found that information which is acquired with some effort, for example by trying to recall it from memory rather than simply reading it again, is often remembered longer than information which is received without effort. Such desirable difficulties, as they are sometimes called, may feel frustrating at the time, and learners often believe that they are making less progress. In fact, the struggle to retrieve or work out an answer appears to strengthen understanding in ways that easy repetition does not.",
+      "Difficulty is also bound up with the satisfaction we take in achievement. A mountain reached by cable car offers the same view as one reached on foot, yet many climbers would say that the experience is entirely different. ( A ) the destination is identical, the meaning of arriving there depends on the effort that has been invested along the way. Much of what people value most in their lives, such as mastering a skill, raising a family, or completing a long project, is valued precisely because it was hard.",
+      "Furthermore, facing difficulty can shape character. When we persist with a task that resists our efforts, we learn something about our own capacities and limits, and we may develop qualities such as patience, resilience, and humility. A person who has never encountered serious obstacles may find it harder to cope when they eventually appear, as they almost inevitably do. In this sense, removing every difficulty from a person's path, however kindly intended, may leave them less prepared for the challenges that no one can remove.",
+      "This is not to say that all difficulty is good. Much of the hardship that people endure, such as poverty, illness, or discrimination, teaches nothing of value and should be reduced wherever possible. There is a crucial difference between difficulty that is chosen and meaningful, like learning a language or training for a race, and difficulty that is imposed and pointless, like struggling with an unnecessarily complicated form. Praising hardship in general would risk excusing conditions that ought to be changed. Recognizing this distinction is therefore the first step toward thinking clearly about the place of difficulty in our lives.",
+      "The challenge, then, is to distinguish between the difficulties worth keeping and those worth eliminating. Technology that removes pointless effort can free us to devote more attention to the difficult tasks we actually care about. Problems arise when convenience begins to replace not only tedious work but also the meaningful effort through which we learn and grow, as when students rely on tools that supply answers without requiring them to think. In such cases, what appears to be a gain in efficiency may in fact be a loss.",
+      "Perhaps, then, we should think of difficulty less as an enemy to be defeated and more as a material to be shaped. A well-designed difficulty, like a good puzzle or a demanding but fair teacher, stretches our abilities without overwhelming them. To live well may require not a life without difficulty but a life in which our difficulties are well chosen, so that the effort we make leads somewhere we genuinely wish to go and helps us to become the kind of people we hope to be.",
+    ],
+    ja: [
+      '現代の技術の多くは、暮らしをより楽にするように作られている。機械が服をあらい、ソフトがつづりを直し、電話の地図が行ったことのない場所へ案内してくれる。こうした便利さのない世界にもどりたいと思う人はほとんどいないだろうし、それらはほかの目的のための大量の時間と力を生み出してきた。しかし、私たちがしばしば取りのぞこうとする難しさそのものに、活動をどれだけ速くなめらかに終えられるかだけで判断するときに見落としやすい価値があるのではないかと問うてみる値打ちはある。',
+      '難しさが大切な理由の一つは、それが学びと深く結びついていることである。心理学者たちは、たとえばただ読み直すのではなく記憶から思い出そうとするなど、いくらかの努力をして得た情報は、努力なしに受け取った情報よりも長く覚えていられることが多いと見いだしてきた。ときに「望ましい困難」とよばれるこうした難しさは、そのときにはもどかしく感じられるかもしれず、学ぶ人はしばしば自分があまり進んでいないと思いこむ。実際には、答えを思い出したり考え出したりする苦労は、かんたんなくり返しにはできないやり方で理解を強めるようである。',
+      '難しさはまた、私たちが達成から得る満足とも結びついている。ケーブルカーで着いた山頂は、歩いて着いた山頂と同じ景色を見せてくれるが、多くの登山者はその経験はまったくちがうと言うだろう。目的地は同じでも、そこに着くことの意味は、途中で注いだ努力にかかっている。技を身につけること、家族を育てること、長い計画をやりとげることなど、人々が人生でもっとも大切にするものの多くは、まさにそれが難しかったからこそ大切にされているのである。',
+      'さらに、難しさに向き合うことは人柄を形づくりうる。思いどおりにならない作業をねばり強く続けるとき、私たちは自分の力と限界について何かを学び、忍耐や立ち直る力や謙虚さといった性質を身につけるかもしれない。深刻な障害に出会ったことのない人は、それがやがて、ほとんどさけられずに現れたときに、対処するのがより難しいと感じるかもしれない。この意味で、どれほど善意からであっても、人の道からあらゆる難しさを取りのぞくことは、だれにも取りのぞけない試練へのそなえを弱めてしまうかもしれない。',
+      'これは、あらゆる難しさがよいということではない。貧困や病気や差別のように、人々が耐えている苦しみの多くは何の価値も教えず、できるかぎりへらされるべきである。言語を学ぶことや競走のために練習することのように、選ばれ意味のある難しさと、不必要に複雑な書類に苦労することのように、おしつけられ無意味な難しさとのあいだには、決定的なちがいがある。苦しみ一般をほめることは、変えられるべき状況を言いわけしてしまうおそれがあるだろう。したがって、この区別を認めることが、暮らしのなかの難しさの位置についてはっきり考えるための第一歩である。',
+      'そこで課題となるのは、残す価値のある難しさと取りのぞく価値のある難しさを見分けることである。無意味な努力を取りのぞく技術は、私たちが本当に大切に思う難しい作業により多くの注意を向けられるようにしてくれる。問題が生じるのは、便利さが、退屈な仕事だけでなく、私たちが学び成長するための意味ある努力までも置きかえはじめるときであり、たとえば生徒が考えることを求めずに答えをあたえる道具にたよる場合がそうである。そうした場合、効率の向上に見えるものが実は損失なのかもしれない。',
+      'だとすれば、私たちは難しさを、打ち負かすべき敵というよりも、形づくるべき素材として考えるべきなのかもしれない。よいパズルや、きびしいが公平な先生のように、よく設計された難しさは、私たちの力を圧倒することなくのばしてくれる。よく生きるために必要なのは、難しさのない人生ではなく、難しさがよく選ばれた人生であり、そこでは私たちの努力が本当に行きたい場所へと通じ、なりたいと願う人になる助けとなるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「目的地は同じだが、着くことの意味は努力にかかっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '努力して思い出した情報は、ただ読み直した情報より長く覚えていられることが多い。', answer: true, why: '第2段落 is often remembered longer than information which is received without effort。' },
+      { statement: '望ましい困難のあいだ、学ぶ人はたいてい自分がよく進んでいると感じる。', answer: false, why: '第2段落 learners often believe that they are making less progress。' },
+      { statement: '筆者は、貧困や病気のような苦しみもへらすべきではないと考えている。', answer: false, why: '第5段落 should be reduced wherever possible。' },
+      { statement: 'よく設計された難しさは、力を圧倒せずにのばす。', answer: true, why: '第7段落 stretches our abilities without overwhelming them。' },
+    ],
+    qa: [
+      { q: 'Why do many climbers say reaching a mountaintop on foot is different?', choices: ['The meaning of arriving depends on the effort invested.', 'The view is better on foot.', 'Cable cars are dangerous.', 'Walking is faster.'], answer: 0, why: '第3段落 the meaning of arriving there depends on the effort that has been invested along the way。' },
+      { q: 'When do problems arise with convenience, according to the author?', choices: ['When it replaces the meaningful effort through which we learn.', 'When it removes tedious work.', 'When it saves time.', 'When it is expensive.'], answer: 0, why: '第6段落 when convenience begins to replace ... the meaningful effort through which we learn and grow。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
