@@ -36302,6 +36302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-old-buildings',
+    title: 'The Value of Old Buildings',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In cities around the world, old buildings are regularly demolished to make way for new ones. Factories become apartment blocks, traditional houses are replaced by offices, and streets that once displayed the styles of several centuries come to look much like streets anywhere else. Such changes are often justified by practical needs, since old buildings may be expensive to maintain, unsuited to modern uses, or unable to meet current safety standards. Yet many people feel that something important is lost when an old building disappears, even when they cannot say exactly what it is.",
+      "One part of the answer lies in the way buildings carry memory. An old school, a railway station, or a market hall may have been the setting for countless lives, and its walls seem to hold traces of the people who passed through them. Unlike a written history, a building can be entered and experienced directly, allowing us to stand where others stood and to sense, however faintly, the continuity between their lives and our own. When such buildings are destroyed, this tangible connection with the past is broken.",
+      "Old buildings also contribute to the character of a place. A neighborhood shaped by buildings of different ages has a texture that newly built areas often lack, revealing the layers of history through which it developed. ( A ) modern architecture can be beautiful and inventive, a city composed entirely of new buildings may feel strangely placeless, as though it could be anywhere, and residents may find it harder to develop a sense of belonging to an environment that seems to have no past.",
+      "There is also an environmental argument for preserving old buildings. Constructing a new building consumes large amounts of energy and materials, much of which is already embodied in the structure that is demolished. Renovating an existing building, even an imperfect one, may therefore be more sustainable than replacing it, particularly when the new building is expected to last only a few decades. In this sense, preservation can be not only a matter of heritage but also one of responsibility toward the future.",
+      "It would be unwise, however, to treat every old building as sacred. Some were poorly built or are genuinely unsafe, and cities must be able to change in order to meet the needs of growing populations. Excessive preservation can also raise housing costs, by limiting the construction of new homes, and can turn historic districts into museums that are admired by visitors but unaffordable for ordinary residents. The question is not whether to preserve everything but how to decide what is worth keeping.",
+      "Making such decisions well requires considering more than architectural beauty or historical fame. Buildings that are modest in appearance may hold great meaning for local communities, while famous structures may be less important to the people who actually live nearby. Involving residents in decisions about preservation, and finding new uses for old buildings rather than leaving them empty, can help to ensure that the past remains part of living communities rather than becoming a mere backdrop. An old warehouse turned into a library or a former school used as a community center can serve new generations while keeping its connection with the past.",
+      "Perhaps the deepest value of old buildings lies in the perspective they offer. Standing in a structure built long before our birth, we are reminded that we are not the first to live in a place and will not be the last. Such awareness can encourage a sense of humility and of obligation, prompting us to consider what we will leave for those who come after us. In preserving the best of what earlier generations built, we may also learn to build more thoughtfully ourselves.",
+    ],
+    ja: [
+      '世界中の都市で、古い建物は新しい建物に場所をゆずるため、たびたび取りこわされている。工場は集合住宅になり、昔ながらの家は事務所にとってかわられ、かつていくつもの世紀の様式を見せていた通りは、ほかのどこの通りともよく似た姿になっていく。そうした変化は、しばしば実際的な必要によって正当化される。古い建物は維持に費用がかかったり、現代の使い方に合わなかったり、今の安全基準をみたせなかったりするからである。しかし多くの人は、たとえそれが何なのかをはっきり言えなくても、古い建物が消えるとき何か大切なものが失われると感じる。',
+      '答えの一部は、建物が記憶を運ぶあり方にある。古い学校や駅や市場の建物は、数えきれない人生の舞台だったかもしれず、その壁には通りすぎた人々のあとが残っているように思われる。書かれた歴史とちがい、建物は中に入って直接経験することができ、ほかの人々が立った場所に立ち、どれほどかすかであれ、彼らの人生と私たちの人生とのつながりを感じられるようにしてくれる。そうした建物がこわされると、過去とのこの手でふれられるつながりは断ち切られてしまう。',
+      '古い建物はまた、その場所の個性にも役立っている。さまざまな年代の建物によって形づくられた地域には、新しくつくられた地域にはしばしば欠けている手ざわりがあり、それが発展してきた歴史の層を明らかにしている。現代の建築も美しく工夫に満ちていることがあるが、すべてが新しい建物でできた都市は、まるでどこにでもありうるかのように、ふしぎと場所の感覚を欠いているように感じられることがあり、住民は過去をもたないように見える環境に居場所の感覚を育てにくいかもしれない。',
+      '古い建物を残すことには、環境からの理由もある。新しい建物をつくるには大量のエネルギーと材料がかかるが、その多くは取りこわされる建物のなかにすでにふくまれている。それゆえ今ある建物を、たとえ不完全なものでも改修するほうが、とくに新しい建物が数十年しかもたないと見こまれる場合には、それを建てかえるより持続可能かもしれない。この意味で、保存は遺産の問題であるだけでなく、未来への責任の問題でもありうる。',
+      'しかし、あらゆる古い建物を神聖なものとしてあつかうのはかしこくないだろう。つくりの悪いものや本当に危険なものもあり、都市はふえる人口の必要にこたえるために変われなければならない。行きすぎた保存はまた、新しい住宅の建設を制限することで住居の費用を上げ、歴史的な地区を、訪問者には賞賛されるがふつうの住民には手のとどかない博物館に変えてしまうこともある。問題は、すべてを残すかどうかではなく、何が残す価値があるかをどう決めるかである。',
+      'そうした決定をうまく行うには、建築の美しさや歴史的な名声以上のものを考える必要がある。見た目はつつましい建物が地域の人々にとって大きな意味をもつこともあれば、有名な建物が実際に近くに住む人々にとってはそれほど大切でないこともある。保存についての決定に住民を加わらせ、古い建物を空のままにせず新しい使い道を見つけることは、過去が単なる背景になるのではなく、生きた地域の一部であり続けるようにする助けになる。図書館に生まれかわった古い倉庫や、地域センターとして使われるかつての学校は、過去とのつながりを保ちつつ、新しい世代の役に立つことができる。',
+      'おそらく古い建物のもっとも深い価値は、それがあたえてくれる視点にある。私たちが生まれるずっと前に建てられた建物のなかに立つと、私たちはその場所に住む最初の者ではなく、最後の者でもないことを思い出させられる。そうした気づきは謙虚さと責任の感覚をうながし、あとから来る人々のために何を残すのかを考えさせてくれる。前の世代が建てたもののなかで最良のものを守るなかで、私たちは自分たちもより思慮深く建てることを学べるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「現代の建築も美しいことがあるが、すべてが新しい都市は場所の感覚を欠く」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '古い建物は、維持に費用がかかることがある。', answer: true, why: '第1段落 old buildings may be expensive to maintain。' },
+      { statement: '筆者によれば、建物は書かれた歴史と同じように直接経験することができない。', answer: false, why: '第2段落 Unlike a written history, a building can be entered and experienced directly。' },
+      { statement: '今ある建物を改修するほうが、建てかえるより持続可能なことがある。', answer: true, why: '第4段落 Renovating an existing building ... may therefore be more sustainable。' },
+      { statement: '筆者は、あらゆる古い建物を残すべきだと主張している。', answer: false, why: '第5段落 It would be unwise, however, to treat every old building as sacred。' },
+    ],
+    qa: [
+      { q: 'How can excessive preservation affect ordinary residents?', choices: ['It can raise housing costs and make districts unaffordable.', 'It always lowers rents.', 'It builds more homes.', 'It makes buildings unsafe.'], answer: 0, why: '第5段落 can also raise housing costs ... unaffordable for ordinary residents。' },
+      { q: 'What can help the past remain part of living communities?', choices: ['Involving residents and finding new uses for old buildings.', 'Leaving old buildings empty.', 'Demolishing all modest buildings.', 'Keeping only famous structures.'], answer: 0, why: '第6段落 Involving residents ... and finding new uses for old buildings。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
