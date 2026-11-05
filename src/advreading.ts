@@ -36578,6 +36578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-hunting',
+    title: 'Should Hunting Be Banned?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hunting has been an important part of human life for as long as our species has existed. In many places, it remains a source of food, a traditional activity passed down through generations, and a popular form of recreation. Yet in recent decades, hunting has become increasingly controversial. Some people regard killing animals for sport as cruel and unnecessary, and have called for it to be banned, while others argue that regulated hunting plays an important role in managing wildlife populations and supporting rural communities.",
+      "Opponents of hunting argue that it causes needless suffering to animals. Animals that are wounded but not killed instantly may experience prolonged pain, and the stress of being pursued can itself be harmful. In societies where few people depend on hunting for food, opponents claim, there is little justification for killing wild animals simply for enjoyment. They also point out that hunting can threaten endangered species when it is poorly regulated, and that the removal of particular animals can disrupt the balance of ecosystems. Hunters who target the largest and strongest animals, for example, may weaken a population by removing the very individuals best able to survive and reproduce.",
+      "Supporters of regulated hunting, however, argue that it can benefit both wildlife and the environment. In many regions, natural predators such as wolves have been greatly reduced, allowing populations of animals such as deer to grow far beyond what their habitats can support. ( A ) such growth may seem harmless, supporters argue, overpopulated herds can destroy forests, damage farmland, and spread disease, and controlled hunting may be one of the few practical ways of keeping their numbers in balance.",
+      "Supporters also emphasize the economic and cultural importance of hunting. In some rural areas, fees paid by hunters fund conservation programs and provide income for local communities. For indigenous peoples and others with long traditions of hunting, the practice may be closely connected with identity, knowledge of the land, and relationships with the natural world. Banning hunting entirely, supporters warn, could harm these communities while doing little to address the real threats to wildlife, such as habitat loss.",
+      "Critics of hunting respond that alternatives to killing are available for managing animal populations. Some suggest reintroducing natural predators, using fertility control, or building fences to protect farms and forests. Critics also question whether conservation programs funded by hunting truly prioritize the welfare of wildlife, or whether they are designed mainly to ensure that there are enough animals for hunters to shoot. In their view, ethical concern for animals should take precedence over recreation and tradition. Some also note that fencing and other nonlethal methods, though expensive at first, may prove more acceptable to the public in the long run.",
+      "Between these positions, many governments have adopted systems of regulation rather than outright bans. These may include limits on the number and type of animals that can be hunted, restrictions on hunting seasons to protect breeding animals, and requirements that hunters pass tests of skill and knowledge. Some regions distinguish between hunting for food or population control, which is permitted, and the hunting of rare animals for trophies, which is prohibited. Such measures aim to address concerns about cruelty and conservation while respecting the needs of rural communities.",
+      "The debate over hunting reflects a broader question about the relationship between human beings and the rest of the natural world. People hold very different views about the moral status of animals, the value of tradition, and the role of humans in managing ecosystems. These deep differences are unlikely to disappear entirely, but careful regulation, informed by scientific research and respectful of diverse perspectives, may allow societies to find practices that protect both wildlife and the communities that live alongside it.",
+    ],
+    ja: [
+      '狩りは、人類が存在してきたのと同じくらい長いあいだ、人間の暮らしの大切な一部であってきた。多くの場所で、それは今も食べ物のみなもとであり、世代をこえて受けつがれる伝統の活動であり、人気のある娯楽の一つでもある。しかしここ数十年で、狩りはますます論争の的になっている。スポーツのために動物を殺すことは残酷で不必要だと考え、それを禁止するよう求める人々もいれば、規制された狩りは野生の生き物の数を管理し、農村の地域をささえるうえで大切な役割をはたしていると主張する人々もいる。',
+      '狩りに反対する人々は、それが動物に不必要な苦しみをあたえると主張する。すぐに死なずに傷ついた動物は長い痛みを味わうかもしれず、追われるストレスそのものも害になりうる。食べ物を狩りにたよる人がほとんどいない社会では、単に楽しみのために野生の動物を殺すことを正当化する理由はほとんどないと反対する人々は主張する。彼らはまた、規制が不十分な狩りは絶滅のおそれのある種をおびやかしうるし、特定の動物を取りのぞくと生態系のつりあいが乱れうると指摘する。たとえば、もっとも大きく強い動物をねらう狩りは、生きのびて子を残すのにもっとも適したまさにその個体を取りのぞくことで、群れ全体を弱めるかもしれない。',
+      'しかし規制された狩りを支持する人々は、それが野生の生き物と環境の両方に益をもたらしうると主張する。多くの地域では、オオカミのような天敵が大きくへり、シカのような動物の数が、すみかがささえられるよりはるかに多くふえている。そうした増加は無害に思えるかもしれないが、ふえすぎた群れは森をこわし、農地を傷つけ、病気を広げうるのであり、管理された狩りはその数をつりあいのとれたものに保つ数少ない実際的な方法の一つかもしれないと支持する人々は主張する。',
+      '支持する人々はまた、狩りの経済的・文化的な大切さを強調する。一部の農村の地域では、狩りをする人がはらう料金が保護の取り組みの資金となり、地域に収入をもたらしている。先住民や長い狩りの伝統をもつほかの人々にとって、この習慣はアイデンティティや土地についての知識や自然の世界との関係と深く結びついているかもしれない。狩りを完全に禁止すると、すみかの喪失のような野生の生き物への本当の脅威にはほとんど取り組めないまま、こうした地域を傷つけるかもしれないと支持する人々は警告する。',
+      '狩りを批判する人々は、動物の数を管理するには殺すこと以外の方法があると答える。天敵を再び放したり、繁殖をおさえる方法を使ったり、農地や森を守るさくをつくったりすることを示す人もいる。批判する人々はまた、狩りによって資金をまかなう保護の取り組みが本当に野生の生き物の幸せを優先しているのか、それとも主に狩りをする人がうつ動物を十分に確保するために設計されているのかを疑う。彼らの見方では、動物への倫理的な配慮は娯楽や伝統より優先されるべきである。また、さくやほかの殺さない方法は、はじめは費用がかかっても、長い目で見れば人々により受け入れられるかもしれないと指摘する人もいる。',
+      'これらの立場のあいだで、多くの政府は全面的な禁止ではなく規制の仕組みを取り入れてきた。それには、狩ってよい動物の数と種類の制限や、子育て中の動物を守るための狩りの季節の制限や、狩りをする人に技能と知識の試験に合格するよう求めることがふくまれうる。食べ物のためや数の管理のための狩りは認め、記念品のために珍しい動物を狩ることは禁止するというように区別する地域もある。こうした方法は、農村の地域の必要を尊重しながら、残酷さと保護についての心配に取り組もうとするものである。',
+      '狩りをめぐる議論は、人間と自然の世界のほかの部分との関係についての、より広い問いを反映している。人々は、動物の道徳的な地位や、伝統の価値や、生態系を管理するうえでの人間の役割について、とてもちがう見方をもっている。こうした深いちがいがすっかり消えることはなさそうだが、科学的な研究にもとづき、多様な見方を尊重する注意深い規制によって、社会は野生の生き物と、それとともに暮らす地域の両方を守る習慣を見つけられるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「増加は無害に思えるかもしれないが、ふえすぎた群れは森をこわしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Opponents argue that hunting causes needless ( 1 ) to animals. Supporters argue that regulated hunting can control overpopulated herds and support rural ( 2 ). Many governments have adopted systems of ( 3 ) rather than outright bans.',
+      blanks: [
+        { choices: ['suffering', 'pleasure', 'growth', 'food'], answer: 0, why: '第2段落 it causes needless suffering to animals。' },
+        { choices: ['communities', 'cities', 'factories', 'schools'], answer: 0, why: '第1段落 supporting rural communities。' },
+        { choices: ['regulation', 'tourism', 'farming', 'education'], answer: 0, why: '第6段落 have adopted systems of regulation rather than outright bans。' },
+      ],
+    },
+    tf: [
+      { statement: '狩りは今も一部の場所で食べ物のみなもとである。', answer: true, why: '第1段落 it remains a source of food。' },
+      { statement: '支持する人々によれば、ふえすぎたシカの群れは無害である。', answer: false, why: '第3段落 overpopulated herds can destroy forests, damage farmland。' },
+      { statement: '狩りをする人がはらう料金が、保護の取り組みの資金になることがある。', answer: true, why: '第4段落 fees paid by hunters fund conservation programs。' },
+      { statement: '筆者によれば、狩りをめぐる見方のちがいはすぐに消えるだろう。', answer: false, why: '第7段落 These differences are unlikely to disappear。' },
+    ],
+    qa: [
+      { q: 'What alternatives to killing do some critics suggest?', choices: ['Reintroducing natural predators or using fertility control.', 'Hunting more animals.', 'Removing all forests.', 'Feeding wild animals more.'], answer: 0, why: '第5段落 reintroducing natural predators, using fertility control。' },
+      { q: 'What kind of hunting do some regions prohibit?', choices: ['Hunting rare animals for trophies.', 'Hunting for food.', 'Hunting for population control.', 'All fishing.'], answer: 0, why: '第6段落 the hunting of rare animals for trophies, which is prohibited。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
