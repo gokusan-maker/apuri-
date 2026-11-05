@@ -35422,6 +35422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-storytelling',
+    title: 'Why We Tell Stories',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every known human culture tells stories. Long before the invention of writing, people gathered to hear accounts of heroes, journeys, and the origins of the world, and today we continue to consume stories in novels, films, television series, and video games, often spending many hours each week absorbed in the lives of people who never existed. This universal fondness for narrative raises an intriguing question. Why should a species concerned with survival devote so much time and attention to events that, strictly speaking, did not happen?",
+      "One answer is that stories allow us to learn from experiences we have not had ourselves. A tale of a traveler who ignores a warning and comes to harm teaches a lesson without requiring the listener to face the danger in person. In this sense, stories function as a kind of simulation, allowing people to explore the consequences of actions and choices in a safe imaginative space. Over generations, such stories may have transmitted practical knowledge as well as moral values, helping communities to survive and to cooperate.",
+      "Stories also help us to understand other minds. To follow a narrative, we must imagine what its characters think, feel, and intend, and we must often see events from perspectives very different from our own. ( A ) the characters in a novel are invented, the mental effort required to understand them resembles the effort we make to understand real people. Some researchers have suggested that regular readers of fiction may become more skilled at recognizing the emotions of others, although the evidence on this point remains a matter of debate.",
+      "Beyond these practical functions, stories shape the way we understand our own lives. People often describe their experiences in narrative form, connecting past events to present circumstances and imagining how the story might continue. This tendency can give life a sense of meaning and direction, allowing us to see setbacks as episodes in a larger journey rather than as random misfortunes. At the same time, it can lead us to impose patterns on events that are in fact accidental, or to cling to a familiar story about ourselves even when it no longer fits the facts.",
+      "Stories, then, are powerful, and their power can be used for good or ill. The same narrative techniques that allow a novelist to evoke sympathy for a character can be used by propagandists to inspire hatred, or by advertisers to persuade people to buy things they do not need. Because stories engage our emotions and imagination, they can bypass critical thought, making their messages seem natural and convincing. Learning to recognize how stories work on us is therefore an important part of thinking clearly.",
+      "This does not mean that we should treat stories with suspicion or abandon them in favor of purely factual reasoning. Facts alone rarely move people to act, and many of the most important ideas in human history have been conveyed through narrative. The challenge is rather to develop a kind of double awareness, allowing ourselves to be absorbed in a story while remaining conscious of the ways in which it shapes our perceptions. Such awareness enables us to enjoy and learn from stories without being controlled by them.",
+      "Perhaps, then, the human love of stories reflects something fundamental about the way we make sense of the world. We are not merely collectors of information but creatures who seek meaning, connection, and understanding, and stories offer all three. To tell and listen to stories is to take part in one of the oldest human activities, linking us to countless generations who gathered in the dark to hear what happened next. In doing so, we continue the long work of imagining who we are and who we might become.",
+    ],
+    ja: [
+      '知られているあらゆる人間の文化は物語を語る。文字が発明されるはるか前から、人々は英雄や旅や世界のはじまりについての話を聞くために集まり、今日でも私たちは小説や映画やテレビの連続ドラマやテレビゲームで物語を楽しみ続け、実在しなかった人々の人生に毎週何時間もひたることが多い。この物語へのあまねき好みは、興味深い問いを投げかける。生きのびることに関心をもつ種が、厳密に言えば起こらなかった出来事に、なぜこれほど多くの時間と注意をささげるのだろうか。',
+      '一つの答えは、物語によって私たちは自分ではしたことのない経験から学べるということである。警告を無視して害を受ける旅人の話は、聞き手が自分でその危険に直面しなくても教訓をあたえる。この意味で、物語は一種の模擬体験としてはたらき、人々が安全な想像の空間のなかで、行動や選択の結果を探れるようにする。何世代にもわたって、そうした物語は道徳的な価値観だけでなく実際的な知識も伝え、地域の人々が生きのび協力する助けになってきたのかもしれない。',
+      '物語はまた、ほかの人の心を理解する助けになる。物語を追うには、登場人物が何を考え、感じ、意図しているかを想像しなければならず、しばしば自分とはまったくちがう立場から出来事を見なければならない。小説の登場人物は作りものだが、彼らを理解するのに必要な心の努力は、私たちが現実の人々を理解しようとするときの努力に似ている。小説をよく読む人はほかの人の感情に気づくのがより上手になるかもしれないと示した研究者もいるが、この点についての証拠は今も議論の的である。',
+      'こうした実際的なはたらきをこえて、物語は私たちが自分の人生を理解するやり方を形づくる。人々はしばしば自分の経験を物語の形で語り、過去の出来事を今の状況に結びつけ、物語がこの先どう続くかを想像する。この傾向は人生に意味と方向の感覚をあたえ、つまずきを、でたらめな不運ではなく、より大きな旅のなかの一場面として見られるようにしてくれる。同時に、それは実際には偶然である出来事に型をおしつけたり、もう事実に合わなくなっても自分についてのなじみの物語にしがみついたりすることにもつながりうる。',
+      'だとすれば、物語は強い力をもち、その力はよいことにも悪いことにも使われうる。小説家が登場人物への共感を呼びおこすのと同じ物語の技法が、宣伝工作をする者によって憎しみをかきたてるのに使われたり、広告主によって必要のない物を買うよう人々を説きふせるのに使われたりすることがある。物語は私たちの感情と想像力にはたらきかけるので、批判的な思考をすりぬけ、そのメッセージを自然で説得力のあるものに見せることができる。それゆえ物語が私たちにどうはたらきかけるかに気づけるようになることは、はっきり考えることの大切な一部である。',
+      'これは、物語をうたがいの目で見たり、純粋に事実にもとづく推論のために物語を捨てたりすべきだということではない。事実だけで人々が行動にうごかされることはめったになく、人類の歴史でもっとも大切な考えの多くは物語を通じて伝えられてきた。むしろ課題は、物語にひたりながら、それが自分の受けとめ方を形づくるあり方にも気づいている、一種の二重の意識を育てることである。そうした意識によって、私たちは物語にあやつられることなく、それを楽しみ、そこから学ぶことができる。',
+      'だとすれば、人間の物語への愛は、私たちが世界を理解するやり方について、何か根本的なことを反映しているのかもしれない。私たちは単なる情報の収集者ではなく、意味とつながりと理解を求める生き物であり、物語はその三つすべてをあたえてくれる。物語を語り聞くことは、人間のもっとも古い活動の一つに加わることであり、次に何が起こったのかを聞くために暗やみに集まった数えきれない世代と私たちを結びつける。そうすることで、私たちは自分がだれであり、だれになりうるのかを想像するという長い営みを続けているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「登場人物は作りものだが、理解する努力は現実の人々への努力に似ている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '文字が発明される前から、人々は物語を聞くために集まっていた。', answer: true, why: '第1段落 Long before the invention of writing, people gathered to hear accounts。' },
+      { statement: '小説を読むと他人の感情に気づくのが上手になることは、すでに確かめられている。', answer: false, why: '第3段落 the evidence on this point remains a matter of debate。' },
+      { statement: '物語の技法は、広告で人々を説きふせるのにも使われうる。', answer: true, why: '第5段落 by advertisers to persuade people to buy things they do not need。' },
+      { statement: '筆者は、物語を捨てて事実だけで考えるべきだと主張している。', answer: false, why: '第6段落 This does not mean that we should ... abandon them in favor of purely factual reasoning。' },
+    ],
+    qa: [
+      { q: 'In what sense do stories function as a kind of simulation?', choices: ['They let people explore the results of choices in a safe imaginative space.', 'They are always about computers.', 'They replace real experience completely.', 'They are only for children.'], answer: 0, why: '第2段落 allowing people to explore the consequences of actions and choices in a safe imaginative space。' },
+      { q: 'What kind of awareness does the author recommend?', choices: ['A double awareness of being absorbed while noticing how a story shapes us.', 'Complete suspicion of all stories.', 'Ignoring our emotions entirely.', 'Reading only factual books.'], answer: 0, why: '第6段落 develop a kind of double awareness。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
