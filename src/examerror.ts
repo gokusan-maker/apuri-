@@ -4778,6 +4778,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It takes (B) many time (C) to become (D) a good doctor.', choices: ['(A) It takes', '(B) many time', '(C) to become', '(D) a good doctor'], answer: 1, why: 'time「時間」は数えられない名詞なので many は使えない。a lot of time。' },
     ],
   },
+  {
+    id: 'exam-error-time-clause-kokkou',
+    title: '入試の正誤問題〈201〉（国公立レベル：時・条件の副詞節の現在形 when・if・until）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '時（when・until・before・after・as soon as・by the time）や条件（if・unless）を表す副詞節では、未来のことも現在形で表し、will は使わない（I will call you when I arrive.）。ただし、know・tell・ask などの目的語になる名詞節の if「～かどうか」や when「いつ～か」は、未来なら will を使う（I don’t know if he will come.）。節がどちらの働きをしているかを見分けることが大切。',
+    ],
+    examples: [
+      { en: 'I will call you when I arrive at the station.', ja: '駅に着いたら電話するね。' },
+      { en: 'I don’t know if he will come tomorrow.', ja: '彼があした来るかどうかわからない。' },
+    ],
+    questions: [
+      { sentence: '(A) I will call you (B) when I (C) will arrive (D) at the station.', choices: ['(A) I will call you', '(B) when I', '(C) will arrive', '(D) at the station'], answer: 2, why: '時を表す when の節では、未来のことも現在形。when I arrive。' },
+      { sentence: '(A) If it (B) will rain (C) tomorrow, (D) we will stay home.', choices: ['(A) If it', '(B) will rain', '(C) tomorrow,', '(D) we will stay home'], answer: 1, why: '条件を表す if の節では、未来のことも現在形。If it rains。' },
+      { sentence: '(A) Please wait here (B) until I (C) will come (D) back.', choices: ['(A) Please wait here', '(B) until I', '(C) will come', '(D) back'], answer: 2, why: 'until「～するまで」の節は現在形。until I come back。' },
+      { sentence: '(A) As soon as (B) he will finish (C) his homework, (D) he will go out.', choices: ['(A) As soon as', '(B) he will finish', '(C) his homework,', '(D) he will go out'], answer: 1, why: 'as soon as の節は現在形。As soon as he finishes。' },
+      { sentence: '(A) I don’t know (B) if he (C) comes (D) tomorrow.', choices: ['(A) I don’t know', '(B) if he', '(C) comes', '(D) tomorrow'], answer: 2, why: 'know の目的語になる if 節（～かどうか）は名詞節なので、未来なら will。if he will come。' },
+      { sentence: '(A) Before (B) you will leave, (C) turn off (D) the lights.', choices: ['(A) Before', '(B) you will leave,', '(C) turn off', '(D) the lights'], answer: 1, why: 'before の節は現在形。Before you leave。' },
+      { sentence: '(A) We will (B) start the game (C) after everyone (D) will arrive.', choices: ['(A) We will', '(B) start the game', '(C) after everyone', '(D) will arrive'], answer: 3, why: 'after の節は現在形。after everyone arrives。' },
+      { sentence: '(A) Unless (B) you will hurry, (C) you will (D) miss the train.', choices: ['(A) Unless', '(B) you will hurry,', '(C) you will', '(D) miss the train'], answer: 1, why: 'unless「～しないかぎり」の節は現在形。Unless you hurry。' },
+      { sentence: '(A) Will (B) you tell me (C) when she (D) arrives tomorrow?', choices: ['(A) Will', '(B) you tell me', '(C) when she', '(D) arrives tomorrow?'], answer: 3, why: 'tell の目的語になる when 節（いつ～か）は名詞節なので、未来なら will。when she will arrive。' },
+      { sentence: '(A) When will (B) she comes back, (C) please tell (D) her to call me.', choices: ['(A) When will', '(B) she comes back,', '(C) please tell', '(D) her to call me'], answer: 0, why: '時の副詞節はふつうの語順で will は不要。When she comes back。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

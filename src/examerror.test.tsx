@@ -2766,3 +2766,10 @@ it('誤文訂正〈194〉：京大レベル 付加疑問と否定疑問の答え
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('don’t')
 })
+
+it('正誤問題〈201〉：国公立レベル 時・条件の副詞節の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-time-clause-kokkou')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) will arrive')
+})
