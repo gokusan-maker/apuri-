@@ -36622,6 +36622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-hesitation',
+    title: 'The Value of Hesitation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Decisiveness is widely admired. We praise leaders who make quick decisions, athletes who react without a moment's delay, and people who seem to know exactly what they want. Hesitation, by contrast, is usually regarded as a weakness, a sign of indecision, anxiety, or a lack of confidence. The person who pauses before acting may be seen as timid, and the one who reconsiders a choice may be accused of being unable to commit. Yet there are reasons to think that hesitation, in its proper place, can be a valuable part of good judgment.",
+      "One reason is that many of our first reactions are shaped by habit, emotion, or prejudice. When we respond immediately, we often rely on patterns of thought that have served us in the past but may not fit the situation in front of us. A brief pause allows us to notice our initial impulse and to ask whether it is really appropriate. In this sense, hesitation is not the absence of thought but the space in which thought becomes possible, a moment in which we can choose rather than merely react.",
+      "Hesitation can be especially important in our dealings with other people. A sharp reply in a moment of anger, a hasty judgment of someone we have just met, or a careless remark may cause harm that is difficult to undo. ( A ) a pause of a few seconds may seem insignificant, it can give us time to consider how our words will be received, to imagine the other person's point of view, and to respond with more care than our first impulse would have allowed. Many quarrels between friends, after all, begin not with deep disagreements but with words spoken too quickly.",
+      "There is also a form of hesitation that reflects respect for the complexity of the world. Some questions, such as whether to accept a new job, how to respond to a moral dilemma, or what to believe about a disputed issue, do not have obvious answers. A person who hesitates before reaching a conclusion may be recognizing, rightly, that the matter requires more information or reflection. Such hesitation is a form of intellectual honesty, an acknowledgment that certainty should be earned rather than assumed.",
+      "Of course, hesitation can also be harmful. In emergencies, delay may cost lives, and a person who is unable to act when action is needed may fail those who depend on them. Excessive hesitation can also become a habit that prevents people from pursuing opportunities, expressing their views, or committing to relationships, leaving them stuck in a state of permanent uncertainty. The challenge is to distinguish between hesitation that reflects thoughtful judgment and hesitation that reflects fear.",
+      "Learning to make this distinction may be one of the more subtle skills of a well-lived life. It involves knowing when a situation calls for speed and when it calls for care, and being honest with oneself about the reasons for one's delay. A useful question may be whether further reflection is likely to improve the decision. If it is, hesitation may be wise. If the pause merely postpones a choice that must be made anyway, it may be better to act.",
+      "Perhaps, then, we should value hesitation not as an end in itself but as a tool of judgment. In a culture that often rewards speed and certainty, the ability to pause, to reconsider, and to admit that one is not yet sure may be increasingly rare and increasingly important. A brief moment of hesitation, used well, can prevent mistakes, deepen understanding, and allow our actions to reflect our considered values rather than our passing impulses. In this sense, knowing when to hesitate may be a sign not of weakness but of wisdom.",
+    ],
+    ja: [
+      '決断の速さは広く賞賛される。私たちはすばやく決断する指導者や、一瞬のためらいもなく反応する運動選手や、自分がほしいものをはっきりわかっているように見える人々をほめる。対照的に、ためらいはふつう弱さ、つまり優柔不断や不安や自信のなさのしるしと見なされる。行動する前に立ち止まる人は臆病に見られ、選択を考え直す人は決めきれないと責められるかもしれない。しかし、ためらいは、ふさわしい場所では、よい判断の価値ある一部になりうると考える理由がある。',
+      '一つの理由は、私たちの最初の反応の多くが習慣や感情や偏見によって形づくられていることである。すぐに反応するとき、私たちはしばしば、過去には役立ったが目の前の状況には合わないかもしれない考えの型にたよる。少し立ち止まることで、私たちは最初の衝動に気づき、それが本当にふさわしいのかを問うことができる。この意味で、ためらいは考えのないことではなく、考えが可能になる余地であり、単に反応するのではなく選べる瞬間なのである。',
+      'ためらいは、ほかの人とのかかわりでとくに大切になりうる。怒ったときのするどい言い返しや、会ったばかりの人についての性急な判断や、不注意な一言は、取り消しにくい害をもたらすかもしれない。数秒の間はとるに足りないように思えるかもしれないが、それは自分のことばがどう受け取られるかを考え、相手の立場を想像し、最初の衝動がゆるしたよりも思いやりをもってこたえる時間をあたえてくれる。結局のところ、友人どうしの多くのけんかは、深い意見のちがいではなく、あまりに早く口にされたことばから始まるのである。',
+      '世界の複雑さへの敬意を表すためらいもある。新しい仕事を受けるかどうか、道徳的なジレンマにどうこたえるか、意見の分かれる問題について何を信じるかといった問いには、はっきりした答えがない。結論にいたる前にためらう人は、その問題がもっと情報やふり返りを必要としていると、正しく認めているのかもしれない。そうしたためらいは知的な誠実さの一つの形であり、確かさは思いこむのではなく、かちとるべきものだと認めることなのである。',
+      'もちろん、ためらいは有害にもなりうる。非常時にはおくれが命をうばうかもしれず、行動が必要なときに行動できない人は、自分にたよる人々の期待を裏切るかもしれない。行きすぎたためらいはまた、機会を追ったり、意見を言ったり、関係に身をささげたりするのをさまたげる習慣になり、人々をずっと不確かなままの状態にとどめてしまうこともある。課題は、思慮深い判断を表すためらいと、おそれを表すためらいとを見分けることである。',
+      'この区別ができるようになることは、よく生きるうえでのより繊細な技能の一つなのかもしれない。それは、状況が速さを求めるときと注意を求めるときを知り、自分がおくれている理由について自分に正直であることをふくむ。役に立つ問いは、もっと考えれば決断がよくなりそうかどうかだろう。そうなら、ためらいはかしこいのかもしれない。立ち止まることが、どのみちしなければならない選択を先のばしにするだけなら、行動するほうがよいかもしれない。',
+      'だとすれば、私たちはためらいを、それ自体を目的としてではなく、判断の道具として大切にすべきなのかもしれない。しばしば速さと確かさがほめたたえられる文化では、立ち止まり、考え直し、まだ確かではないと認める力は、ますますまれに、そしてますます大切になっているのかもしれない。うまく使われた短いためらいの瞬間は、まちがいをふせぎ、理解を深め、私たちの行動が一時の衝動ではなく、よく考えた価値観を反映するようにしてくれる。この意味で、いつためらうべきかを知ることは、弱さではなく知恵のしるしなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「数秒の間はとるに足りないように思えるかもしれないが、時間をあたえてくれる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ためらいはふつう弱さのしるしと見なされる。', answer: true, why: '第1段落 Hesitation ... is usually regarded as a weakness。' },
+      { statement: '筆者によれば、ためらいは考えのないことである。', answer: false, why: '第2段落 hesitation is not the absence of thought。' },
+      { statement: '非常時には、おくれが命をうばうことがある。', answer: true, why: '第5段落 In emergencies, delay may cost lives。' },
+      { statement: '筆者は、ためらいはいつもかしこいと考えている。', answer: false, why: '第5段落 hesitation can also be harmful。' },
+    ],
+    qa: [
+      { q: 'What useful question does the author suggest asking about hesitation?', choices: ['Whether further reflection is likely to improve the decision.', 'Whether others will notice.', 'Whether it is faster to guess.', 'Whether the decision is easy.'], answer: 0, why: '第6段落 whether further reflection is likely to improve the decision。' },
+      { q: 'What does hesitation before a difficult conclusion reflect, according to the author?', choices: ['A form of intellectual honesty.', 'A lack of intelligence.', 'Complete certainty.', 'Fear of other people.'], answer: 0, why: '第4段落 Such hesitation is a form of intellectual honesty。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
