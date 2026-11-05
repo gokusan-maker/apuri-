@@ -34222,6 +34222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-teaching',
+    title: 'What It Means to Teach',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Teaching is among the oldest and most universal of human activities. Parents teach children to speak and to behave, craftspeople teach apprentices their skills, and schools and universities pass on knowledge accumulated over centuries. Yet despite its familiarity, teaching is surprisingly difficult to define. Is it simply the transmission of information from one person to another, or does it involve something more? The answer we give shapes not only how we train teachers but also what we expect education to achieve, and how we judge whether it has succeeded in the lives of those who receive it.",
+      "The simplest view treats teaching as the transfer of knowledge. The teacher possesses information, and the student receives it, perhaps by listening to explanations, reading assigned texts, or practicing exercises. This view has some truth: much of what we know was first learned from others, and clear explanation is a genuine skill. Yet it overlooks the active role of the learner. Knowledge cannot simply be poured into a mind; it must be understood, connected to what the learner already knows, and made his or her own.",
+      "For this reason, many educators emphasize that teaching is less about telling than about helping others to learn. A good teacher asks questions that provoke thought, designs tasks that reveal misunderstandings, and gives feedback that allows students to improve. ( A ) these methods may take more time than direct explanation, they are thought to produce deeper understanding, since students who have struggled with a problem are more likely to remember and apply what they have learned. Teaching of this kind requires the patience to let students make mistakes, since errors that are discovered and corrected by the learners themselves often teach more than correct answers that are simply supplied by someone else.",
+      "Teaching also involves relationships. Students learn more readily from teachers they trust, and the attitudes that teachers convey, such as curiosity, patience, or respect for evidence, may influence students as much as the content of their lessons. Many people remember a particular teacher not for the facts they learned but for the way that teacher made them feel about learning, or about themselves. In this sense, teaching is partly a moral activity, shaping character as well as knowledge.",
+      "The rise of digital technology has raised new questions about the role of teachers. Vast amounts of information are now available online, and computer programs can explain concepts, set exercises, and check answers. Some have suggested that human teachers may become less necessary. Others argue that technology makes good teaching more important, not less, since students need guidance in evaluating information, motivation to persist with difficult material, and the human contact that machines cannot provide.",
+      "Teaching is not confined to classrooms. Every time we explain something to a friend, show a colleague how to use a tool, or answer a child's question, we are teaching. Such informal teaching often reveals how well we ourselves understand a subject, since explaining an idea clearly requires grasping it deeply. Many people discover that they learn most when they try to teach, a reminder that teaching and learning are closely intertwined, and that the roles of teacher and student may change places many times over the course of a single conversation.",
+      "Perhaps the deepest purpose of teaching is not to make students dependent on their teachers but to help them become independent learners. The best teachers, in this view, gradually make themselves unnecessary, equipping students with the skills, confidence, and curiosity to continue learning on their own. Understood in this way, teaching is an act of generosity directed toward a future the teacher will not see, in which students go beyond what they were taught and, in time, become teachers themselves.",
+    ],
+    ja: [
+      '教えることは、人間の活動のうちで最も古く最も普遍的なものの一つである。親は子どもに話し方やふるまい方を教え、職人は弟子に技を教え、学校や大学は何世紀にもわたって積み重ねられた知識を伝える。しかし、なじみ深いものであるにもかかわらず、教えることはおどろくほど定義しにくい。それは単に情報をある人から別の人へ伝えることなのか、それとも何かそれ以上のものをふくむのか。私たちのあたえる答えは、教師をどう育てるかだけでなく、教育に何を成しとげてほしいと期待するかも形づくり、さらに、それを受ける人々の人生において教育が成功したかどうかをどう判断するかも形づくる。',
+      '最も単純な見方は、教えることを知識の移しかえとしてあつかう。教師が情報をもっていて、生徒はたとえば説明を聞いたり、課された文章を読んだり、練習問題に取り組んだりしてそれを受けとる。この見方にはある程度の真実がある。私たちの知っていることの多くは最初に他人から学んだものであり、はっきりした説明は本当の技術である。しかし、この見方は学ぶ者の積極的な役割を見落としている。知識は単に心に注ぎこむことはできない。それは理解され、学ぶ者がすでに知っていることと結びつけられ、その人自身のものにされなければならないのである。',
+      'このため、多くの教育者は、教えることは話して聞かせることよりも、ほかの人が学ぶのを助けることだと強調する。よい教師は考えを引き起こす問いを発し、誤解を明らかにする課題を作り、生徒が向上できるような助言をあたえる。こうした方法は直接の説明より時間がかかるかもしれないが、より深い理解を生むと考えられている。問題に取り組んで苦労した生徒は、学んだことを覚えていて使いやすいからである。この種の教え方には、生徒にまちがえさせる忍耐が必要である。学ぶ者自身が見つけて正したまちがいは、ほかのだれかが単にあたえた正しい答えより多くを教えることが多いからである。',
+      '教えることには人間関係もかかわっている。生徒は信頼する教師からのほうが学びやすく、好奇心や忍耐や証拠への敬意のように教師が伝える態度は、授業の内容と同じくらい生徒に影響するかもしれない。多くの人々が特定の先生を覚えているのは、学んだ事実のためではなく、その先生が学ぶことについて、あるいは自分自身についてどう感じさせてくれたかのためである。この意味で、教えることは一部は道徳的な活動であり、知識だけでなく人がらも形づくるのである。',
+      'デジタル技術の広がりは、教師の役割について新しい問いを引き起こしている。今ではばく大な量の情報がネット上で手に入り、コンピュータのプログラムは概念を説明し、練習問題を出し、答えを確かめることができる。人間の教師はあまり必要でなくなるかもしれないと示唆する人もいる。ほかの人々は、生徒には情報を評価する手引きや、むずかしい内容に取り組み続ける意欲や、機械にはあたえられない人とのふれあいが必要なのだから、技術によってよい教育はかえって大切になると主張する。',
+      '教えることは教室にかぎられない。友人に何かを説明したり、同僚に道具の使い方を見せたり、子どもの質問に答えたりするたびに、私たちは教えている。そのような非公式に教えることは、自分自身がある事がらをどれだけよく理解しているかをしばしば明らかにする。考えをはっきり説明するには、それを深く理解していることが必要だからである。多くの人々は、教えようとするときに最も多くを学ぶことに気づく。それは、教えることと学ぶことが深くからみ合っていることを思い出させてくれる。そして、一つの会話の中でさえ、教師と生徒の役割が何度も入れかわりうることも。',
+      'おそらく教えることの最も深い目的は、生徒を教師に頼らせることではなく、自立して学ぶ者になる助けをすることである。この見方では、最もよい教師は少しずつ自分を不要にし、生徒が自分で学び続けるための技能と自信と好奇心を身につけさせる。このように理解すれば、教えることは、教師が見ることのない未来、つまり生徒が教えられたことをこえていく未来に向けられた、気前のよい行為なのである。そして生徒たちも、やがて自分自身が教える者になっていくのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「こうした方法は時間がかかるかもしれないが、より深い理解を生む」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '最も単純な見方は、教えることを知識の移しかえとしてあつかう。', answer: true, why: '第2段落 The simplest view treats teaching as the transfer of knowledge。' },
+      { statement: '筆者によれば、知識は単に心に注ぎこむことができる。', answer: false, why: '第2段落 Knowledge cannot simply be poured into a mind。' },
+      { statement: '多くの人々は、教えようとするときに最も多くを学ぶと気づく。', answer: true, why: '第6段落 Many people discover that they learn most when they try to teach。' },
+      { statement: '筆者によれば、最もよい教師は生徒を自分に頼らせ続ける。', answer: false, why: '第7段落 The best teachers ... gradually make themselves unnecessary。' },
+    ],
+    qa: [
+      { q: 'Why do many people remember a particular teacher?', choices: ['For the way the teacher made them feel about learning or themselves.', 'For the facts they learned.', 'For the length of the lessons.', 'For the number of tests.'], answer: 0, why: '第4段落 for the way that teacher made them feel about learning, or about themselves。' },
+      { q: 'Why might technology make good teaching more important?', choices: ['Students still need guidance, motivation, and human contact.', 'Computers cannot explain anything.', 'Information is no longer available.', 'Students no longer need to learn.'], answer: 0, why: '第5段落 students need guidance ..., motivation ..., and the human contact that machines cannot provide。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
