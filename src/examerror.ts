@@ -7962,6 +7962,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I will call you [so that you won’t can] forget the meeting.', choices: ['so that you won’t', 'so that you can’t will', 'in order to you won’t', 'so as you won’t'], answer: 0, why: 'will と can は続けて使えない。so that you won’t forget。' },
     ],
   },
+  {
+    id: 'exam-fix-187',
+    title: '入試の誤文訂正〈187〉（国公立レベル：使役動詞 make・let・have・get）',
+    points: ['使役動詞は「人に～させる・してもらう」。make ＋人＋原形（むりに～させる）、let ＋人＋原形（～させてあげる）、have ＋人＋原形（～してもらう）。get だけは get ＋人＋ to do。物が「～される」なら have／get ＋物＋過去分詞（have my hair cut）。受け身の文では make のあとの原形が to do になる（He was made to wait）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' }],
+    questions: [
+      { sentence: 'My mother made me [to clean] my room.', choices: ['clean', 'cleaning', 'cleaned', 'to cleaning'], answer: 0, why: 'make ＋人＋原形。made me clean。' },
+      { sentence: 'Please let me [to know] your answer.', choices: ['know', 'knowing', 'known', 'knew'], answer: 0, why: 'let ＋人＋原形。let me know。' },
+      { sentence: 'I got my brother [help] me with my homework.', choices: ['to help', 'helped', 'helps', 'to helping'], answer: 0, why: 'get ＋人＋ to do。got my brother to help。' },
+      { sentence: 'I had my hair [cutting] yesterday.', choices: ['cut', 'to cut', 'cuts', 'to be cutting'], answer: 0, why: '髪は「切られる」側なので have ＋物＋過去分詞。had my hair cut。' },
+      { sentence: 'He was made [wait] for an hour.', choices: ['to wait', 'waiting', 'waited', 'waits'], answer: 0, why: 'make の受け身では原形が to do になる。was made to wait。' },
+      { sentence: 'I will have the mechanic [to check] my car.', choices: ['check', 'checked', 'checking', 'to checking'], answer: 0, why: 'have ＋人＋原形。have the mechanic check。' },
+      { sentence: 'She got her watch [repair] at the shop.', choices: ['repaired', 'to repair', 'repairing', 'repairs'], answer: 0, why: '時計は「直される」側なので get ＋物＋過去分詞。got her watch repaired。' },
+      { sentence: 'My parents [let me went] to the concert.', choices: ['let me go', 'let me to go', 'let me going', 'let me gone'], answer: 0, why: 'let ＋人＋原形。過去の文でも原形 go。' },
+      { sentence: 'The movie made me [crying].', choices: ['cry', 'to cry', 'cried', 'cries'], answer: 0, why: 'make ＋人＋原形。made me cry。' },
+      { sentence: 'I could not make myself [understanding] in French.', choices: ['understood', 'understand', 'to understand', 'understands'], answer: 0, why: '自分（の言うこと）が「理解される」ので make oneself understood。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
