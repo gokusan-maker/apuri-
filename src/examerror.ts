@@ -8088,6 +8088,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I was surprised at [what happened it].', choices: ['what happened', 'what it happened', 'that happened', 'which happened it'], answer: 0, why: 'what が happened の主語なので it は不要。what happened。' },
     ],
   },
+  {
+    id: 'exam-fix-190',
+    title: '入試の誤文訂正〈190〉（国公立レベル：look forward to ～ing など to のあとの ing）',
+    points: ['to が不定詞ではなく前置詞の表現では、うしろに動詞の ing 形（動名詞）や名詞が来る。look forward to ～ing「～するのを楽しみにする」、be used（accustomed）to ～ing「～することになれている」、What do you say to ～ing?「～するのはどうですか」、object to ～ing「～することに反対する」、when it comes to ～ing「～することとなると」、devote … to ～ing、in addition to ～ing、be committed to ～ing など。一方、used to do「以前は～したものだ」の to は不定詞なので原形が来る。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I am looking forward to seeing you again.', ja: 'またあなたに会えるのを楽しみにしています。' }],
+    questions: [
+      { sentence: 'I am looking forward to [see] you again.', choices: ['seeing', 'have seen', 'saw', 'be seen'], answer: 0, why: 'look forward to の to は前置詞なので ing 形。looking forward to seeing。' },
+      { sentence: 'She is used to [get] up early.', choices: ['getting', 'got', 'gets', 'have got'], answer: 0, why: 'be used to ～ing「～することになれている」。' },
+      { sentence: 'What do you say to [go] for a walk?', choices: ['going', 'went', 'goes', 'have gone'], answer: 0, why: 'What do you say to ～ing?「～するのはどうですか」。' },
+      { sentence: 'He objected to [be] treated like a child.', choices: ['being', 'been', 'was', 'is'], answer: 0, why: 'object to ～ing。受け身なら being ＋過去分詞。' },
+      { sentence: 'When it comes to [cook], she is the best.', choices: ['cooking', 'cooked', 'cooks', 'have cooked'], answer: 0, why: 'when it comes to ～ing「～することとなると」。' },
+      { sentence: 'I am not accustomed to [speak] in public.', choices: ['speaking', 'spoke', 'spoken', 'speaks'], answer: 0, why: 'be accustomed to ～ing「～することになれている」。' },
+      { sentence: 'He devoted his life to [help] the poor.', choices: ['helping', 'helped', 'helps', 'have helped'], answer: 0, why: 'devote … to ～ing「～することに…をささげる」。' },
+      { sentence: 'I used to [playing] tennis every day.', choices: ['play', 'played', 'plays', 'have played'], answer: 0, why: 'used to do「以前はよく～した」の to は不定詞なので原形。' },
+      { sentence: 'In addition to [teach] English, he writes books.', choices: ['teaching', 'taught', 'teaches', 'have taught'], answer: 0, why: 'in addition to の to は前置詞なので ing 形。' },
+      { sentence: 'My father is committed to [quit] smoking.', choices: ['quitting', 'quits', 'quitted to', 'have quit'], answer: 0, why: 'be committed to ～ing「～することに打ちこむ・心に決めている」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

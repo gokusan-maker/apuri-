@@ -2703,3 +2703,10 @@ it('正誤問題〈196〉：京大レベル 独立分詞構文と with の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) permitted,')
 })
+
+it('誤文訂正〈190〉：国公立レベル to のあとの ing の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-190')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('seeing')
+})
