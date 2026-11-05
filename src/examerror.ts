@@ -7626,6 +7626,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '［彼はいつも時間どおりに来る］ He [comes always] on time.', choices: ['always comes', 'comes ever', 'is always come', 'always is coming'], answer: 0, why: '頻度の副詞 always は一般動詞の前。He always comes on time。' },
     ],
   },
+  {
+    id: 'exam-fix-179',
+    title: '入試の誤文訂正〈179〉（京大レベル：二重目的語と to・for への書きかえ）',
+    points: ['give・show・tell・send・lend・teach などは「人に物を」を SVOO（give him a book）でも SVO＋to 人（give a book to him）でも表せる。buy・make・cook・find・get などは for 人（buy a book for him）。ask は of 人（ask a question of him）。explain・suggest・introduce・describe は二重目的語にできず、explain it to me の形にする。目的語が代名詞 it・them のときは give it to him の形がふつう（give him it はさける）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She bought a present for her mother and explained the plan to us.', ja: '彼女は母親にプレゼントを買い、私たちにその計画を説明した。' }],
+    questions: [
+      { sentence: 'Please [explain me the rules].', choices: ['explain the rules to me', 'explain to me it', 'explain for me', 'explaining me'], answer: 0, why: 'explain は二重目的語にできない。explain the rules to me。' },
+      { sentence: 'She bought a present [to] her mother.', choices: ['for', 'of', 'at', 'with'], answer: 0, why: 'buy 物 for 人。' },
+      { sentence: 'He gave the book [for] his sister.', choices: ['to', 'of', 'at', 'by'], answer: 0, why: 'give 物 to 人。' },
+      { sentence: 'May I ask a favor [to] you?', choices: ['of', 'for', 'at', 'with'], answer: 0, why: 'ask a favor of 人「人に頼みごとをする」。' },
+      { sentence: 'I will [give him it] tomorrow.', choices: ['give it to him', 'give it him to', 'give to him it', 'giving it him'], answer: 0, why: '目的語が代名詞 it のときは give it to him。' },
+      { sentence: 'My father made a cake [to] me.', choices: ['for', 'of', 'with', 'by'], answer: 0, why: 'make 物 for 人。' },
+      { sentence: 'Let me [introduce you my friend].', choices: ['introduce my friend to you', 'introduce to you my friend it', 'introduce you to my friend it', 'introducing my friend you'], answer: 0, why: 'introduce は二重目的語にできない。introduce my friend to you。' },
+      { sentence: 'He showed his photos [for] us.', choices: ['to', 'of', 'at', 'with'], answer: 0, why: 'show 物 to 人。' },
+      { sentence: 'Could you [suggest me a good hotel]?', choices: ['suggest a good hotel to me', 'suggest to me of', 'suggesting me', 'suggest for me it'], answer: 0, why: 'suggest は二重目的語にできない。suggest a good hotel to me。' },
+      { sentence: 'She cooked dinner [to] her friends.', choices: ['for', 'of', 'at', 'by'], answer: 0, why: 'cook 物 for 人。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
