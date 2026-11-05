@@ -35742,6 +35742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-saying-no',
+    title: 'The Art of Saying No',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people find it surprisingly difficult to say no. When a colleague asks for help with a project, a friend invites us to an event we would rather avoid, or an organization requests our time as a volunteer, we often agree even when we have little time or desire to do so. We fear disappointing others, appearing unkind, or damaging relationships that matter to us. Yet a habit of saying yes to every request can leave us exhausted, resentful, and unable to give proper attention to the commitments we value most.",
+      "One reason saying no is difficult lies in the social nature of human beings. For most of our history, survival depended on cooperation within small groups, and those who refused to help others risked being excluded. It is not surprising, then, that many of us feel a strong pull to agree with requests and to avoid conflict. This tendency can be valuable, since it supports generosity and mutual aid, but in modern life, where the number of demands on our time can be almost endless, it may lead us to take on far more than we can manage.",
+      "Saying no can therefore be understood not as a rejection of others but as a way of protecting the commitments we have already made. Every time we agree to something new, we implicitly agree to give less time and energy to something else. ( A ) a single request may seem small, the accumulation of many such requests can crowd out the activities and relationships that matter most to us, leaving little room for rest, reflection, or the work we most wish to do well.",
+      "There is also a sense in which saying no can be an act of honesty and respect. When we agree to a request reluctantly, we may perform the task poorly, arrive late, or quietly resent the person who asked. Such outcomes may harm the relationship more than a polite refusal would have done. A clear and considerate no, by contrast, allows others to seek help elsewhere and treats them as capable of accepting a disappointment, rather than as people who must be protected from the truth.",
+      "It must be acknowledged, however, that the freedom to say no is not equally available to everyone. Employees who depend on the goodwill of their managers, students who rely on the support of their teachers, and people in many other situations of unequal power may find that refusing a request carries real risks. For them, advice to simply say no more often may be unrealistic. A society that values the ability to set limits should therefore also consider how to make it safer for those with less power to exercise it.",
+      "Learning to say no well is a skill that can be developed. It may involve pausing before responding to a request, rather than agreeing automatically, and asking oneself whether accepting would serve one's genuine priorities. It may also involve offering alternatives, such as helping in a smaller way or at a later time. Such approaches allow people to set limits without abandoning their concern for others, turning refusal into a thoughtful choice rather than a sudden act of self-defense. Over time, people who practice these approaches often find that others come to respect their limits rather than resent them.",
+      "Perhaps the deepest value of saying no lies in what it makes possible. By declining what does not matter, we create space for what does. A life in which every request is accepted may be busy, but it may also be scattered, with no clear sense of direction. To say no with care is, in the end, to say yes more fully to the people, work, and values we have chosen, and to give them the attention they deserve.",
+    ],
+    ja: [
+      '多くの人は、ことわることがおどろくほど難しいと感じる。同僚から計画を手伝ってほしいとたのまれたり、友だちから行きたくない催しにさそわれたり、ある団体からボランティアとして時間を求められたりすると、私たちは時間もやる気もほとんどないときでさえ、しばしば引き受けてしまう。私たちは人をがっかりさせたり、不親切に見えたり、大切な関係を傷つけたりすることをおそれる。しかし、あらゆるたのみに「はい」と言う習慣は、私たちをつかれさせ、不満をつのらせ、もっとも大切にしている約束に十分な注意を向けられなくしてしまうことがある。',
+      'ことわるのが難しい理由の一つは、人間の社会的な性質にある。歴史の大半のあいだ、生きのびることは小さな集団のなかでの協力にかかっており、ほかの人を助けるのをこばむ者はしめ出される危険をおかした。だとすれば、私たちの多くが、たのみに同意し、対立をさけるよう強く引かれるのもおどろくことではない。この傾向は気前のよさや助け合いをささえるので価値があるが、時間へのもとめがほとんどかぎりなくなりうる現代の暮らしでは、自分でこなせるよりはるかに多くを引き受けることにつながるかもしれない。',
+      'それゆえ、ことわることは、ほかの人をこばむことではなく、すでにした約束を守る方法として理解できる。何か新しいことに同意するたびに、私たちは暗に、ほかの何かにかける時間と力をへらすことに同意している。一つのたのみは小さく思えるかもしれないが、そうしたたのみが積み重なると、私たちにとってもっとも大切な活動や関係がしめ出され、休息やふり返りや、もっともうまくやりとげたい仕事のための余地がほとんど残らなくなってしまう。',
+      'ことわることが正直さと敬意の行いになりうるという面もある。しぶしぶたのみを引き受けると、私たちは仕事をうまくこなせなかったり、おくれたり、たのんだ人をひそかにうらんだりするかもしれない。そうした結果は、ていねいにことわった場合よりも関係を傷つけるかもしれない。対照的に、はっきりして思いやりのある「いいえ」は、相手がほかで助けを求められるようにし、相手を、真実から守られなければならない人ではなく、がっかりすることを受け入れられる人としてあつかうのである。',
+      'しかし、ことわる自由がすべての人に平等にあるわけではないことは認めなければならない。上司の好意にたよっている社員や、先生のささえにたよっている生徒や、ほかの多くの力の不平等な状況にある人々は、たのみをことわることが本当の危険をともなうと気づくかもしれない。彼らにとって、もっとことわればよいという助言は非現実的かもしれない。それゆえ限界を決める力を大切にする社会は、力の弱い人々がそれを使うのをより安全にする方法も考えるべきである。',
+      '上手にことわることを学ぶのは、育てることのできる技能である。それには、たのみに自動的に同意するのではなく、こたえる前に一息おき、引き受けることが自分の本当に大切にしていることに役立つかを自分に問うことがふくまれるかもしれない。また、より小さなかたちや後の時期に手伝うなど、代わりの案を出すこともふくまれるかもしれない。こうしたやり方によって、人々はほかの人への気づかいを捨てずに限界を決めることができ、ことわることを、とっさの自己防衛ではなく、よく考えた選択に変えられるのである。やがて、こうしたやり方を実践する人々は、ほかの人が自分の限界をうらむのではなく尊重するようになることにしばしば気づく。',
+      'おそらく、ことわることのもっとも深い価値は、それが可能にするものにある。大切でないものをことわることで、私たちは大切なもののための余地をつくる。あらゆるたのみが引き受けられる人生はいそがしいかもしれないが、はっきりした方向の感覚のない、ばらばらなものでもあるかもしれない。思いやりをもってことわることは、結局のところ、自分が選んだ人々や仕事や価値観に、より十分に「はい」と言い、それらにふさわしい注意をあたえることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一つのたのみは小さく思えるかもしれないが、積み重なるとしめ出す」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの人は、時間がないときでもたのみを引き受けてしまう。', answer: true, why: '第1段落 we often agree even when we have little time or desire to do so。' },
+      { statement: '筆者によれば、しぶしぶ引き受けるほうが、ていねいにことわるより関係を守れる。', answer: false, why: '第4段落 Such outcomes may harm the relationship more than a polite refusal would have done。' },
+      { statement: '力の不平等な状況では、ことわることが本当の危険をともなうことがある。', answer: true, why: '第5段落 refusing a request carries real risks。' },
+      { statement: '筆者は、ことわることはほかの人をこばむことだと考えている。', answer: false, why: '第3段落 not as a rejection of others but as a way of protecting the commitments。' },
+    ],
+    qa: [
+      { q: 'Why do many people feel a strong pull to agree with requests?', choices: ['Survival once depended on cooperation within small groups.', 'They have too much free time.', 'They dislike their friends.', 'Refusing is illegal.'], answer: 0, why: '第2段落 survival depended on cooperation within small groups。' },
+      { q: 'What is one way to say no well, according to the author?', choices: ['Offering alternatives such as helping later.', 'Never answering requests.', 'Agreeing automatically.', 'Avoiding all people.'], answer: 0, why: '第6段落 offering alternatives, such as helping in a smaller way or at a later time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
