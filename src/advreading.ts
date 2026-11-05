@@ -35022,6 +35022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rest',
+    title: 'The Value of Rest',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many modern societies, being busy has become something close to a virtue. People often describe their crowded schedules with a mixture of complaint and pride, as though the number of tasks they manage were a measure of their worth. Rest, by contrast, is frequently regarded with suspicion, as a reward to be earned only after work is finished or as a sign of laziness when it is taken too often. Yet there are good reasons to think that this attitude misunderstands both the nature of rest and its relationship to the work we value.",
+      "The first point to consider is that rest is not simply the absence of activity. Sleep, for example, is far from a passive state; during it, the brain organizes memories, strengthens what has been learned during the day, and clears away waste that accumulates while we are awake. Even waking rest, such as sitting quietly or walking without a particular purpose, appears to allow the mind to make connections between ideas that remain separate when attention is fixed narrowly on a task.",
+      "This helps to explain a common experience. Many people find that the solution to a problem occurs to them not while they are struggling with it at a desk but later, while taking a shower, going for a walk, or drifting off to sleep. ( A ) such moments may seem to come from nowhere, they often depend on the hard thinking that came before. Rest, in this sense, is not opposed to work but completes it, giving the mind the space it needs to bring its efforts to fruition.",
+      "Rest also matters for reasons that go beyond productivity. A person who never stops may lose touch with what they actually value, since there is no time to reflect on whether their activities serve any meaningful purpose. Periods of rest allow us to step back, to notice our surroundings, to enjoy the company of others, and to ask what kind of life we wish to lead. Without such pauses, even successful work may come to feel empty, a series of tasks completed without any clear sense of why they matter.",
+      "It must be acknowledged, however, that the opportunity to rest is not equally distributed. Many people work long hours or several jobs simply to meet their basic needs, and for them, advice to slow down may sound like a luxury they cannot afford. Discussions of the value of rest therefore risk becoming merely a matter of personal lifestyle unless they also address the economic and social conditions that make rest difficult for so many. A society that genuinely valued rest would seek to make it available to everyone, not only to the fortunate.",
+      "Moreover, rest cannot always be planned in the same way as work. Attempts to optimize leisure, by filling free time with carefully scheduled activities designed to make us healthier or more productive, may turn rest into yet another task to be completed. True rest seems to require a certain freedom from purpose, a willingness to let time pass without demanding that it produce something. This may be uncomfortable for people accustomed to measuring every hour, but it may be precisely what makes rest restorative.",
+      "Perhaps, then, we should regard rest not as the opposite of a productive life but as one of its essential conditions. Just as music depends on silence between the notes, a meaningful life may depend on pauses between its efforts. To rest well is not to abandon our ambitions but to sustain them, ensuring that the energy we bring to our work is renewed rather than exhausted. Learning to value rest may therefore be one of the most important lessons for a society that has come to confuse busyness with worth.",
+    ],
+    ja: [
+      '多くの現代社会では、いそがしいことが美徳に近いものになっている。人々はしばしば、こなしている仕事の数が自分の価値のものさしであるかのように、ぎっしりつまった予定を不満とほこりのまじった調子で語る。対照的に、休息はしばしばうたがいの目で見られ、仕事が終わってからはじめて得られるごほうびとして、あるいはあまりにしばしばとるとなまけ者のしるしとして見なされる。しかし、この態度は休息の性質と、私たちが大切にする仕事と休息との関係の両方を誤解していると考えるもっともな理由がある。',
+      'まず考えるべき点は、休息が単に活動がないことではないということである。たとえば眠りは受け身の状態とはほど遠い。そのあいだ、脳は記憶を整理し、昼間に学んだことを強め、起きているあいだにたまる老廃物を取りのぞく。静かにすわっていたり、とくに目的もなく歩いたりするような起きているあいだの休息でさえ、注意が一つの作業にせまく向けられているときには離れたままの考えどうしを、心が結びつけられるようにするようである。',
+      'これはよくある経験を説明する助けになる。多くの人は、問題の答えが、机でそれと格闘しているあいだではなく、あとでシャワーをあびたり、散歩に出かけたり、眠りに落ちかけたりしているときにふと思いうかぶことに気づく。そうした瞬間はどこからともなく来るように思えるかもしれないが、しばしばその前の懸命な思考にかかっている。この意味で、休息は仕事と対立するのではなくそれを完成させ、心がその努力を実らせるのに必要な余地をあたえるのである。',
+      '休息はまた、生産性をこえた理由でも大切である。けっして立ち止まらない人は、自分の活動が何か意味のある目的に役立っているのかをふり返る時間がないので、自分が本当に大切にしていることを見失うかもしれない。休息の時間は、一歩下がり、まわりに気づき、ほかの人々といっしょにいることを楽しみ、どのような人生を送りたいのかを問うことを可能にする。そうした間がなければ、うまくいった仕事でさえむなしく感じられるようになるかもしれない。なぜそれが大切なのかはっきりわからないまま終えられた作業のつらなりである。',
+      'しかし、休む機会が平等に分けられていないことは認めなければならない。多くの人は、基本的な必要をみたすためだけに長時間働いたり、いくつもの仕事をかけもちしたりしており、彼らにとって、ゆっくりせよという助言は手のとどかないぜいたくに聞こえるかもしれない。それゆえ休息の価値をめぐる議論は、これほど多くの人にとって休息を難しくしている経済的・社会的な条件にも取り組まないかぎり、単に個人の暮らし方の問題になってしまうおそれがある。本当に休息を大切にする社会は、恵まれた人だけでなく、すべての人が休息を得られるようにしようとするだろう。',
+      'さらに、休息は仕事と同じやり方でいつも計画できるわけではない。より健康に、あるいはより生産的になるように作られた、注意深く予定を組んだ活動で自由な時間をうめて余暇を最適化しようとすると、休息がまた一つのこなすべき作業になってしまうかもしれない。本当の休息には、目的からのある種の自由、つまり時間に何かを生み出せと求めずにそれを過ぎさせる気持ちが必要なようである。これは一時間ごとをはかることになれた人には落ち着かないかもしれないが、まさにそれこそが休息を回復させるものにしているのかもしれない。',
+      'だとすれば、私たちは休息を生産的な人生の反対ではなく、その欠かせない条件の一つと見なすべきなのかもしれない。音楽が音と音のあいだの沈黙にかかっているように、意味のある人生はその努力と努力のあいだの間にかかっているのかもしれない。よく休むことは、自分の大きな望みを捨てることではなく、それを持ち続けることであり、仕事に注ぐ力がつきてしまうのではなく新たにされるようにすることである。それゆえ休息を大切にすることを学ぶのは、いそがしさと価値をとりちがえるようになった社会にとって、もっとも大切な教訓の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「どこからともなく来るように思えるが、前の思考にかかっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '眠っているあいだ、脳は記憶を整理し、学んだことを強める。', answer: true, why: '第2段落 the brain organizes memories, strengthens what has been learned。' },
+      { statement: '筆者によれば、休息は仕事と対立するものである。', answer: false, why: '第3段落 Rest ... is not opposed to work but completes it。' },
+      { statement: '休む機会は、すべての人に平等にあたえられているわけではない。', answer: true, why: '第5段落 the opportunity to rest is not equally distributed。' },
+      { statement: '筆者は、余暇を注意深く予定でうめるほど本当の休息になると考えている。', answer: false, why: '第6段落 may turn rest into yet another task to be completed。' },
+    ],
+    qa: [
+      { q: 'When do many people find solutions to problems?', choices: ['While taking a shower or going for a walk.', 'Only while working at a desk.', 'Only during meetings.', 'Never after resting.'], answer: 0, why: '第3段落 while taking a shower, going for a walk, or drifting off to sleep。' },
+      { q: 'What comparison does the author use for rest in a meaningful life?', choices: ['The silence between the notes in music.', 'The engine of a car.', 'The walls of a house.', 'The pages of a book.'], answer: 0, why: '第7段落 Just as music depends on silence between the notes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
