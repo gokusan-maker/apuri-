@@ -34018,6 +34018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-ticket-resale',
+    title: 'Should Ticket Resale Be Restricted?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When tickets for a popular concert or sporting event go on sale, they are often sold out within minutes. Shortly afterward, many of the same tickets reappear on resale websites at prices several times higher than their original value. Some are offered by fans who can no longer attend, but many are bought in large quantities by professional resellers, sometimes using automated software that can purchase tickets faster than any human being. This practice has made many fans angry, and governments in several countries have debated whether ticket resale should be restricted or even banned.",
+      "Critics of ticket resale argue that it is unfair to genuine fans. When resellers buy up large numbers of tickets, ordinary people who wish to attend may be forced either to pay far more than the official price or to miss the event entirely. The profits from these higher prices go not to the performers or organizers but to resellers who have contributed nothing to the event. Critics also point out that resale markets can encourage fraud, as some buyers discover that the tickets they purchased are fake or have already been used.",
+      "Defenders of resale, however, offer a different view. They argue that the high prices on resale websites simply reveal how much people are willing to pay. If organizers set official prices below what the market will bear, a shortage is inevitable, and resale allows tickets to go to those who value them most. ( A ) this argument may seem cold to disappointed fans, defenders note that resale also helps people who buy tickets and later find they cannot attend, allowing them to recover their money rather than waste it.",
+      "There is also a question of why organizers set prices low in the first place. Some performers deliberately keep prices affordable because they want their audiences to include young people and fans with modest incomes. They may regard high resale prices as undermining this intention. Others point out that organizers themselves sometimes benefit from resale, either by charging fees on official resale platforms or by selling tickets directly at higher prices through so-called dynamic pricing, in which prices rise with demand.",
+      "Various measures have been tried to address these problems. Some countries have banned the resale of tickets above their original price, while others have made it illegal to use automated software to buy tickets in bulk. Some organizers print the buyer's name on each ticket and check identification at the entrance, or sell tickets that can only be transferred through official channels at face value. Each approach has drawbacks: strict rules may be difficult to enforce and can create inconvenience for genuine fans who need to transfer their tickets.",
+      "The development of digital tickets has created new possibilities. Tickets stored on smartphones can be linked to a particular buyer, making it harder for resellers to operate, while still allowing tickets to be returned or transferred under controlled conditions. Yet such systems raise concerns about privacy, since they may require fans to share personal information, and about accessibility for people who do not own smartphones or who are uncomfortable with digital technology.",
+      "The debate over ticket resale reflects a broader question about how scarce goods should be distributed. Should they go to those willing to pay the most, to those who arrive first, or to those chosen by some other principle, such as a lottery? Markets are efficient in matching goods with willingness to pay, and they reward those who plan ahead, but they may not produce outcomes that people regard as fair. Finding a balance that respects both the freedom to buy and sell and the shared sense that some experiences should remain accessible to ordinary fans is no simple task, but it is one that organizers, governments, and fans increasingly share.",
+    ],
+    ja: [
+      '人気のコンサートやスポーツの試合のチケットが発売されると、数分で売り切れることが多い。そのすぐあとで、同じチケットの多くが、もとの値段の何倍もの値段で転売のサイトにふたたび現れる。もう行けなくなったファンが出すものもあるが、多くは、ときにどんな人間よりも速くチケットを買えるソフトウェアを使って、職業的な転売業者によって大量に買われたものである。この慣行は多くのファンをおこらせており、いくつかの国の政府は、チケットの転売を制限すべきか、あるいは禁止さえすべきかを議論してきた。',
+      'チケットの転売を批判する人々は、それが本当のファンに不公平だと主張する。転売業者が大量のチケットを買い占めると、行きたいふつうの人々は、正規の値段よりはるかに高い額をはらうか、催しをまったく見のがすかを強いられるかもしれない。こうした高い値段からの利益は、演者や主催者ではなく、催しに何も貢献していない転売業者に入る。批判する人々はまた、転売市場は詐欺をうながしうると指摘する。買ったチケットがにせものだったり、すでに使われていたりしたと気づく買い手もいるからである。',
+      'しかし転売を擁護する人々は、ちがう見方を示す。転売サイトの高い値段は、人々がどれだけはらう気があるかを単に明らかにしているにすぎないと彼らは主張する。主催者が正規の値段を市場が受け入れる額より低く設定すれば、不足はさけられず、転売によってチケットはそれを最も高く評価する人々の手にわたる。この議論は失望したファンには冷たく思えるかもしれないが、転売はチケットを買ってからあとで行けなくなった人々を助け、お金をむだにせずに取りもどせるようにもすると擁護する人々は指摘する。',
+      'そもそも主催者がなぜ値段を低く設定するのかという疑問もある。若者や収入の少ないファンにも観客になってほしいので、わざと値段を手ごろにしておく演者もいる。彼らは高い転売の値段をこの意図をそこなうものとみなすかもしれない。また、主催者自身が、公式の転売の場で手数料を取ったり、需要に応じて値段が上がる、いわゆる変動価格制によって直接高い値段でチケットを売ったりして、転売から利益を得ることもあると指摘する人もいる。',
+      'こうした問題に取り組むために、さまざまな方法が試されてきた。もとの値段をこえるチケットの転売を禁止した国もあれば、ソフトウェアを使ってチケットを大量に買うことを違法にした国もある。チケットに買い手の名前を印刷して入口で身分証明を確かめたり、正規の値段で公式の通り道を通じてしか譲れないチケットを売ったりする主催者もいる。どのやり方にも欠点がある。厳しい規則は守らせるのがむずかしいかもしれず、チケットを譲る必要のある本当のファンに不便を生むこともある。',
+      '電子チケットの発達は新しい可能性を生んでいる。スマートフォンに保存されたチケットは特定の買い手と結びつけることができ、転売業者が活動しにくくなる一方で、管理された条件のもとでチケットを返したり譲ったりすることもできる。しかしそうした仕組みは、ファンに個人情報を共有するよう求めるかもしれないのでプライバシーについての心配を、そしてスマートフォンをもたない人やデジタル技術になれない人にとっての使いやすさについての心配を引き起こす。',
+      'チケットの転売をめぐる議論は、乏しい品物をどう配るべきかという、より広い問いを反映している。それは最も多くはらう気のある人に行くべきなのか、最初に来た人に行くべきなのか、それとも、くじのような何かほかの原則で選ばれた人に行くべきなのか。市場は品物とはらう気持ちとを結びつけるのに効率的で、前もって計画する人に報いるが、人々が公平だと考える結果を生むとはかぎらない。売り買いする自由と、ある種の経験はふつうのファンにとって手の届くものであり続けるべきだという共有された感覚の両方を尊重するつりあいを見つけるのは、かんたんなことではないが、それは主催者と政府とファンがますます共有する課題になっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この議論は冷たく思えるかもしれないが、転売は行けなくなった人を助ける」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that ticket resale is unfair to genuine fans and can encourage ( 1 ). Defenders reply that high resale prices reveal what people are willing to ( 2 ). Various measures, such as banning automated software and using digital tickets, have been tried, but each has ( 3 ).',
+      blanks: [
+        { choices: ['fraud', 'music', 'exercise', 'tourism'], answer: 0, why: '第2段落 resale markets can encourage fraud。' },
+        { choices: ['pay', 'sing', 'travel', 'wait'], answer: 0, why: '第3段落 reveal how much people are willing to pay。' },
+        { choices: ['drawbacks', 'tickets', 'fans', 'winners'], answer: 0, why: '第5段落 Each approach has drawbacks。' },
+      ],
+    },
+    tf: [
+      { statement: '人気の催しのチケットは数分で売り切れることが多い。', answer: true, why: '第1段落 they are often sold out within minutes。' },
+      { statement: '転売の高い値段からの利益は演者に入る。', answer: false, why: '第2段落 go not to the performers or organizers but to resellers。' },
+      { statement: '主催者自身が転売から利益を得ることもある。', answer: true, why: '第4段落 organizers themselves sometimes benefit from resale。' },
+      { statement: '電子チケットの仕組みにはプライバシーの心配はない。', answer: false, why: '第6段落 such systems raise concerns about privacy。' },
+    ],
+    qa: [
+      { q: 'Why do some performers keep ticket prices affordable?', choices: ['They want young people and fans with modest incomes to attend.', 'They want to lose money.', 'They dislike large audiences.', 'They are required by law.'], answer: 0, why: '第4段落 they want their audiences to include young people and fans with modest incomes。' },
+      { q: 'What do some organizers do to prevent resale?', choices: ['Print the buyer’s name on the ticket and check identification.', 'Sell tickets only at night.', 'Double the official price.', 'Cancel popular events.'], answer: 0, why: '第5段落 print the buyer\'s name on each ticket and check identification at the entrance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
