@@ -4634,6 +4634,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Soon (B) had I opened the window (C) than (D) a bird flew in.', choices: ['(A) Soon', '(B) had I opened the window', '(C) than', '(D) a bird flew in'], answer: 0, why: 'than と組んで倒置を起こすのは No sooner。No sooner had I opened。' },
     ],
   },
+  {
+    id: 'exam-error-lie-lay-kokkou',
+    title: '入試の正誤問題〈195〉（国公立レベル：自動詞と他動詞 lie・lay・rise・raise）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'lie（自動詞）「横になる・ある」は lie－lay－lain（ing 形は lying）、lay（他動詞）「～を置く・横たえる・（卵を）産む」は lay－laid－laid。rise（自動詞）「のぼる・上がる」は rise－rose－risen、raise（他動詞）「～を上げる・育てる」は raise－raised－raised。うしろに目的語があれば他動詞（lay・raise）、なければ自動詞（lie・rise）。lie の過去形 lay と、lay の原形をまちがえないこと。',
+    ],
+    examples: [
+      { en: 'He lay on the sofa and laid the book on the table.', ja: '彼はソファに横になり、本をテーブルに置いた。' },
+      { en: 'Prices have risen, so the shop raised its prices.', ja: '物価が上がったので、その店は値段を上げた。' },
+    ],
+    questions: [
+      { sentence: '(A) Please (B) lie (C) the books (D) on the desk.', choices: ['(A) Please', '(B) lie', '(C) the books', '(D) on the desk'], answer: 1, why: '目的語（the books）があるので他動詞 lay「置く」。Please lay the books。' },
+      { sentence: '(A) The sun (B) raises (C) in the east (D) every morning.', choices: ['(A) The sun', '(B) raises', '(C) in the east', '(D) every morning'], answer: 1, why: '目的語がないので自動詞 rise「のぼる」。The sun rises。' },
+      { sentence: '(A) He (B) laid (C) on the sofa (D) all afternoon yesterday.', choices: ['(A) He', '(B) laid', '(C) on the sofa', '(D) all afternoon yesterday'], answer: 1, why: '「横になる」は自動詞 lie で、過去形は lay。He lay on the sofa。' },
+      { sentence: '(A) Rise (B) your hand (C) if you (D) know the answer.', choices: ['(A) Rise', '(B) your hand', '(C) if you', '(D) know the answer'], answer: 0, why: '目的語（your hand）があるので他動詞 raise「上げる」。Raise your hand。' },
+      { sentence: '(A) The price of vegetables (B) has raised (C) sharply (D) this year.', choices: ['(A) The price of vegetables', '(B) has raised', '(C) sharply', '(D) this year'], answer: 1, why: '目的語がないので自動詞 rise。過去分詞は risen。has risen。' },
+      { sentence: '(A) The hen (B) has (C) lain (D) three eggs.', choices: ['(A) The hen', '(B) has', '(C) lain', '(D) three eggs'], answer: 2, why: '目的語（three eggs）があるので他動詞 lay。過去分詞は laid。has laid。' },
+      { sentence: '(A) My dog (B) likes (C) laying (D) in the sun.', choices: ['(A) My dog', '(B) likes', '(C) laying', '(D) in the sun'], answer: 2, why: '「寝そべる」は自動詞 lie で、ing 形は lying。likes lying。' },
+      { sentence: '(A) They (B) have (C) rose (D) the price of tickets.', choices: ['(A) They', '(B) have', '(C) rose', '(D) the price of tickets'], answer: 2, why: '目的語があるので他動詞 raise。過去分詞は raised。have raised。' },
+      { sentence: '(A) I (B) found the cat (C) lying under the table, (D) so I lay it on my bed.', choices: ['(A) I', '(B) found the cat', '(C) lying under the table,', '(D) so I lay it on my bed'], answer: 3, why: '目的語（it）があるので他動詞 lay で、過去形は laid。so I laid it。' },
+      { sentence: '(A) Prices (B) have risen, (C) and wages (D) have raised too.', choices: ['(A) Prices', '(B) have risen,', '(C) and wages', '(D) have raised too'], answer: 3, why: 'wages にも目的語がないので自動詞 rise。have risen too。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
