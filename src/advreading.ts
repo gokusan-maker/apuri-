@@ -36098,6 +36098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-public-wifi',
+    title: 'Should Cities Provide Free Public Internet?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Access to the internet has become essential for many aspects of daily life, from searching for jobs and communicating with family to using banking, health, and government services. Yet not everyone can afford a reliable connection at home, and mobile data can be expensive, particularly for people on low incomes. In response, some cities have begun to provide free wireless internet in public spaces such as parks, libraries, stations, and town squares. Supporters regard this as a basic public service, while critics question whether it is an appropriate use of limited public funds.",
+      "Supporters argue that free public internet helps to reduce the digital divide between those who can easily get online and those who cannot. People without a home connection may struggle to apply for jobs, complete schoolwork, or access services that are increasingly available only online. Providing free access in public places, supporters claim, gives everyone a fair chance to participate in modern society, much as public libraries once provided free access to books for those who could not afford to buy them. During emergencies, such as storms or power cuts, public connections may also allow people to contact family members and receive important information.",
+      "Supporters also point to economic and social benefits. Free connections can attract visitors to town centers, encourage people to spend time in public spaces, and help small businesses that depend on passing customers. ( A ) the cost of installing and maintaining networks is considerable, supporters argue, it is modest compared with other public investments, and the benefits to education, employment, and community life may far outweigh the expense, especially in areas where commercial providers have little incentive to invest.",
+      "Critics, however, raise concerns about security and privacy. Public networks may be easier for criminals to exploit, exposing users to the theft of personal information, particularly if they are unaware of the risks. Critics also worry that city governments that operate such networks could collect data about residents' movements and online activities, raising questions about how this information would be stored and used. Without strong safeguards, they argue, a service intended to help residents could end up putting them at risk.",
+      "Critics further question whether public internet is the best way to address the digital divide. Many people who lack home connections also lack suitable devices or the skills needed to use them effectively, and free connections in public places do little to solve these problems. Moreover, public networks are often slow or unreliable, and people cannot easily complete private tasks, such as medical consultations or job interviews, in crowded outdoor spaces. In their view, subsidizing home connections and providing digital training might be more effective. Such support would allow people to go online safely in their own homes, at any time of day, rather than only when they can travel to a public place.",
+      "Between these positions, many cities have sought to combine free public access with other measures. Some partner with private companies to share the costs of building networks, while others offer free connections only in particular locations, such as libraries and community centers, where staff can provide help and advice. Some cities have also introduced programs that lend devices to residents in need and offer classes in digital skills, recognizing that access to a connection is only one part of meaningful participation online.",
+      "The debate over free public internet reflects a broader question about which services societies should treat as public goods. In earlier times, roads, clean water, and electricity came to be seen as essential services that governments should help to provide. Whether internet access belongs in the same category remains a matter of debate. What seems clear is that as more of life moves online, the question of who can and cannot connect will become increasingly important for fairness and opportunity in society.",
+    ],
+    ja: [
+      'インターネットを使えることは、仕事さがしや家族との連絡から、銀行や医療や行政のサービスの利用まで、日々の暮らしの多くの面で欠かせなくなっている。しかし、だれもが家で安定した接続のための費用をはらえるわけではなく、携帯のデータ通信は、とくに収入の少ない人々にとって高いことがある。これにこたえて、公園や図書館や駅や広場のような公共の空間で無料の無線インターネットを提供しはじめた都市もある。支持する人々はこれを基本的な公共サービスと見なし、批判する人々はそれが限られた公の資金の適切な使い方なのかを疑う。',
+      '支持する人々は、無料の公共インターネットは、かんたんにネットにつなげる人とそうでない人とのあいだのデジタル格差をへらす助けになると主張する。家に接続のない人は、仕事に応募したり、学校の課題をしたり、ますますネットでしか使えなくなっているサービスを利用したりするのに苦労するかもしれない。公共の場所で無料で使えるようにすることは、ちょうど公共図書館がかつて本を買えない人々に本を無料で読めるようにしたように、すべての人に現代社会に参加する公平な機会をあたえると支持する人々は主張する。あらしや停電のような非常時には、公共の接続によって人々が家族と連絡をとり、大切な情報を受け取れるようにもなるかもしれない。',
+      '支持する人々はまた、経済的・社会的な利益も指摘する。無料の接続は、町の中心に訪問者を引きつけ、人々が公共の空間ですごすようにうながし、通りがかりの客にたよる小さな店を助けることができる。ネットワークを設けて維持する費用はかなりのものだが、ほかの公共投資にくらべればささやかであり、とくに民間の業者が投資する動機をほとんどもたない地域では、教育や雇用や地域の暮らしへの利益が出費をはるかに上回るかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、安全とプライバシーについての心配をあげる。公共のネットワークは犯罪者に悪用されやすいかもしれず、とくに利用者が危険に気づいていない場合、個人情報がぬすまれるおそれがある。批判する人々はまた、そうしたネットワークを運営する市の行政が、住民の移動やネット上の活動についてのデータを集めるかもしれず、その情報がどう保存され使われるのかという問題が生じると心配する。強い守りがなければ、住民を助けるはずのサービスが、かえって彼らを危険にさらすことになりかねないと彼らは主張する。',
+      '批判する人々はさらに、公共のインターネットがデジタル格差に取り組む最善の方法なのかを疑う。家に接続のない人の多くは、適した機器や、それを効果的に使うのに必要な技能ももっておらず、公共の場所での無料の接続はこうした問題をほとんど解決しない。さらに、公共のネットワークはしばしばおそかったり不安定だったりし、人々は医療の相談や仕事の面接のような個人的な用事を、混みあった屋外の空間ではかんたんにすませられない。彼らの見方では、家庭の接続に補助金を出し、デジタルの研修を行うほうが効果的かもしれない。そうしたささえがあれば、人々は公共の場所に出かけられるときだけでなく、一日のいつでも、自分の家で安全にネットを使えるようになるだろう。',
+      'これらの立場のあいだで、多くの都市は無料の公共接続をほかの方法と組み合わせようとしてきた。民間の会社と協力してネットワークをつくる費用を分け合う都市もあれば、職員が助けや助言をあたえられる図書館や地域センターのような特定の場所だけで無料の接続を提供する都市もある。接続を使えることはネット上での意味ある参加の一部にすぎないと認めて、必要な住民に機器を貸し出し、デジタルの技能の講座を開く取り組みを取り入れた都市もある。',
+      '無料の公共インターネットをめぐる議論は、社会がどのサービスを公共のものとしてあつかうべきかという、より広い問いを反映している。かつては、道路やきれいな水や電気が、政府が提供を助けるべき欠かせないサービスと見なされるようになった。インターネットを使えることが同じ部類に入るのかは、今も議論の的である。はっきりしているように思えるのは、暮らしのより多くがネットに移るにつれて、だれがつなげてだれがつなげないのかという問いが、社会の公平さと機会にとってますます大切になるということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「費用はかなりのものだが、ほかの公共投資にくらべればささやか」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that free public internet reduces the digital ( 1 ) and brings economic benefits. Critics raise concerns about security and ( 2 ) and argue that many people also lack devices and skills. Some cities lend ( 3 ) to residents and offer classes in digital skills.',
+      blanks: [
+        { choices: ['divide', 'market', 'speed', 'border'], answer: 0, why: '第2段落 helps to reduce the digital divide。' },
+        { choices: ['privacy', 'tourism', 'traffic', 'noise'], answer: 0, why: '第4段落 Critics ... raise concerns about security and privacy。' },
+        { choices: ['devices', 'books', 'cars', 'houses'], answer: 0, why: '第6段落 programs that lend devices to residents in need。' },
+      ],
+    },
+    tf: [
+      { statement: '携帯のデータ通信は、収入の少ない人々にとって高いことがある。', answer: true, why: '第1段落 mobile data can be expensive, particularly for people on low incomes。' },
+      { statement: '支持する人々によれば、ネットワークの費用はほかの公共投資よりずっと大きい。', answer: false, why: '第3段落 it is modest compared with other public investments。' },
+      { statement: '公共のネットワークは、個人情報がぬすまれる危険があるかもしれない。', answer: true, why: '第4段落 exposing users to the theft of personal information。' },
+      { statement: '筆者によれば、インターネットが公共サービスに入るかどうかはもう決まっている。', answer: false, why: '第7段落 remains a matter of debate。' },
+    ],
+    qa: [
+      { q: 'Why might free connections in public places do little to solve the digital divide, according to critics?', choices: ['Many people also lack devices or skills.', 'Everyone already has fast internet.', 'Public places are always empty.', 'Devices are free everywhere.'], answer: 0, why: '第5段落 Many people who lack home connections also lack suitable devices or the skills。' },
+      { q: 'What services came to be seen as essential in earlier times?', choices: ['Roads, clean water, and electricity.', 'Television and radio only.', 'Private cars.', 'Shopping centers.'], answer: 0, why: '第7段落 roads, clean water, and electricity came to be seen as essential services。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
