@@ -35058,6 +35058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tourist-tax',
+    title: 'Should Tourists Pay Extra Taxes?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Tourism has grown enormously over recent decades, as cheaper flights, online booking, and rising incomes have allowed more people than ever to travel. For many cities and regions, visitors bring welcome income and jobs. In the most popular destinations, however, the sheer number of tourists has begun to cause problems, from crowded streets and rising rents to damage to historic sites and natural environments. In response, a growing number of places have introduced special taxes or fees that visitors must pay, and the question of whether such charges are fair and effective has become a matter of public debate.",
+      "Supporters of tourist taxes argue that visitors should contribute to the costs they impose. Tourists use roads, public transport, water, and waste collection, and popular sites require constant maintenance and protection. These costs are usually paid by local residents through their own taxes, even though the benefits of tourism are not always shared evenly among them. A modest charge on each visitor, supporters argue, would allow those who enjoy a place to help pay for its upkeep, while the money raised could be used to improve services for residents and visitors alike.",
+      "Supporters also suggest that taxes can help to manage the number of visitors. In places where crowds threaten to overwhelm fragile environments or the daily lives of residents, a higher charge at the busiest times of year may encourage some travelers to visit at quieter times or to choose less crowded destinations. ( A ) a small tax is unlikely to deter most tourists, supporters argue, it can at least send a signal that a destination is not unlimited and that its resources deserve to be treated with respect.",
+      "Critics, however, warn that tourist taxes may harm the very economies they are meant to support. Many local businesses, including hotels, restaurants, and shops, depend heavily on visitors, and higher costs may drive tourists to competing destinations. Small family-run businesses may be particularly affected, since they have less ability than large companies to absorb price increases. In regions where tourism is one of the few sources of employment, critics fear that even a modest decline in visitor numbers could have serious consequences for local workers.",
+      "Critics also question how the money raised is actually used. If the revenue simply disappears into a general budget rather than being spent on visible improvements, residents and visitors alike may come to see the tax as just another way of raising money. Moreover, taxes may fall most heavily on budget travelers, such as students and families with limited incomes, while doing little to discourage wealthy tourists, for whom an additional charge is a minor expense. In this way, critics argue, tourist taxes may make travel less accessible without truly solving the problem of overcrowding.",
+      "Between these positions, many destinations have experimented with ways of making tourist taxes fairer and more effective. Some vary the charge according to the season or the type of accommodation, while others publish detailed reports showing how the money is spent. Some combine taxes with other measures, such as limiting the number of cruise ships, requiring reservations at popular sites, or promoting lesser-known areas to spread visitors more evenly. Such approaches recognize that a tax alone is rarely enough to address the complex problems that mass tourism can create.",
+      "The debate over tourist taxes ultimately reflects a deeper question about who a place belongs to and who should bear the costs of sharing it with the world. Tourism can bring prosperity and cultural exchange, but it can also strain the communities that host it. A well-designed tax, used transparently and combined with thoughtful planning, may help to strike a balance, allowing visitors to enjoy remarkable places while ensuring that those places remain livable for the people who call them home.",
+    ],
+    ja: [
+      '安い航空便やネット予約や収入の増加によって、これまでになく多くの人が旅行できるようになり、観光はここ数十年でとても大きくなった。多くの都市や地域にとって、訪問者はありがたい収入と仕事をもたらす。しかし、もっとも人気のある観光地では、観光客のあまりの多さが、混雑した通りや家賃の上昇から、歴史的な場所や自然環境への損害まで、問題を起こしはじめている。これにこたえて、訪問者がはらわなければならない特別な税や料金を取り入れる場所がふえており、そうした料金が公平で効果的なのかという問いが人々の議論の的になっている。',
+      '観光税を支持する人々は、訪問者は自分が生む費用を負担すべきだと主張する。観光客は道路や公共交通や水やごみの収集を使い、人気のある場所はたえず手入れと保護を必要とする。こうした費用はふつう、観光の利益が住民のあいだでいつも平等に分けられているわけではないにもかかわらず、地元の住民が自分の税ではらっている。訪問者一人ひとりにささやかな料金をかければ、その場所を楽しむ人がその維持費の一部を負担でき、集まったお金は住民と訪問者の両方のためのサービスをよくするのに使えると支持する人々は主張する。',
+      '支持する人々はまた、税が訪問者の数を調整する助けになると示す。人ごみがこわれやすい環境や住民の日々の暮らしをおびやかすおそれのある場所では、一年でもっとも混む時期に料金を高くすることで、一部の旅行者がすいている時期に訪れたり、混雑の少ない行き先を選んだりするようになるかもしれない。少しの税ではほとんどの観光客を思いとどまらせることはできそうにないが、少なくともその観光地がかぎりないものではなく、その資源が大切にあつかわれるべきだという合図を送ることはできると支持する人々は主張する。',
+      'しかし批判する人々は、観光税は、それがささえるはずのまさにその経済を傷つけるかもしれないと警告する。ホテルやレストランや店をふくむ多くの地元の店は訪問者に大きくたよっており、費用が高くなれば観光客はほかの観光地へ流れるかもしれない。小さな家族経営の店は、大きな会社にくらべて値上がりを吸収する力が弱いので、とくに影響を受けるかもしれない。観光が数少ない仕事のみなもとの一つである地域では、訪問者の数がわずかにへるだけでも、地元で働く人々に深刻な結果をもたらしうると批判する人々は心配する。',
+      '批判する人々はまた、集まったお金が実際にどう使われるのかを疑う。その収入が目に見える改善に使われずに一般の予算に消えてしまうだけなら、住民も訪問者も、その税を単なるお金集めのもう一つの方法と見なすようになるかもしれない。さらに、税は学生や収入の限られた家族のような、お金をかけずに旅をする人々にもっとも重くのしかかり、追加の料金がささいな出費にすぎない裕福な観光客を思いとどまらせることはほとんどないかもしれない。こうして、観光税は混雑の問題を本当には解決しないまま、旅行をより手のとどきにくいものにしてしまうかもしれないと批判する人々は主張する。',
+      'これらの立場のあいだで、多くの観光地は観光税をより公平で効果的にする方法を試してきた。季節や宿の種類によって料金を変えるところもあれば、お金がどう使われているかを示すくわしい報告を公表するところもある。大型客船の数を制限したり、人気のある場所に予約を求めたり、あまり知られていない地域を宣伝して訪問者をより平等に分散させたりするなど、税をほかの方法と組み合わせるところもある。こうしたやり方は、大量の観光が生みうる複雑な問題に取り組むのに、税だけで足りることはめったにないと認めている。',
+      '観光税をめぐる議論は、結局のところ、ある場所はだれのものであり、それを世界と分かち合う費用をだれが負担すべきかという、より深い問いを反映している。観光は繁栄と文化の交流をもたらしうるが、それを受け入れる地域に負担をかけることもある。よく設計され、透明に使われ、よく考えられた計画と組み合わされた税は、訪問者がすばらしい場所を楽しめるようにしつつ、その場所をふるさととよぶ人々にとって住みやすいままにしておく、つりあいをとる助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「少しの税では思いとどまらせられないが、少なくとも合図は送れる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that visitors should help pay the ( 1 ) they impose and that taxes can help manage crowds. Critics warn that taxes may harm local ( 2 ) and fall most heavily on budget travelers. Many destinations combine taxes with other measures and publish how the ( 3 ) is spent.',
+      blanks: [
+        { choices: ['costs', 'debts', 'prices', 'fines'], answer: 0, why: '第2段落 visitors should contribute to the costs they impose。' },
+        { choices: ['businesses', 'schools', 'farms', 'hospitals'], answer: 0, why: '第4段落 Many local businesses ... depend heavily on visitors。' },
+        { choices: ['money', 'time', 'land', 'water'], answer: 0, why: '第6段落 publish detailed reports showing how the money is spent。' },
+      ],
+    },
+    tf: [
+      { statement: '人気のある観光地では、観光客の多さが家賃の上昇などの問題を起こしている。', answer: true, why: '第1段落 from crowded streets and rising rents。' },
+      { statement: '支持する人々によれば、少しの税でほとんどの観光客を思いとどまらせることができる。', answer: false, why: '第3段落 a small tax is unlikely to deter most tourists。' },
+      { statement: '批判する人々は、税が裕福な観光客をほとんど思いとどまらせないと考えている。', answer: true, why: '第5段落 doing little to discourage wealthy tourists。' },
+      { statement: '筆者によれば、大量の観光の問題は税だけでたいてい解決できる。', answer: false, why: '第6段落 a tax alone is rarely enough。' },
+    ],
+    qa: [
+      { q: 'Why may small family-run businesses be particularly affected by tourist taxes?', choices: ['They are less able to absorb price increases.', 'They pay no taxes.', 'They have more customers.', 'They are owned by the government.'], answer: 0, why: '第4段落 they have less ability than large companies to absorb price increases。' },
+      { q: 'What is one measure combined with taxes in some destinations?', choices: ['Requiring reservations at popular sites.', 'Closing all hotels.', 'Banning all visitors.', 'Lowering every price.'], answer: 0, why: '第6段落 requiring reservations at popular sites。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
