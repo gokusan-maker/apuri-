@@ -2847,6 +2847,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="62" cy="84" rx="5" ry="2.5" fill="#111827" />
       </g>
     )
+  if (species === 'rustyspotted')
+    return (
+      <g>
+        {/* さびいろの点もよう */}
+        <circle cx="40" cy="62" r="2" fill="#9a3412" />
+        <circle cx="50" cy="66" r="2" fill="#9a3412" />
+        <circle cx="58" cy="60" r="2" fill="#9a3412" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
