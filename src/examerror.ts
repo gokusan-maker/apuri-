@@ -7878,6 +7878,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Write it down, [unless] you will forget it.', choices: ['or', 'and', 'if', 'so'], answer: 0, why: '忘れるのは悪い結果なので or「さもないと」。unless のあとに will は来ない。' },
     ],
   },
+  {
+    id: 'exam-fix-185',
+    title: '入試の誤文訂正〈185〉（京大レベル：英作文の分詞構文 Having done）',
+    points: ['分詞構文は「接続詞＋主語＋動詞」を分詞で短く表す形。主節より前のことは Having ＋過去分詞（完了分詞構文）で表す。主語が「される」側なら過去分詞（Written in English, ～）や Having been ＋過去分詞。否定は Not を分詞の前に置く（Not having been invited）。分詞の主語が主節の主語とちがうときは、主語を前に置く（It being Sunday, ～：独立分詞構文）。分詞構文のあとに so や and を入れて主節をつなげない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Having finished my homework, I went out to play.', ja: '宿題を終えたので、私は遊びに出かけた。' }],
+    questions: [
+      { sentence: '[Having finish] my homework, I went out to play.', choices: ['Having finished', 'Have finished', 'Had finishing', 'Having finishing'], answer: 0, why: 'Having のあとは過去分詞。Having finished。' },
+      { sentence: '[Having been not] invited, she stayed at home.', choices: ['Not having been', 'Not had been', 'Having been no', 'Been not having'], answer: 0, why: '分詞構文の否定は Not を分詞の前に置く。Not having been invited。' },
+      { sentence: '[Read] the book twice, I knew the story well.', choices: ['Having read', 'Have read', 'To have reading', 'Has read'], answer: 0, why: '「2回読んでいたので」と主節より前のことなので Having read。' },
+      { sentence: '[Writing] in simple English, the book is easy to read.', choices: ['Written', 'Having writing', 'To write', 'Wrote'], answer: 0, why: '本は「書かれる」側なので過去分詞 Written。' },
+      { sentence: 'Having lost my key, [so I could not] get into the house.', choices: ['I could not', 'and I could not', 'so could not I', 'but I could not'], answer: 0, why: '分詞構文のあとに so を入れずに主節を続ける。Having lost my key, I could not get into the house。' },
+      { sentence: '[Seeing] from the plane, the island looked like a heart.', choices: ['Seen', 'Having seeing', 'To seeing', 'Saw'], answer: 0, why: '島は「見られる」側なので過去分詞 Seen。' },
+      { sentence: '[Having live] in Kyoto for ten years, she knows the city well.', choices: ['Having lived', 'Had lived', 'Have living', 'Having living'], answer: 0, why: 'Having のあとは過去分詞。Having lived。' },
+      { sentence: '[Being] Sunday, the shops were closed.', choices: ['It being', 'Been', 'It been', 'Was'], answer: 0, why: '「日曜日なので」の主語 it は主節の主語 the shops とちがうので、主語を残す。It being Sunday。' },
+      { sentence: '[Having telling] the news, he called his mother.', choices: ['Having been told', 'Having told by', 'Been telling', 'Having tell'], answer: 0, why: '彼は知らせを「伝えられた」側で、主節より前なので Having been told。' },
+      { sentence: '[Failing] the exam last year, he is studying harder this year.', choices: ['Having failed', 'Failed to', 'To fail', 'Having failing'], answer: 0, why: '去年のことで主節（今）より前なので完了分詞構文 Having failed。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
