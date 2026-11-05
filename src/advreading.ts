@@ -36542,6 +36542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-boundaries',
+    title: 'Why We Need Boundaries',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Boundaries are often regarded with suspicion. We speak admiringly of thinking without limits, of breaking down barriers between people, and of a world in which information, goods, and ideas flow freely. In personal life, too, the ideal of complete openness, of sharing everything and refusing nothing, can seem attractive. Yet a moment's reflection suggests that boundaries of many kinds are not merely obstacles but conditions for much of what we value, from individual identity and close relationships to the existence of distinct cultures and communities.",
+      "Consider first the boundaries of the self. A person who could not distinguish their own thoughts and feelings from those of others, or who accepted every demand made upon them, would scarcely have a self at all. The ability to say where one ends and another begins allows us to develop our own values, to make choices, and to take responsibility for them. Far from isolating us, such boundaries make genuine relationships possible, since a relationship requires two distinct people rather than one person absorbed into another. Friends who respect each other's limits often find that their trust grows deeper, since each knows that the other will not demand more than can freely be given.",
+      "Boundaries also give shape and meaning to time and activity. A working day that never ends, with no clear line between work and rest, may become exhausting and unproductive. ( A ) modern technology allows us to remain connected to work at every hour, many people find that setting limits, such as not answering messages in the evening or on weekends, helps them to concentrate better when they are working and to rest more fully when they are not. Without such limits, the hours of the day may blur together, leaving people feeling that they are never fully at work and never fully at rest.",
+      "In creative work, limits can be surprisingly productive. Poets who write within strict forms, composers who work within particular structures, and designers who face tight constraints often produce their most inventive results precisely because the boundaries force them to find new solutions. A blank page with no limits may be paralyzing, while a defined task provides a starting point and a challenge. In this sense, boundaries do not always restrict creativity but can actively stimulate it. Many games, too, are enjoyable precisely because their rules limit what players are allowed to do.",
+      "This is not to deny that some boundaries are harmful. Borders that divide families, prejudices that exclude certain groups, and rules that prevent people from developing their abilities can cause great suffering, and many of the most important moral achievements in history have involved breaking down such barriers. The question is therefore not whether boundaries are good or bad in general, but which boundaries serve human flourishing and which ones stand in its way.",
+      "Distinguishing between these kinds of boundaries requires attention to their purpose and effects. A boundary that protects a person's privacy or allows a community to preserve its traditions may be valuable, while one that keeps people from basic opportunities may be unjust. Good boundaries, moreover, are often flexible rather than rigid, allowing exchange and connection while preserving the distinctions that give individuals and groups their character. Like the walls of a house, they may include doors and windows.",
+      "Perhaps, then, the wisdom lies in learning to draw boundaries well rather than in rejecting them altogether. A life with no limits would be formless, and a world with no distinctions would lose much of its variety and meaning. By choosing our boundaries thoughtfully, keeping some firm and others open, we can create the conditions in which both individuals and communities can thrive. In this sense, the art of setting limits may be as important as the courage to cross them.",
+    ],
+    ja: [
+      '境界はしばしばうたがいの目で見られる。私たちは限界なく考えることや、人々のあいだのかべを取りはらうことや、情報や物や考えが自由に行き来する世界を賞賛して語る。個人の暮らしでも、すべてを分かち合い何もことわらない、完全に開かれているという理想は魅力的に思えるかもしれない。しかし少し考えてみると、さまざまな種類の境界は単なるじゃまものではなく、個人のアイデンティティや親密な関係から、独自の文化や地域の存在まで、私たちが大切にするものの多くにとっての条件なのだとわかる。',
+      'まず自己の境界を考えてみよう。自分の考えや気持ちをほかの人のものと区別できず、あるいは自分に向けられるあらゆる求めを受け入れる人には、ほとんど自己というものがないだろう。自分がどこで終わりほかの人がどこから始まるかを言える力によって、私たちは自分の価値観を育て、選択をし、それに責任をもつことができる。そうした境界は私たちを孤立させるどころか、本当の関係を可能にする。関係には、一人がもう一人にのみこまれるのではなく、二人の別々の人が必要だからである。たがいの限界を尊重し合う友人どうしは、しばしば信頼がより深まると気づく。どちらも、相手が自由にあたえられる以上のものを求めてはこないと知っているからである。',
+      '境界はまた、時間と活動に形と意味をあたえる。仕事と休みのあいだにはっきりした線がなく、終わることのない勤務の一日は、つかれさせ、実りのないものになるかもしれない。現代の技術によって私たちはどの時間にも仕事とつながっていられるが、夜や週末にはメッセージに返事をしないといった限界を決めることで、働いているときにはよりよく集中し、働いていないときにはより十分に休めるようになると気づく人は多い。そうした限界がなければ、一日の時間はぼやけて混ざり合い、人々はけっして十分に働いているわけでも、十分に休んでいるわけでもないと感じるかもしれない。',
+      '創造的な仕事では、制限はおどろくほど実りあるものになりうる。きびしい形式のなかで書く詩人や、特定の構造のなかで作曲する作曲家や、きつい制約に直面するデザイナーは、まさにその境界が新しい解決を見つけるようしいるからこそ、もっとも工夫に富んだ成果を生むことが多い。何の制限もない白紙は人を立ちすくませるかもしれないが、決められた課題は出発点と挑戦をあたえてくれる。この意味で、境界はいつも創造をしばるのではなく、積極的にそれをかき立てることもある。多くの遊びもまた、まさにその規則がプレーヤーにできることを制限しているからこそ楽しいのである。',
+      'これは、有害な境界があることを否定するものではない。家族を引きさく国境や、ある集団をしめ出す偏見や、人々が能力をのばすのをさまたげる規則は大きな苦しみを生みうるのであり、歴史上もっとも大切な道徳的成果の多くは、そうしたかべを取りはらうことをふくんでいた。それゆえ問題は、境界が一般によいか悪いかではなく、どの境界が人間のゆたかな生き方に役立ち、どれがそのさまたげになるかなのである。',
+      'こうした種類の境界を見分けるには、その目的と影響に注意をはらう必要がある。人のプライバシーを守ったり、地域がその伝統を保てるようにしたりする境界は価値があるかもしれないが、人々を基本的な機会から遠ざける境界は不正かもしれない。さらに、よい境界はしばしばかたいのではなく柔軟であり、個人や集団に個性をあたえる区別を保ちながら、交流とつながりを可能にする。家のかべのように、そこにはドアや窓があってもよいのである。',
+      'だとすれば、知恵は境界をすっかりこばむことではなく、境界をうまく引くことを学ぶことにあるのかもしれない。限界のない人生は形をもたず、区別のない世界はその多様さと意味の多くを失うだろう。いくつかはしっかりと、ほかは開いたままにして、境界を思慮深く選ぶことで、私たちは個人と地域の両方が栄えられる条件をつくることができる。この意味で、限界を決める技術は、それをこえる勇気と同じくらい大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「技術によっていつも仕事とつながっていられるが、限界を決めるとよく集中し休める」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、自己の境界は本当の関係を可能にする。', answer: true, why: '第2段落 such boundaries make genuine relationships possible。' },
+      { statement: '制限のない白紙のほうが、いつも創造的な成果を生む。', answer: false, why: '第4段落 A blank page with no limits may be paralyzing。' },
+      { statement: '歴史上の大切な道徳的成果の多くは、有害なかべを取りはらうことをふくんでいた。', answer: true, why: '第5段落 many of the most important moral achievements ... involved breaking down such barriers。' },
+      { statement: '筆者は、よい境界はかたく変わらないものであるべきだと考えている。', answer: false, why: '第6段落 Good boundaries ... are often flexible rather than rigid。' },
+    ],
+    qa: [
+      { q: 'Why do strict forms often help poets and composers?', choices: ['The limits force them to find new solutions.', 'They remove all challenges.', 'They make work easier to copy.', 'They need no effort.'], answer: 0, why: '第4段落 the boundaries force them to find new solutions。' },
+      { q: 'What does the author compare good boundaries to?', choices: ['The walls of a house with doors and windows.', 'A locked prison.', 'A blank page.', 'A busy street.'], answer: 0, why: '第6段落 Like the walls of a house, they may include doors and windows。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
