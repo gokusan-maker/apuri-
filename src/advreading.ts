@@ -36178,6 +36178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sunday-trading',
+    title: 'Should Shops Close on Sundays?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, shops have traditionally been required to close on Sundays, a custom rooted partly in religious observance and partly in the idea that society benefits from a shared day of rest. In many other places, such restrictions have been relaxed or abolished, so that large stores now open seven days a week. Debates about whether Sunday trading should be limited continue in a number of countries, reflecting different views about the balance between economic freedom, the interests of workers, and the value of common time away from work.",
+      "Supporters of restrictions argue that a shared day of rest benefits families and communities. When most shops are closed, more people have the same day free, making it easier for families to spend time together, for friends to meet, and for clubs and community groups to organize activities. Without such a day, supporters warn, people's free time becomes scattered across the week, and the opportunities for shared leisure that hold communities together may gradually disappear. A football match for children, a family meal, or a visit to elderly relatives is easier to arrange when everyone can rely on the same free day.",
+      "Supporters also emphasize the interests of retail workers. Employees in shops are often among the lower-paid members of the workforce, and they may feel unable to refuse when asked to work on Sundays, even if they would prefer to spend the day with their families. ( A ) some workers welcome the extra hours and pay, supporters argue, restrictions protect those who might otherwise be pressured into working at times that conflict with their family or religious commitments.",
+      "Critics, however, argue that restrictions on Sunday trading are outdated and harmful to the economy. Many people work long hours during the week and find Sunday the most convenient day for shopping. Opening shops on Sundays, critics claim, increases sales, creates jobs, and gives consumers more choice. In areas that depend on tourism, Sunday opening may also be essential for attracting visitors, who expect to be able to shop and dine whenever they wish. For many small businesses in such areas, the weekend may account for a large share of their weekly income.",
+      "Critics also point out that the nature of shopping has changed. With online stores available at any hour, restricting physical shops on Sundays may simply push customers toward internet retailers, harming local businesses while doing little to create a genuine day of rest. Moreover, in diverse societies where people observe different religious traditions or none at all, critics question whether it is fair to give special status to a single day of the week. A rule that suits one community may feel like an imposition to another, particularly in large cities where residents follow many different calendars and customs.",
+      "Between these positions, some countries have adopted compromise arrangements. Small shops may be allowed to open on Sundays while larger stores face limits on their opening hours. Some places allow Sunday trading only in certain areas, such as tourist districts, or on a limited number of Sundays each year. Others protect the rights of individual workers to refuse Sunday work without penalty, so that shops can open while employees retain a choice about when they work.",
+      "The debate over Sunday trading reflects a broader question about how societies should organize time. A world in which shops never close offers convenience and economic opportunity, but it may also make it harder to protect time for rest, family, and community. Deciding how to balance these values is not merely a technical matter of opening hours. It involves deeper choices about what kind of common life a society wishes to preserve, and about whether some time should remain outside the demands of work and consumption.",
+    ],
+    ja: [
+      'いくつかの国では、店はならわしとして日曜日に閉めることを求められてきた。そのならわしは、一部は宗教上のつとめに、一部は社会が共通の休日から益を得るという考えにもとづいている。ほかの多くの場所では、そうした制限はゆるめられたり廃止されたりしており、今では大きな店が週7日開いている。日曜日の営業を制限すべきかどうかの議論は多くの国で続いており、経済的な自由と、働く人の利益と、仕事からはなれた共通の時間の価値とのつりあいについての、さまざまな見方を反映している。',
+      '制限を支持する人々は、共通の休日は家族と地域に益をもたらすと主張する。ほとんどの店が閉まっていると、より多くの人が同じ日に休みになり、家族がいっしょにすごしたり、友だちが会ったり、クラブや地域の集まりが活動を組んだりしやすくなる。そうした日がなければ、人々の自由な時間は週のあちこちにちらばり、地域を一つにまとめる共通の余暇の機会が少しずつ消えてしまうかもしれないと支持する人々は警告する。子どものサッカーの試合や家族の食事やお年寄りの親せきへの訪問は、だれもが同じ休日をあてにできるほうが予定を立てやすい。',
+      '支持する人々はまた、小売業で働く人々の利益を強調する。店の従業員はしばしば働く人々のなかで給料の低いほうに入り、たとえ家族と一日をすごしたくても、日曜日に働くようたのまれるとことわれないと感じるかもしれない。ふえる勤務時間と給料を歓迎する人もいるが、制限は、そうでなければ家族や宗教のつとめとぶつかる時間に働くよう重圧をかけられるかもしれない人々を守るのだと支持する人々は主張する。',
+      'しかし批判する人々は、日曜日の営業の制限は時代おくれで経済に害をあたえると主張する。多くの人は平日に長時間働いており、日曜日を買い物にもっとも都合のよい日と考えている。日曜日に店を開けると売上がふえ、仕事が生まれ、消費者の選択が広がると批判する人々は主張する。観光にたよる地域では、日曜日の営業は、好きなときに買い物や食事ができると思っている訪問者を引きつけるのに欠かせないかもしれない。そうした地域の多くの小さな店にとって、週末は一週間の収入の大きな部分をしめているかもしれない。',
+      '批判する人々はまた、買い物のあり方が変わったと指摘する。いつでも使えるネットの店がある今、日曜日に実店舗を制限すると、客をネットの小売業者へと追いやるだけで、本当の休日をつくることにはほとんどならないまま、地元の店を傷つけるかもしれない。さらに、人々がさまざまな宗教の伝統を守っていたり、何も守っていなかったりする多様な社会で、週のある一日だけに特別な地位をあたえるのが公平なのかを批判する人々は問う。ある地域に合う規則が、とくに住民がさまざまな暦や習慣にしたがう大都市では、別の地域にはおしつけのように感じられるかもしれない。',
+      'これらの立場のあいだで、歩みよりの取り決めを取り入れた国もある。小さな店は日曜日に開いてよいが、大きな店は営業時間の制限を受けるという場合もある。観光地区のような特定の地域だけ、あるいは毎年かぎられた数の日曜日だけ営業を認める場所もある。働く人一人ひとりが罰を受けずに日曜日の勤務をことわる権利を守り、店は開けられても従業員がいつ働くかを選べるようにしているところもある。',
+      '日曜日の営業をめぐる議論は、社会が時間をどう組み立てるべきかという、より広い問いを反映している。店がけっして閉まらない世界は便利さと経済の機会をあたえるが、休息や家族や地域のための時間を守るのを難しくもするかもしれない。こうした価値のつりあいをどうとるかを決めることは、単なる営業時間の技術的な問題ではない。それは、社会がどのような共通の暮らしを守りたいのか、そしてある時間を仕事と消費のもとめの外に残しておくべきなのかについての、より深い選択にかかわっているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ふえる勤務を歓迎する人もいるが、制限は重圧をかけられる人を守る」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions argue that a shared day of ( 1 ) benefits families and protects retail workers. Critics argue that Sunday opening increases sales and that restrictions may push customers toward ( 2 ) retailers. Some countries allow Sunday trading only in certain areas, such as ( 3 ) districts.',
+      blanks: [
+        { choices: ['rest', 'work', 'study', 'travel'], answer: 0, why: '第2段落 a shared day of rest benefits families and communities。' },
+        { choices: ['online', 'local', 'small', 'foreign'], answer: 0, why: '第5段落 may simply push customers toward internet retailers。' },
+        { choices: ['tourist', 'business', 'school', 'factory'], answer: 0, why: '第6段落 such as tourist districts。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの場所で、日曜日の営業の制限はゆるめられたり廃止されたりしている。', answer: true, why: '第1段落 such restrictions have been relaxed or abolished。' },
+      { statement: '支持する人々によれば、すべての働く人がふえる勤務を歓迎している。', answer: false, why: '第3段落 some workers welcome the extra hours。' },
+      { statement: '観光にたよる地域では、日曜日の営業が欠かせないかもしれない。', answer: true, why: '第4段落 Sunday opening may also be essential for attracting visitors。' },
+      { statement: '筆者によれば、この問題は単なる営業時間の技術的な問題である。', answer: false, why: '第7段落 is not merely a technical matter of opening hours。' },
+    ],
+    qa: [
+      { q: 'Why do critics question giving special status to Sunday?', choices: ['People in diverse societies observe different traditions or none.', 'Sunday is the busiest working day.', 'Shops are always closed anyway.', 'Nobody shops on Sundays.'], answer: 0, why: '第5段落 in diverse societies where people observe different religious traditions or none at all。' },
+      { q: 'What right do some places protect for individual workers?', choices: ['The right to refuse Sunday work without penalty.', 'The right to close any shop.', 'The right to higher prices.', 'The right to shop online only.'], answer: 0, why: '第6段落 protect the rights of individual workers to refuse Sunday work without penalty。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
