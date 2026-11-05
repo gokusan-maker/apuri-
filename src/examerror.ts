@@ -4586,6 +4586,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The faster (B) the runner ran, (C) the more tired (D) did he feel.', choices: ['(A) The faster', '(B) the runner ran,', '(C) the more tired', '(D) did he feel'], answer: 3, why: '「the 比較級, the 比較級」のあとはふつうの語順。he felt。' },
     ],
   },
+  {
+    id: 'exam-error-what-which-kyodai',
+    title: '入試の正誤問題〈193〉（京大レベル：関係代名詞の what と which）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係代名詞 what は先行詞をふくみ「～すること・もの」（＝ the thing which）。前に先行詞（the book など）があれば what は使えず、which か that を使う。前の文の内容を受ける「, which」（継続用法）には what も that も使えない。what が節のなかで目的語・主語になっているので、it などをくり返さない。what の節が主語のときは単数あつかい。',
+    ],
+    examples: [
+      { en: 'What he said surprised everyone.', ja: '彼が言ったことはみんなをおどろかせた。' },
+      { en: 'He missed the train, which made him late.', ja: '彼は電車に乗りおくれ、そのせいでおくれた。' },
+    ],
+    questions: [
+      { sentence: '(A) This is (B) the book (C) what (D) I bought yesterday.', choices: ['(A) This is', '(B) the book', '(C) what', '(D) I bought yesterday'], answer: 2, why: '先行詞 the book があるので what は使えない。which か that。' },
+      { sentence: '(A) Which (B) he said (C) surprised (D) everyone.', choices: ['(A) Which', '(B) he said', '(C) surprised', '(D) everyone'], answer: 0, why: '先行詞がなく「～すること・もの」の意味なので What。What he said surprised everyone。' },
+      { sentence: '(A) I cannot believe (B) which (C) you (D) told me.', choices: ['(A) I cannot believe', '(B) which', '(C) you', '(D) told me'], answer: 1, why: 'believe の目的語で先行詞がないので what。what you told me。' },
+      { sentence: '(A) He missed the train, (B) what (C) made (D) him late.', choices: ['(A) He missed the train,', '(B) what', '(C) made', '(D) him late'], answer: 1, why: '前の文の内容を受ける継続用法は , which。what は継続用法では使えない。' },
+      { sentence: '(A) The house (B) which (C) they live (D) is very old.', choices: ['(A) The house', '(B) which', '(C) they live', '(D) is very old'], answer: 2, why: 'live in the house の in が必要。which they live in（in which they live）。' },
+      { sentence: '(A) What (B) I need (C) are (D) a little more time.', choices: ['(A) What', '(B) I need', '(C) are', '(D) a little more time'], answer: 2, why: 'What I need は単数あつかいなので is。' },
+      { sentence: '(A) She is not (B) which (C) she (D) used to be.', choices: ['(A) She is not', '(B) which', '(C) she', '(D) used to be'], answer: 1, why: '「以前の彼女」は what she used to be。' },
+      { sentence: '(A) Tell me (B) what (C) you want (D) it.', choices: ['(A) Tell me', '(B) what', '(C) you want', '(D) it'], answer: 3, why: 'what が want の目的語になっているので it は不要。Tell me what you want。' },
+      { sentence: '(A) He said nothing, (B) that (C) made (D) her angry.', choices: ['(A) He said nothing,', '(B) that', '(C) made', '(D) her angry'], answer: 1, why: '継続用法に that は使えない。, which。' },
+      { sentence: '(A) Do (B) which (C) you think (D) is right.', choices: ['(A) Do', '(B) which', '(C) you think', '(D) is right'], answer: 1, why: '先行詞がなく「正しいと思うこと」なので what。Do what you think is right。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
