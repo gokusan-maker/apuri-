@@ -35298,6 +35298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-gap-year',
+    title: 'Should Students Take a Gap Year?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, it has become common for young people to take a gap year, a period of several months or a full year between finishing secondary school and starting university. During this time, students may travel, work, volunteer, or pursue personal interests before returning to formal education. In other countries, however, the practice remains rare, and students are generally expected to move directly from one stage of education to the next. Whether gap years should be more widely encouraged has become a subject of debate among educators, employers, and families.",
+      "Supporters argue that a gap year can help young people to mature and to make better decisions about their future. Many students choose a university course at the age of seventeen or eighteen with only a limited understanding of what the subject involves or what kind of career they might want. Time spent working or volunteering, supporters claim, can give them a clearer sense of their interests and abilities, so that when they do enter university, they are more motivated and less likely to change courses or drop out.",
+      "Supporters also emphasize the personal growth that a gap year can bring. Living away from home, managing money, and dealing with unfamiliar situations can develop independence, confidence, and practical skills that are difficult to acquire in a classroom. ( A ) a gap year delays the start of university study, supporters argue, the experience gained during that time may enrich students' learning once they begin, since they bring with them a wider understanding of the world and of other people.",
+      "Critics, however, point out that gap years are not equally available to everyone. Traveling abroad or volunteering in another country can be expensive, and many of the most celebrated gap-year programs are affordable only for students from wealthy families. Students from poorer backgrounds may need to start earning money or complete their education as quickly as possible, and for them, a year without formal study may be a luxury they cannot afford. Encouraging gap years, critics warn, may therefore increase the advantages that privileged students already enjoy.",
+      "Critics also worry that some students may lose momentum during a gap year. After a long break from study, returning to the discipline of reading, writing, and examinations can be difficult, and a small number of students may decide not to return to education at all. In addition, a poorly planned gap year, spent without clear purpose, may offer few of the benefits that supporters describe. In such cases, critics argue, the year may simply delay a student's progress without providing anything of lasting value. Employers, too, may be unimpressed by a gap year that cannot be clearly explained in terms of what the student actually did and learned.",
+      "Between these views, some educators propose ways of making the benefits of a gap year available without its drawbacks. Universities could allow admitted students to defer their place for a year, guaranteeing that they can return. Governments and schools could support structured programs, such as paid community service or work placements, that are open to students from all backgrounds. Others suggest that some of the experiences associated with gap years, such as volunteering and work experience, could be incorporated into secondary or university education itself.",
+      "The debate over gap years ultimately reflects different views of what education is for and how young people should spend the years in which they move toward adulthood. A direct path through school and university may be efficient, but it is not the only route to a fulfilling life, and some students may benefit from pausing to explore before committing to a particular direction. The challenge for societies is to ensure that such opportunities are available to all, rather than only to those who can already afford them.",
+    ],
+    ja: [
+      'いくつかの国では、若者がギャップイヤー、つまり中等学校を終えてから大学に入るまでの数か月から1年の期間をとることが一般的になっている。この期間に生徒は、正式な教育にもどる前に、旅をしたり、働いたり、ボランティアをしたり、自分の興味を追ったりする。しかしほかの国では、この習慣は今もまれで、生徒はふつう教育のある段階から次の段階へまっすぐ進むことを期待されている。ギャップイヤーをもっと広くすすめるべきかどうかは、教育者や雇い主や家族のあいだで議論の的になっている。',
+      '支持する人々は、ギャップイヤーが若者の成長を助け、将来についてよりよい決断をする助けになると主張する。多くの生徒は、17歳か18歳で、その学問が何をふくむのか、どんな仕事を望むかもしれないのかをほとんどわからないまま大学の学科を選ぶ。働いたりボランティアをしたりしてすごす時間は、自分の興味や能力をよりはっきりわからせてくれるので、実際に大学に入るときには、より意欲があり、学科を変えたり中退したりしにくくなると支持する人々は主張する。',
+      '支持する人々はまた、ギャップイヤーがもたらしうる人間としての成長を強調する。家をはなれて暮らし、お金をやりくりし、なれない状況に対処することで、教室では身につけにくい自立心や自信や実際的な技能が育ちうる。ギャップイヤーは大学での学びのはじまりをおくらせるが、その間に得た経験は、学びはじめたときにそれをゆたかにするかもしれないと支持する人々は主張する。生徒は世界やほかの人々についてのより広い理解をたずさえてくるからである。',
+      'しかし批判する人々は、ギャップイヤーはすべての人に平等に手がとどくわけではないと指摘する。外国を旅したり、ほかの国でボランティアをしたりするのは費用がかかり、もっとも名高いギャップイヤーの取り組みの多くは、裕福な家庭の生徒にしか手がとどかない。より貧しい家庭の生徒は、お金をかせぎはじめたり、できるだけ早く教育を終えたりする必要があるかもしれず、彼らにとって正式な勉強のない1年は手のとどかないぜいたくかもしれない。それゆえギャップイヤーをすすめることは、恵まれた生徒がすでにもっている有利さを大きくするかもしれないと批判する人々は警告する。',
+      '批判する人々はまた、ギャップイヤーのあいだに勢いを失う生徒もいるのではないかと心配する。長く勉強からはなれたあと、読むこと、書くこと、試験という規律にもどるのは難しいことがあり、ごく一部の生徒は教育にまったくもどらないと決めるかもしれない。くわえて、はっきりした目的なくすごされた、計画の不十分なギャップイヤーは、支持する人々が述べる利益をほとんどもたらさないかもしれない。そうした場合、その1年は、長く残る価値のあるものを何もあたえないまま、生徒の歩みを単におくらせるだけかもしれないと批判する人々は主張する。雇い主もまた、生徒が実際に何をし何を学んだのかをはっきり説明できないギャップイヤーには、感心しないかもしれない。',
+      'これらの見方のあいだで、ギャップイヤーの欠点なしにその利益を得られるようにする方法を提案する教育者もいる。大学は、合格した生徒が1年入学をのばし、確実にもどれるようにすることができる。政府や学校は、給料の出る地域奉仕や職場体験のように、あらゆる家庭の生徒が参加できる、仕組みの整った取り組みをささえることができる。ボランティアや職場体験のように、ギャップイヤーと結びつけられる経験の一部を、中等教育や大学教育そのもののなかに組みこめると示す人もいる。',
+      'ギャップイヤーをめぐる議論は、結局のところ、教育は何のためにあるのか、そして若者がおとなへと向かう年月をどうすごすべきかについての異なる見方を反映している。学校と大学をまっすぐ進む道は効率的かもしれないが、満ちたりた人生へのただ一つの道ではなく、特定の方向に身をささげる前に立ち止まって探ることで得をする生徒もいるかもしれない。社会にとっての課題は、そうした機会を、すでにその余裕がある人々だけでなく、すべての人が得られるようにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「大学のはじまりをおくらせるが、その経験が学びをゆたかにする」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a gap year helps young people make better decisions and develop ( 1 ). Critics point out that gap years are often affordable only for ( 2 ) families and that some students may lose momentum. Some propose allowing students to ( 3 ) their university place for a year.',
+      blanks: [
+        { choices: ['independence', 'wealth', 'fame', 'height'], answer: 0, why: '第3段落 can develop independence, confidence, and practical skills。' },
+        { choices: ['wealthy', 'large', 'young', 'foreign'], answer: 0, why: '第4段落 affordable only for students from wealthy families。' },
+        { choices: ['defer', 'sell', 'cancel', 'share'], answer: 0, why: '第6段落 allow admitted students to defer their place for a year。' },
+      ],
+    },
+    tf: [
+      { statement: 'ギャップイヤーがまれな国もある。', answer: true, why: '第1段落 In other countries, however, the practice remains rare。' },
+      { statement: '支持する人々によれば、ギャップイヤーをとった生徒は学科を変えやすくなる。', answer: false, why: '第2段落 less likely to change courses or drop out。' },
+      { statement: '計画の不十分なギャップイヤーは、利益をほとんどもたらさないかもしれない。', answer: true, why: '第5段落 a poorly planned gap year ... may offer few of the benefits。' },
+      { statement: '筆者によれば、学校と大学をまっすぐ進むことが満ちたりた人生へのただ一つの道である。', answer: false, why: '第7段落 it is not the only route to a fulfilling life。' },
+    ],
+    qa: [
+      { q: 'Why may a gap year be a luxury for students from poorer backgrounds?', choices: ['They may need to start earning money quickly.', 'They dislike traveling.', 'Universities reject them.', 'They have too much free time.'], answer: 0, why: '第4段落 may need to start earning money or complete their education as quickly as possible。' },
+      { q: 'What kind of programs could governments and schools support?', choices: ['Structured programs open to students from all backgrounds.', 'Expensive trips abroad only.', 'Programs for wealthy students only.', 'Programs that replace university.'], answer: 0, why: '第6段落 structured programs ... open to students from all backgrounds。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
