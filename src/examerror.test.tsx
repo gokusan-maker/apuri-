@@ -2668,3 +2668,10 @@ it('誤文訂正〈187〉：国公立レベル 使役動詞の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('clean')
 })
+
+it('正誤問題〈194〉：東大レベル no sooner／hardly の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-no-sooner-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) when')
+})

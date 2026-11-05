@@ -4610,6 +4610,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Do (B) which (C) you think (D) is right.', choices: ['(A) Do', '(B) which', '(C) you think', '(D) is right'], answer: 1, why: '先行詞がなく「正しいと思うこと」なので what。Do what you think is right。' },
     ],
   },
+  {
+    id: 'exam-error-no-sooner-todai',
+    title: '入試の正誤問題〈194〉（東大レベル：英作文の no sooner／hardly ～ when）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「～するとすぐに…した」は、No sooner had S done ～ than …／Hardly（Scarcely）had S done ～ when（before）…。no sooner は than、hardly・scarcely は when・before と組む。否定の副詞が文頭に来ると「had ＋主語＋過去分詞」の倒置になる。前半は過去完了、後半は過去形。S had no sooner done ～ than … の語順もある。as soon as を使うと As soon as S did, ～ とかんたんに言える。',
+    ],
+    examples: [
+      { en: 'No sooner had I arrived than it began to rain.', ja: '私が着くとすぐに雨が降りだした。' },
+      { en: 'Hardly had he left when the phone rang.', ja: '彼が出ていくとすぐに電話が鳴った。' },
+    ],
+    questions: [
+      { sentence: '(A) No sooner (B) had I arrived (C) when (D) it began to rain.', choices: ['(A) No sooner', '(B) had I arrived', '(C) when', '(D) it began to rain'], answer: 2, why: 'No sooner は than と組む。No sooner had I arrived than ～。' },
+      { sentence: '(A) Hardly (B) had he left (C) than (D) the phone rang.', choices: ['(A) Hardly', '(B) had he left', '(C) than', '(D) the phone rang'], answer: 2, why: 'Hardly（Scarcely）は when／before と組む。Hardly had he left when ～。' },
+      { sentence: '(A) No sooner (B) I had (C) sat down than (D) the bell rang.', choices: ['(A) No sooner', '(B) I had', '(C) sat down than', '(D) the bell rang'], answer: 1, why: '否定の副詞が文頭に来ると倒置が起こる。No sooner had I sat down。' },
+      { sentence: '(A) Hardly (B) she had (C) closed the door (D) when someone knocked.', choices: ['(A) Hardly', '(B) she had', '(C) closed the door', '(D) when someone knocked'], answer: 1, why: 'Hardly が文頭なので倒置。Hardly had she closed。' },
+      { sentence: '(A) Scarcely (B) had the game (C) start (D) when it began to snow.', choices: ['(A) Scarcely', '(B) had the game', '(C) start', '(D) when it began to snow'], answer: 2, why: 'had のあとは過去分詞。had the game started。' },
+      { sentence: '(A) No sooner (B) has he come home (C) than he (D) went out again.', choices: ['(A) No sooner', '(B) has he come home', '(C) than he', '(D) went out again'], answer: 1, why: '過去の話で「～するとすぐ」の前半は過去完了。No sooner had he come home。' },
+      { sentence: '(A) As soon as (B) I will get (C) the results, (D) I will call you.', choices: ['(A) As soon as', '(B) I will get', '(C) the results,', '(D) I will call you'], answer: 1, why: 'as soon as は時の節なので、未来のことも現在形。As soon as I get。' },
+      { sentence: '(A) I had (B) no sooner (C) finished my meal (D) when the waiter took my plate.', choices: ['(A) I had', '(B) no sooner', '(C) finished my meal', '(D) when the waiter took my plate'], answer: 3, why: 'no sooner は than と組む。than the waiter took。' },
+      { sentence: '(A) Hardly had (B) we reached (C) the station when (D) the train had left.', choices: ['(A) Hardly had', '(B) we reached', '(C) the station when', '(D) the train had left'], answer: 3, why: 'when のあとは過去形。過去完了は前半に使う。the train left。' },
+      { sentence: '(A) Soon (B) had I opened the window (C) than (D) a bird flew in.', choices: ['(A) Soon', '(B) had I opened the window', '(C) than', '(D) a bird flew in'], answer: 0, why: 'than と組んで倒置を起こすのは No sooner。No sooner had I opened。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
