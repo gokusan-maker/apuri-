@@ -34782,6 +34782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-surprise',
+    title: 'The Value of Surprise',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Much of human life is organized to avoid surprise. We make plans, follow routines, check weather forecasts, and read reviews before choosing a restaurant or a film, all in order to know what to expect. This desire for predictability is understandable, since surprises can be unpleasant or even dangerous, and a world in which nothing could be anticipated would be exhausting to live in. Yet it is worth asking whether, in our efforts to eliminate uncertainty, we may also be losing something of value.",
+      "From a psychological point of view, surprise plays an important role in learning. When events turn out as we expect, our existing beliefs are simply confirmed, and we have little reason to pay close attention. When something unexpected happens, however, our attention sharpens, and we are prompted to revise our understanding of the world. Researchers have suggested that the brain is particularly responsive to the gap between what it predicts and what actually occurs, and that this gap is one of the main signals that drives learning.",
+      "Surprise is also closely connected with pleasure. Much of the enjoyment we take in stories, jokes, music, and games depends on the unexpected: the twist at the end of a novel, the punch line that we did not see coming, the change of key in a familiar melody. ( A ) we may say that we like to know what will happen, a story whose every event could be predicted from the first page would quickly bore us. It seems that we enjoy surprise most when it occurs within a framework that feels safe, so that the unexpected delights rather than threatens us.",
+      "In science and invention, surprise has often been the starting point for discovery. Many important findings began when a researcher noticed a result that did not fit expectations and, instead of dismissing it as an error, chose to investigate it. The ability to be surprised, in this sense, is not merely a passive reaction but an active intellectual virtue. It requires holding one's beliefs firmly enough to notice when they are contradicted, yet loosely enough to change them when the evidence demands.",
+      "Modern technology, however, may be reducing our opportunities for surprise. Recommendation systems suggest books, music, and news based on what we have chosen before, so that we are increasingly shown more of what we already like. Navigation apps guide us along the fastest route, so that we rarely take a wrong turn and stumble upon an unfamiliar street. These tools are undeniably useful, but by making our experience more predictable, they may also narrow it, limiting our encounters with the unfamiliar. Over time, a person who meets only what has been selected to match their past preferences may find that those preferences harden, leaving fewer chances to discover interests they never knew they had.",
+      "None of this means that we should welcome every surprise or abandon planning altogether. Some surprises, such as illness or disaster, are simply harmful, and reducing them is one of the great achievements of modern society. The point is rather that a life entirely free of the unexpected would be poorer, both intellectually and emotionally. Leaving some room for chance, whether by wandering without a map, reading outside our usual interests, or talking with people unlike ourselves, may help to keep our minds open and our lives interesting.",
+      "Perhaps the deepest value of surprise lies in what it reveals about the limits of our knowledge. Every surprise reminds us that the world is larger and more complex than our expectations, and that our understanding is always incomplete. Far from being something to be eliminated, the capacity to be surprised may be a sign of a mind that remains curious and willing to learn. To lose that capacity entirely would be to stop learning from the world, however comfortable such certainty might feel.",
+    ],
+    ja: [
+      '人の暮らしの多くは、おどろきをさけるように組み立てられている。私たちは計画を立て、決まった習慣にしたがい、天気予報を確かめ、レストランや映画を選ぶ前に評価を読むが、それはすべて何が起こるかを知っておくためである。こうした予測できることへの願いは理解できる。おどろきは不快であったり危険でさえあったりしうるし、何一つ予想できない世界は暮らすのにつかれるだろうからである。しかし、不確かさを取りのぞこうとする努力のなかで、私たちが価値あるものもまた失っているのではないかと問うてみる値打ちはある。',
+      '心理学の見方からすると、おどろきは学びにおいて大切な役割をはたしている。出来事が予想どおりになるとき、今の考えは単に確かめられるだけで、注意をはらう理由はほとんどない。しかし予想外のことが起こると、注意はするどくなり、世界についての理解を見直すようにうながされる。研究者たちは、脳はとくに自分の予測と実際に起こることとのずれに反応しやすく、このずれが学びを進める主な合図の一つだと示してきた。',
+      'おどろきは楽しさとも深く結びついている。私たちが物語や冗談や音楽や遊びから得る楽しみの多くは、予想外のことにかかっている。小説の最後のどんでん返しや、思いもしなかったオチや、聞きなれた旋律の転調である。何が起こるか知っておきたいと口では言うかもしれないが、最初のページからすべての出来事が予想できる物語には、すぐにあきてしまうだろう。私たちがおどろきをもっとも楽しむのは、それが安心できると感じる枠のなかで起こり、予想外のことがおびやかすのではなくよろこばせるときであるようだ。',
+      '科学や発明では、おどろきがしばしば発見の出発点になってきた。多くの大切な発見は、研究者が予想に合わない結果に気づき、それを誤りとして切りすてるのではなく、調べることを選んだときに始まった。この意味で、おどろくことができる力は、単なる受け身の反応ではなく、積極的な知的な美徳である。それには、自分の考えが打ち消されたときに気づけるほどしっかりとそれをもちつつ、証拠が求めるときには変えられるほどゆるやかにもっておくことが必要である。',
+      'しかし現代の技術は、おどろきの機会をへらしているかもしれない。おすすめの仕組みは、私たちが以前に選んだものをもとに本や音楽やニュースを示すので、私たちはすでに好きなものをますます多く見せられるようになる。道案内のアプリはもっとも速い道を案内するので、私たちが道をまちがえて見知らぬ通りにたまたま出くわすことはめったにない。こうした道具はたしかに役に立つが、経験をより予測できるものにすることで、それをせまくし、見なれないものとの出会いを限ってしまうかもしれない。やがて、過去の好みに合うよう選ばれたものにしか出会わない人は、その好みが固まってしまい、自分でも知らなかった関心を見つける機会がへっていくことに気づくかもしれない。',
+      'これは、あらゆるおどろきを歓迎すべきだとか、計画をすっかりやめるべきだということではない。病気や災害のように単に有害なおどろきもあり、それをへらすことは現代社会の大きな成果の一つである。むしろ言いたいのは、予想外のことがまったくない暮らしは、知的にも感情的にもより貧しくなるだろうということである。地図なしで歩きまわったり、いつもの関心の外にある本を読んだり、自分とはちがう人と話したりして、偶然のための余地をいくらか残しておくことは、心を開いたままにし、暮らしをおもしろく保つ助けになるかもしれない。',
+      'おどろきのもっとも深い価値は、それが私たちの知識の限界について明らかにすることにあるのかもしれない。おどろきのたびに、世界は私たちの予想より大きく複雑であり、私たちの理解はいつも不完全だということを思い出させられる。取りのぞくべきものであるどころか、おどろくことができる力は、好奇心をもち学ぶ気持ちのある心のしるしなのかもしれない。その力をすっかり失うことは、そうした確かさがどれほど心地よく感じられようとも、世界から学ぶのをやめることになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「何が起こるか知りたいと言うかもしれないが、予想できる物語にはすぐあきる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '予想どおりの出来事は、注意をはらう理由をあまりあたえない。', answer: true, why: '第2段落 we have little reason to pay close attention。' },
+      { statement: '私たちは、どんな状況でも同じようにおどろきを楽しむ。', answer: false, why: '第3段落 we enjoy surprise most when it occurs within a framework that feels safe。' },
+      { statement: 'おすすめの仕組みは、すでに好きなものをより多く見せる。', answer: true, why: '第5段落 we are increasingly shown more of what we already like。' },
+      { statement: '筆者は、計画をすっかりやめるべきだと主張している。', answer: false, why: '第6段落 None of this means that we should ... abandon planning altogether。' },
+    ],
+    qa: [
+      { q: 'How did many important scientific findings begin?', choices: ['A researcher investigated a result that did not fit expectations.', 'A researcher ignored unexpected results.', 'A machine predicted every result.', 'A researcher followed a fixed routine.'], answer: 0, why: '第4段落 noticed a result that did not fit expectations and ... chose to investigate it。' },
+      { q: 'What does every surprise remind us of, according to the author?', choices: ['That our understanding is always incomplete.', 'That planning is useless.', 'That technology is harmful.', 'That stories are boring.'], answer: 0, why: '第7段落 our understanding is always incomplete。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
