@@ -34462,6 +34462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wealth',
+    title: 'What It Means to Be Rich',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people would like to be richer than they are. Yet if we ask what it actually means to be rich, the answer is less obvious than it first seems. In ordinary language, wealth means possessing a large amount of money or property. But people with similar incomes may feel very differently about their circumstances: some regard themselves as comfortable, while others feel constantly short of money. This suggests that being rich is not only a matter of how much one has, but also of how one's possessions relate to one's desires, needs, and sense of security.",
+      "One ancient line of thought holds that wealth depends as much on wanting as on having. A person who desires little may feel rich with modest resources, while one whose desires constantly expand may never feel that he or she has enough. Philosophers in several traditions have argued that the surest path to wealth is not to increase one's possessions but to limit one's wants. This view contains an important insight, though it can also be used to justify inequality by suggesting that the poor should simply be content with less.",
+      "Another perspective emphasizes the role of comparison. As researchers have repeatedly found, people's satisfaction with their income depends heavily on how it compares with the incomes of those around them. A salary that would seem generous in one community may feel inadequate in another where most people earn more. ( A ) absolute poverty causes real suffering, beyond a certain level of comfort, feelings of wealth or poverty may depend more on relative position than on the actual amount of money one possesses.",
+      "Wealth can also be understood in terms of freedom. Money allows people to make choices: to decide where to live, how to spend their time, and what risks to take. From this perspective, the most valuable feature of wealth may not be the goods it buys but the independence it provides, including the freedom to refuse unpleasant work or to leave harmful situations. Someone with savings that cover several months of expenses may feel richer than someone with a higher income who is deeply in debt.",
+      "Yet many of the things that make life rich cannot be bought. Health, friendship, knowledge, and a sense of meaning contribute enormously to well-being, and they are not distributed in proportion to money. A person with great financial resources may be poor in relationships or purpose, while someone with modest means may enjoy a life full of affection and satisfying work. Some economists have proposed broader measures of national prosperity that include such factors, recognizing that income alone is an incomplete guide to how well people are living.",
+      "There is also a collective dimension to wealth. The prosperity of individuals depends on public goods such as clean air, safe streets, good schools, and functioning institutions, which no one can buy alone. A society may contain many wealthy individuals and yet be poor in shared resources, while another with more modest private incomes may offer its members a high quality of common life. Thinking about wealth only in individual terms may lead us to overlook these shared foundations, which are built and maintained only through common effort.",
+      "Perhaps, then, being truly rich involves a combination of sufficiency, freedom, and connection: having enough to meet one's needs without anxiety, enjoying the ability to shape one's own life, and belonging to relationships and communities that give life meaning. Such a view does not deny the importance of money, which remains essential for security and opportunity. But it suggests that the pursuit of wealth is most rewarding when it serves these deeper goods rather than becoming an end in itself, consuming the very time and attention that a good life requires.",
+    ],
+    ja: [
+      'ほとんどの人は今よりも豊かになりたいと思っている。しかし、豊かであるとは実際にどういうことかと問うと、その答えは最初に思えるほど明らかではない。ふつうのことばでは、富とは多くのお金や財産をもっていることを意味する。しかし、同じくらいの収入の人々でも、自分の状況についてまったくちがう感じ方をすることがある。自分はゆとりがあると考える人もいれば、いつもお金が足りないと感じる人もいる。このことは、豊かであることが、どれだけもっているかだけでなく、自分の持ち物が自分の欲望や必要や安心感とどう関係しているかの問題でもあることを示唆している。',
+      '古くからの一つの考え方によれば、富はもつことと同じくらい望むことにかかっている。わずかしか望まない人は、ささやかな資源でも豊かだと感じるかもしれないが、欲望がたえず広がっていく人は、けっして十分にもっていると感じないかもしれない。いくつかの伝統の哲学者たちは、富への最も確かな道は持ち物をふやすことではなく、欲望を限ることだと主張してきた。この見方には大切な洞察がふくまれているが、まずしい人々は少ないもので満足すべきだとほのめかすことで、不平等を正当化するために使われることもある。',
+      '別の見方は、比較の役割を強調する。研究者たちがくり返し見いだしてきたように、人々の収入への満足は、それがまわりの人々の収入とどうくらべられるかに大きく左右される。ある共同体では気前がよいと思える給料も、ほとんどの人がもっとかせいでいる別の共同体では不十分に感じられるかもしれない。絶対的な貧困は本当の苦しみをもたらすが、ある程度のゆとりをこえると、豊かさやまずしさの感覚は、実際にもっているお金の額よりも相対的な位置にかかっているのかもしれない。',
+      '富は自由の観点から理解することもできる。お金があれば、人は選択をすることができる。どこに住むか、時間をどう使うか、どんな危険をおかすかを決めることができるのである。この観点からは、富の最も価値ある特徴は、それで買える品物ではなく、それがあたえる独立、つまりいやな仕事を断ったり、害のある状況から離れたりする自由もふくめた独立なのかもしれない。数か月分の出費をまかなえる貯金のある人は、深い借金をかかえたもっと収入の高い人より豊かに感じるかもしれない。',
+      'しかし、人生を豊かにするものの多くはお金では買えない。健康や友情や知識や意味の感覚は幸福に大きく貢献するが、それらはお金に比例して配られてはいない。大きな経済的な資源をもつ人が人間関係や目的にまずしいこともあれば、ささやかな手段しかもたない人が愛情と満足のいく仕事に満ちた人生を楽しんでいることもある。収入だけでは人々がどれほどよく暮らしているかを知る不完全な手がかりにすぎないと認めて、そうした要素をふくむ、国の豊かさのより広いはかり方を提案した経済学者もいる。',
+      '富には集団としての面もある。個人の豊かさは、きれいな空気や安全な通りやよい学校やきちんとはたらく制度のような、だれもひとりでは買えない公共のものに頼っている。ある社会には裕福な個人が多くいながら共有の資源にまずしいこともあれば、私的な収入はもっとささやかな別の社会が、成員に質の高い共同の生活をあたえていることもある。富を個人の観点からだけ考えると、こうした共有された土台を見落としてしまうかもしれない。そしてそれは、みんなで力を合わせることによってしか築かれず、保たれないものなのである。',
+      'それなら、本当に豊かであるとは、足りていること、自由、つながりの組み合わせなのかもしれない。不安なく必要を満たすだけのものをもち、自分の人生を形づくる力を楽しみ、人生に意味をあたえる人間関係や共同体に属していることである。そのような見方はお金の大切さを否定しない。お金は安心と機会のために欠かせないままである。しかしそれは、富の追求が、それ自体を目的とするのではなく、こうしたより深いよいものに役立つときに、最も報いの多いものになることを示唆している。富の追求がそれ自体の目的になると、よい人生に必要なまさにその時間と注意を食いつくしてしまうのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「絶対的な貧困は本当の苦しみをもたらすが、ある程度をこえると相対的な位置にかかっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '同じくらいの収入の人々でも、自分の状況についてちがう感じ方をすることがある。', answer: true, why: '第1段落 people with similar incomes may feel very differently about their circumstances。' },
+      { statement: '筆者によれば、欲望を限るという考えは不平等の正当化に使われることはない。', answer: false, why: '第2段落 it can also be used to justify inequality。' },
+      { statement: '貯金のある人は、借金をかかえたもっと収入の高い人より豊かに感じるかもしれない。', answer: true, why: '第4段落 may feel richer than someone with a higher income who is deeply in debt。' },
+      { statement: '筆者はお金の大切さを否定している。', answer: false, why: '第7段落 Such a view does not deny the importance of money。' },
+    ],
+    qa: [
+      { q: 'What may be the most valuable feature of wealth, from the perspective of freedom?', choices: ['The independence it provides.', 'The goods it buys.', 'The respect of others.', 'The size of one’s house.'], answer: 0, why: '第4段落 the independence it provides。' },
+      { q: 'What does the sixth paragraph say individual prosperity depends on?', choices: ['Public goods such as clean air and good schools.', 'Only private savings.', 'Luck alone.', 'Foreign investment.'], answer: 0, why: '第6段落 depends on public goods such as clean air, safe streets, good schools。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
