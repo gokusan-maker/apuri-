@@ -2591,3 +2591,10 @@ it('正誤問題〈188〉：東大レベル 代名詞の格の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) me')
 })
+
+it('誤文訂正〈182〉：国公立レベル ago・before・since の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-182')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('met')
+})

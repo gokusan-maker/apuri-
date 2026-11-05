@@ -7752,6 +7752,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'They live in [a white big old] house.', choices: ['a big old white', 'a white old big', 'an old white big', 'big a white old'], answer: 0, why: '大きさ → 新旧 → 色の順。a big old white house。' },
     ],
   },
+  {
+    id: 'exam-fix-182',
+    title: '入試の誤文訂正〈182〉（国公立レベル：ago・before・since の使い分け）',
+    points: ['～ ago は「今から～前」で、過去形といっしょに使う（現在完了とは使わない）。～ before は「その時（過去のある時点）から～前」で、過去完了といっしょに使うことが多い。before だけなら「以前に」で現在完了とも使える。since は「～以来」で、ふつう現在完了とともに使う（since last year・since I was a child）。for は「～のあいだ」で期間を表す。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I met him three years ago, and I have known him since then.', ja: '私は3年前に彼に会い、それ以来彼を知っている。' }],
+    questions: [
+      { sentence: 'I [have met] him three years ago.', choices: ['met', 'had met', 'have been meeting', 'meet'], answer: 0, why: 'ago は過去形とともに使う。I met him three years ago。' },
+      { sentence: 'She said that she had seen the movie two weeks [ago].', choices: ['before', 'since', 'later', 'for'], answer: 0, why: '過去のある時点から「～前」は before。' },
+      { sentence: 'I have lived here [since] ten years.', choices: ['for', 'ago', 'before', 'during'], answer: 0, why: '期間を表すのは for。for ten years。' },
+      { sentence: 'We have known each other [for] we were children.', choices: ['since', 'ago', 'before', 'during'], answer: 0, why: '「～以来」で主語＋動詞が続くので since。' },
+      { sentence: 'I [have visited] Kyoto last year.', choices: ['visited', 'have been visiting', 'had visited', 'visit'], answer: 0, why: 'last year は過去のはっきりした時なので過去形。' },
+      { sentence: 'He left the office [before] an hour.', choices: ['an hour ago', 'since an hour', 'for an hour ago', 'an hour since'], answer: 0, why: '「1時間前に」は an hour ago。' },
+      { sentence: 'He moved to Tokyo [since] 2015.', choices: ['in', 'for', 'ago', 'during'], answer: 0, why: '過去の一時点に起きたことは in 2015。since は現在完了とともに使う。' },
+      { sentence: 'Have you ever been to London [ago]?', choices: ['before', 'since', 'for', 'during'], answer: 0, why: '「以前に」は before。現在完了と ago は使わない。' },
+      { sentence: 'I [am] waiting here since noon.', choices: ['have been', 'was', 'had', 'will be'], answer: 0, why: 'since とともに「ずっと待っている」は現在完了進行形 have been waiting。' },
+      { sentence: 'I have been sick [ago] last Friday.', choices: ['since', 'for', 'before', 'during'], answer: 0, why: '現在完了で「～以来」は since。since last Friday。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
