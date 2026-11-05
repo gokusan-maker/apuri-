@@ -4562,6 +4562,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) He will have (B) saved enough money (C) to buy a car (D) by the end of last year.', choices: ['(A) He will have', '(B) saved enough money', '(C) to buy a car', '(D) by the end of last year'], answer: 3, why: '未来完了は未来のある時点までの完了なので、last year ではなく next year。by the end of next year。' },
     ],
   },
+  {
+    id: 'exam-error-the-more-kokkou',
+    title: '入試の正誤問題〈192〉（国公立レベル：the 比較級, the 比較級）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「The ＋比較級＋S V, the ＋比較級＋S V」は「～すればするほど、ますます…」。どちらにも the が必要で、比較級になる形容詞・副詞（と名詞）は the のすぐあとに置く（the more interesting I find it／the more money he earned）。the のあとはふつうの語順で、前半は条件なので未来のことも現在形。前半と後半の時制はそろえる。',
+    ],
+    examples: [
+      { en: 'The more you practice, the better you will become.', ja: '練習すればするほど、うまくなるだろう。' },
+      { en: 'The higher we climbed, the colder it became.', ja: '高く登れば登るほど、寒くなった。' },
+    ],
+    questions: [
+      { sentence: '(A) The more (B) you practice, (C) the best (D) you will become.', choices: ['(A) The more', '(B) you practice,', '(C) the best', '(D) you will become'], answer: 2, why: '「the 比較級, the 比較級」なので最上級ではなく比較級。the better。' },
+      { sentence: '(A) The older (B) he got, (C) the wiser (D) he becomes.', choices: ['(A) The older', '(B) he got,', '(C) the wiser', '(D) he becomes'], answer: 3, why: '前半が過去（got）なので後半も過去にそろえる。he became。' },
+      { sentence: '(A) More (B) you read, (C) the more (D) you will learn.', choices: ['(A) More', '(B) you read,', '(C) the more', '(D) you will learn'], answer: 0, why: '「～すればするほど」は The 比較級で始める。The more you read。' },
+      { sentence: '(A) The more (B) carefully you drive, (C) safer (D) you will be.', choices: ['(A) The more', '(B) carefully you drive,', '(C) safer', '(D) you will be'], answer: 2, why: '後半にも the が必要。the safer you will be。' },
+      { sentence: '(A) The higher (B) we climbed, (C) the cold (D) it became.', choices: ['(A) The higher', '(B) we climbed,', '(C) the cold', '(D) it became'], answer: 2, why: 'the のあとは比較級。the colder。' },
+      { sentence: '(A) The sooner (B) you will start, (C) the sooner (D) you will finish.', choices: ['(A) The sooner', '(B) you will start,', '(C) the sooner', '(D) you will finish'], answer: 1, why: '前半は条件を表すので、未来のことも現在形。The sooner you start。' },
+      { sentence: '(A) The much (B) money he earned, (C) the more (D) he wanted.', choices: ['(A) The much', '(B) money he earned,', '(C) the more', '(D) he wanted'], answer: 0, why: 'much の比較級は more。The more money he earned。' },
+      { sentence: '(A) The more (B) I learn about it, (C) the more I find it (D) interesting.', choices: ['(A) The more', '(B) I learn about it,', '(C) the more I find it', '(D) interesting'], answer: 2, why: '比較級になる形容詞は the のすぐあとに置く。the more interesting I find it。' },
+      { sentence: '(A) The less (B) you eat sugar, (C) the healthier (D) your teeth will be.', choices: ['(A) The less', '(B) you eat sugar,', '(C) the healthier', '(D) your teeth will be'], answer: 1, why: '名詞 sugar も the less のすぐあとに置く。The less sugar you eat。' },
+      { sentence: '(A) The faster (B) the runner ran, (C) the more tired (D) did he feel.', choices: ['(A) The faster', '(B) the runner ran,', '(C) the more tired', '(D) did he feel'], answer: 3, why: '「the 比較級, the 比較級」のあとはふつうの語順。he felt。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
