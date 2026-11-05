@@ -35778,6 +35778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-junk-food-schools',
+    title: 'Should Unhealthy Food Be Restricted Near Schools?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Concern about children's diets has led some cities and countries to consider restricting the sale of unhealthy food near schools. Fast-food restaurants and shops selling sweets, fried snacks, and sugary drinks are often found close to school gates, where students can easily visit them before and after classes. Some local governments have introduced rules that prevent new outlets of this kind from opening within a certain distance of schools, while others argue that such restrictions are unfair to businesses and unlikely to change what children eat.",
+      "Supporters of restrictions point to rising rates of obesity and related health problems among young people. Habits formed in childhood, they argue, often continue into adulthood, so that a diet high in sugar, salt, and fat during the school years may increase the risk of serious illness later in life. Because children are less able than adults to judge the long-term consequences of their choices, supporters believe that society has a special responsibility to protect them from an environment that makes unhealthy food cheap, convenient, and attractive.",
+      "Supporters also argue that the location of food outlets matters. Studies in some areas have suggested that children who attend schools surrounded by fast-food restaurants are somewhat more likely to be overweight than those whose schools are not. ( A ) such findings do not prove that the restaurants cause weight gain, supporters argue, they are consistent with the common-sense idea that people tend to eat what is easily available, and that reducing the number of nearby outlets may encourage healthier choices. Children who pass several fast-food outlets every day on the way to school, after all, face temptations that adults with cars and fixed routines may rarely notice.",
+      "Critics, however, question whether such restrictions are effective. Students who wish to buy unhealthy food can often find it a little farther away, bring it from home, or purchase it in supermarkets that are not covered by the rules. Critics also point out that diet is influenced by many factors, including family habits, income, and the food served at home, and that focusing on the location of shops may distract attention from these deeper causes. In their view, education and better school meals would be more useful than limits on businesses.",
+      "Critics further argue that restrictions may harm small businesses and the communities that depend on them. Many shops near schools are run by local families, and rules that prevent them from operating may cost jobs while doing little to improve children's health. Some also object to the idea that governments should decide what kinds of businesses may open in a neighborhood, arguing that such decisions interfere with economic freedom and treat parents as incapable of guiding their own children.",
+      "Between these positions, a number of other approaches have been proposed. Some schools have adopted policies that keep students on school grounds during lunch, while improving the quality and appeal of the food they provide. Others work with nearby shops to offer healthier options at affordable prices, sometimes with discounts for students. Programs that teach children to cook, grow vegetables, and understand food labels aim to change habits from within rather than simply limiting what is available outside the school gate.",
+      "The debate over unhealthy food near schools reflects a broader question about how societies should promote health without unduly restricting freedom. Protecting children is a widely shared goal, but the best means of achieving it remain a matter of disagreement. What seems clear is that no single measure is likely to be sufficient on its own. A combination of education, better food in schools, and a supportive environment in the surrounding community may offer the best chance of helping young people to develop habits that will serve them throughout their lives.",
+    ],
+    ja: [
+      '子どもの食事への心配から、学校の近くでの体によくない食べ物の販売を制限することを考える都市や国が出てきている。ファストフード店や、おかしや揚げ物の軽食や甘い飲み物を売る店は、校門の近くにあることが多く、生徒は授業の前後にかんたんにそこに立ち寄れる。学校から一定の距離のなかにこうした新しい店が開くのをふせぐ規則を取り入れた地方の行政もあれば、そうした制限は店にとって不公平で、子どもの食べる物を変えそうにないと主張する行政もある。',
+      '制限を支持する人々は、若者のあいだで肥満やそれに関連する健康の問題がふえていることを指摘する。子どものころに身についた習慣はしばしばおとなになっても続くので、学校にかよう年月に砂糖や塩や脂肪の多い食事をすると、のちの人生で深刻な病気の危険が高まるかもしれないと彼らは主張する。子どもはおとなほど自分の選択の長い目で見た結果を判断できないので、体によくない食べ物を安く便利で魅力的にする環境から彼らを守る特別な責任が社会にはあると支持する人々は考える。',
+      '支持する人々はまた、食べ物の店の場所が大切だと主張する。いくつかの地域の研究によれば、ファストフード店にかこまれた学校にかよう子どもは、そうでない学校の子どもより、いくらか太りすぎになりやすいことが示されている。そうした発見は店が体重の増加を引き起こすことを証明するものではないが、人は手に入りやすいものを食べがちだという常識的な考えと一致しており、近くの店の数をへらせばより健康的な選択がうながされるかもしれないと支持する人々は主張する。結局のところ、毎日学校へ行くとちゅうでいくつものファストフード店の前を通る子どもは、車と決まった日課をもつおとなにはめったに気づかれない誘惑に直面しているのである。',
+      'しかし批判する人々は、そうした制限に効果があるのかを疑う。体によくない食べ物を買いたい生徒は、しばしば少し遠くでそれを見つけたり、家から持ってきたり、規則の対象にならないスーパーマーケットで買ったりできる。批判する人々はまた、食事は家庭の習慣や収入や家で出される食べ物をふくむ多くの要因に左右されるのであり、店の場所に注目すると、こうしたより深い原因から注意がそれてしまうかもしれないと指摘する。彼らの見方では、店への制限よりも、教育やよりよい給食のほうが役に立つだろう。',
+      '批判する人々はさらに、制限は小さな店と、それにたよる地域を傷つけるかもしれないと主張する。学校の近くの店の多くは地元の家族によって営まれており、その営業をさまたげる規則は、子どもの健康をほとんどよくしないまま仕事をうばうかもしれない。また、地域にどのような店が開いてよいかを政府が決めるべきだという考えに反対し、そうした決定は経済的な自由に干渉し、親を自分の子どもを導くことのできない者としてあつかうと主張する人もいる。',
+      'これらの立場のあいだで、いくつかの別のやり方が提案されてきた。昼休みに生徒を校内にとどめつつ、出す食べ物の質と魅力を高める方針をとった学校もある。近くの店と協力して、ときには生徒への割引をつけて、より健康的な品を手ごろな値段で出してもらっている学校もある。子どもに料理をしたり、野菜を育てたり、食品の表示を理解したりすることを教える取り組みは、校門の外で手に入るものを単に制限するのではなく、内側から習慣を変えることを目指している。',
+      '学校の近くの体によくない食べ物をめぐる議論は、社会が自由を不当に制限することなく健康をどうすすめるべきかという、より広い問いを反映している。子どもを守ることは広く共有された目標だが、それをなしとげる最善の手段は今も意見が分かれている。はっきりしているように思えるのは、どの一つの方法もそれだけでは十分でなさそうだということである。教育と、学校でのよりよい食べ物と、まわりの地域のささえとなる環境を組み合わせることが、若者が一生役に立つ習慣を育てる助けになるもっともよい見込みをあたえるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「発見は店が原因だと証明しないが、常識的な考えと一致している」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions point to rising ( 1 ) among young people and argue that the location of food outlets matters. Critics question whether restrictions work and say they may harm small ( 2 ). Other approaches include improving school meals and teaching children to ( 3 ).',
+      blanks: [
+        { choices: ['obesity', 'income', 'crime', 'traffic'], answer: 0, why: '第2段落 rising rates of obesity。' },
+        { choices: ['businesses', 'schools', 'farms', 'hospitals'], answer: 0, why: '第5段落 restrictions may harm small businesses。' },
+        { choices: ['cook', 'drive', 'swim', 'vote'], answer: 0, why: '第6段落 Programs that teach children to cook。' },
+      ],
+    },
+    tf: [
+      { statement: '体によくない食べ物を売る店は、校門の近くにあることが多い。', answer: true, why: '第1段落 are often found close to school gates。' },
+      { statement: '研究によって、ファストフード店が体重の増加を引き起こすことが証明された。', answer: false, why: '第3段落 such findings do not prove that the restaurants cause weight gain。' },
+      { statement: '学校の近くの店の多くは、地元の家族によって営まれている。', answer: true, why: '第5段落 Many shops near schools are run by local families。' },
+      { statement: '筆者によれば、一つの方法だけで十分に問題を解決できる。', answer: false, why: '第7段落 no single measure is likely to be sufficient on its own。' },
+    ],
+    qa: [
+      { q: 'Why do supporters believe society has a special responsibility to children?', choices: ['Children are less able to judge long-term consequences.', 'Children buy more food than adults.', 'Children own most shops.', 'Children never eat at home.'], answer: 0, why: '第2段落 children are less able than adults to judge the long-term consequences。' },
+      { q: 'What do some schools do with nearby shops?', choices: ['Work with them to offer healthier options.', 'Close them down.', 'Buy them.', 'Ignore them.'], answer: 0, why: '第6段落 work with nearby shops to offer healthier options。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
