@@ -35218,6 +35218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-secondhand',
+    title: 'Should Buying Second-Hand Be Encouraged?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, buying second-hand goods was often associated with poverty or necessity. Those who could afford to buy new clothes, furniture, and appliances usually did so, and used items were passed to relatives or sold cheaply in markets. In recent years, however, attitudes have begun to change. Online platforms now make it easy to buy and sell used goods of every kind, and many young people in particular regard second-hand shopping as fashionable, economical, and environmentally responsible. Some governments have even begun to consider policies that would actively encourage the practice.",
+      "Supporters of such policies emphasize the environmental benefits of reusing goods. Manufacturing new products requires raw materials, energy, and water, and it generates waste and pollution at every stage of production. Clothing is a striking example, since producing a single garment can require large quantities of water and chemicals, and enormous amounts of clothing are thrown away each year after being worn only a few times. Extending the life of existing goods, supporters argue, is one of the simplest ways of reducing the environmental impact of consumption.",
+      "Supporters also point to economic and social advantages. Second-hand goods allow people with limited incomes to obtain items they might otherwise be unable to afford, and the trade in used goods creates jobs in repair, cleaning, and resale. ( A ) the market for new products remains far larger, supporters argue, the growth of second-hand trade shows that many consumers are willing to change their habits when convenient options are available, and governments could support this trend through tax reductions for repair services or for shops that sell used goods.",
+      "Critics, however, raise several concerns. Some worry that encouraging second-hand purchases could harm manufacturers and retailers, along with the workers they employ, particularly in industries where profits are already low. Others point out that used goods may be less safe or reliable than new ones, especially in the case of electrical appliances, children's products, and vehicles, where hidden defects could cause serious harm. Without careful regulation, critics warn, a growing second-hand market may expose consumers to risks that they are not well placed to judge.",
+      "Critics also question whether the environmental benefits are as large as supporters claim. If people who buy cheap second-hand clothing simply buy more items overall, the total amount of consumption may not decline at all. In addition, the transport of used goods sold online may itself create emissions, and some items exported to poorer countries as second-hand donations end up as waste there. In this view, reuse is valuable only if it genuinely replaces the purchase of new goods rather than adding to it.",
+      "Between these positions, many experts suggest measures that would make second-hand markets both larger and safer. These include clear safety standards for used electrical goods, labels showing the condition and history of items, and incentives for manufacturers to design products that last longer and can be repaired easily. Some propose that companies take responsibility for collecting and reselling their own products after use, turning reuse into part of their business rather than a threat to it. Such schemes, if widely adopted, could also provide the reliable information about quality that buyers of used goods often lack.",
+      "The debate over second-hand goods reflects a broader question about how modern economies can reduce their environmental impact without sacrificing prosperity. Buying used items will not, by itself, solve the problems of overconsumption and waste, but it can form part of a wider shift toward valuing durability over novelty. Whether such a shift succeeds depends not only on government policy but also on whether consumers come to see well-used objects not as inferior substitutes but as things worth keeping, repairing, and passing on.",
+    ],
+    ja: [
+      '20世紀の多くのあいだ、中古品を買うことは、しばしば貧しさや必要と結びつけられていた。新しい服や家具や家電を買う余裕のある人はたいていそうし、使った物は親せきにゆずられるか、市場で安く売られた。しかし近年、考え方が変わりはじめている。ネット上の仕組みのおかげで、今ではあらゆる種類の中古品をかんたんに売り買いでき、とくに多くの若者は、中古の買い物をおしゃれで、経済的で、環境に責任のあるものと見なしている。その習慣を積極的にうながす政策を考えはじめた政府さえある。',
+      'そうした政策を支持する人々は、物を再利用することの環境への利益を強調する。新しい製品をつくるには原料やエネルギーや水が必要であり、生産のあらゆる段階でごみや汚染を生む。衣類はきわだった例である。服を1着つくるのに大量の水と化学物質が必要になることがあり、毎年、ほんの数回着られただけで大量の服がすてられているからである。今ある物の寿命をのばすことは、消費が環境にあたえる影響をへらすもっともかんたんな方法の一つだと支持する人々は主張する。',
+      '支持する人々はまた、経済的・社会的な利点も指摘する。中古品は、収入の限られた人々が、そうでなければ買えないかもしれない物を手に入れられるようにし、中古品の取引は修理や清掃や再販売の仕事を生み出す。新しい製品の市場のほうが今もはるかに大きいが、中古の取引がのびていることは、便利な選択肢があれば多くの消費者が習慣を変える気があることを示しており、政府は修理サービスや中古品を売る店の税をへらすことで、この流れをささえることができると支持する人々は主張する。',
+      'しかし批判する人々は、いくつかの心配をあげる。中古品の購入をうながすことが、とくにもうけがすでに少ない産業で、製造業者や小売業者と、そこで働く人々を傷つけるかもしれないと心配する人もいる。また、中古品は新品より安全でなかったり信頼できなかったりするかもしれず、とくに電気製品や子ども用品や乗り物では、かくれた欠陥が深刻な害を起こしうると指摘する人もいる。注意深い規制がなければ、のびていく中古市場は、消費者が判断しにくい危険に彼らをさらすかもしれないと批判する人々は警告する。',
+      '批判する人々はまた、環境への利益が支持する人々の言うほど大きいのかを疑う。安い中古の服を買う人々が、全体として単により多くの物を買うだけなら、消費の総量はまったくへらないかもしれない。くわえて、ネットで売られた中古品の輸送そのものが排出を生むかもしれず、中古の寄付として貧しい国に送られた物の一部は、そこでごみになってしまう。この見方では、再利用が価値をもつのは、それが新しい物の購入に上乗せされるのではなく、本当にそれに取ってかわる場合だけである。',
+      'これらの立場のあいだで、多くの専門家は、中古市場をより大きく、より安全にする方法を提案している。それには、中古の電気製品のはっきりした安全基準や、物の状態と来歴を示す表示や、長もちしかんたんに修理できる製品を設計するよう製造業者をうながすしくみがふくまれる。会社が使われたあとの自社の製品を回収し売り直す責任を負い、再利用を自社の商売への脅威ではなくその一部にすることを提案する人もいる。そうした仕組みが広く取り入れられれば、中古品を買う人にしばしば欠けている、品質についての信頼できる情報をあたえることにもなりうる。',
+      '中古品をめぐる議論は、現代の経済が豊かさを犠牲にせずに環境への影響をどうへらせるかという、より広い問いを反映している。使われた物を買うことは、それだけでは使いすぎとごみの問題を解決しないだろうが、新しさより長もちを大切にするという、より広い変化の一部にはなりうる。そうした変化が成功するかどうかは、政府の政策だけでなく、消費者が使いこまれた物を劣った代わりの品ではなく、持ち続け、直し、受けついでいく価値のあるものと見なすようになるかどうかにもかかっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「新しい製品の市場のほうがはるかに大きいが、中古の取引ののびは習慣を変える気を示す」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that reusing goods reduces the ( 1 ) impact of consumption and helps people with limited incomes. Critics worry about harm to manufacturers and the ( 2 ) of used goods, and doubt that total consumption will fall. Experts suggest safety standards and products that can be ( 3 ) easily.',
+      blanks: [
+        { choices: ['environmental', 'political', 'cultural', 'medical'], answer: 0, why: '第2段落 reducing the environmental impact of consumption。' },
+        { choices: ['safety', 'price', 'color', 'size'], answer: 0, why: '第4段落 used goods may be less safe or reliable than new ones。' },
+        { choices: ['repaired', 'sold', 'hidden', 'printed'], answer: 0, why: '第6段落 products that last longer and can be repaired easily。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの若者は、中古の買い物をおしゃれなものと見なしている。', answer: true, why: '第1段落 regard second-hand shopping as fashionable。' },
+      { statement: '支持する人々によれば、中古品の市場は新しい製品の市場より大きい。', answer: false, why: '第3段落 the market for new products remains far larger。' },
+      { statement: '中古の寄付として送られた物の一部は、送り先の国でごみになる。', answer: true, why: '第5段落 end up as waste there。' },
+      { statement: '筆者は、中古品を買うことだけで使いすぎの問題が解決すると考えている。', answer: false, why: '第7段落 will not, by itself, solve the problems of overconsumption。' },
+    ],
+    qa: [
+      { q: 'When is reuse valuable, according to critics?', choices: ['Only if it replaces the purchase of new goods.', 'Only if goods are sent abroad.', 'Only if prices rise.', 'Only if people buy more.'], answer: 0, why: '第5段落 reuse is valuable only if it genuinely replaces the purchase of new goods。' },
+      { q: 'What do some propose that companies do?', choices: ['Collect and resell their own products after use.', 'Stop making new products.', 'Ban second-hand shops.', 'Raise their prices.'], answer: 0, why: '第6段落 companies take responsibility for collecting and reselling their own products。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
