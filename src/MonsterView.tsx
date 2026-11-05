@@ -2811,6 +2811,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="58" cy="40" r="6" fill="none" stroke="#fef3c7" strokeWidth="2" />
       </g>
     )
+  if (species === 'ocelot')
+    return (
+      <g>
+        {/* 鎖のようにつながったもよう */}
+        <path d="M34 60 q6 -6 12 0 q6 6 12 0" fill="none" stroke="#111827" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
