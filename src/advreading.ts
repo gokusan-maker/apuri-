@@ -35458,6 +35458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-late-night-shops',
+    title: 'Do Shops Need to Stay Open All Night?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many large cities, it is now possible to buy food, medicine, and everyday goods at almost any hour of the day or night. Convenience stores, supermarkets, and some restaurants remain open around the clock, serving shift workers, travelers, and anyone who finds themselves in need of something late at night. In recent years, however, some businesses have begun to shorten their opening hours, citing a shortage of workers and rising costs, and this has prompted a wider debate about whether shops really need to stay open twenty-four hours a day.",
+      "Supporters of all-night opening emphasize its value for people whose lives do not follow a conventional schedule. Nurses, factory workers, taxi drivers, and others who work at night need places to buy meals and supplies, and for them, shops that close in the evening may be of little use. Late-night shops can also provide a sense of security, offering a lit and staffed place where people can seek help in an emergency. In some neighborhoods, supporters argue, an open shop is one of the few signs of life after dark.",
+      "Supporters also point to the economic benefits of longer opening hours. Businesses that remain open can serve more customers and generate more sales, while creating jobs for people who prefer or need to work at night, such as students who study during the day. ( A ) the number of customers late at night may be small, supporters argue, the convenience of being able to shop at any time has become part of what residents expect from modern urban life, and businesses that close early may lose customers to competitors.",
+      "Critics, however, question whether the benefits justify the costs. Keeping a shop open all night requires lighting, heating or cooling, and staff, even when few customers arrive, and these expenses may be passed on to consumers through higher prices. Critics also raise concerns about the workers involved. Night shifts have been linked with disturbed sleep and other health problems, and staff working alone late at night may face a greater risk of robbery or violence. For many shops, finding enough people willing to work such hours has become increasingly difficult.",
+      "Critics further argue that round-the-clock opening reflects and reinforces a culture in which work and consumption never stop. When shops are always open, the boundaries between day and night, and between working time and rest, may become blurred, encouraging people to shop late rather than plan ahead. Some suggest that a society in which certain hours are reserved for rest might be healthier, both for workers and for communities, even if it requires customers to accept a little less convenience.",
+      "Between these positions, some businesses and local governments have experimented with compromises. Some shops close for a few hours in the middle of the night, when demand is lowest, while others use self-service machines or automated stores that require fewer staff. Some areas have arranged for at least one shop or pharmacy to remain open at night on a rotating basis, so that essential needs can be met without requiring every business to stay open. Such approaches aim to balance convenience with the well-being of workers.",
+      "The debate over late-night shopping ultimately raises a broader question about the kind of convenience a society should expect and the price it is willing to pay for it. Services that seem effortless to customers often depend on the labor of people working at inconvenient hours. Recognizing this may lead us to value convenience differently, appreciating it where it meets genuine needs while accepting that not every need must be satisfied immediately. Finding this balance may help to create cities that serve both their customers and the people who work to serve them.",
+    ],
+    ja: [
+      '多くの大都市では、今や昼夜のほとんどどの時間にも食べ物や薬や日用品を買うことができる。コンビニエンスストアやスーパーマーケットや一部のレストランは24時間開いていて、交代制で働く人や旅行者や、夜おそくに何かが必要になった人の役に立っている。しかし近年、働く人の不足と費用の上昇を理由に、営業時間を短くしはじめた店もあり、これをきっかけに、店は本当に1日24時間開いている必要があるのかという、より広い議論が起こっている。',
+      '終夜営業を支持する人々は、暮らしがふつうの予定にしたがわない人々にとってのその価値を強調する。看護師や工場で働く人やタクシーの運転手など夜に働く人々は、食事や必要な物を買う場所を必要としており、彼らにとって夕方に閉まる店はほとんど役に立たないかもしれない。夜おそくの店はまた、明かりがついていて人がいる場所として、非常時に助けを求められる安心感をあたえうる。地域によっては、開いている店は暗くなってからの数少ない人の気配の一つだと支持する人々は主張する。',
+      '支持する人々はまた、営業時間が長いことの経済的な利益を指摘する。開いている店はより多くの客に対応し、より多くの売上を生むことができ、同時に、昼間に勉強する学生のように、夜に働きたい人や働く必要のある人に仕事を生み出す。夜おそくの客の数は少ないかもしれないが、いつでも買い物ができる便利さは、住民が現代の都市生活に期待するものの一部になっており、早く閉まる店は競争相手に客をうばわれるかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、その利益が費用に見合うのかを疑う。店を一晩中開けておくには、客がほとんど来なくても明かりや暖房・冷房や働く人が必要であり、こうした出費はより高い値段を通じて消費者に回されるかもしれない。批判する人々はまた、そこで働く人々についての心配もあげる。夜の勤務は睡眠の乱れやほかの健康の問題と結びつけられており、夜おそくに一人で働く人は、強盗や暴力のより大きな危険に直面するかもしれない。多くの店にとって、そうした時間に働く気のある人を十分に見つけることは、ますます難しくなっている。',
+      '批判する人々はさらに、24時間営業は、仕事と消費がけっしてとまらない文化を反映し、強めていると主張する。店がいつも開いていると、昼と夜の、そして働く時間と休む時間の境目がぼやけ、人々が前もって計画せずに夜おそく買い物をするようになるかもしれない。たとえ客が少し便利さをがまんしなければならなくても、ある時間が休息のためにとっておかれる社会のほうが、働く人にとっても地域にとってもより健やかかもしれないと示す人もいる。',
+      'これらの立場のあいだで、一部の店や地方の行政は歩みよりを試みてきた。需要がもっとも少ない真夜中に数時間閉める店もあれば、働く人がより少なくてすむセルフサービスの機械や無人の店を使う店もある。少なくとも一つの店や薬局が交代で夜に開いているよう取りはからい、すべての店が開いていなくても、欠かせない必要がみたされるようにした地域もある。こうしたやり方は、便利さと働く人の健やかさのつりあいをとることを目指している。',
+      '夜おそくの買い物をめぐる議論は、結局のところ、社会がどのような便利さを期待すべきか、そしてそのためにどんな代償をはらう気があるのかという、より広い問いを投げかけている。客にとって手間いらずに見えるサービスは、しばしば不便な時間に働く人々の労働にささえられている。このことを認めると、私たちは便利さを別のしかたで大切にするようになるかもしれない。本当の必要をみたすところではそれをありがたく思い、すべての必要がすぐにみたされなくてもよいと受け入れるのである。このつりあいを見つけることは、客と、客のために働く人々の両方の役に立つ都市をつくる助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「夜おそくの客は少ないかもしれないが、いつでも買える便利さは期待の一部になっている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that all-night shops serve people who work at ( 1 ) and provide a sense of security. Critics point to the costs and the health and safety of ( 2 ). Some areas arrange for at least one shop or pharmacy to stay open on a ( 3 ) basis.',
+      blanks: [
+        { choices: ['night', 'home', 'school', 'sea'], answer: 0, why: '第2段落 others who work at night need places to buy meals。' },
+        { choices: ['workers', 'tourists', 'children', 'farmers'], answer: 0, why: '第4段落 Critics also raise concerns about the workers involved。' },
+        { choices: ['rotating', 'permanent', 'voluntary', 'temporary'], answer: 0, why: '第6段落 to remain open at night on a rotating basis。' },
+      ],
+    },
+    tf: [
+      { statement: '働く人の不足と費用の上昇を理由に、営業時間を短くした店がある。', answer: true, why: '第1段落 citing a shortage of workers and rising costs。' },
+      { statement: '支持する人々によれば、夜おそくの客の数はとても多い。', answer: false, why: '第3段落 the number of customers late at night may be small。' },
+      { statement: '夜に一人で働く人は、強盗の危険がより大きいかもしれない。', answer: true, why: '第4段落 staff working alone late at night may face a greater risk of robbery。' },
+      { statement: '筆者は、すべての必要がすぐにみたされるべきだと考えている。', answer: false, why: '第7段落 accepting that not every need must be satisfied immediately。' },
+    ],
+    qa: [
+      { q: 'What do critics say round-the-clock opening may blur?', choices: ['The boundaries between working time and rest.', 'The prices of goods.', 'The names of shops.', 'The rules of traffic.'], answer: 0, why: '第5段落 the boundaries between day and night, and between working time and rest, may become blurred。' },
+      { q: 'What is one compromise some shops have tried?', choices: ['Closing for a few hours in the middle of the night.', 'Opening only on weekends.', 'Raising prices at night.', 'Hiring more staff at noon.'], answer: 0, why: '第6段落 Some shops close for a few hours in the middle of the night。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
