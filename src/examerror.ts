@@ -8046,6 +8046,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was not until midnight [when he came] home.', choices: ['that he came', 'he came that', 'when came he', 'which he came'], answer: 0, why: 'It was not until ～ that …「～になってはじめて…」。that he came home。' },
     ],
   },
+  {
+    id: 'exam-fix-189',
+    title: '入試の誤文訂正〈189〉（東大レベル：英作文の what を使った名詞節）',
+    points: ['関係代名詞 what は「～すること・もの」で、what の節は文の主語・目的語・補語になる（What I want is time.／This is what I need.）。what の節が主語なら単数あつかい。疑問詞の what で始まる名詞節（間接疑問）は「what ＋主語＋動詞」のふつうの語順になる（I don’t know what he means.）。what 自体が節のなかの主語・目的語なので、it などをくり返さない。A is to B what C is to D「A と B の関係は C と D の関係と同じ」、what she used to be「以前の彼女」、what ＋名詞「ありったけの～」も覚えておく。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'What I want is a little more time.', ja: '私がほしいのは、もう少しの時間だ。' }],
+    questions: [
+      { sentence: '[That] I want is a little more time.', choices: ['What', 'Which', 'It', 'This'], answer: 0, why: '「私がほしいもの」は先行詞をふくむ what。What I want is ～。' },
+      { sentence: 'I cannot understand [what does he mean].', choices: ['what he means', 'what means he', 'that he means', 'which does he mean'], answer: 0, why: '間接疑問はふつうの語順。what he means。' },
+      { sentence: 'This is [that] I have been looking for.', choices: ['what', 'which', 'who', 'where'], answer: 0, why: '先行詞がないので「さがしていたもの」は what。' },
+      { sentence: 'What surprised me [were] his kindness.', choices: ['was', 'were', 'have been', 'are'], answer: 0, why: 'what の節が主語のときは単数あつかい。was。' },
+      { sentence: 'She is not [that] she used to be.', choices: ['what', 'which', 'who it', 'whom'], answer: 0, why: '「以前の彼女」は what she used to be。' },
+      { sentence: 'Tell me [what do you want] for your birthday.', choices: ['what you want', 'what want you', 'that you want', 'which do you want'], answer: 0, why: '間接疑問はふつうの語順。what you want。' },
+      { sentence: 'Reading is to the mind [that] exercise is to the body.', choices: ['what', 'which', 'that it', 'like'], answer: 0, why: 'A is to B what C is to D「A と B の関係は C と D の関係と同じ」。' },
+      { sentence: 'He gave me [which money] he had.', choices: ['what money', 'that money', 'money which it', 'the money what'], answer: 0, why: '「もっていたありったけのお金」は what ＋名詞。what money he had。' },
+      { sentence: '[That is important] is that you try.', choices: ['What is important', 'It is important', 'Which is important', 'That important'], answer: 0, why: '「大切なこと」が主語なので What is important。' },
+      { sentence: 'I was surprised at [what happened it].', choices: ['what happened', 'what it happened', 'that happened', 'which happened it'], answer: 0, why: 'what が happened の主語なので it は不要。what happened。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
