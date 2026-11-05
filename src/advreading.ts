@@ -34542,6 +34542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-letters',
+    title: 'What Letters Teach Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of history, letters were among the chief means by which people separated by distance stayed in touch. Families scattered by migration, lovers parted by war, and scholars working in different countries relied on handwritten pages that might take weeks or months to arrive. Today, instant messages and emails have largely replaced letters in everyday life, and many young people have rarely, if ever, written one. Yet something may have been lost in this change, and reflecting on the nature of letters can reveal much about how the form of communication shapes its content.",
+      "One obvious difference concerns time. A letter takes time to write, often requiring careful thought about what to say and how to say it. Because it cannot be corrected once sent, and because a reply may not come for a long time, the writer has reason to express thoughts fully and clearly. Instant messages, by contrast, encourage quick exchanges of short phrases, in which meaning is built up gradually through many small replies. Each form has its strengths, but they invite different kinds of attention.",
+      "Letters also tend to create a particular kind of intimacy. Writing to one person at length, the writer addresses that person directly and imagines his or her response. The recipient, in turn, can read the letter slowly, return to it many times, and keep it as a lasting record. ( A ) a brief message can convey affection, a long letter may allow feelings and ideas to unfold more fully, and many people treasure letters from loved ones for decades after they were written.",
+      "The physical nature of letters adds another dimension. Handwriting reveals something of the writer's personality and mood, and the choice of paper, the stamp, and even the smell of a letter can make it feel like a piece of the sender's life. Such details are absent from digital messages, which appear in identical fonts on screens. Some people argue that the effort involved in writing and sending a letter is itself a form of care, showing that the recipient was worth the trouble.",
+      "Letters have also been of great value to historians. Collections of correspondence reveal the private thoughts of famous figures, the daily lives of ordinary people, and the development of ideas in science, art, and politics. Because letters were often kept, they provide a record that may be richer and more personal than official documents. Historians worry that future generations may know less about our time, since digital messages are easily deleted and often stored in forms that may become unreadable as technology changes, leaving gaps in the record of ordinary lives.",
+      "It would be a mistake, however, to idealize letters or to dismiss digital communication. Instant messages allow people to share their lives in real time, maintaining a sense of closeness that letters, with their long delays, could not provide. They also make communication available to many people who might never have written letters, and they allow families separated by great distances to see and hear each other daily. The question is not which form is better, but what each makes possible and what each tends to neglect, and how we can use both wisely in our own lives.",
+      "Perhaps the lesson of the letter is that the way we communicate shapes the relationships we form. Slow and careful communication encourages reflection and depth, while fast and frequent communication encourages responsiveness and a sense of presence. A thoughtful person might choose among these forms according to what a particular relationship or moment requires. Writing an occasional letter, even in an age of instant messages, may be one way of offering someone the gift of our full and unhurried attention, something that has become rare and therefore precious.",
+    ],
+    ja: [
+      '歴史の大部分のあいだ、手紙は、遠くはなれた人々が連絡をとり続けるための主な手段の一つだった。移住によってばらばらになった家族、戦争で引きさかれた恋人たち、ちがう国で研究する学者たちは、とどくまでに何週間も何か月もかかるかもしれない手書きの紙に頼っていた。今日、日常生活ではすぐにとどくメッセージや電子メールが手紙にほとんどとってかわり、多くの若者はめったに、あるいは一度も手紙を書いたことがない。しかし、この変化の中で何かが失われたのかもしれず、手紙の性質についてふり返ることで、伝達の形がその内容をどう形づくるのかについて多くが明らかになりうる。',
+      '一つの明らかなちがいは時間にかかわる。手紙は書くのに時間がかかり、何をどう言うかを注意深く考えることがしばしば必要になる。いったん送ったら直せず、返事が長いあいだ来ないかもしれないので、書き手には考えを十分にはっきりと表す理由がある。対照的に、すぐにとどくメッセージは短いことばのすばやいやりとりをうながし、そこでは意味が多くの小さな返事を通じて少しずつ組み立てられる。どちらの形にも長所があるが、それらはちがう種類の注意をうながすのである。',
+      '手紙はまた、特別な種類の親密さを生みやすい。一人の人に長く書くとき、書き手はその人に直接語りかけ、その人の反応を想像する。受けとった人は、今度は手紙をゆっくり読み、何度も読み返し、長く残る記録としてとっておくことができる。短いメッセージでも愛情を伝えられるが、長い手紙は感情や考えがもっと十分に広がることを許すかもしれず、多くの人々は愛する人からの手紙を、書かれてから何十年も大切にしている。',
+      '手紙の物としての性質は、さらに別の面を加える。手書きの文字は書き手の人がらや気分の何かを明らかにし、紙や切手の選び方、さらには手紙のにおいまでが、それを送り手の生活のかけらのように感じさせうる。そうした細部は、画面に同じ字体で現れるデジタルのメッセージにはない。手紙を書いて送るのにかかる手間そのものが一種の気づかいであり、受けとる人がその手間に値することを示していると主張する人もいる。',
+      '手紙はまた、歴史家にとって大きな価値をもってきた。手紙の集まりは、有名な人物の私的な考えや、ふつうの人々の日々の生活や、科学や芸術や政治における考えの発展を明らかにする。手紙はしばしばとっておかれたので、公式の文書より豊かで個人的な記録をあたえてくれるかもしれない。歴史家たちは、デジタルのメッセージはかんたんに消され、読めなくなるかもしれない形で保存されることが多いので、未来の世代は私たちの時代についてあまり知ることができないのではないかと心配している。技術が変わるにつれて読めなくなり、ふつうの人々の生活の記録にすき間が残ってしまうかもしれないのである。',
+      'しかし、手紙を理想化したり、デジタルの伝達を軽んじたりするのはまちがいだろう。すぐにとどくメッセージによって、人々は自分の生活をその場で共有し、長いおくれのある手紙にはあたえられなかった近さの感覚を保つことができる。それはまた、手紙を書くことがなかったかもしれない多くの人々にも伝達を可能にし、遠くはなれた家族が毎日たがいに顔を見て声を聞くことを可能にしている。問題はどちらの形がよりよいかではなく、それぞれが何を可能にし、それぞれが何をおろそかにしがちなのか、そして自分の生活の中で両方をどう賢く使えるかである。',
+      'おそらく手紙の教訓は、私たちの伝達のしかたが、私たちの結ぶ関係を形づくるということである。ゆっくりした注意深い伝達はふり返りと深さをうながし、速くひんぱんな伝達はすばやい反応とそばにいる感覚をうながす。思慮深い人は、ある関係やある瞬間が何を必要としているかに応じて、こうした形を選ぶかもしれない。すぐにとどくメッセージの時代にも、ときどき手紙を書くことは、だれかに私たちの十分でゆったりとした注意というおくりものをささげる一つの方法なのかもしれない。それは今ではめずらしくなり、だからこそ貴重なものなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「短いメッセージでも愛情を伝えられるが、長い手紙は感情をより十分に広げる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの若者はめったに、あるいは一度も手紙を書いたことがない。', answer: true, why: '第1段落 many young people have rarely, if ever, written one。' },
+      { statement: 'すぐにとどくメッセージは長い文章をうながす。', answer: false, why: '第2段落 encourage quick exchanges of short phrases。' },
+      { statement: '歴史家は、デジタルのメッセージがかんたんに消されることを心配している。', answer: true, why: '第5段落 digital messages are easily deleted。' },
+      { statement: '筆者によれば、手紙はデジタルの伝達よりいつもすぐれている。', answer: false, why: '第6段落 The question is not which form is better。' },
+    ],
+    qa: [
+      { q: 'Why do some people say writing a letter is a form of care?', choices: ['It shows the recipient was worth the effort.', 'It is cheaper than email.', 'It arrives faster.', 'It can be corrected easily.'], answer: 0, why: '第4段落 showing that the recipient was worth the trouble。' },
+      { q: 'What does slow and careful communication encourage?', choices: ['Reflection and depth.', 'Quick replies.', 'Short phrases.', 'A sense of hurry.'], answer: 0, why: '第7段落 Slow and careful communication encourages reflection and depth。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
