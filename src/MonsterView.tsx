@@ -2939,6 +2939,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 60 q3 -5 7 -2 q4 -3 6 2 q-3 4 -6 2 q-4 3 -7 -2 z" fill="none" stroke="#2a1f12" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'asiangoldencat')
+    return (
+      <g>
+        {/* 金色のかがやき */}
+        <circle cx="70" cy="18" r="3" fill="#facc15" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
