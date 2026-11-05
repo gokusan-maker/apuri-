@@ -7584,6 +7584,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'They whispered [so that nobody hear] them.', choices: ['so that nobody would hear', 'in order nobody to hear', 'so as nobody hear', 'for nobody hearing'], answer: 0, why: 'so that のあとは主語＋助動詞＋原形。過去の話なので would hear。' },
     ],
   },
+  {
+    id: 'exam-fix-178',
+    title: '入試の誤文訂正〈178〉（京大レベル：副詞 only・even・also の位置）',
+    points: ['only・even・also・just は、ふつう修飾する語のすぐ前に置く。書きことばで意味をはっきりさせるには位置が大切（I only saw him.／I saw only him.）。also・always・often などの頻度や付加の副詞は、一般動詞の前、be 動詞・助動詞のあとに置く（He is also kind.／She can also swim.）。even は強調したい語の前（Even a child can do it.）。enough は形容詞・副詞のあと。日本語の意味に合う位置を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Even a child can understand it, and he also knows the answer.', ja: '子どもでさえそれを理解でき、彼も答えを知っている。' }],
+    questions: [
+      { sentence: '［子どもでさえそれを理解できる］ [A child even] can understand it.', choices: ['Even a child', 'A child also', 'Only even a child', 'A child can even'], answer: 0, why: '「子どもでさえ」は even を a child の前に。' },
+      { sentence: '［彼は親切でもある］ He [also is] kind.', choices: ['is also', 'also be', 'is too also', 'also'], answer: 0, why: 'also は be 動詞のあと。He is also kind。' },
+      { sentence: '［彼女は泳ぐこともできる］ She [also can] swim.', choices: ['can also', 'can swim also too', 'also could', 'is also can'], answer: 0, why: 'also は助動詞のあと。She can also swim。' },
+      { sentence: '［私は日曜日だけ休む］ I rest [on only Sundays].', choices: ['only on Sundays', 'on Sundays only also', 'on Sunday only even', 'even on Sundays'], answer: 0, why: '「日曜日だけ」は only を on Sundays の前に。' },
+      { sentence: '［彼は朝食さえ食べなかった］ He did not [eat even breakfast].', choices: ['even eat breakfast', 'eat breakfast even also', 'eat only breakfast', 'also eat breakfast'], answer: 0, why: '否定文で「～さえしない」は not even ＋動詞。He did not even eat breakfast。' },
+      { sentence: '［彼女はよく図書館へ行く］ She [goes often] to the library.', choices: ['often goes', 'goes too often', 'is often go', 'often is going'], answer: 0, why: '頻度の副詞は一般動詞の前。She often goes。' },
+      { sentence: '［私たちはちょうど着いたところだ］ We have [arrived just].', choices: ['just arrived', 'arrived only', 'just arrive', 'even arrived'], answer: 0, why: 'just は have と過去分詞のあいだ。We have just arrived。' },
+      { sentence: '［彼だけが真実を知っていた］ [He only] knew the truth.', choices: ['Only he', 'He also', 'Even only he', 'He even'], answer: 0, why: '「彼だけが」は only を he の前に。' },
+      { sentence: '［私もまたその映画が好きだ］ I [like also] the movie.', choices: ['also like', 'like too also', 'am also like', 'also am liking'], answer: 0, why: 'also は一般動詞の前。I also like the movie（I like the movie, too. も可）。' },
+      { sentence: '［彼はいつも時間どおりに来る］ He [comes always] on time.', choices: ['always comes', 'comes ever', 'is always come', 'always is coming'], answer: 0, why: '頻度の副詞 always は一般動詞の前。He always comes on time。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
