@@ -35262,6 +35262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-getting-lost',
+    title: 'The Value of Getting Lost',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, getting lost was an ordinary part of travel. People finding their way through unfamiliar towns or across open country relied on memory, landmarks, the position of the sun, and the advice of strangers, and they frequently took wrong turns. Today, satellite navigation on our phones has made such experiences increasingly rare. We can be guided step by step to almost any destination, and the possibility of losing our way has come to seem less like an adventure than like a failure of technology or of personal planning.",
+      "There is no doubt that this change has brought real benefits. Navigation tools save time, reduce anxiety, and allow people to travel with confidence in places where they do not speak the language. For emergency services, delivery drivers, and anyone with a limited sense of direction, they can be invaluable. Yet some researchers and writers have begun to ask whether, in removing the experience of being lost, we may also be losing certain capacities and pleasures that are not easily replaced.",
+      "One concern relates to the way we come to know places. When we find our own way, we must pay close attention to our surroundings, noticing buildings, streets, and the shape of the land, and gradually building a mental map that connects them. ( A ) a navigation app can lead us efficiently from one point to another, it requires little of this attention, and people who rely on such tools may arrive at their destination with only a vague sense of the route they took or of how the different parts of a city relate to one another.",
+      "Getting lost can also open us to the unexpected. A wrong turn may lead to a quiet square, a small shop, or a view that no guidebook mentions, and many travelers remember such accidental discoveries more vividly than the famous sights they had planned to see. In this sense, being lost is not simply a problem to be solved but an invitation to encounter places on their own terms, rather than as items on a list of destinations chosen in advance. The city we discover by accident often feels more truly our own than the one we merely pass through on the way to somewhere else.",
+      "There is, moreover, a psychological dimension to the experience. Being lost forces us to tolerate uncertainty, to make decisions with incomplete information, and sometimes to ask strangers for help. These are uncomfortable experiences, but they can also build confidence and a sense of resourcefulness. A person who has found their way out of confusion once may feel more capable of facing uncertainty in other areas of life, where no device can tell them exactly which direction to take.",
+      "None of this means that we should abandon navigation technology or deliberately put ourselves in danger. Being lost in a remote mountain area or a dangerous neighborhood is not a romantic adventure but a genuine risk. The point is rather that the choice between being guided and finding our own way need not be all or nothing. We might, for instance, use technology to plan a route and then put the device away, or allow ourselves to wander freely in a safe place without a fixed destination.",
+      "Perhaps the deeper lesson concerns our relationship with uncertainty more generally. A life in which every route is planned and every risk removed may be efficient, but it may also leave little room for discovery. Learning to be lost, at least occasionally, can remind us that not knowing exactly where we are is not always a failure but sometimes the beginning of understanding. In a world that increasingly offers to guide us at every step, the willingness to lose our way may itself be a kind of freedom worth preserving.",
+    ],
+    ja: [
+      '人間の歴史の大半のあいだ、道に迷うことは旅のふつうの一部だった。見知らぬ町や広い野原をこえて道をさがす人々は、記憶や目じるしや太陽の位置や見知らぬ人の助言にたより、しばしば道をまちがえた。今日では、電話の衛星による道案内によって、そうした経験はますますまれになった。私たちはほとんどどんな目的地へも一歩ずつ案内してもらえ、道に迷う可能性は、冒険というよりは技術か自分の計画の失敗のように思われるようになった。',
+      'この変化が本当の利益をもたらしたことはまちがいない。道案内の道具は時間を節約し、不安をへらし、ことばの通じない場所でも人々が安心して旅できるようにする。救急の仕事や配達の運転手や方向感覚にとぼしい人にとって、それはこのうえなく役に立ちうる。しかし、迷うという経験を取りのぞくなかで、私たちはかんたんには取りかえのきかないある種の力や楽しみも失っているのではないかと問いはじめた研究者や書き手もいる。',
+      '一つの心配は、私たちが場所を知るようになるやり方にかかわっている。自分で道を見つけるとき、私たちはまわりに注意深く目を向け、建物や通りや土地の形に気づき、それらを結びつける頭のなかの地図を少しずつつくっていかなければならない。道案内のアプリは一つの地点から別の地点へ効率よく導いてくれるが、こうした注意をほとんど必要とせず、そうした道具にたよる人々は、自分がとった道筋や、都市のさまざまな部分がたがいにどう関係しているかを、ぼんやりとしかわからないまま目的地に着くかもしれない。',
+      '道に迷うことはまた、予想外のものへと私たちを開く。まちがった曲がり角が、どのガイドブックにものっていない静かな広場や小さな店や景色に通じていることもあり、多くの旅行者は、見ようと計画していた有名な名所よりも、そうした偶然の発見のほうをあざやかに覚えている。この意味で、迷うことは単に解決すべき問題ではなく、前もって選んだ目的地のリストの項目としてではなく、場所そのもののありのままに出会うことへのさそいなのである。偶然に見つけた町は、どこかへ行くとちゅうで通りすぎるだけの町よりも、本当に自分のものだと感じられることが多い。',
+      'さらに、この経験には心理的な面もある。迷うことは、不確かさに耐え、不完全な情報で決断し、ときには見知らぬ人に助けを求めることを私たちにしいる。これらは居心地の悪い経験だが、自信と、工夫して切りぬける力の感覚を育てることもできる。一度混乱から道を見つけ出した人は、どの機械もどちらへ進めばよいかを正確に教えてくれない人生のほかの場面でも、不確かさに向き合う力がより自分にあると感じるかもしれない。',
+      'これは、道案内の技術を捨てるべきだとか、わざと自分を危険にさらすべきだということではない。人里はなれた山や危険な地域で迷うことは、ロマンチックな冒険ではなく本当の危険である。むしろ言いたいのは、案内されることと自分で道を見つけることのどちらかを、すべてかゼロかで選ぶ必要はないということである。たとえば技術を使って道筋を計画してから機械をしまったり、安全な場所で決まった目的地なしに自由に歩きまわったりしてもよいのである。',
+      'おそらくより深い教訓は、より一般的な、私たちと不確かさとの関係にかかわっている。あらゆる道筋が計画され、あらゆる危険が取りのぞかれた人生は効率的かもしれないが、発見の余地をほとんど残さないかもしれない。少なくともときどき迷うことを学ぶことは、自分がどこにいるかを正確に知らないことが、いつも失敗ではなく、ときには理解のはじまりであることを思い出させてくれる。あらゆる一歩で私たちを案内しようとする世界で、道に迷う気持ちそのものが、守る価値のある一種の自由なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「アプリは効率よく導くが、注意をほとんど必要としない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '道案内の道具は、ことばの通じない場所でも安心して旅できるようにする。', answer: true, why: '第2段落 allow people to travel with confidence in places where they do not speak the language。' },
+      { statement: '道案内のアプリを使うと、都市の部分どうしの関係がよくわかるようになる。', answer: false, why: '第3段落 may arrive ... with only a vague sense of ... how the different parts of a city relate。' },
+      { statement: '多くの旅行者は、偶然の発見を有名な名所よりあざやかに覚えている。', answer: true, why: '第4段落 remember such accidental discoveries more vividly than the famous sights。' },
+      { statement: '筆者は、道案内の技術を捨てるべきだと主張している。', answer: false, why: '第6段落 None of this means that we should abandon navigation technology。' },
+    ],
+    qa: [
+      { q: 'What can being lost build, according to the author?', choices: ['Confidence and a sense of resourcefulness.', 'A fear of travel.', 'A dislike of strangers.', 'A better phone.'], answer: 0, why: '第5段落 they can also build confidence and a sense of resourcefulness。' },
+      { q: 'What does the author suggest as one way to combine technology and finding our own way?', choices: ['Plan a route with technology and then put the device away.', 'Never use maps at all.', 'Travel only to famous sights.', 'Walk alone in dangerous areas.'], answer: 0, why: '第6段落 use technology to plan a route and then put the device away。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
