@@ -34702,6 +34702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mentors',
+    title: 'The Role of Mentors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people who have achieved something remarkable can name a person who helped them along the way. A teacher who recognized a student's talent, an experienced colleague who explained the unwritten rules of a profession, or an older friend who offered encouragement at a difficult moment may have shaped the course of a life. Such figures are often called mentors. Although the relationship between mentor and learner is ancient, its nature is more subtle than it might first appear, and understanding it may help us to see how knowledge and character are passed from one generation to the next.",
+      "A mentor differs from an ordinary teacher in several ways. A teacher usually works with many students at once and focuses on transmitting a defined body of knowledge. A mentor, by contrast, typically works with one person over a long period and pays attention not only to skills but also to the learner's judgment, confidence, and sense of direction. Much of what a mentor offers cannot be written down: it consists of advice tailored to particular situations, examples of how to behave, and encouragement at the right moment.",
+      "One of the most valuable things a mentor can provide is access to tacit knowledge, the kind of understanding that experts possess but find difficult to explain. An experienced craftsperson may know when a piece of wood is ready to be cut, or a senior doctor may sense that a patient is more seriously ill than test results suggest. ( A ) such knowledge cannot easily be put into words, it can be passed on through close observation and shared practice, which is why apprenticeship has been so important in many traditions.",
+      "Mentoring also has a moral and emotional dimension. A good mentor believes in the learner's potential, sometimes before the learner does, and this belief can give the confidence needed to attempt difficult tasks. Mentors may also model values such as honesty, patience, and care for others, showing through their own conduct what it means to practice a profession well. In this way, mentoring shapes not only what people can do but also who they become, and how they will one day treat those who come after them.",
+      "Yet mentoring relationships can also have drawbacks. A mentor may encourage a learner to follow the same path he or she took, discouraging independent thinking or new approaches. Power differences between mentor and learner may lead to dependence or even exploitation, particularly in workplaces where the mentor controls opportunities for advancement. Moreover, access to mentors is often unequal: people from privileged backgrounds may find it easier to form such relationships, while others are left without guidance, even when their abilities are equal or greater.",
+      "For these reasons, some organizations have tried to make mentoring more widely available, for example by pairing new employees with experienced colleagues or by creating programs that connect students with professionals in their fields of interest. Such efforts can widen opportunities, although formal programs may lack the trust and spontaneity of relationships that develop naturally. The most successful arrangements seem to be those that allow genuine connection while ensuring that no one is excluded simply because they lack the right social networks.",
+      "Perhaps the deepest feature of mentoring is that it is a form of generosity. Mentors give their time and experience without expecting a direct return, often because someone once did the same for them. In this sense, mentoring creates chains of influence that extend across generations, as those who were guided become guides in turn. Recognizing the value of such relationships may encourage us both to seek out mentors and, when the time comes, to offer the same help to others, continuing a tradition that is as old as human learning itself.",
+    ],
+    ja: [
+      '何かめざましいことを成しとげた多くの人々は、途中で自分を助けてくれた人の名前をあげることができる。生徒の才能に気づいた先生、職業の書かれていない決まりを説明してくれた経験豊かな同僚、苦しいときにはげましてくれた年上の友人が、人生の行方を形づくったのかもしれない。そのような人物はしばしばメンターと呼ばれる。メンターと学ぶ者との関係は古くからあるが、その性質は最初に思われるより微妙であり、それを理解することは、知識や人がらがある世代から次の世代へどう受けつがれるのかを知る助けになるかもしれない。',
+      'メンターはいくつかの点でふつうの教師とちがう。教師はふつう一度に多くの生徒とかかわり、決まった知識の体系を伝えることに重点を置く。対照的に、メンターはたいてい一人の人と長いあいだかかわり、技能だけでなく、学ぶ者の判断力や自信や方向の感覚にも注意をはらう。メンターがあたえるものの多くは書きとめることができない。それは、特定の状況に合わせた助言や、どうふるまえばよいかの手本や、ちょうどよいときのはげましから成り立っているのである。',
+      'メンターがあたえうる最も価値あるものの一つは、暗黙知、つまり熟達者がもっているが説明しにくい種類の理解にふれる機会である。経験豊かな職人は木材がいつ切られる準備ができたかがわかるかもしれないし、年長の医師は、検査の結果が示すより患者が重い病気だと感じとるかもしれない。そうした知識はかんたんにはことばにできないが、近くで観察し実践を共にすることで受けつがれうる。だからこそ、多くの伝統で徒弟制度がとても大切にされてきたのである。',
+      'メンターとの関係には道徳的・感情的な面もある。よいメンターは学ぶ者の可能性を、ときには学ぶ者自身より先に信じ、その信頼がむずかしい課題に挑む自信をあたえうる。メンターはまた、正直さや忍耐や他人への気づかいといった価値の手本となり、職業をよく実践するとはどういうことかを自分のふるまいを通じて示すかもしれない。このようにして、メンターとのかかわりは、人々が何をできるかだけでなく、どんな人になるか、そしていつか自分のあとに来る人々をどうあつかうかも形づくるのである。',
+      'しかし、メンターとの関係には欠点もありうる。メンターは学ぶ者に自分のたどった道をたどるようすすめ、独立した考えや新しいやり方をくじくかもしれない。メンターと学ぶ者のあいだの力の差は、とくにメンターが昇進の機会をにぎっている職場では、依存や、さらには搾取につながるかもしれない。さらに、メンターに出会えるかどうかはしばしば不平等である。めぐまれた背景をもつ人々はそうした関係を結びやすいかもしれないが、ほかの人々は導きのないまま残される。その能力が同じかそれ以上であってもである。',
+      'こうした理由から、たとえば新しい従業員を経験豊かな同僚と組ませたり、生徒を興味のある分野の専門家と結びつける取り組みを作ったりして、メンターとのかかわりをより広く得られるようにしようとしてきた組織もある。そうした努力は機会を広げうるが、正式な取り組みには、自然に育つ関係のような信頼や自発性が欠けているかもしれない。最もうまくいく仕組みは、本当のつながりを可能にしながら、適切な人脈がないというだけでだれもしめ出されないようにするもののようである。',
+      'おそらくメンターとのかかわりの最も深い特徴は、それが一種の気前のよさだということである。メンターは直接の見返りを期待せずに自分の時間と経験をあたえるが、それはしばしば、かつてだれかが自分に同じことをしてくれたからである。この意味で、メンターとのかかわりは世代をこえて広がる影響の連鎖を生む。導かれた人々が今度は導く人になるからである。そうした関係の価値を認めることは、私たちがメンターを探し求めると同時に、そのときが来たら同じ助けをほかの人にさしだすようはげましてくれるかもしれない。それは、人間の学びそのものと同じくらい古い伝統を受けつぐことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした知識はことばにできないが、観察と実践で受けつがれうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'メンターはふつう一度に多くの生徒とかかわる。', answer: false, why: '第2段落 A mentor, by contrast, typically works with one person over a long period。' },
+      { statement: '暗黙知は近くで観察し実践を共にすることで受けつがれうる。', answer: true, why: '第3段落 it can be passed on through close observation and shared practice。' },
+      { statement: 'メンターに出会えるかどうかはしばしば不平等である。', answer: true, why: '第5段落 access to mentors is often unequal。' },
+      { statement: '筆者によれば、正式な取り組みには自然な関係と同じ信頼がかならずある。', answer: false, why: '第6段落 formal programs may lack the trust and spontaneity。' },
+    ],
+    qa: [
+      { q: 'What can a good mentor give a learner?', choices: ['The confidence needed to attempt difficult tasks.', 'A guaranteed promotion.', 'A large salary.', 'Freedom from all mistakes.'], answer: 0, why: '第4段落 this belief can give the confidence needed to attempt difficult tasks。' },
+      { q: 'How does mentoring create chains of influence across generations?', choices: ['Those who were guided become guides in turn.', 'Mentors never retire.', 'Learners copy books.', 'Organizations keep records.'], answer: 0, why: '第7段落 as those who were guided become guides in turn。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
