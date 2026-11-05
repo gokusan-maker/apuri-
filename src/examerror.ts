@@ -4442,6 +4442,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) There is (B) nobody (C) who (D) know the answer.', choices: ['(A) There is', '(B) nobody', '(C) who', '(D) know the answer'], answer: 3, why: '先行詞 nobody は単数扱い。who knows。' },
     ],
   },
+  {
+    id: 'exam-error-either-neither-kokuritsu',
+    title: '入試の正誤問題〈187〉（国公立レベル：either A or B・neither A nor B と動詞の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'either A or B「A か B のどちらか」・neither A nor B「A も B も～ない」・not only A but also B・not A but B では、動詞は B（動詞に近いほう）に合わせる。both A and B は複数扱い。A as well as B では A に合わせる。either of ～・neither of ～・each of ～ は書き言葉では単数扱い。neither は nor と、either は or と組み合わせる。',
+    ],
+    examples: [
+      { en: 'Either you or he is going to win.', ja: 'あなたか彼のどちらかが勝つだろう。' },
+      { en: 'Neither my brother nor my parents like fish.', ja: '兄も両親も魚が好きではない。' },
+    ],
+    questions: [
+      { sentence: '(A) Either you (B) or he (C) are (D) going to win.', choices: ['(A) Either you', '(B) or he', '(C) are', '(D) going to win'], answer: 2, why: 'either A or B では動詞は B に合わせる。he なので is。' },
+      { sentence: '(A) Neither my brother (B) nor my parents (C) likes (D) fish.', choices: ['(A) Neither my brother', '(B) nor my parents', '(C) likes', '(D) fish'], answer: 2, why: 'neither A nor B では動詞は B（my parents）に合わせて like。' },
+      { sentence: '(A) Neither of (B) the answers (C) were correct, (D) so I tried again.', choices: ['(A) Neither of', '(B) the answers', '(C) were correct,', '(D) so I tried again'], answer: 2, why: 'neither of ～ は書き言葉では単数扱い。was correct。' },
+      { sentence: '(A) Both Tom (B) and Mary (C) is (D) good at tennis.', choices: ['(A) Both Tom', '(B) and Mary', '(C) is', '(D) good at tennis'], answer: 2, why: 'both A and B は複数扱い。are。' },
+      { sentence: '(A) Either Ken (B) or his sisters (C) are going (D) to helps us.', choices: ['(A) Either Ken', '(B) or his sisters', '(C) are going', '(D) to helps us'], answer: 3, why: 'to のあとは動詞の原形。to help。' },
+      { sentence: '(A) Not only the students (B) but also the teacher (C) were (D) surprised.', choices: ['(A) Not only the students', '(B) but also the teacher', '(C) were', '(D) surprised'], answer: 2, why: 'not only A but also B では動詞は B（the teacher）に合わせる。was。' },
+      { sentence: '(A) Both of (B) my sister (C) and I (D) like cats.', choices: ['(A) Both of', '(B) my sister', '(C) and I', '(D) like cats'], answer: 0, why: 'both A and B の形では of は不要。Both my sister and I。' },
+      { sentence: '(A) Either of (B) the two roads (C) lead (D) to the station.', choices: ['(A) Either of', '(B) the two roads', '(C) lead', '(D) to the station'], answer: 2, why: 'either of ～ は単数扱い。leads。' },
+      { sentence: '(A) The teacher (B) as well as the students (C) were (D) at the meeting.', choices: ['(A) The teacher', '(B) as well as the students', '(C) were', '(D) at the meeting'], answer: 2, why: 'A as well as B では動詞は A（the teacher）に合わせる。was。' },
+      { sentence: '(A) Neither (B) the cat or (C) the dog (D) was hungry.', choices: ['(A) Neither', '(B) the cat or', '(C) the dog', '(D) was hungry'], answer: 1, why: 'neither のあとは nor。neither the cat nor the dog。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
