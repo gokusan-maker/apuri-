@@ -2832,6 +2832,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 80 l2 3 l2 -3 l2 3 M60 80 l2 3 l2 -3 l2 3" fill="none" stroke="#4a3415" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'jaguarundi')
+    return (
+      <g>
+        {/* 細長い胴のライン */}
+        <path d="M24 64 q24 8 48 0" fill="none" stroke="#1f1712" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
