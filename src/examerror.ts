@@ -7794,6 +7794,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I have been sick [ago] last Friday.', choices: ['since', 'for', 'before', 'during'], answer: 0, why: '現在完了で「～以来」は since。since last Friday。' },
     ],
   },
+  {
+    id: 'exam-fix-183',
+    title: '入試の誤文訂正〈183〉（東大レベル：英作文の many・much・a few・a little）',
+    points: ['数えられる名詞（books・friends）には many・a few・few、数えられない名詞（water・money・information・advice）には much・a little・little を使う。a few・a little は「少しある（肯定的）」、few・little は「ほとんどない（否定的）」。a lot of・plenty of はどちらにも使える。英作文では、ふつうの肯定文では much より a lot of を使うことが多い。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I have a few friends here, but little money.', ja: 'ここには友人が少しいるが、お金はほとんどない。' }],
+    questions: [
+      { sentence: 'There were [much] people at the concert.', choices: ['many', 'a little', 'little', 'a much'], answer: 0, why: 'people は数えられる複数名詞なので many。' },
+      { sentence: 'I do not have [many] money now.', choices: ['much', 'a few', 'few', 'a many'], answer: 0, why: 'money は数えられない名詞なので much。' },
+      { sentence: 'Could you give me [a few] advice?', choices: ['a little', 'many', 'few', 'a many'], answer: 0, why: 'advice は数えられない名詞なので a little（some も可）。' },
+      { sentence: 'She has [a little] friends in Tokyo.', choices: ['a few', 'much', 'a much', 'little'], answer: 0, why: 'friends は数えられる複数名詞なので a few。' },
+      { sentence: '［ほとんど時間がない］ We have [a little] time left.', choices: ['little', 'a few', 'few', 'many'], answer: 0, why: '「ほとんどない」は little。a little だと「少しある」。' },
+      { sentence: '［彼を知っている人はほとんどいない］ [A few] people know him.', choices: ['Few', 'A little', 'Little', 'Much'], answer: 0, why: '「ほとんどいない」は Few。A few だと「少しいる」。' },
+      { sentence: 'How [many] water do you drink a day?', choices: ['much', 'few', 'a few', 'little'], answer: 0, why: 'water は数えられない名詞なので How much。' },
+      { sentence: 'There is [many] information on the website.', choices: ['a lot of', 'a few', 'few', 'many a'], answer: 0, why: 'information は数えられない名詞。肯定文では a lot of がふつう。' },
+      { sentence: 'I have [few] questions to ask you. Can you help me?', choices: ['a few', 'little', 'a little', 'much'], answer: 0, why: '「少し質問がある」は肯定的な a few。' },
+      { sentence: 'He spent [much] hours on the project.', choices: ['many', 'a little', 'little', 'a much'], answer: 0, why: 'hours は数えられる複数名詞なので many。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
