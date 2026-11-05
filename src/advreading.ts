@@ -35378,6 +35378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-statues',
+    title: 'Should Controversial Statues Be Removed?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In cities around the world, statues of historical figures stand in squares, parks, and outside public buildings. Many were erected generations ago to honor leaders, soldiers, and benefactors whose achievements were celebrated at the time. In recent years, however, some of these statues have become the focus of intense controversy, as people have drawn attention to the darker aspects of the lives they commemorate, such as involvement in slavery, colonial violence, or the persecution of minorities. In response, some statues have been removed, while others remain standing amid continuing protest.",
+      "Supporters of removal argue that public statues are not neutral records of history but expressions of honor. To place a figure on a pedestal in a central square is to present that person as worthy of admiration, and for communities whose ancestors suffered at the hands of such figures, the daily sight of these monuments may be deeply painful. Removing them, supporters claim, does not erase history but changes the way a society chooses to celebrate it, reflecting values that have developed since the statues were first erected. A society, after all, is free to decide whom it honors in its most visible public places, just as earlier generations made their own choices when the statues were built.",
+      "Supporters also point out that statues have often been removed in the past without any loss of historical knowledge. When political regimes change, monuments to former rulers are frequently taken down, and few people argue that history has been forgotten as a result. ( A ) a statue may be a valuable historical object, supporters argue, it can be preserved in a museum, where it can be displayed with explanations that place the person it represents in a fuller and more honest context.",
+      "Critics of removal, however, warn that judging historical figures by present-day standards may be unfair and misleading. Many people who achieved great things also held views or took part in practices that are now regarded as unacceptable, and if every statue of an imperfect person were removed, few might remain. Critics also argue that public monuments can prompt reflection and discussion precisely because they are uncomfortable, and that removing them may make it easier for societies to forget the injustices of their past rather than confront them.",
+      "Critics further question who should have the authority to decide. When statues are removed quickly in response to protests, decisions may be made without proper public debate, leaving many residents feeling that their views were ignored. Some fear that once the removal of one statue is accepted, demands to remove others will follow without end, and that public spaces will become battlegrounds for competing interpretations of history rather than places that people of different backgrounds can share.",
+      "Between removal and preservation, a number of alternative approaches have been proposed. Some cities have added plaques or information boards that explain the full history of the person represented, including the harm they caused. Others have commissioned new artworks to stand alongside existing statues, presenting perspectives that were previously absent from public spaces. Still others have established public consultations, inviting residents to discuss and vote on the future of particular monuments, so that decisions reflect the views of the community as a whole. Such approaches take longer than simple removal, but they may produce decisions that more residents are willing to accept.",
+      "The debate over statues ultimately reflects a deeper question about how societies should relate to their own past. History is not a fixed set of facts but a continuing conversation in which each generation reconsiders what deserves to be remembered and how. Public monuments, standing at the center of shared spaces, give that conversation a physical form. Whether they are removed, preserved, or reinterpreted, the decisions made about them reveal much about the values a society wishes to uphold and the kind of community it hopes to become.",
+    ],
+    ja: [
+      '世界中の都市で、歴史上の人物の像が広場や公園や公共の建物の前に立っている。その多くは、当時たたえられた業績をもつ指導者や兵士や恩人を記念するために、何世代も前に建てられた。しかし近年、これらの像の一部は激しい論争の的になっている。人々が、奴隷制や植民地での暴力や少数派への迫害へのかかわりなど、像が記念する人物の生涯の暗い面に注意を向けたからである。これにこたえて、取りのぞかれた像もあれば、続く抗議のなかで立ち続けている像もある。',
+      '撤去を支持する人々は、公共の像は歴史の中立的な記録ではなく、敬意の表れだと主張する。ある人物を中心の広場の台座の上に置くことは、その人をあこがれに値する人として示すことであり、祖先がそうした人物の手で苦しめられた地域の人々にとって、こうした記念碑を毎日目にすることは深い苦しみであるかもしれない。像を取りのぞくことは、歴史を消すことではなく、社会がそれをどうたたえるかを変えることであり、像が最初に建てられてから育ってきた価値観を反映するものだと支持する人々は主張する。結局のところ、像が建てられたときに前の世代が自分たちで選んだように、社会はもっとも目立つ公共の場所でだれをたたえるかを自由に決められるのである。',
+      '支持する人々はまた、これまでにも歴史の知識を失うことなく像がしばしば取りのぞかれてきたと指摘する。政治の体制が変わると、かつての支配者の記念碑はしばしば取りこわされるが、その結果として歴史がわすれられたと主張する人はほとんどいない。像は価値ある歴史的な物かもしれないが、博物館で保存でき、そこではそれがあらわす人物をよりゆたかで正直な文脈のなかに置く説明とともに展示できると支持する人々は主張する。',
+      'しかし撤去を批判する人々は、歴史上の人物を今日の基準で判断することは不公平で誤解をまねくかもしれないと警告する。大きなことをなしとげた人々の多くは、今では受け入れられないとされる考えをもっていたり、そうした慣行にかかわったりしていたのであり、不完全な人物の像がすべて取りのぞかれるなら、残るものはほとんどないかもしれない。批判する人々はまた、公共の記念碑は居心地が悪いからこそふり返りや議論をうながすことができ、それを取りのぞくと、社会が過去の不正に向き合うのではなく、それをわすれやすくなるかもしれないと主張する。',
+      '批判する人々はさらに、だれが決める権限をもつべきかを問う。抗議にこたえて像がすばやく取りのぞかれると、きちんとした公の議論なしに決定がなされるかもしれず、多くの住民が自分の意見が無視されたと感じることになる。一つの像の撤去が受け入れられると、ほかの像の撤去を求める声がきりなく続き、公共の空間が、さまざまな背景をもつ人々が分かち合える場所ではなく、歴史の解釈をめぐって争う戦場になってしまうのではないかと心配する人もいる。',
+      '撤去と保存のあいだで、いくつかの別のやり方が提案されてきた。像があらわす人物が引き起こした害をふくむ、その歴史の全体を説明する銘板や案内板をくわえた都市もある。これまで公共の空間に欠けていた見方を示す新しい芸術作品を、今ある像のとなりに置くよう依頼した都市もある。さらに、住民が特定の記念碑の今後について話し合い投票するよう求める公の意見聴取を設け、決定が地域全体の意見を反映するようにした都市もある。こうしたやり方は単に取りのぞくより時間がかかるが、より多くの住民が受け入れられる決定を生むかもしれない。',
+      '像をめぐる議論は、結局のところ、社会が自分自身の過去とどう向き合うべきかという、より深い問いを反映している。歴史は決まった事実の集まりではなく、それぞれの世代が何を、どのように記憶するに値するかを考え直す、続いていく会話である。共有の空間の中心に立つ公共の記念碑は、その会話に形をあたえる。それが取りのぞかれるにせよ、保存されるにせよ、解釈し直されるにせよ、それについてなされる決定は、社会が守りたい価値観や、なりたいと願う地域のあり方について多くを明らかにするのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「像は価値ある歴史的な物かもしれないが、博物館で保存できる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of removal argue that statues are expressions of ( 1 ) and can be preserved in museums. Critics warn that judging the past by present-day standards may be unfair and question who should have the ( 2 ) to decide. Alternatives include adding plaques and holding public ( 3 ).',
+      blanks: [
+        { choices: ['honor', 'anger', 'wealth', 'fear'], answer: 0, why: '第2段落 not neutral records of history but expressions of honor。' },
+        { choices: ['authority', 'money', 'time', 'skill'], answer: 0, why: '第5段落 who should have the authority to decide。' },
+        { choices: ['consultations', 'concerts', 'elections', 'trials'], answer: 0, why: '第6段落 have established public consultations。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの像は、何世代も前に建てられた。', answer: true, why: '第1段落 Many were erected generations ago。' },
+      { statement: '支持する人々によれば、像を取りのぞくことは歴史を消すことである。', answer: false, why: '第2段落 Removing them ... does not erase history。' },
+      { statement: '批判する人々は、居心地の悪い記念碑がふり返りをうながしうると考えている。', answer: true, why: '第4段落 public monuments can prompt reflection ... precisely because they are uncomfortable。' },
+      { statement: '筆者によれば、歴史は決まった事実の集まりである。', answer: false, why: '第7段落 History is not a fixed set of facts。' },
+    ],
+    qa: [
+      { q: 'Why may statues removed quickly in response to protests cause problems, according to critics?', choices: ['Decisions may be made without proper public debate.', 'The statues are too heavy.', 'Museums refuse them.', 'Tourists stop visiting.'], answer: 0, why: '第5段落 decisions may be made without proper public debate。' },
+      { q: 'What have some cities commissioned?', choices: ['New artworks to stand alongside existing statues.', 'Larger statues of the same people.', 'Walls to hide the statues.', 'Copies of every statue.'], answer: 0, why: '第6段落 commissioned new artworks to stand alongside existing statues。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
