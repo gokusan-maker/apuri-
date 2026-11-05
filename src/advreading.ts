@@ -33902,6 +33902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-recognition',
+    title: 'The Need for Recognition',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Human beings need food, shelter, and safety, but they also need something less tangible: to be recognized by others. We want our efforts to be noticed, our opinions to be taken seriously, and our identities to be respected. When this recognition is denied, people may feel humiliated or invisible, even if their material needs are met. Some philosophers have argued that the desire for recognition is one of the fundamental forces shaping both individual lives and the history of societies, driving struggles that cannot be explained by economic interests alone.",
+      "Recognition takes several forms. In close relationships, we seek to be loved and cared for as the particular individuals we are. In society at large, we seek to be treated as equals, possessing the same rights and dignity as everyone else. And in our work and communities, we seek esteem for our contributions, the sense that what we do is valued by others. Each form of recognition supports a different aspect of a person's sense of self, and each can be damaged in different ways. A person may be deeply loved at home yet treated with contempt at work, or respected as a citizen yet ignored by those closest to him or her.",
+      "The denial of recognition can cause deep harm. A child who is never praised or comforted may struggle to develop confidence. A group whose members are treated as inferior by law or custom may come to doubt its own worth. ( A ) such harms are less visible than physical injuries, they can shape a person's entire outlook on life, limiting what he or she believes to be possible and fostering resentment toward those who withhold respect.",
+      "Many social movements can be understood as struggles for recognition. Campaigns for equal rights by women, ethnic minorities, and other groups have sought not only material improvements but also acknowledgment of their equal standing in society. In such cases, demands for recognition are closely connected to demands for justice. A society that fails to recognize some of its members as equals may suffer conflict and instability, even if it is prosperous. History offers many examples of conflicts that began not with hunger but with a deep sense of having been treated as less than equal.",
+      "Yet the pursuit of recognition can also become problematic. When people seek recognition primarily through comparison with others, they may enter an endless competition for status, in which each person's gain is another's loss. Modern social media can intensify this dynamic, encouraging people to measure their worth by the attention they receive. Recognition that depends on constant approval from strangers may be fragile, leaving people anxious and dissatisfied however much attention they attract. Lasting recognition, by contrast, usually grows from relationships in which people know and value one another over time.",
+      "There is also a tension between recognition of difference and recognition of equality. Some groups demand that their particular identities, languages, or traditions be acknowledged and protected, while others fear that emphasizing differences may divide societies and undermine the idea that all citizens are equal regardless of background. Balancing these demands requires careful judgment, since both the denial of difference and the denial of equality can be experienced as forms of disrespect.",
+      "Perhaps the most important insight is that recognition is not a scarce resource to be won from others, but something that can be given freely. Acknowledging the efforts and dignity of those around us costs little, yet it can make a great difference to their lives. A society in which people regularly offer such recognition, in families, schools, workplaces, and public life, may be not only more just but also more humane, allowing each person to develop a secure sense of his or her own worth.",
+    ],
+    ja: [
+      '人間には食べ物や住まいや安全が必要だが、もっと目に見えにくいものも必要である。それは他人から認められることである。私たちは、自分の努力に気づいてもらい、自分の意見を真剣に受けとめてもらい、自分のあり方を尊重してもらいたいと願う。この承認がこばまれると、物質的な必要が満たされていても、人は辱められたとか、見えない存在だとか感じるかもしれない。承認を求める欲求は、個人の人生と社会の歴史の両方を形づくる根本的な力の一つであり、経済的な利害だけでは説明できないたたかいを動かしていると主張した哲学者もいる。',
+      '承認にはいくつかの形がある。親しい関係では、私たちはかけがえのない一人の個人として愛され、気づかわれることを求める。社会全体では、ほかのだれとも同じ権利と尊厳をもつ対等な者としてあつかわれることを求める。そして仕事や共同体では、自分の貢献が評価されること、つまり自分のすることがほかの人々に大切にされているという感覚を求める。それぞれの承認の形は、人の自己の感覚のちがう面をささえており、それぞれちがうしかたで傷つけられうる。人は家では深く愛されながら職場では軽べつされたり、市民としては尊重されながら最も身近な人々には無視されたりすることがある。',
+      '承認がこばまれると、深い害が生じうる。一度もほめられたりなぐさめられたりしたことのない子どもは、自信を育てるのに苦労するかもしれない。法律や慣習によって劣った者としてあつかわれる集団の成員は、自分たちの価値を疑うようになるかもしれない。そうした害は体のけがよりも目に見えにくいが、人の人生の見方全体を形づくり、その人が可能だと信じることを制限し、尊重をあたえない人々へのうらみを育てうる。',
+      '多くの社会運動は、承認を求めるたたかいとして理解できる。女性や民族的な少数派やほかの集団による平等な権利を求める運動は、物質的な改善だけでなく、社会での対等な地位を認められることも求めてきた。そのような場合、承認の要求は正義の要求と深く結びついている。成員の一部を対等な者として認めない社会は、豊かであっても、対立や不安定に苦しむかもしれない。歴史には、飢えからではなく、対等でない者としてあつかわれてきたという深い感覚から始まった対立の例が数多くある。',
+      'しかし、承認の追求が問題になることもある。人々がおもに他人との比較を通じて承認を求めると、一人の得がほかの人の損になる、地位をめぐる終わりのない競争に入ってしまうかもしれない。現代のソーシャルメディアはこの力学を強め、受ける注目によって自分の価値をはかるよう人々をうながしうる。見知らぬ人々からのたえまない賛同に頼る承認はもろいかもしれず、どれほど注目を集めても、人々を不安で満たされないままにしてしまうかもしれない。対照的に、長続きする承認は、ふつう、人々が時間をかけてたがいを知り大切にし合う関係から育つ。',
+      'ちがいの承認と平等の承認とのあいだにも緊張がある。自分たちの特定のあり方や言語や伝統を認め守ってほしいと求める集団もあれば、ちがいを強調することが社会を分断し、背景にかかわらずすべての市民は平等だという考えをくずすのではないかとおそれる人々もいる。こうした要求のつりあいをとるには注意深い判断が必要である。ちがいを否定することも平等を否定することも、どちらも敬意を欠くことの形として経験されうるからである。',
+      'おそらく最も大切な洞察は、承認は他人から勝ちとるべき乏しい資源ではなく、自由にあたえることのできるものだということである。まわりの人々の努力や尊厳を認めることにはほとんど費用がかからないが、それは彼らの人生に大きなちがいを生みうる。家族や学校や職場や公の生活で、人々がふだんからそうした承認をあたえ合う社会は、より正しいだけでなく、より人間的でもあり、一人ひとりが自分の価値についての安定した感覚を育てられるようにするかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした害は目に見えにくいが、人生の見方全体を形づくる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、承認がこばまれると、物質的な必要が満たされていても人は辱められたと感じうる。', answer: true, why: '第1段落 even if their material needs are met。' },
+      { statement: '承認にはただ一つの形しかない。', answer: false, why: '第2段落 Recognition takes several forms。' },
+      { statement: '多くの社会運動は承認を求めるたたかいとして理解できる。', answer: true, why: '第4段落 Many social movements can be understood as struggles for recognition。' },
+      { statement: '筆者によれば、承認は他人から勝ちとるべき乏しい資源である。', answer: false, why: '第7段落 recognition is not a scarce resource to be won from others。' },
+    ],
+    qa: [
+      { q: 'Why may recognition that depends on approval from strangers be fragile?', choices: ['It can leave people anxious however much attention they get.', 'It is always permanent.', 'Strangers never give approval.', 'It is protected by law.'], answer: 0, why: '第5段落 leaving people anxious and dissatisfied however much attention they attract。' },
+      { q: 'What tension does the sixth paragraph describe?', choices: ['Between recognition of difference and recognition of equality.', 'Between rich and poor countries.', 'Between work and leisure.', 'Between science and art.'], answer: 0, why: '第6段落 a tension between recognition of difference and recognition of equality。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
