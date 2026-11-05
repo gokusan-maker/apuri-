@@ -2752,3 +2752,10 @@ it('誤文訂正〈193〉：国公立レベル hard・hardly・late・lately の
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('hard')
 })
+
+it('正誤問題〈200〉：東大レベル It takes・It costs の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-it-takes-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) walking to the station')
+})

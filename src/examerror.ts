@@ -4754,6 +4754,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) There are (B) times (C) which (D) I feel lonely.', choices: ['(A) There are', '(B) times', '(C) which', '(D) I feel lonely'], answer: 2, why: 'I feel lonely at those times なので時の関係副詞 when。' },
     ],
   },
+  {
+    id: 'exam-error-it-takes-todai',
+    title: '入試の正誤問題〈200〉（東大レベル：英作文の It takes ～ to do・It costs）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「（人が）～するのに（時間が）かかる」は It takes（＋人）＋時間＋ to do、「（人が）～するのに（お金が）かかる」は It costs（＋人）＋お金＋ to do。主語は It で、to のあとは動詞の原形。cost ＋人＋お金の「人」の前に to をつけない。物が主語のときは This bag cost me 3,000 yen. のように言える。spend は人が主語で、I spent three hours finishing it. の形になる。疑問文は How long does it take to ～? の語順。',
+    ],
+    examples: [
+      { en: 'It takes ten minutes to walk to the station.', ja: '駅まで歩いて10分かかる。' },
+      { en: 'It cost him 500 yen to buy the book.', ja: 'その本を買うのに彼は500円かかった。' },
+    ],
+    questions: [
+      { sentence: '(A) It (B) takes (C) ten minutes (D) walking to the station.', choices: ['(A) It', '(B) takes', '(C) ten minutes', '(D) walking to the station'], answer: 3, why: 'It takes ＋時間＋ to do「～するのに（時間が）かかる」。to walk。' },
+      { sentence: '(A) It (B) spent (C) me three hours (D) to finish the work.', choices: ['(A) It', '(B) spent', '(C) me three hours', '(D) to finish the work'], answer: 1, why: '時間がかかるのは It took ＋人＋時間＋ to do。spend は人が主語。' },
+      { sentence: '(A) How long (B) it takes (C) to get (D) to the airport?', choices: ['(A) How long', '(B) it takes', '(C) to get', '(D) to the airport?'], answer: 1, why: '疑問文なので語順は does it take。How long does it take to get ～?' },
+      { sentence: '(A) It cost (B) him (C) 500 yen (D) buying the book.', choices: ['(A) It cost', '(B) him', '(C) 500 yen', '(D) buying the book'], answer: 3, why: 'It costs ＋人＋お金＋ to do。to buy the book。' },
+      { sentence: '(A) This bag (B) took (C) me (D) 3,000 yen.', choices: ['(A) This bag', '(B) took', '(C) me', '(D) 3,000 yen'], answer: 1, why: 'お金がかかるのは cost。This bag cost me 3,000 yen。' },
+      { sentence: '(A) It costs (B) a lot of money (C) to repairing (D) the car.', choices: ['(A) It costs', '(B) a lot of money', '(C) to repairing', '(D) the car'], answer: 2, why: 'to のあとは動詞の原形。to repair。' },
+      { sentence: '(A) There (B) takes (C) about two days (D) to learn the basics.', choices: ['(A) There', '(B) takes', '(C) about two days', '(D) to learn the basics'], answer: 0, why: '「～するのに時間がかかる」の主語は It。It takes about two days。' },
+      { sentence: '(A) It will take (B) you (C) at least a week (D) for read this book.', choices: ['(A) It will take', '(B) you', '(C) at least a week', '(D) for read this book'], answer: 3, why: 'It takes ＋人＋時間＋ to do。to read this book。' },
+      { sentence: '(A) The repair (B) cost (C) to me (D) a lot of money.', choices: ['(A) The repair', '(B) cost', '(C) to me', '(D) a lot of money'], answer: 2, why: 'cost ＋人＋お金で、to は不要。cost me a lot of money。' },
+      { sentence: '(A) It takes (B) many time (C) to become (D) a good doctor.', choices: ['(A) It takes', '(B) many time', '(C) to become', '(D) a good doctor'], answer: 1, why: 'time「時間」は数えられない名詞なので many は使えない。a lot of time。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
