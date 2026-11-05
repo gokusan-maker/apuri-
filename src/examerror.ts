@@ -4418,6 +4418,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Whether (B) you agree (C) and not, (D) we must decide today.', choices: ['(A) Whether', '(B) you agree', '(C) and not,', '(D) we must decide today'], answer: 2, why: 'whether A or B「A であれ B であれ」。or not。' },
     ],
   },
+  {
+    id: 'exam-error-there-is-kokuritsu',
+    title: '入試の正誤問題〈186〉（国公立レベル：There is 構文と主語の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'There is（are）～ の文では、動詞のあとの名詞が主語。主語が単数・数えられない名詞なら is（was・has been）、複数なら are（were・have been）。There seem(s) to be ～・There used to be ～・There will be ～ でも主語に合わせる。疑問文は Is（Are）there ～?。a lot of・some・any のあとの名詞が数えられるかどうかで判断する。',
+    ],
+    examples: [
+      { en: 'There are many books on the desk.', ja: '机の上にたくさんの本がある。' },
+      { en: 'There is a little milk left.', ja: '牛乳が少し残っている。' },
+    ],
+    questions: [
+      { sentence: '(A) There (B) is many (C) books (D) on the desk.', choices: ['(A) There', '(B) is many', '(C) books', '(D) on the desk'], answer: 1, why: '主語 many books は複数なので There are many。' },
+      { sentence: '(A) There are (B) a lot of (C) water (D) in the glass.', choices: ['(A) There are', '(B) a lot of', '(C) water', '(D) in the glass'], answer: 0, why: '主語 water は数えられないので There is a lot of water。' },
+      { sentence: '(A) There (B) was (C) three students (D) in the room.', choices: ['(A) There', '(B) was', '(C) three students', '(D) in the room'], answer: 1, why: '主語 three students は複数なので There were。' },
+      { sentence: '(A) There are (B) some (C) child (D) playing in the park.', choices: ['(A) There are', '(B) some', '(C) child', '(D) playing in the park'], answer: 2, why: 'There are のあとは複数名詞。some children。' },
+      { sentence: '(A) There (B) has been (C) many changes (D) in the town.', choices: ['(A) There', '(B) has been', '(C) many changes', '(D) in the town'], answer: 1, why: '主語 many changes は複数なので There have been。' },
+      { sentence: '(A) There (B) seems to be (C) some problems (D) with the plan.', choices: ['(A) There', '(B) seems to be', '(C) some problems', '(D) with the plan'], answer: 1, why: '主語 some problems は複数なので There seem to be。' },
+      { sentence: '(A) Is there (B) any (C) students (D) in the classroom?', choices: ['(A) Is there', '(B) any', '(C) students', '(D) in the classroom?'], answer: 0, why: '主語 students は複数なので Are there any students。' },
+      { sentence: '(A) There (B) will be (C) a meeting (D) at tomorrow.', choices: ['(A) There', '(B) will be', '(C) a meeting', '(D) at tomorrow'], answer: 3, why: 'tomorrow の前に前置詞は不要。There will be a meeting tomorrow。' },
+      { sentence: '(A) There (B) are (C) a little (D) milk left.', choices: ['(A) There', '(B) are', '(C) a little', '(D) milk left'], answer: 1, why: '主語 milk は数えられないので There is a little milk left。' },
+      { sentence: '(A) There is (B) nobody (C) who (D) know the answer.', choices: ['(A) There is', '(B) nobody', '(C) who', '(D) know the answer'], answer: 3, why: '先行詞 nobody は単数扱い。who knows。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

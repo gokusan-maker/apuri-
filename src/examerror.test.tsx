@@ -2556,3 +2556,10 @@ it('誤文訂正〈179〉：京大レベル 二重目的語の書きかえの単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('explain the rules to me')
 })
+
+it('正誤問題〈186〉：国公立レベル There is 構文の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-there-is-kokuritsu')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) is many')
+})
