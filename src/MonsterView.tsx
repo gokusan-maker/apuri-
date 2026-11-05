@@ -2839,6 +2839,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 64 q24 8 48 0" fill="none" stroke="#1f1712" strokeWidth="2" />
       </g>
     )
+  if (species === 'blackfootedcat')
+    return (
+      <g>
+        {/* 黒い足の裏 */}
+        <ellipse cx="34" cy="84" rx="5" ry="2.5" fill="#111827" />
+        <ellipse cx="62" cy="84" rx="5" ry="2.5" fill="#111827" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
