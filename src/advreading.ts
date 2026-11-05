@@ -35822,6 +35822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-old-age',
+    title: 'The Gifts of Old Age',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern societies often celebrate youth. Advertising presents young faces as the image of beauty and energy, workplaces may favor younger employees, and popular culture frequently treats aging as a problem to be delayed, hidden, or overcome. Against this background, old age is commonly described in terms of loss: the decline of physical strength, the fading of memory, and the gradual narrowing of opportunities. Yet such descriptions, however accurate in part, may overlook what later life can offer, both to those who live it and to the societies around them.",
+      "It is true that aging brings real difficulties. Bodies become more fragile, illnesses become more common, and many older people experience the loss of friends and partners. To deny these hardships would be neither honest nor kind. However, research on well-being has produced a result that surprises many people. In a number of countries, surveys suggest that reported happiness tends to dip in middle age and then rise again in later life, so that many people in their sixties and seventies describe themselves as more content than they were in their forties.",
+      "Several explanations have been proposed for this pattern. One is that older people, aware that their time is limited, tend to focus on what matters most to them, spending more time with close friends and family and less on relationships or activities that bring little satisfaction. ( A ) this narrowing of focus might appear to be a loss, it may in fact allow older people to concentrate their energy on experiences that are genuinely meaningful, rather than spreading it thinly across many demands.",
+      "Another possible explanation concerns the accumulation of experience. Having lived through many difficulties, older people may have developed ways of managing strong emotions and may be less easily troubled by setbacks that would have seemed overwhelming when they were younger. This kind of emotional skill is not the same as wisdom, but it may be one of its components, allowing a person to view problems in a broader context and to recognize that many troubles, however painful, eventually pass.",
+      "Old age can also bring a particular kind of freedom. Released from the pressures of building a career or raising young children, many older people find time to pursue interests they had long set aside, to learn new skills, or to contribute to their communities as volunteers, mentors, or caregivers. Their knowledge and experience can be valuable resources for younger generations, and societies that fail to make use of them may lose a great deal. A grandparent who teaches a child to cook a family recipe, or a retired engineer who helps young people repair a machine, passes on knowledge that no textbook can fully contain.",
+      "None of this is to suggest that later life is always fulfilling. Poverty, loneliness, and poor health can make old age extremely difficult, and these problems are not distributed equally. Many older people also face prejudice, being treated as less capable or less important simply because of their age. Whether old age can offer its potential gifts depends in large part on social conditions, such as access to health care, financial security, and opportunities for meaningful participation in community life.",
+      "Perhaps, then, the way a society views old age reflects its deeper values. A culture that measures human worth mainly by productivity and appearance is likely to see aging only as decline. A culture that also values experience, relationships, and reflection may recognize that every stage of life has its own character and its own contributions to make. Since most of us hope to grow old, learning to see later life more fully is not only a matter of fairness to others but also a way of preparing for our own future.",
+    ],
+    ja: [
+      '現代社会はしばしば若さをたたえる。広告は若い顔を美しさと活力の象徴として示し、職場は若い社員を好むことがあり、大衆文化は年をとることを、おくらせたり、かくしたり、乗りこえたりすべき問題としてあつかうことが多い。こうした背景のなかで、老いはふつう、体力のおとろえや記憶のうすれや機会がしだいにせばまることといった、失うものの観点から語られる。しかし、そうした語り方は、一部は正確であっても、人生の後半が、それを生きる人々とまわりの社会の両方にあたえうるものを見落としているのかもしれない。',
+      '年をとることが本当の困難をもたらすのは事実である。体はより弱くなり、病気はより多くなり、多くのお年寄りは友人や連れ合いを失う経験をする。こうした苦しみを否定するのは正直でも親切でもないだろう。しかし、幸福についての研究は、多くの人をおどろかせる結果を生んできた。いくつもの国で、調査によれば、感じている幸福は中年でいったん下がり、人生の後半で再び上がる傾向があり、60代や70代の多くの人が、40代のころより満ちたりていると自分を語っている。',
+      'この型についてはいくつかの説明が出されている。一つは、残された時間がかぎられていることに気づいているお年寄りは、自分にとってもっとも大切なことに集中しがちで、親しい友人や家族と多くの時間をすごし、満足をほとんどもたらさない関係や活動にはあまり時間をかけないということである。この焦点のせばまりは失うことのように見えるかもしれないが、実際には、多くのもとめに力をうすく広げるのではなく、本当に意味のある経験に力を集中できるようにしているのかもしれない。',
+      'もう一つの可能な説明は、経験の積み重ねにかかわる。多くの困難を生きぬいてきたお年寄りは、強い感情をあつかう方法を身につけており、若いころなら圧倒されるように思えたつまずきにも、あまり心を乱されないかもしれない。この種の感情の技能は知恵と同じではないが、その一部なのかもしれず、人が問題をより広い文脈のなかで見て、多くの悩みはどれほどつらくてもやがてすぎさると認められるようにしてくれる。',
+      '老いはまた、ある種の自由をもたらしうる。仕事をきずいたり幼い子どもを育てたりする重圧からときはなたれて、多くのお年寄りは、長いあいだわきに置いていた興味を追ったり、新しい技能を学んだり、ボランティアや助言者や世話をする人として地域に貢献したりする時間を見つける。彼らの知識と経験は若い世代にとって価値ある資源になりうるのであり、それを生かせない社会は多くを失うかもしれない。家族の料理を子どもに教える祖父母や、若者が機械を修理するのを手伝う引退した技術者は、どんな教科書にもすっかりはおさめきれない知識を受けわたしているのである。',
+      'これは、人生の後半がいつも満ちたりたものだということではない。貧困や孤独や健康の悪さは老いをきわめて難しくすることがあり、こうした問題は平等に分けられているわけではない。多くのお年寄りはまた、年齢だけを理由に、能力が低い、あるいは大切でない者としてあつかわれるという偏見に直面している。老いがその可能な贈り物をあたえられるかどうかは、医療を受けられること、経済的な安心、地域の暮らしに意味あるかたちで参加する機会のような、社会の条件に大きくかかっている。',
+      'だとすれば、社会が老いをどう見るかは、その社会のより深い価値観を反映しているのかもしれない。人間の価値を主に生産性と見た目ではかる文化は、年をとることを衰退としてしか見ないだろう。経験や関係やふり返りも大切にする文化は、人生のどの段階にも独自の性格と独自の貢献があると認めるかもしれない。私たちのほとんどは年をとることを望んでいるのだから、人生の後半をより十分に見られるようになることは、ほかの人への公平さの問題であるだけでなく、自分自身の未来にそなえる方法でもある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「焦点のせばまりは失うことのように見えるかもしれないが、意味ある経験に集中できる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '調査によれば、感じている幸福は中年で下がり、人生の後半で再び上がる傾向がある。', answer: true, why: '第2段落 reported happiness tends to dip in middle age and then rise again in later life。' },
+      { statement: '筆者は、年をとることの困難を否定している。', answer: false, why: '第2段落 To deny these hardships would be neither honest nor kind。' },
+      { statement: '多くのお年寄りは、長いあいだわきに置いていた興味を追う時間を見つける。', answer: true, why: '第5段落 find time to pursue interests they had long set aside。' },
+      { statement: '筆者によれば、人生の後半はいつも満ちたりたものである。', answer: false, why: '第6段落 None of this is to suggest that later life is always fulfilling。' },
+    ],
+    qa: [
+      { q: 'What is one explanation for the rise in happiness in later life?', choices: ['Older people focus on what matters most to them.', 'Older people have more money than anyone.', 'Older people never feel sad.', 'Older people work longer hours.'], answer: 0, why: '第3段落 tend to focus on what matters most to them。' },
+      { q: 'What kind of culture is likely to see aging only as decline?', choices: ['One that measures worth by productivity and appearance.', 'One that values experience and reflection.', 'One that respects every stage of life.', 'One that has many older people.'], answer: 0, why: '第7段落 A culture that measures human worth mainly by productivity and appearance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
