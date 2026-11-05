@@ -34382,6 +34382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-celebration',
+    title: 'Why We Celebrate',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every human society celebrates. Birthdays and weddings, harvests and new years, victories and religious festivals mark moments that people regard as worthy of special attention. Celebrations often involve shared meals, music, decorations, and gifts, and they may require considerable time, effort, and expense. From a purely practical point of view, such activities might seem unnecessary, even wasteful. Yet their persistence across cultures and centuries suggests that celebration answers needs that are deeply rooted in human life.",
+      "One of the most obvious functions of celebration is to mark the passage of time. Days, seasons, and years might otherwise flow into one another without distinction. By setting aside particular days for special observance, celebrations give time a rhythm and a shape, allowing people to measure their lives and to notice changes they might otherwise overlook. A birthday reminds us that another year has passed, and a new year invites reflection on what has been achieved and what remains to be done. Without such markers, years might pass almost unnoticed, and people might find it harder to recognize how much they and those around them have changed.",
+      "Celebrations also strengthen social bonds. When people gather to celebrate, they affirm their membership in a family, a community, or a nation. Shared rituals create a sense of belonging and continuity, linking participants not only to one another but also to past generations who celebrated in similar ways. ( A ) the specific customs may change over time, the experience of celebrating together can give people a feeling that they are part of something larger and more lasting than their individual lives.",
+      "In addition, celebration offers a way of expressing gratitude and joy. Many festivals originated as occasions for giving thanks, whether for a good harvest, the birth of a child, or survival through difficult times. Celebrating good fortune openly may help people to appreciate what they have, rather than taking it for granted. At the same time, celebration allows emotions that are normally restrained in daily life to be expressed freely, offering relief from the routines and pressures of ordinary existence. In this way, festivals may help people return to their daily tasks with renewed energy and a fresh sense of purpose.",
+      "Yet celebrations can also have darker sides. They may exclude those who do not share a particular culture or belief, reinforcing divisions rather than bridging them. Commercial pressures can transform celebrations into occasions for excessive spending, turning expressions of affection into obligations that cause stress and debt. For people who are lonely or grieving, times of collective celebration may intensify feelings of isolation, since the joy of others can make their own sorrow more painful.",
+      "Modern life has changed the ways in which people celebrate. In many societies, traditional festivals connected with farming or religion have lost some of their importance, while new celebrations, such as those connected with sports or popular culture, have emerged. Social media allows people to share their celebrations with a wide audience, but it may also encourage them to focus on how their celebrations appear to others rather than on the experience itself. Yet the basic impulse to gather and mark important moments seems to remain as strong as ever, even as its forms continue to change.",
+      "Perhaps the deepest value of celebration lies in its ability to remind us that life is not only a matter of work and necessity. By pausing to mark significant moments, we acknowledge that certain events deserve attention for their own sake, and that joy, gratitude, and companionship are worth cultivating. Celebrations, in this sense, are not distractions from serious life but expressions of what makes life worth living, and the care with which we celebrate may reveal what we truly value, and whom we hold most dear.",
+    ],
+    ja: [
+      'どの人間の社会も祝う。誕生日や結婚式、収穫や新年、勝利や宗教の祭りは、人々が特別な注意に値するとみなす瞬間を区切る。祝いごとにはしばしば、いっしょにとる食事や音楽や飾りやおくりものがともない、かなりの時間や手間や費用が必要になることもある。純粋に実際的な観点からは、そうした活動は不要に、むだにさえ思えるかもしれない。しかし、それが文化や世紀をこえて続いていることは、祝うことが人間の生活に深く根ざした必要にこたえていることを示唆している。',
+      '祝うことの最も明らかな役割の一つは、時の流れに区切りをつけることである。日々や季節や年は、そうでなければ区別なくたがいに流れこんでしまうかもしれない。特別な日を決めてとくに祝うことで、祝いごとは時間にリズムと形をあたえ、人々が自分の人生をはかり、そうでなければ見落とすかもしれない変化に気づけるようにする。誕生日はまた一年が過ぎたことを思い出させ、新年は何が成しとげられ、何がまだ残っているかをふり返るよう誘う。そうした区切りがなければ、年月はほとんど気づかれないまま過ぎてしまうかもしれず、自分やまわりの人々がどれほど変わったかに気づくのがむずかしくなるかもしれない。',
+      '祝いごとはまた、社会的なきずなを強める。人々が祝うために集まるとき、自分が家族や共同体や国の一員であることを確かめる。共有された儀式は所属と連続の感覚を生み、参加者をたがいに結びつけるだけでなく、似たしかたで祝ってきた過去の世代とも結びつける。具体的な習慣は時とともに変わるかもしれないが、いっしょに祝う経験は、人々に、自分が個人の人生より大きく長続きする何かの一部だという感覚をあたえうる。',
+      'さらに、祝うことは感謝と喜びを表す方法をあたえる。多くの祭りは、豊かな収穫のためであれ、子どもの誕生のためであれ、苦しい時期を生きのびたことのためであれ、感謝をささげる機会として始まった。幸運を公然と祝うことは、人々が自分のもっているものを当たり前と思うのではなく、ありがたく思う助けになるかもしれない。同時に、祝いごとは、ふだんの生活ではおさえられている感情を自由に表すことを許し、ふつうの暮らしの決まりきった日常や圧力からの解放をあたえる。このようにして、祭りは人々が新たな力と目的の感覚をもって日々の仕事にもどる助けになるかもしれない。',
+      'しかし祝いごとには暗い面もある。特定の文化や信仰を共有しない人々をしめ出し、分断に橋をかけるのではなく、それを強めることがある。商業的な圧力は祝いごとを度をこした出費の機会に変え、愛情の表現を、ストレスや借金をもたらす義務に変えてしまうことがある。孤独な人や悲しみの中にある人にとっては、みんなで祝う時期は孤立感を強めるかもしれない。他人の喜びが自分の悲しみをいっそうつらくすることがあるからである。',
+      '現代の生活は、人々の祝い方を変えた。多くの社会で、農業や宗教と結びついた伝統的な祭りはその重要さの一部を失い、スポーツや大衆文化と結びついたもののような新しい祝いごとが生まれている。ソーシャルメディアによって、人々は祝いごとを多くの人と共有できるようになったが、経験そのものよりも、自分の祝いごとが他人にどう見えるかに注意を向けるようにうながすこともある。しかし、集まって大切な瞬間に区切りをつけようとする基本的な衝動は、その形が変わり続けても、これまでと同じように強いままのようである。',
+      'おそらく祝うことの最も深い価値は、人生が仕事や必要だけのものではないことを思い出させてくれる力にある。大切な瞬間に区切りをつけるために立ち止まることで、私たちは、ある出来事がそれ自体のために注意に値し、喜びや感謝や仲間とのつながりは育てる価値があると認める。この意味で、祝いごとはまじめな人生から気をそらすものではなく、人生を生きる価値のあるものにしているものの表れであり、私たちがどれほど心をこめて祝うかは、私たちが本当に何を大切にしているかを明らかにするのかもしれない。そして、だれを最も大切に思っているのかも。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「具体的な習慣は変わるかもしれないが、いっしょに祝う経験は大きな何かの一部だという感覚をあたえる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、祝いごとは時間にリズムと形をあたえる。', answer: true, why: '第2段落 celebrations give time a rhythm and a shape。' },
+      { statement: '祝いごとは参加者を過去の世代と結びつけることはない。', answer: false, why: '第3段落 linking participants ... also to past generations。' },
+      { statement: '孤独な人にとって、みんなで祝う時期は孤立感を強めるかもしれない。', answer: true, why: '第5段落 times of collective celebration may intensify feelings of isolation。' },
+      { statement: '筆者によれば、祝いごとはまじめな人生から気をそらすものにすぎない。', answer: false, why: '第7段落 Celebrations ... are not distractions from serious life。' },
+    ],
+    qa: [
+      { q: 'How did many festivals originate?', choices: ['As occasions for giving thanks.', 'As ways to make money.', 'As punishments.', 'As school events.'], answer: 0, why: '第4段落 Many festivals originated as occasions for giving thanks。' },
+      { q: 'What may social media encourage people to do?', choices: ['Focus on how their celebrations appear to others.', 'Stop celebrating completely.', 'Celebrate only alone.', 'Forget traditional festivals.'], answer: 0, why: '第6段落 focus on how their celebrations appear to others rather than on the experience itself。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
