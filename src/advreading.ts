@@ -33982,6 +33982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-future-generations',
+    title: 'What We Owe the Future',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many of the most important decisions societies make today will affect people who have not yet been born. The way we use energy, manage forests and oceans, handle nuclear waste, and accumulate public debt will shape the world that future generations inherit. Yet these future people cannot vote, protest, or negotiate on their own behalf. Their interests are represented, if at all, only by those living now. This situation raises a difficult moral question: what, if anything, do we owe to people who do not yet exist?",
+      "At first sight, the answer may seem obvious. Most people would agree that it would be wrong to leave behind a poisoned planet, even if those harmed would live centuries from now. Suffering does not become less real because it occurs in the distant future. Yet when we try to state our obligations more precisely, difficulties quickly arise. We do not know who future people will be, how many of them there will be, or what they will value, which makes it hard to say exactly what we should do for them.",
+      "One common approach holds that each generation should leave the world in at least as good a condition as it received it. This principle has intuitive appeal, but it is not easy to apply. The world contains many kinds of goods, such as natural resources, knowledge, institutions, and cultural traditions, and a generation may improve some while damaging others. ( A ) it may be impossible to measure overall progress exactly, the principle at least reminds us that the present generation is not the owner of the world but something more like its temporary caretaker.",
+      "Another difficulty concerns the balance between present and future needs. Resources spent protecting the distant future cannot be used to relieve poverty or illness today. Some economists argue that future generations are likely to be wealthier than we are, and that it would therefore be unfair to ask poorer present people to make great sacrifices for richer future ones. Others reply that some harms, such as the extinction of species or severe climate change, cannot be undone by future wealth, and that these deserve special protection, whatever their cost to the present generation.",
+      "Political institutions are not well designed to address these questions. Elected leaders tend to focus on the next election, and voters naturally care most about problems they can see. As a result, long-term concerns are often postponed until they become urgent. Some countries have experimented with institutions intended to represent the interests of future generations, such as commissioners or committees with the power to review policies for their long-term effects, though the influence of such bodies has generally been limited.",
+      "Perhaps our relationship with future generations is better understood through the idea of inheritance. Just as we have received languages, knowledge, cities, and landscapes from those who came before us, we will pass on what we create and preserve to those who come after. Seen in this way, obligations to the future are not entirely different from the gratitude we may feel toward the past. Both connect us to a story that began long before our own lives and will continue long after them.",
+      "Thinking about future generations may also change how we understand ourselves. If we see our lives only in terms of present satisfaction, long-term responsibilities may seem like a burden. But if we see ourselves as participants in a continuing human project, caring for the future becomes a way of giving our own lives meaning. The question of what we owe to future generations, then, is not only about duty; it is also about the kind of people we wish to be, and the kind of world we hope to leave behind.",
+    ],
+    ja: [
+      '今日社会が下す最も大切な決定の多くは、まだ生まれていない人々に影響をあたえるだろう。エネルギーの使い方、森や海の管理、核のごみのあつかい、公的な借金の積み重ね方は、未来の世代が受けつぐ世界を形づくる。しかし、こうした未来の人々は、自分のために投票することも、抗議することも、交渉することもできない。彼らの利益は、代表されるとしても、今生きている人々によってしか代表されない。この状況は、むずかしい道徳的な問いを提起している。まだ存在しない人々に、私たちは何かを負っているのだろうか、負っているとすれば何をか。',
+      '一見すると、答えは明らかに思えるかもしれない。害を受ける人々が何世紀も先に生きるとしても、毒された地球を残すのはまちがいだということに、ほとんどの人は賛成するだろう。苦しみは、遠い未来に起きるからといって、より現実的でなくなるわけではない。しかし、私たちの義務をもっと正確に述べようとすると、すぐにむずかしさが生じる。未来の人々がだれであり、どれだけいて、何を大切にするのかがわからないので、彼らのために正確に何をすべきかを言うのはむずかしいのである。',
+      'よくある一つの考え方は、それぞれの世代は世界を、受けとったときと少なくとも同じくらいよい状態で残すべきだとする。この原則には直観的な魅力があるが、あてはめるのはかんたんではない。世界には、天然資源、知識、制度、文化の伝統など、多くの種類のよいものがあり、ある世代があるものをよくしながら、別のものをそこなうこともある。全体としての進歩を正確にはかるのは不可能かもしれないが、この原則は少なくとも、今の世代は世界の所有者ではなく、むしろ一時的な管理人のようなものだということを思い出させてくれる。',
+      'もう一つのむずかしさは、現在の必要と未来の必要とのつりあいにかかわる。遠い未来を守るために使われる資源は、今日の貧困や病気を和らげるのに使うことができない。未来の世代は私たちより豊かになる可能性が高く、したがって、より貧しい今の人々に、より豊かな未来の人々のために大きな犠牲をはらうよう求めるのは不公平だろうと主張する経済学者もいる。ほかの人々は、種の絶滅や深刻な気候変動のような害は未来の富によって元にもどせず、特別な保護に値するとこたえる。それが今の世代にどれほどの負担をかけるとしても、である。',
+      '政治の制度は、こうした問いに取り組むようにうまく作られていない。選ばれた指導者は次の選挙に集中しがちであり、有権者は当然、目に見える問題を最も気にかける。その結果、長期的な心配は、さしせまったものになるまでしばしば先のばしにされる。いくつかの国は、政策を長期的な影響の観点から見直す権限をもつ委員や委員会のように、未来の世代の利益を代表することを目的とした制度を試してきたが、そうした機関の影響力は全体として限られてきた。',
+      'おそらく私たちと未来の世代との関係は、受けつぐという考えを通じてよりよく理解できるだろう。私たちが前の人々からことばや知識や都市や風景を受けとってきたように、私たちも自分が作り守るものをあとから来る人々に手わたすだろう。このように見れば、未来への義務は、過去に対して感じるかもしれない感謝とまったくちがうものではない。どちらも私たちを、自分の人生よりずっと前に始まり、ずっとあとまで続く物語につなげているのである。',
+      '未来の世代について考えることは、自分自身の理解のしかたを変えるかもしれない。自分の人生を今の満足の観点からだけ見るなら、長期的な責任は重荷に思えるかもしれない。しかし、自分を続いていく人類の営みの参加者として見るなら、未来を気づかうことは自分自身の人生に意味をあたえる方法になる。それなら、未来の世代に何を負っているのかという問いは、義務についてだけではない。それは、私たちがどんな人間でありたいのか、そしてどんな世界をあとに残したいのかについての問いでもあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「全体の進歩をはかるのは不可能かもしれないが、原則は大切なことを思い出させる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '未来の人々は自分のために投票することができない。', answer: true, why: '第1段落 these future people cannot vote。' },
+      { statement: '筆者によれば、未来の人々がだれで何を大切にするかはよくわかっている。', answer: false, why: '第2段落 We do not know who future people will be。' },
+      { statement: '一部の経済学者は、未来の世代は私たちより豊かになる可能性が高いと主張する。', answer: true, why: '第4段落 future generations are likely to be wealthier than we are。' },
+      { statement: '未来の世代を代表する機関は、強い影響力をもってきた。', answer: false, why: '第5段落 the influence of such bodies has generally been limited。' },
+    ],
+    qa: [
+      { q: 'What does the principle in the third paragraph remind us of?', choices: ['That the present generation is like a temporary caretaker of the world.', 'That we own the world forever.', 'That progress is easy to measure.', 'That resources never run out.'], answer: 0, why: '第3段落 not the owner of the world but something more like its temporary caretaker。' },
+      { q: 'Why are long-term concerns often postponed?', choices: ['Leaders focus on the next election and voters on visible problems.', 'Future problems are always small.', 'There is no information about the future.', 'Laws forbid long-term planning.'], answer: 0, why: '第5段落 Elected leaders tend to focus on the next election, and voters naturally care most about problems they can see。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
