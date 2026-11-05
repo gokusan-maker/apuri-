@@ -36418,6 +36418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-rent-control',
+    title: 'Should Cities Control Rents?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many large cities, rents have risen much faster than incomes in recent decades, making it difficult for ordinary workers, young people, and families to find affordable places to live. Some households spend half or more of their income on rent, leaving little for other needs. In response, several cities have introduced or considered rent control, a policy that limits how much landlords may raise rents each year. Supporters regard it as a necessary protection for tenants, while many economists warn that it may worsen the very problem it is meant to solve.",
+      "Supporters of rent control argue that housing is not an ordinary product but a basic need. When rents rise sharply, tenants may be forced to leave neighborhoods where they have lived for many years, losing contact with friends, schools, and jobs. Elderly residents on fixed incomes are particularly vulnerable to such displacement. By limiting increases, supporters argue, rent control provides stability and allows communities to remain intact, protecting people who would otherwise have little power in negotiations with landlords. Teachers, nurses, and other workers on whom a city depends may otherwise be unable to live anywhere near their workplaces.",
+      "Supporters also point out that the housing market does not always work as smoothly as theory suggests. Building new homes typically takes many years, and in popular cities, demand may rise far faster than supply can respond. ( A ) rent control does not create new housing, supporters argue, it can prevent sudden increases that would push vulnerable tenants out of their homes during periods when the market is unable to provide affordable alternatives. In this sense, rent control may serve as a temporary shield while longer-term solutions are developed.",
+      "Critics, however, argue that rent control reduces the incentive to build and maintain rental housing. If landlords cannot raise rents in line with costs, they may spend less on repairs, allowing buildings to deteriorate, or may convert rental apartments into homes for sale. Developers may also be far less willing to build new rental housing in cities where future rents are restricted. Over time, critics warn, these effects may reduce the supply of housing and make it even harder for newcomers to find a place to live.",
+      "Critics also note that rent control does not always help those who need it most. Tenants who already occupy rent-controlled apartments benefit, regardless of their income, while people searching for housing may face fewer available units and greater competition. Because tenants with controlled rents have strong reasons not to move, even when their homes no longer suit their needs, the housing market may become less flexible over time, making it harder for people to relocate for new jobs or changing family circumstances.",
+      "Between these positions, many experts suggest combining limited protections for tenants with measures to increase the supply of housing. Some cities allow moderate annual increases linked to inflation rather than freezing rents entirely, while others apply controls only to older buildings so that new construction is not discouraged. Governments can also actively support the building of new public or nonprofit housing, offer financial assistance to low-income tenants, and reform planning rules that make it difficult to build new homes.",
+      "The debate over rent control reflects a broader question about how societies should balance markets and fairness in meeting basic needs. Housing, after all, affects not only individual well-being but also the character of cities and the opportunities available to their residents. No single policy is likely to solve the problem of high rents on its own. A combination of protection for existing tenants and serious efforts to build more homes may offer the best chance of ensuring that cities remain places where people of all incomes can afford to live.",
+    ],
+    ja: [
+      '多くの大都市では、ここ数十年で家賃が収入よりはるかに速く上がり、ふつうの働き手や若者や家族が手ごろな住まいを見つけるのが難しくなっている。収入の半分以上を家賃にあて、ほかの必要にほとんど残らない世帯もある。これにこたえて、家主が毎年どれだけ家賃を上げてよいかを制限する家賃規制という政策を取り入れたり、考えたりしている都市もある。支持する人々はそれを借り手に必要な保護と見なすが、多くの経済学者は、それがまさに解決しようとしている問題を悪化させるかもしれないと警告する。',
+      '家賃規制を支持する人々は、住まいはふつうの商品ではなく基本的な必要だと主張する。家賃が急に上がると、借り手は何年も住んできた地域から出ていかざるをえなくなり、友だちや学校や仕事とのつながりを失うかもしれない。決まった収入で暮らすお年寄りは、そうした追い出しにとくに弱い。上がり方を制限することで、家賃規制は安定をもたらし、地域がそのまま残れるようにし、そうでなければ家主との交渉でほとんど力をもたない人々を守ると支持する人々は主張する。そうでなければ、教師や看護師など都市がたよっている働き手が、職場の近くのどこにも住めなくなってしまうかもしれない。',
+      '支持する人々はまた、住宅市場はいつも理論の言うほどなめらかにはたらくわけではないと指摘する。新しい住宅を建てるにはふつう何年もかかり、人気のある都市では、需要が供給の追いつけるよりはるかに速くふえることがある。家賃規制は新しい住宅を生み出さないが、市場が手ごろな代わりを用意できない時期に、弱い立場の借り手を家から追い出すような急な値上げをふせげると支持する人々は主張する。この意味で、家賃規制は、より長い目で見た解決策がつくられるあいだの、一時的な盾の役目をはたしうる。',
+      'しかし批判する人々は、家賃規制は賃貸住宅を建てたり手入れしたりする動機をへらすと主張する。費用に合わせて家賃を上げられないと、家主は修理にかけるお金をへらして建物を傷むにまかせたり、賃貸の部屋を売り物の住宅に変えたりするかもしれない。開発業者もまた、ずっと将来の家賃が制限される都市では新しい賃貸住宅を建てたがらなくなるかもしれない。時がたつにつれて、こうした影響が住宅の供給をへらし、新しく来た人が住まいを見つけるのをさらに難しくするかもしれないと批判する人々は警告する。',
+      '批判する人々はまた、家賃規制がもっとも必要とする人々をいつも助けるわけではないと指摘する。すでに家賃規制のある部屋に住んでいる借り手は、収入にかかわらず得をする一方で、住まいをさがしている人々は、空いている部屋が少なくなり、競争がはげしくなるかもしれない。家賃が規制されている借り手は、住まいがもう自分の必要に合わなくなっても引っ越さない強い理由があるので、住宅市場は時がたつにつれてより柔軟でなくなり、人々が新しい仕事や家族の事情の変化に合わせて移り住むのが難しくなるかもしれない。',
+      'これらの立場のあいだで、多くの専門家は、借り手へのかぎられた保護と、住宅の供給をふやす方法を組み合わせることを示している。家賃を完全に固定するのではなく、物価の上昇に合わせたおだやかな年ごとの値上げを認める都市もあれば、新しい建設がくじかれないよう古い建物だけに規制をかける都市もある。政府はまた、新しい公営や非営利の住宅の建設を積極的にささえ、収入の少ない借り手にお金の援助をし、新しい住宅を建てにくくしている計画の規則を改めることもできる。',
+      '家賃規制をめぐる議論は、基本的な必要をみたすうえで、社会が市場と公平さのつりあいをどうとるべきかという、より広い問いを反映している。結局のところ、住まいは個人の幸せだけでなく、都市の個性や、住民があたえられる機会にも影響する。どの一つの政策もそれだけで家賃の高さの問題を解決しそうにはない。今の借り手の保護と、より多くの住宅を建てる本気の努力を組み合わせることが、都市をあらゆる収入の人々が住める場所であり続けさせる、もっともよい見込みをあたえるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「家賃規制は新しい住宅を生まないが、急な値上げをふせげる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that rent control provides ( 1 ) and protects vulnerable tenants. Critics argue that it reduces the incentive to build and maintain housing and may reduce the ( 2 ) of housing. Many experts suggest combining limited protections with efforts to ( 3 ) more homes.',
+      blanks: [
+        { choices: ['stability', 'danger', 'profit', 'noise'], answer: 0, why: '第2段落 rent control provides stability。' },
+        { choices: ['supply', 'price', 'size', 'color'], answer: 0, why: '第4段落 these effects may reduce the supply of housing。' },
+        { choices: ['build', 'sell', 'close', 'hide'], answer: 0, why: '第7段落 serious efforts to build more homes。' },
+      ],
+    },
+    tf: [
+      { statement: '収入の半分以上を家賃にあてる世帯もある。', answer: true, why: '第1段落 Some households spend half or more of their income on rent。' },
+      { statement: '支持する人々によれば、家賃規制は新しい住宅を生み出す。', answer: false, why: '第3段落 rent control does not create new housing。' },
+      { statement: '家賃規制があると、家主が修理にかけるお金をへらすかもしれない。', answer: true, why: '第4段落 they may spend less on repairs。' },
+      { statement: '筆者によれば、一つの政策で家賃の問題は解決できる。', answer: false, why: '第7段落 No single policy is likely to solve the problem。' },
+    ],
+    qa: [
+      { q: 'Why may the housing market become less flexible under rent control?', choices: ['Tenants with controlled rents have reasons not to move.', 'Landlords build more homes.', 'Rents rise faster.', 'Everyone moves often.'], answer: 0, why: '第5段落 tenants with controlled rents have strong reasons not to move。' },
+      { q: 'What do some cities do so that new construction is not discouraged?', choices: ['Apply controls only to older buildings.', 'Freeze all rents.', 'Ban new buildings.', 'Raise taxes on tenants.'], answer: 0, why: '第6段落 apply controls only to older buildings so that new construction is not discouraged。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
