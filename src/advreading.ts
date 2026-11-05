@@ -35698,6 +35698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-libraries',
+    title: 'Should Public Libraries Receive More Funding?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Public libraries have served communities for well over a century, offering free access to books, newspapers, and a quiet place to read and study. In recent decades, however, many libraries have faced reductions in funding, shorter opening hours, and in some cases closure. Those who support these cuts often argue that the internet has made much of what libraries offer available elsewhere, and that limited public money should be spent on more urgent needs. Others insist that libraries remain essential, and that investment in them should be increased rather than reduced.",
+      "Supporters of greater funding point out that libraries do far more than lend books. Many provide free access to computers and the internet, which remains essential for people who cannot afford these at home, particularly when applying for jobs, using government services, or completing schoolwork. Libraries also offer classes in reading, language, and digital skills, activities for young children, and spaces where elderly people and others who live alone can meet and talk. For many residents, supporters argue, the library is one of the few public places where they are welcome without being expected to spend money.",
+      "Supporters also emphasize the role of libraries in promoting equality and lifelong learning. In a society where information is increasingly valuable, access to knowledge should not depend on income. ( A ) many people now find information online, supporters argue, not all of it is reliable, and librarians can help users to find trustworthy sources and to develop the skills needed to judge the quality of what they read, a role that may become more important as misleading information spreads.",
+      "Critics of increased funding, however, question whether traditional libraries remain the most efficient way of achieving these goals. The number of books borrowed has declined in many areas, and much reading and research now takes place on screens. Critics argue that money might be better spent on expanding internet access, supporting schools, or providing digital resources that people can use from home, rather than maintaining buildings that are used by a relatively small proportion of the population. In some towns, critics add, the same funds could keep a school open or pay for several additional teachers, choices that might benefit far more residents.",
+      "Critics also point to the pressures on public budgets. When governments must choose between funding libraries and funding hospitals, care for the elderly, or public transport, libraries may seem less urgent. Some suggest that libraries could raise more of their own income, for example by charging for certain services or renting out rooms, or that volunteers could take over some of the work currently done by paid staff, although others warn that such measures may weaken the quality and reliability of the service.",
+      "Between these positions, many libraries have sought to reinvent themselves. Some have combined with other public services, such as health clinics or job centers, under one roof. Others have introduced makerspaces with equipment such as three-dimensional printers, hosted community events, or extended their digital collections so that users can borrow electronic books from home. Such changes aim to show that libraries can adapt to new needs while preserving their central purpose of providing free and open access to knowledge.",
+      "The debate over library funding reflects a broader question about what kinds of public spaces a society wishes to maintain. Libraries embody the idea that knowledge and culture should be available to everyone, regardless of wealth or background. Whether that idea is best served by traditional libraries, by new forms of public service, or by some combination of the two, the principle behind it remains important. A community that allows its libraries to disappear may find that it has lost not only buildings but also a shared commitment to learning.",
+    ],
+    ja: [
+      '公共図書館は百年をゆうにこえて地域に役立ち、本や新聞を自由に使える場と、読書や勉強のための静かな場所をあたえてきた。しかしここ数十年、多くの図書館は予算の削減や開館時間の短縮に直面し、閉館した図書館さえある。こうした削減を支持する人々は、インターネットによって図書館があたえるものの多くがほかで手に入るようになり、限られた公のお金はより急ぐ必要のあることに使うべきだとしばしば主張する。図書館は今も欠かせないものであり、それへの投資はへらすのではなくふやすべきだと主張する人々もいる。',
+      '予算をふやすことを支持する人々は、図書館は本を貸すことをはるかにこえることをしていると指摘する。多くの図書館はコンピューターやインターネットを無料で使えるようにしており、それは、とくに仕事に応募したり、行政のサービスを使ったり、学校の課題をしたりするときに、家でそれらを用意できない人々にとって今も欠かせない。図書館はまた、読み書きや言語やデジタルの技能の講座、小さな子どものための催し、お年寄りや一人暮らしの人々が会って話せる場所もあたえている。多くの住民にとって、図書館はお金を使うことを期待されずに歓迎される数少ない公共の場所の一つだと支持する人々は主張する。',
+      '支持する人々はまた、平等と生涯学習をすすめるうえでの図書館の役割を強調する。情報がますます価値をもつ社会では、知識を得られるかどうかが収入によって決まるべきではない。今では多くの人がネットで情報を見つけるが、そのすべてが信頼できるわけではなく、図書館員は利用者が信頼できる情報源を見つけ、読むものの質を判断するのに必要な技能を育てる手助けができ、その役割は誤解をまねく情報が広がるにつれてより大切になるかもしれないと支持する人々は主張する。',
+      'しかし予算をふやすことを批判する人々は、昔ながらの図書館が今もこれらの目的をはたすもっとも効率のよい方法なのかを疑う。多くの地域で借りられる本の数はへっており、今では読書や調べものの多くが画面の上で行われている。比較的少ない割合の人々にしか使われていない建物を維持するよりも、インターネットを使える環境を広げたり、学校をささえたり、人々が家から使えるデジタルの資料をあたえたりするほうに、お金を使うほうがよいかもしれないと批判する人々は主張する。町によっては、同じお金で学校を一つ開き続けたり、教師を何人かふやしたりでき、そうした選択のほうがはるかに多くの住民の役に立つかもしれないと批判する人々は付け加える。',
+      '批判する人々はまた、公の予算への重圧を指摘する。政府が図書館への予算と、病院やお年寄りの介護や公共交通への予算のどちらかを選ばなければならないとき、図書館はそれほど急ぐ必要がないように見えるかもしれない。たとえば一部のサービスに料金をとったり部屋を貸したりして図書館がもっと自分で収入を得られるとか、今は給料をもらう職員が行っている仕事の一部をボランティアが引きつげると示す人もいるが、そうした方法はサービスの質と信頼性を弱めるかもしれないと警告する人もいる。',
+      'これらの立場のあいだで、多くの図書館は自分自身を新しくつくり直そうとしてきた。診療所や職業紹介所のような、ほかの公共サービスと一つの建物のなかでいっしょになった図書館もある。立体印刷機のような機器をそなえたものづくりの場を取り入れたり、地域の催しを開いたり、利用者が家から電子書籍を借りられるようデジタルの所蔵をふやしたりした図書館もある。こうした変化は、図書館が、知識を自由に開かれたかたちで得られるようにするという中心の目的を守りながら、新しい必要に適応できることを示そうとしている。',
+      '図書館の予算をめぐる議論は、社会がどのような公共の空間を保ちたいのかという、より広い問いを反映している。図書館は、知識と文化は富や背景にかかわらずすべての人が手にできるべきだという考えを体現している。その考えに役立つのが昔ながらの図書館であれ、新しい形の公共サービスであれ、その二つを組み合わせたものであれ、その背後にある原則は今も大切である。図書館が消えるのを許す地域は、建物だけでなく、学ぶことへの共通の約束も失ったと気づくことになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「今では多くの人がネットで情報を見つけるが、そのすべてが信頼できるわけではない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that libraries offer free internet access and promote ( 1 ) and lifelong learning. Critics question whether traditional libraries are the most ( 2 ) way to reach these goals, given limited budgets. Many libraries have tried to reinvent themselves, for example by extending their ( 3 ) collections.',
+      blanks: [
+        { choices: ['equality', 'tourism', 'competition', 'silence'], answer: 0, why: '第3段落 the role of libraries in promoting equality and lifelong learning。' },
+        { choices: ['efficient', 'expensive', 'famous', 'popular'], answer: 0, why: '第4段落 remain the most efficient way of achieving these goals。' },
+        { choices: ['digital', 'private', 'secret', 'painted'], answer: 0, why: '第6段落 extended their digital collections。' },
+      ],
+    },
+    tf: [
+      { statement: '閉館した図書館もある。', answer: true, why: '第1段落 in some cases closure。' },
+      { statement: '支持する人々によれば、ネット上の情報はすべて信頼できる。', answer: false, why: '第3段落 not all of it is reliable。' },
+      { statement: '多くの地域で、借りられる本の数はへっている。', answer: true, why: '第4段落 The number of books borrowed has declined in many areas。' },
+      { statement: '筆者によれば、図書館の背後にある原則はもう大切ではない。', answer: false, why: '第7段落 the principle behind it remains important。' },
+    ],
+    qa: [
+      { q: 'Why is free internet access at libraries essential for some people?', choices: ['They cannot afford it at home.', 'They dislike their homes.', 'Libraries are faster than homes.', 'They want to play games.'], answer: 0, why: '第2段落 people who cannot afford these at home。' },
+      { q: 'What do some warn about using volunteers instead of paid staff?', choices: ['It may weaken the quality of the service.', 'It will cost much more.', 'Volunteers are not allowed.', 'It will increase opening hours.'], answer: 0, why: '第5段落 such measures may weaken the quality and reliability of the service。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
