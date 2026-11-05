@@ -36498,6 +36498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-park-visitor-limits',
+    title: 'Should Visitors to National Parks Be Limited?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "National parks and other protected natural areas have become increasingly popular destinations. Improved roads, cheaper air travel, and the sharing of photographs online have encouraged millions of people to visit places that were once known only to a few. In some famous parks, visitors now face traffic jams on mountain roads, crowded trails, and long waits simply to see well-known views. To address these problems, a number of parks have begun to limit the number of visitors through reservation systems, daily quotas, or higher entrance fees, while others insist that natural places should remain open to everyone.",
+      "Supporters of visitor limits argue that they are necessary to protect the environment. Large numbers of people can damage fragile ecosystems, trampling plants, eroding trails, disturbing wildlife, and leaving behind waste. Animals that are frequently approached by visitors may change their behavior, abandoning feeding or breeding areas. Supporters claim that if parks are to preserve the very qualities that make them worth visiting, there must be some limit on the number of people who enter them at any one time. Once a fragile meadow or riverbank has been badly damaged, it may take decades to recover, if it recovers at all.",
+      "Supporters also emphasize the quality of the visitor experience. Many people visit natural areas in search of peace, beauty, and a sense of escape from crowded cities. ( A ) a park may be able to accommodate large numbers of visitors physically, supporters argue, the experience of quiet and solitude that many seek is lost when trails are packed with people and viewpoints resemble busy city streets. Limits, in this view, can protect not only nature but also the value of the experience itself.",
+      "Critics, however, worry that visitor limits may make natural areas less accessible to ordinary people. Reservation systems can favor those who are able to plan far in advance or who have flexible schedules, while higher fees may exclude families with limited incomes. National parks, critics point out, were often created on the principle that natural beauty should belong to all citizens, not only to those who can afford it. Restricting access, they argue, risks turning shared public places into privileges enjoyed by only a fortunate few.",
+      "Critics also point to the economic consequences of limits. Many communities near popular parks depend on visitors for jobs and income, from hotels and restaurants to guides and shops. Reducing visitor numbers could harm these local economies, particularly in rural areas with few other sources of employment. Some critics suggest that rather than limiting visitors, parks should invest in better infrastructure, such as shuttle buses, additional trails, and visitor centers, so that larger numbers can be accommodated without causing damage.",
+      "Between these positions, many parks have adopted mixed approaches. Some require reservations only during the busiest seasons or for the most crowded areas, leaving other parts of the park freely accessible. Others reserve a share of permits for people who arrive on the day without booking, or offer discounts for local residents and low-income visitors. Promoting lesser-known parks and trails can also help to spread visitors more evenly, reducing pressure on the most famous sites while introducing people to places they might not otherwise discover.",
+      "The debate over visitor limits reflects a broader question about how societies should share natural places that are both precious and limited. Protecting nature for future generations may require accepting some restrictions today, but those restrictions must be designed with fairness in mind. The challenge is to find ways of preserving the beauty and health of natural areas while ensuring that the opportunity to experience them remains open to people from all walks of life, not only to those with the most money or the most free time.",
+    ],
+    ja: [
+      '国立公園やほかの保護された自然の地域は、ますます人気のある行き先になっている。よくなった道路や安くなった空の旅や、ネットでの写真の共有によって、かつてはごく一部の人にしか知られていなかった場所を何百万人もの人が訪れるようになった。いくつかの有名な公園では、訪問者は今や山道の渋滞や、混みあう登山道や、有名な景色を見るだけのための長い待ち時間に直面している。こうした問題に取り組むため、予約制や1日の上限や高い入場料によって訪問者の数を制限しはじめた公園もあれば、自然の場所はすべての人に開かれたままであるべきだと主張する公園もある。',
+      '訪問者の制限を支持する人々は、それが環境を守るのに必要だと主張する。多くの人は、植物をふみつけ、登山道をすりへらし、野生の生き物をおびやかし、ごみを残すことで、こわれやすい生態系に害をあたえうる。訪問者にたびたび近づかれる動物は、ふるまいを変え、えさ場や子育ての場所を捨ててしまうかもしれない。公園が訪れる価値をもたらしているまさにその性質を守るなら、一度に入る人の数に何らかの限度がなければならないと支持する人々は主張する。こわれやすい草地や川岸がひどく傷つくと、回復するとしても何十年もかかるかもしれない。',
+      '支持する人々はまた、訪問者の経験の質を強調する。多くの人は、静けさと美しさと、混みあった都市からのがれる感覚を求めて自然の地域を訪れる。公園は物理的には多くの訪問者を受け入れられるかもしれないが、多くの人が求める静けさとひとりの時間の経験は、登山道が人でいっぱいになり、展望台がにぎやかな都会の通りのようになると失われてしまうと支持する人々は主張する。この見方では、制限は自然だけでなく、経験そのものの価値も守りうる。',
+      'しかし批判する人々は、訪問者の制限によって自然の地域がふつうの人々にとって手のとどきにくいものになるのではないかと心配する。予約制は、ずっと前から計画できる人や予定を自由に変えられる人に有利になりうるし、高い料金は収入の限られた家族をしめ出すかもしれない。国立公園はしばしば、自然の美しさはそれをはらえる人だけでなくすべての市民のものであるべきだという原則のもとでつくられたと批判する人々は指摘する。立ち入りを制限することは、共有の公共の場所を、恵まれたごく一部の人だけが楽しめる特権に変えてしまうおそれがあると彼らは主張する。',
+      '批判する人々はまた、制限の経済的な結果を指摘する。人気のある公園の近くの多くの地域は、ホテルやレストランからガイドや店まで、訪問者に仕事と収入をたよっている。訪問者の数をへらすと、とくにほかに仕事のみなもとの少ない農村の地域で、こうした地元の経済を傷つけるかもしれない。訪問者を制限するのではなく、シャトルバスや登山道の追加や案内所のような、よりよい設備に投資して、害を起こさずにより多くの人を受け入れられるようにすべきだと示す批判者もいる。',
+      'これらの立場のあいだで、多くの公園は組み合わせたやり方を取り入れてきた。もっとも混む季節やもっとも混雑する地域だけに予約を求め、公園のほかの部分は自由に入れるままにしているところもある。予約せずに当日来た人のために許可の一部をとっておいたり、地元の住民や収入の少ない訪問者に割引をしたりしているところもある。あまり知られていない公園や登山道を宣伝することも、訪問者をより平等に分散させる助けになり、もっとも有名な場所への重圧をへらしながら、そうでなければ知らなかったかもしれない場所を人々に紹介することになる。',
+      '訪問者の制限をめぐる議論は、社会がかけがえがなくかぎりもある自然の場所をどう分かち合うべきかという、より広い問いを反映している。未来の世代のために自然を守るには、今いくらかの制限を受け入れる必要があるかもしれないが、その制限は公平さを念頭において設計されなければならない。課題は、自然の地域の美しさと健やかさを守りつつ、それを経験する機会が、もっとも多くのお金や自由な時間をもつ人々だけでなく、あらゆる立場の人々に開かれたままであるようにする方法を見つけることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「物理的には多くの訪問者を受け入れられるかもしれないが、静けさの経験は失われる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that visitor limits protect the ( 1 ) and the quality of the visitor experience. Critics worry that limits make parks less accessible and may harm local ( 2 ). Many parks require reservations only during the busiest ( 3 ) and offer discounts to some visitors.',
+      blanks: [
+        { choices: ['environment', 'economy', 'roads', 'hotels'], answer: 0, why: '第2段落 they are necessary to protect the environment。' },
+        { choices: ['economies', 'schools', 'governments', 'animals'], answer: 0, why: '第5段落 could harm these local economies。' },
+        { choices: ['seasons', 'nights', 'years', 'hours'], answer: 0, why: '第6段落 require reservations only during the busiest seasons。' },
+      ],
+    },
+    tf: [
+      { statement: '有名な公園では、山道の渋滞が起きることがある。', answer: true, why: '第1段落 visitors now face traffic jams on mountain roads。' },
+      { statement: '支持する人々によれば、多くの訪問者は野生の生き物に何の影響もあたえない。', answer: false, why: '第2段落 disturbing wildlife ... Animals ... may change their behavior。' },
+      { statement: '予約制は、前もって計画できる人に有利になりうる。', answer: true, why: '第4段落 Reservation systems can favor those who are able to plan far in advance。' },
+      { statement: '筆者は、自然を守るためにはどんな制限も公平さを考えなくてよいと考えている。', answer: false, why: '第7段落 those restrictions must be designed with fairness in mind。' },
+    ],
+    qa: [
+      { q: 'What do some critics suggest parks should invest in instead of limiting visitors?', choices: ['Better infrastructure such as shuttle buses.', 'Higher fences.', 'Fewer trails.', 'Closing visitor centers.'], answer: 0, why: '第5段落 invest in better infrastructure, such as shuttle buses。' },
+      { q: 'How can promoting lesser-known parks help?', choices: ['It spreads visitors more evenly.', 'It closes famous sites.', 'It raises entrance fees.', 'It reduces local jobs.'], answer: 0, why: '第6段落 help to spread visitors more evenly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
