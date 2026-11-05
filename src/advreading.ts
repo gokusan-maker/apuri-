@@ -34258,6 +34258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-gig-workers',
+    title: 'Should Gig Workers Be Treated as Employees?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities, a growing number of people earn their living through digital platforms. They deliver meals ordered through smartphone applications, drive passengers who request rides online, or complete small tasks assigned by websites. Companies that operate these platforms usually describe such workers not as employees but as independent contractors who are free to choose when and how much they work. This arrangement has created new opportunities for many people, but it has also raised difficult questions about workers' rights, and courts and governments in several countries are now debating whether gig workers should be treated as employees.",
+      "Supporters of the current arrangement emphasize flexibility. Many gig workers value the ability to set their own hours, to work for several platforms at once, and to stop working whenever they wish. For students, parents with young children, or people seeking extra income alongside another job, this flexibility may be more important than the security of a regular position. Companies argue that treating workers as employees would force them to impose fixed schedules and reduce the number of people they could hire. They add that many workers who joined platforms after losing other jobs would have found no work at all under stricter rules.",
+      "Critics, however, argue that the independence of gig workers is often more apparent than real. Platforms typically set prices, assign tasks through algorithms, and may punish workers who refuse too many jobs or receive low ratings from customers. ( A ) workers can technically choose their hours, critics say, they have little control over the conditions of their work, and many depend on platform income as their main source of support. Because algorithms decide how tasks are distributed, workers may also find it difficult to understand why their income rises or falls from week to week.",
+      "The most serious concern involves protection against risk. Employees in many countries are entitled to a minimum wage, paid holidays, sick pay, and insurance in case of injury. Independent contractors usually receive none of these. A delivery rider who is injured in a traffic accident or falls ill may lose his or her income entirely. Critics argue that platforms are transferring the risks of business to workers who are often in a weak position to bear them, while the companies themselves benefit from low labor costs.",
+      "Some countries and regions have begun to change their laws. In certain places, courts have ruled that drivers or riders should be classified as employees, entitling them to basic protections. Elsewhere, governments have created intermediate categories that give gig workers some rights, such as insurance or a guaranteed minimum income per hour of work, without requiring full employment status. These approaches attempt to preserve flexibility while reducing insecurity, and their results are being closely watched by other countries.",
+      "Each solution involves trade-offs. Classifying workers as employees may improve their protections but could lead companies to raise prices, reduce services, or hire fewer people. Intermediate categories may offer a balance, but they can also create confusion about which rules apply. Some economists suggest that social protections, such as health insurance and pensions, should be linked not to a particular employer but to individuals, so that workers carry their benefits with them regardless of how or where they work.",
+      "The debate over gig work reflects wider changes in the nature of employment. For much of the twentieth century, many workers expected to hold stable jobs with a single employer for long periods. Today, careers are becoming more varied and fragmented, and laws designed for an earlier economy may no longer fit. How societies respond will shape not only the lives of gig workers but also the future of work for everyone, as more forms of employment come to depend on digital platforms.",
+    ],
+    ja: [
+      '多くの都市で、デジタルの仕組みを通じて生計を立てる人々がふえている。彼らはスマートフォンのアプリで注文された食事を配達したり、ネットで乗車を頼んだ客を運んだり、ウェブサイトから割りあてられた小さな仕事をこなしたりする。こうした仕組みを運営する会社は、ふつうそのような働き手を従業員ではなく、いつどれだけ働くかを自由に選べる独立した請負人とみなしている。この仕組みは多くの人々に新しい機会を生んだが、働き手の権利についてのむずかしい問いも引き起こしており、いくつかの国の裁判所や政府は、ギグワーカーを従業員としてあつかうべきかどうかを議論している。',
+      '今の仕組みを支持する人々は柔軟さを強調する。多くのギグワーカーは、自分で働く時間を決め、いくつかの仕組みで同時に働き、好きなときにいつでもやめられることを大切にしている。学生や幼い子どもをもつ親や、別の仕事のかたわら追加の収入を求める人々にとっては、この柔軟さは決まった職の安定より大切かもしれない。会社は、働き手を従業員としてあつかえば、決まった勤務時間をおしつけ、やとえる人の数を減らさざるをえなくなるだろうと主張する。また、ほかの仕事を失ってから仕組みに加わった多くの働き手は、もっと厳しい規則のもとではまったく仕事を見つけられなかっただろうとつけ加える。',
+      'しかし批判する人々は、ギグワーカーの独立はしばしば見かけほど本物ではないと主張する。仕組みはたいてい値段を決め、アルゴリズムで仕事を割りあて、仕事をあまりに多く断ったり客から低い評価を受けたりした働き手を罰することもある。働き手は形の上では働く時間を選べるが、仕事の条件をほとんど決められず、多くは仕組みからの収入をおもな生活のささえにしていると批判する人々は言う。また、仕事の配り方をアルゴリズムが決めるので、働き手は、自分の収入が週ごとになぜふえたり減ったりするのかを理解しにくいかもしれない。',
+      '最も深刻な心配は、危険に対する保護にかかわる。多くの国の従業員には、最低賃金や有給休暇や病気のときの手当や、けがをしたときの保険を受ける権利がある。独立した請負人はふつうそのどれも受けられない。交通事故でけがをしたり病気になったりした配達員は、収入をまったく失うかもしれない。仕組みを運営する会社は、事業の危険を、それを負う力の弱いことが多い働き手に移しながら、自分たちは安い人件費から利益を得ていると批判する人々は主張する。',
+      'いくつかの国や地域は、法律を変え始めている。ある場所では、裁判所が運転手や配達員を従業員として分類すべきだと判断し、基本的な保護を受けられるようにした。別の場所では、政府が中間的な区分を作り、完全な従業員の身分を求めることなく、保険や一時間あたりの最低収入の保証のようないくつかの権利をギグワーカーにあたえている。こうしたやり方は、柔軟さを保ちながら不安定さを減らそうとするものであり、その結果はほかの国々からも注意深く見守られている。',
+      'どの解決策にも、何かを得れば何かを失うという面がある。働き手を従業員に分類すれば保護はよくなるかもしれないが、会社は値段を上げたり、サービスを減らしたり、やとう人を減らしたりするかもしれない。中間的な区分はつりあいをあたえるかもしれないが、どの規則があてはまるのかについて混乱を生むこともある。医療保険や年金のような社会的な保護を、特定の雇い主ではなく個人に結びつけ、働き手がどのように、どこで働くかにかかわらず給付をもち運べるようにすべきだと示唆する経済学者もいる。',
+      'ギグワークをめぐる議論は、雇用の性質のより広い変化を反映している。二十世紀の多くの期間、多くの働き手は一つの雇い主のもとで長いあいだ安定した仕事につくことを期待していた。今日、職業人生はより多様でばらばらになりつつあり、以前の経済のために作られた法律はもう合わないかもしれない。社会がどうこたえるかは、ギグワーカーの生活だけでなく、より多くの雇用の形がデジタルの仕組みに頼るようになるにつれて、すべての人の働き方の未来をも形づくるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「形の上では時間を選べるが、条件をほとんど決められない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of the current arrangement emphasize the ( 1 ) that gig work offers. Critics argue that workers have little control and lack protection against ( 2 ) such as injury or illness. Some governments have created intermediate categories, and some economists suggest linking protections to ( 3 ) rather than employers.',
+      blanks: [
+        { choices: ['flexibility', 'security', 'pensions', 'training'], answer: 0, why: '第2段落 Supporters of the current arrangement emphasize flexibility。' },
+        { choices: ['risk', 'success', 'travel', 'competition'], answer: 0, why: '第4段落 The most serious concern involves protection against risk。' },
+        { choices: ['individuals', 'platforms', 'customers', 'cities'], answer: 0, why: '第6段落 should be linked not to a particular employer but to individuals。' },
+      ],
+    },
+    tf: [
+      { statement: '会社はふつうギグワーカーを独立した請負人とみなしている。', answer: true, why: '第1段落 describe such workers not as employees but as independent contractors。' },
+      { statement: '批判する人々によれば、ギグワーカーは仕事の条件を自由に決められる。', answer: false, why: '第3段落 they have little control over the conditions of their work。' },
+      { statement: 'ある場所では、裁判所が配達員を従業員として分類すべきだと判断した。', answer: true, why: '第5段落 courts have ruled that drivers or riders should be classified as employees。' },
+      { statement: '中間的な区分には何の問題もない。', answer: false, why: '第6段落 they can also create confusion about which rules apply。' },
+    ],
+    qa: [
+      { q: 'What might happen to a delivery rider who is injured?', choices: ['He or she may lose income entirely.', 'He or she will receive full sick pay.', 'The platform will pay all costs.', 'Nothing will change.'], answer: 0, why: '第4段落 may lose his or her income entirely。' },
+      { q: 'How have careers changed since the twentieth century?', choices: ['They have become more varied and fragmented.', 'They have become more stable.', 'People now stay with one employer for life.', 'Everyone now works for the government.'], answer: 0, why: '第7段落 careers are becoming more varied and fragmented。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
