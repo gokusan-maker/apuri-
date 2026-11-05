@@ -7710,6 +7710,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'What [a terrible weather] we are having!', choices: ['terrible weather', 'a terrible weathers', 'terrible a weather', 'terribly weather'], answer: 0, why: 'weather は数えられない名詞なので a はつけない。What terrible weather。' },
     ],
   },
+  {
+    id: 'exam-fix-181',
+    title: '入試の誤文訂正〈181〉（京大レベル：形容詞を並べる順序 a beautiful old wooden box）',
+    points: ['名詞の前に形容詞をいくつか並べるときは、ふつう「冠詞・数 → 意見（beautiful・nice）→ 大きさ（big・small）→ 年齢・新旧（old・new）→ 形（round）→ 色（red）→ 産地・国籍（Japanese）→ 材料（wooden・silk）→ 名詞」の順にする。数は all・both → the・my → 序数（first）→ 基数（three）の順。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She bought a beautiful old wooden box.', ja: '彼女は美しい古い木の箱を買った。' }],
+    questions: [
+      { sentence: 'She bought [a wooden old beautiful] box.', choices: ['a beautiful old wooden', 'an old beautiful wooden', 'a wooden beautiful old', 'a beautiful wooden old'], answer: 0, why: '意見 → 新旧 → 材料の順。a beautiful old wooden box。' },
+      { sentence: 'He has [a red big] car.', choices: ['a big red', 'a red and big', 'big a red', 'a reds big'], answer: 0, why: '大きさ → 色の順。a big red car。' },
+      { sentence: 'I met [two Japanese young] students.', choices: ['two young Japanese', 'young two Japanese', 'Japanese two young', 'two Japanese youngs'], answer: 0, why: '数 → 年齢 → 国籍の順。two young Japanese students。' },
+      { sentence: 'She wore [a silk blue] dress.', choices: ['a blue silk', 'a silk and blue', 'blue a silk', 'a silks blue'], answer: 0, why: '色 → 材料の順。a blue silk dress。' },
+      { sentence: '[The three first] runners got medals.', choices: ['The first three', 'Three the first', 'First the three', 'The three firsts'], answer: 0, why: '序数 → 基数の順。the first three runners。' },
+      { sentence: 'It is [an old nice] house.', choices: ['a nice old', 'an old and nice', 'nice an old', 'a old nice'], answer: 0, why: '意見 → 新旧の順。a nice old house。' },
+      { sentence: 'We sat at [a wooden round] table.', choices: ['a round wooden', 'a wooden and round', 'round a wooden', 'a woods round'], answer: 0, why: '形 → 材料の順。a round wooden table。' },
+      { sentence: '[My all friends] came to the party.', choices: ['All my friends', 'My friends all of', 'All of friends my', 'My the all friends'], answer: 0, why: 'all は所有格の前。All my friends。' },
+      { sentence: 'He gave me [a Swiss small expensive] watch.', choices: ['an expensive small Swiss', 'a small Swiss expensive', 'a Swiss expensive small', 'small an expensive Swiss'], answer: 0, why: '意見 → 大きさ → 産地の順。an expensive small Swiss watch。' },
+      { sentence: 'They live in [a white big old] house.', choices: ['a big old white', 'a white old big', 'an old white big', 'big a white old'], answer: 0, why: '大きさ → 新旧 → 色の順。a big old white house。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

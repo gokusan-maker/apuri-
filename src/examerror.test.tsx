@@ -2577,3 +2577,10 @@ it('正誤問題〈187〉：国公立レベル either・neither と動詞の一�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) are')
 })
+
+it('誤文訂正〈181〉：京大レベル 形容詞の順序の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-181')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('a beautiful old wooden')
+})
