@@ -34142,6 +34142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-optimism',
+    title: 'Optimism and Hope',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Optimism is often praised as a healthy attitude toward life. Optimistic people are said to recover more quickly from illness, cope better with setbacks, and achieve more in their work, while pessimists are sometimes regarded as gloomy companions who discourage effort. Yet optimism has also had its critics, who see it as a form of self-deception that ignores real dangers and real suffering. Whether optimism is a virtue, a mistake, or something more complicated depends partly on what we mean by the word, and on the situations in which it is applied.",
+      "In one sense, optimism is a belief about the future: the expectation that things will generally turn out well. Understood in this way, optimism can be measured against evidence. If a person expects to succeed in a difficult task despite having little preparation, his or her optimism may simply be unrealistic. Psychologists have found that many people display an optimism bias, judging themselves less likely than others to suffer misfortunes such as illness or accidents, even when there is no reason to think so. Such a bias may lead people to neglect sensible precautions, such as saving money or having regular medical checkups.",
+      "Yet optimism of this kind can have practical benefits. People who expect to succeed may work harder and persist longer, and their effort may help to bring about the success they expected. ( A ) unrealistic expectations can lead to disappointment, a degree of confidence beyond what the evidence strictly supports may be necessary for undertaking difficult projects at all. Few people would start a business, write a book, or attempt to reform an institution if they calculated their chances of success with complete coldness.",
+      "Critics argue, however, that optimism can become harmful when it prevents people from recognizing serious problems. A society that insists on looking only at the bright side may fail to prepare for disasters or to address injustices. Individuals who are encouraged always to think positively may feel guilty when they experience grief or anger, as if negative emotions were signs of personal failure. In such cases, optimism becomes not a source of strength but a pressure to deny reality, and those who struggle may feel even more alone because they cannot share the cheerfulness expected of them.",
+      "Some thinkers have distinguished optimism from hope. Optimism, in this view, is the confident expectation that things will go well, while hope is the willingness to act for a good outcome without any guarantee that it will be achieved. Hope can coexist with a clear awareness of difficulties and even with considerable doubt. A person may hope for a cure while understanding that it is unlikely, or work for justice while knowing that the struggle may last longer than his or her lifetime.",
+      "This distinction suggests that what is most valuable is not the belief that things will turn out well, but the ability to keep acting thoughtfully in uncertain situations. Such an attitude does not require us to ignore evidence. On the contrary, it may be strengthened by an honest assessment of risks, since it depends not on predictions but on commitment to what is worth pursuing. Hope of this kind can survive disappointment in a way that simple optimism often cannot.",
+      "Perhaps, then, the question is not whether we should be optimists or pessimists, but how to combine clear vision with the will to act. Seeing the world as it is, with its dangers and suffering, need not lead to despair, and believing in the possibility of improvement need not require blindness. The most mature attitude may be one that faces reality honestly while still choosing to work for a better future, recognizing that such work is meaningful even when its success is uncertain, and perhaps especially then.",
+    ],
+    ja: [
+      '楽観は、人生に対する健全な態度としてしばしばほめられる。楽観的な人は病気から早く回復し、つまずきにうまく対処し、仕事でより多くを成しとげると言われる一方、悲観的な人は努力をくじく陰気な仲間とみなされることがある。しかし楽観にも批判者がおり、彼らはそれを本当の危険や本当の苦しみを無視する一種の自己欺瞞とみなしている。楽観が美徳なのか、まちがいなのか、それとももっと複雑なものなのかは、一部にはこのことばで何を意味するかにかかっており、またそれがどんな状況にあてはめられるかにもかかっている。',
+      '一つの意味では、楽観は未来についての信念である。物事はたいていうまくいくだろうという期待である。このように理解すれば、楽観は証拠と照らし合わせてはかることができる。ほとんど準備をしていないのにむずかしい課題で成功すると期待する人の楽観は、単に非現実的なのかもしれない。心理学者たちは、多くの人々が楽観バイアスを示し、そう考える理由がないときでさえ、自分は病気や事故のような不幸にあう可能性がほかの人より低いと判断することを見いだしている。そのような偏りのために、人々はお金をためたり定期的に健康診断を受けたりといった、分別のある用心をおこたるかもしれない。',
+      'しかし、この種の楽観にも実際的な利点がありうる。成功すると期待する人はより熱心に働き、より長く続けるかもしれず、その努力が期待した成功をもたらす助けになるかもしれない。非現実的な期待は失望につながることもあるが、証拠が厳密にささえる以上のある程度の自信は、そもそもむずかしい事業に取り組むために必要なのかもしれない。成功の見こみをまったく冷静に計算したら、会社を始めたり、本を書いたり、制度を改革しようとしたりする人はほとんどいないだろう。',
+      'しかし批判する人々は、楽観が深刻な問題を認めるのをさまたげるとき、有害になりうると主張する。明るい面だけを見ることにこだわる社会は、災害に備えたり不正に取り組んだりしそこなうかもしれない。いつも前向きに考えるようはげまされる個人は、悲しみや怒りを感じたときに、まるで否定的な感情が個人的な失敗のしるしであるかのように、罪悪感をいだくかもしれない。そのような場合、楽観は力の源ではなく、現実を否定せよという圧力になるのである。そして苦しむ人々は、期待される明るさを分かち合えないために、いっそう孤独を感じるかもしれない。',
+      '楽観と希望とを区別した思想家もいる。この見方では、楽観は物事がうまくいくだろうという自信のある期待であり、希望は、実現される保証がなくても、よい結果のために行動しようとする気持ちである。希望は、困難についてのはっきりした認識と、さらにはかなりの疑いとさえ共存できる。治療法が見つかる見こみが低いと理解しながらそれを願うこともできるし、たたかいが自分の一生より長く続くかもしれないと知りながら正義のために働くこともできる。',
+      'この区別は、最も価値があるのは物事がうまくいくという信念ではなく、不確かな状況で考え深く行動し続ける能力であることを示唆している。そのような態度は、私たちに証拠を無視するよう求めはしない。むしろ、それは予測ではなく、追い求める価値のあるものへのかかわりにもとづいているので、危険を正直に見積もることによって強められるかもしれない。この種の希望は、単純な楽観がしばしばできないしかたで、失望を乗りこえることができる。',
+      'それなら、問題は私たちが楽観主義者であるべきか悲観主義者であるべきかではなく、はっきりとした見方と行動する意志とをどう組み合わせるかなのかもしれない。危険や苦しみをふくめて世界をありのままに見ることがかならず絶望につながるわけではなく、改善の可能性を信じることがかならず盲目を必要とするわけでもない。最も成熟した態度とは、現実に正直に向き合いながら、それでもよりよい未来のために働くことを選び、その成功が不確かなときでさえそうした仕事には意味があると認めるものなのかもしれない。そして、おそらくとくにそのようなときにこそ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「非現実的な期待は失望につながることもあるが、ある程度の自信は必要かもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの人々は、自分は不幸にあう可能性がほかの人より低いと判断する。', answer: true, why: '第2段落 judging themselves less likely than others to suffer misfortunes。' },
+      { statement: '筆者によれば、楽観には実際的な利点がまったくない。', answer: false, why: '第3段落 optimism of this kind can have practical benefits。' },
+      { statement: '希望は困難についてのはっきりした認識と共存できる。', answer: true, why: '第5段落 Hope can coexist with a clear awareness of difficulties。' },
+      { statement: '筆者は、世界をありのままに見るとかならず絶望につながると述べている。', answer: false, why: '第7段落 need not lead to despair。' },
+    ],
+    qa: [
+      { q: 'When can optimism become harmful, according to critics?', choices: ['When it prevents people from recognizing serious problems.', 'When it makes people work harder.', 'When it helps people recover from illness.', 'When it encourages new projects.'], answer: 0, why: '第4段落 when it prevents people from recognizing serious problems。' },
+      { q: 'How is hope distinguished from optimism?', choices: ['Hope is acting for a good outcome without a guarantee.', 'Hope is the certainty of success.', 'Hope ignores all evidence.', 'Hope is the same as pessimism.'], answer: 0, why: '第5段落 the willingness to act for a good outcome without any guarantee。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
