@@ -35502,6 +35502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-seasons',
+    title: 'Living with the Seasons',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the rhythm of life was shaped by the seasons. The timing of planting and harvest, the length of the working day, the foods that could be eaten, and the festivals that were celebrated all depended on the turning of the year. In many modern societies, however, this connection has weakened considerably. Artificial lighting extends the day, heating and air conditioning keep indoor temperatures constant, and supermarkets offer the same fruits and vegetables in every month. It is worth asking what, if anything, is lost when the seasons cease to matter.",
+      "One answer concerns our experience of time itself. When every day resembles the one before, time can seem to pass in an undifferentiated stream, and months may slip by almost unnoticed. The changing seasons, by contrast, divide the year into distinct periods, each with its own colors, sounds, and activities. Such divisions give time a shape, allowing us to anticipate what is coming and to remember what has passed. A year marked by the first blossoms of spring and the falling leaves of autumn may feel fuller than one in which nothing visibly changes.",
+      "The seasons also connect us with the natural world. To notice the lengthening of the days, the return of migrating birds, or the first frost of winter is to be reminded that human life takes place within larger cycles that we did not create and cannot control. ( A ) modern technology allows us to ignore these cycles for much of the time, they continue regardless, and paying attention to them may foster a sense of humility and belonging that is easily lost in an environment designed entirely for human convenience.",
+      "Many cultures have expressed this awareness through art and ritual. Poetry in a number of traditions makes frequent reference to seasonal imagery, using the cherry blossom, the autumn moon, or the winter snow to evoke particular moods and reflections on impermanence. Seasonal festivals bring communities together to mark moments of transition, linking the life of individuals to the life of the land. Such traditions suggest that attention to the seasons is not merely a practical necessity but a source of meaning and shared identity.",
+      "It would be a mistake, however, to idealize the past. For most people in earlier times, the seasons brought not only beauty but also hardship, from the cold and hunger of winter to the exhausting labor of the harvest. The freedom to eat fresh food in every month and to live in comfortable temperatures all year round represents a genuine improvement in human welfare. The question is not whether we should return to a life governed entirely by the seasons but whether we can retain some awareness of them while enjoying the benefits of modern life.",
+      "There are, moreover, new reasons to pay attention to the seasons. Changes in climate are altering familiar patterns, causing flowers to bloom earlier, winters to grow milder, and the arrival of certain animals to shift. People who notice such changes in their own surroundings may understand the effects of a changing climate more vividly than those who encounter it only through statistics. In this sense, seasonal awareness can become a form of knowledge, connecting personal experience with broader environmental change.",
+      "Perhaps, then, the seasons offer a quiet lesson about how to live. They remind us that change is constant, that every period has its own character, and that what fades will, in its time, return in a different form. To live with some awareness of the seasons is to accept a rhythm larger than our own plans and to find in the passing year not merely a sequence of days but a pattern of meaning. In a world that often seems to move at a single relentless pace, such awareness may be worth cultivating.",
+    ],
+    ja: [
+      '人間の歴史の大半のあいだ、暮らしのリズムは季節によって形づくられていた。種まきと収穫の時期、働く一日の長さ、食べられる物、祝われる祭りは、すべて一年のめぐりにかかっていた。しかし多くの現代社会では、この結びつきはかなり弱まっている。人工の明かりが一日をのばし、暖房と冷房が室内の温度を一定に保ち、スーパーマーケットはどの月にも同じ果物や野菜をならべる。季節が意味をもたなくなるとき、何かが失われるとすれば、それは何なのかを問うてみる値打ちがある。',
+      '一つの答えは、時間そのものの経験にかかわる。毎日が前の日と似ていると、時間は区切りのない流れとしてすぎていくように感じられ、何か月もがほとんど気づかれないまますぎさるかもしれない。対照的に、うつりかわる季節は一年をはっきりした期間に分け、それぞれに独自の色や音や活動がある。そうした区切りは時間に形をあたえ、私たちがこれから来るものを楽しみに待ち、すぎたものを思い出せるようにする。春の最初の花や秋の落ち葉でしるしづけられた一年は、目に見えて何も変わらない一年よりも、ゆたかに感じられるかもしれない。',
+      '季節はまた、私たちを自然の世界と結びつける。日がのびていくことや、わたり鳥がもどってくることや、冬の初霜に気づくことは、人間の暮らしが、私たちがつくったのでもあやつれるのでもない、より大きなめぐりのなかで営まれていることを思い出させる。現代の技術によって私たちはたいていの時間こうしためぐりを無視できるが、それでもめぐりは続いており、それに注意をはらうことは、人間の便利さのためだけに設計された環境ではかんたんに失われる、謙虚さと居場所の感覚を育てるかもしれない。',
+      '多くの文化は、この気づきを芸術や儀式を通じて表してきた。いくつもの伝統の詩は季節の景物にたびたびふれ、桜や秋の月や冬の雪を使って、特定の気分や、うつろいやすさについての思いを呼びおこす。季節の祭りは、うつりかわりの時を祝うために地域の人々を集め、個人の暮らしを土地の暮らしと結びつける。こうした伝統は、季節への注意が単に実際的な必要ではなく、意味と共通のアイデンティティのみなもとであることを示している。',
+      'しかし、過去を理想化するのはまちがいだろう。昔の多くの人々にとって、季節は美しさだけでなく、冬の寒さと飢えから収穫のつかれきる労働まで、苦しみももたらした。どの月にも新鮮な食べ物を食べ、一年中心地よい温度で暮らせる自由は、人間の幸福の本当の向上をあらわしている。問題は、季節にすっかり支配された暮らしにもどるべきかどうかではなく、現代の暮らしの利益を楽しみながら、季節への気づきをいくらか保てるかどうかである。',
+      'さらに、季節に注意をはらう新しい理由もある。気候の変化はなじみの型を変えつつあり、花が早く咲いたり、冬がおだやかになったり、ある動物がやってくる時期がずれたりしている。自分のまわりでそうした変化に気づく人は、統計を通じてしか気候の変化に出会わない人よりも、その影響をあざやかに理解するかもしれない。この意味で、季節への気づきは、個人の経験をより広い環境の変化と結びつける一種の知識になりうる。',
+      'だとすれば、季節は生き方について静かな教訓をあたえてくれるのかもしれない。季節は、変化はたえまないこと、どの時期にも独自の性格があること、うすれていくものもやがて別の形でもどってくることを思い出させる。季節をいくらか意識して暮らすことは、自分の計画より大きなリズムを受け入れ、すぎていく一年に単なる日々のつらなりではなく、意味の型を見いだすことである。しばしばただ一つの容赦ない速さで動いているように見える世界で、そうした気づきは育てる価値があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「技術によってめぐりを無視できるが、めぐりは続いている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '現代のスーパーマーケットは、どの月にも同じ果物や野菜をならべる。', answer: true, why: '第1段落 supermarkets offer the same fruits and vegetables in every month。' },
+      { statement: '筆者によれば、毎日が似ていると時間に形があたえられる。', answer: false, why: '第2段落 time can seem to pass in an undifferentiated stream。' },
+      { statement: '昔の人々にとって、季節は苦しみももたらした。', answer: true, why: '第5段落 the seasons brought not only beauty but also hardship。' },
+      { statement: '筆者は、季節にすっかり支配された暮らしにもどるべきだと主張している。', answer: false, why: '第5段落 The question is not whether we should return to a life governed entirely by the seasons。' },
+    ],
+    qa: [
+      { q: 'How can seasonal awareness become a form of knowledge?', choices: ['By connecting personal experience with environmental change.', 'By replacing all statistics.', 'By stopping climate change.', 'By making winters colder.'], answer: 0, why: '第6段落 connecting personal experience with broader environmental change。' },
+      { q: 'What do seasonal festivals do, according to the passage?', choices: ['Bring communities together to mark moments of transition.', 'Prevent people from working.', 'Replace poetry.', 'Make food more expensive.'], answer: 0, why: '第4段落 Seasonal festivals bring communities together to mark moments of transition。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
