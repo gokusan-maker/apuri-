@@ -34942,6 +34942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mistakes',
+    title: 'Learning from Mistakes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "From an early age, most of us are taught that mistakes are something to be avoided. In school, errors are marked in red and lead to lower grades; at work, they may cost money or damage a reputation. It is hardly surprising, then, that many people come to fear making mistakes and go to considerable lengths to hide them. Yet a growing body of thought suggests that this attitude, however natural it may seem, can prevent us from learning and from thinking clearly about the world and ourselves.",
+      "The first reason to reconsider our attitude is that mistakes are an essential part of learning. A child learning to walk falls many times before taking a confident step, and a student learning a language must say many incorrect sentences before speaking fluently. In each case, the error provides information about the gap between what was intended and what actually happened. Without such feedback, improvement would be almost impossible, since we would have no way of knowing which of our attempts had gone wrong and why.",
+      "Fear of mistakes can therefore be self-defeating. A learner who is afraid of being wrong may avoid difficult tasks, choosing instead activities in which success is certain but little is learned. ( A ) such caution may protect a person from embarrassment in the short term, it may also deprive them of the very experiences that would allow them to grow. Teachers have long observed that students who are willing to make mistakes in front of others often progress faster than those who remain silent until they are sure of being correct.",
+      "Mistakes also play an important role in the advancement of knowledge more broadly. Scientific progress depends not only on discovering what is true but also on identifying what is false, and many theories that were once widely accepted were eventually shown to be mistaken. A scientific community that punished every error severely would discourage researchers from proposing bold ideas, since bold ideas are more likely to turn out wrong. The willingness to risk error is, in this sense, a condition for discovering anything genuinely new.",
+      "This is not to suggest that all mistakes are equally acceptable. In some fields, such as medicine or aviation, a single error can cost lives, and great effort is rightly devoted to preventing it. Even here, however, progress has often come from studying mistakes rather than hiding them. Systems that encourage people to report errors openly, without fear of unfair punishment, allow organizations to understand why things went wrong and to change the conditions that made the mistakes more likely. In this way, an individual error becomes an opportunity for the whole organization to improve, rather than simply a reason to blame the person who made it.",
+      "What, then, distinguishes a useful mistake from a merely harmful one? Much depends on how we respond to it. A mistake that is acknowledged, examined, and learned from can become a source of understanding, while one that is denied or concealed teaches nothing and may well be repeated. The ability to admit error, both to others and to oneself, is therefore not a sign of weakness but a form of intellectual honesty, and perhaps one of the most valuable habits a person can develop.",
+      "Ultimately, our relationship with mistakes reflects our relationship with uncertainty. To live and learn is to act without complete knowledge, and anyone who acts in this way will sometimes be wrong. Rather than trying to eliminate mistakes entirely, which is impossible, we might do better to create conditions in which errors can be made safely, recognized quickly, and turned into lessons. A culture that treats mistakes in this way may produce not fewer errors but wiser people, who are better prepared to face a world that never stops surprising them.",
+    ],
+    ja: [
+      '幼いころから、私たちのほとんどは、まちがいはさけるべきものだと教えられる。学校ではまちがいは赤でしるしをつけられ、成績が下がることにつながる。職場ではお金がかかったり評判を傷つけたりするかもしれない。だとすれば、多くの人がまちがえることをおそれるようになり、それをかくすためにかなりの手間をかけるのも、ほとんどおどろくことではない。しかし、この態度は、どれほど自然に見えようとも、私たちが学ぶことや、世界と自分自身についてはっきり考えることをさまたげうると、しだいに多くの考えが示している。',
+      '態度を考え直すべき第一の理由は、まちがいが学びに欠かせない一部だということである。歩くことを学ぶ子どもは、自信のある一歩をふみ出すまでに何度もころび、言語を学ぶ生徒は、流ちょうに話せるようになるまでに多くのまちがった文を言わなければならない。どちらの場合も、まちがいは、意図したことと実際に起こったこととのずれについての情報をあたえる。そうした手がかりがなければ、上達はほとんど不可能だろう。自分の試みのどれがなぜうまくいかなかったのかを知るすべがないからである。',
+      'それゆえ、まちがいへのおそれは自分自身をくじくことになりうる。まちがえるのがこわい学び手は、難しい課題をさけ、代わりに成功は確かだがほとんど何も学べない活動を選ぶかもしれない。そうした用心は、短い目で見れば人をはずかしい思いから守るかもしれないが、成長を可能にするまさにその経験をうばってしまうかもしれない。教師たちは長いあいだ、人前でまちがえることをいとわない生徒のほうが、正しいと確信するまでだまっている生徒よりも速く進歩することが多いと気づいてきた。',
+      'まちがいはまた、より広く知識の進歩においても大切な役割をはたす。科学の進歩は、何が正しいかを見つけることだけでなく、何がまちがっているかを見きわめることにもかかっており、かつて広く受け入れられていた多くの理論が、やがてまちがいだと示された。あらゆるまちがいをきびしく罰する科学の世界は、研究者が大胆な考えを出すのをくじいてしまうだろう。大胆な考えほどまちがいだとわかりやすいからである。この意味で、まちがいの危険をおかす気持ちは、本当に新しいものを見つけるための条件なのである。',
+      'これは、あらゆるまちがいが同じようにゆるされるということではない。医療や航空のような分野では、一つのまちがいが命をうばうこともあり、それをふせぐために大きな努力が注がれるのは当然である。しかしここでさえ、進歩はしばしば、まちがいをかくすことではなく調べることから生まれてきた。不公平に罰せられるおそれなく人々がまちがいを率直に報告することをうながす仕組みは、組織がなぜうまくいかなかったのかを理解し、まちがいを起こりやすくしていた条件を変えることを可能にする。こうして、一人のまちがいは、単にそれをおかした人を責める理由ではなく、組織全体がよくなる機会になるのである。',
+      'では、役に立つまちがいと単に有害なまちがいを分けるものは何だろうか。多くはそれにどうこたえるかにかかっている。認められ、調べられ、そこから学ばれたまちがいは理解のみなもとになりうるが、否定されたりかくされたりしたまちがいは何も教えず、くり返されるおそれも十分にある。それゆえ、他人に対しても自分に対してもまちがいを認める力は、弱さのしるしではなく知的な誠実さの一つの形であり、おそらく人が身につけられるもっとも価値ある習慣の一つなのである。',
+      '結局のところ、私たちとまちがいとの関係は、私たちと不確かさとの関係を反映している。生きて学ぶことは完全な知識なしに行動することであり、そのように行動する人はだれでもときにまちがえる。不可能なことであるまちがいの完全な排除を目指すよりも、まちがいを安全におかせ、すばやく気づけ、教訓に変えられる条件をつくるほうがよいのかもしれない。まちがいをこのようにあつかう文化は、まちがいの少ない人々ではなく、より賢い人々を生み出すかもしれない。たえず私たちをおどろかせ続ける世界に向き合うそなえのよりよくできた人々である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「用心は短期的には守るかもしれないが、成長の経験をうばうかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'まちがいは、意図したことと実際に起こったこととのずれについての情報をあたえる。', answer: true, why: '第2段落 the error provides information about the gap。' },
+      { statement: '教師たちによれば、正しいと確信するまでだまっている生徒のほうが速く進歩する。', answer: false, why: '第3段落 students who are willing to make mistakes ... often progress faster。' },
+      { statement: '医療や航空でも、まちがいを調べることが進歩につながってきた。', answer: true, why: '第5段落 progress has often come from studying mistakes rather than hiding them。' },
+      { statement: '筆者は、まちがいを完全になくすことができると考えている。', answer: false, why: '第7段落 trying to eliminate mistakes entirely, which is impossible。' },
+    ],
+    qa: [
+      { q: 'Why would punishing every error severely discourage bold ideas in science?', choices: ['Bold ideas are more likely to turn out wrong.', 'Bold ideas are always correct.', 'Scientists dislike new ideas.', 'Bold ideas cost less.'], answer: 0, why: '第4段落 since bold ideas are more likely to turn out wrong。' },
+      { q: 'What does the author call the ability to admit error?', choices: ['A form of intellectual honesty.', 'A sign of weakness.', 'A kind of luck.', 'A waste of time.'], answer: 0, why: '第6段落 not a sign of weakness but a form of intellectual honesty。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
