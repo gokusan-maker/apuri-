@@ -36222,6 +36222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-self-taught',
+    title: 'Teaching Oneself',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Throughout history, many remarkable people have taught themselves. Writers who never attended university, inventors with little formal training, and artists who learned by copying the works they admired have all made lasting contributions to human culture. Today, with vast amounts of information freely available online, the opportunity to learn without a teacher has never been greater. This raises an interesting question about the relationship between self-education and formal instruction, and about what each can offer that the other cannot.",
+      "The most obvious advantage of teaching oneself is freedom. A self-taught learner can choose what to study, in what order, and at what pace, following their curiosity wherever it leads. They are not bound by a fixed curriculum or by the need to prepare for examinations, and they can spend as long as they wish on topics that fascinate them. This freedom can produce a depth of engagement that is rare in formal education, where students often learn material because it is required rather than because it interests them. Many self-taught people describe the joy of discovering a subject on their own terms as one of the most rewarding experiences of their lives.",
+      "Self-education also cultivates qualities that are valuable in any field. A person who learns alone must develop the discipline to keep going without external deadlines, the resourcefulness to find answers when no one is available to provide them, and the honesty to recognize when they do not understand something. ( A ) these qualities can be developed in classrooms as well, they are tested especially severely when there is no teacher to guide, correct, or encourage, and those who succeed in teaching themselves often carry these habits throughout their lives.",
+      "Yet self-education has significant limitations. Without a teacher, it can be difficult to know what one does not know. A self-taught learner may develop serious misunderstandings that go uncorrected for years, or may overlook entire areas of a subject simply because they never encountered them. Teachers and structured courses provide not only information but also a map of the field, showing how its parts fit together and which questions are considered important by those who know it well.",
+      "Formal education also offers the benefits of community. Learning alongside others allows students to test their ideas in discussion, to see problems from different perspectives, and to be challenged by people whose views differ from their own. A self-taught learner may lack such opportunities and may therefore be more likely to remain confined within their own assumptions. Moreover, institutions provide credentials that are recognized by employers and others, which self-taught learners may find difficult to obtain, however much they know. In many professions, such as medicine or law, formal qualifications are not merely useful but legally required, so that self-education alone cannot open the door.",
+      "For these reasons, the most effective learning may combine elements of both approaches. Many people who are largely self-taught have also benefited from mentors, informal study groups, or occasional courses that helped them to correct their mistakes and fill gaps in their knowledge. Conversely, students in formal education often learn most deeply when they go beyond the requirements of their courses, pursuing questions on their own initiative. The distinction between being taught and teaching oneself may therefore be less sharp than it first appears.",
+      "Perhaps the deepest lesson of self-education is that all genuine learning ultimately depends on the learner. A teacher can explain, guide, and inspire, but understanding must be built by the person who seeks it. In this sense, every successful student is partly self-taught, and every self-taught person has learned from others, whether through books, conversations, or examples. Recognizing this may help us to value both the independence that self-education demands and the guidance that good teaching provides.",
+    ],
+    ja: [
+      '歴史を通じて、多くのすぐれた人々が独学してきた。大学にかよったことのない作家や、正式な訓練をほとんど受けていない発明家や、あこがれた作品をまねて学んだ芸術家は、みな人間の文化に長く残る貢献をしてきた。今日、ばく大な情報がネットで自由に手に入るので、先生なしに学ぶ機会はこれまでになく大きい。このことは、独学と正式な授業との関係について、そしてそれぞれがもう一方にはないものとして何をあたえうるのかについて、興味深い問いを投げかける。',
+      '独学のもっともはっきりした利点は自由である。独学の学び手は、何を、どの順で、どのくらいの速さで学ぶかを選び、好奇心の導くところへどこまでもついていける。決まった教育課程や試験にそなえる必要にしばられず、夢中になる話題に好きなだけ時間をかけられる。この自由は、生徒がしばしば興味があるからではなく求められているから学ぶ正式な教育ではまれな、深い打ちこみを生みうる。多くの独学者は、自分のやり方で学問を見いだすよろこびを、人生でもっとも実りある経験の一つとして語っている。',
+      '独学はまた、どんな分野でも価値のある性質を育てる。一人で学ぶ人は、外からのしめきりなしに続ける自制心と、答えをくれる人がいないときに答えを見つける工夫の力と、何かがわかっていないときにそれを認める正直さを育てなければならない。こうした性質は教室でも育てられるが、導き、直し、はげましてくれる先生がいないときにとくにきびしくためされるのであり、独学に成功した人はしばしばこうした習慣を一生もち続ける。',
+      'しかし独学には大きな限界がある。先生がいないと、自分が何を知らないのかを知るのが難しいことがある。独学の学び手は、何年も直されないままの深刻な誤解を育ててしまったり、単に出会わなかったというだけで、ある学問の領域をまるごと見落としたりするかもしれない。先生や組み立てられた講座は、情報だけでなく、その分野の地図もあたえてくれる。分野の部分どうしがどう組み合わさり、それをよく知る人々がどの問いを大切だと考えているかを示してくれるのである。',
+      '正式な教育はまた、仲間がいることの利益もあたえる。ほかの人といっしょに学ぶことで、生徒は話し合いのなかで自分の考えをためし、ちがう立場から問題を見て、自分とは異なる見方をもつ人々に挑まれることができる。独学の学び手にはそうした機会が欠けているかもしれず、それゆえ自分の思いこみのなかにとどまりやすいかもしれない。さらに、学校は雇い主などにみとめられる資格をあたえるが、独学の学び手は、どれほど多くを知っていても、それを得るのが難しいと感じるかもしれない。医療や法律のような多くの職業では、正式な資格は単に役に立つだけでなく法律で求められており、独学だけではその扉を開けられない。',
+      'こうした理由から、もっとも効果的な学びは両方のやり方の要素を組み合わせるものなのかもしれない。ほとんど独学の多くの人も、まちがいを直し知識のすきまをうめる助けになった助言者や、気楽な勉強会や、ときどきの講座から益を得てきた。逆に、正式な教育を受けている生徒も、講座の求めをこえて自分から問いを追うときに、もっとも深く学ぶことが多い。それゆえ、教わることと自分で学ぶことのちがいは、はじめに思えるほどはっきりしていないのかもしれない。',
+      'おそらく独学のもっとも深い教訓は、本当の学びはすべて、結局は学び手にかかっているということである。先生は説明し、導き、ふるい立たせることができるが、理解はそれを求める人自身によってきずかれなければならない。この意味で、成功した生徒はだれでも一部は独学しており、独学した人はだれでも、本や会話や手本を通じてほかの人から学んできた。このことを認めることは、独学が求める自立と、よい教えがあたえる導きの両方を大切にする助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「こうした性質は教室でも育てられるが、先生がいないときにとくにきびしくためされる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '今日、先生なしに学ぶ機会はこれまでになく大きい。', answer: true, why: '第1段落 the opportunity to learn without a teacher has never been greater。' },
+      { statement: '独学の学び手は、決まった教育課程にしばられる。', answer: false, why: '第2段落 They are not bound by a fixed curriculum。' },
+      { statement: '独学の学び手は、自分が何を知らないのかを知るのが難しいことがある。', answer: true, why: '第4段落 it can be difficult to know what one does not know。' },
+      { statement: '筆者によれば、教わることと自分で学ぶことのちがいはとてもはっきりしている。', answer: false, why: '第6段落 may therefore be less sharp than it first appears。' },
+    ],
+    qa: [
+      { q: 'What do teachers and structured courses provide besides information?', choices: ['A map of the field.', 'Free time.', 'Unlimited freedom.', 'Fewer questions.'], answer: 0, why: '第4段落 provide not only information but also a map of the field。' },
+      { q: 'What does all genuine learning ultimately depend on, according to the author?', choices: ['The learner.', 'The textbook.', 'The examination.', 'The building.'], answer: 0, why: '第7段落 all genuine learning ultimately depends on the learner。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
