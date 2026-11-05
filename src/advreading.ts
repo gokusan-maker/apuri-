@@ -34062,6 +34062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-coincidence',
+    title: 'The Meaning of Coincidence',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people can recall a coincidence that seemed too remarkable to be accidental. We think of an old friend and receive a message from that person a moment later, or we meet a stranger in a distant city who turns out to have grown up on our own street. Such experiences often produce a strong feeling that something meaningful has happened, that the event was somehow intended. Yet statisticians insist that coincidences are far more common than we imagine, and that our surprise reveals more about the human mind than about the workings of the world. Understanding why this is so can tell us a great deal about how we think.",
+      "The mathematical explanation rests on what might be called the law of large numbers. In a lifetime, each of us experiences an enormous number of events, thoughts, and encounters. Among so many possibilities, it would be extraordinary if surprising combinations never occurred. The chance that a particular coincidence will happen to a particular person on a particular day may be very small, but the chance that some coincidence will happen to someone, somewhere, is very large. We notice the rare matches and forget the countless occasions on which nothing remarkable happened.",
+      "Psychology adds further explanations. Human beings are pattern-seeking creatures, inclined to detect connections and intentions even where none exist. This tendency was probably useful in our evolutionary past, when failing to notice a real pattern, such as the sound of an approaching predator, could be fatal, while noticing a false one usually cost little. ( A ) this tendency helps us learn from experience, it also leads us to see meaning in random events and to remember the cases that confirm our expectations while overlooking those that do not.",
+      "Yet to explain coincidences in this way is not necessarily to deny their significance for those who experience them. A chance meeting may lead to a lasting friendship, a career, or a marriage, and the fact that it was statistically likely to happen to someone does not make it less important in the life of the person to whom it actually happened. The meaning of a coincidence, in this sense, may lie not in its cause but in what we make of it afterward.",
+      "Many cultures have interpreted coincidences as signs, whether of fate, divine guidance, or hidden connections between events. Such interpretations can provide comfort and a sense that life has direction. They may also, however, lead people to make important decisions on the basis of misleading impressions, or to see themselves as specially chosen in ways that encourage arrogance or anxiety. Learning to appreciate coincidences without overinterpreting them may require a delicate balance between wonder and skepticism, allowing us to enjoy the surprise without being ruled by it.",
+      "Coincidences also play a role in science and invention. Many discoveries have been made when researchers noticed an unexpected connection that others had overlooked. In such cases, the coincidence itself is not enough: what matters is the prepared mind that recognizes its potential importance and investigates it carefully. A famous saying holds that chance favors the prepared mind, suggesting that the value of a coincidence depends on the knowledge and attention of the person who encounters it.",
+      "Perhaps, then, coincidences remind us of two things at once. On the one hand, they reveal the limits of our intuition about probability and our tendency to find meaning where there may be none. On the other, they show how much of our lives is shaped by events we did not plan. Recognizing both may help us respond to the unexpected with curiosity rather than superstition, and with gratitude for the chances that have shaped who we have become, and may yet shape who we will be.",
+    ],
+    ja: [
+      'ほとんどの人は、偶然とは思えないほどおどろくべき偶然の一致を思い出すことができる。古い友人のことを考えていると、すぐあとにその人からメッセージがとどいたり、遠い町で出会った見知らぬ人が、自分と同じ通りで育ったとわかったりする。そうした経験は、何か意味のあることが起きた、その出来事はどういうわけか意図されたものだったという強い感覚をしばしば生む。しかし統計学者たちは、偶然の一致は私たちが想像するよりはるかによくあることであり、私たちのおどろきは世界のはたらきよりも人間の心について多くを明らかにしていると強く主張する。なぜそうなのかを理解することは、私たちがどう考えるかについて多くを教えてくれる。',
+      '数学的な説明は、大数の法則とでも呼べるものにもとづいている。一生のあいだに、私たちはそれぞればく大な数の出来事や考えや出会いを経験する。それほど多くの可能性の中で、おどろくべき組み合わせがまったく起きないとしたら、そのほうが並外れたことだろう。ある特定の偶然の一致が、ある特定の人に、ある特定の日に起きる確率はとても小さいかもしれないが、何らかの偶然の一致が、どこかのだれかに起きる確率はとても大きい。私たちはまれな一致に気づき、何もおどろくべきことが起きなかった数えきれない機会は忘れてしまうのである。',
+      '心理学はさらなる説明を加える。人間は型を探す生き物であり、何もないところにさえつながりや意図を見つけようとする傾向がある。この傾向は、近づいてくる捕食者の音のような本当の型に気づかないと命取りになりうる一方、まちがった型に気づいてもふつうは失うものが少なかった、進化の過去ではおそらく役に立った。この傾向は経験から学ぶ助けになるが、でたらめな出来事に意味を見いだし、期待を確かめる例を覚えていながら、そうでない例を見すごすことにもつながる。',
+      'しかし、偶然の一致をこのように説明することは、それを経験する人々にとってのその意味を否定することにはかならずしもならない。偶然の出会いが長く続く友情や職業や結婚につながることもあり、それがだれかに起きる統計的な見こみが高かったからといって、実際にそれが起きた人の人生においてそれが重要でなくなるわけではない。この意味で、偶然の一致の意味はその原因にではなく、あとで私たちがそれをどう受けとめるかにあるのかもしれない。',
+      '多くの文化は、偶然の一致を、運命や神の導きや出来事のあいだのかくれたつながりのしるしとして解釈してきた。そうした解釈は慰めや、人生には方向があるという感覚をあたえうる。しかし、それはまた、人々が誤解をまねく印象にもとづいて大切な決定をしたり、ごうまんや不安をうながすようなしかたで自分を特別に選ばれた者とみなしたりすることにもつながりうる。偶然の一致を解釈しすぎずに味わうことを学ぶには、おどろきと懐疑とのあいだの微妙なつりあいが必要かもしれない。そうすれば、おどろきを楽しみながら、それに支配されずにすむだろう。',
+      '偶然の一致は、科学や発明でも役割を果たしている。多くの発見は、研究者がほかの人の見すごしていた思いがけないつながりに気づいたときになされてきた。そのような場合、偶然の一致そのものだけでは十分ではない。大切なのは、その潜在的な重要さに気づき、それを注意深く調べる準備のできた心である。「偶然は準備のできた心にほほえむ」という有名なことばは、偶然の一致の価値が、それに出会う人の知識と注意にかかっていることを示唆している。',
+      'それなら、偶然の一致は、二つのことを同時に思い出させてくれるのかもしれない。一方では、確率についての私たちの直観の限界と、意味がないかもしれないところに意味を見いだす傾向を明らかにする。もう一方では、私たちの人生のどれほどが、計画しなかった出来事によって形づくられているかを示している。その両方を認めることで、私たちは思いがけないことに、迷信ではなく好奇心をもって、そして今の自分を形づくってきた偶然への感謝をもってこたえられるようになるかもしれない。そしてその偶然は、これからの自分をも形づくるかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この傾向は学ぶ助けになるが、でたらめな出来事に意味を見いだすことにもつながる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '統計学者によれば、偶然の一致は私たちが想像するよりはるかによくある。', answer: true, why: '第1段落 coincidences are far more common than we imagine。' },
+      { statement: '私たちは何も起きなかった機会をよく覚えている。', answer: false, why: '第2段落 forget the countless occasions on which nothing remarkable happened。' },
+      { statement: '筆者によれば、偶然の一致の意味はあとでそれをどう受けとめるかにあるのかもしれない。', answer: true, why: '第4段落 may lie not in its cause but in what we make of it afterward。' },
+      { statement: '科学の発見では、偶然の一致そのものだけで十分である。', answer: false, why: '第6段落 the coincidence itself is not enough。' },
+    ],
+    qa: [
+      { q: 'Why was the pattern-seeking tendency probably useful in our evolutionary past?', choices: ['Missing a real pattern could be fatal, while noticing a false one cost little.', 'It made people famous.', 'It helped people forget dangers.', 'It made all patterns true.'], answer: 0, why: '第3段落 failing to notice a real pattern ... could be fatal, while noticing a false one usually cost little。' },
+      { q: 'What does the saying about the prepared mind suggest?', choices: ['The value of a coincidence depends on the knowledge of the person who meets it.', 'Coincidences never matter.', 'Only lucky people succeed.', 'Preparation is useless.'], answer: 0, why: '第6段落 the value of a coincidence depends on the knowledge and attention of the person who encounters it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
