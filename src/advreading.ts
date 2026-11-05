@@ -36658,6 +36658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-dams',
+    title: 'Should More Large Dams Be Built?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Large dams have long been regarded as symbols of progress. By storing water in vast reservoirs, they can provide drinking water for cities, irrigation for farms, protection against floods, and electricity generated without burning fossil fuels. Many countries built enormous dams during the twentieth century, and some continue to plan new ones today. In recent decades, however, the social and environmental costs of large dams have become more widely recognized, and the question of whether new dams should be built has become a subject of intense debate.",
+      "Supporters of new dams emphasize their contribution to clean energy. Hydroelectric power produces far less carbon dioxide than coal or gas, and unlike wind and solar power, it can be adjusted quickly to meet changing demand. For countries that are trying to reduce their reliance on fossil fuels while meeting the needs of growing populations, supporters argue, large dams offer a reliable source of electricity that can support economic development and reduce poverty. Once built, a well-designed dam can operate for many decades, producing electricity at a relatively low cost long after the initial investment has been repaid.",
+      "Supporters also point to the importance of water security. As climate change makes rainfall less predictable, reservoirs can store water during wet periods for use in times of drought, protecting farmers and cities from shortages. ( A ) dams cannot solve every water problem, supporters argue, they can reduce the damage caused by floods and droughts, both of which are expected to become more frequent and severe in many parts of the world.",
+      "Critics, however, argue that the costs of large dams are often underestimated. Building a dam may require flooding vast areas of land, forcing thousands or even millions of people to leave their homes, often with inadequate compensation. Communities that depend on rivers for fishing or farming downstream may find their livelihoods destroyed when the flow of water and sediment changes. Critics note that those who bear these costs are frequently poor or politically powerless, while the benefits flow mainly to distant cities and industries. Promises of new homes and jobs for those who are relocated, critics add, have not always been kept.",
+      "Critics also highlight the environmental damage caused by dams. By blocking rivers, dams prevent fish from migrating to their breeding grounds, alter water temperatures, and trap sediment that would otherwise enrich farmland and coastal areas. Reservoirs in warm regions can also release significant amounts of methane, a powerful greenhouse gas, as plants decompose underwater, reducing the climate benefits of hydroelectric power. In some cases, critics argue, smaller projects or alternative energy sources would achieve similar benefits at far lower cost.",
+      "Between these positions, many experts recommend a more careful approach to decisions about dams. This includes thorough assessments of social and environmental impacts before projects are approved, genuine consultation with affected communities, and fair compensation for those who must relocate. Some suggest improving the efficiency of existing dams or combining smaller hydroelectric projects with other renewable sources rather than building new large dams. In some countries, old dams that no longer serve a useful purpose have even been removed, allowing rivers to recover. Fish have returned to some of these rivers within only a few years.",
+      "The debate over large dams reflects a broader question about how societies should weigh the benefits of development against its costs. Projects that bring electricity and water to millions may also harm ecosystems and displace vulnerable communities. Making wise decisions requires not only technical expertise but also a willingness to listen to those who will be affected and to consider the long-term consequences for rivers and the people who depend on them. Only by balancing these concerns can societies ensure that progress benefits everyone rather than only a few.",
+    ],
+    ja: [
+      '大きなダムは長いあいだ進歩の象徴と見なされてきた。広大な貯水池に水をためることで、ダムは都市に飲み水を、農場にかんがい用の水を、洪水へのそなえを、そして化石燃料を燃やさずにつくる電気をあたえることができる。多くの国が20世紀に巨大なダムを建て、今も新しいダムを計画している国もある。しかしここ数十年、大きなダムの社会的・環境的な代償がより広く認められるようになり、新しいダムを建てるべきかどうかという問いは、激しい議論の的になっている。',
+      '新しいダムを支持する人々は、クリーンなエネルギーへの貢献を強調する。水力発電は石炭やガスよりはるかに少ない二酸化炭素しか出さず、風力や太陽光とちがって、変わる需要に合わせてすばやく調整できる。ふえる人口の必要にこたえつつ化石燃料へのたよりをへらそうとしている国にとって、大きなダムは経済発展をささえ貧困をへらしうる、信頼できる電気のみなもとをあたえると支持する人々は主張する。よく設計されたダムは、一度建てられれば何十年も動き続け、はじめの投資が返されたずっとあとまで、比較的安い費用で電気をつくることができる。',
+      '支持する人々はまた、水の安全の大切さを指摘する。気候変動によって雨の降り方が予測しにくくなるなかで、貯水池は雨の多い時期に水をため、日照りのときに使えるようにして、農家や都市を水不足から守ることができる。ダムはあらゆる水の問題を解決できるわけではないが、世界の多くの地域でより多く、よりはげしくなると見こまれる洪水と日照りの両方による害をへらせると支持する人々は主張する。',
+      'しかし批判する人々は、大きなダムの代償はしばしば低く見積もられていると主張する。ダムを建てるには広大な土地を水にしずめる必要があることがあり、何千人、ときには何百万人もの人々が、しばしば不十分な補償で家を出ることをしいられる。下流で漁や農業を川にたよっている地域は、水と土砂の流れが変わると暮らしの手段がこわされてしまうかもしれない。こうした代償を負うのはしばしば貧しい人々や政治的に力のない人々である一方、利益は主に遠くの都市や産業に流れると批判する人々は指摘する。移り住む人々への新しい家や仕事の約束がいつも守られてきたわけではないと、批判する人々は付け加える。',
+      '批判する人々はまた、ダムがもたらす環境への害を強調する。川をせき止めることで、ダムは魚が産卵の場所へ移動するのをさまたげ、水の温度を変え、そうでなければ農地や海岸の地域をゆたかにするはずの土砂をとどめてしまう。暖かい地域の貯水池は、水中で植物がくさるにつれて強力な温室効果ガスであるメタンをかなりの量出すこともあり、水力発電の気候への利益をへらしてしまう。場合によっては、より小さな事業やほかのエネルギー源のほうが、はるかに低い費用で同じような利益をもたらすだろうと批判する人々は主張する。',
+      'これらの立場のあいだで、多くの専門家はダムについての決定へのより注意深いやり方をすすめている。それには、事業が認められる前に社会と環境への影響を徹底的に評価すること、影響を受ける地域と本当に話し合うこと、移り住まなければならない人々に公平な補償をすることがふくまれる。新しい大きなダムを建てるのではなく、今あるダムの効率をよくしたり、より小さな水力発電の事業をほかの再生可能エネルギーと組み合わせたりすることを示す人もいる。いくつかの国では、もはや役に立たない古いダムが取りのぞかれ、川が回復できるようになった例さえある。そうした川のいくつかには、わずか数年のうちに魚がもどってきた。',
+      '大きなダムをめぐる議論は、社会が開発の利益とその代償をどうはかりにかけるべきかという、より広い問いを反映している。何百万人もの人に電気と水をもたらす事業は、生態系を傷つけ、弱い立場の地域を立ちのかせることもある。かしこい決定をするには、技術的な専門知識だけでなく、影響を受ける人々の声に耳をかたむけ、川とそれにたよる人々にとっての長い目で見た結果を考える気持ちが必要である。こうした心配のつりあいをとることによってはじめて、社会は進歩が一部の人だけでなくすべての人の益になるようにできるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ダムはあらゆる問題を解決できないが、洪水と日照りの害をへらせる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that dams provide clean ( 1 ) and improve water security. Critics argue that dams force people to leave their homes and cause ( 2 ) damage, such as blocking fish migration. Many experts recommend thorough assessments and genuine ( 3 ) with affected communities.',
+      blanks: [
+        { choices: ['energy', 'air', 'food', 'money'], answer: 0, why: '第2段落 their contribution to clean energy。' },
+        { choices: ['environmental', 'financial', 'cultural', 'medical'], answer: 0, why: '第5段落 the environmental damage caused by dams。' },
+        { choices: ['consultation', 'competition', 'construction', 'celebration'], answer: 0, why: '第6段落 genuine consultation with affected communities。' },
+      ],
+    },
+    tf: [
+      { statement: '水力発電は、石炭やガスより二酸化炭素をはるかに少なく出す。', answer: true, why: '第2段落 produces far less carbon dioxide than coal or gas。' },
+      { statement: '支持する人々によれば、ダムはあらゆる水の問題を解決できる。', answer: false, why: '第3段落 dams cannot solve every water problem。' },
+      { statement: '暖かい地域の貯水池は、メタンを出すことがある。', answer: true, why: '第5段落 can also release significant amounts of methane。' },
+      { statement: '古いダムが取りのぞかれた例は一つもない。', answer: false, why: '第6段落 old dams ... have even been removed。' },
+    ],
+    qa: [
+      { q: 'Who frequently bears the costs of large dams, according to critics?', choices: ['People who are poor or politically powerless.', 'Distant cities.', 'Large industries.', 'Wealthy investors.'], answer: 0, why: '第4段落 those who bear these costs are frequently poor or politically powerless。' },
+      { q: 'What do some experts suggest instead of building new large dams?', choices: ['Improving existing dams or combining smaller projects with other renewables.', 'Building even larger dams.', 'Using more coal.', 'Draining all rivers.'], answer: 0, why: '第6段落 improving the efficiency of existing dams or combining smaller hydroelectric projects with other renewable sources。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
