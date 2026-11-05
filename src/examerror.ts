@@ -4706,6 +4706,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Only if (B) I (C) had listened (D) to you then!', choices: ['(A) Only if', '(B) I', '(C) had listened', '(D) to you then!'], answer: 0, why: '「～でありさえすれば」は If only。If only I had listened。' },
     ],
   },
+  {
+    id: 'exam-error-uncountable-kokkou',
+    title: '入試の正誤問題〈198〉（国公立レベル：数えられない名詞 information・advice・furniture）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'information・advice・furniture・baggage（luggage）・equipment・homework・news・traffic・progress・paper（紙）などは数えられない名詞。a／an をつけず、複数形の s もつけず、動詞は単数あつかい（The news is ～）。many・a few ではなく much・a little・a lot of を使い、数えるときは a piece of advice のように言う。日本語では数えられそうに思えるので、英作文で特に注意する。',
+    ],
+    examples: [
+      { en: 'She gave me some useful advice.', ja: '彼女は私に役立つ助言をしてくれた。' },
+      { en: 'There is a lot of traffic this morning.', ja: '今朝は交通量が多い。' },
+    ],
+    questions: [
+      { sentence: '(A) She gave me (B) some useful (C) advices (D) about my career.', choices: ['(A) She gave me', '(B) some useful', '(C) advices', '(D) about my career'], answer: 2, why: 'advice は数えられない名詞なので s をつけない。some useful advice。' },
+      { sentence: '(A) We need (B) more (C) informations (D) before we decide.', choices: ['(A) We need', '(B) more', '(C) informations', '(D) before we decide'], answer: 2, why: 'information は数えられない名詞。more information。' },
+      { sentence: '(A) They bought (B) a new furniture (C) for (D) the living room.', choices: ['(A) They bought', '(B) a new furniture', '(C) for', '(D) the living room'], answer: 1, why: 'furniture は数えられないので a をつけない。new furniture（a new piece of furniture）。' },
+      { sentence: '(A) How (B) many (C) luggage (D) do you have?', choices: ['(A) How', '(B) many', '(C) luggage', '(D) do you have?'], answer: 1, why: 'luggage は数えられない名詞なので How much。' },
+      { sentence: '(A) There (B) are (C) a lot of (D) traffic this morning.', choices: ['(A) There', '(B) are', '(C) a lot of', '(D) traffic this morning'], answer: 1, why: 'traffic は数えられない名詞で単数あつかい。There is。' },
+      { sentence: '(A) Many (B) homework (C) was given (D) yesterday.', choices: ['(A) Many', '(B) homework', '(C) was given', '(D) yesterday'], answer: 0, why: 'homework は数えられない名詞なので many は使えない。A lot of（Much）homework。' },
+      { sentence: '(A) I heard (B) an interesting (C) news (D) today.', choices: ['(A) I heard', '(B) an interesting', '(C) news', '(D) today'], answer: 1, why: 'news は数えられない名詞なので an は使えない。some interesting news（a piece of news）。' },
+      { sentence: '(A) He has made (B) great progress, (C) but he still needs (D) many practice.', choices: ['(A) He has made', '(B) great progress,', '(C) but he still needs', '(D) many practice'], answer: 3, why: 'practice「練習」は数えられない名詞なので many は使えない。a lot of practice。' },
+      { sentence: '(A) The equipment (B) in this lab (C) are (D) very expensive.', choices: ['(A) The equipment', '(B) in this lab', '(C) are', '(D) very expensive'], answer: 2, why: 'equipment は数えられない名詞で単数あつかい。is。' },
+      { sentence: '(A) Could you give me (B) a (C) piece of (D) papers?', choices: ['(A) Could you give me', '(B) a', '(C) piece of', '(D) papers?'], answer: 3, why: '「紙」の paper は数えられない名詞。a piece of paper。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
