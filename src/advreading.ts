@@ -34818,6 +34818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-urban-noise',
+    title: 'Should Cities Do More to Reduce Noise?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Cities have always been noisy places, but the volume and variety of urban noise have grown considerably over the past century. Traffic, construction, aircraft, delivery vehicles, and amplified music combine to create a background of sound that many residents can rarely escape, even at night. For a long time, noise was treated as an unavoidable side effect of city life, a minor annoyance rather than a serious problem. In recent years, however, a growing number of researchers and city governments have begun to argue that noise deserves to be treated as a public health issue.",
+      "The case for stronger action rests largely on evidence about the effects of noise on health. Long-term exposure to loud traffic or aircraft noise has been linked with disturbed sleep, higher stress, and an increased risk of heart disease, even among people who say they have grown used to the sound. Children who attend schools near busy roads or airports may find it harder to concentrate and to develop reading skills. Because these effects build up slowly and are difficult to see, supporters argue, they have long been underestimated by the public and by policymakers alike.",
+      "Supporters also emphasize that the burden of noise is not shared equally. Housing near highways, railways, and industrial areas is often cheaper, so that people with lower incomes are more likely to live in the noisiest parts of a city. ( A ) wealthier residents can often afford quieter homes, better windows, or a second home in the countryside, many poorer households have no such options. Reducing noise, in this view, is not simply a matter of comfort but also a question of fairness, since it would improve conditions most for those who suffer most.",
+      "Critics, however, warn that strict noise controls may carry significant costs. Limits on construction hours can delay the building of homes and infrastructure that cities urgently need, while restrictions on deliveries or night flights may harm businesses and raise prices. Some also argue that a certain level of noise is part of what makes cities lively and attractive, and that rules against music, festivals, or busy nightlife risk turning vibrant neighborhoods into quiet but lifeless places where few people would wish to spend their evenings.",
+      "Critics further point out that complaints about noise are sometimes used to resist change. New residents who move into a lively area may object to the very bars, concert halls, or markets that made the area attractive in the first place, and their complaints can force long-established businesses to close. Deciding whose interests should come first, those of people who wish to sleep or those of people who wish to work and celebrate, is not a question that measurements of decibels alone can answer.",
+      "Between these positions, a number of practical measures have been proposed. Cities can plant trees and build barriers along major roads, encourage quieter road surfaces and electric vehicles, and require better sound insulation in new buildings. Planning rules can separate noisy activities from homes where possible, while agreements between residents and businesses can set reasonable hours for music and deliveries. Such measures aim not to eliminate sound from city life but to reduce the most harmful noise while preserving the energy that makes cities worth living in.",
+      "The debate over urban noise ultimately reflects the fact that cities are shared spaces in which different needs must be balanced. Quiet is a resource that, like clean air, is easily lost and difficult to recover, yet the activity that creates noise is also part of what gives cities their economic and cultural value. Treating noise as a matter of public policy, rather than simply a private annoyance, may help cities to find a balance in which residents can enjoy both the vitality of urban life and the rest they need.",
+    ],
+    ja: [
+      '都市はいつもさわがしい場所だったが、都市の騒音の大きさと種類は、この百年ほどでかなりふえた。交通、工事、航空機、配送の車、拡声された音楽がまじりあって、多くの住民が夜でさえめったにのがれられない音の背景をつくっている。長いあいだ、騒音は都市生活のさけられない副作用、深刻な問題というよりはちょっとした迷惑としてあつかわれてきた。しかし近年、騒音は公衆衛生の問題としてあつかわれるべきだと主張しはじめる研究者や市の行政がふえている。',
+      'より強い対策をとるべきだという主張は、主に騒音が健康にあたえる影響についての証拠にもとづいている。大きな交通や航空機の騒音に長くさらされることは、睡眠の乱れ、強いストレス、心臓の病気の危険の高まりと結びつけられており、それは音になれたと言う人々のあいだでさえそうである。交通量の多い道路や空港の近くの学校にかよう子どもは、集中したり読む力をのばしたりするのがむずかしくなるかもしれない。こうした影響はゆっくりと積み重なり目に見えにくいので、一般の人々からも政策を決める人々からも長く軽く見られてきたと支持する人々は主張する。',
+      '支持する人々はまた、騒音の負担が平等に分けられていないことを強調する。高速道路や線路や工業地域の近くの住まいはしばしば安いので、収入の少ない人々ほど都市のもっともさわがしい場所に住むことになりやすい。より豊かな住民はしばしば静かな家やよい窓やいなかの別荘を買う余裕があるが、多くの貧しい世帯にはそうした選択肢がない。この見方では、騒音をへらすことは単に快適さの問題ではなく公平さの問題でもある。もっとも苦しんでいる人々の状況をもっともよくすることになるからである。',
+      'しかし批判する人々は、きびしい騒音規制には大きな代償がともなうかもしれないと警告する。工事の時間の制限は、都市がどうしても必要としている住宅や基盤の建設をおくらせうるし、配送や夜間の飛行の制限は商売を傷つけ値段を上げるかもしれない。また、ある程度の騒音は都市を活気がある魅力的なものにしている一部であり、音楽や祭りやにぎやかな夜の暮らしをしばる規則は、活気ある地域を、夜をすごしたいと思う人のほとんどいない、静かだが生気のない場所に変えてしまうおそれがあると主張する人もいる。',
+      '批判する人々はさらに、騒音への苦情がときに変化に抵抗するために使われると指摘する。にぎやかな地域に引っ越してきた新しい住民は、そもそもその地域を魅力的にしていたまさにその酒場やコンサートホールや市場に反対するかもしれず、その苦情によって古くからある店が閉店に追いこまれることもある。眠りたい人々と、働き祝いたい人々の、どちらの利益を先にすべきかを決めることは、デシベルの測定だけで答えられる問いではない。',
+      'これらの立場のあいだで、いくつかの実際的な方法が提案されてきた。都市は大きな道路ぞいに木を植えたり壁をつくったりし、より静かな路面や電気自動車をすすめ、新しい建物によりよい防音を求めることができる。計画の規則は、できるところではさわがしい活動を住まいから離すことができ、住民と店とのとりきめは音楽や配送のための妥当な時間を決めることができる。こうした方法は、都市生活から音をなくすことではなく、都市を住む価値のあるものにしている活気を保ちつつ、もっとも有害な騒音をへらすことを目指している。',
+      '都市の騒音をめぐる議論は、結局のところ、都市はさまざまな必要のつりあいをとらなければならない共有の空間だという事実を反映している。静けさは、きれいな空気と同じように、かんたんに失われ取りもどすのがむずかしい資源だが、騒音を生む活動もまた、都市に経済的・文化的な価値をあたえているものの一部である。騒音を単なる個人的な迷惑ではなく公共の政策の問題としてあつかうことは、住民が都市生活の活気と必要な休息の両方を楽しめるつりあいを都市が見つける助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「豊かな住民は静かな家を買えるが、貧しい世帯にはその選択肢がない」という対比・譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that noise should be treated as a public ( 1 ) issue and that its burden falls most on people with lower incomes. Critics warn that strict controls may delay ( 2 ) and make cities less lively. Practical measures aim to reduce the most harmful noise while preserving the ( 3 ) of city life.',
+      blanks: [
+        { choices: ['health', 'safety', 'transport', 'education'], answer: 0, why: '第1段落 noise deserves to be treated as a public health issue。' },
+        { choices: ['construction', 'elections', 'tourism', 'research'], answer: 0, why: '第4段落 Limits on construction hours can delay the building of homes。' },
+        { choices: ['energy', 'silence', 'history', 'cost'], answer: 0, why: '第6段落 while preserving the energy that makes cities worth living in。' },
+      ],
+    },
+    tf: [
+      { statement: '長いあいだ、騒音はちょっとした迷惑としてあつかわれてきた。', answer: true, why: '第1段落 a minor annoyance rather than a serious problem。' },
+      { statement: '音になれたと言う人には、騒音の健康への影響はない。', answer: false, why: '第2段落 even among people who say they have grown used to the sound。' },
+      { statement: '騒音への苦情によって、古くからある店が閉店することもある。', answer: true, why: '第5段落 their complaints can force long-established businesses to close。' },
+      { statement: '筆者は、都市生活から音をすっかりなくすべきだと主張している。', answer: false, why: '第6段落 aim not to eliminate sound from city life。' },
+    ],
+    qa: [
+      { q: 'Why are people with lower incomes more likely to live in noisy areas?', choices: ['Housing near highways and railways is often cheaper.', 'They prefer noisy places.', 'Quiet areas are far from work.', 'Noise is good for their health.'], answer: 0, why: '第3段落 Housing near highways, railways, and industrial areas is often cheaper。' },
+      { q: 'What cannot be answered by measurements of decibels alone?', choices: ['Whose interests should come first.', 'How loud traffic is.', 'Where airports are built.', 'When people sleep.'], answer: 0, why: '第5段落 Deciding whose interests should come first ... is not a question that measurements of decibels alone can answer。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
