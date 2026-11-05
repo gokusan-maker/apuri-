@@ -2528,3 +2528,10 @@ it('誤文訂正〈177〉：東大レベル 目的表現の単元が10問ある'
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('so that she could catch')
 })
+
+it('正誤問題〈184〉：国公立レベル 間接疑問の語順の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-indirect-q-kokuritsu')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) does he')
+})

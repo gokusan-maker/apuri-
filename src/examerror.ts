@@ -4370,6 +4370,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It (B) appeared (C) that she (D) is happy at the party.', choices: ['(A) It', '(B) appeared', '(C) that she', '(D) is happy at the party'], answer: 3, why: '主節が過去なので that 節も過去。she was happy。' },
     ],
   },
+  {
+    id: 'exam-error-indirect-q-kokuritsu',
+    title: '入試の正誤問題〈184〉（国公立レベル：間接疑問の語順 I wonder where he lives）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '疑問文が文の一部になる間接疑問では、疑問詞のあとを主語＋動詞の平叙文の語順にする（I wonder where he lives.）。助動詞や do・does・did は主語の前に出さない。疑問詞が主語のときはそのまま（who broke）。Yes/No 疑問は if・whether でつなぐ。do you think・do you suppose などがあるときは、疑問詞を文頭に出す（What do you think he is doing?）。主節が過去なら時制を合わせる。',
+    ],
+    examples: [
+      { en: 'I wonder where he lives.', ja: '彼はどこに住んでいるのだろう。' },
+      { en: 'What do you think he is doing?', ja: '彼は何をしていると思いますか。' },
+    ],
+    questions: [
+      { sentence: 'I wonder (A) where (B) does he (C) live (D) now.', choices: ['(A) where', '(B) does he', '(C) live', '(D) now'], answer: 1, why: '間接疑問は平叙文の語順。where he lives。' },
+      { sentence: '(A) Do you know (B) what time (C) is it (D) now?', choices: ['(A) Do you know', '(B) what time', '(C) is it', '(D) now?'], answer: 2, why: '間接疑問の中は主語＋動詞の語順。what time it is。' },
+      { sentence: '(A) Please tell me (B) how (C) can I get (D) to the station.', choices: ['(A) Please tell me', '(B) how', '(C) can I get', '(D) to the station'], answer: 2, why: '間接疑問では助動詞を主語の前に出さない。how I can get。' },
+      { sentence: '(A) I asked her (B) why (C) she is late (D) yesterday.', choices: ['(A) I asked her', '(B) why', '(C) she is late', '(D) yesterday'], answer: 2, why: '主節が過去で yesterday のことなので why she was late。' },
+      { sentence: '(A) Do you know (B) who (C) did break (D) the window?', choices: ['(A) Do you know', '(B) who', '(C) did break', '(D) the window?'], answer: 2, why: 'who が主語の疑問文はそのまま。who broke the window。did は不要。' },
+      { sentence: '(A) What (B) do you think (C) is he (D) doing now?', choices: ['(A) What', '(B) do you think', '(C) is he', '(D) doing now?'], answer: 2, why: 'do you think のあとは平叙文の語順。What do you think he is doing。' },
+      { sentence: '(A) Can you tell me (B) when (C) the next train (D) leave?', choices: ['(A) Can you tell me', '(B) when', '(C) the next train', '(D) leave?'], answer: 3, why: '主語 the next train は三人称単数。leaves。' },
+      { sentence: '(A) Do you know (B) where is (C) the post office (D) in this town?', choices: ['(A) Do you know', '(B) where is', '(C) the post office', '(D) in this town?'], answer: 1, why: '間接疑問の中は主語＋動詞。where the post office is。' },
+      { sentence: '(A) Does he know (B) if (C) will she come (D) tomorrow?', choices: ['(A) Does he know', '(B) if', '(C) will she come', '(D) tomorrow?'], answer: 2, why: 'if 節の中も平叙文の語順。if she will come。' },
+      { sentence: '(A) Where do you know (B) he (C) lives (D) now?', choices: ['(A) Where do you know', '(B) he', '(C) lives', '(D) now?'], answer: 0, why: 'Yes/No で答えられる問いなので Do you know where he lives? の語順。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
