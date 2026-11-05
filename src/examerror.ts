@@ -4490,6 +4490,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) We (B) students (C) must do (D) ours best.', choices: ['(A) We', '(B) students', '(C) must do', '(D) ours best'], answer: 3, why: '名詞 best の前は所有格。our best。' },
     ],
   },
+  {
+    id: 'exam-error-svoc-kyodai',
+    title: '入試の正誤問題〈189〉（京大レベル：keep・leave・find＋目的語＋補語）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'keep・leave・find・make・paint などは「動詞＋目的語（O）＋補語（C）」の形をとり、「O を C の状態にする・に保つ・だとわかる」という意味になる。C には形容詞（keep the room clean）・名詞（make him captain）・分詞（keep the door closed／leave the water running）が入り、副詞は入らない。O が「される」側なら過去分詞、「している」側なら現在分詞。find it ＋形容詞＋to do の形もある。',
+    ],
+    examples: [
+      { en: 'Please keep the door closed.', ja: 'ドアを閉めたままにしてください。' },
+      { en: 'I found the book very interesting.', ja: 'その本はとてもおもしろいとわかった。' },
+    ],
+    questions: [
+      { sentence: '(A) Please (B) keep (C) the door (D) closing.', choices: ['(A) Please', '(B) keep', '(C) the door', '(D) closing'], answer: 3, why: 'ドアは「閉められた」状態なので過去分詞。keep the door closed。' },
+      { sentence: '(A) I found (B) the book (C) very (D) interestingly.', choices: ['(A) I found', '(B) the book', '(C) very', '(D) interestingly'], answer: 3, why: 'find O C の C には形容詞。found the book very interesting。' },
+      { sentence: '(A) Do not (B) leave (C) the water (D) run.', choices: ['(A) Do not', '(B) leave', '(C) the water', '(D) run'], answer: 3, why: '「出しっぱなし」は進行中なので現在分詞。leave the water running。' },
+      { sentence: '(A) The news (B) made (C) her (D) happily.', choices: ['(A) The news', '(B) made', '(C) her', '(D) happily'], answer: 3, why: 'make O C の C には形容詞。made her happy。' },
+      { sentence: '(A) I found (B) it (C) difficulty (D) to answer the question.', choices: ['(A) I found', '(B) it', '(C) difficulty', '(D) to answer the question'], answer: 2, why: 'find it ＋形容詞＋to do。found it difficult to answer。' },
+      { sentence: '(A) He kept (B) me (C) wait (D) for an hour.', choices: ['(A) He kept', '(B) me', '(C) wait', '(D) for an hour'], answer: 2, why: 'keep O ～ing「O を～させ続ける」。kept me waiting。' },
+      { sentence: '(A) Kept (B) the baby (C) quiet, (D) please.', choices: ['(A) Kept', '(B) the baby', '(C) quiet,', '(D) please'], answer: 0, why: '命令文は動詞の原形で始める。Keep the baby quiet。' },
+      { sentence: '(A) Keep (B) you (C) warm (D) in winter.', choices: ['(A) Keep', '(B) you', '(C) warm', '(D) in winter'], answer: 1, why: '命令文の主語は you で、自分自身を目的語にするときは yourself。Keep yourself warm。' },
+      { sentence: '(A) She (B) painted (C) the wall (D) whitely.', choices: ['(A) She', '(B) painted', '(C) the wall', '(D) whitely'], answer: 3, why: 'paint O C の C には形容詞。painted the wall white。' },
+      { sentence: '(A) Keeping (B) the room (C) cleanly (D) is important.', choices: ['(A) Keeping', '(B) the room', '(C) cleanly', '(D) is important'], answer: 2, why: 'keep O C の C には形容詞。keeping the room clean。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

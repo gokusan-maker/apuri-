@@ -2598,3 +2598,10 @@ it('誤文訂正〈182〉：国公立レベル ago・before・since の単元が
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('met')
 })
+
+it('正誤問題〈189〉：京大レベル keep・leave・find＋O＋C の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-svoc-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) closing')
+})
