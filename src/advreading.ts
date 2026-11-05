@@ -34418,6 +34418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-smoking-ban',
+    title: 'Should Smoking Be Banned for a Whole Generation?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Smoking remains one of the leading causes of preventable death in the world, contributing to cancer, heart disease, and many other illnesses. Over the past several decades, many countries have reduced smoking rates through taxes, advertising bans, warning labels, and restrictions on smoking in public places. Recently, a more radical idea has been proposed: a law that would permanently forbid the sale of tobacco to anyone born after a certain year. Under such a policy, the minimum age for buying cigarettes would rise by one year every year, so that a whole generation would never be able to purchase them legally.",
+      "Supporters argue that such a ban would protect young people from a highly addictive product before they ever become dependent on it. Most smokers begin in their teenage years, and many later say that they wish they had never started. Since nicotine addiction makes quitting extremely difficult, preventing people from starting may be far more effective than helping them stop. Supporters also point out that the policy would not take cigarettes away from current adult smokers, who would remain free to buy them, but would gradually phase out tobacco as older generations are replaced by younger ones.",
+      "Supporters also emphasize the costs that smoking imposes on society. Treating smoking-related diseases places a heavy burden on health systems, and the illness and early death of smokers cause great suffering for their families. ( A ) the policy would reduce tax revenue from tobacco sales, supporters argue that the savings in health care and the gains in healthy years of life would far outweigh this loss. They also note that smoking harms not only smokers themselves but also those who breathe in their smoke, including children.",
+      "Critics, however, raise objections based on personal freedom. In their view, adults should be allowed to make their own choices, even unhealthy ones, as long as they do not harm others. A law that treats two adults differently simply because of the year in which they were born seems to them unfair and even absurd: a forty-year-old in the future might be forbidden to buy a product that his or her slightly older colleague can purchase freely. Critics argue that education and support for quitting respect individual choice better than prohibition does.",
+      "There are also practical concerns. Prohibitions of popular products have often encouraged illegal markets, in which goods are sold without quality controls or taxes and criminal groups profit. Critics fear that a generational ban could lead to the smuggling of cigarettes and the growth of an underground trade, particularly if neighboring countries do not adopt similar laws. Enforcing the ban would also require shopkeepers to check the age of customers who may be well into middle age, which could be difficult and costly.",
+      "Another question concerns alternatives to cigarettes, such as electronic cigarettes and heated tobacco products. Some health experts regard these as less harmful ways for smokers to obtain nicotine and argue that they should remain available to help people quit. Others worry that they attract young people who would never have smoked otherwise. How such products are treated could have a large effect on whether a generational ban succeeds or simply shifts young people from one form of nicotine to another.",
+      "The debate over a generational smoking ban reflects a broader tension between protecting public health and respecting individual freedom. Most people agree that reducing the harm caused by smoking is desirable, but they disagree about how far the state should go in limiting personal choices to achieve this goal. Whatever approach a society chooses, the question invites reflection on how laws can balance the welfare of future generations with the liberty of the people who will live under them, many of whom have not yet been born.",
+    ],
+    ja: [
+      '喫煙は今も、世界で防ぐことのできる死の主な原因の一つであり、がんや心臓病やほかの多くの病気の一因になっている。過去数十年のあいだに、多くの国は、税や広告の禁止や警告の表示や公共の場での喫煙の制限によって喫煙率を下げてきた。最近、より大胆な考えが提案されている。ある年より後に生まれた人には、だれにもたばこの販売を永久に禁じる法律である。そのような政策のもとでは、たばこを買える最低年齢が毎年一歳ずつ上がり、一つの世代全体がたばこを合法的に買うことがけっしてできなくなる。',
+      '支持する人々は、そのような禁止は、若者が依存性の強い製品に依存するようになる前に彼らを守るだろうと主張する。ほとんどの喫煙者は十代で吸い始め、その多くがのちに、始めなければよかったと言う。ニコチンへの依存はやめることをきわめてむずかしくするので、人々が吸い始めるのを防ぐほうが、やめるのを助けるよりはるかに効果的かもしれない。支持する人々はまた、この政策は今の大人の喫煙者からたばこを取り上げるのではなく、彼らは自由に買い続けられ、上の世代が若い世代に入れかわるにつれて、たばこを少しずつなくしていくのだと指摘する。',
+      '支持する人々はまた、喫煙が社会にかける費用を強調する。喫煙に関係する病気の治療は医療制度に重い負担をかけ、喫煙者の病気や早い死はその家族に大きな苦しみをもたらす。この政策はたばこの販売による税収を減らすだろうが、医療費の節約と健康にすごせる年月の増加はこの損失をはるかに上回るだろうと支持する人々は主張する。また、喫煙は喫煙者自身だけでなく、子どもをふくめ、そのけむりを吸いこむ人々も傷つけると彼らは指摘する。',
+      'しかし批判する人々は、個人の自由にもとづく反対をあげる。彼らの見方では、大人は他人に害をあたえないかぎり、健康によくないものであっても自分で選ぶことを許されるべきである。生まれた年だけを理由に二人の大人を別々にあつかう法律は、不公平で、ばかげてさえいるように彼らには思われる。将来、四十歳の人が、少しだけ年上の同僚が自由に買える製品を買うことを禁じられるかもしれないのである。教育や禁煙のささえのほうが、禁止よりも個人の選択を尊重すると批判する人々は主張する。',
+      '実際的な心配もある。人気のある製品を禁止すると、品質の管理も税もなしに品物が売られ、犯罪集団が利益を得る違法な市場がしばしばうながされてきた。とくに近隣の国が似た法律を取り入れなければ、世代による禁止はたばこの密輸や地下の取引の広がりにつながりうると批判する人々はおそれている。禁止を守らせるには、店の人が中年をかなり過ぎた客の年齢まで確かめなければならず、それはむずかしく費用がかかるかもしれない。',
+      'もう一つの問いは、電子たばこや加熱式たばこのような、紙巻きたばこにかわるものにかかわる。一部の健康の専門家は、それらを喫煙者がニコチンをとるためのより害の少ない方法とみなし、人々がやめる助けになるように手に入れられるままにしておくべきだと主張する。ほかの専門家は、それらがそうでなければけっして吸わなかったはずの若者を引きつけることを心配している。こうした製品がどうあつかわれるかは、世代による禁止が成功するのか、それとも単に若者をある形のニコチンから別の形へ移すだけなのかに大きく影響しうる。',
+      '世代による喫煙の禁止をめぐる議論は、公衆衛生を守ることと個人の自由を尊重することとのあいだの、より広い緊張を反映している。喫煙が引き起こす害を減らすことが望ましいことにはほとんどの人が賛成するが、この目標を達成するために国家が個人の選択をどこまで制限すべきかについては意見が分かれる。社会がどんなやり方を選ぶにせよ、この問いは、法律が未来の世代の幸福と、その法律のもとで暮らす人々の自由とをどうつりあわせられるかをふり返るよう誘っている。そしてその人々の多くは、まだ生まれていないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「政策は税収を減らすだろうが、節約と健康の利益はそれを上回る」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a generational ban would prevent young people from becoming ( 1 ) on tobacco and reduce the costs of smoking. Critics object on the grounds of personal ( 2 ) and fear the growth of illegal markets. The debate reflects a tension between public health and individual ( 3 ).',
+      blanks: [
+        { choices: ['dependent', 'famous', 'wealthy', 'tired'], answer: 0, why: '第2段落 before they ever become dependent on it。' },
+        { choices: ['freedom', 'wealth', 'fashion', 'safety'], answer: 0, why: '第4段落 raise objections based on personal freedom。' },
+        { choices: ['liberty', 'education', 'income', 'transport'], answer: 0, why: '第7段落 between protecting public health and respecting individual freedom。' },
+      ],
+    },
+    tf: [
+      { statement: 'ほとんどの喫煙者は十代で吸い始める。', answer: true, why: '第2段落 Most smokers begin in their teenage years。' },
+      { statement: 'この政策は今の大人の喫煙者からたばこを取り上げる。', answer: false, why: '第2段落 would not take cigarettes away from current adult smokers。' },
+      { statement: '世代による禁止は、たばこの密輸につながりうると批判する人々はおそれている。', answer: true, why: '第5段落 could lead to the smuggling of cigarettes。' },
+      { statement: '電子たばこについて、健康の専門家の意見は一致している。', answer: false, why: '第6段落 Some health experts ... Others worry。' },
+    ],
+    qa: [
+      { q: 'How would the minimum age for buying cigarettes change under the policy?', choices: ['It would rise by one year every year.', 'It would stay at eighteen.', 'It would fall every year.', 'It would be decided by each shop.'], answer: 0, why: '第1段落 the minimum age for buying cigarettes would rise by one year every year。' },
+      { q: 'Why might enforcing the ban be difficult?', choices: ['Shopkeepers would need to check the age of middle-aged customers.', 'Cigarettes would become free.', 'No one would want to smoke.', 'Shops would close at night.'], answer: 0, why: '第5段落 require shopkeepers to check the age of customers who may be well into middle age。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
