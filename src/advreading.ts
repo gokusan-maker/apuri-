@@ -35618,6 +35618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-walking-to-school',
+    title: 'Should Children Travel to School Alone?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A generation ago, it was common in many countries for children to walk or cycle to school on their own from the age of seven or eight. Today, in many places, this has become much less usual. Parents increasingly drive their children to school or accompany them on foot, often until they reach their teenage years. Concerns about traffic, crime, and the responsibilities of parenthood have all contributed to this change, and some schools and local governments have begun to debate whether children should be encouraged to travel independently once again.",
+      "Supporters of independent travel argue that it brings significant benefits for children's development. Walking or cycling to school provides regular physical exercise at a time when many children are less active than in the past. It also allows children to develop a sense of responsibility, to learn how to judge risks, and to become familiar with their own neighborhood. Children who make the journey with friends may also strengthen friendships and enjoy a degree of freedom that is rare in lives that are otherwise closely supervised by adults. Some teachers report that children who arrive on foot are more alert and ready to learn than those who have been sitting in the back seat of a car.",
+      "Supporters further point out that the risks of independent travel are often overestimated. Serious crimes against children by strangers are rare, and in many places streets are safer than they were in previous decades. ( A ) traffic remains a genuine danger, supporters argue, the large number of parents driving their children to school may itself make roads near schools more crowded and hazardous, so that reducing car journeys could make walking safer for everyone.",
+      "Critics, however, emphasize that parents are responsible for their children's safety and that the consequences of an accident or crime, however unlikely, would be devastating. Traffic in many cities is heavier and faster than it once was, and young children may not have the judgment needed to cross busy roads safely. Critics also note that the distance between home and school has increased in many areas, as families move to suburbs and choose schools outside their immediate neighborhood, making walking impractical for many children. For a child who lives several kilometers from school, the question of walking alone may simply not arise.",
+      "Critics also point to social pressures. Parents who allow young children to travel alone may be judged harshly by others, and in some places they may even be reported to the authorities for neglect. Working parents, too, may find it more convenient to drop children at school on their way to work. In such circumstances, critics argue, it is unrealistic to expect individual families to change their behavior without changes in the wider environment, such as safer roads and closer schools.",
+      "Between these positions, many communities have tried measures that make independent travel easier and safer. These include lowering speed limits near schools, creating safe routes with wide pavements and supervised crossings, and organizing walking groups in which children travel together, sometimes accompanied by a volunteer for part of the way. Some schools have closed the streets immediately outside their gates to cars at the start and end of the day, reducing traffic and encouraging families to walk or cycle instead.",
+      "The debate over children's independent travel reflects a broader question about how societies balance safety and freedom in childhood. Protecting children from every possible danger may seem the most responsible choice, but it may also deprive them of experiences that help them to grow in confidence and independence. Finding the right balance will depend on local conditions, but it is likely to require cooperation among parents, schools, and governments, so that children can enjoy both the security they need and the freedom they deserve.",
+    ],
+    ja: [
+      '一世代前には、多くの国で、子どもが7歳か8歳から一人で歩いたり自転車に乗ったりして学校にかようのはふつうだった。今日、多くの場所で、これはかなりめずらしくなった。親はますます子どもを車で学校へ送ったり、歩いてつきそったりするようになり、それはしばしば子どもが十代になるまで続く。交通や犯罪への心配や、親としての責任が、どれもこの変化の一因になっており、子どもが再び一人で移動するようすすめるべきかどうかを話し合いはじめた学校や地方の行政もある。',
+      '一人での移動を支持する人々は、それが子どもの成長に大きな利益をもたらすと主張する。歩いたり自転車に乗ったりして学校にかようことは、多くの子どもが昔より動かなくなっている時代に、定期的な運動をあたえる。それはまた、子どもが責任感を育て、危険を判断することを学び、自分の地域になじむことを可能にする。友だちといっしょにかよう子どもは、友情を強め、ほかの点ではおとなにきびしく見守られている暮らしではまれな、ある程度の自由を楽しむこともできる。歩いて登校した子どもは、車の後ろの席にすわってきた子どもより、目がさめていて学ぶ準備ができていると語る教師もいる。',
+      '支持する人々はさらに、一人での移動の危険はしばしば大きく見積もられすぎていると指摘する。見知らぬ人による子どもへの深刻な犯罪はまれであり、多くの場所で通りは以前の数十年より安全になっている。交通は今も本当の危険だが、子どもを車で学校へ送る親が多いことそのものが、学校の近くの道をより混雑させ危険にしているのかもしれず、車での移動をへらせば、だれにとっても歩くことがより安全になりうると支持する人々は主張する。',
+      'しかし批判する人々は、親は子どもの安全に責任があり、事故や犯罪の結果は、どれほど起こりそうになくても、取り返しのつかないものになるだろうと強調する。多くの都市の交通は以前より多く速くなっており、幼い子どもには交通量の多い道路を安全にわたるのに必要な判断力がないかもしれない。批判する人々はまた、家族が郊外に移り住み、すぐ近くの地域の外にある学校を選ぶようになって、多くの地域で家と学校のあいだの距離がのび、多くの子どもにとって歩くことが現実的でなくなっていると指摘する。学校から何キロもはなれて住む子どもにとっては、一人で歩くかどうかという問いはそもそも生じないかもしれない。',
+      '批判する人々はまた、社会的な重圧も指摘する。幼い子どもを一人で移動させる親は、ほかの人からきびしく判断されるかもしれず、場所によっては育児放棄として当局に通報されることさえあるかもしれない。働く親もまた、仕事に行くとちゅうで子どもを学校でおろすほうが便利だと感じるかもしれない。そうした状況では、より安全な道路や近い学校のような、より広い環境の変化なしに、個々の家族が行動を変えると期待するのは非現実的だと批判する人々は主張する。',
+      'これらの立場のあいだで、多くの地域は一人での移動をより容易で安全にする方法を試してきた。それには、学校の近くの制限速度を下げること、広い歩道と見守りのある横断歩道をそなえた安全な道筋をつくること、子どもたちがいっしょに移動し、ときには道のりの一部をボランティアがつきそう登校の集団をつくることがふくまれる。一日のはじめと終わりに校門のすぐ外の通りを車に対して閉ざし、交通をへらして家族が代わりに歩いたり自転車に乗ったりするようにうながした学校もある。',
+      '子どもの一人での移動をめぐる議論は、社会が子ども時代の安全と自由のつりあいをどうとるかという、より広い問いを反映している。考えうるあらゆる危険から子どもを守ることは、もっとも責任ある選択に思えるかもしれないが、自信と自立心を育てる助けになる経験を子どもからうばうことにもなりかねない。正しいつりあいを見つけることは地域の状況によるだろうが、子どもが必要な安心と、受けるに値する自由の両方を楽しめるように、親と学校と行政の協力を必要とする可能性が高い。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「交通は今も本当の危険だが、車で送る親の多さそのものが危険を生んでいるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that walking to school provides exercise and helps children develop ( 1 ), and that the risks are often overestimated. Critics stress parents’ responsibility for safety and point to heavier ( 2 ) and longer distances. Many communities have tried lowering speed limits and creating safe ( 3 ) to school.',
+      blanks: [
+        { choices: ['responsibility', 'wealth', 'height', 'fame'], answer: 0, why: '第2段落 allows children to develop a sense of responsibility。' },
+        { choices: ['traffic', 'homework', 'rain', 'noise'], answer: 0, why: '第4段落 Traffic in many cities is heavier and faster。' },
+        { choices: ['routes', 'meals', 'games', 'tests'], answer: 0, why: '第6段落 creating safe routes with wide pavements。' },
+      ],
+    },
+    tf: [
+      { statement: '一世代前には、子どもが一人で学校にかようのはふつうだった。', answer: true, why: '第1段落 it was common ... for children to walk or cycle to school on their own。' },
+      { statement: '支持する人々によれば、見知らぬ人による子どもへの深刻な犯罪は多い。', answer: false, why: '第3段落 Serious crimes against children by strangers are rare。' },
+      { statement: '幼い子どもを一人で移動させる親は、ほかの人からきびしく判断されることがある。', answer: true, why: '第5段落 may be judged harshly by others。' },
+      { statement: '筆者によれば、あらゆる危険から子どもを守ることにはまったく欠点がない。', answer: false, why: '第7段落 it may also deprive them of experiences that help them to grow。' },
+    ],
+    qa: [
+      { q: 'Why may walking to school be impractical for many children, according to critics?', choices: ['The distance between home and school has increased.', 'Schools have no doors.', 'Children dislike exercise.', 'Walking is forbidden.'], answer: 0, why: '第4段落 the distance between home and school has increased in many areas。' },
+      { q: 'What have some schools done at the start and end of the day?', choices: ['Closed the streets outside their gates to cars.', 'Started classes later.', 'Banned bicycles.', 'Hired more drivers.'], answer: 0, why: '第6段落 closed the streets immediately outside their gates to cars。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
