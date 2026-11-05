@@ -35902,6 +35902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-unfinished',
+    title: 'In Praise of the Unfinished',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We generally admire things that are finished. A completed building, a published book, or a solved problem gives a sense of satisfaction, and much of our education and working life is organized around the goal of bringing tasks to an end. Unfinished work, by contrast, is often regarded as a sign of failure, laziness, or poor planning. Yet there are reasons to think that the unfinished has a value of its own, and that our habit of measuring success only by completion may lead us to overlook important aspects of human thought and creativity.",
+      "One reason concerns the way the mind treats incomplete tasks. Psychologists have long observed that people tend to remember interrupted activities better than completed ones, as though the mind keeps unfinished business active in the background. This tendency can be uncomfortable, since it may cause us to worry about tasks we have not yet completed. But it may also be productive, allowing ideas to continue developing while our attention is elsewhere, so that when we return to a problem, we find that our understanding has moved forward.",
+      "In the arts, unfinished works have often exerted a special fascination. Sketches and drafts can reveal the process by which an artist thinks, showing choices that were tried and abandoned in a way that the finished work conceals. ( A ) a sketch lacks the polish of a completed painting, it may convey a freshness and energy that the final version loses, inviting viewers to imagine how the work might have developed and to take part in its creation.",
+      "The value of the unfinished can also be seen in the pursuit of knowledge. Every scientific theory is, in a sense, provisional, open to revision in the light of new evidence. Researchers who treat their conclusions as final may stop asking questions, while those who regard their understanding as incomplete remain alert to possibilities they had not considered. In this sense, a recognition that our knowledge is unfinished is not a weakness but a condition for continued discovery. Many of the greatest scientists have described their work as a series of questions leading to further questions, rather than as a path toward final answers.",
+      "This is not to praise every abandoned project. Many tasks genuinely need to be completed, and a habit of starting things without finishing them can cause real harm, leaving others to deal with the consequences. Promises must be kept, buildings must be made safe, and students must eventually submit their work. The point is rather that completion should not be the only measure of value, and that some activities, such as learning, friendship, and the development of character, are by their nature never fully finished.",
+      "Indeed, some of the most important human projects can only be continued, never completed. A language is passed from one generation to the next and changes as it goes. Communities, traditions, and institutions are maintained by people who know they will not see the end of the work they contribute to. To take part in such projects is to accept that one's efforts are a part of something larger, a contribution to a story that others will carry forward after us.",
+      "Perhaps, then, we should learn to live more comfortably with the unfinished. Rather than seeing incomplete work only as a failure, we might recognize it as a sign that thought and growth are still in progress. A life in which everything has been completed would be a life in which nothing remained to be done. The unfinished, in this sense, is not merely what we have not yet achieved but also what keeps us moving forward, reminding us that there is always more to learn, to create, and to become.",
+    ],
+    ja: [
+      '私たちはふつう、完成したものを高く評価する。できあがった建物や出版された本や解決された問題は満足感をあたえ、教育や仕事の多くは、作業を終わらせるという目標を中心に組み立てられている。対照的に、未完成の仕事はしばしば失敗やなまけや計画のまずさのしるしと見なされる。しかし、未完成のものにはそれ自体の価値があり、成功を完成だけではかる習慣のせいで、人間の思考と創造の大切な面を見落としているかもしれないと考える理由がある。',
+      '一つの理由は、心が終わっていない作業をどうあつかうかにかかわる。心理学者は、まるで心が終わっていない用事を背後で動かし続けているかのように、人は終えた活動よりも中断された活動をよく覚えている傾向があると長く気づいてきた。この傾向は居心地が悪いことがある。まだ終えていない作業について心配させるかもしれないからである。しかしそれは実りあるものでもありうる。注意がよそに向いているあいだも考えが育ち続け、問題にもどったときに、理解が先に進んでいることに気づけるようにするからである。',
+      '芸術では、未完成の作品がしばしば特別な魅力をはなってきた。素描や下書きは、完成した作品がかくしてしまうやり方で、試されては捨てられた選択を示し、芸術家が考える過程を明らかにすることがある。素描には完成した絵のみがかれた仕上がりはないが、最終版が失ってしまう新鮮さと勢いを伝えることがあり、見る人に作品がどう育ちえたかを想像させ、その創造に加わるようさそうのである。',
+      '未完成の価値は、知識の追求にも見られる。どんな科学の理論も、ある意味でかりのものであり、新しい証拠に照らして改められうる。自分の結論を最終的なものとあつかう研究者は問いをやめてしまうかもしれないが、自分の理解を不完全と見なす研究者は、考えていなかった可能性に注意をはらい続ける。この意味で、自分の知識が未完成だと認めることは弱さではなく、発見を続けるための条件なのである。もっとも偉大な科学者の多くは、自分の仕事を、最終的な答えへの道ではなく、さらなる問いへとつながる問いのつらなりとして語ってきた。',
+      'これは、捨てられたあらゆる計画をほめることではない。多くの作業は本当に完成させる必要があり、終えずに物事を始める習慣は、ほかの人に後始末をさせ、本当の害をもたらしうる。約束は守られなければならず、建物は安全にされなければならず、生徒はいずれ課題を出さなければならない。言いたいのはむしろ、完成だけが価値のものさしであるべきではなく、学ぶことや友情や人柄を育てることのような活動は、その性質上けっしてすっかりは終わらないということである。',
+      '実際、人間のもっとも大切な営みのいくつかは、続けることはできても完成させることはけっしてできない。言語はある世代から次の世代へ受けわたされ、そのあいだに変わっていく。地域や伝統や制度は、自分が貢献する仕事の終わりを見ることはないと知っている人々によって保たれている。そうした営みに加わることは、自分の努力がより大きなものの一部であり、私たちのあとでほかの人々が先へ運んでいく物語への貢献であると受け入れることである。',
+      'だとすれば、私たちは未完成のものとより気楽に暮らすことを学ぶべきなのかもしれない。終わっていない仕事を失敗としてだけ見るのではなく、思考と成長がまだ進んでいるしるしとして認めてもよいのである。すべてが完成した人生は、なすべきことが何も残っていない人生だろう。この意味で、未完成とは、まだなしとげていないものであるだけでなく、私たちを前へ進ませ続けるものでもあり、学び、生み出し、なっていくことがいつもまだあると思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「素描には仕上がりはないが、新鮮さと勢いを伝えることがある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人は終えた活動より、中断された活動をよく覚えている傾向がある。', answer: true, why: '第2段落 people tend to remember interrupted activities better than completed ones。' },
+      { statement: '素描は、完成した作品と同じように試された選択をかくしてしまう。', answer: false, why: '第3段落 showing choices that were tried and abandoned in a way that the finished work conceals。' },
+      { statement: 'どんな科学の理論も、ある意味でかりのものである。', answer: true, why: '第4段落 Every scientific theory is, in a sense, provisional。' },
+      { statement: '筆者は、捨てられたあらゆる計画をほめている。', answer: false, why: '第5段落 This is not to praise every abandoned project。' },
+    ],
+    qa: [
+      { q: 'What examples does the author give of activities that are never fully finished?', choices: ['Learning, friendship, and the development of character.', 'Building a house and painting a wall.', 'Submitting homework.', 'Keeping a promise.'], answer: 0, why: '第5段落 such as learning, friendship, and the development of character。' },
+      { q: 'How are communities and traditions maintained, according to the author?', choices: ['By people who know they will not see the end of the work.', 'By one person alone.', 'By finishing them quickly.', 'By stopping all change.'], answer: 0, why: '第6段落 maintained by people who know they will not see the end of the work。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
