@@ -34302,6 +34302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-blame',
+    title: 'The Habit of Blame',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When something goes wrong, our first impulse is often to ask whose fault it is. A project fails, an accident occurs, or a relationship breaks down, and we search for the person responsible. Blaming seems to satisfy a deep need: it gives events a clear explanation, identifies someone who should make amends, and allows those who are not blamed to feel innocent. Yet the habit of blame can also distort our understanding of what happened and make it harder to prevent similar problems in the future. Understanding both the value and the dangers of blame may therefore help us respond more wisely when things go wrong.",
+      "Blame has an important social function. Holding people responsible for their actions encourages them to behave carefully and fairly, since they know that harmful conduct will be noticed and criticized. Without some practice of blame, it would be difficult to maintain moral standards or to express the legitimate anger of those who have been wronged. In this sense, blame is not merely a negative emotion but a way of affirming that certain actions matter and that people are capable of choosing better ones.",
+      "However, the search for someone to blame can lead us to overlook the complexity of causes. Many failures result not from the mistake of a single individual but from a combination of circumstances, including poorly designed systems, unclear instructions, and pressures that make errors likely. ( A ) a particular person may have made the final mistake, focusing only on that person may leave the deeper causes unaddressed, so that the same failure occurs again with someone else.",
+      "Some organizations have tried to address this problem by developing a culture in which mistakes can be reported without fear of punishment. In fields such as aviation and medicine, where errors can have serious consequences, investigators often focus less on identifying individuals to blame than on understanding how a system allowed an error to happen. This approach encourages people to admit mistakes openly, since they know that doing so will help to improve safety rather than simply lead to their own punishment. Such organizations have often found that the number of reported problems rises at first, not because more errors occur, but because people are finally willing to speak about them.",
+      "Psychological research suggests that people tend to blame others more readily than themselves. When we fail, we often attribute the failure to circumstances beyond our control, but when others fail, we are more likely to attribute it to their character or lack of effort. This asymmetry can make blame unfair, leading us to judge others more harshly than we would judge ourselves in the same situation. It can also damage relationships, as each side becomes convinced that the other is responsible for a shared problem.",
+      "Blame can also be directed at oneself, sometimes excessively. People who constantly blame themselves for misfortunes they could not have prevented may suffer from guilt and anxiety that serve no useful purpose. Taking responsibility for one's actions is valuable, but it differs from punishing oneself for every bad outcome. Learning to distinguish between what one could and could not control may be an important part of a healthy relationship with one's own past.",
+      "Perhaps the most constructive approach is to treat blame not as an end in itself but as a step toward understanding and repair. Asking who is responsible can be useful if it leads to honest acknowledgment of mistakes, fair compensation for those harmed, and changes that prevent future harm. But when blame becomes a way of avoiding difficult questions, satisfying anger, or protecting ourselves from criticism, it may do more to divide people than to improve the world they share, and to repair the relationships that the original failure has damaged.",
+    ],
+    ja: [
+      '何かがうまくいかなかったとき、私たちの最初の衝動は、しばしばそれがだれのせいかを問うことである。計画が失敗し、事故が起き、関係がこわれると、私たちは責任のある人を探す。責めることは深い必要を満たすように思われる。それは出来事にはっきりした説明をあたえ、つぐなうべき人を特定し、責められない人々が自分は罪がないと感じられるようにする。しかし責める習慣は、何が起きたのかについての私たちの理解をゆがめ、同じような問題を将来防ぐのをむずかしくすることもある。したがって、責めることの価値と危険の両方を理解すれば、物事がうまくいかなかったときに、より賢くこたえられるようになるかもしれない。',
+      '責めることには大切な社会的な役割がある。人々に自分の行動の責任をとらせることは、害のあるふるまいは気づかれ批判されると知っているので、人々が注意深く公正にふるまうようはげます。何らかの責める慣習がなければ、道徳の基準を保ったり、不当なあつかいを受けた人々の正当な怒りを表したりするのはむずかしいだろう。この意味で、責めることは単なる否定的な感情ではなく、ある種の行動が大切であり、人はよりよい行動を選べるのだと確かめる一つの方法なのである。',
+      'しかし、責める相手を探すことで、原因の複雑さを見落としてしまうことがある。多くの失敗は、一人の個人のまちがいからではなく、うまく設計されていない仕組みやはっきりしない指示や、まちがいを起こしやすくする圧力をふくむ、いくつもの状況の組み合わせから生じる。ある特定の人が最後のまちがいをしたのかもしれないが、その人だけに注目すると、より深い原因が手つかずのまま残り、同じ失敗がほかのだれかによってまた起きるかもしれない。',
+      'この問題に取り組むために、罰を恐れずにまちがいを報告できる文化を育てようとしてきた組織もある。航空や医療のように、まちがいが深刻な結果をもたらしうる分野では、調査する人々はしばしば、責めるべき個人を特定することよりも、仕組みがどのようにしてまちがいが起きるのを許したのかを理解することに重点を置く。このやり方は、人々にまちがいを率直に認めるようはげます。そうすることが単に自分が罰を受けることにつながるのではなく、安全をよくする助けになると知っているからである。そうした組織では、最初は報告される問題の数がふえることが多いとわかっている。まちがいがふえたからではなく、人々がようやくそれについて話そうとするようになったからである。',
+      '心理学の研究は、人々が自分より他人を責めやすい傾向があることを示唆している。自分が失敗したとき、私たちはしばしばその失敗を自分にはどうにもならない状況のせいにするが、他人が失敗したときには、それをその人の性格や努力不足のせいにしやすい。この不つりあいのために、責めることは不公平になりうる。同じ状況なら自分を判断するよりも厳しく他人を判断してしまうのである。それはまた、それぞれの側が共有された問題の責任は相手にあると確信するようになって、人間関係をそこなうこともある。',
+      '責めることは自分自身に向けられることもあり、ときに度をこす。防ぎようのなかった不幸について絶えず自分を責める人は、何の役にも立たない罪悪感や不安に苦しむかもしれない。自分の行動に責任をとることは価値があるが、それは悪い結果のたびに自分を罰することとはちがう。自分がどうにかできたことと、どうにもできなかったこととを区別することを学ぶのは、自分自身の過去との健全な関係の大切な一部なのかもしれない。',
+      'おそらく最も建設的な態度は、責めることをそれ自体を目的とするのではなく、理解と修復への一歩としてあつかうことだろう。だれに責任があるのかを問うことは、まちがいを正直に認め、害を受けた人々に公正につぐない、将来の害を防ぐ変化につながるなら役に立ちうる。しかし責めることが、むずかしい問いをさけ、怒りを満たし、批判から自分を守る方法になると、それは人々が共有する世界をよくするよりも、人々を分断することになるかもしれない。そして、もとの失敗がそこなった人間関係を修復するよりも、である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ある人が最後のまちがいをしたかもしれないが、その人だけに注目すると深い原因が残る」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、責めることには大切な社会的な役割がある。', answer: true, why: '第2段落 Blame has an important social function。' },
+      { statement: '多くの失敗は一人の個人のまちがいだけから生じる。', answer: false, why: '第3段落 Many failures result not from the mistake of a single individual。' },
+      { statement: '人々は自分より他人を責めやすい傾向がある。', answer: true, why: '第5段落 people tend to blame others more readily than themselves。' },
+      { statement: '筆者によれば、悪い結果のたびに自分を罰することは責任をとることと同じである。', answer: false, why: '第6段落 it differs from punishing oneself for every bad outcome。' },
+    ],
+    qa: [
+      { q: 'What do investigators in aviation and medicine often focus on?', choices: ['Understanding how a system allowed an error.', 'Finding someone to punish quickly.', 'Hiding mistakes from the public.', 'Ending all investigations.'], answer: 0, why: '第4段落 understanding how a system allowed an error to happen。' },
+      { q: 'When can asking who is responsible be useful?', choices: ['When it leads to acknowledgment, compensation, and prevention.', 'When it satisfies anger.', 'When it avoids difficult questions.', 'When it protects us from criticism.'], answer: 0, why: '第7段落 if it leads to honest acknowledgment of mistakes, fair compensation ..., and changes that prevent future harm。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
