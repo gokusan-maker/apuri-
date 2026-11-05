@@ -35182,6 +35182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-amateur',
+    title: 'In Praise of the Amateur',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The word amateur comes from a Latin root meaning love, and it originally described a person who pursues an activity for the pleasure of it rather than for payment. Over time, however, the word has acquired a more negative meaning. To call a piece of work amateurish is to suggest that it is careless or unskilled, and in many fields the amateur is regarded as inferior to the professional, whose training and experience are assumed to guarantee quality. Yet this view may overlook what amateurs have contributed, and continue to contribute, to human knowledge and culture.",
+      "Historically, many important discoveries were made by people who had no professional position in the field concerned. Before science became a profession with university departments and research funding, much of it was carried out by individuals who studied plants, stars, or fossils in their spare time, motivated by curiosity rather than by career. Even today, amateur astronomers discover comets, amateur naturalists record the movements of birds and insects, and amateur historians uncover documents that professionals have overlooked, often because they have the patience to examine what others consider too minor to study.",
+      "The amateur's freedom from professional pressures can be an advantage in itself. A professional researcher may need to publish regularly, secure funding, and follow the methods approved by colleagues, all of which can discourage unusual questions. ( A ) the amateur lacks formal training and institutional support, they are free to pursue whatever interests them, for as long as they wish, without worrying about whether the results will advance their career. This freedom can lead them to questions that professionals would never think to ask.",
+      "Amateurs also play an important role in sustaining cultural life. Most of the music played in the world is performed not by professional musicians but by people who sing in choirs, play in local bands, or practice an instrument at home. Their performances may lack the polish of a concert hall, but they keep musical traditions alive and give countless people the experience of creating something rather than merely consuming it. A culture in which only professionals made art would be poorer, even if the quality of its art were higher.",
+      "This is not to deny the value of professional expertise. In many areas, such as medicine, engineering, and law, the consequences of error are so serious that training and accountability are essential. No one would wish to be operated on by an enthusiastic amateur surgeon, however sincere their love of medicine might be. The point is not that amateurs should replace professionals but that the two can complement each other, with professionals providing rigor and amateurs contributing curiosity, local knowledge, and the willingness to spend time on questions that offer no reward other than understanding.",
+      "Modern technology has created new opportunities for such cooperation. Through online projects, amateurs can now classify images of distant galaxies, transcribe historical records, or report observations of wildlife, contributing to research on a scale that professionals alone could never achieve. At the same time, these projects raise questions about recognition and responsibility, since the work of amateurs is sometimes used without adequate acknowledgment, and errors made by untrained participants must be carefully checked before the results can be trusted.",
+      "Perhaps the deepest lesson of the amateur lies in the original meaning of the word. To do something for love is to value the activity itself, not only its results or rewards. In a world that increasingly measures every pursuit by its usefulness or profitability, the amateur reminds us that learning, creating, and exploring can be worthwhile in themselves. Keeping this spirit alive, both in our own lives and in the institutions that shape knowledge, may be essential to preserving the curiosity on which all genuine understanding ultimately depends.",
+    ],
+    ja: [
+      'アマチュアということばは、愛を意味するラテン語の語源から来ており、もともとは、お金のためではなく楽しみのためにある活動に取り組む人を表していた。しかし時がたつにつれて、このことばはより否定的な意味をおびるようになった。作品をアマチュアっぽいとよぶことは、それがいいかげんであったり未熟であったりすると示すことであり、多くの分野でアマチュアは、訓練と経験が質を保証すると思われているプロより劣ると見なされている。しかしこの見方は、アマチュアが人間の知識と文化にこれまで貢献し、今も貢献し続けているものを見落としているのかもしれない。',
+      '歴史的に見ると、多くの大切な発見は、その分野で職業上の地位をもたない人々によってなされた。科学が大学の学部や研究資金をそなえた職業になる前、その多くは、出世ではなく好奇心にうごかされて、あいた時間に植物や星や化石を研究する個人によって行われていた。今日でさえ、アマチュアの天文家はすい星を発見し、アマチュアの博物学者は鳥や虫の動きを記録し、アマチュアの歴史家はプロが見落とした文書を見つけ出す。しばしばそれは、ほかの人が研究するにはささいすぎると考えるものを調べる根気が彼らにあるからである。',
+      'アマチュアが職業上のおしつけから自由であることは、それ自体が利点になりうる。プロの研究者は、定期的に論文を発表し、資金を確保し、同僚にみとめられた方法にしたがう必要があるかもしれず、そのすべてがふつうでない問いをくじきうる。アマチュアには正式な訓練も組織のささえもないが、結果が自分の出世に役立つかを気にせずに、興味のあることを何でも、好きなだけ追い求めることができる。この自由が、プロなら思いつきもしない問いへと彼らを導くことがある。',
+      'アマチュアはまた、文化的な生活をささえるうえで大切な役割をはたしている。世界で演奏される音楽のほとんどは、プロの音楽家ではなく、合唱団で歌ったり、地元のバンドで演奏したり、家で楽器を練習したりする人々によって演奏されている。彼らの演奏にはコンサートホールのみがかれた完成度はないかもしれないが、音楽の伝統を生かし続け、数えきれない人々に、単に消費するのではなく何かを生み出す経験をあたえている。プロだけが芸術をつくる文化は、たとえその芸術の質がより高くても、より貧しいものになるだろう。',
+      'これはプロの専門知識の価値を否定することではない。医療や工学や法律のような多くの分野では、まちがいの結果がとても深刻なので、訓練と責任が欠かせない。医学への愛がどれほど本物であっても、熱心なアマチュアの外科医に手術されたいと思う人はいないだろう。言いたいのは、アマチュアがプロに取ってかわるべきだということではなく、両者がおぎない合えるということである。プロは厳密さをあたえ、アマチュアは好奇心や地元の知識や、理解のほかに何の報いもない問いに時間をかける気持ちをもちよるのである。',
+      '現代の技術は、そうした協力のための新しい機会を生み出した。ネット上の取り組みを通じて、アマチュアは今や遠い銀河の画像を分類したり、歴史の記録を書き写したり、野生の生き物の観察を報告したりでき、プロだけではけっしてなしとげられない規模で研究に貢献している。同時に、こうした取り組みは、評価と責任についての問いを投げかける。アマチュアの仕事が十分な謝辞なしに使われることがときにあり、訓練を受けていない参加者のまちがいは、結果を信頼できるようになる前に注意深く確かめられなければならないからである。',
+      'アマチュアのもっとも深い教訓は、そのことばのもとの意味にあるのかもしれない。何かを愛のために行うことは、その結果や報いだけでなく、活動そのものを大切にすることである。あらゆる営みを役に立つかもうかるかでますますはかる世界で、アマチュアは、学ぶことや生み出すことや探検することがそれ自体で価値をもちうることを思い出させてくれる。この精神を、自分の暮らしでも知識を形づくる組織でも生かし続けることは、すべての本当の理解が結局はよりどころとする好奇心を守るのに欠かせないのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「アマチュアには正式な訓練もささえもないが、自由に追い求められる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'アマチュアということばは、もともと愛を意味する語源から来ている。', answer: true, why: '第1段落 comes from a Latin root meaning love。' },
+      { statement: '今日では、アマチュアが科学的な発見をすることはない。', answer: false, why: '第2段落 Even today, amateur astronomers discover comets。' },
+      { statement: '世界で演奏される音楽のほとんどは、プロでない人々によって演奏されている。', answer: true, why: '第4段落 performed not by professional musicians but by people who sing in choirs。' },
+      { statement: '筆者は、アマチュアがプロに取ってかわるべきだと主張している。', answer: false, why: '第5段落 The point is not that amateurs should replace professionals。' },
+    ],
+    qa: [
+      { q: 'Why can freedom from professional pressures be an advantage for amateurs?', choices: ['They can pursue unusual questions without worrying about their career.', 'They receive more funding.', 'They publish more often.', 'They follow approved methods.'], answer: 0, why: '第3段落 without worrying about whether the results will advance their career。' },
+      { q: 'What problem do online projects with amateurs sometimes raise?', choices: ['Amateurs’ work is used without adequate acknowledgment.', 'Amateurs refuse to join.', 'Professionals do all the work.', 'The projects are too small.'], answer: 0, why: '第6段落 the work of amateurs is sometimes used without adequate acknowledgment。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
