@@ -36462,6 +36462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-moderation',
+    title: 'In Praise of Moderation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern culture often celebrates extremes. We admire athletes who push their bodies to the limit, entrepreneurs who work without rest, and artists who devote themselves entirely to their craft. Advertising encourages us to seek the most intense experiences, the strongest flavors, and the fastest results, while public debate frequently rewards those who express their views in the most forceful terms. In such an environment, moderation can seem dull or even cowardly, a refusal to commit fully to anything. Yet many thinkers across history have regarded moderation not as a weakness but as one of the most important of virtues.",
+      "One reason for this lies in the observation that good qualities can turn into faults when carried too far. Courage, for example, is admirable, but when it becomes reckless disregard for danger, it may lead to disaster. Generosity is a virtue, but giving away everything one owns may leave one unable to care for oneself or one's family. In this sense, moderation is not the opposite of virtue but a condition for it, the ability to find the point at which a good quality remains good rather than becoming excessive. Even honesty, which we rightly value, can become cruelty if it is expressed without any regard for the feelings of others.",
+      "Moderation also matters for well-being. Many of the pleasures of life, such as food, rest, and entertainment, are beneficial in reasonable amounts but harmful when pursued without limit. ( A ) the immediate satisfaction of excess may be intense, its longer-term consequences, including damage to health, relationships, and finances, often outweigh the pleasure it brings. A moderate approach allows people to enjoy such goods without becoming dependent on them or suffering from their overuse. A person who eats well but not too much, or who enjoys entertainment without letting it replace sleep, may find that these pleasures last longer and mean more.",
+      "In public life, moderation can serve as a defense against division. When people hold their views with extreme certainty and regard opponents as enemies, compromise becomes difficult and conflict more likely. A moderate attitude, by contrast, involves recognizing that one may be mistaken, listening to those with different opinions, and seeking solutions that take account of several perspectives. Such an attitude does not require abandoning one's convictions, but it does require holding them with a certain humility.",
+      "It must be acknowledged, however, that moderation is not always appropriate. Some situations call for decisive and even extreme action, such as resisting injustice or responding to an emergency. A person who insists on moderation in the face of serious wrongdoing may simply be avoiding the difficulty of taking a stand. Moreover, what counts as moderate depends on the context, and a position that seems balanced in one society may appear extreme in another.",
+      "For these reasons, moderation is best understood not as a fixed rule but as a kind of practical judgment. It involves considering the circumstances, weighing competing goods, and deciding what response is fitting in a particular situation. This makes moderation more demanding than either extreme, since it cannot be achieved by simply following a formula. It requires attention, reflection, and the willingness to adjust one's behavior as conditions change.",
+      "Perhaps, then, the value of moderation lies in the balance it allows us to maintain among the many goods that make up a good life. Work and rest, ambition and contentment, conviction and openness all have their place, and a life devoted entirely to one of them may lose sight of the others. In an age that often seems to reward excess, the quiet discipline of moderation may be among the most valuable and the most difficult achievements, helping us to live not at the edges but in a richer and more sustainable middle.",
+    ],
+    ja: [
+      '現代の文化はしばしば極端をたたえる。私たちは体を限界までおしすすめる運動選手や、休まず働く起業家や、自分の技にすっかり身をささげる芸術家をあこがれの目で見る。広告はもっとも強烈な経験やもっとも強い味やもっとも速い結果を求めるようすすめ、公の議論はしばしばもっとも強い調子で意見を述べる人々をほめたたえる。そうした環境では、ほどほどであることは退屈に、あるいは臆病にさえ見え、何にも全身で打ちこまないことのように思われるかもしれない。しかし歴史を通じて多くの思想家は、節度を弱さではなく、もっとも大切な美徳の一つと見なしてきた。',
+      'その理由の一つは、よい性質も行きすぎると欠点に変わりうるという観察にある。たとえば勇気はりっぱだが、それが危険へのむこうみずな無視になると、災いを招くかもしれない。気前のよさは美徳だが、もっているものをすべて人にあげてしまうと、自分や家族の世話ができなくなるかもしれない。この意味で、節度は美徳の反対ではなくその条件であり、よい性質が行きすぎにならずよいままでいられる点を見つける力なのである。私たちが当然大切にする正直さでさえ、ほかの人の気持ちをまったく考えずに表されれば、残酷さになりうる。',
+      '節度はまた、幸せにとっても大切である。食べ物や休息や娯楽のような暮らしの楽しみの多くは、ほどよい量なら益になるが、かぎりなく追い求めると害になる。行きすぎのすぐの満足は強烈かもしれないが、健康や人間関係やお金への害をふくむ長い目で見た結果は、それがもたらす楽しみをしばしば上回る。ほどほどのやり方は、人々がそうしたよいものにたよりきったり、使いすぎに苦しんだりすることなく、それを楽しめるようにしてくれる。よく食べるが食べすぎない人や、睡眠のかわりにならないように娯楽を楽しむ人は、こうした楽しみがより長続きし、より意味をもつと気づくかもしれない。',
+      '公の生活では、節度は分断へのそなえになりうる。人々が極端な確信をもって意見をいだき、相手を敵と見なすと、歩みよりは難しくなり、対立が起こりやすくなる。対照的に、節度ある態度とは、自分がまちがっているかもしれないと認め、ちがう意見をもつ人々に耳をかたむけ、いくつもの見方を考えに入れた解決を求めることである。そうした態度は自分の信念を捨てることを求めはしないが、それをある謙虚さとともにもつことを求める。',
+      'しかし、節度がいつもふさわしいわけではないことは認めなければならない。不正に立ち向かったり非常時に対応したりするように、決然とした、極端でさえある行動を求める状況もある。深刻な悪事を前にして節度を言い張る人は、単に立場をとる難しさからにげているだけかもしれない。さらに、何がほどほどとされるかは状況によるのであり、ある社会でつりあいがとれているように見える立場が、別の社会では極端に見えるかもしれない。',
+      'こうした理由から、節度は決まった規則としてではなく、一種の実際的な判断として理解するのがもっともよい。それは状況を考え、きそい合うよいものをはかりにかけ、特定の状況でどの対応がふさわしいかを決めることをふくむ。このことは、節度をどちらの極端よりも難しいものにしている。単に決まった手順にしたがうだけではなしとげられないからである。それには注意とふり返りと、状況が変わるにつれて自分のふるまいを調整する気持ちが必要なのである。',
+      'だとすれば、節度の価値は、よい人生を形づくる多くのよいもののあいだに保たせてくれるつりあいにあるのかもしれない。仕事と休息、大きな望みと満足、信念と開かれた心には、それぞれの居場所があり、そのどれか一つにすっかりささげられた人生は、ほかのものを見失うかもしれない。しばしば行きすぎをほめたたえるように見える時代に、節度という静かな自己規律は、もっとも価値があり、もっとも難しい成果の一つなのかもしれない。それは私たちが、はしではなく、よりゆたかで長続きする真ん中で生きる助けになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「行きすぎのすぐの満足は強烈かもしれないが、長い目で見た結果がそれを上回る」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '現代の文化はしばしば極端をたたえる。', answer: true, why: '第1段落 Modern culture often celebrates extremes。' },
+      { statement: '筆者によれば、節度は美徳の反対である。', answer: false, why: '第2段落 moderation is not the opposite of virtue but a condition for it。' },
+      { statement: '節度ある態度は、自分の信念を捨てることを求めない。', answer: true, why: '第4段落 Such an attitude does not require abandoning one’s convictions。' },
+      { statement: '筆者は、節度はいつもふさわしいと考えている。', answer: false, why: '第5段落 moderation is not always appropriate。' },
+    ],
+    qa: [
+      { q: 'Why is moderation more demanding than either extreme?', choices: ['It cannot be achieved by simply following a formula.', 'It requires no thought.', 'It is always the same in every society.', 'It forbids all pleasure.'], answer: 0, why: '第6段落 it cannot be achieved by simply following a formula。' },
+      { q: 'What can happen when courage is carried too far?', choices: ['It may become reckless and lead to disaster.', 'It becomes generosity.', 'It turns into moderation.', 'It disappears completely.'], answer: 0, why: '第2段落 when it becomes reckless disregard for danger, it may lead to disaster。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
