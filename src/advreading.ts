@@ -36142,6 +36142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-first-impressions',
+    title: 'The Trouble with First Impressions',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Within moments of meeting a stranger, most of us have already formed an impression. We judge whether the person seems friendly or cold, confident or nervous, trustworthy or suspicious, often on the basis of little more than a face, a voice, or a manner of standing. Such judgments are made so quickly that we are rarely aware of making them, and yet they can shape the course of a relationship, influencing whom we hire, whom we befriend, and whom we avoid. It is worth asking how reliable these first impressions are, and what we should do about them.",
+      "From an evolutionary point of view, the ability to judge others quickly may once have been essential. For our ancestors, deciding in an instant whether a stranger was a friend or a threat could be a matter of survival, and there was rarely time for careful deliberation. Some research suggests that quick judgments can be surprisingly accurate about certain qualities, such as whether a person is outgoing or reserved. In this sense, first impressions are not simply errors but the product of a mind designed to make useful predictions with limited information.",
+      "Yet first impressions can also be seriously mistaken. They are strongly influenced by appearance, and people who are considered attractive are often assumed to possess other positive qualities, such as intelligence or kindness, for which there may be no evidence. ( A ) we may believe that we judge others fairly, our impressions are also shaped by stereotypes about age, gender, accent, and background, which can lead us to underestimate or misunderstand people who do not match our expectations.",
+      "What makes first impressions particularly powerful is their tendency to persist. Once we have formed a view of someone, we tend to notice information that confirms it and to overlook information that contradicts it. A person we initially judged to be unfriendly may later behave kindly, but we may interpret their kindness as insincere, or simply fail to notice it. In this way, an early impression can become a lens through which all later experience is filtered, making it difficult to see the person as they really are.",
+      "This tendency has consequences beyond personal relationships. In job interviews, for example, interviewers may form an impression of a candidate within the first few minutes and then spend the rest of the interview seeking confirmation. Teachers may form early expectations of students that influence how they treat them, and these expectations can in turn affect the students' performance. When such judgments are shaped by prejudice, they can contribute to unfairness that is difficult to detect because it operates beneath conscious awareness. Some organizations now use structured interviews, asking every candidate the same questions, partly to reduce this effect.",
+      "It would be unrealistic to suppose that we can stop forming first impressions altogether. The mind will continue to make quick judgments whether we wish it to or not. What we can do, however, is to hold these judgments more loosely, treating them as provisional guesses rather than settled conclusions. Taking time to gather more information, seeking out evidence that might challenge our initial view, and remembering how often our own first impressions have proved wrong may all help us to judge others more fairly.",
+      "Perhaps, then, the lesson of first impressions is one of humility. Other people are almost always more complex than they first appear, and the few seconds in which we form an impression reveal only a small part of who they are. To give others the chance to surprise us is not only fairer to them but also richer for us, since it opens the possibility of discovering qualities and friendships that a hasty judgment might have closed off. Seeing people clearly, in the end, requires patience as well as perception.",
+    ],
+    ja: [
+      '見知らぬ人に会って数瞬のうちに、私たちのほとんどはすでに印象をもっている。私たちは、その人が親しみやすいか冷たいか、自信があるか不安そうか、信頼できるかあやしいかを、しばしば顔や声や立ち方くらいのものをもとに判断する。そうした判断はあまりに速く行われるので、私たちはそれをしていることにめったに気づかないが、それでもそれは関係のゆくえを形づくり、だれをやとい、だれと友だちになり、だれをさけるかに影響しうる。こうした第一印象がどれほど信頼できるのか、そしてそれについて私たちはどうすべきなのかを問うてみる値打ちがある。',
+      '進化の観点から見ると、ほかの人をすばやく判断する力はかつて欠かせないものだったのかもしれない。祖先にとって、見知らぬ人が味方か脅威かを一瞬で決めることは生死にかかわることがあり、注意深く考える時間はめったになかった。ある研究によれば、すばやい判断は、その人が社交的かひかえめかといった、ある種の性質についてはおどろくほど正確でありうる。この意味で、第一印象は単なる誤りではなく、限られた情報で役に立つ予測をするようにできた心の産物なのである。',
+      'しかし第一印象は深刻にまちがうこともある。それは見た目に強く左右され、魅力的と見なされる人は、何の証拠もないかもしれない知性や親切さのような、ほかのよい性質ももっていると思われることが多い。私たちはほかの人を公平に判断していると信じているかもしれないが、私たちの印象は年齢や性別やなまりや背景についての固定観念にも形づくられており、それによって期待に合わない人々を低く見たり誤解したりすることがある。',
+      '第一印象をとくに強力にしているのは、それが持続しやすいことである。ある人についての見方がいったんできると、私たちはそれを確かめる情報に気づき、それに反する情報を見落としがちになる。はじめに無愛想だと判断した人が、のちに親切にふるまっても、私たちはその親切を心からのものではないと解釈したり、単にそれに気づかなかったりするかもしれない。こうして、早い時期の印象は、のちのすべての経験をこして見るレンズとなり、その人をありのままに見るのを難しくしてしまうのである。',
+      'この傾向は、個人的な関係をこえた結果をもたらす。たとえば仕事の面接では、面接官が最初の数分で応募者の印象をつくり、面接の残りをその確認をさがしてすごすことがある。教師は生徒に早い時期の期待をもち、それが生徒へのあつかい方に影響し、その期待が今度は生徒の成績に影響することもある。そうした判断が偏見に形づくられているとき、それは意識の下ではたらくので見つけにくい不公平の一因になりうる。この影響をへらすこともあって、今ではすべての応募者に同じ質問をする、形の決まった面接を使う組織もある。',
+      '第一印象をもつのをすっかりやめられると考えるのは非現実的だろう。心は、私たちが望もうと望むまいと、すばやい判断をし続ける。しかし私たちにできるのは、こうした判断をよりゆるやかにもち、決まった結論ではなく、かりの推測としてあつかうことである。もっと情報を集める時間をとり、はじめの見方をゆさぶるかもしれない証拠をさがし、自分の第一印象がどれほどしばしばまちがいだとわかってきたかを思い出すことは、どれもほかの人をより公平に判断する助けになるかもしれない。',
+      'だとすれば、第一印象の教訓は謙虚さの教訓なのかもしれない。ほかの人はほとんどいつも、はじめに見えるより複雑であり、印象をつくる数秒は、その人がだれであるかのほんの一部しか明らかにしない。ほかの人に私たちをおどろかせる機会をあたえることは、その人にとってより公平であるだけでなく、私たちにとってもよりゆたかである。性急な判断ならとざしてしまったかもしれない性質や友情を見つける可能性を開くからである。人をはっきり見るには、結局のところ、見ぬく力だけでなく根気も必要なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「公平に判断していると信じているかもしれないが、固定観念にも形づくられている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'すばやい判断は、ある種の性質についてはおどろくほど正確でありうる。', answer: true, why: '第2段落 quick judgments can be surprisingly accurate about certain qualities。' },
+      { statement: '魅力的な人は、ほかのよい性質ももっていると証拠にもとづいて判断される。', answer: false, why: '第3段落 for which there may be no evidence。' },
+      { statement: '面接官は最初の数分で応募者の印象をつくることがある。', answer: true, why: '第5段落 may form an impression of a candidate within the first few minutes。' },
+      { statement: '筆者によれば、私たちは第一印象をもつのをすっかりやめられる。', answer: false, why: '第6段落 It would be unrealistic to suppose that we can stop forming first impressions altogether。' },
+    ],
+    qa: [
+      { q: 'Why are first impressions particularly powerful?', choices: ['They tend to persist and shape later experience.', 'They are always correct.', 'They are easy to change.', 'They are based on careful thought.'], answer: 0, why: '第4段落 What makes first impressions particularly powerful is their tendency to persist。' },
+      { q: 'What does the author suggest we do with first impressions?', choices: ['Treat them as provisional guesses rather than conclusions.', 'Trust them completely.', 'Ignore all strangers.', 'Make them even faster.'], answer: 0, why: '第6段落 treating them as provisional guesses rather than settled conclusions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
