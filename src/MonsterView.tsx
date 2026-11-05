@@ -2982,6 +2982,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 22 v8 M48 21 v9 M52 22 v8" stroke="#2b1e11" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'amurleopard')
+    return (
+      <g>
+        {/* 梅の花のようなもよう */}
+        <circle cx="40" cy="60" r="3.5" fill="none" stroke="#2e1e0c" strokeWidth="1.5" />
+        <circle cx="56" cy="58" r="3.5" fill="none" stroke="#2e1e0c" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
