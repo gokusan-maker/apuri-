@@ -34178,6 +34178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-billboards',
+    title: 'Should Cities Ban Outdoor Advertising?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Walk through the center of almost any large city and you will be surrounded by advertising. Billboards rise above highways, digital screens flash on the sides of buildings, and posters cover bus stops and train stations. For advertisers, such spaces offer an opportunity to reach large numbers of people who cannot easily avoid the messages. In recent years, however, a few cities have taken the unusual step of banning or sharply limiting outdoor advertising, arguing that public space should not be dominated by commercial messages. Their decisions have provoked a debate about the purpose of the urban environment.",
+      "Supporters of restrictions argue first that outdoor advertising is a kind of visual pollution. Unlike advertisements in newspapers or on television, which people can choose to ignore by turning the page or changing the channel, billboards are impossible to escape for anyone who walks or drives through the city. Supporters say that removing them can reveal the architecture, trees, and sky that were previously hidden, making streets calmer and more attractive. In cities that have introduced bans, some residents report that they notice details of their surroundings for the first time. Visitors, too, have described these cities as feeling more peaceful, as if a constant background noise had suddenly been switched off.",
+      "Supporters also raise concerns about the effects of constant advertising on people's well-being. Advertisements are designed to create desires, often by suggesting that people will be happier, more attractive, or more successful if they buy particular products. ( A ) a single advertisement may seem harmless, supporters argue that being exposed to hundreds of such messages every day may encourage excessive consumption, dissatisfaction, and, in the case of products such as unhealthy food, harm to public health.",
+      "Critics, however, point out that outdoor advertising has economic value. It provides income for building owners, transport companies, and city governments, which may use the money to maintain bus shelters or fund public services. Small businesses may rely on local advertising to attract customers, and a ban could favor large companies that can afford to advertise through other channels. Critics also note that some forms of outdoor advertising, such as posters for concerts, exhibitions, and community events, contribute to the life and variety of a city.",
+      "There are also questions about freedom of expression. Advertising is a form of communication, and some argue that restricting it in public spaces limits the ability of businesses and organizations to share information. Moreover, decisions about which messages are allowed may be difficult to make fairly. If a city bans commercial advertising but permits political or charitable messages, it must decide where the boundaries lie, and these decisions may themselves become controversial. A rule that seems neutral in principle may, in practice, silence some voices more than others.",
+      "The development of digital screens has added new dimensions to the debate. Electronic billboards can display moving images and change their messages frequently, making them more noticeable and, critics argue, more distracting for drivers. Some screens can even collect data about passers-by, for instance by estimating their age or counting how many people look at them. Such technologies raise concerns about privacy and about the increasing intrusion of commercial interests into everyday life.",
+      "The debate over outdoor advertising ultimately concerns the question of who public space belongs to. Streets and squares are shared by everyone, and the messages that appear there shape the experience of all who pass through them. Whether a city chooses to ban advertising, regulate it, or allow it freely, the decision reflects a judgment about the balance between commercial activity and other values, such as beauty, calm, and the right of citizens to move through their surroundings without constant persuasion, a right that many people only notice once it has been restored.",
+    ],
+    ja: [
+      'ほとんどどの大都市でも中心部を歩けば、広告にかこまれるだろう。看板は高速道路の上にそびえ、デジタルの画面は建物の側面で光り、ポスターはバス停や駅をおおっている。広告主にとって、そうした場所は、メッセージをかんたんにはさけられない多くの人々にとどく機会をあたえてくれる。しかし近年、いくつかの都市は、公共の空間が商業的なメッセージに支配されるべきではないと主張して、屋外広告を禁止したり大きく制限したりするという異例の一歩をふみ出した。その決定は、都市の環境の目的についての議論を引き起こしている。',
+      '制限を支持する人々は、まず屋外広告は一種の視覚的な汚染だと主張する。ページをめくったりチャンネルを変えたりして無視することを選べる新聞やテレビの広告とちがって、看板は都市を歩いたり車で走ったりするだれにとってものがれることができない。看板を取りのぞけば、それまでかくれていた建物や木々や空が現れ、通りがより静かで魅力的になると支持する人々は言う。禁止を取り入れた都市では、まわりのものの細部に初めて気づいたと報告する住民もいる。訪れる人々も、まるで絶え間ない背景の雑音がとつぜん消されたかのように、こうした都市がより落ち着いて感じられると述べている。',
+      '支持する人々はまた、絶え間ない広告が人々の幸福にあたえる影響についての心配もあげる。広告は欲望を生み出すように作られており、しばしば、ある製品を買えばもっと幸せに、魅力的に、あるいは成功するだろうとほのめかす。一つの広告は害がないように思えるかもしれないが、毎日何百ものそうしたメッセージにさらされることは、度をこした消費や不満を、そして健康によくない食べ物のような製品の場合には公衆衛生への害をうながすかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、屋外広告には経済的な価値があると指摘する。それは建物の持ち主や交通会社や市の政府に収入をあたえ、市の政府はそのお金をバスの待合所の維持や公共サービスの資金に使うかもしれない。小さな店は客を引きつけるために地元の広告に頼っているかもしれず、禁止は、ほかの手段で広告を出す余裕のある大企業を有利にしうる。批判する人々はまた、コンサートや展示会や地域の催しのポスターのように、ある種の屋外広告は都市の活気や多様さに貢献していると指摘する。',
+      '表現の自由についての問いもある。広告は伝達の一つの形であり、公共の空間でそれを制限することは、会社や団体が情報を共有する能力を制限することになると主張する人もいる。さらに、どのメッセージを認めるかの決定を公平に下すのはむずかしいかもしれない。都市が商業広告を禁止しながら政治的なメッセージや慈善のメッセージを認めるなら、どこに境界があるのかを決めなければならず、その決定自体が議論をよぶかもしれない。原則として中立に見える規則も、実際にはある声をほかの声よりも多くだまらせるかもしれない。',
+      'デジタルの画面の発達は、この議論に新しい面を加えた。電子看板は動く映像を映し、メッセージをひんぱんに変えることができるので、より目立ち、批判する人々によれば運転する人の気をより散らす。通行人についてのデータを集めることさえできる画面もある。たとえば年齢を推定したり、どれだけの人が見たかを数えたりするのである。そうした技術は、プライバシーと、日常生活への商業的な利害のますますの入りこみについての心配を引き起こしている。',
+      '屋外広告をめぐる議論は、結局のところ、公共の空間はだれのものかという問いにかかわっている。通りや広場はすべての人に共有されており、そこに現れるメッセージは、そこを通るすべての人の経験を形づくる。都市が広告を禁止するにせよ、規制するにせよ、自由に認めるにせよ、その決定は、商業的な活動と、美しさや静けさや、絶え間なく説得されることなくまわりを移動する市民の権利といったほかの価値とのつりあいについての判断を反映しているのである。そしてその権利は、多くの人々が、取りもどされて初めて気づくものなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一つの広告は害がないように思えるかもしれないが、毎日さらされることは害をうながす」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions describe outdoor advertising as a kind of visual ( 1 ) that people cannot escape. Critics point out its ( 2 ) value and raise questions about freedom of expression. The debate concerns the question of who public ( 3 ) belongs to.',
+      blanks: [
+        { choices: ['pollution', 'art', 'education', 'history'], answer: 0, why: '第2段落 outdoor advertising is a kind of visual pollution。' },
+        { choices: ['economic', 'musical', 'medical', 'religious'], answer: 0, why: '第4段落 outdoor advertising has economic value。' },
+        { choices: ['space', 'money', 'transport', 'opinion'], answer: 0, why: '第7段落 who public space belongs to。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの都市は屋外広告を禁止したり大きく制限したりした。', answer: true, why: '第1段落 a few cities have taken the unusual step of banning or sharply limiting outdoor advertising。' },
+      { statement: '看板は新聞の広告と同じように、かんたんに無視することができる。', answer: false, why: '第2段落 billboards are impossible to escape。' },
+      { statement: '禁止は大企業を有利にしうる。', answer: true, why: '第4段落 a ban could favor large companies。' },
+      { statement: 'デジタルの画面には通行人のデータを集めるものはない。', answer: false, why: '第6段落 Some screens can even collect data about passers-by。' },
+    ],
+    qa: [
+      { q: 'What do some residents report after bans are introduced?', choices: ['They notice details of their surroundings for the first time.', 'They feel more stressed.', 'They stop walking in the city.', 'They buy more products.'], answer: 0, why: '第2段落 they notice details of their surroundings for the first time。' },
+      { q: 'Why might decisions about which messages are allowed become controversial?', choices: ['The city must decide where the boundaries lie.', 'All messages are the same.', 'No one reads advertisements.', 'Advertising is always political.'], answer: 0, why: '第5段落 it must decide where the boundaries lie, and these decisions may themselves become controversial。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
