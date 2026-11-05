@@ -34898,6 +34898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-energy-drinks',
+    title: 'Should Energy Drinks Be Restricted for Children?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Energy drinks, which typically contain large amounts of caffeine and sugar, have become increasingly popular among young people in many countries. Sold in brightly colored cans and often marketed through sports, music, and video games, they promise to improve concentration, boost physical performance, and help drinkers stay awake. In response to concerns about their effects on health, several countries and some large shops have introduced restrictions on selling energy drinks to children, while others have chosen to rely on warning labels and parental responsibility instead.",
+      "Supporters of restrictions point first to the amount of caffeine these drinks contain. A single large can may contain as much caffeine as several cups of coffee, a quantity that may be acceptable for many adults but is far more than health authorities generally recommend for children. Because young bodies are smaller and still developing, supporters argue, children may be especially sensitive to the effects of caffeine, which can include a faster heartbeat, anxiety, headaches, and difficulty sleeping, particularly when several drinks are consumed in a single day.",
+      "Supporters also emphasize the indirect effects of energy drinks on young people's lives. Poor sleep caused by late-night caffeine may lead to tiredness at school, which in turn may encourage some students to drink even more energy drinks to stay alert, creating a cycle that is difficult to break. ( A ) the drinks are often marketed as harmless and fun, supporters argue, the combination of caffeine and sugar may contribute to problems with sleep, concentration, and dental health that are rarely obvious at first.",
+      "Critics of restrictions, however, question whether a ban is the right response. Coffee, tea, and many soft drinks also contain caffeine, they point out, yet no one proposes to forbid children from buying them. Singling out energy drinks may therefore seem arbitrary, and critics suggest that clear labels showing the amount of caffeine in every drink, combined with education about its effects, would allow families to make informed choices without the government deciding what young people may drink. Parents, after all, are usually better placed than distant officials to judge what is suitable for their own children, whose needs and habits may differ greatly.",
+      "Critics also doubt that restrictions would be effective in practice. Children who wish to obtain energy drinks may ask older friends or relatives to buy them, or purchase them online, where age checks are often weak. Some fear that banning the drinks could even make them more attractive to teenagers, who may be drawn to products that are presented as forbidden. In their view, efforts to change young people's habits are more likely to succeed through persuasion than through prohibition.",
+      "Between these positions lie a number of more moderate options. Governments could limit the amount of caffeine allowed in a single can, require prominent warnings on packaging, or restrict advertising aimed at young audiences without banning sales entirely. Schools could provide information about sleep and caffeine and ensure that energy drinks are not sold on their premises. Such measures attempt to reduce harm while leaving some room for individual and family choice. They also have the advantage of being easier to adjust over time, as researchers learn more about how caffeine affects young people of different ages.",
+      "The debate over energy drinks raises a familiar question about how far society should go in protecting young people from their own choices. Children are not simply small adults, and there are good reasons to shield them from products whose effects they may not fully understand. At the same time, rules that seem inconsistent or impossible to enforce may lose public support. The most effective approach may be one that combines sensible limits with honest information, so that young people learn to look after their own health as they grow older.",
+    ],
+    ja: [
+      'ふつう大量のカフェインと砂糖をふくむエナジードリンクは、多くの国で若者のあいだでますます人気になっている。明るい色の缶で売られ、しばしばスポーツや音楽やテレビゲームを通じて宣伝されるそれらは、集中力を高め、体の動きをよくし、飲む人が眠らずにいられるようにすると約束する。健康への影響についての心配にこたえて、子どもへのエナジードリンクの販売を制限した国や大きな店もあれば、代わりに注意書きと親の責任にたよることを選んだ国もある。',
+      '制限を支持する人々は、まずこうした飲み物にふくまれるカフェインの量を指摘する。大きな缶1本に、コーヒー数杯分ものカフェインがふくまれることがあり、それは多くの大人にとっては受け入れられる量かもしれないが、健康の当局がふつう子どもにすすめる量よりはるかに多い。若い体は小さく、まだ成長中なので、子どもはカフェインの影響にとくに敏感かもしれないと支持する人々は主張する。その影響には、とくに1日に何本も飲んだときに、心臓がはやく打つこと、不安、頭痛、眠りにくさがふくまれうる。',
+      '支持する人々はまた、エナジードリンクが若者の暮らしにあたえる間接的な影響を強調する。夜おそくのカフェインによる睡眠不足は学校でのつかれにつながりうるし、それがさらに、目をさましておくためにもっとエナジードリンクを飲むよう一部の生徒をうながすかもしれず、ぬけ出しにくい悪循環を生む。これらの飲み物はしばしば無害で楽しいものとして宣伝されているが、カフェインと砂糖の組み合わせは、はじめはめったにはっきりしない睡眠や集中や歯の健康の問題の一因になるかもしれないと支持する人々は主張する。',
+      'しかし制限を批判する人々は、禁止が正しい対応なのかを疑う。コーヒーや紅茶や多くの清涼飲料もカフェインをふくんでいるが、子どもがそれらを買うのを禁じようと提案する人はいないと彼らは指摘する。それゆえエナジードリンクだけを取り上げるのは恣意的に見えるかもしれず、批判する人々は、すべての飲み物のカフェインの量を示すわかりやすい表示と、その影響についての教育を組み合わせれば、政府が若者の飲んでよいものを決めなくても、家族が情報にもとづいて選べるようになると示す。結局のところ、親のほうが遠くの役人よりも、必要や習慣が大きく異なりうる自分の子どもに何がふさわしいかを判断しやすい立場にあることが多いのである。',
+      '批判する人々はまた、制限が実際に効果をもつのかを疑う。エナジードリンクを手に入れたい子どもは、年上の友だちや親せきに買ってもらったり、年齢の確認がしばしば甘いネットで買ったりするかもしれない。禁止によってかえって十代の若者にとって魅力的になってしまうかもしれないと心配する人もいる。若者は禁じられたものとして示される商品に引かれることがあるからである。彼らの見方では、若者の習慣を変える取り組みは、禁止よりも説得によってのほうが成功しやすい。',
+      'これらの立場のあいだには、よりおだやかな選択肢がいくつかある。政府は、販売を完全に禁止することなく、缶1本にゆるされるカフェインの量を制限したり、包装に目立つ注意書きを求めたり、若い人向けの広告を制限したりできる。学校は睡眠とカフェインについての情報をあたえ、校内でエナジードリンクが売られないようにすることができる。こうした方法は、個人と家族の選択の余地をいくらか残しつつ、害をへらそうとするものである。また、カフェインがさまざまな年齢の若者にどう影響するかを研究者がより多く知るにつれて、時間をかけて調整しやすいという利点もある。',
+      'エナジードリンクをめぐる議論は、社会が若者を自分自身の選択からどこまで守るべきかという、おなじみの問いを投げかけている。子どもは単に小さな大人ではなく、その影響を十分に理解していないかもしれない商品から彼らを守るべきもっともな理由がある。同時に、一貫していないように見えたり、守らせることが不可能だったりする規則は、人々の支持を失うかもしれない。もっとも効果的なやり方は、分別ある制限と正直な情報を組み合わせ、若者が成長するにつれて自分の健康に気をくばることを学べるようにするものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「無害で楽しいものとして宣伝されているが、問題の一因になるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions argue that energy drinks contain too much ( 1 ) for children and may harm their sleep. Critics argue that clear ( 2 ) and education would be fairer and that bans may not work. Moderate options include restricting ( 3 ) aimed at young audiences without banning sales entirely.',
+      blanks: [
+        { choices: ['caffeine', 'salt', 'water', 'protein'], answer: 0, why: '第2段落 far more than health authorities generally recommend for children。' },
+        { choices: ['labels', 'prices', 'taxes', 'bans'], answer: 0, why: '第4段落 clear labels showing the amount of caffeine in every drink。' },
+        { choices: ['advertising', 'sports', 'schools', 'coffee'], answer: 0, why: '第6段落 restrict advertising aimed at young audiences。' },
+      ],
+    },
+    tf: [
+      { statement: '大きな缶1本に、コーヒー数杯分のカフェインがふくまれることがある。', answer: true, why: '第2段落 as much caffeine as several cups of coffee。' },
+      { statement: '批判する人々によれば、コーヒーや紅茶も子どもへの販売が禁じられている。', answer: false, why: '第4段落 no one proposes to forbid children from buying them。' },
+      { statement: '禁止によって、エナジードリンクがかえって十代に魅力的になるおそれがある。', answer: true, why: '第5段落 banning the drinks could even make them more attractive to teenagers。' },
+      { statement: '筆者は、子どもを小さな大人としてあつかうべきだと考えている。', answer: false, why: '第7段落 Children are not simply small adults。' },
+    ],
+    qa: [
+      { q: 'What cycle do supporters describe?', choices: ['Poor sleep leads to tiredness, which leads to drinking more energy drinks.', 'Exercise leads to hunger.', 'Advertising leads to lower prices.', 'Study leads to better sleep.'], answer: 0, why: '第3段落 creating a cycle that is difficult to break。' },
+      { q: 'What may the most effective approach combine, according to the author?', choices: ['Sensible limits with honest information.', 'Total bans with heavy fines.', 'Free drinks with advertising.', 'Silence with prohibition.'], answer: 0, why: '第7段落 combines sensible limits with honest information。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
