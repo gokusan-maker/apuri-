@@ -34738,6 +34738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-small-shops',
+    title: 'Should Small Shops Be Protected?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many towns and cities, small independent shops have been disappearing. Family-run bookstores, bakeries, and hardware stores that once lined local shopping streets have closed, replaced by branches of large chains, shopping centers on the edge of town, or simply empty windows. Online shopping has accelerated this trend, allowing consumers to buy almost anything from home. Some governments have responded by introducing measures to protect small businesses, such as limiting the size or opening hours of large stores, while others believe that the market should decide which businesses survive.",
+      "Supporters of protection argue that small shops contribute far more to a community than their sales figures suggest. Independent shopkeepers often know their customers personally, offer advice and services that large stores do not, and help to create a sense of identity and place. A shopping street full of distinctive local businesses may attract visitors and give residents reasons to walk, meet, and spend time in their neighborhood. In some cases, the owner of a small shop may be the first person to notice when an elderly customer has not been seen for several days, a form of informal care that no large store could easily provide. When such shops disappear, supporters warn, towns may lose not only economic activity but also part of their social life.",
+      "Supporters also point out that money spent in local businesses tends to stay in the community, since owners are more likely to live nearby, hire local workers, and buy from other local suppliers. ( A ) large chains may offer lower prices, supporters argue that the hidden costs of their dominance, including empty town centers, longer journeys to shop, and the loss of local employment, may outweigh the savings that consumers enjoy.",
+      "Critics, however, argue that protecting small shops from competition harms consumers. Large stores and online retailers can often offer lower prices, wider choice, and greater convenience, benefits that matter especially to households with limited incomes. Restricting these businesses, critics say, forces people to pay more for everyday goods in order to preserve a way of life that many consumers have chosen to leave behind. In their view, if people truly valued small shops, they would choose to shop there.",
+      "Critics also question whether protection actually works. Rules that limit large stores may simply encourage them to open just outside the protected area, or push more shopping online, where local regulations have little effect. Moreover, protection may benefit existing shop owners while making it harder for new and innovative businesses to enter the market. A town that tries to preserve its past may, critics warn, discourage the very changes that could give it a vibrant future.",
+      "Some places have tried approaches that support small businesses without simply restricting competition. These include lowering taxes or rents for independent shops, improving public spaces to make town centers more attractive, organizing markets and events that draw visitors, and helping small businesses to sell online as well as in person. Such measures aim not to freeze the shape of a town but to help a variety of businesses thrive alongside one another. Whether these measures succeed depends largely on whether local residents, businesses, and governments are willing to work together over many years rather than expecting quick results from a single policy.",
+      "The debate over small shops reflects a broader question about what we value in the places where we live. Prices and convenience are important, but so are community, character, and the opportunity for ordinary people to run their own businesses. Choosing between these values is not always simple, and the right balance may differ from one town to another. What seems clear is that the fate of local shops depends not only on government policy but also on the everyday choices of the people who shop there.",
+    ],
+    ja: [
+      '多くの町や都市で、小さな個人商店が消えつつある。かつて地元の商店街にならんでいた家族経営の本屋やパン屋や金物屋は閉店し、大きなチェーンの支店や町はずれのショッピングセンター、あるいは単なる空っぽの店先にとってかわられた。ネットでの買い物はこの流れを速め、消費者は家からほとんど何でも買えるようになった。大きな店の大きさや営業時間を制限するなど、小さな店を守る方法を取り入れてこれにこたえた政府もあれば、どの店が生き残るかは市場が決めるべきだと考える政府もある。',
+      '保護を支持する人々は、小さな店は売上の数字が示すよりはるかに多くを地域に貢献していると主張する。個人の店主はしばしば客を個人的に知っており、大きな店がしない助言やサービスをあたえ、その場所らしさや地域の個性を生み出す助けになっている。個性的な地元の店でいっぱいの商店街は、訪問者を引きつけ、住民に自分の地域を歩き、会い、時間をすごす理由をあたえるかもしれない。場合によっては、小さな店の店主が、高齢の客を何日も見かけていないことに最初に気づく人になることもあり、それは大きな店がかんたんにはあたえられない、形式ばらない見守りの一つの形である。そうした店が消えると、町は経済活動だけでなく、社会生活の一部も失うかもしれないと支持する人々は警告する。',
+      '支持する人々はまた、地元の店で使われたお金は地域にとどまりやすいと指摘する。店主は近くに住み、地元の人をやとい、ほかの地元の業者から仕入れる可能性が高いからである。大きなチェーンは安い値段を出せるかもしれないが、空っぽの町の中心部や、買い物のための長い移動や、地元の雇用の喪失をふくむ、その支配のかくれた代償は、消費者が得る節約を上回るかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、小さな店を競争から守ることは消費者を傷つけると主張する。大きな店やネットの小売業者は、しばしばより安い値段やより広い品ぞろえやより大きな便利さをあたえることができ、こうした利益はとくに収入の限られた世帯にとって大切である。こうした事業を制限することは、多くの消費者がすでに離れることを選んだ暮らし方を守るために、人々に日用品により多くをはらわせることだと批判する人々は言う。彼らの見方では、人々が本当に小さな店を大切に思っているなら、そこで買い物をすることを選ぶはずなのである。',
+      '批判する人々はまた、保護が本当に効果があるのかを疑う。大きな店を制限する規則は、単に保護された区域のすぐ外に店を出させたり、地元の規制がほとんど効かないネットにもっと買い物を移させたりするだけかもしれない。さらに、保護は今の店主には利益をもたらすかもしれないが、新しく革新的な事業が市場に入りにくくなるかもしれない。過去を守ろうとする町は、活気ある未来をあたえうるまさにその変化をくじいてしまうかもしれないと批判する人々は警告する。',
+      '競争を単に制限することなく小さな店をささえるやり方を試してきた場所もある。それには、個人商店の税や家賃を下げること、町の中心部をより魅力的にするために公共の空間をよくすること、訪問者を引きよせる市や催しを開くこと、小さな店が店頭だけでなくネットでも売れるよう助けることがふくまれる。こうした方法は、町の形を固めてしまうのではなく、さまざまな事業がならんで栄えるのを助けることを目指している。こうした方法が成功するかどうかは、一つの政策からすぐに結果を期待するのではなく、地元の住民と店と行政が何年にもわたって協力する気があるかどうかに大きくかかっている。',
+      '小さな店をめぐる議論は、私たちが自分の暮らす場所で何を大切にするのかという、より広い問いを反映している。値段や便利さは大切だが、地域のつながりや個性や、ふつうの人々が自分の店を営む機会も大切である。こうした価値のあいだで選ぶのはいつもかんたんではなく、正しいつりあいは町ごとにちがうかもしれない。はっきりしているように思えるのは、地元の店の運命が、政府の政策だけでなく、そこで買い物をする人々の日々の選択にもかかっているということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「大きなチェーンは安い値段を出せるかもしれないが、かくれた代償が節約を上回る」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of protection argue that small shops create a sense of identity and keep ( 1 ) in the community. Critics argue that protection harms consumers who benefit from lower ( 2 ) and may not work. Some places support small businesses without simply restricting ( 3 ).',
+      blanks: [
+        { choices: ['money', 'traffic', 'pollution', 'crime'], answer: 0, why: '第3段落 money spent in local businesses tends to stay in the community。' },
+        { choices: ['prices', 'taxes', 'wages', 'rents'], answer: 0, why: '第4段落 can often offer lower prices。' },
+        { choices: ['competition', 'tourism', 'education', 'transport'], answer: 0, why: '第6段落 without simply restricting competition。' },
+      ],
+    },
+    tf: [
+      { statement: 'ネットでの買い物は、小さな店が消える流れを速めた。', answer: true, why: '第1段落 Online shopping has accelerated this trend。' },
+      { statement: '支持する人々によれば、小さな店の貢献は売上の数字で十分にはかれる。', answer: false, why: '第2段落 contribute far more to a community than their sales figures suggest。' },
+      { statement: '大きな店を制限すると、保護区域のすぐ外に店ができるかもしれない。', answer: true, why: '第5段落 encourage them to open just outside the protected area。' },
+      { statement: '筆者によれば、地元の店の運命は政府の政策だけで決まる。', answer: false, why: '第7段落 depends not only on government policy but also on the everyday choices of the people。' },
+    ],
+    qa: [
+      { q: 'Why do critics say protection may harm households with limited incomes?', choices: ['They benefit most from lower prices and convenience.', 'They own most small shops.', 'They never shop online.', 'They prefer expensive goods.'], answer: 0, why: '第4段落 benefits that matter especially to households with limited incomes。' },
+      { q: 'What is one way some places support small businesses?', choices: ['Helping them to sell online as well as in person.', 'Closing all large stores.', 'Banning online shopping.', 'Raising their taxes.'], answer: 0, why: '第6段落 helping small businesses to sell online as well as in person。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
