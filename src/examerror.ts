@@ -4466,6 +4466,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Neither (B) the cat or (C) the dog (D) was hungry.', choices: ['(A) Neither', '(B) the cat or', '(C) the dog', '(D) was hungry'], answer: 1, why: 'neither のあとは nor。neither the cat nor the dog。' },
     ],
   },
+  {
+    id: 'exam-error-pronoun-case-todai',
+    title: '入試の正誤問題〈188〉（東大レベル：英作文の代名詞の格 I・me・mine）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '代名詞は文の中の役割で形が変わる。主語なら主格（I・he・she・we・they）、動詞や前置詞の目的語なら目的格（me・him・her・us・them）、「～のもの」なら所有代名詞（mine・yours・his・hers・ours・theirs）。A and I／A and me のように and でつながっていても、役割で決める（Tom and I went／gave Tom and me）。than・as のあとに動詞が続くなら主格。名詞の前は所有格（our best）。',
+    ],
+    examples: [
+      { en: 'My sister and I went to the concert.', ja: '姉と私はコンサートに行った。' },
+      { en: 'This secret is between you and me.', ja: 'この秘密はあなたと私だけのものだ。' },
+    ],
+    questions: [
+      { sentence: '(A) My sister and (B) me (C) went (D) to the concert.', choices: ['(A) My sister and', '(B) me', '(C) went', '(D) to the concert'], answer: 1, why: '主語なので主格。My sister and I。' },
+      { sentence: '(A) This secret is (B) between you and (C) I, (D) so do not tell anyone.', choices: ['(A) This secret is', '(B) between you and', '(C) I,', '(D) so do not tell anyone'], answer: 2, why: '前置詞 between のあとは目的格。between you and me。' },
+      { sentence: '(A) She is (B) taller (C) than (D) me am.', choices: ['(A) She is', '(B) taller', '(C) than', '(D) me am'], answer: 3, why: 'than のあとに動詞が続くなら主格。than I am。' },
+      { sentence: '(A) This bag is (B) my, (C) not (D) yours.', choices: ['(A) This bag is', '(B) my,', '(C) not', '(D) yours'], answer: 1, why: '「私のもの」は所有代名詞 mine。' },
+      { sentence: '(A) Him and his brother (B) are (C) good (D) at tennis.', choices: ['(A) Him and his brother', '(B) are', '(C) good', '(D) at tennis'], answer: 0, why: '主語なので主格。He and his brother。' },
+      { sentence: '(A) Let (B) we (C) go (D) to the park.', choices: ['(A) Let', '(B) we', '(C) go', '(D) to the park'], answer: 1, why: 'let のあとは目的格。Let us（短くした形は Let’s）。' },
+      { sentence: '(A) The teacher (B) gave (C) Tom and I (D) a prize.', choices: ['(A) The teacher', '(B) gave', '(C) Tom and I', '(D) a prize'], answer: 2, why: 'gave の目的語なので目的格。Tom and me。' },
+      { sentence: '(A) Is this umbrella (B) her (C) or (D) his?', choices: ['(A) Is this umbrella', '(B) her', '(C) or', '(D) his?'], answer: 1, why: '「彼女のもの」は hers。' },
+      { sentence: '(A) Everyone (B) did (C) their best, (D) including myself and he.', choices: ['(A) Everyone', '(B) did', '(C) their best,', '(D) including myself and he'], answer: 3, why: 'including のあとは目的格。including me and him。' },
+      { sentence: '(A) We (B) students (C) must do (D) ours best.', choices: ['(A) We', '(B) students', '(C) must do', '(D) ours best'], answer: 3, why: '名詞 best の前は所有格。our best。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
