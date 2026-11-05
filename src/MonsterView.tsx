@@ -2865,6 +2865,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="60" cy="58" r="1.8" fill="#111827" />
       </g>
     )
+  if (species === 'geoffroycat')
+    return (
+      <g>
+        {/* 小さな黒い点 */}
+        <circle cx="36" cy="60" r="1.5" fill="#111827" />
+        <circle cx="46" cy="56" r="1.5" fill="#111827" />
+        <circle cx="56" cy="62" r="1.5" fill="#111827" />
+        <circle cx="62" cy="54" r="1.5" fill="#111827" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
