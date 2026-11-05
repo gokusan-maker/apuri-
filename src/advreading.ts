@@ -34978,6 +34978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-homework',
+    title: 'Should Homework Be Abolished?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For generations, homework has been an accepted part of school life. Students in many countries spend hours each week completing exercises, writing essays, and preparing for tests after the school day has ended. In recent years, however, the value of homework has been questioned by parents, teachers, and researchers alike, and some schools have reduced or even abolished it, particularly for younger children. Others insist that homework remains essential, and the debate has become a lively one in education systems around the world. At its heart lies a simple but difficult question: does the time students spend on work at home actually help them learn?",
+      "Supporters of homework argue that it gives students the practice they need to master new skills. Lessons in class introduce ideas, but understanding often develops only through repeated effort, and the limited time available at school is rarely enough for this. Homework also teaches habits that extend beyond any single subject, such as managing time, working independently, and taking responsibility for one's own learning. These habits, supporters claim, will prove valuable at university and in working life, where no teacher will be present to guide every step.",
+      "Supporters further point out that homework can strengthen the connection between school and home. When parents see the tasks their children are given, they learn what is being taught and can offer encouragement or help. ( A ) not every family is able to provide such support, supporters argue, homework at least gives parents an opportunity to take an interest in their children's education, and it allows teachers to see which students are struggling and may need additional attention in class.",
+      "Critics, however, question whether homework is as effective as is often assumed. Research suggests that its benefits for younger children are small, and that even for older students, the advantages may disappear once the amount becomes excessive. Too much homework, critics argue, can lead to stress, conflict within families, and a loss of interest in learning itself. Children who spend long evenings on assignments may also have less time for sleep, exercise, play, and other activities that contribute to healthy development. Some teachers have also noticed that students who are overwhelmed by assignments may begin to copy answers from friends or the internet, defeating the purpose of the exercise entirely.",
+      "Critics also emphasize that homework may increase inequality. Students from wealthier families often have quiet places to study, access to computers and books, and parents with the time and knowledge to help them. Students from poorer families may have none of these advantages, and some must care for younger siblings or work part-time after school. When homework counts toward grades, these differences in home circumstances may be reflected in results that appear to measure ability but in fact measure opportunity.",
+      "Between abolishing homework and keeping it unchanged, many educators propose reforming it. Homework could be made shorter and more purposeful, focused on tasks that genuinely require independent work, such as reading or reviewing material, rather than on exercises that merely fill time. Schools could provide supervised study rooms for students who lack suitable places to work at home. Teachers could also give more choice in assignments, allowing students to pursue topics that interest them and to develop the motivation that makes learning last.",
+      "In the end, the debate over homework is less about homework itself than about what we expect schools to achieve and how children's time should be divided. Learning does not stop when the school day ends, but neither should childhood be consumed entirely by study. The most sensible policy may be one that recognizes both the value of practice and the importance of rest, so that the time students spend on homework strengthens their learning without crowding out the other experiences that help them to grow.",
+    ],
+    ja: [
+      '何世代にもわたって、宿題は学校生活の当然の一部とされてきた。多くの国の生徒は、学校の一日が終わったあと、毎週何時間もかけて練習問題をとき、作文を書き、テストにそなえる。しかし近年、宿題の価値は親や教師や研究者から同じように疑われるようになり、とくに小さな子どもについて、宿題をへらしたり、なくしたりさえした学校もある。宿題は今も欠かせないと主張する学校もあり、この議論は世界中の教育制度でさかんなものになっている。その中心には、生徒が家で課題についやす時間は本当に学びの助けになっているのか、という単純だが難しい問いがある。',
+      '宿題を支持する人々は、宿題が新しい技能を身につけるのに必要な練習を生徒にあたえると主張する。授業は考えを紹介するが、理解はしばしばくり返しの努力によってのみ深まり、学校で使える限られた時間ではめったにそれに足りない。宿題はまた、時間を管理すること、一人で取り組むこと、自分の学びに責任をもつことなど、一つの教科をこえる習慣を教える。こうした習慣は、すべての段階を導いてくれる先生がいない大学や仕事の場で役に立つだろうと支持する人々は主張する。',
+      '支持する人々はさらに、宿題が学校と家庭のつながりを強めうると指摘する。親は子どもにあたえられた課題を見ると、何が教えられているかを知り、はげましたり手伝ったりできる。すべての家庭がそうした支えをあたえられるわけではないが、宿題は少なくとも親が子どもの教育に関心をもつ機会をあたえ、教師がどの生徒が苦労していて授業でさらに注意を向ける必要があるかを見られるようにすると支持する人々は主張する。',
+      'しかし批判する人々は、宿題がよく思われているほど効果的なのかを疑う。研究によれば、小さな子どもにとってのその利益は小さく、年上の生徒にとってさえ、量が多すぎるようになるとその利点は消えてしまうかもしれない。宿題が多すぎると、ストレスや家庭内のもめごとや、学ぶことそのものへの関心の喪失につながりうると批判する人々は主張する。長い夜を課題についやす子どもは、健やかな成長に役立つ睡眠や運動や遊びやほかの活動の時間も少なくなるかもしれない。課題におしつぶされた生徒が、友だちやネットから答えを写しはじめ、練習の目的をすっかりだめにしてしまうことがあると気づいている教師もいる。',
+      '批判する人々はまた、宿題が不平等を大きくするかもしれないと強調する。より豊かな家庭の生徒は、しばしば勉強のための静かな場所や、コンピューターや本を使える環境や、手伝う時間と知識のある親をもっている。より貧しい家庭の生徒にはこうした利点が何もないかもしれず、放課後に年下のきょうだいの世話をしたりアルバイトをしたりしなければならない生徒もいる。宿題が成績に入ると、こうした家庭の事情のちがいが、能力をはかっているように見えて実は機会をはかっている結果にあらわれるかもしれない。',
+      '宿題をなくすことと、そのまま続けることのあいだで、多くの教育者は宿題を改めることを提案している。宿題は短く目的のはっきりしたものにし、単に時間をうめるだけの練習問題ではなく、読書や復習のように本当に一人での取り組みを必要とする課題にしぼることができる。学校は、家に適した勉強場所のない生徒のために、見守りのある自習室を用意することができる。教師はまた課題により多くの選択肢をあたえ、生徒が興味のある話題を追い、学びを長続きさせる意欲を育てられるようにすることもできる。',
+      '結局のところ、宿題をめぐる議論は、宿題そのものというより、私たちが学校に何を成しとげてほしいのか、そして子どもの時間をどう分けるべきかについての議論である。学びは学校の一日が終わってもとまらないが、子ども時代が勉強にすっかりついやされるべきでもない。もっとも分別ある方針は、練習の価値と休息の大切さの両方を認め、生徒が宿題にかける時間が、成長を助けるほかの経験をしめ出すことなく学びを強めるようにするものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「すべての家庭が支えをあたえられるわけではないが、少なくとも機会をあたえる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that homework gives students ( 1 ) and teaches useful habits. Critics argue that too much homework causes stress and may increase ( 2 ) between rich and poor students. Many educators propose making homework shorter and more ( 3 ) rather than abolishing it.',
+      blanks: [
+        { choices: ['practice', 'money', 'rest', 'freedom'], answer: 0, why: '第2段落 it gives students the practice they need。' },
+        { choices: ['inequality', 'friendship', 'competition', 'interest'], answer: 0, why: '第5段落 homework may increase inequality。' },
+        { choices: ['purposeful', 'difficult', 'frequent', 'expensive'], answer: 0, why: '第6段落 Homework could be made shorter and more purposeful。' },
+      ],
+    },
+    tf: [
+      { statement: '宿題をへらしたり、なくしたりした学校もある。', answer: true, why: '第1段落 some schools have reduced or even abolished it。' },
+      { statement: '研究によれば、小さな子どもにとって宿題の利益は大きい。', answer: false, why: '第4段落 its benefits for younger children are small。' },
+      { statement: '家に勉強場所のない生徒のために、自習室を用意するという案がある。', answer: true, why: '第6段落 provide supervised study rooms for students who lack suitable places。' },
+      { statement: '筆者は、子ども時代は勉強にすっかりついやされるべきだと考えている。', answer: false, why: '第7段落 neither should childhood be consumed entirely by study。' },
+    ],
+    qa: [
+      { q: 'Why might homework results measure opportunity rather than ability?', choices: ['Students have very different conditions at home.', 'Teachers grade unfairly.', 'Homework is too easy.', 'All students have computers.'], answer: 0, why: '第5段落 these differences in home circumstances may be reflected in results。' },
+      { q: 'According to supporters, how can homework help teachers?', choices: ['It shows which students are struggling.', 'It shortens lessons.', 'It replaces tests.', 'It reduces their salaries.'], answer: 0, why: '第3段落 it allows teachers to see which students are struggling。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
