@@ -34498,6 +34498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-captive-dolphins',
+    title: 'Should Whales and Dolphins Be Kept in Aquariums?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For decades, dolphins and small whales performing in aquarium shows have attracted large and enthusiastic audiences. Children and adults alike are thrilled to see these intelligent animals leap through the air, respond to their trainers, and interact with visitors. In recent years, however, growing awareness of the complex lives of these animals has led many people to question whether they should be kept in captivity at all. Several countries have banned or restricted the practice, and some aquariums have ended their shows. The debate raises questions about animal welfare, education, conservation, and entertainment.",
+      "Critics argue first that tanks cannot meet the needs of animals that, in the wild, may swim great distances every day and live in complex social groups. Even the largest pools are tiny compared with the ocean, and the concrete walls reflect the sounds that these animals use to communicate and navigate. Critics point to evidence that captive dolphins and whales may show signs of stress, such as repetitive behavior, aggression, or damage to their teeth from biting the walls of their tanks. In some cases, captive animals appear to live shorter lives than their wild relatives. Critics add that some of these animals were originally captured from the wild, separating them from their families in ways that would be considered cruel if done to many other mammals.",
+      "Defenders of aquariums reply that modern facilities have greatly improved and that animals in their care receive excellent food, veterinary treatment, and protection from pollution, predators, and fishing nets. They also emphasize the educational value of seeing these animals in person. ( A ) videos and books can teach people about marine life, defenders argue that a direct encounter with a living animal creates an emotional connection that may inspire visitors, especially children, to care about protecting the oceans.",
+      "Supporters of aquariums also point to their role in research and conservation. Studying animals in captivity has helped scientists learn about their physiology, hearing, and behavior, knowledge that can be used to protect wild populations. Some aquariums rescue and treat injured or stranded animals, returning them to the sea when possible. In addition, the income from visitors may help to fund conservation projects in the wild. Without such income, defenders argue, some valuable rescue programs might not be able to continue.",
+      "Critics respond that much of this research could be conducted by observing wild animals, and that most dolphins and whales on display belong to species that are not endangered, so keeping them in captivity contributes little to their survival. They also argue that performances, in which animals carry out tricks for food rewards, may give audiences a misleading picture of their natural behavior, teaching people to see these creatures as entertainers rather than as wild animals with lives of their own.",
+      "One proposed solution is the creation of seaside sanctuaries, large enclosed areas of natural ocean where animals that cannot be released into the wild could live in conditions much closer to their natural environment. Such sanctuaries would allow former performing animals to spend their remaining years with greater space and freedom, while still receiving care. Yet building and maintaining them is expensive, and only a few have so far been established. Moving animals that have spent their whole lives in tanks to the open sea also carries risks that must be carefully managed.",
+      "The debate over keeping whales and dolphins in captivity reflects changing attitudes toward animals more generally. As scientific understanding of animal intelligence and emotion has grown, many people have come to believe that such creatures deserve greater consideration. Whether aquariums can adapt by focusing on rescue, research, and education rather than entertainment, or whether the practice should end entirely, is a question that will likely continue to provoke strong feelings on both sides.",
+    ],
+    ja: [
+      '何十年ものあいだ、水族館のショーで芸をするイルカや小型のクジラは、大勢の熱心な観客を集めてきた。子どもも大人も、この賢い動物が空中を飛び、調教師にこたえ、訪問者とふれあうのを見て胸をおどらせる。しかし近年、こうした動物の複雑な生活についての認識が広がるにつれて、そもそもそれらを飼育すべきなのかを疑う人々がふえている。いくつかの国はこの慣行を禁止したり制限したりしており、ショーをやめた水族館もある。この議論は、動物の福祉や教育や保護や娯楽についての問いを提起している。',
+      '批判する人々は、まず水槽は、野生では毎日長い距離を泳ぎ、複雑な社会集団で暮らすかもしれない動物の必要を満たせないと主張する。最も大きなプールでさえ海にくらべればとても小さく、コンクリートの壁は、こうした動物が意思を伝えたり方向を知ったりするのに使う音をはね返す。批判する人々は、飼育されたイルカやクジラが、同じ行動のくり返しや攻撃性や、水槽の壁をかむことによる歯の傷のような、ストレスのしるしを見せるかもしれないという証拠をあげる。場合によっては、飼育された動物は野生の仲間より寿命が短いようである。批判する人々はさらに、こうした動物の一部はもともと野生から捕らえられたものであり、ほかの多くの哺乳類に対して行われたら残酷だとみなされるようなしかたで家族から引きはなされたとつけ加える。',
+      '水族館を擁護する人々は、現代の施設は大きくよくなっており、そこで世話をされる動物は、すばらしい食べ物や獣医の治療を受け、汚染や捕食者や漁網から守られているとこたえる。彼らはまた、こうした動物を直接見ることの教育的な価値を強調する。動画や本でも海の生き物について教えられるが、生きた動物との直接の出会いは、訪問者、とくに子どもに海を守ることを気にかけるよう刺激する感情的なつながりを生むと擁護する人々は主張する。',
+      '水族館を支持する人々はまた、研究と保護におけるその役割をあげる。飼育された動物を研究することで、科学者たちはその体のしくみや聴覚や行動について学ぶことができ、その知識は野生の集団を守るのに使える。けがをしたり浜に打ち上げられたりした動物を救って治療し、できるときには海に帰す水族館もある。さらに、訪問者からの収入が、野生での保護の取り組みの資金になるかもしれない。そうした収入がなければ、価値ある救助の取り組みの一部は続けられないかもしれないと擁護する人々は主張する。',
+      '批判する人々は、こうした研究の多くは野生の動物を観察することで行えるとこたえ、展示されているイルカやクジラのほとんどは絶滅のおそれのない種に属しているので、それを飼育してもその生存にはほとんど役立たないと指摘する。彼らはまた、動物がえさのほうびのために芸をするショーは、観客に動物の自然なふるまいについて誤った印象をあたえ、こうした生き物を、自分自身の生活をもつ野生の動物ではなく芸人として見るよう教えてしまうかもしれないと主張する。',
+      '提案されている一つの解決策は、海辺の保護区を作ることである。それは、野生に帰すことのできない動物が、自然の環境にずっと近い条件で暮らせる、自然の海を大きく囲った場所である。そのような保護区があれば、かつて芸をしていた動物は、世話を受けながら、より広い空間と自由の中で残りの年月をすごせるだろう。しかし、それを作って維持するには費用がかかり、これまでに作られたのはわずかである。また、一生を水槽ですごしてきた動物を広い海に移すことには、注意深く管理しなければならない危険もともなう。',
+      'クジラやイルカの飼育をめぐる議論は、動物に対するより一般的な態度の変化を反映している。動物の知能や感情についての科学的な理解が深まるにつれて、多くの人々は、そのような生き物はより大きな配慮に値すると信じるようになった。水族館が娯楽ではなく救助や研究や教育に重点を置くことで変わっていけるのか、それともこの慣行を完全にやめるべきなのかは、これからも両方の側に強い感情を引き起こし続けるであろう問いである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「動画や本でも教えられるが、直接の出会いは感情的なつながりを生む」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that tanks cannot meet the needs of animals that swim long distances and live in complex social ( 1 ). Defenders emphasize improved care, education, and research. One proposed solution is to create seaside ( 2 ), though they are expensive. The debate reflects changing ( 3 ) toward animals.',
+      blanks: [
+        { choices: ['groups', 'cities', 'schools', 'markets'], answer: 0, why: '第2段落 live in complex social groups。' },
+        { choices: ['sanctuaries', 'hotels', 'factories', 'stadiums'], answer: 0, why: '第6段落 the creation of seaside sanctuaries。' },
+        { choices: ['attitudes', 'prices', 'laws', 'colors'], answer: 0, why: '第7段落 reflects changing attitudes toward animals。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの国は、イルカやクジラの飼育を禁止したり制限したりしている。', answer: true, why: '第1段落 Several countries have banned or restricted the practice。' },
+      { statement: 'コンクリートの壁は、動物が使う音を吸収する。', answer: false, why: '第2段落 the concrete walls reflect the sounds。' },
+      { statement: 'けがをした動物を救って海に帰す水族館もある。', answer: true, why: '第4段落 Some aquariums rescue and treat injured or stranded animals, returning them to the sea。' },
+      { statement: '展示されているイルカやクジラのほとんどは絶滅のおそれのある種である。', answer: false, why: '第5段落 most dolphins and whales on display belong to species that are not endangered。' },
+    ],
+    qa: [
+      { q: 'What may performances teach audiences, according to critics?', choices: ['To see these animals as entertainers rather than wild animals.', 'To protect the oceans.', 'To become trainers.', 'To swim better.'], answer: 0, why: '第5段落 teaching people to see these creatures as entertainers rather than as wild animals。' },
+      { q: 'Why have only a few seaside sanctuaries been established?', choices: ['They are expensive to build and maintain.', 'Animals do not like them.', 'They are illegal.', 'There is no space in the ocean.'], answer: 0, why: '第6段落 building and maintaining them is expensive。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
