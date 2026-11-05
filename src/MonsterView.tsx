@@ -2780,6 +2780,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 34 L28 24 M40 30 L40 20 M50 30 L52 20 M60 34 L64 24" stroke="#292524" strokeWidth="2" />
       </g>
     )
+  if (species === 'sugarglider')
+    return (
+      <g>
+        {/* 大きな目と広げた膜 */}
+        <circle cx="38" cy="40" r="5" fill="#111827" />
+        <path d="M20 56 Q50 72 80 56" fill="none" stroke="#374151" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
