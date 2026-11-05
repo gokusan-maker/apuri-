@@ -2745,3 +2745,10 @@ it('正誤問題〈199〉：京大レベル 関係副詞の単元が10問ある'
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) which')
 })
+
+it('誤文訂正〈193〉：国公立レベル hard・hardly・late・lately の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-193')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('hard')
+})

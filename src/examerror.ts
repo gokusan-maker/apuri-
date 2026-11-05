@@ -8214,6 +8214,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was so cold [that we could not to] go out.', choices: ['that we could not', 'what we could not', 'as we could not', 'so we could not to'], answer: 0, why: 'that のあとは「主語＋動詞」で、to は不要。that we could not go out。' },
     ],
   },
+  {
+    id: 'exam-fix-193',
+    title: '入試の誤文訂正〈193〉（国公立レベル：形容詞と副詞 hard・hardly・late・lately）',
+    points: ['-ly がつくと意味が変わる副詞に注意する。hard「熱心に・はげしく」と hardly「ほとんど～ない」、late「おそく」と lately「最近」、near「近くに」と nearly「ほとんど」、high「高く」と highly「大いに・非常に」、most「もっとも」と mostly「たいてい・主に」。hardly はそれ自体が否定の意味なので not や never と重ねない（hardly ever「めったに～ない」）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He works hard, but he has hardly any free time.', ja: '彼は熱心に働くが、自由な時間はほとんどない。' }],
+    questions: [
+      { sentence: 'He works very [hardly] every day.', choices: ['hard', 'hardness', 'hardest of', 'harder than'], answer: 0, why: '「熱心に働く」は副詞 hard。hardly は「ほとんど～ない」。' },
+      { sentence: 'I could [hard] believe the news.', choices: ['hardly', 'hardest', 'harder', 'so hard'], answer: 0, why: '「ほとんど信じられなかった」は hardly。' },
+      { sentence: 'Have you seen him [late]?', choices: ['lately', 'later than', 'latest', 'lateness'], answer: 0, why: '「最近」は lately。late は「おそく」。' },
+      { sentence: 'She arrived [lately] for the meeting.', choices: ['late', 'latter', 'lateness', 'lastly'], answer: 0, why: '「会議におくれて着いた」は late。' },
+      { sentence: 'It is [near] ten o’clock.', choices: ['nearly', 'nearer', 'nearest', 'nearness'], answer: 0, why: '「ほとんど10時」は nearly。near は「近くに」。' },
+      { sentence: 'He lives [nearly] the station.', choices: ['near', 'nearest', 'nearness', 'nearer of'], answer: 0, why: '「駅の近くに」は near。' },
+      { sentence: 'The bird flew [highly] in the sky.', choices: ['high', 'height', 'highest of', 'higher than'], answer: 0, why: '「高く飛ぶ」は副詞 high。highly は「大いに」。' },
+      { sentence: 'He is a [high] respected doctor.', choices: ['highly', 'height', 'highest', 'higher'], answer: 0, why: '「大いに尊敬されている」は highly。' },
+      { sentence: 'We [hard ever] go to the cinema.', choices: ['hardly ever', 'hard never', 'ever hardly', 'hardly never'], answer: 0, why: '「めったに～ない」は hardly ever。hardly は never と重ねない。' },
+      { sentence: 'The audience was [most] students.', choices: ['mostly', 'almost', 'the most', 'more'], answer: 0, why: '「観客はたいてい（主に）学生だった」は mostly。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
