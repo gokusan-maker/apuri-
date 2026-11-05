@@ -4394,6 +4394,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Where do you know (B) he (C) lives (D) now?', choices: ['(A) Where do you know', '(B) he', '(C) lives', '(D) now?'], answer: 0, why: 'Yes/No で答えられる問いなので Do you know where he lives? の語順。' },
     ],
   },
+  {
+    id: 'exam-error-if-whether-todai',
+    title: '入試の正誤問題〈185〉（東大レベル：英作文の if と whether の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「～かどうか」の名詞節は if と whether の両方で表せるが、if を使えるのはおもに動詞の目的語のときだけ。文の主語（Whether he comes is ～）、be 動詞の補語（The question is whether ～）、前置詞のあと（depends on whether ～）、to 不定詞の前（whether to go）、or not をすぐあとに続けるとき（whether or not）は whether を使う。節の中は平叙文の語順。「もし～なら」の副詞節の if は未来でも現在形。',
+    ],
+    examples: [
+      { en: 'Whether he will come or not is not important.', ja: '彼が来るかどうかは重要ではない。' },
+      { en: 'It depends on whether the weather is fine.', ja: 'それは天気がよいかどうかによる。' },
+    ],
+    questions: [
+      { sentence: '(A) If (B) he will come (C) or not (D) is not important.', choices: ['(A) If', '(B) he will come', '(C) or not', '(D) is not important'], answer: 0, why: '文の主語になる名詞節は whether を使う。Whether he will come or not。' },
+      { sentence: '(A) The question is (B) if (C) we can (D) finish it in time.', choices: ['(A) The question is', '(B) if', '(C) we can', '(D) finish it in time'], answer: 1, why: 'be 動詞の補語になる名詞節は whether。The question is whether。' },
+      { sentence: '(A) I am not sure (B) if or not (C) she (D) will come.', choices: ['(A) I am not sure', '(B) if or not', '(C) she', '(D) will come'], answer: 1, why: 'or not をすぐあとに続けるときは whether。whether or not。' },
+      { sentence: '(A) It depends on (B) if (C) the weather (D) is fine.', choices: ['(A) It depends on', '(B) if', '(C) the weather', '(D) is fine'], answer: 1, why: '前置詞のあとの名詞節は whether。depends on whether。' },
+      { sentence: '(A) I asked him (B) whether (C) he can (D) help me yesterday.', choices: ['(A) I asked him', '(B) whether', '(C) he can', '(D) help me yesterday'], answer: 2, why: '主節が過去なので could help。' },
+      { sentence: '(A) Please tell me (B) whether (C) to buy or (D) not this book.', choices: ['(A) Please tell me', '(B) whether', '(C) to buy or', '(D) not this book'], answer: 3, why: 'whether to buy this book or not の語順。' },
+      { sentence: '(A) We discussed (B) if (C) we should (D) change the plan.', choices: ['(A) We discussed', '(B) if', '(C) we should', '(D) change the plan'], answer: 1, why: 'discuss の目的語の名詞節は whether がふつう。discussed whether。' },
+      { sentence: '(A) Let me know (B) if (C) you will need (D) any help tomorrow.', choices: ['(A) Let me know', '(B) if', '(C) you will need', '(D) any help tomorrow'], answer: 2, why: '「もし～なら」の副詞節では未来でも現在形。if you need。' },
+      { sentence: '(A) I wonder (B) whether (C) does he know (D) the truth.', choices: ['(A) I wonder', '(B) whether', '(C) does he know', '(D) the truth'], answer: 2, why: 'whether のあとは平叙文の語順。whether he knows。' },
+      { sentence: '(A) Whether (B) you agree (C) and not, (D) we must decide today.', choices: ['(A) Whether', '(B) you agree', '(C) and not,', '(D) we must decide today'], answer: 2, why: 'whether A or B「A であれ B であれ」。or not。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
