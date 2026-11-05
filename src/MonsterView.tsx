@@ -2967,6 +2967,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M58 74 q8 4 10 12" fill="none" stroke="#3b2614" strokeWidth="2.5" />
       </g>
     )
+  if (species === 'iriomotecat')
+    return (
+      <g>
+        {/* 耳の後ろの白い点 */}
+        <circle cx="30" cy="20" r="2" fill="#ffffff" />
+        <circle cx="62" cy="20" r="2" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
