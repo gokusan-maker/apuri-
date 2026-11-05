@@ -2889,6 +2889,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M76 72 q10 -6 8 -18" fill="none" stroke="#3a1a0c" strokeWidth="2.5" />
       </g>
     )
+  if (species === 'oncilla')
+    return (
+      <g>
+        {/* 花の形のもよう */}
+        <circle cx="42" cy="60" r="3" fill="none" stroke="#33220f" strokeWidth="1.5" />
+        <circle cx="56" cy="62" r="3" fill="none" stroke="#33220f" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
