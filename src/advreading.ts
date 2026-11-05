@@ -35982,6 +35982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-lists',
+    title: 'Why We Make Lists',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Human beings are enthusiastic makers of lists. We write shopping lists and lists of tasks to complete, compile rankings of the best films and books, and keep records of places we hope to visit before we die. Some of the oldest surviving written documents are lists of goods, debts, and possessions, suggesting that the urge to organize the world into ordered sequences is almost as old as writing itself. It is worth asking what this habit reveals about the way we think, and whether it always serves us as well as we imagine.",
+      "At the most practical level, lists help us to overcome the limits of memory. The human mind can hold only a small number of items in attention at once, and when we try to remember many separate tasks, some are likely to be forgotten. By writing them down, we transfer the burden of remembering to the page, freeing our minds to concentrate on the task in front of us. Many people report that simply making a list reduces their anxiety, as though the act of naming their obligations made them easier to manage.",
+      "Lists also impose order on complexity. A messy collection of ideas or objects becomes more manageable when it is divided into items and arranged in sequence. ( A ) this process can be useful, it also involves choices that are rarely neutral. Deciding what to include and what to leave out, and in what order to place the items, reflects judgments about what matters, and a list that appears objective may in fact express the priorities and assumptions of the person who made it.",
+      "This becomes especially clear in the case of rankings. Lists of the best universities, the greatest novels, or the most livable cities attract enormous attention, partly because they promise to simplify difficult comparisons. Yet the criteria used to produce such rankings are often debatable, and small changes in method can produce very different results. A ranking may encourage people to see a complex reality in terms of a single scale, overlooking qualities that cannot easily be measured. A small town with a strong sense of community, for example, may rank poorly on a list that values only income and transport, even if its residents are deeply content.",
+      "There is also a risk that lists may replace the activities they are meant to support. A person who spends a great deal of time making and revising lists of tasks may feel productive without actually completing much. Similarly, a list of books one intends to read can become a substitute for reading, providing the satisfaction of planning without the effort of engagement. In such cases, the list becomes not a tool but an end in itself, absorbing the attention it was meant to free.",
+      "Yet lists can also be sources of pleasure and even of beauty. Poets and writers have long used lists to evoke the richness and variety of the world, piling up images and names to create a sense of abundance. A list of the small things that make a day worthwhile, or of the people to whom one feels grateful, can direct attention toward what might otherwise be overlooked. In this sense, making a list can be an act of appreciation as well as organization.",
+      "Perhaps the value of a list depends on how it is used. As a tool for remembering and organizing, it can make life more manageable. As a means of reflection, it can help us to notice what matters. But when it becomes a way of reducing complex reality to a simple sequence, or a substitute for action, it may limit rather than extend our understanding. Like many human inventions, the list is most useful when we remain aware of both its powers and its limits.",
+    ],
+    ja: [
+      '人間は熱心にリストをつくる生き物である。私たちは買い物のリストや、すませるべき作業のリストを書き、最高の映画や本のランキングをまとめ、死ぬまでに行きたい場所の記録をつける。現存するもっとも古い文書のいくつかは、品物や借金や持ち物のリストであり、世界を順序だった並びに整理したいという衝動が、文字そのものとほとんど同じくらい古いことを示している。この習慣が私たちの考え方について何を明らかにしているのか、そしてそれがいつも思っているほど役に立っているのかを問うてみる値打ちがある。',
+      'もっとも実際的なレベルでは、リストは記憶の限界をこえる助けになる。人間の心は一度にほんのわずかな項目しか注意にとどめておけず、多くの別々の作業を覚えておこうとすると、いくつかはわすれられてしまいやすい。それを書き出すことで、私たちは覚えておく重荷を紙に移し、目の前の作業に心を集中できるようにする。多くの人は、リストをつくるだけで不安がへると語っており、まるで自分のしなければならないことに名前をつけるだけで、それがあつかいやすくなるかのようである。',
+      'リストはまた、複雑なものに秩序をあたえる。考えや物の雑然とした集まりも、項目に分けて順に並べると、よりあつかいやすくなる。この過程は役に立ちうるが、めったに中立ではない選択もふくんでいる。何を入れ何をはずすか、どの順に項目を置くかを決めることは、何が大切かについての判断を反映しており、客観的に見えるリストも、実はそれをつくった人の優先順位や思いこみを表しているのかもしれない。',
+      'このことは、ランキングの場合にとくにはっきりする。最高の大学や、もっとも偉大な小説や、もっとも住みやすい都市のリストは、とても大きな注目を集めるが、その理由の一つは、それが難しい比較をかんたんにしてくれると約束するからである。しかし、そうしたランキングをつくるのに使われる基準はしばしば議論の余地があり、方法を少し変えるだけでまったくちがう結果が出ることもある。ランキングは、人々に複雑な現実をただ一つのものさしで見るよううながし、かんたんにははかれない質を見落とさせるかもしれない。たとえば、地域のつながりの強い小さな町は、住民が深く満ちたりていても、収入と交通だけを重んじるリストでは低い順位になるかもしれない。',
+      'リストが、それがささえるはずの活動に取ってかわってしまう危険もある。作業のリストをつくったり直したりするのに多くの時間をかける人は、実際にはあまりやりとげていないのに、はかどっていると感じるかもしれない。同じように、読むつもりの本のリストは、読書の代わりになり、向き合う努力なしに計画する満足をあたえてしまうことがある。そうした場合、リストは道具ではなくそれ自体が目的となり、解放するはずだった注意を吸いこんでしまうのである。',
+      'しかしリストは、楽しみや美しさのみなもとにさえなりうる。詩人や作家は長いあいだ、世界のゆたかさと多様さを呼びおこすためにリストを使い、景物や名前を積み重ねて、満ちあふれる感覚をつくり出してきた。一日を価値あるものにする小さなことや、自分が感謝している人々のリストは、そうでなければ見落とされるかもしれないものに注意を向けさせることができる。この意味で、リストをつくることは、整理であると同時に、ありがたく思う行いにもなりうるのである。',
+      'おそらくリストの価値は、それがどう使われるかにかかっている。覚えたり整理したりする道具としては、それは暮らしをあつかいやすくしてくれる。ふり返りの手段としては、何が大切かに気づく助けになる。しかし、それが複雑な現実を単純な並びにしてしまう方法や、行動の代わりになるとき、それは私たちの理解を広げるのではなくせばめてしまうかもしれない。多くの人間の発明と同じように、リストは、その力と限界の両方を意識しているときにもっとも役に立つのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この過程は役に立ちうるが、中立ではない選択もふくむ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '現存するもっとも古い文書のいくつかは、品物や借金のリストである。', answer: true, why: '第1段落 Some of the oldest surviving written documents are lists of goods, debts。' },
+      { statement: '筆者によれば、リストに何を入れるかの選択はいつも中立である。', answer: false, why: '第3段落 it also involves choices that are rarely neutral。' },
+      { statement: 'ランキングの方法を少し変えると、まったくちがう結果が出ることがある。', answer: true, why: '第4段落 small changes in method can produce very different results。' },
+      { statement: '筆者は、リストは楽しみのみなもとにはなりえないと考えている。', answer: false, why: '第6段落 lists can also be sources of pleasure and even of beauty。' },
+    ],
+    qa: [
+      { q: 'Why do many people feel less anxious after making a list?', choices: ['Naming obligations seems to make them easier to manage.', 'Lists finish the tasks for them.', 'Lists are always short.', 'They forget their tasks.'], answer: 0, why: '第2段落 as though the act of naming their obligations made them easier to manage。' },
+      { q: 'What risk does the author describe in the fifth paragraph?', choices: ['A list may replace the activity it is meant to support.', 'Lists are too expensive.', 'Lists cannot be revised.', 'Lists make people read more.'], answer: 0, why: '第5段落 lists may replace the activities they are meant to support。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
