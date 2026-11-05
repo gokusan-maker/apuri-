@@ -8130,6 +8130,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'My father is committed to [quit] smoking.', choices: ['quitting', 'quits', 'quitted to', 'have quit'], answer: 0, why: 'be committed to ～ing「～することに打ちこむ・心に決めている」。' },
     ],
   },
+  {
+    id: 'exam-fix-191',
+    title: '入試の誤文訂正〈191〉（京大レベル：英作文の部分否定 not all・not always）',
+    points: ['「すべてが～というわけではない」のように一部だけを打ち消すのが部分否定。not all・not every（body）・not always・not both・not necessarily・not completely など、not ＋「全部・いつも」を表す語で表す。一方、no・none・nobody・never・neither・not ～ either は「まったく～ない」の全体否定。英作文では「～とはかぎらない」「～わけではない」を見たら部分否定を使う。［ ］の部分を、日本語に合うように正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Not all rich people are happy.', ja: '金持ちがみな幸せとはかぎらない。' }],
+    questions: [
+      { sentence: '［金持ちがみな幸せとはかぎらない］ [No rich people are] happy.', choices: ['Not all rich people are', 'All rich people are never', 'Rich people are all not', 'Every rich people are not'], answer: 0, why: '「みな～とはかぎらない」は部分否定 Not all。No だと「だれも幸せでない」になる。' },
+      { sentence: '［彼はいつも正しいとはかぎらない］ He is [never] right.', choices: ['not always', 'always not', 'hardly ever', 'not never'], answer: 0, why: '「いつも～とはかぎらない」は not always。never は「けっして～ない」。' },
+      { sentence: '［私はその本を両方とも読んだわけではない］ I have not read [either of] the books.', choices: ['both of', 'neither of', 'none of', 'any of'], answer: 0, why: '「両方とも～わけではない」は not both。not either だと「どちらも読んでいない」。' },
+      { sentence: '［その答えが完全にまちがっているわけではない］ The answer is [not at all] wrong.', choices: ['not completely', 'completely not', 'not in the least', 'never'], answer: 0, why: '「完全に～わけではない」は not completely。not at all は「まったく～ない」。' },
+      { sentence: '［だれもがその規則に賛成したわけではない］ [Nobody] agreed with the rule.', choices: ['Not everybody', 'Everybody not', 'Not nobody', 'Anybody not'], answer: 0, why: '「だれもが～わけではない」は Not everybody。Nobody は「だれも～ない」。' },
+      { sentence: '［高い物が必ずしもよいとはかぎらない］ Expensive things are [never] good.', choices: ['not necessarily', 'necessarily not', 'not ever', 'hardly'], answer: 0, why: '「必ずしも～とはかぎらない」は not necessarily。' },
+      { sentence: '［生徒全員がその問題をといたわけではない］ [None of] the students solved the problem.', choices: ['Not all of', 'All of not', 'Neither of', 'Not none of'], answer: 0, why: '「全員が～わけではない」は Not all of。None of は「だれも～ない」。' },
+      { sentence: '［私はその両方とも知らない］ I don’t know [both of] them.', choices: ['either of', 'some of', 'all of', 'each of'], answer: 0, why: '「両方とも知らない」は全体否定で not either。not both だと「両方は知らない（一方は知っている）」。' },
+      { sentence: '［彼の言うことがすべて本当とはかぎらない］ [Nothing] he says is true.', choices: ['Not everything', 'Everything not', 'Not nothing', 'Anything not'], answer: 0, why: '「すべて～とはかぎらない」は Not everything。Nothing は「何も～ない」。' },
+      { sentence: '［私はいつもひまなわけではない］ I am [always not] free.', choices: ['not always', 'never', 'always never', 'not ever'], answer: 0, why: '部分否定は not を always の前に置く。I am not always free。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
