@@ -35102,6 +35102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rereading',
+    title: 'The Pleasure of Rereading',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an age that offers more books, films, and music than any person could ever hope to experience, the habit of returning to works we already know may seem difficult to justify. Every hour spent rereading a familiar novel, it might be argued, is an hour taken away from discovering something new. Yet many readers, including some of the most widely read, insist that rereading offers pleasures and insights that a first reading cannot provide, and their experience suggests that the value of a book is not exhausted the moment we reach its final page.",
+      "One reason for this lies in the nature of a first reading. When we encounter a story for the first time, much of our attention is absorbed by the question of what will happen next. We hurry forward, eager to learn how the plot will be resolved, and in doing so we inevitably overlook details of language, structure, and character. On a second reading, freed from the pressure of suspense, we can slow down and notice how the author prepares for later events, how small details acquire meaning, and how the parts of the work fit together.",
+      "Rereading also reveals how much our understanding depends on who we are when we read. A novel read at fifteen may seem quite different when read again at forty, not because the words have changed but because the reader has. ( A ) the text remains the same, the experiences we bring to it, of love, loss, work, and responsibility, alter what we are able to see in it. In this sense, returning to a book can become a way of measuring how we ourselves have changed over the years.",
+      "This observation suggests that reading is not simply a matter of extracting information from a text, as one might take facts from a manual. If it were, a single careful reading would be sufficient, and returning to a book would be a waste of time. Instead, reading appears to be a kind of conversation between the reader and the work, in which each brings something to the exchange. Like a conversation with an old friend, it can continue to offer new turns even when both participants seem familiar.",
+      "There are, of course, reasons to be cautious about rereading. A reader who returns only to familiar works may avoid the challenge of the unfamiliar, choosing comfort over discovery. The pleasure of recognition can become a way of hiding from books that might unsettle our assumptions or introduce us to unfamiliar ways of seeing. A balanced reading life, therefore, probably requires both exploration and return, a willingness to venture into new territory as well as to revisit places we have already come to know.",
+      "It is also worth noting that rereading is not limited to literature. Students who return to a difficult textbook chapter, scientists who revisit a classic paper, and musicians who play a familiar piece again all engage in a similar process. In each case, the second encounter allows them to see connections and subtleties that were invisible at first. Mastery in many fields seems to depend less on encountering an endless supply of new material than on returning, again and again, to material that rewards close attention.",
+      "Perhaps, then, the question is not whether we have time to reread but whether we can afford not to. In a culture that values novelty and speed, rereading is a quiet act of resistance, a decision to give depth priority over quantity. The books we return to become, over time, part of who we are, shaping the way we think and feel. To reread is not to stand still but to discover that a familiar place still holds unexplored corners, waiting to be found by a reader who has changed.",
+    ],
+    ja: [
+      'だれも経験しきれないほど多くの本や映画や音楽があふれる時代には、すでに知っている作品にもどる習慣は正当化しにくいように思えるかもしれない。なじみの小説を読み返す一時間は、新しいものを見つけることからうばわれた一時間だと言われるかもしれない。しかし、もっとも広く読んでいる人々の一部をふくむ多くの読者は、読み返すことは初めての読書ではあたえられない楽しみと発見をもたらすと主張し、その経験は、本の価値が最後のページにたどり着いた瞬間につきてしまうのではないことを示している。',
+      'その理由の一つは、初めての読書の性質にある。物語に初めて出会うとき、私たちの注意の多くは、次に何が起こるのかという問いに吸いこまれる。私たちは筋がどう決着するのかを早く知りたくて先を急ぎ、そうするうちに、ことばや構成や人物のこまかなところをどうしても見落としてしまう。二度目の読書では、はらはらする気持ちのおもしからときはなたれて、ゆっくり進み、作者がのちの出来事にどうそなえているか、小さな細部がどう意味をおびるか、作品の部分どうしがどう組み合わさっているかに気づくことができる。',
+      '読み返すことはまた、私たちの理解が、読むときの自分がどんな人間であるかにどれほどかかっているかを明らかにする。15歳で読んだ小説は、40歳で読み返すとかなりちがって見えるかもしれない。それはことばが変わったからではなく、読み手が変わったからである。文章は同じままでも、私たちがそこにもちこむ愛や喪失や仕事や責任の経験が、そこに見えるものを変える。この意味で、本にもどることは、私たち自身が年月とともにどう変わったかをはかる一つの方法になりうる。',
+      'この見方は、読むことが、説明書から事実を取り出すように、単に文章から情報を取り出すことではないことを示している。もしそうなら、注意深く一度読めば十分で、本にもどることは時間のむだだろう。そうではなく、読むことは読み手と作品とのあいだの一種の会話であり、そこではそれぞれが何かをやりとりにもちこむようである。古い友人との会話のように、どちらもなじみ深く思えるときでさえ、新しい展開をあたえ続けることができるのである。',
+      'もちろん、読み返すことに用心すべき理由もある。なじみの作品にばかりもどる読者は、発見よりも安心を選び、見なれないものの挑戦をさけてしまうかもしれない。見覚えのある楽しみは、私たちの思いこみをゆさぶったり、見なれない物の見方を教えてくれたりするかもしれない本からかくれる方法になってしまうこともある。それゆえ、つりあいのとれた読書生活には、おそらく探検ともどることの両方、つまり新しい領域にふみ出す気持ちと、すでに知るようになった場所を再びたずねる気持ちの両方が必要なのである。',
+      '読み返すことが文学にかぎらないことも注目に値する。難しい教科書の章にもどる生徒、古典的な論文を読み直す科学者、なじみの曲をもう一度演奏する音楽家は、みな同じような過程にたずさわっている。どの場合も、二度目の出会いによって、はじめは見えなかったつながりやこまやかさが見えるようになる。多くの分野での熟達は、新しい素材にかぎりなく出会うことよりも、注意深く向き合うほど報われる素材に何度もくり返しもどることにかかっているようである。',
+      'だとすれば、問題は読み返す時間があるかどうかではなく、読み返さずにいられる余裕があるかどうかなのかもしれない。新しさと速さを大切にする文化のなかで、読み返すことは静かな抵抗であり、量より深さを優先するという決断である。私たちがもどる本は、時がたつにつれて私たちの一部となり、考え方や感じ方を形づくる。読み返すことは立ち止まることではなく、なじみの場所にまだ探検されていない片すみが残っていて、変わった読み手に見つけられるのを待っていると気づくことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「文章は同じままでも、もちこむ経験が見えるものを変える」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '初めての読書では、次に何が起こるかに注意が向きやすい。', answer: true, why: '第2段落 much of our attention is absorbed by the question of what will happen next。' },
+      { statement: '15歳と40歳で同じ小説がちがって見えるのは、ことばが変わったからである。', answer: false, why: '第3段落 not because the words have changed but because the reader has。' },
+      { statement: 'なじみの作品にばかりもどると、見なれないものの挑戦をさけてしまうおそれがある。', answer: true, why: '第5段落 may avoid the challenge of the unfamiliar。' },
+      { statement: '筆者によれば、読み返すことは文学だけにかぎられる。', answer: false, why: '第6段落 rereading is not limited to literature。' },
+    ],
+    qa: [
+      { q: 'What does the author compare reading to?', choices: ['A conversation between the reader and the work.', 'Taking facts from a manual.', 'Running a race.', 'Buying a product.'], answer: 0, why: '第4段落 a kind of conversation between the reader and the work。' },
+      { q: 'What does a balanced reading life probably require?', choices: ['Both exploration and return.', 'Only new books.', 'Only familiar books.', 'Reading as fast as possible.'], answer: 0, why: '第5段落 requires both exploration and return。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
