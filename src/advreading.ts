@@ -35938,6 +35938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-longer-school-day',
+    title: 'Should the School Day Be Longer?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the length of the school day has remained largely unchanged for generations. Students arrive in the morning, attend lessons until the early or middle afternoon, and then return home or take part in clubs and other activities. In recent years, however, some educators and policymakers have proposed extending the school day, arguing that additional hours could raise academic standards and help families. Others warn that longer days would exhaust students and teachers and leave too little time for life outside school.",
+      "Supporters of a longer school day argue that it would give teachers more time to cover the curriculum thoroughly. Lessons are often rushed, they say, and students who need extra help may not receive it in the limited time available. Additional hours could be used for individual support, practice, and subjects that are often squeezed out of the timetable, such as music, art, and physical education. In this view, a longer day would not simply mean more of the same but a richer and more balanced education. Students who struggle to find a quiet place to study at home, supporters add, could complete more of their work at school, where teachers are available to answer their questions.",
+      "Supporters also point to the needs of working families. In households where all adults work, the end of the school day may leave children without supervision for several hours, and parents may struggle to find affordable care. ( A ) not every family faces this problem, supporters argue, a longer school day could provide a safe and productive environment for children who might otherwise spend the afternoon alone or in front of screens, and it could reduce the inequality between families who can afford private activities and those who cannot.",
+      "Critics, however, question whether more time in school would actually improve learning. Research on the relationship between hours of instruction and academic achievement has produced mixed results, and some countries with relatively short school days perform well in international comparisons. What matters most, critics argue, is not the quantity of time but the quality of teaching. Adding hours without improving how lessons are taught may simply increase fatigue without raising standards. Tired students, after all, are unlikely to concentrate well in the final hours of a long day.",
+      "Critics also emphasize the importance of time outside school. Children need opportunities to play, rest, pursue their own interests, and spend time with family and friends, all of which contribute to healthy development. A longer school day could reduce these opportunities and increase stress, particularly for older students who already face heavy workloads. Teachers, too, may be overburdened, and extending their working hours without additional staff or pay could worsen shortages in a profession that already struggles to attract new members.",
+      "Between these positions, some schools have experimented with flexible approaches. Rather than extending compulsory lessons, they offer optional activities after the regular school day, such as homework clubs, sports, arts, and tutoring, often run in cooperation with community organizations. Such programs allow families who need them to take advantage of extra hours, while leaving others free to use the time as they choose. They also give students the chance to explore interests that the regular curriculum may not cover.",
+      "The debate over the length of the school day reflects a broader question about the role of schools in society. Schools are expected not only to teach academic subjects but also to support children's well-being, prepare them for adult life, and help families manage the demands of work. Deciding how much of a child's day schools should occupy requires balancing these goals against the value of time spent elsewhere. The best solution may differ from one community to another, but it should be guided by careful attention to what children actually need.",
+    ],
+    ja: [
+      '多くの国で、学校の一日の長さは何世代にもわたってほとんど変わっていない。生徒は朝に登校し、午後の早い時間か半ばまで授業を受け、それから家に帰ったり、クラブやほかの活動に参加したりする。しかし近年、時間をふやせば学力の水準を高め、家庭の助けになると主張して、学校の一日をのばすことを提案する教育者や政策を決める人々も出てきた。一日が長くなると生徒と教師がつかれはて、学校の外での暮らしのための時間がほとんど残らなくなると警告する人々もいる。',
+      '学校の一日をのばすことを支持する人々は、それによって教師が教育課程をじっくりあつかう時間がふえると主張する。授業はしばしばあわただしく、さらに助けが必要な生徒は、使える限られた時間のなかでそれを受けられないかもしれないと彼らは言う。ふえた時間は、個別のささえや練習や、音楽や美術や体育のように時間割からしめ出されがちな教科に使えるだろう。この見方では、一日が長くなることは単に同じことがふえることではなく、よりゆたかでつりあいのとれた教育を意味する。家で静かに勉強できる場所を見つけにくい生徒は、質問に答えてくれる教師のいる学校で、より多くの課題をすませられるだろうと支持する人々は付け加える。',
+      '支持する人々はまた、働く家庭の必要を指摘する。おとながみな働いている家庭では、学校の一日が終わると子どもが何時間も見守られないままになることがあり、親は手ごろな預け先を見つけるのに苦労するかもしれない。すべての家庭がこの問題をかかえているわけではないが、学校の一日が長くなれば、そうでなければ午後を一人ですごしたり画面の前ですごしたりするかもしれない子どもに、安全で実りある環境をあたえられ、民間の習いごとを買える家庭とそうでない家庭の不平等をへらせるかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、学校にいる時間をふやすことで本当に学びがよくなるのかを疑う。授業時間と学力との関係についての研究はまちまちな結果を生んでおり、学校の一日が比較的短い国のなかにも国際比較でよい成績をあげる国がある。もっとも大切なのは時間の量ではなく教え方の質だと批判する人々は主張する。授業の教え方をよくせずに時間をふやすことは、水準を上げることなく、単につかれをふやすだけかもしれない。結局のところ、つかれた生徒が長い一日の最後の数時間によく集中できるとは考えにくい。',
+      '批判する人々はまた、学校の外での時間の大切さを強調する。子どもには遊んだり、休んだり、自分の興味を追ったり、家族や友だちとすごしたりする機会が必要であり、そのすべてが健やかな成長に役立つ。学校の一日が長くなるとこうした機会がへり、とくにすでに重い勉強の量をかかえる年上の生徒にとってストレスがふえるかもしれない。教師もまた負担が重くなるかもしれず、職員や給料をふやさずに勤務時間をのばせば、すでに新しい人を引きつけるのに苦労している職業の人手不足が悪化しかねない。',
+      'これらの立場のあいだで、柔軟なやり方を試してきた学校もある。義務の授業をのばすのではなく、ふだんの学校の一日のあとに、宿題クラブやスポーツや芸術や個別指導のような自由参加の活動を、しばしば地域の団体と協力して行うのである。こうした取り組みは、それを必要とする家庭がふえた時間を活用できるようにしつつ、ほかの家庭は好きなようにその時間を使える自由を残す。それはまた、ふだんの教育課程ではあつかわないかもしれない興味を探る機会を生徒にあたえる。',
+      '学校の一日の長さをめぐる議論は、社会における学校の役割についての、より広い問いを反映している。学校は教科を教えるだけでなく、子どもの健やかさをささえ、おとなの暮らしにそなえさせ、家庭が仕事のもとめに対処するのを助けることも期待されている。子どもの一日のどれだけを学校がしめるべきかを決めるには、こうした目的と、ほかの場所ですごす時間の価値とのつりあいをとらなければならない。最善の解決は地域ごとにちがうかもしれないが、子どもが実際に何を必要としているかへの注意深い配慮によって導かれるべきである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「すべての家庭がこの問題をかかえているわけではないが、安全な環境をあたえられる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a longer school day would give teachers more ( 1 ) and help working families. Critics argue that the quality of ( 2 ) matters more than the quantity of time and that children need time outside school. Some schools offer ( 3 ) activities after the regular school day.',
+      blanks: [
+        { choices: ['time', 'money', 'power', 'space'], answer: 0, why: '第2段落 it would give teachers more time to cover the curriculum。' },
+        { choices: ['teaching', 'buildings', 'uniforms', 'food'], answer: 0, why: '第4段落 not the quantity of time but the quality of teaching。' },
+        { choices: ['optional', 'compulsory', 'expensive', 'secret'], answer: 0, why: '第6段落 they offer optional activities after the regular school day。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国で、学校の一日の長さは長いあいだほとんど変わっていない。', answer: true, why: '第1段落 has remained largely unchanged for generations。' },
+      { statement: '研究によれば、授業時間が長いほど必ず学力が高くなる。', answer: false, why: '第4段落 has produced mixed results。' },
+      { statement: '学校の一日が長くなると、教師の負担が重くなるかもしれない。', answer: true, why: '第5段落 Teachers, too, may be overburdened。' },
+      { statement: '筆者によれば、最善の解決はすべての地域で同じである。', answer: false, why: '第7段落 The best solution may differ from one community to another。' },
+    ],
+    qa: [
+      { q: 'What could additional school hours be used for, according to supporters?', choices: ['Individual support and subjects such as music and art.', 'Longer holidays.', 'More examinations only.', 'Closing schools earlier.'], answer: 0, why: '第2段落 Additional hours could be used for individual support, practice, and subjects ... such as music, art。' },
+      { q: 'What do some countries with short school days show, according to critics?', choices: ['They can still perform well in international comparisons.', 'They always perform badly.', 'They have no teachers.', 'They have longer holidays.'], answer: 0, why: '第4段落 some countries with relatively short school days perform well。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
