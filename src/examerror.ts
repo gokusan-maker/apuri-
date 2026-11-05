@@ -7668,6 +7668,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She cooked dinner [to] her friends.', choices: ['for', 'of', 'at', 'by'], answer: 0, why: 'cook 物 for 人。' },
     ],
   },
+  {
+    id: 'exam-fix-180',
+    title: '入試の誤文訂正〈180〉（東大レベル：英作文の感嘆文 What a ～・How ～）',
+    points: ['感嘆文は What a（an）＋形容詞＋名詞＋主語＋動詞！（数えられない名詞・複数名詞なら a はつけない：What beautiful flowers!）と How ＋形容詞・副詞＋主語＋動詞！の二つの形。主語＋動詞はふつうの語順（How fast he runs!）で、疑問文の語順にしない。名詞があるなら What、形容詞・副詞だけなら How。英作文では so ＋形容詞・such a ＋形容詞＋名詞でも同じ気持ちを表せる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'What a beautiful day it is! How fast he runs!', ja: 'なんてすばらしい日だろう。彼はなんて速く走るのだろう。' }],
+    questions: [
+      { sentence: '[How a beautiful day] it is!', choices: ['What a beautiful day', 'How beautiful a day is', 'What beautiful day', 'How a day beautiful'], answer: 0, why: '名詞 day があるので What a ＋形容詞＋名詞。' },
+      { sentence: 'How fast [does he run]!', choices: ['he runs', 'runs he', 'he does run it', 'did he run'], answer: 0, why: '感嘆文は主語＋動詞のふつうの語順。How fast he runs!' },
+      { sentence: '[What a beautiful flowers] they are!', choices: ['What beautiful flowers', 'How beautiful flowers', 'What a flowers beautiful', 'How a beautiful flowers'], answer: 0, why: '複数名詞なので a はつけない。What beautiful flowers。' },
+      { sentence: '[What kind] she is!', choices: ['How kind', 'What a kind', 'How a kind', 'What kindly'], answer: 0, why: '名詞がなく形容詞だけなので How kind。' },
+      { sentence: 'What [a good advice] he gave me!', choices: ['good advice', 'a good advices', 'good an advice', 'goods advice'], answer: 0, why: 'advice は数えられない名詞なので a はつけない。What good advice。' },
+      { sentence: '[How an interesting book] this is!', choices: ['What an interesting book', 'How interesting book', 'What interesting a book', 'How a book interesting'], answer: 0, why: '名詞 book があるので What an ＋形容詞＋名詞。' },
+      { sentence: 'How [well does she sing]!', choices: ['well she sings', 'good she sings', 'she sings well', 'well sings she'], answer: 0, why: 'How ＋副詞＋主語＋動詞。How well she sings!' },
+      { sentence: 'It was [so a hot day] that we stayed inside.', choices: ['such a hot day', 'so hot a days', 'such hot a day', 'a so hot day'], answer: 0, why: '名詞があるときは such a ＋形容詞＋名詞（so hot a day も可）。' },
+      { sentence: '[What tall] the tower is!', choices: ['How tall', 'What a tall', 'How a tall', 'What tallness'], answer: 0, why: '形容詞だけなので How tall。' },
+      { sentence: 'What [a terrible weather] we are having!', choices: ['terrible weather', 'a terrible weathers', 'terrible a weather', 'terribly weather'], answer: 0, why: 'weather は数えられない名詞なので a はつけない。What terrible weather。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
