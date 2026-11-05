@@ -2825,6 +2825,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 78 q4 4 8 0 M58 78 q4 4 8 0" fill="none" stroke="#283023" strokeWidth="2" />
       </g>
     )
+  if (species === 'sandcat')
+    return (
+      <g>
+        {/* 足の裏の毛 */}
+        <path d="M30 80 l2 3 l2 -3 l2 3 M60 80 l2 3 l2 -3 l2 3" fill="none" stroke="#4a3415" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
