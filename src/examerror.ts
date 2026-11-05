@@ -8298,6 +8298,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I am right, [amn’t I]?', choices: ['aren’t I', 'don’t I', 'isn’t I', 'am not'], answer: 0, why: 'I am ～ の付加疑問は aren’t I?。' },
     ],
   },
+  {
+    id: 'exam-fix-195',
+    title: '入試の誤文訂正〈195〉（東大レベル：英作文の the reason why・the way）',
+    points: ['「～する理由」は the reason why ～（why や the reason は省略できる）、「～する方法・やり方」は the way ～ か how ～ で、the way how とはいわない。That is why ～「だから～」は前が理由、That is because ～「それは～だからだ」はうしろが理由。The reason ～ is that ...「～の理由は…だ」で、is because はさけるのがふつう。「～の理由」は the reason for ～（of ではない）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'That is the reason why he was late.', ja: 'それが彼がおくれた理由だ。' }],
+    questions: [
+      { sentence: 'That is [the reason because] he was late.', choices: ['the reason why', 'the reason what', 'the reason which', 'the cause because'], answer: 0, why: '「～する理由」は the reason why ～。' },
+      { sentence: 'This is [the way how] I learned English.', choices: ['the way', 'the how way', 'the way which', 'the way of how'], answer: 0, why: 'the way と how はいっしょに使わない。the way I learned／how I learned。' },
+      { sentence: 'The reason why he left [is because] he was tired.', choices: ['is that', 'is why', 'are because', 'is what'], answer: 0, why: 'The reason ～ is that ...「～の理由は…だ」。' },
+      { sentence: 'Tell me [how way] you solved it.', choices: ['how', 'which way how', 'what way how', 'the how'], answer: 0, why: '「どのように」は how だけで表す。how you solved it。' },
+      { sentence: 'I don’t understand [the reason of] she said that.', choices: ['why', 'the reason of why', 'because of', 'for what reason that'], answer: 0, why: 'あとに「主語＋動詞」が続くので why（the reason why）。' },
+      { sentence: 'I was sick. That is [because] I was absent yesterday.', choices: ['why', 'the reason because', 'what', 'how'], answer: 0, why: '前の文（病気だった）が理由で、うしろが結果なので That is why ～「だから～」。' },
+      { sentence: 'He was absent. That is [why] he was sick.', choices: ['because', 'the reason why', 'how', 'what'], answer: 0, why: 'うしろ（病気だった）が理由なので That is because ～「それは～だからだ」。' },
+      { sentence: 'This is [the way which] he cooks rice.', choices: ['the way that', 'the way how', 'the which way', 'how the way'], answer: 0, why: 'the way のあとは that か何も置かない。the way that he cooks rice。' },
+      { sentence: 'Nobody knows [the reason he quits] his job last month.', choices: ['the reason he quit', 'the reason of he quit', 'the reason why quit', 'the reasons he quitting'], answer: 0, why: 'last month の過去の話なので quit（過去形）。the reason he quit。' },
+      { sentence: '[The reason of his being late] was that the train stopped.', choices: ['The reason for his being late', 'The reason why of his lateness', 'The reason of he was late', 'Why his being late'], answer: 0, why: '「～の理由」は the reason for ～。of ではない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
