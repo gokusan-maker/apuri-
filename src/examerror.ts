@@ -4658,6 +4658,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Prices (B) have risen, (C) and wages (D) have raised too.', choices: ['(A) Prices', '(B) have risen,', '(C) and wages', '(D) have raised too'], answer: 3, why: 'wages にも目的語がないので自動詞 rise。have risen too。' },
     ],
   },
+  {
+    id: 'exam-error-absolute-kyodai',
+    title: '入試の正誤問題〈196〉（京大レベル：独立分詞構文と付帯状況の with）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文の主語が主節の主語とちがうときは、分詞の前に主語を置く（独立分詞構文：It being a holiday／The sun having set）。慣用表現に weather permitting・all things considered・generally speaking・judging from ～ がある。「with ＋名詞＋分詞・形容詞」は「～を…したまま」（付帯状況）で、名詞が「される」側なら過去分詞（with his eyes closed）、「している」側なら現在分詞（with the engine running）。分詞構文のあとに so や and を入れない。',
+    ],
+    examples: [
+      { en: 'Weather permitting, we will go on a picnic.', ja: '天気がよければ、ピクニックに行く。' },
+      { en: 'He listened to the music with his eyes closed.', ja: '彼は目を閉じて音楽を聞いた。' },
+    ],
+    questions: [
+      { sentence: '(A) Weather (B) permitted, (C) we will (D) go on a picnic tomorrow.', choices: ['(A) Weather', '(B) permitted,', '(C) we will', '(D) go on a picnic tomorrow'], answer: 1, why: '独立分詞構文で weather は「ゆるす」側なので現在分詞。Weather permitting「天気がよければ」。' },
+      { sentence: '(A) He listened to the music (B) with his eyes (C) closing (D) quietly.', choices: ['(A) He listened to the music', '(B) with his eyes', '(C) closing', '(D) quietly'], answer: 2, why: 'with ＋名詞＋分詞で、目は「閉じられた」状態なので過去分詞。with his eyes closed。' },
+      { sentence: '(A) She sat (B) on the bench (C) with her legs (D) crossing.', choices: ['(A) She sat', '(B) on the bench', '(C) with her legs', '(D) crossing'], answer: 3, why: '足は「組まれた」状態なので過去分詞。with her legs crossed。' },
+      { sentence: '(A) All things (B) considering, (C) the plan (D) was a success.', choices: ['(A) All things', '(B) considering,', '(C) the plan', '(D) was a success'], answer: 1, why: 'すべてのことが「考えられる」側なので過去分詞。All things considered「すべてを考えると」。' },
+      { sentence: '(A) The sun (B) set, (C) we (D) started for home.', choices: ['(A) The sun', '(B) set,', '(C) we', '(D) started for home'], answer: 1, why: '主語のちがう独立分詞構文にする。The sun having set「日がしずんだので」。' },
+      { sentence: '(A) Don’t talk (B) with (C) your mouth (D) is full.', choices: ['(A) Don’t talk', '(B) with', '(C) your mouth', '(D) is full'], answer: 3, why: 'with ＋名詞＋形容詞の形で、is は不要。with your mouth full。' },
+      { sentence: '(A) There (B) being no bus, (C) so we (D) walked home.', choices: ['(A) There', '(B) being no bus,', '(C) so we', '(D) walked home'], answer: 2, why: '分詞構文のあとに so を入れない。There being no bus, we walked home。' },
+      { sentence: '(A) Being (B) a holiday, (C) the streets (D) were empty.', choices: ['(A) Being', '(B) a holiday,', '(C) the streets', '(D) were empty'], answer: 0, why: '「休日なので」の主語 it は主節の主語とちがうので残す。It being a holiday。' },
+      { sentence: '(A) He came in (B) with his coat (C) cover (D) with snow.', choices: ['(A) He came in', '(B) with his coat', '(C) cover', '(D) with snow'], answer: 2, why: 'コートは「おおわれた」状態なので過去分詞。with his coat covered with snow。' },
+      { sentence: '(A) Generally (B) speak, (C) Japanese people (D) are polite.', choices: ['(A) Generally', '(B) speak,', '(C) Japanese people', '(D) are polite'], answer: 1, why: '慣用的な分詞構文 generally speaking「一般的に言えば」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

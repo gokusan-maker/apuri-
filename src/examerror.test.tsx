@@ -2696,3 +2696,10 @@ it('誤文訂正〈189〉：東大レベル what を使った名詞節の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('What')
 })
+
+it('正誤問題〈196〉：京大レベル 独立分詞構文と with の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-absolute-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) permitted,')
+})
