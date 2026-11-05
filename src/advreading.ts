@@ -34098,6 +34098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-deep-sea-mining',
+    title: 'Should We Mine the Deep Sea?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Far below the surface of the oceans, on plains thousands of meters deep, lie vast quantities of metal-rich rocks. These rocks contain cobalt, nickel, copper, and other elements used in batteries for electric vehicles and in many forms of modern technology. As demand for these metals grows, several companies and governments have begun to explore the possibility of mining the deep seabed. Supporters see deep-sea mining as a way to supply the materials needed for a transition away from fossil fuels, while critics warn that it could cause irreversible damage to ecosystems we barely understand.",
+      "Supporters argue first that the world needs more of these metals. Reducing greenhouse gas emissions will require millions of electric vehicles and large systems for storing renewable energy, all of which depend on batteries. Mining on land already causes serious environmental and social problems, including the destruction of forests, the pollution of rivers, and, in some places, the use of child labor. Obtaining metals from the deep sea, supporters suggest, might reduce some of these harms by shifting production to areas where no people live. They also argue that relying on a wider range of sources would make supplies more secure, since the production of some metals is currently concentrated in a small number of countries.",
+      "Supporters also note that deep-sea deposits are unusually rich, containing several valuable metals in a single rock. Collecting them may require less digging and produce less waste than many mines on land. ( A ) the technology is still being developed, supporters believe that careful regulation could allow mining to proceed in ways that limit environmental damage while providing materials essential for fighting climate change.",
+      "Critics, however, emphasize how little is known about the deep sea. Scientists estimate that a large proportion of the species living on the deep seabed have never been described, and new organisms are discovered on almost every research expedition. Many deep-sea creatures grow and reproduce extremely slowly, so that damaged habitats may take centuries or even thousands of years to recover. Mining machines would remove the top layer of the seabed, destroying the homes of these organisms and possibly driving some species to extinction before they are ever identified. Once lost, such species and the knowledge they might have offered, including possible sources of new medicines, could never be recovered.",
+      "The effects may also extend far beyond the areas being mined. Mining would create clouds of fine sediment that could spread over large distances, affecting creatures that filter food from the water. Noise and light from mining equipment might disturb animals adapted to darkness and silence. Some scientists also worry about the role of the deep sea in storing carbon, warning that disturbing the seabed could release carbon or reduce the ocean's ability to absorb it.",
+      "There are also questions about who should benefit. Much of the deep seabed lies in international waters, which international law describes as the common heritage of humankind. In principle, this means that the benefits of mining should be shared among all nations, including those without the technology to mine. In practice, it is unclear how this could be achieved, and critics fear that a few powerful companies and countries would gain most of the profits while the environmental costs were borne by everyone. Developing countries with coasts near mining areas may be especially vulnerable.",
+      "Given these uncertainties, many scientists and some governments have called for a pause on deep-sea mining until its effects are better understood. Others argue that the need for metals is urgent and that delay may simply increase pressure on land-based mining. The debate illustrates a difficult dilemma: efforts to solve one environmental problem may create new ones. Deciding how to proceed will require weighing present needs against risks that may affect the planet for generations to come.",
+    ],
+    ja: [
+      '海面のはるか下、深さ何千メートルもの平原には、金属を多くふくむばく大な量の岩がある。こうした岩には、電気自動車の電池や多くの形の現代の技術に使われるコバルトやニッケルや銅やほかの元素がふくまれている。こうした金属の需要がふえるにつれて、いくつかの会社や政府が深海底を採掘する可能性を探り始めた。支持する人々は深海採掘を、化石燃料から離れるのに必要な材料を供給する方法とみなしているが、批判する人々は、私たちがほとんど理解していない生態系に元にもどせない害をあたえるかもしれないと警告している。',
+      '支持する人々は、まず世界にはこうした金属がもっと必要だと主張する。温室効果ガスの排出を減らすには、何百万台もの電気自動車と再生可能エネルギーをたくわえる大きな仕組みが必要であり、そのすべてが電池に頼っている。陸での採掘はすでに、森の破壊や川の汚染や、場所によっては子どもの労働といった深刻な環境的・社会的な問題を引き起こしている。深海から金属を手に入れれば、人が住んでいない場所に生産を移すことで、こうした害の一部を減らせるかもしれないと支持する人々は示唆する。また、ある種の金属の生産は今は少数の国に集中しているので、より多くの供給源に頼れば供給がより安定するとも彼らは主張する。',
+      '支持する人々はまた、深海の鉱床はめずらしく豊かで、一つの岩に価値ある金属がいくつもふくまれていると指摘する。それを集めるのに必要な掘削は陸の多くの鉱山より少なく、出るごみも少ないかもしれない。技術はまだ開発の途中だが、注意深い規制によって、環境への害を限りながら、気候変動とたたかうのに欠かせない材料を提供するしかたで採掘を進められると支持する人々は信じている。',
+      'しかし批判する人々は、深海についてわかっていることがいかに少ないかを強調する。科学者たちは、深海底にすむ種の大きな割合がまだ一度も記載されたことがないと見積もっており、ほとんどどの調査でも新しい生物が見つかっている。深海の生き物の多くはきわめてゆっくり成長し繁殖するので、そこなわれたすみかが回復するには何世紀、あるいは何千年もかかるかもしれない。採掘機械は海底の表面の層をはぎとり、こうした生物のすみかをこわし、ひょっとすると、ある種を見つけられる前に絶滅に追いやるかもしれない。いったん失われれば、そうした種と、新しい薬の源になる可能性をふくめてそれらがあたえたかもしれない知識は、けっして取りもどせないだろう。',
+      'その影響は採掘される場所をはるかにこえて広がるかもしれない。採掘は細かい堆積物の雲を生み、それが遠くまで広がって、水から食べ物をこしとる生き物に影響しうる。採掘機器の音や光は、暗さと静けさに適応した動物をかき乱すかもしれない。また、炭素をたくわえる深海の役割について心配し、海底をかき乱すことで炭素が放出されたり、海が炭素を吸収する力が弱まったりするかもしれないと警告する科学者もいる。',
+      'だれが利益を得るべきかという問いもある。深海底の多くは国際的な水域にあり、国際法はそれを人類の共同の財産と述べている。原則として、これは採掘の利益が、採掘の技術をもたない国もふくめて、すべての国のあいだで分かち合われるべきだということを意味する。実際には、これをどう実現できるのかははっきりせず、批判する人々は、少数の力のある会社や国が利益のほとんどを得る一方で、環境の代償はすべての人が負うことになるのではないかとおそれている。採掘場所に近い海岸をもつ発展途上国は、とくに被害を受けやすいかもしれない。',
+      'こうした不確かさを考えて、多くの科学者と一部の政府は、その影響がもっとよく理解されるまで深海採掘を一時停止するよう求めている。ほかの人々は、金属の必要はさしせまっており、おくらせれば陸での採掘への圧力がふえるだけかもしれないと主張する。この議論はむずかしいジレンマを示している。一つの環境問題を解決しようとする努力が、新しい問題を生むかもしれないのである。どう進むかを決めるには、現在の必要と、何世代にもわたって地球に影響するかもしれない危険とをはかりにかけることが必要だろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「技術はまだ開発の途中だが、注意深い規制で進められると信じている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that deep-sea mining could supply metals needed for ( 1 ) and reduce the harms of mining on land. Critics warn that little is known about deep-sea species, which ( 2 ) very slowly. Many scientists have called for a ( 3 ) until the effects are better understood.',
+      blanks: [
+        { choices: ['batteries', 'jewelry', 'buildings', 'weapons'], answer: 0, why: '第2段落 all of which depend on batteries。' },
+        { choices: ['recover', 'swim', 'travel', 'sing'], answer: 0, why: '第4段落 damaged habitats may take centuries ... to recover。' },
+        { choices: ['pause', 'celebration', 'competition', 'tax'], answer: 0, why: '第7段落 have called for a pause on deep-sea mining。' },
+      ],
+    },
+    tf: [
+      { statement: '深海の岩には電池に使われる金属がふくまれている。', answer: true, why: '第1段落 contain cobalt, nickel, copper, and other elements used in batteries。' },
+      { statement: '陸での採掘には環境的・社会的な問題はない。', answer: false, why: '第2段落 Mining on land already causes serious environmental and social problems。' },
+      { statement: '深海底にすむ種の多くはまだ記載されていない。', answer: true, why: '第4段落 a large proportion of the species ... have never been described。' },
+      { statement: '国際法は深海底を特定の会社の財産と述べている。', answer: false, why: '第6段落 the common heritage of humankind。' },
+    ],
+    qa: [
+      { q: 'How might mining affect creatures far from the mining areas?', choices: ['Clouds of fine sediment could spread over large distances.', 'The water would become warmer everywhere.', 'All fish would move to land.', 'The ocean would become shallower.'], answer: 0, why: '第5段落 clouds of fine sediment that could spread over large distances。' },
+      { q: 'What dilemma does the debate illustrate?', choices: ['Solving one environmental problem may create new ones.', 'Technology is always harmful.', 'Metals are no longer needed.', 'The ocean cannot be studied.'], answer: 0, why: '第7段落 efforts to solve one environmental problem may create new ones。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
