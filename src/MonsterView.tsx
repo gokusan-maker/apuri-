@@ -2773,6 +2773,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M20 52 Q40 66 60 52" fill="none" stroke="#292524" strokeWidth="3" />
       </g>
     )
+  if (species === 'echidna')
+    return (
+      <g>
+        {/* せなかのとげ */}
+        <path d="M30 34 L28 24 M40 30 L40 20 M50 30 L52 20 M60 34 L64 24" stroke="#292524" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
