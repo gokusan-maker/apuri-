@@ -2788,6 +2788,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M20 56 Q50 72 80 56" fill="none" stroke="#374151" strokeWidth="2" />
       </g>
     )
+  if (species === 'slowloris')
+    return (
+      <g>
+        {/* 大きな丸い目 */}
+        <circle cx="36" cy="40" r="7" fill="#fef3c7" stroke="#451a03" strokeWidth="2" />
+        <circle cx="56" cy="40" r="7" fill="#fef3c7" stroke="#451a03" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
