@@ -33938,6 +33938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-pay-transparency',
+    title: 'Should Salaries Be Made Public?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many workplaces, salaries are treated as private information. Employees are often discouraged from discussing what they earn, and job advertisements may describe pay only as \"competitive\" without giving a figure. In recent years, however, several countries and regions have introduced laws requiring companies to publish salary ranges for job openings or to report differences in pay between men and women. Supporters believe that such transparency will make pay fairer, while critics worry that it may create conflict and reduce the flexibility of employers. The debate raises questions about fairness, privacy, and the nature of work.",
+      "Supporters argue first that secrecy allows unfair differences in pay to continue unnoticed. When employees do not know what their colleagues earn, they cannot easily tell whether they are being paid less for the same work. Studies in many countries have found that women, on average, earn less than men, even when differences in occupation and experience are taken into account. Publishing information about pay, supporters say, makes such gaps visible and puts pressure on employers to explain or correct them. Without such information, the burden of discovering unfair treatment falls on the individuals who suffer from it.",
+      "Supporters also emphasize the benefits for job seekers. When salary ranges are included in job advertisements, applicants can decide more easily whether a position is worth pursuing, and they are less likely to accept an offer far below what others receive. ( A ) negotiation may still play a role, transparency gives applicants, especially those who are less confident or less experienced in bargaining, a clearer starting point, which may reduce differences that arise simply from negotiating skill.",
+      "Critics, however, raise concerns about the effects on workplace relationships. Learning that a colleague earns more may cause resentment, even when the difference reflects greater responsibility or performance. Managers may find it harder to reward exceptional employees if every decision must be justified publicly. Some critics also argue that salaries are personal information, and that employees who prefer to keep their pay private should be allowed to do so. In small companies especially, published figures may make it easy to identify exactly what each person earns.",
+      "There are also concerns about unintended consequences. If companies must publish salaries, they may respond by reducing differences in pay, but sometimes by limiting increases for high performers rather than by raising the pay of those who earn less. Some research suggests that transparency can lead to smaller pay rises overall, as employers become more cautious. Critics also point out that published figures may be misleading if they do not take into account differences in hours, experience, or job content.",
+      "Experience from places that have introduced such laws provides mixed evidence. In some cases, published reports have led companies to examine their pay practices and to reduce unexplained differences between men and women. In others, firms have complied with the rules in a minimal way, providing salary ranges so wide that they offer little useful information. The effectiveness of transparency seems to depend on how the rules are designed and on whether companies are willing to act on what the figures reveal. Clear definitions and regular checks appear to make a significant difference.",
+      "The debate over pay transparency reflects a broader tension between privacy and fairness. Openness can expose injustice and help people make informed choices, but it can also create discomfort and new kinds of conflict. Perhaps the most important question is not whether all salaries should be public, but how much information is needed to ensure that people are paid fairly for their work. Societies that find a reasonable answer may build workplaces that are not only more just but also more trusted by those who work in them, and by the public that depends on their fairness.",
+    ],
+    ja: [
+      '多くの職場で、給料は私的な情報としてあつかわれている。従業員は自分がいくらかせいでいるかを話し合わないようすすめられることが多く、求人広告は給料を「好条件」と書くだけで金額を示さないこともある。しかし近年、いくつかの国や地域が、会社に求人の給料の幅を公開させたり、男女の給料の差を報告させたりする法律を取り入れている。支持する人々は、そうした透明性が給料をより公平にすると信じているが、批判する人々は、それが対立を生み、雇い主の柔軟さを減らすかもしれないと心配している。この議論は、公平さやプライバシーや、仕事の性質についての問いを提起している。',
+      '支持する人々は、まず秘密にすることで不公平な給料の差が気づかれないまま続いてしまうと主張する。従業員が同僚のかせぎを知らなければ、同じ仕事で自分が少なくはらわれているかどうかをかんたんには見分けられない。多くの国の研究で、職業や経験のちがいを考えに入れても、女性の給料は平均して男性より少ないことがわかっている。給料についての情報を公開すれば、そうした差が目に見えるようになり、雇い主にそれを説明するか正すよう圧力がかかると支持する人々は言う。そうした情報がなければ、不公平なあつかいを見つけ出す負担は、それに苦しむ個人にかかってしまう。',
+      '支持する人々はまた、仕事を探す人々にとっての利益を強調する。求人広告に給料の幅がふくまれていれば、応募する人はその仕事を目指す価値があるかどうかを決めやすくなり、ほかの人がもらう額をはるかに下回る申し出を受け入れることも少なくなる。交渉はなお一定の役割を果たすかもしれないが、透明性は応募する人、とくに自信がなかったり交渉になれていなかったりする人に、よりはっきりした出発点をあたえ、単に交渉のうまさから生じる差を減らすかもしれない。',
+      'しかし批判する人々は、職場の人間関係への影響についての心配をあげる。同僚のほうが多くかせいでいると知ると、その差がより大きな責任や成績を反映しているときでさえ、うらみが生じるかもしれない。あらゆる決定を公に正当化しなければならないなら、管理者は特にすぐれた従業員に報いにくくなるかもしれない。また、給料は個人的な情報であり、給料を知られたくない従業員はそうすることを許されるべきだと主張する批判者もいる。とくに小さな会社では、公開された数字から、それぞれの人がいくらかせいでいるかを正確に知るのがかんたんになるかもしれない。',
+      '意図しない結果についての心配もある。会社が給料を公開しなければならなくなると、給料の差を減らすことで対応するかもしれないが、それは時に、かせぎの少ない人の給料を上げるのではなく、成績のよい人の昇給をおさえることによってである。透明性によって、雇い主がより慎重になり、全体として昇給が小さくなりうることを示唆する研究もある。批判する人々はまた、公開された数字が労働時間や経験や仕事の内容のちがいを考えに入れていなければ、誤解をまねくかもしれないと指摘する。',
+      'そうした法律を取り入れた場所での経験は、まちまちの証拠をあたえている。公開された報告によって、会社が給料のしくみを見直し、説明のつかない男女の差を減らした例もある。ほかの例では、会社は規則に最小限のしかたでしたがい、ほとんど役に立つ情報にならないほど幅の広い給料の範囲を示した。透明性の効果は、規則がどう設計されるか、そして会社が数字の明らかにすることにもとづいて行動しようとするかどうかにかかっているようである。はっきりした定義と定期的な確認が、大きなちがいを生むようである。',
+      '給料の透明性をめぐる議論は、プライバシーと公平さとのあいだのより広い緊張を反映している。開かれていることは不正をあばき、人々が情報にもとづいて選択する助けになりうるが、居心地の悪さや新しい種類の対立を生むこともある。おそらく最も大切な問いは、すべての給料を公開すべきかどうかではなく、人々が仕事に対して公平にはらわれるようにするにはどれほどの情報が必要かということだろう。理にかなった答えを見つけた社会は、より正しいだけでなく、そこで働く人々により信頼される職場を築けるかもしれない。そしてその公平さに頼っている一般の人々にも信頼される職場を。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「交渉はなお役割を果たすかもしれないが、透明性ははっきりした出発点をあたえる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that publishing pay makes unfair ( 1 ) visible and helps job seekers. Critics worry that it may cause resentment and lead employers to limit pay rises for high ( 2 ). The effectiveness of transparency seems to depend on how the rules are ( 3 ).',
+      blanks: [
+        { choices: ['gaps', 'holidays', 'buildings', 'meetings'], answer: 0, why: '第2段落 makes such gaps visible。' },
+        { choices: ['performers', 'buildings', 'prices', 'mountains'], answer: 0, why: '第5段落 by limiting increases for high performers。' },
+        { choices: ['designed', 'translated', 'forgotten', 'painted'], answer: 0, why: '第6段落 depend on how the rules are designed。' },
+      ],
+    },
+    tf: [
+      { statement: '求人広告が給料を金額で示さないこともある。', answer: true, why: '第1段落 may describe pay only as competitive without giving a figure。' },
+      { statement: '研究によれば、職業や経験のちがいを考えると男女の給料の差はなくなる。', answer: false, why: '第2段落 even when differences in occupation and experience are taken into account。' },
+      { statement: '透明性によって全体の昇給が小さくなりうると示唆する研究もある。', answer: true, why: '第5段落 transparency can lead to smaller pay rises overall。' },
+      { statement: 'すべての会社が規則に積極的にしたがい、役に立つ情報を示した。', answer: false, why: '第6段落 firms have complied with the rules in a minimal way。' },
+    ],
+    qa: [
+      { q: 'How can salary ranges in job advertisements help applicants?', choices: ['They give a clearer starting point for negotiation.', 'They guarantee the highest salary.', 'They remove the need to apply.', 'They hide information from employers.'], answer: 0, why: '第3段落 gives applicants ... a clearer starting point。' },
+      { q: 'Why might published figures be misleading?', choices: ['They may not consider differences in hours or experience.', 'They are always secret.', 'They are written in code.', 'They change every day.'], answer: 0, why: '第5段落 if they do not take into account differences in hours, experience, or job content。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
