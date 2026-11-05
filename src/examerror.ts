@@ -7920,6 +7920,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Failing] the exam last year, he is studying harder this year.', choices: ['Having failed', 'Failed to', 'To fail', 'Having failing'], answer: 0, why: '去年のことで主節（今）より前なので完了分詞構文 Having failed。' },
     ],
   },
+  {
+    id: 'exam-fix-186',
+    title: '入試の誤文訂正〈186〉（東大レベル：英作文の so that・in order to）',
+    points: ['目的「～するために」は in order to do／so as to do（否定は in order not to do／so as not to do）か、so that S can／will／may do で表す。so that のあとは「主語＋動詞」で、過去の文では could／would／might になる。in order to のあとは動詞の原形で、ing 形や「主語＋動詞」は来ない。「～しないように」は in order not to do か so that S will not（would not）do。will と can のように助動詞を2つ続けることはできない。英作文では、主語が変わるときは so that を使う。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I spoke slowly so that everyone could understand me.', ja: 'みんなが理解できるように、私はゆっくり話した。' }],
+    questions: [
+      { sentence: 'I got up early [in order to catching] the first train.', choices: ['in order to catch', 'in order catching', 'so that catch', 'in order for catch'], answer: 0, why: 'in order to のあとは動詞の原形。in order to catch。' },
+      { sentence: 'She spoke loudly [in order to] everyone could hear her.', choices: ['so that', 'in order', 'so as to', 'for'], answer: 0, why: 'あとに「主語＋動詞」が続くので so that。' },
+      { sentence: 'He saved money so that he [can] buy a car last year.', choices: ['could', 'cans', 'can be', 'is able'], answer: 0, why: '過去の文なので can ではなく could。' },
+      { sentence: 'We left early [in order to not] miss the bus.', choices: ['in order not to', 'not in order to', 'in order to no', 'so not to'], answer: 0, why: '否定は not を to の前に置く。in order not to miss。' },
+      { sentence: 'I wrote it down [so as not forget] it.', choices: ['so as not to forget', 'so as to not forgetting', 'so not as to forget', 'so that not forget'], answer: 0, why: 'so as not to ＋原形。so as not to forget。' },
+      { sentence: 'Turn off the light [so that the baby sleeps] well.', choices: ['so that the baby can sleep', 'in order to the baby sleep', 'so as the baby to sleep', 'for the baby sleeping'], answer: 0, why: '目的の so that のあとは can などの助動詞を使うのがふつう。so that the baby can sleep。' },
+      { sentence: 'She studied hard [for passing] the exam.', choices: ['in order to pass', 'for pass', 'so that pass', 'in order passing'], answer: 0, why: '目的は in order to ＋原形。for ＋ ing は目的を表さない。' },
+      { sentence: 'He whispered [so as to she would not] wake up.', choices: ['so that she would not', 'in order to she would not', 'so as she not to', 'in order that not she'], answer: 0, why: '主語（she）が変わり「主語＋動詞」が続くので so that。過去なので would not。' },
+      { sentence: 'They built a wall [so that keep] the wind out.', choices: ['to keep', 'so that keeping', 'for keep', 'in order keep'], answer: 0, why: '目的の不定詞 to keep。so that のあとには主語＋動詞が必要。' },
+      { sentence: 'I will call you [so that you won’t can] forget the meeting.', choices: ['so that you won’t', 'so that you can’t will', 'in order to you won’t', 'so as you won’t'], answer: 0, why: 'will と can は続けて使えない。so that you won’t forget。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

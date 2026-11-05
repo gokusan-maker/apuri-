@@ -2647,3 +2647,10 @@ it('正誤問題〈192〉：国公立レベル the 比較級, the 比較級の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) the best')
 })
+
+it('誤文訂正〈186〉：東大レベル so that・in order to の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-186')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('in order to catch')
+})
