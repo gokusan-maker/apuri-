@@ -4538,6 +4538,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I will lend you the money (B) provided (C) that you (D) paid me back next week.', choices: ['(A) I will lend you the money', '(B) provided', '(C) that you', '(D) paid me back next week'], answer: 3, why: 'provided の節は現在形で未来を表す。provided that you pay me back。' },
     ],
   },
+  {
+    id: 'exam-error-future-perfect-todai',
+    title: '入試の正誤問題〈191〉（東大レベル：英作文の未来完了 will have done）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '未来完了 will have ＋過去分詞は「（未来のある時点）までに～してしまっているだろう」（完了）、「～まで…し続けていることになる」（継続）を表す。期限は by（by next month・by the time S V）で、until は使わない。by the time や when の節は時の節なので、未来のことも現在形で表す。疑問文は Will ＋主語＋have ＋過去分詞。英作文では「～までに」を見たら未来完了を考える。',
+    ],
+    examples: [
+      { en: 'By the time you arrive, we will have eaten dinner.', ja: 'あなたが着くころには、私たちは夕食を食べ終えているだろう。' },
+      { en: 'Next year, my parents will have been married for twenty years.', ja: '来年で、両親は結婚して20年になる。' },
+    ],
+    questions: [
+      { sentence: '(A) By the time you arrive, (B) we will have (C) ate (D) dinner.', choices: ['(A) By the time you arrive,', '(B) we will have', '(C) ate', '(D) dinner'], answer: 2, why: 'have のあとは過去分詞。eat の過去分詞は eaten。we will have eaten dinner。' },
+      { sentence: '(A) By the time he (B) will come back, (C) we will have (D) cleaned the room.', choices: ['(A) By the time he', '(B) will come back,', '(C) we will have', '(D) cleaned the room'], answer: 1, why: 'by the time「～するまでに」は時の節なので、未来のことも現在形。By the time he comes back。' },
+      { sentence: '(A) I have (B) read this book twice, so I (C) will have read it three times (D) if I will read it again.', choices: ['(A) I have', '(B) read this book twice, so I', '(C) will have read it three times', '(D) if I will read it again'], answer: 3, why: '条件の if 節では未来のことも現在形。if I read it again。' },
+      { sentence: '(A) Will have you (B) finished the report (C) by Friday (D) afternoon?', choices: ['(A) Will have you', '(B) finished the report', '(C) by Friday', '(D) afternoon?'], answer: 0, why: '未来完了の疑問文は Will ＋主語＋have ＋過去分詞。Will you have finished。' },
+      { sentence: '(A) Next year, (B) my parents will (C) have been married (D) since twenty years.', choices: ['(A) Next year,', '(B) my parents will', '(C) have been married', '(D) since twenty years'], answer: 3, why: '期間の長さは for。since は起点を表す。for twenty years。' },
+      { sentence: '(A) She will have (B) left (C) the office (D) since you get there.', choices: ['(A) She will have', '(B) left', '(C) the office', '(D) since you get there'], answer: 3, why: '「あなたが着くまでに」は by the time。by the time you get there。' },
+      { sentence: '(A) By 2030, (B) the population of the city (C) will has (D) doubled.', choices: ['(A) By 2030,', '(B) the population of the city', '(C) will has', '(D) doubled'], answer: 2, why: 'will のあとは動詞の原形なので have。will have doubled。' },
+      { sentence: '(A) Until next month, (B) the workers (C) will have finished (D) the new bridge.', choices: ['(A) Until next month,', '(B) the workers', '(C) will have finished', '(D) the new bridge'], answer: 0, why: '完了の期限「～までに」は by。until は「～までずっと」。By next month。' },
+      { sentence: '(A) When you (B) wake up, (C) the snow will have (D) melting.', choices: ['(A) When you', '(B) wake up,', '(C) the snow will have', '(D) melting'], answer: 3, why: '未来完了は will have ＋過去分詞。the snow will have melted。' },
+      { sentence: '(A) He will have (B) saved enough money (C) to buy a car (D) by the end of last year.', choices: ['(A) He will have', '(B) saved enough money', '(C) to buy a car', '(D) by the end of last year'], answer: 3, why: '未来完了は未来のある時点までの完了なので、last year ではなく next year。by the end of next year。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
