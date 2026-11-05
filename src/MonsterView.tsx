@@ -2918,6 +2918,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 76 h6 M30 80 h6 M60 76 h6 M60 80 h6" stroke="#3a2a14" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'marbledcat')
+    return (
+      <g>
+        {/* 大理石のようなまだら */}
+        <path d="M36 58 q4 -4 8 0 q-4 4 -8 0 M54 62 q4 -4 8 0 q-4 4 -8 0" fill="#2b1d10" opacity="0.6" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
