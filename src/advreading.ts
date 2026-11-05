@@ -36062,6 +36062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rivals',
+    title: 'The Value of Rivals',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often think of rivals as obstacles. A rival is someone who competes with us for the same prize, position, or recognition, and whose success may seem to come at our expense. It is natural, then, to regard rivalry with a degree of unease, as a source of envy and conflict that a more cooperative world might do without. Yet history and everyday experience suggest that rivals can also be among the most important influences on our development, pushing us to achieve things we might never have attempted alone.",
+      "One reason for this lies in the way rivals raise our standards. When we compete with someone whose abilities are close to our own, we can see clearly what is possible, and we are motivated to match or exceed it. Athletes often report that their best performances came in contests against a respected opponent, and many scientists, artists, and writers have been spurred to greater effort by the work of a contemporary whose achievements they admired and feared. Without such a rival, it is easy to become satisfied with less. A student who is always the best in a small class may never discover how much further they could go until they meet someone who is better.",
+      "Rivals can also reveal our weaknesses more honestly than friends. A friend may hesitate to point out our faults, but a rival exposes them through the simple fact of doing better where we fall short. ( A ) this experience can be painful, it may provide information that is difficult to obtain in any other way, showing us precisely where we need to improve and preventing us from deceiving ourselves about our abilities. In this sense, a rival can serve as an unwelcome but valuable teacher.",
+      "There is, moreover, a curious intimacy in rivalry. Rivals pay close attention to one another, studying each other's methods and anticipating each other's moves. Over time, this attention can develop into a kind of respect, and many famous rivals have described their opponents as the people who understood their work best. In some cases, rivalry has turned into friendship, as competitors recognize that they share a commitment that few others can fully appreciate.",
+      "Rivalry can, of course, become destructive. When the desire to win becomes more important than the activity itself, rivals may resort to dishonesty, sabotage, or cruelty, harming not only each other but also those around them. A rivalry driven by envy may lead a person to focus on the failures of others rather than on their own growth. The difference between healthy and harmful rivalry seems to depend on whether the competitors remain committed to the shared standards of their field and to treating each other with basic fairness.",
+      "This suggests that rivalry and cooperation are not simply opposites. Competitors in a race need each other to make the contest meaningful, and they share an interest in rules that are fair and respected. In science, rival research groups may race to make a discovery, but their competition takes place within a larger cooperative enterprise, in which results are shared, checked, and built upon. Rivalry, in this sense, can be a form of cooperation in which each side helps the other to become better.",
+      "Perhaps, then, we should be grateful for our rivals rather than simply resenting them. A good rival challenges us, reveals our limits, and reminds us of what we might achieve. The challenge is to keep rivalry within bounds, so that it remains a source of motivation rather than bitterness. Learning to respect those who compete with us may be one of the most valuable lessons that rivalry can teach, allowing us to see in our opponents not enemies but companions in a shared pursuit of excellence.",
+    ],
+    ja: [
+      '私たちはしばしば、ライバルをじゃまものと考える。ライバルとは、同じ賞や地位や評価をめぐって私たちときそい合う人であり、その成功は私たちの犠牲の上に成り立っているように思えるかもしれない。だとすれば、競争関係をある程度の居心地の悪さをもって、より協力的な世界ならなくてもすむ、ねたみと対立のみなもととして見るのは自然である。しかし歴史と日々の経験は、ライバルが、私たちが一人ではけっして試みなかったかもしれないことをなしとげるようせき立てる、私たちの成長にもっとも大切な影響をあたえる存在の一つにもなりうることを示している。',
+      'その理由の一つは、ライバルが私たちの水準を引き上げるあり方にある。自分と力の近い人ときそうとき、私たちは何が可能かをはっきり見ることができ、それに追いつき、こえようという意欲がわく。運動選手はしばしば、最高の成績は尊敬する相手との試合で出たと語り、多くの科学者や芸術家や作家は、あこがれ、おそれもした同時代の人の業績によって、より大きな努力へとかり立てられてきた。そうしたライバルがいなければ、より少ないもので満足してしまいやすい。小さなクラスでいつも一番の生徒は、自分よりすぐれた人に出会うまで、どれだけ先まで行けるのかに気づかないままかもしれない。',
+      'ライバルはまた、友だちよりも正直に私たちの弱点を明らかにすることがある。友だちは私たちの欠点を指摘するのをためらうかもしれないが、ライバルは、私たちのおよばないところでよりよくやるという単純な事実によって、それをさらけ出す。この経験はつらいことがあるが、ほかのどんな方法でも得にくい情報をあたえ、どこを改める必要があるかを正確に示し、自分の能力について自分をあざむくのをふせいでくれるかもしれない。この意味で、ライバルはありがたくはないが価値ある先生の役をはたしうるのである。',
+      'さらに、競争関係には不思議な親密さがある。ライバルはたがいに注意を向け合い、相手のやり方を研究し、相手の動きを予測する。時がたつにつれて、この注意は一種の尊敬に育つことがあり、多くの有名なライバルは、相手を自分の仕事をもっともよく理解していた人だと語ってきた。ほかの人がほとんど十分には理解できない打ちこみを分かち合っていると競争相手が気づき、競争関係が友情に変わったこともある。',
+      'もちろん、競争関係は破壊的になることもある。勝ちたいという願いが活動そのものより大切になると、ライバルは不正やじゃまや残酷さにうったえ、たがいだけでなくまわりの人々も傷つけるかもしれない。ねたみにかられた競争関係は、人を自分の成長ではなくほかの人の失敗に目を向けさせるかもしれない。健全な競争関係と有害な競争関係のちがいは、競争相手がその分野の共通の基準と、たがいを基本的な公平さであつかうことに打ちこみ続けているかどうかにかかっているようである。',
+      'このことは、競争関係と協力が単に正反対ではないことを示している。競走の選手は、競争を意味あるものにするためにたがいを必要とし、公平で尊重される規則に共通の関心をもつ。科学では、ライバルの研究グループが発見をきそうこともあるが、その競争は、結果が共有され、確かめられ、その上に積み重ねられる、より大きな協力の営みのなかで行われる。この意味で、競争関係は、それぞれがおたがいをよりよくする助けになる、協力の一つの形になりうるのである。',
+      'だとすれば、私たちはライバルを単にうらむのではなく、ありがたく思うべきなのかもしれない。よいライバルは私たちに挑み、限界を明らかにし、何をなしとげうるかを思い出させてくれる。課題は、競争関係を一定の範囲にとどめ、それがにがにがしさではなく意欲のみなもとであり続けるようにすることである。きそい合う相手を尊重することを学ぶのは、競争関係が教えうるもっとも価値ある教訓の一つなのかもしれない。それによって私たちは、相手のなかに敵ではなく、すぐれたものを共に追い求める仲間を見られるようになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この経験はつらいことがあるが、得にくい情報をあたえる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '運動選手はしばしば、最高の成績は尊敬する相手との試合で出たと語る。', answer: true, why: '第2段落 their best performances came in contests against a respected opponent。' },
+      { statement: '筆者によれば、友だちのほうがライバルより正直に弱点を明らかにする。', answer: false, why: '第3段落 Rivals can also reveal our weaknesses more honestly than friends。' },
+      { statement: '競争関係が友情に変わったこともある。', answer: true, why: '第4段落 In some cases, rivalry has turned into friendship。' },
+      { statement: '筆者は、競争関係と協力は単に正反対だと考えている。', answer: false, why: '第6段落 rivalry and cooperation are not simply opposites。' },
+    ],
+    qa: [
+      { q: 'What does the difference between healthy and harmful rivalry depend on?', choices: ['Whether competitors stay committed to shared standards and fairness.', 'How much money they earn.', 'How often they win.', 'Whether they are friends from the start.'], answer: 0, why: '第5段落 whether the competitors remain committed to the shared standards of their field and to treating each other with basic fairness。' },
+      { q: 'How does the author describe scientific rivalry?', choices: ['It takes place within a larger cooperative enterprise.', 'It always ends in failure.', 'It prevents results from being shared.', 'It has no rules.'], answer: 0, why: '第6段落 their competition takes place within a larger cooperative enterprise。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
