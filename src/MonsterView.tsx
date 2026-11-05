@@ -2738,6 +2738,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="40" cy="40" r="10" fill="none" stroke="#1a2e05" strokeWidth="2" />
       </g>
     )
+  if (species === 'secretarybird')
+    return (
+      <g>
+        {/* 頭の後ろのかざり羽 */}
+        <path d="M30 24 L18 14 M32 22 L22 10 M34 22 L28 8" stroke="#1c1917" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
