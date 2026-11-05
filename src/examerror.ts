@@ -8256,6 +8256,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The audience was [most] students.', choices: ['mostly', 'almost', 'the most', 'more'], answer: 0, why: '「観客はたいてい（主に）学生だった」は mostly。' },
     ],
   },
+  {
+    id: 'exam-fix-194',
+    title: '入試の誤文訂正〈194〉（京大レベル：英作文の付加疑問と否定疑問への答え）',
+    points: ['付加疑問は「肯定文, 否定の短い疑問？」「否定文, 肯定の短い疑問？」で、前の文の助動詞・be 動詞と主語に合わせる（She can swim, can’t she?）。never・nobody・nothing をふくむ文は否定文なので、うしろは肯定（has he?・did they?）。Let’s ～, shall we?、命令文, will you?、There is ～, isn’t there?、I am ～, aren’t I? も覚える。否定疑問文への答えは、答えの内容が肯定なら Yes、否定なら No（日本語の「はい・いいえ」と逆になることがある）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: '"Aren’t you going?" "Yes, I am."', ja: '「行かないの？」「いいえ、行きます。」' }],
+    questions: [
+      { sentence: 'You like coffee, [doesn’t] you?', choices: ['don’t', 'aren’t', 'didn’t', 'do'], answer: 0, why: '主語 you と一般動詞の現在形に合わせて don’t you?。' },
+      { sentence: 'She can swim, [isn’t] she?', choices: ['can’t', 'doesn’t', 'wasn’t', 'can'], answer: 0, why: '助動詞 can の文なので can’t she?。' },
+      { sentence: 'Let’s go out, [will we]?', choices: ['shall we', 'don’t we', 'won’t we', 'do we'], answer: 0, why: 'Let’s ～ の付加疑問は shall we?。' },
+      { sentence: 'Close the door, [do you]?', choices: ['will you', 'don’t you', 'shall we', 'are you'], answer: 0, why: '命令文の付加疑問は will you?。' },
+      { sentence: 'He has never been abroad, [hasn’t he]?', choices: ['has he', 'doesn’t he', 'isn’t he', 'did he'], answer: 0, why: 'never をふくむ否定の文なので、うしろは肯定 has he?。' },
+      { sentence: '［「行かないの？」「いいえ、行きます」］ "Aren’t you going?" "[No], I am."', choices: ['Yes', 'Well', 'Not', 'Never'], answer: 0, why: '答えの内容が肯定（I am going）なので Yes。日本語の「いいえ」に引きずられない。' },
+      { sentence: '［「彼を知らないの？」「はい、知りません」］ "Don’t you know him?" "[Yes, I don’t.]"', choices: ['No, I don’t.', 'Yes, I do not.', 'No, I do.', 'Yes, I know not.'], answer: 0, why: '答えの内容が否定なので No, I don’t.。Yes と don’t はいっしょに使わない。' },
+      { sentence: 'There is a bank near here, [isn’t it]?', choices: ['isn’t there', 'is there', 'doesn’t it', 'aren’t they'], answer: 0, why: 'There is ～ の付加疑問は isn’t there?。' },
+      { sentence: 'Nobody called me, [didn’t they]?', choices: ['did they', 'did he', 'didn’t he', 'does it'], answer: 0, why: 'nobody は否定の意味なので、うしろは肯定。nobody は they で受ける。did they?。' },
+      { sentence: 'I am right, [amn’t I]?', choices: ['aren’t I', 'don’t I', 'isn’t I', 'am not'], answer: 0, why: 'I am ～ の付加疑問は aren’t I?。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

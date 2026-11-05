@@ -2759,3 +2759,10 @@ it('正誤問題〈200〉：東大レベル It takes・It costs の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) walking to the station')
 })
+
+it('誤文訂正〈194〉：京大レベル 付加疑問と否定疑問の答えの単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-194')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('don’t')
+})
