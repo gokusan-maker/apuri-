@@ -34622,6 +34622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-masks',
+    title: 'The Masks We Wear',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The word person comes from a Latin term for the mask worn by actors in ancient theater. This origin suggests an interesting idea: that to be a person in society is, in some sense, to play a role. We behave differently with our friends than with our employers, speak one way to children and another to strangers, and present ourselves differently online than in private. Some people find this troubling, as if our true selves were hidden behind a series of masks. Others argue that such roles are not disguises but essential parts of who we are.",
+      "The view that social roles conceal our real selves has a long history. It suggests that beneath our public behavior lies an authentic inner person who is constrained, distorted, or even betrayed by the demands of society. According to this view, people who conform too readily to social expectations risk losing touch with their own feelings and values. The ideal, then, would be to drop the masks and express one's true self as directly as possible, regardless of the setting or the people involved.",
+      "Yet this view faces serious difficulties. It is not clear that there is a single true self existing independently of all roles and relationships. The way we behave with a close friend may reveal aspects of ourselves that are just as genuine as those we show to our family, even though they are different. ( A ) we may sometimes feel that a role does not fit us, many of our roles, such as being a parent, a teacher, or a friend, express commitments that we have chosen and that help to define who we are.",
+      "Social roles also serve important functions. They allow people who do not know each other well to interact smoothly, since everyone understands roughly what to expect. A doctor's professional manner, for example, may help patients feel confident and allow difficult conversations to take place with dignity. Politeness, too, can be seen as a kind of mask that protects both ourselves and others from unnecessary hurt, making it possible for people with different views to cooperate.",
+      "Nevertheless, roles can become oppressive when they are imposed rather than chosen, or when they demand that people hide important parts of themselves. People may feel pressure to conceal their beliefs, emotions, or identities in order to be accepted, and the strain of maintaining such a mask over long periods can be exhausting. In such cases, the problem is not that people play roles, but that the roles available to them are too narrow or too rigid. A healthy society may therefore be one that offers a wide range of roles and allows people to move between them freely as their lives change.",
+      "The rise of social media has added a new dimension to these questions. Online, people can carefully select what they reveal about themselves, presenting edited images of their lives. Some observers worry that this encourages a gap between the self people display and the self they experience, leading to feelings of inauthenticity or anxiety. Others note that people have always presented themselves selectively, and that online platforms simply make this familiar practice more visible.",
+      "Perhaps the most useful way to think about masks is not to ask whether we should wear them, but how we wear them. A role played thoughtfully, with awareness of why we are playing it and of the values it expresses, can be a genuine expression of the self. A role worn without reflection, or imposed by others against our will, may indeed hide or distort who we are. The task, then, is not to abandon all masks, but to choose and shape them with care, so that they reveal more of us than they hide.",
+    ],
+    ja: [
+      'パーソン（人）ということばは、古代の演劇で役者がつけた仮面を表すラテン語から来ている。この語源は興味深い考えを示唆している。社会の中で人であるとは、ある意味で役を演じることだ、という考えである。私たちは雇い主に対してとはちがうふるまいを友人に対してし、子どもにはある話し方を、見知らぬ人には別の話し方をし、ネット上では一人のときとはちがうふうに自分を見せる。まるで本当の自分が一連の仮面の後ろにかくされているかのように、これを気がかりに思う人もいる。そうした役は変装ではなく、私たちがだれであるかの欠かせない一部だと主張する人もいる。',
+      '社会的な役割が本当の自分をかくしているという見方には長い歴史がある。それは、公のふるまいの下に、社会の要求によってしばられ、ゆがめられ、裏切られさえする本物の内なる人がいることを示唆する。この見方によれば、社会の期待にたやすく合わせすぎる人は、自分の感情や価値観とのつながりを失う危険がある。それなら理想は、仮面を捨て、本当の自分をできるだけ直接表すことになるだろう。場面やかかわる人々にかかわらず、である。',
+      'しかし、この見方は深刻なむずかしさにぶつかる。あらゆる役割や関係から独立して存在する、ただ一つの本当の自分があるのかははっきりしない。親しい友人に対するふるまいは、ちがってはいても、家族に見せる面と同じように本物である自分の面を明らかにするかもしれない。役が自分に合わないと時に感じることはあっても、親であること、教師であること、友人であることのような私たちの役割の多くは、自分で選び、自分がだれであるかを決める助けになるかかわりを表している。',
+      '社会的な役割はまた、大切な役目も果たしている。それは、たがいをよく知らない人々が、だれもがおおよそ何を期待すればよいかわかっているので、なめらかにかかわり合うことを可能にする。たとえば医師の職業的なふるまいは、患者が安心するのを助け、むずかしい話し合いが尊厳をもって行われるのを可能にするかもしれない。礼儀もまた、自分と他人の両方を不必要な傷から守り、ちがう意見の人々が協力することを可能にする一種の仮面とみなすことができる。',
+      'それでも、役割が選ばれるのではなくおしつけられるとき、あるいは人々に自分の大切な部分をかくすよう求めるとき、役割は抑圧的になりうる。人々は受け入れられるために、自分の信念や感情や自分のあり方をかくすよう圧力を感じるかもしれず、そのような仮面を長いあいだ保つ負担は人をひどく疲れさせうる。そのような場合、問題は人々が役を演じることではなく、彼らが選べる役がせますぎたり固すぎたりすることなのである。したがって健全な社会とは、幅広い役割をあたえ、人々が人生の変化に応じてそのあいだを自由に移ることを許す社会なのかもしれない。',
+      'ソーシャルメディアの広がりは、こうした問いに新しい面を加えた。ネット上では、人々は自分について何を明かすかを注意深く選び、手を加えた生活の姿を見せることができる。これが人々の見せる自分と経験する自分とのずれをうながし、本物でないという感覚や不安につながるのではないかと心配する観察者もいる。ほかの人々は、人はいつも自分を選んで見せてきたのであり、ネットの仕組みは単にこのなじみのある慣習をより目に見えるものにしているだけだと指摘する。',
+      'おそらく仮面について考える最も役に立つ方法は、それをつけるべきかどうかではなく、それをどうつけるかを問うことだろう。なぜそれを演じているのか、それがどんな価値を表しているのかを意識しながら思慮深く演じられる役は、自分の本物の表現になりうる。ふり返ることなくつけられた役や、自分の意志に反して他人におしつけられた役は、たしかに私たちがだれであるかをかくしたりゆがめたりするかもしれない。それなら課題は、すべての仮面を捨てることではなく、注意深くそれを選び形づくることなのである。そうすれば、仮面はかくすよりも多くを明らかにしてくれるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「役が合わないと感じることはあっても、多くの役割は自分を決めるかかわりを表している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'パーソンということばは、役者がつけた仮面を表すことばから来ている。', answer: true, why: '第1段落 comes from a Latin term for the mask worn by actors。' },
+      { statement: '筆者によれば、あらゆる役割から独立したただ一つの本当の自分があることは明らかである。', answer: false, why: '第3段落 It is not clear that there is a single true self。' },
+      { statement: '礼儀は、自分と他人を不必要な傷から守る一種の仮面とみなせる。', answer: true, why: '第4段落 Politeness, too, can be seen as a kind of mask that protects both ourselves and others。' },
+      { statement: '筆者は、すべての仮面を捨てるべきだと結論している。', answer: false, why: '第7段落 The task, then, is not to abandon all masks。' },
+    ],
+    qa: [
+      { q: 'When can roles become oppressive?', choices: ['When they are imposed rather than chosen.', 'When they are chosen freely.', 'When people are polite.', 'When roles are flexible.'], answer: 0, why: '第5段落 when they are imposed rather than chosen。' },
+      { q: 'What do some observers say social media simply does?', choices: ['Make the familiar practice of selective self-presentation more visible.', 'Remove all masks.', 'End all social roles.', 'Make people more honest.'], answer: 0, why: '第6段落 online platforms simply make this familiar practice more visible。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

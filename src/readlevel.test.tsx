@@ -2023,3 +2023,10 @@ it('東大専用の長文125「リサイクルを法律で義務にすべきか�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(p.summary?.blanks).toHaveLength(3)
 })
+
+it('京大専用の長文128「私たちがつける仮面」：京大の下限600語以上・1文18語以上で、京大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-masks')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
