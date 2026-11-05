@@ -35138,6 +35138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-cashless',
+    title: 'Should Societies Go Cashless?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, cash is gradually disappearing from everyday life. Payments by card, smartphone, and online transfer have become so convenient that some shops, restaurants, and even public services no longer accept coins and notes at all. In a few places, the share of purchases made with cash has fallen to a small fraction of the total, and governments and banks have begun to discuss whether society might eventually do without physical money entirely. This prospect has been welcomed by some as a sign of progress and viewed by others with considerable concern.",
+      "Supporters of a cashless society point first to convenience and efficiency. Digital payments are quick, require no counting of change, and allow people to keep track of their spending automatically. For businesses, handling cash involves costs and risks, from transporting money to the bank to the danger of theft. Removing cash, supporters argue, would reduce these costs and allow shops to serve customers more quickly, while banks and governments would save the considerable expense of printing, distributing, and replacing notes and coins. Some also note that digital payments became especially popular during periods when people wished to avoid touching shared objects, a habit that has continued in many places.",
+      "Supporters also argue that digital payments can help to reduce crime. Because cash leaves no record of who paid whom, it is often used to avoid taxes, hide illegal earnings, and pay for criminal activities. ( A ) digital transactions are not immune to fraud, supporters claim, they leave a trail that makes such activities harder to conceal, and a society without cash could collect taxes more fairly and make it more difficult for criminals to profit from their actions without being detected.",
+      "Critics, however, warn that a cashless society may exclude people who are already disadvantaged. Some elderly people find digital payment systems confusing, and some people on low incomes lack bank accounts or reliable access to the internet. For such people, cash is not an old-fashioned habit but a practical necessity, and shops that refuse it may effectively deny them access to goods and services. Cash also helps many people to manage tight budgets, since physical money makes it easier to see how much remains to be spent.",
+      "Critics also raise concerns about privacy and resilience. Every digital payment creates a record that may be stored, analyzed, or shared, allowing companies and governments to learn a great deal about individuals' lives, from where they travel to what they buy. Moreover, digital systems can fail. Power cuts, technical faults, cyberattacks, and natural disasters may make electronic payments impossible, at least temporarily, and in such situations cash may be the only means by which people can obtain food and other essentials.",
+      "Between these positions, many experts propose a gradual and balanced approach. Rather than abolishing cash, governments could guarantee that it remains available and accepted for essential goods and services, while continuing to develop secure and affordable digital alternatives. Some countries have already introduced rules requiring certain shops to accept cash, and others are considering ways of protecting privacy in digital payments. Support for those who struggle with new technology, such as training and simple payment devices, may also help to ensure that no one is left behind.",
+      "The debate over cash reflects a broader question about how societies should adopt new technologies. Innovations that offer convenience to the majority may impose hidden costs on a minority, and changes that seem inevitable may still be shaped by public choices. Whether or not cash eventually disappears, the transition should be managed with attention not only to efficiency but also to fairness, privacy, and security, so that the benefits of digital money can be enjoyed without sacrificing the freedom and protection that physical money has long provided.",
+    ],
+    ja: [
+      '多くの国で、現金は日々の暮らしからしだいに消えつつある。カードやスマートフォンやネット送金による支払いがとても便利になったので、もはや硬貨や紙幣をまったく受け取らない店やレストラン、さらには公共サービスさえある。いくつかの場所では、現金での買い物の割合が全体のごく一部にまで下がり、政府や銀行は、社会がいつか形のあるお金をまったく使わずにすませられるかを話し合いはじめている。この見通しは、進歩のしるしとして歓迎する人々もいれば、かなりの心配をもって見る人々もいる。',
+      'キャッシュレス社会を支持する人々は、まず便利さと効率を指摘する。デジタルの支払いは速く、おつりを数える必要もなく、人々が自動的に支出を把握できるようにする。店にとって、現金をあつかうことには、お金を銀行に運ぶことから盗難の危険まで、費用と危険がともなう。現金をなくせば、こうした費用がへり、店は客により速く対応でき、銀行や政府は紙幣や硬貨を印刷し、配り、取りかえるかなりの費用を節約できると支持する人々は主張する。また、人々が共有の物にふれるのをさけたがった時期にデジタルの支払いがとくに広まり、その習慣が多くの場所で続いていることを指摘する人もいる。',
+      '支持する人々はまた、デジタルの支払いが犯罪をへらす助けになると主張する。現金はだれがだれにはらったかの記録を残さないので、しばしば税をのがれたり、不正な収入をかくしたり、犯罪の活動の代金をはらったりするのに使われる。デジタルの取引も詐欺とは無縁ではないが、そうした活動をかくしにくくする記録を残すので、現金のない社会はより公平に税を集め、犯罪者が見つからずに利益を得ることをより難しくできると支持する人々は主張する。',
+      'しかし批判する人々は、キャッシュレス社会はすでに不利な立場にある人々をしめ出すかもしれないと警告する。デジタルの支払いの仕組みをわかりにくいと感じるお年寄りもいれば、銀行口座や安定したインターネットの環境をもたない収入の少ない人々もいる。そうした人々にとって、現金は古くさい習慣ではなく実際に必要なものであり、それを受け取らない店は、事実上、彼らが品物やサービスを得ることをこばむことになるかもしれない。現金はまた、形のあるお金によってあといくら使えるかがわかりやすくなるので、多くの人がきびしい家計をやりくりする助けにもなっている。',
+      '批判する人々はまた、プライバシーとそなえの強さについての心配もあげる。デジタルの支払いはすべて記録を生み、それは保存され、分析され、共有されるかもしれず、会社や政府が、どこへ旅行するかから何を買うかまで、個人の暮らしについて多くを知ることを可能にする。さらに、デジタルの仕組みはこわれることがある。停電や技術的な故障やサイバー攻撃や自然災害によって、少なくとも一時的に電子の支払いが不可能になることがあり、そうした状況では、現金が人々が食べ物やほかの必需品を手に入れる唯一の手段になるかもしれない。',
+      'これらの立場のあいだで、多くの専門家はゆるやかでつりあいのとれたやり方を提案している。政府は現金をなくすのではなく、それが必需品やサービスのために手に入り受け取られ続けることを保証しつつ、安全で手ごろなデジタルの代わりの手段を開発し続けることができる。一部の店に現金の受け取りを求める規則をすでに取り入れた国もあれば、デジタルの支払いでプライバシーを守る方法を考えている国もある。講習やかんたんな支払いの機器のように、新しい技術に苦労する人々への支えも、だれも取り残されないようにする助けになるかもしれない。',
+      '現金をめぐる議論は、社会が新しい技術をどう取り入れるべきかという、より広い問いを反映している。多数の人に便利さをあたえる新しい技術が、少数の人にかくれた代償をおわせることもあり、さけられないように見える変化も、人々の選択によって形づくられうる。現金がいつか消えるかどうかにかかわらず、その移り変わりは、効率だけでなく公平さやプライバシーや安全にも注意をはらって進められるべきであり、そうすれば形のあるお金が長くあたえてきた自由と守りを犠牲にすることなく、デジタルのお金の利益を楽しめるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「デジタルの取引も詐欺と無縁ではないが、記録を残す」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of a cashless society point to convenience and argue that digital payments can reduce ( 1 ). Critics warn that it may exclude disadvantaged people and threaten ( 2 ). Many experts propose guaranteeing that cash remains available while developing secure ( 3 ) alternatives.',
+      blanks: [
+        { choices: ['crime', 'prices', 'jobs', 'travel'], answer: 0, why: '第3段落 digital payments can help to reduce crime。' },
+        { choices: ['privacy', 'tourism', 'farming', 'sports'], answer: 0, why: '第5段落 Critics also raise concerns about privacy。' },
+        { choices: ['digital', 'paper', 'metal', 'local'], answer: 0, why: '第6段落 secure and affordable digital alternatives。' },
+      ],
+    },
+    tf: [
+      { statement: '現金をまったく受け取らない店もある。', answer: true, why: '第1段落 no longer accept coins and notes at all。' },
+      { statement: '支持する人々によれば、デジタルの取引は詐欺とはまったく無縁である。', answer: false, why: '第3段落 digital transactions are not immune to fraud。' },
+      { statement: '停電や災害のときには、現金が必需品を手に入れる唯一の手段になりうる。', answer: true, why: '第5段落 cash may be the only means by which people can obtain food。' },
+      { statement: '多くの専門家は、現金をすぐになくすべきだと提案している。', answer: false, why: '第6段落 Rather than abolishing cash。' },
+    ],
+    qa: [
+      { q: 'Why does cash help many people manage tight budgets?', choices: ['It makes it easier to see how much remains to be spent.', 'It earns interest.', 'It is accepted everywhere online.', 'It cannot be lost.'], answer: 0, why: '第4段落 physical money makes it easier to see how much remains to be spent。' },
+      { q: 'What do some countries already require?', choices: ['That certain shops accept cash.', 'That all shops refuse cash.', 'That people stop using cards.', 'That banks print more notes.'], answer: 0, why: '第6段落 rules requiring certain shops to accept cash。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
