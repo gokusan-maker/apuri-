@@ -39102,6 +39102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-compromise',
+    title: 'On Compromise',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Compromise has an uncertain reputation. In some contexts it is praised as a sign of maturity and good sense, the means by which people with different interests manage to live and work together. In others it is regarded with suspicion, as a betrayal of principle or a failure of courage. We admire the negotiator who finds common ground, but we also admire the person who refuses to give way when something important is at stake. Understanding when compromise is wise and when it is not may be one of the most difficult tasks of moral and political life.",
+      "The case for compromise begins with the recognition that people disagree, often deeply and for understandable reasons. In families, workplaces, and societies, individuals have different needs, values, and experiences, and no single person can expect to have their way in everything. Without the willingness to give up something for the sake of agreement, cooperation would be impossible, and conflicts would be settled only by force or would never be settled at all. Compromise, in this sense, is the price of living among others. Even the most principled person, if they wish to live among others, must sometimes accept arrangements that fall short of what they believe would be ideal.",
+      "Compromise can also be a form of respect. ( A ) we may be convinced that our own view is correct, accepting a compromise acknowledges that others have reasons of their own and that their concerns deserve to be taken seriously. A person who insists on getting everything they want treats others as obstacles rather than as partners. By contrast, a willingness to meet others halfway expresses a recognition of their equal standing and of the limits of our own certainty.",
+      "Yet not all compromises are good ones. Some agreements are reached by sacrificing the interests of people who are not present to defend themselves, or by abandoning commitments that should never be negotiable. A compromise between someone who wishes to harm others and someone who wishes to protect them may simply mean that a smaller harm is accepted. In such cases, refusing to compromise may be not stubbornness but integrity, and those who stand firm may later be recognized as having been right.",
+      "The difficulty lies in telling these situations apart. One useful question is what exactly is being given up. Compromising on matters of preference, such as where to eat or how to divide a task, rarely raises serious concerns. Compromising on matters of principle, such as honesty or the basic dignity of others, is a different matter. Another question is who bears the cost. A compromise in which both sides give up something of their own is very different from one in which they agree to place the burden on a third party.",
+      "Good compromise also depends on the spirit in which it is reached. An agreement accepted grudgingly, with each side seeking to escape its obligations at the first opportunity, is unlikely to last. One reached through genuine effort to understand the other side, by contrast, can build trust and make future cooperation easier. In this sense, the process of compromising may matter as much as its result, since it shapes the relationships within which later disagreements will be handled.",
+      "Perhaps, then, the wisest attitude toward compromise is neither to celebrate it unconditionally nor to reject it in the name of purity. It is to recognize compromise as a necessary part of shared life, while remaining clear about the principles that should not be traded away. Those who can combine flexibility in what is negotiable with firmness in what is not may be best equipped to live peacefully with others without losing themselves or the respect of those around them.",
+    ],
+    ja: [
+      '妥協の評判ははっきりしない。ある場面では、それは成熟と良識のしるし、つまりちがう利益をもつ人々がともに暮らし働くことを可能にする手段としてほめられる。別の場面では、それは原則への裏切りや勇気の欠如として、うたがいの目で見られる。私たちは共通の土台を見つける交渉人をたたえるが、大切なものがかかっているときに一歩もゆずらない人もたたえる。いつ妥協が賢く、いつそうでないかを理解することは、道徳と政治の暮らしのもっともむずかしい課題の一つかもしれない。',
+      '妥協を支持する理由は、人々が、しばしば深く、もっともな理由で意見がちがうと認めることから始まる。家族でも職場でも社会でも、一人一人はちがう必要や価値観や経験をもっており、だれもすべてを自分の思いどおりにできるとは期待できない。合意のために何かを手ばなす気持ちがなければ、協力は不可能になり、争いは力によってしか決着しないか、まったく決着しないだろう。この意味で、妥協はほかの人々のあいだで暮らすための代価である。もっとも原則を重んじる人でさえ、ほかの人々のあいだで暮らしたいなら、ときには自分が理想だと信じるものにとどかない取り決めを受け入れなければならない。',
+      '妥協はまた敬意の一つの形でもありうる。自分の考えが正しいと確信していても、妥協を受け入れることは、ほかの人にもその人なりの理由があり、その心配は真剣に受けとめられるに値すると認めることである。ほしいものをすべて手に入れると言いはる人は、ほかの人をパートナーではなくじゃま物としてあつかっている。それに対して、相手に歩みよる気持ちは、相手が対等な立場にあることと、自分の確信には限界があることへの認識を表している。',
+      'しかし、すべての妥協がよいものではない。自分を守るためにその場にいない人々の利益をぎせいにしたり、決して交渉すべきでない約束を捨てたりして結ばれる合意もある。ほかの人を傷つけたい人と、その人を守りたい人のあいだの妥協は、ただより小さな害を受け入れることを意味するかもしれない。そうした場合、妥協をこばむことはがんこさではなく誠実さかもしれず、ゆずらなかった人々はのちに正しかったと認められるかもしれない。',
+      'むずかしいのは、こうした状況を見分けることである。役に立つ一つの問いは、いったい何を手ばなそうとしているのかである。どこで食べるかや仕事をどう分けるかのような好みの問題で妥協することが、深刻な心配を生むことはめったにない。正直さやほかの人の基本的な尊厳のような原則の問題で妥協することは、別の話である。もう一つの問いは、だれが費用を負うのかである。双方が自分のものを何か手ばなす妥協と、第三者に負担をおしつけることに同意する妥協とは、まったくちがう。',
+      'よい妥協はまた、それがどんな気持ちで結ばれるかにかかっている。双方がしぶしぶ受け入れ、機会があればすぐに義務からのがれようとする合意は、長続きしそうにない。それに対して、相手の側を理解しようとする本当の努力を通じて結ばれた合意は、信頼を築き、これからの協力をやさしくしうる。この意味で、妥協する過程はその結果と同じくらい大切かもしれない。それが、のちの意見のちがいがあつかわれる関係を形づくるからである。',
+      'そうするとおそらく、妥協へのもっとも賢い態度は、それを無条件にたたえることでも、純粋さの名のもとにこばむことでもない。それは、手ばなしてはいけない原則についてはっきりしたまま、妥協を共通の暮らしの欠かせない一部として認めることである。交渉できることには柔軟さを、できないことにはかたさを組み合わせられる人こそ、自分を失わず、まわりの人々の敬意も失わずにほかの人々とおだやかに暮らすのにもっとも向いているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「自分の考えが正しいと確信していても、妥協は相手の理由を認めることになる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '妥協は、ある場面では原則への裏切りと見られる。', answer: true, why: '第1段落 as a betrayal of principle。' },
+      { statement: '筆者によれば、だれでもすべてを思いどおりにできる。', answer: false, why: '第2段落 no single person can expect to have their way in everything。' },
+      { statement: '妥協をこばむことが、誠実さである場合もある。', answer: true, why: '第4段落 refusing to compromise may be not stubbornness but integrity。' },
+      { statement: '筆者は、妥協を無条件にたたえるべきだと考えている。', answer: false, why: '第7段落 neither to celebrate it unconditionally。' },
+    ],
+    qa: [
+      { q: 'How does a person who insists on getting everything treat others?', choices: ['As obstacles rather than partners.', 'As close friends.', 'As teachers.', 'As equals.'], answer: 0, why: '第3段落 treats others as obstacles rather than as partners。' },
+      { q: 'What kind of agreement can build trust, according to the author?', choices: ['One reached through genuine effort to understand the other side.', 'One accepted grudgingly.', 'One that burdens a third party.', 'One made in secret.'], answer: 0, why: '第6段落 One reached through genuine effort to understand the other side ... can build trust。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
