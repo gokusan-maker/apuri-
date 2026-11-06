@@ -39422,6 +39422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-absorption',
+    title: 'On Being Absorbed',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people have experienced moments of complete absorption. A child building a sandcastle forgets that it is time for lunch; a reader becomes so involved in a novel that the room around them seems to disappear; a musician practicing a difficult passage loses all sense of the passing hours. In such moments, the usual chatter of the mind falls silent, and attention is wholly given to a single activity. These experiences are often among the most satisfying of our lives, yet they are becoming harder to find in a world full of interruptions and distractions.",
+      "Psychologists who have studied such states describe them as moments in which the challenge of a task is closely matched to a person's abilities. When a task is too easy, we become bored; when it is too difficult, we become anxious. But when the difficulty is just right, attention can settle into the activity, and effort itself becomes a source of pleasure. People in this condition often report losing track of time and forgetting about themselves, not because they are careless, but because the activity has fully captured their interest.",
+      "Absorption seems to offer a particular kind of happiness. ( A ) many pleasures depend on receiving something from outside, such as praise, comfort, or entertainment, absorption arises from active engagement with a task. It does not require that the task be pleasant in every moment; a climber may be cold and tired, and a writer may struggle for the right word, yet both may describe the experience as deeply rewarding. The satisfaction comes not from ease but from the full use of one's capacities.",
+      "Yet absorption is fragile. It usually takes time to develop, since the mind must first settle into a task before it can become fully involved. A single interruption can break the state, and returning to it may take many minutes. In environments where messages, notifications, and demands arrive constantly, people may rarely stay with any task long enough to become absorbed. As a result, they may experience many activities only on the surface, never reaching the depth at which they become truly engaging. Many people who notice this pattern in their own lives find that simply turning off notifications for an hour can make a remarkable difference.",
+      "There is also a question of choice. Not every activity that absorbs us is worthwhile. Games designed to capture attention can produce a kind of absorption that leaves people feeling empty rather than fulfilled, and some forms of work can absorb people so completely that they neglect their health or their relationships. The value of absorption, then, depends partly on what we are absorbed in, and on whether that activity contributes to a life we would, on reflection, wish to lead.",
+      "Cultivating worthwhile absorption may therefore require deliberate effort. It may mean protecting periods of uninterrupted time, choosing activities that stretch our abilities without overwhelming them, and returning to them often enough that skill and interest can grow. Children who are given time to play freely, students who are allowed to pursue questions in depth, and adults who make room for a craft or hobby may all find that absorption becomes more frequent with practice.",
+      "Perhaps, then, the capacity for absorption is something like a muscle that grows stronger with use and weaker with neglect. In a culture that often values speed and constant connection, the quiet experience of losing oneself in a task may seem old-fashioned or even unproductive. Yet it may be in such moments that people learn most deeply, create their best work, and feel most fully alive. Protecting the conditions in which absorption is possible may be one of the most valuable things we can do for ourselves and for others.",
+    ],
+    ja: [
+      'ほとんどの人は、すっかり夢中になる瞬間を経験したことがある。砂の城を作る子どもは昼ごはんの時間であることをわすれ、読む人は小説にのめりこんでまわりの部屋が消えたように思え、むずかしい部分を練習する音楽家は過ぎていく時間の感覚をすっかり失う。そうした瞬間には、ふだんの心のおしゃべりがしずまり、注意がすべて一つの活動にそそがれる。こうした経験はしばしば人生でもっとも満ち足りたものの一つだが、じゃまや気を散らすものでいっぱいの世界では、ますます見つけにくくなっている。',
+      'そうした状態を研究してきた心理学者は、それを、作業のむずかしさがその人の能力とぴったり合っている瞬間だと説明する。作業がやさしすぎると私たちは退屈し、むずかしすぎると不安になる。しかしむずかしさがちょうどよいと、注意は活動の中に落ち着き、努力そのものが楽しみのみなもとになる。この状態にある人は、しばしば時間の感覚を失い、自分のことをわすれると言う。それは不注意だからではなく、活動がその人の関心をすっかりとらえたからである。',
+      '夢中になることは、特別な種類の幸せをあたえてくれるようである。多くの楽しみは、ほめことばやなぐさめや娯楽のように、外から何かを受け取ることにかかっているが、夢中になることは作業への積極的なかかわりから生まれる。それは作業が一瞬一瞬楽しいことを必要としない。登山家は寒くてつかれているかもしれず、作家はぴったりのことばを求めて苦しむかもしれないが、どちらもその経験を深く報われるものだと言うかもしれない。満足は楽さからではなく、自分の力を十分に使うことから生まれるのである。',
+      'しかし夢中になることはもろい。心はまず作業に落ち着いてからでないと完全にはかかわれないので、それはふつう育つのに時間がかかる。一度のじゃまでその状態がこわれ、もどるのに何分もかかることがある。メッセージや通知や要求がたえずとどく環境では、人々はどんな作業にも夢中になれるほど長くとどまることはめったにないかもしれない。その結果、多くの活動を表面だけで経験し、それが本当に心を引きつけるようになる深さにはたどりつかないかもしれない。自分の暮らしにこの型があると気づいた多くの人は、一時間だけ通知を切るだけでおどろくほどのちがいが生まれることに気づく。',
+      '選ぶという問題もある。私たちを夢中にさせる活動がすべて価値があるわけではない。注意をうばうように作られたゲームは、人を満たすのではなくむなしい気持ちにさせる種類の夢中を生むことがあり、ある種の仕事は人をすっかり夢中にさせて、健康や人間関係をおろそかにさせることもある。そうすると夢中になることの価値は、一部は何に夢中になっているか、そしてその活動が、よく考えたうえで送りたいと思う人生に役立つかどうかにかかっている。',
+      'そのため価値のある夢中を育てるには、意識した努力が必要かもしれない。それは、じゃまされない時間を守ること、自分の力を圧倒することなくのばしてくれる活動を選ぶこと、そして技能と関心が育つほど何度もそれにもどることを意味するかもしれない。自由に遊ぶ時間をあたえられた子どもも、問いを深く追うことを許された学生も、手仕事や趣味のための場所を作る大人も、練習とともに夢中になることがより多くなると気づくかもしれない。',
+      'そうするとおそらく、夢中になる力は、使えば強くなり、ほうっておけば弱くなる筋肉のようなものなのだろう。速さとたえまないつながりを大切にしがちな文化では、作業の中で自分をわすれる静かな経験は、古くさく、さらには生産的でないように思えるかもしれない。しかし人々がもっとも深く学び、もっともよい作品を生み、もっとも生き生きと感じるのは、そうした瞬間なのかもしれない。夢中になることができる条件を守ることは、自分とほかの人のためにできる、もっとも価値のあることの一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「多くの楽しみは外から受け取るが、夢中になることは積極的なかかわりから生まれる」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '作業がやさしすぎると、人は退屈する。', answer: true, why: '第2段落 When a task is too easy, we become bored。' },
+      { statement: '夢中になるには、作業が一瞬一瞬楽しくなければならない。', answer: false, why: '第3段落 It does not require that the task be pleasant in every moment。' },
+      { statement: '一度のじゃまで、夢中の状態がこわれることがある。', answer: true, why: '第4段落 A single interruption can break the state。' },
+      { statement: '筆者によれば、人を夢中にさせる活動はすべて価値がある。', answer: false, why: '第5段落 Not every activity that absorbs us is worthwhile。' },
+    ],
+    qa: [
+      { q: 'When can attention settle into an activity, according to psychologists?', choices: ['When the difficulty is just right.', 'When the task is very easy.', 'When the task is impossible.', 'When someone is watching.'], answer: 0, why: '第2段落 when the difficulty is just right, attention can settle into the activity。' },
+      { q: 'What does the author compare the capacity for absorption to?', choices: ['A muscle.', 'A machine.', 'A map.', 'A clock.'], answer: 0, why: '第7段落 something like a muscle that grows stronger with use。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
