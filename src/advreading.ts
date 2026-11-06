@@ -37022,6 +37022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-calm',
+    title: 'The Meaning of Calm',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cultures, calmness has been admired as a sign of wisdom and strength. The person who remains composed in a crisis, who responds to insults without anger, and who faces uncertainty without panic is often regarded as someone to be trusted and followed. Yet modern life seems designed to make calm difficult. Constant notifications, rapid news cycles, and the pressure to respond immediately to every demand keep many people in a state of low-level agitation. It is worth asking what calm really is, and why it may matter more than ever.",
+      "Calm is sometimes mistaken for indifference, as though the calm person simply does not care about what happens. But genuine calm is quite different. A doctor who remains composed while treating a seriously injured patient is not indifferent to the patient's suffering; on the contrary, the doctor's calm makes it possible to act effectively on that concern. In this sense, calm is not the absence of feeling but the ability to hold strong feelings without being overwhelmed by them, so that one can think clearly and act wisely.",
+      "This ability has practical benefits. When we are agitated, our attention narrows and our judgment may become distorted, leading us to make hasty decisions that we later regret. ( A ) strong emotions can sometimes help us respond quickly to danger, they often interfere with the careful thought that complex problems require. A calm mind, by contrast, can consider several possibilities, weigh evidence, and choose a course of action with greater care. Many people who work in emergencies, such as pilots and firefighters, are trained precisely to remain calm, because their decisions may affect the lives of others.",
+      "Calm also has a social dimension. Emotions spread among people, and an anxious or angry person can raise the tension in a room, while a calm one can help others to settle. Leaders, teachers, and parents who remain composed in difficult moments may help those around them to feel secure and to think more clearly. In conflicts, a calm response can prevent a disagreement from escalating into a quarrel, creating space in which solutions can be found. A single calm voice can sometimes change the mood of an entire meeting.",
+      "It must be acknowledged, however, that calm is not always appropriate. Some situations call for urgency, and a person who remains placid in the face of injustice or danger may be failing to respond as they should. There is also a risk that the demand for calm may be used to silence legitimate anger, for example when people who protest against unfair treatment are told that they are being too emotional. Calm is valuable, but it should not become a way of avoiding necessary action or dismissing the concerns of others.",
+      "How, then, can calm be cultivated? Many traditions have developed practices for this purpose, such as meditation, breathing exercises, or simply taking regular moments of quiet. Physical activity, adequate sleep, and time spent in nature may also help. Perhaps equally important is the habit of pausing before reacting, giving ourselves a moment to notice our feelings and to choose our response rather than being carried away. Such habits take time to develop, but they can gradually change the way we meet the challenges of daily life.",
+      "Perhaps the deepest value of calm lies in the freedom it provides. A person who is easily agitated is, in a sense, controlled by events and by the reactions of others. A calm person, by contrast, retains the ability to choose how to respond, even in difficult circumstances. In a world that often seems designed to provoke and distract us, the cultivation of calm may be not a retreat from life but a way of engaging with it more fully, thoughtfully, and humanely.",
+    ],
+    ja: [
+      '多くの文化で、おちつきは知恵と強さのしるしとして賞賛されてきた。危機のなかでも平静を保ち、侮辱にも怒らずにこたえ、不確かさにもあわてずに向き合う人は、しばしば信頼し、ついていくべき人と見なされる。しかし現代の暮らしは、おちつくのを難しくするようにできているように見える。たえまない通知や速いニュースのめぐりや、あらゆるもとめにすぐこたえなければという重圧が、多くの人を軽いいらだちの状態にとどめている。おちつきとは本当は何なのか、そしてそれがなぜこれまで以上に大切なのかを問うてみる値打ちがある。',
+      'おちつきは、まるでおちついた人は起こることを気にかけていないかのように、無関心ととりちがえられることがある。しかし本当のおちつきはまったくちがう。重いけがをした患者を手当てしながら平静を保つ医師は、患者の苦しみに無関心なのではない。それどころか、そのおちつきによって、その気づかいにもとづいて効果的に行動できるのである。この意味で、おちつきは感情がないことではなく、強い感情をもちながらそれに圧倒されない力であり、それによってはっきり考え、かしこく行動できるのである。',
+      'この力には実際的な利益がある。いらだっているとき、私たちの注意はせまくなり、判断がゆがみ、あとで後悔する性急な決断をしてしまうかもしれない。強い感情はときに危険にすばやくこたえる助けになるが、複雑な問題が必要とする注意深い思考をしばしばさまたげる。対照的に、おちついた心はいくつもの可能性を考え、証拠をはかりにかけ、より注意深く行動の道を選ぶことができる。パイロットや消防士のように非常時に働く多くの人が、まさにおちつきを保つよう訓練されるのは、その決断がほかの人の命にかかわるかもしれないからである。',
+      'おちつきには社会的な面もある。感情は人から人へ広がり、不安な人や怒った人は部屋の緊張を高めうる一方、おちついた人はほかの人がおちつく助けになりうる。難しい瞬間に平静を保つ指導者や教師や親は、まわりの人々が安心し、よりはっきり考える助けになるかもしれない。対立のなかでは、おちついた返事が意見のちがいを口論へと発展させるのをふせぎ、解決を見つけられる余地をつくることがある。たった一人のおちついた声が、ときに会議全体の雰囲気を変えることもある。',
+      'しかし、おちつきがいつもふさわしいわけではないことは認めなければならない。急ぐことを求める状況もあり、不正や危険を前にしてのんびりしている人は、すべきようにこたえていないのかもしれない。また、たとえば不公平なあつかいに抗議する人々が感情的すぎると言われるときのように、おちつきを求めることが正当な怒りをだまらせるのに使われるおそれもある。おちつきには価値があるが、それが必要な行動をさけたり、ほかの人の心配をはねつけたりする方法になってはならない。',
+      'では、おちつきはどう育てられるのだろうか。多くの伝統は、瞑想や呼吸の練習や、単に定期的に静かな時間をとることのように、この目的のための習慣を発展させてきた。体を動かすことや十分な睡眠や自然のなかですごす時間も助けになるかもしれない。同じくらい大切なのは、反応する前に一息おく習慣かもしれない。自分の気持ちに気づき、流されるのではなく自分のこたえ方を選ぶための一瞬を自分にあたえるのである。そうした習慣は育つのに時間がかかるが、日々の暮らしの課題への向き合い方を少しずつ変えることができる。',
+      'おそらくおちつきのもっとも深い価値は、それがあたえてくれる自由にある。かんたんにいらだつ人は、ある意味で出来事やほかの人の反応にあやつられている。対照的に、おちついた人は難しい状況のなかでも、どうこたえるかを選ぶ力を保っている。しばしば私たちをあおり、気をそらすようにできているように見える世界で、おちつきを育てることは人生からしりぞくことではなく、より十分に、思慮深く、人間らしく人生にかかわる方法なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「強い感情はときに危険にこたえる助けになるが、注意深い思考をさまたげる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの文化で、おちつきは知恵と強さのしるしとされてきた。', answer: true, why: '第1段落 calmness has been admired as a sign of wisdom and strength。' },
+      { statement: '筆者によれば、本当のおちつきは無関心と同じである。', answer: false, why: '第2段落 genuine calm is quite different。' },
+      { statement: 'おちついた人は、ほかの人がおちつく助けになりうる。', answer: true, why: '第4段落 a calm one can help others to settle。' },
+      { statement: '筆者は、おちつきはどんな状況でもふさわしいと考えている。', answer: false, why: '第5段落 calm is not always appropriate。' },
+    ],
+    qa: [
+      { q: 'How does the author define genuine calm?', choices: ['The ability to hold strong feelings without being overwhelmed.', 'Having no feelings at all.', 'Ignoring other people.', 'Reacting as quickly as possible.'], answer: 0, why: '第2段落 the ability to hold strong feelings without being overwhelmed by them。' },
+      { q: 'What risk does the author mention about the demand for calm?', choices: ['It may be used to silence legitimate anger.', 'It makes people too happy.', 'It increases sleep.', 'It prevents meditation.'], answer: 0, why: '第5段落 the demand for calm may be used to silence legitimate anger。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
