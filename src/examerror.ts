@@ -8424,6 +8424,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'A few minutes’ walk [led us at] a small lake.', choices: ['led us to', 'led us for', 'led to us', 'led us in'], answer: 0, why: 'lead ＋人＋ to ＋場所「（～すると）…に出る」。' },
     ],
   },
+  {
+    id: 'exam-fix-198',
+    title: '入試の誤文訂正〈198〉（東大レベル：英作文の倍数表現 twice as ～ as・three times）',
+    points: ['「A は B の～倍…だ」は 倍数＋ as ＋原級＋ as（twice as large as・three times as many books as）。2倍は twice、半分は half、1.5倍は one and a half times。倍数は as の前に置く。比較級を使う形 three times larger than もあるが、as と than を混ぜない。「～倍の大きさ」は twice the size of ～ のように 倍数＋ the ＋名詞 でも言える。数えられる名詞には many、数えられない名詞には much、大きさや人口には large を使う。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This room is twice as large as mine.', ja: 'この部屋は私の部屋の2倍の広さだ。' }],
+    questions: [
+      { sentence: 'This room is [as twice large] as mine.', choices: ['twice as large', 'twice so large', 'double as large', 'as large twice'], answer: 0, why: '倍数は as の前に置く。twice as large as。' },
+      { sentence: 'His car is [three times expensive] than mine.', choices: ['three times more expensive', 'three more times expensive', 'more three times expensive', 'three times as expensive'], answer: 0, why: 'than があるので比較級を使う。three times more expensive than。' },
+      { sentence: 'The population of this city is twice [as many as] that of my town.', choices: ['as large as', 'as much as', 'as many than', 'larger as'], answer: 0, why: '人口の多さは large で表す。twice as large as。' },
+      { sentence: 'She has [three times books as many] as I do.', choices: ['three times as many books', 'as many three times books', 'three times many books', 'books three times as many'], answer: 0, why: '倍数＋ as many ＋名詞＋ as の語順。three times as many books as。' },
+      { sentence: 'This bridge is [half long] as that one.', choices: ['half as long', 'as half long', 'half longer', 'long half'], answer: 0, why: '「半分」は half as ～ as。half as long as。' },
+      { sentence: 'He earns [twice as much money than] his brother.', choices: ['twice as much money as', 'twice money as much as', 'as twice much money as', 'twice so much money as'], answer: 0, why: 'as ～ as の形なので than ではなく as。' },
+      { sentence: 'Tokyo is about [ten times larger as] this town.', choices: ['ten times larger than', 'ten times as larger than', 'ten larger times than', 'larger ten times as'], answer: 0, why: '比較級 larger のあとは than。ten times larger than。' },
+      { sentence: 'This box is [the twice size] of that one.', choices: ['twice the size', 'the size twice', 'double size', 'the two times size'], answer: 0, why: '倍数＋ the ＋名詞の語順。twice the size of ～。' },
+      { sentence: 'I read [as many twice books] as you did.', choices: ['twice as many books', 'as twice many books', 'twice books as many', 'many books twice'], answer: 0, why: '倍数は as の前。twice as many books as。' },
+      { sentence: 'Gas prices are now [one and half times] as high as last year.', choices: ['one and a half times', 'one and half time', 'a one and half times', 'one half and times'], answer: 0, why: '「1.5倍」は one and a half times。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -2815,3 +2815,10 @@ it('正誤問題〈204〉：国公立レベル 再帰代名詞の単元が10問�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) her')
 })
+
+it('誤文訂正〈198〉：東大レベル 倍数表現の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-198')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('twice as large')
+})
