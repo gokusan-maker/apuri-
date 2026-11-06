@@ -5018,6 +5018,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Had better you (B) finish (C) your homework (D) before dinner.', choices: ['(A) Had better you', '(B) finish', '(C) your homework', '(D) before dinner'], answer: 0, why: 'had better は主語のあとに置く。You had better。' },
     ],
   },
+  {
+    id: 'exam-error-same-such-kyodai',
+    title: '入試の正誤問題〈211〉（京大レベル：英作文の the same ～ as・such ～ as）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the same ～ as …「…と同じ～」は the をつけ、than や with ではなく as。as のあとの動詞は前の動詞に合わせる（as he does）。such は such a ＋形容詞＋名詞の語順（a such は×）。such ～ as …「…のような～」、such as ～「たとえば～のような」（such like は×）。「とても～なので…」は such ～ that …。',
+    ],
+    examples: [
+      { en: 'She has the same bag as mine.', ja: '彼女は私と同じかばんをもっている。' },
+      { en: 'It was such a hot day that we stayed inside.', ja: 'とても暑い日だったので、私たちは家の中にいた。' },
+    ],
+    questions: [
+      { sentence: '(A) She has (B) the same bag (C) than (D) mine.', choices: ['(A) She has', '(B) the same bag', '(C) than', '(D) mine'], answer: 2, why: 'the same ～ as「～と同じ…」。than ではなく as。' },
+      { sentence: '(A) I want (B) a same (C) watch (D) as yours.', choices: ['(A) I want', '(B) a same', '(C) watch', '(D) as yours'], answer: 1, why: 'same には the をつける。the same watch as。' },
+      { sentence: '(A) I have never (B) seen (C) such beautiful flower (D) as this.', choices: ['(A) I have never', '(B) seen', '(C) such beautiful flower', '(D) as this'], answer: 2, why: '数えられる名詞の単数には such a ～。such a beautiful flower。' },
+      { sentence: '(A) Animals (B) such like (C) lions and tigers (D) need large areas.', choices: ['(A) Animals', '(B) such like', '(C) lions and tigers', '(D) need large areas'], answer: 1, why: '「たとえば～のような」は such as。' },
+      { sentence: '(A) My opinion (B) is (C) the same with (D) yours.', choices: ['(A) My opinion', '(B) is', '(C) the same with', '(D) yours'], answer: 2, why: '「～と同じ」は the same as。' },
+      { sentence: '(A) It was (B) a such (C) hot day (D) that we stayed inside.', choices: ['(A) It was', '(B) a such', '(C) hot day', '(D) that we stayed inside'], answer: 1, why: 'such a ＋形容詞＋名詞の語順。such a hot day。' },
+      { sentence: '(A) Such books (B) like this (C) are (D) useful for beginners.', choices: ['(A) Such books', '(B) like this', '(C) are', '(D) useful for beginners'], answer: 1, why: 'such ～ as this の形。such books as this。' },
+      { sentence: '(A) We go (B) to the same (C) school (D) as he is.', choices: ['(A) We go', '(B) to the same', '(C) school', '(D) as he is'], answer: 3, why: 'くらべているのは学校に行くことなので as he does。' },
+      { sentence: '(A) It (B) was such (C) an interesting book (D) as I read it twice.', choices: ['(A) It', '(B) was such', '(C) an interesting book', '(D) as I read it twice'], answer: 3, why: '結果「とても～なので…」は such ～ that。that I read it twice。' },
+      { sentence: '(A) A such (B) kind man (C) is (D) rare these days.', choices: ['(A) A such', '(B) kind man', '(C) is', '(D) rare these days'], answer: 0, why: 'such a の語順。Such a kind man。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
