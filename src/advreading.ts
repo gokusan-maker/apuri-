@@ -39182,6 +39182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-exaggeration',
+    title: 'On Exaggeration',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Exaggeration is woven into ordinary speech. We say that we have told someone a million times, that a bag weighs a ton, or that we are dying of hunger when we have merely missed lunch. No one takes such statements literally, and no one is deceived by them. Yet exaggeration is a curious habit, since it involves saying something that is obviously false in order to communicate something that is true. Considering why we exaggerate, and when exaggeration becomes harmful, may tell us something about the nature of language and of honesty.",
+      "One reason we exaggerate is to express the strength of our feelings. Ordinary descriptions often seem too weak to convey how tired, hungry, or delighted we are, and by stretching the truth we invite the listener to share our emotional state. When a friend says that a film was the best they have ever seen, we understand that they enjoyed it greatly, not that they have carefully compared it with every other film. In this sense, exaggeration is less a statement of fact than a form of emphasis, much like raising the voice or using a gesture.",
+      "Exaggeration also plays a social role. ( A ) a plain account of a day's events may be accurate, it is rarely entertaining, and storytellers have always enlarged their tales to hold the attention of their audience. Exaggeration can create humor, build a sense of shared understanding between speaker and listener, and make ordinary experiences seem vivid and memorable. Much of what we enjoy in conversation depends on this playful departure from strict accuracy.",
+      "Yet exaggeration can also mislead. The line between harmless emphasis and distortion is not always clear, particularly when the listener does not share the speaker's assumptions or cannot easily check the facts. Claims that a product is the best in the world, that a problem is the worst crisis in history, or that a rival is completely incompetent may be meant to persuade rather than merely to express feeling. When exaggeration is used in this way, it can encourage panic, unfair judgment, or misplaced confidence. Advertising and political speech, in particular, often rely on exaggeration of this kind, and audiences may not always recognize it for what it is.",
+      "There is also a risk that constant exaggeration weakens language itself. If every inconvenience is described as a disaster and every pleasant experience as amazing, such words lose their power to describe events that truly deserve them. A speaker who habitually exaggerates may find that others no longer take their words seriously, even when they describe something genuinely important. In this sense, exaggeration can undermine the trust on which communication depends, much as a currency loses its value when too much of it is printed.",
+      "For this reason, the wise use of exaggeration depends on awareness of context. Among friends who know each other well, playful overstatement can enrich conversation without misleading anyone. In situations where accurate information matters, such as reporting news, giving medical advice, or making decisions that affect others, restraint becomes a responsibility. The same words may be harmless in one setting and harmful in another, and part of speaking well lies in recognizing the difference.",
+      "Perhaps, then, exaggeration is best understood not as the opposite of honesty but as a tool that can serve or betray it. Used with care, it allows us to express feelings, share laughter, and bring ordinary experiences to life. Used carelessly, it can distort our understanding of the world and erode the meaning of our words. Learning when to stretch the truth and when to hold it steady may be one of the subtler skills of communication. It is a skill that children learn gradually, often by noticing when adults laugh and when they frown.",
+    ],
+    ja: [
+      '大げさな言い方はふだんのことばに織りこまれている。私たちは、だれかに百万回も言ったとか、かばんが一トンもあるとか、ただ昼ごはんをぬいただけなのにおなかがすいて死にそうだとか言う。だれもそうしたことばを文字どおりには受け取らず、だれもそれにだまされない。しかし大げさな言い方は奇妙な習慣である。本当のことを伝えるために、明らかにうそのことを言うのだからである。なぜ大げさに言うのか、そしていつ大げさな言い方が有害になるのかを考えることは、ことばと正直さの性質について何かを教えてくれるかもしれない。',
+      '大げさに言う理由の一つは、気持ちの強さを表すことである。ふつうの説明は、自分がどれほどつかれているか、おなかがすいているか、喜んでいるかを伝えるには弱すぎるように思えることが多く、真実を引きのばすことで、聞き手に自分の感情の状態を分け合うようさそうのである。友だちがある映画をこれまでに見た中で最高だったと言うとき、私たちはその人がそれを大いに楽しんだのだと理解するのであって、ほかのすべての映画と注意深くくらべたとは思わない。この意味で、大げさな言い方は事実を述べることというより、声を大きくしたり身ぶりを使ったりするのとよく似た、強調の一つの形である。',
+      '大げさな言い方はまた社会的な役割も果たす。一日の出来事をありのままに語ると正確かもしれないが、めったにおもしろくはない。語り手は昔から、聞き手の注意を引きつけるために話をふくらませてきた。大げさな言い方は笑いを生み、話し手と聞き手のあいだに共通の理解の感覚を築き、ありふれた経験をあざやかで忘れがたいものにすることができる。私たちが会話で楽しむものの多くは、厳密な正確さからのこの遊び心のある逸脱にかかっている。',
+      'しかし大げさな言い方はまどわすこともある。害のない強調とゆがめることのあいだの境目は、とくに聞き手が話し手の前提を共有していなかったり、事実をかんたんに確かめられなかったりするときには、いつもはっきりしているわけではない。ある商品が世界一だとか、ある問題が歴史上最悪の危機だとか、ライバルがまったく無能だとかいう主張は、ただ気持ちを表すためではなく、人を説得するためのものかもしれない。大げさな言い方がこのように使われると、パニックや不公平な判断や見当ちがいの自信をうながしうる。とくに広告や政治の演説は、しばしばこの種の大げさな言い方にたより、聞き手はいつもその正体に気づくとはかぎらない。',
+      'たえず大げさに言うことが、ことばそのものを弱めてしまう危険もある。あらゆる不便が大災害と言われ、あらゆる楽しい経験がすばらしいと言われれば、そうしたことばは、本当にそれに値する出来事を表す力を失う。いつも大げさに言う話し手は、本当に大切なことを伝えるときでさえ、ほかの人にもう真剣に受け取ってもらえないことに気づくかもしれない。この意味で、大げさな言い方は、お金が刷られすぎると価値を失うのとよく似て、コミュニケーションがたよる信頼をそこないうる。',
+      'このため、大げさな言い方を賢く使えるかどうかは、場面への意識にかかっている。たがいをよく知る友だちのあいだでは、遊び心のある誇張は、だれもまどわさずに会話を豊かにしうる。ニュースを伝えたり、医療の助言をしたり、ほかの人に影響する決定をしたりするような、正確な情報が大切な場面では、ひかえめにすることが責任になる。同じことばが、ある場面では害がなく、別の場面では有害になることがあり、上手に話すことの一部は、そのちがいを見分けることにある。',
+      'そうするとおそらく、大げさな言い方は、正直さの反対としてではなく、正直さに役立つことも裏切ることもある道具として理解するのがいちばんよいのだろう。注意して使えば、それは気持ちを表し、笑いを分け合い、ありふれた経験に命をふきこむことを可能にする。不注意に使えば、それは世界についての理解をゆがめ、ことばの意味をすりへらしうる。いつ真実を引きのばし、いつそれをしっかり保つべきかを学ぶことは、コミュニケーションのより細やかな技能の一つなのかもしれない。それは子どもが少しずつ学ぶ技能であり、多くの場合、大人がどんなときに笑い、どんなときに顔をしかめるかに気づくことで身につけていく。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ありのままの話は正確かもしれないが、めったにおもしろくない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '大げさな言い方は、本当のことを伝えるために明らかにうそのことを言う。', answer: true, why: '第1段落 saying something that is obviously false in order to communicate something that is true。' },
+      { statement: '筆者によれば、大げさな言い方はいつも人をだます。', answer: false, why: '第1段落 no one is deceived by them。' },
+      { statement: 'たえず大げさに言うと、ことばの力が弱まることがある。', answer: true, why: '第5段落 constant exaggeration weakens language itself。' },
+      { statement: '正確な情報が大切な場面でも、大げさに言うべきである。', answer: false, why: '第6段落 restraint becomes a responsibility。' },
+    ],
+    qa: [
+      { q: 'What does the author compare exaggeration to in paragraph 2?', choices: ['Raising the voice or using a gesture.', 'Writing a report.', 'Telling a lie for money.', 'Keeping silent.'], answer: 0, why: '第2段落 much like raising the voice or using a gesture。' },
+      { q: 'What does the author compare the loss of meaning in words to?', choices: ['A currency losing value when too much is printed.', 'A clock stopping.', 'A tree losing leaves.', 'A road closing.'], answer: 0, why: '第5段落 much as a currency loses its value when too much of it is printed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
