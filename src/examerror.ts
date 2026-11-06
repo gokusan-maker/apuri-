@@ -5066,6 +5066,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Feel (B) you (C) better (D) today?', choices: ['(A) Feel', '(B) you', '(C) better', '(D) today?'], answer: 0, why: '一般動詞の疑問文なので Do you feel better today?' },
     ],
   },
+  {
+    id: 'exam-error-noun-prep-kyodai',
+    title: '入試の正誤問題〈213〉（京大レベル：英作文の名詞と前置詞 interest in・effect on・reason for）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '名詞ごとに決まった前置詞がある。interest in ～（興味）、effect／influence on ～（影響）、reason for ～（理由）、demand for ～（需要）、cure for ～（治療法）、solution to ～（解決策）、access to ～（利用）、attitude toward ～（態度）、increase／decrease in ～（増加・減少）、doubt about ～（うたがい）。日本語の「～の」につられて of にしない。',
+    ],
+    examples: [
+      { en: 'She has a strong interest in history.', ja: '彼女は歴史に強い興味がある。' },
+      { en: 'Smoking has a bad effect on your health.', ja: '喫煙は健康に悪い影響をあたえる。' },
+    ],
+    questions: [
+      { sentence: '(A) She has (B) a strong interest (C) for (D) Japanese history.', choices: ['(A) She has', '(B) a strong interest', '(C) for', '(D) Japanese history'], answer: 2, why: 'interest in ～「～への興味」。for ではなく in。' },
+      { sentence: '(A) Smoking (B) has a bad (C) effect to (D) your health.', choices: ['(A) Smoking', '(B) has a bad', '(C) effect to', '(D) your health'], answer: 2, why: 'effect on ～「～への影響」。' },
+      { sentence: '(A) What is (B) the reason (C) of (D) your absence?', choices: ['(A) What is', '(B) the reason', '(C) of', '(D) your absence?'], answer: 2, why: 'reason for ～「～の理由」。' },
+      { sentence: '(A) There is (B) a great demand (C) of (D) skilled workers.', choices: ['(A) There is', '(B) a great demand', '(C) of', '(D) skilled workers'], answer: 2, why: 'demand for ～「～への需要」。' },
+      { sentence: '(A) The scientists (B) finally found (C) a cure (D) of the disease.', choices: ['(A) The scientists', '(B) finally found', '(C) a cure', '(D) of the disease'], answer: 3, why: 'cure for ～「～の治療法」。' },
+      { sentence: '(A) The solution (B) of (C) this problem (D) is not easy.', choices: ['(A) The solution', '(B) of', '(C) this problem', '(D) is not easy'], answer: 1, why: 'solution to ～「～の解決策」。' },
+      { sentence: '(A) His (B) attitude (C) for (D) his classmates was friendly.', choices: ['(A) His', '(B) attitude', '(C) for', '(D) his classmates was friendly'], answer: 2, why: 'attitude toward（to）～「～への態度」。' },
+      { sentence: '(A) The increase (B) of (C) prices (D) worried many people.', choices: ['(A) The increase', '(B) of', '(C) prices', '(D) worried many people'], answer: 1, why: '「～の上昇」は increase in ～。' },
+      { sentence: '(A) I have (B) no doubt (C) in (D) his honesty.', choices: ['(A) I have', '(B) no doubt', '(C) in', '(D) his honesty'], answer: 2, why: '「～をうたがわない」は have no doubt about（of）～。' },
+      { sentence: '(A) An access (B) to the internet (C) is (D) important today.', choices: ['(A) An access', '(B) to the internet', '(C) is', '(D) important today'], answer: 0, why: 'access は数えられない名詞なので an をつけない。access to ～。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
