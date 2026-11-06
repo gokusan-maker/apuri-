@@ -3165,6 +3165,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="34" cy="76" r="4" fill="#241a10" /><circle cx="66" cy="76" r="4" fill="#241a10" />
       </g>
     )
+  if (species === 'zorilla')
+    return (
+      <g>
+        {/* 白いしまもよう */}
+        <path d="M36 30 q14 20 4 44 M64 30 q-14 20 -4 44" stroke="#fafaf9" strokeWidth="4" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
