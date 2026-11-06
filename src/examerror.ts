@@ -8550,6 +8550,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He visits his grandmother [every time when he has] a holiday.', choices: ['whenever he has', 'every time when he has had', 'whenever has he', 'each time when having'], answer: 0, why: 'every time に when は続けない。whenever he has でよい。' },
     ],
   },
+  {
+    id: 'exam-fix-201',
+    title: '入試の誤文訂正〈201〉（国公立レベル：remember・forget・stop のあとの to と ing）',
+    points: ['remember・forget・regret は、あとに to ～ が来ると「これから～すること」、～ing が来ると「（すでに）～したこと」を表す。remember to lock「わすれずにかぎをかける」、remember meeting「会ったことをおぼえている」、forget to call「電話するのをわすれる」、never forget visiting「おとずれたことを決してわすれない」、regret to tell「残念ながら～を伝える」、regret telling「話したことをくやむ」。stop ～ing は「～するのをやめる」、stop to ～ は「～するために立ち止まる（手を止める）」。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Remember to lock the door. I remember meeting him last year.', ja: 'わすれずにドアのかぎをかけてね。私は去年彼に会ったことをおぼえている。' }],
+    questions: [
+      { sentence: 'I remember [to meet] him at the party last year.', choices: ['meeting', 'to have meet', 'meet', 'to meeting'], answer: 0, why: '去年会ったことをおぼえているので remember ～ing。' },
+      { sentence: 'Please remember [locking] the door when you leave.', choices: ['to lock', 'lock', 'to locking', 'having locked'], answer: 0, why: 'これからすることなので remember to ～「わすれずに～する」。' },
+      { sentence: 'I will never forget [to visit] Kyoto for the first time.', choices: ['visiting', 'to have visit', 'visit', 'to visiting'], answer: 0, why: 'すでにしたことを「決してわすれない」ので forget ～ing。' },
+      { sentence: 'Don’t forget [calling] your mother tonight.', choices: ['to call', 'call', 'to calling', 'having called'], answer: 0, why: '今夜これからすることなので forget to ～。' },
+      { sentence: 'He stopped [to smoke] for his health.', choices: ['smoking', 'to smoking', 'smoke', 'smoked'], answer: 0, why: '健康のために「たばこをやめた」ので stop ～ing。stop to smoke は「たばこをすうために立ち止まる」。' },
+      { sentence: 'On the way home, she stopped [buying] some bread at the shop.', choices: ['to buy', 'buy', 'to buying', 'bought'], answer: 0, why: '「パンを買うために立ち寄った」ので stop to ～。' },
+      { sentence: 'I regret [to tell] her the secret yesterday.', choices: ['telling', 'to have tell', 'tell', 'to telling'], answer: 0, why: '昨日すでに話したことをくやんでいるので regret ～ing。' },
+      { sentence: 'We regret [informing] you that the flight has been canceled.', choices: ['to inform', 'inform', 'to informing', 'informed'], answer: 0, why: '「残念ながら～をお知らせします」は regret to inform。' },
+      { sentence: 'Do you remember [to see] this picture before?', choices: ['seeing', 'to seeing', 'see', 'to have see'], answer: 0, why: '以前に見たことをおぼえているかなので remember ～ing。' },
+      { sentence: 'The baby stopped [cry] when its mother picked it up.', choices: ['crying', 'to cry', 'cried', 'to crying'], answer: 0, why: '「泣きやんだ」は stop ～ing。stop to cry だと「泣くために手を止めた」になる。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
