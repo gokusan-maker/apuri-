@@ -39502,6 +39502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-taken-for-granted',
+    title: 'On Taking Things for Granted',
+    level: '難関大（評論）',
+    paragraphs: [
+      "There is a curious feature of human attention: the things we have every day are often the things we notice least. Clean water from the tap, a reliable electricity supply, the health of our bodies, and the presence of people who care for us usually fade into the background of awareness. We take them for granted, not because we do not value them, but because their constant presence makes them invisible. Only when they are interrupted, by illness, by disaster, or by loss, do we suddenly recognize how much they meant to us.",
+      "In some ways, this tendency is useful. A mind that paid equal attention to everything would be overwhelmed, unable to focus on new problems or opportunities. By allowing familiar things to become part of the background, we free our attention for what is changing or uncertain. Taking certain things for granted is therefore not simply a failure of gratitude but a necessary feature of how attention works, allowing us to live without constantly worrying about whether the floor will hold or the sun will rise.",
+      "Yet the same tendency has costs. ( A ) it helps us function efficiently, it can also make us careless toward the very things on which our lives depend. A person who takes a friend's support for granted may neglect the friendship until it weakens. A society that takes clean air or stable institutions for granted may fail to protect them until they are damaged. The invisibility that makes ordinary goods easy to live with also makes them easy to lose. In this sense, the habit of taking things for granted is both a gift and a danger.",
+      "Taking people for granted is perhaps the most painful form of this problem. Those closest to us, such as family members, partners, and old friends, are often the ones whose efforts we notice least. Their kindness becomes expected rather than appreciated, and their presence is assumed rather than celebrated. Many people who have lost someone dear to them describe, among their deepest regrets, the realization that they rarely expressed how much the person mattered while there was still time to do so.",
+      "How can we resist this tendency without exhausting ourselves? One approach is to cultivate occasional moments of deliberate attention. Pausing to notice the taste of a meal, the warmth of a home in winter, or the familiar voice of a friend can restore a sense of value to things that have become routine. Some people find that keeping a record of small things they are grateful for helps them to see their lives more clearly, not as a list of problems but as a web of supports they had stopped noticing.",
+      "Another approach is to imagine absence. Thinking, for a moment, about what life would be like without something we usually take for granted can make its value suddenly vivid. This is not a call to dwell on fear or loss, but a way of gently reminding ourselves that much of what we rely on is not guaranteed. Such reflection can encourage both appreciation and care, prompting us to protect what we have before it is threatened. People who have recovered from a serious illness often describe seeing ordinary days, for a time at least, as unexpectedly precious.",
+      "Perhaps the deepest lesson is that taking things for granted is not a failure to be eliminated but a balance to be managed. We cannot live in constant amazement at everything around us, nor should we. But we can learn to return, from time to time, to the ordinary goods of our lives with fresh eyes. In doing so, we may discover that much of what makes life worth living has been present all along, waiting quietly to be noticed.",
+    ],
+    ja: [
+      '人間の注意には奇妙な特徴がある。毎日もっているものほど、もっとも気づかないものであることが多いのである。蛇口から出るきれいな水や、たよれる電気の供給や、体の健康や、私たちを大切にしてくれる人々の存在は、ふつう意識の背景へとうすれていく。私たちはそれを当たり前だと思っている。それを大切にしていないからではなく、それがいつもあることで見えなくなるからである。病気や災害や喪失によってそれがさえぎられたときにだけ、私たちはそれがどれほど大切だったかにとつぜん気づく。',
+      'ある意味で、この傾向は役に立つ。すべてに等しく注意をはらう心は圧倒され、新しい問題や機会に集中できないだろう。なじみのものを背景の一部にすることで、私たちは変わりつつあるものや不確かなもののために注意を自由にする。そのため、あるものを当たり前だと思うことは、ただ感謝が足りないことではなく、注意の働き方に必要な特徴であり、ゆかがくずれないか、太陽がのぼるかをたえず心配せずに暮らせるようにしてくれる。',
+      'しかし同じ傾向には代価もある。それは私たちが効率よく暮らす助けになるが、暮らしがたよっているものそのものに対して不注意にさせることもある。友だちの支えを当たり前だと思う人は、友情が弱まるまでそれをおろそかにするかもしれない。きれいな空気や安定した制度を当たり前だと思う社会は、それがそこなわれるまで守らないかもしれない。ありふれたよいものをいっしょに暮らしやすくしている見えなさが、それを失いやすくもしているのである。この意味で、ものを当たり前だと思う習慣は、おくり物でもあり危険でもある。',
+      '人を当たり前だと思うことは、おそらくこの問題のもっともつらい形である。家族やパートナーや古い友だちのような、もっとも身近な人々こそ、その努力にもっとも気づかない相手であることが多い。彼らの親切は感謝されるのではなく期待されるようになり、その存在は祝われるのではなく当然と思われる。大切な人を失った多くの人は、もっとも深いくやみの一つとして、まだ時間があったときに、その人がどれほど大切かをめったに伝えなかったと気づいたことを語る。',
+      '自分をつかれさせることなく、この傾向にどうあらがえるだろうか。一つのやり方は、ときどき意識して注意を向ける瞬間を育てることである。食事の味や冬の家のあたたかさや友だちのなじみの声に気づくために立ち止まると、決まりきったものになったものに価値の感覚がもどることがある。感謝している小さなことを記録しておくと、自分の人生を、問題のリストとしてではなく、気づかなくなっていた支えの網としてよりはっきり見られるようになると感じる人もいる。',
+      'もう一つのやり方は、ないことを想像することである。ふだん当たり前だと思っているものがない暮らしがどんなものかを少し考えると、その価値がとつぜんあざやかになることがある。これはおそれや喪失について思いなやめということではなく、私たちがたよっているものの多くは約束されたものではないと、やさしく自分に思い出させる方法である。そうしたふり返りは、感謝と世話の両方をうながし、おびやかされる前に今あるものを守るよう私たちをうながしうる。大きな病気から回復した人々は、少なくともしばらくのあいだ、ふつうの日々を思いがけず貴重なものとして見るようになったとよく語る。',
+      'おそらくもっとも深い教えは、ものを当たり前だと思うことは取りのぞくべき失敗ではなく、うまく保つべきつりあいだということである。私たちはまわりのすべてにたえずおどろいて暮らすことはできないし、そうすべきでもない。しかし、ときどき新しい目で人生のありふれたよいものにもどることを学ぶことはできる。そうすることで、人生を生きる値打ちのあるものにしているものの多くが、ずっとそこにあり、気づかれるのを静かに待っていたことに気づくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「効率よく暮らす助けになるが、不注意にさせることもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '毎日もっているものほど、気づかないことが多い。', answer: true, why: '第1段落 the things we have every day are often the things we notice least。' },
+      { statement: '筆者によれば、すべてに等しく注意をはらうのがよい。', answer: false, why: '第2段落 A mind that paid equal attention to everything would be overwhelmed。' },
+      { statement: 'もっとも身近な人の努力ほど、気づかないことが多い。', answer: true, why: '第4段落 are often the ones whose efforts we notice least。' },
+      { statement: '筆者は、当たり前だと思うことは完全になくすべき失敗だと考えている。', answer: false, why: '第7段落 is not a failure to be eliminated but a balance to be managed。' },
+    ],
+    qa: [
+      { q: 'What can keeping a record of small things one is grateful for help with?', choices: ['Seeing life as a web of supports.', 'Making more money.', 'Forgetting problems forever.', 'Avoiding friends.'], answer: 0, why: '第5段落 as a web of supports they had stopped noticing。' },
+      { q: 'What does imagining absence do, according to the author?', choices: ['It makes the value of things suddenly vivid.', 'It makes people afraid forever.', 'It makes things disappear.', 'It wastes time.'], answer: 0, why: '第6段落 can make its value suddenly vivid。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
