@@ -37858,6 +37858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-circus-animals',
+    title: 'Should Wild Animals Perform in Circuses?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For more than two centuries, circuses have entertained audiences with performances by wild animals such as lions, tigers, elephants, and bears. For many people, these acts were among the most memorable parts of a childhood visit to the circus. In recent decades, however, a growing number of countries and cities have banned or restricted the use of wild animals in traveling shows, and the question of whether such performances should be allowed at all has become a subject of intense public debate, involving animal welfare groups, circus owners, scientists, and ordinary spectators.",
+      "Those who support bans argue that the conditions of circus life are fundamentally unsuitable for wild animals. Traveling circuses move frequently from place to place, and the animals often spend long periods in small cages or trailers, with little space to move and few opportunities to behave as they would in the wild. Elephants, which in nature may walk many kilometers a day and live in complex family groups, are particularly affected. Supporters of bans point to studies showing signs of stress and illness among circus animals, including repetitive movements that are rarely seen in the wild.",
+      "Supporters also question the methods used to train animals for performances. Teaching a tiger to jump through a ring or an elephant to stand on its back legs requires a great deal of control, and critics claim that such training has sometimes involved fear or physical punishment. ( A ) some trainers insist that they use only rewards and treat their animals with affection, supporters of bans argue that it is impossible to check every circus effectively, and that the risk of cruelty is too great to accept for the sake of entertainment.",
+      "Opponents of bans, however, argue that well-run circuses can provide good care for their animals. They point out that many circus animals have been born and raised in captivity and have never known life in the wild, and that experienced keepers often develop close relationships with them. Opponents also argue that the problems identified by critics are not unique to circuses but can also be found in some zoos and private collections, and that it is unfair to single out one type of institution rather than improving standards for all.",
+      "Opponents also emphasize the cultural and economic importance of the circus. For many families who have worked in circuses for generations, animal acts are part of a tradition they are proud to preserve. Banning such acts, opponents argue, would threaten the livelihoods of performers and keepers, and might leave animals without suitable homes if circuses were forced to give them up. In some cases, animals removed from circuses have had to be cared for in sanctuaries at considerable public expense, raising questions about who should bear the cost of change.",
+      "Meanwhile, many circuses have adapted to changing attitudes by abandoning animal acts altogether. Some of the most successful modern circuses rely entirely on human performers, combining acrobatics, music, and theater to create spectacular shows. Their popularity suggests that audiences do not necessarily need animals in order to enjoy the circus, and that the art form can survive and even flourish without them. Some supporters of bans see this development as evidence that legislation is simply accelerating a change that the public already wants.",
+      "The debate over wild animals in circuses reflects a broader shift in how many societies view the relationship between humans and other animals. Practices that once seemed natural forms of entertainment are increasingly examined in light of what is known about animals' needs and capacity for suffering. Whatever decisions are made about circuses, the discussion encourages people to consider what kinds of pleasure can be justified when they depend on the lives of other creatures, and how traditions can be preserved while adapting to new moral understanding.",
+    ],
+    ja: [
+      '二百年以上のあいだ、サーカスはライオンやトラやゾウやクマのような野生動物の芸で観客を楽しませてきた。多くの人々にとって、こうした芸は子どものころのサーカス見物でもっとも思い出に残る部分の一つだった。しかしここ数十年で、移動する見世物での野生動物の使用を禁止したり制限したりする国や都市がふえ、そうした芸をそもそも認めるべきかという問題は、動物福祉の団体やサーカスの持ち主や科学者やふつうの観客をまきこむ、はげしい公の議論の的になっている。',
+      '禁止を支持する人々は、サーカスの暮らしの条件は野生動物には根本的に合わないと主張する。移動サーカスはしょっちゅう場所を移り、動物はしばしば小さなおりやトレーラーの中で長い時間をすごし、動く場所はほとんどなく、野生でするようにふるまう機会もわずかである。自然の中では一日に何キロも歩き、複雑な家族の群れで暮らすゾウは、とくに影響を受ける。禁止を支持する人々は、サーカスの動物に、野生ではめったに見られないくり返しの動きをふくむ、ストレスや病気のしるしが見られることを示す研究をあげる。',
+      '支持する人々はまた、芸のために動物を訓練する方法を疑問視する。トラに輪をくぐらせたり、ゾウに後ろ足で立たせたりするには大きな管理が必要であり、そうした訓練はときにおそれや体罰をともなってきたと批判する人々は主張する。ほうびだけを使い、愛情をもって動物に接していると言いはる訓練士もいるが、すべてのサーカスを効果的に調べるのは不可能であり、娯楽のために残酷な行為の危険を受け入れるには大きすぎると禁止を支持する人々は主張する。',
+      'しかし禁止に反対する人々は、よく運営されたサーカスは動物をよく世話できると主張する。サーカスの動物の多くは飼育下で生まれ育ち、野生の暮らしを一度も知らず、経験ある飼育係はしばしば動物と親しい関係を築くと彼らは指摘する。反対する人々はまた、批判する人々が指摘する問題はサーカスだけのものではなく、一部の動物園や個人のコレクションにも見られるものであり、すべての水準を上げるのではなく、ある一つの種類の施設だけを取りあげるのは不公平だと主張する。',
+      '反対する人々はまた、サーカスの文化的・経済的な大切さを強調する。何世代にもわたってサーカスで働いてきた多くの家族にとって、動物の芸は守ることをほこりに思う伝統の一部である。そうした芸を禁止すれば、演者や飼育係の暮らしがおびやかされ、サーカスが動物を手ばなさざるをえなくなった場合、動物はふさわしい住まいを失うかもしれないと反対する人々は主張する。サーカスから引き取られた動物が、かなりの公的な費用で保護施設で世話されなければならなかった例もあり、変化の費用をだれが負うべきかという問題を投げかけている。',
+      'そのあいだに、多くのサーカスは、動物の芸をすっかりやめることで、変わりつつある考え方に合わせてきた。現代のもっとも成功したサーカスのいくつかは、人間の演者だけにたより、曲芸や音楽や演劇を組み合わせて見事なショーを作っている。その人気は、観客がサーカスを楽しむのに必ずしも動物を必要としないこと、そしてこの芸術の形が動物なしでも生き残り、さらにはさかえうることを示している。禁止を支持する人々のなかには、この展開を、法律が人々のすでに望む変化を速めているだけだという証拠と見る人もいる。',
+      'サーカスの野生動物をめぐる議論は、多くの社会が人間とほかの動物との関係をどう見るかについての、より広い変化を反映している。かつては自然な娯楽の形に思えたならわしが、動物の必要や苦しむ力について知られていることに照らして、ますます見直されている。サーカスについてどんな決定がなされるにせよ、この議論は人々に、ほかの生き物の命にたよるとき、どんな種類の楽しみなら正当化できるのか、そして新しい道徳的な理解に合わせながら、どう伝統を守れるのかを考えるようにうながしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ほうびだけを使うと言う訓練士もいるが、調べるのは不可能だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of bans argue that circus life is unsuitable for wild animals and that training may involve ( 1 ). Opponents argue that well-run circuses can care for animals and that bans would threaten ( 2 ). Many modern circuses now rely entirely on ( 3 ) performers.',
+      blanks: [
+        { choices: ['cruelty', 'music', 'travel', 'science'], answer: 0, why: '第3段落 the risk of cruelty is too great to accept。' },
+        { choices: ['livelihoods', 'forests', 'schools', 'elections'], answer: 0, why: '第5段落 would threaten the livelihoods of performers and keepers。' },
+        { choices: ['human', 'robot', 'animal', 'child'], answer: 0, why: '第6段落 rely entirely on human performers。' },
+      ],
+    },
+    tf: [
+      { statement: '自然の中のゾウは、一日に何キロも歩くことがある。', answer: true, why: '第2段落 may walk many kilometers a day。' },
+      { statement: 'サーカスの動物の多くは、野生で生まれ育った。', answer: false, why: '第4段落 many circus animals have been born and raised in captivity。' },
+      { statement: 'サーカスから引き取られた動物の世話に、公的な費用がかかった例がある。', answer: true, why: '第5段落 cared for in sanctuaries at considerable public expense。' },
+      { statement: '人間の演者だけのサーカスは、まったく人気がない。', answer: false, why: '第6段落 Their popularity suggests that audiences do not necessarily need animals。' },
+    ],
+    qa: [
+      { q: 'What do opponents say about problems identified by critics?', choices: ['They can also be found in some zoos and private collections.', 'They exist only in circuses.', 'They have all been solved.', 'They are caused by audiences.'], answer: 0, why: '第4段落 can also be found in some zoos and private collections。' },
+      { q: 'How do some supporters of bans view the success of animal-free circuses?', choices: ['As evidence that the public already wants change.', 'As a temporary trend.', 'As a reason to bring animals back.', 'As proof that circuses will disappear.'], answer: 0, why: '第6段落 accelerating a change that the public already wants。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
