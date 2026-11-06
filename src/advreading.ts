@@ -38258,6 +38258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tenure',
+    title: 'Should Professors Have Jobs for Life?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, university professors who have passed a period of evaluation are granted tenure, a form of job security that makes it very difficult for their institutions to dismiss them. Tenure was developed in the early twentieth century to protect academic freedom, allowing scholars to pursue unpopular research and express controversial ideas without fear of losing their positions. In recent decades, however, the system has come under increasing criticism, and some universities have reduced the number of tenured positions, relying instead on teachers employed on short-term contracts. Whether tenure should be preserved has become a subject of lively debate.",
+      "Supporters of tenure argue that it remains essential to the freedom of inquiry on which universities depend. Research that challenges powerful interests, questions widely accepted beliefs, or takes many years to produce results is vulnerable to pressure from governments, donors, and university administrators. Without the protection of tenure, supporters claim, scholars might avoid such research and limit themselves to safe and fashionable topics. In their view, the long-term value of independent thought justifies the occasional cost of protecting individuals who prove less productive.",
+      "Supporters also point out that tenure helps universities attract talented people. Academic careers often require many years of study and relatively low pay in the early stages, and the prospect of eventual security makes such careers more attractive to capable students who might otherwise choose more lucrative professions. ( A ) the system were abolished, supporters warn, universities might struggle to recruit and retain the best scholars, particularly in fields where private companies offer far higher salaries. Tenure, in this sense, compensates for years of uncertainty and modest pay with the promise of stability later in life.",
+      "Critics, however, argue that tenure protects poor performance as well as academic freedom. Once professors have tenure, critics claim, some lose their motivation to teach well or to continue productive research, knowing that they are unlikely to be dismissed. This can be unfair to students, who pay for their education, and to younger scholars, who may be unable to find permanent positions because older colleagues occupy them for decades. In this view, a system designed to encourage bold thinking has in some cases become a shelter for complacency.",
+      "Critics also note that the decline of tenure has already transformed universities in ways that its defenders often overlook. In many countries, a growing proportion of teaching is now done by staff on temporary contracts, who receive lower pay, fewer benefits, and little protection of their own academic freedom. Some critics argue that the real problem is not tenure itself but the division it creates between a protected minority and an insecure majority, and that reform should aim at fairer conditions for all academic staff.",
+      "Proposals for reform vary widely. Some suggest replacing permanent tenure with long renewable contracts, under which professors would be reviewed every several years but could not be dismissed for the content of their research. Others propose keeping tenure while strengthening regular evaluations of teaching and research, so that the protection it offers is linked to continued contribution. Still others argue that academic freedom should be protected by law and institutional policy rather than by the employment status of individual scholars. Each of these proposals has its own supporters and critics.",
+      "The debate over tenure ultimately concerns what kind of institutions societies want universities to be. If universities are expected to serve the immediate needs of the economy, flexible employment may seem appropriate. If, however, they are valued as places where knowledge is pursued for its own sake and where uncomfortable truths can be spoken, some form of protection for scholars will remain important. The challenge is to design that protection in a way that preserves freedom without excusing indifference, and that treats all who teach and research with fairness.",
+    ],
+    ja: [
+      '多くの国で、評価の期間を通った大学の教授には「テニュア（終身在職権）」があたえられる。これは大学が教授を解雇するのをとてもむずかしくする、仕事の安定の一つの形である。テニュアは二十世紀の初めに学問の自由を守るために作られ、学者が地位を失うおそれなしに、人気のない研究を進め、論争をまねく考えを表せるようにした。しかしここ数十年、この制度はますます批判を受けるようになり、テニュアのある職の数をへらし、かわりに短期の契約でやとわれる教員にたよる大学も出てきた。テニュアを守るべきかどうかは、活発な議論の的になっている。',
+      'テニュアを支持する人々は、それは大学がたよる探究の自由に今も欠かせないと主張する。権力のある利益に異をとなえたり、広く受け入れられた信念を疑ったり、結果を出すのに何年もかかったりする研究は、政府や寄付者や大学の運営者からの圧力に弱い。テニュアの守りがなければ、学者はそうした研究をさけ、安全で流行の話題に自分を限ってしまうかもしれないと支持する人々は主張する。彼らの見方では、独立した思考の長期的な価値は、生産性の低いとわかった人を守るというときどきの費用を正当化する。',
+      '支持する人々はまた、テニュアは大学が才能ある人を引きつける助けになると指摘する。研究者の道は、多くの場合、何年もの勉強と、初めのうちは比較的低い給料を必要とし、いずれ安定が得られる見こみが、そうでなければもっともうかる職業を選ぶかもしれない有能な学生にとって、その道をより魅力的にする。制度がなくなれば、とくに民間企業がはるかに高い給料を出す分野で、大学はもっともすぐれた学者をやとい、引きとめるのに苦労するかもしれないと支持する人々は警告する。この意味でテニュアは、何年もの不確かさとつつましい給料を、のちの人生の安定という約束でうめ合わせている。',
+      'しかし批判する人々は、テニュアは学問の自由だけでなく、よくない働きぶりも守っていると主張する。教授がいったんテニュアを得ると、解雇されそうにないとわかって、よく教えたり生産的な研究を続けたりする意欲を失う人もいると批判する人々は主張する。これは教育にお金をはらう学生や、年上の同僚が何十年もその職をしめているために常勤の職を見つけられないかもしれない若い学者にとって不公平でありうる。この見方では、大胆な思考をうながすために作られた制度が、場合によっては、ぬるま湯の避難所になってしまった。',
+      '批判する人々はまた、テニュアがへっていることが、擁護する人々がしばしば見落とすやり方で、すでに大学を変えていると指摘する。多くの国で、今では教える仕事のふえ続ける割合が、低い給料と少ない手当で、自分の学問の自由もほとんど守られていない一時的な契約の職員によって行われている。本当の問題はテニュアそのものではなく、それが生む、守られた少数と不安定な多数のあいだの分断であり、改革はすべての教員のより公平な条件を目指すべきだと主張する批判者もいる。',
+      '改革の提案はさまざまである。永久のテニュアを長い更新可能な契約に置きかえ、教授は数年ごとに評価されるが、研究の中身を理由に解雇されることはないようにする案もある。テニュアを残しつつ、教育と研究の定期的な評価を強め、それがあたえる守りを貢献を続けることと結びつける案もある。さらに、学問の自由は、個々の学者の雇用の身分ではなく、法律や大学の方針によって守られるべきだと主張する人もいる。こうした提案のどれにも、それぞれ支持する人と批判する人がいる。',
+      'テニュアをめぐる議論は、結局、社会が大学にどんな機関であってほしいかにかかわっている。大学が経済の目の前の必要に役立つことを期待されるなら、柔軟な雇用がふさわしく思えるかもしれない。しかし、大学が知識をそれ自体のために追い求め、居心地の悪い真実を語れる場所として大切にされるなら、学者のための何らかの守りは大切であり続けるだろう。課題は、無関心を言いわけにすることなく自由を守り、教え研究するすべての人を公平にあつかうやり方で、その守りを作ることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「制度がなくなれば、大学はすぐれた学者をやとうのに苦労する」という条件なので If。' },
+    ],
+    summary: {
+      text: 'Supporters argue that tenure protects academic ( 1 ) and helps universities attract talented people. Critics argue that it can protect poor performance and creates a division with staff on temporary ( 2 ). Some propose replacing tenure with long renewable contracts or protecting freedom by ( 3 ).',
+      blanks: [
+        { choices: ['freedom', 'buildings', 'salaries', 'sports'], answer: 0, why: '第1段落 to protect academic freedom。' },
+        { choices: ['contracts', 'holidays', 'projects', 'visits'], answer: 0, why: '第5段落 staff on temporary contracts。' },
+        { choices: ['law', 'luck', 'force', 'vote'], answer: 0, why: '第6段落 academic freedom should be protected by law and institutional policy。' },
+      ],
+    },
+    tf: [
+      { statement: 'テニュアは、学問の自由を守るために作られた。', answer: true, why: '第1段落 was developed ... to protect academic freedom。' },
+      { statement: '研究者の道は、初めのうちから給料がとても高い。', answer: false, why: '第3段落 relatively low pay in the early stages。' },
+      { statement: '多くの国で、教える仕事の多くが一時的な契約の職員によって行われている。', answer: true, why: '第5段落 a growing proportion of teaching is now done by staff on temporary contracts。' },
+      { statement: '筆者は、学者を守る必要はまったくないと結論づけている。', answer: false, why: '第7段落 some form of protection for scholars will remain important。' },
+    ],
+    qa: [
+      { q: 'Why might younger scholars be unable to find permanent positions?', choices: ['Older colleagues occupy them for decades.', 'They do not want them.', 'Universities have no money at all.', 'Students refuse to study.'], answer: 0, why: '第4段落 because older colleagues occupy them for decades。' },
+      { q: 'What would professors under renewable contracts not be dismissed for?', choices: ['The content of their research.', 'Missing every class.', 'Breaking the law.', 'Leaving the university.'], answer: 0, why: '第6段落 could not be dismissed for the content of their research。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
