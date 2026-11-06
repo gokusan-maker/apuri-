@@ -38222,6 +38222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-busyness',
+    title: 'On Being Busy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Ask people how they are, and many will answer that they are busy. The reply is so common that it has almost replaced older greetings, and it is often spoken with a mixture of complaint and pride. To be busy is to be in demand, to have responsibilities, and to be engaged with the world. Yet the constant claim of busyness raises a question worth considering: what exactly are we so busy with, and does our busyness reflect the richness of our lives or something less admirable?",
+      "Part of the explanation lies in the changing nature of work and communication. Many people now carry devices that keep them connected to their jobs, their friends, and the news at every hour of the day. Tasks that once ended when one left the office can now follow one home, and the boundary between work and leisure has become harder to maintain. In such conditions, the feeling of being busy may arise not only from the amount we do but from the sense that we are never entirely free from obligation.",
+      "Busyness can also serve purposes that have little to do with productivity. ( A ) being busy is often presented as a burden, it can offer a kind of protection. A full schedule leaves little time for difficult questions about whether we are living as we wish, and it can provide an excuse for avoiding conversations, relationships, or tasks that we find uncomfortable. In this sense, busyness may sometimes be less a sign of a full life than a way of escaping from it.",
+      "There is also a social dimension to the value placed on busyness. In some cultures, being visibly busy has become a sign of status, suggesting that one's time is valuable and one's skills are needed. Leisure, which in earlier societies was often the privilege of the wealthy, may now be regarded with suspicion, as if a person with free time must be lacking in ambition or importance. The result can be a quiet competition in which people present themselves as busier than they actually are. Asked how they are, they reply that they are busy, and the answer becomes a kind of badge rather than a description.",
+      "Yet it would be unfair to dismiss all busyness as empty. Some people are busy because they are caring for children or elderly parents, working several jobs to support their families, or devoting themselves to projects they believe in. For them, busyness is not a pose but a necessity or a sincere commitment. The question is not whether we should never be busy, but whether our busyness is chosen with care and directed toward things we genuinely value.",
+      "One way of answering this question is to notice what busyness crowds out. When every hour is filled, there is little room for the kinds of experience that cannot be scheduled: an unhurried conversation, a walk without destination, a moment of quiet reflection. These experiences may seem unproductive, yet they are often the source of insight, friendship, and a sense of meaning. A life without them may be full of activity but strangely empty of the very things that make activity worthwhile.",
+      "Perhaps, then, the wisest response to busyness is not to reject it but to examine it. By asking what our busyness is for, we may discover that some of it is essential, some of it is habit, and some of it is a way of avoiding ourselves. Letting go of the last two kinds would not make us idle; it would free time and attention for what truly matters. To be less busy, in this sense, is not to do less with our lives, but to do more of what deserves to be done.",
+    ],
+    ja: [
+      '人にどうしているかとたずねると、多くの人は「いそがしい」と答える。その返事はあまりにありふれているので、古いあいさつにほとんど取ってかわり、しばしば不満とほこりのまじった調子で口にされる。いそがしいとは、必要とされ、責任をもち、世界とかかわっていることである。しかし、たえず「いそがしい」と言うことは、考える値打ちのある問いを投げかける。私たちはいったい何でそんなにいそがしいのか、そして私たちのいそがしさは人生の豊かさを反映しているのか、それとももっとほめられないものを反映しているのか。',
+      'その説明の一部は、仕事とコミュニケーションの性質の変化にある。今では多くの人が、一日のあらゆる時間に、仕事や友だちやニュースとつながり続ける機器を持ち歩いている。かつては会社を出れば終わった仕事が今では家までついてくることがあり、仕事と余暇の境目を保つのはむずかしくなった。そうした条件では、いそがしいという気持ちは、することの量だけでなく、義務から決して完全には自由になれないという感じからも生まれるのかもしれない。',
+      'いそがしさはまた、生産性とはほとんど関係のない目的に役立つこともある。いそがしいことはしばしば重荷として示されるが、それは一種の守りをあたえることがある。予定がいっぱいだと、自分が望むように生きているかどうかというむずかしい問いのための時間がほとんど残らず、居心地の悪い会話や人間関係や仕事をさける言いわけにもなりうる。この意味で、いそがしさは、ときに充実した人生のしるしというより、人生からにげる方法であるのかもしれない。',
+      'いそがしさにおかれる価値には、社会的な面もある。ある文化では、目に見えていそがしいことが地位のしるしになり、その人の時間は貴重で、その技能が必要とされていることを示している。かつての社会ではしばしば裕福な人の特権だった余暇が、今では、自由な時間のある人は野心や大切さに欠けているにちがいないかのように、うたがいの目で見られるかもしれない。その結果、人々が実際よりもいそがしいように自分を見せる、静かな競争が生まれることがある。どうしているかとたずねられると、いそがしいと答え、その答えは説明というより一種のバッジになるのである。',
+      'しかし、すべてのいそがしさを中身のないものとして片づけるのは不公平だろう。子どもや年老いた親の世話をしていたり、家族を支えるためにいくつもの仕事をしていたり、信じる取り組みに身をささげていたりするためにいそがしい人もいる。彼らにとって、いそがしさは見せかけではなく、必要か、心からのかかわりである。問題は、決していそがしくなるべきではないかどうかではなく、私たちのいそがしさが注意深く選ばれ、本当に大切にするものに向けられているかどうかである。',
+      'この問いに答える一つの方法は、いそがしさが何をおしのけているかに気づくことである。すべての時間がうまっていると、予定に組みこめない種類の経験、つまり急がない会話や、行き先のない散歩や、静かにふり返るひとときのための余地がほとんどなくなる。こうした経験は生産的でないように思えるかもしれないが、しばしば気づきや友情や意味の感覚のみなもとである。それらのない人生は、活動にはあふれていても、活動を値打ちあるものにするまさにそのものが、奇妙なほど欠けているかもしれない。',
+      'そうするとおそらく、いそがしさへのもっとも賢いこたえ方は、それをこばむことではなく、それを見つめ直すことである。自分のいそがしさが何のためなのかを問うことで、その一部は欠かせないもので、一部は習慣で、一部は自分自身からにげる方法だとわかるかもしれない。あとの二つの種類を手ばなしても、私たちはなまけ者にはならない。本当に大切なことのために時間と注意が自由になるのである。この意味で、いそがしさをへらすことは、人生ですることをへらすことではなく、されるに値することをより多くすることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「いそがしいことは重荷として示されるが、守りをあたえることがある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '「いそがしい」という返事は、しばしば不満とほこりのまじった調子で言われる。', answer: true, why: '第1段落 often spoken with a mixture of complaint and pride。' },
+      { statement: '筆者によれば、仕事と余暇の境目は保ちやすくなった。', answer: false, why: '第2段落 the boundary between work and leisure has become harder to maintain。' },
+      { statement: '家族の世話のために、いそがしい人もいる。', answer: true, why: '第5段落 caring for children or elderly parents。' },
+      { statement: '筆者は、いそがしさをすべてこばむべきだと考えている。', answer: false, why: '第7段落 not to reject it but to examine it。' },
+    ],
+    qa: [
+      { q: 'How might busyness serve as protection?', choices: ['It leaves little time for difficult questions about how we live.', 'It makes people richer.', 'It improves health.', 'It prevents all mistakes.'], answer: 0, why: '第3段落 A full schedule leaves little time for difficult questions。' },
+      { q: 'What kinds of experience does busyness crowd out?', choices: ['Unhurried conversations and quiet reflection.', 'Meetings and deadlines.', 'Shopping and errands.', 'Emails and phone calls.'], answer: 0, why: '第6段落 an unhurried conversation, a walk without destination, a moment of quiet reflection。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
