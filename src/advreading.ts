@@ -38658,6 +38658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-vaping',
+    title: 'Should Electronic Cigarettes Be Banned?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Electronic cigarettes, which heat a liquid containing nicotine and flavorings to produce a vapor that users inhale, were originally promoted as a way to help smokers give up traditional cigarettes. In recent years, however, their use has spread rapidly among teenagers and young adults, many of whom had never smoked before. Brightly colored devices with sweet flavors such as fruit or candy have become common in schools in several countries, and governments are now debating whether to restrict or ban them. The question has divided health experts, who agree about some risks but disagree about the best response.",
+      "Supporters of strict restrictions argue that e-cigarettes are creating a new generation of nicotine users. Nicotine is highly addictive, and the developing brains of adolescents may be particularly vulnerable to its effects on attention, mood, and learning. Supporters point out that many young users begin vaping without understanding how much nicotine the devices contain, and that some later move on to smoking traditional cigarettes. In their view, the attractive designs and flavors of many products are deliberately aimed at young people, and regulations should remove these features from the market.",
+      "Supporters also note that the long-term health effects of vaping remain uncertain. Although e-cigarettes do not produce the tar and many of the toxic substances found in tobacco smoke, they still expose users to chemicals whose effects over decades are not yet known. ( A ) the evidence is still developing, supporters argue, it would be unwise to allow a product to become widespread among young people before its safety has been properly established. Some also mention the environmental problems caused by disposable devices, which contain batteries and plastic that are often thrown away carelessly.",
+      "Opponents of broad bans, however, emphasize that e-cigarettes can help adult smokers to quit. Traditional cigarettes are among the leading causes of preventable death in the world, and many smokers who have failed to quit by other methods have succeeded by switching to vaping. Studies in several countries have found that e-cigarettes are, on average, considerably less harmful than smoking, and some health authorities have even recommended them as a tool for reducing the damage caused by tobacco. Banning them, opponents warn, could push former smokers back to cigarettes.",
+      "Opponents also argue that bans may simply create illegal markets. If e-cigarettes were prohibited, they claim, young people who want them would still find ways to obtain them, but the products would be unregulated, with no controls on their ingredients or nicotine content. A more effective approach, opponents suggest, would be to enforce existing age limits strictly, restrict advertising aimed at young people, and limit flavors that appeal mainly to children, while keeping the products available to adults who use them to stop smoking.",
+      "Many governments have adopted policies that attempt to balance these concerns. Some have banned disposable devices or certain flavors while allowing refillable products to be sold to adults. Others have raised taxes on e-cigarettes, required plain packaging, or limited the amount of nicotine that a product may contain. Evidence about which approaches work best is still emerging, and policies continue to change as researchers learn more about patterns of use among young people and adults.",
+      "The debate over e-cigarettes illustrates a common difficulty in public health: a product that may reduce harm for one group can create new risks for another. Policies that focus only on protecting young people may make it harder for smokers to quit, while policies that focus only on helping smokers may allow the product to spread among teenagers. Finding a balance requires careful attention to evidence, a willingness to adjust rules as new information becomes available, and a clear sense of which risks society is most determined to reduce.",
+    ],
+    ja: [
+      '電子たばこは、ニコチンと香料をふくむ液体を熱して、使う人が吸いこむ蒸気を作るもので、もともとは喫煙者がふつうのたばこをやめるのを助ける方法として宣伝された。しかし近年、その使用は十代や若い大人のあいだで急速に広がっており、その多くはそれまでたばこをすったことがなかった。果物やあめのようなあまい香りのする色あざやかな機器は、いくつかの国で学校でもありふれたものになり、今では政府がそれを制限するか禁止するかを議論している。この問題は、いくつかの危険については意見が一致しても、もっともよい対応については意見が分かれる健康の専門家たちを分けている。',
+      'きびしい制限を支持する人々は、電子たばこがニコチンを使う新しい世代を生み出していると主張する。ニコチンはとても依存性が高く、十代の育ちつつある脳は、集中力や気分や学習へのその影響にとくに弱いかもしれない。多くの若い使用者は機器にどれほどのニコチンがふくまれているかを理解せずに使いはじめ、のちにふつうのたばこをすうようになる人もいると支持する人々は指摘する。彼らの見方では、多くの製品の魅力的なデザインや香りは意図して若者に向けられており、規制はこうした特徴を市場から取りのぞくべきである。',
+      '支持する人々はまた、電子たばこの長期的な健康への影響はまだ不確かだと指摘する。電子たばこは、たばこのけむりにふくまれるタールや多くの有毒物質を出さないが、何十年にもわたる影響がまだわかっていない化学物質に使う人をさらしている。証拠はまだ集まりつつあるところだが、安全がきちんと確かめられる前に、ある製品が若者のあいだで広まるのを許すのは賢くないだろうと支持する人々は主張する。使いすての機器が引き起こす環境の問題にふれる人もいる。それには電池やプラスチックがふくまれ、しばしば不注意に捨てられているのである。',
+      'しかし広い禁止に反対する人々は、電子たばこは大人の喫煙者がたばこをやめる助けになりうると強調する。ふつうのたばこは世界でふせげる死のおもな原因の一つであり、ほかの方法でやめられなかった多くの喫煙者が、電子たばこに切りかえることでやめることに成功してきた。いくつかの国の研究では、電子たばこは平均して喫煙よりかなり害が少ないことがわかっており、たばこによる害をへらす道具としてそれをすすめた健康の当局さえある。禁止すれば、たばこをやめた人を元にもどしてしまうかもしれないと反対する人々は警告する。',
+      '反対する人々はまた、禁止はただ違法な市場を生むだけかもしれないと主張する。電子たばこが禁じられても、ほしい若者はやはり手に入れる方法を見つけるが、製品は規制されず、成分やニコチンの量に何の管理もなくなるだろうと彼らは主張する。より効果的なやり方は、今ある年齢の制限をきびしく守らせ、若者向けの広告を制限し、おもに子どもを引きつける香りを限りながら、たばこをやめるために使う大人には製品を手に入れられるようにしておくことだと反対する人々は示す。',
+      '多くの政府は、こうした心配のつりあいをとろうとする方針をとってきた。使いすての機器やある種の香りを禁止しつつ、つめかえ式の製品は大人に売ることを認めたところもある。電子たばこへの税金を上げたり、ロゴのない包装を義務づけたり、製品がふくめるニコチンの量を限ったりしたところもある。どのやり方がもっともよく働くかについての証拠はまだ現れつつあるところで、研究者が若者や大人の使い方についてより多くを知るにつれて、方針は変わり続けている。',
+      '電子たばこをめぐる議論は、公衆衛生でよくあるむずかしさを示している。ある集団には害をへらすかもしれない製品が、別の集団には新しい危険を生むことがあるのである。若者を守ることだけに目を向けた方針は喫煙者がやめるのをむずかしくするかもしれず、喫煙者を助けることだけに目を向けた方針は、製品が十代のあいだに広がるのを許すかもしれない。つりあいを見つけるには、証拠への注意深い目と、新しい情報が手に入ったら規則を見直す意志と、社会がどの危険をもっともへらしたいのかについてのはっきりした考えが必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「証拠はまだ集まりつつあるが、広まるのを許すのは賢くない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions argue that e-cigarettes create a new generation of ( 1 ) users and that their long-term effects are uncertain. Opponents argue that they can help adult smokers to ( 2 ) and that bans may create illegal markets. Many governments have banned ( 3 ) devices or certain flavors.',
+      blanks: [
+        { choices: ['nicotine', 'sugar', 'coffee', 'water'], answer: 0, why: '第2段落 creating a new generation of nicotine users。' },
+        { choices: ['quit', 'start', 'travel', 'study'], answer: 0, why: '第4段落 e-cigarettes can help adult smokers to quit。' },
+        { choices: ['disposable', 'expensive', 'foreign', 'ancient'], answer: 0, why: '第6段落 Some have banned disposable devices or certain flavors。' },
+      ],
+    },
+    tf: [
+      { statement: '電子たばこの若い使用者の多くは、それまでたばこをすったことがなかった。', answer: true, why: '第1段落 many of whom had never smoked before。' },
+      { statement: '電子たばこの長期的な健康への影響は、すでによくわかっている。', answer: false, why: '第3段落 the long-term health effects of vaping remain uncertain。' },
+      { statement: '電子たばこは平均して喫煙よりかなり害が少ないという研究がある。', answer: true, why: '第4段落 considerably less harmful than smoking。' },
+      { statement: 'どのやり方がもっともよく働くかは、すでにはっきりしている。', answer: false, why: '第6段落 Evidence about which approaches work best is still emerging。' },
+    ],
+    qa: [
+      { q: 'Why might adolescents be particularly vulnerable to nicotine?', choices: ['Their brains are still developing.', 'They are taller than adults.', 'They sleep too much.', 'They prefer sweets.'], answer: 0, why: '第2段落 the developing brains of adolescents may be particularly vulnerable。' },
+      { q: 'What do opponents suggest instead of a ban?', choices: ['Strict age limits and restrictions on advertising and flavors.', 'Free devices for everyone.', 'Higher prices for vegetables.', 'More cigarette shops.'], answer: 0, why: '第5段落 enforce existing age limits strictly, restrict advertising ... and limit flavors。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
