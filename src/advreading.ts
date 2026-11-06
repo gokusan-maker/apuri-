@@ -38898,6 +38898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-lawns',
+    title: 'Should Lawns Give Way to Wildflowers?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many suburbs around the world, neatly trimmed green lawns have long been regarded as a symbol of a well-kept home. Maintaining them, however, requires considerable resources: regular mowing, large amounts of water, and often fertilizers and chemicals to control weeds and pests. In recent years, some cities facing water shortages or concerned about declining wildlife have begun to encourage, or even require, residents to replace parts of their lawns with native plants, wildflowers, or other forms of vegetation. Such policies have provoked surprisingly strong reactions from homeowners. The lawn, it turns out, is not merely a matter of grass but of identity and habit.",
+      "Supporters of these policies argue that traditional lawns are an inefficient use of land and water. In dry regions, watering lawns can account for a large share of household water consumption, even as rivers and reservoirs run low. Lawns also offer little food or shelter for insects and birds, since they usually consist of a single type of grass that is cut before it can flower. Replacing them with diverse native plants, supporters claim, can support pollinators, reduce water use, and create gardens that are better suited to the local climate.",
+      "Supporters further note that the cost of maintaining lawns extends beyond individual households. Gas-powered mowers and leaf blowers contribute to air pollution and noise, while fertilizers can wash into rivers and harm aquatic life. ( A ) each lawn may seem small, supporters argue, together they cover vast areas of land, and changing how they are managed could have significant benefits for the environment as a whole. Some cities have offered payments or advice to residents who agree to convert their lawns, making the change easier to adopt.",
+      "Opponents, however, argue that decisions about private gardens should be left to homeowners. A garden, they claim, is an expression of personal taste, and many people simply prefer the appearance of a green lawn or value it as a safe place for children to play. Requiring residents to change their gardens, opponents argue, would be an unreasonable intrusion into private life, especially when the environmental benefits of a single garden are small. Some also worry that untidy-looking gardens could lead to disputes between neighbors or lower property values.",
+      "Opponents also question whether wildflower gardens are always as beneficial as claimed. Converting a lawn successfully requires knowledge, effort, and sometimes considerable expense, and poorly planned plantings may fail or become dominated by weeds. In some areas, allowing vegetation to grow tall may increase the risk of fire or attract unwanted pests. Opponents argue that rather than imposing a single solution, cities should provide information and incentives and allow residents to choose the approach that best fits their circumstances.",
+      "In practice, many communities have found ways to combine these perspectives. Some encourage residents to keep a small area of lawn for play while converting the rest to native plants. Others have changed local rules that previously required lawns to be kept short, allowing residents who wish to create wildflower gardens to do so without penalty. Campaigns that invite people to leave parts of their gardens uncut for a single month in spring have also become popular in several countries. Participants are often surprised by how many flowers and insects appear in just a few weeks.",
+      "The debate over lawns may seem minor compared with other environmental issues, but it reveals how deeply ideas of order and beauty are tied to habit and culture. What one generation regards as a neat and respectable garden may come to seem wasteful to the next. As concerns about water, wildlife, and climate grow, the humble lawn may become a test of how societies balance personal preference with shared responsibility for the land and for the creatures with which we share it.",
+    ],
+    ja: [
+      '世界中の多くの郊外で、きちんと刈りこまれた緑のしばふは、長く手入れの行き届いた家のしるしと見なされてきた。しかしそれを保つには、定期的なしば刈りや大量の水や、しばしば雑草や害虫をおさえるための肥料や化学物質など、かなりの資源が必要である。近年、水不足に直面したり野生生物の減少を心配したりする都市のなかに、住民にしばふの一部をその土地の植物や野の花やほかの種類の植物に置きかえるようすすめたり、義務づけさえしたりするところが出てきた。そうした方針は、家の持ち主から意外なほど強い反応を引き起こしている。しばふは、ただ草の問題ではなく、自分らしさや習慣の問題でもあるとわかったのである。',
+      'こうした方針を支持する人々は、伝統的なしばふは土地と水のむだな使い方だと主張する。かわいた地域では、川や貯水池の水が少なくなっていても、しばふへの水まきが家庭の水の使用の大きな割合をしめることがある。しばふはまた、ふつう花をさかせる前に刈られる一種類の草でできているので、虫や鳥に食べ物やすみかをほとんどあたえない。それを多様なその土地の植物に置きかえれば、花粉を運ぶ虫を支え、水の使用をへらし、その土地の気候により合った庭を作れると支持する人々は主張する。',
+      '支持する人々はさらに、しばふを保つ費用は個々の家庭をこえて広がると指摘する。ガソリンで動くしば刈り機や落ち葉ふき機は大気汚染や騒音の原因になり、肥料は川に流れこんで水の生き物を傷つけることがある。一つ一つのしばふは小さく思えるかもしれないが、合わせると広大な土地をおおっており、その管理のしかたを変えれば環境全体に大きな利益がありうると支持する人々は主張する。しばふを切りかえることに同意した住民にお金や助言をあたえ、変化を取り入れやすくした都市もある。',
+      'しかし反対する人々は、個人の庭についての決定は家の持ち主にまかせるべきだと主張する。庭は個人の好みの表現であり、多くの人はただ緑のしばふの見た目が好きだったり、子どもが遊ぶ安全な場所として大切にしたりしていると彼らは主張する。住民に庭を変えるよう義務づけるのは、とくに一つの庭の環境上の利益が小さいときには、個人の暮らしへの不当な立ち入りになると反対する人々は主張する。乱雑に見える庭が近所どうしの争いを生んだり、不動産の価値を下げたりするのではないかと心配する人もいる。',
+      '反対する人々はまた、野の花の庭がいつも言われるほど有益なのかを疑う。しばふをうまく切りかえるには、知識や努力や、ときにはかなりの費用が必要であり、計画の悪い植えこみはうまくいかなかったり、雑草にしめられたりするかもしれない。地域によっては、植物を高くのばしておくと火事の危険が高まったり、望まない害虫を引きよせたりするかもしれない。都市は一つの解決策をおしつけるのではなく、情報と動機づけをあたえ、住民が自分の事情にもっとも合ったやり方を選べるようにすべきだと反対する人々は主張する。',
+      '実際には、多くの地域がこうした見方を組み合わせる方法を見つけてきた。遊びのために小さなしばふを残しつつ、残りをその土地の植物に切りかえるよう住民にすすめるところもある。以前はしばふを短く保つことを求めていた地元の規則を変え、野の花の庭を作りたい住民が罰を受けずにそうできるようにしたところもある。春のひと月だけ庭の一部を刈らずにおこうと人々によびかける運動も、いくつかの国で人気になっている。参加した人々は、わずか数週間でどれほど多くの花や虫が現れるかにしばしばおどろく。',
+      'しばふをめぐる議論は、ほかの環境の問題にくらべると小さなことに思えるかもしれないが、秩序や美しさの考えがどれほど深く習慣や文化と結びついているかを明らかにしている。ある世代がきちんとしたりっぱな庭と見なすものが、次の世代にはむだに思えてくることもある。水や野生生物や気候への心配が高まるにつれて、ありふれたしばふは、社会が個人の好みと土地と、それを分け合う生き物への共通の責任のつりあいをどうとるかをためすものになるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「一つ一つのしばふは小さく思えても、合わせると広大だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that lawns waste land and ( 1 ) and offer little for wildlife. Opponents argue that decisions about gardens should be left to ( 2 ) and that conversions may fail. Many communities now encourage residents to keep a small lawn and convert the ( 3 ).',
+      blanks: [
+        { choices: ['water', 'money', 'time', 'energy'], answer: 0, why: '第2段落 an inefficient use of land and water。' },
+        { choices: ['homeowners', 'cities', 'scientists', 'gardeners'], answer: 0, why: '第4段落 decisions about private gardens should be left to homeowners。' },
+        { choices: ['rest', 'house', 'street', 'road'], answer: 0, why: '第6段落 keep a small area of lawn for play while converting the rest。' },
+      ],
+    },
+    tf: [
+      { statement: 'しばふは、虫や鳥に食べ物やすみかをほとんどあたえない。', answer: true, why: '第2段落 Lawns also offer little food or shelter for insects and birds。' },
+      { statement: 'しばふを切りかえるのは、いつもかんたんで安い。', answer: false, why: '第5段落 requires knowledge, effort, and sometimes considerable expense。' },
+      { statement: 'しばふを短く保つことを求める規則を変えた地域もある。', answer: true, why: '第6段落 Others have changed local rules that previously required lawns to be kept short。' },
+      { statement: '筆者によれば、美しさの考えは習慣や文化と関係がない。', answer: false, why: '第7段落 how deeply ideas of order and beauty are tied to habit and culture。' },
+    ],
+    qa: [
+      { q: 'What can fertilizers used on lawns do?', choices: ['Wash into rivers and harm aquatic life.', 'Make birds sing.', 'Save water.', 'Prevent fires.'], answer: 0, why: '第3段落 fertilizers can wash into rivers and harm aquatic life。' },
+      { q: 'What kind of campaign has become popular in several countries?', choices: ['Leaving parts of gardens uncut for a month in spring.', 'Painting lawns green.', 'Removing all trees.', 'Watering lawns every day.'], answer: 0, why: '第6段落 leave parts of their gardens uncut for a single month in spring。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
