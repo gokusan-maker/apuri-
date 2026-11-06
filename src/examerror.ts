@@ -5138,6 +5138,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) A broke (B) window (C) was found (D) in the classroom.', choices: ['(A) A broke', '(B) window', '(C) was found', '(D) in the classroom'], answer: 0, why: '「われた窓」は過去分詞 broken。A broken window。' },
     ],
   },
+  {
+    id: 'exam-error-prep-gerund-kokkou',
+    title: '入試の正誤問題〈216〉（国公立レベル：前置詞＋動名詞 by ～ing・without ～ing・instead of ～ing）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '前置詞（by・without・instead of・for・in・at・of・after・before など）のあとに動詞を置くときは、動名詞（～ing）にする。原形や to 不定詞は置けない。by ～ing「～することによって」、without ～ing「～しないで」、instead of ～ing「～するかわりに」、be good at ～ing「～するのが得意」、be afraid of ～ing「～するのをこわがる」、Thank you for ～ing「～してくれてありがとう」。',
+    ],
+    examples: [
+      { en: 'He left without saying goodbye.', ja: '彼はさよならも言わずに去った。' },
+      { en: 'You can improve your English by reading many books.', ja: 'たくさんの本を読むことで英語は上達する。' },
+    ],
+    questions: [
+      { sentence: '(A) He left (B) without (C) say (D) goodbye.', choices: ['(A) He left', '(B) without', '(C) say', '(D) goodbye'], answer: 2, why: '前置詞 without のあとは動名詞なので saying。' },
+      { sentence: '(A) You can (B) improve your English (C) by (D) read many books.', choices: ['(A) You can', '(B) improve your English', '(C) by', '(D) read many books'], answer: 3, why: 'by のあとは動名詞なので reading。' },
+      { sentence: '(A) Instead of (B) take (C) the bus, (D) we walked home.', choices: ['(A) Instead of', '(B) take', '(C) the bus,', '(D) we walked home'], answer: 1, why: 'instead of のあとは動名詞なので taking。' },
+      { sentence: '(A) She is (B) good at (C) to cook (D) Italian food.', choices: ['(A) She is', '(B) good at', '(C) to cook', '(D) Italian food'], answer: 2, why: 'at のあとは動名詞なので cooking。' },
+      { sentence: '(A) Thank you (B) for (C) help (D) me yesterday.', choices: ['(A) Thank you', '(B) for', '(C) help', '(D) me yesterday'], answer: 2, why: 'for のあとは動名詞なので helping。' },
+      { sentence: '(A) I am (B) interested in (C) learn (D) about history.', choices: ['(A) I am', '(B) interested in', '(C) learn', '(D) about history'], answer: 2, why: 'in のあとは動名詞なので learning。' },
+      { sentence: '(A) After (B) finished (C) the work, (D) he went home.', choices: ['(A) After', '(B) finished', '(C) the work,', '(D) he went home'], answer: 1, why: 'after のあとは動名詞なので finishing。' },
+      { sentence: '(A) He is (B) afraid of (C) make (D) mistakes in English.', choices: ['(A) He is', '(B) afraid of', '(C) make', '(D) mistakes in English'], answer: 2, why: 'of のあとは動名詞なので making。' },
+      { sentence: '(A) Before (B) go (C) to bed, (D) brush your teeth.', choices: ['(A) Before', '(B) go', '(C) to bed,', '(D) brush your teeth'], answer: 1, why: 'before のあとは動名詞なので going。' },
+      { sentence: '(A) By to practice (B) every day, (C) she became (D) a great pianist.', choices: ['(A) By to practice', '(B) every day,', '(C) she became', '(D) a great pianist'], answer: 0, why: 'by ～ing「～することによって」。By practicing。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
