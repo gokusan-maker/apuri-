@@ -38578,6 +38578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-study-abroad',
+    title: 'Should Study Abroad Be Required?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an increasingly connected world, many universities encourage their students to spend part of their studies abroad. A semester or a year in another country, supporters claim, offers experiences that cannot be gained in a classroom at home: the chance to improve a foreign language, to understand another culture from the inside, and to develop the independence that comes from living in unfamiliar surroundings. Some educators have gone further, proposing that a period of study abroad should be required of every student. The proposal has attracted both enthusiasm and serious objections.",
+      "Supporters of a requirement argue that international experience has become essential in modern life. Many careers now involve working with colleagues and clients from different countries, and employers often value graduates who have shown that they can adapt to new environments. Supporters also claim that living abroad changes the way people think, making them more open to different perspectives and more aware of the assumptions of their own culture. If such experiences are valuable for everyone, they argue, they should not be left to chance or to the minority of students who choose them.",
+      "Supporters further point out that, without a requirement, study abroad tends to be dominated by students from wealthier families. ( A ) scholarships exist in many countries, students with limited financial resources may hesitate to apply, fearing the costs of travel and living expenses or the loss of income from part-time work. A universal requirement, supporters argue, would force universities and governments to provide the funding needed to make study abroad possible for all, rather than treating it as a privilege for those who can already afford it.",
+      "Opponents, however, argue that a requirement would place unreasonable burdens on many students. Some have family responsibilities, such as caring for younger siblings or elderly relatives, that make it difficult to leave home for an extended period. Others have health conditions or disabilities that make living abroad challenging, and some simply feel anxious about being far from familiar support. Forcing all students to go abroad, opponents claim, would ignore the diversity of their circumstances and might even cause some to abandon their studies. Such students, opponents add, deserve more support rather than additional pressure.",
+      "Opponents also question whether the benefits of study abroad are as universal as supporters suggest. The value of the experience, they argue, depends greatly on how it is used. A student who spends a year abroad mostly in the company of others from the same country may gain little in language or understanding, while a student who never leaves home may develop international awareness through study, friendships with international students, or online collaboration. In this view, what matters is not physical travel but the quality of engagement with other cultures.",
+      "Some universities have sought a compromise. Rather than requiring all students to study abroad, they encourage international experience through a range of options, including short programs of a few weeks, internships with international organizations, and courses taught jointly with partner universities overseas. Others have developed programs that allow students to work with peers in other countries through online projects. Such approaches aim to offer many of the benefits of international experience while respecting the different needs and situations of individual students.",
+      "The debate over compulsory study abroad reflects a broader question about the purpose of higher education. If universities aim to prepare students for life in a global society, international experience may seem an essential part of that preparation. Yet universities must also serve students with very different backgrounds and responsibilities, and a requirement that is easy for some may be impossible for others. Finding ways to make international experience widely available, without making it a barrier to education, remains a challenge for institutions around the world.",
+    ],
+    ja: [
+      'ますますつながっていく世界で、多くの大学は学生に、学業の一部を海外ですごすようすすめている。別の国での一学期や一年は、国内の教室では得られない経験をあたえてくれると支持する人々は主張する。外国語を上達させ、別の文化を内側から理解し、なじみのない環境で暮らすことから生まれる自立を育てる機会である。さらに進んで、海外留学の期間をすべての学生に義務づけるべきだと提案する教育者もいる。この提案は、熱心な支持と深刻な反対の両方を集めている。',
+      '義務化を支持する人々は、国際的な経験は現代の暮らしに欠かせないものになったと主張する。今では多くの仕事でちがう国の同僚や客と働くことがあり、雇い主はしばしば、新しい環境に適応できることを示した卒業生を高く評価する。支持する人々はまた、海外で暮らすことは人の考え方を変え、ちがう見方により開かれ、自分の文化の前提により気づくようにすると主張する。そうした経験がすべての人にとって価値があるなら、それを運や、それを選ぶ少数の学生にまかせるべきではないと彼らは主張する。',
+      '支持する人々はさらに、義務がなければ、海外留学は裕福な家庭の学生にしめられがちだと指摘する。多くの国に奨学金はあるが、お金の余裕のない学生は、旅費や生活費や、アルバイトの収入を失うことをおそれて、応募をためらうかもしれない。全員への義務化は、海外留学を、すでにそれをまかなえる人の特権としてあつかうのではなく、大学や政府に、すべての人がそれをできるようにするための資金を用意させることになると支持する人々は主張する。',
+      'しかし反対する人々は、義務化は多くの学生に不当な負担をかけると主張する。年下のきょうだいや年老いた親せきの世話のような、長いあいだ家をはなれるのをむずかしくする家族の責任をもつ学生もいる。海外での暮らしをむずかしくする病気や障害をもつ学生もいれば、ただなじみの支えから遠くはなれることに不安を感じる学生もいる。すべての学生に海外に行くよう強いることは、彼らの事情の多様さを無視し、学業をあきらめる学生さえ出すかもしれないと反対する人々は主張する。そうした学生に必要なのは、さらなる圧力ではなく、より多くの支えだと彼らは付け加える。',
+      '反対する人々はまた、海外留学の利益が支持する人々が言うほど誰にでも当てはまるのかを疑う。その経験の価値は、それがどう使われるかに大きくかかっていると彼らは主張する。海外での一年をおもに同じ国の人々といっしょにすごす学生は、ことばや理解の面でほとんど得るものがないかもしれないが、一度も家をはなれない学生でも、勉強や留学生との友情やオンラインの共同作業を通じて国際的な意識を育てるかもしれない。この見方では、大切なのは体の移動ではなく、ほかの文化とのかかわりの質である。',
+      '妥協を求めた大学もある。すべての学生に海外留学を義務づけるのではなく、数週間の短いプログラムや、国際機関でのインターンシップや、海外の提携大学と共同で教える授業をふくむ、さまざまな選択肢を通じて国際的な経験をすすめるのである。オンラインの取り組みを通じて、学生がほかの国の仲間と働けるプログラムを作ったところもある。そうしたやり方は、個々の学生のちがう必要や状況を尊重しつつ、国際的な経験の利益の多くをあたえることを目指している。',
+      '海外留学の義務化をめぐる議論は、高等教育の目的についての、より広い問いを反映している。大学が世界的な社会での暮らしに学生をそなえさせることを目指すなら、国際的な経験はその準備の欠かせない一部に思えるかもしれない。しかし大学はまた、とてもちがう背景や責任をもつ学生に役立たなければならず、ある人にはかんたんな義務が、別の人には不可能かもしれない。国際的な経験を教育へのさまたげにすることなく、広く利用できるようにする方法を見つけることは、世界中の大学にとっての課題であり続けている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「奨学金はあるが、余裕のない学生は応募をためらう」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that international experience has become ( 1 ) and that a requirement would make study abroad available to all. Opponents argue that it would place unreasonable ( 2 ) on many students and that what matters is the quality of ( 3 ) with other cultures.',
+      blanks: [
+        { choices: ['essential', 'cheap', 'dangerous', 'optional'], answer: 0, why: '第2段落 international experience has become essential in modern life。' },
+        { choices: ['burdens', 'rewards', 'grades', 'limits'], answer: 0, why: '第4段落 a requirement would place unreasonable burdens on many students。' },
+        { choices: ['engagement', 'travel', 'money', 'distance'], answer: 0, why: '第5段落 the quality of engagement with other cultures。' },
+      ],
+    },
+    tf: [
+      { statement: '雇い主はしばしば、新しい環境に適応できる卒業生を評価する。', answer: true, why: '第2段落 employers often value graduates who have shown that they can adapt。' },
+      { statement: '義務がなければ、海外留学はまずしい家庭の学生にしめられがちである。', answer: false, why: '第3段落 tends to be dominated by students from wealthier families。' },
+      { statement: '家を一度もはなれない学生でも、国際的な意識を育てることがある。', answer: true, why: '第5段落 a student who never leaves home may develop international awareness。' },
+      { statement: 'すべての大学が、海外留学を全員に義務づけている。', answer: false, why: '第6段落 Rather than requiring all students to study abroad。' },
+    ],
+    qa: [
+      { q: 'Why might some students find it difficult to leave home?', choices: ['They have family responsibilities such as caring for relatives.', 'They dislike foreign food.', 'Universities forbid it.', 'They have already traveled.'], answer: 0, why: '第4段落 caring for younger siblings or elderly relatives。' },
+      { q: 'What options do some universities offer instead of a requirement?', choices: ['Short programs, internships, and joint courses.', 'Only long stays abroad.', 'No international programs at all.', 'Free holidays.'], answer: 0, why: '第6段落 short programs of a few weeks, internships ... and courses taught jointly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
