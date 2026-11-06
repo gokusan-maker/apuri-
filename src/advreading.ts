@@ -38738,6 +38738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-debt-relief',
+    title: 'Should the Debts of Poor Countries Be Cancelled?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many of the world's poorest countries owe large sums of money to foreign governments, international institutions, and private lenders. Repaying these debts can consume a significant share of their national budgets, leaving less money for schools, hospitals, and other public services. For decades, campaigners have called on wealthy nations to cancel some or all of these debts, and several major programs of debt relief have been carried out. Yet the question of whether cancellation is the right response remains controversial, and economists, politicians, and activists continue to disagree about its effects.",
+      "Supporters of debt cancellation argue that it is a matter of both justice and practicality. Many of the debts, they point out, were taken on decades ago by governments that were not elected or that used the money for purposes that did little to benefit ordinary citizens. Requiring today's populations to repay such loans, supporters claim, punishes people for decisions they had no part in making. Moreover, when a country spends more on debt repayments than on health or education, it may be unable to escape poverty, and its creditors may never be fully repaid in any case.",
+      "Supporters also point to evidence that debt relief can bring tangible benefits. ( A ) the results have varied from country to country, several governments that received significant debt relief in earlier programs increased their spending on schools and health care, leading to improvements in school enrollment and other measures of well-being. In this view, cancelling debts can be one of the most direct ways of allowing poor countries to invest in their own futures, without the conditions often attached to foreign aid.",
+      "Critics, however, warn that cancelling debts may create problems of its own. One concern is that it could encourage future irresponsibility: if governments expect that their debts will eventually be forgiven, they may borrow excessively or spend money carelessly, and lenders may become reluctant to lend to poorer countries at all. Critics argue that debt relief should therefore be accompanied by reforms that improve the management of public finances and reduce corruption, so that the benefits reach the people who need them.",
+      "Critics also point out that the nature of international lending has changed. In the past, most debts of poor countries were owed to wealthy governments and international institutions, which could agree to cancel them through coordinated programs. Today, a growing share is owed to private investors and to newer lending countries, which may be unwilling to participate in relief. A cancellation that applies only to some creditors, critics warn, may simply transfer money from those who forgive to those who do not, without reducing the overall burden as much as intended.",
+      "Between these positions, some experts propose more flexible approaches. Rather than cancelling debts outright, they suggest restructuring them by extending repayment periods, lowering interest rates, or linking repayments to economic conditions, so that countries pay less in years when their economies are weak. Others have proposed that part of a country's debt could be cancelled in exchange for commitments to spend the savings on specific goals, such as education or protecting forests. Such arrangements, sometimes called debt swaps, have already been tried in several countries.",
+      "The debate over debt cancellation ultimately reflects broader questions about fairness in the global economy. Wealthy countries and institutions have an interest in being repaid, but they also have an interest in a world in which poverty is reduced and economies are stable. Poor countries need relief from burdens that limit their development, but they also need access to credit in the future. Finding solutions that balance these interests requires cooperation among many parties, a willingness to learn from past programs, and attention to the needs of the people whose lives are affected by decisions made far away.",
+    ],
+    ja: [
+      '世界でもっともまずしい国々の多くは、外国の政府や国際機関や民間の貸し手に多額のお金を借りている。こうした借金を返すことで国家予算の大きな割合が使われ、学校や病院やほかの公共サービスのためのお金が少なくなることがある。何十年ものあいだ、運動をする人々は豊かな国に、こうした借金の一部または全部を帳消しにするよう求めてきており、いくつかの大きな債務救済の取り組みが行われてきた。しかし帳消しが正しい対応なのかという問題は今も論争の的であり、経済学者や政治家や活動家は、その効果について意見が分かれ続けている。',
+      '借金の帳消しを支持する人々は、それは正義と実際の両方の問題だと主張する。借金の多くは、選挙で選ばれていない政府や、ふつうの市民にはほとんど役立たない目的にお金を使った政府によって、何十年も前に借りられたものだと彼らは指摘する。今日の人々にそうした借金を返させることは、自分がまったくかかわらなかった決定のために人々を罰することになると支持する人々は主張する。さらに、ある国が健康や教育より借金の返済に多くを使うと、まずしさからぬけ出せないかもしれず、どのみち貸し手が完全に返してもらえることはないかもしれない。',
+      '支持する人々はまた、債務救済が目に見える利益をもたらしうるという証拠をあげる。結果は国によってちがったが、以前の取り組みで大きな債務救済を受けたいくつかの政府は、学校や医療への支出をふやし、就学率やほかの暮らしのよさを測るものの改善につながった。この見方では、借金を帳消しにすることは、外国の援助にしばしばつけられる条件なしに、まずしい国が自分の未来に投資できるようにする、もっとも直接的な方法の一つでありうる。',
+      'しかし批判する人々は、借金を帳消しにすることはそれ自体の問題を生むかもしれないと警告する。一つの心配は、それが将来の無責任さをうながしかねないことである。政府が借金はいずれゆるされると思えば、借りすぎたり不注意にお金を使ったりするかもしれず、貸し手はまずしい国にまったく貸したがらなくなるかもしれない。そのため債務救済には、公的な財政の管理をよくし、不正をへらす改革をともなわせ、利益が必要とする人々にとどくようにすべきだと批判する人々は主張する。',
+      '批判する人々はまた、国際的な貸し付けの性質が変わったと指摘する。かつて、まずしい国の借金のほとんどは豊かな政府や国際機関へのもので、それらは協調した取り組みを通じて帳消しに同意することができた。今日では、ふえ続ける割合が、救済に加わりたがらないかもしれない民間の投資家や新しく貸すようになった国へのものである。一部の貸し手にだけ当てはまる帳消しは、ゆるす者からゆるさない者へお金を移すだけで、全体の負担を意図したほどにはへらさないかもしれないと批判する人々は警告する。',
+      'これらの立場のあいだで、より柔軟なやり方を提案する専門家もいる。借金をすっかり帳消しにするのではなく、返済の期間をのばしたり、利子を下げたり、返済を経済の状況と結びつけたりして借金を組み直し、経済が弱い年には国の支払いが少なくなるようにするのである。国の借金の一部を、節約したお金を教育や森を守ることのような特定の目標に使うという約束と引きかえに帳消しにできるのではないかと提案した人々もいる。ときに「債務スワップ」とよばれるそうした取り決めは、すでにいくつかの国で試されている。',
+      '借金の帳消しをめぐる議論は、結局、世界経済における公平さについての、より広い問いを反映している。豊かな国や機関には返してもらうことに利益があるが、まずしさがへり経済が安定した世界にも利益がある。まずしい国は発展を限る負担からの救済を必要としているが、将来お金を借りられることも必要としている。こうした利益のつりあいをとる解決策を見つけるには、多くの当事者の協力と、過去の取り組みから学ぶ意志と、遠くでなされた決定に暮らしを左右される人々の必要への注意が必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「結果は国によってちがったが、支出をふやした政府もある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that debt cancellation is a matter of justice and allows poor countries to ( 1 ) in their own futures. Critics warn that it may encourage future irresponsibility and that many debts are now owed to ( 2 ) investors. Some experts propose ( 3 ) debts instead of cancelling them outright.',
+      blanks: [
+        { choices: ['invest', 'travel', 'compete', 'vote'], answer: 0, why: '第3段落 allowing poor countries to invest in their own futures。' },
+        { choices: ['private', 'local', 'student', 'retired'], answer: 0, why: '第5段落 a growing share is owed to private investors。' },
+        { choices: ['restructuring', 'ignoring', 'doubling', 'hiding'], answer: 0, why: '第6段落 restructuring them by extending repayment periods。' },
+      ],
+    },
+    tf: [
+      { statement: '借金の返済が、国家予算の大きな割合をしめることがある。', answer: true, why: '第1段落 can consume a significant share of their national budgets。' },
+      { statement: '借金の多くは、すべて選挙で選ばれた政府が最近借りたものである。', answer: false, why: '第2段落 taken on decades ago by governments that were not elected。' },
+      { statement: '債務救済を受けた政府のなかには、学校への支出をふやしたところもある。', answer: true, why: '第3段落 increased their spending on schools and health care。' },
+      { statement: '今日でも、まずしい国の借金のほとんどは豊かな政府へのものである。', answer: false, why: '第5段落 Today, a growing share is owed to private investors and to newer lending countries。' },
+    ],
+    qa: [
+      { q: 'What might happen if governments expect their debts to be forgiven, according to critics?', choices: ['They may borrow excessively or spend carelessly.', 'They will stop borrowing forever.', 'They will pay back more quickly.', 'They will lend to other countries.'], answer: 0, why: '第4段落 they may borrow excessively or spend money carelessly。' },
+      { q: 'What could part of a debt be cancelled in exchange for?', choices: ['Commitments to spend the savings on specific goals.', 'Higher interest rates.', 'Military bases.', 'New loans.'], answer: 0, why: '第6段落 in exchange for commitments to spend the savings on specific goals。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
