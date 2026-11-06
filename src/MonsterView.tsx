@@ -3013,6 +3013,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="54" cy="62" r="3" fill="none" stroke="#3a2610" strokeWidth="1" opacity="0.6" />
       </g>
     )
+  if (species === 'sumatrantiger')
+    return (
+      <g>
+        {/* こく細かいしま */}
+        <path d="M34 54 l4 10 M42 52 l4 12 M50 52 l4 12 M58 54 l4 10" stroke="#1f1206" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
