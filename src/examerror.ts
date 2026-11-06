@@ -9054,6 +9054,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'They live in a [three-bedrooms] apartment.', choices: ['three-bedroom', 'three-bedrooms’', 'three bedroom’s', 'third-bedroom'], answer: 0, why: '名詞の前では単数形。a three-bedroom apartment。' },
     ],
   },
+  {
+    id: 'exam-fix-213',
+    title: '入試の誤文訂正〈213〉（東大レベル：英作文の one of the ＋複数名詞・each・every と動詞の一致）',
+    points: ['one of the ～「～のうちの一つ（一人）」は、of のあとが複数名詞（one of the best players）で、主語の中心は one なので動詞は単数（One of my friends lives ～）。each と every は単数あつかいで、あとの名詞も単数（Each student has ～・Every child needs ～）。each of ＋複数名詞も動詞は単数（Each of the boys is ～）。every A and every B も単数あつかい。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'One of my friends lives in Canada. / Each student has a locker.', ja: '友だちの一人はカナダに住んでいる。／生徒はそれぞれロッカーをもっている。' }],
+    questions: [
+      { sentence: 'One of my friends [live] in Canada.', choices: ['lives', 'are living', 'live in', 'have lived'], answer: 0, why: '主語の中心は One なので単数の lives。' },
+      { sentence: 'She is one of the best [player] in the team.', choices: ['players', 'player’s', 'playing', 'plays'], answer: 0, why: 'one of the ＋複数名詞。players。' },
+      { sentence: 'Each student [have] a locker.', choices: ['has', 'have got', 'are having', 'having'], answer: 0, why: 'each ＋単数名詞は単数あつかい。has。' },
+      { sentence: 'Every child [need] love.', choices: ['needs', 'need to', 'are needing', 'needing'], answer: 0, why: 'every ＋単数名詞は単数あつかい。needs。' },
+      { sentence: 'Each of the boys [are] wearing a cap.', choices: ['is', 'were', 'be', 'being'], answer: 0, why: 'each of ～ は単数あつかい。is。' },
+      { sentence: 'Every [students] must bring a pen.', choices: ['student', 'of students', 'one students', 'students’'], answer: 0, why: 'every のあとは単数名詞。student。' },
+      { sentence: 'One of the [reason] for his success is hard work.', choices: ['reasons', 'reason’s', 'reasoning', 'reasoned'], answer: 0, why: 'one of the ＋複数名詞。reasons。' },
+      { sentence: 'Each of them [have] different ideas.', choices: ['has', 'are having', 'having', 'have to'], answer: 0, why: 'each of them は単数あつかい。has。' },
+      { sentence: 'Every day and every night [are] different.', choices: ['is', 'were', 'be', 'being'], answer: 0, why: 'every A and every B は単数あつかい。is。' },
+      { sentence: 'Each one of the rooms [have] a window.', choices: ['has', 'are having', 'having', 'have been'], answer: 0, why: 'each one は単数あつかい。has。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

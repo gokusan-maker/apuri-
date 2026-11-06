@@ -3025,3 +3025,10 @@ it('正誤問題〈219〉：国公立レベル 副詞節の時制の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) I will arrive')
 })
+
+it('誤文訂正〈213〉：東大レベル one of・each・every の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-213')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('lives')
+})
