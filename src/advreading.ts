@@ -37582,6 +37582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-beginnings',
+    title: 'On Beginnings',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Beginnings hold a special place in human imagination. We celebrate the first day of a new year, the start of a school term, and the opening of a new chapter in our lives, often with a feeling that anything is possible. Many cultures attach great importance to the first actions of a new period, believing that what is done at the beginning will shape everything that follows. Yet beginnings are also moments of uncertainty and even fear, since to begin something is to step into a future whose shape we cannot know.",
+      "Part of the attraction of beginnings lies in their promise of freedom from the past. A new start seems to offer a chance to leave behind old mistakes, old habits, and old disappointments, and to become the person we have wished to be. The blank page of a notebook or the empty calendar of a new year invites us to imagine a version of ourselves unburdened by what has already happened. It is no accident that so many resolutions are made at the start of a year, when the future still appears open and unwritten.",
+      "Yet this promise is in some ways an illusion. ( A ) we may wish to begin entirely anew, we carry our past with us into every new situation, including the habits and fears that we hoped to leave behind. This is one reason why so many resolutions fail within weeks of being made. The new beginning was imagined as a clean break, but the person who began was the same person as before, and the forces that shaped their earlier behavior did not disappear simply because the calendar changed.",
+      "It might seem to follow that beginnings are merely symbolic, and that nothing really changes when we start again. But this conclusion would also be mistaken. Although a beginning cannot erase the past, it can change our relationship to it. By marking a moment as a new start, we give ourselves permission to see our past as something that happened rather than something that defines us. The symbolic power of a beginning, in other words, may have real effects on how we understand ourselves and what we believe we can do.",
+      "There is also something to be learned from the experience of beginning repeatedly. Most worthwhile activities, from learning a language to maintaining a friendship, are not completed in a single effort but require us to begin again many times. A person who stops practicing for a week must begin again; a friendship strained by misunderstanding must be renewed. Seen in this light, the ability to begin is not a rare event reserved for special occasions but a skill that must be exercised throughout life, often quietly and without ceremony.",
+      "This suggests that the value of a beginning depends less on its novelty than on our willingness to continue what we have started. The first step of a journey is important, but it gains its meaning only from the steps that follow. A beginning that is celebrated and then forgotten leaves little behind, while a modest start that is patiently continued may eventually transform a life. The excitement of starting something new is real, but it is the less dramatic work of persisting that determines whether the beginning will matter.",
+      "Perhaps, then, the deepest lesson of beginnings is that they are never entirely finished. Every day offers a small opportunity to begin again, not by rejecting the past but by choosing how to carry it forward. Those who understand this need not wait for a new year or a new stage of life to make a fresh start. They can treat each morning as a modest beginning, accepting both the weight of what has been and the possibility of what might still be.",
+    ],
+    ja: [
+      '始まりは人間の想像力の中で特別な場所をしめている。私たちは新しい年の最初の日や、学期の始まりや、人生の新しい章の始まりを、しばしば何でもできるという気持ちで祝う。多くの文化は新しい期間の最初の行動をとても大切にし、始まりにすることが、そのあとに続くすべてを形づくると信じている。しかし始まりは、不確かさやおそれさえもふくむ時でもある。何かを始めるとは、その形を知ることのできない未来へふみ出すことだからである。',
+      '始まりの魅力の一部は、過去から自由になれるという約束にある。新しい出発は、古いまちがいや古い習慣や古い失望を置いていき、ずっとなりたいと願ってきた人になる機会をあたえてくれるように思える。ノートの白いページや新しい年の空っぽの予定表は、すでに起こったことに重荷を負わされていない自分のすがたを想像するよううながす。未来がまだ開かれて書かれていないように見える年の初めに、あれほど多くの決意がなされるのは偶然ではない。',
+      'しかしこの約束は、ある意味でまぼろしである。まったく新しく始めたいと願っても、私たちは、置いていきたかった習慣やおそれをふくめて、自分の過去をあらゆる新しい状況へもちこむ。これが、あれほど多くの決意が、なされてから数週間のうちにくずれる理由の一つである。新しい始まりはきれいな区切りとして想像されたが、始めた人は前と同じ人であり、以前のふるまいを形づくった力は、ただ暦が変わったからといって消えはしなかったのである。',
+      'そうすると、始まりはただ象徴的なものにすぎず、もう一度始めても本当は何も変わらないということになりそうに思える。しかしこの結論もまたまちがいだろう。始まりは過去を消せないが、過去とのつきあい方を変えることはできる。ある時を新しい出発としてしるすことで、私たちは、自分の過去を、自分を決めつけるものではなく、起こったこととして見ることを自分にゆるす。言いかえれば、始まりの象徴的な力は、私たちが自分をどう理解し、何ができると信じるかに、本当の効果をもちうるのである。',
+      'くり返し始めるという経験から学べることもある。ことばを学ぶことから友情を保つことまで、価値のある活動のほとんどは、一度の努力で終わるのではなく、何度も始め直すことを求める。一週間練習をやめた人は始め直さなければならないし、誤解でぎくしゃくした友情はつなぎ直さなければならない。このように見ると、始める力は、特別な機会にとっておかれるめずらしい出来事ではなく、しばしば静かに、儀式もなく、一生を通じて使わなければならない技能である。',
+      'このことは、始まりの価値は、その新しさよりも、始めたことを続けようとする意志にかかっていることを示している。旅の最初の一歩は大切だが、それは続く歩みによってのみ意味を得る。祝われてわすれられる始まりはほとんど何も残さないが、根気よく続けられるささやかな出発は、やがて人生を変えるかもしれない。何か新しいことを始めるわくわくした気持ちは本物だが、その始まりが意味をもつかどうかを決めるのは、続けるという、あまり劇的でない仕事なのである。',
+      'そうするとおそらく、始まりのもっとも深い教えは、それが決して完全には終わらないということである。毎日が、過去をこばむのではなく、それをどう先へ運ぶかを選ぶことで、もう一度始める小さな機会をあたえてくれる。このことを理解する人は、新しい出発をするのに新しい年や人生の新しい段階を待つ必要はない。これまでにあったことの重みと、まだありうることの可能性の両方を受け入れながら、毎朝をささやかな始まりとしてあつかうことができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「まったく新しく始めたいと願っても、過去をもちこむ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの文化は、新しい期間の最初の行動を大切にする。', answer: true, why: '第1段落 Many cultures attach great importance to the first actions of a new period。' },
+      { statement: '筆者によれば、新しい始まりによって過去は完全に消える。', answer: false, why: '第4段落 a beginning cannot erase the past。' },
+      { statement: '価値のある活動のほとんどは、何度も始め直すことを求める。', answer: true, why: '第5段落 require us to begin again many times。' },
+      { statement: '筆者は、新しい出発をするには新しい年を待つべきだと考えている。', answer: false, why: '第7段落 need not wait for a new year ... to make a fresh start。' },
+    ],
+    qa: [
+      { q: 'Why do so many resolutions fail within weeks, according to the author?', choices: ['People carry their past habits and fears with them.', 'The calendar changes too quickly.', 'Resolutions are too easy.', 'Nobody makes resolutions in winter.'], answer: 0, why: '第3段落 we carry our past with us into every new situation。' },
+      { q: 'What determines whether a beginning will matter?', choices: ['The work of persisting.', 'The size of the celebration.', 'The date it starts.', 'The number of resolutions.'], answer: 0, why: '第6段落 it is the less dramatic work of persisting that determines whether the beginning will matter。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
