@@ -36782,6 +36782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-small-pleasures',
+    title: 'In Praise of Small Pleasures',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When people imagine a happy life, they often think of major achievements and rare experiences: a successful career, a memorable journey, a grand celebration. Such events certainly matter, but they occupy only a small fraction of our time. Most of life consists of ordinary days filled with routine activities, and it is worth asking whether the quality of those days depends less on extraordinary events than on the small pleasures that fill them, such as a warm drink on a cold morning, a short conversation with a friend, or the smell of rain after a dry spell.",
+      "One reason small pleasures matter is simply that they are frequent. A great achievement may bring intense joy, but such moments are rare, and their effect often fades more quickly than we expect. Psychologists have suggested that people adapt to major changes in their circumstances, gradually returning to their usual level of happiness. Small pleasures, by contrast, can be enjoyed again and again, and their cumulative effect on our daily experience may be greater than that of occasional peaks. A person who enjoys a quiet walk each evening may, over a year, gain more happiness from those walks than from a single expensive trip.",
+      "Small pleasures also have the advantage of being widely available. Many of the greatest sources of happiness, such as wealth, fame, or exceptional talent, are distributed unequally and lie beyond the reach of most people. ( A ) not everyone can afford a luxurious holiday, almost everyone can enjoy the light of the setting sun, the taste of a favorite meal, or the pleasure of a good book, and learning to appreciate such things may make a fulfilling life accessible to people in many different circumstances.",
+      "Appreciating small pleasures, however, is not as automatic as it might seem. Busy people often move through their days without noticing the experiences that could bring them joy, their attention fixed on worries about the future or regrets about the past. Many traditions of thought have emphasized the importance of attention, suggesting that happiness depends not only on what happens to us but also on how fully we are present to it. A pleasure that is not noticed is, in a sense, not experienced at all.",
+      "There is also a social dimension to small pleasures. Sharing a meal, exchanging a smile with a stranger, or laughing at a joke with colleagues are modest experiences, but they create connections that sustain us. Such moments may seem quite trivial in isolation, yet over time they form the fabric of relationships and communities. A life rich in such moments may be more satisfying than one devoted to the pursuit of distant goals at the expense of everyday connection.",
+      "None of this means that we should abandon ambition or ignore the larger questions of life. Great goals can give life direction, and some forms of suffering cannot be relieved by small comforts. A person struggling with poverty, illness, or injustice needs more than a pleasant cup of tea. The point is rather that, alongside our larger aims, we should not neglect the ordinary pleasures that are available to us every day, since they may contribute more to our well-being than we usually recognize.",
+      "Perhaps, then, the art of living well includes the art of noticing. By paying attention to the small good things that each day offers, we may discover that our lives contain more happiness than we had realized. Such attention costs nothing and requires no special circumstances, only a willingness to slow down and look around. In a culture that often encourages us to seek more, faster, and bigger, the quiet appreciation of small pleasures may be one of the most reliable paths to contentment.",
+    ],
+    ja: [
+      '幸せな人生を思いえがくとき、人々はしばしば、仕事での成功や思い出に残る旅や盛大な祝いのような、大きな成果やまれな経験を考える。そうした出来事はたしかに大切だが、それは私たちの時間のほんの一部しかしめない。人生のほとんどは決まった活動に満ちたふつうの日々からなっており、そうした日々の質は、並はずれた出来事よりも、寒い朝のあたたかい飲み物や、友人との短い会話や、日照りのあとの雨のにおいのような、日々を満たす小さな楽しみにかかっているのではないかと問うてみる値打ちがある。',
+      '小さな楽しみが大切な理由の一つは、単にそれがたびたびあることである。大きな成果は強いよろこびをもたらすかもしれないが、そうした瞬間はまれで、その影響は思っているよりも早くうすれることが多い。心理学者は、人々は状況の大きな変化になれ、しだいにいつもの幸せの度合いにもどると示してきた。対照的に、小さな楽しみは何度もくり返し味わうことができ、日々の経験へのその積み重なった影響は、ときどきの頂点の影響より大きいかもしれない。毎晩静かな散歩を楽しむ人は、1年を通せば、一度の高価な旅行よりもその散歩から多くの幸せを得ているかもしれない。',
+      '小さな楽しみにはまた、広く手に入るという利点もある。富や名声やすぐれた才能のような、幸せのもっとも大きなみなもとの多くは、平等に分けられておらず、ほとんどの人の手のとどかないところにある。だれもがぜいたくな休暇を楽しめるわけではないが、ほとんどだれもが夕日の光や好きな料理の味やよい本の楽しみを味わうことができ、そうしたものを味わうことを学べば、さまざまな状況の人々にとって満ちたりた人生が手のとどくものになるかもしれない。',
+      'しかし、小さな楽しみを味わうことは、思えるほど自然にできることではない。いそがしい人々は、未来への心配や過去への後悔に注意をうばわれて、よろこびをもたらしうる経験に気づかないまま日々をすごすことが多い。多くの思想の伝統は注意の大切さを強調し、幸せは私たちに何が起こるかだけでなく、それにどれだけ十分に心を向けているかにもかかっていると示してきた。気づかれない楽しみは、ある意味でまったく経験されていないのである。',
+      '小さな楽しみには社会的な面もある。食事を分かち合うこと、見知らぬ人とほほえみをかわすこと、同僚と冗談に笑うことはささやかな経験だが、それは私たちをささえるつながりをつくる。そうした瞬間はそれだけではまったくとるに足りないように見えるかもしれないが、時がたつにつれて人間関係と地域の生地を形づくる。そうした瞬間にゆたかな人生は、日々のつながりを犠牲にして遠い目標を追うことにささげられた人生よりも満ちたりたものかもしれない。',
+      'これは、大きな望みを捨てたり、人生のより大きな問いを無視したりすべきだということではない。大きな目標は人生に方向をあたえることがあり、小さななぐさめではやわらげられない苦しみもある。貧困や病気や不正と闘っている人には、心地よい一杯のお茶以上のものが必要である。言いたいのはむしろ、より大きな目的とならんで、毎日手に入るふつうの楽しみをおろそかにすべきではないということである。それは、ふつう私たちが認めているよりも、私たちの幸せに大きく役立っているのかもしれないからである。',
+      'だとすれば、よく生きる技術には、気づく技術もふくまれるのかもしれない。毎日があたえてくれる小さなよいものに注意をはらうことで、私たちは、自分の人生が思っていたより多くの幸せをふくんでいると気づくかもしれない。そうした注意にはお金もかからず、特別な状況もいらず、ただ速度を落としてまわりを見わたす気持ちがあればよい。しばしばより多く、より速く、より大きくを求めるようすすめる文化のなかで、小さな楽しみを静かに味わうことは、満足へのもっとも確かな道の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「だれもがぜいたくな休暇を楽しめるわけではないが、ほとんどだれもが夕日を楽しめる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '大きな成果の影響は、思っているより早くうすれることが多い。', answer: true, why: '第2段落 their effect often fades more quickly than we expect。' },
+      { statement: '富や名声は、すべての人に平等に分けられている。', answer: false, why: '第3段落 are distributed unequally。' },
+      { statement: '筆者によれば、気づかれない楽しみは、ある意味で経験されていない。', answer: true, why: '第4段落 A pleasure that is not noticed is, in a sense, not experienced at all。' },
+      { statement: '筆者は、大きな望みを捨てるべきだと主張している。', answer: false, why: '第6段落 None of this means that we should abandon ambition。' },
+    ],
+    qa: [
+      { q: 'Why may small pleasures have a greater effect on daily experience than occasional peaks?', choices: ['They can be enjoyed again and again.', 'They are always expensive.', 'They last forever.', 'They require great talent.'], answer: 0, why: '第2段落 Small pleasures ... can be enjoyed again and again。' },
+      { q: 'What does appreciating small pleasures require, according to the author?', choices: ['A willingness to slow down and look around.', 'A large income.', 'Special circumstances.', 'Rare experiences.'], answer: 0, why: '第7段落 only a willingness to slow down and look around。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
