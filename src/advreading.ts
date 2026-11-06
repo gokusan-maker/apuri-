@@ -37502,6 +37502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-choice',
+    title: 'The Burden of Choice',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We usually think of choice as a good thing. To be able to choose our work, our partners, our beliefs, and even the small details of our daily lives is widely regarded as one of the great achievements of modern societies. People in the past often had little say over where they lived or what they did, and many people in the world still have far fewer options than they would like. It may seem strange, then, to suggest that choice can also be a burden, and that having more of it does not always make us happier or freer.",
+      "Yet anyone who has stood for a long time in front of a shelf of almost identical products knows that choice can be tiring. Each decision requires attention and comparison, and when the options are numerous, the effort of choosing can exceed the benefit of finding the best one. Moreover, the more options we have, the more likely we are to feel that we might have chosen better. A person who picks one item from three may be content; a person who picks one from thirty may keep wondering about the twenty-nine they left behind.",
+      "This difficulty becomes more serious when the choices concern the shape of our lives. ( A ) earlier generations often followed paths laid down by family, religion, or social class, many people today are expected to decide for themselves what to study, where to live, and what kind of person to become. Such freedom is precious, but it also places on each individual a responsibility that was once shared by tradition and community. When a choice turns out badly, there may be no one to blame but ourselves.",
+      "It would be a mistake, however, to conclude that we would be better off with fewer choices imposed from outside. The burden of choice is real, but so is the suffering of those who are denied it. People who cannot choose their work or their partners often experience their lives as something done to them rather than something they have made. The problem, then, is not choice itself but a particular way of relating to it, one that treats every decision as an opportunity to find the single best option and every imperfect outcome as a personal failure.",
+      "One way of easing this burden is to accept that most choices do not have a single correct answer. Many decisions involve options that are different but roughly equal in value, and searching endlessly for the perfect one may cost more than it gains. Those who are willing to choose something that is good enough, and then to commit themselves to it, often find greater satisfaction than those who keep searching for something better. What matters, in many cases, is less the choice itself than what we make of it afterward.",
+      "Another way is to recognize that choices are made not only by isolated individuals but within relationships and traditions that can guide and support them. Seeking the advice of people we trust, following customs whose wisdom has been tested by time, or making certain decisions once and for all so that they need not be reconsidered every day can all reduce the weight of choosing. Such practices do not limit our freedom so much as give it a shape within which it can be exercised without exhaustion.",
+      "Choice, in the end, is not simply a quantity of options to be increased but a capacity to be exercised well. A life with no choices would be one in which we could hardly call our actions our own, while a life in which everything must be chosen anew each day would leave little energy for living. Between these extremes lies the possibility of a freedom that knows when to choose carefully, when to choose quickly, and when to rest content with what has already been chosen.",
+    ],
+    ja: [
+      '私たちはふつう、選ぶことはよいことだと考えている。仕事や伴侶や信念、さらには日々の暮らしの小さなことまで選べることは、現代社会の大きななしとげの一つと広く見なされている。昔の人々は、どこに住むか、何をするかについてほとんど口をはさめないことが多く、世界の多くの人々は今も、望むよりはるかに少ない選択肢しかもっていない。そうすると、選ぶことは重荷にもなりうるし、それをより多くもつことがいつも私たちをより幸せにも自由にもするわけではないと示すのは、奇妙に思えるかもしれない。',
+      'しかし、ほとんど同じ商品がならぶたなの前に長いあいだ立ったことのある人ならだれでも、選ぶことはつかれるものだと知っている。それぞれの決定には注意と比較が必要であり、選択肢が多いと、選ぶ手間が、いちばんよいものを見つける利益を上回ることがある。さらに、選択肢が多いほど、もっとよい選び方ができたかもしれないと感じやすくなる。三つから一つを選ぶ人は満足するかもしれないが、三十から一つを選ぶ人は、置いてきた二十九のことをずっと考え続けるかもしれない。',
+      'このむずかしさは、選択が人生の形にかかわるとき、より深刻になる。前の世代はしばしば家族や宗教や社会の階層がしいた道をたどったが、今日の多くの人々は、何を学び、どこに住み、どんな人になるかを自分で決めるよう期待されている。そうした自由は貴重だが、それはまた、かつては伝統や地域が分け合っていた責任を一人一人に負わせる。選択がうまくいかなかったとき、自分以外にせめる人はいないかもしれない。',
+      'しかし、外からおしつけられる選択肢がより少ない方がよいと結論づけるのはまちがいだろう。選ぶことの重荷は本物だが、それをうばわれた人々の苦しみも本物である。仕事や伴侶を選べない人々は、しばしば自分の人生を、自分が作ったものではなく、自分にされたものとして経験する。そうすると、問題は選ぶことそのものではなく、それとのある特定のつきあい方である。それは、すべての決定をたった一つの最善の選択肢を見つける機会として、すべての不完全な結果を個人の失敗としてあつかうつきあい方である。',
+      'この重荷を軽くする一つの方法は、たいていの選択にはたった一つの正しい答えがあるわけではないと受け入れることである。多くの決定には、ちがってはいるが値打ちはだいたい同じ選択肢がかかわっており、完ぺきなものを果てしなくさがすことは、得るものより失うものの方が多いかもしれない。十分によいものを選び、それに打ちこむ気がある人々は、もっとよいものをさがし続ける人々より、大きな満足を見いだすことが多い。多くの場合に大切なのは、選択そのものより、あとでそれをどう生かすかである。',
+      'もう一つの方法は、選択は孤立した個人だけによってではなく、それを導き支えうる人間関係や伝統の中でなされると認めることである。信頼する人々の助言を求めること、その知恵が時によってためされてきた習慣にしたがうこと、ある決定を一度できっぱりして毎日考え直さなくてよいようにすることは、どれも選ぶことの重さをへらしうる。そうしたならわしは、私たちの自由を制限するというより、つかれはてずにそれを使える形をあたえるのである。',
+      '結局のところ、選ぶことは、ただふやすべき選択肢の量ではなく、うまく使うべき力である。選択のない人生は、自分の行動を自分のものとはとてもよべない人生だろうし、毎日すべてを新しく選ばなければならない人生は、生きるための力をほとんど残さないだろう。この両極のあいだに、いつ注意深く選び、いつすばやく選び、いつすでに選んだものに満足して休むべきかを知っている自由の可能性がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「前の世代は決められた道をたどったが、今日の人々は自分で決める」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '世界の多くの人々は、今も望むより少ない選択肢しかもっていない。', answer: true, why: '第1段落 many people in the world still have far fewer options than they would like。' },
+      { statement: '選択肢が多いほど、もっとよい選び方ができたと感じにくくなる。', answer: false, why: '第2段落 the more options we have, the more likely we are to feel that we might have chosen better。' },
+      { statement: '筆者は、外からおしつけられる選択肢が少ない方がよいとは考えていない。', answer: true, why: '第4段落 It would be a mistake ... to conclude that we would be better off with fewer choices imposed from outside。' },
+      { statement: '筆者によれば、たいていの選択にはたった一つの正しい答えがある。', answer: false, why: '第5段落 most choices do not have a single correct answer。' },
+    ],
+    qa: [
+      { q: 'What do people who cannot choose their work often feel about their lives?', choices: ['Their lives are something done to them.', 'Their lives are easier.', 'Their lives are perfect.', 'Their lives are full of options.'], answer: 0, why: '第4段落 experience their lives as something done to them rather than something they have made。' },
+      { q: 'What do practices such as following customs do, according to the author?', choices: ['They give freedom a shape so it can be used without exhaustion.', 'They take freedom away completely.', 'They increase the number of options.', 'They make every choice harder.'], answer: 0, why: '第6段落 give it a shape within which it can be exercised without exhaustion。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
