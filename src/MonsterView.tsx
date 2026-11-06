@@ -3149,6 +3149,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M74 70 q20 2 18 -18 q-8 10 -18 10 z" fill="#22201e" />
       </g>
     )
+  if (species === 'olingo')
+    return (
+      <g>
+        {/* 大きな目のまわりのくまどり */}
+        <circle cx="42" cy="44" r="6" fill="#2a1a0c" opacity="0.35" />
+        <circle cx="58" cy="44" r="6" fill="#2a1a0c" opacity="0.35" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
