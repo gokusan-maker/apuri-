@@ -5114,6 +5114,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Found it (B) hard (C) to believe (D) his story, I asked again.', choices: ['(A) Found it', '(B) hard', '(C) to believe', '(D) his story, I asked again'], answer: 0, why: '主語のない分詞構文なので Finding it hard ～。' },
     ],
   },
+  {
+    id: 'exam-error-participle-postmod-kyodai',
+    title: '入試の正誤問題〈215〉（京大レベル：英作文の分詞の後置修飾 the man standing・a book written）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞がほかの語句をともなって名詞を修飾するときは、名詞のうしろに置く。名詞が「～している」側なら現在分詞（the man standing by the door）、「～される・された」側なら過去分詞（a book written by ～）。一語の分詞は名詞の前に置ける（a broken window）。分詞のかたまりのあとに文の動詞が来るので、主語との一致にも注意する。',
+    ],
+    examples: [
+      { en: 'The man standing by the door is my uncle.', ja: 'ドアのそばに立っている男性は私のおじだ。' },
+      { en: 'This is a book written by a famous scientist.', ja: 'これは有名な科学者によって書かれた本だ。' },
+    ],
+    questions: [
+      { sentence: '(A) The man (B) stood (C) by the door (D) is my uncle.', choices: ['(A) The man', '(B) stood', '(C) by the door', '(D) is my uncle'], answer: 1, why: '「ドアのそばに立っている男性」は現在分詞 standing で後ろから修飾する。' },
+      { sentence: '(A) This is (B) a book (C) writing (D) by a famous scientist.', choices: ['(A) This is', '(B) a book', '(C) writing', '(D) by a famous scientist'], answer: 2, why: '本は「書かれた」ものなので過去分詞 written。' },
+      { sentence: '(A) The children (B) played (C) in the park (D) look happy.', choices: ['(A) The children', '(B) played', '(C) in the park', '(D) look happy'], answer: 1, why: '「公園で遊んでいる子どもたち」は playing。' },
+      { sentence: '(A) I received (B) a letter (C) sending (D) from London.', choices: ['(A) I received', '(B) a letter', '(C) sending', '(D) from London'], answer: 2, why: '手紙は「送られた」ものなので sent。' },
+      { sentence: '(A) Do you know (B) the girl (C) talked (D) with Tom?', choices: ['(A) Do you know', '(B) the girl', '(C) talked', '(D) with Tom?'], answer: 2, why: '「トムと話している少女」は talking。' },
+      { sentence: '(A) Cars (B) making (C) in Japan (D) are popular abroad.', choices: ['(A) Cars', '(B) making', '(C) in Japan', '(D) are popular abroad'], answer: 1, why: '車は「作られた」ものなので made。' },
+      { sentence: '(A) The language (B) speaking (C) in Brazil (D) is Portuguese.', choices: ['(A) The language', '(B) speaking', '(C) in Brazil', '(D) is Portuguese'], answer: 1, why: 'ことばは「話される」ものなので spoken。' },
+      { sentence: '(A) There were (B) many people (C) waited (D) for the bus.', choices: ['(A) There were', '(B) many people', '(C) waited', '(D) for the bus'], answer: 2, why: '「バスを待っている人々」は waiting。' },
+      { sentence: '(A) The bridge (B) built (C) last year (D) are already damaged.', choices: ['(A) The bridge', '(B) built', '(C) last year', '(D) are already damaged'], answer: 3, why: '主語は単数の The bridge なので is。' },
+      { sentence: '(A) A broke (B) window (C) was found (D) in the classroom.', choices: ['(A) A broke', '(B) window', '(C) was found', '(D) in the classroom'], answer: 0, why: '「われた窓」は過去分詞 broken。A broken window。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

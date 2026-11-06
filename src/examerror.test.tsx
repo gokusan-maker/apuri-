@@ -2962,3 +2962,10 @@ it('誤文訂正〈208〉：国公立レベル 他動詞と前置詞の単元が
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('reached')
 })
+
+it('正誤問題〈215〉：京大レベル 分詞の後置修飾の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-participle-postmod-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) stood')
+})
