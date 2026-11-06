@@ -8382,6 +8382,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[What an expensive cars] they are!', choices: ['What expensive cars', 'How expensive cars', 'What an expensive car', 'What a expensive cars'], answer: 0, why: '複数名詞の前には a／an をつけない。What expensive cars they are!' },
     ],
   },
+  {
+    id: 'exam-fix-197',
+    title: '入試の誤文訂正〈197〉（京大レベル：英作文の無生物主語 make・enable・prevent）',
+    points: ['英語では、物や出来事を主語にして「～が人に…させる」と言うことが多い（無生物主語）。make ＋人＋原形、enable・allow ＋人＋ to do、prevent・keep ＋人＋ from ～ing、take・lead ＋人＋ to ＋場所、remind ＋人＋ of ～、bring ＋人＋物 の形をおさえる。日本語の「～のせいで」「～のおかげで」「～すれば」を、無生物主語で書きかえる英作文によく使う。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The heavy rain prevented us from going out.', ja: '大雨のせいで、私たちは外出できなかった。' }],
+    questions: [
+      { sentence: 'The heavy rain [prevented us to go] out.', choices: ['prevented us from going', 'prevented us going to', 'prevented to us going', 'prevented us for going'], answer: 0, why: 'prevent ＋人＋ from ～ing「人が～するのをさまたげる」。' },
+      { sentence: 'This app [enables us use] English every day.', choices: ['enables us to use', 'enables us using', 'enables to us use', 'enables use us'], answer: 0, why: 'enable ＋人＋ to do「人が～できるようにする」。' },
+      { sentence: 'The news [made her to cry].', choices: ['made her cry', 'made her crying', 'made to her cry', 'made her cried'], answer: 0, why: 'make ＋人＋原形。made her cry。' },
+      { sentence: 'What [made you to change] your mind?', choices: ['made you change', 'made you changing', 'did make you to change', 'made you changed'], answer: 0, why: 'What made you ～?「なぜ～したのか」。make ＋人＋原形。' },
+      { sentence: 'A short walk [will take you at] the station.', choices: ['will take you to', 'will take you for', 'will take to you', 'will take you in'], answer: 0, why: 'take ＋人＋ to ＋場所「（～すれば）…に着く」。' },
+      { sentence: 'This photo [reminds me my] childhood.', choices: ['reminds me of my', 'reminds my me', 'reminds me to my', 'reminds of me my'], answer: 0, why: 'remind ＋人＋ of ～「人に～を思い出させる」。' },
+      { sentence: 'His illness [kept him to attend] the meeting.', choices: ['kept him from attending', 'kept him attending to', 'kept to him attending', 'kept him for attend'], answer: 0, why: 'keep ＋人＋ from ～ing「人が～するのをさまたげる」。' },
+      { sentence: 'The bridge [allows people cross] the river safely.', choices: ['allows people to cross', 'allows people crossing', 'allows to people cross', 'allows cross people'], answer: 0, why: 'allow ＋人＋ to do「人が～できるようにする」。' },
+      { sentence: 'Hard work [brought success him].', choices: ['brought him success', 'brought to him success', 'brought him to success of', 'brought success to he'], answer: 0, why: 'bring ＋人＋物「人に物をもたらす」。brought him success。' },
+      { sentence: 'A few minutes’ walk [led us at] a small lake.', choices: ['led us to', 'led us for', 'led to us', 'led us in'], answer: 0, why: 'lead ＋人＋ to ＋場所「（～すると）…に出る」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
