@@ -4970,6 +4970,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Much people (B) came (C) to see (D) the fireworks.', choices: ['(A) Much people', '(B) came', '(C) to see', '(D) the fireworks'], answer: 0, why: 'people は数えられる名詞（複数あつかい）なので Many people。' },
     ],
   },
+  {
+    id: 'exam-error-participle-adj-kokkou',
+    title: '入試の正誤問題〈209〉（国公立レベル：分詞形容詞 exciting・excited）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '感情を表す動詞（excite・bore・surprise・interest・tire・disappoint・confuse・amaze・frighten・embarrass）は「～させる」という意味。物や出来事が人にその気持ちを起こさせるときは ～ing（an exciting game）、人がその気持ちになっているときは ～ed（I was excited）。be interested in のように前置詞がつく形もある。',
+    ],
+    examples: [
+      { en: 'The game was exciting, and we were all excited.', ja: '試合はわくわくするもので、私たちはみんなわくわくしていた。' },
+      { en: 'I was bored during the boring meeting.', ja: '退屈な会議のあいだ、私は退屈していた。' },
+    ],
+    questions: [
+      { sentence: '(A) The movie was (B) so (C) excited (D) that we watched it twice.', choices: ['(A) The movie was', '(B) so', '(C) excited', '(D) that we watched it twice'], answer: 2, why: '映画が人をわくわくさせるので exciting。' },
+      { sentence: '(A) I was (B) very (C) boring (D) during the long meeting.', choices: ['(A) I was', '(B) very', '(C) boring', '(D) during the long meeting'], answer: 2, why: '人が退屈を感じているので bored。' },
+      { sentence: '(A) She (B) looked (C) surprising (D) at the news.', choices: ['(A) She', '(B) looked', '(C) surprising', '(D) at the news'], answer: 2, why: '人がおどろいたので surprised。' },
+      { sentence: '(A) The results (B) of the test (C) were (D) disappointed.', choices: ['(A) The results', '(B) of the test', '(C) were', '(D) disappointed'], answer: 3, why: '結果が人をがっかりさせるので disappointing。' },
+      { sentence: '(A) We were (B) interesting (C) in (D) the history of the castle.', choices: ['(A) We were', '(B) interesting', '(C) in', '(D) the history of the castle'], answer: 1, why: '人が興味をもつので interested in。' },
+      { sentence: '(A) Tiring (B) after the game, (C) the players (D) went straight to bed.', choices: ['(A) Tiring', '(B) after the game,', '(C) the players', '(D) went straight to bed'], answer: 0, why: '選手がつかれているので Tired。' },
+      { sentence: '(A) His speech (B) was so (C) confused (D) that nobody understood it.', choices: ['(A) His speech', '(B) was so', '(C) confused', '(D) that nobody understood it'], answer: 2, why: '話が人を混乱させるので confusing。' },
+      { sentence: '(A) It was (B) an (C) amazed (D) experience for all of us.', choices: ['(A) It was', '(B) an', '(C) amazed', '(D) experience for all of us'], answer: 2, why: '経験が人をおどろかせるので amazing。' },
+      { sentence: '(A) The children (B) were (C) frightening (D) by the loud thunder.', choices: ['(A) The children', '(B) were', '(C) frightening', '(D) by the loud thunder'], answer: 2, why: '子どもがこわがったので frightened。' },
+      { sentence: '(A) I felt (B) embarrassing (C) when I (D) forgot his name.', choices: ['(A) I felt', '(B) embarrassing', '(C) when I', '(D) forgot his name'], answer: 1, why: '自分がはずかしく感じたので embarrassed。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
