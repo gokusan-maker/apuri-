@@ -38418,6 +38418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-doctor-strikes',
+    title: 'Should Doctors and Nurses Be Allowed to Strike?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, workers have the legal right to go on strike, refusing to work in order to press for better pay or conditions. When doctors and nurses take such action, however, the situation becomes especially sensitive, since their work directly affects the health and even the lives of patients. In recent years, strikes by medical staff have occurred in a number of countries, sometimes lasting for weeks and forcing hospitals to cancel thousands of appointments and operations. Similar disputes have arisen over working hours as well as pay. These events have prompted debate about whether health workers should have the same right to strike as other employees.",
+      "Those who support the right of health workers to strike argue that it is a basic protection that all workers should enjoy. Doctors and nurses, they point out, often work long hours under great pressure, and in some countries their pay has fallen behind that of other professions. Without the ability to strike, supporters claim, health workers would have little power to negotiate with governments or employers, and poor conditions could continue until staff left the profession altogether. In the long run, this would harm patients far more than a temporary strike.",
+      "Supporters also argue that strikes by medical staff are usually organized with great care to protect patients. ( A ) routine appointments may be postponed, emergency services and urgent treatments are generally maintained during strikes, and staff often agree to return to work if a serious crisis arises. In this view, the right to strike is not a threat to patient safety but a means of drawing public attention to problems, such as staff shortages and exhaustion, that already endanger patients every day.",
+      "Opponents, however, argue that the special nature of medical work makes strikes unacceptable. Even when emergency services continue, delays in diagnosis and treatment can have serious consequences for patients with conditions such as cancer, and those who suffer are often the most vulnerable members of society. Opponents also claim that health workers enter their profession knowing that it involves a duty of care to others, and that this duty should take priority over their own economic interests, however legitimate those interests may be.",
+      "Some opponents propose alternative ways of resolving disputes in essential services. In several countries, workers in sectors such as policing or firefighting are forbidden to strike, but their pay and conditions are determined by independent bodies that are required to consider fairness and comparisons with other professions. Opponents suggest that a similar system could be applied to health care, protecting patients from disruption while ensuring that medical staff are treated fairly. Under such a system, the decision about pay would rest with experts who are expected to weigh the interests of workers, patients, and taxpayers together.",
+      "Supporters of the right to strike respond that such systems do not always work as intended. Independent bodies may be influenced by governments that wish to limit public spending, and their recommendations are sometimes ignored. Without the possibility of strike action, supporters argue, health workers would depend entirely on the goodwill of those in power. They also note that public sympathy often lies with medical staff during disputes, suggesting that many citizens understand the pressures they face.",
+      "The debate over strikes by health workers reflects a difficult balance between the rights of workers and the needs of patients. Both sides agree that health care depends on the dedication of those who provide it, and that patients suffer when staff are exhausted, underpaid, or leaving the profession. The challenge for societies is to find ways of recognizing the value of medical work fairly, so that disputes can be resolved before they reach the point at which a strike seems the only remaining option.",
+    ],
+    ja: [
+      '多くの国で、働く人々には、よりよい給料や条件を求めて仕事をこばむストライキの法的な権利がある。しかし医者や看護師がそうした行動をとるとき、その仕事は患者の健康、さらには命に直接かかわるので、状況はとくにむずかしくなる。近年、いくつかの国で医療スタッフのストライキが起こり、ときには何週間も続いて、病院が何千もの予約や手術を取り消さざるをえなくなった。給料だけでなく、労働時間をめぐって同じような争いが起こったこともある。こうした出来事は、医療で働く人々にほかの働き手と同じストライキの権利があるべきかについての議論を引き起こしている。',
+      '医療で働く人々のストライキの権利を支持する人々は、それはすべての働き手がもつべき基本的な守りだと主張する。医者や看護師はしばしば大きな圧力のもとで長い時間働いており、国によってはその給料がほかの職業におくれをとっていると彼らは指摘する。ストライキができなければ、医療で働く人々は政府や雇い主と交渉する力をほとんどもたず、スタッフがその職業をすっかりやめるまで悪い条件が続くかもしれないと支持する人々は主張する。長い目で見れば、これは一時的なストライキよりはるかに患者を傷つけるだろう。',
+      '支持する人々はまた、医療スタッフのストライキはふつう、患者を守るよう細心の注意をはらって組織されると主張する。ふだんの予約は延期されるかもしれないが、救急の医療や急ぎの治療はストライキのあいだもたいてい続けられ、深刻な危機が起これば、スタッフは仕事にもどることに同意することが多い。この見方では、ストライキの権利は患者の安全へのおびやかしではなく、人手不足や疲労のような、すでに毎日患者を危険にさらしている問題に世の中の注意を集める手段である。',
+      'しかし反対する人々は、医療の仕事の特別な性質のために、ストライキは受け入れられないと主張する。救急の医療が続いても、診断や治療のおくれは、がんのような病気の患者に深刻な結果をもたらしうるし、苦しむのはしばしば社会のもっとも弱い立場の人々である。反対する人々はまた、医療で働く人々は、その職業がほかの人への世話の義務をともなうと知って入るのであり、自分の経済的な利益がどれほど正当であっても、この義務がそれより優先されるべきだと主張する。',
+      '欠かせないサービスでの争いを解決する別の方法を提案する反対者もいる。いくつかの国では、警察や消防のような分野で働く人々はストライキを禁じられているが、その給料や条件は、公平さやほかの職業とのくらべを考えることを求められた独立した機関によって決められている。反対する人々は、同じような仕組みを医療に当てはめれば、医療スタッフが公平にあつかわれるようにしつつ、患者を混乱から守れると提案する。そうした仕組みでは、給料の決定は、働き手と患者と納税者の利益をいっしょにはかりにかけることを期待される専門家にゆだねられる。',
+      'ストライキの権利を支持する人々は、そうした仕組みはいつも意図どおりに働くわけではないとこたえる。独立した機関は、公的な支出をおさえたい政府の影響を受けるかもしれず、その勧告は無視されることもある。ストライキの可能性がなければ、医療で働く人々は権力をもつ人々の善意にすっかりたよることになると支持する人々は主張する。彼らはまた、争いのあいだ、世の中の同情はしばしば医療スタッフの側にあると指摘し、多くの市民が彼らの受ける圧力を理解していることを示している。',
+      '医療で働く人々のストライキをめぐる議論は、働き手の権利と患者の必要のあいだのむずかしいつりあいを反映している。どちらの側も、医療はそれを提供する人々の献身にかかっており、スタッフがつかれはてたり、給料が低すぎたり、職業をやめたりすると患者が苦しむことには同意している。社会の課題は、医療の仕事の価値を公平に認めるやり方を見つけ、ストライキが残された唯一の手段に思える段階に達する前に、争いを解決できるようにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ふだんの予約は延期されるかもしれないが、救急の医療は続けられる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that the right to strike gives health workers the power to ( 1 ) and that emergency care is usually maintained. Opponents argue that delays can seriously harm patients and that health workers have a ( 2 ) of care. Some propose that pay should be set by ( 3 ) bodies instead.',
+      blanks: [
+        { choices: ['negotiate', 'travel', 'retire', 'study'], answer: 0, why: '第2段落 would have little power to negotiate。' },
+        { choices: ['duty', 'choice', 'habit', 'fear'], answer: 0, why: '第4段落 it involves a duty of care to others。' },
+        { choices: ['independent', 'private', 'foreign', 'religious'], answer: 0, why: '第5段落 determined by independent bodies。' },
+      ],
+    },
+    tf: [
+      { statement: '医療スタッフのストライキが、何週間も続いたことがある。', answer: true, why: '第1段落 sometimes lasting for weeks。' },
+      { statement: 'ストライキのあいだ、救急の医療はたいていすべて止まる。', answer: false, why: '第3段落 emergency services and urgent treatments are generally maintained。' },
+      { statement: 'いくつかの国では、警察や消防で働く人々はストライキを禁じられている。', answer: true, why: '第5段落 are forbidden to strike。' },
+      { statement: '争いのあいだ、世の中の同情はいつも政府の側にある。', answer: false, why: '第6段落 public sympathy often lies with medical staff。' },
+    ],
+    qa: [
+      { q: 'Who often suffers most from delays in treatment, according to opponents?', choices: ['The most vulnerable members of society.', 'Hospital managers.', 'Healthy young people.', 'Government officials.'], answer: 0, why: '第4段落 those who suffer are often the most vulnerable members of society。' },
+      { q: 'What is the challenge for societies, according to the author?', choices: ['To recognize the value of medical work fairly before disputes become strikes.', 'To ban all strikes immediately.', 'To reduce the number of doctors.', 'To close hospitals.'], answer: 0, why: '第7段落 to find ways of recognizing the value of medical work fairly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
