@@ -37982,6 +37982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-neighbors',
+    title: 'On Neighbors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Neighbors occupy an unusual place among the people in our lives. Unlike friends, they are not chosen for their personalities or shared interests; unlike family, they are not bound to us by blood or long history. They are simply the people who happen to live nearby, and yet their presence can shape our daily experience in ways that few other relationships do. A thoughtful neighbor can make a street feel like a community, while a difficult one can make even a comfortable home feel uneasy. The relationship deserves more reflection than it usually receives.",
+      "In many traditional communities, neighbors depended on one another for survival. They helped to bring in harvests, built houses together, cared for the sick, and shared food in times of scarcity. Such relationships were not always warm, but they were necessary, and they created obligations that everyone understood. In modern cities, by contrast, much of what neighbors once provided can be obtained from shops, services, and public institutions. It is now possible to live for years in an apartment building without learning the names of the people next door.",
+      "This change has brought both freedom and loss. ( A ) the decline of close neighborly ties has spared many people from the pressure of constant observation and gossip, it has also left some without anyone nearby to turn to in an emergency. Older people living alone, new arrivals in unfamiliar cities, and families with young children may feel this absence most keenly. The privacy that modern life offers can easily become isolation when no one notices that a neighbor has not been seen for several days.",
+      "What, then, do we owe our neighbors? At a minimum, most people would agree that we owe them a certain restraint: not making excessive noise, keeping shared spaces clean, and respecting their privacy. These obligations are largely negative, consisting of things we should avoid doing. Yet many traditions also speak of positive duties toward neighbors, such as offering help when they are in need, welcoming newcomers, and treating those nearby with the same consideration we would wish to receive.",
+      "The interesting feature of such duties is that they apply regardless of whether we like the people concerned. We may have little in common with our neighbors, and we may even find some of them irritating, yet the fact of living near one another creates a relationship that cannot simply be ignored. In this sense, the neighbor represents a kind of moral test. It is easy to be kind to those we have chosen; it is harder, and perhaps more revealing, to be kind to those who have simply been placed beside us.",
+      "There are also practical reasons to cultivate good relations with neighbors. Studies of disasters have found that the people most likely to rescue someone in the first hours after an earthquake or flood are not professional rescuers but those living nearby. Neighborhoods in which residents know and trust one another tend to recover more quickly from such events. Even in ordinary times, the simple knowledge that someone nearby would notice if something were wrong can provide a sense of security that no technology can fully replace.",
+      "Perhaps the value of neighbors lies precisely in the fact that they are not chosen. In a world where we increasingly select our companions according to shared tastes and opinions, neighbors remind us that we also live among people who differ from us. Learning to coexist with them, and occasionally to help them, is a modest but important practice of tolerance and care. A good neighbor need not become a close friend, but by paying a little attention to those nearby, each of us can help to make the places where we live more humane.",
+    ],
+    ja: [
+      '隣人は、私たちの人生の中の人々のあいだで、めずらしい位置をしめている。友だちとちがって、隣人は性格や共通の関心で選ばれるのではなく、家族とちがって、血や長い歴史で私たちと結ばれているわけでもない。彼らはただたまたま近くに住んでいる人々であり、それでもその存在は、ほかのほとんどの関係にはないやり方で、私たちの日々の経験を形づくりうる。思いやりのある隣人は通りを地域社会のように感じさせ、むずかしい隣人は快適な家でさえ落ち着かなく感じさせることがある。この関係は、ふだん受けている以上に考えてみる値打ちがある。',
+      '多くの伝統的な地域社会では、隣人は生きのびるためにたがいにたよりあっていた。彼らは収穫を手伝い、いっしょに家を建て、病人の世話をし、物が足りないときには食べ物を分け合った。そうした関係はいつもあたたかかったわけではないが、必要なものであり、だれもが理解している義務を生み出した。それに対して現代の都市では、かつて隣人があたえていたものの多くを、店やサービスや公共の機関から得ることができる。今では、となりの人の名前を知らずに、何年もマンションに住むことができる。',
+      'この変化は自由と喪失の両方をもたらした。近所のつながりがうすれたことで、多くの人々はたえず見られることやうわさの圧力からまぬがれたが、それはまた、緊急のときにたよれる人が近くにだれもいない人々も生み出した。一人で暮らすお年寄りや、なじみのない都市に来たばかりの人や、小さな子どもがいる家族は、この不在をもっとも強く感じるかもしれない。現代の暮らしがあたえるプライバシーは、隣人が何日も見かけられていないことにだれも気づかないとき、たやすく孤立になってしまう。',
+      'では、私たちは隣人に何を負っているのだろうか。最低限、私たちは隣人にある種のひかえめさ、つまり大きすぎる音を立てないこと、共有の場所をきれいに保つこと、プライバシーを尊重することを負っているということには、ほとんどの人が同意するだろう。こうした義務の多くは消極的なもので、してはいけないことから成っている。しかし多くの伝統は、困っているときに助けを申し出ること、新しく来た人をむかえること、近くの人を自分が受けたいのと同じ思いやりをもってあつかうことのような、隣人への積極的な義務についても語っている。',
+      'そうした義務の興味深い特徴は、かかわる人々を好きかどうかにかかわらず当てはまることである。私たちは隣人とほとんど共通点がないかもしれず、なかにはいらいらさせる人さえいるかもしれないが、たがいの近くに住んでいるという事実は、ただ無視することのできない関係を生み出す。この意味で、隣人は一種の道徳的な試験を表している。自分が選んだ人に親切にするのはやさしいが、ただとなりに置かれた人に親切にするのはよりむずかしく、おそらくより多くのことを明らかにする。',
+      '隣人とよい関係を育てる実際的な理由もある。災害の研究によると、地震や洪水のあとの最初の数時間にだれかを救う可能性がもっとも高いのは、専門の救助隊ではなく近くに住む人々である。住民がたがいを知り信頼している地域は、そうした出来事からより早く立ち直る傾向がある。ふだんでも、何かがおかしければ近くのだれかが気づいてくれるだろうという単純な知識は、どんな技術も完全には代わりになれない安心感をあたえてくれる。',
+      'おそらく隣人の価値は、まさに選ばれないという事実にある。好みや意見が同じかどうかで仲間をますます選ぶ世界で、隣人は、私たちが自分とちがう人々のあいだでも暮らしていることを思い出させる。彼らとともに生き、ときに彼らを助けることを学ぶのは、寛容と思いやりのささやかだが大切な実践である。よい隣人が親しい友だちになる必要はないが、近くの人に少し注意をはらうことで、私たち一人一人が、自分の住む場所をより人間らしいものにする助けになれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「つながりがうすれて圧力からまぬがれたが、たよれる人のいない人も生んだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '隣人は、性格や共通の関心で選ばれるわけではない。', answer: true, why: '第1段落 they are not chosen for their personalities or shared interests。' },
+      { statement: '伝統的な地域社会の隣人の関係は、いつもあたたかかった。', answer: false, why: '第2段落 Such relationships were not always warm。' },
+      { statement: '災害のあと最初にだれかを救うのは、近くに住む人々であることが多い。', answer: true, why: '第6段落 are not professional rescuers but those living nearby。' },
+      { statement: '筆者によれば、よい隣人は親しい友だちにならなければならない。', answer: false, why: '第7段落 A good neighbor need not become a close friend。' },
+    ],
+    qa: [
+      { q: 'Who may feel the absence of neighborly ties most keenly?', choices: ['Older people living alone and new arrivals.', 'Professional rescuers.', 'Shop owners.', 'Tourists.'], answer: 0, why: '第3段落 Older people living alone, new arrivals in unfamiliar cities, and families with young children。' },
+      { q: 'Why does the author call the neighbor a kind of moral test?', choices: ['It is harder to be kind to those placed beside us than to those we chose.', 'Neighbors check our behavior.', 'Neighbors give us tests.', 'It is easy to like everyone.'], answer: 0, why: '第5段落 it is harder ... to be kind to those who have simply been placed beside us。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
