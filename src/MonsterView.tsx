@@ -3098,6 +3098,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 24 l-6 -18 M60 24 l6 -18" stroke="#1f130a" strokeWidth="3" />
       </g>
     )
+  if (species === 'aardwolf')
+    return (
+      <g>
+        {/* 背中のたてがみ */}
+        <path d="M30 34 l4 -8 l4 8 l4 -8 l4 8 l4 -8 l4 8" stroke="#2b1f0e" strokeWidth="2" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
