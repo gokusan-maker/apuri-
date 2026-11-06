@@ -37058,6 +37058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-loot-boxes',
+    title: 'Should Loot Boxes in Games Be Regulated?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many popular video games now include features that allow players to pay real money for random rewards. These features, often called loot boxes, offer players a chance to receive valuable items, characters, or abilities, but the contents are not known until after the purchase. Because the outcome depends on chance, some people argue that loot boxes resemble gambling and should be regulated or even banned, particularly in games played by children. Others insist that they are a harmless form of entertainment and an important source of income for game developers.",
+      "Supporters of regulation argue that loot boxes use the same psychological techniques as gambling machines. Bright lights, exciting sounds, and the uncertainty of the reward can encourage players to keep spending in the hope of obtaining a rare item. Children and teenagers, whose ability to control impulses is still developing, may be especially vulnerable to these techniques. Some studies have found an association between spending on loot boxes and problems with gambling, although researchers continue to debate whether one causes the other. Even so, supporters argue, the possible risks are serious enough to justify caution, particularly when the players involved are young.",
+      "Supporters also emphasize the lack of transparency in many games. Players are often not told the exact chances of receiving particular items, making it difficult to judge whether a purchase is worthwhile. ( A ) some players may spend only small amounts, supporters argue, others may spend large sums without fully realizing how much they have paid, especially when purchases are made with virtual currencies that disguise their real cost. Clear rules, in their view, would protect consumers and ensure that games are played fairly.",
+      "Critics of regulation, however, argue that loot boxes differ from gambling in important ways. In most games, players always receive something in return for their payment, and the items they obtain cannot usually be exchanged for money. Critics compare loot boxes to collectible card packs or toy capsules, which have long been sold to children without being treated as gambling. They also warn that heavy regulation could harm the games industry, which employs many people and depends on such income to fund the development of new games.",
+      "Critics further argue that the responsibility for managing spending lies with players and parents. Most gaming systems already allow parents to set spending limits or require approval for purchases, and education about responsible spending may be more effective than legal restrictions. In their view, banning loot boxes would treat all players as unable to make their own decisions, when the great majority enjoy the games without spending excessively. A small number of cases of excessive spending, they suggest, should not lead to rules that affect millions of ordinary players.",
+      "Between these positions, several countries have adopted intermediate measures. Some require game companies to publish the probabilities of receiving each item, so that players can make informed decisions. Others restrict the sale of loot boxes to minors or require age verification before purchases can be made. Some companies have voluntarily introduced spending limits or replaced random rewards with items that players can choose directly. Such approaches aim to reduce the risks of loot boxes while allowing games to remain commercially viable.",
+      "The debate over loot boxes reflects a broader question about how societies should respond to new forms of entertainment that blur familiar categories. Digital products can combine elements of games, shopping, and gambling in ways that existing laws were not designed to address. Deciding how to regulate them requires careful attention to the evidence about their effects, especially on young people, as well as respect for the freedom of adults to enjoy entertainment in their own way. Finding this balance will become increasingly important as digital entertainment continues to evolve.",
+    ],
+    ja: [
+      '今では多くの人気のテレビゲームに、プレーヤーが本物のお金をはらってランダムな報酬を得られる仕組みがふくまれている。しばしばルートボックスとよばれるこうした仕組みは、価値のあるアイテムやキャラクターや能力を得るチャンスをあたえるが、中身は買ったあとまでわからない。結果が運にかかっているので、ルートボックスはかけごとに似ており、とくに子どもが遊ぶゲームでは規制するか、禁止さえすべきだと主張する人々もいる。それは害のない娯楽の一つであり、ゲームをつくる会社にとって大切な収入源だと主張する人々もいる。',
+      '規制を支持する人々は、ルートボックスはかけごとの機械と同じ心理的な技法を使っていると主張する。明るい光やわくわくする音や報酬の不確かさは、珍しいアイテムを手に入れたいという望みから、プレーヤーにお金を使い続けるようにうながしうる。衝動をおさえる力がまだ育っている途中の子どもや十代の若者は、こうした技法にとくに弱いかもしれない。ルートボックスへの出費とかけごとの問題との結びつきを見いだした研究もあるが、一方がもう一方を引き起こすのかについては研究者のあいだで今も議論が続いている。それでも、とくにかかわるプレーヤーが若い場合には、考えられる危険は用心を正当化するほど深刻だと支持する人々は主張する。',
+      '支持する人々はまた、多くのゲームで透明性が欠けていることを強調する。プレーヤーはしばしば特定のアイテムを得る正確な確率を知らされず、買う価値があるかを判断するのが難しい。少しのお金しか使わないプレーヤーもいるかもしれないが、とくに本当の費用を見えにくくする仮想通貨で買い物をするときには、自分がどれだけはらったかを十分にわからないまま大金を使ってしまうプレーヤーもいると支持する人々は主張する。彼らの見方では、はっきりした規則が消費者を守り、ゲームが公平に遊ばれるようにするだろう。',
+      'しかし規制を批判する人々は、ルートボックスは大切な点でかけごととちがうと主張する。ほとんどのゲームで、プレーヤーははらったお金に対していつも何かを受け取り、得たアイテムはふつうお金と交換できない。批判する人々は、ルートボックスを、長いあいだかけごととしてあつかわれずに子どもに売られてきたトレーディングカードのパックやカプセルのおもちゃにたとえる。彼らはまた、重い規制は多くの人をやとい、新しいゲームの開発の資金をそうした収入にたよっているゲーム業界を傷つけかねないと警告する。',
+      '批判する人々はさらに、出費を管理する責任はプレーヤーと親にあると主張する。ほとんどのゲーム機にはすでに、親が使える金額に上限を決めたり、買い物に許可を必要としたりする機能があり、責任ある使い方についての教育のほうが法律による制限より効果的かもしれない。彼らの見方では、ルートボックスを禁止することは、大多数が使いすぎることなくゲームを楽しんでいるのに、すべてのプレーヤーを自分で決められない者としてあつかうことになる。少数の使いすぎの例が、何百万人ものふつうのプレーヤーに影響する規則につながるべきではないと彼らは示す。',
+      'これらの立場のあいだで、いくつかの国は中間の方法を取り入れてきた。プレーヤーが情報にもとづいて決められるよう、ゲーム会社にそれぞれのアイテムを得る確率を公表するよう求める国もある。未成年へのルートボックスの販売を制限したり、買う前に年齢の確認を求めたりする国もある。自分から使える金額の上限を取り入れたり、ランダムな報酬の代わりにプレーヤーが直接選べるアイテムにしたりした会社もある。こうしたやり方は、ゲームが商売として成り立ち続けられるようにしつつ、ルートボックスの危険をへらすことを目指している。',
+      'ルートボックスをめぐる議論は、なじみの区分をあいまいにする新しい娯楽に社会がどうこたえるべきかという、より広い問いを反映している。デジタルの商品は、今の法律があつかうようにつくられていないかたちで、遊びと買い物とかけごとの要素を組み合わせることがある。それをどう規制するかを決めるには、とくに若者への影響についての証拠への注意深い配慮と、おとなが自分のやり方で娯楽を楽しむ自由への尊重が必要である。デジタルの娯楽が進化し続けるにつれて、このつりあいを見つけることはますます大切になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「少ししか使わないプレーヤーもいるが、大金を使うプレーヤーもいる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of regulation argue that loot boxes use techniques similar to ( 1 ) and lack transparency. Critics argue that players always receive something and that parents can set spending ( 2 ). Some countries require companies to publish the ( 3 ) of receiving each item.',
+      blanks: [
+        { choices: ['gambling', 'sports', 'cooking', 'reading'], answer: 0, why: '第2段落 loot boxes use the same psychological techniques as gambling machines。' },
+        { choices: ['limits', 'records', 'goals', 'prizes'], answer: 0, why: '第5段落 allow parents to set spending limits。' },
+        { choices: ['probabilities', 'prices', 'names', 'colors'], answer: 0, why: '第6段落 publish the probabilities of receiving each item。' },
+      ],
+    },
+    tf: [
+      { statement: 'ルートボックスの中身は、買ったあとまでわからない。', answer: true, why: '第1段落 the contents are not known until after the purchase。' },
+      { statement: '研究によって、ルートボックスがかけごとの問題を引き起こすことが証明された。', answer: false, why: '第2段落 researchers continue to debate whether one causes the other。' },
+      { statement: '多くのゲームで、得られたアイテムはふつうお金と交換できない。', answer: true, why: '第4段落 the items they obtain cannot usually be exchanged for money。' },
+      { statement: 'どの会社も、自分から出費の上限を取り入れていない。', answer: false, why: '第6段落 Some companies have voluntarily introduced spending limits。' },
+    ],
+    qa: [
+      { q: 'Why may virtual currencies make spending harder to notice?', choices: ['They disguise the real cost of purchases.', 'They are always free.', 'They can only be used once.', 'They show exact prices.'], answer: 0, why: '第3段落 virtual currencies that disguise their real cost。' },
+      { q: 'What do critics compare loot boxes to?', choices: ['Collectible card packs or toy capsules.', 'Casinos.', 'Bank accounts.', 'School exams.'], answer: 0, why: '第4段落 compare loot boxes to collectible card packs or toy capsules。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
