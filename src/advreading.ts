@@ -39458,6 +39458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-gas-stoves',
+    title: 'Should Gas Stoves Be Phased Out?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For generations, many households have cooked on stoves fueled by natural gas, valued for the precise control they offer and the familiar sight of a blue flame. In recent years, however, a number of cities and regions have begun to restrict the installation of gas appliances in new buildings, requiring instead that new homes rely on electric heating and cooking. Supporters see such policies as a necessary step toward reducing greenhouse gas emissions, while critics regard them as an unreasonable limit on consumer choice. The debate has become surprisingly heated for a question that concerns something as ordinary as the kitchen stove.",
+      "Supporters of restrictions argue that buildings are a major source of greenhouse gas emissions, and that burning gas for heating and cooking contributes significantly to the problem. As electricity grids increasingly draw on renewable sources such as wind and solar power, electric appliances can be powered with lower emissions than gas ones. Requiring new buildings to use electricity, supporters claim, avoids locking in decades of fossil fuel use, since appliances and pipes installed today may remain in place for a very long time.",
+      "Supporters also point to concerns about indoor air quality. Burning gas indoors releases pollutants, and some studies have linked the use of gas stoves to increased rates of breathing problems, particularly among children. ( A ) good ventilation can reduce these risks, supporters argue, many kitchens are not adequately ventilated, and residents may be unaware of the pollutants they are breathing. Electric induction stoves, which heat pans directly using magnetic fields, offer an alternative that produces no combustion at all. Some chefs who have tried induction stoves report that they heat food faster and are easier to clean than gas burners.",
+      "Critics, however, argue that such restrictions limit the freedom of households to choose the appliances they prefer. Many cooks value gas stoves for the immediate control they provide, and some traditional cooking methods are difficult to reproduce on electric surfaces. Critics also note that electric appliances can be more expensive to buy, and that in some regions electricity costs more than gas, so that the change may raise household bills. In their view, consumers should be persuaded rather than forced to change.",
+      "Critics also raise concerns about the reliability of electricity supplies. In areas where power cuts are common, particularly during storms or periods of high demand, households that depend entirely on electricity may be left without heating or the ability to cook. Critics further question whether electricity grids in some places are yet clean enough to deliver the promised reductions in emissions, since electricity generated from coal or gas may produce more pollution overall than burning gas directly in the home. For this reason, they argue, the timing of any change should depend on local conditions.",
+      "Many policymakers have tried to respond to these concerns. Some restrictions apply only to new buildings, leaving existing homes free to keep their gas appliances, while others are introduced gradually to allow time for the electricity grid to become cleaner. Several governments offer subsidies to help households purchase electric heat pumps and induction stoves, reducing the financial burden of the change. Cooking demonstrations and trial programs have also been used to show residents what modern electric appliances can do.",
+      "The debate over gas appliances reflects a broader challenge in efforts to address climate change: many of the necessary changes affect ordinary habits and personal preferences, not only large industries. Policies that seem reasonable from the perspective of reducing emissions may feel intrusive to those who must live with them. Successful transitions may therefore depend not only on clear rules but also on fair support, reliable alternatives, and patient efforts to show people that new ways of living can be as satisfying as the old.",
+    ],
+    ja: [
+      '何世代にもわたって、多くの家庭は天然ガスを燃料とするこんろで料理をしてきた。それは細かく火加減ができることと、青い炎のなじみのある見た目で大切にされてきた。しかし近年、いくつかの都市や地域は、新しい建物にガス器具を取りつけることを制限しはじめ、かわりに新しい家に電気の暖房と調理を使うよう求めている。支持する人々はそうした方針を温室効果ガスの排出をへらすために必要な一歩と見るが、批判する人々は消費者の選ぶ自由への不当な制限と見なしている。この議論は、台所のこんろのようなありふれたものにかかわる問題としては、意外なほど熱くなっている。',
+      '制限を支持する人々は、建物は温室効果ガスの排出の大きなみなもとであり、暖房や調理のためにガスを燃やすことはこの問題に大きく寄与していると主張する。電力網がますます風力や太陽光のような再生可能なエネルギーにたよるようになるにつれて、電気の器具はガスの器具より少ない排出で動かせるようになる。今取りつけた器具や管はとても長いあいだそのまま残るかもしれないので、新しい建物に電気を使うよう求めれば、何十年もの化石燃料の使用に閉じこめられるのをさけられると支持する人々は主張する。',
+      '支持する人々はまた、室内の空気の質への心配をあげる。室内でガスを燃やすと汚染物質が出て、ガスこんろの使用を、とくに子どものあいだでの呼吸の問題の増加と結びつけた研究もある。よい換気でこうした危険はへらせるが、多くの台所は十分に換気されておらず、住民は自分が吸っている汚染物質に気づいていないかもしれないと支持する人々は主張する。磁気を使ってなべを直接あたためるＩＨこんろは、燃焼をまったく生まない別の選択肢をあたえてくれる。ＩＨこんろを試した料理人のなかには、ガスのこんろより速く食べ物をあたため、そうじもしやすいと言う人もいる。',
+      'しかし批判する人々は、そうした制限は家庭が好きな器具を選ぶ自由を限ると主張する。多くの料理人はガスこんろをすぐに火加減ができる点で大切にしており、伝統的な料理法のなかには電気の面ではくり返しにくいものもある。批判する人々はまた、電気の器具は買うのに高くつくことがあり、地域によっては電気がガスより高いので、変化は家計の負担を上げるかもしれないと指摘する。彼らの見方では、消費者は強いられるのではなく、説得されて変わるべきである。',
+      '批判する人々はまた、電気の供給の安定性についての心配をあげる。とくに嵐や需要が高い時期に停電がよく起こる地域では、すべてを電気にたよる家庭は暖房も料理もできなくなるかもしれない。批判する人々はさらに、場所によっては電力網がまだ約束された排出の削減をもたらすほどきれいなのかを疑う。石炭やガスで作られた電気は、家で直接ガスを燃やすより、全体としてより多くの汚染を生むかもしれないからである。このため、どんな変化もその時期は地域の条件によるべきだと彼らは主張する。',
+      '多くの政策を作る人々は、こうした心配にこたえようとしてきた。新しい建物にだけ当てはまり、今ある家はガス器具をもち続けられる制限もあれば、電力網がよりきれいになる時間をとるために少しずつ取り入れられるものもある。いくつかの政府は、家庭が電気のヒートポンプやＩＨこんろを買うのを助ける補助金を出し、変化のお金の負担をへらしている。現代の電気の器具に何ができるかを住民に見せるために、料理の実演や試しの取り組みも使われてきた。',
+      'ガス器具をめぐる議論は、気候変動に取り組む努力の、より広い課題を反映している。必要な変化の多くは、大きな産業だけでなく、ふだんの習慣や個人の好みにも影響するのである。排出をへらすという見方からはもっともに思える方針も、それとともに暮らさなければならない人々には立ち入りすぎに感じられるかもしれない。そのため、うまくいく移行は、はっきりした規則だけでなく、公平な支援と、信頼できる別の選択肢と、新しい暮らし方が古いものと同じくらい満足できることを人々に示す根気強い努力にもかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「よい換気で危険はへらせるが、多くの台所は換気されていない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that requiring electric appliances reduces ( 1 ) and improves indoor air quality. Critics argue that the rules limit consumer ( 2 ) and depend on reliable electricity. Many governments offer ( 3 ) to help households buy electric appliances.',
+      blanks: [
+        { choices: ['emissions', 'prices', 'noise', 'traffic'], answer: 0, why: '第2段落 lower emissions than gas ones。' },
+        { choices: ['choice', 'safety', 'income', 'health'], answer: 0, why: '第1段落・第4段落 an unreasonable limit on consumer choice。' },
+        { choices: ['subsidies', 'warnings', 'fines', 'licenses'], answer: 0, why: '第6段落 Several governments offer subsidies。' },
+      ],
+    },
+    tf: [
+      { statement: '今取りつけた器具や管は、とても長いあいだ残るかもしれない。', answer: true, why: '第2段落 may remain in place for a very long time。' },
+      { statement: 'ＩＨこんろは、ガスこんろと同じように燃焼を生む。', answer: false, why: '第3段落 produces no combustion at all。' },
+      { statement: '地域によっては、電気がガスより高いことがある。', answer: true, why: '第4段落 in some regions electricity costs more than gas。' },
+      { statement: 'すべての制限は、今ある家にも当てはまる。', answer: false, why: '第6段落 Some restrictions apply only to new buildings。' },
+    ],
+    qa: [
+      { q: 'Why might households in some areas be left without heating, according to critics?', choices: ['Power cuts are common there.', 'Gas is too cheap.', 'Stoves are too large.', 'Houses are too old.'], answer: 0, why: '第5段落 In areas where power cuts are common。' },
+      { q: 'What have cooking demonstrations been used for?', choices: ['To show what modern electric appliances can do.', 'To sell gas pipes.', 'To train chefs abroad.', 'To close restaurants.'], answer: 0, why: '第6段落 to show residents what modern electric appliances can do。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
