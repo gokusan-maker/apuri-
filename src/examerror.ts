@@ -4994,6 +4994,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I felt (B) embarrassing (C) when I (D) forgot his name.', choices: ['(A) I felt', '(B) embarrassing', '(C) when I', '(D) forgot his name'], answer: 1, why: '自分がはずかしく感じたので embarrassed。' },
     ],
   },
+  {
+    id: 'exam-error-rather-better-todai',
+    title: '入試の正誤問題〈210〉（東大レベル：英作文の would rather・had better のあとの形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'had better ＋動詞の原形「～した方がよい（しないとまずい）」。否定は had better not ＋原形。would better という形はない。would rather ＋原形「むしろ～したい」、would rather A than B は A も B も原形。否定は would rather not ＋原形。would rather ＋主語＋過去形は「（人に）～してほしい」という仮定法。どちらも to をつけない。',
+    ],
+    examples: [
+      { en: 'You had better leave before it gets dark.', ja: '暗くなる前に出発した方がいい。' },
+      { en: 'I would rather stay home than go out tonight.', ja: '今夜は出かけるより家にいたい。' },
+    ],
+    questions: [
+      { sentence: '(A) You (B) had better (C) to leave (D) before it gets dark.', choices: ['(A) You', '(B) had better', '(C) to leave', '(D) before it gets dark'], answer: 2, why: 'had better のあとは動詞の原形。had better leave。' },
+      { sentence: '(A) I would rather (B) stay home (C) than (D) going out tonight.', choices: ['(A) I would rather', '(B) stay home', '(C) than', '(D) going out tonight'], answer: 3, why: 'would rather A than B の A と B はどちらも動詞の原形。than go out。' },
+      { sentence: '(A) You (B) had not better (C) eat (D) too much sugar.', choices: ['(A) You', '(B) had not better', '(C) eat', '(D) too much sugar'], answer: 1, why: '否定は had better not ＋原形の語順。' },
+      { sentence: '(A) I’d rather (B) you (C) don’t tell (D) anyone about this.', choices: ['(A) I’d rather', '(B) you', '(C) don’t tell', '(D) anyone about this'], answer: 2, why: 'would rather ＋主語＋過去形（仮定法）で「～してほしい」。I’d rather you didn’t tell。' },
+      { sentence: '(A) We’d better (B) hurrying, (C) or we will (D) miss the train.', choices: ['(A) We’d better', '(B) hurrying,', '(C) or we will', '(D) miss the train'], answer: 1, why: 'had better のあとは原形なので hurry。' },
+      { sentence: '(A) She would rather (B) to walk (C) than take (D) the crowded bus.', choices: ['(A) She would rather', '(B) to walk', '(C) than take', '(D) the crowded bus'], answer: 1, why: 'would rather のあとは原形なので walk。' },
+      { sentence: '(A) You (B) would better (C) see a doctor (D) about that cough.', choices: ['(A) You', '(B) would better', '(C) see a doctor', '(D) about that cough'], answer: 1, why: '「～した方がよい」は had better。would better という形はない。' },
+      { sentence: '(A) I would rather (B) not (C) to talk (D) about it now.', choices: ['(A) I would rather', '(B) not', '(C) to talk', '(D) about it now'], answer: 2, why: 'would rather not ＋原形なので talk。' },
+      { sentence: '(A) He’d rather (B) his son (C) studies (D) medicine.', choices: ['(A) He’d rather', '(B) his son', '(C) studies', '(D) medicine'], answer: 2, why: 'would rather ＋主語＋過去形なので his son studied。' },
+      { sentence: '(A) Had better you (B) finish (C) your homework (D) before dinner.', choices: ['(A) Had better you', '(B) finish', '(C) your homework', '(D) before dinner'], answer: 0, why: 'had better は主語のあとに置く。You had better。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
