@@ -39538,6 +39538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-meat-tax',
+    title: 'Should Meat Be Taxed?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The production of meat, particularly beef, is responsible for a significant share of the world's greenhouse gas emissions, as well as for large amounts of land and water use. Some economists and environmental groups have therefore proposed a tax on meat, similar to existing taxes on tobacco, alcohol, or sugary drinks, which would raise its price and encourage people to eat less of it. The proposal has attracted growing attention in several countries, but it also provokes strong opposition, since meat plays a central role in many diets, cultures, and rural economies. The debate touches on economics, health, and culture all at the same time.",
+      "Supporters of a meat tax argue that the current price of meat does not reflect its true costs. The damage caused by emissions, deforestation, and water pollution is borne by society as a whole and by future generations, rather than by those who produce and consume the meat. A tax, supporters claim, would correct this imbalance by making the price reflect at least part of these hidden costs. Economists often regard such taxes as an efficient way of reducing harmful activities, since they leave individuals free to decide how much to change their behavior.",
+      "Supporters also point to potential health benefits. Eating large amounts of red and processed meat has been linked in many studies to higher risks of certain illnesses, including heart disease and some cancers. ( A ) a tax would not forbid anyone from eating meat, supporters argue, it could encourage people to replace part of their consumption with vegetables, beans, and other foods, improving public health while reducing environmental damage. The revenue raised could also be used to make healthy food more affordable.",
+      "Critics, however, argue that a meat tax would fall most heavily on those with the least money. Lower-income households spend a larger proportion of their budgets on food, and a rise in the price of meat could make it harder for them to afford a varied diet, particularly if cheaper alternatives are not readily available. Critics also warn that the tax could be seen as an attempt by governments to dictate what people eat, provoking resentment and undermining public support for other environmental policies.",
+      "Critics further emphasize the importance of meat to farmers and rural communities. In many regions, livestock farming is a major source of employment and income, and it has shaped local traditions and landscapes for generations. A tax that reduced demand for meat, critics argue, could threaten these livelihoods and damage rural economies that already face difficulties. Some also note that not all meat production is equally harmful, since methods vary greatly in their environmental effects, and a simple tax may fail to distinguish between them.",
+      "Supporters have proposed ways of addressing these concerns. Revenue from a meat tax could be returned to households, for example through lower taxes on fruit and vegetables or direct payments to those on low incomes, so that the overall cost of food does not rise for the poorest. Part of the revenue could also help farmers shift toward more sustainable methods or toward producing other foods. Some propose that the tax should vary according to the environmental impact of different types of meat, so that the most damaging products bear the highest charge.",
+      "The debate over a meat tax reflects a broader challenge in environmental policy: how to change everyday habits that are deeply woven into culture and livelihood. Few people would welcome higher prices for food they enjoy, yet the costs of current patterns of production are real and growing. Whether through taxes, subsidies, education, or new technologies, societies will need to find ways of making their diets more sustainable that are fair to consumers, respectful of farmers, and effective in reducing harm.",
+    ],
+    ja: [
+      '肉、とくに牛肉の生産は、世界の温室効果ガスの排出の大きな割合と、大量の土地と水の使用の原因になっている。そのため一部の経済学者や環境団体は、たばこや酒やあまい飲み物への今ある税金と同じように、肉の値段を上げて食べる量をへらすようはげます肉への税金を提案してきた。この提案はいくつかの国でますます注目を集めているが、肉は多くの食生活や文化や農村の経済で中心的な役割を果たしているので、強い反対も引き起こしている。この議論は、経済と健康と文化のすべてに同時にかかわっている。',
+      '肉への税金を支持する人々は、今の肉の値段はその本当の費用を反映していないと主張する。排出や森林の破壊や水の汚染による害は、肉を生産し消費する人々ではなく、社会全体と未来の世代が負っている。税金はこうしたかくれた費用の少なくとも一部を値段に反映させることで、このかたよりを正すと支持する人々は主張する。経済学者はしばしば、そうした税金を有害な活動をへらす効率的な方法と見なしている。どれだけふるまいを変えるかを一人一人が自由に決められるからである。',
+      '支持する人々はまた、健康への利益の可能性をあげる。赤身の肉や加工肉を大量に食べることは、多くの研究で、心臓病やある種のがんをふくむ病気の危険の高さと結びつけられてきた。税金はだれかが肉を食べるのを禁じるものではないが、消費の一部を野菜や豆やほかの食べ物に置きかえるよう人々をはげまし、環境への害をへらしながら公衆衛生を改善しうると支持する人々は主張する。集めた税収は、健康的な食べ物をより手ごろにするのにも使える。',
+      'しかし批判する人々は、肉への税金はもっともお金のない人々にもっとも重くのしかかると主張する。収入の少ない家庭は予算のより大きな割合を食べ物に使っており、とくにより安い代わりのものがすぐに手に入らない場合、肉の値段が上がると、いろいろな食事をまかなうのがむずかしくなるかもしれない。批判する人々はまた、この税金は政府が人々の食べるものを指図しようとしていると見られ、反感を引き起こし、ほかの環境政策への人々の支持をそこなうかもしれないと警告する。',
+      '批判する人々はさらに、農家と農村の地域にとっての肉の大切さを強調する。多くの地域で、家畜の飼育は仕事と収入の大きなみなもとであり、何世代にもわたって地元の伝統や景観を形づくってきた。肉の需要をへらす税金は、こうした暮らしをおびやかし、すでに困難に直面している農村の経済をそこないうると批判する人々は主張する。すべての肉の生産が等しく有害なわけではなく、方法によって環境への影響は大きくちがうので、単純な税金はそれらを区別できないかもしれないと指摘する人もいる。',
+      '支持する人々は、こうした心配に取り組む方法を提案してきた。肉への税金の税収は、たとえば果物や野菜への税金を下げたり、収入の少ない人に直接お金をはらったりして家庭にもどし、もっともまずしい人々にとって食べ物の費用全体が上がらないようにできる。税収の一部は、農家がより持続可能な方法やほかの食べ物の生産へ移るのを助けることにも使える。肉の種類ごとの環境への影響に応じて税金を変え、もっとも害の大きい商品にもっとも高い負担がかかるようにすべきだと提案する人もいる。',
+      '肉への税金をめぐる議論は、環境政策の、より広い課題を反映している。それは、文化や暮らしに深く織りこまれた日々の習慣をどう変えるかという課題である。楽しんでいる食べ物の値段が上がるのを歓迎する人はほとんどいないが、今の生産のしかたの費用は本物であり、ふえ続けている。税金であれ、補助金であれ、教育であれ、新しい技術であれ、社会は、消費者に公平で、農家を尊重し、害をへらすのに効果的なやり方で、食生活をより持続可能にする方法を見つける必要があるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「税金は肉を食べるのを禁じるものではないが、消費の置きかえをはげましうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that the price of meat does not reflect its true ( 1 ) and that a tax could improve health. Critics argue that it would fall most heavily on ( 2 ) households and threaten farmers. Supporters propose returning the ( 3 ) to households and helping farmers change.',
+      blanks: [
+        { choices: ['costs', 'flavors', 'origins', 'sizes'], answer: 0, why: '第2段落 does not reflect its true costs。' },
+        { choices: ['lower-income', 'larger', 'urban', 'younger'], answer: 0, why: '第4段落 Lower-income households spend a larger proportion。' },
+        { choices: ['revenue', 'meat', 'land', 'water'], answer: 0, why: '第6段落 Revenue from a meat tax could be returned to households。' },
+      ],
+    },
+    tf: [
+      { statement: '牛肉の生産は、温室効果ガスの排出の大きな割合の原因になっている。', answer: true, why: '第1段落 is responsible for a significant share of the world\'s greenhouse gas emissions。' },
+      { statement: '肉への税金は、肉を食べることを禁じる。', answer: false, why: '第3段落 a tax would not forbid anyone from eating meat。' },
+      { statement: 'すべての肉の生産が等しく有害なわけではない。', answer: true, why: '第5段落 not all meat production is equally harmful。' },
+      { statement: '筆者によれば、今の生産のしかたの費用は小さくなっている。', answer: false, why: '第7段落 the costs of current patterns of production are real and growing。' },
+    ],
+    qa: [
+      { q: 'Why do economists often regard such taxes as efficient?', choices: ['They leave individuals free to decide how much to change.', 'They forbid harmful products.', 'They are very easy to collect.', 'They raise no money.'], answer: 0, why: '第2段落 they leave individuals free to decide how much to change their behavior。' },
+      { q: 'How might the tax vary, according to some proposals?', choices: ['According to the environmental impact of different meats.', 'According to the day of the week.', 'According to the size of the shop.', 'According to the age of the buyer.'], answer: 0, why: '第6段落 vary according to the environmental impact of different types of meat。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
