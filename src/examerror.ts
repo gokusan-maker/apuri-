@@ -5162,6 +5162,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) By to practice (B) every day, (C) she became (D) a great pianist.', choices: ['(A) By to practice', '(B) every day,', '(C) she became', '(D) a great pianist'], answer: 0, why: 'by ～ing「～することによって」。By practicing。' },
     ],
   },
+  {
+    id: 'exam-error-negative-participle-kyodai',
+    title: '入試の正誤問題〈217〉（京大レベル：英作文の分詞構文の否定 Not knowing・Never having）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '分詞構文を否定するときは not や never を分詞の前に置く（Not knowing ～・Never having seen ～）。Knowing not や Having not は×。主節より前のことは完了形 having ＋過去分詞（Not having eaten）。分詞構文の主語は主節の主語と同じなので、その主語が「する」側なら ～ing、「される」側なら過去分詞にする。主節の時制や主語との一致にも注意する。',
+    ],
+    examples: [
+      { en: 'Not knowing what to say, she kept silent.', ja: '何と言ってよいかわからなかったので、彼女はだまっていた。' },
+      { en: 'Never having seen snow before, the children were excited.', ja: 'それまで雪を見たことがなかったので、子どもたちはわくわくしていた。' },
+    ],
+    questions: [
+      { sentence: '(A) Knowing not (B) what to say, (C) she (D) kept silent.', choices: ['(A) Knowing not', '(B) what to say,', '(C) she', '(D) kept silent'], answer: 0, why: '分詞構文の否定は not を分詞の前に置く。Not knowing。' },
+      { sentence: '(A) Not having (B) eat (C) breakfast, (D) he felt hungry by noon.', choices: ['(A) Not having', '(B) eat', '(C) breakfast,', '(D) he felt hungry by noon'], answer: 1, why: '完了形の分詞構文は having ＋過去分詞。Not having eaten。' },
+      { sentence: '(A) Having not (B) received (C) a reply, (D) I called her again.', choices: ['(A) Having not', '(B) received', '(C) a reply,', '(D) I called her again'], answer: 0, why: 'not は having の前に置く。Not having received。' },
+      { sentence: '(A) Never (B) having seen (C) snow before, (D) the children was excited.', choices: ['(A) Never', '(B) having seen', '(C) snow before,', '(D) the children was excited'], answer: 3, why: '主語の the children は複数なので were。' },
+      { sentence: '(A) Not (B) knowing (C) the way, (D) we asked to a police officer.', choices: ['(A) Not', '(B) knowing', '(C) the way,', '(D) we asked to a police officer'], answer: 3, why: 'ask は他動詞なので asked a police officer。' },
+      { sentence: '(A) Not being (B) able (C) to swimming, (D) he stayed on the beach.', choices: ['(A) Not being', '(B) able', '(C) to swimming,', '(D) he stayed on the beach'], answer: 2, why: 'be able to のあとは動詞の原形 swim。' },
+      { sentence: '(A) Not wanting (B) wake (C) the baby, (D) she spoke quietly.', choices: ['(A) Not wanting', '(B) wake', '(C) the baby,', '(D) she spoke quietly'], answer: 1, why: 'want to ＋原形なので Not wanting to wake。' },
+      { sentence: '(A) Never having (B) be (C) abroad, (D) she was nervous about the trip.', choices: ['(A) Never having', '(B) be', '(C) abroad,', '(D) she was nervous about the trip'], answer: 1, why: 'having のあとは過去分詞 been。' },
+      { sentence: '(A) Not (B) understood (C) the question, (D) he asked the teacher to repeat it.', choices: ['(A) Not', '(B) understood', '(C) the question,', '(D) he asked the teacher to repeat it'], answer: 1, why: '主語の he が「理解していない」ので現在分詞 Not understanding。' },
+      { sentence: '(A) Not (B) having finished (C) his homework, (D) he can’t go out last night.', choices: ['(A) Not', '(B) having finished', '(C) his homework,', '(D) he can’t go out last night'], answer: 3, why: 'last night と過去なので he couldn’t go out。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

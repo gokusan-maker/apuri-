@@ -2990,3 +2990,10 @@ it('誤文訂正〈210〉：東大レベル 比較の単元が10問ある', asyn
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('in')
 })
+
+it('正誤問題〈217〉：京大レベル 分詞構文の否定の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-negative-participle-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Knowing not')
+})
