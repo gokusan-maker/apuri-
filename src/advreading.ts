@@ -39262,6 +39262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-overthinking',
+    title: 'On Thinking Too Much',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us know the experience of thinking too much. A remark made by a colleague replays in our minds long after the conversation has ended; a decision already taken is examined again and again for signs that it was mistaken; a small worry about the future grows, through constant attention, into a large and shapeless fear. Such patterns of thought can be exhausting, and they rarely lead to useful conclusions. Yet thinking is also one of our most valuable capacities, and it is not always easy to say when careful reflection turns into something less helpful.",
+      "Part of the difficulty is that overthinking often disguises itself as responsibility. A person who examines every possible consequence of a decision may believe that they are being careful, and in some cases they are. Thinking ahead can prevent mistakes and prepare us for difficulties. The problem arises when thought no longer moves toward a decision or an understanding but circles endlessly around the same questions, producing anxiety rather than insight. The careful planner and the anxious overthinker may look alike from the outside; the difference lies in whether their thinking eventually reaches a point at which it can rest.",
+      "One sign that thinking has become unproductive is that it no longer responds to new information. ( A ) useful reflection changes as we learn more, overthinking tends to repeat the same fears and arguments, as if hoping that one more round of worry will finally produce certainty. But certainty is often impossible, particularly about other people's feelings or about events that have not yet happened. The demand for it can trap a person in a cycle of doubt from which there seems to be no exit.",
+      "Overthinking also tends to isolate us. When we are absorbed in our own thoughts, we may stop noticing the people around us or the details of the present moment. A conversation partner's words may pass unheard while we rehearse what we should have said earlier, and a beautiful afternoon may slip by while we worry about tomorrow. In this sense, excessive thought can cut us off from the very experiences that might relieve our anxiety and remind us of what matters.",
+      "It would be wrong, however, to treat overthinking as simply a personal failing. Some circumstances genuinely call for prolonged reflection, such as major decisions about work, health, or relationships, and people facing such decisions may need time and support rather than advice to stop thinking. Moreover, modern life presents many people with an unusual number of choices and a constant stream of information, conditions that make it difficult to reach a sense of closure about anything.",
+      "What, then, can help? One approach is to distinguish between problems that can be solved by further thought and those that cannot. Questions of fact can often be settled by gathering information, and practical problems can be addressed by making a plan. Uncertainties about other people's intentions or about the distant future, by contrast, may need to be accepted rather than resolved. Recognizing which kind of question one faces can make it easier to stop circling and to turn attention elsewhere. Writing the problem down on paper is another simple method, since it can make a vague worry concrete enough to be examined.",
+      "Another approach is to give the mind something else to do. Physical activity, conversation with others, or absorption in a task that requires concentration can interrupt the cycle of repetitive thought and allow a sense of perspective to return. This is not a rejection of thinking but a recognition that thought works best when it is balanced by action and by attention to the world outside ourselves. The goal is not to think less, but to think in ways that lead somewhere.",
+    ],
+    ja: [
+      '私たちのほとんどは、考えすぎるという経験を知っている。同僚の一言が、会話が終わったずっとあとも頭の中でくり返され、すでに下した決定が、まちがっていたしるしはないかと何度も調べ直され、未来についての小さな心配が、たえず注意を向けられることで、大きく形のないおそれに育っていく。そうした考え方の型はつかれさせるものであり、役に立つ結論につながることはめったにない。しかし考えることはまた、私たちのもっとも価値のある力の一つでもあり、注意深いふり返りがいつ、あまり役に立たないものに変わるのかを言うのはいつもかんたんではない。',
+      'むずかしさの一部は、考えすぎがしばしば責任感によそおうことにある。決定のあらゆる結果を調べる人は、自分は注意深いのだと信じているかもしれず、場合によっては実際にそうである。先のことを考えることは、まちがいをふせぎ、困難にそなえさせてくれる。問題が起こるのは、考えがもう決定や理解へと進まず、同じ問いのまわりを終わりなくまわり、気づきではなく不安を生むときである。注意深く計画する人と不安から考えすぎる人は、外からは同じように見えるかもしれない。そのちがいは、その考えがやがて休める地点にたどりつくかどうかにある。',
+      '考えることが実りのないものになったしるしの一つは、それがもう新しい情報にこたえなくなることである。役に立つふり返りはより多くを知るにつれて変わるが、考えすぎは、もう一度心配すればついに確信が生まれるのを期待するかのように、同じおそれと議論をくり返しがちである。しかし確信は、とくにほかの人の気持ちやまだ起こっていない出来事については、しばしば不可能である。それを求めることは、出口のないように思える疑いのくり返しに人をとじこめてしまうことがある。',
+      '考えすぎはまた、私たちを孤立させがちである。自分の考えに夢中になっていると、まわりの人々や今この瞬間の細かいことに気づかなくなるかもしれない。さっき言うべきだったことを頭の中で練習しているあいだに会話の相手のことばが聞こえないまま過ぎていき、明日のことを心配しているあいだに美しい午後が過ぎ去っていくかもしれない。この意味で、行きすぎた考えは、不安をやわらげ、何が大切かを思い出させてくれるかもしれない経験そのものから、私たちを切りはなしてしまうことがある。',
+      'しかし、考えすぎをただ個人の欠点としてあつかうのはまちがいだろう。仕事や健康や人間関係についての大きな決定のように、本当に長いふり返りを必要とする状況もあり、そうした決定に直面している人には、考えるのをやめろという助言ではなく、時間と支えが必要かもしれない。さらに、現代の暮らしは多くの人に、めずらしいほど多くの選択肢とたえまない情報の流れをあたえており、それは何についても区切りの感覚にいたるのをむずかしくする条件である。',
+      'では、何が助けになるのだろうか。一つのやり方は、さらに考えることで解決できる問題と、できない問題を区別することである。事実の問題はしばしば情報を集めることで決着でき、実際の問題は計画を立てることで取り組める。それに対して、ほかの人の意図や遠い未来についての不確かさは、解決するのではなく受け入れる必要があるかもしれない。自分がどちらの種類の問いに直面しているかを認めることで、まわり続けるのをやめ、注意をほかへ向けやすくなるかもしれない。問題を紙に書き出すのも、ばくぜんとした心配を調べられるほど具体的にしてくれるので、もう一つの単純な方法である。',
+      'もう一つのやり方は、心に何か別のことをさせることである。体を動かすことや、ほかの人との会話や、集中を必要とする作業に打ちこむことは、くり返しの考えの輪を断ち切り、ものごとを見通す感覚をもどしてくれることがある。これは考えることをこばむことではなく、考えは行動と、自分の外の世界への注意とつりあっているときにもっともよく働くと認めることである。目標は考えるのをへらすことではなく、どこかへ向かうやり方で考えることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「役に立つふり返りは変わるが、考えすぎは同じことをくり返す」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '考えすぎは、役に立つ結論につながることはめったにない。', answer: true, why: '第1段落 they rarely lead to useful conclusions。' },
+      { statement: '筆者によれば、先のことを考えるのはいつも害になる。', answer: false, why: '第2段落 Thinking ahead can prevent mistakes。' },
+      { statement: '考えすぎていると、まわりの人々に気づかなくなることがある。', answer: true, why: '第4段落 we may stop noticing the people around us。' },
+      { statement: '筆者は、考えることそのものをやめるべきだと考えている。', answer: false, why: '第7段落 The goal is not to think less。' },
+    ],
+    qa: [
+      { q: 'What is one sign that thinking has become unproductive?', choices: ['It no longer responds to new information.', 'It leads quickly to a decision.', 'It makes us notice details.', 'It changes as we learn more.'], answer: 0, why: '第3段落 it no longer responds to new information。' },
+      { q: 'What may uncertainties about the distant future need, according to the author?', choices: ['To be accepted rather than resolved.', 'More information.', 'A detailed plan.', 'Advice from strangers.'], answer: 0, why: '第6段落 may need to be accepted rather than resolved。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
