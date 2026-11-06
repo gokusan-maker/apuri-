@@ -2899,3 +2899,10 @@ it('正誤問題〈210〉：東大レベル would rather・had better の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to leave')
 })
+
+it('誤文訂正〈204〉：京大レベル because of・due to の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-204')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('because of')
+})

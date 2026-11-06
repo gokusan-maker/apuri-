@@ -8676,6 +8676,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'They [didn’t use to liking] vegetables.', choices: ['didn’t use to like', 'didn’t used to liking', 'weren’t use to like', 'didn’t use liking'], answer: 0, why: '否定文は didn’t use to ＋原形。' },
     ],
   },
+  {
+    id: 'exam-fix-204',
+    title: '入試の誤文訂正〈204〉（京大レベル：英作文の because of・due to・thanks to）',
+    points: ['because of・due to・owing to・thanks to は前置詞のはたらきをするので、あとには名詞（句）が来る（because of the rain）。主語と動詞のある節が来るときは because・since・as を使う（because it rained）。due to は be 動詞のあとにも置ける（The delay was due to the snow.）。thanks to は「～のおかげで」とよい結果に使うことが多い。「～によって引き起こされる」は be caused by。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The game was canceled because of the rain. / The game was canceled because it rained.', ja: '雨のために試合は中止になった。' }],
+    questions: [
+      { sentence: 'The game was canceled [because] the heavy rain.', choices: ['because of', 'because to', 'due', 'thanks for'], answer: 0, why: 'あとが名詞 the heavy rain なので because of。' },
+      { sentence: 'The delay was [due] bad weather.', choices: ['due to', 'due of', 'because', 'owing'], answer: 0, why: 'be 動詞のあとで「～のためだ」は due to ＋名詞。' },
+      { sentence: '[Thanks of] your help, we finished on time.', choices: ['Thanks to', 'Thank to', 'Thank for', 'Owing of'], answer: 0, why: '「～のおかげで」は thanks to。' },
+      { sentence: 'She stayed home [because of she was] sick.', choices: ['because she was', 'because of being she', 'due to she was', 'thanks to she was'], answer: 0, why: 'あとが「主語＋動詞」なので接続詞の because。' },
+      { sentence: '[Due to] the traffic was heavy, we were late.', choices: ['Because', 'Due to that', 'Owing to', 'Thanks to'], answer: 0, why: 'あとが節（the traffic was heavy）なので接続詞の Because。' },
+      { sentence: 'The flight was delayed [owing] engine trouble.', choices: ['owing to', 'owing for', 'owe to', 'owing of'], answer: 0, why: '「～のために」は owing to ＋名詞。' },
+      { sentence: 'His success was [thanks] his hard work.', choices: ['thanks to', 'thank to', 'thanks for', 'thanking'], answer: 0, why: '「～のおかげ」は thanks to。' },
+      { sentence: '[Because of] it was late, we took a taxi.', choices: ['Since', 'Due to', 'Thanks to', 'Owing to'], answer: 0, why: 'あとが節なので接続詞の Since（＝because）。' },
+      { sentence: 'The accident was caused [due to] careless driving.', choices: ['by', 'because', 'thanks to', 'owing'], answer: 0, why: '「～によって引き起こされた」は be caused by。' },
+      { sentence: 'Many trains stopped [because of the snow was] heavy.', choices: ['because the snow was', 'due to the snow was', 'because of snow being was', 'thanks to the snow was'], answer: 0, why: 'あとが節なので because the snow was heavy。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
