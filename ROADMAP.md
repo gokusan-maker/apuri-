@@ -1063,7 +1063,7 @@
   - [x] 410 正誤問題〈208〉（東大レベル：英作文の数えられない名詞 information・advice・furniture）10問
   - [x] 411 誤文訂正〈202〉（京大レベル：英作文の否定語の倒置 Not until・Little did）10問
   - [x] 412 正誤問題〈209〉（国公立レベル：分詞形容詞 exciting・excited）10問
-  - [ ] 413 誤文訂正〈203〉（国公立レベル：used to・be used to ～ing・get used to）10問
+  - [x] 413 誤文訂正〈203〉（国公立レベル：used to・be used to ～ing・get used to）10問
   - [ ] 414 正誤問題〈210〉（東大レベル：英作文の would rather・had better のあとの形）10問
   - [ ] 415 誤文訂正〈204〉（京大レベル：英作文の because of・due to・thanks to）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

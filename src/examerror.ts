@@ -8634,6 +8634,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'No sooner [she had sat] down than the phone rang.', choices: ['had she sat', 'she sat', 'did she sat', 'she has sat'], answer: 0, why: 'No sooner が文頭なので had she sat ～ than。' },
     ],
   },
+  {
+    id: 'exam-fix-203',
+    title: '入試の誤文訂正〈203〉（国公立レベル：used to・be used to ～ing・get used to）',
+    points: ['used to ＋動詞の原形は「以前はよく～した・以前は～だった」（今はちがう）。疑問文・否定文は did ＋ use to ＋原形（Did you use to ～? / didn’t use to ～）。be used to ＋名詞・～ing は「～に慣れている」、get used to ＋名詞・～ing は「～に慣れる」で、この to は前置詞なので動詞は ing 形にする。be used to ＋動詞の原形は「～するのに使われる」（受け身の use）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I used to live in Osaka, so I am used to crowded trains.', ja: '私は以前大阪に住んでいたので、こんだ電車に慣れている。' }],
+    questions: [
+      { sentence: 'I [am used to get] up early.', choices: ['am used to getting', 'used to getting', 'am use to get', 'am used get'], answer: 0, why: '「～に慣れている」は be used to ～ing。' },
+      { sentence: 'There [used to being] a park here.', choices: ['used to be', 'was used to be', 'use to being', 'used to been'], answer: 0, why: '「以前は～があった」は used to ＋原形。used to be。' },
+      { sentence: 'He [is used to live] alone now.', choices: ['is used to living', 'used to living', 'is use to live', 'is used living'], answer: 0, why: '「一人暮らしに慣れている」は be used to ～ing。' },
+      { sentence: 'You will soon [get used to speak] English.', choices: ['get used to speaking', 'get use to speak', 'used to speaking', 'get used speaking'], answer: 0, why: '「～に慣れる」は get used to ～ing。' },
+      { sentence: 'She [use to play] the piano when she was a child.', choices: ['used to play', 'was used to play', 'used to playing', 'uses to playing'], answer: 0, why: '過去の習慣は used to ＋原形。' },
+      { sentence: 'Did you [used to] live in Osaka?', choices: ['use to', 'used', 'using to', 'uses to'], answer: 0, why: 'did を使う疑問文では原形の use to。' },
+      { sentence: 'I [was not used to drive] on the left.', choices: ['was not used to driving', 'did not used to driving', 'was not use to drive', 'not used to drove'], answer: 0, why: '「～に慣れていなかった」は be not used to ～ing。' },
+      { sentence: 'My grandfather [used to walking] to school every day.', choices: ['used to walk', 'was used to walk', 'used walking', 'use to walked'], answer: 0, why: '過去の習慣は used to ＋原形。used to walk。' },
+      { sentence: 'This knife [is used to cutting] bread.', choices: ['is used to cut', 'is used cutting', 'used to cutting', 'is use to cut'], answer: 0, why: '「パンを切るのに使われる」は受け身の be used to ＋原形。' },
+      { sentence: 'They [didn’t use to liking] vegetables.', choices: ['didn’t use to like', 'didn’t used to liking', 'weren’t use to like', 'didn’t use liking'], answer: 0, why: '否定文は didn’t use to ＋原形。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
