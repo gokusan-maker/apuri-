@@ -2913,3 +2913,10 @@ it('正誤問題〈211〉：京大レベル the same ～ as・such ～ as の単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) than')
 })
+
+it('誤文訂正〈205〉：東大レベル during・while・for の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-205')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('during')
+})

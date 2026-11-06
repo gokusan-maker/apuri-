@@ -8718,6 +8718,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Many trains stopped [because of the snow was] heavy.', choices: ['because the snow was', 'due to the snow was', 'because of snow being was', 'thanks to the snow was'], answer: 0, why: 'あとが節なので because the snow was heavy。' },
     ],
   },
+  {
+    id: 'exam-fix-205',
+    title: '入試の誤文訂正〈205〉（東大レベル：英作文の during・while・for の使い分け）',
+    points: ['during は前置詞で、あとに「出来事・期間を表す名詞」が来て「～のあいだ（に）」（during the movie）。while は接続詞で、あとに「主語＋動詞」または ～ing が来る（while I was cooking / while driving）。for は前置詞で、あとに「時間の長さ」が来る（for three weeks）。during のあとに時間の長さ（three weeks）や節を置かない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I fell asleep during the movie. / I fell asleep while I was watching the movie.', ja: '私は映画のあいだにねむってしまった。' }],
+    questions: [
+      { sentence: 'I fell asleep [while] the movie.', choices: ['during', 'while in', 'for', 'since'], answer: 0, why: 'あとが名詞 the movie なので前置詞の during。' },
+      { sentence: 'She stayed in Paris [during] three weeks.', choices: ['for', 'while', 'during for', 'since'], answer: 0, why: 'あとが時間の長さなので for。' },
+      { sentence: '[During] I was cooking, the phone rang.', choices: ['While', 'During that', 'For', 'Since that'], answer: 0, why: 'あとが「主語＋動詞」なので接続詞の While。' },
+      { sentence: 'We talked a lot [while] our trip to Okinawa.', choices: ['during', 'while for', 'for', 'since'], answer: 0, why: 'あとが名詞 our trip なので during。' },
+      { sentence: 'I have lived here [during] ten years.', choices: ['for', 'while', 'since', 'in during'], answer: 0, why: '期間の長さは for。for ten years。' },
+      { sentence: 'Don’t use your phone [during driving].', choices: ['while driving', 'during drive', 'for driving', 'while drive'], answer: 0, why: '「運転しながら」は while ～ing。' },
+      { sentence: 'It rained heavily [while] the night.', choices: ['during', 'while in', 'for', 'since'], answer: 0, why: 'あとが名詞 the night なので during。' },
+      { sentence: 'He waited [during] two hours at the station.', choices: ['for', 'while', 'since', 'during for'], answer: 0, why: '時間の長さなので for two hours。' },
+      { sentence: '[While] the war, many people left the city.', choices: ['During', 'While in', 'For', 'Since in'], answer: 0, why: 'あとが名詞 the war なので During。' },
+      { sentence: 'She listened to music [during she studied].', choices: ['while she studied', 'during studied', 'for she studied', 'while studied she'], answer: 0, why: 'あとが節なので while she studied。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
