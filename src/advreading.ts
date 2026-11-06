@@ -38702,6 +38702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-interruptions',
+    title: 'On Interruptions',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern life is full of interruptions. A message arrives while we are reading, a notification appears in the middle of a conversation, and a colleague's question breaks a train of thought that took half an hour to build. Most of us have grown so used to such interruptions that we hardly notice them, and many even interrupt themselves, checking their phones without any external prompt. Yet the cost of interruption may be greater than we realize, and thinking about it may help us understand what kind of attention our most valuable activities require.",
+      "The most obvious cost of interruption is lost time. Studies of office work have found that after being interrupted, people often take many minutes to return fully to the task they were doing, and some never return to it at all. But the deeper cost may lie in the quality of thought. Many important forms of work, such as writing, solving difficult problems, or understanding a complex argument, depend on holding many ideas in mind at once and seeing how they connect. Such work is fragile, and a single interruption can cause the delicate structure of thought to collapse.",
+      "Interruptions also affect our relationships. ( A ) a brief glance at a phone during dinner may seem harmless, it can signal to the people present that they are not receiving our full attention. Conversations that are repeatedly broken tend to remain on the surface, since people hesitate to raise serious or personal subjects when they expect to be interrupted. Over time, a habit of divided attention may weaken the kind of deep listening on which trust and understanding depend.",
+      "It would be a mistake, however, to regard every interruption as harmful. Some interruptions are welcome and even necessary: a child who needs help, a friend in distress, or an urgent warning cannot wait until we have finished what we are doing. Others bring unexpected benefits, such as a chance remark that suggests a new idea or a pause that allows us to return to a problem with fresh eyes. The ability to respond to such interruptions is part of living among other people rather than in isolation.",
+      "The problem, then, is not interruption as such but the constant stream of interruptions that modern technology makes possible. When we can be reached at any moment by anyone, the boundary between what deserves our attention and what merely demands it becomes harder to maintain. Many interruptions are designed precisely to capture attention, using sounds, colors, and the promise of something new to draw us away from whatever we were doing, whether or not the new thing matters. Resisting such design requires more than willpower; it requires an understanding of how our attention is being shaped.",
+      "Protecting ourselves from unnecessary interruptions therefore requires deliberate effort. Some people set aside periods of the day when they turn off notifications and devote themselves to a single task. Others agree with family members or colleagues on times when they should not be disturbed except in emergencies. Such practices are not a rejection of other people but a recognition that attention is limited, and that giving it fully to one thing sometimes means withholding it from others for a while.",
+      "Perhaps the deepest lesson of interruption is that attention is a form of care. To attend fully to a task, a person, or an idea is to treat it as worthy of our time and energy, and to allow it to reveal what it can only reveal to sustained focus. A life constantly interrupted may be busy and connected, but it risks becoming shallow. By learning when to allow interruptions and when to resist them, we may protect the conditions in which our most meaningful work and relationships can grow.",
+    ],
+    ja: [
+      '現代の暮らしはじゃまでいっぱいである。読んでいるあいだにメッセージがとどき、会話のさいちゅうに通知が現れ、同僚の質問が、組み立てるのに三十分かかった考えの流れを断ち切る。私たちのほとんどはそうしたじゃまにすっかり慣れてしまい、ほとんど気づかなくなっており、多くの人は外からのきっかけがなくても電話を確かめて、自分で自分をじゃましさえする。しかしじゃまの費用は思っているより大きいかもしれず、それについて考えることは、もっとも価値のある活動がどんな種類の注意を必要とするかを理解する助けになるかもしれない。',
+      'じゃまのもっとも明らかな費用は、失われる時間である。会社の仕事の研究では、人はじゃまされたあと、していた仕事に完全にもどるのにしばしば何分もかかり、まったくもどらない人もいることがわかった。しかしより深い費用は、思考の質にあるかもしれない。書くことや、むずかしい問題をとくことや、複雑な議論を理解することのような、多くの大切な種類の仕事は、たくさんの考えを一度に心にとどめ、それがどうつながるかを見ることにかかっている。そうした仕事はもろく、一度のじゃまで、思考の繊細な組み立てがくずれてしまうことがある。',
+      'じゃまはまた人間関係にも影響する。夕食のあいだに電話をちらりと見るのは害がないように思えるかもしれないが、その場にいる人々に、自分は全部の注意を受けていないと伝えてしまうことがある。何度もさえぎられる会話は表面的なままになりがちである。じゃまされると思うと、人々はまじめな話題や個人的な話題を持ち出すのをためらうからである。時がたつにつれて、注意を分ける習慣は、信頼と理解がたよる深く聞く力を弱めるかもしれない。',
+      'しかし、すべてのじゃまを有害と見なすのはまちがいだろう。歓迎され、必要でさえあるじゃまもある。助けを必要とする子どもや、苦しんでいる友だちや、急ぎの警告は、私たちがしていることを終えるまで待てない。思いがけない利益をもたらすじゃまもある。新しい考えを思いつかせるふとした一言や、新しい目で問題にもどれるようにしてくれる中断である。そうしたじゃまにこたえる力は、孤立してではなく、ほかの人々のあいだで生きることの一部である。',
+      'そうすると問題は、じゃまそのものではなく、現代の技術が可能にした、たえまないじゃまの流れである。いつでもだれからでも連絡がとれるとき、注意に値するものと、ただ注意を求めるだけのものの境目を保つのはむずかしくなる。多くのじゃまは、まさに注意をうばうために作られており、音や色や何か新しいものの約束を使って、その新しいものが大切かどうかにかかわらず、私たちがしていることから引きはなすのである。そうした作りにあらがうには、意志の力以上のものが必要である。自分の注意がどう形づくられているかを理解することが必要なのである。',
+      'そのため、不必要なじゃまから自分を守るには、意識した努力が必要である。一日のうちに通知を切って一つの仕事に打ちこむ時間をとる人もいる。家族や同僚と、緊急のとき以外はじゃまされない時間を決めておく人もいる。そうしたならわしは、ほかの人々をこばむことではなく、注意には限りがあり、一つのことに全部の注意を向けることは、ときにしばらくのあいだほかのものから注意を引くことを意味すると認めることである。',
+      'おそらくじゃまのもっとも深い教えは、注意が思いやりの一つの形だということである。仕事や人や考えに全部の注意を向けることは、それを自分の時間と力に値するものとしてあつかい、持続する集中にしか明かさないものを明かさせることである。たえずじゃまされる人生はいそがしくつながっているかもしれないが、浅くなる危険がある。いつじゃまを受け入れ、いつそれにあらがうかを学ぶことで、私たちはもっとも意味のある仕事と人間関係が育つ条件を守れるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「電話をちらりと見るのは害がないように思えるが、全部の注意を受けていないと伝えてしまう」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの人は、外からのきっかけがなくても自分で自分をじゃまする。', answer: true, why: '第1段落 many even interrupt themselves。' },
+      { statement: 'じゃまされたあと、人はすぐに元の仕事に完全にもどる。', answer: false, why: '第2段落 often take many minutes to return fully。' },
+      { statement: '思いがけない利益をもたらすじゃまもある。', answer: true, why: '第4段落 Others bring unexpected benefits。' },
+      { statement: '筆者によれば、注意には限りがない。', answer: false, why: '第6段落 a recognition that attention is limited。' },
+    ],
+    qa: [
+      { q: 'Why do repeatedly broken conversations remain on the surface?', choices: ['People hesitate to raise serious subjects when they expect interruptions.', 'People talk too fast.', 'Phones are too loud.', 'Nobody wants to talk at dinner.'], answer: 0, why: '第3段落 people hesitate to raise serious or personal subjects when they expect to be interrupted。' },
+      { q: 'What does the author say attention is a form of?', choices: ['Care.', 'Punishment.', 'Wealth.', 'Weakness.'], answer: 0, why: '第7段落 attention is a form of care。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
