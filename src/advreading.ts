@@ -39378,6 +39378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-prisoner-voting',
+    title: 'Should Prisoners Be Allowed to Vote?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most democracies, citizens who reach a certain age gain the right to vote, but in many countries this right is suspended for people serving prison sentences. Some countries remove the vote from all prisoners, others only from those convicted of serious crimes, and a number allow all prisoners to vote. The question of whether people in prison should be able to take part in elections has been debated in courts and parliaments, and it raises fundamental issues about punishment, citizenship, and the purpose of democracy itself.",
+      "Those who support removing the vote from prisoners argue that it is a reasonable consequence of breaking the law. By committing a serious crime, they claim, a person has violated the rules of the community and has therefore given up, at least temporarily, the right to help make those rules. Voting is a privilege of membership in a political community, supporters argue, and it is appropriate that those who have seriously harmed that community should lose this privilege for the period of their punishment. In their view, the right to vote carries with it a duty to respect the law.",
+      "Supporters also argue that restoring the vote after release provides an incentive for good behavior and a symbol of reintegration. ( A ) prisoners may lose the right to vote while they are in prison, they regain it once their sentence has been served, which marks their return to full membership of society. In this view, the temporary loss of voting rights is part of a coherent system of punishment that clearly distinguishes between those who are serving sentences and those who have paid their debt to society.",
+      "Opponents, however, argue that voting is a fundamental right rather than a privilege, and that it should not be removed as part of a criminal punishment. The purpose of imprisonment, they claim, is to deprive people of their liberty, not of their status as citizens. Opponents also point out that prisoners remain affected by the laws and policies made by elected governments, including those concerning prisons themselves, and that denying them a voice in these decisions is difficult to justify in a democracy.",
+      "Opponents also emphasize the goal of rehabilitation. If the aim of prison is to help offenders return to society as responsible citizens, they argue, encouraging them to take an interest in public affairs and to participate in elections may support that aim. Excluding prisoners from voting, by contrast, may reinforce their sense of being outside society and make reintegration more difficult. Some opponents also note that voting bans tend to fall most heavily on groups that are already disadvantaged, since such groups are overrepresented in many prison populations.",
+      "In practice, countries have adopted a wide range of approaches. Some allow judges to decide, when sentencing, whether a particular offender should lose the right to vote. Others remove the vote only from those serving long sentences, or only for crimes related to elections or public office. In several countries, courts have ruled that automatic bans affecting all prisoners are incompatible with human rights, prompting governments to reconsider their laws. In other places, prisoners who wish to vote must apply in advance, and polling arrangements are made within the prison itself.",
+      "The debate over prisoner voting ultimately concerns how societies understand both punishment and citizenship. If citizenship is seen as something that can be suspended when a person seriously breaks the law, removing the vote may seem justified. If it is seen as a basic status that every member of society retains regardless of their conduct, then prisoners should keep their voice. How a democracy answers this question says much about the values on which it rests, and about whom it considers to belong to the political community.",
+    ],
+    ja: [
+      'たいていの民主主義の国では、ある年齢に達した市民は投票する権利を得るが、多くの国では、この権利は刑務所で刑に服している人々については停止される。すべての受刑者から投票権をうばう国もあれば、重い罪で有罪になった人からだけうばう国もあり、すべての受刑者に投票を認める国もいくつかある。刑務所にいる人々が選挙に参加できるべきかという問題は、裁判所や議会で議論されてきており、罰と市民権と民主主義そのものの目的についての根本的な問題を投げかけている。',
+      '受刑者から投票権をうばうことを支持する人々は、それは法律を破ったことのもっともな結果だと主張する。重い罪をおかすことで、人は地域社会の規則を破ったのであり、そのため、少なくとも一時的に、その規則を作るのを手伝う権利を手ばなしたのだと彼らは主張する。投票は政治的な共同体の一員であることの特権であり、その共同体に深刻な害をあたえた人がその罰の期間にこの特権を失うのはふさわしいと支持する人々は主張する。彼らの見方では、投票する権利には、法律を尊重する義務がともなうのである。',
+      '支持する人々はまた、出所後に投票権をもどすことは、よいふるまいへの動機づけと社会復帰の象徴になると主張する。受刑者は刑務所にいるあいだは投票権を失うかもしれないが、刑期を終えればそれを取りもどし、それは社会の完全な一員へのもどりをしるすのである。この見方では、投票権の一時的な喪失は、刑に服している人と社会への借りを返した人とをはっきり区別する、筋の通った罰の仕組みの一部である。',
+      'しかし反対する人々は、投票は特権ではなく基本的な権利であり、刑事上の罰の一部として取り上げるべきではないと主張する。刑務所に入れることの目的は、人から自由をうばうことであって、市民としての立場をうばうことではないと彼らは主張する。反対する人々はまた、受刑者も、刑務所そのものにかかわるものをふくめ、選ばれた政府が作る法律や政策の影響を受け続けるのであり、そうした決定で彼らに声をあたえないことは、民主主義では正当化しにくいと指摘する。',
+      '反対する人々はまた、立ち直りという目標を強調する。刑務所の目的が罪をおかした人が責任ある市民として社会にもどるのを助けることなら、公共のことに関心をもたせ、選挙に参加するようはげますことは、その目的を支えるかもしれないと彼らは主張する。それに対して、受刑者を投票から閉め出すことは、社会の外にいるという感覚を強め、社会復帰をむずかしくするかもしれない。反対する人々のなかには、投票の禁止は、すでに不利な立場にある集団にもっとも重くのしかかりがちだと指摘する人もいる。そうした集団は、多くの刑務所の人口の中で割合が大きいからである。',
+      '実際には、国々はさまざまなやり方をとってきた。判決を言いわたすときに、ある罪をおかした人が投票権を失うべきかどうかを裁判官が決められるようにしている国もある。長い刑に服している人からだけ、あるいは選挙や公職にかかわる罪の場合にだけ投票権をうばう国もある。いくつかの国では、裁判所が、すべての受刑者に当てはまる自動的な禁止は人権と両立しないと判断し、政府に法律を考え直させた。ほかの場所では、投票したい受刑者は前もって申しこまなければならず、投票の手配は刑務所の中で行われる。',
+      '受刑者の投票をめぐる議論は、結局、社会が罰と市民権の両方をどう理解しているかにかかわっている。市民権が、人が法律を深刻に破ったときには停止できるものと見なされるなら、投票権をうばうことは正当に思えるかもしれない。それが、ふるまいにかかわらず社会のすべての一員がもち続ける基本的な立場と見なされるなら、受刑者は声をもち続けるべきである。民主主義がこの問いにどう答えるかは、それがもとづく価値観と、だれが政治的な共同体に属すると考えるかについて、多くを語っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「刑務所にいるあいだは投票権を失うかもしれないが、刑期を終えれば取りもどす」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that losing the vote is a reasonable consequence of a serious ( 1 ) and that restoring it marks reintegration. Opponents argue that voting is a fundamental ( 2 ) and that excluding prisoners may hinder rehabilitation. Some countries allow ( 3 ) to decide whether an offender loses the vote.',
+      blanks: [
+        { choices: ['crime', 'illness', 'mistake', 'debt'], answer: 0, why: '第2段落 By committing a serious crime。' },
+        { choices: ['right', 'duty', 'habit', 'reward'], answer: 0, why: '第4段落 voting is a fundamental right rather than a privilege。' },
+        { choices: ['judges', 'voters', 'guards', 'families'], answer: 0, why: '第6段落 Some allow judges to decide。' },
+      ],
+    },
+    tf: [
+      { statement: 'すべての受刑者に投票を認める国もある。', answer: true, why: '第1段落 a number allow all prisoners to vote。' },
+      { statement: '反対する人々は、投票は特権だと考えている。', answer: false, why: '第4段落 voting is a fundamental right rather than a privilege。' },
+      { statement: '自動的な禁止は人権と両立しないと判断した裁判所もある。', answer: true, why: '第6段落 courts have ruled that automatic bans ... are incompatible with human rights。' },
+      { statement: '筆者は、この問いの答えは民主主義の価値観と関係がないと考えている。', answer: false, why: '第7段落 says much about the values on which it rests。' },
+    ],
+    qa: [
+      { q: 'What is the purpose of imprisonment, according to opponents?', choices: ['To deprive people of their liberty, not their citizenship.', 'To remove their citizenship permanently.', 'To make them pay taxes.', 'To stop them from working forever.'], answer: 0, why: '第4段落 to deprive people of their liberty, not of their status as citizens。' },
+      { q: 'Why might voting bans fall most heavily on disadvantaged groups?', choices: ['Such groups are overrepresented in prison populations.', 'They vote more often than others.', 'They live far from polling stations.', 'They are not citizens.'], answer: 0, why: '第5段落 such groups are overrepresented in many prison populations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
