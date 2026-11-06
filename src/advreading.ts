@@ -36702,6 +36702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-duty',
+    title: 'Reconsidering Duty',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The word duty has an old-fashioned sound to many modern ears. It suggests obligations imposed from outside, by tradition, authority, or social expectation, and it may call to mind images of soldiers following orders or people sacrificing their happiness to meet the demands of others. In an age that places great value on personal freedom and self-expression, duty can seem like an obstacle to living authentically. Yet the idea of duty may deserve a more careful hearing, since it captures something important about the moral life that other concepts tend to miss.",
+      "At its core, a duty is something we owe to others, regardless of whether we feel like doing it at a particular moment. Parents have duties to their children, friends to one another, and citizens to their communities. What makes these obligations distinctive is that they do not depend on our momentary desires. A parent who cares for a sick child through the night, despite exhaustion, is not acting from preference but from a sense that the child's needs must be met. In this sense, duty provides a kind of stability that feelings alone cannot supply.",
+      "This stability matters because human feelings are changeable. Our enthusiasm for a commitment may fade, our affection for another person may waver, and our willingness to help may depend on our mood. ( A ) feelings are an important part of moral life, a morality based entirely on them would be unreliable, since people would help others only when they happened to feel like it. Duty allows us to remain faithful to our commitments even when our feelings temporarily fail us. A friend who keeps a promise on a day when they would rather stay at home shows a kind of reliability that others can depend on.",
+      "Duty can also be a source of meaning rather than merely a burden. Many people find that fulfilling their obligations, whether by caring for an aging parent, completing a demanding task, or supporting a community, gives their lives a sense of purpose that pleasure alone does not provide. To be needed and to respond to that need can be deeply satisfying, and those who have no obligations to anyone may find their freedom curiously empty. Freedom without any ties, in other words, can turn out to be less satisfying than it first appears.",
+      "It must be acknowledged, however, that the language of duty has sometimes been abused. People have been pressured to accept unjust roles, to obey harmful commands, or to sacrifice their own well-being in the name of duty. Women, in particular, have often been told that their duty lies in serving others, at the expense of their own development. A sound understanding of duty must therefore distinguish between genuine obligations and demands that merely serve the interests of the powerful.",
+      "One way of making this distinction is to ask whether a duty can be justified by reasons that the person who bears it could accept. Duties that arise from relationships of mutual care, from promises freely made, or from shared membership in a community may meet this test, while duties imposed through fear or deception may not. Genuine duty, in this view, is not the opposite of freedom but one of its expressions, a commitment that a free person recognizes as worth keeping.",
+      "Perhaps, then, the idea of duty is not as outdated as it may seem. In a world that often encourages people to follow their feelings and pursue their own satisfaction, duty reminds us that we are bound to others in ways we did not entirely choose, and that our lives are richer for it. To take our duties seriously, while questioning those that are unjust, may be one of the most demanding and most rewarding tasks of a mature moral life.",
+    ],
+    ja: [
+      '義務ということばは、現代の多くの人の耳には古くさく聞こえる。それは伝統や権威や社会の期待によって外からおしつけられた責任を思わせ、命令にしたがう兵士や、ほかの人のもとめにこたえるために自分の幸せを犠牲にする人々の姿を思いうかばせるかもしれない。個人の自由と自己表現をとても大切にする時代には、義務は自分らしく生きることへのじゃまものに見えるかもしれない。しかし義務という考えは、ほかの概念が見落としがちな道徳的生活の大切な何かをとらえているので、より注意深く耳をかたむけるに値するのかもしれない。',
+      '根本において、義務とは、ある瞬間にそうしたい気分かどうかにかかわらず、私たちがほかの人に負っているものである。親は子どもに、友人はたがいに、市民は地域に義務をもつ。こうした責任をきわだたせているのは、それが私たちの一時の願いによらないことである。つかれはてているにもかかわらず、病気の子どもを夜どおし世話する親は、好みからではなく、子どもの必要がみたされなければならないという感覚から行動している。この意味で、義務は感情だけではあたえられない、一種の安定をもたらしてくれる。',
+      'この安定が大切なのは、人間の感情が変わりやすいからである。約束への熱意はうすれ、ほかの人への愛情はゆらぎ、助ける気持ちはそのときの気分によるかもしれない。感情は道徳的な生活の大切な一部だが、すっかり感情にもとづく道徳は信頼できないだろう。人々はたまたまそうしたい気分のときにだけほかの人を助けることになるからである。義務によって、私たちは感情が一時的にくじけたときでさえ、自分の約束に忠実であり続けられるのである。家にいたい日でも約束を守る友人は、ほかの人がたよれる一種の信頼性を示している。',
+      '義務はまた、単なる重荷ではなく、意味のみなもとにもなりうる。年老いた親を世話することであれ、大変な仕事をやりとげることであれ、地域をささえることであれ、自分の責任をはたすことが、楽しみだけではあたえられない目的の感覚を人生にあたえてくれると気づく人は多い。必要とされ、その必要にこたえることは深い満足をもたらしうるのであり、だれに対しても何の責任ももたない人は、自分の自由がふしぎとむなしいと感じるかもしれない。言いかえれば、何の結びつきもない自由は、はじめに思えるほど満ちたりたものではないとわかることがある。',
+      'しかし、義務ということばがときに悪用されてきたことは認めなければならない。人々は義務の名のもとに、不正な役割を受け入れたり、有害な命令にしたがったり、自分の幸せを犠牲にしたりするよう重圧をかけられてきた。とくに女性は、自分自身の成長を犠牲にしてでも、ほかの人につかえることが義務だとしばしば言われてきた。それゆえ義務についての健全な理解は、本当の責任と、単に力のある者の利益に役立つだけのもとめとを区別しなければならない。',
+      'この区別をする一つの方法は、その義務を負う本人が受け入れられる理由によって、それが正当化できるかどうかを問うことである。たがいに思いやる関係や、自由にした約束や、地域の共通の一員であることから生じる義務は、このためしに合格するかもしれないが、おそれやだましによっておしつけられた義務は合格しないかもしれない。この見方では、本当の義務は自由の反対ではなく、その表れの一つであり、自由な人が守る価値があると認める約束なのである。',
+      'だとすれば、義務という考えは思われているほど時代おくれではないのかもしれない。しばしば自分の感情にしたがい、自分の満足を追うよう人々をうながす世界で、義務は、私たちがすっかり自分で選んだわけではないかたちでほかの人と結ばれており、そのおかげで人生がよりゆたかになっていることを思い出させてくれる。不正な義務を問いながら、自分の義務を真剣に受けとめることは、成熟した道徳的生活のもっとも大変で、もっとも報われる課題の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「感情は道徳的な生活の大切な一部だが、すっかり感情にもとづく道徳は信頼できない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '義務は、そのときの気分にかかわらず、ほかの人に負っているものである。', answer: true, why: '第2段落 regardless of whether we feel like doing it at a particular moment。' },
+      { statement: '筆者によれば、すっかり感情にもとづく道徳は信頼できる。', answer: false, why: '第3段落 a morality based entirely on them would be unreliable。' },
+      { statement: '義務ということばは、ときに悪用されてきた。', answer: true, why: '第5段落 the language of duty has sometimes been abused。' },
+      { statement: '筆者は、本当の義務は自由の反対だと考えている。', answer: false, why: '第6段落 Genuine duty ... is not the opposite of freedom。' },
+    ],
+    qa: [
+      { q: 'What does fulfilling obligations give many people, according to the author?', choices: ['A sense of purpose.', 'Unlimited freedom.', 'More money.', 'Less responsibility.'], answer: 0, why: '第4段落 gives their lives a sense of purpose。' },
+      { q: 'How can we distinguish genuine duties from unjust demands?', choices: ['By asking whether the person bearing the duty could accept the reasons for it.', 'By obeying every command.', 'By following our feelings only.', 'By ignoring all promises.'], answer: 0, why: '第6段落 whether a duty can be justified by reasons that the person who bears it could accept。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
