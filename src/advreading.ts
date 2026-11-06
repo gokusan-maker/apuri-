@@ -39298,6 +39298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-bottle-deposits',
+    title: 'Should Drink Containers Carry a Deposit?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, enormous numbers of plastic bottles and aluminum cans are bought, emptied, and thrown away. Although many of them could be recycled, a large proportion end up in landfill sites, rivers, and the sea. One policy that has attracted attention as a response to this problem is the deposit return scheme, under which customers pay a small extra charge when they buy a drink and receive the money back when they return the empty container. Several countries have used such schemes for decades, while others are now debating whether to introduce them. The idea is simple, but its consequences for shops, consumers, and local governments are more complicated than they first appear.",
+      "Supporters argue that deposit schemes are among the most effective tools for increasing recycling. Because people receive money for returning containers, they have a direct incentive to bring them back rather than discard them. In countries with well-established schemes, the proportion of bottles and cans returned for recycling is often very high, sometimes exceeding ninety percent of all containers sold. Supporters also note that containers collected through such schemes tend to be cleaner and easier to recycle than those mixed with other household waste, which improves the quality of the recycled material.",
+      "Supporters further point out that deposit schemes can reduce litter. A bottle left on a beach or in a park represents money that someone can claim, and people sometimes collect discarded containers to return them for the deposit. ( A ) the amount paid for each container is small, supporters argue, it is enough to change behavior across a whole population, turning what was once rubbish into something of value. The result can be cleaner streets, parks, and coastlines, at relatively little cost to the public.",
+      "Critics, however, raise concerns about the cost and complexity of establishing such schemes. Shops must provide space for return machines or collection points, and systems must be set up to transport, count, and process the returned containers. For small shops in particular, critics argue, these requirements can be a heavy burden. Critics also warn that the extra charge may fall most heavily on low-income households, especially if they are unable to return containers easily because of distance or lack of time.",
+      "Critics also question whether deposit schemes are the best use of resources when many areas already have recycling systems in which households separate bottles and cans from other waste. Introducing a separate deposit system, they argue, may reduce the value of materials collected through existing programs, which local governments sometimes rely on to fund their services. In their view, improving current recycling systems might achieve similar results with less disruption. They also point out that a deposit adds yet another price for shoppers to keep track of, which some may find confusing.",
+      "Experience from countries that have introduced deposit schemes suggests that their success depends heavily on design. Schemes that cover a wide range of containers, make returning them convenient, and set the deposit high enough to motivate people tend to achieve the best results. Some schemes have also been extended to include reusable glass bottles, which can be washed and refilled many times, reducing waste even further. Poorly designed schemes, by contrast, may confuse customers and achieve only modest improvements.",
+      "The debate over deposit schemes reflects a broader question about how societies can encourage people to take responsibility for the waste they create. Simple appeals to environmental conscience have often had limited effect, while financial incentives can change behavior quickly. Yet such incentives must be designed fairly, so that the costs do not fall unevenly on those least able to bear them. A successful approach may combine practical convenience, fair pricing, and a clear sense that reducing waste is a shared responsibility.",
+    ],
+    ja: [
+      '毎日、とてつもない数のペットボトルやアルミ缶が買われ、空になり、捨てられている。その多くはリサイクルできるのに、大きな割合がごみの埋め立て地や川や海に行きつく。この問題への対応として注目を集めてきた方針の一つが、デポジット制度である。客は飲み物を買うときに少しの追加料金をはらい、空の容器を返すとそのお金がもどってくる。いくつかの国は何十年もこうした制度を使ってきたが、今それを取り入れるかどうかを議論している国もある。考え方は単純だが、店や消費者や地方政府への影響は、最初に見えるより複雑である。',
+      '支持する人々は、デポジット制度はリサイクルをふやすもっとも効果的な道具の一つだと主張する。人々は容器を返すとお金を受け取るので、捨てるのではなく持ちもどす直接の動機をもつ。制度がしっかり根づいた国では、リサイクルのために返されるボトルや缶の割合がしばしばとても高く、ときに販売された容器の九十パーセントをこえる。支持する人々はまた、そうした制度で集められた容器は、ほかの家庭ごみとまざったものよりきれいでリサイクルしやすい傾向があり、再生された素材の質を高めると指摘する。',
+      '支持する人々はさらに、デポジット制度はポイ捨てをへらしうると指摘する。浜辺や公園に置き去りにされたボトルはだれかが受け取れるお金であり、人々は捨てられた容器を集めてデポジットのために返すことがある。容器一つにはらわれる額は小さいが、それは人々全体のふるまいを変えるのに十分であり、かつてはごみだったものを価値のあるものに変えると支持する人々は主張する。その結果、比較的少ない公的な費用で、通りや公園や海岸がよりきれいになりうる。',
+      'しかし批判する人々は、そうした制度を作る費用と複雑さについての心配をあげる。店は返却の機械や回収の場所のための空間を用意しなければならず、返された容器を運び、数え、処理する仕組みを作らなければならない。とくに小さな店にとって、こうした要件は重い負担になりうると批判する人々は主張する。批判する人々はまた、とくに距離や時間のなさのために容器をかんたんに返せない場合、追加の料金は収入の少ない家庭にもっとも重くのしかかるかもしれないと警告する。',
+      '批判する人々はまた、多くの地域にすでに家庭がボトルや缶をほかのごみと分ける資源回収の仕組みがあるのに、デポジット制度が資源のもっともよい使い方なのかを疑う。別のデポジットの仕組みを取り入れると、今ある取り組みで集められる素材の価値が下がるかもしれず、地方政府はときにそれにたよってサービスをまかなっていると彼らは主張する。彼らの見方では、今のリサイクルの仕組みを改善すれば、より少ない混乱で同じような結果を得られるかもしれない。彼らはまた、デポジットは買い物客が気にかけなければならない値段をまた一つふやし、それをわかりにくく感じる人もいるかもしれないと指摘する。',
+      'デポジット制度を取り入れた国々の経験は、その成功が作り方に大きくかかっていることを示している。はば広い容器を対象にし、返却を便利にし、人々をやる気にさせるほどデポジットを高く設定する制度が、もっともよい結果を出しがちである。洗って何度もつめ直せる再利用のガラスびんもふくめるよう広げられた制度もあり、ごみをさらにへらしている。それに対して、作りの悪い制度は客を混乱させ、ささやかな改善しか得られないかもしれない。',
+      'デポジット制度をめぐる議論は、社会がどうすれば人々に自分の出すごみへの責任をもたせられるかという、より広い問いを反映している。環境への良心にただうったえかけることは、しばしば限られた効果しかなかったが、お金の動機づけはふるまいをすばやく変えうる。しかしそうした動機づけは、費用がそれをもっとも負いにくい人々にかたよってかからないよう、公平に作らなければならない。うまくいくやり方は、実際の便利さと、公平な値段と、ごみをへらすことは共通の責任だというはっきりした感覚を組み合わせるものかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「はらわれる額は小さいが、ふるまいを変えるのに十分だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that deposit schemes greatly increase ( 1 ) and reduce litter. Critics argue that they are costly and complex and may burden ( 2 ) households. Experience suggests that success depends on the ( 3 ) of the scheme.',
+      blanks: [
+        { choices: ['recycling', 'spending', 'traffic', 'tourism'], answer: 0, why: '第2段落 the most effective tools for increasing recycling。' },
+        { choices: ['low-income', 'large', 'foreign', 'young'], answer: 0, why: '第4段落 may fall most heavily on low-income households。' },
+        { choices: ['design', 'name', 'age', 'color'], answer: 0, why: '第6段落 their success depends heavily on design。' },
+      ],
+    },
+    tf: [
+      { statement: '制度が根づいた国では、九十パーセントをこえる容器が返されることもある。', answer: true, why: '第2段落 sometimes exceeding ninety percent。' },
+      { statement: 'デポジット制度で集めた容器は、ほかのごみとまざったものより汚い。', answer: false, why: '第2段落 tend to be cleaner and easier to recycle。' },
+      { statement: '再利用のガラスびんをふくむよう広げられた制度もある。', answer: true, why: '第6段落 extended to include reusable glass bottles。' },
+      { statement: '筆者によれば、良心にうったえるだけで大きな効果があった。', answer: false, why: '第7段落 Simple appeals to environmental conscience have often had limited effect。' },
+    ],
+    qa: [
+      { q: 'Why can deposit schemes reduce litter?', choices: ['A discarded bottle is money that someone can claim.', 'Bottles become heavier.', 'Shops sell fewer drinks.', 'Parks are closed at night.'], answer: 0, why: '第3段落 represents money that someone can claim。' },
+      { q: 'What do critics suggest instead of a new deposit system?', choices: ['Improving current recycling systems.', 'Banning all drinks.', 'Closing small shops.', 'Raising taxes on water.'], answer: 0, why: '第5段落 improving current recycling systems might achieve similar results。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
