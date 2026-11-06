@@ -37218,6 +37218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-nature-rights',
+    title: 'Should Nature Have Legal Rights?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most legal systems, rivers, forests, and mountains are treated as property or as resources that belong to someone, whether a private owner or the state. In recent decades, however, a small but growing number of countries and local governments have taken a different approach, granting legal rights to natural features themselves. A river may be recognized as a legal person with the right to flow freely, and guardians may be appointed to speak on its behalf in court. This idea, often called the rights of nature, has attracted both enthusiastic support and serious criticism.",
+      "Supporters argue that existing laws have failed to protect the natural world adequately. Environmental regulations usually allow a certain amount of pollution or destruction, and they are often weakly enforced, especially when economic interests are at stake. If a river has rights of its own, supporters claim, harm to the river can be challenged directly in court, without the need to prove that a particular human being has suffered damage. In their view, recognizing such rights would shift the balance of the law toward long-term protection rather than short-term profit.",
+      "Supporters also point out that the idea is not as strange as it may first appear. Legal systems already treat companies, which are not human beings, as legal persons that can own property, sign contracts, and sue or be sued. ( A ) the law can grant such status to a business, supporters ask, why should it not grant similar status to a river on which thousands of people and countless other living things depend? For some indigenous communities, moreover, the idea reflects long-held beliefs that rivers and mountains are living beings to be respected rather than objects to be used.",
+      "Critics, however, raise several objections. One is practical: a river cannot speak for itself, so its rights must be represented by human guardians, and it is not always clear who should serve in this role or how they should decide what the river wants. Different groups may claim to speak for the same river while holding very different views about how it should be managed. Critics worry that the rights of nature could therefore become a tool for whichever group gains control of the guardianship, rather than a genuine voice for the environment.",
+      "Critics also argue that granting rights to nature may create conflicts that the law is poorly equipped to resolve. Farmers need water from rivers, cities need land for housing, and communities need energy, all of which involve some change to the natural world. If every river and forest has rights, critics ask, how should courts weigh those rights against the needs of people who depend on the same resources? Some fear that the result would be endless legal disputes, while others suspect that, in practice, the rights would be quietly ignored whenever they became inconvenient.",
+      "Experience so far suggests that the effects of such laws depend greatly on how they are designed and enforced. In some places, recognizing the rights of a river has led to new cooperation between governments and local communities, and to the restoration of damaged waterways. In others, the laws have existed mainly on paper, with little change in how rivers are actually treated. Many observers conclude that legal rights alone cannot protect nature unless they are supported by funding, clear procedures, and the participation of the people who live closest to the land.",
+      "The debate over the rights of nature raises a deeper question about the relationship between human beings and the world they inhabit. Traditional law has generally assumed that nature exists to serve human purposes, and that its value lies in what it can provide. The rights of nature challenge this assumption by suggesting that rivers and forests may have a value of their own. Whether or not this idea becomes widely accepted, it invites societies to reconsider how their laws reflect, and shape, their responsibilities toward the natural world on which all life depends.",
+    ],
+    ja: [
+      'たいていの法の制度では、川や森や山は、個人の持ち主であれ国であれ、だれかに属する財産や資源としてあつかわれている。しかしここ数十年で、少数ながらふえつつある国や地方政府が別のやり方をとり、自然そのものに法的な権利をあたえている。川が自由に流れる権利をもつ法的な人格として認められ、法廷でその代わりに話す後見人が任命されることもある。しばしば「自然の権利」とよばれるこの考えは、熱心な支持と深刻な批判の両方を集めてきた。',
+      '支持する人々は、今ある法律は自然界を十分に守ることに失敗してきたと主張する。環境の規制はふつう一定の量の汚染や破壊を認めており、とくに経済的な利益がかかわるときには、しばしば弱くしか執行されない。川がそれ自身の権利をもてば、特定の人間が損害を受けたと証明しなくても、川への害を直接法廷で争えると支持する人々は主張する。彼らの見方では、そうした権利を認めることは、法のつりあいを目先の利益よりも長い目で見た保護の方へ移すことになる。',
+      '支持する人々はまた、その考えは最初に見えるほど奇妙ではないと指摘する。法の制度はすでに、人間ではない会社を、財産をもち、契約を結び、訴えたり訴えられたりできる法的な人格としてあつかっている。法が企業にそうした地位をあたえられるなら、何千人もの人々と数えきれないほかの生き物がたよる川に、なぜ同じような地位をあたえてはいけないのかと支持する人々は問う。さらに一部の先住民の地域にとって、その考えは、川や山は使う物ではなく敬うべき生きた存在だという昔からの信念を反映している。',
+      'しかし批判する人々はいくつかの反論をあげる。一つは実際的なものである。川は自分で話せないので、その権利は人間の後見人が代わりに示さなければならないが、だれがこの役をつとめるべきか、川が何を望んでいるかをどう決めるべきかはいつも明らかなわけではない。ちがう集団が、川をどう管理すべきかについてまったくちがう意見をもちながら、同じ川の代わりに話すと主張するかもしれない。そのため自然の権利は、環境の本当の声ではなく、後見の役を手にした集団の道具になりうると批判する人々は心配する。',
+      '批判する人々はまた、自然に権利をあたえることは、法がうまく解決できない対立を生むかもしれないと主張する。農家は川の水を必要とし、都市は住宅のための土地を必要とし、地域はエネルギーを必要とするが、そのすべてが自然界に何らかの変化をともなう。すべての川や森が権利をもつなら、同じ資源にたよる人々の必要とその権利を、裁判所はどうはかりにかけるべきなのかと批判する人々は問う。その結果は終わりのない法的な争いになるとおそれる人もいれば、実際には、権利は不便になるたびにそっと無視されるだろうと疑う人もいる。',
+      'これまでの経験は、そうした法律の効果は、それがどう作られ、どう執行されるかに大きく左右されることを示している。川の権利を認めたことで、政府と地域の人々のあいだに新しい協力が生まれ、傷ついた水路が回復した場所もある。ほかの場所では、法律はおもに紙の上だけに存在し、川の実際のあつかいはほとんど変わらなかった。多くの観察者は、資金や明確な手続きや、その土地のもっとも近くに住む人々の参加に支えられなければ、法的な権利だけでは自然を守れないと結論づけている。',
+      '自然の権利をめぐる議論は、人間と人間がすむ世界との関係について、より深い問いを投げかける。伝統的な法は一般に、自然は人間の目的に役立つために存在し、その価値は自然があたえられるものにあると考えてきた。自然の権利は、川や森にはそれ自身の価値があるかもしれないと示すことで、この前提に疑問を投げかける。この考えが広く受け入れられるかどうかにかかわらず、それは社会に、すべての生命がたよる自然界に対する責任を、自分たちの法がどう反映し、どう形づくっているかを考え直すよううながしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「法が企業にそうした地位をあたえられるなら、なぜ川にはいけないのか」という条件なので If。' },
+    ],
+    summary: {
+      text: 'Supporters argue that existing laws have failed to ( 1 ) nature and that rivers could be given rights like companies. Critics worry about who should act as ( 2 ) and about conflicts with human needs. Experience suggests that the effects depend on how the laws are designed and ( 3 ).',
+      blanks: [
+        { choices: ['protect', 'sell', 'measure', 'describe'], answer: 0, why: '第2段落 existing laws have failed to protect the natural world adequately。' },
+        { choices: ['guardians', 'owners', 'tourists', 'farmers'], answer: 0, why: '第4段落 it is not always clear who should serve in this role（human guardians）。' },
+        { choices: ['enforced', 'translated', 'priced', 'forgotten'], answer: 0, why: '第6段落 depend greatly on how they are designed and enforced。' },
+      ],
+    },
+    tf: [
+      { statement: '法の制度は、すでに会社を法的な人格としてあつかっている。', answer: true, why: '第3段落 Legal systems already treat companies ... as legal persons。' },
+      { statement: '川の後見人をだれがつとめるべきかは、いつも明らかである。', answer: false, why: '第4段落 it is not always clear who should serve in this role。' },
+      { statement: '川の権利を認めても、実際のあつかいがほとんど変わらなかった場所もある。', answer: true, why: '第6段落 the laws have existed mainly on paper。' },
+      { statement: '伝統的な法は、自然にはそれ自身の価値があると考えてきた。', answer: false, why: '第7段落 Traditional law has generally assumed that nature exists to serve human purposes。' },
+    ],
+    qa: [
+      { q: 'What can be done if a river has rights of its own, according to supporters?', choices: ['Harm to it can be challenged directly in court.', 'It can be sold more easily.', 'Pollution becomes legal.', 'Farmers can use more water.'], answer: 0, why: '第2段落 harm to the river can be challenged directly in court。' },
+      { q: 'What do many observers say legal rights need in order to protect nature?', choices: ['Funding, clear procedures, and local participation.', 'More lawyers only.', 'Higher taxes on cities.', 'Fewer guardians.'], answer: 0, why: '第6段落 supported by funding, clear procedures, and the participation of the people。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
