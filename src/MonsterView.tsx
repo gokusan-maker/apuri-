@@ -3202,6 +3202,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M46 24 q-10 -8 -18 -2 M50 22 q-6 -12 -16 -10" stroke="#a8a29e" strokeWidth="2.5" fill="none" />
       </g>
     )
+  if (species === 'viscacha')
+    return (
+      <g>
+        {/* 長い耳と巻いたしっぽ */}
+        <path d="M40 22 l-4 -16 M60 22 l4 -16" stroke="#2a241c" strokeWidth="3" />
+        <path d="M76 70 q14 -2 10 -14 q-6 2 -4 8" stroke="#2a241c" strokeWidth="3" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
