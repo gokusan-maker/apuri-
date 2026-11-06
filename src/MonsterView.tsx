@@ -3135,6 +3135,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 40 l4 -6 l4 6 l4 -6 l4 6 l4 -6 l4 6 l4 -6 l4 6" stroke="#e7e5e4" strokeWidth="1.5" fill="none" />
       </g>
     )
+  if (species === 'cuscus')
+    return (
+      <g>
+        {/* 枝にまきつくしっぽ */}
+        <path d="M74 74 q14 6 16 -6 q-2 -8 -8 -4" stroke="#2b2418" strokeWidth="3" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
