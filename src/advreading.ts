@@ -37102,6 +37102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-admiration',
+    title: 'On Admiration',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Admiration is one of the most common and yet least examined of human emotions. We admire athletes for their skill, scientists for their discoveries, and ordinary people for their courage or kindness. Unlike envy, which makes us resent the success of others, admiration allows us to take pleasure in qualities we do not possess ourselves. Yet admiration is more than a pleasant feeling. It may play an important role in moral and personal development, shaping the kind of people we become and the values we choose to pursue.",
+      "One reason admiration matters is that it shows us what is possible. When we encounter someone who has achieved something remarkable, our sense of what human beings can do expands. A young musician who hears a great performance, or a student who reads about a scientist who overcame many obstacles, may be inspired to aim higher than they would otherwise have dared. In this sense, admiration is not merely a passive response but a source of motivation, drawing us toward excellence. Many people who later achieve great things describe a moment in their youth when admiration for someone they encountered, in person or in a book, first set them on their path.",
+      "Admiration also helps us to clarify our values. The people we admire reveal what we consider worthy of praise, whether it is honesty, generosity, creativity, or perseverance. ( A ) we may not always be able to explain our values in abstract terms, the figures we admire can make them concrete, offering examples of how those values might be lived. Reflecting on whom we admire, and why, can therefore be a way of understanding ourselves. Two people who admire very different figures may discover, by comparing their choices, how differently they understand what makes a life worthwhile.",
+      "Yet admiration can also be misplaced. People sometimes admire others for qualities that are not truly admirable, such as wealth obtained unfairly, power used cruelly, or fame achieved through deception. In a culture dominated by celebrity, admiration may be directed toward those who are most visible rather than those who are most deserving. When this happens, admiration can lead us astray, encouraging us to imitate qualities that do little to make our lives or our societies better. Young people, in particular, may be drawn toward models whose appeal lies more in their image than in their character.",
+      "There is also a risk that admiration may turn into uncritical devotion. When we admire someone intensely, we may overlook their faults or excuse their wrongdoing, treating them as beyond criticism. History offers many examples of people who followed admired leaders into terrible mistakes, unable to question those they regarded as heroes. Healthy admiration, by contrast, recognizes that even the most remarkable people are imperfect, and that we can value certain of their qualities without approving of everything they do.",
+      "These considerations suggest that admiration, like other emotions, can be educated. We can learn to notice the quieter forms of excellence that are often overlooked, such as the patience of a caregiver, the honesty of a colleague, or the persistence of someone facing hardship. We can also learn to examine our admiration critically, asking whether the qualities we admire are truly worth imitating. Such reflection does not diminish admiration but deepens it, directing it toward what genuinely deserves our respect.",
+      "Perhaps, then, admiration is one of the ways in which human beings learn to become better. By recognizing excellence in others, we glimpse possibilities for ourselves, and by reflecting on what we admire, we come to understand our own deepest values. In a world that often encourages comparison and competition, the capacity to admire others without envy may be both a source of joy and a quiet form of moral growth.",
+    ],
+    ja: [
+      'あこがれは、人間の感情のなかでもっともありふれていながら、もっともふり返られることの少ないものの一つである。私たちは運動選手をその技能のために、科学者をその発見のために、ふつうの人々をその勇気や親切のためにあこがれる。ほかの人の成功をうらませるねたみとちがって、あこがれは、自分ではもっていない性質に楽しみを感じさせてくれる。しかしあこがれは心地よい感情以上のものである。それは道徳的な成長と個人の成長に大切な役割をはたし、私たちがどのような人になり、どのような価値を追い求めることを選ぶかを形づくっているのかもしれない。',
+      'あこがれが大切な理由の一つは、それが何が可能かを示してくれることである。何かすばらしいことをなしとげた人に出会うと、人間に何ができるかについての感覚が広がる。すぐれた演奏を聞いた若い音楽家や、多くの障害を乗りこえた科学者について読んだ生徒は、そうでなければ思い切れなかったほど高い目標をもつようふるい立たされるかもしれない。この意味で、あこがれは単なる受け身の反応ではなく、私たちをすぐれたものへと引きよせる意欲のみなもとなのである。のちに大きなことをなしとげる多くの人は、直接にであれ本のなかであれ、出会っただれかへのあこがれが、はじめて自分をその道へと向かわせた若いころの瞬間について語る。',
+      'あこがれはまた、私たちの価値観をはっきりさせる助けになる。私たちがあこがれる人々は、正直さであれ、気前のよさであれ、創造性であれ、ねばり強さであれ、私たちが何をほめる値打ちがあると考えているかを明らかにする。私たちはいつも自分の価値観を抽象的なことばで説明できるわけではないが、あこがれる人物はそれを具体的にし、その価値観がどう生きられうるかの例をあたえてくれる。それゆえ、だれに、なぜあこがれるのかをふり返ることは、自分自身を理解する方法になりうる。まったくちがう人物にあこがれる二人は、その選択をくらべることで、何が人生を価値あるものにするのかについての理解がどれほどちがうかに気づくかもしれない。',
+      'しかしあこがれは見当ちがいになることもある。人々はときに、不正に得た富や残酷に使われた権力やだましで得た名声のような、本当はあこがれるに値しない性質のためにほかの人にあこがれる。有名人が支配する文化では、あこがれは、もっともふさわしい人ではなく、もっとも目立つ人に向けられるかもしれない。そうなると、あこがれは私たちを迷わせ、暮らしや社会をよくすることにほとんど役立たない性質をまねるよううながしてしまう。とくに若者は、その魅力が人柄よりもイメージにある手本に引きよせられるかもしれない。',
+      'あこがれが無批判な心酔に変わるおそれもある。だれかに強くあこがれると、私たちはその欠点を見落としたり悪い行いを許したりし、その人を批判のおよばない存在としてあつかうかもしれない。歴史には、あこがれた指導者についていって英雄と見なした人を疑うことができずに、恐ろしいあやまちにいたった人々の例が数多くある。対照的に、健全なあこがれは、もっともすぐれた人でさえ不完全であり、その人のすることすべてを認めなくても、ある性質を大切にできると認めている。',
+      'こうした考察は、あこがれもほかの感情と同じように育てられることを示している。私たちは、世話をする人の根気や、同僚の正直さや、困難に向き合う人のねばり強さのような、見落とされがちな静かなすぐれた形に気づくことを学べる。また、自分のあこがれを批判的に見つめ、あこがれる性質が本当にまねる価値があるのかを問うことも学べる。そうしたふり返りはあこがれを小さくするのではなく深め、本当に尊敬に値するものへとそれを向けるのである。',
+      'だとすれば、あこがれは人間がよりよくなることを学ぶ方法の一つなのかもしれない。ほかの人のなかにすぐれたものを認めることで、私たちは自分にとっての可能性をかいま見て、何にあこがれるかをふり返ることで、自分のもっとも深い価値観を理解するようになる。しばしばくらべ合いと競争をうながす世界で、ねたまずにほかの人にあこがれる力は、よろこびのみなもとであると同時に、静かな道徳的成長の一つの形なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「価値観をいつも抽象的に説明できるわけではないが、あこがれる人物がそれを具体的にする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ねたみとちがって、あこがれは自分にない性質に楽しみを感じさせる。', answer: true, why: '第1段落 Unlike envy ... admiration allows us to take pleasure in qualities we do not possess。' },
+      { statement: '筆者によれば、あこがれは単なる受け身の反応である。', answer: false, why: '第2段落 admiration is not merely a passive response。' },
+      { statement: '有名人が支配する文化では、あこがれがもっとも目立つ人に向けられることがある。', answer: true, why: '第4段落 directed toward those who are most visible。' },
+      { statement: '健全なあこがれは、あこがれる人のすることすべてを認める。', answer: false, why: '第5段落 without approving of everything they do。' },
+    ],
+    qa: [
+      { q: 'What can reflecting on whom we admire help us to do?', choices: ['Understand ourselves and our values.', 'Become famous.', 'Avoid all other people.', 'Forget our goals.'], answer: 0, why: '第3段落 can therefore be a way of understanding ourselves。' },
+      { q: 'What is one quiet form of excellence the author mentions?', choices: ['The patience of a caregiver.', 'The wealth of a celebrity.', 'The power of a ruler.', 'The fame of a singer.'], answer: 0, why: '第6段落 the patience of a caregiver。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
