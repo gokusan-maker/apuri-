@@ -39582,6 +39582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-pity-compassion',
+    title: 'Pity and Compassion',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we see someone suffering, we may respond with pity or with compassion, and the two are often treated as if they were the same. Both involve an awareness of another person's pain and a wish that it might be relieved. Yet many thinkers have argued that there is an important difference between them, and that this difference reveals something about how we relate to others. Understanding it may help us to respond to suffering in ways that respect, rather than diminish, the people who are suffering.",
+      "Pity, in its common sense, often involves looking at another person from a position of distance or superiority. We pity someone whose situation seems unfortunate, but we may do so while feeling relieved that we are not in the same position. The person pitied becomes, in a subtle way, an object of our concern rather than an equal. This is why many people dislike being pitied, even when the feeling is sincere: it can make them feel smaller, as if their misfortune had become the whole of who they are. Pity may be kindly meant, yet it can leave a lasting sense of distance between people.",
+      "Compassion, by contrast, is usually understood as a feeling of suffering with another person. ( A ) pity tends to look down on suffering from above, compassion tries to stand beside it. The compassionate person recognizes that the other's pain could have been their own, and that vulnerability to suffering is part of the human condition shared by all. In this sense, compassion includes a kind of humility, an acknowledgment that no one is entirely protected from misfortune.",
+      "This difference has practical consequences. Help offered out of pity may be generous, but it can also be offered in ways that ignore the wishes and dignity of the person helped. The giver decides what is needed and expects gratitude in return. Help offered out of compassion, by contrast, tends to begin with listening: with an effort to understand what the other person actually needs and wants, and with respect for their ability to make their own choices. The difference is often felt by the person receiving help, who can usually tell whether they are being treated as a partner or as a problem to be solved.",
+      "Yet it would be a mistake to dismiss pity entirely. In many situations, a feeling of pity may be the first step toward deeper understanding. A person who feels sorry for others has at least noticed their suffering, and this noticing can grow into a more genuine identification with them. Moreover, compassion can be demanding: to share in another's pain is emotionally costly, and those who work closely with suffering, such as nurses or social workers, must find ways to care deeply without being overwhelmed by it.",
+      "Some researchers have suggested that sustainable compassion depends on a certain balance. Feeling another person's pain too intensely can lead to exhaustion and withdrawal, while feeling it too little can lead to indifference. The goal, perhaps, is a form of compassion that combines warmth with steadiness, allowing a person to remain present with others in their suffering without being consumed by it. Such compassion may require practice, reflection, and the support of others.",
+      "In the end, the distinction between pity and compassion may matter less as a matter of definition than as a guide to how we treat one another. When we respond to suffering, we can ask ourselves whether we are looking at the other person or standing with them, whether we are deciding for them or listening to them. Such questions may help us to offer care that honors the dignity of those who receive it, and that reminds us of the common humanity we all share.",
+    ],
+    ja: [
+      'だれかが苦しんでいるのを見ると、私たちはあわれみか思いやりでこたえるかもしれないが、この二つはしばしば同じもののようにあつかわれる。どちらも、ほかの人の痛みに気づき、それがやわらぐことを願うことをふくんでいる。しかし多くの思想家は、両者のあいだには大切なちがいがあり、そのちがいは私たちがほかの人とどうかかわるかについて何かを明らかにすると主張してきた。それを理解することは、苦しんでいる人々をおとしめるのではなく尊重するやり方で、苦しみにこたえる助けになるかもしれない。',
+      'ふつうの意味でのあわれみは、しばしば、はなれた、あるいは上の立場からほかの人を見ることをふくむ。私たちは状況が不運に見える人をあわれむが、自分が同じ立場にいないことにほっとしながらそうするかもしれない。あわれまれる人は、目立たないやり方で、対等な人ではなく私たちの心配の対象になる。気持ちが心からのものであっても、多くの人があわれまれるのをいやがるのはこのためである。それは、まるで自分の不運が自分のすべてになってしまったかのように、自分を小さく感じさせることがあるのである。あわれみは親切のつもりでも、人と人のあいだにいつまでも残るへだたりの感覚を生むことがある。',
+      'それに対して思いやりは、ふつう、ほかの人とともに苦しむ気持ちとして理解されている。あわれみは苦しみを上から見下ろしがちだが、思いやりはそのそばに立とうとする。思いやりのある人は、相手の痛みが自分のものだったかもしれないこと、そして苦しみにさらされることは、すべての人が分け合う人間の条件の一部だと認めている。この意味で、思いやりには一種の謙虚さ、つまりだれも不運から完全に守られてはいないという認識がふくまれている。',
+      'このちがいには実際的な結果がある。あわれみから示される助けは気前がよいかもしれないが、助けられる人の願いや尊厳を無視するやり方で示されることもある。あたえる人が何が必要かを決め、見返りに感謝を期待するのである。それに対して、思いやりから示される助けは、聞くことから始まりがちである。相手が実際に何を必要とし何を望んでいるかを理解しようとする努力と、自分で選ぶ相手の力への尊重から始まるのである。そのちがいは、助けを受ける人がしばしば感じとるものであり、その人はふつう、自分がパートナーとしてあつかわれているのか、解決すべき問題としてあつかわれているのかを見分けられる。',
+      'しかし、あわれみをすっかりはねつけるのはまちがいだろう。多くの状況で、あわれみの気持ちは、より深い理解への最初の一歩かもしれない。ほかの人を気の毒に思う人は、少なくともその苦しみに気づいたのであり、この気づきは、相手とのより本当の一体感へと育ちうる。さらに、思いやりは負担が大きいこともある。ほかの人の痛みを分け合うことは心に重くのしかかり、看護師やソーシャルワーカーのように苦しみの近くで働く人々は、それに圧倒されずに深く気にかける方法を見つけなければならない。',
+      '続けられる思いやりは、あるつりあいにかかっていると示した研究者もいる。ほかの人の痛みをあまりに強く感じると、つかれはてて身を引くことにつながりかねず、あまりに弱く感じると無関心につながりかねない。目標はおそらく、あたたかさと落ち着きを組み合わせ、苦しみにのみこまれずに、苦しむ人のそばにい続けられるような形の思いやりなのだろう。そうした思いやりには、練習とふり返りと、ほかの人の支えが必要かもしれない。',
+      '結局のところ、あわれみと思いやりの区別は、定義の問題としてより、私たちがたがいにどう接するかの手引きとして大切なのかもしれない。苦しみにこたえるとき、私たちは、相手を見ているのか、それとも相手とともに立っているのか、相手のために決めているのか、それとも相手の話を聞いているのかを自分に問うことができる。そうした問いは、受け取る人の尊厳を敬い、私たちみんなが分け合う共通の人間らしさを思い出させてくれるような世話を示す助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「あわれみは上から見下ろし、思いやりはそばに立つ」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: 'あわれみと思いやりは、どちらもほかの人の痛みに気づくことをふくむ。', answer: true, why: '第1段落 Both involve an awareness of another person\'s pain。' },
+      { statement: '筆者によれば、あわれまれることを多くの人が喜ぶ。', answer: false, why: '第2段落 many people dislike being pitied。' },
+      { statement: '思いやりからの助けは、聞くことから始まりがちである。', answer: true, why: '第4段落 tends to begin with listening。' },
+      { statement: '筆者は、あわれみをすっかりはねつけるべきだと考えている。', answer: false, why: '第5段落 it would be a mistake to dismiss pity entirely。' },
+    ],
+    qa: [
+      { q: 'What kind of humility does compassion include?', choices: ['An acknowledgment that no one is entirely protected from misfortune.', 'A belief that one is better than others.', 'A refusal to help.', 'A fear of strangers.'], answer: 0, why: '第3段落 an acknowledgment that no one is entirely protected from misfortune。' },
+      { q: 'What can feeling another person\'s pain too intensely lead to?', choices: ['Exhaustion and withdrawal.', 'Greater wealth.', 'Indifference only.', 'Better sleep.'], answer: 0, why: '第6段落 can lead to exhaustion and withdrawal。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
