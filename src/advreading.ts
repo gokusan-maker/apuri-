@@ -38782,6 +38782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-being-remembered',
+    title: 'On Being Remembered',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people hope, at least in a quiet way, to be remembered. We want our names to mean something to those who come after us, and we may feel a kind of sadness at the thought that, within a few generations, almost everyone who knew us will be gone and our lives will be forgotten. This wish to be remembered has inspired great works of art, buildings intended to last for centuries, and countless smaller efforts, from family photographs to names carved on park benches. Yet it is worth asking what exactly we hope for when we wish to be remembered, and whether that hope is wise.",
+      "For a few people, remembrance takes the form of fame. Rulers, artists, and scientists whose names appear in history books seem to have achieved a kind of survival beyond death. Yet even this form of memory is less complete than it appears. We may remember the name of an ancient poet while knowing almost nothing about the person who wrote the poems, and the image that survives may bear little resemblance to the life that was actually lived. Fame preserves a name, but rarely a self.",
+      "For most people, remembrance is more modest and more personal. We live on for a time in the memories of family members, friends, and colleagues, in the stories they tell about us and the habits they learned from us. ( A ) such memories are less permanent than a name in a history book, they may be closer to the truth of who we were, since they are formed by people who knew us in ordinary circumstances. A grandmother's recipe, passed down through generations, may carry more of her character than any monument could.",
+      "There is also a form of remembrance that does not depend on names at all. The influence of a good teacher continues in the lives of students who may later forget the teacher's name but retain the curiosity or confidence that the teacher encouraged. A kindness offered to a stranger may change the course of that person's life without either of them remembering the details. In this sense, much of what we contribute to the world survives not as memory but as effect, woven anonymously into the lives of others.",
+      "Recognizing this may change how we think about the wish to be remembered. If our deepest influence lies in the effects we have on others rather than in the preservation of our names, then the most meaningful way to be remembered may be to live in a way that benefits those around us. The desire for recognition, by contrast, can lead people astray, encouraging them to seek attention or to measure the value of their actions by how visible they are rather than by how much good they do.",
+      "This is not to say that the wish to be remembered is foolish. It reflects something important about human beings: our sense that a life is a story, and that stories deserve to be told. Remembering the dead is also a way of honoring them and of recognizing that their lives mattered. Many cultures maintain rituals for remembering ancestors, and these rituals can give the living a sense of continuity and belonging that extends beyond their own lifetimes.",
+      "Perhaps, then, the wisest attitude is to hold the wish to be remembered lightly. We can cherish the memories we leave in the minds of those who love us, without depending on them for our sense of worth. And we can recognize that, even when our names have been forgotten, the care we have given and the good we have done may continue to shape the world in ways we will never know. To be forgotten in name while remaining present in effect may be, in the end, a gentle and generous kind of immortality.",
+    ],
+    ja: [
+      'たいていの人は、少なくとも静かなやり方で、おぼえられていたいと願っている。私たちは自分の名前があとに来る人々にとって何かの意味をもつことを望み、数世代のうちに私たちを知っていたほとんどすべての人がいなくなり、自分の人生がわすれられると考えると、ある種のさびしさを感じるかもしれない。このおぼえられていたいという願いは、すぐれた芸術作品や、何世紀も残るよう意図された建物や、家族の写真から公園のベンチにきざまれた名前まで、数えきれないささやかな努力を生んできた。しかし、おぼえられていたいと願うとき、私たちはいったい何を望んでいるのか、そしてその望みが賢いものなのかを問う値打ちがある。',
+      '少数の人にとって、おぼえられることは名声の形をとる。名前が歴史の本にのる支配者や芸術家や科学者は、死をこえた一種の生き残りをなしとげたように思える。しかしこの形の記憶でさえ、見かけほど完全ではない。私たちは古代の詩人の名前をおぼえていても、その詩を書いた人についてはほとんど何も知らないかもしれず、残っているすがたは、実際に生きられた人生とはほとんど似ていないかもしれない。名声は名前を残すが、その人自身を残すことはめったにない。',
+      'たいていの人にとって、おぼえられることはよりつつましく、より個人的である。私たちは家族や友だちや同僚の記憶の中で、彼らが私たちについて語る話や、私たちから学んだ習慣の中で、しばらく生き続ける。そうした記憶は歴史の本の名前ほど長く残らないが、ふだんの状況で私たちを知っていた人々によって形づくられるので、私たちが本当はどんな人だったかにより近いかもしれない。何世代にもわたって受けつがれる祖母のレシピは、どんな記念碑よりも多く彼女の人柄を運ぶかもしれない。',
+      '名前にまったくたよらない形のおぼえられ方もある。よい先生の影響は、のちに先生の名前をわすれても、先生がはげました好奇心や自信をもち続ける生徒の人生の中で続いていく。知らない人にあたえた親切は、どちらもくわしいことをおぼえていなくても、その人の人生の向きを変えるかもしれない。この意味で、私たちが世界にもたらすものの多くは、記憶としてではなく効果として、名もなくほかの人々の人生に織りこまれて生き残るのである。',
+      'このことを認めると、おぼえられていたいという願いについての考え方が変わるかもしれない。私たちのもっとも深い影響が、名前が残ることではなくほかの人々にあたえる効果にあるなら、もっとも意味のあるおぼえられ方は、まわりの人々の役に立つように生きることかもしれない。それに対して、認められたいという欲求は人をまよわせ、注目を求めさせたり、自分の行動の値打ちを、どれだけよいことをするかではなく、どれだけ目立つかで測らせたりすることがある。',
+      'これは、おぼえられていたいという願いがおろかだということではない。それは人間について大切なことを反映している。人生は一つの物語であり、物語は語られるに値するという感覚である。死者を思い出すことはまた、彼らを敬い、その人生が大切だったと認める方法でもある。多くの文化は祖先を思い出すための儀式を保っており、こうした儀式は、生きている人々に、自分の一生をこえて広がる、つながりと居場所の感覚をあたえうる。',
+      'そうするとおそらく、もっとも賢い態度は、おぼえられていたいという願いを軽やかにもつことである。私たちは、自分の値打ちの感覚をそれにたよることなく、愛してくれる人々の心に残す記憶を大切にできる。そして、名前がわすれられたあとでさえ、私たちがあたえた思いやりやなしたよいことが、私たちが決して知ることのないやり方で世界を形づくり続けるかもしれないと認めることができる。名前はわすれられても効果として残り続けることは、結局、おだやかで気前のよい一種の不死なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした記憶は長く残らないが、本当の姿により近いかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'おぼえられていたいという願いは、すぐれた芸術作品を生んできた。', answer: true, why: '第1段落 has inspired great works of art。' },
+      { statement: '筆者によれば、名声はその人自身を完全に残す。', answer: false, why: '第2段落 Fame preserves a name, but rarely a self。' },
+      { statement: '先生の名前をわすれても、その影響は生徒の人生に続くことがある。', answer: true, why: '第4段落 students who may later forget the teacher\'s name but retain the curiosity。' },
+      { statement: '筆者は、おぼえられていたいという願いはおろかだと考えている。', answer: false, why: '第6段落 This is not to say that the wish to be remembered is foolish。' },
+    ],
+    qa: [
+      { q: 'What may carry more of a grandmother\'s character than a monument?', choices: ['A recipe passed down through generations.', 'A history book.', 'A famous painting.', 'A park bench.'], answer: 0, why: '第3段落 A grandmother\'s recipe, passed down through generations。' },
+      { q: 'What can the desire for recognition lead people to do?', choices: ['Measure their actions by how visible they are.', 'Help others quietly.', 'Forget their names.', 'Stop working.'], answer: 0, why: '第5段落 measure the value of their actions by how visible they are。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
