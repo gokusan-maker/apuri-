@@ -37822,6 +37822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-gardens',
+    title: 'What Gardens Teach',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A garden occupies a curious position between nature and culture. It is made of living things that grow according to their own laws, yet it exists only because human beings have chosen to arrange, protect, and limit that growth. A garden left untended soon ceases to be a garden and becomes simply a piece of wild land, while a garden controlled too strictly may come to resemble a building made of plants. Between these extremes lies the art of gardening, which may tell us something about how human beings can live with the world around them.",
+      "One of the first lessons a garden teaches is patience. Seeds cannot be hurried, and the gardener who digs up a plant to see whether its roots are growing will only damage it. Many of the most rewarding results take years to appear: a tree planted today may not give shade for a generation. In a culture that increasingly values speed and instant results, the garden offers a reminder that some forms of growth cannot be accelerated, and that the willingness to wait is itself a kind of skill.",
+      "A garden also teaches humility. However carefully the gardener plans, the weather, the soil, insects, and countless other factors will influence the outcome in ways that cannot be fully controlled. ( A ) experience allows a gardener to predict many of these influences, there will always be seasons when carefully tended plants fail and unexpected ones flourish. To garden well is therefore to accept that one is a participant in a process rather than its master, working with forces that are larger and older than oneself.",
+      "At the same time, the garden is an expression of human choice and imagination. Every garden reflects decisions about what to plant and what to remove, about which plants deserve space and which are to be treated as weeds. These decisions reveal the values of those who make them. A garden designed for food reflects concern with usefulness; one designed for beauty reflects a love of color and form; one planted to attract butterflies and bees reflects a wish to share the space with other forms of life.",
+      "The idea of the weed is especially revealing. A weed is not a particular kind of plant but simply a plant growing where someone does not want it. The same flower that is carefully cultivated in one garden may be pulled up as a nuisance in another. This suggests that the distinctions we draw between valuable and worthless things are often less natural than they appear, depending as much on our purposes as on the qualities of the things themselves. What we call a weed, in other words, tells us as much about ourselves as about the plant.",
+      "Gardens also create a particular relationship with time. Unlike a painting or a building, a garden is never finished. It changes with every season, and it must be tended continually if it is to retain its form. Some gardeners find this endless work tiring, but many find in it a source of deep satisfaction. To care for a garden is to take part in a cycle of growth, decay, and renewal that connects the gardener to the rhythms of the natural world and to those who tended the same ground before.",
+      "Perhaps this is why gardens have so often served as images of a good life. A well-tended garden suggests a balance between effort and acceptance, between shaping the world and allowing it to grow according to its own nature. It reminds us that care is not the same as control, and that the most lasting results often come from patient attention rather than forceful intervention. In learning to tend a garden, we may also learn something about how to tend our relationships, our communities, and ourselves.",
+    ],
+    ja: [
+      '庭は自然と文化のあいだの奇妙な位置をしめている。それは自分の法則にしたがって育つ生き物でできているが、人間がその成長を整え、守り、限ることを選んだからこそ存在する。手入れされない庭はすぐに庭でなくなり、ただの野生の土地になるが、あまりにきびしく管理された庭は、植物でできた建物のように見えてくるかもしれない。この両極のあいだに庭づくりの技があり、それは人間がまわりの世界とどうともに生きられるかについて何かを教えてくれるかもしれない。',
+      '庭が教えてくれる最初のことの一つは、根気である。種を急がせることはできず、根がのびているかを見るために植物をほり起こす庭師は、それを傷つけるだけである。もっとも実りの多い結果の多くは、現れるのに何年もかかる。今日植えた木は、一世代のあいだ日かげをあたえないかもしれない。速さと即座の結果をますます大切にする文化の中で、庭は、ある種の成長は速めることができず、待とうとする気持ちそのものが一種の技能だと思い出させてくれる。',
+      '庭はまた謙虚さを教える。庭師がどれほど注意深く計画しても、天気や土や虫や数えきれないほかの要因が、完全には管理できないやり方で結果に影響する。経験によって庭師はこうした影響の多くを予想できるが、注意深く世話をした植物がだめになり、思いがけない植物がさかえる季節はいつもあるだろう。そのため上手に庭づくりをすることは、自分が過程の主人ではなくその参加者であると受け入れ、自分より大きく古い力とともに働くことなのである。',
+      '同時に、庭は人間の選択と想像力の表れでもある。どの庭も、何を植え何を取りのぞくか、どの植物が場所を得るに値し、どれが雑草としてあつかわれるべきかについての決定を反映している。こうした決定は、それをする人々の価値観を明らかにする。食べ物のために作られた庭は役に立つことへの関心を、美しさのために作られた庭は色と形への愛を、チョウやハチを引きよせるために植えられた庭は、ほかの生命の形と場所を分け合いたいという願いを反映している。',
+      '雑草という考えはとくに多くのことを明らかにする。雑草とは特定の種類の植物ではなく、ただだれかが望まない場所に育っている植物である。ある庭で注意深く育てられている花が、別の庭ではじゃま者としてぬかれるかもしれない。このことは、私たちが価値のあるものと価値のないもののあいだに引く区別は、見かけほど自然なものではなく、ものそのものの性質と同じくらい私たちの目的にかかっていることが多いと示している。言いかえれば、私たちが雑草とよぶものは、植物についてと同じくらい私たち自身について多くを語っているのである。',
+      '庭はまた、時間との特別な関係を生み出す。絵や建物とちがって、庭は決して完成しない。それは季節ごとに変わり、形を保つにはたえず手入れをしなければならない。この終わりのない仕事をつかれると感じる庭師もいるが、多くの人はそこに深い満足を見いだす。庭の世話をすることは、庭師を自然界のリズムや、同じ土地を以前に世話した人々と結びつける、成長と衰えと再生のくり返しに加わることなのである。',
+      'おそらくこれが、庭がしばしばよい人生のイメージとして使われてきた理由だろう。よく手入れされた庭は、努力と受け入れのあいだの、世界を形づくることと、それが自分の性質にしたがって育つのをゆるすことのあいだのつりあいを思わせる。それは、世話は管理と同じではなく、もっとも長続きする結果は、力ずくの介入よりも根気強い注意から生まれることが多いと思い出させてくれる。庭の世話を学ぶことで、私たちは人間関係や地域や自分自身をどう世話するかについても何かを学ぶかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「経験で多くを予想できるが、だめになる季節はいつもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '手入れされない庭は、すぐにただの野生の土地になる。', answer: true, why: '第1段落 A garden left untended soon ceases to be a garden。' },
+      { statement: '筆者によれば、庭師は天気や虫を完全に管理できる。', answer: false, why: '第3段落 in ways that cannot be fully controlled。' },
+      { statement: '雑草とは、だれかが望まない場所に育っている植物である。', answer: true, why: '第5段落 simply a plant growing where someone does not want it。' },
+      { statement: '庭は絵や建物のように、いつか完成する。', answer: false, why: '第6段落 a garden is never finished。' },
+    ],
+    qa: [
+      { q: 'What does a garden planted to attract butterflies reflect?', choices: ['A wish to share the space with other forms of life.', 'A concern with usefulness.', 'A love of buildings.', 'A desire for speed.'], answer: 0, why: '第4段落 reflects a wish to share the space with other forms of life。' },
+      { q: 'What does a well-tended garden remind us, according to the author?', choices: ['That care is not the same as control.', 'That control is always best.', 'That gardens are useless.', 'That growth can be hurried.'], answer: 0, why: '第7段落 It reminds us that care is not the same as control。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
