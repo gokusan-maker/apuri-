@@ -37378,6 +37378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-public-broadcasting',
+    title: 'Should Public Broadcasting Be Funded by the Public?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, a public broadcaster provides television and radio programs funded not mainly by advertising but by taxes or by a fee paid by every household that owns a television. For decades, such broadcasters have been regarded as a central part of national life, offering news, education, and entertainment to everyone regardless of income. In recent years, however, the rise of streaming services and online media has led many people to question whether citizens should still be required to pay for a broadcaster that they may rarely watch or listen to.",
+      "Supporters of public funding argue that public broadcasters serve purposes that commercial media cannot be relied upon to fulfill. Because they do not depend on advertising, they can produce programs that are valuable but unlikely to attract large audiences, such as documentaries on science and history, programs for children, and broadcasts in minority languages. Supporters also argue that a well-funded public broadcaster can provide news that is less influenced by the interests of advertisers or wealthy owners, helping citizens to form their opinions on the basis of reliable information.",
+      "Supporters further emphasize the role of public broadcasters in times of crisis. During natural disasters, a trusted broadcaster that reaches almost every household can deliver warnings and instructions quickly and clearly, potentially saving lives. ( A ) commercial channels may also report on such events, supporters argue, they have little incentive to maintain the expensive networks and staff required to serve remote areas where few viewers live. In this view, public funding is an investment in a service that benefits the whole society, including those who rarely use it in ordinary times.",
+      "Critics, however, argue that the traditional model of public broadcasting no longer fits the way people consume media. Many young people now obtain news and entertainment almost entirely online, and they may see little reason to pay for programs they never watch. Requiring every household to pay a fixed fee, critics claim, is particularly unfair to people with low incomes, for whom even a modest charge can be a burden. Some suggest that public broadcasters should instead rely on voluntary subscriptions, like other services, and compete for audiences on equal terms.",
+      "Critics also question whether public broadcasters are truly independent. Because their funding depends on decisions made by governments, there is a risk that politicians will use their influence to shape the content of news programs, either directly or by threatening to reduce budgets. In some countries, public broadcasters have been accused of favoring the government of the day, while in others they have been accused of political bias in the opposite direction. Critics argue that a media system funded by the state can never be entirely free from the suspicion of serving those in power.",
+      "In response to these challenges, many public broadcasters have tried to adapt. Some have moved much of their content online, offering programs on demand and creating services designed for younger audiences. Others have established independent boards to manage their finances and protect editorial decisions from political interference. Several countries have also replaced fees based on television ownership with charges collected through general taxation, arguing that, since almost everyone now has access to some form of media, the costs should be shared in proportion to income.",
+      "The debate over public broadcasting ultimately concerns what kind of information and culture a society believes should be available to all its members. If media is treated purely as a product to be bought and sold, programs that serve small audiences or the public interest may disappear. If, however, it is treated as a shared resource, societies must find ways of funding it that are fair to citizens and that preserve its independence. Balancing these goals will require public broadcasters to justify their value continually to the people who pay for them.",
+    ],
+    ja: [
+      '多くの国で、公共放送局は、おもに広告ではなく、税金やテレビをもつすべての世帯がはらう料金によってまかなわれるテレビやラジオの番組を提供している。何十年ものあいだ、そうした放送局は国の暮らしの中心の一部と見なされ、収入にかかわらずすべての人にニュースや教育や娯楽を届けてきた。しかし近年、動画配信サービスやオンラインのメディアが広がったことで、ほとんど見たり聞いたりしないかもしれない放送局に、市民がまだお金をはらわされるべきなのかを疑う人が多くなっている。',
+      '公的な資金を支持する人々は、公共放送局は、民間のメディアにはたよれない目的に役立っていると主張する。広告にたよらないので、科学や歴史のドキュメンタリーや子ども向けの番組や少数言語での放送のように、価値はあるが多くの視聴者を集めそうにない番組を作れる。支持する人々はまた、十分な資金をもつ公共放送局は、広告主や裕福な持ち主の利益に左右されにくいニュースを届け、市民が信頼できる情報にもとづいて意見を形づくるのを助けられると主張する。',
+      '支持する人々はさらに、危機のときの公共放送局の役割を強調する。自然災害のあいだ、ほとんどすべての世帯に届く信頼された放送局は、警報や指示をすばやくはっきりと伝えることができ、命を救うかもしれない。民間のチャンネルもそうした出来事を報じるかもしれないが、視聴者の少ない遠い地域に届けるのに必要な、費用のかかる設備や人員を保つ動機はほとんどないと支持する人々は主張する。この見方では、公的な資金は、ふだんはほとんど使わない人々をふくめ、社会全体に役立つサービスへの投資である。',
+      'しかし批判する人々は、公共放送の伝統的な形は、もう人々のメディアの使い方に合っていないと主張する。今では多くの若者がニュースや娯楽をほとんどすべてオンラインで手に入れており、まったく見ない番組にお金をはらう理由をほとんど感じないかもしれない。すべての世帯に決まった料金をはらわせるのは、ささやかな料金でも負担になりうる収入の少ない人々にとってとくに不公平だと批判する人々は主張する。公共放送局はかわりに、ほかのサービスのように任意の契約にたより、同じ条件で視聴者を取り合うべきだと提案する人もいる。',
+      '批判する人々はまた、公共放送局が本当に独立しているのかを疑う。資金が政府の決定にかかっているので、政治家が、直接に、あるいは予算をへらすとおどすことで、影響力を使ってニュース番組の中身を形づくる危険がある。ある国では公共放送局がそのときの政府をひいきしているとせめられ、別の国では反対の方向に政治的にかたよっているとせめられてきた。国がまかなうメディアの仕組みは、権力をもつ人々に仕えているという疑いから決して完全には自由になれないと批判する人々は主張する。',
+      'こうした課題にこたえて、多くの公共放送局は変わろうとしてきた。中身の多くをオンラインに移し、見たいときに見られる番組を提供し、若い視聴者向けのサービスを作ったところもある。財政を管理し、編集の決定を政治の干渉から守るために、独立した委員会を設けたところもある。いくつかの国ではまた、テレビをもっているかどうかにもとづく料金を、一般の税金で集める負担に置きかえた。今ではほとんどすべての人が何らかのメディアを利用できるので、費用は収入に応じて分け合うべきだという考えからである。',
+      '公共放送をめぐる議論は、結局、社会がどのような情報と文化をすべての人々が利用できるようにすべきだと考えるかにかかわっている。メディアがただ売り買いされる商品としてあつかわれれば、少ない視聴者や公共の利益に役立つ番組は消えるかもしれない。しかし、それが共有の資源としてあつかわれるなら、社会は、市民に公平で、その独立を守るような資金のまかない方を見つけなければならない。こうした目的のつりあいをとるには、公共放送局が、お金をはらう人々にその価値をたえず示し続けることが必要だろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「民間も報じるかもしれないが、遠い地域に届ける動機はない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that public broadcasters can make valuable programs because they do not depend on ( 1 ). Critics argue that a fixed fee is unfair to people with low ( 2 ) and question whether such broadcasters are truly ( 3 ).',
+      blanks: [
+        { choices: ['advertising', 'weather', 'teachers', 'tourists'], answer: 0, why: '第2段落 Because they do not depend on advertising。' },
+        { choices: ['incomes', 'voices', 'expectations', 'grades'], answer: 0, why: '第4段落 particularly unfair to people with low incomes。' },
+        { choices: ['independent', 'popular', 'modern', 'expensive'], answer: 0, why: '第5段落 Critics also question whether public broadcasters are truly independent。' },
+      ],
+    },
+    tf: [
+      { statement: '公共放送局は、少数言語での放送のような番組を作れる。', answer: true, why: '第2段落 broadcasts in minority languages。' },
+      { statement: '多くの若者は、今もニュースをおもにテレビから得ている。', answer: false, why: '第4段落 Many young people now obtain news and entertainment almost entirely online。' },
+      { statement: '独立した委員会を設けた公共放送局もある。', answer: true, why: '第6段落 Others have established independent boards。' },
+      { statement: '筆者は、メディアをただの商品としてあつかうべきだと結論づけている。', answer: false, why: '第7段落 programs that serve small audiences or the public interest may disappear と危険を示している。' },
+    ],
+    qa: [
+      { q: 'Why are public broadcasters important during natural disasters?', choices: ['They can deliver warnings quickly to almost every household.', 'They have more advertisements.', 'They charge lower fees.', 'They only broadcast online.'], answer: 0, why: '第3段落 can deliver warnings and instructions quickly and clearly。' },
+      { q: 'What have several countries replaced fees based on television ownership with?', choices: ['Charges collected through general taxation.', 'Voluntary donations.', 'Advertising income.', 'Free services.'], answer: 0, why: '第6段落 replaced fees based on television ownership with charges collected through general taxation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
