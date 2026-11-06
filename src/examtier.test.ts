@@ -1653,3 +1653,14 @@ it('本番の長さの長文：共通テスト評論の「ピア・チュータ�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('段落の和訳をえらぶ問題：まちがいの選択肢は正解と重ならない3つで、全部ちがう', () => {
+  const ps = passagesForTier('kyutei').filter((p) => p.gist)
+  expect(ps.length).toBeGreaterThan(0)
+  for (const p of ps.slice(0, 30))
+    for (const g of p.gist!) {
+      expect(g.choices).toHaveLength(4)
+      expect(new Set(g.choices).size).toBe(4)
+      expect(g.choices[g.answer]).toBe(p.ja[g.para])
+    }
+})

@@ -78,11 +78,27 @@ export const HARD_TIERS: ExamTier[] = ['kokkoritsu', 'kyutei', 'kokuritsu-med', 
 const seedOf = (s: string) => [...s].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 7)
 export function withTranslation(p: LongPassage, pool: LongPassage[] = ADV_PASSAGES): LongPassage {
   if (!HARD_TIERS.includes(tierOf(p)) || p.gist || p.paragraphs.length < 2 || p.ja.length !== p.paragraphs.length) return p
-  const others = pool.filter((x) => x.id !== p.id && tierOf(x) === tierOf(p)).flatMap((x) => x.ja)
+  const t = tierOf(p)
   const paras = p.paragraphs.length >= 3 ? [1, p.paragraphs.length - 1] : [0, 1]
+  // まちがいの選択肢：同じ長文のほかの段落 → 同じレベルのほかの長文の和訳の順に、重ならない3つ（3つ集まったら止める）
+  const pickWrong = (para: number, right: string): string[] => {
+    const seen = new Set<string>([right])
+    const out: string[] = []
+    const add = (s: string) => {
+      if (!seen.has(s)) out.push(s)
+      seen.add(s)
+      return out.length >= 3
+    }
+    for (let i = 0; i < p.ja.length; i++) if (i !== para && add(p.ja[i])) return out
+    for (const x of pool) {
+      if (x.id === p.id || tierOf(x) !== t) continue
+      for (const s of x.ja) if (add(s)) return out
+    }
+    return out
+  }
   const gist = paras.map((para) => {
     const right = p.ja[para]
-    const wrong = [...p.ja.filter((_, i) => i !== para), ...others].filter((t, i, a) => t !== right && a.indexOf(t) === i).slice(0, 3)
+    const wrong = pickWrong(para, right)
     const choices = [right, ...wrong]
     const k = (seedOf(p.id) + para) % choices.length
     const order = [...choices.slice(k), ...choices.slice(0, k)]
