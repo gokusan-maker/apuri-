@@ -38178,6 +38178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-alcohol-labels',
+    title: 'Should Alcohol Carry Health Warnings?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, cigarette packages carry large health warnings, often accompanied by disturbing images of damaged lungs or teeth. Alcoholic drinks, by contrast, are usually sold with little or no information about their health risks, even though alcohol is linked to a wide range of serious illnesses, including several types of cancer. In recent years, some governments have proposed requiring health warnings on bottles and cans of alcohol, similar to those already used for tobacco. The proposals have provoked strong reactions from the drinks industry, health experts, and consumers, who disagree about whether such labels are necessary or effective.",
+      "Supporters of warning labels argue that consumers have a right to know about the risks of what they buy. Surveys in several countries have found that many people are unaware that alcohol increases the risk of cancer, and that awareness is particularly low among young people. Labels, supporters claim, would provide this information at the moment when it is most relevant, when people are choosing what to drink. In their view, the absence of warnings sends a misleading message that alcohol is a harmless product, unlike tobacco.",
+      "Supporters also point to the experience of tobacco control. Warning labels on cigarettes, together with other measures such as higher taxes and restrictions on advertising, have contributed to a significant decline in smoking in many countries. ( A ) alcohol differs from tobacco in important ways, supporters argue, the same principle applies: when people are regularly reminded of the risks of a product, at least some of them will choose to use it less. Even a small reduction in heavy drinking, they note, could prevent many illnesses and deaths each year.",
+      "Opponents, however, argue that alcohol should not be treated like tobacco. Unlike smoking, they point out, moderate drinking is a normal part of social life in many cultures and is not harmful for most people in the same way. Labels designed to frighten consumers, opponents claim, would unfairly stigmatize those who drink responsibly and might damage industries such as wine-making that are important to local economies and cultural traditions. Some argue that warnings would be widely ignored, just as many people ignore the information already printed on food packaging.",
+      "Opponents also question whether labels would reach those who most need them. People who drink heavily, they argue, are often aware of the risks but continue to drink for reasons that a printed warning is unlikely to change, such as addiction, stress, or social pressure. Resources spent on labels, in their view, might be better used to support treatment programs and education campaigns aimed at specific groups. Others warn that requiring new labels would raise costs for small producers, who may struggle to redesign their packaging.",
+      "Research on the effects of alcohol warnings offers mixed results. Some studies have found that clear and prominent labels increase awareness of health risks and slightly reduce the amount people intend to drink, particularly when the warnings are new and specific. Other studies suggest that the effect fades over time as consumers become used to seeing the same messages. Many researchers conclude that labels are most effective when they form part of a broader strategy that includes education, pricing policies, and limits on marketing.",
+      "The debate over alcohol warning labels reflects a wider question about how societies should balance individual freedom with public health. Few people would argue that adults should be prevented from drinking, but many believe that they should be able to make their choices with accurate information. Whether or not warning labels become common, the discussion encourages both governments and consumers to consider how much they really know about a product that is so deeply woven into social life, and how that knowledge might shape their decisions.",
+    ],
+    ja: [
+      '多くの国で、たばこの箱には大きな健康上の警告がのっており、しばしば傷んだ肺や歯のどぎつい画像がそえられている。それに対してお酒は、いくつかの種類のがんをふくむ、さまざまな深刻な病気と結びついているにもかかわらず、ふつうは健康の危険についての情報をほとんど、あるいはまったくつけずに売られている。近年、たばこにすでに使われているのと同じような健康上の警告を、お酒のびんや缶につけることを義務づけようと提案する政府もある。この提案は、そうした表示が必要なのか、効果があるのかについて意見が分かれる酒類業界や健康の専門家や消費者から、強い反応を引き起こしている。',
+      '警告の表示を支持する人々は、消費者には自分が買うものの危険を知る権利があると主張する。いくつかの国の調査では、多くの人がお酒ががんの危険を高めることを知らず、その認識はとくに若者のあいだで低いことがわかった。表示があれば、何を飲むかを選んでいる、もっともかかわりのある瞬間に、この情報を届けられると支持する人々は主張する。彼らの見方では、警告がないことは、たばことちがってお酒は害のない商品だという誤解をまねくメッセージを送っている。',
+      '支持する人々はまた、たばこ対策の経験をあげる。たばこの警告表示は、税金の引き上げや広告の制限のようなほかの対策とともに、多くの国で喫煙が大きくへることに貢献してきた。お酒はたばこと大切な点でちがうが、同じ原則が当てはまると支持する人々は主張する。人々がある商品の危険をくり返し思い出させられると、少なくともその一部は使う量をへらすことを選ぶだろう。大量の飲酒がわずかにへるだけでも、毎年多くの病気や死をふせげるかもしれないと彼らは指摘する。',
+      'しかし反対する人々は、お酒をたばこのようにあつかうべきではないと主張する。喫煙とちがって、ほどほどの飲酒は多くの文化でふつうの社会生活の一部であり、ほとんどの人にとって同じようには有害ではないと彼らは指摘する。消費者をこわがらせるための表示は、責任をもって飲む人々に不当な汚名を着せ、地元の経済や文化の伝統にとって大切なワイン作りのような産業をそこなうかもしれないと反対する人々は主張する。食品の包装にすでに印刷されている情報を多くの人が無視するのと同じように、警告も広く無視されるだろうと主張する人もいる。',
+      '反対する人々はまた、表示がもっとも必要とする人に届くのかを疑う。大量に飲む人々は、しばしば危険を知っているが、依存やストレスや社会的な圧力のように、印刷された警告では変わりそうにない理由で飲み続けると彼らは主張する。彼らの見方では、表示に使われる資源は、治療の取り組みや、特定の集団に向けた教育の活動を支えることに使った方がよいかもしれない。新しい表示を義務づければ、包装をデザインし直すのに苦労するかもしれない小さな生産者の費用が上がると警告する人もいる。',
+      'お酒の警告の効果についての研究は、まちまちの結果を示している。はっきりした目立つ表示は健康の危険への認識を高め、とくに警告が新しく具体的なときには、人々が飲もうとする量をわずかにへらすことを見いだした研究もある。消費者が同じメッセージを見ることに慣れるにつれて、効果は時とともにうすれることを示す研究もある。多くの研究者は、表示がもっとも効果的なのは、教育や価格の政策や販売促進の制限をふくむ、より広い戦略の一部になるときだと結論づけている。',
+      'お酒の警告表示をめぐる議論は、社会が個人の自由と公衆衛生のつりあいをどうとるべきかという、より広い問いを反映している。大人が飲むのをさまたげられるべきだと主張する人はほとんどいないが、多くの人は、大人が正確な情報をもって選べるべきだと考えている。警告表示が広まるかどうかにかかわらず、この議論は政府と消費者の両方に、社会生活にこれほど深く織りこまれた商品について本当にどれほど知っているのか、そしてその知識が自分の決定をどう形づくりうるのかを考えるようにうながしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「お酒はたばこと大切な点でちがうが、同じ原則が当てはまる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that consumers have a right to know the ( 1 ) of alcohol and point to the success of tobacco control. Opponents argue that moderate drinking is a normal part of ( 2 ) life and that labels may not reach heavy drinkers. Research suggests that labels work best as part of a broader ( 3 ).',
+      blanks: [
+        { choices: ['risks', 'prices', 'origins', 'flavors'], answer: 0, why: '第2段落 consumers have a right to know about the risks。' },
+        { choices: ['social', 'private', 'political', 'academic'], answer: 0, why: '第4段落 moderate drinking is a normal part of social life。' },
+        { choices: ['strategy', 'market', 'product', 'tradition'], answer: 0, why: '第6段落 when they form part of a broader strategy。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの人は、お酒ががんの危険を高めることを知らない。', answer: true, why: '第2段落 many people are unaware that alcohol increases the risk of cancer。' },
+      { statement: 'たばこの警告表示は、喫煙をへらすのにまったく役立たなかった。', answer: false, why: '第3段落 have contributed to a significant decline in smoking。' },
+      { statement: '警告の効果は、時とともにうすれることがある。', answer: true, why: '第6段落 the effect fades over time。' },
+      { statement: '筆者によれば、多くの人は大人が飲むことを禁じるべきだと主張している。', answer: false, why: '第7段落 Few people would argue that adults should be prevented from drinking。' },
+    ],
+    qa: [
+      { q: 'Why might heavy drinkers continue to drink despite knowing the risks?', choices: ['Because of addiction, stress, or social pressure.', 'Because labels are too small.', 'Because alcohol is cheap.', 'Because doctors recommend it.'], answer: 0, why: '第5段落 such as addiction, stress, or social pressure。' },
+      { q: 'Who might struggle with the cost of new labels?', choices: ['Small producers.', 'Large supermarkets.', 'Consumers abroad.', 'Health experts.'], answer: 0, why: '第5段落 would raise costs for small producers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
