@@ -37698,6 +37698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-admission-lottery',
+    title: 'Should Schools Admit Students by Lottery?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Admission to popular schools and universities is usually decided by examinations, interviews, or a combination of grades and other achievements. These methods are intended to select the applicants who are most capable or most deserving, yet they have long been criticized for favoring children from wealthy families, who can afford private tutoring and other forms of preparation. In response, some educators and policymakers have proposed a surprising alternative: selecting students, at least in part, by lottery. The idea has attracted interest in several countries, but it remains highly controversial.",
+      "Supporters of admission lotteries argue that they would make access to education fairer. When places are awarded by examination, the results often reflect not only a student's ability but also the resources available to their family. A lottery, by contrast, gives every qualified applicant the same chance, regardless of background. Supporters also note that many selection processes claim to measure differences that are, in reality, very small, and that choosing between two equally capable applicants on the basis of a few points on a test is hardly more rational than leaving the choice to chance.",
+      "Supporters further argue that lotteries could reduce the intense pressure that competitive admissions place on young people. In some societies, children spend years preparing for entrance examinations, sacrificing sleep, play, and other interests in pursuit of a few additional points. ( A ) a lottery were used to choose among applicants who meet a basic standard, supporters claim, students could focus on learning for its own sake rather than on outperforming their peers, and families might feel less need to spend large sums on preparation.",
+      "Opponents, however, argue that lotteries ignore the value of effort and achievement. Students who have worked hard to reach a high standard may feel that their efforts count for nothing if a place can be won by luck alone. Opponents also worry that lotteries would weaken the motivation of students to excel, since there would be little reason to aim higher than the minimum required to enter the draw. In their view, a fair system is not one that treats everyone identically but one that rewards people according to what they have accomplished.",
+      "Opponents also question whether lotteries would actually reduce inequality. Wealthy families, they point out, might simply find other ways to secure advantages for their children, such as moving to areas with better schools or paying for private education outside the lottery system. Moreover, if the minimum standard required to enter a lottery were itself determined by examination, the pressure to prepare would not disappear but merely shift to a different stage. Critics argue that the deeper causes of educational inequality lie outside the admission process and must be addressed there.",
+      "Some institutions have experimented with partial lotteries as a compromise. Under such systems, applicants who clearly exceed a high standard are admitted directly, while places for the remaining qualified applicants are allocated by chance. Others use lotteries only to choose among applicants whose scores fall within a narrow range, where differences are unlikely to be meaningful. Early studies suggest that such approaches may slightly increase the diversity of admitted students without lowering academic standards, although researchers caution that the evidence is still limited and that results may vary between institutions.",
+      "The debate over admission lotteries ultimately reflects different ideas about what fairness in education means. For some, fairness requires rewarding merit as precisely as possible; for others, it requires recognizing that merit itself is shaped by luck, including the luck of being born into a supportive family. Whichever view one holds, the proposal invites societies to examine whether their current methods of selection truly measure what they claim to measure, and whether the competition they create serves the interests of the young people involved.",
+    ],
+    ja: [
+      '人気のある学校や大学への入学は、ふつう試験や面接、あるいは成績とほかの実績の組み合わせによって決められる。こうした方法は、もっとも能力のある、あるいはもっともふさわしい志願者を選ぶためのものだが、個別指導やほかの準備にお金を出せる裕福な家庭の子どもに有利だと長く批判されてきた。これにこたえて、一部の教育者や政策を作る人々は、おどろくような別の案を出している。少なくとも一部の学生を、くじ引きで選ぶというものである。この考えはいくつかの国で関心を集めてきたが、今も大きな論争の的である。',
+      '入学のくじ引きを支持する人々は、それによって教育を受ける機会がより公平になると主張する。席が試験によってあたえられると、その結果はしばしば生徒の能力だけでなく、家庭が使える資源も反映する。それに対してくじ引きは、資格のあるすべての志願者に、生まれ育ちにかかわらず同じ機会をあたえる。支持する人々はまた、多くの選抜の手続きは、実際にはとても小さなちがいを測ると主張しており、同じくらい能力のある二人の志願者のどちらかを、試験の数点の差で選ぶのは、選択を運にまかせるのとほとんど変わらないほど合理的でないと指摘する。',
+      '支持する人々はさらに、くじ引きは、競争的な入学選考が若者にかける強い圧力をへらしうると主張する。ある社会では、子どもたちは何年も入学試験の準備に費やし、数点を上乗せするために、睡眠や遊びやほかの関心をぎせいにする。基本的な水準を満たす志願者のなかから選ぶのにくじ引きが使われれば、生徒はまわりの人を上回ることではなく、学ぶこと自体に集中でき、家族も準備に大金を使う必要をあまり感じなくなるかもしれないと支持する人々は主張する。',
+      'しかし反対する人々は、くじ引きは努力となしとげたことの価値を無視すると主張する。高い水準に達しようと一生けんめい努力してきた生徒は、席が運だけで手に入るなら、自分の努力は何の意味もないと感じるかもしれない。反対する人々はまた、くじ引きに参加するのに必要な最低限より上を目指す理由がほとんどなくなるので、くじ引きは生徒のすぐれようとする意欲を弱めるだろうと心配する。彼らの見方では、公平な制度とは、すべての人を同じにあつかうものではなく、人々をそのなしとげたことに応じて報いるものである。',
+      '反対する人々はまた、くじ引きが本当に不平等をへらすのかを疑う。裕福な家庭は、よりよい学校のある地域に引っこしたり、くじ引きの制度の外の私立教育にお金をはらったりするなど、子どもに有利な立場を確保するほかの方法をただ見つけるだけかもしれないと彼らは指摘する。さらに、くじ引きに参加するのに必要な最低限の水準そのものが試験で決められるなら、準備の圧力は消えず、ただ別の段階に移るだけだろう。教育の不平等のより深い原因は入学の手続きの外にあり、そこで取り組まなければならないと批判する人々は主張する。',
+      '妥協として、部分的なくじ引きを試した機関もある。そうした制度では、高い水準をはっきり上回る志願者はそのまま入学を認められ、残りの資格のある志願者の席は運によって割りあてられる。点数がせまいはんいに入っていて、ちがいに意味があるとは思えない志願者のなかから選ぶときだけ、くじ引きを使うところもある。初期の研究は、そうした方法が学力の水準を下げずに、入学する学生の多様性を少しふやすかもしれないことを示しているが、研究者は証拠はまだ限られており、結果は機関によってちがうかもしれないと注意している。',
+      '入学のくじ引きをめぐる議論は、結局、教育における公平さが何を意味するかについてのちがう考えを反映している。ある人々にとって、公平さとはできるだけ正確に実力に報いることであり、別の人々にとっては、実力そのものが、支えてくれる家庭に生まれるという運をふくめ、運によって形づくられていると認めることである。どちらの見方をとるにせよ、この提案は社会に、今の選抜の方法が本当に測ると主張するものを測っているのか、そしてそれが生み出す競争がかかわる若者の利益になっているのかを考えるようにうながしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「くじ引きが使われれば、学ぶこと自体に集中できる」という条件なので If。' },
+    ],
+    summary: {
+      text: 'Supporters argue that admission lotteries would make access to education ( 1 ) and reduce pressure on young people. Opponents argue that lotteries ignore the value of ( 2 ) and may not reduce inequality. Some institutions use ( 3 ) lotteries as a compromise.',
+      blanks: [
+        { choices: ['fairer', 'harder', 'shorter', 'cheaper'], answer: 0, why: '第2段落 they would make access to education fairer。' },
+        { choices: ['effort', 'money', 'luck', 'travel'], answer: 0, why: '第4段落 lotteries ignore the value of effort and achievement。' },
+        { choices: ['partial', 'secret', 'national', 'daily'], answer: 0, why: '第6段落 experimented with partial lotteries as a compromise。' },
+      ],
+    },
+    tf: [
+      { statement: '試験による選抜は、裕福な家庭の子どもに有利だと批判されてきた。', answer: true, why: '第1段落 criticized for favoring children from wealthy families。' },
+      { statement: '反対する人々は、くじ引きで生徒の意欲が高まると考えている。', answer: false, why: '第4段落 lotteries would weaken the motivation of students to excel。' },
+      { statement: '初期の研究によれば、部分的なくじ引きで学力の水準が大きく下がった。', answer: false, why: '第6段落 without lowering academic standards。' },
+      { statement: '実力そのものが運に形づくられていると考える人々もいる。', answer: true, why: '第7段落 merit itself is shaped by luck。' },
+    ],
+    qa: [
+      { q: 'What might wealthy families do if lotteries were introduced, according to opponents?', choices: ['Move to areas with better schools.', 'Stop caring about education.', 'Give money to the lottery.', 'Refuse to apply.'], answer: 0, why: '第5段落 moving to areas with better schools。' },
+      { q: 'When do some institutions use lotteries?', choices: ['Only for applicants whose scores fall within a narrow range.', 'For all applicants.', 'Only for students from abroad.', 'Only after graduation.'], answer: 0, why: '第6段落 only to choose among applicants whose scores fall within a narrow range。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
