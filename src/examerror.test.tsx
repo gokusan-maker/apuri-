@@ -3018,3 +3018,10 @@ it('誤文訂正〈212〉：京大レベル 数字＋名詞の形容詞の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('ten-year-old')
 })
+
+it('正誤問題〈219〉：国公立レベル 副詞節の時制の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-adverb-clause-tense-kokkou')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) I will arrive')
+})

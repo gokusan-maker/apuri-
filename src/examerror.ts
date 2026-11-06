@@ -5210,6 +5210,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The dead (B) and the wounded (C) was carried (D) away.', choices: ['(A) The dead', '(B) and the wounded', '(C) was carried', '(D) away'], answer: 2, why: '主語は複数なので were carried。' },
     ],
   },
+  {
+    id: 'exam-error-adverb-clause-tense-kokkou',
+    title: '入試の正誤問題〈219〉（国公立レベル：時や条件の副詞節では未来のことも現在形 when・if・until）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'when・until・before・after・as soon as・by the time・next time（時）や if・unless（条件）が導く副詞節では、未来のことでも will を使わず現在形にする（I will call you when I arrive.）。ただし if や when が「～かどうか」「いつ～か」という名詞節（know・ask などの目的語）のときは、未来のことに will を使う（I don’t know if he will come.）。',
+    ],
+    examples: [
+      { en: 'I will call you when I arrive at the station.', ja: '駅に着いたら電話するね。' },
+      { en: 'I don’t know if he will come tomorrow.', ja: '彼が明日来るかどうかわからない。' },
+    ],
+    questions: [
+      { sentence: '(A) I will call you (B) when (C) I will arrive (D) at the station.', choices: ['(A) I will call you', '(B) when', '(C) I will arrive', '(D) at the station'], answer: 2, why: '時を表す副詞節では未来のことも現在形。when I arrive。' },
+      { sentence: '(A) If it (B) will rain (C) tomorrow, (D) we will stay home.', choices: ['(A) If it', '(B) will rain', '(C) tomorrow,', '(D) we will stay home'], answer: 1, why: '条件を表す副詞節では現在形。If it rains。' },
+      { sentence: '(A) Please wait here (B) until (C) I will come (D) back.', choices: ['(A) Please wait here', '(B) until', '(C) I will come', '(D) back'], answer: 2, why: 'until の節は現在形。until I come back。' },
+      { sentence: '(A) As soon as (B) she will finish (C) her work, (D) she will go home.', choices: ['(A) As soon as', '(B) she will finish', '(C) her work,', '(D) she will go home'], answer: 1, why: 'as soon as の節は現在形。she finishes。' },
+      { sentence: '(A) I don’t know (B) if he (C) comes (D) tomorrow.', choices: ['(A) I don’t know', '(B) if he', '(C) comes', '(D) tomorrow'], answer: 2, why: 'この if は「～かどうか」の名詞節なので、未来のことは will come。' },
+      { sentence: '(A) Before (B) you will leave, (C) turn off (D) the lights.', choices: ['(A) Before', '(B) you will leave,', '(C) turn off', '(D) the lights'], answer: 1, why: 'before の節は現在形。Before you leave。' },
+      { sentence: '(A) We will (B) start the game (C) after everyone (D) will get here.', choices: ['(A) We will', '(B) start the game', '(C) after everyone', '(D) will get here'], answer: 3, why: 'after の節は現在形。after everyone gets here。' },
+      { sentence: '(A) Unless (B) you will hurry, (C) you will (D) miss the bus.', choices: ['(A) Unless', '(B) you will hurry,', '(C) you will', '(D) miss the bus'], answer: 1, why: 'unless の節は現在形。Unless you hurry。' },
+      { sentence: '(A) By the time (B) we will get there, (C) the shop (D) will be closed.', choices: ['(A) By the time', '(B) we will get there,', '(C) the shop', '(D) will be closed'], answer: 1, why: 'by the time の節は現在形。By the time we get there。' },
+      { sentence: '(A) Next time I will see him, (B) I (C) will give him (D) your message.', choices: ['(A) Next time I will see him,', '(B) I', '(C) will give him', '(D) your message'], answer: 0, why: 'next time ～ の節は現在形。Next time I see him。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
