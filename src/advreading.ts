@@ -38062,6 +38062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-thrift',
+    title: 'On Thrift',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Thrift was once regarded as one of the central virtues of ordinary life. To spend carefully, to waste nothing, and to save for the future were habits that parents taught their children and that communities admired in their members. In many modern societies, however, thrift has come to seem old-fashioned, even slightly embarrassing. Economic growth depends on consumption, advertising encourages us to buy, and the person who mends old clothes or refuses to replace a working phone may be regarded as eccentric rather than wise. It is worth asking what has been gained and lost in this change.",
+      "Part of the traditional value of thrift lay in necessity. For most of history, resources were scarce, and a household that wasted food or money could quickly fall into hardship. Thrift was a way of protecting oneself and one's family against an uncertain future, and it reflected a realistic understanding of how fragile prosperity could be. Even today, people who have experienced poverty often retain habits of careful spending long after their circumstances have improved, as if remembering a lesson that could not safely be forgotten.",
+      "Yet thrift was never only a matter of economics. It also expressed an attitude toward the things we own. ( A ) a wasteful person treats objects as easily replaceable, a thrifty person tends to value them, to care for them, and to use them fully before letting them go. This attitude can bring a kind of satisfaction that has nothing to do with saving money: the pleasure of a well-repaired chair, a meal made from leftovers, or a coat that has lasted for many years and carries memories of the places it has been.",
+      "Thrift also has a moral dimension that extends beyond the individual. Resources used carelessly by one person are unavailable to others, and in a world facing environmental pressures, the habits of reusing, repairing, and consuming less take on new significance. What was once a private virtue practiced for the sake of one's household may now be seen as a contribution to the common good, a way of reducing the burden that human consumption places on the planet and on future generations. In this light, the thrifty household and the sustainable society may have more in common than we usually assume.",
+      "It would be a mistake, however, to celebrate thrift without qualification. Taken to an extreme, careful spending can turn into stinginess, an unwillingness to share or to enjoy anything that costs money. A person so anxious about the future that they deny themselves and others every pleasure has not achieved a virtue but fallen into a different kind of error. Thrift, like other virtues, depends on judgment: it is admirable when it serves good ends and regrettable when it becomes an end in itself.",
+      "The challenge, then, is to recover what was valuable in thrift without reviving its harsher forms. This might mean spending less on things that bring little lasting satisfaction in order to spend more generously on what truly matters, such as time with friends, help for those in need, or experiences that enrich our lives. Seen in this way, thrift is not simply a matter of having less but of choosing more carefully, directing our limited resources toward what we genuinely value.",
+      "In a culture that constantly urges us to want more, the quiet practice of thrift can be a form of freedom. It loosens the hold of advertising and fashion, reminds us that much of what we are told we need is optional, and allows us to decide for ourselves what a good life requires. Thrift, understood in this broader sense, is less about denying ourselves than about knowing ourselves well enough to recognize what is enough, and to be content with it.",
+    ],
+    ja: [
+      '倹約は、かつてはふつうの暮らしの中心的な美徳の一つと見なされていた。注意してお金を使い、何もむだにせず、将来にそなえてためることは、親が子どもに教え、地域が人々の中でたたえる習慣だった。しかし多くの現代社会では、倹約は古くさく、少しはずかしいものにさえ思われるようになった。経済の成長は消費にかかっており、広告は私たちに買うようすすめ、古い服をつくろったり、使える電話を買いかえるのをことわったりする人は、賢いというより変わり者と見なされるかもしれない。この変化で何が得られ、何が失われたのかを問う値打ちがある。',
+      '倹約の伝統的な価値の一部は必要にあった。歴史のほとんどのあいだ、資源は少なく、食べ物やお金をむだにする家庭はすぐに苦しい暮らしにおちいりえた。倹約は、不確かな未来から自分と家族を守る方法であり、豊かさがどれほどもろいものかについての現実的な理解を反映していた。今日でも、まずしさを経験した人々は、暮らしがよくなったずっとあとまで注意深くお金を使う習慣をもち続けることが多い。まるで、安心してわすれることのできない教訓をおぼえているかのように。',
+      'しかし倹約は決して経済だけの問題ではなかった。それはまた、自分のもつ物への態度を表していた。むだづかいをする人は物をかんたんに取りかえのきくものとしてあつかうが、倹約する人は物を大切にし、世話をし、手ばなす前に十分に使いきる傾向がある。この態度は、お金をためることとは関係のない一種の満足をもたらしうる。よく修理されたいすや、残り物で作った食事や、何年も長持ちし、行った場所の思い出をのせたコートの喜びである。',
+      '倹約にはまた、個人をこえる道徳的な面がある。一人が不注意に使った資源はほかの人が使えなくなり、環境の圧力に直面する世界では、再利用し、修理し、消費をへらす習慣が新しい意味をもつ。かつては家庭のために行われる個人的な美徳だったものが、今では共通の利益への貢献、つまり人間の消費が地球と未来の世代にかける負担をへらす方法と見なされるかもしれない。このように見ると、倹約する家庭と持続可能な社会は、ふだん思っている以上に多くの共通点をもっているのかもしれない。',
+      'しかし、倹約を無条件にたたえるのはまちがいだろう。行きすぎると、注意深い出費はけちに変わり、分け合うことや、お金のかかるものを楽しむことを、何もしたがらなくなることがある。未来をあまりに心配して、自分にもほかの人にもあらゆる楽しみをさせない人は、美徳をなしとげたのではなく、別の種類のあやまりにおちいったのである。倹約は、ほかの美徳と同じように判断にかかっている。よい目的に役立つときにはたたえられるべきものだが、それ自体が目的になるとなげかわしいものになる。',
+      'そうすると課題は、倹約のよりきびしい形をよみがえらせずに、倹約の中で価値のあったものを取りもどすことである。それは、友だちとの時間や困っている人への助けや人生を豊かにする経験のような、本当に大切なものにより気前よくお金を使うために、長続きする満足をほとんどもたらさない物への出費をへらすことを意味するかもしれない。このように見ると、倹約とはただ少なくもつことではなく、より注意深く選ぶこと、つまり限られた資源を本当に大切にするものへ向けることなのである。',
+      'もっとほしがるようたえずうながす文化の中で、倹約という静かな実践は一種の自由になりうる。それは広告や流行のしばりをゆるめ、必要だと言われるものの多くはなくてもよいものだと思い出させ、よい人生に何が必要かを自分で決めさせてくれる。このより広い意味で理解された倹約は、自分にがまんさせることというより、何が十分かを見分け、それに満足できるほど自分をよく知ることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「むだづかいする人は物を取りかえのきくものとし、倹約する人は大切にする」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '多くの現代社会では、倹約は古くさく思われるようになった。', answer: true, why: '第1段落 thrift has come to seem old-fashioned。' },
+      { statement: '筆者によれば、倹約は経済だけの問題だった。', answer: false, why: '第3段落 thrift was never only a matter of economics。' },
+      { statement: '行きすぎた倹約は、けちに変わりうる。', answer: true, why: '第5段落 careful spending can turn into stinginess。' },
+      { statement: '筆者は、倹約とはただ少なくもつことだと考えている。', answer: false, why: '第6段落 thrift is not simply a matter of having less but of choosing more carefully。' },
+    ],
+    qa: [
+      { q: 'Why might people who experienced poverty keep careful habits?', choices: ['As if remembering a lesson that could not safely be forgotten.', 'Because they are forced by law.', 'Because they dislike shopping.', 'Because advertising tells them to.'], answer: 0, why: '第2段落 as if remembering a lesson that could not safely be forgotten。' },
+      { q: 'What can thrift be in a culture that urges us to want more?', choices: ['A form of freedom.', 'A kind of punishment.', 'A sign of weakness.', 'A waste of time.'], answer: 0, why: '第7段落 the quiet practice of thrift can be a form of freedom。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
