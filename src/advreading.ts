@@ -36898,6 +36898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-student-debt',
+    title: 'Should Student Debt Be Cancelled?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a number of countries, the cost of higher education has risen sharply, and many graduates now begin their working lives with large debts from student loans. Repaying these loans can take decades, influencing decisions about where to live, whether to buy a home, and even when to start a family. In response, some politicians have proposed that governments should cancel all or part of this debt, while others argue that such a policy would be unfair to those who did not attend university or who have already repaid their loans.",
+      "Supporters of debt cancellation argue that heavy student debt places an unreasonable burden on young people. Many students took out loans when they were only eighteen years old, often without fully understanding the long-term consequences, and some find that their degrees do not lead to jobs that pay enough to repay them. Cancelling debt, supporters claim, would free graduates to spend money, start businesses, and take risks that benefit the wider economy, rather than devoting a large share of their income to repayments for many years. Some graduates, burdened by debt, even avoid careers in teaching or social work that they would otherwise have chosen, because such jobs pay too little.",
+      "Supporters also emphasize questions of fairness between generations. In the past, they point out, higher education in many countries was much cheaper or even free, so that older generations were able to obtain degrees without accumulating large debts. ( A ) cancellation would not solve the underlying problem of high tuition fees, supporters argue, it would offer relief to a generation that has faced rising costs, stagnant wages, and expensive housing, and it could reduce inequalities that student debt tends to deepen.",
+      "Critics, however, argue that cancelling student debt would be unfair to many taxpayers. People who chose not to attend university, often because they wished to avoid debt, would help to pay for the education of others, many of whom will go on to earn higher incomes. Those who made sacrifices to repay their loans quickly might also feel that their efforts had been wasted. In the view of critics, a policy that transfers money from less educated workers to university graduates could worsen rather than reduce inequality.",
+      "Critics also warn that cancellation would do nothing to address the causes of rising costs. If universities know that debts may eventually be forgiven, they may feel less pressure to control their fees, and future students could face even larger loans. Instead of cancelling existing debt, critics suggest, governments should focus on making higher education more affordable, improving information about the value of different courses, and expanding alternatives such as vocational training and apprenticeships. These measures, they argue, would help future students rather than only those who happen to hold debt today.",
+      "Between these positions, many experts propose more targeted forms of relief. These include linking repayments to income, so that graduates with low earnings pay less or nothing, and cancelling remaining debt after a fixed number of years. Some suggest forgiving debt for those who work in public services such as teaching or nursing, or for students whose institutions misled them about the value of their courses. Such approaches aim to help those most in need without placing an excessive burden on taxpayers.",
+      "The debate over student debt reflects a broader question about who should pay for higher education. If a university degree benefits mainly the individual who receives it, it may seem reasonable for that person to bear much of the cost. If, however, education also benefits society as a whole, by creating a more skilled workforce and a better-informed public, there may be a strong case for greater public support. How societies answer this question will shape the opportunities available to future generations.",
+    ],
+    ja: [
+      'いくつもの国で高等教育の費用が急に上がり、多くの卒業生は今や学生ローンによる大きな借金をかかえて働きはじめる。こうしたローンを返すには何十年もかかることがあり、どこに住むか、家を買うかどうか、さらにはいつ家族をもつかの決断にまで影響する。これにこたえて、政府はこの借金のすべてか一部を帳消しにすべきだと提案する政治家もいれば、そうした政策は大学に行かなかった人やすでにローンを返した人にとって不公平だと主張する人もいる。',
+      '借金の帳消しを支持する人々は、重い学生の借金は若者に不当な負担をおわせていると主張する。多くの学生はわずか18歳でローンを借り、しばしば長い目で見た結果を十分に理解しておらず、自分の学位がそれを返すのに足りる給料の仕事につながらないと気づく人もいる。借金を帳消しにすれば、卒業生は何年も収入の大きな部分を返済にあてるのではなく、お金を使い、事業を始め、より広い経済に益をもたらす危険をおかせるようになると支持する人々は主張する。借金をかかえた卒業生のなかには、給料が低すぎるために、そうでなければ選んでいたはずの教育や福祉の仕事をさける人さえいる。',
+      '支持する人々はまた、世代間の公平さの問題を強調する。かつて多くの国で高等教育はずっと安いか、無料でさえあり、上の世代は大きな借金をかかえずに学位を得られたと彼らは指摘する。帳消しは高い授業料という根本的な問題を解決しないが、上がる費用とのびない給料と高い住宅に直面してきた世代に救いをあたえ、学生の借金が深めがちな不平等をへらせるかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、学生の借金を帳消しにすることは多くの納税者にとって不公平だと主張する。しばしば借金をさけたくて大学に行かないことを選んだ人々が、ほかの人々の教育の費用をはらう手助けをすることになり、その多くはのちにより高い収入を得るだろう。ローンを早く返すために犠牲をはらった人々もまた、自分の努力がむだになったと感じるかもしれない。批判する人々の見方では、教育の少ない働き手から大学の卒業生へとお金を移す政策は、不平等をへらすのではなく悪化させかねない。',
+      '批判する人々はまた、帳消しは費用の上昇の原因に何も取り組まないと警告する。借金がいずれ帳消しにされるかもしれないと大学がわかれば、授業料をおさえる重圧を感じにくくなり、将来の学生はさらに大きなローンに直面するかもしれない。今ある借金を帳消しにするのではなく、政府は高等教育をより手ごろにし、さまざまな課程の価値についての情報をよくし、職業訓練や見習い制度のような別の道を広げることに力を入れるべきだと批判する人々は示す。こうした方法は、今たまたま借金をかかえている人だけでなく、将来の学生も助けるだろうと彼らは主張する。',
+      'これらの立場のあいだで、多くの専門家は、より対象をしぼった救いの形を提案している。それには、返済を収入に結びつけ、収入の少ない卒業生はより少なく、あるいはまったくはらわなくてすむようにすることや、決まった年数がたったら残りの借金を帳消しにすることがふくまれる。教育や看護のような公共の仕事で働く人や、学校が課程の価値について誤解させた学生の借金を帳消しにすることを示す人もいる。こうしたやり方は、納税者に行きすぎた負担をかけずに、もっとも困っている人々を助けることを目指している。',
+      '学生の借金をめぐる議論は、だれが高等教育の費用をはらうべきかという、より広い問いを反映している。大学の学位が主にそれを受ける個人に益をもたらすのなら、その人が費用の多くを負うのは妥当に思えるかもしれない。しかし教育が、より技能の高い働き手と、よりよく情報を得た市民を生み出すことで社会全体にも益をもたらすのなら、より大きな公のささえを求める強い理由があるかもしれない。社会がこの問いにどう答えるかが、未来の世代があたえられる機会を形づくるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「帳消しは根本の問題を解決しないが、救いをあたえる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that student debt places an unreasonable burden on young people and that cancellation would improve fairness between ( 1 ). Critics argue that it would be unfair to ( 2 ) and would not address rising costs. Many experts propose linking repayments to ( 3 ).',
+      blanks: [
+        { choices: ['generations', 'countries', 'companies', 'schools'], answer: 0, why: '第3段落 questions of fairness between generations。' },
+        { choices: ['taxpayers', 'teachers', 'students', 'banks'], answer: 0, why: '第4段落 would be unfair to many taxpayers。' },
+        { choices: ['income', 'age', 'grades', 'health'], answer: 0, why: '第6段落 linking repayments to income。' },
+      ],
+    },
+    tf: [
+      { statement: '学生ローンの返済には何十年もかかることがある。', answer: true, why: '第1段落 Repaying these loans can take decades。' },
+      { statement: '支持する人々によれば、帳消しは高い授業料の問題を解決する。', answer: false, why: '第3段落 cancellation would not solve the underlying problem of high tuition fees。' },
+      { statement: '借金が帳消しにされると、大学が授業料をおさえなくなるおそれがある。', answer: true, why: '第5段落 they may feel less pressure to control their fees。' },
+      { statement: '筆者によれば、教育はいつも個人だけに益をもたらす。', answer: false, why: '第7段落 education also benefits society as a whole。' },
+    ],
+    qa: [
+      { q: 'Why might cancellation worsen inequality, according to critics?', choices: ['It transfers money from less educated workers to graduates.', 'It lowers university fees.', 'It helps only the poor.', 'It ends all loans forever.'], answer: 0, why: '第4段落 a policy that transfers money from less educated workers to university graduates could worsen ... inequality。' },
+      { q: 'Whose debt do some suggest forgiving?', choices: ['Those who work in public services such as teaching.', 'Only the richest graduates.', 'Everyone who never studied.', 'University owners.'], answer: 0, why: '第6段落 forgiving debt for those who work in public services such as teaching or nursing。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
