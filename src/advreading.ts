@@ -37938,6 +37938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-historic-skylines',
+    title: 'Should Tall Buildings Be Allowed in Historic Cities?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many of the world's most admired cities are known for their historic centers, where narrow streets, old churches or temples, and low buildings create a distinctive atmosphere that has developed over centuries. As urban populations grow and land prices rise, however, developers increasingly seek permission to build tall modern towers in or near these districts. Such proposals often provoke fierce debate, since they raise difficult questions about whether cities should prioritize the preservation of their heritage or the economic and social benefits that new development can bring.",
+      "Those who oppose tall buildings in historic areas argue that such structures can permanently damage the character of a city. A single tower, visible from many streets, may dominate the skyline and change the way residents and visitors experience the older buildings around it. Opponents also point out that historic districts attract large numbers of tourists precisely because of their distinctive appearance, and that allowing modern towers could reduce their appeal and harm the local economy in the long run. In their view, the heritage of a city belongs to future generations as well as to present ones.",
+      "Opponents further argue that tall buildings often serve the interests of investors more than those of residents. Luxury apartments and offices in prestigious locations may be purchased by wealthy buyers who rarely live in them, while doing little to address the shortage of affordable housing. ( A ) developers may promise that new towers will revitalize old neighborhoods, opponents claim, the result is sometimes rising rents that force long-time residents and small businesses to move elsewhere, changing the social character of the area as well as its appearance.",
+      "Supporters of development, however, argue that cities cannot be preserved as museums. Throughout history, cities have changed constantly, and many buildings now regarded as treasured heritage were once controversial additions to the urban landscape. Supporters also point out that growing cities need more space for housing and offices, and that building upward allows more people to live and work close to public transport and services. Restricting height, they argue, may push development outward, increasing traffic and the loss of countryside.",
+      "Supporters also emphasize the economic benefits of new development. Modern office towers can attract businesses and create jobs, while the taxes they generate can help fund public services, including the maintenance of historic buildings themselves. Some argue that carefully designed modern architecture can complement older structures rather than overwhelm them, creating a dialogue between past and present that adds to a city's interest. In this view, the question is not whether to build but how to build well. Several cities have also used the profits from new towers to restore older buildings that would otherwise have fallen into disrepair.",
+      "Many cities have tried to find a balance between these concerns. Some protect specific views of important landmarks, forbidding any building that would block them, while allowing taller structures in other parts of the city. Others concentrate high-rise development in designated business districts at a distance from historic centers. Planning authorities increasingly use computer models to show how a proposed building would appear from different points, allowing the public to judge its impact before construction begins. Such tools do not settle the debate, but they make it easier for ordinary citizens to take part in it.",
+      "The debate over tall buildings in historic cities reflects a broader question about how societies relate to their past. Preservation without change risks turning living cities into static displays, while change without care risks destroying what makes those cities valuable in the first place. Finding a balance requires not only technical planning but also public discussion about what residents value in their surroundings, and about how the needs of the present can be met without sacrificing the inheritance that future generations will receive.",
+    ],
+    ja: [
+      '世界でもっとも賞賛される都市の多くは、その歴史的な中心部で知られている。そこでは細い通りや古い教会や寺や低い建物が、何世紀にもわたって育ってきた独特のふんいきを作っている。しかし都市の人口がふえ、土地の値段が上がるにつれて、開発業者はますますこうした地区の中や近くに、背の高い現代的なタワーを建てる許可を求めるようになっている。そうした提案は、都市が遺産を守ることと、新しい開発がもたらしうる経済的・社会的な利益のどちらを優先すべきかというむずかしい問いを投げかけるので、しばしばはげしい議論を引き起こす。',
+      '歴史的な地区の高い建物に反対する人々は、そうした建物は都市の性格をいつまでもそこないうると主張する。多くの通りから見える一本のタワーは、町なみを支配し、住民や訪問者がまわりの古い建物を経験するしかたを変えてしまうかもしれない。反対する人々はまた、歴史的な地区が多くの観光客を引きよせるのはまさにその独特の見た目のためであり、現代的なタワーを認めればその魅力がへり、長い目で見て地元の経済をそこなうかもしれないと指摘する。彼らの見方では、都市の遺産は今の世代だけでなく、未来の世代のものでもある。',
+      '反対する人々はさらに、高い建物はしばしば住民よりも投資家の利益に役立つと主張する。一等地の高級マンションや事務所は、めったにそこに住まない裕福な買い手に買われることがあり、手ごろな住宅の不足にはほとんど役立たない。開発業者は新しいタワーが古い地域を生き返らせると約束するかもしれないが、その結果はときに家賃の上昇であり、長く住んできた住民や小さな店がよそへ移らざるをえなくなり、地域の見た目だけでなく社会的な性格も変わってしまうと反対する人々は主張する。',
+      'しかし開発を支持する人々は、都市を博物館のように保存することはできないと主張する。歴史を通じて都市はたえず変わってきたのであり、今は大切な遺産と見なされている建物の多くも、かつては町の景観への論争の的となる追加だった。支持する人々はまた、成長する都市には住宅や事務所のための場所がもっと必要であり、上へ建てることで、より多くの人々が公共交通やサービスの近くに住み、働けるようになると指摘する。高さを制限すると開発が外へおし出され、交通がふえ、田園が失われるかもしれないと彼らは主張する。',
+      '支持する人々はまた、新しい開発の経済的な利益を強調する。現代的なオフィスタワーは企業を引きよせ、仕事を生み出すことができ、それが生む税金は、歴史的な建物そのものの維持をふくむ公共サービスをまかなう助けになる。注意深く設計された現代建築は、古い建物を圧倒するのではなく引き立て、都市の面白さを増す過去と現在の対話を生み出しうると主張する人もいる。この見方では、問題は建てるかどうかではなく、どううまく建てるかである。新しいタワーからの利益を使って、そうでなければ荒れはててしまったであろう古い建物を修復した都市もいくつかある。',
+      '多くの都市は、こうした心配のあいだでつりあいを見つけようとしてきた。大切な名所への特定のながめを守り、それをさえぎる建物を禁じる一方で、都市のほかの部分ではより高い建物を認めるところもある。高層の開発を、歴史的な中心部からはなれた指定のビジネス地区に集めるところもある。都市計画の当局はますますコンピューターのモデルを使い、計画中の建物がいろいろな地点からどう見えるかを示し、工事が始まる前に人々がその影響を判断できるようにしている。そうした道具は議論に決着をつけるわけではないが、ふつうの市民がそれに加わるのを容易にする。',
+      '歴史的な都市の高い建物をめぐる議論は、社会が自分たちの過去とどうかかわるかという、より広い問いを反映している。変化のない保存は、生きた都市を動かない展示に変えてしまう危険があり、配慮のない変化は、そもそもそうした都市を価値あるものにしているものをこわしてしまう危険がある。つりあいを見つけるには、技術的な計画だけでなく、住民がまわりの環境の何を大切にしているか、そして未来の世代が受けつぐものをぎせいにせずに今の必要をどう満たせるかについての、公の話し合いが必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「開発業者は生き返らせると約束するかもしれないが、結果は家賃の上昇だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Opponents argue that tall buildings can damage the ( 1 ) of historic cities and push out long-time residents. Supporters argue that cities cannot be preserved as ( 2 ) and that building upward brings economic benefits. Many cities protect specific ( 3 ) of landmarks while allowing taller buildings elsewhere.',
+      blanks: [
+        { choices: ['character', 'weather', 'population', 'language'], answer: 0, why: '第2段落 can permanently damage the character of a city。' },
+        { choices: ['museums', 'farms', 'factories', 'schools'], answer: 0, why: '第4段落 cities cannot be preserved as museums。' },
+        { choices: ['views', 'prices', 'names', 'rules'], answer: 0, why: '第6段落 Some protect specific views of important landmarks。' },
+      ],
+    },
+    tf: [
+      { statement: '歴史的な地区は、その独特の見た目のために多くの観光客を引きよせる。', answer: true, why: '第2段落 attract large numbers of tourists precisely because of their distinctive appearance。' },
+      { statement: '今は大切な遺産とされる建物は、どれもはじめから歓迎された。', answer: false, why: '第4段落 were once controversial additions to the urban landscape。' },
+      { statement: '高い建物が生む税金は、歴史的な建物の維持に役立ちうる。', answer: true, why: '第5段落 including the maintenance of historic buildings themselves。' },
+      { statement: '筆者は、変化のない保存がもっともよいと結論づけている。', answer: false, why: '第7段落 Preservation without change risks turning living cities into static displays。' },
+    ],
+    qa: [
+      { q: 'What might restricting building height cause, according to supporters?', choices: ['Development pushed outward, more traffic, and loss of countryside.', 'Lower rents everywhere.', 'More tourists in the center.', 'Fewer jobs in the countryside.'], answer: 0, why: '第4段落 may push development outward, increasing traffic and the loss of countryside。' },
+      { q: 'Why do planning authorities use computer models?', choices: ['To show how a proposed building would appear from different points.', 'To calculate rents.', 'To count tourists.', 'To design old buildings.'], answer: 0, why: '第6段落 to show how a proposed building would appear from different points。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
