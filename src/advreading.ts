@@ -38498,6 +38498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sports-betting',
+    title: 'Should Sports Betting Be Legal?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Betting on sports has existed for as long as people have competed in games, but in recent years it has been transformed by technology. Smartphone applications now allow people to place bets at any moment, on almost any event, from the final score of a football match to the result of a single point in a tennis game. Several countries have legalized and regulated online sports betting, while others continue to restrict it. The rapid growth of the industry has raised difficult questions about personal freedom, public health, and the integrity of sport itself. The answers that societies have given differ widely from one country to another.",
+      "Supporters of legal sports betting argue that adults should be free to spend their money as they choose. Many people enjoy placing small bets as a way of adding excitement to watching sports, and for most of them it causes no harm. Supporters also point out that banning betting does not stop it from happening; it simply pushes it into illegal markets, where there is no protection for consumers and no tax revenue for governments. A regulated legal market, they argue, allows authorities to set rules, monitor companies, and support those who develop problems.",
+      "Supporters further note that legal betting can generate significant income for public services and for sport. Taxes on betting companies can fund schools, hospitals, or programs to treat gambling addiction, and sponsorship agreements provide money for clubs and competitions. ( A ) these benefits must be weighed against possible harms, supporters claim, a well-designed system can capture them while limiting the risks, as several countries have attempted to show. In some countries, part of this income is also used to support grassroots sport, such as clubs for children and local amateur leagues.",
+      "Critics, however, argue that the spread of online betting has created serious public health problems. Unlike a visit to a betting shop, a smartphone application is always available, making it easy for people to bet impulsively and to lose large sums quickly. Studies have found that a small proportion of users account for a large share of the money lost, suggesting that companies depend heavily on people with gambling problems. Critics also point to the damage that such problems can cause to families, employment, and mental health.",
+      "Critics are particularly concerned about the effects on young people. Advertisements for betting companies appear frequently during sports broadcasts and on social media, and many feature attractive offers designed to encourage new customers. Young fans who grow up surrounded by such messages, critics argue, may come to see betting as a normal part of enjoying sport. Some countries have responded by restricting betting advertisements during live matches or banning them from team shirts.",
+      "Another concern involves the integrity of sport. When large amounts of money can be won by predicting particular events within a game, there is a risk that players or officials may be pressured or bribed to influence those events. Several sports have experienced scandals involving fixed matches linked to illegal betting. Critics argue that the more betting opportunities exist, the harder it becomes to protect competitions from corruption, while supporters respond that legal markets make suspicious betting patterns easier to detect.",
+      "The debate over sports betting thus involves a balance between individual freedom and collective protection. Few would argue that adults should be completely forbidden from betting, but many believe that the industry should be required to take responsibility for the harms it can cause. Possible measures include limits on advertising, tools that allow users to restrict their own spending, and taxes that fund treatment services. Whatever approach is taken, the challenge is to allow people to enjoy sport and the excitement of a wager without allowing a minority to be drawn into serious harm.",
+    ],
+    ja: [
+      'スポーツへのかけごとは、人々が競技で競ってきたのと同じくらい昔からあるが、近年それは技術によって変わった。今ではスマートフォンのアプリで、サッカーの試合の最終得点からテニスの試合の一つのポイントの結果まで、ほとんどどんな出来事にもいつでもかけられる。オンラインのスポーツのかけごとを合法化して規制した国もあれば、今も制限している国もある。この産業の急速な成長は、個人の自由と公衆衛生とスポーツそのものの公正さについて、むずかしい問いを投げかけている。社会が出してきた答えは、国によって大きくちがう。',
+      '合法的なスポーツのかけごとを支持する人々は、大人は自分のお金を好きなように使う自由があるべきだと主張する。多くの人はスポーツ観戦をよりわくわくさせる方法として少額をかけることを楽しんでおり、そのほとんどの人にとって害はない。支持する人々はまた、かけごとを禁じてもそれがなくなるわけではなく、ただ違法な市場においやるだけであり、そこでは消費者の守りも政府の税収もないと指摘する。規制された合法的な市場によって、当局は規則を決め、企業を監視し、問題をかかえた人々を支えることができると彼らは主張する。',
+      '支持する人々はさらに、合法的なかけごとは公共サービスやスポーツのために大きな収入を生みうると指摘する。かけごとの企業への税金は学校や病院や、ギャンブル依存の治療の取り組みをまかなうことができ、スポンサー契約はクラブや大会にお金をあたえる。こうした利益は起こりうる害とはかりにかけなければならないが、いくつかの国が示そうとしてきたように、よく作られた仕組みなら危険を限りながら利益を得られると支持する人々は主張する。国によっては、この収入の一部が、子どものクラブや地元のアマチュアのリーグのような、草の根のスポーツを支えるためにも使われている。',
+      'しかし批判する人々は、オンラインのかけごとの広がりが深刻な公衆衛生の問題を生んだと主張する。かけごとの店に行くこととちがって、スマートフォンのアプリはいつでも使えるので、人々は衝動的にかけ、大金をすぐに失いやすい。研究によると、少数の利用者が失われるお金の大きな割合をしめており、企業がギャンブルの問題をかかえる人々に大きくたよっていることを示している。批判する人々はまた、そうした問題が家族や仕事や心の健康にあたえうる害をあげる。',
+      '批判する人々はとくに若者への影響を心配する。かけごとの企業の広告はスポーツ中継やソーシャルメディアにひんぱんに現れ、その多くは新しい客を引きつけるための魅力的な特典を見せている。そうしたメッセージにかこまれて育つ若いファンは、かけごとをスポーツを楽しむことのふつうの一部と見るようになるかもしれないと批判する人々は主張する。ある国々は、試合の生中継のあいだのかけごとの広告を制限したり、チームのユニフォームから禁じたりしてこたえた。',
+      'もう一つの心配はスポーツの公正さにかかわる。試合の中の特定の出来事を予想して大金がもうけられるとき、選手や審判がその出来事を左右するよう圧力をかけられたり、わいろをわたされたりする危険がある。いくつかのスポーツでは、違法なかけごとと結びついた八百長の不祥事が起こってきた。かけごとの機会が多いほど大会を不正から守るのはむずかしくなると批判する人々は主張し、支持する人々は、合法的な市場の方があやしいかけ方を見つけやすいとこたえる。',
+      'このようにスポーツのかけごとをめぐる議論は、個人の自由と集団の守りのつりあいにかかわっている。大人がかけごとをすることを完全に禁じるべきだと主張する人はほとんどいないが、多くの人は、産業がそれのもたらしうる害に責任をもつよう求められるべきだと考えている。考えられる対策には、広告の制限や、利用者が自分の出費を限れる道具や、治療のサービスをまかなう税金がふくまれる。どんなやり方をとるにせよ、課題は、少数の人を深刻な害に引きこむことなく、人々がスポーツとかけるわくわく感を楽しめるようにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「利益は害とはかりにかけなければならないが、よく作られた仕組みなら利益を得られる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that adults should be free to bet and that a regulated market is better than an ( 1 ) one. Critics argue that online betting creates public health problems and influences young ( 2 ). Another concern is the ( 3 ) of sport, since betting may encourage fixed matches.',
+      blanks: [
+        { choices: ['illegal', 'empty', 'honest', 'ancient'], answer: 0, why: '第2段落 it simply pushes it into illegal markets。' },
+        { choices: ['people', 'players', 'leaders', 'teachers'], answer: 0, why: '第5段落 Critics are particularly concerned about the effects on young people。' },
+        { choices: ['integrity', 'speed', 'popularity', 'history'], answer: 0, why: '第6段落 Another concern involves the integrity of sport。' },
+      ],
+    },
+    tf: [
+      { statement: '少額をかけることを楽しむ多くの人にとって、かけごとは害にならない。', answer: true, why: '第2段落 for most of them it causes no harm。' },
+      { statement: '研究によれば、失われるお金はすべての利用者に平等に分かれている。', answer: false, why: '第4段落 a small proportion of users account for a large share of the money lost。' },
+      { statement: 'チームのユニフォームからかけごとの広告を禁じた国もある。', answer: true, why: '第5段落 banning them from team shirts。' },
+      { statement: '筆者によれば、多くの人は大人のかけごとを完全に禁じるべきだと主張している。', answer: false, why: '第7段落 Few would argue that adults should be completely forbidden from betting。' },
+    ],
+    qa: [
+      { q: 'Why is a smartphone application more risky than a betting shop, according to critics?', choices: ['It is always available, making impulsive betting easy.', 'It is more expensive.', 'It only works at night.', 'It requires a long walk.'], answer: 0, why: '第4段落 a smartphone application is always available。' },
+      { q: 'What do supporters say legal markets make easier?', choices: ['Detecting suspicious betting patterns.', 'Fixing matches.', 'Avoiding taxes.', 'Hiding losses.'], answer: 0, why: '第6段落 legal markets make suspicious betting patterns easier to detect。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
