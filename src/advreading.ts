@@ -39058,6 +39058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-laptop-ban',
+    title: 'Should Laptops Be Banned from Lectures?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In university lecture halls around the world, many students now take notes on laptops or tablets rather than on paper. For some, these devices are indispensable tools that allow them to type quickly, organize materials, and access online resources during class. Yet a growing number of professors have begun to ban laptops from their lectures, arguing that they distract students and reduce learning. The question of whether such bans are justified has become a lively subject of debate among educators, researchers, and students themselves. Some universities have even begun to collect data on how students use their devices during class, hoping to settle the question with evidence rather than opinion.",
+      "Supporters of laptop bans point to research suggesting that devices can harm concentration. When a laptop is open, the temptation to check messages, browse social media, or shop online is constant, and many students admit that they do so during lectures. Studies have also found that students sitting near classmates who use laptops for unrelated activities may perform worse, since the screens in front of them draw their attention away from the lecture. In this view, laptops affect not only their users but the learning environment as a whole.",
+      "Supporters also cite evidence about note-taking itself. Some studies suggest that students who type notes tend to record the lecturer's words almost exactly, while those who write by hand, being unable to write as quickly, must summarize and rephrase what they hear. ( A ) typing allows students to capture more information, supporters argue, the process of summarizing by hand may lead to deeper understanding and better memory of the material. A ban on laptops, they claim, encourages a more active form of listening.",
+      "Opponents of bans, however, argue that they treat all students as if they had the same needs. For students with certain disabilities, such as difficulties with handwriting or visual impairments, a laptop may be essential for taking notes at all. Requiring such students to request special permission, opponents point out, may draw unwanted attention to their situation and make them feel singled out. A blanket ban, in this view, risks excluding the very students who most depend on technology to participate fully.",
+      "Opponents also argue that university students are adults who should be responsible for their own learning. If a student chooses to spend a lecture browsing the internet, they claim, the consequences fall mainly on that student, and it is not the role of the professor to control how people use their own devices. Some also note that the research on note-taking is less conclusive than often suggested, and that later studies have found smaller differences between typed and handwritten notes than early experiments reported. Learning to manage distractions, they argue, is itself part of a university education.",
+      "Between these positions, some professors have adopted more flexible policies. They may ask students who use laptops to sit in particular areas of the room so as not to distract others, or allow devices only for specific activities such as reading shared documents. Others try to design lectures that are interactive enough to hold students' attention, using questions, discussion, and short exercises that make passive browsing less tempting. Such approaches aim to reduce distraction without denying students the benefits of technology.",
+      "The debate over laptops in lecture halls reflects a broader question about how education should respond to technology. Devices can make information more accessible and learning more flexible, but they also compete constantly for attention. Rather than choosing simply between permitting and forbidding them, educators may need to help students develop the habits of focus and self-control that will serve them not only in university but throughout lives in which distractions will never be far away and attention will be one of their most valuable resources.",
+    ],
+    ja: [
+      '世界中の大学の講義室で、今では多くの学生が紙ではなくノートパソコンやタブレットでノートをとっている。ある学生にとって、こうした機器は、すばやく打ちこみ、資料を整理し、授業中にオンラインの資料を見ることを可能にする、なくてはならない道具である。しかし講義でのノートパソコンを禁止する教授がふえはじめており、それは学生の気を散らし、学習をへらすと主張している。そうした禁止が正当なのかという問題は、教育者や研究者や学生自身のあいだで、活発な議論の的になっている。授業中に学生が機器をどう使っているかのデータを集めはじめ、意見ではなく証拠でこの問題に決着をつけようとしている大学さえある。',
+      'ノートパソコンの禁止を支持する人々は、機器が集中をそこないうると示す研究をあげる。ノートパソコンが開いていると、メッセージを確かめたり、ソーシャルメディアを見たり、オンラインで買い物をしたりしたい誘惑がたえずあり、多くの学生は講義中にそうしていると認めている。研究はまた、関係のないことにノートパソコンを使う同級生の近くにすわる学生は、目の前の画面に講義から注意をそらされるので、成績が下がるかもしれないことを見いだした。この見方では、ノートパソコンは使う人だけでなく、学習の環境全体に影響する。',
+      '支持する人々はまた、ノートのとり方そのものについての証拠をあげる。ノートを打ちこむ学生は講師のことばをほとんどそのまま記録しがちだが、手で書く学生は、それほど速く書けないので、聞いたことを要約し言いかえなければならないと示す研究もある。打ちこむことで学生はより多くの情報を記録できるが、手で要約する過程の方が、内容のより深い理解とよりよい記憶につながるかもしれないと支持する人々は主張する。ノートパソコンの禁止は、より積極的な聞き方をうながすと彼らは主張する。',
+      'しかし禁止に反対する人々は、それはすべての学生が同じ必要をもつかのようにあつかっていると主張する。手で書くことがむずかしかったり目が不自由だったりするような、ある種の障害をもつ学生にとって、ノートパソコンはそもそもノートをとるのに欠かせないかもしれない。そうした学生に特別な許可を求めさせることは、望まない注目を彼らの状況に集め、自分だけ特別あつかいされていると感じさせるかもしれないと反対する人々は指摘する。この見方では、一律の禁止は、十分に参加するために技術にもっともたよっている学生こそを閉め出す危険がある。',
+      '反対する人々はまた、大学生は自分の学習に責任をもつべき大人だと主張する。学生が講義の時間をインターネットを見てすごすことを選んでも、その結果はおもにその学生自身にかかってくるのであり、人々が自分の機器をどう使うかを管理するのは教授の役目ではないと彼らは主張する。ノートのとり方についての研究は、よく言われるほど決定的ではなく、のちの研究では、初期の実験が報告したよりも、打ちこんだノートと手書きのノートの差は小さいことがわかったと指摘する人もいる。気が散るものに対処することを学ぶこと自体が、大学教育の一部だと彼らは主張する。',
+      'これらの立場のあいだで、より柔軟な方針をとる教授もいる。ノートパソコンを使う学生に、ほかの人の気を散らさないよう教室の特定の場所にすわるようたのんだり、共有の資料を読むような特定の活動にだけ機器を認めたりするのである。質問や話し合いや短い練習を使って、何となくネットを見たくならないほど学生の注意を引きつける、双方向の講義を作ろうとする人もいる。そうしたやり方は、学生から技術の利益をうばわずに、気が散ることをへらすことを目指している。',
+      '講義室のノートパソコンをめぐる議論は、教育が技術にどうこたえるべきかという、より広い問いを反映している。機器は情報を手に入れやすくし、学習を柔軟にしうるが、たえず注意をうばい合いもする。教育者は、ただ認めるか禁じるかを選ぶのではなく、大学だけでなく、気を散らすものがいつも近くにあり、注意がもっとも貴重な資源の一つになる一生を通じて役に立つ、集中と自制の習慣を学生が育てるのを助ける必要があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「打ちこむと多く記録できるが、手で要約する方が深い理解につながる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of bans argue that laptops harm ( 1 ) and that writing by hand leads to deeper understanding. Opponents argue that bans may exclude students with ( 2 ) and that university students should be responsible for their own learning. Some professors have adopted more ( 3 ) policies.',
+      blanks: [
+        { choices: ['concentration', 'eyesight', 'friendship', 'fitness'], answer: 0, why: '第2段落 devices can harm concentration。' },
+        { choices: ['disabilities', 'scholarships', 'cars', 'pets'], answer: 0, why: '第4段落 For students with certain disabilities。' },
+        { choices: ['flexible', 'strict', 'expensive', 'secret'], answer: 0, why: '第6段落 some professors have adopted more flexible policies。' },
+      ],
+    },
+    tf: [
+      { statement: 'ノートパソコンを使う同級生の近くの学生は、成績が下がるかもしれない。', answer: true, why: '第2段落 may perform worse。' },
+      { statement: '手で書く学生は、講師のことばをそのまま記録しがちである。', answer: false, why: '第3段落 those who write by hand ... must summarize and rephrase。' },
+      { statement: 'のちの研究では、打ちこみと手書きのノートの差は初期の実験より小さかった。', answer: true, why: '第5段落 later studies have found smaller differences。' },
+      { statement: '筆者は、ただ機器を禁じることがもっともよいと結論づけている。', answer: false, why: '第7段落 Rather than choosing simply between permitting and forbidding them。' },
+    ],
+    qa: [
+      { q: 'Why might a special permission system make some students uncomfortable?', choices: ['It may draw unwanted attention to their situation.', 'It costs too much money.', 'It takes too many weeks.', 'It requires a new laptop.'], answer: 0, why: '第4段落 may draw unwanted attention to their situation。' },
+      { q: 'What kind of lectures do some professors try to design?', choices: ['Interactive lectures that keep students focused.', 'Longer lectures without breaks.', 'Online-only lectures.', 'Silent lectures.'], answer: 0, why: '第6段落 lectures that are interactive enough to hold students\' attention。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
