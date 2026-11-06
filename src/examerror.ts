@@ -8592,6 +8592,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The baby stopped [cry] when its mother picked it up.', choices: ['crying', 'to cry', 'cried', 'to crying'], answer: 0, why: '「泣きやんだ」は stop ～ing。stop to cry だと「泣くために手を止めた」になる。' },
     ],
   },
+  {
+    id: 'exam-fix-202',
+    title: '入試の誤文訂正〈202〉（京大レベル：英作文の否定語の倒置 Not until・Little did）',
+    points: ['Never・Little・Seldom・Hardly・No sooner・Not until ～・Only after ～・Not only・Under no circumstances などの否定や制限の語句が文の頭に出ると、そのあとは疑問文と同じ語順（倒置）になる。一般動詞は do／does／did ＋主語＋原形、完了形は have／had ＋主語＋過去分詞、助動詞は助動詞＋主語。Not until ～ や Only after ～ では、その語句のあとの主節が倒置する。Hardly／No sooner は had ＋主語＋過去分詞のあと when／than が続く。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Not until he came home did he notice the mistake.', ja: '家に帰ってはじめて、彼はそのまちがいに気づいた。' }],
+    questions: [
+      { sentence: 'Not until he came home [he noticed] the mistake.', choices: ['did he notice', 'he did notice', 'noticed he', 'had noticed he'], answer: 0, why: 'Not until ～ が文頭なので主節が倒置。did he notice。' },
+      { sentence: 'Little [she knew] what was waiting for her.', choices: ['did she know', 'she did know', 'knew she', 'she knows'], answer: 0, why: 'Little が文頭に出ると倒置。did she know「少しも知らなかった」。' },
+      { sentence: 'Never [I have seen] such a beautiful sunset.', choices: ['have I seen', 'I saw', 'seen I have', 'I have see'], answer: 0, why: 'Never が文頭なので完了形は have I seen。' },
+      { sentence: 'Only after the meeting [he realized] his error.', choices: ['did he realize', 'he did realize', 'realized he', 'he has realize'], answer: 0, why: 'Only after ～ が文頭なので倒置。did he realize。' },
+      { sentence: 'Hardly [he had arrived] when it began to rain.', choices: ['had he arrived', 'he arrived', 'did he arrived', 'he has arrived'], answer: 0, why: 'Hardly が文頭なので had he arrived ～ when。' },
+      { sentence: 'Not only [she speaks] French, but she also speaks Chinese.', choices: ['does she speak', 'she does speak', 'speaks she', 'she speaking'], answer: 0, why: 'Not only が文頭なので倒置。does she speak。' },
+      { sentence: 'Seldom [we see] such talent in young players.', choices: ['do we see', 'we do see', 'see we', 'we are see'], answer: 0, why: 'Seldom が文頭なので倒置。do we see。' },
+      { sentence: 'Under no circumstances [you should] open this door.', choices: ['should you', 'you shall', 'you must to', 'should to you'], answer: 0, why: 'Under no circumstances が文頭なので助動詞＋主語。should you open。' },
+      { sentence: 'Not until last year [I began] to study Korean.', choices: ['did I begin', 'I did begin', 'began I', 'I have begun'], answer: 0, why: 'Not until ～ が文頭なので主節が倒置。did I begin。' },
+      { sentence: 'No sooner [she had sat] down than the phone rang.', choices: ['had she sat', 'she sat', 'did she sat', 'she has sat'], answer: 0, why: 'No sooner が文頭なので had she sat ～ than。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
