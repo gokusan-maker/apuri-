@@ -3084,6 +3084,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="96" cy="70" r="3" fill="#f5f5f4" />
       </g>
     )
+  if (species === 'sifaka')
+    return (
+      <g>
+        {/* 茶色の頭のぼうし */}
+        <path d="M36 24 q14 -10 28 0 q-14 4 -28 0 z" fill="#78350f" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
