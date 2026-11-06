@@ -39698,6 +39698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-right-to-be-forgotten',
+    title: 'Should People Have a Right to Be Forgotten?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the past, embarrassing incidents or mistakes would gradually fade from public memory. A newspaper article about a minor offense or a foolish remark might be read by many people for a day or two and then forgotten, preserved only in archives that few would ever consult. Today, however, information published online can remain easily searchable for decades. A single mistake made in youth may appear at the top of search results whenever a person's name is entered. In response, some legal systems have recognized a so-called right to be forgotten, allowing individuals to request that certain information about them be removed from search results.",
+      "Supporters of this right argue that people deserve the chance to move beyond their past. Human beings change over time, and a person who made a mistake many years ago may now be entirely different. When outdated or irrelevant information follows them forever, it can damage their employment prospects, relationships, and sense of dignity, even when the original matter was minor or has long been resolved. Supporters argue that allowing such information to fade restores something of the natural forgetting that once protected people before the internet.",
+      "Supporters also note that much personal information online was never intended to be permanent. Photographs shared among friends, comments posted in moments of anger, or details revealed in local news reports may now be accessible to anyone in the world. ( A ) such information may once have been public in a narrow sense, supporters argue, its permanent and global visibility is something new, and individuals should have some control over how they are presented to the world. Without such control, they suggest, a single unfortunate moment can come to define an entire life in the eyes of strangers who know nothing else about the person.",
+      "Critics, however, warn that a right to be forgotten could threaten freedom of expression and access to information. Journalists, historians, and members of the public may have legitimate reasons to know about a person's past, particularly if that person holds public office or seeks positions of trust. Removing information from search results, critics argue, could allow powerful people to hide embarrassing facts and make it harder for citizens to hold them accountable.",
+      "Critics also point to practical difficulties. Deciding which information should be removed requires difficult judgments about relevance, public interest, and the passage of time, and these decisions are often left to private companies that operate search engines. Critics worry that such companies may remove information too readily to avoid legal disputes, or apply rules inconsistently across countries. Moreover, information removed from search results in one country may remain easily accessible elsewhere, raising questions about how effective the right can be.",
+      "In practice, systems that recognize this right usually attempt to balance competing interests. Requests are typically assessed case by case, taking into account the nature of the information, how long ago it was published, and whether the person involved plays a role in public life. Information about serious crimes or the conduct of public officials is often kept available, while outdated details about private individuals are more likely to be removed. Even so, the boundaries remain contested, and similar requests may receive quite different answers depending on the country in which they are made and on the particular judges or officials who examine them.",
+      "The debate over the right to be forgotten reflects a broader question about memory in the digital age. The internet has given societies an extraordinary capacity to remember, but it has also removed some of the forgetting that allowed people to grow and change. Finding a balance between preserving information that serves the public and allowing individuals to leave their past behind will remain a challenge for lawmakers, technology companies, and citizens alike.",
+    ],
+    ja: [
+      '昔は、はずかしい出来事やまちがいは、少しずつ人々の記憶からうすれていった。ささいな違反やおろかな発言についての新聞記事は、一日か二日のあいだ多くの人に読まれても、そのあとわすれられ、めったに調べる人のいない記録の中にだけ保存された。しかし今日、オンラインで公開された情報は、何十年もかんたんに検索できるままであることがある。若いころの一度のまちがいが、その人の名前を入力するたびに検索結果のいちばん上に現れるかもしれない。これにこたえて、いわゆる「わすれられる権利」を認め、自分についてのある種の情報を検索結果から取りのぞくよう個人が求められるようにした法の制度もある。',
+      'この権利を支持する人々は、人には過去をこえて進む機会があるべきだと主張する。人間は時とともに変わり、何年も前にまちがいをした人が、今ではまったくちがう人になっていることもある。古くなった、あるいは関係のない情報がいつまでもついてまわると、もとの問題がささいなものだったり、とっくに解決していたりしても、仕事の見こみや人間関係や尊厳の感覚をそこないうる。そうした情報がうすれるのを認めることは、インターネットの前に人々を守っていた自然な忘却をいくらか取りもどすことになると支持する人々は主張する。',
+      '支持する人々はまた、オンラインの個人情報の多くは、永久に残ることを意図したものではなかったと指摘する。友だちのあいだで分け合った写真や、怒りにまかせて書いたコメントや、地元のニュースでふれられたくわしいことが、今では世界中のだれでも見られるかもしれない。そうした情報はかつてせまい意味では公のものだったかもしれないが、それが永久に、世界中に見えるということは新しいことであり、個人は自分が世界にどう示されるかをある程度管理できるべきだと支持する人々は主張する。そうした管理がなければ、たった一つの不運な瞬間が、その人について何も知らない見知らぬ人々の目には、人生全体を決めてしまいうると彼らは言う。',
+      'しかし批判する人々は、わすれられる権利は表現の自由と情報を知ることをおびやかしうると警告する。記者や歴史家や一般の人々には、とくにその人が公職についていたり信頼される地位を求めていたりする場合、その人の過去を知る正当な理由があるかもしれない。検索結果から情報を取りのぞくことは、権力のある人々にはずかしい事実をかくさせ、市民が彼らに説明責任を求めるのをむずかしくしうると批判する人々は主張する。',
+      '批判する人々はまた、実際のむずかしさをあげる。どの情報を取りのぞくべきかを決めるには、関連性や公共の利益や時の経過についてのむずかしい判断が必要であり、こうした決定はしばしば検索エンジンを運営する民間企業にまかされている。そうした企業は法的な争いをさけるために情報をかんたんに取りのぞきすぎたり、国によって規則をばらばらに当てはめたりするかもしれないと批判する人々は心配する。さらに、ある国で検索結果から取りのぞかれた情報が、ほかの場所ではかんたんに見られるままのこともあり、この権利がどれほど効果的でありうるのかという疑問を投げかけている。',
+      '実際には、この権利を認める仕組みは、ふつう、対立する利益のつりあいをとろうとしている。求めはふつう一件ずつ評価され、情報の性質や、どれくらい前に公開されたか、かかわる人が公の暮らしで役割を果たしているかどうかが考えに入れられる。重い犯罪や公職者のふるまいについての情報はしばしば見られるままにされ、一方で個人についての古くなったくわしいことは取りのぞかれやすい。それでも、その境目は今も争われており、似たような求めでも、それが出された国や、それを調べる特定の裁判官や役人によって、かなりちがう答えを受けることがある。',
+      'わすれられる権利をめぐる議論は、デジタル時代の記憶についての、より広い問いを反映している。インターネットは社会にとてつもない記憶の力をあたえたが、人々が成長し変わることを可能にしていた忘却の一部も取りのぞいてしまった。公共に役立つ情報を残すことと、個人が過去を置いていけるようにすることのつりあいを見つけることは、法律を作る人にとっても、技術企業にとっても、市民にとっても課題であり続けるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「かつてせまい意味では公のものだったかもしれないが、永久に見えるのは新しい」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that people deserve the chance to move beyond their ( 1 ) and to control how they appear online. Critics warn that the right may threaten freedom of ( 2 ) and that decisions are left to private companies. In practice, requests are usually assessed case by ( 3 ).',
+      blanks: [
+        { choices: ['past', 'future', 'family', 'country'], answer: 0, why: '第2段落 people deserve the chance to move beyond their past。' },
+        { choices: ['expression', 'movement', 'religion', 'travel'], answer: 0, why: '第4段落 could threaten freedom of expression。' },
+        { choices: ['case', 'day', 'country', 'name'], answer: 0, why: '第6段落 Requests are typically assessed case by case。' },
+      ],
+    },
+    tf: [
+      { statement: 'オンラインの情報は、何十年も検索できるままのことがある。', answer: true, why: '第1段落 can remain easily searchable for decades。' },
+      { statement: '批判する人々は、公職者の過去を知る理由はないと考えている。', answer: false, why: '第4段落 may have legitimate reasons to know about a person\'s past。' },
+      { statement: 'ある国で取りのぞかれた情報が、ほかの場所では見られることがある。', answer: true, why: '第5段落 may remain easily accessible elsewhere。' },
+      { statement: '重い犯罪についての情報は、ふつうすぐに取りのぞかれる。', answer: false, why: '第6段落 Information about serious crimes ... is often kept available。' },
+    ],
+    qa: [
+      { q: 'What can outdated information that follows people forever damage?', choices: ['Employment prospects, relationships, and dignity.', 'Only their computers.', 'Their eyesight.', 'Search engines.'], answer: 0, why: '第2段落 it can damage their employment prospects, relationships, and sense of dignity。' },
+      { q: 'Who often decides which information should be removed?', choices: ['Private companies that operate search engines.', 'Newspaper readers.', 'Schoolteachers.', 'The people who wrote the articles.'], answer: 0, why: '第5段落 left to private companies that operate search engines。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
