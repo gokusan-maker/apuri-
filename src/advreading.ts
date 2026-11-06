@@ -37778,6 +37778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-organic-farming',
+    title: 'Should Governments Subsidize Organic Farming?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Organic farming, which avoids synthetic fertilizers and pesticides and relies instead on natural methods such as crop rotation and compost, has grown rapidly in recent decades. Many consumers are willing to pay higher prices for organic food, believing it to be healthier and better for the environment, and some governments now offer financial support to farmers who convert to organic methods. Whether public money should be used in this way, however, remains a matter of debate among scientists, economists, and policymakers, who disagree about the true costs and benefits of organic agriculture.",
+      "Supporters of subsidies argue that organic farming brings important environmental benefits. By avoiding chemical pesticides, organic farms may provide better habitats for insects, birds, and other wildlife, and they may reduce the pollution of rivers and groundwater by agricultural chemicals. Supporters also claim that organic methods can improve the health of the soil over time, helping it to store more carbon and to resist erosion. Because these benefits are shared by society as a whole rather than by individual farmers, supporters argue that it is reasonable for governments to help pay for them.",
+      "Supporters further point out that converting to organic farming is difficult and expensive. During the transition, which may last several years, farmers must follow organic rules but cannot yet sell their products at organic prices, and their yields often fall. ( A ) public support is available during this period, supporters argue, many farmers who would like to change their methods will be unable to afford the risk. Subsidies, in their view, are therefore a way of helping farmers to make a change that benefits everyone in the long run.",
+      "Critics, however, question whether organic farming is as beneficial as its supporters claim. One of their main concerns is that organic farms usually produce less food per hectare than conventional ones. If the world's growing population is to be fed by organic methods, critics argue, more land would need to be cleared for farming, which could destroy forests and other natural habitats. In this view, the environmental advantages of organic farming on a single field may be outweighed by the need for more fields overall.",
+      "Critics also argue that subsidies for organic farming may not be the most effective way to achieve environmental goals. Some conventional farmers use modern techniques that reduce the use of chemicals while maintaining high yields, and these methods may offer many of the same benefits at lower cost. Critics suggest that governments should reward farmers for specific results, such as cleaner water or greater biodiversity, rather than for following a particular set of rules. Such an approach, they argue, would encourage innovation instead of favoring one type of agriculture over others.",
+      "There are also questions about fairness to consumers. Organic food is generally more expensive than conventional food, and those who buy it tend to have higher incomes. Critics point out that using taxes to support organic farming may therefore benefit wealthier households more than poorer ones, at least in the short term. Supporters respond that the environmental benefits of organic farming are enjoyed by all, regardless of what they eat, and that greater support could eventually lower prices by making organic production more efficient.",
+      "The debate over organic subsidies reflects a broader challenge facing agricultural policy: how to produce enough food while protecting the natural systems on which farming itself depends. Neither organic nor conventional farming offers a complete solution, and each has strengths and weaknesses that vary according to local conditions. Many experts therefore argue that the best policies will be those that are guided by careful evidence, that reward environmental results directly, and that allow farmers the flexibility to combine the most effective methods from different approaches.",
+    ],
+    ja: [
+      '有機農業は、合成の肥料や農薬をさけ、そのかわりに輪作や堆肥のような自然の方法にたよる農業で、ここ数十年で急速に広がった。多くの消費者は、有機の食べ物の方が健康によく環境にもよいと信じて、より高い値段をはらうことをいとわず、有機の方法に切りかえる農家にお金の支援をする政府もある。しかし公的なお金をこのように使うべきかどうかは、有機農業の本当の費用と利益について意見が分かれる科学者や経済学者や政策を作る人々のあいだで、今も議論の的である。',
+      '補助金を支持する人々は、有機農業は大切な環境上の利益をもたらすと主張する。化学農薬をさけることで、有機の農場は虫や鳥やほかの野生生物によりよいすみかをあたえ、農業の化学物質による川や地下水の汚染をへらすかもしれない。支持する人々はまた、有機の方法は時間をかけて土の健康を改善し、より多くの炭素をたくわえ、浸食に強くするのを助けうると主張する。こうした利益は個々の農家ではなく社会全体に分け合われるので、政府がその費用の一部をはらうのはもっともだと支持する人々は主張する。',
+      '支持する人々はさらに、有機農業に切りかえるのはむずかしく費用がかかると指摘する。何年も続くかもしれない移行の期間、農家は有機の規則にしたがわなければならないが、まだ製品を有機の値段で売ることはできず、収穫量もしばしば落ちる。この期間に公的な支援がなければ、方法を変えたいと思う多くの農家はその危険を負えないだろうと支持する人々は主張する。そのため彼らの見方では、補助金は、長い目で見てみんなの利益になる変化を農家がするのを助ける方法である。',
+      'しかし批判する人々は、有機農業が支持する人々が主張するほど有益なのかを疑う。彼らのおもな心配の一つは、有機の農場はふつう、ふつうの農場より1ヘクタールあたりの食料の生産が少ないことである。世界のふえ続ける人口を有機の方法で養うなら、農業のためにより多くの土地を切り開く必要があり、それは森やほかの自然のすみかをこわしうると批判する人々は主張する。この見方では、一つの畑での有機農業の環境上の利点は、全体としてより多くの畑が必要になることで打ち消されるかもしれない。',
+      '批判する人々はまた、有機農業への補助金は、環境の目標を達成するいちばん効果的な方法ではないかもしれないと主張する。ふつうの農家のなかには、高い収穫量を保ちながら化学物質の使用をへらす現代の技術を使う人もおり、こうした方法はより低い費用で同じ利益の多くをあたえるかもしれない。政府は、決まった規則にしたがうことではなく、よりきれいな水やより豊かな生物の多様性のような具体的な成果に対して農家に報いるべきだと批判する人々は提案する。そうしたやり方は、ある種類の農業をほかよりひいきするのではなく、工夫をうながすだろうと彼らは主張する。',
+      '消費者に対する公平さの問題もある。有機の食べ物は一般にふつうの食べ物より高く、それを買う人々は収入が多い傾向がある。そのため有機農業を支えるために税金を使うと、少なくとも短期的には、まずしい世帯より裕福な世帯の利益になるかもしれないと批判する人々は指摘する。支持する人々は、有機農業の環境上の利益は、何を食べるかにかかわらずすべての人が受けており、支援をふやせば、有機の生産をより効率的にすることで、やがて値段を下げられるかもしれないとこたえる。',
+      '有機の補助金をめぐる議論は、農業政策が直面する、より広い課題を反映している。それは、農業そのものがたよる自然の仕組みを守りながら、どうやって十分な食料を生産するかという課題である。有機農業もふつうの農業も完全な解決策ではなく、それぞれに、その土地の条件によって変わる長所と短所がある。そのため多くの専門家は、もっともよい政策とは、注意深い証拠に導かれ、環境上の成果に直接報い、農家にちがうやり方からもっとも効果的な方法を組み合わせる自由をあたえるものだろうと主張している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Unless', 'Because', 'Although', 'Once'], answer: 0, why: '「この期間に公的な支援がなければ、危険を負えない」という条件なので Unless。' },
+    ],
+    summary: {
+      text: 'Supporters argue that organic farming brings ( 1 ) benefits that are shared by society. Critics argue that organic farms produce less food per hectare, so more ( 2 ) might be needed. Many experts say that policies should reward environmental ( 3 ) directly.',
+      blanks: [
+        { choices: ['environmental', 'financial', 'cultural', 'military'], answer: 0, why: '第2段落 organic farming brings important environmental benefits。' },
+        { choices: ['land', 'water', 'money', 'workers'], answer: 0, why: '第4段落 more land would need to be cleared for farming。' },
+        { choices: ['results', 'rules', 'prices', 'names'], answer: 0, why: '第7段落 that reward environmental results directly。' },
+      ],
+    },
+    tf: [
+      { statement: '有機農業への移行の期間、農家の収穫量はしばしば落ちる。', answer: true, why: '第3段落 their yields often fall。' },
+      { statement: '有機の農場はふつう、1ヘクタールあたりの生産がふつうの農場より多い。', answer: false, why: '第4段落 organic farms usually produce less food per hectare。' },
+      { statement: '有機の食べ物を買う人々は、収入が多い傾向がある。', answer: true, why: '第6段落 those who buy it tend to have higher incomes。' },
+      { statement: '筆者によれば、有機農業は完全な解決策である。', answer: false, why: '第7段落 Neither organic nor conventional farming offers a complete solution。' },
+    ],
+    qa: [
+      { q: 'What do critics suggest governments should reward farmers for?', choices: ['Specific results such as cleaner water.', 'Following organic rules only.', 'Growing more crops at any cost.', 'Selling food abroad.'], answer: 0, why: '第5段落 reward farmers for specific results, such as cleaner water or greater biodiversity。' },
+      { q: 'How might greater support lower organic prices, according to supporters?', choices: ['By making organic production more efficient.', 'By reducing taxes.', 'By banning conventional farming.', 'By importing food.'], answer: 0, why: '第6段落 by making organic production more efficient。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
