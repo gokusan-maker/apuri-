@@ -3188,6 +3188,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="72" cy="56" r="7" fill="#f97316" /><circle cx="72" cy="56" r="3" fill="#231a10" />
       </g>
     )
+  if (species === 'angwantibo')
+    return (
+      <g>
+        {/* 金色の毛のつや */}
+        <path d="M30 40 q20 -12 40 0" stroke="#fde68a" strokeWidth="2" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
