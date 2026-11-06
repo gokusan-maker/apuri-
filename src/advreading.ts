@@ -39218,6 +39218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-checkout-sweets',
+    title: 'Should Sweets Be Removed from Checkouts?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Anyone who has waited in line at a supermarket checkout knows the shelves of chocolate, sweets, and sugary drinks placed within easy reach. These products are positioned there deliberately: shoppers who are tired or bored while waiting are more likely to make impulse purchases, and children who see sweets at eye level often ask their parents to buy them. In recent years, some governments have introduced rules restricting the sale of such foods at checkouts and store entrances, as part of efforts to reduce obesity. The measures have been welcomed by health campaigners but criticized by parts of the food industry.",
+      "Supporters of these rules argue that the placement of products strongly influences what people buy. Research on shopping behavior has shown that items displayed in prominent positions sell far more than those placed elsewhere, and that many purchases of sweets and snacks are made on impulse rather than planned in advance. By removing unhealthy foods from the most tempting locations, supporters claim, governments can help people make healthier choices without forbidding anything. The products would still be available for those who want them; they would simply be less difficult to resist.",
+      "Supporters also emphasize the effect on children and families. Parents often describe the checkout as one of the most stressful parts of shopping, since children who are made to wait beside displays of sweets may become upset when refused. ( A ) individual parents can say no, supporters argue, it is unfair to expect them to resist marketing techniques that are carefully designed to exploit children's desires. Reducing such displays, in their view, supports parents in their efforts to encourage healthy eating.",
+      "Critics, however, argue that such rules interfere with the freedom of businesses to arrange their stores as they wish. Shops have always used the placement of products to attract customers, they point out, and it is not clear why sweets should be treated differently from other goods. Critics also note that restrictions can be costly for smaller shops, which may have limited space and depend on sales of snacks for a significant part of their income. Imposing the same rules on all retailers, they argue, may harm small businesses more than large supermarket chains.",
+      "Critics further question whether moving products will have a meaningful effect on public health. Obesity has many causes, including diet as a whole, physical activity, income, and the cost of healthy food, and it is unlikely to be solved by changing the position of a few shelves. People who want sweets, critics suggest, will simply walk to another part of the store to buy them. In this view, the policy may give the appearance of action while doing little to address the deeper factors behind unhealthy eating.",
+      "Early evidence from places that have introduced such restrictions is modestly encouraging. Studies of supermarkets that removed sweets from checkouts, whether voluntarily or because of regulations, have found reductions in purchases of these products at the point of sale, although some of the decline may have been offset by purchases elsewhere in the store. Researchers generally conclude that such measures are unlikely to transform diets on their own but may make a small contribution as part of a broader strategy.",
+      "The debate over checkout sweets reflects a wider question about the role of governments in shaping everyday choices. Few people would support banning sweets, but many accept that the environment in which choices are made can be designed to make healthier options easier. Whether such policies are seen as helpful guidance or unwelcome interference often depends on how much one trusts individuals to resist the influence of marketing, and on how seriously one regards the costs of unhealthy eating for society as a whole and for future generations.",
+    ],
+    ja: [
+      'スーパーのレジの列にならんだことのある人ならだれでも、手のとどくところに置かれたチョコレートやあめやあまい飲み物のたなを知っている。こうした商品は意図してそこに置かれている。待っているあいだにつかれていたり退屈していたりする買い物客は衝動買いをしやすく、目の高さにお菓子を見つけた子どもはしばしば親に買ってとねだるのである。近年、肥満をへらす取り組みの一つとして、レジや店の入口でのそうした食べ物の販売を制限する規則を取り入れた政府もある。この対策は健康の運動をする人々には歓迎されたが、食品業界の一部からは批判されている。',
+      'こうした規則を支持する人々は、商品の置き場所は人々が何を買うかに強く影響すると主張する。買い物の行動の研究では、目立つ場所にならべられた商品はほかの場所に置かれた商品よりはるかによく売れ、お菓子やスナックの買い物の多くは前もって計画されたものではなく衝動によるものであることがわかっている。不健康な食べ物をもっとも誘惑の強い場所から取りのぞくことで、政府は何も禁じることなく、人々がより健康的な選択をするのを助けられると支持する人々は主張する。商品はほしい人にはやはり手に入るのであり、ただがまんするのがそれほどむずかしくなくなるだけなのである。',
+      '支持する人々はまた、子どもと家族への影響を強調する。親はしばしば、レジを買い物のもっともストレスの多い場面の一つと言う。お菓子のならぶ横で待たされる子どもは、ことわられるとぐずるかもしれないからである。一人一人の親はだめと言えるが、子どもの欲求につけこむよう注意深く作られた販売の技に、親がたえることを期待するのは不公平だと支持する人々は主張する。彼らの見方では、そうした陳列をへらすことは、健康的な食事をうながそうとする親の努力を支えることになる。',
+      'しかし批判する人々は、そうした規則は企業が好きなように店をならべる自由に干渉すると主張する。店は昔から商品の置き場所を使って客を引きつけてきたのであり、なぜお菓子だけをほかの商品とちがうあつかいにすべきなのかははっきりしないと彼らは指摘する。批判する人々はまた、制限は小さな店にとって費用がかかることがあると指摘する。そうした店は場所が限られていて、収入のかなりの部分をスナックの売り上げにたよっているかもしれないからである。すべての小売店に同じ規則をおしつけると、大きなスーパーのチェーンより小さな店をそこなうかもしれないと彼らは主張する。',
+      '批判する人々はさらに、商品を移すことが公衆衛生に意味のある効果をもつのかを疑う。肥満には、食事全体や運動や収入や健康的な食べ物の値段をふくむ多くの原因があり、いくつかのたなの位置を変えるだけで解決するとは思えない。お菓子がほしい人は、ただ店の別の場所まで歩いて買うだけだろうと批判する人々は示す。この見方では、この方針は、不健康な食事の背後にあるより深い要因にはほとんど取り組まないまま、行動しているように見せるだけかもしれない。',
+      'そうした制限を取り入れた場所からの初期の証拠は、ささやかながら希望をもたせるものである。自分から、あるいは規制のためにレジからお菓子を取りのぞいたスーパーの研究では、店のほかの場所での購入によって一部はうめ合わされたかもしれないものの、レジでのこうした商品の購入がへったことがわかった。研究者は一般に、そうした対策はそれだけで食生活を変えるとは思えないが、より広い戦略の一部として小さな貢献をするかもしれないと結論づけている。',
+      'レジのお菓子をめぐる議論は、日々の選択を形づくるうえでの政府の役割についての、より広い問いを反映している。お菓子を禁止することを支持する人はほとんどいないが、多くの人は、選択がなされる環境を、より健康的な選択肢をえらびやすくするように作れると認めている。そうした方針が役に立つ手助けと見られるか、ありがたくない干渉と見られるかは、しばしば、人々が販売の影響にあらがえるとどれほど信頼するか、そして不健康な食事が社会全体と未来の世代にもたらす費用をどれほど深刻に考えるかにかかっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「一人一人の親はだめと言えるが、たえることを期待するのは不公平だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that the ( 1 ) of products strongly influences purchases and that removing sweets from checkouts supports parents. Critics argue that the rules interfere with businesses and may not affect public ( 2 ). Early evidence suggests a small reduction in purchases at the point of ( 3 ).',
+      blanks: [
+        { choices: ['placement', 'price', 'color', 'size'], answer: 0, why: '第2段落 the placement of products strongly influences what people buy。' },
+        { choices: ['health', 'transport', 'safety', 'opinion'], answer: 0, why: '第5段落 a meaningful effect on public health。' },
+        { choices: ['sale', 'entry', 'view', 'origin'], answer: 0, why: '第6段落 reductions in purchases of these products at the point of sale。' },
+      ],
+    },
+    tf: [
+      { statement: 'お菓子やスナックの買い物の多くは、衝動によるものである。', answer: true, why: '第2段落 many purchases of sweets and snacks are made on impulse。' },
+      { statement: '規則によって、お菓子はまったく買えなくなる。', answer: false, why: '第2段落 The products would still be available for those who want them。' },
+      { statement: '小さな店は、スナックの売り上げに大きくたよっていることがある。', answer: true, why: '第4段落 depend on sales of snacks for a significant part of their income。' },
+      { statement: '研究者は、この対策だけで食生活が大きく変わると結論づけている。', answer: false, why: '第6段落 unlikely to transform diets on their own。' },
+    ],
+    qa: [
+      { q: 'Why do parents find the checkout stressful?', choices: ['Children may become upset when refused sweets.', 'The lines are too short.', 'Prices are too low.', 'Shops are too quiet.'], answer: 0, why: '第3段落 children ... may become upset when refused。' },
+      { q: 'What might people who want sweets do, according to critics?', choices: ['Walk to another part of the store to buy them.', 'Stop shopping completely.', 'Grow their own sugar.', 'Complain to the government.'], answer: 0, why: '第5段落 will simply walk to another part of the store to buy them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
