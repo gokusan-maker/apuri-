@@ -3233,6 +3233,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M46 68 q4 -4 8 0" stroke="#3f2a10" strokeWidth="1.5" fill="none" />
       </g>
     )
+  if (species === 'pacarana')
+    return (
+      <g>
+        {/* 背中の白いはん点 */}
+        <circle cx="38" cy="50" r="3" fill="#f5f5f4" /><circle cx="50" cy="48" r="3" fill="#f5f5f4" /><circle cx="62" cy="50" r="3" fill="#f5f5f4" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
