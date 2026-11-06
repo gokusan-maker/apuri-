@@ -4802,6 +4802,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) When will (B) she comes back, (C) please tell (D) her to call me.', choices: ['(A) When will', '(B) she comes back,', '(C) please tell', '(D) her to call me'], answer: 0, why: '時の副詞節はふつうの語順で will は不要。When she comes back。' },
     ],
   },
+  {
+    id: 'exam-error-prep-relative-kyodai',
+    title: '入試の正誤問題〈202〉（京大レベル：前置詞＋関係代名詞 in which・of whom）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係代名詞の前に前置詞を置く形（in which・to whom・of whom）では、物なら which、人なら whom を使い、that や who は使えない。前置詞を前に出したら、節の最後に同じ前置詞をくり返さない（the hotel at which we stayed）。「～のうちの…」は most of whom・both of which・some of which のように、数量のことば＋ of ＋ whom／which で表し、them や it は使わない。',
+    ],
+    examples: [
+      { en: 'This is the house in which he lives.', ja: 'これは彼が住んでいる家だ。' },
+      { en: 'She has two brothers, both of whom are doctors.', ja: '彼女には兄弟が2人いて、2人とも医者だ。' },
+    ],
+    questions: [
+      { sentence: '(A) This is the house (B) in that (C) he (D) lives.', choices: ['(A) This is the house', '(B) in that', '(C) he', '(D) lives'], answer: 1, why: '前置詞のあとに that は置けない。in which（＝ where）。' },
+      { sentence: '(A) The man (B) to who (C) I spoke (D) was kind.', choices: ['(A) The man', '(B) to who', '(C) I spoke', '(D) was kind'], answer: 1, why: '前置詞のあとの人の関係代名詞は whom。to whom。' },
+      { sentence: '(A) She has two brothers, (B) both of them (C) are (D) doctors.', choices: ['(A) She has two brothers,', '(B) both of them', '(C) are', '(D) doctors'], answer: 1, why: '2つの節をつなぐには関係代名詞が必要。both of whom。' },
+      { sentence: '(A) The pen (B) with which (C) I wrote the letter (D) with was red.', choices: ['(A) The pen', '(B) with which', '(C) I wrote the letter', '(D) with was red'], answer: 3, why: 'with はすでに which の前にあるので、うしろにくり返さない。was red。' },
+      { sentence: '(A) The company (B) for which (C) he works for (D) is large.', choices: ['(A) The company', '(B) for which', '(C) he works for', '(D) is large'], answer: 2, why: 'for はすでに which の前にあるので不要。he works。' },
+      { sentence: '(A) There were (B) many students, (C) most of which (D) were from Asia.', choices: ['(A) There were', '(B) many students,', '(C) most of which', '(D) were from Asia'], answer: 2, why: '人（students）を受けるので whom。most of whom。' },
+      { sentence: '(A) I have (B) a friend (C) on whom (D) I can depend on.', choices: ['(A) I have', '(B) a friend', '(C) on whom', '(D) I can depend on'], answer: 3, why: 'on はすでに whom の前にあるので不要。I can depend。' },
+      { sentence: '(A) Which (B) the people (C) we met (D) were friendly.', choices: ['(A) Which', '(B) the people', '(C) we met', '(D) were friendly'], answer: 0, why: '文の主語は the people なので Which は不要。The people we met were friendly。' },
+      { sentence: '(A) The hotel (B) at which (C) we stayed (D) at was clean.', choices: ['(A) The hotel', '(B) at which', '(C) we stayed', '(D) at was clean'], answer: 3, why: 'at はすでに which の前にあるので不要。was clean。' },
+      { sentence: '(A) This is (B) the tool (C) without that (D) I can’t work.', choices: ['(A) This is', '(B) the tool', '(C) without that', '(D) I can’t work'], answer: 2, why: '前置詞のあとに that は置けない。without which。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
