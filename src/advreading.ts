@@ -38862,6 +38862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-memorization',
+    title: 'Learning by Heart',
+    level: '難関大（評論）',
+    paragraphs: [
+      "There was a time when learning by heart was regarded as the foundation of education. Children memorized poems, multiplication tables, historical dates, and long passages from important texts, and the ability to recite them was considered a sign of learning. Today, memorization is often viewed with suspicion. Critics describe it as mechanical and dull, a poor substitute for genuine understanding, and in an age when almost any fact can be found in seconds on a phone, it may seem pointless to store information in our own minds. Yet the case against memorization may be weaker than it appears.",
+      "The most common objection to memorization is that it produces knowledge without understanding. A student who has memorized a formula may be able to repeat it without knowing when or why to use it, and one who has learned a poem by heart may recite its words without grasping its meaning. This danger is real, and education that relies only on memorization can indeed become empty. But the objection assumes that memorization and understanding are opposed, when in fact they may support each other in important ways.",
+      "Understanding, after all, depends on having something to understand. ( A ) we can look up facts whenever we need them, we cannot think with knowledge that is not already in our minds. A person who wishes to solve a problem in mathematics, to appreciate a line of poetry, or to follow an argument in history must be able to call upon relevant knowledge quickly and without effort. The more we know by heart, the more freely our attention can turn to the connections between ideas, which is where understanding actually takes place.",
+      "Memorization also changes our relationship with what we learn. A poem that has been learned by heart is not merely stored but lived with; it may return to us at unexpected moments, revealing new meanings as our experience grows. Many people who memorized passages in childhood report that those words became companions throughout their lives, offering comfort in difficult times or clarity in moments of confusion. Information found on a screen, by contrast, tends to be used and forgotten, rarely becoming part of who we are.",
+      "There is also a social dimension to shared memory. Communities that know the same songs, stories, or sayings possess a common language through which they can express shared feelings and recall a shared past. When such knowledge is no longer held in people's minds but only stored in books or databases, something of this common life may be lost. The ability to recite a poem together at a ceremony or to sing a traditional song at a gathering depends on memory that has been cultivated over time. Such moments are difficult to create when every word must first be looked up.",
+      "None of this means that education should return to endless repetition. Memorization is most valuable when it is joined with explanation, discussion, and application, so that what is remembered is also understood. The question is not whether students should memorize or understand, but how the two can be combined. A student who memorizes key ideas and then explores how they connect is likely to learn more deeply than one who either memorizes without thinking or thinks without remembering.",
+      "In a world where information is abundant, it may seem that our own memories matter less than ever. Yet the very abundance of information may make memory more important, not less. Without a store of knowledge in our own minds, we may find it difficult to judge which information is reliable, to recognize what is new, or to think independently at all. Learning by heart, understood in this way, is not an outdated habit but a means of making knowledge truly our own.",
+    ],
+    ja: [
+      '暗記が教育の土台と見なされていた時代があった。子どもたちは詩やかけ算の九九や歴史の年号や大切な文章の長い一節をおぼえ、それをそらで言える力は学んだことのしるしと考えられていた。今日、暗記はしばしばうたがいの目で見られる。批判する人々はそれを機械的で退屈な、本当の理解のまずしい代用品だと言い、ほとんどどんな事実も電話で数秒のうちに見つけられる時代に、自分の頭の中に情報をたくわえるのは無意味に思えるかもしれない。しかし暗記への反論は、見かけほど強くないかもしれない。',
+      '暗記へのもっともよくある反論は、それが理解をともなわない知識を生むというものである。公式を暗記した生徒は、いつなぜそれを使うのかを知らずにくり返せるかもしれず、詩をそらでおぼえた生徒は、その意味をつかまずにことばを暗唱するかもしれない。この危険は本物であり、暗記だけにたよる教育はたしかに中身のないものになりうる。しかしこの反論は暗記と理解が対立していると前提しているが、実際には両者は大切なやり方でたがいを支え合っているかもしれない。',
+      '結局のところ、理解は、理解すべき何かをもっていることにかかっている。事実は必要なときにいつでも調べられるが、すでに頭の中にない知識で考えることはできない。数学の問題をとこうとする人も、詩の一行を味わおうとする人も、歴史の議論についていこうとする人も、かかわりのある知識をすばやく、苦労なく呼び出せなければならない。そらで知っていることが多いほど、私たちの注意は、実際に理解が起こる場である考えどうしのつながりへと、より自由に向かえるのである。',
+      '暗記はまた、学ぶものとの関係を変える。そらでおぼえた詩は、ただたくわえられるのではなく、ともに生きられる。それは思いがけないときに私たちのもとにもどり、経験が深まるにつれて新しい意味を明かしてくれるかもしれない。子どものころに文章を暗記した多くの人は、そのことばが一生の友になり、つらいときにはなぐさめを、まよったときにははっきりした考えをあたえてくれたと言う。それに対して、画面で見つけた情報は使われてはわすれられがちで、自分の一部になることはめったにない。',
+      '共有された記憶には社会的な面もある。同じ歌や物語やことわざを知っている地域は、共通の気持ちを表し、共通の過去を思い出せる共通のことばをもっている。そうした知識が人々の頭の中にもうなく、本やデータベースにたくわえられているだけになると、この共通の暮らしの何かが失われるかもしれない。儀式でいっしょに詩を暗唱したり、集まりで伝統の歌を歌ったりできるのは、時間をかけて育てられた記憶のおかげなのである。すべてのことばをまず調べなければならないなら、そうした瞬間を作るのはむずかしい。',
+      'このどれも、教育が終わりのないくり返しにもどるべきだということではない。暗記がもっとも価値をもつのは、説明や話し合いや応用と結びつき、おぼえたことが理解もされるときである。問題は、生徒が暗記すべきか理解すべきかではなく、二つをどう組み合わせられるかである。大切な考えを暗記し、それがどうつながるかを探る生徒は、考えずに暗記する生徒や、おぼえずに考える生徒よりも深く学ぶだろう。',
+      '情報があふれる世界では、自分の記憶はこれまでになく大切でなくなったように思えるかもしれない。しかし情報があふれていることこそが、記憶をより大切にするのかもしれない。自分の頭の中に知識のたくわえがなければ、どの情報が信頼できるかを判断したり、何が新しいかに気づいたり、そもそも自分で考えたりするのがむずかしくなるかもしれない。このように理解すると、暗記は古くさい習慣ではなく、知識を本当に自分のものにする手段なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「事実はいつでも調べられるが、頭にない知識で考えることはできない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '今日、暗記はしばしばうたがいの目で見られる。', answer: true, why: '第1段落 Today, memorization is often viewed with suspicion。' },
+      { statement: '筆者によれば、暗記と理解は必ず対立する。', answer: false, why: '第2段落 they may support each other in important ways。' },
+      { statement: '子どものころに暗記したことばが一生の友になったと言う人は多い。', answer: true, why: '第4段落 those words became companions throughout their lives。' },
+      { statement: '筆者は、教育は終わりのないくり返しにもどるべきだと考えている。', answer: false, why: '第6段落 None of this means that education should return to endless repetition。' },
+    ],
+    qa: [
+      { q: 'Where does understanding actually take place, according to the author?', choices: ['In the connections between ideas.', 'On a phone screen.', 'In a database.', 'In repetition alone.'], answer: 0, why: '第3段落 the connections between ideas, which is where understanding actually takes place。' },
+      { q: 'What may the abundance of information make more important?', choices: ['Memory.', 'Speed.', 'Silence.', 'Money.'], answer: 0, why: '第7段落 the very abundance of information may make memory more important。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
