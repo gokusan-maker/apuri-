@@ -2850,3 +2850,10 @@ it('誤文訂正〈200〉：東大レベル every time・whenever の単元が10
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('Every time')
 })
+
+it('正誤問題〈207〉：京大レベル 部分否定の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-partial-negation-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) so money is everything')
+})

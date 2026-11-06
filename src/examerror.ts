@@ -4922,6 +4922,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It said that (B) the bridge (C) will be (D) finished next year.', choices: ['(A) It said that', '(B) the bridge', '(C) will be', '(D) finished next year'], answer: 0, why: '「～と言われている」は It is said that。is がぬけている。' },
     ],
   },
+  {
+    id: 'exam-error-partial-negation-kyodai',
+    title: '入試の正誤問題〈207〉（京大レベル：英作文の部分否定 not necessarily・not always）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'not always「いつも～とはかぎらない」、not necessarily「必ずしも～ではない」、not all／not every「すべてが～とはかぎらない」、not completely「完全に～というわけではない」は部分否定。not を前に置く語順にする（always do not・every not は×）。necessarily は副詞なので形容詞の前でも necessary にしない。部分否定は「そうでない場合もある」という意味なので、あとに続く内容と矛盾しないか確かめる。',
+    ],
+    examples: [
+      { en: 'The best players do not always win.', ja: 'いちばんうまい選手がいつも勝つとはかぎらない。' },
+      { en: 'Expensive things are not necessarily better.', ja: '高いものが必ずしもよいとはかぎらない。' },
+    ],
+    questions: [
+      { sentence: '(A) Rich people (B) are not always (C) happy, (D) so money is everything.', choices: ['(A) Rich people', '(B) are not always', '(C) happy,', '(D) so money is everything'], answer: 3, why: '「金持ちがいつも幸せとはかぎらない」から「お金がすべてだ」は導けない。so money is not everything が自然。' },
+      { sentence: '(A) Not all (B) of the students (C) was (D) able to answer the question.', choices: ['(A) Not all', '(B) of the students', '(C) was', '(D) able to answer the question'], answer: 2, why: 'not all of the students は複数なので were。' },
+      { sentence: '(A) Expensive (B) things are not (C) necessary (D) better than cheap ones.', choices: ['(A) Expensive', '(B) things are not', '(C) necessary', '(D) better than cheap ones'], answer: 2, why: '部分否定「必ずしも～ではない」は副詞の necessarily。' },
+      { sentence: '(A) The best players (B) always do not (C) win (D) the game.', choices: ['(A) The best players', '(B) always do not', '(C) win', '(D) the game'], answer: 1, why: '「いつも～とはかぎらない」は do not always の語順。' },
+      { sentence: '(A) Every not (B) student (C) likes (D) mathematics.', choices: ['(A) Every not', '(B) student', '(C) likes', '(D) mathematics'], answer: 0, why: '「すべての生徒が～とはかぎらない」は Not every student の語順。' },
+      { sentence: '(A) What the newspaper says (B) is not (C) necessarily (D) truth.', choices: ['(A) What the newspaper says', '(B) is not', '(C) necessarily', '(D) truth'], answer: 3, why: 'be 動詞のあとは形容詞 true。is not necessarily true。' },
+      { sentence: '(A) I don’t (B) completely (C) agreeing (D) with your opinion.', choices: ['(A) I don’t', '(B) completely', '(C) agreeing', '(D) with your opinion'], answer: 2, why: 'don’t のあとは動詞の原形 agree。not completely「完全に～というわけではない」。' },
+      { sentence: '(A) Not all (B) birds (C) can fly; penguins, for example, (D) can fly very well.', choices: ['(A) Not all', '(B) birds', '(C) can fly; penguins, for example,', '(D) can fly very well'], answer: 3, why: '「すべての鳥が飛べるわけではない」の例なので、ペンギンは飛べない。cannot fly。' },
+      { sentence: '(A) Old (B) books are not (C) always (D) more valuable as new ones.', choices: ['(A) Old', '(B) books are not', '(C) always', '(D) more valuable as new ones'], answer: 3, why: '比較級 more valuable のあとは than。' },
+      { sentence: '(A) It is (B) not (C) necessary (D) true that hard work leads to success.', choices: ['(A) It is', '(B) not', '(C) necessary', '(D) true that hard work leads to success'], answer: 2, why: '「必ずしも本当ではない」は not necessarily true。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
