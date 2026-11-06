@@ -4850,6 +4850,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) His advice (B) proved (C) to be (D) of great helpful.', choices: ['(A) His advice', '(B) proved', '(C) to be', '(D) of great helpful'], answer: 3, why: 'of のあとは名詞。of great help「とても役に立つ」。' },
     ],
   },
+  {
+    id: 'exam-error-reflexive-kokkou',
+    title: '入試の正誤問題〈204〉（国公立レベル：再帰代名詞 myself・by oneself）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '主語と目的語が同じ人・物のときは再帰代名詞（myself・yourself・himself・herself・itself・ourselves・yourselves・themselves）を使う。you が一人なら yourself、複数なら yourselves。hisself・theirselves という語はない。慣用表現に by oneself「一人で」、enjoy oneself「楽しむ」、help oneself to ～「～を自由に取る」、introduce oneself「自己紹介する」、by itself「ひとりでに」がある。再帰代名詞は主語には使えない。',
+    ],
+    examples: [
+      { en: 'She looked at herself in the mirror.', ja: '彼女は鏡で自分を見た。' },
+      { en: 'He lives by himself in a small apartment.', ja: '彼は小さなアパートに一人で住んでいる。' },
+    ],
+    questions: [
+      { sentence: '(A) She looked at (B) her (C) in the mirror (D) for a long time.', choices: ['(A) She looked at', '(B) her', '(C) in the mirror', '(D) for a long time'], answer: 1, why: '主語と目的語が同じ人なので再帰代名詞。looked at herself。' },
+      { sentence: '(A) Please (B) help (C) yourselves (D) to the cake, Tom.', choices: ['(A) Please', '(B) help', '(C) yourselves', '(D) to the cake, Tom'], answer: 2, why: '相手は Tom 一人なので単数の yourself。help yourself to ～「～を自由に取って食べる」。' },
+      { sentence: '(A) He lives (B) by him (C) in a small (D) apartment.', choices: ['(A) He lives', '(B) by him', '(C) in a small', '(D) apartment'], answer: 1, why: 'by oneself「一人で」。by himself。' },
+      { sentence: '(A) We (B) enjoyed (C) us (D) at the party.', choices: ['(A) We', '(B) enjoyed', '(C) us', '(D) at the party'], answer: 2, why: 'enjoy oneself「楽しむ」。主語 we なので ourselves。' },
+      { sentence: '(A) The children (B) cleaned the room (C) by theirselves (D) yesterday.', choices: ['(A) The children', '(B) cleaned the room', '(C) by theirselves', '(D) yesterday'], answer: 2, why: 'theirselves という語はない。themselves。' },
+      { sentence: '(A) I hurt (B) me (C) while (D) playing soccer.', choices: ['(A) I hurt', '(B) me', '(C) while', '(D) playing soccer'], answer: 1, why: '主語と目的語が同じなので myself。I hurt myself。' },
+      { sentence: '(A) Myself (B) and my sister (C) went (D) to the zoo.', choices: ['(A) Myself', '(B) and my sister', '(C) went', '(D) to the zoo'], answer: 0, why: '主語に myself は使えない。My sister and I went to the zoo。' },
+      { sentence: '(A) The machine (B) turns (C) off (D) by it.', choices: ['(A) The machine', '(B) turns', '(C) off', '(D) by it'], answer: 3, why: '「ひとりでに」は by itself。' },
+      { sentence: '(A) He (B) introduced (C) him (D) to the new students.', choices: ['(A) He', '(B) introduced', '(C) him', '(D) to the new students'], answer: 2, why: '自分を紹介するので himself。introduced himself。' },
+      { sentence: '(A) Did you (B) make (C) this cake (D) by yourselves, Mary?', choices: ['(A) Did you', '(B) make', '(C) this cake', '(D) by yourselves, Mary?'], answer: 3, why: '相手は Mary 一人なので by yourself。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
