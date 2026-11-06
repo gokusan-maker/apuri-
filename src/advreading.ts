@@ -38018,6 +38018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-exotic-pets',
+    title: 'Should the Exotic Pet Trade Be Banned?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Around the world, millions of people keep exotic animals as pets, from parrots and tortoises to snakes, monkeys, and even big cats. The global trade that supplies these animals is worth billions of dollars, and online marketplaces have made it easier than ever to buy creatures that once could be seen only in zoos or documentaries. In response to concerns about animal welfare, conservation, and public health, a growing number of governments have proposed stricter controls or outright bans on the trade, but such proposals have met strong resistance from owners, breeders, and sellers.",
+      "Supporters of a ban argue that the exotic pet trade threatens wild populations. Many animals sold as pets are captured from the wild rather than bred in captivity, and for some species collection for the pet trade has become a serious cause of decline. Even when animals are bred in captivity, supporters claim, the demand created by the trade encourages illegal capture and smuggling, since wild animals are often cheaper to obtain. In their view, the only effective way to protect vulnerable species is to reduce the demand for them as pets.",
+      "Supporters also emphasize the welfare of the animals themselves. Exotic species often have complex needs for space, temperature, diet, and social contact that are difficult to meet in an ordinary home. ( A ) many owners care deeply about their pets, supporters argue, good intentions are not enough when the necessary knowledge and facilities are lacking. As a result, many exotic pets suffer from illness or stress, and large numbers die within the first year of captivity or are abandoned when they grow larger or more demanding than their owners expected.",
+      "Concerns about public health have added weight to these arguments. Some exotic animals can carry diseases that may be transmitted to humans, and the close contact involved in keeping such animals at home may increase the risk of infection. Animals that escape or are released by their owners can also become invasive species, competing with native wildlife and damaging local ecosystems. Supporters argue that the costs of these problems, which fall on society as a whole, justify strict regulation of the trade.",
+      "Opponents of a ban, however, argue that responsible ownership is possible and should not be punished. Many keepers of reptiles, birds, and other exotic species are knowledgeable enthusiasts who provide excellent care and contribute to scientific understanding of the animals they keep. Some captive breeding programs run by private keepers have even helped to preserve species that are endangered in the wild. Opponents argue that a ban would penalize these responsible owners for the failures of others, and that better education and licensing would be a fairer solution.",
+      "Opponents also warn that a ban might simply drive the trade underground. If legal sales were prohibited, they argue, people who wanted exotic pets might turn to illegal sellers, where conditions are worse and no checks are made on the health or origin of the animals. In this view, a regulated legal market, with clear rules about which species can be sold and how they must be kept, would offer better protection for both animals and people than a prohibition that could not be fully enforced.",
+      "The debate over the exotic pet trade raises broader questions about the relationship between humans and wild animals. The desire to live close to unusual and beautiful creatures is understandable, and for some people it reflects a genuine fascination with the natural world. Yet that desire must be weighed against the needs of the animals and the health of wild populations. Whether through bans, licensing, or education, societies are increasingly being asked to consider whether some animals are better appreciated in the wild than in the home.",
+    ],
+    ja: [
+      '世界中で、何百万人もの人々が、オウムやカメからヘビやサル、さらには大型のネコ科の動物まで、めずらしい動物をペットとして飼っている。こうした動物を供給する世界的な取引は何十億ドルもの規模があり、オンラインの市場によって、かつては動物園やドキュメンタリーでしか見られなかった生き物を買うことが、これまでになく簡単になった。動物福祉や自然保護や公衆衛生への心配にこたえて、取引をきびしく規制したり、すっかり禁止したりすることを提案する政府がふえているが、そうした提案は飼い主や繁殖業者や売り手から強い抵抗を受けてきた。',
+      '禁止を支持する人々は、めずらしいペットの取引は野生の個体群をおびやかしていると主張する。ペットとして売られる動物の多くは飼育下で繁殖されたのではなく野生からとらえられたもので、ある種にとってはペット取引のための採集が数のへる深刻な原因になっている。飼育下で繁殖された動物であっても、野生の動物の方が安く手に入ることが多いので、取引が生む需要が違法な捕獲や密輸をうながすと支持する人々は主張する。彼らの見方では、弱い立場の種を守る唯一の効果的な方法は、ペットとしての需要をへらすことである。',
+      '支持する人々はまた、動物自身の福祉を強調する。めずらしい種は、ふつうの家では満たしにくい、広さや温度や食べ物や仲間とのかかわりについての複雑な必要をもつことが多い。多くの飼い主はペットを深く大切にしているが、必要な知識や設備が足りないときには、よい意図だけでは十分ではないと支持する人々は主張する。その結果、多くのめずらしいペットが病気やストレスに苦しみ、飼われはじめて最初の一年のうちに死んだり、飼い主が思っていたより大きく、手がかかるようになると捨てられたりするものも多い。',
+      '公衆衛生への心配が、こうした主張に重みを加えてきた。めずらしい動物のなかには人間にうつりうる病気をもつものもおり、そうした動物を家で飼うことにともなう密接なふれあいは、感染の危険を高めるかもしれない。にげ出したり飼い主にはなされたりした動物は外来種になり、その土地の野生生物と競い、地元の生態系をそこなうこともある。こうした問題の費用は社会全体が負うので、取引をきびしく規制することは正当化されると支持する人々は主張する。',
+      'しかし禁止に反対する人々は、責任ある飼い方は可能であり、罰せられるべきではないと主張する。爬虫類や鳥やほかのめずらしい種を飼う人の多くは、すぐれた世話をし、飼っている動物の科学的な理解に貢献する知識豊かな愛好家である。個人の飼育者が運営する飼育下繁殖の取り組みのなかには、野生で絶滅のおそれがある種を守る助けになったものさえある。禁止はほかの人々の失敗のためにこうした責任ある飼い主を罰することになり、よりよい教育と免許制の方が公平な解決策だろうと反対する人々は主張する。',
+      '反対する人々はまた、禁止は取引を地下にもぐらせるだけかもしれないと警告する。合法的な販売が禁じられれば、めずらしいペットをほしい人々は違法な売り手に向かうかもしれず、そこでは条件はもっと悪く、動物の健康や出どころについて何の確認もされないと彼らは主張する。この見方では、どの種を売ってよいか、どう飼わなければならないかについてはっきりした規則のある、規制された合法的な市場の方が、完全には執行できない禁止よりも、動物と人の両方をよりよく守るだろう。',
+      'めずらしいペットの取引をめぐる議論は、人間と野生動物の関係について、より広い問いを投げかける。めずらしく美しい生き物の近くで暮らしたいという願いは理解できるものであり、ある人々にとってそれは自然界への本物の興味の表れである。しかしその願いは、動物の必要や野生の個体群の健康とはかりにかけられなければならない。禁止によってであれ、免許制や教育によってであれ、社会は、ある動物は家の中より野生でこそよく味わわれるのではないかを考えるよう、ますます求められている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「多くの飼い主は大切にしているが、よい意図だけでは十分でない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of a ban argue that the trade threatens wild ( 1 ), harms animal welfare, and creates risks to public health. Opponents argue that responsible ( 2 ) is possible and that a ban might drive the trade ( 3 ).',
+      blanks: [
+        { choices: ['populations', 'prices', 'zoos', 'markets'], answer: 0, why: '第2段落 the exotic pet trade threatens wild populations。' },
+        { choices: ['ownership', 'hunting', 'trading', 'farming'], answer: 0, why: '第5段落 responsible ownership is possible。' },
+        { choices: ['underground', 'abroad', 'online', 'upward'], answer: 0, why: '第6段落 a ban might simply drive the trade underground。' },
+      ],
+    },
+    tf: [
+      { statement: 'ペットとして売られる動物の多くは、野生からとらえられている。', answer: true, why: '第2段落 Many animals sold as pets are captured from the wild。' },
+      { statement: 'めずらしい種の必要は、ふつうの家でかんたんに満たせる。', answer: false, why: '第3段落 difficult to meet in an ordinary home。' },
+      { statement: '個人の飼育者の繁殖の取り組みが、絶滅のおそれのある種を守る助けになったこともある。', answer: true, why: '第5段落 have even helped to preserve species that are endangered in the wild。' },
+      { statement: '反対する人々は、規制のない市場がもっともよいと考えている。', answer: false, why: '第6段落 a regulated legal market, with clear rules。' },
+    ],
+    qa: [
+      { q: 'What can happen to animals that escape or are released?', choices: ['They can become invasive species.', 'They always return home.', 'They become endangered.', 'They are sold again.'], answer: 0, why: '第4段落 can also become invasive species。' },
+      { q: 'What do opponents propose instead of a ban?', choices: ['Better education and licensing.', 'Higher prices.', 'More zoos.', 'Free animals for everyone.'], answer: 0, why: '第5段落 better education and licensing would be a fairer solution。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
