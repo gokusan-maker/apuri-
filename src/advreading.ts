@@ -37742,6 +37742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mirrors',
+    title: 'On Mirrors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, people rarely saw their own faces. Still water, polished metal, and later small and expensive mirrors offered occasional and imperfect glimpses, but the clear reflection that most of us now encounter many times a day is a relatively recent experience. Today, mirrors hang in bathrooms, shops, and elevators, and the cameras on our phones allow us to examine our appearance whenever we wish. It is worth asking what this constant self-observation has done to the way we understand ourselves.",
+      "At first glance, the mirror seems to offer simple and objective information. It shows us whether our hair is tidy or our clothes are clean, allowing us to present ourselves to others with confidence. In this practical sense, the mirror is a useful tool, much like a clock or a map. Yet the image in the mirror is never quite neutral. We do not merely look at our reflection; we judge it, comparing it with an image of how we wish to appear or how we believe others expect us to look. In this way, even a quick glance at the mirror involves a quiet act of evaluation.",
+      "This act of judgment reveals something curious about the relationship between the self and its image. ( A ) the face in the mirror is undoubtedly our own, we often experience it as something slightly foreign, an object to be inspected rather than the familiar presence from which we look out at the world. In ordinary life, we do not see our own faces at all; we see the faces of others. The mirror reverses this situation, inviting us to see ourselves as others see us, or at least as we imagine they do.",
+      "There is value in this reversal. To be able to see ourselves from the outside is, in a sense, a precondition of self-knowledge. A person who never considered how they appeared to others might remain unaware of the effects of their behavior and unable to understand the reactions they provoke. The mirror, in this sense, can serve as a symbol of reflection in its other meaning: the capacity to step back from our immediate experience and consider ourselves with some detachment.",
+      "Yet the mirror can also mislead. It shows only the surface, and it shows that surface in a frozen moment, without the movement, expression, and context through which others actually perceive us. A face that seems unremarkable in the bathroom mirror may be lively and warm in conversation, while a carefully arranged appearance may conceal anxiety or unhappiness. If we come to identify ourselves too closely with the image we see, we may mistake the most visible part of ourselves for the whole.",
+      "The arrival of cameras and social media has intensified both the value and the danger of the mirror. We can now record and share countless images of ourselves, adjusting them until they match an ideal that may have little to do with how we actually look or live. Such images can be a source of pleasure and creativity, but they can also encourage a constant comparison with others and with idealized versions of ourselves, leaving many people more anxious about their appearance than any previous generation.",
+      "Perhaps the lesson of the mirror is that self-knowledge requires both seeing ourselves from the outside and remembering that we are more than what can be seen. The reflection is a real part of who we are, but it is only a part, and often the least important one. The people who know us best rarely think about our faces at all; they think about how we speak, how we listen, and how we treat them. A wise relationship with the mirror, then, is one that uses it without being ruled by it.",
+    ],
+    ja: [
+      '人間の歴史のほとんどのあいだ、人々は自分の顔をめったに見なかった。静かな水やみがいた金属、のちには小さく高価な鏡が、ときどき不完全なすがたを見せてくれたが、今では私たちの多くが一日に何度も出会うはっきりした映り姿は、比較的新しい経験である。今日、鏡は洗面所や店やエレベーターにかかり、電話のカメラによって、私たちは見たいときにいつでも自分の見た目を調べられる。このたえまない自己観察が、私たちの自分の理解のしかたに何をもたらしたのかを問う値打ちがある。',
+      '一見すると、鏡は単純で客観的な情報をあたえてくれるように思える。それは髪が整っているか、服がきれいかを見せ、自信をもってほかの人の前に出られるようにしてくれる。この実用的な意味で、鏡は時計や地図とよく似た役に立つ道具である。しかし鏡の中の像は決して完全に中立ではない。私たちは映った自分をただ見るのではなく、それを裁き、どう見られたいか、ほかの人がどう見えることを期待していると思うかという像とくらべるのである。このように、鏡をちらりと見ることにさえ、静かな評価の行為がふくまれている。',
+      'この裁くという行為は、自分とその像との関係について、ある奇妙なことを明らかにする。鏡の中の顔はまちがいなく自分のものだが、私たちはしばしばそれを少しよそよそしいもの、つまり、そこから世界を見ているなじみの存在というより、調べられるべき物として経験する。ふだんの暮らしでは、私たちは自分の顔をまったく見ず、ほかの人の顔を見ている。鏡はこの状況を逆にし、ほかの人が私たちを見るように、あるいは少なくともそう見ていると想像するように、自分を見るようにうながすのである。',
+      'この逆転には価値がある。自分を外から見られることは、ある意味で自己認識の前提である。自分がほかの人にどう見えるかを一度も考えない人は、自分のふるまいの影響に気づかないままで、自分が引き起こす反応を理解できないかもしれない。この意味で鏡は、「リフレクション」のもう一つの意味、つまり目の前の経験から一歩引いて、ある程度はなれて自分について考える力の象徴になりうる。',
+      'しかし鏡はまどわすこともある。それは表面しか見せず、しかもその表面を、ほかの人が実際に私たちを感じとる動きや表情や文脈なしに、こおりついた一瞬の中で見せる。洗面所の鏡ではありふれて見える顔が、会話の中では生き生きとしてあたたかいこともあれば、注意深く整えた見た目が不安や不幸せをかくしていることもある。見える像と自分をあまりにも強く同じものと見なすようになると、自分のもっとも目に見える部分を全体と取りちがえてしまうかもしれない。',
+      'カメラとソーシャルメディアの登場は、鏡の価値と危険の両方を強めた。私たちは今では自分の画像を数えきれないほど記録して共有し、実際の見た目や暮らしとはほとんど関係のないかもしれない理想に合うまで調整できる。そうした画像は楽しみや創造性のもとになりうるが、ほかの人や理想化された自分とのたえまない比較をうながし、多くの人々を、これまでのどの世代よりも見た目について不安にさせることもある。',
+      'おそらく鏡の教えは、自己認識には、自分を外から見ることと、自分は見えるもの以上の存在だとおぼえておくことの両方が必要だということである。映り姿は私たちの本当の一部だが、それは一部にすぎず、しばしばもっとも大切でない部分である。私たちをいちばんよく知る人々は、私たちの顔のことをほとんど考えない。彼らが考えるのは、私たちがどう話し、どう聞き、どう彼らに接するかである。そうすると、鏡との賢いつきあい方とは、それに支配されずにそれを使うことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「鏡の中の顔はまちがいなく自分のものだが、よそよそしく感じる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人間の歴史のほとんどのあいだ、人々は自分の顔をめったに見なかった。', answer: true, why: '第1段落 For most of human history, people rarely saw their own faces。' },
+      { statement: '筆者によれば、鏡の中の像は完全に中立である。', answer: false, why: '第2段落 the image in the mirror is never quite neutral。' },
+      { statement: '鏡は表面を、こおりついた一瞬の中で見せる。', answer: true, why: '第5段落 shows that surface in a frozen moment。' },
+      { statement: '私たちをよく知る人々は、いつも私たちの顔のことを考えている。', answer: false, why: '第7段落 rarely think about our faces at all。' },
+    ],
+    qa: [
+      { q: 'What does the author say is a precondition of self-knowledge?', choices: ['Being able to see ourselves from the outside.', 'Owning many mirrors.', 'Taking many photographs.', 'Never thinking about others.'], answer: 0, why: '第4段落 To be able to see ourselves from the outside is ... a precondition of self-knowledge。' },
+      { q: 'What can images on social media encourage?', choices: ['Constant comparison with others and idealized selves.', 'Less interest in appearance.', 'Honest self-knowledge only.', 'Fewer photographs.'], answer: 0, why: '第6段落 encourage a constant comparison with others and with idealized versions of ourselves。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
