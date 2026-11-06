@@ -37182,6 +37182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-losing',
+    title: 'Learning to Lose',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Winning is widely celebrated. Societies honor champions, schools display trophies, and much of popular culture tells stories of triumph over adversity. Losing, by contrast, is usually treated as something to be avoided, forgotten, or quickly overcome. Yet everyone who competes in anything, whether in sport, examinations, or the pursuit of a career, will lose far more often than they win. It may therefore be worth asking whether learning how to lose is as important as learning how to win.",
+      "One reason to value the experience of losing is that it teaches lessons that victory cannot. A player who wins easily may never discover the weaknesses in their technique, while one who loses is forced to examine what went wrong. Defeat provides information about our limits and invites us to improve. Many accomplished athletes, scientists, and artists describe their failures as the turning points of their careers, moments that compelled them to rethink their methods and to develop new skills.",
+      "Losing also tests and shapes character. It is relatively easy to behave graciously when one is winning; the true test comes when things go badly. ( A ) the disappointment of defeat can be intense, learning to accept it without anger or excuses, to congratulate the winner sincerely, and to try again, develops qualities such as humility, resilience, and respect for others. These qualities may prove more valuable in later life than any particular victory. Friends and colleagues tend to remember not who won a particular contest but how each person behaved when the result was announced.",
+      "There is, moreover, a social dimension to losing well. Every competition requires that some participants lose, and a culture in which losing is regarded as shameful may become one in which people refuse to accept defeat, blame others, or abandon fair play in order to avoid it. The ability to lose gracefully is therefore not only a personal virtue but also a condition for healthy competition, in sport and elsewhere. Even in politics, the willingness of defeated candidates to accept the results of elections is essential to democratic life.",
+      "Some educators worry that efforts to protect children from disappointment may deprive them of the chance to learn these lessons. When every participant receives a prize, or when competitions are avoided altogether, children may have fewer opportunities to experience defeat in a safe setting. This is not to say that young people should be exposed to harsh or humiliating failure, but rather that they may benefit from gentle experiences of losing, accompanied by support that helps them to understand and grow from the experience. A coach or parent who helps a child to see a defeat as a step in learning, rather than as a judgment of their worth, may give them a gift that lasts a lifetime.",
+      "It must be acknowledged, however, that not all losses are equal. Losing a game is very different from losing a job, a home, or a loved one, and the lessons of sport should not be used to dismiss the real suffering that some losses bring. Moreover, some people lose repeatedly not because of their own shortcomings but because of unfair conditions, and telling them simply to accept defeat gracefully would be inappropriate. Learning to lose well is valuable, but so is recognizing when losses result from injustice that should be challenged.",
+      "Perhaps, then, the art of losing is one of the less celebrated but more important skills of life. Victories are rare and often brief, while defeats are common and can teach lasting lessons. Those who learn to lose with grace, to learn from their failures, and to try again may find that they are better prepared for the many disappointments that every life contains. In this sense, knowing how to lose may be, in the end, an essential part of knowing how to live.",
+    ],
+    ja: [
+      '勝つことは広くたたえられる。社会はチャンピオンをほめたたえ、学校はトロフィーをかざり、大衆文化の多くは逆境に打ち勝つ物語を語る。対照的に、負けることはふつう、さけるべきもの、わすれるべきもの、あるいはすぐに乗りこえるべきものとしてあつかわれる。しかし、スポーツであれ試験であれ仕事の追求であれ、何かで競う人はだれでも、勝つよりはるかに多く負ける。それゆえ、負け方を学ぶことは勝ち方を学ぶことと同じくらい大切なのではないかと問うてみる値打ちがあるかもしれない。',
+      '負ける経験を大切にする一つの理由は、それが勝利には教えられない教訓を教えることである。かんたんに勝つ選手は自分の技術の弱点に気づかないかもしれないが、負けた選手は何がまちがっていたのかを調べざるをえない。敗北は私たちの限界についての情報をあたえ、上達するようさそう。多くのすぐれた運動選手や科学者や芸術家は、自分の失敗を仕事の転換点、つまりやり方を考え直し、新しい技能を育てざるをえなかった瞬間として語っている。',
+      '負けることはまた、人柄をためし、形づくる。勝っているときに品よくふるまうのは比較的かんたんであり、本当のためしは物事がうまくいかないときにやってくる。敗北の失望ははげしいことがあるが、怒ったり言いわけしたりせずにそれを受け入れ、勝った人を心から祝い、もう一度挑むことを学ぶことは、謙虚さや立ち直る力やほかの人への敬意のような性質を育てる。こうした性質は、のちの人生でどんな特定の勝利よりも価値があるとわかるかもしれない。友人や同僚は、ある勝負でだれが勝ったかではなく、結果が発表されたときにそれぞれがどうふるまったかを覚えていることが多い。',
+      'さらに、よく負けることには社会的な面もある。どんな競争でも一部の参加者が負けなければならず、負けることがはずかしいと見なされる文化は、人々が敗北を受け入れることをこばみ、ほかの人を責めたり、それをさけるために公正なふるまいを捨てたりする文化になってしまうかもしれない。それゆえ品よく負ける力は、個人の美徳であるだけでなく、スポーツでもほかの場でも、健全な競争の条件なのである。政治においてさえ、選挙で負けた候補者が結果を受け入れる気持ちは、民主的な暮らしに欠かせない。',
+      '子どもを失望から守ろうとする努力が、こうした教訓を学ぶ機会を子どもからうばっているのではないかと心配する教育者もいる。参加者全員が賞をもらったり、競争がすっかりさけられたりすると、子どもが安全な場で敗北を経験する機会は少なくなるかもしれない。これは若者がきびしい、あるいは屈辱的な失敗にさらされるべきだということではなく、むしろその経験を理解し、そこから成長する助けになるささえをともなった、おだやかな負けの経験から益を得られるかもしれないということである。子どもが敗北を自分の価値の判定ではなく学びの一歩として見られるよう助けるコーチや親は、一生続く贈り物をその子にあたえるのかもしれない。',
+      'しかし、すべての負けが同じではないことは認めなければならない。試合に負けることは、仕事や家や愛する人を失うこととはまったくちがい、スポーツの教訓を、ある喪失がもたらす本当の苦しみを軽く見るのに使うべきではない。さらに、自分の欠点のせいではなく不公平な条件のせいで負け続ける人もおり、そうした人に単に品よく敗北を受け入れよと言うのはふさわしくないだろう。よく負けることを学ぶのは価値があるが、負けが立ち向かうべき不正から生じているときにそれを見ぬくことも同じく価値がある。',
+      'だとすれば、負ける技術は、あまりたたえられないが、より大切な人生の技能の一つなのかもしれない。勝利はまれでしばしば短いが、敗北はよくあることで、長く残る教訓を教えてくれる。品よく負け、失敗から学び、もう一度挑むことを学んだ人は、どんな人生にもふくまれる多くの失望にそなえがよりできていると気づくかもしれない。この意味で、負け方を知ることは、結局のところ、生き方を知ることの欠かせない一部なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「敗北の失望ははげしいことがあるが、受け入れることを学ぶと性質が育つ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '何かで競う人はだれでも、勝つより多く負ける。', answer: true, why: '第1段落 will lose far more often than they win。' },
+      { statement: '筆者によれば、勝っているときに品よくふるまうのは難しい。', answer: false, why: '第3段落 It is relatively easy to behave graciously when one is winning。' },
+      { statement: '選挙で負けた候補者が結果を受け入れることは、民主的な暮らしに欠かせない。', answer: true, why: '第4段落 is essential to democratic life。' },
+      { statement: '筆者は、すべての負けは同じだと考えている。', answer: false, why: '第6段落 not all losses are equal。' },
+    ],
+    qa: [
+      { q: 'What do many accomplished people describe their failures as?', choices: ['The turning points of their careers.', 'Things they have forgotten.', 'Reasons to quit.', 'Proof of bad luck.'], answer: 0, why: '第2段落 describe their failures as the turning points of their careers。' },
+      { q: 'What do some educators worry about?', choices: ['Protecting children from disappointment may deprive them of lessons.', 'Children win too often.', 'Competitions are too safe.', 'Prizes are too expensive.'], answer: 0, why: '第5段落 efforts to protect children from disappointment may deprive them of the chance to learn these lessons。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
