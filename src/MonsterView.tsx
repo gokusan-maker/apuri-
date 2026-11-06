@@ -3076,6 +3076,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M20 84 l10 -8 l12 4 l6 6 z" fill="#78716c" />
       </g>
     )
+  if (species === 'jerboa')
+    return (
+      <g>
+        {/* 長いしっぽとふさ */}
+        <path d="M74 74 q16 6 22 -4" stroke="#3a2a12" strokeWidth="2" fill="none" />
+        <circle cx="96" cy="70" r="3" fill="#f5f5f4" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
