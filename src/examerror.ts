@@ -5090,6 +5090,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) An access (B) to the internet (C) is (D) important today.', choices: ['(A) An access', '(B) to the internet', '(C) is', '(D) important today'], answer: 0, why: 'access は数えられない名詞なので an をつけない。access to ～。' },
     ],
   },
+  {
+    id: 'exam-error-formal-object-todai',
+    title: '入試の正誤問題〈214〉（東大レベル：英作文の find it ＋形容詞＋ to ～（形式目的語））',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'find・make・think・consider・feel のあとの目的語が to 不定詞や that 節のときは、形式目的語 it を置いて本当の目的語をうしろに回す（I found it difficult to answer.）。it のあとは形容詞か名詞（clear・impossible・a rule）で、副詞にしない。意味上の主語は for ～ to …。決まった言い方に make it a rule to ～「～することにしている」、take it for granted that ～「～を当然と思う」がある。',
+    ],
+    examples: [
+      { en: 'I found it difficult to answer the question.', ja: 'その質問に答えるのはむずかしいとわかった。' },
+      { en: 'He makes it a rule to jog every morning.', ja: '彼は毎朝ジョギングすることにしている。' },
+    ],
+    questions: [
+      { sentence: '(A) I found (B) difficult (C) to answer (D) the question.', choices: ['(A) I found', '(B) difficult', '(C) to answer', '(D) the question'], answer: 1, why: '目的語の to 不定詞が長いときは形式目的語 it を置く。found it difficult。' },
+      { sentence: '(A) She made (B) it (C) clearly (D) that she disagreed.', choices: ['(A) She made', '(B) it', '(C) clearly', '(D) that she disagreed'], answer: 2, why: 'make it ＋形容詞＋ that ～ なので clear。' },
+      { sentence: '(A) He found (B) it (C) easy (D) make new friends.', choices: ['(A) He found', '(B) it', '(C) easy', '(D) make new friends'], answer: 3, why: 'it ＋形容詞のあとは to 不定詞。to make。' },
+      { sentence: '(A) They consider (B) that (C) wrong (D) to lie to children.', choices: ['(A) They consider', '(B) that', '(C) wrong', '(D) to lie to children'], answer: 1, why: '形式目的語は it。consider it wrong to ～。' },
+      { sentence: '(A) I found it (B) impossibly (C) to finish (D) the work in a day.', choices: ['(A) I found it', '(B) impossibly', '(C) to finish', '(D) the work in a day'], answer: 1, why: 'it のあとは形容詞なので impossible。' },
+      { sentence: '(A) The new rule (B) made it (C) difficult (D) for us leave early.', choices: ['(A) The new rule', '(B) made it', '(C) difficult', '(D) for us leave early'], answer: 3, why: 'for us のあとは to 不定詞。for us to leave。' },
+      { sentence: '(A) I take (B) it (C) for granted (D) what he will help us.', choices: ['(A) I take', '(B) it', '(C) for granted', '(D) what he will help us'], answer: 3, why: 'take it for granted that ～。what ではなく that。' },
+      { sentence: '(A) She (B) felt it (C) her duty (D) helping the poor.', choices: ['(A) She', '(B) felt it', '(C) her duty', '(D) helping the poor'], answer: 3, why: 'feel it one’s duty to ～ なので to help。' },
+      { sentence: '(A) He makes (B) a rule (C) to jog (D) every morning.', choices: ['(A) He makes', '(B) a rule', '(C) to jog', '(D) every morning'], answer: 1, why: 'make it a rule to ～ の it が必要。makes it a rule。' },
+      { sentence: '(A) Found it (B) hard (C) to believe (D) his story, I asked again.', choices: ['(A) Found it', '(B) hard', '(C) to believe', '(D) his story, I asked again'], answer: 0, why: '主語のない分詞構文なので Finding it hard ～。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
