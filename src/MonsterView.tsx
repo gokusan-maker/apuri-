@@ -3062,6 +3062,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M78 66 q14 -2 12 -16 q-6 8 -14 10 z" fill="#2b0f05" />
       </g>
     )
+  if (species === 'fossa')
+    return (
+      <g>
+        {/* 長いしっぽ */}
+        <path d="M76 70 q18 4 20 -14" stroke="#24150b" strokeWidth="4" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
