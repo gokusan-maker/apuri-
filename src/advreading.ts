@@ -38302,6 +38302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tears',
+    title: 'Why We Cry',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Tears are among the most puzzling of human expressions. We cry when we are sad, but also when we are overjoyed, deeply moved, relieved, or exhausted. A person may weep at a funeral and again at a wedding, at the end of a film or at the sound of a familiar song. Human beings appear to be the only animals that shed tears for emotional reasons, and the question of why we do so has interested thinkers for centuries. Considering this question may help us understand not only tears themselves but the nature of our emotional lives.",
+      "One common view holds that crying is a release of feeling that would otherwise become unbearable. According to this view, tears allow emotions that have built up inside us to flow out, leaving us calmer afterward. Many people do report feeling better after a good cry, and the idea of emotional release is deeply rooted in ordinary language. Yet research on the subject suggests that the relief people feel depends greatly on the circumstances, and that crying does not always bring comfort, particularly when it occurs in the presence of people who respond with impatience or disapproval.",
+      "Another view emphasizes the social meaning of tears. ( A ) many emotions can be hidden or disguised, tears are difficult to fake convincingly and difficult to conceal, which makes them a powerful signal to others. When we see someone crying, we tend to soften, to offer help, or at least to stop whatever we were doing that might have caused distress. In this sense, tears may function less as a release for the person who cries than as a message to those nearby, inviting care and reducing conflict.",
+      "This social dimension helps to explain why attitudes toward crying differ so widely between cultures and situations. In some societies, public weeping at funerals is expected and even encouraged, while in others it is regarded as a loss of self-control. Many people have been taught, especially in childhood, that certain people should not cry, or that crying is a sign of weakness. Such lessons can make it difficult to express grief or distress openly, and may leave some people feeling isolated in moments when they most need support.",
+      "The tears of joy present a particular puzzle. Why should we cry at moments of happiness, when there seems to be nothing to release and no help to request? One possible answer is that such tears arise when an experience overwhelms our ordinary capacity to respond, whether the experience is painful or joyful. The reunion with a loved one after a long separation, or the sudden success of a long struggle, may bring together relief, gratitude, and an awareness of what might have been lost, mingling feelings that cannot easily be separated.",
+      "Seen in this light, tears may be less a sign of a single emotion than of the meeting of several. We cry when the significance of a moment exceeds what words or gestures can express, when we are reminded of how much we care about something or someone. This may be why people often weep at art: a piece of music or a scene in a novel can awaken memories and hopes that have long been quiet, bringing them suddenly to the surface.",
+      "Perhaps, then, tears deserve more respect than they sometimes receive. They are not merely a weakness to be controlled or an embarrassment to be hidden, but a form of expression that reveals what matters to us. To cry is to acknowledge, often without choosing to, that we are affected by the world and by others. A society that made room for tears, without demanding them or forbidding them, might be one in which people found it easier to understand and to support one another.",
+    ],
+    ja: [
+      '涙は人間の表現の中でもっとも不思議なものの一つである。私たちは悲しいときに泣くが、大喜びしたとき、深く心を動かされたとき、ほっとしたとき、つかれはてたときにも泣く。人は葬式で泣き、また結婚式でも、映画の終わりにも、なじみの歌を聞いたときにも泣くことがある。人間は感情のために涙を流す唯一の動物であるらしく、なぜそうするのかという問いは何世紀ものあいだ思想家の関心をひいてきた。この問いを考えることは、涙そのものだけでなく、私たちの感情の生活の性質を理解する助けになるかもしれない。',
+      'よくある一つの見方は、泣くことは、そうでなければたえられなくなる気持ちを外に出すことだとする。この見方によると、涙は、心の中にたまった感情を流れ出させ、あとで私たちを落ち着かせてくれる。多くの人は思いきり泣いたあとに気分がよくなると言い、感情を外に出すという考えはふだんのことばに深く根づいている。しかしこの話題についての研究は、人々が感じる安らぎは状況に大きくかかっており、泣くことは、とくにいらだちや非難でこたえる人の前で起こるときには、いつもなぐさめをもたらすわけではないことを示している。',
+      '別の見方は、涙の社会的な意味を強調する。多くの感情はかくしたりよそおったりできるが、涙はそれらしくいつわるのがむずかしく、かくすのもむずかしいので、ほかの人への強い合図になる。だれかが泣いているのを見ると、私たちはやさしくなり、助けを申し出たり、少なくとも苦しみの原因になったかもしれないことをやめたりしがちである。この意味で、涙は泣く人のための発散というより、近くの人々への、思いやりをさそい対立をへらすメッセージとして働くのかもしれない。',
+      'この社会的な面は、泣くことへの態度が文化や状況によってこれほど大きくちがう理由を説明する助けになる。ある社会では葬式で人前で泣くことが期待され、すすめられさえするが、別の社会では自分をおさえられないこととみなされる。多くの人は、とくに子どものころに、ある人は泣くべきではない、あるいは泣くことは弱さのしるしだと教えられてきた。そうした教えは、悲しみや苦しみをおおっぴらに表すのをむずかしくし、支えをもっとも必要とする時に、孤立を感じさせるかもしれない。',
+      'うれし涙はとくに不思議である。外に出すものも求める助けもないように思える幸せの瞬間に、なぜ私たちは泣くのだろうか。一つのありうる答えは、そうした涙は、経験が苦しいものであれうれしいものであれ、こたえるふだんの力を圧倒するときに生まれるというものである。長くはなれていた愛する人との再会や、長い苦労がとつぜん実ることは、安心や感謝や、失われたかもしれないものへの意識を結びつけ、かんたんには切りはなせない気持ちをまぜ合わせるのかもしれない。',
+      'このように見ると、涙は一つの感情というより、いくつかの感情が出会うしるしなのかもしれない。私たちは、ある瞬間の意味がことばや身ぶりで表せるものをこえるとき、何かやだれかをどれほど大切に思っているかを思い出させられるときに泣く。人々がしばしば芸術に涙するのはこのためかもしれない。一曲の音楽や小説の一場面は、長いあいだしずまっていた思い出や希望を目覚めさせ、それをとつぜん表にうかび上がらせることがある。',
+      'そうするとおそらく、涙はときに受けている以上の敬意に値するのだろう。それはただおさえるべき弱さやかくすべきはずかしいことではなく、私たちにとって何が大切かを明らかにする表現の一つの形である。泣くことは、しばしば選ぶこともなく、自分が世界やほかの人々に心を動かされていると認めることである。涙を求めることも禁じることもなく、涙のための場所を作る社会は、人々がたがいを理解し支え合うのが、よりやさしい社会なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「多くの感情はかくせるが、涙はいつわるのもかくすのもむずかしい」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人間は、感情のために涙を流す唯一の動物であるらしい。', answer: true, why: '第1段落 Human beings appear to be the only animals that shed tears for emotional reasons。' },
+      { statement: '研究によれば、泣くことはいつもなぐさめをもたらす。', answer: false, why: '第2段落 crying does not always bring comfort。' },
+      { statement: '泣くことへの態度は、文化によって大きくちがう。', answer: true, why: '第4段落 attitudes toward crying differ so widely between cultures。' },
+      { statement: '筆者は、涙はかくすべきはずかしいものだと考えている。', answer: false, why: '第7段落 They are not merely a weakness to be controlled or an embarrassment to be hidden。' },
+    ],
+    qa: [
+      { q: 'Why are tears a powerful signal to others?', choices: ['They are difficult to fake and difficult to conceal.', 'They are always loud.', 'They last for hours.', 'They only happen in public.'], answer: 0, why: '第3段落 tears are difficult to fake convincingly and difficult to conceal。' },
+      { q: 'Why might people weep at art?', choices: ['Art can awaken memories and hopes that have long been quiet.', 'Art is always sad.', 'Art is expensive.', 'Art makes people tired.'], answer: 0, why: '第6段落 can awaken memories and hopes that have long been quiet。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
