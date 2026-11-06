@@ -2998,6 +2998,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="62" cy="84" rx="7" ry="3" fill="#2c261c" opacity="0.5" />
       </g>
     )
+  if (species === 'iberianlynx')
+    return (
+      <g>
+        {/* ほおの長い毛 */}
+        <path d="M24 48 l-6 6 l6 -1 M72 48 l6 6 l-6 -1" fill="none" stroke="#2e1d0b" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
