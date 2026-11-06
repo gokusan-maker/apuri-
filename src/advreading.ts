@@ -38542,6 +38542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-smell',
+    title: 'The Forgotten Sense',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the senses, smell is perhaps the most neglected in ordinary thought. We speak readily about what we see and hear, and we have rich vocabularies for colors and sounds, but when we try to describe a smell, we often find ourselves reduced to comparisons: it smells like rain, like burnt toast, like a hospital. Yet smell plays a far larger role in human experience than this poverty of language would suggest, and its peculiar relationship with memory and emotion makes it worth considering more carefully.",
+      "One of the most striking features of smell is its power to bring back the past. A particular scent, encountered unexpectedly, can return us in an instant to a childhood kitchen, a classroom, or a summer by the sea, often with a vividness that deliberate efforts at remembering cannot match. Many people have had the experience of being moved almost to tears by a smell they had not noticed for years, without at first being able to say why. Such memories seem to arrive whole, carrying feelings along with images.",
+      "This connection between smell and emotion may help to explain why our responses to scents are so personal. ( A ) most people agree about whether a color is red or blue, they often disagree sharply about whether a smell is pleasant or unpleasant. A scent that reminds one person of a beloved grandparent may remind another of an unhappy hospital visit. Our reactions to smells, in other words, are shaped not only by the smells themselves but by the histories we bring to them.",
+      "Smell also plays a quiet but important role in social life. People in many cultures associate certain scents with cleanliness, hospitality, or celebration, and the smell of food being prepared can create a sense of welcome long before a meal is served. At the same time, attitudes toward bodily odors and perfumes differ widely between societies, and judgments about how others smell have sometimes been used to express prejudice. The sense that seems most private can thus become entangled with questions of belonging and exclusion.",
+      "Modern life has changed our relationship with smell in significant ways. Cities are full of the odors of traffic and industry, while many homes and shops are filled with artificial fragrances designed to create particular moods. At the same time, much of our experience now takes place through screens, which can show images and play sounds but cannot convey scents. It is possible that, as more of life moves into digital spaces, the role of smell in shaping our memories and feelings is gradually diminishing, although few of us have noticed the change.",
+      "Those who have lost their sense of smell, whether through illness or injury, often describe the loss as far more serious than they would have expected. Food becomes less enjoyable, familiar places feel strangely empty, and the subtle emotional texture of daily life seems to fade. Such accounts suggest that smell contributes to our sense of being at home in the world in ways that we rarely notice until it is gone. Some describe the experience as like watching the world through glass, able to see everything but unable to fully take part in it.",
+      "Perhaps, then, smell deserves more attention than it usually receives. Paying closer attention to the scents around us, the smell of rain on a hot street, of bread in the morning, of a book that has been kept for many years, may enrich our experience and deepen our connection to places and people. In a world that often privileges sight above all other senses, learning to notice what we smell may be a small but genuine way of living more fully in the present while remaining connected to the past.",
+    ],
+    ja: [
+      'すべての感覚の中で、においはふだんの考えの中でもっともないがしろにされているものかもしれない。私たちは見るものや聞くものについてはたやすく話し、色や音のための豊かな語いももっているが、においを説明しようとすると、しばしばたとえにたよるしかなくなる。雨のようなにおい、こげたトーストのようなにおい、病院のようなにおい、と。しかし、においは人間の経験の中で、このことばのまずしさが示すよりはるかに大きな役割を果たしており、記憶や感情とのそのふしぎな関係は、より注意深く考える値打ちがある。',
+      'においのもっともおどろくべき特徴の一つは、過去を呼びもどす力である。思いがけず出会ったあるにおいは、一瞬で私たちを子どものころの台所や教室や海辺の夏へと連れもどすことができ、それはしばしば、意識して思い出そうとする努力ではかなわないほどあざやかである。多くの人は、何年も気づかなかったにおいに、はじめはなぜなのか言えないまま、ほとんど涙が出そうなほど心を動かされた経験をもっている。そうした記憶は、映像とともに気持ちもいっしょに運んで、まるごとやって来るように思える。',
+      'においと感情のこの結びつきは、においへの反応がなぜこれほど個人的なのかを説明する助けになるかもしれない。ほとんどの人はある色が赤か青かについては同意するが、あるにおいが心地よいか不快かについてはしばしば大きく意見が分かれる。ある人に大好きな祖父母を思い出させるにおいが、別の人には不幸な病院通いを思い出させるかもしれない。言いかえれば、においへの反応は、においそのものだけでなく、私たちがそれにもちこむ歴史によって形づくられるのである。',
+      'においはまた、社会生活の中で静かだが大切な役割を果たしている。多くの文化の人々はあるにおいを清潔さやもてなしや祝いと結びつけ、料理されている食べ物のにおいは、食事が出されるずっと前から歓迎の気持ちを生み出しうる。同時に、体のにおいや香水への態度は社会によって大きくちがい、ほかの人のにおいについての判断は、ときに偏見を表すために使われてきた。もっとも個人的に思える感覚が、こうして、受け入れることと閉め出すことの問題とからみ合うことがある。',
+      '現代の暮らしは、においとの関係を大きく変えた。都市は交通や工業のにおいでいっぱいであり、多くの家や店は、ある気分を生み出すために作られた人工の香りで満たされている。同時に、私たちの経験の多くは今では画面を通して起こるが、画面は映像を見せ音を流すことはできても、においを伝えることはできない。暮らしのより多くがデジタルの空間に移るにつれて、記憶や気持ちを形づくるにおいの役割は、少しずつ小さくなっているのかもしれないが、その変化に気づいている人はほとんどいない。',
+      '病気やけがによってにおいの感覚を失った人々は、その喪失を、予想していたよりはるかに深刻なものとして語ることが多い。食べ物はあまり楽しめなくなり、なじみの場所は奇妙なほど空っぽに感じられ、日々の暮らしの細やかな感情の手ざわりがうすれていくように思える。そうした話は、においが、失われるまでめったに気づかないやり方で、世界の中でくつろいでいるという感覚に貢献していることを示している。その経験を、ガラスごしに世界をながめるようなもの、すべてが見えるのに十分には加われないようなものだと語る人もいる。',
+      'そうするとおそらく、においはふだん受けている以上の注意に値するのだろう。暑い通りにふる雨のにおい、朝のパンのにおい、何年もしまっておいた本のにおいのような、まわりのにおいにもっと注意をはらうことは、私たちの経験を豊かにし、場所や人とのつながりを深めるかもしれない。しばしば視覚をほかのすべての感覚より重んじる世界で、においに気づくことを学ぶのは、過去とつながったまま、今をより豊かに生きる、ささやかだが本当の方法なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「色については同意するが、においについては意見が分かれる」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: 'においを説明しようとすると、しばしばたとえにたよることになる。', answer: true, why: '第1段落 we often find ourselves reduced to comparisons。' },
+      { statement: 'においへの反応は、だれでも同じである。', answer: false, why: '第3段落 they often disagree sharply about whether a smell is pleasant or unpleasant。' },
+      { statement: '画面はにおいを伝えることができない。', answer: true, why: '第5段落 cannot convey scents。' },
+      { statement: 'においの感覚を失った人々は、その喪失をささいなものだと語る。', answer: false, why: '第6段落 often describe the loss as far more serious than they would have expected。' },
+    ],
+    qa: [
+      { q: 'What can a particular scent do, according to the author?', choices: ['Return us in an instant to the past.', 'Make us forget everything.', 'Improve our eyesight.', 'Teach us new words.'], answer: 0, why: '第2段落 can return us in an instant to a childhood kitchen。' },
+      { q: 'How have judgments about how others smell sometimes been used?', choices: ['To express prejudice.', 'To choose food.', 'To measure time.', 'To find directions.'], answer: 0, why: '第4段落 have sometimes been used to express prejudice。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
