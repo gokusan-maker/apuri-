@@ -37138,6 +37138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-human-remains',
+    title: 'Should Museums Display Human Remains?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Museums around the world hold the remains of human beings, from ancient mummies and skeletons to preserved body parts collected for medical study. For many visitors, such displays offer a powerful encounter with the past, revealing how people lived, what they ate, and how they died. In recent years, however, the display of human remains has become increasingly controversial. Some argue that it is disrespectful to the dead and to their descendants, while others insist that it serves important educational and scientific purposes.",
+      "Supporters of displaying human remains emphasize their educational value. Seeing the actual remains of a person who lived thousands of years ago can make history feel real in a way that books and pictures cannot. Scientific study of remains has also produced valuable knowledge about ancient diseases, diets, and migrations, and some of this knowledge continues to inform medical research today. Supporters argue that, when presented with care and dignity, such displays can foster respect for past peoples rather than diminish it. A carefully prepared exhibition, they add, can tell the story of an individual life, giving a name and a history to someone who might otherwise be forgotten.",
+      "Supporters also point out that many visitors find such exhibitions deeply meaningful. ( A ) some people may feel uncomfortable, supporters argue, encountering the remains of others can prompt reflection on the shared human experience of mortality, encouraging visitors to think about their own lives and about the people who came before them. Removing all human remains from public view, in their view, would deprive museums of one of their most powerful means of connecting people with history.",
+      "Critics, however, argue that displaying human remains often ignores the wishes of the dead and their communities. Many remains in museum collections were obtained during periods of colonial rule, sometimes through grave robbing or without the consent of the people concerned. For descendant communities, seeing their ancestors displayed as objects of curiosity may be deeply painful, and some regard it as a continuation of historical injustice. Critics argue that such remains should be returned to their communities for burial or other appropriate treatment. Several museums have already returned remains in this way, and some communities have held ceremonies to welcome their ancestors home.",
+      "Critics also question whether the display of remains is necessary for education. Modern technology, such as detailed photographs, three-dimensional scans, and replicas, can allow museums to convey much of the same information without exhibiting actual bodies. In the view of critics, the desire to see real remains may sometimes reflect curiosity or even a taste for the sensational rather than a genuine wish to learn, and museums should be cautious about encouraging it. Respect for the dead, they argue, should not depend on whether showing their bodies attracts more visitors.",
+      "Between these positions, many museums have revised their policies. Some now consult descendant communities before displaying or studying remains and return remains when communities request it. Others have moved remains from public galleries to private storage, allowing researchers access while removing them from casual view. Some exhibitions include explanations of how the remains were obtained and invite visitors to consider the ethical questions involved, transforming the display itself into an occasion for reflection.",
+      "The debate over human remains in museums reflects a broader question about how societies should treat the past and the people who lived in it. Museums aim to preserve knowledge and to help people understand history, but they must also respect the dignity of those whose lives they represent. Finding a balance between these aims requires listening to the communities most affected, being honest about how collections were formed, and recognizing that the dead, too, may be owed a kind of respect that should guide the decisions of the living.",
+    ],
+    ja: [
+      '世界中の博物館は、古代のミイラや骨格から、医学の研究のために集められた保存された体の一部まで、人間の遺体を所蔵している。多くの訪問者にとって、そうした展示は過去との強烈な出会いをあたえ、人々がどう暮らし、何を食べ、どう死んだかを明らかにする。しかし近年、人間の遺体の展示はますます論争の的になっている。それは死者とその子孫に対して失礼だと主張する人々もいれば、大切な教育的・科学的目的に役立っていると主張する人々もいる。',
+      '人間の遺体を展示することを支持する人々は、その教育的な価値を強調する。何千年も前に生きた人の実際の遺体を見ることは、本や絵にはできないやり方で歴史を本物に感じさせることができる。遺体の科学的な研究はまた、古代の病気や食事や移住についての価値ある知識を生み出しており、その知識の一部は今日の医学研究にも生かされている。注意と尊厳をもって示されれば、そうした展示は過去の人々への敬意を小さくするのではなく、むしろ育てうると支持する人々は主張する。注意深く準備された展示は、一人の人生の物語を語り、そうでなければわすれられてしまうかもしれない人に名前と歴史をあたえることができると彼らは付け加える。',
+      '支持する人々はまた、多くの訪問者がそうした展示を深く意味のあるものと感じていると指摘する。居心地の悪さを感じる人もいるかもしれないが、ほかの人の遺体に出会うことは、死という人間に共通の経験についてのふり返りをうながし、訪問者に自分の人生や先に生きた人々について考えさせることができると支持する人々は主張する。彼らの見方では、すべての人間の遺体を人目から取りのぞくことは、人々を歴史と結びつける博物館のもっとも強力な手段の一つをうばうことになる。',
+      'しかし批判する人々は、人間の遺体を展示することは、しばしば死者とその地域の人々の願いを無視していると主張する。博物館の所蔵品の多くの遺体は植民地支配の時代に、ときには墓あらしによって、あるいは関係する人々の同意なしに手に入れられた。子孫の地域の人々にとって、祖先が好奇の対象として展示されているのを見るのは深い苦しみであるかもしれず、それを歴史的な不正の続きと見なす人もいる。そうした遺体は、埋葬やほかのふさわしいあつかいのために、その地域にかえされるべきだと批判する人々は主張する。いくつかの博物館はすでにこうして遺体をかえしており、祖先をふるさとにむかえる儀式を行った地域もある。',
+      '批判する人々はまた、教育のために遺体の展示が必要なのかを疑う。くわしい写真や立体の画像や複製のような現代の技術によって、博物館は実際の遺体を展示しなくても同じ情報の多くを伝えられる。批判する人々の見方では、本物の遺体を見たいという願いは、本当に学びたいという気持ちよりも、好奇心や、ときにはどぎつさへの好みを反映していることがあり、博物館はそれをうながすことに慎重であるべきだ。死者への敬意は、その体を見せることでより多くの訪問者が集まるかどうかに左右されるべきではないと彼らは主張する。',
+      'これらの立場のあいだで、多くの博物館は方針を見直してきた。今では遺体を展示したり研究したりする前に子孫の地域と相談し、求められれば遺体をかえすところもある。遺体を公開の展示室から非公開の保管庫に移し、研究者には利用を認めつつ、何気ない人目からは取りのぞいたところもある。遺体がどう手に入れられたかの説明をふくめ、かかわる倫理的な問いを考えるよう訪問者にうながし、展示そのものをふり返りの機会に変えた展覧会もある。',
+      '博物館の人間の遺体をめぐる議論は、社会が過去とそこに生きた人々をどうあつかうべきかという、より広い問いを反映している。博物館は知識を守り、人々が歴史を理解する助けになることを目指しているが、その人生を表している人々の尊厳も尊重しなければならない。こうした目的のつりあいを見つけるには、もっとも影響を受ける地域の声を聞き、所蔵品がどう形づくられたかについて正直であり、死者もまた、生きている者の決定を導くべき一種の敬意を受けるに値するかもしれないと認めることが必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「居心地の悪さを感じる人もいるかもしれないが、ふり返りをうながす」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that displaying human remains has educational and ( 1 ) value. Critics argue that many remains were obtained without ( 2 ) and should be returned to their communities. Many museums now ( 3 ) descendant communities before displaying remains.',
+      blanks: [
+        { choices: ['scientific', 'financial', 'political', 'artistic'], answer: 0, why: '第1段落 it serves important educational and scientific purposes。' },
+        { choices: ['consent', 'money', 'tickets', 'labels'], answer: 0, why: '第4段落 without the consent of the people concerned。' },
+        { choices: ['consult', 'ignore', 'charge', 'hire'], answer: 0, why: '第6段落 Some now consult descendant communities。' },
+      ],
+    },
+    tf: [
+      { statement: '遺体の研究は、古代の病気についての知識を生み出してきた。', answer: true, why: '第2段落 valuable knowledge about ancient diseases。' },
+      { statement: '博物館の遺体はすべて、関係する人々の同意を得て手に入れられた。', answer: false, why: '第4段落 sometimes through grave robbing or without the consent。' },
+      { statement: '現代の技術によって、実際の遺体なしに多くの情報を伝えられる。', answer: true, why: '第5段落 can allow museums to convey much of the same information without exhibiting actual bodies。' },
+      { statement: '筆者によれば、死者には敬意を受ける値打ちがない。', answer: false, why: '第7段落 the dead, too, may be owed a kind of respect。' },
+    ],
+    qa: [
+      { q: 'Why might seeing ancestors displayed be painful for descendant communities?', choices: ['They are shown as objects of curiosity.', 'Museums are too far away.', 'The exhibitions are too short.', 'The remains are replicas.'], answer: 0, why: '第4段落 seeing their ancestors displayed as objects of curiosity may be deeply painful。' },
+      { q: 'What have some museums done with remains in public galleries?', choices: ['Moved them to private storage.', 'Sold them.', 'Made more copies.', 'Displayed them outdoors.'], answer: 0, why: '第6段落 moved remains from public galleries to private storage。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
