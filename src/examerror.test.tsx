@@ -3032,3 +3032,10 @@ it('誤文訂正〈213〉：東大レベル one of・each・every の単元が10
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('lives')
 })
+
+it('正誤問題〈220〉：京大レベル that・those の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-that-those-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) Osaka')
+})

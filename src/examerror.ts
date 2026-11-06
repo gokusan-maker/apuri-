@@ -5234,6 +5234,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Next time I will see him, (B) I (C) will give him (D) your message.', choices: ['(A) Next time I will see him,', '(B) I', '(C) will give him', '(D) your message'], answer: 0, why: 'next time ～ の節は現在形。Next time I see him。' },
     ],
   },
+  {
+    id: 'exam-error-that-those-kyodai',
+    title: '入試の正誤問題〈220〉（京大レベル：英作文のくり返しをさける that・those（the price of ～ と比べる））',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '比較では同じ種類のものどうしをくらべる。前に出た名詞をくり返すかわりに、単数なら that、複数なら those を使う（The population of Tokyo is larger than that of Osaka.／His ideas are different from those of his father.）。that／those を落として Osaka や a cat と直接くらべるのはまちがい。those who ～ は「～する人々」で複数あつかい。',
+    ],
+    examples: [
+      { en: 'The population of Tokyo is larger than that of Osaka.', ja: '東京の人口は大阪の人口より多い。' },
+      { en: 'The ears of a rabbit are longer than those of a cat.', ja: 'ウサギの耳はネコの耳より長い。' },
+    ],
+    questions: [
+      { sentence: '(A) The population of Tokyo (B) is larger (C) than (D) Osaka.', choices: ['(A) The population of Tokyo', '(B) is larger', '(C) than', '(D) Osaka'], answer: 3, why: 'くらべるのは人口どうしなので than that of Osaka。' },
+      { sentence: '(A) The climate of Japan (B) is milder (C) than (D) those of Canada.', choices: ['(A) The climate of Japan', '(B) is milder', '(C) than', '(D) those of Canada'], answer: 3, why: 'climate は単数なので that of Canada。' },
+      { sentence: '(A) His ideas (B) are different from (C) that (D) of his father.', choices: ['(A) His ideas', '(B) are different from', '(C) that', '(D) of his father'], answer: 2, why: 'ideas は複数なので those of his father。' },
+      { sentence: '(A) The ears of a rabbit (B) are longer (C) than (D) a cat.', choices: ['(A) The ears of a rabbit', '(B) are longer', '(C) than', '(D) a cat'], answer: 3, why: 'くらべるのは耳どうしなので those of a cat。' },
+      { sentence: '(A) The price of gold (B) is (C) much higher (D) than silver.', choices: ['(A) The price of gold', '(B) is', '(C) much higher', '(D) than silver'], answer: 3, why: 'くらべるのは値段どうしなので than that of silver。' },
+      { sentence: '(A) Those (B) who (C) wants to join (D) should sign here.', choices: ['(A) Those', '(B) who', '(C) wants to join', '(D) should sign here'], answer: 2, why: 'those who ～「～する人々」は複数なので want。' },
+      { sentence: '(A) The streets in this town (B) are wider (C) than (D) that in my town.', choices: ['(A) The streets in this town', '(B) are wider', '(C) than', '(D) that in my town'], answer: 3, why: 'streets は複数なので those in my town。' },
+      { sentence: '(A) Her (B) voice (C) is softer than (D) her sister.', choices: ['(A) Her', '(B) voice', '(C) is softer than', '(D) her sister'], answer: 3, why: 'くらべるのは声どうしなので that of her sister（her sister’s）。' },
+      { sentence: '(A) That (B) who (C) work hard (D) will succeed.', choices: ['(A) That', '(B) who', '(C) work hard', '(D) will succeed'], answer: 0, why: '「～する人々」は Those who。' },
+      { sentence: '(A) The rules of tennis (B) is (C) more complicated than (D) those of table tennis.', choices: ['(A) The rules of tennis', '(B) is', '(C) more complicated than', '(D) those of table tennis'], answer: 1, why: '主語の The rules は複数なので are。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
