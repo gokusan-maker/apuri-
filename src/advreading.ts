@@ -38462,6 +38462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-lost-things',
+    title: 'On Losing Things',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Everyone loses things. Keys disappear on busy mornings, umbrellas are left behind on trains, and letters or photographs that were carefully kept for years cannot be found when they are finally needed. Most such losses are minor annoyances, quickly forgotten once the object has been replaced. Yet some losses affect us far more deeply than the value of the object would suggest, and the feelings they arouse may reveal something about the relationship between people and the things they own.",
+      "Part of the distress of losing something lies in the disruption of routine. We rely on our possessions to be where we expect them, and when they are not, the smooth flow of daily life is interrupted. The time spent searching, the plans that must be changed, and the frustration of retracing one's steps all add to the cost of the loss. In this practical sense, losing an object is less about the object itself than about the small order we create in our lives and the effort required to restore it. It is no wonder that losing keys on a busy morning can spoil an entire day.",
+      "Other losses touch us in a different way. ( A ) a new pen can easily replace an old one, a ring inherited from a grandparent or a letter from a friend who has died cannot be replaced at all. Such objects carry memories and relationships that give them a value no price can measure. When they are lost, we may feel that we have lost not merely a thing but a connection to a person or a period of our lives, and the grief can be surprisingly strong.",
+      "This suggests that we do not simply own objects; we also invest them with meaning. A worn sweater may remind us of a winter spent with friends, and a battered book may recall the person who first gave it to us. Over time, such objects become extensions of our memory, holding parts of our past that we might otherwise forget. To lose them is to feel, at least for a moment, that those parts of the past have become less secure.",
+      "Yet the experience of loss can also teach us something about the nature of memory. Many people discover, after losing a treasured object, that the memories it held do not vanish with it. The friend is still remembered, the winter still recalled, even without the object that once called them to mind. The object, it turns out, was a reminder rather than a container, and the meaning we attached to it lives on in us rather than in the thing itself.",
+      "There is also a certain freedom in loss. People who have lost possessions in moves, disasters, or periods of hardship sometimes report that, after their initial distress, they felt lighter, as if released from the burden of caring for so many things. Such experiences can lead them to reconsider which possessions truly matter and which they had kept merely out of habit. Some even choose, after such an experience, to live with far fewer things than before. Loss, in this sense, can prompt a kind of reflection that rarely occurs while everything remains in its place.",
+      "None of this makes losing things pleasant, and it would be strange to welcome every loss as an opportunity. But the feelings that loss arouses can help us understand what we value and why. They remind us that our attachment to objects is often an attachment to people, places, and moments in time, and that these deeper attachments do not depend entirely on the survival of the things that represent them. Learning this may make our losses easier to bear and our possessions easier to hold lightly.",
+    ],
+    ja: [
+      'だれでも物をなくす。いそがしい朝にかぎが消え、かさは電車に置きわすれられ、何年も大切にしまっておいた手紙や写真は、ようやく必要になったときに見つからない。そうした損失のほとんどはささいないらだちで、物が取りかえられればすぐにわすれられる。しかし、物の値打ちから想像されるよりはるかに深く私たちに影響する損失もあり、それが引き起こす気持ちは、人と自分のもつ物との関係について何かを明らかにするかもしれない。',
+      '物をなくす苦しみの一部は、決まった流れがみだされることにある。私たちは持ち物が思っている場所にあることにたよっており、そうでないと、日々の暮らしのなめらかな流れがさえぎられる。さがすのに使う時間、変えなければならない予定、来た道をたどり直すいらだちのすべてが、損失の費用を大きくする。この実際的な意味で、物をなくすことは、物そのものより、私たちが暮らしの中に作る小さな秩序と、それを取りもどすのに必要な努力にかかわっている。いそがしい朝にかぎをなくすと一日じゅうがだいなしになりうるのも、ふしぎではない。',
+      'ほかの損失は別のやり方で私たちの心にふれる。新しいペンは古いペンにかんたんに取ってかわれるが、祖父母から受けついだ指輪や、亡くなった友だちからの手紙はまったく取りかえがきかない。そうした物は、どんな値段でも測れない値打ちをあたえる思い出や関係をになっている。それらが失われると、私たちはただの物ではなく、ある人や人生のある時期とのつながりを失ったように感じるかもしれず、その悲しみはおどろくほど強いことがある。',
+      'このことは、私たちがただ物をもっているのではなく、物に意味をこめてもいることを示している。着古したセーターは友だちとすごした冬を思い出させるかもしれず、いたんだ本は、最初にそれをくれた人を思い起こさせるかもしれない。時がたつにつれて、そうした物は記憶の延長になり、そうでなければわすれてしまうかもしれない過去の一部をとどめている。それらを失うことは、少なくとも一瞬、過去のその部分がより不確かになったと感じることである。',
+      'しかし損失の経験は、記憶の性質について何かを教えてくれることもある。多くの人は、大切な物をなくしたあとで、それがとどめていた思い出がいっしょに消えるわけではないことに気づく。かつてそれを思い出させてくれた物がなくても、友だちは今もおぼえられており、冬は今も思い出される。物は入れ物ではなく思い出させるものだったのであり、私たちがそれにこめた意味は、物そのものではなく私たちの中に生き続けるのだとわかるのである。',
+      '損失にはまた、ある種の自由もある。引っこしや災害や苦しい時期に持ち物を失った人々は、最初の苦しみのあとで、たくさんの物を世話する重荷から解き放たれたかのように、身軽になったと感じたと言うことがある。そうした経験によって、どの持ち物が本当に大切で、どれをただ習慣で取っておいたのかを考え直すようになることがある。そうした経験のあと、以前よりずっと少ない物で暮らすことを選ぶ人さえいる。この意味で、損失は、すべてがもとの場所にあるあいだにはめったに起こらない種類のふり返りをうながしうる。',
+      'このどれも物をなくすことを楽しいものにはしないし、すべての損失を機会として歓迎するのは奇妙だろう。しかし損失が引き起こす気持ちは、私たちが何をなぜ大切にしているのかを理解する助けになる。それは、物への愛着がしばしば人や場所やある時への愛着であり、こうしたより深い愛着は、それを表す物が残っているかどうかにすっかりかかっているわけではないことを思い出させてくれる。このことを学べば、損失にたえやすくなり、持ち物をより軽やかにもてるようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「新しいペンはかんたんに取ってかわれるが、受けついだ指輪は取りかえがきかない」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '物をなくすことのほとんどは、ささいないらだちである。', answer: true, why: '第1段落 Most such losses are minor annoyances。' },
+      { statement: '祖父母から受けついだ指輪は、かんたんに取りかえがきく。', answer: false, why: '第3段落 cannot be replaced at all。' },
+      { statement: '大切な物をなくしても、それがとどめていた思い出は消えないことが多い。', answer: true, why: '第5段落 the memories it held do not vanish with it。' },
+      { statement: '筆者は、すべての損失を機会として歓迎すべきだと考えている。', answer: false, why: '第7段落 it would be strange to welcome every loss as an opportunity。' },
+    ],
+    qa: [
+      { q: 'What do objects such as a worn sweater become over time?', choices: ['Extensions of our memory.', 'Useless rubbish.', 'Valuable investments.', 'Gifts for strangers.'], answer: 0, why: '第4段落 such objects become extensions of our memory。' },
+      { q: 'How do some people feel after losing possessions in a move or disaster?', choices: ['Lighter, as if released from a burden.', 'Angry forever.', 'Richer than before.', 'More attached to things.'], answer: 0, why: '第6段落 they felt lighter, as if released from the burden of caring for so many things。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
