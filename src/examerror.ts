@@ -8928,6 +8928,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It was not until the next day [that the news reach] them.', choices: ['that the news reached', 'that did the news reach', 'when the news reached', 'the news reached that'], answer: 0, why: '強調構文の that のあとは過去形でふつうの語順。that the news reached。' },
     ],
   },
+  {
+    id: 'exam-fix-210',
+    title: '入試の誤文訂正〈210〉（東大レベル：英作文の比較 than・of と in の使い分け）',
+    points: ['比較級のあとは than（as や then にしない）。最上級の「～の中で」は、場所や集団を表す単数名詞なら in（in the city・in our class）、同じ種類の複数のものなら of（of the three sisters・of all the seasons）。比較級を強めるのは much・far（more better・very better は×）。「ほかのどの～よりも」は 比較級＋ than any other ＋単数名詞。くらべる対象をそろえる（her score と my score → mine）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'She is the youngest of the three sisters, and the tallest girl in her class.', ja: '彼女は三姉妹の中でいちばん年下で、クラスでいちばん背が高い女の子だ。' }],
+    questions: [
+      { sentence: 'This is the tallest building [of] the city.', choices: ['in', 'than', 'for', 'to'], answer: 0, why: '場所を表す the city なので in。' },
+      { sentence: 'She is the youngest [in] the three sisters.', choices: ['of', 'than', 'for', 'to'], answer: 0, why: '同じ種類の複数（the three sisters）なので of。' },
+      { sentence: 'He is taller [as] his brother.', choices: ['than', 'then', 'to', 'that'], answer: 0, why: '比較級のあとは than。' },
+      { sentence: 'Mt. Fuji is higher than [any mountain] in Japan.', choices: ['any other mountain', 'all mountain', 'any mountains other', 'other any mountain'], answer: 0, why: '富士山も日本の山なので any other mountain。' },
+      { sentence: 'This book is [more better] than that one.', choices: ['much better', 'more good', 'most better', 'very better'], answer: 0, why: '比較級を強めるのは much。much better。' },
+      { sentence: 'Tom is the [most fast] runner in our class.', choices: ['fastest', 'most faster', 'more fast', 'faster most'], answer: 0, why: 'fast の最上級は fastest。' },
+      { sentence: 'Of all the seasons, I like summer [better].', choices: ['best', 'the better', 'most better', 'good'], answer: 0, why: 'すべての中でいちばんなので best。' },
+      { sentence: 'Her score was higher than [me].', choices: ['mine', 'I', 'my', 'myself'], answer: 0, why: 'くらべるのは得点どうしなので mine（＝my score）。' },
+      { sentence: 'This is [the more] interesting book I have ever read.', choices: ['the most', 'most', 'the much', 'the mostly'], answer: 0, why: '「今まで読んだ中でいちばん」なので最上級 the most。' },
+      { sentence: 'No other student in the class is [as tall than] Ken.', choices: ['as tall as', 'so tall than', 'taller as', 'tallest than'], answer: 0, why: 'as ～ as の形。No other ～ is as tall as Ken。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
