@@ -39342,6 +39342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-criticism',
+    title: 'On Receiving Criticism',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few experiences are as uncomfortable as being criticized. Whether the criticism comes from a teacher, a colleague, a friend, or a stranger, it can provoke feelings of embarrassment, anger, or hurt, and our first impulse is often to defend ourselves or to dismiss what has been said. Yet criticism is also one of the most important sources of learning. Without it, we would have little idea of how our work and behavior appear to others, and our mistakes might continue unnoticed for years. Learning to receive criticism well may therefore be one of the most valuable skills a person can develop.",
+      "Part of the difficulty lies in the way criticism touches our sense of who we are. When someone points out a flaw in our work, we may hear it as a judgment on our whole character, as if being wrong about one thing meant being worthless in general. This reaction is understandable, but it often prevents us from considering whether the criticism is accurate. The more closely we identify ourselves with our work or opinions, the harder it becomes to examine them calmly when they are challenged. Learning to see our work as something we have made, rather than as a part of ourselves, can make criticism much easier to hear.",
+      "It helps, then, to separate the criticism from the person. ( A ) a comment may be delivered harshly or at an inconvenient moment, it may still contain something true and useful. Conversely, criticism delivered kindly may be mistaken. The question to ask is not whether the criticism feels pleasant but whether it is justified, and answering that question requires a willingness to set aside our immediate emotional reaction and to consider the evidence as fairly as we can.",
+      "Not all criticism, of course, deserves to be accepted. Some is offered carelessly, without understanding the circumstances; some reflects the critic's own preferences rather than any real fault; and some is motivated by envy or the desire to hurt. Receiving criticism well does not mean agreeing with everything that is said. It means listening attentively, distinguishing what is useful from what is not, and responding with honesty rather than with defensiveness or blind submission to whatever is said.",
+      "There is also an art to giving criticism, and understanding it can help us receive criticism more generously. Effective criticism focuses on specific actions rather than on the person as a whole, offers reasons rather than mere judgments, and is delivered with an evident wish to help. When we recognize how difficult it is to criticize others in this way, we may become more patient with those who criticize us clumsily, and more grateful to those who take the trouble to do it well.",
+      "Over time, the ability to accept criticism can transform both work and relationships. Writers who learn from editors, scientists who welcome the objections of their colleagues, and friends who can hear difficult truths from one another often grow in ways that would otherwise be impossible. Such growth depends on trust: the confidence that criticism is offered in good faith and received without lasting resentment. Where such trust exists, criticism becomes not a threat but a form of care. Many successful people say that the most valuable advice they ever received was also the most painful to hear.",
+      "Perhaps, then, the way we respond to criticism reveals something important about our character. Those who cannot bear any criticism may protect their pride in the short term, but they risk remaining fixed in their mistakes. Those who can listen, reflect, and change when change is warranted show a kind of strength that is easily overlooked: the strength to admit that they are not yet finished, and that others may see what they themselves cannot.",
+    ],
+    ja: [
+      '批判されることほど居心地の悪い経験は少ない。批判が先生や同僚や友だちや知らない人のどこから来るにせよ、それははずかしさや怒りや傷ついた気持ちを引き起こしうるし、私たちの最初の衝動はしばしば、自分を守るか、言われたことをはねつけることである。しかし批判はまた、学びのもっとも大切なみなもとの一つでもある。それがなければ、私たちは自分の仕事やふるまいがほかの人にどう見えるかをほとんど知らず、まちがいは何年も気づかれないまま続くかもしれない。そのため批判を上手に受けとめることを学ぶのは、人が育てられるもっとも価値のある技能の一つかもしれない。',
+      'むずかしさの一部は、批判が自分は何者かという感覚にふれるしかたにある。だれかが私たちの仕事の欠点を指摘すると、私たちはそれを、一つのことでまちがっているのは全体として価値がないことを意味するかのように、自分の人柄全体への判断として聞いてしまうかもしれない。この反応は理解できるが、それはしばしば、その批判が正確かどうかを考えるのをさまたげる。自分を自分の仕事や意見と強く同じものと見なすほど、それが問われたときにおだやかに調べるのはむずかしくなる。自分の仕事を自分の一部としてではなく、自分が作ったものとして見ることを学ぶと、批判はずっと聞きやすくなりうる。',
+      'そうすると、批判と人を切りはなすことが助けになる。あることばがきびしく、あるいは都合の悪いときに伝えられても、それはやはり本当で役に立つことをふくんでいるかもしれない。反対に、やさしく伝えられた批判がまちがっていることもある。問うべきなのは、その批判が心地よく感じられるかどうかではなく、それが正当かどうかであり、その問いに答えるには、目の前の感情の反応をわきに置き、できるだけ公平に証拠を考えようとする気持ちが必要である。',
+      'もちろん、すべての批判が受け入れられるに値するわけではない。状況を理解せず不注意になされるものもあり、本当の欠点ではなく批判する人自身の好みを反映するものもあり、ねたみや傷つけたいという気持ちから生まれるものもある。批判を上手に受けとめることは、言われたことすべてに同意することではない。それは注意深く耳をかたむけ、役に立つものとそうでないものを見分け、身構えたり、言われたことに何でも盲目的にしたがったりするのではなく、正直にこたえることである。',
+      '批判をする技もあり、それを理解することは、批判をより寛大に受けとめる助けになる。効果的な批判は、人全体ではなく具体的な行動に焦点を当て、ただの判断ではなく理由を示し、助けたいという気持ちがはっきりわかるように伝えられる。このようにほかの人を批判するのがどれほどむずかしいかを認めると、ぎこちなく批判する人にはより根気強く、手間をかけて上手に批判してくれる人にはより感謝するようになるかもしれない。',
+      '時がたつにつれて、批判を受け入れる力は、仕事と人間関係の両方を変えうる。編集者から学ぶ作家や、同僚の反論を歓迎する科学者や、たがいからむずかしい真実を聞ける友だちは、そうでなければ不可能なやり方で成長することが多い。そうした成長は信頼にかかっている。批判は善意から示され、いつまでも残るうらみなしに受けとめられるという確信である。そうした信頼があるところでは、批判はおびやかしではなく、思いやりの一つの形になる。成功した多くの人は、これまでに受けたもっとも価値のある助言は、聞くのがもっともつらいものでもあったと言う。',
+      'そうするとおそらく、批判へのこたえ方は、私たちの人柄について大切なことを明らかにするのだろう。どんな批判にもたえられない人は、短い目で見ればほこりを守れるかもしれないが、まちがいの中にとどまり続ける危険がある。耳をかたむけ、ふり返り、変わる理由があるときに変われる人は、見すごされやすい種類の強さを示している。自分はまだ完成していないこと、そしてほかの人には自分に見えないものが見えるかもしれないことを認める強さである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「きびしく伝えられても、本当で役に立つことをふくんでいるかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、批判は学びの大切なみなもとの一つである。', answer: true, why: '第1段落 criticism is also one of the most important sources of learning。' },
+      { statement: 'やさしく伝えられた批判は、いつも正しい。', answer: false, why: '第3段落 criticism delivered kindly may be mistaken。' },
+      { statement: '批判を上手に受けとめるとは、すべてに同意することではない。', answer: true, why: '第4段落 does not mean agreeing with everything that is said。' },
+      { statement: 'どんな批判にもたえられない人は、まちがいから早くぬけ出せる。', answer: false, why: '第7段落 they risk remaining fixed in their mistakes。' },
+    ],
+    qa: [
+      { q: 'What does effective criticism focus on?', choices: ['Specific actions rather than the person as a whole.', 'Who the person is overall.', 'Only small details of style.', 'How the critic feels.'], answer: 0, why: '第5段落 focuses on specific actions rather than on the person as a whole。' },
+      { q: 'What does growth through criticism depend on, according to the author?', choices: ['Trust.', 'Luck.', 'Money.', 'Silence.'], answer: 0, why: '第6段落 Such growth depends on trust。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
