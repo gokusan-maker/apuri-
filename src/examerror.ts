@@ -8340,6 +8340,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[The reason of his being late] was that the train stopped.', choices: ['The reason for his being late', 'The reason why of his lateness', 'The reason of he was late', 'Why his being late'], answer: 0, why: '「～の理由」は the reason for ～。of ではない。' },
     ],
   },
+  {
+    id: 'exam-fix-196',
+    title: '入試の誤文訂正〈196〉（国公立レベル：感嘆文 What a ～!・How ～!）',
+    points: ['感嘆文は「なんて～だろう」。名詞をふくむときは What（a／an）＋形容詞＋名詞＋主語＋動詞!、形容詞・副詞だけのときは How ＋形容詞・副詞＋主語＋動詞!。主語と動詞はふつうの語順で最後に置く。数えられない名詞（news・advice）や複数名詞の前には a／an をつけない（What good news!・What beautiful flowers!）。名詞の前は形容詞で、副詞は使わない。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'What a beautiful day it is!', ja: 'なんて美しい日なんだろう！' }],
+    questions: [
+      { sentence: '[How] a beautiful day it is!', choices: ['What', 'So', 'Such', 'Which'], answer: 0, why: 'a beautiful day という名詞のかたまりがあるので What。' },
+      { sentence: '[What] tall he is!', choices: ['How', 'So', 'Such', 'Very'], answer: 0, why: '形容詞 tall だけなので How。How tall he is!' },
+      { sentence: '[What a good news] it is!', choices: ['What good news', 'How a good news', 'What a good new', 'How good news'], answer: 0, why: 'news は数えられない名詞なので a をつけない。What good news!' },
+      { sentence: 'How [fast does he run]!', choices: ['fast he runs', 'he runs fast', 'does he run fast', 'fast runs he'], answer: 0, why: '感嘆文は How ＋副詞＋主語＋動詞のふつうの語順。How fast he runs!' },
+      { sentence: 'What [beautiful flower] these are!', choices: ['beautiful flowers', 'a beautiful flowers', 'the beautiful flower', 'a beautiful flower'], answer: 0, why: 'these are に合わせて複数形。複数なので a はつけない。' },
+      { sentence: 'What an [honest boy is he]!', choices: ['honest boy he is', 'honest he is boy', 'boy honest he is', 'honest is he boy'], answer: 0, why: '主語＋動詞はふつうの語順で最後に置く。What an honest boy he is!' },
+      { sentence: 'How [an interesting] this book is!', choices: ['interesting', 'a interesting', 'interested', 'an interested'], answer: 0, why: 'How のあとは形容詞だけで、a／an は置かない。本は「おもしろい」側なので interesting。' },
+      { sentence: 'What a [nicely] house you have!', choices: ['nice', 'nicer', 'nicest', 'most nicely'], answer: 0, why: '名詞 house の前は形容詞 nice。' },
+      { sentence: '[What] carefully she drives!', choices: ['How', 'What a', 'So a', 'Such'], answer: 0, why: '副詞 carefully だけなので How。' },
+      { sentence: '[What an expensive cars] they are!', choices: ['What expensive cars', 'How expensive cars', 'What an expensive car', 'What a expensive cars'], answer: 0, why: '複数名詞の前には a／an をつけない。What expensive cars they are!' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
