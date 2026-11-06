@@ -36738,6 +36738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-maximum-wage',
+    title: 'Should There Be a Maximum Wage?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the gap between the highest and lowest paid workers has grown dramatically over recent decades. Chief executives of large companies may now earn hundreds of times more than the average employee of the same firm. While governments commonly set a minimum wage to protect low-paid workers, some people have proposed the opposite measure: a limit on the highest salaries, either as a fixed amount or as a maximum ratio between the pay of the best-paid and worst-paid employees. This proposal has provoked strong reactions from supporters and critics alike.",
+      "Supporters of a maximum wage argue that extreme differences in pay are difficult to justify. Even if senior executives work hard and carry great responsibility, they argue, it is hard to believe that one person's contribution is worth hundreds of times that of a nurse, a teacher, or a factory worker. Very high salaries may reflect not exceptional talent but the power of executives to influence their own pay, often through boards whose members have close ties to them. A limit on top pay, supporters claim, would restore a sense of fairness. Employees who see their leaders receive enormous rewards while their own wages stagnate may also lose motivation and loyalty, harming the very companies those leaders are paid to run.",
+      "Supporters also point to the social effects of inequality. Large differences in income may weaken trust between different groups, reduce social mobility, and allow the wealthiest people to exercise disproportionate influence over politics. ( A ) a maximum wage would affect only a small number of people directly, supporters argue, it could send a powerful message about the kind of society people wish to live in, and money saved on top salaries might be used to raise the pay of ordinary employees.",
+      "Critics, however, argue that a maximum wage would harm the economy. Talented people, they claim, might move to countries without such limits, taking their skills, businesses, and tax payments with them. Companies could find it harder to attract experienced leaders, and the incentive to work hard, take risks, and create new businesses might be weakened. In a global economy where skilled people can easily move, critics warn, a country that limits top pay may find itself at a disadvantage.",
+      "Critics also question whether a maximum wage would be effective or fair in practice. High earners might receive compensation in other forms, such as shares, bonuses, or benefits, that are difficult to regulate. Setting the right limit would also be extremely difficult in practice, since jobs and industries differ greatly. Moreover, some critics argue that governments should not decide how much any individual may earn, and that inequality is better addressed through taxation and public services than through direct limits on pay.",
+      "Between these positions, a number of more moderate measures have been proposed. Some countries require companies to publish the ratio between the pay of their chief executive and that of their average worker, allowing shareholders and the public to judge whether pay is reasonable. Others give shareholders a binding vote on executive pay, or link tax benefits to fairer pay structures. Higher tax rates on very high incomes are another option, reducing inequality without setting an absolute limit on what anyone may earn.",
+      "The debate over a maximum wage reflects a broader question about what makes differences in income acceptable. Most people readily accept that some kinds of jobs should be paid more than others, since they require greater skill, effort, or responsibility. The question is how large such differences can become before they undermine fairness and social cohesion. Whether through limits, transparency, or taxation, societies must decide how to reward talent and effort while ensuring that the benefits of economic activity are widely shared.",
+    ],
+    ja: [
+      '多くの国で、もっとも給料の高い働き手と低い働き手の差は、ここ数十年で劇的に広がった。大企業の最高経営責任者は、今や同じ会社のふつうの社員の何百倍もかせぐことがある。政府はふつう、給料の低い働き手を守るために最低賃金を定めるが、反対の方法、つまり最高の給料に、決まった金額か、もっとも給料の高い社員と低い社員の給料の最大の比率として限度をもうけることを提案する人々もいる。この提案は、支持する人々と批判する人々の両方から強い反応を引きおこしている。',
+      '最高賃金を支持する人々は、極端な給料の差は正当化しにくいと主張する。たとえ上級の経営者が熱心に働き大きな責任を負っているとしても、一人の貢献が看護師や教師や工場で働く人の何百倍もの価値があるとは信じがたいと彼らは主張する。とても高い給料は、すぐれた才能ではなく、しばしば自分と近い関係にある人々がいる取締役会を通じて、経営者が自分の給料に影響をあたえる力を反映しているのかもしれない。最高の給料に限度をもうければ公平さの感覚が取りもどされると支持する人々は主張する。自分の給料がのびないのに指導者がばく大な報酬を受け取るのを見る社員は、意欲と忠誠心を失うかもしれず、それはその指導者が運営するために給料をもらっているまさにその会社を傷つける。',
+      '支持する人々はまた、不平等の社会への影響を指摘する。収入の大きな差は、さまざまな集団のあいだの信頼を弱め、社会の中で上へ移る機会をへらし、もっとも裕福な人々が政治にふつりあいな影響力をふるえるようにするかもしれない。最高賃金が直接影響するのはごく少数の人だけだが、それは人々がどのような社会に住みたいのかについての強いメッセージを送ることができ、最高の給料で節約されたお金はふつうの社員の給料を上げるのに使えるかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、最高賃金は経済に害をあたえると主張する。才能ある人々は、そうした限度のない国へ、技能や事業や税金ごと移ってしまうかもしれないと彼らは言う。会社は経験ある指導者を引きつけにくくなり、熱心に働き、危険をおかし、新しい事業を生み出す動機が弱まるかもしれない。技能をもつ人がかんたんに移動できる世界経済のなかで、最高の給料を制限する国は不利な立場に立たされるかもしれないと批判する人々は警告する。',
+      '批判する人々はまた、最高賃金が実際に効果的で公平なのかを疑う。高い収入を得る人は、株やボーナスや手当のような、規制しにくいほかの形で報酬を受け取るかもしれない。仕事や産業は大きく異なるので、正しい限度を決めるのも実際にはきわめて難しいだろう。さらに、政府がどんな個人がいくらかせいでよいかを決めるべきではなく、不平等は給料への直接の制限よりも、税と公共サービスを通じて取り組むほうがよいと主張する批判者もいる。',
+      'これらの立場のあいだで、よりおだやかな方法がいくつか提案されてきた。会社に最高経営責任者とふつうの社員の給料の比率を公表するよう求め、株主や一般の人々が給料が妥当かどうかを判断できるようにした国もある。経営者の給料について株主に拘束力のある投票権をあたえたり、より公平な給料の仕組みに税の優遇を結びつけたりしている国もある。とても高い収入へのより高い税率もまた、だれかがかせいでよい額に絶対の限度をもうけずに不平等をへらす、もう一つの選択肢である。',
+      '最高賃金をめぐる議論は、収入の差を受け入れられるものにしているのは何かという、より広い問いを反映している。ほとんどの人は、より大きな技能や努力や責任を必要とするので、ある仕事がほかより多く支払われるべきだと受け入れている。問題は、そうした差が公平さと社会のまとまりをそこなう前に、どれほど大きくなってよいかである。限度によってであれ、透明性によってであれ、税によってであれ、社会は、経済活動の利益が広く分かち合われるようにしながら、才能と努力にどうむくいるかを決めなければならない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「直接影響するのはごく少数だが、強いメッセージを送れる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that extreme differences in pay are hard to justify and that a maximum wage would restore ( 1 ). Critics argue that talented people might move abroad and that high earners could receive pay in other ( 2 ). Some countries require companies to publish pay ( 3 ).',
+      blanks: [
+        { choices: ['fairness', 'growth', 'speed', 'safety'], answer: 0, why: '第2段落 would restore a sense of fairness。' },
+        { choices: ['forms', 'countries', 'languages', 'colors'], answer: 0, why: '第5段落 receive compensation in other forms。' },
+        { choices: ['ratios', 'records', 'rules', 'reviews'], answer: 0, why: '第6段落 publish the ratio between the pay of their chief executive and that of their average worker。' },
+      ],
+    },
+    tf: [
+      { statement: '最高経営責任者は、ふつうの社員の何百倍もかせぐことがある。', answer: true, why: '第1段落 may now earn hundreds of times more than the average employee。' },
+      { statement: '支持する人々によれば、最高賃金は多くの人に直接影響する。', answer: false, why: '第3段落 would affect only a small number of people directly。' },
+      { statement: '仕事や産業はさまざまなので、正しい限度を決めるのは難しい。', answer: true, why: '第5段落 Setting the right limit would also be extremely difficult in practice, since jobs and industries differ greatly。' },
+      { statement: 'ほとんどの人は、すべての仕事が同じ給料であるべきだと考えている。', answer: false, why: '第7段落 Most people readily accept that some kinds of jobs should be paid more than others。' },
+    ],
+    qa: [
+      { q: 'Why might very high salaries not reflect exceptional talent, according to supporters?', choices: ['Executives may influence their own pay through boards.', 'Executives work fewer hours.', 'Salaries are set by law.', 'Workers choose executive pay.'], answer: 0, why: '第2段落 the power of executives to influence their own pay。' },
+      { q: 'What is one alternative to an absolute limit on pay?', choices: ['Higher tax rates on very high incomes.', 'Lower minimum wages.', 'Banning all bonuses.', 'Closing large companies.'], answer: 0, why: '第6段落 Higher tax rates on very high incomes are another option。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
