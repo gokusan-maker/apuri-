@@ -38142,6 +38142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tiredness',
+    title: 'On Tiredness',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Tiredness is so common an experience that we rarely stop to think about it seriously. We feel tired after work, after study, after long journeys, and sometimes after doing nothing at all. In modern societies, tiredness is often treated as a problem to be solved, whether by drinking coffee, sleeping longer, or using techniques that promise greater energy and productivity. Yet tiredness is not merely an obstacle; it is also a signal, and the way we respond to it may say a great deal about how we understand our own limits.",
+      "At its simplest, tiredness tells us that we have used up some of our resources and need to recover. The body that has worked hard needs rest, and the mind that has concentrated for hours needs a change. Ignoring these signals for long periods can lead to illness, mistakes, and a loss of the very abilities that effort was meant to develop. In this sense, tiredness is a form of wisdom built into the body, reminding us that human beings are not machines that can run continuously without care or rest.",
+      "Many modern habits, however, encourage us to override this wisdom. ( A ) earlier generations often lived according to the rhythms of daylight and the seasons, we now have artificial light, constant entertainment, and work that can follow us home through our phones. It has become possible, and in some workplaces almost expected, to work late into the night and to treat exhaustion as evidence of dedication. Those who admit to being tired may fear that they will be seen as weak or uncommitted.",
+      "Yet not all tiredness is the same. There is the honest tiredness that follows meaningful effort, which can bring a deep sense of satisfaction: the fatigue of a long walk in the mountains, or of a day spent helping a friend move house. There is also a different kind of tiredness, which comes not from effort but from frustration, boredom, or the feeling that one's work has no purpose. This second kind may not be cured by sleep, because its causes lie less in the body than in the circumstances of one's life.",
+      "Recognizing this distinction may help us respond more wisely to our own fatigue. When tiredness comes from honest effort, the answer is usually rest, and the rest itself can be enjoyed as the natural completion of the work. When it comes from frustration or meaninglessness, however, rest alone may not be enough. What is needed may be a change in how we work, what we work for, or the relationships within which we spend our days. In such cases, tiredness becomes a question we must take seriously rather than a symptom to be silenced.",
+      "There is also something to be learned from the tiredness of others. When a friend or colleague is exhausted, our first impulse may be to offer advice or encouragement. Often, however, what helps most is simple recognition: an acknowledgment that their tiredness is real and that they are allowed to rest. In a culture that tends to admire endless activity, such recognition can be a quiet form of kindness, giving others permission to care for themselves without shame or guilt.",
+      "Perhaps, then, tiredness deserves a more respectful place in our understanding of a good life. It marks the boundary between what we can do and what we cannot, and in doing so it protects us from the dangerous illusion that we are limitless. To listen to tiredness is not to give up on effort but to make effort sustainable, so that we can return to our work, our studies, and our relationships with renewed strength. A life that never allowed for tiredness would not be stronger, but only more fragile.",
+    ],
+    ja: [
+      'つかれはあまりにありふれた経験なので、私たちはそれについてめったに立ち止まって真剣に考えない。私たちは仕事のあと、勉強のあと、長い旅のあと、ときには何もしなかったあとにさえつかれを感じる。現代社会では、つかれは、コーヒーを飲むことや長くねむることや、より多くの元気と生産性を約束する方法を使うことで解決すべき問題としてあつかわれることが多い。しかしつかれはただのじゃま物ではなく、一つの合図でもあり、私たちがそれにどうこたえるかは、自分の限界をどう理解しているかについて多くを語るかもしれない。',
+      'もっとも単純に言えば、つかれは、私たちが資源の一部を使いきり、回復する必要があることを教えてくれる。よく働いた体は休みを必要とし、何時間も集中した心は気分転換を必要とする。こうした合図を長いあいだ無視すると、病気やまちがいや、努力によって育てようとした能力そのものを失うことにつながりうる。この意味で、つかれは体に組みこまれた一種の知恵であり、人間は世話や休みなしにたえず動き続けられる機械ではないことを思い出させてくれる。',
+      'しかし現代の多くの習慣は、この知恵をおしのけるよう私たちをうながす。前の世代はしばしば日の光や季節のリズムにしたがって暮らしていたが、私たちには今、人工の明かりや、たえまない娯楽や、電話を通じて家までついてくる仕事がある。夜おそくまで働き、つかれはてることを熱心さの証拠としてあつかうことが可能になり、職場によってはほとんど期待されるようにさえなった。つかれていると認める人は、弱い、あるいはやる気がないと見られることをおそれるかもしれない。',
+      'しかし、すべてのつかれが同じわけではない。意味のある努力のあとに来る正直なつかれがあり、それは深い満足をもたらしうる。山での長い散歩のつかれや、友だちの引っこしを手伝って一日をすごしたつかれである。また、努力からではなく、いらだちや退屈や、自分の仕事に目的がないという気持ちから来る、別の種類のつかれもある。この二つ目の種類はねむっても治らないかもしれない。その原因は体よりも人生の状況にあるからである。',
+      'この区別を認めることは、自分のつかれに、より賢くこたえる助けになるかもしれない。つかれが正直な努力から来るとき、答えはたいてい休むことであり、その休みそのものを、仕事の自然な仕上げとして楽しむことができる。しかし、それがいらだちや意味のなさから来るとき、休みだけでは十分ではないかもしれない。必要なのは、働き方や、何のために働くかや、日々をすごす人間関係を変えることかもしれない。そうした場合、つかれは、だまらせるべき症状ではなく、真剣に受けとめなければならない問いになる。',
+      'ほかの人のつかれから学べることもある。友だちや同僚がつかれはてているとき、私たちはまず助言やはげましをしたくなるかもしれない。しかし、もっとも助けになるのは、多くの場合、単純に認めること、つまり、その人のつかれは本物で、休んでもよいのだと認めることである。終わりのない活動をたたえがちな文化の中で、そうした認めることは、静かな親切の一つの形になり、ほかの人が恥や罪悪感をもつことなく自分を大切にすることをゆるすのである。',
+      'そうするとおそらく、つかれは、よい人生についての私たちの理解の中で、より敬意をはらわれる場所に値するのだろう。それはできることとできないことの境目をしるし、そうすることで、自分には限界がないという危険なまぼろしから私たちを守る。つかれに耳をかたむけることは、努力をあきらめることではなく、努力を続けられるものにすることであり、そうして私たちは新たな力をもって仕事や勉強や人間関係にもどることができる。つかれをまったくゆるさない人生は、より強いのではなく、ただよりもろいだけだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「前の世代は日の光にしたがって暮らしたが、私たちには人工の明かりがある」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、つかれは一つの合図でもある。', answer: true, why: '第1段落 it is also a signal。' },
+      { statement: '人間は世話なしにたえず動き続けられる機械である。', answer: false, why: '第2段落 human beings are not machines that can run continuously without care。' },
+      { statement: 'いらだちから来るつかれは、ねむっても治らないかもしれない。', answer: true, why: '第4段落 This second kind may not be cured by sleep。' },
+      { statement: '筆者は、つかれをまったくゆるさない人生の方が強いと考えている。', answer: false, why: '第7段落 would not be stronger, but only more fragile。' },
+    ],
+    qa: [
+      { q: 'What can honest tiredness after meaningful effort bring?', choices: ['A deep sense of satisfaction.', 'Illness only.', 'Boredom.', 'A loss of purpose.'], answer: 0, why: '第4段落 which can bring a deep sense of satisfaction。' },
+      { q: 'What often helps a tired friend most, according to the author?', choices: ['Simple recognition that their tiredness is real.', 'Detailed advice.', 'More coffee.', 'Ignoring them.'], answer: 0, why: '第6段落 what helps most is simple recognition。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
