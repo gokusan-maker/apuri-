@@ -38978,6 +38978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-election-holiday',
+    title: 'Should Election Day Be a Public Holiday?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many democracies, a significant proportion of eligible citizens do not vote in national elections, and turnout tends to be especially low among young people and those with lower incomes. One reason often given is that elections are held on ordinary working days, when many people find it difficult to reach a polling station because of their jobs, travel, or family responsibilities. Some countries already hold elections on weekends or declare election day a public holiday, and there have been calls elsewhere to do the same. The proposal is simple, but its likely effects are a matter of debate.",
+      "Supporters argue that making election day a holiday would remove a practical barrier to voting. Workers with long hours or inflexible schedules, they point out, may have to choose between earning a day's wages and casting their vote, and people who rely on public transport or care for children may struggle to find time. A national holiday, supporters claim, would allow everyone the opportunity to vote without sacrificing income or other duties, and would send a clear message that participation in democracy is valued by society as a whole.",
+      "Supporters also see symbolic value in the proposal. Elections, they argue, are among the most important events in the life of a democracy, and treating them as an ordinary working day suggests that voting is a minor task to be fitted around more important matters. ( A ) a holiday cannot by itself create enthusiasm for politics, supporters believe it could encourage a sense of shared civic occasion, with communities organizing events and families discussing the choices before them. In some countries, election day already has something of a festive atmosphere, with polling stations set up in schools and community halls.",
+      "Critics, however, question whether a holiday would actually increase turnout. Studies comparing countries with weekend or holiday elections and those with weekday elections have produced mixed results, and some suggest that people who do not vote are more often discouraged by a lack of interest or trust in politics than by a lack of time. Critics also note that many workers in shops, hospitals, transport, and other services would still have to work on a public holiday, so that the benefit would not reach everyone equally.",
+      "Critics also point to the economic costs of an additional public holiday. Businesses would lose a day of production, and some employers would have to pay higher wages to staff who work on the holiday. Others argue that a holiday might encourage people to travel or engage in leisure activities rather than vote, particularly if it created a long weekend. In their view, the same goal could be achieved more cheaply by other means, such as extending voting hours, expanding early voting, or making it easier to vote by post.",
+      "Many countries have in fact adopted such alternatives. Early voting allows citizens to cast their ballots on several days before the official election day, and postal voting makes it possible to vote from home. Some places have also introduced mobile polling stations that visit hospitals, care homes, and remote communities. Evidence suggests that these measures can increase participation, particularly among groups who face practical difficulties, although their effects depend on how well they are publicized and organized.",
+      "The debate over election holidays reflects a broader question about how societies can encourage democratic participation. Removing practical obstacles to voting is important, but it may not be enough if many citizens feel that their votes make no difference. A combination of convenient voting arrangements, civic education, and political institutions that respond to the concerns of ordinary people may be necessary to ensure that elections truly reflect the will of the whole population rather than only those who find it easiest to vote.",
+    ],
+    ja: [
+      '多くの民主主義の国では、投票する資格のある市民のかなりの割合が国の選挙で投票せず、投票率はとくに若者や収入の少ない人々のあいだで低い傾向がある。よくあげられる理由の一つは、選挙がふつうの平日に行われ、多くの人が仕事や移動や家族の責任のために投票所に行くのがむずかしいことである。選挙を週末に行ったり、投票日を祝日にしたりしている国もすでにあり、ほかの国でも同じことをするよう求める声がある。この提案は単純だが、それがもたらしそうな効果については議論がある。',
+      '支持する人々は、投票日を休みにすれば投票への実際的なさまたげが取りのぞかれると主張する。長時間働いたり予定が自由にならなかったりする働き手は、一日分の給料をかせぐか投票するかを選ばなければならないかもしれず、公共交通にたよる人や子どもの世話をする人は時間を見つけるのに苦労するかもしれないと彼らは指摘する。国の祝日にすれば、だれもが収入やほかの務めをぎせいにせずに投票する機会を得られ、民主主義への参加が社会全体で大切にされているというはっきりしたメッセージを送ることになると支持する人々は主張する。',
+      '支持する人々はまた、この提案に象徴的な価値を見ている。選挙は民主主義の暮らしの中でもっとも大切な出来事の一つであり、それをふつうの平日としてあつかうことは、投票はもっと大切なことの合間におさめるべきささいな用事だと示してしまうと彼らは主張する。休みにするだけで政治への熱意が生まれるわけではないが、地域が行事を開き、家族が目の前の選択について話し合うなど、共通の市民の行事という感覚をうながしうると支持する人々は考えている。国によっては、投票所が学校や公民館に設けられ、投票日がすでにお祭りのようなふんいきをおびているところもある。',
+      'しかし批判する人々は、休みにすれば本当に投票率が上がるのかを疑う。週末や祝日に選挙を行う国と平日に行う国をくらべた研究はまちまちの結果を出しており、投票しない人々は時間がないことよりも、政治への関心や信頼がないことによって投票を思いとどまっていることが多いと示す研究もある。批判する人々はまた、店や病院や交通やほかのサービスで働く多くの人は祝日でも働かなければならないので、その利益はすべての人に平等にはとどかないと指摘する。',
+      '批判する人々はまた、祝日をふやすことの経済的な費用をあげる。企業は一日分の生産を失い、休日に働く職員により高い給料をはらわなければならない雇い主もいるだろう。とくに連休になる場合、休日は人々に投票よりも旅行や娯楽をうながすかもしれないと主張する人もいる。彼らの見方では、投票時間をのばしたり、期日前投票を広げたり、郵便で投票しやすくしたりするほかの手段で、同じ目的をより安く達成できるだろう。',
+      '実際、多くの国はそうした別の方法を取り入れてきた。期日前投票によって、市民は正式な投票日の前の何日かのあいだに投票でき、郵便投票によって家から投票できる。病院や介護施設や遠い地域をまわる移動投票所を取り入れたところもある。証拠によると、こうした対策は、とくに実際的なむずかしさをかかえる集団のあいだで参加をふやしうるが、その効果は、どれだけよく知らされ、組織されるかにかかっている。',
+      '投票日の休みをめぐる議論は、社会がどうすれば民主的な参加をうながせるかという、より広い問いを反映している。投票への実際的なさまたげを取りのぞくことは大切だが、多くの市民が自分の一票は何も変えないと感じているなら、それだけでは十分ではないかもしれない。選挙が、もっとも投票しやすい人々だけでなく、すべての人々の意思を本当に反映するようにするには、便利な投票の仕組みと、市民教育と、ふつうの人々の心配にこたえる政治の制度の組み合わせが必要かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「休みにするだけで熱意は生まれないが、市民の行事という感覚をうながしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that an election holiday would remove a ( 1 ) barrier to voting and show that democracy is valued. Critics argue that non-voters are often discouraged by a lack of ( 2 ) rather than time and that a holiday would be costly. Many countries have instead adopted early voting and ( 3 ) voting.',
+      blanks: [
+        { choices: ['practical', 'legal', 'religious', 'cultural'], answer: 0, why: '第2段落 would remove a practical barrier to voting。' },
+        { choices: ['interest', 'money', 'transport', 'education'], answer: 0, why: '第4段落 discouraged by a lack of interest or trust in politics。' },
+        { choices: ['postal', 'online', 'secret', 'public'], answer: 0, why: '第6段落 postal voting makes it possible to vote from home。' },
+      ],
+    },
+    tf: [
+      { statement: '投票率は、とくに若者のあいだで低い傾向がある。', answer: true, why: '第1段落 especially low among young people。' },
+      { statement: '研究によれば、休日の選挙はいつも投票率を大きく上げる。', answer: false, why: '第4段落 have produced mixed results。' },
+      { statement: '病院や介護施設をまわる移動投票所を取り入れたところもある。', answer: true, why: '第6段落 mobile polling stations that visit hospitals, care homes。' },
+      { statement: '筆者は、投票のさまたげを取りのぞくだけで十分だと考えている。', answer: false, why: '第7段落 it may not be enough。' },
+    ],
+    qa: [
+      { q: 'Why might a holiday not benefit everyone equally, according to critics?', choices: ['Many service workers would still have to work.', 'Holidays are too long.', 'Polling stations would close.', 'Votes would not be counted.'], answer: 0, why: '第4段落 many workers in shops, hospitals, transport ... would still have to work。' },
+      { q: 'What might a long weekend encourage instead of voting?', choices: ['Travel or leisure activities.', 'More political debates.', 'Longer working hours.', 'Higher taxes.'], answer: 0, why: '第5段落 might encourage people to travel or engage in leisure activities rather than vote。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
