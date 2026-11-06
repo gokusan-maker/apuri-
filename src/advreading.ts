@@ -39138,6 +39138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-cruise-ships',
+    title: 'Should Cities Turn Away Cruise Ships?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every year, millions of passengers board enormous cruise ships that carry thousands of people at once between popular ports. For many coastal cities, the arrival of these ships brings crowds of visitors who spend money in shops, restaurants, and museums. In recent years, however, several famous destinations have begun to restrict or even ban large cruise ships from entering their harbors, citing damage to the environment, overcrowding, and the limited benefits for local residents. The decision to welcome or turn away these floating cities has become a difficult question for many communities.",
+      "Those who support restrictions point first to the environmental effects of cruise ships. Large vessels burn substantial amounts of fuel, and when they are docked in port they often keep their engines running to supply electricity, releasing pollutants into the air of nearby neighborhoods. They also produce large quantities of waste water and rubbish, and their size can disturb sensitive marine environments such as coral reefs and shallow lagoons. In cities built close to the water, supporters argue, these effects are felt directly by residents.",
+      "Supporters of restrictions also emphasize the problem of overcrowding. When several ships arrive on the same day, thousands of passengers may pour into the narrow streets of a historic town within a few hours, making it difficult for residents to go about their daily lives. ( A ) the visitors bring some income, supporters argue, much of the money is spent on board the ships rather than in local businesses, since many passengers return to the ship for meals and entertainment. The benefits, in their view, are smaller than they appear, while the costs are borne by the community.",
+      "Opponents of restrictions, however, warn that limiting cruise ships could harm local economies. In many ports, shops, tour guides, taxi drivers, and restaurants depend heavily on the steady flow of cruise passengers, and a sudden reduction could cost jobs and force businesses to close. Opponents also note that port fees paid by cruise companies can provide significant revenue for local governments, helping to fund public services. For smaller communities with few other sources of income, they argue, cruise tourism can be a vital lifeline.",
+      "Opponents also point out that the cruise industry has begun to address some of the criticisms made against it. Some newer ships use cleaner fuels or can connect to electricity supplied by the port, reducing pollution while docked. Companies have also experimented with spreading their visits more evenly across the week and the year, so that ports are not overwhelmed on particular days. In the view of opponents, cooperation with the industry may achieve more than outright bans, which might simply move the ships and their problems to other destinations.",
+      "In practice, many cities have adopted intermediate measures. Some limit the number of ships that may arrive on a single day or require them to dock at terminals farther from historic centers. Others charge higher fees for larger ships or for those that use more polluting fuels, using the revenue to reduce the impact of tourism. A few have invested in shore power facilities, which allow ships to switch off their engines while in port, although such facilities are expensive to build.",
+      "The debate over cruise ships reflects a broader challenge faced by popular destinations around the world: how to benefit from tourism without allowing it to overwhelm the places that make tourism possible. A historic town or beautiful bay that is damaged by too many visitors may eventually lose the very qualities that attracted them. Finding a sustainable balance requires not only rules and fees but also a clear sense of what kind of place a community wishes to be, and of how visitors can be welcomed without displacing the people who live there.",
+    ],
+    ja: [
+      '毎年、何百万人もの乗客が、一度に何千人もの人を乗せて人気の港のあいだを行き来する巨大なクルーズ船に乗る。多くの海辺の都市にとって、こうした船がやって来ると、店やレストランや博物館でお金を使う訪問者の群れがもたらされる。しかし近年、いくつかの有名な観光地は、環境への害や混雑や地元の住民にとっての利益の少なさを理由に、大型のクルーズ船が港に入るのを制限したり、禁止したりしはじめた。こうした海にうかぶ都市を歓迎するか追い返すかの決定は、多くの地域にとってむずかしい問題になっている。',
+      '制限を支持する人々は、まずクルーズ船の環境への影響をあげる。大きな船はかなりの量の燃料を燃やし、港にとまっているあいだも電気をまかなうためにしばしばエンジンを動かし続け、近くの地域の空気に汚染物質を出す。また大量の排水やごみを出し、その大きさはサンゴ礁や浅い潟のような傷つきやすい海の環境をみだしうる。水べのすぐ近くに作られた都市では、こうした影響を住民が直接受けると支持する人々は主張する。',
+      '制限を支持する人々はまた、混雑の問題を強調する。何そうもの船が同じ日に着くと、何千人もの乗客が数時間のうちに歴史的な町の細い通りに流れこみ、住民がふだんの暮らしを送るのをむずかしくすることがある。訪問者はいくらかの収入をもたらすが、多くの乗客は食事や娯楽のために船にもどるので、お金の多くは地元の店ではなく船の上で使われると支持する人々は主張する。彼らの見方では、利益は見かけより小さく、一方で費用は地域が負っている。',
+      'しかし制限に反対する人々は、クルーズ船を限ると地元の経済をそこないうると警告する。多くの港では、店や観光ガイドやタクシーの運転手やレストランがクルーズの乗客のたえまない流れに大きくたよっており、急にへると仕事が失われ、店が閉店に追いこまれるかもしれない。反対する人々はまた、クルーズ会社がはらう入港料が地方政府の大きな収入になり、公共サービスをまかなう助けになると指摘する。ほかに収入源の少ない小さな地域にとって、クルーズ観光は欠かせない命綱になりうると彼らは主張する。',
+      '反対する人々はまた、クルーズ業界が向けられた批判の一部に取り組みはじめたと指摘する。新しい船のなかには、よりきれいな燃料を使ったり、港から供給される電気につないだりして、停泊中の汚染をへらせるものもある。会社はまた、特定の日に港があふれないよう、訪問を一週間や一年のあいだにより均等に分散させることも試してきた。反対する人々の見方では、業界との協力は、船とその問題をただほかの行き先に移すだけかもしれない全面的な禁止よりも、多くを達成できるかもしれない。',
+      '実際には、多くの都市が中間の対策をとってきた。一日に着いてよい船の数を限ったり、歴史的な中心部からはなれた港に船をとめさせたりするところもある。より大きな船や、より汚染の多い燃料を使う船により高い料金をかけ、その収入を観光の影響をへらすのに使うところもある。船が港でエンジンを切れるようにする陸上電源の設備に投資したところもいくつかあるが、そうした設備は作るのに費用がかかる。',
+      'クルーズ船をめぐる議論は、世界中の人気の観光地が直面する、より広い課題を反映している。それは、観光を可能にしている場所そのものを観光にのみこませることなく、どう観光から利益を得るかという課題である。多すぎる訪問者に傷つけられた歴史的な町や美しい湾は、やがて人々を引きつけていたまさにその性質を失うかもしれない。持続できるつりあいを見つけるには、規則や料金だけでなく、地域がどんな場所でありたいのか、そしてそこに住む人々をおしのけることなく、どう訪問者を歓迎できるのかについてのはっきりした考えが必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「訪問者は収入をもたらすが、お金の多くは船の上で使われる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions argue that cruise ships cause pollution and ( 1 ) while bringing limited benefits. Opponents argue that many local businesses ( 2 ) on cruise passengers and that the industry has begun to change. Many cities have adopted ( 3 ) measures such as limiting the number of ships per day.',
+      blanks: [
+        { choices: ['overcrowding', 'unemployment', 'silence', 'drought'], answer: 0, why: '第3段落 the problem of overcrowding。' },
+        { choices: ['depend', 'insist', 'rely', 'spend'], answer: 0, why: '第4段落 depend heavily on the steady flow of cruise passengers。' },
+        { choices: ['intermediate', 'military', 'secret', 'temporary'], answer: 0, why: '第6段落 many cities have adopted intermediate measures。' },
+      ],
+    },
+    tf: [
+      { statement: '大きな船は港にとまっているあいだもエンジンを動かし続けることがある。', answer: true, why: '第2段落 they often keep their engines running。' },
+      { statement: 'クルーズの乗客は、お金をすべて地元の店で使う。', answer: false, why: '第3段落 much of the money is spent on board the ships。' },
+      { statement: '新しい船のなかには、港の電気につなげるものもある。', answer: true, why: '第5段落 can connect to electricity supplied by the port。' },
+      { statement: '陸上電源の設備は、安く作ることができる。', answer: false, why: '第6段落 such facilities are expensive to build。' },
+    ],
+    qa: [
+      { q: 'Why might cruise tourism be a vital lifeline for some communities?', choices: ['They have few other sources of income.', 'They have too many hotels.', 'They dislike visitors.', 'They have no harbors.'], answer: 0, why: '第4段落 For smaller communities with few other sources of income。' },
+      { q: 'What might outright bans do, according to opponents?', choices: ['Move the ships and their problems elsewhere.', 'End all pollution.', 'Increase local jobs.', 'Make ships smaller.'], answer: 0, why: '第5段落 might simply move the ships and their problems to other destinations。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
