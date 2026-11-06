@@ -37422,6 +37422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-innocence',
+    title: 'On Innocence',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Innocence is one of the qualities we most admire in children and most often regret losing in ourselves. We speak fondly of the innocence of a small child who trusts everyone, believes whatever they are told, and has not yet learned to suspect hidden motives. At the same time, we recognize that no one can remain innocent forever, and that an adult who knew nothing of deception or cruelty would be poorly prepared for life. Innocence, it seems, is something we value most in those who will inevitably lose it, and perhaps precisely because they will lose it.",
+      "Part of the appeal of innocence lies in its freedom from calculation. The innocent person acts without asking what advantage an action will bring or how it will appear to others. A child who gives away a favorite toy to a crying friend does so not to be praised but simply because the friend is sad. Adults, by contrast, are often aware of their own motives in a way that complicates even their kindest acts, and they may envy the directness with which the innocent respond to the world.",
+      "Yet innocence also has a darker side. Because the innocent do not recognize danger, they can be easily deceived or exploited by those who wish to harm them. ( A ) innocence may be charming in a protected setting, it becomes a weakness when the protection is removed. Much of what we call growing up consists precisely in learning that people do not always mean what they say, that appearances can mislead, and that good intentions do not guarantee good results.",
+      "It might seem, then, that innocence and experience are simply opposites, and that the loss of one is the price of gaining the other. Many stories and poems have been built on this idea, portraying the passage from childhood to adulthood as a kind of fall from a happier state. But this picture may be too simple. Experience need not destroy everything that innocence contained; it may instead transform it, preserving some of its qualities while adding the knowledge needed to protect them.",
+      "Consider the difference between a person who trusts others because they have never been betrayed and a person who continues to trust others despite having been betrayed. The first trust is innocent; the second is something more deliberate and perhaps more admirable. The second person knows the risks and has chosen to accept them, not out of ignorance but out of a conviction that a life without trust would be poorer than a life that occasionally suffers from it. Such trust is not the absence of experience but its mature result.",
+      "Something similar can be said of wonder, generosity, and hope. A child may wonder at the stars because everything is new; an adult who has studied astronomy may wonder at them all the more because they understand how vast and strange the universe really is. In such cases, knowledge does not replace the openness of innocence but deepens it. What is lost in the process is not the capacity for wonder itself, but only the particular form it took when we knew very little. Knowledge, in other words, can give wonder a deeper and more lasting foundation.",
+      "This suggests that the task of adulthood is not to recover a lost innocence, which is impossible, nor to abandon innocence entirely in favor of suspicion, which would make life narrow and cold. It is rather to cultivate what some have called a second innocence: an openness to the world that has passed through experience and chosen to remain open. Such a quality cannot be given to us at birth. It must be achieved, often slowly and with difficulty, by those who have seen enough to know why it is worth preserving.",
+    ],
+    ja: [
+      '無垢は、私たちが子どもの中でもっともたたえ、自分の中から失ったことをもっともよくくやむ性質の一つである。私たちは、だれでも信頼し、言われたことを信じ、かくれた動機をうたがうことをまだ学んでいない小さな子どもの無垢を、いとおしそうに語る。同時に、だれもいつまでも無垢のままではいられず、だましやむごさについて何も知らない大人は、人生にとって準備不足だろうと私たちは認めている。無垢とは、どうやら、いずれかならずそれを失う人の中で、私たちがもっとも大切にするものであるらしい。そしてそれは、まさに彼らがそれを失うからなのかもしれない。',
+      '無垢の魅力の一部は、損得の計算から自由であることにある。無垢な人は、ある行動がどんな利益をもたらすか、ほかの人にどう見えるかを問わずに行動する。泣いている友だちにお気に入りのおもちゃをあげる子どもは、ほめられるためではなく、ただ友だちが悲しんでいるからそうする。それに対して大人は、もっとも親切な行いさえ複雑にしてしまうやり方で自分の動機に気づいていることが多く、無垢な人が世界にこたえるまっすぐさをうらやむかもしれない。',
+      'しかし無垢には暗い面もある。無垢な人は危険に気づかないので、害をあたえようとする人にたやすくだまされたり利用されたりしうる。無垢は守られた場所ではかわいらしいかもしれないが、守りが取りのぞかれると弱点になる。私たちが成長とよぶものの多くは、まさに、人はいつも言うとおりのことを思っているわけではないこと、見かけはまどわすことがあること、よい意図がよい結果を約束しないことを学ぶことにある。',
+      'そうすると、無垢と経験はただの反対どうしで、一方を失うことはもう一方を得るための代価だと思えるかもしれない。多くの物語や詩がこの考えの上に築かれ、子どもから大人への移り変わりを、より幸せな状態からの一種の転落としてえがいてきた。しかしこのえがき方は単純すぎるかもしれない。経験は、無垢がふくんでいたすべてをこわす必要はない。それはかわりに無垢を変え、その性質の一部を保ちながら、それを守るのに必要な知識を加えるのかもしれない。',
+      '一度も裏切られたことがないから人を信頼する人と、裏切られたにもかかわらず人を信頼し続ける人のちがいを考えてみよう。前者の信頼は無垢なものであり、後者はより意識的で、おそらくよりたたえられるべきものである。後者の人は危険を知っていて、それを受け入れることを選んだのである。無知からではなく、信頼のない人生は、ときに信頼のせいで苦しむ人生よりもまずしいだろうという確信からである。そうした信頼は、経験がないことではなく、経験の成熟した結果である。',
+      '同じようなことが、おどろき、気前のよさ、希望についても言える。子どもは、すべてが新しいので星におどろくかもしれない。天文学を学んだ大人は、宇宙が本当にどれほど広く奇妙かを理解しているからこそ、なおさら星におどろくかもしれない。そうした場合、知識は無垢の開かれた心に取ってかわるのではなく、それを深める。その過程で失われるのは、おどろく力そのものではなく、私たちがほとんど何も知らなかったときにそれがとっていた特定の形だけである。言いかえれば、知識はおどろきに、より深く長続きする土台をあたえうるのである。',
+      'このことは、大人になることの課題は、失われた無垢を取りもどすことではなく（それは不可能である）、うたがいのために無垢をすっかり捨てることでもない（それは人生をせまく冷たいものにする）ことを示している。それはむしろ、ある人々が「第二の無垢」とよんできたもの、つまり経験を通りぬけたうえで開かれたままでいることを選んだ、世界への開かれた心を育てることである。そうした性質は生まれたときにあたえられるものではない。それがなぜ守る値打ちがあるのかを知るのに十分なものを見てきた人々によって、しばしばゆっくりと苦労してなしとげられなければならないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「無垢は守られた場所ではかわいらしいかもしれないが、弱点になる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、だれもいつまでも無垢のままではいられない。', answer: true, why: '第1段落 no one can remain innocent forever。' },
+      { statement: '無垢な人は、危険にすぐ気づく。', answer: false, why: '第3段落 Because the innocent do not recognize danger。' },
+      { statement: '筆者は、経験は無垢がふくんでいたすべてをこわすわけではないと考えている。', answer: true, why: '第4段落 Experience need not destroy everything that innocence contained。' },
+      { statement: '筆者は、失われた無垢を取りもどすことが大人の課題だと考えている。', answer: false, why: '第7段落 not to recover a lost innocence, which is impossible。' },
+    ],
+    qa: [
+      { q: 'Why does a child give a favorite toy to a crying friend?', choices: ['Simply because the friend is sad.', 'To be praised.', 'To get a new toy.', 'Because a parent said so.'], answer: 0, why: '第2段落 not to be praised but simply because the friend is sad。' },
+      { q: 'What does the author call an openness that has passed through experience?', choices: ['A second innocence.', 'A lost childhood.', 'A kind of suspicion.', 'A fall.'], answer: 0, why: '第7段落 what some have called a second innocence。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
