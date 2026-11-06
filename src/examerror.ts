@@ -8802,6 +8802,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'That restaurant is [worth to go] to.', choices: ['worth going', 'worth go', 'worthy going', 'worth to going'], answer: 0, why: 'worth going to。前置詞の to は残す。' },
     ],
   },
+  {
+    id: 'exam-fix-207',
+    title: '入試の誤文訂正〈207〉（東大レベル：英作文の so と such・too と enough の語順）',
+    points: ['so ＋形容詞・副詞、such (a) ＋形容詞＋名詞。数えられない名詞や複数形には a をつけず such good weather・such good friends。so many ＋数えられる名詞の複数、so much ＋数えられない名詞。「とても～なので…」は so／such ～ that …。too ～ to …「～すぎて…できない」では to のあとの動詞の目的語が主語と同じなら it を置かない。enough は形容詞・副詞のあとに置く（old enough）。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was such a hot day that we went swimming. / He is old enough to drive.', ja: 'とても暑い日だったので泳ぎに行った。／彼は運転できる年齢だ。' }],
+    questions: [
+      { sentence: 'It was [so a hot day] that we went swimming.', choices: ['such a hot day', 'a so hot day', 'such hot a day', 'so hot day'], answer: 0, why: '形容詞＋名詞なので such a hot day。' },
+      { sentence: 'He is [enough old] to drive.', choices: ['old enough', 'enough older', 'too old enough', 'old so enough'], answer: 0, why: 'enough は形容詞のあと。old enough。' },
+      { sentence: 'This box is [too much heavy] to carry.', choices: ['too heavy', 'too much heavily', 'too heavier', 'enough heavy'], answer: 0, why: '「重すぎて運べない」は too heavy to carry。' },
+      { sentence: 'She had [so many work] that she stayed late.', choices: ['so much work', 'such many work', 'so many works', 'such much work'], answer: 0, why: 'work（仕事）は数えられないので so much work。' },
+      { sentence: 'He was [such kind] that everyone liked him.', choices: ['so kind', 'such a kind', 'so a kind', 'such kindly'], answer: 0, why: '形容詞だけなら so kind that ～。' },
+      { sentence: 'The question was [too difficult for me to answer it].', choices: ['too difficult for me to answer', 'so difficult for me to answer it', 'too difficult that I answer', 'enough difficult for me to answer'], answer: 0, why: 'answer の目的語は主語の the question なので it を置かない。' },
+      { sentence: 'They are [such good friends as] they do everything together.', choices: ['such good friends that', 'so good friends that', 'such good friend that', 'so good friends as'], answer: 0, why: '複数形なので such good friends that ～。' },
+      { sentence: 'Is this room [enough big for] all of us?', choices: ['big enough for', 'big enough to', 'bigger enough for', 'too big enough for'], answer: 0, why: 'enough は形容詞のあと。big enough for ～。' },
+      { sentence: 'It was [so good weather] that we had a picnic.', choices: ['such good weather', 'such a good weather', 'so a good weather', 'so good a weather'], answer: 0, why: 'weather は数えられないので a をつけない。such good weather。' },
+      { sentence: 'He spoke [too fast that] I couldn’t follow him.', choices: ['so fast that', 'too fast for', 'such fast that', 'enough fast that'], answer: 0, why: '「とても速く話したので」は so fast that ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
