@@ -3180,6 +3180,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M80 72 l1 -5 M87 69 l2 -5 M92 63 l3 -4 M95 56 l4 -2" stroke="#2a2014" strokeWidth="2.5" />
       </g>
     )
+  if (species === 'sunbittern')
+    return (
+      <g>
+        {/* つばさの目玉もよう */}
+        <circle cx="28" cy="56" r="7" fill="#f97316" /><circle cx="28" cy="56" r="3" fill="#231a10" />
+        <circle cx="72" cy="56" r="7" fill="#f97316" /><circle cx="72" cy="56" r="3" fill="#231a10" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
