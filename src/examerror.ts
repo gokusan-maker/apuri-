@@ -4826,6 +4826,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) This is (B) the tool (C) without that (D) I can’t work.', choices: ['(A) This is', '(B) the tool', '(C) without that', '(D) I can’t work'], answer: 2, why: '前置詞のあとに that は置けない。without which。' },
     ],
   },
+  {
+    id: 'exam-error-abstract-noun-todai',
+    title: '入試の正誤問題〈203〉（東大レベル：英作文の of ＋抽象名詞・with ＋抽象名詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'of ＋抽象名詞は形容詞の働きをする（of importance ＝ important、of use ＝ useful、of value ＝ valuable、of help ＝ helpful）。with ＋抽象名詞は副詞の働きをする（with ease ＝ easily、with care ＝ carefully、with patience ＝ patiently、with confidence ＝ confidently）。of・with のあとは名詞なので、形容詞をそのまま置かない。great・no・little などで程度を表せる（of great importance・of no use）。',
+    ],
+    examples: [
+      { en: 'This book is of great importance to students.', ja: 'この本は生徒にとってとても大切だ。' },
+      { en: 'She solved the problem with ease.', ja: '彼女はその問題をかんたんにといた。' },
+    ],
+    questions: [
+      { sentence: '(A) This book (B) is of (C) great important (D) to students.', choices: ['(A) This book', '(B) is of', '(C) great important', '(D) to students'], answer: 2, why: 'of のあとは名詞。of great importance「とても大切な」。' },
+      { sentence: '(A) She solved (B) the problem (C) with easy (D) in a few minutes.', choices: ['(A) She solved', '(B) the problem', '(C) with easy', '(D) in a few minutes'], answer: 2, why: 'with のあとは名詞。with ease「かんたんに」。' },
+      { sentence: '(A) He is (B) a man (C) of great wise (D) and kindness.', choices: ['(A) He is', '(B) a man', '(C) of great wise', '(D) and kindness'], answer: 2, why: 'of のあとは名詞。of great wisdom and kindness。' },
+      { sentence: '(A) Please handle (B) the box (C) carefully, (D) for it is of fragile.', choices: ['(A) Please handle', '(B) the box', '(C) carefully,', '(D) for it is of fragile'], answer: 3, why: 'fragile は形容詞なので of は不要。for it is fragile。' },
+      { sentence: '(A) With patient, (B) the teacher (C) explained (D) the rule again.', choices: ['(A) With patient,', '(B) the teacher', '(C) explained', '(D) the rule again'], answer: 0, why: 'with のあとは名詞。With patience「根気強く」。' },
+      { sentence: '(A) This medicine (B) is of (C) no effective (D) against colds.', choices: ['(A) This medicine', '(B) is of', '(C) no effective', '(D) against colds'], answer: 2, why: 'of のあとは名詞。of no effect「効果がない」。' },
+      { sentence: '(A) He spoke (B) to the crowd (C) with confident (D) and humor.', choices: ['(A) He spoke', '(B) to the crowd', '(C) with confident', '(D) and humor'], answer: 2, why: 'with のあとは名詞。with confidence and humor。' },
+      { sentence: '(A) The vase (B) is great value (C) to (D) our family.', choices: ['(A) The vase', '(B) is great value', '(C) to', '(D) our family'], answer: 1, why: '「大きな価値がある」は of ＋抽象名詞で of great value。' },
+      { sentence: '(A) She looked (B) at the painting (C) with (D) interesting.', choices: ['(A) She looked', '(B) at the painting', '(C) with', '(D) interesting'], answer: 3, why: 'with のあとは名詞。with interest「興味をもって」。' },
+      { sentence: '(A) His advice (B) proved (C) to be (D) of great helpful.', choices: ['(A) His advice', '(B) proved', '(C) to be', '(D) of great helpful'], answer: 3, why: 'of のあとは名詞。of great help「とても役に立つ」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
