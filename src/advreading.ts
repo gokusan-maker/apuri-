@@ -38338,6 +38338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-pesticide-limits',
+    title: 'Should Pesticides Be Banned?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Chemical pesticides have played a central role in modern agriculture. By protecting crops from insects, weeds, and diseases, they have helped farmers to produce far more food than was possible in the past, contributing to lower prices and greater food security in many parts of the world. In recent decades, however, growing evidence of their effects on human health and the environment has led some governments to ban or restrict certain pesticides, and others are under pressure to do the same. The question of how far such restrictions should go has become one of the most contested issues in agricultural policy.",
+      "Supporters of stricter limits argue that many pesticides cause serious harm to the natural world. Some chemicals kill not only the pests they target but also bees and other insects that pollinate crops and wild plants, and the decline of these insects threatens both ecosystems and agriculture itself. Pesticides can also wash into rivers and lakes, harming fish and other wildlife, and some remain in the soil for long periods. Birds that feed on insects may also suffer when their food supply disappears. In the view of supporters, the long-term costs of this damage outweigh the short-term benefits of higher yields.",
+      "Supporters also raise concerns about human health. Farm workers who handle pesticides regularly may be exposed to high levels of chemicals, and some studies have linked certain substances to illnesses, including some forms of cancer. ( A ) the evidence for many chemicals remains uncertain, supporters argue that governments should apply a principle of caution, restricting substances that may be harmful until their safety has been clearly demonstrated, rather than waiting for proof of damage that may take decades to appear.",
+      "Opponents of broad bans, however, warn that removing pesticides too quickly could have serious consequences for food production. Without effective chemical protection, crop losses from pests and diseases could rise sharply, reducing yields and increasing prices. This would affect poorer consumers most severely, and in some regions it could threaten food security. Opponents also point out that farmers might respond to bans by using other chemicals that are less well studied, or by clearing more land to make up for lower yields.",
+      "Opponents also argue that decisions about pesticides should be based on careful scientific assessment of each substance rather than on general fears. Modern regulatory systems already test chemicals for safety before approving them, and some opponents claim that bans are sometimes introduced in response to public pressure even when the evidence of harm is weak. Such decisions, they argue, can damage trust in scientific regulation and impose heavy costs on farmers without delivering clear benefits. Some also point out that farmers themselves have strong reasons to use chemicals carefully, since pesticides are expensive and overuse can make pests resistant to them.",
+      "Between these positions, many experts advocate an approach known as integrated pest management. Rather than relying mainly on chemicals, this approach combines several methods, such as rotating crops, encouraging natural predators of pests, using resistant plant varieties, and applying pesticides only when monitoring shows that they are truly necessary. Studies in several countries suggest that such methods can reduce pesticide use significantly without large losses in yield, although they require knowledge, training, and sometimes more labor.",
+      "The debate over pesticides reflects a broader challenge facing modern agriculture: how to produce enough food for a growing population while protecting the natural systems on which farming depends. Neither the unrestricted use of chemicals nor their sudden removal offers a satisfactory answer. What is needed, many argue, is a gradual transition supported by research, advice for farmers, and policies that reward environmentally responsible practices, so that the costs of change are shared fairly and the benefits are secured for future generations.",
+    ],
+    ja: [
+      '化学農薬は現代の農業で中心的な役割を果たしてきた。作物を虫や雑草や病気から守ることで、農家が昔よりはるかに多くの食料を生産するのを助け、世界の多くの地域で値段の低下と食料の安定に貢献してきた。しかしここ数十年、人間の健康と環境への影響についての証拠がふえたことで、ある種の農薬を禁止したり制限したりした政府もあり、ほかの政府も同じことをするよう圧力を受けている。そうした制限をどこまで進めるべきかという問題は、農業政策でもっとも争われている問題の一つになっている。',
+      'よりきびしい制限を支持する人々は、多くの農薬が自然界に深刻な害をあたえていると主張する。ある化学物質は、ねらった害虫だけでなく、作物や野生の植物の花粉を運ぶハチやほかの虫も殺してしまい、こうした虫がへることは、生態系と農業そのものの両方をおびやかしている。農薬はまた川や湖に流れこみ、魚やほかの野生生物を傷つけることがあり、長いあいだ土に残るものもある。虫を食べる鳥も、えさがなくなると苦しむかもしれない。支持する人々の見方では、この害の長期的な費用は、収穫量が上がるという短期的な利益を上回る。',
+      '支持する人々はまた、人間の健康への心配をあげる。農薬をいつもあつかう農場の働き手は、高い濃度の化学物質にさらされるかもしれず、ある種の物質を、ある種のがんをふくむ病気と結びつけた研究もある。多くの化学物質についての証拠は今も不確かだが、政府は用心の原則を当てはめ、何十年もたたないと現れないかもしれない害の証拠を待つのではなく、安全がはっきり示されるまで害があるかもしれない物質を制限すべきだと支持する人々は主張する。',
+      'しかし広い禁止に反対する人々は、農薬を急いでなくすと食料の生産に深刻な結果をもたらしうると警告する。効果的な化学的な守りがなければ、害虫や病気による作物の損失が急にふえ、収穫量がへり、値段が上がるかもしれない。これはまずしい消費者にもっとも重く影響し、地域によっては食料の安定をおびやかしうる。反対する人々はまた、農家が禁止にこたえて、あまり研究されていないほかの化学物質を使ったり、低い収穫量をおぎなうためにより多くの土地を切り開いたりするかもしれないと指摘する。',
+      '反対する人々はまた、農薬についての決定は、一般的なおそれではなく、それぞれの物質の注意深い科学的な評価にもとづくべきだと主張する。現代の規制の仕組みは、承認する前にすでに化学物質の安全を試験しており、害の証拠が弱いときでさえ、世論の圧力にこたえて禁止が取り入れられることがあると主張する反対者もいる。そうした決定は、科学的な規制への信頼をそこない、はっきりした利益をもたらさないまま農家に重い費用を負わせうると彼らは主張する。農家自身にも化学物質を注意深く使う強い理由があると指摘する人もいる。農薬は高価であり、使いすぎると害虫がそれに強くなってしまうからである。',
+      'これらの立場のあいだで、多くの専門家は「総合的病害虫管理」とよばれるやり方をすすめている。おもに化学物質にたよるのではなく、このやり方は、輪作や、害虫の天敵をふやすことや、病気に強い品種を使うことや、観察で本当に必要だとわかったときにだけ農薬を使うことのような、いくつかの方法を組み合わせる。いくつかの国の研究は、知識や訓練や、ときにはより多くの労働が必要になるものの、そうした方法で収穫量を大きくへらさずに農薬の使用を大きくへらせることを示している。',
+      '農薬をめぐる議論は、現代の農業が直面する、より広い課題を反映している。それは、農業がたよる自然の仕組みを守りながら、ふえる人口のために十分な食料をどう生産するかという課題である。化学物質を制限なく使うことも、とつぜんなくすことも、満足のいく答えにはならない。多くの人が主張するように必要なのは、研究と農家への助言と、環境に責任ある方法に報いる政策に支えられた少しずつの移行であり、そうすれば変化の費用は公平に分け合われ、その利益は未来の世代のために確保されるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「証拠は不確かだが、用心の原則を当てはめるべきだ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of stricter limits argue that pesticides harm insects such as ( 1 ) and may threaten human health. Opponents warn that sudden bans could reduce food ( 2 ) and raise prices. Many experts advocate integrated pest management, which uses pesticides only when truly ( 3 ).',
+      blanks: [
+        { choices: ['bees', 'birds', 'fish', 'cows'], answer: 0, why: '第2段落 also bees and other insects that pollinate crops。' },
+        { choices: ['production', 'waste', 'imports', 'quality'], answer: 0, why: '第4段落 serious consequences for food production。' },
+        { choices: ['necessary', 'cheap', 'popular', 'legal'], answer: 0, why: '第6段落 only when monitoring shows that they are truly necessary。' },
+      ],
+    },
+    tf: [
+      { statement: '農薬は、世界の多くの地域で食料の安定に貢献してきた。', answer: true, why: '第1段落 contributing to lower prices and greater food security。' },
+      { statement: '農薬はすべて、すぐに土から消える。', answer: false, why: '第2段落 some remain in the soil for long periods。' },
+      { statement: '禁止がまずしい消費者にもっとも重く影響するかもしれない。', answer: true, why: '第4段落 This would affect poorer consumers most severely。' },
+      { statement: '筆者によれば、化学物質をとつぜんなくすことが満足のいく答えである。', answer: false, why: '第7段落 Neither the unrestricted use of chemicals nor their sudden removal offers a satisfactory answer。' },
+    ],
+    qa: [
+      { q: 'What principle do supporters say governments should apply?', choices: ['A principle of caution.', 'A principle of profit.', 'A principle of speed.', 'A principle of silence.'], answer: 0, why: '第3段落 governments should apply a principle of caution。' },
+      { q: 'What might farmers do in response to bans, according to opponents?', choices: ['Use less well studied chemicals or clear more land.', 'Stop farming entirely.', 'Grow only flowers.', 'Move to cities.'], answer: 0, why: '第4段落 by using other chemicals that are less well studied, or by clearing more land。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
