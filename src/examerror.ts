@@ -4874,6 +4874,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Did you (B) make (C) this cake (D) by yourselves, Mary?', choices: ['(A) Did you', '(B) make', '(C) this cake', '(D) by yourselves, Mary?'], answer: 3, why: '相手は Mary 一人なので by yourself。' },
     ],
   },
+  {
+    id: 'exam-error-no-more-than-kyodai',
+    title: '入試の正誤問題〈205〉（京大レベル：英作文の no more than・no less than）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'no more than ～ は「わずか～・～しか」（＝only）で少なさを、no less than ～ は「～も」（＝as many as / as much as）で多さを強調する。not more than ～ は「多くても～」（＝at most）、not less than ～ は「少なくとも～」（＝at least）。どれも than を使い、as や then にしない。A is no more B than C は「C と同様 A も B ではない」。数のあとの名詞の形と動詞の数にも注意する。',
+    ],
+    examples: [
+      { en: 'It takes no more than ten minutes to walk there.', ja: 'そこへは歩いてわずか10分しかかからない。' },
+      { en: 'The stadium holds no less than fifty thousand people.', ja: 'その競技場は5万人も入る。' },
+    ],
+    questions: [
+      { sentence: '(A) She has (B) no less than (C) ten yen, (D) so she cannot buy anything.', choices: ['(A) She has', '(B) no less than', '(C) ten yen,', '(D) so she cannot buy anything'], answer: 1, why: '「10円しか持っていないので何も買えない」は少なさを強調するので no more than（＝only）。' },
+      { sentence: '(A) The stadium (B) holds (C) no less as (D) fifty thousand people.', choices: ['(A) The stadium', '(B) holds', '(C) no less as', '(D) fifty thousand people'], answer: 2, why: 'no less than ～「～も（多くの）」。as ではなく than。' },
+      { sentence: '(A) It (B) takes (C) no more then (D) ten minutes to walk there.', choices: ['(A) It', '(B) takes', '(C) no more then', '(D) ten minutes to walk there'], answer: 2, why: 'no more than ～「わずか～」。then ではなく than。' },
+      { sentence: '(A) No fewer than (B) a thousand (C) people (D) was at the concert.', choices: ['(A) No fewer than', '(B) a thousand', '(C) people', '(D) was at the concert'], answer: 3, why: '主語は people（複数）なので were。' },
+      { sentence: '(A) She is (B) no less than (C) fifteen, (D) but she already plays like a professional.', choices: ['(A) She is', '(B) no less than', '(C) fifteen,', '(D) but she already plays like a professional'], answer: 1, why: '「まだ15歳にすぎないのに」は若さの強調なので no more than。' },
+      { sentence: '(A) I (B) can stay (C) not more than (D) a hour.', choices: ['(A) I', '(B) can stay', '(C) not more than', '(D) a hour'], answer: 3, why: 'hour は母音の音で始まるので an hour。not more than ～「多くても～」。' },
+      { sentence: '(A) Not less than (B) twenty students (C) has passed (D) the exam this year.', choices: ['(A) Not less than', '(B) twenty students', '(C) has passed', '(D) the exam this year'], answer: 2, why: '主語は students なので have passed。not less than ～「少なくとも～」。' },
+      { sentence: '(A) This book costs (B) no more than (C) five hundred yen, (D) so it is very expensive.', choices: ['(A) This book costs', '(B) no more than', '(C) five hundred yen,', '(D) so it is very expensive'], answer: 3, why: 'no more than は「わずか～」と安さを強調するので、expensive とは合わない。so it is very cheap が自然。' },
+      { sentence: '(A) He is (B) no more a genius (C) as I am, (D) so he must study hard.', choices: ['(A) He is', '(B) no more a genius', '(C) as I am,', '(D) so he must study hard'], answer: 2, why: 'A is no more B than C「C と同様 A も B ではない」。as ではなく than I am。' },
+      { sentence: '(A) No more than (B) a thousand people (C) came to the festival, (D) which was far more than we expected.', choices: ['(A) No more than', '(B) a thousand people', '(C) came to the festival,', '(D) which was far more than we expected'], answer: 0, why: '「予想よりはるかに多かった」ので、多さを強調する No less than（＝as many as）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

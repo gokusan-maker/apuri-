@@ -2822,3 +2822,10 @@ it('誤文訂正〈198〉：東大レベル 倍数表現の単元が10問ある'
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('twice as large')
 })
+
+it('正誤問題〈205〉：京大レベル no more than・no less than の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-no-more-than-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) no less than')
+})
