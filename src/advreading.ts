@@ -38818,6 +38818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tourist-pricing',
+    title: 'Should Foreign Tourists Pay More?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "At many famous museums, temples, and historical sites, visitors pay the same price for admission regardless of where they come from. In recent years, however, a growing number of popular destinations have introduced or considered a different approach: charging foreign tourists more than local residents. Supporters see this as a fair way of funding the preservation of cultural heritage, while critics regard it as a form of discrimination that may damage a country's reputation. The debate touches on questions of fairness, public funding, and the meaning of shared cultural heritage.",
+      "Supporters of higher prices for foreign visitors argue that local residents already contribute to the maintenance of cultural sites through their taxes. When a government spends public money on restoring an ancient temple or running a national museum, citizens have in effect paid for part of the visit in advance. Foreign tourists, by contrast, benefit from these sites without having contributed to their upkeep. Charging them a higher price, supporters claim, simply asks them to pay a fairer share of the costs that residents bear throughout the year. In their view, the difference in price is less a penalty on foreigners than a recognition of contributions already made.",
+      "Supporters also point to the growing pressure that mass tourism places on popular sites. Large numbers of visitors can damage fragile buildings, crowd narrow streets, and make it difficult for residents to enjoy places in their own communities. ( A ) higher prices may not reduce the number of visitors greatly, the additional income can be used to repair damage, hire staff, and improve facilities. In countries where the average local income is much lower than that of many international tourists, a single price may either be too expensive for residents or too cheap to cover costs.",
+      "Critics, however, argue that charging different prices according to nationality is unfair and potentially discriminatory. Cultural heritage, they claim, belongs in an important sense to all of humanity, and great works of art and architecture should be equally accessible to everyone who wishes to see them. Critics also note that the distinction between residents and foreigners is not always clear: long-term foreign residents, students from abroad, and citizens who live overseas may find themselves treated unfairly by rigid rules.",
+      "Critics further worry about the practical effects of dual pricing. Checking visitors' identity documents at entrances can slow down admission and create an unwelcoming atmosphere. Tourists who feel that they are being charged unfairly may form a negative impression of the country as a whole and share their complaints online, potentially discouraging others from visiting. Some travelers have even chosen other destinations for this reason. Since tourism is an important source of income for many local businesses, critics argue that policies which make visitors feel unwelcome may harm the very communities they are intended to benefit.",
+      "Some destinations have adopted compromise approaches. Rather than charging foreigners more, they offer discounts to residents, students, or older people, so that the standard price applies to everyone else. Others set a higher general price but provide free entry on certain days or to local schoolchildren. Still others have introduced visitor taxes that apply to everyone staying in a city, with the revenue directed toward the preservation of historic sites, avoiding a direct distinction between residents and foreigners at the entrance.",
+      "The debate over pricing for foreign visitors reflects a broader tension between the global and the local. Cultural sites attract visitors from around the world because they are part of a shared human heritage, yet the responsibility for maintaining them falls mainly on the communities where they are located. Finding a fair way to share the costs of preservation, without making visitors feel excluded or residents feel exploited, will remain an important challenge as international tourism continues to grow.",
+    ],
+    ja: [
+      '多くの有名な博物館や寺や歴史的な場所では、訪問者はどこから来たかにかかわらず同じ入場料をはらう。しかし近年、人気のある観光地のなかに、別のやり方を取り入れたり検討したりするところがふえている。外国人観光客に地元の住民より高い料金をとるのである。支持する人々はこれを文化遺産を守るための資金を集める公平な方法と見るが、批判する人々はそれを国の評判をそこないかねない差別の一つの形と見なしている。この議論は、公平さや公的な資金や、共有の文化遺産の意味についての問いにふれている。',
+      '外国人訪問者への高い料金を支持する人々は、地元の住民はすでに税金を通じて文化的な場所の維持に貢献していると主張する。政府が古い寺を修復したり国立博物館を運営したりするのに公的なお金を使うとき、市民は事実上、見学の一部の料金を前ばらいしているのである。それに対して外国人観光客は、維持に貢献することなくこうした場所から利益を得ている。彼らに高い料金をとることは、住民が一年中負っている費用について、より公平な分をはらうよう求めているだけだと支持する人々は主張する。彼らの見方では、料金の差は外国人への罰というより、すでになされた貢献を認めることなのである。',
+      '支持する人々はまた、大量の観光が人気のある場所にかける圧力が高まっていることをあげる。多くの訪問者は、もろい建物を傷つけ、細い通りを混雑させ、住民が自分の地域の場所を楽しむのをむずかしくすることがある。高い料金で訪問者の数があまりへらなくても、追加の収入は損傷の修理や職員の雇用や施設の改善に使える。地元の平均収入が多くの外国人観光客よりはるかに低い国では、一つの料金は住民には高すぎるか、費用をまかなうには安すぎるかのどちらかになりうる。',
+      'しかし批判する人々は、国籍によってちがう料金をとることは不公平で、差別になりうると主張する。文化遺産は大切な意味ですべての人類のものであり、すぐれた芸術や建築は、見たいと願うすべての人に平等にひらかれているべきだと彼らは主張する。批判する人々はまた、住民と外国人の区別はいつもはっきりしているわけではないと指摘する。長く住んでいる外国人や外国からの学生や海外に住む市民は、かたい規則によって不公平にあつかわれるかもしれない。',
+      '批判する人々はさらに、二重料金の実際の影響を心配する。入口で訪問者の身分証明書を確かめると入場がおそくなり、歓迎されていないふんいきを生むことがある。不公平に料金をとられていると感じた観光客は、国全体に悪い印象をもち、オンラインで不満を広め、ほかの人の訪問を思いとどまらせるかもしれない。このためにほかの行き先を選んだ旅行者さえいる。観光は多くの地元の商売にとって大切な収入源なので、訪問者に歓迎されていないと感じさせる方針は、それが役立つはずの地域そのものをそこないうると批判する人々は主張する。',
+      '妥協のやり方をとった観光地もある。外国人に高い料金をとるのではなく、住民や学生やお年寄りに割引をし、標準の料金はほかのすべての人に当てはまるようにするのである。全体の料金を高めにしつつ、特定の日や地元の小中学生には無料にするところもある。都市に泊まるすべての人に当てはまる宿泊税を取り入れ、その収入を歴史的な場所の保存に向けることで、入口で住民と外国人を直接区別することをさけたところもある。',
+      '外国人訪問者の料金をめぐる議論は、世界的なものと地元のもののあいだの、より広い緊張を反映している。文化的な場所が世界中から訪問者を引きつけるのは、それが人類の共有の遺産の一部だからだが、それを守る責任はおもにその場所がある地域にかかっている。訪問者に閉め出されたと感じさせず、住民に利用されたと感じさせずに、保存の費用を分け合う公平な方法を見つけることは、国際的な観光がふえ続けるなかで、大切な課題であり続けるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「高い料金で訪問者はあまりへらなくても、収入は修理に使える」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that residents already contribute through their ( 1 ) and that extra income can repair damage from mass tourism. Critics argue that dual pricing is unfair and may make visitors feel ( 2 ). Some destinations instead offer ( 3 ) to residents or introduce visitor taxes for everyone.',
+      blanks: [
+        { choices: ['taxes', 'votes', 'visits', 'languages'], answer: 0, why: '第2段落 through their taxes。' },
+        { choices: ['unwelcome', 'excited', 'rich', 'tired'], answer: 0, why: '第5段落 policies which make visitors feel unwelcome。' },
+        { choices: ['discounts', 'tours', 'maps', 'gifts'], answer: 0, why: '第6段落 they offer discounts to residents, students, or older people。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの訪問者は、もろい建物を傷つけることがある。', answer: true, why: '第3段落 Large numbers of visitors can damage fragile buildings。' },
+      { statement: '住民と外国人の区別は、いつもはっきりしている。', answer: false, why: '第4段落 the distinction between residents and foreigners is not always clear。' },
+      { statement: '入口で身分証明書を確かめると、入場がおそくなることがある。', answer: true, why: '第5段落 can slow down admission。' },
+      { statement: '筆者によれば、保存の費用を分け合う公平な方法はすでに見つかっている。', answer: false, why: '第7段落 will remain an important challenge。' },
+    ],
+    qa: [
+      { q: 'Why do supporters say residents have in effect paid in advance?', choices: ['Public money from taxes is spent on the sites.', 'They bought tickets last year.', 'They work at the museums.', 'They donate to tourists.'], answer: 0, why: '第2段落 When a government spends public money ... citizens have in effect paid。' },
+      { q: 'Where is the revenue from visitor taxes directed in some cities?', choices: ['Toward the preservation of historic sites.', 'Toward building hotels.', 'Toward airline tickets.', 'Toward foreign governments.'], answer: 0, why: '第6段落 with the revenue directed toward the preservation of historic sites。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
