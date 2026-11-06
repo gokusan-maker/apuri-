@@ -5042,6 +5042,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) A such (B) kind man (C) is (D) rare these days.', choices: ['(A) A such', '(B) kind man', '(C) is', '(D) rare these days'], answer: 0, why: 'such a の語順。Such a kind man。' },
     ],
   },
+  {
+    id: 'exam-error-linking-verbs-kokkou',
+    title: '入試の正誤問題〈212〉（国公立レベル：look・sound・feel ＋形容詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'look「～に見える」・sound「～に聞こえる」・feel「～と感じる」・taste「～な味がする」・smell「～なにおいがする」・become／get「～になる」・keep「～のままでいる」のあとには、主語のようすを表す形容詞を置く（副詞にしない）。名詞を続けるときは look like ～・sound like ～ のように like を使う。',
+    ],
+    examples: [
+      { en: 'You look happy today.', ja: '今日はうれしそうだね。' },
+      { en: 'That sounds like a good plan.', ja: 'それはよい計画に聞こえる。' },
+    ],
+    questions: [
+      { sentence: '(A) You (B) look (C) happily (D) today.', choices: ['(A) You', '(B) look', '(C) happily', '(D) today'], answer: 2, why: 'look ＋形容詞で「～に見える」。happy。' },
+      { sentence: '(A) That idea (B) sounds (C) greatly (D) to me.', choices: ['(A) That idea', '(B) sounds', '(C) greatly', '(D) to me'], answer: 2, why: 'sound ＋形容詞なので great。' },
+      { sentence: '(A) This blanket (B) feels (C) softly (D) and warm.', choices: ['(A) This blanket', '(B) feels', '(C) softly', '(D) and warm'], answer: 2, why: 'feel ＋形容詞なので soft。' },
+      { sentence: '(A) The soup (B) tastes (C) a little (D) saltily.', choices: ['(A) The soup', '(B) tastes', '(C) a little', '(D) saltily'], answer: 3, why: 'taste ＋形容詞なので salty。' },
+      { sentence: '(A) She (B) looks (C) like (D) tired after the trip.', choices: ['(A) She', '(B) looks', '(C) like', '(D) tired after the trip'], answer: 2, why: 'look ＋形容詞なので like は不要。look like のあとは名詞。' },
+      { sentence: '(A) The flowers (B) smell (C) sweetly (D) in the garden.', choices: ['(A) The flowers', '(B) smell', '(C) sweetly', '(D) in the garden'], answer: 2, why: 'smell ＋形容詞なので sweet。' },
+      { sentence: '(A) He (B) got angrily (C) when he (D) heard the news.', choices: ['(A) He', '(B) got angrily', '(C) when he', '(D) heard the news'], answer: 1, why: 'get ＋形容詞「～になる」なので got angry。' },
+      { sentence: '(A) The music (B) sounded (C) beautifully (D) in the hall.', choices: ['(A) The music', '(B) sounded', '(C) beautifully', '(D) in the hall'], answer: 2, why: 'sound ＋形容詞なので beautiful。' },
+      { sentence: '(A) Please (B) keep (C) quietly (D) in the library.', choices: ['(A) Please', '(B) keep', '(C) quietly', '(D) in the library'], answer: 2, why: 'keep ＋形容詞「～のままでいる」なので quiet。' },
+      { sentence: '(A) Feel (B) you (C) better (D) today?', choices: ['(A) Feel', '(B) you', '(C) better', '(D) today?'], answer: 0, why: '一般動詞の疑問文なので Do you feel better today?' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

@@ -2920,3 +2920,10 @@ it('誤文訂正〈205〉：東大レベル during・while・for の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('during')
 })
+
+it('正誤問題〈212〉：国公立レベル look・sound・feel ＋形容詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-linking-verbs-kokkou')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) happily')
+})
