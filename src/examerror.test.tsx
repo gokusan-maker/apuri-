@@ -2955,3 +2955,10 @@ it('正誤問題〈214〉：東大レベル 形式目的語の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) difficult')
 })
+
+it('誤文訂正〈208〉：国公立レベル 他動詞と前置詞の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-208')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('reached')
+})

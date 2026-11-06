@@ -8844,6 +8844,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He spoke [too fast that] I couldn’t follow him.', choices: ['so fast that', 'too fast for', 'such fast that', 'enough fast that'], answer: 0, why: '「とても速く話したので」は so fast that ～。' },
     ],
   },
+  {
+    id: 'exam-fix-208',
+    title: '入試の誤文訂正〈208〉（国公立レベル：英作文の reach・discuss などの他動詞と arrive at・talk about）',
+    points: ['reach・discuss・marry・enter・answer・resemble・contact・approach は他動詞で、すぐあとに目的語を置き、前置詞をつけない（reach the station、discuss the plan）。同じ意味でも arrive は自動詞なので arrive at（in）～、talk は talk about ～、reply は reply to ～ と前置詞が必要。日本語の「～に着く」「～について話し合う」「～と結婚する」につられて前置詞を入れないこと。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'We reached the station at noon. / We arrived at the station at noon.', ja: '私たちは正午に駅に着いた。' }],
+    questions: [
+      { sentence: 'We [reached to] the station at noon.', choices: ['reached', 'arrived to', 'got at', 'reached at'], answer: 0, why: 'reach は他動詞なので前置詞なしで reached the station。' },
+      { sentence: 'Let’s [discuss about] the plan.', choices: ['discuss', 'discuss on', 'talk', 'discuss for'], answer: 0, why: 'discuss は他動詞。discuss the plan。' },
+      { sentence: 'She [married with] a doctor.', choices: ['married', 'married to', 'got married', 'married for'], answer: 0, why: 'marry は他動詞なので married a doctor。' },
+      { sentence: 'He [entered into] the room quietly.', choices: ['entered', 'entered in', 'entered to', 'came into to'], answer: 0, why: '「部屋に入る」は enter the room。' },
+      { sentence: 'Please [answer to] my question.', choices: ['answer', 'answer for', 'reply', 'respond'], answer: 0, why: 'answer は他動詞。answer my question。reply や respond なら to が必要。' },
+      { sentence: 'They [arrived] Tokyo late at night.', choices: ['arrived in', 'arrived to', 'reached at', 'got'], answer: 0, why: 'arrive は自動詞なので arrive in Tokyo。' },
+      { sentence: 'We [talked] the problem for hours.', choices: ['talked about', 'talked on to', 'discussed about', 'spoke'], answer: 0, why: 'talk は自動詞なので talk about ～。' },
+      { sentence: 'You [resemble with] your father.', choices: ['resemble', 'resemble to', 'are resemble', 'resembling'], answer: 0, why: 'resemble は他動詞。resemble your father。' },
+      { sentence: 'I will [contact with] you tomorrow.', choices: ['contact', 'contact to', 'contact at', 'be contact'], answer: 0, why: 'contact は他動詞。contact you。' },
+      { sentence: 'He [approached to] the door slowly.', choices: ['approached', 'approached at', 'approached for', 'approached into'], answer: 0, why: 'approach は他動詞。approached the door。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
