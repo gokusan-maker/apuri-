@@ -36818,6 +36818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-pe-grades',
+    title: 'Should Physical Education Be Graded?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most schools around the world, physical education is a required subject, and in many countries it is graded in the same way as mathematics or history. Students may receive marks for running speed, skill in team sports, or performance in gymnastics, and these marks may count toward their overall academic record. In recent years, however, some educators and parents have questioned whether physical education should be graded at all, arguing that marks based on athletic ability may discourage the very students who most need to develop healthy habits.",
+      "Critics of grading argue that physical ability depends heavily on factors beyond a student's control. Height, body shape, early development, and natural coordination vary widely among young people, and a student who works hard may still perform worse than a naturally talented classmate who makes little effort. Giving low marks to such students, critics claim, may make them feel that sport is not for them, leading them to avoid physical activity not only at school but also in later life, when regular exercise becomes increasingly important for health.",
+      "Critics also emphasize the emotional effects of being judged in public. Unlike a written test, physical performance often takes place in front of classmates, and students who struggle may feel embarrassed or ashamed. ( A ) some students thrive on competition, critics argue, many others experience physical education as a source of anxiety, and grading only adds to the pressure. The goal of the subject, in their view, should be to encourage enjoyment of movement and lifelong fitness rather than to rank students by ability.",
+      "Supporters of grading, however, argue that removing marks would send the message that physical education is less important than other subjects. If students know that their efforts will not be assessed, they may take the subject less seriously, and teachers may find it harder to motivate them. Supporters also point out that grades in other subjects reflect differences in natural ability as well, and that it would be inconsistent to treat physical education differently from mathematics or music. Without any form of assessment, they add, it would be difficult for teachers to identify students who are falling behind or who might benefit from additional support.",
+      "Supporters further suggest that assessment can be designed fairly. Rather than grading students only on speed or strength, teachers can evaluate improvement over time, effort, knowledge of health and fitness, and the ability to cooperate with others. Such assessment, supporters argue, rewards qualities that every student can develop, while still recognizing that physical education involves skills and knowledge that can be learned and measured. A student who learns to swim, for example, has achieved something real, whether or not they are faster than their classmates.",
+      "Between these positions, many schools have experimented with alternative approaches. Some offer a choice of activities, such as dance, swimming, or hiking, so that students who dislike competitive sports can find forms of exercise they enjoy. Others replace traditional marks with descriptive feedback or a simple pass or fail, focusing on participation and progress. Some schools encourage students to set personal goals and track their own development, helping them to see physical activity as a matter of personal health rather than comparison with others.",
+      "The debate over grading physical education reflects a broader question about what schools should measure and why. Grades can motivate students and communicate expectations, but they can also discourage those who feel they cannot succeed. In physical education, where the long-term goal is often a healthy and active life, the way students are assessed may shape not only their marks but also their attitudes toward their own bodies. Finding approaches that encourage every student to keep moving may be more important than producing precise rankings.",
+    ],
+    ja: [
+      '世界のほとんどの学校で体育は必修の教科であり、多くの国では数学や歴史と同じように成績がつけられる。生徒は走る速さや団体競技の技能や体操の出来で点をつけられ、その点が学校の成績全体に入ることもある。しかし近年、運動能力にもとづく点は、健やかな習慣をもっとも育てる必要のあるまさにその生徒をくじいてしまうかもしれないと主張して、体育に成績をつけるべきかどうかを疑う教育者や親もいる。',
+      '成績をつけることを批判する人々は、運動能力は生徒が自分ではどうにもできない要因に大きく左右されると主張する。身長や体つきや成長の早さや生まれつきの身のこなしは若者のあいだで大きく異なり、熱心に取り組む生徒でも、ほとんど努力しない生まれつき才能のある同級生より成績が悪いことがある。そうした生徒に低い点をつけると、スポーツは自分には向いていないと感じさせ、学校でだけでなく、定期的な運動が健康にとってますます大切になるのちの人生でも、体を動かすことをさけるようにさせてしまうかもしれないと批判する人々は主張する。',
+      '批判する人々はまた、人前で評価されることの感情への影響を強調する。筆記試験とちがって、体を使った出来はしばしば同級生の前で行われ、苦手な生徒ははずかしい思いをしたり、恥じたりするかもしれない。競争で力を発揮する生徒もいるが、ほかの多くの生徒は体育を不安のみなもととして経験しており、成績をつけることはその重圧をふやすだけだと批判する人々は主張する。彼らの見方では、この教科の目標は、生徒を能力で順位づけることではなく、体を動かす楽しみと一生続く健康をうながすことであるべきである。',
+      'しかし成績をつけることを支持する人々は、点をなくすと、体育はほかの教科より大切ではないというメッセージを送ることになると主張する。自分の努力が評価されないとわかれば、生徒はこの教科をあまり真剣に受けとめなくなるかもしれず、教師は生徒のやる気を引き出しにくくなるかもしれない。支持する人々はまた、ほかの教科の成績も生まれつきの能力のちがいを反映しているのであり、体育を数学や音楽とちがうようにあつかうのは一貫しないと指摘する。何の評価もなければ、教師がおくれている生徒や、さらなるささえで益を得られるかもしれない生徒を見つけるのは難しいだろうと彼らは付け加える。',
+      '支持する人々はさらに、評価は公平に設計できると示す。速さや強さだけで生徒に成績をつけるのではなく、教師は時間をかけた上達や努力や、健康と体力についての知識や、ほかの人と協力する力を評価できる。そうした評価は、どの生徒も育てられる性質にむくいながら、体育には学んではかることのできる技能と知識がふくまれていることも認めるものだと支持する人々は主張する。たとえば泳げるようになった生徒は、同級生より速いかどうかにかかわらず、本当に何かをなしとげたのである。',
+      'これらの立場のあいだで、多くの学校は別のやり方を試してきた。ダンスや水泳やハイキングのような活動の選択肢をあたえ、競争的なスポーツがきらいな生徒が楽しめる運動の形を見つけられるようにしている学校もある。ふつうの点の代わりに、言葉での助言や単純な合格か不合格かを使い、参加と上達に注目している学校もある。生徒が自分の目標を決め、自分の成長を記録するようすすめ、体を動かすことをほかの人とのくらべっこではなく自分の健康の問題として見られるよう助けている学校もある。',
+      '体育の成績をめぐる議論は、学校が何を、なぜはかるべきかという、より広い問いを反映している。成績は生徒のやる気を引き出し、期待を伝えることができるが、成功できないと感じる生徒をくじくこともある。長い目で見た目標がしばしば健やかで活動的な人生である体育では、生徒がどう評価されるかは、点だけでなく自分の体への態度も形づくるかもしれない。すべての生徒が体を動かし続けるようはげますやり方を見つけることは、正確な順位をつくることより大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「競争で力を発揮する生徒もいるが、多くの生徒は不安を経験する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that physical ability depends on factors beyond students’ ( 1 ) and that grading may discourage exercise. Supporters argue that removing marks would make the subject seem less ( 2 ) and that assessment can be fair. Some schools offer a choice of ( 3 ) such as dance and swimming.',
+      blanks: [
+        { choices: ['control', 'interest', 'memory', 'budget'], answer: 0, why: '第2段落 factors beyond a student’s control。' },
+        { choices: ['important', 'difficult', 'expensive', 'popular'], answer: 0, why: '第4段落 less important than other subjects。' },
+        { choices: ['activities', 'teachers', 'textbooks', 'schools'], answer: 0, why: '第6段落 Some offer a choice of activities, such as dance, swimming, or hiking。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国で、体育はほかの教科と同じように成績がつけられる。', answer: true, why: '第1段落 graded in the same way as mathematics or history。' },
+      { statement: '批判する人々によれば、すべての生徒が競争で力を発揮する。', answer: false, why: '第3段落 some students thrive on competition ... many others experience ... anxiety。' },
+      { statement: '支持する人々は、上達や努力も評価できると考えている。', answer: true, why: '第5段落 teachers can evaluate improvement over time, effort。' },
+      { statement: '筆者によれば、正確な順位をつくることがもっとも大切である。', answer: false, why: '第7段落 may be more important than producing precise rankings。' },
+    ],
+    qa: [
+      { q: 'Why might low marks in physical education have long-term effects?', choices: ['Students may avoid physical activity in later life.', 'Students may become professional athletes.', 'Students will study harder in math.', 'Students will grow taller.'], answer: 0, why: '第2段落 leading them to avoid physical activity not only at school but also in later life。' },
+      { q: 'What do some schools use instead of traditional marks?', choices: ['Descriptive feedback or a simple pass or fail.', 'Longer races.', 'More competitive tests.', 'Public rankings.'], answer: 0, why: '第6段落 replace traditional marks with descriptive feedback or a simple pass or fail。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
