@@ -37618,6 +37618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-cosmetic-surgery',
+    title: 'Should Cosmetic Surgery for Teenagers Be Restricted?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Cosmetic surgery, once associated mainly with celebrities and the wealthy, has become increasingly common in many parts of the world. Procedures that change the shape of the nose, eyes, or body are now widely advertised, and some clinics actively encourage young people to undergo them. In several countries, the number of teenagers seeking such operations has risen sharply, prompting debate about whether the law should restrict cosmetic surgery for those under the age of eighteen, or whether such decisions should be left to young people and their families.",
+      "Those who favor restrictions argue that teenagers are not yet in a position to make such permanent decisions. The adolescent years are a time when feelings about one's appearance can change rapidly, and a feature that seems unbearable at fifteen may seem perfectly acceptable a few years later. Because many cosmetic procedures cannot be reversed, supporters of restrictions argue that it is wiser to wait until young people have reached adulthood and can judge more clearly whether an operation is something they truly want. Moreover, the risks of surgery, such as infection and other complications, are not always fully explained to young patients.",
+      "Supporters of restrictions also point to the influence of social pressure. Teenagers today are constantly exposed to images on social media that present narrow and often unrealistic standards of beauty, many of which have been digitally altered. ( A ) a young person may sincerely believe that surgery will make them happier, supporters argue, this belief may reflect pressures from advertising and online culture rather than a genuine personal choice. Restricting surgery, in their view, would protect young people from decisions shaped by forces they may not fully recognize.",
+      "Opponents of restrictions, however, argue that such rules would interfere with the rights of families and individuals. Many teenagers who seek surgery do so for reasons that deserve respect, such as correcting a feature that causes them serious distress or that has made them the target of bullying. In such cases, opponents argue, forcing a young person to wait several years may cause real suffering. Parents and doctors, they suggest, are better placed than lawmakers to decide whether a particular operation is in a young person's interest.",
+      "Opponents also note that the line between cosmetic and medical surgery is not always clear. An operation to correct protruding ears or a cleft lip may be described as cosmetic, yet it can have a significant effect on a child's health, confidence, and social life. A law that banned all cosmetic procedures for minors might therefore prevent treatments that most people would regard as reasonable. Opponents argue that any restriction would need to be carefully designed to avoid such unintended consequences, and that this may prove difficult in practice.",
+      "Between these positions, some countries have chosen a middle path. Rather than banning cosmetic surgery for teenagers outright, they require a waiting period between the first consultation and the operation, psychological assessment before certain procedures, or the consent of both the young person and their parents. Some have also restricted the advertising of cosmetic surgery to young audiences, arguing that the problem lies less in individual decisions than in the commercial pressures that encourage them. Such measures aim to ensure that young people have time to reflect and access to impartial advice before making a decision.",
+      "The debate over cosmetic surgery for teenagers raises broader questions about how societies should protect young people while respecting their growing independence. It also invites reflection on the cultural forces that make so many young people dissatisfied with their appearance in the first place. Laws may help to prevent hasty decisions, but they cannot by themselves change the standards of beauty that shape those decisions. Addressing those standards may require efforts not only from lawmakers but also from schools, families, and the media.",
+    ],
+    ja: [
+      '美容整形は、かつてはおもに有名人や裕福な人々と結びつけられていたが、世界の多くの地域でますますふつうのものになっている。鼻や目や体の形を変える手術が今では広く宣伝され、若者に受けるよう積極的にすすめる診療所もある。いくつかの国では、そうした手術を求める十代の数が急にふえ、法律が十八歳未満の美容整形を制限すべきか、それともそうした決定は若者とその家族にまかせるべきかについての議論を引き起こしている。',
+      '制限に賛成する人々は、十代の若者はまだそうした取り返しのつかない決定をする立場にないと主張する。思春期は自分の見た目についての気持ちが急に変わりうる時期であり、十五歳のときにたえられないと思える特徴が、数年後にはまったく受け入れられるものに思えることもある。多くの美容の手術は元にもどせないので、若者が大人になり、手術が本当に望むものなのかをよりはっきり判断できるまで待つ方が賢いと制限を支持する人々は主張する。さらに、感染やほかの合併症のような手術の危険は、若い患者にいつも十分に説明されるわけではない。',
+      '制限を支持する人々はまた、社会的な圧力の影響を指摘する。今日の十代の若者は、せまく、しばしば現実ばなれした美しさの基準を示すソーシャルメディア上の画像にたえずさらされており、その多くはデジタル加工されている。若者は手術で自分がもっと幸せになると本気で信じているかもしれないが、この信念は本当の個人的な選択ではなく、広告やネットの文化からの圧力を反映しているかもしれないと支持する人々は主張する。彼らの見方では、手術を制限することは、十分には気づいていないかもしれない力に形づくられた決定から若者を守ることになる。',
+      'しかし制限に反対する人々は、そうした規則は家族と個人の権利に干渉すると主張する。手術を求める十代の多くは、深刻な苦しみの原因になっている特徴や、いじめの的になってきた特徴を直すことのように、尊重されるべき理由からそうする。そうした場合、若者に何年も待たせることは本当の苦しみを生むかもしれないと反対する人々は主張する。ある手術が若者の利益になるかどうかを決めるには、法律を作る人よりも親や医者の方がよい立場にいると彼らは示す。',
+      '反対する人々はまた、美容の手術と医療の手術の境目はいつもはっきりしているわけではないと指摘する。つき出た耳や口唇裂を直す手術は美容と言われることがあるが、それは子どもの健康や自信や人づきあいに大きな影響をもちうる。そのため、未成年の美容の手術をすべて禁じる法律は、ほとんどの人が妥当だと考える治療をさまたげるかもしれない。どんな制限も、そうした意図しない結果をさけるよう注意深く作る必要があり、それは実際にはむずかしいかもしれないと反対する人々は主張する。',
+      'これらの立場のあいだで、中間の道を選んだ国もある。十代の美容整形をまったく禁じるのではなく、最初の相談と手術のあいだの待つ期間や、ある種の手術の前の心理的な評価や、若者本人と親の両方の同意を求めるのである。問題は個人の決定よりも、それをうながす商業的な圧力にあると考え、若い人々に向けた美容整形の広告を制限したところもある。そうした対策は、若者が決定をする前に、考える時間と公平な助言を得られるようにすることを目指している。',
+      '十代の美容整形をめぐる議論は、育ちつつある自立を尊重しながら、社会が若者をどう守るべきかという、より広い問いを投げかける。それはまた、そもそもなぜこれほど多くの若者が自分の見た目に不満をもつのかという、その文化的な力について考えるようにうながす。法律は急いだ決定をふせぐ助けになるかもしれないが、それだけでは、そうした決定を形づくる美しさの基準を変えることはできない。その基準に取り組むには、法律を作る人だけでなく、学校や家族やメディアの努力も必要かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「本気で信じているかもしれないが、それは圧力の反映かもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Those who favor restrictions argue that teenagers should not make ( 1 ) decisions and that their wishes may reflect social pressure. Opponents argue that restrictions interfere with the rights of ( 2 ) and that the line between cosmetic and medical surgery is unclear. Some countries require a ( 3 ) period instead of a complete ban.',
+      blanks: [
+        { choices: ['permanent', 'quick', 'shared', 'public'], answer: 0, why: '第2段落 not yet in a position to make such permanent decisions。' },
+        { choices: ['families', 'doctors', 'schools', 'clinics'], answer: 0, why: '第4段落 interfere with the rights of families and individuals。' },
+        { choices: ['waiting', 'training', 'holiday', 'trial'], answer: 0, why: '第6段落 they require a waiting period。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの国では、美容整形を求める十代の数が急にふえている。', answer: true, why: '第1段落 the number of teenagers seeking such operations has risen sharply。' },
+      { statement: 'ソーシャルメディアの画像は、すべて加工されていない。', answer: false, why: '第3段落 many of which have been digitally altered。' },
+      { statement: '美容と医療の手術の境目は、いつもはっきりしているわけではない。', answer: true, why: '第5段落 the line between cosmetic and medical surgery is not always clear。' },
+      { statement: '筆者は、法律だけで美しさの基準を変えられると考えている。', answer: false, why: '第7段落 they cannot by themselves change the standards of beauty。' },
+    ],
+    qa: [
+      { q: 'Why might a teenager seek surgery for reasons that deserve respect?', choices: ['A feature causes them serious distress or bullying.', 'They want to become famous.', 'Their friends pay for it.', 'Clinics give it for free.'], answer: 0, why: '第4段落 a feature that causes them serious distress or that has made them the target of bullying。' },
+      { q: 'What have some countries restricted besides surgery itself?', choices: ['The advertising of cosmetic surgery to young audiences.', 'The use of social media.', 'The number of clinics.', 'Medical treatments for children.'], answer: 0, why: '第6段落 restricted the advertising of cosmetic surgery to young audiences。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
