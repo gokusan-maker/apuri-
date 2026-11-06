@@ -37342,6 +37342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-reputation',
+    title: 'On Reputation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few things matter more to most people than their reputation, yet few things are less within their control. A reputation is not something we possess in the way we possess a coat or a skill; it exists in the minds of others, formed from what they have seen, heard, and imagined about us. We may spend years building a good name through honest work and careful behavior, only to see it damaged in a moment by a misunderstanding or a rumor. This strange combination of importance and fragility makes reputation a subject worth thinking about carefully.",
+      "One reason reputation matters is that it allows people to cooperate with strangers. In a small village, everyone may know everyone else directly, but in a large society we must constantly decide whom to trust without personal knowledge. A reputation for honesty, built over time and passed from person to person, allows a shopkeeper to sell to customers who are complete strangers and allows a doctor to be trusted by patients on their first visit. In this sense, reputation is a kind of shared memory that makes social life possible on a scale far beyond personal acquaintance.",
+      "Reputation also shapes behavior in ways that are often beneficial. Knowing that others will remember how we act, we have reason to keep our promises, to treat people fairly, and to avoid the kind of conduct that would bring us shame. ( A ) we might sometimes be tempted to act badly when no one is watching, the awareness that our actions may become known encourages us to behave as we would wish to be seen. Some thinkers have argued that much of what we call morality depends, at least in part, on this concern for the opinion of others.",
+      "Yet the concern for reputation can also lead us astray. A person who cares too much about how they appear may begin to value the appearance of virtue more than virtue itself. They may perform generous acts mainly to be seen performing them, avoid unpopular truths in order to remain liked, or conceal their mistakes rather than correct them. In such cases, reputation ceases to be a reflection of character and becomes a mask behind which character can quietly decay.",
+      "There is also the problem that reputations are often unjust. They can be built on incomplete information, shaped by prejudice, or spread by those who have reasons to praise or to harm. A quiet person of great integrity may be little known, while a skillful self-promoter may enjoy a reputation far beyond what they deserve. Modern communication has made these problems more severe, since a single story, true or false, can now travel around the world in hours and attach itself permanently to a name.",
+      "How, then, should we relate to our own reputation? One answer, offered by many moral traditions, is that we should care about it, but not too much, and not in the wrong way. We should try to deserve a good reputation rather than merely to possess one, trusting that over time, though not always, the two will tend to coincide. When they do not, we may find some comfort in the thought that what others believe about us, however painful, does not change what we have actually done or who we actually are.",
+      "Reputation, in the end, is a reminder that we live not only in our own minds but in the minds of others. We cannot fully control how we are seen, and we would be unwise to ignore it entirely. The wisest course may be to treat reputation as a kind of mirror: worth consulting, since it can show us things about ourselves that we might otherwise miss, but never to be mistaken for the face it reflects. A life devoted to honesty and care may not always earn the reputation it deserves, but it remains worth living for its own sake.",
+    ],
+    ja: [
+      'たいていの人にとって評判ほど大切なものは少ないが、評判ほど思いどおりにならないものも少ない。評判は、コートや技能をもつようには、私たちがもっているものではない。それはほかの人々の心の中に、彼らが私たちについて見たり聞いたり想像したりしたことから形づくられて存在している。私たちは正直な仕事と注意深いふるまいによって何年もかけてよい名を築いても、誤解やうわさで一瞬にしてそれが傷つくのを見ることがある。この大切さともろさの奇妙な組み合わせが、評判を注意深く考える値打ちのある話題にしている。',
+      '評判が大切な理由の一つは、それによって人々が知らない人と協力できることである。小さな村では、だれもがほかのみんなを直接知っているかもしれないが、大きな社会では、私たちは個人的な知識なしに、だれを信頼するかをたえず決めなければならない。時間をかけて築かれ、人から人へと伝えられる正直さの評判によって、店主は会ったことのない客に売ることができ、医者は初めて来た患者に信頼される。この意味で、評判は、個人的な知り合いをはるかにこえる規模で社会生活を可能にする、一種の共有された記憶である。',
+      '評判はまた、しばしば役に立つやり方で人のふるまいを形づくる。ほかの人々が私たちのふるまいをおぼえていると知っているので、私たちには約束を守り、人を公平にあつかい、恥をもたらすようなふるまいをさける理由がある。だれも見ていないときには悪いことをしたくなることがあっても、自分の行動が知られるかもしれないと意識していることが、見られたいと思うようにふるまうよう私たちをうながす。私たちが道徳とよぶものの多くは、少なくとも一部は、このほかの人々の意見への気づかいにかかっていると主張してきた思想家もいる。',
+      'しかし評判への気づかいは、私たちをまよわせることもある。自分がどう見えるかを気にしすぎる人は、美徳そのものより美徳の見かけを大切にしはじめるかもしれない。おもに見られるために気前のよい行いをしたり、好かれ続けるために人気のない真実をさけたり、まちがいを正すかわりにかくしたりするかもしれない。そうした場合、評判は人柄の反映であることをやめ、その陰で人柄が静かにくさっていく仮面になる。',
+      '評判がしばしば不当であるという問題もある。評判は不完全な情報の上に築かれたり、偏見によって形づくられたり、ほめたりおとしめたりする理由をもつ人々によって広められたりする。誠実さにあふれた物静かな人がほとんど知られない一方で、自分を売りこむのがうまい人が、値するよりはるかに大きな評判を楽しむこともある。現代の通信はこうした問題をより深刻にした。一つの話が、本当でもうそでも、今では数時間で世界をめぐり、ある名前にいつまでもくっつくことがあるからである。',
+      'では、私たちは自分の評判とどうつきあうべきなのか。多くの道徳の伝統が示す一つの答えは、評判を気にかけるべきだが、気にしすぎず、まちがったやり方で気にしてはいけないというものである。私たちは、よい評判をただもとうとするのではなく、それに値しようとすべきであり、いつもではないにせよ、時がたてば二つは重なりがちになると信じるべきである。重ならないときには、ほかの人々が私たちについて信じることは、どれほどつらくても、私たちが実際にしたことや実際の自分を変えはしないという考えに、いくらかなぐさめを見いだせるかもしれない。',
+      '結局のところ評判は、私たちが自分の心の中だけでなく、ほかの人々の心の中にも生きていることを思い出させる。私たちはどう見られるかを完全には思いどおりにできないし、それをまったく無視するのも賢くないだろう。もっとも賢いやり方は、評判を一種の鏡としてあつかうことかもしれない。それは、そうでなければ見のがしてしまうかもしれない自分についてのことを見せてくれるので、のぞいてみる値打ちはあるが、それが映す顔そのものだと取りちがえてはいけない。正直さと思いやりにささげた人生は、いつも値するだけの評判を得るとはかぎらないが、それ自体のために生きる値打ちがあり続ける。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「だれも見ていないと悪いことをしたくなることがあっても、意識がよいふるまいをうながす」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、評判はほかの人々の心の中に存在する。', answer: true, why: '第1段落 it exists in the minds of others。' },
+      { statement: '大きな社会では、だれを信頼するかを個人的な知識だけで決められる。', answer: false, why: '第2段落 we must constantly decide whom to trust without personal knowledge。' },
+      { statement: '自分を売りこむのがうまい人が、値する以上の評判を得ることがある。', answer: true, why: '第5段落 a skillful self-promoter may enjoy a reputation far beyond what they deserve。' },
+      { statement: '筆者は、評判をまったく無視するのが賢いと考えている。', answer: false, why: '第7段落 we would be unwise to ignore it entirely。' },
+    ],
+    qa: [
+      { q: 'What may a person who cares too much about appearances begin to value?', choices: ['The appearance of virtue more than virtue itself.', 'Honesty above everything.', 'Unpopular truths.', 'Their own mistakes.'], answer: 0, why: '第4段落 may begin to value the appearance of virtue more than virtue itself。' },
+      { q: 'How does the author suggest we treat reputation?', choices: ['As a kind of mirror.', 'As a coat.', 'As a weapon.', 'As a prize.'], answer: 0, why: '第7段落 to treat reputation as a kind of mirror。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
