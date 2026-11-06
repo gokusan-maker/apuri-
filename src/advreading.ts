@@ -37902,6 +37902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-weather-talk',
+    title: 'Talking about the Weather',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few subjects are discussed as often, or as casually, as the weather. Strangers waiting at a bus stop remark on the rain, colleagues greet each other by complaining about the heat, and friends who have not spoken for months begin their conversations with a comment on the season. Such remarks are often dismissed as empty small talk, a way of filling silence when there is nothing more interesting to say. Yet the persistence of weather as a topic of conversation across many cultures suggests that it may serve purposes that are less trivial than they appear.",
+      "One reason the weather is such a convenient topic is that it is shared. Everyone in the same place experiences the same sky, regardless of age, occupation, or opinion. To comment on the weather is therefore to point to something that both speakers know, creating a small moment of agreement before any more personal or difficult subject is raised. In this sense, talk about the weather functions as a kind of social bridge, allowing people who know little about each other to establish a connection without risk.",
+      "The weather is also a subject about which no one is responsible. ( A ) people may disagree about politics, money, or the behavior of their neighbors, they can complain about a storm without blaming anyone present. This neutrality makes the weather an ideal topic for moments when people wish to be friendly without revealing much about themselves. It allows them to express feelings such as frustration, relief, or pleasure in a form that invites sympathy rather than argument.",
+      "Yet the weather is more than a safe topic; it also shapes human experience in profound ways. For most of history, the success of harvests, the safety of journeys, and even survival itself depended on conditions that no one could control or reliably predict. It is not surprising that so many myths, festivals, and religious practices are connected with rain, sun, and the changing seasons. Even in modern cities, where most people spend their days indoors, the weather continues to influence moods, plans, and the rhythm of daily life. Farmers, sailors, and travelers, in particular, once learned to read the sky with a care that few of us now possess.",
+      "There is something humbling in this dependence. Modern technology allows us to heat and cool our homes, to travel quickly over great distances, and to forecast storms days in advance, yet it cannot prevent a typhoon or end a drought. The weather reminds us that human beings remain part of a natural world whose forces are far greater than our own. To talk about the weather, then, may also be a way of acknowledging, however lightly, the limits of our control over the conditions of our lives.",
+      "In recent years, conversations about the weather have taken on a new seriousness. As people notice heat waves becoming more frequent, rainfall patterns shifting, and seasons arriving earlier or later than they once did, casual remarks about unusual weather increasingly carry an undertone of concern. What was once the safest of topics has become connected with questions about the future of the planet, and comments that once invited easy agreement may now lead to discussion of responsibility and change.",
+      "Perhaps, then, talk about the weather deserves more respect than it usually receives. It allows strangers to connect, expresses feelings without conflict, and reminds us of our shared dependence on a world we did not make and cannot fully master. In an age when that world is changing, such conversations may also become a way of noticing what is happening around us. The next time someone remarks that it is unusually warm for the season, the comment may be worth more than a polite nod.",
+    ],
+    ja: [
+      '天気ほどよく、そして気軽に話される話題は少ない。バス停で待っている知らない人どうしが雨について一言かわし、同僚は暑さについてぼやいてあいさつし、何か月も話していなかった友だちは季節についての一言から会話を始める。そうした一言は、もっとおもしろい言うことがないときに沈黙をうめる方法、つまり中身のない世間話として片づけられることが多い。しかし多くの文化で天気が会話の話題としてなくならないことは、それが見かけほどつまらなくない目的に役立っているかもしれないことを示している。',
+      '天気がこれほど便利な話題である理由の一つは、それが共有されていることである。同じ場所にいるだれもが、年齢や職業や意見にかかわらず、同じ空を経験する。そのため天気について一言言うことは、話す二人がどちらも知っていることを指さし、より個人的な、あるいはむずかしい話題が出る前に、小さな合意の瞬間を作ることである。この意味で、天気の話は一種の社会的なかけ橋として働き、たがいをほとんど知らない人々が危険なく結びつきを作れるようにする。',
+      '天気はまた、だれにも責任のない話題である。人々は政治やお金や近所の人のふるまいについては意見が分かれるかもしれないが、その場にいるだれもせめずに嵐について文句を言うことができる。この中立さによって、天気は、自分についてあまり明かさずに親しくしたいときに理想的な話題になる。それによって人々は、いらだちや安心や喜びのような気持ちを、議論ではなく共感をさそう形で表すことができる。',
+      'しかし天気は安全な話題以上のものであり、人間の経験を深く形づくってもいる。歴史のほとんどのあいだ、収穫の成功や旅の安全、さらには生きのびることそのものが、だれも管理も確実な予測もできない条件にかかっていた。これほど多くの神話や祭りや宗教のならわしが、雨や太陽や移り変わる季節と結びついているのはおどろくことではない。ほとんどの人が一日を屋内ですごす現代の都市でさえ、天気は気分や予定や日々の暮らしのリズムに影響し続けている。とくに農家や船乗りや旅人は、かつて、今の私たちのほとんどがもたないほどの注意深さで空を読むことを学んだ。',
+      'このように天気にたよっていることには、人を謙虚にさせるものがある。現代の技術によって、私たちは家をあたためたり冷やしたりし、遠い道のりをすばやく移動し、何日も前に嵐を予報できるが、台風をふせいだり干ばつを終わらせたりはできない。天気は、人間が今も、その力が私たちの力よりはるかに大きい自然界の一部であることを思い出させる。そうすると天気について話すことは、どれほど軽くであれ、自分の暮らしの条件を思いどおりにすることの限界を認める方法でもあるのかもしれない。',
+      '近年、天気についての会話は新しい深刻さをおびるようになった。熱波がしだいにふえ、雨のふり方が変わり、季節がかつてより早く、あるいはおそく来ることに人々が気づくにつれて、めずらしい天気についての気軽な一言は、ますます心配の気配をふくむようになっている。かつてもっとも安全な話題だったものが、地球の未来についての問いと結びつき、かつては気軽な同意をさそった一言が、今では責任や変化についての話し合いにつながるかもしれない。',
+      'そうするとおそらく、天気の話はふだん受けている以上の敬意に値するのだろう。それは知らない人どうしを結びつけ、対立なしに気持ちを表し、私たちが作ったのでもなく完全に支配することもできない世界に、ともにたよっていることを思い出させる。その世界が変わりつつある時代に、そうした会話は、まわりで起こっていることに気づく方法にもなるかもしれない。次にだれかが、この季節にしてはめずらしく暖かいと言ったら、その一言は礼儀正しくうなずく以上の値打ちがあるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「政治などでは意見が分かれるかもしれないが、嵐にはだれもせめずに文句を言える」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '天気についての一言は、中身のない世間話として片づけられることが多い。', answer: true, why: '第1段落 Such remarks are often dismissed as empty small talk。' },
+      { statement: '筆者によれば、天気はだれかに責任のある話題である。', answer: false, why: '第3段落 The weather is also a subject about which no one is responsible。' },
+      { statement: '現代の技術でも、台風をふせぐことはできない。', answer: true, why: '第5段落 it cannot prevent a typhoon。' },
+      { statement: '天気の話は、今でもまったく深刻さのない話題である。', answer: false, why: '第6段落 conversations about the weather have taken on a new seriousness。' },
+    ],
+    qa: [
+      { q: 'Why does talk about the weather work as a social bridge?', choices: ['Everyone in the same place experiences the same sky.', 'Everyone likes rain.', 'It is the most exciting topic.', 'It reveals personal secrets.'], answer: 0, why: '第2段落 Everyone in the same place experiences the same sky。' },
+      { q: 'What does the weather remind us of, according to the author?', choices: ['That we remain part of a natural world with greater forces.', 'That technology controls everything.', 'That forecasts are always wrong.', 'That cities are better than the countryside.'], answer: 0, why: '第5段落 human beings remain part of a natural world whose forces are far greater than our own。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
