@@ -4946,6 +4946,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It is (B) not (C) necessary (D) true that hard work leads to success.', choices: ['(A) It is', '(B) not', '(C) necessary', '(D) true that hard work leads to success'], answer: 2, why: '「必ずしも本当ではない」は not necessarily true。' },
     ],
   },
+  {
+    id: 'exam-error-uncountable-todai2',
+    title: '入試の正誤問題〈208〉（東大レベル：英作文の数えられない名詞 information・advice・furniture）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'information・advice・furniture・luggage（baggage）・equipment・homework・news・traffic・progress は数えられない名詞。a／an をつけず、複数形にもしない。主語なら単数あつかい（The news was ～）。量は much・a little・a lot of で表し、many・a few は使わない。数えたいときは a piece of advice・two pieces of furniture のようにする。people は反対に複数あつかいなので many people。',
+    ],
+    examples: [
+      { en: 'She gave me some useful advice.', ja: '彼女は私に役に立つ助言をくれた。' },
+      { en: 'The news was surprising to everyone.', ja: 'その知らせはみんなをおどろかせた。' },
+    ],
+    questions: [
+      { sentence: '(A) She gave me (B) some (C) useful advices (D) about studying abroad.', choices: ['(A) She gave me', '(B) some', '(C) useful advices', '(D) about studying abroad'], answer: 2, why: 'advice は数えられない名詞なので複数形にしない。useful advice。' },
+      { sentence: '(A) We need (B) more (C) informations (D) before we decide.', choices: ['(A) We need', '(B) more', '(C) informations', '(D) before we decide'], answer: 2, why: 'information は数えられないので複数形にしない。more information。' },
+      { sentence: '(A) They bought (B) a new (C) furniture (D) for the living room.', choices: ['(A) They bought', '(B) a new', '(C) furniture', '(D) for the living room'], answer: 1, why: 'furniture は数えられないので a をつけない。new furniture、または a piece of furniture。' },
+      { sentence: '(A) How (B) many luggage (C) do you (D) have with you?', choices: ['(A) How', '(B) many luggage', '(C) do you', '(D) have with you?'], answer: 1, why: 'luggage は数えられないので How much luggage。' },
+      { sentence: '(A) The news (B) were (C) surprising (D) to everyone.', choices: ['(A) The news', '(B) were', '(C) surprising', '(D) to everyone'], answer: 1, why: 'news は数えられない名詞で単数あつかいなので was。' },
+      { sentence: '(A) There (B) are (C) a lot of (D) traffic on this road in the morning.', choices: ['(A) There', '(B) are', '(C) a lot of', '(D) traffic on this road in the morning'], answer: 1, why: 'traffic は数えられないので is。' },
+      { sentence: '(A) He has (B) made (C) great progress, (D) but he still needs much practices.', choices: ['(A) He has', '(B) made', '(C) great progress,', '(D) but he still needs much practices'], answer: 3, why: 'practice（練習）は数えられないので複数形にしない。much practice。' },
+      { sentence: '(A) A lot of (B) equipments (C) in the lab (D) needs to be replaced.', choices: ['(A) A lot of', '(B) equipments', '(C) in the lab', '(D) needs to be replaced'], answer: 1, why: 'equipment は数えられないので複数形にしない。' },
+      { sentence: '(A) I have (B) a few (C) homework (D) to do tonight.', choices: ['(A) I have', '(B) a few', '(C) homework', '(D) to do tonight'], answer: 1, why: 'homework は数えられないので a few ではなく a little。' },
+      { sentence: '(A) Much people (B) came (C) to see (D) the fireworks.', choices: ['(A) Much people', '(B) came', '(C) to see', '(D) the fireworks'], answer: 0, why: 'people は数えられる名詞（複数あつかい）なので Many people。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

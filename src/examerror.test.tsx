@@ -2864,3 +2864,10 @@ it('誤文訂正〈201〉：国公立レベル remember・forget・stop の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('meeting')
 })
+
+it('正誤問題〈208〉：東大レベル 数えられない名詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-uncountable-todai2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) useful advices')
+})
