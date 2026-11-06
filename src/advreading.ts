@@ -37538,6 +37538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-election-polls',
+    title: 'Should Election Polls Be Banned Before Voting Day?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Opinion polls have become a familiar part of modern elections. In the weeks before voting day, newspapers, television channels, and websites regularly report surveys that estimate how much support each party or candidate enjoys, and these figures are often discussed as if they were the election itself. Some countries, however, forbid the publication of new polls during the final days of a campaign, and in others there are calls for similar rules. Whether such restrictions protect democracy or damage it is a question on which reasonable people strongly disagree.",
+      "Those who support restrictions argue that polls can influence the very results they claim to measure. When a poll shows one candidate far ahead, some voters may decide that their vote makes no difference and stay at home, while others may switch to the apparent winner simply because they wish to be on the winning side. Supporters of restrictions also point out that polls are sometimes inaccurate, and that a misleading survey published shortly before voting day can shape opinion before anyone has had the chance to correct it.",
+      "Supporters further argue that the constant reporting of polls changes the nature of political debate. Instead of discussing policies and their consequences, the media may focus on which candidate is rising or falling, treating the election like a horse race. ( A ) such coverage may attract audiences, supporters claim, it leaves voters less informed about the questions that actually matter. A short period without new polls, in their view, would encourage citizens to make their final decisions on the basis of their own judgment rather than the predicted behavior of others.",
+      "Opponents of restrictions, however, argue that banning polls limits freedom of expression and the public's right to information. Polls are a form of information about what other citizens think, and opponents ask why voters should be prevented from knowing it. They also note that political parties and wealthy organizations conduct private polls throughout the campaign, so that a ban on publication would leave ordinary citizens less informed than the powerful. In this view, restrictions do not remove the influence of polls; they simply make it less visible and less equal.",
+      "Opponents also argue that polls can help voters make better decisions. In systems where many parties compete, voters may wish to know which candidates have a realistic chance of winning, so that they can avoid wasting their votes or support the option most likely to defeat a candidate they oppose. Such strategic voting, opponents argue, is a legitimate part of democratic choice, and it depends on access to information about the likely outcome. Removing that information would not make voters more independent but merely less able to act on their preferences.",
+      "There is also the practical question of whether restrictions can still be enforced. In an age of global communication, polls conducted in one country can be published on websites based abroad, shared on social media, or circulated through private messages within minutes. Some countries that once banned polls before elections have shortened or abandoned these rules, partly because they proved impossible to apply consistently. Critics argue that a rule which is widely ignored may do more harm than good, since it rewards those willing to break it.",
+      "The debate over election polls reflects a broader tension within democratic societies. On the one hand, democracy depends on the free flow of information and on trusting citizens to make up their own minds. On the other, it depends on fair conditions in which each vote is cast thoughtfully rather than under the pressure of predictions. Rather than simply banning polls, some suggest improving the way they are reported, for example by explaining their margins of error clearly, so that voters can use them wisely without being misled by them.",
+    ],
+    ja: [
+      '世論調査は現代の選挙のおなじみの一部になった。投票日の前の数週間、新聞やテレビ局やウェブサイトは、それぞれの政党や候補者がどれだけの支持を得ているかを見積もる調査をくり返し報じ、その数字はしばしば選挙そのものであるかのように論じられる。しかし、選挙運動の最後の数日間に新しい世論調査を公表することを禁じている国もあり、ほかの国でも同じような規則を求める声がある。そうした制限が民主主義を守るのか、それともそこなうのかは、良識ある人々のあいだでも意見が強く分かれる問題である。',
+      '制限を支持する人々は、世論調査は、それが測ると主張する結果そのものに影響しうると主張する。調査がある候補者の大きなリードを示すと、自分の一票は何も変えないと決めて家にいる有権者もいれば、ただ勝つ側にいたいという理由で、勝ちそうな方に乗りかえる有権者もいるかもしれない。制限を支持する人々はまた、世論調査はときに不正確であり、投票日の直前に公表された誤解をまねく調査は、だれもそれを正す機会をもたないうちに世論を形づくりうると指摘する。',
+      '支持する人々はさらに、世論調査のたえまない報道が政治的な議論の性質を変えると主張する。政策とその結果を論じるかわりに、メディアはどの候補者がのびているか落ちているかに注目し、選挙を競馬のようにあつかうかもしれない。そうした報道は視聴者を集めるかもしれないが、本当に大切な問題について有権者の知識を少なくしてしまうと支持する人々は主張する。彼らの見方では、新しい世論調査のない短い期間は、市民がほかの人々の予想されるふるまいではなく、自分自身の判断にもとづいて最終的な決定をするようにうながすだろう。',
+      'しかし制限に反対する人々は、世論調査を禁じることは表現の自由と、情報を知る公衆の権利を制限すると主張する。世論調査はほかの市民が何を考えているかについての情報の一形態であり、なぜ有権者がそれを知ることをさまたげられるべきなのかと反対する人々は問う。彼らはまた、政党や裕福な団体は選挙運動のあいだずっと非公開の世論調査を行っているので、公表の禁止は、ふつうの市民を権力をもつ人々より情報の少ない立場に置くことになると指摘する。この見方では、制限は世論調査の影響を取りのぞくのではなく、ただそれを見えにくく、不平等にするだけである。',
+      '反対する人々はまた、世論調査は有権者がよりよい決定をする助けになりうると主張する。多くの政党が競う制度では、有権者は、票をむだにしないために、あるいは反対する候補者を負かす見こみがもっとも高い選択肢を支持するために、どの候補者に現実的な勝ち目があるかを知りたいと思うかもしれない。そうした戦略的な投票は民主的な選択の正当な一部であり、それは予想される結果についての情報が手に入ることにかかっていると反対する人々は主張する。その情報を取りのぞいても、有権者がより自立するのではなく、ただ自分の好みにもとづいて行動しにくくなるだけだろう。',
+      '制限がまだ執行できるのかという実際的な問題もある。世界的な通信の時代には、ある国で行われた世論調査が、外国にあるウェブサイトで公表されたり、ソーシャルメディアで共有されたり、個人的なメッセージで数分のうちに広まったりしうる。かつて選挙前の世論調査を禁じていた国のなかには、こうした規則を短くしたりやめたりしたところもある。一つには、それを一貫して当てはめるのが不可能だとわかったからである。広く無視される規則は、それを破ることをいとわない人々に得をさせるので、益より害の方が大きいかもしれないと批判する人々は主張する。',
+      '選挙の世論調査をめぐる議論は、民主的な社会の中のより広い緊張を反映している。一方で、民主主義は情報の自由な流れと、市民が自分で考えを決めると信頼することにかかっている。他方で、それはそれぞれの票が予想の圧力のもとではなく、よく考えて投じられる公正な条件にもかかっている。世論調査をただ禁じるのではなく、たとえば誤差の範囲をはっきり説明するなど、報じ方を改善し、有権者がまどわされずに上手に使えるようにすることを提案する人もいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「そうした報道は視聴者を集めるかもしれないが、有権者の知識を少なくする」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions argue that polls can ( 1 ) the results they measure and turn elections into a horse race. Opponents argue that bans limit freedom of ( 2 ) and leave ordinary citizens less informed than the powerful. Some suggest improving how polls are ( 3 ) instead of banning them.',
+      blanks: [
+        { choices: ['influence', 'count', 'announce', 'delay'], answer: 0, why: '第2段落 polls can influence the very results they claim to measure。' },
+        { choices: ['expression', 'movement', 'religion', 'trade'], answer: 0, why: '第4段落 banning polls limits freedom of expression。' },
+        { choices: ['reported', 'paid', 'hidden', 'banned'], answer: 0, why: '第7段落 improving the way they are reported。' },
+      ],
+    },
+    tf: [
+      { statement: '世論調査で大きな差を見て、投票に行かない有権者もいるかもしれない。', answer: true, why: '第2段落 some voters may decide that their vote makes no difference and stay at home。' },
+      { statement: '政党は選挙運動のあいだ、非公開の世論調査を行わない。', answer: false, why: '第4段落 political parties and wealthy organizations conduct private polls throughout the campaign。' },
+      { statement: '選挙前の世論調査の禁止を短くしたりやめたりした国もある。', answer: true, why: '第6段落 have shortened or abandoned these rules。' },
+      { statement: '筆者は、世論調査をただちに禁止すべきだと結論づけている。', answer: false, why: '第7段落 Rather than simply banning polls, some suggest improving the way they are reported。' },
+    ],
+    qa: [
+      { q: 'Why might voters in multi-party systems want poll information?', choices: ['To know which candidates have a realistic chance of winning.', 'To find out the weather.', 'To learn how old the candidates are.', 'To avoid voting entirely.'], answer: 0, why: '第5段落 which candidates have a realistic chance of winning。' },
+      { q: 'Why have bans on polls become hard to enforce?', choices: ['Polls can be published abroad and shared online within minutes.', 'Polls have become illegal everywhere.', 'Nobody conducts polls anymore.', 'Newspapers have stopped printing.'], answer: 0, why: '第6段落 can be published on websites based abroad, shared on social media。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
