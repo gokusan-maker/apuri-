@@ -3128,6 +3128,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 70 q6 6 12 0" stroke="#2563eb" strokeWidth="4" fill="none" />
       </g>
     )
+  if (species === 'tuatara')
+    return (
+      <g>
+        {/* 背中のとげのたてがみ */}
+        <path d="M30 40 l4 -6 l4 6 l4 -6 l4 6 l4 -6 l4 6 l4 -6 l4 6" stroke="#e7e5e4" strokeWidth="1.5" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
