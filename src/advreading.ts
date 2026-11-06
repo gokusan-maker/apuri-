@@ -36942,6 +36942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-enough',
+    title: 'The Idea of Enough',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern economies depend on the desire for more. Advertising encourages us to want new products, careers are often measured by promotion and rising income, and economic success is commonly defined in terms of growth. In such a culture, the idea of having enough can seem strange or even suspicious, as though anyone who is satisfied with what they have must lack ambition. Yet many philosophical and religious traditions have regarded the recognition of sufficiency as one of the keys to a good life, and their insight may be especially relevant today.",
+      "One reason to reconsider the pursuit of more is that it often fails to deliver the satisfaction it promises. People who receive a pay rise or buy a long-desired possession frequently find that their pleasure fades quickly, as they become accustomed to their new circumstances and begin to want something else. This pattern, sometimes described as a treadmill, suggests that the pursuit of more can become endless, leaving people perpetually dissatisfied no matter how much they acquire. The finish line, it seems, moves further away each time we approach it.",
+      "The idea of enough offers a way out of this cycle. To recognize that one has enough is not to stop caring about one's life but to shift attention from accumulation to appreciation. ( A ) this shift may seem small, it can change the way people experience their circumstances, allowing them to enjoy what they already have rather than constantly measuring it against what they lack. Those who feel they have enough may also have more time and energy for relationships, interests, and contributions to others. A person who no longer feels compelled to work longer hours for a larger house, for example, may discover that time spent with family brings deeper rewards.",
+      "There is also an environmental dimension to the question. The pursuit of ever-increasing consumption places enormous demands on the planet's resources, contributing to pollution, the loss of habitats, and climate change. If wealthy societies were to adopt a more modest idea of what constitutes a good life, they might reduce their environmental impact without necessarily becoming less happy. In this sense, the recognition of sufficiency may be not only a personal virtue but also a collective necessity.",
+      "It must be acknowledged, however, that the idea of enough can be misused. For people living in poverty, the problem is not excessive desire but a genuine lack of food, shelter, health care, and opportunity. Telling such people to be content with what they have would be both unjust and insulting. The question of what counts as enough must therefore take account of real needs, and a society that values sufficiency should also work to ensure that everyone has enough to live with dignity.",
+      "Moreover, deciding what is enough is not always easy. Needs and circumstances differ, and what seems sufficient to one person may be inadequate for another. The point is not to impose a single standard but to encourage reflection, inviting people to ask whether their desire for more is truly serving their well-being or merely following habits and pressures they have never examined. Such reflection may lead different people to different conclusions, but it is valuable in itself.",
+      "Perhaps, then, the idea of enough deserves a place in our thinking about how to live. In a world that constantly encourages us to want more, the ability to recognize sufficiency may be a form of freedom, releasing us from the pressure to keep pursuing goals that never bring lasting satisfaction. To know when we have enough is not to give up on improvement but to direct our efforts toward what genuinely matters, allowing us to live with greater contentment and with greater care for others and for the world.",
+    ],
+    ja: [
+      '現代の経済は、もっとほしいという欲求にたよっている。広告は新しい商品をほしがるよう私たちをうながし、仕事はしばしば昇進と収入の増加ではかられ、経済の成功はふつう成長の観点から定義される。そうした文化のなかでは、「足りている」という考えは、もっているものに満足している人はだれでも大きな望みに欠けているにちがいないかのように、ふしぎに、あるいはあやしくさえ思えるかもしれない。しかし多くの哲学や宗教の伝統は、足りていることを認めることをよい人生の鍵の一つと見なしてきたのであり、その洞察は今日とくにかかわりが深いのかもしれない。',
+      'もっとを追い求めることを考え直す一つの理由は、それが約束する満足をしばしばもたらさないことである。昇給を受けたり長くほしかった物を買ったりした人々は、新しい状況になれて別のものをほしがりはじめるにつれて、その楽しみがすぐにうすれることに気づくことが多い。ときにルームランナーにたとえられるこの型は、もっとを追い求めることがきりのないものになり、どれほど多くを手に入れても人々をたえず満たされないままにしてしまうことを示している。ゴールは、近づくたびにさらに遠くへ動いていくようなのである。',
+      '足りているという考えは、このくり返しからぬけ出す道をあたえてくれる。足りていると認めることは、自分の人生を気にかけるのをやめることではなく、注意を積み重ねることから味わうことへと移すことである。この移り変わりは小さく見えるかもしれないが、それは人々が自分の状況を経験するあり方を変え、欠けているものとたえずくらべるのではなく、すでにもっているものを楽しめるようにしてくれる。足りていると感じる人は、人間関係や興味やほかの人への貢献のための時間と力も、より多くもっているかもしれない。たとえば、より大きな家のためにもっと長く働かなければと感じなくなった人は、家族とすごす時間がより深い報いをもたらすと気づくかもしれない。',
+      'この問いには環境の面もある。ふえ続ける消費を追い求めることは地球の資源にばく大な負担をかけ、汚染やすみかの喪失や気候変動の一因になっている。豊かな社会が、よい人生とは何かについてのよりつつましい考えを取り入れれば、必ずしも幸せが少なくなることなく、環境への影響をへらせるかもしれない。この意味で、足りていることを認めるのは、個人の美徳であるだけでなく、みんなにとっての必要でもあるのかもしれない。',
+      'しかし、足りているという考えは悪用されうることも認めなければならない。貧困のなかで暮らす人々にとって、問題は行きすぎた欲求ではなく、食べ物や住まいや医療や機会が本当に欠けていることである。そうした人々にもっているもので満足せよと言うのは、不正であると同時に侮辱的だろう。それゆえ何が足りているとされるかという問いは本当の必要を考えに入れなければならず、足りていることを大切にする社会は、すべての人が尊厳をもって生きるのに足りるものをもてるよう努めるべきでもある。',
+      'さらに、何が足りているかを決めるのはいつもかんたんではない。必要や状況は人によってちがい、ある人に十分に見えるものが別の人には不十分かもしれない。言いたいのは、ただ一つの基準をおしつけることではなく、ふり返りをうながし、もっとほしいという欲求が本当に自分の幸せに役立っているのか、それとも一度も考えたことのない習慣や重圧にしたがっているだけなのかを問うよう人々をさそうことである。そうしたふり返りはさまざまな人をさまざまな結論に導くかもしれないが、それ自体に価値がある。',
+      'だとすれば、足りているという考えは、どう生きるかについての私たちの考えのなかに居場所をもつに値するのかもしれない。たえずもっとほしがるようすすめる世界で、足りていることを認める力は一種の自由であり、長く続く満足をもたらさない目標を追い続ける重圧から私たちをときはなってくれる。いつ足りているかを知ることは、よくなることをあきらめることではなく、本当に大切なものに努力を向けることであり、それによって私たちはより満ちたりて、ほかの人と世界へのより深い配慮をもって生きられるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この移り変わりは小さく見えるかもしれないが、経験のあり方を変える」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '昇給を受けた人の楽しみは、すぐにうすれることが多い。', answer: true, why: '第2段落 their pleasure fades quickly。' },
+      { statement: '筆者によれば、足りていると認めることは自分の人生を気にかけるのをやめることである。', answer: false, why: '第3段落 is not to stop caring about one’s life。' },
+      { statement: '貧困のなかの人々にもっているもので満足せよと言うのは不正である。', answer: true, why: '第5段落 would be both unjust and insulting。' },
+      { statement: '筆者は、何が足りているかについてただ一つの基準をおしつけるべきだと考えている。', answer: false, why: '第6段落 The point is not to impose a single standard。' },
+    ],
+    qa: [
+      { q: 'What does the author compare the endless pursuit of more to?', choices: ['A treadmill.', 'A mountain.', 'A river.', 'A garden.'], answer: 0, why: '第2段落 sometimes described as a treadmill。' },
+      { q: 'How might wealthy societies reduce their environmental impact?', choices: ['By adopting a more modest idea of a good life.', 'By consuming even more.', 'By ignoring climate change.', 'By growing faster.'], answer: 0, why: '第4段落 If wealthy societies were to adopt a more modest idea of what constitutes a good life。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
