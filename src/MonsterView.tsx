@@ -2990,6 +2990,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="56" cy="58" r="3.5" fill="none" stroke="#2e1e0c" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'canadalynx')
+    return (
+      <g>
+        {/* 大きな足 */}
+        <ellipse cx="34" cy="84" rx="7" ry="3" fill="#2c261c" opacity="0.5" />
+        <ellipse cx="62" cy="84" rx="7" ry="3" fill="#2c261c" opacity="0.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
