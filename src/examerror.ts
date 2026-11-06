@@ -8760,6 +8760,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She listened to music [during she studied].', choices: ['while she studied', 'during studied', 'for she studied', 'while studied she'], answer: 0, why: 'あとが節なので while she studied。' },
     ],
   },
+  {
+    id: 'exam-fix-206',
+    title: '入試の誤文訂正〈206〉（国公立レベル：英作文の worth ～ing・It is worth）',
+    points: ['worth は前置詞のように使う形容詞で、あとに名詞か ～ing を置く。A is worth ～ing「A は～する価値がある」のとき、～ing の目的語は主語の A なので、うしろにもう一度 it を置かない（This book is worth reading.）。listen to のような前置詞つきの動詞は to を残す（worth listening to）。worth to ～ や worth of は×。It is worth ～ing「～する価値がある」、It is worthwhile to ～ も同じ意味。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'This book is worth reading. / It is worth visiting the museum.', ja: 'この本は読む価値がある。／その博物館はたずねる価値がある。' }],
+    questions: [
+      { sentence: 'This book is worth [to read].', choices: ['reading', 'to reading', 'read', 'being read'], answer: 0, why: 'worth のあとは ～ing。worth reading。' },
+      { sentence: 'The museum is [worth visit].', choices: ['worth visiting', 'worth to visit', 'worthy visiting', 'worth of visiting'], answer: 0, why: 'worth ＋ ～ing。worth visiting。' },
+      { sentence: 'It is [worth to try] again.', choices: ['worth trying', 'worth try', 'worthy to trying', 'worth of trying'], answer: 0, why: 'It is worth ～ing。worth trying。' },
+      { sentence: 'This movie is not [worth seen].', choices: ['worth seeing', 'worth to see', 'worthy seen', 'worth of see'], answer: 0, why: 'worth のあとは ～ing。worth seeing。' },
+      { sentence: 'Is the trip [worth of] the money?', choices: ['worth', 'worthy', 'worth for', 'worthing'], answer: 0, why: 'worth のあとにそのまま名詞を置く。worth the money。' },
+      { sentence: 'The problem is [worth discussing it].', choices: ['worth discussing', 'worth to discuss it', 'worth discuss it', 'worthy discussing it'], answer: 0, why: 'discussing の目的語は主語 the problem なので it を置かない。' },
+      { sentence: 'It is [worth while visit] the old town.', choices: ['worth while to visit', 'worth while visit to', 'worthwhile visit', 'worth to while visit'], answer: 0, why: 'It is worth while（worthwhile）to ～ の形。' },
+      { sentence: 'Her advice is [worth listen] to.', choices: ['worth listening', 'worth to listen', 'worthy listen', 'worth of listening'], answer: 0, why: 'worth listening to。前置詞の to は残す。' },
+      { sentence: 'This old car is [worthy] nothing.', choices: ['worth', 'worthing', 'worth of', 'worthy of'], answer: 0, why: '「何の価値もない」は worth nothing。' },
+      { sentence: 'That restaurant is [worth to go] to.', choices: ['worth going', 'worth go', 'worthy going', 'worth to going'], answer: 0, why: 'worth going to。前置詞の to は残す。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

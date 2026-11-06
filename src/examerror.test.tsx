@@ -2927,3 +2927,10 @@ it('正誤問題〈212〉：国公立レベル look・sound・feel ＋形容詞�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) happily')
 })
+
+it('誤文訂正〈206〉：国公立レベル worth ～ing の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-206')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('reading')
+})
