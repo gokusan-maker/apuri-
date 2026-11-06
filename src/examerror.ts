@@ -4898,6 +4898,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) No more than (B) a thousand people (C) came to the festival, (D) which was far more than we expected.', choices: ['(A) No more than', '(B) a thousand people', '(C) came to the festival,', '(D) which was far more than we expected'], answer: 0, why: '「予想よりはるかに多かった」ので、多さを強調する No less than（＝as many as）。' },
     ],
   },
+  {
+    id: 'exam-error-said-todai',
+    title: '入試の正誤問題〈206〉（東大レベル：英作文の It is said that・be said to）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「～と言われている」は It is said that ＋主語＋動詞、または 主語＋ be said to ＋動詞の原形。人や物を主語にする形では that を使わない。言われている時より前のことは完了不定詞 to have ＋過去分詞（He is said to have been rich.）。believe・think・report も同じ形で使える。主語が複数なら are said。',
+    ],
+    examples: [
+      { en: 'It is said that he is the richest man in town.', ja: '彼は町一番の金持ちだと言われている。' },
+      { en: 'She is said to have lived in Paris ten years ago.', ja: '彼女は10年前にパリに住んでいたと言われている。' },
+    ],
+    questions: [
+      { sentence: '(A) It is said (B) that he (C) to be (D) the richest man in town.', choices: ['(A) It is said', '(B) that he', '(C) to be', '(D) the richest man in town'], answer: 2, why: 'It is said that のあとは「主語＋動詞」の節なので that he is。' },
+      { sentence: '(A) He is said (B) that he is (C) the best player (D) on the team.', choices: ['(A) He is said', '(B) that he is', '(C) the best player', '(D) on the team'], answer: 1, why: '人を主語にするときは He is said to be ～ の形。that は使わない。' },
+      { sentence: '(A) She (B) is said (C) to live (D) in Paris ten years ago.', choices: ['(A) She', '(B) is said', '(C) to live', '(D) in Paris ten years ago'], answer: 2, why: 'ten years ago と言われている時より前のことなので完了不定詞 to have lived。' },
+      { sentence: '(A) It (B) says that (C) the castle (D) was built in 1600.', choices: ['(A) It', '(B) says that', '(C) the castle', '(D) was built in 1600'], answer: 1, why: '「～と言われている」は受け身の It is said that。' },
+      { sentence: '(A) The old man (B) is said (C) to have been (D) a famous singer when he is young.', choices: ['(A) The old man', '(B) is said', '(C) to have been', '(D) a famous singer when he is young'], answer: 3, why: '若かったのは過去なので when he was young。' },
+      { sentence: '(A) This temple (B) is saying (C) to be (D) over a thousand years old.', choices: ['(A) This temple', '(B) is saying', '(C) to be', '(D) over a thousand years old'], answer: 1, why: '「～と言われている」は受け身なので is said。' },
+      { sentence: '(A) It is (B) believed (C) what the plan (D) will succeed.', choices: ['(A) It is', '(B) believed', '(C) what the plan', '(D) will succeed'], answer: 2, why: 'It is believed that ～ の形。what ではなく that。' },
+      { sentence: '(A) The singers (B) is said (C) to be (D) coming to Japan next month.', choices: ['(A) The singers', '(B) is said', '(C) to be', '(D) coming to Japan next month'], answer: 1, why: '主語は複数の The singers なので are said。' },
+      { sentence: '(A) He is said (B) to (C) having (D) a lot of money.', choices: ['(A) He is said', '(B) to', '(C) having', '(D) a lot of money'], answer: 2, why: 'to のあとは動詞の原形なので to have。' },
+      { sentence: '(A) It said that (B) the bridge (C) will be (D) finished next year.', choices: ['(A) It said that', '(B) the bridge', '(C) will be', '(D) finished next year'], answer: 0, why: '「～と言われている」は It is said that。is がぬけている。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

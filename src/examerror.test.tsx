@@ -2836,3 +2836,10 @@ it('誤文訂正〈199〉：国公立レベル make と do の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('made a mistake')
 })
+
+it('正誤問題〈206〉：東大レベル It is said that・be said to の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-said-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to be')
+})
