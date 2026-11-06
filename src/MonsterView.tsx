@@ -3113,6 +3113,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M84 72 l2 -4 M91 68 l3 -3 M96 61 l3 -2" stroke="#1c140b" strokeWidth="2" />
       </g>
     )
+  if (species === 'tamarin')
+    return (
+      <g>
+        {/* 白い口ひげ */}
+        <path d="M44 60 q-10 4 -14 14 M56 60 q10 4 14 14" stroke="#f5f5f4" strokeWidth="2.5" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
