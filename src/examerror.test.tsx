@@ -2997,3 +2997,10 @@ it('正誤問題〈217〉：京大レベル 分詞構文の否定の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Knowing not')
 })
+
+it('誤文訂正〈211〉：国公立レベル come・go・bring・take の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-211')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('coming')
+})

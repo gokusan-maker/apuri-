@@ -8970,6 +8970,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'No other student in the class is [as tall than] Ken.', choices: ['as tall as', 'so tall than', 'taller as', 'tallest than'], answer: 0, why: 'as ～ as の形。No other ～ is as tall as Ken。' },
     ],
   },
+  {
+    id: 'exam-fix-211',
+    title: '入試の誤文訂正〈211〉（国公立レベル：英作文の come と go・bring と take の使い分け）',
+    points: ['come は話し手や聞き手のいる（いることになる）場所へ近づくとき、go はそこからはなれて別の場所へ行くとき。英語では相手のところへ行くときも come を使う（I’m coming. / I’ll come to your house.）。bring は物や人を話し手・聞き手のいる場所へ「持ってくる・連れてくる」、take はそこから別の場所へ「持っていく・連れていく」。日本語の「行く」「持っていく」にそのまま合わせないこと。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: '“Dinner is ready!” “OK, I’m coming.” / Take an umbrella when you go out.', ja: '「ごはんですよ」「はい、今行きます」／出かけるときはかさを持っていきなさい。' }],
+    questions: [
+      { sentence: '“Dinner is ready!” “OK, I’m [going].”', choices: ['coming', 'went', 'come to', 'gone'], answer: 0, why: '呼んだ相手のところへ向かうので come。I’m coming。' },
+      { sentence: 'Please [take] your homework to my office tomorrow, so I can check it.', choices: ['bring', 'come', 'bringing', 'to bring'], answer: 0, why: '話し手がいる場所へ持ってくるので bring。' },
+      { sentence: 'Can I [go] to your party next Saturday?', choices: ['come', 'bring', 'be going', 'take'], answer: 0, why: '聞き手のパーティーへ行くので come。' },
+      { sentence: 'Don’t forget to [bring] an umbrella when you go out.', choices: ['take', 'come', 'bring with', 'go'], answer: 0, why: 'ここから外へ持っていくので take。' },
+      { sentence: 'I’ll [go] to see you at your house tomorrow.', choices: ['come', 'bring', 'take', 'be go'], answer: 0, why: '聞き手の家へ行くので come。' },
+      { sentence: 'She [brought] the dog to the vet yesterday, and it is still there.', choices: ['took', 'came', 'brung', 'bring'], answer: 0, why: '話し手のいない場所へ連れていったので took。' },
+      { sentence: 'Could you [take] me a glass of water, please?', choices: ['bring', 'come', 'took', 'taking'], answer: 0, why: '話し手のところへ持ってきてもらうので bring。' },
+      { sentence: 'He [went] to my house yesterday and stayed for dinner.', choices: ['came', 'brought', 'took', 'goes'], answer: 0, why: '話し手の家へ来たので came。' },
+      { sentence: 'Shall I [take] some food when I come to your party?', choices: ['bring', 'go', 'took', 'coming'], answer: 0, why: '聞き手のパーティーへ持っていくので bring。' },
+      { sentence: 'Let’s [come] to the beach this weekend; it is far from here.', choices: ['go', 'bring', 'take', 'coming'], answer: 0, why: 'ここからはなれた場所へ行くので go。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
