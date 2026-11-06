@@ -38098,6 +38098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-legacy-admissions',
+    title: 'Should Universities Favor the Children of Graduates?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "At some universities, applicants whose parents or grandparents studied at the same institution receive an advantage in the admissions process. This practice, often called legacy admission, has a long history, particularly at older private universities, where it is defended as a way of maintaining ties with former students and their families. In recent years, however, it has come under growing criticism, and several institutions have abandoned it. The debate raises fundamental questions about fairness, tradition, and the purpose of higher education in a society that claims to value equal opportunity.",
+      "Critics argue that legacy preferences reinforce existing inequalities. The parents who attended prestigious universities are, on average, wealthier and better connected than the general population, and their children already enjoy many advantages, such as good schools, private tutoring, and educational travel. Giving these applicants an additional advantage, critics claim, means that places which might have gone to talented students from less privileged backgrounds are instead given to those who need help least. In their view, admission should depend on what applicants have achieved, not on who their parents are.",
+      "Critics also point out that legacy preferences may reduce the diversity of student populations. Because past generations of students at many universities came largely from particular social or ethnic groups, favoring their descendants tends to preserve the composition of the past. ( A ) universities often speak of their commitment to broadening access, critics argue, legacy policies work in the opposite direction, sending a message to students from new backgrounds that the institution still belongs mainly to certain families.",
+      "Defenders of legacy admission, however, argue that it serves legitimate purposes. Universities depend heavily on the loyalty and generosity of their former students, whose donations fund scholarships, research, and facilities. A family connection that extends across generations, defenders claim, strengthens this loyalty, and the resulting donations can benefit students from all backgrounds, including those who receive financial aid. Abolishing legacy preferences, they warn, might weaken the bonds that sustain universities financially. Some universities also argue that legacy families help to preserve the traditions that give the institution its identity.",
+      "Defenders also argue that the effect of legacy preferences is often exaggerated. At many institutions, they say, legacy status is only one factor among many and is considered only when applicants are otherwise well qualified. Some point out that the children of former students may have grown up with a particular understanding of the university's traditions and values, and may therefore contribute to its community in distinctive ways. In this view, a modest preference for legacy applicants is no different from the many other factors that universities consider in building a varied student body.",
+      "Evidence from universities that have ended legacy preferences offers some guidance. Several have reported that abandoning the practice did not lead to a significant decline in donations, and that the proportion of students from families without a history of higher education increased. Such results suggest that the financial fears of defenders may be overstated, although researchers caution that the effects may differ between institutions with different histories and sources of funding. Other studies have found that applicants from families with no university experience became more likely to apply once the policy was removed, perhaps because they no longer felt that the competition was unfair.",
+      "The debate over legacy admission ultimately reflects a tension between two ideas of what a university is. One sees it as a community that grows across generations, bound by loyalty and shared tradition; the other sees it as an institution whose primary duty is to identify and develop talent wherever it is found. Most universities claim to embody both ideas, but legacy preferences force them to decide which should take priority when the two come into conflict, and the choice they make reveals much about the values they hold.",
+    ],
+    ja: [
+      'いくつかの大学では、親や祖父母が同じ大学で学んだ志願者が、入学選考で有利になる。しばしば「レガシー入学」とよばれるこのならわしは、とくに古い私立大学で長い歴史をもち、そこでは卒業生とその家族とのつながりを保つ方法として正当化されている。しかし近年、それはますます批判を受けるようになり、いくつかの大学はそれをやめた。この議論は、機会の平等を大切にすると主張する社会における、公平さと伝統と高等教育の目的についての根本的な問いを投げかけている。',
+      '批判する人々は、レガシーの優遇は今ある不平等を強めると主張する。一流大学に通った親は、平均して、一般の人々より裕福で人脈も多く、その子どもたちはすでに、よい学校や個別指導や教育のための旅行のような多くの有利な点をもっている。こうした志願者にさらに有利な点をあたえることは、恵まれない環境の才能ある学生に行ったかもしれない席が、もっとも助けを必要としない人々にあたえられることを意味すると批判する人々は主張する。彼らの見方では、入学は親がだれかではなく、志願者がなしとげたことによって決まるべきである。',
+      '批判する人々はまた、レガシーの優遇は学生の多様性をへらすかもしれないと指摘する。多くの大学の過去の世代の学生はおもに特定の社会的・民族的な集団の出身だったので、その子孫を優遇すると、過去の構成が保たれがちになる。大学はしばしば門戸を広げる決意を語るが、レガシーの方針は反対の方向に働き、新しい環境の学生に、大学は今もおもにある家族のものだというメッセージを送ってしまうと批判する人々は主張する。',
+      'しかしレガシー入学を擁護する人々は、それは正当な目的に役立っていると主張する。大学は卒業生の忠誠心と気前のよさに大きくたよっており、その寄付が奨学金や研究や施設をまかなっている。世代をこえて続く家族のつながりはこの忠誠心を強め、その結果としての寄付は、学費の援助を受ける学生をふくめ、あらゆる環境の学生の役に立ちうると擁護する人々は主張する。レガシーの優遇をなくせば、大学を財政的に支えるきずなが弱まるかもしれないと彼らは警告する。大学のなかには、レガシーの家族が、大学に個性をあたえる伝統を守る助けになると主張するところもある。',
+      '擁護する人々はまた、レガシーの優遇の影響はしばしば大げさに言われていると主張する。多くの大学では、レガシーであることは多くの要素の一つにすぎず、志願者がほかの点で十分な資格をもつときにだけ考慮されると彼らは言う。卒業生の子どもは、大学の伝統と価値観についての特別な理解をもって育ったかもしれず、そのため独自のやり方で大学の共同体に貢献するかもしれないと指摘する人もいる。この見方では、レガシーの志願者へのささやかな優遇は、多様な学生の集団を作るために大学が考慮するほかの多くの要素と変わらない。',
+      'レガシーの優遇をやめた大学からの証拠は、いくらかの手がかりをあたえてくれる。いくつかの大学は、このならわしをやめても寄付は大きくへらず、家族に高等教育の歴史のない学生の割合がふえたと報告している。そうした結果は、擁護する人々の財政的な心配は大げさかもしれないことを示しているが、研究者は、歴史や資金の出どころがちがう大学では影響がちがうかもしれないと注意している。ほかの研究では、方針がなくなると、大学の経験のない家族の志願者が出願しやすくなったことがわかった。おそらく、競争が不公平だともう感じなくなったからだろう。',
+      'レガシー入学をめぐる議論は、結局、大学とは何かについての二つの考えのあいだの緊張を反映している。一つは、大学を忠誠心と共通の伝統で結ばれ、世代をこえて育つ共同体と見る考えであり、もう一つは、どこにあろうと才能を見つけて育てることを第一の義務とする機関と見る考えである。ほとんどの大学は両方の考えを体現していると主張するが、レガシーの優遇は、二つがぶつかるときにどちらを優先すべきかを決めさせ、その選択は大学がもつ価値観について多くを明らかにする。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「大学は門戸を広げる決意を語るが、レガシーの方針は反対に働く」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that legacy preferences reinforce ( 1 ) and reduce the diversity of students. Defenders argue that family ties strengthen the loyalty of former students, whose ( 2 ) support universities. Evidence suggests that ending the practice did not greatly reduce donations, although its effects may ( 3 ) between institutions.',
+      blanks: [
+        { choices: ['inequalities', 'traditions', 'sports', 'languages'], answer: 0, why: '第2段落 legacy preferences reinforce existing inequalities。' },
+        { choices: ['donations', 'grades', 'complaints', 'votes'], answer: 0, why: '第4段落 whose donations fund scholarships, research, and facilities。' },
+        { choices: ['differ', 'disappear', 'double', 'stop'], answer: 0, why: '第6段落 the effects may differ between institutions。' },
+      ],
+    },
+    tf: [
+      { statement: 'レガシー入学は、とくに古い私立大学で長い歴史をもつ。', answer: true, why: '第1段落 particularly at older private universities。' },
+      { statement: '一流大学に通った親は、平均して一般の人々よりまずしい。', answer: false, why: '第2段落 wealthier and better connected than the general population。' },
+      { statement: '擁護する人々は、レガシーは多くの要素の一つにすぎないと言う。', answer: true, why: '第5段落 legacy status is only one factor among many。' },
+      { statement: 'レガシーの優遇をやめた大学では、どこも寄付が大きくへった。', answer: false, why: '第6段落 did not lead to a significant decline in donations。' },
+    ],
+    qa: [
+      { q: 'What message might legacy policies send, according to critics?', choices: ['That the institution still belongs mainly to certain families.', 'That everyone is welcome equally.', 'That tuition will be free.', 'That grades do not matter.'], answer: 0, why: '第3段落 the institution still belongs mainly to certain families。' },
+      { q: 'What are the two ideas of a university described in the last paragraph?', choices: ['A community across generations and an institution developing talent.', 'A business and a museum.', 'A school and a hospital.', 'A club and a library.'], answer: 0, why: '第7段落 a community that grows across generations ... an institution whose primary duty is to identify and develop talent。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
