@@ -38622,6 +38622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-teasing',
+    title: 'On Teasing',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Teasing occupies an ambiguous place in human relationships. Among close friends and family members, gentle mockery is often a sign of affection: we tease those we feel comfortable with, and being teased can make us feel accepted and included. Yet teasing can also wound, and the same words that one person intends as playful may be experienced by another as humiliation. Because the boundary between friendly teasing and cruelty is so easily crossed, the practice deserves more careful thought than it usually receives.",
+      "Part of the appeal of teasing lies in its playfulness. A teasing remark is not meant to be taken literally; it invites the listener to recognize the exaggeration and to respond in kind. In this sense, teasing resembles a game with unspoken rules, and the pleasure it gives depends on both participants understanding and accepting those rules. When it works, teasing can lighten tension, express intimacy, and allow people to acknowledge each other's faults without seriousness or blame. Teasing of this kind is often a way of saying, indirectly, that a relationship is strong enough to survive a little roughness.",
+      "The difficulty is that the rules of this game are rarely made explicit. ( A ) the person who teases may believe that the remark is harmless, the person being teased may not share that understanding, particularly if they are sensitive about the subject or less powerful in the relationship. A joke about someone's appearance, accent, or abilities may seem trivial to the speaker but touch a source of real insecurity for the listener. What one person experiences as play, another may experience as an attack.",
+      "Power plays an important role in determining whether teasing is harmless. Among equals who know each other well, teasing tends to be balanced: each person both gives and receives it, and either can signal when it has gone too far. When there is an imbalance of power, however, as between a teacher and a student or between a popular group and an isolated individual, the person being teased may feel unable to object. In such cases, what is called teasing may in fact be a form of bullying disguised as humor.",
+      "For this reason, the ability to tease well requires a particular kind of sensitivity. It involves paying attention not only to one's own intentions but also to the reactions of the other person, and being willing to stop when those reactions suggest discomfort. It also requires knowing the other person well enough to avoid subjects that genuinely hurt. Teasing that ignores these considerations is not a sign of closeness but of carelessness, and it can damage the very relationships it claims to express.",
+      "Being able to accept teasing gracefully is also a valuable capacity. People who can laugh at their own weaknesses often find that teasing loses its sting, and their willingness to do so can make others feel more at ease. Yet this capacity should not be demanded of those who are being treated unfairly. To tell someone who has been hurt by a joke that they should simply learn to take it is to shift the responsibility from the person who caused the harm to the person who suffered it.",
+      "Teasing, then, is neither simply good nor simply bad. At its best, it is a form of affectionate play that strengthens bonds and allows people to share their imperfections with good humor. At its worst, it becomes a means of exclusion and cruelty. The difference lies less in the words themselves than in the relationship within which they are spoken, the balance of power between the people involved, and the attentiveness with which they are offered. To tease kindly is, in the end, a small but revealing test of how well we understand one another.",
+    ],
+    ja: [
+      'からかいは、人間関係の中であいまいな位置をしめている。親しい友だちや家族のあいだでは、やさしいからかいはしばしば愛情のしるしである。私たちは気を許せる人をからかい、からかわれることで受け入れられ、仲間に入れられていると感じることがある。しかしからかいは人を傷つけることもあり、ある人がふざけたつもりで言ったことばが、別の人には屈辱として感じられることもある。親しみのあるからかいとむごさの境目はたやすくこえられてしまうので、このならわしは、ふだん受けている以上に注意深く考える値打ちがある。',
+      'からかいの魅力の一部は、その遊びの性質にある。からかいのことばは文字どおりに受け取られることを意図しておらず、聞き手に大げさな表現を見ぬき、同じようにこたえるようさそう。この意味で、からかいは口に出されない規則のある遊びに似ており、それがあたえる楽しみは、両方の参加者がその規則を理解し受け入れていることにかかっている。うまくいくとき、からかいは緊張をやわらげ、親しさを表し、人々がまじめさや非難なしに、たがいの欠点を認め合えるようにする。この種のからかいは、関係が少しの手荒さにはたえられるほど強いことを、遠回しに伝える方法であることが多い。',
+      'むずかしいのは、この遊びの規則がはっきり示されることがめったにないことである。からかう人はそのことばに害はないと信じているかもしれないが、からかわれる人は、とくにその話題を気にしていたり、関係の中で力が弱かったりする場合、その理解を共有していないかもしれない。だれかの見た目やなまりや能力についての冗談は、話し手にはささいなことに思えても、聞き手にとっては本当の不安のもとにふれることがある。ある人が遊びとして経験するものを、別の人は攻撃として経験するかもしれない。',
+      'からかいが害のないものかどうかを決めるのに、力は大切な役割を果たす。たがいをよく知る対等な人どうしのあいだでは、からかいはつりあいがとれがちである。どちらもからかい、からかわれ、行きすぎたときにはどちらもそれを伝えられる。しかし先生と生徒のあいだや、人気のある集団と孤立した一人のあいだのように力の差があるとき、からかわれる人は異をとなえられないと感じるかもしれない。そうした場合、からかいとよばれるものは、実はユーモアをよそおったいじめの一つの形かもしれない。',
+      'このため、上手にからかう力には、特別な種類の感受性が必要である。それは自分の意図だけでなく相手の反応にも注意をはらい、その反応が居心地の悪さを示しているときにはやめようとすることをふくむ。また、本当に傷つける話題をさけられるほど相手をよく知っていることも必要である。こうした配慮を無視するからかいは、親しさのしるしではなく不注意のしるしであり、それが表すと主張する関係そのものをそこないうる。',
+      'からかいを上手に受け入れられることも、価値のある力である。自分の弱さを笑える人は、からかいのとげがなくなることにしばしば気づき、そうしようとする姿勢がまわりの人を気楽にさせることもある。しかしこの力を、不公平にあつかわれている人に求めるべきではない。冗談に傷ついた人に、ただ受け流せるようになるべきだと言うのは、責任を害をもたらした人から、それに苦しんだ人へうつしてしまうことである。',
+      'そうすると、からかいはただよいものでも、ただ悪いものでもない。最高の形では、それはきずなを強め、人々が自分の不完全さをユーモアをもって分け合えるようにする、愛情のこもった遊びの一つの形である。最悪の形では、それは閉め出しとむごさの手段になる。そのちがいは、ことばそのものよりも、それが語られる関係や、かかわる人々のあいだの力のつりあいや、それが示されるときの心づかいにある。やさしくからかうことは、結局、私たちがたがいをどれほどよく理解しているかを測る、小さいが多くを明らかにする試験なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「からかう人は害はないと信じているかもしれないが、からかわれる人はそう思わないかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '親しい人のあいだでは、やさしいからかいは愛情のしるしになりうる。', answer: true, why: '第1段落 gentle mockery is often a sign of affection。' },
+      { statement: 'からかいの規則は、ふつうはっきり示されている。', answer: false, why: '第3段落 the rules of this game are rarely made explicit。' },
+      { statement: '力の差があるとき、からかいはいじめの一つの形かもしれない。', answer: true, why: '第4段落 may in fact be a form of bullying disguised as humor。' },
+      { statement: '筆者は、傷ついた人はただ受け流すべきだと考えている。', answer: false, why: '第6段落 is to shift the responsibility ... to the person who suffered it。' },
+    ],
+    qa: [
+      { q: 'What does teasing resemble, according to the author?', choices: ['A game with unspoken rules.', 'A serious argument.', 'A written contract.', 'A school test.'], answer: 0, why: '第2段落 teasing resembles a game with unspoken rules。' },
+      { q: 'What does teasing well require?', choices: ['Paying attention to how the other person reacts.', 'Speaking loudly.', 'Teasing strangers often.', 'Ignoring feelings.'], answer: 0, why: '第5段落 paying attention ... to the reactions of the other person。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
