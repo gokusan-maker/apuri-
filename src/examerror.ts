@@ -8508,6 +8508,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She [did a lot of money] by selling her paintings.', choices: ['made a lot of money', 'made many money', 'did much money', 'took a lot of money'], answer: 0, why: '「お金をかせぐ」は make money。money は数えられないので many は使わない。' },
     ],
   },
+  {
+    id: 'exam-fix-200',
+    title: '入試の誤文訂正〈200〉（東大レベル：英作文の every time・whenever・each time）',
+    points: ['「～するたびに」は every time ～・each time ～・whenever ～。every time と each time はそれ自体が接続詞のように働くので、when を続けない（every time when は×）。time は単数のまま（every times は×）。時を表す節なので、未来のことでも現在形を使う（Whenever you need help, ...）。the next time ～「次に～するときに」、the first time ～「初めて～したときに」も同じ形。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Every time I visit him, he is reading a book.', ja: '彼をたずねるたびに、彼は本を読んでいる。' }],
+    questions: [
+      { sentence: '[Every times] I visit him, he is reading a book.', choices: ['Every time', 'Each times', 'All the time', 'Every when'], answer: 0, why: 'time は単数のまま。Every time ～「～するたびに」。' },
+      { sentence: 'Whenever [I will see] her, she smiles at me.', choices: ['I see', 'I will be seeing', 'I am see', 'seeing I'], answer: 0, why: '時を表す節なので現在形。Whenever I see her。' },
+      { sentence: 'Each time [when I call] him, he is out.', choices: ['I call', 'I am called', 'when calling I', 'of my calling'], answer: 0, why: 'each time 自体が接続詞の働きをするので when は不要。' },
+      { sentence: '[Every time when] it rains, this road floods.', choices: ['Every time', 'Every times when', 'At every time', 'Each when'], answer: 0, why: 'every time のあとに when は続けない。Every time it rains。' },
+      { sentence: 'Call me [whenever will you need] help.', choices: ['whenever you need', 'whenever you will need', 'when ever you need', 'whenever needing you'], answer: 0, why: '節の中はふつうの語順で、未来のことでも現在形。whenever you need。' },
+      { sentence: 'He gets nervous [every time to speak] in public.', choices: ['every time he speaks', 'every time speaking he', 'every times he speaks', 'each times speaking'], answer: 0, why: 'every time のあとは主語＋動詞。every time he speaks。' },
+      { sentence: 'You can visit us [whatever you like].', choices: ['whenever you like', 'whichever you like', 'wherever time you like', 'whenever like you'], answer: 0, why: '「好きなときにいつでも」は whenever you like。' },
+      { sentence: 'The next time [I will go] to Kyoto, I will visit that temple.', choices: ['I go', 'I will be going', 'I went', 'I am go'], answer: 0, why: 'the next time ～ は時を表す節なので現在形。The next time I go。' },
+      { sentence: '[Each times] I hear this song, I remember my school days.', choices: ['Each time', 'Each of times', 'Every times', 'Each timing'], answer: 0, why: 'time は単数。Each time ～「～するたびに」。' },
+      { sentence: 'He visits his grandmother [every time when he has] a holiday.', choices: ['whenever he has', 'every time when he has had', 'whenever has he', 'each time when having'], answer: 0, why: 'every time に when は続けない。whenever he has でよい。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

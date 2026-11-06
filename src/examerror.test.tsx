@@ -2843,3 +2843,10 @@ it('正誤問題〈206〉：東大レベル It is said that・be said to の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to be')
 })
+
+it('誤文訂正〈200〉：東大レベル every time・whenever の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-200')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Every time')
+})

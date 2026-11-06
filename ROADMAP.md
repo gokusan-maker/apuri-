@@ -1045,7 +1045,7 @@
   - [x] 404 正誤問題〈205〉（京大レベル：英作文の no more than・no less than）10問
   - [x] 405 誤文訂正〈199〉（国公立レベル：make と do の使い分け）10問
   - [x] 406 正誤問題〈206〉（東大レベル：英作文の It is said that・be said to）10問
-  - [ ] 407 誤文訂正〈200〉（東大レベル：英作文の every time・whenever・each time）10問
+  - [x] 407 誤文訂正〈200〉（東大レベル：英作文の every time・whenever・each time）10問
   - [ ] 408 正誤問題〈207〉（京大レベル：英作文の部分否定 not necessarily・not always）10問
   - [ ] 409 誤文訂正〈201〉（国公立レベル：remember・forget・stop のあとの to と ing）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
