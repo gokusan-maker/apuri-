@@ -8886,6 +8886,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He [approached to] the door slowly.', choices: ['approached', 'approached at', 'approached for', 'approached into'], answer: 0, why: 'approach は他動詞。approached the door。' },
     ],
   },
+  {
+    id: 'exam-fix-209',
+    title: '入試の誤文訂正〈209〉（京大レベル：英作文の It is not until ～ that …）',
+    points: ['It is (was) not until ～ that …「～してはじめて…する（した）」。強調構文なので that を使い、when や which にしない。that のあとはふつうの語順（主語＋動詞）で倒置しない。過去のことなら It was not until ～ と was にし、that のあとの動詞も過去形にそろえる。同じ意味で Not until ～ を文頭に出すと、主節は倒置して did he notice のようになる。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was not until he came home that he noticed the mistake.', ja: '家に帰ってはじめて、彼はそのまちがいに気づいた。' }],
+    questions: [
+      { sentence: 'It was not until he came home [when he noticed] the mistake.', choices: ['that he noticed', 'did he notice', 'then he noticed', 'which he noticed'], answer: 0, why: '強調構文なので that。that he noticed。' },
+      { sentence: 'It was not until last year [that did I start] learning Spanish.', choices: ['that I started', 'that did I started', 'when I start', 'that I had start'], answer: 0, why: 'that のあとは倒置しない。that I started。' },
+      { sentence: '[It is not until] she was thirty that she learned to drive.', choices: ['It was not until', 'It is not since', 'It was until not', 'Not it was until'], answer: 0, why: '過去のことなので It was not until。' },
+      { sentence: 'It was not [after] I read the book that I understood the movie.', choices: ['until', 'by', 'since', 'when'], answer: 0, why: '「～してはじめて」は not until。' },
+      { sentence: 'It was not until the war ended [that could they return] home.', choices: ['that they could return', 'could they that return', 'that they can return', 'when they could return'], answer: 0, why: 'that のあとはふつうの語順で、時制は過去。' },
+      { sentence: 'Not until he left [he realized] how much he loved the town.', choices: ['did he realize', 'he did realize', 'realized he', 'that he realized'], answer: 0, why: 'Not until ～ が文頭なので主節が倒置。did he realize。' },
+      { sentence: 'It was not until midnight [that she finishes] her homework.', choices: ['that she finished', 'that she has finished', 'when she finishes', 'that did she finish'], answer: 0, why: 'It was に合わせて過去形。that she finished。' },
+      { sentence: 'It was [until not] I lost my health that I knew its value.', choices: ['not until', 'not since', 'no until', 'until no'], answer: 0, why: '語順は not until。' },
+      { sentence: 'It was not until I met him [that I learn] the truth.', choices: ['that I learned', 'did I learn', 'that I am learning', 'then I learned'], answer: 0, why: '過去のことなので that I learned。' },
+      { sentence: 'It was not until the next day [that the news reach] them.', choices: ['that the news reached', 'that did the news reach', 'when the news reached', 'the news reached that'], answer: 0, why: '強調構文の that のあとは過去形でふつうの語順。that the news reached。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
