@@ -38382,6 +38382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-darkness',
+    title: 'In Praise of Darkness',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, night was a time of genuine darkness. Once the sun had set, people relied on the moon, the stars, and the small light of fires and candles, and much of ordinary activity came to a halt. Today, in many parts of the world, artificial light has transformed the night. Streets, shops, and homes remain brightly lit long after sunset, and it is possible to work, travel, and be entertained at any hour. This change has brought obvious benefits, but it may also have cost us something whose value we are only beginning to recognize.",
+      "The benefits of light are easy to see. Lighting makes streets safer, extends the hours in which people can study and work, and allows cities to remain lively and welcoming after dark. For people who in the past would have been confined to their homes by darkness, artificial light has opened new possibilities for education, employment, and social life. It would be absurd to wish for a return to the dangers and limitations that darkness once imposed. Light has, in this sense, been one of the great instruments of human freedom.",
+      "Yet the disappearance of darkness has consequences that are less visible. ( A ) bright lights make our nights more convenient, they also disrupt the natural rhythms of many living things. Birds that migrate at night can be confused by city lights, insects gather around streetlamps in enormous numbers, and plants and animals that depend on the cycle of day and night may be affected in ways that scientists are still trying to understand. Human beings, too, may find their sleep disturbed by constant exposure to artificial light.",
+      "There is also a cultural and spiritual loss. For thousands of years, the night sky was one of the most familiar sights in human life. People told stories about the stars, used them to navigate and to mark the seasons, and found in them a sense of wonder and of their own small place in the universe. Today, many people living in cities have never seen the Milky Way, and the stars have become something to be seen mainly in photographs. A source of shared imagination has quietly faded from ordinary experience.",
+      "Darkness also offered a different kind of time. When the day's light was gone, work stopped, and people gathered to talk, rest, or simply sit together. The night was associated with dreams, reflection, and intimacy, a period in which the demands of the day loosened their hold. In a world where light allows activity to continue without end, the boundary between day and night has blurred, and with it, perhaps, the sense that there is a time for stopping as well as a time for doing.",
+      "None of this means that we should abandon artificial light. It does suggest, however, that we might use it with greater care. Many cities have begun to adopt lighting that is directed downward, dimmer at late hours, or turned off when it is not needed, reducing waste and protecting wildlife without sacrificing safety. Some regions have created dark-sky reserves where the stars can still be seen clearly. Such measures show that it is possible to enjoy the benefits of light while preserving some of what darkness offered.",
+      "Perhaps the deeper lesson is that darkness was never simply the absence of something good. It was a part of the natural order to which human life was once closely tied, and it carried meanings that light alone cannot provide. To value darkness again is not to fear progress but to recognize that some goods can be lost when we eliminate every limitation. By making room for the night, we may recover a sense of rest, of wonder, and of our connection to the larger world.",
+    ],
+    ja: [
+      '人間の歴史のほとんどのあいだ、夜は本当の暗やみの時間だった。日がしずむと、人々は月や星や、火やろうそくの小さな明かりにたより、ふだんの活動の多くは止まった。今日、世界の多くの地域で、人工の明かりが夜を変えた。通りや店や家は日がしずんだずっとあとも明るく照らされ、どの時間にも働き、移動し、楽しむことができる。この変化は明らかな利益をもたらしたが、その価値に私たちがようやく気づきはじめたばかりの何かを、うばったのかもしれない。',
+      '明かりの利益は見てとりやすい。照明は通りをより安全にし、人々が勉強し働ける時間をのばし、都市が暗くなってからも活気があって居心地のよい場所であり続けられるようにする。かつては暗やみのために家にとじこめられていたであろう人々にとって、人工の明かりは教育や仕事や社会生活の新しい可能性を開いた。かつて暗やみがおしつけた危険や制限への逆もどりを願うのはばかげているだろう。この意味で、明かりは人間の自由の大きな道具の一つだった。',
+      'しかし暗やみが消えたことには、あまり目に見えない結果がある。明るい明かりは私たちの夜をより便利にするが、多くの生き物の自然のリズムもみだす。夜にわたる鳥は都市の明かりにまどわされることがあり、虫は街灯のまわりにものすごい数で集まり、昼と夜のくり返しにたよる植物や動物は、科学者がまだ理解しようとしているやり方で影響を受けるかもしれない。人間もまた、人工の明かりにたえずさらされることで、ねむりがみだされるかもしれない。',
+      '文化的で精神的な喪失もある。何千年ものあいだ、夜空は人間の暮らしでもっともなじみのある景色の一つだった。人々は星について物語を語り、それを道しるべや季節のしるしに使い、そこにおどろきと、宇宙の中の自分の小さな場所の感覚を見いだした。今日、都市に住む多くの人は天の川を一度も見たことがなく、星はおもに写真で見るものになった。共有の想像力のみなもとが、ふだんの経験から静かにうすれてしまったのである。',
+      '暗やみはまた、別の種類の時間をあたえてくれた。一日の光が消えると仕事は止まり、人々は話したり休んだり、ただいっしょにすわったりするために集まった。夜は夢やふり返りや親密さと結びつき、一日の求めがそのしばりをゆるめる時間だった。明かりが活動を終わりなく続けさせる世界では、昼と夜の境目はぼやけ、それとともに、することのための時間だけでなく、止まるための時間もあるという感覚もうすれたのかもしれない。',
+      'このどれも、人工の明かりを捨てるべきだということではない。しかしそれは、もっと注意深く明かりを使えるかもしれないことを示している。多くの都市は、下向きに照らしたり、夜おそくには暗くしたり、必要のないときには消したりする照明を取り入れはじめており、安全をぎせいにせずに、むだをへらし野生生物を守っている。星が今もはっきり見える「暗い空の保護区」を作った地域もある。そうした取り組みは、暗やみがあたえてくれたものの一部を守りながら、明かりの利益を楽しむことができると示している。',
+      'おそらくより深い教えは、暗やみが決して、ただよいものがない状態ではなかったということである。それはかつて人間の暮らしが深く結びついていた自然の秩序の一部であり、明かりだけではあたえられない意味をになっていた。ふたたび暗やみを大切にすることは、進歩をおそれることではなく、あらゆる制限を取りのぞくと失われうるよいものもあると認めることである。夜のための場所を作ることで、私たちは休息とおどろきと、より大きな世界とのつながりの感覚を取りもどせるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「明かりは夜を便利にするが、自然のリズムもみだす」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人間の歴史のほとんどのあいだ、夜は本当の暗やみだった。', answer: true, why: '第1段落 night was a time of genuine darkness。' },
+      { statement: '筆者は、暗やみの危険への逆もどりを願っている。', answer: false, why: '第2段落 It would be absurd to wish for a return to the dangers。' },
+      { statement: '都市に住む多くの人は、天の川を一度も見たことがない。', answer: true, why: '第4段落 many people living in cities have never seen the Milky Way。' },
+      { statement: '筆者によれば、人工の明かりは捨てるべきである。', answer: false, why: '第6段落 None of this means that we should abandon artificial light。' },
+    ],
+    qa: [
+      { q: 'What can city lights do to birds that migrate at night?', choices: ['Confuse them.', 'Help them find food.', 'Make them sleep.', 'Keep them warm.'], answer: 0, why: '第3段落 Birds that migrate at night can be confused by city lights。' },
+      { q: 'What have some regions created to see the stars clearly?', choices: ['Dark-sky reserves.', 'Bigger telescopes in every home.', 'Brighter streetlamps.', 'Night markets.'], answer: 0, why: '第6段落 Some regions have created dark-sky reserves。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
