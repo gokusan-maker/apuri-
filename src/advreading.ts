@@ -36862,6 +36862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-awkwardness',
+    title: 'In Defense of Awkwardness',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us dislike feeling awkward. The moment when a joke falls flat, when we forget the name of someone we have met several times, or when we stumble over words in front of an audience can seem unbearable, and we often go to great lengths to avoid such situations. Social life, in many ways, is organized around the goal of appearing smooth and competent. Yet there are reasons to think that awkwardness, uncomfortable as it is, plays a valuable role in human experience, and that our efforts to eliminate it may cost us more than we realize.",
+      "One reason is that awkwardness often accompanies learning. When we try a new activity, speak a foreign language, or enter an unfamiliar social setting, we are likely to make mistakes and to feel clumsy. This discomfort is a sign that we are operating beyond the limits of our existing skills. A person who avoids every situation in which they might feel awkward will remain within the narrow range of what they already know how to do, never discovering what they might become capable of with practice. Every skilled speaker, musician, or athlete was once a beginner who felt clumsy and uncertain, and their skill grew precisely because they were willing to endure that discomfort.",
+      "Awkwardness can also be a sign of honesty. Smooth social performance sometimes depends on following scripts, saying the expected things, and concealing uncertainty. ( A ) such polish can make interactions pleasant, it can also make them superficial, and moments of awkwardness, when the script breaks down and people respond spontaneously, may reveal more genuine feelings. Many friendships begin not with a perfect conversation but with a shared moment of embarrassment that allows two people to drop their guard.",
+      "There is, moreover, a moral dimension to awkwardness. We often feel awkward when we encounter people whose experiences are very different from our own, or when we are uncertain how to respond to someone else's grief or difficulty. Such discomfort is not pleasant, but it may reflect a genuine effort to understand and respect another person. A person who never feels awkward in such situations may simply be indifferent, while one who feels awkward is at least attempting to respond with care.",
+      "Modern technology offers many ways of avoiding awkwardness. Messages can be written and revised before they are sent, conversations can be ended with a single click, and online profiles can be carefully curated to present an ideal image. These tools have real advantages, but they may also reduce our tolerance for the unpredictable moments that face-to-face interaction involves. Young people in particular, some observers worry, may find ordinary conversations increasingly stressful because they have had fewer opportunities to practice them.",
+      "None of this means that we should seek out awkwardness for its own sake or that social skill is unimportant. Grace and tact can make life easier for everyone, and some awkward situations are genuinely painful. The point is rather that awkwardness is an unavoidable part of growth, honesty, and connection, and that learning to tolerate it, in ourselves and in others, may be more valuable than learning to avoid it entirely. Those who accept a certain amount of awkwardness may, in the end, become more relaxed and confident than those who constantly try to escape it.",
+      "Perhaps, then, we should treat awkward moments with more kindness. When we see someone else stumble, we might remember our own clumsy beginnings and respond with patience rather than judgment. When we ourselves feel awkward, we might recognize the feeling as a sign that we are trying something new or reaching toward another person. A life free of awkwardness would be a life in which we never risked anything, never learned anything difficult, and never truly met anyone unlike ourselves.",
+    ],
+    ja: [
+      '私たちのほとんどは、ぎこちなく感じるのがきらいである。冗談がすべったときや、何度も会った人の名前をわすれたときや、人前でことばにつまったときの瞬間は耐えがたく思えることがあり、私たちはそうした状況をさけるためにしばしば大きな手間をかける。社会生活は、多くの点で、なめらかで有能に見えるという目標を中心に組み立てられている。しかし、ぎこちなさは、居心地は悪くても、人間の経験のなかで価値ある役割をはたしており、それをなくそうとする努力は思っている以上に高くつくかもしれないと考える理由がある。',
+      '一つの理由は、ぎこちなさがしばしば学びにともなうことである。新しい活動を試したり、外国語を話したり、なれない社交の場に入ったりするとき、私たちはまちがえ、不器用に感じやすい。この居心地の悪さは、今の技能の限界をこえて動いているしるしである。ぎこちなく感じるかもしれないあらゆる状況をさける人は、すでにできることのせまい範囲のなかにとどまり、練習すれば何ができるようになるかを知ることがない。熟練した話し手も音楽家も運動選手も、かつては不器用で自信のない初心者であり、その技能はまさにその居心地の悪さに耐える気持ちがあったからこそ育ったのである。',
+      'ぎこちなさはまた、正直さのしるしにもなりうる。なめらかな社交のふるまいは、ときに台本にしたがい、期待されることを言い、不確かさをかくすことにかかっている。そうした洗練はやりとりを心地よくすることがあるが、うわべだけのものにすることもあり、台本がくずれて人々がとっさにこたえるぎこちない瞬間のほうが、より本当の気持ちを明らかにするかもしれない。多くの友情は、完ぺきな会話ではなく、二人が身がまえるのをやめられるような、はずかしさを分かち合う瞬間から始まるのである。',
+      'さらに、ぎこちなさには道徳的な面もある。私たちは、自分とはとてもちがう経験をもつ人に出会ったときや、ほかの人の悲しみや困難にどうこたえればよいかわからないときに、しばしばぎこちなく感じる。そうした居心地の悪さは心地よくはないが、相手を理解し尊重しようとする本当の努力を反映しているのかもしれない。そうした状況でけっしてぎこちなく感じない人は単に無関心なだけかもしれず、ぎこちなく感じる人は少なくとも思いやりをもってこたえようとしているのである。',
+      '現代の技術は、ぎこちなさをさける多くの方法をあたえている。メッセージは送る前に書いて直すことができ、会話はクリック一つで終えられ、ネットのプロフィールは理想の姿を示すよう注意深く整えられる。こうした道具には本当の利点があるが、顔を合わせたやりとりがともなう予測できない瞬間への私たちの忍耐をへらしてもいるかもしれない。とくに若者は、練習する機会が少なかったために、ふつうの会話をますますストレスに感じるようになっているのではないかと心配する人もいる。',
+      'これは、ぎこちなさをそれ自体のために求めるべきだとか、社交の技能が大切でないということではない。品のよさや気配りはだれにとっても暮らしを楽にしうるし、ぎこちない状況のなかには本当につらいものもある。言いたいのはむしろ、ぎこちなさは成長と正直さとつながりのさけられない一部であり、自分にもほかの人にもそれを耐えることを学ぶほうが、それをすっかりさけることを学ぶより価値があるかもしれないということである。ある程度のぎこちなさを受け入れる人は、結局のところ、たえずそれからにげようとする人より、くつろいで自信をもてるようになるのかもしれない。',
+      'だとすれば、私たちはぎこちない瞬間をもっとやさしくあつかうべきなのかもしれない。ほかの人がつまずくのを見たら、自分の不器用なはじまりを思い出し、判断ではなく根気をもってこたえてもよい。自分がぎこちなく感じるときには、その気持ちを、何か新しいことを試しているか、ほかの人に手をのばしているしるしとして認めてもよい。ぎこちなさのない人生とは、何の危険もおかさず、何も難しいことを学ばず、自分とちがう人に本当に出会うこともない人生なのだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「洗練はやりとりを心地よくすることがあるが、うわべだけにすることもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ぎこちなさは、今の技能の限界をこえているしるしになりうる。', answer: true, why: '第2段落 a sign that we are operating beyond the limits of our existing skills。' },
+      { statement: '筆者によれば、多くの友情は完ぺきな会話から始まる。', answer: false, why: '第3段落 not with a perfect conversation but with a shared moment of embarrassment。' },
+      { statement: '若者がふつうの会話をストレスに感じるようになっていると心配する人もいる。', answer: true, why: '第5段落 may find ordinary conversations increasingly stressful。' },
+      { statement: '筆者は、ぎこちなさをそれ自体のために求めるべきだと主張している。', answer: false, why: '第6段落 None of this means that we should seek out awkwardness for its own sake。' },
+    ],
+    qa: [
+      { q: 'What may feeling awkward in front of someone else’s grief reflect?', choices: ['A genuine effort to understand and respect them.', 'Complete indifference.', 'A lack of honesty.', 'A wish to end the conversation.'], answer: 0, why: '第4段落 it may reflect a genuine effort to understand and respect another person。' },
+      { q: 'How might technology reduce our tolerance for awkwardness?', choices: ['It lets us avoid unpredictable face-to-face moments.', 'It forces us to speak in public.', 'It makes conversations longer.', 'It removes all messages.'], answer: 0, why: '第5段落 may also reduce our tolerance for the unpredictable moments that face-to-face interaction involves。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
