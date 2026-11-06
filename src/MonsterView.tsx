@@ -3020,6 +3020,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 54 l4 10 M42 52 l4 12 M50 52 l4 12 M58 54 l4 10" stroke="#1f1206" strokeWidth="2" />
       </g>
     )
+  if (species === 'bengaltiger')
+    return (
+      <g>
+        {/* 太い黒いしま */}
+        <path d="M30 50 l6 14 M44 48 l4 16 M56 48 l-2 16 M66 50 l-6 14" stroke="#1c1005" strokeWidth="3" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
