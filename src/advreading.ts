@@ -37458,6 +37458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-teen-curfews',
+    title: 'Should Cities Impose Curfews on Teenagers?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a number of cities around the world, local governments have introduced curfews that forbid young people under a certain age from being in public places late at night unless they are accompanied by an adult. Such rules are usually justified as a way of protecting teenagers from danger and of reducing crime and disorder in the streets. They are, however, the subject of continuing debate, since they restrict the freedom of an entire age group on the basis of the behavior of a few, and since their effectiveness is far from certain.",
+      "Supporters of teenage curfews argue that they protect young people from harm. Late at night, streets may be less safe, and teenagers who are out alone may be more likely to become victims of crime or to be drawn into dangerous situations involving alcohol or drugs. A curfew, supporters claim, gives parents a clear rule to support their own efforts to keep their children at home, and it allows police to return young people safely to their families before problems arise. In this view, a curfew is less a punishment than a form of care.",
+      "Supporters also argue that curfews can reduce crime committed by young people. If teenagers are not allowed to gather in public places late at night, there may be fewer opportunities for fights, vandalism, and other offenses that tend to occur after dark. ( A ) most teenagers would never commit such acts, supporters point out, a small number can cause serious harm to their neighborhoods, and a simple rule that applies to everyone may be easier to enforce than efforts to identify and control those few individuals.",
+      "Critics, however, argue that curfews treat all young people as potential criminals. The great majority of teenagers who are out at night are doing nothing wrong: they may be returning from part-time jobs, sports practices, or visits to friends. Forbidding them from being in public, critics argue, is unfair and may damage the trust between young people and the police. Some also point out that curfews tend to be enforced more strictly in poorer neighborhoods, so that their burden falls most heavily on young people who already face disadvantages.",
+      "Critics also question whether curfews actually achieve their aims. Studies of cities that have introduced curfews have produced mixed results, and some researchers have found little evidence that such rules reduce crime overall. Many offenses committed by young people occur not late at night but in the hours immediately after school, when curfews do not apply. Moreover, police time spent enforcing curfews is time that cannot be spent on other duties, and critics argue that it might be better used in responding to serious crimes.",
+      "Instead of curfews, critics often propose measures that address the reasons young people are on the streets at night. These might include youth centers that remain open in the evening, programs that offer sports, music, or other activities, and support for families who struggle to supervise their children because of long working hours. Such measures, critics argue, give young people somewhere to go rather than simply telling them where they cannot be, and they treat teenagers as members of the community rather than as problems to be controlled.",
+      "The debate over teenage curfews reflects a broader tension between protecting young people and respecting their growing independence. Teenagers are not yet adults, and societies have a responsibility to keep them safe. Yet they are also developing the judgment they will need as adults, and excessive restrictions may deny them the chance to learn how to manage risks on their own. Finding the right balance requires not only clear rules but also careful attention to evidence and to the voices of the young people whose lives such rules affect.",
+    ],
+    ja: [
+      '世界のいくつかの都市で、地方政府は、一定の年齢より下の若者が大人といっしょでなければ夜おそく公共の場所にいることを禁じる外出禁止の規則を取り入れてきた。そうした規則はふつう、十代の若者を危険から守り、通りの犯罪や混乱をへらす方法として正当化される。しかし、それは少数のふるまいをもとにある年齢の集団全体の自由を制限し、その効果もまったく確かではないので、議論が続いている。',
+      '十代の外出禁止を支持する人々は、それが若者を害から守ると主張する。夜おそくには通りはあまり安全でないかもしれず、一人で外にいる十代の若者は、犯罪の被害者になったり、酒や薬物がかかわる危険な状況に引きこまれたりしやすいかもしれない。外出禁止は、子どもを家にいさせようとする親自身の努力を支えるはっきりした規則を親にあたえ、問題が起こる前に警察が若者を家族のもとへ安全に帰せるようにすると支持する人々は主張する。この見方では、外出禁止は罰というより、思いやりの一つの形である。',
+      '支持する人々はまた、外出禁止は若者による犯罪をへらしうると主張する。十代の若者が夜おそく公共の場所に集まることを許されなければ、暗くなってから起こりがちなけんかや器物損壊やほかの違反の機会がへるかもしれない。たいていの十代の若者はそうした行為を決してしないだろうが、少数の人が地域に深刻な害をあたえることがあり、みんなに当てはまる単純な規則の方が、その少数の人を見つけて管理しようとする取り組みより執行しやすいかもしれないと支持する人々は指摘する。',
+      'しかし批判する人々は、外出禁止はすべての若者を犯罪者になるかもしれない人としてあつかっていると主張する。夜に外にいる十代の若者の大多数は何も悪いことをしていない。アルバイトや部活動の練習や友だちの家から帰るところかもしれないのである。彼らが公共の場所にいることを禁じるのは不公平で、若者と警察のあいだの信頼をそこなうかもしれないと批判する人々は主張する。外出禁止はまずしい地域でよりきびしく執行されがちなので、その負担は、すでに不利な立場にある若者にもっとも重くのしかかると指摘する人もいる。',
+      '批判する人々はまた、外出禁止が本当に目的を果たしているのかを疑う。外出禁止を取り入れた都市の研究はまちまちの結果を出しており、そうした規則が全体として犯罪をへらすという証拠はほとんど見つからなかった研究者もいる。若者による違反の多くは、夜おそくではなく、外出禁止が当てはまらない放課後すぐの時間に起こる。さらに、外出禁止の執行に使われる警察の時間は、ほかの仕事に使えない時間であり、それは深刻な犯罪への対応に使った方がよいかもしれないと批判する人々は主張する。',
+      '外出禁止のかわりに、批判する人々はしばしば、若者が夜に通りにいる理由に取り組む対策を提案する。そうした対策には、夕方も開いている若者向けの施設や、スポーツや音楽やほかの活動を提供するプログラムや、長い労働時間のために子どもを見守るのに苦労している家族への支援がふくまれるだろう。そうした対策は、若者に、いてはいけない場所をただ告げるのではなく、行く場所をあたえ、十代の若者を管理すべき問題ではなく地域の一員としてあつかうと批判する人々は主張する。',
+      '十代の外出禁止をめぐる議論は、若者を守ることと、育ちつつある自立を尊重することのあいだの、より広い緊張を反映している。十代の若者はまだ大人ではなく、社会には彼らを安全に保つ責任がある。しかし彼らはまた、大人になって必要になる判断力を育てているところであり、行きすぎた制限は、自分で危険に対処する方法を学ぶ機会をうばうかもしれない。正しいつりあいを見つけるには、はっきりした規則だけでなく、証拠と、そうした規則が暮らしに影響する若者の声に注意深く耳をかたむけることが必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「たいていの若者はしないが、少数が深刻な害をあたえうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that curfews ( 1 ) young people from harm and reduce crime. Critics argue that curfews treat all teenagers as potential ( 2 ) and that there is little evidence they work. Instead, critics propose measures such as youth centers that give young people somewhere to ( 3 ).',
+      blanks: [
+        { choices: ['protect', 'remove', 'hide', 'separate'], answer: 0, why: '第2段落 they protect young people from harm。' },
+        { choices: ['criminals', 'leaders', 'workers', 'victims'], answer: 0, why: '第4段落 curfews treat all young people as potential criminals。' },
+        { choices: ['go', 'sleep', 'pay', 'hide'], answer: 0, why: '第6段落 give young people somewhere to go。' },
+      ],
+    },
+    tf: [
+      { statement: '外出禁止は、親が子どもを家にいさせる努力を支えうる。', answer: true, why: '第2段落 gives parents a clear rule to support their own efforts。' },
+      { statement: '夜に外にいる十代の若者の大多数は、何か悪いことをしている。', answer: false, why: '第4段落 The great majority ... are doing nothing wrong。' },
+      { statement: '若者による違反の多くは、放課後すぐの時間に起こる。', answer: true, why: '第5段落 in the hours immediately after school。' },
+      { statement: '筆者は、規則さえあれば若者の声を聞く必要はないと考えている。', answer: false, why: '第7段落 not only clear rules but also careful attention ... to the voices of the young people。' },
+    ],
+    qa: [
+      { q: 'Where do critics say curfews tend to be enforced more strictly?', choices: ['In poorer neighborhoods.', 'In schools.', 'In wealthy areas.', 'In the countryside.'], answer: 0, why: '第4段落 enforced more strictly in poorer neighborhoods。' },
+      { q: 'What might excessive restrictions deny teenagers, according to the author?', choices: ['The chance to learn how to manage risks on their own.', 'Their part-time jobs.', 'Access to schools.', 'Time with their friends at school.'], answer: 0, why: '第7段落 may deny them the chance to learn how to manage risks on their own。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
