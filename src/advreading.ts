@@ -37262,6 +37262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-obedience',
+    title: 'On Obedience',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Obedience has an uncertain reputation. In childhood it is often praised as a virtue, and a well-behaved child is one who does what parents and teachers say. In adulthood, however, obedience is more often regarded with suspicion, as a sign of weakness or a lack of independent thought. History offers terrible examples of people who did great harm while claiming that they were only following orders, and many of us admire those who refused to obey when obedience would have meant doing wrong. Yet a society in which no one obeyed anyone would hardly be a society at all.",
+      "One reason obedience is necessary is that no individual can work out everything for themselves. We follow the instructions of doctors, pilots, and engineers not because we have examined their reasoning in detail but because we recognize that they know more than we do about matters on which our safety depends. To insist on understanding every rule before following it would be not independence but a kind of arrogance, and it would make ordinary cooperation impossible. In this sense, a reasonable degree of obedience is an expression of trust in the knowledge and good will of others.",
+      "Obedience also makes shared life possible. Traffic laws, school rules, and the customs of a workplace allow large numbers of people to coordinate their actions without negotiating every decision from the beginning. ( A ) a particular rule may seem inconvenient or even pointless, following it often benefits everyone by making the behavior of others predictable. A driver who ignores a red light because the road looks empty may be right on that occasion, but a world in which every driver made such judgments would be far more dangerous than one in which drivers simply obeyed.",
+      "The difficulty is that obedience can be given to the wrong authorities or for the wrong reasons. People sometimes obey not because they trust the knowledge of those in charge but because they fear punishment, wish to avoid responsibility, or simply find it easier not to think. Obedience of this kind can make ordinary people participants in injustice. The danger is greatest when it becomes a habit so deep that people no longer notice when an instruction conflicts with their own sense of what is right.",
+      "For this reason, many thinkers have argued that the important question is not whether to obey but how. Obedience that is thoughtful remains aware of its reasons and of its limits. A person who obeys in this way follows a rule because they understand, or at least trust, its purpose, and they remain ready to question it when it seems to demand something clearly wrong. Such obedience is compatible with conscience rather than opposed to it, because the decision to obey is itself an exercise of judgment.",
+      "Learning this kind of obedience is not easy, and it may be one of the central tasks of moral education. Children must first learn to follow rules before they can understand why rules exist, but if their education stops there, they may grow into adults who obey without reflection. A good education gradually invites young people to ask about the reasons behind rules, to recognize when those reasons no longer apply, and to accept responsibility for their own choices, including the choice to obey.",
+      "Seen in this light, obedience and independence are not simply opposites. The person who never obeys is not truly free, since they are governed by their own impulses and cut off from the knowledge and cooperation of others. The person who always obeys has surrendered their judgment entirely. Between these extremes lies a form of obedience that a mature person can offer without shame: a willingness to follow others where trust is justified, combined with the courage to refuse when conscience demands it, and the wisdom to tell the difference between the two.",
+    ],
+    ja: [
+      '服従の評判ははっきりしない。子どものころ、それはしばしば美徳としてほめられ、行儀のよい子とは親や先生の言うことをする子である。しかし大人になると、服従は弱さや自分で考える力が足りないしるしとして、うたがいの目で見られることの方が多い。歴史は、命令にしたがっただけだと言いながら大きな害をなした人々のおそろしい例を示しており、私たちの多くは、服従が悪いことをする意味になるときに服従をこばんだ人々をたたえる。それでも、だれもだれにもしたがわない社会は、とても社会とは言えないだろう。',
+      '服従が必要な理由の一つは、だれもすべてを自分でつきとめることはできないということである。私たちが医者やパイロットや技術者の指示にしたがうのは、彼らの考えをくわしく調べたからではなく、私たちの安全がかかわる事がらについて、彼らが私たちより多くを知っていると認めるからである。すべての規則をしたがう前に理解すると言いはるのは、自立ではなく一種のごうまんであり、ふつうの協力を不可能にしてしまう。この意味で、ほどよい服従は、ほかの人々の知識と善意への信頼の表れである。',
+      '服従はまた、ともに暮らすことを可能にする。交通の法律や学校の規則や職場の習慣によって、多くの人々は、すべての決定を最初から話し合わなくても行動を合わせることができる。ある規則が不便に、あるいは無意味にさえ思えても、それにしたがうことは、ほかの人々のふるまいを予測できるものにすることで、しばしばみんなの役に立つ。道がすいて見えるから赤信号を無視する運転手は、そのときは正しいかもしれないが、すべての運転手がそうした判断をする世界は、運転手がただしたがう世界よりはるかに危険だろう。',
+      'むずかしいのは、服従がまちがった権威に、あるいはまちがった理由であたえられうることである。人々はときに、責任者の知識を信頼するからではなく、罰をおそれたり、責任をさけたかったり、ただ考えない方が楽だったりするからしたがう。この種の服従は、ふつうの人々を不正の参加者にしてしまうことがある。その危険がもっとも大きいのは、服従が深い習慣になり、指示が自分の正しさの感覚とぶつかっても人々がもう気づかなくなるときである。',
+      'このため多くの思想家は、大切な問いは、したがうかどうかではなく、どうしたがうかだと主張してきた。よく考えた服従は、その理由と限界を意識し続ける。こうしてしたがう人は、規則の目的を理解しているか、少なくとも信頼しているから規則にしたがい、それが明らかにまちがったことを求めるように思えたときには、いつでも問い直す用意がある。したがうという決定そのものが判断の働きなので、そうした服従は良心と対立するのではなく、両立する。',
+      'この種の服従を学ぶのはやさしくなく、それは道徳教育の中心的な課題の一つかもしれない。子どもは、規則がなぜあるのかを理解する前に、まず規則にしたがうことを学ばなければならないが、教育がそこで止まれば、ふり返らずにしたがう大人に育つかもしれない。よい教育は少しずつ若い人々に、規則の背後にある理由を問い、その理由がもう当てはまらないときに気づき、したがうという選択をふくめて、自分の選択に責任をもつようにうながす。',
+      'このように見ると、服従と自立はただの反対どうしではない。決してしたがわない人は本当に自由ではない。その人は自分の衝動に支配され、ほかの人々の知識や協力から切りはなされているからである。いつもしたがう人は、自分の判断をすっかり手ばなしている。この両極のあいだに、成熟した人が恥じることなく示せる服従の形がある。それは、信頼が正当なところではほかの人々にしたがう意志と、良心が求めるときにはこばむ勇気と、その二つを見分ける知恵とが結びついたものである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ある規則が不便に思えても、したがうことはみんなの役に立つ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '子どものころ、服従はしばしば美徳としてほめられる。', answer: true, why: '第1段落 In childhood it is often praised as a virtue。' },
+      { statement: '筆者によれば、すべての規則をしたがう前に理解すると言いはるのは本当の自立である。', answer: false, why: '第2段落 would be not independence but a kind of arrogance。' },
+      { statement: '人々は、罰をおそれてしたがうことがある。', answer: true, why: '第4段落 because they fear punishment。' },
+      { statement: '筆者は、決してしたがわない人こそ本当に自由だと考えている。', answer: false, why: '第7段落 The person who never obeys is not truly free。' },
+    ],
+    qa: [
+      { q: 'Why do we follow the instructions of doctors and pilots?', choices: ['We recognize that they know more than we do.', 'We have examined their reasoning in detail.', 'We are forced by law.', 'We want to avoid paying.'], answer: 0, why: '第2段落 because we recognize that they know more than we do。' },
+      { q: 'What does thoughtful obedience remain aware of?', choices: ['Its reasons and its limits.', 'Only the punishment.', 'The cost of rules.', 'The mistakes of others.'], answer: 0, why: '第5段落 Obedience that is thoughtful remains aware of its reasons and of its limits。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
