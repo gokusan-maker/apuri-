@@ -38942,6 +38942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-farewells',
+    title: 'On Saying Goodbye',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every life is marked by farewells. We say goodbye to friends at the end of a school year, to colleagues when we change jobs, to places when we move, and eventually to the people we love most. Some farewells are brief and casual, followed by an expectation of meeting again; others are final, and we know as we speak them that we will not see the other person again. Although farewells are so common, we rarely reflect on what they mean or on why some of them are so difficult to say well.",
+      "One reason farewells matter is that they give shape to experience. A period of life that ends without any acknowledgment can feel unfinished, as if it had simply faded away rather than come to a close. By marking an ending, a farewell allows us to recognize what has happened, to express gratitude for what we have shared, and to carry the memory of it with us. Ceremonies of graduation, retirement, and mourning exist in many cultures precisely because human beings seem to need such moments of completion.",
+      "Yet farewells are often avoided or rushed. ( A ) we may feel strongly about the people and places we are leaving, we may find it awkward to say so directly, and it can seem easier to slip away quietly or to promise vaguely that we will keep in touch. Modern technology has made such avoidance easier, since it allows us to believe that no one is ever truly left behind. We can follow former classmates online and send messages across the world, and the sense of a real ending may never quite arrive.",
+      "There is something valuable in this continued connection, but also something lost. A farewell that is never fully spoken may leave feelings unexpressed, and relationships that are maintained only through occasional messages may lose their depth without ever clearly ending. The ability to say goodbye well, to acknowledge that something important is ending even if contact continues, may help us to honor relationships rather than allowing them to fade without notice. A goodbye that is clearly spoken, by contrast, often makes it easier to stay in touch afterward, since both people know what the relationship has meant.",
+      "Saying goodbye well is not easy. It requires attention to the other person and honesty about our own feelings. It may involve thanking someone for what they have given us, apologizing for what we regret, or simply telling them that they have mattered. Such words can feel uncomfortable, especially in cultures that value restraint, but they are often remembered long after the moment has passed. Many people who have lost someone suddenly regret, above all, the farewells they never had the chance to say.",
+      "Farewells also teach us something about the nature of time. Every encounter, however ordinary, will one day come to an end, and the awareness of this can make the present more precious. A person who knows that a friend is leaving may listen more carefully, notice details that would otherwise pass unseen, and value the remaining time more deeply. In this sense, the prospect of farewell can heighten our attention to the people around us, reminding us not to take their presence for granted.",
+      "Perhaps, then, farewells deserve more care than we usually give them. They are not merely the unfortunate end of good things but moments in which the meaning of those things becomes clear. To say goodbye well is to acknowledge both loss and gratitude, and to allow an ending to become part of a story rather than an unexplained gap. Those who learn to do so may find that the people and places they leave behind remain with them, not as wounds, but as parts of who they have become.",
+    ],
+    ja: [
+      'どの人生にも別れのしるしがある。私たちは学年の終わりに友だちに、仕事を変えるときに同僚に、引っこすときに場所に、そしていずれはもっとも愛する人々にさよならを言う。短く気軽で、また会えると思える別れもあれば、口にしながら、もう二度と相手に会えないとわかっている最後の別れもある。別れはこれほどありふれているのに、私たちはそれが何を意味するのか、なぜ上手に言うのがむずかしい別れがあるのかを、めったにふり返らない。',
+      '別れが大切な理由の一つは、それが経験に形をあたえることである。何のけじめもなく終わる人生のある時期は、終わりをむかえたというより、ただ消えていったかのように、やりかけのままに感じられることがある。終わりをしるすことで、別れは私たちに、起こったことを認め、分け合ったものへの感謝を表し、その記憶をたずさえていくことをゆるしてくれる。卒業や退職や喪の儀式が多くの文化に存在するのは、まさに人間がそうした仕上げの瞬間を必要としているように思えるからである。',
+      'しかし別れはしばしばさけられたり、急がされたりする。去っていく人や場所に強い思いをいだいていても、それを直接言うのは気まずく感じられ、こっそり立ち去ったり、連絡をとり合おうとあいまいに約束したりする方がやさしく思えることがある。現代の技術はそうしたさけ方をやさしくした。だれも本当に置き去りにされはしないと信じさせてくれるからである。私たちはかつての同級生をオンラインで追い、世界のどこへでもメッセージを送れるので、本当の終わりの感覚はいつまでもやって来ないかもしれない。',
+      'このつながり続けることには価値もあるが、失われるものもある。きちんと口にされない別れは気持ちを表されないままにするかもしれず、ときどきのメッセージだけで保たれる関係は、はっきり終わることもないまま深さを失うかもしれない。上手にさよならを言う力、つまり連絡が続いても何か大切なものが終わりつつあると認める力は、関係を気づかれないままうすれさせるのではなく、それを敬う助けになるかもしれない。それに対して、はっきり口にされたさよならは、二人ともその関係が何を意味してきたかを知っているので、そのあとも連絡をとり合いやすくすることが多い。',
+      '上手にさよならを言うのはやさしくない。それには相手への注意と、自分の気持ちへの正直さが必要である。それは、あたえてくれたものについてだれかに感謝したり、くやんでいることをあやまったり、ただあなたは大切な人だったと伝えたりすることをふくむかもしれない。そうしたことばは、とくにひかえめさを大切にする文化では居心地悪く感じられることがあるが、その瞬間が過ぎたずっとあとまでおぼえられていることが多い。だれかをとつぜん失った多くの人は、何よりも、言う機会のなかった別れをくやむ。',
+      '別れはまた、時間の性質について何かを教えてくれる。どんな出会いも、どれほどふつうのものでも、いつかは終わり、そのことに気づいていると今がより貴重になる。友だちが去っていくと知っている人は、より注意深く耳をかたむけ、そうでなければ見すごしてしまう細かいことに気づき、残りの時間をより深く大切にするかもしれない。この意味で、別れの見通しは、まわりの人々への注意を高め、その人がいることを当然と思わないよう思い出させてくれる。',
+      'そうするとおそらく、別れはふだんあたえている以上の心づかいに値するのだろう。それはただよいことの残念な終わりではなく、そのよいことの意味がはっきりする瞬間である。上手にさよならを言うことは、喪失と感謝の両方を認め、終わりを説明のないすき間ではなく物語の一部にすることである。そうできるようになった人は、置いてきた人や場所が、傷としてではなく、今の自分の一部として、自分とともにあり続けることに気づくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「強い思いをいだいていても、直接言うのは気まずい」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの文化には、卒業や退職のような儀式がある。', answer: true, why: '第2段落 Ceremonies of graduation, retirement, and mourning exist in many cultures。' },
+      { statement: '現代の技術によって、別れをさけるのはむずかしくなった。', answer: false, why: '第3段落 Modern technology has made such avoidance easier。' },
+      { statement: 'だれかをとつぜん失った人は、言えなかった別れをくやむことが多い。', answer: true, why: '第5段落 regret, above all, the farewells they never had the chance to say。' },
+      { statement: '筆者によれば、別れはただよいことの残念な終わりである。', answer: false, why: '第7段落 They are not merely the unfortunate end of good things。' },
+    ],
+    qa: [
+      { q: 'What can a period of life that ends without acknowledgment feel like?', choices: ['Unfinished, as if it had simply faded away.', 'Perfectly complete.', 'Exciting and new.', 'Very short.'], answer: 0, why: '第2段落 can feel unfinished, as if it had simply faded away。' },
+      { q: 'How can the prospect of farewell affect our attention?', choices: ['It can heighten our attention to the people around us.', 'It makes us ignore others.', 'It makes time pass faster.', 'It makes us forget details.'], answer: 0, why: '第6段落 the prospect of farewell can heighten our attention to the people around us。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
