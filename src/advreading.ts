@@ -37298,6 +37298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-doping',
+    title: 'Should Doping Be Allowed in Sport?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Since the early days of modern sport, athletes have looked for ways to gain an advantage over their rivals, and some have turned to drugs that increase strength, endurance, or speed. Most sporting organizations ban such substances and test athletes regularly, punishing those who are caught with suspensions or the loss of medals. Despite these efforts, doping scandals continue to appear in many sports, and a small number of commentators have begun to ask a provocative question: would it be better to allow certain performance-enhancing drugs under medical supervision rather than to keep fighting a battle that seems impossible to win?",
+      "Those who support allowing doping argue that the current system is both unfair and ineffective. Testing is expensive, and wealthy countries and teams can afford methods of avoiding detection that poorer athletes cannot. As a result, some argue, the athletes who are caught are not necessarily the only ones who cheat, but simply the ones with the fewest resources. If certain drugs were permitted and openly monitored, supporters claim, the competition would at least take place on a more equal basis, and athletes would no longer be tempted to use dangerous substances in secret.",
+      "Supporters also question where the line between acceptable and unacceptable enhancement should be drawn. Athletes already use special diets, advanced equipment, training at high altitudes, and medical treatments that improve their performance. ( A ) these methods are generally accepted, supporters ask, why should a carefully controlled drug be treated as fundamentally different? In their view, sport has always involved the use of science to push the limits of the human body, and the ban on doping reflects tradition more than any clear principle.",
+      "Opponents, however, argue that allowing doping would endanger the health of athletes. Many performance-enhancing drugs have serious side effects, including damage to the heart, liver, and hormones, and some of these effects may not appear until years later. Even under medical supervision, opponents warn, the pressure to win would push athletes to take ever larger doses, and those who refused would find it almost impossible to compete. The freedom to choose, in this situation, would become little more than an obligation to accept risks that no one should be forced to take.",
+      "Opponents also worry about the effects on young people. Professional athletes serve as role models for millions of children, and many young players imitate the training methods of their heroes. If doping were accepted at the highest level, opponents fear, it would quickly spread to school and amateur sport, where medical supervision would be far weaker or entirely absent. The result could be a generation of young athletes damaging their bodies in pursuit of success that only a few will ever achieve.",
+      "Beyond questions of health, many people believe that doping would change the meaning of sport itself. Sport is valued, in part, because it shows what human beings can achieve through talent, effort, and discipline. If victories depended largely on access to the most effective drugs, the achievements of athletes might come to seem less like human accomplishments and more like the products of laboratories. For many spectators, the appeal of watching a race or a match lies precisely in the belief that the competitors are testing the limits of what a human body can naturally do.",
+      "The debate over doping thus raises a broader question about what societies want sport to represent. If sport is mainly entertainment, the methods used to produce spectacular performances may seem less important. If, however, sport is valued as a demonstration of human effort and fair competition, then protecting athletes and preserving trust in the results will remain essential. Whatever the answer, the persistence of doping suggests that rules alone cannot solve the problem, and that sporting organizations must also address the pressures that lead athletes to cheat in the first place.",
+    ],
+    ja: [
+      '近代スポーツの初めのころから、選手はライバルより有利になる方法をさがしてきており、なかには力や持久力や速さを高める薬にたよった人もいる。たいていのスポーツの団体はそうした物質を禁止し、選手を定期的に検査し、見つかった人を出場停止やメダルのはく奪で罰している。こうした努力にもかかわらず、ドーピングの不祥事は多くのスポーツで起こり続けており、少数の論者は、挑発的な問いを投げかけはじめている。勝てそうにない戦いを続けるより、医学的な管理のもとで、ある種の競技力を高める薬を認める方がよいのではないか、と。',
+      'ドーピングを認めることを支持する人々は、今の制度は不公平で効果もないと主張する。検査には費用がかかり、豊かな国やチームは、貧しい選手には払えない、発見をさける方法にお金を出せる。その結果、見つかる選手は、ずるをしている唯一の人々とはかぎらず、ただもっとも資源の少ない人々にすぎないと主張する人もいる。ある種の薬が認められ、おおやけに監視されれば、少なくとも競技はより平等な条件で行われ、選手はもう危険な物質をこっそり使いたくならないだろうと支持する人々は主張する。',
+      '支持する人々はまた、受け入れられる強化と受け入れられない強化のあいだの線をどこに引くべきかを問う。選手はすでに、特別な食事や進んだ道具や高地でのトレーニングや、競技力を高める医学的な治療を使っている。こうした方法が一般に受け入れられているなら、注意深く管理された薬がなぜ根本的にちがうものとしてあつかわれるべきなのかと支持する人々は問う。彼らの見方では、スポーツはつねに人間の体の限界をおし広げるために科学を使うことをふくんできたのであり、ドーピングの禁止は、明確な原則よりも伝統を反映している。',
+      'しかし反対する人々は、ドーピングを認めれば選手の健康が危険にさらされると主張する。競技力を高める薬の多くには、心臓や肝臓やホルモンへの害をふくむ深刻な副作用があり、その一部は何年もたってから現れるかもしれない。医学的な管理のもとでも、勝ちたいという圧力が選手にますます多くの量を飲ませ、こばむ人はほとんど競えなくなるだろうと反対する人々は警告する。この状況では、選ぶ自由は、だれもおしつけられるべきでない危険を受け入れる義務とほとんど変わらなくなるだろう。',
+      '反対する人々はまた、若者への影響を心配する。プロの選手は何百万人もの子どものお手本であり、多くの若い選手はあこがれの人のトレーニングの方法をまねする。最高の水準でドーピングが受け入れられれば、それはすぐに学校やアマチュアのスポーツに広がり、そこでは医学的な管理ははるかに弱いか、まったくないだろうと反対する人々はおそれる。その結果、ほんの少しの人しか手にできない成功を追いかけて体を傷つける若い選手の世代が生まれるかもしれない。',
+      '健康の問題をこえて、多くの人々は、ドーピングがスポーツの意味そのものを変えてしまうと考えている。スポーツが大切にされるのは、一つには、人間が才能と努力と規律によって何をなしとげられるかを示すからである。勝利がおもにもっとも効く薬を手に入れられるかどうかで決まるなら、選手のなしとげたことは、人間の業績というより研究室の産物のように思えてくるかもしれない。多くの観客にとって、競走や試合を見る魅力は、まさに、競う人々が人間の体が自然にできることの限界をためしているという信念にある。',
+      'このようにドーピングをめぐる議論は、社会がスポーツに何を表してほしいのかという、より広い問いを投げかける。スポーツがおもに娯楽なら、見事な記録を生み出すために使われる方法はそれほど大切に思えないかもしれない。しかし、スポーツが人間の努力と公正な競争を示すものとして大切にされるなら、選手を守り、結果への信頼を保つことは欠かせないままだろう。答えがどうであれ、ドーピングがなくならないことは、規則だけではこの問題を解決できず、スポーツの団体は、そもそも選手をずるへと向かわせる圧力にも取り組まなければならないことを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「こうした方法が受け入れられているなら、なぜ薬はちがうのか」という条件なので If。' },
+    ],
+    summary: {
+      text: 'Supporters of allowing doping argue that the current testing system is unfair and ( 1 ). Opponents warn that doping would endanger the ( 2 ) of athletes and spread to young people. Many also believe it would change the ( 3 ) of sport itself.',
+      blanks: [
+        { choices: ['ineffective', 'popular', 'cheap', 'simple'], answer: 0, why: '第2段落 the current system is both unfair and ineffective。' },
+        { choices: ['health', 'wealth', 'fame', 'speed'], answer: 0, why: '第4段落 allowing doping would endanger the health of athletes。' },
+        { choices: ['meaning', 'price', 'length', 'rules'], answer: 0, why: '第6段落 doping would change the meaning of sport itself。' },
+      ],
+    },
+    tf: [
+      { statement: '豊かな国やチームは、発見をさける方法にお金を出せる。', answer: true, why: '第2段落 wealthy countries and teams can afford methods of avoiding detection。' },
+      { statement: '競技力を高める薬の副作用は、すぐに現れるものだけである。', answer: false, why: '第4段落 some of these effects may not appear until years later。' },
+      { statement: '多くの若い選手は、あこがれの人のトレーニングの方法をまねする。', answer: true, why: '第5段落 many young players imitate the training methods of their heroes。' },
+      { statement: '筆者は、規則だけでドーピングの問題を解決できると考えている。', answer: false, why: '第7段落 rules alone cannot solve the problem。' },
+    ],
+    qa: [
+      { q: 'What methods do athletes already use to improve performance, according to supporters?', choices: ['Special diets, advanced equipment, and high-altitude training.', 'Only drugs.', 'Longer holidays.', 'Fewer competitions.'], answer: 0, why: '第3段落 special diets, advanced equipment, training at high altitudes。' },
+      { q: 'Why might the freedom to choose become an obligation?', choices: ['Those who refused drugs could hardly compete.', 'Doctors would force athletes.', 'Drugs would be free.', 'Tests would become stricter.'], answer: 0, why: '第4段落 those who refused would find it almost impossible to compete。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
