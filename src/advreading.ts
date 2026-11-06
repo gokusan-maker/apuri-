@@ -39022,6 +39022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-second-chances',
+    title: 'On Second Chances',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us have been given a second chance at some point in our lives, often when we least expected it. A teacher allowed us to retake a test, a friend forgave a careless remark, or an employer kept us on after a serious mistake. Such moments can be turning points, allowing a person to learn from failure rather than be defined by it. Yet the idea of the second chance raises difficult questions: when should one be offered, how many chances should a person receive, and what do we owe to those who have been harmed by the mistake in the first place?",
+      "The case for second chances rests partly on a recognition of human fallibility. Everyone makes mistakes, and many of the most serious ones are made by people who are young, inexperienced, or under great pressure. To treat a single failure as a final judgment on a person's character would be both unfair and unrealistic. Second chances express a belief that people can change, that the self who made the mistake is not the only self they are capable of becoming.",
+      "Second chances may also benefit those who give them. ( A ) refusing to forgive can feel like a way of protecting ourselves, it can also leave us burdened with resentment and cut us off from relationships that might have been repaired. Many people who have offered a second chance to a friend or family member report that the relationship eventually became stronger than before, precisely because both sides had faced a difficult moment and chosen to continue.",
+      "Yet second chances are not always wise. A person who repeatedly causes harm and shows no willingness to change may simply take advantage of forgiveness, and offering endless chances can expose others to danger. The question is not only whether the person who made the mistake deserves another opportunity but whether those who might be affected by a repeated mistake have been considered. In some situations, such as when a person's actions put others at serious risk, caution may be more responsible than generosity.",
+      "For this reason, the most meaningful second chances are often conditional. They depend on an acknowledgment of the mistake, a sincere effort to repair the harm, and evidence of a willingness to act differently. A second chance offered without any such conditions may teach the person that mistakes have no consequences, while one offered with clear expectations can become an opportunity for growth. In this sense, the second chance is not simply a gift but an invitation, which the person who receives it must choose to accept.",
+      "Institutions face similar questions on a larger scale. Schools must decide how to respond to students who break rules, employers must decide whether to hire people with criminal records, and legal systems must balance punishment with the possibility of rehabilitation. Societies that offer no second chances may leave many people permanently excluded, while those that offer them carelessly may fail to protect the vulnerable. Finding the right balance is one of the most difficult tasks that any community faces. Many communities have found that people who are given real opportunities to rebuild their lives often become valuable contributors to society.",
+      "Perhaps the deepest lesson of second chances is that they require courage on both sides. The person who offers one risks being disappointed, while the person who receives one must face the knowledge of their failure and the effort needed to do better. When both are willing to take these risks, a second chance can transform not only an individual life but the relationships around it. It reminds us that the future is not entirely determined by the past, and that the way we respond to failure may matter more than the failure itself.",
+    ],
+    ja: [
+      '私たちのほとんどは、人生のどこかで二度目の機会を、しばしばもっとも思いがけないときにあたえられたことがある。先生が試験の受け直しを認めてくれたり、友だちが不注意な一言をゆるしてくれたり、雇い主が大きなまちがいのあとも働き続けさせてくれたりしたのである。そうした瞬間は転機になることがあり、人が失敗に決めつけられるのではなく、失敗から学べるようにしてくれる。しかし二度目の機会という考えはむずかしい問いを投げかける。それはいつあたえられるべきか、人は何度機会を受けるべきか、そして、そもそもそのまちがいで傷ついた人々に私たちは何を負っているのか。',
+      '二度目の機会を支持する理由の一部は、人間がまちがうものだと認めることにある。だれもがまちがいをし、もっとも深刻なまちがいの多くは、若かったり経験が少なかったり大きな圧力のもとにいたりする人によってなされる。一度の失敗をその人の人柄への最終的な判断としてあつかうのは、不公平でもあり、現実的でもないだろう。二度目の機会は、人は変われるという信念、つまりまちがいをした自分が、その人がなれる唯一の自分ではないという信念を表している。',
+      '二度目の機会はまた、それをあたえる人のためにもなるかもしれない。ゆるさないことは自分を守る方法のように感じられるかもしれないが、うらみを背負わせ、修復できたかもしれない関係から私たちを切りはなすこともある。友だちや家族に二度目の機会をあたえた多くの人は、まさに双方がむずかしい瞬間に向き合い、続けることを選んだからこそ、その関係がやがて以前より強くなったと言う。',
+      'しかし二度目の機会はいつも賢いわけではない。くり返し害をあたえ、変わろうとする気持ちを見せない人は、ただゆるしにつけこむかもしれず、終わりのない機会をあたえることはほかの人々を危険にさらしうる。問題は、まちがいをした人がもう一度の機会に値するかどうかだけでなく、くり返されたまちがいの影響を受けるかもしれない人々が考えられているかどうかでもある。人の行動がほかの人を深刻な危険にさらすときのような状況では、気前のよさより慎重さの方が責任ある態度かもしれない。',
+      'このため、もっとも意味のある二度目の機会は、しばしば条件つきである。それは、まちがいを認めること、害をつぐなおうとする心からの努力、そしてちがうふるまいをしようとする意志の証拠にかかっている。そうした条件なしにあたえられる二度目の機会は、まちがいには何の結果もないとその人に教えてしまうかもしれないが、はっきりした期待とともにあたえられるものは、成長の機会になりうる。この意味で、二度目の機会はただのおくり物ではなく、受け取る人が受け入れることを選ばなければならない、一つのさそいなのである。',
+      '組織も、より大きな規模で同じような問いに直面する。学校は規則を破る生徒にどう対応するかを決めなければならず、雇い主は犯罪歴のある人をやとうかどうかを決めなければならず、法の制度は罰と立ち直りの可能性のつりあいをとらなければならない。二度目の機会を一切あたえない社会は多くの人をいつまでも閉め出すかもしれず、不注意にあたえる社会は弱い立場の人々を守れないかもしれない。正しいつりあいを見つけることは、どんな地域社会にとってももっともむずかしい課題の一つである。本当に人生を立て直す機会をあたえられた人々が、しばしば社会に大きく貢献するようになることに気づいた地域も多い。',
+      'おそらく二度目の機会のもっとも深い教えは、それが双方に勇気を求めるということである。機会をあたえる人は裏切られる危険を負い、受け取る人は自分の失敗を知り、よりよくするのに必要な努力に向き合わなければならない。双方がこうした危険を負う気があるとき、二度目の機会は一人の人生だけでなく、そのまわりの関係も変えうる。それは、未来は過去によって完全には決まっておらず、失敗にどうこたえるかが失敗そのものより大切かもしれないことを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ゆるさないことは自分を守る方法のように感じられるかもしれないが、うらみを背負わせる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '二度目の機会は、人は変われるという信念を表している。', answer: true, why: '第2段落 Second chances express a belief that people can change。' },
+      { statement: '筆者によれば、二度目の機会はいつも賢い。', answer: false, why: '第4段落 Yet second chances are not always wise。' },
+      { statement: 'もっとも意味のある二度目の機会は、しばしば条件つきである。', answer: true, why: '第5段落 the most meaningful second chances are often conditional。' },
+      { statement: '筆者は、未来は過去によって完全に決まると考えている。', answer: false, why: '第7段落 the future is not entirely determined by the past。' },
+    ],
+    qa: [
+      { q: 'Why might a relationship become stronger after a second chance?', choices: ['Both sides faced a difficult moment and chose to continue.', 'They never talked again.', 'One person moved away.', 'They forgot the mistake completely.'], answer: 0, why: '第3段落 because both sides had faced a difficult moment and chosen to continue。' },
+      { q: 'What does the author say a second chance is, besides a gift?', choices: ['An invitation.', 'A punishment.', 'A contract.', 'A secret.'], answer: 0, why: '第5段落 the second chance is not simply a gift but an invitation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
