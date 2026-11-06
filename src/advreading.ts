@@ -36978,6 +36978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-truancy-fines',
+    title: 'Should Parents Be Fined When Children Miss School?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Regular attendance at school is widely regarded as essential for children's learning. Students who miss many days may fall behind in their studies, lose touch with friends, and find it increasingly difficult to return. In some countries, governments have responded to rising absence rates by fining parents whose children miss school without a valid reason, for example by taking them on holiday during term time. Supporters regard such fines as a necessary way of encouraging attendance, while critics argue that they punish families without addressing the reasons why children stay away.",
+      "Supporters of fines argue that parents have a legal and moral responsibility to ensure that their children receive an education. When parents remove children from school for avoidable reasons, such as cheaper holidays outside the peak season, they may be placing their own convenience above their children's learning. Fines, supporters claim, send a clear message that school attendance matters, and they may persuade some families to change their plans. Without any penalty, supporters warn, rules about attendance would have little force. Families who follow the rules, and who arrange their holidays during school breaks at greater cost, might also feel that those who ignore them are being treated too leniently.",
+      "Supporters also point out that absence affects not only the student who is missing but also the whole class. Teachers may need to spend time helping returning students catch up, slowing progress for everyone else. ( A ) a few days of absence may seem harmless, supporters argue, the effects accumulate over time, and research suggests that even modest levels of absence can be associated with lower achievement, making early intervention important. A student who misses a week of lessons in mathematics, for instance, may struggle to understand the topics that build on what was taught during that time.",
+      "Critics, however, argue that fines often fail to address the real causes of absence. Many children miss school because of illness, anxiety, bullying, caring responsibilities at home, or difficulties that their families are struggling to manage. Fining parents in such circumstances, critics claim, may increase stress and financial hardship without helping the child return to school. For families with low incomes, a fine may be a serious burden, while wealthier families may simply pay it and continue to take holidays during term time.",
+      "Critics also question whether punishment is the right approach to a problem that often reflects deeper difficulties. Schools that rely on fines may damage their relationships with families, making parents less willing to cooperate. In the view of critics, more effective approaches would involve understanding why individual students are absent and offering support, such as counseling, help with transport, or closer communication between teachers and families, rather than treating all absences as the result of irresponsible parenting. Such support, they suggest, may cost more at first but is more likely to produce lasting improvements.",
+      "Between these positions, some schools and local authorities have tried to combine clear expectations with support. They may issue warnings and offer meetings with families before any fine is considered, and reserve penalties for cases where parents repeatedly refuse to cooperate without good reason. Some regions have also made school holidays more flexible or reduced the cost of family travel during school breaks, addressing one of the main reasons parents give for taking children out of school.",
+      "The debate over fining parents reflects a broader question about the balance between responsibility and support in public policy. Ensuring that children attend school is clearly important, but the reasons for absence are often complex and cannot always be solved by penalties. The most effective approach may be one that holds families accountable while also recognizing the difficulties many of them face, so that the shared goal of helping every child learn is pursued through cooperation rather than conflict.",
+    ],
+    ja: [
+      '学校に定期的にかようことは、子どもの学びに欠かせないと広く見なされている。多くの日を休む生徒は勉強でおくれをとり、友だちとのつながりを失い、学校にもどるのがますます難しくなるかもしれない。いくつかの国では、欠席率の上昇にこたえて、たとえば学期中に休暇に連れていくなど、正当な理由なしに子どもが学校を休んだ親に罰金を科している。支持する人々はそうした罰金を出席をうながすのに必要な方法と見なすが、批判する人々は、子どもが学校に来ない理由に取り組まずに家族を罰していると主張する。',
+      '罰金を支持する人々は、親には子どもが教育を受けられるようにする法的・道徳的な責任があると主張する。繁忙期をさけた安い休暇のような、さけられる理由で親が子どもを学校から連れ出すとき、親は子どもの学びより自分の都合を優先しているのかもしれない。罰金は学校への出席が大切だというはっきりしたメッセージを送り、一部の家族に計画を変えるよう説得するかもしれないと支持する人々は主張する。何の罰もなければ、出席についての規則はほとんど力をもたないだろうと支持する人々は警告する。規則を守り、より高い費用をかけて学校の休み中に休暇を組む家族もまた、規則を無視する人々があまりに甘くあつかわれていると感じるかもしれない。',
+      '支持する人々はまた、欠席は休んでいる生徒だけでなくクラス全体にも影響すると指摘する。教師はもどってきた生徒が追いつくのを手伝うのに時間をかける必要があるかもしれず、ほかのみんなの進み方がおそくなる。数日の欠席は無害に思えるかもしれないが、その影響は時がたつにつれて積み重なり、研究によればわずかな欠席でも成績の低さと結びつくことがあるので、早めの手だてが大切だと支持する人々は主張する。たとえば数学の授業を1週間休んだ生徒は、その間に教えられたことの上に積み重なる単元を理解するのに苦労するかもしれない。',
+      'しかし批判する人々は、罰金はしばしば欠席の本当の原因に取り組めていないと主張する。多くの子どもは、病気や不安やいじめや家での世話の役目や、家族がなんとかしようと苦労している困難のために学校を休む。そうした状況で親に罰金を科すことは、子どもが学校にもどるのを助けないまま、ストレスとお金の苦しさをふやすかもしれないと批判する人々は主張する。収入の少ない家族にとって罰金は重い負担になりうる一方、より裕福な家族は単にそれをはらい、学期中に休暇をとり続けるかもしれない。',
+      '批判する人々はまた、しばしばより深い困難を反映している問題に、罰が正しいやり方なのかを疑う。罰金にたよる学校は家族との関係を傷つけ、親が協力する気をなくさせるかもしれない。批判する人々の見方では、すべての欠席を無責任な子育ての結果としてあつかうのではなく、一人ひとりの生徒がなぜ休んでいるのかを理解し、相談や通学の手助けや教師と家族のより緊密な連絡のようなささえをあたえるほうが、より効果的だろう。そうしたささえは、はじめは費用がかかっても、長く続く改善を生みやすいと彼らは示す。',
+      'これらの立場のあいだで、はっきりした期待とささえを組み合わせようとしてきた学校や地方の行政もある。罰金を考える前に警告を出し、家族との話し合いの場を設け、親が正当な理由なしにくり返し協力をこばむ場合にだけ罰をとっておくことがある。学校の休みをより柔軟にしたり、学校の休み中の家族旅行の費用を下げたりして、親が子どもを学校から連れ出す主な理由の一つに取り組んだ地域もある。',
+      '親への罰金をめぐる議論は、公共の政策における責任とささえのつりあいについての、より広い問いを反映している。子どもが学校にかよえるようにすることは明らかに大切だが、欠席の理由はしばしば複雑で、罰によっていつも解決できるわけではない。もっとも効果的なやり方は、家族に責任を求めながら、その多くが直面している困難も認め、すべての子どもの学びを助けるという共通の目標が、対立ではなく協力を通じて追い求められるようにするものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「数日の欠席は無害に思えるかもしれないが、影響は積み重なる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that fines remind parents of their ( 1 ) and that absence affects the whole class. Critics argue that fines fail to address the real ( 2 ) of absence and may harm families with low incomes. Some schools issue warnings and offer meetings before any ( 3 ) is considered.',
+      blanks: [
+        { choices: ['responsibility', 'holidays', 'income', 'friends'], answer: 0, why: '第2段落 parents have a legal and moral responsibility。' },
+        { choices: ['causes', 'costs', 'dates', 'results'], answer: 0, why: '第4段落 fines often fail to address the real causes of absence。' },
+        { choices: ['fine', 'holiday', 'test', 'trip'], answer: 0, why: '第6段落 before any fine is considered。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの日を休む生徒は、勉強でおくれをとるかもしれない。', answer: true, why: '第1段落 may fall behind in their studies。' },
+      { statement: '支持する人々によれば、欠席は休んでいる生徒だけに影響する。', answer: false, why: '第3段落 affects not only the student who is missing but also the whole class。' },
+      { statement: '裕福な家族は、罰金をはらって学期中に休暇をとり続けるかもしれない。', answer: true, why: '第4段落 wealthier families may simply pay it and continue to take holidays。' },
+      { statement: '筆者によれば、欠席の問題はいつも罰によって解決できる。', answer: false, why: '第7段落 cannot always be solved by penalties。' },
+    ],
+    qa: [
+      { q: 'What are some reasons children miss school, according to critics?', choices: ['Illness, anxiety, bullying, or caring duties at home.', 'Too much homework only.', 'Long summer holidays.', 'New school uniforms.'], answer: 0, why: '第4段落 because of illness, anxiety, bullying, caring responsibilities at home。' },
+      { q: 'What have some regions done to address a main reason for taking children out of school?', choices: ['Made school holidays more flexible.', 'Doubled the fines.', 'Closed schools in winter.', 'Banned family travel.'], answer: 0, why: '第6段落 made school holidays more flexible or reduced the cost of family travel。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
