@@ -8466,6 +8466,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Gas prices are now [one and half times] as high as last year.', choices: ['one and a half times', 'one and half time', 'a one and half times', 'one half and times'], answer: 0, why: '「1.5倍」は one and a half times。' },
     ],
   },
+  {
+    id: 'exam-fix-199',
+    title: '入試の誤文訂正〈199〉（国公立レベル：make と do の使い分け）',
+    points: ['make は「（形のあるものや結果を）作り出す」、do は「（作業・行為を）する」が基本。make を使う決まった言い方に make a mistake（まちがえる）・make a decision（決める）・make progress（進歩する）・make an effort（努力する）・make a noise（音を立てる）・make friends with ～（～と友だちになる）・make money（お金をかせぐ）がある。do を使う決まった言い方に do one’s homework（宿題をする）・do the dishes（皿を洗う）・do one’s best（最善をつくす）・do ～ a favor（～の頼みを聞く）・do harm（害をあたえる）・do business（商売をする）がある。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'I made a mistake, but I did my best.', ja: '私はまちがえたが、最善をつくした。' }],
+    questions: [
+      { sentence: 'I [did a mistake] on the test.', choices: ['made a mistake', 'did mistake', 'made mistake', 'took a mistake'], answer: 0, why: '「まちがえる」は make a mistake。' },
+      { sentence: 'Have you [made your homework] yet?', choices: ['done your homework', 'did your homework', 'make your homework', 'done your homeworks'], answer: 0, why: '「宿題をする」は do one’s homework。完了形なので done。homework は数えられない。' },
+      { sentence: 'We have to [do a decision] by Friday.', choices: ['make a decision', 'take decision', 'do decision', 'make decide'], answer: 0, why: '「決める」は make a decision。' },
+      { sentence: 'Could you [make me a favor]?', choices: ['do me a favor', 'do a favor me', 'make a favor for', 'give me favor'], answer: 0, why: '「頼みを聞く」は do ～ a favor。' },
+      { sentence: 'She is [doing good progress] in English.', choices: ['making good progress', 'making a good progresses', 'doing a good progress', 'taking good progress'], answer: 0, why: '「進歩する」は make progress。progress は数えられないので a をつけない。' },
+      { sentence: 'Please don’t [do so much noise] in the library.', choices: ['make so much noise', 'make so many noise', 'do so many noises', 'give so much noise'], answer: 0, why: '「音を立てる」は make (a) noise。noise を数えない用法では much。' },
+      { sentence: 'I always [make the dishes] after dinner.', choices: ['do the dishes', 'do the dish', 'make dishes', 'make the dish'], answer: 0, why: '「皿を洗う」は do the dishes。' },
+      { sentence: 'He [did friends with] a boy from Canada.', choices: ['made friends with', 'made friend with', 'did a friend with', 'made friends to'], answer: 0, why: '「～と友だちになる」は make friends with ～。friends は複数形。' },
+      { sentence: 'Too much sun can [make harm] to your skin.', choices: ['do harm', 'make a harm', 'do harms', 'give a harm'], answer: 0, why: '「害をあたえる」は do harm。harm は数えられない。' },
+      { sentence: 'She [did a lot of money] by selling her paintings.', choices: ['made a lot of money', 'made many money', 'did much money', 'took a lot of money'], answer: 0, why: '「お金をかせぐ」は make money。money は数えられないので many は使わない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
