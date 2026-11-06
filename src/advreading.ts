@@ -39662,6 +39662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-leaving-home',
+    title: 'On Leaving Home',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many young people, leaving home is one of the great turning points of life. Whether they move to another city for university, take a job far away, or simply rent a room of their own, the experience marks a separation from the household in which they grew up. It is often anticipated with excitement and remembered with mixed feelings, since it involves both the freedom of independence and the loss of a familiar world. Reflecting on this experience may reveal something about what home means and why leaving it can be both necessary and painful.",
+      "Part of the excitement of leaving home lies in the chance to define oneself. In the family home, a person is often seen through the eyes of parents and siblings, who remember every stage of their childhood and may expect them to remain the same. Away from home, they can try out new habits, friendships, and interests without the weight of these expectations. Many people describe their first years of independence as a time when they discovered who they were, or at least who they wished to become. Some even change the way they dress, speak, or spend their free time, experimenting with versions of themselves that would have been difficult to explore at home.",
+      "Yet independence also brings responsibilities that home once quietly carried. ( A ) a young person may long to escape the rules of their parents, they soon discover how much work those parents did without being noticed: preparing meals, paying bills, remembering appointments, and offering comfort in difficult moments. The first months away from home are often a lesson in gratitude, as tasks that once seemed to happen by themselves suddenly require time, effort, and planning.",
+      "Leaving home can also bring loneliness. Even those who have longed for freedom may find themselves missing familiar voices, routines, and smells, and the silence of a new apartment can feel very different from the noise of a family household. Such feelings are not a sign of weakness but a natural response to change. Over time, many people build new networks of friends and new routines that make their new place feel like home, although the process may take longer than they expected and may involve moments of real doubt.",
+      "Interestingly, leaving home often changes how people see the home they left. From a distance, the family house may come to seem both smaller and more precious than it did before. Habits that once seemed irritating may now appear as expressions of care, and conflicts that once seemed important may lose their force. Returning for a visit, many people experience a strange combination of comfort and unfamiliarity, as if they were both returning to themselves and visiting someone else's life.",
+      "In some cultures, leaving home is expected at a certain age, while in others young people remain with their families until marriage or beyond. These differences reflect varying ideas about independence, family obligation, and the relationship between generations. Neither pattern is simply better than the other. Staying at home can strengthen bonds and provide mutual support, while leaving can encourage self-reliance. What matters, perhaps, is whether the choice allows a person to grow while maintaining meaningful connections with those who matter to them.",
+      "Perhaps the deepest lesson of leaving home is that home is not only a place but a set of relationships and memories that we carry with us. We may leave the house in which we grew up, but we do not leave behind the people who shaped us or the experiences that made us who we are. In learning to build a life elsewhere, we may come to understand more clearly what our first home gave us, and how we might, in turn, create a home for others.",
+    ],
+    ja: [
+      '多くの若者にとって、家を出ることは人生の大きな転機の一つである。大学のために別の都市に移るにせよ、遠くで仕事につくにせよ、ただ自分の部屋を借りるにせよ、その経験は育った家庭からの別れをしるす。それはしばしばわくわくしながら待たれ、複雑な気持ちで思い出される。自立の自由と、なじみの世界を失うことの両方をふくむからである。この経験をふり返ることは、家が何を意味するのか、そしてなぜそれを出ることが必要でありつらくもありうるのかについて、何かを明らかにするかもしれない。',
+      '家を出るわくわく感の一部は、自分を形づくる機会にある。家族の家では、人はしばしば、子どものころのすべての段階をおぼえていて、その人が変わらないままでいることを期待するかもしれない親やきょうだいの目を通して見られる。家からはなれれば、そうした期待の重さなしに、新しい習慣や友情や関心をためすことができる。多くの人は、自立して最初の数年を、自分が何者なのか、あるいは少なくとも何者になりたいのかを見つけた時期だと語る。服装や話し方や自由な時間のすごし方を変え、家ではためしにくかったであろう自分のすがたを試す人さえいる。',
+      'しかし自立はまた、かつては家が静かに引き受けていた責任ももたらす。若者は親の規則からのがれたいと願うかもしれないが、親が気づかれずにどれほど多くの仕事をしていたかをすぐに知ることになる。食事を作り、お金をはらい、約束をおぼえておき、つらいときになぐさめてくれていたのである。家をはなれて最初の数か月は、しばしば感謝を学ぶ時期になる。かつてはひとりでに起こるように思えた仕事が、とつぜん時間と努力と計画を必要とするようになるからである。',
+      '家を出ることはまたさびしさをもたらすこともある。自由を待ち望んでいた人でさえ、なじみの声や決まった流れやにおいがなつかしくなるかもしれず、新しい部屋の静けさは、家族の家のにぎやかさとはまったくちがって感じられることがある。そうした気持ちは弱さのしるしではなく、変化への自然な反応である。時がたつにつれて、多くの人は新しい場所を家のように感じさせる、新しい友だちの輪や新しい決まった流れを作っていくが、その過程は思っていたより長くかかり、本当にまよう瞬間をともなうかもしれない。',
+      '興味深いことに、家を出ることはしばしば、出てきた家の見え方を変える。はなれてみると、家族の家は以前より小さく、そしてより大切に思えてくることがある。かつてはいらいらさせた習慣が今では思いやりの表れに見え、かつては大切に思えた争いがその力を失うかもしれない。たずねてもどると、多くの人は、自分自身にもどると同時に、だれか別の人の暮らしをおとずれているかのような、安らぎとなじみのなさの奇妙な組み合わせを経験する。',
+      'ある文化では、ある年齢で家を出ることが期待されているが、別の文化では、若者は結婚するまで、あるいはそのあとも家族とともに暮らす。こうしたちがいは、自立や家族の義務や世代のあいだの関係についてのさまざまな考えを反映している。どちらの型も、ただもう一方よりよいわけではない。家にとどまることはきずなを強め、たがいに支え合うことができ、家を出ることは自分の力でやっていくことをうながしうる。大切なのはおそらく、その選択が、自分にとって大切な人々との意味のあるつながりを保ちながら成長できるようにするかどうかである。',
+      'おそらく家を出ることのもっとも深い教えは、家はただの場所ではなく、私たちがたずさえていく人間関係と記憶のまとまりだということである。私たちは育った家を出るかもしれないが、自分を形づくった人々や、今の自分を作った経験を置いていくわけではない。別の場所で暮らしを築くことを学ぶなかで、私たちは最初の家が何をあたえてくれたのか、そして今度は自分がどうすればほかの人のために家を作れるのかを、よりはっきり理解するようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「親の規則からのがれたいと願うかもしれないが、親の仕事の多さをすぐに知る」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '家を出ることは、自立の自由となじみの世界を失うことの両方をふくむ。', answer: true, why: '第1段落 involves both the freedom of independence and the loss of a familiar world。' },
+      { statement: '筆者によれば、家を出たあとのさびしさは弱さのしるしである。', answer: false, why: '第4段落 Such feelings are not a sign of weakness。' },
+      { statement: 'はなれてみると、家族の家がより大切に思えることがある。', answer: true, why: '第5段落 may come to seem both smaller and more precious。' },
+      { statement: '筆者は、家を出る型の方がいつもよいと考えている。', answer: false, why: '第6段落 Neither pattern is simply better than the other。' },
+    ],
+    qa: [
+      { q: 'What do young people often discover after leaving home?', choices: ['How much work their parents did without being noticed.', 'That they never miss home.', 'That bills pay themselves.', 'That freedom has no cost.'], answer: 0, why: '第3段落 how much work those parents did without being noticed。' },
+      { q: 'What does the author say home is, besides a place?', choices: ['A set of relationships and memories.', 'A kind of prison.', 'A place to sleep only.', 'A financial investment.'], answer: 0, why: '第7段落 home is not only a place but a set of relationships and memories。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
