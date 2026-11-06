@@ -39618,6 +39618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-police-cameras',
+    title: 'Should Police Officers Wear Cameras?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, police officers now wear small cameras attached to their uniforms that record their interactions with members of the public. These body cameras were introduced in response to concerns about the use of force and about disputes over what happened during encounters between officers and citizens. Supporters believe that recording such encounters increases accountability and trust, while critics raise questions about privacy, cost, and whether the cameras actually change behavior. As the technology spreads, societies are being asked to decide how it should be used and controlled.",
+      "Supporters argue that body cameras protect both citizens and officers. When an encounter is recorded, there is an objective account of what happened, which can help to resolve complaints quickly and fairly. Citizens who believe they have been treated badly can point to the recording as evidence, while officers who have been falsely accused can use it to defend themselves. In this view, the cameras serve the interests of everyone who wants the truth to be known, and they may encourage both sides to behave more calmly. Some courts have also found recordings useful in criminal trials, where they can confirm or contradict the accounts given by witnesses.",
+      "Supporters also hope that cameras will improve public trust in the police. In communities where relations between residents and officers are strained, the knowledge that encounters are recorded may reassure people that misconduct will not go unnoticed. ( A ) cameras cannot by themselves solve deep problems of trust, supporters argue, they can be one part of broader efforts to make policing more transparent and responsive to the communities it serves.",
+      "Critics, however, raise concerns about privacy. Police officers often enter homes, hospitals, and other private spaces, and they frequently meet people at moments of distress, such as victims of crime or those experiencing medical emergencies. Recording these encounters may expose sensitive information, and it is not always clear who will be able to view the recordings or how long they will be kept. Critics argue that without strict rules, body cameras could become a tool of surveillance rather than accountability. Bystanders who appear in the background of a recording, for example, have not agreed to be filmed at all.",
+      "Critics also question how effective the cameras really are. Studies of their effects have produced mixed results: some have found reductions in complaints and in the use of force, while others have found little difference. Critics point out that officers may be able to switch the cameras off or position them in ways that do not capture important events, and that recordings may be released selectively. The cost of buying the equipment and storing large amounts of video can also be considerable for police departments with limited budgets.",
+      "In response to these concerns, many jurisdictions have developed detailed rules. Some require cameras to be switched on during all encounters with the public, with strict penalties for officers who fail to do so. Others limit recording in sensitive situations, such as interviews with victims of violence, or require that people be informed when they are being recorded. Rules about who may access recordings, and when they must be released to the public, vary widely and remain the subject of debate.",
+      "The debate over police body cameras reflects a broader question about how technology can support fairness and accountability without undermining privacy. Cameras can provide valuable evidence, but they do not interpret themselves, and the way recordings are used depends on the institutions and rules that surround them. Ultimately, the effectiveness of body cameras may depend less on the technology itself than on the willingness of police departments and communities to use it honestly and transparently. Without such willingness, even the most advanced equipment may do little to change how people are treated.",
+    ],
+    ja: [
+      '多くの国で、警察官は今、制服に取りつけた小さなカメラを身につけ、人々とのやりとりを記録している。こうした身につけるカメラは、力の使い方への心配や、警察官と市民の出会いのあいだに何が起こったかをめぐる争いにこたえて取り入れられた。支持する人々は、そうした出会いを記録することで説明責任と信頼が高まると信じているが、批判する人々は、プライバシーや費用や、カメラが本当にふるまいを変えるのかについて疑問をあげる。この技術が広がるにつれて、社会はそれをどう使い、どう管理すべきかを決めるよう求められている。',
+      '支持する人々は、身につけるカメラは市民と警察官の両方を守ると主張する。出会いが記録されていれば、何が起こったかについて客観的な記録があり、それは苦情をすばやく公平に解決する助けになる。ひどいあつかいを受けたと思う市民は記録を証拠として示すことができ、まちがってうったえられた警察官は自分を守るためにそれを使える。この見方では、カメラは本当のことが知られるのを望むすべての人の利益になり、双方によりおだやかにふるまうようはげますかもしれない。記録は刑事裁判でも役に立つことがあり、証人の話を裏づけたり、それと食いちがったりすることを示せると考えた裁判所もある。',
+      '支持する人々はまた、カメラが警察への人々の信頼を高めることを期待している。住民と警察官の関係がぎくしゃくしている地域では、出会いが記録されていると知ることで、不正が見のがされないと人々が安心するかもしれない。カメラだけで信頼の深い問題を解決することはできないが、警察の仕事をより開かれたものにし、仕える地域にこたえるものにする、より広い努力の一部にはなりうると支持する人々は主張する。',
+      'しかし批判する人々は、プライバシーへの心配をあげる。警察官はしばしば家や病院やほかの私的な場所に入り、犯罪の被害者や急病の人のように、苦しんでいる瞬間の人々にしばしば出会う。こうした出会いを記録すると、他人に知られたくない情報がさらされるかもしれず、だれが記録を見られるのか、どれだけ長く保存されるのかはいつもはっきりしているわけではない。きびしい規則がなければ、身につけるカメラは説明責任ではなく監視の道具になりうると批判する人々は主張する。たとえば記録の背景に映りこんだ通りがかりの人は、撮影されることにまったく同意していない。',
+      '批判する人々はまた、カメラが本当にどれほど効果的なのかを疑う。その効果の研究はまちまちの結果を出している。苦情や力の使用がへったことを見いだした研究もあれば、ほとんどちがいがなかったとする研究もある。警察官はカメラを切ったり、大切な出来事が映らないような位置に向けたりできるかもしれず、記録は選んで公開されるかもしれないと批判する人々は指摘する。機器を買い、大量の映像を保存する費用も、予算の限られた警察にとってはかなりのものになりうる。',
+      'こうした心配にこたえて、多くの地域はくわしい規則を作ってきた。人々とのすべての出会いでカメラを動かすことを義務づけ、そうしなかった警察官にきびしい罰をあたえるところもある。暴力の被害者への聞き取りのような、他人に知られたくない場面での記録を限ったり、記録されていることを人々に知らせるよう求めたりするところもある。だれが記録を見られるのか、いつ人々に公開しなければならないのかについての規則は大きくちがい、今も議論の的である。',
+      '警察の身につけるカメラをめぐる議論は、技術がプライバシーをそこなわずに、どう公平さと説明責任を支えられるかという、より広い問いを反映している。カメラは価値のある証拠をあたえられるが、それ自体が自分を解釈するわけではなく、記録の使われ方は、それをとりまく制度や規則にかかっている。結局、身につけるカメラの効果は、技術そのものよりも、警察と地域がそれを正直に、開かれたやり方で使おうとする意志にかかっているのかもしれない。そうした意志がなければ、もっとも進んだ機器でさえ、人々のあつかわれ方をほとんど変えないかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「カメラだけで信頼の問題は解決できないが、より広い努力の一部になりうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that body cameras protect both citizens and officers and may improve public ( 1 ). Critics raise concerns about ( 2 ) and question how effective the cameras really are. Many places have developed detailed ( 3 ) about recording and access.',
+      blanks: [
+        { choices: ['trust', 'fear', 'taxes', 'traffic'], answer: 0, why: '第3段落 cameras will improve public trust in the police。' },
+        { choices: ['privacy', 'weather', 'fashion', 'language'], answer: 0, why: '第4段落 Critics, however, raise concerns about privacy。' },
+        { choices: ['rules', 'stories', 'prices', 'games'], answer: 0, why: '第6段落 many jurisdictions have developed detailed rules。' },
+      ],
+    },
+    tf: [
+      { statement: '記録は、まちがってうったえられた警察官を守るのにも使える。', answer: true, why: '第2段落 officers who have been falsely accused can use it to defend themselves。' },
+      { statement: 'カメラの効果の研究は、すべて同じ結果を出している。', answer: false, why: '第5段落 Studies of their effects have produced mixed results。' },
+      { statement: '記録されていることを人々に知らせるよう求める地域もある。', answer: true, why: '第6段落 require that people be informed when they are being recorded。' },
+      { statement: '筆者によれば、カメラの効果は技術だけで決まる。', answer: false, why: '第7段落 may depend less on the technology itself。' },
+    ],
+    qa: [
+      { q: 'Why might recording encounters expose sensitive information?', choices: ['Officers often enter private spaces and meet people in distress.', 'Cameras are too large.', 'Officers never enter homes.', 'Recordings are always deleted.'], answer: 0, why: '第4段落 Police officers often enter homes, hospitals ... and they frequently meet people at moments of distress。' },
+      { q: 'What can be a considerable cost for police departments?', choices: ['Buying equipment and storing video.', 'Hiring more judges.', 'Building new prisons.', 'Training dogs.'], answer: 0, why: '第5段落 The cost of buying the equipment and storing large amounts of video。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
