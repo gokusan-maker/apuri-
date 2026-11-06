@@ -3069,6 +3069,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M76 70 q18 4 20 -14" stroke="#24150b" strokeWidth="4" fill="none" />
       </g>
     )
+  if (species === 'hyrax')
+    return (
+      <g>
+        {/* 岩のかけら */}
+        <path d="M20 84 l10 -8 l12 4 l6 6 z" fill="#78716c" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
