@@ -3240,6 +3240,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="38" cy="50" r="3" fill="#f5f5f4" /><circle cx="50" cy="48" r="3" fill="#f5f5f4" /><circle cx="62" cy="50" r="3" fill="#f5f5f4" />
       </g>
     )
+  if (species === 'springhare')
+    return (
+      <g>
+        {/* 長い後ろ足 */}
+        <path d="M44 78 l-8 12 h8 M58 78 l8 12 h-8" stroke="#2a1d0c" strokeWidth="3" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
