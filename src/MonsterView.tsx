@@ -3157,6 +3157,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="58" cy="44" r="6" fill="#2a1a0c" opacity="0.35" />
       </g>
     )
+  if (species === 'potto')
+    return (
+      <g>
+        {/* 枝をにぎる手 */}
+        <path d="M24 78 h52" stroke="#5b3a1e" strokeWidth="4" />
+        <circle cx="34" cy="76" r="4" fill="#241a10" /><circle cx="66" cy="76" r="4" fill="#241a10" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
