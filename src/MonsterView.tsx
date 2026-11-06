@@ -3120,6 +3120,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 60 q-10 4 -14 14 M56 60 q10 4 14 14" stroke="#f5f5f4" strokeWidth="2.5" fill="none" />
       </g>
     )
+  if (species === 'cassowary')
+    return (
+      <g>
+        {/* かぶとのとさかと青い首 */}
+        <path d="M44 22 q6 -14 12 0 z" fill="#a16207" />
+        <path d="M44 70 q6 6 12 0" stroke="#2563eb" strokeWidth="4" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
