@@ -9012,6 +9012,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Let’s [come] to the beach this weekend; it is far from here.', choices: ['go', 'bring', 'take', 'coming'], answer: 0, why: 'ここからはなれた場所へ行くので go。' },
     ],
   },
+  {
+    id: 'exam-fix-212',
+    title: '入試の誤文訂正〈212〉（京大レベル：英作文の数字＋名詞の形容詞 a ten-year-old boy・a five-minute walk）',
+    points: ['「数字＋名詞」を名詞の前に置いて形容詞として使うときは、ハイフンでつなぎ、名詞は単数形にする（a ten-year-old boy・a five-minute walk・a three-day trip）。be 動詞のあとに置くときはハイフンをつけず複数形にする（He is ten years old.）。「～歳の子どもたち」と名詞として使うときは eight-year-olds のように最後に s をつける。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'He is a ten-year-old boy. / He is ten years old.', ja: '彼は十歳の男の子だ。／彼は十歳だ。' }],
+    questions: [
+      { sentence: 'He is a [ten-years-old] boy.', choices: ['ten-year-old', 'ten years-old', 'ten-year-olds', 'tenth-year-old'], answer: 0, why: '名詞の前では単数形でハイフン。ten-year-old。' },
+      { sentence: 'It is a [five-minutes] walk to the station.', choices: ['five-minute', 'five minute’s', 'five-minutes’', 'fifth-minute'], answer: 0, why: '名詞の前では単数形。a five-minute walk。' },
+      { sentence: 'She bought a [two-hundreds-dollar] dress.', choices: ['two-hundred-dollar', 'two-hundred-dollars', 'two hundreds dollar', 'two-hundredth-dollar'], answer: 0, why: 'すべて単数形でハイフン。two-hundred-dollar。' },
+      { sentence: 'We took a [three-days] trip to Kyoto.', choices: ['three-day', 'three-days’', 'three day’s', 'third-day'], answer: 0, why: '名詞の前では単数形。a three-day trip。' },
+      { sentence: 'My sister is [ten-year-old].', choices: ['ten years old', 'ten-year-olds', 'ten year old', 'ten-years-old'], answer: 0, why: 'be 動詞のあとではハイフンなしで複数形。ten years old。' },
+      { sentence: 'This is a [twenty-floors] building.', choices: ['twenty-floor', 'twenty-floors’', 'twenty floor’s', 'twentieth-floors'], answer: 0, why: '名詞の前では単数形。a twenty-floor building。' },
+      { sentence: 'The class is full of [eight-years-olds].', choices: ['eight-year-olds', 'eight-years-old', 'eight-year-old', 'eight-year-oldes'], answer: 0, why: '「八歳の子どもたち」と名詞で使うので eight-year-olds。' },
+      { sentence: 'He wrote a [500-words] essay.', choices: ['500-word', '500-words’', '500 word’s', '500th-word'], answer: 0, why: '名詞の前では単数形。a 500-word essay。' },
+      { sentence: 'It was a [two-weeks] holiday.', choices: ['two-week', 'two-weeks’', 'two week’s', 'second-week'], answer: 0, why: '名詞の前では単数形。a two-week holiday。' },
+      { sentence: 'They live in a [three-bedrooms] apartment.', choices: ['three-bedroom', 'three-bedrooms’', 'three bedroom’s', 'third-bedroom'], answer: 0, why: '名詞の前では単数形。a three-bedroom apartment。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
