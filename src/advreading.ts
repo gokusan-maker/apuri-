@@ -37662,6 +37662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-punctuality',
+    title: 'On Punctuality',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Punctuality is often treated as a minor virtue, a matter of good manners rather than of deep moral significance. To arrive on time for a meeting, a class, or an appointment seems a small thing compared with honesty, courage, or kindness. Yet the way people relate to time reveals a great deal about how they understand their obligations to others, and the expectations surrounding punctuality vary so widely between cultures that they can cause real misunderstanding. Thinking carefully about punctuality may therefore tell us more about social life than its modest reputation suggests.",
+      "At its simplest, punctuality is a form of respect. When we agree to meet someone at a particular time, we make a small promise, and arriving late means asking the other person to give up part of their time for our sake. A person who is regularly late may not intend any offense, but the habit can communicate that they regard their own time as more valuable than that of others. In this sense, punctuality expresses an understanding that time, unlike many other resources, cannot be recovered once it has been lost.",
+      "Punctuality is also closely connected with the coordination of modern life. Trains, factories, schools, and offices depend on large numbers of people acting at the same moment, and a society in which no one could be relied upon to arrive on time would struggle to function. ( A ) earlier societies organized their days by the movement of the sun or the needs of the seasons, industrial societies came to depend on the clock, and the value placed on punctuality grew along with this dependence. The railway timetable, which required towns across a country to agree on a common time, is often cited as an example of this change.",
+      "Yet this history also suggests that punctuality is not a universal value but one shaped by particular circumstances. In many cultures, a certain flexibility about time is regarded not as rudeness but as a sign that relationships matter more than schedules. To end a conversation abruptly in order to reach the next appointment may seem, in such settings, far more impolite than arriving a little late. What counts as being on time, moreover, may differ from one situation to another, even within a single society.",
+      "Such differences should make us cautious about treating punctuality as a simple measure of character. A person who arrives late may be careless, but they may also be responding to obligations that the clock does not record, such as caring for a sick relative or helping a stranger in difficulty. Strict punctuality, conversely, can sometimes reflect not consideration for others but anxiety, rigidity, or an excessive concern with appearing reliable. The meaning of arriving on time, in other words, depends on the reasons behind it.",
+      "None of this implies that punctuality is unimportant. In a world where people from different backgrounds increasingly work together, shared expectations about time can prevent frustration and build trust. The point is rather that punctuality is best understood as one way of expressing a deeper value, namely respect for the time and needs of others. When it is practiced in this spirit, it becomes a form of consideration; when it is treated as an end in itself, it can become a source of unnecessary judgment.",
+      "Perhaps the wisest attitude toward punctuality combines firmness with understanding. We can take our own commitments seriously, making an effort to arrive when we have promised, while remaining generous toward those whose relationship with time differs from ours. Such an attitude recognizes that the clock is a useful servant of human cooperation but a poor master of human worth. To be on time is a small courtesy; to understand why others are not may require a larger kind of wisdom.",
+    ],
+    ja: [
+      '時間を守ることは、深い道徳的な意味をもつことというより、行儀の問題として、ささいな美徳としてあつかわれることが多い。会議や授業や約束の時間どおりに着くことは、正直さや勇気や親切さにくらべると小さなことに思える。しかし人々の時間とのつきあい方は、ほかの人への義務をどう理解しているかについて多くのことを明らかにし、時間を守ることをめぐる期待は文化によって大きくちがうので、本当の誤解を生むこともある。そのため時間を守ることについて注意深く考えることは、そのつつましい評判が示す以上に、社会生活について多くを教えてくれるかもしれない。',
+      'もっとも単純に言えば、時間を守ることは敬意の一つの形である。ある時間にだれかと会うことに同意するとき、私たちは小さな約束をしているのであり、おくれて着くことは、相手に自分のために時間の一部を手ばなすよう求めることを意味する。いつもおくれる人は、悪気があるわけではないかもしれないが、その習慣は、自分の時間をほかの人の時間より価値があるとみなしていると伝えてしまうことがある。この意味で、時間を守ることは、ほかの多くの資源とちがって、時間は一度失われると取りもどせないという理解を表している。',
+      '時間を守ることはまた、現代の暮らしの調整と深く結びついている。電車や工場や学校や会社は、多くの人々が同じ時に行動することにたよっており、だれも時間どおりに着くとたよれない社会は、うまく動くのに苦労するだろう。昔の社会は太陽の動きや季節の必要によって一日を組み立てていたが、産業社会は時計にたよるようになり、時間を守ることにおかれる価値はこの依存とともに大きくなった。国じゅうの町に共通の時刻で合意することを求めた鉄道の時刻表は、この変化の例としてよくあげられる。',
+      'しかしこの歴史はまた、時間を守ることは普遍的な価値ではなく、特定の事情によって形づくられたものであることを示している。多くの文化では、時間についてのある程度のゆとりは、失礼ではなく、予定より人間関係の方が大切だというしるしと見なされている。そうした場では、次の約束に間に合うために会話を急に打ち切ることは、少しおくれて着くことよりはるかに失礼に思えるかもしれない。さらに、何が時間どおりとみなされるかは、一つの社会の中でさえ、状況によってちがうことがある。',
+      'そうしたちがいを考えると、時間を守ることを人柄の単純なものさしとしてあつかうことには慎重になるべきである。おくれて着く人は不注意なのかもしれないが、病気の家族の世話をすることや、困っている知らない人を助けることのように、時計が記録しない義務にこたえているのかもしれない。反対に、きびしく時間を守ることは、ときにほかの人への思いやりではなく、不安や融通のきかなさや、たよれるように見えることへの行きすぎた気づかいを反映していることもある。言いかえれば、時間どおりに着くことの意味は、その背後にある理由にかかっているのである。',
+      'このどれも、時間を守ることが大切でないということではない。ちがう背景をもつ人々がますますいっしょに働く世界では、時間についての共通の期待は、いらだちをふせぎ、信頼を築くことができる。言いたいのはむしろ、時間を守ることは、より深い価値、つまりほかの人の時間と必要への敬意を表す一つの方法として理解するのがいちばんよいということである。この精神で行われるとき、それは思いやりの一つの形になり、それ自体が目的としてあつかわれるとき、不必要な裁きのもとになりうる。',
+      'おそらく時間を守ることへのもっとも賢い態度は、しっかりした心と理解を組み合わせるものである。私たちは自分の約束を真剣に受けとめ、約束した時に着くよう努力しながら、時間とのつきあい方が自分とちがう人々に対しては寛大でいることができる。そうした態度は、時計は人間の協力の役に立つ召使いだが、人間の値打ちを決める主人としてはふさわしくないと認めている。時間どおりに着くことは小さな礼儀だが、ほかの人がなぜそうしないのかを理解するには、より大きな知恵が必要かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Whereas', 'Because', 'Unless', 'Once'], answer: 0, why: '「昔の社会は太陽で一日を組み立てたが、産業社会は時計にたよった」という対比なので Whereas。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、時間は一度失われると取りもどせない。', answer: true, why: '第2段落 time ... cannot be recovered once it has been lost。' },
+      { statement: '時間を守ることは、すべての文化で同じように大切にされている。', answer: false, why: '第4段落 punctuality is not a universal value。' },
+      { statement: 'きびしく時間を守ることが、不安を反映していることもある。', answer: true, why: '第5段落 can sometimes reflect ... anxiety。' },
+      { statement: '筆者は、時間を守ることはまったく大切でないと考えている。', answer: false, why: '第6段落 None of this implies that punctuality is unimportant。' },
+    ],
+    qa: [
+      { q: 'What can the habit of being regularly late communicate?', choices: ['That they value their own time more highly.', 'That one is very busy and important.', 'That one respects others deeply.', 'That one has no watch.'], answer: 0, why: '第2段落 they regard their own time as more valuable than that of others。' },
+      { q: 'How does the author describe the clock?', choices: ['A useful servant but a poor master.', 'A cruel master.', 'A useless tool.', 'A measure of human worth.'], answer: 0, why: '第7段落 a useful servant of human cooperation but a poor master of human worth。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
