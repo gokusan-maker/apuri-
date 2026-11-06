@@ -3005,6 +3005,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 48 l-6 6 l6 -1 M72 48 l6 6 l-6 -1" fill="none" stroke="#2e1d0b" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'arabianleopard')
+    return (
+      <g>
+        {/* うすい色のもよう */}
+        <circle cx="42" cy="58" r="3" fill="none" stroke="#3a2610" strokeWidth="1" opacity="0.6" />
+        <circle cx="54" cy="62" r="3" fill="none" stroke="#3a2610" strokeWidth="1" opacity="0.6" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
