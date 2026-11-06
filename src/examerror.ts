@@ -5186,6 +5186,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Not (B) having finished (C) his homework, (D) he can’t go out last night.', choices: ['(A) Not', '(B) having finished', '(C) his homework,', '(D) he can’t go out last night'], answer: 3, why: 'last night と過去なので he couldn’t go out。' },
     ],
   },
+  {
+    id: 'exam-error-the-adjective-todai',
+    title: '入試の正誤問題〈218〉（東大レベル：英作文の the ＋形容詞（the rich・the young）と動詞の一致）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the ＋形容詞は「～な人々」という意味の複数名詞になる（the rich「お金持ちの人々」、the young「若者」、the elderly「お年寄り」、the poor・the homeless・the unemployed・the injured）。動詞は複数に合わせ（The rich are ～）、形容詞に s をつけない（the olds・the blinds は×）。a や an はつけない。',
+    ],
+    examples: [
+      { en: 'The rich are not always happy.', ja: 'お金持ちがいつも幸せだとはかぎらない。' },
+      { en: 'The young should respect the old.', ja: '若者はお年寄りを敬うべきだ。' },
+    ],
+    questions: [
+      { sentence: '(A) The rich (B) is not (C) always (D) happy.', choices: ['(A) The rich', '(B) is not', '(C) always', '(D) happy'], answer: 1, why: 'the ＋形容詞「～な人々」は複数あつかいなので are。' },
+      { sentence: '(A) The young (B) should (C) respect (D) the olds.', choices: ['(A) The young', '(B) should', '(C) respect', '(D) the olds'], answer: 3, why: '「お年寄り」は the old（the elderly）。the ＋形容詞は複数形にしない。' },
+      { sentence: '(A) The poor (B) in this city (C) needs (D) more help.', choices: ['(A) The poor', '(B) in this city', '(C) needs', '(D) more help'], answer: 2, why: 'the poor は複数あつかいなので need。' },
+      { sentence: '(A) The injured (B) was taken (C) to hospital (D) quickly.', choices: ['(A) The injured', '(B) was taken', '(C) to hospital', '(D) quickly'], answer: 1, why: 'the injured「けが人たち」は複数あつかいなので were taken。' },
+      { sentence: '(A) A rich (B) are expected (C) to pay (D) more taxes.', choices: ['(A) A rich', '(B) are expected', '(C) to pay', '(D) more taxes'], answer: 0, why: '「お金持ちの人々」は The rich。' },
+      { sentence: '(A) The elderly (B) often (C) feels (D) lonely in big cities.', choices: ['(A) The elderly', '(B) often', '(C) feels', '(D) lonely in big cities'], answer: 2, why: 'the elderly は複数あつかいなので feel。' },
+      { sentence: '(A) The unemployed (B) have (C) difficulty (D) to find work.', choices: ['(A) The unemployed', '(B) have', '(C) difficulty', '(D) to find work'], answer: 3, why: 'have difficulty ～ing の形なので difficulty finding work。' },
+      { sentence: '(A) The blinds (B) can read (C) using (D) Braille.', choices: ['(A) The blinds', '(B) can read', '(C) using', '(D) Braille'], answer: 0, why: '「目の不自由な人々」は the blind。the ＋形容詞は複数形にしない。' },
+      { sentence: '(A) The homeless (B) needs (C) a safe place (D) to sleep.', choices: ['(A) The homeless', '(B) needs', '(C) a safe place', '(D) to sleep'], answer: 1, why: 'the homeless は複数あつかいなので need。' },
+      { sentence: '(A) The dead (B) and the wounded (C) was carried (D) away.', choices: ['(A) The dead', '(B) and the wounded', '(C) was carried', '(D) away'], answer: 2, why: '主語は複数なので were carried。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
