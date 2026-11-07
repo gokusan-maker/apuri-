@@ -41858,6 +41858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-four-day-school-week',
+    title: 'Should Schools Move to a Four-Day Week?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a small but growing number of school districts, students now attend classes only four days a week instead of five. The school day is usually made longer to compensate, and the fifth day may be used for rest, optional activities, or teacher training. The change began largely in rural areas, where schools hoped to save money on transport and heating and to attract teachers who might otherwise prefer to work in cities. As the idea spreads, however, parents, educators, and researchers have begun to ask whether a shorter school week truly benefits students.",
+      "Supporters argue that the four-day week can improve the quality of school life. Teachers who have an extra day each week to plan lessons, mark work, and rest may return to the classroom more energetic and better prepared. Supporters also claim that students arrive more motivated after a long weekend, and that the free day can be used for appointments, family time, or activities such as sports, music, and part-time work, reducing absences on regular school days. Some districts report that students and teachers alike describe the new schedule as less exhausting, and that the atmosphere in schools has become noticeably more relaxed and positive.",
+      "Supporters also point to practical benefits for schools and communities. In districts where students must travel long distances, eliminating one day of transport can save significant amounts of money, which may then be spent on teachers, materials, or other improvements. ( A ) the savings are often smaller than expected, supporters argue, the schedule can make teaching jobs more attractive, helping rural schools to recruit and keep qualified staff in a time of widespread teacher shortages.",
+      "Critics, however, raise concerns about the effects on learning. Longer school days may leave younger children tired and less able to concentrate in the final hours, and some studies suggest that students in four-day schools may make slightly less progress in subjects such as mathematics than those who attend for five days. Critics argue that, whatever the benefits for teachers or budgets, schools should not adopt a schedule that may harm the education of the students they serve. They also note that students who are already behind may find it especially hard to keep up when lessons are compressed into fewer days.",
+      "Critics also worry about the burden on families. Parents who work full time must find someone to care for their children on the fifth day, which may be difficult or expensive, especially for low-income families. Children who rely on school meals may go without a proper lunch on the extra day at home, and those who lack safe places to spend their time may be left without supervision. In this sense, critics argue, the costs of the change may fall most heavily on those who are already disadvantaged.",
+      "Some districts have tried to address these concerns. They may offer optional programs on the fifth day, providing supervised activities, tutoring, or meals for students whose families need them. Others carefully monitor student achievement and adjust the schedule if results decline. Many experts suggest that the success of a four-day week depends heavily on how the extra time is used, both by schools and by families, and on whether support is available for those who need it most.",
+      "The debate over the four-day school week ultimately reflects broader questions about what schools are for and whom they should serve. Schools are places of learning, but they also provide childcare, meals, and social connection, and changes to their schedules affect all of these roles. Deciding whether a shorter week is worthwhile requires weighing the needs of teachers, students, and families, and recognizing that the same change may benefit some while placing new burdens on others in the same community.",
+    ],
+    ja: [
+      '少しずつだがふえている学区で、生徒は今、週に五日ではなく四日だけ授業に出ている。そのかわりにふつう一日の授業時間が長くされ、五日目は休みや自由参加の活動や先生の研修にあてられることがある。この変化は主にいなかの地域ではじまり、学校は通学の交通や暖房の費用を節約し、そうでなければ都市で働くことを選ぶかもしれない先生をひきつけたいと願っていた。しかし、この考えが広まるにつれて、親や教育者や研究者は、短い週が本当に生徒のためになるのかと問いはじめている。',
+      '支持する人々は、週四日制は学校生活の質をよくしうると主張する。毎週、授業の準備をし、課題を採点し、休むための一日がふえた先生は、より元気に、よりよく準備して教室にもどってくるかもしれない。支持する人々はまた、長い週末のあとに生徒はよりやる気をもって登校し、休みの日は通院や家族との時間や、スポーツや音楽やアルバイトのような活動に使えるので、ふつうの授業日の欠席がへると言う。新しい時間割は前よりつかれにくいと生徒も先生も語り、学校のふんいきが目に見えてゆったりと明るくなったと報告する学区もある。',
+      '支持する人々はまた、学校と地域にとっての実際的な利益をあげる。生徒が長い距離を通わなければならない学区では、一日分の交通をなくすことでかなりのお金を節約でき、そのお金を先生や教材やほかの改善に使うことができる。節約できる額はしばしば予想より少ないが、この時間割は先生の仕事をより魅力的にし、先生の不足が広がる時代に、いなかの学校が資格のある職員をやとい、とどめておく助けになると支持する人々は主張する。',
+      'しかし批判する人々は、学びへの影響について心配をあげる。授業日が長くなると、小さな子どもはつかれて、最後の数時間には集中しにくくなるかもしれず、週四日制の学校の生徒は、五日通う生徒より、数学のような科目の進み具合が少しおとるかもしれないことを示す研究もある。先生や予算にとってどんな利益があるにせよ、学校は、自分たちが仕える生徒の教育を害するかもしれない時間割を取り入れるべきではないと批判する人々は主張する。また、授業がより少ない日数につめこまれると、すでにおくれている生徒はとくについていくのがむずかしくなるかもしれないと彼らは指摘する。',
+      '批判する人々はまた、家庭への負担を心配する。フルタイムで働く親は、五日目に子どもの世話をしてくれる人を見つけなければならず、それは、とくに収入の少ない家庭にとって、むずかしかったり高くついたりするかもしれない。学校給食にたよっている子どもは、家にいるその日にちゃんとした昼ごはんを食べられないかもしれず、時間を過ごす安全な場所のない子どもは、見守る人のいないままにされるかもしれない。この意味で、変化の負担は、すでに不利な立場にある人々にもっとも重くのしかかるかもしれないと批判する人々は主張する。',
+      'こうした心配にこたえようとしてきた学区もある。五日目に自由参加の仕組みを用意し、家庭が必要とする生徒に、見守りのついた活動や学習の手助けや食事を提供することがある。生徒の学力を注意深く見守り、結果が下がれば時間割を調整するところもある。多くの専門家は、週四日制が成功するかどうかは、ふえた時間を学校と家庭の両方がどう使うか、そしてもっともそれを必要とする人々へのささえがあるかどうかに大きくかかっていると言う。',
+      '週四日制の学校をめぐる議論は、結局のところ、学校は何のためにあり、だれに仕えるべきかについての、より広い問いを反映している。学校は学びの場所だが、子どもの世話や食事や社会的なつながりもあたえており、時間割の変更はこれらすべての役割に影響する。短い週に価値があるかどうかを決めるには、先生と生徒と家庭の必要をくらべ、同じ変化が、ある人々のためになる一方で、同じ地域の別の人々に新しい負担をかけうることを認める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「節約できる額は予想より少ないが、先生の仕事を魅力的にする」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that a four-day week gives teachers time to prepare and helps rural schools ( 1 ) staff. Critics worry about effects on learning and the burden on ( 2 ), especially those with low incomes. Some districts offer optional programs on the fifth day and ( 3 ) student achievement.',
+      blanks: [
+        { choices: ['recruit', 'dismiss', 'forget', 'punish'], answer: 0, why: '第3段落 helping rural schools to recruit and keep qualified staff。' },
+        { choices: ['families', 'buses', 'buildings', 'textbooks'], answer: 0, why: '第5段落 Critics also worry about the burden on families。' },
+        { choices: ['monitor', 'ignore', 'hide', 'lower'], answer: 0, why: '第6段落 Others carefully monitor student achievement。' },
+      ],
+    },
+    tf: [
+      { statement: '週四日制は、主にいなかの地域ではじまった。', answer: true, why: '第1段落 The change began largely in rural areas。' },
+      { statement: '週四日制の学校では、一日の授業時間がふつう短くされる。', answer: false, why: '第1段落 The school day is usually made longer to compensate。' },
+      { statement: '数学の進み具合が少しおとるかもしれないとする研究がある。', answer: true, why: '第4段落 may make slightly less progress in subjects such as mathematics。' },
+      { statement: '五日目の負担は、裕福な家庭にもっとも重くのしかかる。', answer: false, why: '第5段落 may fall most heavily on those who are already disadvantaged。' },
+    ],
+    qa: [
+      { q: 'How can eliminating one day of transport help some districts?', choices: ['It can save money that may be spent on teachers or materials.', 'It makes buses faster.', 'It increases homework.', 'It shortens holidays.'], answer: 0, why: '第3段落 can save significant amounts of money, which may then be spent on teachers, materials。' },
+      { q: 'What might children who rely on school meals miss on the extra day?', choices: ['A proper lunch.', 'Their homework.', 'Their sports practice.', 'Their friends online.'], answer: 0, why: '第5段落 may go without a proper lunch on the extra day at home。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
