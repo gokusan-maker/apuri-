@@ -41218,6 +41218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-telemedicine',
+    title: 'Can Online Doctors Replace Face-to-Face Care?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, seeing a doctor almost always meant traveling to a clinic or hospital, sitting in a waiting room, and meeting face to face. Today, many patients consult doctors through video calls, send photographs of symptoms through their phones, or receive prescriptions without ever leaving home. This practice, often called telemedicine, expanded rapidly during periods when people were advised to avoid crowded places, and many health systems have continued to rely on it. Yet as online consultations become more common, questions have arisen about whether they can truly replace traditional care.",
+      "Supporters argue that telemedicine makes health care more accessible. People who live in remote areas far from hospitals, those with disabilities that make travel difficult, and parents who cannot easily leave work or children may all find it much easier to consult a doctor online. Supporters also point out that online appointments can save time for both patients and doctors, reducing waiting lists and allowing minor problems to be dealt with quickly before they become more serious. In regions that face a shortage of doctors, a single specialist working online may be able to advise patients across a wide area, sharing expertise that would otherwise be available only in large cities.",
+      "Telemedicine may also offer particular benefits for certain kinds of care. Patients with long-term conditions such as diabetes may be able to share readings from home devices regularly, allowing doctors to monitor their health more closely than occasional visits would permit. ( A ) a video call cannot replace every aspect of a physical examination, supporters argue, many follow-up appointments, discussions of test results, and consultations about mental health can be carried out effectively from a distance.",
+      "Critics, however, warn that something important may be lost when doctors and patients do not meet in person. A physical examination allows a doctor to notice details that may not be visible on a screen, such as a patient's breathing, posture, or subtle changes in skin color. Experienced doctors often rely on such observations, and critics fear that serious conditions might be missed or diagnosed too late if too many consultations take place online. Some also worry that the ease of online appointments might encourage unnecessary visits, adding to the workload of doctors rather than reducing it.",
+      "Critics also raise concerns about inequality and the doctor-patient relationship. Not everyone has access to a reliable internet connection or feels comfortable using video technology, and older or poorer patients may therefore be left behind. Moreover, trust between doctors and patients is often built through personal contact over time, and some patients find it harder to discuss sensitive or frightening matters through a screen than in the privacy of a quiet consulting room with the doctor sitting beside them.",
+      "Many health professionals now favor a combination of online and in-person care. They suggest that telemedicine is most suitable for routine follow-ups, simple advice, and situations where patients find travel especially difficult, while first appointments, complex symptoms, and physical examinations should usually take place face to face. Clear guidelines, training for doctors, and support for patients who are less familiar with technology may help to ensure that online care is used safely and fairly. Regular reviews of patient outcomes can also show where online care works well and where it falls short.",
+      "The debate over telemedicine ultimately reflects a broader question about the role of technology in caring for human beings. Technology can remove barriers of distance and time, but medicine is not only a matter of exchanging information; it also involves observation, touch, and trust. How health systems combine the convenience of online care with the irreplaceable qualities of personal contact will shape the experience of patients for many years to come, in both cities and the countryside.",
+    ],
+    ja: [
+      '少し前まで、医者にかかることといえば、ほとんどいつも診療所や病院まで行き、待合室にすわり、顔を合わせて会うことを意味していた。今日では、多くの患者がビデオ通話で医者に相談したり、電話で症状の写真を送ったり、家から一歩も出ずに処方せんを受け取ったりしている。遠隔医療とよばれることの多いこの習慣は、混み合った場所をさけるよう人々がすすめられた時期に急速に広まり、多くの医療の仕組みが今もそれにたより続けている。しかしオンラインの診察がふえるにつれて、それが本当にこれまでの医療にかわれるのかという疑問が生まれている。',
+      '支持する人々は、遠隔医療は医療をより受けやすくすると主張する。病院から遠くはなれた地域に住む人々や、移動をむずかしくする障害のある人々や、仕事や子どもからかんたんにはなれられない親は、みな、オンラインで医者に相談するほうがはるかにかんたんだと感じるかもしれない。支持する人々はまた、オンラインの予約は患者と医者の両方の時間を節約し、待っている人の列をへらし、軽い問題が重くなる前にすばやく対処できるようにすると指摘する。医者の不足になやむ地域では、オンラインで働くたった一人の専門医が広い範囲の患者に助言できるかもしれず、そうでなければ大都市でしか受けられない専門知識を分かち合えるようになる。',
+      '遠隔医療はまた、ある種の医療にとくに利益をもたらすかもしれない。糖尿病のような長く続く病気の患者は、家の機器の測定値を定期的に分かち合えるかもしれず、それによって医者は、ときどきの通院でできるより注意深く患者の健康を見守れるようになる。ビデオ通話は体の診察のあらゆる面にかわることはできないが、多くの経過を見る通院や、検査結果についての話し合いや、心の健康についての相談は、はなれていても効果的に行えると支持する人々は主張する。',
+      'しかし批判する人々は、医者と患者がじかに会わないと、何か大切なものが失われるかもしれないと警告する。体の診察によって、医者は、患者の呼吸や姿勢や、はだの色のかすかな変化のような、画面では見えないかもしれない細かいことに気づくことができる。経験豊かな医者はしばしばそうした観察にたよっており、あまりに多くの診察がオンラインで行われると、重い病気が見のがされたり、診断がおくれたりするのではないかと批判する人々はおそれている。また、オンラインの予約が手軽なために必要のない受診がふえ、医者の仕事をへらすどころかふやしてしまうのではないかと心配する人もいる。',
+      '批判する人々はまた、不平等と医者と患者の関係についての心配をあげる。だれもがたよれるインターネットの接続をもっていたり、ビデオの技術を気楽に使えたりするわけではなく、そのため、お年寄りや貧しい患者が取り残されるかもしれない。さらに、医者と患者のあいだの信頼は、しばしば時間をかけた個人的なふれ合いを通じて築かれるものであり、医者がそばにすわるしずかな診察室のプライバシーの中でより、画面ごしのほうが、敏感なことやおそろしいことを話しにくいと感じる患者もいる。',
+      '今では多くの医療の専門家が、オンラインとじかの医療の組み合わせを支持している。遠隔医療は、決まった経過の確認や、かんたんな助言や、患者がとくに移動しにくい場合にもっとも向いており、一方で、はじめての受診や複雑な症状や体の診察は、ふつう顔を合わせて行うべきだと彼らは提案する。はっきりした指針や、医者のための訓練や、技術になれていない患者へのささえは、オンラインの医療が安全で公平に使われるようにする助けになるかもしれない。患者の治療結果を定期的に見直すことで、オンラインの医療がどこでうまくいき、どこで足りないのかもわかる。',
+      '遠隔医療をめぐる議論は、結局のところ、人間を世話することにおける技術の役割についての、より広い問いを反映している。技術は距離と時間のかべを取りのぞけるが、医療はただ情報を交換することではなく、観察し、ふれ、信頼することもふくんでいる。医療の仕組みがオンラインの医療の便利さと、個人的なふれ合いのかけがえのない性質をどう組み合わせるかが、これから何年ものあいだ、都市でもいなかでも、患者の経験を形づくるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「体の診察のあらゆる面にかわることはできないが、多くの通院は効果的に行える」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that telemedicine makes health care more ( 1 ) and saves time. Critics warn that doctors may miss details visible only in a physical ( 2 ) and that some patients may be left behind. Many professionals favor a ( 3 ) of online and in-person care.',
+      blanks: [
+        { choices: ['accessible', 'expensive', 'dangerous', 'formal'], answer: 0, why: '第2段落 telemedicine makes health care more accessible。' },
+        { choices: ['examination', 'payment', 'conversation', 'journey'], answer: 0, why: '第4段落 A physical examination allows a doctor to notice details。' },
+        { choices: ['combination', 'competition', 'separation', 'reduction'], answer: 0, why: '第6段落 favor a combination of online and in-person care。' },
+      ],
+    },
+    tf: [
+      { statement: '遠くに住む人々は、オンラインで医者に相談するほうがかんたんかもしれない。', answer: true, why: '第2段落 People who live in remote areas ... may all find it much easier。' },
+      { statement: '支持する人々は、ビデオ通話が体の診察のすべてにかわれると言う。', answer: false, why: '第3段落 a video call cannot replace every aspect of a physical examination。' },
+      { statement: 'お年寄りや貧しい患者が取り残されるかもしれないと批判する人々は言う。', answer: true, why: '第5段落 older or poorer patients may therefore be left behind。' },
+      { statement: '専門家は、はじめての受診はオンラインがよいと言う。', answer: false, why: '第6段落 first appointments ... should usually take place face to face。' },
+    ],
+    qa: [
+      { q: 'What may patients with long-term conditions be able to do with telemedicine?', choices: ['Share readings from home devices regularly.', 'Avoid all treatment.', 'Visit hospitals more often.', 'Stop taking medicine.'], answer: 0, why: '第3段落 may be able to share readings from home devices regularly。' },
+      { q: 'What can a doctor notice in a physical examination that may not be visible on a screen?', choices: ['Breathing, posture, or subtle changes in skin color.', 'The name of the patient.', 'The time of the appointment.', 'The price of medicine.'], answer: 0, why: '第4段落 such as a patient’s breathing, posture, or subtle changes in skin color。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
