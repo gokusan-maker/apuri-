@@ -3081,3 +3081,10 @@ it('正誤問題〈223〉：京大レベル by the time ～ と完了形の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) already started')
 })
+
+it('誤文訂正〈217〉：国公立レベル besides・except・between・among の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-217')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Besides')
+})

@@ -9225,6 +9225,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She tried hard [passing] the exam, and she finally succeeded.', choices: ['to pass', 'pass', 'passed', 'having passed'], answer: 0, why: '「合格しようと努力した」は try to pass。' },
     ],
   },
+  {
+    id: 'exam-fix-217',
+    title: '入試の誤文訂正〈217〉（国公立レベル：まぎらわしい前置詞 besides・except・between・among）',
+    points: ['besides は「～に加えて」（ほかにもある）、except は「～をのぞいて」（それだけはちがう）。between は2つ（または1つ1つがはっきりした個々）のあいだ、among は3つ以上のまとまりの中。beside（～のそばに）と besides をまちがえない。'],
+    examples: [{ en: 'Besides English, she speaks French. / Everyone came except Tom.', ja: '英語に加えて、彼女はフランス語も話す。／トム以外はみんな来た。' }],
+    questions: [
+      { sentence: '[Except] English, she can also speak French and Chinese.', choices: ['Besides', 'Beside', 'Without', 'Instead of'], answer: 0, why: '英語に加えてほかの言語も話すので「～に加えて」の Besides。' },
+      { sentence: 'Everyone came to the party [besides] Tom; he was sick.', choices: ['except', 'beside', 'with', 'among'], answer: 0, why: 'トムだけは来なかったので「～をのぞいて」の except。' },
+      { sentence: 'The cat is sleeping [besides] the fire.', choices: ['beside', 'except', 'between', 'among'], answer: 0, why: '「～のそばに」は beside。besides は「～に加えて」。' },
+      { sentence: 'Divide the cake [among] you and your sister.', choices: ['between', 'besides', 'except', 'beside'], answer: 0, why: '2人のあいだで分けるので between。' },
+      { sentence: 'The singer is popular [between] young people in Japan.', choices: ['among', 'besides', 'except', 'beside'], answer: 0, why: '多くの若者の中で人気なので among。' },
+      { sentence: 'The shop is open every day [besides] Monday.', choices: ['except', 'beside', 'among', 'between'], answer: 0, why: '月曜日だけは休みなので except。' },
+      { sentence: 'There is a small river [among] the two villages.', choices: ['between', 'besides', 'except', 'beside'], answer: 0, why: '2つの村のあいだなので between。' },
+      { sentence: '[Except] being a doctor, he is also a famous writer.', choices: ['Besides', 'Beside', 'Among', 'Between'], answer: 0, why: '医者であることに加えて作家でもあるので Besides。' },
+      { sentence: 'The house stands [between] the tall trees in the forest.', choices: ['among', 'besides', 'except', 'beside'], answer: 0, why: '森の多くの木々の中に立っているので among。' },
+      { sentence: 'I like all vegetables [besides] carrots; I hate them.', choices: ['except', 'beside', 'among', 'between'], answer: 0, why: 'ニンジンだけは好きでないので except。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
