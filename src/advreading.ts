@@ -42702,6 +42702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-lamps',
+    title: 'On Lamps',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the arrival of night meant the end of most activity. Once the sun had set, people could see only as far as the light of a fire, a candle, or an oil lamp allowed, and the small circle of brightness that such a lamp created became the center of evening life. Today we flood our homes and streets with electric light at the touch of a switch, and we rarely think about lamps at all, yet the history of the lamp suggests that the way we light the darkness shapes the way we live together.",
+      "An oil lamp or a candle gave off only a little light, and that light did not reach very far. Families who wished to read, sew, or talk in the evening therefore had to gather closely around a single source of brightness, sharing not only its light but also its warmth. ( A ) this arrangement was born of necessity rather than choice, it created a particular kind of closeness, since the people who sat within the same small circle of light were drawn into the same conversations and the same stories.",
+      "The limited reach of the lamp also gave the darkness beyond it a special character. Outside the circle of light, the room faded into shadow, and the world beyond the window seemed vast and unknown. This contrast between the bright interior and the dark exterior may have helped people feel that their home was a place of safety and belonging, and it may explain why so many traditional stories are set around a fire or a lamp, where listeners felt protected while they imagined dangers lurking in the night outside.",
+      "The arrival of electric light changed this situation dramatically. Within a few decades, homes in many parts of the world could be lit evenly from corner to corner, and every member of a household could pursue a different activity in a different room. This new freedom brought enormous benefits, extending the hours in which people could study, work, and enjoy themselves, and few people today would wish to give it up, but it also meant that families no longer needed to gather in one place simply in order to see.",
+      "Something similar happened outside the home. Streets that had once been dark and dangerous after sunset became bright enough for people to walk safely at any hour, and cities came to be admired for their glittering lights. Yet as artificial light spread, the night sky itself gradually disappeared from view, and many people who live in cities today have never seen the stars clearly, a loss that may seem small but that deprives them of a sight which inspired wonder in countless generations before them.",
+      "It is interesting, then, that many people still choose to light their homes with lamps rather than with a single bright light on the ceiling. A lamp placed on a table creates a pool of light around which people can sit, leaving the rest of the room in soft shadow, and such arrangements are often described as cozy or welcoming. This preference suggests that the small, shared circle of light still satisfies a human need that the even brightness of modern lighting cannot fully meet.",
+      "Perhaps, then, lamps deserve more attention than we usually give them. They remind us that light is not only a practical necessity but also a way of shaping space and relationships, drawing people together or allowing them to spread apart. In an age when we can illuminate every corner of our world, it may be worth asking whether we have lost something by abolishing the darkness, and whether the simple act of gathering around a lamp might still help us to rediscover the closeness that our ancestors found in its glow.",
+    ],
+    ja: [
+      '人類の歴史のほとんどの期間、夜がくることは、ほとんどの活動の終わりを意味していた。日がしずむと、人々は火やろうそく、油のランプの光がとどくところまでしか見ることができず、そうしたランプがつくり出す小さな明るい輪が、夜の生活の中心になった。今日、私たちはスイッチ一つで家や道路を電気の光でみたし、ランプについて考えることはめったにない。しかしランプの歴史は、私たちが暗やみをどのように照らすかが、私たちがどのようにともに暮らすかを形づくっていることを示している。',
+      '油のランプやろうそくは、少しの光しか出さず、その光はあまり遠くまでとどかなかった。そのため、夜に読んだり、ぬい物をしたり、話したりしたい家族は、一つの明かりのまわりに身をよせ合って集まらなければならず、その光だけでなく暖かさも分け合った。このあり方は選んだものではなく必要から生まれたものだったが、それは特別な種類の親しさを生み出した。同じ小さな光の輪の中にすわる人々は、同じ会話、同じ物語に引きこまれたからである。',
+      'ランプの光がとどく範囲がかぎられていたことは、その外の暗やみにも特別な性格をあたえた。光の輪の外では、部屋はかげの中にうすれていき、窓の向こうの世界は広く未知のものに思えた。この明るい内側と暗い外側との対比は、人々が自分の家を安全で自分の居場所だと感じる助けになったのかもしれない。そしてそれは、なぜ多くの昔話が火やランプのまわりを舞台にしているのかを説明するのかもしれない。聞き手は、外の夜にひそむ危険を想像しながらも、そこでは守られていると感じたのである。',
+      '電気の光の登場は、この状況を大きく変えた。数十年のうちに、世界の多くの地域で家は部屋のすみからすみまで均一に照らせるようになり、家族の一人一人がちがう部屋でちがう活動をすることができるようになった。この新しい自由は大きな利益をもたらし、人々が勉強し、働き、楽しめる時間をのばした。今日それを手ばなしたいと思う人はほとんどいないだろう。しかしそれはまた、家族がただ見るために一か所に集まる必要がもうなくなったことも意味していた。',
+      '似たようなことが家の外でも起こった。かつて日がしずむと暗く危険だった道路は、いつでも安全に歩けるほど明るくなり、都市はそのきらめく明かりで称賛されるようになった。しかし人工の光が広がるにつれて、夜空そのものがしだいに見えなくなり、今日都市に住む多くの人々は、星をはっきり見たことがない。それは小さな損失に思えるかもしれないが、それ以前の数えきれない世代に驚きをあたえてきた光景を彼らからうばっているのである。',
+      'だとすれば、多くの人がいまでも、天井の一つの明るい照明ではなくランプで家を照らすことを選んでいるのは興味深い。テーブルの上に置かれたランプは、人々がそのまわりにすわれる光のたまりをつくり、部屋の残りをやわらかなかげの中に残す。そうした配置は、しばしば居心地がよい、温かく迎えてくれるとあらわされる。この好みは、小さな共有された光の輪が、現代の照明の均一な明るさでは十分に満たせない人間の必要を、いまでも満たしていることを示している。',
+      'だとすれば、ランプは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。ランプは、光が実際に必要なものであるだけでなく、空間と人間関係を形づくる手段でもあり、人々を引きよせることも、ばらばらに広がらせることもできることを思い出させてくれる。世界のすみずみまで照らすことができる時代に、暗やみをなくしてしまったことで何かを失ったのではないか、そしてランプのまわりに集まるという単純な行為が、先祖たちがその光の中に見いだした親しさを、いまもふたたび見つける助けになるのではないかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「このあり方は必要から生まれたものだったが、特別な親しさを生み出した」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '油のランプやろうそくの光は、遠くまでとどいた。', answer: false, why: '第2段落 that light did not reach very far。' },
+      { statement: '多くの昔話は、火やランプのまわりを舞台にしている。', answer: true, why: '第3段落 so many traditional stories are set around a fire or a lamp。' },
+      { statement: '電気の光によって、家族の一人一人がちがう部屋でちがう活動をできるようになった。', answer: true, why: '第4段落 every member of a household could pursue a different activity in a different room。' },
+      { statement: '筆者は、電気の光の自由を手ばなすべきだと述べている。', answer: false, why: '第4段落 few people today would wish to give it up。' },
+    ],
+    qa: [
+      { q: 'What have many people who live in cities today never seen clearly?', choices: ['The stars.', 'Street lights.', 'Their neighbors.', 'Electric lamps.'], answer: 0, why: '第5段落 have never seen the stars clearly。' },
+      { q: 'What does a lamp placed on a table create, according to the passage?', choices: ['A pool of light around which people can sit.', 'Even brightness in every corner.', 'A dark and dangerous room.', 'Warmth for the whole house.'], answer: 0, why: '第6段落 creates a pool of light around which people can sit。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
