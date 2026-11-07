@@ -42942,6 +42942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-gloves',
+    title: 'On Gloves',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A glove seems at first to be one of the most ordinary objects we own. We put on gloves to keep our hands warm in winter, to protect them while gardening or cleaning, and to avoid spreading germs in hospitals and kitchens, and we rarely think about them once the task is done. Yet the glove occupies a curious position between the body and the world, since it both protects the hand and separates it from what it touches, and this double role may reveal something important about the way human beings experience contact with their surroundings and with one another.",
+      "The hand is among the most sensitive parts of the human body. Through it we feel the texture of fabric, the warmth of another person's skin, and the shape of objects that we cannot see, and much of our knowledge of the physical world comes to us through touch. A glove reduces this sensitivity in exchange for protection, so that a person wearing thick gloves can handle sharp or hot materials safely but may struggle to pick up a coin or feel whether a surface is rough or smooth.",
+      "For this reason, the decision to wear or remove a glove has often carried social meaning. In many traditions, a person who wished to show respect or friendship would take off a glove before shaking hands, as if to say that nothing should come between them. ( A ) such customs have become less common in everyday life, the gesture survives in the feeling that a gloved handshake is somehow incomplete, and that genuine contact requires the risk of meeting another person without protection.",
+      "Gloves have also served as symbols of status and occupation. Fine gloves made of soft leather or silk were once signs of wealth, indicating that their owners did not need to work with their hands, while thick, worn gloves revealed the labor of builders, farmers, and fishermen. In this way, gloves could display a person's place in society at a glance, showing whether the hands inside them were accustomed to comfort or to effort, and to which kind of world their owner belonged.",
+      "In recent years, the glove has taken on new importance in medicine and public health. Doctors, nurses, and many other workers now wear thin disposable gloves as a matter of routine, protecting both themselves and the people they care for from infection. These gloves are designed to preserve as much sensitivity as possible, allowing surgeons to perform delicate operations, yet patients sometimes say that being touched by gloved hands feels colder and more distant, which suggests that even the thinnest barrier can change the meaning of contact.",
+      "There is, moreover, a sense in which modern life increasingly resembles wearing gloves. Much of our communication now takes place through screens, and many of the objects we use are designed so that we never need to touch the materials from which they are made. Such arrangements bring convenience and safety, but they may also reduce the direct, physical knowledge of the world that comes from handling things ourselves, and they may make our relationships feel smoother but less immediate than those of people who lived without such barriers.",
+      "Perhaps, then, gloves deserve more attention than we usually give them. They remind us that protection and contact are often in tension, and that every barrier which keeps us safe also keeps something away from us. The question is not whether we should wear gloves, since there are many situations in which we clearly must, but whether we remain aware of what we give up when we do, and whether we are willing, at the right moments, to take them off and meet the world and other people with our bare hands.",
+    ],
+    ja: [
+      '手ぶくろは、一見、私たちがもっているもののなかでもっともありふれたものの一つに思える。私たちは冬に手を温かく保つために、庭仕事や掃除のあいだ手を守るために、そして病院や台所でばい菌を広げないために手ぶくろをはめ、作業が終わればそれについてめったに考えない。しかし手ぶくろは、体と世界とのあいだのふしぎな位置をしめている。それは手を守ると同時に、手がふれるものから手をへだてるからである。そしてこの二重の役割は、人間がまわりのものや人とのふれ合いをどのように経験しているのかについて、大切なことを明らかにしているのかもしれない。',
+      '手は人間の体のなかでもっとも敏感な部分の一つである。手を通して、私たちは布の手ざわりや、ほかの人の肌の温かさ、見えないものの形を感じ、物の世界についての知識の多くは、ふれることを通して私たちにとどく。手ぶくろは保護とひきかえにこの敏感さを減らす。そのため、厚い手ぶくろをはめた人は、とがったものや熱いものを安全にあつかえるが、硬貨をつまみ上げたり、表面がざらざらかすべすべかを感じたりするのには苦労するかもしれない。',
+      'このため、手ぶくろをはめるか外すかを決めることは、しばしば社会的な意味をもってきた。多くの伝統で、敬意や友情を示したい人は、握手をする前に手ぶくろを外した。まるで、二人のあいだには何もはさむべきではないと言うかのように。そうした習慣は日常生活ではあまり見られなくなったが、そのしぐさは、手ぶくろをしたままの握手はどこか不完全で、本当のふれ合いには、守りなしにほかの人と向き合う危険をおかすことが必要だという感覚のなかに残っている。',
+      '手ぶくろはまた、身分や職業の象徴としての役割も果たしてきた。やわらかい革や絹でできた上等な手ぶくろは、かつては富のしるしであり、その持ち主が手を使って働く必要がないことを示していた。一方、厚くすり切れた手ぶくろは、建てる人や農民、漁師の労働を表していた。このように、手ぶくろは人の社会での位置をひと目で示すことができた。中の手が快適さになれているのか、努力になれているのか、そして持ち主がどのような世界に属しているのかを示したのである。',
+      '近年、手ぶくろは医療と公衆衛生において新たな重要性をおびるようになった。医師や看護師、ほかの多くの働き手は、いまでは決まりとしてうすい使いすての手ぶくろをはめ、自分自身と世話をする人々の両方を感染から守っている。こうした手ぶくろはできるだけ敏感さを保つように設計されており、外科医が繊細な手術をおこなえるようにしている。しかし患者は、手ぶくろをした手でふれられるのは冷たく、よそよそしく感じられると言うことがある。このことは、どんなにうすいへだてでも、ふれ合いの意味を変えうることを示している。',
+      'さらに、現代の生活はますます手ぶくろをはめることに似てきている、と言える面もある。私たちのやりとりの多くはいまや画面を通しておこなわれ、私たちが使うものの多くは、それをつくっている素材にふれる必要がまったくないように設計されている。そうした仕組みは便利さと安全をもたらすが、自分でものをあつかうことから得られる、世界についての直接の体の知識を減らすかもしれず、そのようなへだてなしに暮らした人々の関係よりも、私たちの関係をなめらかではあるが、じかではないものに感じさせるかもしれない。',
+      'だとすれば、手ぶくろは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。手ぶくろは、保護とふれ合いがしばしばせめぎ合っていること、そして私たちを安全に保つへだてはどれも、何かを私たちから遠ざけてもいることを思い出させてくれる。問題は手ぶくろをはめるべきかどうかではない。はめなければならない場面は明らかにたくさんあるからである。問題は、はめるときに自分が何を手ばなしているのかに気づいているかどうか、そしてふさわしいときには、それを外し、素手で世界やほかの人々と向き合う気があるかどうかなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした習慣はあまり見られなくなったが、そのしぐさは感覚のなかに残っている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '手ぶくろは、手を守ると同時に、手がふれるものから手をへだてる。', answer: true, why: '第1段落 it both protects the hand and separates it from what it touches。' },
+      { statement: '厚い手ぶくろをはめると、硬貨をつまみ上げやすくなる。', answer: false, why: '第2段落 may struggle to pick up a coin。' },
+      { statement: '上等な手ぶくろは、かつて富のしるしだった。', answer: true, why: '第4段落 Fine gloves ... were once signs of wealth。' },
+      { statement: '筆者は、手ぶくろをはめるべきではないと述べている。', answer: false, why: '第7段落 there are many situations in which we clearly must。' },
+    ],
+    qa: [
+      { q: 'What did people in many traditions do before shaking hands to show respect?', choices: ['They took off a glove.', 'They put on thicker gloves.', 'They washed their hands.', 'They bowed twice.'], answer: 0, why: '第3段落 would take off a glove before shaking hands。' },
+      { q: 'How do some patients say it feels to be touched by gloved hands?', choices: ['Colder and more distant.', 'Warmer and closer.', 'Exactly the same.', 'Painful and dangerous.'], answer: 0, why: '第5段落 feels colder and more distant。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
