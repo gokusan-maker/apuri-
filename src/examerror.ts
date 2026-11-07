@@ -5733,6 +5733,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I’m looking for (B) someone (C) to help (D) me with to this job.', choices: ['(A) I’m looking for', '(B) someone', '(C) to help', '(D) me with to this job'], answer: 3, why: 'help 人 with ～ なので me with this job。to は不要。' },
     ],
   },
+  {
+    id: 'exam-error-win-beat',
+    title: '入試の正誤問題〈240〉（京大レベル：英作文の win と beat・lose と miss の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'win のあとは試合・賞・選挙（win the game／win first prize）、beat のあとは相手（beat the team from Osaka）。「負けた」は lose the game／lose to 相手、人が負かされるのは be beaten。',
+      'lose は「なくす」（lose my wallet）、miss は「のがす・乗りおくれる・行きそこねる・いなくてさびしい」（miss the train／miss the party）。「決勝で」は in the final、「宝くじで」は in the lottery。',
+    ],
+    examples: [
+      { en: 'Our team beat the team from Osaka and won the cup.', ja: '私たちのチームは大阪のチームに勝ち、優勝杯を勝ちとった。' },
+      { en: 'I lost my umbrella and missed the bus.', ja: '私はかさをなくし、バスに乗りおくれた。' },
+    ],
+    questions: [
+      { sentence: '(A) Our team (B) won (C) the team from Osaka (D) in the final.', choices: ['(A) Our team', '(B) won', '(C) the team from Osaka', '(D) in the final'], answer: 1, why: '相手を負かすのは beat。win のあとは試合や賞。beat the team。' },
+      { sentence: '(A) She (B) beat (C) first prize (D) in the speech contest.', choices: ['(A) She', '(B) beat', '(C) first prize', '(D) in the speech contest'], answer: 1, why: '賞を勝ちとるのは win。won first prize。' },
+      { sentence: '(A) Hurry up, (B) or you will (C) lose (D) the last train.', choices: ['(A) Hurry up,', '(B) or you will', '(C) lose', '(D) the last train'], answer: 2, why: '乗り物に乗りおくれるのは miss。miss the last train。' },
+      { sentence: '(A) I (B) missed my wallet (C) somewhere (D) in the station.', choices: ['(A) I', '(B) missed my wallet', '(C) somewhere', '(D) in the station'], answer: 1, why: 'ものをなくすのは lose。lost my wallet。' },
+      { sentence: '(A) Winning (B) him at chess (C) is (D) very difficult.', choices: ['(A) Winning', '(B) him at chess', '(C) is', '(D) very difficult'], answer: 0, why: '人を負かすのは beat なので Beating him。' },
+      { sentence: '(A) We (B) lost (C) to them (D) at the final match.', choices: ['(A) We', '(B) lost', '(C) to them', '(D) at the final match'], answer: 3, why: '「決勝で」は in the final match。' },
+      { sentence: '(A) I’m sorry I (B) couldn’t come and (C) lost (D) your party.', choices: ['(A) I’m sorry I', '(B) couldn’t come and', '(C) lost', '(D) your party'], answer: 2, why: 'パーティーなどに行きそこねるのは miss。missed your party。' },
+      { sentence: '(A) He (B) won (C) a lot of money (D) at lottery.', choices: ['(A) He', '(B) won', '(C) a lot of money', '(D) at lottery'], answer: 3, why: '「宝くじで」は in the lottery。' },
+      { sentence: '(A) The champion (B) was won (C) by a young player (D) last year.', choices: ['(A) The champion', '(B) was won', '(C) by a young player', '(D) last year'], answer: 1, why: '人が負かされるのは be beaten。was beaten。' },
+      { sentence: '(A) Lost (B) the match, (C) the players (D) looked sad.', choices: ['(A) Lost', '(B) the match,', '(C) the players', '(D) looked sad'], answer: 0, why: '「試合に負けて」は分詞構文で Having lost。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
