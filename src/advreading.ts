@@ -42258,6 +42258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-self-checkouts',
+    title: 'Should Shops Replace Cashiers with Machines?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In supermarkets around the world, rows of staffed checkouts are steadily being replaced by machines at which customers scan and pay for their own shopping. Retailers present self-checkouts as a modern convenience that shortens queues and gives customers more control, while many shoppers, particularly older people, complain that the machines are confusing and impersonal. The spread of these machines has therefore become a small but revealing example of a larger debate about how far everyday services should be automated, and about who benefits and who loses when they are.",
+      "Supporters argue that self-checkouts allow shops to serve more customers in less space. A single member of staff can supervise several machines at once, so that a shop can open more checkouts during busy periods without hiring many extra workers. Customers with only a few items, supporters point out, no longer need to wait behind someone with a full trolley, and many people say that they simply prefer to pack their shopping at their own pace without feeling hurried by a cashier or by the people waiting behind them. Some shops have also found that the machines allow them to stay open later in the evening, when it would be too expensive to keep several cashiers on duty.",
+      "Supporters also claim that automation can free workers from repetitive tasks. Scanning items for hours on end is tiring and monotonous work, and staff who no longer have to do it may be moved to roles in which they help customers find products, check the quality of fresh food, or deal with problems that machines cannot handle. ( A ) the transition may be difficult for some employees, supporters argue, it could in the long run make jobs in retail more varied and more satisfying than they were before.",
+      "Critics, however, doubt that the benefits are shared fairly. They point out that self-checkouts often transfer work from paid employees to unpaid customers, who must now do the scanning, weighing, and packing themselves while paying the same prices as before. Critics also argue that the promise of better jobs is not always kept, since many retailers use the machines mainly to reduce the number of staff, and the workers who remain may find themselves responsible for supervising a whole row of machines that frequently stop working.",
+      "Critics also emphasize the effects on customers who find the technology difficult. Older people, people with disabilities, and those who are unfamiliar with digital devices may feel embarrassed when a machine repeatedly announces an unexpected item in the bagging area, and some may stop visiting shops where staffed checkouts are no longer available. For people who live alone, a short conversation with a cashier may be one of the few social contacts of the day, and critics argue that removing it has a cost that is rarely included in any calculation of efficiency.",
+      "In response, some retailers have tried to find a middle way. Some shops keep at least a few staffed checkouts open at all times, while others have introduced slower lanes in which cashiers are encouraged to chat with customers who wish to talk. A number of supermarkets have even reduced the number of self-checkouts after discovering that losses from theft and mistakes were higher than expected, which suggests that automation does not always save as much money as its supporters originally claimed.",
+      "The debate over self-checkouts ultimately reflects a broader question about what we expect from the places where we shop. If a supermarket is understood simply as a system for exchanging money for goods as quickly as possible, then machines may be the obvious solution, but if it is also a place in which people meet, ask for help, and feel part of a community, then the human beings behind the counter may be worth more than any single measure of speed or cost can show.",
+    ],
+    ja: [
+      '世界中のスーパーマーケットで、店員のいるレジの列が、客が自分で買い物の品をスキャンして代金をはらう機械に少しずつ置きかえられている。小売業者はセルフレジを、列を短くし客に主導権をあたえる現代的な便利さとして示すが、多くの買い物客、とくに高齢の人々は、機械がわかりにくく、人間味がないと不満を言う。そのためこの機械の広まりは、日常のサービスをどこまで自動化すべきか、そしてそうしたときにだれが得をし、だれが損をするのかという、より大きな議論の、小さいけれども多くを語る例になっている。',
+      '支持する人々は、セルフレジによって店がより少ない場所でより多くの客に対応できると主張する。一人の店員が同時に何台もの機械を見守ることができるので、店は、多くの働き手を新たにやとわなくても、混む時間帯にレジを多く開けられる。品物が少しだけの客は、もう満杯のカートをもつ人のうしろで待つ必要がないと支持者は指摘し、また多くの人は、レジ係やうしろで待つ人々にせかされていると感じずに、自分のペースで買ったものを袋につめるほうが単純に好きだと言う。また、機械のおかげで、何人ものレジ係を勤務させておくには費用がかかりすぎる夜おそくまで店を開けておけるようになった店もある。',
+      '支持する人々はまた、自動化によって働き手がくり返しの作業から解放されうると主張する。何時間も続けて品物をスキャンするのはつかれる単調な仕事であり、それをしなくてよくなった店員は、客が商品を見つけるのを手伝ったり、生鮮食品の品質を確かめたり、機械にはあつかえない問題に対応したりする役割に移れるかもしれない。この移行は一部の従業員にとってむずかしいかもしれないが、長い目で見れば小売の仕事を以前より変化に富み、満足のいくものにしうる、と支持者は主張する。',
+      'しかし批判する人々は、その利益が公平に分けられているかどうかを疑う。彼らは、セルフレジがしばしば、給料をもらう従業員から給料をもらわない客へと仕事を移しているだけだと指摘する。客は以前と同じ値段をはらいながら、スキャンも重さをはかることも袋づめも自分でしなければならないのである。批判する人々はまた、よりよい仕事という約束がいつも守られるわけではないとも主張する。多くの小売業者はおもに店員の数を減らすために機械を使っており、残った働き手は、しょっちゅう止まる機械の列全体を見守る責任を負わされるかもしれないからである。',
+      '批判する人々はまた、その技術をむずかしいと感じる客への影響も強調する。高齢の人や障害のある人、デジタル機器になじみのない人は、機械が「袋づめの場所に予期しない品物があります」とくり返し告げると気まずく感じるかもしれず、店員のいるレジがもうない店には行かなくなる人もいるかもしれない。一人で暮らす人々にとって、レジ係との短い会話は、その日の数少ない人とのふれ合いの一つかもしれず、それをなくすことには、効率の計算にはめったにふくまれない代償があると批判する人々は主張する。',
+      'これに対して、中間の道を見つけようとしてきた小売業者もいる。いつも少なくともいくつかの店員のいるレジを開けておく店もあれば、話をしたい客とレジ係がおしゃべりするようすすめる、ゆっくりした列を設けた店もある。盗みやまちがいによる損失が予想よりも大きかったことに気づいて、セルフレジの数を減らしたスーパーマーケットさえいくつかある。このことは、自動化が、支持者が当初言っていたほど多くのお金をいつも節約するわけではないことを示している。',
+      'セルフレジをめぐる議論は、結局のところ、買い物をする場所に私たちが何を期待するのかという、より広い問いを反映している。スーパーマーケットが、お金と品物をできるだけ速く交換するための仕組みにすぎないと理解されるなら、機械は当然の解決策かもしれない。しかしそれが、人々が出会い、助けを求め、地域の一員だと感じる場所でもあるなら、カウンターのうしろにいる人間には、速さや費用のどんな一つの物差しが示すよりも大きな価値があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「移行はむずかしいかもしれないが、長い目で見れば仕事をよりよくしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say self-checkouts serve more customers in less space and free workers from ( 1 ) tasks. Critics argue that they transfer work to unpaid customers and cause difficulties for people unfamiliar with digital ( 2 ). Some supermarkets have reduced the number of machines because losses from ( 3 ) and mistakes were higher than expected.',
+      blanks: [
+        { choices: ['repetitive', 'creative', 'dangerous', 'expensive'], answer: 0, why: '第3段落 free workers from repetitive tasks。' },
+        { choices: ['devices', 'music', 'farms', 'roads'], answer: 0, why: '第5段落 those who are unfamiliar with digital devices。' },
+        { choices: ['theft', 'weather', 'holidays', 'advertising'], answer: 0, why: '第6段落 losses from theft and mistakes were higher than expected。' },
+      ],
+    },
+    tf: [
+      { statement: '一人の店員が、同時に何台ものセルフレジを見守ることができる。', answer: true, why: '第2段落 A single member of staff can supervise several machines at once。' },
+      { statement: '批判する人々によると、セルフレジを使う客は以前より安い値段をはらっている。', answer: false, why: '第4段落 while paying the same prices as before。' },
+      { statement: '一人で暮らす人にとって、レジ係との会話は大切なふれ合いになりうる。', answer: true, why: '第5段落 one of the few social contacts of the day。' },
+      { statement: 'セルフレジの数を減らしたスーパーマーケットは一つもない。', answer: false, why: '第6段落 A number of supermarkets have even reduced the number of self-checkouts。' },
+    ],
+    qa: [
+      { q: 'According to supporters, what could staff who no longer scan items do instead?', choices: ['Help customers find products.', 'Repair the machines at night.', 'Deliver shopping to homes.', 'Set the prices of goods.'], answer: 0, why: '第3段落 roles in which they help customers find products。' },
+      { q: 'What have some shops introduced as a middle way?', choices: ['Slower lanes where cashiers chat with customers.', 'Machines that speak many languages.', 'Free bags for every customer.', 'Shorter opening hours.'], answer: 0, why: '第6段落 introduced slower lanes in which cashiers are encouraged to chat。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
