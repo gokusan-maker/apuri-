@@ -40978,6 +40978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sharenting',
+    title: 'Should Parents Share Their Children Online?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many parents today share photographs and stories of their children online, posting images of first steps, birthday parties, and school performances for friends, relatives, and sometimes thousands of strangers to see. The practice, which some have called sharenting, has become so common that a child may have a substantial online presence long before they are old enough to understand what the internet is. For many families, sharing such moments is a natural expression of pride and affection, yet a growing number of critics have begun to ask whether it respects the interests of the children themselves.",
+      "Supporters argue that sharing family life online is simply a modern version of a very old practice. Parents have always shown photographs to friends and relatives, and social media merely makes it easier to stay connected with people who live far away. For grandparents in distant cities or relatives abroad, regular updates may be a precious way of watching a child grow up, and parents who feel isolated may find support and advice by sharing their experiences with others facing similar challenges.",
+      "Supporters also note that most parents share images with good intentions and choose them carefully. ( A ) some content may later embarrass a child, supporters argue, the great majority of posts are harmless records of ordinary family moments, and parents are in the best position to judge what is appropriate for their own children. They warn that strict rules about what parents may share could intrude unreasonably into family life and the freedom of parents to raise their children as they see fit.",
+      "Critics, however, emphasize that children cannot give meaningful consent to having their lives displayed online. A photograph that seems charming to a parent today may be a source of embarrassment to a teenager years later, and once an image has been shared widely, it may be impossible to remove completely. Critics argue that children have a right to shape their own identities and decide for themselves which aspects of their lives they wish to make public, a right that is undermined when parents make these decisions for them.",
+      "Critics also raise concerns about safety and privacy. Images and details such as a child's name, school, or daily routine can be collected by strangers, and some may be misused in ways that parents never imagined. In addition, some families earn money by sharing their children's lives on popular online channels, raising questions about whether children are being treated as workers without the protections that would normally apply to child performers in film or television. Such children may spend hours being filmed, and the income they help to generate is not always set aside for their future.",
+      "In response to these concerns, some experts recommend that parents adopt simple guidelines. They suggest asking older children for permission before posting about them, avoiding images that reveal locations or personal details, limiting audiences to trusted friends and family, and considering how a child might feel about a post in ten or twenty years. Such habits, they argue, allow families to keep sharing joyful moments while showing respect for the people who will one day have to live with the record. Some countries have also begun to discuss laws that would protect children who appear regularly in commercial online content.",
+      "The debate over sharenting ultimately reflects broader questions about privacy and identity in the digital age. Parents have always made decisions on behalf of their children, but the permanence and reach of online sharing give those decisions new significance. Balancing parents' natural desire to share their joy with children's right to grow up with some control over their own stories may require new habits of thought, and perhaps a greater willingness to let some precious moments remain private.",
+    ],
+    ja: [
+      '今日、多くの親が子どもの写真や話をオンラインで分かち合い、はじめて歩いたときや誕生日会や学校の発表会の画像を、友だちや親せきや、ときには何千人もの見知らぬ人が見られるように投稿している。シェアレンティングとよばれることもあるこの習慣はとても広まっているので、子どもは、インターネットが何かを理解できる年になるずっと前から、オンライン上にかなりの存在をもっていることがある。多くの家庭にとって、そうした瞬間を分かち合うことはほこりと愛情の自然なあらわれだが、それが子ども自身の利益を尊重しているのかと問いはじめる批判者がふえている。',
+      '支持する人々は、家族の暮らしをオンラインで分かち合うことは、とても古い習慣の現代版にすぎないと主張する。親はいつも友だちや親せきに写真を見せてきたのであり、ソーシャルメディアはただ遠くに住む人々とつながり続けるのをかんたんにしているだけだという。遠い都市に住む祖父母や海外の親せきにとって、定期的な近況は子どもの成長を見守る貴重な方法かもしれず、孤立を感じている親は、同じような苦労をかかえるほかの人々と経験を分かち合うことで、ささえや助言を得られるかもしれない。',
+      '支持する人々はまた、ほとんどの親はよい心がけで画像を分かち合い、注意深く選んでいると指摘する。あとになって子どもをはずかしがらせる内容もあるかもしれないが、投稿の大多数はふつうの家族の瞬間のたわいない記録であり、自分の子どもにとって何が適切かを判断するのにもっともふさわしい立場にいるのは親だと支持する人々は主張する。親が分かち合ってよいものについてのきびしい規則は、家族の暮らしや、親が自分の考えで子どもを育てる自由に不当に立ち入りかねないと彼らは警告する。',
+      'しかし批判する人々は、子どもは自分の暮らしをオンラインで見せられることに意味のある同意をあたえられないと強調する。今日の親にはかわいらしく見える写真が、何年もたってから十代の子どもにとってはずかしさの源になることがあり、一度広く分かち合われた画像は完全に消すことができないかもしれない。子どもには、自分の個性を自分で形づくり、暮らしのどの面を公にしたいかを自分で決める権利があり、親がかわりにそうした決定をすると、その権利がそこなわれると批判する人々は主張する。',
+      '批判する人々はまた、安全とプライバシーについての心配をあげる。画像や、子どもの名前や学校や毎日の行動のようなくわしい情報は、見知らぬ人に集められることがあり、親が思いもしなかったやり方で悪用されるものもあるかもしれない。さらに、人気のあるオンラインのチャンネルで子どもの暮らしを見せてお金をかせぐ家庭もあり、映画やテレビの子役にふつうなら当てはまる守りなしに、子どもが働き手としてあつかわれているのではないかという疑問を生んでいる。そうした子どもたちは何時間も撮影されることがあり、彼らがかせぐのを助けたお金が、いつも彼らの将来のためにとっておかれるとはかぎらない。',
+      'こうした心配にこたえて、親にかんたんな指針を取り入れるようすすめる専門家もいる。年長の子どもについて投稿する前には本人に許可を求めること、場所や個人のくわしい情報がわかる画像をさけること、見る人を信頼できる友だちや家族にしぼること、そして十年後や二十年後に子どもがその投稿をどう感じるかを考えることを彼らは提案する。そうした習慣があれば、家族はよろこびの瞬間を分かち合い続けながら、いつかその記録とともに生きなければならない本人への敬意を示せると彼らは主張する。商業的なオンラインの内容にたびたび登場する子どもを守る法律について話し合いはじめた国もある。',
+      'シェアレンティングをめぐる議論は、結局のところ、デジタル時代のプライバシーと個性についての、より広い問いを反映している。親はいつも子どもにかわって決定をしてきたが、オンラインで分かち合うことの永続性と広がりが、そうした決定に新しい重みをあたえている。よろこびを分かち合いたいという親の自然な望みと、自分自身の物語をある程度自分で管理しながら育つ子どもの権利のつりあいをとるには、新しい考え方の習慣と、もしかすると、大切な瞬間のいくつかをそっと家族の中だけにとどめておく、より大きな心がまえが必要なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「はずかしがらせる内容もあるかもしれないが、大多数はたわいない記録」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that sharing family life online helps people stay ( 1 ) and that parents choose images carefully. Critics emphasize that children cannot give meaningful ( 2 ) and raise concerns about safety. Some experts recommend asking older children for ( 3 ) before posting.',
+      blanks: [
+        { choices: ['connected', 'silent', 'hidden', 'famous'], answer: 0, why: '第2段落 to stay connected with people who live far away。' },
+        { choices: ['consent', 'money', 'advice', 'photos'], answer: 0, why: '第4段落 children cannot give meaningful consent。' },
+        { choices: ['permission', 'payment', 'help', 'directions'], answer: 0, why: '第6段落 asking older children for permission before posting。' },
+      ],
+    },
+    tf: [
+      { statement: '子どもはインターネットを理解する前から、オンラインに存在をもっていることがある。', answer: true, why: '第1段落 a child may have a substantial online presence long before they are old enough to understand。' },
+      { statement: '支持する人々は、親が分かち合うものにきびしい規則を設けるべきだと言う。', answer: false, why: '第3段落 They warn that strict rules ... could intrude unreasonably。' },
+      { statement: '一度広く分かち合われた画像は、完全に消せないかもしれない。', answer: true, why: '第4段落 it may be impossible to remove completely。' },
+      { statement: 'どの国も、子どもを守る法律について話し合っていない。', answer: false, why: '第6段落 Some countries have also begun to discuss laws。' },
+    ],
+    qa: [
+      { q: 'Who may find regular updates a precious way of watching a child grow up?', choices: ['Grandparents in distant cities or relatives abroad.', 'Strangers online.', 'The children themselves.', 'Teachers at school.'], answer: 0, why: '第2段落 For grandparents in distant cities or relatives abroad。' },
+      { q: 'What question is raised by families who earn money from their children online?', choices: ['Whether children are being treated as workers without protection.', 'Whether parents are too strict.', 'Whether children like cameras.', 'Whether schools allow phones.'], answer: 0, why: '第5段落 whether children are being treated as workers without the protections。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
