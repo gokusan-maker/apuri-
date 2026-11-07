@@ -40142,6 +40142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-music',
+    title: 'On Listening to Music',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Music is among the oldest and most universal of human activities. Every known culture has produced some form of it, whether songs sung while working in the fields, rhythms played at religious ceremonies, or melodies hummed to calm a crying child. Yet music is also one of the most puzzling. Unlike food or shelter, it serves no obvious practical purpose, and it is difficult to say in words exactly what a piece of music means, even when it moves us deeply and stays in our memory for years.",
+      "One reason music affects us so powerfully may be its close connection to emotion. A melody can make us feel joy, sorrow, excitement, or calm within a few seconds, often before we have had time to think about why. People frequently turn to music to express feelings that they find difficult to put into words, and many can recall particular songs that accompanied important moments in their lives, so that hearing them again brings back not only memories but the emotions attached to them.",
+      "Music also has a remarkable capacity to bring people together. When people sing or play together, they must listen carefully to one another and adjust their timing, volume, and pitch to create a shared sound. ( A ) each participant may contribute only a small part, the result can be something far greater than any individual could produce alone, and many people describe the experience of making music with others as one of deep connection and belonging. Choirs, bands, and orchestras have long served as places where people of different ages and backgrounds meet as equals, united for a while by a common purpose.",
+      "In the modern world, however, our relationship with music has changed in significant ways. For most of history, people could hear music only when someone performed it in their presence, and such occasions were often rare and special. Today, recorded music is available almost everywhere and at almost any time, playing in shops, restaurants, and through the headphones that many people wear throughout the day. Music has become so constantly present that it is easy to stop truly listening to it.",
+      "This abundance has brought undeniable benefits. People can now explore music from every period and every part of the world, discovering styles and traditions that would once have been entirely unknown to them. At the same time, when music becomes a constant background to other activities, it may lose some of its power to move us. A song heard a hundred times while working or traveling may become merely familiar noise rather than an experience that demands and rewards our full attention.",
+      "To listen to music attentively is therefore a kind of skill that can be cultivated. It involves setting aside other activities, allowing oneself to follow the development of a melody, noticing the textures of different instruments, and responding to the changes in mood that a piece expresses. Such listening does not require formal musical training, but it does require patience and openness, a willingness to let the music unfold in its own time rather than demanding immediate satisfaction. Those who practice it often find that familiar pieces reveal new details each time they are heard.",
+      "In the end, music may matter to human beings precisely because it cannot be reduced to practical use. It offers a space in which feelings can be expressed and shared, in which people can join together across differences of language and culture, and in which time itself seems to take on a different quality. In a world increasingly organized around efficiency, the experience of truly listening to music may remind us that some of the most valuable things in life are those that serve no purpose beyond themselves.",
+    ],
+    ja: [
+      '音楽は、人間の活動のうちでもっとも古く、もっとも普遍的なものの一つである。知られているすべての文化が、畑で働きながら歌う歌であれ、宗教の儀式で演奏されるリズムであれ、泣いている子どもを落ち着かせるために口ずさむ旋律であれ、何らかの形の音楽を生み出してきた。しかし音楽は、もっとも不思議なものの一つでもある。食べ物や住まいとちがって、それにはわかりやすい実用的な目的がなく、ある曲が私たちを深く感動させ、何年も記憶に残るときでさえ、その曲が何を意味しているのかをことばで正確に言うのはむずかしい。',
+      '音楽が私たちにこれほど強く影響する理由の一つは、感情と深く結びついていることかもしれない。旋律は、なぜかを考えるひまもないうちに、数秒で私たちによろこびや悲しみや興奮や落ち着きを感じさせることがある。人々はしばしば、ことばにするのがむずかしい気持ちをあらわすために音楽にたより、多くの人が人生の大切な瞬間にともなっていた特定の歌を思い出すことができる。そのため、それをもう一度聞くと、思い出だけでなく、それに結びついた感情までもよみがえるのである。',
+      '音楽はまた、人々を結びつけるおどろくべき力をもっている。人々がいっしょに歌ったり演奏したりするとき、たがいの音を注意深く聞き、タイミングや音量や音の高さを合わせて、共通の音をつくり出さなければならない。一人一人が加えるのは小さな部分だけかもしれないが、その結果は、どの個人が一人でつくれるものよりもはるかに大きなものになりうる。そして多くの人が、ほかの人々と音楽をつくる経験を、深いつながりと居場所の感覚をもたらすものとして語る。合唱団やバンドやオーケストラは、長いあいだ、ちがう年齢や生い立ちの人々が対等な者として出会い、しばらくのあいだ共通の目的によって結ばれる場所の役割を果たしてきた。',
+      'しかし現代の世界では、音楽との関係は大きく変わってきた。歴史のほとんどを通じて、人々は、だれかが目の前で演奏したときにしか音楽を聞けず、そうした機会はしばしばまれで特別なものだった。今日では、録音された音楽が、店やレストランで流れ、多くの人が一日中つけているヘッドホンを通じて、ほとんどどこでも、ほとんどいつでも聞ける。音楽はあまりにたえず存在するようになったので、本当に耳をかたむけるのをやめてしまいやすい。',
+      'このあふれるほどの豊かさは、たしかな利益をもたらしてきた。人々は今では、あらゆる時代、あらゆる地域の音楽をさぐり、かつてはまったく知られていなかったはずの様式や伝統を見つけることができる。同時に、音楽がほかの活動のたえまない背景になると、私たちを感動させる力の一部を失うかもしれない。働いたり移動したりしながら百回聞いた歌は、私たちの注意のすべてを求め、それにこたえてくれる経験ではなく、ただなじみの雑音になってしまうかもしれない。',
+      'したがって、注意深く音楽を聞くことは、育てることのできる一種の技術である。それには、ほかの活動をわきに置き、旋律の展開についていき、さまざまな楽器の音の手ざわりに気づき、曲があらわす気分の変化にこたえることがふくまれる。そうした聞き方には正式な音楽の訓練は必要ないが、忍耐と心の開かれた態度、つまり、すぐに満足を求めるのではなく、音楽がそれ自身の時間の中で広がっていくのにまかせる気持ちが必要である。そうした聞き方を続ける人は、なじみの曲が聞くたびに新しい細部を見せてくれることに、しばしば気づく。',
+      '結局のところ、音楽が人間にとって大切なのは、まさにそれが実用的な役に立つことにまとめられないからなのかもしれない。音楽は、感情をあらわし分かち合える場、人々がことばや文化のちがいをこえて結びつける場、そして時間そのものがちがう性質をおびるように思える場を提供してくれる。ますます効率を中心に組み立てられていく世界の中で、本当に音楽に耳をかたむける経験は、人生でもっとも価値のあるものの中には、それ自体をこえる目的を何ももたないものがあることを思い出させてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「加えるのは小さな部分だけかもしれないが、結果ははるかに大きい」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '知られているすべての文化が、何らかの形の音楽を生み出してきた。', answer: true, why: '第1段落 Every known culture has produced some form of it。' },
+      { statement: '筆者は、音楽にはわかりやすい実用的な目的があると述べている。', answer: false, why: '第1段落 it serves no obvious practical purpose。' },
+      { statement: '歴史のほとんどを通じて、音楽を聞ける機会はまれだった。', answer: true, why: '第4段落 such occasions were often rare and special。' },
+      { statement: '注意深く音楽を聞くには、正式な訓練が必要である。', answer: false, why: '第6段落 does not require formal musical training。' },
+    ],
+    qa: [
+      { q: 'What must people do when they sing or play together?', choices: ['Listen carefully to one another and adjust their timing, volume, and pitch.', 'Play as loudly as possible.', 'Ignore the other musicians.', 'Practice alone for years.'], answer: 0, why: '第3段落 listen carefully to one another and adjust their timing, volume, and pitch。' },
+      { q: 'What may a song heard a hundred times while working become?', choices: ['Merely familiar noise.', 'A deeper experience each time.', 'A new kind of language.', 'A form of exercise.'], answer: 0, why: '第5段落 may become merely familiar noise。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
