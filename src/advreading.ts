@@ -40702,6 +40702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-plants',
+    title: 'On the Lives of Plants',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us pass by plants every day without giving them much thought. The trees along a street, the grass in a park, and the weeds growing through cracks in the pavement form a kind of green background to our lives, noticed perhaps when flowers bloom or leaves change color, but otherwise taken for granted. Compared with animals, which move, make sounds, and seem to share something of our own experience, plants can appear passive and almost lifeless, as though they were simply part of the scenery rather than living beings with lives of their own.",
+      "Yet this impression may say more about the limits of human perception than about plants themselves. Plants live on a different time scale from ours, growing, turning toward the light, and responding to their surroundings so slowly that their movements are usually invisible to the naked eye. When their growth is recorded over days and played back in a few seconds, however, they reveal a surprising liveliness, as shoots twist and search, leaves open and close, and tendrils reach out to grasp whatever support they can find.",
+      "Plants are also far more responsive to their environment than they appear. They can sense light, gravity, moisture, and touch, and adjust their growth accordingly. ( A ) they have no brains or nervous systems like those of animals, some researchers have found that plants can respond to damage by releasing chemicals that warn nearby plants or attract creatures that prey on the insects attacking them, a form of communication that was long unsuspected. Roots, too, interact with fungi in the soil, exchanging sugars for water and nutrients in partnerships that may link many plants across a forest floor.",
+      "Our dependence on plants, moreover, is almost total. They produce the oxygen we breathe, provide most of the food we eat either directly or through the animals that feed on them, and supply materials for shelter, clothing, and medicine. Entire civilizations have been shaped by the cultivation of a few plant species, such as rice, wheat, and maize. In this sense, the quiet green background of our lives is in fact the foundation on which all human activity rests.",
+      "Despite this dependence, many people today know remarkably little about the plants around them. Surveys have suggested that some people can recognize hundreds of brand logos but only a handful of local trees or flowers. This unfamiliarity may matter more than it seems, since people who cannot name or recognize the plants in their surroundings may also be less likely to notice when those plants decline or disappear, and less inclined to care about protecting them. Some teachers have responded by taking students outdoors to learn the names and habits of local plants, hoping to restore a familiarity that earlier generations often possessed.",
+      "Learning to pay attention to plants can therefore change the way we experience the world. A walk through a park becomes richer when one can distinguish between different trees, observe the stages of their growth through the seasons, and notice the small plants that thrive in unexpected places. Such attention requires patience, since plants rarely reveal themselves quickly, but it can bring a sense of connection to the living world that is easily lost in a busy urban life.",
+      "In the end, the lives of plants invite us to reconsider what it means to be alive. They remind us that life need not be fast, loud, or visible to be complex and responsive, and that the beings we overlook may be quietly sustaining us at every moment. To look more carefully at plants is to recognize our place within a vast web of living things, and perhaps to cultivate a humility that our hurried, human-centered view of the world often lacks.",
+    ],
+    ja: [
+      '私たちのほとんどは、毎日植物のそばを通りすぎながら、それについてあまり考えることがない。通りぞいの木や、公園の草や、歩道のわれ目から生えてくる雑草は、私たちの暮らしの一種の緑の背景をつくっており、花がさいたり葉の色が変わったりしたときには気づかれるかもしれないが、それ以外は当たり前のものと思われている。動き、音を出し、私たち自身の経験の何かを分かち合っているように見える動物とくらべると、植物は受け身で、ほとんど生きていないように見え、まるで自分自身の生をもつ生き物ではなく、ただの景色の一部であるかのようである。',
+      'しかしこの印象は、植物そのものよりも、人間の知覚の限界について多くを語っているのかもしれない。植物は私たちとはちがう時間の尺度で生きており、育ち、光の方へ向き、まわりにこたえる動きがとてもゆっくりなので、その動きはふつう肉眼では見えない。しかし、何日にもわたる成長を記録して数秒で再生すると、植物はおどろくほどの生き生きとした姿を見せる。芽はねじれながら何かをさがし、葉は開いたりとじたりし、つるはつかまれるものなら何にでも手をのばしてつかもうとするのである。',
+      '植物はまた、見かけよりはるかにまわりの環境に敏感である。植物は光や重力や水分やふれられることを感じとり、それに合わせて育ち方を変えることができる。植物には動物のような脳や神経の仕組みはないが、植物が傷を受けると化学物質を出して近くの植物に警告したり、自分をおそう虫を食べる生き物を引き寄せたりすることを発見した研究者もいる。それは長いあいだ思いもよらなかった一種のコミュニケーションである。根もまた土の中のきのこのなかまとかかわり合い、糖を水や養分と交換している。そのつながりは、森の地面全体にわたって多くの植物を結んでいるのかもしれない。',
+      'さらに、私たちの植物へのたよりはほとんど完全である。植物は私たちがすう酸素をつくり出し、私たちが食べる食べ物のほとんどを、直接に、あるいはそれを食べる動物を通じて提供し、住まいや衣服や薬の材料をあたえてくれる。文明全体が、米や小麦やトウモロコシのような、わずかな種類の植物の栽培によって形づくられてきた。この意味で、私たちの暮らしのしずかな緑の背景は、実はあらゆる人間の活動がよりどころとする土台なのである。',
+      'このようにたよっているにもかかわらず、今日の多くの人は、身のまわりの植物についておどろくほど少ししか知らない。何百もの商品のマークを見分けられるのに、地元の木や花はほんのいくつかしか見分けられない人がいることを示す調査もある。この不なれさは見かけ以上に大切かもしれない。まわりの植物の名前を言えなかったり見分けられなかったりする人は、その植物がへったり消えたりしても気づきにくく、それを守ることを気にかけにくいかもしれないからである。これにこたえて、以前の世代がしばしばもっていたなじみを取りもどそうと、生徒を外に連れ出して地元の植物の名前や性質を学ばせる先生もいる。',
+      'したがって、植物に注意をはらうことを学ぶと、世界の感じ方が変わりうる。ちがう木を見分け、季節を通じたその成長の段階を観察し、思いがけない場所で育つ小さな植物に気づけるようになれば、公園の散歩はより豊かなものになる。植物がすぐに姿を見せることはめったにないので、そうした注意には忍耐が必要だが、それは、いそがしい都会の暮らしの中で失われやすい、生きている世界とのつながりの感覚をもたらしてくれる。',
+      '結局のところ、植物の生は、生きているとはどういうことかを考え直すよう私たちをさそう。植物は、生命が複雑で敏感であるために、速くも、さわがしくも、目に見えるものでもある必要はないこと、そして私たちが見落としている生き物が、あらゆる瞬間にしずかに私たちをささえているかもしれないことを思い出させてくれる。植物をもっと注意深く見ることは、生き物の広大な網の中の自分の居場所を知ることであり、もしかすると、急ぎがちで人間中心の世界の見方にしばしば欠けているけんきょさを育てることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「動物のような脳はないが、化学物質で警告できる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '植物の動きは、ふつう肉眼では見えないほどゆっくりである。', answer: true, why: '第2段落 their movements are usually invisible to the naked eye。' },
+      { statement: '植物には、動物と同じような脳がある。', answer: false, why: '第3段落 they have no brains or nervous systems like those of animals。' },
+      { statement: '何百もの商品のマークを見分けられても、木はわずかしか見分けられない人がいる。', answer: true, why: '第5段落 can recognize hundreds of brand logos but only a handful of local trees or flowers。' },
+      { statement: '筆者は、植物に注意をはらうことにはまったく忍耐がいらないと述べている。', answer: false, why: '第6段落 Such attention requires patience。' },
+    ],
+    qa: [
+      { q: 'What can plants do when they are damaged, according to some researchers?', choices: ['Release chemicals that warn nearby plants.', 'Move to another place.', 'Make loud sounds.', 'Stop growing forever.'], answer: 0, why: '第3段落 can respond to damage by releasing chemicals that warn nearby plants。' },
+      { q: 'Which plants have shaped entire civilizations?', choices: ['Rice, wheat, and maize.', 'Roses and tulips.', 'Weeds in the pavement.', 'Grass in the park.'], answer: 0, why: '第4段落 such as rice, wheat, and maize。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
