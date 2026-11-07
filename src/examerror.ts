@@ -9397,6 +9397,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'On [hear] the noise, the cat jumped off the sofa.', choices: ['hearing', 'heard', 'to hear', 'hears'], answer: 0, why: '前置詞 on のあとは動名詞 hearing。' },
     ],
   },
+  {
+    id: 'exam-fix-221',
+    title: '入試の誤文訂正〈221〉（京大レベル：英作文の anything but・nothing but・all but）',
+    points: ['but は「～以外」の意味の前置詞としても使われる。anything but ～「けっして～ではない（～以外なら何でも）」、nothing but ～「～だけ（～以外は何もない）＝only」、all but ～「ほとんど～（＝almost）」。意味が正反対になりやすいので、文の内容から選ぶ。'],
+    examples: [{ en: 'The test was anything but easy. / He did nothing but sleep all day.', ja: 'そのテストはけっしてかんたんではなかった。／彼は一日中ねてばかりいた。' }],
+    questions: [
+      { sentence: 'The movie was [nothing but] interesting; I almost fell asleep.', choices: ['anything but', 'all but', 'but for', 'nothing more'], answer: 0, why: '「ねむりそうになった」ので「けっしておもしろくない」anything but。' },
+      { sentence: 'He ate [anything but] bread for a week because he had no money.', choices: ['nothing but', 'all but', 'but anything', 'everything but'], answer: 0, why: 'お金がなくパンだけを食べたので nothing but（＝only）。' },
+      { sentence: 'The work is [nothing but] finished; only one page remains.', choices: ['all but', 'anything but', 'but all', 'not but'], answer: 0, why: '残り1ページなので「ほとんど終わった」all but（＝almost）。' },
+      { sentence: 'She is [all but] shy; she talks to everyone she meets.', choices: ['anything but', 'nothing but', 'but all', 'all except'], answer: 0, why: 'だれとでも話すので「けっして内気ではない」anything but。' },
+      { sentence: 'The baby did [anything but] cry all night long.', choices: ['nothing but', 'all but', 'but nothing', 'everything'], answer: 0, why: '一晩中泣いてばかりいたので nothing but cry。' },
+      { sentence: 'After the storm, the old bridge was [anything but] destroyed; it could not be used.', choices: ['all but', 'nothing but', 'not but', 'but all'], answer: 0, why: '使えないほどだったので「ほとんどこわれた」all but。' },
+      { sentence: 'I want [all but] the truth from you.', choices: ['nothing but', 'anything but', 'but all', 'not all'], answer: 0, why: '「真実だけ」がほしいので nothing but。' },
+      { sentence: 'His explanation was [all but] clear, so nobody understood it.', choices: ['anything but', 'nothing but', 'but not', 'all clear'], answer: 0, why: 'だれも理解できなかったので「けっして明確ではない」anything but。' },
+      { sentence: 'The team [anything but] won the game; they lost by just one point.', choices: ['all but', 'nothing but', 'but nothing', 'all not'], answer: 0, why: '1点差で負けたので「もう少しで勝つところだった」all but won。' },
+      { sentence: 'This room has [all but] books in it; there is no furniture at all.', choices: ['nothing but', 'anything but', 'but nothing', 'not but'], answer: 0, why: '家具はなく本だけなので nothing but books。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

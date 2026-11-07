@@ -3137,3 +3137,10 @@ it('正誤問題〈227〉：東大レベル recently・these days・nowadays の
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) worked')
 })
+
+it('誤文訂正〈221〉：京大レベル anything but・nothing but・all but の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-221')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('anything but')
+})
