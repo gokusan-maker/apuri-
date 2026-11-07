@@ -5433,6 +5433,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I (B) have been (C) very busy (D) these day.', choices: ['(A) I', '(B) have been', '(C) very busy', '(D) these day'], answer: 3, why: '「最近」は these days（複数形）。' },
     ],
   },
+  {
+    id: 'exam-error-used-to-would-kokuritsu',
+    title: '入試の正誤問題〈228〉（国公立レベル：過去の習慣 used to と would の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'used to ～ は「以前は～したものだ（今はちがう）」で、過去の習慣（動作）にも状態にも使える（I used to live in Kyoto.／There used to be a tree here.）。would ～ は過去にくり返した動作だけに使い、be・have・know・live のような状態には使わない。',
+      'used to・would のあとは動詞の原形。疑問文・否定文は Did you use to ～?／didn’t use to ～。be used to ～ing「～になれている」と区別する。',
+    ],
+    examples: [
+      { en: 'There used to be a big tree in front of my house.', ja: '以前は家の前に大きな木があった。' },
+      { en: 'When I was a child, I would go fishing with my father.', ja: '子どものころ、よく父とつりに行ったものだ。' },
+    ],
+    questions: [
+      { sentence: '(A) There (B) would be (C) a big tree (D) in front of my house.', choices: ['(A) There', '(B) would be', '(C) a big tree', '(D) in front of my house'], answer: 1, why: '過去の状態（存在）は would ではなく used to なので There used to be。' },
+      { sentence: '(A) When I was a child, (B) I would (C) going (D) fishing with my father.', choices: ['(A) When I was a child,', '(B) I would', '(C) going', '(D) fishing with my father'], answer: 2, why: 'would のあとは動詞の原形なので go。' },
+      { sentence: '(A) My grandmother (B) used to (C) lived (D) in Kyoto.', choices: ['(A) My grandmother', '(B) used to', '(C) lived', '(D) in Kyoto'], answer: 2, why: 'used to のあとは動詞の原形なので live。' },
+      { sentence: '(A) He (B) would (C) have (D) long hair when he was young.', choices: ['(A) He', '(B) would', '(C) have', '(D) long hair when he was young'], answer: 1, why: '過去の状態（髪が長かった）は would ではなく used to have。' },
+      { sentence: '(A) Did (B) you (C) used to (D) play the piano?', choices: ['(A) Did', '(B) you', '(C) used to', '(D) play the piano?'], answer: 2, why: '疑問文では Did you use to ～ なので use to。' },
+      { sentence: '(A) I (B) am used to (C) walk (D) to school every day when I was little.', choices: ['(A) I', '(B) am used to', '(C) walk', '(D) to school every day when I was little'], answer: 1, why: '過去の習慣は used to walk。be used to は「～になれている」で ～ing をとる。' },
+      { sentence: '(A) In ten years ago, (B) there used to (C) be (D) a park here.', choices: ['(A) In ten years ago,', '(B) there used to', '(C) be', '(D) a park here'], answer: 0, why: 'ago は前置詞 in といっしょに使わないので Ten years ago。' },
+      { sentence: '(A) This building (B) used to (C) being (D) a hospital.', choices: ['(A) This building', '(B) used to', '(C) being', '(D) a hospital'], answer: 2, why: 'used to のあとは原形なので be。' },
+      { sentence: '(A) She (B) would (C) know (D) everyone in the village back then.', choices: ['(A) She', '(B) would', '(C) know', '(D) everyone in the village back then'], answer: 1, why: 'know は状態をあらわす動詞なので would ではなく used to know。' },
+      { sentence: '(A) Every summer, (B) we would (C) visit (D) to our uncle in the country.', choices: ['(A) Every summer,', '(B) we would', '(C) visit', '(D) to our uncle in the country'], answer: 3, why: 'visit は他動詞なので to をつけず visit our uncle。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
