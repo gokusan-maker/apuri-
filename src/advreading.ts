@@ -40862,6 +40862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rain',
+    title: 'On Rain',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few experiences are as common, or as easily dismissed, as rain. In many parts of the world, it falls so often that people hardly notice it except as an inconvenience, something that spoils plans, soaks clothes, and slows traffic. Weather forecasts treat it as a problem to be predicted and avoided, and we speak of a rainy day as a symbol of misfortune. Yet rain is also one of the most essential and quietly remarkable phenomena on Earth, and our attitudes toward it may reveal much about our relationship with the natural world.",
+      "At the most basic level, rain makes life possible. It fills rivers and lakes, nourishes crops and forests, and replenishes the underground water on which billions of people depend. In regions where rain is scarce, its arrival may be celebrated with joy, and many cultures have developed rituals and prayers asking for it. The same shower that a city dweller regards as a nuisance may mean, to a farmer in a dry land, the difference between a good harvest and hunger.",
+      "Rain also transforms the way the world appears and feels. Streets that seemed dull and gray take on a new brightness as they reflect lights, and the air is filled with a distinctive scent that many people find pleasant and calming. ( A ) a sudden storm can be frightening, a gentle rain often has the opposite effect, slowing the rhythm of the day and inviting people to stay indoors, listen to the sound on the roof, and turn their attention inward. Many people find that they read, think, or talk more deeply on such days, as though the steady sound outside had created a protective space in which reflection becomes easier.",
+      "For writers and artists, rain has long served as a source of inspiration. It can suggest sadness and loneliness, as in countless stories in which characters part beneath gray skies, but it can also symbolize renewal and cleansing, washing away dust and allowing new growth to begin. The same phenomenon thus carries opposite meanings, depending on the mood of the observer and the context in which it appears, reminding us how much our perception of nature is shaped by our own feelings.",
+      "Modern life, however, has distanced many people from the experience of rain. Covered walkways, cars, and climate-controlled buildings allow us to move through the world while remaining almost entirely dry, and many children rarely have the chance to play outside in the rain or to watch puddles form and disappear. This protection brings obvious comforts, but it may also reduce our awareness of the natural cycles on which our lives depend and make weather seem like something that happens elsewhere.",
+      "At the same time, changes in the climate are making rain more unpredictable in many regions. Some places are experiencing longer droughts, while others face heavier downpours that cause floods and landslides. Such changes remind us that rain is not merely a backdrop to human activity but a powerful force that shapes where and how people can live, and that the balance on which we have long relied can be disturbed by human actions. Learning to value rain, in this sense, may also mean learning to protect the conditions that make it reliable.",
+      "In the end, paying attention to rain may help us recover a sense of our place in the world. To notice the smell of wet earth, the changing sound of drops on different surfaces, or the way plants seem to brighten after a shower is to be reminded that we live within a larger system of air, water, and life. Rain, so often regarded as an inconvenience, may thus offer a quiet lesson in humility and gratitude for the forces that sustain us.",
+    ],
+    ja: [
+      '雨ほどありふれていて、しかもかんたんに軽く見られる経験はほとんどない。世界の多くの地域では、雨があまりにしばしばふるので、人々は予定をだめにし、服をぬらし、交通をおくらせる不便なものとしてしか、ほとんど気にとめない。天気予報は雨を予測してさけるべき問題としてあつかい、私たちは雨の日を不運の象徴として語る。しかし雨は、地球上でもっとも欠かせない、しずかにおどろくべき現象の一つでもあり、雨に対する私たちの態度は、自然の世界との関係について多くを明らかにするかもしれない。',
+      'もっとも基本的な次元では、雨は生命を可能にしている。雨は川や湖を満たし、作物や森を育て、何十億もの人々がたよる地下水をおぎなう。雨の少ない地域では、雨がふるとよろこびをもって祝われることがあり、多くの文化が雨を求める儀式や祈りを生み出してきた。都会に住む人がやっかいなものと見なす同じにわか雨が、かわいた土地の農家にとっては、よい収穫と飢えの分かれ目を意味することもある。',
+      '雨はまた、世界の見え方と感じ方を変える。くすんで灰色に見えた通りが明かりを映して新しい明るさをおび、空気は多くの人が心地よく落ち着くと感じる独特のにおいで満たされる。急なあらしはこわいこともあるが、しずかな雨はしばしば反対の効果をもち、一日のリズムをゆるめ、人々を家の中にとどまらせ、屋根に当たる音に耳をかたむけさせ、注意を内側へ向けさせる。多くの人は、そうした日にはより深く読んだり、考えたり、話したりできることに気づく。まるで外のたえまない音が、ふり返ることをしやすくする守られた空間をつくり出したかのようである。',
+      '作家や芸術家にとって、雨は長いあいだひらめきの源の役割を果たしてきた。雨は、登場人物たちが灰色の空の下で別れる数えきれない物語のように、悲しみやさびしさをあらわすこともあるが、ほこりを洗い流し、新しい成長がはじまるのを可能にする、再生や清めの象徴になることもある。このように同じ現象が、見る人の気分やそれがあらわれる文脈によって正反対の意味をおび、自然についての私たちの感じ方が、どれほど自分自身の感情によって形づくられているかを思い出させてくれる。',
+      'しかし現代の暮らしは、多くの人を雨の経験から遠ざけてきた。屋根つきの通路や車や空調のきいた建物のおかげで、私たちはほとんどまったくぬれずに世界を動きまわることができ、多くの子どもたちは雨の中で外遊びをしたり、水たまりができては消えるのをながめたりする機会がめったにない。この守りはわかりやすい快適さをもたらすが、私たちの暮らしがたよっている自然の循環への気づきをうすれさせ、天気をどこか別の場所で起きることのように思わせるかもしれない。',
+      '同時に、気候の変化によって、多くの地域で雨はより予測しにくくなっている。より長い干ばつにみまわれている場所もあれば、洪水や土砂くずれをひき起こす、よりはげしい大雨にさらされている場所もある。こうした変化は、雨がただ人間の活動の背景ではなく、人々がどこにどう住めるかを形づくる強い力であること、そして私たちが長いあいだたよってきたつりあいが人間の行いによってみだされうることを思い出させてくれる。この意味で、雨を大切にすることを学ぶとは、雨をたよれるものにしている条件を守ることを学ぶことでもあるのかもしれない。',
+      '結局のところ、雨に注意をはらうことは、世界の中の自分の居場所の感覚を取りもどす助けになるかもしれない。ぬれた土のにおいや、ちがうものに当たるしずくの音の変化や、にわか雨のあとに植物が明るくなったように見えるようすに気づくことは、私たちが空気と水と生命のより大きな仕組みの中に生きていることを思い出させてくれる。だから、しばしば不便なものと見なされる雨は、私たちをささえる力へのけんきょさと感謝について、しずかな教えをあたえてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「急なあらしはこわいこともあるが、しずかな雨は反対の効果をもつ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '雨の少ない地域では、雨がよろこびをもって祝われることがある。', answer: true, why: '第2段落 its arrival may be celebrated with joy。' },
+      { statement: '筆者によれば、雨はいつも悲しみだけをあらわす。', answer: false, why: '第4段落 it can also symbolize renewal and cleansing。' },
+      { statement: '多くの子どもたちは、雨の中で外遊びをする機会がめったにない。', answer: true, why: '第5段落 many children rarely have the chance to play outside in the rain。' },
+      { statement: '気候の変化によって、雨はより予測しやすくなっている。', answer: false, why: '第6段落 making rain more unpredictable。' },
+    ],
+    qa: [
+      { q: 'What might a shower mean to a farmer in a dry land?', choices: ['The difference between a good harvest and hunger.', 'A spoiled plan.', 'A reason to stay indoors.', 'A sign of bad luck.'], answer: 0, why: '第2段落 the difference between a good harvest and hunger。' },
+      { q: 'What do changes in rain remind us of, according to the author?', choices: ['That rain is a powerful force that shapes where and how people can live.', 'That rain is only a backdrop.', 'That weather forecasts are always right.', 'That floods never happen.'], answer: 0, why: '第6段落 a powerful force that shapes where and how people can live。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
