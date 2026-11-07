@@ -41138,6 +41138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-health-data',
+    title: 'Should Medical Records Be Shared for Research?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every visit to a doctor, every blood test, and every hospital stay produces information about a patient's health. In many countries, this information is now stored in digital records that could, in principle, be combined into vast databases covering millions of people. Researchers argue that such databases could transform medicine, revealing patterns of disease and the effects of treatments in ways that small studies never could. Yet the prospect of sharing personal health information on such a scale also raises serious concerns about privacy, consent, and trust.",
+      "Supporters argue that combining health records offers extraordinary opportunities for medical progress. By studying the experiences of very large numbers of patients, researchers can identify rare side effects of medicines, discover which treatments work best for particular groups, and detect the early signs of diseases before they become serious. During outbreaks of infectious disease, rapid access to health data can help authorities understand how an illness is spreading and which people are most at risk, allowing them to respond more quickly and effectively. Supporters point out that some of the most important discoveries in public health, such as the link between smoking and lung cancer, were made by studying the records of large populations over many years.",
+      "Supporters also emphasize that such research can benefit everyone, including those whose data are used. A treatment developed or improved through the analysis of shared records may one day help the very patients who contributed their information, or their children and grandchildren. ( A ) individual patients may never know exactly how their data have been used, supporters argue, they participate in a collective effort that improves health care for society as a whole, much as people contribute to public services through taxes.",
+      "Critics, however, warn that health information is among the most sensitive kinds of personal data. Records may reveal details about mental illness, sexual health, genetic conditions, or addiction that people may not wish to share even with close friends. If such information were to be leaked, stolen, or misused, the consequences could include embarrassment, discrimination by employers or insurers, and a loss of trust in the health care system itself, which might discourage people from seeking treatment when they need it.",
+      "Critics also question whether removing names and addresses from records is enough to protect privacy. Researchers have shown that it is sometimes possible to identify individuals by combining supposedly anonymous data with other information, such as dates of birth or locations. Furthermore, critics worry that health data may be shared not only with university researchers working for the public good, but also with private companies seeking to profit from it, raising questions about who should benefit from information that belongs to patients. If a company earns large profits from medicines developed with public data, critics ask, should some of those profits be returned to the health system?",
+      "Many experts believe that the key to resolving these tensions lies in transparency and public trust. They suggest that patients should be clearly informed about how their data may be used, given the opportunity to opt out if they wish, and assured that strict rules will govern access. Independent bodies could review requests to use health data, and the results of research could be published openly, so that the public can see the benefits of their contributions.",
+      "The debate over sharing health data ultimately reflects a broader question about the balance between individual privacy and the common good. Medical knowledge has always depended on the experiences of patients, and modern technology makes it possible to learn from those experiences on an unprecedented scale. Whether societies embrace this possibility will depend on whether they can build systems that protect individuals while allowing their information to contribute to the health of millions of others.",
+    ],
+    ja: [
+      '医者にかかるたびに、血液検査を受けるたびに、入院するたびに、患者の健康についての情報が生まれる。多くの国で、この情報は今ではデジタルの記録に保存されており、理くつの上では、何百万人もの人々をふくむ巨大なデータベースにまとめることができる。研究者たちは、そうしたデータベースが医学を大きく変え、小さな研究ではけっしてできないやり方で、病気のパターンや治療の効果を明らかにしうると主張する。しかし、個人の健康の情報をそのような規模で分かち合うという見通しは、プライバシーや同意や信頼についての重大な心配も生んでいる。',
+      '支持する人々は、健康の記録をまとめることは医学の進歩のためのとてつもない機会をあたえると主張する。とても多くの患者の経験を調べることで、研究者は薬のめずらしい副作用を見つけ、特定の集団にどの治療がもっともよく効くかを発見し、病気が重くなる前にその早いきざしに気づくことができる。感染症が広がるときには、健康のデータにすばやくアクセスできれば、当局が病気がどう広がっているか、どの人々がもっとも危険にさらされているかを理解する助けになり、より速く効果的に対応できるようになる。たばことがんの結びつきのような、公衆衛生のもっとも重要な発見のいくつかは、多くの人々の記録を何年にもわたって調べることでなされたと支持する人々は指摘する。',
+      '支持する人々はまた、そうした研究は、データを使われる人々をふくめて、すべての人の役に立ちうると強調する。分かち合われた記録の分析を通じて開発されたりよくされたりした治療が、いつか情報を提供したまさにその患者や、その子どもや孫を助けるかもしれない。一人一人の患者は自分のデータが正確にどう使われたかを知ることはないかもしれないが、人々が税を通じて公共サービスに貢献するのと同じように、社会全体の医療をよくする共同の努力に参加しているのだと支持する人々は主張する。',
+      'しかし批判する人々は、健康の情報は個人のデータの中でももっとも敏感なものの一つだと警告する。記録は、心の病気や性の健康や遺伝的な状態や依存症について、人々が親しい友だちにさえ話したくないかもしれないくわしいことを明らかにすることがある。もしそうした情報がもれたり、ぬすまれたり、悪用されたりすれば、その結果には、はずかしさや、雇い主や保険会社による差別や、医療の仕組みそのものへの信頼の喪失がふくまれうる。そうなれば、人々は必要なときに治療を受けるのをためらうようになるかもしれない。',
+      '批判する人々はまた、記録から名前や住所を取りのぞくだけでプライバシーを守るのに十分なのかと疑問を投げかける。研究者たちは、匿名のはずのデータを、生年月日や場所のようなほかの情報と組み合わせることで、個人を特定できる場合があることを示してきた。さらに、健康のデータが、公共の利益のために働く大学の研究者だけでなく、それから利益を得ようとする民間企業とも分かち合われるかもしれないと批判する人々は心配しており、患者のものである情報からだれが利益を得るべきなのかという疑問を投げかけている。もし企業が公共のデータを使って開発した薬で大きな利益を得たなら、その利益の一部を医療の仕組みにもどすべきではないかと批判する人々は問う。',
+      '多くの専門家は、こうした緊張を解く鍵は、透明性と人々の信頼にあると考えている。患者には、自分のデータがどう使われうるかがはっきりと知らされ、望めば参加をことわる機会があたえられ、きびしい規則が利用を管理することが保証されるべきだと彼らは提案する。独立した機関が健康のデータを使いたいという求めを審査し、研究の結果を公に発表すれば、人々は自分の貢献の利益を目にすることができるだろう。',
+      '健康のデータを分かち合うことをめぐる議論は、結局のところ、個人のプライバシーと共通の利益のつりあいについての、より広い問いを反映している。医学の知識はいつも患者の経験にたよってきたのであり、現代の技術は、これまでにない規模でその経験から学ぶことを可能にしている。社会がこの可能性を受け入れるかどうかは、個人を守りながら、その情報が何百万ものほかの人々の健康に役立つようにする仕組みを築けるかどうかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「どう使われたかを知ることはないかもしれないが、共同の努力に参加している」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that combining health records offers great opportunities for medical ( 1 ). Critics warn that health information is highly ( 2 ) and that removing names may not protect privacy. Many experts believe the key lies in transparency and public ( 3 ).',
+      blanks: [
+        { choices: ['progress', 'fashion', 'sports', 'music'], answer: 0, why: '第2段落 extraordinary opportunities for medical progress。' },
+        { choices: ['sensitive', 'cheap', 'boring', 'simple'], answer: 0, why: '第4段落 among the most sensitive kinds of personal data。' },
+        { choices: ['trust', 'noise', 'anger', 'speed'], answer: 0, why: '第6段落 lies in transparency and public trust。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの患者の経験を調べれば、薬のめずらしい副作用を見つけられる。', answer: true, why: '第2段落 researchers can identify rare side effects of medicines。' },
+      { statement: '健康の情報は、だれにでも気軽に話せる種類のものだと批判する人々は言う。', answer: false, why: '第4段落 that people may not wish to share even with close friends。' },
+      { statement: '匿名のはずのデータから、個人を特定できる場合がある。', answer: true, why: '第5段落 it is sometimes possible to identify individuals。' },
+      { statement: '専門家は、患者に参加をことわる機会をあたえるべきではないと言う。', answer: false, why: '第6段落 given the opportunity to opt out if they wish。' },
+    ],
+    qa: [
+      { q: 'During outbreaks, how can rapid access to health data help authorities?', choices: ['By showing how an illness is spreading and who is most at risk.', 'By making medicine cheaper.', 'By closing hospitals.', 'By hiding information from the public.'], answer: 0, why: '第2段落 understand how an illness is spreading and which people are most at risk。' },
+      { q: 'What might happen if health information were leaked or misused?', choices: ['People might be discouraged from seeking treatment.', 'People would visit doctors more often.', 'Research would become faster.', 'Insurance would become free.'], answer: 0, why: '第4段落 which might discourage people from seeking treatment when they need it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
