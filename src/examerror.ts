@@ -5583,6 +5583,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) She (B) introduced (C) her sister (D) us.', choices: ['(A) She', '(B) introduced', '(C) her sister', '(D) us'], answer: 3, why: 'introduce 人 to 人 の形なので to us。' },
     ],
   },
+  {
+    id: 'exam-error-must-not-have-to-kokuritsu',
+    title: '入試の正誤問題〈234〉（国公立レベル：must not と don’t have to・need not の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'must not（mustn’t）は「～してはいけない」という禁止、don’t have to と need not（needn’t）は「～する必要はない」。must と have to はどちらも「～しなければならない」だが、否定にすると意味が大きく変わる。',
+      'must・need（助動詞）のあとは原形（must not touch・need not bring）。have to の否定は don’t (doesn’t／didn’t) have to ＋原形。',
+    ],
+    examples: [
+      { en: 'You must not smoke in the hospital.', ja: '病院でたばこを吸ってはいけない。' },
+      { en: 'Tomorrow is a holiday, so you don’t have to get up early.', ja: '明日は休みなので、早く起きる必要はない。' },
+    ],
+    questions: [
+      { sentence: '(A) Tomorrow is a holiday, (B) so you (C) must not (D) get up early.', choices: ['(A) Tomorrow is a holiday,', '(B) so you', '(C) must not', '(D) get up early'], answer: 2, why: '「起きる必要はない」は don’t have to（must not は「してはいけない」）。' },
+      { sentence: '(A) You (B) don’t have to (C) smoke (D) in the hospital.', choices: ['(A) You', '(B) don’t have to', '(C) smoke', '(D) in the hospital'], answer: 1, why: '「吸ってはいけない」という禁止なので must not。' },
+      { sentence: '(A) She (B) doesn’t have (C) worry (D) about the test.', choices: ['(A) She', '(B) doesn’t have', '(C) worry', '(D) about the test'], answer: 2, why: 'don’t have to のあとに to が必要なので doesn’t have to worry。' },
+      { sentence: '(A) Students (B) need not to (C) bring (D) lunch tomorrow.', choices: ['(A) Students', '(B) need not to', '(C) bring', '(D) lunch tomorrow'], answer: 1, why: '助動詞の need not のあとは原形なので need not bring（to をつけない）。' },
+      { sentence: '(A) You (B) must (C) not to (D) touch the paintings.', choices: ['(A) You', '(B) must', '(C) not to', '(D) touch the paintings'], answer: 2, why: 'must not のあとは原形なので must not touch。' },
+      { sentence: '(A) He (B) has not to (C) wear (D) a tie at work.', choices: ['(A) He', '(B) has not to', '(C) wear', '(D) a tie at work'], answer: 1, why: '「～する必要がない」は doesn’t have to（has not to は使わない）。' },
+      { sentence: '(A) We (B) didn’t have to (C) waited (D) long for the bus.', choices: ['(A) We', '(B) didn’t have to', '(C) waited', '(D) long for the bus'], answer: 2, why: 'didn’t have to のあとは原形なので wait。' },
+      { sentence: '(A) Mustn’t (B) worry; (C) everything (D) will be fine.', choices: ['(A) Mustn’t', '(B) worry;', '(C) everything', '(D) will be fine'], answer: 0, why: '「心配しないで」という命令は Don’t worry。mustn’t の前には主語が必要。' },
+      { sentence: '(A) Visitors (B) must not (C) take (D) photo in the museum.', choices: ['(A) Visitors', '(B) must not', '(C) take', '(D) photo in the museum'], answer: 3, why: 'photo は数えられる名詞なので photos（photographs）。' },
+      { sentence: '(A) Must (B) we (C) finishing (D) this today?', choices: ['(A) Must', '(B) we', '(C) finishing', '(D) this today?'], answer: 2, why: 'must のあとは原形なので finish。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
