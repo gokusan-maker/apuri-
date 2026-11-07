@@ -42222,6 +42222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-stairs',
+    title: 'On Stairs',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the parts of a building, stairs are perhaps the ones we notice least, even though most of us climb and descend them many times every day. We tend to think of them simply as a practical solution to the problem of moving between floors, and once a lift or an escalator is available, we often avoid them altogether. Yet stairs have a long and surprisingly rich history, and the way a society builds them can reveal a great deal about how it thinks about effort, about power, and about the relationship between the body and the spaces it inhabits.",
+      "In many ancient civilizations, stairs were not only practical but also deeply symbolic. Long flights of steps led up to temples, palaces, and tombs, and the effort required to climb them was part of their meaning, since to approach a sacred place or a ruler was to rise slowly above the ordinary world. The higher and steeper the stairs, the more clearly they expressed the distance between those who stood at the top and those who waited at the bottom, and even today the grand staircases of courts and parliaments preserve something of this ancient message.",
+      "At the same time, stairs have always been shaped by the human body. Builders discovered long ago that steps which are too high exhaust people quickly, while steps which are too shallow make them stumble, and over centuries they arrived at rules relating the height of each step to the length of a normal stride. ( A ) these rules are rarely noticed by the people who follow them, they explain why a well-designed staircase feels almost effortless, and why a badly designed one can make even a healthy person feel clumsy and uncertain.",
+      "Stairs also change the way we experience time and movement inside a building. A lift carries us from one floor to another in a closed box, so that we arrive without having seen anything in between, but a staircase allows us to watch a space unfold gradually as we climb. Architects have often used this quality deliberately, placing windows on landings or turning a staircase so that each new section reveals a different view, and in such buildings climbing becomes a small journey rather than a mere interruption between two destinations.",
+      "In recent decades, however, stairs have increasingly been hidden away. In many modern office buildings, the main staircase is enclosed behind heavy doors and used mainly as an emergency exit, while visitors and workers are guided towards lifts that stand in the most prominent position. This arrangement reflects an understandable desire for convenience and accessibility, since stairs can be a serious barrier for people who use wheelchairs or have difficulty walking, but it also means that a form of everyday physical activity has quietly disappeared from many people's lives.",
+      "Some designers have begun to respond by making stairs attractive again. They place open, well-lit staircases near entrances, so that climbing a floor or two becomes the natural choice for those who are able, while lifts and ramps remain available for everyone who needs them. Studies suggest that people are far more likely to take the stairs when they are pleasant and easy to find, which indicates that our habits depend less on personal willpower than on the environments that architects and planners create around us.",
+      "Perhaps, then, stairs deserve more attention than we usually give them. Each step records a long conversation between human needs and human ambitions, between the wish to make movement easy and the belief that some places are worth a little effort to reach. To climb a staircase thoughtfully is to take part in that conversation, and perhaps to remember that the effort we so often try to avoid can also be a source of pleasure, of health, and even of a quiet sense of achievement when we finally reach the top.",
+    ],
+    ja: [
+      '建物のあらゆる部分のなかで、階段はおそらくもっとも気づかれない部分だろう。私たちの多くは毎日何度もそれを上り下りしているにもかかわらず、である。私たちは階段を、階と階のあいだを移動するという問題への実用的な解決策としか考えない傾向があり、エレベーターやエスカレーターがあれば、まったく使わないことも多い。しかし階段には長く驚くほど豊かな歴史があり、ある社会がどのように階段をつくるかは、その社会が努力について、権力について、そして体とそれが住まう空間との関係について、どう考えているかを多く明らかにしうる。',
+      '多くの古代文明において、階段は実用的であるだけでなく、深い象徴的な意味ももっていた。長い石段が神殿や宮殿、墓へと続き、それを上るのに必要な努力がその意味の一部だった。聖なる場所や支配者に近づくことは、ふつうの世界からゆっくりと上へのぼることだったからである。階段が高く急であるほど、頂上に立つ者と下で待つ者とのへだたりがはっきりと表され、今日でも、宮廷や議会の壮大な階段は、この古代のメッセージのなにかを保っている。',
+      '同時に、階段はつねに人間の体によって形づくられてきた。建てる人々は昔から、高すぎる段はすぐに人をつかれさせ、低すぎる段はつまずかせることに気づいており、何世紀もかけて、一段の高さをふつうの歩はばの長さに関係づける決まりにたどりついた。こうした決まりは、それに従う人々にはめったに気づかれないが、よく設計された階段がほとんど力をつかわないように感じられる理由や、まずく設計された階段が健康な人さえぎこちなく不安にさせうる理由を説明している。',
+      '階段はまた、建物のなかで私たちが時間と動きを経験するしかたも変える。エレベーターは閉じた箱で私たちをある階から別の階へ運ぶので、私たちはそのあいだのものを何も見ずに到着するが、階段は、上るにつれて空間が少しずつ広がっていくのを見ることを可能にする。建築家はしばしばこの性質を意図して使い、踊り場に窓を置いたり、新しい区切りごとにちがう眺めが見えるよう階段を曲げたりしてきた。そのような建物では、上ることは、二つの目的地のあいだの単なる中断ではなく、小さな旅になる。',
+      'しかしここ数十年、階段はますます隠されるようになってきた。多くの現代のオフィスビルでは、主な階段は重い扉の向こうに閉じこめられ、おもに非常口として使われる一方、訪問者や働く人は、もっとも目立つ場所にあるエレベーターへと導かれる。この配置は、便利さと使いやすさへの理解できる願いを反映している。車いすを使う人や歩くのがむずかしい人にとって、階段は大きな障害になりうるからである。しかしそれはまた、日常の体の活動の一つが、多くの人々の生活からしずかに消えてしまったことも意味している。',
+      'これに応えて、階段をふたたび魅力的にしようとしはじめた設計者もいる。彼らは入口の近くに開放的で明るい階段を置き、上れる人にとって一、二階上がることが自然な選択になるようにする一方、必要とするすべての人のためにエレベーターやスロープも用意しておく。研究によれば、人々は階段が心地よく見つけやすいとき、はるかに階段を使いやすくなるという。このことは、私たちの習慣が、個人の意志の力よりも、建築家や計画者が私たちのまわりにつくる環境に左右されることを示している。',
+      'だとすれば、階段は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。一つ一つの段は、人間の必要と人間の大志とのあいだの、つまり動きを楽にしたいという願いと、ある場所には少しの努力をしてでもたどりつく価値があるという信念とのあいだの、長い対話を記録している。よく考えながら階段を上ることは、その対話に加わることであり、もしかすると、私たちがしばしばさけようとする努力が、楽しみや健康の源にもなり、ついに頂上にたどりついたときには、しずかな達成感の源にさえなりうることを思い出すことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「決まりはめったに気づかれないが、よい階段が楽に感じられる理由を説明する」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '古代では、階段を上る努力そのものが意味の一部だった。', answer: true, why: '第2段落 the effort required to climb them was part of their meaning。' },
+      { statement: '段は低ければ低いほど、歩きやすくなる。', answer: false, why: '第3段落 steps which are too shallow make them stumble。' },
+      { statement: '多くの現代のオフィスビルでは、主な階段がおもに非常口として使われている。', answer: true, why: '第5段落 used mainly as an emergency exit。' },
+      { statement: '筆者は、階段を使うかどうかは個人の意志の力だけで決まると述べている。', answer: false, why: '第6段落 depend less on personal willpower than on the environments。' },
+    ],
+    qa: [
+      { q: 'What does a staircase allow us to do that a lift does not?', choices: ['Watch a space unfold gradually as we climb.', 'Arrive more quickly.', 'Carry heavy luggage.', 'Avoid all effort.'], answer: 0, why: '第4段落 a staircase allows us to watch a space unfold gradually as we climb。' },
+      { q: 'Where do some designers place open, well-lit staircases?', choices: ['Near entrances.', 'Behind heavy doors.', 'In basements.', 'On the roof.'], answer: 0, why: '第6段落 They place open, well-lit staircases near entrances。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
