@@ -9784,6 +9784,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Do you think it will be sunny? — [Yes, I think it].', choices: ['Yes, I think so', 'Yes, I think that', 'Yes, I think yes', 'Yes, I so think'], answer: 0, why: '「そう思う」は I think so。' },
     ],
   },
+  {
+    id: 'exam-fix-230',
+    title: '入試の誤文訂正〈230〉（京大レベル：英作文の接続詞の重ね使い Although ～, but・Because ～, so をさける）',
+    points: ['日本語の「～だけれど、…」「～なので、…」につられて、英語で Although ～, but … や Because ～, so … のように接続詞を2つ重ねるのはまちがい。Although か but、Because か so のどちらか一方だけを使う（○Although it rained, we went out. ○It rained, but we went out.）。', 'though・even though・while・since・as も同じで、主節の前に but や so をつけない。because of ＋名詞・despite ＋名詞は前置詞なので、うしろに文（主語＋動詞）はおかない。'],
+    examples: [{ en: 'Although the road was icy, we arrived on time. / Because the bus was late, I took a taxi.', ja: '道はこおっていたけれど、私たちは時間どおりに着いた。／バスがおくれたので、私はタクシーに乗った。' }],
+    questions: [
+      { sentence: 'Although it was raining, [but we went] for a walk.', choices: ['we went', 'so we went', 'and we went', 'but went we'], answer: 0, why: 'Although があるので but は不要。Although ～, we went for a walk。' },
+      { sentence: 'Because the train was delayed, [so I was] late for school.', choices: ['I was', 'but I was', 'and so I was', 'so was I'], answer: 0, why: 'Because があるので so は不要。Because ～, I was late。' },
+      { sentence: 'Though he is rich, [but he lives] in a small flat.', choices: ['he lives', 'so he lives', 'and he lives', 'yet but he lives'], answer: 0, why: 'Though があるので but は不要。Though he is rich, he lives ～。' },
+      { sentence: 'Since it was a holiday, [so the shops were] closed.', choices: ['the shops were', 'but the shops were', 'and so the shops were', 'so were the shops'], answer: 0, why: '理由の Since があるので so は不要。' },
+      { sentence: 'Even though she was tired, [but she kept] working.', choices: ['she kept', 'so she kept', 'and she kept', 'but kept she'], answer: 0, why: 'Even though があるので but は不要。' },
+      { sentence: 'As I had no money, [so I could not] buy the book.', choices: ['I could not', 'but I could not', 'and so I could not', 'so could not I'], answer: 0, why: '理由の As があるので so は不要。' },
+      { sentence: 'We stayed at home [because of it was] very cold.', choices: ['because it was', 'because of was it', 'because of it being so', 'because of that was'], answer: 0, why: 'because of のうしろは名詞。文が続くので because it was very cold。' },
+      { sentence: '[Despite it rained] heavily, the game was not cancelled.', choices: ['Although it rained', 'Despite rained it', 'Despite of it rained', 'Although of it rained'], answer: 0, why: 'despite は前置詞なので文は続けられない。Although it rained heavily, ～。' },
+      { sentence: 'While I understand your point, [but I cannot] agree with you.', choices: ['I cannot', 'so I cannot', 'and I cannot', 'but cannot I'], answer: 0, why: '譲歩の While があるので but は不要。' },
+      { sentence: 'Because he practised every day, [so he won] the contest.', choices: ['he won', 'but he won', 'and so he won', 'so won he'], answer: 0, why: 'Because があるので so は不要。Because ～, he won the contest。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
