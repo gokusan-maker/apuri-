@@ -42418,6 +42418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-referendums',
+    title: 'Should Major Decisions Be Made by Referendum?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In most democracies, citizens do not make laws themselves. Instead, they elect representatives who debate and vote on their behalf, and if voters are unhappy with the results, they can choose different representatives at the next election. From time to time, however, governments ask the whole population to decide a single important question directly, by means of a referendum. Such votes have been used to settle questions as varied as changes to a constitution, membership of international organizations, and moral issues on which opinion is deeply divided, and they have become the subject of intense debate.",
+      "Supporters argue that referendums are the purest form of democracy. When a decision will shape the future of a country for generations, they say, it is only right that every citizen should have an equal voice in making it, rather than leaving it to a small number of politicians who may be influenced by their parties or by powerful interest groups. Supporters also point out that a decision approved directly by the people is likely to be seen as more legitimate, and therefore easier to accept, than one reached by representatives behind closed doors.",
+      "Supporters further claim that referendums can encourage citizens to take a more active interest in public life. In the weeks before an important vote, people often discuss the question with family, friends, and colleagues, read about it in newspapers, and attend public meetings, which may deepen their understanding of how their country is governed. ( A ) such debates can be noisy and sometimes bitter, supporters argue, they remind citizens that democracy is not simply something that politicians do for them but something in which they themselves are expected to take part.",
+      "Critics, however, warn that many important questions are too complex to be reduced to a simple choice between yes and no. A decision about a country's relationship with its neighbors, for example, may involve hundreds of detailed agreements on trade, travel, and law, and voters cannot be expected to study all of them before casting a ballot. Critics argue that representatives, who have time, expert advice, and the opportunity to negotiate compromises, are often in a better position to make such decisions than a population asked to answer a single question on a single day.",
+      "Critics also worry that referendums can be easily influenced by misleading campaigns. Because the result depends on a single vote, both sides may be tempted to exaggerate the benefits of their position and the dangers of the other, and voters may be swayed by slogans and emotions rather than by careful reasoning. Some critics further point out that a narrow majority can impose a permanent decision on a large and unhappy minority, leaving a country divided for many years after the votes have been counted.",
+      "In response to these concerns, some countries have tried to improve the way referendums are conducted. Some require a larger majority, or a minimum level of participation, before a major change can be approved, while others provide every household with balanced information prepared by an independent body. A number of countries have also experimented with citizens' assemblies, in which a randomly chosen group of ordinary people spends several weeks studying a question with the help of experts before making recommendations that may later be put to a national vote.",
+      "The debate over referendums ultimately reflects a broader question about what democracy is meant to achieve. If democracy means above all that the will of the majority should prevail, then asking the people directly may seem the most faithful way of putting it into practice, but if democracy also requires careful deliberation, the protection of minorities, and the willingness to compromise, then the role of elected representatives may be harder to replace than supporters of direct voting assume.",
+    ],
+    ja: [
+      'ほとんどの民主主義国では、市民が自分で法律をつくることはない。代わりに市民は、自分たちに代わって議論し投票する代表者を選び、その結果に不満があれば、次の選挙でちがう代表者を選ぶことができる。しかしときどき、政府は一つの重要な問いを、国民投票によって国民全体に直接決めてもらうことがある。こうした投票は、憲法の改正、国際機関への加盟、意見が深く分かれる道徳的な問題など、さまざまな問いに決着をつけるために使われてきており、激しい議論の対象になっている。',
+      '支持する人々は、国民投票はもっとも純粋な形の民主主義だと主張する。ある決定が何世代にもわたって国の未来を形づくるのであれば、それを、政党や力のある利益団体に影響されるかもしれない少数の政治家にまかせるのではなく、すべての市民がそれを決めるうえで平等な声をもつべきなのは当然だ、と彼らは言う。支持する人々はまた、国民が直接みとめた決定は、代表者が密室で出した決定よりも正当だと見なされやすく、したがって受け入れられやすいとも指摘する。',
+      '支持する人々はさらに、国民投票は市民が公共の生活にもっと積極的な関心をもつよう促しうると主張する。重要な投票の前の数週間、人々はしばしば家族や友人、同僚とその問いについて話し合い、新聞で読み、公開の集会に参加する。そうしたことで、自分の国がどのように治められているかについての理解が深まるかもしれない。そうした議論はさわがしく、ときにとげとげしくなることもあるが、それは市民に、民主主義とは政治家が自分たちのためにしてくれるものにすぎないのではなく、自分たち自身が参加することを期待されているものだと思い出させる、と支持者は主張する。',
+      'しかし批判する人々は、多くの重要な問いは、賛成か反対かという単純な選択にまとめるには複雑すぎると警告する。たとえば、ある国と近隣諸国との関係についての決定には、貿易や移動、法律についての何百もの細かい取り決めがかかわるかもしれず、有権者が投票する前にそのすべてを学ぶことは期待できない。時間と専門家の助言、そして歩みよりの交渉をする機会をもつ代表者のほうが、ある一日に一つの問いに答えるよう求められた国民よりも、そうした決定をするのにふさわしい立場にあることが多い、と批判する人々は主張する。',
+      '批判する人々はまた、国民投票がまぎらわしい運動に影響されやすいことも心配する。結果が一度の投票で決まるので、どちらの側も自分の立場の利点と相手の立場の危険を大げさに言いたくなるかもしれず、有権者は注意深い推論よりもスローガンや感情に動かされるかもしれない。さらに、わずかな差の多数派が、大きく不満をもつ少数派に永続的な決定をおしつけることになりかねず、票が数えられたあとも長年にわたって国が分断されたままになりうると指摘する批判者もいる。',
+      'こうした懸念に応えて、国民投票のやり方を改善しようとしてきた国もある。大きな変更をみとめる前に、より大きな多数や最低限の投票率を求める国もあれば、独立した機関がつくった公平な情報をすべての家庭に配る国もある。また、無作為に選ばれたふつうの人々の集団が、専門家の助けを借りて数週間かけて一つの問いを学んだうえで提言をおこない、それがのちに全国の投票にかけられることもある市民会議を試みた国もいくつかある。',
+      '国民投票をめぐる議論は、結局のところ、民主主義が何をなしとげるためのものなのかという、より広い問いを反映している。民主主義が何よりも多数派の意思が通るべきだということを意味するなら、国民に直接たずねることは、それを実行するもっとも忠実な方法に思えるかもしれない。しかし民主主義が、注意深い熟議や少数派の保護、歩みよろうとする姿勢も必要とするなら、選挙で選ばれた代表者の役割は、直接投票を支持する人々が考えるよりも代わりを見つけにくいものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「議論はさわがしくとげとげしくなることもあるが、民主主義への参加を思い出させる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say referendums give every citizen an equal ( 1 ) and encourage interest in public life. Critics argue that many questions are too ( 2 ) for a simple yes or no and that campaigns can mislead voters. Some countries have experimented with citizens’ ( 3 ) to study questions carefully.',
+      blanks: [
+        { choices: ['voice', 'salary', 'house', 'holiday'], answer: 0, why: '第2段落 every citizen should have an equal voice。' },
+        { choices: ['complex', 'cheap', 'funny', 'short'], answer: 0, why: '第4段落 too complex to be reduced to a simple choice between yes and no。' },
+        { choices: ['assemblies', 'parties', 'markets', 'festivals'], answer: 0, why: '第6段落 experimented with citizens’ assemblies。' },
+      ],
+    },
+    tf: [
+      { statement: 'ほとんどの民主主義国では、市民が自分で法律をつくっている。', answer: false, why: '第1段落 citizens do not make laws themselves。' },
+      { statement: '支持者によると、国民が直接みとめた決定は受け入れられやすい。', answer: true, why: '第2段落 likely to be seen as more legitimate, and therefore easier to accept。' },
+      { statement: '批判する人々は、わずかな差の多数派が少数派に決定をおしつけうると心配している。', answer: true, why: '第5段落 a narrow majority can impose a permanent decision on a large and unhappy minority。' },
+      { statement: '市民会議のメンバーは、選挙で選ばれた政治家である。', answer: false, why: '第6段落 a randomly chosen group of ordinary people。' },
+    ],
+    qa: [
+      { q: 'What do people often do in the weeks before an important vote?', choices: ['Discuss the question and attend public meetings.', 'Stop reading newspapers.', 'Leave the country.', 'Elect new representatives.'], answer: 0, why: '第3段落 discuss the question with family, friends, and colleagues ... and attend public meetings。' },
+      { q: 'What do some countries require before a major change can be approved?', choices: ['A larger majority or a minimum level of participation.', 'A decision by the courts only.', 'The approval of neighboring countries.', 'A second vote ten years later.'], answer: 0, why: '第6段落 require a larger majority, or a minimum level of participation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
