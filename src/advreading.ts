@@ -43502,6 +43502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-envelopes',
+    title: 'On Envelopes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "An envelope is one of those objects whose purpose seems so obvious that we never think about it. It is a folded piece of paper that holds a letter, a card, or a document, protecting it on its journey from one person to another. Yet the envelope has a quality that few other everyday objects share: it hides what it contains, while at the same time announcing to whom it belongs. In this double role of concealing and addressing, the humble envelope may reveal something important about the way human beings communicate and about the value they place on privacy.",
+      "The most basic function of an envelope is to keep a message private. A letter folded inside an envelope cannot be read by the people who carry it, sort it, or deliver it, and in many societies opening someone else's mail without permission has long been regarded as a serious wrong. The envelope therefore represents a kind of promise, an assurance that words written for one person will reach that person alone, and this promise has allowed people to share thoughts and feelings that they would never express in public.",
+      "At the same time, the outside of an envelope speaks openly to strangers. The name and address written on it guide the letter through a vast network of postal workers, each of whom handles it without knowing what it contains. ( A ) the people who carry a letter will never meet its writer or its reader, they take part in a remarkable chain of cooperation, and the envelope is the object that makes this cooperation possible by separating what must be seen from what must remain hidden.",
+      "An envelope also creates a moment of anticipation. When a letter arrives, its contents remain unknown until the envelope is opened, and the handwriting on the outside may already suggest who has written and what kind of message to expect. Many people remember the excitement of receiving an envelope addressed to them by hand, and the slight pause before tearing it open, during which they imagined what might be inside, may be part of what made letters so memorable. Some people even keep the envelopes of important letters long after the letters themselves have been lost, as if the outside still held a trace of the moment of arrival.",
+      "Envelopes can also carry meaning in their own right. A thick envelope from a university may announce good news before it is opened, while a formal envelope from an official office may cause anxiety. In some cultures, money given as a gift is placed in a special envelope whose color and decoration express respect or celebration, so that the way something is wrapped becomes as important as the thing itself, and the envelope becomes part of the message rather than merely its container.",
+      "In recent decades, much of the communication that once traveled in envelopes has moved to email and messaging services. These new forms are fast and convenient, but they lack the physical boundary that an envelope provides. A digital message may be read by the systems that carry it, forwarded with a single click, or seen by others over the reader's shoulder, and the clear separation between the private inside and the public outside has become far less certain than it once was.",
+      "Perhaps, then, envelopes deserve more attention than we usually give them. They remind us that communication depends not only on the words we choose but also on the ways in which those words are protected, delivered, and received. In an age when messages travel instantly and can be copied endlessly, it may be worth asking how we can preserve the trust that the envelope once represented, the confidence that what we write for one person will be read by that person, and by no one else.",
+    ],
+    ja: [
+      'ふうとうは、その目的があまりにも明らかに思えるので、私たちがけっしてそれについて考えないものの一つである。それは手紙やカード、書類を入れて、ある人から別の人への旅のあいだそれを守る、折りたたまれた一枚の紙である。しかしふうとうには、ほかの日用品にはほとんどない性質がある。中に入っているものをかくしながら、同時にそれがだれのものであるかを告げているのである。かくすことと宛てることのこの二重の役割において、つつましいふうとうは、人間がどのようにやりとりし、プライバシーにどれほどの価値をおいているかについて、大切なことを明らかにしているのかもしれない。',
+      'ふうとうのもっとも基本的な働きは、知らせを私的なものに保つことである。ふうとうの中に折りたたまれた手紙は、それを運んだり、仕分けたり、配達したりする人々には読めず、多くの社会では、許可なく他人の郵便を開けることは昔から重大なあやまちとみなされてきた。だからふうとうは一種の約束、つまりある人のために書かれたことばがその人だけにとどくという保証を表しており、この約束のおかげで、人々は人前ではけっして口にしないであろう考えや気持ちを分かち合うことができた。',
+      '同時に、ふうとうの外側は見知らぬ人々に向かって公然と語りかける。そこに書かれた名前と住所は、郵便で働くばく大な人々の網の目のなかで手紙を導き、その一人一人は中身を知らないままそれをあつかう。手紙を運ぶ人々は、書き手にも読み手にもけっして会うことはないが、おどろくべき協力の連なりに加わっている。そしてふうとうは、見せなければならないものとかくしておかなければならないものを分けることで、この協力を可能にしているものなのである。',
+      'ふうとうはまた、期待の瞬間をつくり出す。手紙がとどくと、ふうとうが開けられるまで中身はわからず、外側の筆跡は、だれが書いたのか、どのような知らせを期待すればよいのかをすでに思わせるかもしれない。多くの人は、手書きで自分宛てに書かれたふうとうを受けとったときのわくわくした気持ちを覚えており、それを破って開ける前の、中に何があるのかを想像したわずかな間が、手紙をこれほど記憶に残るものにしていたものの一部なのかもしれない。大切な手紙の中身をなくしたずっとあとまで、そのふうとうをとっておく人さえいる。まるで外側に、とどいた瞬間のあとがいまも残っているかのように。',
+      'ふうとうはまた、それ自体で意味をもつこともある。大学からの厚いふうとうは、開ける前によい知らせを告げているかもしれないし、役所からのあらたまったふうとうは不安を引き起こすかもしれない。文化によっては、贈り物としてわたすお金を特別なふうとうに入れ、その色やかざりで敬意や祝いの気持ちを表す。こうして、何かをどのように包むかが、そのもの自体と同じくらい大切になり、ふうとうは単なる入れものではなく、知らせの一部になるのである。',
+      'ここ数十年、かつてふうとうに入って旅をしていたやりとりの多くは、電子メールやメッセージのサービスへと移った。こうした新しい形は速くて便利だが、ふうとうがあたえる物理的なさかいめをもっていない。デジタルの知らせは、それを運ぶ仕組みに読まれたり、クリック一つで転送されたり、読み手の肩ごしにほかの人に見られたりするかもしれず、私的な内側と公の外側とのはっきりした区別は、かつてよりもずっと不確かなものになってしまった。',
+      'だとすれば、ふうとうは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。ふうとうは、やりとりが、私たちが選ぶことばだけでなく、そのことばがどのように守られ、とどけられ、受けとられるかにもかかっていることを思い出させてくれる。知らせが一瞬で旅をし、果てしなくコピーされうる時代に、ふうとうがかつて表していた信頼、つまりある人のために書いたものはその人によって読まれ、ほかのだれにも読まれないという確信を、どうすれば保てるのかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「運ぶ人々は書き手にも読み手にも会わないが、協力の連なりに加わっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの社会では、許可なく他人の郵便を開けることは重大なあやまちとみなされてきた。', answer: true, why: '第2段落 has long been regarded as a serious wrong。' },
+      { statement: '郵便で働く人々は、手紙の中身を知ったうえでそれをあつかう。', answer: false, why: '第3段落 each of whom handles it without knowing what it contains。' },
+      { statement: '文化によっては、贈り物のお金を特別なふうとうに入れる。', answer: true, why: '第5段落 money given as a gift is placed in a special envelope。' },
+      { statement: '筆者によると、デジタルの知らせは私的な内側と公の外側をはっきり分けている。', answer: false, why: '第6段落 the clear separation ... has become far less certain。' },
+    ],
+    qa: [
+      { q: 'What may the handwriting on an envelope already suggest?', choices: ['Who has written and what kind of message to expect.', 'How much the stamp cost.', 'When the letter was printed.', 'Which postal worker delivered it.'], answer: 0, why: '第4段落 may already suggest who has written and what kind of message to expect。' },
+      { q: 'What may a thick envelope from a university announce?', choices: ['Good news.', 'A higher fee.', 'A change of address.', 'An official warning.'], answer: 0, why: '第5段落 may announce good news before it is opened。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
