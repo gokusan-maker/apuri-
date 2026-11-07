@@ -9956,6 +9956,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It takes ten minutes to [go to school on walk].', choices: ['walk to school', 'go to school by walk', 'walk to the school by foot', 'go on walk to school'], answer: 0, why: '「歩いて学校へ行く」は walk to school（または go to school on foot）。' },
     ],
   },
+  {
+    id: 'exam-fix-234',
+    title: '入試の誤文訂正〈234〉（東大レベル：英作文の can と be able to・could と was able to）',
+    points: ['can は助動詞なので、ほかの助動詞（will・would like to のあと）や完了形（have ～）の中では使えない。そのときは be able to を使う（will be able to／have been able to）。can のあとは原形で、can に s や to はつけない。', 'could は「（いつでも）～する能力があった」を表す。過去の一回の場面で「（実際に）～できた」と言うときは was able to／managed to を使う（I was able to catch the last train.）。否定の could not はどちらにも使える。be able to の否定は be not able to。'],
+    examples: [{ en: 'I could swim when I was five. / Yesterday I was able to catch the last train.', ja: '私は5歳のとき泳げた。／きのうは最終電車に間に合った。' }],
+    questions: [
+      { sentence: 'I [can] swim when I was five.', choices: ['could', 'can to', 'am able', 'cans'], answer: 0, why: '過去の能力なので could。' },
+      { sentence: 'You will [can] speak English well soon.', choices: ['be able to', 'can to', 'able to', 'be can'], answer: 0, why: 'will のあとに can は置けないので will be able to。' },
+      { sentence: 'Fortunately, I [could] catch the last train yesterday.', choices: ['was able to', 'can', 'could be', 'am able to'], answer: 0, why: '過去の一回の場面で実際にできたことは was able to。' },
+      { sentence: 'She has not [could] sleep well recently.', choices: ['been able to', 'can', 'could be', 'be able'], answer: 0, why: '完了形の中では has not been able to。' },
+      { sentence: 'I would like to [can] play the piano.', choices: ['be able to', 'can to', 'could', 'being able'], answer: 0, why: 'to のあとに can は置けないので would like to be able to。' },
+      { sentence: 'He [cans] speak three languages.', choices: ['can', 'can to', 'is can', 'cannot be'], answer: 0, why: '助動詞 can に s はつけない。' },
+      { sentence: 'We [were able not to] finish the work on time.', choices: ['were not able to', 'were able to not', 'not were able to', 'could be not'], answer: 0, why: 'be able to の否定は be not able to。' },
+      { sentence: '[Can you able to] come tomorrow?', choices: ['Will you be able to', 'Can you be able', 'Are you can', 'Do you can'], answer: 0, why: '未来のことは Will you be able to ～? とする。' },
+      { sentence: 'I [could not to] find my key this morning.', choices: ['could not', 'could not be', 'did not could', 'was not able'], answer: 0, why: 'could のあとは to をつけず原形。I could not find。' },
+      { sentence: 'The baby [can be walk] already.', choices: ['can walk', 'can walking', 'is can walk', 'can to walk'], answer: 0, why: 'can のあとは動詞の原形なので can walk。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
