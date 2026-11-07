@@ -41698,6 +41698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-media-literacy',
+    title: 'Should Media Literacy Be a Required Subject?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Young people today encounter more information in a single day than earlier generations might have seen in a month. News articles, videos, advertisements, and opinions flow constantly through their phones, often mixed together in ways that make it difficult to tell reliable reporting from rumor, propaganda, or deliberate deception. In response, some educators have argued that schools should teach media literacy, the ability to find, evaluate, and create information critically, as a required subject for all students. Others question whether such lessons can achieve what their supporters hope.",
+      "Supporters argue that media literacy has become as essential as reading and writing. A citizen who cannot distinguish a trustworthy source from a misleading one may be easily manipulated, whether by advertisers seeking to sell products or by groups spreading false information for political purposes. By teaching students to ask who created a message, for what purpose, and on what evidence it is based, supporters claim, schools can help them become more thoughtful consumers of information and more responsible participants in democratic life. Supporters note that false stories often spread faster than corrections online, so that habits of checking information before sharing it may be one of the most valuable protections a society can develop.",
+      "Supporters also emphasize that media literacy involves more than avoiding falsehoods. Students can learn how images and headlines are designed to attract attention, how algorithms shape what appears on their screens, and how their own online behavior may be tracked and used. ( A ) such knowledge may not prevent every mistake, supporters argue, it gives young people tools for understanding the forces that shape their view of the world, and it encourages them to reflect on the messages they themselves create and share.",
+      "Critics, however, question whether media literacy can be taught effectively as a separate subject. The skills involved, they argue, are closely connected to knowledge of particular topics; a student who knows little about science or history may struggle to judge claims in those areas, however many general techniques for evaluating sources they have learned. Critics suggest that strengthening knowledge across the curriculum may do more to protect students from misinformation than adding another subject to an already crowded timetable. They also point out that teachers would need training to teach such lessons well, since the media environment changes so quickly.",
+      "Critics also warn that lessons intended to encourage critical thinking can sometimes produce excessive cynicism. If students are taught that every source may be biased, they may come to distrust all information equally, including reliable reporting and scientific research. Such cynicism could make them more vulnerable rather than less, since a person who believes that nothing can be trusted may simply choose to believe whatever confirms their existing views.",
+      "Many educators therefore favor an approach that combines dedicated lessons with practice in every subject. Teachers of history, science, and language can show students how experts in their fields evaluate evidence, while specific lessons can address the particular challenges of digital media. Encouraging students to examine real examples, discuss their judgments with others, and explain the reasons for their conclusions may help them develop both healthy skepticism and the ability to recognize trustworthy information when they see it, both inside and outside the classroom.",
+      "The debate over media literacy ultimately reflects a broader question about the purpose of education in a changing world. Schools have always sought to prepare young people to understand their society and take part in it, and the forms of information that shape society have changed dramatically within a single generation. Whether through a separate subject or through changes across the curriculum, helping students navigate this new environment wisely may be one of the most important tasks that education faces today.",
+    ],
+    ja: [
+      '今日の若者は、以前の世代が一か月に目にしたかもしれないより多くの情報に、たった一日で出会っている。ニュースの記事や動画や広告や意見がたえず電話の中を流れ、しばしば、信頼できる報道と、うわさや宣伝や意図的なだましを見分けるのがむずかしいほどまぜこぜになっている。これにこたえて、学校は、情報を批判的にさがし、評価し、つくり出す力であるメディア・リテラシーをすべての生徒の必修の科目として教えるべきだと主張する教育者もいる。しかし、そうした授業が支持する人々の望むことをなしとげられるのかと疑問を投げかける人もいる。',
+      '支持する人々は、メディア・リテラシーは読み書きと同じくらい欠かせないものになったと主張する。信頼できる情報源と誤解をまねく情報源を見分けられない市民は、製品を売ろうとする広告主によっても、政治的な目的のためにうその情報を広める集団によっても、かんたんにあやつられてしまうかもしれない。だれがそのメッセージをつくったのか、何のためなのか、どんな証拠にもとづいているのかを問うよう生徒に教えることで、学校は生徒がより考え深い情報の受け手になり、民主的な暮らしにより責任をもって参加する助けになると支持する人々は言う。オンラインでは、うその話がしばしば訂正よりも速く広まるので、分かち合う前に情報を確かめる習慣は、社会が育てられるもっとも価値のある守りの一つかもしれないと支持する人々は指摘する。',
+      '支持する人々はまた、メディア・リテラシーはうそをさけることだけではないと強調する。生徒は、画像や見出しが注意をひくためにどうつくられているか、アルゴリズムが画面にあらわれるものをどう形づくっているか、そして自分のオンラインでの行動がどう追跡され使われているかを学ぶことができる。そうした知識がすべてのまちがいをふせぐわけではないかもしれないが、若者に、自分の世界の見方を形づくる力を理解する道具をあたえ、自分自身がつくり分かち合うメッセージについてふり返るようはげますと支持する人々は主張する。',
+      'しかし批判する人々は、メディア・リテラシーを別の科目として効果的に教えられるのかと疑問を投げかける。かかわる力は特定の分野の知識と深く結びついていると彼らは主張する。科学や歴史についてほとんど知らない生徒は、情報源を評価する一般的な技術をどれほど多く学んでいても、それらの分野の主張を判断するのに苦労するかもしれない。すでにいっぱいの時間割にもう一つ科目を加えるより、教育課程全体で知識を強めるほうが、生徒をまちがった情報から守るのに役立つかもしれないと批判する人々は言う。また、メディアの環境はとても速く変わるので、そうした授業をうまく教えるには先生に訓練が必要になると彼らは指摘する。',
+      '批判する人々はまた、批判的な考え方をうながすための授業が、ときに行きすぎた不信を生むことがあると警告する。もし生徒が、どの情報源もかたよっているかもしれないと教えられれば、信頼できる報道や科学的な研究もふくめて、あらゆる情報を同じようにうたがうようになるかもしれない。そうした不信は、生徒をより強くするどころか、より弱くしかねない。何も信じられないと思う人は、ただ自分の今の考えを裏づけるものなら何でも信じることを選ぶかもしれないからである。',
+      'そのため多くの教育者は、専用の授業とあらゆる科目での練習を組み合わせるやり方を支持している。歴史や科学やことばの先生は、それぞれの分野の専門家が証拠をどう評価するかを生徒に示すことができ、一方で特定の授業がデジタルのメディアの特有の課題をあつかうことができる。生徒に本物の例を調べさせ、自分の判断をほかの人と話し合わせ、結論の理由を説明させることは、健全な疑いの心と、教室の中でも外でも、信頼できる情報を目にしたときにそれに気づく力の両方を育てる助けになるかもしれない。',
+      'メディア・リテラシーをめぐる議論は、結局のところ、変わりゆく世界における教育の目的についての、より広い問いを反映している。学校はいつも、若者が自分の社会を理解しそれに参加できるようそなえさせようとしてきたが、社会を形づくる情報の形は、たったひと世代のうちに大きく変わった。別の科目を通じてであれ、教育課程全体の変化を通じてであれ、生徒がこの新しい環境をかしこく進んでいけるよう助けることは、今日の教育が直面するもっとも大切な仕事の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「すべてのまちがいをふせぐわけではないが、理解する道具をあたえる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that media literacy is as essential as reading and writing and helps students avoid being ( 1 ). Critics argue that the skills depend on ( 2 ) of particular topics and that lessons may produce excessive ( 3 ). Many educators favor combining dedicated lessons with practice in every subject.',
+      blanks: [
+        { choices: ['manipulated', 'educated', 'entertained', 'employed'], answer: 0, why: '第2段落 may be easily manipulated。' },
+        { choices: ['knowledge', 'luck', 'money', 'speed'], answer: 0, why: '第4段落 closely connected to knowledge of particular topics。' },
+        { choices: ['cynicism', 'kindness', 'confidence', 'humor'], answer: 0, why: '第5段落 can sometimes produce excessive cynicism。' },
+      ],
+    },
+    tf: [
+      { statement: '今日の若者は、一日に多くの情報に出会っている。', answer: true, why: '第1段落 encounter more information in a single day ...。' },
+      { statement: '支持する人々は、メディア・リテラシーはうそをさけることだけだと言う。', answer: false, why: '第3段落 media literacy involves more than avoiding falsehoods。' },
+      { statement: '何も信じられないと思う人は、自分の考えを裏づけるものを信じるかもしれない。', answer: true, why: '第5段落 may simply choose to believe whatever confirms their existing views。' },
+      { statement: '多くの教育者は、メディア・リテラシーを一つの授業だけで教えるべきだと言う。', answer: false, why: '第6段落 combines dedicated lessons with practice in every subject。' },
+    ],
+    qa: [
+      { q: 'What questions should students learn to ask about a message, according to supporters?', choices: ['Who created it, for what purpose, and on what evidence it is based.', 'How long it is.', 'What color it is.', 'How many people liked it.'], answer: 0, why: '第2段落 who created a message, for what purpose, and on what evidence it is based。' },
+      { q: 'Why might a student with little knowledge of science struggle, according to critics?', choices: ['They may find it hard to judge claims in that area.', 'They cannot use phones.', 'They have no time.', 'They dislike reading.'], answer: 0, why: '第4段落 may struggle to judge claims in those areas。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
