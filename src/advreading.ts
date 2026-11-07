@@ -43102,6 +43102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fences',
+    title: 'On Fences',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Fences are so common in towns and countryside alike that we seldom look at them closely. They run along the edges of gardens, fields, playgrounds, and roads, and we usually notice them only when we need to find a gate or when one has fallen down. Yet a fence is never simply a line of wood, stone, or wire. Every fence expresses a decision about where one space ends and another begins, about who may enter and who must stay outside, and in this sense fences can tell us a great deal about the societies that build them.",
+      "The most obvious purpose of a fence is protection. Farmers build fences to keep their animals from wandering away and to keep wild animals out of their crops, while families build them to give children a safe place to play. In such cases, the fence serves those on both sides, since it prevents accidents and misunderstandings that might otherwise lead to conflict, and neighbors who agree on where a fence should stand may find it easier to live peacefully side by side. In this sense, a well-placed fence can be less a sign of hostility than a quiet agreement that both sides have chosen to respect.",
+      "At the same time, a fence can express distrust. A high wall topped with sharp wire suggests that the people inside fear those outside, and a neighborhood surrounded by gates and guards may separate its residents from the wider community around them. ( A ) such barriers may make the people inside feel safer, they can also make those who are kept out feel unwelcome, and they may gradually weaken the sense that people of different backgrounds belong to the same town or city.",
+      "The history of fences is also a history of property. In many parts of the world, land that had once been used by whole communities for grazing animals or collecting firewood was eventually divided and enclosed by individual owners. The fences that marked these new boundaries brought greater efficiency to farming, but they also deprived many people of resources on which they had depended, and they turned what had been shared into something that could be bought, sold, and defended against others. The effects of these changes can still be seen today in the patterns of fields and hedges that cover much of the countryside in many countries.",
+      "Not all fences, however, are designed to keep people apart. A low fence in front of a house, over which neighbors can talk and children can see, marks a boundary while still inviting contact, and in some communities people decorate their fences with plants or paintings that passers-by can enjoy. Such fences suggest that the purpose of a boundary need not be exclusion, and that it is possible to define one's own space while remaining open to the world beyond it.",
+      "In recent years, new kinds of fences have appeared that are almost invisible. Many places are now protected not by walls but by cameras, electronic gates, and passwords, and the boundaries between public and private spaces are increasingly enforced by technology rather than by physical barriers. These invisible fences may be less unpleasant to look at, but they can also be harder to notice and to question, since people may not realize where a boundary lies until they find themselves on the wrong side of it.",
+      "Perhaps, then, fences deserve more attention than we usually give them. They remind us that every community must decide how to balance the desire for safety and privacy with the need for openness and shared space. The question is not whether we should have fences at all, since some boundaries are clearly necessary, but what kind of fences we build, how high we make them, and whether we leave enough gates through which neighbors, strangers, and new ideas can still pass.",
+    ],
+    ja: [
+      'さくは町でもいなかでもあまりにもふつうにあるので、私たちはそれをよく見ることがめったにない。さくは庭や畑、遊び場、道路のはしにそって続いており、私たちはふつう、門をさがす必要があるときか、さくがたおれたときにしかそれに気づかない。しかしさくは、けっしてただの木や石や針金の線ではない。どのさくも、ある空間がどこで終わり、別の空間がどこから始まるのか、だれが入ってよく、だれが外にとどまらなければならないのかについての決定を表している。この意味で、さくは、それをつくる社会について多くのことを教えてくれる。',
+      'さくのもっとも明らかな目的は守ることである。農民は、家畜が迷い出ないように、そして野生動物が作物に入らないようにさくをつくり、家族は子どもが安全に遊べる場所をあたえるためにさくをつくる。そうした場合、さくは両側の人々の役に立つ。そうでなければ対立につながるかもしれない事故や誤解をふせぐからである。そして、さくをどこに立てるべきかについて合意している隣人どうしは、となり合っておだやかに暮らしやすくなるかもしれない。この意味で、うまく置かれたさくは、敵意のしるしというよりも、両側が尊重することを選んだしずかな合意なのである。',
+      '同時に、さくは不信を表すこともある。とがった針金をのせた高い壁は、中の人々が外の人々をおそれていることを思わせ、門と警備員にかこまれた住宅地は、住民をまわりのより広い地域から切りはなすかもしれない。そうした障壁は中の人々に安全だと感じさせるかもしれないが、しめ出される人々には歓迎されていないと感じさせることもあり、ちがう生まれの人々が同じ町や都市に属しているという感覚を少しずつ弱めるかもしれない。',
+      'さくの歴史は、所有の歴史でもある。世界の多くの地域で、かつては共同体全体が家畜に草を食べさせたり、たきぎを集めたりするのに使っていた土地が、やがて個々の持ち主によって分けられ、かこいこまれた。こうした新しいさかいめを示すさくは、農業の効率を高めたが、同時に多くの人々から、それまでたよっていた資源をうばい、共有されていたものを、売り買いし、他人から守ることのできるものに変えてしまった。こうした変化の影響は、いまも多くの国のいなかの大部分をおおう畑や生けがきの模様に見ることができる。',
+      'しかし、すべてのさくが人々を引きはなすためにつくられているわけではない。家の前の低いさくは、その上ごしに隣人どうしが話し、子どもたちが向こうを見ることができ、さかいめを示しながらもふれ合いをさそう。地域によっては、人々がさくを植物や絵でかざり、通りかかった人が楽しめるようにしているところもある。そうしたさくは、さかいめの目的がしめ出すことである必要はなく、自分の空間を決めながらも、その向こうの世界に開かれていることができると思わせてくれる。',
+      '近年、ほとんど目に見えない新しい種類のさくがあらわれている。多くの場所はいまや壁ではなく、カメラや電子の門、パスワードによって守られており、公の空間と私的な空間のさかいめは、物理的な障壁よりも技術によってますます守られるようになっている。こうした見えないさくは、見た目のいやな感じは少ないかもしれないが、気づいたり疑問をもったりするのがむずかしくもある。人々は、自分がさかいめのまちがった側にいることに気づくまで、それがどこにあるのかわからないかもしれないからである。',
+      'だとすれば、さくは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。さくは、どの共同体も、安全とプライバシーを求める気持ちと、開かれた共有の空間の必要とのつりあいをどうとるかを決めなければならないことを思い出させてくれる。問題は、さくをもつべきかどうかではない。いくつかのさかいめは明らかに必要だからである。問題は、どのようなさくをつくり、どれほど高くし、隣人や見知らぬ人、新しい考えがいまも通りぬけられる門を十分に残しておくかどうかなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「障壁は中の人々を安全に感じさせるかもしれないが、しめ出される人々には歓迎されていないと感じさせる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '農民は、家畜が迷い出ないようにさくをつくる。', answer: true, why: '第2段落 to keep their animals from wandering away。' },
+      { statement: '筆者によると、高い壁はつねに地域のつながりを強める。', answer: false, why: '第3段落 may gradually weaken the sense that people ... belong to the same town。' },
+      { statement: 'さくによるかこいこみは、農業の効率を高めた。', answer: true, why: '第4段落 brought greater efficiency to farming。' },
+      { statement: '筆者は、さくはまったく必要ないと述べている。', answer: false, why: '第7段落 some boundaries are clearly necessary。' },
+    ],
+    qa: [
+      { q: 'What does a low fence in front of a house do, according to the passage?', choices: ['It marks a boundary while still inviting contact.', 'It keeps all neighbors away.', 'It hides the house completely.', 'It protects crops from animals.'], answer: 0, why: '第5段落 marks a boundary while still inviting contact。' },
+      { q: 'Why may invisible fences be harder to question?', choices: ['People may not realize where a boundary lies.', 'They are more expensive.', 'They are taller than walls.', 'They are made of stone.'], answer: 0, why: '第6段落 people may not realize where a boundary lies。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
