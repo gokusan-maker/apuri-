@@ -42018,6 +42018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-ai-labels',
+    title: 'Should AI-Generated Content Be Labeled?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Advances in artificial intelligence have made it possible to create images, videos, and voices that are almost impossible to distinguish from real ones. A photograph of an event that never happened, a video of a politician saying words they never spoke, or a recording that imitates a family member's voice can now be produced quickly and cheaply. In response, some governments and technology companies have proposed that all such content should carry clear labels indicating that it was created or altered by artificial intelligence. The proposal seems simple, yet it raises difficult questions.",
+      "Supporters argue that labels are essential for protecting trust in information. When people cannot tell whether an image or video is genuine, they may be deceived by false stories, or they may begin to doubt everything they see, including authentic evidence of real events. Clear labels, supporters claim, would allow people to make informed judgments about what they encounter, much as food labels allow consumers to know what they are eating. Labels might also help journalists, teachers, and researchers, who increasingly need reliable ways of checking the origin of the images and recordings they use in their work.",
+      "Supporters also emphasize the need to protect individuals from harm. Fabricated images can be used to damage reputations, to deceive people into sending money, or to spread false accusations. ( A ) labels alone cannot prevent all misuse, supporters argue, they create a clear standard of honesty, making it easier to identify and punish those who deliberately present artificial content as real in order to mislead others. In elections, for example, a clear rule could make it easier to remove fake videos of candidates before they spread widely and influence the result.",
+      "Critics, however, question whether labeling requirements can be enforced effectively. Content can be copied, edited, and shared across many platforms, and labels may be removed or lost along the way. People who create misleading content for harmful purposes are unlikely to follow the rules, critics argue, so that labels may appear mainly on harmless creative work while the most dangerous fakes continue to circulate without any warning at all.",
+      "Critics also worry about where the line should be drawn. Many ordinary photographs are now improved by software that adjusts colors, removes blemishes, or sharpens details, and much creative work combines human effort with digital tools. If every image touched by artificial intelligence had to carry a label, critics argue, the labels might become so common that people would stop paying attention to them, undermining the very purpose they were intended to serve. Artists, too, worry that their work might be unfairly regarded as less genuine simply because they used digital tools.",
+      "Some experts suggest that labels should be combined with other approaches. Technology companies might develop invisible markers embedded in files that can be detected even after editing, while platforms could provide tools that help users check the origin of an image or video. Education also plays a role, since people who understand how artificial content is created may be better able to question what they see, even when no label is present. Schools in some countries have already begun teaching students to look for signs that an image has been generated, such as strange details in hands, shadows, or backgrounds.",
+      "The debate over labeling artificial content ultimately reflects a broader challenge that new technologies pose to society. As tools for creating convincing illusions become more powerful and widely available, the shared sense of what is real may become more fragile. Protecting that shared sense may require not only rules and technology but also new habits of skepticism and care among citizens, so that trust can be preserved in a world where seeing is no longer believing.",
+    ],
+    ja: [
+      '人工知能の進歩によって、本物とほとんど見分けられない画像や動画や声をつくり出すことが可能になった。起こらなかったできごとの写真や、言わなかったことばを話す政治家の動画や、家族の声をまねた録音が、今では速く安くつくられうる。これにこたえて、そうした内容にはすべて、人工知能によってつくられたか手を加えられたことを示すはっきりした表示をつけるべきだと提案する政府や技術企業もある。この提案はかんたんに見えるが、むずかしい問いを生んでいる。',
+      '支持する人々は、表示は情報への信頼を守るために欠かせないと主張する。画像や動画が本物かどうかを見分けられないと、人々はうその話にだまされるかもしれないし、本当のできごとの本物の証拠もふくめて、見るものすべてをうたがいはじめるかもしれない。食品の表示によって消費者が自分の食べているものを知ることができるのと同じように、はっきりした表示があれば、人々は出会うものについて、情報にもとづいた判断ができるだろうと支持する人々は言う。表示はまた、仕事で使う画像や録音の出どころを確かめるたよれる方法をますます必要としている記者や先生や研究者の助けにもなるかもしれない。',
+      '支持する人々はまた、個人を害から守る必要を強調する。つくりものの画像は、評判をそこなったり、人をだましてお金を送らせたり、うその非難を広めたりするために使われうる。表示だけですべての悪用をふせぐことはできないが、はっきりした正直さの基準をつくることになり、人をまどわすためにつくりものの内容を本物として見せる人々を見つけて罰しやすくなると支持する人々は主張する。たとえば選挙では、はっきりした規則があれば、候補者のにせの動画が広く出回って結果に影響する前に、それを取りのぞきやすくなるだろう。',
+      'しかし批判する人々は、表示の義務を効果的に取りしまれるのかと疑問を投げかける。内容はコピーされ、編集され、多くのサービスで分かち合われることがあり、そのとちゅうで表示が取りのぞかれたり失われたりするかもしれない。害のある目的のために人をまどわす内容をつくる人々が規則を守ることはありそうになく、そのため、表示は主に害のない創作に見られる一方で、もっとも危険なにせものは何の警告もなく出回り続けるかもしれないと批判する人々は主張する。',
+      '批判する人々はまた、どこで線を引くべきかを心配する。今では多くのふつうの写真が、色を調整したり、しみを消したり、細部をくっきりさせたりするソフトウェアでよくされており、多くの創作は人間の努力とデジタルの道具を組み合わせている。人工知能がふれたあらゆる画像に表示をつけなければならないとすれば、表示があまりにありふれて人々が気にとめなくなり、表示がもともとはたすはずだった目的そのものがそこなわれるかもしれないと批判する人々は主張する。芸術家もまた、デジタルの道具を使ったというだけで、自分の作品が不当に本物らしくないと見なされるのではないかと心配している。',
+      '表示をほかのやり方と組み合わせるべきだと提案する専門家もいる。技術企業は、編集されたあとでも見つけられる、ファイルにうめこまれた目に見えないしるしを開発するかもしれず、サービスは、利用者が画像や動画の出どころを確かめる助けになる道具を提供できる。教育も役割を果たす。つくりものの内容がどうつくられるかを理解している人は、表示がないときでも、見るものに疑問をもちやすいかもしれないからである。手やかげや背景のおかしな細部のような、画像がつくられたものだというしるしをさがすよう、すでに生徒に教えはじめている国の学校もある。',
+      'つくりものの内容の表示をめぐる議論は、結局のところ、新しい技術が社会にもたらす、より広い課題を反映している。本物らしいまぼろしをつくる道具がより強力に、より広く手に入るようになるにつれて、何が本物かについての共有された感覚はよりこわれやすくなるかもしれない。その共有された感覚を守るには、規則と技術だけでなく、市民のあいだの新しい疑いの心と注意の習慣も必要かもしれない。見ることがもはや信じることではない世界で、信頼を保つためにである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「表示だけですべての悪用をふせげないが、正直さの基準をつくる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that labels protect ( 1 ) in information and protect individuals from harm. Critics question whether labels can be ( 2 ) and worry that they may become too common to notice. Some experts suggest combining labels with invisible markers and ( 3 ).',
+      blanks: [
+        { choices: ['trust', 'speed', 'profit', 'beauty'], answer: 0, why: '第2段落 labels are essential for protecting trust in information。' },
+        { choices: ['enforced', 'enjoyed', 'printed', 'sold'], answer: 0, why: '第4段落 whether labeling requirements can be enforced effectively。' },
+        { choices: ['education', 'punishment', 'advertising', 'silence'], answer: 0, why: '第6段落 Education also plays a role。' },
+      ],
+    },
+    tf: [
+      { statement: '今では、本物と見分けにくい画像や声を安くつくれる。', answer: true, why: '第1段落 can now be produced quickly and cheaply。' },
+      { statement: '支持する人々は、表示だけですべての悪用をふせげると言う。', answer: false, why: '第3段落 labels alone cannot prevent all misuse。' },
+      { statement: '表示は、内容が分かち合われるとちゅうで失われることがある。', answer: true, why: '第4段落 labels may be removed or lost along the way。' },
+      { statement: '多くのふつうの写真は、ソフトウェアで一切手を加えられていない。', answer: false, why: '第5段落 Many ordinary photographs are now improved by software。' },
+    ],
+    qa: [
+      { q: 'What do supporters compare labels on artificial content to?', choices: ['Food labels that tell consumers what they are eating.', 'Price tags in shops.', 'Road signs.', 'Book covers.'], answer: 0, why: '第2段落 much as food labels allow consumers to know what they are eating。' },
+      { q: 'What might technology companies develop, according to some experts?', choices: ['Invisible markers embedded in files.', 'Larger screens.', 'Faster cameras.', 'New social networks.'], answer: 0, why: '第6段落 invisible markers embedded in files。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
