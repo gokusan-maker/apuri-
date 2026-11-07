@@ -3314,6 +3314,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="66" cy="66" r="2.5" fill="#fef9c3" />
       </g>
     )
+  if (species === 'dormouse')
+    return (
+      <g>
+        {/* 背中の黒いすじ */}
+        <path d="M50 30 L50 70" stroke="#3f2a10" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
