@@ -43138,6 +43138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-public-toilets',
+    title: 'Should Cities Provide More Public Toilets?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few people like to talk about public toilets, yet the question of whether a city provides enough of them affects almost everyone who leaves home for more than a few hours. In some countries, clean and free public toilets can be found in parks, stations, and shopping streets, while in others they have become increasingly rare, as local governments facing tight budgets have closed facilities that were expensive to maintain. The issue may seem minor, but a growing number of campaigners argue that access to toilets is a basic matter of health, dignity, and equality that deserves far more attention than it usually receives.",
+      "Supporters of providing more public toilets point out that the lack of them affects some groups far more than others. Older people, people with certain medical conditions, pregnant women, and parents with small children often need to use a toilet frequently or at short notice, and they may avoid going out altogether if they are unsure whether one will be available. Supporters argue that a city without enough toilets therefore quietly excludes many of its residents from public life, limiting their ability to work, shop, exercise, and meet friends.",
+      "Supporters also emphasize the benefits for public health and for the city as a whole. When toilets are scarce, people may be forced to relieve themselves in streets or parks, creating unpleasant conditions and spreading disease, while those who work outdoors, such as delivery drivers and street cleaners, may suffer discomfort throughout the day. ( A ) building and maintaining toilets costs money, supporters argue, the expense is small compared with the benefits of a city in which everyone can move about freely and comfortably.",
+      "Critics, however, point to the practical difficulties of providing public toilets. Facilities that are open to everyone must be cleaned frequently, repaired when damaged, and supervised to prevent misuse, and many local governments say that they simply cannot afford to keep them in good condition. Critics argue that a dirty or unsafe toilet may be worse than none at all, and that limited public money might be better spent on other services that benefit a larger number of people.",
+      "Critics also suggest that businesses could fill much of the gap. In many towns, cafés, shops, and shopping centers already allow members of the public to use their toilets, and some local governments pay a small fee to businesses that agree to display a sign welcoming non-customers. Critics argue that such schemes make use of facilities that already exist and are already cleaned, so that they can increase access to toilets far more cheaply than building new ones. In their view, cooperation between local governments and businesses is a more realistic solution than relying on public money alone.",
+      "Supporters respond that such arrangements are helpful but not sufficient. Shops and cafés are open only during certain hours, and many people feel uncomfortable entering a business without buying anything, particularly if they are poor or if staff seem unwelcoming. As a result, several cities have begun to combine both approaches, encouraging businesses to share their toilets while also building new public facilities, sometimes with designs that are easier to clean and that include features for people with disabilities.",
+      "The debate over public toilets ultimately reflects a broader question about what a city owes to the people who use its streets. If public spaces are meant to be open to everyone, then the facilities that make it possible to spend time in them must be available to everyone too. How generously a city provides such basic services may therefore reveal how seriously it takes the needs of those who are most easily overlooked, and whether it regards its streets as places merely to pass through or as places where people can comfortably live their lives.",
+    ],
+    ja: [
+      '公衆トイレについて話したがる人はほとんどいないが、都市が十分な数のトイレを用意しているかどうかという問いは、数時間以上家を出るほとんどすべての人に影響する。いくつかの国では、公園や駅、商店街で清潔で無料の公衆トイレを見つけることができるが、ほかの国では、きびしい予算に直面した地方自治体が維持に費用のかかる施設を閉鎖してきたため、公衆トイレはますます少なくなっている。この問題はささいに思えるかもしれないが、トイレを使えることは健康と尊厳と平等にかかわる基本的な問題であり、ふだん受けているよりもはるかに多くの注目に値すると主張する活動家がふえている。',
+      '公衆トイレをもっと用意することを支持する人々は、トイレがないことはほかの人々よりもはるかに強く影響を受ける集団があると指摘する。お年寄りや、ある種の病気のある人、妊娠している女性、小さな子どものいる親は、しばしばひんぱんに、あるいは急にトイレを使う必要があり、トイレがあるかどうかわからなければ、外出そのものをさけるかもしれない。そのため、十分なトイレのない都市は、多くの住民をしずかに公共の生活からしめ出し、働いたり、買い物をしたり、運動したり、友だちに会ったりする力を制限している、と支持者は主張する。',
+      '支持する人々はまた、公衆衛生と都市全体にとっての利点も強調する。トイレが少ないと、人々は道路や公園で用を足さざるをえなくなり、不快な状態を生み病気を広げるかもしれないし、配達の運転手や道路の清掃員のように外で働く人々は、一日じゅうつらい思いをするかもしれない。トイレを建てて維持するにはお金がかかるが、その費用は、だれもが自由に快適に動きまわれる都市の利益にくらべれば小さい、と支持者は主張する。',
+      'しかし批判する人々は、公衆トイレを用意することの実際上のむずかしさを指摘する。だれでも使える施設は、ひんぱんに掃除し、こわれたら直し、不正な使用をふせぐために見守らなければならず、多くの地方自治体は、よい状態に保つ余裕がとてもないと言う。きたなかったり安全でなかったりするトイレは、まったくないよりも悪いかもしれず、かぎられた公的なお金は、より多くの人々の役に立つほかのサービスに使ったほうがよいかもしれない、と批判する人々は主張する。',
+      '批判する人々はまた、その不足の多くは企業が補えるかもしれないと言う。多くの町で、カフェや店、ショッピングセンターはすでに一般の人々にトイレを使わせており、客でない人も歓迎するという表示を出すことに同意した店に、少しの料金をはらっている地方自治体もある。そうした仕組みは、すでにあり、すでに掃除されている設備を活用するので、新しいトイレを建てるよりもはるかに安く、トイレを使える機会をふやせる、と批判する人々は主張する。彼らの考えでは、地方自治体と企業の協力のほうが、公的なお金だけにたよるよりも現実的な解決策なのである。',
+      '支持する人々は、そうした取り決めは役に立つが十分ではないと答える。店やカフェはある時間帯にしか開いておらず、とくにお金がなかったり、店員が歓迎していないように見えたりすると、何も買わずに店に入るのを気まずく感じる人は多い。その結果、いくつかの都市は両方のやり方を組み合わせはじめている。企業にトイレを共有するよう促しながら、新しい公共の施設も建てているのであり、ときには掃除しやすく、障害のある人のための設備をそなえた設計を取り入れている。',
+      '公衆トイレをめぐる議論は、結局のところ、都市はその道路を使う人々に何を負っているのかという、より広い問いを反映している。公共の空間がだれにでも開かれているべきなら、そこで時間を過ごすことを可能にする設備も、だれにでも使えるものでなければならない。だから、都市がそうした基本的なサービスをどれほど手厚く用意するかは、その都市が、もっとも見すごされやすい人々の必要をどれほど真剣に受けとめているか、そして道路を、ただ通りすぎる場所とみなしているのか、それとも人々が快適に生活を送れる場所とみなしているのかを明らかにするのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「トイレを建てて維持するにはお金がかかるが、その費用は利益にくらべれば小さい」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say a lack of public toilets ( 1 ) many residents from public life and harms public health. Critics point to the cost of keeping toilets clean and suggest that ( 2 ) could share their facilities. Several cities now ( 3 ) both approaches.',
+      blanks: [
+        { choices: ['excludes', 'protects', 'invites', 'teaches'], answer: 0, why: '第2段落 quietly excludes many of its residents from public life。' },
+        { choices: ['businesses', 'schools', 'hospitals', 'families'], answer: 0, why: '第5段落 businesses could fill much of the gap。' },
+        { choices: ['combine', 'reject', 'forget', 'hide'], answer: 0, why: '第6段落 several cities have begun to combine both approaches。' },
+      ],
+    },
+    tf: [
+      { statement: 'きびしい予算のために、公衆トイレを閉鎖した地方自治体がある。', answer: true, why: '第1段落 have closed facilities that were expensive to maintain。' },
+      { statement: '支持者によると、トイレがないことはすべての人に同じように影響する。', answer: false, why: '第2段落 the lack of them affects some groups far more than others。' },
+      { statement: '批判する人々は、きたないトイレはないよりも悪いかもしれないと言う。', answer: true, why: '第4段落 a dirty or unsafe toilet may be worse than none at all。' },
+      { statement: '店やカフェは、一日じゅういつでも開いている。', answer: false, why: '第6段落 Shops and cafés are open only during certain hours。' },
+    ],
+    qa: [
+      { q: 'Which workers may suffer discomfort when toilets are scarce, according to supporters?', choices: ['Delivery drivers and street cleaners.', 'Office workers at home.', 'Teachers in classrooms.', 'Pilots on airplanes.'], answer: 0, why: '第3段落 delivery drivers and street cleaners。' },
+      { q: 'What do some local governments pay businesses to do?', choices: ['Display a sign welcoming non-customers.', 'Close their toilets.', 'Build new parks.', 'Lower their prices.'], answer: 0, why: '第5段落 businesses that agree to display a sign welcoming non-customers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
