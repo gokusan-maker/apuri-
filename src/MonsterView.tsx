@@ -3343,6 +3343,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="66" rx="9" ry="6" fill="#6b4226" stroke="#1c0f06" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'squirrelmonkey')
+    return (
+      <g>
+        {/* 白い顔と黒い口元 */}
+        <ellipse cx="50" cy="48" rx="12" ry="10" fill="#fafaf9" />
+        <ellipse cx="50" cy="54" rx="5" ry="3.5" fill="#1c1917" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
