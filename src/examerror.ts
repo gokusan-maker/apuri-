@@ -5783,6 +5783,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) You (B) should (C) never (D) to give up.', choices: ['(A) You', '(B) should', '(C) never', '(D) to give up'], answer: 3, why: '助動詞のあとは原形なので never give up。' },
     ],
   },
+  {
+    id: 'exam-error-come-to-do',
+    title: '入試の正誤問題〈242〉（東大レベル：英作文の「～するようになる」come to do・learn to do・get to do）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「（気持ちや考えが変わって）～するようになる」は come to do（come to like／come to realize）、「（練習して）～できるようになる」は learn to do、「（機会を得て）～するようになる」は get to do（get to know）。become to do とは言わない。',
+      'どれも to のあとは動詞の原形。get used to ～（～になれる）の to は前置詞なので、あとは名詞か動名詞（get used to living）。',
+    ],
+    examples: [
+      { en: 'After a few months, she came to like her new school.', ja: '数か月たって、彼女は新しい学校が好きになった。' },
+      { en: 'We got to know each other at university.', ja: '私たちは大学で知り合った。' },
+    ],
+    questions: [
+      { sentence: '(A) After a few months, (B) she came (C) liking (D) her new school.', choices: ['(A) After a few months,', '(B) she came', '(C) liking', '(D) her new school'], answer: 2, why: '「～するようになる」は come to do なので came to like。' },
+      { sentence: '(A) He (B) became to (C) understand (D) the problem.', choices: ['(A) He', '(B) became to', '(C) understand', '(D) the problem'], answer: 1, why: 'become のあとに to 不定詞は続かない。came to understand。' },
+      { sentence: '(A) My son (B) has learned (C) to riding (D) a bike.', choices: ['(A) My son', '(B) has learned', '(C) to riding', '(D) a bike'], answer: 2, why: 'learn to do で「～できるようになる」。to ride。' },
+      { sentence: '(A) Becoming to (B) know her better, (C) I (D) began to trust her.', choices: ['(A) Becoming to', '(B) know her better,', '(C) I', '(D) began to trust her'], answer: 0, why: '「（人と）知り合いになる・よく知るようになる」は get to know。Getting to know。' },
+      { sentence: '(A) We (B) got (C) knowing each other (D) at university.', choices: ['(A) We', '(B) got', '(C) knowing each other', '(D) at university'], answer: 2, why: 'get to do なので got to know。' },
+      { sentence: '(A) I hope (B) you will (C) come to (D) enjoying living here.', choices: ['(A) I hope', '(B) you will', '(C) come to', '(D) enjoying living here'], answer: 3, why: 'come to のあとは動詞の原形なので enjoy。' },
+      { sentence: '(A) She (B) learned (C) speak French (D) when she lived in Paris.', choices: ['(A) She', '(B) learned', '(C) speak French', '(D) when she lived in Paris'], answer: 2, why: 'learn のあとは to 不定詞なので learned to speak。' },
+      { sentence: '(A) Become (B) a doctor (C) is (D) my dream.', choices: ['(A) Become', '(B) a doctor', '(C) is', '(D) my dream'], answer: 0, why: '主語になるのは動名詞か to 不定詞なので Becoming（To become）。' },
+      { sentence: '(A) People (B) have came to (C) realize (D) the importance of sleep.', choices: ['(A) People', '(B) have came to', '(C) realize', '(D) the importance of sleep'], answer: 1, why: 'come の過去分詞は come なので have come to。' },
+      { sentence: '(A) It took me a year (B) to get (C) used to (D) live in the city.', choices: ['(A) It took me a year', '(B) to get', '(C) used to', '(D) live in the city'], answer: 3, why: 'get used to のあとは名詞・動名詞なので living。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
