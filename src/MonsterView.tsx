@@ -3365,6 +3365,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="46" rx="13" ry="11" fill="#dc2626" />
       </g>
     )
+  if (species === 'capuchin')
+    return (
+      <g>
+        {/* 頭の上の黒い毛 */}
+        <path d="M38 28 q12 -10 24 0 q-12 -4 -24 0 z" fill="#1c1209" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
