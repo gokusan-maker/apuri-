@@ -5533,6 +5533,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) They (B) are looking (C) the stars (D) through a telescope.', choices: ['(A) They', '(B) are looking', '(C) the stars', '(D) through a telescope'], answer: 2, why: '「～を見る」は look at なので at the stars。' },
     ],
   },
+  {
+    id: 'exam-error-sometime-everyday-kyodai',
+    title: '入試の正誤問題〈232〉（京大レベル：英作文の sometime・sometimes・some time と everyday・every day）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'sometimes は「ときどき」、sometime は「（過去・未来の）いつか」、some time は「しばらくの時間」。1語か2語か、s がつくかどうかで意味が変わる。',
+      'every day（2語）は副詞「毎日」（I go jogging every day.）、everyday（1語）は形容詞「毎日の・ふだんの」（everyday life）。',
+    ],
+    examples: [
+      { en: 'Let’s have lunch together sometime next week.', ja: '来週いつか、いっしょに昼ごはんを食べよう。' },
+      { en: 'I go jogging every day as part of my everyday routine.', ja: '毎日の習慣として、毎日ジョギングをしている。' },
+    ],
+    questions: [
+      { sentence: '(A) I go (B) jogging (C) everyday (D) before breakfast.', choices: ['(A) I go', '(B) jogging', '(C) everyday', '(D) before breakfast'], answer: 2, why: '副詞として「毎日」は2語の every day。everyday は形容詞「毎日の」。' },
+      { sentence: '(A) Washing dishes (B) is part of (C) my every day (D) routine.', choices: ['(A) Washing dishes', '(B) is part of', '(C) my every day', '(D) routine'], answer: 2, why: '名詞 routine を修飾する形容詞なので1語の everyday。' },
+      { sentence: '(A) Let’s (B) have lunch (C) together (D) sometimes next week.', choices: ['(A) Let’s', '(B) have lunch', '(C) together', '(D) sometimes next week'], answer: 3, why: '未来の「いつか」は sometime。sometimes は「ときどき」。' },
+      { sentence: '(A) Sometime (B) I (C) walk (D) to school when the weather is nice.', choices: ['(A) Sometime', '(B) I', '(C) walk', '(D) to school when the weather is nice'], answer: 0, why: '「ときどき」は Sometimes。' },
+      { sentence: '(A) It took (B) sometime (C) to repair (D) the old car.', choices: ['(A) It took', '(B) sometime', '(C) to repair', '(D) the old car'], answer: 1, why: '「しばらくの時間」は2語の some time。' },
+      { sentence: '(A) She (B) sometimes (C) visit (D) her grandmother on weekends.', choices: ['(A) She', '(B) sometimes', '(C) visit', '(D) her grandmother on weekends'], answer: 2, why: '主語 She は三人称単数なので visits。' },
+      { sentence: '(A) I hope (B) to visit Kyoto (C) some times (D) in the future.', choices: ['(A) I hope', '(B) to visit Kyoto', '(C) some times', '(D) in the future'], answer: 2, why: '未来の「いつか」は1語の sometime。' },
+      { sentence: '(A) We need (B) sometimes (C) to think about (D) your offer.', choices: ['(A) We need', '(B) sometimes', '(C) to think about', '(D) your offer'], answer: 1, why: '「しばらく（考える）時間」は some time。' },
+      { sentence: '(A) He (B) wears (C) everyday clothes (D) every days.', choices: ['(A) He', '(B) wears', '(C) everyday clothes', '(D) every days'], answer: 3, why: '「毎日」は every day（day は単数）。' },
+      { sentence: '(A) Everyday (B) life (C) in the city (D) are very busy.', choices: ['(A) Everyday', '(B) life', '(C) in the city', '(D) are very busy'], answer: 3, why: '主語 Everyday life は単数なので is。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

@@ -1198,7 +1198,7 @@
   - [x] 455 誤文訂正〈224〉（京大レベル：英作文の hope と wish の使い分け）10問
   - [x] 456 正誤問題〈231〉（国公立レベル：see・look at・watch／hear・listen to の使い分け）10問
   - [x] 457 誤文訂正〈225〉（東大レベル：英作文の affect と effect・expect と wait for）10問
-  - [ ] 458 正誤問題〈232〉（京大レベル：英作文の sometime・sometimes・some time と everyday・every day）10問
+  - [x] 458 正誤問題〈232〉（京大レベル：英作文の sometime・sometimes・some time と everyday・every day）10問
   - [ ] 459 誤文訂正〈226〉（国公立レベル：「～もそうだ」の So do I・Neither do I）10問
   - [ ] 460 正誤問題〈233〉（東大レベル：英作文の explain to 人・marry・resemble・enter などの語法）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
