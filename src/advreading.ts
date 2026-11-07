@@ -42862,6 +42862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-baskets',
+    title: 'On Baskets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we imagine the earliest human inventions, we usually think of stone tools and weapons, objects that have survived for thousands of years and that suggest a story of hunting and conquest. Yet some scholars have argued that one of the most important early inventions may have been something far more modest: a container in which to carry food. Baskets, bags, and nets made of plant fibers rarely survive in the ground, so we know little about their early history, but it is hard to imagine how human communities could have developed without some way of gathering and sharing what they found.",
+      "A basket allows a person to collect more than can be held in two hands. Berries, nuts, roots, and seeds can be gathered over many hours and brought back to a home or a camp, where they can be stored for later or divided among others. In this sense, the basket made it possible to plan for the future and to support people who could not gather food for themselves, such as small children, the sick, and the elderly, and it may therefore have played a quiet but essential part in the emergence of cooperation and care.",
+      "The making of a basket also requires a particular kind of skill. Fibers must be selected, prepared, and woven together in patterns that are both strong and flexible, and the work demands patience, attention, and a detailed knowledge of local plants. ( A ) such knowledge is rarely written down, it has been passed from generation to generation in many cultures, often from older women to younger ones, and the patterns woven into baskets frequently carry meanings that connect their makers to particular places, families, and traditions.",
+      "Baskets also embody a different way of thinking about objects. A stone tool is shaped by removing material until the desired form remains, while a basket is made by bringing many separate strands together until they support one another. Each strand is weak on its own, but woven together they create something capable of holding considerable weight, and this image has often been used to describe communities, in which individuals who might struggle alone become strong through their connections with others.",
+      "In modern societies, baskets have largely been replaced by plastic bags, cardboard boxes, and metal containers that can be produced cheaply in enormous quantities. These new containers are convenient, but many of them are used only once and then thrown away, and they rarely carry any trace of the people who made them. The shift from baskets to disposable packaging may therefore reflect a broader change in our relationship with objects, from one in which things were made carefully and kept for many years to one in which they are produced quickly and soon forgotten.",
+      "It is interesting, then, that baskets have recently enjoyed something of a revival. Some shoppers now carry woven bags to markets in order to reduce waste, and in several countries traditional basket makers have found new customers who value objects made by hand from natural materials. Such choices may be partly a matter of fashion, but they may also express a desire to reconnect with forms of making and using that are slower, more personal, and more respectful of the materials from which they come.",
+      "Perhaps, then, baskets deserve more attention than we usually give them. They remind us that the history of human beings is not only a story of tools for cutting and fighting but also a story of containers for gathering, carrying, and sharing. To look closely at a basket is to see in its woven strands an image of how human communities are held together, and perhaps to recognize that the most important inventions are sometimes those that leave the fewest traces, because they were made to be used and shared rather than to last forever.",
+    ],
+    ja: [
+      '人類のもっとも初期の発明を思いえがくとき、私たちはふつう石の道具や武器を考える。それらは何千年も残ってきたものであり、狩りと征服の物語を思わせる。しかし一部の学者は、もっとも重要な初期の発明の一つは、はるかにささやかなもの、つまり食べものを運ぶための入れものだったのかもしれないと論じてきた。植物の繊維でつくったかごやふくろ、網は地中にめったに残らないので、その初期の歴史についてはほとんどわかっていないが、見つけたものを集め、分け合う何らかの方法がなければ、人間の共同体がどのように発展できたのかを想像するのはむずかしい。',
+      'かごがあれば、人は両手にもてる以上のものを集めることができる。木の実や果実、根、種を何時間もかけて集め、家やキャンプにもち帰り、あとのためにたくわえたり、ほかの人々と分けたりすることができる。この意味で、かごは未来のために計画を立て、小さな子どもや病人、お年寄りのように、自分で食べものを集められない人々をささえることを可能にした。だからかごは、協力と思いやりが生まれるうえで、しずかだが欠かせない役割を果たしたのかもしれない。',
+      'かごをつくるには、また特別な種類の技術が必要である。繊維を選び、下ごしらえをし、強くてしなやかな模様に編み合わせなければならず、その作業には根気と注意、そして地元の植物についてのくわしい知識が求められる。そうした知識が書き記されることはめったにないが、多くの文化で世代から世代へと、しばしば年上の女性から若い女性へと伝えられてきた。そしてかごに編みこまれた模様は、しばしば、つくり手を特定の場所や家族、伝統と結びつける意味をもっている。',
+      'かごはまた、ものについてのちがう考え方を体現している。石の道具は、望む形が残るまで材料をけずりとってつくられるが、かごは、多くの別々の糸がおたがいをささえ合うようになるまで寄せ集めてつくられる。一本一本の糸はそれだけでは弱いが、編み合わせると、かなりの重さをささえられるものになる。このイメージはしばしば共同体を表すのに使われてきた。共同体では、ひとりでは苦労するかもしれない人々が、ほかの人々とのつながりによって強くなるのである。',
+      '現代の社会では、かごの多くは、安く大量につくれるビニールぶくろや段ボール箱、金属の入れものに置きかえられてきた。こうした新しい入れものは便利だが、その多くは一度だけ使われてすてられ、それをつくった人々のあとをとどめることはめったにない。だから、かごから使いすての包装への移り変わりは、ものとの関係のより広い変化を反映しているのかもしれない。ものが注意深くつくられ何年も大切にされる関係から、すばやく生産されすぐにわすれられる関係への変化である。',
+      'それにしても、かごが最近ちょっとした復活をとげているのは興味深い。ごみを減らすために編んだふくろを市場にもっていく買い物客もおり、いくつかの国では、伝統的なかご職人が、天然の素材から手でつくられたものを大切にする新しい客を見つけている。そうした選択は一部には流行の問題かもしれないが、より時間をかけ、より個人的で、もとになった素材をより大切にするつくり方や使い方と、ふたたびつながりたいという願いを表しているのかもしれない。',
+      'だとすれば、かごは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。かごは、人間の歴史が切ったり戦ったりするための道具の物語であるだけでなく、集め、運び、分け合うための入れものの物語でもあることを思い出させてくれる。かごをよく見ることは、その編まれた糸のなかに、人間の共同体がどのようにまとまっているかのイメージを見ることであり、そしてもしかすると、もっとも重要な発明はときに、もっともあとを残さないものであることに気づくことなのかもしれない。それらは永遠に残るためではなく、使われ分かち合われるためにつくられたからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした知識は書き記されることはめったにないが、世代から世代へ伝えられてきた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '植物の繊維でつくったかごは、地中に長く残りやすい。', answer: false, why: '第1段落 rarely survive in the ground。' },
+      { statement: 'かごによって、自分で食べものを集められない人々をささえることができた。', answer: true, why: '第2段落 to support people who could not gather food for themselves。' },
+      { statement: '石の道具は、多くの糸を寄せ集めてつくられる。', answer: false, why: '第4段落 A stone tool is shaped by removing material。' },
+      { statement: '伝統的なかご職人が新しい客を見つけている国もある。', answer: true, why: '第6段落 traditional basket makers have found new customers。' },
+    ],
+    qa: [
+      { q: 'What image do woven strands often describe, according to the passage?', choices: ['Communities in which individuals become strong through connections.', 'Wars between neighboring groups.', 'The speed of modern factories.', 'The loneliness of city life.'], answer: 0, why: '第4段落 this image has often been used to describe communities。' },
+      { q: 'Why do some shoppers now carry woven bags to markets?', choices: ['To reduce waste.', 'To save time.', 'To carry heavier loads.', 'To follow a new law.'], answer: 0, why: '第6段落 carry woven bags to markets in order to reduce waste。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
