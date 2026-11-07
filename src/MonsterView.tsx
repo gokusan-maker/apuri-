@@ -3558,6 +3558,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 78 v10 M62 78 v10" stroke="#3b0764" strokeWidth="5" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'kob')
+    return (
+      <g>
+        {/* たてごと形のツノ */}
+        <path d="M42 26 q-6 -6 0 -12 q4 -4 0 -8 M58 26 q6 -6 0 -12 q-4 -4 0 -8" stroke="#4a2a10" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
