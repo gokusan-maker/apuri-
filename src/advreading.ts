@@ -41742,6 +41742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-bridges',
+    title: 'On Bridges',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We cross bridges so often that we rarely think about them. A short walk through a city may take us over several, and a train journey may carry us across rivers and valleys without our noticing. Yet a bridge is a remarkable achievement, a structure that allows people to pass over obstacles that would otherwise separate them. In its simplest form, it may be no more than a log laid across a stream; in its most ambitious, it may span kilometers of water, supported by towers that rise higher than any building in the surrounding city.",
+      "Building a bridge has always required a careful understanding of natural forces. A bridge must carry its own weight and the weight of everything that crosses it, while resisting wind, floods, earthquakes, and the slow effects of time. Engineers over the centuries have developed many different forms, from stone arches that press their weight outward into the ground to suspension bridges that hang from enormous cables. Each design reflects a particular solution to the problem of how to hold something up over empty space. Some of the earliest arch bridges, built with simple tools and without modern calculations, have stood for nearly two thousand years, a testament to the knowledge their builders gained through careful observation and long experience.",
+      "Bridges have also transformed the lives of the communities they connect. A town that was once isolated by a river may suddenly find itself linked to markets, schools, and hospitals on the other side. ( A ) such connections bring new opportunities, they can also bring change that not everyone welcomes, as traffic increases, local customs give way to outside influences, and the sense of separateness that once defined a place begins to fade.",
+      "Perhaps because of their power to connect, bridges have long carried symbolic meaning. People speak of building bridges between nations, cultures, or generations, meaning that they hope to overcome divisions and establish understanding. At the same time, the phrase burning one's bridges describes an action that makes return impossible. Such expressions reveal how deeply the image of the bridge has entered the way human beings think about relationships and choices.",
+      "Some bridges have become beloved landmarks, admired not only for their usefulness but for their beauty. Their graceful curves, soaring towers, and reflections in the water below attract visitors from around the world, and they may become symbols of the cities in which they stand. Yet even the most ordinary footbridge can have a quiet charm, offering a place to pause, watch the water flow beneath, and see familiar surroundings from a slightly different angle. Many people have favorite bridges in their own towns where they like to stop on the way home, watching the light change on the water as evening falls.",
+      "Bridges, however, do not last forever without care. Steel rusts, concrete cracks, and the foundations beneath the water may be worn away by currents over many decades. When bridges are neglected, the consequences can be tragic, and many societies now face the challenge of maintaining structures built generations ago. Caring for bridges requires not only technical skill but also a willingness to invest in work that may seem invisible until something goes wrong, and to plan for repairs long before they become urgent.",
+      "In the end, bridges remind us that connection is something that must be built and maintained. Just as a physical bridge requires careful design and constant attention, the bridges between people, communities, and ideas depend on effort, patience, and trust. To cross a bridge, then, is to benefit from the work of those who came before us, and perhaps to remember that the connections we rely on every day are often the result of choices that others made long ago.",
+    ],
+    ja: [
+      '私たちはあまりにしばしば橋をわたるので、それについて考えることはめったにない。都市を少し歩くだけでいくつもの橋を通ることがあり、電車の旅は、気づかないうちに私たちを川や谷の向こうへ運んでいく。しかし橋はおどろくべき成果であり、そうでなければ人々を分けてしまうはずの障害を、人々がこえていけるようにする建造物である。もっともかんたんな形では、小川にわたした一本の丸太にすぎないかもしれないが、もっとも大がかりなものは、何キロメートルもの水の上にかかり、まわりの都市のどの建物よりも高くそびえる塔にささえられていることもある。',
+      '橋をつくるには、いつも自然の力を注意深く理解することが必要だった。橋は自分の重さと、そこをわたるあらゆるものの重さを運びながら、風や洪水や地震や、時の流れのゆっくりとした影響にたえなければならない。何世紀にもわたって、技術者たちは、重さを外側へ地面におしつける石のアーチから、巨大なケーブルからつり下がるつり橋まで、さまざまな形を生み出してきた。どの設計も、何もない空間の上に何かをどうささえるかという問題への、一つの特定の答えを映している。かんたんな道具で、現代の計算もなしにつくられたもっとも古いアーチ橋の中には、二千年近くも立ち続けているものがあり、それをつくった人々が注意深い観察と長い経験を通じて得た知識のあかしとなっている。',
+      '橋はまた、それが結ぶ地域の暮らしを大きく変えてきた。かつて川によって孤立していた町が、突然、向こう岸の市場や学校や病院と結ばれることもある。そうしたつながりは新しい機会をもたらすが、だれもが歓迎するわけではない変化をもたらすこともある。交通がふえ、地元の習わしが外からの影響に道をゆずり、かつてその場所を形づくっていたはなれているという感覚がうすれはじめるのである。',
+      '結びつける力をもっているからか、橋は長いあいだ象徴的な意味をもってきた。人々は国や文化や世代のあいだに「橋をかける」と言い、分かれ目をのりこえて理解を築きたいという望みをあらわす。同時に、「自分の橋を燃やす」という言い方は、もどることを不可能にする行いをあらわす。こうした言い方は、橋のイメージが、人間が関係や選択について考えるやり方の中に、どれほど深く入りこんでいるかを示している。',
+      '役に立つことだけでなく、その美しさのためにもほめたたえられ、愛される名所になった橋もある。その優美な曲線や、そびえる塔や、下の水に映る姿は、世界中から人々をひきつけ、それが立つ都市の象徴になることもある。しかし、もっともありふれた歩道橋でさえ、しずかな魅力をもっていることがある。立ち止まって下を流れる水をながめ、なじみのまわりの景色を少しちがう角度から見る場所をあたえてくれるのである。多くの人が、自分の町に、家に帰るとちゅうに立ち止まって、夕暮れとともに水の上の光が変わるのをながめるのが好きな、お気に入りの橋をもっている。',
+      'しかし橋は、手入れなしに永遠に続くわけではない。鉄はさび、コンクリートはひびわれ、水の下の土台は何十年もかけて流れにけずられるかもしれない。橋がほうっておかれると、その結果は悲惨なものになりうるし、多くの社会が今、何世代も前につくられた建造物を保つという課題に直面している。橋の世話には、技術の力だけでなく、何かがうまくいかなくなるまで目に見えないように思える仕事に投資し、修理が急を要するようになるずっと前から計画を立てる心がまえも必要である。',
+      '結局のところ、橋は、つながりとは築き、保ち続けなければならないものだということを思い出させてくれる。物としての橋が注意深い設計とたえまない注意を必要とするのと同じように、人々や地域や考えのあいだの橋も、努力と忍耐と信頼にかかっている。だから、橋をわたることは、私たちより前に来た人々の仕事の恵みを受けることであり、もしかすると、私たちが毎日たよっているつながりが、しばしばずっと前にほかの人々が行った選択の結果であることを思い出すことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「新しい機会をもたらすが、歓迎されない変化ももたらす」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '橋は、風や洪水や地震にたえなければならない。', answer: true, why: '第2段落 while resisting wind, floods, earthquakes。' },
+      { statement: '橋がもたらす変化は、だれもが歓迎する。', answer: false, why: '第3段落 change that not everyone welcomes。' },
+      { statement: '「自分の橋を燃やす」は、もどれなくする行いをあらわす。', answer: true, why: '第4段落 describes an action that makes return impossible。' },
+      { statement: '橋は手入れをしなくても永遠に続く。', answer: false, why: '第6段落 Bridges, however, do not last forever without care。' },
+    ],
+    qa: [
+      { q: 'What does each bridge design reflect, according to the passage?', choices: ['A particular solution to holding something up over empty space.', 'The wealth of its builders.', 'The color of the river.', 'The number of cars that use it.'], answer: 0, why: '第2段落 a particular solution to the problem of how to hold something up over empty space。' },
+      { q: 'What does caring for bridges require besides technical skill?', choices: ['A willingness to invest in work that may seem invisible.', 'More tourists.', 'Taller towers.', 'Faster trains.'], answer: 0, why: '第6段落 a willingness to invest in work that may seem invisible。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
