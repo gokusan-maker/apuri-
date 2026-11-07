@@ -41938,6 +41938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-young-drivers',
+    title: 'Should New Young Drivers Face Restrictions?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, young people are allowed to drive alone as soon as they pass a driving test, often at the age of seventeen or eighteen. Yet statistics consistently show that new drivers, especially young ones, are far more likely to be involved in serious accidents than experienced drivers. In response, some governments have introduced systems of graduated licensing, under which new drivers must accept certain restrictions for their first year or two, such as limits on driving at night or carrying young passengers. Such rules have saved lives, supporters say, but they have also been criticized as unfair and difficult to enforce.",
+      "Supporters argue that the restrictions address the specific risks faced by inexperienced drivers. Many accidents involving young drivers occur late at night, when visibility is poor and drivers may be tired, or when several friends are traveling together and the driver is distracted. By limiting these situations during the first months of driving, graduated licensing allows new drivers to gain experience under safer conditions, gradually building the skills and judgment that only time on the road can provide. Researchers note that the parts of the brain responsible for judging risk and controlling impulses continue to develop well into a person's twenties, which may help explain why young drivers sometimes take dangerous chances.",
+      "Supporters also point to evidence from countries that have adopted such systems. In several places, the introduction of graduated licensing has been followed by significant reductions in accidents among young drivers. ( A ) the rules may seem inconvenient to the drivers themselves, supporters argue, they protect not only young people but also passengers, pedestrians, and other road users who might otherwise be harmed by a moment of inexperience.",
+      "Critics, however, argue that such restrictions treat all young drivers as if they were equally careless. Many teenagers drive responsibly, and the rules may penalize them for the behavior of others. Critics also note that in rural areas, where public transport is limited, young people may need to drive at night to reach jobs, schools, or activities, and restrictions could make it difficult for them to work or study. In such cases, the rules may limit independence without necessarily improving safety.",
+      "Critics also question how effectively the restrictions can be enforced. Police officers cannot easily tell whether a driver is newly licensed, and some young drivers may simply ignore the rules if they believe they are unlikely to be caught. Critics suggest that resources might be better spent on improving driver education, encouraging more supervised practice before the test, or developing technology that monitors driving behavior and warns of dangerous habits. Some insurance companies already offer lower prices to young drivers who agree to have their driving recorded by such devices.",
+      "Many experts believe that the most effective approach combines several measures. Graduated licensing can be supported by requirements for a minimum number of hours of supervised practice, by education programs that teach young people about the specific risks they face, and by involving parents in setting expectations. Some families use agreements in which young drivers promise to follow certain rules in exchange for greater freedom as they demonstrate responsibility over time, a system that many parents find both fair and practical.",
+      "The debate over restrictions on young drivers ultimately reflects a broader question about how societies balance safety and freedom. Driving can bring independence and opportunity, but it also carries serious risks for drivers and others alike. Deciding how much freedom to grant new drivers, and how quickly, requires weighing the evidence about accidents against the value of trust and independence, and recognizing that the right balance may differ from one community to another, depending on local roads, transport, and the needs of young people themselves.",
+    ],
+    ja: [
+      '多くの国では、若者は運転免許の試験に合格するとすぐに、しばしば17歳か18歳で、一人で運転することをゆるされる。しかし統計は、新しい運転者、とくに若い運転者が、経験豊かな運転者よりはるかに重い事故にあいやすいことを一貫して示している。これにこたえて、新しい運転者が最初の一、二年のあいだ、夜の運転や若い同乗者を乗せることへの制限のような一定の制限を受け入れなければならない、段階的な免許の仕組みを取り入れた政府もある。そうした規則は命を救ってきたと支持する人々は言うが、不公平で取りしまりにくいとも批判されてきた。',
+      '支持する人々は、こうした制限は経験の少ない運転者がかかえる特有の危険にこたえていると主張する。若い運転者がかかわる事故の多くは、見通しが悪く運転者がつかれているかもしれない夜おそくや、何人もの友だちがいっしょに乗っていて運転者の気がちっているときに起こる。運転をはじめた最初の数か月にこうした場面を制限することで、段階的な免許は、新しい運転者がより安全な条件のもとで経験を積み、道路の上で過ごす時間だけがあたえられる技術と判断力を少しずつ育てられるようにする。危険を判断し衝動をおさえる脳の部分は二十代に入ってもしばらく発達し続けると研究者は指摘しており、それが、若い運転者がときに危険な賭けに出る理由を説明する助けになるかもしれない。',
+      '支持する人々はまた、そうした仕組みを取り入れた国々からの証拠をあげる。いくつかの場所では、段階的な免許を取り入れたあと、若い運転者の事故が大きくへった。規則は運転者本人には不便に見えるかもしれないが、若者だけでなく、そうでなければ一瞬の経験不足によって傷つけられたかもしれない同乗者や歩行者やほかの道路の利用者も守ると支持する人々は主張する。',
+      'しかし批判する人々は、そうした制限はすべての若い運転者を同じように不注意であるかのようにあつかっていると主張する。多くの十代の若者は責任をもって運転しており、規則はほかの人のふるまいのために彼らを罰することになるかもしれない。批判する人々はまた、公共交通の限られたいなかの地域では、若者が仕事や学校や活動に行くために夜に運転する必要があるかもしれず、制限によって働いたり学んだりするのがむずかしくなりかねないと指摘する。そうした場合、規則は安全をかならずしも高めることなく、自立を制限するかもしれない。',
+      '批判する人々はまた、制限をどれほど効果的に取りしまれるのかと疑問を投げかける。警察官には運転者が免許を取ったばかりかどうかをかんたんには見分けられず、つかまりにくいと思えば規則をただ無視する若い運転者もいるかもしれない。資源は、運転の教育をよくしたり、試験の前に見守りのついた練習をもっとするようすすめたり、運転のふるまいを見守って危険な習慣を警告する技術を開発したりすることに使ったほうがよいかもしれないと批判する人々は言う。そうした機器で運転を記録されることに同意した若い運転者に、すでにより安い保険料を提示している保険会社もある。',
+      '多くの専門家は、もっとも効果的なやり方はいくつかの手だてを組み合わせることだと考えている。段階的な免許を、見守りのついた練習の最低限の時間の義務づけや、若者がかかえる特有の危険について教える教育の仕組みや、期待を決めることへの親の参加によってささえることができる。若い運転者が一定の規則を守ると約束し、時とともに責任感を示すにつれて、そのかわりにより大きな自由をあたえられるという取り決めを使う家庭もあり、多くの親はこの仕組みを公平で実際的だと感じている。',
+      '若い運転者への制限をめぐる議論は、結局のところ、社会が安全と自由をどうつりあわせるかについての、より広い問いを反映している。運転は自立と機会をもたらしうるが、運転者にもほかの人々にも重大な危険をともなう。新しい運転者にどれだけの自由を、どれほど早くあたえるかを決めるには、事故についての証拠と、信頼と自立の価値をくらべ、正しいつりあいが、地元の道路や交通や若者自身の必要によって、地域ごとにちがうかもしれないことを認める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「本人には不便に見えるかもしれないが、多くの人を守る」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that graduated licensing addresses the risks faced by ( 1 ) drivers and has reduced accidents. Critics argue that it treats all young drivers as equally careless and is difficult to ( 2 ). Many experts favor combining it with supervised ( 3 ) and education.',
+      blanks: [
+        { choices: ['inexperienced', 'elderly', 'professional', 'foreign'], answer: 0, why: '第2段落 the specific risks faced by inexperienced drivers。' },
+        { choices: ['enforce', 'explain', 'enjoy', 'escape'], answer: 0, why: '第5段落 how effectively the restrictions can be enforced。' },
+        { choices: ['practice', 'parties', 'shopping', 'sleeping'], answer: 0, why: '第6段落 a minimum number of hours of supervised practice。' },
+      ],
+    },
+    tf: [
+      { statement: '新しい若い運転者は、経験豊かな運転者より重い事故にあいやすい。', answer: true, why: '第1段落 far more likely to be involved in serious accidents。' },
+      { statement: '若い運転者の事故の多くは、昼間の明るい時間に起こる。', answer: false, why: '第2段落 Many accidents ... occur late at night。' },
+      { statement: 'いなかでは、若者が夜に運転する必要があることもある。', answer: true, why: '第4段落 young people may need to drive at night to reach jobs, schools。' },
+      { statement: '警察官は、免許を取ったばかりの運転者をかんたんに見分けられる。', answer: false, why: '第5段落 Police officers cannot easily tell whether a driver is newly licensed。' },
+    ],
+    qa: [
+      { q: 'What kind of restrictions might new drivers face under graduated licensing?', choices: ['Limits on driving at night or carrying young passengers.', 'A ban on all driving.', 'Higher taxes.', 'Shorter driving tests.'], answer: 0, why: '第1段落 such as limits on driving at night or carrying young passengers。' },
+      { q: 'What agreements do some families use?', choices: ['Young drivers follow rules in exchange for greater freedom over time.', 'Parents drive all the time.', 'Young drivers pay for every trip.', 'Families sell their cars.'], answer: 0, why: '第6段落 young drivers promise to follow certain rules in exchange for greater freedom。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
