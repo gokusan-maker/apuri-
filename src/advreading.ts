@@ -42062,6 +42062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-clocks',
+    title: 'On Clocks',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few objects shape modern life as completely as the clock. It tells us when to wake, when to begin work, when to eat, and when to sleep, and its numbers appear on phones, computers, cars, ovens, and walls throughout our homes. We arrange meetings to the minute, measure races to the hundredth of a second, and often feel anxious when we fall behind schedule. Yet for most of human history, people lived without precise clocks, and the way we now organize our days would have seemed strange, even unnatural, to our distant ancestors.",
+      "Before mechanical clocks, people measured time mainly by the movements of the sun, the moon, and the stars. Days began at dawn and ended at dusk, and the length of an hour could vary with the seasons. Sundials, water clocks, and candles marked with lines offered rough ways of dividing the day, but most people relied on natural signs, such as the position of the sun or the crowing of roosters, to know when to begin and end their work. Time, in this older sense, was closely tied to the rhythms of nature and to the tasks at hand, so that farmers might speak of the time needed to milk the cows or to walk to the next village rather than of a fixed number of minutes.",
+      "The spread of mechanical clocks transformed this relationship. Clock towers in town squares announced the hours for everyone, and over time, smaller clocks and watches allowed individuals to carry precise time with them. ( A ) these devices brought great benefits in coordination and efficiency, they also changed the way people experienced time itself, encouraging them to think of it as a series of equal units to be measured, spent, saved, or wasted.",
+      "This change became especially important with the rise of factories and railways. Workers had to arrive at fixed hours, machines operated according to strict schedules, and trains required timetables shared across great distances. To make such coordination possible, towns that had once kept their own local time based on the sun gradually adopted standard time zones, so that a single clock time could be used across entire regions and eventually the whole world.",
+      "Today, clocks have become so accurate that they can measure intervals far smaller than human beings can perceive. Atomic clocks keep time with astonishing precision, allowing satellites to guide navigation systems and computers to coordinate vast networks. Yet this precision has a cost. Many people feel that they never have enough time, that every minute must be used productively, and that rest or idleness is somehow a failure. Even holidays can become crowded with scheduled activities, leaving little room for the unplanned moments that often bring the deepest rest.",
+      "Some thinkers have suggested that we may need to recover a different relationship with time. They point out that many of the most meaningful experiences in life, such as a long conversation with a friend, a walk in the woods, or the absorption of creative work, cannot easily be measured in minutes, and may even be spoiled if we keep checking the clock. Learning to forget the time, at least occasionally, may therefore be as important as learning to keep it.",
+      "In the end, the clock reminds us that the way we measure time shapes the way we live it. It has given us remarkable powers of coordination, but it can also make us forget that time is not merely a resource to be managed but the substance of our lives. To look up from the clock now and then, and to notice the light, the seasons, and the people around us, may help us remember what all those carefully counted minutes are really for.",
+    ],
+    ja: [
+      '時計ほど現代の暮らしを完全に形づくっている物はほとんどない。時計は、いつ起き、いつ仕事をはじめ、いつ食べ、いつねむるかを教え、その数字は電話やコンピューターや車やオーブンや家中のかべにあらわれる。私たちは分単位で会議を設定し、百分の一秒単位で競走をはかり、予定よりおくれると不安を感じる。しかし人類の歴史のほとんどを通じて、人々は正確な時計なしに暮らしており、今私たちが一日を組み立てているやり方は、祖先には奇妙に、不自然にさえ思えただろう。',
+      '機械の時計ができる前、人々は主に太陽や月や星の動きによって時間をはかっていた。一日は夜明けにはじまり夕暮れに終わり、一時間の長さは季節によって変わることもあった。日時計や水時計や線をつけたろうそくは一日を分けるおおまかな方法をあたえたが、ほとんどの人は、仕事をいつはじめていつ終えるかを知るのに、太陽の位置やおんどりの鳴き声のような自然のしるしにたよっていた。この古い意味での時間は、自然のリズムや目の前の仕事と深く結びついており、農家は決まった分数ではなく、牛の乳をしぼるのにかかる時間や、となりの村まで歩くのにかかる時間について語ったかもしれない。',
+      '機械の時計が広まると、この関係は大きく変わった。町の広場の時計台はすべての人に時刻を知らせ、やがて小さな時計やうで時計によって、一人一人が正確な時間をもち運べるようになった。こうした道具は調整と効率の面で大きな利益をもたらしたが、人々の時間そのものの感じ方も変え、時間を、はかり、使い、節約し、むだにする、ひとしい単位のならびとして考えるようにうながした。',
+      'この変化は、工場や鉄道の発達とともにとくに大切になった。働き手は決まった時刻に来なければならず、機械はきびしい予定にしたがって動き、列車には遠く広い範囲で共有される時刻表が必要だった。そうした調整を可能にするために、かつては太陽にもとづいてそれぞれの土地の時刻を使っていた町は、少しずつ標準時の時間帯を取り入れ、一つの時計の時刻を地域全体、やがて世界全体で使えるようになった。',
+      '今日、時計はとても正確になり、人間が感じとれるよりもはるかに短い間隔をはかれるようになった。原子時計はおどろくべき正確さで時を刻み、人工衛星が道案内の仕組みを導き、コンピューターが巨大な網を調整することを可能にしている。しかしこの正確さには代償がある。多くの人が、時間がいつも足りない、一分一分を生産的に使わなければならない、休むことやぼんやりすることは何かの失敗だと感じているのである。休日でさえ予定された活動でいっぱいになり、もっとも深い休息をもたらすことの多い、計画していない瞬間の入る余地がほとんど残らないこともある。',
+      '時間とのちがう関係を取りもどす必要があるかもしれないと示す思想家もいる。友だちとの長い会話や、森の散歩や、創作への没頭のような、人生でもっとも意味のある経験の多くは、分単位ではかんたんにはかれず、時計を見続けているとだめになってしまうことさえあると彼らは指摘する。だから、少なくともときどきは時間をわすれることを学ぶのは、時間を守ることを学ぶのと同じくらい大切なのかもしれない。',
+      '結局のところ、時計は、時間のはかり方が時間の生き方を形づくることを思い出させてくれる。時計は私たちにおどろくべき調整の力をあたえたが、時間がただ管理すべき資源ではなく、私たちの人生の中身そのものであることをわすれさせることもある。ときどき時計から目を上げて、光や季節やまわりの人々に気づくことは、注意深く数えられたその分のすべてが何のためにあるのかを思い出す助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「大きな利益をもたらしたが、時間の感じ方も変えた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '昔は、一時間の長さが季節によって変わることもあった。', answer: true, why: '第2段落 the length of an hour could vary with the seasons。' },
+      { statement: '鉄道の発達は、時刻の調整とは関係がなかった。', answer: false, why: '第4段落 trains required timetables shared across great distances。' },
+      { statement: '原子時計は、人工衛星の道案内を可能にしている。', answer: true, why: '第5段落 allowing satellites to guide navigation systems。' },
+      { statement: '筆者は、時間をわすれることは決してよくないと述べている。', answer: false, why: '第6段落 Learning to forget the time ... may therefore be as important。' },
+    ],
+    qa: [
+      { q: 'What did most people rely on before mechanical clocks?', choices: ['Natural signs such as the position of the sun.', 'Watches on their wrists.', 'Clocks on their phones.', 'Train timetables.'], answer: 0, why: '第2段落 relied on natural signs, such as the position of the sun。' },
+      { q: 'Why did towns gradually adopt standard time zones?', choices: ['To make coordination across regions possible.', 'To make days longer.', 'To save money on clocks.', 'To follow the moon.'], answer: 0, why: '第4段落 To make such coordination possible ... adopted standard time zones。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
