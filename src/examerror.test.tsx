@@ -3193,3 +3193,10 @@ it('正誤問題〈231〉：国公立レベル see・look at・watch／hear・li
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) look')
 })
+
+it('誤文訂正〈225〉：東大レベル affect と effect・expect と wait for の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-225')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('affect')
+})

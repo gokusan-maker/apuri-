@@ -9569,6 +9569,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I [am hoping for] I had a dog.', choices: ['wish', 'hope', 'want that', 'expect'], answer: 0, why: 'had（仮定法）なので wish。' },
     ],
   },
+  {
+    id: 'exam-fix-225',
+    title: '入試の誤文訂正〈225〉（東大レベル：英作文の affect と effect・expect と wait for）',
+    points: ['affect は動詞「～に影響する」（affect A）、effect は名詞「影響・効果」（have an effect on A）。expect は「（起こると）予想する・期待する」（expect A／expect to do／expect 人 to do）、wait for は「（来るのを）待つ」、look forward to ～ing は「～を楽しみに待つ」。'],
+    examples: [{ en: 'The weather affects our mood. / Music has a strong effect on us.', ja: '天気は気分に影響する。／音楽は私たちに強い影響をあたえる。' }],
+    questions: [
+      { sentence: 'Lack of sleep can [effect] your health.', choices: ['affect', 'effect on', 'affection', 'effective'], answer: 0, why: '動詞「～に影響する」は affect。' },
+      { sentence: 'The new law had a big [affect] on small shops.', choices: ['effect', 'affection', 'affecting', 'effective'], answer: 0, why: '名詞「影響」は effect（have an effect on）。' },
+      { sentence: 'I [am waiting] it to rain this afternoon.', choices: ['expect', 'wait for', 'look forward', 'hope'], answer: 0, why: '「雨がふると予想する」は expect it to rain。' },
+      { sentence: 'We [expected] the bus for thirty minutes in the cold.', choices: ['waited for', 'expected for', 'looked forward', 'waited'], answer: 0, why: '「（来るのを）待った」は waited for。' },
+      { sentence: 'I am looking forward to [see] you again.', choices: ['seeing', 'see to', 'saw', 'be seen'], answer: 0, why: 'look forward to のあとは動名詞 seeing。' },
+      { sentence: 'The medicine had no [affect] at all.', choices: ['effect', 'affecting', 'affective', 'effects of'], answer: 0, why: '名詞「効果」は effect。' },
+      { sentence: 'His speech deeply [effected] the audience.', choices: ['affected', 'effect', 'affection', 'effective'], answer: 0, why: '動詞「（人の心）を動かす・影響する」は affected。' },
+      { sentence: 'Nobody [waited] such a large crowd to come.', choices: ['expected', 'waited for', 'looked', 'hoped for'], answer: 0, why: '「来ると予想した」は expected ～ to come。' },
+      { sentence: 'Please [expect] me here until I come back.', choices: ['wait for', 'expect for', 'look forward', 'hope'], answer: 0, why: '「もどるまで待つ」は wait for。' },
+      { sentence: 'The cold weather [had affect] the harvest this year.', choices: ['affected', 'effected', 'had effected', 'effect'], answer: 0, why: '動詞「影響した」は affected（has affected とも）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
