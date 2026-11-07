@@ -10085,6 +10085,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The doctor arrived [just on time] to save the boy’s life.', choices: ['just in time', 'just at time', 'by just time', 'just on the time'], answer: 0, why: '「ぎりぎり間に合って」は just in time。' },
     ],
   },
+  {
+    id: 'exam-fix-237',
+    title: '入試の誤文訂正〈237〉（東大レベル：英作文の alone と lonely・alive と living の使い分け）',
+    points: ['alone は「ひとりで（いる）」という状態を表し、名詞の前には置かない（live alone／leave 人 alone）。lonely は「さびしい」という気持ちを表す形容詞で、名詞の前にも置ける（a lonely man）が、副詞としては使わない。', 'alive・asleep のように a- で始まる形容詞はふつう名詞の前に置かず、be動詞のあとなどで使う（The fish is alive.）。名詞の前では living・sleeping・live を使う（a living fish／a sleeping baby）。lively は「元気な・にぎやかな」で意味がちがう。'],
+    examples: [{ en: 'He lives alone, but he never feels lonely. / The fish was still alive, so we put the living fish back in the river.', ja: '彼はひとりで暮らしているが、さびしいと感じたことはない。／魚はまだ生きていたので、私たちはその生きている魚を川にもどした。' }],
+    questions: [
+      { sentence: 'I found [an alive fish] in the bucket.', choices: ['a living fish', 'an aliving fish', 'a lived fish', 'an alive of fish'], answer: 0, why: 'alive は名詞の前に置かないので a living fish。' },
+      { sentence: 'He lives [lonely] in a small house in the mountains.', choices: ['alone', 'lonelily', 'lonely of', 'a lonely'], answer: 0, why: '「ひとりで暮らす」は live alone。lonely は副詞として使わない。' },
+      { sentence: 'The old man was [an alone man] with no friends.', choices: ['a lonely man', 'an alone of man', 'a lonelily man', 'an alonely man'], answer: 0, why: '名詞の前には alone を置かない。「さびしい男」は a lonely man。' },
+      { sentence: 'Are your grandparents still [living alive]?', choices: ['alive', 'live alive', 'lively', 'lives'], answer: 0, why: '「まだ生きている」は still alive。' },
+      { sentence: 'Be quiet — there is [an asleep baby] in the next room.', choices: ['a sleeping baby', 'an asleeping baby', 'a slept baby', 'an sleep baby'], answer: 0, why: 'asleep は名詞の前に置かないので a sleeping baby。' },
+      { sentence: 'Don’t leave the children [lonely] at home.', choices: ['alone', 'lonelily', 'a lonely', 'lonely of'], answer: 0, why: '「ひとりにしておく」は leave 人 alone。' },
+      { sentence: 'I like being [lonely] sometimes because I can read quietly.', choices: ['alone', 'lonelily', 'a lonely one', 'loneliness of'], answer: 0, why: 'さびしい気持ちではなく「ひとりでいる」状態なので alone。' },
+      { sentence: 'This is a story about [alive animals] in the forest.', choices: ['living animals', 'alive of animals', 'lively animal', 'animals live of'], answer: 0, why: '名詞の前では living animals。' },
+      { sentence: 'Nobody thought the dog would come out of the fire [living].', choices: ['alive', 'lived', 'liveliness', 'a live'], answer: 0, why: '「生きて（出てくる）」という状態は alive。' },
+      { sentence: 'The concert was very [alive] and everyone danced.', choices: ['lively', 'alively', 'living of', 'a live'], answer: 0, why: '「にぎやかな・活気のある」は lively。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

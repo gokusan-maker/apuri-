@@ -3361,3 +3361,10 @@ it('正誤問題〈243〉：京大レベル happen・take place・occur の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) was happened')
 })
+
+it('誤文訂正〈237〉：東大レベル alone と lonely・alive と living の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-237')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('a living fish')
+})
