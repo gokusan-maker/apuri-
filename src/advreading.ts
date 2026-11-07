@@ -40338,6 +40338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-airport-expansion',
+    title: 'Should Airports Be Expanded?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As air travel has grown over recent decades, many of the world's busiest airports have reached the limits of their capacity. Runways are crowded, terminals are full, and airlines complain that they cannot add new routes because there is no space for additional flights. In response, governments and airport operators have proposed building new runways or even entirely new airports. Such projects are often presented as essential for economic growth, yet they frequently provoke fierce opposition from local residents and environmental groups.",
+      "Supporters argue that expanding airports brings significant economic benefits. Airports connect cities to the rest of the world, making it easier for businesses to trade, for tourists to visit, and for skilled workers to move where they are needed. A city whose airport cannot meet demand, supporters warn, may lose investment and jobs to rival cities with better connections. Construction itself creates employment, and an expanded airport may support thousands of further jobs in airlines, hotels, transport, and related industries for many years to come. Supporters add that if one country refuses to expand its airports, travelers may simply fly through hubs in neighboring countries instead, so that emissions are not reduced but merely moved elsewhere along with the economic benefits.",
+      "Supporters also emphasize the needs of ordinary travelers. When airports are overcrowded, delays become more common, ticket prices may rise, and passengers have fewer choices of destinations and times. ( A ) many people fly only occasionally, supporters argue, air travel has become an important part of modern life, allowing families separated by great distances to meet, students to study abroad, and people of modest means to experience other countries and cultures.",
+      "Critics, however, point first to the environmental costs. Aviation is a significant and growing source of greenhouse gas emissions, and building new runways would allow more flights and therefore more emissions at a time when many countries have committed to reducing them. Critics argue that it makes little sense to invest heavily in infrastructure that will encourage an activity whose growth is difficult to reconcile with international climate targets. Although cleaner aircraft and new fuels are being developed, critics note that such technologies remain years or even decades away from widespread use, while new runways would increase emissions almost immediately.",
+      "Critics also highlight the effects on people who live near airports. Aircraft noise, particularly at night, can disturb sleep and has been linked to stress and other health problems, while increased road traffic around airports can worsen air pollution. Expansion projects may also require the destruction of homes, farmland, or natural habitats, and residents often feel that they bear the costs of decisions whose benefits are enjoyed mainly by others who live far away.",
+      "Between these positions, some propose alternatives to building new runways. They suggest making better use of existing capacity by spreading flights more evenly throughout the day, encouraging travelers to use high-speed trains for shorter journeys within the same country, or shifting some flights to smaller regional airports. Others argue that expansion might be acceptable if it were accompanied by strict limits on noise and emissions and by generous compensation for affected communities, though critics doubt whether such promises would be kept once construction was complete and the pressure to grow returned.",
+      "The debate over airport expansion ultimately reflects a difficult tension between economic ambition and environmental responsibility. Air travel offers real benefits that many people value, but its costs fall unevenly, both on local communities and on future generations who will live with the consequences of a changing climate. How societies resolve this tension will reveal much about how they weigh present prosperity against long-term sustainability, and the interests of the many against those of the few who live closest to the runways.",
+    ],
+    ja: [
+      'ここ数十年で空の旅がふえるにつれて、世界でもっとも混み合う空港の多くが、受け入れられる量の限界に達してきた。滑走路は混雑し、ターミナルはいっぱいで、航空会社は、追加の便のための余地がないので新しい路線をふやせないと不満を言っている。これにこたえて、政府や空港の運営者は、新しい滑走路や、まったく新しい空港をつくることを提案してきた。そうした計画は、しばしば経済の成長に欠かせないものとして示されるが、地元の住民や環境団体からのはげしい反対をひき起こすことも多い。',
+      '支持する人々は、空港を広げることは大きな経済の利益をもたらすと主張する。空港は都市を世界のほかの場所と結び、企業が取り引きしたり、観光客がおとずれたり、技術をもつ働き手が必要とされる場所へ移ったりするのをかんたんにする。空港が需要に応えられない都市は、より便利なつながりをもつ競争相手の都市に投資や仕事をうばわれるかもしれないと支持する人々は警告する。工事そのものが雇用を生み、広げられた空港は、これから何年にもわたって、航空会社やホテルや交通や関連する産業で、さらに何千もの仕事をささえるかもしれない。もしある国が空港を広げることをこばめば、旅行者はただかわりに近くの国の拠点の空港を経由して飛ぶだけかもしれず、そうなれば排出はへるのではなく、経済の利益とともにほかの場所へ移るだけだと支持する人々はつけ加える。',
+      '支持する人々はまた、ふつうの旅行者の必要を強調する。空港が混み合いすぎると、おくれが起こりやすくなり、航空券の値段が上がるかもしれず、乗客が選べる行き先や時間が少なくなる。多くの人はたまにしか飛行機に乗らないが、空の旅は現代の暮らしの大切な一部になっており、遠くはなれて暮らす家族が会ったり、学生が留学したり、それほど裕福でない人々がほかの国や文化を体験したりすることを可能にしていると支持する人々は主張する。',
+      'しかし批判する人々は、まず環境への負担をあげる。航空は温室効果ガスの排出の大きな、そしてふえつつある源であり、新しい滑走路をつくれば、多くの国が排出をへらすと約束している時に、より多くの便、したがってより多くの排出を可能にしてしまう。その成長が国際的な気候の目標と両立しにくい活動をうながす基盤に、多くのお金を注ぎこむのは筋が通らないと批判する人々は主張する。よりきれいな航空機や新しい燃料が開発されつつあるものの、そうした技術が広く使われるまでにはまだ何年も、あるいは何十年もかかる一方で、新しい滑走路はほとんどすぐに排出をふやすだろうと批判する人々は指摘する。',
+      '批判する人々はまた、空港の近くに住む人々への影響を強調する。航空機の騒音は、とくに夜には、ねむりをさまたげることがあり、ストレスやほかの健康の問題とも結びつけられてきた。また、空港のまわりで道路の交通がふえると、大気汚染が悪化することがある。拡張の計画には、家や農地や自然のすみかをこわすことが必要になる場合もあり、住民はしばしば、その利益が主に遠くに住むほかの人々に楽しまれる決定の負担を、自分たちが負っていると感じている。',
+      'これらの立場のあいだで、新しい滑走路をつくるかわりの方法を提案する人々もいる。便を一日のうちにより平均して分けることで今ある受け入れの量をうまく使ったり、同じ国の中の短い旅には高速鉄道を使うよう旅行者にうながしたり、一部の便を小さな地方の空港に移したりすることを彼らは提案する。また、騒音と排出へのきびしい上限と、影響を受ける地域への手厚い補償がともなうなら、拡張も受け入れられるかもしれないと主張する人々もいるが、批判する人々は、工事が終わってふたたび成長への圧力がもどってきたときに、そうした約束が守られるかどうか疑っている。',
+      '空港の拡張をめぐる議論は、結局のところ、経済の野心と環境への責任のあいだのむずかしい緊張を反映している。空の旅は多くの人が大切にする本当の利益をもたらすが、その負担は、地元の地域にも、変わりゆく気候の結果とともに生きる将来の世代にも、かたよってのしかかる。社会がこの緊張をどう解決するかは、今の豊かさと長い目で見た持続可能性を、そして多くの人々の利益と、滑走路のもっとも近くに住む少数の人々の利益をどうくらべるかについて、多くのことを明らかにするだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「たまにしか乗らないが、空の旅は暮らしの大切な一部」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that expanding airports brings ( 1 ) benefits and helps ordinary travelers. Critics point to greenhouse gas emissions and to the effects of ( 2 ) and pollution on local residents. Some propose ( 3 ) to building new runways, such as using high-speed trains.',
+      blanks: [
+        { choices: ['economic', 'religious', 'artistic', 'medical'], answer: 0, why: '第2段落 expanding airports brings significant economic benefits。' },
+        { choices: ['noise', 'music', 'light', 'silence'], answer: 0, why: '第5段落 Aircraft noise, particularly at night。' },
+        { choices: ['alternatives', 'additions', 'answers', 'apologies'], answer: 0, why: '第6段落 some propose alternatives to building new runways。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの混み合う空港が、受け入れられる量の限界に達している。', answer: true, why: '第1段落 have reached the limits of their capacity。' },
+      { statement: '支持する人々は、空港を広げても仕事はふえないと言う。', answer: false, why: '第2段落 Construction itself creates employment。' },
+      { statement: '航空は温室効果ガスの排出の、ふえつつある源である。', answer: true, why: '第4段落 Aviation is a significant and growing source of greenhouse gas emissions。' },
+      { statement: '批判する人々は、補償の約束はかならず守られると信じている。', answer: false, why: '第6段落 critics doubt whether such promises would be kept。' },
+    ],
+    qa: [
+      { q: 'What happens when airports are overcrowded, according to supporters?', choices: ['Delays become more common and passengers have fewer choices.', 'Ticket prices always fall.', 'More new routes are added.', 'Airlines stop flying at night.'], answer: 0, why: '第3段落 delays become more common ... passengers have fewer choices。' },
+      { q: 'How do residents near airports often feel about expansion?', choices: ['That they bear the costs while others enjoy the benefits.', 'That they gain the most from it.', 'That it has no effect on them.', 'That it reduces noise.'], answer: 0, why: '第5段落 residents often feel that they bear the costs of decisions whose benefits are enjoyed mainly by others。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
