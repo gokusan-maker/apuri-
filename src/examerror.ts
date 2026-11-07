@@ -5608,6 +5608,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Must (B) we (C) finishing (D) this today?', choices: ['(A) Must', '(B) we', '(C) finishing', '(D) this today?'], answer: 2, why: 'must のあとは原形なので finish。' },
     ],
   },
+  {
+    id: 'exam-error-made-of-from-kyodai',
+    title: '入試の正誤問題〈235〉（京大レベル：英作文の be made of・be made from・be made into）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be made of ～ は材料が見てわかる（形や性質が変わらない）とき（This desk is made of wood.）、be made from ～ は原料が変化して元の形がわからないとき（Cheese is made from milk.）に使う。',
+      'be made into ～ は「（原料が）～に作り変えられる」（Grapes are made into wine.）。作る人は by であらわす（made by my father）。',
+    ],
+    examples: [
+      { en: 'This desk is made of wood, but paper is made from wood.', ja: 'この机は木でできているが、紙は木から作られる。' },
+      { en: 'These grapes will be made into wine.', ja: 'これらのぶどうはワインにされる。' },
+    ],
+    questions: [
+      { sentence: '(A) This desk (B) is made (C) from (D) wood.', choices: ['(A) This desk', '(B) is made', '(C) from', '(D) wood'], answer: 2, why: '材料が見た目でわかる（形が変わらない）ときは be made of なので of wood。' },
+      { sentence: '(A) Cheese (B) is made (C) of (D) milk.', choices: ['(A) Cheese', '(B) is made', '(C) of', '(D) milk'], answer: 2, why: '原料が変化して元の形がわからないときは be made from なので from milk。' },
+      { sentence: '(A) The old factory (B) was made (C) to (D) a museum.', choices: ['(A) The old factory', '(B) was made', '(C) to', '(D) a museum'], answer: 2, why: '「～に作り変えられる」は be made into なので into a museum。' },
+      { sentence: '(A) Paper (B) is (C) made (D) by wood.', choices: ['(A) Paper', '(B) is', '(C) made', '(D) by wood'], answer: 3, why: '原料をあらわすので be made from wood（by は作る人）。' },
+      { sentence: '(A) These grapes (B) will be made (C) of (D) wine.', choices: ['(A) These grapes', '(B) will be made', '(C) of', '(D) wine'], answer: 2, why: '「ぶどうがワインにされる」は be made into wine。' },
+      { sentence: '(A) This sweater (B) made (C) of (D) wool.', choices: ['(A) This sweater', '(B) made', '(C) of', '(D) wool'], answer: 1, why: '受け身なので is made of。be 動詞が必要。' },
+      { sentence: '(A) Make (B) of (C) glass, (D) the bottle broke easily.', choices: ['(A) Make', '(B) of', '(C) glass,', '(D) the bottle broke easily'], answer: 0, why: '「ガラスでできているので」という分詞構文は受け身の意味なので Made of glass。' },
+      { sentence: '(A) Wine (B) is made (C) of (D) grapes.', choices: ['(A) Wine', '(B) is made', '(C) of', '(D) grapes'], answer: 2, why: '原料が変化するので be made from grapes。' },
+      { sentence: '(A) The house (B) is made (C) from (D) stone and glass.', choices: ['(A) The house', '(B) is made', '(C) from', '(D) stone and glass'], answer: 2, why: '材料が見た目でわかるので be made of stone and glass。' },
+      { sentence: '(A) Milk (B) can make (C) into (D) butter.', choices: ['(A) Milk', '(B) can make', '(C) into', '(D) butter'], answer: 1, why: '「牛乳がバターにされる」は受け身 can be made into。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

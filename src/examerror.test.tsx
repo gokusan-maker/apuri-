@@ -3242,3 +3242,10 @@ it('誤文訂正〈228〉：東大レベル people・police・news などの単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('are')
 })
+
+it('正誤問題〈235〉：京大レベル be made of・from・into の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-made-of-from-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) from')
+})
