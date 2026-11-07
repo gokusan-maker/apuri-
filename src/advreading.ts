@@ -43378,6 +43378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-firework-sales',
+    title: 'Should Fireworks Be Sold to the Public?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, fireworks are a familiar part of celebrations, lighting up the sky at festivals, national holidays, and the arrival of the new year. In some places, they are set off only at large public displays organized by professionals, but in others ordinary people are free to buy fireworks in shops and set them off in their gardens or in the street. In recent years, a growing number of people have called for the sale of fireworks to the public to be banned or strictly limited, and the proposal has provoked strong disagreement between those who value the tradition and those who suffer from its side effects.",
+      "Supporters of a ban point first to the danger of injury. Every year, hospitals treat people who have been burned or have lost fingers or eyesight because fireworks exploded too early, were held too close, or were thrown at others, and many of the victims are children and teenagers. Supporters argue that professional displays, which are carried out by trained staff under strict safety rules, allow people to enjoy fireworks without these risks, so that there is little reason for dangerous explosives to be sold to anyone who wishes to buy them.",
+      "Supporters also emphasize the distress that fireworks can cause to animals and to some people. Dogs, cats, horses, and wild animals are often terrified by sudden loud explosions, and some may injure themselves while trying to escape. ( A ) a single evening of fireworks may seem harmless to those who enjoy them, supporters argue, the noise often continues for many nights around popular holidays, causing great difficulty for pet owners, farmers, and people who are particularly sensitive to loud noise.",
+      "Critics, however, argue that a ban would take away a harmless pleasure from the many people who use fireworks responsibly. For families in many communities, lighting fireworks together is a cherished tradition that brings neighbors out into the street and creates lasting memories for children. Critics insist that the problems are caused by a small minority who behave carelessly or deliberately cause trouble, and that it would be unfair to punish everyone for the actions of a few. They also point out that small family celebrations are often cheaper and more personal than large public events, which many people cannot easily attend.",
+      "Critics also doubt whether a ban would actually work. If fireworks could no longer be bought legally, they warn, people might obtain them from illegal sellers, whose products are often more dangerous because they do not meet any safety standards. Critics argue that stricter enforcement of existing rules, such as limits on the hours during which fireworks may be set off and on the age of buyers, would do more to reduce problems than a complete prohibition that many people would simply ignore.",
+      "In response to these concerns, many places have adopted intermediate measures. Some allow fireworks to be sold only during a few days before major holidays, while others permit only quieter products that produce colorful effects without loud bangs. A number of cities have also begun to replace traditional displays with shows in which hundreds of small flying drones carrying lights form shapes in the night sky, offering a spectacle without noise, smoke, or the risk of fire. Such shows can be expensive to organize, but their supporters believe that the cost will fall as the technology becomes more common.",
+      "The debate over fireworks ultimately reflects a broader question about how societies should balance individual freedom against harm to others. An activity that brings joy to some can cause fear, injury, or suffering to others, including those who have no voice in the decision, such as animals. Finding a fair balance requires asking not only whether a tradition is valued, but also who bears its costs, and whether there are ways of preserving what people love about it while reducing the harm it causes.",
+    ],
+    ja: [
+      '多くの国で、花火は祝いごとのなじみ深い一部であり、祭りや国の祝日、新しい年のおとずれに空を照らしている。専門家が開く大きな公共の花火大会でだけ打ち上げられる場所もあるが、ふつうの人々が店で花火を買い、庭や道路で自由に打ち上げられる場所もある。近年、一般の人々への花火の販売を禁止したり厳しく制限したりするよう求める人がふえており、その提案は、伝統を大切にする人々と、その副作用に苦しむ人々とのあいだに強い対立を引き起こしている。',
+      '禁止を支持する人々は、まずけがの危険を指摘する。毎年、病院には、花火が早く爆発したり、近くでもちすぎたり、人に向かって投げられたりしたために、やけどをしたり、指や視力を失ったりした人々が運ばれ、被害者の多くは子どもや十代の若者である。訓練を受けたスタッフが厳しい安全の決まりのもとでおこなう専門家の花火大会があれば、人々はこうした危険なしに花火を楽しめるので、危険な爆発物を買いたい人にだれにでも売る理由はほとんどない、と支持者は主張する。',
+      '支持する人々はまた、花火が動物や一部の人々にあたえる苦しみも強調する。イヌやネコ、ウマ、野生動物は、とつぜんの大きな爆発音にしばしばひどくおびえ、にげようとしてけがをするものもいる。一晩の花火は楽しむ人々には害がないように思えるかもしれないが、その音は人気のある祝日の前後に何晩も続くことが多く、ペットの飼い主や農家、大きな音にとくに敏感な人々に大きな困難をもたらす、と支持者は主張する。',
+      'しかし批判する人々は、禁止は花火を責任をもって使う多くの人々から害のない楽しみをうばうことになると主張する。多くの地域の家族にとって、いっしょに花火をすることは大切な伝統であり、近所の人々を道路に集め、子どもたちにいつまでも残る思い出をつくる。問題を起こしているのは、不注意にふるまったり、わざと迷惑をかけたりするごく一部の人々であり、少数の行動のためにみんなを罰するのは不公平だ、と批判する人々は強く主張する。彼らはまた、家族での小さな祝いは、多くの人がかんたんには行けない大きな公共の催しよりも、安く個人的なものであることが多いと指摘する。',
+      '批判する人々はまた、禁止が本当にうまくいくのかどうかを疑う。花火が合法的に買えなくなれば、人々は違法な売り手から手に入れるかもしれず、その製品はどんな安全基準も満たしていないため、より危険なことが多いと彼らは警告する。花火を打ち上げてよい時間や買い手の年齢の制限など、今ある決まりをもっと厳しく守らせるほうが、多くの人がただ無視するであろう全面的な禁止よりも、問題を減らすのに役立つと批判する人々は主張する。',
+      'こうした懸念に応えて、多くの場所が中間の対策を取り入れている。大きな祝日の前の数日間だけ花火の販売を認めるところもあれば、大きな破裂音を出さずに色あざやかな効果を生む、音のしずかな製品だけを認めるところもある。また、光をつけた何百機もの小さなドローンが夜空に形をえがくショーで、昔ながらの花火大会を置きかえはじめた都市もいくつかある。音もけむりも火事の危険もない見ものを提供しているのである。そうしたショーを開くには費用がかかることもあるが、技術がより広まるにつれて費用は下がるだろうと、その支持者は考えている。',
+      '花火をめぐる議論は、結局のところ、社会が個人の自由と他人への害とのつりあいをどうとるべきかという、より広い問いを反映している。ある人々に喜びをもたらす活動が、動物のように決定に声をもたない者もふくめて、ほかの人々におそれやけがや苦しみをもたらすことがある。公平なつりあいを見つけるには、ある伝統が大切にされているかどうかだけでなく、だれがその代償を負っているのか、そして人々がそれについて愛しているものを保ちながら、それが生む害を減らす方法があるかどうかを問う必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「一晩の花火は害がないように思えるかもしれないが、音は何晩も続く」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of a ban point to injuries and the ( 1 ) that fireworks cause to animals. Critics argue that a ban would punish responsible users and might push buyers toward ( 2 ) sellers. Some cities now use shows with flying ( 3 ) instead of traditional displays.',
+      blanks: [
+        { choices: ['distress', 'income', 'light', 'food'], answer: 0, why: '第3段落 the distress that fireworks can cause to animals。' },
+        { choices: ['illegal', 'famous', 'foreign', 'small'], answer: 0, why: '第5段落 obtain them from illegal sellers。' },
+        { choices: ['drones', 'birds', 'balloons', 'kites'], answer: 0, why: '第6段落 hundreds of small flying drones carrying lights。' },
+      ],
+    },
+    tf: [
+      { statement: '花火によるけがの被害者の多くは、子どもや十代の若者である。', answer: true, why: '第2段落 many of the victims are children and teenagers。' },
+      { statement: '支持者によると、花火の音は一晩だけで終わる。', answer: false, why: '第3段落 the noise often continues for many nights。' },
+      { statement: '批判する人々は、問題を起こしているのはごく一部の人々だと言う。', answer: true, why: '第4段落 caused by a small minority。' },
+      { statement: 'すべての場所が、花火の販売を一年じゅう認めている。', answer: false, why: '第6段落 Some allow fireworks to be sold only during a few days before major holidays。' },
+    ],
+    qa: [
+      { q: 'Why may fireworks from illegal sellers be more dangerous?', choices: ['They do not meet any safety standards.', 'They are louder than legal ones.', 'They are more expensive.', 'They are sold only at night.'], answer: 0, why: '第5段落 because they do not meet any safety standards。' },
+      { q: 'What kind of products do some places permit instead of loud fireworks?', choices: ['Quieter products without loud bangs.', 'Only very large rockets.', 'Products sold to children.', 'Fireworks made at home.'], answer: 0, why: '第6段落 permit only quieter products that produce colorful effects without loud bangs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
