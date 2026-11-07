@@ -43262,6 +43262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-calendars',
+    title: 'On Calendars',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us glance at a calendar several times a day, whether it hangs on a kitchen wall, sits on a desk, or appears on the screen of a phone. We use it to remember appointments, plan holidays, and count the days until an important event, and we rarely stop to think about the calendar itself. Yet a calendar is not simply a neutral record of time passing. It is a human invention, shaped by astronomy, religion, politics, and habit, and the way it divides the year influences how we experience our lives in ways we seldom notice.",
+      "The basic units of most calendars are taken from nature. The day follows the turning of the earth, the month was originally linked to the changing shape of the moon, and the year follows the journey of the earth around the sun. Unfortunately, these natural cycles do not fit neatly together, since a year does not contain a whole number of days or months, and every calendar in history has had to find some way of dealing with the leftover time, whether by adding extra days, extra months, or complicated rules about when such additions should be made.",
+      "Because these solutions involve choices, calendars have often been the subject of disagreement. Different communities have kept different calendars for centuries, and changes to a calendar have sometimes provoked strong resistance. ( A ) the reasons for such changes may have been purely technical, people often felt that something important was being taken from them, since their festivals, their memories, and their sense of order were all tied to the familiar arrangement of days. Even today, many people continue to celebrate certain festivals according to older calendars, as a way of keeping alive a connection with the customs of their ancestors.",
+      "A calendar also gives time a shape that it would not otherwise have. Without weeks, there would be no weekends to look forward to and no Mondays to dread, and without the division of the year into months, the passage of time might feel like a single continuous stream. By marking certain days as holidays, anniversaries, or the beginning of a new year, the calendar creates moments at which people pause, celebrate, or make resolutions, giving rhythm to lives that might otherwise feel shapeless.",
+      "Shared calendars also help to hold communities together. When everyone in a society observes the same days of rest and celebration, people can meet, travel, and work together more easily, and the festivals that fall on particular dates can create a sense of belonging that extends across generations. At the same time, a calendar that is imposed on everyone may leave little room for those whose traditions follow a different pattern, and many societies now try to recognize the holidays of several calendars side by side.",
+      "In recent years, the calendars that organize our lives have become increasingly personal. Digital calendars allow each person to arrange their own schedule in fine detail, filling every hour with appointments and receiving reminders throughout the day. This flexibility brings obvious benefits, but it may also mean that time is experienced less as a shared rhythm and more as a private resource to be managed efficiently, so that the empty spaces in which people once simply rested or met by chance gradually disappear.",
+      "Perhaps, then, calendars deserve more attention than we usually give them. They remind us that the way we measure time is not given by nature alone but shaped by human choices, and that those choices affect how we work, rest, remember, and relate to one another. As our schedules become ever more crowded and personal, it may be worth asking whether we have left enough room for the shared moments and unplanned days that once gave the year its familiar and comforting shape.",
+    ],
+    ja: [
+      '私たちのほとんどは、台所の壁にかかっているものであれ、机の上に置いてあるものであれ、電話の画面にあらわれるものであれ、一日に何度もカレンダーに目をやる。私たちは予定を覚えたり、休みを計画したり、大切なできごとまでの日数を数えたりするのにそれを使うが、カレンダーそのものについて立ちどまって考えることはめったにない。しかしカレンダーは、時が過ぎていくことのただの中立な記録ではない。それは天文学や宗教、政治、習慣によって形づくられた人間の発明であり、それが一年を区切るしかたは、私たちがほとんど気づかないかたちで、自分の人生の経験のしかたに影響をあたえている。',
+      'ほとんどのカレンダーの基本の単位は自然からとられている。一日は地球の回転にしたがい、一か月はもともと月の形の変化と結びついており、一年は地球が太陽のまわりを回る旅にしたがっている。残念なことに、こうした自然の周期はきれいにはかみ合わない。一年はちょうど整数の日数や月数をふくんでいないからである。そのため歴史上のどのカレンダーも、日を加えたり、月を加えたり、そうした追加をいつおこなうべきかについての複雑な決まりを設けたりして、あまった時間をあつかう何らかの方法を見つけなければならなかった。',
+      'こうした解決策には選択がともなうため、カレンダーはしばしば意見の対立の対象になってきた。ちがう共同体は何世紀にもわたってちがうカレンダーを使いつづけ、カレンダーの変更はときに強い抵抗を引き起こした。そうした変更の理由はまったく技術的なものだったかもしれないが、人々はしばしば、何か大切なものがうばわれようとしていると感じた。祭りも思い出も秩序の感覚も、すべてなじみ深い日のならびと結びついていたからである。今日でも、多くの人々が、先祖の習慣とのつながりを保つ方法として、ある祭りを古いカレンダーにしたがって祝いつづけている。',
+      'カレンダーはまた、そうでなければもたない形を時間にあたえる。週がなければ、楽しみにする週末も、ゆううつな月曜日もないだろうし、一年が月に分けられていなければ、時の流れは一つのとぎれない流れのように感じられるかもしれない。ある日を休日や記念日、新しい年の始まりとして示すことで、カレンダーは、人々が立ちどまり、祝い、決意をする瞬間をつくり出し、そうでなければ形のないものに感じられるかもしれない生活にリズムをあたえているのである。',
+      '共有されたカレンダーはまた、共同体をまとめる助けにもなる。社会のだれもが同じ休みの日や祝いの日を守るとき、人々はより会いやすく、旅をしやすく、いっしょに働きやすくなり、特定の日付にある祭りは、世代をこえて広がる帰属の感覚を生み出しうる。同時に、全員におしつけられたカレンダーは、ちがう型にしたがう伝統をもつ人々の居場所をほとんど残さないかもしれず、多くの社会はいま、いくつかのカレンダーの祝日をならべて認めようとしている。',
+      '近年、私たちの生活を整えるカレンダーはますます個人的なものになってきた。デジタルのカレンダーによって、一人一人が自分の予定をこまかく組み、すべての時間を予定でうめ、一日じゅう通知を受けとることができる。この柔軟さには明らかな利点があるが、それはまた、時間が共有されたリズムとしてよりも、効率よく管理すべき私的な資源として経験されるようになり、人々がかつてただ休んだり、偶然出会ったりしていた空白の時間が、しだいに消えていくことを意味しているのかもしれない。',
+      'だとすれば、カレンダーは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。カレンダーは、私たちが時間をはかるしかたが自然だけによってあたえられたものではなく、人間の選択によって形づくられていること、そしてその選択が、私たちがどのように働き、休み、思い出し、おたがいに関わるかに影響していることを思い出させてくれる。予定がますますこみ合い個人的になっていくなかで、かつて一年になじみ深く心地よい形をあたえていた、共有された瞬間や予定のない日のための余地を十分に残しているかどうかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「変更の理由は技術的なものだったかもしれないが、人々は大切なものがうばわれると感じた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '一か月は、もともと月の形の変化と結びついていた。', answer: true, why: '第2段落 the month was originally linked to the changing shape of the moon。' },
+      { statement: '一年は、ちょうど整数の日数をふくんでいる。', answer: false, why: '第2段落 a year does not contain a whole number of days or months。' },
+      { statement: 'カレンダーの変更は、ときに強い抵抗を引き起こした。', answer: true, why: '第3段落 changes to a calendar have sometimes provoked strong resistance。' },
+      { statement: '筆者は、デジタルのカレンダーには利点がまったくないと述べている。', answer: false, why: '第6段落 This flexibility brings obvious benefits。' },
+    ],
+    qa: [
+      { q: 'What would there be no weekends to look forward to without, according to the passage?', choices: ['Weeks.', 'Months.', 'Holidays abroad.', 'Digital calendars.'], answer: 0, why: '第4段落 Without weeks, there would be no weekends to look forward to。' },
+      { q: 'What may gradually disappear as calendars become more personal?', choices: ['Empty spaces in which people rested or met by chance.', 'Festivals on fixed dates.', 'The months of the year.', 'Phones and screens.'], answer: 0, why: '第6段落 the empty spaces in which people once simply rested or met by chance gradually disappear。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
