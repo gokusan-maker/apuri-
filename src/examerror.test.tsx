@@ -3074,3 +3074,10 @@ it('誤文訂正〈216〉：東大レベル regret・stop・try の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('telling')
 })
+
+it('正誤問題〈223〉：京大レベル by the time ～ と完了形の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-by-the-time-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) already started')
+})

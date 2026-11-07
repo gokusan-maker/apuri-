@@ -5308,6 +5308,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Almost (B) every (C) students (D) passed the test.', choices: ['(A) Almost', '(B) every', '(C) students', '(D) passed the test'], answer: 2, why: 'almost every のあとは単数名詞なので every student。' },
     ],
   },
+  {
+    id: 'exam-error-by-the-time-kyodai',
+    title: '入試の正誤問題〈223〉（京大レベル：英作文の by the time ～ と完了形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'by the time ～「～するまでに（は）」は接続詞で、あとに主語＋動詞が来る（by だけは前置詞なので by six o’clock のように名詞が来る）。主節は、過去の話なら過去完了 had done、未来の話なら未来完了 will have done にすることが多い。',
+      'by the time ～ の節の中は、未来のことでも現在形を使う（By the time you come back, I will have finished my homework.）。',
+    ],
+    examples: [
+      { en: 'By the time we arrived, the movie had already started.', ja: '私たちが着いたときには、映画はもう始まっていた。' },
+      { en: 'By next spring, they will have built the new bridge.', ja: '来年の春までには、彼らは新しい橋を完成させているだろう。' },
+    ],
+    questions: [
+      { sentence: '(A) By the time (B) we arrived, (C) the movie (D) already started.', choices: ['(A) By the time', '(B) we arrived,', '(C) the movie', '(D) already started'], answer: 3, why: '着いた時点より前に始まっていたので過去完了 had already started。' },
+      { sentence: '(A) By the time (B) you will come back, (C) I will have finished (D) my homework.', choices: ['(A) By the time', '(B) you will come back,', '(C) I will have finished', '(D) my homework'], answer: 1, why: '時をあらわす副詞節の中は未来でも現在形なので you come back。' },
+      { sentence: '(A) By the time (B) she was twenty, (C) she has visited (D) ten countries.', choices: ['(A) By the time', '(B) she was twenty,', '(C) she has visited', '(D) ten countries'], answer: 2, why: '過去のある時点までの経験なので過去完了 had visited。' },
+      { sentence: '(A) The train (B) had left (C) by the time (D) we get to the station.', choices: ['(A) The train', '(B) had left', '(C) by the time', '(D) we get to the station'], answer: 3, why: 'had left（過去完了）と合わせて過去形 we got。' },
+      { sentence: '(A) By next spring, (B) they will build (C) the new bridge (D) across the river.', choices: ['(A) By next spring,', '(B) they will build', '(C) the new bridge', '(D) across the river'], answer: 1, why: '未来のある時点までに完了していることは未来完了 will have built。' },
+      { sentence: '(A) When (B) I reached the shop, (C) it has (D) already closed.', choices: ['(A) When', '(B) I reached the shop,', '(C) it has', '(D) already closed'], answer: 2, why: '過去の時点より前のことなので had already closed。' },
+      { sentence: '(A) By the time (B) the police arrived, (C) the thief (D) has escaped.', choices: ['(A) By the time', '(B) the police arrived,', '(C) the thief', '(D) has escaped'], answer: 3, why: '過去の時点より前に起きたので had escaped。' },
+      { sentence: '(A) By the end of (B) this year, (C) I will be (D) working here for ten years.', choices: ['(A) By the end of', '(B) this year,', '(C) I will be', '(D) working here for ten years'], answer: 2, why: '未来の時点まで続く期間は未来完了（進行形）will have been working。' },
+      { sentence: '(A) By the time (B) he finish (C) his speech, (D) most people will have left.', choices: ['(A) By the time', '(B) he finish', '(C) his speech,', '(D) most people will have left'], answer: 1, why: '主語 he は三人称単数で、時の副詞節は現在形なので he finishes。' },
+      { sentence: '(A) By (B) we got home, (C) it had (D) started to rain.', choices: ['(A) By', '(B) we got home,', '(C) it had', '(D) started to rain'], answer: 0, why: 'by は前置詞なので、あとに主語＋動詞を続けるときは接続詞の By the time を使う。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
