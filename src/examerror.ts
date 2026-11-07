@@ -5808,6 +5808,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It took me a year (B) to get (C) used to (D) live in the city.', choices: ['(A) It took me a year', '(B) to get', '(C) used to', '(D) live in the city'], answer: 3, why: 'get used to のあとは名詞・動名詞なので living。' },
     ],
   },
+  {
+    id: 'exam-error-happen-occur',
+    title: '入試の正誤問題〈243〉（京大レベル：英作文の happen・take place・occur（受け身にしない））',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'happen・occur・take place はどれも「起こる」という意味の自動詞なので、受け身（be happened／be taken place）にしない。偶然のできごとは happen・occur、予定された行事は take place が多い。',
+      'happen to do は「たまたま～する」、It happened that ～ は「たまたま～した」。「（考えが人に）うかぶ」は occur to 人（An idea occurred to me.）。',
+    ],
+    examples: [
+      { en: 'The accident happened near the station, and the festival takes place every summer.', ja: '事故は駅の近くで起こり、祭りは毎年夏に開かれる。' },
+      { en: 'A good idea occurred to me while I was walking.', ja: '歩いているときに、いい考えがうかんだ。' },
+    ],
+    questions: [
+      { sentence: '(A) The accident (B) was happened (C) near the station (D) last night.', choices: ['(A) The accident', '(B) was happened', '(C) near the station', '(D) last night'], answer: 1, why: 'happen は自動詞なので受け身にしない。happened。' },
+      { sentence: '(A) The festival (B) is taken place (C) every summer (D) in this town.', choices: ['(A) The festival', '(B) is taken place', '(C) every summer', '(D) in this town'], answer: 1, why: 'take place は受け身にしない。takes place。' },
+      { sentence: '(A) A good idea (B) occurred (C) me (D) while I was walking.', choices: ['(A) A good idea', '(B) occurred', '(C) me', '(D) while I was walking'], answer: 2, why: '「（考えが人に）うかぶ」は occur to 人。occurred to me。' },
+      { sentence: '(A) What happened (B) to him (C) was (D) surprised to everyone.', choices: ['(A) What happened', '(B) to him', '(C) was', '(D) surprised to everyone'], answer: 3, why: '「おどろかせるような」なので surprising。' },
+      { sentence: '(A) It is happened (B) that (C) I met him (D) at the station.', choices: ['(A) It is happened', '(B) that', '(C) I met him', '(D) at the station'], answer: 0, why: '「たまたま～した」は It happened that ～。受け身にしない。' },
+      { sentence: '(A) The meeting (B) will take place (C) at the hall (D) in next Monday.', choices: ['(A) The meeting', '(B) will take place', '(C) at the hall', '(D) in next Monday'], answer: 3, why: 'next Monday の前に in はつけない。' },
+      { sentence: '(A) Many changes (B) have occurred (C) in this city (D) since ten years.', choices: ['(A) Many changes', '(B) have occurred', '(C) in this city', '(D) since ten years'], answer: 3, why: '期間は for ten years（または in the last ten years）。' },
+      { sentence: '(A) I (B) happened (C) seeing (D) my old teacher at the airport.', choices: ['(A) I', '(B) happened', '(C) seeing', '(D) my old teacher at the airport'], answer: 2, why: '「たまたま～する」は happen to do なので to see。' },
+      { sentence: '(A) Accidents like this (B) are occurred (C) when drivers (D) use their phones.', choices: ['(A) Accidents like this', '(B) are occurred', '(C) when drivers', '(D) use their phones'], answer: 1, why: 'occur は自動詞なので受け身にしない。occur。' },
+      { sentence: '(A) Taken place (B) every four years, (C) the Olympics (D) attract millions of viewers.', choices: ['(A) Taken place', '(B) every four years,', '(C) the Olympics', '(D) attract millions of viewers'], answer: 0, why: 'take place は受け身の意味をもたないので Taking place（または Held）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
