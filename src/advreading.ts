@@ -42738,6 +42738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-indoor-cats',
+    title: 'Should Pet Cats Be Kept Indoors?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, pet cats have traditionally been free to come and go as they please, spending their nights hunting in gardens and returning home in the morning for food and rest. In recent years, however, a growing number of scientists, conservation groups, and local governments have argued that cats should be kept indoors, or at least confined to their owners' property, for much of the day. The proposal has provoked strong feelings, because it touches not only on the protection of wildlife but also on the welfare of the animals themselves and on the freedom of the people who care for them.",
+      "Supporters of keeping cats indoors point first to the damage that cats can do to wild animals. Even well-fed pet cats retain a strong instinct to hunt, and studies in several countries have estimated that cats kill very large numbers of birds, small mammals, and reptiles every year. Supporters argue that this pressure can be especially serious in places where native species have evolved without such predators, and that responsible owners should therefore take steps to prevent their pets from adding to the many other threats that wildlife already faces.",
+      "Supporters also emphasize the benefits for the cats themselves. Cats that roam freely face dangers from traffic, fights with other animals, and diseases that can spread between them, and on average they may live shorter lives than cats that are kept safely at home. ( A ) some owners worry that indoor cats will be bored, supporters argue, this risk can be reduced by providing toys, climbing shelves, and regular play, so that the animal can satisfy its natural instincts without endangering itself or others.",
+      "Critics, however, argue that keeping cats indoors can harm their wellbeing. Cats are active and curious animals, and those that are confined to a small apartment may become stressed, overweight, or prone to behavioral problems such as scratching furniture or refusing to use a litter tray. Critics point out that many owners lack the time or space to provide the stimulation that an indoor cat needs, and they warn that a rule designed to protect wildlife could end up reducing the quality of life of millions of pets.",
+      "Critics also question whether strict rules can be enforced fairly. Cats are skilled at escaping through small openings, and unlike dogs they cannot easily be kept on a leash, so that even careful owners may find it difficult to keep them confined at all times. Some critics further argue that the impact of cats on wildlife varies greatly from place to place, and that a rule which makes sense on a small island with rare birds may be unnecessary in a city where the main threats to wildlife come from traffic and the loss of habitat.",
+      "In response, some communities have adopted more flexible approaches. Some require cats to be kept indoors only at night, when many small animals are most active, while others encourage owners to build enclosed outdoor spaces in which cats can enjoy fresh air without being able to hunt. Owners are also often advised to fit their cats with brightly colored collars, which some research suggests may make it easier for birds to notice an approaching cat, and to have their pets neutered so that the number of unwanted cats does not continue to grow.",
+      "The debate over keeping cats indoors ultimately reflects a broader question about our responsibilities toward the animals we bring into our lives. A pet is not only a companion but also a member of the wider natural world, and its behavior can affect creatures far beyond its owner's home. Deciding how much freedom a cat should have therefore requires owners and communities to weigh the welfare of individual animals against the protection of wildlife, and to accept that loving a pet may sometimes mean limiting what it is allowed to do.",
+    ],
+    ja: [
+      '多くの国で、ペットのネコは昔から自由に出入りでき、夜は庭で狩りをして過ごし、朝になると食べものと休みを求めて家に帰ってくるものだった。しかし近年、ますます多くの科学者や自然保護団体、地方自治体が、ネコは家の中で飼うべきだ、少なくとも一日の多くの時間は飼い主の敷地の中にとどめるべきだと主張するようになっている。この提案は強い感情を引き起こしている。それは野生動物の保護だけでなく、ネコ自身の幸せや、ネコの世話をする人々の自由にもかかわるからである。',
+      'ネコを家の中で飼うことを支持する人々は、まずネコが野生動物にあたえうる害を指摘する。十分に食べものをもらっているペットのネコでさえ強い狩りの本能をもちつづけており、いくつかの国の研究は、ネコが毎年非常に多くの鳥や小型のほ乳類、は虫類を殺していると見積もっている。この圧力は、在来の生きものがそのような捕食者のいない環境で進化してきた場所ではとくに深刻になりうるので、責任ある飼い主は、野生動物がすでに直面している多くの脅威に自分のペットが加わらないよう手を打つべきだ、と支持者は主張する。',
+      '支持する人々はまた、ネコ自身にとっての利点も強調する。自由に歩きまわるネコは、交通事故や、ほかの動物とのけんか、ネコのあいだでうつる病気といった危険にさらされ、平均すると、家で安全に飼われているネコより寿命が短いかもしれない。家の中のネコは退屈するのではないかと心配する飼い主もいるが、おもちゃやのぼれる棚を用意し、定期的に遊んでやれば、この危険は減らすことができ、ネコは自分やほかの生きものを危険にさらさずに本能を満たすことができる、と支持者は主張する。',
+      'しかし批判する人々は、ネコを家の中で飼うことがその幸せをそこないうると主張する。ネコは活発で好奇心の強い動物であり、せまいアパートにとじこめられたネコは、ストレスをかかえたり、太りすぎたり、家具で爪をといだりトイレを使わなくなったりといった行動の問題を起こしやすくなったりするかもしれない。多くの飼い主には、家の中のネコに必要な刺激をあたえる時間や場所がないと批判する人々は指摘し、野生動物を守るための決まりが、何百万匹ものペットの暮らしの質を下げることになりかねないと警告する。',
+      '批判する人々はまた、厳しい決まりを公平に守らせることができるのかどうかを疑う。ネコは小さなすき間からぬけ出すのがうまく、イヌとちがってかんたんにはリードにつないでおけないので、注意深い飼い主でさえ、いつもとどめておくのはむずかしいと感じるかもしれない。さらに、ネコが野生動物にあたえる影響は場所によって大きくちがい、めずらしい鳥のいる小さな島では理にかなう決まりも、野生動物へのおもな脅威が交通やすみかの喪失から来ている都市では不要かもしれない、と主張する批判者もいる。',
+      'これに対して、より柔軟なやり方をとっている地域もある。多くの小さな動物がもっとも活発になる夜のあいだだけネコを家の中にとどめるよう求めるところもあれば、ネコが狩りはできないが外の空気を楽しめる、かこわれた屋外の場所をつくるよう飼い主にすすめるところもある。飼い主はまた、鳥が近づくネコに気づきやすくなるかもしれないことを示す研究もある明るい色の首輪をネコにつけることや、望まれないネコの数が増えつづけないよう不妊・去勢手術を受けさせることをすすめられることが多い。',
+      'ネコを家の中で飼うことをめぐる議論は、結局のところ、自分の生活に迎え入れる動物に対する私たちの責任についての、より広い問いを反映している。ペットは仲間であるだけでなく、より広い自然界の一員でもあり、その行動は飼い主の家をはるかにこえた生きものに影響をあたえうる。そのため、ネコにどれだけの自由をあたえるべきかを決めるには、飼い主と地域が、一匹一匹の動物の幸せと野生動物の保護とをはかりにかけ、ペットを愛することが、ときにはそのペットに許すことを制限することを意味しうると受け入れる必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「家の中のネコは退屈すると心配する飼い主もいるが、その危険は減らせる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say keeping cats indoors protects ( 1 ) and keeps cats safe from traffic and disease. Critics argue that confinement can harm cats’ wellbeing and that strict rules are hard to ( 2 ). Some communities require cats to be kept indoors only at ( 3 ).',
+      blanks: [
+        { choices: ['wildlife', 'furniture', 'gardens', 'neighbors'], answer: 0, why: '第2段落 the damage that cats can do to wild animals。' },
+        { choices: ['enforce', 'explain', 'write', 'remember'], answer: 0, why: '第5段落 whether strict rules can be enforced fairly。' },
+        { choices: ['night', 'noon', 'weekends', 'school'], answer: 0, why: '第6段落 kept indoors only at night。' },
+      ],
+    },
+    tf: [
+      { statement: '十分に食べものをもらっているネコは、狩りの本能をなくす。', answer: false, why: '第2段落 Even well-fed pet cats retain a strong instinct to hunt。' },
+      { statement: '自由に歩きまわるネコは、平均して寿命が短いかもしれない。', answer: true, why: '第3段落 they may live shorter lives than cats that are kept safely at home。' },
+      { statement: '批判する人々によると、ネコが野生動物にあたえる影響は場所によって大きくちがう。', answer: true, why: '第5段落 the impact of cats on wildlife varies greatly from place to place。' },
+      { statement: 'すべての地域が、ネコを一日じゅう家の中にとどめるよう求めている。', answer: false, why: '第6段落 Some require cats to be kept indoors only at night。' },
+    ],
+    qa: [
+      { q: 'According to supporters, how can owners reduce the risk that indoor cats become bored?', choices: ['By providing toys, climbing shelves, and regular play.', 'By letting them out every night.', 'By feeding them more often.', 'By keeping them in a cage.'], answer: 0, why: '第3段落 by providing toys, climbing shelves, and regular play。' },
+      { q: 'Why might brightly colored collars help, according to some research?', choices: ['Birds may notice an approaching cat more easily.', 'Cats may sleep more.', 'Owners may find lost cats faster.', 'Cars may drive more slowly.'], answer: 0, why: '第6段落 may make it easier for birds to notice an approaching cat。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
