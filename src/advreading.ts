@@ -42462,6 +42462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-knots',
+    title: 'On Knots',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few skills are as old, or as quietly important, as the ability to tie a knot. Long before people learned to write, they were tying ropes to build shelters, catch fish, carry loads, and fasten boats to the shore, and in many parts of the world knots were used to record numbers and events as well. Today most of us know only one or two knots, which we use to tie our shoes or close a bag, yet the history of knots suggests that this small and humble art reflects some of the most basic ways in which human beings hold their world together.",
+      "What makes a good knot is not simply that it holds, but that it holds in the right way. A knot used by a sailor must stay firm under great strain and yet be easy to untie when the work is finished, while a knot used by a climber must never slip, even if it is difficult to undo later. Over many centuries, people in different trades developed hundreds of knots, each suited to a particular purpose, and the knowledge of which knot to choose was often as valuable as the ability to tie it.",
+      "This knowledge was rarely learned from books. It passed instead from hand to hand, as experienced workers showed younger ones how to form each loop and pull each end, correcting them patiently until the movement became natural. ( A ) such teaching seems slow compared with reading a set of instructions, it had the advantage of transmitting something that words alone can hardly express, namely the feeling in the fingers that tells a skilled person whether a knot has been tied correctly.",
+      "Knots have also long served as powerful symbols. In many languages, people speak of tying the knot when they marry, and the image of a knot is used to describe bonds of friendship, loyalty, and obligation that are difficult to break. At the same time, a knot can represent a problem that seems impossible to solve, as when we speak of a knot in our stomach or of a situation so tangled that no one knows where to begin, which shows that the same object can stand both for security and for confusion.",
+      "This double meaning may reveal something important about the nature of human ties. The bonds that hold us together, like the knots that hold a rope, depend on a certain amount of tension, and without that tension they would simply fall apart. Yet if the tension becomes too great, or if the knot is tied carelessly, the same bond may become a source of pain, and learning to live with others may therefore require something like the knot maker's skill of knowing when to tighten and when to loosen.",
+      "In an age of plastic clips, zips, and adhesive tape, the practical need for knots has declined considerably. Many of the tasks that once required careful tying can now be performed in seconds with devices that require no special knowledge, and few young people today feel any need to learn more than the simplest knot. This change has obvious advantages, but it may also mean that a kind of patient, hands-on understanding of materials, once shared by sailors, farmers, and builders alike, is slowly disappearing from everyday life.",
+      "Perhaps, then, there is still value in learning to tie a few good knots. Doing so connects us with countless generations of people who depended on such skills for their survival, and it reminds us that holding things together, whether ropes or relationships, is rarely a matter of strength alone. A well-tied knot is a small example of how care and attention can turn a simple material into something reliable, and of how much of human life depends on bonds that are strong precisely because someone took the trouble to make them well.",
+    ],
+    ja: [
+      '結び目を結ぶ能力ほど古く、しずかに重要な技術はほとんどない。人々は書くことを学ぶずっと前から、すみかをつくり、魚をとり、荷物を運び、船を岸につなぐためにロープを結んでおり、世界の多くの地域では、結び目は数やできごとを記録するためにも使われていた。今日、私たちのほとんどは、くつひもを結んだりふくろを閉じたりするのに使う一つか二つの結び方しか知らないが、結び目の歴史は、この小さくつつましい技術が、人間が自分の世界をつなぎとめているもっとも基本的なやり方のいくつかを反映していることを示している。',
+      'よい結び目とは、ただほどけないということではなく、正しいしかたでほどけないということである。船乗りが使う結び目は、大きな力がかかってもかたく保たれ、それでいて仕事が終わればかんたんにほどけなければならない。一方、登山者が使う結び目は、あとでほどくのがむずかしくても、けっしてすべってはならない。何世紀もかけて、さまざまな職業の人々が、それぞれ特定の目的に合った何百もの結び方を生み出し、どの結び方を選ぶべきかという知識は、しばしばそれを結ぶ能力と同じくらい価値があった。',
+      'この知識が本から学ばれることはめったになかった。それはむしろ、経験をつんだ働き手が若い人に、輪の一つ一つをつくり、端の一つ一つを引くやり方を見せ、動きが自然になるまで根気よく直してやることで、手から手へと伝えられた。そうした教え方は、説明書を読むのにくらべると時間がかかるように思えるが、ことばだけではとても表せないもの、つまり、熟練した人に結び目が正しく結ばれたかどうかを教える指先の感覚を伝えられるという利点があった。',
+      '結び目はまた、長いあいだ力強い象徴としての役割も果たしてきた。多くの言語で、人々は結婚することを「結び目を結ぶ」と言い、結び目のイメージは、切りにくい友情や忠誠、義務のきずなを表すのに使われる。同時に、結び目は解けそうにない問題を表すこともある。おなかの中に結び目があると言ったり、だれもどこから手をつければよいかわからないほどもつれた状況について話したりするときがそうであり、このことは、同じものが安心ともまどいとも結びつきうることを示している。',
+      'この二重の意味は、人と人とのきずなの性質について大切なことを明らかにしているのかもしれない。私たちをつなぎとめるきずなは、ロープをつなぎとめる結び目と同じように、ある程度の張りに支えられており、その張りがなければ、ただばらばらになってしまうだろう。しかし張りが強くなりすぎたり、結び目がいいかげんに結ばれたりすると、同じきずなが苦しみの源になることもある。だから、ほかの人々とともに生きることを学ぶには、いつしめ、いつゆるめるべきかを知る、結び目をつくる人の技術のようなものが必要なのかもしれない。',
+      'プラスチックの留め具やファスナー、粘着テープの時代には、結び目の実際上の必要は大きく減ってしまった。かつては注意深く結ぶことが必要だった作業の多くは、いまでは特別な知識のいらない道具で数秒のうちにできるようになり、今日の若者で、もっとも単純な結び方以上を学ぶ必要を感じる人はほとんどいない。この変化には明らかな利点があるが、それはまた、かつて船乗りにも農民にも建てる人にも共有されていた、素材についての根気強く手を使った理解が、日常生活から少しずつ消えつつあることを意味しているのかもしれない。',
+      'だとすれば、いくつかのよい結び方を学ぶことには、まだ価値があるのかもしれない。そうすることは、生きのびるためにそうした技術にたよっていた数えきれない世代の人々と私たちをつなげ、ロープであれ人間関係であれ、ものをつなぎとめることが、力だけの問題であることはめったにないことを思い出させる。よく結ばれた結び目は、注意と心配りが単純な素材をたよれるものに変えうることの、そして人間の生活のどれほど多くが、だれかが手間をおしまずしっかりつくったからこそ強いきずなに支えられているかの、小さな例なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「その教え方は時間がかかるように思えるが、ことばでは表せないものを伝える利点があった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人々は書くことを学ぶ前から、ロープを結んでいた。', answer: true, why: '第1段落 Long before people learned to write, they were tying ropes。' },
+      { statement: '登山者の結び目は、かんたんにほどけることがもっとも大切である。', answer: false, why: '第2段落 a knot used by a climber must never slip, even if it is difficult to undo later。' },
+      { statement: '結び方の知識は、おもに本から学ばれた。', answer: false, why: '第3段落 This knowledge was rarely learned from books。' },
+      { statement: '結び目は、安心とまどいの両方を表しうる。', answer: true, why: '第4段落 the same object can stand both for security and for confusion。' },
+    ],
+    qa: [
+      { q: 'What could hand-to-hand teaching transmit that words alone can hardly express?', choices: ['The feeling in the fingers that tells whether a knot is tied correctly.', 'The names of all the knots.', 'The price of good rope.', 'The history of sailing.'], answer: 0, why: '第3段落 the feeling in the fingers that tells a skilled person whether a knot has been tied correctly。' },
+      { q: 'According to the author, what may be slowly disappearing from everyday life?', choices: ['A patient, hands-on understanding of materials.', 'The use of plastic clips.', 'The need for adhesive tape.', 'The habit of marrying.'], answer: 0, why: '第6段落 a kind of patient, hands-on understanding of materials ... is slowly disappearing。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
