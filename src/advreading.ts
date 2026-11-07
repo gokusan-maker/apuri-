@@ -40578,6 +40578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-ai-tutors',
+    title: 'Should Every Student Have an AI Tutor?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For generations, wealthy families have hired private tutors to give their children individual attention, explaining difficult ideas, correcting mistakes, and adjusting the pace of learning to suit each student. Such help has always been expensive and therefore available to only a few. Recent advances in artificial intelligence have raised the possibility that a similar kind of personal guidance could soon be offered to every student, through software that answers questions, provides explanations, and responds to the needs of each learner. The prospect has excited many educators, but it has also prompted serious concerns.",
+      "Supporters argue that AI tutors could make high-quality learning support available on an unprecedented scale. A student struggling with a mathematics problem late at night, or one who is too shy to ask questions in class, could receive patient explanations whenever they needed them. Because such systems can adjust to the level of each learner, they might help students who have fallen behind to catch up, while allowing those who learn quickly to move ahead without waiting for the rest of the class. Students in remote areas or in schools with few specialist teachers, supporters add, could gain access to explanations in subjects that would otherwise be unavailable to them.",
+      "Supporters also suggest that AI tutors could relieve some of the pressure on teachers. In many schools, teachers are responsible for large classes and have little time to give individual attention to every student. ( A ) software cannot replace the human relationships at the heart of education, supporters argue, it could take over routine tasks such as checking exercises and answering basic questions, freeing teachers to concentrate on discussion, encouragement, and the guidance that only a person can provide.",
+      "Critics, however, question whether such systems truly help students learn. If a program supplies answers too readily, students may come to rely on it instead of developing the patience and persistence needed to solve problems on their own. Learning often involves struggle, confusion, and the gradual building of understanding, and critics worry that constant assistance may deprive students of these valuable experiences, producing work that looks correct but reflects little genuine understanding. Some teachers have already noticed that students who use such tools heavily can complete assignments quickly yet struggle to explain their reasoning when asked to do so in their own words.",
+      "Critics also raise concerns about accuracy and fairness. AI systems can produce explanations that sound convincing but contain errors, and young students may lack the knowledge needed to recognize such mistakes. Furthermore, access to the most advanced tools may depend on a family's ability to pay, so that technology intended to reduce inequality might instead widen it. There are also questions about privacy, since such systems may collect detailed information about how each child thinks, learns, and makes mistakes.",
+      "Some educators propose that the key lies in how AI tutors are designed and used. Systems that ask students guiding questions rather than simply giving answers may encourage deeper thinking, and teachers who understand the strengths and weaknesses of such tools can help students use them wisely. Clear rules about the protection of personal data and efforts to ensure that all students have access to the same resources may also help to address the concerns of critics.",
+      "The debate over AI tutors ultimately reflects a broader question about the purpose of education. If learning were merely a matter of acquiring correct answers, software might one day perform much of the work currently done by teachers. But education also involves developing curiosity, independence, and the ability to think critically, and these qualities are shaped through human relationships as much as through information. How societies use this new technology will reveal what they believe education is truly for.",
+    ],
+    ja: [
+      '何世代にもわたって、裕福な家庭は家庭教師をやとい、子どもに一人一人に合わせた注意をはらわせ、むずかしい考えを説明させ、まちがいを直させ、学ぶ速さを生徒一人一人に合わせさせてきた。そうした助けはいつも高価で、そのためわずかな人しか受けられなかった。人工知能の最近の進歩によって、質問に答え、説明をあたえ、学ぶ人一人一人の必要にこたえるソフトウェアを通じて、同じような一人一人への手引きが、まもなくすべての生徒に提供されうるという可能性が出てきた。この見通しは多くの教育者をわくわくさせているが、重大な心配もひき起こしている。',
+      '支持する人々は、AIの家庭教師は、質の高い学びのささえを、これまでにない規模で受けられるようにしうると主張する。夜おそくに数学の問題に苦しんでいる生徒や、はずかしがって授業で質問できない生徒も、必要なときにいつでも、しんぼう強い説明を受けられるだろう。そうした仕組みは学ぶ人一人一人の水準に合わせられるので、おくれた生徒が追いつくのを助けつつ、速く学ぶ生徒がクラスのほかの人を待たずに先へ進めるようにするかもしれない。へんぴな地域の生徒や、専門の先生が少ない学校の生徒も、そうでなければ学べなかったはずの科目の説明を受けられるようになるかもしれないと支持する人々はつけ加える。',
+      '支持する人々はまた、AIの家庭教師は先生の負担の一部をやわらげうると言う。多くの学校では、先生は大きなクラスを受けもち、すべての生徒に一人一人の注意をはらう時間がほとんどない。ソフトウェアは教育の中心にある人間どうしの関係にかわることはできないが、練習問題の確認や基本的な質問に答えることのような決まった仕事を引き受け、先生が話し合いやはげましや、人間にしかできない手引きに集中できるようにしうると支持する人々は主張する。',
+      'しかし批判する人々は、そうした仕組みが本当に生徒の学びを助けるのかと疑問を投げかける。もしプログラムがあまりにかんたんに答えをあたえれば、生徒は自分で問題を解くのに必要な忍耐とねばり強さを育てるかわりに、それにたよるようになるかもしれない。学ぶことには、しばしば苦労や混乱や、少しずつ理解を積み上げていくことがともなうので、たえまない手助けは生徒からこうした貴重な経験をうばい、正しく見えても本当の理解をほとんど反映していない答えを生むのではないかと批判する人々は心配する。そうした道具をさかんに使う生徒は、課題をすばやく仕上げられても、自分のことばで考えの筋道を説明するよう求められると苦労することに、すでに気づいている先生もいる。',
+      '批判する人々はまた、正確さと公平さについての心配をあげる。AIの仕組みは、説得力があるように聞こえるがまちがいをふくむ説明をつくり出すことがあり、幼い生徒には、そうしたまちがいに気づくのに必要な知識がないかもしれない。さらに、もっとも進んだ道具を使えるかどうかは家庭の支はらう力によるかもしれず、そのため、不平等をへらすはずの技術が、かえってそれを広げてしまうかもしれない。また、そうした仕組みは、子ども一人一人がどう考え、学び、まちがえるかについてのくわしい情報を集めるかもしれないので、プライバシーについての疑問もある。',
+      '大切なのはAIの家庭教師がどう設計され、どう使われるかだと提案する教育者もいる。ただ答えをあたえるのではなく、生徒に手がかりとなる質問をする仕組みは、より深く考えることをうながすかもしれず、そうした道具の長所と短所を理解している先生は、生徒がそれをかしこく使えるよう助けることができる。個人のデータを守ることについてのはっきりした規則や、すべての生徒が同じ資源を使えるようにする努力も、批判する人々の心配にこたえる助けになるかもしれない。',
+      'AIの家庭教師をめぐる議論は、結局のところ、教育の目的についての、より広い問いを反映している。もし学ぶことがただ正しい答えを身につけることにすぎないなら、ソフトウェアはいつか、今先生が行っている仕事の多くをこなすかもしれない。しかし教育には、好奇心や自立心や批判的に考える力を育てることもふくまれており、こうした性質は、情報を通じてと同じくらい、人間どうしの関係を通じて形づくられる。社会がこの新しい技術をどう使うかは、教育が本当は何のためにあると社会が信じているかを明らかにするだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「人間どうしの関係にかわることはできないが、決まった仕事を引き受けられる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that AI tutors could offer personal learning support on a large ( 1 ) and relieve pressure on teachers. Critics worry that students may come to ( 2 ) on them and that the tools may contain errors. Much depends on how such systems are ( 3 ) and used.',
+      blanks: [
+        { choices: ['scale', 'stage', 'screen', 'scene'], answer: 0, why: '第2段落 on an unprecedented scale。' },
+        { choices: ['rely', 'insist', 'agree', 'comment'], answer: 0, why: '第4段落 students may come to rely on it。' },
+        { choices: ['designed', 'sold', 'hidden', 'banned'], answer: 0, why: '第6段落 the key lies in how AI tutors are designed and used。' },
+      ],
+    },
+    tf: [
+      { statement: '家庭教師はこれまで高価で、わずかな人しか受けられなかった。', answer: true, why: '第1段落 Such help has always been expensive and therefore available to only a few。' },
+      { statement: '支持する人々は、ソフトウェアが先生を完全にかえられると言う。', answer: false, why: '第3段落 software cannot replace the human relationships at the heart of education。' },
+      { statement: 'AIは、説得力があってもまちがいをふくむ説明をつくることがある。', answer: true, why: '第5段落 can produce explanations that sound convincing but contain errors。' },
+      { statement: '筆者は、教育は正しい答えを身につけることだけだと述べている。', answer: false, why: '第7段落 education also involves developing curiosity, independence ...。' },
+    ],
+    qa: [
+      { q: 'What kind of systems may encourage deeper thinking, according to some educators?', choices: ['Systems that ask students guiding questions rather than giving answers.', 'Systems that give answers as quickly as possible.', 'Systems that replace all teachers.', 'Systems that collect as much data as possible.'], answer: 0, why: '第6段落 Systems that ask students guiding questions rather than simply giving answers。' },
+      { q: 'Why might technology intended to reduce inequality widen it?', choices: ['Access to the most advanced tools may depend on the ability of a family to pay.', 'Teachers refuse to use it.', 'Students do not like computers.', 'It works only in large classes.'], answer: 0, why: '第5段落 access to the most advanced tools may depend on a family’s ability to pay。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
