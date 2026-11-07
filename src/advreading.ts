@@ -41422,6 +41422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-snow',
+    title: 'On Snow',
+    level: '難関大（評論）',
+    paragraphs: [
+      "There is something about falling snow that seems to change the world. Overnight, familiar streets and fields are covered in white, sounds become muffled, and the ordinary rhythm of life slows down. Children rush outside to play, adults pause at windows to watch, and even those who must struggle to work through icy roads may feel a moment of wonder at the transformation. Snow is, of course, simply frozen water, yet its effect on human feelings and imagination is far greater than its physical nature might suggest.",
+      "Part of the fascination of snow lies in its beauty at the smallest scale. Each snowflake forms as water vapor freezes around a tiny particle in a cloud, growing into a delicate structure of ice crystals whose shape depends on the temperature and moisture of the air through which it falls. Because these conditions vary constantly, no two snowflakes are likely to be exactly alike. To examine a single flake under a magnifying glass is to discover an intricate pattern that exists for only a moment before melting away.",
+      "Snow also changes the way we experience sound and space. A thick layer of snow absorbs noise, so that a snowy landscape can feel remarkably quiet, as though the world were holding its breath. ( A ) the cold can be harsh and uncomfortable, many people find this silence deeply calming, and the clean white surface can make a familiar place seem new, inviting us to see it with fresh eyes and to notice details we had long overlooked.",
+      "For communities in cold regions, however, snow is not merely a source of beauty but a central fact of life that must be managed. Heavy snowfall can block roads, isolate villages, and collapse roofs, and people living in such places have developed practical knowledge and customs for coping with long winters. Neighbors may take turns clearing paths, check on elderly residents during storms, and share stores of food and fuel, so that the hardship of snow also strengthens the bonds of community. At the same time, snow provides water that melts in spring to fill rivers and nourish crops, and in some mountainous regions it is an essential source of drinking water for millions of people.",
+      "Snow has also played an important role in culture and art. Poets have used it as a symbol of purity, silence, and the passing of time, and painters have tried to capture the subtle colors that appear in snow under different kinds of light. In many traditions, the first snow of the year is celebrated as a special occasion, and festivals built around snow and ice attract visitors who come to admire sculptures that will disappear when warmer weather arrives in spring.",
+      "In recent decades, changes in climate have begun to alter patterns of snowfall in many parts of the world. Some regions receive less snow than in the past, threatening water supplies and winter industries, while others experience heavier storms. Such changes remind us that snow, which may seem timeless and reliable, is in fact closely tied to the delicate balance of the climate, and that its disappearance would represent a loss not only for ecosystems but also for human culture.",
+      "In the end, snow may teach us to value the temporary. Each flake lasts only a short time, and even the deepest snowfall eventually melts, leaving the world as it was before. Yet the brief transformation it brings can renew our capacity for wonder and remind us to pay attention to beauty while it lasts. In a culture that often seeks permanence, snow offers a gentle lesson in the value of moments that cannot be held but can still be fully experienced by those who take the time to look.",
+    ],
+    ja: [
+      'ふる雪には、世界を変えてしまうような何かがある。一晩のうちに、見なれた通りや野原が白におおわれ、音はくぐもり、ふだんの暮らしのリズムはゆるやかになる。子どもたちは外へかけ出して遊び、大人はまどべで立ち止まってながめ、凍った道を苦労して仕事に行かなければならない人々でさえ、その変化にふとおどろきを感じるかもしれない。雪はもちろんただのこおった水にすぎないが、人間の感情と想像力にあたえる影響は、その物としての性質から想像されるよりはるかに大きい。',
+      '雪のふしぎな魅力の一部は、もっとも小さな規模での美しさにある。雪の結晶は、雲の中の小さな粒のまわりで水蒸気がこおってでき、ふりながら通りぬける空気の温度や湿り気によって形が決まる、氷の結晶のこまやかなつくりへと育っていく。こうした条件はたえず変わるので、二つの結晶がまったく同じになることはまずない。一つの結晶を虫めがねで調べることは、とけて消えてしまう前のほんの一瞬だけ存在する、こみいったもようを見つけることなのである。',
+      '雪はまた、音と空間の感じ方を変える。厚く積もった雪は音を吸いこむので、雪の景色は、まるで世界が息をひそめているかのように、おどろくほど静かに感じられることがある。寒さはきびしく不快なこともあるが、多くの人はこの静けさに深い落ち着きを感じ、きれいな白い表面は見なれた場所を新しく見せ、新鮮な目でそれを見て、長いあいだ見落としていた細部に気づくようさそってくれる。',
+      'しかし寒い地域の地域にとって、雪はただの美しさの源ではなく、うまくあつかわなければならない暮らしの中心的な事実である。大雪は道路をふさぎ、村を孤立させ、屋根をおしつぶすことがあり、そうした場所に住む人々は、長い冬をのりきるための実際的な知識と習わしを育ててきた。近所の人どうしが交代で道の雪かきをしたり、あらしのときにお年寄りのようすを見に行ったり、食べ物や燃料のたくわえを分け合ったりして、雪の苦労が地域のきずなを強めることもある。同時に、雪は春にとけて川を満たし作物を育てる水をあたえ、山の多い地域の中には、雪が何百万もの人々にとって欠かせない飲み水の源になっているところもある。',
+      '雪はまた、文化と芸術の中で大切な役割を果たしてきた。詩人は雪を純粋さや静けさや時の流れの象徴として使い、画家はさまざまな光の下で雪にあらわれるかすかな色をとらえようとしてきた。多くの伝統で、その年のはじめての雪は特別な機会として祝われ、雪と氷をめぐる祭りには、春になってあたたかくなれば消えてしまう像をながめに来る人々が集まる。',
+      'ここ数十年、気候の変化が、世界の多くの地域で雪のふり方を変えはじめている。以前より雪が少なくなり、水の供給や冬の産業がおびやかされている地域もあれば、よりはげしい大雪にみまわれる地域もある。こうした変化は、時をこえて変わらずたよれるものに見えるかもしれない雪が、実は気候のこわれやすいつりあいと深く結びついており、雪が消えてしまえば、それは生態系にとってだけでなく人間の文化にとっても損失になることを思い出させてくれる。',
+      '結局のところ、雪は、一時的なものを大切にすることを教えてくれるのかもしれない。一つ一つの結晶はほんの短いあいだしか続かず、どんなに深く積もった雪もやがてとけて、世界はもとのままにもどる。しかし雪がもたらすつかのまの変化は、私たちのおどろく力を新たにし、美しさが続いているあいだにそれに注意をはらうよう思い出させてくれる。しばしば永続を求める文化の中で、雪は、とどめておくことはできなくても、時間をかけて見る人なら、それでも十分に味わうことのできる瞬間の価値について、やさしい教えをあたえてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「寒さはきびしいこともあるが、多くの人は静けさに落ち着きを感じる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '雪の結晶の形は、空気の温度や湿り気によって決まる。', answer: true, why: '第2段落 whose shape depends on the temperature and moisture of the air。' },
+      { statement: '厚く積もった雪は、音を大きくする。', answer: false, why: '第3段落 A thick layer of snow absorbs noise。' },
+      { statement: '雪は、何百万もの人々の飲み水の源になっている地域がある。', answer: true, why: '第4段落 an essential source of drinking water for millions of people。' },
+      { statement: '気候の変化によって、どの地域でも雪がふえている。', answer: false, why: '第6段落 Some regions receive less snow than in the past。' },
+    ],
+    qa: [
+      { q: 'Why are no two snowflakes likely to be exactly alike?', choices: ['Because the conditions in the air vary constantly.', 'Because they are made in factories.', 'Because they never melt.', 'Because they are all the same size.'], answer: 0, why: '第2段落 Because these conditions vary constantly。' },
+      { q: 'What may snow teach us, according to the author?', choices: ['To value the temporary.', 'To avoid going outside.', 'To build higher roofs.', 'To forget about beauty.'], answer: 0, why: '第7段落 snow may teach us to value the temporary。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
