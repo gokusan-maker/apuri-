@@ -41582,6 +41582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-stones',
+    title: 'On Stones',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few things seem more ordinary than a stone. We step over them on mountain paths, kick them carelessly along city streets, and rarely give them a second thought. Yet children are often fascinated by stones, filling their pockets with pebbles from beaches and riverbanks and keeping them as treasures. Perhaps they sense something that adults tend to forget: that every stone, however plain it may appear, carries within it a history far older and stranger than anything in human experience.",
+      "A single pebble on a beach may have begun its existence millions of years ago, deep beneath the surface of the Earth, formed by heat and pressure or by layers of sediment slowly settling at the bottom of an ancient sea. Over unimaginable stretches of time, it may have been lifted into mountains, broken apart by ice, carried by rivers, and rolled by waves until its edges were worn smooth. To hold such a stone is, in a sense, to hold a fragment of the planet's long story.",
+      "Stones also record the history of life itself. Fossils preserved in rock reveal the shapes of creatures that lived long before human beings appeared, from tiny shells to enormous reptiles. ( A ) the living things themselves have long since vanished, their traces remain in the stone, allowing scientists to reconstruct the history of life on Earth and to understand how the planet's climate and environment have changed over millions of years.",
+      "Human beings, too, have long depended on stone. The earliest tools were made by striking one stone against another to create sharp edges, and for thousands of years people built homes, temples, and walls from stone because of its strength and durability. Many of the oldest surviving human structures are made of stone, and they connect us with the people who shaped them, whose names have been forgotten but whose skill and effort remain visible. Walls built without mortar, in which each stone was carefully chosen and fitted to its neighbors, still stand in many places after centuries of storms and earthquakes, a testimony to knowledge passed down through generations of builders.",
+      "Stones have also held deep symbolic meanings. In many cultures, they have been used to mark graves, boundaries, and sacred places, and some stones have been regarded as possessing special power or spirit. The very permanence of stone makes it a natural symbol of endurance and memory, which is why monuments intended to last for generations are so often made of it, and why people speak of promises or principles as being set in stone.",
+      "Yet stone is not truly permanent. Even the hardest rock is slowly worn away by wind, water, and ice, and mountains that seem eternal are gradually reduced to sand over millions of years. This slow transformation reminds us that permanence is always relative, and that what appears unchanging to a human observer is, on a longer time scale, in constant motion. Even the sand on a beach was once part of solid rock, and may one day be pressed into rock again. The stone that seems the very image of stillness is in fact part of an endless cycle of creation and decay.",
+      "In the end, paying attention to stones may help us to see our own lives in a different light. Compared with the age of a pebble, a human life is extraordinarily brief, and the concerns that fill our days may seem small. Yet this perspective need not be discouraging. It can encourage a sense of humility and wonder, reminding us that we are part of a vast and ancient world, and that even the most ordinary objects around us hold stories worth discovering if only we take the time to look.",
+    ],
+    ja: [
+      '石ほどありふれて見えるものはほとんどない。私たちは山道で石をまたぎ、町の通りで何気なくけとばし、二度と考えることはめったにない。しかし子どもたちはしばしば石に夢中になり、浜辺や川原の小石でポケットをいっぱいにし、宝物としてとっておく。もしかすると彼らは、大人がわすれがちなことを感じとっているのかもしれない。どれほど地味に見えても、どの石も、人間の経験のどんなものよりもはるかに古く不思議な歴史をうちにもっているということを。',
+      '浜辺の一つの小石は、何百万年も前に、地球の表面の深い下で、熱と圧力によって、あるいは古代の海の底に少しずつしずんでいった堆積物の層によってできたのかもしれない。想像もつかないほどの長い時間のあいだに、その石は山へと持ち上げられ、氷にくだかれ、川に運ばれ、角がすりへってなめらかになるまで波にころがされてきたのかもしれない。そうした石を手にとることは、ある意味で、地球の長い物語のかけらを手にとることなのである。',
+      '石はまた、生命そのものの歴史も記録している。岩の中に残された化石は、小さな貝から巨大なは虫類まで、人間があらわれるずっと前に生きていた生き物の形を明らかにする。生き物そのものはとうの昔に消えてしまったが、その跡は石の中に残っており、科学者たちが地球上の生命の歴史を組み立て直し、何百万年にもわたって地球の気候や環境がどう変わってきたかを理解することを可能にしている。',
+      '人間もまた、長いあいだ石にたよってきた。最初の道具は、一つの石を別の石に打ちつけてするどい刃をつくることでつくられ、何千年ものあいだ、人々はその強さと長持ちすることから、石で家や神殿やかべを建ててきた。今に残るもっとも古い人間の建造物の多くは石でできており、それらは私たちを、それを形づくった人々と結びつけている。その人々の名前はわすれられてしまったが、その技と努力は今も目に見えるのである。しっくいを使わずに、一つ一つの石を注意深く選んでとなりの石に合わせて積んだかべは、何世紀ものあらしや地震をへても多くの場所で今も立っており、何世代もの石工に受けつがれてきた知識のあかしとなっている。',
+      '石はまた、深い象徴的な意味をもってきた。多くの文化で、石は墓や境界や神聖な場所のしるしとして使われ、特別な力や魂をもつと見なされてきた石もある。石の永続性そのものが、石をたえることと記憶の自然な象徴にしており、だからこそ何世代も残ることを意図した記念碑がしばしば石でつくられ、人々は約束や原則について「石にきざまれた」と言うのである。',
+      'しかし石は本当に永遠なわけではない。もっともかたい岩でさえ、風や水や氷によってゆっくりとけずられ、永遠に見える山も何百万年もかけて少しずつ砂になっていく。このゆっくりとした変化は、永続とはいつも相対的なものであり、人間の目には変わらないように見えるものも、より長い時間の尺度ではたえず動いていることを思い出させてくれる。浜辺の砂でさえ、かつてはかたい岩の一部であり、いつかまたおし固められて岩になるかもしれない。静けさそのものの姿のように見える石は、実は終わりのない誕生と崩壊の循環の一部なのである。',
+      '結局のところ、石に注意をはらうことは、自分自身の人生をちがう光の中で見る助けになるかもしれない。小石の年齢にくらべれば、人間の一生はとてつもなく短く、毎日を満たしている心配ごとは小さく見えるかもしれない。しかしこの見方は、がっかりさせるものである必要はない。それはけんきょさとおどろきの感覚をうながし、私たちが広大で古い世界の一部であること、そして身のまわりのもっともありふれた物でさえ、時間をかけて見さえすれば、見つける価値のある物語をもっていることを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「生き物そのものはとうに消えたが、その跡は石の中に残っている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '子どもたちはしばしば石に夢中になる。', answer: true, why: '第1段落 children are often fascinated by stones。' },
+      { statement: '浜辺の小石は、ふつうつい最近できたものである。', answer: false, why: '第2段落 may have begun its existence millions of years ago。' },
+      { statement: '最初の道具は、石を打ちつけてつくられた。', answer: true, why: '第4段落 The earliest tools were made by striking one stone against another。' },
+      { statement: '筆者によれば、石は本当に永遠である。', answer: false, why: '第6段落 Yet stone is not truly permanent。' },
+    ],
+    qa: [
+      { q: 'What do fossils preserved in rock reveal?', choices: ['The shapes of creatures that lived long before human beings.', 'The names of ancient builders.', 'The price of stones.', 'The future of the climate.'], answer: 0, why: '第3段落 reveal the shapes of creatures that lived long before human beings appeared。' },
+      { q: 'Why are monuments so often made of stone?', choices: ['Because the permanence of stone makes it a symbol of endurance and memory.', 'Because stone is very light.', 'Because stone is cheap to carry.', 'Because stone changes color.'], answer: 0, why: '第5段落 The very permanence of stone makes it a natural symbol of endurance and memory。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
