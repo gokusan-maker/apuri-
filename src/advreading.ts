@@ -40738,6 +40738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-paying-student-athletes',
+    title: 'Should Student Athletes Be Paid?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, university sports have grown into an enormous business. Games are broadcast to millions of viewers, stadiums hold tens of thousands of spectators, and coaches may earn salaries far greater than those of university presidents. Yet the young athletes whose performances generate this wealth have traditionally received no payment beyond scholarships covering their tuition and living costs. In recent years, a heated debate has developed over whether these students should be paid for their work, and some institutions have begun to change their rules in response. Courts and lawmakers have also become involved, as former athletes have challenged the rules that prevented them from sharing in the money their talents produced.",
+      "Supporters of payment argue that the current arrangement is fundamentally unfair. Student athletes may spend forty hours or more each week on training, travel, and competition, leaving little time for study or part-time work. Their efforts attract television contracts, ticket sales, and donations worth vast sums, yet most of this money flows to universities, coaches, and administrators. Supporters argue that it is unjust for everyone involved to profit from the athletes' labor except the athletes themselves, many of whom come from families with limited financial resources.",
+      "Supporters also point to the risks that athletes face. Serious injuries can end a sporting career in a single moment, and some may leave lasting physical damage. ( A ) only a small fraction of student athletes will ever play professionally, supporters argue, they all accept these risks while generating income for their institutions, and fair compensation would allow them to save money, support their families, and prepare for a future that may not include a career in sport.",
+      "Critics, however, argue that paying student athletes would undermine the purpose of university sport. They believe that these students should be regarded primarily as learners who take part in athletics as one part of their education, not as employees of a sports business. Introducing salaries, critics warn, could transform universities into commercial enterprises in which academic goals are increasingly overshadowed by the pursuit of victory and profit. They also fear that paid athletes might feel even greater pressure to perform, neglecting their studies in the hope of earning more.",
+      "Critics also raise practical concerns. Only a few sports, usually those that attract large television audiences, generate significant revenue, while many others operate at a loss. If athletes in popular sports were paid, critics ask, what would happen to those in less popular ones? Universities might be forced to cut smaller programs in order to afford salaries for the most profitable teams, reducing opportunities for many students and possibly widening gaps between men's and women's sports. Critics argue that such consequences would harm the very students whom the reforms were intended to help, since most athletes compete in sports that earn little money.",
+      "Some have proposed compromises between these positions. Instead of paying salaries, universities might allow athletes to earn money from the use of their names and images in advertising, provide stronger health insurance and support for injured players, or guarantee scholarships that allow athletes to complete their degrees even after their sporting careers end. Such measures, supporters of compromise argue, could address the most serious injustices while preserving the educational character of university sport.",
+      "The debate over paying student athletes ultimately reflects broader questions about the relationship between education and commerce. When an activity generates great wealth, it becomes difficult to maintain that those who perform it are participating merely for the love of the game or for their own education. How societies answer this question will depend on whether they view university sport as part of learning or as a business, and on how they balance fairness to individuals with the values that institutions claim to uphold.",
+    ],
+    ja: [
+      'いくつかの国では、大学のスポーツがとてつもなく大きな商売に成長している。試合は何百万もの視聴者に放送され、競技場には何万人もの観客が入り、コーチは大学の学長よりはるかに多い給料をかせぐことがある。しかし、そのプレーがこの富を生み出している若い選手たちは、これまで学費と生活費をまかなう奨学金のほかには何の支はらいも受けてこなかった。近年、こうした学生に彼らの働きへの報酬をはらうべきかどうかについてはげしい議論が起こり、これにこたえて規則を変えはじめた大学もある。かつての選手たちが、自分の才能が生み出したお金を分け合うことをさまたげてきた規則に異議を申し立てたため、裁判所や議員もかかわるようになっている。',
+      '支はらいを支持する人々は、今の仕組みは根本から不公平だと主張する。学生選手は毎週40時間以上を練習や移動や試合に使うこともあり、勉強やアルバイトにほとんど時間が残らない。彼らの努力は、ばく大な金額にのぼるテレビの契約やチケットの売り上げや寄付を引き寄せるが、このお金のほとんどは大学やコーチや運営者に流れていく。かかわるだれもが選手の働きから利益を得ているのに、選手自身だけがそうでないのは不正であり、しかも選手の多くは経済的に余裕のない家庭の出身だと支持する人々は主張する。',
+      '支持する人々はまた、選手がかかえる危険をあげる。重いけがは一瞬でスポーツの道を終わらせることがあり、長く残る体の害をあたえるけがもある。プロになるのは学生選手のごく一部にすぎないが、全員が大学に収入をもたらしながらこうした危険を受け入れており、公正な報酬があれば、お金をたくわえ、家族をささえ、スポーツの仕事をふくまないかもしれない将来にそなえることができると支持する人々は主張する。',
+      'しかし批判する人々は、学生選手にお金をはらうことは大学のスポーツの目的をそこなうと主張する。彼らは、こうした学生は、スポーツの会社の従業員ではなく、教育の一部としてスポーツに参加する学ぶ人として、まず見られるべきだと信じている。給料を取り入れれば、大学は、学問の目標が勝利と利益の追求にますますおおいかくされる商業的な事業に変わりかねないと批判する人々は警告する。また、お金をはらわれる選手は、さらに強い結果への重圧を感じ、より多くかせぐことを願って勉強をおろそかにするかもしれないと彼らは心配している。',
+      '批判する人々はまた、実際的な心配をあげる。大きな収入を生むのは、ふつう多くのテレビの視聴者を引き寄せるわずかな競技だけであり、ほかの多くの競技は赤字で運営されている。人気のある競技の選手にお金がはらわれるなら、人気のない競技の選手はどうなるのかと批判する人々は問う。大学はもっとも利益の上がるチームの給料をまかなうために小さな部をけずらざるをえなくなり、多くの学生の機会がへり、男子と女子の競技のあいだの差が広がるかもしれない。ほとんどの選手はあまりお金をかせがない競技で戦っているので、そうした結果は、改革が助けようとしたまさにその学生たちを傷つけるだろうと批判する人々は主張する。',
+      'これらの立場のあいだの妥協案を提案する人もいる。給料をはらうかわりに、大学は選手が広告で自分の名前や姿を使わせてお金をかせぐことを認めたり、けがをした選手のためのより手厚い健康保険やささえを用意したり、スポーツの道が終わったあとでも学位を取れるような奨学金を保証したりできるかもしれない。そうした手だてなら、大学のスポーツの教育としての性質を保ちながら、もっとも深刻な不正にこたえられると妥協を支持する人々は主張する。',
+      '学生選手へのお金の支はらいをめぐる議論は、結局のところ、教育と商業の関係についての、より広い問いを反映している。ある活動が大きな富を生むとき、それを行う人々がただ競技を愛するために、あるいは自分の教育のために参加しているのだと言い続けるのはむずかしくなる。社会がこの問いにどう答えるかは、大学のスポーツを学びの一部と見るか商売と見るか、そして個人への公平さと、大学がかかげる価値をどうつりあわせるかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「プロになるのはごく一部だが、全員が危険を受け入れている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that it is unfair for everyone to profit from the ( 1 ) of student athletes except the athletes themselves. Critics believe these students should be regarded primarily as ( 2 ) and worry that smaller programs might be cut. Some propose ( 3 ) such as allowing athletes to earn money from advertising.',
+      blanks: [
+        { choices: ['labor', 'grades', 'rules', 'travel'], answer: 0, why: '第2段落 to profit from the athletes’ labor。' },
+        { choices: ['learners', 'employees', 'coaches', 'viewers'], answer: 0, why: '第4段落 should be regarded primarily as learners。' },
+        { choices: ['compromises', 'punishments', 'contests', 'complaints'], answer: 0, why: '第6段落 Some have proposed compromises。' },
+      ],
+    },
+    tf: [
+      { statement: 'コーチが大学の学長より多い給料をかせぐことがある。', answer: true, why: '第1段落 coaches may earn salaries far greater than those of university presidents。' },
+      { statement: '学生選手は、練習のあとも勉強やアルバイトの時間がたっぷりある。', answer: false, why: '第2段落 leaving little time for study or part-time work。' },
+      { statement: '大きな収入を生むのは、ふつうわずかな競技だけである。', answer: true, why: '第5段落 Only a few sports ... generate significant revenue。' },
+      { statement: '妥協案では、スポーツの道が終わると学位を取れなくなる。', answer: false, why: '第6段落 guarantee scholarships that allow athletes to complete their degrees。' },
+    ],
+    qa: [
+      { q: 'What do critics warn could happen if salaries were introduced?', choices: ['Universities could become commercial enterprises.', 'Athletes would study harder.', 'Television contracts would end.', 'Stadiums would become smaller.'], answer: 0, why: '第4段落 could transform universities into commercial enterprises。' },
+      { q: 'What might universities be forced to do in order to afford salaries?', choices: ['Cut smaller programs.', 'Build more stadiums.', 'Lower tuition for everyone.', 'Hire more coaches.'], answer: 0, why: '第5段落 Universities might be forced to cut smaller programs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
