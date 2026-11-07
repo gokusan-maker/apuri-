@@ -41502,6 +41502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wind',
+    title: 'On Wind',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the forces of nature, wind may be the most mysterious in everyday experience. We cannot see it directly; we know it only by its effects, by the movement of leaves, the changing shape of clouds, the coolness on our skin, or the sound it makes as it rushes through trees and around buildings. It can be gentle enough to carry the scent of flowers across a garden or violent enough to tear roofs from houses. Perhaps because it is both invisible and powerful, wind has long occupied a special place in human thought and imagination.",
+      "In scientific terms, wind is simply air in motion, created by differences in temperature and pressure across the surface of the Earth. When the sun warms one region more than another, air rises in some places and sinks in others, setting in motion vast currents that circle the whole planet. These movements carry heat from the tropics toward the poles, bring rain to dry lands, and shape the climate of every region. Without wind, much of the Earth would be far less habitable than it is today.",
+      "For most of human history, wind has also been a source of energy. Sails allowed people to cross oceans and trade with distant lands, and windmills ground grain and pumped water for centuries. ( A ) these technologies were eventually replaced in many places by engines powered by coal and oil, the growing need for clean energy has brought wind back to the center of human activity, as large turbines now generate electricity in many parts of the world.",
+      "Wind has also shaped the physical world in quieter ways. Over thousands of years, it has carved strange forms in rock, piled sand into enormous dunes, and carried seeds and spores to new places where plants could grow and new communities of life could take root. Many trees on exposed coasts and mountaintops grow bent in the direction of the prevailing wind, their shapes recording the patient force that has acted on them for decades. In this sense, the landscape itself can be read as a record of the wind's long history.",
+      "In human culture, wind has often symbolized change, freedom, and the presence of forces beyond our control. Many languages speak of the winds of change, and poets have long imagined the wind as a messenger carrying news from distant places. In some traditions, wind is associated with breath and spirit, suggesting a connection between the invisible movement of air and the invisible life within living beings. Sailors, farmers, and fishers in many cultures have given local winds their own names, recognizing them almost as familiar characters whose moods must be understood and respected.",
+      "At the same time, wind reminds us of our vulnerability. Storms and hurricanes can destroy homes, flood coastal towns, and take many lives in a matter of hours. As the climate changes, some scientists warn that powerful storms may become more frequent or intense, and communities must prepare to face winds of a strength they have rarely experienced. Learning to read the wind, to predict its behavior, and to build in harmony with it has therefore become more important than ever for communities living in exposed places.",
+      "In the end, wind offers a lesson in the power of what cannot be seen. It moves through our lives constantly, shaping the weather, the land, and even our moods, yet we rarely stop to notice it unless it becomes unusually strong or suddenly falls completely still. To pay attention to the wind is to become aware of the vast and invisible systems that sustain life on Earth, and perhaps to recognize that much of what matters most in the world is felt rather than seen.",
+    ],
+    ja: [
+      '自然の力の中で、風は毎日の経験の中でもっともなぞめいたものかもしれない。私たちは風をじかに見ることはできず、その効果によってしか知ることができない。葉の動きや雲の形や、はだに感じるすずしさや、木々のあいだや建物のまわりをかけぬけるときの音によってである。風は庭を横ぎって花のかおりを運ぶほどおだやかなこともあれば、家から屋根を引きはがすほどはげしいこともある。目に見えず、しかも力強いからこそ、風は長いあいだ人間の思考と想像力の中で特別な場所をしめてきたのかもしれない。',
+      '科学的にいえば、風はただ動いている空気であり、地球の表面の温度と気圧のちがいによって生まれる。太陽がある地域をほかの地域よりあたためると、ある場所では空気が上がり、別の場所では下がって、地球をめぐる広大な流れが動き出す。こうした動きは熱帯から極へ熱を運び、かわいた土地に雨をもたらし、あらゆる地域の気候を形づくる。風がなければ、地球の多くは今よりはるかに住みにくいだろう。',
+      '人類の歴史のほとんどを通じて、風はエネルギーの源でもあった。帆のおかげで人々は海をわたり、遠い土地と貿易することができ、風車は何世紀ものあいだ穀物をひき、水をくみ上げてきた。こうした技術は、やがて多くの場所で石炭や石油で動く機関にとってかわられたが、きれいなエネルギーへの必要の高まりが、風をふたたび人間の活動の中心にもどしており、今では世界の多くの地域で大きな風車が電気をつくっている。',
+      '風はまた、もっとしずかなやり方で物の世界を形づくってきた。何千年もかけて、風は岩に不思議な形をきざみ、砂を巨大な砂丘に積み上げ、植物が育つことのできる新しい場所へ種や胞子を運び、新しい生き物の集まりが根づけるようにしてきた。風にさらされた海岸や山の頂の多くの木は、いつもふく風の方向に曲がって育ち、その形は何十年も木にはたらいてきたしんぼう強い力を記録している。この意味で、景色そのものを、風の長い歴史の記録として読むことができる。',
+      '人間の文化の中で、風はしばしば変化や自由や、私たちの手のおよばない力の存在を象徴してきた。多くの言語に「変化の風」という言い方があり、詩人たちは長いあいだ、風を遠い場所から知らせを運ぶ使者として思いえがいてきた。ある伝統では、風は息や魂と結びつけられ、空気の目に見えない動きと、生き物の中の目に見えない命とのつながりを示している。多くの文化の船乗りや農家や漁師は、土地の風にそれぞれの名前をつけ、その機嫌を理解し尊重しなければならない、ほとんどなじみの登場人物のようにみとめてきた。',
+      '同時に、風は私たちのもろさを思い出させる。あらしやハリケーンは、数時間のうちに家をこわし、海辺の町を水びたしにし、多くの命をうばうことがある。気候が変わるにつれて、強いあらしがより多く、あるいはよりはげしくなるかもしれないと警告する科学者もおり、地域はめったに経験したことのない強さの風に向き合う準備をしなければならない。そのため、風を読み、そのふるまいを予測し、風と調和して建てることを学ぶことは、風にさらされた場所に住む地域にとって、かつてないほど大切になっている。',
+      '結局のところ、風は見えないものの力についての教えをあたえてくれる。風はたえず私たちの暮らしの中を通りぬけ、天気や土地や、気分さえも形づくっているが、私たちはそれがとりわけ強くなったり、急にぴたりとやんだりしないかぎり、立ち止まって気づくことはめったにない。風に注意をはらうことは、地球上の生命をささえる広大で目に見えない仕組みに気づくことであり、もしかすると、世界でもっとも大切なものの多くは、見るものではなく感じるものだと知ることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「やがて機関にとってかわられたが、きれいなエネルギーの必要が風を中心にもどした」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '私たちは、風をその効果によってしか知ることができない。', answer: true, why: '第1段落 we know it only by its effects。' },
+      { statement: '風がなくても、地球は今と同じくらい住みやすいだろう。', answer: false, why: '第2段落 Without wind, much of the Earth would be far less habitable。' },
+      { statement: '風にさらされた木は、風の方向に曲がって育つことがある。', answer: true, why: '第4段落 grow bent in the direction of the prevailing wind。' },
+      { statement: '筆者は、大切なものはすべて目に見えると述べている。', answer: false, why: '第7段落 much of what matters most in the world is felt rather than seen。' },
+    ],
+    qa: [
+      { q: 'What is wind, in scientific terms?', choices: ['Air in motion created by differences in temperature and pressure.', 'Water vapor in clouds.', 'Light from the sun.', 'Sound traveling through trees.'], answer: 0, why: '第2段落 wind is simply air in motion, created by differences in temperature and pressure。' },
+      { q: 'In some traditions, what is wind associated with?', choices: ['Breath and spirit.', 'Money and trade.', 'Fire and metal.', 'Sleep and dreams.'], answer: 0, why: '第5段落 wind is associated with breath and spirit。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
