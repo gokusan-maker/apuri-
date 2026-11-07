@@ -42622,6 +42622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-pockets',
+    title: 'On Pockets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Pockets are so common in the clothes we wear that we rarely notice them, yet they are a surprisingly recent invention in the long history of clothing. For centuries, people carried their small possessions in bags tied to their belts or hidden inside their garments, and only gradually did tailors begin to sew pockets directly into coats, trousers, and dresses. To think about pockets, then, is to think about how human beings have carried their belongings with them, and about what those belongings have meant for their sense of independence and identity.",
+      "The most obvious function of a pocket is to keep useful things close at hand. A key, a coin, a pencil, or a handkerchief can be reached in an instant without the need to open a bag or ask anyone else for help, and this small convenience allows people to move freely through the world while remaining prepared for whatever they might need. In this sense, a pocket is a kind of portable home, a private space that travels with us and that holds the objects on which our daily lives depend.",
+      "Historically, however, pockets were not distributed equally. In many societies, the clothes of men were given generous pockets long before those of women, whose garments often had none at all or only small ones that could hold very little. ( A ) such differences may seem trivial, they had real consequences, since a person without pockets must either rely on others to carry things or take a bag wherever she goes, and some writers have argued that the lack of pockets both reflected and reinforced the limited independence that women were allowed.",
+      "Pockets also reveal something about the relationship between privacy and trust. What a person keeps in a pocket is usually hidden from view, and to reach into someone else's pocket without permission is widely regarded as a serious violation. Yet people may also invite others to share what their pockets contain, offering a sweet to a child or showing a photograph to a friend, so that the pocket becomes a place from which small gifts and confidences are drawn as well as a place in which possessions are protected.",
+      "The contents of our pockets can even serve as a record of our lives. A ticket from a forgotten journey, a stone picked up on a beach, or a note written in a hurry may remain in a coat for months or years, and discovering such objects can bring back memories that would otherwise have faded. In this way, a pocket preserves fragments of experience that are too small to be kept deliberately but too meaningful to be thrown away without a moment of hesitation.",
+      "In recent years, the contents of pockets have changed considerably. Many of the objects that people once carried separately, such as keys, money, tickets, and photographs, have been gathered into a single device, so that a pocket may now hold little more than a mobile phone. This concentration is undoubtedly convenient, but it may also mean that the varied collection of small objects that once reflected each person's habits and history has been replaced by a uniform device that looks almost the same in everyone's hand.",
+      "Perhaps, then, pockets deserve more attention than we usually give them. They show how ordinary objects can carry questions of freedom, equality, and privacy, and how something as simple as a piece of fabric sewn into a coat can shape the way people move through the world. The next time we reach into a pocket without thinking, it may be worth pausing for a moment to consider what we carry, why we carry it, and what our choices reveal about the kind of life we lead.",
+    ],
+    ja: [
+      'ポケットは、私たちが着る服にあまりにもふつうにあるので、めったに気づかれないが、服の長い歴史のなかでは、おどろくほど最近の発明である。何世紀ものあいだ、人々は身のまわりの小さなものを、ベルトに結んだふくろや服の内側にかくして持ち歩いており、仕立て屋が上着やズボン、ドレスにじかにポケットをぬいつけはじめたのは少しずつのことだった。だから、ポケットについて考えることは、人間が自分の持ち物をどのように身につけて運んできたか、そしてその持ち物が人々の自立の感覚や自分らしさにとって何を意味してきたかについて考えることなのである。',
+      'ポケットのもっとも明らかな働きは、役に立つものを手もとに置いておくことである。鍵や硬貨、えんぴつ、ハンカチは、かばんを開けたりだれかに助けをたのんだりしなくても一瞬で取り出すことができ、このささやかな便利さのおかげで、人々は必要になるかもしれないものにそなえながら、自由に世の中を動きまわることができる。この意味で、ポケットは一種のもち運べる家であり、私たちといっしょに旅をし、日々の生活がたよっているものを入れておく私的な空間なのである。',
+      'しかし歴史的には、ポケットは平等に分けあたえられてはいなかった。多くの社会で、男性の服には女性の服よりずっと早くからたっぷりとしたポケットがつけられ、女性の服にはしばしばまったくないか、ほとんど何も入らない小さなものしかなかった。そうしたちがいはささいなことに思えるかもしれないが、それは現実の結果をもたらした。ポケットのない人は、ものを運ぶのを他人にたよるか、どこへ行くにもかばんを持っていかなければならないからである。そして、ポケットがないことは、女性にゆるされていたかぎられた自立を反映し、またそれを強めてもいた、と論じる書き手もいる。',
+      'ポケットはまた、プライバシーと信頼の関係について何かを明らかにする。人がポケットに入れているものはふつう人目からかくれており、許可なくだれかのポケットに手を入れることは、重大な侵害だと広く考えられている。しかし人はまた、子どもにあめをあげたり、友だちに写真を見せたりして、ポケットの中身を分け合うよう他人をさそうこともある。こうしてポケットは、持ち物が守られる場所であるだけでなく、小さな贈り物や打ち明け話が取り出される場所にもなるのである。',
+      'ポケットの中身は、私たちの人生の記録にさえなりうる。わすれていた旅のきっぷや、浜辺でひろった石、急いで書いたメモが、何か月も何年も上着の中に残っていることがあり、そうしたものを見つけると、そうでなければうすれていたはずの思い出がよみがえることがある。このように、ポケットは、わざわざとっておくには小さすぎるが、一瞬もためらわずにすてるには意味がありすぎる、経験のかけらを保存しているのである。',
+      '近年、ポケットの中身は大きく変わった。鍵やお金、きっぷ、写真のように、人々がかつて別々に持ち歩いていたものの多くが、一つの機器にまとめられ、ポケットにはいまや携帯電話くらいしか入っていないこともある。この集約はたしかに便利だが、それはまた、かつて一人一人の習慣や歴史を反映していた小さなもののさまざまな集まりが、だれの手の中でもほとんど同じに見える画一的な機器に置きかえられたことを意味しているのかもしれない。',
+      'だとすれば、ポケットは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。ポケットは、ふつうのものが、自由や平等、プライバシーの問題をになうことができること、そして上着にぬいつけられた一枚の布のような単純なものが、人々の世の中の動き方を形づくりうることを示している。次に何も考えずにポケットに手を入れるとき、少し立ちどまって、自分が何を持ち歩いているのか、なぜそれを持ち歩いているのか、そして自分の選択がどんな生き方を表しているのかを考えてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ちがいはささいに思えるかもしれないが、現実の結果をもたらした」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '服の歴史のなかで、ポケットはおどろくほど最近の発明である。', answer: true, why: '第1段落 they are a surprisingly recent invention。' },
+      { statement: '多くの社会で、女性の服には男性の服より早くからポケットがつけられた。', answer: false, why: '第3段落 the clothes of men were given generous pockets long before those of women。' },
+      { statement: '許可なく他人のポケットに手を入れることは、重大な侵害と考えられている。', answer: true, why: '第4段落 is widely regarded as a serious violation。' },
+      { statement: '筆者は、携帯電話への集約には便利さがまったくないと述べている。', answer: false, why: '第6段落 This concentration is undoubtedly convenient。' },
+    ],
+    qa: [
+      { q: 'What does the author call a pocket in the second paragraph?', choices: ['A kind of portable home.', 'A small business.', 'A public square.', 'A secret weapon.'], answer: 0, why: '第2段落 a pocket is a kind of portable home。' },
+      { q: 'What can discovering old objects in a pocket bring back?', choices: ['Memories that would otherwise have faded.', 'Money that was lost.', 'Clothes that were sold.', 'Friends who moved away.'], answer: 0, why: '第5段落 can bring back memories that would otherwise have faded。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
