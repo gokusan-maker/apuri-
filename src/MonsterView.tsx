@@ -3408,6 +3408,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="58" cy="40" r="3" fill="#a78bfa" />
       </g>
     )
+  if (species === 'quetzal')
+    return (
+      <g>
+        {/* 赤いおなか */}
+        <ellipse cx="50" cy="66" rx="12" ry="9" fill="#dc2626" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
