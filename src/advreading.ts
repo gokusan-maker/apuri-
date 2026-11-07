@@ -41778,6 +41778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-debate-lessons',
+    title: 'Should Debate Be a Required School Subject?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, students regularly take part in formal debates, standing before their classmates to argue for or against a proposition, responding to opponents, and being judged on the strength of their reasoning. In others, such activities are rare, and classroom discussion tends to focus on finding the correct answer rather than defending a position. As concern grows about the ability of citizens to discuss difficult issues calmly, thoughtfully, and fairly, some educators have proposed that debate should become a required part of the school curriculum. The proposal has been welcomed by many teachers and parents, but it has also raised serious doubts.",
+      "Supporters argue that debate develops skills that are essential in modern life. To argue effectively, students must research a topic, organize evidence, anticipate objections, and express their ideas clearly under pressure. These abilities are valuable not only in academic study but also in careers that require presenting proposals, negotiating agreements, or explaining complex ideas to others. Supporters claim that students who practice debate become more confident speakers and more careful thinkers, better able to distinguish strong arguments from weak ones. Teachers who use debate regularly often report that students begin to ask sharper questions in other subjects as well, challenging claims in textbooks and asking for evidence rather than simply accepting what they are told.",
+      "Supporters also emphasize the role of debate in democratic societies. Citizens must often decide between competing proposals on matters such as taxation, education, and the environment, and they need to understand the reasons behind different positions. ( A ) students may sometimes be asked to defend views they do not personally hold, supporters argue, this experience can teach them to understand the perspectives of others, an ability that may reduce hostility and encourage more respectful public discussion.",
+      "Critics, however, worry that formal debate may encourage the wrong attitudes. Because debates are usually structured as contests with winners and losers, students may learn to focus on defeating their opponents rather than seeking the truth. Clever arguments that exploit weaknesses in an opponent's presentation may be rewarded more than careful reasoning, and students may come to see discussion as a form of combat rather than a shared search for understanding. Such habits, critics fear, could make public discussion even more divided, rewarding those who speak forcefully rather than those who listen.",
+      "Critics also raise concerns about fairness and comfort. Some students, particularly those who are shy or who are less confident in the language of instruction, may find public argument stressful and may perform poorly even when they understand the issues well. If debate becomes compulsory, critics argue, these students could be disadvantaged, and their anxiety might discourage them from participating in discussion at all, defeating the very purpose that supporters hope to achieve.",
+      "Many educators therefore suggest forms of debate that address these concerns. Some classes use structured discussions in which students must summarize their opponents' arguments fairly before responding, or switch sides partway through so that they experience both perspectives. Others place less emphasis on winning and more on the quality of reasoning and the ability to change one's mind in response to good evidence. Smaller group discussions can also give quieter students opportunities to develop confidence gradually before speaking in front of the whole class.",
+      "The debate over debate ultimately reflects broader questions about what kind of thinkers schools should produce. A society benefits from citizens who can express and defend their views, but also from those who can listen carefully, admit uncertainty, and seek common ground. Whether debate lessons strengthen these qualities or undermine them may depend less on whether they are compulsory than on how they are designed and the values they are intended to cultivate in young people.",
+    ],
+    ja: [
+      'いくつかの国では、生徒はふだんから正式なディベートに参加し、クラスメートの前に立って、ある主張に賛成または反対の立場で論じ、相手にこたえ、理由づけの強さで評価される。ほかの国々では、そうした活動はめずらしく、授業の話し合いは、ある立場を守ることよりも正しい答えを見つけることに集中しがちである。市民がむずかしい問題を落ち着いて、考え深く、公平に話し合う力についての心配が高まるにつれて、ディベートを学校の教育課程の必修の一部にすべきだと提案する教育者もいる。この提案は多くの先生や親に歓迎されてきたが、深刻な疑問も生んでいる。',
+      '支持する人々は、ディベートは現代の暮らしに欠かせない力を育てると主張する。効果的に論じるためには、生徒は題材を調べ、証拠を整理し、反対意見を予想し、重圧の中で自分の考えをはっきりとあらわさなければならない。こうした力は、学問の勉強だけでなく、提案を発表したり、取り決めの交渉をしたり、複雑な考えをほかの人に説明したりすることが求められる仕事においても価値がある。ディベートを練習する生徒は、より自信のある話し手になり、より注意深く考える人になって、強い主張と弱い主張を見分けやすくなると支持する人々は言う。ディベートをふだんから取り入れている先生たちは、生徒がほかの科目でもよりするどい質問をするようになり、言われたことをただ受け入れるのではなく、教科書の主張に疑問をもち、証拠を求めるようになるとしばしば報告している。',
+      '支持する人々はまた、民主的な社会におけるディベートの役割を強調する。市民はしばしば、税や教育や環境のような問題について、対立する提案のどちらかを選ばなければならず、ちがう立場の背後にある理由を理解する必要がある。生徒はときに自分が個人的にはもっていない考えを守るよう求められるかもしれないが、この経験は他人の見方を理解することを教えうるのであり、その力は敵意をへらし、より敬意のある公の話し合いをうながすかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、正式なディベートはまちがった態度をうながすかもしれないと心配する。ディベートはふつう勝者と敗者のいる勝負として組み立てられているので、生徒は真実を求めることよりも相手を負かすことに集中するようになるかもしれない。相手の発表の弱点をつく巧みな主張が、注意深い理由づけよりも高く評価されることもあり、生徒は話し合いを、理解を求める共同の作業ではなく、一種のたたかいと見なすようになるかもしれない。そうした習慣は、聞く人ではなく強く語る人を高く評価して、公の話し合いをさらに分断しかねないと批判する人々はおそれている。',
+      '批判する人々はまた、公平さと心地よさについての心配をあげる。とくに内気な生徒や、授業の言語に自信のない生徒の中には、人前で論じることを負担に感じ、問題をよく理解していても、うまくできない者がいるかもしれない。ディベートが必修になれば、こうした生徒は不利になりかねず、その不安のために話し合いにまったく参加しなくなるかもしれず、支持する人々がなしとげたいと願うまさにその目的がだめになってしまうと批判する人々は主張する。',
+      'そのため多くの教育者は、こうした心配にこたえる形のディベートを提案している。答える前に相手の主張を公平に要約しなければならない組み立てられた話し合いを使ったり、とちゅうで立場を入れかえて両方の見方を経験させたりするクラスもある。勝つことよりも、理由づけの質や、よい証拠にこたえて考えを変える力を重んじるクラスもある。少人数のグループでの話し合いも、静かな生徒にクラス全体の前で話す前に、少しずつ自信を育てる機会をあたえることができる。',
+      'ディベートをめぐる議論は、結局のところ、学校がどのような考える人を育てるべきかについての、より広い問いを反映している。社会は、自分の考えをあらわし守ることのできる市民からも、注意深く聞き、不確かさを認め、共通点を求めることのできる市民からも、利益を受ける。ディベートの授業がこうした性質を強めるか、それともそこなうかは、それが必修かどうかよりも、どのように組み立てられ、若者の中にどのような価値を育てようとしているかにかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「自分がもっていない考えを守るよう求められるかもしれないが、他人の見方を理解することを教えうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that debate develops essential skills and helps students understand the ( 1 ) of others. Critics worry that debate may encourage students to focus on ( 2 ) rather than truth and may disadvantage shy students. Many educators suggest forms of debate that place less emphasis on ( 3 ).',
+      blanks: [
+        { choices: ['perspectives', 'salaries', 'homes', 'names'], answer: 0, why: '第3段落 understand the perspectives of others。' },
+        { choices: ['winning', 'reading', 'sleeping', 'eating'], answer: 0, why: '第4段落 focus on defeating their opponents rather than seeking the truth。' },
+        { choices: ['competition', 'reasoning', 'evidence', 'listening'], answer: 0, why: '第6段落 place less emphasis on winning（勝つこと＝競争）。' },
+      ],
+    },
+    tf: [
+      { statement: 'ディベートでは、生徒は重圧の中で考えをあらわさなければならない。', answer: true, why: '第2段落 express their ideas clearly under pressure。' },
+      { statement: '生徒は、自分が個人的にもっている考えしか守らない。', answer: false, why: '第3段落 may sometimes be asked to defend views they do not personally hold。' },
+      { statement: '内気な生徒は、人前で論じることを負担に感じるかもしれない。', answer: true, why: '第5段落 may find public argument stressful。' },
+      { statement: '筆者は、ディベートを必修にするかどうかだけが大切だと述べている。', answer: false, why: '第7段落 may depend less on whether they are compulsory than on how they are designed。' },
+    ],
+    qa: [
+      { q: 'What must students do to argue effectively, according to supporters?', choices: ['Research a topic, organize evidence, and anticipate objections.', 'Memorize the textbook.', 'Speak as loudly as possible.', 'Avoid all questions.'], answer: 0, why: '第2段落 research a topic, organize evidence, anticipate objections。' },
+      { q: 'What do some classes require students to do before responding?', choices: ['Summarize their opponents’ arguments fairly.', 'Leave the room.', 'Write a long essay.', 'Agree with the teacher.'], answer: 0, why: '第6段落 must summarize their opponents’ arguments fairly before responding。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
