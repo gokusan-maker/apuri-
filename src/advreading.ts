@@ -41902,6 +41902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-shadows',
+    title: 'On Shadows',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Wherever there is light, there are shadows. They follow us along sunny streets, stretch across fields at the end of the day, and gather in the corners of rooms as evening falls. Because they are so constant a part of our surroundings, we seldom pay them much attention, noticing them perhaps only when a child tries to step on one or when a sudden cloud covers the sun. Yet shadows have shaped human experience in subtle and surprising ways, and thinking about them can reveal something about how we perceive the world.",
+      "In the simplest sense, a shadow is merely an area where light has been blocked by an object. Its shape depends on the form of that object and on the position of the light source, which is why shadows grow long in the early morning and late afternoon and shrink almost to nothing at midday. For thousands of years, people used these changing shadows to measure time, observing how the shadow of a stick or pillar moved across the ground as the sun traveled across the sky. Sundials, which still stand in many old gardens and town squares, are reminders of a time when daily life was organized around the slow movement of shadows rather than the ticking of mechanical clocks.",
+      "Shadows also play an essential role in the way we see. Our eyes and brains rely on patterns of light and shade to understand the shape and depth of objects; without shadows, a round ball might look like a flat circle, and a landscape would lose much of its sense of distance. ( A ) we rarely notice them consciously, shadows give the world its texture and solidity, which is why artists have long studied them carefully in order to make paintings appear lifelike.",
+      "In many cultures, shadows have carried mysterious or even frightening associations. Stories describe shadows that move on their own, people who lose their shadows, or spirits that dwell in dark places. A shadow can seem to be both part of a person and separate from them, following every movement yet never quite belonging to the body that casts it. Such ideas suggest that shadows have long been used to explore questions about identity and the hidden aspects of the self.",
+      "Shadows have also been valued for their beauty. Some traditions of architecture and design have deliberately made use of soft, dim light, creating rooms in which shadows give depth and calm to the space. In such environments, objects may appear more beautiful partly hidden than fully illuminated, and the gradual movement of shadows through the day can make a room feel alive. This appreciation reminds us that brightness is not always better, and that darkness can have its own kind of richness.",
+      "In modern cities, however, shadows are often treated as problems to be eliminated. Bright artificial lighting floods streets, offices, and homes, leaving few places where shadows can gather. Such lighting brings undeniable benefits in safety and convenience, but it may also flatten the visual experience of our surroundings and make it harder to appreciate the subtle changes of light that once marked the passing of time. Some cities have begun to reduce unnecessary lighting at night, partly to save energy and partly to restore a more natural balance between light and darkness.",
+      "In the end, shadows may teach us that what is partly hidden can be as meaningful as what is fully revealed. They give depth to what we see, help us measure time, and invite reflection on the unseen parts of ourselves. To notice a shadow, then, is to become aware of the light that creates it and of the delicate balance between brightness and darkness that shapes every moment of our visual world.",
+    ],
+    ja: [
+      '光のあるところにはどこにでもかげがある。かげは日の当たる通りで私たちについてきて、一日の終わりには野原に長くのび、夜になると部屋のすみに集まる。かげはあまりにいつもまわりにあるものなので、私たちはほとんど注意をはらわず、子どもがかげをふもうとしたときや、急に雲が太陽をかくしたときくらいにしか気づかないかもしれない。しかし、かげはかすかでおどろくべきやり方で人間の経験を形づくってきたのであり、それについて考えることは、私たちが世界をどう感じとっているかについて何かを明らかにしうる。',
+      'もっとも単純な意味では、かげは、光が物によってさえぎられた場所にすぎない。その形は物の形と光の源の位置によって決まるので、かげは早朝と夕方には長くなり、真昼にはほとんどなくなるまで短くなる。何千年ものあいだ、人々はこうした移り変わるかげを使って時間をはかり、太陽が空をわたるにつれて、棒や柱のかげが地面の上をどう動くかを観察した。今も多くの古い庭や町の広場に立っている日時計は、毎日の暮らしが機械の時計の音ではなく、かげのゆっくりとした動きを中心に組み立てられていた時代を思い出させてくれる。',
+      'かげはまた、私たちのものの見方においても欠かせない役割を果たしている。私たちの目と脳は、光とかげのパターンにたよって物の形や奥行きを理解する。かげがなければ、丸いボールは平らな円に見えるかもしれず、景色は遠さの感覚の多くを失うだろう。私たちはかげを意識することはめったにないが、かげは世界に手ざわりとたしかさをあたえており、だからこそ画家たちは、絵を本物のように見せるために、長いあいだかげを注意深く研究してきたのである。',
+      '多くの文化で、かげはなぞめいた、あるいはおそろしい結びつきをもってきた。物語は、ひとりでに動くかげや、かげを失った人や、暗い場所にすむ霊をえがく。かげは人の一部であると同時に、その人から切りはなされたもののようにも見え、あらゆる動きについていきながら、それを落とす体にけっして完全には属さない。こうした考えは、かげが長いあいだ、個性や自分のかくれた面についての問いをさぐるために使われてきたことを示している。',
+      'かげはまた、その美しさのためにも大切にされてきた。建築やデザインのある伝統は、わざとやわらかくほの暗い光を使い、かげが空間に奥行きと落ち着きをあたえる部屋をつくってきた。そうした環境では、物は完全に照らされているときより、一部がかくれているときのほうが美しく見えることがあり、一日を通じたかげのゆっくりとした動きが、部屋を生きているように感じさせることがある。こうした味わい方は、明るさがいつもよいとはかぎらず、暗さにはそれ自身の豊かさがありうることを思い出させてくれる。',
+      'しかし現代の都市では、かげはしばしば取りのぞくべき問題としてあつかわれる。明るい人工の照明が通りや職場や家をあふれさせ、かげが集まれる場所はほとんど残されていない。そうした照明は安全と便利さの面でたしかな利益をもたらすが、まわりの景色の見え方を平らにし、かつて時の流れをしるしていた光のかすかな変化を味わうことをむずかしくしているかもしれない。エネルギーを節約するためでもあり、光と暗さのより自然なつりあいを取りもどすためでもあって、夜の不必要な照明をへらしはじめた都市もある。',
+      '結局のところ、かげは、一部がかくれているものが、完全にあらわされているものと同じくらい意味をもちうることを教えてくれるのかもしれない。かげは私たちの見るものに奥行きをあたえ、時間をはかる助けになり、自分の見えない部分についてふり返るようさそう。だから、かげに気づくことは、それを生み出す光に気づくことであり、私たちの見る世界のあらゆる瞬間を形づくる、明るさと暗さのこわれやすいつりあいに気づくことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「意識することはめったにないが、かげは世界に手ざわりをあたえる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'かげは、真昼にはほとんどなくなるまで短くなる。', answer: true, why: '第2段落 shrink almost to nothing at midday。' },
+      { statement: 'かげがなくても、物の形や奥行きは同じように理解できる。', answer: false, why: '第3段落 without shadows, a round ball might look like a flat circle。' },
+      { statement: 'ある建築の伝統は、わざとほの暗い光を使ってきた。', answer: true, why: '第5段落 deliberately made use of soft, dim light。' },
+      { statement: '筆者によれば、明るさはいつもよい。', answer: false, why: '第5段落 brightness is not always better。' },
+    ],
+    qa: [
+      { q: 'How did people use shadows for thousands of years?', choices: ['To measure time.', 'To cook food.', 'To build boats.', 'To grow crops.'], answer: 0, why: '第2段落 people used these changing shadows to measure time。' },
+      { q: 'What may bright artificial lighting do, according to the passage?', choices: ['Flatten the visual experience of our surroundings.', 'Make shadows longer.', 'Improve our sense of distance.', 'Help us measure time.'], answer: 0, why: '第6段落 may also flatten the visual experience of our surroundings。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
