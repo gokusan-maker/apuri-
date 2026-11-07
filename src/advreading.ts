@@ -40498,6 +40498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-offshore-wind',
+    title: 'Should We Build More Wind Farms at Sea?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As countries seek to reduce their dependence on fossil fuels, many have turned to the sea in search of clean energy. Offshore wind farms, consisting of dozens or even hundreds of large turbines anchored to the seabed or floating on the water, can take advantage of the strong and steady winds that blow across the ocean. In some regions, such projects already supply a significant share of electricity, and governments have announced ambitious plans to expand them. Yet the rapid growth of offshore wind has also raised concerns among fishing communities, environmental groups, and coastal residents.",
+      "Supporters argue that offshore wind offers one of the most promising paths toward a low-carbon future. Winds at sea are generally stronger and more consistent than those on land, allowing turbines to generate more electricity over the course of a year. Because the turbines are located far from homes, they cause fewer complaints about noise and visual disturbance than wind farms on land, and the vast area of the ocean provides space for installations on a scale that would be difficult to achieve elsewhere. New designs for floating turbines may even allow wind farms to be placed in deep waters far from shore, where they would be almost invisible from the coast and where the wind is often strongest.",
+      "Supporters also emphasize the economic opportunities. Building, installing, and maintaining offshore turbines requires skilled workers, specialized ships, and port facilities, creating jobs in coastal regions that may have suffered from the decline of traditional industries. ( A ) the initial costs of such projects are high, supporters argue, the price of offshore wind power has fallen considerably in recent years, and a domestic supply of renewable energy can make a country less vulnerable to sudden changes in the global price of oil and gas.",
+      "Critics, however, raise concerns about the effects on marine life. The construction of turbine foundations can generate intense underwater noise that may disturb or injure whales, dolphins, and fish, and the presence of large structures may alter the movements of certain species. Seabirds may collide with turning blades, and cables laid along the seabed can disturb habitats. Critics argue that the long-term ecological consequences of building thousands of turbines at sea are still poorly understood, and that damage done now may be difficult to reverse later.",
+      "Fishing communities have also expressed strong opposition in some areas. Wind farms may occupy fishing grounds that have been used for generations, and fishing boats may be restricted from entering areas around the turbines for safety reasons. Fishers worry that their livelihoods will be sacrificed for the benefit of energy companies and distant consumers, and they often feel that their knowledge of the sea and their concerns have been given little weight when projects are planned.",
+      "Some researchers suggest that these conflicts can be reduced through careful planning. Choosing locations that avoid important breeding areas and migration routes, scheduling the noisiest construction work outside sensitive seasons, and using quieter installation methods may lessen the impact on wildlife. There is also evidence that turbine foundations can act as artificial reefs, attracting fish and other marine organisms. Involving fishing communities early in the planning process and sharing the economic benefits with them may help to build trust.",
+      "The debate over offshore wind ultimately reflects the difficult trade-offs involved in responding to climate change. Even clean sources of energy have costs, and those costs are rarely shared equally. The challenge for governments is not simply to build as many turbines as possible, but to do so in ways that protect the marine environment, respect the communities that depend on the sea, and maintain public support for the transition to renewable energy over the decades it will take to complete.",
+    ],
+    ja: [
+      '国々が化石燃料へのたよりをへらそうとするにつれて、多くの国がきれいなエネルギーを求めて海に目を向けてきた。海底に固定されたり水にうかんだりした何十、何百もの大きな風車からなる洋上風力発電所は、海の上をふく強く安定した風を利用できる。いくつかの地域では、そうした計画がすでに電気の大きな割合をまかなっており、政府はそれを広げる大きな計画を発表している。しかし洋上風力の急速な成長は、漁業の地域や環境団体や海辺の住民のあいだに心配も生んでいる。',
+      '支持する人々は、洋上風力は低炭素の未来へのもっとも有望な道の一つだと主張する。海の風は一般に陸の風より強く安定しているので、風車は一年を通じてより多くの電気を生み出せる。風車は家から遠くにあるので、陸の風力発電所より騒音や景観をそこなうことへの苦情が少なく、広大な海は、ほかの場所では実現しにくい規模の設備のための場所をあたえてくれる。うかぶ風車の新しい設計によって、岸から遠くはなれた深い海にさえ風力発電所を置けるようになるかもしれない。そこなら海岸からはほとんど見えず、しかも風がもっとも強いことが多い。',
+      '支持する人々はまた、経済の機会を強調する。洋上の風車をつくり、設置し、保守するには、技術をもつ働き手や特別な船や港の施設が必要であり、昔ながらの産業のおとろえに苦しんできたかもしれない海辺の地域に仕事を生み出す。そうした計画のはじめの費用は高いが、洋上風力の電気の値段はここ数年でかなり下がっており、国内で再生可能エネルギーをまかなえれば、石油やガスの世界的な値段の急な変化に国が左右されにくくなると支持する人々は主張する。',
+      'しかし批判する人々は、海の生き物への影響について心配をあげる。風車の土台の工事は、クジラやイルカや魚をみだしたり傷つけたりしうる強い水中の騒音を生むことがあり、大きな建造物があることで、ある種の生き物の動きが変わるかもしれない。海鳥が回る羽根にぶつかることもあり、海底にしかれるケーブルがすみかをみだすこともある。海に何千もの風車をつくることの長い目で見た生態系への影響は、まだよくわかっておらず、今あたえた害はあとでもとにもどすのがむずかしいかもしれないと批判する人々は主張する。',
+      'いくつかの地域では、漁業の地域も強い反対を表明してきた。風力発電所は何世代も使われてきた漁場をしめるかもしれず、安全のために漁船が風車のまわりの区域に入るのを制限されることもある。漁師たちは、自分たちの生計がエネルギー会社や遠くの消費者の利益のために犠牲にされるのではないかと心配しており、計画が立てられるときに、海についての自分たちの知識や心配がほとんど重んじられていないとしばしば感じている。',
+      'こうした対立は注意深い計画によってへらせると提案する研究者もいる。大切な繁殖地や移動の道筋をさける場所を選び、もっともうるさい工事を敏感な季節の外に予定し、より静かな設置の方法を使えば、野生の生き物への影響を小さくできるかもしれない。風車の土台が人工の岩礁の役割を果たし、魚やほかの海の生き物を引き寄せうるという証拠もある。計画の早い段階から漁業の地域をかかわらせ、経済の利益を分かち合うことは、信頼を築く助けになるかもしれない。',
+      '洋上風力をめぐる議論は、結局のところ、気候変動へのこたえにともなうむずかしい交換条件を反映している。きれいなエネルギー源にも負担はあり、その負担が平等に分かち合われることはめったにない。政府にとっての課題は、ただできるだけ多くの風車をつくることではなく、海の環境を守り、海にたよる地域を尊重し、完了までにかかる何十年ものあいだ再生可能エネルギーへの移行への人々のささえを保つやり方で、それをつくることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「はじめの費用は高いが、値段はかなり下がっている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that offshore wind can generate large amounts of clean electricity and create ( 1 ) in coastal regions. Critics raise concerns about marine ( 2 ) and the livelihoods of fishing communities. Researchers suggest that careful ( 3 ) can reduce these conflicts.',
+      blanks: [
+        { choices: ['jobs', 'storms', 'debts', 'waves'], answer: 0, why: '第3段落 creating jobs in coastal regions。' },
+        { choices: ['life', 'trade', 'tourism', 'law'], answer: 0, why: '第4段落 concerns about the effects on marine life。' },
+        { choices: ['planning', 'fishing', 'shopping', 'sailing'], answer: 0, why: '第6段落 these conflicts can be reduced through careful planning。' },
+      ],
+    },
+    tf: [
+      { statement: '海の風は、一般に陸の風より強く安定している。', answer: true, why: '第2段落 Winds at sea are generally stronger and more consistent。' },
+      { statement: '洋上風力の電気の値段は、ここ数年で上がり続けている。', answer: false, why: '第3段落 has fallen considerably in recent years。' },
+      { statement: '風車の土台は、魚を引き寄せる人工の岩礁になりうる。', answer: true, why: '第6段落 turbine foundations can act as artificial reefs。' },
+      { statement: '筆者は、できるだけ多くの風車をつくることが唯一の課題だと述べている。', answer: false, why: '第7段落 is not simply to build as many turbines as possible。' },
+    ],
+    qa: [
+      { q: 'What may the construction of turbine foundations generate?', choices: ['Intense underwater noise.', 'New fishing grounds.', 'Cheaper oil.', 'Stronger winds.'], answer: 0, why: '第4段落 can generate intense underwater noise。' },
+      { q: 'How do fishers often feel when projects are planned?', choices: ['That their knowledge and concerns are given little weight.', 'That they are the main decision makers.', 'That the projects will make them rich.', 'That they have no interest in the sea.'], answer: 0, why: '第5段落 their knowledge of the sea and their concerns have been given little weight。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
