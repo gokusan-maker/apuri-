@@ -5858,6 +5858,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) In (B) hearing the news, (C) he (D) jumped for joy.', choices: ['(A) In', '(B) hearing the news,', '(C) he', '(D) jumped for joy'], answer: 0, why: '「～するとすぐに」は On ～ing。On hearing。' },
     ],
   },
+  {
+    id: 'exam-error-double-possessive',
+    title: '入試の正誤問題〈245〉（東大レベル：英作文の二重所有格 a friend of mine・this book of hers）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'a・this・that・some・any などと my・her・your などの所有格は、名詞の前にならべて置けない（×a my friend／×this her book）。そのときは「a ＋名詞＋of ＋所有代名詞」の二重所有格を使う（a friend of mine／this book of hers）。',
+      'of のあとは所有代名詞（mine・yours・his・hers・ours・theirs）で、hers・yours・ours・theirs にアポストロフィはつけない。主語の中心は前の名詞なので、動詞はそれに合わせる（That car of his is ～）。',
+    ],
+    examples: [
+      { en: 'A friend of mine lent me this book of his.', ja: '私の友だちの一人が、彼のこの本を貸してくれた。' },
+      { en: 'That idea of yours sounds great.', ja: 'あなたのあの考えはすばらしいと思う。' },
+    ],
+    questions: [
+      { sentence: '(A) He is (B) a my friend (C) from (D) high school.', choices: ['(A) He is', '(B) a my friend', '(C) from', '(D) high school'], answer: 1, why: 'a と my はならべられないので a friend of mine。' },
+      { sentence: '(A) This (B) her book (C) is (D) very interesting.', choices: ['(A) This', '(B) her book', '(C) is', '(D) very interesting'], answer: 1, why: 'this と her はならべられないので This book of hers。' },
+      { sentence: '(A) A friend (B) of me (C) lives (D) in Canada.', choices: ['(A) A friend', '(B) of me', '(C) lives', '(D) in Canada'], answer: 1, why: '二重所有格は of ＋所有代名詞なので of mine。' },
+      { sentence: '(A) That (B) car of his (C) are (D) always clean.', choices: ['(A) That', '(B) car of his', '(C) are', '(D) always clean'], answer: 2, why: '主語は That car（単数）なので is。' },
+      { sentence: '(A) Ken is (B) a classmate (C) of her (D) at university.', choices: ['(A) Ken is', '(B) a classmate', '(C) of her', '(D) at university'], answer: 2, why: 'of のあとは所有代名詞なので of hers。' },
+      { sentence: '(A) Mine (B) a friend (C) gave me (D) this book.', choices: ['(A) Mine', '(B) a friend', '(C) gave me', '(D) this book'], answer: 0, why: '「私の友だちの一人」は A friend of mine。' },
+      { sentence: '(A) These (B) photos of theirs (C) was taken (D) in Kyoto.', choices: ['(A) These', '(B) photos of theirs', '(C) was taken', '(D) in Kyoto'], answer: 2, why: '主語は These photos（複数）なので were taken。' },
+      { sentence: '(A) That (B) idea (C) of your (D) sounds great.', choices: ['(A) That', '(B) idea', '(C) of your', '(D) sounds great'], answer: 2, why: 'of のあとは所有代名詞なので of yours。' },
+      { sentence: '(A) She (B) introduced me (C) to a cousin (D) of her’s.', choices: ['(A) She', '(B) introduced me', '(C) to a cousin', '(D) of her’s'], answer: 3, why: 'hers にアポストロフィはつけない。of hers。' },
+      { sentence: '(A) The my (B) old teacher (C) still (D) sends me letters.', choices: ['(A) The my', '(B) old teacher', '(C) still', '(D) sends me letters'], answer: 0, why: 'the と my はならべられないので My old teacher。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
