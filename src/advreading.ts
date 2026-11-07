@@ -43298,6 +43298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sacred-sites',
+    title: 'Should Climbing Be Banned at Sacred Sites?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Around the world, many mountains, rocks, lakes, and forests are regarded as sacred by the communities who have lived near them for generations. Some of these places have also become popular destinations for tourists and climbers, who travel long distances to reach their summits or to photograph them. In recent years, a number of governments and local communities have begun to restrict or ban climbing at such sites, and the decision has raised difficult questions about who has the right to decide how a place should be used, and whose values should take priority when they conflict.",
+      "Supporters of such restrictions argue that respect for the beliefs of local communities should come first. For many indigenous peoples, a sacred mountain is not simply a beautiful landscape but a place connected with their ancestors, their stories, and their identity, and climbing it may be regarded as deeply disrespectful, much as walking across the altar of a cathedral might offend members of another faith. Supporters point out that such communities have often lost control of their land in the past, and they argue that allowing them to protect their sacred places is a modest way of acknowledging that history.",
+      "Supporters also point to the physical damage that large numbers of visitors can cause. Paths worn by thousands of climbers can lead to erosion, litter and human waste can pollute fragile environments, and accidents in dangerous terrain can place heavy demands on rescue services. ( A ) tourism may bring income to nearby towns, supporters argue, such benefits do not justify damage to places that cannot be restored once they have been harmed.",
+      "Critics, however, argue that restrictions can unfairly limit the freedom of visitors to enjoy natural landscapes. Many climbers say that they feel a deep personal connection to mountains and that reaching a summit can be a profound experience, and they question why the beliefs of one group should determine what others may do in a place that is often legally public land. Critics also worry that bans may set a precedent that could gradually close off large areas of the countryside to ordinary people. Some also note that mountains have been climbed for centuries by people from many cultures, including some who regarded the climb itself as a spiritual act.",
+      "Critics further point to the economic consequences for local communities themselves. In some regions, climbing and tourism provide an important source of employment, supporting guides, hotels, and shops, and a ban may reduce the income of the very people whose traditions it is intended to protect. Some critics argue that it would be better to educate visitors about the significance of a place and to encourage respectful behavior than to forbid access entirely. In their view, visitors who understand why a place matters are more likely to treat it with care than those who are simply told to stay away.",
+      "In response, many sites have adopted approaches that fall between unrestricted access and complete prohibition. Some allow visitors to walk around the base of a sacred mountain while asking them not to climb to the top, and others close certain areas during religious ceremonies or seasons of special importance. At several sites, local communities now work as guides and rangers, explaining the meaning of the landscape to visitors and earning income from tourism in a way that supports rather than undermines their traditions.",
+      "The debate over climbing sacred sites ultimately reflects a broader question about how societies should share places that carry different meanings for different people. A mountain may be a challenge to one person, a source of income to another, and a living part of a spiritual tradition to a third. Finding a fair way to balance these meanings requires listening carefully to those whose connection with a place is oldest, while also recognizing that people from many backgrounds may come to value the same landscape in their own ways.",
+    ],
+    ja: [
+      '世界中で、多くの山や岩、湖、森が、何世代にもわたってその近くに暮らしてきた共同体から聖なるものとみなされている。こうした場所のいくつかは、観光客や登山者の人気の目的地にもなっており、彼らは頂上にたどりついたり写真をとったりするために遠くから旅をしてくる。近年、いくつかの政府や地域の共同体が、そうした場所での登山を制限したり禁止したりしはじめており、その決定は、ある場所をどう使うべきかを決める権利がだれにあるのか、そして価値観が対立するときにだれの価値観を優先すべきかという、むずかしい問いを投げかけている。',
+      'そうした制限を支持する人々は、地域の共同体の信仰への敬意が第一であるべきだと主張する。多くの先住民にとって、聖なる山は単に美しい景色ではなく、先祖や物語、自分たちが何者であるかと結びついた場所であり、それに登ることは、大聖堂の祭壇の上を歩くことがほかの信仰をもつ人々の気分を害するのと同じように、ひどく失礼なことだとみなされるかもしれない。そうした共同体は過去にしばしば自分たちの土地の支配権を失ってきたと支持者は指摘し、彼らが自分たちの聖なる場所を守れるようにすることは、その歴史を認めるささやかな方法だと主張する。',
+      '支持する人々はまた、多くの訪問者があたえうる物理的な損害も指摘する。何千人もの登山者にふみならされた道は土壌の侵食につながることがあり、ごみや排せつ物はこわれやすい環境をよごし、危険な地形での事故は救助隊に重い負担をかけることがある。観光は近くの町に収入をもたらすかもしれないが、そうした利益は、一度そこなわれたら元にもどせない場所への損害を正当化するものではない、と支持者は主張する。',
+      'しかし批判する人々は、制限は自然の景色を楽しむ訪問者の自由を不当にせばめうると主張する。多くの登山者は、自分は山と深い個人的なつながりを感じており、頂上にたどりつくことは深い経験になりうると言い、なぜ一つの集団の信仰が、法律上はしばしば公有地である場所でほかの人々が何をしてよいかを決めるべきなのかと疑問をもつ。批判する人々はまた、禁止が前例となって、いなかの広い地域がしだいにふつうの人々に閉ざされていくかもしれないと心配する。また、山は何世紀にもわたってさまざまな文化の人々に登られてきており、そのなかには登ること自体を精神的な行いと考えた人々もいたと指摘する人もいる。',
+      '批判する人々はさらに、地域の共同体自身にとっての経済的な結果も指摘する。いくつかの地域では、登山と観光は大切な仕事の源になっており、ガイドやホテル、店をささえている。そして禁止は、それが守ろうとしている伝統をもつまさにその人々の収入を減らすかもしれない。立ち入りを完全に禁じるよりも、訪問者に場所の意味を教え、敬意あるふるまいを促すほうがよいと主張する批判者もいる。彼らの考えでは、ある場所がなぜ大切なのかを理解した訪問者のほうが、ただ近づくなと言われた訪問者よりも、その場所を大切にあつかう可能性が高いのである。',
+      'これに対して、多くの場所は、自由な立ち入りと完全な禁止のあいだのやり方をとっている。聖なる山のふもとをめぐって歩くことは認めながら、頂上までは登らないよう訪問者にたのむところもあれば、宗教の儀式や特別に大切な季節のあいだは一部の区域を閉じるところもある。いくつかの場所では、地域の共同体の人々がいまではガイドや監視員として働き、訪問者に景色の意味を説明し、自分たちの伝統をそこなうのではなくささえるかたちで観光から収入を得ている。',
+      '聖なる場所への登山をめぐる議論は、結局のところ、ちがう人々にとってちがう意味をもつ場所を、社会がどのように分かち合うべきかという、より広い問いを反映している。一つの山は、ある人にとっては挑戦であり、別の人にとっては収入の源であり、さらに別の人にとっては生きた精神的な伝統の一部であるかもしれない。こうした意味のつりあいを公平にとる方法を見つけるには、ある場所ともっとも古くからつながっている人々の声に注意深く耳をかたむけると同時に、さまざまな生まれの人々が、それぞれのしかたで同じ景色を大切に思うようになりうることを認める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「観光は収入をもたらすかもしれないが、損害を正当化しない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions say respect for local ( 1 ) should come first and that visitors damage fragile places. Critics argue that bans limit visitors’ freedom and may reduce local ( 2 ). Many sites now take a middle approach, and local people sometimes work as ( 3 ).',
+      blanks: [
+        { choices: ['beliefs', 'prices', 'roads', 'weather'], answer: 0, why: '第2段落 respect for the beliefs of local communities should come first。' },
+        { choices: ['income', 'rain', 'noise', 'traffic'], answer: 0, why: '第5段落 may reduce the income of the very people。' },
+        { choices: ['guides', 'pilots', 'judges', 'singers'], answer: 0, why: '第6段落 local communities now work as guides and rangers。' },
+      ],
+    },
+    tf: [
+      { statement: '聖なる場所のなかには、観光客の人気の目的地になっているものもある。', answer: true, why: '第1段落 Some of these places have also become popular destinations。' },
+      { statement: '支持者によると、観光の利益は場所への損害を正当化する。', answer: false, why: '第3段落 such benefits do not justify damage。' },
+      { statement: '批判する人々は、禁止が前例となることを心配している。', answer: true, why: '第4段落 bans may set a precedent。' },
+      { statement: 'すべての聖なる山で、ふもとを歩くことも禁止されている。', answer: false, why: '第6段落 Some allow visitors to walk around the base of a sacred mountain。' },
+    ],
+    qa: [
+      { q: 'What physical damage can large numbers of climbers cause?', choices: ['Erosion and pollution of fragile environments.', 'Higher prices in hotels.', 'Fewer tourists in nearby towns.', 'More religious ceremonies.'], answer: 0, why: '第3段落 can lead to erosion, litter and human waste can pollute fragile environments。' },
+      { q: 'What do some critics think would be better than forbidding access entirely?', choices: ['Educating visitors and encouraging respectful behavior.', 'Charging very high entrance fees.', 'Building hotels on the summit.', 'Allowing climbing only at night.'], answer: 0, why: '第5段落 to educate visitors ... and to encourage respectful behavior。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
