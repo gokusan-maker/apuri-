@@ -41982,6 +41982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-doors',
+    title: 'On Doors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, we pass through countless doors without giving them a second thought. We open the front door of our home in the morning, walk through the doors of shops, schools, and offices, and carefully close doors behind us when we want privacy or quiet. Doors are so ordinary that they seem hardly worth noticing, yet they perform a remarkable function: they divide space into inside and outside, public and private, and allow us to move between these worlds at will.",
+      "At its simplest, a door is a movable barrier that can be opened or closed. When open, it connects two spaces; when closed, it separates them. This double nature gives doors their particular significance. A closed door can offer protection, warmth, and privacy, keeping out strangers, weather, and noise, while an open door can signal welcome, trust, and invitation. The same object, depending on its position, can express either separation or connection. A door left slightly open may even carry its own subtle message, suggesting that the person inside is busy but willing to be interrupted, or that a conversation is private but not secret.",
+      "Doors also shape the way we behave. Most people knock before entering a closed room, recognizing that a door marks a boundary that should not be crossed without permission. ( A ) such customs vary from one culture to another, nearly every society has developed rules about who may open which doors and when, reflecting deeper ideas about privacy, hospitality, and the relationships between individuals and groups. In some homes, for example, children's bedroom doors are expected to remain open, while in others a closed door is respected as a sign that a young person needs time alone.",
+      "In many traditions, doors and gates have carried symbolic meanings far beyond their practical use. The entrance to a temple, a city, or a home may be decorated with elaborate carvings or symbols intended to welcome guests and keep away misfortune. Passing through such a doorway can mark a transition, from the ordinary world into a sacred space, from childhood into adulthood, or from one stage of life into another. Weddings, graduations, and the opening of new buildings often include ceremonies in which people pass through a doorway or gate together.",
+      "Doors also appear frequently in language and imagination. People speak of opportunities as doors that open, of closed doors as obstacles, and of standing on the threshold of something new. Stories are full of doors that lead to unexpected places, hidden rooms, or other worlds, suggesting that a door can represent the mystery of what lies beyond our present knowledge and the courage required to step boldly into the unknown.",
+      "In modern life, the nature of doors has begun to change. Automatic doors slide open as we approach, and many buildings now use cards or codes instead of keys. Online, the idea of a door has been extended to passwords and security systems that control access to information. These developments bring convenience and protection, but they may also make the act of opening a door less deliberate, turning a meaningful gesture into an unnoticed routine that we perform dozens of times a day without a single thought about where we are going.",
+      "In the end, doors remind us that much of human life involves choosing when to open ourselves to others and when to protect what is private. To open a door is to accept the possibility of encounter, while to close one is to claim a space of one's own. Learning when to do each may be one of the quiet arts of living well, and every doorway we pass through offers a small reminder of the boundaries and connections that shape our lives.",
+    ],
+    ja: [
+      '毎日、私たちは二度と考えることもなく、数えきれないドアを通りぬけている。朝には家の玄関のドアを開け、店や学校や職場のドアを通り、ひとりになりたいときや静かにしたいときには後ろでドアをしめる。ドアはあまりにありふれているので、気にとめるほどのものではないように思えるが、おどろくべきはたらきをしている。空間を内と外、公と私に分け、私たちが思いのままにこれらの世界のあいだを行き来できるようにしているのである。',
+      'もっとも単純にいえば、ドアは開けたりしめたりできる動くしきりである。開いているときは二つの空間を結び、しまっているときはそれを分ける。この二重の性質が、ドアに特別な意味をあたえている。しまったドアは、見知らぬ人や天気や音を入れずに、守りやあたたかさやプライバシーをあたえうるし、開いたドアは歓迎や信頼やさそいの合図になりうる。同じ物が、その位置によって、分けることも結ぶこともあらわせるのである。少しだけ開けたままのドアは、中の人はいそがしいがじゃまされてもかまわないとか、話は内々のものだがひみつではないといった、それ自身のかすかなメッセージを伝えることさえある。',
+      'ドアはまた、私たちのふるまいを形づくる。ほとんどの人は、しまった部屋に入る前にノックをし、ドアがゆるしなしにこえるべきではない境目をしるしていることを認めている。そうした習わしは文化によってちがうが、ほとんどすべての社会が、だれがいつどのドアを開けてよいかについての決まりを育ててきた。それは、プライバシーやもてなしや、個人と集団の関係についてのより深い考えを映している。たとえば、子どもの寝室のドアを開けておくことが期待される家もあれば、しまったドアが、若者がひとりの時間を必要としているしるしとして尊重される家もある。',
+      '多くの伝統で、ドアや門は実用的な使い道をはるかにこえた象徴的な意味をもってきた。神殿や都市や家の入り口は、客をむかえ、不運を遠ざけることを意図した、こみいった彫り物やしるしでかざられていることがある。そうした入り口を通ることは、ふだんの世界から神聖な空間へ、子どもから大人へ、あるいは人生のある段階から別の段階への移り変わりをしるすことがある。結婚式や卒業式や新しい建物の開館では、しばしば人々がいっしょに入り口や門を通る儀式がふくまれる。',
+      'ドアはまた、ことばや想像力の中にもしばしば登場する。人々は機会を開くドアとして、障害をしまったドアとして語り、何か新しいことの「しきいの上に立っている」と言う。物語は、思いがけない場所や、かくし部屋や、別の世界へ通じるドアに満ちており、ドアが、私たちが今知っていることの向こうにあるもののなぞと、知らないものの中へふみ出すのに必要な勇気をあらわしうることを示している。',
+      '現代の暮らしでは、ドアのあり方が変わりはじめている。自動ドアは私たちが近づくとすべるように開き、多くの建物が今ではかぎのかわりにカードや番号を使っている。オンラインでは、ドアの考えはパスワードや、情報への出入りを管理する安全の仕組みにまで広げられている。こうした発展は便利さと守りをもたらすが、ドアを開けるという行いを意図的でないものにし、意味のあるしぐさを自分がどこへ向かうのかを少しも考えずに一日に何十回もくり返す、気づかれない決まりきった動作に変えてしまうかもしれない。',
+      '結局のところ、ドアは、人間の暮らしの多くが、いつ他人に自分を開き、いつ自分の私的なものを守るかを選ぶことにかかわっていることを思い出させてくれる。ドアを開けることは出会いの可能性を受け入れることであり、ドアをしめることは自分だけの空間を求めることである。それぞれをいつするべきかを学ぶことは、よく生きるためのしずかな技の一つかもしれず、私たちが通りぬけるどの入り口も、私たちの暮らしを形づくる境目とつながりを、ささやかに思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「習わしは文化によってちがうが、ほとんどの社会が決まりを育ててきた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ドアは、空間を内と外、公と私に分ける。', answer: true, why: '第1段落 they divide space into inside and outside, public and private。' },
+      { statement: '開いたドアは、いつも危険の合図である。', answer: false, why: '第2段落 an open door can signal welcome, trust, and invitation。' },
+      { statement: 'ドアを開けてよい決まりは、文化によってちがう。', answer: true, why: '第3段落 such customs vary from one culture to another。' },
+      { statement: '筆者は、自動ドアには何の利点もないと述べている。', answer: false, why: '第6段落 These developments bring convenience and protection。' },
+    ],
+    qa: [
+      { q: 'Why do most people knock before entering a closed room?', choices: ['They recognize that a door marks a boundary.', 'They want to test the door.', 'They are afraid of the dark.', 'They want to make noise.'], answer: 0, why: '第3段落 recognizing that a door marks a boundary that should not be crossed without permission。' },
+      { q: 'What can passing through a decorated doorway mark, in many traditions?', choices: ['A transition from one stage of life to another.', 'The end of the day.', 'A change in the weather.', 'The price of entry.'], answer: 0, why: '第4段落 can mark a transition ... from one stage of life into another。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
