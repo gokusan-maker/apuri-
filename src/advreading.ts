@@ -41262,6 +41262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-forests',
+    title: 'On Forests',
+    level: '難関大（評論）',
+    paragraphs: [
+      "To walk into a forest is to enter a different world. The noise of traffic fades, the light becomes softer and greener, and the air seems cooler and richer. Paths wind between trunks that may be centuries old, and the ground beneath one's feet is soft with fallen leaves. For many people, such an experience brings a sense of calm that is difficult to find elsewhere, yet the forest is far more than a peaceful setting for human relaxation; it is one of the most complex and vital systems on the planet.",
+      "A forest is not simply a collection of individual trees. Beneath the surface, roots intertwine with networks of fungi that carry water and nutrients between plants, and countless insects, birds, and mammals depend on the shelter and food that the trees provide. Fallen trees decay slowly, returning their substance to the soil and providing homes for new forms of life. In this sense, a forest is a community in which every part contributes to the survival of the whole, and in which death and life are closely intertwined.",
+      "Forests are also essential to the wellbeing of human beings, even those who live far from them. They absorb carbon dioxide from the atmosphere, helping to slow the warming of the climate, and they regulate the flow of water, reducing the risk of floods and droughts. ( A ) their contributions are often invisible to city dwellers, the clean air and water that many people take for granted depend in part on forests located hundreds or even thousands of kilometers away.",
+      "Throughout history, human beings have had a complicated relationship with forests. They have provided timber for building, fuel for warmth, and land for farming, and in many places they have been cleared to make way for growing towns and cities. At the same time, forests have often been regarded with reverence, as places inhabited by spirits or as sacred groves that should not be disturbed. These contrasting attitudes, between using the forest and respecting it, continue to shape debates today. Some communities have managed forests for generations in ways that allowed them to take what they needed while leaving the forest healthy for their grandchildren, offering models that modern societies are only now beginning to appreciate.",
+      "In recent decades, the loss of forests has accelerated in many parts of the world. Vast areas of tropical rainforest have been cut down for agriculture, mining, and logging, destroying habitats for countless species and releasing large amounts of carbon into the atmosphere. Even where forests remain, they may be weakened by pollution, disease, and changes in climate that make them more vulnerable to fires and pests. In some places, fires that were once rare have become a regular feature of hot, dry summers, destroying in days what took centuries to grow.",
+      "Yet there are also signs of hope. In some regions, forests have expanded as farmland has been abandoned or as communities have planted new trees, and efforts to protect remaining forests have gained increasing support. Many experts emphasize, however, that a newly planted forest cannot quickly replace an ancient one, since the complex relationships among its many inhabitants may take centuries to develop, and that protecting existing forests is therefore especially important.",
+      "In the end, the forest offers a lesson in patience and interdependence. Trees grow slowly, over lifetimes far longer than our own, and the health of a forest depends on countless relationships that no single organism controls. To care for forests, then, is to think beyond the short term and to recognize that our own wellbeing is bound up with the lives of other beings, many of which we may never see but on which we nonetheless depend every single day.",
+    ],
+    ja: [
+      '森の中に入っていくことは、ちがう世界に入ることである。車の音はうすれ、光はやわらかく緑がかり、空気はよりすずしく豊かに感じられる。道は何世紀もたっているかもしれない幹のあいだをくねくねと通り、足もとの地面は落ち葉でやわらかい。多くの人にとって、そうした経験はほかの場所ではなかなか見つからない落ち着きをもたらすが、森は人間がくつろぐためのおだやかな場所というだけではなく、地球上でもっとも複雑で欠かせない仕組みの一つなのである。',
+      '森はただ一本一本の木の集まりではない。地面の下では、根が植物のあいだで水や養分を運ぶきのこのなかまの網とからみ合い、数えきれない虫や鳥やほ乳類が、木があたえるすみかと食べ物にたよっている。たおれた木はゆっくりとくちて、その中身を土にかえし、新しい生き物にすみかをあたえる。この意味で、森は、あらゆる部分が全体が生きのこることに役立ち、死と生が深くからみ合っている共同体なのである。',
+      '森はまた、森から遠くはなれて住む人々をふくめて、人間の幸せにとって欠かせない。森は大気から二酸化炭素を吸収して気候の温暖化をおそくする助けになり、水の流れを調整して洪水や干ばつの危険をへらす。森の役割は都市に住む人々にはしばしば見えないが、多くの人が当たり前と思っているきれいな空気や水は、何百キロ、あるいは何千キロメートルもはなれた森にも一部たよっているのである。',
+      '歴史を通じて、人間は森と複雑な関係をもってきた。森は建てるための木材や、あたたまるための燃料や、農業のための土地をあたえ、多くの場所で、大きくなる町や都市のために切りひらかれてきた。同時に、森はしばしばおそれうやまわれ、霊がすむ場所や、みだしてはならない神聖な林と見なされてきた。森を使うことと森を尊重することのあいだの、こうした対照的な態度は、今日の議論も形づくり続けている。何世代にもわたって、必要なものをとりながらも孫たちのために森を健康なまま残すやり方で森を管理してきた地域もあり、それは現代の社会が今ようやく評価しはじめた手本をあたえてくれる。',
+      'ここ数十年、世界の多くの地域で森の喪失が速まってきた。広大な熱帯雨林が農業や採掘や伐採のために切りたおされ、数えきれない種のすみかがこわされ、大量の炭素が大気に出されてきた。森が残っている場所でさえ、汚染や病気や、火事や害虫に弱くする気候の変化によって、森は弱っているかもしれない。かつてはめったに起きなかった火事が、暑くかわいた夏のおなじみのできごとになった場所もあり、育つのに何世紀もかかったものを数日でこわしてしまう。',
+      'しかし希望のきざしもある。ある地域では、農地がすてられたり、地域が新しい木を植えたりしたことで森が広がっており、残っている森を守る取り組みはますますささえを得ている。しかし多くの専門家は、新しく植えられた森が古い森にすぐかわることはできないと強調する。多くの住人のあいだの複雑な関係が育つには何世紀もかかるかもしれず、そのため今ある森を守ることがとりわけ大切だというのである。',
+      '結局のところ、森は忍耐とたがいにたより合うことについての教えをあたえてくれる。木は私たち自身よりはるかに長い一生をかけてゆっくりと育ち、森の健康は、どの一つの生き物も支配していない数えきれない関係にかかっている。だから、森を大切にすることは、目先のことをこえて考え、私たち自身の幸せがほかの生き物の生と結びついていることを認めることである。その多くを私たちは一生見ることがないかもしれないが、それでも私たちは毎日それにたよっているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「都市に住む人々にはしばしば見えないが、きれいな空気や水は森にたよっている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '森の中では、根がきのこのなかまの網とからみ合っている。', answer: true, why: '第2段落 roots intertwine with networks of fungi。' },
+      { statement: '森は、遠くに住む人々の暮らしには関係がない。', answer: false, why: '第3段落 even those who live far from them。' },
+      { statement: '森はおそれうやまわれ、神聖な場所と見なされることもあった。', answer: true, why: '第4段落 forests have often been regarded with reverence。' },
+      { statement: '新しく植えられた森は、古い森にすぐかわることができる。', answer: false, why: '第6段落 a newly planted forest cannot quickly replace an ancient one。' },
+    ],
+    qa: [
+      { q: 'What happens to fallen trees in a forest?', choices: ['They decay slowly and provide homes for new forms of life.', 'They are always removed by people.', 'They turn into stone.', 'They stop all other life.'], answer: 0, why: '第2段落 Fallen trees decay slowly ... providing homes for new forms of life。' },
+      { q: 'Why is protecting existing forests especially important, according to experts?', choices: ['Complex relationships in a forest may take centuries to develop.', 'New trees are too expensive.', 'Old trees grow faster.', 'Forests never recover.'], answer: 0, why: '第6段落 the complex relationships among its many inhabitants may take centuries to develop。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
