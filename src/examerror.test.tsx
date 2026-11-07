@@ -3326,3 +3326,10 @@ it('誤文訂正〈234〉：東大レベル can と be able to の単元が10問
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('could')
 })
+
+it('正誤問題〈241〉：国公立レベル 頻度の副詞の位置の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-frequency-adverbs')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) goes always')
+})

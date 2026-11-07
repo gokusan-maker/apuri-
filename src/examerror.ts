@@ -5758,6 +5758,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Lost (B) the match, (C) the players (D) looked sad.', choices: ['(A) Lost', '(B) the match,', '(C) the players', '(D) looked sad'], answer: 0, why: '「試合に負けて」は分詞構文で Having lost。' },
     ],
   },
+  {
+    id: 'exam-error-frequency-adverbs',
+    title: '入試の正誤問題〈241〉（国公立レベル：頻度の副詞 always・often・never の位置）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'always・usually・often・sometimes・seldom・never などの頻度の副詞は、一般動詞の前、be動詞と助動詞のあとに置く（She always goes ～／He is often late／I have never seen ～）。',
+      'seldom・hardly ever・never は否定の意味をふくむので、not や never を重ねない（×seldom don’t watch）。助動詞のあとの動詞は原形（should never give up）。',
+    ],
+    examples: [
+      { en: 'She always goes to school by bike, but she is often late.', ja: '彼女はいつも自転車で通学するが、よくおくれる。' },
+      { en: 'I have never seen such a beautiful view.', ja: 'こんなに美しい景色は一度も見たことがない。' },
+    ],
+    questions: [
+      { sentence: '(A) She (B) goes always (C) to school (D) by bike.', choices: ['(A) She', '(B) goes always', '(C) to school', '(D) by bike'], answer: 1, why: '頻度の副詞は一般動詞の前に置くので always goes。' },
+      { sentence: '(A) He is (B) late often (C) for (D) class.', choices: ['(A) He is', '(B) late often', '(C) for', '(D) class'], answer: 1, why: 'be動詞のあとに置くので He is often late。' },
+      { sentence: '(A) Never I have (B) seen (C) such (D) a beautiful view.', choices: ['(A) Never I have', '(B) seen', '(C) such', '(D) a beautiful view'], answer: 0, why: 'never は have と過去分詞のあいだに置くので I have never seen。' },
+      { sentence: '(A) My father (B) usually (C) drink coffee (D) in the morning.', choices: ['(A) My father', '(B) usually', '(C) drink coffee', '(D) in the morning'], answer: 2, why: '主語が三人称単数なので drinks。' },
+      { sentence: '(A) They (B) sometimes are (C) busy (D) on Mondays.', choices: ['(A) They', '(B) sometimes are', '(C) busy', '(D) on Mondays'], answer: 1, why: 'be動詞のあとに置くので are sometimes。' },
+      { sentence: '(A) She (B) has (C) always wanted (D) visiting Kyoto.', choices: ['(A) She', '(B) has', '(C) always wanted', '(D) visiting Kyoto'], answer: 3, why: 'want のあとは to 不定詞なので to visit。' },
+      { sentence: '(A) Tom (B) hardly ever (C) eats (D) never vegetables.', choices: ['(A) Tom', '(B) hardly ever', '(C) eats', '(D) never vegetables'], answer: 3, why: 'hardly ever に never を重ねない。eats vegetables。' },
+      { sentence: '(A) I (B) seldom (C) don’t watch (D) TV these days.', choices: ['(A) I', '(B) seldom', '(C) don’t watch', '(D) TV these days'], answer: 2, why: 'seldom は否定の意味をふくむので don’t は不要。seldom watch。' },
+      { sentence: '(A) Always he (B) gets up (C) at six (D) in the morning.', choices: ['(A) Always he', '(B) gets up', '(C) at six', '(D) in the morning'], answer: 0, why: 'always は主語と一般動詞のあいだに置くので He always gets up。' },
+      { sentence: '(A) You (B) should (C) never (D) to give up.', choices: ['(A) You', '(B) should', '(C) never', '(D) to give up'], answer: 3, why: '助動詞のあとは原形なので never give up。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
