@@ -42542,6 +42542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ladders',
+    title: 'On Ladders',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A ladder is one of the simplest tools that human beings have ever invented. It consists of nothing more than two long pieces of wood or metal joined by a series of short steps, and yet for thousands of years it has allowed people to pick fruit, repair roofs, climb out of pits, and reach places that would otherwise have remained beyond their grasp. Perhaps because it is so simple, the ladder has also become one of our most familiar images for thinking about progress, ambition, and the way we move through our lives.",
+      "The first thing a ladder teaches is that great heights are reached in small steps. No one can leap from the ground to the top of a wall, but almost anyone can climb a ladder by lifting one foot a short distance and then the other, repeating the same modest effort until the top is reached. In this sense, the ladder offers a hopeful lesson about learning and work, suggesting that tasks which seem impossible as a whole may become manageable once they are divided into a sequence of small and achievable stages.",
+      "A ladder also reminds us that climbing is never entirely a solitary activity. Anyone who has climbed a tall ladder knows how much safer it feels when someone else is holding it firmly at the bottom, and many accidents happen precisely when people try to climb alone. ( A ) the person at the top receives most of the attention, the one who holds the ladder plays an equally essential role, and the image may therefore remind us how often our achievements depend on others whose contribution is rarely seen.",
+      "At the same time, the ladder has become a symbol of competition and inequality. We speak of the social ladder and the career ladder, imagining society as a structure in which some people stand on higher rungs than others and in which success means climbing above those who were once beside us. This way of thinking can motivate people to work hard, but it can also encourage the belief that there is room at the top for only a few, and that the progress of one person must come at the expense of another.",
+      "The image of the ladder also tends to suggest that life moves in a single direction. A ladder goes straight up, and those who step off it to the side seem simply to have fallen behind. Yet many people find that the most meaningful periods of their lives involve changing direction, starting again in a new field, or spending time on activities that bring no obvious advancement, and for such people the ladder may be a misleading picture of what it means to live well.",
+      "Some writers have therefore suggested replacing the ladder with other images. One might think of life as a path that winds through varied country, or as a network of connections that extends in many directions, or even as a climbing wall on which there are many possible routes to the top and many places at which to pause. Each of these images captures something that the ladder leaves out, and choosing among them is not merely a matter of language, since the pictures we use shape the choices we feel able to make.",
+      "Perhaps, then, the ladder deserves both our gratitude and our caution. As a tool, it reminds us that patient effort and the support of others can carry us to places we could never reach alone, and this lesson remains as valuable as ever. As an image of life, however, it may limit our imagination if we accept it too readily, and it may be worth remembering that the purpose of climbing a ladder is not to stand above others but to reach something worth reaching, and then, perhaps, to hold the ladder for someone else.",
+    ],
+    ja: [
+      'はしごは、人間がこれまでに発明したもっとも単純な道具の一つである。それは、短い段の連なりでつながれた二本の長い木や金属にすぎないが、何千年ものあいだ、人々が果物をつみ、屋根を直し、穴からはい出し、そうでなければ手のとどかないままだった場所にとどくことを可能にしてきた。おそらくそれがとても単純だからこそ、はしごはまた、進歩や大志、そして私たちが人生を進んでいくしかたについて考えるための、もっともなじみ深いイメージの一つにもなっている。',
+      'はしごが最初に教えてくれるのは、大きな高さは小さな一歩でたどりつくということである。だれも地面から壁のてっぺんまでとび上がることはできないが、ほとんどだれでも、片足を少し上げ、次にもう一方の足を上げ、同じささやかな努力をてっぺんにたどりつくまでくり返すことで、はしごを上ることができる。この意味で、はしごは学ぶことと働くことについて希望のある教訓をあたえてくれる。全体としては不可能に思える作業も、小さく達成できる段階の連なりに分ければ、手に負えるものになりうることを示しているのである。',
+      'はしごはまた、上ることがけっして完全にひとりの活動ではないことを思い出させる。高いはしごを上ったことのある人なら、だれかが下でしっかりとささえてくれているとき、どれほど安全に感じられるかを知っており、多くの事故はまさに人がひとりで上ろうとするときに起こる。てっぺんにいる人がもっとも注目を集めるが、はしごをささえる人も同じくらい欠かせない役割を果たしている。だからこのイメージは、私たちの達成が、その貢献がめったに目にとまらないほかの人々にどれほどたよっているかを思い出させてくれるかもしれない。',
+      '同時に、はしごは競争と不平等の象徴にもなってきた。私たちは社会のはしごや出世のはしごについて語り、社会を、ある人々がほかの人々より高い段に立ち、成功とはかつてとなりにいた人々の上へ上ることだという構造として思いえがく。この考え方は人々を一生懸命働かせる動機になりうるが、同時に、てっぺんには少数の人のための場所しかなく、ある人の進歩はほかの人を犠牲にしなければならないという信念を助長することもある。',
+      'はしごのイメージはまた、人生が一つの方向にだけ進むことをほのめかしがちである。はしごはまっすぐ上に向かっており、横にそれた人は、ただ取り残されたように見える。しかし多くの人は、人生でもっとも意味のある時期に、方向を変えたり、新しい分野で一からやり直したり、目に見える前進をもたらさない活動に時間を使ったりしていることに気づく。そうした人々にとって、はしごは、よく生きるとはどういうことかについての、まぎらわしい絵なのかもしれない。',
+      'そこで、はしごをほかのイメージに置きかえることを提案してきた書き手もいる。人生を、変化に富んだ土地をくねくねと通る小道として、あるいは多くの方向に広がるつながりの網として、さらには、てっぺんへの道すじがたくさんあり、ひと休みできる場所もたくさんあるクライミングの壁として考えることもできるだろう。これらのイメージのそれぞれが、はしごがとりこぼしているものをとらえており、そのなかから選ぶことは単なることばの問題ではない。私たちが使う絵は、自分がとれると感じる選択を形づくるからである。',
+      'だとすれば、はしごは、私たちの感謝と用心の両方に値するのかもしれない。道具としてのはしごは、根気強い努力とほかの人々のささえが、ひとりではけっしてとどかない場所へ私たちを運んでくれることを思い出させ、この教訓はいまもかわらず価値がある。しかし人生のイメージとしては、あまりにもたやすく受け入れると、私たちの想像力をせばめてしまうかもしれない。はしごを上る目的は、ほかの人より上に立つことではなく、たどりつく価値のある何かにたどりつくことであり、そしてもしかすると、そのあとでほかのだれかのためにはしごをささえることなのだと、覚えておく価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「てっぺんの人が注目を集めるが、ささえる人も同じくらい欠かせない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によると、はしごは大きな高さが小さな一歩でたどりつかれることを教えてくれる。', answer: true, why: '第2段落 great heights are reached in small steps。' },
+      { statement: '多くの事故は、だれかがはしごをささえているときに起こる。', answer: false, why: '第3段落 many accidents happen precisely when people try to climb alone。' },
+      { statement: '社会のはしごという考え方は、人々を一生懸命働かせる動機になりうる。', answer: true, why: '第4段落 This way of thinking can motivate people to work hard。' },
+      { statement: '筆者は、人生のイメージとしてはしごだけを使うべきだと述べている。', answer: false, why: '第6・7段落 replacing the ladder with other images ／ it may limit our imagination。' },
+    ],
+    qa: [
+      { q: 'What other image of life is mentioned as having many possible routes to the top?', choices: ['A climbing wall.', 'A straight road.', 'A tall tower.', 'A deep well.'], answer: 0, why: '第6段落 a climbing wall on which there are many possible routes to the top。' },
+      { q: 'According to the author, what is the purpose of climbing a ladder?', choices: ['To reach something worth reaching.', 'To stand above others.', 'To avoid helping others.', 'To show physical strength.'], answer: 0, why: '第7段落 not to stand above others but to reach something worth reaching。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
