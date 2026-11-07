@@ -40018,6 +40018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-urban-trees',
+    title: 'Should Cities Plant More Trees?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As summers grow hotter in many parts of the world, cities are searching for ways to keep their residents cool and safe. Dense urban areas, covered with concrete, asphalt, and glass, absorb the heat of the sun during the day and release it slowly at night, making them significantly warmer than the surrounding countryside. One response that has attracted growing attention is the large-scale planting of trees along streets, in parks, and around schools and hospitals, but the idea, simple as it may seem, raises a number of practical and social questions.",
+      "Supporters argue that trees offer one of the most effective and natural ways of cooling cities. By providing shade and releasing water vapor through their leaves, trees can lower the temperature of streets and buildings by several degrees, reducing the risk of heat-related illness and the need for energy-intensive air conditioning. Trees also absorb rainwater, which can lessen the danger of flooding during heavy storms, and they remove certain pollutants from the air, improving conditions for people who suffer from breathing problems. Compared with building new drainage systems or installing cooling equipment, supporters claim, planting trees can achieve several goals at once and at relatively modest cost.",
+      "Beyond these physical benefits, supporters point to the effects of trees on human well-being. Research suggests that people who live near green spaces tend to report lower levels of stress and a greater sense of attachment to their neighborhoods. ( A ) such benefits are difficult to measure precisely, supporters argue, streets lined with trees often encourage people to walk, to linger, and to meet one another, strengthening the social life of a community in ways that concrete alone cannot achieve.",
+      "Critics, however, caution that planting trees is neither as cheap nor as simple as it appears. Young trees require years of watering, pruning, and protection before they can provide meaningful shade, and many die before reaching maturity because of poor soil, limited space, or neglect. In crowded cities, roots may damage pavements and underground pipes, and falling branches can pose dangers during storms, creating ongoing costs that are sometimes overlooked when ambitious planting programs are announced. Choosing the wrong species can also cause problems, since trees that are poorly suited to the local climate may struggle to survive the very heat and drought they were meant to relieve.",
+      "Critics also raise concerns about fairness. In many cities, wealthier neighborhoods already enjoy far more tree cover than poorer ones, which are often hotter and more polluted. If new trees are planted mainly where residents have the time and influence to demand them, existing inequalities may deepen. Furthermore, some studies suggest that improvements in green space can raise property values and rents, potentially forcing the very residents who most need cooler streets to move elsewhere.",
+      "In response to these concerns, some cities have tried to plan their tree programs more carefully. They may use maps of surface temperature to identify the hottest neighborhoods, involve local residents in deciding where trees should be planted, and commit funds not only for planting but also for long-term care. Some have combined tree planting with other measures, such as reflective roofs and policies to protect affordable housing, so that the benefits of greener streets are shared more widely.",
+      "The debate over urban trees ultimately reflects a broader question about how cities should adapt to a changing climate. Trees alone cannot solve the problem of rising temperatures, but they represent a form of infrastructure that is living, slow-growing, and closely tied to the daily experience of residents. Whether such efforts succeed will depend less on the number of trees planted than on the patience, planning, and commitment to fairness with which cities care for them over the decades to come.",
+    ],
+    ja: [
+      '世界の多くの地域で夏がより暑くなるにつれて、都市は住民をすずしく安全に保つ方法をさがしている。コンクリートやアスファルトやガラスにおおわれた建物の密集した都市部は、昼間に太陽の熱をすいこみ、夜にゆっくりと出すので、まわりのいなかよりかなり暑くなる。注目を集めている対策の一つは、通りぞいや公園や、学校や病院のまわりに、大きな規模で木を植えることだが、その考えは、かんたんに見えるかもしれないが、いくつもの実際的で社会的な問いを投げかける。',
+      '支持する人々は、木は都市を冷やすもっとも効果的で自然な方法の一つだと主張する。かげをつくり、葉から水蒸気を出すことによって、木は通りや建物の温度を数度下げ、暑さによる病気の危険や、エネルギーを多く使う冷房の必要をへらすことができる。木はまた雨水をすいこみ、はげしいあらしのときの洪水の危険をへらすことがあり、空気からある種の汚染物質を取りのぞいて、呼吸の問題に苦しむ人々の状態をよくする。新しい排水の設備をつくったり冷房の装置を取りつけたりするのにくらべて、木を植えることは、比較的少ない費用で、いくつもの目的を一度に果たせると支持する人々は言う。',
+      'こうした物理的な利益をこえて、支持する人々は、木が人間の幸せにあたえる効果をあげる。研究によれば、緑地の近くに住む人々は、ストレスが少なく、自分の地域への愛着が強いと答える傾向がある。そうした利益を正確にはかるのはむずかしいが、木のならぶ通りは、しばしば人々に歩き、ゆっくりと過ごし、たがいに出会うようにうながし、コンクリートだけではなしとげられないやり方で地域の社会生活を強めると支持する人々は主張する。',
+      'しかし批判する人々は、木を植えることは見かけほど安くもかんたんでもないと注意をうながす。若い木は、意味のあるかげをつくれるようになるまでに、何年もの水やりや枝の手入れや保護が必要であり、悪い土や限られた場所や手入れ不足のために、育ちきる前にかれてしまうものも多い。混み合った都市では、根が歩道や地下の管をこわすことがあり、あらしのときには落ちる枝が危険になることもあって、大きな植樹の計画が発表されるときに見すごされがちな、続いていく費用が生まれる。また、木の種類を選びまちがえることも問題をひき起こしうる。その土地の気候に合わない木は、まさにやわらげるはずだった暑さや干ばつの中で生きのこるのに苦労するかもしれないからである。',
+      '批判する人々はまた、公平さについての心配をあげる。多くの都市では、裕福な地域はすでに貧しい地域よりはるかに多くの木におおわれており、貧しい地域はしばしばより暑く、より汚染されている。もし新しい木が主に、住民が求める時間と影響力をもつ場所に植えられれば、今ある不平等が深まるかもしれない。さらに、緑地がよくなると土地の値段や家賃が上がり、すずしい通りをもっとも必要とするまさにその住民が、ほかの場所へ移らざるをえなくなるかもしれないことを示す研究もある。',
+      'こうした心配にこたえて、植樹の計画をより注意深く立てようとしてきた都市もある。地表の温度の地図を使ってもっとも暑い地域を見つけたり、木をどこに植えるべきかを決めるのに地元の住民を加えたり、植えることだけでなく長い期間の手入れにも資金を約束したりすることがある。木を植えることを、光をはね返す屋根や、手ごろな住宅を守る政策のようなほかの手だてと組み合わせて、緑の多い通りの利益がより広く分かち合われるようにした都市もある。',
+      '都市の木をめぐる議論は、結局のところ、都市が変わりゆく気候にどう適応すべきかについての、より広い問いを反映している。木だけで気温の上昇の問題を解決することはできないが、木は、生きていて、ゆっくりと育ち、住民の毎日の経験と深く結びついた、一つの形の基盤である。そうした努力が成功するかどうかは、植えられた木の数よりも、都市がこれからの何十年にもわたって、どれだけの忍耐と計画と公平さへの決意をもって木の世話をするかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「正確にはかるのはむずかしいが、木のならぶ通りは社会生活を強める」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that trees can cool cities, reduce flooding, and improve human ( 1 ). Critics warn that young trees need years of ( 2 ) and that new planting may deepen existing inequalities. Some cities now use maps of surface ( 3 ) to plan more carefully.',
+      blanks: [
+        { choices: ['well-being', 'traffic', 'income', 'noise'], answer: 0, why: '第3段落 the effects of trees on human well-being。' },
+        { choices: ['care', 'silence', 'travel', 'darkness'], answer: 0, why: '第4段落 require years of watering, pruning, and protection。' },
+        { choices: ['temperature', 'population', 'traffic', 'rainfall'], answer: 0, why: '第6段落 use maps of surface temperature。' },
+      ],
+    },
+    tf: [
+      { statement: '都市部は、まわりのいなかよりかなり暑くなる。', answer: true, why: '第1段落 making them significantly warmer than the surrounding countryside。' },
+      { statement: '若い木は、植えてすぐに十分なかげをつくる。', answer: false, why: '第4段落 require years of watering ... before they can provide meaningful shade。' },
+      { statement: '多くの都市では、裕福な地域のほうが木が多い。', answer: true, why: '第5段落 wealthier neighborhoods already enjoy far more tree cover。' },
+      { statement: '筆者は、木だけで気温の上昇を解決できると述べている。', answer: false, why: '第7段落 Trees alone cannot solve the problem of rising temperatures。' },
+    ],
+    qa: [
+      { q: 'How do trees lower the temperature of streets and buildings?', choices: ['By providing shade and releasing water vapor through their leaves.', 'By absorbing all sunlight.', 'By blocking the wind.', 'By producing cold air from their roots.'], answer: 0, why: '第2段落 By providing shade and releasing water vapor through their leaves。' },
+      { q: 'What might improvements in green space do to property values and rents?', choices: ['Raise them.', 'Lower them.', 'Keep them the same.', 'Make them disappear.'], answer: 0, why: '第5段落 can raise property values and rents。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
