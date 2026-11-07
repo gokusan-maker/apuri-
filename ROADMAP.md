@@ -1153,7 +1153,7 @@
   - [x] 440 正誤問題〈223〉（京大レベル：英作文の by the time ～ と完了形）10問
   - [x] 441 誤文訂正〈217〉（国公立レベル：まぎらわしい前置詞 besides・except・between・among）10問
   - [x] 442 正誤問題〈224〉（東大レベル：英作文の prefer A to B・would rather A than B）10問
-  - [ ] 443 誤文訂正〈218〉（京大レベル：英作文の It is no use ～ing・There is no point in ～ing）10問
+  - [x] 443 誤文訂正〈218〉（京大レベル：英作文の It is no use ～ing・There is no point in ～ing）10問
   - [ ] 444 正誤問題〈225〉（国公立レベル：have trouble ～ing・spend 時間 ～ing）10問
   - [ ] 445 誤文訂正〈219〉（東大レベル：英作文の provide A with B・rob A of B・remind A of B の前置詞）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

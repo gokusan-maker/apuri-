@@ -9268,6 +9268,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I like all vegetables [besides] carrots; I hate them.', choices: ['except', 'beside', 'among', 'between'], answer: 0, why: 'ニンジンだけは好きでないので except。' },
     ],
   },
+  {
+    id: 'exam-fix-218',
+    title: '入試の誤文訂正〈218〉（京大レベル：英作文の It is no use ～ing・There is no point in ～ing）',
+    points: ['「～してもむだだ」は It is no use ～ing／It is no good ～ing／There is no point (in) ～ing。use・good のあとも in のあとも動名詞を使い、to 不定詞にしない（It is useless to ～ なら to 不定詞）。no use のあとに of をつけない。'],
+    examples: [{ en: 'It is no use crying over spilt milk. / There is no point in waiting any longer.', ja: 'こぼれたミルクをなげいてもむだだ。／これ以上待ってもしかたがない。' }],
+    questions: [
+      { sentence: 'It is no use [to cry] over the broken vase now.', choices: ['crying', 'cry', 'cried', 'of crying'], answer: 0, why: 'It is no use のあとは動名詞 crying。' },
+      { sentence: 'There is no point [to wait] for the bus; it has already left.', choices: ['in waiting', 'wait', 'waited', 'for wait'], answer: 0, why: 'There is no point (in) ～ing なので in waiting。' },
+      { sentence: 'It is no good [to complain] about the weather.', choices: ['complaining', 'complain', 'complained', 'for complaining'], answer: 0, why: 'It is no good のあとも動名詞 complaining。' },
+      { sentence: 'It is no use [of asking] him; he never listens.', choices: ['asking', 'to asking', 'ask', 'asked'], answer: 0, why: 'no use のあとに of はつけない。It is no use asking。' },
+      { sentence: 'There is no point [in to argue] with her about it.', choices: ['in arguing', 'to argue in', 'argue', 'argued'], answer: 0, why: '前置詞 in のあとは動名詞 arguing。' },
+      { sentence: 'It is [no useful] trying to change his mind.', choices: ['no use', 'not use', 'no using', 'useless of'], answer: 0, why: '「～してもむだだ」は It is no use ～ing。' },
+      { sentence: 'It is useless [arguing] with him; he is very stubborn.', choices: ['to argue', 'argue', 'argued', 'of arguing'], answer: 0, why: 'It is useless のあとは to 不定詞 to argue（形式主語 It）。' },
+      { sentence: 'There is no point [of studying] all night before the test.', choices: ['in studying', 'to studying', 'studied', 'for study'], answer: 0, why: 'There is no point in ～ing なので in studying。' },
+      { sentence: 'It is no use [worried] about things you cannot control.', choices: ['worrying', 'worry', 'to worry', 'of worry'], answer: 0, why: 'It is no use のあとは動名詞 worrying。' },
+      { sentence: 'There is [not point] in hurrying; the shop is already closed.', choices: ['no point', 'none point', 'not a point of', 'no pointing'], answer: 0, why: '「～してもしかたがない」は There is no point in ～ing。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
