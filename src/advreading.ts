@@ -40542,6 +40542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-watching-sport',
+    title: 'On Watching Sport',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every weekend, millions of people gather in stadiums or in front of screens to watch others run, jump, kick, and throw. They cheer, groan, and argue about the performance of athletes whom most of them will never meet, and the results of games played far away can affect their mood for days. To someone who does not share this passion, it may seem puzzling that adults should care so deeply about the outcome of a contest that changes nothing in their own lives, yet the appeal of watching sport is one of the most widespread features of modern culture.",
+      "One explanation for this appeal lies in the drama that sport provides. Unlike a film or a novel, a sporting contest has no script, and its outcome remains genuinely uncertain until the final moment. A team that seems certain of victory may collapse, while an underdog may rise to unexpected glory. Spectators experience this uncertainty together, sharing moments of tension and release that are all the more powerful because no one, not even the athletes themselves, knows how the story will end.",
+      "Sport also offers a sense of belonging. Supporting a team can connect people to a city, a region, or a nation, and to the countless others who share the same loyalty. ( A ) the individuals in a crowd may have little else in common, for the duration of a match they become part of a single community, united in hope and disappointment, and this experience of collective emotion may be increasingly rare in societies where many people live and work in relative isolation.",
+      "In addition, watching sport allows us to admire forms of human excellence that most of us will never achieve. The speed of a sprinter, the precision of a gymnast, or the vision of a player who sees an opening that no one else has noticed can inspire a kind of wonder. Such performances remind us of what the human body and mind can accomplish through talent, discipline, and years of practice, and they may encourage spectators to pursue excellence in their own fields. Young people in particular often find in athletes models of dedication, learning from them that great achievements usually rest on countless hours of unseen effort.",
+      "Yet the passion of spectators also has a darker side. Loyalty to a team can turn into hostility toward rivals, and history offers many examples of violence among supporters. The intense commercial interests surrounding professional sport can also distort its values, as money, fame, and the pressure to win encourage cheating, the exploitation of young athletes, and a focus on entertainment at the expense of fairness and health. Spectators themselves can contribute to these problems when they demand victory at any cost.",
+      "These dangers do not mean that watching sport is harmful in itself, but they suggest that its value depends on the attitude of those who watch. A spectator who can admire the skill of an opponent, accept defeat with grace, and remember that the players are human beings rather than mere instruments of victory may gain much from the experience. One who treats every match as a matter of life and death, by contrast, may find that sport becomes a source of anger rather than joy.",
+      "In the end, our fascination with sport may reveal something about human nature. We are creatures who long for drama, belonging, and the sight of excellence, and sport provides all three in a form that is accessible to almost everyone. Understood in this way, watching a game is not a trivial escape from serious life, but an expression of needs that run deep, and perhaps a reminder that shared joy and disappointment can bring strangers together in ways that few other activities can.",
+    ],
+    ja: [
+      '毎週末、何百万もの人々が競技場や画面の前に集まり、ほかの人々が走り、とび、けり、投げるのを見る。彼らは、そのほとんどが一生会うことのない選手のプレーに声援を送り、うめき、言い合い、遠くで行われた試合の結果が、何日も気分を左右することがある。この熱中を分かち合わない人には、大人が自分の暮らしを何も変えない勝負の結果をそれほど深く気にかけるのは不思議に思えるかもしれないが、スポーツを見ることの魅力は、現代の文化のもっとも広く見られる特徴の一つである。',
+      'この魅力の説明の一つは、スポーツがもたらすドラマにある。映画や小説とちがって、スポーツの勝負には台本がなく、その結果は最後の瞬間まで本当に不確かなままである。勝利がまちがいないと見えたチームがくずれることもあれば、弱いと思われていた側が思いがけない栄光にのぼりつめることもある。観客はこの不確かさをいっしょに経験し、緊張と解放の瞬間を分かち合う。その瞬間は、だれも、選手自身さえも、物語がどう終わるかを知らないからこそ、いっそう強いものになる。',
+      'スポーツはまた、居場所の感覚をあたえてくれる。チームを応援することは、人々を都市や地域や国に、そして同じ思いをもつ数えきれないほかの人々に結びつけることがある。観衆の一人一人にはほかに共通点がほとんどないかもしれないが、試合のあいだ、彼らは希望と失望で結ばれた一つの共同体の一部になる。そして、この集団で感情を分かち合う経験は、多くの人が比較的孤立して暮らし働く社会では、ますますめずらしくなっているのかもしれない。',
+      'さらに、スポーツを見ることで、私たちのほとんどがけっしてなしとげられない形の人間のすぐれた力を、ほめたたえることができる。短距離走者の速さ、体操選手の正確さ、あるいはほかのだれも気づかなかったすき間を見ぬく選手の視野は、一種のおどろきを呼び起こすことがある。そうしたプレーは、人間の体と心が、才能ときびしい練習と何年もの努力によって何をなしとげられるかを思い出させ、観客が自分自身の分野ですぐれたものを追い求めるようはげますかもしれない。とくに若者は、しばしば選手の中にひたむきさの手本を見いだし、大きな成果はたいてい、人に見えない数えきれない時間の努力の上に成り立っていることを学ぶ。',
+      'しかし観客の熱中には暗い面もある。チームへの忠誠心はライバルへの敵意に変わることがあり、歴史には応援する人々のあいだの暴力の例が数多くある。プロスポーツをとりまく強い商業的な利益も、その価値をゆがめることがある。お金や名声や勝たなければという重圧が、ずるや、若い選手の搾取や、公平さと健康を犠牲にした娯楽への偏りをうながすからである。観客自身も、どんな代償をはらっても勝利を求めるとき、こうした問題に加担しうる。',
+      'こうした危険は、スポーツを見ること自体が有害だということを意味しないが、その価値が見る人の態度にかかっていることを示している。相手の技をほめたたえ、負けをいさぎよく受け入れ、選手がただの勝利の道具ではなく人間であることをおぼえている観客は、その経験から多くを得るかもしれない。それに対して、すべての試合を生死にかかわる問題としてあつかう人は、スポーツがよろこびではなく怒りの源になってしまうことに気づくかもしれない。',
+      '結局のところ、スポーツへの熱中は、人間の本性について何かを明らかにしているのかもしれない。私たちはドラマと居場所とすぐれた力の姿を強く求める生き物であり、スポーツはその三つを、ほとんどだれにでも手の届く形であたえてくれる。このように理解すれば、試合を見ることは、まじめな暮らしからのささいな逃避ではなく、深いところにある必要のあらわれであり、もしかすると、分かち合うよろこびと失望が、ほかのほとんどの活動にはできないやり方で見知らぬ人どうしを結びつけうることを思い出させてくれるものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ほかに共通点がほとんどないかもしれないが、試合のあいだは一つの共同体になる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'スポーツの勝負には台本がなく、結果は最後まで不確かである。', answer: true, why: '第2段落 a sporting contest has no script ... genuinely uncertain until the final moment。' },
+      { statement: '観衆の一人一人には、いつも多くの共通点がある。', answer: false, why: '第3段落 may have little else in common。' },
+      { statement: 'プロスポーツの商業的な利益が、その価値をゆがめることがある。', answer: true, why: '第5段落 The intense commercial interests ... can also distort its values。' },
+      { statement: '筆者は、スポーツを見ること自体が有害だと結論づけている。', answer: false, why: '第6段落 These dangers do not mean that watching sport is harmful in itself。' },
+    ],
+    qa: [
+      { q: 'What can supporting a team connect people to?', choices: ['A city, a region, or a nation, and others who share the same loyalty.', 'Only the athletes.', 'Their workplace.', 'Their school subjects.'], answer: 0, why: '第3段落 can connect people to a city, a region, or a nation, and to the countless others who share the same loyalty。' },
+      { q: 'What kind of spectator may gain much from watching sport?', choices: ['One who can admire the skill of an opponent and accept defeat with grace.', 'One who treats every match as a matter of life and death.', 'One who only cares about winning.', 'One who never watches the game.'], answer: 0, why: '第6段落 A spectator who can admire the skill of an opponent, accept defeat with grace ...。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
