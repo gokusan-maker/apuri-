@@ -43422,6 +43422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-pencils',
+    title: 'On Pencils',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the tools that people use for writing, the pencil may be the most humble. It is cheap, it needs no electricity, and it can be found in almost every home, school, and office, often lying forgotten at the bottom of a drawer. Yet the pencil has a quality that sets it apart from most other writing tools: what it leaves on the page can be easily removed. This simple fact has shaped the way generations of people have learned, drawn, and thought, and it may tell us something important about the relationship between making marks and making mistakes.",
+      "A mark made in ink is difficult to undo. Once a word has been written with a pen, it can be crossed out but not truly erased, and the page will always bear a trace of the writer's first attempt. A pencil mark, by contrast, can be rubbed away and replaced, so that the page seems to forget what was written before. For this reason, pencils have long been the preferred tool for drafts, sketches, and exercises, situations in which the writer expects to change their mind and does not yet wish to commit to a final version.",
+      "This quality makes the pencil especially valuable for learning. Children who are beginning to write or to solve problems in arithmetic need to try, fail, and try again many times, and a tool that allows them to correct their errors without leaving a mess encourages them to keep experimenting. ( A ) adults sometimes regard pencils as tools for beginners, many architects, artists, and mathematicians continue to use them throughout their careers, precisely because they value the freedom to explore ideas without fear of spoiling the page.",
+      "At the same time, the pencil carries a certain modesty. Important documents, such as contracts and official records, are rarely written in pencil, since their authors want them to be permanent and difficult to alter. To write in pencil is therefore to suggest that one's words are provisional, open to revision and discussion, and some writers have found that this sense of impermanence helps them to begin, since a first sentence written in pencil seems less like a commitment and more like an invitation to keep thinking.",
+      "The pencil also has a distinctive physical character. Its line can be light or dark, thin or broad, depending on how firmly it is pressed and how it is held, and many people enjoy the slight resistance of the paper and the soft sound the pencil makes as it moves. A pencil also wears down as it is used, becoming shorter with every page, so that its gradual disappearance becomes a visible record of the work it has done and the time that its owner has spent with it.",
+      "In recent decades, much writing has moved from paper to screens, where words can be deleted and rearranged with even less effort than a pencil allows. In some ways, digital writing has taken the pencil's freedom to an extreme, since nothing need ever be final and every version can be endlessly revised. Yet some people find that this unlimited freedom makes it harder rather than easier to finish anything, and that the gentle limits of the pencil, which allow correction but still leave faint traces, encourage a more thoughtful kind of revision.",
+      "Perhaps, then, pencils deserve more attention than we usually give them. They remind us that good work often begins with rough attempts, that mistakes are a natural part of thinking, and that the ability to correct ourselves is as important as the ability to express ourselves. In a world that often demands instant and permanent results, the humble pencil may still teach us the value of trying, erasing, and trying again, until what we have written finally says what we mean.",
+    ],
+    ja: [
+      '人々が書くために使う道具のなかで、えんぴつはもっともつつましいものかもしれない。安く、電気もいらず、ほとんどどの家にも学校にも職場にもあり、しばしば引き出しのいちばん下にわすれられている。しかしえんぴつには、ほかのほとんどの筆記用具とはちがう性質がある。ページに残したものをかんたんに消せるのである。この単純な事実は、何世代もの人々が学び、えがき、考えるしかたを形づくってきた。そしてそれは、しるしをつけることとまちがいをすることとの関係について、大切なことを教えてくれるのかもしれない。',
+      'インクでつけたしるしは消しにくい。ペンで一度ことばを書くと、線を引いて消すことはできても本当に消すことはできず、ページには書き手の最初の試みのあとがいつまでも残る。それに対して、えんぴつのしるしはこすって消し、書きかえることができるので、ページは前に書かれたものをわすれるかのように見える。このため、えんぴつは昔から、下書きやスケッチや練習に好んで使われてきた。書き手が考えを変えるつもりでいて、まだ最終版を決めたくない場面である。',
+      'この性質のおかげで、えんぴつはとくに学ぶうえで価値がある。字を書きはじめたばかりの子どもや、算数の問題をときはじめた子どもは、何度もやってみて、失敗して、またやってみる必要があり、きたなくせずにまちがいを直せる道具は、子どもが試しつづけるよう促す。大人はときにえんぴつを初心者のための道具とみなすが、多くの建築家や芸術家、数学者は、仕事を続けるあいだずっとえんぴつを使いつづけている。まさに、ページをだいなしにするおそれなしに考えを探れる自由を大切にしているからである。',
+      '同時に、えんぴつには一種のつつましさがある。契約書や公式の記録のような大切な書類がえんぴつで書かれることはめったにない。それを書く人は、それが永続し、書きかえにくいものであってほしいからである。だから、えんぴつで書くことは、自分のことばが仮のもので、書き直しや話し合いに開かれていることをほのめかすことになる。そして、この仮のものだという感覚が書きはじめる助けになると感じた書き手もいる。えんぴつで書いた最初の一文は、約束というよりも、考えつづけるようにというさそいのように思えるからである。',
+      'えんぴつはまた、独特の手ざわりをもっている。その線は、どれほど強くおしつけ、どのようにもつかによって、うすくもこくも、細くも太くもなり、多くの人は紙のかすかな手ごたえや、えんぴつが動くときのやわらかな音を楽しむ。えんぴつはまた使うにつれてすりへり、ページごとに短くなっていくので、そのしだいに消えていくようすが、えんぴつがしてきた仕事と、持ち主がそれと過ごした時間の目に見える記録になる。',
+      'ここ数十年、書くことの多くは紙から画面へと移り、そこではことばを、えんぴつよりもさらに少ない手間で消したりならべかえたりできる。ある意味で、デジタルで書くことは、えんぴつの自由を極端にまでおし進めた。何一つ最終的である必要はなく、どの版も果てしなく書き直せるからである。しかし、このかぎりない自由のせいで、何かを仕上げることがやさしくなるどころかむずかしくなると感じる人もいる。そして、直すことは許しながらもかすかなあとを残すえんぴつのゆるやかな限界が、より考えぶかい書き直しを促すと感じる人もいる。',
+      'だとすれば、えんぴつは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。えんぴつは、よい仕事がしばしばあらい試みから始まること、まちがいは考えることの自然な一部であること、そして自分を直す力は自分を表現する力と同じくらい大切であることを思い出させてくれる。すぐに永続する結果を求めることの多い世界で、つつましいえんぴつは、書いたものがついに言いたいことを言えるようになるまで、試し、消し、また試すことの価値を、いまも私たちに教えてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「大人はえんぴつを初心者の道具とみなすことがあるが、多くの専門家は使いつづけている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'えんぴつのしるしは、かんたんに消すことができる。', answer: true, why: '第1段落 what it leaves on the page can be easily removed。' },
+      { statement: '契約書や公式の記録は、ふつうえんぴつで書かれる。', answer: false, why: '第4段落 are rarely written in pencil。' },
+      { statement: 'えんぴつは使うにつれて短くなる。', answer: true, why: '第5段落 becoming shorter with every page。' },
+      { statement: '筆者によると、デジタルで書くことは、だれにとっても仕上げることをやさしくする。', answer: false, why: '第6段落 some people find that this unlimited freedom makes it harder rather than easier to finish。' },
+    ],
+    qa: [
+      { q: 'Why do many architects and artists continue to use pencils?', choices: ['They value the freedom to explore ideas without fear of spoiling the page.', 'Pencils are the most expensive tools.', 'They cannot use computers.', 'Their clients require it.'], answer: 0, why: '第3段落 they value the freedom to explore ideas without fear of spoiling the page。' },
+      { q: 'What can a first sentence written in pencil seem like, according to some writers?', choices: ['An invitation to keep thinking.', 'A final decision.', 'A legal contract.', 'A sign of laziness.'], answer: 0, why: '第4段落 more like an invitation to keep thinking。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

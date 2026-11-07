@@ -3673,3 +3673,10 @@ it('東大専用の長文235「花火を一般の人に売ってよいか」：6
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(p.summary?.blanks).toHaveLength(3)
 })
+
+it('京大専用の長文238「えんぴつについて」：京大の下限600語以上・1文18語以上で、京大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-pencils')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
