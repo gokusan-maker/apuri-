@@ -3046,3 +3046,10 @@ it('誤文訂正〈214〉：国公立レベル まぎらわしい形容詞の単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('sensible')
 })
+
+it('正誤問題〈221〉：東大レベル 名詞＋ to 不定詞の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-noun-to-infinitive-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) climbing')
+})

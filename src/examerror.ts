@@ -5258,6 +5258,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The rules of tennis (B) is (C) more complicated than (D) those of table tennis.', choices: ['(A) The rules of tennis', '(B) is', '(C) more complicated than', '(D) those of table tennis'], answer: 1, why: '主語の The rules は複数なので are。' },
     ],
   },
+  {
+    id: 'exam-error-noun-to-infinitive-todai',
+    title: '入試の正誤問題〈221〉（東大レベル：英作文の名詞＋ to 不定詞 the first to ～・a chance to ～）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'the first（最後なら the last・ただ一人なら the only）＋名詞のあとに to 不定詞を置くと「～した最初の人」の意味になる（She was the first woman to climb the mountain alone.）。chance・time・right・decision・plan なども to 不定詞で「～する機会・時・権利・決心・計画」をあらわす。',
+      'something to drink・nothing to worry about のように、名詞が前置詞の目的語になるときは前置詞を残し、it などを重ねて置かない。',
+    ],
+    examples: [
+      { en: 'He was the last to leave the office.', ja: '彼はオフィスを最後に出た人だった。' },
+      { en: 'There is nothing to worry about.', ja: '心配することは何もない。' },
+    ],
+    questions: [
+      { sentence: '(A) She was (B) the first woman (C) climbing (D) the mountain alone.', choices: ['(A) She was', '(B) the first woman', '(C) climbing', '(D) the mountain alone'], answer: 2, why: '「～した最初の人」は the first ～ to 不定詞なので to climb。' },
+      { sentence: '(A) I had (B) no chance (C) to talking (D) with him.', choices: ['(A) I had', '(B) no chance', '(C) to talking', '(D) with him'], answer: 2, why: 'a chance to ～ の to のあとは動詞の原形なので to talk。' },
+      { sentence: '(A) He was (B) the last (C) leave (D) the office.', choices: ['(A) He was', '(B) the last', '(C) leave', '(D) the office'], answer: 2, why: '「～する最後の人」は the last to 不定詞なので to leave。' },
+      { sentence: '(A) There is (B) nothing (C) to worry (D) about it.', choices: ['(A) There is', '(B) nothing', '(C) to worry', '(D) about it'], answer: 3, why: 'nothing to worry about で、about の目的語は nothing。it は不要。' },
+      { sentence: '(A) Give me (B) something (C) cold (D) drinking.', choices: ['(A) Give me', '(B) something', '(C) cold', '(D) drinking'], answer: 3, why: '「飲むための冷たいもの」は something cold to drink。' },
+      { sentence: '(A) She needs (B) a friend (C) to talk (D) with her.', choices: ['(A) She needs', '(B) a friend', '(C) to talk', '(D) with her'], answer: 3, why: 'a friend to talk with で、with の目的語は a friend。her は不要。' },
+      { sentence: '(A) We have (B) a lot of work (C) doing (D) before dinner.', choices: ['(A) We have', '(B) a lot of work', '(C) doing', '(D) before dinner'], answer: 2, why: '「するべき仕事」は work to do。' },
+      { sentence: '(A) It is (B) time (C) for you (D) going to bed.', choices: ['(A) It is', '(B) time', '(C) for you', '(D) going to bed'], answer: 3, why: 'It is time for you to ～ なので to go to bed。' },
+      { sentence: '(A) Her decide (B) to study abroad (C) surprised (D) her parents.', choices: ['(A) Her decide', '(B) to study abroad', '(C) surprised', '(D) her parents'], answer: 0, why: '主語は名詞が必要なので Her decision（決心）。decision to ～ の形。' },
+      { sentence: '(A) They have (B) the right of vote (C) in (D) the election.', choices: ['(A) They have', '(B) the right of vote', '(C) in', '(D) the election'], answer: 1, why: '「投票する権利」は the right to vote。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
