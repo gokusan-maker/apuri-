@@ -3328,6 +3328,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 14 l-2 -6 l5 3 z M62 14 l2 -6 l-5 3 z" fill="#1f2937" />
       </g>
     )
+  if (species === 'gerbil')
+    return (
+      <g>
+        {/* 長いしっぽの先のふさ */}
+        <path d="M78 72 q14 4 18 -8" stroke="#6b4a1f" strokeWidth="3" fill="none" strokeLinecap="round" />
+        <circle cx="96" cy="63" r="3" fill="#6b4a1f" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
