@@ -3565,6 +3565,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M42 26 q-6 -6 0 -12 q4 -4 0 -8 M58 26 q6 -6 0 -12 q-4 -4 0 -8" stroke="#4a2a10" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'bushbuck')
+    return (
+      <g>
+        {/* 白い点々 */}
+        <circle cx="40" cy="62" r="2.5" fill="#ffffff" />
+        <circle cx="50" cy="66" r="2.5" fill="#ffffff" />
+        <circle cx="60" cy="62" r="2.5" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
