@@ -3158,3 +3158,10 @@ it('誤文訂正〈222〉：東大レベル 形容詞＋前置詞の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('to')
 })
+
+it('正誤問題〈229〉：京大レベル other・another・the other・the others の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-other-another-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) another is a teacher')
+})

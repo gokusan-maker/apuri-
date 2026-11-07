@@ -5458,6 +5458,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Every summer, (B) we would (C) visit (D) to our uncle in the country.', choices: ['(A) Every summer,', '(B) we would', '(C) visit', '(D) to our uncle in the country'], answer: 3, why: 'visit は他動詞なので to をつけず visit our uncle。' },
     ],
   },
+  {
+    id: 'exam-error-other-another-kyodai',
+    title: '入試の正誤問題〈229〉（京大レベル：英作文の other・another・the other・the others）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'another ＝ an ＋ other で「（不特定の）もう1つ・もう1人」。あとは単数名詞（another cup）。other は形容詞として複数名詞の前に置く（other students）。代名詞で「ほかの人たち」は others。',
+      '数が決まっている中で「残り」をいうときは the をつける。残りが1つなら the other、複数なら the others（two brothers: one ～, the other ～）。「おたがい」は each other。',
+    ],
+    examples: [
+      { en: 'I have two brothers; one is a doctor and the other is a teacher.', ja: '私には兄弟が2人いて、1人は医者で、もう1人は先生だ。' },
+      { en: 'Some students like math, and others prefer English.', ja: '数学が好きな生徒もいれば、英語のほうが好きな生徒もいる。' },
+    ],
+    questions: [
+      { sentence: '(A) I have (B) two brothers; (C) one is a doctor and (D) another is a teacher.', choices: ['(A) I have', '(B) two brothers;', '(C) one is a doctor and', '(D) another is a teacher'], answer: 3, why: '2人のうち残りの1人は the other。' },
+      { sentence: '(A) This shirt is too small. (B) Could you show me (C) other (D) one?', choices: ['(A) This shirt is too small', '(B) Could you show me', '(C) other', '(D) one?'], answer: 2, why: '「（ほかの）もう1つ」は数えられる単数なので another one。' },
+      { sentence: '(A) Some students like math, (B) and (C) other (D) prefer English.', choices: ['(A) Some students like math,', '(B) and', '(C) other', '(D) prefer English'], answer: 2, why: '「ほかの人たち」と代名詞で使うときは others。' },
+      { sentence: '(A) There are (B) five apples; (C) I ate one, and my sister ate (D) the other.', choices: ['(A) There are', '(B) five apples;', '(C) I ate one, and my sister ate', '(D) the other'], answer: 3, why: '5つのうち1つをのぞいた残り全部なので the others（残りが複数）。' },
+      { sentence: '(A) Another (B) students (C) were waiting (D) outside.', choices: ['(A) Another', '(B) students', '(C) were waiting', '(D) outside'], answer: 0, why: 'another のあとは単数名詞。複数なら Other students。' },
+      { sentence: '(A) We should (B) help (C) each others (D) in difficult times.', choices: ['(A) We should', '(B) help', '(C) each others', '(D) in difficult times'], answer: 2, why: '「おたがい」は each other（others にしない）。' },
+      { sentence: '(A) Would you like (B) other (C) cup (D) of tea?', choices: ['(A) Would you like', '(B) other', '(C) cup', '(D) of tea?'], answer: 1, why: '「もう1杯」は another cup。' },
+      { sentence: '(A) One of the twins (B) is tall, (C) but the others (D) is short.', choices: ['(A) One of the twins', '(B) is tall,', '(C) but the others', '(D) is short'], answer: 2, why: '双子の残りの1人なので the other（動詞 is と合う）。' },
+      { sentence: '(A) He lives (B) on (C) another side (D) of the river.', choices: ['(A) He lives', '(B) on', '(C) another side', '(D) of the river'], answer: 2, why: '川の「向こう側」は2つのうち片方なので the other side。' },
+      { sentence: '(A) Some people (B) walk to work, (C) while the other (D) take the bus.', choices: ['(A) Some people', '(B) walk to work,', '(C) while the other', '(D) take the bus'], answer: 2, why: '不特定の「ほかの人たち」は others（take と合う複数）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
