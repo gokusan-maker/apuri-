@@ -3481,6 +3481,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 54 l0 18 M44 54 l0 18 M52 54 l0 18 M60 54 l0 18" stroke="#fef3c7" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'nyala')
+    return (
+      <g>
+        {/* 背中のたてがみ */}
+        <path d="M34 34 q16 -6 32 0" stroke="#211913" strokeWidth="4" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
