@@ -40622,6 +40622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-city-life',
+    title: 'On City Life',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the great majority of people lived in villages or small towns, surrounded by fields and forests and by neighbors whom they had known all their lives. Today, more than half of the world's population lives in cities, and the proportion continues to grow. The city has become the characteristic setting of modern life, yet our feelings about it remain deeply divided. Many people are drawn to cities by the opportunities they offer, while at the same time longing for the quiet and closeness that they associate with life in the countryside.",
+      "One of the great attractions of the city is the freedom it provides. In a small community, everyone may know everyone else's business, and those who differ from local customs may feel watched or judged. In a large city, by contrast, a person can live according to their own choices with relatively little interference, finding others who share their interests, beliefs, or ways of life. For many people, especially the young, the anonymity of the city is not a source of loneliness but a welcome escape from the expectations of their families and neighbors.",
+      "The city also offers an extraordinary concentration of activity. Within a small area, one may find theaters, libraries, markets, universities, and people from many different backgrounds and nations. ( A ) such diversity can sometimes produce tension and misunderstanding, it also generates new ideas, as people with different skills and perspectives meet, exchange knowledge, and combine their efforts in ways that would be unlikely in a more isolated setting. Historians have long observed that many of the most important developments in art, science, and commerce first appeared in great cities, where talent and resources were gathered together in one place.",
+      "Yet the same features that make cities exciting can also make them exhausting. The constant noise, crowds, and pace of urban life may leave people feeling overwhelmed, and the very anonymity that offers freedom can also produce isolation. It is possible to live among millions of people and yet know none of them well, passing neighbors on the stairs for years without learning their names. In this sense, the city can be both the most crowded and the loneliest of places.",
+      "The relationship between city dwellers and the natural world has also changed. In dense urban areas, many people rarely see the night sky, walk on soil, or observe the changing seasons in the plants and animals around them. Some writers have suggested that this separation from nature may contribute to stress and a sense of disconnection, and many cities have responded by creating parks, gardens, and green spaces that offer residents moments of rest and contact with living things. Even a single tree outside a window, some residents say, can change how a home feels.",
+      "Whether the city enriches or diminishes human life may depend in large part on how it is designed and how its residents choose to live. Neighborhoods with small shops, public squares, and streets that encourage walking can foster a sense of community, while those dominated by highways and isolated buildings may discourage human contact. Individuals, too, can shape their experience of the city by seeking out local connections, joining groups, and taking time to notice the places they pass through each day.",
+      "In the end, the city reflects the contradictions of human nature itself. We desire freedom and individuality, yet we also need belonging and connection; we seek stimulation and variety, yet we also long for rest and quiet. The city offers all of these possibilities but guarantees none of them. Learning to live well in a city, then, may require the same wisdom that living well anywhere demands: the ability to balance independence with community, and activity with reflection.",
+    ],
+    ja: [
+      '人類の歴史のほとんどを通じて、大多数の人々は、畑や森と、一生のあいだ知り合いだった近所の人々にかこまれて、村や小さな町に住んでいた。今日では、世界の人口の半分以上が都市に住んでおり、その割合はふえ続けている。都市は現代の暮らしの典型的な舞台になったが、それについての私たちの気持ちは今も深く分かれている。多くの人は都市があたえる機会にひきつけられる一方で、同時に、いなかの暮らしと結びつけて考える静けさと親しさにもあこがれている。',
+      '都市の大きな魅力の一つは、それがあたえる自由である。小さな共同体では、だれもがほかのだれもの事情を知っているかもしれず、地元の習わしとちがう人は、見られている、あるいは判断されていると感じるかもしれない。それに対して大きな都市では、人は比較的じゃまされずに自分の選択にしたがって暮らし、関心や信念や暮らし方を同じくするほかの人々を見つけることができる。多くの人、とくに若者にとって、都市の匿名性はさびしさの源ではなく、家族や近所の人々の期待からのうれしい逃げ場なのである。',
+      '都市はまた、とてつもない活動の集まりをあたえてくれる。小さな区域の中に、劇場や図書館や市場や大学や、さまざまな生い立ちや国の人々が見つかることがある。そうした多様さはときに緊張や誤解を生むこともあるが、新しい考えも生み出す。ちがう技術や見方をもつ人々が出会い、知識を交換し、より孤立した環境ではありそうにないやり方で努力を組み合わせるからである。歴史家たちは長いあいだ、芸術や科学や商業のもっとも重要な発展の多くが、才能と資源が一つの場所に集められた大都市で最初にあらわれたことに注目してきた。',
+      'しかし、都市をわくわくさせるのと同じ特徴が、都市をつかれさせるものにもしうる。たえまない騒音や人ごみや都会の暮らしの速さは、人々を圧倒されたように感じさせるかもしれず、自由をあたえるまさにその匿名性が、孤立を生むこともある。何百万もの人々のあいだで暮らしながら、だれ一人よく知らず、何年も階段で近所の人とすれちがいながら名前も知らないということもありうる。この意味で、都市はもっとも混み合った場所であると同時に、もっともさびしい場所にもなりうるのである。',
+      '都市に住む人々と自然の世界との関係も変わってきた。建物の密集した都市部では、多くの人が夜空を見ることも、土の上を歩くことも、まわりの植物や動物に季節の移り変わりを見ることもめったにない。この自然からの切りはなしがストレスやつながりのなさの感覚の一因になっているかもしれないと示す書き手もおり、多くの都市は、住民に休息と生き物とふれ合う瞬間をあたえる公園や庭や緑地をつくることでこたえてきた。まどの外のたった一本の木でさえ、家の感じを変えることがあると言う住民もいる。',
+      '都市が人間の暮らしを豊かにするか、それともまずしくするかは、その多くが、都市がどう設計され、住民がどう暮らすことを選ぶかにかかっているのかもしれない。小さな店や広場や歩くことをうながす通りのある地域は、共同体の感覚を育てうるが、高速道路や孤立した建物が中心の地域は、人どうしのふれ合いを遠ざけるかもしれない。個人もまた、地元のつながりを求めたり、集まりに加わったり、毎日通りすぎる場所に気づく時間をとったりすることで、都市の経験を形づくることができる。',
+      '結局のところ、都市は人間の本性そのものの矛盾を映している。私たちは自由と個性を望むが、居場所とつながりも必要としている。刺激と多様さを求めるが、休息と静けさにもあこがれている。都市はこれらすべての可能性をあたえてくれるが、どれ一つ保証してはくれない。だから、都市でよく暮らすことを学ぶには、どこでよく暮らすにも必要なのと同じ知恵、つまり自立と共同体のつりあいをとり、活動とふり返りのつりあいをとる力が必要なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「多様さはときに緊張を生むが、新しい考えも生み出す」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '今日、世界の人口の半分以上が都市に住んでいる。', answer: true, why: '第1段落 more than half of the world’s population lives in cities。' },
+      { statement: '筆者によれば、都市の匿名性は若者にとっていつもさびしさの源である。', answer: false, why: '第2段落 not a source of loneliness but a welcome escape。' },
+      { statement: '何年も近所の人の名前を知らずに暮らすこともありうる。', answer: true, why: '第4段落 passing neighbors on the stairs for years without learning their names。' },
+      { statement: '都市はわくわくさせるが、つかれさせることはない。', answer: false, why: '第4段落 can also make them exhausting。' },
+    ],
+    qa: [
+      { q: 'What does diversity in the city generate, according to the passage?', choices: ['New ideas.', 'Only tension.', 'Fewer jobs.', 'Quieter streets.'], answer: 0, why: '第3段落 it also generates new ideas。' },
+      { q: 'What kind of neighborhoods can foster a sense of community?', choices: ['Those with small shops, public squares, and streets that encourage walking.', 'Those dominated by highways.', 'Those with isolated buildings.', 'Those without any shops.'], answer: 0, why: '第6段落 Neighborhoods with small shops, public squares, and streets that encourage walking。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
