@@ -3304,6 +3304,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <rect x="46" y="58" width="8" height="7" rx="1" fill="#fefce8" stroke="#3b2a17" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'paca')
+    return (
+      <g>
+        {/* 体の白い点のもよう */}
+        <circle cx="36" cy="66" r="2.5" fill="#fef9c3" />
+        <circle cx="46" cy="70" r="2.5" fill="#fef9c3" />
+        <circle cx="56" cy="70" r="2.5" fill="#fef9c3" />
+        <circle cx="66" cy="66" r="2.5" fill="#fef9c3" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
