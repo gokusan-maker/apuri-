@@ -9913,6 +9913,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I met [a young nice] teacher at the station.', choices: ['a nice young', 'a young and nice of', 'nice a young', 'young a nice'], answer: 0, why: '意見 → 年齢の順なので a nice young teacher。' },
     ],
   },
+  {
+    id: 'exam-fix-233',
+    title: '入試の誤文訂正〈233〉（国公立レベル：交通手段の by car・on foot・take a bus）',
+    points: ['「～で行く」の交通手段は by ＋無冠詞の名詞（by car・by bus・by train・by bike）。ただし「歩いて」は on foot。by のあとに a・the・my をつけたり、名詞を複数形にしたりしない。', '特定の乗り物や冠詞・所有格がつくときは in my car・on the bus・on the 8:30 train のように in／on を使う（車・タクシーは in、バス・電車・自転車は on）。動詞で言うなら take a bus・take the train・walk to school。get on／off は バス・電車、get in／out of は 車・タクシー。'],
+    examples: [{ en: 'I go to school by bus, but my sister goes on foot. / We went there in my father’s car.', ja: '私はバスで通学するが、姉は歩いて行く。／私たちは父の車でそこへ行った。' }],
+    questions: [
+      { sentence: 'I usually go to school [by a bus].', choices: ['by bus', 'by the buses', 'with bus', 'on bus by'], answer: 0, why: '交通手段の by のあとは無冠詞。by bus。' },
+      { sentence: 'My grandfather goes to the shop [by foot] every day.', choices: ['on foot', 'by feet', 'on feet', 'with foot'], answer: 0, why: '「歩いて」は on foot。' },
+      { sentence: 'We went to the beach [by my car].', choices: ['in my car', 'on my car', 'by car my', 'with car'], answer: 0, why: '所有格がつくと by は使えない。in my car。' },
+      { sentence: 'She [took by train] to Osaka.', choices: ['took the train', 'took train by', 'took on train', 'by took the train'], answer: 0, why: '動詞で言うなら take the train。by は不要。' },
+      { sentence: 'Hurry up, or we will [miss to the bus].', choices: ['miss the bus', 'miss on the bus', 'miss by bus', 'miss at the bus'], answer: 0, why: 'miss は他動詞なので miss the bus。' },
+      { sentence: 'He [got off from] the train at the next station.', choices: ['got off', 'got out from', 'got down of', 'got off of from'], answer: 0, why: '電車をおりるのは get off the train。from は不要。' },
+      { sentence: 'Please [get on] the taxi quickly.', choices: ['get in', 'get on to', 'get by', 'get off'], answer: 0, why: 'タクシー・車に乗るのは get in。get on はバス・電車。' },
+      { sentence: 'They travelled around Europe [by trains].', choices: ['by train', 'by the trains', 'on trains by', 'with trains'], answer: 0, why: 'by のあとの名詞は単数・無冠詞。by train。' },
+      { sentence: 'I came here [on the 7:30 train by].', choices: ['on the 7:30 train', 'by the 7:30 train', 'in 7:30 train', 'with the 7:30 train'], answer: 0, why: '特定の電車は on the 7:30 train。by は不要。' },
+      { sentence: 'It takes ten minutes to [go to school on walk].', choices: ['walk to school', 'go to school by walk', 'walk to the school by foot', 'go on walk to school'], answer: 0, why: '「歩いて学校へ行く」は walk to school（または go to school on foot）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
