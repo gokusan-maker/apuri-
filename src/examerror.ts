@@ -9827,6 +9827,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Because he practised every day, [so he won] the contest.', choices: ['he won', 'but he won', 'and so he won', 'so won he'], answer: 0, why: 'Because があるので so は不要。Because ～, he won the contest。' },
     ],
   },
+  {
+    id: 'exam-fix-231',
+    title: '入試の誤文訂正〈231〉（東大レベル：英作文の数の言い方 hundreds of・two hundred・dozens of）',
+    points: ['具体的な数のときの hundred・thousand・million・dozen は複数形にせず、of もつけない（two hundred people／three thousand yen／a dozen eggs）。数がはっきりしない「何百もの」「何十もの」は hundreds of・thousands of・dozens of と複数形＋of を使う。', '数詞＋名詞をハイフンでつないで形容詞にするときは名詞を単数にする（a five-year-old boy／a two-hour meeting）。a lot of・a number of のあとは複数名詞、the number of ～ は「～の数」で単数あつかい。'],
+    examples: [{ en: 'Two hundred people came to the concert, and hundreds of others watched it online.', ja: '200人がコンサートに来て、ほかに何百人もがオンラインで見た。' }],
+    questions: [
+      { sentence: 'More than [three hundreds] students took part in the event.', choices: ['three hundred', 'three hundreds of', 'three hundred of', 'hundreds three'], answer: 0, why: '具体的な数のときは hundred を複数形にしない。three hundred students。' },
+      { sentence: '[Hundred of] birds were flying over the lake.', choices: ['Hundreds of', 'Hundred', 'A hundreds of', 'Hundreds'], answer: 0, why: '「何百もの」は Hundreds of。' },
+      { sentence: 'The new bridge cost [five millions] dollars.', choices: ['five million', 'five millions of', 'five million of', 'millions five'], answer: 0, why: '具体的な数なので five million dollars。' },
+      { sentence: 'I bought [two dozens] eggs at the market.', choices: ['two dozen', 'two dozens of', 'two dozen of', 'dozens two'], answer: 0, why: '数詞のあとの dozen は複数形にせず of もつけない。two dozen eggs。' },
+      { sentence: 'She has visited [dozen of] countries for her work.', choices: ['dozens of', 'dozen', 'a dozens of', 'dozens'], answer: 0, why: '「何十もの」は dozens of countries。' },
+      { sentence: 'He is a [ten-years-old] boy who loves trains.', choices: ['ten-year-old', 'ten-year-olds', 'ten-years old', 'ten year-olds'], answer: 0, why: 'ハイフンでつないだ形容詞では名詞を単数にする。a ten-year-old boy。' },
+      { sentence: 'We had a [three-hours] meeting yesterday.', choices: ['three-hour', 'three-hour’s', 'three hours’s', 'three-hours’'], answer: 0, why: 'ハイフンでつないだ形容詞なので a three-hour meeting。' },
+      { sentence: '[Thousand of] people gathered in the square.', choices: ['Thousands of', 'Thousand', 'A thousands of', 'Thousands'], answer: 0, why: '「何千もの」は Thousands of people。' },
+      { sentence: 'The ticket costs [two thousands] yen.', choices: ['two thousand', 'two thousands of', 'two thousand of', 'thousands two'], answer: 0, why: '具体的な数なので two thousand yen。' },
+      { sentence: 'The number of visitors [were] larger than last year.', choices: ['was', 'are', 'have been', 'being'], answer: 0, why: 'The number of ～ は「～の数」で単数あつかいなので was。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

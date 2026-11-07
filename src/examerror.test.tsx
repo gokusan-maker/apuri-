@@ -3277,3 +3277,10 @@ it('正誤問題〈237〉：国公立レベル will と be going to の単元が
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) visiting my grandmother')
 })
+
+it('誤文訂正〈231〉：東大レベル 数の言い方 hundreds of・two hundred の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-231')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('three hundred')
+})
