@@ -42302,6 +42302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-bells',
+    title: 'On Bells',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the loudest sound that ordinary people regularly heard, apart from thunder, was probably the ringing of a bell. Long before clocks became common in homes, bells announced the hours of the day, called people to work and to worship, and warned them of fire, flood, or approaching danger. Today we hear them far less often, and when we do, we tend to treat them as charming reminders of the past, yet it is worth asking what bells once did for the communities that lived within the range of their sound.",
+      "One of the most important functions of the bell was to organize time. In towns and villages where few people owned a watch, the sound of a bell marking the hours allowed everyone to share the same rhythm, rising, working, eating, and resting at roughly the same moments. In this sense, a bell did not merely measure time but also created a common experience of it, so that the day was something that the whole community lived through together rather than something that each person experienced alone.",
+      "Bells also defined the boundaries of a community in a way that is easy to overlook. People who could hear a particular bell often felt that they belonged to the same place, and in some languages there are expressions which describe a person's home as the area within the sound of its bells. ( A ) such boundaries were never drawn on any map, they could be remarkably strong, shaping where people married, where they traded, and whom they considered neighbors rather than strangers.",
+      "At the same time, the sound of bells could carry a wide range of emotions. The same bell might ring joyfully to celebrate a wedding, slowly and heavily to mark a death, and urgently to call people to put out a fire, and listeners learned to understand these differences without needing any words. A bell was thus a kind of public voice, one that spoke to everyone at once and that could express feelings which the community shared but which no single person could easily put into language.",
+      "With the arrival of clocks, radios, and mobile phones, many of these functions have passed to other devices. Each of us now carries our own private source of time and news, and we no longer need to listen together to a single sound in order to know when to begin work or whether danger is approaching. In some cities, people who have recently moved into old neighborhoods have even complained that the ringing of bells disturbs their sleep, which suggests that a sound once heard as a shared language is now sometimes heard simply as noise.",
+      "This change is not entirely a loss. Private devices allow people to organize their lives according to their own needs, and few of us would wish to return to a world in which a single authority controlled the rhythm of everyone's day. Yet something may also have disappeared with the bells, namely the experience of being reminded, several times a day, that we live alongside others who are hearing the same sound and who share, at least for a moment, the same place and the same time.",
+      "Perhaps that is why bells still move us when we hear them unexpectedly. Their sound reaches us from a world in which time was public rather than private, and in which belonging to a community was something that could be heard as well as felt. To stop and listen to a bell, then, may be to recognize how much our sense of place depends on shared experiences, and to wonder what might take the place of such experiences in a world where each of us increasingly listens alone.",
+    ],
+    ja: [
+      '人類の歴史のほとんどの期間、ふつうの人々がいつも聞いていたいちばん大きな音は、かみなりをのぞけば、おそらく鐘の音だっただろう。家に時計が広まるずっと前から、鐘は一日の時刻を知らせ、人々を仕事や祈りによびよせ、火事や洪水、近づく危険を警告していた。今日、私たちが鐘を聞くことはずっと少なくなり、聞いたとしても、過去を思い出させる趣のあるものとしてあつかいがちである。しかし、鐘がかつて、その音のとどく範囲で暮らす共同体のために何をしていたのかを問うてみる価値はある。',
+      '鐘のもっとも重要な働きの一つは、時間を整えることだった。時計をもつ人がほとんどいない町や村では、時刻を知らせる鐘の音によって、だれもが同じリズムを共有し、だいたい同じときに起き、働き、食べ、休むことができた。この意味で、鐘はただ時間をはかったのではなく、時間についての共通の経験もつくり出していた。こうして一日は、一人一人がばらばらに経験するものではなく、共同体全体がいっしょに過ごしていくものになっていたのである。',
+      '鐘はまた、見すごされやすいかたちで共同体のさかいめを決めていた。ある鐘が聞こえる人々は、しばしば自分たちが同じ場所に属していると感じ、言語によっては、人のふるさとを、その鐘の音がとどく範囲としてあらわす表現もある。そのようなさかいめはどの地図にも引かれることはなかったが、おどろくほど強いものになりえた。人々がどこで結婚し、どこで商売をし、だれを見知らぬ人ではなく隣人とみなすかを形づくっていたのである。',
+      '同時に、鐘の音はさまざまな感情を伝えることができた。同じ鐘が、結婚を祝って楽しげに鳴ることも、死をいたんでゆっくりと重く鳴ることも、火を消すよう人々をよび集めるために急いで鳴ることもあり、聞く人々は、どんなことばも必要とせずにこれらのちがいを理解するようになった。鐘はこのように一種の公の声であり、全員に同時に語りかけ、共同体が共有していながら、どの一人もことばにするのがむずかしい感情を表すことができたのである。',
+      '時計やラジオ、携帯電話があらわれると、こうした働きの多くはほかの機器に移った。私たちはそれぞれ、時刻と知らせの自分だけの源をもち歩いており、いつ仕事を始めるか、危険が近づいているかどうかを知るために、一つの音をいっしょに聞く必要はもうない。一部の都市では、古い地区に最近引っこしてきた人々が、鐘の音で眠りがさまたげられると苦情を言うことさえあった。このことは、かつては共通のことばとして聞かれていた音が、いまではときに、ただの騒音として聞かれていることを示している。',
+      'この変化はまったくの損失というわけではない。個人の機器によって、人々は自分の必要に合わせて生活を整えることができ、一つの権威がみんなの一日のリズムを支配していた世界にもどりたいと願う人はほとんどいないだろう。それでも、鐘とともに何かが消えてしまったのかもしれない。つまり、同じ音を聞き、少なくともひとときのあいだ同じ場所と同じ時間を共有しているほかの人々とともに暮らしていることを、一日に何度か思い出させられるという経験である。',
+      'だからこそ、思いがけず鐘を聞くと、私たちはいまでも心を動かされるのかもしれない。その音は、時間が私的なものではなく公のものであり、共同体に属していることが感じられるだけでなく聞こえるものでもあった世界から、私たちにとどく。そうだとすれば、立ちどまって鐘に耳をかたむけることは、私たちの場所の感覚がどれほど共有された経験に支えられているかに気づき、一人一人がますますひとりで耳をかたむけるようになった世界で、何がそのような経験の代わりになりうるのかを考えることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「地図には引かれなかったが、おどろくほど強かった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '時計が家に広まる前から、鐘は時刻を知らせていた。', answer: true, why: '第1段落 Long before clocks became common in homes, bells announced the hours of the day。' },
+      { statement: '筆者によると、鐘は一人一人が時間をばらばらに経験するようにした。', answer: false, why: '第2段落 created a common experience of it ... rather than something that each person experienced alone。' },
+      { statement: '同じ鐘が、喜びの場面にも悲しみの場面にも鳴らされた。', answer: true, why: '第4段落 ring joyfully to celebrate a wedding, slowly and heavily to mark a death。' },
+      { statement: '筆者は、一つの権威がみんなの一日を支配する世界にもどるべきだと述べている。', answer: false, why: '第6段落 few of us would wish to return to a world in which a single authority controlled the rhythm of everyone’s day。' },
+    ],
+    qa: [
+      { q: 'How do some languages describe a person’s home, according to the passage?', choices: ['As the area within the sound of its bells.', 'As the place where the river begins.', 'As the house with the tallest tower.', 'As the town with the most clocks.'], answer: 0, why: '第3段落 describe a person’s home as the area within the sound of its bells。' },
+      { q: 'What have some people who recently moved into old neighborhoods complained about?', choices: ['The ringing of bells disturbs their sleep.', 'There are too few shops.', 'The streets are too narrow.', 'Their phones do not work.'], answer: 0, why: '第5段落 complained that the ringing of bells disturbs their sleep。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
