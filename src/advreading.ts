@@ -40658,6 +40658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-last-chance-tourism',
+    title: 'Should We Visit Places Before They Disappear?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, a growing number of travelers have set out to visit places that may soon disappear or change beyond recognition. They journey to melting glaciers, shrinking coral reefs, and remote islands threatened by rising seas, hoping to see these wonders before it is too late. This phenomenon, sometimes called last-chance tourism, has become a significant industry in certain regions. Yet it raises a troubling question: by traveling long distances to witness the effects of environmental change, are tourists helping to protect these places or hastening their destruction?",
+      "Supporters argue that seeing endangered places firsthand can transform people's attitudes. Reading about the decline of a glacier or a reef in a newspaper may produce little more than passing concern, but standing before the ice or swimming above the coral can create a powerful emotional connection. Travelers who have witnessed such changes, supporters claim, often return home with a stronger commitment to protecting the environment, sharing their experiences with friends and family and supporting conservation efforts in ways they might not otherwise have done. Photographs and stories brought back by such visitors can also reach audiences who will never travel themselves, spreading concern far beyond the original group.",
+      "Tourism can also bring economic benefits to the communities that live near threatened places. Fees paid by visitors may fund research, conservation programs, and the training of local guides, and the income generated can give residents a reason to preserve their natural surroundings rather than exploit them in more destructive ways. ( A ) the number of visitors must be managed carefully, supporters argue, a well-regulated tourism industry can make conservation financially sustainable in regions where other sources of support are scarce.",
+      "Critics, however, point out a painful irony. Many of the places most sought after by last-chance tourists are threatened by climate change, and the long flights required to reach them contribute to the very emissions that are causing the damage. A single journey to a distant glacier may produce more greenhouse gases than a person in some countries generates in an entire year. Critics argue that it is difficult to justify such travel on the grounds that it raises awareness, when the travel itself worsens the problem.",
+      "Critics also worry about the direct effects of visitors on fragile environments. Large numbers of tourists can damage coral by touching it or stirring up sediment, disturb wildlife during breeding seasons, and leave behind waste in places that have little capacity to absorb it. In some cases, the infrastructure built to accommodate visitors, such as hotels, roads, and harbors, may cause further harm to the very landscapes that people have come to see. Local residents may also find their daily lives disrupted by crowds.",
+      "Some observers suggest that the impact of last-chance tourism depends on how it is practiced. Strict limits on visitor numbers, rules that protect sensitive areas, and requirements that tour operators contribute to conservation can reduce harm. Travelers, too, can choose to visit less often, stay longer, and select operators committed to responsible practices. Others argue that, for many people, the most responsible choice may be to learn about these places through films, books, and virtual experiences rather than visiting in person, leaving the places themselves undisturbed.",
+      "The debate over last-chance tourism ultimately reflects a broader tension between the desire to experience the world and the responsibility to protect it. Seeing a threatened place with one's own eyes can be deeply moving, but the value of that experience must be weighed against its costs to the environment and to future generations. How travelers and societies resolve this tension may reveal whether our love of the natural world can be expressed in ways that help to preserve it rather than consume it.",
+    ],
+    ja: [
+      '近年、まもなく消えてしまうか、見ちがえるほど変わってしまうかもしれない場所をおとずれようと出かける旅行者がふえている。彼らは、とけつつある氷河や、小さくなりつつあるサンゴ礁や、海面の上昇におびやかされる遠い島々へ旅し、手おくれになる前にこうした驚異を見たいと願っている。この現象は「ラストチャンス・ツーリズム」とよばれることもあり、ある地域では大きな産業になっている。しかしそれは、気がかりな問いを投げかける。環境の変化の影響を見とどけるために遠くまで旅することで、旅行者はこうした場所を守る助けになっているのか、それともその破壊を早めているのか。',
+      '支持する人々は、危機にある場所を自分の目で見ることは、人々の態度を大きく変えうると主張する。新聞で氷河やサンゴ礁のおとろえについて読んでも、一時的な心配くらいしか生まれないかもしれないが、氷の前に立ったり、サンゴの上を泳いだりすれば、強い感情的なつながりが生まれうる。そうした変化を見とどけた旅行者は、しばしば環境を守ることへのより強い決意をもって家にもどり、友だちや家族に経験を伝え、そうでなければしなかったかもしれないやり方で保護の取り組みをささえると支持する人々は言う。そうした来訪者が持ち帰る写真や話は、自分では旅をしない人々にも届き、心配をもとの集団をはるかにこえて広げることがある。',
+      '観光はまた、危機にある場所の近くに住む地域に経済の利益をもたらしうる。来訪者がはらう料金は、研究や保護の計画や地元のガイドの育成の資金になるかもしれず、生み出される収入は、住民にまわりの自然を、より破壊的なやり方で利用するのではなく、守る理由をあたえうる。来訪者の数は注意深く管理しなければならないが、きちんと規制された観光産業は、ほかのささえが少ない地域で、保護をお金の面で続けられるものにしうると支持する人々は主張する。',
+      'しかし批判する人々は、痛ましい皮肉を指摘する。ラストチャンス・ツーリズムの旅行者にもっとも求められる場所の多くは気候変動におびやかされており、そこへ行くのに必要な長い飛行は、まさに害をひき起こしている排出に加担している。遠い氷河への一回の旅は、ある国々の人が一年間に出すよりも多くの温室効果ガスを生むかもしれない。旅そのものが問題を悪化させているのに、関心を高めるという理由でそうした旅を正当化するのはむずかしいと批判する人々は主張する。',
+      '批判する人々はまた、こわれやすい環境への来訪者の直接の影響を心配する。多くの観光客は、サンゴにさわったり、どろをまき上げたりしてサンゴをいため、繁殖の季節に野生の生き物をみだし、ごみを吸収する力のほとんどない場所にごみを残していくことがある。場合によっては、ホテルや道路や港のような、来訪者を受け入れるためにつくられた基盤が、人々が見に来たまさにその景色に、さらなる害をあたえることもある。地元の住民も、人ごみによって毎日の暮らしをみだされることがある。',
+      'ラストチャンス・ツーリズムの影響は、それがどのように行われるかによると考える人もいる。来訪者の数へのきびしい上限や、敏感な区域を守る規則や、旅行会社に保護への貢献を求めることは、害をへらしうる。旅行者自身も、おとずれる回数をへらして長く滞在したり、責任あるやり方を大切にする旅行会社を選んだりすることができる。また、多くの人にとって、もっとも責任ある選択は、実際におとずれるのではなく、映画や本や仮想の体験を通じてこうした場所について学び、場所そのものはそっとしておくことかもしれないと主張する人々もいる。',
+      'ラストチャンス・ツーリズムをめぐる議論は、結局のところ、世界を体験したいという望みと、それを守る責任のあいだの、より広い緊張を反映している。危機にある場所を自分の目で見ることは深く心を動かすものでありうるが、その経験の価値は、環境と将来の世代にとっての負担とくらべられなければならない。旅行者と社会がこの緊張をどう解決するかは、自然の世界への私たちの愛が、それを消費するのではなく守る助けになるやり方であらわされうるかどうかを明らかにするかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「数は注意深く管理しなければならないが、規制された観光は保護を続けられるものにしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that seeing endangered places can change attitudes and bring ( 1 ) benefits to local communities. Critics point out that the long flights add to ( 2 ) and that visitors can damage fragile environments. Some suggest strict ( 3 ) on visitor numbers.',
+      blanks: [
+        { choices: ['economic', 'military', 'religious', 'musical'], answer: 0, why: '第3段落 Tourism can also bring economic benefits。' },
+        { choices: ['emissions', 'friendships', 'lessons', 'savings'], answer: 0, why: '第4段落 contribute to the very emissions that are causing the damage。' },
+        { choices: ['limits', 'prizes', 'songs', 'gifts'], answer: 0, why: '第6段落 Strict limits on visitor numbers。' },
+      ],
+    },
+    tf: [
+      { statement: '危機にある場所を見に行く旅行者がふえている。', answer: true, why: '第1段落 a growing number of travelers have set out to visit places that may soon disappear。' },
+      { statement: '支持する人々は、新聞で読むほうが強い感情的なつながりが生まれると言う。', answer: false, why: '第2段落 standing before the ice ... can create a powerful emotional connection。' },
+      { statement: '来訪者を受け入れる基盤が、景色をさらに害することがある。', answer: true, why: '第5段落 the infrastructure built to accommodate visitors ... may cause further harm。' },
+      { statement: '筆者は、すべての人がかならずその場所をおとずれるべきだと結論づけている。', answer: false, why: '第6段落 the most responsible choice may be to learn about these places through films, books ...。' },
+    ],
+    qa: [
+      { q: 'What irony do critics point out?', choices: ['The flights to threatened places add to the emissions that damage them.', 'The places are too easy to reach.', 'Tourists never see the places.', 'Local people refuse to work as guides.'], answer: 0, why: '第4段落 the long flights required to reach them contribute to the very emissions that are causing the damage。' },
+      { q: 'What can travelers themselves do to reduce harm?', choices: ['Visit less often, stay longer, and choose responsible operators.', 'Visit as often as possible.', 'Touch the coral to learn about it.', 'Visit during breeding seasons.'], answer: 0, why: '第6段落 choose to visit less often, stay longer, and select operators committed to responsible practices。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

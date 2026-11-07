@@ -3155,3 +3155,11 @@ it('京大専用の長文203「都市の暮らしについて」：京大の下�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
 })
+
+it('東大専用の長文201「消える前にその場所をおとずれるべきか」：600語以上・1文18語以上で、要約の空所補充（3つ）つき。東大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('東大').find((x) => x.id === 'todai-last-chance-tourism')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(p.summary?.blanks).toHaveLength(3)
+})
