@@ -40178,6 +40178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-lower-speed-limits',
+    title: 'Should Cities Lower Their Speed Limits?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a growing number of cities around the world, the default speed limit on residential streets has been reduced from fifty kilometers per hour to thirty. Signs announcing the change have appeared on roads where cars once moved freely, and drivers who once crossed a city in a few minutes now find their journeys taking somewhat longer. Supporters describe the policy as a simple and effective way to save lives and make streets more pleasant, while critics regard it as an unnecessary restriction that slows traffic and inconveniences ordinary people.",
+      "Supporters point first to safety. The speed at which a vehicle strikes a pedestrian has a dramatic effect on the severity of injuries, and a person hit at thirty kilometers per hour is far more likely to survive than one hit at fifty. Lower speeds also give drivers more time to react to unexpected events, such as a child running into the road, and shorten the distance needed to stop. Supporters argue that in dense urban areas, where people on foot and on bicycles share the streets with cars, these differences can mean the difference between life and death.",
+      "Supporters also claim that slower traffic improves the quality of urban life. Streets where cars move slowly tend to be quieter, and residents may feel more comfortable allowing their children to walk or cycle to school. ( A ) the change may seem small to drivers, supporters argue, it can transform the atmosphere of a neighborhood, encouraging people to spend more time outdoors, to visit local shops, and to treat the street as a shared public space rather than merely a route for vehicles.",
+      "Critics, however, question whether lower limits deliver the benefits claimed for them. They note that in many streets, traffic already moves slowly because of congestion, so that changing the official limit makes little practical difference. Where roads are wide and straight, critics argue, drivers may ignore limits that seem unreasonably low, especially if enforcement is weak, and a rule that is widely disregarded may undermine respect for traffic laws in general. In their view, resources would be better spent on targeted measures at the most dangerous locations, such as busy junctions and streets near schools.",
+      "Critics also raise concerns about the costs of slower journeys. Delivery services, taxis, buses, and emergency vehicles may take longer to reach their destinations, and over time the lost minutes could add up to significant economic costs. Some critics also argue that the policy reflects the preferences of residents of central neighborhoods while ignoring the needs of people who live farther away and depend on cars to reach work, shops, and medical services, and who may have few practical alternatives.",
+      "In practice, the effects of lower speed limits appear to depend heavily on how they are introduced. Cities that combine new limits with changes to street design, such as narrower lanes, raised crossings, and planted areas, often see greater reductions in speed and accidents than those that simply put up new signs. Public consultation and clear communication can also help, since residents who understand the reasons for a change are more likely to accept it and to observe the new rules. Regular reviews of accident data can then show whether the policy is working and where further adjustments are needed.",
+      "The debate over urban speed limits ultimately reflects a broader question about whom city streets are for. For much of the twentieth century, streets were designed primarily to move cars quickly, and other users were expected to adapt. Lowering speed limits represents an attempt to shift that balance toward pedestrians, cyclists, and residents. Whether such a shift is welcomed or resisted will depend on how societies weigh convenience against safety, and individual freedom against the shared life of the community.",
+    ],
+    ja: [
+      '世界の多くの都市で、住宅地の通りのふだんの制限速度が時速50キロメートルから30キロメートルに下げられている。その変更を知らせる標識が、かつて車が自由に走っていた道路にあらわれ、かつて数分で都市を横ぎっていた運転者は、今では移動に少し長くかかるようになっている。支持する人々はこの政策を、命を救い通りをより快適にするかんたんで効果的な方法とよぶが、批判する人々は、交通をおそくし、ふつうの人々に不便をかける不必要な制限と見なしている。',
+      '支持する人々は、まず安全をあげる。車が歩行者にぶつかる速さは、けがの重さに大きく影響し、時速30キロメートルではねられた人は、時速50キロメートルではねられた人よりはるかに生きのこりやすい。速さが低ければ、子どもが道路に走り出てくるといった思いがけないできごとに運転者が反応する時間もふえ、止まるのに必要な距離も短くなる。歩く人や自転車に乗る人が車と通りを分け合う建物の密集した都市部では、こうしたちがいが生死を分けうると支持する人々は主張する。',
+      '支持する人々はまた、交通がおそくなると都市の暮らしの質がよくなると言う。車がゆっくり走る通りは静かになりやすく、住民は子どもを歩きや自転車で学校に行かせることを、より安心して認められるかもしれない。その変化は運転者には小さく見えるかもしれないが、地域のふんいきを変え、人々が外でより多くの時間を過ごしたり、地元の店をおとずれたり、通りをただの車の道ではなく共有の公共の場として使ったりするようにうながしうると支持する人々は主張する。',
+      'しかし批判する人々は、制限を下げることが言われているような利益をもたらすのかと疑問を投げかける。多くの通りでは、渋滞のためにすでに交通がゆっくり流れているので、公式の制限を変えても実際にはほとんどちがいがないと彼らは指摘する。道路が広くまっすぐなところでは、とくに取りしまりが弱ければ、運転者はふつりあいに低く思える制限を無視するかもしれず、広く無視される規則は、交通の法律全体への敬意をそこなうかもしれないと批判する人々は主張する。彼らの考えでは、資源は、混み合った交差点や学校の近くの通りのような、もっとも危険な場所にしぼった対策に使ったほうがよい。',
+      '批判する人々はまた、移動がおそくなることの費用についての心配をあげる。配達のサービスやタクシーやバスや緊急車両が目的地に着くのに長くかかるかもしれず、時がたつにつれて、失われた数分が積み重なって大きな経済の費用になりうる。この政策は都心の地域の住民の好みを反映する一方で、もっと遠くに住み、仕事や店や病院に行くのに車にたよっている人々、しかも実際にはほかの手段がほとんどないかもしれない人々の必要を無視していると主張する批判者もいる。',
+      '実際には、制限速度を下げることの効果は、それがどのように取り入れられるかに大きく左右されるようである。新しい制限を、せまい車線や高くした横断歩道や植えこみのような通りのつくりの変更と組み合わせる都市は、ただ新しい標識を立てるだけの都市より、速さや事故がより大きくへることが多い。住民の意見を聞くことや、はっきりと伝えることも役に立つ。変更の理由を理解している住民は、それを受け入れ、新しい規則を守りやすいからである。そのうえで事故のデータを定期的に見直せば、政策がうまくいっているか、どこでさらに調整が必要かがわかる。',
+      '都市の制限速度をめぐる議論は、結局のところ、都市の通りはだれのためのものかについての、より広い問いを反映している。二十世紀の多くのあいだ、通りは主に車を速く動かすためにつくられ、ほかの利用者はそれに合わせることを求められた。制限速度を下げることは、そのつりあいを歩行者や自転車に乗る人や住民の側へ移そうとする試みである。そうした変化が歓迎されるか、それとも反対されるかは、社会が便利さと安全、そして個人の自由と地域の共有の暮らしをどうくらべるかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「運転者には小さく見えるかもしれないが、地域のふんいきを変える」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that lower speed limits improve ( 1 ) and the quality of urban life. Critics question whether the limits make a practical difference and point to the costs of slower ( 2 ). The effects seem to depend on combining new limits with changes to street ( 3 ).',
+      blanks: [
+        { choices: ['safety', 'speed', 'prices', 'noise'], answer: 0, why: '第2段落 Supporters point first to safety。' },
+        { choices: ['journeys', 'meals', 'lessons', 'songs'], answer: 0, why: '第5段落 the costs of slower journeys。' },
+        { choices: ['design', 'names', 'lights', 'music'], answer: 0, why: '第6段落 combine new limits with changes to street design。' },
+      ],
+    },
+    tf: [
+      { statement: '時速30キロメートルではねられた人は、50キロメートルの場合より生きのこりやすい。', answer: true, why: '第2段落 far more likely to survive than one hit at fifty。' },
+      { statement: '批判する人々は、渋滞の多い通りでは制限を変えても大きなちがいがあると言う。', answer: false, why: '第4段落 changing the official limit makes little practical difference。' },
+      { statement: '緊急車両が目的地に着くのに長くかかるかもしれないと批判する人々は言う。', answer: true, why: '第5段落 emergency vehicles may take longer to reach their destinations。' },
+      { statement: 'ただ新しい標識を立てるだけで、もっとも大きな効果が出る。', answer: false, why: '第6段落 often see greater reductions ... than those that simply put up new signs。' },
+    ],
+    qa: [
+      { q: 'What can lower speeds give drivers, according to supporters?', choices: ['More time to react to unexpected events.', 'Higher fuel costs.', 'Fewer places to park.', 'Faster journeys.'], answer: 0, why: '第2段落 Lower speeds also give drivers more time to react to unexpected events。' },
+      { q: 'For much of the twentieth century, what were streets designed primarily to do?', choices: ['Move cars quickly.', 'Help children play.', 'Protect trees.', 'Slow down buses.'], answer: 0, why: '第7段落 streets were designed primarily to move cars quickly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
