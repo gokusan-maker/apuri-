@@ -40942,6 +40942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-the-sea',
+    title: 'On the Sea',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For people who live near the coast, the sea is a constant presence, visible from windows, audible at night, and felt in the salt that hangs in the air. For those who live far inland, it may be something seen only on occasional holidays, a place of escape and wonder. Yet whether we see it every day or only rarely, the sea seems to hold a special power over the human imagination, drawing people to stand at its edge and gaze toward a horizon that never comes closer, however long they may stand and watch.",
+      "Part of this power lies in the sheer scale of the ocean. It covers most of the Earth's surface and reaches depths that remain largely unexplored, and standing before it can make human concerns seem small and temporary. Many people describe a sense of calm when they look at the sea, as though its vastness helped them to see their own problems in a wider perspective. At the same time, the same vastness can inspire fear, reminding us of forces far beyond our control. Storms, tsunamis, and sudden changes in the weather have taken countless lives over the centuries, and coastal communities often preserve stories and memorials that keep these losses in mind.",
+      "The sea has also shaped human history in profound ways. For thousands of years, it has served both as a barrier separating peoples and as a highway connecting them. ( A ) crossing the ocean was long dangerous and uncertain, sailors carried goods, ideas, languages, and religions from one shore to another, so that many of the world's great cultures developed through contact made possible by the sea, and coastal cities became busy centers of trade and cultural exchange.",
+      "For those who depend on it for their livelihoods, the sea is not a romantic symbol but a demanding partner. Fishing communities must read its moods, respect its dangers, and adapt to the changing seasons and the movements of fish. Their knowledge of tides, currents, and weather, often passed down through generations, reflects a relationship based less on admiration than on close attention and practical experience, and their lives remind us that the sea gives generously but can also take away suddenly and without any warning.",
+      "In recent decades, human activity has begun to change the sea itself. Plastic waste drifts across the oceans and gathers on remote beaches, many fish populations have declined sharply because of overfishing, and rising temperatures are damaging coral reefs and altering the habitats of countless species. The ocean, which once seemed too vast to be affected by human actions, has proved to be far more vulnerable than earlier generations imagined. Scientists warn that some of these changes may take centuries to reverse, even if harmful practices were stopped today.",
+      "These changes challenge us to think differently about our relationship with the sea. Rather than regarding it simply as a source of resources or a place for recreation, we may need to recognize it as a living system on which much of life on Earth depends, including our own. The sea produces much of the oxygen we breathe and helps to regulate the climate, and its health is therefore closely linked to the wellbeing of human societies far from any coast.",
+      "In the end, the sea may serve as a mirror of our attitudes toward the natural world. It invites wonder and humility, but it also reveals the consequences of carelessness and greed. To stand at the shore and watch the waves is to be reminded both of the beauty that surrounds us and of the responsibility we bear for preserving it, so that future generations, too, may feel the same mixture of awe and calm before its endless horizon.",
+    ],
+    ja: [
+      '海辺の近くに住む人々にとって、海はたえずそこにあるものであり、まどから見え、夜には音が聞こえ、空気にただよう塩けとして感じられる。内陸の遠くに住む人々にとっては、ときどきの休みにしか見ないもの、つまり逃げ場であり、おどろきの場所であるかもしれない。しかし毎日見るにせよ、たまにしか見ないにせよ、海は人間の想像力に特別な力をもっているようであり、人々をそのふちに立たせ、どれほど長く立ってながめていても、けっして近づいてこない水平線を見つめさせる。',
+      'この力の一部は、海のあまりの大きさにある。海は地球の表面のほとんどをおおい、まだほとんど探検されていない深さにまでおよんでおり、その前に立つと、人間の心配ごとが小さく、一時的なものに思えることがある。多くの人が、海を見ると心が落ち着くと語る。まるでその広大さが、自分自身の問題をより広い視野で見る助けになったかのようである。同時に、その同じ広大さがおそれを呼び起こし、私たちの手のおよばない力を思い出させることもある。あらしや津波や急な天気の変化は、何世紀にもわたって数えきれない命をうばってきており、海辺の地域はしばしば、こうした喪失をわすれないための物語や記念碑を残している。',
+      '海はまた、人間の歴史を深く形づくってきた。何千年ものあいだ、海は人々を分けるかべであると同時に、人々を結ぶ大通りでもあった。海をわたることは長いあいだ危険で不確かなことだったが、船乗りたちは品物や考えやことばや宗教をある岸から別の岸へと運び、そのため世界の大きな文化の多くは、海によって可能になったふれ合いを通じて発展し、海辺の都市は貿易と文化の交流のにぎやかな中心になった。',
+      '海に生計をたよる人々にとって、海は夢のような象徴ではなく、きびしい相手である。漁業の地域は、海の機嫌を読み、その危険を尊重し、季節の移り変わりや魚の動きに合わせなければならない。しばしば何世代にもわたって受けつがれてきた、潮や海流や天気についての彼らの知識は、あこがれよりも、注意深い観察と実際の経験にもとづく関係を映しており、彼らの暮らしは、海が気前よくあたえる一方で、前ぶれもなくうばいもすることを思い出させてくれる。',
+      'ここ数十年、人間の活動が海そのものを変えはじめている。プラスチックのごみが海をただよい、遠くの浜辺に集まり、多くの魚の数がとりすぎのために大きくへり、水温の上昇がサンゴ礁をいため、数えきれない種のすみかを変えている。かつては人間の行いに影響されるにはあまりに広大に見えた海は、以前の世代が思っていたよりはるかにこわれやすいことがわかってきた。たとえ今日有害なやり方をやめたとしても、こうした変化の一部はもとにもどるまでに何世紀もかかるかもしれないと科学者は警告している。',
+      'こうした変化は、海との関係をちがうふうに考えるよう私たちにせまっている。海をただ資源の源や遊びの場所と見るのではなく、私たち自身をふくむ地球上の生命の多くがたよっている、生きた仕組みとして認める必要があるかもしれない。海は私たちがすう酸素の多くを生み出し、気候を調整する助けになっており、そのため海の健康は、どんな海岸からも遠くはなれた人間の社会の幸せとも深く結びついている。',
+      '結局のところ、海は、自然の世界に対する私たちの態度を映す鏡の役割を果たすのかもしれない。海はおどろきとけんきょさをさそうが、不注意と欲のもたらす結果も明らかにする。岸に立って波をながめることは、私たちをとりまく美しさと、それを守るために私たちが負う責任の両方を思い出すことであり、そうすることで、将来の世代もまた、その終わりのない水平線を前にして、同じおそれと落ち着きのまじった気持ちを感じられるようにするのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「海をわたるのは長いあいだ危険だったが、船乗りは品物や考えを運んだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '海は地球の表面のほとんどをおおっている。', answer: true, why: '第2段落 It covers most of the Earth’s surface。' },
+      { statement: '海は、人々を分けるだけで、結ぶことはなかった。', answer: false, why: '第3段落 both as a barrier ... and as a highway connecting them。' },
+      { statement: '漁業の地域の知識は、しばしば何世代にもわたって受けつがれてきた。', answer: true, why: '第4段落 often passed down through generations。' },
+      { statement: '海は、人間の行いにまったく影響されないことがわかった。', answer: false, why: '第5段落 has proved to be far more vulnerable than earlier generations imagined。' },
+    ],
+    qa: [
+      { q: 'What do many people describe when they look at the sea?', choices: ['A sense of calm.', 'A feeling of hunger.', 'A desire to sleep.', 'A wish to go home.'], answer: 0, why: '第2段落 Many people describe a sense of calm。' },
+      { q: 'What does the sea do for the climate, according to the passage?', choices: ['It helps to regulate the climate.', 'It makes the climate colder every year.', 'It has no effect on the climate.', 'It causes all storms.'], answer: 0, why: '第6段落 helps to regulate the climate。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
