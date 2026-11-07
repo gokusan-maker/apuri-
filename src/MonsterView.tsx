@@ -3351,6 +3351,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="54" rx="5" ry="3.5" fill="#1c1917" />
       </g>
     )
+  if (species === 'gibbon')
+    return (
+      <g>
+        {/* 長いうで */}
+        <path d="M24 56 q-14 -18 -6 -38 M76 56 q14 -18 6 -38" stroke="#151210" strokeWidth="4" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
