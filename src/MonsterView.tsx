@@ -3282,6 +3282,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 30 q-14 -10 -6 -26 M60 30 q14 -10 6 -26" stroke="#4a3620" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'olinguito')
+    return (
+      <g>
+        {/* 丸い耳 */}
+        <circle cx="34" cy="26" r="6" fill="#b5672e" stroke="#4a2510" strokeWidth="2" />
+        <circle cx="66" cy="26" r="6" fill="#b5672e" stroke="#4a2510" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
