@@ -39778,6 +39778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-space-tourism',
+    title: 'Should Space Tourism Be Encouraged?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of the history of space exploration, only a small number of highly trained astronauts, selected and paid for by national governments, have traveled beyond the Earth's atmosphere. In recent years, however, private companies have begun offering flights to paying customers, and a handful of wealthy individuals have already experienced a few minutes of weightlessness or even spent days aboard an orbiting station. Supporters believe that space tourism could one day become as ordinary as international air travel, while critics question whether it should be encouraged at all.",
+      "Supporters argue that space tourism can drive technological progress. Because private companies must compete for customers and reduce costs in order to survive, they have strong incentives to develop reusable rockets and more efficient designs. Such innovations, supporters claim, may eventually lower the cost of launching satellites, scientific instruments, and research missions, benefiting not only tourists but society as a whole. In this view, the money spent by wealthy travelers today helps finance the infrastructure that will make space more accessible in the future. Similar patterns have appeared before, they point out, since early airplanes and computers were also expensive toys for a privileged few before they became tools used by ordinary people every day.",
+      "Supporters also emphasize the human value of seeing the Earth from space. Many astronauts have described a profound change in perspective when they first looked down at the planet, noticing how thin the atmosphere appears and how invisible national borders become. ( A ) only a few people can currently afford such an experience, supporters argue, spreading it more widely could encourage a greater sense of shared responsibility for the planet and its future.",
+      "Critics, however, raise serious concerns about the environmental costs of space tourism. Rocket launches release gases and particles high into the atmosphere, where some of them may remain for long periods and contribute to climate change or damage the ozone layer. A single tourist flight may produce far more emissions per passenger than a long-distance airplane journey, and critics argue that it is difficult to justify such costs for what is essentially an expensive form of entertainment. If the industry grows as quickly as some companies hope, these effects could multiply, turning a minor source of pollution into a significant one within a few decades.",
+      "Critics also question the fairness of devoting resources to an activity that only the very rich can enjoy. At a time when many people around the world lack access to clean water, health care, or education, they argue, the spectacle of billionaires traveling into space for pleasure sends a troubling message about the priorities of modern societies. Some critics also worry that safety rules for private flights may be weaker than those applied to government missions, placing passengers and crews at risk.",
+      "Between these positions, some observers suggest that space tourism should be neither banned nor freely encouraged but carefully regulated. Governments could set limits on emissions, require companies to invest in cleaner fuels, and establish strict safety standards for passengers. They might also require that tourist flights carry scientific experiments or share data with researchers, so that each journey contributes something of public value beyond the experience of the individual traveler. Such rules would not settle every disagreement, but they could ensure that the benefits and burdens of this new industry are shared more fairly.",
+      "The debate over space tourism ultimately reflects deeper questions about how humanity should use its expanding technological power. Space has long been imagined as a frontier for science and exploration, pursued on behalf of all humankind. Whether it will also become a destination for leisure, and on what terms, will depend on choices made by companies, governments, and citizens about the balance between innovation, fairness, and responsibility toward the planet.",
+    ],
+    ja: [
+      '宇宙探査の歴史のほとんどを通じて、各国の政府に選ばれ費用を出してもらった、高度な訓練を受けたわずかな宇宙飛行士だけが、地球の大気の外へ旅してきた。しかし近年、民間企業が料金をはらう客に飛行を提供しはじめ、ひとにぎりの裕福な人々がすでに数分間の無重力を体験したり、軌道を回る基地で何日も過ごしたりしている。支持する人々は、宇宙旅行がいつか国際的な空の旅のようにありふれたものになりうると信じているが、批判する人々は、そもそもそれをすすめるべきなのかと疑問を投げかけている。',
+      '支持する人々は、宇宙旅行は技術の進歩をおし進めうると主張する。民間企業は生きのこるために客を取り合い費用を下げなければならないので、くり返し使えるロケットやより効率のよい設計を開発する強い動機がある。そうした革新は、やがて人工衛星や科学の機器や研究の飛行を打ち上げる費用を下げ、旅行者だけでなく社会全体の役に立つかもしれないと支持する人々は言う。この見方では、今日裕福な旅行者が使うお金は、将来宇宙をより身近にする基盤の資金になっている。同じような流れは前にも見られたと彼らは指摘する。初期の飛行機やコンピューターも、ふつうの人々が毎日使う道具になる前は、ひとにぎりの特権を持つ人々のための高価なおもちゃだったからである。',
+      '支持する人々はまた、宇宙から地球を見ることの人間にとっての価値を強調する。多くの宇宙飛行士が、はじめて地球を見下ろしたとき、大気がいかにうすく見えるか、国境がいかに見えなくなるかに気づき、ものの見方が深く変わったと語ってきた。今のところそうした体験をする余裕があるのはわずかな人だけだが、それをより広く広めることは、地球とその未来に対する共通の責任の感覚を強めうると支持する人々は主張する。',
+      'しかし批判する人々は、宇宙旅行の環境への負担について重大な心配をあげる。ロケットの打ち上げは、気体や粒子を大気の高いところに出し、その一部は長いあいだそこに残って気候変動に加担したりオゾン層をこわしたりするかもしれない。一回の旅行の飛行は、乗客一人あたり、長い距離の飛行機の旅よりはるかに多くの排出を生むかもしれず、本質的には高価な娯楽の一つにすぎないもののために、そうした負担を正当化するのはむずかしいと批判する人々は主張する。もしこの産業が一部の企業の望むほど急速に成長すれば、こうした影響は何倍にもなり、小さな汚染の原因が数十年のうちに大きなものに変わりうる。',
+      '批判する人々はまた、ごく裕福な人々だけが楽しめる活動に資源を注ぐことの公平さに疑問を投げかける。世界中の多くの人々がきれいな水や医療や教育を得られずにいる時に、大富豪が楽しみのために宇宙へ旅する光景は、現代社会の優先順位について気がかりな合図を送っていると彼らは主張する。民間の飛行の安全の規則が、政府の飛行に当てはめられる規則より弱く、乗客や乗組員を危険にさらすのではないかと心配する批判者もいる。',
+      'これらの立場のあいだで、宇宙旅行は禁止するのでも自由にすすめるのでもなく、注意深く規制すべきだと提案する人々もいる。政府は排出に上限を設け、企業によりきれいな燃料に投資するよう求め、乗客のためのきびしい安全の基準をつくることができるだろう。また、旅行の飛行に科学の実験をのせたり研究者とデータを分け合ったりするよう求め、それぞれの旅が、個々の旅行者の体験をこえて、何か公共の価値に役立つようにすることもできるかもしれない。そうした規則がすべての意見のちがいを解決するわけではないが、この新しい産業の利益と負担がより公平に分かち合われるようにすることはできるだろう。',
+      '宇宙旅行をめぐる議論は、結局のところ、人類が広がりつづける技術の力をどう使うべきかについての、より深い問いを反映している。宇宙は長いあいだ、全人類のために追い求められる、科学と探検のフロンティアとして思いえがかれてきた。宇宙がレジャーの行き先にもなるのかどうか、そしてどのような条件でそうなるのかは、革新と公平さと地球への責任のつりあいについて、企業や政府や市民が行う選択しだいだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「今は余裕があるのはわずかな人だけだが、広めれば責任の感覚を強めうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that space tourism can drive technological ( 1 ) and change how people see the Earth. Critics point to its environmental costs and question its ( 2 ), since only the very rich can enjoy it. Some observers suggest that it should be carefully ( 3 ).',
+      blanks: [
+        { choices: ['progress', 'decline', 'history', 'silence'], answer: 0, why: '第2段落 space tourism can drive technological progress。' },
+        { choices: ['fairness', 'speed', 'beauty', 'popularity'], answer: 0, why: '第5段落 Critics also question the fairness。' },
+        { choices: ['regulated', 'banned', 'ignored', 'celebrated'], answer: 0, why: '第6段落 should be neither banned nor freely encouraged but carefully regulated。' },
+      ],
+    },
+    tf: [
+      { statement: 'すでに数人の裕福な人々が、宇宙で無重力を体験している。', answer: true, why: '第1段落 a handful of wealthy individuals have already experienced a few minutes of weightlessness。' },
+      { statement: '一回の宇宙旅行の飛行は、乗客一人あたりの排出が飛行機の旅より少ない。', answer: false, why: '第4段落 may produce far more emissions per passenger than a long-distance airplane journey。' },
+      { statement: '民間の飛行の安全の規則が弱いかもしれないと心配する批判者がいる。', answer: true, why: '第5段落 safety rules for private flights may be weaker。' },
+      { statement: '筆者は、宇宙旅行はすぐに禁止すべきだと結論づけている。', answer: false, why: '第7段落 選択しだいだと述べ、禁止を結論にしていない。' },
+    ],
+    qa: [
+      { q: 'Why do private companies have strong incentives to develop reusable rockets?', choices: ['They must compete for customers and reduce costs to survive.', 'Governments order them to.', 'Astronauts refuse to fly otherwise.', 'Rockets are too heavy to carry.'], answer: 0, why: '第2段落 they must compete for customers and reduce costs in order to survive。' },
+      { q: 'What do many astronauts say they noticed when looking down at the Earth?', choices: ['How thin the atmosphere appears and how invisible borders become.', 'How large the cities look.', 'How bright the moon is.', 'How fast the clouds move.'], answer: 0, why: '第3段落 how thin the atmosphere appears and how invisible national borders become。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
