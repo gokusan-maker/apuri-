@@ -43022,6 +43022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wells',
+    title: 'On Wells',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, the place where people obtained their water was also one of the places where they met. In villages without pipes or taps, someone from each household had to walk to a well every day, wait their turn, and carry heavy containers home, and while they waited they talked, exchanged news, and settled small disputes. Today most of us obtain water by turning a tap in the privacy of our own homes, and we rarely think about where it comes from, yet the history of the well suggests that the way we meet our most basic needs shapes the way we live together.",
+      "A well is, first of all, a sign of dependence on the earth. Its water is drawn from deep underground, from sources that have collected slowly over long periods of time, and the people who use it are reminded every day that their lives rest on something they did not create and cannot fully control. In dry seasons, when the water level falls, the community must share what remains carefully, and the condition of the well becomes a concern for everyone rather than a private matter for each household.",
+      "For this reason, wells were often surrounded by rules and customs. In many places, the people who used a well were responsible together for keeping it clean, repairing its walls, and deciding how much water each family could take when supplies were short. ( A ) such arrangements could be the source of quarrels, they also taught people that a shared resource must be protected by shared effort, and that the welfare of each household depended on the cooperation of all the others.",
+      "Wells have also held a special place in the human imagination. In many stories and songs, a well is a place of meetings and promises, where travelers are welcomed and where strangers become friends, and its dark depths have often been associated with mystery and hidden knowledge. Perhaps because water was so precious, the act of drawing it up from the darkness into the light came to stand for the effort required to obtain anything of real value, whether wisdom, love, or understanding.",
+      "The arrival of piped water changed all of this. Water that flows freely into every home has saved countless hours of labor, especially for women and children who once carried it for long distances, and it has greatly reduced the spread of disease. Few people would wish to give up these benefits, but it is worth noticing that the well, as a place where neighbors met every day in order to obtain something they all needed, has largely disappeared from the lives of those who now take water for granted.",
+      "Something similar may be happening with other shared resources. Many of the goods and services that people once obtained together, in markets, libraries, and public squares, are now delivered privately to each household, often through screens. Such changes bring great convenience, but they may also reduce the everyday occasions on which people of different ages and backgrounds encounter one another, and they may make it easier to forget that the resources on which we all depend are ultimately shared and finite.",
+      "Perhaps, then, wells deserve more attention than we usually give them. They remind us that meeting our needs has long been a social activity as well as a practical one, and that the places where we gather to obtain what we need can become the places where communities are formed. In a world where water and much else arrive at our doors without effort, it may be worth asking how we can preserve the sense of shared responsibility that the well once taught, and how we might create new places where neighbors can meet as naturally as they once did around the water.",
+    ],
+    ja: [
+      '人類の歴史のほとんどの期間、人々が水を手に入れる場所は、人々が出会う場所の一つでもあった。水道管も蛇口もない村では、それぞれの家からだれかが毎日井戸まで歩いて行き、順番を待ち、重い入れものを家まで運ばなければならなかった。そして待っているあいだに、人々は話をし、知らせを交換し、小さなもめごとを解決した。今日、私たちのほとんどは自分の家の中で蛇口をひねって水を手に入れ、それがどこから来るのかをめったに考えない。しかし井戸の歴史は、私たちがもっとも基本的な必要を満たすしかたが、私たちがどのようにともに暮らすかを形づくっていることを示している。',
+      '井戸は、まず何よりも、大地にたよっていることのしるしである。その水は地下深くから、長い時間をかけてゆっくりとたまった源からくみ上げられ、それを使う人々は、自分たちの生活が、自分ではつくっておらず完全にはあやつれない何かの上に成り立っていることを毎日思い出させられる。かわいた季節に水位が下がると、共同体は残った水を注意深く分け合わなければならず、井戸の状態は、それぞれの家の私的な問題ではなく、みんなの関心事になる。',
+      'このため、井戸はしばしば決まりや習慣にかこまれていた。多くの場所で、井戸を使う人々は、井戸をきれいに保ち、その壁を直し、水がたりないときに各家族がどれだけ水をとってよいかを決める責任を、いっしょに負っていた。そうした取り決めはけんかの種になることもあったが、それはまた人々に、共有の資源は共有の努力によって守られなければならないこと、そして各家の暮らしがほかのすべての家の協力にかかっていることを教えた。',
+      '井戸はまた、人間の想像力のなかで特別な位置をしめてきた。多くの物語や歌のなかで、井戸は出会いと約束の場所であり、旅人が迎えられ、見知らぬ人どうしが友だちになる場所である。そしてその暗い深みは、しばしばなぞやかくされた知識と結びつけられてきた。おそらく水がとても貴重だったからこそ、暗やみから光の中へ水をくみ上げるという行為は、知恵であれ愛であれ理解であれ、本当に価値あるものを手に入れるのに必要な努力を表すようになったのだろう。',
+      '水道の登場は、これらすべてを変えた。どの家にも自由に流れこむ水は、数えきれない時間の労働を省き、とくにかつて長い距離を運んでいた女性や子どもを助け、病気の広がりを大きく減らした。こうした利益を手ばなしたいと思う人はほとんどいないだろう。しかし、近所の人々がみんなが必要とするものを手に入れるために毎日出会う場所としての井戸が、いまや水を当たり前と思っている人々の生活からほとんど消えてしまったことには気づいておく価値がある。',
+      '似たようなことが、ほかの共有の資源についても起こっているのかもしれない。人々がかつて市場や図書館、広場でいっしょに手に入れていた品物やサービスの多くは、いまでは各家庭にばらばらに、しばしば画面を通してとどけられる。そうした変化は大きな便利さをもたらすが、ちがう年齢や生まれの人々がおたがいに出会う日々の機会を減らすかもしれず、私たちみんながたよっている資源が、結局は共有されたかぎりあるものだということをわすれやすくするかもしれない。',
+      'だとすれば、井戸は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。井戸は、自分の必要を満たすことが、昔から実際的な活動であると同時に社会的な活動でもあったこと、そして必要なものを手に入れるために集まる場所が、共同体が形づくられる場所になりうることを思い出させてくれる。水をはじめ多くのものが努力なしに玄関までとどく世界で、井戸がかつて教えてくれた共有の責任の感覚をどうすれば保てるのか、そして近所の人々が、かつて水のまわりでそうしたように自然に出会える新しい場所をどうすればつくれるのかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「取り決めはけんかの種になることもあったが、共有の努力の大切さを教えた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '井戸で順番を待つあいだに、人々は知らせを交換した。', answer: true, why: '第1段落 while they waited they talked, exchanged news。' },
+      { statement: 'かわいた季節には、井戸の状態は各家の私的な問題になった。', answer: false, why: '第2段落 a concern for everyone rather than a private matter for each household。' },
+      { statement: '水道は、病気の広がりを大きく減らした。', answer: true, why: '第5段落 it has greatly reduced the spread of disease。' },
+      { statement: '筆者は、水道の利益を手ばなすべきだと述べている。', answer: false, why: '第5段落 Few people would wish to give up these benefits。' },
+    ],
+    qa: [
+      { q: 'Who were responsible together for keeping a well clean in many places?', choices: ['The people who used it.', 'Travelers from far away.', 'Only the village leader.', 'Children alone.'], answer: 0, why: '第3段落 the people who used a well were responsible together for keeping it clean。' },
+      { q: 'What did drawing water up from the darkness come to stand for?', choices: ['The effort required to obtain anything of real value.', 'The danger of deep water.', 'The end of a long journey.', 'The power of rulers.'], answer: 0, why: '第4段落 came to stand for the effort required to obtain anything of real value。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
