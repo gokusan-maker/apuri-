@@ -40382,6 +40382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-books',
+    title: 'On Living with Books',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many homes contain shelves of books that have been read once and never opened again, along with others that were bought with good intentions but have never been read at all. To a practical observer, such collections may seem wasteful, occupying space that could be used for other purposes and gathering dust year after year. Yet many people feel a strong attachment to the books they own, and they would be reluctant to part with them even if they knew that they would never read them again.",
+      "One reason for this attachment may be that books are not only sources of information but also companions in a life. A book read at a particular moment, perhaps during a difficult period or a long journey, may become associated with that time, so that simply seeing its cover can bring back memories of who we were when we first read it. In this sense, a shelf of books can serve as a kind of autobiography, recording the interests, questions, and changing tastes of its owner across many years.",
+      "Unread books, too, may have a value that is easy to overlook. A shelf of books that we have not yet read can remind us of how much we do not know and of how many worlds remain to be explored. ( A ) some may regard such books as evidence of laziness or vanity, others see them as a healthy reminder of the limits of their knowledge, a quiet encouragement to remain curious rather than to assume that they have already learned enough.",
+      "The physical form of the printed book also contributes to its significance. Unlike a file stored on a screen, a printed book occupies space, has weight, and changes with age, its pages yellowing and its spine bearing the marks of use. Readers may write notes in the margins, fold the corners of pages, or keep a ticket or a letter between them, so that over time each copy becomes unique, carrying traces of the particular life in which it has been read.",
+      "In recent decades, digital reading has transformed the relationship between people and books. It is now possible to carry thousands of books on a single device, to search their contents instantly, and to obtain new titles within seconds. These advantages are considerable, especially for those who travel frequently or have little space at home. Yet some readers feel that something is lost when books become invisible files, since they no longer surround us as visible presences in the rooms where we live. A child growing up in a home without visible books, some worry, may never experience the curiosity that comes from pulling an unfamiliar volume from a shelf.",
+      "Living with books, then, is not only a matter of reading them but of allowing them to shape the spaces and rhythms of daily life. A book left on a table may invite a moment of reading that would not otherwise have occurred, and a guest who browses a host's shelves may discover a shared interest that leads to a long conversation. In such ways, books continue to act on us even when we are not reading them, quietly influencing our thoughts and relationships.",
+      "In the end, our attachment to books may reveal a deeper human desire to keep our past within reach and our future open. The books we have read remind us of the paths we have taken, while those we have not yet read suggest the paths that remain. To live among books is therefore to live in the company of both memory and possibility, and perhaps this is why so many people find it hard to let them go, even when practical reason suggests that they should.",
+    ],
+    ja: [
+      '多くの家には、一度読まれたきり二度と開かれない本や、よい心がけで買われたものの一度も読まれていない本がならぶ本だなが置かれている。実際的な目で見る人には、そうした本の集まりはむだに見えるかもしれない。ほかの目的に使えたはずの場所をしめ、年ごとにほこりをかぶっているからである。しかし多くの人は自分のもっている本に強い愛着を感じており、もう二度と読まないとわかっていても、それを手ばなすのをためらうだろう。',
+      'この愛着の理由の一つは、本がただの情報の源ではなく、人生の道づれでもあることかもしれない。ある時期、たとえばつらい時期や長い旅のあいだに読んだ本は、その時と結びつくことがあり、そのため、表紙を見るだけで、はじめてそれを読んだときの自分を思い出すことがある。この意味で、本だなは一種の自伝の役割を果たし、持ち主の関心や問いや移り変わる好みを、何年にもわたって記録しているのである。',
+      'まだ読んでいない本にも、見落とされやすい価値があるかもしれない。まだ読んでいない本のならぶ本だなは、私たちがどれほど多くのことを知らず、どれほど多くの世界がまださぐられずに残っているかを思い出させてくれる。そうした本をなまけ心や見えのしるしと見なす人もいるかもしれないが、それを自分の知識の限界を思い出させる健全なもの、つまり、もう十分に学んだと思いこむのではなく、好奇心をもち続けるようにとしずかにはげましてくれるものと見る人もいる。',
+      '印刷された本という物としての形も、その意味に役立っている。画面の中に保存されたファイルとちがって、印刷された本は場所をしめ、重さがあり、年とともに変わっていく。ページは黄ばみ、背には使われた跡が残る。読者は余白にメモを書いたり、ページの角を折ったり、切符や手紙をはさんでおいたりすることがあり、そのため、時がたつにつれて一冊一冊がほかにないものになり、それが読まれてきた特定の人生の跡をとどめるようになる。',
+      'ここ数十年、デジタルの読書が、人と本の関係を大きく変えてきた。今では一つの機器で何千冊もの本をもち運び、その中身をすぐに検索し、新しい本を数秒で手に入れることができる。こうした利点は、とくによく旅をする人や家に場所の少ない人にとって大きい。しかし、本が目に見えないファイルになると何かが失われると感じる読者もいる。本がもはや、私たちの暮らす部屋の中で、目に見える存在として私たちをかこんでいないからである。目に見える本のない家で育つ子どもは、たなから見知らぬ一冊をぬき出すことから生まれる好奇心を、一度も味わわないかもしれないと心配する人もいる。',
+      'だから、本とともに暮らすとは、本を読むことだけでなく、本が日々の暮らしの場所やリズムを形づくるのにまかせることでもある。テーブルに置かれた本は、そうでなければ起こらなかったはずの読書のひとときをさそうかもしれず、主人の本だなをながめる客は、長い会話につながる共通の関心を見つけるかもしれない。こうしたやり方で、本は、私たちが読んでいないときでさえ私たちにはたらきかけ続け、考えや人間関係にしずかに影響をあたえているのである。',
+      '結局のところ、本への愛着は、過去を手の届くところに置き、未来を開いたままにしておきたいという、より深い人間の望みをあらわしているのかもしれない。読んだ本は私たちがたどってきた道を思い出させ、まだ読んでいない本は残っている道を示してくれる。だから本にかこまれて暮らすことは、記憶と可能性の両方とともに暮らすことであり、実際的な理くつが手ばなすべきだと示しているときでさえ、多くの人が本を手ばなしにくいのは、おそらくそのためなのだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「なまけ心や見えのしるしと見なす人もいるかもしれないが、健全なものと見る人もいる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの人は、もう読まない本でも手ばなすのをためらう。', answer: true, why: '第1段落 they would be reluctant to part with them。' },
+      { statement: '筆者は、まだ読んでいない本には何の価値もないと述べている。', answer: false, why: '第3段落 Unread books, too, may have a value。' },
+      { statement: '印刷された本は、使われるうちに一冊一冊がほかにないものになる。', answer: true, why: '第4段落 over time each copy becomes unique。' },
+      { statement: 'デジタルの読書には、利点がまったくない。', answer: false, why: '第5段落 These advantages are considerable。' },
+    ],
+    qa: [
+      { q: 'What can a shelf of books serve as, according to the author?', choices: ['A kind of autobiography of its owner.', 'A list of prices.', 'A school textbook.', 'A piece of furniture only.'], answer: 0, why: '第2段落 a shelf of books can serve as a kind of autobiography。' },
+      { q: 'What might a guest who browses the shelves of a host discover?', choices: ['A shared interest that leads to a long conversation.', 'A hidden treasure.', 'A way to read faster.', 'A reason to leave early.'], answer: 0, why: '第6段落 may discover a shared interest that leads to a long conversation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
