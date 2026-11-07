@@ -41458,6 +41458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-swimming-lessons',
+    title: 'Should Swimming Lessons Be Compulsory?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Drowning is one of the leading causes of accidental death among children and young people in many parts of the world. Tragedies occur not only in the sea but also in rivers, lakes, swimming pools, and even shallow water near homes, often within a few minutes and sometimes within sight of other people. In response, some countries have made swimming lessons a compulsory part of primary education, requiring every child to reach a basic level of skill before leaving school. Others leave such lessons to families, raising the question of whether learning to swim should be treated as an essential life skill.",
+      "Supporters argue that compulsory swimming lessons can save lives. A child who can float, swim a short distance, and stay calm in the water has a much better chance of surviving an accident than one who cannot. Because drowning often happens unexpectedly, supporters point out, even people who never intend to swim for pleasure may find themselves in danger, for example when a boat overturns or a flood strikes. Teaching every child basic water safety is therefore a form of protection whose value may only become apparent in an emergency. Supporters add that confident swimmers are also more likely to enjoy healthy outdoor activities throughout their lives, from boating to simply playing at the beach with their own children.",
+      "Supporters also emphasize the importance of fairness. In many places, children from wealthier families are far more likely to learn to swim, because their parents can afford private lessons and have easy access to pools. ( A ) swimming may seem like a recreational activity, supporters argue, unequal access to lessons means that poorer children face greater risks, and only schools can ensure that every child, regardless of background, receives the same opportunity to learn.",
+      "Critics, however, point to practical obstacles. Many schools have no pool of their own and must transport students to public facilities, which takes time and money. In areas where pools are scarce, it may be difficult to provide enough lessons for every child to learn properly, and large classes may leave instructors unable to give each student the attention needed to become confident in the water. Critics argue that, without adequate funding, compulsory lessons may exist only on paper, with many children leaving school still unable to swim.",
+      "Critics also note that swimming in a pool is very different from surviving in open water. A child who can swim several lengths in a calm, warm pool may still be at risk in cold water, strong currents, or waves. Some experts therefore argue that lessons should focus not only on swimming technique but also on understanding the dangers of different environments, recognizing when not to enter the water, and knowing how to help others safely without putting oneself at risk.",
+      "Many countries that have adopted compulsory lessons combine them with broader water safety education. Children may learn how to float on their backs, how to call for help, and how to use objects as flotation devices, in addition to basic swimming strokes. Public campaigns, lifeguards at popular beaches, and fences around pools and ponds can further reduce the risk of accidents, especially for very young children who cannot yet be taught to swim at all.",
+      "The debate over compulsory swimming lessons ultimately reflects a broader question about what schools should be responsible for. Education is often thought of in terms of academic subjects, but schools also play an important role in teaching skills that protect health and life. Deciding whether swimming belongs in this category requires weighing the costs of providing lessons against the value of lives that might be saved, a calculation in which many would argue that even a single life saved outweighs considerable expense.",
+    ],
+    ja: [
+      'おぼれることは、世界の多くの地域で、子どもや若者の事故による死の主な原因の一つである。悲劇は海だけでなく、川や湖やプールで、さらには家の近くの浅い水の中でも起こり、しばしば数分のうちに、ときにはほかの人の目のとどくところで起こる。これにこたえて、水泳の授業を小学校の教育の必修の一部にし、すべての子どもに学校を出る前に基本的な水準に達することを求める国もある。ほかの国々はそうした授業を家庭にまかせており、泳ぎを学ぶことを欠かせない生きる技術としてあつかうべきかという問いを投げかけている。',
+      '支持する人々は、必修の水泳の授業は命を救いうると主張する。うかび、短い距離を泳ぎ、水の中で落ち着いていられる子どもは、そうでない子どもよりも、事故から生きのびる見こみがはるかに高い。おぼれることはしばしば思いがけず起こるので、楽しみのために泳ぐつもりのない人でさえ、たとえば船がひっくり返ったり洪水におそわれたりしたときに、危険な目にあうかもしれないと支持する人々は指摘する。だから、すべての子どもに基本的な水の安全を教えることは、その価値が緊急時にしかはっきりしないかもしれない一つの守りなのである。また、自信をもって泳げる人は、ボートから、自分の子どもと浜辺で遊ぶことまで、一生を通じて健康的な外の活動を楽しみやすいと支持する人々はつけ加える。',
+      '支持する人々はまた、公平さの大切さを強調する。多くの場所で、裕福な家庭の子どもははるかに泳ぎを学びやすい。親が個人の教室の費用をはらうことができ、プールにかんたんに行けるからである。水泳は遊びの活動のように見えるかもしれないが、授業を受けられる機会が不平等だということは、貧しい子どもがより大きな危険にさらされるということであり、生い立ちにかかわらず、すべての子どもが学ぶ同じ機会を受けられるようにできるのは学校だけだと支持する人々は主張する。',
+      'しかし批判する人々は、実際的な障害をあげる。多くの学校には自分のプールがなく、生徒を公共の施設まで運ばなければならず、それには時間とお金がかかる。プールが少ない地域では、すべての子どもがきちんと学べるだけの授業を用意するのはむずかしいかもしれず、大きなクラスでは、指導者が、生徒一人一人が水の中で自信をもつのに必要な注意をはらえないかもしれない。十分な資金がなければ、必修の授業は書類の上にしか存在せず、多くの子どもがまだ泳げないまま学校を出ていくかもしれないと批判する人々は主張する。',
+      '批判する人々はまた、プールで泳ぐことは、自然の水の中で生きのびることとはまったくちがうと指摘する。おだやかであたたかいプールで何往復も泳げる子どもでも、つめたい水や強い流れや波の中では、まだ危険にさらされているかもしれない。そのため、授業は泳ぎ方だけでなく、さまざまな環境の危険を理解すること、水に入るべきでないときに気づくこと、そして自分を危険にさらさずに安全に人を助ける方法を知ることにも力を入れるべきだと主張する専門家もいる。',
+      '必修の授業を取り入れた多くの国は、それをより広い水の安全の教育と組み合わせている。子どもたちは、基本的な泳ぎ方に加えて、あおむけにうかぶ方法や、助けを呼ぶ方法や、物をうきとして使う方法を学ぶことがある。広報の取り組みや、人気のある浜辺の監視員や、プールや池のまわりのさくは、とくにまだ泳ぎを教えられないとても小さな子どもにとって、事故の危険をさらにへらすことができる。',
+      '必修の水泳の授業をめぐる議論は、結局のところ、学校が何に責任をもつべきかについての、より広い問いを反映している。教育はしばしば学問の科目の点から考えられるが、学校は健康と命を守る技術を教えるうえでも大切な役割を果たしている。水泳がこの部類に入るかどうかを決めるには、授業を用意する費用と、救われるかもしれない命の価値をくらべる必要がある。そしてその計算では、たった一つの命でさえかなりの費用にまさると、多くの人は主張するだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「遊びの活動のように見えるかもしれないが、機会の不平等は貧しい子どもの危険を高める」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that compulsory swimming lessons can save lives and ensure ( 1 ) for all children. Critics point to the lack of ( 2 ) and note that swimming in a pool differs from surviving in open water. Many countries combine lessons with broader water ( 3 ) education.',
+      blanks: [
+        { choices: ['fairness', 'fame', 'speed', 'silence'], answer: 0, why: '第3段落 the importance of fairness。' },
+        { choices: ['pools', 'students', 'books', 'buses'], answer: 0, why: '第4段落 Many schools have no pool of their own。' },
+        { choices: ['safety', 'sports', 'science', 'music'], answer: 0, why: '第6段落 broader water safety education。' },
+      ],
+    },
+    tf: [
+      { statement: 'おぼれる事故は、浅い水の中でも起こりうる。', answer: true, why: '第1段落 even shallow water near homes。' },
+      { statement: '裕福な家庭の子どもも貧しい家庭の子どもも、同じくらい泳ぎを学ぶ機会がある。', answer: false, why: '第3段落 children from wealthier families are far more likely to learn to swim。' },
+      { statement: 'プールで泳げる子どもでも、自然の水では危険なことがある。', answer: true, why: '第5段落 may still be at risk in cold water, strong currents, or waves。' },
+      { statement: '池のまわりのさくは、事故の危険をへらすのに役立たない。', answer: false, why: '第6段落 fences around pools and ponds can further reduce the risk。' },
+    ],
+    qa: [
+      { q: 'Why do many schools find it difficult to provide swimming lessons?', choices: ['They have no pool and must transport students to public facilities.', 'Students do not like water.', 'Teachers cannot swim.', 'Lessons are forbidden by law.'], answer: 0, why: '第4段落 Many schools have no pool of their own and must transport students。' },
+      { q: 'What do some experts think lessons should also teach?', choices: ['How to recognize dangers and help others safely.', 'How to dive from great heights.', 'How to race professionally.', 'How to build a pool.'], answer: 0, why: '第5段落 recognizing when not to enter the water, and knowing how to help others safely。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
