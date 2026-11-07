@@ -42178,6 +42178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-dynamic-pricing',
+    title: 'Should Prices Rise and Fall with Demand?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Anyone who has booked a flight or a hotel room online knows that the price of the same seat or room can change from one day to the next, and sometimes from one hour to the next. This practice, known as dynamic pricing, allows sellers to raise prices when demand is high and lower them when demand is weak. It has recently spread from airlines and hotels to concert tickets, taxi rides, sports events, and even electricity, and it has provoked a lively debate about whether it is a sensible use of technology or an unfair way of taking advantage of customers.",
+      "Supporters argue that dynamic pricing makes markets work more efficiently. When a fixed price is set too low for a popular event, tickets sell out in minutes, and many of them end up in the hands of resellers who charge far more than the original price. If the price itself rises with demand, supporters say, the extra money goes to the performers and organizers rather than to people who simply bought tickets in order to sell them again. In their view, a flexible price only reveals openly what the market would have charged anyway.",
+      "Supporters also point out that flexible prices can spread demand more evenly over time. A taxi service that charges more during a sudden storm encourages more drivers to come out onto the roads, while customers who are not in a hurry may choose to wait until the price falls again. ( A ) higher prices are rarely welcome, supporters argue, they can help make sure that a service is available to the people who need it most urgently, rather than leaving everyone waiting in a long queue for cars that never arrive.",
+      "Critics, however, argue that dynamic pricing can feel deeply unfair to ordinary customers. Fans who have waited years to see their favorite band may discover that the price has doubled while they were waiting in an online queue, and families who must travel during school holidays have little choice but to pay whatever is demanded. Critics point out that the practice tends to favor wealthier customers, because those with less money are simply priced out of events and services at the very moments when they are most wanted.",
+      "Critics also raise concerns about transparency and trust. Because prices are increasingly set by computer programs that analyze large amounts of data, customers often have no idea why a price has risen or whether they are being charged more than someone else. Some worry that companies may eventually use information about individual customers, such as their location or their past purchases, to charge each person the highest price they are likely to accept, which would turn a simple purchase into a contest that the customer cannot see.",
+      "In response, some governments and organizations have begun to set rules on how flexible prices may be used. Some ticket sellers now promise to show the full price clearly before customers enter a queue, while others limit how far prices can rise above the original level. Some regulators have also argued that prices for essential goods and services, such as water, medicine, and emergency transport, should not be allowed to increase sharply during a crisis, since people in such situations cannot reasonably wait or go elsewhere.",
+      "The debate over dynamic pricing ultimately reflects a broader question about what a fair price really is. For some people, a fair price is simply whatever buyers are willing to pay at a given moment, while for others it is a stable price that treats all customers equally regardless of when they happen to buy. As technology makes it ever easier to change prices instantly, societies will need to decide how much of their economic life should be governed by the logic of the market, and how much should be protected by shared ideas about fairness.",
+    ],
+    ja: [
+      '航空券やホテルの部屋をインターネットで予約したことがある人なら、同じ座席や部屋の値段が日によって、ときには時間によって変わることを知っている。ダイナミック・プライシング（変動価格制）とよばれるこのやり方では、売り手は需要が高いときには値段を上げ、需要が弱いときには下げることができる。この方法は最近、航空会社やホテルから、コンサートのチケット、タクシーの乗車、スポーツの試合、さらには電気にまで広がり、技術の賢い使い方なのか、それとも客の弱みにつけこむ不公平なやり方なのかをめぐって、活発な議論を引き起こしている。',
+      '支持する人々は、変動価格制が市場をより効率よく働かせると主張する。人気のある催しで固定の値段が低すぎると、チケットは数分で売り切れ、その多くが、もとの値段よりはるかに高く売る転売業者の手にわたってしまう。値段そのものが需要とともに上がれば、増えたお金は、ただ転売するためにチケットを買った人々ではなく、出演者や主催者に入ると支持者は言う。彼らの考えでは、変動する値段は、市場がいずれにせよつけていたはずの値段を、ただ公然と示すだけなのである。',
+      '支持する人々はまた、変動する値段が需要を時間的により均等に分散させうると指摘する。急な嵐のあいだに高い料金をとるタクシー会社は、より多くの運転手を道路に出てこさせ、一方で急いでいない客は値段がまた下がるまで待つことを選ぶかもしれない。高い値段が歓迎されることはめったにないが、それは、決して来ない車を待つ長い列に全員を並ばせたままにするのではなく、もっとも急いで必要としている人々がサービスを使えるようにする助けになりうる、と支持者は主張する。',
+      'しかし批判する人々は、変動価格制がふつうの客にとってひどく不公平に感じられることがあると主張する。大好きなバンドを見るために何年も待ってきたファンが、オンラインの順番待ちをしているあいだに値段が倍になったことに気づくかもしれないし、学校の休みの時期に旅行しなければならない家族には、求められた額をはらうしかない。批判する人々は、このやり方は裕福な客に有利になりがちだと指摘する。お金の少ない人々は、催しやサービスがもっとも求められるまさにそのときに、値段のせいで締め出されてしまうからである。',
+      '批判する人々はまた、透明性と信頼についての懸念も示す。値段はますます大量のデータを分析するコンピュータープログラムによって決められるようになっているため、客は、なぜ値段が上がったのか、ほかの人より高い額をとられているのかどうかを知らないことが多い。会社がいずれ、居場所や過去の買い物といった個々の客についての情報を使って、一人ひとりに受け入れそうなもっとも高い値段をつけるようになるのではないかと心配する人もいる。そうなれば、単純な買い物が、客には見えない駆け引きに変わってしまうだろう。',
+      'これに対して、一部の政府や団体は、変動する値段の使い方について決まりを設けはじめている。客が順番待ちに入る前に総額をはっきり示すと約束するチケット販売会社もあれば、値段がもとの水準からどこまで上がれるかを制限する会社もある。また、水や薬、緊急の移動手段といった欠かせない商品やサービスの値段は、危機のあいだに急に上げることを許すべきではないと主張する規制当局もある。そのような状況にある人々は、無理なく待つことも、ほかへ行くこともできないからである。',
+      '変動価格制をめぐる議論は、結局のところ、公正な値段とは本当は何なのかという、より広い問いを反映している。ある人々にとって公正な値段とは、ある時点で買い手がはらう気のある額にすぎないが、ほかの人々にとっては、いつ買うかにかかわらずすべての客を平等にあつかう安定した値段である。技術によって値段を瞬時に変えることがますます簡単になるなかで、社会は、経済生活のどこまでを市場の論理にゆだね、どこまでを公正さについての共通の考えによって守るべきかを決める必要があるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「高い値段は歓迎されないが、必要な人にサービスが届く助けになる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that dynamic pricing makes markets more ( 1 ) and spreads demand over time. Critics say it favors wealthier customers and damages ( 2 ) because prices are set by computer programs. Some regulators argue that prices for ( 3 ) goods should not rise sharply during a crisis.',
+      blanks: [
+        { choices: ['efficient', 'dangerous', 'silent', 'crowded'], answer: 0, why: '第2段落 makes markets work more efficiently。' },
+        { choices: ['trust', 'roads', 'music', 'weather'], answer: 0, why: '第5段落 concerns about transparency and trust。' },
+        { choices: ['essential', 'luxury', 'foreign', 'second-hand'], answer: 0, why: '第6段落 prices for essential goods and services。' },
+      ],
+    },
+    tf: [
+      { statement: '変動価格制は、いまでは電気の料金にも広がっている。', answer: true, why: '第1段落 and even electricity。' },
+      { statement: '支持者によると、値段が需要とともに上がれば、増えたお金は転売業者に入る。', answer: false, why: '第2段落 the extra money goes to the performers and organizers rather than to people who simply bought tickets in order to sell them again。' },
+      { statement: '学校の休みに旅行する家族には、ほかに選べる道がほとんどない。', answer: true, why: '第4段落 have little choice but to pay whatever is demanded。' },
+      { statement: 'すべてのチケット販売会社が、値段の上がりかたに上限を設けている。', answer: false, why: '第6段落 others limit how far prices can rise（一部の会社だけ）。' },
+    ],
+    qa: [
+      { q: 'According to supporters, what can a higher taxi fare during a storm do?', choices: ['Encourage more drivers to come out onto the roads.', 'Make all customers wait longer.', 'Stop people from using taxis at all.', 'Lower the price of electricity.'], answer: 0, why: '第3段落 encourages more drivers to come out onto the roads。' },
+      { q: 'What do some critics fear companies may eventually do with information about individual customers?', choices: ['Charge each person the highest price they are likely to accept.', 'Give every customer the same discount.', 'Send it to the government.', 'Delete it after each purchase.'], answer: 0, why: '第5段落 to charge each person the highest price they are likely to accept。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
