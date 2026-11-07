@@ -41822,6 +41822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-windows',
+    title: 'On Windows',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the parts of a house, the window may be the one that most shapes our daily experience, yet we rarely think about it. Through windows, light enters our rooms, air flows in and out, and we catch sight of the weather, the passing seasons, and the everyday lives of our neighbors. A room without windows can feel oppressive and confined, while a single well-placed window can transform even a small space into a place of calm and openness. In this sense, windows are not merely holes in walls but frames through which we encounter the world.",
+      "Historically, windows were often small and few, partly because glass was expensive and partly because large openings made buildings colder and less secure. In many places, people covered openings with paper, cloth, or wooden shutters, letting in only limited light. As techniques for producing glass improved, windows grew larger and more common, changing not only the appearance of buildings but also the way people lived inside them, allowing them to read, work, and gather in rooms filled with daylight. Architects today continue to debate how large windows should be, balancing the pleasure of natural light and views against the need to keep buildings warm in winter and cool in summer.",
+      "Windows also create a particular relationship between inside and outside. They allow us to see the world while remaining protected from it, to watch rain fall or snow drift without getting wet or cold. ( A ) a window separates us from the outdoors, it also connects us to it, and many people find that simply gazing out of a window, at trees, clouds, or a busy street, can rest their eyes and minds after long periods of concentration.",
+      "At the same time, windows raise questions of privacy. The same pane of glass that allows us to look out allows others to look in, and people have long used curtains, blinds, and frosted glass to control what can be seen. In crowded cities, where buildings stand close together, the balance between light and privacy can be difficult to achieve, and the view from a window may reveal more of a neighbor's life than either party would wish. Learning to respect one another's privacy in such conditions is part of the quiet etiquette of city life.",
+      "Windows have long held a place in art and literature as well. Painters have depicted figures standing at windows, gazing toward distant landscapes, as symbols of longing, reflection, or hope. Writers have described characters watching the world from behind glass, separated from events yet drawn to them. The window, in such works, often represents the threshold between private thought and public life, between what is known and what lies beyond.",
+      "In modern life, screens have in some ways taken over the role that windows once played. Many people spend more time looking at phones and computers than out of the windows of their homes or offices, and the images on these screens show places and events far beyond what any window could reveal. Yet a screen offers a very different kind of view, one selected and arranged by others, while a window shows whatever happens to be there, unedited and unpredictable.",
+      "In the end, the window may remind us of the value of simply looking. To sit by a window and watch the world go by, without any particular purpose, is to allow ourselves a kind of attention that busy lives often crowd out. The changing light, the movement of people, and the slow progress of the seasons are all visible to those who take the time to look, and the humble window offers this opportunity every day to anyone willing to pause for a moment and look.",
+    ],
+    ja: [
+      '家のあらゆる部分の中で、まどはもっとも私たちの毎日の経験を形づくっているかもしれないのに、それについて考えることはめったにない。まどを通じて光が部屋に入り、空気が出入りし、私たちは天気や季節の移り変わりや近所の人々の暮らしを目にする。まどのない部屋は重苦しく、とじこめられたように感じられることがあるが、うまく置かれたたった一つのまどが、小さな空間でさえ落ち着きと開放感のある場所に変えることがある。この意味で、まどはただのかべの穴ではなく、それを通して私たちが世界と出会うわくなのである。',
+      '歴史的には、まどはしばしば小さく少なかった。ガラスが高価だったことや、大きな開口部が建物をより寒く、より安全でないものにしたことがその理由の一部である。多くの場所で、人々は開口部を紙や布や木のよろい戸でおおい、限られた光だけを入れていた。ガラスをつくる技術がよくなるにつれて、まどは大きく、ありふれたものになり、建物の見た目だけでなく、その中での人々の暮らし方も変え、日の光に満ちた部屋で読んだり、働いたり、集まったりできるようにした。今日の建築家も、まどをどのくらい大きくすべきかを議論し続けており、自然の光とながめの楽しみを、冬に建物をあたたかく、夏にすずしく保つ必要とつりあわせようとしている。',
+      'まどはまた、内と外のあいだに特別な関係をつくる。まどは、私たちが世界から守られたままで世界を見ること、ぬれたり寒くなったりせずに雨がふったり雪が舞ったりするのをながめることを可能にする。まどは私たちを外から切りはなすが、同時に外と結びつけもする。多くの人は、ただまどの外の木や雲やにぎやかな通りを見つめるだけで、長く集中したあとの目と心を休められることに気づいている。',
+      '同時に、まどはプライバシーの問題を生む。私たちが外を見ることを可能にする同じ一枚のガラスが、ほかの人が中を見ることも可能にし、人々は長いあいだ、カーテンやブラインドやくもりガラスを使って、見えるものを調整してきた。建物がたがいに近くに立つ混み合った都市では、光とプライバシーのつりあいをとるのはむずかしいことがあり、まどからのながめが、どちらも望まないほど近所の人の暮らしを見せてしまうこともある。そうした条件でたがいのプライバシーを尊重することを学ぶのは、都市の暮らしのしずかな作法の一部である。',
+      'まどは、芸術や文学の中でも長いあいだ一つの場所をしめてきた。画家は、まどべに立って遠くの景色を見つめる人物を、あこがれやもの思いや希望の象徴としてえがいてきた。作家は、ガラスの向こうから世界をながめ、できごとから切りはなされながらも、それにひきつけられる登場人物をえがいてきた。そうした作品の中で、まどはしばしば、ひとりの思いと公の暮らしのあいだ、知っていることとその向こうにあるもののあいだの境目をあらわしている。',
+      '現代の暮らしでは、画面が、かつてまどが果たしていた役割をある意味で引きついでいる。多くの人が、家や職場のまどの外を見るより長い時間を、電話やコンピューターを見て過ごし、そうした画面の画像は、どんなまどにも見せられないほど遠くの場所やできごとを映し出す。しかし画面がみせるのはまったくちがう種類のながめであり、それはほかの人によって選ばれ、ならべられたものである。一方、まどは、たまたまそこにあるものを、手を加えず、予測できないまま見せてくれる。',
+      '結局のところ、まどは、ただ見ることの価値を思い出させてくれるのかもしれない。まどべにすわって、とくに目的もなく世界が過ぎていくのをながめることは、いそがしい暮らしがしばしばおしのけてしまう種類の注意を、自分にゆるすことである。移り変わる光や人々の動きや季節のゆっくりとした歩みは、時間をかけて見る人にはすべて見えるのであり、ささやかなまどは、少し立ち止まって見ようとするだれにでも、毎日この機会をあたえてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「まどは外から切りはなすが、外と結びつけもする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'まどのない部屋は、重苦しく感じられることがある。', answer: true, why: '第1段落 A room without windows can feel oppressive and confined。' },
+      { statement: '昔はガラスが安かったので、まどは大きかった。', answer: false, why: '第2段落 windows were often small and few, partly because glass was expensive。' },
+      { statement: '人々はカーテンなどを使って、見えるものを調整してきた。', answer: true, why: '第4段落 people have long used curtains, blinds, and frosted glass。' },
+      { statement: '筆者によれば、画面とまどはまったく同じ種類のながめを見せる。', answer: false, why: '第6段落 a screen offers a very different kind of view。' },
+    ],
+    qa: [
+      { q: 'What can simply gazing out of a window do, according to the passage?', choices: ['Rest our eyes and minds after concentration.', 'Make us colder.', 'Improve our handwriting.', 'Make rooms smaller.'], answer: 0, why: '第3段落 can rest their eyes and minds after long periods of concentration。' },
+      { q: 'What does the window often represent in art and literature?', choices: ['The threshold between private thought and public life.', 'Wealth and power.', 'Danger and fear.', 'Speed and progress.'], answer: 0, why: '第5段落 the threshold between private thought and public life。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
