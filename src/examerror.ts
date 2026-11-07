@@ -5833,6 +5833,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Taken place (B) every four years, (C) the Olympics (D) attract millions of viewers.', choices: ['(A) Taken place', '(B) every four years,', '(C) the Olympics', '(D) attract millions of viewers'], answer: 0, why: 'take place は受け身の意味をもたないので Taking place（または Held）。' },
     ],
   },
+  {
+    id: 'exam-error-gerund-idioms',
+    title: '入試の正誤問題〈244〉（国公立レベル：動名詞の慣用表現 be busy ～ing・feel like ～ing・on ～ing）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '動名詞を使う決まった言い方：be busy ～ing（～するのにいそがしい）、feel like ～ing（～したい気がする）、on ～ing（～するとすぐに）、have difficulty ～ing（～するのに苦労する）、spend 時間 ～ing（～して時間を過ごす）。どれも to 不定詞にしない。',
+      'be busy ～ing・spend 時間 ～ing には with や in はふつう入れない。「～するとすぐに」は in ではなく on ～ing。',
+    ],
+    examples: [
+      { en: 'My mother is busy cooking dinner, so I don’t feel like going out.', ja: '母は夕食を作るのにいそがしいので、私は出かける気がしない。' },
+      { en: 'On hearing the news, she began to cry.', ja: 'その知らせを聞くとすぐに、彼女は泣き出した。' },
+    ],
+    questions: [
+      { sentence: '(A) My mother (B) is busy (C) to cook (D) dinner now.', choices: ['(A) My mother', '(B) is busy', '(C) to cook', '(D) dinner now'], answer: 2, why: 'be busy ～ing で「～するのにいそがしい」。cooking。' },
+      { sentence: '(A) I (B) don’t feel like (C) to go out (D) tonight.', choices: ['(A) I', '(B) don’t feel like', '(C) to go out', '(D) tonight'], answer: 2, why: 'feel like ～ing で「～したい気がする」。going out。' },
+      { sentence: '(A) On (B) hear the news, (C) she (D) began to cry.', choices: ['(A) On', '(B) hear the news,', '(C) she', '(D) began to cry'], answer: 1, why: 'on ～ing で「～するとすぐに」。hearing。' },
+      { sentence: '(A) He was busy (B) with (C) preparing (D) for the test.', choices: ['(A) He was busy', '(B) with', '(C) preparing', '(D) for the test'], answer: 1, why: 'be busy ～ing には with は不要。busy preparing。' },
+      { sentence: '(A) We (B) had difficulty (C) find (D) the hotel.', choices: ['(A) We', '(B) had difficulty', '(C) find', '(D) the hotel'], answer: 2, why: 'have difficulty ～ing で「～するのに苦労する」。finding。' },
+      { sentence: '(A) On arriving (B) at the station, (C) I (D) called to my father.', choices: ['(A) On arriving', '(B) at the station,', '(C) I', '(D) called to my father'], answer: 3, why: '「電話する」の call は他動詞なので called my father。' },
+      { sentence: '(A) Busy (B) doing her homework, (C) she (D) didn’t answering the phone.', choices: ['(A) Busy', '(B) doing her homework,', '(C) she', '(D) didn’t answering the phone'], answer: 3, why: 'didn’t のあとは原形なので didn’t answer。' },
+      { sentence: '(A) Feeling like (B) to have (C) a rest, (D) I sat on the bench.', choices: ['(A) Feeling like', '(B) to have', '(C) a rest,', '(D) I sat on the bench'], answer: 1, why: 'feel like のあとは ～ing なので having。' },
+      { sentence: '(A) Kind as (B) he was, (C) he spent an hour (D) to help me.', choices: ['(A) Kind as', '(B) he was,', '(C) he spent an hour', '(D) to help me'], answer: 3, why: 'spend 時間 ～ing なので helping。' },
+      { sentence: '(A) In (B) hearing the news, (C) he (D) jumped for joy.', choices: ['(A) In', '(B) hearing the news,', '(C) he', '(D) jumped for joy'], answer: 0, why: '「～するとすぐに」は On ～ing。On hearing。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

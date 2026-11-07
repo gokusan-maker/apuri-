@@ -1270,7 +1270,7 @@
   - [x] 479 誤文訂正〈236〉（国公立レベル：in time と on time・in the end と at the end）10問
   - [x] 480 正誤問題〈243〉（京大レベル：英作文の happen・take place・occur（受け身にしない））10問
   - [x] 481 誤文訂正〈237〉（東大レベル：英作文の alone と lonely・alive と living の使い分け）10問
-  - [ ] 482 正誤問題〈244〉（国公立レベル：動名詞の慣用表現 be busy ～ing・feel like ～ing・on ～ing）10問
+  - [x] 482 正誤問題〈244〉（国公立レベル：動名詞の慣用表現 be busy ～ing・feel like ～ing・on ～ing）10問
   - [ ] 483 誤文訂正〈238〉（京大レベル：英作文の so far・until now と現在完了）10問
   - [ ] 484 正誤問題〈245〉（東大レベル：英作文の二重所有格 a friend of mine・this book of hers）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
