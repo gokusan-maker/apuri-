@@ -39938,6 +39938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-geoengineering',
+    title: 'Should We Engineer the Climate?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As efforts to reduce greenhouse gas emissions continue to fall short of what scientists say is necessary, some researchers have begun to consider a more dramatic response to climate change. Known as geoengineering, this approach involves deliberately intervening in the Earth's climate system on a large scale, either by removing carbon dioxide from the atmosphere or by reflecting a small portion of sunlight back into space. Its supporters see it as a possible emergency tool, while its critics regard it as a dangerous gamble with the only planet we have.",
+      "Supporters argue that the world may soon have little choice. Even if countries dramatically reduce their emissions, the gases already released will continue to warm the planet for decades, bringing more intense heat waves, droughts, and floods. Some forms of geoengineering, such as spraying fine particles into the upper atmosphere to reflect sunlight, could in principle cool the Earth within a few years and at a cost far lower than that of many other climate policies, buying valuable time while societies move away from fossil fuels. In their view, refusing even to consider such options would mean accepting suffering that might otherwise have been reduced, especially in poor regions that have contributed least to the problem but are most exposed to its effects.",
+      "Supporters also emphasize that research is not the same as deployment. Studying how such methods might work, through computer models and small, carefully controlled experiments, would allow scientists to understand the risks before any decision to use them is made. ( A ) the technologies may never be needed, supporters argue, it would be irresponsible to remain ignorant of options that future generations might one day be forced to consider in a genuine emergency.",
+      "Critics, however, warn that the risks of geoengineering are enormous and poorly understood. The climate is an extraordinarily complex system, and altering the amount of sunlight reaching the surface could change rainfall patterns in ways that harm agriculture in some regions while benefiting others. Moreover, reflecting sunlight does nothing to reduce the carbon dioxide in the atmosphere, which would continue to make the oceans more acidic and threaten marine life even if temperatures were kept under control. Some scientists also warn that if a sunlight-reflecting program were suddenly stopped, temperatures could rise very rapidly, giving ecosystems and societies little time to adapt.",
+      "Critics also fear that the mere possibility of geoengineering could weaken efforts to cut emissions. If governments and industries believe that a technological solution is available, they may feel less pressure to make the costly and difficult changes that reducing emissions requires. Some critics describe this as a moral hazard, comparing it to a person who continues a harmful habit because they believe a medical treatment will repair the damage later.",
+      "There are also profound questions of governance. Because the effects of geoengineering would be felt across the entire planet, a decision by one country or even one wealthy individual to begin such a project could affect billions of people who had no say in it. Who should have the authority to set the global thermostat, and how should conflicts between nations with different interests be resolved? Without clear international agreements, critics argue, geoengineering could become a source of serious political tension.",
+      "The debate over geoengineering ultimately reflects a broader dilemma about how humanity should respond to problems of its own making. Some believe that human ingenuity, which created the problem, must also be used to solve it, while others insist that the wiser course is to change the behavior that caused the damage in the first place. Whatever path is chosen, the discussion forces societies to confront difficult questions about risk, responsibility, and the limits of human control over nature.",
+    ],
+    ja: [
+      '温室効果ガスの排出をへらす努力が、科学者が必要だと言う水準に届かないままであるため、一部の研究者は気候変動へのより大胆な対応を考えはじめている。ジオエンジニアリング（気候工学）として知られるこの方法は、大気から二酸化炭素を取りのぞくか、太陽の光のごく一部を宇宙へはね返すことによって、地球の気候の仕組みに大きな規模で意図的に手を加えることである。支持する人々はそれを緊急時に使えるかもしれない道具と見ているが、批判する人々は、私たちがもつただ一つの惑星をかけた危険なかけと見なしている。',
+      '支持する人々は、世界にはまもなくほとんど選択の余地がなくなるかもしれないと主張する。たとえ国々が排出を大はばにへらしても、すでに出された気体は何十年も地球をあたため続け、より強い熱波や干ばつや洪水をもたらす。太陽の光をはね返すために細かい粒を大気の上のほうにまくといったある種のジオエンジニアリングは、理くつの上では数年のうちに地球を冷やすことができ、ほかの多くの気候政策よりはるかに安い費用ですみ、社会が化石燃料からはなれていくあいだの貴重な時間をかせげるかもしれない。彼らの考えでは、そうした選択肢を考えることさえこばむのは、本来ならへらせたかもしれない苦しみを受け入れることになり、それはとくに、問題への責任がもっとも小さいのにその影響をもっとも受けやすい貧しい地域に当てはまる。',
+      '支持する人々はまた、研究することは実際に使うことと同じではないと強調する。コンピューターの模型や、小さく注意深く管理された実験を通じてそうした方法がどうはたらくかを調べれば、それを使うかどうかの決定がなされる前に、科学者が危険を理解できるようになるだろう。その技術はけっして必要にならないかもしれないが、将来の世代が本当の緊急時にいつか考えざるをえなくなるかもしれない選択肢について、何も知らないままでいるのは無責任だろうと支持する人々は主張する。',
+      'しかし批判する人々は、ジオエンジニアリングの危険はとてつもなく大きく、よくわかっていないと警告する。気候はきわめて複雑な仕組みであり、地表にとどく太陽の光の量を変えると、雨のふり方が変わり、ある地域の農業を害する一方でほかの地域には役立つといったことが起こりうる。さらに、太陽の光をはね返しても大気中の二酸化炭素はへらず、たとえ気温がおさえられても、二酸化炭素は海をより酸性にし続け、海の生き物をおびやかすだろう。また、太陽の光をはね返す計画が急に止められれば、気温がとても急速に上がり、生態系や社会が適応する時間がほとんどなくなりうると警告する科学者もいる。',
+      '批判する人々はまた、ジオエンジニアリングがありうるというだけで、排出をへらす努力が弱まるのではないかとおそれる。もし政府や産業が技術による解決があると信じれば、排出をへらすのに必要な、お金がかかりむずかしい変化を行うようせまられる感じが弱まるかもしれない。批判する人々の中には、これをモラルハザードとよび、あとで医療が害を直してくれると信じて体に悪い習慣を続ける人にたとえる者もいる。',
+      '統治についての深い問いもある。ジオエンジニアリングの影響は地球全体におよぶので、一つの国や、たった一人の裕福な人でさえ、そうした計画をはじめると決めれば、それに何の発言もできなかった何十億もの人々に影響しうる。だれが地球の温度調節器を設定する権限をもつべきなのか、ちがう利益をもつ国どうしの対立はどう解決されるべきなのか。明確な国際的な取り決めがなければ、ジオエンジニアリングは深刻な政治的緊張の原因になりうると批判する人々は主張する。',
+      'ジオエンジニアリングをめぐる議論は、結局のところ、人類が自分でつくり出した問題にどうこたえるべきかについての、より広いジレンマを反映している。問題をつくり出した人間の工夫が、それを解決するためにも使われなければならないと信じる人もいれば、よりかしこい道は、そもそも害をひき起こした行動を変えることだと主張する人もいる。どの道が選ばれるにせよ、この議論は、危険と責任と、自然に対する人間の支配の限界について、むずかしい問いに社会を向き合わせるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「技術はけっして必要にならないかもしれないが、知らないままは無責任」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters see geoengineering as a possible ( 1 ) tool that could cool the Earth quickly. Critics warn that its risks are poorly understood, that it could weaken efforts to cut ( 2 ), and that it raises difficult questions of ( 3 ).',
+      blanks: [
+        { choices: ['emergency', 'everyday', 'farming', 'teaching'], answer: 0, why: '第1段落 Its supporters see it as a possible emergency tool。' },
+        { choices: ['emissions', 'prices', 'taxes', 'forests'], answer: 0, why: '第5段落 could weaken efforts to cut emissions。' },
+        { choices: ['governance', 'fashion', 'grammar', 'cooking'], answer: 0, why: '第6段落 There are also profound questions of governance。' },
+      ],
+    },
+    tf: [
+      { statement: 'すでに出された気体は、何十年も地球をあたため続ける。', answer: true, why: '第2段落 will continue to warm the planet for decades。' },
+      { statement: '太陽の光をはね返せば、大気中の二酸化炭素もへる。', answer: false, why: '第4段落 does nothing to reduce the carbon dioxide in the atmosphere。' },
+      { statement: '支持する人々は、研究することと実際に使うことは同じだと考えている。', answer: false, why: '第3段落 research is not the same as deployment。' },
+      { statement: 'たった一人の裕福な人の決定が、何十億もの人々に影響しうる。', answer: true, why: '第6段落 even one wealthy individual ... could affect billions of people。' },
+    ],
+    qa: [
+      { q: 'What might changing the amount of sunlight reaching the surface do?', choices: ['Change rainfall patterns and harm agriculture in some regions.', 'Stop all earthquakes.', 'Make the oceans less acidic.', 'Increase the number of fish.'], answer: 0, why: '第4段落 could change rainfall patterns in ways that harm agriculture in some regions。' },
+      { q: 'What do some critics compare the moral hazard of geoengineering to?', choices: ['A person who continues a harmful habit, expecting a treatment to repair the damage.', 'A student who studies too hard.', 'A farmer who plants too many trees.', 'A driver who drives too slowly.'], answer: 0, why: '第5段落 comparing it to a person who continues a harmful habit。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
