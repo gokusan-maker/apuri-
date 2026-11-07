@@ -39742,6 +39742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-self-kindness',
+    title: 'On Being Kind to Oneself',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us would never speak to a friend in the way we sometimes speak to ourselves. When a friend fails an examination or makes an embarrassing mistake at work, we usually offer comfort, reminding them that everyone stumbles and that one setback does not define a person. Yet when we fail in exactly the same way, the voice inside our heads is often harsh and unforgiving, calling us foolish or lazy and replaying the mistake again and again long after everyone else has forgotten it. Few of us ever stop to ask why we hold ourselves to standards of cruelty that we would never apply to the people we care about.",
+      "Many people believe that this harshness is necessary. They fear that if they were gentle with themselves, they would become complacent, lose their motivation, and stop trying to improve. In this view, self-criticism works like a strict teacher who pushes a reluctant student forward, and kindness toward oneself is a dangerous luxury that only weak or self-satisfied people can afford. It is an understandable belief, especially for those who were raised in environments where praise was rare and high standards were constantly emphasized.",
+      "There are reasons, however, to doubt whether harsh self-criticism really helps us. A person who fears their own judgment may begin to avoid difficult challenges altogether, since every attempt carries the risk of another painful attack. ( A ) a strict teacher may sometimes push a student forward, a teacher who only shouts and never encourages tends to produce anxiety rather than learning, and the inner critic is often exactly this kind of teacher, demanding perfection while offering no guidance on how to do better.",
+      "Kindness toward oneself, in contrast, does not mean ignoring one's faults or pretending that mistakes do not matter. It means responding to failure in the way a wise and caring friend would respond: acknowledging honestly what went wrong, recognizing that failure is part of being human, and then asking what can be learned for the future. Such a response allows a person to look directly at their mistakes, rather than turning away from them in shame, and this honest attention is precisely what makes improvement possible.",
+      "Self-kindness also reminds us that our struggles are shared. When we fail, it is easy to feel that we alone are inadequate and that everyone else is managing their lives without difficulty. In reality, nearly everyone experiences disappointment, embarrassment, and doubt, even those who seem most confident from the outside. Recognizing this common humanity can soften the loneliness of failure and make it easier to ask others for help instead of hiding our problems, which in turn often leads to better solutions than any person could find alone.",
+      "Learning to be kind to oneself is not always easy, particularly for people who have spent many years listening to a harsh inner voice. It may begin with small steps, such as noticing the words we use when we make a mistake, or asking ourselves what we would say to a friend in the same situation. Over time, these small acts of attention can gradually change the tone of our inner conversation, replacing contempt with patience and fear with a calm determination to keep trying.",
+      "In the end, the way we treat ourselves shapes the way we face the world. A person who meets their own failures with cruelty may become fearful, defensive, and unwilling to take risks. A person who meets them with kindness, on the other hand, may find the courage to try again, to admit their weaknesses, and to grow. Being kind to oneself, then, is not a sign of weakness but a foundation for strength, resilience, and perhaps even for kindness toward others.",
+    ],
+    ja: [
+      '私たちのほとんどは、ときどき自分に向かって話すようなやり方で、友だちに話すことはけっしてないだろう。友だちが試験に落ちたり職場ではずかしいまちがいをしたりすると、私たちはふつうなぐさめのことばをかけ、だれでもつまずくものであり、一度の失敗でその人が決まるわけではないと思い出させる。それなのに、自分がまったく同じように失敗すると、頭の中の声はしばしばきびしく容赦がなく、自分をおろかだとかなまけ者だとかよび、ほかのだれもがわすれてしまったずっとあとまで、そのまちがいを何度もくりかえし思い返す。大切に思う人々にはけっして当てはめないような残こくな基準を、なぜ自分には当てはめるのかと立ち止まって問う人は、ほとんどいない。',
+      '多くの人は、このきびしさが必要だと信じている。自分にやさしくすれば、満足してしまい、やる気を失い、よくなろうとするのをやめてしまうのではないかとおそれているのだ。この見方では、自分を責めることは、気の進まない生徒を前におしやるきびしい先生のようにはたらき、自分へのやさしさは、弱い人や自己満足した人だけがもてる危険なぜいたくである。それは、とくにほめられることがめったになく、高い基準がたえず強調される環境で育った人にとっては、理解できる考えである。',
+      'しかし、きびしく自分を責めることが本当に役立つのかうたがう理由がある。自分の判断をおそれる人は、どの試みにももう一度つらい攻撃を受ける危険があるため、むずかしい挑戦をまったくさけはじめるかもしれない。きびしい先生がときに生徒を前におしやることはあるかもしれないが、どなるだけでけっしてはげまさない先生は、学びよりも不安を生みやすく、心の中の批判者はしばしばまさにこの種の先生であって、完ぺきを求めながら、どうすればよくなるかについては何の手引きもあたえない。',
+      'それに対して、自分へのやさしさとは、自分の欠点を無視したり、まちがいはどうでもいいふりをしたりすることではない。それは、かしこく思いやりのある友だちがこたえるようなやり方で失敗にこたえることを意味する。つまり、何がうまくいかなかったかを正直に認め、失敗は人間であることの一部だと気づき、それから将来のために何を学べるかを問うのである。そうしたこたえ方によって、人ははじて目をそむけるのではなく、自分のまちがいをまっすぐ見ることができ、この正直な注意こそがまさに向上を可能にするものである。',
+      '自分へのやさしさはまた、私たちの苦しみが分かち合われたものであることを思い出させてくれる。失敗すると、自分だけが力不足で、ほかのだれもが苦労なく暮らしをこなしていると感じやすい。実際には、外からはもっとも自信があるように見える人でさえ、ほとんどだれもが失望やはずかしさやうたがいを経験している。この共通の人間らしさに気づくことは、失敗のさびしさをやわらげ、問題をかくすかわりに人に助けを求めやすくしてくれる。そしてそのことが、しばしば、一人で見つけられるどんな解決よりもよい解決につながる。',
+      '自分にやさしくすることを学ぶのは、とくに何年もきびしい心の声を聞いてきた人にとっては、いつもかんたんなわけではない。それは、まちがいをしたときに自分が使うことばに気づくことや、同じ状きょうの友だちに何と言うだろうかと自分に問うことのような、小さな一歩からはじまるかもしれない。時とともに、こうした小さな注意の行いが、心の中の会話の調子を少しずつ変え、軽べつを忍耐に、おそれを、ためしつづけようとする落ち着いた決意に置きかえていくことがある。',
+      '結局のところ、自分をどうあつかうかが、世界にどう向き合うかを形づくる。自分の失敗に残こくさで向き合う人は、おびえ、身がまえ、危険をおかしたがらなくなるかもしれない。一方、やさしさで向き合う人は、もう一度ためし、自分の弱さを認め、成長する勇気を見つけるかもしれない。つまり、自分にやさしくすることは、弱さのしるしではなく、強さや立ち直る力、そしておそらく他人へのやさしさの土台なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「きびしい先生がときに前におしやることはあるかもしれないが、どなるだけの先生は不安を生む」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '私たちは友だちが失敗すると、ふつうなぐさめのことばをかける。', answer: true, why: '第1段落 we usually offer comfort。' },
+      { statement: '筆者は、自分へのやさしさとは欠点を無視することだと述べている。', answer: false, why: '第4段落 does not mean ignoring one\'s faults。' },
+      { statement: '自信がありそうに見える人も、失望やうたがいを経験している。', answer: true, why: '第5段落 even those who seem most confident from the outside。' },
+      { statement: '筆者は、自分へのやさしさは弱さのしるしだと結論づけている。', answer: false, why: '第7段落 is not a sign of weakness but a foundation for strength。' },
+    ],
+    qa: [
+      { q: 'Why do many people believe harsh self-criticism is necessary?', choices: ['They fear they would lose their motivation if they were gentle.', 'They want to make their friends happy.', 'They think mistakes do not matter.', 'They were always praised as children.'], answer: 0, why: '第2段落 they would become complacent, lose their motivation。' },
+      { q: 'What small step does the author suggest for learning self-kindness?', choices: ['Asking what we would say to a friend in the same situation.', 'Avoiding all difficult challenges.', 'Hiding our problems from others.', 'Demanding perfection from ourselves.'], answer: 0, why: '第6段落 asking ourselves what we would say to a friend in the same situation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
