@@ -43742,6 +43742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-scales',
+    title: 'On Scales',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Scales for weighing are among the oldest measuring instruments that human beings have made. Long before people could measure distance or time with precision, they built simple balances in which an object placed on one side could be compared with a known weight placed on the other, and such instruments became essential to trade, medicine, and cooking. Yet the scale has always been more than a practical tool. Its image appears in law courts, in religious art, and in everyday language, and the idea of weighing one thing against another has shaped the way people think about fairness and judgment.",
+      "The most important function of a scale in early societies was to make exchange fair. When merchants bought and sold grain, metal, or spices, both sides needed to trust that the quantity being exchanged was correct, and a reliable scale allowed strangers to trade without fear of being cheated. For this reason, many rulers took responsibility for checking the weights used in markets, and dishonest merchants who used false weights were often punished severely, since their deception threatened the trust on which all trade depended.",
+      "From this practical role, the scale came to symbolize justice itself. In many traditions, a judge is imagined as someone who weighs the evidence on both sides of a case before reaching a decision, and statues representing justice often hold a balance in one hand. ( A ) no court actually uses a scale to decide a case, the image expresses an ideal that remains powerful, namely that a fair decision is one in which each side's claims are considered carefully and given the weight they deserve.",
+      "The scale also offers a way of thinking about difficult choices in ordinary life. When people face a decision, they often speak of weighing the advantages and disadvantages, as if the reasons for and against could be placed on two sides of a balance. This way of thinking can be helpful, since it encourages people to consider more than one point of view, but it may also be misleading, because some considerations, such as love, loyalty, or conscience, cannot easily be compared with others on a single scale.",
+      "In recent times, scales have taken on a more personal and sometimes troubling role. Many people weigh themselves regularly at home, and for some the number displayed on the bathroom scale has become a source of anxiety, as though their worth as human beings could be measured in kilograms. Doctors point out that weight can be a useful indicator of health, but they also warn that a single number reveals little about a person's fitness, habits, or happiness, and that focusing too narrowly on it can do more harm than good.",
+      "Modern technology has extended the idea of measurement far beyond weight. Devices now record the number of steps we take, the hours we sleep, and the calories we consume, and organizations measure the performance of workers and students with increasing precision. Such measurements can provide valuable information, but they may also tempt us to believe that whatever can be measured is what matters most, and to neglect qualities that cannot be placed on any scale. A teacher's kindness or a friend's patience, for example, may matter enormously to the people who receive them, yet appear in no record at all.",
+      "Perhaps, then, scales deserve more attention than we usually give them. They remind us that fairness depends on careful and honest measurement, and that the trust between people often rests on instruments that everyone can rely on. At the same time, they remind us of the limits of measurement, since some of the most important things in life cannot be weighed at all, and a wise judgment may require us to recognize when the balance itself is not the right tool for the question we are trying to answer.",
+    ],
+    ja: [
+      '重さをはかるはかりは、人間がつくったもっとも古い計測の道具の一つである。人々が距離や時間を正確にはかれるようになるずっと前から、彼らは、片側にのせたものを反対側にのせた重さのわかったおもりと比べる簡単なてんびんをつくっており、そうした道具は、商売や医療、料理に欠かせないものになった。しかしはかりは、つねに実用的な道具以上のものだった。そのイメージは裁判所や宗教美術、日常のことばにあらわれ、あるものを別のものとはかりにかけるという考えは、人々が公正さや判断について考えるしかたを形づくってきた。',
+      '初期の社会におけるはかりのもっとも重要な働きは、交換を公正にすることだった。商人が穀物や金属、香辛料を売り買いするとき、両方の側が、交換される量が正しいと信頼する必要があり、信頼できるはかりのおかげで、見知らぬ人どうしもだまされるおそれなしに取引ができた。このため、多くの支配者は市場で使われるおもりを点検する責任を負い、にせのおもりを使う不正な商人はしばしば厳しく罰せられた。そのごまかしが、すべての取引のよりどころである信頼をおびやかしたからである。',
+      'この実用的な役割から、はかりは正義そのものを象徴するようになった。多くの伝統で、裁判官は、判決を下す前に事件の両側の証拠をはかりにかける人として思いえがかれ、正義を表す像はしばしば片手にてんびんをもっている。実際に事件を決めるのにはかりを使う裁判所はないが、そのイメージは、いまも力をもつ理想を表している。つまり、公正な決定とは、それぞれの側の主張が注意深く考えられ、それにふさわしい重みをあたえられた決定だという理想である。',
+      'はかりはまた、日常生活のむずかしい選択について考える一つの方法もあたえてくれる。決断に直面すると、人々はしばしば利点と欠点をはかりにかけると言う。まるで賛成と反対の理由をてんびんの両側にのせられるかのように。この考え方は役に立つことがある。一つ以上の見方を考えるよう促すからである。しかしそれはまた、まぎらわしいこともある。愛や忠誠、良心のような考慮すべきことのなかには、一つのはかりの上でほかのものとかんたんに比べられないものがあるからである。',
+      '近年、はかりはより個人的で、ときに悩ましい役割をになうようになった。多くの人が家で定期的に体重をはかり、一部の人にとって、体重計に表示される数字は不安の種になっている。まるで人間としての価値がキログラムではかれるかのように。医師は、体重が健康の役に立つ目安になりうると指摘するが、一つの数字は人の体力や習慣、幸せについてほとんど何も明らかにしないこと、そしてそれにばかり注目すると、益よりも害のほうが大きくなりうることも警告している。',
+      '現代の技術は、はかるという考えを重さのはるか先まで広げた。機器はいまや、私たちが歩く歩数や眠る時間、とるカロリーを記録し、組織は働く人や生徒の成果をますます正確にはかっている。そうした計測は価値ある情報をあたえてくれるが、はかれるものこそがもっとも大切なものだと信じさせ、どんなはかりにものせられない性質をおろそかにさせる誘惑にもなりうる。たとえば、教師のやさしさや友だちの根気強さは、それを受けとる人々にとってはかりしれないほど大切かもしれないが、どんな記録にもまったくあらわれない。',
+      'だとすれば、はかりは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。はかりは、公正さが注意深く正直な計測にかかっていること、そして人と人との信頼がしばしばだれもがたよれる道具に支えられていることを思い出させてくれる。同時に、はかりは計測の限界も思い出させる。人生でもっとも大切なもののいくつかはまったくはかれず、賢明な判断には、てんびんそのものが、答えようとしている問いにふさわしい道具ではないときに、それに気づくことが必要なのかもしれないからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「実際にはかりを使う裁判所はないが、そのイメージは理想を表している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '信頼できるはかりのおかげで、見知らぬ人どうしも取引ができた。', answer: true, why: '第2段落 a reliable scale allowed strangers to trade without fear of being cheated。' },
+      { statement: 'にせのおもりを使う商人は、ほとんど罰せられなかった。', answer: false, why: '第2段落 were often punished severely。' },
+      { statement: '正義を表す像は、しばしば片手にてんびんをもっている。', answer: true, why: '第3段落 statues representing justice often hold a balance in one hand。' },
+      { statement: '筆者によると、人生で大切なものはすべてはかることができる。', answer: false, why: '第7段落 some of the most important things in life cannot be weighed at all。' },
+    ],
+    qa: [
+      { q: 'Why may thinking of choices as weighing be misleading?', choices: ['Some considerations cannot easily be compared on a single scale.', 'Scales are always inaccurate.', 'People never face difficult decisions.', 'It takes too much time.'], answer: 0, why: '第4段落 some considerations ... cannot easily be compared with others on a single scale。' },
+      { q: 'What do doctors warn about focusing too narrowly on body weight?', choices: ['It can do more harm than good.', 'It always improves health.', 'It is required by law.', 'It makes people sleep longer.'], answer: 0, why: '第5段落 focusing too narrowly on it can do more harm than good。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
