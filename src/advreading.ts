@@ -40098,6 +40098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-daylight-saving',
+    title: 'Should We Stop Changing the Clocks?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, clocks are moved forward by one hour in spring and back again in autumn, a practice known as daylight saving time. The idea is to shift an hour of daylight from the early morning, when many people are asleep, to the evening, when they are more likely to be awake and active. Although the practice has existed for more than a century, it remains controversial, and in recent years a growing number of governments and citizens have questioned whether the twice-yearly change of clocks still serves any useful purpose.",
+      "Supporters argue that longer evenings bring a range of benefits. When it stays light until later in the day, people have more opportunities to spend time outdoors after work or school, whether playing sports, shopping, or simply walking in the park. Some businesses, particularly those connected with leisure and tourism, report higher sales during these months, and supporters claim that brighter evenings may also reduce traffic accidents and certain crimes, since many such incidents occur more frequently in darkness. For many people, moreover, the arrival of daylight saving time has become a welcome sign that winter is over, and the long, bright evenings of summer are among the pleasures they most look forward to.",
+      "The original justification for daylight saving time, however, was to save energy. By making better use of natural light in the evening, it was thought, households would need less electricity for lighting. ( A ) this argument may have been convincing when lighting accounted for a large share of energy use, critics point out that modern homes rely heavily on heating, cooling, and electronic devices, and studies of the actual energy savings have produced mixed and often disappointing results.",
+      "Critics also emphasize the effects of changing the clocks on human health. The sudden loss of an hour in spring disrupts the body's internal clock, which regulates sleep, alertness, and many other functions. Some researchers have reported increases in heart problems, workplace injuries, and traffic accidents in the days immediately following the change, suggesting that even a single hour can have serious consequences when it is imposed on an entire population at once. Teenagers, whose natural sleep patterns already tend to conflict with early school schedules, may be particularly affected by the change.",
+      "For these reasons, many critics favor abolishing the clock changes altogether. Yet this raises a further question: which time should be kept permanently? Some prefer permanent standard time, arguing that it better matches the natural rhythm of the sun and allows children to travel to school in daylight during winter. Others prefer permanent daylight saving time, which would preserve bright evenings throughout the year but leave mornings dark for much longer in the coldest months.",
+      "The decision is further complicated by geography and international coordination. The effects of shifting the clock depend greatly on a country's distance from the equator, since regions near the poles experience much greater seasonal differences in daylight than those near the equator. In addition, neighboring countries that trade closely with one another may prefer to keep their clocks aligned, so that a decision taken by one government can create inconvenience for businesses and travelers in many others, at least until a common solution is agreed.",
+      "The debate over daylight saving time may seem a minor matter, but it raises broader questions about how societies organize time. Clocks are human inventions, yet they shape when people wake, work, eat, and sleep, and changes to them affect millions of lives at once. Deciding whether to keep, modify, or abandon the practice requires weighing economic interests, public health, and personal preference, and it reminds us that even the measurement of time reflects choices that societies make about how they wish to live.",
+    ],
+    ja: [
+      '多くの国では、春に時計を一時間進め、秋にまたもとにもどしており、この習慣はサマータイム（夏時間）として知られている。その考えは、多くの人がねむっている朝早くの一時間の日の光を、人々が起きて活動している可能性の高い夕方へ移すことである。この習慣は百年以上続いているが、今も議論を呼んでおり、近年では、一年に二回時計を変えることがまだ何か役に立っているのかと疑問を投げかける政府や市民がふえている。',
+      '支持する人々は、夕方が長くなることはさまざまな利益をもたらすと主張する。一日のおそくまで明るいと、人々は仕事や学校のあとに、スポーツをしたり、買い物をしたり、ただ公園を歩いたりして、外で過ごす機会がふえる。とくにレジャーや観光にかかわる一部の店は、この時期に売り上げが上がると報告しており、また、多くの交通事故やある種の犯罪は暗い中でより多く起きるので、明るい夕方はそれらをへらすかもしれないと支持する人々は言う。さらに、多くの人にとって、サマータイムのはじまりは冬が終わったといううれしいしるしになっており、夏の長く明るい夕方は、彼らがもっとも楽しみにしているものの一つである。',
+      'しかし、サマータイムのもともとの理由はエネルギーを節約することだった。夕方に自然の光をうまく使えば、家庭は明かりのための電気が少なくてすむと考えられていたのである。照明がエネルギーの使用の大きな部分をしめていたころには、この主張は説得力があったかもしれないが、現代の家庭は暖房や冷房や電子機器に大きくたよっており、実際のエネルギーの節約についての研究は、まちまちで、しばしば期待はずれの結果を出してきたと批判する人々は指摘する。',
+      '批判する人々はまた、時計を変えることが人間の健康にあたえる影響を強調する。春に急に一時間を失うことは、ねむりや目のさめ具合や多くのほかのはたらきを調整する体内時計をみだす。時計を変えた直後の数日に、心臓の病気や職場のけがや交通事故がふえたと報告する研究者もおり、それは、たった一時間でも、国民全体に一度に課されると重大な結果をもたらしうることを示している。もともとのねむりのリズムが朝早い学校の予定とぶつかりがちな十代の若者は、この変化からとくに大きな影響を受けるかもしれない。',
+      'こうした理由から、多くの批判者は、時計を変えることそのものをやめることを支持している。しかしこれはさらなる問いを生む。どちらの時刻をずっと使うべきなのか。標準時をずっと使うことをのぞむ人もおり、そのほうが太陽の自然なリズムによく合い、冬に子どもたちが明るい中で学校に通えると主張する。サマータイムをずっと使うことをのぞむ人もおり、そうすれば一年中明るい夕方を保てるが、もっとも寒い月には朝がずっと長いあいだ暗いままになる。',
+      'この決定は、地理と国どうしの調整によってさらにむずかしくなる。時計をずらすことの影響は、国が赤道からどれだけはなれているかに大きく左右される。極に近い地域は、赤道に近い地域より、季節による日の光のちがいがはるかに大きいからである。さらに、たがいに深く貿易をしている近くの国々は、時計をそろえておくことをのぞむかもしれず、ある政府の決定が、少なくとも共通の解決が合意されるまでは、ほかの多くの国の企業や旅行者に不便をもたらすこともある。',
+      'サマータイムをめぐる議論はささいなことに見えるかもしれないが、社会が時間をどう組み立てるかについての、より広い問いを投げかけている。時計は人間の発明だが、人々がいつ起き、働き、食べ、ねむるかを形づくっており、それを変えれば何百万もの人々の暮らしに一度に影響する。この習慣を続けるか、変えるか、やめるかを決めるには、経済の利益と公衆の健康と個人の好みをくらべる必要があり、そのことは、時間をはかることでさえ、社会がどのように生きたいかについて行う選択を反映していることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「かつては説得力があったかもしれないが、今の家庭は暖房などにたよっている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of daylight saving time point to the benefits of longer ( 1 ). Critics argue that it saves little energy and that changing the clocks harms human ( 2 ). Even those who want to abolish the changes disagree about which time should be kept ( 3 ).',
+      blanks: [
+        { choices: ['evenings', 'nights', 'winters', 'meetings'], answer: 0, why: '第2段落 longer evenings bring a range of benefits。' },
+        { choices: ['health', 'language', 'memory', 'income'], answer: 0, why: '第4段落 the effects of changing the clocks on human health。' },
+        { choices: ['permanently', 'secretly', 'briefly', 'loudly'], answer: 0, why: '第5段落 which time should be kept permanently?' },
+      ],
+    },
+    tf: [
+      { statement: 'サマータイムのもともとの理由は、エネルギーの節約だった。', answer: true, why: '第3段落 The original justification ... was to save energy。' },
+      { statement: 'エネルギーの節約についての研究は、どれも大きな効果を示している。', answer: false, why: '第3段落 have produced mixed and often disappointing results。' },
+      { statement: '標準時をずっと使えば、冬に子どもが明るい中で学校に通えると主張する人がいる。', answer: true, why: '第5段落 allows children to travel to school in daylight during winter。' },
+      { statement: '極に近い地域ほど、季節による日の光のちがいは小さい。', answer: false, why: '第6段落 regions near the poles experience much greater seasonal differences。' },
+    ],
+    qa: [
+      { q: 'What does the sudden loss of an hour in spring disrupt?', choices: ['The internal clock of the body.', 'The weather.', 'The school calendar.', 'International trade.'], answer: 0, why: '第4段落 disrupts the body’s internal clock。' },
+      { q: 'Why might neighboring countries prefer to keep their clocks aligned?', choices: ['Because they trade closely with one another.', 'Because they share the same language.', 'Because they have the same weather.', 'Because they play the same sports.'], answer: 0, why: '第6段落 neighboring countries that trade closely with one another may prefer to keep their clocks aligned。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
