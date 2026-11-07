@@ -5483,6 +5483,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Some people (B) walk to work, (C) while the other (D) take the bus.', choices: ['(A) Some people', '(B) walk to work,', '(C) while the other', '(D) take the bus'], answer: 2, why: '不特定の「ほかの人たち」は others（take と合う複数）。' },
     ],
   },
+  {
+    id: 'exam-error-wear-fit-suit-todai',
+    title: '入試の正誤問題〈230〉（東大レベル：英作文の wear・put on・fit・suit の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'wear は「身につけている（状態）」、put on は「身につける（動作）」、take off は「ぬぐ」。服だけでなく、くつ・めがね・帽子・指輪などにも使う。',
+      'fit は「（大きさ・形が）合う」、suit は「（色・型が）にあう」、match・go with は「（物どうしが）合う」。fit・suit・match は他動詞なので前置詞をつけない（suits her）。',
+    ],
+    examples: [
+      { en: 'She put on her coat and went out.', ja: '彼女はコートを着て出かけた。' },
+      { en: 'These shoes do not fit me, but the color suits me.', ja: 'このくつはサイズが合わないが、色は私ににあう。' },
+    ],
+    questions: [
+      { sentence: '(A) My sister (B) is wearing (C) a coat (D) quickly because it is cold.', choices: ['(A) My sister', '(B) is wearing', '(C) a coat', '(D) quickly because it is cold'], answer: 1, why: '「急いで着る」という動作なので is putting on。wear は着ている状態。' },
+      { sentence: '(A) Do you (B) always (C) put on (D) a uniform at your school?', choices: ['(A) Do you', '(B) always', '(C) put on', '(D) a uniform at your school?'], answer: 2, why: 'いつも制服を着ている状態なので wear。' },
+      { sentence: '(A) The jacket (B) is too big; (C) it doesn’t (D) suit me.', choices: ['(A) The jacket', '(B) is too big;', '(C) it doesn’t', '(D) suit me'], answer: 3, why: '大きさが合わないのは fit。suit は「にあう」。' },
+      { sentence: '(A) That hat (B) fits (C) you very well; (D) the color is perfect.', choices: ['(A) That hat', '(B) fits', '(C) you very well;', '(D) the color is perfect'], answer: 1, why: '色が「にあう」のは suits。fit はサイズが合う。' },
+      { sentence: '(A) Wear (B) your shoes (C) before you (D) go outside.', choices: ['(A) Wear', '(B) your shoes', '(C) before you', '(D) go outside'], answer: 0, why: '「はく（身につける）」動作なので Put on。' },
+      { sentence: '(A) He (B) was wearing (C) a glasses (D) at the party.', choices: ['(A) He', '(B) was wearing', '(C) a glasses', '(D) at the party'], answer: 2, why: 'glasses「めがね」は複数形なので a をつけない。' },
+      { sentence: '(A) Her bag (B) matches (C) to her shoes (D) perfectly.', choices: ['(A) Her bag', '(B) matches', '(C) to her shoes', '(D) perfectly'], answer: 2, why: 'match は他動詞なので to をつけず matches her shoes。' },
+      { sentence: '(A) The tie (B) doesn’t go (C) on (D) your shirt.', choices: ['(A) The tie', '(B) doesn’t go', '(C) on', '(D) your shirt'], answer: 2, why: '「～と合う」は go with なので with。' },
+      { sentence: '(A) Short hair (B) suits (C) for her (D) very well.', choices: ['(A) Short hair', '(B) suits', '(C) for her', '(D) very well'], answer: 2, why: 'suit は他動詞なので for をつけず suits her。' },
+      { sentence: '(A) She (B) wore off (C) her coat (D) when she came in.', choices: ['(A) She', '(B) wore off', '(C) her coat', '(D) when she came in'], answer: 1, why: '「ぬぐ」は took off。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
