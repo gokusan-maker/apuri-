@@ -40258,6 +40258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-water-fluoride',
+    title: 'Should Fluoride Be Added to Drinking Water?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, small amounts of fluoride are added to public drinking water in order to reduce tooth decay. The practice began in the middle of the twentieth century, after researchers observed that people living in areas where water naturally contained fluoride tended to have healthier teeth. Since then, it has been praised by many health authorities as one of the most effective public health measures ever introduced, yet it has also faced persistent opposition, and in recent years several communities have voted to stop adding fluoride to their water supplies.",
+      "Supporters argue that water fluoridation offers a simple and inexpensive way to protect the health of an entire population. Because nearly everyone drinks tap water, the benefits reach people regardless of their income, education, or access to dental care. Supporters emphasize that tooth decay is not a trivial problem, since it can cause pain, infection, and difficulty eating, and that children from poorer families, who may rarely visit a dentist, are often the ones who benefit most from fluoride in the water. Removing it, they warn, could widen existing gaps in health between rich and poor communities, and the costs of treating decay later in life would far exceed the modest expense of fluoridation.",
+      "Supporters also point out that the amount of fluoride added is carefully controlled. Health authorities set limits that are intended to provide protection against decay while remaining far below levels that could cause harm. ( A ) high doses of fluoride can damage teeth and bones, supporters argue, the small concentrations used in public water have been studied for decades, and most scientific reviews have concluded that they are safe for the general population.",
+      "Critics, however, raise several objections. Some question whether fluoridation is still necessary at a time when fluoride toothpaste is widely available and many people receive regular dental care. Others point to studies suggesting that even moderate exposure to fluoride might have effects on health that are not yet fully understood, and they argue that, where uncertainty exists, it is wiser to avoid adding substances to water that everyone must drink. They add that people differ in how much water they consume, so that some may receive far larger doses than others.",
+      "For many critics, the central issue is not scientific but ethical. Adding fluoride to water, they argue, amounts to giving a medical treatment to an entire population without asking individuals for their consent. A person who does not wish to consume fluoride can choose not to use fluoride toothpaste, but it is far more difficult to avoid tap water, especially for those who cannot afford bottled water or filters. In this view, fluoridation places the judgment of authorities above the right of individuals to make decisions about their own bodies.",
+      "Supporters respond that many public health measures involve similar trade-offs. Governments require that certain vitamins be added to flour or salt, that drinking water be treated to remove harmful bacteria, and that food meet safety standards, all without the consent of each individual. In each case, they argue, a small limitation on personal choice is justified by large benefits to the population as a whole, particularly to those who are most vulnerable and least able to protect themselves.",
+      "The debate over water fluoridation ultimately reflects a broader tension in public health between the welfare of the community and the freedom of the individual. Scientific evidence can inform such decisions, but it cannot by itself settle them, since people may weigh risks and benefits differently and hold different views about the proper role of government. How communities resolve this tension will depend not only on research but also on trust between citizens and the institutions that make decisions on their behalf.",
+    ],
+    ja: [
+      '多くの国では、むし歯をへらすために、公共の飲み水に少しのフッ素が加えられている。この習慣は、水に自然にフッ素がふくまれている地域に住む人々の歯がより健康である傾向に研究者が気づいたあと、二十世紀の半ばにはじまった。それ以来、多くの保健当局から、これまでに取り入れられたもっとも効果的な公衆衛生の対策の一つとしてほめられてきたが、たえず反対にもあっており、近年では、いくつかの地域が水道にフッ素を加えるのをやめることを投票で決めた。',
+      '支持する人々は、水道水へのフッ素の添加は、国民全体の健康を守るかんたんで安い方法だと主張する。ほとんどだれもが水道の水を飲むので、その利益は、収入や教育や歯の治療を受けられるかどうかにかかわらず、人々に届く。むし歯は、痛みや感染や食べにくさをひき起こしうるので、ささいな問題ではなく、めったに歯医者に行かないかもしれない貧しい家庭の子どもたちこそが、しばしば水のフッ素からもっとも利益を受けると支持する人々は強調する。それを取りのぞけば、豊かな地域と貧しい地域のあいだの今ある健康の差が広がりかねず、のちの人生でむし歯を治療する費用は、フッ素の添加のささやかな費用をはるかに上回るだろうと彼らは警告する。',
+      '支持する人々はまた、加えられるフッ素の量は注意深く管理されていると指摘する。保健当局は、むし歯をふせぎつつ、害をひき起こしうる水準よりはるかに低くとどまるように上限を設けている。大量のフッ素は歯や骨をいためることがあるが、公共の水に使われる少ない濃度は何十年も研究されてきており、ほとんどの科学的な見直しは、それが一般の人々にとって安全だと結論づけていると支持する人々は主張する。',
+      'しかし批判する人々は、いくつかの反対意見をあげる。フッ素入りの歯みがきが広く手に入り、多くの人がふだんから歯の治療を受けている時代に、フッ素の添加がまだ必要なのかと疑問を投げかける人もいる。また、ほどほどの量のフッ素でも、まだ完全にはわかっていない健康への影響があるかもしれないことを示す研究をあげ、不確かさがあるところでは、だれもが飲まなければならない水に物質を加えるのをさけるほうがかしこいと主張する人もいる。彼らはさらに、人によって飲む水の量はちがうので、ほかの人よりはるかに多くの量をとる人もいるかもしれないと言う。',
+      '多くの批判者にとって、中心の問題は科学ではなく倫理である。水にフッ素を加えることは、一人一人に同意を求めずに、国民全体に医療をほどこすことになると彼らは主張する。フッ素をとりたくない人はフッ素入りの歯みがきを使わないことを選べるが、とくにペットボトルの水やろ過器を買う余裕のない人にとって、水道水をさけるのははるかにむずかしい。この見方では、フッ素の添加は、自分の体について決める個人の権利よりも当局の判断を上に置いている。',
+      '支持する人々は、多くの公衆衛生の対策が同じような交換条件をふくんでいると答える。政府は、小麦粉や塩にある種のビタミンを加えること、飲み水を処理して有害な細菌を取りのぞくこと、食べ物が安全の基準を満たすことを、どれも一人一人の同意なしに求めている。どの場合も、個人の選択への小さな制限は、全体としての国民、とくにもっとも弱く、もっとも自分を守れない人々への大きな利益によって正当化されると彼らは主張する。',
+      '水道水へのフッ素の添加をめぐる議論は、結局のところ、公衆衛生における、地域の幸せと個人の自由のあいだの、より広い緊張を反映している。科学的な証拠はそうした決定に役立つ情報をあたえられるが、それだけでは決着をつけられない。人々は危険と利益をちがうようにくらべ、政府の適切な役割についてちがう考えをもちうるからである。地域がこの緊張をどう解決するかは、研究だけでなく、市民と、市民にかわって決定を行う機関とのあいだの信頼にもかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「大量では害があるが、少ない濃度は安全と結論づけられている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that fluoridation is a simple and inexpensive way to reduce tooth ( 1 ) across a whole population. Critics question whether it is still necessary and argue that it is given without individual ( 2 ). The debate reflects a tension between the welfare of the community and the ( 3 ) of the individual.',
+      blanks: [
+        { choices: ['decay', 'growth', 'color', 'size'], answer: 0, why: '第1・2段落 to reduce tooth decay。' },
+        { choices: ['consent', 'payment', 'education', 'knowledge'], answer: 0, why: '第5段落 without asking individuals for their consent。' },
+        { choices: ['freedom', 'income', 'health', 'education'], answer: 0, why: '第7段落 between the welfare of the community and the freedom of the individual。' },
+      ],
+    },
+    tf: [
+      { statement: '水に自然にフッ素がふくまれる地域の人々の歯が健康である傾向が観察された。', answer: true, why: '第1段落 people living in areas where water naturally contained fluoride tended to have healthier teeth。' },
+      { statement: '支持する人々は、フッ素の利益はお金持ちの家庭にだけ届くと言う。', answer: false, why: '第2段落 regardless of their income。' },
+      { statement: '水道水をさけるのは、フッ素入りの歯みがきを使わないことよりむずかしい。', answer: true, why: '第5段落 it is far more difficult to avoid tap water。' },
+      { statement: '筆者は、科学的な証拠だけでこの議論に決着がつくと述べている。', answer: false, why: '第7段落 it cannot by itself settle them。' },
+    ],
+    qa: [
+      { q: 'Who often benefits most from fluoride in the water, according to supporters?', choices: ['Children from poorer families who may rarely visit a dentist.', 'People who drink only bottled water.', 'Dentists.', 'Wealthy adults.'], answer: 0, why: '第2段落 children from poorer families, who may rarely visit a dentist。' },
+      { q: 'What examples of other public health measures do supporters give?', choices: ['Adding vitamins to flour or salt and treating water to remove bacteria.', 'Banning toothpaste.', 'Closing hospitals.', 'Selling bottled water.'], answer: 0, why: '第6段落 certain vitamins be added to flour or salt, that drinking water be treated to remove harmful bacteria。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
