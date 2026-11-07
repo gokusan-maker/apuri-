@@ -5283,6 +5283,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) They have (B) the right of vote (C) in (D) the election.', choices: ['(A) They have', '(B) the right of vote', '(C) in', '(D) the election'], answer: 1, why: '「投票する権利」は the right to vote。' },
     ],
   },
+  {
+    id: 'exam-error-almost-most-kokuritsu',
+    title: '入試の正誤問題〈222〉（国公立レベル：almost・most・most of の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'almost は「ほとんど」という副詞で、名詞を直接修飾できない（×almost students → ○most students／almost all students）。most は形容詞として名詞の前に置ける（most people）。the・my・them などがつくときは most of を使う（most of the books・most of them）。',
+      'most of ～ が主語のときは、of のあとの名詞に動詞を合わせる（most of the water is／most of the students are）。',
+    ],
+    examples: [
+      { en: 'Most students in my class have smartphones.', ja: '私のクラスのほとんどの生徒はスマートフォンをもっている。' },
+      { en: 'Almost all of the books on the shelf are old.', ja: 'たなの本のほとんどすべてが古い。' },
+    ],
+    questions: [
+      { sentence: '(A) Almost (B) students (C) in my class (D) have smartphones.', choices: ['(A) Almost', '(B) students', '(C) in my class', '(D) have smartphones'], answer: 0, why: 'almost は副詞なので名詞を直接修飾できない。Most students（または Almost all students）。' },
+      { sentence: '(A) Most of (B) people (C) like (D) summer vacation.', choices: ['(A) Most of', '(B) people', '(C) like', '(D) summer vacation'], answer: 0, why: 'most of のあとは the・my などがついた名詞が来る。Most people（または Most of the people）。' },
+      { sentence: '(A) Almost of (B) the books (C) on the shelf (D) are old.', choices: ['(A) Almost of', '(B) the books', '(C) on the shelf', '(D) are old'], answer: 0, why: 'almost of とは言わない。Most of the books（または Almost all of the books）。' },
+      { sentence: '(A) She has (B) read (C) most the novels (D) by that writer.', choices: ['(A) She has', '(B) read', '(C) most the novels', '(D) by that writer'], answer: 2, why: 'most のあとに the をつけるなら most of the novels。' },
+      { sentence: '(A) Most (B) of the water (C) in the lake (D) are clean.', choices: ['(A) Most', '(B) of the water', '(C) in the lake', '(D) are clean'], answer: 3, why: 'most of の後ろが数えられない名詞 water なので動詞は単数 is。' },
+      { sentence: '(A) Most (B) of the students (C) was (D) absent yesterday.', choices: ['(A) Most', '(B) of the students', '(C) was', '(D) absent yesterday'], answer: 2, why: 'most of the students は複数なので were。' },
+      { sentence: '(A) We (B) almost (C) finished (D) the most of the work.', choices: ['(A) We', '(B) almost', '(C) finished', '(D) the most of the work'], answer: 3, why: '「仕事のほとんど」は most of the work。the most of とは言わない。' },
+      { sentence: '(A) It is (B) most (C) ten o’clock, (D) so let’s go.', choices: ['(A) It is', '(B) most', '(C) ten o’clock,', '(D) so let’s go'], answer: 1, why: '「ほとんど10時」は almost ten o’clock。' },
+      { sentence: '(A) Most of (B) them (C) agrees (D) with the plan.', choices: ['(A) Most of', '(B) them', '(C) agrees', '(D) with the plan'], answer: 2, why: 'most of them は複数なので agree。' },
+      { sentence: '(A) Almost (B) every (C) students (D) passed the test.', choices: ['(A) Almost', '(B) every', '(C) students', '(D) passed the test'], answer: 2, why: 'almost every のあとは単数名詞なので every student。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
