@@ -9354,6 +9354,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'You remind me [to] your father when you laugh like that.', choices: ['of', 'with', 'for', 'about to'], answer: 0, why: 'remind A of B「A に B を思い出させる」なので of。remind A to do は「A に～するよう気づかせる」。' },
     ],
   },
+  {
+    id: 'exam-fix-220',
+    title: '入試の誤文訂正〈220〉（国公立レベル：as soon as・the moment ～「～するとすぐに」）',
+    points: ['as soon as・the moment・the minute・immediately（イギリス英語）は「～するとすぐに」という接続詞のはたらきをする。時をあらわす副詞節なので、未来のことでも中は現在形（As soon as he arrives, …）。as soon as の as を落とさない。on ～ing も「～するとすぐに」の意味になる（On arriving, …）。'],
+    examples: [{ en: 'As soon as he arrives, we will start. / The moment she saw me, she smiled.', ja: '彼が着いたらすぐに始めよう。／私を見たとたん、彼女はほほえんだ。' }],
+    questions: [
+      { sentence: 'Call me as soon as you [will get] home.', choices: ['get', 'got', 'getting', 'have get'], answer: 0, why: '時の副詞節の中は未来でも現在形なので you get。' },
+      { sentence: '[Soon as] the bell rang, the students ran out.', choices: ['As soon as', 'So soon as', 'Soon that', 'As soon'], answer: 0, why: '「～するとすぐに」は As soon as。' },
+      { sentence: 'The moment she [will see] the letter, she will understand.', choices: ['sees', 'saw', 'seeing', 'has seen to'], answer: 0, why: 'the moment ～ も時の副詞節なので現在形 sees。' },
+      { sentence: '[On arrive] at the station, he called his mother.', choices: ['On arriving', 'In arrive', 'On arrived', 'At arriving'], answer: 0, why: 'on ～ing「～するとすぐに」なので On arriving。' },
+      { sentence: 'As soon as I [had heard] the news tomorrow, I will tell you.', choices: ['hear', 'heard', 'will hear', 'hearing'], answer: 0, why: '未来のことだが時の副詞節なので現在形 hear。' },
+      { sentence: '[The moment of] the door opened, the dog ran out.', choices: ['The moment', 'At the moment of', 'In moment', 'By the moment'], answer: 0, why: '「～したとたん」は The moment ＋主語＋動詞。' },
+      { sentence: 'He left the room as soon [that] the meeting ended.', choices: ['as', 'when', 'so', 'than'], answer: 0, why: 'as soon as の形なので as。' },
+      { sentence: 'I will start cooking the minute you [are going to come] back.', choices: ['come', 'came', 'will come', 'coming'], answer: 0, why: 'the minute ～ も時の副詞節なので現在形 come。' },
+      { sentence: 'As soon as she [arrive] at the airport, she called me.', choices: ['arrived', 'arrives', 'arriving', 'will arrive'], answer: 0, why: '過去の話で主節も called なので arrived。' },
+      { sentence: 'On [hear] the noise, the cat jumped off the sofa.', choices: ['hearing', 'heard', 'to hear', 'hears'], answer: 0, why: '前置詞 on のあとは動名詞 hearing。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

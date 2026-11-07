@@ -3123,3 +3123,10 @@ it('正誤問題〈226〉：京大レベル suggest・insist・demand that ＋�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) stops smoking')
 })
+
+it('誤文訂正〈220〉：国公立レベル as soon as・the moment の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-220')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('get')
+})
