@@ -5333,6 +5333,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) By (B) we got home, (C) it had (D) started to rain.', choices: ['(A) By', '(B) we got home,', '(C) it had', '(D) started to rain'], answer: 0, why: 'by は前置詞なので、あとに主語＋動詞を続けるときは接続詞の By the time を使う。' },
     ],
   },
+  {
+    id: 'exam-error-prefer-rather-todai',
+    title: '入試の正誤問題〈224〉（東大レベル：英作文の prefer A to B・would rather A than B）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'prefer A to B「B より A のほうが好き」の to は前置詞なので、A・B に動詞を置くなら動名詞（prefer reading to watching TV）。prefer to do のときは rather than do を使う（prefer to stay home rather than go out）。',
+      'would rather A than B「B するよりむしろ A したい」の A・B は動詞の原形（would rather walk than take the bus）。否定は would rather not do。would rather のあとに主語＋動詞を続けると過去形を使う（I’d rather you didn’t tell anyone.）。',
+    ],
+    examples: [
+      { en: 'I prefer tea to coffee.', ja: '私はコーヒーより紅茶のほうが好きだ。' },
+      { en: 'I would rather walk than take the bus.', ja: 'バスに乗るより、むしろ歩きたい。' },
+    ],
+    questions: [
+      { sentence: '(A) I prefer (B) tea (C) than (D) coffee.', choices: ['(A) I prefer', '(B) tea', '(C) than', '(D) coffee'], answer: 2, why: 'prefer A to B「B より A が好き」なので to coffee。' },
+      { sentence: '(A) She would rather (B) to stay (C) home (D) than go out.', choices: ['(A) She would rather', '(B) to stay', '(C) home', '(D) than go out'], answer: 1, why: 'would rather のあとは動詞の原形なので stay。' },
+      { sentence: '(A) I would rather (B) walk (C) than (D) taking the bus.', choices: ['(A) I would rather', '(B) walk', '(C) than', '(D) taking the bus'], answer: 3, why: 'would rather A than B の A と B はどちらも原形なので take the bus。' },
+      { sentence: '(A) He prefers (B) reading books (C) to (D) watch TV.', choices: ['(A) He prefers', '(B) reading books', '(C) to', '(D) watch TV'], answer: 3, why: 'prefer A to B の to は前置詞なので watching TV。' },
+      { sentence: '(A) Would you rather (B) to eat (C) here (D) or outside?', choices: ['(A) Would you rather', '(B) to eat', '(C) here', '(D) or outside?'], answer: 1, why: 'Would you rather のあとは原形なので eat。' },
+      { sentence: '(A) I prefer (B) to (C) stay home (D) to going out.', choices: ['(A) I prefer', '(B) to', '(C) stay home', '(D) to going out'], answer: 3, why: 'prefer to do のときは rather than do を使うので rather than go out。' },
+      { sentence: '(A) We would (B) rather not (C) to talk (D) about it.', choices: ['(A) We would', '(B) rather not', '(C) to talk', '(D) about it'], answer: 2, why: 'would rather not のあとも原形なので talk。' },
+      { sentence: '(A) Most people (B) prefers (C) summer (D) to winter.', choices: ['(A) Most people', '(B) prefers', '(C) summer', '(D) to winter'], answer: 1, why: '主語 Most people は複数なので prefer。' },
+      { sentence: '(A) I’d rather (B) you (C) don’t tell (D) anyone.', choices: ['(A) I’d rather', '(B) you', '(C) don’t tell', '(D) anyone'], answer: 2, why: 'would rather のあとに主語＋動詞が来るときは過去形（仮定法）なので didn’t tell。' },
+      { sentence: '(A) I rather (B) go (C) by train (D) than by car.', choices: ['(A) I rather', '(B) go', '(C) by train', '(D) than by car'], answer: 0, why: '「むしろ～したい」は would rather なので I would（I’d）rather。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
