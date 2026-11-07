@@ -41618,6 +41618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-home-insulation',
+    title: 'Should Homes Be Required to Have Better Insulation?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A large share of the energy that households use goes into heating and cooling their homes. In many older buildings, much of this energy is wasted, escaping through thin walls, single-pane windows, and gaps around doors and roofs. As concern about climate change and rising energy bills has grown, some governments have begun to consider requiring landlords and homeowners to improve the insulation of their buildings. Supporters see such rules as a practical way to cut emissions and protect households from high costs, while critics worry about who will pay for the improvements.",
+      "Supporters argue that better insulation is one of the most cost-effective ways to reduce energy use. Unlike new power stations or advanced technologies, insulation relies on simple materials and techniques that are already widely available. A well-insulated home needs far less energy to stay warm in winter and cool in summer, which reduces greenhouse gas emissions and lowers bills for its occupants year after year. Over the lifetime of a building, supporters point out, the savings can be many times greater than the original cost of the work. Because buildings often stand for a century or more, they add, homes that are improved today will continue to reduce emissions long after the people who paid for the work have moved away.",
+      "Supporters also emphasize the benefits for health and comfort. Cold, damp homes can contribute to breathing problems, heart disease, and other illnesses, particularly among elderly people and young children. ( A ) the effects of poor housing are often less visible than those of other health risks, supporters argue, improving insulation can reduce hospital visits and allow people to live more comfortably, especially those on low incomes who may otherwise have to choose between heating their homes and buying food.",
+      "Critics, however, raise concerns about the costs of compulsory improvements. Insulating an old building can be expensive and disruptive, sometimes requiring residents to move out temporarily while work is carried out. For homeowners with limited savings, the upfront cost may be difficult to afford, even if the work will eventually pay for itself. Critics also worry that landlords required to make improvements may pass the costs on to tenants through higher rents, or decide to sell their properties rather than invest in them, reducing the supply of homes available to rent.",
+      "Critics also point out practical difficulties. Some historic buildings cannot easily be insulated without damaging their character, and poorly installed insulation can trap moisture inside walls, leading to mold and structural problems. In addition, there may not be enough trained workers to carry out improvements on a large scale, and rushing the process could result in low-quality work that fails to deliver the promised benefits. Some homeowners, critics note, have already been disappointed by poorly managed schemes in the past, and may be reluctant to trust new ones.",
+      "Many experts suggest that the best approach combines regulation with support. Governments can set gradual targets that give owners time to plan improvements, while offering grants, low-interest loans, or tax reductions to help cover the costs, particularly for low-income households. Training programs can increase the number of skilled workers, and clear standards can ensure that work is carried out safely and effectively, avoiding the problems that hasty or careless installation might cause.",
+      "The debate over home insulation ultimately reflects a broader question about how societies should share the costs of addressing climate change. Many measures that reduce emissions also bring long-term benefits, but they often require significant investment at the beginning. Ensuring that the burden of this investment does not fall unfairly on those least able to bear it may be essential if such policies are to gain public support and achieve their goals over the coming decades.",
+    ],
+    ja: [
+      '家庭が使うエネルギーの大きな割合は、家をあたためたり冷やしたりすることに使われている。多くの古い建物では、このエネルギーの多くがうすいかべや一枚ガラスのまどや、ドアや屋根のまわりのすき間からにげて、むだになっている。気候変動とエネルギー代の上昇への心配が高まるにつれて、家主や家の持ち主に建物の断熱をよくするよう義務づけることを考えはじめた政府もある。支持する人々はそうした規則を、排出をへらし家庭を高い費用から守る実際的な方法と見ているが、批判する人々は、だれがその改修の代金をはらうのかを心配している。',
+      '支持する人々は、断熱をよくすることは、エネルギーの使用をへらすもっとも費用対効果の高い方法の一つだと主張する。新しい発電所や進んだ技術とちがって、断熱はすでに広く手に入るかんたんな材料と技術にたよっている。よく断熱された家は、冬にあたたかく夏にすずしく保つのに必要なエネルギーがはるかに少なく、それが温室効果ガスの排出をへらし、住む人の光熱費を毎年下げる。建物の一生を通じて、節約できる額は工事のもとの費用の何倍にもなりうると支持する人々は指摘する。建物はしばしば百年以上も立ち続けるので、今日改修された家は、工事の代金をはらった人々が引っこしたずっとあとまで、排出をへらし続けるだろうと彼らはつけ加える。',
+      '支持する人々はまた、健康と快適さにとっての利益を強調する。寒くしめった家は、とくにお年寄りや小さな子どもの、呼吸の問題や心臓の病気やほかの病気の一因になりうる。悪い住まいの影響は、ほかの健康の危険の影響より目に見えにくいことが多いが、断熱をよくすれば病院へ行く回数をへらし、人々がより快適に暮らせるようになると支持する人々は主張する。とくに、そうでなければ家をあたためるか食べ物を買うかを選ばなければならないかもしれない収入の少ない人々にとってはそうである。',
+      'しかし批判する人々は、義務づけられた改修の費用について心配をあげる。古い建物を断熱するには、お金がかかり、暮らしをみだすこともあり、工事のあいだ住民が一時的に引っこさなければならないこともある。たくわえの少ない家の持ち主にとっては、工事がやがて元を取れるとしても、はじめの費用をはらうのはむずかしいかもしれない。批判する人々はまた、改修を義務づけられた家主が、その費用を家賃の値上げという形で借り手に回したり、投資するかわりに物件を売ってしまったりして、借りられる家が少なくなるかもしれないと心配する。',
+      '批判する人々はまた、実際のむずかしさを指摘する。歴史のある建物の中には、その味わいをそこなわずにはかんたんに断熱できないものもあり、うまく取りつけられなかった断熱材はかべの中に湿気をとじこめ、カビや建物の問題をひき起こすことがある。さらに、大きな規模で改修を行うのに十分な訓練を受けた働き手がいないかもしれず、急いで進めると、約束された利益をもたらさない質の低い工事になるかもしれない。過去にうまく管理されなかった制度にすでにがっかりした家の持ち主もおり、新しい制度を信じるのをためらうかもしれないと批判する人々は指摘する。',
+      '多くの専門家は、もっともよいやり方は規制とささえを組み合わせることだと提案する。政府は、持ち主が改修を計画する時間をもてるよう少しずつの目標を設け、とくに収入の少ない家庭のために、費用をまかなう助けとして補助金や低い利子の貸しつけや税の減額を用意することができる。訓練の仕組みは技術をもつ働き手の数をふやし、はっきりした基準は、工事が安全で効果的に行われるようにして、急いだ、あるいは不注意な取りつけがひき起こしかねない問題をさけられる。',
+      '家の断熱をめぐる議論は、結局のところ、社会が気候変動にとりくむ費用をどう分かち合うべきかについての、より広い問いを反映している。排出をへらす多くの手だては長い目で見た利益ももたらすが、しばしばはじめに大きな投資を必要とする。そうした政策が人々のささえを得て、これからの何十年かで目標を達成するためには、この投資の負担が、もっともそれにたえられない人々に不公平にのしかからないようにすることが欠かせないのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「悪い住まいの影響は目に見えにくいが、断熱は病院へ行く回数をへらす」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that better insulation is a cost-effective way to reduce ( 1 ) use and improves health. Critics worry about the ( 2 ) of compulsory improvements and practical difficulties. Many experts suggest combining regulation with ( 3 ) such as grants and loans.',
+      blanks: [
+        { choices: ['energy', 'water', 'paper', 'land'], answer: 0, why: '第2段落 the most cost-effective ways to reduce energy use。' },
+        { choices: ['costs', 'colors', 'sizes', 'names'], answer: 0, why: '第4段落 concerns about the costs of compulsory improvements。' },
+        { choices: ['support', 'punishment', 'silence', 'delay'], answer: 0, why: '第6段落 combines regulation with support。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの古い建物では、暖房のエネルギーの多くがむだになっている。', answer: true, why: '第1段落 much of this energy is wasted。' },
+      { statement: '断熱には、まだ手に入らない進んだ技術が必要である。', answer: false, why: '第2段落 relies on simple materials and techniques that are already widely available。' },
+      { statement: 'うまく取りつけられなかった断熱材は、カビの原因になることがある。', answer: true, why: '第5段落 can trap moisture inside walls, leading to mold。' },
+      { statement: '専門家は、すぐにすべての家を改修させるべきだと言う。', answer: false, why: '第6段落 set gradual targets that give owners time to plan improvements。' },
+    ],
+    qa: [
+      { q: 'Who may suffer most from cold, damp homes?', choices: ['Elderly people and young children.', 'Builders.', 'Landlords.', 'Office workers.'], answer: 0, why: '第3段落 particularly among elderly people and young children。' },
+      { q: 'What might landlords do if required to make improvements, according to critics?', choices: ['Raise rents or sell their properties.', 'Lower rents.', 'Build new houses.', 'Pay tenants to move.'], answer: 0, why: '第4段落 pass the costs on to tenants through higher rents, or decide to sell their properties。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
