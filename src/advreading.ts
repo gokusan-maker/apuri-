@@ -40898,6 +40898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-english-medium',
+    title: 'Should Universities Teach in English?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In universities across Asia, Europe, and other regions where English is not the main language, a growing number of courses are now taught entirely in English. Students may attend lectures, write essays, and take examinations in a language that is neither their own nor that of most of their teachers. Universities promote these programs as a way of preparing graduates for a global economy and attracting students from abroad, yet the trend has also prompted concern among educators, who question whether teaching in a foreign language truly serves the goals of higher education.",
+      "Supporters argue that English-medium instruction offers students valuable advantages. English has become the dominant language of international business, science, and academic research, and graduates who can work comfortably in it may have access to a much wider range of careers. Studying a subject in English, supporters claim, allows students to improve their language skills while also mastering academic content, so that they learn two things at once rather than treating language as a separate subject studied in isolation. Some employers, they add, now expect applicants to have taken at least part of their degree in English, regarding it as evidence of adaptability and confidence in international settings.",
+      "Supporters also emphasize the benefits for universities themselves. Courses taught in English can attract students and researchers from many countries, creating a more diverse academic community and strengthening international partnerships. ( A ) such programs require considerable investment, supporters argue, they can raise a university's international reputation and help it compete for talented students and faculty in an increasingly global academic market, which may in turn benefit domestic students as well.",
+      "Critics, however, worry that learning in a foreign language may reduce the depth of students' understanding. When students struggle to follow lectures or express complex ideas in English, they may focus on memorizing vocabulary and phrases rather than engaging critically with the subject. Teachers, too, may simplify their explanations or avoid lively discussion if they are not fully confident in the language, so that the quality of teaching declines even as the language of instruction changes. Some studies have found that students in such courses ask fewer questions and participate less actively in class than those taught in their own language, particularly in their first year.",
+      "Critics also raise concerns about fairness and culture. Students who have had the opportunity to study abroad or attend expensive language schools may enjoy significant advantages over those who have not, so that English-medium programs could widen existing social inequalities. Furthermore, if more and more academic work is conducted in English, local languages may gradually lose their capacity to express advanced scientific and scholarly ideas, weakening their role in national intellectual life. Some countries have already noticed that new technical terms are increasingly borrowed from English rather than created in their own language.",
+      "Some universities have sought to address these concerns through careful planning. They may provide intensive language support for students and teachers, allow students to choose between courses in English and in the local language, or combine the two languages within a single program. Others encourage teachers to adapt their methods, using more visual materials, group work, and opportunities for students to ask questions, so that language difficulties do not prevent genuine learning from taking place.",
+      "The debate over English-medium instruction ultimately reflects broader questions about globalization and education. A university must prepare its students for a world in which English plays an important role, but it also has a responsibility to cultivate deep understanding and to sustain the intellectual life of its own society. How universities balance these goals will shape not only the careers of their graduates but also the future of the languages in which knowledge is created and shared.",
+    ],
+    ja: [
+      'アジアやヨーロッパなど、英語が主な言語ではない地域の大学で、すべて英語で教えられる授業がふえている。学生は、自分の言語でも、ほとんどの先生の言語でもない言語で、講義に出て、レポートを書き、試験を受けることがある。大学はこうした課程を、卒業生を世界的な経済にそなえさせ、海外から学生を引き寄せる方法として売りこんでいるが、この流れは教育者のあいだに心配も生んでおり、外国語で教えることが本当に高等教育の目標に役立つのかと疑問を投げかける人もいる。',
+      '支持する人々は、英語による授業は学生に貴重な利点をあたえると主張する。英語は国際的な商売や科学や学問の研究の中心的な言語になっており、英語で気楽に働ける卒業生は、はるかに広い範囲の仕事につけるかもしれない。科目を英語で学ぶことで、学生は学問の内容を身につけながら言語の力も高めることができ、言語を切りはなされた別の科目としてあつかうのではなく、一度に二つのことを学べると支持する人々は言う。今では、応募者が学位の少なくとも一部を英語で取っていることを期待し、それを国際的な場での適応力と自信の証拠と見なす雇い主もいると彼らはつけ加える。',
+      '支持する人々はまた、大学自身にとっての利益を強調する。英語で教えられる授業は多くの国から学生や研究者を引き寄せ、より多様な学問の共同体をつくり、国際的な提携を強めることができる。そうした課程にはかなりの投資が必要だが、大学の国際的な評判を高め、ますます世界的になる学問の市場で才能ある学生や教員を取り合う助けになり、それがひいては国内の学生にも役立つかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、外国語で学ぶことは学生の理解の深さをへらすかもしれないと心配する。学生が講義についていったり、複雑な考えを英語であらわしたりするのに苦労すると、科目に批判的に取り組むのではなく、単語や言い回しを暗記することに集中してしまうかもしれない。先生もまた、その言語に十分な自信がなければ、説明を単純にしたり、活発な話し合いをさけたりするかもしれず、そのため、授業の言語が変わるのと同時に、教えることの質が下がってしまう。そうした授業の学生は、とくに一年目には、自分の言語で教えられる学生より質問が少なく、授業への参加も消極的だとする研究もある。',
+      '批判する人々はまた、公平さと文化についての心配をあげる。留学したり、高い語学学校に通ったりする機会のあった学生は、そうでない学生よりかなり有利かもしれず、そのため英語による課程は今ある社会の不平等を広げかねない。さらに、ますます多くの学問の仕事が英語で行われるようになれば、地元の言語は、高度な科学や学問の考えをあらわす力を少しずつ失い、国の知的な暮らしの中での役割が弱まるかもしれない。新しい専門用語が、自分の言語でつくられるのではなく、ますます英語から借りられるようになっていることに、すでに気づいている国もある。',
+      '注意深い計画によってこうした心配にこたえようとしてきた大学もある。学生や先生のために集中的な語学のささえを用意したり、英語の授業と地元の言語の授業を学生が選べるようにしたり、一つの課程の中で二つの言語を組み合わせたりすることがある。また、先生に教え方を工夫するようすすめ、目で見る資料やグループでの作業や、学生が質問する機会をふやして、言語のむずかしさが本当の学びのさまたげにならないように工夫しているところもある。',
+      '英語による授業をめぐる議論は、結局のところ、グローバル化と教育についての、より広い問いを反映している。大学は、英語が大切な役割を果たす世界に向けて学生をそなえさせなければならないが、深い理解を育て、自分の社会の知的な暮らしをささえる責任もある。大学がこれらの目標をどうつりあわせるかは、卒業生の仕事だけでなく、知識がつくられ分かち合われる言語の未来をも形づくるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「かなりの投資が必要だが、評判を高めうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that teaching in English prepares students for global ( 1 ) and helps universities attract students from abroad. Critics worry that it may reduce the ( 2 ) of understanding and widen inequalities. Some universities provide intensive language ( 3 ) for students and teachers.',
+      blanks: [
+        { choices: ['careers', 'holidays', 'sports', 'meals'], answer: 0, why: '第2段落 access to a much wider range of careers。' },
+        { choices: ['depth', 'speed', 'price', 'noise'], answer: 0, why: '第4段落 may reduce the depth of students’ understanding。' },
+        { choices: ['support', 'tests', 'fees', 'rules'], answer: 0, why: '第6段落 provide intensive language support。' },
+      ],
+    },
+    tf: [
+      { statement: '英語が主な言語でない地域で、英語で教えられる授業がふえている。', answer: true, why: '第1段落 a growing number of courses are now taught entirely in English。' },
+      { statement: '支持する人々は、英語で学べば一度に二つのことを学べると言う。', answer: true, why: '第2段落 they learn two things at once。' },
+      { statement: '批判する人々は、英語の授業ではいつも議論が活発になると言う。', answer: false, why: '第4段落 may simplify their explanations or avoid lively discussion。' },
+      { statement: '英語による課程は、社会の不平等をかならずへらす。', answer: false, why: '第5段落 could widen existing social inequalities。' },
+    ],
+    qa: [
+      { q: 'What might students focus on when they struggle with English, according to critics?', choices: ['Memorizing vocabulary and phrases.', 'Engaging critically with the subject.', 'Teaching their classmates.', 'Writing longer essays.'], answer: 0, why: '第4段落 focus on memorizing vocabulary and phrases。' },
+      { q: 'What may happen to local languages if more academic work is done in English?', choices: ['They may lose their capacity to express advanced ideas.', 'They may become more popular.', 'They may replace English.', 'They may be used only in science.'], answer: 0, why: '第5段落 may gradually lose their capacity to express advanced scientific and scholarly ideas。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
