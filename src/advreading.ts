@@ -43698,6 +43698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-delivery-robots',
+    title: 'Should Delivery Robots Use Our Pavements?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a number of cities around the world, small wheeled robots have begun to appear on pavements, carrying groceries, meals, and parcels from shops to customers' doors. Some companies have also tested drones that fly packages over rooftops to gardens and balconies. Their supporters present such machines as a convenient and environmentally friendly solution to the rapid growth of home deliveries, while critics worry about safety, jobs, and the effect on public spaces, and many local governments are now trying to decide whether, and under what conditions, these new kinds of delivery should be allowed.",
+      "Supporters argue that delivery robots could reduce traffic and pollution. A large share of the vehicles on city streets today are vans delivering online orders, and many of these vehicles make short trips carrying only a few small items. Supporters point out that small electric robots, which use far less energy than vans, could handle many of these journeys, freeing roads from congestion and reducing the emissions that contribute to poor air quality and climate change. They add that robots can work through the night, when roads are quiet, so that deliveries need not compete with commuters for space during the busiest hours of the day.",
+      "Supporters also emphasize the benefits for people who find it difficult to go shopping. Older people, people with disabilities, and those living in areas without nearby shops could receive food and medicine quickly and at low cost, and deliveries could be made at times that suit customers rather than drivers. ( A ) the technology is still developing, supporters argue, early trials suggest that robots can operate reliably in many conditions and that most residents quickly become used to seeing them.",
+      "Critics, however, warn that pavements are already crowded and that robots may make them less safe and less pleasant for people on foot. Wheelchair users, parents with prams, and people with impaired vision may find their path blocked by a robot, and critics fear that if such machines become common, pavements designed for people could gradually be taken over by commercial traffic. They also question who would be responsible if a robot caused an accident or was damaged by passers-by. In some trial areas, residents have reported robots stopping in the middle of narrow pavements, unable to decide which way to go.",
+      "Critics also raise concerns about employment and privacy. Delivery work provides jobs for large numbers of people, many of whom have few other opportunities, and critics argue that replacing them with machines would mainly benefit the companies that own the technology. Delivery robots and drones also carry cameras and sensors in order to navigate, and some residents are uneasy about machines that constantly record the streets and gardens through which they pass.",
+      "In response, some cities have introduced rules that allow testing under strict conditions. Robots may be limited to certain routes, required to move at walking speed, and obliged to give way to pedestrians, while companies may be asked to share data about accidents and to provide a way for residents to report problems. Some cities have also chosen to test robots only in particular areas, such as university campuses or new housing developments, before deciding whether to allow them more widely. Such cautious approaches allow problems to be identified early, while giving residents a chance to judge the technology for themselves.",
+      "The debate over delivery robots ultimately reflects a broader question about who public spaces are for. Pavements have traditionally been places where people walk, meet, and pause, and the arrival of machines that use them for commercial purposes challenges that tradition. Deciding whether to welcome such machines requires cities to weigh the convenience and environmental benefits they may offer against the needs of the people who rely on those spaces, and to ensure that technology serves the community rather than the other way around.",
+    ],
+    ja: [
+      '世界のいくつかの都市で、車輪のついた小さなロボットが歩道にあらわれはじめ、食料品や食事、荷物を店から客の玄関まで運んでいる。荷物を屋根の上をこえて庭やベランダまで飛んで運ぶドローンを試した会社もある。支持する人々は、そうした機械を、急にふえている家への配達に対する便利で環境にやさしい解決策として示すが、批判する人々は、安全や仕事、公共の空間への影響を心配しており、多くの地方自治体は、こうした新しい種類の配達を認めるべきかどうか、そしてどのような条件で認めるべきかを決めようとしている。',
+      '支持する人々は、配達ロボットが交通と汚染を減らしうると主張する。今日、都市の道路を走る車のかなりの割合はネット注文を配達するバンであり、その多くはいくつかの小さな品物だけを運んで短い距離を走っている。バンよりはるかに少ないエネルギーで動く小さな電動ロボットなら、こうした移動の多くを引き受けることができ、道路を渋滞から解放し、悪い空気や気候変動の原因になる排出を減らせる、と支持者は指摘する。彼らはさらに、ロボットは道路がすいている夜のあいだも働けるので、配達が一日でもっとも混む時間に通勤する人々と場所をうばい合わなくてすむと付け加える。',
+      '支持する人々はまた、買い物に行くのがむずかしい人々にとっての利点も強調する。お年寄りや障害のある人、近くに店のない地域に住む人々は、食べものや薬を早く安く受けとることができ、配達は運転手ではなく客の都合のよい時間におこなえるかもしれない。技術はまだ発展のとちゅうだが、初期の試験は、ロボットが多くの条件のもとで確実に動けることや、ほとんどの住民がロボットを見ることにすぐになれることを示している、と支持者は主張する。',
+      'しかし批判する人々は、歩道はすでにこみ合っており、ロボットは歩く人々にとって歩道をより危険で不快なものにするかもしれないと警告する。車いすを使う人やベビーカーをおす親、目の不自由な人は、ロボットに道をふさがれるかもしれず、そうした機械が広まれば、人のために設計された歩道が少しずつ商業の交通に乗っとられかねないと批判する人々は心配する。彼らはまた、ロボットが事故を起こしたり、通行人にこわされたりした場合、だれが責任を負うのかを問う。試験がおこなわれている地域のなかには、ロボットがどちらへ進めばよいか決められず、せまい歩道のまん中でとまってしまったと住民が報告しているところもある。',
+      '批判する人々はまた、雇用とプライバシーについての懸念も示す。配達の仕事は多くの人々に職をあたえており、その多くはほかの機会がほとんどない人々である。彼らを機械に置きかえることは、おもにその技術を所有する会社の利益になるだけだと批判する人々は主張する。配達ロボットやドローンは、道を見つけるためにカメラやセンサーも積んでおり、自分たちが通る道路や庭をたえず記録する機械に不安を感じる住民もいる。',
+      'これに対して、きびしい条件のもとで試験を認める決まりを取り入れた都市もある。ロボットは決められた道すじにかぎられ、歩く速さで動き、歩行者に道をゆずるよう義務づけられることがあり、会社は事故についてのデータを共有し、住民が問題を報告できる方法を用意するよう求められることもある。また、より広く認めるかどうかを決める前に、大学の構内や新しい住宅地など、特定の地域でだけロボットを試すことを選んだ都市もある。そうした慎重なやり方によって、問題を早く見つけられると同時に、住民が自分でその技術を判断する機会をもつことができる。',
+      '配達ロボットをめぐる議論は、結局のところ、公共の空間はだれのためのものなのかという、より広い問いを反映している。歩道は昔から人々が歩き、出会い、立ちどまる場所であり、商業の目的のためにそれを使う機械の登場は、その伝統に疑問を投げかけている。そうした機械を歓迎するかどうかを決めるには、都市が、それがもたらしうる便利さや環境への利点と、その空間にたよる人々の必要とをはかりにかけ、技術が地域に仕えるのであって、その逆ではないようにする必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「技術はまだ発展のとちゅうだが、初期の試験は確実に動けることを示している」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say delivery robots could reduce traffic and ( 1 ) and help people who find shopping difficult. Critics warn that robots may block pavements and threaten jobs and ( 2 ). Some cities allow testing only under strict ( 3 ).',
+      blanks: [
+        { choices: ['pollution', 'music', 'tourism', 'rainfall'], answer: 0, why: '第2段落 could reduce traffic and pollution。' },
+        { choices: ['privacy', 'weather', 'history', 'sport'], answer: 0, why: '第5段落 concerns about employment and privacy。' },
+        { choices: ['conditions', 'colors', 'prices', 'songs'], answer: 0, why: '第6段落 allow testing under strict conditions。' },
+      ],
+    },
+    tf: [
+      { statement: '荷物を飛んで運ぶドローンを試した会社もある。', answer: true, why: '第1段落 Some companies have also tested drones。' },
+      { statement: '支持する人々によると、ロボットはバンより多くのエネルギーを使う。', answer: false, why: '第2段落 small electric robots, which use far less energy than vans。' },
+      { statement: '批判する人々は、ロボットが車いすを使う人の道をふさぐかもしれないと心配している。', answer: true, why: '第4段落 Wheelchair users ... may find their path blocked by a robot。' },
+      { statement: 'すべての都市が、ロボットをどこでも自由に走らせている。', answer: false, why: '第6段落 Robots may be limited to certain routes。' },
+    ],
+    qa: [
+      { q: 'Why are some residents uneasy about delivery robots and drones?', choices: ['They constantly record the streets and gardens they pass.', 'They are too slow.', 'They make loud music.', 'They are too expensive to use.'], answer: 0, why: '第5段落 machines that constantly record the streets and gardens through which they pass。' },
+      { q: 'Where have some cities chosen to test robots first?', choices: ['University campuses or new housing developments.', 'Busy city centers only.', 'Airports and harbors.', 'Old historic streets.'], answer: 0, why: '第6段落 such as university campuses or new housing developments。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
