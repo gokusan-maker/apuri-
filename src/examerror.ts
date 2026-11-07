@@ -9440,6 +9440,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This room has [all but] books in it; there is no furniture at all.', choices: ['nothing but', 'anything but', 'but nothing', 'not but'], answer: 0, why: '家具はなく本だけなので nothing but books。' },
     ],
   },
+  {
+    id: 'exam-fix-222',
+    title: '入試の誤文訂正〈222〉（東大レベル：英作文の形容詞＋前置詞 similar to・aware of・capable of・responsible for）',
+    points: ['形容詞ごとに決まった前置詞がある。similar to「～に似ている」、aware of「～に気づいている」、capable of ～ing「～できる」、responsible for「～に責任がある」、familiar with（人が物事に）／familiar to（物事が人に）「よく知っている」、dependent on「～にたよっている」、independent of「～から独立した」。'],
+    examples: [{ en: 'Her idea is similar to mine. / He was not aware of the danger.', ja: '彼女の考えは私の考えに似ている。／彼はその危険に気づいていなかった。' }],
+    questions: [
+      { sentence: 'My bag is very similar [with] yours.', choices: ['to', 'of', 'for', 'from'], answer: 0, why: 'similar to「～に似ている」なので to。' },
+      { sentence: 'Were you aware [about] the change in the schedule?', choices: ['of', 'with', 'to', 'for'], answer: 0, why: 'aware of「～に気づいている」なので of。' },
+      { sentence: 'This machine is capable [to] working without electricity.', choices: ['of', 'for', 'in', 'with'], answer: 0, why: 'capable of ～ing「～できる」なので of。' },
+      { sentence: 'Who is responsible [of] cleaning the classroom today?', choices: ['for', 'to', 'with', 'about'], answer: 0, why: 'responsible for「～に責任がある」なので for。' },
+      { sentence: 'Are you familiar [to] this area?', choices: ['with', 'of', 'for', 'at'], answer: 0, why: '人が主語なら familiar with「～をよく知っている」。' },
+      { sentence: 'That song is familiar [with] many people in Japan.', choices: ['to', 'of', 'for', 'at'], answer: 0, why: '物事が主語なら familiar to「（人に）よく知られている」。' },
+      { sentence: 'Young children are dependent [of] their parents.', choices: ['on', 'to', 'with', 'from'], answer: 0, why: 'dependent on「～にたよっている」なので on。' },
+      { sentence: 'She became independent [on] her parents at eighteen.', choices: ['of', 'to', 'with', 'for'], answer: 0, why: 'independent of「～から独立した」なので of。' },
+      { sentence: 'The new phone is quite different [of] the old one.', choices: ['from', 'with', 'by', 'on'], answer: 0, why: 'different from「～とちがう」なので from。' },
+      { sentence: 'He is not capable [for] telling a lie.', choices: ['of', 'to', 'with', 'in'], answer: 0, why: 'capable of ～ing なので of。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
