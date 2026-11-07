@@ -5358,6 +5358,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I rather (B) go (C) by train (D) than by car.', choices: ['(A) I rather', '(B) go', '(C) by train', '(D) than by car'], answer: 0, why: '「むしろ～したい」は would rather なので I would（I’d）rather。' },
     ],
   },
+  {
+    id: 'exam-error-trouble-spend-kokuritsu',
+    title: '入試の正誤問題〈225〉（国公立レベル：have trouble ～ing・spend 時間 ～ing）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'have trouble (in) ～ing／have difficulty (in) ～ing／have a problem (in) ～ing は「～するのに苦労する」。to 不定詞にしない。trouble・difficulty はふつう数えられない名詞としてあつかう（×troubles）。',
+      'spend 時間・お金 (in) ～ing は「～して時間（お金）を使う」。名詞を続けるときは spend money on books のように on を使う。',
+    ],
+    examples: [
+      { en: 'I had trouble finding the station.', ja: '駅を見つけるのに苦労した。' },
+      { en: 'She spent two hours cleaning her room.', ja: '彼女は部屋のそうじに2時間を使った。' },
+    ],
+    questions: [
+      { sentence: '(A) I had (B) trouble (C) to find (D) the station.', choices: ['(A) I had', '(B) trouble', '(C) to find', '(D) the station'], answer: 2, why: 'have trouble ～ing「～するのに苦労する」なので finding。' },
+      { sentence: '(A) She spent (B) two hours (C) to clean (D) her room.', choices: ['(A) She spent', '(B) two hours', '(C) to clean', '(D) her room'], answer: 2, why: 'spend 時間 ～ing「～して時間を過ごす」なので cleaning。' },
+      { sentence: '(A) We had (B) a lot of difficulty (C) understand (D) his speech.', choices: ['(A) We had', '(B) a lot of difficulty', '(C) understand', '(D) his speech'], answer: 2, why: 'have difficulty ～ing なので understanding。' },
+      { sentence: '(A) He spends (B) too much money (C) for buying (D) video games.', choices: ['(A) He spends', '(B) too much money', '(C) for buying', '(D) video games'], answer: 2, why: 'spend お金 ～ing（または on ＋名詞）なので buying（spend money on video games）。' },
+      { sentence: '(A) They have (B) troubles (C) getting (D) up early.', choices: ['(A) They have', '(B) troubles', '(C) getting', '(D) up early'], answer: 1, why: 'have trouble ～ing の trouble は数えられない名詞なので trouble。' },
+      { sentence: '(A) I spent (B) the whole weekend (C) read (D) comic books.', choices: ['(A) I spent', '(B) the whole weekend', '(C) read', '(D) comic books'], answer: 2, why: 'spend 時間 ～ing なので reading。' },
+      { sentence: '(A) Did you (B) have (C) any problem (D) to solve the puzzle?', choices: ['(A) Did you', '(B) have', '(C) any problem', '(D) to solve the puzzle?'], answer: 3, why: 'have a problem (in) ～ing なので solving the puzzle。' },
+      { sentence: '(A) My father (B) spend (C) a lot of time (D) working in the garden.', choices: ['(A) My father', '(B) spend', '(C) a lot of time', '(D) working in the garden'], answer: 1, why: '主語 My father は三人称単数なので spends（過去なら spent）。' },
+      { sentence: '(A) Have (B) you (C) trouble (D) sleeping these days?', choices: ['(A) Have', '(B) you', '(C) trouble', '(D) sleeping these days?'], answer: 0, why: '一般動詞の have を使う疑問文なので Do you have trouble sleeping。' },
+      { sentence: '(A) She has (B) no trouble (C) to make (D) new friends.', choices: ['(A) She has', '(B) no trouble', '(C) to make', '(D) new friends'], answer: 2, why: 'have no trouble ～ing「らくに～する」なので making。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

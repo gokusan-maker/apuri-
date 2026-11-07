@@ -3102,3 +3102,10 @@ it('誤文訂正〈218〉：京大レベル It is no use ～ing の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('crying')
 })
+
+it('正誤問題〈225〉：国公立レベル have trouble ～ing・spend 時間 ～ing の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-trouble-spend-kokuritsu')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to find')
+})
