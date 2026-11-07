@@ -42338,6 +42338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-influencer-ads',
+    title: 'Should Influencer Advertising Be Regulated?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the past, companies that wanted to sell a product usually bought space in newspapers, on television, or on large signs beside busy roads. Today a growing share of advertising money goes instead to ordinary people who have built large audiences on social media and who are paid to mention, wear, or recommend products in their posts. These so-called influencers can be remarkably persuasive, especially among young people, and their rapid rise has led many governments to ask whether this new form of advertising should be regulated more strictly than it is at present.",
+      "Supporters of stricter rules argue that influencer advertising is often difficult to recognize as advertising at all. When a television program is interrupted by a commercial, viewers understand that they are being sold something, but when a popular video maker casually praises a skin cream or a game, followers may believe that they are hearing an honest personal opinion, even when the influencer has in fact been paid a considerable sum to say it. Supporters point out that this blurring of the line between recommendation and promotion can mislead people, particularly children and teenagers who may not yet have learned to read such messages critically.",
+      "Supporters also emphasize the special relationship between influencers and their followers. Many young people feel that they know the influencers they watch every day, and they may trust them more than they trust traditional companies or even their own friends. ( A ) this sense of closeness is part of what makes social media enjoyable, supporters argue, it also gives influencers unusual power over the choices of their audience, and that power should come with a clear duty to be honest about who is paying them.",
+      "Critics of strict regulation, however, warn that rules designed for large companies may be unfair to individuals. Many influencers are young people working alone from their bedrooms, earning modest amounts from occasional sponsorship deals, and they may lack the legal knowledge needed to follow complicated regulations. Critics argue that heavy penalties could drive such people out of an activity that allows them to express their creativity and earn a living, leaving the field to large media businesses that can afford teams of lawyers. They also note that existing laws against false or misleading advertising already apply to influencers, so that new rules may add little except confusion.",
+      "Critics also question whether regulation can keep pace with a constantly changing technology. New platforms appear every few years, each with its own forms of video, image, and live broadcasting, and a rule written for one platform may quickly become irrelevant on another. Some critics further argue that audiences are less naive than regulators assume, since many young people already understand that influencers are paid and treat their recommendations with a healthy degree of suspicion rather than accepting everything they are told.",
+      "In response, a number of countries have adopted a middle course. Instead of banning particular kinds of promotion, they require influencers to label paid content clearly, for example by placing a word such as advertisement at the beginning of a post rather than hiding it among dozens of tags at the end. Some platforms have also introduced tools that make such labels easier to add, while schools in several countries now teach students how to identify sponsored content as part of lessons on media literacy.",
+      "The debate over influencer advertising ultimately reflects a broader question about trust in the digital age. When information and persuasion reach us through people we feel we know, rather than through obvious commercial messages, the traditional boundary between friendship and marketing becomes harder to see. Societies will therefore need to decide how much responsibility should rest with influencers and platforms to make that boundary visible, and how much should rest with audiences themselves to look beyond a friendly face and ask who is really speaking.",
+    ],
+    ja: [
+      'かつて、製品を売りたい会社は、ふつう新聞やテレビ、にぎやかな道路ぞいの大きな看板の広告枠を買っていた。今日では、広告費のますます大きな割合が、代わりにソーシャルメディアで多くの見る人を集め、投稿の中で製品にふれたり、身につけたり、すすめたりすることでお金をもらう、ふつうの人々に向けられている。いわゆるインフルエンサーとよばれるこうした人々は、とくに若者のあいだでおどろくほど人を動かす力をもちうるため、その急速な広まりを受けて、多くの政府が、この新しい形の広告を今よりも厳しく規制すべきかどうかを問うようになっている。',
+      'より厳しい決まりを支持する人々は、インフルエンサーによる広告は、そもそも広告だと見分けるのがむずかしいことが多いと主張する。テレビ番組がコマーシャルで中断されると、見る人は何かを売りこまれているとわかるが、人気の動画制作者が肌のクリームやゲームを何気なくほめると、フォロワーは、そのインフルエンサーが実はそう言うためにかなりの額をもらっているときでさえ、正直な個人の意見を聞いていると信じるかもしれない。推薦と宣伝のさかいめがこのようにぼやけると、人々、とくにそうしたメッセージを批判的に読むことをまだ身につけていないかもしれない子どもや十代の若者が、まどわされうると支持者は指摘する。',
+      '支持する人々はまた、インフルエンサーとフォロワーとの特別な関係も強調する。多くの若者は、毎日見ているインフルエンサーのことを知っていると感じており、伝統的な会社や、ときには自分の友だちよりも彼らを信頼するかもしれない。この親しみの感覚はソーシャルメディアを楽しいものにしている要素の一部だが、それはまたインフルエンサーに、見る人の選択に対するふつうではない力をあたえており、その力には、だれがお金をはらっているのかについて正直であるというはっきりした義務がともなうべきだ、と支持者は主張する。',
+      'しかし厳しい規制を批判する人々は、大きな会社向けにつくられた決まりは個人にとって不公平かもしれないと警告する。多くのインフルエンサーは、自分の部屋から一人で活動し、ときどきのスポンサー契約からわずかな額をかせいでいる若者であり、複雑な規則に従うのに必要な法律の知識をもっていないかもしれない。重い罰則は、そうした人々を、創造性を表現し生計を立てられる活動から追い出し、弁護士のチームをやとえる大きなメディア企業だけが残ることになりかねない、と批判する人々は主張する。彼らはまた、うそやまぎらわしい広告を禁じる今の法律がすでにインフルエンサーにも当てはまるので、新しい決まりは混乱のほかにはほとんど何も加えないかもしれないと指摘する。',
+      '批判する人々はまた、規制がたえず変化する技術についていけるのかどうかを疑う。数年ごとに新しいプラットフォームがあらわれ、それぞれが独自の動画や画像、生配信の形をもっているので、あるプラットフォームのために書かれた決まりは、別のプラットフォームではすぐに役に立たなくなるかもしれない。さらに、見る人は規制する側が考えるほど無知ではないと主張する批判者もいる。多くの若者はすでに、インフルエンサーがお金をもらっていることを理解しており、言われたことをすべて受け入れるのではなく、ほどよい疑いをもってその推薦をあつかっているからである。',
+      'これに対して、いくつかの国は中間の道をとっている。特定の種類の宣伝を禁止する代わりに、インフルエンサーに、たとえば「広告」といったことばを、投稿の最後の何十ものタグのなかにかくすのではなく、投稿のはじめに置くなどして、お金をもらった内容をはっきり表示するよう求めているのである。そうした表示をつけやすくする機能を取り入れたプラットフォームもあり、いくつかの国の学校では、いまではメディア・リテラシーの授業の一部として、スポンサーつきの内容を見分ける方法を生徒に教えている。',
+      'インフルエンサー広告をめぐる議論は、結局のところ、デジタル時代の信頼についての、より広い問いを反映している。情報や説得が、あからさまな商業メッセージではなく、知っていると感じる人々を通じて私たちにとどくとき、友情とマーケティングとの昔ながらのさかいめは見えにくくなる。そのため社会は、そのさかいめを見えるようにする責任を、どこまでインフルエンサーやプラットフォームが負うべきか、そしてどこまで見る人自身が、親しげな顔の向こうを見て、本当に語っているのはだれなのかを問うべきかを決める必要があるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「親しみはソーシャルメディアを楽しくする一部だが、ふつうではない力もあたえる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of stricter rules say influencer advertising is hard to ( 1 ) as advertising and that influencers have unusual power over their followers. Critics warn that heavy rules may be unfair to ( 2 ) and cannot keep pace with new platforms. Many countries now require paid content to be clearly ( 3 ).',
+      blanks: [
+        { choices: ['recognize', 'produce', 'forget', 'translate'], answer: 0, why: '第2段落 difficult to recognize as advertising at all。' },
+        { choices: ['individuals', 'governments', 'newspapers', 'teachers'], answer: 0, why: '第4段落 may be unfair to individuals。' },
+        { choices: ['labeled', 'hidden', 'banned', 'shortened'], answer: 0, why: '第6段落 require influencers to label paid content clearly。' },
+      ],
+    },
+    tf: [
+      { statement: '広告費の大きな割合が、ソーシャルメディアのふつうの人々に向けられるようになっている。', answer: true, why: '第1段落 a growing share of advertising money goes instead to ordinary people。' },
+      { statement: '支持者によると、若者はインフルエンサーより伝統的な会社をいつも信頼している。', answer: false, why: '第3段落 they may trust them more than they trust traditional companies。' },
+      { statement: '多くのインフルエンサーは、一人で活動している若者である。', answer: true, why: '第4段落 young people working alone from their bedrooms。' },
+      { statement: 'いくつかの国は、インフルエンサーによる宣伝をすべて禁止した。', answer: false, why: '第6段落 Instead of banning particular kinds of promotion（禁止ではなく表示を求めた）。' },
+    ],
+    qa: [
+      { q: 'According to some critics, how do many young people treat influencers’ recommendations?', choices: ['With a healthy degree of suspicion.', 'As completely honest opinions.', 'As official government advice.', 'With no interest at all.'], answer: 0, why: '第5段落 treat their recommendations with a healthy degree of suspicion。' },
+      { q: 'What do schools in several countries now teach students?', choices: ['How to identify sponsored content.', 'How to become influencers.', 'How to write advertisements.', 'How to build new platforms.'], answer: 0, why: '第6段落 teach students how to identify sponsored content。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
