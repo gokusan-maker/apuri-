@@ -9096,6 +9096,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Each one of the rooms [have] a window.', choices: ['has', 'are having', 'having', 'have been'], answer: 0, why: 'each one は単数あつかい。has。' },
     ],
   },
+  {
+    id: 'exam-fix-214',
+    title: '入試の誤文訂正〈214〉（国公立レベル：まぎらわしい形容詞 sensitive・sensible・economic・economical）',
+    points: ['同じ語から生まれた形容詞は意味がちがう。sensitive「敏感な・傷つきやすい」／sensible「分別のある・賢明な」、economic「経済の」／economical「経済的な（安上がりな）」、imaginative「想像力豊かな」／imaginary「想像上の」、respectful「敬意をはらう」／respectable「りっぱな」、considerate「思いやりのある」／considerable「かなりの」、successful「成功した」／successive「連続する」。文の意味に合う方を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'It was sensible of you to bring an umbrella. / My skin is sensitive to the sun.', ja: 'かさを持ってきたのは賢明だったね。／私のはだは日光に敏感だ。' }],
+    questions: [
+      { sentence: 'It was [sensitive] of you to bring an umbrella.', choices: ['sensible', 'sensibility', 'sensitively', 'sensational'], answer: 0, why: '「賢明な」は sensible。' },
+      { sentence: 'My skin is very [sensible] to the sun.', choices: ['sensitive', 'sensibly', 'senseless', 'sensation'], answer: 0, why: '「敏感な」は sensitive。' },
+      { sentence: 'This car is [economic]; it uses little fuel.', choices: ['economical', 'economics', 'economy', 'economist'], answer: 0, why: '「燃料が少なくてすむ・安上がりな」は economical。' },
+      { sentence: 'The country is facing serious [economical] problems.', choices: ['economic', 'economics', 'economically', 'economist'], answer: 0, why: '「経済の問題」は economic problems。' },
+      { sentence: 'She is very [imaginary]; she always thinks of new ideas.', choices: ['imaginative', 'imaginable', 'imagination', 'imagined'], answer: 0, why: '「想像力豊かな」は imaginative。' },
+      { sentence: 'The dragon is an [imaginative] animal.', choices: ['imaginary', 'imaginable', 'imagination', 'imagining'], answer: 0, why: '「想像上の」は imaginary。' },
+      { sentence: 'He is always [respectable] to his teachers.', choices: ['respectful', 'respective', 'respecting', 'respected'], answer: 0, why: '「敬意をはらう」は respectful。' },
+      { sentence: 'It was very [considerable] of you to help me.', choices: ['considerate', 'considering', 'considerably', 'consideration'], answer: 0, why: '「思いやりのある」は considerate。' },
+      { sentence: 'The fire caused [considerate] damage.', choices: ['considerable', 'considering', 'considerately', 'consideration'], answer: 0, why: '「かなりの」は considerable。' },
+      { sentence: 'The test was [successive]; everyone passed.', choices: ['successful', 'succeeding', 'success', 'successively'], answer: 0, why: '「成功した」は successful。successive は「連続する」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
