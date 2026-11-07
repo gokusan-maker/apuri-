@@ -40782,6 +40782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-animals',
+    title: 'On Living Alongside Animals',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Human beings have always lived alongside other animals. For our earliest ancestors, animals were sources of food, clothing, and danger, and their movements and habits were matters of life and death. Over thousands of years, some species were domesticated to pull plows, guard homes, and provide companionship, while others remained wild, admired from a distance or feared. Today, our relationships with animals are more varied and contradictory than ever, and examining them can reveal much about the way we understand ourselves.",
+      "One striking feature of these relationships is how differently we treat different species. Many people regard their dogs and cats as members of the family, celebrating their birthdays and mourning their deaths, while eating other animals whose intelligence and capacity for suffering may be comparable. Some species are protected by law and celebrated in films and stories, whereas others, perhaps less attractive to human eyes, are ignored or regarded as pests. Such distinctions often owe more to custom and emotion than to any careful reasoning about the nature of the animals themselves.",
+      "Our understanding of animal minds has also changed considerably. For much of modern history, many thinkers regarded animals as little more than complex machines, incapable of genuine thought or feeling. ( A ) this view still has its defenders, research has increasingly shown that many animals can solve problems, use tools, recognize individuals, and form lasting social bonds, and some appear to experience emotions such as fear, curiosity, and even grief in ways that resemble our own.",
+      "These discoveries raise difficult moral questions. If animals can suffer and form relationships, it becomes harder to justify treating them merely as resources for human use. Yet human societies depend on animals in countless ways, for food, clothing, medical research, and labor, and it is far from clear how these practices could be changed without great cost. Many people therefore live with an uneasy tension between their affection for animals and the ways in which their daily lives depend on them. Some respond by changing their diets or habits, while others prefer not to think too closely about the matter at all.",
+      "At the same time, contact with animals can enrich human life in ways that are difficult to measure. Watching birds at a feeder, walking a dog through a park, or simply observing insects in a garden can draw our attention outward, away from our own concerns and toward the lives of other creatures. Such experiences may remind us that the world is not organized solely around human interests, and that other beings have their own needs, rhythms, and ways of perceiving their surroundings.",
+      "In cities, however, many people have few opportunities for such encounters. Wild animals are often pushed to the margins of urban life, and the animals people know best may be those they see on screens rather than in person. Some writers have suggested that this distance may weaken our sense of connection with the natural world, making it easier to overlook the effects of human activity on other species and harder to imagine their experiences. Efforts to bring wildlife back into cities, through parks, ponds, and corridors of green space, may offer one way of restoring these lost encounters.",
+      "In the end, our relationships with animals may serve as a mirror of our own values. The way we treat creatures that cannot speak for themselves reveals what we consider worthy of respect and care, and how far we are willing to extend our moral concern beyond our own kind. To think carefully about animals, then, is not only to learn about them but also to ask what kind of beings we wish to be, and how we can share the world more justly with those who live alongside us.",
+    ],
+    ja: [
+      '人間はいつもほかの動物とともに暮らしてきた。私たちの最初の祖先にとって、動物は食べ物や衣服の源であり、危険でもあり、その動きや習性は生死にかかわる問題だった。何千年ものあいだに、ある種の動物は、すきを引き、家を守り、心のなぐさめをあたえるために家畜にされ、ほかの動物は野生のままで、遠くからあこがれられたり、おそれられたりした。今日、動物との関係はかつてないほど多様で矛盾に満ちており、それを調べることで、私たちが自分自身をどう理解しているかについて多くのことが明らかになりうる。',
+      'こうした関係のきわだった特徴の一つは、私たちが種によってどれほどちがうあつかいをしているかである。多くの人はイヌやネコを家族の一員と見なし、その誕生日を祝い、その死をいたむ一方で、知能や苦しむ力が同じくらいかもしれないほかの動物を食べている。法律で守られ、映画や物語でたたえられる種もあれば、人間の目にはあまり魅力的に見えないのかもしれない、無視されたり害獣と見なされたりする種もある。そうした区別は、動物そのものの性質についての注意深い理由づけよりも、習わしや感情によることが多い。',
+      '動物の心についての私たちの理解も大きく変わってきた。近代の歴史の多くのあいだ、多くの思想家は、動物を本物の思考や感情をもたない、複雑な機械くらいのものと見なしていた。この見方を支持する人は今もいるが、研究によって、多くの動物が問題を解き、道具を使い、個体を見分け、長く続く社会的なきずなを結べることがますます示されており、おそれや好奇心や、悲しみでさえ、私たち自身に似たやり方で感じているように見える動物もいる。',
+      'こうした発見は、むずかしい道徳の問いを投げかける。動物が苦しみ、関係を結べるのなら、それをただ人間が使うための資源としてあつかうことを正当化するのはむずかしくなる。しかし人間の社会は、食べ物や衣服や医学の研究や労働など、数えきれないやり方で動物にたよっており、大きな負担なしにこうした習わしをどう変えられるのかは、まったくはっきりしない。そのため多くの人は、動物への愛情と、自分の毎日の暮らしが動物にたよっているあり方とのあいだの、落ち着かない緊張をかかえて暮らしている。それにこたえて食生活や習慣を変える人もいれば、そのことをあまりくわしく考えないようにする人もいる。',
+      '同時に、動物とのふれ合いは、はかりにくいやり方で人間の暮らしを豊かにしうる。えさ台に来る鳥をながめたり、公園でイヌを散歩させたり、ただ庭の虫を観察したりすることは、私たちの注意を外へ、自分自身の心配ごとからほかの生き物の生へと向けさせる。そうした経験は、世界がただ人間の利益だけを中心に組み立てられているのではないこと、そしてほかの生き物にも、それぞれの必要やリズムや、まわりを感じとるやり方があることを思い出させてくれるかもしれない。',
+      'しかし都市では、多くの人がそうした出会いの機会をほとんどもたない。野生の動物はしばしば都会の暮らしのすみに追いやられ、人々がもっともよく知っている動物は、じかに見るものではなく画面で見るものかもしれない。この距離が自然の世界とのつながりの感覚を弱め、人間の活動がほかの種にあたえる影響を見落としやすくし、彼らの経験を想像しにくくしているかもしれないと示す書き手もいる。公園や池や緑の通り道によって都市に野生の生き物を呼びもどす取り組みは、こうした失われた出会いを取りもどす一つの方法になるかもしれない。',
+      '結局のところ、動物との関係は、私たち自身の価値観を映す鏡の役割を果たすのかもしれない。自分では語ることのできない生き物をどうあつかうかは、私たちが何を尊重と配慮にあたいするものと考え、自分たちのなかまをこえてどこまで道徳的な関心を広げようとしているかを明らかにする。だから、動物について注意深く考えることは、動物について学ぶことだけでなく、私たちがどのような存在でありたいのか、そしてともに暮らす者たちと世界をどうすればもっと公正に分かち合えるのかを問うことでもある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この見方を支持する人は今もいるが、研究は多くの動物の能力を示している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '私たちは種によってちがうあつかいをしている。', answer: true, why: '第2段落 how differently we treat different species。' },
+      { statement: '筆者によれば、種の区別はいつも注意深い理由づけにもとづいている。', answer: false, why: '第2段落 owe more to custom and emotion than to any careful reasoning。' },
+      { statement: '多くの動物が道具を使い、個体を見分けられることが示されている。', answer: true, why: '第3段落 many animals can solve problems, use tools, recognize individuals。' },
+      { statement: '都市では、多くの人が野生の動物とふれ合う機会をたくさんもっている。', answer: false, why: '第6段落 many people have few opportunities for such encounters。' },
+    ],
+    qa: [
+      { q: 'What did many thinkers regard animals as for much of modern history?', choices: ['Little more than complex machines.', 'Members of the family.', 'Teachers of humans.', 'Gods of nature.'], answer: 0, why: '第3段落 regarded animals as little more than complex machines。' },
+      { q: 'What does the way we treat animals reveal, according to the author?', choices: ['What we consider worthy of respect and care.', 'How rich we are.', 'How many pets we own.', 'Which films we like.'], answer: 0, why: '第7段落 reveals what we consider worthy of respect and care。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
