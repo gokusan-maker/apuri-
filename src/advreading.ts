@@ -41182,6 +41182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-islands',
+    title: 'On Islands',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Islands have long held a special place in the human imagination. In stories, legends, and dreams, they appear as places of escape, mystery, and possibility, where travelers discover strange creatures, lost civilizations, or a simpler and happier way of life far from the troubles of home. For people who live on large continents, the idea of a small piece of land surrounded on all sides by water can seem almost magical. Yet for those who actually live on islands, life is shaped by realities that are often very different from the romantic images held by outsiders.",
+      "One of the most obvious features of island life is isolation. The sea that surrounds an island separates its inhabitants from the wider world, making travel, trade, and communication more difficult. Goods that are easily available on the mainland may be expensive or scarce, and young people may need to leave in search of education and work. At the same time, this isolation can foster a strong sense of identity and community, as people who depend on one another develop close relationships and distinctive traditions. Neighbors who know they cannot easily leave tend to resolve disagreements carefully, and festivals and shared work often play a central role in maintaining harmony.",
+      "Islands are also remarkable laboratories of nature. Because plants and animals that arrive on an island may be cut off from their relatives elsewhere, they often evolve in unusual ways over long periods of time. ( A ) many island species are found nowhere else on Earth, they are also especially vulnerable, since a single new predator, disease, or competitor introduced by human beings can drive them to extinction within a short period.",
+      "The limits of an island can make the consequences of human choices unusually visible. On a continent, the effects of cutting down forests or overusing water may be spread across a vast area and become apparent only slowly. On a small island, by contrast, such changes can quickly affect everyone, and the history of some islands offers sobering examples of societies that suffered when their natural resources were exhausted. In this sense, islands can serve as warnings about the fragility of the systems on which all human life depends.",
+      "In recent decades, many islands have faced new challenges. Rising sea levels threaten low-lying islands with flooding and the loss of fresh water, and stronger storms can devastate homes and crops. Tourism has brought income to many island communities, but it has also placed pressure on beaches, reefs, and local cultures. For some island nations, the question is no longer how to develop, but whether their homeland will survive at all. Some governments have even begun to consider how their citizens might one day be relocated, and how a nation's culture and identity could be preserved if its land were lost.",
+      "Despite these difficulties, island communities have often shown remarkable resilience and creativity. Over generations, they have developed ways of fishing, building, and farming adapted to their particular environments, and many have preserved languages and customs that enrich the cultural diversity of the world. Today, some islands are experimenting with renewable energy, sustainable fishing, and new forms of local cooperation, offering valuable examples that larger and wealthier societies might learn from.",
+      "In the end, islands remind us that every community exists within limits. The sea makes those limits visible on an island, but they are no less real on a continent, where the boundaries of resources and ecosystems are simply harder to see. To think about islands, then, is to reflect on how human beings can live well within a finite world, balancing independence with connection, and using what they have with care so that it may be passed on to those who come after them.",
+    ],
+    ja: [
+      '島は長いあいだ、人間の想像力の中で特別な場所をしめてきた。物語や伝説や夢の中で、島は逃げ場であり、なぞであり、可能性の場所としてあらわれ、そこで旅人は不思議な生き物や失われた文明や、ふるさとの悩みから遠くはなれた、より単純で幸せな暮らし方を見つける。大きな大陸に住む人々にとって、四方を水にかこまれた小さな土地という考えは、ほとんど魔法のように思えることがある。しかし実際に島に住む人々にとって、暮らしは、よそ者がもつ夢のような姿とはしばしばまったくちがう現実によって形づくられている。',
+      '島の暮らしのもっともわかりやすい特徴の一つは孤立である。島をかこむ海は住民を広い世界から切りはなし、旅や貿易や連絡をむずかしくする。本土ではかんたんに手に入る品物が高かったり少なかったりすることがあり、若者は教育や仕事を求めて出ていかなければならないかもしれない。同時に、この孤立は強い個性と共同体の感覚を育てることがある。たがいにたより合う人々が親しい関係と独特の伝統を育てるからである。かんたんには出ていけないとわかっている近所の人どうしは、意見のちがいを注意深く解決する傾向があり、祭りや共同の仕事が、なごやかさを保つうえで中心的な役割を果たすことが多い。',
+      '島はまた、自然のおどろくべき実験室でもある。島にたどり着いた植物や動物は、ほかの場所のなかまから切りはなされることがあるので、長い時間をかけて変わったやり方で進化することが多い。島の種の多くは地球上のほかのどこにも見られないが、とりわけ弱くもある。人間が持ちこんだたった一つの新しい捕食者や病気や競争相手によって、短い期間で絶滅に追いこまれることがあるからである。',
+      '島の限界は、人間の選択の結果をとりわけ目に見えるものにすることがある。大陸では、森を切りたおしたり水を使いすぎたりすることの影響は、広い範囲に広がり、ゆっくりとしかあらわれないかもしれない。それに対して小さな島では、そうした変化がすぐにだれにでも影響することがあり、いくつかの島の歴史は、自然の資源が使いつくされたときに苦しんだ社会の、考えさせられる例をあたえてくれる。この意味で、島は、あらゆる人間の暮らしがたよっている仕組みのこわれやすさについての警告の役割を果たしうる。',
+      'ここ数十年、多くの島が新しい課題に直面してきた。海面の上昇は、低い島々を洪水と真水の喪失でおびやかし、より強いあらしは家や作物を荒らしうる。観光は多くの島の地域に収入をもたらしたが、浜辺やサンゴ礁や地元の文化に負担もかけてきた。いくつかの島国にとって、問いはもはやどう発展するかではなく、自分たちのふるさとがそもそも生きのこれるかどうかなのである。いつか国民をどう移住させるか、そして土地が失われたら国の文化と個性をどう守れるかを考えはじめた政府さえある。',
+      'こうした困難にもかかわらず、島の地域はしばしばおどろくべき立ち直る力と創造性を示してきた。何世代にもわたって、彼らはそれぞれの環境に合った漁や建築や農業のやり方を育て、多くの島が、世界の文化の多様さを豊かにすることばや習わしを守ってきた。今日では、再生可能エネルギーや持続可能な漁や、地元の協力の新しい形をためしている島もあり、より大きく豊かな社会が学べるかもしれない貴重な例を示している。',
+      '結局のところ、島は、あらゆる共同体が限界の中に存在していることを思い出させてくれる。海は島の上でその限界を目に見えるものにするが、大陸でもその限界は同じように現実のものであり、ただ資源や生態系の境が見えにくいだけである。だから、島について考えることは、人間が限りある世界の中でどうすればよく暮らせるのか、自立とつながりのつりあいをとり、もっているものを大切に使って、あとに続く人々にわたしていけるのかをふり返ることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ほかのどこにも見られないが、とりわけ弱くもある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '島の孤立は、強い共同体の感覚を育てることがある。', answer: true, why: '第2段落 this isolation can foster a strong sense of identity and community。' },
+      { statement: '島の種は、新しい捕食者が来ても絶滅することはない。', answer: false, why: '第3段落 can drive them to extinction within a short period。' },
+      { statement: '小さな島では、資源を使いすぎた影響がすぐにだれにでも及ぶことがある。', answer: true, why: '第4段落 such changes can quickly affect everyone。' },
+      { statement: '筆者は、大陸には限界がまったくないと述べている。', answer: false, why: '第7段落 they are no less real on a continent。' },
+    ],
+    qa: [
+      { q: 'What may young people on islands need to do?', choices: ['Leave in search of education and work.', 'Build larger boats.', 'Become fishers.', 'Stay at home forever.'], answer: 0, why: '第2段落 young people may need to leave in search of education and work。' },
+      { q: 'What are some islands experimenting with today?', choices: ['Renewable energy, sustainable fishing, and new forms of cooperation.', 'Building more airports.', 'Cutting down forests.', 'Closing their schools.'], answer: 0, why: '第6段落 experimenting with renewable energy, sustainable fishing, and new forms of local cooperation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
