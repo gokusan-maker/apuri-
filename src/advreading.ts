@@ -42658,6 +42658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-school-streets',
+    title: 'Should Streets Outside Schools Be Closed to Cars?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every school day, the streets outside many primary schools become crowded with cars as parents drop off their children in the morning and collect them in the afternoon. Engines run while drivers wait, vehicles stop in places where they should not, and children must find their way to the school gate between moving cars. In response, a number of cities have begun to close the streets directly outside schools to motor traffic for short periods at the start and end of the school day, a policy that has been praised by some and strongly opposed by others.",
+      "Supporters argue that such closures make the journey to school much safer for children. Young pupils are small, easily distracted, and not always able to judge the speed of approaching vehicles, so that a street full of cars that are reversing, turning, and parking presents a serious risk of accidents. When cars are kept away from the school gate, supporters say, children can arrive and leave without having to watch constantly for danger, and parents can feel more confident about allowing older children to walk or cycle to school on their own.",
+      "Supporters also point to the benefits for health and the environment. Vehicles that wait with their engines running release pollutants at exactly the height at which small children breathe, and research has linked such pollution to breathing problems and other illnesses. ( A ) closing a single street will not solve the wider problem of air pollution, supporters argue, it can reduce children's exposure at one of the most polluted moments of their day and encourage more families to replace short car journeys with walking.",
+      "Critics, however, argue that the policy ignores the realities of many families' lives. Parents who must drive their children to school on the way to work, or who live too far away for walking to be practical, may find themselves forced to park further away and walk the remaining distance, which can make them late for their jobs. Critics also point out that families with disabled children, or with several young children to look after at once, may depend on being able to stop close to the school gate.",
+      "Critics also warn that the problem may simply be moved elsewhere. If cars can no longer enter the street directly outside a school, drivers may stop instead in neighboring streets, creating congestion and danger in places that were previously quiet. Some residents who live on closed streets have also complained that they are unable to leave or return to their homes at certain times, and critics argue that a policy intended to protect one group should not create unreasonable difficulties for another.",
+      "In response, many cities have tried to design the scheme more carefully. Residents and people with disabilities are often given permits allowing them to drive into the closed area, while volunteers or staff stand at the barriers to explain the rules and make sure that emergency vehicles can always pass. Some schools have also organized walking groups, in which an adult leads a line of children from a meeting point along a safe route, so that families who live further away can still avoid driving all the way to the gate.",
+      "The debate over closing streets outside schools ultimately reflects a broader question about who our streets are for. For much of the past century, streets have been designed mainly for the movement of motor vehicles, and people on foot have been expected to adapt to them. Policies that give priority to children at certain times of day challenge that assumption, and the arguments they provoke show how difficult it can be to balance safety, convenience, and fairness in spaces that everyone shares but that no single group fully owns.",
+    ],
+    ja: [
+      '学校のある日はいつも、多くの小学校の前の道路が、親が朝に子どもを送り、午後にむかえに来る車でこみ合う。運転する人が待つあいだもエンジンはかかったままで、車はとまってはいけない場所にとまり、子どもたちは動く車のあいだをぬって校門までたどりつかなければならない。これに対して、いくつかの都市では、学校のすぐ前の道路を、登校と下校の時間帯の短いあいだだけ車の通行止めにしはじめた。この方針は、ある人々からはほめられ、ほかの人々からは強く反対されている。',
+      '支持する人々は、そのような通行止めによって、子どもたちの通学がずっと安全になると主張する。低学年の子どもは体が小さく、気がちりやすく、近づいてくる車の速さをいつも判断できるわけではないので、バックしたり曲がったりとまったりする車でいっぱいの道路は、事故の大きな危険をもたらす。車が校門から遠ざけられれば、子どもたちはたえず危険に注意しなくても登校や下校ができ、親も、年上の子どもが一人で歩いたり自転車に乗ったりして学校へ行くのを、より安心して許せるようになる、と支持者は言う。',
+      '支持する人々はまた、健康と環境にとっての利点も指摘する。エンジンをかけたまま待つ車は、まさに小さな子どもが息をする高さで汚染物質を出し、研究はそのような汚染を呼吸の問題やほかの病気と結びつけてきた。一つの道路を通行止めにしても、大気汚染というより大きな問題が解決するわけではないが、子どもの一日のなかでもっとも汚染のひどい時間の一つに、子どもが汚染にさらされるのを減らし、より多くの家庭が短い車での移動を歩くことに切りかえるよう促すことができる、と支持者は主張する。',
+      'しかし批判する人々は、この方針が多くの家庭の生活の実情を無視していると主張する。仕事に行くとちゅうで子どもを車で学校まで送らなければならない親や、歩くのが現実的でないほど遠くに住んでいる親は、もっと遠くに車をとめて残りの道のりを歩くことを強いられ、そのせいで仕事におくれるかもしれない。批判する人々はまた、障害のある子どもがいる家庭や、何人もの小さな子どもを同時に世話しなければならない家庭は、校門の近くにとまれることにたよっているかもしれないと指摘する。',
+      '批判する人々はまた、問題がただほかの場所へ移るだけかもしれないと警告する。学校のすぐ前の道路に車が入れなくなれば、運転する人は代わりにとなりの道路にとまり、以前はしずかだった場所に渋滞と危険を生むかもしれない。通行止めになる道路に住む住民のなかには、ある時間帯には家から出ることも家にもどることもできないと苦情を言う人もおり、ある人々を守るための方針が、別の人々に不当な困難を生むべきではない、と批判する人々は主張する。',
+      'これに対して、多くの都市はこの仕組みをもっと注意深く設計しようとしてきた。住民や障害のある人々には、通行止めの区域に車で入れる許可証があたえられることが多く、ボランティアや職員が柵のところに立って決まりを説明し、緊急車両がいつでも通れるようにしている。また、大人が集合場所から安全な道すじにそって子どもの列を先導する「歩くグループ」をつくった学校もある。そうすれば、遠くに住む家庭も、校門まで車で行かずにすむからである。',
+      '学校の前の道路を通行止めにすることをめぐる議論は、結局のところ、道路はだれのためのものなのかという、より広い問いを反映している。前の世紀の大部分のあいだ、道路はおもに自動車が動くために設計され、歩く人々は車に合わせることを求められてきた。一日のある時間に子どもを優先する方針は、その前提に疑問を投げかけるものであり、それが引き起こす議論は、だれもが共有しているが、どの一つの集団も完全には所有していない空間で、安全と便利さと公平さのつりあいをとることがどれほどむずかしいかを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「一つの道路を通行止めにしても大気汚染は解決しないが、子どもがさらされるのを減らせる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say closing streets outside schools makes the journey to school ( 1 ) and reduces children’s exposure to pollution. Critics argue that some families depend on driving and that the problem may simply be moved to ( 2 ) streets. Many cities give ( 3 ) to residents and people with disabilities.',
+      blanks: [
+        { choices: ['safer', 'longer', 'cheaper', 'noisier'], answer: 0, why: '第2段落 make the journey to school much safer。' },
+        { choices: ['neighboring', 'foreign', 'private', 'empty'], answer: 0, why: '第5段落 drivers may stop instead in neighboring streets。' },
+        { choices: ['permits', 'prizes', 'warnings', 'tickets'], answer: 0, why: '第6段落 are often given permits allowing them to drive into the closed area。' },
+      ],
+    },
+    tf: [
+      { statement: '通行止めは、登校と下校の時間帯の短いあいだだけおこなわれる。', answer: true, why: '第1段落 for short periods at the start and end of the school day。' },
+      { statement: 'エンジンをかけたまま待つ車は、大人の頭の高さで汚染物質を出す。', answer: false, why: '第3段落 at exactly the height at which small children breathe。' },
+      { statement: '批判する人々によると、親が仕事におくれることもありうる。', answer: true, why: '第4段落 which can make them late for their jobs。' },
+      { statement: '通行止めの区域には、緊急車両も入ることができない。', answer: false, why: '第6段落 make sure that emergency vehicles can always pass。' },
+    ],
+    qa: [
+      { q: 'Why are young pupils especially at risk on streets full of cars?', choices: ['They are small, easily distracted, and cannot always judge speed.', 'They walk too slowly.', 'They do not like school.', 'They always cycle without lights.'], answer: 0, why: '第2段落 Young pupils are small, easily distracted, and not always able to judge the speed。' },
+      { q: 'What happens in the walking groups organized by some schools?', choices: ['An adult leads a line of children along a safe route.', 'Children walk alone at night.', 'Parents drive in a line of cars.', 'Teachers carry children to school.'], answer: 0, why: '第6段落 an adult leads a line of children from a meeting point along a safe route。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
