@@ -3297,6 +3297,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M78 70 q16 -4 14 -22" stroke="#3f3527" strokeWidth="6" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'marmot')
+    return (
+      <g>
+        {/* 大きな前歯 */}
+        <rect x="46" y="58" width="8" height="7" rx="1" fill="#fefce8" stroke="#3b2a17" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
