@@ -43058,6 +43058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-single-sex-schools',
+    title: 'Should Schools Be Single-Sex?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, most children are educated in schools where boys and girls study together, but a significant number of schools still teach only boys or only girls. Some of these single-sex schools have long and distinguished histories, and their supporters believe that they offer advantages that mixed schools cannot easily provide. Others, however, regard them as a relic of a time when boys and girls were expected to follow very different paths in life, and the question of whether such schools should continue to exist has remained a subject of debate among parents, teachers, and researchers.",
+      "Supporters argue that single-sex schools allow students to concentrate more fully on their studies. During adolescence, they say, young people are often highly conscious of how they appear to members of the opposite sex, and this self-consciousness can make them reluctant to ask questions, take risks, or show enthusiasm for subjects that are considered unfashionable. Supporters point out that some students report feeling freer to be themselves in a single-sex environment, where they are less worried about the impression they are making on others.",
+      "Supporters also claim that single-sex schools can help students resist stereotypes about which subjects suit boys and which suit girls. In a school where all the students are girls, for example, girls fill every role in science clubs, sports teams, and student councils, and they may be more likely to choose subjects such as physics or engineering. ( A ) the evidence on this point is not entirely consistent, supporters argue, such schools may give some students the confidence to pursue interests they might otherwise have abandoned.",
+      "Critics, however, argue that separating boys and girls fails to prepare young people for the world in which they will live and work. Adults must cooperate with people of all genders in universities, workplaces, and communities, and critics believe that learning to do so naturally is an important part of education. They worry that students who spend their teenage years mainly with members of their own sex may find it harder to form respectful and equal relationships later, or may develop exaggerated ideas about the differences between men and women.",
+      "Critics also question whether the apparent success of single-sex schools is really caused by the separation of the sexes. Many such schools are selective or charge high fees, which means that their students may come from families with more resources and stronger support for education. When researchers compare students with similar backgrounds, critics point out, the advantages of single-sex education often appear much smaller or disappear altogether, suggesting that the quality of teaching and the expectations of the school may matter far more than whether its students are all boys or all girls.",
+      "In response, some educators have sought a middle path. Some mixed schools now teach certain subjects in separate classes for boys and girls while keeping the rest of school life shared, and others focus on reducing stereotypes within mixed classrooms by encouraging all students to try a wide range of subjects and activities. Many experts emphasize that what matters most is not the structure of the school but whether every student feels safe, respected, and free to develop their abilities. In their view, a poorly run school will disappoint its students whether it is single-sex or mixed.",
+      "The debate over single-sex schools ultimately reflects a broader question about what schools are for. If their main purpose is to help each student achieve as much as possible academically, then any arrangement that improves concentration and confidence may seem worth considering. If, however, schools are also meant to prepare young people to live together in a diverse society, then the experience of learning side by side with others who are different from oneself may be valuable in ways that no examination result can fully measure.",
+    ],
+    ja: [
+      '多くの国で、ほとんどの子どもは男女がいっしょに学ぶ学校で教育を受けているが、男子だけ、あるいは女子だけを教える学校もかなりの数がまだある。こうした男女別学の学校のなかには長くすぐれた歴史をもつものもあり、それを支持する人々は、共学の学校ではかんたんには提供できない利点があると信じている。しかし、男子と女子が人生でまったくちがう道を進むことを期待されていた時代のなごりだと考える人々もおり、そうした学校が存在しつづけるべきかどうかという問いは、親や教師、研究者のあいだで議論の対象でありつづけている。',
+      '支持する人々は、別学の学校では生徒が勉強により集中できると主張する。思春期には、若者はしばしば異性に自分がどう見えるかを強く意識しており、この自意識のせいで、質問したり、思いきって挑戦したり、はやらないと思われている科目に熱意を見せたりするのをためらうことがある、と彼らは言う。別学の環境では、ほかの人にあたえる印象をあまり気にしなくてすむので、より自分らしくいられると感じると話す生徒もいる、と支持者は指摘する。',
+      '支持する人々はまた、別学の学校は、どの科目が男子に向き、どの科目が女子に向くかという固定観念に生徒が流されないよう助けうると主張する。たとえば生徒が全員女子の学校では、理科クラブや運動部、生徒会のあらゆる役割を女子がになうことになり、物理や工学のような科目を選びやすくなるかもしれない。この点についての証拠はかならずしも一貫していないが、そうした学校は、一部の生徒に、そうでなければあきらめていたかもしれない関心を追い求める自信をあたえるかもしれない、と支持者は主張する。',
+      'しかし批判する人々は、男子と女子を分けることは、若者がこれから暮らし働く世界への準備にならないと主張する。大人は大学や職場、地域で、あらゆる性別の人々と協力しなければならず、それを自然にできるようになることは教育の大切な一部だと批判する人々は考える。十代のあいだおもに同性の人々とだけ過ごした生徒は、のちに敬意にもとづく対等な関係を築くのがむずかしくなったり、男女のちがいについて大げさな考えをもつようになったりするかもしれないと彼らは心配する。',
+      '批判する人々はまた、別学の学校の見かけの成功が、本当に男女を分けたことによるものなのかどうかを疑う。そうした学校の多くは入学者を選抜していたり、高い授業料をとったりしており、その生徒は、より多くの資源をもち、教育をより強くささえる家庭の出身である可能性がある。研究者が似たような生い立ちの生徒どうしを比べると、別学の教育の利点はずっと小さく見えるか、まったく消えてしまうことが多いと批判する人々は指摘し、生徒が全員男子か全員女子かよりも、授業の質や学校の期待のほうがはるかに重要なのかもしれないと示している。',
+      'これに対して、中間の道を求めてきた教育者もいる。共学の学校のなかには、一部の科目だけを男女別のクラスで教え、学校生活のほかの部分は共有したままにするところもあり、すべての生徒にはば広い科目や活動を試すよう促すことで、共学の教室の中の固定観念を減らすことに力を入れるところもある。多くの専門家は、もっとも大切なのは学校の形ではなく、すべての生徒が安全で、尊重され、自分の能力を自由に伸ばせると感じられるかどうかだと強調する。彼らの考えでは、運営のまずい学校は、別学であれ共学であれ、生徒を失望させるだろう。',
+      '別学の学校をめぐる議論は、結局のところ、学校は何のためにあるのかという、より広い問いを反映している。学校のおもな目的が、一人一人の生徒が学業でできるだけ多くを達成するのを助けることなら、集中力や自信を高めるどんな仕組みも考える価値があるように思えるかもしれない。しかし学校が、若者が多様な社会でともに暮らす準備をさせるためのものでもあるなら、自分とちがう人々とならんで学ぶ経験は、どんな試験の結果でも十分にははかれないかたちで価値があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「証拠はかならずしも一貫していないが、自信をあたえるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say single-sex schools help students ( 1 ) and resist stereotypes about subjects. Critics argue that such schools fail to prepare young people to work with people of all genders and that their success may reflect students’ family ( 2 ). Many experts emphasize that every student should feel safe and ( 3 ).',
+      blanks: [
+        { choices: ['concentrate', 'travel', 'sleep', 'compete'], answer: 0, why: '第2段落 allow students to concentrate more fully on their studies。' },
+        { choices: ['backgrounds', 'names', 'houses', 'pets'], answer: 0, why: '第5段落 When researchers compare students with similar backgrounds。' },
+        { choices: ['respected', 'tired', 'watched', 'alone'], answer: 0, why: '第6段落 feels safe, respected, and free to develop their abilities。' },
+      ],
+    },
+    tf: [
+      { statement: '別学の学校のなかには、長い歴史をもつものもある。', answer: true, why: '第1段落 Some of these single-sex schools have long and distinguished histories。' },
+      { statement: '支持者によると、別学の学校の効果についての証拠は完全に一貫している。', answer: false, why: '第3段落 the evidence on this point is not entirely consistent。' },
+      { statement: '別学の学校の多くは、入学者を選抜していたり高い授業料をとったりしている。', answer: true, why: '第5段落 Many such schools are selective or charge high fees。' },
+      { statement: '共学の学校はどこも、すべての科目を男女いっしょに教えている。', answer: false, why: '第6段落 Some mixed schools now teach certain subjects in separate classes。' },
+    ],
+    qa: [
+      { q: 'Why might adolescents be reluctant to ask questions, according to supporters?', choices: ['They are conscious of how they appear to the opposite sex.', 'They do not like their teachers.', 'They have too much homework.', 'They are always tired.'], answer: 0, why: '第2段落 highly conscious of how they appear to members of the opposite sex。' },
+      { q: 'What do critics believe is an important part of education?', choices: ['Learning to cooperate naturally with people of all genders.', 'Studying only science.', 'Winning sports competitions.', 'Paying high fees.'], answer: 0, why: '第4段落 learning to do so naturally is an important part of education。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
