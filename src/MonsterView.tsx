@@ -3379,6 +3379,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M76 74 q18 2 14 16 q-4 8 -12 2" stroke="#3e2614" strokeWidth="4" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'langur')
+    return (
+      <g>
+        {/* 黒い顔 */}
+        <ellipse cx="50" cy="46" rx="11" ry="10" fill="#1c1917" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
