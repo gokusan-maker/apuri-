@@ -3443,6 +3443,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M60 46 q14 2 18 12" stroke="#082f49" strokeWidth="2.5" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'weka')
+    return (
+      <g>
+        {/* まだらもよう */}
+        <circle cx="40" cy="62" r="2.5" fill="#33240f" />
+        <circle cx="52" cy="66" r="2.5" fill="#33240f" />
+        <circle cx="62" cy="60" r="2.5" fill="#33240f" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
