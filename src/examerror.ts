@@ -9139,6 +9139,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The test was [successive]; everyone passed.', choices: ['successful', 'succeeding', 'success', 'successively'], answer: 0, why: '「成功した」は successful。successive は「連続する」。' },
     ],
   },
+  {
+    id: 'exam-fix-215',
+    title: '入試の誤文訂正〈215〉（京大レベル：英作文の despite・in spite of・although の使い分け）',
+    points: ['despite と in spite of は前置詞なので、あとに名詞や動名詞が来る（despite the rain／in spite of being tired）。although・though・even though は接続詞なので、あとに主語＋動詞が来る（although it rained）。despite of とは言わない。'],
+    examples: [{ en: 'Despite the rain, we went out. / Although it was raining, we went out.', ja: '雨にもかかわらず、私たちは出かけた。／雨がふっていたけれど、私たちは出かけた。' }],
+    questions: [
+      { sentence: '[Although] the rain, we played soccer.', choices: ['Despite', 'Even though', 'Though', 'However'], answer: 0, why: 'あとが名詞 the rain なので前置詞 Despite。' },
+      { sentence: '[Despite] it was cold, she went swimming.', choices: ['Although', 'In spite of', 'Because of', 'Instead of'], answer: 0, why: 'あとが主語＋動詞 it was cold なので接続詞 Although。' },
+      { sentence: 'He passed the exam [despite of] his illness.', choices: ['in spite of', 'although', 'even though', 'though'], answer: 0, why: 'despite of とは言わない。in spite of（または despite）。' },
+      { sentence: '[In spite] being tired, he kept working.', choices: ['In spite of', 'Although', 'Though', 'Even if'], answer: 0, why: 'in spite of の of は落とせない。あとは動名詞 being。' },
+      { sentence: '[Even though] his hard work, he failed.', choices: ['Despite', 'Although', 'Unless', 'While'], answer: 0, why: 'あとが名詞 his hard work なので前置詞 Despite。' },
+      { sentence: 'She smiled [in spite of] she was sad.', choices: ['although', 'despite', 'because of', 'in case of'], answer: 0, why: 'あとが主語＋動詞 she was sad なので接続詞 although。' },
+      { sentence: 'Despite [to be] young, he leads the team.', choices: ['being', 'be', 'been', 'he is'], answer: 0, why: '前置詞 despite のあとは動名詞 being。' },
+      { sentence: '[Though] the noise, the baby slept well.', choices: ['Despite', 'Even though', 'Although', 'As though'], answer: 0, why: 'あとが名詞 the noise なので前置詞 Despite。' },
+      { sentence: 'Although [of] heavy traffic, we arrived on time.', choices: ['there was', 'despite', 'in spite', 'because'], answer: 0, why: 'although のあとは主語＋動詞なので Although there was heavy traffic。' },
+      { sentence: 'In spite of [he is rich], he lives simply.', choices: ['being rich', 'rich is he', 'he rich', 'to be rich'], answer: 0, why: '前置詞 in spite of のあとは動名詞 being rich。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
