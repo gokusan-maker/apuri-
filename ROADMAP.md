@@ -1261,7 +1261,7 @@
   - [x] 476 正誤問題〈241〉（国公立レベル：頻度の副詞 always・often・never の位置）10問
   - [x] 477 誤文訂正〈235〉（京大レベル：英作文の say・tell・speak・talk の使い分け）10問
   - [x] 478 正誤問題〈242〉（東大レベル：英作文の「～するようになる」come to do・learn to do・get to do）10問
-  - [ ] 479 誤文訂正〈236〉（国公立レベル：in time と on time・in the end と at the end）10問
+  - [x] 479 誤文訂正〈236〉（国公立レベル：in time と on time・in the end と at the end）10問
   - [ ] 480 正誤問題〈243〉（京大レベル：英作文の happen・take place・occur（受け身にしない））10問
   - [ ] 481 誤文訂正〈237〉（東大レベル：英作文の alone と lonely・alive と living の使い分け）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

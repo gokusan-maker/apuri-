@@ -10042,6 +10042,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Speaking] the truth, I don’t like this plan.', choices: ['To tell', 'Saying', 'Talking', 'Telling of'], answer: 0, why: '「実を言うと」は To tell the truth。' },
     ],
   },
+  {
+    id: 'exam-fix-236',
+    title: '入試の誤文訂正〈236〉（国公立レベル：in time と on time・in the end と at the end）',
+    points: ['on time は「時間どおりに・定刻に」（The train arrived on time.）、in time は「間に合って」（in time to catch the train／in time for the start）。just in time で「ぎりぎり間に合って」。', 'in the end は「最後には・結局」（副詞句として文全体にかかる）、at the end of ～ は「～の終わりに・～のつき当たりに」（at the end of the street／at the end of the film）。「～の終わりまでに」は by the end of ～、「ついに・やっと」は at last。'],
+    examples: [{ en: 'The bus left on time, and we arrived just in time for the concert. / In the end, we went home happy.', ja: 'バスは定刻に出発し、私たちはコンサートにぎりぎり間に合った。／結局、私たちは楽しい気分で家に帰った。' }],
+    questions: [
+      { sentence: 'The train arrived [in time], exactly at 9:00 as scheduled.', choices: ['on time', 'at time', 'by time', 'on the time'], answer: 0, why: '予定どおり定刻に着くのは on time。' },
+      { sentence: 'We got to the station just [on time] to catch the last train.', choices: ['in time', 'at time', 'by the time', 'on the time'], answer: 0, why: '「間に合って」は in time（to do）。' },
+      { sentence: '[At the end], we decided to stay at home.', choices: ['In the end', 'At end', 'By the end of', 'On the end'], answer: 0, why: '「結局」は In the end。' },
+      { sentence: 'There is a small shop [in the end] of this street.', choices: ['at the end', 'in end', 'at end', 'by the end'], answer: 0, why: '「通りのつき当たりに」は at the end of。' },
+      { sentence: 'I will finish the report [in the end of] this month.', choices: ['by the end of', 'in end of', 'at end', 'on the end of'], answer: 0, why: '「今月末までに」は by the end of this month。' },
+      { sentence: 'The bus is never [in time]; it is always late.', choices: ['on time', 'at time', 'by time', 'in the time'], answer: 0, why: '「定刻どおりに来ない」なので on time。' },
+      { sentence: 'He ran fast and arrived [in time for to] the start of the race.', choices: ['in time for', 'on time to', 'in time to for', 'on time for to'], answer: 0, why: '名詞の前は in time for。to は不要。' },
+      { sentence: '[At last of] the film, everyone was crying.', choices: ['At the end of', 'In the end of', 'At last', 'By end of'], answer: 0, why: '「映画の終わりに」は At the end of the film。' },
+      { sentence: 'We waited for hours, and [at the last] the bus came.', choices: ['at last', 'in last', 'at the lastly', 'on last'], answer: 0, why: '「やっと・ついに」は at last。' },
+      { sentence: 'The doctor arrived [just on time] to save the boy’s life.', choices: ['just in time', 'just at time', 'by just time', 'just on the time'], answer: 0, why: '「ぎりぎり間に合って」は just in time。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
