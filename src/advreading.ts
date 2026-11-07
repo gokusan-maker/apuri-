@@ -42098,6 +42098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-pets-at-work',
+    title: 'Should Employees Bring Pets to Work?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a growing number of offices around the world, it is no longer unusual to see a dog sleeping under a desk or wandering between meeting rooms. Some companies now allow employees to bring their pets to work, either every day or on special occasions, presenting the policy as a way to make the workplace friendlier and more relaxed. Supporters believe that animals can improve both the wellbeing and the productivity of staff, while critics worry about allergies, distractions, and the comfort of colleagues who do not share their enthusiasm for pets.",
+      "Supporters argue that the presence of animals can reduce stress. Research has suggested that interacting with friendly animals may lower blood pressure and improve mood, and many employees report feeling calmer and happier when their pets are nearby. For people who would otherwise worry about leaving a dog alone at home all day, bringing it to work may remove a significant source of anxiety and allow them to concentrate more fully on their tasks. Some employees also say that a short walk with a dog at lunchtime encourages them to take a proper break, returning to their desks refreshed rather than eating in front of a screen.",
+      "Supporters also claim that pets can strengthen relationships among colleagues. A dog in the office can provide a natural topic of conversation, encouraging people from different departments to talk to one another and creating a more sociable atmosphere. ( A ) such benefits are difficult to measure precisely, supporters argue, companies that allow pets may find it easier to attract and keep employees, particularly younger workers who value a relaxed and flexible working environment.",
+      "Critics, however, point out that not everyone enjoys the company of animals. Some employees have allergies that can cause serious discomfort, while others are afraid of dogs or simply find them distracting. A barking dog during an important telephone call, or a pet that wanders into a colleague's space uninvited, can create tension and interrupt work. Critics argue that a policy that pleases some employees may make the workplace less comfortable for others who have equal rights to a pleasant environment. Those who object may also feel uncomfortable complaining, worried that they will seem unfriendly to colleagues who love their pets.",
+      "Critics also raise practical concerns. Animals may damage furniture, cause accidents, or create problems with hygiene, particularly in workplaces where food is prepared or where hygiene standards are strict. Companies may face questions about who is responsible if an animal injures someone, and owners may be distracted by the need to walk, feed, or care for their pets during the working day, reducing rather than increasing their productivity.",
+      "Many companies that allow pets have tried to address these concerns through clear rules. They may require that animals be well behaved and vaccinated, limit them to certain areas of the building, or set aside pet-free zones for employees with allergies or fears. Some allow pets only on particular days, while others ask staff to agree on the policy before it is introduced, so that the needs and preferences of everyone are taken into account. Regular reviews allow the rules to be adjusted if problems arise, and in some cases a trial period helps everyone decide whether the arrangement works.",
+      "The debate over pets at work ultimately reflects broader questions about how workplaces should balance the wellbeing of different employees. Policies that make some people happier may make others less comfortable, and finding a fair compromise requires listening carefully to a range of views. Whether or not animals belong in the office, the discussion highlights the growing recognition that the conditions in which people work can have a significant effect on both their health and their happiness at work.",
+    ],
+    ja: [
+      '世界中のますます多くの職場で、机の下でねむったり会議室のあいだを歩きまわったりするイヌを見かけることが、もはやめずらしくなくなっている。毎日、あるいは特別な日に、社員がペットを職場に連れてくることを認め、その方針を職場をより親しみやすく、くつろいだものにする方法として示す会社もある。支持する人々は、動物は社員の幸せと仕事の成果の両方をよくしうると信じているが、批判する人々は、アレルギーや気がちることや、ペットへの熱意を共有しない同僚の心地よさを心配している。',
+      '支持する人々は、動物がいることはストレスをへらしうると主張する。人なつこい動物とふれ合うと血圧が下がり気分がよくなるかもしれないことを示す研究があり、多くの社員が、ペットが近くにいるとより落ち着き幸せを感じると語る。そうでなければ一日中イヌを家に一ぴきで残しておくことを心配するかもしれない人々にとって、職場に連れてくることは大きな不安の種を取りのぞき、仕事により集中できるようにするかもしれない。また、昼休みにイヌと少し散歩することで、画面の前で食べるのではなく、ちゃんと休んで、すっきりして机にもどれるようになると話す社員もいる。',
+      '支持する人々はまた、ペットは同僚どうしの関係を強めうると言う。職場のイヌは自然な話題になり、ちがう部署の人々がたがいに話すようにうながし、より人づきあいのよいふんいきをつくることがある。そうした利益を正確にはかるのはむずかしいが、ペットを認める会社は社員をひきつけてとどめておきやすくなるかもしれず、とくに、くつろいだ柔軟な働く環境を大切にする若い働き手にとってはそうだと支持する人々は主張する。',
+      'しかし批判する人々は、だれもが動物といっしょにいることを楽しむわけではないと指摘する。ひどい不快をひき起こすアレルギーをもつ社員もいれば、イヌをこわがったり、ただ気がちると感じたりする社員もいる。大切な電話のあいだにほえるイヌや、さそわれもしないのに同僚の場所に入りこむペットは、緊張を生み、仕事をさまたげうる。一部の社員をよろこばせる方針が、心地よい環境への同じ権利をもつほかの社員にとって職場を居心地の悪いものにするかもしれないと批判する人々は主張する。反対する人々は、ペットを愛する同僚に不親切だと思われることを心配して、不満を口にするのを気まずく感じるかもしれない。',
+      '批判する人々はまた、実際的な心配をあげる。動物は家具をいためたり、事故をひき起こしたり、衛生の問題を生んだりすることがあり、とくに食べ物がつくられる職場や衛生の基準がきびしい職場ではそうである。動物がだれかをけがさせたらだれが責任を負うのかという問題に会社が直面するかもしれず、飼い主は仕事の日のあいだにペットを散歩させたり、えさをやったり、世話をしたりする必要に気をとられ、仕事の成果をふやすどころかへらしてしまうかもしれない。',
+      'ペットを認める多くの会社は、はっきりした決まりによってこうした心配にこたえようとしてきた。動物がしつけられ予防接種を受けていることを求めたり、建物の決まった場所にかぎったり、アレルギーやおそれのある社員のためにペットのいない区域を設けたりすることがある。特定の日にだけペットを認める会社もあれば、方針を取り入れる前に社員に合意を求め、すべての人の必要と好みが考えに入れられるようにする会社もある。定期的な見直しによって、問題が起きれば決まりを調整でき、ためしの期間を設けることで、その仕組みがうまくいくかどうかをみんなで決められる場合もある。',
+      '職場のペットをめぐる議論は、結局のところ、職場がちがう社員の幸せをどうつりあわせるべきかについての、より広い問いを反映している。ある人々をより幸せにする方針は、ほかの人々をより居心地悪くするかもしれず、公平な妥協を見つけるには、さまざまな意見に注意深く耳をかたむける必要がある。動物が職場にふさわしいかどうかにかかわらず、この話し合いは、人々が働く条件がその職場での健康と幸せの両方に大きな影響をあたえうることが、ますます認められていることを浮かびあがらせている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「正確にはかるのはむずかしいが、社員をひきつけやすくなる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that pets at work can reduce ( 1 ) and strengthen relationships among colleagues. Critics point to allergies, fears, and practical problems such as ( 2 ). Many companies address these concerns through clear ( 3 ).',
+      blanks: [
+        { choices: ['stress', 'salaries', 'meetings', 'holidays'], answer: 0, why: '第2段落 the presence of animals can reduce stress。' },
+        { choices: ['hygiene', 'music', 'weather', 'traffic'], answer: 0, why: '第5段落 create problems with hygiene。' },
+        { choices: ['rules', 'songs', 'prizes', 'games'], answer: 0, why: '第6段落 through clear rules。' },
+      ],
+    },
+    tf: [
+      { statement: '動物とのふれ合いは、気分をよくするかもしれない。', answer: true, why: '第2段落 may lower blood pressure and improve mood。' },
+      { statement: '職場のイヌは、同僚どうしの会話を少なくする。', answer: false, why: '第3段落 encouraging people from different departments to talk to one another。' },
+      { statement: 'イヌをこわがる社員もいる。', answer: true, why: '第4段落 others are afraid of dogs。' },
+      { statement: 'ペットを認める会社は、どこもまったく決まりを設けていない。', answer: false, why: '第6段落 address these concerns through clear rules。' },
+    ],
+    qa: [
+      { q: 'Who might find it easier to concentrate if they can bring their dog to work?', choices: ['People who would worry about leaving the dog alone at home.', 'People with allergies.', 'People who fear dogs.', 'People who work at night.'], answer: 0, why: '第2段落 people who would otherwise worry about leaving a dog alone at home all day。' },
+      { q: 'What do some companies set aside for employees with allergies or fears?', choices: ['Pet-free zones.', 'Extra holidays.', 'Larger desks.', 'Special lunches.'], answer: 0, why: '第6段落 set aside pet-free zones for employees with allergies or fears。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
