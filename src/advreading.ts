@@ -40818,6 +40818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-board-quotas',
+    title: 'Should Company Boards Have Gender Quotas?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, women make up roughly half of the workforce and a majority of university graduates, yet they remain a small minority among the directors who sit on the boards of large companies. To address this imbalance, several governments have introduced laws requiring that a certain percentage of board seats be held by women, sometimes as much as forty percent. Such quotas have been praised as a powerful tool for promoting equality, but they have also been criticized as unfair, unnecessary, or even harmful to the very people they are meant to help.",
+      "Supporters argue that quotas are needed because progress without them has been extremely slow. For decades, companies promised to appoint more women to senior positions, yet the numbers changed only slightly. Supporters claim that informal networks, unconscious bias, and the tendency of existing directors to choose people similar to themselves have kept qualified women out of leadership roles, and that only a legal requirement can break this pattern quickly enough to make a real difference within a single generation. They note that quotas are often designed to be temporary, intended to be removed once a more balanced situation has been achieved and new habits of recruitment have taken hold.",
+      "Supporters also point to evidence that diverse boards may make better decisions. A group whose members have different backgrounds and experiences may be more likely to question assumptions, consider a wider range of options, and avoid the errors that arise when everyone thinks alike. ( A ) the research on this question is not entirely conclusive, supporters argue, the presence of women in leadership also sends an important message to younger employees, showing them that the highest positions are open to people like themselves.",
+      "Critics, however, object that quotas conflict with the principle that people should be selected on the basis of merit alone. If companies are required to appoint a fixed number of women, critics argue, some appointments may be made to satisfy the law rather than because the candidates are the best available. This could be unfair to qualified men who are passed over, and it might also unfairly cast doubt on the abilities of women who would have been chosen anyway, since colleagues might assume that they had been appointed only because of the rule.",
+      "Critics also question whether quotas address the deeper causes of inequality. The small number of women on boards, they argue, reflects problems that begin much earlier, such as the difficulty of combining demanding careers with family responsibilities and the lack of support for parents in many workplaces. Placing a few women at the very top, critics claim, may do little to help the far larger number of women who face obstacles at lower levels, and may allow companies to appear progressive without making more fundamental changes.",
+      "In countries that have introduced quotas, the results have been mixed. The proportion of women on boards has typically risen rapidly, and fears that companies would be unable to find qualified candidates have largely proved unfounded. However, the effects on the number of women in other senior positions, such as chief executives, have often been more modest. Some observers suggest that quotas work best when combined with other measures, such as flexible working arrangements, transparent recruitment, and mentoring programs for younger staff.",
+      "The debate over board quotas ultimately reflects a broader disagreement about how societies should pursue equality. Some believe that fairness requires treating every individual identically, regardless of group membership, while others argue that achieving genuine equality may require temporary measures that take past disadvantages into account. How a society answers this question will depend not only on evidence about the effects of quotas, but also on its understanding of what fairness itself demands.",
+    ],
+    ja: [
+      '多くの国では、女性は働き手のおよそ半分、大学の卒業生の大半をしめているが、大企業の取締役会にすわる役員の中では今も少数派にとどまっている。この不つりあいにこたえるため、いくつかの政府は、取締役会の席のある割合、ときには40パーセントもを女性がしめることを求める法律を取り入れてきた。そうした割り当ては平等を進める強い道具としてほめられてきたが、不公平だ、不必要だ、さらには助けるはずの人々にとって有害でさえあると批判されてもきた。',
+      '支持する人々は、割り当てがなければ進歩がきわめておそかったので、割り当てが必要だと主張する。何十年ものあいだ、企業は上の地位にもっと女性を任命すると約束してきたが、数はわずかしか変わらなかった。非公式な人のつながりや、無意識の思いこみや、今の役員が自分と似た人を選ぶ傾向が、能力のある女性を指導的な役割から遠ざけてきたのであり、ひと世代のうちに本当のちがいを生むほど速くこのパターンをこわせるのは法律による要求だけだと支持する人々は言う。割り当てはしばしば一時的なものとしてつくられ、よりつりあいのとれた状態が実現し、新しい採用の習慣が根づいたら取りのぞかれることになっていると彼らは指摘する。',
+      '支持する人々はまた、多様な取締役会のほうがよい決定をするかもしれないという証拠をあげる。ちがう生い立ちや経験をもつ人々からなる集団は、思いこみを疑い、より広い選択肢を考え、だれもが同じように考えるときに生まれるまちがいをさけやすいかもしれない。この問いについての研究は完全に決定的ではないが、上に立つ地位に女性がいることは、若い社員に、いちばん高い地位も自分のような人々に開かれていることを示す、大切な合図を送ることにもなると支持する人々は主張する。',
+      'しかし批判する人々は、割り当ては人は能力だけで選ばれるべきだという原則とぶつかると反論する。企業が決まった数の女性を任命するよう求められれば、候補者がいちばんすぐれているからではなく、法律を満たすために任命がなされることもあるかもしれないと批判する人々は主張する。これは、見送られる能力のある男性にとって不公平でありうるし、割り当てがなくても選ばれていたはずの女性の能力に、不当にも疑いを投げかけることになるかもしれない。同僚が、彼女たちは規則のためだけに任命されたのだと思いこむかもしれないからである。',
+      '批判する人々はまた、割り当てが不平等のより深い原因にこたえているのかと疑問を投げかける。取締役会の女性が少ないのは、きびしい仕事と家族の責任を両立させるむずかしさや、多くの職場での親へのささえの不足のように、ずっと早い段階からはじまる問題を反映していると彼らは主張する。いちばん上にほんの数人の女性を置いても、もっと下の段階で障害にぶつかっているはるかに多くの女性を助けることにはほとんどならず、企業がより根本的な変化をせずに進歩的に見えるようにするだけかもしれないと批判する人々は言う。',
+      '割り当てを取り入れた国々では、結果はまちまちである。取締役会の女性の割合はたいてい急速に上がり、企業が能力のある候補者を見つけられないだろうというおそれは、ほとんど根拠のないものだとわかった。しかし、最高経営責任者のような、ほかの上の地位の女性の数への影響は、しばしばよりひかえめだった。割り当ては、柔軟な働き方や、透明な採用や、若い社員のための指導の仕組みのようなほかの手だてと組み合わせたときにもっともうまくいくと考える人もいる。',
+      '取締役会の割り当てをめぐる議論は、結局のところ、社会が平等をどう追い求めるべきかについての、より広い意見のちがいを反映している。公平さとは、どの集団に属するかにかかわらず、すべての個人をまったく同じようにあつかうことだと信じる人もいれば、本当の平等を実現するには、過去の不利を考えに入れる一時的な手だてが必要かもしれないと主張する人もいる。社会がこの問いにどう答えるかは、割り当ての効果についての証拠だけでなく、公平さそのものが何を求めているかについての理解にもかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「研究は完全に決定的ではないが、大切な合図を送る」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that quotas are needed because progress has been slow and that diverse boards may make better ( 1 ). Critics object that quotas conflict with selection by ( 2 ) and may not address deeper causes. In practice, the results have been ( 3 ).',
+      blanks: [
+        { choices: ['decisions', 'products', 'profits', 'buildings'], answer: 0, why: '第3段落 diverse boards may make better decisions。' },
+        { choices: ['merit', 'age', 'luck', 'height'], answer: 0, why: '第4段落 selected on the basis of merit alone。' },
+        { choices: ['mixed', 'perfect', 'secret', 'unknown'], answer: 0, why: '第6段落 the results have been mixed。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国で、女性は大学の卒業生の大半をしめている。', answer: true, why: '第1段落 a majority of university graduates。' },
+      { statement: '割り当てがなくても、取締役会の女性の数は急速にふえてきた。', answer: false, why: '第2段落 the numbers changed only slightly。' },
+      { statement: '割り当ての国では、能力のある候補者を見つけられないというおそれはほとんど根拠がなかった。', answer: true, why: '第6段落 fears ... have largely proved unfounded。' },
+      { statement: '割り当てによって、最高経営責任者の女性も大きくふえた。', answer: false, why: '第6段落 the effects on ... chief executives, have often been more modest。' },
+    ],
+    qa: [
+      { q: 'What have kept qualified women out of leadership roles, according to supporters?', choices: ['Informal networks, unconscious bias, and directors choosing people similar to themselves.', 'A lack of university graduates.', 'High salaries.', 'Strict laws.'], answer: 0, why: '第2段落 informal networks, unconscious bias, and the tendency of existing directors to choose people similar to themselves。' },
+      { q: 'With what other measures do quotas work best, according to some observers?', choices: ['Flexible working, transparent recruitment, and mentoring.', 'Lower salaries for men.', 'Fewer board seats.', 'Longer working hours.'], answer: 0, why: '第6段落 flexible working arrangements, transparent recruitment, and mentoring programs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
