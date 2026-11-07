@@ -41662,6 +41662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fire',
+    title: 'On Fire',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For hundreds of thousands of years, human beings have gathered around fire. It warmed them through cold nights, protected them from predators, and allowed them to cook food that would otherwise have been difficult to eat. Some researchers believe that the control of fire played a central role in human evolution, making it possible to obtain more energy from food and to spend long evenings together in shared light. Even today, when most homes are heated by hidden systems and lit by electric bulbs, many people feel a strange and powerful attraction to the sight of flames.",
+      "Part of this attraction may lie in the way fire seems to be alive. Flames move constantly, flicker, grow, and shrink, responding to every breath of wind and every new piece of wood. Unlike the steady glow of a lamp, a fire never looks exactly the same from one moment to the next, and watching it can be absorbing in the way that watching waves or clouds can be. Many people describe a sense of calm as they gaze into a fire, as though its restless movement allowed their own thoughts to settle.",
+      "Fire has also long been associated with community. In many societies, the hearth was the center of the home, the place where food was prepared, stories were told, and family members gathered at the end of the day. ( A ) modern homes no longer depend on an open flame, the memory of the hearth survives in many customs, from candles lit at celebrations to the campfires around which friends still gather to talk late into the night under the stars.",
+      "At the same time, fire is one of the most destructive forces that human beings have ever tried to control. A single spark can grow into a blaze that destroys homes, forests, and entire towns, and in many parts of the world wildfires have become larger and more frequent as summers grow hotter and drier. The same flame that warms and nourishes can also kill, and much of human history has indeed been shaped by efforts to harness fire's benefits while guarding against its dangers. Firefighters, building codes, and warning systems all reflect lessons learned at great cost from disasters of the past.",
+      "Fire has played a powerful role in human imagination as well. In myths and religions, it has often been regarded as a gift from the gods, a symbol of knowledge, purification, or divine presence. Poets have used it to represent passion, anger, and inspiration, and many languages speak of ideas that spark, hopes that are kindled, and enthusiasm that burns. Such expressions suggest how deeply the experience of fire has shaped the way we think about energy and change in our own lives.",
+      "In modern life, however, direct contact with fire has become increasingly rare. Many children grow up without ever learning how to build or tend a fire, and the energy that powers our homes is produced in distant places where flames are hidden from view. This distance brings safety and convenience, but it may also weaken our understanding of where energy comes from and what it costs, both in resources and in the effects of burning on the air and climate.",
+      "In the end, fire may serve as a reminder of the double nature of human power. The ability to control fire gave our ancestors warmth, food, and community, but it also brought the capacity for destruction. To sit beside a fire, watching its light and feeling its heat, is to experience both the comfort and the danger that have accompanied human progress from the very beginning, and perhaps to reflect on how carefully we must use the powers that sustain us and our world.",
+    ],
+    ja: [
+      '何十万年ものあいだ、人間は火のまわりに集まってきた。火は寒い夜を通じて人々をあたため、けものから守り、そうでなければ食べにくかったはずの食べ物を料理できるようにした。火をあつかえるようになったことが、食べ物からより多くのエネルギーを得て、分かち合う明かりの中で長い夜をいっしょに過ごすことを可能にし、人類の進化の中心的な役割を果たしたと考える研究者もいる。今日でさえ、ほとんどの家が見えない仕組みで暖められ、電球で照らされているのに、多くの人は炎の姿に不思議で強いひきつけられ方を感じる。',
+      'このひきつけられ方の一部は、火が生きているように見えることにあるのかもしれない。炎はたえず動き、ゆらめき、大きくなったり小さくなったりし、風の一息ごとに、新しいまき一本ごとにこたえる。ランプのおだやかなかがやきとちがって、火は一瞬ごとにまったく同じに見えることはなく、それをながめることは、波や雲をながめるのと同じように心をうばうことがある。多くの人が、火を見つめていると落ち着きを感じると語る。まるでその落ち着きのない動きが、自分自身の考えを静めてくれるかのようである。',
+      '火はまた、長いあいだ共同体と結びつけられてきた。多くの社会で、炉は家の中心であり、食べ物がつくられ、物語が語られ、一日の終わりに家族が集まる場所だった。現代の家はもはやむき出しの炎にたよっていないが、炉の記憶は、お祝いでともされるろうそくから、今も友だちが集まって星空の下で夜おそくまで語り合うキャンプファイヤーまで、多くの習わしの中に生き残っている。',
+      '同時に、火は人間がこれまであつかおうとしてきた中でもっとも破壊的な力の一つである。たった一つの火花が、家や森や町全体をこわす大火事に育つことがあり、世界の多くの地域で、夏がより暑くかわくにつれて、山火事はより大きく、よりひんぱんになってきた。あたため、やしなう同じ炎が命をうばうこともあり、人間の歴史の多くは、火の危険をふせぎながらその恵みを利用しようとする努力によって形づくられてきた。消防士や建物の基準や警報の仕組みは、どれも過去の災害から大きな代償をはらって学んだ教えを映している。',
+      '火はまた、人間の想像力の中でも強い役割を果たしてきた。神話や宗教で、火はしばしば神々からのおくりもの、知識や清めや神の存在の象徴と見なされてきた。詩人は火を使って情熱や怒りやひらめきをあらわし、多くの言語が、火花のように生まれる考えや、火のともされる希望や、燃える熱意について語る。こうした言い方は、火の経験が、私たち自身の暮らしの中のエネルギーと変化についての考え方を、どれほど深く形づくってきたかを示している。',
+      'しかし現代の暮らしでは、火とじかにふれ合うことはますます少なくなっている。多くの子どもたちは火のおこし方や世話のしかたを一度も学ばずに育ち、家を動かすエネルギーは、炎が見えない遠くの場所で生み出されている。この距離は安全と便利さをもたらすが、エネルギーがどこから来て、資源の面でも、燃やすことが空気と気候にあたえる影響の面でも、どれほどの代償をともなうのかについての理解を弱めているかもしれない。',
+      '結局のところ、火は人間の力の二重の性質を思い出させるものになるのかもしれない。火をあつかう力は、私たちの祖先にあたたかさと食べ物と共同体をあたえたが、破壊する力ももたらした。火のそばにすわり、その光をながめ、その熱を感じることは、人間の進歩にはじめからともなってきた心地よさと危険の両方を経験することであり、もしかすると、私たちと私たちの世界をささえる力をどれほど注意深く使わなければならないかをふり返ることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「現代の家はもう炎にたよっていないが、炉の記憶は習わしに生き残っている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '火をあつかえたことが人類の進化に大きな役割を果たしたと考える研究者がいる。', answer: true, why: '第1段落 the control of fire played a central role in human evolution。' },
+      { statement: '火は、いつも同じように見える。', answer: false, why: '第2段落 a fire never looks exactly the same from one moment to the next。' },
+      { statement: '多くの地域で、山火事はより大きく、ひんぱんになってきた。', answer: true, why: '第4段落 wildfires have become larger and more frequent。' },
+      { statement: '今の子どもたちは、ほとんどが火のおこし方を学んでいる。', answer: false, why: '第6段落 Many children grow up without ever learning how to build or tend a fire。' },
+    ],
+    qa: [
+      { q: 'What was the hearth in many societies?', choices: ['The center of the home where food was prepared and stories were told.', 'A place to store money.', 'A kind of school.', 'A room for sleeping only.'], answer: 0, why: '第3段落 the hearth was the center of the home, the place where food was prepared, stories were told。' },
+      { q: 'How has fire often been regarded in myths and religions?', choices: ['As a gift from the gods.', 'As a punishment for children.', 'As something unimportant.', 'As a kind of food.'], answer: 0, why: '第5段落 it has often been regarded as a gift from the gods。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
