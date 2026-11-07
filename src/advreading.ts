@@ -39902,6 +39902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-collecting',
+    title: 'On Collecting',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people, at some point in their lives, become collectors. A child may gather unusual stones from a riverbank or keep a box of picture cards that no one else is allowed to touch, while an adult may spend years searching for rare stamps, old records, or particular editions of favorite books. To an outsider, such efforts can seem puzzling or even absurd, since the objects collected often have little practical use, and yet for the collector they may carry a significance that is difficult to explain in words. Understanding this significance may tell us something not only about collectors but also about the ways in which all of us attach meaning to the things around us.",
+      "One reason collecting holds such appeal may be that it creates order in a world that often feels chaotic. Life rarely offers complete control, but within a collection, everything has its place and can be arranged, labeled, and understood. The collector decides what belongs and what does not, and each new addition brings the collection closer to a kind of completeness that is seldom found elsewhere. In this sense, a collection can serve as a small, manageable world in which one's own judgment governs everything.",
+      "Collecting also connects people to time and memory. A collected object often carries traces of the past, whether of the era in which it was made, the people who once owned it, or the moment in the collector's own life when it was found. ( A ) the object itself may be ordinary, the stories attached to it can make it precious, so that a collection becomes a kind of personal history, a record of curiosity and desire that would otherwise fade from memory.",
+      "Moreover, collecting can be a deeply social activity. Collectors frequently seek out others who share their interest, exchanging knowledge, trading items, and discussing the finer points of their subject with an enthusiasm that outsiders may find hard to share. Through these exchanges, a solitary pursuit can become the basis of friendships and communities that cross differences of age, profession, and nationality, united by a shared fascination with something that most people overlook.",
+      "There is, however, a darker side to collecting. The desire to complete a collection can become a source of anxiety rather than pleasure, as the collector focuses on what is missing rather than on what has already been gathered. In extreme cases, the pursuit of objects may consume time, money, and space far beyond what is reasonable, and the joy of discovery may give way to a restless need that can never be satisfied, however many items are acquired. Some collectors eventually find that the objects they once loved have become a burden, filling their homes while bringing them little of the pleasure they originally sought.",
+      "The value of collecting may therefore depend less on the objects themselves than on the attitude with which they are pursued. A collector who approaches the activity with curiosity and patience may find in it a lasting source of learning and delight, while one who is driven chiefly by the need to possess may find only frustration. The difference lies in whether the collection serves the collector's life or whether the collector's life comes to serve the collection.",
+      "In the end, collecting reveals something about the human relationship with the material world. We are creatures who find meaning not only in ideas and relationships but also in things, and who use objects to remember, to understand, and to express who we are. A well-loved collection, however modest, can thus be seen as a reflection of its owner's character, a quiet testimony to the ways in which people give order and significance to the scattered fragments of their experience.",
+    ],
+    ja: [
+      '多くの人は、人生のどこかで収集家になる。子どもは川原からめずらしい石を集めたり、ほかのだれにもさわらせない絵カードの箱をもっていたりするかもしれないし、大人は何年もかけて、めずらしい切手や古いレコードや好きな本の特定の版をさがし求めるかもしれない。集められる物にはしばしば実用的な使い道がほとんどないので、外の人にとって、そうした努力は理解しにくく、ばかげてさえ見えることがあるが、収集家にとっては、ことばで説明するのがむずかしいほどの意味をもっていることがある。この意味を理解することは、収集家についてだけでなく、私たちだれもが身のまわりの物に意味を結びつけるやり方についても、何かを教えてくれるかもしれない。',
+      '収集がそれほど人をひきつける理由の一つは、しばしば混とんとして感じられる世界に秩序をつくり出すからかもしれない。人生が完全な管理をゆるしてくれることはめったにないが、コレクションの中では、すべてに居場所があり、ならべたり、名前をつけたり、理解したりできる。何が入り何が入らないかを決めるのは収集家であり、新しく加わる一つ一つが、ほかではめったに見つからない一種の完全さにコレクションを近づける。この意味で、コレクションは、自分自身の判断がすべてを治める、小さく、あつかいやすい世界の役割を果たしうる。',
+      '収集はまた、人を時間と記憶に結びつける。集められた物は、それがつくられた時代であれ、かつてそれをもっていた人々であれ、収集家自身の人生でそれが見つかった瞬間であれ、しばしば過去の跡をとどめている。物そのものはありふれていても、それにまつわる物語がそれを大切なものにすることがあり、そうしてコレクションは一種の個人の歴史、つまり、そうでなければ記憶からうすれてしまう好奇心と望みの記録になる。',
+      'さらに、収集は深く社会的な活動になりうる。収集家はしばしば同じ関心をもつほかの人々をさがし、知識を交換し、物を交かんし、外の人には共有しにくいほどの熱意をもって、その題材の細かい点について語り合う。こうしたやりとりを通じて、一人きりの楽しみが、ほとんどの人が見すごすものへの共通の夢中さによって結ばれ、年齢や職業や国籍のちがいをこえた友情や共同体のもとになることがある。',
+      'しかし、収集には暗い面もある。コレクションを完成させたいという望みは、収集家がすでに集めたものではなく欠けているものに目を向けるにつれて、よろこびではなく不安の源になりうる。極端な場合には、物を追い求めることが、時間やお金や場所を、もっともな範囲をはるかにこえて使いつくし、発見のよろこびが、どれだけ多くの物を手に入れてもけっして満たされない、落ち着かない欲求にかわってしまうこともある。かつて愛した物が、家をうめつくしながら、はじめに求めていたよろこびをほとんどもたらさない重荷になっていることに、やがて気づく収集家もいる。',
+      'したがって、収集の価値は、物そのものよりも、それを追い求める態度にかかっているのかもしれない。好奇心と忍耐をもってこの活動に取り組む収集家は、そこに学びとよろこびの長く続く源を見いだすかもしれないが、主にもちたいという欲求にかりたてられている人は、いらだちしか見いださないかもしれない。そのちがいは、コレクションが収集家の人生に役立っているのか、それとも収集家の人生がコレクションに仕えるようになっているのかにある。',
+      '結局のところ、収集は、人間と物の世界との関係について何かを明らかにする。私たちは、考えや人間関係だけでなく物にも意味を見いだし、物を使って思い出し、理解し、自分がだれであるかをあらわす生き物である。愛されたコレクションは、どれほどささやかであっても、その持ち主の人柄を映すものであり、人々が自分の経験のばらばらのかけらに秩序と意味をあたえるやり方の、静かなあかしと見ることができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「物そのものはありふれていても、物語が大切なものにする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '集められる物には、しばしば実用的な使い道がほとんどない。', answer: true, why: '第1段落 the objects collected often have little practical use。' },
+      { statement: 'コレクションの中では、何が入るかを決めるのは収集家である。', answer: true, why: '第2段落 The collector decides what belongs and what does not。' },
+      { statement: '筆者は、収集はいつも一人きりの活動だと述べている。', answer: false, why: '第4段落 collecting can be a deeply social activity。' },
+      { statement: '筆者は、収集の価値は物の値段で決まると結論づけている。', answer: false, why: '第6段落 depend less on the objects themselves than on the attitude。' },
+    ],
+    qa: [
+      { q: 'What can the desire to complete a collection become, according to the passage?', choices: ['A source of anxiety rather than pleasure.', 'A way to earn money.', 'A kind of school subject.', 'A reason to stop collecting.'], answer: 0, why: '第5段落 can become a source of anxiety rather than pleasure。' },
+      { q: 'What can a well-loved collection be seen as?', choices: ['A reflection of the character of its owner.', 'A waste of time.', 'A copy of a museum.', 'A list of prices.'], answer: 0, why: '第7段落 a reflection of its owner’s character。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
