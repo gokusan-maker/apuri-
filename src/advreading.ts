@@ -42578,6 +42578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-paid-chores',
+    title: 'Should Children Be Paid for Chores?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many families, children are expected to help with household tasks such as washing dishes, tidying their rooms, taking out the rubbish, or looking after younger brothers and sisters. Some parents reward this help with money, paying a fixed amount for each task or linking a weekly allowance to the work that has been done, while others insist that such tasks are simply part of belonging to a family and should never be paid for. The question of whether children should be paid for chores may seem a small domestic matter, but it raises surprisingly deep questions about motivation, responsibility, and the meaning of work.",
+      "Supporters of paying for chores argue that it teaches children valuable lessons about money. When children earn money by working, they learn that income is connected to effort, and they may become more careful about how they spend it than if they simply received it as a gift. Supporters also point out that children who manage their own earnings from an early age may develop habits of saving and planning that will help them later in life, when they must make far larger financial decisions on their own.",
+      "Supporters further claim that payment can make household work feel fairer and more satisfying. Children often notice that adults are paid for the work they do outside the home, and they may wonder why their own efforts should go unrewarded. ( A ) the amounts involved are usually small, supporters argue, the experience of being paid can give children a sense that their contribution is valued, and it may encourage them to take on tasks they would otherwise avoid.",
+      "Critics, however, worry that paying for chores sends the wrong message about family life. In their view, a household is not a small business in which members provide services in return for payment, but a community in which everyone contributes because they care for one another. Critics argue that children who are paid for every task may come to expect money whenever they are asked to help, and may refuse to do anything for which no reward has been offered, even when their help is clearly needed.",
+      "Critics also draw on research suggesting that external rewards can sometimes weaken internal motivation. When people are paid to do something they might otherwise have done willingly, they may begin to see the activity as a job rather than as something worth doing for its own sake, and their interest may decline once the payment stops. Some critics further point out that families with limited incomes may be unable to pay their children at all, which could make the practice a source of comparison and disappointment among friends.",
+      "In response, many parents have tried to find a middle way. Some separate everyday chores, which every family member is expected to do without payment, from extra tasks, such as washing the car or helping with a large garden project, for which children may earn money if they wish. Others give children a regular allowance that is not tied to particular tasks, but discuss with them how it should be spent and saved, so that lessons about money can be learned without turning family duties into paid work.",
+      "The debate over paying children for chores ultimately reflects a broader question about why people work at all. If work is understood mainly as a way of earning money, then it may seem natural to pay children for their efforts, but if it is also a way of caring for others and taking part in a shared life, then some forms of work may be most valuable precisely because they are done freely. Learning to recognize both kinds of work may be one of the most important lessons that a family can teach.",
+    ],
+    ja: [
+      '多くの家庭では、子どもは、皿洗いや部屋のかたづけ、ごみ出し、弟や妹の世話といった家の仕事を手伝うことを期待されている。この手伝いにお金でこたえる親もいて、仕事ごとに決まった額をはらったり、毎週のおこづかいを、した仕事に結びつけたりする。一方で、そうした仕事はただ家族の一員であることの一部であって、けっしてお金をはらうべきではないと主張する親もいる。子どもに家の手伝いのお金をはらうべきかどうかという問いは、家庭の小さな問題に思えるかもしれないが、それは意欲、責任、そして働くことの意味について、おどろくほど深い問いを投げかけている。',
+      '手伝いにお金をはらうことを支持する人々は、それが子どもにお金についての価値ある教訓を教えると主張する。子どもが働いてお金をかせぐと、収入が努力と結びついていることを学び、ただ贈り物としてもらった場合よりも、使い方に注意深くなるかもしれない。支持する人々はまた、幼いころから自分のかせぎを管理する子どもは、貯金や計画の習慣を身につけるかもしれず、それはのちの人生で、はるかに大きなお金の決定を自分でしなければならなくなったときに役立つだろうと指摘する。',
+      '支持する人々はさらに、お金をはらうことで、家の仕事がより公平で満足のいくものに感じられるようになりうると主張する。子どもはしばしば、大人が家の外でする仕事に対してお金をもらっていることに気づき、なぜ自分の努力にはむくいがないのかとふしぎに思うかもしれない。かかわる額はふつう少ないが、お金をもらう経験は、自分の貢献が大切にされているという感覚を子どもにあたえ、そうでなければさけてしまう仕事を引き受けるよう促すかもしれない、と支持者は主張する。',
+      'しかし批判する人々は、手伝いにお金をはらうことが家族の生活について誤ったメッセージを送ることを心配する。彼らの考えでは、家庭とは、メンバーがお金とひきかえにサービスを提供する小さな会社ではなく、だれもがおたがいを大切に思うからこそ貢献する共同体である。仕事のたびにお金をもらう子どもは、手伝いをたのまれるたびにお金を期待するようになり、手伝いが明らかに必要なときでさえ、むくいが示されていないことは何もしようとしなくなるかもしれない、と批判する人々は主張する。',
+      '批判する人々はまた、外からのごほうびがときに内からの意欲を弱めうることを示す研究にも目を向ける。人は、ほかの場合なら進んでしたかもしれないことをするのにお金をもらうと、その活動を、それ自体のためにする価値のあるものではなく、仕事として見るようになりはじめ、お金がとまると興味が下がってしまうことがある。さらに、収入のかぎられた家庭は子どもにまったくお金をはらえないかもしれず、そのせいでこのやり方が友だちのあいだで比べ合いや失望の種になりうると指摘する批判者もいる。',
+      'これに対して、多くの親は中間の道を見つけようとしてきた。家族のだれもがお金なしでするよう期待される毎日の手伝いと、車を洗ったり大がかりな庭仕事を手伝ったりといった、したければ子どもがお金をかせげる特別な仕事とを分ける親もいる。特定の仕事に結びつけない決まったおこづかいを子どもにあたえ、それをどう使いどう貯めるべきかを子どもと話し合う親もいる。そうすれば、家族の務めをお金のための仕事に変えることなく、お金についての教訓を学ぶことができるからである。',
+      '子どもに家の手伝いのお金をはらうことをめぐる議論は、結局のところ、人はそもそもなぜ働くのかという、より広い問いを反映している。働くことがおもにお金をかせぐ手段として理解されるなら、子どもの努力にお金をはらうのは自然なことに思えるかもしれない。しかしそれが、ほかの人を大切にし、共有された生活に参加する手段でもあるなら、ある種の仕事は、まさに自由にされるからこそ、もっとも価値があるのかもしれない。両方の種類の仕事を見分けられるようになることは、家族が教えられるもっとも大切な教訓の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「額はふつう少ないが、お金をもらう経験は貢献が大切にされている感覚をあたえる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say paying for chores teaches children about ( 1 ) and makes household work feel fairer. Critics argue that it treats the family like a business and may weaken children’s internal ( 2 ). Many parents separate everyday chores from ( 3 ) tasks for which children may earn money.',
+      blanks: [
+        { choices: ['money', 'music', 'travel', 'science'], answer: 0, why: '第2段落 teaches children valuable lessons about money。' },
+        { choices: ['motivation', 'strength', 'height', 'memory'], answer: 0, why: '第5段落 external rewards can sometimes weaken internal motivation。' },
+        { choices: ['extra', 'daily', 'secret', 'dangerous'], answer: 0, why: '第6段落 from extra tasks ... for which children may earn money。' },
+      ],
+    },
+    tf: [
+      { statement: '支持者によると、かせいだお金は贈り物としてもらったお金より注意深く使われるかもしれない。', answer: true, why: '第2段落 may become more careful about how they spend it than if they simply received it as a gift。' },
+      { statement: '批判する人々は、家庭を小さな会社のようなものだと考えている。', answer: false, why: '第4段落 a household is not a small business。' },
+      { statement: '収入のかぎられた家庭は、子どもにお金をはらえないかもしれない。', answer: true, why: '第5段落 families with limited incomes may be unable to pay their children at all。' },
+      { statement: 'すべての親が、毎日の手伝いにもお金をはらっている。', answer: false, why: '第6段落 everyday chores, which every family member is expected to do without payment。' },
+    ],
+    qa: [
+      { q: 'What may happen to people’s interest when payment for an activity stops?', choices: ['It may decline.', 'It may double.', 'It always stays the same.', 'It turns into anger.'], answer: 0, why: '第5段落 their interest may decline once the payment stops。' },
+      { q: 'Which is given as an example of an extra task?', choices: ['Washing the car.', 'Tidying one’s room.', 'Taking out the rubbish.', 'Washing dishes.'], answer: 0, why: '第6段落 extra tasks, such as washing the car。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
