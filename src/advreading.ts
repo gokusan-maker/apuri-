@@ -42498,6 +42498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-digital-exams',
+    title: 'Should Exams Move from Paper to Screens?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For more than a century, important examinations have usually followed the same pattern: students sit in silent rows, writing their answers by hand on sheets of paper that are later collected, marked, and stored. In recent years, however, a growing number of schools, universities, and testing organizations have begun to replace paper with computers, asking candidates to read questions and type their answers on screens. This change has been welcomed by some as a long overdue modernization and criticized by others as a risky experiment that may disadvantage many students.",
+      "Supporters argue that computer-based examinations better reflect the way people actually work today. Outside the examination hall, most writing is now done with a keyboard, and students who are used to drafting and revising on screens may express their ideas more clearly when they are allowed to do so in tests as well. Supporters also point out that typed answers are easier to read than handwriting, which may reduce the risk that a student's mark is affected by untidy writing rather than by the quality of the thinking it contains.",
+      "Supporters also emphasize the practical benefits for those who organize examinations. Printing, transporting, and storing millions of paper scripts is expensive and creates opportunities for mistakes, whereas digital answers can be sent instantly to examiners anywhere in the country. ( A ) the initial cost of providing enough computers is high, supporters argue, digital systems may eventually allow results to be produced more quickly and make it possible to include new kinds of questions, such as those that use sound, video, or interactive graphs.",
+      "Critics, however, warn that not all students have the same experience with computers. Students from families that cannot afford a computer at home, or from schools with limited equipment, may type more slowly and feel less comfortable working on screens than their wealthier classmates. Critics argue that an examination which is meant to measure knowledge and reasoning may end up measuring familiarity with technology instead, and that this could widen existing inequalities rather than reduce them.",
+      "Critics also raise concerns about reliability and security. A power cut, a network failure, or a problem with the software can interrupt an examination for hundreds of candidates at once, and students who lose their work in the middle of an important test may suffer considerable stress. Some critics further point out that research on reading suggests that people sometimes understand long and complex texts less deeply on screens than on paper, which may matter a great deal in examinations that depend on careful reading of long passages and difficult arguments.",
+      "In response to these concerns, many organizations have chosen to introduce digital examinations gradually. Some allow candidates to choose between paper and screen, while others begin with subjects in which typing is clearly useful, such as essay writing, before extending the system to others. Schools in several countries have also been given funding to improve their equipment and to provide students with regular practice on computers well before they take high-stakes tests, so that no one meets the technology for the first time on the day of the examination. Some organizations also keep paper versions ready, so that an examination can continue even if the computers suddenly stop working.",
+      "The debate over digital examinations ultimately reflects a broader question about what tests are meant to measure. If an examination is intended to show how well students can perform the tasks they will face in later life, then it may be reasonable for it to follow changes in the way people read and write, but if it is intended above all to measure understanding as fairly as possible, then any change in format must be judged by whether it gives every candidate an equal chance to show what they know.",
+    ],
+    ja: [
+      '百年以上ものあいだ、重要な試験はふつう同じ形をとってきた。生徒たちはしずかに列になってすわり、答えを紙に手で書き、その紙はあとで集められ、採点され、保管される。しかし近年、ますます多くの学校や大学、試験を実施する団体が、紙をコンピューターに置きかえはじめ、受験者に画面で問題を読み、答えを打ちこむよう求めている。この変化は、ある人々からは長く待たれていた近代化として歓迎され、ほかの人々からは多くの生徒を不利にするかもしれない危険な実験として批判されている。',
+      '支持する人々は、コンピューターでの試験は、今日人々が実際に働くやり方をよりよく反映していると主張する。試験会場の外では、いまやほとんどの文章がキーボードで書かれており、画面で下書きし書き直すことになれた生徒は、試験でもそうすることを許されれば、考えをよりはっきり表現できるかもしれない。支持する人々はまた、打ちこまれた答えは手書きより読みやすく、生徒の点数が、そこにふくまれる考えの質ではなく、字のきたなさに左右されるおそれを減らせるかもしれないと指摘する。',
+      '支持する人々はまた、試験を運営する側にとっての実際的な利点も強調する。何百万枚もの答案を印刷し、運び、保管するのには費用がかかり、まちがいが起こるきっかけも生まれるが、デジタルの答えは国じゅうのどこにいる採点者にも一瞬で送ることができる。十分な数のコンピューターを用意する最初の費用は高いが、デジタルの仕組みによって、いずれは結果をより早く出せるようになり、音や動画、操作できるグラフを使う問題のような新しい種類の問題を入れることもできるようになるかもしれない、と支持者は主張する。',
+      'しかし批判する人々は、すべての生徒がコンピューターについて同じ経験をもっているわけではないと警告する。家にコンピューターを買う余裕のない家庭の生徒や、設備のかぎられた学校の生徒は、裕福なクラスメートよりも打ちこむのがおそく、画面で作業するのに慣れていないかもしれない。知識と推論をはかるはずの試験が、代わりに技術へのなれをはかることになりかねず、それは今ある不平等を減らすどころか広げるおそれがある、と批判する人々は主張する。',
+      '批判する人々はまた、信頼性と安全性についての懸念も示す。停電やネットワークの故障、ソフトウェアの不具合が、何百人もの受験者の試験を一度に中断させることがあり、重要な試験のとちゅうで答えを失った生徒は大きなストレスを受けるかもしれない。さらに、読むことについての研究によれば、人は長く複雑な文章を、紙の上よりも画面の上のほうが浅くしか理解できないことがあると指摘する批判者もいる。それは、長い文章やむずかしい議論を注意深く読むことにかかっている試験では大きな意味をもちうる。',
+      'こうした懸念に応えて、多くの団体はデジタルの試験を少しずつ取り入れることを選んできた。紙か画面かを受験者が選べるようにするところもあれば、まず小論文のように打ちこむことが明らかに役立つ科目から始め、そのあとでほかの科目に広げるところもある。いくつかの国の学校はまた、設備を改善し、重要な試験を受けるずっと前から生徒がコンピューターで定期的に練習できるようにするための資金をあたえられている。試験の当日にはじめてその技術にふれる人が一人もいないようにするためである。また、コンピューターが急に動かなくなっても試験を続けられるよう、紙の問題を用意しておく団体もある。',
+      'デジタルの試験をめぐる議論は、結局のところ、試験が何をはかるためのものなのかという、より広い問いを反映している。試験が、生徒がのちの人生で直面する作業をどれだけうまくこなせるかを示すためのものなら、人々の読み書きのしかたの変化に合わせることは理にかなっているかもしれない。しかし試験が何よりも、理解をできるだけ公平にはかるためのものなら、形式のどんな変更も、それがすべての受験者に知っていることを示す平等な機会をあたえるかどうかによって判断されなければならない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「最初の費用は高いが、いずれ結果を早く出せるようになる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say computer-based exams reflect how people work today and are easier to ( 1 ) than handwriting. Critics warn that students differ in their experience with computers and that technical problems can cause ( 2 ). Many organizations therefore introduce digital exams ( 3 ).',
+      blanks: [
+        { choices: ['read', 'hide', 'sell', 'sing'], answer: 0, why: '第2段落 typed answers are easier to read than handwriting。' },
+        { choices: ['stress', 'laughter', 'profit', 'rain'], answer: 0, why: '第5段落 may suffer considerable stress。' },
+        { choices: ['gradually', 'secretly', 'suddenly', 'cheaply'], answer: 0, why: '第6段落 introduce digital examinations gradually。' },
+      ],
+    },
+    tf: [
+      { statement: '支持者によると、打ちこまれた答えは手書きより読みやすい。', answer: true, why: '第2段落 typed answers are easier to read than handwriting。' },
+      { statement: 'コンピューターを用意する最初の費用は安い。', answer: false, why: '第3段落 the initial cost of providing enough computers is high。' },
+      { statement: '批判する人々は、デジタルの試験が不平等を広げるおそれがあると考えている。', answer: true, why: '第4段落 this could widen existing inequalities。' },
+      { statement: 'すべての団体が、すべての科目で一度にデジタルの試験を始めた。', answer: false, why: '第6段落 introduce digital examinations gradually ... begin with subjects ...。' },
+    ],
+    qa: [
+      { q: 'What new kinds of questions might digital systems make possible?', choices: ['Questions that use sound, video, or interactive graphs.', 'Questions that must be answered by hand.', 'Questions without any answers.', 'Questions written only in pencil.'], answer: 0, why: '第3段落 those that use sound, video, or interactive graphs。' },
+      { q: 'Why have some schools been given funding?', choices: ['To improve equipment and give students regular practice on computers.', 'To print more paper scripts.', 'To hire more examiners.', 'To build new examination halls.'], answer: 0, why: '第6段落 to improve their equipment and to provide students with regular practice on computers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
