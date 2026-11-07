@@ -41378,6 +41378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-digital-nomads',
+    title: 'Should Countries Welcome Digital Nomads?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As more jobs can be done entirely online, a growing number of workers have chosen to leave their home countries and live abroad while continuing to work for employers or clients elsewhere. These so-called digital nomads may spend a few months in one country, then move on to another, carrying their work with them on a laptop. To attract such workers, many countries have introduced special visas that allow foreigners to live and work remotely for a year or more. Supporters see these programs as an opportunity, but critics worry about their effects on local communities.",
+      "Supporters argue that digital nomads bring significant economic benefits to the places where they settle. Because they earn their income from abroad, they do not compete directly with local workers for jobs, yet they spend money on housing, food, transport, and entertainment, supporting local businesses. In regions that have suffered from declining populations or the loss of traditional industries, the arrival of remote workers may help to revive towns, fill empty houses, and bring new energy to communities that young people have been leaving for decades. Some small towns have even begun to advertise themselves to remote workers, offering shared offices, fast internet connections, and help with finding a place to live.",
+      "Supporters also emphasize the cultural benefits of such movement. Remote workers from different countries may share their skills, start new businesses, or take part in local life, creating opportunities for exchange between residents and newcomers. ( A ) many digital nomads stay only for a limited period, supporters argue, they can still form meaningful connections, and some eventually decide to settle permanently, contributing to the long-term life of the communities they have chosen.",
+      "Critics, however, warn that the arrival of large numbers of relatively wealthy foreigners can raise the cost of living for local residents. When newcomers earning salaries from richer countries are willing to pay high rents, landlords may prefer them to local tenants, pushing up housing prices and forcing some residents to move away. In popular cities, critics claim, entire neighborhoods have changed character as cafés and short-term apartments designed for foreigners have replaced shops and homes that served local people.",
+      "Critics also question whether digital nomads contribute fairly to the societies in which they live. Some may use public services such as roads, hospitals, and parks while paying little or no tax in the country where they reside, depending on the rules that apply to them. Moreover, critics argue that remote workers who move frequently may have little interest in local politics or community life, enjoying the benefits of a place without taking on the responsibilities of membership. Local residents, critics add, may come to feel like strangers in their own neighborhoods as familiar faces disappear and the language spoken in shops and cafés changes.",
+      "Some governments have tried to address these concerns through careful policy design. Visa programs may require remote workers to have health insurance, to pay certain taxes, or to stay for a minimum period, and some regions have encouraged newcomers to settle in rural areas rather than in already crowded cities. Local authorities may also introduce measures to protect affordable housing for residents, so that the benefits of remote work are shared more evenly between newcomers and the people who have lived there for generations.",
+      "The debate over digital nomads ultimately reflects broader changes in the relationship between work and place. When people can earn a living from anywhere, the traditional link between a job, a home, and a community becomes weaker. Whether this freedom enriches or disrupts the places that receive remote workers will depend on how societies balance openness to newcomers with the needs of those who have long called these places home.",
+    ],
+    ja: [
+      '完全にオンラインでできる仕事がふえるにつれて、自分の国をはなれて海外に住みながら、ほかの場所の雇い主やお客のために働き続けることを選ぶ働き手がふえている。いわゆるデジタルノマドは、ある国で数か月過ごしたあと別の国へ移り、ノートパソコンで仕事をもち運ぶことがある。そうした働き手をひきつけるために、多くの国が、外国人が一年以上住んで遠隔で働けるようにする特別なビザを取り入れてきた。支持する人々はこうした制度を機会と見ているが、批判する人々は地元の地域への影響を心配している。',
+      '支持する人々は、デジタルノマドは住みつく場所に大きな経済の利益をもたらすと主張する。彼らは海外から収入を得ているので、地元の働き手と直接仕事を取り合うことはないが、住まいや食べ物や交通や娯楽にお金を使い、地元の店をささえる。人口がへったり昔ながらの産業を失ったりしてきた地域では、遠隔で働く人々がやって来ることで、町が生き返り、空き家がうまり、若者が何十年も出ていきつづけてきた地域に新しい活気がもたらされるかもしれない。共同の事務所や速いインターネットの接続や、住む場所さがしの手助けを用意して、遠隔で働く人々に自分たちを売りこみはじめた小さな町さえある。',
+      '支持する人々はまた、そうした移動の文化的な利益を強調する。さまざまな国から来た遠隔で働く人々は、技術を分かち合ったり、新しい事業をはじめたり、地元の暮らしに参加したりして、住民と新しく来た人々のあいだの交流の機会をつくることがある。多くのデジタルノマドは限られた期間しかとどまらないが、それでも意味のあるつながりを築くことができ、中にはやがてずっと住みつくことを決めて、自分が選んだ地域の長い暮らしに役立つ人もいると支持する人々は主張する。',
+      'しかし批判する人々は、比較的裕福な外国人が大勢やって来ると、地元の住民の生活費が上がりうると警告する。より豊かな国から給料を得ている新しく来た人々が高い家賃をはらおうとすると、家主は地元の借り手より彼らを好むかもしれず、家の値段が上がり、出ていかざるをえなくなる住民も出てくる。人気のある都市では、外国人向けのカフェや短期の部屋が、地元の人々のための店や家にとってかわり、地域全体の性格が変わってしまったと批判する人々は言う。',
+      '批判する人々はまた、デジタルノマドが住んでいる社会に公平に貢献しているのかと疑問を投げかける。当てはまる規則によっては、道路や病院や公園のような公共サービスを使いながら、住んでいる国にほとんど、あるいはまったく税をはらわない人もいるかもしれない。さらに、ひんぱんに移り住む遠隔で働く人々は、地元の政治や地域の暮らしにほとんど関心をもたず、その一員としての責任を引き受けずに、場所の利益だけを楽しむかもしれないと批判する人々は主張する。見なれた顔が消え、店やカフェで話されることばが変わるにつれて、地元の住民は自分の地域でよそ者のように感じるようになるかもしれないと批判する人々はつけ加える。',
+      '注意深い政策のつくり方によってこうした心配にこたえようとしてきた政府もある。ビザの制度で、遠隔で働く人々に健康保険への加入や、ある種の税の支はらいや、最低限の滞在期間を求めることがあり、新しく来る人々に、すでに混み合っている都市ではなくいなかの地域に住むようすすめてきた地域もある。地元の当局は、住民のための手ごろな住まいを守る手だてを取り入れ、遠隔の仕事の利益が新しく来た人々と何世代もそこに住んできた人々のあいだで、より平等に分かち合われるようにすることもできる。',
+      'デジタルノマドをめぐる議論は、結局のところ、仕事と場所の関係のより広い変化を反映している。人々がどこからでも生計を立てられるようになると、仕事と家と地域のあいだの昔ながらの結びつきは弱くなる。この自由が、遠隔で働く人々を受け入れる場所を豊かにするか、それともみだすかは、社会が新しく来る人々への開かれた態度と、長いあいだそこをふるさととしてきた人々の必要とをどうつりあわせるかにかかっているだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「限られた期間しかとどまらないが、意味のあるつながりを築ける」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that digital nomads bring ( 1 ) benefits and help revive towns. Critics warn that they can raise the cost of ( 2 ) for local residents and may not contribute fairly. Some governments require remote workers to pay certain ( 3 ) or stay for a minimum period.',
+      blanks: [
+        { choices: ['economic', 'military', 'medical', 'religious'], answer: 0, why: '第2段落 bring significant economic benefits。' },
+        { choices: ['living', 'travel', 'learning', 'fishing'], answer: 0, why: '第4段落 can raise the cost of living for local residents。' },
+        { choices: ['taxes', 'visits', 'songs', 'games'], answer: 0, why: '第6段落 to pay certain taxes。' },
+      ],
+    },
+    tf: [
+      { statement: 'デジタルノマドは、地元の働き手と直接仕事を取り合わない。', answer: true, why: '第2段落 they do not compete directly with local workers for jobs。' },
+      { statement: 'デジタルノマドは、だれもがずっとその地域にとどまる。', answer: false, why: '第3段落 many digital nomads stay only for a limited period。' },
+      { statement: '新しく来た人々のために家賃が上がり、出ていく住民もいると批判する人々は言う。', answer: true, why: '第4段落 forcing some residents to move away。' },
+      { statement: 'どの政府も、ビザの制度に条件をつけていない。', answer: false, why: '第6段落 Visa programs may require remote workers to have health insurance ...。' },
+    ],
+    qa: [
+      { q: 'What might the arrival of remote workers do in regions with declining populations?', choices: ['Help to revive towns and fill empty houses.', 'Close local businesses.', 'Raise unemployment.', 'Reduce public services.'], answer: 0, why: '第2段落 may help to revive towns, fill empty houses。' },
+      { q: 'Where have some regions encouraged newcomers to settle?', choices: ['In rural areas rather than crowded cities.', 'Only in the capital.', 'In hotels near airports.', 'In other countries.'], answer: 0, why: '第6段落 encouraged newcomers to settle in rural areas rather than in already crowded cities。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
