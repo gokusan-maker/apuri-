@@ -9870,6 +9870,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The number of visitors [were] larger than last year.', choices: ['was', 'are', 'have been', 'being'], answer: 0, why: 'The number of ～ は「～の数」で単数あつかいなので was。' },
     ],
   },
+  {
+    id: 'exam-fix-232',
+    title: '入試の誤文訂正〈232〉（国公立レベル：形容詞をならべる順番 a beautiful old wooden house）',
+    points: ['名詞の前に形容詞をいくつかならべるときは、ふつう「冠詞・数 → 意見（beautiful・nice）→ 大きさ（big・small）→ 新旧・年齢（old・new・young）→ 形（round）→ 色（red）→ 産地（Japanese）→ 材料（wooden）→ 名詞」の順にする。', '数は first・second などの序数が先で、そのあとに two・three などの数がくる（the first two chapters）。all・both は冠詞や所有格の前に置く（all the students／both my parents）。'],
+    examples: [{ en: 'She lives in a beautiful old wooden house. / The first two chapters are easy.', ja: '彼女は美しく古い木の家に住んでいる。／最初の2章はやさしい。' }],
+    questions: [
+      { sentence: 'He bought [a red big] car last month.', choices: ['a big red', 'a red and big', 'big a red', 'red a big'], answer: 0, why: '大きさ → 色の順なので a big red car。' },
+      { sentence: 'She has [a wooden old] table in her kitchen.', choices: ['an old wooden', 'a old wooden', 'wooden an old', 'an wooden old'], answer: 0, why: '新旧 → 材料の順。old の前の冠詞は an。' },
+      { sentence: 'We stayed at [an old lovely] hotel by the sea.', choices: ['a lovely old', 'an lovely old', 'lovely an old', 'old a lovely'], answer: 0, why: '意見 → 新旧の順なので a lovely old hotel。' },
+      { sentence: 'Please read [the two first] chapters before class.', choices: ['the first two', 'two the first', 'first the two', 'the firsts two'], answer: 0, why: '序数 → 数の順なので the first two chapters。' },
+      { sentence: '[The all students] passed the test.', choices: ['All the students', 'The students all of', 'All of students the', 'Students the all'], answer: 0, why: 'all は冠詞の前に置くので All the students。' },
+      { sentence: '[My both parents] work at the hospital.', choices: ['Both my parents', 'My parents both of', 'Both of parents my', 'Parents my both'], answer: 0, why: 'both は所有格の前に置くので Both my parents。' },
+      { sentence: 'He gave me [a Japanese small] doll.', choices: ['a small Japanese', 'a Japanese and small', 'small a Japanese', 'Japanese a small'], answer: 0, why: '大きさ → 産地の順なので a small Japanese doll。' },
+      { sentence: 'She was wearing [a silk blue] scarf.', choices: ['a blue silk', 'a silk and blue', 'blue a silk', 'silk a blue'], answer: 0, why: '色 → 材料の順なので a blue silk scarf。' },
+      { sentence: 'They live in [a round white big] house.', choices: ['a big round white', 'a white big round', 'a round big white', 'big a round white'], answer: 0, why: '大きさ → 形 → 色の順なので a big round white house。' },
+      { sentence: 'I met [a young nice] teacher at the station.', choices: ['a nice young', 'a young and nice of', 'nice a young', 'young a nice'], answer: 0, why: '意見 → 年齢の順なので a nice young teacher。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

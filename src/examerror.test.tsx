@@ -3291,3 +3291,10 @@ it('正誤問題〈238〉：京大レベル want・ask・tell 人 to do の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) want that I')
 })
+
+it('誤文訂正〈232〉：国公立レベル 形容詞をならべる順番の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-232')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('a big red')
+})
