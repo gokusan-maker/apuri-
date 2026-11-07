@@ -9483,6 +9483,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He is not capable [for] telling a lie.', choices: ['of', 'to', 'with', 'in'], answer: 0, why: 'capable of ～ing なので of。' },
     ],
   },
+  {
+    id: 'exam-fix-223',
+    title: '入試の誤文訂正〈223〉（国公立レベル：borrow・lend・rent の使い分け）',
+    points: ['borrow は「（無料で）借りる」（borrow A from B）、lend は「（無料で）貸す」（lend 人 物／lend 物 to 人）、rent は「お金をはらって借りる・貸す」（家・車など）。トイレや電話のように持ち運ばずにその場で使うものは use を使う（May I use your bathroom?）。'],
+    examples: [{ en: 'Can I borrow your pen? / She lent me her umbrella.', ja: 'ペンを借りてもいい？／彼女はかさを貸してくれた。' }],
+    questions: [
+      { sentence: 'Could you [borrow] me your dictionary for a moment?', choices: ['lend', 'rent', 'take', 'give back'], answer: 0, why: '「（人に）貸す」は lend 人 物。' },
+      { sentence: 'I [lent] this book from the school library.', choices: ['borrowed', 'rented', 'paid', 'kept'], answer: 0, why: '「（図書館から）借りた」は borrowed A from B。' },
+      { sentence: 'We [borrowed] a car at the airport and paid by the day.', choices: ['rented', 'lent', 'used to', 'gave'], answer: 0, why: 'お金をはらって借りたので rented。' },
+      { sentence: 'May I [borrow] your bathroom?', choices: ['use', 'lend', 'rent', 'take'], answer: 0, why: 'その場で使う（持ち運ばない）ものは use。' },
+      { sentence: 'He [rented] me some money until payday.', choices: ['lent', 'borrowed', 'used', 'took'], answer: 0, why: '友だちにお金を（無料で）貸すのは lent。' },
+      { sentence: 'Can I [lend] your umbrella? It is raining.', choices: ['borrow', 'rent', 'give', 'keep'], answer: 0, why: '「借りる」は borrow。' },
+      { sentence: 'They [lend] out their house to tourists every summer.', choices: ['rent', 'borrow', 'use', 'take'], answer: 0, why: 'お金をとって家を貸すのは rent out。' },
+      { sentence: 'I lent my bike [from] my brother yesterday.', choices: ['to', 'for', 'by', 'with'], answer: 0, why: 'lend 物 to 人 なので to。' },
+      { sentence: 'She borrowed some sugar [to] her neighbor.', choices: ['from', 'for', 'with', 'by'], answer: 0, why: 'borrow A from B なので from。' },
+      { sentence: 'How much does it cost to [lend] a bicycle here for a day?', choices: ['rent', 'borrow from', 'use to', 'give'], answer: 0, why: 'お金をはらって借りるので rent。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -3165,3 +3165,10 @@ it('正誤問題〈229〉：京大レベル other・another・the other・the ot
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) another is a teacher')
 })
+
+it('誤文訂正〈223〉：国公立レベル borrow・lend・rent の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-223')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('lend')
+})
