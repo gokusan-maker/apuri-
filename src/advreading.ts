@@ -43182,6 +43182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-corners',
+    title: 'On Corners',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Corners are among the most familiar features of the places we inhabit, yet we rarely think of them as anything more than the points where two walls or two streets happen to meet. We turn corners many times a day without noticing them, and we tend to regard them simply as places to pass through on the way to somewhere else. On closer inspection, however, corners turn out to play a surprisingly important role in shaping how we move, how we meet one another, and even how we think about uncertainty and change.",
+      "In a city, the street corner has long been one of the liveliest places in the neighborhood. Because people coming from different directions must pass through it, the corner naturally becomes a place of encounters, where friends stop to talk, where shops and cafés compete for customers, and where newspapers and news were once sold. A shop on a corner can be seen from two streets at once, and for this reason corner buildings have often been the most valuable in a town and the most carefully designed.",
+      "A corner is also a place of limited vision. As we approach it, we cannot see what lies beyond, and for a moment we must move forward without knowing exactly what we will find. ( A ) this uncertainty can occasionally be dangerous, as drivers and cyclists know, it also gives corners a certain charm, since turning one may reveal an unexpected view, a new street, or a face we had not expected to see, and many travelers say that the pleasure of exploring a city lies precisely in wondering what is around the next corner.",
+      "Inside our homes, corners carry rather different associations. A corner of a room can be a place of shelter, where a person may sit quietly with a book or where a child may build a small hiding place, enjoying the feeling of being protected on two sides. Yet a corner can also be a place of confinement, and the image of being pushed into a corner, with no way of escape, has long been used to describe situations in which people feel trapped and unable to choose freely.",
+      "Our language is full of expressions that reflect these different meanings. We speak of turning a corner when a difficult period comes to an end and things begin to improve, of cutting corners when people save time or money by doing a task less carefully than they should, and of finding someone in every corner of the world when we wish to suggest that something is universal. Such expressions show how deeply the experience of corners has entered the way we describe our lives.",
+      "In recent decades, some architects and planners have begun to pay closer attention to corners. Instead of designing buildings with sharp, closed edges, they sometimes round or open their corners so that pedestrians can see further ahead and so that small public spaces, such as benches or trees, can be created where streets meet. Such designs reflect an understanding that corners are not merely technical problems to be solved but places where the life of a city is concentrated.",
+      "Perhaps, then, corners deserve more attention than we usually give them. They remind us that the spaces in which we live are full of thresholds, points at which one direction gives way to another and at which we must move forward without full knowledge of what lies ahead. To pay attention to corners is to recognize that uncertainty is not only a source of danger but also a source of discovery, and that some of the most meaningful encounters in our lives may wait for us just beyond the point where the path turns.",
+    ],
+    ja: [
+      'かどは私たちが住む場所のもっともなじみ深い特徴の一つだが、私たちはそれを、二つの壁や二つの道がたまたま出会う点以上のものと考えることはめったにない。私たちは一日に何度も気づかずにかどを曲がり、それを、どこかほかの場所へ行くとちゅうで通りすぎる場所としか見ない傾向がある。しかしよく見ると、かどは、私たちがどのように動き、どのようにおたがいに出会い、さらには不確かさや変化についてどのように考えるかを形づくるうえで、おどろくほど大切な役割を果たしていることがわかる。',
+      '都市では、街かどは昔から地域でもっともにぎやかな場所の一つだった。ちがう方向から来た人々がそこを通らなければならないので、かどは自然と出会いの場所になる。友だちが立ちどまって話し、店やカフェが客をうばい合い、かつては新聞や知らせが売られた場所である。かどにある店は二つの通りから同時に見えるので、かどの建物はしばしば町でもっとも価値が高く、もっとも注意深く設計されてきた。',
+      'かどはまた、見通しのかぎられた場所でもある。近づいても、その先に何があるのかは見えず、ほんのひととき、何を見つけるのかを正確に知らないまま前へ進まなければならない。この不確かさは、運転する人や自転車に乗る人が知っているように、ときに危険になることもあるが、それはかどに一種の魅力もあたえている。かどを曲がると、思いがけない景色や新しい通り、思ってもみなかった顔が見えるかもしれないからである。そして多くの旅人は、都市を探検する楽しみはまさに、次のかどの向こうに何があるのかと思いめぐらすことにあると言う。',
+      '家の中では、かどはかなりちがうイメージをともなう。部屋のすみは、人が本を手にしずかにすわったり、子どもが小さなかくれがをつくったりできる、守られた場所になりうる。二方向から守られている感覚を楽しめるのである。しかしすみは、とじこめられる場所にもなりうる。にげ場のないすみに追いつめられるというイメージは、人がわなにかかったように感じ、自由に選べない状況を表すのに、昔から使われてきた。',
+      '私たちのことばは、こうしたさまざまな意味を反映した表現にみちている。私たちは、苦しい時期が終わり物事がよくなりはじめるときに「かどを曲がる」と言い、時間やお金を節約するために作業を本来よりいいかげんにすることを「かどを切る（手をぬく）」と言い、何かがどこにでもあることを言いたいときには「世界のすみずみで」だれかを見つけると言う。そうした表現は、かどの経験が、私たちが自分の生活を語るしかたのなかにどれほど深く入りこんでいるかを示している。',
+      'ここ数十年、かどにもっと注意をはらいはじめた建築家や計画者もいる。とがった、閉じたはしをもつ建物を設計する代わりに、彼らはときにかどを丸めたり開いたりして、歩く人がより先まで見通せるようにし、道が出会うところにベンチや木のような小さな公共の空間をつくれるようにする。そうした設計は、かどが単に解決すべき技術的な問題ではなく、都市の生活が集まる場所だという理解を反映している。',
+      'だとすれば、かどは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。かどは、私たちが暮らす空間が、ある方向が別の方向に変わり、先に何があるのかを十分に知らないまま前へ進まなければならない、さかいめにみちていることを思い出させてくれる。かどに注意をはらうことは、不確かさが危険の源であるだけでなく発見の源でもあること、そして人生でもっとも意味のある出会いのいくつかが、道が曲がるそのすぐ先で私たちを待っているのかもしれないことに気づくことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この不確かさはときに危険だが、かどに魅力もあたえる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'かどにある店は、二つの通りから同時に見える。', answer: true, why: '第2段落 A shop on a corner can be seen from two streets at once。' },
+      { statement: 'かどに近づくと、その先にあるものがよく見える。', answer: false, why: '第3段落 we cannot see what lies beyond。' },
+      { statement: '部屋のすみは、守られた場所にも、とじこめられる場所にもなりうる。', answer: true, why: '第4段落 a place of shelter ... can also be a place of confinement。' },
+      { statement: '建築家はみな、とがった閉じたかどの建物だけを設計している。', answer: false, why: '第6段落 they sometimes round or open their corners。' },
+    ],
+    qa: [
+      { q: 'What does "cutting corners" mean, according to the passage?', choices: ['Doing a task less carefully to save time or money.', 'Turning left at every street.', 'Building round houses.', 'Finishing a difficult period.'], answer: 0, why: '第5段落 save time or money by doing a task less carefully than they should。' },
+      { q: 'Why do some architects round or open the corners of buildings?', choices: ['So that pedestrians can see further ahead.', 'So that buildings look older.', 'So that cars can drive faster.', 'So that shops can hide their goods.'], answer: 0, why: '第6段落 so that pedestrians can see further ahead。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
