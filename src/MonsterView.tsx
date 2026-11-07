@@ -3502,6 +3502,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 86 q20 -8 40 0" stroke="#78716c" strokeWidth="5" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'sitatunga')
+    return (
+      <g>
+        {/* 沼の水面 */}
+        <path d="M28 88 q11 -5 22 0 q11 5 22 0" stroke="#0e7490" strokeWidth="4" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
