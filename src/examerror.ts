@@ -9612,6 +9612,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The cold weather [had affect] the harvest this year.', choices: ['affected', 'effected', 'had effected', 'effect'], answer: 0, why: '動詞「影響した」は affected（has affected とも）。' },
     ],
   },
+  {
+    id: 'exam-fix-226',
+    title: '入試の誤文訂正〈226〉（国公立レベル：「～もそうだ」の So do I・Neither do I）',
+    points: ['肯定の文に「～もそうだ」と続けるときは So ＋（助）動詞＋主語、否定の文には Neither（Nor）＋（助）動詞＋主語。（助）動詞は前の文に合わせる（be 動詞なら be、一般動詞なら do・does・did、助動詞ならその助動詞）。主語と動詞の順番が入れかわることに注意。'],
+    examples: [{ en: 'I like cats. — So do I. / I can’t swim. — Neither can I.', ja: '私はネコが好き。— 私も。／私は泳げない。— 私も（泳げない）。' }],
+    questions: [
+      { sentence: 'I love chocolate. — [So am I].', choices: ['So do I', 'So I do', 'Neither do I', 'So love I'], answer: 0, why: '一般動詞 love の文なので So do I。' },
+      { sentence: 'I am tired. — [So do I].', choices: ['So am I', 'So I am', 'Neither am I', 'So tired I'], answer: 0, why: 'be 動詞の文なので So am I。' },
+      { sentence: 'I can’t swim. — [So can I].', choices: ['Neither can I', 'So can’t I', 'Neither I can', 'Either can I'], answer: 0, why: '否定の文には Neither can I。' },
+      { sentence: 'She went to the concert, and [so did I went].', choices: ['so did I', 'so I did', 'so went I', 'so was I'], answer: 0, why: '過去の一般動詞の文なので so did I。' },
+      { sentence: 'Tom has never been abroad, and [neither I have].', choices: ['neither have I', 'so have I', 'neither did I', 'neither I am'], answer: 0, why: '現在完了の否定の文なので neither have I（語順に注意）。' },
+      { sentence: 'My brother plays the guitar, and [so do my sister].', choices: ['so does my sister', 'so is my sister', 'so my sister does', 'neither does my sister'], answer: 0, why: '主語 my sister は三人称単数なので so does my sister。' },
+      { sentence: 'I didn’t like the movie. — [So did I].', choices: ['Neither did I', 'So didn’t I', 'Neither I did', 'Nor I did'], answer: 0, why: '否定の文には Neither did I。' },
+      { sentence: 'They will come to the party, and [so are we].', choices: ['so will we', 'so do we', 'so we will', 'neither will we'], answer: 0, why: '助動詞 will の文なので so will we。' },
+      { sentence: 'Ken isn’t hungry, and [neither does Mary].', choices: ['neither is Mary', 'so is Mary', 'neither Mary is', 'neither was Mary'], answer: 0, why: 'be 動詞 isn’t の文なので neither is Mary。' },
+      { sentence: 'I have finished my homework. — [So I have].', choices: ['So have I', 'So did I', 'Neither have I', 'So do I'], answer: 0, why: '現在完了の文なので So have I。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

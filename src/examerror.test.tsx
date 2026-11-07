@@ -3207,3 +3207,10 @@ it('正誤問題〈232〉：京大レベル sometime・sometimes・some time と
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) everyday')
 })
+
+it('誤文訂正〈226〉：国公立レベル So do I・Neither do I の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-226')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('So do I')
+})
