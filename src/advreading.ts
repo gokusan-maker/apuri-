@@ -41538,6 +41538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-ev-subsidies',
+    title: 'Should Governments Pay People to Buy Electric Cars?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, governments offer generous financial support to people who buy electric cars. Buyers may receive direct payments, tax reductions, or discounts on charging, parking, and road tolls, and some cities even allow electric vehicles to use lanes reserved for buses. These policies are intended to speed up the shift away from cars powered by gasoline and diesel, which are a major source of greenhouse gas emissions and air pollution. Yet the use of public money to support the purchase of private vehicles has also attracted criticism from several different directions.",
+      "Supporters argue that subsidies are necessary to overcome the obstacles that slow the adoption of new technology. Electric cars are often more expensive to buy than conventional ones, even if they are cheaper to run, and many consumers hesitate to pay more for an unfamiliar product. By reducing the purchase price, subsidies encourage more people to make the switch, which in turn increases demand, allows manufacturers to produce batteries and vehicles on a larger scale, and eventually lowers costs for everyone. Supporters point out that similar support helped solar panels become far cheaper over the past few decades, transforming them from an expensive novelty into one of the most affordable sources of electricity.",
+      "Supporters also emphasize the benefits for public health and the climate. Electric cars produce no exhaust at the point of use, which can improve air quality in crowded cities where pollution from traffic contributes to breathing problems and heart disease. ( A ) the electricity that powers them may still come partly from fossil fuels, supporters argue, the overall emissions of an electric car over its lifetime are generally lower, and they will fall further as power grids rely increasingly on renewable sources.",
+      "Critics, however, question whether subsidies for electric cars are a fair use of public money. Because new cars are expensive, those who benefit most from such programs are often wealthier households who could afford to buy a car anyway, while people who cannot afford any car at all receive nothing. In effect, critics argue, taxpayers on modest incomes may be helping to pay for the vehicles of the comfortably off, which seems difficult to justify at a time when many public services face financial pressure.",
+      "Critics also argue that subsidies for private cars may distract attention from more effective ways of reducing emissions. Replacing gasoline cars with electric ones does nothing to reduce traffic congestion, the space devoted to roads and parking, or the injuries caused by accidents. Investing in public transport, cycling, and walking, critics claim, could reduce emissions and improve city life for a much larger number of people, including those who do not own cars. Electric cars, they add, still require mining for battery materials, which can damage landscapes and harm workers in distant countries.",
+      "In response to these concerns, some governments have modified their programs. They may limit subsidies to cheaper models, provide larger payments to lower-income households, or gradually reduce support as electric cars become more affordable. Others have shifted part of their spending toward building charging stations, supporting electric buses and taxis, or encouraging car-sharing schemes, so that the benefits of cleaner transport are spread more widely across society, reaching people of every income.",
+      "The debate over electric car subsidies ultimately reflects broader questions about how societies should pay for the transition to a low-carbon economy. Encouraging new technologies may require public support, but the way that support is distributed affects both its effectiveness and its fairness. Policies that combine help for individuals with investment in shared services may offer the best chance of reducing emissions while ensuring that the costs and benefits of change are shared in a way that most citizens regard as just.",
+    ],
+    ja: [
+      '多くの国で、政府は電気自動車を買う人に手厚いお金のささえをあたえている。買う人は、直接の支はらいや税の減額や、充電・駐車・有料道路の割引を受けられることがあり、電気自動車にバス専用の車線を使わせている都市さえある。こうした政策は、温室効果ガスの排出と大気汚染の大きな原因であるガソリン車やディーゼル車からの移行を速めることをねらっている。しかし、個人の車の購入をささえるために公のお金を使うことは、いくつもの方向から批判も集めてきた。',
+      '支持する人々は、新しい技術の広まりをおくらせる障害をのりこえるには、補助金が必要だと主張する。電気自動車は、走らせる費用は安くても、買うときの値段がふつうの車より高いことが多く、多くの消費者はなじみのない製品により多くはらうことをためらう。買う値段を下げることで、補助金はより多くの人が乗りかえるようにうながし、それが需要をふやし、製造会社がより大きな規模で電池や車をつくれるようにし、やがてだれにとっても費用を下げるのである。同じようなささえのおかげで、ここ数十年で太陽光パネルがはるかに安くなり、高価なめずらしい物から、もっとも手ごろな電気の源の一つに変わったと支持する人々は指摘する。',
+      '支持する人々はまた、公衆の健康と気候にとっての利益を強調する。電気自動車は使う場所で排気ガスを出さないので、交通による汚染が呼吸の問題や心臓の病気の一因になっている混み合った都市の空気の質をよくしうる。電気自動車を動かす電気はまだ一部が化石燃料から来ているかもしれないが、電気自動車の一生を通じた排出の合計はふつうより少なく、電力網がますます再生可能な源にたよるようになれば、さらにへっていくと支持する人々は主張する。',
+      'しかし批判する人々は、電気自動車への補助金が公のお金の公平な使い方なのかと疑問を投げかける。新しい車は高いので、そうした制度からもっとも利益を受けるのは、どちらにせよ車を買う余裕のある裕福な家庭であることが多く、車をまったく買えない人々は何も受け取らない。つまり、収入のひかえめな納税者が、暮らしにゆとりのある人々の車の代金をはらう手伝いをしているのかもしれず、それは、多くの公共サービスがお金の圧力にさらされている時に正当化しにくいと批判する人々は主張する。',
+      '批判する人々はまた、個人の車への補助金は、排出をへらすより効果的な方法から注意をそらすかもしれないと主張する。ガソリン車を電気自動車に置きかえても、交通渋滞や、道路や駐車場にあてられる場所や、事故によるけがはまったくへらない。公共交通や自転車や歩くことに投資すれば、車をもたない人々をふくむ、はるかに多くの人々のために、排出をへらし都市の暮らしをよくできると批判する人々は言う。また、電気自動車も電池の材料のための採掘を必要としており、それは遠い国々の景色をそこない、働き手を傷つけることがあると彼らはつけ加える。',
+      'こうした心配にこたえて、制度を見直した政府もある。補助金をより安い車種にかぎったり、収入の少ない家庭により多くの支はらいをしたり、電気自動車が手ごろになるにつれて少しずつささえをへらしたりすることがある。また、支出の一部を充電所の建設や、電気バスやタクシーへのささえや、カーシェアリングの仕組みの後おしに回し、よりきれいな交通の利益が社会により広く、あらゆる収入の人々に行きわたるようにしたところもある。',
+      '電気自動車の補助金をめぐる議論は、結局のところ、社会が低炭素の経済への移行の費用をどうまかなうべきかについての、より広い問いを反映している。新しい技術をうながすには公のささえが必要かもしれないが、そのささえがどう分けられるかは、その効果と公平さの両方に影響する。個人への手助けと共有のサービスへの投資を組み合わせる政策が、排出をへらしながら、変化の費用と利益を、ほとんどの市民が公正だと考えるやり方で分かち合うための、もっともよい機会をあたえるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「電気はまだ一部が化石燃料から来ているかもしれないが、一生の排出は少ない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that subsidies help overcome high purchase ( 1 ) and benefit public health. Critics argue that they mainly help ( 2 ) households and distract from investment in public transport. Some governments now limit subsidies to ( 3 ) models.',
+      blanks: [
+        { choices: ['prices', 'speeds', 'colors', 'sizes'], answer: 0, why: '第2段落 By reducing the purchase price。' },
+        { choices: ['wealthier', 'poorer', 'younger', 'rural'], answer: 0, why: '第4段落 those who benefit most ... are often wealthier households。' },
+        { choices: ['cheaper', 'faster', 'larger', 'older'], answer: 0, why: '第6段落 limit subsidies to cheaper models。' },
+      ],
+    },
+    tf: [
+      { statement: '電気自動車にバス専用の車線を使わせている都市がある。', answer: true, why: '第1段落 some cities even allow electric vehicles to use lanes reserved for buses。' },
+      { statement: '電気自動車は、買う値段がふつうの車より安いことが多い。', answer: false, why: '第2段落 Electric cars are often more expensive to buy。' },
+      { statement: '電気自動車に置きかえても、交通渋滞はへらない。', answer: true, why: '第5段落 does nothing to reduce traffic congestion。' },
+      { statement: 'どの政府も、補助金の制度を見直していない。', answer: false, why: '第6段落 some governments have modified their programs。' },
+    ],
+    qa: [
+      { q: 'How do subsidies eventually lower costs for everyone, according to supporters?', choices: ['By increasing demand so that manufacturers can produce on a larger scale.', 'By banning gasoline.', 'By raising taxes.', 'By closing factories.'], answer: 0, why: '第2段落 increases demand, allows manufacturers to produce batteries and vehicles on a larger scale。' },
+      { q: 'What do critics suggest investing in instead?', choices: ['Public transport, cycling, and walking.', 'Larger highways.', 'More parking lots.', 'Faster sports cars.'], answer: 0, why: '第5段落 Investing in public transport, cycling, and walking。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
