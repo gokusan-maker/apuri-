@@ -42142,6 +42142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-paths',
+    title: 'On Paths',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A path through a forest or across a field is one of the simplest things human beings create, and yet it holds a quiet kind of wisdom. No one designs most paths; they emerge gradually as people walk the same way again and again, each traveler pressing the grass a little flatter and the soil a little harder. Over time, a line appears where none existed before, a record of countless journeys made by people who may never have met one another but who shared, at least for a moment, the same direction.",
+      "Paths reveal a great deal about the needs of those who use them. They often follow the easiest route through a landscape, avoiding steep slopes, crossing streams at shallow points, and connecting places that matter to the people nearby, such as wells, fields, and neighboring villages. In this sense, a path is a kind of collective knowledge, a solution to the problem of how to move through a particular place that has been discovered and refined by many people over many years.",
+      "In cities, planners sometimes notice paths that appear where no one intended them, worn into the grass of parks or across corners of open land. These informal routes show where people actually want to walk, which may differ from where designers expected them to go. ( A ) such paths may look untidy, some planners have learned to respect them, paving them instead of fencing them off, recognizing that the feet of ordinary people can reveal patterns that careful planning had missed.",
+      "Paths also connect us to the past. An old track through the hills may have been used for centuries by traders, pilgrims, or shepherds, and walking it today allows us to follow, quite literally, in the footsteps of those who came before. Some ancient routes have become famous, attracting travelers from around the world, while countless others survive only as faint lines in the landscape, known mainly to local residents who still use them. When such paths are abandoned, they can disappear within a few years as plants grow back over them, and with them may vanish memories of how earlier generations moved through the land.",
+      "The idea of the path has long appeared in language and thought as a symbol of life itself. People speak of choosing their path, of losing their way, or of following in someone else's footsteps. Such expressions suggest that we often understand our lives as journeys, shaped partly by the choices we make and partly by the routes that others have already established. A path, in this sense, combines freedom and tradition: it guides us, but we must still decide whether to follow it.",
+      "In modern life, many of the paths we use have been replaced by roads designed primarily for vehicles. Such roads allow us to travel quickly and comfortably, but they often cut through landscapes without regard for the patterns of walking that once shaped them. Walking paths, by contrast, invite a slower relationship with the land, in which we notice its slopes, textures, and changes, and in which the journey itself becomes part of the experience rather than merely a means of arriving.",
+      "In the end, a path may remind us of the value of shared experience across time. Each person who walks a path helps to maintain it for those who will follow, and each journey adds to a story that no single traveler could write alone. To walk a path, then, is to take part in a quiet collaboration with strangers past and future, and perhaps to recognize that many of the routes we follow in life were made possible by others whose names we will never know but whose efforts we still enjoy.",
+    ],
+    ja: [
+      '森の中や野原を横ぎる小道は、人間がつくるもっとも単純なものの一つだが、それでもしずかな種類の知恵をもっている。ほとんどの小道はだれかが設計したものではない。人々が同じ道を何度も歩くうちに少しずつあらわれるのであり、旅人の一人一人が草を少し平らにし、土を少しかたくしていく。時がたつと、それまでなかった場所に一本の線があらわれる。それは、一度もたがいに会ったことがないかもしれないが、少なくともひとときは同じ方向を分かち合った人々による、数えきれない旅の記録である。',
+      '小道は、それを使う人々の必要について多くのことを明らかにする。小道はしばしば景色の中でいちばん楽な道すじをたどり、急な坂をさけ、浅いところで小川をわたり、井戸や畑やとなりの村のような、近くの人々にとって大切な場所を結ぶ。この意味で、小道は一種の共同の知識であり、ある特定の場所をどう進むかという問題への、多くの人が何年もかけて見つけ、みがいてきた答えなのである。',
+      '都市では、計画を立てる人が、だれも意図しなかった場所にあらわれる小道に気づくことがある。公園の芝生や空き地のかどをななめに横ぎるようにすりへってできた道である。こうした非公式の道は、人々が実際にどこを歩きたいのかを示しており、それは設計者が予想したところとはちがうかもしれない。そうした小道は見た目がだらしないかもしれないが、それをさくでふさぐのではなく舗装して、それを尊重することを学んだ計画者もいる。ふつうの人々の足が、注意深い計画が見落としたパターンを明らかにしうることを認めたのである。',
+      '小道はまた、私たちを過去と結びつける。丘をこえる古い小道は、何世紀ものあいだ、商人や巡礼者や羊飼いに使われてきたのかもしれず、今日それを歩くことは、文字どおり、私たちより前に来た人々の足あとをたどることになる。有名になって世界中から旅人をひきつけている古い道もあれば、今もそれを使う地元の住民に主に知られているだけの、景色の中のかすかな線としてしか残っていない道も数えきれない。そうした小道は使われなくなると、植物がふたたびおおって数年のうちに消えてしまうことがあり、それとともに、以前の世代が土地をどう行き来していたかの記憶も消えるかもしれない。',
+      '小道という考えは、長いあいだ、人生そのものの象徴として、ことばや思考の中にあらわれてきた。人々は自分の道を選ぶこと、道に迷うこと、だれかの足あとをたどることについて語る。こうした言い方は、私たちがしばしば自分の人生を旅として、つまり、自分の選択と、すでにほかの人々が切りひらいた道すじの両方によって形づくられるものとして理解していることを示している。この意味で、小道は自由と伝統を組み合わせている。小道は私たちを導くが、それにしたがうかどうかは自分で決めなければならないのである。',
+      '現代の暮らしでは、私たちが使う小道の多くが、主に車のためにつくられた道路に置きかえられてきた。そうした道路のおかげで速く快適に移動できるが、それはしばしば、かつて景色を形づくっていた歩く人のパターンをかえりみずに景色を切りさいている。それに対して歩く小道は、土地とのよりゆっくりとした関係をさそう。そこでは私たちは坂や手ざわりや変化に気づき、旅そのものが、ただ着くための手段ではなく、経験の一部になるのである。',
+      '結局のところ、小道は、時をこえて分かち合われる経験の価値を思い出させてくれるのかもしれない。小道を歩く一人一人が、あとに続く人々のためにそれを保つ手助けをしており、一つ一つの旅が、どの旅人も一人では書けない物語に加わっていく。だから小道を歩くことは、過去と未来の見知らぬ人々とのしずかな協力に加わることであり、もしかすると、私たちが人生でたどる道の多くが、名前を知ることはなくても、その努力を今も私たちが受けている人々のおかげで可能になったことを知ることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「見た目がだらしないかもしれないが、それを尊重することを学んだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ほとんどの小道は、だれかが設計したものではない。', answer: true, why: '第1段落 No one designs most paths。' },
+      { statement: '小道はしばしば、急な坂を通るいちばんむずかしい道すじをたどる。', answer: false, why: '第2段落 often follow the easiest route ... avoiding steep slopes。' },
+      { statement: '非公式の道を舗装して尊重することを学んだ計画者がいる。', answer: true, why: '第3段落 paving them instead of fencing them off。' },
+      { statement: '筆者は、車のための道路は景色の歩く人のパターンをいつも大切にしていると述べている。', answer: false, why: '第6段落 often cut through landscapes without regard for the patterns of walking。' },
+    ],
+    qa: [
+      { q: 'What do informal routes in cities show, according to the passage?', choices: ['Where people actually want to walk.', 'Where cars should park.', 'Where trees grow best.', 'Where shops should open.'], answer: 0, why: '第3段落 show where people actually want to walk。' },
+      { q: 'What does a path combine, in a symbolic sense?', choices: ['Freedom and tradition.', 'Speed and comfort.', 'Wealth and power.', 'Fear and anger.'], answer: 0, why: '第5段落 A path, in this sense, combines freedom and tradition。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
