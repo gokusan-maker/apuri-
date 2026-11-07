@@ -3375,3 +3375,10 @@ it('正誤問題〈244〉：国公立レベル 動名詞の慣用表現の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to cook')
 })
+
+it('誤文訂正〈238〉：京大レベル so far・until now と現在完了の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-238')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('have visited')
+})

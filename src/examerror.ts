@@ -10128,6 +10128,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The concert was very [alive] and everyone danced.', choices: ['lively', 'alively', 'living of', 'a live'], answer: 0, why: '「にぎやかな・活気のある」は lively。' },
     ],
   },
+  {
+    id: 'exam-fix-238',
+    title: '入試の誤文訂正〈238〉（京大レベル：英作文の so far・until now と現在完了）',
+    points: ['so far・until now・up to now（今までのところ）、this month・this year（今月・今年これまでに）、since ～・for ＋期間は、今までの経験・完了・継続を表す現在完了（have ＋過去分詞）といっしょに使うことが多い。', 'last year・an hour ago・yesterday のような過去の一点を表す語は現在完了といっしょに使わず、過去形にする。過去のある時点までの経験は過去完了（had ＋過去分詞）、「～したにちがいない」は must have ＋過去分詞。since のあとは起点、for のあとは期間。'],
+    examples: [{ en: 'So far, I have visited five countries. / I met him three times last year.', ja: '今までのところ、私は5か国を訪れたことがある。／私は去年彼に3回会った。' }],
+    questions: [
+      { sentence: 'So far, I [visited] five countries.', choices: ['have visited', 'was visiting', 'had visit', 'am visiting'], answer: 0, why: 'so far（今までのところ）は現在完了と使うので have visited。' },
+      { sentence: 'Until now, nobody [solves] this problem.', choices: ['has solved', 'solving', 'is solve', 'had solves'], answer: 0, why: 'until now は現在完了と使うので has solved。' },
+      { sentence: 'We [have met] three times last year.', choices: ['met', 'have meet', 'has met', 'meeting'], answer: 0, why: 'last year は過去の一点なので過去形 met。' },
+      { sentence: 'How many books [did you read] so far this month?', choices: ['have you read', 'you have read', 'did you have read', 'do you read'], answer: 0, why: 'so far this month は現在完了なので have you read。' },
+      { sentence: 'I have lived here [since two years].', choices: ['for two years', 'since two years ago', 'during two years', 'from two years'], answer: 0, why: '期間は for two years。since のあとは起点。' },
+      { sentence: 'Up to now, the team [is winning] every game this season.', choices: ['has won', 'won every', 'is win', 'winning'], answer: 0, why: 'up to now は現在完了なので has won。' },
+      { sentence: 'He [has finished] the report an hour ago.', choices: ['finished', 'has finish', 'had finishing', 'finishing'], answer: 0, why: 'an hour ago は過去の一点なので過去形 finished。' },
+      { sentence: 'By now, she [must arrive] at the airport.', choices: ['must have arrived', 'must arrived', 'must arriving', 'must be arrive'], answer: 0, why: '「もう着いたにちがいない」は must have arrived。' },
+      { sentence: 'So far this year, it [rains] very little.', choices: ['has rained', 'rained to', 'is rain', 'raining'], answer: 0, why: 'so far this year は現在完了なので has rained。' },
+      { sentence: 'I [have never seen] such a big fish until yesterday.', choices: ['had never seen', 'have never saw', 'never have seen', 'has never seen'], answer: 0, why: '過去の一点（きのう）までの経験なので過去完了 had never seen。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
