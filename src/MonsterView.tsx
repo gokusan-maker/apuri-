@@ -3275,6 +3275,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M42 28 l-2 -8 M58 28 l2 -8" stroke="#3d2817" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'ibex')
+    return (
+      <g>
+        {/* 弓なりの大きなツノ */}
+        <path d="M40 30 q-14 -10 -6 -26 M60 30 q14 -10 6 -26" stroke="#4a3620" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
