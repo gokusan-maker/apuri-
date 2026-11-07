@@ -9182,6 +9182,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'In spite of [he is rich], he lives simply.', choices: ['being rich', 'rich is he', 'he rich', 'to be rich'], answer: 0, why: '前置詞 in spite of のあとは動名詞 being rich。' },
     ],
   },
+  {
+    id: 'exam-fix-216',
+    title: '入試の誤文訂正〈216〉（東大レベル：英作文の regret・stop・try ＋ to 不定詞／動名詞）',
+    points: ['regret・stop・try は、あとが to 不定詞か動名詞かで意味が変わる。regret -ing「（過去に）～したことを後悔する」／regret to ～「残念ながら～する」、stop -ing「～するのをやめる」／stop to ～「～するために立ち止まる」、try -ing「ためしに～してみる」／try to ～「～しようと努力する」。'],
+    examples: [{ en: 'He stopped to talk with his friend. / He stopped talking.', ja: '彼は友だちと話すために立ち止まった。／彼は話すのをやめた。' }],
+    questions: [
+      { sentence: 'I regret [to tell] her the secret last year; she was very hurt.', choices: ['telling', 'to have told', 'tell', 'told'], answer: 0, why: '去年したことを後悔しているので regret telling。' },
+      { sentence: 'We regret [informing] you that the concert has been canceled.', choices: ['to inform', 'inform', 'informed', 'to have informed'], answer: 0, why: '「残念ながらお知らせします」は regret to inform。' },
+      { sentence: 'The doctor told him to stop [to smoke] for his health.', choices: ['smoking', 'smoke', 'smoked', 'to have smoked'], answer: 0, why: '「たばこを吸うのをやめる」は stop smoking。' },
+      { sentence: 'On the way home, she stopped [buying] some milk at the store.', choices: ['to buy', 'buy', 'bought', 'having bought'], answer: 0, why: '「牛乳を買うために立ち寄った」は stop to buy。' },
+      { sentence: 'The phone kept ringing, so I stopped [to read] and answered it.', choices: ['reading', 'read', 'to have read', 'reads'], answer: 0, why: '「読むのをやめて電話に出た」は stopped reading。' },
+      { sentence: 'I tried [opening] the window, but it was stuck and would not move.', choices: ['to open', 'open', 'opened', 'having opened'], answer: 0, why: '開けようと努力したが開かなかったので try to open。' },
+      { sentence: 'If your computer freezes, try [to turn] it off and on again.', choices: ['turning', 'turn', 'turned', 'to have turned'], answer: 0, why: '「ためしにやってみる」は try turning。' },
+      { sentence: 'He will never regret [to choose] this school.', choices: ['choosing', 'choose', 'chose', 'to have chosen'], answer: 0, why: '「選んだことを後悔する」は regret choosing。' },
+      { sentence: 'Please stop [to make] so much noise; the baby is sleeping.', choices: ['making', 'make', 'made', 'to have made'], answer: 0, why: '「音を立てるのをやめる」は stop making。' },
+      { sentence: 'She tried hard [passing] the exam, and she finally succeeded.', choices: ['to pass', 'pass', 'passed', 'having passed'], answer: 0, why: '「合格しようと努力した」は try to pass。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
