@@ -3333,3 +3333,10 @@ it('正誤問題〈241〉：国公立レベル 頻度の副詞の位置の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) goes always')
 })
+
+it('誤文訂正〈235〉：京大レベル say・tell・speak・talk の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-235')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('told me')
+})

@@ -9999,6 +9999,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The baby [can be walk] already.', choices: ['can walk', 'can walking', 'is can walk', 'can to walk'], answer: 0, why: 'can のあとは動詞の原形なので can walk。' },
     ],
   },
+  {
+    id: 'exam-fix-235',
+    title: '入試の誤文訂正〈235〉（京大レベル：英作文の say・tell・speak・talk の使い分け）',
+    points: ['tell は人を直接目的語にとる（tell 人 that ～／tell 人 to do／tell 人 how to ～）。say は人を目的語にとらず、say that ～／say to 人 の形。tell には tell a lie・tell the truth・tell a story などの決まった言い方がある。', 'speak は言語や「話す能力」（speak English／speak to 人）、talk は「話し合う・おしゃべりする」（talk to 人／talk about ～）。about をとるのは talk・speak で、say about ～ とはふつう言わない。「実を言うと」は To tell the truth。'],
+    examples: [{ en: 'She told me that she was tired. / He said that he would come later.', ja: '彼女は私に、つかれていると言った。／彼はあとで来ると言った。' }],
+    questions: [
+      { sentence: 'She [said me] that she was tired.', choices: ['told me', 'talked me', 'spoke me', 'said with me'], answer: 0, why: 'say は人を目的語にとらないので told me。' },
+      { sentence: 'He [told] that he would come later.', choices: ['said', 'told to', 'talked', 'spoke'], answer: 0, why: 'tell には人の目的語が必要。人がないので said。' },
+      { sentence: 'Can you [speak to] me the truth?', choices: ['tell', 'say', 'talk', 'speak'], answer: 0, why: '「本当のことを言う」は tell 人 the truth。' },
+      { sentence: 'Let’s [say about] our plans for the summer.', choices: ['talk about', 'tell about', 'speak', 'say'], answer: 0, why: '「～について話し合う」は talk about。' },
+      { sentence: 'My grandmother can [talk] three languages.', choices: ['speak', 'tell', 'say', 'talk with'], answer: 0, why: '言語を話すのは speak。' },
+      { sentence: 'Please [say] me how to get to the station.', choices: ['tell', 'say to', 'speak', 'talk'], answer: 0, why: 'tell 人 how to ～ で「～のしかたを教える」。' },
+      { sentence: 'The teacher [told to us] to be quiet.', choices: ['told us', 'said us', 'spoke us', 'talked us'], answer: 0, why: 'tell 人 to do なので told us。to は不要。' },
+      { sentence: 'He [said a lie] to his parents.', choices: ['told a lie', 'spoke a lie', 'talked a lie', 'said lie'], answer: 0, why: '「うそをつく」は tell a lie。' },
+      { sentence: 'I want to [say with] you about something important.', choices: ['talk to', 'tell', 'say', 'speak about to'], answer: 0, why: '「～と話す」は talk to 人（about ～）。' },
+      { sentence: '[Speaking] the truth, I don’t like this plan.', choices: ['To tell', 'Saying', 'Talking', 'Telling of'], answer: 0, why: '「実を言うと」は To tell the truth。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
