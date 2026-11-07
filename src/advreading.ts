@@ -42382,6 +42382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-keys',
+    title: 'On Keys',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us carry a few keys with us wherever we go, and we rarely think about them except on the unhappy occasions when we cannot find them. A key is a small and apparently simple object, a piece of shaped metal that fits a particular lock, yet it holds together a surprising number of ideas about property, privacy, and trust. To ask what a key really does is therefore to ask how human beings decide who may enter the spaces they consider their own, and who must remain outside.",
+      "At the most practical level, a key protects what belongs to us. It allows us to leave a house, a car, or a cupboard without worrying that anyone may simply walk in and take what is inside, and in this sense it expresses a basic distrust of strangers. Yet it is worth noticing that a lock rarely stops a determined thief for very long, which suggests that its real power lies less in physical strength than in a shared understanding that a locked door marks a boundary that ordinary people should not cross.",
+      "A key also creates a private space in which people can be themselves. Behind a locked door, we can rest, think, or behave in ways that we would not wish others to see, and the ability to close that door when we choose is an important part of what it means to have a life of our own. ( A ) children often resent the locked doors of adults, many of them, upon reaching adolescence, begin to ask for a lock on their own bedroom door, as if recognizing that growing up requires a place where others cannot follow.",
+      "At the same time, keys are also signs of trust. To give someone a copy of the key to one's home is to say that this person is no longer an outsider, and the moment at which a young person first receives a house key, or a couple exchange keys, is often remembered as a step into a new kind of relationship. In some cultures, a household's keys were traditionally held by the person responsible for managing the home, so that carrying them was a visible sign of authority and responsibility within the family.",
+      "The loss or return of a key can carry equally strong meanings. When a relationship ends, the return of a key may say more than any words, and when a tenant leaves an apartment for the last time, handing back the keys marks the moment at which a familiar place becomes someone else's. Such experiences suggest that a key is not only a tool for opening doors but also a kind of record of our connections, showing which places and which people we belong to at any particular time in our lives.",
+      "In recent years, physical keys have begun to be replaced by numbers, cards, and mobile phones. Many hotels, offices, and even homes now open with a code or a signal rather than with a piece of metal, and the permission to enter can be granted or removed instantly from a distance. This change brings obvious convenience, since a lost card can simply be cancelled, but it also makes the act of trusting someone less visible, because nothing needs to be placed physically in another person's hand.",
+      "Perhaps, then, keys deserve more attention than we usually give them. They remind us that every home, however open and welcoming, depends on a decision about where the inside ends and the outside begins, and that the people we let in are those we have chosen to trust. As keys become invisible, it may be worth asking whether we can preserve the meaning that once accompanied them, so that the act of opening our doors to another person remains, as it has long been, a quiet but significant expression of trust.",
+    ],
+    ja: [
+      '私たちのほとんどは、どこへ行くにもいくつかの鍵をもち歩いているが、それが見つからないという残念なときをのぞけば、めったに鍵のことを考えない。鍵は小さく、一見単純なもの、つまり特定の錠に合うよう形づくられた金属の一片にすぎないが、それは所有、プライバシー、信頼についての、おどろくほど多くの考えをつなぎとめている。だから、鍵が本当は何をしているのかを問うことは、人間が、自分のものとみなす空間にだれが入ってよく、だれが外にとどまらなければならないのかを、どのように決めているのかを問うことなのである。',
+      'もっとも実用的なレベルでは、鍵は私たちのものを守る。鍵があるおかげで、私たちは、だれかがただ入ってきて中のものをもっていくかもしれないと心配せずに、家や車や戸棚をはなれることができ、この意味で、鍵は見知らぬ人への基本的な不信を表している。しかし、錠が決意のかたい泥棒をそう長くは止められないことに気づく価値はある。このことは、錠の本当の力は、物理的な強さよりも、鍵のかかった扉はふつうの人がこえるべきではないさかいめを示すという、共有された理解にあることを示している。',
+      '鍵はまた、人が自分らしくいられる私的な空間をつくり出す。鍵のかかった扉のうしろで、私たちは休んだり、考えたり、他人に見られたくないふるまいをしたりすることができ、好きなときにその扉を閉められることは、自分自身の生活をもつということの大切な一部である。子どもはしばしば大人の鍵のかかった扉をいやがるが、その多くは思春期になると、自分の部屋の扉に鍵をつけてほしいと言いはじめる。まるで、大人になるには他人がついて来られない場所が必要だと気づいたかのように。',
+      '同時に、鍵は信頼のしるしでもある。だれかに自分の家の合鍵をわたすことは、その人がもはや部外者ではないと言うことであり、若者がはじめて家の鍵を受けとるときや、二人が鍵を交換するときは、新しい種類の関係への一歩として記憶されることが多い。文化によっては、家の鍵は伝統的に家をとりしきる責任をもつ人がもっており、それをもち歩くことは、家族のなかでの権威と責任の目に見えるしるしだった。',
+      '鍵をなくしたり返したりすることも、同じくらい強い意味をもちうる。関係が終わるとき、鍵を返すことはどんなことばよりも多くを語るかもしれないし、借り手が最後にアパートを出るとき、鍵を返すことは、なじみの場所がほかのだれかのものになる瞬間を示す。そうした経験は、鍵が扉を開ける道具であるだけでなく、私たちのつながりの一種の記録でもあり、人生のある時点で、私たちがどの場所とどの人々に属しているのかを示していることを思わせる。',
+      '近年、物としての鍵は、番号やカード、携帯電話に置きかえられはじめている。多くのホテルやオフィス、さらには家までもが、金属の一片ではなく暗証番号や信号で開くようになり、入る許可は遠くから一瞬であたえたり取り消したりできる。この変化には明らかな便利さがある。なくしたカードはただ無効にすればよいからである。しかしそれはまた、だれかを信頼する行為を見えにくくもする。もう何も、相手の手に実際にわたす必要がないからである。',
+      'だとすれば、鍵は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。鍵は、どんなに開かれた温かい家も、どこで内側が終わり、どこから外側が始まるのかという決定に支えられていること、そして私たちが中に入れる人々は、信頼すると決めた人々であることを思い出させる。鍵が目に見えなくなっていくなかで、かつて鍵にともなっていた意味を保てるかどうか、つまり、だれかに扉を開くという行為が、長くそうであったように、しずかだが大切な信頼の表現でありつづけられるかどうかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「子どもは大人の鍵をいやがるが、思春期には自分の部屋の鍵をほしがる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者によると、錠は決意のかたい泥棒を長いあいだ止めることができる。', answer: false, why: '第2段落 a lock rarely stops a determined thief for very long。' },
+      { statement: '思春期になると、自分の部屋に鍵をほしがる子どもが多い。', answer: true, why: '第3段落 begin to ask for a lock on their own bedroom door。' },
+      { statement: '文化によっては、家の鍵をもつことが家族のなかでの権威のしるしだった。', answer: true, why: '第4段落 a visible sign of authority and responsibility within the family。' },
+      { statement: '筆者は、番号やカードの鍵には便利さがまったくないと述べている。', answer: false, why: '第6段落 This change brings obvious convenience。' },
+    ],
+    qa: [
+      { q: 'What does giving someone a copy of the key to one’s home say, according to the passage?', choices: ['That the person is no longer an outsider.', 'That the house is for sale.', 'That the lock is broken.', 'That the owner is moving abroad.'], answer: 0, why: '第4段落 this person is no longer an outsider。' },
+      { q: 'Why does the author say that new kinds of keys make trusting someone less visible?', choices: ['Nothing needs to be placed physically in another person’s hand.', 'They are more expensive than metal keys.', 'They cannot be cancelled.', 'They only work in hotels.'], answer: 0, why: '第6段落 because nothing needs to be placed physically in another person’s hand。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
