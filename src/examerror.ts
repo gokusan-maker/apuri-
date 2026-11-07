@@ -5408,6 +5408,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Suggested (B) the manager (C) that we (D) work overtime?', choices: ['(A) Suggested', '(B) the manager', '(C) that we', '(D) work overtime?'], answer: 0, why: '疑問文なので Did the manager suggest that we work overtime?' },
     ],
   },
+  {
+    id: 'exam-error-recently-nowadays-todai',
+    title: '入試の正誤問題〈227〉（東大レベル：英作文の recently・these days・nowadays と時制）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'recently・lately「最近（この前）」は、過去形か現在完了とともに使う（I saw her recently.／I have seen her recently.）。現在形の習慣にはふつう使わない。',
+      'these days・nowadays「近ごろは（昔とちがって今は）」は、現在形や現在進行形とともに使う（These days, more people work from home.）。day は複数形の days にする。',
+    ],
+    examples: [
+      { en: 'I saw her recently.', ja: '最近、彼女に会った。' },
+      { en: 'These days, more people work from home.', ja: '近ごろは、家で働く人がふえている。' },
+    ],
+    questions: [
+      { sentence: '(A) These days, (B) more people (C) worked (D) from home.', choices: ['(A) These days,', '(B) more people', '(C) worked', '(D) from home'], answer: 2, why: 'these days「最近は（今は）」は現在の状態をあらわすので現在形 work。' },
+      { sentence: '(A) I (B) see (C) her (D) recently.', choices: ['(A) I', '(B) see', '(C) her', '(D) recently'], answer: 1, why: 'recently「最近（この前）」は過去形か現在完了とともに使うので saw（または have seen）。' },
+      { sentence: '(A) Nowadays, (B) many young people (C) got (D) news on their phones.', choices: ['(A) Nowadays,', '(B) many young people', '(C) got', '(D) news on their phones'], answer: 2, why: 'nowadays「近ごろは」は現在の習慣なので現在形 get。' },
+      { sentence: '(A) Recently, (B) she (C) is starting (D) a new job.', choices: ['(A) Recently,', '(B) she', '(C) is starting', '(D) a new job'], answer: 2, why: 'recently は過去形か現在完了とともに使うので started（または has started）。' },
+      { sentence: '(A) He (B) has (C) recently (D) move to Osaka.', choices: ['(A) He', '(B) has', '(C) recently', '(D) move to Osaka'], answer: 3, why: '現在完了なので過去分詞 moved。' },
+      { sentence: '(A) These day, (B) prices (C) are rising (D) quickly.', choices: ['(A) These day,', '(B) prices', '(C) are rising', '(D) quickly'], answer: 0, why: '「最近は」は These days（複数形）。' },
+      { sentence: '(A) Have you (B) talked to (C) Ken (D) nowadays?', choices: ['(A) Have you', '(B) talked to', '(C) Ken', '(D) nowadays?'], answer: 3, why: '現在完了の疑問文で「最近」は recently（または lately）。nowadays は現在形とともに使う。' },
+      { sentence: '(A) Recent, (B) the weather (C) has been (D) very strange.', choices: ['(A) Recent,', '(B) the weather', '(C) has been', '(D) very strange'], answer: 0, why: '文全体を修飾する副詞なので Recently。' },
+      { sentence: '(A) Nowadays (B) children (C) spend (D) less times outdoors.', choices: ['(A) Nowadays', '(B) children', '(C) spend', '(D) less times outdoors'], answer: 3, why: '「時間」の time は数えられない名詞なので less time。' },
+      { sentence: '(A) I (B) have been (C) very busy (D) these day.', choices: ['(A) I', '(B) have been', '(C) very busy', '(D) these day'], answer: 3, why: '「最近」は these days（複数形）。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

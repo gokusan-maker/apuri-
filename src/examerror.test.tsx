@@ -3130,3 +3130,10 @@ it('誤文訂正〈220〉：国公立レベル as soon as・the moment の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('get')
 })
+
+it('正誤問題〈227〉：東大レベル recently・these days・nowadays の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-recently-nowadays-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) worked')
+})
