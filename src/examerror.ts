@@ -9311,6 +9311,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There is [not point] in hurrying; the shop is already closed.', choices: ['no point', 'none point', 'not a point of', 'no pointing'], answer: 0, why: '「～してもしかたがない」は There is no point in ～ing。' },
     ],
   },
+  {
+    id: 'exam-fix-219',
+    title: '入試の誤文訂正〈219〉（東大レベル：英作文の provide A with B・rob A of B・remind A of B の前置詞）',
+    points: ['動詞ごとに決まった前置詞がある。provide・supply A with B「A に B をあたえる」（provide B for A とも言う）、rob・deprive A of B「A から B をうばう」、remind A of B「A に B を思い出させる」、inform A of B「A に B を知らせる」、cure A of B「A の B を治す」。steal は steal B from A（物を主語の目的語にする）。'],
+    examples: [{ en: 'The school provides students with lunch. / This song reminds me of my childhood.', ja: 'その学校は生徒に昼食を出している。／この歌を聞くと子どものころを思い出す。' }],
+    questions: [
+      { sentence: 'The hotel provides every guest [for] a free breakfast.', choices: ['with', 'of', 'to', 'from'], answer: 0, why: 'provide A with B なので with。' },
+      { sentence: 'Two men robbed the old woman [from] her bag.', choices: ['of', 'with', 'for', 'to'], answer: 0, why: 'rob A of B「A から B をうばう」なので of。' },
+      { sentence: 'This photo always reminds me [about] my grandmother.', choices: ['of', 'with', 'from', 'for'], answer: 0, why: 'remind A of B「A に B を思い出させる」なので of。' },
+      { sentence: 'Someone [robbed] my bike from the station yesterday.', choices: ['stole', 'robbed of', 'deprived', 'took of'], answer: 0, why: '「物をぬすむ」は steal B from A。rob は人や場所を目的語にする。' },
+      { sentence: 'Please inform us [for] any change in your address.', choices: ['of', 'with', 'by', 'from'], answer: 0, why: 'inform A of B「A に B を知らせる」なので of。' },
+      { sentence: 'The war deprived many children [with] their homes.', choices: ['of', 'from', 'for', 'to'], answer: 0, why: 'deprive A of B「A から B をうばう」なので of。' },
+      { sentence: 'The farm supplies the city [of] fresh vegetables.', choices: ['with', 'from', 'to', 'by'], answer: 0, why: 'supply A with B なので with。' },
+      { sentence: 'The doctor cured him [from] his illness.', choices: ['of', 'with', 'for', 'by'], answer: 0, why: 'cure A of B「A の B を治す」なので of。' },
+      { sentence: 'The government provides food [with] people who lost their homes.', choices: ['for', 'of', 'from', 'by'], answer: 0, why: 'provide B for A（B を A にあたえる）なので for。' },
+      { sentence: 'You remind me [to] your father when you laugh like that.', choices: ['of', 'with', 'for', 'about to'], answer: 0, why: 'remind A of B「A に B を思い出させる」なので of。remind A to do は「A に～するよう気づかせる」。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

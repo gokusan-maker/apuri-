@@ -3109,3 +3109,10 @@ it('正誤問題〈225〉：国公立レベル have trouble ～ing・spend 時�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to find')
 })
+
+it('誤文訂正〈219〉：東大レベル provide A with B・rob A of B の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-219')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('with')
+})
