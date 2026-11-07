@@ -9698,6 +9698,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Children [is to] go to bed by nine.', choices: ['are to', 'are', 'is', 'be to'], answer: 0, why: '主語 Children は複数なので are to。' },
     ],
   },
+  {
+    id: 'exam-fix-228',
+    title: '入試の誤文訂正〈228〉（東大レベル：英作文の people・police・news・furniture などの単数・複数）',
+    points: ['people（人々）・police（警察）・cattle（牛）はつねに複数あつかい。news・information・furniture・advice は数えられない名詞で単数あつかい（a news／newses とは言わない）。mathematics・physics・economics のような学問名は s で終わっても単数あつかい。a series は「一続き」で単数あつかい。'],
+    examples: [{ en: 'The police are looking for the man. / The news was surprising.', ja: '警察はその男をさがしている。／その知らせはおどろくべきものだった。' }],
+    questions: [
+      { sentence: 'Many people [is] waiting outside the theater.', choices: ['are', 'was', 'has', 'does'], answer: 0, why: 'people は複数あつかいなので are。' },
+      { sentence: 'The police [has] arrested the thief.', choices: ['have', 'is', 'was', 'does'], answer: 0, why: 'police は複数あつかいなので have。' },
+      { sentence: 'The news [were] a great shock to everyone.', choices: ['was', 'are', 'have', 'do'], answer: 0, why: 'news は単数あつかいなので was。' },
+      { sentence: 'We bought some new [furnitures] for the living room.', choices: ['furniture', 'a furniture', 'furnitures pieces', 'furniture items of'], answer: 0, why: 'furniture は数えられない名詞なので furniture。' },
+      { sentence: 'Mathematics [are] my favorite subject.', choices: ['is', 'were', 'have', 'do'], answer: 0, why: '学問名 mathematics は単数あつかいなので is。' },
+      { sentence: 'I heard [a good news] from my friend today.', choices: ['some good news', 'good newses', 'a news good', 'a goods news'], answer: 0, why: 'news に a はつけないので some good news。' },
+      { sentence: 'There [is] a lot of cattle on the farm.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'cattle は複数あつかいなので There are。' },
+      { sentence: 'A series of accidents [were] reported last week.', choices: ['was', 'are', 'have', 'do'], answer: 0, why: 'a series of ～ は単数あつかいなので was。' },
+      { sentence: 'Economics [study] how people use money and resources.', choices: ['studies', 'study about', 'are studying', 'have studied'], answer: 0, why: '学問名 economics は単数あつかいなので studies。' },
+      { sentence: 'There [are] much useful information on this website.', choices: ['is', 'were', 'have', 'many'], answer: 0, why: 'information は数えられない名詞で単数あつかいなので is。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

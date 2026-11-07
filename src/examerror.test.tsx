@@ -3235,3 +3235,10 @@ it('正誤問題〈234〉：国公立レベル must not と don’t have to・ne
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) must not')
 })
+
+it('誤文訂正〈228〉：東大レベル people・police・news などの単数・複数の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-228')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('are')
+})
