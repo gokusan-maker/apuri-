@@ -43342,6 +43342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-shelves',
+    title: 'On Shelves',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A shelf is perhaps the simplest piece of furniture ever devised: a flat board fixed to a wall or supported by a frame, on which objects can be placed and left. We rarely give shelves much thought, yet almost every home contains several of them, holding books, dishes, photographs, tools, and souvenirs. What we place on our shelves, and how we arrange it, can reveal a surprising amount about who we are, what we value, and how we relate to the past, and in this sense a shelf is not merely a place for storage but also a kind of quiet self-portrait.",
+      "The most obvious function of a shelf is to keep things within reach while freeing the floor and the table for other uses. A kitchen shelf holds the plates and spices that are used every day, and a workshop shelf holds tools in the order in which they are likely to be needed. In such cases, the arrangement of a shelf reflects the rhythm of daily life, and a person who knows where everything is can work quickly and calmly, without wasting time searching for what they need.",
+      "Shelves also serve as places of display. Many people keep books they have already read, objects inherited from their grandparents, or souvenirs from journeys long ago, not because these things are useful but because they carry memories and meanings. ( A ) visitors may glance at such shelves only briefly, they often learn a great deal from them, since the books someone keeps or the objects they choose to show suggest the kind of life that person has lived and the kind of person they hope to be.",
+      "The way people arrange their shelves can be equally revealing. Some organize their books by subject or by author, creating an orderly system that allows any volume to be found at once, while others arrange them by color, by size, or simply in the order in which they were acquired. Each method expresses a different idea of order, and some people find that rearranging their shelves helps them to think more clearly, as if putting objects in place could also bring order to their minds.",
+      "In recent years, however, many of the objects that once filled our shelves have become digital. Music, films, photographs, and even books can now be stored on a single device, and many people have chosen to own fewer physical possessions in order to live in smaller spaces or to reduce clutter. This change brings real advantages, since digital collections take up no room and can be carried anywhere, but it may also mean that our collections become invisible, hidden inside machines rather than displayed where others can see and share them.",
+      "Something may be lost when this happens. A shelf of books invites browsing, encouraging a person to pick up a volume they had forgotten or to notice a connection between two works placed side by side, whereas a digital collection usually shows only what we search for. Physical shelves also allow children to explore the possessions of their parents and grandparents, discovering interests and memories that might otherwise never be passed on, and this kind of accidental discovery is difficult to reproduce on a screen.",
+      "Perhaps, then, shelves deserve more attention than we usually give them. They remind us that the things we keep are not only tools but also records of our lives, and that the way we arrange them shapes both how we live and how others understand us. In an age when so much of what we own has become invisible, it may be worth asking which objects we wish to keep in view, and whether a simple board on a wall might still help us remember who we have been and share that memory with those who come after us.",
+    ],
+    ja: [
+      'たなは、おそらくこれまでに考え出されたもっとも単純な家具である。壁に取りつけられたり、わくでささえられたりした平らな板で、その上にものを置いておくことができる。私たちはたなについてあまり考えることはないが、ほとんどどの家にもいくつかのたながあり、本や皿、写真、道具、みやげ物をのせている。私たちがたなに何を置き、それをどのようにならべるかは、私たちが何者で、何を大切にし、過去とどのように関わっているかについて、おどろくほど多くを明らかにしうる。この意味で、たなはただの物置きの場所ではなく、一種のしずかな自画像でもあるのである。',
+      'たなのもっとも明らかな働きは、床やテーブルをほかの用途のために空けながら、ものを手のとどくところに置いておくことである。台所のたなには毎日使う皿や香辛料がのり、作業場のたなには必要になりそうな順に道具がならぶ。そうした場合、たなのならべ方は日々の生活のリズムを反映しており、どこに何があるかを知っている人は、必要なものをさがして時間をむだにすることなく、すばやくおちついて作業できる。',
+      'たなはまた、かざるための場所としての役割も果たす。多くの人は、すでに読んだ本や、祖父母から受けついだもの、ずっと昔の旅のみやげ物を、それが役に立つからではなく、思い出や意味をもっているからとっておく。訪れた人はそうしたたなをほんの少し見るだけかもしれないが、そこから多くを知ることが多い。ある人がとっておく本や、見せるために選ぶものは、その人がどのような人生を送ってきたのか、そしてどのような人になりたいと願っているのかを思わせるからである。',
+      '人々がたなをどのように整えるかも、同じくらい多くを明らかにしうる。本を分野や著者ごとに整理し、どの本もすぐに見つけられる整った仕組みをつくる人もいれば、色や大きさ、あるいはただ手に入れた順にならべる人もいる。それぞれの方法はちがう秩序の考え方を表しており、たなを整え直すと頭がすっきりすると感じる人もいる。まるで、ものをあるべき場所に置くことで、心にも秩序をもたらせるかのように。',
+      'しかし近年、かつて私たちのたなをうめていたものの多くがデジタルになった。音楽や映画、写真、さらには本までもが一つの機器に保存できるようになり、多くの人は、せまい空間で暮らしたり、ものを減らしたりするために、物としての持ち物を少なくすることを選んできた。この変化には本当の利点がある。デジタルのコレクションは場所をとらず、どこへでも持ち運べるからである。しかしそれはまた、私たちのコレクションが目に見えなくなり、ほかの人が見て分かち合える場所にかざられるのではなく、機械の中にかくされてしまうことを意味しているのかもしれない。',
+      'そうなるとき、何かが失われるのかもしれない。本のならんだたなは見て回ることをさそい、わすれていた本を手にとったり、となりにならんだ二つの作品のつながりに気づいたりするよう人を促すが、デジタルのコレクションはふつう、私たちがさがしたものしか見せない。物としてのたなはまた、子どもが親や祖父母の持ち物を探検し、そうでなければ受けつがれることのなかったかもしれない関心や思い出を見つけることを可能にする。そしてこの種の偶然の発見を画面の上で再現するのはむずかしい。',
+      'だとすれば、たなは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。たなは、私たちがとっておくものが道具であるだけでなく、私たちの人生の記録でもあること、そしてそれをどのようにならべるかが、私たちがどのように暮らし、ほかの人が私たちをどのように理解するかを形づくっていることを思い出させてくれる。持っているものの多くが目に見えなくなった時代に、どのものを目に見えるところに置いておきたいのか、そして壁の上の一枚の単純な板が、自分がどのような人間だったのかを思い出し、その記憶をあとに続く人々と分かち合う助けにいまもなるのかどうかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「訪れた人は少し見るだけかもしれないが、そこから多くを知る」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者は、たなを一種のしずかな自画像だと述べている。', answer: true, why: '第1段落 a kind of quiet self-portrait。' },
+      { statement: '多くの人は、役に立つものだけをたなにかざる。', answer: false, why: '第3段落 not because these things are useful but because they carry memories。' },
+      { statement: '本を色や大きさでならべる人もいる。', answer: true, why: '第4段落 others arrange them by color, by size。' },
+      { statement: 'デジタルのコレクションは、たなと同じように見て回ることをさそう。', answer: false, why: '第6段落 a digital collection usually shows only what we search for。' },
+    ],
+    qa: [
+      { q: 'What do some people find that rearranging their shelves helps them to do?', choices: ['Think more clearly.', 'Sleep longer.', 'Save money.', 'Read faster.'], answer: 0, why: '第4段落 rearranging their shelves helps them to think more clearly。' },
+      { q: 'What do physical shelves allow children to do, according to the passage?', choices: ['Explore the possessions of their parents and grandparents.', 'Play games on screens.', 'Buy new books online.', 'Build their own furniture.'], answer: 0, why: '第6段落 allow children to explore the possessions of their parents and grandparents。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
