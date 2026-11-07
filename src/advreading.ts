@@ -43218,6 +43218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-nightlife',
+    title: 'Should Cities Protect Their Nightlife?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many large cities, small music venues, late-night cafés, and other places that come alive after dark have been closing in growing numbers. Rising rents are partly to blame, but owners also point to complaints from new residents who move into apartments built nearby and then object to the noise of music and crowds late at night. As a result, a number of cities have begun to ask whether they should take active steps to protect their nightlife, and the question has revealed a sharp conflict between the right of residents to sleep peacefully and the value of a lively culture after dark.",
+      "Supporters of protecting nightlife argue that it plays an important role in the cultural and economic life of a city. Small venues are often the places where young musicians, comedians, and artists first perform in front of an audience, and many well-known performers began their careers in such places. Supporters also point out that the businesses that operate at night provide jobs for large numbers of people, from bar staff and security guards to taxi drivers, and that a city with an attractive nightlife may find it easier to draw visitors and young workers.",
+      "Supporters also emphasize the question of fairness between old and new residents. In many cases, they say, a music venue has existed in the same building for decades, and the people who complain about it chose to move nearby knowing that it was there. ( A ) new residents certainly have a right to a reasonable level of quiet, supporters argue, it seems unfair that a long-established venue should be forced to close because of a problem that the developers of new buildings could have prevented with better soundproofing.",
+      "Critics, however, warn that nightlife can impose real costs on the people who live around it. Noise from music and crowds leaving venues in the early hours can make it difficult to sleep, and lack of sleep can affect people's health, their work, and their children's performance at school. Critics also point to problems such as litter, vandalism, and disorderly behavior, which may make some streets feel unpleasant or even unsafe for residents at night.",
+      "Critics further argue that a city must provide housing for its growing population, and that protecting venues should not prevent new homes from being built in central areas. Many cities face a serious shortage of affordable housing, and critics believe that the needs of people who require somewhere to live should take priority over those who want somewhere to spend an evening. They also note that residents who work early in the morning, such as nurses and bus drivers, may be among those most affected by noise late at night.",
+      "In response to these competing concerns, several cities have adopted new approaches. Some have introduced a rule under which the developer of a new building near an existing venue must pay for soundproofing, rather than requiring the venue to reduce its noise. Others have appointed officials whose job is to represent the interests of the night-time economy and to help businesses and residents resolve disputes before they reach the courts, and some have improved late-night public transport so that crowds can leave quickly and quietly.",
+      "The debate over nightlife ultimately reflects a broader question about how cities should balance different ways of living in the same space. A city is not only a place where people sleep but also a place where they meet, celebrate, and create, and these activities do not always fit neatly into the hours of daylight. Finding a fair balance requires recognizing that both the quiet of a residential street and the energy of a crowded venue have value, and that a city which loses either may become a poorer place to live.",
+    ],
+    ja: [
+      '多くの大都市で、小さなライブハウスや夜おそくまで開いているカフェなど、暗くなってからにぎわう場所が、ますます多く閉店している。家賃の上昇も原因の一つだが、経営者たちは、近くに建てられたアパートに引っこしてきて、夜おそくの音楽や人ごみのさわがしさに苦情を言う新しい住民も原因だと指摘する。その結果、いくつかの都市は夜の文化を守るために積極的な手を打つべきかどうかを問いはじめており、その問いは、住民がしずかに眠る権利と、暗くなってからのにぎやかな文化の価値とのあいだの鋭い対立を浮かびあがらせている。',
+      '夜の文化を守ることを支持する人々は、それが都市の文化と経済の生活において大切な役割を果たしていると主張する。小さなライブハウスは、若い音楽家や芸人、芸術家がはじめて観客の前で演じる場所であることが多く、多くの有名な演者もそうした場所で仕事を始めた。支持する人々はまた、夜に営業する店は、バーの店員や警備員からタクシー運転手まで、多くの人々に仕事をあたえており、魅力的な夜の文化のある都市は、訪問者や若い働き手を引きつけやすいかもしれないと指摘する。',
+      '支持する人々はまた、古くからの住民と新しい住民とのあいだの公平さの問題も強調する。多くの場合、ライブハウスは何十年も同じ建物にあり、それに苦情を言う人々は、それがあることを知ったうえで近くに引っこすことを選んだのだと彼らは言う。新しい住民にはたしかにほどよいしずけさを求める権利があるが、新しい建物を建てる開発業者がよりよい防音でふせげたはずの問題のために、長く続いてきたライブハウスが閉店に追いこまれるのは不公平に思える、と支持者は主張する。',
+      'しかし批判する人々は、夜の文化がまわりに住む人々に現実の負担をかけうると警告する。音楽や、明け方に店を出る人ごみの音は眠りをさまたげることがあり、睡眠不足は人々の健康や仕事、子どもの学校での成績に影響しうる。批判する人々はまた、ごみや器物の損壊、さわがしいふるまいといった問題も指摘する。そうした問題のせいで、一部の通りは夜、住民にとって不快に、あるいは危険にさえ感じられるかもしれない。',
+      '批判する人々はさらに、都市はふえていく人口のために住宅を用意しなければならず、ライブハウスを守ることが中心部に新しい家を建てるさまたげになるべきではないと主張する。多くの都市は手ごろな住宅の深刻な不足に直面しており、住む場所を必要とする人々の必要は、夜を過ごす場所をほしがる人々の必要よりも優先されるべきだと批判する人々は考える。彼らはまた、看護師やバスの運転手のように朝早く働く住民が、夜おそくの音にもっとも影響を受ける人々にふくまれるかもしれないとも指摘する。',
+      'こうした対立する懸念に応えて、いくつかの都市は新しいやり方を取り入れている。すでにあるライブハウスの近くに新しい建物を建てる開発業者が、ライブハウスに音を減らすよう求めるのではなく、防音の費用をはらわなければならないという決まりを導入した都市もある。また、夜の経済の利益を代表し、争いが裁判になる前に店と住民が解決できるよう助けることを仕事とする役職をおいた都市や、人ごみがすばやくしずかに帰れるよう深夜の公共交通を改善した都市もある。',
+      '夜の文化をめぐる議論は、結局のところ、都市が同じ空間でのちがう暮らし方のつりあいをどうとるべきかという、より広い問いを反映している。都市は人々が眠る場所であるだけでなく、出会い、祝い、創造する場所でもあり、こうした活動はかならずしも昼間の時間にきれいにおさまるわけではない。公平なつりあいを見つけるには、住宅街のしずけさも、こみ合ったライブハウスの熱気も、どちらにも価値があり、どちらかを失った都市はより貧しい住む場所になりうると認めることが必要である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「新しい住民にはしずけさを求める権利があるが、閉店に追いこまれるのは不公平」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say nightlife gives young performers a place to start and provides many ( 1 ). Critics warn that noise can disturb ( 2 ) and that cities must build more homes. Some cities require developers to pay for ( 3 ) near existing venues.',
+      blanks: [
+        { choices: ['jobs', 'trees', 'schools', 'rivers'], answer: 0, why: '第2段落 provide jobs for large numbers of people。' },
+        { choices: ['sleep', 'traffic', 'markets', 'sports'], answer: 0, why: '第4段落 can make it difficult to sleep。' },
+        { choices: ['soundproofing', 'parking', 'gardens', 'tickets'], answer: 0, why: '第6段落 the developer of a new building near an existing venue must pay for soundproofing。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの有名な演者は、小さなライブハウスで仕事を始めた。', answer: true, why: '第2段落 many well-known performers began their careers in such places。' },
+      { statement: '支持する人々によると、新しい住民にはしずけさを求める権利がまったくない。', answer: false, why: '第3段落 new residents certainly have a right to a reasonable level of quiet。' },
+      { statement: '朝早く働く住民は、夜おそくの音に大きく影響を受けるかもしれない。', answer: true, why: '第5段落 may be among those most affected by noise late at night。' },
+      { statement: 'すべての都市が、ライブハウスに音を減らすよう求めている。', answer: false, why: '第6段落 rather than requiring the venue to reduce its noise。' },
+    ],
+    qa: [
+      { q: 'Besides rising rents, what do venue owners blame for closures?', choices: ['Complaints from new residents who move in nearby.', 'A lack of musicians.', 'Bad weather at night.', 'High taxes on tickets.'], answer: 0, why: '第1段落 complaints from new residents who move into apartments built nearby。' },
+      { q: 'What have some cities improved so that crowds can leave quickly and quietly?', choices: ['Late-night public transport.', 'Street lighting only.', 'Parking for private cars.', 'Shopping hours.'], answer: 0, why: '第6段落 improved late-night public transport。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
