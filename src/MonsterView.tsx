@@ -3452,6 +3452,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="62" cy="60" r="2.5" fill="#33240f" />
       </g>
     )
+  if (species === 'dikdik')
+    return (
+      <g>
+        {/* 大きな目 */}
+        <circle cx="40" cy="42" r="5" fill="#1c1917" />
+        <circle cx="60" cy="42" r="5" fill="#1c1917" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
