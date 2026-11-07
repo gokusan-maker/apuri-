@@ -3516,6 +3516,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M26 84 q8 -10 16 0 q8 -10 16 0" stroke="#15803d" strokeWidth="4" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'steenbok')
+    return (
+      <g>
+        {/* 大きな耳 */}
+        <path d="M34 30 q-6 -12 2 -18 M66 30 q6 -12 -2 -18" stroke="#431407" strokeWidth="4" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
