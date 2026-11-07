@@ -42782,6 +42782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-chairs',
+    title: 'On Chairs',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us spend a large part of every day sitting on chairs, at desks, at tables, in cars, and in front of screens, and we seldom stop to think about the objects that support us for so many hours. Yet the chair is not as natural or as universal as it may seem. For much of human history, and in many cultures even today, people have sat, worked, and eaten on the floor, on mats, or on simple benches, and the widespread use of individual chairs is a relatively recent development whose effects on our bodies and our relationships deserve closer attention.",
+      "In many early societies, a chair was not an everyday object but a sign of rank. Ordinary people sat on the ground or on stools, while a raised seat with a back and arms was reserved for rulers, priests, and heads of households. Traces of this history survive in our language, since we still speak of the chair of a meeting or of a professor holding a chair at a university, and the image of a throne continues to suggest that the person who sits highest is the one who holds the most power over others.",
+      "As chairs gradually became available to ordinary people, they changed the way homes were arranged and the way people spent their time. Rooms came to be organized around tables and seats, and activities that had once been performed on the floor were raised to the height of a chair. ( A ) this change brought new forms of comfort, it also fixed people in particular positions, since a chair invites its occupant to remain in one place and in one posture for long periods of time.",
+      "In recent decades, doctors and researchers have become increasingly concerned about the consequences of so much sitting. Many people now spend most of their waking hours in chairs, moving between a seat at home, a seat in a vehicle, and a seat at work, and studies have linked long periods of sitting to a range of health problems. Some writers have therefore suggested that the chair, once a symbol of privilege and rest, has become for many people a quiet trap that keeps the body still when it was designed to move.",
+      "Chairs also shape the way people relate to one another. A row of seats facing a stage encourages people to listen quietly to a speaker, while chairs arranged in a circle invite everyone to speak and to see one another's faces. The choice of where to sit, and of who sits at the head of a table, can express respect, closeness, or authority, and many people feel uncomfortable when they cannot find a seat at a gathering, as if they had been left outside the group that the chairs define.",
+      "It is interesting, then, that many designers have begun to rethink the chair. Some offices now provide desks at which people can stand, as well as stools that encourage small movements, and some schools allow children to sit on cushions, balls, or the floor during parts of the day. Such experiments suggest that the conventional chair is only one of many possible ways of supporting the body, and that the best arrangement may be one that allows people to change position frequently rather than remaining in a single posture.",
+      "Perhaps, then, chairs deserve more attention than we usually give them. They carry a long history of power and privilege, they influence the health of our bodies, and they quietly organize the way we meet, listen, and speak to one another. To notice the chair we are sitting in is to recognize how much of our daily experience is shaped by objects that we take for granted, and perhaps to remember that we are free, at least from time to time, to stand up and choose a different way of being in the world.",
+    ],
+    ja: [
+      '私たちのほとんどは、毎日のかなりの時間を、机やテーブルで、車の中で、画面の前で、いすにすわって過ごしているが、こんなに長い時間私たちをささえているものについて、立ちどまって考えることはめったにない。しかし、いすは思われているほど自然なものでも、どこにでもあるものでもない。人類の歴史の大部分のあいだ、そして今日でも多くの文化で、人々は床やむしろの上、あるいは簡単な長いすにすわり、働き、食べてきた。一人一人のいすが広く使われるようになったのは比較的最近のことであり、それが私たちの体と人間関係にあたえる影響は、もっと注意深く見る価値がある。',
+      '多くの初期の社会では、いすは日常の道具ではなく、身分のしるしだった。ふつうの人々は地面や背もたれのない腰かけにすわり、背もたれとひじかけのある高い座席は、支配者や神官、家の長のためにとっておかれた。この歴史のなごりは私たちのことばにも残っている。いまでも会議の議長を chair とよんだり、大学で講座（chair）をもつ教授と言ったりするのである。そして玉座のイメージは、もっとも高くすわる人こそが、ほかの人々に対してもっとも大きな力をもつ人であることを、いまも思わせつづけている。',
+      'いすがしだいにふつうの人々にも手に入るようになると、それは家の配置のしかたや、人々の時間の使い方を変えた。部屋はテーブルと座席を中心に整えられるようになり、かつて床の上でおこなわれていた活動は、いすの高さまで持ち上げられた。この変化は新しい種類の快適さをもたらしたが、それはまた人々を特定の位置に固定することにもなった。いすは、すわる人に、一つの場所に一つの姿勢で長いあいだとどまるよう促すからである。',
+      'ここ数十年、医師や研究者は、こんなに長くすわっていることがもたらす結果をますます心配するようになっている。いまや多くの人が、起きている時間のほとんどをいすの上で過ごし、家の座席から乗り物の座席へ、そして職場の座席へと移っていく。研究は、長い時間すわっていることをさまざまな健康上の問題と結びつけてきた。そのため、かつては特権と休息の象徴だったいすが、多くの人々にとって、動くようにできている体をじっとさせておく、しずかなわなになってしまったと言う書き手もいる。',
+      'いすはまた、人と人との関わり方も形づくる。舞台に向かってならんだ座席は、人々が話し手にしずかに耳をかたむけるよう促し、輪になってならべたいすは、全員が話し、おたがいの顔を見るようさそう。どこにすわるか、だれがテーブルの上座にすわるかを選ぶことは、敬意や親しさ、権威を表すことがあり、多くの人は集まりで席が見つからないと居心地の悪さを感じる。まるで、いすがつくる集団の外に取り残されたかのように。',
+      'それにしても、多くの設計者がいすを考え直しはじめているのは興味深い。立ったまま使える机や、小さな動きを促す腰かけを用意するオフィスもあり、一日のうちのある時間、子どもがクッションやボール、床の上にすわることを許す学校もある。そうした試みは、ふつうのいすが体をささえる多くの方法の一つにすぎず、もっともよい配置とは、一つの姿勢にとどまるのではなく、人々がひんぱんに姿勢を変えられるものなのかもしれないことを示している。',
+      'だとすれば、いすは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。いすは権力と特権の長い歴史をにない、私たちの体の健康に影響をあたえ、私たちが出会い、耳をかたむけ、おたがいに話すしかたをしずかに整えている。自分がすわっているいすに気づくことは、私たちの日々の経験のどれほど多くが、当たり前と思っているものによって形づくられているかに気づくことであり、そしてもしかすると、少なくともときどきは、立ち上がって、世界の中でのちがうあり方を選ぶ自由が私たちにあることを思い出すことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「新しい快適さをもたらしたが、人々を特定の位置に固定した」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '一人一人のいすが広く使われるようになったのは、比較的最近のことである。', answer: true, why: '第1段落 a relatively recent development。' },
+      { statement: '多くの初期の社会では、ふつうの人々が背もたれとひじかけのある座席にすわっていた。', answer: false, why: '第2段落 Ordinary people sat on the ground or on stools。' },
+      { statement: '研究は、長い時間すわっていることを健康上の問題と結びつけてきた。', answer: true, why: '第4段落 studies have linked long periods of sitting to a range of health problems。' },
+      { statement: '筆者によると、いすの配置は人と人との関わり方に影響しない。', answer: false, why: '第5段落 Chairs also shape the way people relate to one another。' },
+    ],
+    qa: [
+      { q: 'What do chairs arranged in a circle invite people to do?', choices: ['Speak and see one another’s faces.', 'Listen quietly to one speaker.', 'Leave the room quickly.', 'Sleep comfortably.'], answer: 0, why: '第5段落 invite everyone to speak and to see one another’s faces。' },
+      { q: 'What do some offices now provide, according to the passage?', choices: ['Desks at which people can stand.', 'Thrones for managers.', 'Rooms without any furniture.', 'Beds for short naps.'], answer: 0, why: '第6段落 provide desks at which people can stand。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
