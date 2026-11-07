@@ -3284,3 +3284,10 @@ it('誤文訂正〈231〉：東大レベル 数の言い方 hundreds of・two hu
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('three hundred')
 })
+
+it('正誤問題〈238〉：京大レベル want・ask・tell 人 to do の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-want-ask-tell')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) want that I')
+})

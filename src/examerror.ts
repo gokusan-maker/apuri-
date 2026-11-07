@@ -5683,6 +5683,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Wait! I (B) will to help you (C) carry (D) that heavy box.', choices: ['(A) Wait! I', '(B) will to help you', '(C) carry', '(D) that heavy box'], answer: 1, why: 'will のあとは to をつけず原形。I will help you。' },
     ],
   },
+  {
+    id: 'exam-error-want-ask-tell',
+    title: '入試の正誤問題〈238〉（京大レベル：英作文の want・ask・tell 人 to do と that 節）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'want・would like・ask・tell・advise・expect・encourage は「動詞＋人＋to do」の形をとる（×want that I ～ → ○want me to ～）。人の前に to はつけない（×asked to me）。否定は not to do（advised him not to eat）。',
+      'tell は tell 人 that ～ と人を直接目的語にとる（×told to me that）。hope は hope 人 to do の形をとらず、hope (that) ～ を使う。',
+    ],
+    examples: [
+      { en: 'My parents want me to become a doctor.', ja: '両親は私に医者になってほしいと思っている。' },
+      { en: 'The doctor advised him not to eat too much salt.', ja: '医者は彼に塩分をとりすぎないよう助言した。' },
+    ],
+    questions: [
+      { sentence: '(A) My parents (B) want that I (C) become (D) a doctor in the future.', choices: ['(A) My parents', '(B) want that I', '(C) become', '(D) a doctor in the future'], answer: 1, why: 'want は that 節をとらず want 人 to do。want me to become。' },
+      { sentence: '(A) The teacher (B) told us (C) finish the report (D) by Friday.', choices: ['(A) The teacher', '(B) told us', '(C) finish the report', '(D) by Friday'], answer: 2, why: 'tell 人 to do なので told us to finish。' },
+      { sentence: '(A) She asked (B) to me (C) to help her (D) with the heavy bags.', choices: ['(A) She asked', '(B) to me', '(C) to help her', '(D) with the heavy bags'], answer: 1, why: 'ask 人 to do で、人の前に to はつけない。asked me。' },
+      { sentence: '(A) I would like (B) you (C) coming (D) to the party tomorrow.', choices: ['(A) I would like', '(B) you', '(C) coming', '(D) to the party tomorrow'], answer: 2, why: 'would like 人 to do なので you to come。' },
+      { sentence: '(A) She hoped me (B) to (C) pass (D) the exam.', choices: ['(A) She hoped me', '(B) to', '(C) pass', '(D) the exam'], answer: 0, why: 'hope は hope 人 to do の形をとらない。She hoped (that) I would pass ～ とする。' },
+      { sentence: '(A) The doctor (B) advised him (C) to not (D) eat too much salt.', choices: ['(A) The doctor', '(B) advised him', '(C) to not', '(D) eat too much salt'], answer: 2, why: '不定詞の否定は not to do。advised him not to eat。' },
+      { sentence: '(A) My mother (B) told to me (C) that (D) dinner was ready.', choices: ['(A) My mother', '(B) told to me', '(C) that', '(D) dinner was ready'], answer: 1, why: 'tell は人を直接目的語にとるので told me that ～。' },
+      { sentence: '(A) We expect (B) the new library (C) to open (D) in next spring.', choices: ['(A) We expect', '(B) the new library', '(C) to open', '(D) in next spring'], answer: 3, why: 'next spring の前に in はつけない。' },
+      { sentence: '(A) The coach (B) encouraged us (C) to keep (D) to practise harder.', choices: ['(A) The coach', '(B) encouraged us', '(C) to keep', '(D) to practise harder'], answer: 3, why: 'encourage 人 to do のあとにもう一つ to は続かない。keep practising。' },
+      { sentence: '(A) He wanted (B) his sister (C) lend (D) him some money.', choices: ['(A) He wanted', '(B) his sister', '(C) lend', '(D) him some money'], answer: 2, why: 'want 人 to do なので his sister to lend。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
