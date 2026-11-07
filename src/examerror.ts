@@ -5508,6 +5508,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) She (B) wore off (C) her coat (D) when she came in.', choices: ['(A) She', '(B) wore off', '(C) her coat', '(D) when she came in'], answer: 1, why: '「ぬぐ」は took off。' },
     ],
   },
+  {
+    id: 'exam-error-see-look-watch-kokuritsu',
+    title: '入試の正誤問題〈231〉（国公立レベル：see・look at・watch／hear・listen to の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'see は「（自然に目に入って）見える・見る」、look at は「（意識して）～を見る」、watch は「（動くものを）しばらく見守る」（テレビ・試合など）。hear は「（自然に）聞こえる」、listen to は「（意識して）～を聞く」。look と listen は自動詞なので、目的語の前に at・to が必要。',
+      '知覚動詞 see・hear・watch ＋目的語＋動詞の原形（または ～ing）で「～が…するのを見る・聞く」。to 不定詞にしない（I saw him cross the street.）。',
+    ],
+    examples: [
+      { en: 'Please look at the board.', ja: '黒板を見てください。' },
+      { en: 'I heard a strange noise last night.', ja: '昨夜、変な音が聞こえた。' },
+    ],
+    questions: [
+      { sentence: '(A) Please (B) look (C) the board (D) carefully.', choices: ['(A) Please', '(B) look', '(C) the board', '(D) carefully'], answer: 1, why: '「～を見る」は look at なので look at the board。' },
+      { sentence: '(A) We (B) saw (C) a soccer game (D) on TV for two hours.', choices: ['(A) We', '(B) saw', '(C) a soccer game', '(D) on TV for two hours'], answer: 1, why: 'テレビで（動きのあるものを）しばらく見るのは watched。' },
+      { sentence: '(A) I (B) listened (C) a strange noise (D) outside last night.', choices: ['(A) I', '(B) listened', '(C) a strange noise', '(D) outside last night'], answer: 1, why: '自然に耳に入るのは heard（listen to は意識して聞く）。' },
+      { sentence: '(A) She likes (B) to listen (C) music (D) on the train.', choices: ['(A) She likes', '(B) to listen', '(C) music', '(D) on the train'], answer: 2, why: 'listen は自動詞なので listen to music。' },
+      { sentence: '(A) Can you (B) watch (C) that bird (D) in the tree? It is very small.', choices: ['(A) Can you', '(B) watch', '(C) that bird', '(D) in the tree? It is very small'], answer: 1, why: '「（目に入って）見える」は see。' },
+      { sentence: '(A) Look (B) at! (C) There is (D) a rainbow.', choices: ['(A) Look', '(B) at!', '(C) There is', '(D) a rainbow'], answer: 1, why: 'look at のあとには目的語が必要。「ほら見て」は Look!。' },
+      { sentence: '(A) Hear (B) to me (C) carefully, (D) please.', choices: ['(A) Hear', '(B) to me', '(C) carefully,', '(D) please'], answer: 0, why: '意識して「聞く」のは Listen（Listen to me）。' },
+      { sentence: '(A) I (B) saw (C) him (D) to cross the street.', choices: ['(A) I', '(B) saw', '(C) him', '(D) to cross the street'], answer: 3, why: '知覚動詞 see ＋人＋原形（または ～ing）なので cross（crossing）。' },
+      { sentence: '(A) We heard (B) the children (C) to sing (D) in the next room.', choices: ['(A) We heard', '(B) the children', '(C) to sing', '(D) in the next room'], answer: 2, why: '知覚動詞 hear ＋人＋原形（または ～ing）なので sing（singing）。' },
+      { sentence: '(A) They (B) are looking (C) the stars (D) through a telescope.', choices: ['(A) They', '(B) are looking', '(C) the stars', '(D) through a telescope'], answer: 2, why: '「～を見る」は look at なので at the stars。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
