@@ -3400,6 +3400,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="46" rx="13" ry="12" fill="#f5f0e6" />
       </g>
     )
+  if (species === 'bowerbird')
+    return (
+      <g>
+        {/* むらさき色の目 */}
+        <circle cx="42" cy="40" r="3" fill="#a78bfa" />
+        <circle cx="58" cy="40" r="3" fill="#a78bfa" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
