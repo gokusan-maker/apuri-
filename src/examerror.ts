@@ -5558,6 +5558,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Everyday (B) life (C) in the city (D) are very busy.', choices: ['(A) Everyday', '(B) life', '(C) in the city', '(D) are very busy'], answer: 3, why: '主語 Everyday life は単数なので is。' },
     ],
   },
+  {
+    id: 'exam-error-explain-marry-todai',
+    title: '入試の正誤問題〈233〉（東大レベル：英作文の explain to 人・marry・resemble・enter などの語法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'explain・introduce・suggest・say は人を直接の目的語にとらない。explain 物 to 人／introduce 人 to 人 の形にする（×explain me → ○explain it to me）。',
+      'marry・resemble・enter・discuss・mention・approach・attend は他動詞なので前置詞をつけない（×marry with → ○marry 人、×enter into the room → ○enter the room）。',
+    ],
+    examples: [
+      { en: 'Can you explain the rules to me?', ja: 'ルールを私に説明してくれますか。' },
+      { en: 'She married a doctor and resembles her mother.', ja: '彼女は医者と結婚し、お母さんに似ている。' },
+    ],
+    questions: [
+      { sentence: '(A) Can you (B) explain (C) me (D) how to use this machine?', choices: ['(A) Can you', '(B) explain', '(C) me', '(D) how to use this machine?'], answer: 2, why: 'explain は人を直接の目的語にとらないので explain to me。' },
+      { sentence: '(A) She (B) married (C) with (D) a doctor last year.', choices: ['(A) She', '(B) married', '(C) with', '(D) a doctor last year'], answer: 2, why: 'marry は他動詞なので with をつけず married a doctor。' },
+      { sentence: '(A) He (B) resembles (C) to his father (D) very much.', choices: ['(A) He', '(B) resembles', '(C) to his father', '(D) very much'], answer: 2, why: 'resemble は他動詞なので to をつけず resembles his father。' },
+      { sentence: '(A) The students (B) entered (C) into (D) the classroom quietly.', choices: ['(A) The students', '(B) entered', '(C) into', '(D) the classroom quietly'], answer: 2, why: '「部屋に入る」の enter は他動詞なので entered the classroom。' },
+      { sentence: '(A) The teacher (B) explained (C) us (D) the rules of the game.', choices: ['(A) The teacher', '(B) explained', '(C) us', '(D) the rules of the game'], answer: 2, why: 'explain 物 to 人 の形なので explained the rules to us。' },
+      { sentence: '(A) Please (B) mention (C) about (D) this problem at the meeting.', choices: ['(A) Please', '(B) mention', '(C) about', '(D) this problem at the meeting'], answer: 2, why: 'mention は他動詞なので about をつけず mention this problem。' },
+      { sentence: '(A) I (B) will (C) approach to (D) the problem carefully.', choices: ['(A) I', '(B) will', '(C) approach to', '(D) the problem carefully'], answer: 2, why: 'approach は他動詞なので to をつけず approach the problem。' },
+      { sentence: '(A) Explain (B) me (C) the reason (D) for your absence.', choices: ['(A) Explain', '(B) me', '(C) the reason', '(D) for your absence'], answer: 1, why: 'explain 人 物 の形はとらないので Explain the reason to me。' },
+      { sentence: '(A) Enter into (B) the room (C) quietly, (D) please.', choices: ['(A) Enter into', '(B) the room', '(C) quietly,', '(D) please'], answer: 0, why: '「部屋に入る」は Enter the room。enter into は「（話し合いなど）を始める」。' },
+      { sentence: '(A) She (B) introduced (C) her sister (D) us.', choices: ['(A) She', '(B) introduced', '(C) her sister', '(D) us'], answer: 3, why: 'introduce 人 to 人 の形なので to us。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

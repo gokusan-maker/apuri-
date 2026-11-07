@@ -3214,3 +3214,10 @@ it('誤文訂正〈226〉：国公立レベル So do I・Neither do I の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('So do I')
 })
+
+it('正誤問題〈233〉：東大レベル explain・marry・resemble・enter の語法の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-explain-marry-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) me')
+})
