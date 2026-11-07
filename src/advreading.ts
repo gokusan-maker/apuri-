@@ -43582,6 +43582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-corridors',
+    title: 'On Corridors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Corridors are among the least admired spaces in any building. They are designed not as places to stay but as passages between the rooms where the real business of life is supposed to happen, and architects often try to make them as short and as narrow as possible in order to save space and money. Yet anyone who has spent years in a school, a hospital, or an office knows that a surprising amount of life takes place in corridors, and that these in-between spaces may be more important to our experience of a building than their modest purpose suggests.",
+      "The corridor is, first of all, a place of movement. People pass through it on the way from one task to another, carrying papers, pushing trolleys, or hurrying to a meeting, and the width and length of a corridor can shape the pace at which they move. A long, narrow corridor encourages people to walk quickly in a single line, while a wide one with windows and corners invites them to slow down, look around, and notice others who are passing in the opposite direction. In this way, a decision about the shape of a corridor, made long before anyone uses it, can influence thousands of small encounters every day.",
+      "Because so many people pass through it, the corridor is also a place of unplanned encounters. Colleagues who work in different departments may meet only in corridors, exchanging a few words that lead to new ideas or friendships, and students may share news and worries between lessons more freely than they ever could in a classroom. ( A ) such conversations are rarely recorded or planned, many people believe that they contribute as much to the life of an organization as the formal meetings held behind closed doors.",
+      "At the same time, corridors can be places of waiting and uncertainty. In hospitals, relatives often sit in corridors outside operating rooms, waiting anxiously for news, and in schools and offices people may stand in corridors before an examination or an interview, preparing themselves for what lies ahead. The corridor in such moments becomes a threshold between two states, a space in which people pause between what they have left behind and what they are about to face. Many people can still remember the corridor where they waited for important news, long after they have forgotten the rooms in which that news was given.",
+      "The design of corridors can also reveal how an institution regards the people who use it. Some older buildings have dark, featureless corridors that seem intended only to move people efficiently from one place to another, while others include benches, displays, and natural light that make the corridor a place where people are welcome to linger. The difference may seem small, but it can affect whether people feel that a building is a place they merely pass through or a place in which they belong.",
+      "In recent years, some architects have begun to rethink the corridor deliberately. Instead of treating it as wasted space, they design wide passages with seating areas, plants, and views of the outside, hoping to encourage the kind of informal meetings that they believe make organizations more creative and communities more connected. Others, however, warn that such spaces may become noisy or crowded, and that people also need quiet places where they can move without being interrupted or observed.",
+      "Perhaps, then, corridors deserve more attention than we usually give them. They remind us that life does not take place only in the rooms we design for particular purposes but also in the spaces between them, where people move, wait, and meet without planning to. To pay attention to corridors is to recognize the value of the in-between, and perhaps to remember that some of the most important moments in our lives happen not when we arrive at our destination but while we are on our way.",
+    ],
+    ja: [
+      'ろうかは、どの建物のなかでももっともほめられることの少ない空間の一つである。ろうかはとどまるための場所ではなく、生活の本当の営みがおこなわれるとされる部屋と部屋をつなぐ通路として設計されており、建築家は空間とお金を節約するために、できるだけ短くせまくしようとすることが多い。しかし、学校や病院、職場で何年も過ごしたことのある人なら、おどろくほど多くの生活がろうかでおこなわれていること、そしてこうしたあいだの空間が、そのつつましい目的から思われるよりも、建物の経験にとって大切なのかもしれないことを知っている。',
+      'ろうかは、まず何よりも、動きの場所である。人々は一つの仕事から次の仕事へ行くとちゅうで、書類をもったり、台車をおしたり、会議に急いだりしながらそこを通りぬけ、ろうかのはばと長さは、人々が動く速さを形づくりうる。長くせまいろうかは、人々が一列になって速く歩くよう促し、窓やかどのある広いろうかは、人々が速度を落とし、まわりを見て、反対方向から来る人々に気づくようさそう。このように、だれかがそれを使うずっと前になされたろうかの形についての決定が、毎日何千もの小さな出会いに影響しうるのである。',
+      '多くの人々がそこを通るので、ろうかはまた予定されていない出会いの場所でもある。ちがう部署で働く同僚どうしはろうかでしか会わないことがあり、二言三言を交わすことが新しい考えや友情につながることもある。そして生徒たちは、授業のあいだに、教室ではとてもできないほど自由に知らせや心配ごとを分かち合うかもしれない。そうした会話が記録されたり計画されたりすることはめったにないが、それらは、閉じた扉のうしろで開かれる正式な会議と同じくらい組織の生活に貢献していると多くの人は信じている。',
+      '同時に、ろうかは待つことと不確かさの場所にもなりうる。病院では、家族はしばしば手術室の外のろうかにすわり、心配しながら知らせを待つ。学校や職場では、人々は試験や面接の前にろうかに立ち、これから待ち受けるものに向けて心の準備をすることがある。そのような瞬間のろうかは、二つの状態のあいだのさかいめになる。人々が、あとにしてきたものと、これから向き合うものとのあいだで立ちどまる空間になるのである。多くの人は、大切な知らせを告げられた部屋のことはわすれてしまっても、その知らせを待っていたろうかのことはずっと覚えている。',
+      'ろうかの設計はまた、ある組織がそれを使う人々をどう考えているかを明らかにすることもある。古い建物のなかには、人々をある場所から別の場所へ効率よく動かすためだけのものに思える、暗く特徴のないろうかをもつものもあるが、ベンチやかざり、自然の光を取り入れ、人々がゆっくりとどまることを歓迎する場所にしているものもある。そのちがいは小さく思えるかもしれないが、人々がその建物を、ただ通りすぎる場所と感じるか、自分が属する場所と感じるかに影響しうる。',
+      '近年、意図してろうかを考え直しはじめた建築家もいる。ろうかをむだな空間としてあつかう代わりに、彼らはすわる場所や植物、外の眺めのある広い通路を設計し、組織をより創造的にし、地域をよりつながったものにすると信じる、気軽な出会いを促そうとしている。しかし、そうした空間はさわがしくなったりこみ合ったりするかもしれず、人々には、じゃまされたり見られたりせずに動けるしずかな場所も必要だと警告する人もいる。',
+      'だとすれば、ろうかは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。ろうかは、生活が特定の目的のために設計した部屋のなかだけでなく、その部屋のあいだの空間、つまり人々が計画することなく動き、待ち、出会う空間でもおこなわれていることを思い出させてくれる。ろうかに注意をはらうことは、あいだにあるものの価値に気づくことであり、そしてもしかすると、人生でもっとも大切な瞬間のいくつかが、目的地に着いたときではなく、そこへ向かうとちゅうで起こることを思い出すことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした会話は記録も計画もされないが、正式な会議と同じくらい貢献している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '建築家は、ろうかをできるだけ短くせまくしようとすることが多い。', answer: true, why: '第1段落 architects often try to make them as short and as narrow as possible。' },
+      { statement: '長くせまいろうかは、人々がゆっくり歩くよう促す。', answer: false, why: '第2段落 A long, narrow corridor encourages people to walk quickly in a single line。' },
+      { statement: '病院では、家族がろうかで知らせを待つことがある。', answer: true, why: '第4段落 relatives often sit in corridors outside operating rooms。' },
+      { statement: 'すべての建築家が、広く人の集まるろうかに賛成している。', answer: false, why: '第6段落 Others, however, warn that such spaces may become noisy or crowded。' },
+    ],
+    qa: [
+      { q: 'Where may colleagues who work in different departments meet only?', choices: ['In corridors.', 'In the cafeteria.', 'At formal meetings.', 'Outside the building.'], answer: 0, why: '第3段落 may meet only in corridors。' },
+      { q: 'What do some architects include in corridors to make people welcome to linger?', choices: ['Benches, displays, and natural light.', 'Locked doors.', 'Dark walls.', 'Narrow passages.'], answer: 0, why: '第5段落 include benches, displays, and natural light。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
