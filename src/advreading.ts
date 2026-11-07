@@ -42818,6 +42818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-child-free-zones',
+    title: 'Should Cafés Be Allowed to Ban Children?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In several countries, a small but growing number of cafés, restaurants, and hotels have begun to declare themselves child-free, refusing entry to children below a certain age. Their owners usually explain that they wish to offer a calm and quiet atmosphere for adult customers, and some report that the policy has attracted new visitors who were tired of noise and disruption elsewhere. Others, however, regard such rules as a form of discrimination against children and their parents, and the spread of child-free spaces has become the subject of a surprisingly heated public debate.",
+      "Supporters argue that business owners should be free to decide what kind of experience they wish to offer. Just as some restaurants specialize in fine dining while others welcome large and noisy groups, a café that promises silence for reading or working is simply serving a particular market. Supporters point out that there are countless places where families with children are welcome, and they argue that it is reasonable for a small number of establishments to cater instead to adults who are willing to pay for peace and quiet.",
+      "Supporters also emphasize the interests of other customers and staff. A crying baby or a child running between tables can make it difficult for others to relax, and waiters may worry about accidents involving hot drinks or sharp objects. ( A ) most parents try hard to keep their children under control, supporters argue, owners cannot rely on every family to do so, and a clear rule may be fairer and easier to apply than asking staff to decide in each case whether a particular child is behaving well enough to stay.",
+      "Critics, however, argue that excluding people because of their age is fundamentally unfair. They point out that a business would rarely be allowed to refuse entry to customers because of their race, religion, or disability, and they ask why age should be treated differently. Critics also note that many adults behave badly in public places, talking loudly, using their phones, or drinking too much, yet they are not excluded as a group, which suggests that child-free policies punish children for who they are rather than for what they actually do.",
+      "Critics also worry about the wider message that such policies send. In societies where birth rates are falling and many young parents already feel isolated, signs announcing that children are not welcome may make families feel that they are a burden on the community rather than a valued part of it. Some critics further argue that children learn how to behave in public precisely by spending time in public places, and that excluding them may deprive them of opportunities to develop patience, good manners, and respect for others.",
+      "In response, some businesses have tried to find alternatives to outright bans. Some set aside particular areas or times for quiet, while welcoming families in the rest of the building or during other hours, and others focus on behavior rather than age, asking any customer, adult or child, to leave if they seriously disturb others. Some local governments have also encouraged businesses to provide facilities such as play corners and changing tables, arguing that making places more comfortable for families may reduce conflict more effectively than excluding them.",
+      "The debate over child-free spaces ultimately reflects a broader question about how people with different needs can share public life. Adults who seek calm and parents who need somewhere to take their children are both making reasonable demands, and the challenge is to find arrangements that respect both without treating either group as unwelcome. How a society answers this question may reveal a great deal about the place it gives to children, and about whether it regards them as future members of the community or as present members whose needs deserve to be taken seriously.",
+    ],
+    ja: [
+      'いくつかの国で、少数だが増えつつあるカフェやレストラン、ホテルが「子ども禁止」をかかげ、ある年齢未満の子どもの入店をことわりはじめている。経営者はふつう、大人の客のためにおだやかでしずかな雰囲気を提供したいのだと説明し、ほかの場所のさわがしさや迷惑にうんざりしていた新しい客がこの方針によって集まったと報告するところもある。しかし、そうした決まりを子どもとその親への差別の一種と考える人々もおり、子ども禁止の場所の広まりは、おどろくほど激しい世間の議論の対象になっている。',
+      '支持する人々は、事業主はどのような体験を提供したいかを自由に決めてよいはずだと主張する。高級な料理を専門にするレストランもあれば、大人数のさわがしい団体を歓迎するレストランもあるように、読書や仕事のためのしずけさを約束するカフェは、特定の客層に応えているにすぎない。家族連れが歓迎される場所は数えきれないほどあると支持者は指摘し、少数の店が代わりに、しずけさにお金をはらう気のある大人を相手にするのは理にかなっていると主張する。',
+      '支持する人々はまた、ほかの客や店員の利益も強調する。泣いている赤ちゃんや、テーブルのあいだを走りまわる子どもは、ほかの人々がくつろぐのをむずかしくすることがあり、店員は熱い飲み物やとがったものがかかわる事故を心配するかもしれない。ほとんどの親は子どもをおとなしくさせようと懸命に努めるが、すべての家族がそうすることを経営者があてにすることはできず、ある子どもが店にいてよいほど行儀よくしているかどうかをその都度店員に判断させるよりも、はっきりした決まりのほうが公平で使いやすいかもしれない、と支持者は主張する。',
+      'しかし批判する人々は、年齢を理由に人々をしめ出すことは根本的に不公平だと主張する。店が人種や宗教、障害を理由に客の入店をことわることはほとんど許されないと彼らは指摘し、なぜ年齢だけがちがうあつかいを受けるべきなのかと問う。批判する人々はまた、多くの大人が公共の場で、大声で話したり、電話を使ったり、飲みすぎたりして、行儀悪くふるまうのに、彼らは集団としてしめ出されていないことにも注目する。このことは、子ども禁止の方針が、子どもを実際の行動ではなく、子どもであることそのもので罰していることを示している。',
+      '批判する人々はまた、そうした方針が送るより広いメッセージを心配する。出生率が下がり、多くの若い親がすでに孤立を感じている社会では、子どもは歓迎されないと告げる表示は、家族に、自分たちが地域の大切な一員ではなく重荷なのだと感じさせるかもしれない。さらに、子どもはまさに公共の場で時間を過ごすことによって公共の場でのふるまい方を学ぶのであり、子どもをしめ出すことは、がまん強さや行儀のよさ、他人への敬意を育てる機会を子どもからうばうかもしれない、と主張する批判者もいる。',
+      'これに対して、全面的な禁止に代わるものを見つけようとしてきた店もある。特定の場所や時間をしずかに過ごすためにとっておき、建物のほかの部分やほかの時間帯には家族連れを歓迎する店もあれば、年齢ではなく行動に注目し、大人であれ子どもであれ、ほかの人に大きな迷惑をかける客には出ていくよう求める店もある。また、遊びのコーナーやおむつ交換台のような設備を用意するよう店に促してきた地方自治体もある。家族にとって場所をより居心地よくすることのほうが、しめ出すことよりも効果的に対立を減らせるかもしれないと考えるからである。',
+      '子ども禁止の場所をめぐる議論は、結局のところ、ちがう必要をもつ人々がどのように公共の生活を分かち合えるのかという、より広い問いを反映している。おだやかさを求める大人も、子どもを連れて行ける場所を必要とする親も、どちらも理にかなった要求をしており、むずかしいのは、どちらの集団も歓迎されないものとしてあつかうことなく、両方を尊重する仕組みを見つけることである。社会がこの問いにどう答えるかは、その社会が子どもにどのような場所をあたえているか、そして子どもを未来の地域の一員とみなしているのか、それとも、その必要が真剣に受けとめられるべき今の一員とみなしているのかについて、多くを明らかにするかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ほとんどの親は努めるが、すべての家族をあてにはできない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say business owners should be free to offer a calm atmosphere and that clear rules are fairer than case-by-case decisions. Critics argue that excluding people because of their ( 1 ) is unfair and that such policies make families feel like a ( 2 ). Some businesses focus on ( 3 ) rather than age.',
+      blanks: [
+        { choices: ['age', 'height', 'income', 'language'], answer: 0, why: '第4段落 excluding people because of their age is fundamentally unfair。' },
+        { choices: ['burden', 'gift', 'joke', 'secret'], answer: 0, why: '第5段落 they are a burden on the community。' },
+        { choices: ['behavior', 'prices', 'clothing', 'weather'], answer: 0, why: '第6段落 others focus on behavior rather than age。' },
+      ],
+    },
+    tf: [
+      { statement: '子ども禁止の方針によって、新しい客が集まった店もある。', answer: true, why: '第1段落 the policy has attracted new visitors。' },
+      { statement: '支持する人々によると、家族連れが歓迎される場所はほとんどない。', answer: false, why: '第2段落 there are countless places where families with children are welcome。' },
+      { statement: '批判する人々は、行儀の悪い大人も集団としてしめ出されていると述べている。', answer: false, why: '第4段落 yet they are not excluded as a group。' },
+      { statement: '遊びのコーナーなどの設備を用意するよう店に促す自治体もある。', answer: true, why: '第6段落 encouraged businesses to provide facilities such as play corners。' },
+    ],
+    qa: [
+      { q: 'According to some critics, how do children learn how to behave in public?', choices: ['By spending time in public places.', 'By staying at home.', 'By watching television.', 'By reading rules on signs.'], answer: 0, why: '第5段落 children learn how to behave in public precisely by spending time in public places。' },
+      { q: 'What do some businesses do instead of an outright ban?', choices: ['Set aside particular areas or times for quiet.', 'Raise their prices for families.', 'Close on weekends.', 'Serve only children.'], answer: 0, why: '第6段落 Some set aside particular areas or times for quiet。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
