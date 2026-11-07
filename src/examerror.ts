@@ -9655,6 +9655,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I have finished my homework. — [So I have].', choices: ['So have I', 'So did I', 'Neither have I', 'So do I'], answer: 0, why: '現在完了の文なので So have I。' },
     ],
   },
+  {
+    id: 'exam-fix-227',
+    title: '入試の誤文訂正〈227〉（京大レベル：英作文の be to 不定詞（予定・義務・可能・意図））',
+    points: ['be to ＋動詞の原形は、文脈によって「予定（～することになっている）」「義務（～すべきだ）」「可能（～できる、ふつう否定文・受け身）」「意図（～するつもりなら、if 節で）」などをあらわす。to のあとは原形。可能の意味ではふつう受け身（be to be seen）を使う。'],
+    examples: [{ en: 'The meeting is to be held next Monday. / If you are to succeed, you must work hard.', ja: '会議は来週の月曜日に開かれることになっている。／成功するつもりなら、一生けんめい働かなければならない。' }],
+    questions: [
+      { sentence: 'The prime minister is to [visiting] France next month.', choices: ['visit', 'visited', 'visits', 'be visit'], answer: 0, why: 'be to のあとは動詞の原形 visit（予定）。' },
+      { sentence: 'You are [to not] smoke in this building.', choices: ['not to', 'to no', 'no to', 'not'], answer: 0, why: 'be to の否定は be not to なので are not to smoke（義務：してはいけない）。' },
+      { sentence: 'Not a single star was to [see] in the cloudy sky.', choices: ['be seen', 'seeing', 'seen', 'have seen'], answer: 0, why: '可能の意味の be to はふつう受け身なので to be seen。' },
+      { sentence: 'If you [will] succeed, you must work harder.', choices: ['are to', 'were', 'be to', 'are going'], answer: 0, why: '「～するつもりなら」の意図は if 節で are to succeed。' },
+      { sentence: 'The new bridge is to [be complete] by next year.', choices: ['be completed', 'complete', 'completing', 'completed'], answer: 0, why: '橋は「完成させられる」ので受け身 be completed。' },
+      { sentence: 'All students [are to wearing] uniforms at school.', choices: ['are to wear', 'are wear', 'are to wore', 'to wear'], answer: 0, why: 'be to のあとは原形なので are to wear（義務）。' },
+      { sentence: 'The two leaders [are to meeting] in Tokyo tomorrow.', choices: ['are to meet', 'are meet', 'are to met', 'to meet'], answer: 0, why: 'be to のあとは原形なので are to meet（予定）。' },
+      { sentence: 'My keys were nowhere to [find].', choices: ['be found', 'finding', 'found', 'have found'], answer: 0, why: '可能の be to は受け身なので nowhere to be found「どこにも見つからない」。' },
+      { sentence: 'He left Japan and was never [seeing] his hometown again.', choices: ['to see', 'saw', 'seen', 'to seeing'], answer: 0, why: '「（運命として）二度と～することはなかった」は was never to see。'},
+      { sentence: 'Children [is to] go to bed by nine.', choices: ['are to', 'are', 'is', 'be to'], answer: 0, why: '主語 Children は複数なので are to。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
