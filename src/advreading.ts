@@ -39822,6 +39822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-asking-for-help',
+    title: 'On Asking for Help',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few things seem simpler than asking for help, and yet many people find it surprisingly difficult. A student who does not understand a lesson may sit in silence rather than raise a hand, and an employee struggling with an unfamiliar task may work late into the night instead of asking a colleague for a few minutes of advice. Even when help is readily available and freely offered, we often hesitate, as though admitting that we need assistance were somehow a confession of failure. This hesitation can be costly, turning small problems into large ones and leaving people to carry burdens that others would gladly have shared with them.",
+      "Part of this reluctance comes from the value that many societies place on independence. From an early age, children are praised for doing things by themselves, and adults are admired for being self-reliant and capable. These are genuine virtues, but when they are taken too far, they can lead people to believe that needing others is a weakness to be hidden. As a result, asking for help can feel like a small surrender of the competence on which our self-respect depends.",
+      "Another source of hesitation is the fear of being a burden. We may worry that our request will inconvenience others, interrupt their work, or make them think less of us. ( A ) such concerns reflect a genuine consideration for others, they are often exaggerated, since research and ordinary experience both suggest that people are generally more willing to help than we expect, and that they frequently feel pleased to have been asked.",
+      "Indeed, asking for help can strengthen relationships rather than weaken them. When we allow others to assist us, we show that we trust them and value their knowledge or abilities. The person who helps may feel a sense of usefulness and connection, and the person who is helped may feel grateful and more willing to offer assistance in return. In this way, a single request can begin a cycle of mutual support that benefits everyone involved. Communities in which such cycles are common tend to be more resilient, because their members know that they can rely on one another when difficulties arise.",
+      "Asking for help is also closely connected to learning. No one can master every skill or understand every subject alone, and much of what we know has been passed on to us by teachers, parents, friends, and strangers. A person who refuses to ask questions may avoid momentary embarrassment, but they also cut themselves off from one of the most powerful sources of growth, namely the experience and wisdom of other people, which no book or screen can fully replace.",
+      "This does not mean that we should depend on others for everything. There is real value in struggling with a problem for a while before seeking assistance, since effort and persistence can deepen understanding and build confidence. The wisest approach may lie in recognizing when our own efforts have reached their limit, and in being willing at that point to set aside our pride and turn to others without shame. Knowing where that point lies is itself a skill, and it is one that usually improves with experience and reflection over many years.",
+      "In the end, the ability to ask for help may be less a sign of weakness than a mark of maturity. It requires honesty about our limitations, trust in the goodwill of others, and the courage to appear imperfect. A society in which people feel free to ask for help, and are glad to offer it, is likely to be not only more efficient but also kinder and more humane, because it recognizes that every person, however capable, depends in some way upon others.",
+    ],
+    ja: [
+      '助けを求めることほどかんたんに見えることはほとんどないが、それなのに多くの人はそれがおどろくほどむずかしいと感じる。授業がわからない生徒は手をあげるよりもだまってすわっているかもしれないし、なれない仕事に苦労している社員は、同僚に数分の助言を求めるかわりに夜おそくまで働くかもしれない。助けがすぐに得られ、気前よく申し出られているときでさえ、まるで助けが必要だと認めることが何かの失敗の告白であるかのように、私たちはしばしばためらう。このためらいは高くつくことがあり、小さな問題を大きな問題に変え、他人がよろこんでいっしょに背負ってくれたはずの重荷を、一人で背負わせることになる。',
+      'このためらいの一部は、多くの社会が自立に置く価値から来ている。幼いころから、子どもは自分で物事をするとほめられ、大人は自分にたよれる有能な人であることで尊敬される。これらは本物の美徳だが、行きすぎると、人に他人を必要とすることはかくすべき弱さだと信じさせてしまいうる。その結果、助けを求めることは、自尊心のよりどころである有能さを少し明けわたすことのように感じられることがある。',
+      'ためらいのもう一つの原因は、負担になることへのおそれである。私たちは、自分のたのみが他人に迷惑をかけ、仕事のじゃまをし、あるいは自分を低く見させるのではないかと心配するかもしれない。そうした心配は他人への本物の思いやりを反映しているが、しばしば大げさであり、研究もふつうの経験も、人は一般に私たちが思うより進んで助けてくれ、たのまれたことをしばしばうれしく感じることを示している。',
+      '実際、助けを求めることは、人間関係を弱めるよりもむしろ強めることがある。他人に手伝ってもらうとき、私たちはその人を信頼し、その人の知識や能力を大切にしていることを示す。助ける人は役に立っている感覚やつながりを感じるかもしれず、助けられる人は感謝し、お返しに手を貸そうという気持ちが強まるかもしれない。このようにして、一つのたのみが、かかわるすべての人の役に立つささえ合いの循環をはじめることがある。そうした循環がよく見られる共同体は、困難が起きたときにたがいにたよれることをその一員が知っているので、より立ち直る力が強い傾向がある。',
+      '助けを求めることはまた、学ぶことと深く結びついている。だれもすべての技術を身につけたり、すべての科目を一人で理解したりはできず、私たちが知っていることの多くは、先生や親や友だちや見知らぬ人から伝えられたものである。質問するのをこばむ人は、一時のはずかしさはさけられるかもしれないが、成長のもっとも強い源の一つ、つまり他人の経験と知恵から自分を切りはなしてしまう。それは、どんな本や画面も完全にはかわりになれないものである。',
+      'これは、何でも他人にたよるべきだということではない。努力とねばり強さは理解を深め自信を育てるので、助けを求める前にしばらく問題と格闘することには本当の価値がある。もっともかしこいやり方は、自分の努力が限界に達したときに気づき、そのときにはプライドをわきに置いて、はじることなく他人にたよろうとすることにあるのかもしれない。その時点がどこにあるのかを知ることはそれ自体が一つの技術であり、ふつうは何年にもわたる経験とふり返りによってみがかれていく。',
+      '結局のところ、助けを求める力は、弱さのしるしというより、成熟のしるしなのかもしれない。それには、自分の限界についての正直さと、他人の善意への信頼と、不完全に見える勇気が必要である。人々が気軽に助けを求めることができ、よろこんでそれに応じる社会は、どんなに有能な人であってもだれもが何らかの形で他人にたよっていることを認めているので、より効率がよいだけでなく、よりやさしく人間らしい社会になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「他人への思いやりを反映しているが、しばしば大げさである」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '助けがすぐに得られるときでも、人はしばしば助けを求めるのをためらう。', answer: true, why: '第1段落 Even when help is readily available ... we often hesitate。' },
+      { statement: '筆者は、自立は美徳ではないと述べている。', answer: false, why: '第2段落 These are genuine virtues。' },
+      { statement: '人は一般に、私たちが思うより進んで助けてくれる。', answer: true, why: '第3段落 people are generally more willing to help than we expect。' },
+      { statement: '筆者は、問題にぶつかったらすぐに他人にたよるべきだと述べている。', answer: false, why: '第6段落 There is real value in struggling with a problem for a while。' },
+    ],
+    qa: [
+      { q: 'What do we show when we allow others to assist us?', choices: ['That we trust them and value their knowledge or abilities.', 'That we are lazy.', 'That we want to pay them.', 'That we do not need them.'], answer: 0, why: '第4段落 we show that we trust them and value their knowledge or abilities。' },
+      { q: 'What does a person who refuses to ask questions cut themselves off from?', choices: ['The experience and wisdom of other people.', 'Their own family.', 'Their school.', 'Momentary embarrassment.'], answer: 0, why: '第5段落 one of the most powerful sources of growth, namely the experience and wisdom of other people。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
