@@ -5658,6 +5658,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The city has (B) fewer parks (C) as (D) other cities.', choices: ['(A) The city has', '(B) fewer parks', '(C) as', '(D) other cities'], answer: 2, why: 'fewer は比較級なので than other cities。' },
     ],
   },
+  {
+    id: 'exam-error-will-going-to',
+    title: '入試の正誤問題〈237〉（国公立レベル：will と be going to・現在進行形であらわす未来）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'will・be going to のあとは動詞の原形（×will to help／×going to visiting）。be going to は be動詞を落とさない。その場で決めたことは will、前から決めていたことは be going to が多い。',
+      '日時の決まった予定は現在進行形でもあらわせる（We are meeting him tomorrow.）。時・条件をあらわす when・if の節の中は、未来のことでも現在形を使う。next week・tomorrow の前に前置詞はつけない。',
+    ],
+    examples: [
+      { en: 'I am going to visit my grandmother this weekend.', ja: '私は今週末、祖母をたずねるつもりだ。' },
+      { en: 'We are meeting our teacher at the station tomorrow morning.', ja: '私たちは明日の朝、駅で先生と会うことになっている。' },
+    ],
+    questions: [
+      { sentence: '(A) I am going to (B) visiting my grandmother (C) this weekend (D) with my sister.', choices: ['(A) I am going to', '(B) visiting my grandmother', '(C) this weekend', '(D) with my sister'], answer: 1, why: 'be going to のあとは動詞の原形なので visit。' },
+      { sentence: '(A) My sister is (B) going to (C) studies abroad (D) next year.', choices: ['(A) My sister is', '(B) going to', '(C) studies abroad', '(D) next year'], answer: 2, why: 'be going to のあとは動詞の原形なので study。' },
+      { sentence: '(A) We are (B) meet our teacher (C) at the station (D) tomorrow morning.', choices: ['(A) We are', '(B) meet our teacher', '(C) at the station', '(D) tomorrow morning'], answer: 1, why: '決まった予定は現在進行形で are meeting。' },
+      { sentence: '(A) She going to (B) take the exam (C) in March (D) next year.', choices: ['(A) She going to', '(B) take the exam', '(C) in March', '(D) next year'], answer: 0, why: 'be動詞がぬけている。She is going to。' },
+      { sentence: '(A) I think (B) it will (C) be snow (D) tomorrow.', choices: ['(A) I think', '(B) it will', '(C) be snow', '(D) tomorrow'], answer: 2, why: 'snow は動詞として使い it will snow とする。' },
+      { sentence: '(A) My brother is (B) starting his new job (C) at next week (D) in Tokyo.', choices: ['(A) My brother is', '(B) starting his new job', '(C) at next week', '(D) in Tokyo'], answer: 2, why: 'next week の前に前置詞 at はつけない。' },
+      { sentence: '(A) If it (B) will rain tomorrow, (C) we will (D) stay at home.', choices: ['(A) If it', '(B) will rain tomorrow,', '(C) we will', '(D) stay at home'], answer: 1, why: '条件をあらわす if 節の中は未来のことでも現在形なので rains。' },
+      { sentence: '(A) Tom and I (B) are playing tennis (C) after school (D) tomorrow afternoons.', choices: ['(A) Tom and I', '(B) are playing tennis', '(C) after school', '(D) tomorrow afternoons'], answer: 3, why: '「明日の午後」は tomorrow afternoon（単数）。' },
+      { sentence: '(A) He is going to (B) come back (C) to home (D) next month.', choices: ['(A) He is going to', '(B) come back', '(C) to home', '(D) next month'], answer: 2, why: 'home は副詞なので to はつけない。come back home。' },
+      { sentence: '(A) Wait! I (B) will to help you (C) carry (D) that heavy box.', choices: ['(A) Wait! I', '(B) will to help you', '(C) carry', '(D) that heavy box'], answer: 1, why: 'will のあとは to をつけず原形。I will help you。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

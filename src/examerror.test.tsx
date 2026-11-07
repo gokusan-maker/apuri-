@@ -3270,3 +3270,10 @@ it('誤文訂正〈230〉：京大レベル 接続詞の重ね使いをさける
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('we went')
 })
+
+it('正誤問題〈237〉：国公立レベル will と be going to の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-will-going-to')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) visiting my grandmother')
+})
