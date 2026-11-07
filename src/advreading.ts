@@ -39858,6 +39858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-beyond-gdp',
+    title: 'Is GDP the Right Measure of Progress?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the past century, the success of national economies has been judged largely by a single number: gross domestic product, or GDP, which measures the total value of goods and services produced in a country over a given period. Politicians promise to raise it, newspapers report its rise and fall, and international rankings are often based on it. In recent decades, however, a growing number of economists and policymakers have argued that GDP is a poor guide to whether people's lives are actually improving, and that other measures should take its place or at least stand alongside it.",
+      "Critics point out that GDP counts many activities that do not make people better off. When a factory pollutes a river and the government spends money cleaning it up, both the production and the cleanup add to GDP, even though the population is no better off than before the pollution occurred. Similarly, rising spending on security systems, medical treatment for preventable illnesses, or repairs after natural disasters all increase GDP, although they often reflect problems rather than progress. A country could in principle increase its GDP simply by becoming more dangerous, more polluted, or more prone to illness, which suggests that the figure cannot by itself tell us whether a society is moving in a desirable direction.",
+      "At the same time, GDP ignores much that people value. Unpaid work such as caring for children or elderly relatives, volunteering in the community, or cooking meals at home contributes enormously to human welfare, yet it does not appear in national accounts. ( A ) such activities are difficult to price, critics argue, leaving them out entirely gives a distorted picture of how a society is really doing and may encourage policies that undervalue care and community life.",
+      "GDP also says nothing about how income is distributed or whether growth can be sustained. A country's GDP may rise rapidly while most of the gains go to a small minority, leaving ordinary families no better off. Likewise, an economy may grow by cutting down forests, draining underground water, or burning fossil fuels at a rate that will damage the prospects of future generations, and GDP records this as success rather than as a loss of natural wealth.",
+      "Defenders of GDP, however, argue that its limitations are well known and that it was never intended to measure happiness or well-being. It is valued precisely because it is relatively objective, can be calculated consistently across countries, and is closely linked to employment, tax revenue, and the resources available for public services. Replacing it with broader measures, defenders warn, could introduce subjective judgments about what matters and make comparisons between countries more difficult and more open to political manipulation. In their view, it is better to keep a clear and familiar figure and to interpret it carefully than to abandon it for measures whose meaning is less certain.",
+      "Some governments have tried to find a middle path by publishing a range of indicators alongside GDP. These may include measures of life expectancy, educational attainment, inequality, environmental quality, and the satisfaction that people report with their own lives. Several countries have even begun to design budgets around such indicators, asking not only how a policy will affect economic output but also how it will affect health, social connection, and the natural environment over the long term.",
+      "The debate over GDP ultimately reflects a deeper question about what societies should aim for. A single number has the appeal of simplicity, but human well-being depends on many things that cannot easily be added together. Whether or not GDP remains the headline figure, the growing interest in broader measures suggests that many people want governments to pay closer attention to the quality of life, the fairness of its distribution, and the condition of the world that will be left to future generations.",
+    ],
+    ja: [
+      '過去一世紀の多くのあいだ、各国の経済の成功は、主にたった一つの数字で判断されてきた。それが国内総生産、つまりGDPであり、ある期間に国内で生産されたモノとサービスの価値の合計をはかるものである。政治家はそれを上げると約束し、新聞はその上がり下がりを報じ、国際的な順位もしばしばそれにもとづいている。しかしここ数十年、人々の暮らしが実際によくなっているかどうかについて、GDPは悪い手引きであり、ほかの指標がそれにかわるか、少なくともそれとならぶべきだと主張する経済学者や政策を決める人々がふえている。',
+      '批判する人々は、GDPは人々をよりよい状態にしない多くの活動を数に入れていると指摘する。工場が川をよごし、政府がそれをきれいにするためにお金を使うと、生産と清掃の両方がGDPを増やすが、人々は汚染が起こる前よりよい状態になっているわけではない。同じように、防犯の設備や、防げたはずの病気の治療や、自然災害のあとの修理への支出がふえることも、すべてGDPを増やすが、それらはしばしば進歩ではなく問題を反映している。理くつの上では、国はただより危険に、よりよごれた、より病気になりやすい場所になるだけでGDPを増やせることになり、このことは、その数字だけでは社会が望ましい方向に進んでいるかどうかを教えてくれないことを示している。',
+      '同時に、GDPは人々が大切にする多くのものを無視している。子どもや年老いた家族の世話をすることや、地域でボランティアをすることや、家で食事をつくることのような、お金の支はらわれない仕事は、人間の幸せにとても大きく役立っているが、国の会計にはあらわれない。そうした活動に値段をつけるのはむずかしいが、それらを完全にのぞいてしまうことは、社会が本当にどうなっているかについてゆがんだ姿を示し、世話や地域の暮らしを軽く見る政策をうながすかもしれないと批判する人々は主張する。',
+      'GDPはまた、所得がどう分配されているか、成長が続けられるものかどうかについて何も語らない。ある国のGDPが急速に上がっても、その利益のほとんどがごく少数の人々に行き、ふつうの家庭はよくならないままかもしれない。同じように、経済は森を切りたおし、地下水をくみつくし、将来の世代の見通しをそこなうほどの速さで化石燃料を燃やすことで成長するかもしれず、GDPはそれを自然の富の損失ではなく成功として記録する。',
+      'しかしGDPを擁護する人々は、その限界はよく知られており、もともと幸福や幸せをはかるためのものではなかったと主張する。GDPが重んじられるのは、まさに比較的客観的で、国どうしで一貫して計算でき、雇用や税収や公共サービスに使える資源と深く結びついているからである。それをより広い指標に置きかえれば、何が大切かについての主観的な判断がもちこまれ、国どうしの比較がよりむずかしく、政治的な操作を受けやすくなりうると擁護する人々は警告する。彼らの考えでは、意味のよりたしかでない指標のためにそれをすてるより、明確でなじみのある数字を残し、それを注意深く読みとくほうがよい。',
+      'GDPとならべていろいろな指標を公表することで、中間の道を見つけようとしてきた政府もある。それには、平均寿命や、教育の到達度や、格差や、環境の質や、人々が自分の暮らしについて答える満足度の指標がふくまれることがある。いくつかの国は、そうした指標をもとに予算を立てはじめ、ある政策が経済の生産にどう影響するかだけでなく、長い目で見て健康や社会のつながりや自然環境にどう影響するかも問うようになっている。',
+      'GDPをめぐる議論は、結局のところ、社会が何を目指すべきかについての、より深い問いを反映している。たった一つの数字にはかんたんさという魅力があるが、人間の幸せは、かんたんには足し合わせられない多くのものにかかっている。GDPが見出しの数字であり続けるかどうかにかかわらず、より広い指標への関心の高まりは、多くの人々が、暮らしの質や、その分配の公平さや、将来の世代に残される世界の状態に、政府がもっと注意をはらうことを望んでいることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「値段をつけるのはむずかしいが、完全にのぞくのはゆがんだ姿を示す」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Critics argue that GDP counts activities that reflect problems, ignores unpaid ( 1 ), and says nothing about distribution or whether growth can be ( 2 ). Defenders reply that it is relatively objective. Some governments now publish a range of ( 3 ) alongside it.',
+      blanks: [
+        { choices: ['work', 'taxes', 'debts', 'prices'], answer: 0, why: '第3段落 Unpaid work such as caring for children ...。' },
+        { choices: ['sustained', 'measured', 'stopped', 'hidden'], answer: 0, why: '第4段落 whether growth can be sustained。' },
+        { choices: ['indicators', 'factories', 'elections', 'rankings'], answer: 0, why: '第6段落 publishing a range of indicators alongside GDP。' },
+      ],
+    },
+    tf: [
+      { statement: '工場が川をよごし、政府がそれをきれいにすると、両方がGDPを増やす。', answer: true, why: '第2段落 both the production and the cleanup add to GDP。' },
+      { statement: '家で子どもの世話をすることは、GDPに数えられる。', answer: false, why: '第3段落 it does not appear in national accounts。' },
+      { statement: '擁護する人々は、GDPはもともと幸福をはかるためのものだったと言う。', answer: false, why: '第5段落 it was never intended to measure happiness or well-being。' },
+      { statement: 'いくつかの国は、広い指標をもとに予算を立てはじめている。', answer: true, why: '第6段落 Several countries have even begun to design budgets around such indicators。' },
+    ],
+    qa: [
+      { q: 'Why is GDP valued, according to its defenders?', choices: ['It is relatively objective and can be calculated consistently across countries.', 'It measures happiness directly.', 'It includes unpaid work.', 'It shows how income is distributed.'], answer: 0, why: '第5段落 it is relatively objective, can be calculated consistently across countries。' },
+      { q: 'How does GDP record growth that damages future generations?', choices: ['As success rather than as a loss of natural wealth.', 'As a loss of natural wealth.', 'It does not record it at all.', 'As a sign of inequality.'], answer: 0, why: '第4段落 GDP records this as success rather than as a loss of natural wealth。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
