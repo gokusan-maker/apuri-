@@ -3116,3 +3116,10 @@ it('誤文訂正〈219〉：東大レベル provide A with B・rob A of B の単
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('with')
 })
+
+it('正誤問題〈226〉：京大レベル suggest・insist・demand that ＋原形の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-suggest-that-kyodai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) stops smoking')
+})

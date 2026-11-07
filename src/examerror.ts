@@ -5383,6 +5383,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) She has (B) no trouble (C) to make (D) new friends.', choices: ['(A) She has', '(B) no trouble', '(C) to make', '(D) new friends'], answer: 2, why: 'have no trouble ～ing「らくに～する」なので making。' },
     ],
   },
+  {
+    id: 'exam-error-suggest-that-kyodai',
+    title: '入試の正誤問題〈226〉（京大レベル：英作文の suggest・insist・demand that ＋動詞の原形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'suggest・propose・recommend・insist・demand・require など「提案・要求」の動詞のあとの that 節では、主語や時制にかかわらず動詞の原形を使う（イギリス英語では should ＋原形も）。否定は not ＋原形（that he not be late）。',
+      'It is necessary・important・essential that ～ の that 節でも原形を使う。suggest は人を目的語にとらず、to 不定詞もとらない（×suggest him to go → ○suggest that he go／suggest going）。',
+    ],
+    examples: [
+      { en: 'The doctor suggested that he stop smoking.', ja: '医者は彼にたばこをやめるよう提案した。' },
+      { en: 'It is important that she not miss the train.', ja: '彼女がその電車に乗りおくれないことが大切だ。' },
+    ],
+    questions: [
+      { sentence: '(A) The doctor (B) suggested (C) that he (D) stops smoking.', choices: ['(A) The doctor', '(B) suggested', '(C) that he', '(D) stops smoking'], answer: 3, why: 'suggest that のあとは動詞の原形（または should ＋原形）なので stop smoking。' },
+      { sentence: '(A) She insisted (B) that her son (C) goes (D) to bed early.', choices: ['(A) She insisted', '(B) that her son', '(C) goes', '(D) to bed early'], answer: 2, why: 'insist that ～「～するよう強く求める」のあとは原形なので go。' },
+      { sentence: '(A) The teacher demanded (B) that every student (C) hands in (D) the report by Friday.', choices: ['(A) The teacher demanded', '(B) that every student', '(C) hands in', '(D) the report by Friday'], answer: 2, why: 'demand that のあとは原形なので hand in。' },
+      { sentence: '(A) It is (B) necessary (C) that he (D) is present at the meeting.', choices: ['(A) It is', '(B) necessary', '(C) that he', '(D) is present at the meeting'], answer: 3, why: 'It is necessary that のあとは原形なので be present。' },
+      { sentence: '(A) I suggested (B) him (C) that we (D) take a taxi.', choices: ['(A) I suggested', '(B) him', '(C) that we', '(D) take a taxi'], answer: 1, why: 'suggest は人を目的語にとらないので I suggested (to him) that we take a taxi。' },
+      { sentence: '(A) They recommended (B) that the meeting (C) was (D) postponed.', choices: ['(A) They recommended', '(B) that the meeting', '(C) was', '(D) postponed'], answer: 2, why: 'recommend that のあとは原形なので be postponed。' },
+      { sentence: '(A) My father (B) suggested (C) to go (D) fishing on Sunday.', choices: ['(A) My father', '(B) suggested', '(C) to go', '(D) fishing on Sunday'], answer: 2, why: 'suggest は to 不定詞をとらないので suggested going（または that we go）。' },
+      { sentence: '(A) The law (B) requires (C) that every driver (D) wears a seat belt.', choices: ['(A) The law', '(B) requires', '(C) that every driver', '(D) wears a seat belt'], answer: 3, why: 'require that のあとは原形なので wear a seat belt。' },
+      { sentence: '(A) It is (B) important (C) that she (D) doesn’t miss the train.', choices: ['(A) It is', '(B) important', '(C) that she', '(D) doesn’t miss the train'], answer: 3, why: 'It is important that のあとの否定は not ＋原形なので not miss。' },
+      { sentence: '(A) Suggested (B) the manager (C) that we (D) work overtime?', choices: ['(A) Suggested', '(B) the manager', '(C) that we', '(D) work overtime?'], answer: 0, why: '疑問文なので Did the manager suggest that we work overtime?' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
