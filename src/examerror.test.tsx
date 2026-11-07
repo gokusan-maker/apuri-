@@ -3179,3 +3179,10 @@ it('正誤問題〈230〉：東大レベル wear・put on・fit・suit の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) is wearing')
 })
+
+it('誤文訂正〈224〉：京大レベル hope と wish の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-224')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('hope')
+})

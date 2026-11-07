@@ -9526,6 +9526,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'How much does it cost to [lend] a bicycle here for a day?', choices: ['rent', 'borrow from', 'use to', 'give'], answer: 0, why: 'お金をはらって借りるので rent。' },
     ],
   },
+  {
+    id: 'exam-fix-224',
+    title: '入試の誤文訂正〈224〉（京大レベル：英作文の hope と wish の使い分け）',
+    points: ['hope は「（実現しそうなことを）望む」で、that 節の中はふつうの時制（I hope it will be sunny／I hope you get well）。wish は「（実現しそうにないことを）願う」で、that 節の中は仮定法（今のことは過去形、過去のことは過去完了）。ただし wish 人 物（I wish you a happy birthday）や wish to do は「願う・したい」の意味で使える。'],
+    examples: [{ en: 'I hope it will be sunny tomorrow. / I wish I could fly.', ja: '明日晴れるといいな。／空を飛べたらいいのに。' }],
+    questions: [
+      { sentence: 'I [wish] you will pass the exam next week.', choices: ['hope', 'want', 'expect to', 'would like'], answer: 0, why: '実現しうることを望むので hope。wish のあとに will は使わない。' },
+      { sentence: 'I [hope] I were taller.', choices: ['wish', 'want', 'think', 'expect'], answer: 0, why: 'were（仮定法）なので実現しそうにない願いの wish。' },
+      { sentence: 'I wish I [can] speak French.', choices: ['could', 'will', 'am able', 'may'], answer: 0, why: 'wish のあとは仮定法なので could。' },
+      { sentence: 'She hopes [to winning] the contest.', choices: ['to win', 'winning', 'won', 'for win'], answer: 0, why: 'hope to do なので to win。' },
+      { sentence: 'I wish I [studied] harder last year.', choices: ['had studied', 'study', 'have studied', 'will study'], answer: 0, why: '過去のことへの後悔は wish ＋過去完了 had studied。' },
+      { sentence: 'We [wish] that the weather will be nice for the picnic.', choices: ['hope', 'wished', 'would wish', 'are wishing'], answer: 0, why: '実現しうることを望むので hope。' },
+      { sentence: 'I wish [you to have] a happy new year.', choices: ['you', 'to you', 'for you', 'you will'], answer: 0, why: 'wish 人 物「人に～を願う」なので wish you a happy new year。' },
+      { sentence: 'I hope you [will have got] well soon.', choices: ['get', 'got', 'had got', 'would get'], answer: 0, why: 'hope のあとはふつうの時制。I hope you get well soon（または will get）。' },
+      { sentence: 'He wishes he [has] more free time.', choices: ['had', 'have', 'will have', 'is having'], answer: 0, why: 'wish のあとの今のことは過去形 had。' },
+      { sentence: 'I [am hoping for] I had a dog.', choices: ['wish', 'hope', 'want that', 'expect'], answer: 0, why: 'had（仮定法）なので wish。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
