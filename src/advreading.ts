@@ -41298,6 +41298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-first-aid-lessons',
+    title: 'Should First Aid Be Taught in Every School?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every year, many people die from heart attacks, choking, severe bleeding, and other emergencies that occur suddenly, often at home, at work, or in the street. In many of these cases, the first few minutes are critical, and the actions of ordinary bystanders can make the difference between life and death. Yet surveys in many countries suggest that only a small proportion of adults feel confident giving basic first aid. In response, some governments have made first aid a compulsory part of the school curriculum, and others are considering whether to follow their example.",
+      "Supporters argue that teaching first aid in schools is one of the most effective ways to save lives. Children who learn how to perform chest compressions, place an unconscious person in a safe position, or stop serious bleeding carry these skills with them into adulthood. Because almost every young person attends school, supporters point out, such lessons can reach an entire generation in a way that voluntary courses for adults never could, gradually creating a society in which many more people are able to help in an emergency. Young people may also pass on what they learn to their parents and grandparents, spreading knowledge through families in a way that formal courses rarely achieve.",
+      "Supporters also emphasize the broader benefits of such education. Learning first aid can teach young people to stay calm under pressure, to take responsibility for others, and to act rather than look away when someone is in trouble. ( A ) few students will ever face a life-threatening emergency, supporters argue, the confidence and sense of civic duty gained from such lessons may influence how they respond to many other situations in which others need help.",
+      "Critics, however, raise practical concerns. School timetables are already crowded, and adding a new compulsory subject may mean reducing time for other important areas of study. Teachers may lack the training to teach first aid effectively, and providing equipment such as practice dummies and qualified instructors can be expensive, particularly for schools with limited budgets. Critics argue that, without adequate resources, lessons may be too brief or superficial to give students skills they could actually use.",
+      "Critics also question whether skills learned in childhood will be retained. First aid techniques can be forgotten if they are not practiced regularly, and guidelines sometimes change as medical knowledge advances. A teenager who attended a single lesson at the age of thirteen may not remember what to do in a real emergency years later, especially under the stress of the moment. Critics therefore argue that refresher courses for adults may be just as important as school lessons. Some also worry that children might feel anxious or burdened by the idea that they are expected to save lives, unless lessons are presented with care.",
+      "Many experts believe that the most effective approach combines several elements. Short, practical lessons repeated over several school years may help students remember key techniques, and these can be supplemented by community courses, workplace training, and public information campaigns. Some countries have also placed devices that can restart a heart in public places, with simple instructions that allow even untrained people to use them, reducing the knowledge required to save a life in those vital first minutes.",
+      "The debate over first aid in schools ultimately reflects a broader question about what education should provide. Schools are often expected to prepare young people for examinations and careers, but they also shape the kind of citizens students will become. Teaching first aid expresses the belief that every member of society has a role to play in protecting others, and that the ability to help a stranger in danger is a skill as valuable as any academic subject taught in the classroom.",
+    ],
+    ja: [
+      '毎年、多くの人が、しばしば家や職場や通りで突然起きる心臓発作や、のどのつまりや、ひどい出血や、そのほかの緊急事態で亡くなっている。こうした場合の多くで、最初の数分がきわめて大切であり、その場に居合わせたふつうの人々の行動が生死を分けることがある。しかし多くの国の調査は、基本的な応急手当に自信をもっている大人はわずかな割合にすぎないことを示している。これにこたえて、応急手当を学校の教育課程の必修の一部にした政府もあれば、その例にならうかどうかを考えている政府もある。',
+      '支持する人々は、学校で応急手当を教えることは、命を救うもっとも効果的な方法の一つだと主張する。胸をおす心臓マッサージや、意識のない人を安全な姿勢にすることや、ひどい出血を止めることを学んだ子どもは、その技術を大人になってももち続ける。ほとんどすべての若者が学校に通うので、そうした授業は、大人向けの自由参加の講座にはけっしてできないやり方で一つの世代全体に届き、少しずつ、緊急時に助けられる人がはるかに多い社会をつくっていくと支持する人々は指摘する。若者は学んだことを親や祖父母に伝えることもあり、正式な講座ではめったに実現しないやり方で、家族を通じて知識を広げるかもしれない。',
+      '支持する人々はまた、そうした教育のより広い利益を強調する。応急手当を学ぶことは、若者に、重圧の中で落ち着き、他人に責任をもち、だれかがこまっているときに目をそらすのではなく行動することを教えうる。命にかかわる緊急事態にいつか直面する生徒はわずかだが、そうした授業から得られる自信と市民としての責任感は、他人が助けを必要とする多くのほかの場面で、彼らがどうふるまうかに影響するかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、実際的な心配をあげる。学校の時間割はすでにいっぱいであり、新しい必修科目を加えれば、ほかの大切な学習の時間をへらすことになるかもしれない。先生には応急手当を効果的に教える訓練がないかもしれず、練習用の人形や資格をもつ指導者を用意するのは、とくに予算の限られた学校にとって高くつくことがある。十分な資源がなければ、授業は短すぎたり表面的すぎたりして、生徒が実際に使える技術をあたえられないかもしれないと批判する人々は主張する。',
+      '批判する人々はまた、子どものころに学んだ技術が身につき続けるのかと疑問を投げかける。応急手当の技術は、定期的に練習しなければわすれてしまうことがあり、医学の知識が進むにつれて指針が変わることもある。13歳のときにたった一度授業を受けた十代の若者は、何年もあとの本当の緊急事態で、とくにその場の緊張の中で、何をすべきかをおぼえていないかもしれない。そのため、大人のための復習の講座も学校の授業と同じくらい大切かもしれないと批判する人々は主張する。また、授業が注意深く行われなければ、子どもが命を救うことを期待されていると感じて、不安や重荷を感じるかもしれないと心配する人もいる。',
+      '多くの専門家は、もっとも効果的なやり方はいくつかの要素を組み合わせることだと考えている。何年かの学年にわたってくり返される短く実際的な授業は、生徒が大切な技術をおぼえる助けになるかもしれず、それを地域の講座や職場の訓練や広報の取り組みでおぎなうことができる。また、止まった心臓を動かせる機器を公共の場所に置き、訓練を受けていない人でも使えるかんたんな説明をつけて、大切な最初の数分で命を救うのに必要な知識をへらしている国もある。',
+      '学校での応急手当をめぐる議論は、結局のところ、教育が何をあたえるべきかについての、より広い問いを反映している。学校はしばしば、若者を試験や仕事にそなえさせることを期待されるが、生徒がどのような市民になるかも形づくっている。応急手当を教えることは、社会のすべての一員が他人を守る役割をもっており、危険にさらされた見知らぬ人を助ける力は、教室で教えられるどんな学問の科目にも劣らず価値のある技術だという考えをあらわしているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「緊急事態に直面する生徒はわずかだが、自信と責任感はほかの場面に影響する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that teaching first aid in schools can save ( 1 ) and build a sense of civic duty. Critics point to crowded timetables, limited ( 2 ), and the risk that skills will be forgotten. Many experts favor short lessons ( 3 ) over several years.',
+      blanks: [
+        { choices: ['lives', 'money', 'time', 'energy'], answer: 0, why: '第2段落 one of the most effective ways to save lives。' },
+        { choices: ['resources', 'students', 'holidays', 'buildings'], answer: 0, why: '第4段落 without adequate resources。' },
+        { choices: ['repeated', 'cancelled', 'hidden', 'shortened'], answer: 0, why: '第6段落 Short, practical lessons repeated over several school years。' },
+      ],
+    },
+    tf: [
+      { statement: '緊急事態では、最初の数分がきわめて大切である。', answer: true, why: '第1段落 the first few minutes are critical。' },
+      { statement: '多くの国で、ほとんどの大人が応急手当に自信をもっている。', answer: false, why: '第1段落 only a small proportion of adults feel confident。' },
+      { statement: '応急手当の指針は、医学の進歩につれて変わることがある。', answer: true, why: '第5段落 guidelines sometimes change as medical knowledge advances。' },
+      { statement: '公共の機器は、訓練を受けた人しか使えない。', answer: false, why: '第6段落 allow even untrained people to use them。' },
+    ],
+    qa: [
+      { q: 'Why can school lessons reach an entire generation, according to supporters?', choices: ['Because almost every young person attends school.', 'Because adults teach them at home.', 'Because lessons are very long.', 'Because hospitals require it.'], answer: 0, why: '第2段落 Because almost every young person attends school。' },
+      { q: 'What might a teenager who attended a single lesson fail to do years later?', choices: ['Remember what to do in a real emergency.', 'Pass a mathematics exam.', 'Find a job.', 'Call a friend.'], answer: 0, why: '第5段落 may not remember what to do in a real emergency years later。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
