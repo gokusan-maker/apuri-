@@ -5708,6 +5708,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) He wanted (B) his sister (C) lend (D) him some money.', choices: ['(A) He wanted', '(B) his sister', '(C) lend', '(D) him some money'], answer: 2, why: 'want 人 to do なので his sister to lend。' },
     ],
   },
+  {
+    id: 'exam-error-infinitive-preposition',
+    title: '入試の正誤問題〈239〉（東大レベル：英作文の a pen to write with など前置詞で終わる不定詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '名詞を to 不定詞で修飾するとき、もとの形で前置詞が必要なら最後に残す（write with a pen → a pen to write with／sit on a chair → a chair to sit on／live in a house → a house to live in）。修飾される名詞が目的語なので、うしろに it などをくり返さない。',
+      'something・anything のような -thing の語を形容詞と不定詞で修飾するときは something cold to drink の語順。紙なら paper to write on、道具なら a pen to write with と、前置詞で意味が変わる。',
+    ],
+    examples: [
+      { en: 'I need a pen to write with and some paper to write on.', ja: '書くためのペンと、書くための紙が必要だ。' },
+      { en: 'She is looking for a friend to talk to.', ja: '彼女は話し相手をさがしている。' },
+    ],
+    questions: [
+      { sentence: '(A) She is looking (B) for a friend (C) to talk (D) about her problem.', choices: ['(A) She is looking', '(B) for a friend', '(C) to talk', '(D) about her problem'], answer: 2, why: '「話し相手」は talk to a friend なので a friend to talk to。' },
+      { sentence: '(A) There are (B) no chairs (C) to sit (D) in this room.', choices: ['(A) There are', '(B) no chairs', '(C) to sit', '(D) in this room'], answer: 2, why: '「すわるいす」は sit on a chair なので chairs to sit on。' },
+      { sentence: '(A) The children (B) need a big park (C) to play in (D) on weekend.', choices: ['(A) The children', '(B) need a big park', '(C) to play in', '(D) on weekend'], answer: 3, why: '「週末に」は on weekends（または at the weekend）。' },
+      { sentence: '(A) He has (B) a lot of homework (C) doing (D) tonight.', choices: ['(A) He has', '(B) a lot of homework', '(C) doing', '(D) tonight'], answer: 2, why: '名詞を修飾するのは to 不定詞なので homework to do。' },
+      { sentence: '(A) Something (B) to eat it (C) would be (D) nice now.', choices: ['(A) Something', '(B) to eat it', '(C) would be', '(D) nice now'], answer: 1, why: 'something が eat の目的語なので it は不要。something to eat。' },
+      { sentence: '(A) Cold something (B) to drink (C) is all (D) I want.', choices: ['(A) Cold something', '(B) to drink', '(C) is all', '(D) I want'], answer: 0, why: '-thing の語を修飾する形容詞はうしろに置くので Something cold。' },
+      { sentence: '(A) He has (B) no house (C) to live (D) with his family.', choices: ['(A) He has', '(B) no house', '(C) to live', '(D) with his family'], answer: 2, why: '「住む家」は live in a house なので a house to live in。' },
+      { sentence: '(A) She gave me (B) a piece of paper (C) to write (D) with.', choices: ['(A) She gave me', '(B) a piece of paper', '(C) to write', '(D) with'], answer: 3, why: '紙は「その上に書く」ので to write on。with は書く道具（a pen to write with）。' },
+      { sentence: '(A) The baby needs (B) a toy (C) to playing with (D) in the car.', choices: ['(A) The baby needs', '(B) a toy', '(C) to playing with', '(D) in the car'], answer: 2, why: '不定詞は to ＋原形なので a toy to play with。' },
+      { sentence: '(A) I’m looking for (B) someone (C) to help (D) me with to this job.', choices: ['(A) I’m looking for', '(B) someone', '(C) to help', '(D) me with to this job'], answer: 3, why: 'help 人 with ～ なので me with this job。to は不要。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
