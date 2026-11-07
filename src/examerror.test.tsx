@@ -3389,3 +3389,10 @@ it('正誤問題〈245〉：東大レベル 二重所有格の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) a my friend')
 })
+
+it('誤文訂正〈239〉：国公立レベル no longer・still と yet の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-239')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('no longer lives')
+})

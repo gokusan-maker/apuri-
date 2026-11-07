@@ -10171,6 +10171,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I [have never seen] such a big fish until yesterday.', choices: ['had never seen', 'have never saw', 'never have seen', 'has never seen'], answer: 0, why: '過去の一点（きのう）までの経験なので過去完了 had never seen。' },
     ],
   },
+  {
+    id: 'exam-fix-239',
+    title: '入試の誤文訂正〈239〉（国公立レベル：no longer・not ～ any longer・still と yet）',
+    points: ['「もはや～ない」は no longer（一般動詞の前・be動詞のあと）か not ～ any longer（文の終わり）。no longer はそれ自体が否定なので don’t や not と重ねない（×doesn’t live no longer）。', 'still は「まだ（続いている）」で肯定文・疑問文に使う（She is still sleeping.／Are you still angry?）。yet は否定文で「まだ（～ない）」、疑問文で「もう（～したか）」。肯定文で「もう～した」は already。'],
+    examples: [{ en: 'He no longer lives in Tokyo. / Have you finished yet? — No, I’m still working.', ja: '彼はもう東京に住んでいない。／もう終わった？—いいえ、まだやっているところです。' }],
+    questions: [
+      { sentence: 'He [doesn’t live no longer] in Tokyo.', choices: ['no longer lives', 'doesn’t live any more no', 'lives no more longer', 'not lives any longer'], answer: 0, why: 'no longer は否定語を重ねず一般動詞の前に置く。no longer lives。' },
+      { sentence: 'I can’t wait [no longer].', choices: ['any longer', 'longer no', 'some longer', 'no long'], answer: 0, why: 'not（can’t）と使うのは any longer。' },
+      { sentence: 'Have you finished your homework [still]?', choices: ['yet', 'already yet', 'still yet', 'ever'], answer: 0, why: '疑問文の「もう～したか」は yet。' },
+      { sentence: 'It is ten o’clock, but she is [yet] sleeping.', choices: ['still', 'already', 'ever', 'yet still'], answer: 0, why: '肯定文の「まだ～している」は still。' },
+      { sentence: 'The train hasn’t arrived [already].', choices: ['yet', 'still', 'ever', 'now already'], answer: 0, why: '否定文の「まだ～ない」は yet。' },
+      { sentence: 'She is [not longer] a child.', choices: ['no longer', 'any longer no', 'no long', 'not long ago'], answer: 0, why: '「もはや～ない」は no longer。' },
+      { sentence: 'We [don’t no longer] use this room.', choices: ['no longer use', 'don’t use no more', 'not use longer', 'use no long'], answer: 0, why: 'no longer に don’t は重ねない。no longer use。' },
+      { sentence: 'Are you [yet] angry with me?', choices: ['still', 'already', 'yet still', 'ever yet'], answer: 0, why: '「まだおこっているの？」は still。' },
+      { sentence: 'He has [yet] left the office.', choices: ['already', 'still', 'yet already', 'ever'], answer: 0, why: '肯定文の「もう～した」は already。' },
+      { sentence: 'This shop is [not any more longer] open on Sundays.', choices: ['no longer', 'not longer any', 'any no longer', 'no more longer'], answer: 0, why: 'be動詞のあとに no longer を置く。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -1279,7 +1279,7 @@
   - [x] 482 正誤問題〈244〉（国公立レベル：動名詞の慣用表現 be busy ～ing・feel like ～ing・on ～ing）10問
   - [x] 483 誤文訂正〈238〉（京大レベル：英作文の so far・until now と現在完了）10問
   - [x] 484 正誤問題〈245〉（東大レベル：英作文の二重所有格 a friend of mine・this book of hers）10問
-  - [ ] 485 誤文訂正〈239〉（国公立レベル：no longer・not ～ any longer・still と yet）10問
+  - [x] 485 誤文訂正〈239〉（国公立レベル：no longer・not ～ any longer・still と yet）10問
   - [ ] 486 正誤問題〈246〉（京大レベル：英作文の make・do・take の決まった組み合わせ）10問
   - [ ] 487 誤文訂正〈240〉（東大レベル：英作文の as ～ as possible・as ～ as one can）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
