@@ -41342,6 +41342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-deserts',
+    title: 'On Deserts',
+    level: '難関大（評論）',
+    paragraphs: [
+      "To many people, the word desert suggests emptiness: endless sand, burning sun, and an absence of life. Deserts are often used in stories and speech as symbols of loneliness, hardship, or spiritual exile, places where travelers lose their way and nothing grows. Yet those who have spent time in deserts frequently describe them very differently, speaking of extraordinary beauty, silence, and a surprising richness of life that reveals itself only to those willing to look closely and patiently.",
+      "Deserts are defined not by heat but by dryness. Some of the world's largest deserts are cold, covered with ice and snow for much of the year, while others experience scorching days followed by freezing nights. What they share is a lack of rainfall, which makes water the most precious resource of all. Every plant and animal that survives in such conditions has developed remarkable ways of finding, storing, or conserving water, from roots that reach deep underground to bodies that can endure long periods without drinking. Some beetles even collect moisture from morning fog on their backs, tilting their bodies so that tiny droplets run down into their mouths.",
+      "The apparent emptiness of the desert can therefore be misleading. Many desert creatures are active only at night, hiding from the heat during the day, and many plants remain dormant for years, waiting for rare rains. ( A ) a desert may seem lifeless at first glance, a single heavy shower can transform it within days, as seeds that have lain buried for years suddenly burst into flower and the ground is briefly covered with color.",
+      "Human beings, too, have long found ways to live in deserts. Nomadic peoples have traveled across them for thousands of years, following seasonal patterns of water and grazing, and settled communities have built towns around oases and developed ingenious systems for collecting and distributing scarce water. The knowledge accumulated by these peoples reflects a deep understanding of the desert, one based not on conquering it but on adapting to its rhythms and respecting its limits, lessons that remain valuable in a world facing growing shortages of water.",
+      "For visitors, the desert often offers an experience of silence and space that is rare in modern life. Without the noise of traffic and the constant presence of other people, travelers may become more aware of their own thoughts, of the vastness of the sky at night, and of the fragility of their own existence. Many religious and philosophical traditions have regarded the desert as a place of reflection and renewal, where people withdraw from ordinary life in order to confront fundamental questions. Even a short stay in such a place, many travelers report, can change the way they see the crowded and noisy world to which they eventually return.",
+      "Today, however, deserts face growing pressures. In some regions, the spread of desert-like conditions into formerly fertile land, a process known as desertification, threatens farms and communities, often as a result of overgrazing, the cutting of trees, and changes in climate. At the same time, deserts are increasingly valued for their resources, from minerals to the sunlight that can be used to generate electricity, raising questions about how they can be developed without destroying their unique ecosystems.",
+      "In the end, the desert may teach us that apparent emptiness is often a failure of perception. What seems barren to a hurried observer may be full of life adapted to conditions we can barely imagine, and what seems silent may be filled with subtle sounds. To understand the desert, then, is to learn the value of patience and attention, and perhaps to recognize that abundance can take forms very different from those we are used to seeing in our everyday lives.",
+    ],
+    ja: [
+      '多くの人にとって、砂ばくということばは、何もないことを思わせる。はてしない砂、焼けつくような太陽、そして生命がないこと。砂ばくはしばしば物語や話の中で、さびしさや苦しみや心の追放の象徴として使われ、旅人が道に迷い、何も育たない場所とされる。しかし砂ばくで時を過ごした人々は、それをしばしばまったくちがうふうに語る。とてつもない美しさと静けさ、そして、注意深くしんぼう強く見ようとする人にだけ姿をあらわす、おどろくほど豊かな生命について語るのである。',
+      '砂ばくは、暑さではなく、かわきによって決まる。世界最大級の砂ばくの中には寒いものもあり、一年の多くを氷と雪におおわれているし、焼けつくような昼のあとにこおりつくような夜が来る砂ばくもある。共通しているのは雨の少なさであり、そのため水がもっとも貴重な資源になる。そうした条件で生きのびるすべての植物や動物は、地下深くまでのびる根から、長いあいだ水を飲まずにたえられる体まで、水を見つけ、たくわえ、むだにしないおどろくべきやり方を身につけてきた。中には、朝の霧から背中に水分を集め、体をかたむけて小さなしずくを口へ流しこむ甲虫さえいる。',
+      'だから、砂ばくの見かけの何もなさは、誤解をまねきうる。砂ばくの生き物の多くは夜だけ活動し、昼は暑さをさけてかくれており、多くの植物は何年も休眠して、まれな雨を待っている。砂ばくは一目見ただけでは命がないように見えるかもしれないが、たった一度のはげしい雨で数日のうちに姿を変えることがある。何年もうまっていた種が突然花をさかせ、地面がしばらくのあいだ色でおおわれるのである。',
+      '人間もまた、長いあいだ砂ばくで暮らす方法を見つけてきた。遊牧の人々は何千年ものあいだ、季節による水と草の移り変わりにしたがって砂ばくを旅し、定住する地域はオアシスのまわりに町をつくり、少ない水を集めて分けるくふうに富んだ仕組みを生み出してきた。こうした人々が積み重ねてきた知識は、砂ばくへの深い理解を映している。それは砂ばくを征服することではなく、そのリズムに合わせ、その限界を尊重することにもとづく理解であり、その教えは、水不足が深まる世界で今も価値をもっている。',
+      'おとずれる人にとって、砂ばくはしばしば、現代の暮らしではめずらしい静けさと広がりの経験をあたえてくれる。車の音もほかの人のたえまない気配もない中で、旅人は自分自身の考えや、夜空の広大さや、自分の存在のこわれやすさに、より気づくようになるかもしれない。多くの宗教や哲学の伝統は、砂ばくを、人々が根本的な問いに向き合うためにふだんの暮らしからはなれる、ふり返りと再生の場所と見なしてきた。そうした場所にほんの少しとどまるだけでも、やがてもどっていく混み合ったさわがしい世界の見え方が変わることがあると、多くの旅人は語る。',
+      'しかし今日、砂ばくは高まる圧力にさらされている。ある地域では、以前は肥えていた土地に砂ばくのような状態が広がること、つまり砂ばく化とよばれる過程が、農地や地域をおびやかしており、それはしばしば、家畜の放牧しすぎや木の伐採や気候の変化の結果である。同時に、砂ばくは、鉱物から電気をつくるのに使える日光まで、その資源のためにますます重んじられるようになっており、独特の生態系をこわさずにどう開発できるのかという疑問を生んでいる。',
+      '結局のところ、砂ばくは、見かけの何もなさがしばしば感じとる力の不足であることを教えてくれるのかもしれない。急ぐ人にはやせた土地に見えるものが、私たちにはほとんど想像できない条件に合わせた生命に満ちていることもあり、静かに見えるものが、かすかな音に満ちていることもある。だから、砂ばくを理解することは、忍耐と注意の価値を学ぶことであり、もしかすると、豊かさが、私たちがふだんの暮らしで見なれているものとはまったくちがう形をとりうることを知ることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一目見ただけでは命がないように見えるかもしれないが、雨で姿を変える」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '砂ばくは、暑さではなくかわきによって決まる。', answer: true, why: '第2段落 Deserts are defined not by heat but by dryness。' },
+      { statement: 'すべての砂ばくは一年中暑い。', answer: false, why: '第2段落 Some of the world’s largest deserts are cold。' },
+      { statement: '遊牧の人々は、季節による水と草の移り変わりにしたがって旅してきた。', answer: true, why: '第4段落 following seasonal patterns of water and grazing。' },
+      { statement: '砂ばく化は、家畜の放牧しすぎとは関係がない。', answer: false, why: '第6段落 often as a result of overgrazing。' },
+    ],
+    qa: [
+      { q: 'What can happen to a desert after a single heavy shower?', choices: ['Seeds burst into flower and the ground is covered with color.', 'All the animals leave.', 'The sand turns to ice.', 'Nothing changes at all.'], answer: 0, why: '第3段落 seeds ... suddenly burst into flower and the ground is briefly covered with color。' },
+      { q: 'How have many religious traditions regarded the desert?', choices: ['As a place of reflection and renewal.', 'As a place for markets.', 'As a place to avoid at all costs.', 'As a place for sports.'], answer: 0, why: '第5段落 regarded the desert as a place of reflection and renewal。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
