@@ -1219,7 +1219,7 @@
   - [x] 462 正誤問題〈234〉（国公立レベル：must not と don’t have to・need not の使い分け）10問
   - [x] 463 誤文訂正〈228〉（東大レベル：英作文の people・police・news・furniture などの単数・複数）10問
   - [x] 464 正誤問題〈235〉（京大レベル：英作文の be made of・be made from・be made into）10問
-  - [ ] 465 誤文訂正〈229〉（国公立レベル：I don’t think ～ の否定の位置と I hope not・I’m afraid not）10問
+  - [x] 465 誤文訂正〈229〉（国公立レベル：I don’t think ～ の否定の位置と I hope not・I’m afraid not）10問
   - [ ] 466 正誤問題〈236〉（東大レベル：英作文の fewer と less・as many と as much）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

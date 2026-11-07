@@ -9741,6 +9741,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'There [are] much useful information on this website.', choices: ['is', 'were', 'have', 'many'], answer: 0, why: 'information は数えられない名詞で単数あつかいなので is。' },
     ],
   },
+  {
+    id: 'exam-fix-229',
+    title: '入試の誤文訂正〈229〉（国公立レベル：I don’t think ～ の否定の位置と I hope not・I’m afraid not）',
+    points: ['英語では「～ではないと思う」を I don’t think ～ と、think の側を否定するのがふつう（×I think he won’t come → ○I don’t think he will come）。believe・suppose・imagine も同じ。ただし hope と be afraid は I hope he won’t ～ のように that 節を否定する。', '相手のことばに「そうではないといいね」「残念ながらそうではない」とこたえるときは I hope not／I’m afraid not（×I don’t hope so）。「そうだといいね」は I hope so、「そう思う」は I think so。'],
+    examples: [{ en: 'I don’t think it will rain. / Will he be late? — I hope not.', ja: '雨はふらないと思う。／彼はおくれるかな？—おくれないといいね。' }],
+    questions: [
+      { sentence: 'I [think it won’t] rain tomorrow.', choices: ['don’t think it will', 'think not it will', 'not think it will', 'don’t think it won’t'], answer: 0, why: '英語では think の側を否定するので I don’t think it will rain。' },
+      { sentence: 'Will it snow tomorrow? — [I don’t hope so].', choices: ['I hope not', 'I not hope', 'I hope no', 'I don’t hope'], answer: 0, why: '「そうでないといいね」は I hope not。' },
+      { sentence: 'Can you come to the party? — [I’m not afraid so].', choices: ['I’m afraid not', 'I’m afraid no', 'I don’t afraid', 'I afraid not'], answer: 0, why: '「残念ながら行けない」は I’m afraid not。' },
+      { sentence: 'I [believe she won’t] agree with the plan.', choices: ['don’t believe she will', 'believe not she will', 'not believe she will', 'don’t believe she won’t'], answer: 0, why: 'believe も主節を否定するので I don’t believe she will agree。' },
+      { sentence: 'Is he coming? — [I think not so].', choices: ['I don’t think so', 'I not think so', 'I think no', 'I don’t so think'], answer: 0, why: '「そうは思わない」は I don’t think so。' },
+      { sentence: 'Will you pass the test? — I [hope it].', choices: ['hope so', 'hope that', 'hope this', 'hope yes'], answer: 0, why: '「そうだといいね」は I hope so。' },
+      { sentence: 'I [suppose he isn’t] at home now.', choices: ['don’t suppose he is', 'suppose not he is', 'not suppose he is', 'don’t suppose he isn’t'], answer: 0, why: 'suppose も主節を否定するので I don’t suppose he is at home。' },
+      { sentence: 'I [don’t hope] it will rain on the day of the picnic.', choices: ['hope it won’t', 'not hope', 'hope not that', 'don’t hope that'], answer: 0, why: 'hope は that 節を否定するので I hope it won’t rain。' },
+      { sentence: 'Is the shop still open? — [I’m afraid it isn’t not].', choices: ['I’m afraid not', 'I’m not afraid', 'I afraid not', 'I’m afraid no'], answer: 0, why: '「残念ながら開いていない」は I’m afraid not。' },
+      { sentence: 'Do you think it will be sunny? — [Yes, I think it].', choices: ['Yes, I think so', 'Yes, I think that', 'Yes, I think yes', 'Yes, I so think'], answer: 0, why: '「そう思う」は I think so。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
