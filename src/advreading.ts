@@ -40418,6 +40418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-managed-retreat',
+    title: 'Should Coastal Communities Retreat from the Sea?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As sea levels rise and coastal storms become more intense, many communities living near the shore face a difficult choice. They can try to defend themselves by building higher sea walls, restoring beaches, and raising roads and houses, or they can gradually move away from the most vulnerable areas, a strategy known as managed retreat. For people whose families have lived in the same coastal town for generations, the idea of leaving can seem unthinkable, yet a growing number of experts argue that in some places it may be the only realistic option.",
+      "Supporters of managed retreat argue that defending every stretch of coastline is neither affordable nor sustainable. Sea walls and other protective structures are enormously expensive to build and maintain, and they must be repeatedly raised as the water continues to rise. Moreover, such defenses can fail during extreme storms, sometimes with catastrophic results for those who believed themselves safe behind them. Supporters claim that it is better to plan an orderly move while there is still time than to wait for a disaster to force people out. A planned move, they add, allows families to choose where to go, to stay close to relatives and neighbors, and to rebuild their lives at a pace they can manage.",
+      "Supporters also point to the benefits for the natural environment. When people move away from the coast, wetlands, dunes, and marshes can be allowed to return, providing habitats for wildlife and acting as natural barriers that absorb the energy of waves and storms. ( A ) such landscapes may seem less valuable than homes and roads, supporters argue, they offer protection to inland areas and help to preserve the ecological health of the coastline for future generations.",
+      "Critics, however, emphasize the human costs of retreat. Leaving a home means more than moving to a new building; it can mean losing a community, a way of life, and a deep connection to a particular place. Fishing villages, for example, may depend on access to the sea for their livelihoods, and their residents may have little desire or ability to start again elsewhere. Critics argue that forcing people to move, even with compensation, risks destroying communities that cannot easily be rebuilt.",
+      "Critics also raise questions of fairness. Wealthy coastal areas, which often have the political influence and resources to fund expensive defenses, may be protected, while poorer communities are encouraged or pressured to leave. Furthermore, if governments buy property in threatened areas, they must decide how much to pay, and residents whose homes have lost value because of the risk of flooding may receive far less than they need to establish themselves somewhere new. Such outcomes, critics warn, could leave the most vulnerable residents worse off than before the program began.",
+      "In practice, many places are attempting to combine defense and retreat rather than choosing one or the other. Some communities protect their most important buildings and infrastructure while gradually moving homes away from the most dangerous areas. Others offer voluntary purchase programs, allowing residents to sell their properties if they wish, and use the land to create parks or wetlands. Involving residents closely in such decisions, experts suggest, can make the process less painful and more widely accepted by those who must leave.",
+      "The debate over managed retreat ultimately reflects a broader challenge that climate change poses to human societies: the need to adapt to conditions that can no longer be fully controlled. For centuries, people have shaped coastlines to suit their needs, but rising seas may require a different relationship with the natural world, one based less on resistance than on adjustment. How communities respond will test not only their engineering skills but also their capacity for planning, solidarity, and difficult collective choices.",
+    ],
+    ja: [
+      '海面が上がり、海岸をおそうあらしがはげしくなるにつれて、海の近くに住む多くの地域がむずかしい選択にせまられている。より高い防潮堤をつくったり、砂浜を回復させたり、道路や家を高くしたりして自分たちを守ろうとすることもできるし、もっとも危険な地域から少しずつはなれていくこともできる。後者は「計画的な撤退」として知られる方法である。家族が何世代も同じ海辺の町に住んできた人々にとって、そこを去るという考えは考えられないものに思えるかもしれないが、場所によってはそれが唯一の現実的な選択肢かもしれないと主張する専門家がふえている。',
+      '計画的な撤退を支持する人々は、海岸線のすべてを守ることは、費用の面でもできないし、続けることもできないと主張する。防潮堤やほかの守りの建造物は、つくるのにも保つのにもとてつもなく費用がかかり、水が上がり続けるにつれて何度も高くしなければならない。さらに、そうした守りは極端なあらしのときにやぶれることがあり、その後ろで安全だと信じていた人々にとって、ときに大惨事をもたらす。災害が人々を追い出すまで待つより、まだ時間のあるうちに秩序ある移転を計画するほうがよいと支持する人々は言う。計画された移転なら、家族はどこへ行くかを選び、親せきや近所の人々の近くにとどまり、自分たちにあつかえる速さで暮らしを立て直すことができると彼らはつけ加える。',
+      '支持する人々はまた、自然環境にとっての利益をあげる。人々が海岸からはなれると、湿地や砂丘や沼地がもどってくることができ、野生の生き物にすみかをあたえ、波やあらしのエネルギーを吸収する自然の防壁の役割を果たす。そうした景色は家や道路より価値が低く見えるかもしれないが、内陸の地域を守り、将来の世代のために海岸線の生態系の健康を保つのに役立つと支持する人々は主張する。',
+      'しかし批判する人々は、撤退の人間にとっての負担を強調する。家を去ることは、新しい建物に移る以上のことを意味する。それは地域や暮らし方や、特定の場所との深いつながりを失うことになりうる。たとえば漁村は、生計を海に出られることにたよっているかもしれず、その住民には、よそで一からやり直す望みも力もほとんどないかもしれない。たとえ補償があっても人々に移転を強いることは、かんたんにはつくり直せない地域をこわす危険があると批判する人々は主張する。',
+      '批判する人々はまた、公平さについての問いを投げかける。費用のかかる守りに資金を出す政治的な影響力と資源をもつことの多い裕福な海辺の地域は守られるかもしれない一方で、貧しい地域は去るようにすすめられたり、圧力をかけられたりするかもしれない。さらに、政府が危険にさらされた地域の土地を買う場合、いくらはらうかを決めなければならず、洪水の危険のために家の価値が下がった住民は、新しい場所で暮らしを立てるのに必要な額よりはるかに少ない額しか受け取れないかもしれない。そうした結果は、もっとも弱い立場の住民を、計画がはじまる前より悪い状態に置きかねないと批判する人々は警告する。',
+      '実際には、多くの場所が、どちらか一方を選ぶのではなく、守りと撤退を組み合わせようとしている。もっとも大切な建物や基盤を守りながら、もっとも危険な地域から少しずつ家を移していく地域もある。また、住民が望めば土地を売れるようにする自発的な買い取りの計画を用意し、その土地を公園や湿地にするところもある。住民をそうした決定に深くかかわらせることで、その過程の痛みが少なくなり、去らなければならない人々により広く受け入れられるようになりうると専門家は言う。',
+      '計画的な撤退をめぐる議論は、結局のところ、気候変動が人間の社会にもたらす、より広い課題を反映している。もはや完全には制御できない条件に適応する必要である。何世紀ものあいだ、人々は自分たちの必要に合わせて海岸線を形づくってきたが、海面の上昇は、自然の世界とのちがう関係、つまり抵抗よりも調整にもとづく関係を求めるかもしれない。地域がどうこたえるかは、技術の力だけでなく、計画を立てる力と連帯と、むずかしい共同の選択をする力をためすことになるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「家や道路より価値が低く見えるかもしれないが、内陸を守る」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of managed retreat argue that defending every coastline is not ( 1 ) and that natural landscapes can return. Critics emphasize the loss of communities and raise questions of ( 2 ). Many places now try to ( 3 ) defense and retreat.',
+      blanks: [
+        { choices: ['affordable', 'beautiful', 'dangerous', 'necessary'], answer: 0, why: '第2段落 is neither affordable nor sustainable。' },
+        { choices: ['fairness', 'speed', 'taste', 'fashion'], answer: 0, why: '第5段落 Critics also raise questions of fairness。' },
+        { choices: ['combine', 'forget', 'separate', 'prohibit'], answer: 0, why: '第6段落 attempting to combine defense and retreat。' },
+      ],
+    },
+    tf: [
+      { statement: '防潮堤は、水が上がるにつれて何度も高くしなければならない。', answer: true, why: '第2段落 they must be repeatedly raised as the water continues to rise。' },
+      { statement: '湿地や砂丘は、波のエネルギーを吸収する自然の防壁になりうる。', answer: true, why: '第3段落 acting as natural barriers that absorb the energy of waves and storms。' },
+      { statement: '批判する人々は、家を去ることは新しい建物に移るだけのことだと言う。', answer: false, why: '第4段落 Leaving a home means more than moving to a new building。' },
+      { statement: '筆者は、守りか撤退かどちらか一方だけを選ぶべきだと結論づけている。', answer: false, why: '第6段落 attempting to combine defense and retreat rather than choosing one or the other。' },
+    ],
+    qa: [
+      { q: 'What might fishing villages depend on, according to critics?', choices: ['Access to the sea for their livelihoods.', 'Tourists from abroad.', 'New sea walls.', 'Government jobs.'], answer: 0, why: '第4段落 may depend on access to the sea for their livelihoods。' },
+      { q: 'What do some voluntary purchase programs do with the land?', choices: ['Create parks or wetlands.', 'Build new houses.', 'Build factories.', 'Sell it to companies.'], answer: 0, why: '第6段落 use the land to create parks or wetlands。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
