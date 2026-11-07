@@ -41102,6 +41102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rivers',
+    title: 'On Rivers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many of the world's great cities stand beside rivers, and this is no accident. For thousands of years, rivers provided people with water to drink, fish to eat, fertile soil for farming, and a means of transporting goods and travelers from one place to another. Settlements grew where rivers could be crossed or where they met the sea, and entire civilizations developed along their banks. Yet in many modern cities, rivers have been hidden beneath roads, confined between concrete walls, or treated simply as channels for carrying away waste. Residents may live for years within a few hundred meters of a river without ever noticing it, so thoroughly has it disappeared from the life of the city.",
+      "A river is, in one sense, a paradox. It seems to remain the same, flowing along the same course year after year, yet the water within it is never the same from one moment to the next. Philosophers have long used this image to reflect on change and continuity, suggesting that a person, like a river, may preserve a recognizable identity while constantly being renewed. To stand on a riverbank and watch the current is to observe both permanence and movement at once.",
+      "Rivers also connect places that may seem far apart. A single river may begin as a trickle of melting snow in distant mountains, pass through forests, farmland, and cities, and finally empty into the sea hundreds of kilometers away. ( A ) the people living along its course may never meet one another, they are linked by the water that flows past them, so that what happens upstream, such as pollution or the building of a dam, inevitably affects those who live downstream.",
+      "For this reason, rivers have often been sources of both cooperation and conflict. Communities and nations that share a river must find ways to divide its water fairly, especially in dry regions where every drop is precious. History offers many examples of disputes over rivers, but also of agreements that allowed different peoples to share them peacefully. In this sense, a river can teach the difficult lesson that our actions have consequences for others whom we may never see, and that responsibility does not end at the borders of our own community.",
+      "In the past century, many rivers have been profoundly altered by human activity. Dams have been built to generate electricity and control floods, channels have been straightened to allow ships to pass, and waste from factories and farms has poured into the water. These changes have brought undeniable benefits, but they have also damaged the habitats of fish and other creatures and, in some cases, increased the risk of floods by preventing rivers from spreading naturally across their surrounding land.",
+      "In recent years, however, a growing number of cities and communities have begun to restore their rivers. Concrete banks have been replaced with natural slopes and vegetation, hidden streams have been brought back to the surface, and efforts have been made to clean polluted water so that fish can return. Such projects often reveal how much a river can contribute to the life of a city, offering places to walk, play, and rest, and reminding residents of the natural world that flows through their streets.",
+      "In the end, our relationship with rivers may reflect our broader attitude toward nature. When we treat a river merely as a resource to be used or an obstacle to be controlled, we may lose sight of its deeper value as a living system that connects places, creatures, and people. To care for a river, by contrast, is to recognize that we are part of a larger flow of life, one that began long before us and will continue long after, if we allow it to.",
+    ],
+    ja: [
+      '世界の大都市の多くは川のほとりにあり、それは偶然ではない。何千年ものあいだ、川は人々に飲み水や、食べるための魚や、農業のための肥えた土をあたえ、品物や旅人をある場所から別の場所へ運ぶ手段にもなった。集落は川をわたれる場所や川が海にそそぐ場所で大きくなり、文明全体が川岸ぞいに発展した。しかし現代の多くの都市では、川は道路の下にかくされたり、コンクリートのかべのあいだにとじこめられたり、ただごみを運び去る水路としてあつかわれたりしている。住民は川から数百メートルのところに何年も住みながら、一度もそれに気づかないこともある。それほど完全に、川は都市の暮らしから消えてしまっているのである。',
+      '川は、ある意味でパラドックスである。年ごとに同じ道すじを流れ、同じままのように見えるが、その中の水は一瞬ごとに同じではない。哲学者たちは長いあいだこのたとえを使って変化と連続について考え、人もまた川のように、たえず新しくなりながら、それとわかる個性を保っているのかもしれないと示してきた。川岸に立って流れを見ることは、変わらないことと動くことを同時に見ることなのである。',
+      '川はまた、遠くはなれているように思える場所を結ぶ。一本の川が、遠い山でとける雪のしずくとしてはじまり、森や畑や都市を通りすぎ、最後には何百キロメートルもはなれた海にそそぐこともある。その流れにそって住む人々はたがいに一度も会わないかもしれないが、そばを流れる水によって結ばれており、そのため、汚染やダムの建設のような上流で起こることは、かならず下流に住む人々に影響する。',
+      'このため、川はしばしば協力と対立の両方の源になってきた。一本の川を分け合う地域や国々は、とくに一滴一滴が貴重なかわいた地域では、その水を公平に分ける方法を見つけなければならない。歴史には川をめぐる争いの例が数多くあるが、ちがう人々が川を平和に分け合えるようにした取り決めの例もある。この意味で、川は、私たちの行いが、一生会わないかもしれない他人に結果をもたらすという、むずかしい教えを伝えてくれる。そしてその責任は、自分の地域の境で終わるわけではない。',
+      'この一世紀のあいだに、多くの川が人間の活動によって大きく変えられてきた。電気をつくり洪水をおさえるためにダムがつくられ、船が通れるように水路がまっすぐにされ、工場や農場からのごみが水に流れこんだ。こうした変化はたしかな利益をもたらしたが、魚やほかの生き物のすみかをこわし、場合によっては、川がまわりの土地へ自然に広がるのをさまたげることで、洪水の危険をかえって高めもした。',
+      'しかし近年、自分たちの川を回復させはじめる都市や地域がふえている。コンクリートの岸が自然な斜面と植物に置きかえられ、かくされていた小川が地上にもどされ、魚がもどってこられるように、よごれた水をきれいにする努力がなされてきた。そうした取り組みは、川が都市の暮らしにどれほど役立ちうるかをしばしば明らかにする。歩いたり、遊んだり、休んだりする場所をあたえ、住民に、自分たちの通りを流れる自然の世界を思い出させてくれるのである。',
+      '結局のところ、川との関係は、自然に対するより広い態度を映しているのかもしれない。川をただ使うための資源や、おさえるべき障害としてあつかうとき、私たちは、場所や生き物や人々を結ぶ生きた仕組みとしての、川のより深い価値を見失ってしまうかもしれない。それに対して、川を大切にすることは、私たちがより大きな生命の流れの一部であることを認めることである。その流れは私たちよりずっと前にはじまり、私たちがそれをゆるすなら、私たちのずっとあとまで続いていくだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「たがいに一度も会わないかもしれないが、水によって結ばれている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '世界の大都市の多くが川のほとりにあるのは偶然ではない。', answer: true, why: '第1段落 this is no accident。' },
+      { statement: '川の中の水は、いつも同じ水である。', answer: false, why: '第2段落 the water within it is never the same from one moment to the next。' },
+      { statement: '上流で起こることは、下流に住む人々に影響する。', answer: true, why: '第3段落 what happens upstream ... inevitably affects those who live downstream。' },
+      { statement: 'ダムや水路の変化には、何の利益もなかった。', answer: false, why: '第5段落 These changes have brought undeniable benefits。' },
+    ],
+    qa: [
+      { q: 'What have philosophers used the image of a river to reflect on?', choices: ['Change and continuity.', 'Money and power.', 'War and peace.', 'Food and farming.'], answer: 0, why: '第2段落 to reflect on change and continuity。' },
+      { q: 'What have some cities done to restore their rivers?', choices: ['Replaced concrete banks with natural slopes and brought hidden streams back to the surface.', 'Built more dams.', 'Covered rivers with roads.', 'Straightened every channel.'], answer: 0, why: '第6段落 Concrete banks have been replaced with natural slopes ... hidden streams have been brought back to the surface。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
