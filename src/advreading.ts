@@ -40302,6 +40302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-clothing',
+    title: 'On What We Wear',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Each morning, most of us make a decision so routine that we hardly notice it: we choose what to wear. The choice may take only a moment, and we may tell ourselves that we are simply dressing for the weather or for comfort. Yet clothing is rarely a purely practical matter. What we wear speaks to others before we have said a word, and it may also shape, in quiet but powerful ways, how we see ourselves and how we behave throughout the day.",
+      "At the most basic level, clothing protects the body from cold, heat, rain, and injury. But human beings have long used it for far more than protection. Across history and across cultures, clothes have signaled a person's age, occupation, social rank, religious belief, and membership in particular groups. A uniform tells us at a glance who is a nurse, a soldier, or a student, and even in societies without strict rules about dress, people read one another's clothing constantly, often without being aware that they are doing so.",
+      "Clothing is also a means of self-expression. Through the colors, styles, and combinations they choose, people may express their tastes, their moods, and their sense of who they are or wish to become. ( A ) such choices may appear trivial to an outsider, they can matter deeply to the person who makes them, especially to young people who are searching for an identity of their own and trying to find their place among their peers.",
+      "At the same time, the freedom to express oneself through clothing is never complete. Social expectations, workplace rules, and the opinions of others all limit what people feel able to wear. Someone who dresses in a way that differs sharply from those around them may be admired for their courage, but they may also be criticized, ridiculed, or excluded. In this sense, clothing reflects a constant negotiation between the desire to stand out and the desire to fit in. Fashions themselves often arise from this tension, as styles first adopted by a daring few gradually spread until they become ordinary and the cycle begins again.",
+      "There is evidence, too, that clothing affects not only how others see us but how we see ourselves. Many people report feeling more confident, focused, or relaxed depending on what they are wearing, and the act of dressing for a special occasion can itself create a sense of importance or celebration. A person who changes out of work clothes at the end of the day may feel that they are leaving one role behind and entering another, as though the garments carried part of their identity with them.",
+      "In recent decades, the rise of inexpensive, rapidly changing fashion has transformed the relationship between people and their clothes. Garments that were once repaired and worn for many years are now often discarded after a few uses, and wardrobes are filled with items that are rarely worn. This abundance offers more choice than ever before, yet it may also weaken the attachment that people once felt to particular garments, and it raises serious questions about waste and about the conditions of those who make the clothes. Some people have responded by buying fewer garments of higher quality and keeping them for longer.",
+      "In the end, clothing reveals the close connection between the outer and the inner aspects of human life. The garments we wear are material objects, but they are also signs, memories, and expressions of who we are and how we wish to be seen. To think carefully about what we wear, then, is not merely a matter of vanity, but a way of reflecting on our relationships with others, with ourselves, and with the world that produces the things we so casually put on each morning.",
+    ],
+    ja: [
+      '毎朝、私たちのほとんどは、あまりに決まりきっていてほとんど気づかないような決定をしている。何を着るかを選ぶのである。その選択にはほんの一瞬しかかからないかもしれず、私たちは自分に、ただ天気や着心地に合わせて服を着ているのだと言い聞かせるかもしれない。しかし服が純粋に実用的な問題であることはめったにない。着ているものは、私たちがひとことも話さないうちに人に語りかけ、また、しずかだが強いやり方で、私たちが一日を通じて自分をどう見て、どうふるまうかを形づくるかもしれない。',
+      'もっとも基本的な次元では、服は寒さや暑さや雨やけがから体を守る。しかし人間は長いあいだ、服を守ること以上のはるかに多くのことのために使ってきた。歴史を通じて、また文化をこえて、服はその人の年齢や職業や社会的な地位や宗教的な信念や、特定の集団の一員であることを知らせてきた。制服を見れば、だれが看護師か、兵士か、学生かがひと目でわかり、服装についてのきびしい規則のない社会でさえ、人々はたえずたがいの服を読みとっており、しかも自分がそうしていることにしばしば気づいていない。',
+      '服はまた、自分をあらわす手段でもある。選ぶ色や型や組み合わせを通じて、人は自分の好みや気分や、自分がだれであるか、あるいはだれになりたいかという感覚をあらわすことがある。そうした選択は外の人にはささいに見えるかもしれないが、選ぶ本人にとってはとても大切でありうる。とくに、自分自身の個性をさがし、仲間の中で自分の居場所を見つけようとしている若者にとってはそうである。',
+      '同時に、服を通じて自分をあらわす自由がけっして完全でないことも事実である。社会の期待や職場の規則や他人の意見はどれも、人が着られると感じるものを制限している。まわりの人々と大きくちがう服装をする人は、その勇気を尊敬されるかもしれないが、批判されたり、からかわれたり、仲間はずれにされたりすることもある。この意味で、服は、目立ちたいという望みとなじみたいという望みのあいだの、たえまない交渉を映している。流行そのものもしばしばこの緊張から生まれる。大胆な少数の人がはじめに取り入れた型が、少しずつ広まってありふれたものになり、そしてまた同じ循環がはじまるのである。',
+      '服が、人が私たちをどう見るかだけでなく、私たちが自分をどう見るかにも影響するという証拠もある。多くの人が、着ているものによって、より自信をもったり、集中したり、くつろいだりすると語り、特別な日のために服を着るという行い自体が、大切さや祝いの感覚を生み出すことがある。一日の終わりに仕事着からほかの服に着がえる人は、まるで衣服が自分の個性の一部を運んでいるかのように、一つの役割を置いて別の役割に入っていくと感じるかもしれない。',
+      'ここ数十年、安くて移り変わりの速いファッションの広まりが、人と服の関係を大きく変えてきた。かつてはつくろわれ、何年も着られていた衣服が、今ではしばしば数回着ただけですてられ、たんすはめったに着られない服であふれている。この豊かさはかつてないほど多くの選択肢をあたえてくれるが、人々がかつて特定の衣服に感じていた愛着を弱めるかもしれず、ごみの問題や、服をつくる人々の労働の条件について重大な問いを投げかけている。これにこたえて、質のよい服を少しだけ買い、より長く着るようになった人々もいる。',
+      '結局のところ、服は、人間の暮らしの外側と内側の深い結びつきを明らかにする。私たちが着る衣服は物であるが、同時に、しるしであり、思い出であり、私たちがだれであり、どう見られたいかをあらわすものでもある。だから、何を着るかを注意深く考えることは、ただの見えの問題ではなく、他人との関係、自分自身との関係、そして私たちが毎朝何気なく身につけるものを生み出す世界との関係について、ふり返る一つの方法なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「外の人にはささいに見えるかもしれないが、本人にはとても大切」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '服は、その人の職業や社会的な地位を知らせてきた。', answer: true, why: '第2段落 clothes have signaled a person’s age, occupation, social rank ...。' },
+      { statement: '服を通じて自分をあらわす自由は、いつも完全である。', answer: false, why: '第4段落 the freedom to express oneself through clothing is never complete。' },
+      { statement: '着ているものによって、自信をもったりくつろいだりすると語る人が多い。', answer: true, why: '第5段落 Many people report feeling more confident, focused, or relaxed。' },
+      { statement: '筆者は、何を着るかを考えるのはただの見えの問題だと述べている。', answer: false, why: '第7段落 is not merely a matter of vanity。' },
+    ],
+    qa: [
+      { q: 'What does a uniform tell us at a glance?', choices: ['Who is a nurse, a soldier, or a student.', 'How old the clothes are.', 'What the weather will be.', 'How much the clothes cost.'], answer: 0, why: '第2段落 A uniform tells us at a glance who is a nurse, a soldier, or a student。' },
+      { q: 'What has happened to garments because of inexpensive, rapidly changing fashion?', choices: ['They are often discarded after a few uses.', 'They are repaired more often.', 'They are worn for many years.', 'They have become more expensive.'], answer: 0, why: '第6段落 are now often discarded after a few uses。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
