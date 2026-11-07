@@ -42898,6 +42898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sports-technology',
+    title: 'Should Technology in Sport Be Limited?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many sports, the equipment that athletes use has changed dramatically over the past few decades. Running shoes now contain light, springy materials and stiff plates that return more of the runner's energy with every step, swimsuits have been designed to reduce resistance in the water, and bicycles are built from materials that make them both lighter and stronger. As records continue to fall, sports organizations have faced an increasingly difficult question: should such technological advances be welcomed as a natural part of progress, or should they be limited in order to protect the fairness and meaning of competition?",
+      "Supporters of new technology argue that sport has always changed in response to new ideas. The first runners competed barefoot, early tennis players used heavy wooden rackets, and pole vaulters once used poles made of wood or bamboo, yet few people today would suggest returning to such equipment. Supporters point out that improvements in shoes, rackets, and bicycles have made sports safer and more enjoyable for millions of ordinary participants, and they argue that it would be strange to forbid elite athletes from using the best equipment available when everyone else is free to do so.",
+      "Supporters also claim that technology can make sport more exciting for spectators. Fans enjoy seeing records broken and limits pushed further, and new equipment may allow athletes to achieve performances that would once have seemed impossible. ( A ) some records may be set partly because of better equipment, supporters argue, athletes must still train for years and compete under enormous pressure, so that the achievement remains essentially their own rather than that of the engineers who designed their shoes.",
+      "Critics, however, warn that technology can undermine the very idea of fair competition. If the outcome of a race depends heavily on which shoes or suits the competitors are wearing, then the winner may simply be the athlete with access to the most advanced equipment rather than the one who has trained hardest or shown the greatest talent. Critics also point out that new products are often expensive or available only to athletes sponsored by particular companies, which may give a further advantage to those from wealthy countries and well-funded teams.",
+      "Critics also worry about the difficulty of comparing performances across time. Much of the appeal of sport lies in the ability to compare today's champions with the great athletes of the past, but if records are broken mainly because of improvements in equipment, such comparisons become almost meaningless. Some critics further argue that when a sport becomes too dependent on technology, it risks becoming a contest between manufacturers rather than between human beings, and that this would weaken the qualities of effort and endurance that make sport worth watching.",
+      "In response to these concerns, many sports organizations have introduced rules that limit particular kinds of equipment. Some have set maximum measurements for the thickness of shoe soles or the materials that swimsuits may contain, while others require that any equipment used in competition must also be available for purchase by the general public. Such rules attempt to allow genuine improvements in safety and comfort while preventing changes that would give some athletes an unfair advantage over others. Officials, however, often find it difficult to keep such rules up to date, because manufacturers are constantly developing new designs.",
+      "The debate over technology in sport ultimately reflects a broader question about what we value in human achievement. If sport is mainly about discovering how fast, how high, and how far human beings can go, then any tool that helps them go further may seem acceptable. If, however, sport is valued above all as a test of human ability under fair and equal conditions, then the rules governing equipment become as important as the athletes themselves, since they determine what kind of achievement a victory really represents.",
+    ],
+    ja: [
+      '多くのスポーツで、選手が使う用具はここ数十年で劇的に変わってきた。ランニングシューズにはいまや、一歩ごとに走る人のエネルギーをより多く返す、軽くはずむ素材とかたい板が入っており、水着は水の抵抗を減らすように設計され、自転車はより軽くより強くなる素材でつくられている。記録がやぶられつづけるなかで、スポーツ団体はますますむずかしい問いに直面してきた。そうした技術の進歩は進歩の自然な一部として歓迎されるべきなのか、それとも競技の公平さと意味を守るために制限されるべきなのか、という問いである。',
+      '新しい技術を支持する人々は、スポーツはつねに新しい考えに応じて変わってきたと主張する。最初の走者ははだしで競い、初期のテニス選手は重い木のラケットを使い、棒高とびの選手はかつて木や竹でできた棒を使っていたが、今日そうした用具にもどることを提案する人はほとんどいない。くつやラケット、自転車の改良は、何百万人ものふつうの参加者にとってスポーツをより安全で楽しいものにしてきたと支持者は指摘し、ほかのだれもが自由に使えるのに、一流の選手だけが手に入る最高の用具を使うのを禁じるのはおかしいだろうと主張する。',
+      '支持する人々はまた、技術はスポーツを観客にとってよりわくわくするものにしうると主張する。ファンは記録がやぶられ、限界がさらに押し広げられるのを見るのを楽しみ、新しい用具によって、選手はかつて不可能に思えた成績をあげられるようになるかもしれない。一部の記録は部分的にはよりよい用具のおかげで生まれるかもしれないが、選手はそれでも何年も練習し、ものすごい重圧のもとで競わなければならないので、その達成は、くつを設計した技術者のものではなく、本質的には選手自身のものでありつづける、と支持者は主張する。',
+      'しかし批判する人々は、技術が公平な競争という考えそのものをそこないうると警告する。レースの結果が、競技者がどのくつや水着を身につけているかに大きく左右されるなら、勝者は、もっとも懸命に練習した選手やもっとも大きな才能を示した選手ではなく、ただもっとも進んだ用具を手に入れられる選手になってしまうかもしれない。批判する人々はまた、新しい製品はしばしば高価であるか、特定の会社に支援された選手にしか手に入らず、それが豊かな国や資金の豊富なチームの選手にさらに有利にはたらくかもしれないと指摘する。',
+      '批判する人々はまた、時代をこえて成績を比べることがむずかしくなることも心配する。スポーツの魅力の多くは、今日のチャンピオンを過去の偉大な選手と比べられることにあるが、記録がおもに用具の改良のおかげでやぶられるなら、そうした比較はほとんど意味をなさなくなる。さらに、スポーツが技術にたよりすぎるようになると、人間どうしではなくメーカーどうしの競争になってしまうおそれがあり、それはスポーツを見る価値のあるものにしている努力とねばり強さという特質を弱めるだろう、と主張する批判者もいる。',
+      'こうした懸念に応えて、多くのスポーツ団体は特定の種類の用具を制限する決まりを取り入れてきた。くつの底の厚さや水着にふくめてよい素材に上限を設けた団体もあれば、競技で使われる用具はすべて一般の人々も買えるものでなければならないと定めた団体もある。そうした決まりは、安全と快適さの本当の改良は認めつつ、一部の選手にほかの選手より不公平な有利さをあたえる変化をふせごうとするものである。しかし、メーカーがたえず新しい設計を生み出しているため、役員がそうした決まりを最新の状態に保つのはむずかしいことが多い。',
+      'スポーツにおける技術をめぐる議論は、結局のところ、私たちが人間の達成において何を大切にしているのかという、より広い問いを反映している。スポーツがおもに、人間がどれだけ速く、高く、遠くまで行けるかを発見することであるなら、人間がより遠くへ行く助けになる道具は、どれも受け入れられるものに思えるかもしれない。しかし、スポーツが何よりも、公平で平等な条件のもとでの人間の能力の試験として大切にされるなら、用具を定める決まりは選手自身と同じくらい重要になる。その決まりこそが、勝利が本当はどのような達成を表しているのかを決めるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「一部の記録は用具のおかげで生まれるかもしれないが、達成は選手自身のもの」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say sport has always changed with new ideas and that technology makes it more ( 1 ) for spectators. Critics warn that it can undermine fair competition and make it hard to compare performances across ( 2 ). Many organizations now set ( 3 ) on particular kinds of equipment.',
+      blanks: [
+        { choices: ['exciting', 'expensive', 'dangerous', 'boring'], answer: 0, why: '第3段落 technology can make sport more exciting for spectators。' },
+        { choices: ['time', 'countries', 'languages', 'schools'], answer: 0, why: '第5段落 the difficulty of comparing performances across time。' },
+        { choices: ['limits', 'prizes', 'taxes', 'colors'], answer: 0, why: '第6段落 introduced rules that limit particular kinds of equipment。' },
+      ],
+    },
+    tf: [
+      { statement: '棒高とびの選手は、かつて木や竹の棒を使っていた。', answer: true, why: '第2段落 pole vaulters once used poles made of wood or bamboo。' },
+      { statement: '支持者によると、新しい用具を使えば選手は練習しなくてもよい。', answer: false, why: '第3段落 athletes must still train for years。' },
+      { statement: '新しい製品は、特定の会社に支援された選手にしか手に入らないことがある。', answer: true, why: '第4段落 available only to athletes sponsored by particular companies。' },
+      { statement: 'すべてのスポーツ団体が、用具についての決まりをなくした。', answer: false, why: '第6段落 many sports organizations have introduced rules that limit particular kinds of equipment。' },
+    ],
+    qa: [
+      { q: 'What do some critics fear a sport may become if it depends too much on technology?', choices: ['A contest between manufacturers.', 'A game for children only.', 'A sport without spectators.', 'A competition without rules.'], answer: 0, why: '第5段落 a contest between manufacturers rather than between human beings。' },
+      { q: 'What do some organizations require of equipment used in competition?', choices: ['It must be available for purchase by the general public.', 'It must be made of wood.', 'It must be designed by the athletes.', 'It must be used only once.'], answer: 0, why: '第6段落 must also be available for purchase by the general public。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
