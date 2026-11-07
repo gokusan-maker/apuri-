@@ -43662,6 +43662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-spoons',
+    title: 'On Spoons',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Among the tools that human beings use every day, the spoon is perhaps the one we learn to use first. Long before children can write their names or tie their shoes, they are given a small spoon and encouraged to bring food to their own mouths, often with messy and uncertain results. Because it is so familiar, the spoon rarely attracts our attention, yet its simple shape carries a long history and a surprising range of meanings, connected not only with eating but also with care, dependence, and the gradual growth of independence.",
+      "The basic form of the spoon is very old. People in many parts of the world used shells, pieces of wood, or hollowed bones to scoop up liquids and soft foods long before metal tools were common, and the spoon in some form appears in almost every culture. Unlike the knife, which cuts, or the fork, which pierces, the spoon simply holds, and this gentle function may explain why it has so often been associated with nourishment rather than with force. Even today, the first solid food that many babies receive is offered on a spoon, often by someone who is watching their face closely for signs of pleasure or refusal.",
+      "The spoon is also closely tied to the experience of being cared for. Before we can feed ourselves, someone else must feed us, guiding a spoon toward our mouths with patience and attention, and many people's earliest memories of affection may be connected with this act. ( A ) the scene is ordinary enough to be forgotten, it represents one of the most basic forms of trust between people, since the one who is fed must accept what is offered and the one who feeds must pay close attention to the other's needs.",
+      "Learning to use a spoon oneself is therefore an important step toward independence. A child who insists on holding the spoon, even when much of the food ends up on the floor, is expressing a desire to act without help, and parents who allow this struggle are making a choice to accept mess and delay for the sake of the child's development. In this sense, the spoon marks a small but meaningful moment in the long process by which dependent infants become capable of caring for themselves.",
+      "At the other end of life, the spoon may take on this meaning once again. People who are ill or elderly sometimes lose the ability to feed themselves, and those who care for them must return to the patient work of feeding another person. Many caregivers describe this experience as both demanding and deeply moving, since it reverses the roles of childhood and reminds them that the care they once received is now being returned in a different form. Some describe the quiet moments of feeding a parent as among the most intimate they have ever shared with that person.",
+      "Spoons also carry meanings in language and custom. In some places, a decorated spoon is given as a gift to celebrate the birth of a child, and the expression born with a silver spoon in one's mouth is used to describe someone who has enjoyed wealth and privilege from the beginning of life. Such customs and expressions suggest that the spoon has long been associated not only with feeding but also with the circumstances into which a person is born.",
+      "Perhaps, then, spoons deserve more attention than we usually give them. They remind us that every human life depends at its beginning, and often at its end, on the patient care of others, and that the movement toward independence is gradual, uncertain, and supported by those who are willing to wait. The next time we lift a spoon without thinking, it may be worth remembering the many hands that once guided that same simple motion, and the trust that such guidance required.",
+    ],
+    ja: [
+      '人間が毎日使う道具のなかで、スプーンはおそらく私たちが最初に使い方を学ぶものである。自分の名前を書いたり、くつひもを結んだりできるようになるずっと前に、子どもは小さなスプーンをあたえられ、自分の口に食べものを運ぶよう促される。その結果はしばしばちらかって、たよりないものである。あまりにもなじみ深いので、スプーンが私たちの注意を引くことはめったにないが、その単純な形には長い歴史と、おどろくほどはば広い意味がこめられている。それは食べることだけでなく、世話をすること、だれかにたよること、そして少しずつ自立していくことにも結びついているのである。',
+      'スプーンの基本の形はとても古い。世界の多くの地域の人々は、金属の道具が広まるずっと前から、貝がらや木切れ、くりぬいた骨を使って液体ややわらかい食べものをすくっており、何らかの形のスプーンはほとんどどの文化にもあらわれる。切るナイフや、つきさすフォークとちがって、スプーンはただ受けとめる。このやさしい働きこそが、スプーンがしばしば力ではなく栄養と結びつけられてきた理由なのかもしれない。今日でも、多くの赤ちゃんが最初に口にする固形の食べものはスプーンで差し出され、差し出す人はしばしば、喜んでいるか、いやがっているかのしるしを見のがさないよう、その顔をじっと見つめている。',
+      'スプーンはまた、世話をされる経験とも深く結びついている。自分で食べられるようになる前は、だれかほかの人が、根気と注意をもってスプーンを私たちの口に運んで食べさせてくれなければならず、多くの人のいちばん古い愛情の記憶は、この行為と結びついているのかもしれない。その場面はわすれられてしまうほどありふれたものだが、それは人と人とのあいだのもっとも基本的な信頼の形の一つを表している。食べさせてもらう人は差し出されたものを受け入れなければならず、食べさせる人は相手の必要に細かく注意をはらわなければならないからである。',
+      'だから、自分でスプーンを使えるようになることは、自立への大切な一歩なのである。食べものの多くが床に落ちてしまうときでさえスプーンをもちたがる子どもは、助けなしに行動したいという願いを表しており、この奮闘を許す親は、子どもの成長のために、ちらかることやおくれを受け入れるという選択をしている。この意味で、スプーンは、人にたよる赤ちゃんが自分で自分の世話をできるようになっていく長い過程のなかの、小さいけれども意味のある瞬間を示しているのである。',
+      '人生のもう一方のはしでも、スプーンはふたたびこの意味をおびることがある。病気の人やお年寄りは、ときに自分で食べる力を失い、その世話をする人々は、ほかの人に食べさせるという根気のいる仕事にもどらなければならない。多くの介護する人々は、この経験をたいへんであると同時に深く心を動かされるものだと語る。それは子ども時代の役割を逆にし、かつて自分が受けた世話が、いまちがう形で返されていることを思い出させるからである。親に食べさせるしずかなひとときを、その人とこれまでに分かち合ったなかでもっとも親密な時間の一つだと語る人もいる。',
+      'スプーンはまた、ことばや習慣のなかでも意味をもっている。子どもの誕生を祝って、かざりのついたスプーンを贈り物にする地域もあり、「銀のスプーンをくわえて生まれる」という表現は、人生の始まりから富と特権を楽しんできた人をあらわすのに使われる。そうした習慣や表現は、スプーンが昔から、食べさせることだけでなく、人がどのような境遇に生まれるかとも結びつけられてきたことを思わせる。',
+      'だとすれば、スプーンは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。スプーンは、どの人間の人生も、その始まりに、そしてしばしばその終わりに、ほかの人々の根気強い世話にたよっていること、そして自立への歩みは少しずつで、たよりなく、待つ気のある人々にささえられていることを思い出させてくれる。次に何も考えずにスプーンをもち上げるとき、かつてその同じ単純な動きを導いてくれた多くの手と、その導きが必要とした信頼を思い出す価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「その場面はわすれられるほどありふれているが、もっとも基本的な信頼の形を表している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人々は金属の道具が広まる前から、貝がらなどでものをすくっていた。', answer: true, why: '第2段落 used shells, pieces of wood, or hollowed bones ... long before metal tools were common。' },
+      { statement: 'スプーンは、ナイフのように食べものを切るための道具である。', answer: false, why: '第2段落 Unlike the knife, which cuts ... the spoon simply holds。' },
+      { statement: '子どもにスプーンをもたせる親は、ちらかることを受け入れている。', answer: true, why: '第4段落 making a choice to accept mess and delay。' },
+      { statement: '筆者によると、自立への歩みはとつぜん一度に起こる。', answer: false, why: '第7段落 the movement toward independence is gradual, uncertain。' },
+    ],
+    qa: [
+      { q: 'How do many caregivers describe the experience of feeding someone who is ill or elderly?', choices: ['Both demanding and deeply moving.', 'Easy and boring.', 'Dangerous and unpleasant.', 'Quick and simple.'], answer: 0, why: '第5段落 as both demanding and deeply moving。' },
+      { q: 'What is a decorated spoon given as a gift to celebrate in some places?', choices: ['The birth of a child.', 'A wedding.', 'A new job.', 'A long journey.'], answer: 0, why: '第6段落 to celebrate the birth of a child。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
