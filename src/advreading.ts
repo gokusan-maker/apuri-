@@ -40222,6 +40222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-color',
+    title: 'On Color',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We live surrounded by color, yet we seldom stop to ask what it really is. To a physicist, color is a matter of light of different wavelengths reflected from surfaces and received by the eye. To a painter, it is a material to be mixed, balanced, and arranged. To most of us, however, color is simply part of the way the world appears, as natural and unquestioned as the shapes of things, and it is only when we reflect on it that its strangeness and richness begin to emerge.",
+      "One surprising fact about color is that it depends as much on the observer as on the object. The same apple may look bright red in sunlight and dull brown in dim evening light, and two people with different eyes may not perceive a shade in exactly the same way. Many animals see colors that are invisible to human beings, while others see far fewer. Color, in this sense, is not a fixed property of things but a relationship between the world, the light that falls on it, and the creature that looks at it.",
+      "Color is also shaped by language and culture. Different languages divide the range of visible colors in different ways, and a single word in one language may cover what another language treats as two or three distinct colors. ( A ) all human beings share broadly similar eyes, the words available to them may influence which differences they notice and remember, so that speakers of different languages may, in a subtle sense, live in slightly different worlds of color.",
+      "Beyond perception and language, colors carry rich emotional and symbolic meanings. In many societies, particular colors are associated with mourning, celebration, danger, or purity, and these associations can vary greatly from one culture to another. A color that signifies happiness at a wedding in one country may be worn at funerals in another. Such meanings are learned so early and so deeply that they often feel natural, even though they are the product of long and complex histories. Travelers who move between cultures sometimes discover, with surprise, that a color they had always considered cheerful carries a very different message elsewhere.",
+      "Color also has a powerful influence on mood and behavior, though its effects are often subtle. People commonly describe some colors as warm and others as cool, and designers of homes, hospitals, and shops choose colors carefully in the hope of creating particular feelings. Whether specific colors reliably produce the same effects in everyone remains uncertain, but few would deny that a room painted in one color can feel very different from the same room painted in another. Even the changing colors of the sky at dawn and dusk can alter our sense of time and our state of mind.",
+      "In modern life, our relationship with color has been transformed by technology. Artificial dyes and pigments have made bright colors cheap and widely available, whereas in earlier centuries some colors were so rare and expensive that they were reserved for the wealthy or powerful. Screens now display millions of colors at the touch of a button. Yet this abundance may also make us less attentive, since colors that are everywhere can easily become unremarkable, losing some of the wonder they once inspired.",
+      "In the end, reflecting on color reminds us how much of our experience is shaped by the meeting of the world and the mind. Color belongs neither entirely to objects nor entirely to ourselves, but arises from the encounter between them, colored in turn by language, memory, and culture. To look closely at color, then, is to discover that even the most ordinary act of seeing is full of complexity, and that the familiar world around us is richer and stranger than we usually imagine.",
+    ],
+    ja: [
+      '私たちは色にかこまれて暮らしているが、それが本当は何なのかを立ち止まって問うことはめったにない。物理学者にとって、色とは、物の表面からはね返されて目に受け取られる、さまざまな波長の光の問題である。画家にとっては、まぜ、つりあいをとり、配置するための材料である。しかし私たちのほとんどにとって、色はただ世界が見えるあり方の一部であり、物の形と同じように自然で疑われないものであって、それについてじっくり考えたときにはじめて、その不思議さと豊かさがあらわれはじめる。',
+      '色についてのおどろくべき事実の一つは、色が物と同じくらい見る者にかかっているということである。同じりんごでも、日光の下ではあざやかな赤に見え、夕方のうす暗い光の中ではくすんだ茶色に見えることがあり、ちがう目をもつ二人が、ある色合いをまったく同じようには感じていないかもしれない。多くの動物は人間には見えない色を見ており、一方でずっと少ない色しか見ない動物もいる。この意味で、色は物の決まった性質ではなく、世界と、それに当たる光と、それを見る生き物とのあいだの関係なのである。',
+      '色はまた、ことばと文化によって形づくられる。言語によって目に見える色の範囲の分け方はちがい、ある言語の一つの語が、別の言語では二つか三つの別々の色としてあつかわれるものをふくむことがある。すべての人間はおおまかには似た目をもっているが、使えることばが、どのちがいに気づき、おぼえるかに影響するかもしれず、そのため、ちがう言語を話す人々は、かすかな意味で、少しずつちがう色の世界に住んでいるのかもしれない。',
+      '知覚とことばをこえて、色は豊かな感情的、象徴的な意味をもっている。多くの社会で、特定の色は、喪や祝いや危険や純粋さと結びつけられており、こうした結びつきは文化によって大きくちがうことがある。ある国では結婚式でよろこびをあらわす色が、別の国では葬式で身につけられることもある。そうした意味はとても早く、とても深く学ばれるので、長く複雑な歴史の産物であるにもかかわらず、しばしば自然なものに感じられる。文化から文化へと移り住む旅行者は、ずっと明るい色だと思っていた色が、よその土地ではまったくちがう意味を伝えていることに気づいて、おどろくことがある。',
+      '色はまた、気分やふるまいに強い影響をあたえるが、その効果はしばしばかすかである。人々はよく、ある色をあたたかい色、ほかの色をつめたい色と言い、家や病院や店をつくる人々は、特定の感じを生み出すことを願って色を注意深く選ぶ。特定の色がすべての人にいつも同じ効果を生むかどうかははっきりしないが、ある色にぬられた部屋が、別の色にぬられた同じ部屋とまったくちがって感じられうることを否定する人はほとんどいないだろう。夜明けや夕暮れの空の色の移り変わりでさえ、時間の感じ方や心の状態を変えることがある。',
+      '現代の暮らしでは、色との関係は技術によって大きく変わった。人工の染料や顔料によって、あざやかな色は安く手に入りやすくなったが、以前の何世紀かには、あまりにめずらしく高価なために、裕福な人や権力のある人だけのものとされた色もあった。今では画面がボタン一つで何百万もの色を映し出す。しかしこの豊かさは、私たちの注意をうすれさせるかもしれない。どこにでもある色は、かんたんにありふれたものになり、かつて呼び起こしていたおどろきの一部を失ってしまうからである。',
+      '結局のところ、色についてじっくり考えることは、私たちの経験のどれほど多くが世界と心の出会いによって形づくられているかを思い出させてくれる。色は物だけのものでも、私たちだけのものでもなく、その両者の出会いから生まれ、さらにことばや記憶や文化によって色づけられている。だから、色をよく見ることは、もっともありふれた見るという行いでさえ複雑さに満ちていること、そして身のまわりのなじみの世界が、ふだん思っているよりも豊かで不思議であることを見いだすことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「おおまかには似た目をもっているが、ことばが気づくちがいに影響する」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '同じりんごでも、光によってちがう色に見えることがある。', answer: true, why: '第2段落 The same apple may look bright red in sunlight and dull brown in dim evening light。' },
+      { statement: 'すべての動物は、人間と同じ色を見ている。', answer: false, why: '第2段落 Many animals see colors that are invisible to human beings, while others see far fewer。' },
+      { statement: '色の意味は、文化によって大きくちがうことがある。', answer: true, why: '第4段落 these associations can vary greatly from one culture to another。' },
+      { statement: '以前の何世紀かでも、あざやかな色はだれでも安く手に入れられた。', answer: false, why: '第6段落 some colors were so rare and expensive that they were reserved for the wealthy or powerful。' },
+    ],
+    qa: [
+      { q: 'What may the words available in a language influence?', choices: ['Which color differences people notice and remember.', 'The shape of their eyes.', 'The wavelength of light.', 'The price of paint.'], answer: 0, why: '第3段落 may influence which differences they notice and remember。' },
+      { q: 'According to the author, where does color arise from?', choices: ['The encounter between objects and ourselves.', 'Objects alone.', 'Our minds alone.', 'Screens and dyes.'], answer: 0, why: '第7段落 arises from the encounter between them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
