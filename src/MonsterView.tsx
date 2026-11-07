@@ -3623,6 +3623,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="74" cy="64" r="6" stroke="#ffffff" strokeWidth="3" fill="none" />
       </g>
     )
+  if (species === 'oribi')
+    return (
+      <g>
+        {/* 耳の下の黒いもよう */}
+        <circle cx="36" cy="40" r="3" fill="#1c1917" />
+        <circle cx="64" cy="40" r="3" fill="#1c1917" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
