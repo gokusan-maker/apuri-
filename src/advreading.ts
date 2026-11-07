@@ -43618,6 +43618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-student-rules',
+    title: 'Should Students Help Make School Rules?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every school has rules, governing matters as varied as attendance, behavior in class, the use of mobile phones, and in some places even the color and length of students' hair. Traditionally, such rules have been decided by teachers and school leaders and simply announced to students, who are expected to follow them whether or not they understand the reasons behind them. In recent years, however, a growing number of schools have begun to involve students in reviewing and even writing the rules they must obey, and the practice has prompted a debate about how much say young people should have in decisions that affect their daily lives.",
+      "Supporters argue that involving students in making rules teaches them important lessons about democracy. In many countries, young people study the principles of democratic government in their classes, yet they may have few opportunities to practice those principles in their own lives. By discussing which rules are necessary, listening to different opinions, and voting on proposals, supporters say, students can learn through experience how communities reach decisions and why compromise is often necessary. Such lessons, they believe, may stay with students far longer than anything they read about democracy in a textbook.",
+      "Supporters also claim that rules made with students are more likely to be respected. When students understand why a rule exists and have had a chance to influence it, they may see it as fair rather than arbitrary, and they may be more willing to follow it even when no teacher is watching. ( A ) some rules will always be unpopular with certain students, supporters argue, the process of explaining and discussing them can reduce conflict between students and teachers and make the atmosphere of a school more cooperative.",
+      "Critics, however, warn that young people may lack the experience and judgment needed to make sound decisions about school life. Teachers and school leaders are responsible for the safety and education of every student, and they may understand the consequences of certain rules far better than students do. Critics fear that students might vote to remove rules that are unpopular but necessary, such as those that protect students from bullying or ensure that they attend lessons regularly. They also note that students stay at a school for only a few years, so that they may not have to live with the long-term consequences of the changes they propose.",
+      "Critics also point out that student participation can be difficult to organize fairly. In many schools, the students who join councils and committees tend to be those who are already confident and successful, while quieter students or those who struggle academically may have little voice. Critics argue that a process dominated by a small group of active students may give a misleading impression that everyone has been consulted, when in fact many students' views have not been heard at all.",
+      "In response, many schools have tried to find a balance between student participation and adult responsibility. Some allow students to propose changes to certain rules, such as those concerning uniforms or the use of school facilities, while keeping decisions about safety in the hands of teachers. Others use anonymous surveys to gather the opinions of every student rather than relying only on elected representatives, and some invite parents and local residents to take part in the discussions as well.",
+      "The debate over student involvement in school rules ultimately reflects a broader question about how young people learn to become responsible citizens. If they are expected to participate fully in democratic life as adults, it may seem reasonable to give them opportunities to practice that participation while they are still at school. At the same time, schools must ensure that such opportunities support rather than undermine their responsibility to protect and educate every student, and finding this balance may itself be one of the most valuable lessons a school can teach.",
+    ],
+    ja: [
+      'どの学校にも決まりがあり、それは出席や授業中のふるまい、携帯電話の使い方、さらに場所によっては生徒の髪の色や長さといった、さまざまなことを定めている。昔から、そうした決まりは教師や学校の指導者が決めて生徒にただ知らせるものであり、生徒は、その理由を理解しているかどうかにかかわらず、それに従うことを求められてきた。しかし近年、ますます多くの学校が、生徒が従わなければならない決まりを見直したり、さらには書いたりすることに生徒を関わらせはじめており、このやり方は、自分の日々の生活に影響する決定に若者がどれほど意見を言えるべきかについての議論を引き起こしている。',
+      '支持する人々は、決まりづくりに生徒を関わらせることは、民主主義について大切な教訓を教えると主張する。多くの国で、若者は授業で民主的な政治の原則を学ぶが、自分の生活のなかでその原則を実践する機会はほとんどないかもしれない。どの決まりが必要かを話し合い、さまざまな意見に耳をかたむけ、提案について投票することで、生徒は、共同体がどのように決定にたどりつくのか、そしてなぜ歩みよりがしばしば必要なのかを経験を通して学べる、と支持者は言う。そうした教訓は、教科書で民主主義について読んだどんなことよりもずっと長く生徒の心に残るかもしれない、と彼らは考える。',
+      '支持する人々はまた、生徒とともにつくった決まりのほうが守られやすいと主張する。ある決まりがなぜあるのかを理解し、それに影響をあたえる機会があった生徒は、それを勝手なものではなく公平なものと見なすかもしれず、教師が見ていないときでもすすんでそれに従うかもしれない。いくつかの決まりはつねに一部の生徒に不人気だろうが、それを説明し話し合う過程が生徒と教師の対立を減らし、学校の雰囲気をより協力的なものにしうる、と支持者は主張する。',
+      'しかし批判する人々は、若者には学校生活について適切な決定をするのに必要な経験や判断力が欠けているかもしれないと警告する。教師や学校の指導者はすべての生徒の安全と教育に責任を負っており、ある決まりがもたらす結果を生徒よりもずっとよく理解しているかもしれない。生徒が、いじめから生徒を守る決まりや、授業にきちんと出席させる決まりのように、不人気だが必要な決まりをなくす方向に投票するかもしれないと、批判する人々は心配する。彼らはまた、生徒が学校にいるのは数年だけなので、自分が提案した変更の長期的な結果とともに過ごす必要がないかもしれないとも指摘する。',
+      '批判する人々はまた、生徒の参加を公平に組織するのはむずかしいことがあると指摘する。多くの学校で、生徒会や委員会に加わる生徒は、すでに自信があり成績のよい生徒であることが多く、おとなしい生徒や勉強に苦労している生徒の声はほとんど反映されないかもしれない。少数の積極的な生徒がとりしきる過程は、実際には多くの生徒の意見がまったく聞かれていないのに、全員に相談したかのようなまちがった印象をあたえるかもしれない、と批判する人々は主張する。',
+      'これに対して、多くの学校は、生徒の参加と大人の責任とのつりあいを見つけようとしてきた。制服や学校の設備の使い方に関する決まりなど、一部の決まりについては生徒が変更を提案できるようにしながら、安全に関する決定は教師の手に残しておく学校もある。選ばれた代表だけにたよるのではなく、無記名のアンケートですべての生徒の意見を集める学校もあり、話し合いに親や地域の住民も招く学校もある。',
+      '学校の決まりへの生徒の関わりをめぐる議論は、結局のところ、若者がどのように責任ある市民になることを学ぶのかという、より広い問いを反映している。大人になったら民主的な生活に十分に参加することが期待されているのなら、まだ学校にいるうちにその参加を実践する機会をあたえるのは理にかなっているように思えるかもしれない。同時に、学校は、そうした機会が、すべての生徒を守り教育するという責任をそこなうのではなくささえるようにしなければならず、このつりあいを見つけること自体が、学校が教えられるもっとも価値のある教訓の一つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「いくつかの決まりは不人気だろうが、話し合う過程が対立を減らす」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say involving students in rule-making teaches lessons about ( 1 ) and makes rules more likely to be respected. Critics warn that students may lack judgment and that participation may be dominated by a few ( 2 ) students. Some schools use anonymous ( 3 ) to hear every student.',
+      blanks: [
+        { choices: ['democracy', 'chemistry', 'cooking', 'geography'], answer: 0, why: '第2段落 teaches them important lessons about democracy。' },
+        { choices: ['active', 'sleepy', 'foreign', 'younger'], answer: 0, why: '第5段落 a process dominated by a small group of active students。' },
+        { choices: ['surveys', 'tests', 'letters', 'games'], answer: 0, why: '第6段落 Others use anonymous surveys。' },
+      ],
+    },
+    tf: [
+      { statement: '昔から、学校の決まりはふつう教師や学校の指導者が決めてきた。', answer: true, why: '第1段落 Traditionally, such rules have been decided by teachers and school leaders。' },
+      { statement: '支持する人々は、生徒とつくった決まりは守られにくいと言う。', answer: false, why: '第3段落 rules made with students are more likely to be respected。' },
+      { statement: '批判する人々は、生徒が必要な決まりをなくす方向に投票するかもしれないと心配している。', answer: true, why: '第4段落 students might vote to remove rules that are unpopular but necessary。' },
+      { statement: 'すべての学校が、安全に関する決定も生徒にまかせている。', answer: false, why: '第6段落 keeping decisions about safety in the hands of teachers。' },
+    ],
+    qa: [
+      { q: 'Which students tend to join councils and committees, according to critics?', choices: ['Those who are already confident and successful.', 'Those who are new to the school.', 'Those who are often absent.', 'Those who dislike rules.'], answer: 0, why: '第5段落 those who are already confident and successful。' },
+      { q: 'Who do some schools invite to take part in the discussions as well?', choices: ['Parents and local residents.', 'Students from other countries.', 'Government officials.', 'University professors.'], answer: 0, why: '第6段落 invite parents and local residents to take part in the discussions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
