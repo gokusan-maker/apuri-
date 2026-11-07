@@ -43538,6 +43538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-summer-holidays',
+    title: 'Should the Summer Holiday Be Shortened?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the school year is interrupted by a long summer holiday lasting six weeks or more. For generations of children, these weeks have meant freedom from lessons, time with family and friends, and the chance to travel, play, or simply rest. In recent years, however, some educators and policymakers have argued that the long summer break no longer suits modern societies and should be shortened, with the time redistributed across the year as shorter holidays, and the proposal has provoked strong reactions from parents, teachers, and students alike.",
+      "Supporters of a shorter summer holiday point first to what is sometimes called summer learning loss. Researchers have found that many students return to school in the autumn having forgotten some of what they learned before the break, particularly in mathematics, so that teachers must spend the first weeks of the new year reviewing old material. Supporters argue that shorter, more frequent breaks would allow students to rest without losing so much of their progress, and that the time saved on revision could be used to learn new things.",
+      "Supporters also emphasize that the effects of a long break are not shared equally. Children from wealthier families often spend the summer at camps, on trips, or with books and activities that keep their minds active, while children from poorer families may have few such opportunities and may even lack regular meals when school lunches are not available. ( A ) a long summer may be a pleasure for some families, supporters argue, it can widen the gap between advantaged and disadvantaged students and place a heavy burden on working parents who must find childcare for many weeks.",
+      "Critics, however, argue that the summer holiday provides benefits that are difficult to measure but nonetheless important. Long breaks give children time to pursue their own interests, to play freely, and to recover from the pressures of the school year, and some educators believe that this unstructured time helps children to develop creativity and independence. Critics also point out that teachers need time to rest and prepare, and that shortening the holiday might make the profession less attractive at a time when many schools already struggle to recruit staff.",
+      "Critics also raise practical and economic concerns. In many regions, families plan their trips around the summer break, and businesses that depend on tourism, such as hotels, campsites, and holiday resorts, rely on the long season for much of their income. Some older school buildings also lack air conditioning, and critics warn that keeping students in hot classrooms during the warmest weeks of the year could make learning more difficult rather than easier.",
+      "In response, some schools and local governments have experimented with intermediate solutions. Some have shortened the summer break by a week or two while adding a longer holiday in the autumn, and others have kept the traditional holiday but offered free summer programs for students who would benefit from extra support. Such programs often combine reading and mathematics with sports, art, and outdoor activities, aiming to keep students engaged while still allowing them to enjoy a sense of freedom. Early reports from some of these programs suggest that students who attend them return to school more confident, although researchers caution that more evidence is needed.",
+      "The debate over the summer holiday ultimately reflects a broader question about what childhood is for. If school is seen mainly as preparation for future success, then any time away from learning may appear to be a cost that should be reduced. If, however, childhood is also valued for its own sake, then the long, unhurried days of summer may offer something that no classroom can provide, and the challenge is to ensure that every child, not only the fortunate, can benefit from them.",
+    ],
+    ja: [
+      '多くの国で、学校の一年は六週間以上続く長い夏休みで中断される。何世代もの子どもたちにとって、この数週間は授業からの解放、家族や友だちとの時間、そして旅をしたり、遊んだり、ただ休んだりする機会を意味してきた。しかし近年、一部の教育者や政策担当者は、長い夏休みはもはや現代の社会に合っておらず、短くして、その時間をより短い休みとして一年じゅうに分けるべきだと主張するようになっており、その提案は、親や教師、生徒からも強い反応を引き起こしている。',
+      '夏休みを短くすることを支持する人々は、まず「夏の学習のおくれ」とよばれることのあるものを指摘する。研究者たちは、多くの生徒が休みの前に学んだことの一部を、とくに数学でわすれて秋に学校にもどってくることを発見しており、そのため教師は新しい年度の最初の数週間を、前の内容の復習に使わなければならない。より短く回数の多い休みにすれば、生徒はそれほど進歩を失わずに休むことができ、復習で節約した時間を新しいことを学ぶのに使えるだろう、と支持者は主張する。',
+      '支持する人々はまた、長い休みの影響が平等に分かち合われていないことを強調する。裕福な家庭の子どもは、しばしばキャンプや旅行、あるいは頭を働かせつづける本や活動で夏を過ごすが、まずしい家庭の子どもにはそうした機会がほとんどないかもしれず、学校の給食がないときには規則正しい食事さえとれないかもしれない。長い夏は一部の家族にとっては楽しみかもしれないが、それは恵まれた生徒と恵まれない生徒の差を広げ、何週間も子どもの世話をしてくれる場所を見つけなければならない働く親に重い負担をかけうる、と支持者は主張する。',
+      'しかし批判する人々は、夏休みには、はかりにくいけれども大切な利点があると主張する。長い休みは、子どもたちに自分の関心を追い、自由に遊び、学校の一年の重圧から回復する時間をあたえ、一部の教育者は、この決まりのない時間が子どもの創造性と自立心を育てる助けになると信じている。批判する人々はまた、教師には休んで準備する時間が必要であり、多くの学校がすでに職員を集めるのに苦労している時期に、休みを短くすれば教職の魅力が下がるかもしれないと指摘する。',
+      '批判する人々はまた、実際的・経済的な懸念も示す。多くの地域で、家族は夏休みに合わせて旅行を計画し、ホテルやキャンプ場、行楽地のように観光にたよる商売は、収入の多くを長い夏の季節にたよっている。また、古い校舎のなかには冷房のないものもあり、一年でもっとも暑い数週間に生徒を暑い教室にとどめておけば、学ぶことがやさしくなるどころかむずかしくなるかもしれないと批判する人々は警告する。',
+      'これに対して、中間の解決策を試してきた学校や地方自治体もある。夏休みを一、二週間短くする代わりに秋の休みを長くしたところもあれば、昔ながらの休みは残しつつ、特別な支援が役立つ生徒のために無料の夏の講座を用意したところもある。そうした講座では、しばしば読み書きや数学をスポーツや美術、野外活動と組み合わせ、生徒が自由の感覚を楽しみながらも学びに関わりつづけられるようにしている。こうした講座のいくつかについての初期の報告によれば、参加した生徒はより自信をもって学校にもどってくるというが、研究者たちはさらに多くの証拠が必要だと注意をうながしている。',
+      '夏休みをめぐる議論は、結局のところ、子ども時代は何のためにあるのかという、より広い問いを反映している。学校がおもに将来の成功への準備と見なされるなら、学びからはなれる時間はどれも減らすべき損失に見えるかもしれない。しかし子ども時代がそれ自体として大切にされるなら、夏の長くゆったりとした日々は、どんな教室にもあたえられない何かを提供しているのかもしれず、課題は、恵まれた子どもだけでなく、すべての子どもがその恩恵を受けられるようにすることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「長い夏は一部の家族には楽しみかもしれないが、差を広げ親に負担をかける」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of a shorter summer holiday point to summer learning ( 1 ) and to the unequal effects of the break. Critics argue that long holidays allow children to rest and develop creativity, and that many businesses depend on ( 2 ). Some schools offer free summer ( 3 ) for students who need extra support.',
+      blanks: [
+        { choices: ['loss', 'success', 'travel', 'music'], answer: 0, why: '第2段落 what is sometimes called summer learning loss。' },
+        { choices: ['tourism', 'farming', 'mining', 'fishing'], answer: 0, why: '第5段落 businesses that depend on tourism。' },
+        { choices: ['programs', 'exams', 'uniforms', 'fees'], answer: 0, why: '第6段落 offered free summer programs。' },
+      ],
+    },
+    tf: [
+      { statement: '研究者によると、多くの生徒は休みの前に学んだことの一部をわすれる。', answer: true, why: '第2段落 having forgotten some of what they learned before the break。' },
+      { statement: '支持する人々は、長い休みの影響はすべての子どもに平等だと述べている。', answer: false, why: '第3段落 the effects of a long break are not shared equally。' },
+      { statement: '古い校舎のなかには冷房のないものもある。', answer: true, why: '第5段落 Some older school buildings also lack air conditioning。' },
+      { statement: 'すべての学校が、夏休みを完全になくした。', answer: false, why: '第6段落 Some have shortened the summer break by a week or two。' },
+    ],
+    qa: [
+      { q: 'In which subject do students especially forget what they learned, according to researchers?', choices: ['Mathematics.', 'Music.', 'History.', 'Art.'], answer: 0, why: '第2段落 particularly in mathematics。' },
+      { q: 'What do critics say unstructured time may help children develop?', choices: ['Creativity and independence.', 'Better handwriting.', 'Higher test scores only.', 'Stronger muscles.'], answer: 0, why: '第4段落 helps children to develop creativity and independence。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
