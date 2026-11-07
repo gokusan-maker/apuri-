@@ -40462,6 +40462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-looking-at-art',
+    title: 'On Looking at Art',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a busy museum, it is common to see visitors moving quickly from one painting to the next, pausing for only a few seconds before each work, perhaps long enough to read the label or take a photograph. Studies of museum behavior have suggested that the average time spent in front of a single artwork is remarkably short. Yet many of the works on display took months or even years to create, and they were often intended to reward slow and repeated attention rather than a passing glance.",
+      "Part of the reason for this haste may be the sheer abundance of images in modern life. We are surrounded by pictures on screens, advertisements, and packaging, most of which are designed to be understood instantly and then forgotten. Accustomed to this rapid flow, we may approach paintings in the same way, expecting them to communicate their meaning at once. When they do not, we may conclude that they are boring or difficult and move on to something else. The camera in our pocket adds to this tendency, since photographing a work can feel like a substitute for actually looking at it, as though the image could be properly examined later, which it rarely is.",
+      "Looking at art attentively, however, can reveal things that a quick glance misses. As we stand before a painting for several minutes, details that were at first invisible begin to emerge: the texture of the brushstrokes, the way light falls on a particular face, the relationship between colors in different parts of the canvas. ( A ) the painting itself does not change, our perception of it does, and what initially seemed simple may gradually appear rich, strange, and full of questions.",
+      "Such attention also changes the person who looks. Slow looking requires patience and a willingness to tolerate uncertainty, since we may not immediately understand what we are seeing or why it affects us. In learning to stay with a work of art rather than rushing to judge it, we may develop habits of mind that are valuable far beyond the museum, such as the ability to observe carefully, to notice our own reactions, and to consider more than one interpretation. These habits can serve us well in conversations, in study, and in any situation where a hasty conclusion might lead us astray.",
+      "Some people feel that they cannot appreciate art without specialized knowledge of its history and techniques. Such knowledge can certainly deepen our understanding, helping us to recognize influences, styles, and the circumstances in which a work was made. Yet it is not a prerequisite for meaningful looking. A visitor with no training may still respond powerfully to a painting, and their fresh perspective may notice things that experts, accustomed to seeing the work through established ideas, have overlooked.",
+      "Museums themselves have begun to encourage slower ways of looking. Some offer sessions in which visitors spend an hour or more with a single work, discussing what they see with others or simply sitting in silence. Others provide benches and quiet spaces, inviting people to rest rather than hurry. Such efforts suggest a growing recognition that the value of a museum lies not in how many works a visitor sees, but in how deeply they engage with even a few.",
+      "In the end, the way we look at art may reflect the way we look at the world. A life spent rushing from one image to the next may leave us with many impressions but little understanding, while the practice of slow and careful attention can open us to depths that are otherwise hidden. To stand quietly before a painting, then, is not merely to examine an object but to rediscover the capacity for wonder that ordinary haste so easily wears away.",
+    ],
+    ja: [
+      'にぎやかな美術館では、来館者が一枚の絵から次の絵へと急いで移り、それぞれの作品の前で、説明を読んだり写真をとったりするのにちょうど足りるくらいの数秒だけ立ち止まるのを見かけることがよくある。美術館での人々のふるまいについての研究は、一つの作品の前で過ごす平均の時間がおどろくほど短いことを示してきた。しかし展示されている作品の多くは、つくるのに何か月、あるいは何年もかかったものであり、しばしば、通りすがりの一目ではなく、ゆっくりとくり返しはらわれる注意にこたえるように意図されていた。',
+      'この急ぎぶりの理由の一つは、現代の暮らしにおける画像のあまりの多さかもしれない。私たちは画面や広告や包装の絵にかこまれており、そのほとんどはすぐに理解され、そのあとわすれられるようにつくられている。この速い流れになれているので、私たちは絵にも同じように近づき、その意味がすぐに伝わることを期待するかもしれない。そうならないと、それはつまらない、あるいはむずかしいと結論づけて、別のものへ移ってしまうかもしれない。ポケットの中のカメラも、この傾向を強めている。作品の写真をとることが、実際にそれを見ることのかわりのように感じられるからである。まるであとでその画像をきちんと調べられるかのようだが、実際にそうすることはめったにない。',
+      'しかし、注意深く作品を見ることは、すばやい一目では見のがすものを明らかにしうる。一枚の絵の前に数分間立っていると、はじめは見えなかった細部があらわれはじめる。筆のあとの手ざわりや、ある顔に光が当たるようすや、画面のちがう部分の色どうしの関係である。絵そのものは変わらないが、それを見る私たちの感じ方は変わり、はじめは単純に見えたものが、しだいに豊かで不思議で、問いに満ちたものに見えてくるかもしれない。',
+      'そうした注意は、見る人をも変える。ゆっくり見ることには、忍耐と、不確かさにたえる気持ちが必要である。自分が何を見ているのか、なぜそれに心を動かされるのかを、すぐには理解できないかもしれないからである。作品を急いで判断するのではなく、作品とともにとどまることを学ぶうちに、私たちは、注意深く観察する力や、自分自身の反応に気づく力や、一つ以上の解釈を考える力のような、美術館をはるかにこえて価値のある心の習慣を育てるかもしれない。こうした習慣は、会話でも、勉強でも、急いだ結論が私たちをまちがった方向へ導きかねないどんな場面でも役に立ちうる。',
+      '美術の歴史や技法についての専門的な知識がなければ、美術を味わうことはできないと感じる人もいる。そうした知識はたしかに理解を深め、影響や様式や、作品がつくられた状況に気づく助けになる。しかしそれは意味のある見方の前提条件ではない。訓練を受けていない来館者でも、ある絵に強く心を動かされることがあり、その新鮮な見方は、決まった考えを通して作品を見ることになれた専門家が見落としてきたものに気づくかもしれない。',
+      '美術館そのものも、よりゆっくりとした見方をうながしはじめている。来館者が一つの作品と一時間以上をともにし、見えたものをほかの人と話し合ったり、ただしずかにすわっていたりする時間を用意しているところもある。ベンチやしずかな場所を用意して、急ぐのではなく休むよう人々をさそうところもある。そうした取り組みは、美術館の価値が、来館者がどれだけ多くの作品を見るかではなく、たとえ少しの作品であってもどれだけ深くかかわるかにあるという認識が広まっていることを示している。',
+      '結局のところ、私たちの美術の見方は、世界の見方を映しているのかもしれない。一つの画像から次の画像へと急いで過ごす暮らしは、多くの印象を残しても理解はほとんど残さないかもしれず、一方で、ゆっくりと注意深くはらう注意の習慣は、そうでなければかくれたままの深さへと私たちを開いてくれる。だから、一枚の絵の前にしずかに立つことは、ただ物を調べることではなく、ふだんの急ぎぶりがいとも簡単にすりへらしてしまうおどろく力を、もう一度見いだすことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「絵そのものは変わらないが、感じ方は変わる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '一つの作品の前で過ごす平均の時間は、おどろくほど短い。', answer: true, why: '第1段落 the average time spent in front of a single artwork is remarkably short。' },
+      { statement: '現代の画像のほとんどは、ゆっくり見るようにつくられている。', answer: false, why: '第2段落 designed to be understood instantly and then forgotten。' },
+      { statement: '筆者は、専門的な知識がなければ美術は味わえないと述べている。', answer: false, why: '第5段落 it is not a prerequisite for meaningful looking。' },
+      { statement: '一つの作品と一時間以上をともにする時間を用意する美術館がある。', answer: true, why: '第6段落 sessions in which visitors spend an hour or more with a single work。' },
+    ],
+    qa: [
+      { q: 'What details may emerge when we stand before a painting for several minutes?', choices: ['The texture of the brushstrokes and the way light falls on a face.', 'The price of the painting.', 'The name of the museum.', 'The number of visitors.'], answer: 0, why: '第3段落 the texture of the brushstrokes, the way light falls on a particular face。' },
+      { q: 'Where does the value of a museum lie, according to the passage?', choices: ['In how deeply visitors engage with even a few works.', 'In how many works visitors see.', 'In how large the building is.', 'In how quickly visitors move.'], answer: 0, why: '第6段落 in how deeply they engage with even a few。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
