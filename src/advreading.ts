@@ -39982,6 +39982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-walking',
+    title: 'On Walking',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Walking is so ordinary an activity that we rarely think about it at all. For most of human history, it was simply the way people moved from one place to another, and even today, despite the spread of cars, trains, and airplanes, nearly everyone walks some distance every day. Yet precisely because walking is so familiar, its deeper value is easily overlooked, and many people now regard it merely as a slow and inconvenient way of getting somewhere that could be reached more quickly by other means.",
+      "One of the most striking qualities of walking is the particular relationship it creates between the body and the mind. When we walk at a steady pace, our bodies are occupied but not strained, and our thoughts are free to wander in a way that is difficult to achieve while sitting still. Many writers and thinkers have claimed that their best ideas came to them while walking, as though the rhythm of their steps helped to loosen thoughts that had remained stubbornly fixed at a desk.",
+      "Walking also changes the way we experience the places through which we pass. Seen from the window of a fast-moving car, a town or a landscape tends to blur into a series of fleeting images, but on foot we notice small details: the smell of bread from a bakery, the sound of children playing, the changing light on the walls of old buildings. ( A ) the walker covers far less ground than the driver, they often come to know a place far more intimately, because they encounter it at a human scale and speed.",
+      "In addition, walking allows for a kind of encounter that faster forms of travel tend to prevent. A person on foot may stop to greet a neighbor, ask a stranger for directions, or pause to watch a street performer, and such small exchanges, repeated over time, help to weave the social fabric of a community. Streets designed for walking, with wide pavements, shaded benches, and small shops, often feel more lively and welcoming than those designed chiefly for cars.",
+      "Modern life, however, has made walking increasingly difficult for many people. Cities have often been planned around the needs of motor vehicles, leaving pedestrians with narrow paths, dangerous crossings, and long distances between homes, schools, and workplaces. At the same time, busy schedules encourage people to choose the quickest way of travel, so that walking comes to seem like a luxury that only those with free time can afford, rather than a natural part of daily life. Children, too, are increasingly driven to school instead of walking, losing a daily experience of independence and discovery that earlier generations took for granted.",
+      "Recovering the value of walking does not require giving up modern transport altogether. It may begin with small choices, such as walking to a nearby shop instead of driving, taking a longer route home through a park, or setting aside time for a walk without any particular destination. Such choices can bring benefits to health, but perhaps more importantly, they offer moments in which the pressure to be efficient is temporarily lifted, allowing the mind to rest and to notice the world around it.",
+      "In the end, walking reminds us that not everything worth doing needs to be done quickly. In a culture that prizes speed and efficiency, the slowness of walking can seem like a weakness, yet it is precisely this slowness that allows us to think, to observe, and to connect with others. To walk is to move through the world at the pace for which our bodies and minds were made, and in doing so, perhaps, to recover something of ourselves that a faster life tends to leave behind.",
+    ],
+    ja: [
+      '歩くことはとてもありふれた活動なので、私たちはそれについてほとんど考えることがない。人類の歴史のほとんどを通じて、それはただ人がある場所から別の場所へ移る方法であり、今日でさえ、車や電車や飛行機が広まったにもかかわらず、ほとんどだれもが毎日いくらかの距離を歩いている。しかし、歩くことがあまりになじみ深いからこそ、そのより深い価値は見すごされやすく、今では多くの人が、それをほかの手段ならもっと速く行ける場所へ向かうための、ただおそくて不便な方法と見なしている。',
+      '歩くことのもっともきわだった性質の一つは、それが体と心のあいだに生み出す特別な関係である。一定の速さで歩くとき、体はいそがしいが無理はしておらず、考えは、じっとすわっているときにはなかなかできないやり方で自由にさまようことができる。多くの作家や思想家が、もっともよい考えは歩いているときにうかんだと語ってきた。まるで足どりのリズムが、机の前ではがんこに固まったままだった考えをほぐすのを助けたかのようである。',
+      '歩くことはまた、通りすぎる場所の感じ方を変える。速く走る車のまどから見ると、町や景色は一連のつかのまの像にぼやけがちだが、歩いていると、パン屋からのパンのにおいや、子どもたちが遊ぶ声や、古い建物のかべにうつる光の変化といった小さなことに気づく。歩く人は車を運転する人よりはるかに短い距離しか進まないが、人間の規模と速さでその場所に出会うので、しばしばその場所をはるかに親しく知るようになる。',
+      'さらに、歩くことは、より速い旅の形ではさまたげられがちな種類の出会いを可能にする。歩いている人は立ち止まって近所の人にあいさつしたり、見知らぬ人に道をたずねたり、足を止めて大道芸人をながめたりすることがあり、そうした小さなやりとりは、時とともにくり返されて、地域の社会のつながりを織りあげるのを助ける。広い歩道や日かげのベンチや小さな店のある、歩くためにつくられた通りは、主に車のためにつくられた通りよりも、しばしばにぎやかで居心地がよく感じられる。',
+      'しかし現代の暮らしは、多くの人にとって歩くことをますますむずかしくしてきた。都市はしばしば自動車の必要に合わせて計画され、歩行者には、せまい道や危険な横断歩道や、家と学校と職場のあいだの長い距離が残された。同時に、いそがしい予定は人々にいちばん速い移動の方法を選ばせるので、歩くことは日々の暮らしの自然な一部ではなく、ひまのある人だけが楽しめるぜいたくのように思われるようになる。子どもたちもまた、歩くかわりに車で学校に送られることがふえ、以前の世代が当たり前と思っていた、自立と発見の毎日の経験を失っている。',
+      '歩くことの価値を取りもどすのに、現代の交通をまったくすてる必要はない。それは、車で行くかわりに近くの店まで歩くことや、公園を通る長い道で家に帰ることや、とくに行き先のない散歩のための時間をとっておくことのような、小さな選択からはじまるかもしれない。そうした選択は健康に役立つこともあるが、おそらくもっと大切なのは、効率よくあらねばという重圧が一時的にとりのぞかれ、心が休み、まわりの世界に気づくことができる瞬間をあたえてくれることである。',
+      '結局のところ、歩くことは、する価値のあることのすべてが速くなされる必要はないことを思い出させてくれる。速さと効率を重んじる文化の中では、歩くことのおそさは弱点のように見えるかもしれないが、私たちが考え、観察し、人とつながることを可能にしているのは、まさにこのおそさなのである。歩くとは、体と心がもともと合うようにつくられた速さで世界を進むことであり、そうすることで、おそらく、より速い暮らしが置き去りにしがちな自分自身の何かを取りもどすことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「進む距離ははるかに短いが、場所をはるかに親しく知る」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの作家や思想家が、よい考えは歩いているときにうかんだと語ってきた。', answer: true, why: '第2段落 their best ideas came to them while walking。' },
+      { statement: '歩いていると、車から見るより小さなことに気づきにくい。', answer: false, why: '第3段落 on foot we notice small details。' },
+      { statement: '都市はしばしば自動車の必要に合わせて計画されてきた。', answer: true, why: '第5段落 Cities have often been planned around the needs of motor vehicles。' },
+      { statement: '筆者は、歩くことの価値を取りもどすには車をすてなければならないと述べている。', answer: false, why: '第6段落 does not require giving up modern transport altogether。' },
+    ],
+    qa: [
+      { q: 'What do streets designed for walking often feel like?', choices: ['More lively and welcoming than streets designed for cars.', 'More dangerous than highways.', 'Empty and quiet.', 'Too narrow to use.'], answer: 0, why: '第4段落 often feel more lively and welcoming than those designed chiefly for cars。' },
+      { q: 'What does the author say allows us to think, observe, and connect with others?', choices: ['The slowness of walking.', 'The speed of cars.', 'Busy schedules.', 'Long distances.'], answer: 0, why: '第7段落 it is precisely this slowness that allows us to think, to observe, and to connect with others。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
