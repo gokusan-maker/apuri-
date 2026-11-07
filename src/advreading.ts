@@ -42978,6 +42978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-second-homes',
+    title: 'Should Second Homes Be Taxed More Heavily?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many attractive coastal towns and mountain villages, a large share of the houses are not lived in for most of the year. They belong to people who live and work elsewhere and who visit only during holidays or at weekends, leaving the buildings empty for months at a time. As house prices in such places have risen far beyond what many local workers can afford, a number of governments have begun to consider whether owners of second homes should pay higher taxes, and the proposal has divided opinion sharply between local residents, property owners, and those who depend on tourism.",
+      "Supporters of higher taxes argue that second homes make it harder for local people to find somewhere to live. When wealthy buyers from cities compete for a limited number of houses, prices rise, and young families who have grown up in a town may be forced to move away because they cannot afford to stay. Supporters point out that a community in which many homes are empty for most of the year can lose the shops, schools, and services that depend on a permanent population, so that the character of the place gradually disappears even as its houses become more valuable.",
+      "Supporters also argue that higher taxes could raise money for the communities most affected. The revenue could be used to build affordable housing for local workers, to support public transport, or to maintain the roads and services that visitors also use. ( A ) such a tax would not solve the housing problem on its own, supporters argue, it would at least ensure that those who benefit from owning property in popular places contribute more fairly to the costs that their presence creates.",
+      "Critics, however, argue that owners of second homes already make an important contribution to local economies. Visitors who stay in their own houses spend money in restaurants, shops, and local businesses, and they often employ local builders, cleaners, and gardeners to look after their properties. Critics warn that heavy taxes might discourage such visitors, reducing the income of the very people whom the policy is meant to help, particularly in places where tourism is one of the few sources of employment.",
+      "Critics also point out that not all second-home owners are wealthy. Some have inherited a family house in the village where their parents or grandparents lived and hope to return there one day, while others have saved for many years to buy a small holiday cottage. Critics argue that treating all such owners in the same way would be unfair, and that a tax designed to target rich investors might end up punishing ordinary families who have strong personal connections to a particular place.",
+      "In response, some governments have tried to design more targeted measures. Some apply higher taxes only to homes that are left empty for most of the year, while exempting those that are rented to local residents or lived in for several months. Others limit the number of new houses that can be sold as second homes, reserving a proportion of new developments for people who live and work in the area, and some combine such rules with programs that help local young people buy their first home.",
+      "The debate over second homes ultimately reflects a broader question about who has the right to belong to a place. Those who own property in a town may feel that their investment and their affection for it give them a legitimate claim, while those who were born there may feel that their families and their daily lives give them a stronger one. Finding a fair balance between these claims requires societies to decide whether housing should be treated mainly as a source of wealth and pleasure, or above all as a basic need for those who keep a community alive.",
+    ],
+    ja: [
+      '多くの魅力的な海辺の町や山の村では、家のかなりの割合に、一年のほとんどのあいだだれも住んでいない。それらは、ほかの場所に住み働き、休日や週末にだけおとずれる人々のものであり、建物は何か月も空いたままになる。そうした場所の家の値段が、多くの地元の働き手には手のとどかないほど上がったため、いくつかの政府は、別荘の持ち主がより高い税金をはらうべきかどうかを考えはじめており、その提案は、地元の住民、不動産の持ち主、観光にたよる人々のあいだで意見を鋭く分けている。',
+      '税を高くすることを支持する人々は、別荘が地元の人々の住む場所を見つけにくくしていると主張する。都会の裕福な買い手がかぎられた数の家をめぐって競い合うと、値段が上がり、その町で育った若い家族は、住みつづける余裕がないために出ていかざるをえなくなるかもしれない。一年のほとんど多くの家が空いている地域では、定住する人口にたよっている店や学校、サービスが失われることがあり、家の価値が上がる一方で、その場所の性格が少しずつ消えていく、と支持者は指摘する。',
+      '支持する人々はまた、税を高くすれば、もっとも影響を受ける地域のためにお金を集めることができると主張する。その収入は、地元の働き手のための手ごろな住宅を建てたり、公共交通をささえたり、訪れる人々も使う道路やサービスを維持したりするのに使えるだろう。そうした税だけで住宅の問題が解決するわけではないが、少なくとも、人気のある場所に不動産をもつことで得をしている人々が、自分たちがいることで生じる費用をより公平に負担するようにはなる、と支持者は主張する。',
+      'しかし批判する人々は、別荘の持ち主はすでに地元の経済に大きく貢献していると主張する。自分の家に泊まる訪問者はレストランや店、地元の商売でお金を使い、家を管理するために地元の大工や掃除をする人、庭師をやとうことも多い。重い税金はそうした訪問者を遠ざけ、この方針が助けようとしているまさにその人々の収入を減らしかねない、と批判する人々は警告する。とくに、観光が数少ない仕事の源の一つである場所ではそうである。',
+      '批判する人々はまた、別荘の持ち主がみな裕福なわけではないと指摘する。親や祖父母が住んでいた村の家を受けつぎ、いつかそこにもどりたいと願っている人もいれば、何年もお金を貯めて小さな休暇用の家を買った人もいる。そうした持ち主をすべて同じようにあつかうのは不公平であり、裕福な投資家をねらった税が、特定の場所と強い個人的なつながりをもつふつうの家族を罰することになりかねない、と批判する人々は主張する。',
+      'これに対して、いくつかの政府はよりねらいをしぼった対策を考えようとしてきた。一年のほとんどのあいだ空いている家にだけ高い税をかけ、地元の住民に貸している家や数か月住んでいる家は対象からはずすところもある。また、別荘として売ることのできる新しい家の数を制限し、新しい開発の一定の割合をその地域に住み働く人々のためにとっておくところもあり、そうした決まりを、地元の若者がはじめての家を買うのを助ける仕組みと組み合わせているところもある。',
+      '別荘をめぐる議論は、結局のところ、だれがある場所に属する権利をもつのかという、より広い問いを反映している。町に不動産をもつ人々は、自分の投資とその町への愛着が正当な権利をあたえると感じるかもしれず、そこで生まれた人々は、家族と日々の暮らしがより強い権利をあたえると感じるかもしれない。これらの主張のあいだに公平なつりあいを見つけるには、社会が、住宅をおもに富と楽しみの源としてあつかうべきか、それとも何よりも、地域を生かしつづける人々にとっての基本的な必要としてあつかうべきかを決める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「その税だけで住宅の問題は解決しないが、少なくとも公平な負担にはなる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say second homes push up prices and make it hard for local people to find ( 1 ), and that higher taxes could fund affordable housing. Critics argue that visitors support local ( 2 ) and that not all owners are wealthy. Some governments tax only homes that are left ( 3 ) for most of the year.',
+      blanks: [
+        { choices: ['housing', 'jobs abroad', 'holidays', 'cars'], answer: 0, why: '第2段落 make it harder for local people to find somewhere to live。' },
+        { choices: ['economies', 'politicians', 'schools abroad', 'weather'], answer: 0, why: '第4段落 an important contribution to local economies。' },
+        { choices: ['empty', 'crowded', 'painted', 'unlocked'], answer: 0, why: '第6段落 homes that are left empty for most of the year。' },
+      ],
+    },
+    tf: [
+      { statement: '人気のある町では、家の値段が多くの地元の働き手には手のとどかないほど上がった。', answer: true, why: '第1段落 risen far beyond what many local workers can afford。' },
+      { statement: '支持する人々によると、税だけで住宅の問題は完全に解決する。', answer: false, why: '第3段落 such a tax would not solve the housing problem on its own。' },
+      { statement: '別荘の持ち主のなかには、家族の家を受けついだ人もいる。', answer: true, why: '第5段落 Some have inherited a family house。' },
+      { statement: 'すべての政府が、すべての別荘に同じ税をかけている。', answer: false, why: '第6段落 Some apply higher taxes only to homes that are left empty。' },
+    ],
+    qa: [
+      { q: 'What can a community lose when many homes are empty for most of the year?', choices: ['Shops, schools, and services.', 'Its beaches.', 'Its tourists.', 'Its mountains.'], answer: 0, why: '第2段落 can lose the shops, schools, and services that depend on a permanent population。' },
+      { q: 'Whom do second-home owners often employ, according to critics?', choices: ['Local builders, cleaners, and gardeners.', 'Foreign lawyers.', 'City bankers.', 'Government officials.'], answer: 0, why: '第4段落 employ local builders, cleaners, and gardeners。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
