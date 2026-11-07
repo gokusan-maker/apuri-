@@ -41022,6 +41022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mountains',
+    title: 'On Mountains',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of human history, mountains were regarded with fear rather than admiration. They were difficult to cross, dangerous in bad weather, and often believed to be the homes of gods, spirits, or monsters. Travelers who had to pass through them hurried on as quickly as possible, and few would have imagined climbing a peak simply for pleasure. Today, by contrast, mountains attract millions of visitors each year, and their summits are celebrated as places of beauty, challenge, and inspiration. This change in attitude reveals much about how human beings have come to understand nature and themselves.",
+      "Part of the appeal of mountains lies in the physical challenge they present. Climbing a steep path requires effort, endurance, and careful attention to one's surroundings, and reaching the top can bring a deep sense of achievement. Unlike many modern activities, mountain walking offers no shortcuts; every step must be taken by one's own body, and progress is measured not in seconds but in hours. For many people, this slow and demanding effort provides a welcome contrast to the speed and convenience of everyday life.",
+      "Mountains also offer a particular kind of perspective. From a high summit, the landscape below spreads out like a map, and towns, roads, and rivers that seemed large and important appear small and quiet. ( A ) the view itself lasts only as long as one remains at the top, many climbers describe a lasting change in how they see their own lives, as though the experience of looking down from such a height had loosened the hold of everyday worries. Some return from the mountains with decisions they had been unable to make for months, as if distance from ordinary life had finally allowed them to see clearly what mattered most.",
+      "At the same time, mountains remain places of genuine danger. Weather can change suddenly, paths can become slippery or disappear beneath snow, and even experienced climbers can make fatal mistakes. These dangers are part of what gives mountains their power, reminding visitors that they are entering an environment that does not exist for human convenience. Respect for the mountain, rather than the desire to conquer it, is often described by experienced climbers as the most important quality a person can bring.",
+      "The growing popularity of mountains has also brought problems. Popular routes may become crowded, paths erode under the feet of countless visitors, and litter accumulates in places that were once pristine. In some regions, the desire to reach famous summits has led to dangerous queues of climbers at high altitudes. Such developments raise questions about whether the very qualities that draw people to mountains, their wildness and solitude, can survive the attention that they now receive. Some authorities have introduced permits and limits on the number of climbers in order to protect both the mountains and the people who visit them.",
+      "For the communities who live in mountain regions, the relationship with the peaks is often more complex than that of visitors. Mountains may provide water, grazing land, and income from tourism, but they also bring isolation, harsh winters, and the risk of avalanches and landslides. Many mountain peoples have developed rich traditions of knowledge and belief about their surroundings, and their perspective reminds us that mountains are not merely scenery for outsiders but homes with long and complicated histories.",
+      "In the end, our changing attitudes toward mountains may reflect a deeper longing in modern life. In a world that is increasingly crowded, comfortable, and controlled, mountains offer an encounter with something vast, ancient, and indifferent to human wishes. To climb a mountain, then, may be not so much to conquer nature as to be reminded of our place within it, and to return to ordinary life with a renewed sense of both our limits and our capacity for wonder.",
+    ],
+    ja: [
+      '人類の歴史のほとんどを通じて、山はあこがれではなくおそれをもって見られてきた。山は越えるのがむずかしく、天気が悪いと危険で、しばしば神や霊や怪物のすみかだと信じられていた。山を通らなければならない旅人はできるだけ急いで通りすぎ、ただ楽しみのために頂上にのぼることを想像した人はほとんどいなかっただろう。それに対して今日では、山は毎年何百万もの人をひきつけ、その頂は美しさと挑戦とひらめきの場所としてたたえられている。この態度の変化は、人間が自然と自分自身をどう理解するようになったかについて、多くのことを明らかにしている。',
+      '山の魅力の一部は、山があたえる体の挑戦にある。けわしい道をのぼるには、努力とねばり強さとまわりへの注意深い注意が必要であり、頂上にたどり着くと深いなしとげた感覚をもたらすことがある。多くの現代の活動とちがって、山歩きには近道がない。一歩一歩を自分の体でふみ出さなければならず、進み具合は秒ではなく時間ではかられる。多くの人にとって、このゆっくりときびしい努力は、毎日の暮らしの速さと便利さとのうれしい対照になっている。',
+      '山はまた、特別な種類の見晴らしをあたえてくれる。高い頂からは、下の景色が地図のように広がり、大きく大切に見えた町や道路や川が小さく静かに見える。その景色そのものは頂上にいるあいだしか続かないが、多くの登山者は、自分の暮らしの見方が長く変わったと語る。まるでそれほどの高さから見下ろす経験が、毎日の心配ごとのしめつけをゆるめたかのようである。何か月も決められなかったことを、山から帰ってきたときには決めていたという人もいる。まるでふだんの暮らしからはなれたことで、ようやくいちばん大切なことがはっきり見えたかのようである。',
+      '同時に、山は今も本当に危険な場所である。天気は急に変わることがあり、道はすべりやすくなったり雪の下に消えたりし、経験豊かな登山者でさえ命にかかわるまちがいをすることがある。こうした危険は山に力をあたえているものの一部であり、おとずれる人に、自分が人間の便利さのために存在するのではない環境に入っていくのだと思い出させる。経験豊かな登山者はしばしば、山を征服したいという望みではなく、山への敬意こそが、人がたずさえられるもっとも大切な性質だと語る。',
+      '山の人気の高まりは、問題ももたらしてきた。人気のある道は混み合い、数えきれない来訪者の足の下で道がすりへり、かつては手つかずだった場所にごみがたまる。ある地域では、有名な頂上にたどり着きたいという望みのために、高い場所で登山者の危険な行列ができている。こうした成り行きは、人々を山にひきつけるまさにその性質、つまり野生と孤独が、今山が受けている注目のもとで生きのこれるのかという疑問を投げかける。山とそこをおとずれる人々の両方を守るために、許可制や登山者の数の上限を取り入れた当局もある。',
+      '山の地域に住む人々にとって、頂との関係はしばしば来訪者のそれよりも複雑である。山は水や放牧地や観光からの収入をもたらすかもしれないが、孤立やきびしい冬や、なだれや土砂くずれの危険ももたらす。多くの山の人々は、まわりの環境についての豊かな知識と信仰の伝統を育ててきた。彼らの見方は、山がただよそ者のための景色ではなく、長く複雑な歴史をもつ住まいであることを思い出させてくれる。',
+      '結局のところ、山に対する私たちの態度の変化は、現代の暮らしの中の、より深いあこがれを映しているのかもしれない。ますます混み合い、快適で、管理された世界の中で、山は、広大で古く、人間の望みに無関心な何かとの出会いをあたえてくれる。だから、山にのぼることは、自然を征服することというより、自然の中の自分の居場所を思い出すことであり、自分の限界とおどろく力の両方を新たに感じて、ふだんの暮らしにもどることなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「景色は頂上にいるあいだしか続かないが、見方が長く変わったと語る」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人類の歴史のほとんどで、山はおそれをもって見られてきた。', answer: true, why: '第1段落 mountains were regarded with fear rather than admiration。' },
+      { statement: '山歩きには、多くの近道がある。', answer: false, why: '第2段落 mountain walking offers no shortcuts。' },
+      { statement: '経験豊かな登山者は、山を征服したいという望みがもっとも大切だと語る。', answer: false, why: '第4段落 Respect for the mountain, rather than the desire to conquer it。' },
+      { statement: 'ある地域では、高い場所で登山者の危険な行列ができている。', answer: true, why: '第5段落 dangerous queues of climbers at high altitudes。' },
+    ],
+    qa: [
+      { q: 'How do towns and rivers appear from a high summit?', choices: ['Small and quiet.', 'Large and noisy.', 'Dark and frightening.', 'Bright and colorful.'], answer: 0, why: '第3段落 appear small and quiet。' },
+      { q: 'What do mountains bring to the communities who live there, besides water and income?', choices: ['Isolation, harsh winters, and the risk of avalanches.', 'Only easy and comfortable lives.', 'Large cities.', 'Fast trains.'], answer: 0, why: '第6段落 they also bring isolation, harsh winters, and the risk of avalanches and landslides。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
