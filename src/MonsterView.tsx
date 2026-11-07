@@ -3574,6 +3574,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="60" cy="62" r="2.5" fill="#ffffff" />
       </g>
     )
+  if (species === 'impala')
+    return (
+      <g>
+        {/* おしりの黒いすじ */}
+        <path d="M72 58 v14" stroke="#1c1917" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
