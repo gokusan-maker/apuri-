@@ -41058,6 +41058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-calculators',
+    title: 'Should Students Use Calculators?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In classrooms around the world, a long-running debate continues over whether students should be allowed to use calculators when learning and practicing mathematics. In some countries, calculators are permitted in most examinations from an early age, while in others students are expected to perform calculations by hand until well into secondary school. The question may seem minor, but it touches on fundamental issues about what mathematical skill really means and how it should be taught in an age when machines can perform arithmetic instantly and without error.",
+      "Supporters of calculators argue that they free students to concentrate on more important aspects of mathematics. Much of the subject, they point out, involves understanding concepts, recognizing patterns, and solving complex problems, rather than simply carrying out long calculations. When students spend a great deal of time on tedious arithmetic, they may lose sight of the larger ideas and come to see mathematics as a dull exercise in following rules. Calculators, supporters claim, allow students to explore real-world problems involving large or awkward numbers that would otherwise be too time-consuming to attempt.",
+      "Supporters also emphasize that calculators reflect the reality of modern life. Adults rarely perform complex calculations by hand, relying instead on phones, computers, and other devices. ( A ) basic arithmetic remains useful, supporters argue, schools should prepare students to use the tools they will actually encounter in their working lives, including the judgment needed to choose appropriate methods and to check whether the results produced by a machine are reasonable.",
+      "Critics, however, warn that relying on calculators too early may prevent students from developing a genuine understanding of numbers. Performing calculations by hand, they argue, helps children grasp how numbers relate to one another, how operations such as multiplication and division work, and how to estimate answers. Students who have never developed this sense may be unable to recognize when a calculator has produced an obviously wrong result, perhaps because they pressed the wrong button, and may accept absurd answers without question. Teachers sometimes report that students can enter a complicated formula into a device yet struggle to say whether an answer of ten or ten thousand would be more sensible.",
+      "Critics also point out that mental arithmetic is valuable in its own right. The ability to calculate quickly in one's head is useful in everyday situations, such as checking a bill or estimating costs while shopping, and it may also strengthen memory and concentration. Some researchers have suggested that the practice of working through calculations step by step helps to build the patience and precision that more advanced mathematics requires. In their view, removing these early challenges entirely might leave students less prepared for the demands of higher-level study, where no machine can simply supply the necessary insight.",
+      "Many educators now favor a balanced approach. They suggest that students should first develop a solid foundation in mental and written arithmetic, so that they understand how numbers behave, and only then be introduced to calculators as tools for handling more complex tasks. Examinations might include sections in which calculators are prohibited alongside others in which they are allowed, so that both basic skills and higher-level problem solving can be assessed fairly. Such an approach treats the calculator not as an enemy of learning but as a tool whose proper use must itself be taught.",
+      "The debate over calculators ultimately reflects a broader question about the role of technology in education. Every new tool, from the printing press to the internet, has raised concerns that it might weaken certain human abilities even as it strengthens others. The challenge for schools is not to reject such tools or to accept them uncritically, but to decide which abilities are worth preserving, and how technology can be used to support rather than replace genuine understanding.",
+    ],
+    ja: [
+      '世界中の教室で、数学を学び練習するときに生徒に電卓を使わせるべきかどうかについて、長く続く議論が今も続いている。早い年齢からほとんどの試験で電卓が認められている国もあれば、中等学校にかなり入るまで手で計算することが求められる国もある。この問いはささいなことに見えるかもしれないが、数学の力とは本当は何を意味するのか、そして機械が算数をすぐにまちがいなく行える時代に、それをどう教えるべきかという根本的な問題にかかわっている。',
+      '電卓を支持する人々は、電卓によって生徒は数学のより大切な面に集中できるようになると主張する。この科目の多くは、ただ長い計算をすることではなく、考え方を理解し、パターンに気づき、複雑な問題を解くことにかかわっていると彼らは指摘する。生徒が退屈な計算に多くの時間を使うと、より大きな考えを見失い、数学を規則にしたがうだけのつまらない練習と見なすようになるかもしれない。電卓があれば、そうでなければ時間がかかりすぎて取り組めない、大きな数や半端な数をふくむ現実の問題をさぐることができると支持する人々は言う。',
+      '支持する人々はまた、電卓は現代の暮らしの現実を反映していると強調する。大人が複雑な計算を手で行うことはめったになく、かわりに電話やコンピューターやほかの機器にたよっている。基本的な算数は今も役に立つが、学校は生徒が働く暮らしで実際に出会う道具を使えるようにそなえさせるべきであり、それには適切な方法を選び、機械が出した結果がもっともらしいかどうかを確かめるのに必要な判断力もふくまれると支持する人々は主張する。',
+      'しかし批判する人々は、早くから電卓にたよりすぎると、生徒が数を本当に理解する力を育てられなくなるかもしれないと警告する。手で計算することは、子どもが数どうしの関係や、かけ算やわり算のような計算のしくみや、答えの見当のつけ方をつかむのに役立つと彼らは主張する。この感覚を一度も育てたことのない生徒は、たとえばボタンをおしまちがえたために電卓が明らかにまちがった結果を出しても、それに気づけず、ばかげた答えをうたがいもせずに受け入れてしまうかもしれない。生徒が複雑な式を機器に入力できるのに、答えが10と1万のどちらがもっともらしいかを言うのに苦労することがあると話す先生もいる。',
+      '批判する人々はまた、暗算はそれ自体に価値があると指摘する。頭の中ですばやく計算する力は、請求書を確かめたり、買い物をしながら費用の見当をつけたりするような毎日の場面で役に立ち、記憶や集中力を強めるかもしれない。計算を一歩一歩たどっていく練習が、より高度な数学が必要とする忍耐と正確さを育てるのに役立つと示す研究者もいる。彼らの考えでは、こうした早い段階の課題を完全に取りのぞくと、どんな機械もただ必要なひらめきをあたえてはくれない、より高い次元の学びの要求に、生徒がそなえにくくなるかもしれない。',
+      '今では多くの教育者が、つりあいのとれたやり方を支持している。生徒はまず暗算と筆算のしっかりした土台を育てて数のふるまいを理解し、そのあとではじめて、より複雑な作業をあつかう道具として電卓を取り入れるべきだと彼らは提案する。試験に、電卓を禁止する部分と認める部分の両方をふくめれば、基本の力とより高い次元の問題を解く力の両方を公平に評価できるかもしれない。そうしたやり方は、電卓を学びの敵ではなく、その正しい使い方そのものを教えなければならない道具としてあつかうのである。',
+      '電卓をめぐる議論は、結局のところ、教育における技術の役割についての、より広い問いを反映している。印刷機からインターネットまで、あらゆる新しい道具は、ある人間の力を強める一方で別の力を弱めるかもしれないという心配を生んできた。学校にとっての課題は、そうした道具をこばむことでも、うたがいなく受け入れることでもなく、どの力を残す価値があるのか、そして技術が本当の理解にかわるのではなく、それをささえるためにどう使えるのかを決めることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「基本的な算数は今も役に立つが、学校は実際の道具を使えるようにすべき」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters argue that calculators let students focus on ( 1 ) and reflect modern life. Critics warn that early reliance may prevent a genuine understanding of ( 2 ) and that mental arithmetic has value. Many educators favor a ( 3 ) approach.',
+      blanks: [
+        { choices: ['concepts', 'handwriting', 'history', 'music'], answer: 0, why: '第2段落 involves understanding concepts, recognizing patterns ...。' },
+        { choices: ['numbers', 'words', 'colors', 'maps'], answer: 0, why: '第4段落 a genuine understanding of numbers。' },
+        { choices: ['balanced', 'strict', 'secret', 'random'], answer: 0, why: '第6段落 Many educators now favor a balanced approach。' },
+      ],
+    },
+    tf: [
+      { statement: '国によって、電卓の使い方についての考えがちがう。', answer: true, why: '第1段落 In some countries, calculators are permitted ... while in others ...。' },
+      { statement: '支持する人々は、数学はただ長い計算をすることだと言う。', answer: false, why: '第2段落 rather than simply carrying out long calculations。' },
+      { statement: '暗算は、記憶や集中力を強めるかもしれない。', answer: true, why: '第5段落 it may also strengthen memory and concentration。' },
+      { statement: '筆者は、学校は新しい道具をすべてこばむべきだと述べている。', answer: false, why: '第7段落 not to reject such tools or to accept them uncritically。' },
+    ],
+    qa: [
+      { q: 'What may students who never developed a sense of numbers fail to do?', choices: ['Recognize when a calculator has produced an obviously wrong result.', 'Press the buttons on a calculator.', 'Read mathematics textbooks.', 'Use computers at work.'], answer: 0, why: '第4段落 may be unable to recognize when a calculator has produced an obviously wrong result。' },
+      { q: 'How might examinations assess both basic skills and problem solving?', choices: ['By including sections with and without calculators.', 'By banning all calculators.', 'By allowing only calculators.', 'By removing written tests.'], answer: 0, why: '第6段落 sections in which calculators are prohibited alongside others in which they are allowed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
