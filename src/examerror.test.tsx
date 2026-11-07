@@ -3256,3 +3256,10 @@ it('誤文訂正〈229〉：国公立レベル I don’t think と I hope not �
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('don’t think it will')
 })
+
+it('正誤問題〈236〉：東大レベル fewer と less・as many と as much の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-fewer-less-todai')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) less')
+})

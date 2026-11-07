@@ -5633,6 +5633,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Milk (B) can make (C) into (D) butter.', choices: ['(A) Milk', '(B) can make', '(C) into', '(D) butter'], answer: 1, why: '「牛乳がバターにされる」は受け身 can be made into。' },
     ],
   },
+  {
+    id: 'exam-error-fewer-less-todai',
+    title: '入試の正誤問題〈236〉（東大レベル：英作文の fewer と less・as many と as much）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'fewer は数えられる名詞（複数形）に、less は数えられない名詞に使う（fewer students／less time）。比較級なので「～より」は than。',
+      'as many ＋複数名詞 as ～／as much ＋数えられない名詞 as ～ で「～と同じくらい多くの」。倍数は twice as many books as ～ のように前に置く。',
+    ],
+    examples: [
+      { en: 'There are fewer students and less noise in the library today.', ja: '今日は図書館の生徒が少なく、音も小さい。' },
+      { en: 'She has as many books as her brother.', ja: '彼女はお兄さんと同じくらいたくさんの本をもっている。' },
+    ],
+    questions: [
+      { sentence: '(A) There are (B) less (C) students (D) in my class this year.', choices: ['(A) There are', '(B) less', '(C) students', '(D) in my class this year'], answer: 1, why: '数えられる名詞 students には fewer。' },
+      { sentence: '(A) I have (B) fewer (C) free time (D) than before.', choices: ['(A) I have', '(B) fewer', '(C) free time', '(D) than before'], answer: 1, why: '数えられない名詞 time には less。' },
+      { sentence: '(A) She has (B) as much (C) books (D) as her brother.', choices: ['(A) She has', '(B) as much', '(C) books', '(D) as her brother'], answer: 1, why: '数えられる名詞 books には as many。' },
+      { sentence: '(A) There was (B) much less snow (C) this winter (D) then last winter.', choices: ['(A) There was', '(B) much less snow', '(C) this winter', '(D) then last winter'], answer: 3, why: '比較の「～より」は than。' },
+      { sentence: '(A) Fewer (B) people (C) uses (D) cash these days.', choices: ['(A) Fewer', '(B) people', '(C) uses', '(D) cash these days'], answer: 2, why: '主語 people は複数なので use。' },
+      { sentence: '(A) Less (B) cars (C) on the road (D) means cleaner air.', choices: ['(A) Less', '(B) cars', '(C) on the road', '(D) means cleaner air'], answer: 0, why: '数えられる名詞 cars には Fewer。' },
+      { sentence: '(A) You should drink (B) more water and (C) eat (D) less snacks.', choices: ['(A) You should drink', '(B) more water and', '(C) eat', '(D) less snacks'], answer: 3, why: '数えられる名詞 snacks には fewer。' },
+      { sentence: '(A) I read (B) twice as many (C) book (D) as last year.', choices: ['(A) I read', '(B) twice as many', '(C) book', '(D) as last year'], answer: 2, why: 'as many のあとは複数名詞なので books。' },
+      { sentence: '(A) This year (B) we had (C) as many rain (D) as last year.', choices: ['(A) This year', '(B) we had', '(C) as many rain', '(D) as last year'], answer: 2, why: '数えられない名詞 rain には as much。' },
+      { sentence: '(A) The city has (B) fewer parks (C) as (D) other cities.', choices: ['(A) The city has', '(B) fewer parks', '(C) as', '(D) other cities'], answer: 2, why: 'fewer は比較級なので than other cities。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
