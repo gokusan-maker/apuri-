@@ -43458,6 +43458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-national-service',
+    title: 'Should Young People Do National Service?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In several countries, there has recently been renewed discussion about whether young people should be required to spend a period of their lives in service to their nation. Such service need not be military: proposals often include working in hospitals, schools, care homes, environmental projects, or disaster relief, usually for a year or less after leaving school. Supporters present national service as a way of strengthening communities and helping young people grow up, while critics regard it as an unnecessary and expensive intrusion into the freedom of individuals to choose their own path in life.",
+      "Supporters argue that national service could bring together young people from different backgrounds who might otherwise never meet. In many societies, people increasingly live, study, and work among others who share their income, education, and opinions, and supporters believe that this separation weakens the sense of a common national identity. By asking young people from cities and villages, wealthy and poor families, and different cultural groups to work side by side on shared tasks, they say, national service could help to build understanding and trust across lines that now divide society.",
+      "Supporters also emphasize the benefits for young people themselves. A period of service could teach practical skills, such as teamwork, responsibility, and the ability to cope with unfamiliar situations, that are valued by employers and useful in everyday life. ( A ) some young people may be reluctant at first, supporters argue, many would discover interests and abilities they had not known they possessed, and some might even find a career in the fields where they served. Supporters also note that hospitals, care homes, and environmental projects in many countries struggle to find enough workers, so that the contribution of young people could meet real needs.",
+      "Critics, however, argue that compulsory service would violate the freedom of young people to make their own decisions. Adults are not usually required to work for the state unless they choose to, and critics ask why young people should be treated differently simply because of their age. They also point out that a year spent in service could delay education or employment, which may be especially costly for young people from poorer families who need to begin earning money as soon as possible.",
+      "Critics also question whether national service would achieve its goals in practice. Organizing work for hundreds of thousands of young people each year would require enormous resources, and there is a risk that participants would be given meaningless tasks simply to fill their time. Critics further warn that young people who are forced to serve may feel resentment rather than commitment, and that work performed unwillingly may be of lower quality than that of trained professionals or genuine volunteers.",
+      "In response, some governments have chosen to encourage service rather than require it. They offer voluntary programs in which young people receive a modest salary, training, or help with university fees in exchange for a period of work in the community, and they seek to make these programs attractive to people from all backgrounds. Others have proposed short programs lasting a few weeks, combining outdoor activities with community projects, as a less demanding way of bringing young people together. Such programs are cheaper to run, and their organizers hope that participants who enjoy the experience will later choose to volunteer for longer periods.",
+      "The debate over national service ultimately reflects a broader question about what citizens owe to one another. If membership of a society brings both rights and responsibilities, then it may seem reasonable to ask young people to contribute to the common good for a limited time. If, however, the freedom to shape one's own life is regarded as fundamental, then any such contribution may be valuable only when it is freely given, and the challenge for societies is to inspire service rather than to demand it.",
+    ],
+    ja: [
+      'いくつかの国で最近、若者は人生のある期間を国への奉仕に使うよう求められるべきかどうかについて、ふたたび議論が起こっている。そうした奉仕は軍隊のものである必要はない。提案の多くには、病院や学校、介護施設、環境のための事業、災害の救援での仕事がふくまれ、ふつうは学校を出たあとの一年以下の期間である。支持する人々は、国民奉仕を地域を強くし若者の成長を助ける方法として示すが、批判する人々は、自分の人生の道を自分で選ぶ個人の自由への、不必要で費用のかかる介入だと考えている。',
+      '支持する人々は、国民奉仕によって、そうでなければけっして出会わないかもしれないちがう生まれの若者どうしを結びつけられると主張する。多くの社会で、人々はますます、収入や教育、意見が同じような人々のなかで暮らし、学び、働くようになっており、支持者はこの分断が国の共通の一体感を弱めていると考える。都会と村、裕福な家庭とまずしい家庭、ちがう文化の集団から来た若者に、共通の仕事でならんで働くよう求めることで、国民奉仕は、いま社会を分けているさかいめをこえて、理解と信頼を築く助けになりうると彼らは言う。',
+      '支持する人々はまた、若者自身にとっての利点も強調する。奉仕の期間は、チームワークや責任感、なじみのない状況に対処する力といった、雇い主に評価され日々の生活でも役に立つ実際的な力を教えてくれるかもしれない。最初はしぶる若者もいるかもしれないが、多くの若者は自分がもっているとは知らなかった関心や能力を見つけ、なかには奉仕した分野で仕事を見つける人さえいるかもしれない、と支持者は主張する。支持する人々はまた、多くの国で病院や介護施設、環境のための事業が十分な働き手を見つけるのに苦労しており、若者の貢献が現実の必要に応えられるかもしれないと指摘する。',
+      'しかし批判する人々は、義務としての奉仕は若者が自分で決める自由を侵すことになると主張する。大人はふつう、自分で選ばないかぎり国のために働くことを求められることはなく、なぜ若者だけが年齢のせいでちがうあつかいを受けるべきなのかと批判する人々は問う。彼らはまた、奉仕に使う一年は進学や就職をおくらせるかもしれず、それはできるだけ早くお金をかせぎはじめる必要のある、まずしい家庭の若者にとってとくに大きな負担になりうると指摘する。',
+      '批判する人々はまた、国民奉仕が実際に目的を果たせるのかどうかを疑う。毎年何十万人もの若者のために仕事を用意するには、ばく大な資源が必要になり、参加者がただ時間をうめるためだけの意味のない仕事をあたえられるおそれもある。さらに、むりやり奉仕させられた若者は、熱意よりもむしろ反発を感じるかもしれず、いやいやおこなわれた仕事は、訓練を受けた専門家や本当のボランティアの仕事より質が低いかもしれない、と批判する人々は警告する。',
+      'これに対して、奉仕を義務にするのではなく促すことを選んだ政府もある。若者が地域での一定期間の仕事とひきかえに、わずかな給料や訓練、大学の学費の援助を受けられる自由参加の仕組みを用意し、それをあらゆる生まれの人々にとって魅力的なものにしようとしているのである。また、野外活動と地域の事業を組み合わせた数週間の短い仕組みを、若者を結びつけるための、より負担の少ない方法として提案した政府もある。そうした仕組みは運営の費用が安く、主催者は、その経験を楽しんだ参加者がのちに自分からより長い期間ボランティアをすることを選ぶよう期待している。',
+      '国民奉仕をめぐる議論は、結局のところ、市民がおたがいに何を負っているのかという、より広い問いを反映している。社会の一員であることが権利と責任の両方をもたらすのなら、若者にかぎられた期間、公共の利益のために貢献するよう求めるのは理にかなっているように思えるかもしれない。しかし、自分の人生を形づくる自由が根本的なものとみなされるなら、そうした貢献はすすんでなされたときにだけ価値があるのかもしれず、社会にとっての課題は、奉仕を求めることではなく、奉仕したいと思わせることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「最初はしぶる若者もいるかもしれないが、多くは関心や能力を見つける」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say national service could bring together young people from different ( 1 ) and teach practical skills. Critics argue that compulsory service violates young people’s ( 2 ) and may produce meaningless tasks. Some governments prefer ( 3 ) programs that offer a salary or help with fees.',
+      blanks: [
+        { choices: ['backgrounds', 'planets', 'languages', 'centuries'], answer: 0, why: '第2段落 bring together young people from different backgrounds。' },
+        { choices: ['freedom', 'health', 'music', 'height'], answer: 0, why: '第4段落 would violate the freedom of young people。' },
+        { choices: ['voluntary', 'military', 'secret', 'expensive'], answer: 0, why: '第6段落 They offer voluntary programs。' },
+      ],
+    },
+    tf: [
+      { statement: '提案されている国民奉仕は、すべて軍隊のものである。', answer: false, why: '第1段落 Such service need not be military。' },
+      { statement: '支持者によると、奉仕した分野で仕事を見つける若者もいるかもしれない。', answer: true, why: '第3段落 some might even find a career in the fields where they served。' },
+      { statement: '批判する人々は、奉仕の一年がまずしい家庭の若者にとってとくに負担になりうると言う。', answer: true, why: '第4段落 especially costly for young people from poorer families。' },
+      { statement: 'すべての政府が、国民奉仕を義務にしている。', answer: false, why: '第6段落 some governments have chosen to encourage service rather than require it。' },
+    ],
+    qa: [
+      { q: 'What do supporters believe weakens the sense of a common national identity?', choices: ['People living among others who share their income and opinions.', 'Too many national holidays.', 'A lack of military training.', 'The cost of university.'], answer: 0, why: '第2段落 people increasingly live, study, and work among others who share their income, education, and opinions。' },
+      { q: 'What risk do critics see in organizing work for so many young people?', choices: ['Participants might be given meaningless tasks.', 'There would be too many professionals.', 'Young people would earn too much.', 'Schools would close.'], answer: 0, why: '第5段落 participants would be given meaningless tasks simply to fill their time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
