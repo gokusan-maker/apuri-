@@ -3488,6 +3488,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 34 q16 -6 32 0" stroke="#211913" strokeWidth="4" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'addax')
+    return (
+      <g>
+        {/* おでこのまき毛 */}
+        <path d="M42 30 q8 -8 16 0" stroke="#7c5a3a" strokeWidth="4" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
