@@ -40062,6 +40062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-sleep',
+    title: 'On Sleep',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every night, almost without exception, each of us performs a remarkable act of trust. We lie down, close our eyes, and gradually surrender our awareness of the world, entering a state in which we can neither defend ourselves nor control our thoughts. We spend roughly a third of our lives in this condition, yet because it is so familiar, we rarely stop to consider what a strange and mysterious experience sleep really is, or what our attitude toward it reveals about the values of the society in which we live.",
+      "In many modern societies, sleep is often treated as an obstacle to productivity. Successful people are sometimes admired for how little they sleep, and students may boast of staying awake all night to finish an assignment or prepare for an examination. In this view, sleep is time that could have been used for work or study, a necessary weakness of the body that should be reduced as far as possible, rather than an activity with value of its own. Bright screens, late-night messages, and the constant availability of entertainment make it easier than ever to postpone rest, so that many people go to bed later than they intend night after night.",
+      "Yet this attitude overlooks how much depends on sleep. A person deprived of rest for even a single night may find it difficult to concentrate, to control their emotions, or to make sound judgments. ( A ) the effects of one sleepless night may pass quickly, long periods of insufficient rest can weaken the body's defenses against illness, disturb memory, and gradually erode the very abilities that people hoped to gain by staying awake.",
+      "Sleep is also closely connected to learning and creativity. Researchers have found that the sleeping brain does not simply rest but continues to process the experiences of the day, strengthening some memories and discarding others. Many people have had the experience of going to bed with an unsolved problem and waking with a solution, as though the mind had quietly continued working while the conscious self was absent, arranging scattered pieces of information into a new and meaningful pattern. Dreams, too, have long fascinated human beings, and in many cultures they have been regarded as messages, warnings, or sources of inspiration that the waking mind could not have produced.",
+      "There is, moreover, something humbling about sleep. However powerful, intelligent, or ambitious a person may be, they must eventually lie down and give up control, just as every other human being must do. In this sense, sleep is a great equalizer, reminding us that we are bodily creatures with limits, dependent on rhythms that we did not choose and cannot entirely overcome, no matter how strongly we may wish to do so.",
+      "To value sleep, then, is not to be lazy but to accept a certain wisdom about human nature. It means recognizing that rest is not merely the absence of activity but a condition that makes meaningful activity possible. A society that respects sleep might organize work and school in ways that allow people to rest adequately, and individuals who respect it might learn to see the end of the day not as a defeat but as a natural pause before a new beginning.",
+      "In the end, our relationship with sleep reflects our relationship with our own limits. Those who constantly fight against sleep may be expressing a desire to escape the boundaries of the body and to achieve more than any single life allows. Those who welcome it, on the other hand, may find in that nightly surrender a kind of peace, an acknowledgment that the world will continue without their attention for a few hours, and that they too will be renewed by morning.",
+    ],
+    ja: [
+      '毎晩、ほとんど例外なく、私たちはそれぞれ、おどろくべき信頼の行いをしている。横になり、目をとじ、少しずつ世界への意識を手ばなして、自分を守ることも考えをおさえることもできない状態に入るのである。私たちは人生のおよそ三分の一をこの状態で過ごしているが、それがあまりになじみ深いので、ねむりが本当はどれほど不思議でなぞめいた経験であるのか、また、それに対する私たちの態度が、自分の住む社会の価値観について何を明らかにしているのかを、立ち止まって考えることはめったにない。',
+      '多くの現代の社会では、ねむりはしばしば生産性へのじゃまものとしてあつかわれる。成功した人々は、どれほど少ししかねむらないかで尊敬されることがあり、学生は課題を仕上げたり試験の準備をしたりするために一晩中起きていたことを自慢するかもしれない。この見方では、ねむりは仕事や勉強に使えたはずの時間であり、それ自体の価値をもつ活動ではなく、できるだけへらすべき、体の必要な弱さなのである。明るい画面や、夜おそくのメッセージや、いつでも楽しめる娯楽のせいで、休むことを先のばしにするのはかつてなくかんたんになり、多くの人が毎晩、つもりより遅くねむりにつく。',
+      'しかしこの態度は、どれほど多くのことがねむりにかかっているかを見落としている。たった一晩でも休みをうばわれた人は、集中することや、感情をおさえることや、しっかりした判断をすることがむずかしくなるかもしれない。ねむれない一晩の影響はすぐに消えるかもしれないが、長い期間休みが足りないと、病気に対する体の守りが弱まり、記憶がみだれ、人々が起きていることで得ようとしたまさにその能力が少しずつそこなわれていく。',
+      'ねむりはまた、学ぶことや創造性と深く結びついている。研究者たちは、ねむっている脳はただ休んでいるのではなく、その日の経験を処理し続け、ある記憶を強め、ほかの記憶をすてていることを発見してきた。多くの人が、解けない問題をかかえてねむり、答えとともに目ざめるという経験をしたことがある。まるで意識している自分がいないあいだにも、心がしずかに働き続け、ばらばらの情報のかけらを、新しく意味のある形にならべていたかのようである。夢もまた長いあいだ人間をひきつけてきており、多くの文化で、目ざめている心には生み出せなかったはずのお告げや警告やひらめきの源と見なされてきた。',
+      'さらに、ねむりには人をけんきょにさせるものがある。どれほど力があり、かしこく、意欲のある人であっても、ほかのすべての人間と同じように、やがては横になって支配を手ばなさなければならない。この意味で、ねむりはすべての人を平等にする大きなものであり、私たちが限界をもつ体をもった生き物であって、自分で選んだのではなく、どれほど強く望んでも完全にはのりこえられないリズムにたよっていることを思い出させてくれる。',
+      'したがって、ねむりを大切にすることは、なまけることではなく、人間の本性についてのある種の知恵を受け入れることである。それは、休みがただ活動がないことではなく、意味のある活動を可能にする状態であると認めることを意味する。ねむりを尊重する社会は、人々が十分に休めるように仕事や学校を組み立てるかもしれず、ねむりを尊重する個人は、一日の終わりを敗北ではなく、新しいはじまりの前の自然な休止として見ることを学ぶかもしれない。',
+      '結局のところ、ねむりとの関係は、自分自身の限界との関係を映している。たえずねむりとたたかう人は、体の境界からのがれ、一つの人生がゆるす以上のことをなしとげたいという望みをあらわしているのかもしれない。一方、ねむりをむかえ入れる人は、その毎晩の手ばなしの中に一種のやすらぎを見いだすかもしれない。それは、数時間のあいだ自分が注意をはらわなくても世界は続いていき、自分もまた朝までに新しくなるのだと認めることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「一晩の影響はすぐ消えるかもしれないが、長い期間足りないと能力がそこなわれる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '私たちは人生のおよそ三分の一をねむって過ごしている。', answer: true, why: '第1段落 We spend roughly a third of our lives in this condition。' },
+      { statement: 'ねむっている脳は、ただ休んでいるだけである。', answer: false, why: '第4段落 the sleeping brain does not simply rest。' },
+      { statement: '筆者は、ねむりはすべての人を平等にすると述べている。', answer: true, why: '第5段落 sleep is a great equalizer。' },
+      { statement: '筆者は、ねむりを大切にすることはなまけることだと考えている。', answer: false, why: '第6段落 To value sleep, then, is not to be lazy。' },
+    ],
+    qa: [
+      { q: 'How is sleep often treated in many modern societies?', choices: ['As an obstacle to productivity.', 'As the most important activity.', 'As a kind of sport.', 'As a school subject.'], answer: 0, why: '第2段落 sleep is often treated as an obstacle to productivity。' },
+      { q: 'What can long periods of insufficient rest do?', choices: ['Weaken the defenses of the body against illness and disturb memory.', 'Make people more creative.', 'Improve their judgment.', 'Help them control their emotions.'], answer: 0, why: '第3段落 can weaken the body’s defenses against illness, disturb memory。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
