@@ -46862,6 +46862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fountains',
+    title: 'On Fountains',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the squares of many cities, water rises into the air, falls back into stone basins, and rises again, endlessly. People sit beside fountains to rest, children run through their spray on hot days, and visitors throw coins into them for luck. Fountains are so familiar a part of the urban landscape that we seldom ask why they are there. Yet they have a long history, and they reveal much about how human beings have thought about water, power, beauty, and the shared spaces in which they live.",
+      "For most of history, fountains served an essential practical purpose: they supplied drinking water. Before water was piped into individual homes, people in towns depended on public fountains, which were fed by springs, wells, or channels that carried water from distant hills. Collecting water was a daily task, often performed by women and children, and the fountain was therefore a place where neighbors met regularly, exchanged news, and shared the rhythms of daily life. In many towns, the fountain was as much a center of community as the market or the church.",
+      "Fountains also became symbols of power and generosity. ( A ) the basic purpose of a fountain was to provide water, rulers and wealthy citizens often built elaborate fountains decorated with statues and carvings, displaying their importance and their concern for the public good. Bringing a reliable supply of clean water into a crowded city was a remarkable achievement, and a grand fountain announced to everyone that those in power could command nature itself for the benefit of the people. Some of these fountains still carry inscriptions recording the names of those who paid for them.",
+      "As engineering advanced, fountains grew more ambitious. Designers learned to use the pressure of water flowing from higher ground to send jets high into the air, and gardens of palaces were filled with fountains that danced, sang, and formed complex patterns. Such displays were often meant to astonish visitors, demonstrating not only wealth but also the skill of engineers who could make water behave in ways that seemed almost magical. Visitors sometimes traveled long distances simply to see such marvels.",
+      "Once water was piped directly into homes, many public fountains lost their original function. Yet they did not disappear. Instead, they became primarily places of beauty and pleasure, offering the sound and movement of water in the middle of busy streets. Studies of urban life have suggested that people are drawn to such places, and that the sound of falling water can make a noisy city feel calmer and more pleasant, encouraging people to linger and to meet. A fountain, in this sense, continued to serve the community, though in a new way.",
+      "In recent years, some cities have returned to the idea of fountains as sources of drinking water. Concerned about plastic waste from bottled drinks, they have installed new public fountains where people can drink or refill their own bottles. At the same time, in regions facing water shortages, decorative fountains have sometimes been turned off to save water, raising questions about whether such displays are a luxury that cities can still afford. The fountain, it seems, is once again being asked to justify its place in the life of the city.",
+      "Perhaps, then, the fountain deserves more thought than we usually give it. It has supplied life-giving water, displayed the power of rulers, showcased the skill of engineers, and offered calm in the heart of the city. The next time we pause beside a fountain and listen to the sound of its water, it may be worth remembering that we are standing at a place where, for centuries, people have gathered to meet one of their most basic needs and to enjoy one of the simplest forms of beauty.",
+    ],
+    ja: [
+      '多くの都市の広場では、水が空中にふき上がり、石の水盤に落ち、またふき上がることをかぎりなくくり返している。人々は噴水のそばにすわって休み、子どもたちは暑い日にそのしぶきの中をかけまわり、観光客は幸運を願ってコインを投げ入れる。噴水は都市の風景のあまりにもなじみ深い一部なので、私たちはなぜそれがそこにあるのかをめったに問わない。しかし噴水には長い歴史があり、人間が水や権力、美しさ、そして自分たちがくらす共有の空間についてどのように考えてきたかを多く明らかにしてくれる。',
+      '歴史のほとんどのあいだ、噴水は欠かせない実際的な目的をはたしていた。飲み水を供給することである。水がひとつひとつの家に管で引かれる前、町の人々は、泉や井戸、遠くの丘から水を運ぶ水路から水を引いた公共の水くみ場にたよっていた。水くみは毎日の仕事で、しばしば女性や子どもが行ったので、水くみ場は近所の人々がいつも出会い、知らせを交わし、日々の生活のリズムを分かち合う場所だったのである。多くの町で、水くみ場は市場や教会と同じくらい地域の中心だった。',
+      '噴水はまた、権力と気前のよさのシンボルにもなった。噴水の基本的な目的は水を供給することだったが、支配者や裕福な市民はしばしば、像や彫刻でかざられた手のこんだ噴水を建て、自分たちの重要さと公共の利益への関心を見せつけた。混み合った都市に信頼できるきれいな水を引くことはおどろくべき業績であり、壮大な噴水は、権力をもつ者が人々のために自然そのものを思いのままにできることを、すべての人に知らせたのである。こうした噴水のなかには、お金を出した人々の名前を記した文字がいまも残っているものもある。',
+      '技術が進歩するにつれて、噴水はより大がかりになった。設計者たちは、高い土地から流れてくる水の圧力を使って水を空高くふき上げることを学び、宮殿の庭は、おどり、歌い、複雑な模様をえがく噴水でみたされた。そうした見せ物はしばしば訪れる人をおどろかせるためのものであり、富だけでなく、水をほとんど魔法のように思えるやり方でふるまわせることのできる技術者の腕も示していた。訪れる人のなかには、そうしたおどろくべきものを見るためだけに長い距離を旅した人もいた。',
+      '水が直接家に引かれるようになると、多くの公共の噴水はもともとの役目を失った。しかし噴水は消えなかった。かわりに、噴水はおもに美しさと楽しみの場所となり、にぎやかな通りのまんなかで水の音と動きをあたえるようになった。都市の生活についての研究によれば、人々はそうした場所にひきつけられ、落ちる水の音はさわがしい都市をより落ち着いた心地よいものに感じさせ、人々がそこにとどまり、出会うようはげますという。この意味で、噴水は新しいやり方ではあっても、地域の役に立ちつづけたのである。',
+      '近年、噴水を飲み水のみなもととする考えにもどった都市もある。ペットボトルの飲み物によるプラスチックごみを心配して、人々が水を飲んだり自分のボトルに水を入れたりできる新しい公共の水飲み場を設けたのである。同時に、水不足に直面している地域では、水を節約するためにかざりの噴水が止められることもあり、そうした見せ物は都市がいまもまかなえるぜいたくなのかどうかという問いが投げかけられている。噴水はふたたび、都市の生活の中で自分の居場所の正しさを示すよう求められているらしいのである。',
+      'だとすれば、噴水は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは命をささえる水を供給し、支配者の力を示し、技術者の腕を見せ、都市の中心に落ち着きをあたえてきた。次に噴水のそばで立ち止まり、その水の音に耳をかたむけるとき、何世紀ものあいだ人々がもっとも基本的な必要のひとつをみたし、もっとも単純な形の美しさのひとつを楽しむために集まってきた場所に立っているのだと思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「噴水の基本的な目的は水の供給だったが、支配者は手のこんだ噴水を建てた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '水が家に引かれる前、町の人々は公共の水くみ場にたよっていた。', answer: true, why: '第2段落 people in towns depended on public fountains。' },
+      { statement: '支配者は、かざりのない単純な噴水だけを建てた。', answer: false, why: '第3段落 often built elaborate fountains decorated with statues。' },
+      { statement: '落ちる水の音は、さわがしい都市を落ち着いて感じさせることがある。', answer: true, why: '第5段落 can make a noisy city feel calmer。' },
+      { statement: '筆者によると、どの都市も水飲み場をなくしつつある。', answer: false, why: '第6段落 they have installed new public fountains where people can drink。' },
+    ],
+    qa: [
+      { q: 'How did designers send jets of water high into the air?', choices: ['By using the pressure of water flowing from higher ground.', 'By using electric pumps only.', 'By heating the water.', 'By using wind power.'], answer: 0, why: '第4段落 to use the pressure of water flowing from higher ground。' },
+      { q: 'Why have some decorative fountains been turned off?', choices: ['To save water in regions facing shortages.', 'Because they were too noisy.', 'Because nobody visited them.', 'To build new roads.'], answer: 0, why: '第6段落 decorative fountains have sometimes been turned off to save water。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
