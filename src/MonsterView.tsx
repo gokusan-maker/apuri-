@@ -3865,6 +3865,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="68" cy="34" rx="7" ry="4" fill="#8f7154" />
       </g>
     )
+  if (species === 'whitetail')
+    return (
+      <g>
+        {/* 旗のような白いしっぽ */}
+        <ellipse cx="72" cy="58" rx="3" ry="6" fill="#fafaf9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
