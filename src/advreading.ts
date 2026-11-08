@@ -47022,6 +47022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-lighthouses',
+    title: 'On Lighthouses',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Standing alone on rocky headlands or small islands, lighthouses have long been among the most recognizable buildings in the world. Their tall towers and turning beams appear on postcards, in paintings, and in countless stories, and many people who have never been to sea feel a strange attachment to them. Yet the lighthouse was built for a practical and urgent purpose, and its history tells us much about the dangers of the sea, the progress of technology, and the human desire to protect strangers whom we will never meet.",
+      "The basic purpose of a lighthouse is to warn ships of danger and to help them find their way. Before modern navigation, sailors approaching a coast at night or in storms faced a constant risk of striking hidden rocks or running aground on sandbanks. A light shining from a high tower could be seen from far out at sea, telling sailors where the land was and which dangers to avoid. On busy coasts, a single well-placed light might guide hundreds of ships safely past the same dangerous reef every year. Each lighthouse often had its own pattern of flashes, so that sailors could tell one from another in the dark.",
+      "Early lighthouses were simple fires burning on hills or towers, and keeping them alight required constant effort. ( A ) such fires could be seen only at short distances, they were still a vital help to sailors in many ancient harbors. Over the centuries, fires were replaced by candles, oil lamps, and eventually electric lights, and the invention of special lenses that gathered light into a powerful beam allowed lighthouses to be seen from much greater distances than before.",
+      "For a long time, lighthouses depended on the people who lived in them. Lighthouse keepers trimmed the lamps, cleaned the lenses, and kept watch through the night, often living with their families in isolated places for months at a time. Supplies were often brought by boat, and when the weather was bad, keepers might wait weeks for fresh food and news from the mainland. Their work was lonely and sometimes dangerous, and in storms they might risk their own lives to rescue sailors from wrecks. Many stories of courage and endurance are connected with these keepers and the remote stations in which they lived.",
+      "In modern times, the role of the lighthouse has changed. Ships now use satellite navigation and electronic charts that show their position with great precision, and most lighthouses have become automatic, operating without keepers. Some have been switched off entirely, and the old towers stand dark, slowly worn down by wind and salt. Yet many continue to function as a backup in case electronic systems fail, and others have been preserved as museums or holiday accommodation, allowing visitors to experience something of the isolation and beauty that keepers once knew.",
+      "The lighthouse has also become a powerful image in human thought. It suggests guidance, safety, and hope, a fixed point that helps travelers find their way through darkness and danger. Writers have used the lighthouse as a symbol of steadfastness, of a person or idea that remains firm while everything else is in motion. At the same time, the solitary tower standing against the sea can suggest loneliness, and the quiet devotion of those who serve others without being seen.",
+      "Perhaps, then, the lighthouse deserves more thought than we usually give it. It has saved countless lives, reflected the progress of human technology, and offered an enduring image of guidance and care. The next time we see a lighthouse standing on a distant cliff, it may be worth remembering the keepers who once tended its light, and the simple idea behind it: that people on land should do what they can to help strangers at sea find their way safely home.",
+    ],
+    ja: [
+      '岩の多い岬や小さな島にひとりぽつんと立つ灯台は、長いあいだ世界でもっともよく知られた建物のひとつだった。その高い塔と回る光は、絵はがきや絵画、数えきれない物語にあらわれ、海に出たことのない多くの人々も、灯台にふしぎな愛着を感じている。しかし灯台は実際的で差しせまった目的のために建てられたのであり、その歴史は、海の危険や技術の進歩、そして一度も会うことのない見知らぬ人々を守りたいという人間の願いについて多くを教えてくれる。',
+      '灯台の基本的な目的は、船に危険を知らせ、道を見つける助けをすることである。現代の航海術ができる前、夜やあらしの中で海岸に近づく船乗りは、かくれた岩にぶつかったり砂州に乗り上げたりする危険にたえず直面していた。高い塔から光る明かりは沖からでも見え、船乗りに陸がどこにあり、どの危険をさけるべきかを知らせた。船の多い海岸では、うまく置かれたひとつの明かりが、毎年何百もの船を同じ危険な岩礁の横を無事に通らせることもあった。灯台にはそれぞれ独自の光り方があることが多く、船乗りは暗やみの中でひとつひとつを見分けることができた。',
+      '初期の灯台は丘や塔の上で燃やす単純な火であり、それを燃やしつづけるにはたえまない努力が必要だった。そうした火は近い距離からしか見えなかったが、多くの古代の港で船乗りにとって欠かせない助けだった。何世紀ものあいだに、火はろうそくや油のランプ、やがて電気の明かりに取ってかわられ、光を集めて強い光線にするとくべつなレンズの発明によって、灯台は以前よりはるかに遠くから見えるようになった。',
+      '長いあいだ、灯台はそこに住む人々にたよっていた。灯台守はランプの芯を整え、レンズをみがき、夜通し見張りをし、しばしば家族とともに何か月も人里はなれた場所でくらした。物資はしばしば船で運ばれ、天気が悪いと、灯台守は本土からの新しい食べ物や知らせを何週間も待つこともあった。その仕事はさびしく、ときに危険であり、あらしのときには難破船から船乗りを助けるために自分の命をかけることもあった。勇気と忍耐の多くの物語が、こうした灯台守と彼らがくらした遠くはなれた灯台に結びついている。',
+      '現代では、灯台の役割は変わった。いまでは船は位置をとても正確に示す衛星の航法や電子の海図を使っており、ほとんどの灯台は灯台守なしで動く自動のものになった。完全に消され、古い塔が暗いまま風と潮によって少しずつすり減っているものもある。しかし多くの灯台は、電子のしくみが故障したときの予備として動きつづけており、博物館や宿泊施設として保存され、訪れる人がかつて灯台守が知っていた孤独と美しさの何かを味わえるようになっているものもある。',
+      '灯台はまた、人間の考えの中で力強いイメージにもなっている。それは導きや安全、希望を、つまり旅人が暗やみと危険の中で道を見つける助けとなる動かない一点を思わせる。作家たちは灯台を、ほかのすべてが動いているあいだもしっかりとありつづける人や考えの、ゆるぎなさのシンボルとして使ってきた。同時に、海に向かってひとり立つ塔は、孤独と、人に見られることなくほかの人々につくす人々の静かな献身を思わせることもある。',
+      'だとすれば、灯台は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは数えきれない命を救い、人間の技術の進歩を映し出し、導きと思いやりの変わらないイメージをあたえてきた。次に遠いがけの上に立つ灯台を見かけたら、かつてその明かりを守った灯台守たちと、その背後にある単純な考えを思い出してみる価値があるかもしれない。陸にいる人々は、海にいる見知らぬ人々が無事に家への道を見つけられるよう、できることをすべきだという考えである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした火は近くからしか見えなかったが、欠かせない助けだった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '灯台にはそれぞれ独自の光り方があることが多かった。', answer: true, why: '第2段落 Each lighthouse often had its own pattern of flashes。' },
+      { statement: '初期の灯台は、はじめから電気の明かりを使っていた。', answer: false, why: '第3段落 Early lighthouses were simple fires。' },
+      { statement: '灯台守は、ときに難破船の船乗りを助けるために命をかけた。', answer: true, why: '第4段落 they might risk their own lives to rescue sailors。' },
+      { statement: '筆者によると、今日すべての灯台は消されている。', answer: false, why: '第5段落 many continue to function as a backup。' },
+    ],
+    qa: [
+      { q: 'What allowed lighthouses to be seen from much greater distances?', choices: ['Special lenses that gathered light into a beam.', 'Taller towers only.', 'Brighter candles.', 'Larger fires on hills.'], answer: 0, why: '第3段落 special lenses that gathered light into a powerful beam。' },
+      { q: 'What do ships now use to find their position?', choices: ['Satellite navigation and electronic charts.', 'The stars only.', 'Lighthouse keepers.', 'Foghorns.'], answer: 0, why: '第5段落 Ships now use satellite navigation and electronic charts。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
