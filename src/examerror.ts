@@ -10429,6 +10429,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Do you mind [I smoke] here?', choices: ['if I smoke', 'I smoking', 'that smoke I', 'I to smoke'], answer: 0, why: '「～してもいいですか」は Do you mind if I ～。' },
     ],
   },
+  {
+    id: 'exam-fix-245',
+    title: '入試の誤文訂正〈245〉（国公立レベル：agree with・agree to・agree on の使い分け）',
+    points: ['agree with は「（人・意見）に賛成する」（I agree with you.／I agree with his opinion.）。agree to は「（提案・計画・条件）に同意する・応じる」（She agreed to the plan.）。agree on は「（決めること）について意見が一致する」（We agreed on the date.）。', 'agree は自動詞なので、ふつう目的語を直接とらない（× agree you）。agree to do で「～することに同意する」、agree that ～ で「～ということで意見が一致する」。'],
+    examples: [{ en: 'I agree with you. / They agreed to our proposal. / We agreed on a meeting place.', ja: 'あなたに賛成です。／彼らは私たちの提案に応じた。／私たちは待ち合わせ場所について意見が一致した。' }],
+    questions: [
+      { sentence: 'I completely [agree to you] about this.', choices: ['agree with you', 'agree you', 'agree on you', 'agree at you'], answer: 0, why: '「（人）に賛成する」は agree with 人。' },
+      { sentence: 'The workers finally [agreed with the new contract].', choices: ['agreed to the new contract', 'agreed the new contract with', 'agreed at the new contract', 'agreed of the new contract'], answer: 0, why: '「（条件・契約）に応じる」は agree to。' },
+      { sentence: 'We could not [agree to a date] for the party.', choices: ['agree on a date', 'agree a date at', 'agree with a date of', 'agree in a date'], answer: 0, why: '「（決めること）について意見が一致する」は agree on。' },
+      { sentence: 'Do you [agree his opinion]?', choices: ['agree with his opinion', 'agree to his opinion of', 'agree at his opinion', 'agree on his opinion of'], answer: 0, why: '「（意見）に賛成する」は agree with。agree は自動詞。' },
+      { sentence: 'She [agreed helping] us with the move.', choices: ['agreed to help', 'agreed to helping with', 'agreed on help', 'agreed with help'], answer: 0, why: '「～することに同意する」は agree to do。' },
+      { sentence: 'The two countries [agreed with a plan] to reduce pollution.', choices: ['agreed on a plan', 'agreed a plan with', 'agreed at a plan', 'agreed of a plan'], answer: 0, why: 'いっしょに決めた計画について意見が一致するので agree on。' },
+      { sentence: 'My parents finally [agreed with my request] to study abroad.', choices: ['agreed to my request', 'agreed my request on', 'agreed at my request', 'agreed in my request'], answer: 0, why: '「（要求・申し出）に応じる」は agree to。' },
+      { sentence: 'Everyone [agreed on that] the meeting was too long.', choices: ['agreed that', 'agreed with that of', 'agreed to that of', 'agreed at that'], answer: 0, why: '「～ということで意見が一致する」は agree that 節。前置詞は不要。' },
+      { sentence: 'I [am agree] with you on this point.', choices: ['agree', 'am agreeing to', 'am agreed on', 'agreeing'], answer: 0, why: 'agree は動詞なので be 動詞は不要。I agree with you.' },
+      { sentence: 'The team members could not [agree to who] should be the leader.', choices: ['agree on who', 'agree who to', 'agree with who of', 'agree at who'], answer: 0, why: '「だれにするか」という決めることについては agree on。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

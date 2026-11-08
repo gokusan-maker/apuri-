@@ -3473,3 +3473,10 @@ it('正誤問題〈251〉：東大レベル hear from・hear of・hear about の
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) of him')
 })
+
+it('誤文訂正〈245〉：国公立レベル agree with・agree to・agree on の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-245')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('agree with you')
+})
