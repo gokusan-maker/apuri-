@@ -46142,6 +46142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-towers',
+    title: 'On Towers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Wherever human beings have built settlements, they seem to have felt the urge to build upward. Ancient temples rose in steps toward the sky, castles were guarded by tall stone towers, and churches and mosques were given spires and minarets that could be seen from far away. Today, glass towers dominate the centers of many cities, competing to be the tallest in the world. Why have people in so many different cultures been drawn to build towers, and what do these structures reveal about the societies that created them?",
+      "Some towers were built for practical reasons. A tall structure allows people to see far into the distance, and watchtowers have long been used to observe the approach of enemies, to watch for fires, or to guide ships safely along dangerous coasts. Towers have also been used to carry sound and signals, from bells that called people to prayer to lights and radio transmitters that send messages across great distances. In these cases, height is useful because it extends the reach of human senses and voices. A tower, in this sense, allows a single person to see and be heard far beyond the limits of the body.",
+      "Yet many towers serve purposes that are less practical. ( A ) a tall building may offer useful space or a fine view, its height often seems intended above all to impress. Rulers, religious institutions, and wealthy families have built towers to display their power and importance, and the tallest structure in a city has often belonged to whoever held the greatest authority. In some periods, rival families in the same town competed to build ever-taller towers, as if height itself were a measure of status.",
+      "Modern skyscrapers continue this tradition in new forms. Advances in steel, concrete, and lifts made it possible to build far higher than ever before, and cities and companies have competed to construct the tallest buildings as symbols of economic strength and modernity. A distinctive tower can give a city a recognizable image, appearing on postcards and in films, and attracting visitors who wish to look out from its highest floors over the streets below. Some cities have even become better known for a single tower than for anything else they possess.",
+      "Towers have also raised concerns. Very tall buildings can cast long shadows over neighboring streets, change the patterns of wind at ground level, and use large amounts of energy for heating, cooling, and lifts. In historic cities, new towers may clash with older buildings and spoil views that residents value, and there have been many debates about whether such structures should be permitted near important landmarks. A tower that seems a proud symbol to some may seem an unwelcome intrusion to others. Such disagreements show that a tower is never simply a building.",
+      "The tower has also been a powerful image in stories and in thought. Ancient tales describe people who tried to build a tower reaching the heavens and were punished for their pride, and the phrase living in an ivory tower is used for people who are cut off from ordinary life. In such images, the tower suggests both aspiration and isolation, the desire to rise above others and the danger of losing touch with the world below.",
+      "Perhaps, then, towers deserve more thought than we usually give them. They express practical needs, the wish for power and recognition, and the human longing to reach upward, and they shape the appearance and life of the cities around them. When we look up at a tall building against the sky, we may be reminded that every tower is also a statement, and it may be worth asking not only how high it rises but also what it says about those who built it.",
+    ],
+    ja: [
+      '人間が住みついたところではどこでも、上へ向かって建てたいという衝動を感じてきたようである。古代の神殿は空へ向かって階段状にそびえ、城は高い石の塔で守られ、教会やモスクには遠くからでも見える尖塔やミナレットがつけられた。今日、ガラスの塔は多くの都市の中心部を支配し、世界でいちばん高くなろうと競い合っている。なぜこれほど多くのちがう文化の人々が塔を建てたいと思ってきたのか、そしてこれらの建物は、それをつくった社会について何を明らかにするのだろうか。',
+      '実際的な理由で建てられた塔もある。高い建物からは遠くまで見わたすことができ、物見の塔は長いあいだ、敵が近づくのを見張ったり、火事を見はったり、危険な海岸ぞいで船を安全に導いたりするのに使われてきた。塔はまた、人々を祈りによぶ鐘から、遠くまでメッセージを送る光や電波の送信機にいたるまで、音や合図を運ぶのにも使われてきた。こうした場合、高さが役に立つのは、それが人間の感覚と声のとどく範囲を広げるからである。この意味で、塔は、ひとりの人間が体の限界をはるかにこえて見たり、声をとどけたりすることを可能にするのである。',
+      'しかし多くの塔は、それほど実際的ではない目的をはたしている。高い建物は役に立つ空間やよい眺めをあたえてくれるかもしれないが、その高さは何よりも人々をおどろかせることをねらっているように見えることが多い。支配者や宗教の組織、裕福な一族は、自分たちの権力と重要さを示すために塔を建て、都市でいちばん高い建物は、しばしば最大の権威をもつ者のものだった。時代によっては、同じ町の競い合う一族が、まるで高さそのものが地位をはかるものさしであるかのように、ますます高い塔を建てようと競った。',
+      '現代の超高層ビルは、この伝統を新しい形で受けついでいる。鉄やコンクリート、エレベーターの進歩によって、これまでよりはるかに高く建てることが可能になり、都市や会社は経済の力と近代性のシンボルとして、いちばん高い建物を建てようと競ってきた。特徴のある塔は都市にひと目でわかるイメージをあたえ、絵はがきや映画に登場し、いちばん上の階から下の通りを見わたしたいと願う訪問者をひきつける。ひとつの塔によって、ほかのどんなものよりもよく知られるようになった都市さえある。',
+      '塔はまた、心配も生んできた。とても高い建物は、となりの通りに長いかげを落とし、地上の風の流れを変え、暖房や冷房、エレベーターのために大量のエネルギーを使うことがある。歴史のある都市では、新しい塔が古い建物と調和せず、住民が大切にしている眺めをそこなうことがあり、そうした建物を大切な名所の近くにみとめるべきかどうかをめぐって多くの議論があった。ある人々にとってほこらしいシンボルに思える塔が、別の人々には歓迎されない割りこみに思えることもあるのである。そうした意見のちがいは、塔がけっしてただの建物ではないことを示している。',
+      '塔はまた、物語や思想の中で力強いイメージになってきた。古い物語は、天にとどく塔を建てようとして、そのおごりのためにばっせられた人々をえがいており、「象牙の塔に住む」という言い方は、ふつうの生活から切りはなされた人々に使われる。そうしたイメージでは、塔はあこがれと孤立の両方を、つまりほかの人々の上にのぼりたいという願いと、下の世界とのつながりを失う危険の両方を示している。',
+      'だとすれば、塔は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは実際的な必要や、権力とみとめられることへの願い、そして上へとどきたいという人間のあこがれを表しており、まわりの都市の見た目と生活を形づくっている。空を背にした高い建物を見上げるとき、どの塔もまたひとつの主張であることを思い出し、それがどれだけ高くそびえているかだけでなく、それを建てた人々について何を語っているのかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「高い建物は役に立つ空間をあたえるかもしれないが、高さはおもにおどろかせるためのものだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '物見の塔は、敵が近づくのを見張るのに使われてきた。', answer: true, why: '第2段落 to observe the approach of enemies。' },
+      { statement: 'すべての塔は、実際的な目的のためだけに建てられた。', answer: false, why: '第3段落 many towers serve purposes that are less practical。' },
+      { statement: 'とても高い建物は、地上の風の流れを変えることがある。', answer: true, why: '第5段落 change the patterns of wind at ground level。' },
+      { statement: '筆者によると、塔はだれにとってもほこらしいシンボルである。', answer: false, why: '第5段落 may seem an unwelcome intrusion to others。' },
+    ],
+    qa: [
+      { q: 'What made it possible to build modern skyscrapers far higher than before?', choices: ['Advances in steel, concrete, and lifts.', 'Cheaper land in cities.', 'Stronger winds.', 'New religious rules.'], answer: 0, why: '第4段落 Advances in steel, concrete, and lifts。' },
+      { q: 'What is the phrase living in an ivory tower used for?', choices: ['People cut off from ordinary life.', 'People who build towers.', 'People who are very rich.', 'People who live in old castles.'], answer: 0, why: '第6段落 used for people who are cut off from ordinary life。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
