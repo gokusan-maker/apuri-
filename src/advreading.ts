@@ -46942,6 +46942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-moss',
+    title: 'On Moss',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Moss is one of the most overlooked forms of life on earth. It grows quietly on stones, tree trunks, walls, and roofs, forming soft green carpets that few people stop to examine. Many gardeners regard it as a nuisance to be removed from lawns and paths, and most of us would struggle to name a single kind of moss. Yet mosses are among the oldest plants on the planet, and their small, patient lives reveal a great deal about survival, cooperation, and the value of things that are easily ignored.",
+      "Mosses were among the first plants to move from water onto land, hundreds of millions of years ago. Unlike most familiar plants, they have no flowers, seeds, or true roots, and they absorb water directly through their leaves. This simple structure might seem a disadvantage, but it allows mosses to grow in places where other plants cannot survive, such as bare rock, cracks in pavements, and the cold, windy slopes of high mountains. In this sense, what looks like weakness is in fact a kind of strength.",
+      "One of the most remarkable qualities of moss is its ability to survive drought. ( A ) a moss may appear completely dead after weeks without rain, turning brown and brittle, many kinds can return to life within hours once they are wet again. This ability to pause life and resume it later allows mosses to live in harsh environments where water is available only from time to time, and it has made them a subject of great interest to scientists who study how living things endure extreme conditions. Some mosses kept dry for many years have even been brought back to life in laboratories.",
+      "Mosses also play an important part in the life of forests and other ecosystems. Thick layers of moss hold large amounts of water, releasing it slowly and helping to prevent floods and soil erosion. They provide shelter for tiny insects and other small creatures, and in some places they help to create the conditions in which other plants can later grow. In cold regions, vast areas of moss and peat store enormous quantities of carbon, playing a role in the climate of the whole planet. Damage to these areas could therefore have effects far beyond the places where it occurs.",
+      "In some cultures, moss has also been valued for its beauty. Certain traditional gardens are famous for carpets of moss that cover the ground beneath trees, carefully tended by gardeners who remove fallen leaves by hand. In such gardens, moss is admired for its quiet color, its softness, and the sense of age and calm that it brings, qualities that may be appreciated more fully by those who take the time to look closely. Visitors to such gardens often say that the moss makes them speak more quietly.",
+      "Moss has also entered language and thought. A well-known saying holds that a rolling stone gathers no moss, a phrase that has been understood in different ways: as a warning that those who keep moving never settle down and grow, or as praise for those who stay active and avoid becoming stale. The fact that the same image can carry opposite meanings suggests how differently cultures and individuals may value stability and change.",
+      "Perhaps, then, moss deserves more thought than we usually give it. It has survived for hundreds of millions of years, protects soil and water, shelters countless small creatures, and offers a quiet kind of beauty to those who notice it. The next time we see a patch of green on an old wall or a forest stone, it may be worth pausing to look more closely, since in this humble plant we may find a lesson about patience, resilience, and the importance of small things.",
+    ],
+    ja: [
+      'コケは、地球上でもっとも見すごされている生きもののひとつである。それは石や木のみき、かべ、屋根の上に静かにはえ、やわらかな緑のじゅうたんをつくるが、立ち止まってそれをじっくり見る人はほとんどいない。多くの庭師はそれを芝生や小道から取りのぞくべきやっかいものと見なしており、私たちのほとんどはコケの種類をひとつ挙げることさえむずかしいだろう。しかしコケは地球でもっとも古い植物のひとつであり、その小さく根気強い生き方は、生きのびることや協力、そして見すごされやすいものの価値について多くを明らかにしてくれる。',
+      'コケは、何億年も前に水から陸へ移った最初の植物のひとつだった。よく知られたほとんどの植物とちがい、コケには花も種も本当の根もなく、葉から直接水をすいこむ。この単純なつくりは不利に思えるかもしれないが、それによってコケは、むき出しの岩や歩道のわれ目、高い山の寒く風の強い斜面など、ほかの植物が生きられない場所で育つことができるのである。この意味で、弱さに見えるものは、実は一種の強さなのである。',
+      'コケのもっともおどろくべき性質のひとつは、かわきにたえる力である。コケは何週間も雨がふらないと、茶色くもろくなり、完全にかれたように見えるかもしれないが、多くの種類はふたたびぬれると数時間のうちによみがえる。この、生命をいったん止めてあとで再開する力によって、コケはときどきしか水が手に入らないきびしい環境でもくらすことができ、生きものがきびしい条件にどのようにたえるかを研究する科学者たちの大きな関心の的になってきた。何年もかわいた状態でたもたれたコケが、研究室でよみがえらされたことさえある。',
+      'コケはまた、森などの生態系の生活でも大切な役割をはたしている。厚いコケの層は大量の水をたくわえ、それをゆっくりと出すことで、洪水や土がけずられるのをふせぐ助けになる。コケは小さな昆虫などの小さな生きもののかくれ家になり、場所によっては、のちにほかの植物が育つ条件をつくり出す助けにもなる。寒い地域では、広大なコケと泥炭の地帯が大量の炭素をたくわえており、地球全体の気候で役割をはたしている。したがって、こうした地帯がそこなわれれば、それが起きた場所をはるかにこえて影響がおよびうるのである。',
+      '文化によっては、コケはその美しさでも大切にされてきた。ある種の伝統的な庭は、木々の下の地面をおおうコケのじゅうたんで有名であり、庭師が落ち葉を手で取りのぞきながら注意深く手入れしている。そうした庭では、コケはその静かな色合いややわらかさ、そしてそれがもたらす古さと落ち着きの感じのためにたたえられており、それらの性質は、時間をかけてじっくり見る人にこそより深く味わわれるのかもしれない。そうした庭を訪れる人は、コケのおかげで声が自然と小さくなるとよく言う。',
+      'コケはまた、ことばや考えの中にも入りこんでいる。よく知られたことわざに「転がる石にコケはつかない」というものがあり、この言い方はさまざまに理解されてきた。動きつづける人はけっして落ち着いて成長しないという警告として、あるいは活発でありつづけて古びることのない人へのほめことばとしてである。同じイメージが反対の意味をになえるという事実は、文化や個人によって安定と変化の大切にし方がいかにちがうかを示している。',
+      'だとすれば、コケは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは何億年も生きのび、土と水を守り、数えきれない小さな生きものをかくまい、気づいた人に静かな種類の美しさをあたえてくれる。次に古いかべや森の石の上に緑の一角を見かけたら、立ち止まってもっとよく見てみる価値があるかもしれない。このつつましい植物の中に、根気としなやかな強さ、そして小さなものの大切さについての教えを見つけられるかもしれないからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「コケは完全にかれたように見えるかもしれないが、ぬれるとよみがえる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'コケには花も種も本当の根もない。', answer: true, why: '第2段落 they have no flowers, seeds, or true roots。' },
+      { statement: 'かわいて茶色くなったコケは、二度とよみがえらない。', answer: false, why: '第3段落 many kinds can return to life within hours once they are wet again。' },
+      { statement: '厚いコケの層は、洪水をふせぐ助けになる。', answer: true, why: '第4段落 helping to prevent floods and soil erosion。' },
+      { statement: '筆者によると、「転がる石」のことわざはひとつの意味にしか理解されていない。', answer: false, why: '第6段落 a phrase that has been understood in different ways。' },
+    ],
+    qa: [
+      { q: 'How do mosses absorb water?', choices: ['Directly through their leaves.', 'Through deep roots.', 'Through their flowers.', 'From the air at night only.'], answer: 0, why: '第2段落 they absorb water directly through their leaves。' },
+      { q: 'What do vast areas of moss and peat in cold regions store?', choices: ['Enormous quantities of carbon.', 'Large amounts of salt.', 'Seeds of other plants.', 'Ancient tools.'], answer: 0, why: '第4段落 store enormous quantities of carbon。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
