@@ -44622,6 +44622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-souvenirs',
+    title: 'On Souvenirs',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Almost every traveler returns home with something they did not have when they left: a small carving, a shell from a beach, a printed tea towel, or a keyring bearing the name of a famous city. Such souvenirs are often inexpensive and sometimes of little practical use, and they may be laughed at as clutter or as evidence of poor taste. Yet people in many cultures have collected objects to remind them of places they have visited, and the persistence of this habit suggests that souvenirs satisfy a need that is worth examining more closely. Understanding this need may tell us something about how human memory itself works.",
+      "The word souvenir comes from a French word meaning to remember, and memory is indeed the main purpose of most souvenirs. A journey lasts only a short time, and the impressions it leaves can fade quickly once a traveler returns to ordinary routines. An object brought back from that journey offers something to hold and look at, a physical link to experiences that would otherwise exist only in the mind, and seeing it on a shelf may bring back a sudden memory of a street, a smell, or a conversation.",
+      "Souvenirs are also a way of sharing a journey with others. Many travelers buy small gifts for family members, friends, and colleagues, and in some cultures bringing back presents from a trip is regarded as an important social duty. ( A ) such gifts may be modest, they show that the traveler thought of others while away, and they allow those who stayed at home to take part, in a small way, in an experience they did not share directly.",
+      "The choice of souvenirs can also reveal how travelers wish to remember a place. Some prefer objects made by local craftspeople, believing that these express something genuine about the culture they visited, while others are content with mass-produced items bearing a picture of a famous landmark. The difference raises interesting questions about authenticity, since a souvenir sold to millions of tourists may say more about the tourism industry than about the place itself. Even so, a cheap copy of a famous tower may matter deeply to the person who bought it, because its value lies in the memory rather than in the object.",
+      "Souvenirs can also carry meanings that change over time. An object bought casually on a holiday may become precious years later, when the person with whom the trip was taken is no longer alive, or when the place itself has changed beyond recognition. In this way, a souvenir can come to represent not only a place but also a particular period of one's life, holding memories that grow more valuable as the years pass.",
+      "In recent years, many travelers have come to rely on photographs rather than objects to remember their journeys. Photographs can capture far more detail than any souvenir, and they take up no space on a shelf. Yet some people find that physical objects carry a different kind of memory, one connected with touch and with the moment of choosing and buying, and many continue to bring back small things even when their phones are full of images. For them, a photograph shows what a place looked like, while an object recalls what it felt like to be there.",
+      "Perhaps, then, souvenirs deserve more attention than we usually give them. They remind us that human beings seem to need physical reminders of the places and people that matter to them, and that memory is often attached to objects as well as to images and words. Even the simplest souvenir may therefore hold a small story, and to look at it again is to return, for a moment, to a place we have left behind and to the person we were when we were there.",
+    ],
+    ja: [
+      'ほとんどの旅人は、出発したときにはもっていなかった何かをもって家に帰ってくる。小さな彫り物や浜辺の貝がら、プリントされたふきん、有名な都市の名前が入ったキーホルダーなどである。そうしたおみやげはしばしば安く、ときには実用的にはほとんど役に立たず、ガラクタや趣味の悪さの証拠として笑われることもある。しかし多くの文化の人々が、訪れた場所を思い出すためのものを集めてきており、この習慣がなくならないことは、おみやげが、もっとよく調べる価値のある必要を満たしていることを示している。その必要を理解することは、人間の記憶そのものがどのようにはたらくかについて、何かを教えてくれるかもしれない。',
+      'スーベニア（おみやげ）ということばは、「思い出す」という意味のフランス語から来ており、たしかに記憶はほとんどのおみやげのおもな目的である。旅はほんの短いあいだしか続かず、旅人がふだんの日課にもどると、それが残した印象はすぐにうすれていく。その旅からもち帰ったものは、手にとって見られる何かをあたえてくれる。そうでなければ心の中にしか存在しない経験への、物としてのつながりである。そしてたなの上にそれを見ると、ある通りや、においや、会話の記憶がとつぜんよみがえることがある。',
+      'おみやげはまた、旅をほかの人々と分かち合う方法でもある。多くの旅人は家族や友人、同僚のために小さな贈り物を買い、文化によっては、旅からおみやげをもち帰ることが大切な社会的な務めとみなされている。そうした贈り物はささやかなものかもしれないが、それは旅人がはなれているあいだもほかの人々のことを思っていたことを示し、家に残っていた人々が、じかには分かち合わなかった経験に少しだけ加われるようにしてくれる。',
+      'おみやげの選び方は、旅人がある場所をどのように思い出したいかを明らかにすることもある。地元の職人がつくったものを好み、それが訪れた文化について何か本物のものを表していると信じる人もいれば、有名な名所の絵が入った大量生産の品物で満足する人もいる。このちがいは本物らしさについての興味深い問いを投げかける。何百万人もの観光客に売られるおみやげは、その場所そのものよりも、観光業について多くを語っているかもしれないからである。それでも、有名な塔の安い模型が、それを買った人にとっては深い意味をもつこともある。その価値は、もの自体ではなく記憶の中にあるからである。',
+      'おみやげはまた、時とともに変わる意味をになうこともある。休みの日に気軽に買ったものが、何年もたって、いっしょに旅をした人がもう生きていないとき、あるいはその場所そのものがすっかり変わってしまったとき、かけがえのないものになることがある。このように、おみやげは場所だけでなく人生の特定の時期を表すようになり、年月がたつにつれてより価値の増す記憶をとどめるのである。',
+      '近年、多くの旅人は旅を思い出すのに、ものではなく写真にたよるようになった。写真はどんなおみやげよりもはるかにくわしく記録でき、たなの場所もとらない。しかし、物としてのものは、ふれることや、選んで買った瞬間と結びついた、ちがう種類の記憶をになっていると感じる人もいる。そして多くの人は、電話が画像でいっぱいでも、小さなものをもち帰りつづけている。そうした人々にとって、写真はある場所がどう見えたかを示すが、ものはそこにいるのがどんな感じだったかを思い出させてくれるのである。',
+      'だとすれば、おみやげは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。おみやげは、人間が自分にとって大切な場所や人を思い出させる物としての手がかりを必要としているらしいこと、そして記憶がしばしば画像やことばだけでなく、ものにも結びついていることを思い出させてくれる。だから、どんなに単純なおみやげにも小さな物語がこめられているのかもしれず、それをもう一度見ることは、ほんのひととき、あとにしてきた場所と、そこにいたときの自分にもどることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「贈り物はささやかかもしれないが、ほかの人を思っていたことを示す」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'スーベニアということばは、「思い出す」という意味のフランス語から来ている。', answer: true, why: '第2段落 comes from a French word meaning to remember。' },
+      { statement: 'どの文化でも、旅からおみやげをもち帰る必要はまったくないと考えられている。', answer: false, why: '第3段落 in some cultures bringing back presents ... is regarded as an important social duty。' },
+      { statement: '気軽に買ったおみやげが、何年もたってかけがえのないものになることがある。', answer: true, why: '第5段落 may become precious years later。' },
+      { statement: '筆者によると、写真が広まってから、だれもおみやげを買わなくなった。', answer: false, why: '第6段落 many continue to bring back small things。' },
+    ],
+    qa: [
+      { q: 'What might a souvenir sold to millions of tourists say more about?', choices: ['The tourism industry.', 'The traveler’s family.', 'The history of art.', 'The price of travel.'], answer: 0, why: '第4段落 may say more about the tourism industry than about the place itself。' },
+      { q: 'What kind of memory do physical objects carry, according to some people?', choices: ['One connected with touch and the moment of choosing.', 'One that is more detailed than photos.', 'One that never fades.', 'One shared by everyone.'], answer: 0, why: '第6段落 one connected with touch and with the moment of choosing and buying。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
