@@ -45982,6 +45982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-bread',
+    title: 'On Bread',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few foods are as familiar as bread. In many parts of the world it appears at almost every meal, sliced for breakfast, wrapped around fillings at lunch, or torn by hand to accompany soup in the evening. It is so ordinary that we rarely think about it, buying a loaf without considering the long chain of work that produced it. Yet bread is one of the oldest foods that human beings have made, and its history is closely bound up with the development of farming, cities, and many of the customs that shape social life.",
+      "Making bread requires a surprising amount of knowledge and effort. Grain must first be grown and harvested, then ground into flour, mixed with water, and baked. In many kinds of bread, the dough is also allowed to rise, a process caused by tiny living organisms that produce gas as they feed, filling the dough with bubbles. Early bakers could not have understood this process scientifically, but through long experience they learned how to control it, passing their skills from one generation to the next. In some families, the same mixture used to start the rising of dough has reportedly been kept alive for many decades.",
+      "The growing of grain for bread helped to change the way human beings lived. ( A ) people had once moved from place to place in search of food, the cultivation of wheat and other grains encouraged them to settle in one area, to store food for the future, and eventually to build villages and towns. Because grain could be stored and traded, it also became a measure of wealth, and in some ancient societies workers were paid partly in bread or in the grain from which it was made. Bread, in this sense, was not only food but also a kind of money.",
+      "Bread has often been at the center of political life. When the price of bread rose sharply, ordinary people could face hunger, and history records many protests and even revolutions that began with anger over the cost of this basic food. Rulers in many places tried to keep bread cheap in order to maintain order, and the phrase that people need bread, meaning that they need the basic means of survival, reflects how closely this food has been linked with the well-being of whole societies.",
+      "Bread also carries deep symbolic meanings. In many cultures, sharing bread is a sign of friendship and trust, and words connected with companionship in several languages come from expressions meaning to share bread with someone. Bread has been used in religious ceremonies, offered to guests as a sign of welcome, and placed on tables at important family occasions. Even the act of breaking bread together has come to stand for the idea of meeting in peace.",
+      "In modern times, the way bread is made has changed greatly. Much of it is now produced in large factories, where machines mix and bake dough quickly and in enormous quantities, making bread cheaper and more widely available than ever before. At the same time, some people have begun to return to slower, traditional methods, baking at home or buying from small bakeries, in the belief that bread made with patience tastes better and connects them with a long history of human skill.",
+      "Perhaps, then, bread deserves more thought than we usually give it. It has fed countless generations, helped to create settled communities, sparked protests, and come to symbolize friendship and peace. When we pick up a slice of bread at breakfast, we hold in our hands the result of thousands of years of human effort and invention, and it may be worth pausing for a moment to appreciate how much is contained in something so simple and so easily taken for granted.",
+    ],
+    ja: [
+      'パンほどなじみ深い食べ物はほとんどない。世界の多くの地域で、それはほとんど毎回の食事にあらわれ、朝食にはうすく切られ、昼食には具をつつみ、夕方には手でちぎってスープにそえられる。それはあまりにもありふれているので、私たちはそれについてめったに考えず、それを生み出した長い仕事の連なりを考えることなくひとかたまりを買っている。しかしパンは人間がつくってきたもっとも古い食べ物のひとつであり、その歴史は、農業や都市、そして社会生活を形づくる多くの習慣の発展と深く結びついているのである。',
+      'パンをつくるには、おどろくほど多くの知識と労力が必要である。まず穀物を育てて収穫し、それをひいて粉にし、水とまぜて焼かなければならない。多くの種類のパンでは、生地をふくらませもする。それは、えさを食べるときにガスを出す小さな生きものによって起こる過程で、生地を泡でいっぱいにする。初期のパン職人はこの過程を科学的に理解していたはずはないが、長い経験を通じてそれをあやつる方法を学び、その技術を世代から世代へと受けついできた。家族によっては、生地をふくらませはじめるのに使う同じたねを、何十年も生かしつづけてきたと言われている。',
+      'パンのための穀物を育てることは、人間のくらし方を変える助けとなった。人々はかつて食べ物をもとめてあちこち移動していたが、小麦などの穀物の栽培によって、ひとつの地域に住みつき、将来のために食べ物をたくわえ、やがて村や町を築くようになった。穀物はたくわえたり取り引きしたりできたので、富をはかるものにもなり、古代の社会のなかには、働く人々にパンやその材料の穀物で賃金の一部を払っていたところもあった。この意味で、パンは食べ物であるだけでなく、一種のお金でもあったのである。',
+      'パンはしばしば政治の生活の中心にあった。パンの値段が急に上がると、ふつうの人々は飢えに直面することがあり、歴史には、この基本的な食べ物の値段へのいかりから始まった多くの抗議、さらには革命が記録されている。多くの場所で支配者は秩序をたもつためにパンを安くたもとうとした。そして「人々にはパンが必要だ」、つまり生きるための基本的な手段が必要だという言い方は、この食べ物が社会全体の幸せといかに深く結びつけられてきたかを映し出している。',
+      'パンはまた、深い象徴的な意味もになっている。多くの文化で、パンを分け合うことは友情と信頼のしるしであり、いくつかの言語で仲間であることにかかわることばは、だれかとパンを分け合うという意味の表現から来ている。パンは宗教の儀式で使われ、歓迎のしるしとして客にさし出され、家族の大切な場でテーブルに置かれてきた。いっしょにパンをちぎるという行為でさえ、平和のうちに出会うという考えを表すようになったのである。',
+      '現代では、パンのつくり方は大きく変わった。その多くはいまでは大きな工場でつくられ、そこでは機械が生地を早く大量にまぜて焼き、パンをこれまでになく安く、広く手に入るものにしている。同時に、ゆっくりとした伝統的な方法にもどりはじめた人々もいる。家で焼いたり、小さなパン屋で買ったりするのである。彼らは、時間をかけてつくったパンのほうがおいしく、人間の技術の長い歴史と自分たちをつないでくれると信じている。',
+      'だとすれば、パンは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは数えきれない世代を養い、定住する共同体を生み出す助けとなり、抗議のきっかけとなり、友情と平和のシンボルになってきた。朝食にパンを1枚手にとるとき、私たちは何千年にもわたる人間の努力と発明の成果を手にしているのであり、これほど単純で、当たり前と思われやすいものの中に、どれほど多くのものがこめられているかを、少し立ち止まって味わってみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「人々はかつて移動していたが、穀物の栽培で住みつくようになった」という対比なので Although。' },
+    ],
+    tf: [
+      { statement: '生地がふくらむのは、小さな生きものがガスを出すためである。', answer: true, why: '第2段落 caused by tiny living organisms that produce gas。' },
+      { statement: '初期のパン職人は、ふくらむ過程を科学的に理解していた。', answer: false, why: '第2段落 could not have understood this process scientifically。' },
+      { statement: 'パンの値段へのいかりから始まった抗議が、歴史に記録されている。', answer: true, why: '第4段落 many protests and even revolutions that began with anger over the cost。' },
+      { statement: '筆者によると、今日すべてのパンは家庭で焼かれている。', answer: false, why: '第6段落 Much of it is now produced in large factories。' },
+    ],
+    qa: [
+      { q: 'How were workers in some ancient societies paid?', choices: ['Partly in bread or grain.', 'Only in gold.', 'With land.', 'With animals.'], answer: 0, why: '第3段落 workers were paid partly in bread or in the grain。' },
+      { q: 'What has the act of breaking bread together come to stand for?', choices: ['Meeting in peace.', 'Starting a war.', 'Working hard.', 'Saying goodbye.'], answer: 0, why: '第5段落 has come to stand for the idea of meeting in peace。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
