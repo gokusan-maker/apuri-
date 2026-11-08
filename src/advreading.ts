@@ -45858,6 +45858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-exam-retakes',
+    title: 'Should Students Be Allowed to Retake Exams?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many schools and universities, a student who performs badly in an important examination has little chance to improve the result. The mark is recorded, and it may affect the student's grades, scholarships, or future opportunities for years to come. Some educators, however, have begun to argue that students should be allowed to retake exams, or at least some of them, so that a single poor performance does not define their record. The proposal has gained support in several places, but it has also met with strong objections.",
+      "Supporters of retakes argue first that the purpose of education is learning rather than ranking. If a student fails to understand a topic the first time but later masters it, supporters say, the final record should reflect that achievement rather than the earlier failure. Allowing retakes encourages students to go back over material they found difficult, instead of simply moving on and forgetting it, and it sends the message that effort and improvement are valued more than getting everything right at the first attempt. Some teachers report that students who are allowed to retake a test often study the material more deeply the second time.",
+      "Supporters also point out that performance on a single day can be affected by many factors that have nothing to do with ability. A student may be ill, may have family problems, or may simply suffer from anxiety under the pressure of a formal examination. Giving students a second opportunity, supporters argue, reduces the influence of such circumstances and makes assessment fairer, especially for those who find tests particularly stressful or who face difficulties outside school.",
+      "Critics, however, argue that unlimited retakes would weaken the value of examinations. ( A ) a second chance may seem kind, students who know they can always try again may prepare less seriously the first time, treating the initial exam as a kind of practice. Critics also note that preparing and marking additional exams requires a great deal of time from teachers, who are already busy, and that schools would need to create new versions of tests to prevent students from simply memorizing the questions. In large schools, such demands could quickly become impossible to meet.",
+      "Critics further suggest that retakes may be unfair to students who did well at the first attempt. If one student studies hard and passes on the first try while another passes only after several attempts, critics ask, should both records look exactly the same? In addition, they argue, life after school often offers no second chances, and part of the purpose of education is to prepare young people for situations in which they must perform well when it matters most.",
+      "Some schools have tried to find a balance. They allow students to retake an exam only once, or only after completing additional study, and in some cases they record both the original and the new results. Others limit retakes to students who have a good reason, such as illness, or allow students to replace a poor mark with a slightly lower maximum score than they could have achieved at the first attempt. Such rules aim to encourage improvement while still rewarding careful preparation. Teachers in such schools often report that the number of students who fail at the first attempt does not increase.",
+      "The debate over retakes therefore reflects a deeper question about what examinations are meant to measure. If their main purpose is to compare students with one another at a particular moment, a single attempt may seem appropriate. If, on the other hand, their purpose is to show what students have learned, then giving them a chance to demonstrate improvement may be more consistent with the aims of education. The answer may depend on whether we see learning as a race or as a journey.",
+    ],
+    ja: [
+      '多くの学校や大学では、大切な試験で悪い成績をとった学生には、その結果を改善する機会がほとんどない。点数は記録され、何年にもわたって成績や奨学金、将来の機会に影響するかもしれない。しかし一部の教育者は、1回の悪い出来がその学生の記録を決めてしまわないよう、学生に試験の、少なくともその一部の再受験をみとめるべきだと主張しはじめている。この提案はいくつかの場所で支持を得ているが、強い反対にもあっている。',
+      '再受験を支持する人々は、まず、教育の目的は順位をつけることではなく学ぶことだと主張する。学生がはじめはある単元を理解できなくても、あとでそれを身につけたなら、最終的な記録は前の失敗ではなくその達成を映し出すべきだと支持する人々は言う。再受験をみとめると、学生はむずかしいと感じた内容をただ先へ進んでわすれてしまうのではなく、もう一度見直すようになり、最初の挑戦ですべて正しく答えることよりも、努力と上達のほうが大切にされるというメッセージが伝わる。再受験をみとめられた学生は、2回目のほうが内容をより深く勉強することが多いと報告する先生もいる。',
+      '支持する人々はまた、1日の出来は能力とは関係のない多くの要因に左右されうると指摘する。学生は病気かもしれないし、家庭の問題をかかえているかもしれないし、正式な試験の重圧のもとでただ不安になってしまうかもしれない。学生に2回目の機会をあたえれば、そうした事情の影響がへり、評価がより公平になる。とくにテストがとてもストレスに感じる学生や、学校の外でこまりごとをかかえる学生にとってはそうだと支持する人々は主張する。',
+      'しかし批判する人々は、何回でも再受験できると試験の価値が弱まると主張する。2回目の機会はやさしく思えるかもしれないが、いつでももう一度挑戦できるとわかっている学生は、最初はそれほど真剣に準備せず、最初の試験を一種の練習のようにあつかうかもしれない。批判する人々はまた、追加の試験の準備と採点にはすでにいそがしい先生の時間が大量に必要であり、学生がただ問題を覚えてしまわないよう、学校は新しい版のテストをつくらなければならないと指摘する。大きな学校では、そうした負担はすぐに対応しきれないものになりうる。',
+      '批判する人々はさらに、再受験は最初の挑戦でよい成績をとった学生にとって不公平かもしれないと考える。ある学生はいっしょうけんめい勉強して1回で合格し、別の学生は何回か挑戦してようやく合格したとき、両方の記録がまったく同じに見えるべきだろうか、と批判する人々は問う。さらに、学校を出たあとの人生には2回目の機会がないことが多く、教育の目的の一部は、いちばん大切なときによい成果を出さなければならない場面に若い人々をそなえさせることだと彼らは主張する。',
+      'つりあいを見つけようとしてきた学校もある。再受験を1回だけ、あるいは追加の勉強を終えたあとだけみとめ、場合によっては最初の結果と新しい結果の両方を記録するのである。また、病気などのもっともな理由がある学生だけに再受験をかぎったり、悪い点数を、最初に取れたであろう最高点より少し低い上限で置きかえられるようにしたりする学校もある。こうした決まりは、注意深い準備にむくいながら、上達をうながすことをめざしている。そうした学校の先生たちは、最初の挑戦で不合格になる学生の数はふえていないとよく報告している。',
+      'したがって、再受験をめぐる議論は、試験は何をはかるためのものなのかという、より深い問いを映し出している。そのおもな目的がある時点で学生どうしをくらべることなら、1回だけの挑戦が適切に思えるかもしれない。一方、その目的が学生が何を学んだかを示すことなら、上達を示す機会をあたえることのほうが教育の目的にかなっているのかもしれない。その答えは、学ぶことを競走と見るか、旅と見るかによるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「2回目の機会はやさしく思えるかもしれないが、学生は真剣に準備しなくなるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say retakes reflect what students finally learn and reduce the influence of illness or ( 1 ). Critics argue that students may prepare less seriously and that retakes may be unfair to those who passed at the first ( 2 ). Some schools allow only one retake or record both ( 3 ).',
+      blanks: [
+        { choices: ['anxiety', 'weather', 'height', 'fashion'], answer: 0, why: '第3段落 may simply suffer from anxiety。' },
+        { choices: ['attempt', 'school', 'lesson', 'season'], answer: 0, why: '第5段落 students who did well at the first attempt。' },
+        { choices: ['results', 'names', 'teachers', 'subjects'], answer: 0, why: '第6段落 they record both the original and the new results。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によると、教育の目的は順位をつけることではなく学ぶことだ。', answer: true, why: '第2段落 the purpose of education is learning rather than ranking。' },
+      { statement: '支持する人々によると、1日の出来は能力だけで決まる。', answer: false, why: '第3段落 can be affected by many factors that have nothing to do with ability。' },
+      { statement: '追加の試験の準備と採点には、先生の多くの時間が必要だ。', answer: true, why: '第4段落 requires a great deal of time from teachers。' },
+      { statement: 'すべての学校が、何回でも自由に再受験をみとめている。', answer: false, why: '第6段落 allow students to retake an exam only once ...。' },
+    ],
+    qa: [
+      { q: 'Why would schools need to create new versions of tests?', choices: ['To prevent students from memorizing the questions.', 'To make tests easier.', 'To save paper.', 'To please parents.'], answer: 0, why: '第4段落 to prevent students from simply memorizing the questions。' },
+      { q: 'According to the last paragraph, what might the answer depend on?', choices: ['Whether learning is seen as a race or a journey.', 'How many teachers a school has.', 'The price of examinations.', 'The age of the students.'], answer: 0, why: '第7段落 whether we see learning as a race or as a journey。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
