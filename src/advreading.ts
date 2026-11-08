@@ -46542,6 +46542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-harbors',
+    title: 'On Harbors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A harbor is a place where the sea meets the land and where human beings have tried, for thousands of years, to make that meeting safe. Fishing boats return there at dawn, ferries come and go throughout the day, and great ships unload goods from distant countries. For those who live near the coast, the harbor may be the center of the town's life and work, while for travelers it is often the first or last place they see of a country. Yet we seldom think about what a harbor is, or about the long history that has shaped it.",
+      "The basic purpose of a harbor is shelter. The open sea can be dangerous, especially in storms, and ships need a place where the water is calm enough for them to anchor, load, and unload. Some harbors are natural, formed by bays or river mouths protected by surrounding land, while others have been created by building walls of stone or concrete that break the force of the waves. The search for good harbors has influenced where towns and cities were founded, since a sheltered coast offered opportunities for fishing and trade.",
+      "Harbors have long been places of exchange. ( A ) a harbor may appear to be simply a collection of piers and boats, it has often served as a meeting point between peoples, bringing together sailors, merchants, and travelers from many lands. Along with goods, ships carried new foods, ideas, languages, and customs, and many harbor cities became known for their mixed populations and their openness to the outside world. Some of the most important cities in history grew up around great harbors. In this sense, the harbor has been not only a shelter for ships but also a door through which the wider world entered.",
+      "The nature of harbors changed greatly with the development of modern shipping. In the past, goods were carried on and off ships by hand, a slow process that required large numbers of workers. Today, most cargo travels in standard metal containers that can be lifted by enormous cranes, and huge modern ports may be located far from city centers, where there is space for storage and roads. As a result, many old harbors near the center of cities have lost their original purpose. The sounds and smells of the working waterfront have disappeared from many places.",
+      "Many cities have found new uses for these old harbors. Former warehouses have been turned into museums, restaurants, and apartments, and waterfront areas that were once busy with workers have become places where people walk, relax, and enjoy the view of the water. Such changes can bring new life to neglected areas, but they can also raise concerns about rising prices and the loss of the working communities that once gave these places their character.",
+      "The harbor has also become a powerful image in human thought. A safe harbor suggests a place of refuge after danger, and many writers have described home, family, or friendship as harbors in which a person can rest after the storms of life. At the same time, the harbor is a place of departure, where journeys begin and people say goodbye, so that it carries feelings of both safety and longing, of returning home and of setting out into the unknown.",
+      "Perhaps, then, the harbor deserves more thought than we usually give it. It has protected sailors, shaped the growth of cities, brought peoples and cultures together, and offered a powerful image of shelter and departure. The next time we stand by the water and watch a boat enter a harbor, it may be worth remembering that we are looking at one of the oldest meeting places between human beings and the sea, and between one people and another.",
+    ],
+    ja: [
+      '港は、海と陸が出会う場所であり、人間が何千年ものあいだ、その出会いを安全なものにしようとしてきた場所である。漁船は夜明けにそこへもどり、フェリーは1日中行き来し、大きな船は遠い国からの品物をおろす。海岸の近くにくらす人々にとって、港は町の生活と仕事の中心かもしれず、旅人にとっては、しばしばその国で最初に、あるいは最後に目にする場所である。しかし私たちは、港とは何なのか、そしてそれを形づくってきた長い歴史について考えることはめったにない。',
+      '港の基本的な目的は、身を守る場所をあたえることである。外海は、とくにあらしのときには危険になりうるので、船にはいかりをおろし、荷を積み、おろせるほど水がおだやかな場所が必要である。湾や、まわりの陸に守られた河口によってできた自然の港もあれば、波の力をくだく石やコンクリートのかべを築いてつくられた港もある。よい港をさがすことは、町や都市がどこにつくられるかに影響をあたえてきた。守られた海岸は、漁業と取り引きの機会をあたえてくれたからである。',
+      '港は長いあいだ、交換の場所だった。港はただの桟橋と船の集まりに見えるかもしれないが、しばしば人々の出会いの場としてはたらき、多くの国の船乗りや商人、旅人を集めてきた。品物といっしょに、船は新しい食べ物や考え、ことば、習慣を運び、多くの港町は、さまざまな人々がくらし、外の世界に開かれていることで知られるようになった。歴史上もっとも重要な都市のいくつかは、大きな港のまわりに発達したのである。この意味で、港は船のための避難所であるだけでなく、より広い世界が入ってくる戸口でもあったのである。',
+      '港の性質は、現代の海運の発達とともに大きく変わった。かつては、品物は手で船に積みおろしされ、それには多くの働き手を必要とするゆっくりとした作業だった。今日では、ほとんどの貨物は、巨大なクレーンで持ち上げられる規格化された金属のコンテナで運ばれ、巨大な現代の港は、保管や道路のための場所がある都市の中心から遠くはなれたところにあることもある。その結果、都市の中心に近い多くの古い港は、もともとの目的を失ってしまった。働く水辺の音やにおいは、多くの場所から消えてしまった。',
+      '多くの都市は、こうした古い港の新しい使い道を見つけてきた。かつての倉庫は美術館やレストラン、アパートに変えられ、かつて働き手でにぎわっていた水辺は、人々が歩き、くつろぎ、水の眺めを楽しむ場所になった。そうした変化はさびれた地域に新しい活気をもたらしうるが、物価が上がることや、かつてこれらの場所に独特の雰囲気をあたえていた働く人々の共同体が失われることへの心配も生みうる。',
+      '港はまた、人間の考えの中で力強いイメージにもなっている。安全な港は危険のあとのにげ場を思わせ、多くの作家が、家や家族、友情を、人生のあらしのあとに人が休める港としてえがいてきた。同時に、港は出発の場所でもあり、旅が始まり、人々が別れを告げるところなので、安全とあこがれの両方の、家にもどることと未知へと旅立つことの両方の気持ちをになっているのである。',
+      'だとすれば、港は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは船乗りを守り、都市の成長を形づくり、人々と文化を結びつけ、身を守る場所と出発の力強いイメージをあたえてくれた。次に水辺に立って、船が港に入ってくるのをながめるとき、私たちが、人間と海との、そしてある人々と別の人々とのあいだのもっとも古い出会いの場のひとつを見ているのだと思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「港はただの桟橋と船の集まりに見えるかもしれないが、人々の出会いの場だった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '湾や河口によってできた自然の港がある。', answer: true, why: '第2段落 Some harbors are natural, formed by bays or river mouths。' },
+      { statement: '船は品物だけを運び、考えや習慣は運ばなかった。', answer: false, why: '第3段落 ships carried new foods, ideas, languages, and customs。' },
+      { statement: '今日のほとんどの貨物は、規格化された金属のコンテナで運ばれる。', answer: true, why: '第4段落 most cargo travels in standard metal containers。' },
+      { statement: '筆者によると、古い港の再開発には何の心配もない。', answer: false, why: '第5段落 can also raise concerns about rising prices。' },
+    ],
+    qa: [
+      { q: 'Why have many old harbors near city centers lost their original purpose?', choices: ['Modern ports are often located far from city centers.', 'Ships no longer carry goods.', 'The sea has become calmer.', 'Fishing has been banned.'], answer: 0, why: '第4段落 huge modern ports may be located far from city centers。' },
+      { q: 'What feelings does the harbor carry, according to the sixth paragraph?', choices: ['Both safety and longing.', 'Only fear.', 'Only boredom.', 'Anger and sadness.'], answer: 0, why: '第6段落 it carries feelings of both safety and longing。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
