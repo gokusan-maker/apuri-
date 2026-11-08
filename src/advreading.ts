@@ -45458,6 +45458,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-speed-limiters',
+    title: 'Should New Cars Be Fitted with Speed Limiters?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Modern cars are increasingly able to control their own speed. Using cameras that read road signs and maps stored in the car's computer, some vehicles can now recognize the speed limit on any road and warn the driver, or even slow the car down automatically, if it goes too fast. In several countries, governments have begun to require that all new cars be fitted with such systems, and the question of whether these devices should be made compulsory everywhere has become the subject of an increasingly heated debate.",
+      "Supporters of speed limiters argue first that they would save many lives. Excessive speed is one of the main causes of serious road accidents, since a car travelling faster takes longer to stop and strikes with far greater force. Even a small reduction in average speed, supporters point out, can lead to a large reduction in the number of deaths and serious injuries, especially among pedestrians and cyclists, who have little protection when they are hit by a vehicle. The cost of fitting such systems, they add, is small compared with the human and financial cost of a single fatal accident.",
+      "Supporters also note that many drivers exceed the speed limit without meaning to. On unfamiliar roads, limits can change frequently, and drivers who are concentrating on traffic may fail to notice a sign. A system that reminds them of the limit, or that gently prevents the car from going faster, could help well-meaning drivers to obey the law without effort. In addition, supporters suggest, cars that travel at steady and moderate speeds use less fuel and produce less pollution.",
+      "Critics, however, raise several objections. ( A ) speed limiters may reduce accidents in many situations, there are moments when a driver may need to accelerate quickly, for example to overtake safely or to avoid a sudden danger. Critics worry that a system which prevents this could, in rare cases, make driving more dangerous rather than less. They also point out that the cameras and maps on which these systems depend are not always accurate, and that a car which slows down unexpectedly may itself cause a collision.",
+      "Critics also raise concerns about freedom and privacy. Many drivers feel that the decision about how fast to travel, within the law, should remain their own, and they resent the idea of a machine overruling their judgment. Others worry that systems which constantly record a car's speed and position could be used to monitor drivers, to punish them automatically for minor offences, or to collect information that could be sold or misused without their knowledge. For these critics, the safety benefits of the technology must be weighed carefully against such risks.",
+      "Some countries have tried to address these concerns by requiring systems that advise rather than control. In these systems, the car warns the driver with a sound or a vibration when the limit is exceeded, and may resist pressure on the accelerator, but the driver can still override it by pressing harder. Early studies suggest that even such gentle systems lead most drivers to travel more slowly, and that many people who were doubtful at first come to accept them after using them for a while. Drivers who once complained, researchers note, often say later that they no longer notice the system at all.",
+      "The debate over speed limiters therefore reflects a wider question about the role of technology in protecting people from their own mistakes. Machines can now do many things that once depended entirely on human judgment, and in some cases they may do them more reliably. Yet people value the sense of being in control of their own actions, and the challenge for policymakers is to find ways of using technology to make roads safer while still respecting the responsibility and dignity of those who use them.",
+    ],
+    ja: [
+      '現代の車は、ますます自分で速度を調節できるようになっている。道路標識を読むカメラと車のコンピューターに保存された地図を使って、いまではどんな道路でも制限速度を見分け、速く走りすぎると運転者に警告したり、さらには自動的に車の速度を落としたりできる車もある。いくつかの国では、政府がすべての新車にそうしたしくみを取りつけることを義務づけはじめており、こうした装置をどこでも義務にすべきかどうかという問いは、ますますはげしい議論の対象になっている。',
+      '速度制限装置を支持する人々は、まず、それは多くの命を救うだろうと主張する。スピードの出しすぎは重大な交通事故のおもな原因のひとつである。速く走る車は止まるのにより長くかかり、はるかに大きな力でぶつかるからである。平均速度がわずかに下がるだけでも、死者や重傷者の数が大きくへりうるし、とくに車にぶつけられたときにほとんど身を守るものがない歩行者や自転車に乗る人の場合はそうだと支持する人々は指摘する。そうしたしくみを取りつける費用は、たった1件の死亡事故がもたらす人的・経済的な損失にくらべれば小さいと、彼らはつけ加える。',
+      '支持する人々はまた、多くの運転者がそのつもりもなく制限速度をこえていることも指摘する。なれない道路では制限がたびたび変わることがあり、交通に集中している運転者は標識に気づかないかもしれない。制限を思い出させたり、車がそれ以上速く走らないようやわらかくおさえたりするしくみは、悪気のない運転者が苦労せずに法律を守る助けになるだろう。さらに、一定のおだやかな速度で走る車は、燃料を使う量も汚染を出す量も少なくなると支持する人々は考える。',
+      'しかし批判する人々は、いくつかの反論をあげる。速度制限装置は多くの場面で事故をへらすかもしれないが、たとえば安全に追いこすためや、とつぜんの危険をさけるために、運転者がすばやく加速する必要がある瞬間もある。それをさまたげるしくみは、まれな場合には、運転をより安全にするどころか、より危険にしうるのではないかと批判する人々は心配している。また、こうしたしくみがたよっているカメラや地図はいつも正確とはかぎらず、思いがけず速度を落とす車そのものが衝突を引き起こすかもしれないとも指摘する。',
+      '批判する人々はまた、自由とプライバシーについての心配もあげる。多くの運転者は、法律の範囲内でどれだけの速さで走るかの決定は自分のものであるべきだと感じており、機械が自分の判断をくつがえすという考えに反発している。また、車の速度と位置をたえず記録するしくみが、運転者を見張ったり、小さな違反を自動的にばっしたり、本人の知らないうちに売られたり悪用されたりしうる情報を集めたりするのに使われるのではないかと心配する人もいる。こうした批判する人々にとって、この技術の安全上の利益は、そうした危険と注意深くはかりにかけられなければならないのである。',
+      '制御するのではなく助言するしくみを求めることで、こうした心配に対応しようとしてきた国もある。そうしたしくみでは、制限をこえると車が音や振動で運転者に警告し、アクセルをふむ力に抵抗することもあるが、運転者はより強くふむことでそれを無視することができる。初期の研究によれば、そうしたおだやかなしくみでさえ、ほとんどの運転者がよりゆっくり走るようになり、はじめは疑っていた多くの人も、しばらく使ううちにそれを受け入れるようになるという。かつて文句を言っていた運転者も、あとになるともうそのしくみにまったく気づかないと言うことが多いと、研究者たちは指摘する。',
+      'したがって、速度制限装置をめぐる議論は、人々を自分自身のまちがいから守るうえでの技術の役割についての、より広い問いを映し出している。機械はいまでは、かつてはまったく人間の判断にたよっていた多くのことを行うことができ、場合によってはより確実に行うかもしれない。しかし人々は自分の行動を自分でコントロールしているという感覚を大切にしており、政策をつくる人々にとっての課題は、道路を使う人々の責任と尊厳を尊重しながら、技術を使って道路をより安全にする方法を見つけることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「速度制限装置は事故をへらすかもしれないが、すばやく加速する必要がある瞬間もある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say speed limiters would save lives, especially among pedestrians and ( 1 ), and help drivers obey the law. Critics argue that drivers sometimes need to accelerate quickly and worry about freedom and ( 2 ). Some countries require systems that only warn drivers, who can still ( 3 ) them by pressing harder.',
+      blanks: [
+        { choices: ['cyclists', 'passengers', 'mechanics', 'tourists'], answer: 0, why: '第2段落 especially among pedestrians and cyclists。' },
+        { choices: ['privacy', 'price', 'comfort', 'fashion'], answer: 0, why: '第5段落 Critics also raise concerns about freedom and privacy。' },
+        { choices: ['override', 'repair', 'switch', 'sell'], answer: 0, why: '第6段落 the driver can still override it by pressing harder。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの国では、すべての新車に速度を調節するしくみを義務づけはじめている。', answer: true, why: '第1段落 governments have begun to require that all new cars be fitted with such systems。' },
+      { statement: '支持する人々によると、平均速度が少し下がっても死者の数はほとんど変わらない。', answer: false, why: '第2段落 can lead to a large reduction in the number of deaths。' },
+      { statement: 'カメラや地図は、いつも正確とはかぎらない。', answer: true, why: '第4段落 are not always accurate。' },
+      { statement: '初期の研究によれば、おだやかなしくみでは運転者の速度は変わらなかった。', answer: false, why: '第6段落 lead most drivers to travel more slowly。' },
+    ],
+    qa: [
+      { q: 'Why may drivers fail to notice a speed limit sign?', choices: ['They are concentrating on traffic.', 'The signs are too large.', 'They drive only at night.', 'The car hides the signs.'], answer: 0, why: '第3段落 drivers who are concentrating on traffic may fail to notice a sign。' },
+      { q: 'What do some drivers worry systems that record speed and position could be used for?', choices: ['To monitor drivers.', 'To repair cars.', 'To make roads wider.', 'To lower fuel prices.'], answer: 0, why: '第5段落 could be used to monitor drivers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
