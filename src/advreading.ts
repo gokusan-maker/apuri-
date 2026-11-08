@@ -44418,6 +44418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-imperfect-produce',
+    title: 'Should Supermarkets Sell Imperfect Produce?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many supermarkets, the fruit and vegetables on display look almost perfect. Apples are round and evenly colored, carrots are straight, and potatoes are of similar size, giving the impression that nature produces food in neat and uniform shapes. In reality, a large proportion of the crops grown on farms do not meet these strict standards of appearance, and much of this produce is sold cheaply for processing, fed to animals, or simply left in the fields. In response, some governments and campaigners have argued that supermarkets should be encouraged or even required to sell imperfect produce, and the idea has prompted a debate about waste, consumer choice, and the economics of farming.",
+      "Supporters argue that rejecting food because of its appearance is a serious waste. An apple with a small mark on its skin or a carrot with two roots tastes exactly the same as one that looks perfect, and the water, soil, energy, and labor used to grow it have already been spent. Supporters point out that at a time when many people around the world struggle to obtain enough food, throwing away edible produce simply because of its shape seems difficult to justify. They add that food left to rot in fields also releases gases that contribute to climate change, so that reducing such waste could benefit the environment as well as people's budgets.",
+      "Supporters also claim that selling imperfect produce could benefit both farmers and consumers. Farmers would be able to sell a larger share of what they grow, increasing their income and reducing the pressure to use chemicals and other methods to make crops look uniform. ( A ) some shoppers may prefer perfect-looking food, supporters argue, many would welcome the chance to buy cheaper produce that is just as nutritious, particularly families on tight budgets.",
+      "Critics, however, warn that requiring supermarkets to sell imperfect produce may not be practical. Irregularly shaped fruit and vegetables can be harder to pack, transport, and display, and items with marks or bruises may spoil more quickly, increasing the risk that they will be thrown away in the shop rather than on the farm. Critics also point out that if imperfect produce is sold more cheaply, it may reduce the prices that farmers receive for their standard crops, so that their overall income does not necessarily rise.",
+      "Critics further argue that consumer preferences should be respected. Many shoppers choose fruit and vegetables by their appearance, and supermarkets argue that they are simply responding to what customers want. Critics suggest that rather than imposing rules on retailers, governments should focus on educating consumers and supporting other uses for imperfect produce, such as making soups, juices, and prepared meals, or donating it to food banks. In their view, the problem of waste can be solved more effectively by cooperation along the whole food chain than by placing the burden on shops alone.",
+      "In response, many supermarkets have introduced voluntary schemes. Some sell boxes of imperfect fruit and vegetables at lower prices under special labels that present their unusual shapes as charming rather than defective, and others use such produce in their own prepared foods. Some farmers have also begun to sell directly to customers through markets and online subscriptions, offering mixed boxes in which the appearance of individual items matters less than freshness and flavor.",
+      "The debate over imperfect produce ultimately reflects a broader question about how modern food systems shape our expectations. Over time, supermarkets and consumers have come to expect food to look uniform, even though nature rarely produces it that way, and this expectation has consequences for farmers, the environment, and the amount of food that is wasted. Reconsidering what counts as good enough to eat may therefore require not only new rules or schemes but also a change in the way we look at the food on our plates.",
+    ],
+    ja: [
+      '多くのスーパーマーケットで、ならんでいる果物や野菜はほとんど完ぺきに見える。リンゴはまるく、色はむらがなく、ニンジンはまっすぐで、ジャガイモは同じくらいの大きさであり、自然が食べものを整った同じ形でつくり出しているかのような印象をあたえる。実際には、農場で育てられた作物のかなりの割合はこうした厳しい見た目の基準を満たさず、その多くは加工用に安く売られたり、家畜のえさにされたり、ただ畑に残されたりしている。これに対して、スーパーマーケットに見た目の悪い農産物を売るよう促すべきだ、さらには義務づけるべきだと主張する政府や活動家もおり、その考えは、むだや消費者の選択、そして農業の経済についての議論を引き起こしている。',
+      '支持する人々は、見た目を理由に食べものを拒むのは深刻なむだだと主張する。皮に小さなきずのあるリンゴや、根が二つに分かれたニンジンは、完ぺきに見えるものとまったく同じ味がし、それを育てるのに使われた水や土、エネルギー、労働はすでに使われてしまっている。世界中の多くの人が十分な食べものを手に入れるのに苦労している時代に、ただ形が理由で食べられる農産物を捨てることを正当化するのはむずかしいように思える、と支持者は指摘する。彼らはさらに、畑でくさるままにされた食べものは気候変動の原因になる気体も出すので、そうしたむだを減らせば、家計だけでなく環境の利益にもなりうると付け加える。',
+      '支持する人々はまた、見た目の悪い農産物を売ることは、農家と消費者の両方の利益になりうると主張する。農家は育てたもののより多くの割合を売ることができ、収入がふえ、作物の見た目をそろえるために化学物質やほかの方法を使うようせまられることも減るだろう。完ぺきに見える食べものを好む買い物客もいるかもしれないが、多くの人は、同じくらい栄養があってより安い農産物を買う機会を歓迎するだろう、とくに家計の苦しい家族はそうだ、と支持者は主張する。',
+      'しかし批判する人々は、スーパーマーケットに見た目の悪い農産物を売るよう義務づけるのは現実的でないかもしれないと警告する。形のふぞろいな果物や野菜は、つめたり運んだりならべたりするのがむずかしいことがあり、きずやいたみのある品物はより早くいたむかもしれず、畑ではなく店で捨てられる危険が高まる。批判する人々はまた、見た目の悪い農産物がより安く売られると、農家がふつうの作物に受けとる値段が下がり、全体の収入がかならずしもふえないかもしれないと指摘する。',
+      '批判する人々はさらに、消費者の好みは尊重されるべきだと主張する。多くの買い物客は見た目で果物や野菜を選んでおり、スーパーマーケットは客が望むものに応えているだけだと主張している。小売業者に決まりをおしつけるのではなく、政府は消費者を教育し、スープやジュース、調理ずみの食事をつくったり、フードバンクに寄付したりといった、見た目の悪い農産物のほかの使い道をささえることに力を入れるべきだと批判する人々は言う。彼らの考えでは、むだの問題は、店だけに負担をおわせるよりも、食べものの流れ全体での協力によってより効果的に解決できるのである。',
+      'これに対して、多くのスーパーマーケットは自主的な取り組みを始めている。見た目の悪い果物や野菜の箱を、そのめずらしい形を欠点ではなく愛らしさとして示す特別なラベルをつけて安く売るスーパーもあれば、そうした農産物を自分の店の調理ずみ食品に使うスーパーもある。また、市場やインターネットの定期便を通じて客にじかに売りはじめた農家もあり、一つ一つの品物の見た目よりも、新鮮さや味が大切にされる詰め合わせの箱を提供している。',
+      '見た目の悪い農産物をめぐる議論は、結局のところ、現代の食の仕組みが私たちの期待をどのように形づくっているのかという、より広い問いを反映している。自然がそのように食べものをつくることはめったにないのに、時がたつにつれて、スーパーマーケットも消費者も、食べものの見た目がそろっていることを期待するようになった。そしてこの期待は、農家や環境、むだになる食べものの量に影響をおよぼしている。だから、何を食べるのに十分よいものとみなすかを考え直すには、新しい決まりや取り組みだけでなく、自分の皿の上の食べものの見方を変えることも必要なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「完ぺきに見える食べものを好む客もいるかもしれないが、多くの人は安い農産物を歓迎する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say rejecting food because of its appearance is a serious ( 1 ) and that selling imperfect produce could help farmers and consumers. Critics warn that such produce is harder to transport and may ( 2 ) more quickly, and that consumer preferences should be respected. Many supermarkets have introduced ( 3 ) schemes.',
+      blanks: [
+        { choices: ['waste', 'success', 'secret', 'game'], answer: 0, why: '第2段落 rejecting food because of its appearance is a serious waste。' },
+        { choices: ['spoil', 'grow', 'shine', 'freeze'], answer: 0, why: '第4段落 may spoil more quickly。' },
+        { choices: ['voluntary', 'illegal', 'secret', 'military'], answer: 0, why: '第6段落 many supermarkets have introduced voluntary schemes。' },
+      ],
+    },
+    tf: [
+      { statement: '作物のかなりの割合は、見た目の基準を満たさない。', answer: true, why: '第1段落 a large proportion of the crops ... do not meet these strict standards。' },
+      { statement: '支持する人々によると、きずのあるリンゴは味が悪い。', answer: false, why: '第2段落 tastes exactly the same as one that looks perfect。' },
+      { statement: '批判する人々は、見た目の悪い農産物が店で捨てられる危険が高まると言う。', answer: true, why: '第4段落 increasing the risk that they will be thrown away in the shop。' },
+      { statement: 'すべての農家が、スーパーマーケットにしか作物を売っていない。', answer: false, why: '第6段落 Some farmers have also begun to sell directly to customers。' },
+    ],
+    qa: [
+      { q: 'What do critics suggest governments should focus on instead of imposing rules?', choices: ['Educating consumers and supporting other uses for imperfect produce.', 'Raising the price of all vegetables.', 'Banning supermarkets.', 'Growing only perfect crops.'], answer: 0, why: '第5段落 focus on educating consumers and supporting other uses for imperfect produce。' },
+      { q: 'How do some special labels present the unusual shapes of produce?', choices: ['As charming rather than defective.', 'As dangerous to eat.', 'As grown abroad.', 'As more expensive.'], answer: 0, why: '第6段落 present their unusual shapes as charming rather than defective。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
