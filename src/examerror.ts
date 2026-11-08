@@ -10816,6 +10816,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It is hard to [get used] the noise of the trains.', choices: ['get used to', 'get use to', 'get using', 'get used at'], answer: 0, why: '「～に慣れる」は get used to ～。to が必要。' },
     ],
   },
+  {
+    id: 'exam-fix-254',
+    title: '入試の誤文訂正〈254〉（国公立レベル：英作文の thank 人 for・blame 人 for・praise 人 for）',
+    points: ['「（人）に（こと）を感謝する」は thank 人 for ～、「（人）を（こと）で責める」は blame 人 for ～、「（人）を（こと）でほめる」は praise 人 for ～。どれも人を目的語にして、理由は for で表す。', 'for のあとに動詞を置くときは ～ing（thank you for helping me）。blame A on B は「A を B のせいにする」（blame the accident on the weather）。× thank to you（「～のおかげで」は thanks to）。'],
+    examples: [{ en: 'Thank you for helping me. / They blamed him for the mistake. / The teacher praised her for her hard work.', ja: '手伝ってくれてありがとう。／彼らはそのまちがいで彼を責めた。／先生は彼女のがんばりをほめた。' }],
+    questions: [
+      { sentence: 'I want to thank you [to help] me yesterday.', choices: ['for helping', 'to helping', 'for help to', 'of helping'], answer: 0, why: '「～してくれたことに感謝する」は thank 人 for ～ing。' },
+      { sentence: 'Don’t blame me [of] the accident.', choices: ['for', 'to', 'with', 'about'], answer: 0, why: '「（人）を（こと）で責める」は blame 人 for ～。' },
+      { sentence: 'The coach praised the team [on] their efforts.', choices: ['for', 'at', 'by', 'to'], answer: 0, why: '「（人）を（こと）でほめる」は praise 人 for ～。' },
+      { sentence: 'She thanked [to her friends] for their support.', choices: ['her friends', 'with her friends', 'at her friends', 'for her friends'], answer: 0, why: 'thank は他動詞なので人をすぐあとに置く。thanked her friends。' },
+      { sentence: 'They blamed the delay [for] the bad weather.', choices: ['on', 'to', 'at', 'with'], answer: 0, why: '「A を B のせいにする」は blame A on B。' },
+      { sentence: 'He was praised for [save] a child from the river.', choices: ['saving', 'saved', 'to save', 'saves'], answer: 0, why: '前置詞 for のあとは動名詞なので saving。' },
+      { sentence: '[Thank to] your help, we finished on time.', choices: ['Thanks to', 'Thank for', 'Thanking to', 'Thanks for to'], answer: 0, why: '「～のおかげで」は thanks to ～。' },
+      { sentence: 'Nobody should be [blame] for things they cannot control.', choices: ['blamed', 'blaming', 'blamer', 'blames'], answer: 0, why: '受け身なので過去分詞 blamed。' },
+      { sentence: 'The mayor thanked the volunteers [for they cleaned] the park.', choices: ['for cleaning', 'for clean', 'to cleaning', 'for cleaned'], answer: 0, why: 'for のあとは動名詞。for cleaning the park。' },
+      { sentence: 'Many critics [praised the film of] its beautiful music.', choices: ['praised the film for', 'praised the film with', 'praised for the film', 'praised to the film for'], answer: 0, why: 'praise 人・もの for ～。praised the film for its beautiful music。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
