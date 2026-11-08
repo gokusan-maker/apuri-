@@ -45262,6 +45262,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-footprints',
+    title: 'On Footprints',
+    level: '難関大（評論）',
+    paragraphs: [
+      "After rain, or after a fresh fall of snow, the ground becomes a kind of page on which every passing creature writes its name. The marks of shoes, paws, and tiny claws cross one another in every direction, recording movements that took place when nobody was watching. Most of us notice such footprints only briefly, if at all, before they are washed away or trodden into mud. Yet footprints are among the oldest and most widespread signs of life, and they have much to teach us about how we read the traces that others leave behind.",
+      "For hunters in many traditional societies, the ability to read footprints was a matter of survival. A skilled tracker could tell from a set of prints not only which animal had passed, but also how long ago, how fast it had been moving, and sometimes even whether it was tired or injured. Such knowledge was built up over many years of careful observation and was often passed from older members of a community to younger ones, forming a kind of reading that existed long before writing. In some places, such skills are still valued today, and trackers have been asked to help scientists study animals in remote areas.",
+      "Footprints have also provided remarkable evidence about the distant past. In a few places, the prints of early human beings have been preserved in hardened mud or volcanic ash for hundreds of thousands of years. ( A ) bones can tell scientists about the shape of ancient bodies, footprints reveal how those bodies moved, showing, for example, whether our ancestors walked upright in the way that we do today. Such prints capture a single moment in a single life, and it is difficult to look at them without feeling a sense of connection with those who made them.",
+      "The study of footprints has practical uses in the modern world as well. Investigators examine the prints left at the scene of a crime, since the size and pattern of a shoe may help to identify the person who wore it. Scientists who study wild animals use footprints to estimate the number of creatures living in an area without needing to catch or even see them, which allows rare and shy species to be studied without being disturbed. In this way, a simple mark in the mud can become a valuable tool for protecting animals.",
+      "Footprints have also become a powerful image in human thought and language. We speak of following in someone's footsteps when we choose the same path as a parent or teacher, and of leaving our footprints when we hope that our actions will be remembered. More recently, the idea of a carbon footprint has been used to describe the effect of a person's way of life on the climate, turning a simple mark on the ground into a measure of responsibility.",
+      "Yet the image of the footprint also reminds us of how easily traces disappear. Most footprints last only until the next rain or the next tide, and even those preserved for thousands of years survive only by chance. This fragility gives footprints a particular kind of beauty, since they record not lasting achievements but passing moments, the ordinary movements of creatures going about their lives, which would otherwise leave no trace at all.",
+      "Perhaps, then, the footprint deserves more thought than we usually give it. It is at once a record of movement, a source of knowledge, a piece of evidence, and an image of the marks that each of us leaves on the world. The next time we see a line of prints crossing a beach or a field of snow, it may be worth pausing for a moment to read them, and to remember that we, too, are leaving traces that others may one day try to understand.",
+    ],
+    ja: [
+      '雨のあとや、雪がふり積もったばかりのあと、地面は一種のページになり、そこを通りすぎるすべての生きものが自分の名前を書いていく。くつや足、小さなつめのあとが四方八方に交差し、だれも見ていないときに起こった動きを記録している。私たちのほとんどは、そうした足あとに気づいたとしてもほんの少しのあいだだけで、やがてそれは流されたり、どろにふみこまれたりしてしまう。しかし足あとは生命のしるしのなかでもっとも古く、もっとも広く見られるもののひとつであり、ほかのものが残した跡を私たちがどのように読むかについて、多くのことを教えてくれる。',
+      '多くの伝統的な社会の狩人にとって、足あとを読む力は生きのびるための問題だった。熟練した追跡者は、ひとつながりの足あとから、どの動物が通ったかだけでなく、どれくらい前だったか、どれくらいの速さで動いていたか、ときにはつかれていたかけがをしていたかさえ見分けることができた。そうした知識は何年もの注意深い観察を通じて積み上げられ、しばしば地域の年長者から若い人へと受けつがれ、文字よりずっと前から存在した一種の読み方を形づくっていた。いまでもそうした技術が大切にされている場所もあり、追跡者は、遠くはなれた地域で動物を研究する科学者を手伝うよう求められてきた。',
+      '足あとはまた、遠い過去についてのおどろくべき証拠をあたえてくれた。いくつかの場所では、初期の人類の足あとが、かたまったどろや火山灰の中に何十万年ものあいだ保存されてきた。骨は古代の体の形について科学者に教えてくれるが、足あとはその体がどのように動いたかを明らかにし、たとえば、私たちの祖先がいまの私たちと同じように直立して歩いていたかどうかを示してくれる。そうした足あとは、ひとつの人生のある一瞬をとらえており、それを見ると、それを残した人々とのつながりを感じずにはいられない。',
+      '足あとの研究は、現代の世界でも実際に役立っている。捜査をする人々は事件の現場に残された足あとを調べる。くつの大きさや模様が、それをはいていた人を特定する助けになるかもしれないからである。野生の動物を研究する科学者は、足あとを使って、つかまえたり見たりすることさえなく、ある地域にすむ生きものの数を見つもる。それによって、めずらしく臆病な種をじゃますることなく研究できるのである。このようにして、どろの上の単純なしるしが、動物を守るための貴重な道具になりうるのである。',
+      '足あとはまた、人間の考えやことばの中で力強いイメージにもなっている。私たちは、親や先生と同じ道を選ぶとき、その人の足あとをたどると言い、自分の行いが覚えていてもらえることを願うとき、足あとを残すと言う。最近では、カーボンフットプリントという考えが、ある人の生活のしかたが気候にあたえる影響を表すのに使われており、地面の単純なしるしを責任の大きさをはかるものに変えている。',
+      'しかし足あとのイメージは、跡がいかにかんたんに消えてしまうかも思い出させる。ほとんどの足あとは次の雨や次の潮までしかもたず、何千年も保存されてきたものでさえ、たまたま残ったにすぎない。このもろさが、足あとに特別な種類の美しさをあたえている。足あとが記録しているのは長く続く業績ではなく、すぎゆく瞬間、つまり、自分の生活をいとなむ生きもののふつうの動きであり、それは足あとがなければまったく何の跡も残さないものだからである。',
+      'だとすれば、足あとは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは動きの記録であると同時に、知識のもとであり、証拠のひとつであり、私たちひとりひとりが世界に残すしるしのイメージでもある。次に浜辺や雪の原を横切る足あとの列を見かけたら、少し立ち止まってそれを読み、私たちもまた、いつかだれかが理解しようとするかもしれない跡を残しているのだと思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「骨は体の形を教えてくれるが、足あとは体の動きを明らかにする」という対比なので Although。' },
+    ],
+    tf: [
+      { statement: '熟練した追跡者は、動物がつかれていたかどうかまで見分けられることがあった。', answer: true, why: '第2段落 sometimes even whether it was tired or injured。' },
+      { statement: '足あとを読む知識は、文字が生まれてから始まった。', answer: false, why: '第2段落 a kind of reading that existed long before writing。' },
+      { statement: '科学者は足あとから、動物を見ずにその数を見つもることがある。', answer: true, why: '第4段落 estimate the number of creatures ... without needing to catch or even see them。' },
+      { statement: '筆者によると、ほとんどの足あとは何千年も残る。', answer: false, why: '第6段落 Most footprints last only until the next rain or the next tide。' },
+    ],
+    qa: [
+      { q: 'What can footprints of early humans reveal?', choices: ['How their bodies moved.', 'What they ate.', 'What language they spoke.', 'How tall their houses were.'], answer: 0, why: '第3段落 footprints reveal how those bodies moved。' },
+      { q: 'What does the idea of a carbon footprint describe?', choices: ['The effect of a person’s way of life on the climate.', 'The size of a person’s shoes.', 'The path a hunter follows.', 'A mark left at a crime scene.'], answer: 0, why: '第5段落 the effect of a person’s way of life on the climate。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
