@@ -4070,3 +4070,11 @@ it('京大専用の長文264「塩について」：京大の下限600語以上�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
 })
+
+it('東大専用の長文262「献血する人にお金を払うべきか」：600語以上・1文18語以上で、要約の空所補充（3つ）つき。東大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('東大').find((x) => x.id === 'todai-paid-blood-donors')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(p.summary?.blanks).toHaveLength(3)
+})

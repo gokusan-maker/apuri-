@@ -45538,6 +45538,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-paid-blood-donors',
+    title: 'Should Blood Donors Be Paid?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hospitals around the world depend on a steady supply of donated blood. It is needed for surgery, for the treatment of accidents and certain illnesses, and for mothers who lose a great deal of blood during childbirth. In many countries, blood is given by volunteers who receive nothing in return except perhaps a cup of tea and a biscuit, while in others donors are paid for their time. As many health systems struggle to collect enough blood, the question of whether donors should be paid has become a subject of serious debate.",
+      "Supporters of payment argue first that it would increase the supply of blood. Many people who would be willing to donate never do so, perhaps because they are busy or because donating requires travel and time off work. A small payment, supporters say, would compensate them for these costs and encourage more people to come forward, reducing the shortages that sometimes force hospitals to delay operations. In their view, the goal of saving lives is more important than the question of whether donors are motivated by kindness or by money.",
+      "Supporters also point out that blood is already part of a large industry. Once it has been collected, blood and the substances made from it are processed, transported, and sold, and many people along the way are paid for their work. It seems unfair, supporters argue, that the only person who receives nothing is the donor, without whom the whole system could not exist. Paying donors would simply recognize the value of what they provide. Some countries that pay donors for certain blood products, they note, collect far more than they need and even export the surplus.",
+      "Critics, however, argue that paying for blood may make the supply less safe. ( A ) most paid donors may be honest, payment may attract some people who are in urgent need of money and who may hide information about their health in order to be accepted. Volunteers, critics suggest, have no reason to conceal illnesses or risky behavior, since they gain nothing by donating. For this reason, many health organizations have long recommended that blood should come mainly from unpaid volunteers. Modern testing has reduced these risks, but critics argue that no test is perfect.",
+      "Critics also worry that payment may change the meaning of giving blood. For many people, donating is a way of helping strangers and of taking part in the life of their community, and some research suggests that offering money can actually discourage those who give for these reasons, since it turns a generous act into a kind of transaction. Critics further point out that payment may place pressure on poorer members of society to sell their blood, raising difficult questions about fairness.",
+      "Some countries have tried to find a middle way. Instead of paying donors directly, they offer small rewards such as time off work, free health checks, or gifts of little value, which show appreciation without turning donation into a source of income. Others have focused on making donation easier, for example by opening centers in workplaces and shopping areas, extending opening hours, and sending reminders to regular donors. Such measures have increased donations in several places without the need for payment. Regular donors, organizers report, often say that being thanked matters more to them than any reward.",
+      "The debate over paying blood donors therefore reflects a deeper question about the role of money in matters of health and community. Markets can be powerful tools for increasing supply, but some things may be valued precisely because they are given freely. Finding the right balance may require societies to think carefully not only about how to collect enough blood, but also about what kind of relationship they wish to encourage between those who give and those who receive.",
+    ],
+    ja: [
+      '世界中の病院は、寄付された血液の安定した供給にたよっている。それは手術や、事故やある種の病気の治療、出産のときに多くの血を失った母親のために必要とされる。多くの国では、血液はお茶とビスケットくらいしか見返りを受けとらないボランティアによって提供されているが、提供者が時間に対してお金を受けとる国もある。多くの医療のしくみが十分な血液を集めるのに苦労するなかで、提供者にお金を払うべきかどうかという問いは真剣な議論の対象になっている。',
+      '支払いを支持する人々は、まず、それによって血液の供給がふえると主張する。提供してもよいと思っている多くの人がけっしてそうしないのは、いそがしいからか、提供するには移動して仕事を休む必要があるからかもしれない。少額の支払いはこうした負担をおぎない、より多くの人が名乗り出るのをうながし、ときに病院が手術を遅らせざるをえなくなる不足をへらすだろうと支持する人々は言う。彼らの考えでは、命を救うという目的は、提供者が親切心で動いているのかお金で動いているのかという問題よりも大切なのである。',
+      '支持する人々はまた、血液はすでに大きな産業の一部だと指摘する。集められると、血液とそこからつくられる物質は加工され、運ばれ、売られ、そのとちゅうで多くの人が仕事に対してお金を受けとる。何も受けとらないただひとりの人が、その人なしではしくみ全体が成り立たない提供者であるのは不公平に思えると支持する人々は主張する。提供者にお金を払うことは、彼らがあたえているものの価値をみとめるだけのことなのである。ある種の血液製剤について提供者にお金を払っている国のなかには、必要よりはるかに多くを集め、余った分を輸出さえしているところもあると彼らは指摘する。',
+      'しかし批判する人々は、血液にお金を払うと、供給の安全性が下がるかもしれないと主張する。お金をもらう提供者のほとんどは正直かもしれないが、支払いは、どうしてもお金を必要としていて、受け入れてもらうために健康についての情報をかくすかもしれない人をひきつけるかもしれない。ボランティアは提供しても何も得られないので、病気や危険な行動をかくす理由がないと批判する人々は考える。この理由から、多くの保健機関は、血液はおもにお金をもらわないボランティアから集めるべきだと長くすすめてきた。現代の検査によってこうした危険はへったが、完ぺきな検査はないと批判する人々は主張する。',
+      '批判する人々はまた、支払いが献血の意味を変えてしまうのではないかと心配する。多くの人にとって、献血は見知らぬ人を助け、地域の生活に加わる方法であり、研究によっては、お金をさし出すと、こうした理由で提供する人々をかえって遠ざけることがあるという。気前のよい行いを一種の取り引きに変えてしまうからである。批判する人々はさらに、支払いは社会のより貧しい人々に血液を売るよう圧力をかけるかもしれず、公平さについてのむずかしい問いを投げかけると指摘する。',
+      '中間の道を見つけようとしてきた国もある。提供者に直接お金を払うかわりに、仕事の休みや無料の健康診断、ほとんど値打ちのない贈り物などの小さなお礼をさし出すのである。それは、献血を収入源に変えることなく感謝を示す。また、職場や商店街に献血の場所を開いたり、受付時間をのばしたり、定期的な提供者に知らせを送ったりして、献血をしやすくすることに力を入れてきた国もある。こうした対策によって、いくつかの場所では、お金を払わなくても献血がふえた。定期的な提供者は、どんなお礼よりも感謝されることのほうが大切だとよく言うと、運営する人々は報告している。',
+      'したがって、血液の提供者にお金を払うことをめぐる議論は、健康や地域にかかわる問題におけるお金の役割についての、より深い問いを映し出している。市場は供給をふやす強力な道具になりうるが、まさに無償であたえられるからこそ大切にされるものもあるのかもしれない。正しいつりあいを見つけるには、社会は十分な血液をどのように集めるかだけでなく、あたえる人と受けとる人とのあいだにどのような関係をはぐくみたいのかについても、注意深く考える必要があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「お金をもらう提供者のほとんどは正直かもしれないが、健康の情報をかくす人をひきつけるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say payment would increase the supply of blood and recognize the value of what ( 1 ) provide. Critics argue that payment may make blood less ( 2 ) and change the meaning of giving. Some countries offer small rewards or make donation ( 3 ) instead of paying donors.',
+      blanks: [
+        { choices: ['donors', 'doctors', 'patients', 'companies'], answer: 0, why: '第3段落 recognize the value of what they provide（they＝donors）。' },
+        { choices: ['safe', 'expensive', 'popular', 'colorful'], answer: 0, why: '第4段落 paying for blood may make the supply less safe。' },
+        { choices: ['easier', 'rarer', 'slower', 'harder'], answer: 0, why: '第6段落 have focused on making donation easier。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国では、血液はほとんど見返りを受けとらないボランティアによって提供されている。', answer: true, why: '第1段落 given by volunteers who receive nothing in return ...。' },
+      { statement: '支持する人々によると、血液を加工したり運んだりする人々はお金を受けとっていない。', answer: false, why: '第3段落 many people along the way are paid for their work。' },
+      { statement: 'お金をさし出すと、親切心で提供する人をかえって遠ざけることがあるという研究がある。', answer: true, why: '第5段落 offering money can actually discourage those who give for these reasons。' },
+      { statement: '小さなお礼などの対策では、献血はまったくふえなかった。', answer: false, why: '第6段落 Such measures have increased donations in several places。' },
+    ],
+    qa: [
+      { q: 'Why do volunteers have no reason to conceal illnesses, according to critics?', choices: ['They gain nothing by donating.', 'They are all doctors.', 'They are tested every day.', 'They are paid more than others.'], answer: 0, why: '第4段落 since they gain nothing by donating。' },
+      { q: 'Where have some countries opened donation centers?', choices: ['In workplaces and shopping areas.', 'Only in large hospitals.', 'In schools for children.', 'At airports abroad.'], answer: 0, why: '第6段落 opening centers in workplaces and shopping areas。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
