@@ -43778,6 +43778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-large-car-parking',
+    title: 'Should Larger Cars Pay More to Park?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Over the past few decades, the cars sold in many countries have become steadily larger and heavier. Vehicles that were once used mainly on farms or in the countryside have become popular in cities, where their owners value the sense of space, comfort, and safety they provide. In response, a number of city governments have begun to charge higher parking fees for larger and heavier vehicles, arguing that they impose greater costs on the community, and the policy has sparked a lively debate about fairness, safety, and the use of public space.",
+      "Supporters of higher charges argue first that large vehicles take up more of a limited resource. Space on city streets is scarce and valuable, and a car that is longer and wider than average occupies more of it, both when it is parked and when it is moving. Supporters point out that it seems reasonable for those who use more space to pay more for it, just as people who live in larger homes usually pay higher rents or taxes. In their view, a parking fee that ignores the size of a vehicle quietly asks drivers of small cars to subsidize those who choose larger ones.",
+      "Supporters also emphasize the risks that heavier vehicles pose to other road users. Research has suggested that pedestrians and cyclists who are struck by tall, heavy vehicles are more likely to be seriously injured than those struck by smaller cars, partly because the front of such vehicles is higher and partly because of the greater force involved. ( A ) the drivers of large cars may feel safer themselves, supporters argue, the people around them may be placed at greater risk, and higher parking fees could encourage some drivers to choose smaller vehicles.",
+      "Critics, however, argue that such fees unfairly punish people who have good reasons for owning larger vehicles. Families with several children, people who carry heavy equipment for work, and those who care for elderly or disabled relatives may need more space than a small car provides. Critics also point out that many larger vehicles are now electric, and that their extra weight often comes from batteries, so that charging them more might discourage the very changes that are needed to reduce pollution.",
+      "Critics further question whether the policy addresses the real problems of urban transport. If the aim is to make streets safer and less crowded, they say, it would be more effective to improve public transport, build safer paths for cyclists and pedestrians, and reduce the number of cars overall, rather than focusing on their size. Some critics also worry that higher fees will affect people with modest incomes more than wealthy drivers, who can easily afford to pay. For such drivers, they argue, a higher fee may simply become one more cost of a comfortable lifestyle rather than a reason to change.",
+      "In response to these concerns, some cities have designed their policies with exceptions and limits. Residents who park near their own homes may be exempted, as may people with disabilities and those who need large vehicles for their work, so that the higher fees fall mainly on visitors who drive into the city center. Some cities have also announced that the extra money raised will be spent on public transport and on making streets safer for those who walk and cycle.",
+      "The debate over charging larger cars more ultimately reflects a broader question about how the costs of private choices should be shared. A driver who chooses a large vehicle may gain comfort and a sense of security, but some of the costs, such as the space it occupies and the risks it creates, are borne by others. Deciding how far those costs should be reflected in what drivers pay requires societies to balance individual freedom of choice against the interests of the community as a whole.",
+    ],
+    ja: [
+      'ここ数十年で、多くの国で売られる車はしだいに大きく重くなってきた。かつてはおもに農場やいなかで使われていた車が都市で人気になり、その持ち主は、それがあたえてくれるゆとりや快適さ、安全の感覚を大切にしている。これに対して、いくつかの都市の政府は、より大きく重い車に高い駐車料金をかけはじめており、そうした車は地域により大きな負担をかけていると主張している。この方針は、公平さや安全、公共の空間の使い方をめぐる活発な議論を引き起こしている。',
+      '料金を高くすることを支持する人々は、まず、大きな車はかぎられた資源をより多く使っていると主張する。都市の道路の空間は少なく貴重であり、平均より長く幅の広い車は、とまっているときも動いているときも、その空間をより多くしめる。より多くの空間を使う人がそれに対してより多くはらうのは理にかなっているように思える、と支持者は指摘する。ちょうど広い家に住む人がふつうより高い家賃や税金をはらうのと同じように。彼らの考えでは、車の大きさを無視した駐車料金は、小さな車の運転者に、大きな車を選ぶ人々の分をこっそり負担させていることになる。',
+      '支持する人々はまた、重い車がほかの道路の利用者にあたえる危険も強調する。研究によれば、背が高く重い車にはねられた歩行者や自転車に乗る人は、小さな車にはねられた人よりも大けがをしやすいという。そうした車の前面が高いことも、より大きな力がかかることも原因である。大きな車を運転する人自身はより安全に感じるかもしれないが、まわりの人々はより大きな危険にさらされるかもしれず、高い駐車料金は、一部の運転者に小さな車を選ぶよう促すかもしれない、と支持者は主張する。',
+      'しかし批判する人々は、そうした料金は、大きな車をもつもっともな理由のある人々を不当に罰するものだと主張する。何人もの子どもがいる家族や、仕事で重い道具を運ぶ人、お年寄りや障害のある家族の世話をする人々は、小さな車よりも広い空間を必要とするかもしれない。批判する人々はまた、大きな車の多くはいまでは電気自動車であり、その重さはしばしば電池によるものなので、それに高い料金をかけると、汚染を減らすのに必要なまさにその変化をさまたげかねないと指摘する。',
+      '批判する人々はさらに、この方針が都市の交通の本当の問題に取り組んでいるのかどうかを疑う。目的が道路をより安全でこみ合わないものにすることなら、車の大きさに注目するよりも、公共交通を改善し、自転車や歩行者のためのより安全な道をつくり、車の数そのものを減らすほうが効果的だろうと彼らは言う。また、高い料金は、かんたんにはらえる裕福な運転者よりも、収入のそれほど多くない人々に強く影響するのではないかと心配する批判者もいる。そうした裕福な運転者にとって、高い料金は変わるきっかけではなく、快適な暮らしにかかる費用がもう一つ増えるだけになるかもしれないと彼らは主張する。',
+      'こうした懸念に応えて、例外や上限を設けて方針を設計した都市もある。自分の家の近くに駐車する住民や、障害のある人、仕事のために大きな車が必要な人は対象からはずされることがあり、高い料金はおもに都心に車で入ってくる訪問者にかかるようになっている。また、増えた収入を公共交通や、歩く人や自転車に乗る人にとって道路をより安全にすることに使うと発表した都市もある。',
+      '大きな車に高い料金をかけることをめぐる議論は、結局のところ、個人の選択の代償をどのように分かち合うべきかという、より広い問いを反映している。大きな車を選ぶ運転者は、快適さや安心感を得るかもしれないが、それがしめる空間やそれが生む危険など、その代償の一部はほかの人々が負っている。そうした代償を運転者がはらう額にどこまで反映させるべきかを決めるには、社会が、個人の選ぶ自由と地域全体の利益とのつりあいをとる必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「運転者自身は安全に感じるかもしれないが、まわりの人々は危険にさらされる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say large vehicles use more scarce ( 1 ) and pose greater risks to pedestrians. Critics argue that some people need large vehicles and that many heavy cars are now ( 2 ). Some cities exempt residents and spend the extra money on public ( 3 ).',
+      blanks: [
+        { choices: ['space', 'water', 'time', 'music'], answer: 0, why: '第2段落 Space on city streets is scarce and valuable。' },
+        { choices: ['electric', 'stolen', 'colorful', 'cheap'], answer: 0, why: '第4段落 many larger vehicles are now electric。' },
+        { choices: ['transport', 'gardens', 'festivals', 'libraries'], answer: 0, why: '第6段落 will be spent on public transport。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国で売られる車は、しだいに大きく重くなってきた。', answer: true, why: '第1段落 have become steadily larger and heavier。' },
+      { statement: '研究によると、重い車にはねられた歩行者は大けがをしにくい。', answer: false, why: '第3段落 are more likely to be seriously injured。' },
+      { statement: '批判する人々によると、大きな車の重さはしばしば電池によるものである。', answer: true, why: '第4段落 their extra weight often comes from batteries。' },
+      { statement: 'すべての都市が、住民にも同じ高い料金をかけている。', answer: false, why: '第6段落 Residents who park near their own homes may be exempted。' },
+    ],
+    qa: [
+      { q: 'What do critics say would be more effective than focusing on the size of cars?', choices: ['Improving public transport and reducing the number of cars.', 'Building more parking spaces.', 'Lowering speed limits on highways.', 'Making all cars larger.'], answer: 0, why: '第5段落 improve public transport ... and reduce the number of cars overall。' },
+      { q: 'On whom do the higher fees fall mainly in some cities?', choices: ['Visitors who drive into the city center.', 'Residents near their homes.', 'People with disabilities.', 'Bus drivers.'], answer: 0, why: '第6段落 fall mainly on visitors who drive into the city center。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
