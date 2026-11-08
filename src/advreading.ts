@@ -44222,6 +44222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-balconies',
+    title: 'On Balconies',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A balcony is a curious space, neither fully inside nor fully outside. It belongs to a home, yet it hangs above the street, open to the weather and visible to anyone who looks up. In many cities, balconies are where people grow plants, dry their laundry, sit in the evening, or simply watch the life of the neighborhood below. Because they are so ordinary, we rarely think about them, yet the way people use balconies reveals a great deal about the relationship between private life and the shared life of the city.",
+      "The most obvious value of a balcony is that it brings the outside world closer to people who live in apartments. For those without gardens, a small balcony may be the only place where they can feel the sun, breathe fresh air, or grow a few herbs and flowers. In crowded cities, where green space is scarce, such small spaces can make a significant difference to people's sense of comfort, offering a moment of openness in lives that are otherwise spent largely indoors. Some people even grow tomatoes or beans in pots on their balconies, discovering the satisfaction of producing a little of their own food high above the busy streets.",
+      "A balcony is also a place from which to watch and be watched. From above, a person can observe the street, noticing who passes and what is happening, while remaining slightly apart from the crowd. ( A ) this position may seem distant, it can create a quiet sense of connection, since people on balconies often recognize their neighbors, greet passers-by, or exchange a few words with someone on the next balcony.",
+      "In some cultures, balconies have long played an important social role. People gather on them in the evening to talk, to share meals, or to escape the heat of the rooms inside, and balconies decorated with flowers can make an entire street feel welcoming. During festivals and celebrations, balconies may be hung with flags and lights, turning the faces of buildings into a shared display that expresses the spirit of the community. Visitors to such towns often remember these colorful streets long after they have forgotten the famous buildings they came to see.",
+      "At the same time, the balcony raises questions about privacy and rules. Because it is visible from outside, what people do on their balconies may affect their neighbors, whether through noise, smoke, or the view of laundry hanging in the sun. Some apartment buildings have strict rules about what may be placed on balconies, and disagreements about such rules can reveal different ideas about how much freedom people should have in spaces that are private but also public.",
+      "Balconies took on special significance during periods when people were required to stay at home for long stretches of time. In many cities, residents went out onto their balconies to sing, to applaud those who were working to help others, or simply to see and greet their neighbors from a safe distance. These moments showed that even a small space on the edge of a building could become a place where a sense of community survived when ordinary meetings were impossible. Many people later said that they had spoken more with their neighbors during those weeks than in all the years before.",
+      "Perhaps, then, balconies deserve more attention than we usually give them. They remind us that the boundary between private and public life is not a wall but a space in between, where people can enjoy a little freedom while remaining connected to others. As cities grow denser and more people live in apartments, it may be worth asking how such in-between spaces can be designed and protected, so that the city remains not only a place where people live side by side but also a place where they can see, greet, and care for one another.",
+    ],
+    ja: [
+      'バルコニーは、完全に内でも完全に外でもない、ふしぎな空間である。それは家の一部でありながら、通りの上につき出していて、天気にさらされ、見上げる人ならだれにでも見える。多くの都市で、バルコニーは人々が植物を育てたり、洗たく物をほしたり、夕方にすわったり、ただ下の地域の暮らしをながめたりする場所である。あまりにもありふれているので、私たちはそれについてめったに考えないが、人々がバルコニーをどのように使うかは、私的な生活と都市の共有の生活との関係について、多くのことを明らかにしている。',
+      'バルコニーのもっとも明らかな価値は、アパートに住む人々に外の世界を近づけてくれることである。庭のない人々にとって、小さなバルコニーは、日の光を感じ、新鮮な空気を吸い、いくつかのハーブや花を育てられる唯一の場所かもしれない。緑の空間が少ないこみ合った都市では、そうした小さな空間が人々の快適さの感覚に大きなちがいをもたらしうる。そうでなければほとんど屋内で過ごす生活に、ひとときの開放感をあたえてくれるのである。バルコニーの鉢でトマトや豆を育て、にぎやかな通りのはるか上で自分の食べものを少しつくる満足を知る人さえいる。',
+      'バルコニーはまた、ながめ、ながめられる場所でもある。上からなら、人は人ごみから少しはなれたまま、通りを観察し、だれが通り、何が起きているかに気づくことができる。この位置は遠く思えるかもしれないが、それはしずかなつながりの感覚を生み出すことがある。バルコニーにいる人々は、しばしば近所の人に気づき、通りかかる人にあいさつし、となりのバルコニーの人と二言三言を交わすからである。',
+      '文化によっては、バルコニーは昔から大切な社会的役割を果たしてきた。人々は夕方にバルコニーに集まり、話したり、食事を分かち合ったり、中の部屋の暑さからのがれたりし、花でかざられたバルコニーは通り全体を温かく迎えてくれるように感じさせる。祭りや祝いのときには、バルコニーに旗や明かりがかけられることもあり、建物の正面を、地域の心を表す共有のかざりに変えるのである。そうした町を訪れた人々は、見に来た有名な建物をわすれてしまったずっとあとも、こうした色あざやかな通りを覚えていることが多い。',
+      '同時に、バルコニーはプライバシーや決まりについての問いも投げかける。外から見えるので、人々がバルコニーですることは、音やけむり、日なたにほされた洗たく物の見た目などを通じて、近所の人に影響することがある。バルコニーに置いてよいものについて厳しい決まりをもつアパートもあり、そうした決まりをめぐる意見の対立は、私的でありながら公でもある空間で、人々がどれほどの自由をもつべきかについての、ちがう考え方を明らかにすることがある。',
+      '人々が長いあいだ家にいなければならなかった時期に、バルコニーは特別な意味をおびた。多くの都市で、住民はバルコニーに出て歌ったり、ほかの人々を助けるために働く人々に拍手を送ったり、ただ安全な距離から近所の人を見てあいさつしたりした。こうした瞬間は、建物のはしにある小さな空間でさえ、ふつうの集まりが不可能なときに、地域の感覚が生きのびる場所になりうることを示した。多くの人がのちに、その数週間のあいだに、それまでの何年間よりも多く近所の人と話したと語った。',
+      'だとすれば、バルコニーは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。バルコニーは、私的な生活と公の生活のさかいめが壁ではなく、そのあいだの空間であり、人々がほかの人々とつながりながらも少しの自由を楽しめる場所であることを思い出させてくれる。都市がより密集し、より多くの人がアパートに住むようになるなかで、そうしたあいだの空間をどのように設計し守っていけるのかを問うてみる価値があるかもしれない。そうすれば都市は、人々がならんで暮らす場所であるだけでなく、おたがいを見て、あいさつし、気づかい合える場所でありつづけられるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この位置は遠く思えるかもしれないが、しずかなつながりの感覚を生み出す」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '庭のない人にとって、バルコニーは日の光を感じられる唯一の場所かもしれない。', answer: true, why: '第2段落 a small balcony may be the only place where they can feel the sun。' },
+      { statement: 'バルコニーにいる人は、近所の人と話すことがまったくない。', answer: false, why: '第3段落 exchange a few words with someone on the next balcony。' },
+      { statement: 'バルコニーに置いてよいものについて厳しい決まりをもつアパートもある。', answer: true, why: '第5段落 Some apartment buildings have strict rules。' },
+      { statement: '筆者は、私的な生活と公の生活のさかいめは厚い壁だと述べている。', answer: false, why: '第7段落 is not a wall but a space in between。' },
+    ],
+    qa: [
+      { q: 'What may balconies be hung with during festivals?', choices: ['Flags and lights.', 'Laundry only.', 'Large signs for shops.', 'Nothing at all.'], answer: 0, why: '第4段落 balconies may be hung with flags and lights。' },
+      { q: 'What did residents do on their balconies when they had to stay at home?', choices: ['Sang, applauded workers, and greeted neighbors.', 'Built new rooms.', 'Held large parties together.', 'Sold food to passers-by.'], answer: 0, why: '第6段落 to sing, to applaud ... or simply to see and greet their neighbors。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
