@@ -3719,6 +3719,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 30 q-10 -4 -14 4 M64 30 q10 -4 14 4" stroke="#57534e" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'tamaraw')
+    return (
+      <g>
+        {/* V字のツノ */}
+        <path d="M40 28 l-6 -8 M60 28 l6 -8" stroke="#292524" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
