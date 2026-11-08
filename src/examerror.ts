@@ -5883,6 +5883,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The my (B) old teacher (C) still (D) sends me letters.', choices: ['(A) The my', '(B) old teacher', '(C) still', '(D) sends me letters'], answer: 0, why: 'the と my はならべられないので My old teacher。' },
     ],
   },
+  {
+    id: 'exam-error-make-do-take',
+    title: '入試の正誤問題〈246〉（京大レベル：英作文の make・do・take の決まった組み合わせ）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'make は「つくり出す」感じ：make a decision・make a mistake・make a speech・make a difference・make progress・make yourself at home。do は「（作業・仕事を）する」：do homework・do research・do the dishes・do 人 a favor。',
+      'take は「とる・受けとる」感じ：take a photo・take a break・take a look・take a seat・take part in。日本語の「する」につられて、すべて do にしないこと。',
+    ],
+    examples: [
+      { en: 'After she did some research, she made a decision and took a short break.', ja: '彼女は少し調べてから決断し、短い休けいをとった。' },
+      { en: 'Don’t worry about making mistakes — just do your best.', ja: 'まちがえることを気にしないで、ただ全力をつくして。' },
+    ],
+    questions: [
+      { sentence: '(A) We (B) must do (C) a decision (D) by tomorrow.', choices: ['(A) We', '(B) must do', '(C) a decision', '(D) by tomorrow'], answer: 1, why: '「決める」は make a decision。' },
+      { sentence: '(A) She (B) made (C) research (D) on climate change.', choices: ['(A) She', '(B) made', '(C) research', '(D) on climate change'], answer: 1, why: '「研究する」は do research。' },
+      { sentence: '(A) I (B) have to (C) make my homework (D) before dinner.', choices: ['(A) I', '(B) have to', '(C) make my homework', '(D) before dinner'], answer: 2, why: '「宿題をする」は do my homework。' },
+      { sentence: '(A) Making (B) a photo (C) is not allowed (D) in this museum.', choices: ['(A) Making', '(B) a photo', '(C) is not allowed', '(D) in this museum'], answer: 0, why: '「写真をとる」は take a photo。Taking。' },
+      { sentence: '(A) He (B) did (C) a lot of mistakes (D) on the test.', choices: ['(A) He', '(B) did', '(C) a lot of mistakes', '(D) on the test'], answer: 1, why: '「まちがえる」は make a mistake。made。' },
+      { sentence: '(A) Please (B) take (C) a seat and (D) do yourself at home.', choices: ['(A) Please', '(B) take', '(C) a seat and', '(D) do yourself at home'], answer: 3, why: '「くつろいでください」は make yourself at home。' },
+      { sentence: '(A) The new medicine (B) did (C) a big difference (D) to her health.', choices: ['(A) The new medicine', '(B) did', '(C) a big difference', '(D) to her health'], answer: 1, why: '「大きなちがいを生む」は make a difference。made。' },
+      { sentence: '(A) It (B) took (C) me two hours (D) doing the dishes.', choices: ['(A) It', '(B) took', '(C) me two hours', '(D) doing the dishes'], answer: 3, why: 'It takes 人 時間 to do なので to do the dishes。' },
+      { sentence: '(A) Do (B) a look (C) at this map (D) before we leave.', choices: ['(A) Do', '(B) a look', '(C) at this map', '(D) before we leave'], answer: 0, why: '「ちょっと見る」は take a look（have a look）。' },
+      { sentence: '(A) She (B) took (C) a speech (D) at the ceremony.', choices: ['(A) She', '(B) took', '(C) a speech', '(D) at the ceremony'], answer: 1, why: '「スピーチをする」は make（give）a speech。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

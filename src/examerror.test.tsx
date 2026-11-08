@@ -3396,3 +3396,10 @@ it('誤文訂正〈239〉：国公立レベル no longer・still と yet の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('no longer lives')
 })
+
+it('正誤問題〈246〉：京大レベル make・do・take の決まった組み合わせの単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-make-do-take')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) must do')
+})
