@@ -6108,6 +6108,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) You can (B) count (C) with me (D) whenever you need help.', choices: ['(A) You can', '(B) count', '(C) with me', '(D) whenever you need help'], answer: 2, why: '「（人）をあてにする」は count on 人。' },
     ],
   },
+  {
+    id: 'exam-error-consist-of',
+    title: '入試の正誤問題〈255〉（京大レベル：英作文の consist of・be made up of・be composed of）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「～から成る」は consist of ～（能動態で、受け身にしない）／be made up of ～／be composed of ～（受け身の形）。前置詞はどれも of。',
+      'consist in ～ は「～にある（本質が～だ）」という別の意味。分詞構文では Consisting of ～／Made up of ～ となる。',
+    ],
+    examples: [
+      { en: 'The team consists of eleven players. / The team is made up of eleven players.', ja: 'そのチームは11人の選手から成る。' },
+      { en: 'Water is composed of hydrogen and oxygen.', ja: '水は水素と酸素で構成されている。' },
+    ],
+    questions: [
+      { sentence: '(A) The team (B) consists (C) from (D) eleven players.', choices: ['(A) The team', '(B) consists', '(C) from', '(D) eleven players'], answer: 2, why: '「～から成る」は consist of ～。' },
+      { sentence: '(A) Our class (B) is consisted (C) of (D) thirty students.', choices: ['(A) Our class', '(B) is consisted', '(C) of', '(D) thirty students'], answer: 1, why: 'consist は受け身にしない。consists of。' },
+      { sentence: '(A) The committee (B) is made up (C) by (D) five members.', choices: ['(A) The committee', '(B) is made up', '(C) by', '(D) five members'], answer: 2, why: '「～から成る」は be made up of ～。' },
+      { sentence: '(A) The air (B) is mainly (C) composed (D) by nitrogen.', choices: ['(A) The air', '(B) is mainly', '(C) composed', '(D) by nitrogen'], answer: 3, why: '「～で構成される」は be composed of ～。of nitrogen。' },
+      { sentence: '(A) Consisting (B) of only three rooms, (C) the house (D) were small.', choices: ['(A) Consisting', '(B) of only three rooms,', '(C) the house', '(D) were small'], answer: 3, why: '主語 the house は単数なので was。' },
+      { sentence: '(A) The book (B) consists of (C) ten chapter, (D) each about a different city.', choices: ['(A) The book', '(B) consists of', '(C) ten chapter,', '(D) each about a different city'], answer: 2, why: 'ten のあとは複数なので ten chapters。' },
+      { sentence: '(A) Make (B) up of many islands, (C) the country (D) has a long coastline.', choices: ['(A) Make', '(B) up of many islands,', '(C) the country', '(D) has a long coastline'], answer: 0, why: '分詞構文で受け身の意味なので Made up of。' },
+      { sentence: '(A) The meal (B) consisted (C) of (D) rice, soup, and a vegetables.', choices: ['(A) The meal', '(B) consisted', '(C) of', '(D) rice, soup, and a vegetables'], answer: 3, why: 'vegetables は複数なので a はつけない。and vegetables。' },
+      { sentence: '(A) This group (B) is composed (C) with (D) students from five countries.', choices: ['(A) This group', '(B) is composed', '(C) with', '(D) students from five countries'], answer: 2, why: '「～で構成される」は be composed of ～。' },
+      { sentence: '(A) The jury (B) was made up (C) of (D) twelve ordinary citizen.', choices: ['(A) The jury', '(B) was made up', '(C) of', '(D) twelve ordinary citizen'], answer: 3, why: 'twelve のあとは複数なので citizens。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

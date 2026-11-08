@@ -3522,3 +3522,10 @@ it('誤文訂正〈248〉：国公立レベル succeed in・manage to・fail to 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('succeeded in passing')
 })
+
+it('正誤問題〈255〉：京大レベル consist of・be made up of・be composed of の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-consist-of')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) from')
+})
