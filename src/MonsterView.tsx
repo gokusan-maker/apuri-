@@ -3777,6 +3777,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M46 56 v6 M54 56 v6" stroke="#fafaf9" strokeWidth="2" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'milu')
+    return (
+      <g>
+        {/* ロバのようなしっぽ */}
+        <path d="M70 66 q8 4 6 14" stroke="#3a2614" strokeWidth="2" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
