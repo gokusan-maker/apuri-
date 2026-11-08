@@ -46978,6 +46978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-hospital-food',
+    title: 'Should Hospitals Sell Only Healthy Food?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hospitals exist to make people healthy, yet the food sold in many of them tells a different story. Cafés and shops inside hospitals often offer sugary drinks, sweets, crisps, and fried snacks, and vending machines in waiting areas are frequently filled with similar products. In recent years, some hospitals have begun to restrict or remove such items, arguing that institutions devoted to health should set an example. Others have resisted these changes, and the question of whether hospitals should sell only healthy food has become a subject of debate.",
+      "Supporters of restrictions argue first that hospitals have a special responsibility to promote good health. Doctors and nurses spend much of their time treating illnesses connected with poor diet, such as heart disease and diabetes, and it seems contradictory, supporters say, for the same institutions to profit from selling the foods that contribute to these conditions. A hospital that offers only healthy choices sends a clear message to patients, visitors, and staff about the importance of what they eat. Patients recovering from illness, they add, may be especially open to such messages.",
+      "Supporters also point out that hospital staff often work long and irregular hours, and may depend heavily on the food available at their workplace. Nurses and doctors working night shifts may have few other options, and if the only food on offer is unhealthy, their own health may suffer over time. Providing nutritious meals and snacks, supporters argue, is a way of caring for those who care for others, and may even help to reduce tiredness and mistakes at work. A hospital that looks after the health of its own workers, in their view, will be better able to look after its patients.",
+      "Critics, however, argue that restrictions may be unfair to patients and visitors. ( A ) healthy eating is important, people who are anxious, grieving, or waiting for long hours may simply want a familiar comfort, such as a chocolate bar or a sweet drink. Critics suggest that hospitals should respect adults' freedom to choose what they eat, and that removing such items may make a stressful experience even more unpleasant without bringing any real improvement in health. A small treat, they point out, can sometimes do more for a frightened child than any lecture about nutrition.",
+      "Critics also raise financial concerns. Shops and cafés in hospitals often provide income that helps to pay for services or supports hospital charities, and if popular products are removed, sales may fall. In addition, critics note, visitors who cannot find what they want inside the hospital may simply buy it elsewhere and bring it in, so that restrictions reduce income without changing what people actually eat. Such outcomes, they warn, would benefit no one.",
+      "Some hospitals have tried to find a balance. Rather than banning unhealthy items completely, they reduce their number, place healthier options in the most visible positions, and limit special offers on sugary products. Others have improved the quality and taste of healthy food, so that it becomes an attractive choice rather than a forced one, and have extended opening hours so that staff on night shifts can obtain proper meals. Early reports suggest that such changes can shift buying habits without causing strong complaints. Staff, in particular, have often welcomed the improvements.",
+      "The debate over food in hospitals therefore reflects a wider question about the role of public institutions in shaping people's choices. Hospitals, schools, and other public places can influence behavior simply by deciding what to offer, and many people believe that such influence should be used to encourage healthier lives. At the same time, respect for individual freedom and the realities of stressful situations suggest that change may work best when it is gradual, thoughtful, and sensitive to the needs of those it affects.",
+    ],
+    ja: [
+      '病院は人々を健康にするためにあるが、その多くで売られている食べ物はちがう話を物語っている。病院の中のカフェや売店ではしばしば、甘い飲み物やおかし、ポテトチップス、あげたおやつが売られ、待合室の自動販売機も同じような商品でいっぱいのことが多い。近年、健康のためにある施設は手本を示すべきだと主張して、そうした品物を制限したりなくしたりしはじめた病院がある。こうした変化に反対してきた病院もあり、病院は健康的な食べ物だけを売るべきかどうかという問いは、議論の対象になっている。',
+      '制限を支持する人々は、まず、病院には健康をすすめるとくべつな責任があると主張する。医師や看護師は、心臓病や糖尿病など、食生活の悪さと結びついた病気の治療に多くの時間を使っており、同じ施設がこうした病気の原因となる食べ物を売って利益を得るのは矛盾していると支持する人々は言う。健康的な選択肢だけを提供する病院は、患者や見舞い客、職員に、何を食べるかが大切であるというはっきりしたメッセージを送るのである。病気から回復しつつある患者は、とくにそうしたメッセージを受け入れやすいかもしれないと彼らはつけ加える。',
+      '支持する人々はまた、病院の職員はしばしば長く不規則な時間働き、職場で手に入る食べ物に大きくたよっているかもしれないと指摘する。夜勤で働く看護師や医師にはほかの選択肢がほとんどないかもしれず、出される食べ物が不健康なものだけなら、時がたつにつれて彼ら自身の健康がそこなわれるかもしれない。栄養のある食事やおやつを用意することは、ほかの人の世話をする人々を世話するひとつの方法であり、仕事でのつかれやまちがいをへらす助けにさえなるかもしれないと支持する人々は主張する。彼らの考えでは、自分の職員の健康に気を配る病院のほうが、患者の世話もよりよくできるのである。',
+      'しかし批判する人々は、制限は患者や見舞い客にとって不公平かもしれないと主張する。健康的に食べることは大切だが、不安をかかえていたり、悲しんでいたり、長い時間待っていたりする人々は、チョコレートや甘い飲み物のような、なじみのあるなぐさめをただほしいだけかもしれない。病院は大人が何を食べるかを選ぶ自由を尊重すべきであり、そうした品物をなくすことは、健康に本当の改善をもたらすことなく、ストレスの多い経験をさらにいやなものにするかもしれないと批判する人々は考える。ちょっとしたごほうびのほうが、おびえた子どもにとって、栄養についてのどんなお説教よりも役に立つことがあると彼らは指摘する。',
+      '批判する人々はまた、お金の心配もあげる。病院の売店やカフェはしばしば、サービスの費用をまかなったり病院の慈善団体をささえたりする収入をもたらしており、人気のある商品をなくせば売り上げが落ちるかもしれない。さらに、病院の中でほしいものが見つからない見舞い客は、ただほかの場所で買ってもちこむかもしれず、そうなれば制限は、人々が実際に食べるものを変えることなく収入だけをへらすことになると批判する人々は指摘する。そうした結果はだれのためにもならないと彼らは警告する。',
+      'つりあいを見つけようとしてきた病院もある。不健康な品物を完全に禁止するかわりに、その数をへらし、より健康的な選択肢をいちばん目立つ場所に置き、甘い商品のとくべつな割引を制限するのである。また、健康的な食べ物の質と味をよくして、それがおしつけられた選択ではなく魅力的な選択になるようにし、夜勤の職員がきちんとした食事をとれるよう営業時間をのばした病院もある。初期の報告によれば、そうした変化は強い苦情をまねくことなく、買い物の習慣を変えうるという。とくに職員は、こうした改善をしばしば歓迎してきた。',
+      'したがって、病院の食べ物をめぐる議論は、人々の選択を形づくるうえでの公共の施設の役割についての、より広い問いを映し出している。病院や学校などの公共の場所は、何を提供するかを決めるだけで人々の行動に影響をあたえることができ、多くの人は、そうした影響はより健康的な生活をうながすために使われるべきだと考えている。同時に、個人の自由への敬意と、ストレスの多い状況の現実を考えると、変化は、それが影響をあたえる人々の必要に気を配りながら、少しずつ、よく考えて行われるときにもっともうまくいくのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「健康的に食べることは大切だが、不安な人はなじみのあるなぐさめをほしいかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say hospitals should set an example and care for staff who work night ( 1 ). Critics argue that patients and visitors may want familiar comfort and that removing popular products may reduce ( 2 ). Some hospitals place healthier options in the most ( 3 ) positions instead of banning unhealthy items.',
+      blanks: [
+        { choices: ['shifts', 'classes', 'flights', 'games'], answer: 0, why: '第3段落 Nurses and doctors working night shifts。' },
+        { choices: ['income', 'waiting', 'illness', 'noise'], answer: 0, why: '第5段落 restrictions reduce income。' },
+        { choices: ['visible', 'expensive', 'distant', 'crowded'], answer: 0, why: '第6段落 place healthier options in the most visible positions。' },
+      ],
+    },
+    tf: [
+      { statement: '病院の中の売店では、甘い飲み物やおかしが売られていることが多い。', answer: true, why: '第1段落 Cafés and shops inside hospitals often offer sugary drinks, sweets ...。' },
+      { statement: '支持する人々によると、夜勤の職員にはほかの食べ物の選択肢がたくさんある。', answer: false, why: '第3段落 may have few other options。' },
+      { statement: '見舞い客は、ほしいものをほかの場所で買ってもちこむかもしれない。', answer: true, why: '第5段落 may simply buy it elsewhere and bring it in。' },
+      { statement: '初期の報告によれば、変化は強い苦情をまねいた。', answer: false, why: '第6段落 without causing strong complaints。' },
+    ],
+    qa: [
+      { q: 'Why do supporters think it is contradictory for hospitals to sell unhealthy food?', choices: ['They treat illnesses connected with poor diet.', 'They have no shops.', 'Patients never eat there.', 'Food is too expensive.'], answer: 0, why: '第2段落 treating illnesses connected with poor diet ... it seems contradictory。' },
+      { q: 'What do the shops and cafés in hospitals often provide?', choices: ['Income that supports services or charities.', 'Free meals for patients.', 'Medical advice.', 'Places to sleep.'], answer: 0, why: '第5段落 provide income that helps to pay for services or supports hospital charities。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
