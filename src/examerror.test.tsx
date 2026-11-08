@@ -3508,3 +3508,10 @@ it('誤文訂正〈247〉：京大レベル deal with・cope with・put up with 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('deal with the problem')
 })
+
+it('正誤問題〈254〉：東大レベル depend on・rely on・count on の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-depend-rely')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) depend in')
+})

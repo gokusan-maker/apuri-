@@ -6083,6 +6083,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) My father (B) is (C) good at (D) cook Italian food.', choices: ['(A) My father', '(B) is', '(C) good at', '(D) cook Italian food'], answer: 3, why: '前置詞 at のあとは動名詞なので cooking。' },
     ],
   },
+  {
+    id: 'exam-error-depend-rely',
+    title: '入試の正誤問題〈254〉（東大レベル：英作文の depend on・rely on・count on）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'depend on ～・rely on ～・count on ～ はどれも「～にたよる・～をあてにする」で、前置詞は on。It depends on ～ は「～しだいだ」。',
+      '「人が～してくれるのをあてにする」は rely on（count on）人 to do。主語が whether 節や動名詞のときは単数あつかいで depends になる。',
+    ],
+    examples: [
+      { en: 'You can depend on me. / It depends on the weather.', ja: '私をたよっていいよ。／それは天気しだいだ。' },
+      { en: 'I am counting on you to help me.', ja: 'あなたが手伝ってくれるのをあてにしています。' },
+    ],
+    questions: [
+      { sentence: '(A) You (B) can always (C) depend in (D) your family.', choices: ['(A) You', '(B) can always', '(C) depend in', '(D) your family'], answer: 2, why: '「～にたよる」は depend on ～。' },
+      { sentence: '(A) Many people (B) rely (C) on their phones (D) find their way.', choices: ['(A) Many people', '(B) rely', '(C) on their phones', '(D) find their way'], answer: 3, why: '「～するのに…にたよる」は rely on A to do。to find their way。' },
+      { sentence: '(A) I am (B) counting (C) on you (D) help me tomorrow.', choices: ['(A) I am', '(B) counting', '(C) on you', '(D) help me tomorrow'], answer: 3, why: 'count on 人 to do で「人が～してくれるのをあてにする」。to help me。' },
+      { sentence: '(A) Depend (B) on others (C) too much (D) is not good.', choices: ['(A) Depend', '(B) on others', '(C) too much', '(D) is not good'], answer: 0, why: '主語になるので動名詞 Depending。' },
+      { sentence: '(A) Whether we go (B) depend on (C) the weather (D) tomorrow.', choices: ['(A) Whether we go', '(B) depend on', '(C) the weather', '(D) tomorrow'], answer: 1, why: '主語は whether 節（単数あつかい）なので depends on。' },
+      { sentence: '(A) The town’s economy (B) relies (C) heavily on (D) the tourism.', choices: ['(A) The town’s economy', '(B) relies', '(C) heavily on', '(D) the tourism'], answer: 3, why: '「観光業」一般には the をつけない。on tourism。' },
+      { sentence: '(A) She (B) has always relied (C) on (D) herself for since she was young.', choices: ['(A) She', '(B) has always relied', '(C) on', '(D) herself for since she was young'], answer: 3, why: 'since の前の for は不要。herself since she was young。' },
+      { sentence: '(A) It (B) depends (C) of (D) how much money we have.', choices: ['(A) It', '(B) depends', '(C) of', '(D) how much money we have'], answer: 2, why: '「～しだいだ」は It depends on ～。' },
+      { sentence: '(A) Relying (B) on a map, (C) we found the hotel (D) easy.', choices: ['(A) Relying', '(B) on a map,', '(C) we found the hotel', '(D) easy'], answer: 3, why: '動詞 found を修飾するので副詞 easily。' },
+      { sentence: '(A) You can (B) count (C) with me (D) whenever you need help.', choices: ['(A) You can', '(B) count', '(C) with me', '(D) whenever you need help'], answer: 2, why: '「（人）をあてにする」は count on 人。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
