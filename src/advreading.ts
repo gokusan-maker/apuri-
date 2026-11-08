@@ -46178,6 +46178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-dogs-in-restaurants',
+    title: 'Should Dogs Be Allowed in Restaurants?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, dogs have traditionally been kept out of restaurants and cafés, except for guide dogs and other assistance animals. In recent years, however, a growing number of places have begun to welcome pet dogs, offering water bowls at the door and even special menus for animals. Some cities have changed their rules to allow dogs in certain kinds of eating places, while others continue to forbid them. The question of whether dogs should be allowed in restaurants has become a surprisingly lively subject of debate.",
+      "Supporters argue first that dogs are an important part of many people's lives. For owners who live alone, a dog may be a constant companion, and leaving it at home or tied up outside while they eat can seem unkind. Allowing dogs into restaurants, supporters say, makes it easier for owners to go out, to meet friends, and to take part in the social life of their neighborhood. In some countries where dogs have long been welcome in cafés, this has caused few problems, which suggests that such rules can work well.",
+      "Supporters also point out the benefits for businesses. Restaurants that welcome dogs may attract customers who would otherwise stay at home, and many dog owners are loyal to places where their animals are treated kindly. In addition, supporters argue, well-behaved dogs can create a friendly and relaxed atmosphere, encouraging conversations between strangers and making a café feel more like a part of the community rather than simply a place to buy food. Some owners even choose where to eat mainly on the basis of whether their dogs are welcome.",
+      "Critics, however, raise concerns about hygiene and health. ( A ) most dogs may be clean and well behaved, animals can carry dirt and germs, shed hair, and occasionally have accidents, all of which are serious matters in places where food is prepared and eaten. Critics also point out that some customers are allergic to dogs, and that even a short time near an animal can cause them real discomfort. For these people, a restaurant that allows dogs may be a place they can no longer visit.",
+      "Critics further note that not everyone feels comfortable around dogs. Some people are afraid of them, perhaps because of a bad experience in childhood, and others simply prefer to eat without animals nearby. A barking or restless dog can disturb other diners, and conflicts may arise between owners and other customers. Critics argue that restaurants are shared spaces, and that the preferences of those who do not want dogs nearby deserve as much consideration as the wishes of dog owners. Staff, too, may find it difficult to serve food safely while moving between tables where dogs are lying on the floor.",
+      "Some places have tried to find a compromise. They allow dogs only on outdoor terraces, or in a separate section of the restaurant, and require them to be kept on a lead and off the furniture. Others leave the decision to each restaurant, so that customers can choose places that suit their preferences, as long as clear signs inform them in advance. Such arrangements aim to give dog owners more freedom while protecting the comfort and health of those who would rather avoid animals.",
+      "The debate over dogs in restaurants therefore reflects a wider question about how people with different needs and preferences can share public spaces. In a society where many people live with animals, and many others do not, rules that suit one group may inconvenience another. The most satisfactory solutions may be those that offer a range of choices, so that different kinds of places can serve different kinds of customers, rather than imposing a single rule that pleases no one completely.",
+    ],
+    ja: [
+      '多くの国で、盲導犬などの補助犬をのぞいて、犬は昔からレストランやカフェには入れないものとされてきた。しかし近年、入り口に水のおわんを置いたり、動物のための特別なメニューさえ用意したりして、ペットの犬を歓迎しはじめる店がふえている。ある種の飲食店に犬を入れられるよう決まりを変えた都市もあれば、いまも禁止しつづけている都市もある。犬をレストランに入れてよいかどうかという問いは、おどろくほど活発な議論の対象になっている。',
+      '支持する人々は、まず、犬は多くの人の生活の大切な一部だと主張する。ひとりぐらしの飼い主にとって、犬はいつもいっしょにいる仲間かもしれず、食事のあいだ家に置いてきたり外につないでおいたりするのは、思いやりのないことに思えるかもしれない。犬をレストランに入れられれば、飼い主は出かけたり、友人に会ったり、地域の社会生活に加わったりしやすくなると支持する人々は言う。犬が長くカフェで歓迎されてきた国では、これがほとんど問題を起こしていないことから、そうした決まりはうまくいきうることがうかがえる。',
+      '支持する人々はまた、店にとっての利益も指摘する。犬を歓迎するレストランは、そうでなければ家にいたであろう客をひきつけるかもしれず、多くの飼い主は自分の動物をやさしくあつかってくれる店のなじみ客になる。さらに、行儀のよい犬はなごやかで落ち着いた雰囲気をつくり、見知らぬ人どうしの会話をうながし、カフェを単に食べ物を買う場所ではなく、地域の一部のように感じさせると支持する人々は主張する。どこで食べるかを、おもに犬が歓迎されるかどうかで選ぶ飼い主さえいる。',
+      'しかし批判する人々は、衛生と健康についての心配をあげる。ほとんどの犬は清潔で行儀がよいかもしれないが、動物はよごれやばい菌を運び、毛がぬけ、ときにはそそうをすることもあり、それらはどれも食べ物をつくって食べる場所では重大な問題である。批判する人々はまた、犬にアレルギーのある客もおり、短い時間動物の近くにいるだけでも本当につらい思いをすることがあると指摘する。そうした人々にとって、犬を入れるレストランは、もう行けない場所になるかもしれない。',
+      '批判する人々はさらに、すべての人が犬のそばで気楽にいられるわけではないと指摘する。子どものころのいやな経験のせいか、犬をこわがる人もいれば、ただ近くに動物がいないところで食べたいと思う人もいる。ほえたり落ち着かなかったりする犬はほかの客のじゃまになりうるし、飼い主とほかの客とのあいだに争いが起こるかもしれない。レストランは共有の空間であり、近くに犬がいてほしくない人々の好みも、飼い主の願いと同じくらい考えられるべきだと批判する人々は主張する。店員にとっても、犬が床にねそべっているテーブルのあいだを行き来しながら、安全に料理を運ぶのはむずかしいかもしれない。',
+      '折り合いをつけようとしてきた場所もある。犬は外のテラス席か、店の中の別の区画でだけみとめ、ひもにつないで家具にのせないよう求めるのである。また、前もってはっきりした表示で知らせるかぎり、決定をそれぞれのレストランにまかせ、客が自分の好みに合った店を選べるようにしているところもある。そうしたしくみは、飼い主により多くの自由をあたえながら、動物をさけたい人々の快適さと健康を守ることをめざしている。',
+      'したがって、犬とレストランをめぐる議論は、ちがう必要や好みをもつ人々がどのように公共の空間を分け合えるかという、より広い問いを映し出している。多くの人が動物とくらし、またほかの多くの人がそうではない社会では、ある集団に合う決まりが別の集団にとって不便になることがある。もっとも満足のいく解決策は、だれも完全には満足させないひとつの決まりをおしつけるのではなく、さまざまな選択肢を用意し、ちがう種類の場所がちがう種類の客の役に立てるようにするものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ほとんどの犬は清潔かもしれないが、動物はよごれやばい菌を運ぶ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say allowing dogs helps owners take part in social life and can attract loyal ( 1 ). Critics raise concerns about hygiene, allergies, and people who are ( 2 ) of dogs. Some places allow dogs only on outdoor terraces or leave the decision to each restaurant, with clear ( 3 ) in advance.',
+      blanks: [
+        { choices: ['customers', 'workers', 'farmers', 'doctors'], answer: 0, why: '第3段落 many dog owners are loyal to places where their animals are treated kindly。' },
+        { choices: ['afraid', 'fond', 'proud', 'tired'], answer: 0, why: '第5段落 Some people are afraid of them。' },
+        { choices: ['signs', 'prices', 'menus', 'tables'], answer: 0, why: '第6段落 as long as clear signs inform them in advance。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国で、補助犬をのぞいて犬は昔からレストランに入れなかった。', answer: true, why: '第1段落 dogs have traditionally been kept out ... except for guide dogs。' },
+      { statement: '犬が長くカフェで歓迎されてきた国では、多くの問題が起きた。', answer: false, why: '第2段落 this has caused few problems。' },
+      { statement: '犬にアレルギーのある客もいる。', answer: true, why: '第4段落 some customers are allergic to dogs。' },
+      { statement: 'すべての場所が、犬を店の中のどこにでも入れてよいとしている。', answer: false, why: '第6段落 They allow dogs only on outdoor terraces, or in a separate section。' },
+    ],
+    qa: [
+      { q: 'How can well-behaved dogs affect the atmosphere of a café, according to supporters?', choices: ['They can make it friendly and relaxed.', 'They can make it quieter.', 'They can make food cheaper.', 'They can make it more formal.'], answer: 0, why: '第3段落 can create a friendly and relaxed atmosphere。' },
+      { q: 'What may the most satisfactory solutions offer?', choices: ['A range of choices.', 'A single strict rule.', 'Lower prices for dog owners.', 'Separate cities for dogs.'], answer: 0, why: '第7段落 those that offer a range of choices。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
