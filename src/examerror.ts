@@ -10300,6 +10300,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The letter was written [by hand of].', choices: ['by hand', 'with hand', 'in hand', 'on hand'], answer: 0, why: '「手書きで」は by hand。of は不要。' },
     ],
   },
+  {
+    id: 'exam-fix-242',
+    title: '入試の誤文訂正〈242〉（国公立レベル：否定文の「～も」too と either・also の位置）',
+    points: ['「～も」は肯定文では too（文末）・also（文中）、否定文では文末の either を使う（I don’t like it, either.）。否定文で too・also・as well は使わない。', 'also は一般動詞の前、be動詞と助動詞のあとに置く（She also speaks Spanish.／I am also tired.／We can also go.）。also と too を重ねたり、文頭に Too を置いたりしない。'],
+    examples: [{ en: 'I like soccer, too. / I don’t like coffee, either. / She is also a good singer.', ja: '私もサッカーが好きだ。／私もコーヒーは好きではない。／彼女は歌もうまい。' }],
+    questions: [
+      { sentence: 'I don’t like coffee, and my sister doesn’t like it, [too].', choices: ['either', 'also', 'neither', 'so'], answer: 0, why: '否定文の「～も」は either。' },
+      { sentence: 'He can’t swim, and I can’t swim, [too].', choices: ['either', 'also', 'so', 'neither too'], answer: 0, why: '否定文なので either。' },
+      { sentence: 'She speaks French, and she [also speaks too] Spanish.', choices: ['also speaks', 'speaks either', 'too speaks also', 'either speaks'], answer: 0, why: 'also と too は重ねない。also は一般動詞の前。' },
+      { sentence: 'I [also am] tired after the long walk.', choices: ['am also', 'also be', 'am either', 'too am'], answer: 0, why: 'also は be動詞のあとに置く。am also。' },
+      { sentence: 'My brother likes soccer. I like soccer, [either].', choices: ['too', 'neither', 'also either', 'so'], answer: 0, why: '肯定文の「～も」は too。' },
+      { sentence: 'Tom didn’t come, and Ken didn’t come, [also].', choices: ['either', 'too', 'so', 'neither also'], answer: 0, why: '否定文の文末は either。' },
+      { sentence: 'She [also is] a good singer.', choices: ['is also', 'also be', 'is either', 'too is'], answer: 0, why: 'also は be動詞のあと。is also。' },
+      { sentence: 'I am not hungry, and he isn’t hungry, [neither].', choices: ['either', 'too', 'also', 'so'], answer: 0, why: 'isn’t と neither は重ねない。否定文の文末は either。' },
+      { sentence: '[Too I want] to visit Kyoto.', choices: ['I also want', 'I want too', 'Either I want', 'I too wants'], answer: 0, why: 'Too は文頭に置かない。I also want（または文末に too）。' },
+      { sentence: 'He doesn’t eat meat, and he doesn’t eat fish [as well].', choices: ['either', 'too', 'also', 'so'], answer: 0, why: '否定文では as well ではなく either。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
