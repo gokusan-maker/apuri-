@@ -46418,6 +46418,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-campus-housing',
+    title: 'Should Students Be Required to Live on Campus?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "At some universities, all first-year students are required to live in student housing on or near the campus. Others leave the choice entirely to students, many of whom continue to live with their families or rent rooms in the city. Supporters of compulsory campus housing argue that it helps young people adjust to university life and form lasting friendships, while critics regard it as an unnecessary expense and a restriction on personal freedom. The question of whether universities should require students to live on campus has become a subject of lively debate.",
+      "Supporters argue first that living on campus helps new students make the difficult transition from school to university. Many students arrive in a new city without friends or family nearby, and living among others in the same situation can reduce feelings of loneliness and make it easier to ask for help. Supporters point out that students who live on campus are close to libraries, laboratories, and teachers, and that research in several countries has suggested they are somewhat less likely to drop out during their first year. Being able to walk to an early lecture, they add, may matter more than it seems.",
+      "Supporters also emphasize the social and personal benefits. Sharing a building with students from different backgrounds, regions, and countries can broaden young people's views and teach them to live alongside others whose habits and opinions differ from their own. Many former students remember their time in campus housing as the period in which they formed their closest friendships and learned to manage daily life independently, from cooking and cleaning to budgeting their money.",
+      "Critics, however, argue that compulsory housing places a heavy financial burden on some families. ( A ) living on campus may be convenient, the cost of rooms and meals can be considerably higher than living at home, and students from families with low incomes may be discouraged from applying to universities that require it. Critics point out that for many students, living with their families allows them to attend university at all, and that a rule designed to help students may in practice exclude those with fewer resources. Some students, critics add, may even be forced to take on debts simply to meet the housing requirement.",
+      "Critics also argue that young adults should be free to decide how and where they live. Some students have responsibilities at home, such as caring for younger siblings or elderly relatives, while others simply prefer the quiet of their own rooms to the noise of shared housing. Critics further note that campus life does not suit everyone, and that students who feel uncomfortable in crowded or highly social environments may find compulsory housing stressful rather than helpful.",
+      "Some universities have tried to find a balance. They encourage rather than require students to live on campus, offering scholarships or reduced rents to those who would otherwise be unable to afford it, and allow exceptions for students with family responsibilities or other good reasons. Others organize activities and support programs for students who live off campus, so that those who commute can also take part in university life and build connections with their classmates. Such programs suggest that a sense of belonging can be created in more than one way.",
+      "The debate over campus housing therefore reflects a wider question about what a university education should include. If university is seen mainly as a place for academic study, where students live may seem a private matter. If, on the other hand, it is seen as a stage of life in which young people grow socially as well as intellectually, then the experience of living together may appear to be an important part of that education, as long as it is made available fairly to all.",
+    ],
+    ja: [
+      'いくつかの大学では、すべての1年生がキャンパスの中か近くの学生寮に住むことを求められている。ほかの大学は選択を完全に学生にまかせており、その多くは家族といっしょに住みつづけたり、都市で部屋を借りたりしている。寮生活の義務化を支持する人々は、それは若い人々が大学生活に慣れ、長く続く友情を築く助けになると主張し、批判する人々はそれを必要のない出費であり、個人の自由の制限だと見なしている。大学は学生にキャンパスに住むことを求めるべきかどうかという問いは、活発な議論の対象になっている。',
+      '支持する人々は、まず、キャンパスに住むことは新入生が学校から大学へのむずかしい移り変わりをはたす助けになると主張する。多くの学生は、近くに友人も家族もいない新しい都市にやってくるが、同じ立場の人々の中でくらすことは、さびしさをやわらげ、助けをもとめやすくしてくれる。キャンパスに住む学生は図書館や実験室、先生の近くにおり、いくつかの国の研究によれば、1年目にやめてしまう割合がいくらか低いという、と支持する人々は指摘する。朝早い講義に歩いて行けることは、思われている以上に大切かもしれないと彼らはつけ加える。',
+      '支持する人々はまた、社会的・個人的な利益も強調する。ちがう背景や地域、国から来た学生と建物を共有することは、若い人々の視野を広げ、習慣や意見が自分とちがう人々とともにくらすことを教えてくれる。多くの卒業生は、寮ですごした時期を、もっとも親しい友情を築き、料理やそうじからお金のやりくりまで、日々の生活を自分でこなすことを学んだ時期として思い出している。',
+      'しかし批判する人々は、寮生活の義務化は一部の家庭に重い経済的負担をかけると主張する。キャンパスに住むことは便利かもしれないが、部屋代と食費は家に住むよりもかなり高くなることがあり、収入の少ない家庭の学生は、それを求める大学に出願するのを思いとどまるかもしれない。多くの学生にとっては、家族といっしょに住むことでようやく大学に通えるのであり、学生を助けるためにつくられた決まりが、実際には資源の少ない人々をしめ出してしまうかもしれないと批判する人々は指摘する。寮に住むという決まりをみたすだけのために、借金をせざるをえない学生さえいるかもしれないと彼らはつけ加える。',
+      '批判する人々はまた、若い大人はどのように、どこに住むかを自由に決められるべきだと主張する。年下のきょうだいや年老いた親せきの世話など、家に責任をもつ学生もいれば、共同の寮のさわがしさより自分の部屋の静けさをただ好む学生もいる。批判する人々はさらに、キャンパスの生活がすべての人に合うわけではなく、混み合った場所やとても社交的な環境が苦手な学生にとって、義務の寮生活は助けになるどころかストレスになるかもしれないと指摘する。',
+      'つりあいを見つけようとしてきた大学もある。キャンパスに住むことを求めるのではなくすすめ、そうでなければ費用を払えない学生には奨学金や家賃の割引をあたえ、家庭の責任などのもっともな理由がある学生には例外をみとめるのである。また、キャンパスの外に住む学生のための活動や支援のしくみを用意し、通学する学生も大学生活に加わり、クラスの仲間とつながりを築けるようにしている大学もある。そうした取り組みは、仲間であるという感覚がひとつ以上の方法でつくり出せることを示している。',
+      'したがって、寮生活をめぐる議論は、大学教育が何をふくむべきかという、より広い問いを映し出している。大学がおもに学問を学ぶ場所と見なされるなら、学生がどこに住むかは私的な問題に思えるかもしれない。一方、大学が、若い人々が知的にだけでなく社会的にも成長する人生の一段階と見なされるなら、ともにくらす経験は、それがすべての人に公平に用意されるかぎり、その教育の大切な一部に思えるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「キャンパスに住むことは便利かもしれないが、費用はかなり高くなる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say campus housing reduces ( 1 ) and helps students form friendships and live independently. Critics argue that it places a heavy financial burden on some families and limits personal ( 2 ). Some universities encourage campus living and offer ( 3 ) to students who could not otherwise afford it.',
+      blanks: [
+        { choices: ['loneliness', 'traffic', 'noise', 'homework'], answer: 0, why: '第2段落 can reduce feelings of loneliness。' },
+        { choices: ['freedom', 'health', 'study', 'safety'], answer: 0, why: '第5段落 young adults should be free to decide how and where they live。' },
+        { choices: ['scholarships', 'cars', 'jobs', 'computers'], answer: 0, why: '第6段落 offering scholarships or reduced rents。' },
+      ],
+    },
+    tf: [
+      { statement: 'いくつかの大学では、すべての1年生が学生寮に住むことを求められている。', answer: true, why: '第1段落 all first-year students are required to live in student housing。' },
+      { statement: '研究によれば、キャンパスに住む学生は1年目にやめる割合が高い。', answer: false, why: '第2段落 somewhat less likely to drop out。' },
+      { statement: '家族の世話などの責任をもつ学生もいる。', answer: true, why: '第5段落 Some students have responsibilities at home。' },
+      { statement: 'どの大学も、キャンパスの外に住む学生のための支援をしていない。', answer: false, why: '第6段落 organize activities and support programs for students who live off campus。' },
+    ],
+    qa: [
+      { q: 'What do many former students remember learning in campus housing?', choices: ['To manage daily life independently.', 'To speak many languages.', 'To drive a car.', 'To start a business.'], answer: 0, why: '第3段落 learned to manage daily life independently。' },
+      { q: 'Who may find compulsory housing stressful, according to critics?', choices: ['Students uncomfortable in crowded environments.', 'Students who like sports.', 'Students from large cities.', 'Students who study science.'], answer: 0, why: '第5段落 students who feel uncomfortable in crowded or highly social environments。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
