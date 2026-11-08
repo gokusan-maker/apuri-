@@ -45502,6 +45502,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-salt',
+    title: 'On Salt',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Salt is so common today that it is hard to imagine it was once among the most precious substances in the world. It sits on almost every kitchen table, it is added to nearly every kind of prepared food, and a small packet of it costs almost nothing. Yet for most of human history, salt was difficult to obtain, expensive to transport, and essential to life, and the efforts that people made to secure it have left deep marks on trade, politics, and even the words we use every day.",
+      "The human body needs salt in order to function, and so do the animals that people have raised for food. In regions far from the sea, where salt could not easily be collected from seawater, communities depended on salt that was mined from the ground or carried over long distances. Routes along which salt was transported became some of the busiest trading paths of the ancient world, and towns grew up at places where salt was produced or exchanged. Some of these towns still carry names that recall the salt on which their early wealth was built.",
+      "Salt was valued not only because the body needs it but also because it preserves food. ( A ) we now rely on refrigerators to keep food fresh, for thousands of years the only way to store meat and fish through the winter, or to carry them on long voyages, was to dry them, smoke them, or pack them in salt. Without salt, many communities would have faced hunger during the months when fresh food was scarce, and long sea journeys would have been almost impossible. In this sense, salt made possible not only survival through hard seasons but also exploration and long-distance trade.",
+      "Because salt was so important, it often became a source of power and conflict. Rulers in many places controlled its production and sale, and taxes on salt provided a large share of their income. Such taxes were often deeply unpopular, since they fell on a necessity that rich and poor alike could not do without, and protests against salt taxes have played a part in several important political movements, in which ordinary people resisted rules they regarded as unjust. A substance as simple as salt could thus become a symbol of the relationship between rulers and the people they governed.",
+      "Traces of salt's importance can still be found in language. Several common words are thought to come from the ancient word for salt, and expressions such as being worth one's salt, meaning being good at one's job, suggest how closely salt was once connected with value. In many cultures, salt has also had religious or symbolic meanings, being offered to guests as a sign of friendship or used in ceremonies to purify a place.",
+      "In modern times, the problem with salt has been reversed. Instead of struggling to obtain enough, many people now consume far more than they need, much of it hidden in bread, soup, and other processed foods. Doctors warn that too much salt can raise blood pressure and increase the risk of serious illness, and some governments have asked food companies to reduce the amount they use, a striking change for a substance that was once so hard to find.",
+      "Perhaps, then, salt deserves more thought than we usually give it. It has shaped trade routes, filled the treasuries of rulers, provoked protests, and entered our language, and it remains essential to life even as we struggle to use it wisely. When we reach for the salt at the dinner table, we may remember that this small white substance carries within it a long history of human need, effort, and ingenuity, and that what seems ordinary today was once worth a great deal.",
+    ],
+    ja: [
+      '塩は今日あまりにもありふれているので、かつてそれが世界でもっとも貴重なもののひとつだったとは想像しにくい。それはほとんどすべての台所のテーブルにあり、ほとんどすべての種類の加工食品に加えられ、小さな包みならほとんど何のお金もかからない。しかし人間の歴史のほとんどにおいて、塩は手に入れるのがむずかしく、運ぶのにお金がかかり、生きるのに欠かせないものだった。そして人々が塩を手に入れるためにはらった努力は、取り引きや政治、さらには私たちが毎日使うことばにまで深い跡を残してきたのである。',
+      '人間の体は、はたらくために塩を必要としており、人々が食べるために育ててきた動物もそうである。海から遠く、海水からかんたんに塩を集められない地域では、人々は地面からほり出した塩や、長い距離を運ばれてきた塩にたよっていた。塩が運ばれた道は古代の世界でもっともにぎわう交易路のいくつかになり、塩がつくられたり交換されたりする場所には町が生まれた。そうした町のなかには、はじめの富を築いた塩を思い出させる名前をいまももつところもある。',
+      '塩が大切にされたのは、体が必要とするからだけでなく、食べ物を保存するからでもあった。私たちはいまでは食べ物を新鮮にたもつのに冷蔵庫にたよっているが、何千年ものあいだ、冬のあいだ肉や魚をたくわえたり、長い航海にもっていったりする唯一の方法は、それをかわかすか、いぶすか、塩につけることだった。塩がなければ、多くの地域は新鮮な食べ物が少ない月日に飢えに直面しただろうし、長い船の旅はほとんど不可能だっただろう。この意味で、塩はきびしい季節を生きのびることだけでなく、探検や遠くとの取り引きも可能にしたのである。',
+      '塩はとても大切だったので、しばしば権力と争いのもとになった。多くの場所で支配者はその生産と販売を管理し、塩にかける税は彼らの収入の大きな部分をしめた。そうした税はしばしばひどくきらわれた。金持ちも貧しい人も同じようになしではすませられない必需品にかかるからである。そして塩の税への抗議は、ふつうの人々が不当と考えた決まりに抵抗したいくつかの重要な政治運動で、ある役割をはたしてきた。このように、塩のような単純なものが、支配者と支配される人々との関係のシンボルになりえたのである。',
+      '塩が大切だったことの名残は、いまでもことばの中に見つけることができる。いくつかのよく使われる単語は、塩を表す古いことばから来ていると考えられており、「塩に値する」、つまり仕事ができるという意味の表現は、塩がかつて価値といかに深く結びついていたかを示している。多くの文化では、塩はまた宗教的な、あるいは象徴的な意味をもち、友情のしるしとして客にさし出されたり、場所を清めるために儀式で使われたりしてきた。',
+      '現代では、塩の問題は逆転した。十分な量を手に入れるのに苦労するかわりに、いまでは多くの人が必要よりはるかに多くとっており、その多くはパンやスープなどの加工食品の中にかくれている。医師は、塩のとりすぎは血圧を上げ、重い病気の危険を高めうると警告しており、使う量をへらすよう食品会社に求めた政府もある。かつてはあれほど見つけるのがむずかしかったものにとって、これはおどろくべき変化である。',
+      'だとすれば、塩は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは交易路を形づくり、支配者の財源をみたし、抗議を引き起こし、私たちのことばに入りこんできた。そして私たちがかしこく使おうと苦労しているいまも、生きるのに欠かせないものでありつづけている。夕食のテーブルで塩に手をのばすとき、この小さな白いものが、人間の必要と努力と工夫の長い歴史をその中にたずさえていること、そして今日ありふれて見えるものが、かつてはとても大きな値打ちをもっていたことを思い出すかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「いまは冷蔵庫にたよっているが、何千年ものあいだ塩につけるしかなかった」という対比なので Although。' },
+    ],
+    tf: [
+      { statement: '塩が運ばれた道は、古代の世界でもっともにぎわう交易路のいくつかになった。', answer: true, why: '第2段落 became some of the busiest trading paths of the ancient world。' },
+      { statement: '塩の税は、いつも人々に歓迎された。', answer: false, why: '第4段落 Such taxes were often deeply unpopular。' },
+      { statement: '多くの文化で、塩は友情のしるしとして客にさし出されてきた。', answer: true, why: '第5段落 being offered to guests as a sign of friendship。' },
+      { statement: '筆者によると、現代の人々はたいてい塩が足りずに苦労している。', answer: false, why: '第6段落 many people now consume far more than they need。' },
+    ],
+    qa: [
+      { q: 'Why was salt valued besides being needed by the body?', choices: ['It preserves food.', 'It makes food colorful.', 'It is easy to grow.', 'It keeps houses warm.'], answer: 0, why: '第3段落 also because it preserves food。' },
+      { q: 'What have some governments asked food companies to do?', choices: ['Reduce the amount of salt they use.', 'Use more salt.', 'Stop selling bread.', 'Make salt more expensive.'], answer: 0, why: '第6段落 asked food companies to reduce the amount they use。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
