@@ -10902,6 +10902,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She seemed [anxiety] about the trip.', choices: ['anxious', 'anxiously', 'anxieties', 'to anxiety'], answer: 0, why: 'seem のあとは形容詞。anxious about ～。' },
     ],
   },
+  {
+    id: 'exam-fix-256',
+    title: '入試の誤文訂正〈256〉（京大レベル：英作文の avoid・deny・consider・enjoy のあとの ～ing）',
+    points: ['avoid（さける）・deny（否定する）・consider（よく考える）・enjoy（楽しむ）・finish・mind・give up などは、目的語に動名詞（～ing）をとり、to 不定詞はとらない（× avoid to go／○ avoid going）。', '否定は not ～ing（I considered not going.＝行かないでおこうかと考えた）。「～したことを否定する」は deny ～ing または deny having done。consider ～ing は「～しようかと考える」。'],
+    examples: [{ en: 'Try to avoid eating too late. / He denied breaking the window. / I am considering studying abroad.', ja: '夜おそくに食べるのはさけるようにしよう。／彼は窓を割ったことを否定した。／留学しようかと考えている。' }],
+    questions: [
+      { sentence: 'You should avoid [to eat] too much sugar.', choices: ['eating', 'to eating', 'eat', 'ate'], answer: 0, why: 'avoid のあとは動名詞なので eating。' },
+      { sentence: 'The boy denied [to take] the money.', choices: ['taking', 'take', 'to taking', 'took'], answer: 0, why: 'deny のあとは動名詞なので taking。' },
+      { sentence: 'We are considering [to move] to the countryside.', choices: ['moving', 'move', 'to moving', 'moved'], answer: 0, why: 'consider のあとは動名詞なので moving。' },
+      { sentence: 'My grandparents enjoy [to walk] in the park every morning.', choices: ['walking', 'walk', 'to walking', 'walked'], answer: 0, why: 'enjoy のあとは動名詞なので walking。' },
+      { sentence: 'Have you finished [to write] your report?', choices: ['writing', 'write', 'to writing', 'wrote'], answer: 0, why: 'finish のあとは動名詞なので writing。' },
+      { sentence: 'She avoided [to look at] me during the meeting.', choices: ['looking at', 'look at', 'to looking at', 'looked at'], answer: 0, why: 'avoid のあとは動名詞なので looking at。' },
+      { sentence: 'He gave up [to smoke] last year.', choices: ['smoking', 'smoke', 'to smoking', 'smoked'], answer: 0, why: 'give up のあとは動名詞なので smoking。' },
+      { sentence: 'The suspect denied [to have been] at the scene.', choices: ['having been', 'to being', 'have been', 'had been'], answer: 0, why: '「～したことを否定する」は deny having done。' },
+      { sentence: 'Would you consider [to join] our team?', choices: ['joining', 'join', 'to joining', 'joined'], answer: 0, why: 'consider のあとは動名詞なので joining。' },
+      { sentence: 'Many people enjoy [to listen] to music while studying.', choices: ['listening', 'listen', 'to listening', 'listened'], answer: 0, why: 'enjoy のあとは動名詞なので listening。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
