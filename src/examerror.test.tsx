@@ -3676,3 +3676,10 @@ it('誤文訂正〈259〉：京大レベル set up・set off・set out の単元
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('set up')
 })
+
+it('正誤問題〈266〉：東大レベル look into・look over・go through の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-look-into')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) at into')
+})

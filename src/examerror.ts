@@ -6383,6 +6383,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) She (B) was asked (C) to hand over (D) to her passport.', choices: ['(A) She', '(B) was asked', '(C) to hand over', '(D) to her passport'], answer: 3, why: 'hand over のあとにすぐ目的語を置く。hand over her passport。' },
     ],
   },
+  {
+    id: 'exam-error-look-into',
+    title: '入試の正誤問題〈266〉（東大レベル：英作文の look into・look over・go through）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'look into ～（～を調べる）・look over ～（～にざっと目を通す）・go through ～（～をくわしく調べる・（つらいこと）を経験する）。前置詞・副詞をまちがえると意味が変わる（look at・look for など）。',
+      'look over は代名詞を間に置ける（look it over）。look into・go through は前置詞なので代名詞はうしろ（look into it／go through it）。',
+    ],
+    examples: [
+      { en: 'The police are looking into the case. / Please look over my report.', ja: '警察はその事件を調べている。／私の報告書に目を通してください。' },
+      { en: 'She went through a difficult time.', ja: '彼女はつらい時期を経験した。' },
+    ],
+    questions: [
+      { sentence: '(A) The police (B) are looking (C) at into (D) the cause of the fire.', choices: ['(A) The police', '(B) are looking', '(C) at into', '(D) the cause of the fire'], answer: 2, why: '「～を調べる」は look into ～。looking into。' },
+      { sentence: '(A) Please (B) look (C) on over (D) my essay before I hand it in.', choices: ['(A) Please', '(B) look', '(C) on over', '(D) my essay before I hand it in'], answer: 2, why: '「～にざっと目を通す」は look over ～。look over my essay。' },
+      { sentence: '(A) She (B) went (C) through by (D) a difficult time after the accident.', choices: ['(A) She', '(B) went', '(C) through by', '(D) a difficult time after the accident'], answer: 2, why: '「（つらいこと）を経験する」は go through ～。went through。' },
+      { sentence: '(A) Look (B) into by experts, (C) the problem (D) was soon solved.', choices: ['(A) Look', '(B) into by experts,', '(C) the problem', '(D) was soon solved'], answer: 0, why: '受け身の分詞構文なので Looked into by experts。' },
+      { sentence: '(A) The teacher (B) looked over (C) the reports (D) careful.', choices: ['(A) The teacher', '(B) looked over', '(C) the reports', '(D) careful'], answer: 3, why: '動詞 looked over を修飾するので副詞 carefully。' },
+      { sentence: '(A) We (B) has gone through (C) all the documents (D) twice.', choices: ['(A) We', '(B) has gone through', '(C) all the documents', '(D) twice'], answer: 1, why: '主語 We なので have gone through。' },
+      { sentence: '(A) Each (B) of the files (C) were looked into (D) by the inspector.', choices: ['(A) Each', '(B) of the files', '(C) were looked into', '(D) by the inspector'], answer: 2, why: 'Each of ～ は単数あつかいなので was looked into。' },
+      { sentence: '(A) I (B) looked over it (C) quickly (D) before the meeting.', choices: ['(A) I', '(B) looked over it', '(C) quickly', '(D) before the meeting'], answer: 1, why: 'look over は代名詞を間に置ける句動詞。looked it over。' },
+      { sentence: '(A) Many families (B) went through (C) a hardships (D) during the war.', choices: ['(A) Many families', '(B) went through', '(C) a hardships', '(D) during the war'], answer: 2, why: 'hardships は複数なので a はつけない。went through hardships。' },
+      { sentence: '(A) She (B) looked into (C) the matter (D) with great carefully.', choices: ['(A) She', '(B) looked into', '(C) the matter', '(D) with great carefully'], answer: 3, why: '前置詞 with のあとは名詞。with great care。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
