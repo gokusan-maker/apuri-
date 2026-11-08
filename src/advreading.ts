@@ -44462,6 +44462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-notebooks',
+    title: 'On Notebooks',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A blank notebook is one of the most hopeful objects a person can own. Its empty pages wait to be filled with notes, lists, sketches, plans, and thoughts, and many people feel a particular pleasure when they open a new one for the first time. Notebooks are so common in schools, offices, and homes that we rarely consider them, yet they have played a remarkable role in the history of human thinking, and the habit of writing things down by hand may shape the way we remember, plan, and understand the world.",
+      "The most obvious purpose of a notebook is to help us remember. Human memory is limited, and ideas, appointments, and observations that are not recorded may quickly be forgotten. By writing them down, people free their minds from the burden of holding everything at once, and many scientists, writers, and travelers have kept notebooks in which they recorded what they saw and thought, creating records that later allowed them, and sometimes others, to return to ideas that would otherwise have been lost. Some of the most famous discoveries in history were first sketched in such notebooks, long before they were presented to the world in finished form.",
+      "Yet a notebook is not only a store of memories. For many people, it is also a place where thinking itself happens. Writing an idea by hand forces a person to slow down and choose words, and in the process thoughts that were vague may become clearer. ( A ) the notes may look untidy to anyone else, they often record the gradual development of an idea, with crossings-out, arrows, and questions in the margins that show how the writer moved from confusion toward understanding.",
+      "A notebook is also a private space. Unlike a published book or a public message, its pages are usually seen by no one but its owner, and this privacy allows people to write freely, to try out ideas that may be foolish, and to record feelings they would not share with others. In this sense, a notebook can offer a kind of freedom, a place in which mistakes are permitted and in which a person can speak honestly to themselves. Many people find that simply writing down a worry makes it feel smaller, as if putting it into words had given them some distance from it.",
+      "Notebooks also connect us with our own past. Opening an old notebook can bring back the person we were years ago, revealing what we worried about, what we hoped for, and how our handwriting and interests have changed. Such discoveries can be surprising or even moving, reminding us that our present thoughts are only one stage in a long process of change, and that the questions which seem urgent today may look very different in the future.",
+      "In recent years, many people have moved their notes to phones and computers, where they can be searched, copied, and shared instantly. Digital notes have obvious advantages, but some researchers suggest that writing by hand may help people remember information better, because the slower pace encourages them to summarize and reflect rather than simply record. Many people therefore continue to use paper notebooks alongside digital tools, choosing each for the tasks it suits best. A student might, for example, take notes by hand in class and later type a neat summary to share with friends.",
+      "Perhaps, then, notebooks deserve more attention than we usually give them. They remind us that thinking is not always quick or tidy, and that ideas often grow slowly through the patient work of writing, crossing out, and writing again. To keep a notebook is to give one's thoughts a place to develop, and perhaps to recognize that the empty page, far from being something to fear, is an invitation to discover what we did not yet know we thought.",
+    ],
+    ja: [
+      '何も書かれていないノートは、人がもてるもののなかでもっとも希望にみちたものの一つである。その白いページは、メモやリスト、スケッチ、計画、考えでうめられるのを待っており、多くの人は新しいノートをはじめて開くとき、特別な喜びを感じる。ノートは学校や職場、家にあまりにもふつうにあるので、私たちはそれについてめったに考えないが、ノートは人間の思考の歴史のなかでおどろくべき役割を果たしてきた。そして手でものを書きとめる習慣は、私たちが覚え、計画し、世界を理解するしかたを形づくっているのかもしれない。',
+      'ノートのもっとも明らかな目的は、覚えておく助けになることである。人間の記憶にはかぎりがあり、記録されなかった考えや予定、観察はすぐにわすれられてしまうかもしれない。それを書きとめることで、人は何もかもを一度にかかえておく重荷から頭を解放する。多くの科学者や作家、旅人はノートをつけ、見たことや考えたことを記録してきた。その記録のおかげで、彼ら自身、ときにはほかの人々が、そうでなければ失われていたはずの考えにあとでもどることができたのである。歴史上もっとも有名な発見のいくつかは、完成した形で世界に示されるずっと前に、まずそうしたノートの中にえがかれたのである。',
+      'しかしノートは、ただ記憶をたくわえる場所ではない。多くの人にとって、ノートは考えることそのものがおこなわれる場所でもある。考えを手で書くと、人は速度を落としてことばを選ばざるをえず、その過程で、ぼんやりしていた考えがはっきりしてくることがある。そのメモはほかの人にはきたなく見えるかもしれないが、しばしばある考えが少しずつ育っていくようすを記録している。消した線や矢印、余白の問いが、書き手がどのように混乱から理解へと進んでいったかを示しているのである。',
+      'ノートはまた、私的な空間でもある。出版された本や公の知らせとちがって、そのページはふつう持ち主以外のだれにも見られず、このプライバシーのおかげで、人は自由に書き、ばかげているかもしれない考えを試し、ほかの人とは分かち合わない気持ちを記録することができる。この意味で、ノートは一種の自由をあたえてくれる。まちがいが許され、自分自身に正直に語りかけられる場所なのである。多くの人は、心配ごとをただ書きとめるだけで、それが小さく感じられることに気づく。まるで、ことばにしたことで、それから少し距離をおけたかのように。',
+      'ノートはまた、私たちを自分自身の過去と結びつける。古いノートを開くと、何年も前の自分がよみがえり、何を心配し、何を願っていたのか、そして筆跡や関心がどのように変わってきたのかが明らかになる。そうした発見はおどろくべきものであったり、心を動かすものであったりさえし、いまの考えが長い変化の過程のなかの一つの段階にすぎないこと、そして今日差しせまって思える問いも、将来にはまったくちがって見えるかもしれないことを思い出させてくれる。',
+      '近年、多くの人がメモを電話やコンピューターに移しており、そこではメモをすぐに検索し、コピーし、共有できる。デジタルのメモには明らかな利点があるが、一部の研究者は、手で書くほうが情報をよく覚えられるかもしれないと考えている。ゆっくりした速さのおかげで、ただ記録するのではなく、要約し、ふり返るよう促されるからである。そのため、多くの人は紙のノートをデジタルの道具とならべて使いつづけ、それぞれをもっとも合う作業のために選んでいる。たとえば生徒は、授業中は手でノートをとり、あとで友だちと共有するために整った要約を打ちこむかもしれない。',
+      'だとすれば、ノートは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。ノートは、考えることがいつもすばやく整ったものではないこと、そして考えはしばしば、書き、消し、また書くという根気強い作業を通じてゆっくり育っていくことを思い出させてくれる。ノートをつけることは、自分の考えに育つ場所をあたえることであり、そしてもしかすると、白いページはおそれるべきものではなく、自分がまだ考えているとは知らなかったことを発見するようにというさそいなのだと気づくことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「メモはほかの人にはきたなく見えるかもしれないが、考えが育つようすを記録している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの科学者や作家、旅人はノートをつけてきた。', answer: true, why: '第2段落 many scientists, writers, and travelers have kept notebooks。' },
+      { statement: '考えを手で書くと、人はより速く書くようになる。', answer: false, why: '第3段落 forces a person to slow down。' },
+      { statement: 'ノートは、まちがいが許される場所になりうる。', answer: true, why: '第4段落 a place in which mistakes are permitted。' },
+      { statement: '筆者によると、紙のノートを使う人はもういない。', answer: false, why: '第6段落 Many people therefore continue to use paper notebooks。' },
+    ],
+    qa: [
+      { q: 'What can opening an old notebook bring back?', choices: ['The person we were years ago.', 'Money we lost.', 'Friends who moved away.', 'Books we never read.'], answer: 0, why: '第5段落 can bring back the person we were years ago。' },
+      { q: 'Why might writing by hand help people remember better, according to some researchers?', choices: ['The slower pace encourages them to summarize and reflect.', 'Paper is cheaper than phones.', 'Handwriting is always neater.', 'Notebooks are easier to carry.'], answer: 0, why: '第6段落 the slower pace encourages them to summarize and reflect。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
