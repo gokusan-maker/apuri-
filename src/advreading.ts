@@ -46738,6 +46738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-artificial-turf',
+    title: 'Should Artificial Turf Be Restricted?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many towns and cities, natural grass on sports fields is being replaced with artificial turf, a surface made of plastic fibers that look like grass and never need to be watered or cut. Schools, local councils, and sports clubs have welcomed it as a practical solution that allows fields to be used in all weathers. In recent years, however, concerns about the environmental and health effects of artificial turf have grown, and some places have begun to restrict or even ban new installations. The question of whether such restrictions are justified has become a subject of debate.",
+      "Supporters of artificial turf argue first that it allows far more people to play sport. Natural grass fields can become muddy and damaged after heavy rain or frequent use, and they often need to be closed for weeks to recover. An artificial field, by contrast, can be used every day and in almost any weather, so that a single field can serve many more teams and schools. In crowded cities where space is limited, supporters say, this greater availability is an important benefit for children and young people. A field that is always available, they add, may encourage more children to take up sport in the first place.",
+      "Supporters also point out that artificial turf can save water and money. Natural grass requires regular watering, especially in hot and dry regions, as well as fertilizers, chemicals to control weeds, and frequent mowing by machines that burn fuel. Artificial turf needs none of these, and although it is expensive to install, supporters argue that its lower maintenance costs may make it cheaper over its lifetime, particularly for organizations with limited budgets.",
+      "Critics, however, raise serious environmental concerns. ( A ) artificial turf may save water, it is made from plastic, and over time its fibers break down into tiny pieces that can be washed into rivers and seas. Many fields also use small pieces of rubber between the fibers, often made from old tires, which may release chemicals and add to plastic pollution. When a field wears out after a number of years, critics note, large amounts of material must be disposed of, and much of it cannot easily be recycled. The savings in water, they argue, may therefore be outweighed by other kinds of damage.",
+      "Critics also worry about the effects on players and on the local environment. Artificial surfaces can become very hot in summer, much hotter than natural grass, which may make playing uncomfortable or even dangerous on sunny days. Some players also believe that artificial turf causes different kinds of injuries. In addition, critics point out, natural grass provides a home for insects and other small creatures, absorbs rainwater, and helps keep cities cool, benefits that are lost when it is replaced by plastic.",
+      "Some places have tried to find a compromise. Rather than banning artificial turf entirely, they require new fields to use materials that release fewer particles, to include barriers that prevent pieces from being washed away, and to be recycled at the end of their life. Others have invested in improved natural grass, using better drainage and stronger varieties of grass that can withstand more use. Some sports organizations now combine natural and artificial fibers in a single surface, hoping to gain the advantages of both.",
+      "The debate over artificial turf therefore reflects a wider question about how societies should weigh different kinds of benefits and costs. Artificial fields offer clear practical advantages that people can see every day, while some of their costs are hidden or appear only over many years. Making wise decisions may require communities to consider not only the immediate needs of players, but also the long-term effects of their choices on the environment that future generations will inherit.",
+    ],
+    ja: [
+      '多くの町や都市で、競技場の天然の芝が人工芝に取りかえられている。人工芝は芝のように見えるプラスチックの繊維でできた表面で、水やりも芝かりもいらない。学校や地方の議会、スポーツクラブは、どんな天気でも競技場を使えるようにする実際的な解決策としてそれを歓迎してきた。しかし近年、人工芝が環境と健康にあたえる影響への心配が高まり、新しく人工芝をしくことを制限したり、禁止さえしたりしはじめた場所もある。そうした制限が正しいかどうかという問いは、議論の対象になっている。',
+      '人工芝を支持する人々は、まず、それによってはるかに多くの人がスポーツをできるようになると主張する。天然の芝の競技場は、大雨やたびたびの使用のあとにどろだらけになったりいたんだりすることがあり、回復のために何週間もとざさなければならないことが多い。それに対して人工芝の競技場は毎日、ほとんどどんな天気でも使えるので、ひとつの競技場がはるかに多くのチームや学校の役に立つ。場所がかぎられた混み合った都市では、このように使いやすいことは子どもや若い人々にとって大切な利益だと支持する人々は言う。いつでも使える競技場は、そもそもスポーツを始める子どもをふやすかもしれないと彼らはつけ加える。',
+      '支持する人々はまた、人工芝は水とお金を節約できると指摘する。天然の芝には、とくに暑くかわいた地域では定期的な水やりが必要であり、肥料や雑草をおさえる薬品、燃料を使う機械でのたびたびの芝かりも必要である。人工芝にはこうしたものが何もいらず、しくのには高い費用がかかるが、維持の費用が低いので、とくに予算のかぎられた団体にとっては、使う期間全体ではより安くなるかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、深刻な環境への心配をあげる。人工芝は水を節約するかもしれないが、それはプラスチックでできており、時がたつとその繊維は小さなかけらにくだけて、川や海に流れこむことがある。多くの競技場では繊維のあいだに小さなゴムのつぶも使われており、それはしばしば古いタイヤからつくられていて、化学物質を出し、プラスチック汚染をふやすかもしれない。何年かたって競技場がすりへると、大量の材料を処分しなければならず、その多くはかんたんにはリサイクルできないと批判する人々は指摘する。したがって、水の節約は、ほかの種類の害によって打ち消されてしまうかもしれないと彼らは主張する。',
+      '批判する人々はまた、選手や地元の環境への影響も心配している。人工の表面は夏にはとても熱くなり、天然の芝よりはるかに熱くなるので、晴れた日にはプレーするのが不快になったり、危険にさえなったりするかもしれない。人工芝はちがう種類のけがを引き起こすと考える選手もいる。さらに、天然の芝は昆虫などの小さな生きもののすみかになり、雨水をすいこみ、都市を涼しくたもつ助けになっているが、それがプラスチックに取りかえられると、こうした利益は失われると批判する人々は指摘する。',
+      '折り合いをつけようとしてきた場所もある。人工芝を完全に禁止するかわりに、新しい競技場には、出るかけらの少ない材料を使い、かけらが流されるのをふせぐかべをつけ、使い終わったらリサイクルすることを求めるのである。また、よりよい排水やより多くの使用にたえる強い品種の芝を使って、改良された天然の芝に投資してきた場所もある。いまでは、天然の繊維と人工の繊維をひとつの表面に組み合わせ、両方の利点を得ようとしているスポーツ団体もある。',
+      'したがって、人工芝をめぐる議論は、社会がさまざまな種類の利益と費用をどのようにはかりにかけるべきかという、より広い問いを映し出している。人工の競技場は人々が毎日目にするはっきりした実際的な利点をあたえるが、その費用のなかにはかくれていたり、何年もたってからようやくあらわれたりするものもある。かしこい決定をするには、地域が選手のいまの必要だけでなく、自分たちの選択が、将来の世代が受けつぐ環境にあたえる長期的な影響も考える必要があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「人工芝は水を節約するかもしれないが、プラスチックでできている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say artificial turf can be used in almost any ( 1 ) and saves water and maintenance costs. Critics argue that it adds to plastic ( 2 ), becomes very hot in summer, and removes the benefits of natural grass. Some places require new fields to be ( 3 ) at the end of their life or combine natural and artificial fibers.',
+      blanks: [
+        { choices: ['weather', 'language', 'season', 'country'], answer: 0, why: '第2段落 can be used every day and in almost any weather。' },
+        { choices: ['pollution', 'production', 'prices', 'packaging'], answer: 0, why: '第4段落 add to plastic pollution。' },
+        { choices: ['recycled', 'painted', 'sold', 'covered'], answer: 0, why: '第6段落 to be recycled at the end of their life。' },
+      ],
+    },
+    tf: [
+      { statement: '天然の芝の競技場は、回復のために何週間もとざさなければならないことがある。', answer: true, why: '第2段落 they often need to be closed for weeks to recover。' },
+      { statement: '人工芝には定期的な水やりや芝かりが必要だ。', answer: false, why: '第3段落 Artificial turf needs none of these。' },
+      { statement: '人工の表面は、夏には天然の芝よりはるかに熱くなる。', answer: true, why: '第5段落 much hotter than natural grass。' },
+      { statement: 'すべての場所が、人工芝を完全に禁止している。', answer: false, why: '第6段落 Rather than banning artificial turf entirely ...。' },
+    ],
+    qa: [
+      { q: 'What are the small pieces of rubber in many fields often made from?', choices: ['Old tires.', 'Recycled bottles.', 'Natural plants.', 'Used shoes.'], answer: 0, why: '第4段落 often made from old tires。' },
+      { q: 'What benefits of natural grass are lost when it is replaced?', choices: ['It provides homes for insects and helps keep cities cool.', 'It makes fields cheaper to build.', 'It allows play in all weather.', 'It never needs care.'], answer: 0, why: '第5段落 provides a home for insects ... and helps keep cities cool。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
