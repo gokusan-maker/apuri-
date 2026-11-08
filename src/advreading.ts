@@ -44658,6 +44658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-library-fines',
+    title: 'Should Libraries Abolish Late Fees?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For as long as public libraries have lent books, most of them have charged small fines to borrowers who return books late. The purpose seemed obvious: without some kind of penalty, people might keep books for months, and others who wanted to read them would have to wait. In recent years, however, a growing number of libraries in several countries have stopped charging such fines altogether, and the decision has started a lively debate about what libraries are for and how they should treat the people who use them.",
+      "Supporters of abolishing fines argue first that they fall most heavily on those who can least afford them. A fine of a few coins a day may mean little to a comfortable family, but for a poor family with several children, the total can quickly grow large enough to matter. When fines are not paid, many libraries block the borrower's card, and supporters point out that the people who lose access in this way are often exactly those who depend most on the library for books, computers, and a quiet place to study.",
+      "Supporters also question whether fines actually work. Several libraries that abolished them reported that most borrowers continued to return books on time, and some even found that more books came back after the change, because people who had stayed away out of embarrassment over old debts felt able to return. Collecting small fines, moreover, takes staff time and money, and in some libraries the cost of collecting them was close to the amount that was collected each year. In such cases, supporters suggest, the fines may be doing more to discourage reading than to protect the library's collection.",
+      "Critics of abolition, however, argue that fines teach an important lesson about responsibility. A library book belongs to the whole community, they say, and borrowers who keep it too long are taking something away from their neighbors. ( A ) most people may return books on time without any penalty, a small number will not, and without fines there is little to encourage them to change their behavior. Critics also worry that popular books may disappear from the shelves for long periods.",
+      "Critics further point out that libraries in many places face tight budgets, and that the money raised from fines, though small, helps to pay for new books and services. If this income is lost, they argue, it must be replaced from somewhere else, perhaps by cutting opening hours or reducing the number of new titles. In their view, it would be unfair to ask all taxpayers to cover the cost of a problem caused by a minority of careless borrowers who simply forgot their due dates.",
+      "Some libraries have tried to find a middle way. Rather than charging fines, they send friendly reminders by email or text message before a book is due, and they charge borrowers only when a book is not returned at all, asking them to pay the cost of replacing it. Others allow children to reduce their fines by spending time reading in the library, an approach that turns a punishment into an encouragement to read and that many parents have welcomed with enthusiasm. Early reports suggest that such schemes can bring back families who had stopped visiting.",
+      "The debate over library fines therefore reflects a larger question about the purpose of public institutions. If a library is seen mainly as a store of valuable property, it is natural to protect that property with penalties. If, on the other hand, it is seen as a place that exists to welcome everyone and to encourage reading, then any rule that drives people away deserves to be examined carefully. How a community answers this question may say a good deal about what it values most.",
+    ],
+    ja: [
+      '公共図書館が本を貸してきたのと同じくらい長いあいだ、ほとんどの図書館は、本を遅れて返す利用者に少額の延滞料を課してきた。その目的は明らかに思えた。何らかの罰がなければ、人々は本を何か月も手もとに置くかもしれず、それを読みたいほかの人々は待たなければならなくなる。しかし近年、いくつかの国で延滞料をすっかりやめる図書館がふえており、その決定は、図書館は何のためにあるのか、そして利用する人々をどうあつかうべきかについての活発な議論を引き起こしている。',
+      '延滞料の廃止を支持する人々は、まず、延滞料はそれをもっとも払えない人々にもっとも重くのしかかると主張する。1日数枚の硬貨という延滞料は、ゆとりのある家庭にはほとんど意味がないかもしれないが、子どもが何人もいる貧しい家庭にとっては、合計がすぐに無視できないほど大きくなりうる。延滞料が払われないと、多くの図書館は利用者のカードを止める。そしてこのようにして利用できなくなる人々は、本やコンピューター、静かに勉強できる場所を図書館にもっともたよっている人々であることが多いと、支持する人々は指摘する。',
+      '支持する人々はまた、延滞料が本当に効果があるのかを疑う。延滞料を廃止したいくつかの図書館は、ほとんどの利用者が期限どおりに本を返しつづけたと報告しており、変更のあとに返ってくる本がふえたところさえあった。古い借りをはずかしく思って足が遠のいていた人々が、返しに来られると感じたからである。さらに、少額の延滞料を集めるには職員の時間とお金がかかり、図書館によっては、集めるための費用が毎年集まる金額に近かった。そうした場合、延滞料は図書館の本を守るよりも、むしろ読書から人を遠ざけているのかもしれないと、支持する人々は言う。',
+      'しかし廃止を批判する人々は、延滞料は責任についての大切な教訓を教えると主張する。図書館の本は地域全体のものであり、それを長く手もとに置きすぎる利用者は、となりの人々から何かをうばっているのだと彼らは言う。ほとんどの人は罰がなくても期限どおりに本を返すかもしれないが、そうしない人も少数おり、延滞料がなければその人たちに行動を変えさせるものがほとんどない。批判する人々はまた、人気のある本が長いあいだ棚から消えてしまうことも心配している。',
+      '批判する人々はさらに、多くの地域で図書館はきびしい予算に直面しており、延滞料から得られるお金は、少額ではあっても新しい本やサービスの費用をまかなう助けになっていると指摘する。この収入が失われれば、どこかほかのところからおぎなわなければならず、開館時間を短くしたり新しい本の数をへらしたりすることになるかもしれないと彼らは主張する。彼らの考えでは、返却日をただ忘れていた一部の不注意な利用者が引き起こした問題の費用を、すべての納税者に負担させるのは不公平だろう。',
+      '中間の道を見つけようとしてきた図書館もある。延滞料をとるかわりに、返却日の前にメールや携帯電話のメッセージで親しみのある通知を送り、本がまったく返されなかったときだけ、その本を買いかえる費用を払うよう利用者に求めるのである。また、子どもが図書館で本を読んで時間をすごすことで延滞料をへらせるようにした図書館もある。罰を読書へのはげましに変えるこのやり方を、多くの親が大いに歓迎している。初期の報告によれば、こうした取り組みは、来なくなっていた家族を呼びもどせることがあるという。',
+      'したがって、図書館の延滞料をめぐる議論は、公共の施設の目的についてのより大きな問いを映し出している。図書館がおもに価値ある財産の倉庫と見なされるなら、その財産を罰によって守るのは自然なことである。一方、それがすべての人を歓迎し、読書をすすめるために存在する場所と見なされるなら、人々を遠ざけるどんな決まりも注意深く見直されるべきである。地域がこの問いにどう答えるかは、その地域がもっとも大切にしているものについて多くを語るのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ほとんどの人は罰がなくても返すかもしれないが、そうしない人もいる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of abolition say fines hurt poor families most and that many borrowers return books on time without them. Critics argue that fines teach ( 1 ) and that the money helps libraries with tight ( 2 ). Some libraries now send ( 3 ) before books are due instead of charging fines.',
+      blanks: [
+        { choices: ['responsibility', 'history', 'patience', 'kindness'], answer: 0, why: '第4段落 fines teach an important lesson about responsibility。' },
+        { choices: ['budgets', 'schedules', 'shelves', 'rules'], answer: 0, why: '第5段落 libraries in many places face tight budgets。' },
+        { choices: ['reminders', 'bills', 'gifts', 'books'], answer: 0, why: '第6段落 they send friendly reminders by email or text message。' },
+      ],
+    },
+    tf: [
+      { statement: '延滞料が払われないと、利用者のカードを止める図書館が多い。', answer: true, why: '第2段落 many libraries block the borrower’s card。' },
+      { statement: '延滞料を廃止した図書館では、返ってくる本がかならずへった。', answer: false, why: '第3段落 some even found that more books came back after the change。' },
+      { statement: '批判する人々は、人気のある本が長いあいだ棚から消えることを心配している。', answer: true, why: '第4段落 popular books may disappear from the shelves for long periods。' },
+      { statement: 'どの図書館も、本が返されなくても費用を求めない。', answer: false, why: '第6段落 asking them to pay the cost of replacing it。' },
+    ],
+    qa: [
+      { q: 'Why did some people stay away from libraries, according to supporters?', choices: ['They felt embarrassed about old debts.', 'The libraries were too far away.', 'They preferred reading online.', 'The opening hours were too short.'], answer: 0, why: '第3段落 people who had stayed away out of embarrassment over old debts。' },
+      { q: 'How can children reduce their fines at some libraries?', choices: ['By spending time reading in the library.', 'By cleaning the shelves.', 'By bringing a parent.', 'By buying a new book.'], answer: 0, why: '第6段落 reduce their fines by spending time reading in the library。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
