@@ -61,3 +61,8 @@ it('2026-11-08 に足した国公立・旧帝大の単語は、そのレベル�
   expect(courseWords('国公立').some((w) => w.en === 'equilibrium')).toBe(true)
   expect(courseWords('旧帝大').some((w) => w.en === 'supersede')).toBe(true)
 })
+
+it('2026-11-08 に足した京大・東大の単語は、そのレベルに入る', () => {
+  expect(courseWords('京大').some((w) => w.en === 'caveat')).toBe(true)
+  expect(courseWords('東大').some((w) => w.en === 'verisimilitude')).toBe(true)
+})
