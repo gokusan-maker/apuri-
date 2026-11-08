@@ -45058,6 +45058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-bike-helmets',
+    title: 'Should Cyclists Be Required to Wear Helmets?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, every person who rides a bicycle is required by law to wear a helmet, while in others the choice is left entirely to the individual. Countries that have strong traditions of cycling, where bicycles are used every day for travelling to work, school, and the shops, often have no such law, and most riders there go bareheaded. As cities around the world try to encourage more people to cycle, the question of whether helmets should be compulsory has become the subject of a surprisingly fierce debate.",
+      "Supporters of compulsory helmets argue first that they save lives. When a cyclist falls or is struck by a car, the head is often the part of the body that suffers the most serious injury, and studies have suggested that a helmet can greatly reduce the risk of brain damage in many kinds of accident. Since the cost of a helmet is small compared with the cost of a serious injury, both to the victim and to the health system, supporters see a legal requirement as a simple and sensible way of protecting people. They add that a law also helps parents, since children are more willing to wear helmets when everyone else does.",
+      "Supporters also point out that society already accepts similar rules in other areas. Drivers and passengers in cars must wear seat belts, and riders of motorcycles must wear helmets, even though these rules limit individual freedom to some extent. If the law can require people to take such precautions when they travel by car or motorcycle, supporters ask, why should cycling be treated differently, especially when cyclists share the same roads as heavy and fast-moving vehicles?",
+      "Critics, however, argue that compulsory helmet laws may do more harm than good. ( A ) a helmet may protect an individual rider in a crash, a law requiring helmets may discourage many people from cycling at all, particularly for short, everyday journeys. Critics point to cases in which the number of cyclists fell sharply after such laws were introduced. Since regular cycling brings great benefits to health, they argue, fewer cyclists may mean more illness from lack of exercise, which could outweigh the injuries that helmets prevent.",
+      "Critics also suggest that helmet laws place the responsibility for safety on the wrong people. Most serious accidents involving cyclists, they note, are caused by collisions with motor vehicles, and the most effective way to reduce them is to build separate lanes for bicycles, lower speed limits, and design streets in which cars and bicycles do not come into conflict. Focusing on helmets, in their view, may allow governments to avoid these more expensive but more effective measures, while making cycling appear more dangerous than it really is.",
+      "Some places have adopted a compromise. They require helmets for children, whose skills on the road are still developing, and for those who take part in sports such as mountain biking or racing, but leave adults who ride for everyday purposes free to decide for themselves. At the same time, many of these places have invested heavily in protected bicycle lanes, hoping to make cycling safe enough that the question of helmets becomes less important than it once seemed. Such places often report both rising numbers of cyclists and falling numbers of serious injuries.",
+      "The debate over helmets therefore reflects a deeper disagreement about how safety should be achieved. One view emphasizes the responsibility of each individual to protect himself or herself from harm, while the other emphasizes the responsibility of society to create conditions in which harm is less likely to occur. Both views contain some truth, and the most successful policies may be those that recognize the value of individual precautions while never forgetting that the safest streets are those designed with all their users in mind.",
+    ],
+    ja: [
+      '自転車に乗るすべての人に法律でヘルメットの着用を義務づけている国もあれば、選択をまったく個人にまかせている国もある。仕事や学校、買い物に行くのに毎日自転車が使われる、自転車の伝統が根強い国には、そうした法律がないことが多く、そこでは乗る人のほとんどが何もかぶらずに走っている。世界中の都市がもっと多くの人に自転車に乗ってもらおうとするなかで、ヘルメットを義務にすべきかどうかという問いは、おどろくほどはげしい議論の対象になっている。',
+      'ヘルメットの義務化を支持する人々は、まず、ヘルメットは命を救うと主張する。自転車に乗っている人がころんだり車にぶつけられたりすると、頭がもっとも重いけがを負う部分であることが多く、研究によれば、ヘルメットは多くの種類の事故で脳がそこなわれる危険を大きくへらしうるという。ヘルメットの値段は、けがをした人にとっても医療のしくみにとっても、重いけがの費用にくらべれば小さいので、支持する人々は法律で義務づけることを、人々を守る単純でかしこい方法と見なしている。法律は親の助けにもなると彼らはつけ加える。みんながかぶっていれば、子どももすすんでヘルメットをかぶるからである。',
+      '支持する人々はまた、社会はほかの分野でもすでに同じような決まりを受け入れていると指摘する。車の運転者や同乗者はシートベルトをしなければならず、オートバイに乗る人はヘルメットをかぶらなければならない。これらの決まりは個人の自由をある程度せばめるにもかかわらずである。車やオートバイで移動するときにそうした用心をするよう法律が求めることができるなら、なぜ自転車だけちがうあつかいをすべきなのか、とくに自転車に乗る人が重くて速く走る乗り物と同じ道路を使っているのに、と支持する人々は問う。',
+      'しかし批判する人々は、ヘルメットを義務づける法律は益より害のほうが大きいかもしれないと主張する。ヘルメットは事故のときに乗っている人ひとりを守るかもしれないが、ヘルメットを義務づける法律は、とくに短い日常の移動で、多くの人に自転車に乗ること自体を思いとどまらせるかもしれない。批判する人々は、そうした法律が取り入れられたあとに自転車に乗る人の数が急にへった例をあげる。日常的に自転車に乗ることは健康に大きな利益をもたらすので、自転車に乗る人がへれば運動不足による病気がふえるかもしれず、それはヘルメットがふせぐけがを上まわるかもしれないと彼らは主張する。',
+      '批判する人々はまた、ヘルメットの法律は安全の責任をまちがった人々に負わせていると考える。自転車に乗る人がかかわる重大な事故のほとんどは自動車との衝突によって起こっており、それをへらすもっとも効果的な方法は、自転車専用の車線をつくり、制限速度を下げ、車と自転車がぶつかり合わない通りを設計することだと彼らは指摘する。彼らの考えでは、ヘルメットに注目することで、政府はこうした費用はかかるがより効果的な対策をさけ、しかも自転車に乗ることを実際より危険に見せてしまうかもしれないのである。',
+      '折り合いをつけた地域もある。道路での技術がまだ発達しつつある子どもや、マウンテンバイクやレースのようなスポーツをする人にはヘルメットを義務づけるが、日常の目的で乗る大人には自分で決める自由を残すのである。同時に、こうした地域の多くは、守られた自転車専用車線に多額の投資をしてきた。自転車に乗ることを十分に安全にして、ヘルメットの問題がかつて思われていたほど重要ではなくなるようにしたいと願ってのことである。そうした地域では、自転車に乗る人の数がふえると同時に、重いけがの数がへったと報告されることが多い。',
+      'したがって、ヘルメットをめぐる議論は、安全をどのように実現すべきかについてのより深い意見のちがいを映し出している。ひとつの見方は、害から自分を守るひとりひとりの責任を強調し、もうひとつの見方は、害が起こりにくい条件をつくる社会の責任を強調する。どちらの見方にもある程度の真実がふくまれており、もっともうまくいく政策は、個人の用心の価値をみとめながらも、もっとも安全な通りとはすべての利用者のことを考えて設計された通りであることをけっして忘れないものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ヘルメットはひとりを守るかもしれないが、法律は多くの人に自転車をやめさせるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say helmets save lives and compare them to seat ( 1 ) in cars. Critics argue that helmet laws may discourage cycling, which brings great benefits to ( 2 ), and that separate lanes and lower speed limits are more effective. Some places require helmets only for ( 3 ) and for sports riders.',
+      blanks: [
+        { choices: ['belts', 'covers', 'cushions', 'heaters'], answer: 0, why: '第3段落 Drivers and passengers in cars must wear seat belts。' },
+        { choices: ['health', 'business', 'tourism', 'farming'], answer: 0, why: '第4段落 regular cycling brings great benefits to health。' },
+        { choices: ['children', 'police officers', 'tourists', 'drivers'], answer: 0, why: '第6段落 They require helmets for children。' },
+      ],
+    },
+    tf: [
+      { statement: '自転車の伝統が根強い国には、ヘルメットの法律がないことが多い。', answer: true, why: '第1段落 often have no such law。' },
+      { statement: '支持する人々によると、ヘルメットの値段は重いけがの費用より高い。', answer: false, why: '第2段落 the cost of a helmet is small compared with the cost of a serious injury。' },
+      { statement: 'ヘルメットの法律のあとに、自転車に乗る人が急にへった例がある。', answer: true, why: '第4段落 the number of cyclists fell sharply after such laws were introduced。' },
+      { statement: '批判する人々によると、重大な事故のほとんどは自転車どうしの衝突で起こる。', answer: false, why: '第5段落 caused by collisions with motor vehicles。' },
+    ],
+    qa: [
+      { q: 'According to critics, what may focusing on helmets allow governments to avoid?', choices: ['More expensive but more effective measures.', 'Paying for new hospitals.', 'Building more car parks.', 'Teaching children to ride.'], answer: 0, why: '第5段落 avoid these more expensive but more effective measures。' },
+      { q: 'What have many places with a compromise invested heavily in?', choices: ['Protected bicycle lanes.', 'Cheaper helmets.', 'Faster cars.', 'More motorcycles.'], answer: 0, why: '第6段落 invested heavily in protected bicycle lanes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
