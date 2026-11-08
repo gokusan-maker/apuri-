@@ -44178,6 +44178,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-skateboarding',
+    title: 'Should Skateboarding Be Allowed in Public Squares?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities, young people can be seen skateboarding across public squares, along the edges of fountains, and down the steps outside museums and office buildings. Some local governments have responded by banning skateboarding in such places or by installing small metal studs on benches and ledges that make tricks impossible, while others have welcomed skateboarders and even designed spaces for them in the heart of the city. The question of whether skateboarding should be allowed in public places has become a revealing example of how cities treat young people and what they believe public space is for.",
+      "Supporters of allowing skateboarding argue that young people have as much right to public space as anyone else. Many cities offer few places where teenagers can spend time without paying, and squares and plazas may be among the only spaces where they can meet friends and be active. Supporters point out that skateboarding is now an Olympic sport and a form of creative expression that demands discipline and courage, and they argue that treating skateboarders as a nuisance sends young people the message that they are not welcome in their own cities. Some also note that the metal studs used to stop skateboarding make benches less comfortable for everyone, including older people who simply want to rest.",
+      "Supporters also claim that skateboarders can make public spaces livelier and safer. Squares that are empty in the evening may feel threatening to people walking alone, while the presence of young people practicing their skills can make such places feel more active and watched over. ( A ) some residents may find the noise of skateboards irritating, supporters argue, a lively square is generally preferable to an empty one, and many cities that have accepted skateboarding report fewer problems than they had feared.",
+      "Critics, however, warn that skateboarding can damage public property and endanger pedestrians. Repeated tricks on benches, steps, and ledges can wear away stone and metal, and repairing historic buildings and monuments can be expensive. Critics also point out that older people, small children, and people with disabilities may feel unsafe when skateboarders move quickly through crowded spaces, and that a collision could cause serious injuries. Some shop owners near popular squares also complain that groups of skateboarders discourage customers from stopping to look in their windows.",
+      "Critics further argue that skateboarders should use facilities designed specifically for them. Many cities have built skate parks with ramps and rails where young people can practice safely without disturbing others, and critics believe that these are more appropriate places for an activity that requires space and generates noise. They also note that some public squares are places of remembrance or quiet reflection, where the sound and movement of skateboards may seem out of place.",
+      "In response, some cities have tried to accommodate skateboarding without allowing it everywhere. Some designate particular areas of a square for skateboarding while keeping other areas quiet, and others have designed benches and ledges strong enough to withstand tricks, so that the same features can be used for sitting and for skating. A few cities have invited skateboarders to help design public spaces, finding that young people who are consulted are more likely to respect the rules that result. In these cities, skateboarders have sometimes even helped to keep the spaces clean and to explain the rules to newcomers.",
+      "The debate over skateboarding ultimately reflects a broader question about who public spaces are designed for. If squares and plazas are meant mainly for quiet walking and sitting, then activities that are noisy and energetic may seem to disturb their purpose. If, however, public spaces are meant to serve the whole community, including young people who have few other places to go, then finding ways to share them may be more valuable than excluding those whose ways of using them differ from our own.",
+    ],
+    ja: [
+      '多くの都市で、若者が公共の広場を横切ったり、噴水のふちにそったり、美術館や会社の建物の外の階段を下りたりしてスケートボードをしているのを見ることができる。これに対して、そうした場所でのスケートボードを禁止したり、ベンチやへりに技をできなくする小さな金属のでっぱりを取りつけたりした地方自治体もあれば、スケートボーダーを歓迎し、都市の中心に彼らのための空間を設計した自治体さえある。公共の場所でスケートボードを認めるべきかどうかという問いは、都市が若者をどうあつかい、公共の空間を何のためのものと考えているかを示す、よい例になっている。',
+      'スケートボードを認めることを支持する人々は、若者にもほかのだれとも同じように公共の空間を使う権利があると主張する。多くの都市では、十代の若者がお金をはらわずに過ごせる場所はほとんどなく、広場は、友だちと会い体を動かせる数少ない場所の一つかもしれない。スケートボードはいまやオリンピックの競技であり、規律と勇気を必要とする創造的な表現の一つだと支持者は指摘し、スケートボーダーを迷惑なものとしてあつかうことは、若者に、自分の都市で歓迎されていないというメッセージを送ることになると主張する。また、スケートボードをふせぐための金属のでっぱりは、ただ休みたいだけのお年寄りもふくめ、だれにとってもベンチをすわり心地の悪いものにしていると指摘する人もいる。',
+      '支持する人々はまた、スケートボーダーは公共の空間をよりにぎやかで安全なものにしうると主張する。夕方にだれもいない広場は、ひとりで歩く人にとってこわく感じられるかもしれないが、若者が技を練習していると、そうした場所はより活気があり、見守られているように感じられる。一部の住民はスケートボードの音をいらだたしく思うかもしれないが、にぎやかな広場はふつう空っぽの広場よりも望ましく、スケートボードを受け入れた多くの都市は、心配していたほどの問題は起きていないと報告している、と支持者は主張する。',
+      'しかし批判する人々は、スケートボードは公共の財産をいため、歩行者を危険にさらしうると警告する。ベンチや階段、へりでくり返し技をすると、石や金属がすりへることがあり、歴史的な建物や記念碑を修理するには費用がかかる。批判する人々はまた、お年寄りや小さな子ども、障害のある人は、スケートボーダーがこみ合った場所をすばやく動くと危険を感じることがあり、ぶつかれば大けがにつながりかねないと指摘する。人気のある広場の近くの店主のなかには、スケートボーダーの集団がいると、客が立ちどまって店の窓をのぞかなくなると不満を言う人もいる。',
+      '批判する人々はさらに、スケートボーダーは自分たちのために設計された施設を使うべきだと主張する。多くの都市は、若者がほかの人のじゃまをせずに安全に練習できるスロープや手すりのあるスケートパークをつくっており、批判する人々は、場所を必要とし音を出す活動にはそのほうがふさわしいと考える。彼らはまた、公共の広場のなかには、追悼やしずかに思いをめぐらす場所もあり、そこではスケートボードの音や動きが場ちがいに思えるかもしれないと指摘する。',
+      'これに対して、どこでも認めることはせずにスケートボードを受け入れようとしてきた都市もある。広場の特定の区域をスケートボード用にし、ほかの区域はしずかに保つ都市もあれば、技にたえられるほどじょうぶなベンチやへりを設計し、同じ設備をすわることにもすべることにも使えるようにした都市もある。公共の空間の設計にスケートボーダーを招いた都市もいくつかあり、相談を受けた若者のほうが、その結果できた決まりを守る可能性が高いことがわかったという。そうした都市では、スケートボーダーが空間をきれいに保ったり、新しく来た人に決まりを説明したりするのを手伝うことさえある。',
+      'スケートボードをめぐる議論は、結局のところ、公共の空間がだれのために設計されているのかという、より広い問いを反映している。広場がおもにしずかに歩いたりすわったりするためのものなら、さわがしく活発な活動はその目的をみだすように思えるかもしれない。しかし公共の空間が、ほかに行く場所のほとんどない若者もふくめた地域全体に役立つためのものなら、自分たちとちがう使い方をする人々をしめ出すよりも、分かち合う方法を見つけるほうが価値があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「音をいらだたしく思う住民もいるかもしれないが、にぎやかな広場のほうが望ましい」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say young people have a right to public space and that skateboarders can make squares livelier and ( 1 ). Critics warn of damage to property and danger to ( 2 ), and argue that skateboarders should use skate parks. Some cities have invited skateboarders to help ( 3 ) public spaces.',
+      blanks: [
+        { choices: ['safer', 'quieter', 'emptier', 'darker'], answer: 0, why: '第3段落 can make public spaces livelier and safer。' },
+        { choices: ['pedestrians', 'buildings', 'fountains', 'cars'], answer: 0, why: '第4段落 endanger pedestrians。' },
+        { choices: ['design', 'close', 'clean', 'sell'], answer: 0, why: '第6段落 invited skateboarders to help design public spaces。' },
+      ],
+    },
+    tf: [
+      { statement: 'スケートボードはいまやオリンピックの競技である。', answer: true, why: '第2段落 skateboarding is now an Olympic sport。' },
+      { statement: 'スケートボードを受け入れた都市の多くは、心配以上の問題が起きたと報告している。', answer: false, why: '第3段落 report fewer problems than they had feared。' },
+      { statement: 'くり返し技をすると、石や金属がすりへることがある。', answer: true, why: '第4段落 can wear away stone and metal。' },
+      { statement: 'すべての都市が、広場のどこでもスケートボードを禁止している。', answer: false, why: '第6段落 Some designate particular areas of a square for skateboarding。' },
+    ],
+    qa: [
+      { q: 'What have some local governments installed to stop skateboarding?', choices: ['Small metal studs on benches and ledges.', 'Large fountains.', 'New skate parks only.', 'Bright street lights.'], answer: 0, why: '第1段落 installing small metal studs on benches and ledges。' },
+      { q: 'What did some cities find when they consulted young people?', choices: ['They were more likely to respect the resulting rules.', 'They stopped skateboarding completely.', 'They demanded more money.', 'They moved to other cities.'], answer: 0, why: '第6段落 more likely to respect the rules that result。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
