@@ -3893,6 +3893,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 80 v4 M60 80 v4" stroke="#3a2513" strokeWidth="4" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'wapiti')
+    return (
+      <g>
+        {/* うしろに広がる大きなツノ */}
+        <path d="M38 28 l-10 -14 M33 21 l-8 2 M62 28 l10 -14 M67 21 l8 2" stroke="#57534e" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
