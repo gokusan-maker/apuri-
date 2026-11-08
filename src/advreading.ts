@@ -46258,6 +46258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-state-lotteries',
+    title: 'Should Governments Run Lotteries?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, the government runs or licenses a national lottery, selling tickets that offer buyers a small chance of winning a very large prize. Part of the money raised is used to pay for public projects, such as sports facilities, museums, and charities, and millions of people buy tickets every week. Supporters regard lotteries as a harmless form of entertainment that benefits society, while critics argue that it is wrong for governments to encourage gambling. The question of whether states should run lotteries at all has become a subject of continuing debate.",
+      "Supporters argue first that lotteries raise large sums of money without increasing taxes. Because people choose freely whether to buy tickets, supporters say, lottery income is a voluntary contribution, unlike taxes that everyone must pay. The money has helped to build parks, restore historic buildings, and support community groups that might otherwise have struggled to find funding, and many of these projects benefit people who never buy a ticket themselves. Without lottery money, supporters warn, many such projects would simply disappear.",
+      "Supporters also point out that most players treat the lottery as a form of entertainment rather than a serious attempt to become rich. For the price of a cup of coffee, a ticket offers a few days of pleasant daydreaming about what one might do with a fortune. If people are going to gamble anyway, supporters add, it is better that they do so through a regulated system run by the state, which can set limits and ensure fairness, than through illegal or poorly controlled operators.",
+      "Critics, however, argue that lotteries take money disproportionately from those who can least afford it. ( A ) the price of a single ticket may be small, studies in several countries have suggested that people with low incomes spend a larger share of their money on lotteries than wealthier people do. Critics describe this as a hidden tax on the poor, and they note that the chances of winning a major prize are so small that, for most players, buying tickets is simply a way of losing money over time. A person who buys a ticket every week for decades may spend a considerable sum while winning almost nothing.",
+      "Critics also object to the role that governments play in promoting gambling. Lotteries are often advertised widely, with images of winners celebrating their sudden wealth, and critics argue that such advertising encourages unrealistic hopes and may lead some people to develop harmful habits. Young people, in particular, may be influenced by such messages. It seems contradictory, critics say, for a state to warn citizens about the dangers of gambling while at the same time spending large sums to persuade them to buy more lottery tickets.",
+      "Some countries have tried to address these concerns. They limit how lotteries may be advertised, require clear information about the odds of winning, and set aside part of the income to help people who suffer from gambling problems. Others ensure that the money raised is spent in ways that benefit poorer communities in particular, so that those who contribute most may also gain the most. Such measures aim to keep the benefits of lotteries while reducing the harm they may cause. Some also offer ways for players to limit how much they can spend each month.",
+      "The debate over state lotteries therefore reflects a deeper question about the responsibilities of government. A state that runs a lottery acts both as a guardian of public welfare and as a seller of a product that may harm some of its customers. Whether these roles can be reconciled may depend on how carefully lotteries are regulated, how honestly they are promoted, and whether the good they do for society truly outweighs the costs borne by those who play.",
+    ],
+    ja: [
+      '多くの国で、政府は国の宝くじを運営したり許可したりしており、買った人にとても大きな賞金が当たるわずかな可能性をあたえる券を売っている。集まったお金の一部はスポーツ施設や美術館、慈善団体などの公共の事業にあてられ、何百万もの人が毎週券を買っている。支持する人々は宝くじを社会に役立つ害のない娯楽と見なしているが、批判する人々は、政府がかけごとをすすめるのはまちがっていると主張する。国はそもそも宝くじを運営すべきかどうかという問いは、続いている議論の対象である。',
+      '支持する人々は、まず、宝くじは税金を上げることなく大きなお金を集めると主張する。人々は券を買うかどうかを自由に選ぶので、宝くじの収入は、すべての人が払わなければならない税金とはちがい、自発的な寄付だと支持する人々は言う。そのお金は公園をつくったり、歴史のある建物を修復したり、そうでなければ資金を見つけるのに苦労したかもしれない地域の団体を支えたりするのに役立ってきたし、こうした事業の多くは、自分では一度も券を買わない人々にも利益をもたらしている。宝くじのお金がなければ、そうした事業の多くはただ消えてしまうだろうと支持する人々は警告する。',
+      '支持する人々はまた、ほとんどの人は宝くじを、本気で金持ちになろうとする試みではなく娯楽として楽しんでいると指摘する。コーヒー1ぱいの値段で、券は、大金で何をしようかと楽しく空想する数日間をあたえてくれる。どうせ人々がかけごとをするなら、違法な、あるいはきちんと管理されていない業者を通してよりも、限度を設けて公平さを守れる国が運営する規制されたしくみを通してするほうがよいと支持する人々はつけ加える。',
+      'しかし批判する人々は、宝くじはそれをもっとも払えない人々から不釣り合いに多くのお金をとっていると主張する。1枚の券の値段は小さいかもしれないが、いくつかの国の研究によれば、収入の少ない人々は豊かな人々よりも、自分のお金のより大きな割合を宝くじに使っているという。批判する人々はこれを貧しい人々へのかくれた税と表現し、大きな賞金が当たる確率はあまりにも小さいので、ほとんどの人にとって券を買うことは、時間とともにお金を失うひとつの方法にすぎないと指摘する。何十年も毎週券を買う人は、ほとんど何も当たらないまま、かなりの額を使ってしまうかもしれない。',
+      '批判する人々はまた、政府がかけごとを広める役割をはたしていることにも反対する。宝くじはしばしば広く宣伝され、とつぜんの富を祝う当せん者のすがたが映し出されるが、そうした宣伝は現実的でない期待をうながし、一部の人々に害のある習慣をもたせるかもしれないと批判する人々は主張する。とくに若い人々は、そうしたメッセージに影響されるかもしれない。国が国民にかけごとの危険を警告しながら、同時に多額のお金を使って宝くじをもっと買うよう説得するのは矛盾しているように思えると、批判する人々は言う。',
+      'こうした心配に対応しようとしてきた国もある。宝くじの宣伝のしかたを制限し、当たる確率についてのはっきりした情報を求め、収入の一部をかけごとの問題に苦しむ人々を助けるためにとっておくのである。また、集まったお金をとくに貧しい地域に役立つように使い、もっとも多くお金を出す人々がもっとも多くの利益も得られるようにしている国もある。そうした対策は、宝くじの利益をたもちながら、それが引き起こしうる害をへらすことをめざしている。また、買う人が毎月使える金額を自分で制限できるしくみを用意しているところもある。',
+      'したがって、国の宝くじをめぐる議論は、政府の責任についての、より深い問いを映し出している。宝くじを運営する国は、公共の福祉の守り手であると同時に、客の一部に害をあたえうる商品の売り手としてもふるまっている。これらの役割を両立できるかどうかは、宝くじがどれだけ注意深く規制され、どれだけ正直に宣伝され、それが社会にもたらすよいことが、買う人々の負担を本当に上まわるかどうかによるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「1枚の値段は小さいかもしれないが、収入の少ない人ほど多くの割合を使う」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say lotteries raise money without increasing taxes and offer harmless ( 1 ). Critics argue that lotteries act as a hidden tax on the ( 2 ) and that governments should not promote gambling. Some countries limit advertising and provide clear information about the ( 3 ) of winning.',
+      blanks: [
+        { choices: ['entertainment', 'education', 'exercise', 'employment'], answer: 0, why: '第3段落 treat the lottery as a form of entertainment。' },
+        { choices: ['poor', 'young', 'rich', 'old'], answer: 0, why: '第4段落 a hidden tax on the poor。' },
+        { choices: ['odds', 'costs', 'rules', 'dates'], answer: 0, why: '第6段落 require clear information about the odds of winning。' },
+      ],
+    },
+    tf: [
+      { statement: '宝くじで集まったお金の一部は、公共の事業にあてられる。', answer: true, why: '第1段落 Part of the money raised is used to pay for public projects。' },
+      { statement: '支持する人々によると、宝くじの収入はすべての人が払う税金と同じだ。', answer: false, why: '第2段落 a voluntary contribution, unlike taxes that everyone must pay。' },
+      { statement: '研究によれば、収入の少ない人々はお金のより大きな割合を宝くじに使っている。', answer: true, why: '第4段落 people with low incomes spend a larger share of their money on lotteries。' },
+      { statement: 'すべての国が、宝くじの宣伝をまったく制限していない。', answer: false, why: '第6段落 They limit how lotteries may be advertised。' },
+    ],
+    qa: [
+      { q: 'Why do supporters prefer a lottery run by the state?', choices: ['It can set limits and ensure fairness.', 'It offers bigger prizes.', 'It is cheaper to play.', 'It never loses money.'], answer: 0, why: '第3段落 which can set limits and ensure fairness。' },
+      { q: 'What do critics find contradictory?', choices: ['A state warning about gambling while promoting lotteries.', 'People buying tickets every week.', 'Winners celebrating their wealth.', 'Museums receiving lottery money.'], answer: 0, why: '第5段落 for a state to warn citizens ... while at the same time spending large sums to persuade them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
