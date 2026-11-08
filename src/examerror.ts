@@ -5908,6 +5908,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) She (B) took (C) a speech (D) at the ceremony.', choices: ['(A) She', '(B) took', '(C) a speech', '(D) at the ceremony'], answer: 1, why: '「スピーチをする」は make（give）a speech。' },
     ],
   },
+  {
+    id: 'exam-error-phrasal-verbs',
+    title: '入試の正誤問題〈247〉（国公立レベル：句動詞 look for・look after・look up・put off）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '句動詞は動詞と前置詞・副詞のセットで意味が決まる：look for（さがす）、look after（世話をする）、look up（調べる）、put off（延期する）、turn off（消す）、take off（ぬぐ）、come across（偶然見つける）、run into（偶然出会う）。余計な to や with をつけない。',
+      'look up・put off・turn off・take off・fill out のように副詞を使う句動詞は、目的語が代名詞のとき動詞と副詞のあいだにはさむ（look it up／turn it off）。put off のあとに動詞を続けるときは ～ing。',
+    ],
+    examples: [
+      { en: 'I’m looking for my keys. / If you don’t know the word, look it up.', ja: '私は鍵をさがしている。／その単語を知らないなら、調べなさい。' },
+      { en: 'We had to put off holding the meeting until Friday.', ja: '私たちは会議を開くのを金曜日まで延期しなければならなかった。' },
+    ],
+    questions: [
+      { sentence: '(A) I’m (B) looking (C) my keys (D) everywhere.', choices: ['(A) I’m', '(B) looking', '(C) my keys', '(D) everywhere'], answer: 2, why: '「～をさがす」は look for なので looking for my keys。' },
+      { sentence: '(A) My grandmother (B) looks after (C) to my sister (D) after school.', choices: ['(A) My grandmother', '(B) looks after', '(C) to my sister', '(D) after school'], answer: 2, why: 'look after のあとにすぐ目的語。to は不要。' },
+      { sentence: '(A) If you don’t know the word, (B) look up it (C) in (D) the dictionary.', choices: ['(A) If you don’t know the word,', '(B) look up it', '(C) in', '(D) the dictionary'], answer: 1, why: '目的語が代名詞のときは look it up の語順。' },
+      { sentence: '(A) We (B) had to put off (C) to hold (D) the meeting until Friday.', choices: ['(A) We', '(B) had to put off', '(C) to hold', '(D) the meeting until Friday'], answer: 2, why: 'put off のあとは ～ing なので holding。' },
+      { sentence: '(A) Looking for (B) to (C) a new job, (D) he read the newspaper every day.', choices: ['(A) Looking for', '(B) to', '(C) a new job,', '(D) he read the newspaper every day'], answer: 1, why: 'look for のあとに to は不要。' },
+      { sentence: '(A) Turn of (B) the light (C) before you (D) leave the room.', choices: ['(A) Turn of', '(B) the light', '(C) before you', '(D) leave the room'], answer: 0, why: '「消す」は turn off。' },
+      { sentence: '(A) I (B) ran (C) into an old friend (D) in yesterday.', choices: ['(A) I', '(B) ran', '(C) into an old friend', '(D) in yesterday'], answer: 3, why: 'yesterday の前に in はつけない。' },
+      { sentence: '(A) Please (B) fill (C) this form (D) out of.', choices: ['(A) Please', '(B) fill', '(C) this form', '(D) out of'], answer: 3, why: '「記入する」は fill out（this form out）。of は不要。' },
+      { sentence: '(A) Take of (B) your shoes (C) before you (D) enter the house.', choices: ['(A) Take of', '(B) your shoes', '(C) before you', '(D) enter the house'], answer: 0, why: '「ぬぐ」は take off。' },
+      { sentence: '(A) He (B) came across (C) with an interesting book (D) at the library.', choices: ['(A) He', '(B) came across', '(C) with an interesting book', '(D) at the library'], answer: 2, why: 'come across は「偶然見つける」で、with は不要。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
