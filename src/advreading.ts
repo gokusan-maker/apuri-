@@ -47102,6 +47102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-nests',
+    title: 'On Nests',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Among the many things that animals build, few are as familiar or as quietly remarkable as the nest. Most of us have seen a bird's nest resting in the fork of a tree or tucked under the edge of a roof, and many of us have felt a small thrill at finding one with eggs inside. Yet we rarely stop to consider how much skill, effort, and knowledge such a small structure contains, or what it might teach us about the relationship between living creatures and the places they make their own.",
+      "The basic purpose of a nest is to protect eggs and young animals during the period when they are most vulnerable. A nest keeps eggs warm, hides them from predators, and gives the young a safe place to grow until they are strong enough to leave. Because the dangers and conditions in each environment differ, nests take an astonishing variety of forms. Some birds build simple platforms of sticks, while others weave delicate cups of grass, moss, and spider silk that stretch as the chicks inside grow larger.",
+      "Many nests show a level of skill that seems almost impossible for creatures without hands. ( A ) a bird has only its beak and feet to work with, it can collect hundreds of pieces of material and arrange them into a structure strong enough to survive wind and rain. Weaver birds tie knots in strips of grass to create hanging nests, and some swifts use their own saliva to glue their nests to the walls of caves. Such abilities are partly inherited, but young birds often build better nests as they gain experience.",
+      "Nests are not built only by birds. Fish such as sticklebacks build nests of plant material on the bottom of streams, and some frogs create floating nests of foam to protect their eggs. Insects such as wasps and termites build structures far larger than themselves, and certain mammals, including squirrels and harvest mice, construct nests of leaves and grass in which to rest and raise their young. The idea of preparing a protected space for the next generation appears again and again across the animal world.",
+      "Nests also connect animals closely to their surroundings. The materials used to build them must be found nearby, so a nest is in a sense a small portrait of its environment, made of the twigs, mud, feathers, and leaves that happen to be available. In recent years, scientists have found that many birds now include pieces of plastic, string, and other human waste in their nests. Such discoveries remind us that even the most private spaces of wild creatures are shaped by the ways in which humans change the world.",
+      "For human beings, the nest has long been a powerful symbol. We speak of making a home as building a nest, and of children leaving home as leaving the nest. The image suggests warmth, safety, and care, but also the temporary nature of such a shelter. Most nests are used for only a single season, and when the young have gone, the structure is abandoned and slowly returns to the earth. In this way, the nest reminds us that protection and care are often most valuable precisely because they do not last forever.",
+      "Perhaps, then, the humble nest deserves more attention than we usually give it. It represents the efforts of countless generations of animals to protect their young, it reflects the environment from which it is made, and it offers an image of care that people have found meaningful for centuries. The next time we notice a nest in a hedge or on a ledge, it may be worth pausing for a moment to admire the patience that built it and the fragile life it was made to shelter.",
+    ],
+    ja: [
+      '動物がつくる多くのもののなかで、巣ほどなじみ深く、しかもひっそりとすばらしいものは少ない。私たちの多くは、木のまたにのっていたり屋根のはしの下におさまっていたりする鳥の巣を見たことがあり、中に卵のある巣を見つけて小さなときめきを感じたことのある人も多い。しかし私たちは、そうした小さなつくりにどれほどの技術と努力と知識がこめられているのか、また、それが生き物と、生き物が自分のものにする場所との関係について何を教えてくれるのかを、立ち止まって考えることはめったにない。',
+      '巣の基本的な目的は、卵や子どもがもっとも弱い時期にそれらを守ることである。巣は卵を温め、捕食者からかくし、子どもが巣立てるほど強くなるまで育つ安全な場所をあたえる。それぞれの環境の危険や条件はちがうので、巣はおどろくほどさまざまな形をとる。小枝を組んだだけの台をつくる鳥もいれば、草やコケ、クモの糸で繊細なおわん形の巣を編み、中のひなが大きくなるにつれてのびるようにする鳥もいる。',
+      '多くの巣は、手のない生き物にはほとんど不可能に思えるほどの技術を示している。鳥には使えるものがくちばしと足しかないのに、何百もの材料を集め、風や雨にもたえる強いつくりに組み立てることができる。ハタオリドリは草の細長いきれはしで結び目をつくってぶら下がる巣をつくり、アマツバメのなかまには自分のだ液で洞くつのかべに巣をはりつけるものもいる。こうした能力は一部は生まれつきのものだが、若い鳥は経験を積むにつれて、よりよい巣をつくるようになることが多い。',
+      '巣をつくるのは鳥だけではない。トゲウオのような魚は川底に植物で巣をつくり、卵を守るために泡でうく巣をつくるカエルもいる。ハチやシロアリのような昆虫は自分の体よりはるかに大きなつくりをきずき、リスやカヤネズミをふくむある種のほ乳類は、休んだり子を育てたりするために葉や草で巣をつくる。次の世代のために守られた場所を用意するという考えは、動物の世界でくり返しあらわれるのである。',
+      '巣はまた、動物をまわりの環境と強く結びつける。巣をつくる材料は近くで見つけなければならないので、巣はある意味でその環境の小さな肖像画であり、たまたま手に入る小枝や泥、羽、葉でできている。近年、科学者たちは、多くの鳥がいまではプラスチックのかけらやひも、そのほかの人間のごみを巣に入れていることを発見した。そうした発見は、野生の生き物のもっとも私的な場所でさえ、人間が世界を変えるやり方によって形づくられていることを思い出させる。',
+      '人間にとって、巣は長いあいだ力強いシンボルだった。私たちは家庭をつくることを巣づくりと言い、子どもが家を出ることを巣立ちと言う。そのイメージは温かさ、安全、思いやりを思わせるが、そうしたかくれ場所が一時的なものであることも思わせる。ほとんどの巣はひとつの季節しか使われず、子どもたちがいなくなると、そのつくりは見すてられ、ゆっくりと土に返っていく。このように巣は、守ることや世話をすることが、まさに永遠には続かないからこそもっとも価値があることが多いのだと思い出させてくれる。',
+      'だとすれば、ささやかな巣は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。それは子どもを守ろうとする数えきれない世代の動物の努力をあらわし、それがつくられた環境を映し出し、人々が何世紀にもわたって意味深いと感じてきた思いやりのイメージをあたえている。次に生けがきや岩だなの上に巣を見つけたら、少し立ち止まって、それをつくった忍耐と、それが守るためにつくられたこわれやすい命に感心してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「鳥にはくちばしと足しかないが、強い巣を組み立てられる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '中のひなが大きくなるにつれてのびる巣をつくる鳥もいる。', answer: true, why: '第2段落 delicate cups ... that stretch as the chicks inside grow larger。' },
+      { statement: '筆者によると、巣づくりの能力はすべて経験だけで身につく。', answer: false, why: '第3段落 Such abilities are partly inherited。' },
+      { statement: '泡で巣をつくるカエルもいる。', answer: true, why: '第4段落 some frogs create floating nests of foam。' },
+      { statement: 'ほとんどの巣は何年も続けて使われる。', answer: false, why: '第6段落 Most nests are used for only a single season。' },
+    ],
+    qa: [
+      { q: 'How do some swifts attach their nests to cave walls?', choices: ['They use their own saliva as glue.', 'They tie knots in grass.', 'They dig holes in the rock.', 'They use spider silk only.'], answer: 0, why: '第3段落 some swifts use their own saliva to glue their nests。' },
+      { q: 'What have scientists found in many birds’ nests in recent years?', choices: ['Pieces of plastic, string, and other human waste.', 'Gold coins.', 'Fish bones.', 'Seeds of rare trees.'], answer: 0, why: '第5段落 many birds now include pieces of plastic, string, and other human waste。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
