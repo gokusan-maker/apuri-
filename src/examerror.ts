@@ -10386,6 +10386,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I couldn’t find [some of] my keys.', choices: ['any of', 'some of any', 'none of', 'anything of'], answer: 0, why: '否定文では any of my keys。' },
     ],
   },
+  {
+    id: 'exam-fix-244',
+    title: '入試の誤文訂正〈244〉（京大レベル：英作文の mind ～ing・Would you mind if ～）',
+    points: ['mind のあとは動名詞（～ing）で、to 不定詞はとらない（Would you mind opening the window?／I don’t mind waiting.）。否定は not ～ing（Would you mind not smoking here?）。', '「～してもかまいませんか」は Do you mind if I ～（現在形）／Would you mind if I ～（過去形がていねい）。mind は「いやだと思う」という意味なので、引き受けるときの答えは Not at all. や Of course not. になる。'],
+    examples: [{ en: 'Would you mind opening the window? — Not at all. / Do you mind if I sit here?', ja: '窓を開けていただけますか。—いいですよ。／ここにすわってもいいですか。' }],
+    questions: [
+      { sentence: 'Would you mind [to open] the window?', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind のあとは動名詞なので opening。' },
+      { sentence: 'Do you mind [if I will sit] here?', choices: ['if I sit', 'if I will sitting', 'that I sit', 'if sit I'], answer: 0, why: 'Do you mind if I ～ の if 節は現在形。if I sit。' },
+      { sentence: 'Would you mind [me to use] your phone?', choices: ['if I used', 'me to using', 'that I use', 'me use to'], answer: 0, why: 'ていねいに許可を求めるなら Would you mind if I used ～?' },
+      { sentence: 'I don’t mind [wait] for a few minutes.', choices: ['waiting', 'to wait', 'waited', 'to waiting'], answer: 0, why: 'mind のあとは動名詞なので waiting。' },
+      { sentence: 'Would you mind [not to smoke] here?', choices: ['not smoking', 'to not smoke', 'not smoke', 'no smoking to'], answer: 0, why: '動名詞の否定は not ～ing。' },
+      { sentence: '“Would you mind closing the door?” “[Yes, of course.]”', choices: ['Of course not.', 'Yes, I mind it.', 'No, I do.', 'Yes, not at all.'], answer: 0, why: 'mind は「いやだ」なので、引き受けるなら Of course not.（Not at all.）。' },
+      { sentence: 'Do you mind [to help] me with this?', choices: ['helping', 'help', 'to helping', 'helped'], answer: 0, why: 'mind のあとは動名詞なので helping。' },
+      { sentence: 'She doesn’t mind [to work] late.', choices: ['working', 'work', 'to working', 'worked'], answer: 0, why: 'mind のあとは動名詞なので working。' },
+      { sentence: 'Would you mind [speak] more slowly?', choices: ['speaking', 'to speak', 'spoke', 'to speaking'], answer: 0, why: 'mind のあとは動名詞なので speaking。' },
+      { sentence: 'Do you mind [I smoke] here?', choices: ['if I smoke', 'I smoking', 'that smoke I', 'I to smoke'], answer: 0, why: '「～してもいいですか」は Do you mind if I ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

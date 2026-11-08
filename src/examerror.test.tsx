@@ -3459,3 +3459,10 @@ it('正誤問題〈250〉：国公立レベル help 人 (to) do の単元が10�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) doing')
 })
+
+it('誤文訂正〈244〉：京大レベル mind ～ing・Would you mind if の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-244')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('opening')
+})
