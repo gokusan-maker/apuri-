@@ -3438,3 +3438,10 @@ it('誤文訂正〈242〉：国公立レベル too と either・also の単元�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('either')
 })
+
+it('正誤問題〈249〉：京大レベル when と if の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-when-if')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) it will rain')
+})

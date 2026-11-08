@@ -5958,6 +5958,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Such a (B) vegetables as carrots (C) are (D) rich in vitamins.', choices: ['(A) Such a', '(B) vegetables as carrots', '(C) are', '(D) rich in vitamins'], answer: 0, why: '複数名詞には a をつけないので Such vegetables as carrots。' },
     ],
   },
+  {
+    id: 'exam-error-when-if',
+    title: '入試の正誤問題〈249〉（京大レベル：英作文の when と if の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'when は「～するとき」で、かならず起こること・起こったことに使う（When the sun rises ～）。if は「もし～なら」で、起こるかどうかわからないことに使う（If it rains ～）。日本語の「～たら」につられて区別をわすれないこと。',
+      '時・条件を表す副詞節（when・if・until・as soon as）では、未来のことも現在形にする。ただし「いつ～か」「～かどうか」を表す名詞節では未来は will を使う（I don’t know when he will come back.）。',
+    ],
+    examples: [
+      { en: 'When I get home, I will call you. / If it rains tomorrow, we will stay home.', ja: '家に着いたら電話するね。／明日雨がふったら、家にいます。' },
+      { en: 'I don’t know when he will come back.', ja: '彼がいつもどってくるのかわからない。' },
+    ],
+    questions: [
+      { sentence: '(A) When (B) it will rain (C) tomorrow, (D) we will stay home.', choices: ['(A) When', '(B) it will rain', '(C) tomorrow,', '(D) we will stay home'], answer: 1, why: '時・条件を表す節では未来のことも現在形。it rains。' },
+      { sentence: '(A) I will call you (B) if (C) I will arrive (D) at the station.', choices: ['(A) I will call you', '(B) if', '(C) I will arrive', '(D) at the station'], answer: 2, why: '条件の if 節は現在形なので I arrive。' },
+      { sentence: '(A) When (B) I was a child, (C) I often (D) go fishing with my father.', choices: ['(A) When', '(B) I was a child,', '(C) I often', '(D) go fishing with my father'], answer: 3, why: '過去の話なので went fishing。' },
+      { sentence: '(A) If (B) I get up (C) tomorrow morning, I will (D) make breakfast.', choices: ['(A) If', '(B) I get up', '(C) tomorrow morning, I will', '(D) make breakfast'], answer: 0, why: 'かならず起こることには if ではなく When を使う。' },
+      { sentence: '(A) If (B) the sun rises (C) tomorrow, (D) we will start.', choices: ['(A) If', '(B) the sun rises', '(C) tomorrow,', '(D) we will start'], answer: 0, why: '日がのぼるのは確実なので When。' },
+      { sentence: '(A) I don’t know (B) when (C) he comes back (D) next week.', choices: ['(A) I don’t know', '(B) when', '(C) he comes back', '(D) next week'], answer: 2, why: '「いつ～か」の名詞節では未来は will を使う。he will come back。' },
+      { sentence: '(A) I was surprised (B) if (C) I heard (D) the news.', choices: ['(A) I was surprised', '(B) if', '(C) I heard', '(D) the news'], answer: 1, why: '「～したとき」なので when。' },
+      { sentence: '(A) If you (B) were (C) me, what (D) will you do?', choices: ['(A) If you', '(B) were', '(C) me, what', '(D) will you do?'], answer: 3, why: '仮定法過去なので would。' },
+      { sentence: '(A) Let’s start (B) the meeting (C) when everyone (D) will arrive.', choices: ['(A) Let’s start', '(B) the meeting', '(C) when everyone', '(D) will arrive'], answer: 3, why: '時の副詞節は現在形なので arrives。' },
+      { sentence: '(A) When (B) I will finish (C) my homework, (D) I’ll watch TV.', choices: ['(A) When', '(B) I will finish', '(C) my homework,', '(D) I’ll watch TV'], answer: 1, why: '時の副詞節は現在形なので I finish。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
