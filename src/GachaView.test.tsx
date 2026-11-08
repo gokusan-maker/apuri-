@@ -900,7 +900,7 @@ it('デザイン219：キャラ図鑑で、30日以上いっしょの相棒に�
   fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
   expect(screen.queryByLabelText(/日いっしょの長いつきあい/)).toBeNull()
   expect(JSON.parse(localStorage.getItem('eitan:partner-since')!).species).toBe('mochi')
-})
+}, 180000) // キャラ図鑑（490体以上）を2回描くので重い
 
 it('デザイン220：連続ガチャで同じ種類が2体なら「👯 ふたご！」、3体なら「👯 3つご！」、ばらばらなら出ない', () => {
   localStorage.clear()
