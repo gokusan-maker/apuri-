@@ -44302,6 +44302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-bookmarks',
+    title: 'On Bookmarks',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A bookmark is one of the humblest objects associated with reading. It may be a strip of decorated card bought in a shop, a ribbon sewn into the binding of a book, or simply a bus ticket, a receipt, or a folded scrap of paper that happened to be at hand. Its purpose seems obvious: to mark the place where a reader stopped, so that the story can be resumed later. Yet the bookmark reflects something important about the way people read, about the relationship between reading and the rest of life, and about the act of returning to something left unfinished.",
+      "The very existence of the bookmark reminds us that most reading is interrupted. Few people read a long book from beginning to end without a pause; instead, they read in fragments, on trains, before sleep, or during a quiet half hour, and then close the book and return to their other responsibilities. The bookmark makes this rhythm possible, allowing a reader to step out of the world of a book and step back into it days or even weeks later without losing the thread. Without such a simple aid, readers would have to search through the pages each time, and many might give up a difficult book long before reaching its end.",
+      "A bookmark also records a kind of promise. When readers place a bookmark in a book and set it aside, they are expressing an intention to come back, a belief that the story is worth continuing. ( A ) many books are never finished, and bookmarks may remain for years between the same two pages, the small strip of paper still holds the memory of that intention, reminding the reader of a journey that was begun but not completed.",
+      "The objects people use as bookmarks can be surprisingly personal. A ticket from a concert, a pressed flower, a photograph, or a note from a friend may serve the purpose as well as any specially made bookmark, and when such objects are discovered long afterward, they can bring back vivid memories of the time and place in which the book was being read. In this way, a bookmark can become a small record not only of a reader's progress through a book but also of the life that surrounded the reading.",
+      "Bookmarks also say something about the physical nature of books. A printed book has a clear beginning, middle, and end that can be felt in the hand, and a bookmark shows at a glance how far the reader has traveled and how much remains. This visible sense of progress may be part of the satisfaction of reading a printed book, since the reader can watch the pages on one side of the bookmark grow thicker as those on the other side grow thinner.",
+      "In digital reading, bookmarks have taken a different form. Electronic devices automatically remember where a reader stopped, and readers can mark as many pages as they wish with a single touch. This convenience is undeniable, but it may also remove some of the meaning that physical bookmarks once carried, since nothing needs to be chosen, placed, or later rediscovered, and the reader's progress becomes a number on a screen rather than something that can be held.",
+      "Perhaps, then, bookmarks deserve more attention than we usually give them. They remind us that reading is woven into the fabric of daily life, interrupted and resumed, and that the books we love often accompany us through many different moments and places. To place a bookmark between the pages is to make a quiet promise to return, and perhaps to recognize that some of the most valuable things in life are not completed all at once but are taken up again and again, a little at a time.",
+    ],
+    ja: [
+      'しおりは、読書にまつわるもっともつつましいものの一つである。それは店で買ったかざりのついた細長いカードであったり、本のとじ目にぬいつけられたリボンであったり、あるいはたまたま手もとにあったバスのきっぷやレシート、折りたたんだ紙切れであったりする。その目的は明らかに思える。読み手がやめたところに印をつけ、あとで物語を再開できるようにすることである。しかししおりは、人々がどのように読むのか、読書とそれ以外の生活との関係、そしてやりかけのものにもどっていくという行為について、大切なことを反映している。',
+      'しおりがあることそのものが、ほとんどの読書がとぎれとぎれであることを思い出させる。長い本を最初から最後まで休まずに読む人はほとんどいない。むしろ人々は、電車の中や寝る前、しずかな三十分のあいだに少しずつ読み、そのあと本を閉じてほかの務めにもどる。しおりはこのリズムを可能にし、読み手が本の世界からぬけ出し、何日も、あるいは何週間もあとに、話の筋を見失うことなくふたたびその世界にもどれるようにしてくれるのである。そうした単純な助けがなければ、読み手は毎回ページをさがさなければならず、多くの人はむずかしい本を、終わりにたどりつくずっと前にあきらめてしまうかもしれない。',
+      'しおりはまた、一種の約束を記録している。読み手が本にしおりをはさんでわきに置くとき、彼らはもどってくるつもりであること、その物語は続ける価値があると信じていることを表している。多くの本はけっして読み終えられず、しおりは何年も同じ二つのページのあいだに残っているかもしれないが、その小さな紙切れはいまもそのつもりの記憶をとどめており、始めたけれども終えなかった旅を読み手に思い出させるのである。',
+      '人々がしおりとして使うものは、おどろくほど個人的なものであることがある。コンサートのきっぷやおし花、写真、友だちからのメモは、特別につくられたしおりと同じくらいその役目を果たし、そうしたものがずっとあとになって見つかると、その本を読んでいた時と場所のあざやかな思い出をよみがえらせることがある。このように、しおりは、本の中を読み進んだ記録であるだけでなく、読書をとりまいていた生活の小さな記録にもなりうるのである。',
+      'しおりはまた、本の物としての性質についても何かを語っている。印刷された本には、手で感じられるはっきりした始まりとまん中と終わりがあり、しおりは、読み手がどこまで進み、あとどれだけ残っているかをひと目で示してくれる。この目に見える進歩の感覚は、印刷された本を読む満足の一部なのかもしれない。読み手は、しおりの一方の側のページが厚くなり、もう一方の側のページがうすくなっていくのを見ることができるからである。',
+      'デジタルの読書では、しおりはちがう形をとるようになった。電子機器は読み手がやめたところを自動的に覚えており、読み手は一回ふれるだけで好きなだけページに印をつけられる。この便利さは否定できないが、それはまた、物としてのしおりがかつてもっていた意味の一部を取りさってしまうかもしれない。何も選んだり、はさんだり、あとで見つけ直したりする必要がなく、読み手の進み具合は、手にもてるものではなく、画面の上の数字になってしまうからである。',
+      'だとすれば、しおりは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。しおりは、読書が日々の生活の布のなかに織りこまれ、とぎれては再開されるものであること、そして私たちが愛する本が、しばしば多くのちがう瞬間や場所をともに過ごしてくれることを思い出させてくれる。ページのあいだにしおりをはさむことは、もどってくるというしずかな約束をすることであり、そしてもしかすると、人生でもっとも価値のあるもののいくつかは、一度に終えられるのではなく、少しずつ何度も手にとられるものなのだと気づくことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「多くの本は読み終えられないが、しおりはそのつもりの記憶をとどめている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'バスのきっぷやレシートも、しおりとして使われることがある。', answer: true, why: '第1段落 a bus ticket, a receipt ... that happened to be at hand。' },
+      { statement: 'ほとんどの人は、長い本を休まずに一気に読む。', answer: false, why: '第2段落 Few people read a long book from beginning to end without a pause。' },
+      { statement: 'しおりとして使ったものが、あとで思い出をよみがえらせることがある。', answer: true, why: '第4段落 they can bring back vivid memories。' },
+      { statement: '筆者によると、電子機器のしおりには便利さがない。', answer: false, why: '第6段落 This convenience is undeniable。' },
+    ],
+    qa: [
+      { q: 'What does a reader express when placing a bookmark and setting a book aside?', choices: ['An intention to come back.', 'A wish to sell the book.', 'A dislike of the story.', 'A plan to lend it to a friend.'], answer: 0, why: '第3段落 expressing an intention to come back。' },
+      { q: 'What can a reader watch in a printed book with a bookmark?', choices: ['The pages on one side grow thicker as those on the other grow thinner.', 'The words change color.', 'The cover becomes brighter.', 'The pictures move.'], answer: 0, why: '第5段落 watch the pages on one side of the bookmark grow thicker。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
