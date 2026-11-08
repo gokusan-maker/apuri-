@@ -3740,6 +3740,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 82 h6 M58 82 h6" stroke="#f5f5f4" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'banteng')
+    return (
+      <g>
+        {/* 白いおしり */}
+        <ellipse cx="50" cy="74" rx="8" ry="4" fill="#fafaf9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
