@@ -46622,6 +46622,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-kites',
+    title: 'On Kites',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On a windy day in an open field, a child runs with a string in one hand, and behind her a kite lifts from the ground and climbs into the sky. It is one of the simplest pleasures human beings have invented: a light frame covered with paper or cloth, held by a thin line and carried upward by the wind. Kites are often regarded as toys for children, and we rarely think of them as anything more. Yet kites have a long and surprising history, and they reveal much about human curiosity, ingenuity, and the desire to reach the sky.",
+      "Kites are believed to have been invented more than two thousand years ago in East Asia, where they were made from silk or paper stretched over frames of bamboo. From there, they spread to many other parts of the world, and different regions developed their own shapes, colors, and traditions. In some places, kites are flown at particular festivals, decorated with images of animals, heroes, or gods, and the sky above a city may be filled with hundreds of them on a single day. In some of these festivals, teams compete to cut the strings of rival kites, turning a peaceful pastime into a lively contest.",
+      "Kites have not always been used for play. ( A ) they may seem like simple toys, kites have served many practical purposes over the centuries. They have been used to send signals across long distances, to measure the strength and direction of the wind, and even to lift instruments high into the air to study the weather. Some scientists used kites to investigate electricity in the atmosphere, and early experiments with kites contributed to the understanding of how objects can be lifted by moving air.",
+      "This understanding played an important part in the history of flight. Before the first powered aircraft rose from the ground, many inventors studied kites to learn how wings behave in the wind, and some built large kites capable of carrying a person. The principles that keep a kite in the air, the balance between the pull of the string, the force of the wind, and the weight of the frame, are closely related to those that allow modern aircraft to fly. The humble kite, in other words, was one of the first steps toward the age of flight.",
+      "Flying a kite also requires a kind of cooperation with nature. A kite cannot fly without wind, and the person holding the string must constantly respond to changes in its strength and direction, letting out more line when the wind rises and pulling it in when it weakens. In this sense, kite flying is less a matter of controlling the sky than of working with forces beyond our control, a skill that requires patience, attention, and a gentle hand.",
+      "The kite has also become a powerful image in human thought and art. A kite rising freely in the sky can suggest hope, freedom, and the longing to escape the limits of ordinary life. Yet the kite is never entirely free, since it can fly only because it is held by a string, and some writers have seen in this a reminder that freedom and connection are not opposites. Without its line, a kite does not soar higher; it simply falls.",
+      "Perhaps, then, the kite deserves more thought than we usually give it. It has delighted children, decorated festivals, assisted scientists, and helped to inspire the invention of flight. The next time we see a kite climbing into the wind, it may be worth remembering that this simple object carries a long history of human imagination, and that it offers a quiet lesson about how we, too, may rise highest when we remain connected to something that holds us steady.",
+    ],
+    ja: [
+      '風の強い日、ひらけた野原で、子どもが片手に糸をもって走ると、そのうしろでたこが地面からうき上がり、空へとのぼっていく。それは人間が発明したもっとも単純な楽しみのひとつである。紙や布をはった軽い骨組みが、細い糸でつながれ、風によって上へ運ばれるのである。たこはしばしば子どものおもちゃと見なされ、私たちはそれ以上のものとして考えることはめったにない。しかしたこには長くおどろくべき歴史があり、人間の好奇心や工夫、そして空にとどきたいという願いについて多くを明らかにしてくれる。',
+      'たこは2000年以上前に東アジアで発明されたと考えられており、そこでは竹の骨組みに絹や紙をはってつくられた。そこから世界の多くの地域に広まり、それぞれの地域が独自の形や色、伝統を発達させた。場所によっては、たこは決まったお祭りであげられ、動物や英雄、神々の絵でかざられ、ある1日には都市の上の空が何百ものたこでうめつくされることもある。そうしたお祭りのなかには、チームが相手のたこの糸を切ろうと競い合い、おだやかな楽しみをにぎやかな勝負に変えるものもある。',
+      'たこはいつも遊びに使われてきたわけではない。たこは単純なおもちゃのように思えるかもしれないが、何世紀ものあいだ多くの実際的な目的に役立ってきた。遠くまで合図を送ったり、風の強さと向きをはかったり、さらには天気を研究するために計器を空高く持ち上げたりするのに使われてきた。たこを使って大気中の電気を調べた科学者もおり、たこを使った初期の実験は、動く空気によってものが持ち上げられるしくみの理解に役立った。',
+      'この理解は、飛行の歴史で大切な役割をはたした。エンジンのついた最初の飛行機が地面から飛び立つ前に、多くの発明家が翼が風の中でどうふるまうかを学ぶためにたこを研究し、人をのせられる大きなたこをつくった人もいた。たこを空にとどめておく原理、つまり糸が引く力と風の力と骨組みの重さのつりあいは、現代の飛行機を飛ばす原理と深く結びついている。言いかえれば、つつましいたこは、空の時代へ向かう最初の一歩のひとつだったのである。',
+      'たこをあげることはまた、自然との一種の協力を必要とする。たこは風がなければ飛べず、糸をもつ人は風の強さと向きの変化にたえずこたえ、風が強まれば糸をくり出し、弱まればたぐりよせなければならない。この意味で、たこあげは空をあやつることというよりも、自分の力のおよばない力とともにはたらくことであり、根気と注意とやさしい手つきを必要とする技術なのである。',
+      'たこはまた、人間の考えや芸術の中で力強いイメージにもなっている。空に自由にのぼっていくたこは、希望や自由、ふつうの生活の限界からのがれたいというあこがれを思わせる。しかしたこはけっして完全に自由ではない。糸につながれているからこそ飛べるのであり、作家のなかにはそこに、自由とつながりが反対のものではないことを思い出させるものを見た人もいる。糸がなければ、たこはさらに高く舞い上がるのではなく、ただ落ちてしまうのである。',
+      'だとすれば、たこは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは子どもたちを喜ばせ、お祭りをかざり、科学者を助け、飛行の発明を生み出すきっかけのひとつになってきた。次にたこが風に向かってのぼっていくのを見かけたら、この単純なものが人間の想像力の長い歴史をたずさえていること、そして私たちもまた、自分をしっかりささえてくれる何かとつながっているときにこそもっとも高くのぼれるのかもしれないという、静かな教えをあたえてくれることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「たこは単純なおもちゃに思えるかもしれないが、多くの実際的な目的に役立ってきた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'たこは2000年以上前に東アジアで発明されたと考えられている。', answer: true, why: '第2段落 invented more than two thousand years ago in East Asia。' },
+      { statement: 'たこは遊び以外には一度も使われたことがない。', answer: false, why: '第3段落 kites have served many practical purposes。' },
+      { statement: '多くの発明家が、翼のふるまいを学ぶためにたこを研究した。', answer: true, why: '第4段落 many inventors studied kites to learn how wings behave。' },
+      { statement: '筆者によると、糸がなければたこはさらに高く舞い上がる。', answer: false, why: '第6段落 Without its line, a kite does not soar higher; it simply falls。' },
+    ],
+    qa: [
+      { q: 'What must the person holding the string do when the wind rises?', choices: ['Let out more line.', 'Pull the kite down.', 'Stop running.', 'Cut the string.'], answer: 0, why: '第5段落 letting out more line when the wind rises。' },
+      { q: 'What do some writers see in the kite and its string?', choices: ['A reminder that freedom and connection are not opposites.', 'A symbol of danger.', 'A sign of bad weather.', 'A lesson about money.'], answer: 0, why: '第6段落 a reminder that freedom and connection are not opposites。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
