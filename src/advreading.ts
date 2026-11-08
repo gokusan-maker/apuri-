@@ -46302,6 +46302,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-bricks',
+    title: 'On Bricks',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A brick is perhaps the most modest of all building materials. It is small enough to be held in one hand, plain in shape, and usually hidden behind paint or plaster once a building is finished. Yet bricks have been used for thousands of years to build houses, walls, temples, and entire cities, and many of the oldest surviving structures in the world are made of them. To consider the humble brick carefully is to discover a great deal about the relationship between human beings, their materials, and the places in which they live.",
+      "The earliest bricks were made from mud mixed with straw and left to dry in the sun. In hot, dry regions where wood and stone were scarce, such bricks offered a cheap and practical way of building, and they kept houses cool during the day and warm at night. Later, people learned to bake bricks in kilns, making them much harder and able to resist rain and frost. This discovery allowed brick buildings to spread to wetter climates and to last far longer than before. Some baked bricks made thousands of years ago are still strong enough to be reused today.",
+      "The great advantage of the brick lies in its size and regularity. ( A ) a single brick may seem insignificant, thousands of identical units can be combined to create structures of almost any shape, from simple walls to curved arches and tall chimneys. Because each brick is light enough for one person to lift, buildings could be constructed without heavy machinery, and the work could be divided among many laborers. In this sense, the brick is an early example of the idea of standard parts.",
+      "Bricks also reflect the places where they are made. Their color depends on the clay from which they are formed and on the way they are fired, so that bricks from different regions may be red, yellow, brown, or almost white. Old towns built mainly of local brick often have a distinctive appearance, and the warm tones of their walls are part of what gives them their character. When buildings are restored, builders sometimes search carefully for bricks that match the originals. A wall of the wrong color, however well built, can look strangely out of place.",
+      "The brick has played an important part in the growth of cities. In periods of rapid urban expansion, factories produced bricks in enormous quantities, allowing rows of houses, factories, and public buildings to be built quickly. At the same time, the fear of fire in crowded towns, where wooden houses could burn easily, led many cities to require that new buildings be made of brick or stone, changing the appearance of streets and the lives of those who lived along them. The red brick streets that many people now find charming were, in part, a response to danger.",
+      "Bricks have also entered language and thought. We speak of building something brick by brick when we mean that it is achieved slowly and patiently, step by step, and of hitting a brick wall when progress suddenly becomes impossible. Such expressions suggest that the brick has come to stand for both steady effort and solid resistance, for the patient work of construction and for the obstacles that sometimes block our way.",
+      "Perhaps, then, the brick deserves more thought than we usually give it. It has sheltered countless families, shaped the appearance of towns and cities, and offered a model of how small, simple units can be combined to create something large and lasting. The next time we walk past an old brick wall, it may be worth looking closely at its surface, since in its rows of small blocks we may read the patient labor of many hands and a long history of human building.",
+    ],
+    ja: [
+      'れんがは、おそらくすべての建築材料のなかでもっともつつましいものだろう。片手でもてるほど小さく、形は飾り気がなく、建物ができあがると、たいていペンキやしっくいのうしろにかくれてしまう。しかしれんがは何千年ものあいだ、家やかべ、神殿、さらには都市全体を建てるのに使われてきたし、世界で残っているもっとも古い建物の多くはれんがでできている。このつつましいれんがを注意深く考えることは、人間と材料、そして人間がくらす場所との関係について、多くのことを発見することなのである。',
+      'もっとも古いれんがは、どろにわらをまぜて日に当ててかわかしたものだった。木や石が少ない暑くかわいた地域では、そうしたれんがは安く実際的な建て方をあたえてくれ、昼は家を涼しく、夜はあたたかくたもった。のちに人々はかまでれんがを焼くことを覚え、それによってれんがはずっとかたくなり、雨や霜にもたえられるようになった。この発見によって、れんがの建物はより雨の多い気候にも広まり、以前よりはるかに長くもつようになった。何千年も前に焼かれたれんがのなかには、いまでも再利用できるほどじょうぶなものもある。',
+      'れんがの大きな利点は、その大きさと規則正しさにある。1個のれんがは取るに足りないものに思えるかもしれないが、何千もの同じ単位を組み合わせれば、単純なかべから曲がったアーチや高いえんとつまで、ほとんどどんな形の建物でもつくることができる。どのれんがもひとりで持ち上げられるほど軽いので、重い機械なしに建物を建てることができ、仕事を多くの働き手で分けることもできた。この意味で、れんがは規格化された部品という考えの初期の例なのである。',
+      'れんがはまた、それがつくられる場所を映し出している。その色はつくられる粘土と焼き方によって決まるので、地域ごとにれんがは赤や黄色、茶色、あるいはほとんど白のこともある。おもに地元のれんがで建てられた古い町はしばしば独特の見た目をしており、そのかべのあたたかい色合いは、その町らしさをつくるものの一部である。建物を修復するとき、建築家はもとのものと合うれんがを注意深くさがすことがある。色のちがうかべは、どれほどうまく建てられていても、ふしぎなほどその場にそぐわなく見えることがある。',
+      'れんがは都市の成長でも大切な役割をはたしてきた。都市が急速に広がった時代には、工場が大量のれんがを生産し、家や工場、公共の建物の列をすばやく建てることを可能にした。同時に、木の家がかんたんに燃えてしまう混み合った町では火事へのおそれから、多くの都市が新しい建物をれんがか石でつくるよう求め、通りの見た目とそこにくらす人々の生活を変えたのである。いま多くの人が魅力的だと感じる赤れんがの通りは、ある意味では危険への対応だったのである。',
+      'れんがはまた、ことばや考えの中にも入りこんでいる。私たちは、何かがゆっくりと根気強く、一歩ずつなしとげられることを、れんがをひとつずつ積むように築くと言い、進歩がとつぜん不可能になることを、れんがのかべにぶつかると言う。そうした表現は、れんがが着実な努力とかたい抵抗の両方を、つまり建てるという根気のいる仕事と、ときに私たちの行く手をふさぐ障害の両方を表すようになったことを示している。',
+      'だとすれば、れんがは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは数えきれない家族をまもり、町や都市の見た目を形づくり、小さく単純な単位を組み合わせて大きく長く続くものをつくるやり方の手本をあたえてくれた。次に古いれんがのかべの前を通るとき、その表面をじっくり見てみる価値があるかもしれない。小さなかたまりの列の中に、多くの手による根気強い労働と、人間の建築の長い歴史を読みとれるかもしれないからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「1個のれんがは取るに足りないように思えるかもしれないが、組み合わせればどんな形もつくれる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'もっとも古いれんがは、どろにわらをまぜて日にかわかしたものだった。', answer: true, why: '第2段落 made from mud mixed with straw and left to dry in the sun。' },
+      { statement: 'かまで焼いたれんがは、雨や霜に弱くなった。', answer: false, why: '第2段落 able to resist rain and frost。' },
+      { statement: 'れんがの色は、粘土と焼き方によって決まる。', answer: true, why: '第4段落 Their color depends on the clay ... and on the way they are fired。' },
+      { statement: '筆者によると、れんがは重い機械がなければ使えなかった。', answer: false, why: '第3段落 buildings could be constructed without heavy machinery。' },
+    ],
+    qa: [
+      { q: 'Why did many cities require new buildings to be made of brick or stone?', choices: ['Because of the fear of fire.', 'Because bricks were cheaper than wood.', 'Because of heavy snow.', 'Because of a lack of workers.'], answer: 0, why: '第5段落 the fear of fire in crowded towns。' },
+      { q: 'What does hitting a brick wall mean?', choices: ['Progress suddenly becomes impossible.', 'Building something slowly.', 'Repairing an old house.', 'Making new bricks.'], answer: 0, why: '第6段落 when progress suddenly becomes impossible。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
