@@ -44738,6 +44738,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-workplace-naps',
+    title: 'Should Workplaces Allow Naps?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many offices, a worker who falls asleep at the desk is likely to be regarded as lazy, or at least as someone who did not take care to get enough rest the night before. In recent years, however, a number of companies have begun to take a different view. Some have set aside quiet rooms where employees may lie down for a short time during the day, and a few even encourage staff to take brief naps after lunch. Whether such policies should become more common has become a topic of serious discussion.",
+      "Supporters of workplace naps point first to research on sleep and the human body. Many adults feel a natural drop in energy in the early afternoon, regardless of how much they have eaten, and studies have suggested that a nap of fifteen to twenty minutes can improve attention, memory, and mood for several hours afterwards. If a short rest allows employees to work more effectively for the rest of the day, supporters argue, it should be seen not as wasted time but as a sensible investment. Some point out that in several countries a short rest after lunch has long been an accepted part of the working day.",
+      "Supporters also note that many people in modern societies do not get enough sleep at night. Long working hours, long journeys to and from work, and the demands of caring for children or elderly parents all reduce the time available for rest. Tired workers are more likely to make mistakes, and in some jobs, such as driving or operating machinery, a single moment of inattention can have serious consequences. Allowing a short nap, in their view, is a practical way of reducing such risks.",
+      "Critics, however, raise several objections. ( A ) a short nap may help some people, others find that sleeping during the day leaves them feeling heavy and confused, and that it makes it harder for them to sleep at night. Critics also worry that naps may be abused by a small number of employees, and that managers will find it difficult to tell the difference between a worker who is resting in order to work better and one who is simply avoiding work. Some also fear that customers may form a poor impression of a company whose staff are seen sleeping.",
+      "There are also practical concerns. Many workplaces are small and crowded, and it may be impossible to provide a quiet, comfortable space where people can sleep without being disturbed. In jobs that involve serving customers, it may be difficult to arrange for others to cover the work of those who are resting. Critics further argue that offering nap rooms may allow companies to avoid the real problem, which is that many employees are required to work far too many hours.",
+      "Some companies have tried to address these concerns by setting clear rules. They limit naps to a fixed length, often around twenty minutes, and ask employees to book rooms in advance so that not everyone rests at the same time. Others treat naps as one part of a wider effort to protect the health of staff, which also includes limits on overtime and more flexible working hours. Early reports from such companies suggest that most employees use the rooms responsibly, and that many return to work feeling refreshed.",
+      "In the end, the debate over workplace naps reflects a broader question about how work should fit into human life. If a company values only the number of hours its employees spend at their desks, a nap will always look like a loss. If, on the other hand, it values the quality of the work that people produce and the health of those who produce it, a short rest in the middle of the day may come to seem not a luxury but a reasonable part of an ordinary working day.",
+    ],
+    ja: [
+      '多くの職場では、机でねむりこんでしまう人はなまけ者か、少なくとも前の晩に十分な休息をとるよう気をつけなかった人と見なされやすい。しかし近年、いくつかの会社がちがう見方をとりはじめている。従業員が昼間に少しのあいだ横になれる静かな部屋を用意したところもあれば、昼食のあとに短い昼寝をするよう社員にすすめるところさえある。こうした方針をもっと広めるべきかどうかは、真剣な議論の話題になっている。',
+      '職場での昼寝を支持する人々は、まず、睡眠と人間の体についての研究を指摘する。多くの大人は、どれだけ食べたかにかかわらず、午後の早い時間に自然と元気が落ちるのを感じ、研究によれば、15分から20分の昼寝は、そのあと数時間にわたって注意力や記憶力、気分を高めうるという。短い休みによって従業員がその日の残りをより効果的に働けるなら、それはむだな時間ではなく、かしこい投資と見なすべきだと支持する人々は主張する。いくつかの国では、昼食のあとの短い休みが昔から労働日のふつうの一部としてみとめられてきたと指摘する人もいる。',
+      '支持する人々はまた、現代社会の多くの人が夜に十分ねむれていないことも指摘する。長い労働時間や長い通勤、子どもや年老いた親の世話にかかる手間は、どれも休息にあてられる時間をへらす。つかれた働き手はまちがいをおかしやすく、運転や機械の操作のような仕事では、一瞬の不注意が重大な結果をまねくことがある。彼らの考えでは、短い昼寝をみとめることは、そうした危険をへらす実際的な方法なのである。',
+      'しかし批判する人々は、いくつかの反論をあげる。短い昼寝が役に立つ人もいるかもしれないが、昼間にねむると体が重くぼんやりし、夜にねむりにくくなるという人もいる。批判する人々はまた、一部の従業員が昼寝を悪用するのではないか、そして管理する立場の人は、よりよく働くために休んでいる人と、ただ仕事をさけている人とを見分けにくいのではないかと心配している。社員がねむっている姿を見た客が、その会社によくない印象をもつのではないかとおそれる人もいる。',
+      '実際的な心配もある。多くの職場はせまくて混み合っており、人々がじゃまされずにねむれる静かで快適な場所を用意するのは不可能かもしれない。客に応対する仕事では、休んでいる人の仕事をほかの人に代わってもらう手配がむずかしいこともある。批判する人々はさらに、昼寝部屋を設けることで、会社が本当の問題、つまり多くの従業員があまりにも長い時間働かされているという問題から目をそらせてしまうかもしれないと主張する。',
+      'こうした心配に対して、はっきりした決まりをつくることで対応しようとしてきた会社もある。昼寝の長さをたいてい20分ほどに決め、全員が同時に休まないよう、従業員に前もって部屋を予約してもらうのである。また、昼寝を、残業の制限やより柔軟な労働時間もふくむ、社員の健康を守るためのより広い取り組みの一部としてあつかう会社もある。そうした会社からの初期の報告によれば、ほとんどの従業員は部屋を責任をもって使い、多くの人がすっきりした気分で仕事にもどっているという。',
+      '結局のところ、職場での昼寝をめぐる議論は、仕事が人間の生活にどのようにおさまるべきかという、より広い問いを映し出している。会社が従業員の机に向かう時間の長さだけを重んじるなら、昼寝はいつも損失に見えるだろう。一方、人々が生み出す仕事の質と、それを生み出す人々の健康を重んじるなら、昼間の短い休みは、ぜいたくではなく、ふつうの労働日のもっともな一部と思えるようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「短い昼寝が役に立つ人もいるかもしれないが、体が重くなる人もいる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say a short nap can improve attention, memory, and ( 1 ) and can reduce the risks caused by tired workers. Critics worry that naps may be abused and that companies may use nap rooms to avoid the problem of long working ( 2 ). Some companies limit naps to about twenty minutes and ask staff to ( 3 ) rooms in advance.',
+      blanks: [
+        { choices: ['mood', 'salary', 'height', 'appetite'], answer: 0, why: '第2段落 can improve attention, memory, and mood。' },
+        { choices: ['hours', 'clothes', 'tools', 'rooms'], answer: 0, why: '第5段落 many employees are required to work far too many hours。' },
+        { choices: ['book', 'clean', 'paint', 'close'], answer: 0, why: '第6段落 ask employees to book rooms in advance。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの大人は、午後の早い時間に自然と元気が落ちるのを感じる。', answer: true, why: '第2段落 Many adults feel a natural drop in energy in the early afternoon。' },
+      { statement: '支持する人々によると、現代の人はほとんど夜に十分ねむれている。', answer: false, why: '第3段落 many people in modern societies do not get enough sleep at night。' },
+      { statement: '昼間にねむると、夜にねむりにくくなる人もいる。', answer: true, why: '第4段落 it makes it harder for them to sleep at night。' },
+      { statement: '初期の報告では、ほとんどの従業員が部屋を悪用していた。', answer: false, why: '第6段落 most employees use the rooms responsibly。' },
+    ],
+    qa: [
+      { q: 'Why may it be difficult to provide nap rooms in many workplaces?', choices: ['They are small and crowded.', 'Employees do not like quiet places.', 'Naps are against the law.', 'Beds are too expensive.'], answer: 0, why: '第5段落 Many workplaces are small and crowded。' },
+      { q: 'If a company values only the hours employees spend at their desks, how will a nap look?', choices: ['Like a loss.', 'Like a reward.', 'Like a luxury.', 'Like a habit.'], answer: 0, why: '第7段落 a nap will always look like a loss。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
