@@ -6,7 +6,7 @@ const top = ADV_PASSAGES.filter((p) => /^(todai|kyodai)-/.test(p.id))
 
 it('東大・京大の長文：空所の答えが Although ばかりにならない（作り直した長文は別の語の空所）', () => {
   const although = top.filter((p) => p.blanks.some((b) => b.choices[b.answer] === 'Although'))
-  expect(although.length).toBeLessThanOrEqual(82)
+  expect(although.length).toBeLessThanOrEqual(4)
   for (const id of ['kyodai-hope', 'kyodai-metaphor', 'kyodai-forgiveness']) {
     const p = top.find((x) => x.id === id)!
     expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
