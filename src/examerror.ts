@@ -10343,6 +10343,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He doesn’t eat meat, and he doesn’t eat fish [as well].', choices: ['either', 'too', 'also', 'so'], answer: 0, why: '否定文では as well ではなく either。' },
     ],
   },
+  {
+    id: 'exam-fix-243',
+    title: '入試の誤文訂正〈243〉（東大レベル：英作文の some と any・something と anything）',
+    points: ['some・something・somebody はふつう肯定文で、any・anything・anybody は否定文や疑問文で使う（I have some friends.／I don’t have any money.／Do you have any questions?）。', 'ものをすすめたりたのんだりする疑問文では some を使う（Would you like some tea?）。not と nothing・nobody を重ねない（×isn’t nothing → ○isn’t anything／is nothing）。'],
+    examples: [{ en: 'I don’t have any money, but I have some ideas. / Would you like some tea?', ja: '私はお金はまったくないが、考えはいくつかある。／お茶はいかがですか。' }],
+    questions: [
+      { sentence: 'Do you have [some any] questions?', choices: ['any', 'some any of', 'a some', 'anything of'], answer: 0, why: '疑問文では any。some は不要。' },
+      { sentence: 'I don’t have [some] money with me.', choices: ['any', 'none', 'a some', 'no any'], answer: 0, why: '否定文では any。' },
+      { sentence: 'Would you like [any] tea?', choices: ['some', 'a any', 'anything', 'any of'], answer: 0, why: 'ものをすすめるときは疑問文でも some。' },
+      { sentence: 'There isn’t [nothing] in the box.', choices: ['anything', 'something not', 'nothings', 'any thing of'], answer: 0, why: 'isn’t と nothing を重ねない。isn’t anything。' },
+      { sentence: 'I want to eat [anything] sweet.', choices: ['something', 'any thing', 'some thing of', 'nothing'], answer: 0, why: '肯定文の「何か」は something。' },
+      { sentence: 'I didn’t see [somebody] at the station.', choices: ['anybody', 'nobody not', 'some body', 'anyone of'], answer: 0, why: '否定文では anybody。' },
+      { sentence: 'There are [any] apples in the fridge.', choices: ['some', 'a any', 'anything', 'an any'], answer: 0, why: '肯定文では some。' },
+      { sentence: 'He didn’t say [something] about it.', choices: ['anything', 'nothing not', 'some thing', 'any of thing'], answer: 0, why: '否定文では anything。' },
+      { sentence: '[Anybody] called you while you were out.', choices: ['Somebody', 'Any body', 'Nobody not', 'Anyone of'], answer: 0, why: '肯定文の「だれか」は Somebody。' },
+      { sentence: 'I couldn’t find [some of] my keys.', choices: ['any of', 'some of any', 'none of', 'anything of'], answer: 0, why: '否定文では any of my keys。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
