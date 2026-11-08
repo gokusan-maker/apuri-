@@ -44862,6 +44862,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-benches',
+    title: 'On Benches',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A public bench is among the simplest things a city can offer. It is usually no more than a few boards of wood or strips of metal fixed to a frame, placed beside a path, in a park, or at a bus stop. Most of us pass dozens of benches every week without paying them any attention, and we notice them only when we are tired and find that there is nowhere to sit. Yet the humble bench raises surprisingly deep questions about who public space is for and how a city treats the people who move through it.",
+      "The first and most obvious purpose of a bench is to offer rest. For a healthy young adult, a walk of half an hour may present no difficulty, but for an elderly person, a pregnant woman, or someone recovering from illness, the same walk may be possible only if there are places to stop along the way. A street without benches may therefore be quietly closed to some people, not by any rule or sign, but simply by the absence of somewhere to sit. In this sense, the number of benches on a street can be read as a measure of how far a city has thought about its weaker members.",
+      "Benches also make it possible for people to stay in public places rather than merely pass through them. A person sitting on a bench may read, eat lunch, watch children play, or talk with a stranger, and in doing so becomes part of the life of the street. Planners have long observed that places where people can sit tend to attract more visitors, and that the presence of people who linger makes a place feel safer and more welcoming to others. A bench, in other words, is not only a place to rest but also an invitation to take part in public life.",
+      "In recent years, however, some benches have been designed to discourage certain kinds of use. ( A ) a bench may appear ordinary at first glance, it may be divided by armrests so that nobody can lie down, or sloped so that sitting for long becomes uncomfortable. Such designs are often intended to prevent people without homes from sleeping in public places, and they have been criticized for treating some members of the community as problems to be removed rather than as people to be helped.",
+      "Defenders of such designs argue that cities must balance the needs of many different users. If benches are regularly used for sleeping, they say, other people may feel unable to sit on them, and shops or residents nearby may complain. Critics reply that hostile designs do nothing to solve the underlying problem of homelessness, and that they make public space less comfortable for everyone, including the elderly and disabled people for whom benches are most important.",
+      "Benches can also carry personal meaning. In many countries, families pay for a bench to be placed in a park or beside the sea in memory of someone who has died, often with a small sign bearing the person's name and a few words about the place he or she loved. Such benches turn an ordinary piece of street furniture into a quiet memorial, and those who sit on them are invited, for a moment, to share a view that once meant a great deal to someone else.",
+      "Perhaps, then, the bench deserves more attention than we usually give it. Where a city places its benches, how it designs them, and whom it allows to use them reveal what kind of public life it hopes to create. A city that offers generous places to sit seems to say that everyone is welcome to stay for a while, and that the streets belong not only to those who are passing through but also to those who wish to pause, rest, and simply be there.",
+    ],
+    ja: [
+      '公共のベンチは、都市が提供できるもののなかでもっとも単純なもののひとつである。それはふつう、枠に固定された数枚の木の板か金属の細長い板にすぎず、小道のわきや公園、バス停に置かれている。私たちのほとんどは毎週何十ものベンチの前を気にもとめずに通りすぎ、それに気づくのは、つかれているのにすわる場所がどこにもないとわかったときだけである。しかしこのつつましいベンチは、公共の空間はだれのためにあるのか、そして都市はそこを行き来する人々をどのようにあつかうのかについて、おどろくほど深い問いを投げかける。',
+      'ベンチの第一の、そしてもっとも明らかな目的は、休む場所を提供することである。健康な若い大人にとって、30分歩くことは何の苦にもならないかもしれないが、お年寄りや妊娠している女性、病気から回復しつつある人にとっては、同じ道のりも、とちゅうで止まれる場所があってはじめて歩けるのかもしれない。したがって、ベンチのない通りは、どんな決まりや標識によってでもなく、ただすわる場所がないことによって、一部の人々には静かにとざされているのかもしれない。この意味で、通りのベンチの数は、都市が弱い立場の人々のことをどこまで考えてきたかをはかるものさしとして読むことができる。',
+      'ベンチはまた、人々が公共の場所をただ通りすぎるのではなく、そこにとどまることを可能にする。ベンチにすわった人は、本を読んだり、昼食を食べたり、子どもが遊ぶのをながめたり、見知らぬ人と話したりするかもしれず、そうすることで通りの生活の一部になる。人々がすわれる場所には多くの人が集まりやすく、そこにとどまる人々がいることで、ほかの人にとってもその場所がより安全で居心地よく感じられることに、都市計画の専門家は昔から気づいてきた。言いかえれば、ベンチは休む場所であるだけでなく、公共の生活に加わるようにというさそいでもあるのである。',
+      'しかし近年、ある種の使い方をさせないように設計されたベンチもある。ベンチはひと目見ただけではふつうに見えるかもしれないが、だれも横になれないようにひじかけで区切られていたり、長くすわると落ち着かないようにかたむけられていたりすることがある。そうしたデザインは、家のない人々が公共の場所でねむるのをふせぐためのものであることが多く、地域の一部の人々を、助けるべき人々ではなく、取りのぞくべき問題としてあつかっていると批判されてきた。',
+      'そうしたデザインを擁護する人々は、都市は多くのさまざまな利用者の必要のつりあいをとらなければならないと主張する。ベンチがいつもねむるのに使われていると、ほかの人々はそこにすわれないと感じるかもしれず、近くの店や住民が苦情を言うかもしれないと彼らは言う。批判する人々は、敵対的なデザインはホームレスという根本的な問題を何も解決せず、ベンチがもっとも大切なお年寄りや体の不自由な人々をふくむすべての人にとって、公共の空間を居心地の悪いものにしていると反論する。',
+      'ベンチはまた、個人的な意味をになうこともある。多くの国では、家族がお金を出して、亡くなった人をしのんで公園や海辺にベンチを置いてもらうことがあり、その人の名前と、その人が愛した場所についての短いことばが入った小さな札がそえられていることが多い。そうしたベンチは、ふつうの街の設備を静かな記念碑に変え、そこにすわる人々は、ほんのひととき、かつてだれかにとって大きな意味をもった景色を分かち合うようさそわれるのである。',
+      'だとすれば、ベンチは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。都市がどこにベンチを置き、どのように設計し、だれに使わせるかは、その都市がどのような公共の生活をつくりたいと願っているかを明らかにする。気前よくすわる場所を提供する都市は、だれでもしばらくとどまってよいのだと、そして通りは通りすぎる人々だけでなく、立ち止まり、休み、ただそこにいたいと願う人々のものでもあるのだと言っているように思える。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ひと目見るとふつうに見えるかもしれないが、ひじかけで区切られている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ベンチのない通りは、一部の人々には静かにとざされているのかもしれない。', answer: true, why: '第2段落 A street without benches may therefore be quietly closed to some people。' },
+      { statement: '人々がすわれる場所には、人が集まりにくい。', answer: false, why: '第3段落 places where people can sit tend to attract more visitors。' },
+      { statement: '亡くなった人をしのんで、家族がベンチを置いてもらうことがある。', answer: true, why: '第6段落 families pay for a bench to be placed ... in memory of someone who has died。' },
+      { statement: '批判する人々によると、敵対的なデザインはホームレスの問題を解決した。', answer: false, why: '第5段落 hostile designs do nothing to solve the underlying problem。' },
+    ],
+    qa: [
+      { q: 'Why are some benches divided by armrests?', choices: ['So that nobody can lie down.', 'So that they last longer.', 'So that more people can sit.', 'So that they look modern.'], answer: 0, why: '第4段落 divided by armrests so that nobody can lie down。' },
+      { q: 'What does a city that offers generous places to sit seem to say?', choices: ['Everyone is welcome to stay for a while.', 'People should walk faster.', 'Only visitors may use the streets.', 'Parks are for children only.'], answer: 0, why: '第7段落 everyone is welcome to stay for a while。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
