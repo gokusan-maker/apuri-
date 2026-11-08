@@ -3900,6 +3900,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M38 28 l-10 -14 M33 21 l-8 2 M62 28 l10 -14 M67 21 l8 2" stroke="#57534e" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'roedeer')
+    return (
+      <g>
+        {/* おしりの白いハート */}
+        <path d="M66 62 q3 -4 6 0 q-3 5 -6 0 z" fill="#fafaf9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
