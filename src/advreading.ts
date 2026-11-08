@@ -45298,6 +45298,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-phone-calls-transit',
+    title: 'Should Phone Calls Be Restricted on Public Transport?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, passengers on trains and buses are expected to avoid talking on their phones, and signs ask them to switch to silent mode as soon as they board. In others, phone calls on public transport are an ordinary part of daily life, and few people think twice about answering a call in a crowded carriage. As more and more people carry phones wherever they go, the question of whether calls should be restricted or even banned on public transport has become a topic of growing discussion.",
+      "Supporters of restrictions argue first that public transport is a shared space in which every passenger has a right to a reasonable degree of peace. A journey to work or school may be one of the few quiet moments in a busy day, and many passengers use it to read, to rest, or simply to think. A loud phone conversation, supporters say, forces everyone nearby to listen to matters that do not concern them, and it can be far more disturbing than a quiet conversation between two people sitting together. Some passengers, they add, have even begun to wear earplugs on their daily journeys simply to escape the conversations of others.",
+      "Supporters also point out that the problem is not simply one of noise. Research on attention has suggested that hearing only one side of a conversation is especially distracting, because the listener's mind automatically tries to fill in the missing half. A passenger who could easily ignore two friends chatting may find it impossible to concentrate when a stranger nearby is speaking on the phone. For this reason, supporters argue, phone calls deserve to be treated differently from other kinds of talk.",
+      "Critics of restrictions, however, argue that phones have become essential tools for work and family life. ( A ) some calls may be unnecessary, others are urgent, such as a call from a child's school, a message about a delayed meeting, or news of a family emergency. Critics point out that many people spend long hours travelling, and that preventing them from making calls during that time may cause real difficulties, especially for those whose jobs require them to be available at all times. For parents of young children, in particular, the ability to answer a call at any moment may be a source of real peace of mind.",
+      "Critics also question how such rules could be enforced. Staff on crowded trains and buses already have many responsibilities, and asking them to stop passengers from using their phones could lead to arguments and even conflict. Critics further suggest that good manners cannot easily be created by law, and that most passengers already try to speak quietly and keep their calls short, so that a strict ban would punish the many for the behavior of a few.",
+      "Some transport companies have tried to find a balance by creating quiet areas. On many long-distance trains, certain carriages are set aside for passengers who wish to travel in silence, while phone calls are permitted elsewhere. Others rely on gentle announcements and signs that remind passengers to keep their voices down, rather than on formal rules. Surveys suggest that many passengers appreciate having a choice, and that quiet carriages are often among the first to fill up.",
+      "The debate over phone calls on public transport therefore reflects a wider question about how people should share public spaces in an age of constant connection. Technology allows us to remain in contact with others wherever we are, but it can also make it harder to be fully present among the strangers around us. The most effective solutions may be those that combine clear expectations with a respect for individual needs, and that encourage passengers to consider how their behavior affects those with whom they share their journey.",
+    ],
+    ja: [
+      '国によっては、電車やバスの乗客は電話で話すのをさけることを期待されており、乗りこんだらすぐにマナーモードにするよう表示が求めている。ほかの国では、公共交通機関での通話は日常生活のふつうの一部であり、混んだ車両で電話に出ることを気にかける人はほとんどいない。ますます多くの人がどこへ行くにも電話をもち歩くなかで、公共交通機関での通話を制限すべきか、あるいは禁止さえすべきかという問いは、議論がふえつつある話題になっている。',
+      '制限を支持する人々は、まず、公共交通機関は共有の空間であり、どの乗客にもある程度の静けさを求める権利があると主張する。仕事や学校へ向かう移動は、いそがしい1日のなかで数少ない静かな時間のひとつかもしれず、多くの乗客はそれを本を読んだり、休んだり、ただ考えたりするのに使っている。大きな声の電話での会話は、近くにいるすべての人に自分とは関係のない話を聞かせることになり、いっしょにすわっているふたりの静かな会話よりもはるかにじゃまになりうると、支持する人々は言う。ほかの人の会話からのがれるためだけに、毎日の移動で耳せんをするようになった乗客さえいると、彼らはつけ加える。',
+      '支持する人々はまた、問題は単にうるささだけではないと指摘する。注意についての研究によれば、会話の片方だけを聞くことはとくに気が散るという。聞く人の心が、欠けている半分を自動的にうめようとするからである。ふたりの友人のおしゃべりならかんたんに気にせずにいられる乗客も、近くの見知らぬ人が電話で話していると集中できなくなるかもしれない。この理由から、電話での通話はほかの種類の話し声とはちがうあつかいを受けるべきだと支持する人々は主張する。',
+      'しかし制限を批判する人々は、電話は仕事や家庭生活に欠かせない道具になっていると主張する。必要のない通話もあるかもしれないが、子どもの学校からの電話や、会議が遅れるという知らせ、家族の緊急事態の知らせのように、急を要するものもある。多くの人は長い時間をかけて移動しており、そのあいだ電話をかけられないようにすると、とくにいつでも連絡がとれることを仕事で求められる人々にとって、本当にこまったことになりうると批判する人々は指摘する。とくに幼い子どもをもつ親にとっては、いつでも電話に出られることが、本当の安心のもとになっているのかもしれない。',
+      '批判する人々はまた、そうした決まりをどのように守らせるのかを疑問に思っている。混んだ電車やバスの職員にはすでに多くの責任があり、乗客が電話を使うのを止めるよう求めれば、言い争いや、衝突にさえなりかねない。批判する人々はさらに、よいマナーは法律でかんたんにつくり出せるものではなく、ほとんどの乗客はすでに小さな声で話し、通話を短くしようとしているので、きびしい禁止は少数の人のふるまいのために多くの人をばっすることになると考えている。',
+      '静かな場所をつくることでつりあいをとろうとしてきた交通会社もある。多くの長距離列車では、静かに旅をしたい乗客のためにいくつかの車両が用意され、それ以外の場所では通話がみとめられている。正式な決まりではなく、声をおさえるよう乗客に思い出させるやわらかなアナウンスや表示にたよる会社もある。調査によれば、多くの乗客は選べることをありがたく思っており、静かな車両はしばしばいちばん早くうまるという。',
+      'したがって、公共交通機関での通話をめぐる議論は、いつもつながっている時代に人々が公共の空間をどのように分け合うべきかという、より広い問いを映し出している。技術のおかげで私たちはどこにいてもほかの人と連絡をとりつづけられるが、それはまた、まわりの見知らぬ人々のあいだにしっかりと身を置くことをむずかしくもしうる。もっとも効果的な解決策は、はっきりした期待と個人の必要への敬意を組み合わせ、乗客に、自分のふるまいがいっしょに旅をする人々にどう影響するかを考えるようはげますものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「必要のない通話もあるかもしれないが、急を要するものもある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say passengers have a right to peace and that hearing only one side of a conversation is especially ( 1 ). Critics argue that some calls are urgent and that such rules would be hard to ( 2 ). Some companies have created quiet ( 3 ) where passengers can travel in silence.',
+      blanks: [
+        { choices: ['distracting', 'relaxing', 'useful', 'expensive'], answer: 0, why: '第3段落 hearing only one side of a conversation is especially distracting。' },
+        { choices: ['enforce', 'remember', 'write', 'translate'], answer: 0, why: '第5段落 how such rules could be enforced。' },
+        { choices: ['carriages', 'stations', 'offices', 'parks'], answer: 0, why: '第6段落 certain carriages are set aside for passengers who wish to travel in silence。' },
+      ],
+    },
+    tf: [
+      { statement: '国によっては、公共交通機関での通話は日常生活のふつうの一部である。', answer: true, why: '第1段落 phone calls on public transport are an ordinary part of daily life。' },
+      { statement: '支持する人々によると、電話の会話はふたりの静かな会話よりじゃまにならない。', answer: false, why: '第2段落 it can be far more disturbing than a quiet conversation。' },
+      { statement: '批判する人々によると、ほとんどの乗客はすでに小さな声で話そうとしている。', answer: true, why: '第5段落 most passengers already try to speak quietly。' },
+      { statement: '調査によれば、静かな車両はほとんど使われていない。', answer: false, why: '第6段落 quiet carriages are often among the first to fill up。' },
+    ],
+    qa: [
+      { q: 'Why is hearing only one side of a conversation especially distracting?', choices: ['The listener’s mind tries to fill in the missing half.', 'The speaker always talks very loudly.', 'Phones make strange noises.', 'Passengers cannot see the speaker.'], answer: 0, why: '第3段落 the listener’s mind automatically tries to fill in the missing half。' },
+      { q: 'What might asking staff to stop passengers from using phones lead to?', choices: ['Arguments and even conflict.', 'Higher ticket prices.', 'Faster trains.', 'Fewer passengers.'], answer: 0, why: '第5段落 could lead to arguments and even conflict。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
