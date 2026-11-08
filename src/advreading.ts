@@ -44018,6 +44018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-athlete-activism',
+    title: 'Should Athletes Speak Out on Social Issues?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Famous athletes today have audiences far larger than most politicians or journalists. Millions of people follow them on social media, watch their matches, and buy the products they promote, and many athletes have begun to use this attention to speak about social and political issues, from racial equality to climate change. Some sports organizations, however, have rules that discourage or forbid political statements during competitions, and the question of whether athletes should use their fame in this way has become the subject of an intense and sometimes bitter debate.",
+      "Supporters argue that athletes, like all citizens, have the right to express their views. Being skilled at a sport does not mean giving up the freedom to speak about matters of public concern, and supporters point out that many athletes have personal experience of the issues they raise, such as discrimination or poverty. In their view, asking athletes to remain silent amounts to treating them as entertainers whose only role is to perform, rather than as human beings with their own beliefs and experiences. Supporters add that young fans often look up to athletes as role models, and that seeing a hero stand up for others may encourage them to care about their communities.",
+      "Supporters also emphasize that athletes can bring attention to causes that might otherwise be ignored. When a famous player speaks about an injustice, millions of people who would never read a newspaper article on the subject may hear about it for the first time. ( A ) some fans may disagree with the views expressed, supporters argue, history offers many examples of athletes whose public stands helped to change attitudes and are now widely admired.",
+      "Critics, however, argue that sport should remain a space free from political division. For many people, watching sport is a way of escaping the arguments of daily life and of sharing excitement with others regardless of their opinions, and critics fear that political statements may divide fans and spoil the sense of unity that sport can create. They also point out that international competitions bring together people from countries with very different values, and that political gestures may cause tension between nations. Some fans also feel uncomfortable when their favorite player expresses views they strongly reject, and may stop supporting a team as a result.",
+      "Critics also question whether athletes are always well informed about the issues they discuss. An athlete's fame comes from physical skill rather than expertise in politics or economics, and critics worry that fans may give their opinions more weight than they deserve. Some critics further note that athletes are often paid large sums by sponsors, and that their statements may sometimes reflect commercial interests or a desire for publicity rather than genuine conviction.",
+      "In response, some sports organizations have tried to find a balance. Some allow athletes to express their views in interviews and on social media while asking them not to make political gestures during the competition itself, and others have relaxed earlier bans after discussions with athletes. Many organizations now emphasize the difference between promoting values that most people share, such as fairness and respect, and taking sides on issues on which societies are deeply divided. Drawing this line is not always easy, however, since what seems like a shared value to one group may appear political to another.",
+      "The debate over athletes and politics ultimately reflects a broader question about the role of public figures in society. Fame brings the power to influence others, and that power can be used to inspire, to inform, or to mislead. Deciding how athletes should use their voice requires balancing their freedom as individuals against the responsibilities that come with a large audience, and recognizing that sport, which has always been connected with national pride and identity, may never be entirely separate from the wider world in which it takes place.",
+    ],
+    ja: [
+      '今日の有名なスポーツ選手は、ほとんどの政治家やジャーナリストよりもはるかに多くの人々に見られている。何百万人もの人がソーシャルメディアで彼らをフォローし、試合を見て、彼らが宣伝する商品を買う。そして多くの選手が、この注目を使って、人種の平等から気候変動まで、社会や政治の問題について語るようになった。しかし、競技中の政治的な発言をおさえたり禁止したりする決まりをもつスポーツ団体もあり、選手がこのように名声を使うべきかどうかという問いは、激しく、ときにとげとげしい議論の対象になっている。',
+      '支持する人々は、選手はすべての市民と同じように、自分の考えを表す権利をもっていると主張する。スポーツがうまいからといって、公共の関心ごとについて語る自由を手ばなすことにはならない。支持者は、多くの選手が、差別や貧困のように自分が取り上げる問題を身をもって経験していると指摘する。彼らの考えでは、選手にだまっているよう求めることは、選手を、自分の信念や経験をもつ人間としてではなく、演じることだけが役割の芸人としてあつかうことにひとしい。支持する人々はさらに、若いファンはしばしば選手を手本としてあおいでおり、あこがれの人がほかの人々のために立ち上がる姿を見ることは、彼らが自分の地域を大切に思うよう促すかもしれないと付け加える。',
+      '支持する人々はまた、選手は、そうでなければ無視されるかもしれない問題に注目を集められると強調する。有名な選手がある不正について語ると、その問題についての新聞記事をけっして読まないであろう何百万人もの人々が、はじめてそれを耳にするかもしれない。示された意見に反対するファンもいるかもしれないが、歴史には、公の場での立場表明が人々の考え方を変える助けになり、いまでは広く尊敬されている選手の例がたくさんある、と支持者は主張する。',
+      'しかし批判する人々は、スポーツは政治の分断から自由な場であるべきだと主張する。多くの人にとって、スポーツを見ることは日々の言い争いからのがれ、意見のちがいに関係なくほかの人々と興奮を分かち合う方法であり、政治的な発言がファンを分断し、スポーツが生み出しうる一体感をそこなうのではないかと批判する人々は心配する。彼らはまた、国際大会はまったくちがう価値観をもつ国々の人々を集めるので、政治的なしぐさが国と国とのあいだの緊張を生むかもしれないと指摘する。また、好きな選手が自分の強く反対する考えを表すと気まずく感じ、その結果チームを応援するのをやめてしまうファンもいる。',
+      '批判する人々はまた、選手が自分の語る問題についていつも十分な知識をもっているのかどうかを疑う。選手の名声は、政治や経済の専門知識ではなく体の技術から来ており、ファンがその意見に、それにふさわしい以上の重みをあたえてしまうかもしれないと批判する人々は心配する。さらに、選手はしばしばスポンサーから多額のお金を受けとっており、その発言が、本当の信念よりも、商業的な利益や注目を集めたいという願いを反映していることもあると指摘する批判者もいる。',
+      'これに対して、つりあいを見つけようとしてきたスポーツ団体もある。インタビューやソーシャルメディアで選手が考えを表すことは認めながら、競技そのものの最中には政治的なしぐさをしないようたのむ団体もあれば、選手との話し合いのあとで以前の禁止をゆるめた団体もある。多くの団体はいま、公正さや敬意のように、ほとんどの人が共有する価値をすすめることと、社会が深く分かれている問題でどちらかの側につくこととのちがいを強調している。しかし、ある集団には共有された価値に思えるものが、別の集団には政治的に見えることもあるので、この線を引くのはいつもかんたんなわけではない。',
+      '選手と政治をめぐる議論は、結局のところ、社会における有名人の役割についての、より広い問いを反映している。名声はほかの人々に影響をあたえる力をもたらし、その力は、人をはげますためにも、知らせるためにも、まどわすためにも使われうる。選手が自分の声をどのように使うべきかを決めるには、個人としての自由と、多くの人に見られることにともなう責任とのつりあいをとり、昔から国の誇りやアイデンティティと結びついてきたスポーツが、それがおこなわれるより広い世界から完全に切りはなされることはけっしてないかもしれないと認める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「反対するファンもいるかもしれないが、尊敬されている選手の例がたくさんある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say athletes have the right to express their views and can bring ( 1 ) to ignored causes. Critics argue that sport should remain free from political ( 2 ) and that athletes may lack expertise. Some organizations allow statements in interviews but not during the ( 3 ) itself.',
+      blanks: [
+        { choices: ['attention', 'money', 'medals', 'weather'], answer: 0, why: '第3段落 athletes can bring attention to causes。' },
+        { choices: ['division', 'training', 'music', 'tickets'], answer: 0, why: '第4段落 a space free from political division。' },
+        { choices: ['competition', 'holiday', 'election', 'journey'], answer: 0, why: '第6段落 not to make political gestures during the competition itself。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの選手は、自分が取り上げる問題を身をもって経験している。', answer: true, why: '第2段落 many athletes have personal experience of the issues they raise。' },
+      { statement: '支持者によると、歴史には尊敬されるようになった選手の例はない。', answer: false, why: '第3段落 history offers many examples of athletes ... widely admired。' },
+      { statement: '批判する人々は、政治的なしぐさが国と国との緊張を生むかもしれないと言う。', answer: true, why: '第4段落 political gestures may cause tension between nations。' },
+      { statement: 'すべてのスポーツ団体が、選手の考えの表明を完全に禁止している。', answer: false, why: '第6段落 Some allow athletes to express their views in interviews。' },
+    ],
+    qa: [
+      { q: 'Where does an athlete’s fame come from, according to critics?', choices: ['Physical skill rather than expertise in politics.', 'Their knowledge of economics.', 'Their work as journalists.', 'Their family background.'], answer: 0, why: '第5段落 comes from physical skill rather than expertise in politics or economics。' },
+      { q: 'What difference do many organizations now emphasize?', choices: ['Promoting shared values versus taking sides on divisive issues.', 'Winning versus losing.', 'Young versus old athletes.', 'National versus local teams.'], answer: 0, why: '第6段落 the difference between promoting values that most people share ... and taking sides。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
