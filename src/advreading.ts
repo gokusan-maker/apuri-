@@ -45102,6 +45102,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-feathers',
+    title: 'On Feathers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A single feather lying on the ground is easy to overlook. It is light enough to be carried away by the smallest breath of wind, and most people who notice one simply step over it and walk on. Yet the feather is one of the most remarkable structures in the natural world, and human beings have long been fascinated by it, using feathers for warmth, for decoration, for writing, and as symbols of qualities that they admire. To consider the feather carefully is to discover how much can be contained in something so slight.",
+      "For birds, feathers serve many purposes at once. They keep the body warm by trapping a layer of air close to the skin, they protect against rain and sun, and, in most species, they make flight possible. A flight feather is a marvel of design, consisting of a central shaft from which thousands of tiny branches extend, each linked to its neighbors by even smaller hooks, so that the whole forms a surface that is both extremely light and strong enough to push against the air.",
+      "Feathers also play an important role in communication. The bright colors of many male birds, and the elaborate displays in which they spread or shake their feathers, are used to attract mates and to warn rivals. ( A ) such displays may seem to us simply beautiful, they carry information about the health and strength of the bird, since only a bird in good condition can grow and maintain such splendid feathers. In this sense, feathers are a kind of language, read by other birds in ways that we are only beginning to understand.",
+      "Human beings have made use of feathers for thousands of years. Feathers have been stuffed into pillows and quilts to provide warmth, attached to arrows to help them fly straight, and worn in headdresses and hats as signs of rank or courage. For many centuries, the quill pen, made from a large feather, was the chief tool for writing in many parts of the world, so that a great deal of what we know about the past was first recorded with the help of a bird. It is a curious thought that the history of human writing owes so much to creatures that cannot read.",
+      "The popularity of feathers has not always been good for birds. At certain times in history, the fashion for decorating hats with feathers became so great that millions of birds were killed every year, and some species were brought close to extinction. Public anger at this destruction helped to inspire some of the earliest movements for the protection of wildlife, and laws were eventually passed to limit the trade in feathers, showing how a change in public feeling can lead to a change in law.",
+      "Feathers have also had a surprising place in the study of the history of life. The discovery of fossils of animals that had both feathers and the features of reptiles helped scientists to understand that birds are closely related to certain dinosaurs. Some of these animals could probably not fly, which suggests that feathers first developed for other purposes, such as keeping warm or attracting mates, and only later became useful for flight, a reminder that features of living things can change their uses over time.",
+      "Perhaps, then, the feather deserves more attention than we usually give it. In its structure we can see the elegance of natural design, in its colors a form of communication, and in its history a record of both human creativity and human carelessness. The next time we see a feather lying on the ground, it may be worth stopping for a moment to pick it up, and to remember that even the lightest of objects can carry a long and weighty story.",
+    ],
+    ja: [
+      '地面に落ちている1枚の羽根は見のがしやすい。それはほんのかすかな風にも運ばれていくほど軽く、それに気づいたほとんどの人は、ただまたいで歩きつづける。しかし羽根は自然界でもっともおどろくべきつくりのもののひとつであり、人間は長いあいだそれに心をひかれ、あたたかさのため、かざりのため、書くために羽根を使い、また自分たちがあこがれる性質のシンボルとしても使ってきた。羽根を注意深く考えることは、これほどわずかなものの中にどれほど多くのものがふくまれうるかを発見することなのである。',
+      '鳥にとって、羽根は一度に多くの役目をはたしている。羽根は皮ふの近くに空気の層をとじこめることで体をあたたかくたもち、雨や日ざしから守り、そしてほとんどの種では空を飛ぶことを可能にしている。飛ぶための羽根は設計のおどろくべき作品であり、中心のじくから何千もの小さな枝がのび、そのひとつひとつがさらに小さなかぎでとなりの枝とつながっているので、全体として、とても軽いのに空気をおしのけられるほどじょうぶな面ができあがっている。',
+      '羽根はまた、伝え合うことにおいても大切な役割をはたしている。多くのオスの鳥のあざやかな色や、羽根を広げたりふるわせたりする手のこんだ見せ方は、相手を引きつけたり、ライバルに警告したりするのに使われる。そうした見せ方は私たちにはただ美しく思えるかもしれないが、それは鳥の健康とつよさについての情報を伝えている。調子のよい鳥でなければ、そのようなみごとな羽根を育て、たもつことはできないからである。この意味で、羽根は一種のことばであり、ほかの鳥たちは、私たちがようやく理解しはじめたばかりのやり方でそれを読みとっているのである。',
+      '人間は何千年ものあいだ羽根を利用してきた。羽根は、あたたかさのためにまくらやふとんにつめられ、まっすぐ飛ぶよう矢につけられ、地位や勇気のしるしとして頭かざりやぼうしにつけられてきた。何世紀ものあいだ、大きな羽根でつくった羽ペンは世界の多くの地域で書くためのおもな道具であり、私たちが過去について知っていることの多くは、はじめは鳥の助けを借りて記録されたのである。人間の書きものの歴史が、字を読めない生きものにこれほど多くをおっているというのは、ふしぎな考えである。',
+      '羽根の人気は、いつも鳥にとってよいものだったわけではない。歴史のある時期には、ぼうしを羽根でかざる流行があまりにも大きくなり、毎年何百万羽もの鳥が殺され、絶滅寸前に追いこまれた種もあった。この破壊に対する人々のいかりは、野生生物を守るもっとも初期の運動のいくつかを生み出すきっかけとなり、やがて羽根の取り引きを制限する法律がつくられた。それは、人々の気持ちの変化が法律の変化につながりうることを示している。',
+      '羽根はまた、生命の歴史の研究においても意外な位置をしめてきた。羽根と、は虫類の特徴の両方をもつ動物の化石が発見されたことは、鳥がある種の恐竜と近い関係にあることを科学者が理解する助けとなった。こうした動物のなかにはおそらく飛べないものもいたことから、羽根ははじめは体をあたたかくたもつことや相手を引きつけることなど、ほかの目的のために発達し、あとになってから飛ぶのに役立つようになったと考えられる。これは、生きものの特徴が時とともにその使い道を変えうることを思い出させてくれる。',
+      'だとすれば、羽根は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。そのつくりの中に自然のデザインの優美さを、その色の中に伝え合う方法を、そしてその歴史の中に人間の創造性と人間の不注意の両方の記録を見ることができる。次に地面に落ちている羽根を見かけたら、少し立ち止まってそれを拾い、もっとも軽いものでさえ長く重みのある物語をにないうることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「見せ方は美しく思えるかもしれないが、健康とつよさの情報を伝えている」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '羽根は皮ふの近くに空気の層をとじこめて、体をあたたかくたもつ。', answer: true, why: '第2段落 by trapping a layer of air close to the skin。' },
+      { statement: 'どんな鳥でも、調子にかかわらずみごとな羽根をたもつことができる。', answer: false, why: '第3段落 only a bird in good condition can grow and maintain such splendid feathers。' },
+      { statement: '羽根の流行で多くの鳥が殺されたことが、野生生物を守る運動のきっかけになった。', answer: true, why: '第5段落 helped to inspire some of the earliest movements for the protection of wildlife。' },
+      { statement: '筆者によると、羽根ははじめから飛ぶためだけに発達した。', answer: false, why: '第6段落 feathers first developed for other purposes。' },
+    ],
+    qa: [
+      { q: 'What was the quill pen made from?', choices: ['A large feather.', 'A piece of bone.', 'A thin stick of wood.', 'A metal tube.'], answer: 0, why: '第4段落 the quill pen, made from a large feather。' },
+      { q: 'What did fossils with feathers help scientists to understand?', choices: ['That birds are closely related to certain dinosaurs.', 'That all dinosaurs could fly.', 'That feathers are very heavy.', 'That reptiles have no bones.'], answer: 0, why: '第6段落 birds are closely related to certain dinosaurs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

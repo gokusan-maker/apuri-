@@ -3988,3 +3988,10 @@ it('東大専用の長文256「自転車のヘルメットを義務にすべき�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(p.summary?.blanks).toHaveLength(3)
 })
+
+it('京大専用の長文259「羽根について」：京大の下限600語以上・1文18語以上で、京大に出る', async () => {
+  const { passageStats } = await import('./examtier')
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-feathers')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+})
