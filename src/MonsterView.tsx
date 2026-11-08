@@ -3705,6 +3705,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="66" cy="34" r="7" stroke="#3a2a18" strokeWidth="4" fill="none" />
       </g>
     )
+  if (species === 'urial')
+    return (
+      <g>
+        {/* 胸の黒い毛 */}
+        <path d="M46 54 v12 M50 54 v14 M54 54 v12" stroke="#1c1917" strokeWidth="2" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
