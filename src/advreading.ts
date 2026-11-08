@@ -44818,6 +44818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-visiting-hours',
+    title: 'Should Hospitals Relax Visiting Hours?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many years, most hospitals have allowed patients to receive visitors only during fixed hours, often a short period in the afternoon and another in the early evening. Outside these times, family members and friends have usually been asked to stay away, so that doctors and nurses can work without interruption and patients can rest. In recent years, however, a growing number of hospitals have relaxed these rules or removed them entirely, and the question of whether visiting should be allowed at any time has become a subject of real debate.",
+      "Supporters of open visiting argue first that the presence of loved ones can help patients recover. Being in hospital is often frightening and lonely, especially for elderly people and young children, and a familiar face can reduce anxiety and help patients feel more secure. Some studies have suggested that patients who receive frequent visits are less likely to become confused, and that they may even be ready to leave hospital sooner than those who spend long periods alone in unfamiliar surroundings. Family members can also notice small changes in a patient's condition that busy staff might miss.",
+      "Supporters also point out that fixed hours can be extremely difficult for families to follow. Many people work during the day and cannot easily reach the hospital in the middle of the afternoon, while others must travel long distances or look after children at home. A rule that allows visits only at certain times may therefore mean that some patients receive no visitors at all, not because their families do not care, but because their working lives make it impossible for them to come.",
+      "Critics of open visiting, however, raise important concerns. ( A ) visitors may bring comfort, they may also bring noise and crowding to wards where other patients are trying to sleep. In shared rooms, a patient who wants to rest may be disturbed by the visitors of the person in the next bed, and late-night visits in particular may interrupt the sleep that is essential to recovery. Critics argue that the needs of all patients, not only those with visitors, must be considered.",
+      "Critics also worry about the effect of unlimited visiting on the work of hospital staff. Doctors and nurses must examine patients, give medicine, and carry out procedures, and the presence of visitors at all hours may make these tasks slower and more difficult. There are also concerns about infection, since every visitor who enters a ward may carry illnesses that could spread to patients whose bodies are already weakened. During outbreaks of disease, critics note, strict limits may be necessary to protect everyone in the hospital. In their view, a rule that seems unkind to one family may in fact protect many others.",
+      "Some hospitals have tried to find a balance between these concerns. They allow visiting at most times of the day but set aside a quiet period, often in the early afternoon, when patients are encouraged to rest and visitors are asked to leave. Others limit the number of visitors at each bed, ask visitors to wash their hands when they arrive, or allow one family member to stay overnight with a patient who is very ill or very young, while keeping stricter rules for larger groups.",
+      "The debate over visiting hours therefore reflects a wider question about what hospitals are for. If a hospital is seen mainly as a place where medical treatment is given efficiently, visitors may appear to be an obstacle to that work. If, on the other hand, it is seen as a place where people are cared for as whole human beings, with families and relationships that matter to their recovery, then making it easier for loved ones to visit may come to seem not a favor but a natural part of good care.",
+    ],
+    ja: [
+      '長いあいだ、ほとんどの病院は、患者が見舞い客を受け入れるのを決まった時間だけにかぎってきた。それはたいてい午後の短い時間と夕方の早い時間である。それ以外の時間には、医師や看護師がじゃまされずに働き、患者が休めるように、家族や友人はふつう来ないよう求められてきた。しかし近年、こうした決まりをゆるめたり、すっかりなくしたりする病院がふえており、面会をいつでもみとめるべきかどうかという問いは、本当の議論の対象になっている。',
+      '自由な面会を支持する人々は、まず、愛する人がそばにいることは患者の回復を助けると主張する。入院することはしばしばこわくてさびしいことであり、とくにお年寄りや小さな子どもにとってはそうである。見なれた顔は不安をやわらげ、患者がより安心できるよう助けてくれる。研究によっては、たびたび見舞いを受ける患者は混乱しにくく、なじみのない環境で長いあいだひとりですごす患者よりも、早く退院できる状態になることさえあるという。家族はまた、いそがしい職員が見のがすかもしれない患者の様子の小さな変化に気づくこともできる。',
+      '支持する人々はまた、決まった時間は家族にとって守るのがとてもむずかしいことがあると指摘する。多くの人は昼間に働いていて、午後のさなかに病院へ行くのはかんたんではないし、遠くから来なければならない人や、家で子どもの世話をしなければならない人もいる。したがって、ある時間にだけ面会をみとめる決まりは、家族が気にかけていないからではなく、仕事の事情で来ることができないために、だれも見舞いに来ない患者を生むことになるかもしれない。',
+      'しかし自由な面会を批判する人々は、大切な心配をあげる。見舞い客はなぐさめをもたらすかもしれないが、ほかの患者がねむろうとしている病棟に、さわがしさや混雑ももちこむかもしれない。相部屋では、休みたい患者がとなりのベッドの人の見舞い客にじゃまされることがあり、とくに夜おそくの面会は、回復に欠かせない睡眠をさまたげるかもしれない。見舞い客のいる患者だけでなく、すべての患者の必要を考えなければならないと批判する人々は主張する。',
+      '批判する人々はまた、面会を無制限にすることが病院の職員の仕事にあたえる影響を心配している。医師や看護師は患者を診察し、薬をあたえ、処置を行わなければならず、いつでも見舞い客がいると、こうした仕事がおそく、むずかしくなるかもしれない。感染についての心配もある。病棟に入る見舞い客のひとりひとりが、すでに体が弱っている患者にうつりうる病気をもちこむかもしれないからである。病気が流行しているあいだは、病院にいるすべての人を守るためにきびしい制限が必要かもしれないと批判する人々は指摘する。彼らの考えでは、ある家族には不親切に思える決まりが、実はほかの多くの人々を守っているのかもしれない。',
+      'こうした心配のあいだでつりあいをとろうとしてきた病院もある。1日のほとんどの時間に面会をみとめながら、たいてい午後の早い時間に、患者が休むようすすめられ、見舞い客には帰ってもらう静かな時間を設けるのである。また、ベッドごとの見舞い客の数を制限したり、到着したときに手をあらうよう求めたり、とても重い病気の患者やとても幼い患者には家族ひとりが夜も付きそえるようにしたりしながら、大人数のグループにはよりきびしい決まりを残す病院もある。',
+      'したがって、面会時間をめぐる議論は、病院は何のためにあるのかという、より広い問いを映し出している。病院がおもに医療が効率よく行われる場所と見なされるなら、見舞い客はその仕事のさまたげに見えるかもしれない。一方、病院が、回復にとって大切な家族や人間関係をもつ、ひとりの人間全体として人々が世話を受ける場所と見なされるなら、愛する人が見舞いに来やすくすることは、特別なはからいではなく、よい世話の自然な一部と思えるようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「見舞い客はなぐさめをもたらすかもしれないが、さわがしさももちこむ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say visits from loved ones reduce ( 1 ) and help patients recover, and that fixed hours are hard for working families. Critics worry about noise, the work of staff, and the risk of ( 2 ). Some hospitals allow visits at most times but keep a ( 3 ) period when patients are encouraged to rest.',
+      blanks: [
+        { choices: ['anxiety', 'costs', 'hunger', 'pain'], answer: 0, why: '第2段落 a familiar face can reduce anxiety。' },
+        { choices: ['infection', 'fire', 'theft', 'flooding'], answer: 0, why: '第5段落 There are also concerns about infection。' },
+        { choices: ['quiet', 'busy', 'long', 'dark'], answer: 0, why: '第6段落 set aside a quiet period。' },
+      ],
+    },
+    tf: [
+      { statement: 'たびたび見舞いを受ける患者は混乱しにくいという研究がある。', answer: true, why: '第2段落 patients who receive frequent visits are less likely to become confused。' },
+      { statement: '支持する人々によると、見舞いに来ない家族はみな患者を気にかけていない。', answer: false, why: '第3段落 not because their families do not care。' },
+      { statement: '夜おそくの面会は、回復に欠かせない睡眠をさまたげるかもしれない。', answer: true, why: '第4段落 late-night visits ... may interrupt the sleep that is essential to recovery。' },
+      { statement: 'どの病院も、家族が夜に付きそうことをいっさいみとめていない。', answer: false, why: '第6段落 allow one family member to stay overnight。' },
+    ],
+    qa: [
+      { q: 'Why may some patients receive no visitors at all under fixed hours?', choices: ['Their families cannot come because of work.', 'Their families do not care about them.', 'The hospital is closed in the afternoon.', 'Visitors must pay to enter.'], answer: 0, why: '第3段落 because their working lives make it impossible for them to come。' },
+      { q: 'What may visitors carry into a ward, according to critics?', choices: ['Illnesses that could spread to patients.', 'Food that patients cannot eat.', 'Flowers that cause allergies.', 'Too many presents.'], answer: 0, why: '第5段落 may carry illnesses that could spread to patients。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
