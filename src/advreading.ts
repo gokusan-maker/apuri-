@@ -45698,6 +45698,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-sign-language-school',
+    title: 'Should Schools Teach Sign Language?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most schools teach at least one foreign language, but very few teach the sign language used by deaf people in their own country. In recent years, however, a number of educators and campaigners have argued that sign language should become a regular part of the school curriculum, studied by hearing and deaf children alike. Supporters see this as a way of building a more inclusive society, while others question whether it is the best use of limited school time, and the proposal has begun to attract serious attention.",
+      "Supporters argue first that teaching sign language would break down barriers between deaf and hearing people. Many deaf people find that everyday activities, such as shopping, visiting a doctor, or talking with neighbors, are made difficult not by their deafness itself but by the fact that so few people around them can communicate in their language. If hearing children learned even the basics of sign language at school, supporters say, the next generation would be far better able to include deaf people in ordinary social life. Deaf children, too, would benefit from classmates who could talk with them freely during lessons and at break times.",
+      "Supporters also point out that learning sign language can benefit hearing children themselves. Studies have suggested that young children who learn signs develop a stronger awareness of language and may find it easier to learn other languages later. Sign language also encourages children to pay close attention to facial expressions and gestures, skills that are valuable in many forms of communication. In addition, supporters note, sign language can be useful in situations where speech is impossible, such as in very noisy places.",
+      "Critics, however, raise practical objections. ( A ) the goal of a more inclusive society may be admirable, school timetables are already crowded, and adding a new subject would mean reducing the time available for others, such as mathematics, science, or spoken foreign languages that may be important for future careers. Critics also point out that there are not enough qualified teachers of sign language, and that training them would take time and money that many school systems do not have. Poorly taught lessons, they warn, might do more harm than good by giving students a false sense of their ability.",
+      "Critics further question whether compulsory lessons would achieve their aims. Like any language, sign language requires regular practice to be maintained, and many students who study a foreign language for several years still forget most of it once they leave school. Without frequent opportunities to use sign language outside the classroom, critics argue, most hearing students would quickly lose what they had learned, and the benefits for deaf people might therefore be smaller than supporters expect.",
+      "Some schools have tried to find a middle way. Instead of making sign language a full subject, they offer it as an optional course or a club activity, or include a few basic lessons within existing subjects such as language studies or social studies. Others invite deaf adults to visit classrooms, so that children can learn not only signs but also something about the lives and culture of deaf people, which many teachers believe is just as important as the language itself. Such visits, teachers report, often leave a lasting impression on children.",
+      "The debate over teaching sign language therefore reflects a wider question about what schools are for. If education is seen mainly as preparation for work and examinations, a new subject may appear to be a luxury. If, on the other hand, schools are also meant to prepare children to live together with people who are different from themselves, then learning to communicate with deaf members of the community may come to seem not an extra but an essential part of growing up.",
+    ],
+    ja: [
+      'ほとんどの学校は少なくともひとつの外国語を教えているが、自分の国の耳の聞こえない人々が使う手話を教える学校はとても少ない。しかし近年、手話を学校のふつうの教科の一部にし、聞こえる子どもも聞こえない子どもも同じように学ぶべきだと主張する教育者や運動家がふえている。支持する人々はこれを、だれもが受け入れられる社会を築く方法と見なしているが、かぎられた学校の時間の最善の使い方かどうかを疑問に思う人もおり、この提案は真剣な注目を集めはじめている。',
+      '支持する人々は、まず、手話を教えることは聞こえない人々と聞こえる人々とのあいだのかべを取りはらうだろうと主張する。多くの聞こえない人々は、買い物や病院へ行くこと、近所の人と話すことのような日々の活動がむずかしくなっているのは、耳が聞こえないことそのものではなく、まわりに自分のことばで話せる人がほとんどいないためだと感じている。聞こえる子どもたちが学校で手話の基本だけでも学べば、次の世代は聞こえない人々をふつうの社会生活にずっと受け入れやすくなるだろうと支持する人々は言う。聞こえない子どもたちにとっても、授業中や休み時間に自由に話せるクラスの仲間がいることは利益になるだろう。',
+      '支持する人々はまた、手話を学ぶことは聞こえる子どもたち自身にも利益になりうると指摘する。研究によれば、手話を学ぶ幼い子どもはことばへの意識が強まり、あとでほかの言語を学ぶのが楽になるかもしれないという。手話はまた、子どもが表情や身ぶりに注意をはらうようはげまし、それは多くの形の伝え合いで役立つ力である。さらに、手話はとてもさわがしい場所のように、話すことができない場面でも役に立つと支持する人々は指摘する。',
+      'しかし批判する人々は、実際的な反論をあげる。だれもが受け入れられる社会という目標はりっぱかもしれないが、学校の時間割はすでにいっぱいであり、新しい教科を加えれば、数学や理科、将来の仕事に大切かもしれない話しことばの外国語など、ほかの教科の時間をへらすことになる。批判する人々はまた、手話の資格をもつ先生が十分におらず、その養成には多くの学校のしくみにない時間とお金がかかると指摘する。教え方の悪い授業は、生徒に自分の力についてまちがった自信をあたえ、益より害のほうが大きくなるかもしれないと彼らは警告する。',
+      '批判する人々はさらに、必修の授業が目的をはたせるかどうかを疑問に思う。どの言語とも同じように、手話もたもつにはふだんの練習が必要であり、何年も外国語を学んだ多くの生徒も、学校を出るとそのほとんどをわすれてしまう。教室の外で手話を使う機会がたびたびなければ、聞こえる生徒のほとんどは学んだことをすぐに失ってしまい、そのため聞こえない人々にとっての利益は、支持する人々が期待するより小さいかもしれないと批判する人々は主張する。',
+      '中間の道を見つけようとしてきた学校もある。手話を正式な教科にするかわりに、選択の授業やクラブ活動として提供したり、言語の学習や社会科などのいまある教科の中に基本の授業をいくつかふくめたりするのである。また、聞こえない大人を教室にまねき、子どもたちが手話だけでなく、聞こえない人々の生活や文化についても学べるようにしている学校もある。多くの先生は、それがことばそのものと同じくらい大切だと考えている。そうした訪問は、子どもたちに長く残る印象をあたえることが多いと先生たちは報告している。',
+      'したがって、手話を教えることをめぐる議論は、学校は何のためにあるのかという、より広い問いを映し出している。教育がおもに仕事や試験への準備と見なされるなら、新しい教科はぜいたくに見えるかもしれない。一方、学校が子どもたちに自分とはちがう人々とともにくらす準備をさせるものでもあるなら、地域の聞こえない人々と伝え合うことを学ぶのは、おまけではなく、成長に欠かせない一部に思えるようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「目標はりっぱかもしれないが、時間割はすでにいっぱいだ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say teaching sign language would break down barriers and help hearing children develop an awareness of ( 1 ). Critics argue that timetables are crowded, qualified ( 2 ) are lacking, and students may forget what they learn. Some schools offer sign language as an optional course or invite deaf ( 3 ) to visit classrooms.',
+      blanks: [
+        { choices: ['language', 'money', 'sports', 'history'], answer: 0, why: '第3段落 develop a stronger awareness of language。' },
+        { choices: ['teachers', 'buildings', 'books', 'computers'], answer: 0, why: '第4段落 there are not enough qualified teachers of sign language。' },
+        { choices: ['adults', 'animals', 'doctors', 'musicians'], answer: 0, why: '第6段落 invite deaf adults to visit classrooms。' },
+      ],
+    },
+    tf: [
+      { statement: '自分の国の手話を教える学校はとても少ない。', answer: true, why: '第1段落 very few teach the sign language used by deaf people。' },
+      { statement: '支持する人々によると、聞こえない人々の日々の苦労は耳が聞こえないことだけが原因だ。', answer: false, why: '第2段落 not by their deafness itself but by the fact that so few people ... can communicate。' },
+      { statement: '手話は、とてもさわがしい場所でも役に立つ。', answer: true, why: '第3段落 such as in very noisy places。' },
+      { statement: 'すべての学校が、手話を正式な必修の教科にしている。', answer: false, why: '第6段落 Instead of making sign language a full subject ...。' },
+    ],
+    qa: [
+      { q: 'Why might most hearing students quickly lose what they had learned?', choices: ['They lack opportunities to use sign language outside class.', 'The lessons are too easy.', 'They have too many deaf friends.', 'Sign language changes every year.'], answer: 0, why: '第5段落 Without frequent opportunities to use sign language outside the classroom。' },
+      { q: 'What do many teachers believe is just as important as the language itself?', choices: ['Learning about the lives and culture of deaf people.', 'Passing examinations.', 'Learning spoken foreign languages.', 'Using computers in class.'], answer: 0, why: '第6段落 something about the lives and culture of deaf people。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
