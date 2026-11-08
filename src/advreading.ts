@@ -45218,6 +45218,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-free-returns',
+    title: 'Should Online Returns Be Free?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many shoppers, one of the great attractions of buying online is the promise of free returns. If a pair of shoes does not fit or a jacket looks different from its picture, the customer can simply send it back without paying anything. Many online shops have made free returns a central part of their business, believing that customers will buy more if they know they can change their minds. Recently, however, a number of companies have begun to charge for returns, and the question of whether free returns should continue has become a matter of public debate.",
+      "Supporters of free returns argue first that they are fair to customers. When people shop in a physical store, they can see, touch, and try on goods before buying them, but online shoppers must rely on pictures and descriptions that may be inaccurate. Free returns, supporters say, simply give online customers the same chance to examine goods that shoppers in stores have always had, and they protect people from losing money because of mistakes or misleading information that are not their own fault.",
+      "Supporters also note that free returns can benefit shops themselves. Customers who are confident that they can return goods without cost may be more willing to try new brands or to buy more expensive items, and they may become loyal to a shop that treats them generously. In a market where many sellers offer similar products, a simple and free returns policy can be one of the main reasons why customers choose one shop rather than another. Removing free returns, supporters warn, could drive customers toward larger competitors who can afford to keep them.",
+      "Critics, however, argue that free returns carry hidden costs that are paid by everyone. ( A ) a return may cost the customer nothing, the shop must pay to transport the item, check it, repackage it, and return it to its shelves, and a surprisingly large share of returned goods can never be sold again and is simply thrown away. These costs, critics point out, are eventually included in the prices that all customers pay, so that those who rarely return anything are in effect paying for those who return a great deal.",
+      "Critics also draw attention to the environmental impact of free returns. Every returned item must travel back through the delivery system, adding to traffic and pollution, and some shoppers have developed the habit of ordering several sizes or colors of the same item with the intention of keeping only one. Such habits, critics argue, are encouraged by the promise that returns cost nothing, and they turn shopping into a process that wastes energy, packaging, and goods on a very large scale. In some countries, returned clothes are even burned because sorting them would cost more than they are worth.",
+      "Some companies have tried to find a middle way. They continue to offer free returns to customers who bring items back to a physical store or to a collection point, but charge a small fee for items collected from the customer's home. Others provide more detailed information about the size and fit of their products, sometimes with the help of reviews from other customers, in the hope of reducing the number of returns before they happen rather than charging people afterwards.",
+      "The debate over free returns therefore reflects a wider question about the true cost of convenience. Services that seem free to individual customers are rarely free in reality, and their costs may be spread across society or passed on to the natural environment. As online shopping continues to grow, both shops and customers may need to think more carefully about who should pay for the choices that make shopping easy, and whether some of those choices are worth their price at all.",
+    ],
+    ja: [
+      '多くの買い物客にとって、オンラインで買うことの大きな魅力のひとつは、無料で返品できるという約束である。くつのサイズが合わなかったり、上着が写真とちがって見えたりしても、客はお金を何も払わずにそれを送り返すことができる。多くのオンラインの店は、客は気が変わってもよいとわかっていればもっと買うだろうと考え、無料返品を商売の中心にしてきた。しかし最近、返品にお金をとりはじめる会社がふえており、無料返品を続けるべきかどうかという問いは、世の中の議論の的になっている。',
+      '無料返品を支持する人々は、まず、それは客にとって公平だと主張する。人々は実際の店で買い物をするとき、買う前に品物を見たり、さわったり、試着したりできるが、オンラインの客は、不正確かもしれない写真や説明にたよらなければならない。無料返品は、店の客がいつももっていた品物をたしかめる機会を、オンラインの客にもあたえるだけであり、自分のせいではないまちがいや誤解をまねく情報のために人々がお金を失わないよう守るものだと、支持する人々は言う。',
+      '支持する人々はまた、無料返品は店自身にも利益になりうると指摘する。費用をかけずに品物を返せると安心している客は、新しいブランドを試したり、より高い品物を買ったりしやすく、気前よくあつかってくれる店のなじみ客になるかもしれない。多くの売り手が同じような商品を提供する市場では、単純で無料の返品の方針が、客がほかの店ではなくその店を選ぶおもな理由のひとつになりうるのである。無料返品をやめれば、それを続ける余裕のある大きな競争相手に客を追いやることになりかねないと、支持する人々は警告する。',
+      'しかし批判する人々は、無料返品には、すべての人が払っている見えない費用があると主張する。返品は客には何の費用もかからないかもしれないが、店は品物を運び、点検し、つつみ直し、棚にもどすためにお金を払わなければならず、返品された品物のおどろくほど多くの割合は二度と売ることができず、ただ捨てられる。こうした費用は最終的にすべての客が払う値段にふくまれるので、ほとんど何も返品しない人々が、実質的にはたくさん返品する人々の分を払っていることになると批判する人々は指摘する。',
+      '批判する人々はまた、無料返品が環境にあたえる影響にも注意をうながす。返品されたひとつひとつの品物は配達のしくみを通ってもどらなければならず、交通量と汚染をふやす。さらに、同じ品物のサイズや色をいくつも注文し、ひとつだけ残すつもりでいる習慣を身につけた買い物客もいる。そうした習慣は返品が無料だという約束によってうながされており、買い物を、エネルギーや包装や品物をとても大きな規模でむだにする過程に変えてしまうと批判する人々は主張する。国によっては、返品された服を仕分けるほうがその値打ちより高くつくため、燃やされることさえある。',
+      '中間の道を見つけようとしてきた会社もある。実際の店や受け取り場所に品物を持ってきた客には無料返品を続けるが、客の家まで取りに行く品物には少額の料金をとるのである。また、ときにはほかの客の感想の助けも借りながら、商品のサイズや着心地についてよりくわしい情報を提供し、あとから客にお金をとるのではなく、返品が起こる前にその数をへらそうとしている会社もある。',
+      'したがって、無料返品をめぐる議論は、便利さの本当の費用についての、より広い問いを映し出している。個々の客には無料に思えるサービスが本当に無料であることはめったになく、その費用は社会全体に広がったり、自然環境に押しつけられたりしているかもしれない。オンラインでの買い物がふえつづけるなかで、店も客も、買い物を楽にする選択の費用をだれが払うべきか、そしてそうした選択のなかに、そもそもその値段に見合わないものがあるのではないかを、もっと注意深く考える必要があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「返品は客には費用がかからないかもしれないが、店は運ぶ費用などを払う」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say free returns give online shoppers a fair chance to examine goods and can make customers ( 1 ) to a shop. Critics argue that their hidden costs are paid by all customers and that they harm the ( 2 ). Some companies now charge a small fee only for items collected from customers’ ( 3 ).',
+      blanks: [
+        { choices: ['loyal', 'angry', 'tired', 'lazy'], answer: 0, why: '第3段落 they may become loyal to a shop。' },
+        { choices: ['environment', 'economy', 'government', 'schools'], answer: 0, why: '第5段落 the environmental impact of free returns。' },
+        { choices: ['homes', 'offices', 'schools', 'cars'], answer: 0, why: '第6段落 items collected from the customer’s home。' },
+      ],
+    },
+    tf: [
+      { statement: 'オンラインの客は、不正確かもしれない写真や説明にたよらなければならない。', answer: true, why: '第2段落 must rely on pictures and descriptions that may be inaccurate。' },
+      { statement: '返品された品物は、すべてもう一度売ることができる。', answer: false, why: '第4段落 a surprisingly large share ... can never be sold again。' },
+      { statement: '同じ品物をいくつも注文し、ひとつだけ残す買い物客もいる。', answer: true, why: '第5段落 ordering several sizes or colors ... keeping only one。' },
+      { statement: 'すべての会社が、返品が起こってから客にお金をとることだけを考えている。', answer: false, why: '第6段落 reducing the number of returns before they happen。' },
+    ],
+    qa: [
+      { q: 'According to critics, who in effect pays for those who return a great deal?', choices: ['Customers who rarely return anything.', 'The delivery drivers.', 'The government.', 'Shops in other countries.'], answer: 0, why: '第4段落 those who rarely return anything are in effect paying for those who return a great deal。' },
+      { q: 'What do some companies provide to reduce returns?', choices: ['More detailed information about size and fit.', 'Free delivery to every country.', 'Lower prices for all items.', 'Larger shopping bags.'], answer: 0, why: '第6段落 provide more detailed information about the size and fit。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
