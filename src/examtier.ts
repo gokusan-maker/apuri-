@@ -33,7 +33,9 @@ const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
 
 // 本文のむずかしさを数で見る：語数と、1文あたりの平均語数（入試の長文ほど1文が長く、構文が複雑になる）
 export function passageStats(p: LongPassage): { words: number; wps: number } {
-  const text = p.paragraphs.join(' ')
+  // 空所（( A ) など）は答えの語を入れて数える（空所の答えが2語以上でも本文の長さが変わらないように）
+  const fill = new Map(p.blanks.map((b) => [b.id, b.choices[b.answer]]))
+  const text = p.paragraphs.join(' ').replace(/\( ([A-Z]) \)/g, (m, id: string) => fill.get(id) ?? m)
   const words = (text.match(/[A-Za-z][A-Za-z'’-]*/g) ?? []).length
   const sentences = text.split(/[.!?]+["”)]?\s/).filter((s) => s.trim().length > 0).length
   return { words, wps: words / Math.max(1, sentences) }
