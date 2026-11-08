@@ -46578,6 +46578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-meat-free-days',
+    title: 'Should Schools Have Meat-Free Days?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a number of countries, some schools have begun to serve only vegetarian meals on one day each week. On these days, the school lunch contains no meat or fish, and students are offered dishes made from vegetables, beans, grains, and dairy products instead. Supporters see the practice as a simple way of improving health and protecting the environment, while critics regard it as an unwelcome restriction on what children eat. The question of whether schools should introduce meat-free days has become a subject of lively public discussion.",
+      "Supporters argue first that meat-free days can benefit the environment. Producing meat, especially beef, requires large amounts of land, water, and animal feed, and it releases significant quantities of gases that contribute to climate change. If millions of school meals each week contained no meat, supporters say, the combined effect could be considerable. In addition, schools that serve such meals can teach children about the connection between the food on their plates and the wider world, encouraging them to think about the consequences of their choices. Lessons in the classroom, they add, can be reinforced by what children actually eat at lunch.",
+      "Supporters also point to the benefits for health. Many children eat fewer vegetables, beans, and whole grains than doctors recommend, and a meat-free day gives them an opportunity to try dishes they might never eat at home. Supporters argue that well-planned vegetarian meals can provide all the nutrients that growing children need, and that learning to enjoy a wider variety of foods at an early age may encourage healthier eating habits that last throughout life. Children who are introduced to new foods in a friendly setting, they note, are often more willing to accept them.",
+      "Critics, however, argue that such decisions should be left to families. ( A ) the aims of meat-free days may be worthy, parents have the right to decide what their children eat, and some feel that schools should not try to influence their children's diets according to particular views about food. Critics also point out that for some children, especially those from poorer families, school lunch may be one of the main sources of protein in their diet, and that removing meat even once a week could affect their nutrition if the meals are not carefully planned.",
+      "Critics further worry that meat-free days may simply lead to waste. If children dislike the vegetarian dishes, they may leave much of their food uneaten, or bring snacks from home instead, so that neither the environmental nor the health benefits are achieved. Critics also note that school kitchens may lack the skills or resources to prepare appealing vegetarian meals, and that poorly prepared dishes could make children less, rather than more, willing to try such food in the future.",
+      "Some schools have tried to address these concerns. Rather than removing meat entirely, they offer a vegetarian option alongside the usual meal, so that students can choose freely. Others introduce meat-free days gradually, involve students in planning menus, and train cooks to prepare tasty dishes from vegetables and beans. Schools that have taken such steps often report that students become more willing to try new foods over time, and that the amount of food thrown away does not increase.",
+      "The debate over meat-free days therefore reflects a wider question about the role of schools in shaping children's habits. Schools have long been expected to teach not only academic subjects but also healthy ways of living, yet decisions about food touch on family traditions, personal beliefs, and cultural identity. Finding the right approach may require schools to work closely with parents and students, so that changes are made in ways that are both effective and respectful of different views. Explaining the reasons for any change may matter as much as the change itself.",
+    ],
+    ja: [
+      'いくつかの国で、週に1日だけベジタリアンの食事しか出さないようにしはじめた学校がある。そうした日には、学校の昼食には肉も魚も入っておらず、かわりに野菜や豆、穀物、乳製品でつくった料理が生徒に出される。支持する人々はこの取り組みを、健康をよくし、環境を守る単純な方法と見なしているが、批判する人々は、子どもが食べるものへの歓迎できない制限と見なしている。学校は肉なしの日を取り入れるべきかどうかという問いは、世の中の活発な話し合いの対象になっている。',
+      '支持する人々は、まず、肉なしの日は環境に利益をもたらしうると主張する。肉、とくに牛肉を生産するには、大量の土地や水、家畜のえさが必要であり、気候変動の原因となるガスをかなりの量出す。毎週何百万食もの学校給食に肉が入っていなければ、その効果を合わせるとかなり大きくなりうると支持する人々は言う。さらに、そうした食事を出す学校は、自分の皿の上の食べ物とより広い世界とのつながりについて子どもたちに教え、自分の選択がどんな結果をもたらすかを考えるようはげますことができる。教室での授業は、子どもが実際に昼食で食べるものによって、さらに身につくものになりうると彼らはつけ加える。',
+      '支持する人々はまた、健康への利益も指摘する。多くの子どもは医師がすすめるよりも野菜や豆、全粒穀物を食べる量が少なく、肉なしの日は、家ではけっして食べないかもしれない料理をためす機会をあたえてくれる。よく考えられたベジタリアンの食事は、成長する子どもが必要とするすべての栄養をあたえることができ、幼いころからさまざまな食べ物を楽しめるようになることは、一生続く健康的な食習慣をうながすかもしれないと支持する人々は主張する。親しみやすい場で新しい食べ物に出会った子どもは、それを受け入れやすいことが多いと彼らは指摘する。',
+      'しかし批判する人々は、そうした決定は家庭にまかせるべきだと主張する。肉なしの日の目的はりっぱかもしれないが、親には子どもが何を食べるかを決める権利があり、学校が食べ物についての特定の考えにしたがって子どもの食事に影響をあたえようとすべきではないと感じる親もいる。批判する人々はまた、一部の子ども、とくに貧しい家庭の子どもにとっては、学校の昼食が食事の中でたんぱく質をとるおもな手段のひとつかもしれず、食事が注意深く計画されていなければ、週に1度肉をなくすだけでも栄養に影響しうると指摘する。',
+      '批判する人々はさらに、肉なしの日はただむだを生むだけかもしれないと心配する。子どもがベジタリアンの料理をきらえば、食べ物の多くを残したり、かわりに家からおやつをもってきたりするかもしれず、そうなれば環境への利益も健康への利益も得られない。批判する人々はまた、学校の調理場には、おいしそうなベジタリアンの食事をつくる技術や資源が足りないかもしれず、うまくつくられていない料理は、子どもが将来そうした食べ物をためそうとする気持ちを、強めるどころか弱めてしまうかもしれないと指摘する。',
+      'こうした心配に対応しようとしてきた学校もある。肉を完全になくすかわりに、ふつうの食事とならべてベジタリアンの選択肢を用意し、生徒が自由に選べるようにするのである。また、肉なしの日を少しずつ取り入れ、献立づくりに生徒を加え、調理員に野菜や豆からおいしい料理をつくる研修をする学校もある。そうした取り組みをした学校では、生徒が時間とともに新しい食べ物をためすようになり、捨てられる食べ物の量はふえないと報告されることが多い。',
+      'したがって、肉なしの日をめぐる議論は、子どもの習慣を形づくるうえでの学校の役割についての、より広い問いを映し出している。学校は長いあいだ、勉強の教科だけでなく健康的な生き方も教えることを期待されてきたが、食べ物についての決定は、家庭の伝統や個人の信念、文化的なアイデンティティにかかわる。正しいやり方を見つけるには、学校が親や生徒と緊密に協力し、変化が効果的で、しかもさまざまな考えを尊重するやり方で行われるようにする必要があるのかもしれない。どんな変化についても、その理由を説明することは、変化そのものと同じくらい大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「肉なしの日の目的はりっぱかもしれないが、親には決める権利がある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say meat-free days help the environment and give children a chance to try healthier ( 1 ). Critics argue that such decisions belong to ( 2 ) and that unpopular meals may lead to waste. Some schools offer a vegetarian ( 3 ) alongside the usual meal so that students can choose freely.',
+      blanks: [
+        { choices: ['dishes', 'sports', 'books', 'games'], answer: 0, why: '第3段落 an opportunity to try dishes they might never eat at home。' },
+        { choices: ['families', 'teachers', 'farmers', 'doctors'], answer: 0, why: '第4段落 such decisions should be left to families。' },
+        { choices: ['option', 'teacher', 'garden', 'holiday'], answer: 0, why: '第6段落 they offer a vegetarian option alongside the usual meal。' },
+      ],
+    },
+    tf: [
+      { statement: '肉、とくに牛肉の生産には、大量の土地や水が必要だ。', answer: true, why: '第2段落 Producing meat, especially beef, requires large amounts of land, water ...。' },
+      { statement: '支持する人々によると、ベジタリアンの食事では子どもに必要な栄養はとれない。', answer: false, why: '第3段落 can provide all the nutrients that growing children need。' },
+      { statement: '一部の子どもにとって、学校の昼食はたんぱく質をとるおもな手段かもしれない。', answer: true, why: '第4段落 one of the main sources of protein in their diet。' },
+      { statement: '取り組みをした学校では、捨てられる食べ物の量が大きくふえたと報告されている。', answer: false, why: '第6段落 the amount of food thrown away does not increase。' },
+    ],
+    qa: [
+      { q: 'What might children do if they dislike the vegetarian dishes?', choices: ['Leave much of their food uneaten.', 'Ask for more vegetables.', 'Cook at home.', 'Stop going to school.'], answer: 0, why: '第5段落 they may leave much of their food uneaten。' },
+      { q: 'What do decisions about food touch on, according to the last paragraph?', choices: ['Family traditions, personal beliefs, and cultural identity.', 'Only the price of food.', 'The size of school kitchens.', 'The number of teachers.'], answer: 0, why: '第7段落 touch on family traditions, personal beliefs, and cultural identity。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
