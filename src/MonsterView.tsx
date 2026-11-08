@@ -3697,6 +3697,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 54 q6 6 12 0" stroke="#ffffff" strokeWidth="4" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'argali')
+    return (
+      <g>
+        {/* うずまきのツノ */}
+        <circle cx="34" cy="34" r="7" stroke="#3a2a18" strokeWidth="4" fill="none" />
+        <circle cx="66" cy="34" r="7" stroke="#3a2a18" strokeWidth="4" fill="none" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
