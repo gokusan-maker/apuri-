@@ -44062,6 +44062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-kettles',
+    title: 'On Kettles',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many homes, the day begins with the sound of a kettle. Someone fills it with water, sets it on the stove or switches it on, and waits for the familiar rumble that grows louder until the water boils. Because this routine is repeated so often, we rarely think about it, yet the kettle is a small object at the center of some of the most widespread human rituals, and the few minutes we spend waiting for it may reveal something about the way people pause, gather, and care for one another.",
+      "The most obvious purpose of a kettle is practical. It allows people to heat water quickly for drinking, cooking, and cleaning, and in places where tap water is not safe, boiling it has long been an important way of preventing disease. For much of history, heating water required building a fire and watching it carefully, and the arrival of kettles that could be placed directly on a stove, and later of electric kettles, saved countless hours of labor. In some regions, a heavy iron kettle kept warm on the stove all day once served as a constant source of hot water for the whole household.",
+      "Yet the kettle is also closely linked with hospitality. In many cultures, the first thing a host does when a guest arrives is to put the kettle on, as if the act of preparing a hot drink were itself a way of saying that the visitor is welcome. ( A ) the drink that follows may be simple, the gesture carries a meaning that goes far beyond refreshment, since it invites the guest to sit down, to stay a while, and to share a moment of conversation.",
+      "The time spent waiting for a kettle to boil also has a particular character. It is too short to begin any serious task but too long to ignore, and many people use it to pause, to look out of the window, or to talk with whoever happens to be in the kitchen. In offices, the area where the kettle stands often becomes a place where colleagues who rarely meet exchange a few words, so that the small delay created by boiling water produces opportunities for contact that might not otherwise occur.",
+      "The kettle has also become associated with comfort in difficult times. In many places, the instinctive response to bad news or to a crisis is to make a hot drink, and offering someone a cup of tea or coffee can express sympathy more simply than words. The ritual of preparing it, filling the kettle, waiting, and pouring, may itself be calming, giving people something familiar to do when they feel uncertain or distressed. Many people remember a relative or neighbor who, in a moment of sorrow, quietly filled the kettle without being asked, and they recall that simple act long after the words spoken that day have been forgotten.",
+      "In recent years, new machines have made it possible to produce hot drinks almost instantly, without any waiting at all. Such devices are undoubtedly convenient, but they may also remove the small pause that the kettle once created, the moment in which people stopped what they were doing and turned their attention, however briefly, to the people around them. Something that seemed like a minor inconvenience may thus have served a purpose that we notice only when it disappears.",
+      "Perhaps, then, kettles deserve more attention than we usually give them. They remind us that ordinary routines can carry deep meanings, and that the simple acts of making and sharing a hot drink can express welcome, sympathy, and companionship. In a world that values speed above almost everything else, the patient kettle may still teach us that some things are worth waiting for, and that the moments we spend waiting together can be among the most human moments of the day.",
+    ],
+    ja: [
+      '多くの家では、一日はやかんの音で始まる。だれかがそれに水を入れ、コンロにかけたりスイッチを入れたりして、お湯がわくまでだんだん大きくなる、あのなじみのゴロゴロという音を待つ。この日課はあまりにもくり返されるので、私たちはそれについてめったに考えないが、やかんは人間のもっとも広く見られる儀式のいくつかの中心にある小さな道具であり、それを待って過ごす数分間は、人々がどのように立ちどまり、集まり、おたがいを気づかうかについて、何かを明らかにしているのかもしれない。',
+      'やかんのもっとも明らかな目的は実用的なものである。それによって人々は、飲んだり、料理したり、きれいにしたりするための湯をすばやくわかすことができ、水道の水が安全でない場所では、それをわかすことは昔から病気をふせぐ大切な方法だった。歴史の大部分のあいだ、湯をわかすには火をおこして注意深く見守る必要があり、コンロにじかにのせられるやかんの登場、そしてのちには電気ポットの登場が、数えきれない時間の労働を省いた。地域によっては、一日じゅうコンロの上で温められている重い鉄のやかんが、かつて家族全員のためのたえまない湯の源になっていた。',
+      'しかしやかんは、もてなしとも深く結びついている。多くの文化で、客が来たときに主人がまずすることはやかんを火にかけることであり、まるで温かい飲み物を用意する行為そのものが、客を歓迎していると言う方法であるかのようである。そのあとに出される飲み物は簡単なものかもしれないが、そのしぐさには、のどをうるおすことをはるかにこえた意味がこめられている。それは客にすわって、しばらくとどまり、会話のひとときを分かち合うようさそうものだからである。',
+      'やかんがわくのを待つ時間にも、特別な性格がある。それは本格的な仕事を始めるには短すぎるが、無視するには長すぎる時間であり、多くの人はそれを使って立ちどまったり、窓の外を見たり、たまたま台所にいる人と話したりする。職場では、やかんの置かれた場所が、めったに会わない同僚どうしがことばを交わす場所になることが多く、湯をわかすことで生まれる小さなおくれが、そうでなければ起こらなかったかもしれないふれ合いの機会を生み出しているのである。',
+      'やかんはまた、苦しいときのなぐさめとも結びつくようになった。多くの場所で、悪い知らせや危機に対する本能的な反応は温かい飲み物をいれることであり、だれかにお茶やコーヒーを一杯差し出すことは、ことばよりも単純に思いやりを表すことができる。やかんに水を入れ、待ち、注ぐというそれを用意する儀式そのものが、人々を落ちつかせることもあり、不安や苦しみを感じているときに、なじみのあるすることをあたえてくれる。多くの人は、悲しみのときに、たのまれもしないのにしずかにやかんに水を入れてくれた親せきや隣人のことを覚えており、その日に交わされたことばをわすれてしまったずっとあとも、その単純な行いを思い出す。',
+      '近年、新しい機械のおかげで、まったく待たずにほとんど一瞬で温かい飲み物をつくれるようになった。そうした機器はたしかに便利だが、やかんがかつてつくり出していた小さな間、つまり人々がしていることをやめ、ほんの少しのあいだでもまわりの人々に注意を向けた瞬間を、取りさってしまうのかもしれない。ささいな不便に思えたものが、それが消えてはじめて気づく役目を果たしていたのかもしれないのである。',
+      'だとすれば、やかんは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。やかんは、ありふれた日課が深い意味をもちうること、そして温かい飲み物をつくり分かち合うという単純な行為が、歓迎や思いやり、仲間であることを表しうることを思い出させてくれる。何よりも速さが大切にされる世界で、根気強いやかんは、待つ価値のあるものもあること、そしていっしょに待って過ごす瞬間が、一日のなかでもっとも人間らしい瞬間の一つになりうることを、いまも教えてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「飲み物は簡単なものかもしれないが、しぐさには深い意味がある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '水道の水が安全でない場所では、水をわかすことが病気をふせぐ方法だった。', answer: true, why: '第2段落 boiling it has long been an important way of preventing disease。' },
+      { statement: '多くの文化で、客が来ると主人はまずやかんを火にかける。', answer: true, why: '第3段落 the first thing a host does ... is to put the kettle on。' },
+      { statement: 'やかんがわくのを待つ時間は、本格的な仕事を始めるのにちょうどよい長さである。', answer: false, why: '第4段落 too short to begin any serious task。' },
+      { statement: '筆者は、すぐに飲み物ができる機械には便利さがないと述べている。', answer: false, why: '第6段落 Such devices are undoubtedly convenient。' },
+    ],
+    qa: [
+      { q: 'What often happens near the kettle in offices?', choices: ['Colleagues who rarely meet exchange a few words.', 'Important meetings are held.', 'Workers take long naps.', 'Managers check attendance.'], answer: 0, why: '第4段落 colleagues who rarely meet exchange a few words。' },
+      { q: 'What is the instinctive response to bad news in many places?', choices: ['To make a hot drink.', 'To go for a long walk.', 'To call the police.', 'To turn on the television.'], answer: 0, why: '第5段落 the instinctive response to bad news ... is to make a hot drink。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
