@@ -3571,3 +3571,10 @@ it('正誤問題〈258〉：京大レベル search for・look for・seek の単�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) the missing child')
 })
+
+it('誤文訂正〈252〉：東大レベル concentrate on・focus on・be absorbed in の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-252')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('concentrate on')
+})

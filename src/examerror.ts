@@ -10730,6 +10730,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'We soon became [accustomed in] the noise of the city.', choices: ['accustomed to', 'accustomed at', 'accustomed by', 'accustomed with'], answer: 0, why: '「～になれる」は become accustomed to ～。' },
     ],
   },
+  {
+    id: 'exam-fix-252',
+    title: '入試の誤文訂正〈252〉（東大レベル：英作文の concentrate on・focus on・be absorbed in）',
+    points: ['「～に集中する」は concentrate on ～／focus on ～ で、前置詞は on（× concentrate in／× focus at）。他動詞として concentrate A on B（A を B に集中させる）とも言う。', 'be absorbed in ～ は「～に夢中になっている」で、前置詞は in。前置詞のあとに動詞を置くときは ～ing（concentrate on studying）。'],
+    examples: [{ en: 'I can’t concentrate on my homework. / We should focus on the main problem. / He was absorbed in a book.', ja: '宿題に集中できない。／おもな問題に焦点をしぼるべきだ。／彼は本に夢中になっていた。' }],
+    questions: [
+      { sentence: 'It is hard to [concentrate in] my work when it is noisy.', choices: ['concentrate on', 'concentrate at', 'concentrate to', 'concentrate with'], answer: 0, why: '「～に集中する」は concentrate on ～。' },
+      { sentence: 'The meeting [focused at] the budget for next year.', choices: ['focused on', 'focused to', 'focused in', 'focused by'], answer: 0, why: '「～に焦点をあてる」は focus on ～。' },
+      { sentence: 'She was so [absorbed on] the novel that she forgot the time.', choices: ['absorbed in', 'absorbed at', 'absorbed to', 'absorbed with'], answer: 0, why: '「～に夢中になる」は be absorbed in ～。' },
+      { sentence: 'You should concentrate on [study] for the exam.', choices: ['studying', 'to study', 'studied', 'studies'], answer: 0, why: '前置詞 on のあとは動名詞なので studying。' },
+      { sentence: 'The children [absorbed in] the game and did not hear me.', choices: ['were absorbed in', 'absorbed at', 'were absorbing to', 'absorbed on'], answer: 0, why: '「夢中になっている」は受け身の形 be absorbed in。' },
+      { sentence: 'Let’s [focus to] what we can do now.', choices: ['focus on', 'focus in', 'focus at', 'focus with'], answer: 0, why: '「～に焦点をあてる」は focus on ～。' },
+      { sentence: 'He tried to concentrate his attention [to] the problem.', choices: ['on', 'at', 'in', 'with'], answer: 0, why: 'concentrate A on B で「A を B に集中させる」。' },
+      { sentence: 'Being [absorbing] in his work, he skipped lunch.', choices: ['absorbed', 'absorb', 'absorbs', 'to absorb'], answer: 0, why: '「夢中になっている」は過去分詞 absorbed。' },
+      { sentence: 'The new course focuses on [improve] speaking skills.', choices: ['improving', 'improved', 'improves', 'to improve'], answer: 0, why: '前置詞 on のあとは動名詞なので improving。' },
+      { sentence: 'I find it difficult to [concentrate] the lecture after lunch.', choices: ['concentrate on', 'concentrate at', 'concentrate in', 'concentrate to'], answer: 0, why: 'concentrate は自動詞として concentrate on ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
