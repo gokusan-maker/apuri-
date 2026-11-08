@@ -1366,7 +1366,10 @@
   - [x] 511 誤文訂正〈252〉（東大レベル：英作文の concentrate on・focus on・be absorbed in）10問
   - [x] 512 正誤問題〈259〉（国公立レベル：英作文の apply for・apply to・graduate from）10問
   - [x] 513 誤文訂正〈253〉（京大レベル：英作文の adapt to・adjust to・get used to）10問
-  - [ ] 514 正誤問題〈260〉（東大レベル：英作文の belong to・recover from・suffer from の形）10問
+  - [x] 514 正誤問題〈260〉（東大レベル：英作文の belong to・recover from・suffer from の形）10問
+  - [ ] 515 誤文訂正〈254〉（国公立レベル：英作文の thank 人 for・blame 人 for・praise 人 for）10問
+  - [ ] 516 正誤問題〈261〉（京大レベル：英作文の accuse 人 of・congratulate 人 on・approve of）10問
+  - [ ] 517 誤文訂正〈255〉（東大レベル：英作文の worry about・be worried about・be anxious about）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中1）の3択の問題（129問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

@@ -6233,6 +6233,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Students (B) who wish to apply (C) for the program (D) must to submit an essay.', choices: ['(A) Students', '(B) who wish to apply', '(C) for the program', '(D) must to submit an essay'], answer: 3, why: 'must のあとは動詞の原形。must submit。' },
     ],
   },
+  {
+    id: 'exam-error-belong-recover',
+    title: '入試の正誤問題〈260〉（東大レベル：英作文の belong to・recover from・suffer from の形）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'belong to ～（～のものだ・～に所属している）は状態を表す動詞なので進行形にしない（× is belonging）。前置詞は to。',
+      'recover from ～（～から回復する）・suffer from ～（～に苦しむ・～をわずらう）は自動詞で、受け身にしない（× is suffered）。どちらも前置詞 from が必要。',
+    ],
+    examples: [
+      { en: 'This bag belongs to my sister. / He recovered from his illness.', ja: 'このかばんは姉のものだ。／彼は病気から回復した。' },
+      { en: 'Many people suffer from hay fever in spring.', ja: '春には多くの人が花粉症に苦しむ。' },
+    ],
+    questions: [
+      { sentence: '(A) This bag (B) is belonging (C) to (D) my sister.', choices: ['(A) This bag', '(B) is belonging', '(C) to', '(D) my sister'], answer: 1, why: 'belong は状態を表す動詞なので進行形にしない。belongs to。' },
+      { sentence: '(A) He (B) has fully (C) recovered (D) his illness.', choices: ['(A) He', '(B) has fully', '(C) recovered', '(D) his illness'], answer: 3, why: '「（病気）から回復する」は recover from ～。from his illness。' },
+      { sentence: '(A) Many people (B) are suffered (C) from (D) hay fever in spring.', choices: ['(A) Many people', '(B) are suffered', '(C) from', '(D) hay fever in spring'], answer: 1, why: 'suffer は受け身にしない。suffer from。' },
+      { sentence: '(A) Belong (B) to the club, (C) she can (D) use the gym for free.', choices: ['(A) Belong', '(B) to the club,', '(C) she can', '(D) use the gym for free'], answer: 0, why: '分詞構文なので Belonging to the club。' },
+      { sentence: '(A) The old castle (B) belongs (C) for (D) the city.', choices: ['(A) The old castle', '(B) belongs', '(C) for', '(D) the city'], answer: 2, why: '「～のものだ」は belong to ～。' },
+      { sentence: '(A) It took (B) her (C) a month to recover (D) of the operation.', choices: ['(A) It took', '(B) her', '(C) a month to recover', '(D) of the operation'], answer: 3, why: '「（手術）から回復する」は recover from ～。' },
+      { sentence: '(A) The town (B) suffers (C) from (D) a shortage of water every summers.', choices: ['(A) The town', '(B) suffers', '(C) from', '(D) a shortage of water every summers'], answer: 3, why: 'every のあとは単数なので every summer。' },
+      { sentence: '(A) My grandfather (B) is suffering (C) a bad cold (D) this week.', choices: ['(A) My grandfather', '(B) is suffering', '(C) a bad cold', '(D) this week'], answer: 2, why: '「（病気）にかかっている」は suffer from ～。from a bad cold。' },
+      { sentence: '(A) These books (B) belong to (C) the library, (D) so you must return it.', choices: ['(A) These books', '(B) belong to', '(C) the library,', '(D) so you must return it'], answer: 3, why: 'These books を受けるので them。return them。' },
+      { sentence: '(A) The economy (B) has slowly (C) recovered from (D) the crisis since last years.', choices: ['(A) The economy', '(B) has slowly', '(C) recovered from', '(D) the crisis since last years'], answer: 3, why: 'since のあとの last year は単数。since last year。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
