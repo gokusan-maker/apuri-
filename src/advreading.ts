@@ -46498,6 +46498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-heading-ball',
+    title: 'Should Children Be Allowed to Head the Ball?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In football, heading the ball is one of the most familiar skills in the game. Players use their heads to pass, to clear the ball away from danger, and to score goals, and a well-timed header is often greeted with loud applause. In recent years, however, concerns about the effects of repeated blows to the head have led some football organizations to restrict heading for young children, banning it entirely in training for certain age groups. Whether such rules should be extended has become a subject of serious discussion among parents, coaches, and doctors.",
+      "Supporters of restrictions argue first that children's brains are still developing and may be especially vulnerable to injury. Even when a header does not cause obvious harm, supporters say, repeated small impacts over many years might contribute to problems later in life. Some studies of former professional players have suggested that they may face a higher risk of certain brain illnesses than the general population, and although the causes are not yet fully understood, supporters argue that it is wiser to be cautious when the health of children is at stake. Waiting for complete proof, they warn, could mean that a whole generation of young players is exposed to unnecessary risk.",
+      "Supporters also point out that children can learn to play football well without heading the ball. Young players spend most of their time learning to control the ball with their feet, to pass accurately, and to understand the game, and heading plays only a small part in matches at that age. Delaying the practice of heading until players are older and stronger, supporters argue, would reduce risks without preventing children from enjoying the sport or developing their skills.",
+      "Critics, however, argue that the evidence for harm is still uncertain. ( A ) concerns about head injuries are understandable, many of the studies involve professional players who headed heavy balls thousands of times over long careers, and their results may not apply to children who head light balls only occasionally. Critics warn that rules based on limited evidence may change the nature of the game unnecessarily and discourage some children from taking part in a sport that brings great benefits to their health.",
+      "Critics also argue that banning heading for young players may make the game more dangerous later. If children never learn the correct technique, they may be more likely to injure themselves when they begin heading the ball as teenagers, when they are bigger, faster, and play more competitively. In addition, critics note, other sports involve risks of head injury as well, and focusing on football alone may give a misleading picture of where the real dangers lie. Some argue that rules about tackling and collisions between players deserve just as much attention.",
+      "Some organizations have tried to find a balance. Rather than banning heading completely, they limit the number of headers that young players may practice each week, use lighter balls for younger age groups, and teach proper technique gradually as children grow. They also train coaches and referees to recognize the signs of head injury, so that players who are hurt can be removed from the game and examined. Such measures aim to reduce risks while keeping the sport recognizable and enjoyable.",
+      "The debate over heading the ball therefore reflects a wider question about how societies should respond to uncertain risks. When the evidence is incomplete, people must decide whether to act cautiously and accept some loss of freedom or tradition, or to wait for clearer proof and accept the possibility of harm. In matters concerning children's health, many people believe that caution should come first, but the right balance may depend on continued research and on careful attention to what the evidence actually shows.",
+    ],
+    ja: [
+      'サッカーで、ボールを頭で受けるヘディングは、試合でもっともなじみ深い技術のひとつである。選手は頭を使ってパスをし、ボールを危険から遠ざけ、ゴールを決める。そしてタイミングのよいヘディングには、しばしば大きな拍手が送られる。しかし近年、頭へのくり返しの衝撃が引き起こす影響への心配から、幼い子どものヘディングを制限し、ある年齢の集団では練習で完全に禁止するサッカーの団体も出てきた。そうした決まりを広げるべきかどうかは、親やコーチ、医師のあいだで真剣な話し合いの対象になっている。',
+      '制限を支持する人々は、まず、子どもの脳はまだ発達のとちゅうであり、とくにけがをしやすいかもしれないと主張する。ヘディングが目に見える害を引き起こさなくても、何年にもわたるくり返しの小さな衝撃が、のちの人生で問題の一因になるかもしれないと支持する人々は言う。元プロ選手の研究のなかには、彼らが一般の人々よりもある種の脳の病気になる危険が高いかもしれないことを示すものもあり、原因はまだ十分にわかっていないが、子どもの健康がかかっているときは用心するほうがかしこいと支持する人々は主張する。完全な証明を待てば、若い選手の一世代まるごとが必要のない危険にさらされることになりかねないと彼らは警告する。',
+      '支持する人々はまた、子どもはヘディングをしなくてもサッカーをじょうずにできるようになると指摘する。幼い選手は、ほとんどの時間を足でボールをあつかうことや、正確にパスをすること、試合を理解することを学ぶのに使っており、その年齢の試合でヘディングがはたす役割は小さい。選手がもっと大きく強くなるまでヘディングの練習を遅らせれば、子どもがスポーツを楽しんだり技術をのばしたりするのをさまたげることなく、危険をへらせるだろうと支持する人々は主張する。',
+      'しかし批判する人々は、害についての証拠はまだはっきりしていないと主張する。頭のけがへの心配は理解できるが、研究の多くは、長い選手生活のあいだに重いボールを何千回もヘディングしたプロ選手を対象にしており、軽いボールをたまにしかヘディングしない子どもには、その結果は当てはまらないかもしれない。かぎられた証拠にもとづく決まりは、試合の性質を必要以上に変え、健康に大きな利益をもたらすスポーツに加わることを一部の子どもに思いとどまらせるかもしれないと批判する人々は警告する。',
+      '批判する人々はまた、幼い選手のヘディングを禁止すると、のちに試合がかえって危険になるかもしれないと主張する。子どもが正しい技術を一度も学ばなければ、10代になってヘディングを始めたとき、体が大きく速くなり、より競争の激しい試合をするようになってから、けがをしやすくなるかもしれない。さらに、ほかのスポーツにも頭のけがの危険はあり、サッカーだけに注目すると、本当の危険がどこにあるのかについて誤解をまねく見方をあたえるかもしれないと批判する人々は指摘する。選手どうしのタックルや衝突についての決まりも、同じくらい注目されるべきだと主張する人もいる。',
+      'つりあいを見つけようとしてきた団体もある。ヘディングを完全に禁止するかわりに、幼い選手が毎週練習してよいヘディングの回数を制限し、年下の集団には軽いボールを使い、子どもの成長に合わせて正しい技術を少しずつ教えるのである。また、コーチや審判に頭のけがのしるしを見分けるよう訓練し、けがをした選手を試合から外して診察できるようにしている。そうした対策は、スポーツらしさと楽しさをたもちながら、危険をへらすことをめざしている。',
+      'したがって、ヘディングをめぐる議論は、社会が不確かな危険にどのようにこたえるべきかという、より広い問いを映し出している。証拠が不十分なとき、人々は、用心深く行動して自由や伝統をある程度失うことを受け入れるか、よりはっきりした証明を待って害が起こる可能性を受け入れるかを決めなければならない。子どもの健康にかかわる問題では、用心を優先すべきだと考える人が多いが、正しいつりあいは、研究を続けることと、証拠が実際に何を示しているのかに注意深く目を向けることによるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「頭のけがへの心配は理解できるが、研究の多くはプロ選手が対象だ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say children’s brains may be especially ( 1 ) and that young players can learn football without heading. Critics argue that the evidence is still uncertain and that children who never learn the correct ( 2 ) may be injured later. Some organizations limit the number of headers and use ( 3 ) balls for younger players.',
+      blanks: [
+        { choices: ['vulnerable', 'strong', 'large', 'quiet'], answer: 0, why: '第2段落 may be especially vulnerable to injury。' },
+        { choices: ['technique', 'rules', 'language', 'diet'], answer: 0, why: '第5段落 If children never learn the correct technique。' },
+        { choices: ['lighter', 'heavier', 'larger', 'harder'], answer: 0, why: '第6段落 use lighter balls for younger age groups。' },
+      ],
+    },
+    tf: [
+      { statement: 'ある年齢の集団で、練習でのヘディングを完全に禁止した団体がある。', answer: true, why: '第1段落 banning it entirely in training for certain age groups。' },
+      { statement: '支持する人々によると、幼い選手の試合ではヘディングが大きな役割をはたしている。', answer: false, why: '第3段落 heading plays only a small part in matches at that age。' },
+      { statement: '多くの研究は、重いボールを何千回もヘディングしたプロ選手が対象である。', answer: true, why: '第4段落 professional players who headed heavy balls thousands of times。' },
+      { statement: 'すべての団体が、ヘディングを完全に禁止している。', answer: false, why: '第6段落 Rather than banning heading completely ...。' },
+    ],
+    qa: [
+      { q: 'What do critics say focusing on football alone may give?', choices: ['A misleading picture of where the real dangers lie.', 'A clear answer about head injuries.', 'More money for football clubs.', 'Better training for coaches.'], answer: 0, why: '第5段落 may give a misleading picture of where the real dangers lie。' },
+      { q: 'What are coaches and referees trained to recognize?', choices: ['The signs of head injury.', 'The best young players.', 'Unfair tactics.', 'Changes in the weather.'], answer: 0, why: '第6段落 train coaches and referees to recognize the signs of head injury。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
