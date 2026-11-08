@@ -46382,6 +46382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ropes',
+    title: 'On Ropes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A rope is one of the simplest tools that human beings have ever made. It is nothing more than fibers twisted together until they become long and strong, and it can be found coiled in sheds, tied to boats, and hanging in gymnasiums. Most of us use rope only occasionally and give it little thought. Yet the ability to make rope was one of the most important skills in human history, and without it many of the achievements we take for granted, from sailing ships to great bridges, would never have been possible.",
+      "The basic principle of rope-making is surprisingly clever. A single fiber of plant or animal material is weak and short, but when many fibers are twisted together, the friction between them holds them in place, so that the whole becomes far stronger than any of its parts. Twisting several such strands together in the opposite direction makes the rope even stronger and prevents it from unwinding. People in many parts of the world discovered this principle independently, using whatever materials were available, from grass and bark to hair and leather. The fact that so many peoples arrived at the same solution suggests how naturally the idea follows from careful observation.",
+      "Rope made possible a remarkable range of activities. ( A ) the stone blocks of ancient monuments may seem impossibly heavy, they were moved and raised with the help of ropes, often pulled by large teams of workers. Sailing ships depended on ropes to raise and control their sails, and a large ship might carry many kilometers of rope. Ropes were also used to build bridges across rivers and deep valleys, to draw water from wells, and to tie loads onto the backs of animals.",
+      "Because ropes were so important, rope-making became a skilled trade. In some towns, long narrow buildings were constructed where workers walked backward for great distances, twisting fibers as they went, in order to produce ropes long enough for ships. The strength and reliability of a rope could mean the difference between life and death for sailors and climbers, and those who made ropes took great pride in the quality of their work. A single weak point, after all, could cause an entire rope to fail.",
+      "In modern times, ropes are often made from artificial fibers that are lighter and stronger than natural ones and that do not rot when wet. Such ropes are used in mountain climbing, rescue work, and sport, as well as in industry and shipping. Yet the basic principle of twisting or weaving many small fibers into a single strong line has hardly changed, and the same idea is used in the steel cables that support modern bridges and lifts.",
+      "Rope has also given us many images and expressions. We speak of learning the ropes when we come to understand how something works, of being at the end of one's rope when we can endure no more, and of a lifeline when we mean something that offers help in a crisis. The image of a rope suggests both connection and support, linking people to one another and holding them safely, but it can also suggest restraint, as when someone is tied down or held back.",
+      "Perhaps, then, the rope deserves more thought than we usually give it. It shows how weak materials can become strong through cooperation, it made possible some of the greatest human achievements, and it has given us powerful ways of thinking about connection and support. The next time we pick up a piece of rope, it may be worth remembering that this simple object embodies an idea that has served human beings for thousands of years: that many small things, bound together, can bear a great weight.",
+    ],
+    ja: [
+      'ロープは、人間がこれまでにつくったもっとも単純な道具のひとつである。それは長くじょうぶになるまでよりあわせた繊維にすぎず、物置にまかれていたり、船にむすびつけられていたり、体育館にぶらさがっていたりする。私たちのほとんどはロープをたまにしか使わず、ほとんど考えることもない。しかしロープをつくる力は人間の歴史でもっとも大切な技術のひとつであり、それがなければ、帆船から大きな橋にいたるまで、私たちが当たり前と思っている多くの成果はけっして可能にならなかっただろう。',
+      'ロープづくりの基本的な原理はおどろくほどかしこい。植物や動物の材料からとった1本の繊維は弱くて短いが、多くの繊維をよりあわせると、そのあいだのまさつがそれらをその場にとどめ、全体はどの部分よりもはるかにじょうぶになる。そうした糸を何本か反対の方向にいっしょによりあわせると、ロープはさらにじょうぶになり、ほどけにくくなる。世界の多くの地域の人々が、草や木の皮から毛や革まで、手に入るどんな材料でも使って、この原理をそれぞれ独自に発見した。これほど多くの人々が同じ解決にたどり着いたことは、その考えが注意深い観察からいかに自然に生まれるかを示している。',
+      'ロープはおどろくほど幅広い活動を可能にした。古代の記念碑の石のかたまりは、とても動かせないほど重く思えるかもしれないが、それらはしばしば働き手の大きな集団に引かれたロープの助けで動かされ、持ち上げられた。帆船は帆を上げてあやつるのにロープにたより、大きな船は何キロメートルものロープを積んでいることもあった。ロープはまた、川や深い谷に橋をかけたり、井戸から水をくみ上げたり、動物の背中に荷物をしばりつけたりするのにも使われた。',
+      'ロープはとても大切だったので、ロープづくりは熟練した仕事になった。町によっては、細長い建物が建てられ、そこでは働き手が繊維をよりながら長い距離をうしろ向きに歩き、船に使えるほど長いロープをつくった。ロープのじょうぶさと信頼性は、船乗りや登山者にとって生死をわけることがあり、ロープをつくる人々は自分の仕事の質に大きなほこりをもっていた。なにしろ、たったひとつの弱い部分がロープ全体を切れさせてしまうこともありえたのである。',
+      '現代では、ロープはしばしば、自然の繊維より軽くじょうぶで、ぬれてもくさらない人工の繊維でつくられる。そうしたロープは登山や救助活動、スポーツ、さらに産業や海運で使われている。しかし多くの小さな繊維をよりあわせたり編んだりして1本のじょうぶな線にするという基本的な原理はほとんど変わっておらず、同じ考えが、現代の橋やエレベーターをささえる鋼のケーブルにも使われている。',
+      'ロープはまた、多くのイメージや表現をあたえてくれた。私たちは、何かのしくみがわかるようになることを「ロープを学ぶ（こつを覚える）」と言い、もうがまんできないときを「ロープのはしにいる（万策つきた）」と言い、危機のときに助けになるものを「命づな」と言う。ロープのイメージは、人々をたがいにつなぎ、安全にささえるという、つながりとささえの両方を思わせるが、だれかがしばりつけられたり、引きとめられたりするときのように、束縛を思わせることもある。',
+      'だとすれば、ロープは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは弱い材料が協力によってじょうぶになりうることを示し、人間のもっとも偉大な成果のいくつかを可能にし、つながりとささえについて考える力強い方法をあたえてくれた。次にロープを手にとるとき、この単純なものが、何千年ものあいだ人間に役立ってきたひとつの考えを体現していることを思い出してみる価値があるかもしれない。それは、多くの小さなものも、たばねられれば大きな重さにたえられるという考えである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「石のかたまりはとても重く思えるかもしれないが、ロープで動かされた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '多くの繊維をよりあわせると、どの部分よりもじょうぶになる。', answer: true, why: '第2段落 the whole becomes far stronger than any of its parts。' },
+      { statement: 'ロープづくりの原理は、世界のひとつの場所でしか発見されなかった。', answer: false, why: '第2段落 People in many parts of the world discovered this principle independently。' },
+      { statement: '現代の人工のロープは、ぬれてもくさらない。', answer: true, why: '第5段落 do not rot when wet。' },
+      { statement: '筆者によると、ロープのイメージはつながりだけを表し、束縛は表さない。', answer: false, why: '第6段落 it can also suggest restraint。' },
+    ],
+    qa: [
+      { q: 'Why did rope-makers walk backward for great distances?', choices: ['To produce ropes long enough for ships.', 'To test the strength of ropes.', 'To sell ropes in other towns.', 'To dry the fibers in the sun.'], answer: 0, why: '第4段落 in order to produce ropes long enough for ships。' },
+      { q: 'What does learning the ropes mean?', choices: ['Coming to understand how something works.', 'Being unable to endure more.', 'Climbing a mountain.', 'Building a bridge.'], answer: 0, why: '第6段落 when we come to understand how something works。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
