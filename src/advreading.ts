@@ -46098,6 +46098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-drive-throughs',
+    title: 'Should Cities Restrict Drive-Through Restaurants?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Drive-through restaurants allow customers to order and collect food without ever leaving their cars. In many countries they have become a familiar feature of roadsides and suburbs, offering speed and convenience to busy drivers. In recent years, however, a number of cities have begun to restrict or even ban the opening of new drive-through restaurants, arguing that they harm the environment and the character of local neighborhoods. The question of whether such restrictions are wise has become a subject of lively public debate.",
+      "Supporters of restrictions argue first that drive-throughs increase pollution. Cars waiting in long lines often leave their engines running for many minutes, releasing exhaust into the air while barely moving. Supporters point out that this is especially harmful in busy areas where people live and walk nearby, and they suggest that encouraging drivers to park and walk inside, or to buy food elsewhere, would reduce unnecessary emissions without preventing anyone from eating what they wish. In some busy locations, they note, lines of waiting cars have even blocked nearby roads and delayed buses and emergency vehicles.",
+      "Supporters also argue that drive-throughs shape cities in ways that favor cars over people. Because they require large spaces for lanes and parking, they often take up land that could be used for housing, shops, or parks, and the constant flow of vehicles in and out can make streets more dangerous for pedestrians and cyclists. By limiting new drive-throughs, supporters say, cities can encourage developments that are designed for people on foot and that make neighborhoods more pleasant to live in. Several cities that have adopted such rules report that new businesses with shops facing the street have opened in place of drive-throughs.",
+      "Critics, however, argue that drive-throughs meet real needs. ( A ) some customers may use them simply out of habit, others depend on them, including parents traveling with small children, people with disabilities who find it difficult to leave their cars, and workers who have only a short break. During periods when people were advised to avoid crowded indoor spaces, critics note, drive-throughs allowed many businesses to keep serving customers safely, and they remain valued by those who feel more comfortable staying in their vehicles.",
+      "Critics also point out that restrictions may harm local businesses and workers. Drive-throughs often account for a large share of a restaurant's sales, and a ban on new ones may discourage companies from opening branches, reducing jobs in the area. In rural regions and suburbs where public transport is limited and distances are long, critics argue, rules designed for crowded city centers may make little sense, since most people there have no realistic alternative to driving. For such communities, a drive-through may be one of the few places nearby to buy a quick meal.",
+      "Some cities have tried to find a middle way. Rather than banning drive-throughs entirely, they allow them only in certain areas, such as along major roads, and require designs that reduce waiting times and keep lines of cars away from pavements. Others encourage restaurants to use systems that let customers order in advance and collect their food quickly, reducing the time engines spend running. Such measures aim to keep the convenience of drive-throughs while limiting their effects on the environment and on neighbors. Restaurant owners have generally accepted such rules more readily than outright bans.",
+      "The debate over drive-through restaurants therefore reflects a wider question about how cities should balance individual convenience against shared concerns such as clean air and safe streets. Services that save time for individual customers may impose costs on others who never use them. Finding the right balance may require cities to consider not only what residents want today, but also what kind of places they hope their neighborhoods will become in the years ahead.",
+    ],
+    ja: [
+      'ドライブスルーのレストランでは、客は車からおりることなく注文し、食べ物を受けとることができる。多くの国で、それは道ばたや郊外のおなじみの風景になり、いそがしい運転者に速さと便利さを提供している。しかし近年、ドライブスルーは環境や地域の雰囲気をそこなうと主張して、新しいドライブスルーのレストランの開店を制限したり、禁止さえしたりしはじめた都市がある。そうした制限がかしこいかどうかという問いは、世の中の活発な議論の対象になっている。',
+      '制限を支持する人々は、まず、ドライブスルーは汚染をふやすと主張する。長い列にならんで待つ車は、しばしば何分もエンジンをかけたままにしており、ほとんど動かないまま排気ガスを空気中に出している。人々が近くでくらし、歩くにぎやかな地域ではとくに害が大きいと支持する人々は指摘し、運転者に車をとめて中に入って歩くよう、あるいはほかの場所で食べ物を買うようすすめれば、だれかが好きなものを食べるのをさまたげることなく、必要のない排出をへらせるだろうと考える。にぎやかな場所によっては、待っている車の列が近くの道路をふさぎ、バスや緊急車両を遅らせたことさえあると彼らは指摘する。',
+      '支持する人々はまた、ドライブスルーは、人よりも車を優先するように都市を形づくると主張する。ドライブスルーには車線と駐車場のための広い場所が必要なので、住宅や店、公園に使えたかもしれない土地をしめることが多く、車がたえず出入りすることで、歩行者や自転車に乗る人にとって通りがより危険になりうる。新しいドライブスルーを制限することで、都市は歩く人のために設計され、地域をくらしやすくする開発をうながすことができると支持する人々は言う。そうした決まりを取り入れたいくつかの都市では、ドライブスルーのかわりに、通りに面した店をもつ新しい店が開いたと報告されている。',
+      'しかし批判する人々は、ドライブスルーは本当の必要をみたしていると主張する。ただ習慣で使う客もいるかもしれないが、小さな子どもをつれて移動する親や、車からおりるのがむずかしい体の不自由な人々、休み時間が短い働く人々など、それにたよっている人もいる。人々が混み合った屋内の場所をさけるよう求められていた時期には、ドライブスルーのおかげで多くの店が安全に客に対応しつづけることができたし、車の中にいるほうが安心できる人々にはいまも大切にされていると批判する人々は指摘する。',
+      '批判する人々はまた、制限は地元の店や働く人々に害をあたえるかもしれないと指摘する。ドライブスルーはしばしばレストランの売り上げの大きな部分をしめており、新しいものを禁止すれば、会社が支店を開くのを思いとどまり、その地域の仕事がへるかもしれない。公共交通がかぎられていて距離の長い地方や郊外では、混み合った都市の中心部のためにつくられた決まりはほとんど意味がないかもしれないと批判する人々は主張する。そこではほとんどの人に、車を使う以外の現実的な選択肢がないからである。そうした地域にとって、ドライブスルーは、近くですばやく食事を買える数少ない場所のひとつかもしれない。',
+      '中間の道を見つけようとしてきた都市もある。ドライブスルーを完全に禁止するかわりに、大きな道路ぞいなど決まった地域でだけみとめ、待ち時間を短くし、車の列を歩道から遠ざける設計を求めるのである。また、客が前もって注文して食べ物をすばやく受けとれるしくみを使うようレストランにすすめ、エンジンがかかっている時間をへらそうとしている都市もある。そうした対策は、ドライブスルーの便利さをたもちながら、環境や近所の人々への影響をおさえることをめざしている。レストランの経営者たちは、全面的な禁止よりもそうした決まりのほうを、おおむねすんなりと受け入れている。',
+      'したがって、ドライブスルーのレストランをめぐる議論は、都市が個人の便利さと、きれいな空気や安全な通りなどの共通の心配とのつりあいをどのようにとるべきかという、より広い問いを映し出している。個々の客の時間を節約するサービスが、それを一度も使わないほかの人々に負担をかけることがある。正しいつりあいを見つけるには、都市は住民がいま何を望んでいるかだけでなく、これからの年月に自分たちの地域がどのような場所になってほしいのかも考える必要があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ただ習慣で使う客もいるかもしれないが、それにたよっている人もいる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say drive-throughs increase pollution from waiting cars and use land that could serve ( 1 ). Critics argue that they meet real needs and that restrictions may harm local businesses, especially in rural areas with limited public ( 2 ). Some cities allow drive-throughs only along major roads and encourage ordering in ( 3 ).',
+      blanks: [
+        { choices: ['pedestrians', 'drivers', 'farmers', 'pilots'], answer: 0, why: '第3段落 developments that are designed for people on foot。' },
+        { choices: ['transport', 'schools', 'parks', 'hospitals'], answer: 0, why: '第5段落 where public transport is limited。' },
+        { choices: ['advance', 'person', 'secret', 'silence'], answer: 0, why: '第6段落 let customers order in advance。' },
+      ],
+    },
+    tf: [
+      { statement: '列にならぶ車は、しばしばエンジンをかけたまま待っている。', answer: true, why: '第2段落 often leave their engines running for many minutes。' },
+      { statement: '支持する人々によると、ドライブスルーは歩行者にとって通りを安全にする。', answer: false, why: '第3段落 can make streets more dangerous for pedestrians。' },
+      { statement: '体の不自由な人々のなかには、ドライブスルーにたよっている人もいる。', answer: true, why: '第4段落 people with disabilities who find it difficult to leave their cars。' },
+      { statement: 'すべての都市が、ドライブスルーを完全に禁止している。', answer: false, why: '第6段落 Rather than banning drive-throughs entirely ...。' },
+    ],
+    qa: [
+      { q: 'Why may rules for city centers make little sense in rural regions?', choices: ['Most people there have no realistic alternative to driving.', 'There are no restaurants there.', 'People there do not eat out.', 'The roads are too wide.'], answer: 0, why: '第5段落 most people there have no realistic alternative to driving。' },
+      { q: 'What did drive-throughs allow many businesses to do when people avoided crowded indoor spaces?', choices: ['Keep serving customers safely.', 'Close their shops.', 'Lower their prices.', 'Hire more workers.'], answer: 0, why: '第4段落 allowed many businesses to keep serving customers safely。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
