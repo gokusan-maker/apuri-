@@ -6033,6 +6033,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I (B) have heard (C) from her (D) last week.', choices: ['(A) I', '(B) have heard', '(C) from her', '(D) last week'], answer: 1, why: 'last week は過去の一点なので過去形 heard。' },
     ],
   },
+  {
+    id: 'exam-error-think-of-about',
+    title: '入試の正誤問題〈252〉（京大レベル：英作文の think of・think about・think that）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'think of ～ は「～を思いつく・～のことを思う」、think about ～ は「～についてよく考える」、think that ～ は「～だと思う」。「どう思うか」は what you think（how ではない）。think of A as B で「A を B と見なす」。',
+      '「～しようかと考えている」は be thinking of（about）～ing で、to 不定詞にはしない。前置詞のあとは動名詞。',
+    ],
+    examples: [
+      { en: 'I can’t think of a good answer. / What do you think about the plan?', ja: 'よい答えが思いうかばない。／その計画についてどう思う？' },
+      { en: 'We are thinking of moving to a bigger city.', ja: '私たちはもっと大きな都市に引っこそうかと考えている。' },
+    ],
+    questions: [
+      { sentence: '(A) I (B) often think (C) for my grandfather, (D) who lives far away.', choices: ['(A) I', '(B) often think', '(C) for my grandfather,', '(D) who lives far away'], answer: 2, why: '「（人）のことを思う」は think of（about）。think for ではない。' },
+      { sentence: '(A) I don’t know (B) how you think (C) about (D) the new plan.', choices: ['(A) I don’t know', '(B) how you think', '(C) about', '(D) the new plan'], answer: 1, why: '「どう思うか」は what you think about ～。how ではなく what。' },
+      { sentence: '(A) We (B) are thinking (C) to move (D) to a bigger city.', choices: ['(A) We', '(B) are thinking', '(C) to move', '(D) to a bigger city'], answer: 2, why: '「～しようかと考えている」は be thinking of（about）～ing。thinking of moving。' },
+      { sentence: '(A) Thought (B) about the problem (C) for hours, (D) she finally found an answer.', choices: ['(A) Thought', '(B) about the problem', '(C) for hours,', '(D) she finally found an answer'], answer: 0, why: '分詞構文なので Thinking about the problem。' },
+      { sentence: '(A) I (B) can’t think (C) of (D) a good name to my dog.', choices: ['(A) I', '(B) can’t think', '(C) of', '(D) a good name to my dog'], answer: 3, why: '「犬のための名前」は a good name for my dog。' },
+      { sentence: '(A) My sister (B) has never thought (C) about (D) to study abroad.', choices: ['(A) My sister', '(B) has never thought', '(C) about', '(D) to study abroad'], answer: 3, why: '前置詞 about のあとは動名詞なので studying abroad。' },
+      { sentence: '(A) He (B) is thinking (C) about her (D) since this morning.', choices: ['(A) He', '(B) is thinking', '(C) about her', '(D) since this morning'], answer: 1, why: 'since があるので現在完了進行形 has been thinking。' },
+      { sentence: '(A) Everyone (B) thought of him (C) as (D) a honest person.', choices: ['(A) Everyone', '(B) thought of him', '(C) as', '(D) a honest person'], answer: 3, why: 'honest は母音で始まるので an honest person。' },
+      { sentence: '(A) Think (B) of the danger, (C) he decided (D) not to go.', choices: ['(A) Think', '(B) of the danger,', '(C) he decided', '(D) not to go'], answer: 0, why: '分詞構文なので Thinking of the danger。' },
+      { sentence: '(A) We (B) should think (C) more careful (D) about our future.', choices: ['(A) We', '(B) should think', '(C) more careful', '(D) about our future'], answer: 2, why: '動詞 think を修飾するので副詞 carefully。more carefully。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

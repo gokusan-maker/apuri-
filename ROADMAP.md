@@ -1318,7 +1318,7 @@
   - [x] 495 誤文訂正〈244〉（京大レベル：英作文の mind ～ing・Would you mind if ～）10問
   - [x] 496 正誤問題〈251〉（東大レベル：英作文の hear from・hear of・hear about）10問
   - [x] 497 誤文訂正〈245〉（国公立レベル：agree with・agree to・agree on の使い分け）10問
-  - [ ] 498 正誤問題〈252〉（京大レベル：英作文の think of・think about・think that）10問
+  - [x] 498 正誤問題〈252〉（京大レベル：英作文の think of・think about・think that）10問
   - [ ] 499 誤文訂正〈246〉（東大レベル：英作文の apologize to 人 for・complain to 人 about）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
