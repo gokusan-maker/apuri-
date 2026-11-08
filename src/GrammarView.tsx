@@ -12,8 +12,8 @@ import { GrammarSpot } from './GrammarSpotView'
 import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
-import { EXAM_GRAMMAR } from './examgrammar'
-import { EXAM_ERROR, EXAM_FIX, randomErrorUnit } from './examerror'
+import { randomErrorUnit } from './examerror'
+import { examSections, EXAM_LV_ALL } from './examlevels'
 import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
@@ -155,6 +155,7 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
+  const [examLv, setExamLv] = useState<string>(EXAM_LV_ALL) // 入試の文法：見るレベル（問題の実際のレベルで分けた）
   const [free, setFree] = useState(false) // 城だけのページで「単元をえらんで自由に勉強」をおした
   const [freeLevel, setFreeLevel] = useState('中1') // 自由に勉強でえらんだレベル（中1〜ネイティブ）
   const gcLevel = castleLevel ?? loadGcLevel(loadGrade()) // キャラの下でえらんだ文法の城
@@ -474,32 +475,30 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
         {misc && (
           <details className="exam-grammar game-fold lg-4">
             <summary>
-              <span className="lg-icon" aria-hidden="true">🎓</span>入試の文法 <span className="fold-meta">{EXAM_GRAMMAR.length}</span>
+              <span className="lg-icon" aria-hidden="true">🎓</span>入試の文法 <span className="fold-meta">{examSections().reduce((n, x) => n + x.units.length, 0)}</span>
             </summary>
+            <div className="exam-lv-tabs" role="group" aria-label="入試の文法のレベル">
+              {[EXAM_LV_ALL, ...examSections().map((x) => x.level)].map((l) => (
+                <button key={l} className={`exam-lv${examLv === l ? ' on' : ''}`} aria-pressed={examLv === l} onClick={() => setExamLv(l)}>
+                  {l}
+                </button>
+              ))}
+            </div>
             <div className="exam-grammar-grid" role="group" aria-label="入試の文法">
-              {EXAM_GRAMMAR.map((u) => (
-                <button
-                  key={u.id}
-                  className="exam-tier"
-                  onClick={() => open(u)}
-                >
-                  {u.title.split('の文法')[0]}
-                  <small>{u.questions.length}問</small>
-                </button>
-              ))}
-              {EXAM_ERROR.map((u) => (
-                <button key={u.id} className="exam-tier" onClick={() => open(u)}>
-                  {u.title.replace('入試の', '')}
-                  <small>{u.questions.length}問</small>
-                </button>
-              ))}
-              {EXAM_FIX.map((u) => (
-                <button key={u.id} className="exam-tier" onClick={() => open(u)}>
-                  {u.title.replace('入試の', '').replace('（［ ］を正しい形に）', '')}
-                  <small>{u.questions.length}問</small>
-                </button>
-              ))}
-              <button className="exam-tier" onClick={() => open(randomErrorUnit())}>
+              {examSections()
+                .filter((x) => examLv === EXAM_LV_ALL || x.level === examLv)
+                .map((x) => [
+                  <div key={`h-${x.level}`} className="exam-lv-head">
+                    {x.level} <small>{x.units.length}単元</small>
+                  </div>,
+                  ...x.units.map((u) => (
+                    <button key={u.id} className="exam-tier" onClick={() => open(u)}>
+                      {u.title.split('の文法')[0].replace('入試の', '').replace('（［ ］を正しい形に）', '')}
+                      <small>{u.questions.length}問</small>
+                    </button>
+                  )),
+                ])}
+              <button className="exam-tier" onClick={() => open(randomErrorUnit(10, Math.random, examLv === EXAM_LV_ALL ? undefined : examLv))}>
                 🎲 正誤問題ランダム
                 <small>10問</small>
               </button>

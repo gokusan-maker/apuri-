@@ -471,13 +471,6 @@ it('誤文訂正㉚：まぎらわしい語の使い分けの単元が10問あ�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('affect')
 })
 
-it('正誤問題㊲：まぎらわしい語の使い分けの単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-confusing')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[9].choices[u.questions[9].answer]).toBe('(A) principle')
-})
-
 it('誤文訂正㉛：共通テストレベル（語法の総復習）の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-31')!
@@ -525,13 +518,6 @@ it('誤文訂正㉞：時制と仮定法の総復習の単元が10問ある', as
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-34')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('were')
-})
-
-it('正誤問題㊶：時制と仮定法の総復習の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-tense3')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[3].choices[u.questions[3].answer]).toBe('(D) am you')
 })
 
 it('誤文訂正㉟：原因と結果をあらわす表現の単元が10問ある', async () => {
@@ -595,13 +581,6 @@ it('誤文訂正㊴：意見を述べる・ゆずる表現の単元が10問あ�
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-39')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('Despite')
-})
-
-it('正誤問題㊻：意見を述べる・ゆずる表現の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-opinion')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) opinions')
 })
 
 it('誤文訂正㊵：分詞構文・強調構文・同格の that の単元が10問ある', async () => {
@@ -989,13 +968,6 @@ it('誤文訂正〈67〉：つなぎのことばの単元が10問ある', async 
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('Despite')
 })
 
-it('正誤問題〈74〉：つなぎのことばの単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-linking3')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Although')
-})
-
 it('誤文訂正〈68〉：仮定法の総まとめの単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-68')!
@@ -1015,13 +987,6 @@ it('誤文訂正〈69〉：代名詞の一致の単元が10問ある', async () 
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-69')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('its')
-})
-
-it('正誤問題〈76〉：代名詞の一致の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-pronoun3')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) their new plan')
 })
 
 it('誤文訂正〈70〉：関係詞の総まとめの単元が10問ある', async () => {
@@ -1122,20 +1087,6 @@ it('正誤問題〈83〉：まぎらわしい動詞の単元が10問ある', asy
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) raised')
 })
 
-it('誤文訂正〈77〉：まぎらわしい前置詞の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-77')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('by')
-})
-
-it('正誤問題〈84〉：まぎらわしい前置詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-prep3')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) until')
-})
-
 it('誤文訂正〈78〉：倒置の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-78')!
@@ -1185,13 +1136,6 @@ it('誤文訂正〈81〉：冠詞 a／the／なしの単元が10問ある', asyn
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('The cat')
 })
 
-it('正誤問題〈88〉：冠詞 a／the／なしの単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-article2')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) A cat')
-})
-
 it('誤文訂正〈82〉：強調構文と it の用法の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-82')!
@@ -1232,13 +1176,6 @@ it('正誤問題〈91〉：接続詞の使い分けの単元が10問ある', asy
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-conj3')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) if you')
-})
-
-it('誤文訂正〈85〉：名詞節の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-85')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('Whether')
 })
 
 it('正誤問題〈92〉：名詞節の単元が10問ある', async () => {
@@ -1290,32 +1227,11 @@ it('正誤問題〈95〉：再帰代名詞と相互代名詞の単元が10問あ
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Myself')
 })
 
-it('誤文訂正〈89〉：比較の書き言葉の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-89')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('from')
-})
-
-it('正誤問題〈96〉：比較の書き言葉の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-compare7')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) than')
-})
-
 it('誤文訂正〈90〉：仮定法の発展の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-90')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('Were I')
-})
-
-it('正誤問題〈97〉：仮定法の発展の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-subj4')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) I were you,')
 })
 
 it('誤文訂正〈91〉：前置詞のつく動詞の単元が10問ある', async () => {
@@ -1346,13 +1262,6 @@ it('正誤問題〈99〉：不定詞の意味上の主語と完了不定詞の�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) of me')
 })
 
-it('誤文訂正〈93〉：書き言葉のまとめ問題①の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-93')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('research shows')
-})
-
 it('正誤問題〈100〉：書き言葉のまとめ問題②の単元が10問ある', async () => {
   const { EXAM_ERROR } = await import('./examerror')
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-review1')!
@@ -1372,13 +1281,6 @@ it('正誤問題〈101〉：まとめ問題④の単元が10問ある', async ()
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-review4')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) live')
-})
-
-it('誤文訂正〈95〉：まぎらわしい形容詞の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-95')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('sensible')
 })
 
 it('正誤問題〈102〉：まぎらわしい形容詞の単元が10問ある', async () => {
@@ -1435,13 +1337,6 @@ it('誤文訂正〈99〉：まぎらわしい名詞の単元が10問ある', asy
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-99')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('fare')
-})
-
-it('正誤問題〈106〉：まぎらわしい名詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-nouns')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) price from Tokyo')
 })
 
 it('誤文訂正〈100〉：京大レベルの長い文の一致の単元が10問ある', async () => {
@@ -1507,13 +1402,6 @@ it('誤文訂正〈104〉：時と場所の前置詞の単元が10問ある', as
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('at')
 })
 
-it('正誤問題〈111〉：時と場所の前置詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-timeprep')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) on three')
-})
-
 it('誤文訂正〈105〉：国公立レベルの関係詞の発展の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-105')!
@@ -1547,13 +1435,6 @@ it('誤文訂正〈107〉：東大レベルの要約・英作文の接続語の�
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-107')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('Although')
-})
-
-it('正誤問題〈114〉：東大レベルの接続語の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-connectives')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) Despite the team practiced hard,')
 })
 
 it('誤文訂正〈108〉：旧帝大レベルの倒置・強調構文の単元が10問ある', async () => {
@@ -1626,32 +1507,11 @@ it('正誤問題〈119〉：東大レベルの英作文の語法の単元が10�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) suggested me')
 })
 
-it('誤文訂正〈113〉：不定詞と動名詞の使い分けの単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-113')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('smoking')
-})
-
-it('正誤問題〈120〉：不定詞と動名詞の使い分けの単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-toing')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) to drink coffee')
-})
-
 it('誤文訂正〈114〉：旧帝大レベルの仮定法の発展の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-114')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('were')
-})
-
-it('正誤問題〈121〉：旧帝大レベルの仮定法の発展の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-subj5')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) is not for')
 })
 
 it('誤文訂正〈115〉：比較の発展の単元が10問ある', async () => {
@@ -1843,13 +1703,6 @@ it('誤文訂正〈128〉：京大レベル 時制の一致と話法の単元が
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('was')
 })
 
-it('正誤問題〈135〉：京大レベル 時制の一致と話法の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-speech-kyodai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) is')
-})
-
 it('誤文訂正〈129〉：国公立レベル 前置詞の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-129')!
@@ -1862,20 +1715,6 @@ it('正誤問題〈136〉：国公立レベル 前置詞の単元が10問ある'
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-prep-koku')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) on')
-})
-
-it('誤文訂正〈130〉：東大レベル まぎらわしい動詞の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-130')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('made')
-})
-
-it('正誤問題〈137〉：東大レベル まぎらわしい動詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-verbs-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) did')
 })
 
 it('誤文訂正〈131〉：旧帝大レベル 代名詞の単元が10問ある', async () => {
@@ -1904,34 +1743,6 @@ it('正誤問題〈139〉：京大レベル 接続詞の単元が10問ある', a
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-conj-kyodai')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) you do not')
-})
-
-it('誤文訂正〈133〉：国公立レベル 受動態の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-133')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('of')
-})
-
-it('正誤問題〈140〉：国公立レベル 受動態の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-passive-koku')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) from')
-})
-
-it('誤文訂正〈134〉：東大レベル 形容詞と副詞の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-134')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('hard')
-})
-
-it('正誤問題〈141〉：東大レベル 形容詞と副詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-adverb-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) hardly')
 })
 
 it('誤文訂正〈135〉：旧帝大レベル 使役動詞と知覚動詞の単元が10問ある', async () => {
@@ -1967,13 +1778,6 @@ it('誤文訂正〈137〉：国公立レベル 関係副詞の単元が10問あ�
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-137')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('where')
-})
-
-it('正誤問題〈144〉：国公立レベル 関係副詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-reladverb-kokkoritsu')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) at')
 })
 
 it('誤文訂正〈138〉：東大レベル 英作文の数と時の表現の単元が10問ある', async () => {
@@ -2207,13 +2011,6 @@ it('誤文訂正〈154〉：国公立レベル 使役動詞の単元が10問あ�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('clean')
 })
 
-it('正誤問題〈161〉：東大レベル 時制の一致と話法の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-reported-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(D) next week')
-})
-
 it('誤文訂正〈155〉：京大レベル 仮定法 I wish・If only・as if の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-155')!
@@ -2326,13 +2123,6 @@ it('正誤問題〈169〉：京大レベル 仮定法過去完了と混合仮定
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) would pass')
 })
 
-it('誤文訂正〈163〉：国公立レベル 受動態で by 以外を使う表現の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-163')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('in')
-})
-
 it('正誤問題〈170〉：東大レベル 代名詞 one・it・that の単元が10問ある', async () => {
   const { EXAM_ERROR } = await import('./examerror')
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-pronoun-one-todai')!
@@ -2417,13 +2207,6 @@ it('誤文訂正〈169〉：国公立レベル 比較の as ～ as と倍数表�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('as heavy as')
 })
 
-it('正誤問題〈176〉：東大レベル 仮定法 I wish・as if の時制の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-wish-asif-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) can speak')
-})
-
 it('誤文訂正〈170〉：京大レベル 関係副詞と関係代名詞の使い分けの単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-170')!
@@ -2436,13 +2219,6 @@ it('正誤問題〈177〉：京大レベル 助動詞の慣用表現の単元が
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-modal-idioms-kyodai')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) to be')
-})
-
-it('誤文訂正〈171〉：東大レベル 名詞＋前置詞の結びつきの単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-171')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('on')
 })
 
 it('正誤問題〈178〉：国公立レベル 形容詞＋前置詞の単元が10問ある', async () => {
@@ -2501,13 +2277,6 @@ it('誤文訂正〈175〉：京大レベル 比較の慣用の単元が10問あ�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('no more than')
 })
 
-it('正誤問題〈182〉：東大レベル It is said that と be said to の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-said-to-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) being')
-})
-
 it('誤文訂正〈176〉：国公立レベル too ～ to と enough to の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-176')!
@@ -2541,13 +2310,6 @@ it('誤文訂正〈178〉：京大レベル 副詞の位置の単元が10問あ�
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-178')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('Even a child')
-})
-
-it('正誤問題〈185〉：東大レベル if と whether の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-if-whether-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(A) If')
 })
 
 it('誤文訂正〈179〉：京大レベル 二重目的語の書きかえの単元が10問ある', async () => {
@@ -2767,13 +2529,6 @@ it('誤文訂正〈194〉：京大レベル 付加疑問と否定疑問の答え
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('don’t')
 })
 
-it('正誤問題〈201〉：国公立レベル 時・条件の副詞節の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-time-clause-kokkou')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) will arrive')
-})
-
 it('誤文訂正〈195〉：東大レベル the reason why・the way の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-195')!
@@ -2837,13 +2592,6 @@ it('誤文訂正〈199〉：国公立レベル make と do の単元が10問あ�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('made a mistake')
 })
 
-it('正誤問題〈206〉：東大レベル It is said that・be said to の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-said-todai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) to be')
-})
-
 it('誤文訂正〈200〉：東大レベル every time・whenever の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-200')!
@@ -2877,13 +2625,6 @@ it('誤文訂正〈202〉：京大レベル 否定語の倒置の単元が10問�
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-202')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('did he notice')
-})
-
-it('正誤問題〈209〉：国公立レベル 分詞形容詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-participle-adj-kokkou')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) excited')
 })
 
 it('誤文訂正〈203〉：国公立レベル used to・be used to の単元が10問ある', async () => {
@@ -2933,13 +2674,6 @@ it('誤文訂正〈206〉：国公立レベル worth ～ing の単元が10問あ
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-206')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('reading')
-})
-
-it('正誤問題〈213〉：京大レベル 名詞と前置詞の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-noun-prep-kyodai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) for')
 })
 
 it('誤文訂正〈207〉：東大レベル so・such・too・enough の単元が10問ある', async () => {
@@ -3096,13 +2830,6 @@ it('正誤問題〈224〉：東大レベル prefer・would rather の単元が10
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) than')
 })
 
-it('誤文訂正〈218〉：京大レベル It is no use ～ing の単元が10問ある', async () => {
-  const { EXAM_FIX } = await import('./examerror')
-  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-218')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('crying')
-})
-
 it('正誤問題〈225〉：国公立レベル have trouble ～ing・spend 時間 ～ing の単元が10問ある', async () => {
   const { EXAM_ERROR } = await import('./examerror')
   const u = EXAM_ERROR.find((x) => x.id === 'exam-error-trouble-spend-kokuritsu')!
@@ -3243,13 +2970,6 @@ it('誤文訂正〈228〉：東大レベル people・police・news などの単�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('are')
 })
 
-it('正誤問題〈235〉：京大レベル be made of・from・into の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-made-of-from-kyodai')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) from')
-})
-
 it('誤文訂正〈229〉：国公立レベル I don’t think と I hope not の単元が10問ある', async () => {
   const { EXAM_FIX } = await import('./examerror')
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-229')!
@@ -3283,13 +3003,6 @@ it('誤文訂正〈231〉：東大レベル 数の言い方 hundreds of・two hu
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-231')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('three hundred')
-})
-
-it('正誤問題〈238〉：京大レベル want・ask・tell 人 to do の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-want-ask-tell')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) want that I')
 })
 
 it('誤文訂正〈232〉：国公立レベル 形容詞をならべる順番の単元が10問ある', async () => {
@@ -3605,13 +3318,6 @@ it('誤文訂正〈254〉：国公立レベル thank 人 for・blame 人 for・p
   const u = EXAM_FIX.find((x) => x.id === 'exam-fix-254')!
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('for helping')
-})
-
-it('正誤問題〈261〉：京大レベル accuse 人 of・congratulate 人 on・approve of の単元が10問ある', async () => {
-  const { EXAM_ERROR } = await import('./examerror')
-  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-accuse-congratulate')!
-  expect(u.questions).toHaveLength(10)
-  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) him for')
 })
 
 it('誤文訂正〈255〉：東大レベル worry about・be worried about・be anxious about の単元が10問ある', async () => {

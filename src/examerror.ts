@@ -1,5 +1,6 @@
 // 入試の正誤問題：文の4か所（A〜D）のうち、まちがっている1か所を選ぶ。問題・解説はすべて自作
 import type { GrammarUnit } from './grammar'
+import { errorLevelOf } from './examerrorlevel'
 
 export const EXAM_ERROR: GrammarUnit[] = [
   {
@@ -148,7 +149,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-advanced',
-    title: '入試の正誤問題⑦（総合・難関大）',
+    title: '入試の正誤問題⑦（総合）',
     points: [
       '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。難関大でよく出る倒置・分詞構文・仮定法・付加疑問をまぜた総合問題。',
       '否定語が文の最初に出ると倒置（Hardly had I ～）、分詞構文の意味上の主語は文の主語と同じ、suggest that のあとは原形、に注目する。',
@@ -172,7 +173,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-medical',
-    title: '入試の正誤問題⑧（総合・医学部）',
+    title: '入試の正誤問題⑧（総合②）',
     points: [
       '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。医学部の入試によく出る医療・健康の話題の文で、総合的に確かめる。',
       '長い主語の中心の名詞と動詞の一致、仮定法の倒置、分詞の向き（involved / developed）、前置詞と接続詞のちがい（despite / although）に注目する。',
@@ -244,7 +245,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-prep',
-    title: '入試の正誤問題⑫（前置詞・冠詞の難問）',
+    title: '入試の正誤問題⑫（前置詞・冠詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'arrive in / at、for と since、an honest、by bus（冠詞なし）、Mt. ～（the なし）、時刻の at など、前置詞と冠詞のこまかいきまりに注目する。',
@@ -268,7 +269,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-noun2',
-    title: '入試の正誤問題⑬（名詞・代名詞の難問）',
+    title: '入試の正誤問題⑬（名詞・代名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '数えられない名詞（furniture・advice・homework）、複数形が特別な名詞（children・sheep）、police の複数あつかい、所有代名詞 hers、比較の that of ～ に注目する。',
@@ -292,7 +293,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-relconj',
-    title: '入試の正誤問題⑭（関係詞・接続詞の難問）',
+    title: '入試の正誤問題⑭（関係詞・接続詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '関係代名詞と関係副詞（which と where・why）、whose、主格の who と目的格の whom、関係代名詞のあとの目的語の重複、because と because of、whether or not に注目する。',
@@ -316,7 +317,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-gerund',
-    title: '入試の正誤問題⑮（動名詞・分詞の難問）',
+    title: '入試の正誤問題⑮（動名詞・分詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'remember -ing と remember to ～、avoid・mind・be worth・have trouble のあとの動名詞、boring と bored のような分詞の形容詞、付帯状況の with ＋名詞＋分詞に注目する。',
@@ -340,7 +341,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-passive',
-    title: '入試の正誤問題⑯（受け身・時制の一致の難問）',
+    title: '入試の正誤問題⑯（受け身・時制の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'be ＋過去分詞の形、spoken to by のように前置詞が残る受け身、使役 make の受け身の to、進行形の受け身 being ＋過去分詞、時制の一致（will → would）に注目する。',
@@ -364,7 +365,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adj',
-    title: '入試の正誤問題⑰（形容詞・副詞の難問）',
+    title: '入試の正誤問題⑰（形容詞・副詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'good と well、a few と a little、late と lately、every ＋単数名詞、taste・look ＋形容詞、alive と living、fast の比較級に注目する。',
@@ -388,7 +389,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-subj',
-    title: '入試の正誤問題⑱（仮定法・助動詞の難問）',
+    title: '入試の正誤問題⑱（仮定法・助動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '仮定法過去（would ＋原形）と仮定法過去完了（would have ＋過去分詞）、I wish・as if・If only、Were I ～ の倒置、It is necessary that ＋原形、need not ＋原形、had better not に注目する。',
@@ -412,7 +413,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare2',
-    title: '入試の正誤問題⑲（比較の難問）',
+    title: '入試の正誤問題⑲（比較）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'more や most の重ね使い、as ～ as と than のまぜ使い、any other ＋単数名詞、than yours のように比べる物をそろえること、fewer と less、Nothing is so ～ as、倍数表現に注目する。',
@@ -436,7 +437,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-agree2',
-    title: '入試の正誤問題⑳（主語と動詞の一致の難問）',
+    title: '入試の正誤問題⑳（主語と動詞の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'one of ＋複数名詞は単数、学科名 mathematics・news・まとまった時間は単数、a number of ～ は複数、either A or B / not only A but also B は B に合わせる、the ＋形容詞は複数あつかい、に注目する。',
@@ -460,7 +461,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-inf',
-    title: '入試の正誤問題㉑（不定詞の難問）',
+    title: '入試の正誤問題㉑（不定詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'It is ～ for 人 to ～、ask 人 not to ～、the first ～ to ～、too ～ to ～、目的の to、完了不定詞 to have ＋過去分詞、how to、感情の原因の to、It is careless of you to ～ に注目する。',
@@ -484,7 +485,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-tense2',
-    title: '入試の正誤問題㉒（時制の難問）',
+    title: '入試の正誤問題㉒（時制）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'ago と現在完了、未来完了（by next year）、時制の一致の過去完了、know を進行形にしない、時や条件の節の現在形、recently と現在完了に注目する。',
@@ -508,7 +509,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-usage2',
-    title: '入試の正誤問題㉓（TOEFL・IELTS の語法②：make/let/allow・rise/raise・lie/lay）',
+    title: '入試の正誤問題㉓（make/let/allow・rise/raise・lie/lay）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'let ＋人＋原形、allow ＋人＋ to ～、get ＋人＋ to ～、have ＋物＋過去分詞、自動詞 rise と他動詞 raise、自動詞 lie（lay・lain）と他動詞 lay（laid・laid）に注目する。',
@@ -532,7 +533,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-pronoun',
-    title: '入試の正誤問題㉔（代名詞の難問）',
+    title: '入試の正誤問題㉔（代名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '主格と目的格（between you and me）、所有代名詞 mine・a friend of mine、再帰代名詞、the other と the others、another、くり返しをさける that と those、their と theirs に注目する。',
@@ -556,7 +557,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-partconj',
-    title: '入試の正誤問題㉕（分詞構文・接続詞の難問）',
+    title: '入試の正誤問題㉕（分詞構文・接続詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文の意味上の主語（ずれると誤り）、受け身の分詞構文（Written・Seen）、独立分詞構文（It being）、時の節の現在形、although と but、as long as、Hardly ～ when、whether ～ or not に注目する。',
@@ -580,7 +581,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-invert',
-    title: '入試の正誤問題㉖（倒置・強調の難問）',
+    title: '入試の正誤問題㉖（倒置・強調）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'Never・Little・Rarely・Only・Not until が文頭に出たときの倒置、So ～ that の倒置、強調構文 It is ～ that、助動詞 do による強調、場所の語句が文頭に出る倒置に注目する。',
@@ -604,7 +605,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hard',
-    title: '入試の正誤問題㉗（医学部・難関大レベル）',
+    title: '入試の正誤問題㉗（総合）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'avoid -ing、Scarcely ～ when、It is high time ＋過去形、Had ～ の倒置と would have ＋過去分詞、a number of ＋複数名詞、object to / be used to ＋ -ing、Hardly のあとの付加疑問、Without ～ の仮定法過去完了に注目する。医療の場面の文が多い。',
@@ -628,7 +629,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-clause',
-    title: '入試の正誤問題㉘（関係詞・名詞節の難問）',
+    title: '入試の正誤問題㉘（関係詞・名詞節）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'whether と that、同格の that、前置詞＋関係代名詞での前置詞の重複、関係副詞 where と関係代名詞 which、名詞節の what と that、whoever と whomever、間接疑問の語順に注目する。',
@@ -700,7 +701,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hard2',
-    title: '入試の正誤問題㉛（医学部・難関大レベル②）',
+    title: '入試の正誤問題㉛（総合）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '長い主語の中心と動詞の一致、insist on -ing、recommend that ＋原形、Hardly ～ when の時制、the ＋比較級, the ＋比較級、Little / Not until の倒置、所有の whose、現在完了の付加疑問に注目する。医療・研究の場面の文が多い。',
@@ -724,7 +725,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-review2',
-    title: '入試の正誤問題㉜（共通テストレベル：高2の総復習）',
+    title: '入試の正誤問題㉜（高2の総復習）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '仮定法過去、since と for、関係代名詞の先行詞と動詞の一致、stop -ing と stop to、too ～ to の目的語、受け身の分詞構文、surprised と surprising、the ＋比較級、I wish など、高2までの重要文法の総復習。',
@@ -748,7 +749,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-national',
-    title: '入試の正誤問題㉝（国公立二次レベル）',
+    title: '入試の正誤問題㉝（総合）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'It was not until ～ that、not so much A as B、There is no use -ing、前置詞のあとの動名詞、Should の倒置、and で結ぶ形のそろえ、It goes without saying、cannot help but ＋原形、Not until の倒置、主語と動詞の一致に注目する。',
@@ -772,7 +773,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-private',
-    title: '入試の正誤問題㉞（私大難関レベル）',
+    title: '入試の正誤問題㉞（総合）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'senior / preferable と to、Scarcely ～ when の時制、Few of ＋複数、make の受け身の to、倍数表現、きょり・時間の単数あつかい、such と so、advise 人 not to、主格 who に注目する。',
@@ -796,7 +797,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-longsubj',
-    title: '入試の正誤問題㉟（TOEFL・IELTS の書き言葉：長い主語と動詞）',
+    title: '入試の正誤問題㉟（長い主語と動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'of ～・関係詞・分詞で長くなった主語の中心をさがす。The number of・One of・Each of は単数、動名詞と What の節も単数、数えられない名詞は a lot of がついても単数あつかい。',
@@ -843,32 +844,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-confusing',
-    title: '入試の正誤問題㊲（まぎらわしい語の使い分け）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'affect と effect、advise と advice、fewer と less、lose と loose、its と it’s、their と there、than と then、rise と raise、accept と except、principal と principle など、形や発音の似た語に注目する。',
-    ],
-    examples: [
-      { en: 'There were fewer people at the event than last year.', ja: '行事に来た人は去年より少なかった。（数えられる名詞 → fewer）' },
-      { en: 'The principal of our school gave a speech.', ja: '校長先生がスピーチをした。（principal ＝校長）' },
-    ],
-    questions: [
-      { sentence: 'The noise (A) effected (B) my (C) ability (D) to concentrate.', choices: ['(A) effected', '(B) my', '(C) ability', '(D) to concentrate'], answer: 0, why: '「影響した」という動詞は affect の過去形 affected。' },
-      { sentence: 'My teacher (A) gave (B) me a good (C) advise (D) about my future.', choices: ['(A) gave', '(B) me a good', '(C) advise', '(D) about my future'], answer: 2, why: '名詞「助言」は advice（数えられない名詞なので a good piece of advice ／ good advice）。advise は動詞。' },
-      { sentence: 'There were (A) less (B) people (C) at the event (D) than last year.', choices: ['(A) less', '(B) people', '(C) at the event', '(D) than last year'], answer: 0, why: 'people は数えられる名詞の複数なので fewer。' },
-      { sentence: 'Be careful not (A) to (B) loose (C) your (D) passport.', choices: ['(A) to', '(B) loose', '(C) your', '(D) passport'], answer: 1, why: '「なくす」という動詞は lose。loose は形容詞「ゆるい」。' },
-      { sentence: 'The team (A) lost (B) it’s (C) first (D) game.', choices: ['(A) lost', '(B) it’s', '(C) first', '(D) game'], answer: 1, why: '所有「その」は its。it’s は it is / it has の短縮形。' },
-      { sentence: 'The students (A) put (B) there (C) books (D) on the desk.', choices: ['(A) put', '(B) there', '(C) books', '(D) on the desk'], answer: 1, why: '所有「彼らの」は their。' },
-      { sentence: 'This test was (A) much (B) more difficult (C) then (D) the last one.', choices: ['(A) much', '(B) more difficult', '(C) then', '(D) the last one'], answer: 2, why: '比較の「～より」は than。' },
-      { sentence: 'Food prices in many countries (A) have (B) been (C) steadily (D) raising.', choices: ['(A) have', '(B) been', '(C) steadily', '(D) raising'], answer: 3, why: '「（物価が）上がる」は自動詞 rise：have been rising。raise は目的語が必要。' },
-      { sentence: 'I (A) accept (B) all of your ideas (C) accept (D) the last one.', choices: ['(A) accept', '(B) all of your ideas', '(C) accept', '(D) the last one'], answer: 2, why: '「～をのぞいて」は except：except the last one。' },
-      { sentence: 'The (A) principle (B) of our school (C) gave (D) a speech.', choices: ['(A) principle', '(B) of our school', '(C) gave', '(D) a speech'], answer: 0, why: '「校長」は principal。principle は「原理・主義」。' },
-    ],
-  },
-  {
     id: 'exam-error-usage3',
-    title: '入試の正誤問題㊳（共通テストレベル：語法の総復習）',
+    title: '入試の正誤問題㊳（語法の総復習）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'tell 人、listen to、wait for、arrive at、look for と look at、say と tell、時制のそろえ、enjoy oneself、It takes 人 時間、Thank you for -ing など、共通テストで必要な動詞の語法の総復習。',
@@ -892,7 +869,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hard3',
-    title: '入試の正誤問題㊴（医学部・難関大レベル③）',
+    title: '入試の正誤問題㊴（総合）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'too ～ to、Had it not been for、demand that ＋原形、Not only の倒置、連鎖関係詞節の who、lie の過去形 lay、Hardly ～ when、neither A nor B、前置詞のあとの動名詞など、医療の場面で問われる難しい文法。',
@@ -939,30 +916,6 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-tense3',
-    title: '入試の正誤問題㊶（共通テストレベル：時制と仮定法の総復習）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '過去をあらわす語句と過去形、過去完了、時・条件の副詞節の現在形、If I were、仮定法過去完了、I wish、状態動詞、have been to、Without ～ の仮定法など、時制と仮定法のまとめ。',
-    ],
-    examples: [
-      { en: 'I lived in Osaka when I was a child.', ja: '私は子どものころ大阪に住んでいた。' },
-      { en: 'If it rains tomorrow, the game will be canceled.', ja: 'もしあした雨がふったら、試合は中止になる。' },
-    ],
-    questions: [
-      { sentence: 'I (A) have lived (B) in Osaka (C) when I (D) was a child.', choices: ['(A) have lived', '(B) in Osaka', '(C) when I', '(D) was a child'], answer: 0, why: 'when I was a child（はっきりした過去）があるので過去形 lived。' },
-      { sentence: 'By the time (A) we arrived, the movie (B) has already started, (C) so we (D) missed the beginning.', choices: ['(A) we arrived, the movie', '(B) has already started', '(C) so we', '(D) missed the beginning'], answer: 1, why: '過去のある時までに終わっていたことは過去完了：had already started。so we missed は正しい。' },
-      { sentence: 'The game (A) will be (B) canceled (C) if it (D) will rain tomorrow.', choices: ['(A) will be', '(B) canceled', '(C) if it', '(D) will rain tomorrow'], answer: 3, why: '条件の if 節では未来のことも現在形：If it rains。' },
-      { sentence: 'I (A) would (B) apologize (C) to her if I (D) am you.', choices: ['(A) would', '(B) apologize', '(C) to her if I', '(D) am you'], answer: 3, why: '今の事実と反対の仮定は If I were you。' },
-      { sentence: 'If she (A) had studied harder, she (B) would pass (C) the exam (D) last year.', choices: ['(A) had studied harder, she', '(B) would pass', '(C) the exam', '(D) last year'], answer: 1, why: '過去の事実と反対なので would have passed。' },
-      { sentence: 'I (A) really wish (B) that I (C) can speak French (D) as well as you.', choices: ['(A) really wish', '(B) that I', '(C) can speak French', '(D) as well as you'], answer: 2, why: 'I wish のあとは仮定法過去：that I could speak。' },
-      { sentence: '(A) I (B) am knowing (C) the answer (D) to this question.', choices: ['(A) I', '(B) am knowing', '(C) the answer', '(D) to this question'], answer: 1, why: 'know は状態動詞なので進行形にしない：I know。' },
-      { sentence: 'She (A) loves France and (B) has gone (C) to Paris (D) three times.', choices: ['(A) loves France and', '(B) has gone', '(C) to Paris', '(D) three times'], answer: 1, why: '経験は have been to ～：has been to Paris。' },
-      { sentence: 'I (A) will call you (B) as soon as (C) I will get (D) home.', choices: ['(A) will call you', '(B) as soon as', '(C) I will get', '(D) home'], answer: 2, why: '時の as soon as 節では未来のことも現在形：as soon as I get home。' },
-      { sentence: 'Without (A) your help, I (B) could not finish (C) the work (D) yesterday.', choices: ['(A) your help, I', '(B) could not finish', '(C) the work', '(D) yesterday'], answer: 1, why: '過去のことの仮定なので could not have finished。' },
-    ],
-  },
-  {
     id: 'exam-error-cause',
     title: '入試の正誤問題㊷（原因と結果をあらわす表現）',
     points: [
@@ -988,7 +941,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-relconj2',
-    title: '入試の正誤問題㊸（国公立レベル：関係詞と接続詞のまとめ）',
+    title: '入試の正誤問題㊸（関係詞と接続詞のまとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '関係副詞 where・when・why、関係代名詞 what・whose、so that、Although と Despite、whether or not、so ～ that、疑問詞 which など、関係詞と接続詞のまとめ。',
@@ -1036,7 +989,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-idiom2',
-    title: '入試の正誤問題㊺（私学難関レベル：熟語・語法の総まとめ）',
+    title: '入試の正誤問題㊺（熟語・語法の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'look forward to -ing、be used to -ing、object to -ing、mind -ing、can’t help -ing、make 人 ＋原形、have 物 ＋過去分詞、be worth -ing、prevent 人 from -ing、remember -ing など、私立大学でよく問われる熟語と語法。',
@@ -1059,32 +1012,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-opinion',
-    title: '入試の正誤問題㊻（意見を述べる・ゆずる表現）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'in my opinion、Despite と Although、It is true that ～, but、agree with、On the other hand、believe that、Whatever、No matter how、Even if、助動詞の受け身など、エッセイで意見を述べるときの表現。',
-    ],
-    examples: [
-      { en: 'Despite its advantages, the plan has serious problems.', ja: '利点はあるものの、その計画には深刻な問題がある。' },
-      { en: 'No matter how hard it is, we must keep trying.', ja: 'どれほどむずかしくても、私たちはためしつづけなければならない。' },
-    ],
-    questions: [
-      { sentence: 'Cities (A) should have (B) more parks, (C) in my (D) opinions.', choices: ['(A) should have', '(B) more parks', '(C) in my', '(D) opinions'], answer: 3, why: '「私の意見では」は in my opinion（単数）。' },
-      { sentence: '(A) Although its advantages, (B) the plan (C) has (D) serious problems.', choices: ['(A) Although its advantages', '(B) the plan', '(C) has', '(D) serious problems'], answer: 0, why: 'うしろが名詞なので前置詞 Despite its advantages。' },
-      { sentence: 'It is true (A) that cars (B) are convenient, (C) and they (D) also cause pollution.', choices: ['(A) that cars', '(B) are convenient', '(C) and they', '(D) also cause pollution'], answer: 2, why: 'ゆずってから反論するので It is true that ～, but …。' },
-      { sentence: 'I (A) am agree (B) with (C) this idea (D) completely.', choices: ['(A) am agree', '(B) with', '(C) this idea', '(D) completely'], answer: 0, why: 'agree は動詞なので be 動詞はいらない：I agree with。' },
-      { sentence: 'Online classes (A) save time. (B) On the other hands, (C) they (D) can feel lonely.', choices: ['(A) save time', '(B) On the other hands', '(C) they', '(D) can feel lonely'], answer: 1, why: 'On the other hand（hand は単数）。' },
-      { sentence: 'Some people (A) believe (B) what (C) technology (D) makes life easier.', choices: ['(A) believe', '(B) what', '(C) technology', '(D) makes life easier'], answer: 1, why: 'うしろは完全な文なので接続詞 that。' },
-      { sentence: '(A) Whatever (B) happen, (C) I will (D) support you.', choices: ['(A) Whatever', '(B) happen', '(C) I will', '(D) support you'], answer: 1, why: 'Whatever は単数あつかいで現在形：Whatever happens。' },
-      { sentence: 'No matter (A) what hard (B) it is, (C) we must (D) keep trying.', choices: ['(A) what hard', '(B) it is', '(C) we must', '(D) keep trying'], answer: 0, why: '形容詞の前は how：No matter how hard。' },
-      { sentence: '(A) Even if (B) it will rain tomorrow, (C) the event (D) will be held.', choices: ['(A) Even if', '(B) it will rain tomorrow', '(C) the event', '(D) will be held'], answer: 1, why: '条件の副詞節では未来も現在形：it rains tomorrow。' },
-      { sentence: 'I (A) disagree (B) with the idea (C) that homework (D) should banned.', choices: ['(A) disagree', '(B) with the idea', '(C) that homework', '(D) should banned'], answer: 3, why: '助動詞のあとの受け身は should be banned。' },
-    ],
-  },
-  {
     id: 'exam-error-hard4',
-    title: '入試の正誤問題㊼（医学部・難関大レベル④：分詞構文・強調構文・同格の that）',
+    title: '入試の正誤問題㊼（分詞構文・強調構文・同格の that）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '受け身・完了・否定の分詞構文、独立分詞構文、強調構文 It is ～ that、同格の that、Judging from、the news・the fact の主語と動詞の一致など、難関大学でよく問われる構文。',
@@ -1108,7 +1037,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-prep2',
-    title: '入試の正誤問題㊽（共通テストレベル：前置詞の総まとめ）',
+    title: '入試の正誤問題㊽（前置詞の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '日付の on、期限の by、期間の for、arrive at、good at、時刻の at、married to、interested in、on foot、他動詞 discuss など、まちがえやすい前置詞。',
@@ -1156,7 +1085,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-noun3',
-    title: '入試の正誤問題㊿（国公立レベル：名詞・冠詞・代名詞の総まとめ）',
+    title: '入試の正誤問題㊿（名詞・冠詞・代名詞の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'advice・furniture・water（数えられない名詞）、スポーツ名と冠詞、by bus、an honest、help yourself、mine、the other、others など、名詞・冠詞・代名詞のまとめ。',
@@ -1204,7 +1133,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare4',
-    title: '入試の正誤問題〈52〉（私学難関レベル：比較の慣用表現）',
+    title: '入試の正誤問題〈52〉（比較の慣用表現）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'not so much A as B、by far the 最上級、The 比較級 ～, the 比較級、know better than to、no more ～ than、superior to、prefer A to B、Nothing is more ～ than、as soon as possible、No other ～ as … as など、比較の慣用表現。',
@@ -1228,7 +1157,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-infger',
-    title: '入試の正誤問題〈53〉（共通テストレベル：不定詞と動名詞の使い分けの総まとめ）',
+    title: '入試の正誤問題〈53〉（不定詞と動名詞の使い分けの総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'enjoy・avoid・finish（動名詞）、decide・hope・promise（不定詞）、forget to、It is ～ to、前置詞のあとの動名詞、主語になる動名詞など、不定詞と動名詞の使い分け。',
@@ -1276,7 +1205,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adjadv',
-    title: '入試の正誤問題〈55〉（国公立レベル：形容詞・副詞の総まとめ）',
+    title: '入試の正誤問題〈55〉（形容詞・副詞の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'good と well、形容詞 ＋ enough、hard と hardly、little と few、a few、surprising と surprised、late と lately、taste ＋形容詞、much ＋比較級、never など、形容詞と副詞の使い分け。',
@@ -1300,7 +1229,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hard5',
-    title: '入試の正誤問題〈56〉（医学部・難関大レベル⑤：倒置・省略・挿入）',
+    title: '入試の正誤問題〈56〉（倒置・省略・挿入）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'Never・Only・So・Little が文頭に出たときの倒置、Should you・Were I（if を省いた倒置）、While waiting・if necessary の省略、who I think の挿入、Here comes など、難関大学でよく問われる特別な語順。',
@@ -1324,7 +1253,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-rel3',
-    title: '入試の正誤問題〈57〉（共通テストレベル：関係代名詞と関係副詞の総まとめ）',
+    title: '入試の正誤問題〈57〉（関係代名詞と関係副詞の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'which と where・when の使い分け、the only ～ that、what、whose、the way と how、非制限用法の who、前置詞 ＋ which、everything that など、関係詞のまとめ。',
@@ -1372,7 +1301,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-verbs',
-    title: '入試の正誤問題〈59〉（私学難関レベル：まぎらわしい動詞の語法）',
+    title: '入試の正誤問題〈59〉（まぎらわしい動詞の語法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'rise と raise、lie と lay、borrow と lend、tell と say、fit と suit、steal と rob など、まぎらわしい動詞の使い分け。',
@@ -1396,7 +1325,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-subj2',
-    title: '入試の正誤問題〈60〉（共通テストレベル：仮定法の総まとめ）',
+    title: '入試の正誤問題〈60〉（仮定法の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'I wish、as if ＋過去完了、It’s time ＋過去形、But for、仮定法過去完了、If it were not for、would rather、If only、Had I known、混合仮定法など、仮定法のまとめ。',
@@ -1444,7 +1373,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-tense4',
-    title: '入試の正誤問題〈62〉（国公立レベル：時制と一致の総まとめ）',
+    title: '入試の正誤問題〈62〉（時制と一致の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '時制の一致（was・would・had ＋過去分詞）、不変の真理の現在形、間接疑問の語順、if のあとの語順など、時制の一致と話法のまとめ。',
@@ -1468,7 +1397,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hard6',
-    title: '入試の正誤問題〈63〉（医学部・難関大レベル⑥：名詞構文・無生物主語・強調）',
+    title: '入試の正誤問題〈63〉（名詞構文・無生物主語・強調）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '名詞構文（death・discovery・arrival・examination）、無生物主語の make・prevent、強調の did・the very、a good speaker、冠詞と数など、難関大学の英文で多い書き方。',
@@ -1492,7 +1421,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-modal2',
-    title: '入試の正誤問題〈64〉（共通テストレベル：助動詞の総まとめ）',
+    title: '入試の正誤問題〈64〉（助動詞の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'had better（not）＋原形、must have ＋過去分詞、should have ＋過去分詞、used to、may have、need not、Shall I、would rather、can’t be など、助動詞のまとめ。',
@@ -1516,7 +1445,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-prepidiom',
-    title: '入試の正誤問題〈65〉（私学難関レベル：前置詞をふくむ熟語の総まとめ）',
+    title: '入試の正誤問題〈65〉（前置詞をふくむ熟語の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'be proud of、be tired of、be afraid of、be full of、be famous for、look forward to、belong to、depend on、be responsible for、be filled with など、前置詞が決まっている熟語。',
@@ -1564,7 +1493,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare5',
-    title: '入試の正誤問題〈67〉（国公立レベル：比較の総まとめ）',
+    title: '入試の正誤問題〈67〉（比較の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '最上級・比較級の正しい形、as ～ as、副詞の最上級、fewer と less、the best ～ I have ever ～、比べるものをそろえる（mine）、one of the ＋複数名詞など、比較のまとめ。',
@@ -1588,7 +1517,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hard7',
-    title: '入試の正誤問題〈68〉（医学部・難関大レベル⑦：前置詞＋関係代名詞・複合関係詞）',
+    title: '入試の正誤問題〈68〉（前置詞＋関係代名詞・複合関係詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'with whom・with which・for which・in which、前置詞のあとに that・where を置かない、whoever・whatever・however・whenever、most of whom など、難関大学でよく問われる関係詞。',
@@ -1612,7 +1541,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-passive4',
-    title: '入試の正誤問題〈69〉（共通テストレベル：受け身の総まとめ）',
+    title: '入試の正誤問題〈69〉（受け身の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'be ＋過去分詞、be spoken to・be taken care of、be known to・be made from、have 物 ＋過去分詞、will be held、every day と everyday など、受け身のまとめ。',
@@ -1636,7 +1565,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-noun4',
-    title: '入試の正誤問題〈70〉（TOEFL・IELTS の書き言葉：名詞の数と冠詞）',
+    title: '入試の正誤問題〈70〉（名詞の数と冠詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'research・evidence・information・advice・equipment・furniture は数えられない名詞、a number of ＋複数名詞は複数・the number of ～ は単数、one of the ＋複数名詞、every ＋単数名詞など、論文やエッセイでよく問われる名詞のきまり。',
@@ -1660,7 +1589,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-agree3',
-    title: '入試の正誤問題〈71〉（TOEFL・IELTS の書き言葉：主語と動詞の一致）',
+    title: '入試の正誤問題〈71〉（主語と動詞の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '長い主語の中心をさがす、either A or B・neither A nor B・not only A but also B は B に合わせる、together with は主語に入らない、動名詞の主語や距離・時間のまとまりは単数、there is / are はうしろの名詞に合わせるなど、主語と動詞の一致のきまり。',
@@ -1684,7 +1613,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-participle3',
-    title: '入試の正誤問題〈72〉（共通テストレベル：分詞の形容詞用法）',
+    title: '入試の正誤問題〈72〉（分詞の形容詞用法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'boring と bored のような感情の分詞（人をそうさせる側は -ing、そう感じる人は過去分詞）、名詞を後ろからかざる分詞（a girl singing ～・a watch made in ～）、名詞の前の分詞（broken glass）など。',
@@ -1708,7 +1637,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare6',
-    title: '入試の正誤問題〈73〉（共通テストレベル：比較の慣用表現）',
+    title: '入試の正誤問題〈73〉（比較の慣用表現）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'the 比較級 ～, the 比較級 …、比較級 and 比較級、not so much A as B、as ～ as possible、倍数 ＋ as ～ as、would rather A than B、No other ～ 比較級 than、no more than など、比較の慣用表現。',
@@ -1731,32 +1660,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-linking3',
-    title: '入試の正誤問題〈74〉（TOEFL・IELTS の書き言葉：つなぎのことば）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'although・because・while は接続詞（あとに主語＋動詞）、despite・because of・due to・in spite of は前置詞（あとに名詞）、however・therefore・moreover は副詞（カンマだけで文をつなげない）など、エッセイでよく問われるつなぎのことば。',
-    ],
-    examples: [
-      { en: 'Despite the heavy rain, the festival was a great success.', ja: '大雨にもかかわらず、お祭りは大成功だった。' },
-      { en: 'The plan was expensive; however, the city approved it.', ja: 'その計画はお金がかかったが、市はそれをみとめた。' },
-    ],
-    questions: [
-      { sentence: '(A) Although (B) the heavy rain, (C) the festival (D) was a great success.', choices: ['(A) Although', '(B) the heavy rain,', '(C) the festival', '(D) was a great success'], answer: 0, why: 'あとが名詞なので前置詞 Despite（または In spite of）。' },
-      { sentence: '(A) Despite (B) it was very cold, (C) the children (D) played outside.', choices: ['(A) Despite', '(B) it was very cold,', '(C) the children', '(D) played outside'], answer: 0, why: 'あとが主語＋動詞なので接続詞 Although。' },
-      { sentence: 'The game (A) was canceled (B) because (C) the strong wind (D) last night.', choices: ['(A) was canceled', '(B) because', '(C) the strong wind', '(D) last night'], answer: 1, why: 'あとが名詞なので because of。' },
-      { sentence: 'The plan (A) was expensive, (B) however (C) the city (D) approved it.', choices: ['(A) was expensive,', '(B) however', '(C) the city', '(D) approved it'], answer: 1, why: 'however は副詞なのでカンマだけで文をつなげない：but（または ; however,）。' },
-      { sentence: 'She (A) practiced every day; (B) therefore, she (C) won (D) despite of the strong rivals.', choices: ['(A) practiced every day;', '(B) therefore, she', '(C) won', '(D) despite of the strong rivals'], answer: 3, why: 'despite のあとに of はつけない：despite the strong rivals。' },
-      { sentence: '(A) Many people (B) like the city, (C) while others (D) prefers the countryside.', choices: ['(A) Many people', '(B) like the city,', '(C) while others', '(D) prefers the countryside'], answer: 3, why: '主語 others は複数なので prefer。' },
-      { sentence: 'The flight (A) was delayed (B) due to (C) the pilot (D) arrived late.', choices: ['(A) was delayed', '(B) due to', '(C) the pilot', '(D) arrived late'], answer: 1, why: 'あとが主語＋動詞なので接続詞 because。' },
-      { sentence: '(A) In spite (B) the difficulties, (C) they finished (D) the work on time.', choices: ['(A) In spite', '(B) the difficulties,', '(C) they finished', '(D) the work on time'], answer: 0, why: 'in spite of ～ の of をわすれない。' },
-      { sentence: 'Prices (A) have risen (B) sharply. (C) Despite, (D) many people still shop here.', choices: ['(A) have risen', '(B) sharply', '(C) Despite,', '(D) many people still shop here'], answer: 2, why: 'despite は前置詞なので単独では使えない：However,。' },
-      { sentence: 'He (A) was tired. (B) Moreover, (C) he (D) continued working until midnight.', choices: ['(A) was tired', '(B) Moreover,', '(C) he', '(D) continued working until midnight'], answer: 2, why: '「つかれていた」のに働き続けたので、追加の Moreover ではなく逆接の However（または Nevertheless）。' },
-    ],
-  },
-  {
     id: 'exam-error-subj3',
-    title: '入試の正誤問題〈75〉（共通テストレベル：仮定法の総まとめ）',
+    title: '入試の正誤問題〈75〉（仮定法の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '仮定法過去（If ＋過去形, would ＋原形）、仮定法過去完了（If ＋had ＋過去分詞, would have ＋過去分詞）、I wish、as if、Without ～、If it were not for ～、It is time ＋過去形など、仮定法のまとめ。',
@@ -1779,32 +1684,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-pronoun3',
-    title: '入試の正誤問題〈76〉（TOEFL・IELTS の書き言葉：代名詞の一致）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '代名詞は指す名詞の数に合わせる（the company → its・the students → their）、比べるときの that of ～／those of ～、同じ種類のものは one(s)・その物自体は it、its（所有）と it is のちがい、所有代名詞 ours・theirs など。',
-    ],
-    examples: [
-      { en: 'The population of China is larger than that of Japan.', ja: '中国の人口は日本の人口より多い。' },
-      { en: 'The museum is famous for its collection of old maps.', ja: 'その博物館は古い地図のコレクションで有名だ。' },
-    ],
-    questions: [
-      { sentence: 'The company (A) announced (B) their new plan (C) at (D) the meeting.', choices: ['(A) announced', '(B) their new plan', '(C) at', '(D) the meeting'], answer: 1, why: 'the company は単数あつかいなので its new plan。' },
-      { sentence: 'The population (A) of China (B) is larger (C) than (D) Japan.', choices: ['(A) of China', '(B) is larger', '(C) than', '(D) Japan'], answer: 3, why: '人口どうしを比べるので than that of Japan。' },
-      { sentence: 'The prices (A) at this store (B) are lower (C) than (D) that at the mall.', choices: ['(A) at this store', '(B) are lower', '(C) than', '(D) that at the mall'], answer: 3, why: '複数の prices を受けるので those at the mall。' },
-      { sentence: 'I (A) lost my pen, (B) so I (C) have to buy (D) it at the shop.', choices: ['(A) lost my pen,', '(B) so I', '(C) have to buy', '(D) it at the shop'], answer: 3, why: 'なくしたペンそのものではなく「ペンをひとつ」なので one。' },
-      { sentence: '(A) The students (B) handed in (C) his reports (D) on time.', choices: ['(A) The students', '(B) handed in', '(C) his reports', '(D) on time'], answer: 2, why: '主語は複数の the students なので their reports。' },
-      { sentence: 'The museum (A) is famous (B) for (C) it is (D) collection of old maps.', choices: ['(A) is famous', '(B) for', '(C) it is', '(D) collection of old maps'], answer: 2, why: '「その博物館の」と所有を表すのは its。' },
-      { sentence: '(A) These shoes (B) are too small, so I (C) need (D) bigger one.', choices: ['(A) These shoes', '(B) are too small, so I', '(C) need', '(D) bigger one'], answer: 3, why: '複数の shoes を受けるので bigger ones。' },
-      { sentence: '(A) Many animals (B) change (C) its behavior (D) in winter.', choices: ['(A) Many animals', '(B) change', '(C) its behavior', '(D) in winter'], answer: 2, why: '主語は複数の Many animals なので their behavior。' },
-      { sentence: 'The climate (A) of this island (B) is (C) milder than (D) those of the mainland.', choices: ['(A) of this island', '(B) is', '(C) milder than', '(D) those of the mainland'], answer: 3, why: '単数の climate を受けるので that of the mainland。' },
-      { sentence: 'Each of (A) them have (B) to finish (C) the report (D) by Friday.', choices: ['(A) them have', '(B) to finish', '(C) the report', '(D) by Friday'], answer: 0, why: 'each of ～ は単数あつかいなので Each of them has。' },
-    ],
-  },
-  {
     id: 'exam-error-rel4',
-    title: '入試の正誤問題〈77〉（共通テストレベル：関係詞の総まとめ）',
+    title: '入試の正誤問題〈77〉（関係詞の総まとめ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'うしろに主語や目的語がぬけていれば関係代名詞、完全な文なら関係副詞（where・when・why）、先行詞がなければ what、「～の」は whose、カンマや前置詞のあとに that は使えない、など関係詞のまとめ。',
@@ -1828,7 +1709,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-speech2',
-    title: '入試の正誤問題〈78〉（共通テストレベル：時制の一致と話法）',
+    title: '入試の正誤問題〈78〉（時制の一致と話法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '主節が過去なら that 節も過去にずらす、さらに前は過去完了、真理は現在形のまま、間接疑問は主語＋動詞、Yes / No の質問は if、命令は tell 人 to ～、tomorrow → the next day など、時制の一致と話法のまとめ。',
@@ -1852,7 +1733,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-parallel2',
-    title: '入試の正誤問題〈79〉（TOEFL・IELTS の書き言葉：並列）',
+    title: '入試の正誤問題〈79〉（並列）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'and・or・but や both A and B・not only A but also B・either A or B でつなぐものは同じ形にそろえる（名詞は名詞、動名詞は動名詞、形容詞は形容詞、前置詞もそろえる）。',
@@ -1876,7 +1757,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-infger2',
-    title: '入試の正誤問題〈80〉（共通テストレベル：不定詞と動名詞の使い分け）',
+    title: '入試の正誤問題〈80〉（不定詞と動名詞の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'enjoy・finish・mind のあとは動名詞、want・decide・refuse のあとは不定詞、stop ～ing／stop to ～、remember to ～／remember ～ing、前置詞・look forward to のあとは動名詞、主語になる動名詞など。',
@@ -1900,7 +1781,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-wordform2',
-    title: '入試の正誤問題〈81〉（TOEFL・IELTS の書き言葉：語の形）',
+    title: '入試の正誤問題〈81〉（語の形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '名詞の前は形容詞、動詞や形容詞をくわしくするのは副詞、冠詞・所有格のあとは名詞。economic／economical、effect（名詞）／affect（動詞）など、エッセイでよく問われる語の形。',
@@ -1924,7 +1805,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-modalpast',
-    title: '入試の正誤問題〈82〉（共通テストレベル：助動詞＋have ＋過去分詞）',
+    title: '入試の正誤問題〈82〉（助動詞＋have ＋過去分詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'must have ～（～したにちがいない）、can not have ～（～したはずがない）、may have ～（～したかもしれない）、should have ～（～すべきだったのに）、need not have ～（～する必要はなかったのに）。have のあとは過去分詞。',
@@ -1948,7 +1829,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-verbs2',
-    title: '入試の正誤問題〈83〉（TOEFL・IELTS の書き言葉：まぎらわしい動詞）',
+    title: '入試の正誤問題〈83〉（まぎらわしい動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'rise／raise、lie／lay、borrow／lend、rob 人 of 物／steal 物、say／tell、remind 人 of ～ など、まぎらわしい動詞の使い分け。',
@@ -1971,32 +1852,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-prep3',
-    title: '入試の正誤問題〈84〉（共通テストレベル：まぎらわしい前置詞）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'by（期限）／until（継続）、for（期間の長さ）／during（特定の期間）、within（以内に）、時刻は at・日付や曜日は on・月や年は in、by bus（冠詞なし）など。',
-    ],
-    examples: [
-      { en: 'Please hand in the report by Friday.', ja: '金曜日までにレポートを出してください。' },
-      { en: 'I waited for her until six.', ja: '私は6時まで彼女を待った。' },
-    ],
-    questions: [
-      { sentence: 'Please (A) hand in (B) the report (C) until (D) Friday.', choices: ['(A) hand in', '(B) the report', '(C) until', '(D) Friday'], answer: 2, why: '期限「金曜日までに」は by。' },
-      { sentence: 'I (A) waited (B) for her (C) by (D) six, but she never came.', choices: ['(A) waited', '(B) for her', '(C) by', '(D) six, but she never came'], answer: 2, why: '継続「6時までずっと」は until。' },
-      { sentence: 'He (A) stayed (B) in London (C) during (D) three weeks.', choices: ['(A) stayed', '(B) in London', '(C) during', '(D) three weeks'], answer: 2, why: '期間の長さには for：for three weeks。' },
-      { sentence: 'We (A) visited (B) our aunt (C) for (D) the summer vacation.', choices: ['(A) visited', '(B) our aunt', '(C) for', '(D) the summer vacation'], answer: 2, why: '特定の期間の間は during the summer vacation。' },
-      { sentence: 'The meeting (A) starts (B) on (C) 3 p.m. (D) tomorrow.', choices: ['(A) starts', '(B) on', '(C) 3 p.m', '(D) tomorrow'], answer: 1, why: '時刻には at：at 3 p.m.。' },
-      { sentence: '(A) My birthday (B) is (C) in (D) May 5.', choices: ['(A) My birthday', '(B) is', '(C) in', '(D) May 5'], answer: 2, why: '日付には on：on May 5。' },
-      { sentence: 'She (A) was born (B) on (C) 2010 (D) in Osaka.', choices: ['(A) was born', '(B) on', '(C) 2010', '(D) in Osaka'], answer: 1, why: '年には in：in 2010。' },
-      { sentence: 'I (A) usually (B) go to school (C) by (D) a bus.', choices: ['(A) usually', '(B) go to school', '(C) by', '(D) a bus'], answer: 3, why: '交通手段の by には冠詞をつけない：by bus。' },
-      { sentence: '(A) In Monday morning, we (B) had (C) a test (D) in math.', choices: ['(A) In Monday morning, we', '(B) had', '(C) a test', '(D) in math'], answer: 0, why: '曜日のついた朝には on：On Monday morning。' },
-      { sentence: 'You (A) must finish (B) the test (C) until (D) 30 minutes.', choices: ['(A) must finish', '(B) the test', '(C) until', '(D) 30 minutes'], answer: 2, why: '「30分以内に」は within 30 minutes。' },
-    ],
-  },
-  {
     id: 'exam-error-inversion2',
-    title: '入試の正誤問題〈85〉（TOEFL・IELTS の書き言葉：倒置）',
+    title: '入試の正誤問題〈85〉（倒置）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '否定語（Never・Rarely・Seldom・Little・Not only・No sooner・Hardly）や Only ＋副詞句が文頭に出ると疑問文の語順になる。So ／ Neither ＋助動詞＋主語、No sooner ～ than・Hardly ～ when の組み合わせなど。',
@@ -2020,7 +1877,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-causative2',
-    title: '入試の正誤問題〈86〉（共通テストレベル：使役動詞と知覚動詞）',
+    title: '入試の正誤問題〈86〉（使役動詞と知覚動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'make・let・have 人 ＋原形、get 人 to ～、have 物 ＋過去分詞、see・hear・feel 人 ＋原形（～ing）、使役の受け身 be made to ～ など。',
@@ -2044,7 +1901,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-participle4',
-    title: '入試の正誤問題〈87〉（共通テストレベル：分詞構文）',
+    title: '入試の正誤問題〈87〉（分詞構文）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文の主語は主節の主語と同じ。「する」側なら -ing、「される」側なら過去分詞、前のことは Having ＋過去分詞、否定は Not ～ing、Judging from ～・Generally speaking など。',
@@ -2067,32 +1924,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-article2',
-    title: '入試の正誤問題〈88〉（TOEFL・IELTS の書き言葉：冠詞 a／the／なし）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '2回目以降・ひとつしかないもの・最上級・序数・楽器には the、母音の音の前は an、数えられない名詞や一般的に言う複数名詞は冠詞なし、など。',
-    ],
-    examples: [
-      { en: 'I saw a cat. The cat was very small.', ja: '私はネコを見た。そのネコはとても小さかった。' },
-      { en: 'She waited for an hour.', ja: '彼女は1時間待った。' },
-    ],
-    questions: [
-      { sentence: 'I (A) saw a cat (B) in the park. (C) A cat (D) was very small.', choices: ['(A) saw a cat', '(B) in the park', '(C) A cat', '(D) was very small'], answer: 2, why: '2回目に出るので The cat。' },
-      { sentence: 'She (A) waited (B) for (C) a hour (D) at the station.', choices: ['(A) waited', '(B) for', '(C) a hour', '(D) at the station'], answer: 2, why: 'hour は母音の音で始まるので an hour。' },
-      { sentence: 'He (A) studies (B) at an university (C) in (D) Tokyo.', choices: ['(A) studies', '(B) at an university', '(C) in', '(D) Tokyo'], answer: 1, why: 'university は子音の音で始まるので a university。' },
-      { sentence: '(A) Sun (B) rises (C) in (D) the east.', choices: ['(A) Sun', '(B) rises', '(C) in', '(D) the east'], answer: 0, why: 'ひとつしかないものには the：The sun。' },
-      { sentence: 'Mt. Fuji (A) is (B) highest (C) mountain (D) in Japan.', choices: ['(A) is', '(B) highest', '(C) mountain', '(D) in Japan'], answer: 1, why: '最上級には the：the highest。' },
-      { sentence: 'I (A) usually (B) drink (C) a milk (D) in the morning.', choices: ['(A) usually', '(B) drink', '(C) a milk', '(D) in the morning'], answer: 2, why: '数えられない名詞 milk は冠詞なし。' },
-      { sentence: '(A) The dogs (B) are (C) loyal animals (D) in general.', choices: ['(A) The dogs', '(B) are', '(C) loyal animals', '(D) in general'], answer: 0, why: '一般的に言うときは無冠詞の複数形 Dogs。' },
-      { sentence: 'This is (A) a first time (B) I (C) have (D) visited Kyoto.', choices: ['(A) a first time', '(B) I', '(C) have', '(D) visited Kyoto'], answer: 0, why: '序数には the：the first time。' },
-      { sentence: 'Can (A) you (B) play (C) piano (D) well?', choices: ['(A) you', '(B) play', '(C) piano', '(D) well?'], answer: 2, why: 'play the ＋楽器：the piano。' },
-      { sentence: 'We (A) went to (B) the beach (C) and found (D) an unique shell.', choices: ['(A) went to', '(B) the beach', '(C) and found', '(D) an unique shell'], answer: 3, why: 'unique は「ユ」という子音の音で始まるので a unique shell。' },
-    ],
-  },
-  {
     id: 'exam-error-itcleft',
-    title: '入試の正誤問題〈89〉（共通テストレベル：強調構文と it の用法）',
+    title: '入試の正誤問題〈89〉（強調構文と it の用法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '強調構文 It is ～ that …、形式主語 It is ～ to …、形式目的語 find it ～ to …、It takes 人 時間 to ～、It costs 人 お金 to ～、It is kind of 人 to ～／It is necessary for 人 to ～、距離の it など。',
@@ -2116,7 +1949,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-quantity2',
-    title: '入試の正誤問題〈90〉（TOEFL・IELTS の書き言葉：数量の表し方）',
+    title: '入試の正誤問題〈90〉（数量の表し方）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '数えられる名詞には many・few・a number of・fewer、数えられない名詞には much・little・an amount of・less。number の大小は large／small、a lot of の of をわすれない、など。',
@@ -2140,7 +1973,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-conj3',
-    title: '入試の正誤問題〈91〉（共通テストレベル：接続詞の使い分け）',
+    title: '入試の正誤問題〈91〉（接続詞の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'unless・as long as・in case・even if・once・by the time の使い分け、時・条件の節の中は現在形、because と because of のちがい、など。',
@@ -2164,7 +1997,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-nounclause',
-    title: '入試の正誤問題〈92〉（TOEFL・IELTS の書き言葉：名詞節）',
+    title: '入試の正誤問題〈92〉（名詞節）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'that 節・whether 節・what 節・疑問詞の節は名詞のかたまり。主語なら単数あつかい、節の中は主語＋動詞、主語の位置の「～かどうか」は whether、完全な文なら that・不完全なら what。',
@@ -2188,7 +2021,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-appositive',
-    title: '入試の正誤問題〈93〉（共通テストレベル：同格の that と名詞＋to 不定詞）',
+    title: '入試の正誤問題〈93〉（同格の that と名詞＋to 不定詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'the fact・the news・the idea・evidence のあとの同格の that（あとに完全な文）、decision・plan・ability・chance のあとの to 不定詞、something to drink のような不定詞の形容詞用法など。',
@@ -2212,7 +2045,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-passive5',
-    title: '入試の正誤問題〈94〉（TOEFL・IELTS の書き言葉：受け身の書き言葉）',
+    title: '入試の正誤問題〈94〉（受け身の書き言葉）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'It is believed／said／thought that ～、be said to ～／be said to have ＋過去分詞、be expected to ～、be considered ～、be known for／as ～ など、書き言葉でよく使う受け身。',
@@ -2236,7 +2069,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-reflexive',
-    title: '入試の正誤問題〈95〉（共通テストレベル：再帰代名詞と相互代名詞）',
+    title: '入試の正誤問題〈95〉（再帰代名詞と相互代名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '主語と目的語が同じなら再帰代名詞（myself・themselves）、by oneself・enjoy oneself・help oneself to、「おたがい」は each other、hisself・theirselves という形はない、主語に再帰代名詞は使わない、など。',
@@ -2259,56 +2092,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-compare7',
-    title: '入試の正誤問題〈96〉（TOEFL・IELTS の書き言葉：比較の書き言葉）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'different from、the same as、similar to、superior to、prefer A to B、compared with、in contrast to、that of ～、twice as ～ as など、エッセイでよく使う比較の言い方。',
-    ],
-    examples: [
-      { en: 'My opinion is different from yours.', ja: '私の意見はあなたの意見とちがう。' },
-      { en: 'I prefer tea to coffee.', ja: '私はコーヒーより紅茶が好きだ。' },
-    ],
-    questions: [
-      { sentence: 'My opinion (A) is (B) different (C) than (D) yours.', choices: ['(A) is', '(B) different', '(C) than', '(D) yours'], answer: 2, why: '「～とちがう」は different from。' },
-      { sentence: 'His phone (A) is (B) the same (C) like (D) mine.', choices: ['(A) is', '(B) the same', '(C) like', '(D) mine'], answer: 2, why: '「～と同じ」は the same as。' },
-      { sentence: 'This painting (A) is (B) similar (C) with (D) the one in the museum.', choices: ['(A) is', '(B) similar', '(C) with', '(D) the one in the museum'], answer: 2, why: '「～に似ている」は similar to。' },
-      { sentence: 'This model (A) is (B) superior (C) than (D) the old one.', choices: ['(A) is', '(B) superior', '(C) than', '(D) the old one'], answer: 2, why: 'superior は to をとる：superior to。' },
-      { sentence: 'I (A) prefer (B) tea (C) than (D) coffee.', choices: ['(A) prefer', '(B) tea', '(C) than', '(D) coffee'], answer: 2, why: 'prefer A to B：prefer tea to coffee。' },
-      { sentence: '(A) Compare with last year, (B) sales (C) have increased (D) by 20 percent.', choices: ['(A) Compare with last year,', '(B) sales', '(C) have increased', '(D) by 20 percent'], answer: 0, why: '「～とくらべると」は Compared with。' },
-      { sentence: 'In contrast (A) with the city, (B) the countryside (C) is (D) quiet.', choices: ['(A) with the city,', '(B) the countryside', '(C) is', '(D) quiet'], answer: 0, why: '「～とは対照的に」は In contrast to。' },
-      { sentence: 'The population (A) of Tokyo (B) is larger (C) than (D) Osaka.', choices: ['(A) of Tokyo', '(B) is larger', '(C) than', '(D) Osaka'], answer: 3, why: '人口どうしを比べるので than that of Osaka。' },
-      { sentence: 'This bridge (A) is (B) twice longer (C) than (D) that one.', choices: ['(A) is', '(B) twice longer', '(C) than', '(D) that one'], answer: 1, why: '倍数は twice as long as。' },
-      { sentence: 'Prices (A) in this area (B) are (C) highest (D) than in the city.', choices: ['(A) in this area', '(B) are', '(C) highest', '(D) than in the city'], answer: 2, why: 'than があるので比較級 higher。' },
-    ],
-  },
-  {
-    id: 'exam-error-subj4',
-    title: '入試の正誤問題〈97〉（共通テストレベル：仮定法の発展）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'if を省略した倒置（Were I ～・Had I known ～・Should you ～）、If it were not for ～／had not been for ～、But for ～、混合仮定法、It is time ＋過去形、as if ＋過去完了など。',
-    ],
-    examples: [
-      { en: 'Were I you, I would accept the offer.', ja: 'もし私があなたなら、その申し出を受けるだろう。' },
-      { en: 'Had I known the truth, I would have told you.', ja: 'もし本当のことを知っていたら、あなたに話していただろう。' },
-    ],
-    questions: [
-      { sentence: '(A) I were you, (B) I would (C) accept (D) the offer.', choices: ['(A) I were you,', '(B) I would', '(C) accept', '(D) the offer'], answer: 0, why: 'if を省略すると倒置：Were I you。' },
-      { sentence: '(A) I had known (B) the truth, I (C) would have told (D) you.', choices: ['(A) I had known', '(B) the truth, I', '(C) would have told', '(D) you'], answer: 0, why: 'if を省略した倒置：Had I known。' },
-      { sentence: 'If it (A) was not (B) for your advice, I (C) would (D) be lost.', choices: ['(A) was not', '(B) for your advice, I', '(C) would', '(D) be lost'], answer: 0, why: 'If it were not for ～。' },
-      { sentence: 'If it (A) had not (B) be for the rain, we (C) would have (D) gone hiking.', choices: ['(A) had not', '(B) be for the rain, we', '(C) would have', '(D) gone hiking'], answer: 1, why: 'If it had not been for ～：been。' },
-      { sentence: 'If I (A) had studied (B) harder, I (C) would have been (D) a doctor now.', choices: ['(A) had studied', '(B) harder, I', '(C) would have been', '(D) a doctor now'], answer: 2, why: 'now があるので混合仮定法：would be。' },
-      { sentence: 'It (A) is high time (B) we (C) leave (D) for the airport.', choices: ['(A) is high time', '(B) we', '(C) leave', '(D) for the airport'], answer: 2, why: 'It is high time ＋過去形：left。' },
-      { sentence: 'She talks (A) as if she (B) has seen (C) the accident, but (D) she was not there.', choices: ['(A) as if she', '(B) has seen', '(C) the accident, but', '(D) she was not there'], answer: 1, why: '過去の事実と反対は as if ＋過去完了：had seen。' },
-      { sentence: 'But (A) of (B) your support, we (C) would have (D) failed.', choices: ['(A) of', '(B) your support, we', '(C) would have', '(D) failed'], answer: 1, why: 'But for ～「～がなければ」。' },
-      { sentence: '(A) Should you (B) need any help, (C) please (D) calling me.', choices: ['(A) Should you', '(B) need any help,', '(C) please', '(D) calling me'], answer: 3, why: '命令文は動詞の原形：please call me。' },
-      { sentence: 'I (A) wish I (B) can (C) fly (D) like a bird.', choices: ['(A) wish I', '(B) can', '(C) fly', '(D) like a bird'], answer: 1, why: '今の事実と反対の願いは I wish ＋過去形：could。' },
-    ],
-  },
-  {
     id: 'exam-error-prepverbs',
-    title: '入試の正誤問題〈98〉（TOEFL・IELTS の書き言葉：前置詞のつく動詞）',
+    title: '入試の正誤問題〈98〉（前置詞のつく動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'depend on・consist of・result in／result from・account for・contribute to・belong to・rely on など動詞と前置詞の組み合わせ、discuss・reach は前置詞をつけない、など。',
@@ -2332,7 +2117,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-infsubject',
-    title: '入試の正誤問題〈99〉（共通テストレベル：不定詞の意味上の主語と完了不定詞）',
+    title: '入試の正誤問題〈99〉（不定詞の意味上の主語と完了不定詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '不定詞の意味上の主語は for 人、人の性質（kind・careless）は of 人、too ～ for 人 to …・～ enough for 人 to …、主節より前のことは to have ＋過去分詞（受け身は to have been ＋過去分詞）。',
@@ -2356,7 +2141,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-review1',
-    title: '入試の正誤問題〈100〉（TOEFL・IELTS の書き言葉：まとめ問題②）',
+    title: '入試の正誤問題〈100〉（まとめ問題②）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'これまでの書き言葉のまちがい（数えられない名詞、主語と動詞の一致、並列、語の形、つなぎのことば、代名詞の一致、前置詞のつく動詞、比較の言い方）をまぜた総まとめ。',
@@ -2380,7 +2165,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-review4',
-    title: '入試の正誤問題〈101〉（共通テストレベル：まとめ問題④）',
+    title: '入試の正誤問題〈101〉（まとめ問題④）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '時制（現在完了・過去完了・時制の一致）、関係詞（where・whose・what）、分詞（うしろからかざる分詞・分詞構文）、仮定法をまぜた総まとめ。',
@@ -2404,7 +2189,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adjectives',
-    title: '入試の正誤問題〈102〉（共通テストレベル：まぎらわしい形容詞）',
+    title: '入試の正誤問題〈102〉（まぎらわしい形容詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'sensitive／sensible、successful／successive、imaginary／imaginative、considerate／considerable、respectful／respectable、industrial／industrious、economic／economical など、形の似た形容詞の使い分け。',
@@ -2428,7 +2213,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-review5',
-    title: '入試の正誤問題〈103〉（TOEFL・IELTS の書き言葉：まとめ問題⑥）',
+    title: '入試の正誤問題〈103〉（まとめ問題⑥）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '主語と動詞の一致（each／a number of／the number of／neither A nor B）、名詞の数（advice・phenomenon／phenomena・one of ＋複数名詞）、冠詞（a／an・唯一のもの）をまぜた、論文や説明文でよく見るまちがい。',
@@ -2452,7 +2237,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-confverbs',
-    title: '入試の正誤問題〈104〉（共通テストレベル：まぎらわしい動詞）',
+    title: '入試の正誤問題〈104〉（まぎらわしい動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'lie／lay・rise／raise・borrow／lend・rob／steal・say／tell・fit／suit の使い分けと、前置詞をつけない他動詞（discuss・resemble）、人を直接目的語にとらない explain。',
@@ -2476,7 +2261,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare8',
-    title: '入試の正誤問題〈105〉（TOEFL・IELTS の書き言葉：比較）',
+    title: '入試の正誤問題〈105〉（比較）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '比べるものをそろえる（that of／those of・mine）、the 比較級, the 比較級、much／far で強める比較級、superior to、倍数 ＋ as 原級 as、compared with、fewer／less、最上級 ＋ ever。',
@@ -2499,32 +2284,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-nouns',
-    title: '入試の正誤問題〈106〉（共通テストレベル：まぎらわしい名詞）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'price／fare／fee・customer／guest／audience／passenger・reservation／appointment・habit／custom・scenery（数えられない）の使い分け。',
-    ],
-    examples: [
-      { en: 'The bus fare has gone up again.', ja: 'バスの運賃がまた上がった。' },
-      { en: 'Bowing is a common custom in Japan.', ja: 'おじぎは日本でよく見られる慣習だ。' },
-    ],
-    questions: [
-      { sentence: 'The train (A) price from Tokyo (B) to Osaka (C) has gone up (D) again this year.', choices: ['(A) price from Tokyo', '(B) to Osaka', '(C) has gone up', '(D) again this year'], answer: 0, why: '乗り物の運賃は fare。The train fare。' },
-      { sentence: '(A) The entrance (B) fare for the museum (C) is free (D) for children.', choices: ['(A) The entrance', '(B) fare for the museum', '(C) is free', '(D) for children'], answer: 1, why: '入場料は fee。The entrance fee。' },
-      { sentence: 'The hotel (A) welcomed (B) its customers (C) with tea (D) and sweets.', choices: ['(A) welcomed', '(B) its customers', '(C) with tea', '(D) and sweets'], answer: 1, why: 'ホテルの宿泊客は guests。' },
-      { sentence: '(A) The large (B) audiences (C) cheered (D) loudly at the end of the play.', choices: ['(A) The large', '(B) audiences', '(C) cheered', '(D) loudly at the end of the play'], answer: 1, why: '1つの劇の観客は集合名詞 audience。The large audience。' },
-      { sentence: 'I (A) have (B) a reservation (C) with my dentist (D) at three.', choices: ['(A) have', '(B) a reservation', '(C) with my dentist', '(D) at three'], answer: 2, why: '人と会う予約は appointment。a reservation with my dentist は不自然で、an appointment with my dentist。' },
-      { sentence: '(A) Bowing (B) when people meet (C) is a common (D) habit in Japan.', choices: ['(A) Bowing', '(B) when people meet', '(C) is a common', '(D) habit in Japan'], answer: 3, why: '社会の慣習は custom。a common custom。' },
-      { sentence: 'We stopped (A) the car (B) to enjoy (C) the beautiful sceneries (D) of the coast.', choices: ['(A) the car', '(B) to enjoy', '(C) the beautiful sceneries', '(D) of the coast'], answer: 2, why: 'scenery は数えられない名詞。the beautiful scenery。' },
-      { sentence: '(A) The cost (B) of this jacket (C) is printed (D) on the tag.', choices: ['(A) The cost', '(B) of this jacket', '(C) is printed', '(D) on the tag'], answer: 0, why: '品物につけられた値段は price。The price。' },
-      { sentence: 'My (A) uncle has (B) a custom (C) of jogging (D) every morning.', choices: ['(A) uncle has', '(B) a custom', '(C) of jogging', '(D) every morning'], answer: 1, why: '個人の習慣は habit。a habit。' },
-      { sentence: '(A) All the (B) passengers on the bus (C) paid their (D) fees to the driver.', choices: ['(A) All the', '(B) passengers on the bus', '(C) paid their', '(D) fees to the driver'], answer: 3, why: 'バスの運賃は fares。' },
-    ],
-  },
-  {
     id: 'exam-error-kyodai',
-    title: '入試の正誤問題〈107〉（京大レベル：長い文の構造）',
+    title: '入試の正誤問題〈107〉（長い文の構造）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '京大の長い文で、倒置（Only after・So ～ ・Not until）、同格の that、仮定法過去完了、挿入をはさんだ主語と動詞の一致、the 比較級 ～, the 比較級 … 、非制限用法の which を見ぬく。',
@@ -2548,7 +2309,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-todai',
-    title: '入試の正誤問題〈108〉（東大レベル：長い文の時制・仮定法・譲歩）',
+    title: '入試の正誤問題〈108〉（長い文の時制・仮定法・譲歩）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '東大の長い文で、仮定法（過去完了・仮定法現在・It is high time・as if）、時制の一致、未来完了進行形、譲歩（However ＋形容詞）、自動詞の受け身のまちがいを見ぬく。',
@@ -2572,7 +2333,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adverbs',
-    title: '入試の正誤問題〈109〉（共通テストレベル：まぎらわしい副詞）',
+    title: '入試の正誤問題〈109〉（まぎらわしい副詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'hard／hardly・late／lately・near／nearly・most／almost・high／highly の使い分けと、hardly ever（never といっしょに使わない）。',
@@ -2596,7 +2357,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-participle5',
-    title: '入試の正誤問題〈110〉（旧帝大レベル：分詞構文）',
+    title: '入試の正誤問題〈110〉（分詞構文）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文の能動・受け身、完了形（Having done）、独立分詞構文（There being ～）、with ＋ O ＋ 分詞、意味上の主語のずれ（懸垂分詞）、Frankly speaking などの慣用表現。',
@@ -2619,32 +2380,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-timeprep',
-    title: '入試の正誤問題〈111〉（共通テストレベル：時と場所の前置詞）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '時の前置詞 at（時刻）／on（日付・特定の日の朝夕）／in（年・月・季節）、by（期限）／until（継続）、for（期間の長さ）／during（特定の期間）、場所の前置詞 at（地点）／on（面）／in（中）。',
-    ],
-    examples: [
-      { en: 'Please return the books by Friday.', ja: '金曜日までに本を返してください。' },
-      { en: 'She lived in Canada for three years.', ja: '彼女は3年間カナダに住んでいた。' },
-    ],
-    questions: [
-      { sentence: 'The meeting (A) will start (B) on three (C) in the afternoon (D) tomorrow.', choices: ['(A) will start', '(B) on three', '(C) in the afternoon', '(D) tomorrow'], answer: 1, why: '時刻には at。at three。' },
-      { sentence: '(A) We visited (B) our uncle (C) in the evening (D) of New Year Day.', choices: ['(A) We visited', '(B) our uncle', '(C) in the evening', '(D) of New Year Day'], answer: 2, why: '特定の日の夕方は on the evening of ～。' },
-      { sentence: 'This temple (A) was built (B) at 1650 (C) by a famous (D) carpenter.', choices: ['(A) was built', '(B) at 1650', '(C) by a famous', '(D) carpenter'], answer: 1, why: '年には in。in 1650。' },
-      { sentence: 'Please (A) return (B) these books (C) to the library (D) until Friday.', choices: ['(A) return', '(B) these books', '(C) to the library', '(D) until Friday'], answer: 3, why: '「～までに（期限）」は by Friday。' },
-      { sentence: '(A) I studied (B) in the library (C) by nine (D) last night.', choices: ['(A) I studied', '(B) in the library', '(C) by nine', '(D) last night'], answer: 2, why: '「9時までずっと」と継続を表すので until nine。' },
-      { sentence: 'She (A) lived (B) in Canada (C) during three years (D) when she was a child.', choices: ['(A) lived', '(B) in Canada', '(C) during three years', '(D) when she was a child'], answer: 2, why: '期間の長さは for three years。' },
-      { sentence: '(A) Nobody (B) spoke (C) for the ceremony, (D) so it was very quiet.', choices: ['(A) Nobody', '(B) spoke', '(C) for the ceremony,', '(D) so it was very quiet'], answer: 2, why: '「式の間」は特定の期間なので during the ceremony。' },
-      { sentence: '(A) In the bus stop, (B) many people (C) were waiting (D) for the first bus.', choices: ['(A) In the bus stop,', '(B) many people', '(C) were waiting', '(D) for the first bus'], answer: 0, why: 'バス停という「地点」には at。At the bus stop。' },
-      { sentence: '(A) There is (B) a map (C) in the wall (D) of our classroom.', choices: ['(A) There is', '(B) a map', '(C) in the wall', '(D) of our classroom'], answer: 2, why: '壁の面に接しているので on the wall。' },
-      { sentence: '(A) In winter, (B) we often go (C) skating (D) in the lake.', choices: ['(A) In winter,', '(B) we often go', '(C) skating', '(D) in the lake'], answer: 3, why: 'こおった湖の「上で」すべるので on the lake。' },
-    ],
-  },
-  {
     id: 'exam-error-rel5',
-    title: '入試の正誤問題〈112〉（国公立レベル：関係詞の発展）',
+    title: '入試の正誤問題〈112〉（関係詞の発展）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'what（先行詞をふくむ）・whatever、前置詞＋関係代名詞（to whom・by which）、関係副詞 where／when、所有格 whose、非制限用法に that は使えないこと。',
@@ -2668,7 +2405,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-transitive',
-    title: '入試の正誤問題〈113〉（共通テストレベル：自動詞と他動詞）',
+    title: '入試の正誤問題〈113〉（自動詞と他動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'discuss・marry・enter・reach・mention・approach・resemble・attend は他動詞で前置詞をつけない。explain は人を直接目的語にとらない。rise（自動詞）／raise（他動詞）。',
@@ -2691,32 +2428,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-connectives',
-    title: '入試の正誤問題〈114〉（東大レベル：要約・英作文の接続語）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '接続詞 although／because／while／whereas ＋ S V と、前置詞 despite／in spite of／because of／during ＋名詞の使い分け。however・therefore は副詞なので文をつなげない。',
-    ],
-    examples: [
-      { en: 'Although the team practiced hard, they lost the final.', ja: 'チームは一生けんめい練習したが、決勝で負けた。' },
-      { en: 'Despite the snow, the trains were running on time.', ja: '雪にもかかわらず、電車は時間どおりに走っていた。' },
-    ],
-    questions: [
-      { sentence: '(A) Despite the team practiced hard, (B) they lost (C) the final match (D) by one point.', choices: ['(A) Despite the team practiced hard,', '(B) they lost', '(C) the final match', '(D) by one point'], answer: 0, why: 'うしろが S＋V なので Although the team practiced hard。' },
-      { sentence: '(A) Although the snow, (B) the trains (C) were running (D) on time.', choices: ['(A) Although the snow,', '(B) the trains', '(C) were running', '(D) on time'], answer: 0, why: 'うしろが名詞なので Despite the snow。' },
-      { sentence: 'The event (A) was canceled (B) because (C) the typhoon (D) approaching the city.', choices: ['(A) was canceled', '(B) because', '(C) the typhoon', '(D) approaching the city'], answer: 1, why: 'うしろが名詞句なので because of the typhoon approaching the city。' },
-      { sentence: '(A) Nobody (B) left the hall (C) while (D) the long speech.', choices: ['(A) Nobody', '(B) left the hall', '(C) while', '(D) the long speech'], answer: 2, why: 'うしろが名詞なので during the long speech。' },
-      { sentence: 'Sales (A) increased (B) in Asia, (C) however (D) they fell in Europe.', choices: ['(A) increased', '(B) in Asia,', '(C) however', '(D) they fell in Europe'], answer: 2, why: 'however は副詞なので2つの文をつなげない。while（一方で）。' },
-      { sentence: 'The plan (A) was approved. (B) Although, (C) many members (D) still had doubts.', choices: ['(A) was approved', '(B) Although,', '(C) many members', '(D) still had doubts'], answer: 1, why: '文頭で前の文と逆のことを言う副詞は However。' },
-      { sentence: '(A) In spite (B) its age, (C) the bridge (D) is still safe to use.', choices: ['(A) In spite', '(B) its age,', '(C) the bridge', '(D) is still safe to use'], answer: 0, why: 'In spite of its age。of が必要。' },
-      { sentence: 'The city (A) has a growing population; (B) because, (C) it needs (D) more schools.', choices: ['(A) has a growing population;', '(B) because,', '(C) it needs', '(D) more schools'], answer: 1, why: '結論を述べる副詞 therefore。because は接続詞。' },
-      { sentence: '(A) Whereas (B) some people (C) prefer cities, others (D) choosing to live in the countryside.', choices: ['(A) Whereas', '(B) some people', '(C) prefer cities, others', '(D) choosing to live in the countryside'], answer: 3, why: 'Whereas の対比の後半にも動詞が必要。others choose to live。' },
-      { sentence: '(A) Because of (B) the price (C) was too high, (D) we decided not to buy the car.', choices: ['(A) Because of', '(B) the price', '(C) was too high,', '(D) we decided not to buy the car'], answer: 0, why: 'うしろが S＋V なので Because the price was too high。' },
-    ],
-  },
-  {
     id: 'exam-error-inversion3',
-    title: '入試の正誤問題〈115〉（旧帝大レベル：倒置・強調構文・形式主語）',
+    title: '入試の正誤問題〈115〉（倒置・強調構文・形式主語）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '否定語・Only ～・So ～・Such が文頭に出たときの倒置、強調構文 It is ～ that …（where・when にしない）、形式主語 It is ～ to／that …。',
@@ -2740,7 +2453,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-countable',
-    title: '入試の正誤問題〈116〉（共通テストレベル：数えられる名詞・数えられない名詞）',
+    title: '入試の正誤問題〈116〉（数えられる名詞・数えられない名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'advice・furniture・news・homework・baggage・information・equipment は数えられない名詞。many／few は数えられる名詞、much／little は数えられない名詞につく。',
@@ -2764,7 +2477,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-ellipsis',
-    title: '入試の正誤問題〈117〉（京大レベル：省略と代用）',
+    title: '入試の正誤問題〈117〉（省略と代用）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '代不定詞 to、I hope so／not、do so、代動詞 do／did、one（不特定の1つ）と that／those（the ＋名詞のくり返し）、When asked・While waiting・if necessary などの省略。',
@@ -2788,7 +2501,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-causative3',
-    title: '入試の正誤問題〈118〉（共通テストレベル：使役動詞・知覚動詞）',
+    title: '入試の正誤問題〈118〉（使役動詞・知覚動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'make／let／have ＋ O ＋ 原形、get ＋ O ＋ to 不定詞、have ＋ O ＋ 過去分詞、知覚動詞 ＋ O ＋ 原形／～ing／過去分詞、make の受け身 be made to ～。',
@@ -2812,7 +2525,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-usage-todai',
-    title: '入試の正誤問題〈119〉（東大レベル：英作文でまちがえやすい語法）',
+    title: '入試の正誤問題〈119〉（英作文でまちがえやすい語法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'suggest／recommend that S 原形、explain A to 人、hope that ～／wish（仮定法）、lend／borrow、make it possible for 人 to ～、look forward to ～ing、discuss（他動詞）、It is ～ for 人 to … 。',
@@ -2835,56 +2548,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-toing',
-    title: '入試の正誤問題〈120〉（国公立レベル：不定詞と動名詞の使い分け）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'stop／remember／forget／try／regret ＋ to と ～ing の意味のちがい。enjoy・finish・mind・avoid は動名詞、decide・hope・plan・refuse は不定詞。',
-    ],
-    examples: [
-      { en: 'Remember to lock the door when you leave.', ja: '出かけるときは忘れずにかぎをかけてね。' },
-      { en: 'I still remember visiting Kyoto as a child.', ja: '子どものころ京都をおとずれたのを今もおぼえている。' },
-    ],
-    questions: [
-      { sentence: 'My grandfather (A) stopped (B) to drink coffee (C) ten years ago, and (D) he has not had a cup since.', choices: ['(A) stopped', '(B) to drink coffee', '(C) ten years ago, and', '(D) he has not had a cup since'], answer: 1, why: '「コーヒーを飲むのをやめた」は stopped drinking coffee。' },
-      { sentence: '(A) Remember (B) locking the door (C) when you (D) leave the house.', choices: ['(A) Remember', '(B) locking the door', '(C) when you', '(D) leave the house'], answer: 1, why: '「忘れずに～する（これから）」は Remember to lock。' },
-      { sentence: 'I (A) still remember (B) to visit (C) Kyoto (D) with my parents as a child.', choices: ['(A) still remember', '(B) to visit', '(C) Kyoto', '(D) with my parents as a child'], answer: 1, why: '「（過去に）～したのをおぼえている」は remember visiting。' },
-      { sentence: '(A) Do not forget bringing (B) your passport (C) to the airport (D) tomorrow.', choices: ['(A) Do not forget bringing', '(B) your passport', '(C) to the airport', '(D) tomorrow'], answer: 0, why: '「忘れずに持ってくる（これから）」は forget to bring の否定。Do not forget to bring。' },
-      { sentence: '(A) If you cannot sleep, (B) try (C) to drink warm milk (D) before bed.', choices: ['(A) If you cannot sleep,', '(B) try', '(C) to drink warm milk', '(D) before bed'], answer: 2, why: '「ためしに～してみる」は try drinking。' },
-      { sentence: '(A) I regret (B) to say (C) such a rude thing (D) to her yesterday.', choices: ['(A) I regret', '(B) to say', '(C) such a rude thing', '(D) to her yesterday'], answer: 1, why: '「（昨日）言ったことを後悔している」は regret saying。' },
-      { sentence: '(A) We (B) enjoyed (C) to swim (D) in the warm sea.', choices: ['(A) We', '(B) enjoyed', '(C) to swim', '(D) in the warm sea'], answer: 2, why: 'enjoy は動名詞。enjoyed swimming。' },
-      { sentence: '(A) She (B) decided (C) going abroad (D) after graduation.', choices: ['(A) She', '(B) decided', '(C) going abroad', '(D) after graduation'], answer: 2, why: 'decide は不定詞。decided to go abroad。' },
-      { sentence: '(A) Would you mind (B) to close (C) the door (D) behind you?', choices: ['(A) Would you mind', '(B) to close', '(C) the door', '(D) behind you?'], answer: 1, why: 'mind は動名詞。mind closing。' },
-      { sentence: '(A) After finishing (B) the report, (C) she tried to avoid (D) to make any more mistakes.', choices: ['(A) After finishing', '(B) the report,', '(C) she tried to avoid', '(D) to make any more mistakes'], answer: 3, why: 'avoid は動名詞。avoid making。' },
-    ],
-  },
-  {
-    id: 'exam-error-subj5',
-    title: '入試の正誤問題〈121〉（旧帝大レベル：仮定法の発展）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'If it were not for／had not been for、But for・Without、otherwise、Suppose ＋仮定法過去、It is time S 過去形、If only、as if、倒置 Had I known ～ 。帰結の形を時に合わせる。',
-    ],
-    examples: [
-      { en: 'If it were not for my family, I could not study abroad.', ja: '家族がいなければ、私は留学できないだろう。' },
-      { en: 'Had I known the truth, I would have told you.', ja: '本当のことを知っていたら、あなたに話していただろう。' },
-    ],
-    questions: [
-      { sentence: 'If it (A) is not for (B) the support of my family, (C) I would not be (D) able to study abroad.', choices: ['(A) is not for', '(B) the support of my family,', '(C) I would not be', '(D) able to study abroad'], answer: 0, why: '今の事実の反対は If it were not for ～。' },
-      { sentence: 'If it (A) had not been for (B) the rain, (C) we would go (D) hiking yesterday.', choices: ['(A) had not been for', '(B) the rain,', '(C) we would go', '(D) hiking yesterday'], answer: 2, why: '過去の事実の反対なので would have gone。' },
-      { sentence: 'But for (A) his quick action, (B) the fire (C) will spread (D) to the next house.', choices: ['(A) his quick action,', '(B) the fire', '(C) will spread', '(D) to the next house'], answer: 2, why: 'But for ～（～がなかったら）は仮定法。would have spread（過去）。' },
-      { sentence: 'I (A) left home early; (B) however, (C) I would have (D) missed the bus.', choices: ['(A) left home early;', '(B) however,', '(C) I would have', '(D) missed the bus'], answer: 1, why: '「そうでなければ」は otherwise。' },
-      { sentence: '(A) Suppose you (B) will lose (C) your passport, what (D) would you do?', choices: ['(A) Suppose you', '(B) will lose', '(C) your passport, what', '(D) would you do?'], answer: 1, why: 'あまりありえない仮定は Suppose ＋仮定法過去。Suppose you lost。' },
-      { sentence: 'It is (A) high time (B) the government (C) takes action (D) on climate change.', choices: ['(A) high time', '(B) the government', '(C) takes action', '(D) on climate change'], answer: 2, why: 'It is (high) time S 過去形。took action。' },
-      { sentence: '(A) If only (B) I know (C) her phone number, (D) I could call her now.', choices: ['(A) If only', '(B) I know', '(C) her phone number,', '(D) I could call her now'], answer: 1, why: 'If only ＋仮定法過去。If only I knew。' },
-      { sentence: 'Without (A) your help, (B) I (C) could not finish (D) the project last month.', choices: ['(A) your help,', '(B) I', '(C) could not finish', '(D) the project last month'], answer: 2, why: '過去（last month）の反対なので could not have finished。' },
-      { sentence: 'She (A) talks (B) as if she (C) is (D) the boss of the company.', choices: ['(A) talks', '(B) as if she', '(C) is', '(D) the boss of the company'], answer: 2, why: 'as if ＋仮定法過去。as if she were the boss。' },
-      { sentence: '(A) Had I known (B) the truth at that time, (C) I would (D) tell you about it.', choices: ['(A) Had I known', '(B) the truth at that time,', '(C) I would', '(D) tell you about it'], answer: 3, why: 'Had I known ～ は過去の事実の反対（仮定法過去完了）。I would have told you。' },
-    ],
-  },
-  {
     id: 'exam-error-compare9',
-    title: '入試の正誤問題〈122〉（共通テストレベル：比較の発展）',
+    title: '入試の正誤問題〈122〉（比較の発展）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'as ～ as possible、the 最上級 ＋ in／of、any other ＋単数名詞、No other ＋単数名詞、倍数 ＋ as ～ as、much ＋比較級、the 比較級 of the two、prefer A to B、one of the 最上級 ＋複数名詞。',
@@ -2908,7 +2573,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-what',
-    title: '入試の正誤問題〈123〉（京大レベル：what の慣用表現）',
+    title: '入試の正誤問題〈123〉（what の慣用表現）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'what we call／what is called（いわゆる）、what S was（昔の S）、A is to B what C is to D、what little ＋名詞、what is more、what は先行詞をふくみ単数あつかい。',
@@ -2932,7 +2597,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-tense5',
-    title: '入試の正誤問題〈124〉（共通テストレベル：時制 現在完了と過去）',
+    title: '入試の正誤問題〈124〉（時制 現在完了と過去）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'はっきりした過去（yesterday・last ～・～ ago・When）は過去形。since・for・yet・ever は現在完了。時・条件の副詞節（when・if・until）の中は現在形。',
@@ -2956,7 +2621,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-article-todai',
-    title: '入試の正誤問題〈125〉（東大レベル：英作文の冠詞）',
+    title: '入試の正誤問題〈125〉（冠詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '総称は無冠詞の複数形（Dogs are ～）。advice・information・furniture・evidence は数えられない名詞で a をつけず複数形にもしない。前に出たものには the。スポーツ名や「健康」「教育」一般は無冠詞。',
@@ -2980,7 +2645,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare-idiom',
-    title: '入試の正誤問題〈126〉（旧帝大レベル：比較の慣用表現）',
+    title: '入試の正誤問題〈126〉（比較の慣用表現）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'The＋比較級 ～, the＋比較級（両方に the）。比較級を強めるのは much・far・even。2つのうちは the＋比較級。倍数は ～ times as＋原級＋as。同じ集まりの中は any other＋単数名詞。比べるものをそろえる（that of ～）。',
@@ -3004,7 +2669,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-relative-koku',
-    title: '入試の正誤問題〈127〉（国公立レベル：関係詞）',
+    title: '入試の正誤問題〈127〉（関係詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '先行詞があれば what は使えない。前置詞のあとは whom／which。非制限用法（コンマのあと）に that は使えない。関係代名詞のあとは名詞が1つ欠けた文、完全な文なら関係副詞 where／when／why。',
@@ -3028,7 +2693,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-participle-kyodai',
-    title: '入試の正誤問題〈128〉（京大レベル：分詞構文）',
+    title: '入試の正誤問題〈128〉（分詞構文）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文の意味上の主語は主節の主語と同じ（ちがえば分詞の前に置く独立分詞構文）。「～される」なら過去分詞、主節より前なら Having＋過去分詞、否定は Not＋分詞。with＋名詞＋分詞、weather permitting・all things considered などの慣用表現にも注意。',
@@ -3052,7 +2717,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-subjunctive-todai',
-    title: '入試の正誤問題〈129〉（東大レベル：仮定法）',
+    title: '入試の正誤問題〈129〉（仮定法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '現在の事実の反対は If S＋過去形, S would＋原形、過去の反対は If S had＋過去分詞, S would have＋過去分詞。if の省略は倒置（Had I known）。I wish・as if のあとは過去形（今）／had＋過去分詞（過去）。It is high time S＋過去形。But for／If it were not for ～。',
@@ -3076,7 +2741,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-agreement-kyutei',
-    title: '入試の正誤問題〈130〉（旧帝大レベル：主語と動詞の一致）',
+    title: '入試の正誤問題〈130〉（主語と動詞の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'the number of ～ は単数、a number of ～ は複数。each・every は単数。either A or B・not only A but also B は B に、A as well as B は A に合わせる。長い修飾語があっても本当の主語に合わせる。mathematics・news は単数あつかい。',
@@ -3100,7 +2765,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-inversion-kyodai',
-    title: '入試の正誤問題〈131〉（京大レベル：強調構文と倒置）',
+    title: '入試の正誤問題〈131〉（強調構文と倒置）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '強調構文は It is ～ that …（人なら who も可、what・which は不可）。Never・Little・Rarely・Only then・Not until ～・So＋形容詞が文頭にくると倒置。Hardly had S＋過去分詞 when ～。倒置の do／does／did のあとは原形。',
@@ -3124,7 +2789,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-gerund-koku',
-    title: '入試の正誤問題〈132〉（国公立レベル：不定詞と動名詞）',
+    title: '入試の正誤問題〈132〉（不定詞と動名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'remember／forget＋to do は「これから～すること」、＋-ing は「すでに～したこと」。stop -ing は「～をやめる」。finish・mind・avoid・give up は動名詞、decide・hope・want は不定詞。look forward to・be used to の to は前置詞。',
@@ -3148,7 +2813,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-usage-todai2',
-    title: '入試の正誤問題〈133〉（東大レベル：英作文の語法）',
+    title: '入試の正誤問題〈133〉（語法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'discuss・mention・marry・enter・reach・resemble は他動詞で前置詞をつけない。suggest・insist・demand＋that S（should）＋原形。explain は explain＋もの＋to 人。suggest 人 to do の形はない。',
@@ -3172,7 +2837,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-quantity-kyutei',
-    title: '入試の正誤問題〈134〉（旧帝大レベル：数量の言い方）',
+    title: '入試の正誤問題〈134〉（数量の言い方）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'many・few・a few・a number of は数えられる名詞、much・little・a little・an amount of は数えられない名詞に。time・money・water・milk・homework・equipment は数えられない名詞で複数形にしない。',
@@ -3195,32 +2860,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-speech-kyodai',
-    title: '入試の正誤問題〈135〉（京大レベル：時制の一致と話法）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '主節が過去なら that 節も過去・過去完了・would・could にそろえる。間接疑問は 疑問詞（if）＋S＋V の語順。tell 人 (not) to do。say to 人／tell 人（said me・told to me は誤り）。',
-    ],
-    examples: [
-      { en: 'He said that he was hungry.', ja: '彼はおなかがすいていると言った。' },
-      { en: 'She asked me what time it was.', ja: '彼女は私に何時かとたずねた。' },
-    ],
-    questions: [
-      { sentence: 'He (A) said (B) that he (C) is (D) hungry.', choices: ['(A) said', '(B) that he', '(C) is', '(D) hungry'], answer: 2, why: '主節が said（過去）なので was。' },
-      { sentence: 'She (A) told me (B) that she (C) lost her bag (D) the day before.', choices: ['(A) told me', '(B) that she', '(C) lost her bag', '(D) the day before'], answer: 2, why: '言ったときより前なので had lost。' },
-      { sentence: 'I (A) thought (B) that it (C) will (D) snow.', choices: ['(A) thought', '(B) that it', '(C) will', '(D) snow'], answer: 2, why: '主節が過去なので would。' },
-      { sentence: '(A) He asked me (B) where did I (C) live (D) then.', choices: ['(A) He asked me', '(B) where did I', '(C) live', '(D) then'], answer: 1, why: '間接疑問はふつうの語順。where I lived。' },
-      { sentence: 'She (A) asked me (B) that (C) I could (D) help her.', choices: ['(A) asked me', '(B) that', '(C) I could', '(D) help her'], answer: 1, why: 'Yes／No の間接疑問は if（whether）。' },
-      { sentence: 'The doctor (A) said me (B) to get (C) more (D) sleep.', choices: ['(A) said me', '(B) to get', '(C) more', '(D) sleep'], answer: 0, why: 'tell 人 to do。told me。' },
-      { sentence: 'My mother (A) told me (B) not stay (C) up (D) late.', choices: ['(A) told me', '(B) not stay', '(C) up', '(D) late'], answer: 1, why: 'tell 人 not to do。not to stay。' },
-      { sentence: '(A) He (B) told to me (C) that he (D) would be late.', choices: ['(A) He', '(B) told to me', '(C) that he', '(D) would be late'], answer: 1, why: 'tell は tell 人 that ～。told me。' },
-      { sentence: 'I did not (A) know (B) that she (C) can (D) speak French.', choices: ['(A) know', '(B) that she', '(C) can', '(D) speak French'], answer: 2, why: '主節が過去なので could。' },
-      { sentence: 'She asked me (A) what (B) time (C) it (D) is.', choices: ['(A) what', '(B) time', '(C) it', '(D) is'], answer: 3, why: '主節が asked（過去）なので what time it was。' },
-    ],
-  },
-  {
     id: 'exam-error-prep-koku',
-    title: '入試の正誤問題〈136〉（国公立レベル：前置詞）',
+    title: '入試の正誤問題〈136〉（前置詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '時刻は at、曜日・日付は on、月・年・季節は in。by は期限、until は継続。for は期間の長さ、during は特定の期間。現在完了の「～以来」は since。',
@@ -3243,32 +2884,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-verbs-todai',
-    title: '入試の正誤問題〈137〉（東大レベル：まぎらわしい動詞）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'make a mistake／a decision、do homework／research。tell 人・tell the truth、speak＋言語、talk to 人 about ～。テレビやスポーツは watch、止まっているものは look at。',
-    ],
-    examples: [
-      { en: 'I made a mistake, so I did the exercise again.', ja: 'まちがえたので、その練習問題をやり直した。' },
-      { en: 'He told me the truth.', ja: '彼は私に本当のことを話した。' },
-    ],
-    questions: [
-      { sentence: 'I (A) did (B) a mistake (C) on (D) the test.', choices: ['(A) did', '(B) a mistake', '(C) on', '(D) the test'], answer: 0, why: 'make a mistake。made。' },
-      { sentence: 'Have you (A) made (B) your homework (C) yet, (D) Ken?', choices: ['(A) made', '(B) your homework', '(C) yet,', '(D) Ken?'], answer: 0, why: 'do your homework。done。' },
-      { sentence: 'We (A) must (B) do (C) a decision (D) soon.', choices: ['(A) must', '(B) do', '(C) a decision', '(D) soon'], answer: 1, why: 'make a decision。make。' },
-      { sentence: 'The scientists (A) are (B) studying whales and (C) making research (D) on their songs.', choices: ['(A) are', '(B) studying whales and', '(C) making research', '(D) on their songs'], answer: 2, why: 'do research。doing research。' },
-      { sentence: 'He (A) said (B) me (C) that he (D) was busy.', choices: ['(A) said', '(B) me', '(C) that he', '(D) was busy'], answer: 1, why: '人を目的語にとるのは tell。told me。' },
-      { sentence: 'She (A) never (B) tells (C) lies, and she always (D) says the truth.', choices: ['(A) never', '(B) tells', '(C) lies, and she always', '(D) says the truth'], answer: 3, why: 'tell the truth。tells the truth。' },
-      { sentence: 'Can (A) you (B) talk (C) French (D) well?', choices: ['(A) you', '(B) talk', '(C) French', '(D) well?'], answer: 1, why: '言語を話すのは speak。' },
-      { sentence: 'We (A) saw (B) a baseball game (C) on TV (D) last night.', choices: ['(A) saw', '(B) a baseball game', '(C) on TV', '(D) last night'], answer: 0, why: 'テレビで動くものを見るのは watch。watched。' },
-      { sentence: 'Please (A) watch (B) this map (C) and (D) find the station.', choices: ['(A) watch', '(B) this map', '(C) and', '(D) find the station'], answer: 0, why: '止まっているものを見るのは look at。' },
-      { sentence: 'I (A) want to (B) talk (C) to you (D) of the plan.', choices: ['(A) want to', '(B) talk', '(C) to you', '(D) of the plan'], answer: 3, why: 'talk to 人 about ～。about the plan。' },
-    ],
-  },
-  {
     id: 'exam-error-pronoun-kyutei',
-    title: '入試の正誤問題〈138〉（旧帝大レベル：代名詞）',
+    title: '入試の正誤問題〈138〉（代名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'one は同じ種類の別のもの、it はそのもの。くり返しをさけるのは that of（単数）／those of（複数）。talk to each other。主語と同じなら -self。2つの残りは the other、Some ～, others …。',
@@ -3292,7 +2909,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-conj-kyodai',
-    title: '入試の正誤問題〈139〉（京大レベル：接続詞）',
+    title: '入試の正誤問題〈139〉（接続詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'unless（＝if not）に not をつけない。in case は「念のため」、as long as は「～する限り（条件）」、as far as は「～する範囲では」。even if は仮定、even though は事実。because of＋名詞。although と but は同時に使わない。',
@@ -3315,56 +2932,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-passive-koku',
-    title: '入試の正誤問題〈140〉（国公立レベル：受動態）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'be made of（材料）／from（原料）。be known for（～で有名）／to（～に知られている）。be covered with・be filled with・be surprised at。助動詞の受動態は 助動詞＋be＋過去分詞。',
-    ],
-    examples: [
-      { en: 'Butter is made from milk.', ja: 'バターは牛乳から作られる。' },
-      { en: 'Nara is known for its deer.', ja: '奈良はシカで有名だ。' },
-    ],
-    questions: [
-      { sentence: 'This table (A) is made (B) from (C) wood (D) from Hokkaido.', choices: ['(A) is made', '(B) from', '(C) wood', '(D) from Hokkaido'], answer: 1, why: '材料が見てわかるので be made of。' },
-      { sentence: '(A) Butter (B) is made (C) of (D) milk.', choices: ['(A) Butter', '(B) is made', '(C) of', '(D) milk'], answer: 2, why: '原料が変化しているので be made from。' },
-      { sentence: 'Nara (A) is known (B) by (C) its deer (D) in the park.', choices: ['(A) is known', '(B) by', '(C) its deer', '(D) in the park'], answer: 1, why: '「～で有名だ」は be known for。' },
-      { sentence: 'His songs (A) are known (B) for (C) young people (D) all over Japan.', choices: ['(A) are known', '(B) for', '(C) young people', '(D) all over Japan'], answer: 2, why: '「～に知られている」は be known to。' },
-      { sentence: 'The ground (A) was covered (B) by (C) snow (D) this morning.', choices: ['(A) was covered', '(B) by', '(C) snow', '(D) this morning'], answer: 1, why: 'be covered with。' },
-      { sentence: '(A) I was (B) surprised (C) of (D) the result.', choices: ['(A) I was', '(B) surprised', '(C) of', '(D) the result'], answer: 2, why: 'be surprised at。' },
-      { sentence: '(A) Make of glass, (B) this vase (C) is very (D) fragile.', choices: ['(A) Make of glass,', '(B) this vase', '(C) is very', '(D) fragile'], answer: 0, why: '花びんは「作られる」側なので Made of glass。' },
-      { sentence: 'The report (A) must (B) finish (C) by (D) Friday.', choices: ['(A) must', '(B) finish', '(C) by', '(D) Friday'], answer: 1, why: '報告書は「仕上げられる」側なので must be finished。' },
-      { sentence: 'This letter (A) was (B) written (C) by (D) she.', choices: ['(A) was', '(B) written', '(C) by', '(D) she'], answer: 3, why: '前置詞のあとは目的格。by her。' },
-      { sentence: 'The bottle (A) was (B) filled (C) by (D) water.', choices: ['(A) was', '(B) filled', '(C) by', '(D) water'], answer: 2, why: 'be filled with。' },
-    ],
-  },
-  {
-    id: 'exam-error-adverb-todai',
-    title: '入試の正誤問題〈141〉（東大レベル：形容詞と副詞）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'hard（熱心に）／hardly（ほとんど～ない）、late（おくれて）／lately（最近）、near（近くに）／nearly（ほとんど）。動詞は副詞でくわしくし、look・taste などのあとは形容詞。enough は形容詞のあと。friendly は形容詞。',
-    ],
-    examples: [
-      { en: 'She studied hard, but she could hardly sleep.', ja: '彼女は熱心に勉強したが、ほとんど眠れなかった。' },
-      { en: 'Nearly all the students passed the test.', ja: 'ほとんどすべての生徒がテストに合格した。' },
-    ],
-    questions: [
-      { sentence: 'She (A) studied (B) hardly (C) for (D) the test.', choices: ['(A) studied', '(B) hardly', '(C) for', '(D) the test'], answer: 1, why: '「熱心に」は hard。hardly は「ほとんど～ない」。' },
-      { sentence: 'I (A) could (B) hard (C) understand (D) his accent.', choices: ['(A) could', '(B) hard', '(C) understand', '(D) his accent'], answer: 1, why: '「ほとんど～できなかった」は hardly。' },
-      { sentence: '(A) Near (B) all the students (C) passed (D) the test.', choices: ['(A) Near', '(B) all the students', '(C) passed', '(D) the test'], answer: 0, why: '「ほとんどすべての」は Nearly all。' },
-      { sentence: 'It (A) is (B) near (C) midnight, (D) so we should go home.', choices: ['(A) is', '(B) near', '(C) midnight,', '(D) so we should go home'], answer: 2, why: '「もうすぐ真夜中」は nearly midnight。' },
-      { sentence: 'Please (A) speak (B) more (C) slow (D) for the children.', choices: ['(A) speak', '(B) more', '(C) slow', '(D) for the children'], answer: 2, why: '動詞をくわしくするのは副詞。more slowly。' },
-      { sentence: 'This (A) soup (B) tastes (C) well (D) today.', choices: ['(A) soup', '(B) tastes', '(C) well', '(D) today'], answer: 2, why: 'taste のあとは形容詞。tastes good。' },
-      { sentence: '(A) Sadly, he (B) failed the exam (C) because he did not (D) study hardly.', choices: ['(A) Sadly, he', '(B) failed the exam', '(C) because he did not', '(D) study hardly'], answer: 3, why: '「熱心に勉強する」は study hard。' },
-      { sentence: 'He (A) is (B) enough old (C) to drive (D) a car.', choices: ['(A) is', '(B) enough old', '(C) to drive', '(D) a car'], answer: 1, why: 'enough は形容詞のあと。old enough。' },
-      { sentence: 'The staff (A) were (B) very (C) friendlily (D) to us.', choices: ['(A) were', '(B) very', '(C) friendlily', '(D) to us'], answer: 2, why: 'friendly は形容詞。were very friendly。' },
-      { sentence: 'The bus (A) came (B) lately (C) because of (D) the heavy rain.', choices: ['(A) came', '(B) lately', '(C) because of', '(D) the heavy rain'], answer: 1, why: '「おくれて」は late。lately は「最近」。' },
-    ],
-  },
-  {
     id: 'exam-error-causative-kyutei',
-    title: '入試の正誤問題〈142〉（旧帝大レベル：使役動詞と知覚動詞）',
+    title: '入試の正誤問題〈142〉（使役動詞と知覚動詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'make／let／have＋人＋原形、get＋人＋to do、have＋もの＋過去分詞（～してもらう・～される）。be made to do。see・hear・watch＋目的語＋原形／-ing。目的語が「される」側なら過去分詞。',
@@ -3388,7 +2957,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-inanimate-kyodai',
-    title: '入試の正誤問題〈143〉（京大レベル：無生物主語の構文）',
+    title: '入試の正誤問題〈143〉（無生物主語の構文）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'prevent／keep 人 from -ing、remind 人 of、make it possible for 人 to do、enable／cause／allow 人 to do、take 人 to 場所。疑問詞が主語の疑問文は do を使わない（What made you ～?）。',
@@ -3411,32 +2980,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-reladverb-kokkoritsu',
-    title: '入試の正誤問題〈144〉（国公立レベル：関係副詞）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '関係副詞 where／when／why の後ろは完全な文（前置詞や目的語は残らない）。後ろに目的語が欠けていれば関係代名詞 which／that。the way how とは言わない。in which のように前置詞を前に出したら、後ろにはもう置かない。',
-    ],
-    examples: [
-      { en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' },
-      { en: 'Kyoto is a city which many tourists visit every year.', ja: '京都は毎年多くの旅行者がおとずれる都市だ。' },
-    ],
-    questions: [
-      { sentence: 'This is the town (A) where (B) I (C) was born (D) at.', choices: ['(A) where', '(B) I', '(C) was born', '(D) at'], answer: 3, why: '関係副詞 where のあとに前置詞は要らない。at を取る。' },
-      { sentence: 'This is (A) the way how (B) he (C) solved (D) the problem.', choices: ['(A) the way how', '(B) he', '(C) solved', '(D) the problem'], answer: 0, why: 'the way how とは言わない。the way か how のどちらか一方。' },
-      { sentence: 'Kyoto is a city (A) where (B) many tourists (C) visit (D) every year.', choices: ['(A) where', '(B) many tourists', '(C) visit', '(D) every year'], answer: 1, why: 'visit は目的語が要る他動詞なので、関係代名詞 which／that。' },
-      { sentence: 'I will never forget the day (A) which (B) my son (C) was (D) born.', choices: ['(A) which', '(B) my son', '(C) was', '(D) born'], answer: 0, why: '時を表す先行詞で、後ろが完全な文なので when（＝on which）。' },
-      { sentence: 'That is (A) the reason (B) because (C) I (D) left early.', choices: ['(A) the reason', '(B) because', '(C) I', '(D) left early'], answer: 1, why: 'the reason why ～「～する理由」。because は使えない。' },
-      { sentence: 'The house (A) in which (B) he (C) lives in (D) is old.', choices: ['(A) in which', '(B) he', '(C) lives in', '(D) is old'], answer: 2, why: 'in which の in がすでにあるので、lives の後ろの in は要らない。' },
-      { sentence: 'We went to Nara, (A) where (B) we (C) saw (D) there many deer.', choices: ['(A) where', '(B) we', '(C) saw', '(D) there many deer'], answer: 3, why: 'where（＝and there）があるので there は要らない。' },
-      { sentence: 'The library is a place (A) where (B) students (C) can study (D) in it quietly.', choices: ['(A) where', '(B) students', '(C) can study', '(D) in it quietly'], answer: 3, why: 'where（＝in which）があるので in it は要らない。' },
-      { sentence: 'I visited the house (A) where (B) the writer (C) had lived in (D) as a child.', choices: ['(A) where', '(B) the writer', '(C) had lived in', '(D) as a child'], answer: 2, why: 'where のあとに前置詞 in は要らない。had lived。' },
-      { sentence: 'Winter is the season (A) when (B) I like (C) best of (D) all the seasons.', choices: ['(A) when', '(B) I like', '(C) best of', '(D) all the seasons'], answer: 0, why: 'like の目的語が欠けているので、関係代名詞 which／that。' },
-    ],
-  },
-  {
     id: 'exam-error-concession-kyodai',
-    title: '入試の正誤問題〈145〉（京大レベル：譲歩の表現）',
+    title: '入試の正誤問題〈145〉（譲歩の表現）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'however／no matter how は「＋形容詞・副詞＋主語＋動詞」の語順（However tired you are）。whatever／whoever／whichever／wherever／whenever の節は、未来のことでも現在形。although と but はいっしょに使わない。even だけでは接続詞にならない（even if／even though）。',
@@ -3460,7 +3005,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-with-todai',
-    title: '入試の正誤問題〈146〉（東大レベル：付帯状況の with）',
+    title: '入試の正誤問題〈146〉（付帯状況の with）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '付帯状況の with は「with＋名詞＋分詞・形容詞・副詞・前置詞句」で「～を…したまま・…の状態で」。名詞が「する」側なら現在分詞（with night coming on）、「される」側なら過去分詞（with his eyes closed）。with の後ろに動詞の過去形や is は置けない。',
@@ -3484,7 +3029,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adjective-kokkoritsu',
-    title: '入試の正誤問題〈147〉（国公立レベル：形容詞の叙述用法と後置）',
+    title: '入試の正誤問題〈147〉（形容詞の叙述用法と後置）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'alive・asleep・awake・afraid・alike・aware などの a- で始まる形容詞は、名詞の前に置けず補語として使う（the sleeping baby／The baby is asleep）。名詞の前では live・living・similar などを使う。something・anything など -thing の語は形容詞を後ろに置く（something cold）。be afraid of・be aware of の前置詞にも注意。',
@@ -3508,7 +3053,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-gerund-kyodai',
-    title: '入試の正誤問題〈148〉（京大レベル：動名詞の意味上の主語と完了形）',
+    title: '入試の正誤問題〈148〉（動名詞の意味上の主語と完了形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '前置詞のあとは動名詞（of being）。動名詞の意味上の主語は所有格か目的格（his coming／my going）。述語動詞より前のことは完了形の動名詞 having＋過去分詞（He denied having stolen it）。deny・mind・insist on は動名詞をとる。remember -ing は「（過去に）～したことを覚えている」。',
@@ -3532,7 +3077,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-article2-todai',
-    title: '入試の正誤問題〈149〉（東大レベル：英作文の冠詞）',
+    title: '入試の正誤問題〈149〉（冠詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '一度出た名詞や、だれにもわかる特定のものは the（the sun・in the east・in the class）。スポーツ名・食事名・by＋交通手段・go to bed・last week は無冠詞。Mount ～ の山の名前は無冠詞。a／an は文字ではなく最初の音で決まる（a university・an hour）。',
@@ -3556,7 +3101,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-quantity-kokkoritsu',
-    title: '入試の正誤問題〈150〉（国公立レベル：数量形容詞）',
+    title: '入試の正誤問題〈150〉（数量形容詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '数えられる名詞（friends・students）には many／few／a few、数えられない名詞（water・money・information・time・coffee）には much／little／a little。few・little は「ほとんどない」、a few・a little は「少しある」。a few of the students は複数あつかい。',
@@ -3580,7 +3125,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-negation-kyodai',
-    title: '入試の正誤問題〈151〉（京大レベル：準否定と倒置）',
+    title: '入試の正誤問題〈151〉（準否定と倒置）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'hardly・scarcely・seldom・rarely はそれ自体が否定の意味なので not と重ねない。否定の副詞（Never・Hardly・Little・Seldom・Only＋副詞句・Not only）が文頭に来ると、疑問文の語順に倒置する（Never have I seen）。Hardly／Scarcely ～ when …、No sooner ～ than … の組み合わせに注意。',
@@ -3604,7 +3149,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-perfect-todai',
-    title: '入試の正誤問題〈152〉（東大レベル：英作文の現在完了と過去形）',
+    title: '入試の正誤問題〈152〉（現在完了と過去形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '現在完了（have＋過去分詞）は今とつながる経験・完了・継続。last year・ago・When ～? のような過去の時点をはっきり表す語とは過去形を使う。since のあとは過去の時点（過去形）、for のあとは期間。経験の「行ったことがある」は have been to、has gone は「行ってしまった（今いない）」。',
@@ -3628,7 +3173,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-conj-kokkoritsu',
-    title: '入試の正誤問題〈153〉（国公立レベル：接続詞と前置詞の使い分け）',
+    title: '入試の正誤問題〈153〉（接続詞と前置詞の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '後ろに主語＋動詞の文がくるなら接続詞（because・although・while）、名詞だけなら前置詞（because of・despite／in spite of・during）。despite に of はつけない。in spite of の of は落とさない。although と but はいっしょに使わない。',
@@ -3652,7 +3197,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-inversion-if-kyodai',
-    title: '入試の正誤問題〈154〉（京大レベル：仮定法の if の省略と倒置）',
+    title: '入試の正誤問題〈154〉（仮定法の if の省略と倒置）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'if を省略すると倒置になる：Had I known（＝If I had known）・Were I you（＝If I were you）・Should you need（＝If you should need）・Had it not been for（＝If it had not been for）。仮定法過去の主節は would／could＋原形、仮定法過去完了の主節は would／could have＋過去分詞。I wish のあとも仮定法。',
@@ -3676,7 +3221,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-agreement-todai',
-    title: '入試の正誤問題〈155〉（東大レベル：英作文の名詞の数と主語の一致）',
+    title: '入試の正誤問題〈155〉（名詞の数と主語の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'one of the＋複数名詞（動詞は単数）。each・every・everyone は単数あつかい（every のあとも単数名詞）。the number of ～「～の数」は単数、a number of ～「たくさんの～」は複数。mathematics・news などの -s で終わる単数名詞、ひとまとまりの期間（ten years）は単数あつかい。',
@@ -3700,7 +3245,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-modal-have-kokkoritsu',
-    title: '入試の正誤問題〈156〉（国公立レベル：助動詞＋have＋過去分詞）',
+    title: '入試の正誤問題〈156〉（助動詞＋have＋過去分詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '助動詞＋have＋過去分詞は過去のことについての推量・後悔。should have done「～すべきだったのに」・must have done「～したにちがいない」・cannot have done「～したはずがない」・may have done「～したかもしれない」・need not have done「～する必要はなかったのに」。助動詞のあとは have（has ではない）、have のあとは過去分詞。',
@@ -3724,7 +3269,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-cleft-kyodai',
-    title: '入試の正誤問題〈157〉（京大レベル：強調構文と形式主語）',
+    title: '入試の正誤問題〈157〉（強調構文と形式主語）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '強調構文は It is／was ＋強調する語句＋that ～（人なら who も可）。強調するものが複数でも It is／was のまま。副詞句を強調するときは which・when は使わず that。It was not until ～ that …「～してはじめて…」。形式主語の It は It is ＋形容詞＋that 節／for 人 to do／of 人 to do。見分け方：It is と that を取りさって文が成り立てば強調構文。',
@@ -3748,7 +3293,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-asas-todai',
-    title: '入試の正誤問題〈158〉（東大レベル：英作文の原級比較と倍数表現）',
+    title: '入試の正誤問題〈158〉（原級比較と倍数表現）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'as ～ as … の間は原級（形容詞・副詞のもとの形）。倍数は twice／three times／half＋as ～ as …（than とまぜない）。not so（as）～ as …「…ほど～ない」。as ～ as possible「できるだけ～」。the same ～ as …（like ではない）。比べるものをそろえる（the population of Tokyo と that of this town）。',
@@ -3772,7 +3317,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-ittakes-kokuritsu',
-    title: '入試の正誤問題〈159〉（国公立レベル：It takes 人 時間 to do・It costs 人 お金 to do）',
+    title: '入試の正誤問題〈159〉（It takes 人 時間 to do・It costs 人 お金 to do）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'It takes（人）時間 to do「（人が）～するのに時間がかかる」。It costs（人）お金 to do「（人が）～するのにお金がかかる」。人は動詞のすぐあと（to をつけない）、そのあとは to＋動詞の原形。cost は cost-cost-cost。時間には take、お金には cost を使う。「長い時間」は a long time。',
@@ -3796,7 +3341,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-relwhere-kyodai',
-    title: '入試の正誤問題〈160〉（京大レベル：関係副詞 where・when と 前置詞＋which）',
+    title: '入試の正誤問題〈160〉（関係副詞 where・when と 前置詞＋which）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '関係副詞は、うしろの文に「そこで・そのとき・その理由で」の意味が欠けているときに使う：場所 where、時 when、理由 why。where＝in（at）which。前置詞のあとに関係副詞は置かない（in where は×）。うしろの動詞が目的語をとる（visit・spend など）なら関係代名詞 which。the way と how は重ねない。前置詞を which の前に出したら文の最後にくり返さない。',
@@ -3819,32 +3364,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-reported-todai',
-    title: '入試の正誤問題〈161〉（東大レベル：英作文の時制の一致と話法の書きかえ）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '主節が過去なら、that 節の動詞も1つ過去にずらす（is→was・will→would・can→could・現在完了→過去完了）。ただし変わらない真理は現在形のまま。話法を書きかえると時や場所のことばも変わる（yesterday→the day before・next week→the following week・ago→before・now→then）。say that ～／tell 人 that ～（say me・tell that は×）。間接疑問は〈疑問詞＋主語＋動詞〉の語順。命令は tell 人 (not) to do。',
-    ],
-    examples: [
-      { en: 'She said that she would visit Kyoto the following week.', ja: '彼女は、次の週に京都をおとずれるつもりだと言った。' },
-      { en: 'He asked me where I lived.', ja: '彼は私にどこに住んでいるのかたずねた。' },
-    ],
-    questions: [
-      { sentence: 'She said (A) that she (B) would visit (C) Kyoto (D) next week.', choices: ['(A) that she', '(B) would visit', '(C) Kyoto', '(D) next week'], answer: 3, why: '話法を書きかえると next week は the following week になる。' },
-      { sentence: 'He told me (A) that he (B) had lost (C) his key (D) yesterday.', choices: ['(A) that he', '(B) had lost', '(C) his key', '(D) yesterday'], answer: 3, why: '話法を書きかえると yesterday は the day before（the previous day）になる。' },
-      { sentence: 'She (A) told (B) that she (C) had finished (D) the work.', choices: ['(A) told', '(B) that she', '(C) had finished', '(D) the work'], answer: 0, why: 'told のあとには人が必要。said that ～ か told me that ～。' },
-      { sentence: 'He asked me (A) where (B) did I live (C) at (D) that time.', choices: ['(A) where', '(B) did I live', '(C) at', '(D) that time'], answer: 1, why: '間接疑問は〈疑問詞＋主語＋動詞〉の語順。where I lived。' },
-      { sentence: 'Our teacher (A) told us (B) that (C) water boiled (D) at 100 degrees.', choices: ['(A) told us', '(B) that', '(C) water boiled', '(D) at 100 degrees'], answer: 2, why: '変わらない真理は時制の一致を受けず現在形。water boils。' },
-      { sentence: 'She asked me (A) if (B) I (C) can help her (D) with her homework.', choices: ['(A) if', '(B) I', '(C) can help her', '(D) with her homework'], answer: 2, why: '主節が過去なので時制の一致で could help。' },
-      { sentence: '(A) Tom said (B) that he (C) has been (D) to Paris twice.', choices: ['(A) Tom said', '(B) that he', '(C) has been', '(D) to Paris twice'], answer: 2, why: '主節が過去なので現在完了は過去完了に。had been。' },
-      { sentence: 'My mother told me (A) not (B) to staying (C) out (D) late.', choices: ['(A) not', '(B) to staying', '(C) out', '(D) late'], answer: 1, why: 'tell 人 not to do。to のあとは動詞の原形 stay。' },
-      { sentence: 'He asked me (A) what time (B) would the train (C) leave (D) the next day.', choices: ['(A) what time', '(B) would the train', '(C) leave', '(D) the next day'], answer: 1, why: '間接疑問の語順は〈疑問詞＋主語＋動詞〉。what time the train would leave。' },
-      { sentence: 'She (A) said that (B) she had met him (C) two days ago (D) in the library.', choices: ['(A) said that', '(B) she had met him', '(C) two days ago', '(D) in the library'], answer: 2, why: '話法を書きかえると ago は before になる。two days before。' },
-    ],
-  },
-  {
     id: 'exam-error-forof-kokuritsu',
-    title: '入試の正誤問題〈162〉（国公立レベル：不定詞の意味上の主語 for 人・of 人）',
+    title: '入試の正誤問題〈162〉（不定詞の意味上の主語 for 人・of 人）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '不定詞の「だれが」は for 人 で表す（It is difficult for me to answer）。ただし kind・nice・careless・wise・foolish・rude など人の性質を表す形容詞のときは of 人（It is kind of you to help me）。for 人・of 人 のあとは to＋動詞の原形。否定は not to do。too ～ for 人 to do で主語が目的語にあたるとき、目的語の it はつけない。',
@@ -3868,7 +3389,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-emphasis-kyodai',
-    title: '入試の正誤問題〈163〉（京大レベル：強調構文 It is ～ that と形式主語 It の見分け）',
+    title: '入試の正誤問題〈163〉（強調構文 It is ～ that と形式主語 It の見分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '強調構文 It is（was）～ that …：強調したい語句を ～ に入れ、残りを that のあとに置く。人なら who も使えるが、場所・時・理由の語句でも which・where・when・why ではなく that。It was not until ～ that …「～してはじめて…」。疑問詞の強調は What is it that ～? のあとをふつうの語順に。形式主語 It：It is important（clear）that ～・It is said that ～。that を取り去って文が成り立てば強調構文、成り立たなければ形式主語。',
@@ -3892,7 +3413,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-uncountable-todai',
-    title: '入試の正誤問題〈164〉（東大レベル：英作文の数えられない名詞 information・advice・furniture）',
+    title: '入試の正誤問題〈164〉（数えられない名詞 information・advice・furniture）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '英語で数えられない名詞：information・advice・furniture・luggage（baggage）・homework・progress・traffic・news・paper（紙）・money など。a（an）をつけず、複数形にもしない。単数あつかい（The news was ～）。量は much・a little・some・a lot of で、数えるときは a piece of advice・two pieces of furniture。people・police は複数あつかいの数えられる名詞なので many people。',
@@ -3916,7 +3437,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-whose-kokuritsu',
-    title: '入試の正誤問題〈165〉（国公立レベル：所有格の関係代名詞 whose と of which）',
+    title: '入試の正誤問題〈165〉（所有格の関係代名詞 whose と of which）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「その～の…」と所有を表す関係代名詞は whose（人にも物にも使える）。whose のあとの名詞には a・the をつけない（whose roof）。物の場合は the ～ of which も使える（the top of which）。who・which・that には所有の意味はない。whose＋名詞が節の主語なら動詞はその名詞に合わせ、文全体の動詞は先行詞に合わせる。whose＋名詞が目的語なら、うしろに it などをくり返さない。',
@@ -3940,7 +3461,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-dangling-kyodai',
-    title: '入試の正誤問題〈166〉（京大レベル：分詞構文の意味上の主語のずれ（懸垂分詞）と独立分詞構文）',
+    title: '入試の正誤問題〈166〉（分詞構文の意味上の主語のずれ（懸垂分詞）と独立分詞構文）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文の意味上の主語は、ふつう主節の主語と同じ。ずれる（懸垂分詞）とまちがい（Walking along the street, a noise was heard は×）。主語がちがうときは分詞の前に主語を置く独立分詞構文（It being a rainy day・The sun having set・There being no bus）。主語が「される」側なら過去分詞（Seen from the plane・all things considered）。慣用表現 generally speaking・judging from ～・weather permitting。',
@@ -3964,7 +3485,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-articles-todai',
-    title: '入試の正誤問題〈167〉（東大レベル：英作文の冠詞 a・the・無冠詞の使い分け）',
+    title: '入試の正誤問題〈167〉（冠詞 a・the・無冠詞の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'a（an）ははじめて出てくる数えられる名詞1つ。an は母音の「音」の前（an honest man・a university）。the は一度出たもの・ただ一つのもの（the world・the sun）・方角（in the east）・楽器（play the piano）。冠詞をつけないもの：スポーツ（play tennis）・食事（have breakfast）・交通手段の by（by bus）・本来の目的で使う場所（go to school・go to bed）・一般的な意味の数えられない名詞（Life is ～）。',
@@ -3988,7 +3509,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-lielay-kokuritsu',
-    title: '入試の正誤問題〈168〉（国公立レベル：まぎらわしい自動詞と他動詞 lie・lay／rise・raise）',
+    title: '入試の正誤問題〈168〉（まぎらわしい自動詞と他動詞 lie・lay／rise・raise）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '自動詞（目的語をとらない）と他動詞（目的語をとる）のまぎらわしい組。lie「横になる・ある」lie-lay-lain／lay「置く・（卵を）産む」lay-laid-laid。rise「上がる・のぼる」rise-rose-risen／raise「上げる・育てる」raise-raised-raised。うしろに目的語（the book・his hand・taxes）があれば他動詞 lay・raise、なければ自動詞 lie・rise。lie の過去形 lay と、lay の原形を取りちがえないこと。',
@@ -4012,7 +3533,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-mixedif-kyodai',
-    title: '入試の正誤問題〈169〉（京大レベル：仮定法過去完了と混合仮定法）',
+    title: '入試の正誤問題〈169〉（仮定法過去完了と混合仮定法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '過去の事実とちがうことは仮定法過去完了：If＋主語＋had＋過去分詞, 主語＋would（could・might）have＋過去分詞。if 節に would は使わない。if を省くと Had I known ～ と倒置。過去の条件が今に影響するときは混合仮定法：If＋had＋過去分詞（過去）, would＋動詞の原形（今・now）。Without ～ も過去のことなら would have＋過去分詞。yesterday・last week・now など時のことばを手がかりにする。',
@@ -4036,7 +3557,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-pronoun-one-todai',
-    title: '入試の正誤問題〈170〉（東大レベル：英作文の代名詞 one・it・that の使い分け）',
+    title: '入試の正誤問題〈170〉（代名詞 one・it・that の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'it は前に出たその「もの自体」を指す。one は同じ種類の「別の1つ」（a new one・the old one）、複数なら ones。the＋名詞＋of ～ のくり返しをさけるときは、単数なら that、複数なら those（that of Canada・those of a cat）。「～する人々」は those who ～。所有代名詞 mine・yours・hers のあとに名詞や one はつけない。another のあとは単数。',
@@ -4060,7 +3581,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-conj-unless-kokuritsu',
-    title: '入試の正誤問題〈171〉（国公立レベル：接続詞 unless・once・as long as・in case の使い分け）',
+    title: '入試の正誤問題〈171〉（接続詞 unless・once・as long as・in case の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'unless「～しないかぎり」（否定の意味をふくむので not をつけない）、once「いったん～すると」、as long as「～するかぎり・～しさえすれば」、in case「～するといけないから・～する場合にそなえて」。時や条件を表すこれらの接続詞のあとは、未来のことでも現在形（in case it rains・once you start）。in case of のあとは名詞（in case of fire）。',
@@ -4084,7 +3605,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-doukaku-kyodai',
-    title: '入試の正誤問題〈172〉（京大レベル：同格の that と関係代名詞の that の見分け）',
+    title: '入試の正誤問題〈172〉（同格の that と関係代名詞の that の見分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '同格の that は the news・the fact・the idea・a rumor・no doubt などのあとで「～という」と内容を説明し、うしろは欠けたところのない完全な文。which・what は使えない。関係代名詞の that は、うしろの文で主語や目的語が欠けているので、目的語の it などをくり返さない。見分け方：that 以下が完全な文なら同格、主語か目的語が欠けていれば関係代名詞。',
@@ -4108,7 +3629,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-compare-obj-todai',
-    title: '入試の正誤問題〈173〉（東大レベル：英作文の比較の対象をそろえる）',
+    title: '入試の正誤問題〈173〉（比較の対象をそろえる）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '比較では、比べるもの同士の種類と形をそろえる。「中国の人口」と比べるのは「日本の人口」なので than that of Japan（複数なら those of ～）。人の持ち物なら所有代名詞・所有格（mine・my brother’s）。動名詞は動名詞と（Living ～ than living ～）。the number（数）の大小は large・small。',
@@ -4132,7 +3653,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-passive-make-kokuritsu',
-    title: '入試の正誤問題〈174〉（国公立レベル：使役・知覚動詞の受け身 be made to do・be seen to do）',
+    title: '入試の正誤問題〈174〉（使役・知覚動詞の受け身 be made to do・be seen to do）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '能動態では make・see・hear のあとは動詞の原形（made him apologize・saw him enter）。受け身にすると to が出る（was made to wash・was seen to run・was heard to say）。let はふつう受け身にせず be allowed to do を使う。to のあとはいつも動詞の原形。',
@@ -4156,7 +3677,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-idiomatic-participle-kyodai',
-    title: '入試の正誤問題〈175〉（京大レベル：慣用的な分詞構文と独立分詞構文）',
+    title: '入試の正誤問題〈175〉（慣用的な分詞構文と独立分詞構文）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '慣用的な分詞構文は主節の主語と関係なく使える決まった形：frankly speaking「率直に言えば」・generally speaking「一般的に言えば」・judging from ～「～から判断すると」・compared with ～「～と比べると」・taking ～ into consideration「～を考慮すると」。主節とちがう主語は分詞の前に残す（独立分詞構文：The sun having set, ～・It being rainy, ～・Weather permitting, ～）。主語が「される」側なら過去分詞、否定は not を分詞の前に置く。',
@@ -4179,32 +3700,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-wish-asif-todai',
-    title: '入試の正誤問題〈176〉（東大レベル：仮定法 I wish・as if の時制）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'I wish・If only・as if（as though）のあとは、現在の事実に反することなら過去形（be は were）、過去の事実に反することなら過去完了（had＋過去分詞）。主節の時制が変わっても、あとの形は「主節と同じ時か、それより前か」で決まる。I wish のあとに will は使わない（実現しそうなら I hope）。It is high time ＋過去形「もう～するころだ」。',
-    ],
-    examples: [
-      { en: 'I wish I could speak French as well as you.', ja: 'あなたと同じくらいフランス語が話せたらいいのに。' },
-      { en: 'He looked as if he had seen a ghost.', ja: '彼はまるで幽霊を見たかのような顔をしていた。' },
-    ],
-    questions: [
-      { sentence: 'I wish (A) I (B) can speak (C) French (D) as well as you.', choices: ['(A) I', '(B) can speak', '(C) French', '(D) as well as you'], answer: 1, why: 'I wish のあとの現在の事実に反する願望は過去形。could speak。' },
-      { sentence: '(A) She talks (B) as if she (C) knows (D) everything.', choices: ['(A) She talks', '(B) as if she', '(C) knows', '(D) everything'], answer: 2, why: 'as if のあとの現在の事実に反することは過去形。knew。' },
-      { sentence: 'I wish (A) I (B) had studied (C) harder (D) when I am young.', choices: ['(A) I', '(B) had studied', '(C) harder', '(D) when I am young'], answer: 3, why: '「若かったとき」は過去なので when I was young。' },
-      { sentence: '(A) He looked (B) as if he (C) has seen (D) a ghost.', choices: ['(A) He looked', '(B) as if he', '(C) has seen', '(D) a ghost'], answer: 2, why: '主節より前のことで事実に反するなら過去完了。had seen。' },
-      { sentence: '(A) I wish (B) it (C) will stop (D) raining soon.', choices: ['(A) I wish', '(B) it', '(C) will stop', '(D) raining soon'], answer: 2, why: 'I wish のあとに will は使わない。実現しそうな願いなら I hope it will stop、事実に反する願いなら I wish it would stop。' },
-      { sentence: '(A) If only (B) I (C) have known (D) the truth then.', choices: ['(A) If only', '(B) I', '(C) have known', '(D) the truth then'], answer: 2, why: '過去の事実に反する願望は If only ＋過去完了。had known。' },
-      { sentence: '(A) It is (B) high time (C) we go (D) home.', choices: ['(A) It is', '(B) high time', '(C) we go', '(D) home'], answer: 2, why: 'It is high time ＋過去形「もう～してもよいころだ」。we went home。' },
-      { sentence: '(A) He spoke (B) to me (C) as though (D) I am a child.', choices: ['(A) He spoke', '(B) to me', '(C) as though', '(D) I am a child'], answer: 3, why: 'as though のあとの事実に反することは過去形。I were a child。' },
-      { sentence: 'I wish (A) you (B) are (C) here (D) with us now.', choices: ['(A) you', '(B) are', '(C) here', '(D) with us now'], answer: 1, why: '現在の事実に反する願望は過去形（be は were）。you were here。' },
-      { sentence: '(A) I hope (B) I were (C) rich enough (D) to buy that house.', choices: ['(A) I hope', '(B) I were', '(C) rich enough', '(D) to buy that house'], answer: 0, why: '事実に反する願望で were を使うなら I wish。I wish I were rich enough。' },
-    ],
-  },
-  {
     id: 'exam-error-modal-idioms-kyodai',
-    title: '入試の正誤問題〈177〉（京大レベル：助動詞の慣用表現 may well・might as well・cannot help ～ing）',
+    title: '入試の正誤問題〈177〉（助動詞の慣用表現 may well・might as well・cannot help ～ing）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '助動詞の慣用表現：may well ＋原形「～するのももっともだ・たぶん～だろう」、might as well ＋原形「～したほうがましだ」（might as well A as B「B するくらいなら A したほうがましだ」）、cannot help ～ing「～せずにいられない」、cannot ～ too ...「いくら…してもしすぎることはない」、had better (not) ＋原形、would rather A than B、used to ＋原形、need not ＋原形。助動詞のあとはいつも動詞の原形で、to はつけない（used to・ought to をのぞく）。',
@@ -4228,7 +3725,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adj-prep-kokuritsu',
-    title: '入試の正誤問題〈178〉（国公立レベル：形容詞＋前置詞 be famous for・be proud of・be different from）',
+    title: '入試の正誤問題〈178〉（形容詞＋前置詞 be famous for・be proud of・be different from）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '形容詞とあとの前置詞の結びつきは決まっている：be famous for ～・be proud of ～・be different from ～・be good at ～・be full of ～（＝be filled with ～）・be afraid of ～・be kind to ～・be interested in ～・be satisfied with ～・be similar to ～。人の気持ちを表すときは -ed の形（interested・satisfied）。',
@@ -4252,7 +3749,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-quantity-todai',
-    title: '入試の正誤問題〈179〉（東大レベル：英作文の数量表現 a number of・the number of・most of）',
+    title: '入試の正誤問題〈179〉（数量表現 a number of・the number of・most of）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '数量表現の単数・複数：a number of ＋複数名詞「多くの～」は複数扱い、the number of ＋複数名詞「～の数」は単数扱い。most of・all of・some of・分数＋of・percent of は of のあとの名詞に合わせる（数えられる複数なら複数、数えられない名詞や単数なら単数）。each・every・each of・neither of は単数扱い。almost は副詞なので almost all ＋名詞の形にする。',
@@ -4276,7 +3773,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-whatever-kyodai',
-    title: '入試の正誤問題〈180〉（京大レベル：複合関係詞 whatever・whoever・no matter how）',
+    title: '入試の正誤問題〈180〉（複合関係詞 whatever・whoever・no matter how）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '複合関係詞：whatever「何でも・何が～しようとも」、whoever「だれでも・だれが～しようとも」（単数扱い）、whichever「どちらでも」、wherever「どこへでも」、whenever「いつでも」、however ＋形容詞・副詞「どんなに～でも」。譲歩の意味では no matter what・who・how と言いかえられる。節の中は平叙文の語順（whatever you like）。主節の時制・主語との一致にも注意する。',
@@ -4300,7 +3797,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-nonrestrictive-kokuritsu',
-    title: '入試の正誤問題〈181〉（国公立レベル：関係代名詞の非制限用法 , which・, who）',
+    title: '入試の正誤問題〈181〉（関係代名詞の非制限用法 , which・, who）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'カンマのあとに関係詞を置く非制限用法は、先行詞に情報を「付け足す」用法。人は , who（目的格 , whom）、物は , which、場所は , where、時は , when。非制限用法では that は使えない。, which は前の文全体を受けることもできる（She said nothing, which made him angry.）。関係詞が目的語なら it・him などをくり返さない。前置詞のあとは whom・which（both of whom）。',
@@ -4323,32 +3820,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-said-to-todai',
-    title: '入試の正誤問題〈182〉（東大レベル：英作文の It is said that と be said to の書きかえ）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '「～と言われている」は It is said that S＋V と S is said to do の二通りに書ける（believe・think・report なども同じ）。that 節が主節より前のことなら、to 不定詞は完了形 to have ＋過去分詞（He is said to have lived in Paris.）。受け身の内容なら to be ＋過去分詞・to have been ＋過去分詞。人が主語なら that 節は続けない（They are said that ～ は誤り）。',
-    ],
-    examples: [
-      { en: 'He is said to be a great cook.', ja: '彼はすばらしい料理人だと言われている。' },
-      { en: 'The castle is said to have been built in the 16th century.', ja: 'その城は16世紀に建てられたと言われている。' },
-    ],
-    questions: [
-      { sentence: '(A) He (B) is said (C) being (D) a great cook.', choices: ['(A) He', '(B) is said', '(C) being', '(D) a great cook'], answer: 2, why: 'be said to ＋原形。is said to be。' },
-      { sentence: '(A) It is said (B) that (C) she to speak (D) five languages.', choices: ['(A) It is said', '(B) that', '(C) she to speak', '(D) five languages'], answer: 2, why: 'that のあとは主語＋動詞。she speaks。' },
-      { sentence: '(A) The castle (B) is said (C) to build (D) in the 16th century.', choices: ['(A) The castle', '(B) is said', '(C) to build', '(D) in the 16th century'], answer: 2, why: '城は「建てられた」側で、しかも過去のこと。to have been built。' },
-      { sentence: '(A) She (B) is said (C) to be (D) lived in Paris when young.', choices: ['(A) She', '(B) is said', '(C) to be', '(D) lived in Paris when young'], answer: 3, why: '過去のことは完了不定詞。to have lived。' },
-      { sentence: '(A) It (B) says that (C) the river (D) is very deep.', choices: ['(A) It', '(B) says that', '(C) the river', '(D) is very deep'], answer: 1, why: '「～と言われている」は It is said that。' },
-      { sentence: '(A) They are said (B) that they (C) are (D) very rich.', choices: ['(A) They are said', '(B) that they', '(C) are', '(D) very rich'], answer: 0, why: '人が主語なら They are said to be very rich、it が主語なら It is said that they are very rich。They are said that は誤り。' },
-      { sentence: '(A) It is believed (B) that the man (C) has (D) escaped last night.', choices: ['(A) It is believed', '(B) that the man', '(C) has', '(D) escaped last night'], answer: 2, why: 'last night は過去のはっきりした時なので現在完了は使えない。escaped。' },
-      { sentence: '(A) He (B) is thought (C) to have (D) stole the money.', choices: ['(A) He', '(B) is thought', '(C) to have', '(D) stole the money'], answer: 3, why: 'to have のあとは過去分詞。to have stolen。' },
-      { sentence: '(A) It was (B) reported (C) that the plane (D) land safely.', choices: ['(A) It was', '(B) reported', '(C) that the plane', '(D) land safely'], answer: 3, why: '主節が過去なので that 節も過去形。landed。' },
-      { sentence: '(A) This tree (B) is said (C) be (D) over 1,000 years old.', choices: ['(A) This tree', '(B) is said', '(C) be', '(D) over 1,000 years old'], answer: 2, why: 'be said のあとは to 不定詞。to be。' },
-    ],
-  },
-  {
     id: 'exam-error-seem-to-kyodai',
-    title: '入試の正誤問題〈183〉（京大レベル：seem to・appear to と完了不定詞）',
+    title: '入試の正誤問題〈183〉（seem to・appear to と完了不定詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'S seem（appear）to do「S は～するようだ」＝ It seems（appears）that S＋V。seem と同じ時のことなら to do、seem より前のことなら完了不定詞 to have ＋過去分詞（She seems to have been ill.＝It seems that she was ill.）。進行中なら to be ～ing。to のあとはいつも原形。It seemed that ～ のように主節が過去なら that 節も時制を合わせる。',
@@ -4372,7 +3845,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-indirect-q-kokuritsu',
-    title: '入試の正誤問題〈184〉（国公立レベル：間接疑問の語順 I wonder where he lives）',
+    title: '入試の正誤問題〈184〉（間接疑問の語順 I wonder where he lives）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '疑問文が文の一部になる間接疑問では、疑問詞のあとを主語＋動詞の平叙文の語順にする（I wonder where he lives.）。助動詞や do・does・did は主語の前に出さない。疑問詞が主語のときはそのまま（who broke）。Yes/No 疑問は if・whether でつなぐ。do you think・do you suppose などがあるときは、疑問詞を文頭に出す（What do you think he is doing?）。主節が過去なら時制を合わせる。',
@@ -4395,32 +3868,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-if-whether-todai',
-    title: '入試の正誤問題〈185〉（東大レベル：英作文の if と whether の使い分け）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '「～かどうか」の名詞節は if と whether の両方で表せるが、if を使えるのはおもに動詞の目的語のときだけ。文の主語（Whether he comes is ～）、be 動詞の補語（The question is whether ～）、前置詞のあと（depends on whether ～）、to 不定詞の前（whether to go）、or not をすぐあとに続けるとき（whether or not）は whether を使う。節の中は平叙文の語順。「もし～なら」の副詞節の if は未来でも現在形。',
-    ],
-    examples: [
-      { en: 'Whether he will come or not is not important.', ja: '彼が来るかどうかは重要ではない。' },
-      { en: 'It depends on whether the weather is fine.', ja: 'それは天気がよいかどうかによる。' },
-    ],
-    questions: [
-      { sentence: '(A) If (B) he will come (C) or not (D) is not important.', choices: ['(A) If', '(B) he will come', '(C) or not', '(D) is not important'], answer: 0, why: '文の主語になる名詞節は whether を使う。Whether he will come or not。' },
-      { sentence: '(A) The question is (B) if (C) we can (D) finish it in time.', choices: ['(A) The question is', '(B) if', '(C) we can', '(D) finish it in time'], answer: 1, why: 'be 動詞の補語になる名詞節は whether。The question is whether。' },
-      { sentence: '(A) I am not sure (B) if or not (C) she (D) will come.', choices: ['(A) I am not sure', '(B) if or not', '(C) she', '(D) will come'], answer: 1, why: 'or not をすぐあとに続けるときは whether。whether or not。' },
-      { sentence: '(A) It depends on (B) if (C) the weather (D) is fine.', choices: ['(A) It depends on', '(B) if', '(C) the weather', '(D) is fine'], answer: 1, why: '前置詞のあとの名詞節は whether。depends on whether。' },
-      { sentence: '(A) I asked him (B) whether (C) he can (D) help me yesterday.', choices: ['(A) I asked him', '(B) whether', '(C) he can', '(D) help me yesterday'], answer: 2, why: '主節が過去なので could help。' },
-      { sentence: '(A) Please tell me (B) whether (C) to buy or (D) not this book.', choices: ['(A) Please tell me', '(B) whether', '(C) to buy or', '(D) not this book'], answer: 3, why: 'whether to buy this book or not の語順。' },
-      { sentence: '(A) We discussed (B) if (C) we should (D) change the plan.', choices: ['(A) We discussed', '(B) if', '(C) we should', '(D) change the plan'], answer: 1, why: 'discuss の目的語の名詞節は whether がふつう。discussed whether。' },
-      { sentence: '(A) Let me know (B) if (C) you will need (D) any help tomorrow.', choices: ['(A) Let me know', '(B) if', '(C) you will need', '(D) any help tomorrow'], answer: 2, why: '「もし～なら」の副詞節では未来でも現在形。if you need。' },
-      { sentence: '(A) I wonder (B) whether (C) does he know (D) the truth.', choices: ['(A) I wonder', '(B) whether', '(C) does he know', '(D) the truth'], answer: 2, why: 'whether のあとは平叙文の語順。whether he knows。' },
-      { sentence: '(A) Whether (B) you agree (C) and not, (D) we must decide today.', choices: ['(A) Whether', '(B) you agree', '(C) and not,', '(D) we must decide today'], answer: 2, why: 'whether A or B「A であれ B であれ」。or not。' },
-    ],
-  },
-  {
     id: 'exam-error-there-is-kokuritsu',
-    title: '入試の正誤問題〈186〉（国公立レベル：There is 構文と主語の一致）',
+    title: '入試の正誤問題〈186〉（There is 構文と主語の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'There is（are）～ の文では、動詞のあとの名詞が主語。主語が単数・数えられない名詞なら is（was・has been）、複数なら are（were・have been）。There seem(s) to be ～・There used to be ～・There will be ～ でも主語に合わせる。疑問文は Is（Are）there ～?。a lot of・some・any のあとの名詞が数えられるかどうかで判断する。',
@@ -4444,7 +3893,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-either-neither-kokuritsu',
-    title: '入試の正誤問題〈187〉（国公立レベル：either A or B・neither A nor B と動詞の一致）',
+    title: '入試の正誤問題〈187〉（either A or B・neither A nor B と動詞の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'either A or B「A か B のどちらか」・neither A nor B「A も B も～ない」・not only A but also B・not A but B では、動詞は B（動詞に近いほう）に合わせる。both A and B は複数扱い。A as well as B では A に合わせる。either of ～・neither of ～・each of ～ は書き言葉では単数扱い。neither は nor と、either は or と組み合わせる。',
@@ -4468,7 +3917,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-pronoun-case-todai',
-    title: '入試の正誤問題〈188〉（東大レベル：英作文の代名詞の格 I・me・mine）',
+    title: '入試の正誤問題〈188〉（代名詞の格 I・me・mine）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '代名詞は文の中の役割で形が変わる。主語なら主格（I・he・she・we・they）、動詞や前置詞の目的語なら目的格（me・him・her・us・them）、「～のもの」なら所有代名詞（mine・yours・his・hers・ours・theirs）。A and I／A and me のように and でつながっていても、役割で決める（Tom and I went／gave Tom and me）。than・as のあとに動詞が続くなら主格。名詞の前は所有格（our best）。',
@@ -4492,7 +3941,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-svoc-kyodai',
-    title: '入試の正誤問題〈189〉（京大レベル：keep・leave・find＋目的語＋補語）',
+    title: '入試の正誤問題〈189〉（keep・leave・find＋目的語＋補語）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'keep・leave・find・make・paint などは「動詞＋目的語（O）＋補語（C）」の形をとり、「O を C の状態にする・に保つ・だとわかる」という意味になる。C には形容詞（keep the room clean）・名詞（make him captain）・分詞（keep the door closed／leave the water running）が入り、副詞は入らない。O が「される」側なら過去分詞、「している」側なら現在分詞。find it ＋形容詞＋to do の形もある。',
@@ -4516,7 +3965,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-conditional-kyodai',
-    title: '入試の正誤問題〈190〉（京大レベル：条件の接続詞 provided・suppose・in case）',
+    title: '入試の正誤問題〈190〉（条件の接続詞 provided・suppose・in case）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'provided（providing）that ～「～という条件で」、suppose（supposing）～「もし～としたら」、in case ～「～するといけないから・～の場合に備えて」は、if に近い条件の接続詞。時や条件の節なので、未来のことも現在形で表す（in case it rains）。suppose ＋過去形は仮定法で、主節は would になる。in case of のあとは名詞。',
@@ -4540,7 +3989,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-future-perfect-todai',
-    title: '入試の正誤問題〈191〉（東大レベル：英作文の未来完了 will have done）',
+    title: '入試の正誤問題〈191〉（未来完了 will have done）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '未来完了 will have ＋過去分詞は「（未来のある時点）までに～してしまっているだろう」（完了）、「～まで…し続けていることになる」（継続）を表す。期限は by（by next month・by the time S V）で、until は使わない。by the time や when の節は時の節なので、未来のことも現在形で表す。疑問文は Will ＋主語＋have ＋過去分詞。英作文では「～までに」を見たら未来完了を考える。',
@@ -4564,7 +4013,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-the-more-kokkou',
-    title: '入試の正誤問題〈192〉（国公立レベル：the 比較級, the 比較級）',
+    title: '入試の正誤問題〈192〉（the 比較級, the 比較級）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「The ＋比較級＋S V, the ＋比較級＋S V」は「～すればするほど、ますます…」。どちらにも the が必要で、比較級になる形容詞・副詞（と名詞）は the のすぐあとに置く（the more interesting I find it／the more money he earned）。the のあとはふつうの語順で、前半は条件なので未来のことも現在形。前半と後半の時制はそろえる。',
@@ -4588,7 +4037,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-what-which-kyodai',
-    title: '入試の正誤問題〈193〉（京大レベル：関係代名詞の what と which）',
+    title: '入試の正誤問題〈193〉（関係代名詞の what と which）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '関係代名詞 what は先行詞をふくみ「～すること・もの」（＝ the thing which）。前に先行詞（the book など）があれば what は使えず、which か that を使う。前の文の内容を受ける「, which」（継続用法）には what も that も使えない。what が節のなかで目的語・主語になっているので、it などをくり返さない。what の節が主語のときは単数あつかい。',
@@ -4612,7 +4061,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-no-sooner-todai',
-    title: '入試の正誤問題〈194〉（東大レベル：英作文の no sooner／hardly ～ when）',
+    title: '入試の正誤問題〈194〉（ no sooner／hardly ～ when）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「～するとすぐに…した」は、No sooner had S done ～ than …／Hardly（Scarcely）had S done ～ when（before）…。no sooner は than、hardly・scarcely は when・before と組む。否定の副詞が文頭に来ると「had ＋主語＋過去分詞」の倒置になる。前半は過去完了、後半は過去形。S had no sooner done ～ than … の語順もある。as soon as を使うと As soon as S did, ～ とかんたんに言える。',
@@ -4636,7 +4085,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-lie-lay-kokkou',
-    title: '入試の正誤問題〈195〉（国公立レベル：自動詞と他動詞 lie・lay・rise・raise）',
+    title: '入試の正誤問題〈195〉（自動詞と他動詞 lie・lay・rise・raise）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'lie（自動詞）「横になる・ある」は lie－lay－lain（ing 形は lying）、lay（他動詞）「～を置く・横たえる・（卵を）産む」は lay－laid－laid。rise（自動詞）「のぼる・上がる」は rise－rose－risen、raise（他動詞）「～を上げる・育てる」は raise－raised－raised。うしろに目的語があれば他動詞（lay・raise）、なければ自動詞（lie・rise）。lie の過去形 lay と、lay の原形をまちがえないこと。',
@@ -4660,7 +4109,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-absolute-kyodai',
-    title: '入試の正誤問題〈196〉（京大レベル：独立分詞構文と付帯状況の with）',
+    title: '入試の正誤問題〈196〉（独立分詞構文と付帯状況の with）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文の主語が主節の主語とちがうときは、分詞の前に主語を置く（独立分詞構文：It being a holiday／The sun having set）。慣用表現に weather permitting・all things considered・generally speaking・judging from ～ がある。「with ＋名詞＋分詞・形容詞」は「～を…したまま」（付帯状況）で、名詞が「される」側なら過去分詞（with his eyes closed）、「している」側なら現在分詞（with the engine running）。分詞構文のあとに so や and を入れない。',
@@ -4684,7 +4133,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-wish-todai',
-    title: '入試の正誤問題〈197〉（東大レベル：英作文の I wish・as if の仮定法）',
+    title: '入試の正誤問題〈197〉（ I wish・as if の仮定法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'I wish ＋過去形は「今～ならいいのに」、I wish ＋過去完了は「あのとき～だったらよかったのに」、I wish ＋ would は「（これから）～してくれたらいいのに」。as if（as though）＋過去形は「まるで～かのように」（同じ時）、as if ＋過去完了は「まるで～したかのように」（前の時）。If only ～! は I wish をさらに強めた言い方。It’s time ＋過去形は「もう～する時間だ」。現実とちがう願いには hope は使わない。',
@@ -4708,7 +4157,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-uncountable-kokkou',
-    title: '入試の正誤問題〈198〉（国公立レベル：数えられない名詞 information・advice・furniture）',
+    title: '入試の正誤問題〈198〉（数えられない名詞 information・advice・furniture）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'information・advice・furniture・baggage（luggage）・equipment・homework・news・traffic・progress・paper（紙）などは数えられない名詞。a／an をつけず、複数形の s もつけず、動詞は単数あつかい（The news is ～）。many・a few ではなく much・a little・a lot of を使い、数えるときは a piece of advice のように言う。日本語では数えられそうに思えるので、英作文で特に注意する。',
@@ -4732,7 +4181,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-rel-adverb-kyodai',
-    title: '入試の正誤問題〈199〉（京大レベル：関係副詞 where・when・why・how）',
+    title: '入試の正誤問題〈199〉（関係副詞 where・when・why・how）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '関係副詞は、先行詞が場所なら where、時なら when、理由（the reason）なら why、方法なら how。関係副詞は「前置詞＋ which」の代わりで（where ＝ in which）、うしろは主語も目的語もそろった完全な文になる。うしろに主語や目的語がぬけているなら関係代名詞（which・that）を使う。the way how とはいわず、the way か how のどちらかだけを使う。関係副詞の節のなかで in it などをくり返さない。',
@@ -4756,7 +4205,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-it-takes-todai',
-    title: '入試の正誤問題〈200〉（東大レベル：英作文の It takes ～ to do・It costs）',
+    title: '入試の正誤問題〈200〉（ It takes ～ to do・It costs）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「（人が）～するのに（時間が）かかる」は It takes（＋人）＋時間＋ to do、「（人が）～するのに（お金が）かかる」は It costs（＋人）＋お金＋ to do。主語は It で、to のあとは動詞の原形。cost ＋人＋お金の「人」の前に to をつけない。物が主語のときは This bag cost me 3,000 yen. のように言える。spend は人が主語で、I spent three hours finishing it. の形になる。疑問文は How long does it take to ～? の語順。',
@@ -4779,32 +4228,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-time-clause-kokkou',
-    title: '入試の正誤問題〈201〉（国公立レベル：時・条件の副詞節の現在形 when・if・until）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '時（when・until・before・after・as soon as・by the time）や条件（if・unless）を表す副詞節では、未来のことも現在形で表し、will は使わない（I will call you when I arrive.）。ただし、know・tell・ask などの目的語になる名詞節の if「～かどうか」や when「いつ～か」は、未来なら will を使う（I don’t know if he will come.）。節がどちらの働きをしているかを見分けることが大切。',
-    ],
-    examples: [
-      { en: 'I will call you when I arrive at the station.', ja: '駅に着いたら電話するね。' },
-      { en: 'I don’t know if he will come tomorrow.', ja: '彼があした来るかどうかわからない。' },
-    ],
-    questions: [
-      { sentence: '(A) I will call you (B) when I (C) will arrive (D) at the station.', choices: ['(A) I will call you', '(B) when I', '(C) will arrive', '(D) at the station'], answer: 2, why: '時を表す when の節では、未来のことも現在形。when I arrive。' },
-      { sentence: '(A) If it (B) will rain (C) tomorrow, (D) we will stay home.', choices: ['(A) If it', '(B) will rain', '(C) tomorrow,', '(D) we will stay home'], answer: 1, why: '条件を表す if の節では、未来のことも現在形。If it rains。' },
-      { sentence: '(A) Please wait here (B) until I (C) will come (D) back.', choices: ['(A) Please wait here', '(B) until I', '(C) will come', '(D) back'], answer: 2, why: 'until「～するまで」の節は現在形。until I come back。' },
-      { sentence: '(A) As soon as (B) he will finish (C) his homework, (D) he will go out.', choices: ['(A) As soon as', '(B) he will finish', '(C) his homework,', '(D) he will go out'], answer: 1, why: 'as soon as の節は現在形。As soon as he finishes。' },
-      { sentence: '(A) I don’t know (B) if he (C) comes (D) tomorrow.', choices: ['(A) I don’t know', '(B) if he', '(C) comes', '(D) tomorrow'], answer: 2, why: 'know の目的語になる if 節（～かどうか）は名詞節なので、未来なら will。if he will come。' },
-      { sentence: '(A) Before (B) you will leave, (C) turn off (D) the lights.', choices: ['(A) Before', '(B) you will leave,', '(C) turn off', '(D) the lights'], answer: 1, why: 'before の節は現在形。Before you leave。' },
-      { sentence: '(A) We will (B) start the game (C) after everyone (D) will arrive.', choices: ['(A) We will', '(B) start the game', '(C) after everyone', '(D) will arrive'], answer: 3, why: 'after の節は現在形。after everyone arrives。' },
-      { sentence: '(A) Unless (B) you will hurry, (C) you will (D) miss the train.', choices: ['(A) Unless', '(B) you will hurry,', '(C) you will', '(D) miss the train'], answer: 1, why: 'unless「～しないかぎり」の節は現在形。Unless you hurry。' },
-      { sentence: '(A) Will (B) you tell me (C) when she (D) arrives tomorrow?', choices: ['(A) Will', '(B) you tell me', '(C) when she', '(D) arrives tomorrow?'], answer: 3, why: 'tell の目的語になる when 節（いつ～か）は名詞節なので、未来なら will。when she will arrive。' },
-      { sentence: '(A) When will (B) she comes back, (C) please tell (D) her to call me.', choices: ['(A) When will', '(B) she comes back,', '(C) please tell', '(D) her to call me'], answer: 0, why: '時の副詞節はふつうの語順で will は不要。When she comes back。' },
-    ],
-  },
-  {
     id: 'exam-error-prep-relative-kyodai',
-    title: '入試の正誤問題〈202〉（京大レベル：前置詞＋関係代名詞 in which・of whom）',
+    title: '入試の正誤問題〈202〉（前置詞＋関係代名詞 in which・of whom）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '関係代名詞の前に前置詞を置く形（in which・to whom・of whom）では、物なら which、人なら whom を使い、that や who は使えない。前置詞を前に出したら、節の最後に同じ前置詞をくり返さない（the hotel at which we stayed）。「～のうちの…」は most of whom・both of which・some of which のように、数量のことば＋ of ＋ whom／which で表し、them や it は使わない。',
@@ -4828,7 +4253,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-abstract-noun-todai',
-    title: '入試の正誤問題〈203〉（東大レベル：英作文の of ＋抽象名詞・with ＋抽象名詞）',
+    title: '入試の正誤問題〈203〉（ of ＋抽象名詞・with ＋抽象名詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'of ＋抽象名詞は形容詞の働きをする（of importance ＝ important、of use ＝ useful、of value ＝ valuable、of help ＝ helpful）。with ＋抽象名詞は副詞の働きをする（with ease ＝ easily、with care ＝ carefully、with patience ＝ patiently、with confidence ＝ confidently）。of・with のあとは名詞なので、形容詞をそのまま置かない。great・no・little などで程度を表せる（of great importance・of no use）。',
@@ -4852,7 +4277,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-reflexive-kokkou',
-    title: '入試の正誤問題〈204〉（国公立レベル：再帰代名詞 myself・by oneself）',
+    title: '入試の正誤問題〈204〉（再帰代名詞 myself・by oneself）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '主語と目的語が同じ人・物のときは再帰代名詞（myself・yourself・himself・herself・itself・ourselves・yourselves・themselves）を使う。you が一人なら yourself、複数なら yourselves。hisself・theirselves という語はない。慣用表現に by oneself「一人で」、enjoy oneself「楽しむ」、help oneself to ～「～を自由に取る」、introduce oneself「自己紹介する」、by itself「ひとりでに」がある。再帰代名詞は主語には使えない。',
@@ -4876,7 +4301,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-no-more-than-kyodai',
-    title: '入試の正誤問題〈205〉（京大レベル：英作文の no more than・no less than）',
+    title: '入試の正誤問題〈205〉（ no more than・no less than）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'no more than ～ は「わずか～・～しか」（＝only）で少なさを、no less than ～ は「～も」（＝as many as / as much as）で多さを強調する。not more than ～ は「多くても～」（＝at most）、not less than ～ は「少なくとも～」（＝at least）。どれも than を使い、as や then にしない。A is no more B than C は「C と同様 A も B ではない」。数のあとの名詞の形と動詞の数にも注意する。',
@@ -4899,32 +4324,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-said-todai',
-    title: '入試の正誤問題〈206〉（東大レベル：英作文の It is said that・be said to）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '「～と言われている」は It is said that ＋主語＋動詞、または 主語＋ be said to ＋動詞の原形。人や物を主語にする形では that を使わない。言われている時より前のことは完了不定詞 to have ＋過去分詞（He is said to have been rich.）。believe・think・report も同じ形で使える。主語が複数なら are said。',
-    ],
-    examples: [
-      { en: 'It is said that he is the richest man in town.', ja: '彼は町一番の金持ちだと言われている。' },
-      { en: 'She is said to have lived in Paris ten years ago.', ja: '彼女は10年前にパリに住んでいたと言われている。' },
-    ],
-    questions: [
-      { sentence: '(A) It is said (B) that he (C) to be (D) the richest man in town.', choices: ['(A) It is said', '(B) that he', '(C) to be', '(D) the richest man in town'], answer: 2, why: 'It is said that のあとは「主語＋動詞」の節なので that he is。' },
-      { sentence: '(A) He is said (B) that he is (C) the best player (D) on the team.', choices: ['(A) He is said', '(B) that he is', '(C) the best player', '(D) on the team'], answer: 1, why: '人を主語にするときは He is said to be ～ の形。that は使わない。' },
-      { sentence: '(A) She (B) is said (C) to live (D) in Paris ten years ago.', choices: ['(A) She', '(B) is said', '(C) to live', '(D) in Paris ten years ago'], answer: 2, why: 'ten years ago と言われている時より前のことなので完了不定詞 to have lived。' },
-      { sentence: '(A) It (B) says that (C) the castle (D) was built in 1600.', choices: ['(A) It', '(B) says that', '(C) the castle', '(D) was built in 1600'], answer: 1, why: '「～と言われている」は受け身の It is said that。' },
-      { sentence: '(A) The old man (B) is said (C) to have been (D) a famous singer when he is young.', choices: ['(A) The old man', '(B) is said', '(C) to have been', '(D) a famous singer when he is young'], answer: 3, why: '若かったのは過去なので when he was young。' },
-      { sentence: '(A) This temple (B) is saying (C) to be (D) over a thousand years old.', choices: ['(A) This temple', '(B) is saying', '(C) to be', '(D) over a thousand years old'], answer: 1, why: '「～と言われている」は受け身なので is said。' },
-      { sentence: '(A) It is (B) believed (C) what the plan (D) will succeed.', choices: ['(A) It is', '(B) believed', '(C) what the plan', '(D) will succeed'], answer: 2, why: 'It is believed that ～ の形。what ではなく that。' },
-      { sentence: '(A) The singers (B) is said (C) to be (D) coming to Japan next month.', choices: ['(A) The singers', '(B) is said', '(C) to be', '(D) coming to Japan next month'], answer: 1, why: '主語は複数の The singers なので are said。' },
-      { sentence: '(A) He is said (B) to (C) having (D) a lot of money.', choices: ['(A) He is said', '(B) to', '(C) having', '(D) a lot of money'], answer: 2, why: 'to のあとは動詞の原形なので to have。' },
-      { sentence: '(A) It said that (B) the bridge (C) will be (D) finished next year.', choices: ['(A) It said that', '(B) the bridge', '(C) will be', '(D) finished next year'], answer: 0, why: '「～と言われている」は It is said that。is がぬけている。' },
-    ],
-  },
-  {
     id: 'exam-error-partial-negation-kyodai',
-    title: '入試の正誤問題〈207〉（京大レベル：英作文の部分否定 not necessarily・not always）',
+    title: '入試の正誤問題〈207〉（部分否定 not necessarily・not always）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'not always「いつも～とはかぎらない」、not necessarily「必ずしも～ではない」、not all／not every「すべてが～とはかぎらない」、not completely「完全に～というわけではない」は部分否定。not を前に置く語順にする（always do not・every not は×）。necessarily は副詞なので形容詞の前でも necessary にしない。部分否定は「そうでない場合もある」という意味なので、あとに続く内容と矛盾しないか確かめる。',
@@ -4948,7 +4349,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-uncountable-todai2',
-    title: '入試の正誤問題〈208〉（東大レベル：英作文の数えられない名詞 information・advice・furniture）',
+    title: '入試の正誤問題〈208〉（数えられない名詞 information・advice・furniture）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'information・advice・furniture・luggage（baggage）・equipment・homework・news・traffic・progress は数えられない名詞。a／an をつけず、複数形にもしない。主語なら単数あつかい（The news was ～）。量は much・a little・a lot of で表し、many・a few は使わない。数えたいときは a piece of advice・two pieces of furniture のようにする。people は反対に複数あつかいなので many people。',
@@ -4971,32 +4372,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-participle-adj-kokkou',
-    title: '入試の正誤問題〈209〉（国公立レベル：分詞形容詞 exciting・excited）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '感情を表す動詞（excite・bore・surprise・interest・tire・disappoint・confuse・amaze・frighten・embarrass）は「～させる」という意味。物や出来事が人にその気持ちを起こさせるときは ～ing（an exciting game）、人がその気持ちになっているときは ～ed（I was excited）。be interested in のように前置詞がつく形もある。',
-    ],
-    examples: [
-      { en: 'The game was exciting, and we were all excited.', ja: '試合はわくわくするもので、私たちはみんなわくわくしていた。' },
-      { en: 'I was bored during the boring meeting.', ja: '退屈な会議のあいだ、私は退屈していた。' },
-    ],
-    questions: [
-      { sentence: '(A) The movie was (B) so (C) excited (D) that we watched it twice.', choices: ['(A) The movie was', '(B) so', '(C) excited', '(D) that we watched it twice'], answer: 2, why: '映画が人をわくわくさせるので exciting。' },
-      { sentence: '(A) I was (B) very (C) boring (D) during the long meeting.', choices: ['(A) I was', '(B) very', '(C) boring', '(D) during the long meeting'], answer: 2, why: '人が退屈を感じているので bored。' },
-      { sentence: '(A) She (B) looked (C) surprising (D) at the news.', choices: ['(A) She', '(B) looked', '(C) surprising', '(D) at the news'], answer: 2, why: '人がおどろいたので surprised。' },
-      { sentence: '(A) The results (B) of the test (C) were (D) disappointed.', choices: ['(A) The results', '(B) of the test', '(C) were', '(D) disappointed'], answer: 3, why: '結果が人をがっかりさせるので disappointing。' },
-      { sentence: '(A) We were (B) interesting (C) in (D) the history of the castle.', choices: ['(A) We were', '(B) interesting', '(C) in', '(D) the history of the castle'], answer: 1, why: '人が興味をもつので interested in。' },
-      { sentence: '(A) Tiring (B) after the game, (C) the players (D) went straight to bed.', choices: ['(A) Tiring', '(B) after the game,', '(C) the players', '(D) went straight to bed'], answer: 0, why: '選手がつかれているので Tired。' },
-      { sentence: '(A) His speech (B) was so (C) confused (D) that nobody understood it.', choices: ['(A) His speech', '(B) was so', '(C) confused', '(D) that nobody understood it'], answer: 2, why: '話が人を混乱させるので confusing。' },
-      { sentence: '(A) It was (B) an (C) amazed (D) experience for all of us.', choices: ['(A) It was', '(B) an', '(C) amazed', '(D) experience for all of us'], answer: 2, why: '経験が人をおどろかせるので amazing。' },
-      { sentence: '(A) The children (B) were (C) frightening (D) by the loud thunder.', choices: ['(A) The children', '(B) were', '(C) frightening', '(D) by the loud thunder'], answer: 2, why: '子どもがこわがったので frightened。' },
-      { sentence: '(A) I felt (B) embarrassing (C) when I (D) forgot his name.', choices: ['(A) I felt', '(B) embarrassing', '(C) when I', '(D) forgot his name'], answer: 1, why: '自分がはずかしく感じたので embarrassed。' },
-    ],
-  },
-  {
     id: 'exam-error-rather-better-todai',
-    title: '入試の正誤問題〈210〉（東大レベル：英作文の would rather・had better のあとの形）',
+    title: '入試の正誤問題〈210〉（ would rather・had better のあとの形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'had better ＋動詞の原形「～した方がよい（しないとまずい）」。否定は had better not ＋原形。would better という形はない。would rather ＋原形「むしろ～したい」、would rather A than B は A も B も原形。否定は would rather not ＋原形。would rather ＋主語＋過去形は「（人に）～してほしい」という仮定法。どちらも to をつけない。',
@@ -5020,7 +4397,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-same-such-kyodai',
-    title: '入試の正誤問題〈211〉（京大レベル：英作文の the same ～ as・such ～ as）',
+    title: '入試の正誤問題〈211〉（ the same ～ as・such ～ as）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'the same ～ as …「…と同じ～」は the をつけ、than や with ではなく as。as のあとの動詞は前の動詞に合わせる（as he does）。such は such a ＋形容詞＋名詞の語順（a such は×）。such ～ as …「…のような～」、such as ～「たとえば～のような」（such like は×）。「とても～なので…」は such ～ that …。',
@@ -5044,7 +4421,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-linking-verbs-kokkou',
-    title: '入試の正誤問題〈212〉（国公立レベル：look・sound・feel ＋形容詞）',
+    title: '入試の正誤問題〈212〉（look・sound・feel ＋形容詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'look「～に見える」・sound「～に聞こえる」・feel「～と感じる」・taste「～な味がする」・smell「～なにおいがする」・become／get「～になる」・keep「～のままでいる」のあとには、主語のようすを表す形容詞を置く（副詞にしない）。名詞を続けるときは look like ～・sound like ～ のように like を使う。',
@@ -5067,32 +4444,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-noun-prep-kyodai',
-    title: '入試の正誤問題〈213〉（京大レベル：英作文の名詞と前置詞 interest in・effect on・reason for）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      '名詞ごとに決まった前置詞がある。interest in ～（興味）、effect／influence on ～（影響）、reason for ～（理由）、demand for ～（需要）、cure for ～（治療法）、solution to ～（解決策）、access to ～（利用）、attitude toward ～（態度）、increase／decrease in ～（増加・減少）、doubt about ～（うたがい）。日本語の「～の」につられて of にしない。',
-    ],
-    examples: [
-      { en: 'She has a strong interest in history.', ja: '彼女は歴史に強い興味がある。' },
-      { en: 'Smoking has a bad effect on your health.', ja: '喫煙は健康に悪い影響をあたえる。' },
-    ],
-    questions: [
-      { sentence: '(A) She has (B) a strong interest (C) for (D) Japanese history.', choices: ['(A) She has', '(B) a strong interest', '(C) for', '(D) Japanese history'], answer: 2, why: 'interest in ～「～への興味」。for ではなく in。' },
-      { sentence: '(A) Smoking (B) has a bad (C) effect to (D) your health.', choices: ['(A) Smoking', '(B) has a bad', '(C) effect to', '(D) your health'], answer: 2, why: 'effect on ～「～への影響」。' },
-      { sentence: '(A) What is (B) the reason (C) of (D) your absence?', choices: ['(A) What is', '(B) the reason', '(C) of', '(D) your absence?'], answer: 2, why: 'reason for ～「～の理由」。' },
-      { sentence: '(A) There is (B) a great demand (C) of (D) skilled workers.', choices: ['(A) There is', '(B) a great demand', '(C) of', '(D) skilled workers'], answer: 2, why: 'demand for ～「～への需要」。' },
-      { sentence: '(A) The scientists (B) finally found (C) a cure (D) of the disease.', choices: ['(A) The scientists', '(B) finally found', '(C) a cure', '(D) of the disease'], answer: 3, why: 'cure for ～「～の治療法」。' },
-      { sentence: '(A) The solution (B) of (C) this problem (D) is not easy.', choices: ['(A) The solution', '(B) of', '(C) this problem', '(D) is not easy'], answer: 1, why: 'solution to ～「～の解決策」。' },
-      { sentence: '(A) His (B) attitude (C) for (D) his classmates was friendly.', choices: ['(A) His', '(B) attitude', '(C) for', '(D) his classmates was friendly'], answer: 2, why: 'attitude toward（to）～「～への態度」。' },
-      { sentence: '(A) The increase (B) of (C) prices (D) worried many people.', choices: ['(A) The increase', '(B) of', '(C) prices', '(D) worried many people'], answer: 1, why: '「～の上昇」は increase in ～。' },
-      { sentence: '(A) I have (B) no doubt (C) in (D) his honesty.', choices: ['(A) I have', '(B) no doubt', '(C) in', '(D) his honesty'], answer: 2, why: '「～をうたがわない」は have no doubt about（of）～。' },
-      { sentence: '(A) An access (B) to the internet (C) is (D) important today.', choices: ['(A) An access', '(B) to the internet', '(C) is', '(D) important today'], answer: 0, why: 'access は数えられない名詞なので an をつけない。access to ～。' },
-    ],
-  },
-  {
     id: 'exam-error-formal-object-todai',
-    title: '入試の正誤問題〈214〉（東大レベル：英作文の find it ＋形容詞＋ to ～（形式目的語））',
+    title: '入試の正誤問題〈214〉（ find it ＋形容詞＋ to ～（形式目的語））',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'find・make・think・consider・feel のあとの目的語が to 不定詞や that 節のときは、形式目的語 it を置いて本当の目的語をうしろに回す（I found it difficult to answer.）。it のあとは形容詞か名詞（clear・impossible・a rule）で、副詞にしない。意味上の主語は for ～ to …。決まった言い方に make it a rule to ～「～することにしている」、take it for granted that ～「～を当然と思う」がある。',
@@ -5116,7 +4469,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-participle-postmod-kyodai',
-    title: '入試の正誤問題〈215〉（京大レベル：英作文の分詞の後置修飾 the man standing・a book written）',
+    title: '入試の正誤問題〈215〉（分詞の後置修飾 the man standing・a book written）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞がほかの語句をともなって名詞を修飾するときは、名詞のうしろに置く。名詞が「～している」側なら現在分詞（the man standing by the door）、「～される・された」側なら過去分詞（a book written by ～）。一語の分詞は名詞の前に置ける（a broken window）。分詞のかたまりのあとに文の動詞が来るので、主語との一致にも注意する。',
@@ -5140,7 +4493,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-prep-gerund-kokkou',
-    title: '入試の正誤問題〈216〉（国公立レベル：前置詞＋動名詞 by ～ing・without ～ing・instead of ～ing）',
+    title: '入試の正誤問題〈216〉（前置詞＋動名詞 by ～ing・without ～ing・instead of ～ing）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '前置詞（by・without・instead of・for・in・at・of・after・before など）のあとに動詞を置くときは、動名詞（～ing）にする。原形や to 不定詞は置けない。by ～ing「～することによって」、without ～ing「～しないで」、instead of ～ing「～するかわりに」、be good at ～ing「～するのが得意」、be afraid of ～ing「～するのをこわがる」、Thank you for ～ing「～してくれてありがとう」。',
@@ -5164,7 +4517,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-negative-participle-kyodai',
-    title: '入試の正誤問題〈217〉（京大レベル：英作文の分詞構文の否定 Not knowing・Never having）',
+    title: '入試の正誤問題〈217〉（分詞構文の否定 Not knowing・Never having）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '分詞構文を否定するときは not や never を分詞の前に置く（Not knowing ～・Never having seen ～）。Knowing not や Having not は×。主節より前のことは完了形 having ＋過去分詞（Not having eaten）。分詞構文の主語は主節の主語と同じなので、その主語が「する」側なら ～ing、「される」側なら過去分詞にする。主節の時制や主語との一致にも注意する。',
@@ -5188,7 +4541,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-the-adjective-todai',
-    title: '入試の正誤問題〈218〉（東大レベル：英作文の the ＋形容詞（the rich・the young）と動詞の一致）',
+    title: '入試の正誤問題〈218〉（ the ＋形容詞（the rich・the young）と動詞の一致）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'the ＋形容詞は「～な人々」という意味の複数名詞になる（the rich「お金持ちの人々」、the young「若者」、the elderly「お年寄り」、the poor・the homeless・the unemployed・the injured）。動詞は複数に合わせ（The rich are ～）、形容詞に s をつけない（the olds・the blinds は×）。a や an はつけない。',
@@ -5212,7 +4565,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adverb-clause-tense-kokkou',
-    title: '入試の正誤問題〈219〉（国公立レベル：時や条件の副詞節では未来のことも現在形 when・if・until）',
+    title: '入試の正誤問題〈219〉（時や条件の副詞節では未来のことも現在形 when・if・until）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'when・until・before・after・as soon as・by the time・next time（時）や if・unless（条件）が導く副詞節では、未来のことでも will を使わず現在形にする（I will call you when I arrive.）。ただし if や when が「～かどうか」「いつ～か」という名詞節（know・ask などの目的語）のときは、未来のことに will を使う（I don’t know if he will come.）。',
@@ -5236,7 +4589,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-that-those-kyodai',
-    title: '入試の正誤問題〈220〉（京大レベル：英作文のくり返しをさける that・those（the price of ～ と比べる））',
+    title: '入試の正誤問題〈220〉（くり返しをさける that・those（the price of ～ と比べる））',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '比較では同じ種類のものどうしをくらべる。前に出た名詞をくり返すかわりに、単数なら that、複数なら those を使う（The population of Tokyo is larger than that of Osaka.／His ideas are different from those of his father.）。that／those を落として Osaka や a cat と直接くらべるのはまちがい。those who ～ は「～する人々」で複数あつかい。',
@@ -5260,7 +4613,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-noun-to-infinitive-todai',
-    title: '入試の正誤問題〈221〉（東大レベル：英作文の名詞＋ to 不定詞 the first to ～・a chance to ～）',
+    title: '入試の正誤問題〈221〉（名詞＋ to 不定詞 the first to ～・a chance to ～）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'the first（最後なら the last・ただ一人なら the only）＋名詞のあとに to 不定詞を置くと「～した最初の人」の意味になる（She was the first woman to climb the mountain alone.）。chance・time・right・decision・plan なども to 不定詞で「～する機会・時・権利・決心・計画」をあらわす。',
@@ -5285,7 +4638,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-almost-most-kokuritsu',
-    title: '入試の正誤問題〈222〉（国公立レベル：almost・most・most of の使い分け）',
+    title: '入試の正誤問題〈222〉（almost・most・most of の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'almost は「ほとんど」という副詞で、名詞を直接修飾できない（×almost students → ○most students／almost all students）。most は形容詞として名詞の前に置ける（most people）。the・my・them などがつくときは most of を使う（most of the books・most of them）。',
@@ -5310,7 +4663,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-by-the-time-kyodai',
-    title: '入試の正誤問題〈223〉（京大レベル：英作文の by the time ～ と完了形）',
+    title: '入試の正誤問題〈223〉（ by the time ～ と完了形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'by the time ～「～するまでに（は）」は接続詞で、あとに主語＋動詞が来る（by だけは前置詞なので by six o’clock のように名詞が来る）。主節は、過去の話なら過去完了 had done、未来の話なら未来完了 will have done にすることが多い。',
@@ -5335,7 +4688,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-prefer-rather-todai',
-    title: '入試の正誤問題〈224〉（東大レベル：英作文の prefer A to B・would rather A than B）',
+    title: '入試の正誤問題〈224〉（ prefer A to B・would rather A than B）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'prefer A to B「B より A のほうが好き」の to は前置詞なので、A・B に動詞を置くなら動名詞（prefer reading to watching TV）。prefer to do のときは rather than do を使う（prefer to stay home rather than go out）。',
@@ -5360,7 +4713,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-trouble-spend-kokuritsu',
-    title: '入試の正誤問題〈225〉（国公立レベル：have trouble ～ing・spend 時間 ～ing）',
+    title: '入試の正誤問題〈225〉（have trouble ～ing・spend 時間 ～ing）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'have trouble (in) ～ing／have difficulty (in) ～ing／have a problem (in) ～ing は「～するのに苦労する」。to 不定詞にしない。trouble・difficulty はふつう数えられない名詞としてあつかう（×troubles）。',
@@ -5385,7 +4738,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-suggest-that-kyodai',
-    title: '入試の正誤問題〈226〉（京大レベル：英作文の suggest・insist・demand that ＋動詞の原形）',
+    title: '入試の正誤問題〈226〉（ suggest・insist・demand that ＋動詞の原形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'suggest・propose・recommend・insist・demand・require など「提案・要求」の動詞のあとの that 節では、主語や時制にかかわらず動詞の原形を使う（イギリス英語では should ＋原形も）。否定は not ＋原形（that he not be late）。',
@@ -5410,7 +4763,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-recently-nowadays-todai',
-    title: '入試の正誤問題〈227〉（東大レベル：英作文の recently・these days・nowadays と時制）',
+    title: '入試の正誤問題〈227〉（ recently・these days・nowadays と時制）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'recently・lately「最近（この前）」は、過去形か現在完了とともに使う（I saw her recently.／I have seen her recently.）。現在形の習慣にはふつう使わない。',
@@ -5435,7 +4788,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-used-to-would-kokuritsu',
-    title: '入試の正誤問題〈228〉（国公立レベル：過去の習慣 used to と would の使い分け）',
+    title: '入試の正誤問題〈228〉（過去の習慣 used to と would の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'used to ～ は「以前は～したものだ（今はちがう）」で、過去の習慣（動作）にも状態にも使える（I used to live in Kyoto.／There used to be a tree here.）。would ～ は過去にくり返した動作だけに使い、be・have・know・live のような状態には使わない。',
@@ -5460,7 +4813,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-other-another-kyodai',
-    title: '入試の正誤問題〈229〉（京大レベル：英作文の other・another・the other・the others）',
+    title: '入試の正誤問題〈229〉（ other・another・the other・the others）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'another ＝ an ＋ other で「（不特定の）もう1つ・もう1人」。あとは単数名詞（another cup）。other は形容詞として複数名詞の前に置く（other students）。代名詞で「ほかの人たち」は others。',
@@ -5485,7 +4838,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-wear-fit-suit-todai',
-    title: '入試の正誤問題〈230〉（東大レベル：英作文の wear・put on・fit・suit の使い分け）',
+    title: '入試の正誤問題〈230〉（ wear・put on・fit・suit の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'wear は「身につけている（状態）」、put on は「身につける（動作）」、take off は「ぬぐ」。服だけでなく、くつ・めがね・帽子・指輪などにも使う。',
@@ -5510,7 +4863,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-see-look-watch-kokuritsu',
-    title: '入試の正誤問題〈231〉（国公立レベル：see・look at・watch／hear・listen to の使い分け）',
+    title: '入試の正誤問題〈231〉（see・look at・watch／hear・listen to の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'see は「（自然に目に入って）見える・見る」、look at は「（意識して）～を見る」、watch は「（動くものを）しばらく見守る」（テレビ・試合など）。hear は「（自然に）聞こえる」、listen to は「（意識して）～を聞く」。look と listen は自動詞なので、目的語の前に at・to が必要。',
@@ -5535,7 +4888,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-sometime-everyday-kyodai',
-    title: '入試の正誤問題〈232〉（京大レベル：英作文の sometime・sometimes・some time と everyday・every day）',
+    title: '入試の正誤問題〈232〉（ sometime・sometimes・some time と everyday・every day）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'sometimes は「ときどき」、sometime は「（過去・未来の）いつか」、some time は「しばらくの時間」。1語か2語か、s がつくかどうかで意味が変わる。',
@@ -5560,7 +4913,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-explain-marry-todai',
-    title: '入試の正誤問題〈233〉（東大レベル：英作文の explain to 人・marry・resemble・enter などの語法）',
+    title: '入試の正誤問題〈233〉（ explain to 人・marry・resemble・enter などの語法）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'explain・introduce・suggest・say は人を直接の目的語にとらない。explain 物 to 人／introduce 人 to 人 の形にする（×explain me → ○explain it to me）。',
@@ -5585,7 +4938,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-must-not-have-to-kokuritsu',
-    title: '入試の正誤問題〈234〉（国公立レベル：must not と don’t have to・need not の使い分け）',
+    title: '入試の正誤問題〈234〉（must not と don’t have to・need not の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'must not（mustn’t）は「～してはいけない」という禁止、don’t have to と need not（needn’t）は「～する必要はない」。must と have to はどちらも「～しなければならない」だが、否定にすると意味が大きく変わる。',
@@ -5609,33 +4962,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-made-of-from-kyodai',
-    title: '入試の正誤問題〈235〉（京大レベル：英作文の be made of・be made from・be made into）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'be made of ～ は材料が見てわかる（形や性質が変わらない）とき（This desk is made of wood.）、be made from ～ は原料が変化して元の形がわからないとき（Cheese is made from milk.）に使う。',
-      'be made into ～ は「（原料が）～に作り変えられる」（Grapes are made into wine.）。作る人は by であらわす（made by my father）。',
-    ],
-    examples: [
-      { en: 'This desk is made of wood, but paper is made from wood.', ja: 'この机は木でできているが、紙は木から作られる。' },
-      { en: 'These grapes will be made into wine.', ja: 'これらのぶどうはワインにされる。' },
-    ],
-    questions: [
-      { sentence: '(A) This desk (B) is made (C) from (D) wood.', choices: ['(A) This desk', '(B) is made', '(C) from', '(D) wood'], answer: 2, why: '材料が見た目でわかる（形が変わらない）ときは be made of なので of wood。' },
-      { sentence: '(A) Cheese (B) is made (C) of (D) milk.', choices: ['(A) Cheese', '(B) is made', '(C) of', '(D) milk'], answer: 2, why: '原料が変化して元の形がわからないときは be made from なので from milk。' },
-      { sentence: '(A) The old factory (B) was made (C) to (D) a museum.', choices: ['(A) The old factory', '(B) was made', '(C) to', '(D) a museum'], answer: 2, why: '「～に作り変えられる」は be made into なので into a museum。' },
-      { sentence: '(A) Paper (B) is (C) made (D) by wood.', choices: ['(A) Paper', '(B) is', '(C) made', '(D) by wood'], answer: 3, why: '原料をあらわすので be made from wood（by は作る人）。' },
-      { sentence: '(A) These grapes (B) will be made (C) of (D) wine.', choices: ['(A) These grapes', '(B) will be made', '(C) of', '(D) wine'], answer: 2, why: '「ぶどうがワインにされる」は be made into wine。' },
-      { sentence: '(A) This sweater (B) made (C) of (D) wool.', choices: ['(A) This sweater', '(B) made', '(C) of', '(D) wool'], answer: 1, why: '受け身なので is made of。be 動詞が必要。' },
-      { sentence: '(A) Make (B) of (C) glass, (D) the bottle broke easily.', choices: ['(A) Make', '(B) of', '(C) glass,', '(D) the bottle broke easily'], answer: 0, why: '「ガラスでできているので」という分詞構文は受け身の意味なので Made of glass。' },
-      { sentence: '(A) Wine (B) is made (C) of (D) grapes.', choices: ['(A) Wine', '(B) is made', '(C) of', '(D) grapes'], answer: 2, why: '原料が変化するので be made from grapes。' },
-      { sentence: '(A) The house (B) is made (C) from (D) stone and glass.', choices: ['(A) The house', '(B) is made', '(C) from', '(D) stone and glass'], answer: 2, why: '材料が見た目でわかるので be made of stone and glass。' },
-      { sentence: '(A) Milk (B) can make (C) into (D) butter.', choices: ['(A) Milk', '(B) can make', '(C) into', '(D) butter'], answer: 1, why: '「牛乳がバターにされる」は受け身 can be made into。' },
-    ],
-  },
-  {
     id: 'exam-error-fewer-less-todai',
-    title: '入試の正誤問題〈236〉（東大レベル：英作文の fewer と less・as many と as much）',
+    title: '入試の正誤問題〈236〉（ fewer と less・as many と as much）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'fewer は数えられる名詞（複数形）に、less は数えられない名詞に使う（fewer students／less time）。比較級なので「～より」は than。',
@@ -5660,7 +4988,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-will-going-to',
-    title: '入試の正誤問題〈237〉（国公立レベル：will と be going to・現在進行形であらわす未来）',
+    title: '入試の正誤問題〈237〉（will と be going to・現在進行形であらわす未来）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'will・be going to のあとは動詞の原形（×will to help／×going to visiting）。be going to は be動詞を落とさない。その場で決めたことは will、前から決めていたことは be going to が多い。',
@@ -5684,33 +5012,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-want-ask-tell',
-    title: '入試の正誤問題〈238〉（京大レベル：英作文の want・ask・tell 人 to do と that 節）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'want・would like・ask・tell・advise・expect・encourage は「動詞＋人＋to do」の形をとる（×want that I ～ → ○want me to ～）。人の前に to はつけない（×asked to me）。否定は not to do（advised him not to eat）。',
-      'tell は tell 人 that ～ と人を直接目的語にとる（×told to me that）。hope は hope 人 to do の形をとらず、hope (that) ～ を使う。',
-    ],
-    examples: [
-      { en: 'My parents want me to become a doctor.', ja: '両親は私に医者になってほしいと思っている。' },
-      { en: 'The doctor advised him not to eat too much salt.', ja: '医者は彼に塩分をとりすぎないよう助言した。' },
-    ],
-    questions: [
-      { sentence: '(A) My parents (B) want that I (C) become (D) a doctor in the future.', choices: ['(A) My parents', '(B) want that I', '(C) become', '(D) a doctor in the future'], answer: 1, why: 'want は that 節をとらず want 人 to do。want me to become。' },
-      { sentence: '(A) The teacher (B) told us (C) finish the report (D) by Friday.', choices: ['(A) The teacher', '(B) told us', '(C) finish the report', '(D) by Friday'], answer: 2, why: 'tell 人 to do なので told us to finish。' },
-      { sentence: '(A) She asked (B) to me (C) to help her (D) with the heavy bags.', choices: ['(A) She asked', '(B) to me', '(C) to help her', '(D) with the heavy bags'], answer: 1, why: 'ask 人 to do で、人の前に to はつけない。asked me。' },
-      { sentence: '(A) I would like (B) you (C) coming (D) to the party tomorrow.', choices: ['(A) I would like', '(B) you', '(C) coming', '(D) to the party tomorrow'], answer: 2, why: 'would like 人 to do なので you to come。' },
-      { sentence: '(A) She hoped me (B) to (C) pass (D) the exam.', choices: ['(A) She hoped me', '(B) to', '(C) pass', '(D) the exam'], answer: 0, why: 'hope は hope 人 to do の形をとらない。She hoped (that) I would pass ～ とする。' },
-      { sentence: '(A) The doctor (B) advised him (C) to not (D) eat too much salt.', choices: ['(A) The doctor', '(B) advised him', '(C) to not', '(D) eat too much salt'], answer: 2, why: '不定詞の否定は not to do。advised him not to eat。' },
-      { sentence: '(A) My mother (B) told to me (C) that (D) dinner was ready.', choices: ['(A) My mother', '(B) told to me', '(C) that', '(D) dinner was ready'], answer: 1, why: 'tell は人を直接目的語にとるので told me that ～。' },
-      { sentence: '(A) We expect (B) the new library (C) to open (D) in next spring.', choices: ['(A) We expect', '(B) the new library', '(C) to open', '(D) in next spring'], answer: 3, why: 'next spring の前に in はつけない。' },
-      { sentence: '(A) The coach (B) encouraged us (C) to keep (D) to practise harder.', choices: ['(A) The coach', '(B) encouraged us', '(C) to keep', '(D) to practise harder'], answer: 3, why: 'encourage 人 to do のあとにもう一つ to は続かない。keep practising。' },
-      { sentence: '(A) He wanted (B) his sister (C) lend (D) him some money.', choices: ['(A) He wanted', '(B) his sister', '(C) lend', '(D) him some money'], answer: 2, why: 'want 人 to do なので his sister to lend。' },
-    ],
-  },
-  {
     id: 'exam-error-infinitive-preposition',
-    title: '入試の正誤問題〈239〉（東大レベル：英作文の a pen to write with など前置詞で終わる不定詞）',
+    title: '入試の正誤問題〈239〉（ a pen to write with など前置詞で終わる不定詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '名詞を to 不定詞で修飾するとき、もとの形で前置詞が必要なら最後に残す（write with a pen → a pen to write with／sit on a chair → a chair to sit on／live in a house → a house to live in）。修飾される名詞が目的語なので、うしろに it などをくり返さない。',
@@ -5735,7 +5038,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-win-beat',
-    title: '入試の正誤問題〈240〉（京大レベル：英作文の win と beat・lose と miss の使い分け）',
+    title: '入試の正誤問題〈240〉（ win と beat・lose と miss の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'win のあとは試合・賞・選挙（win the game／win first prize）、beat のあとは相手（beat the team from Osaka）。「負けた」は lose the game／lose to 相手、人が負かされるのは be beaten。',
@@ -5760,7 +5063,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-frequency-adverbs',
-    title: '入試の正誤問題〈241〉（国公立レベル：頻度の副詞 always・often・never の位置）',
+    title: '入試の正誤問題〈241〉（頻度の副詞 always・often・never の位置）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'always・usually・often・sometimes・seldom・never などの頻度の副詞は、一般動詞の前、be動詞と助動詞のあとに置く（She always goes ～／He is often late／I have never seen ～）。',
@@ -5785,7 +5088,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-come-to-do',
-    title: '入試の正誤問題〈242〉（東大レベル：英作文の「～するようになる」come to do・learn to do・get to do）',
+    title: '入試の正誤問題〈242〉（「～するようになる」come to do・learn to do・get to do）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「（気持ちや考えが変わって）～するようになる」は come to do（come to like／come to realize）、「（練習して）～できるようになる」は learn to do、「（機会を得て）～するようになる」は get to do（get to know）。become to do とは言わない。',
@@ -5810,7 +5113,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-happen-occur',
-    title: '入試の正誤問題〈243〉（京大レベル：英作文の happen・take place・occur（受け身にしない））',
+    title: '入試の正誤問題〈243〉（ happen・take place・occur（受け身にしない））',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'happen・occur・take place はどれも「起こる」という意味の自動詞なので、受け身（be happened／be taken place）にしない。偶然のできごとは happen・occur、予定された行事は take place が多い。',
@@ -5835,7 +5138,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-gerund-idioms',
-    title: '入試の正誤問題〈244〉（国公立レベル：動名詞の慣用表現 be busy ～ing・feel like ～ing・on ～ing）',
+    title: '入試の正誤問題〈244〉（動名詞の慣用表現 be busy ～ing・feel like ～ing・on ～ing）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '動名詞を使う決まった言い方：be busy ～ing（～するのにいそがしい）、feel like ～ing（～したい気がする）、on ～ing（～するとすぐに）、have difficulty ～ing（～するのに苦労する）、spend 時間 ～ing（～して時間を過ごす）。どれも to 不定詞にしない。',
@@ -5860,7 +5163,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-double-possessive',
-    title: '入試の正誤問題〈245〉（東大レベル：英作文の二重所有格 a friend of mine・this book of hers）',
+    title: '入試の正誤問題〈245〉（二重所有格 a friend of mine・this book of hers）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'a・this・that・some・any などと my・her・your などの所有格は、名詞の前にならべて置けない（×a my friend／×this her book）。そのときは「a ＋名詞＋of ＋所有代名詞」の二重所有格を使う（a friend of mine／this book of hers）。',
@@ -5885,7 +5188,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-make-do-take',
-    title: '入試の正誤問題〈246〉（京大レベル：英作文の make・do・take の決まった組み合わせ）',
+    title: '入試の正誤問題〈246〉（ make・do・take の決まった組み合わせ）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'make は「つくり出す」感じ：make a decision・make a mistake・make a speech・make a difference・make progress・make yourself at home。do は「（作業・仕事を）する」：do homework・do research・do the dishes・do 人 a favor。',
@@ -5910,7 +5213,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-phrasal-verbs',
-    title: '入試の正誤問題〈247〉（国公立レベル：句動詞 look for・look after・look up・put off）',
+    title: '入試の正誤問題〈247〉（句動詞 look for・look after・look up・put off）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '句動詞は動詞と前置詞・副詞のセットで意味が決まる：look for（さがす）、look after（世話をする）、look up（調べる）、put off（延期する）、turn off（消す）、take off（ぬぐ）、come across（偶然見つける）、run into（偶然出会う）。余計な to や with をつけない。',
@@ -5935,7 +5238,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-such-as',
-    title: '入試の正誤問題〈248〉（東大レベル：英作文の such as・like・for example の使い方）',
+    title: '入試の正誤問題〈248〉（ such as・like・for example の使い方）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '例をあげるときは「名詞, such as A and B」「名詞 like A」の形で、such as は前の名詞のあとに置く（×Such as apples, many fruits ～）。such A as B の形もあり、A が複数なら a はつけない（such vegetables as carrots）。for example は文頭や文中にコンマとともに置く。',
@@ -5960,7 +5263,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-when-if',
-    title: '入試の正誤問題〈249〉（京大レベル：英作文の when と if の使い分け）',
+    title: '入試の正誤問題〈249〉（ when と if の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'when は「～するとき」で、かならず起こること・起こったことに使う（When the sun rises ～）。if は「もし～なら」で、起こるかどうかわからないことに使う（If it rains ～）。日本語の「～たら」につられて区別をわすれないこと。',
@@ -5985,7 +5288,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-help-do',
-    title: '入試の正誤問題〈250〉（国公立レベル：help 人 (to) do・help 人 with ～）',
+    title: '入試の正誤問題〈250〉（help 人 (to) do・help 人 with ～）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「人が～するのを手伝う」は help 人 (to) do で、to は省略できる（help me carry the bags）。～ing にはしない。人の前に to はつけない（×help to me）。',
@@ -6010,7 +5313,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hear-from-of',
-    title: '入試の正誤問題〈251〉（東大レベル：英作文の hear from・hear of・hear about）',
+    title: '入試の正誤問題〈251〉（ hear from・hear of・hear about）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'hear from 人 は「人から連絡（手紙・電話）がある」、hear of ～ は「～のこと（存在・うわさ）を聞く」、hear about ～ は「～について（くわしく）聞く」。hear のあとに to はつけない（×hear to the rumor）。',
@@ -6035,7 +5338,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-think-of-about',
-    title: '入試の正誤問題〈252〉（京大レベル：英作文の think of・think about・think that）',
+    title: '入試の正誤問題〈252〉（ think of・think about・think that）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'think of ～ は「～を思いつく・～のことを思う」、think about ～ は「～についてよく考える」、think that ～ は「～だと思う」。「どう思うか」は what you think（how ではない）。think of A as B で「A を B と見なす」。',
@@ -6060,7 +5363,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-adj-prep',
-    title: '入試の正誤問題〈253〉（国公立レベル：英作文の be good at・be fond of・be afraid of などの前置詞）',
+    title: '入試の正誤問題〈253〉（ be good at・be fond of・be afraid of などの前置詞）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '形容詞ごとに前置詞が決まっている：be good at（得意）・be fond of（好き）・be afraid of（こわい）・be proud of（ほこり）・be full of（いっぱい）・be famous for（有名）・be interested in（興味）・be tired of（あきた）。',
@@ -6085,7 +5388,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-depend-rely',
-    title: '入試の正誤問題〈254〉（東大レベル：英作文の depend on・rely on・count on）',
+    title: '入試の正誤問題〈254〉（ depend on・rely on・count on）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'depend on ～・rely on ～・count on ～ はどれも「～にたよる・～をあてにする」で、前置詞は on。It depends on ～ は「～しだいだ」。',
@@ -6110,7 +5413,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-consist-of',
-    title: '入試の正誤問題〈255〉（京大レベル：英作文の consist of・be made up of・be composed of）',
+    title: '入試の正誤問題〈255〉（ consist of・be made up of・be composed of）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「～から成る」は consist of ～（能動態で、受け身にしない）／be made up of ～／be composed of ～（受け身の形）。前置詞はどれも of。',
@@ -6135,7 +5438,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-likely-sure',
-    title: '入試の正誤問題〈256〉（京大レベル：英作文の be likely to・be sure to・be about to）',
+    title: '入試の正誤問題〈256〉（ be likely to・be sure to・be about to）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'be likely to do（～しそうだ）・be sure to do（きっと～する）・be about to do（まさに～しようとしている）は、どれも to のあとが動詞の原形。',
@@ -6160,7 +5463,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-contribute-object',
-    title: '入試の正誤問題〈257〉（東大レベル：英作文の contribute to・object to ～ing・be opposed to）',
+    title: '入試の正誤問題〈257〉（ contribute to・object to ～ing・be opposed to）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'contribute to ～（～に貢献する・～の一因となる）・object to ～（～に反対する）・be opposed to ～（～に反対している）の to は前置詞なので、あとに動詞を置くときは ～ing にする（object to building／be opposed to raising）。',
@@ -6185,7 +5488,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-search-seek',
-    title: '入試の正誤問題〈258〉（京大レベル：英作文の search for・look for・seek の使い分け）',
+    title: '入試の正誤問題〈258〉（ search for・look for・seek の使い分け）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '「（人・物）をさがす」は look for ～／search for ～。search のすぐあとに名詞を置くと「（場所・人の体）を調べる」の意味になる（search the house for the money＝家の中をお金をさがして調べる）。',
@@ -6210,7 +5513,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-apply-graduate',
-    title: '入試の正誤問題〈259〉（国公立レベル：英作文の apply for・apply to・graduate from）',
+    title: '入試の正誤問題〈259〉（ apply for・apply to・graduate from）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'apply for ～ は「（仕事・許可・ビザ）を申しこむ・に応募する」、apply to ～ は「（大学・会社）に出願する」「（規則が）～に当てはまる」。apply to a company for a job のように両方使うこともある。',
@@ -6235,7 +5538,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-belong-recover',
-    title: '入試の正誤問題〈260〉（東大レベル：英作文の belong to・recover from・suffer from の形）',
+    title: '入試の正誤問題〈260〉（ belong to・recover from・suffer from の形）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'belong to ～（～のものだ・～に所属している）は状態を表す動詞なので進行形にしない（× is belonging）。前置詞は to。',
@@ -6259,33 +5562,8 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-error-accuse-congratulate',
-    title: '入試の正誤問題〈261〉（京大レベル：英作文の accuse 人 of・congratulate 人 on・approve of）',
-    points: [
-      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
-      'accuse 人 of ～（人を～で責める・告発する）、congratulate 人 on ～（人の～を祝う）、approve of ～（～に賛成する・～をよいと思う）。前置詞がそれぞれちがうので注意する（× accuse 人 for／× congratulate 人 for）。',
-      '前置詞のあとに動詞を置くときは ～ing。受け身は be accused of ～／be congratulated on ～。',
-    ],
-    examples: [
-      { en: 'They accused him of lying. / We congratulated her on her success.', ja: '彼らは彼がうそをついたと責めた。／私たちは彼女の成功を祝った。' },
-      { en: 'My parents approved of my decision.', ja: '両親は私の決心に賛成してくれた。' },
-    ],
-    questions: [
-      { sentence: '(A) The police (B) accused (C) him for (D) stealing the car.', choices: ['(A) The police', '(B) accused', '(C) him for', '(D) stealing the car'], answer: 2, why: '「（人）を（こと）で責める・告発する」は accuse 人 of ～。accused him of。' },
-      { sentence: '(A) We (B) congratulated (C) her for (D) winning the prize.', choices: ['(A) We', '(B) congratulated', '(C) her for', '(D) winning the prize'], answer: 2, why: '「（人）の（こと）を祝う」は congratulate 人 on ～。congratulated her on。' },
-      { sentence: '(A) My parents (B) do not (C) approve (D) my plan to travel alone.', choices: ['(A) My parents', '(B) do not', '(C) approve', '(D) my plan to travel alone'], answer: 2, why: '「～に賛成する・～をよいとみとめる」は approve of ～。approve of my plan。' },
-      { sentence: '(A) Accuse (B) of cheating, (C) the player (D) left the game.', choices: ['(A) Accuse', '(B) of cheating,', '(C) the player', '(D) left the game'], answer: 0, why: '受け身の分詞構文なので Accused of cheating。' },
-      { sentence: '(A) The manager (B) was accused (C) of (D) lie to his staff.', choices: ['(A) The manager', '(B) was accused', '(C) of', '(D) lie to his staff'], answer: 3, why: '前置詞 of のあとは動名詞。of lying。' },
-      { sentence: '(A) The teacher (B) congratulated (C) to the students (D) on their success.', choices: ['(A) The teacher', '(B) congratulated', '(C) to the students', '(D) on their success'], answer: 2, why: 'congratulate は他動詞なので to は不要。congratulated the students。' },
-      { sentence: '(A) The committee (B) has approved (C) of (D) the new budget last week.', choices: ['(A) The committee', '(B) has approved', '(C) of', '(D) the new budget last week'], answer: 1, why: 'last week は過去の一点なので過去形 approved。（「正式に承認する」は approve the budget とも言う。）' },
-      { sentence: '(A) She (B) was congratulated (C) on (D) pass the exam.', choices: ['(A) She', '(B) was congratulated', '(C) on', '(D) pass the exam'], answer: 3, why: '前置詞 on のあとは動名詞。on passing。' },
-      { sentence: '(A) Most people (B) does not approve (C) of (D) cruelty to animals.', choices: ['(A) Most people', '(B) does not approve', '(C) of', '(D) cruelty to animals'], answer: 1, why: '主語 Most people は複数なので do not。' },
-      { sentence: '(A) He (B) strong (C) denied (D) the accusation.', choices: ['(A) He', '(B) strong', '(C) denied', '(D) the accusation'], answer: 1, why: '動詞 denied を修飾するので副詞 strongly。' },
-    ],
-  },
-  {
     id: 'exam-error-three-word-verbs',
-    title: '入試の正誤問題〈262〉（国公立レベル：英作文の come up with・catch up with・run out of（3語の句動詞））',
+    title: '入試の正誤問題〈262〉（ come up with・catch up with・run out of（3語の句動詞））',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       '3語の句動詞は最後の前置詞まででひとまとまり：come up with ～（～を思いつく）・catch up with ～（～に追いつく）・run out of ～（～を切らす）。前置詞をぬかしたり、別の前置詞にしたりしない。',
@@ -6310,7 +5588,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-look-up-to',
-    title: '入試の正誤問題〈263〉（東大レベル：英作文の look up to・make up for・get along with）',
+    title: '入試の正誤問題〈263〉（ look up to・make up for・get along with）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'look up to ～（～を尊敬する）・make up for ～（～をうめ合わせる）・get along with ～（～と仲よくやっていく）は3語でひとまとまり。最後の前置詞をぬかしたり変えたりしない（look up だけだと「調べる」になる）。',
@@ -6335,7 +5613,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-carry-out',
-    title: '入試の正誤問題〈264〉（京大レベル：英作文の carry out・bring up・take after）',
+    title: '入試の正誤問題〈264〉（ carry out・bring up・take after）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'carry out ～（～を実行する）・bring up ～（～を育てる・（話題）をもち出す）・take after ～（（親）に似ている）。take after は前置詞 after のあとにすぐ人を置き、状態を表すので進行形にしない。',
@@ -6360,7 +5638,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-hand-in-out',
-    title: '入試の正誤問題〈265〉（国公立レベル：英作文の hand in・hand out・hand over）',
+    title: '入試の正誤問題〈265〉（ hand in・hand out・hand over）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'hand in ～（～を提出する）・hand out ～（～を配る）・hand over ～（～をわたす・引きわたす）。向きのちがいに注意：先生に出すのは in、みんなに配るのは out、相手にゆずりわたすのは over。',
@@ -6385,7 +5663,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
   },
   {
     id: 'exam-error-look-into',
-    title: '入試の正誤問題〈266〉（東大レベル：英作文の look into・look over・go through）',
+    title: '入試の正誤問題〈266〉（ look into・look over・go through）',
     points: [
       '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
       'look into ～（～を調べる）・look over ～（～にざっと目を通す）・go through ～（～をくわしく調べる・（つらいこと）を経験する）。前置詞・副詞をまちがえると意味が変わる（look at・look for など）。',
@@ -6406,6 +5684,96 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) I (B) looked over it (C) quickly (D) before the meeting.', choices: ['(A) I', '(B) looked over it', '(C) quickly', '(D) before the meeting'], answer: 1, why: 'look over は代名詞を間に置ける句動詞。looked it over。' },
       { sentence: '(A) Many families (B) went through (C) a hardships (D) during the war.', choices: ['(A) Many families', '(B) went through', '(C) a hardships', '(D) during the war'], answer: 2, why: 'hardships は複数なので a はつけない。went through hardships。' },
       { sentence: '(A) She (B) looked into (C) the matter (D) with great carefully.', choices: ['(A) She', '(B) looked into', '(C) the matter', '(D) with great carefully'], answer: 3, why: '前置詞 with のあとは名詞。with great care。' },
+    ],
+  },
+  {
+    id: 'exam-error-lv-shinan-1',
+    title: '入試の正誤問題（私学難関①：語法の細かい区別）',
+    points: ['意味が近い動詞でも、とる形（他動詞か自動詞か、前置詞、to 不定詞か動名詞か）がちがう', '可算・不可算、人を主語にとれない形容詞（possible・convenient など）に注意する'],
+    examples: [{ en: 'The two theories differ from each other in several important ways.', ja: 'その2つの理論はいくつかの重要な点でたがいに異なる。' }],
+    questions: [
+      { sentence: 'Many researchers (A) object to the idea that intelligence can be measured by one test, (B) insisting that it (C) consists of abilities that (D) differ to each other.', choices: ['(A) object to the idea', '(B) insisting that', '(C) consists of', '(D) differ to'], answer: 3, why: 'differ は「〜と異なる」で differ from をとるので (D) を differ from に直す。object to the idea は to が前置詞で名詞が続く正しい形、consist of も正しい。' },
+      { sentence: 'The committee (A) discussed about the proposal for hours but could not (B) reach an agreement and decided to (C) postpone the vote (D) until the following month.', choices: ['(A) discussed about', '(B) reach an agreement', '(C) postpone the vote', '(D) until the following month'], answer: 0, why: 'discuss は他動詞なので about は不要。(A) を discussed the proposal に直す。reach an agreement は「合意に達する」の正しい言い方で、reach は前置詞なしで目的語をとる。' },
+      { sentence: 'Although the survey provided (A) a great deal of information, it offered (B) little evidence that the new policy had (C) affected the behavior of (D) much residents.', choices: ['(A) a great deal of information', '(B) little evidence', '(C) affected the behavior of', '(D) much residents'], answer: 3, why: 'residents は可算名詞の複数なので much ではなく many。(D) を many residents に直す。information・evidence は不可算なので a great deal of・little で正しい。' },
+      { sentence: 'It is (A) necessary for citizens to understand taxes, (B) since few of them are (C) aware of the services they are (D) possible to use free of charge.', choices: ['(A) necessary for citizens to', '(B) since few of them are', '(C) aware of', '(D) possible to use'], answer: 3, why: 'possible は人を主語にとれないので、they are possible to use は誤り。(D) を able to use に直す。It is necessary for 人 to do と aware of は正しい。' },
+      { sentence: 'Rural residents (A) who find it hard to visit a bank (B) are convenient to use online services that (C) let them (D) manage their savings from home.', choices: ['(A) who find it hard to visit a bank', '(B) are convenient to use', '(C) let them', '(D) manage their savings'], answer: 1, why: 'convenient は人を主語にとらない。(B) を find it convenient to use などに直す。find it hard to do は形式目的語の正しい形、let them manage は使役動詞＋原形で正しい。' },
+      { sentence: 'Last year the museum (A) was stolen of several paintings, and the police (B) suspect a former guard of (C) helping the thieves (D) enter the building at night.', choices: ['(A) was stolen of', '(B) suspect a former guard of', '(C) helping the thieves', '(D) enter the building'], answer: 0, why: 'steal は盗む「物」を目的語にとり、「人・場所から奪う」は rob A of B。(A) を was robbed of に直す。suspect 人 of doing、help 人 do（原形）は正しい。' },
+      { sentence: 'Archaeologists believe that the bones, which had (A) laid undisturbed under the floor for centuries, were (B) buried there by villagers (C) who wished to (D) honor their ancestors.', choices: ['(A) laid', '(B) buried', '(C) who wished to', '(D) honor their ancestors'], answer: 0, why: '「横たわる」は自動詞 lie（lie-lay-lain）で、過去完了は had lain。laid は他動詞 lay の過去分詞で目的語が必要。(A) を lain に直す。were buried は受動態で正しい。' },
+      { sentence: 'Scientists (A) have long warned of the risks of plastic, yet governments, (B) afraid of upsetting industry, (C) hesitate introducing laws that (D) prohibit companies from using disposable packaging.', choices: ['(A) have long warned of', '(B) afraid of upsetting industry', '(C) hesitate introducing', '(D) prohibit companies from using'], answer: 2, why: 'hesitate は to 不定詞をとり hesitate to introduce とする。(C) が誤り。warn of は「〜の危険を警告する」、prohibit 人 from doing は正しい語法。' },
+      { sentence: 'The novelist, who (A) married a scientist in her twenties, (B) explained us that her husband’s research (C) had inspired many ideas (D) found in her later books.', choices: ['(A) married a scientist', '(B) explained us', '(C) had inspired', '(D) found in her later books'], answer: 1, why: 'explain は人を直接目的語にとれず explain to 人 that とする。(B) を explained to us に直す。marry は他動詞で with 不要なので married a scientist は正しい。' },
+      { sentence: 'Before the trial, researchers (A) informed all participants (B) of possible side effects and (C) made them to sign a form (D) stating that they agreed to take part.', choices: ['(A) informed all participants', '(B) of possible side effects', '(C) made them to sign', '(D) stating that'], answer: 2, why: '使役の make は make 人 do（原形）なので to は不要。(C) を made them sign に直す。inform 人 of 事柄 は正しい語法で、stating は a form を後ろから修飾する正しい分詞。' },
+    ],
+  },
+  {
+    id: 'exam-error-lv-kokko-1',
+    title: '入試の正誤問題（国公立①：長い文の関係詞・準動詞・一致）',
+    points: ['関係詞は先行詞の数と、関係詞節の中に主語・目的語が欠けているかを確かめる', '分詞・不定詞は意味上の主語との関係（する／される）と、動詞の語法（make it possible for A to do など）で判断する'],
+    examples: [{ en: 'The number of students who have joined the club has doubled.', ja: 'クラブに入った生徒の数は2倍になった。' }],
+    questions: [
+      { sentence: 'The number of wild plants (A) that grows naturally in the region (B) has declined sharply since the forests (C) were cleared for farms (D) that supply the growing cities.', choices: ['(A) that grows naturally', '(B) has declined sharply', '(C) were cleared', '(D) that supply'], answer: 0, why: '「自然に育つ」のは plants（複数）なので that grow naturally が正しい。(B) has declined は主語 The number（単数）に一致して正しい。(C)(D)も態・一致とも正しい。' },
+      { sentence: 'Researchers (A) studying sleep patterns found that teenagers (B) depriving of rest for several nights performed worse on memory tests than those (C) who were allowed (D) to sleep freely.', choices: ['(A) studying', '(B) depriving of', '(C) who were allowed', '(D) to sleep freely'], answer: 1, why: 'deprive A of B の受け身で「休息をうばわれた」なので deprived of rest にする。(A) studying は「研究している」能動で正しい。(C)(D) be allowed to do も正しい。' },
+      { sentence: 'The museum (A) located near the harbor attracts visitors (B) whose interest lies in trade history, but few notice the small bridge (C) where was built (D) by local craftsmen centuries ago.', choices: ['(A) located near the harbor', '(B) whose interest', '(C) where was built', '(D) by local craftsmen'], answer: 2, why: '関係詞節に主語がないので、関係副詞 where ではなく主格の which/that を使い which was built とする。(B) whose interest は所有格、(A) located は過去分詞で正しい。' },
+      { sentence: 'Each of the proposals (A) submitted to the committee (B) was examined carefully, but none of the members could agree on (C) which plan would cost the least, (D) considered the limited budget.', choices: ['(A) submitted to the committee', '(B) was examined', '(C) which plan would cost the least', '(D) considered the limited budget'], answer: 3, why: '「限られた予算を考えると」は considering（または given）を使い、considered は誤り。(B) was は主語 Each に一致して単数で正しい。(A) submitted は「提出された」受け身の過去分詞で正しい。' },
+      { sentence: '(A) Seeing from a satellite, the forests of the Amazon appear as a single green carpet, (B) hiding the damage (C) that illegal logging (D) has caused over the past decade.', choices: ['(A) Seeing from a satellite', '(B) hiding the damage', '(C) that illegal logging', '(D) has caused'], answer: 0, why: '森は衛星から「見られる」側なので分詞構文は Seen from a satellite にする。(B) hiding は森が被害を「かくす」能動で正しい。(D) has caused は over the past decade と合う。' },
+      { sentence: 'Experts warn that the rise in sea levels, (A) together with more frequent storms, (B) are forcing many coastal communities (C) to rethink where (D) to build new homes.', choices: ['(A) together with more frequent storms', '(B) are forcing', '(C) to rethink', '(D) to build new homes'], answer: 1, why: 'together with ～ は主語に加わらないので、動詞は主語 the rise（単数）に合わせて is forcing にする。(C) force O to do、(D) where to do はどちらも正しい形。' },
+      { sentence: 'The report describes a region (A) where rainfall has decreased, a change (B) that farmers there (C) have been noticed for years, (D) according to local officials.', choices: ['(A) where rainfall has decreased', '(B) that farmers there', '(C) have been noticed', '(D) according to local officials'], answer: 2, why: '農家が変化に「気づいてきた」能動なので have noticed にする。that は noticed の目的語にあたる関係代名詞。(A) where は後ろが完全な文なので関係副詞で正しい。' },
+      { sentence: 'The committee was asked to explain why the bridge, (A) which had been inspected only a month earlier, (B) collapsed, but it failed to provide (C) any evidence (D) supported its claims.', choices: ['(A) which had been inspected', '(B) collapsed', '(C) any evidence', '(D) supported its claims'], answer: 3, why: '証拠が主張を「支える」能動なので supporting（または to support）にする。(A) had been inspected は崩落より前の受け身で正しい。(B) collapsed は why 節の動詞。' },
+      { sentence: 'Many historians believe that the invention of printing, (A) more than any other single event, (B) made it possible for ideas (C) spreading across Europe (D) at a speed never seen before.', choices: ['(A) more than any other single event', '(B) made it possible', '(C) spreading across Europe', '(D) at a speed never seen before'], answer: 2, why: 'make it possible for A to do の形なので for ideas to spread とする。(B) の it は形式目的語、(D) は speed を修飾する過去分詞で正しい。' },
+      { sentence: 'The ruins (A) discovered last year (B) had laid buried under the sand for nearly two thousand years before a storm (C) exposed (D) part of the outer wall.', choices: ['(A) discovered last year', '(B) had laid buried', '(C) exposed', '(D) part of the outer wall'], answer: 1, why: '「横たわる」は自動詞 lie（lie-lay-lain）なので had lain buried にする。laid は他動詞 lay の過去分詞。(A) discovered は過去分詞、(C) exposed は他動詞で正しい。' },
+    ],
+  },
+  {
+    id: 'exam-error-lv-kyutei-1',
+    title: '入試の正誤問題（旧帝大①：長い主語・挿入・はなれた一致）',
+    points: ['長い主語や挿入句をかっこでくくり、文の中心の主語と動詞を見つけて一致を確かめる', '関係詞は先行詞と節の中での役割（主語・目的語・所有格・前置詞の目的語）から形を決める'],
+    examples: [{ en: 'The theory proposed by the two researchers, which few experts accepted at first, has now become widely known.', ja: '2人の研究者が提唱したその理論は、最初はほとんどの専門家が受け入れなかったが、今では広く知られている。' }],
+    questions: [
+      { sentence: '(A) Many of the early research on childhood bilingualism, which was conducted largely with small and unrepresentative samples, (B) has since been criticized for (C) drawing conclusions that the data could not (D) support.', choices: ['(A) Many of the early research', '(B) has since been criticized', '(C) drawing', '(D) support'], answer: 0, why: 'research は不可算名詞なので Many of ではなく Much of にする。はなれた位置の has が単数なのもそのため。criticized for doing（〜したことで批判される）は正しい形。' },
+      { sentence: 'The idea that languages (A) spoken by small communities will inevitably disappear, (B) which many linguists accepted a generation ago, (C) have been challenged by recent studies (D) showing how such communities adapt.', choices: ['(A) spoken', '(B) which many linguists accepted', '(C) have been challenged', '(D) showing'], answer: 2, why: '主語は The idea（that 節は同格）なので have ではなく has been challenged にする。挿入の which は idea を受け、spoken・showing の分詞修飾も正しい。' },
+      { sentence: 'Children (A) exposed to two languages from birth, (B) contrary to that was once widely feared, do not lag behind in cognitive development; (C) if anything, they tend to show (D) greater flexibility in solving problems.', choices: ['(A) exposed', '(B) contrary to that was once widely feared', '(C) if anything', '(D) greater flexibility'], answer: 1, why: '前置詞 to のあとで「〜こと」を表す名詞節には what が必要。contrary to what was once widely feared にする。exposed は Children を後ろから修飾する過去分詞で正しい。' },
+      { sentence: 'The museum’s collection of ancient tools, (A) most of which were found by local farmers, (B) offers a rare glimpse into how early communities (C) coped with life in the harsh region they (D) lived.', choices: ['(A) most of which were found', '(B) offers', '(C) coped with', '(D) lived'], answer: 3, why: 'live は自動詞なので the region they lived in と前置詞 in が必要。主語は collection なので offers、most of which は tools を受け were で正しい。' },
+      { sentence: 'The reason (A) why so many ancient cities were built along rivers (B) is easy to understand: rivers supplied water and (C) a means of transport which goods could be carried (D) at little cost.', choices: ['(A) why so many ancient cities were built', '(B) is', '(C) a means of transport which goods could be carried', '(D) at little cost'], answer: 2, why: 'goods could be carried by a means of transport の関係なので、which ではなく by which が必要。主語の中心は The reason なので is で正しい。' },
+      { sentence: 'The committee, (A) which members had spent months reviewing the proposals submitted by universities across the country, finally (B) recommended that the funds (C) be distributed according to (D) how many students each institution enrolled.', choices: ['(A) which members', '(B) recommended', '(C) be distributed', '(D) how many students'], answer: 0, why: '「その委員会の委員たち」なので所有格の関係代名詞 whose members にする。recommend that S (should) 原形 なので be distributed は正しく、how 節も正しい。' },
+      { sentence: 'Only a small fraction of the plastic (A) that is thrown away each year (B) is recycled, and most of the rest, (C) which is not properly collected, (D) end up polluting rivers and oceans.', choices: ['(A) that is thrown away', '(B) is recycled', '(C) which is not properly collected', '(D) end up'], answer: 3, why: 'most of the rest は不可算の plastic の残りを指すので単数あつかい。end up ではなく ends up にする。a fraction of the plastic も is で正しい。' },
+      { sentence: 'Since the first vaccines (A) were developed more than two centuries ago, they (B) saved countless lives, although public trust in them (C) has varied considerably depending on (D) how openly governments shared information.', choices: ['(A) were developed', '(B) saved', '(C) has varied', '(D) how openly governments shared'], answer: 1, why: 'since 〜 ago（〜以来ずっと）が主節にかかるので現在完了 have saved にする。since 節の中は過去形 were developed で正しい。trust が主語なので has varied も正しい。' },
+      { sentence: 'What (A) makes the theory attractive to economists is not its elegance but the fact (B) that it accounts for (C) so a wide range of phenomena (D) with only a few assumptions.', choices: ['(A) makes', '(B) that it accounts for', '(C) so a wide range', '(D) with only a few assumptions'], answer: 2, why: 'so wide a range の語順か such a wide range にする。What 節は単数あつかいなので makes・is で正しく、the fact that は同格の that で正しい。' },
+      { sentence: 'The decline in bee populations (A) observed across Europe over recent decades (B) has been attributed to several factors, (C) among which the widespread use of pesticides (D) are thought to be the most serious.', choices: ['(A) observed', '(B) has been attributed', '(C) among which', '(D) are thought'], answer: 3, why: 'among which のあとの主語は the widespread use なので are ではなく is thought にする。主節の主語は The decline なので has been attributed で正しい。' },
+    ],
+  },
+  {
+    id: 'exam-error-lv-kyodai-1',
+    title: '入試の正誤問題（京大①：倒置・省略・挿入を見ぬく）',
+    points: ['否定語・only・so ~ that の so が文頭に出たら倒置（助動詞 + S + 原形）になっているかを確かめる', '挿入句や同格の that 節をはずして、主語と動詞・先行詞と関係詞の対応を見る'],
+    examples: [{ en: 'Not until the evidence was overwhelming did the committee change its view.', ja: '証拠が圧倒的になって初めて、委員会は見解を変えた。' }],
+    questions: [
+      { sentence: 'Rarely (A) a scientific theory has been embraced so quickly as plate tectonics was in the 1960s, (B) once evidence from the ocean floor (C) had made the idea of moving continents (D) impossible to dismiss.', choices: ['(A) a scientific theory has been', '(B) once evidence from the ocean floor', '(C) had made the idea of moving continents', '(D) impossible to dismiss'], answer: 0, why: '否定の副詞 Rarely が文頭に出ると倒置が起きるので has a scientific theory been にする。(C) は embraced より前のことなので過去完了で正しく、(D) は make O C の C で正しい。' },
+      { sentence: 'The more closely linguists examine the way children acquire their first language, (A) the clearer it becomes that the process (B) involves far more than imitation, since children routinely produce forms (C) what they have never (D) heard from adults.', choices: ['(A) the clearer it becomes', '(B) involves far more than', '(C) what', '(D) heard from adults'], answer: 2, why: 'forms という先行詞があるので what ではなく that か which にする。(A) は the + 比較級, the + 比較級 の後半で正しく、(B) は主語 the process に合う単数形で far は比較級の強調。' },
+      { sentence: 'No sooner (A) had the new vaccine been distributed (B) when reports began to emerge that a mutated strain, (C) against which it offered little protection, (D) was spreading rapidly through the region.', choices: ['(A) had the new vaccine been distributed', '(B) when', '(C) against which it offered little protection', '(D) was spreading rapidly'], answer: 1, why: 'No sooner A than B の形なので when を than にする（when は Hardly と組む）。(A) は否定語が文頭に出た倒置で正しく、(D) は単数の主語 a mutated strain に合う。' },
+      { sentence: 'Reading is to the mind (A) what exercise is to the body; just as muscles weaken when (B) left unused, (C) so does the capacity for sustained attention (D) declines in those who rarely engage with long texts.', choices: ['(A) what exercise is', '(B) left unused', '(C) so does the capacity', '(D) declines'], answer: 3, why: 'just as ~, so does S + 原形 の倒置なので declines を decline にする。(A) は A is to B what C is to D の構文、(B) は they are の省略で正しい。' },
+      { sentence: 'The belief that economic growth alone will reduce poverty, (A) widely held among postwar policymakers, (B) have come under growing criticism, not least because the benefits of growth (C) have tended to be concentrated among those (D) who were already wealthy.', choices: ['(A) widely held among postwar policymakers', '(B) have come under', '(C) have tended to be concentrated', '(D) who were already wealthy'], answer: 1, why: '主語は同格の that 節と挿入句にはさまれた The belief（単数）なので has come にする。(C) の主語は the benefits（複数）で have が正しく、(A) は which was を省いた挿入の分詞句。' },
+      { sentence: '(A) What is often the case with new technologies, the printing press was at first used merely to reproduce texts (B) that already existed, and only gradually (C) did it give rise to forms of writing (D) that had previously been unthinkable.', choices: ['(A) What is often the case', '(B) that already existed', '(C) did it give rise to', '(D) that had previously been unthinkable'], answer: 0, why: '主節の内容全体を受けて「よくあることだが」と言うのは関係代名詞 as を使った As is often the case with ~ なので What を As にする。(C) は only + 副詞が文頭に出た倒置で正しい。' },
+      { sentence: 'The discovery (A) that some bacteria can survive in boiling water (B) has forced biologists to reconsider the conditions under which life is possible, raising the possibility (C) which organisms might exist on planets (D) once thought far too hostile.', choices: ['(A) that some bacteria can survive', '(B) has forced biologists', '(C) which organisms might exist', '(D) once thought far too hostile'], answer: 2, why: '後ろが完全な文で the possibility の内容を説明する同格なので which を that にする。(A) も The discovery の同格の that で正しく、(B) は主語 The discovery に合う単数形。' },
+      { sentence: 'Hardly (A) had the expedition reached the summit (B) than a violent storm swept across the ridge, forcing the climbers, (C) exhausted as they were, (D) to begin their descent in near-total darkness.', choices: ['(A) had the expedition reached the summit', '(B) than', '(C) exhausted as they were', '(D) to begin their descent'], answer: 1, why: 'Hardly A when B なので than を when（または before）にする。than は No sooner と組む。(C) は譲歩の形容詞 + as + S + V、(D) は force O to do で正しい。' },
+      { sentence: '(A) So rapid the pace of urbanization was in the twentieth century that many cities found (B) themselves unable to provide adequate housing, and the informal settlements (C) that sprang up on their edges (D) are still home to millions today.', choices: ['(A) So rapid the pace of urbanization was', '(B) themselves unable to provide', '(C) that sprang up', '(D) are still home to'], answer: 0, why: 'So + 形容詞 が文頭に出た so ~ that 構文では倒置が起きるので So rapid was the pace of urbanization にする。(D) は複数の主語 settlements に合う現在形で正しい。' },
+      { sentence: 'Modern cities consume far more energy (A) than is needed to sustain their populations, partly because buildings (B) designed decades ago (C) waste much of the energy they consume, a problem (D) which solution requires costly renovation.', choices: ['(A) than is needed', '(B) designed decades ago', '(C) waste much of the energy', '(D) which solution requires'], answer: 3, why: 'problem と solution は「その問題の解決策」という所有の関係なので whose solution にする。(A) は than が主語の役をする関係代名詞的用法で正しく、(C) は主語 buildings に合う複数形。' },
+    ],
+  },
+  {
+    id: 'exam-error-lv-todai-1',
+    title: '入試の正誤問題（東大①：論説文の一致・冠詞・論理）',
+    points: ['主語と動詞が挿入や長い修飾ではなれていないか、比べている物どうしがそろっているかを確かめる', '冠詞・時制・接続語は文全体の論理から判断し、まぎらわしい正しい形（総称の the、強調構文など）と区別する'],
+    examples: [{ en: 'The belief that technology alone can solve environmental problems, popular among many economists, has been questioned in recent years.', ja: '技術だけで環境問題を解決できるという、多くの経済学者に人気の考えは、近年疑問視されている。' }],
+    questions: [
+      { sentence: 'The assumption that economic growth inevitably leads to greater happiness, (A) widely shared among policymakers in the postwar decades, (B) have been challenged by studies (C) showing that life satisfaction levels off (D) once basic needs are met.', choices: ['(A) widely shared among policymakers', '(B) have been challenged by studies', '(C) showing that life satisfaction levels off', '(D) once basic needs are met'], answer: 1, why: '主語は The assumption（単数）で、that節と挿入された分詞句をはさんで動詞がはなれている。have を has に直す。(A) は主語を補足する過去分詞の挿入、(C) は studies を修飾する現在分詞で正しい。' },
+      { sentence: 'Unlike (A) the printing press, which spread literacy gradually over several centuries, (B) the internet has transformed the way information circulates (C) within a span of the single generation, (D) prompting fears that existing institutions cannot adapt quickly enough.', choices: ['(A) the printing press', '(B) the internet has transformed', '(C) within a span of the single generation', '(D) prompting fears that existing institutions'], answer: 2, why: '「たった一世代のうちに」は within the span of a single generation で、a と the が逆。(A) は発明品を表す総称の the で、比較の対象も the internet とそろっている。' },
+      { sentence: 'Researchers have found that (A) children who are read to regularly (B) tend to acquire a larger vocabulary (C) by the age of five, and that their vocabulary remains richer than (D) children who are rarely exposed to books.', choices: ['(A) children who are read to regularly', '(B) tend to acquire a larger vocabulary', '(C) by the age of five', '(D) children who are rarely exposed to books'], answer: 3, why: '比べているのは「語彙」と「語彙」なので、children ではなく that of children とする。(A) の are read to は read to 〜（〜に読み聞かせる）の受動態で前置詞が残る正しい形。' },
+      { sentence: 'By the time the international agreement was finally signed, scientists (A) have already accumulated substantial evidence (B) that human activity was altering the climate, yet many governments (C) remained reluctant to commit to targets (D) that might slow their economies.', choices: ['(A) have already accumulated substantial evidence', '(B) that human activity was altering the climate', '(C) remained reluctant to commit to targets', '(D) that might slow their economies'], answer: 0, why: 'By the time + 過去形は過去の一時点を示すので、それまでの完了は過去完了 had already accumulated にする。(B) は時制の一致で過去進行形、(C) の commit to も正しい。' },
+      { sentence: '(A) Although the theory accounted for most of the observations available at the time, (B) but it failed to explain the irregular orbit of Mercury, (C) a discrepancy that was resolved only (D) when Einstein proposed a radically different account of gravity.', choices: ['(A) Although the theory accounted for most', '(B) but it failed to explain', '(C) a discrepancy that was resolved only', '(D) when Einstein proposed a radically different account'], answer: 1, why: 'Although と but を同時に使うと接続語が二重になる。but を取る。(C) は前の内容と同格の名詞句で、only when 〜（〜して初めて）も正しい。' },
+      { sentence: 'A coral reef, (A) which supports an extraordinary diversity of life, (B) depends on a balance between algae and coral, and even a slight rise in water temperature can (C) cause the coral expel the algae, (D) leaving behind a bleached skeleton.', choices: ['(A) which supports an extraordinary diversity', '(B) depends on a balance between algae and coral', '(C) cause the coral expel the algae', '(D) leaving behind a bleached skeleton'], answer: 2, why: 'cause は cause + 目的語 + to 不定詞の形なので cause the coral to expel とする（make とちがい原形は不可）。(B) は A coral reef に合う単数形、(D) は結果の分詞構文。' },
+      { sentence: 'Historians who study the collapse of ancient civilizations (A) are increasingly inclined to attribute it not to a single catastrophe (B) but to a combination of factors, (C) for which archaeologists have recently uncovered (D) a considerable number of evidences.', choices: ['(A) are increasingly inclined to attribute it', '(B) but to a combination of factors', '(C) for which archaeologists have recently uncovered', '(D) a considerable number of evidences'], answer: 3, why: 'evidence は不可算名詞で複数形も number of も不可。a considerable amount of evidence とする。(B) は attribute A not to B but to C の呼応で正しい。' },
+      { sentence: '(A) The most of the energy consumed in modern cities (B) is used to heat, cool, and light buildings, which is why architects (C) are now being asked to design structures (D) that consume far less power than their predecessors.', choices: ['(A) The most of the energy consumed', '(B) is used to heat, cool, and light buildings', '(C) are now being asked to design structures', '(D) that consume far less power'], answer: 0, why: '「〜の大部分」は most of the 〜 で、The most of とは言わない。The を取る。(B) は most of the energy（不可算・単数）に合わせた is で正しく、(C) は進行形の受動態で正しい。' },
+      { sentence: 'The economic consequences of the pandemic (A) were felt most severely by workers (B) whose jobs could not be done remotely, and their losses in income (C) proved far greater than (D) that of employees in professional occupations.', choices: ['(A) were felt most severely by workers', '(B) whose jobs could not be done remotely', '(C) proved far greater than', '(D) that of employees in professional occupations'], answer: 3, why: '比べる対象は複数形の losses なので代名詞も複数の those にし、those of employees とする。(A) は consequences に合う were、(C) の far は比較級を強める正しい副詞。' },
+      { sentence: '(A) Having invented in the late nineteenth century, the telephone was initially regarded as a novelty for the wealthy, (B) and it was not until decades later (C) that it became an instrument (D) on which ordinary households relied.', choices: ['(A) Having invented in the late nineteenth century', '(B) and it was not until decades later', '(C) that it became an instrument', '(D) on which ordinary households relied'], answer: 0, why: '電話は「発明される」側なので受動の Invented（Having been invented）にする。(B)(C) は not until 〜 の強調構文、(D) は rely on の on が前に出た正しい形。' },
     ],
   },
 ]
@@ -6450,7 +5818,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-3',
-    title: '入試の誤文訂正③（医学部・難関大レベル）',
+    title: '入試の誤文訂正③（総合）',
     points: ['倒置・仮定法・主語と動詞の一致・動名詞・まぎらわしい語など、難関大で出やすい誤り。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Hardly had I arrived when it began to rain.', ja: '着いたとたんに雨がふり始めた。（Hardly が文頭に出ると倒置）' }],
     questions: [
@@ -6486,7 +5854,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-5',
-    title: '入試の誤文訂正⑤（時制・仮定法の難問）',
+    title: '入試の誤文訂正⑤（時制・仮定法）',
     points: ['過去形と現在完了・過去完了のちがい、時や条件を表す節の現在形、仮定法（過去・過去完了・混合）、I wish / as if など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'If he had studied harder last year, he would be a college student now.', ja: '去年もっと勉強していたら、今ごろ大学生だろうに。（過去の仮定＋今の結果）' }],
     questions: [
@@ -6504,7 +5872,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-6',
-    title: '入試の誤文訂正⑥（接続詞・分詞構文の難問）',
+    title: '入試の誤文訂正⑥（接続詞・分詞構文）',
     points: ['分詞構文（意味上の主語・受け身・完了形・否定の not の位置）、付帯状況の with、命令文＋ or、unless、so / such … that など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Seen from the plane, the city looked like a toy.', ja: '飛行機から見ると、町はおもちゃのように見えた。（町は「見られる」ので過去分詞 Seen）' }],
     questions: [
@@ -6522,7 +5890,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-7',
-    title: '入試の誤文訂正⑦（比較・倒置の難問）',
+    title: '入試の誤文訂正⑦（比較・倒置）',
     points: ['最上級と比較級、the ＋比較級, the ＋比較級、比較級を強める much、倍数表現、superior to、否定語や Only ～ が文頭に出たときの倒置など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。（Never が文頭で倒置）' }],
     questions: [
@@ -6540,7 +5908,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-8',
-    title: '入試の誤文訂正⑧（助動詞・不定詞の難問）',
+    title: '入試の誤文訂正⑧（助動詞・不定詞）',
     points: ['had better not、助動詞＋ have ＋過去分詞、used to、It is kind of you to ～、kind enough to ～、too ～ to …、would rather、cannot help -ing、疑問詞＋ to 不定詞など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'You should have told me the truth yesterday.', ja: '昨日、本当のことを言ってくれるべきだったのに。（should have ＋過去分詞）' }],
     questions: [
@@ -6558,7 +5926,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-9',
-    title: '入試の誤文訂正⑨（語順・語法の難問）',
+    title: '入試の誤文訂正⑨（語順・語法）',
     points: ['間接疑問の語順、such a ＋形容詞＋名詞、What do you think ～?、reach / resemble（前置詞なし）、lend と borrow、Most と Almost など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'What do you think about this plan?', ja: 'この計画についてどう思いますか。（「どう」でも How ではなく What）' }],
     questions: [
@@ -6666,7 +6034,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-15',
-    title: '入試の誤文訂正⑮（関係詞の難問②）',
+    title: '入試の誤文訂正⑮（関係詞②）',
     points: ['関係詞のあとの目的語の重複、非制限用法で that を使わない、連鎖関係詞節（who I think is）、what と that、前置詞＋ which、both of whom、関係副詞 when、whose、whoever など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He is the man who I think is honest.', ja: '彼は、私が正直だと思う男性だ。（who は is の主語。I think がはさまっている）' }],
     questions: [
@@ -6684,7 +6052,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-16',
-    title: '入試の誤文訂正⑯（名詞・冠詞の難問）',
+    title: '入試の誤文訂正⑯（名詞・冠詞）',
     points: ['楽器の the、a と an（発音で決まる）、食事に冠詞をつけない、ただ1つのもの（the sun）、数えられない名詞（luggage・bread・hair）、言語名に the をつけない、ten-minute のような数字＋単数名詞の形容詞など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Let’s take a ten-minute break.', ja: '10分休けいしよう。（名詞の前でハイフンでつなぐときは minute と単数）' }],
     questions: [
@@ -6702,7 +6070,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-17',
-    title: '入試の誤文訂正⑰（前置詞の難問②）',
+    title: '入試の誤文訂正⑰（前置詞②）',
     points: ['日付の on、arrive at、be good at、be interested in、be different from、be afraid of、期限の by、be famous for、talk with、be absent from など、動詞・形容詞と組になる前置詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The museum is famous for its paintings.', ja: 'その美術館は絵画で有名だ。（be famous for ～）' }],
     questions: [
@@ -6756,7 +6124,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-20',
-    title: '入試の誤文訂正⑳（医学部・難関大レベル②）',
+    title: '入試の誤文訂正⑳（総合）',
     points: ['consist of（進行形・受け身にしない）、would rather ＋仮定法、It is essential that ＋原形、Had I known の倒置、suggest -ing、No sooner ～ than、the reason why ＋主語＋動詞、2つの比較の the ＋比較級、Were it not for、one of those ＋複数名詞＋ who など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She is one of those people who never give up.', ja: '彼女はけっしてあきらめない人々の1人だ。（who の先行詞は those people で複数）' }],
     questions: [
@@ -6792,7 +6160,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-22',
-    title: '入試の誤文訂正㉒（動詞の語法の難問③）',
+    title: '入試の誤文訂正㉒（動詞の語法③）',
     points: ['steal と rob、mention・enter・approach（前置詞がいらない他動詞）、prevent 人 from -ing、afford to ～、suit（前置詞なし）、deny -ing、apologize to 人 for ～ など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The thief robbed me of my wallet.', ja: 'どろぼうは私から財布をうばった。（rob 人 of 物）' }],
     questions: [
@@ -6846,7 +6214,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-25',
-    title: '入試の誤文訂正㉕（共通テストレベル：中学〜高1の総復習）',
+    title: '入試の誤文訂正㉕（中学〜高1の総復習）',
     points: ['三人称単数・助動詞＋原形・There are・不規則動詞の過去形・比較級・現在完了の疑問文・不定詞・過去分詞の形容詞的用法・現在進行形・関係代名詞 who など、共通テストの土台になる文法の総復習。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The book written by her is popular.', ja: '彼女によって書かれた本は人気がある。（過去分詞が名詞を説明）' }],
     questions: [
@@ -6864,7 +6232,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-26',
-    title: '入試の誤文訂正㉖（国公立二次レベル）',
+    title: '入試の誤文訂正㉖（総合）',
     points: ['It was not until ～ that、not so much A as B、It goes without saying、There is no use -ing、cannot help but ＋原形、What do you say to -ing、have no objection to -ing、make it a rule to ～、Should you ～（倒置）、anything but など、国公立二次で問われる構文。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was not until midnight that he came home.', ja: '真夜中になってはじめて彼は帰ってきた。' }],
     questions: [
@@ -6882,7 +6250,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-27',
-    title: '入試の誤文訂正㉗（私大難関レベル：早慶・上智の頻出）',
+    title: '入試の誤文訂正㉗（早慶・上智の頻出）',
     points: ['senior / preferable は than ではなく to、make の受け身の to、倍数表現、Scarcely の倒置、時間＋ walk の単数あつかい、so ＋形容詞＋ a ＋名詞、Few ＋複数、advise 人 not to ～、主格の who など、私大難関で問われる語法・構文。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She is senior to me by two years.', ja: '彼女は私より2つ年上だ。（senior は to と組む）' }],
     questions: [
@@ -6954,7 +6322,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-31',
-    title: '入試の誤文訂正㉛（共通テストレベル：語法の総復習）',
+    title: '入試の誤文訂正㉛（語法の総復習）',
     points: ['tell 人、listen to、wait for、get to、look for、tell と say、go home、enjoy oneself、It takes 人 時間 to ～、Thank you for -ing など、共通テストの土台になる動詞の語法の総復習。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It takes me two hours to get there.', ja: 'そこへ行くのに2時間かかる。（時間がかかる → take）' }],
     questions: [
@@ -6972,7 +6340,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-32',
-    title: '入試の誤文訂正㉜（医学部・難関大レベル③）',
+    title: '入試の誤文訂正㉜（総合）',
     points: ['too ～ to …、Had it not been for と would have ＋過去分詞、demand 人 ＋原形、Not only の倒置、Little is known、連鎖関係詞節の who、despite ＋動名詞、lie と lay、Hardly の倒置、neither A nor B の一致など、医療の場面で問われる難しい構文。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Had it not been for the vaccine, many more people would have died.', ja: 'ワクチンがなかったら、もっと多くの人が亡くなっていただろう。' }],
     questions: [
@@ -7008,7 +6376,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-34',
-    title: '入試の誤文訂正㉞（共通テストレベル：時制と仮定法の総復習）',
+    title: '入試の誤文訂正㉞（時制と仮定法の総復習）',
     points: ['過去をあらわす語句と過去形、by the time と過去完了、時・条件の副詞節の現在形、仮定法過去（If I were）、仮定法過去完了、I wish ＋過去形、状態動詞は進行形にしない、have been to（経験）、Without ～ の仮定法など、時制と仮定法のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'If she had studied harder, she would have passed the exam.', ja: 'もっと一生けんめい勉強していたら、彼女は試験に受かっていただろう。' }],
     questions: [
@@ -7044,7 +6412,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-36',
-    title: '入試の誤文訂正㊱（国公立レベル：関係詞と接続詞のまとめ）',
+    title: '入試の誤文訂正㊱（関係詞と接続詞のまとめ）',
     points: ['関係副詞 where・when・why、関係代名詞 what・whose、so that ～ can（目的）、Although と Despite、whether or not、so ～ that と such ～ that、疑問詞 which など、関係詞と接続詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the town where I was born.', ja: 'ここが私の生まれた町だ。' }],
     questions: [
@@ -7080,7 +6448,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-38',
-    title: '入試の誤文訂正㊳（私学難関レベル：熟語・語法の総まとめ）',
+    title: '入試の誤文訂正㊳（熟語・語法の総まとめ）',
     points: ['look forward to -ing・be used to -ing・object to -ing（to のあとは動名詞）、mind -ing、can’t help -ing、make 人 ＋原形、have 物 ＋過去分詞、be worth -ing、prevent 人 from -ing、remember -ing（～したことを覚えている）など、私立大学の入試でよく問われる熟語と語法。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I am looking forward to seeing you.', ja: 'あなたに会えるのを楽しみにしています。' }],
     questions: [
@@ -7116,7 +6484,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-40',
-    title: '入試の誤文訂正㊵（医学部・難関大レベル④：分詞構文・強調構文・同格の that）',
+    title: '入試の誤文訂正㊵（分詞構文・強調構文・同格の that）',
     points: ['受け身の分詞構文（Seen from ～）、完了の分詞構文（Having ＋過去分詞）、否定の Not ＋分詞、強調構文 It is ～ that …、同格の that（the fact that ～）、独立分詞構文（The weather being fine）、Judging from ～ など、難関大学でよく問われる構文。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Seen from the plane, the island looked tiny.', ja: '飛行機から見ると、その島はとても小さく見えた。' }],
     questions: [
@@ -7134,7 +6502,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-41',
-    title: '入試の誤文訂正㊶（共通テストレベル：前置詞の総まとめ）',
+    title: '入試の誤文訂正㊶（前置詞の総まとめ）',
     points: ['日付の on、期限の by と継続の until、期間の for と起点の since、arrive at、be good at、時刻の at、be married to、be interested in、on foot、他動詞 discuss（前置詞がいらない）など、まちがえやすい前置詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Please finish the report by Friday.', ja: '金曜日までに報告書を仕上げてください。' }],
     questions: [
@@ -7170,7 +6538,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-43',
-    title: '入試の誤文訂正㊸（国公立レベル：名詞・冠詞・代名詞の総まとめ）',
+    title: '入試の誤文訂正㊸（名詞・冠詞・代名詞の総まとめ）',
     points: ['数えられない名詞（advice・furniture・water）、スポーツ名に冠詞をつけない、by ＋交通手段、母音の音で始まる語の前の an、help yourself、所有代名詞 mine、2つのうちの残り the other、ほかの人々 others など、名詞・冠詞・代名詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She gave me some advice.', ja: '彼女は私にアドバイスをくれた。' }],
     questions: [
@@ -7206,7 +6574,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-45',
-    title: '入試の誤文訂正㊺（私学難関レベル：比較の慣用表現）',
+    title: '入試の誤文訂正㊺（比較の慣用表現）',
     points: ['no more than（たった～）と no less than（～も）、not so much A as B（A というよりむしろ B）、by far the 最上級、The 比較級 ～, the 比較級 …、know better than to ～（～するほどばかではない）、A is no more B than C is D（クジラの公式型）、superior to、prefer A to B、Nothing is more ～ than …、as soon as possible など、私立大学でよく問われる比較の慣用表現。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He is not so much a scholar as a writer.', ja: '彼は学者というよりむしろ作家だ。' }],
     questions: [
@@ -7224,7 +6592,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-46',
-    title: '入試の誤文訂正㊻（共通テストレベル：不定詞と動名詞の使い分けの総まとめ）',
+    title: '入試の誤文訂正㊻（不定詞と動名詞の使い分けの総まとめ）',
     points: ['動名詞をとる動詞（enjoy・avoid・finish・stop など）、不定詞をとる動詞（decide・hope・promise など）、forget to（わすれずに～）と stop -ing（～するのをやめる）、It is ～ to …、前置詞のあとの動名詞（think of -ing）など、不定詞と動名詞の使い分けのまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She decided to study abroad.', ja: '彼女は留学することに決めた。' }],
     questions: [
@@ -7260,7 +6628,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-48',
-    title: '入試の誤文訂正㊽（国公立レベル：形容詞・副詞の総まとめ）',
+    title: '入試の誤文訂正㊽（形容詞・副詞の総まとめ）',
     points: ['good（形容詞）と well（副詞）、形容詞 ＋ enough、hard（一生けんめい）と hardly（ほとんど～ない）、little（量）と few（数）、a few（少しある）、surprising と surprised、late（おそく）と lately（最近）、taste ＋形容詞、比較級を強める much、never など、形容詞と副詞の使い分けのまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She speaks English very well.', ja: '彼女はとてもじょうずに英語を話す。' }],
     questions: [
@@ -7278,7 +6646,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-49',
-    title: '入試の誤文訂正㊾（医学部・難関大レベル⑤：倒置・省略・挿入）',
+    title: '入試の誤文訂正㊾（倒置・省略・挿入）',
     points: ['否定語（Never・Little）や Only ～・So ～ が文頭に出たときの倒置、if を省いた仮定の倒置（Should you ～・Were I ～）、While ～ing・If necessary のような主語と be 動詞の省略、who I think のような挿入、Here comes ＋名詞など、難関大学でよく問われる特別な語順。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Never have I seen such a strange disease.', ja: 'こんなにふしぎな病気は見たことがない。' }],
     questions: [
@@ -7296,7 +6664,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-50',
-    title: '入試の誤文訂正㊿（共通テストレベル：関係代名詞と関係副詞の総まとめ）',
+    title: '入試の誤文訂正㊿（関係代名詞と関係副詞の総まとめ）',
     points: ['うしろに名詞が欠けていれば関係代名詞（which・that）、欠けていなければ関係副詞（where・when）、the only ～ that、先行詞をふくむ what、所有の whose、the way と how はいっしょに使わない、コンマのあとに that は使えない、前置詞 ＋ which、everything that など、関係詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the house which my father built.', ja: 'これは父が建てた家だ。' }],
     questions: [
@@ -7332,7 +6700,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-52',
-    title: '入試の誤文訂正〈52〉（私学難関レベル：まぎらわしい動詞の語法）',
+    title: '入試の誤文訂正〈52〉（まぎらわしい動詞の語法）',
     points: ['rise（上がる）と raise（～を上げる）、lie（横になる：lie-lay-lain）と lay（～を置く：lay-laid-laid）、borrow（借りる）と lend（貸す）、tell 人 ～ と say、fit（サイズが合う）と suit（にあう）、steal 物 と rob 人 of 物 など、私立大学でよく問われる、まぎらわしい動詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She lay on the bed because she was tired.', ja: '彼女はつかれていたのでベッドに横になった。' }],
     questions: [
@@ -7350,7 +6718,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-53',
-    title: '入試の誤文訂正〈53〉（共通テストレベル：仮定法の総まとめ）',
+    title: '入試の誤文訂正〈53〉（仮定法の総まとめ）',
     points: ['I wish ＋過去形、as if ＋過去完了、It’s time ＋過去形、But for ～、仮定法過去完了、If it were not for ～、would rather ＋過去形、If only ～、Had I known（if を省いた倒置）、過去の仮定と今の結果をあわせた形（混合仮定法）など、仮定法のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'If he had taken the medicine last week, he would be healthy now.', ja: '先週その薬を飲んでいたら、彼は今ごろ元気だろう。' }],
     questions: [
@@ -7386,7 +6754,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-55',
-    title: '入試の誤文訂正〈55〉（国公立レベル：時制と一致の総まとめ）',
+    title: '入試の誤文訂正〈55〉（時制と一致の総まとめ）',
     points: ['主節が過去のときの時制の一致（is → was、will → would、can → could、現在完了 → 過去完了）、不変の真理は現在形のまま、間接疑問は「疑問詞 ＋主語＋動詞」の語順、ask if ＋主語＋動詞など、時制の一致と話法のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Our teacher told us that the earth moves around the sun.', ja: '先生は、地球は太陽のまわりを回っていると教えてくれた。' }],
     questions: [
@@ -7404,7 +6772,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-56',
-    title: '入試の誤文訂正〈56〉（医学部・難関大レベル⑥：名詞構文・無生物主語・強調）',
+    title: '入試の誤文訂正〈56〉（名詞構文・無生物主語・強調）',
     points: ['動詞を名詞にした名詞構文（die → death、discover → discovery、arrive → arrival、examine → examination）、無生物主語（This medicine will make you feel ～・The snow prevented us from going ～）、強調の did ＋原形・the very ～、a good speaker of ～ など、医学部や難関大学の英文で多い書き方。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The discovery of the new drug saved many lives.', ja: '新しい薬の発見が多くの命を救った。' }],
     questions: [
@@ -7422,7 +6790,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-57',
-    title: '入試の誤文訂正〈57〉（共通テストレベル：助動詞の総まとめ）',
+    title: '入試の誤文訂正〈57〉（助動詞の総まとめ）',
     points: ['had better not ＋原形、can’t be（～のはずがない）、must have ＋過去分詞（～したにちがいない）、should have ＋過去分詞（～すべきだったのに）、don’t have to（～しなくてよい）と mustn’t（～してはいけない）、used to ＋原形、may have ＋過去分詞、need not ＋原形、Shall I ～?、would rather ＋原形など、助動詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She looks tired. She must have stayed up late last night.', ja: '彼女はつかれているようだ。昨夜おそくまで起きていたにちがいない。' }],
     questions: [
@@ -7440,7 +6808,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-58',
-    title: '入試の誤文訂正〈58〉（私学難関レベル：前置詞をふくむ熟語の総まとめ）',
+    title: '入試の誤文訂正〈58〉（前置詞をふくむ熟語の総まとめ）',
     points: ['be proud of、be tired of（あきている）、be afraid of、be full of と be filled with、be famous for、look forward to、belong to、depend on、be responsible for など、前置詞が決まっている熟語のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He is proud of his son.', ja: '彼は息子をほこりに思っている。' }],
     questions: [
@@ -7476,7 +6844,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-60',
-    title: '入試の誤文訂正〈60〉（国公立レベル：比較の総まとめ）',
+    title: '入試の誤文訂正〈60〉（比較の総まとめ）',
     points: ['最上級・比較級の正しい形（more や most と -er・-est を重ねない）、as ～ as、副詞の最上級 the fastest、fewer（数）と less（量）、the best ～ I have ever ～、比べるものをそろえる（mine）、one of the ＋最上級＋複数名詞など、比較のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Kyoto is one of the oldest cities in Japan.', ja: '京都は日本で最も古い都市の1つだ。' }],
     questions: [
@@ -7494,7 +6862,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-61',
-    title: '入試の誤文訂正〈61〉（医学部・難関大レベル⑦：前置詞＋関係代名詞・複合関係詞）',
+    title: '入試の誤文訂正〈61〉（前置詞＋関係代名詞・複合関係詞）',
     points: ['前置詞＋関係代名詞（in which・with whom・for which）、前置詞のあとに that は使えない、複合関係詞（whoever・whatever・however・whenever）、most of whom など、難関大学でよく問われる関係詞の形。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The friend with whom I traveled was very kind.', ja: 'いっしょに旅行した友だちはとても親切だった。' }],
     questions: [
@@ -7512,7 +6880,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-62',
-    title: '入試の誤文訂正〈62〉（共通テストレベル：受け身の総まとめ）',
+    title: '入試の誤文訂正〈62〉（受け身の総まとめ）',
     points: ['受け身の基本（be ＋過去分詞）、句動詞の受け身（be spoken to・be taken care of）、by 以外の前置詞（be known to・be made from）、have 物 ＋過去分詞、未来や助動詞の受け身（will be held・must be cleaned）など、受け身のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I was spoken to by a stranger.', ja: '私は知らない人に話しかけられた。' }],
     questions: [
@@ -7530,7 +6898,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-63',
-    title: '入試の誤文訂正〈63〉（TOEFL・IELTS の書き言葉：名詞の数と冠詞）',
+    title: '入試の誤文訂正〈63〉（名詞の数と冠詞）',
     points: ['research・evidence・information・advice・equipment は数えられない名詞（複数形にせず a もつけない）、a number of ＋複数名詞は複数あつかい・the number of ～ は単数あつかい、one of the ＋複数名詞、総称の the ＋単数名詞など、論文やエッセイでよく問われる名詞と冠詞のきまり。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Recent research suggests that sleep improves memory.', ja: '最近の研究は、睡眠が記憶をよくすることを示している。' }],
     questions: [
@@ -7548,7 +6916,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-64',
-    title: '入試の誤文訂正〈64〉（共通テストレベル：分詞の形容詞用法）',
+    title: '入試の誤文訂正〈64〉（分詞の形容詞用法）',
     points: ['boring（人をたいくつさせる）と bored（人がたいくつした）のような感情の分詞、名詞を後ろからかざる分詞（a boy playing ～・a car made in ～）、名詞の前におく分詞（a broken window・a sleeping baby）など。「する」側なら -ing、「される」側なら過去分詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The movie was so boring that I fell asleep.', ja: 'その映画はとてもたいくつだったので、私はねむってしまった。' }],
     questions: [
@@ -7566,7 +6934,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-65',
-    title: '入試の誤文訂正〈65〉（TOEFL・IELTS の書き言葉：主語と動詞の一致）',
+    title: '入試の誤文訂正〈65〉（主語と動詞の一致）',
     points: ['長い主語の中心（The results of the study …）をさがす、either A or B・neither A nor B・not only A but also B は B に合わせる、A as well as B・together with は A に合わせる、動名詞の主語や距離・時間・お金のまとまりは単数など、論文やエッセイでよく問われる主語と動詞の一致。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The results of the survey are surprising.', ja: 'その調査の結果はおどろくべきものだ。' }],
     questions: [
@@ -7584,7 +6952,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-66',
-    title: '入試の誤文訂正〈66〉（共通テストレベル：比較の慣用表現）',
+    title: '入試の誤文訂正〈66〉（比較の慣用表現）',
     points: ['the 比較級 ～, the 比較級 …（～すればするほど…）、比較級 and 比較級（ますます）、no more than（たった）、less ＋原級 ＋ than、not so much A as B（A というより B）、as ～ as possible、倍数 ＋ as ～ as、would rather A than B など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、上手になる。' }],
     questions: [
@@ -7602,7 +6970,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-67',
-    title: '入試の誤文訂正〈67〉（TOEFL・IELTS の書き言葉：つなぎのことば）',
+    title: '入試の誤文訂正〈67〉（つなぎのことば）',
     points: ['although・because・while は接続詞（あとに主語＋動詞）、despite・because of・due to は前置詞（あとに名詞）、however・therefore・moreover は副詞なので文と文をつなぐときはピリオドやセミコロンで区切る、など。エッセイでよく問われるつなぎのことばの使い分け。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Despite the rain, the event was a success.', ja: '雨にもかかわらず、その行事は成功した。' }],
     questions: [
@@ -7620,7 +6988,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-68',
-    title: '入試の誤文訂正〈68〉（共通テストレベル：仮定法の総まとめ）',
+    title: '入試の誤文訂正〈68〉（仮定法の総まとめ）',
     points: ['仮定法過去（If ＋過去形, would ＋原形）、仮定法過去完了（If ＋had ＋過去分詞, would have ＋過去分詞）、I wish ＋過去形・過去完了、as if ＋過去形、Without ～／But for ～、It is time ＋過去形、If it were not for ～ など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'If I were you, I would accept the offer.', ja: 'もし私があなたなら、その申し出を受けるだろう。' }],
     questions: [
@@ -7638,7 +7006,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-69',
-    title: '入試の誤文訂正〈69〉（TOEFL・IELTS の書き言葉：代名詞の一致）',
+    title: '入試の誤文訂正〈69〉（代名詞の一致）',
     points: ['代名詞は指す名詞の数に合わせる（the company → its・the students → their）、比べるときの that of ～／those of ～（同じ名詞のくり返しをさける）、同じ種類のものは one・その物自体は it、each・every ～ を受ける代名詞など、エッセイでよく問われる代名詞のきまり。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The population of Tokyo is larger than that of Osaka.', ja: '東京の人口は大阪の人口より多い。' }],
     questions: [
@@ -7656,7 +7024,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-70',
-    title: '入試の誤文訂正〈70〉（共通テストレベル：関係詞の総まとめ）',
+    title: '入試の誤文訂正〈70〉（関係詞の総まとめ）',
     points: ['うしろに主語や目的語がぬけていれば関係代名詞（which・who・that）、完全な文なら関係副詞（where・when・why）、先行詞がなければ what、「～の」は whose、前置詞＋which、カンマのあとに that は使えない、など関係詞のまとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' }],
     questions: [
@@ -7674,7 +7042,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-71',
-    title: '入試の誤文訂正〈71〉（共通テストレベル：時制の一致と話法）',
+    title: '入試の誤文訂正〈71〉（時制の一致と話法）',
     points: ['主節が過去なら that 節の動詞も過去にずらす（He said he was busy.）、さらに前のことは過去完了、ただし今も変わらない事実・真理は現在形のまま、間接話法では代名詞・時の語（tomorrow → the next day）も変える、間接疑問は主語＋動詞の語順、命令は tell 人 to ～ など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She said that she was tired.', ja: '彼女はつかれていると言った。' }],
     questions: [
@@ -7692,7 +7060,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-72',
-    title: '入試の誤文訂正〈72〉（TOEFL・IELTS の書き言葉：並列）',
+    title: '入試の誤文訂正〈72〉（並列）',
     points: ['and・or・but や both A and B・not only A but also B・either A or B でつなぐものは、同じ形（名詞なら名詞、動名詞なら動名詞、to 不定詞なら to 不定詞）にそろえる。エッセイでよく問われる並列のきまり。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She likes reading, swimming, and cooking.', ja: '彼女は読書と水泳と料理が好きだ。' }],
     questions: [
@@ -7710,7 +7078,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-73',
-    title: '入試の誤文訂正〈73〉（共通テストレベル：不定詞と動名詞の使い分け）',
+    title: '入試の誤文訂正〈73〉（不定詞と動名詞の使い分け）',
     points: ['enjoy・finish・avoid・mind・give up のあとは動名詞、want・decide・hope・plan・refuse のあとは不定詞。stop ～ing（～するのをやめる）／stop to ～（～するために立ち止まる）、remember ～ing（～したのを覚えている）／remember to ～（わすれずに～する）、forget・try も意味が変わる。前置詞のあと・look forward to のあとは動名詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Remember to lock the door when you leave.', ja: '出かけるときはわすれずにドアのかぎをかけてね。' }],
     questions: [
@@ -7728,7 +7096,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-74',
-    title: '入試の誤文訂正〈74〉（TOEFL・IELTS の書き言葉：語の形）',
+    title: '入試の誤文訂正〈74〉（語の形）',
     points: ['名詞の前は形容詞、動詞や形容詞をくわしくするのは副詞、冠詞や所有格のあとは名詞。economic（経済の）／economical（むだのない）、successful／successfully、importance／important など、エッセイでよく問われる語の形のまちがい。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The government is facing serious economic problems.', ja: '政府は深刻な経済の問題に直面している。' }],
     questions: [
@@ -7746,7 +7114,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-75',
-    title: '入試の誤文訂正〈75〉（共通テストレベル：助動詞＋have ＋過去分詞）',
+    title: '入試の誤文訂正〈75〉（助動詞＋have ＋過去分詞）',
     points: ['過去のことへの推量や後悔は「助動詞＋have ＋過去分詞」。must have ～（～したにちがいない）、can not have ～（～したはずがない）、may have ～（～したかもしれない）、should have ～（～すべきだったのに）、need not have ～（～する必要はなかったのに）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The ground is wet. It must have rained last night.', ja: '地面がぬれている。昨夜雨がふったにちがいない。' }],
     questions: [
@@ -7764,7 +7132,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-76',
-    title: '入試の誤文訂正〈76〉（TOEFL・IELTS の書き言葉：まぎらわしい動詞）',
+    title: '入試の誤文訂正〈76〉（まぎらわしい動詞）',
     points: ['rise（上がる・自動詞）／raise（上げる・他動詞）、lie（横になる：lie-lay-lain）／lay（置く：lay-laid-laid）、borrow（借りる）／lend（貸す）、rob 人 of 物／steal 物、say／tell、remind 人 of ～ など、エッセイでよく問われるまぎらわしい動詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Prices have risen sharply this year.', ja: '今年は物価が急に上がった。' }],
     questions: [
@@ -7781,26 +7149,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-77',
-    title: '入試の誤文訂正〈77〉（共通テストレベル：まぎらわしい前置詞）',
-    points: ['by（～までに：期限）／until（～までずっと：継続）、for（期間の長さ）／during（特定の期間の間）、in（～後に）／within（～以内に）、時刻は at・日付や曜日は on・月や年は in、交通手段の by bus（冠詞なし）など。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'Please hand in the report by Friday.', ja: '金曜日までにレポートを出してください。' }],
-    questions: [
-      { sentence: 'Please hand in the report [until] Friday.', choices: ['by', 'for', 'during', 'since'], answer: 0, why: '「金曜日までに（期限）」は by。until は「～までずっと」。' },
-      { sentence: 'I waited for her [by] six o\'clock, but she never came.', choices: ['until', 'during', 'within', 'for'], answer: 0, why: '「6時までずっと待った（継続）」は until。' },
-      { sentence: 'He stayed in London [during] three weeks.', choices: ['for', 'by', 'since', 'until'], answer: 0, why: '期間の長さ（three weeks）には for。during はあとに特定の期間（the summer など）がくる。' },
-      { sentence: 'I visited my grandparents [for] the summer vacation.', choices: ['during', 'by', 'since', 'until'], answer: 0, why: '特定の期間（the summer vacation）の間は during。' },
-      { sentence: 'The train will arrive [after] ten minutes, so let\'s wait here.', choices: ['in', 'by', 'since', 'during'], answer: 0, why: '「今から10分後に」は in ten minutes。after は過去や基準の時点からのあとに使う。' },
-      { sentence: 'The meeting starts [on] 3 p.m.', choices: ['at', 'in', 'by', 'for'], answer: 0, why: '時刻には at。' },
-      { sentence: 'My birthday is [in] May 5.', choices: ['on', 'at', 'by', 'for'], answer: 0, why: '日付には on。' },
-      { sentence: 'She was born [on] 2010.', choices: ['in', 'at', 'by', 'for'], answer: 0, why: '年には in。' },
-      { sentence: 'I usually go to school [by a bus].', choices: ['by bus', 'on bus', 'with bus', 'by the buses'], answer: 0, why: '交通手段の by には冠詞をつけない：by bus。' },
-      { sentence: 'You must finish the test [in] 30 minutes or less.', choices: ['within', 'until', 'since', 'during'], answer: 0, why: '「30分以内に」は within。or less とあるので期限内を表す within が適切。' },
-    ],
-  },
-  {
     id: 'exam-fix-78',
-    title: '入試の誤文訂正〈78〉（TOEFL・IELTS の書き言葉：倒置）',
+    title: '入試の誤文訂正〈78〉（倒置）',
     points: ['否定語（Never・Rarely・Seldom・Little・Not only・No sooner・Hardly）や Only ＋副詞句が文の前に出ると、うしろは疑問文と同じ語順（助動詞・be 動詞＋主語）になる。So ＋助動詞＋主語「～もそうだ」、Neither ＋助動詞＋主語「～もそうではない」も同じ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。' }],
     questions: [
@@ -7818,7 +7168,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-79',
-    title: '入試の誤文訂正〈79〉（共通テストレベル：使役動詞と知覚動詞）',
+    title: '入試の誤文訂正〈79〉（使役動詞と知覚動詞）',
     points: ['make・let・have 人 ＋動詞の原形（～させる）、get 人 to ～、have 物 ＋過去分詞（～してもらう）、see・hear・watch・feel 人 ＋原形（～するのを見る）／＋～ing（～しているところを見る）、受け身では be made to ～（to が必要）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' }],
     questions: [
@@ -7836,7 +7186,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-80',
-    title: '入試の誤文訂正〈80〉（共通テストレベル：分詞構文）',
+    title: '入試の誤文訂正〈80〉（分詞構文）',
     points: ['分詞構文の主語は主節の主語と同じ。主語が「する」側なら -ing、「される」側なら過去分詞（Seen from ～）、主節より前のことは Having ＋過去分詞、否定は Not ～ing、慣用表現 Judging from ～・Generally speaking など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Seen from the plane, the island looked like a heart.', ja: '飛行機から見ると、その島はハートの形に見えた。' }],
     questions: [
@@ -7854,7 +7204,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-81',
-    title: '入試の誤文訂正〈81〉（TOEFL・IELTS の書き言葉：冠詞 a／the／なし）',
+    title: '入試の誤文訂正〈81〉（冠詞 a／the／なし）',
     points: ['はじめて出る数えられる単数名詞には a／an、話し手と聞き手がどれか分かるものや2回目以降は the、ひとつしかないもの（the sun・the Internet）・最上級・序数には the、数えられない名詞や複数名詞を一般的に言うときは冠詞なし、母音で始まる音の前は an（an hour・a university）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I saw a cat. The cat was very small.', ja: '私はネコを見た。そのネコはとても小さかった。' }],
     questions: [
@@ -7872,7 +7222,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-82',
-    title: '入試の誤文訂正〈82〉（共通テストレベル：強調構文と it の用法）',
+    title: '入試の誤文訂正〈82〉（強調構文と it の用法）',
     points: ['強調構文 It is ～ that …（人なら who も可）、形式主語 It is ～ to …／It is ～ that …、形式目的語 find it ～ to …、It takes 人 時間 to ～、It costs 人 お金 to ～、天気・時間・距離の it など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was Ken that broke the window.', ja: '窓をわったのはケンだった。' }],
     questions: [
@@ -7890,7 +7240,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-83',
-    title: '入試の誤文訂正〈83〉（TOEFL・IELTS の書き言葉：数量の表し方）',
+    title: '入試の誤文訂正〈83〉（数量の表し方）',
     points: ['数えられる名詞には many・few・a number of・fewer、数えられない名詞には much・little・an amount of・less。a few／a little は「少しある」、few／little は「ほとんどない」。large と small は number・amount に使い、many・much とはいっしょにしない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'A large number of students attended the lecture.', ja: '多くの学生がその講義に出席した。' }],
     questions: [
@@ -7908,7 +7258,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-84',
-    title: '入試の誤文訂正〈84〉（共通テストレベル：接続詞の使い分け）',
+    title: '入試の誤文訂正〈84〉（接続詞の使い分け）',
     points: ['unless（～しないかぎり）、as long as（～するかぎり：条件）、in case（～するといけないから）、even if（たとえ～しても）、once（いったん～すると）、by the time（～するまでには）、時や条件を表す節の中では未来のことも現在形にする、など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Take an umbrella in case it rains.', ja: '雨がふるといけないから、かさを持っていきなさい。' }],
     questions: [
@@ -7925,26 +7275,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-85',
-    title: '入試の誤文訂正〈85〉（TOEFL・IELTS の書き言葉：名詞節）',
-    points: ['that 節・whether 節・what 節・疑問詞の節は名詞のかたまりとして主語や目的語になる。名詞節が主語なら動詞は単数、節の中は主語＋動詞の語順、「～かどうか」は whether（主語の位置では if は使わない）、「～すること・もの」は what。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'Whether the plan will succeed is still unclear.', ja: 'その計画が成功するかどうかはまだわからない。' }],
-    questions: [
-      { sentence: '[If] the plan will succeed is still unclear.', choices: ['Whether', 'What', 'That if', 'Which'], answer: 0, why: '主語になる「～かどうか」は Whether。主語の位置に if は使えない。' },
-      { sentence: '[That] he said at the meeting surprised everyone.', choices: ['What', 'Which', 'Whether', 'It'], answer: 0, why: '「彼が言ったこと」は先行詞をふくむ what：What he said。' },
-      { sentence: 'I do not know where [does she live].', choices: ['she lives', 'lives she', 'she does live', 'living she'], answer: 0, why: '疑問詞の名詞節の中は主語＋動詞の語順：where she lives。' },
-      { sentence: 'What the students need [are] more time to practice.', choices: ['is', 'were', 'have', 'being'], answer: 0, why: '名詞節 What the students need が主語なので単数あつかい：is。' },
-      { sentence: 'The problem is [what] we do not have enough money.', choices: ['that', 'which', 'whether to', 'how about'], answer: 0, why: '補語になる完全な文「～ということ」は that 節。what はあとが不完全な文のとき。' },
-      { sentence: 'It is clear [what] the experiment was a success.', choices: ['that', 'which', 'if', 'whose'], answer: 0, why: '形式主語 It のあとの「～ということ」は that 節。' },
-      { sentence: 'Scientists are studying [that] the virus spreads so quickly.', choices: ['why', 'which', 'what', 'whose'], answer: 0, why: '「なぜ～なのか」という疑問詞の名詞節：why the virus spreads。' },
-      { sentence: 'Please tell me [what time does the store open].', choices: ['what time the store opens', 'what time opens the store', 'the store what time opens', 'what does the store open'], answer: 0, why: '疑問詞の名詞節の中は主語＋動詞の語順：what time the store opens。' },
-      { sentence: '[What] people should eat less sugar is widely accepted.', choices: ['That', 'If', 'Whether that', 'Which'], answer: 0, why: '完全な文「人は砂糖をへらすべきだということ」が主語なので That 節。' },
-      { sentence: 'I am not sure [that] I will be able to come tomorrow.', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: '「来られるかどうかわからない」は whether（if でも可）。' },
-    ],
-  },
-  {
     id: 'exam-fix-86',
-    title: '入試の誤文訂正〈86〉（共通テストレベル：同格の that と名詞＋to 不定詞）',
+    title: '入試の誤文訂正〈86〉（同格の that と名詞＋to 不定詞）',
     points: ['the fact・the news・the idea・the belief のあとの同格の that（～という事実・知らせ）は、あとに完全な文が続く（関係代名詞の which は使えない）。decision・plan・ability・chance・way などのあとは to 不定詞で「～する決定・計画」、名詞をくわしくする不定詞は名詞のすぐあと。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The news that the team had won made everyone happy.', ja: 'チームが勝ったという知らせは、みんなを喜ばせた。' }],
     questions: [
@@ -7962,7 +7294,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-87',
-    title: '入試の誤文訂正〈87〉（TOEFL・IELTS の書き言葉：受け身の書き言葉）',
+    title: '入試の誤文訂正〈87〉（受け身の書き言葉）',
     points: ['It is believed／said／thought that ～（～と信じられている）、主語＋ be said to ～（～と言われている）、過去のことは be said to have ＋過去分詞、be expected to ～、be considered ～、be known for ～（～で有名）など、論文やエッセイでよく使う受け身の言い方。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It is believed that the castle was built in the 1500s.', ja: 'その城は1500年代に建てられたと信じられている。' }],
     questions: [
@@ -7980,7 +7312,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-88',
-    title: '入試の誤文訂正〈88〉（共通テストレベル：再帰代名詞と相互代名詞）',
+    title: '入試の誤文訂正〈88〉（再帰代名詞と相互代名詞）',
     points: ['主語と目的語が同じ人なら再帰代名詞（myself・themselves）、「自分で・ひとりで」は by oneself、enjoy oneself（楽しむ）・help oneself to ～（自由に取って食べる）、「おたがい」は each other／one another（each other は前置詞のあとも使う）、hisself・theirselves という形はない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Please help yourself to the cookies.', ja: 'クッキーをご自由にどうぞ。' }],
     questions: [
@@ -7997,26 +7329,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-89',
-    title: '入試の誤文訂正〈89〉（TOEFL・IELTS の書き言葉：比較の書き言葉）',
-    points: ['different from（～とちがう）、the same as（～と同じ）、similar to（～に似ている）、compared with／to（～とくらべると）、in contrast to（～とは対照的に）、superior／inferior to（than ではなく to）、prefer A to B、twice as ～ as、比べるものをそろえる（that of ～）など、エッセイでよく使う比較の言い方。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'The climate of Japan is different from that of Australia.', ja: '日本の気候はオーストラリアの気候とちがう。' }],
-    questions: [
-      { sentence: 'My opinion is different [than] yours.', choices: ['from', 'with', 'to as', 'of'], answer: 0, why: '「～とちがう」は different from。書き言葉では from が標準。' },
-      { sentence: 'His phone is the same [like] mine.', choices: ['as', 'to', 'with', 'than'], answer: 0, why: '「～と同じ」は the same as。' },
-      { sentence: 'This painting is similar [with] the one in the museum.', choices: ['to', 'as', 'from', 'than'], answer: 0, why: '「～に似ている」は similar to。' },
-      { sentence: 'This model is superior [than] the old one in many ways.', choices: ['to', 'from', 'as', 'over than'], answer: 0, why: 'superior／inferior は than ではなく to をとる：superior to。' },
-      { sentence: 'I prefer tea [than] coffee.', choices: ['to', 'from', 'as', 'over to'], answer: 0, why: 'prefer A to B「B より A が好き」。than は使わない。' },
-      { sentence: '[Compare] with last year, sales have increased by 20 percent.', choices: ['Compared', 'Comparing to', 'To compare', 'Comparison'], answer: 0, why: '「～とくらべると」は Compared with ～（過去分詞の分詞構文）。' },
-      { sentence: 'In contrast [with] the city, the countryside is quiet and peaceful.', choices: ['to', 'from', 'than', 'of'], answer: 0, why: '「～とは対照的に」は in contrast to ～。' },
-      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka has', 'it of Osaka'], answer: 0, why: '人口どうしを比べるので that of Osaka。' },
-      { sentence: 'This bridge is [twice longer] than that one.', choices: ['twice as long as', 'two times long as', 'twice long as', 'as twice long as'], answer: 0, why: '倍数は twice as ～ as：twice as long as。' },
-      { sentence: 'Prices in this area are [highest] than in the city center.', choices: ['higher', 'more high', 'the highest', 'high'], answer: 0, why: 'than があるので比較級 higher。' },
-    ],
-  },
-  {
     id: 'exam-fix-90',
-    title: '入試の誤文訂正〈90〉（共通テストレベル：仮定法の発展）',
+    title: '入試の誤文訂正〈90〉（仮定法の発展）',
     points: ['if を省略した倒置（Were I ～＝If I were ～、Had I known ～＝If I had known ～、Should you ～）、If it were not for ～／If it had not been for ～、But for ～、混合仮定法（If I had studied, I would be ～ now）、I would rather you ＋過去形、It is time ＋過去形など。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Had I known the truth, I would have told you.', ja: 'もし本当のことを知っていたら、あなたに話していただろう。' }],
     questions: [
@@ -8034,7 +7348,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-91',
-    title: '入試の誤文訂正〈91〉（TOEFL・IELTS の書き言葉：前置詞のつく動詞）',
+    title: '入試の誤文訂正〈91〉（前置詞のつく動詞）',
     points: ['depend on（～による）、consist of（～からなる）、result in（～という結果になる）／result from（～から生じる）、account for（～を説明する・～をしめる）、contribute to（～に貢献する）、focus on、rely on、belong to など、エッセイでよく使う動詞と前置詞の組み合わせ。逆に discuss・reach・enter・approach は前置詞をつけない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The team consists of five members.', ja: 'そのチームは5人のメンバーからなる。' }],
     questions: [
@@ -8052,7 +7366,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-92',
-    title: '入試の誤文訂正〈92〉（共通テストレベル：不定詞の意味上の主語と完了不定詞）',
+    title: '入試の誤文訂正〈92〉（不定詞の意味上の主語と完了不定詞）',
     points: ['不定詞の意味上の主語は for 人（It is easy for me to ～）、人の性質をほめる・せめるときは of 人（It is kind of you to ～）、too ～ for 人 to …、～ enough for 人 to …。主節より前のことは完了不定詞 to have ＋過去分詞（seem to have ～・be said to have ～）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He seems to have been ill last week.', ja: '彼は先週具合が悪かったようだ。' }],
     questions: [
@@ -8069,26 +7383,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-93',
-    title: '入試の誤文訂正〈93〉（TOEFL・IELTS の書き言葉：まとめ問題①）',
-    points: ['これまでの書き言葉のまちがい（数えられない名詞、主語と動詞の一致、並列、語の形、つなぎのことば、代名詞の一致、前置詞のつく動詞、比較の言い方）をまぜた総まとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'Recent research shows that regular exercise improves memory.', ja: '最近の研究は、定期的な運動が記憶をよくすることを示している。' }],
-    questions: [
-      { sentence: 'Recent [researches show] that regular exercise improves memory.', choices: ['research shows', 'researches shows', 'research show', 'a research shows'], answer: 0, why: 'research は数えられない名詞なので単数あつかい：research shows。' },
-      { sentence: 'The results of the survey [was] surprising to many experts.', choices: ['were', 'is', 'has been', 'being'], answer: 0, why: '主語の中心は results（複数）なので were。' },
-      { sentence: 'The program helps students read faster, think critically, and [writing] clearly.', choices: ['write', 'to writing', 'written', 'writes'], answer: 0, why: 'read・think とそろえて原形 write（並列）。' },
-      { sentence: 'The country is facing serious [economical] problems.', choices: ['economic', 'economy', 'economically', 'economist'], answer: 0, why: '「経済の」は economic。economical は「むだのない」。' },
-      { sentence: '[Despite] the price was high, many people bought the product.', choices: ['Although', 'In spite of', 'Because of', 'However'], answer: 0, why: 'あとが主語＋動詞なので接続詞 Although。despite は前置詞。' },
-      { sentence: 'The company announced [their] new policy yesterday.', choices: ['its', 'it', 'theirs', 'it is'], answer: 0, why: 'the company は単数あつかいなので its。' },
-      { sentence: 'The success of the project depends [of] good teamwork.', choices: ['on', 'in', 'to', 'from'], answer: 0, why: '「～による」は depend on。' },
-      { sentence: 'The population of Tokyo is larger than [Osaka].', choices: ['that of Osaka', 'those of Osaka', 'Osaka is', 'it of Osaka'], answer: 0, why: '人口どうしを比べるので that of Osaka。' },
-      { sentence: 'There [is] several reasons for this change.', choices: ['are', 'was', 'has', 'be'], answer: 0, why: 'there is / are はうしろの名詞に合わせる。several reasons は複数なので are。' },
-      { sentence: 'We [discussed about] the problem for two hours.', choices: ['discussed', 'discussed on', 'discussed of', 'discussed with'], answer: 0, why: 'discuss は前置詞なしで目的語をとる：discussed the problem。' },
-    ],
-  },
-  {
     id: 'exam-fix-94',
-    title: '入試の誤文訂正〈94〉（共通テストレベル：まとめ問題③）',
+    title: '入試の誤文訂正〈94〉（まとめ問題③）',
     points: ['時制（現在完了・過去完了・時制の一致）、関係詞（which・where・whose・what）、分詞（現在分詞・過去分詞・分詞構文）、仮定法をまぜた総まとめ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I have lived in this town since I was a child.', ja: '私は子どものころからこの町に住んでいる。' }],
     questions: [
@@ -8105,26 +7401,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-95',
-    title: '入試の誤文訂正〈95〉（共通テストレベル：まぎらわしい形容詞）',
-    points: ['sensitive（敏感な）／sensible（分別のある）、successful（成功した）／successive（連続した）、economic（経済の）／economical（むだのない）、imaginary（想像上の）／imaginative（想像力ゆたかな）、respectful（敬意をはらう）／respectable（立派な）、considerate（思いやりのある）／considerable（かなりの）、industrial（産業の）／industrious（勤勉な）など、形の似た形容詞。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'It was a sensible decision to leave early.', ja: '早く出発したのは分別のある判断だった。' }],
-    questions: [
-      { sentence: 'It was a [sensitive] decision to leave early because of the storm.', choices: ['sensible', 'sense', 'sensing', 'sensory'], answer: 0, why: '「分別のある・賢明な」判断は sensible。sensitive は「敏感な」。' },
-      { sentence: 'My skin is very [sensible] to sunlight.', choices: ['sensitive', 'sensational', 'senseless', 'sense'], answer: 0, why: '「日光に敏感な」は sensitive to ～。' },
-      { sentence: 'The team won the championship for three [successful] years.', choices: ['successive', 'success', 'succeeding to', 'successfully'], answer: 0, why: '「3年連続で」は three successive years。successful は「成功した」。' },
-      { sentence: 'She is a [successive] businesswoman who runs three companies.', choices: ['successful', 'success', 'succeed', 'successfully'], answer: 0, why: '「成功した実業家」は successful。' },
-      { sentence: 'Dragons are [imaginative] animals that appear in many stories.', choices: ['imaginary', 'imagine', 'imagination', 'imaginably'], answer: 0, why: '「想像上の」動物は imaginary。imaginative は「想像力ゆたかな」。' },
-      { sentence: 'The child drew a very [imaginary] picture of a city in the sky.', choices: ['imaginative', 'imagine', 'imagination of', 'imaginarily'], answer: 0, why: '「想像力ゆたかな」絵は imaginative。' },
-      { sentence: 'It was [considerable] of you to call me when I was sick.', choices: ['considerate', 'consider', 'considering', 'consideration'], answer: 0, why: '「思いやりのある」は considerate。considerable は「かなりの」。' },
-      { sentence: 'The project cost a [considerate] amount of money.', choices: ['considerable', 'consider', 'considering', 'considered of'], answer: 0, why: '「かなりの量の」は considerable。' },
-      { sentence: 'Students should be [respectable] to their teachers.', choices: ['respectful', 'respective', 'respect', 'respecting of'], answer: 0, why: '「～に敬意をはらう」は respectful to ～。respectable は「立派な」。' },
-      { sentence: 'Ants are known as [industrial] insects that work very hard.', choices: ['industrious', 'industry', 'industrially', 'industrialized'], answer: 0, why: '「勤勉な」は industrious。industrial は「産業の」。' },
-    ],
-  },
-  {
     id: 'exam-fix-96',
-    title: '入試の誤文訂正〈96〉（TOEFL・IELTS の書き言葉：まとめ問題⑤）',
+    title: '入試の誤文訂正〈96〉（まとめ問題⑤）',
     points: ['主語と動詞の一致（主語が長いとき・each／the number of／a number of・either A or B）、名詞の数（数えられない名詞 information／equipment／research、one of ＋複数名詞、criteria／phenomena の単数形）、冠詞（the＋最上級・楽器・唯一のもの、a／an の使い分け）をまぜた、論文や説明文でよく見るまちがい。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The number of international students has increased.', ja: '留学生の数は増えている。' }],
     questions: [
@@ -8142,7 +7420,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-97',
-    title: '入試の誤文訂正〈97〉（共通テストレベル：まぎらわしい動詞）',
+    title: '入試の誤文訂正〈97〉（まぎらわしい動詞）',
     points: ['lie（横になる：lie-lay-lain）／lay（横にする：lay-laid-laid）、rise（上がる・自動詞）／raise（上げる・他動詞）、borrow（借りる）／lend（貸す）、rob 人 of 物／steal 物、say／tell、fit／suit など、意味や形の似た動詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He lay on the sofa and fell asleep.', ja: '彼はソファに横になって、ねむってしまった。' }],
     questions: [
@@ -8160,7 +7438,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-98',
-    title: '入試の誤文訂正〈98〉（TOEFL・IELTS の書き言葉：比較）',
+    title: '入試の誤文訂正〈98〉（比較）',
     points: ['比べるものをそろえる（that of／those of）、the 比較級, the 比較級、比較級を強める much／far、as ～ as の形、than のあとの代名詞、superior to（than ではない）など、グラフや表を説明する文章でよく見る比較のまちがい。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The population of Tokyo is larger than that of Osaka.', ja: '東京の人口は大阪の人口より多い。' }],
     questions: [
@@ -8178,7 +7456,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-99',
-    title: '入試の誤文訂正〈99〉（共通テストレベル：まぎらわしい名詞）',
+    title: '入試の誤文訂正〈99〉（まぎらわしい名詞）',
     points: ['price（値段）／cost（費用）／fare（運賃）／fee（料金・謝礼）、customer（店の客）／guest（招待客・宿泊客）／audience（聴衆）／passenger（乗客）、reservation（予約）／appointment（面会の約束）、habit（個人の習慣）／custom（社会の慣習）、scenery（景色・数えられない）／view（ながめ）など、意味の近い名詞の使い分け。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I have an appointment with the dentist at three.', ja: '3時に歯医者の予約がある。' }],
     questions: [
@@ -8196,7 +7474,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-100',
-    title: '入試の誤文訂正〈100〉（京大レベル：長い文の中の一致・挿入・遠い先行詞）',
+    title: '入試の誤文訂正〈100〉（長い文の中の一致・挿入・遠い先行詞）',
     points: ['京大の英文は1文が長く、主語と動詞の間に関係詞節・分詞・挿入句が入る。文の骨組み（主語はどれか・その動詞はどれか・関係詞の先行詞はどれか）を見ぬいてから、一致や形を確かめる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The idea that children learn best when they are free to explore, which many teachers now accept, was once considered radical.', ja: '子どもは自由に探索できるときにいちばんよく学ぶという考えは、今では多くの教師が受け入れているが、かつては過激だと考えられていた。' }],
     questions: [
@@ -8214,7 +7492,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-101',
-    title: '入試の誤文訂正〈101〉（東大レベル：長い文の時制・仮定法・譲歩）',
+    title: '入試の誤文訂正〈101〉（長い文の時制・仮定法・譲歩）',
     points: ['東大の要約・英作文では、長い文の中で時制の一致・仮定法（過去・過去完了・仮定法現在）・譲歩（however／whatever／no matter）を正しく使えるかが問われる。主節と従属節の時の関係を確かめる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'If the government had acted sooner, fewer people would be living in poverty today.', ja: '政府がもっと早く手を打っていたら、今日、貧困の中で暮らす人はもっと少なかっただろう。' }],
     questions: [
@@ -8232,7 +7510,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-102',
-    title: '入試の誤文訂正〈102〉（共通テストレベル：まぎらわしい副詞）',
+    title: '入試の誤文訂正〈102〉（まぎらわしい副詞）',
     points: ['hard（熱心に）／hardly（ほとんど～ない）、late（おそく）／lately（最近）、near（近くに）／nearly（ほとんど・もう少しで）、most（大部分の）／almost（ほとんど・副詞）、high（高く）／highly（大いに）など、-ly がつくと意味が変わる副詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She worked hard, but she could hardly finish the report on time.', ja: '彼女は一生けんめい働いたが、報告書を時間内にほとんど終えられなかった。' }],
     questions: [
@@ -8250,7 +7528,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-103',
-    title: '入試の誤文訂正〈103〉（旧帝大レベル：分詞構文・独立分詞構文）',
+    title: '入試の誤文訂正〈103〉（分詞構文・独立分詞構文）',
     points: ['分詞構文の意味上の主語は、ふつう主節の主語と同じ。ちがうときは独立分詞構文（The weather being fine, ～）にする。主語が「する」側なら現在分詞、「される」側なら過去分詞。前のことは完了形（Having done）。with ＋ O ＋ 分詞 は O と分詞の関係で形を決める。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Written in plain English, the report was easy to understand.', ja: 'わかりやすい英語で書かれていたので、その報告書は理解しやすかった。' }],
     questions: [
@@ -8268,7 +7546,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-104',
-    title: '入試の誤文訂正〈104〉（共通テストレベル：時と場所の前置詞）',
+    title: '入試の誤文訂正〈104〉（時と場所の前置詞）',
     points: ['時：at（時刻）／on（日付・曜日・特定の日の朝）／in（月・年・季節・朝昼晩）。by（～までに・期限）／until（～までずっと・継続）。for（期間の長さ）／during（特定の期間の間）。場所：at（地点）／on（面の上）／in（中・広い場所）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Please finish the report by Friday; I will be here until six.', ja: '金曜日までに報告書を仕上げてください。私は6時までここにいます。' }],
     questions: [
@@ -8286,7 +7564,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-105',
-    title: '入試の誤文訂正〈105〉（国公立レベル：関係詞の発展）',
+    title: '入試の誤文訂正〈105〉（関係詞の発展）',
     points: ['what（～すること・もの）は先行詞をふくむ。whatever は「～するものは何でも」。前置詞＋関係代名詞（in which・to whom）のうしろは完全な文。関係副詞 where／when／why のうしろも完全な文で、which のうしろは名詞が欠けた文。コンマのあとに that は使えない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the house in which the poet spent her last years.', ja: 'これはその詩人が晩年を過ごした家だ。' }],
     questions: [
@@ -8304,7 +7582,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-106',
-    title: '入試の誤文訂正〈106〉（京大レベル：無生物主語・名詞構文）',
+    title: '入試の誤文訂正〈106〉（無生物主語・名詞構文）',
     points: ['京大の英文に多い無生物主語（The storm prevented us from ～／This medicine will make you ～／A short walk brought me to ～）と、動詞を名詞にした名詞構文（his arrival＝he arrived・the discovery of ～）。動詞の語法（prevent A from ～ing・enable A to ～・cost A B・remind A of B）と、名詞のあとの前置詞を確かめる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The heavy snow prevented the train from arriving on time.', ja: '大雪のせいで、電車は時間どおりに着けなかった。' }],
     questions: [
@@ -8322,7 +7600,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-107',
-    title: '入試の誤文訂正〈107〉（東大レベル：要約・英作文の接続語）',
+    title: '入試の誤文訂正〈107〉（要約・英作文の接続語）',
     points: ['要約や英作文で論理をつなぐ語は、うしろが「S＋V」か「名詞」かで使い分ける。although／because／while（接続詞）＋S V、despite／because of／during（前置詞）＋名詞。however・therefore は副詞なので、2つの文をコンマだけでつなげない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Although the plan was expensive, the city decided to carry it out.', ja: 'その計画は費用がかかったが、市は実行することに決めた。' }],
     questions: [
@@ -8340,7 +7618,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-108',
-    title: '入試の誤文訂正〈108〉（旧帝大レベル：倒置・強調構文・形式主語）',
+    title: '入試の誤文訂正〈108〉（倒置・強調構文・形式主語）',
     points: ['否定語（Never・Rarely・Little・Not until・Only when）や So ～／Such が文頭に出ると、うしろは疑問文の語順の倒置。強調構文 It is ～ that … は、It is と that をとっても文が成り立つ。形式主語 It is ～ that／to … では、うしろの節・不定詞が本当の主語。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Never have I seen such a beautiful view.', ja: 'こんなに美しいながめは一度も見たことがない。' }],
     questions: [
@@ -8358,7 +7636,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-109',
-    title: '入試の誤文訂正〈109〉（共通テストレベル：数えられる名詞・数えられない名詞）',
+    title: '入試の誤文訂正〈109〉（数えられる名詞・数えられない名詞）',
     points: ['advice・information・furniture・news・homework・baggage（luggage）・equipment は数えられない名詞で、a をつけず複数形にもしない。数えるときは a piece of ～。many／few は数えられる名詞、much／little は数えられない名詞につく。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She gave me a useful piece of advice.', ja: '彼女は私に役に立つ助言を1つくれた。' }],
     questions: [
@@ -8376,7 +7654,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-110',
-    title: '入試の誤文訂正〈110〉（京大レベル：省略と代用）',
+    title: '入試の誤文訂正〈110〉（省略と代用）',
     points: ['英語はくり返しをきらい、前に出た語句を省略したり代わりの語で受けたりする。代不定詞 to（want to のあとの動詞を省く）、I think so／I hope not、do so（前の動詞句の代わり）、one（同じ種類の不特定の1つ）と that（the ＋名詞のくり返し）。京大の和訳では、省略された部分をおぎなって訳す。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I wanted to join the team, but my parents did not allow me to.', ja: '私はそのチームに入りたかったが、両親は（入ることを）ゆるしてくれなかった。' }],
     questions: [
@@ -8394,7 +7672,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-111',
-    title: '入試の誤文訂正〈111〉（共通テストレベル：使役動詞・知覚動詞）',
+    title: '入試の誤文訂正〈111〉（使役動詞・知覚動詞）',
     points: ['使役動詞 make／let／have ＋ O ＋ 原形（get は get O to ～）。O が「される」側なら have／get ＋ O ＋ 過去分詞。知覚動詞 see／hear／watch／feel ＋ O ＋ 原形（全部）／～ing（している途中）／過去分詞（される）。make の受け身は be made to ～。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'My mother made me clean my room before dinner.', ja: '母は夕食の前に私に部屋をそうじさせた。' }],
     questions: [
@@ -8412,7 +7690,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-112',
-    title: '入試の誤文訂正〈112〉（東大レベル：英作文でまちがえやすい語法）',
+    title: '入試の誤文訂正〈112〉（英作文でまちがえやすい語法）',
     points: ['東大の英作文で減点されやすい語法。suggest／recommend は人を目的語にとらず、suggest that S (should) 原形 か suggest ～ing。explain は explain A to 人。hope は hope to ～／hope that ～（hope 人 to は不可）、wish は仮定法。lend は人に貸す、borrow は借りる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The doctor suggested that I get more sleep.', ja: '医者は私にもっと眠るようすすめた。' }],
     questions: [
@@ -8429,26 +7707,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-113',
-    title: '入試の誤文訂正〈113〉（国公立レベル：不定詞と動名詞の使い分け）',
-    points: ['stop ～ing（～するのをやめる）／stop to ～（～するために立ち止まる）、remember ～ing（～したのをおぼえている）／remember to ～（忘れずに～する）、forget ～ing／forget to ～、try ～ing（ためしに～する）／try to ～（～しようと努める）、regret ～ing（～したことを後悔する）／regret to ～（残念ながら～する）。enjoy・finish・mind・avoid は動名詞、decide・hope・plan・refuse は不定詞。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'Remember to lock the door when you leave.', ja: '出かけるときは忘れずにドアのかぎをかけてね。' }],
-    questions: [
-      { sentence: 'My father stopped [to smoke] ten years ago and has felt much healthier since then.', choices: ['smoking', 'smoke', 'to smoking', 'smoked'], answer: 0, why: '「たばこをやめた」は stop ～ing。stop to smoke だと「たばこを吸うために立ち止まる」。' },
-      { sentence: 'Please remember [sending] this letter before the post office closes.', choices: ['to send', 'send', 'sent', 'having sent'], answer: 0, why: '「忘れずに～する（これからのこと）」は remember to ～。' },
-      { sentence: 'I clearly remember [to meet] her at the station years ago.', choices: ['meeting', 'meet', 'to have meet', 'met'], answer: 0, why: '「～したのをおぼえている（過去のこと）」は remember ～ing。' },
-      { sentence: 'I will never forget [to see] the beautiful view from the top of the mountain.', choices: ['seeing', 'see', 'to seeing', 'seen'], answer: 0, why: '「見たことを忘れない（過去）」は forget ～ing。' },
-      { sentence: 'Do not forget [turning off] the lights when you leave the room.', choices: ['to turn off', 'turn off', 'turned off', 'to turning off'], answer: 0, why: '「忘れずに消す（これから）」は forget to ～ の否定。' },
-      { sentence: 'If the door will not open, try [to push] it a little harder; it sometimes sticks.', choices: ['pushing', 'push', 'pushed', 'to pushing'], answer: 0, why: '「ためしに押してみる」は try ～ing。try to ～ は「～しようと努める」。' },
-      { sentence: 'I regret [to tell] him the secret last week; now everyone knows it.', choices: ['telling', 'tell', 'to have tell', 'told'], answer: 0, why: '「（過去に）言ったことを後悔している」は regret ～ing。regret to ～ は「残念ながら～する」。' },
-      { sentence: 'We enjoyed [to talk] with the students from Australia.', choices: ['talking', 'talk', 'to talking', 'talked'], answer: 0, why: 'enjoy は動名詞を目的語にとる。' },
-      { sentence: 'She decided [studying] medicine at university.', choices: ['to study', 'study', 'studied', 'to studying'], answer: 0, why: 'decide は不定詞を目的語にとる。' },
-      { sentence: 'Would you mind [to open] the window? It is very hot in here.', choices: ['opening', 'open', 'to opening', 'opened'], answer: 0, why: 'mind は動名詞を目的語にとる。' },
-    ],
-  },
-  {
     id: 'exam-fix-114',
-    title: '入試の誤文訂正〈114〉（旧帝大レベル：仮定法の発展）',
+    title: '入試の誤文訂正〈114〉（仮定法の発展）',
     points: ['If it were not for ～（今～がなければ）／If it had not been for ～（あのとき～がなかったら）、But for ～／Without ～、Otherwise（そうでなければ）、Suppose（Supposing）S V（もし～なら）、It is time S 過去形、If only S 過去形（～でさえあればなあ）、as if。帰結の形（would ＋原形／would have ＋過去分詞）を時に合わせる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'If it were not for water, no living thing could survive.', ja: 'もし水がなければ、どんな生き物も生きられないだろう。' }],
     questions: [
@@ -8466,7 +7726,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-115',
-    title: '入試の誤文訂正〈115〉（共通テストレベル：比較の発展）',
+    title: '入試の誤文訂正〈115〉（比較の発展）',
     points: ['as ～ as possible（できるだけ～）、the 最上級 ＋ of／in、比較級 than any other ＋単数名詞、No other ＋単数名詞 ～ 比較級 than、倍数 ＋ as ～ as、much ＋比較級、the 比較級 of the two（2つのうちの～なほう）、prefer A to B。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Mt. Fuji is higher than any other mountain in Japan.', ja: '富士山は日本のほかのどの山よりも高い。' }],
     questions: [
@@ -8484,7 +7744,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-116',
-    title: '入試の誤文訂正〈116〉（京大レベル：what の慣用表現）',
+    title: '入試の誤文訂正〈116〉（what の慣用表現）',
     points: ['京大の和訳でよく出る what の慣用表現。what is called／what we call（いわゆる）、what S is（今の S）／what S was（昔の S）、A is to B what C is to D（A と B の関係は C と D の関係と同じ）、what little ＋名詞（わずかながらすべての）、what is more（さらに）、what は先行詞をふくむので、前に名詞を置かない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He is not what he was ten years ago.', ja: '彼は10年前の彼ではない。' }],
     questions: [
@@ -8502,7 +7762,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-117',
-    title: '入試の誤文訂正〈117〉（共通テストレベル：時制 現在完了と過去）',
+    title: '入試の誤文訂正〈117〉（時制 現在完了と過去）',
     points: ['yesterday・last ～・～ ago・When ～? などはっきり過去を表す語とは現在完了を使わず過去形。since ～（～以来）・for ～（～の間）・already・yet・ever・never は現在完了と相性がよい。時・条件の副詞節（when・if・until・as soon as）の中では、未来のことも現在形で表す。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I have lived in this town since I was ten.', ja: '私は10歳のときからこの町に住んでいる。' }],
     questions: [
@@ -8520,7 +7780,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-118',
-    title: '入試の誤文訂正〈118〉（東大レベル：英作文の冠詞 a／the／無冠詞・総称の言い方）',
+    title: '入試の誤文訂正〈118〉（冠詞 a／the／無冠詞・総称の言い方）',
     points: ['自由英作文・和文英訳で減点されやすいのが冠詞。数えられる名詞の単数形は a／the などがないと使えない。「～というもの（総称）」は無冠詞の複数形（Dogs are ～）が最もふつう。数えられない名詞（information・advice・furniture・evidence など）には a をつけず、複数形にもしない。話の中ですでに出たもの・1つに決まるもの（the sun・the world・the first ～・最上級）には the。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Smartphones have changed the way people communicate.', ja: 'スマートフォンは人々の意思疎通のしかたを変えた。' }],
     questions: [
@@ -8538,7 +7798,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-119',
-    title: '入試の誤文訂正〈119〉（旧帝大レベル：比較の慣用表現）',
+    title: '入試の誤文訂正〈119〉（比較の慣用表現）',
     points: ['no more than ～＝「たった～（only）」、not more than ～＝「多くても～（at most）」、no less than ～＝「～も（as many/much as）」、not less than ～＝「少なくとも～（at least）」。「～すればするほど…」は The＋比較級 ～, the＋比較級 …（両方に the）。比較級を強めるのは much・far・even（very は使えない）。「2つのうちで～なほう」は the＋比較級 of the two。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、うまくなる。' }],
     questions: [
@@ -8556,7 +7816,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-120',
-    title: '入試の誤文訂正〈120〉（国公立レベル：関係詞 what／which／that・前置詞＋関係代名詞）',
+    title: '入試の誤文訂正〈120〉（関係詞 what／which／that・前置詞＋関係代名詞）',
     points: ['what は先行詞をふくむ関係代名詞（＝the thing(s) which）なので、前に名詞（先行詞）があるときは使えない。前置詞＋関係代名詞は whom／which を使い、that や who は前置詞のあとに置けない。コンマのあと（非制限用法）に that は使えない。関係代名詞のあとは、名詞が1つ欠けた文になる（欠けていなければ関係副詞 where／when や前置詞＋which）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the house in which my grandfather was born.', ja: 'これは祖父が生まれた家だ。' }],
     questions: [
@@ -8574,7 +7834,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-121',
-    title: '入試の誤文訂正〈121〉（京大レベル：分詞構文 意味上の主語・having＋過去分詞・with＋名詞＋分詞）',
+    title: '入試の誤文訂正〈121〉（分詞構文 意味上の主語・having＋過去分詞・with＋名詞＋分詞）',
     points: ['分詞構文の意味上の主語は、ふつう主節の主語と同じ。ちがうときは分詞の前に主語を置く（独立分詞構文：The weather being fine, ～）。主語が「～される」側なら過去分詞（Seen from ～）。主節より前のことは Having＋過去分詞。否定は Not を分詞の前に置く。with＋名詞＋分詞は、名詞が「～している」なら現在分詞、「～されている」なら過去分詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Having finished his homework, he went out to play.', ja: '宿題を終えてから、彼は遊びに出かけた。' }],
     questions: [
@@ -8592,7 +7852,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-122',
-    title: '入試の誤文訂正〈122〉（東大レベル：仮定法 if の省略・without／but for・I wish・It is time）',
+    title: '入試の誤文訂正〈122〉（仮定法 if の省略・without／but for・I wish・It is time）',
     points: ['現在の事実の反対は If S＋過去形, S would＋原形。過去の事実の反対は If S had＋過去分詞, S would have＋過去分詞。if を省略すると倒置（Were I ～／Had S＋過去分詞 ～／Should S ～）。without ～／but for ～ は「～がなければ（なかったら）」。I wish のあとは過去形（今）・had＋過去分詞（過去）。It is (high) time S＋過去形 は「もう～してよいころだ」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Had I known the truth, I would have told you.', ja: 'もし本当のことを知っていたら、あなたに話していただろう。' }],
     questions: [
@@ -8610,7 +7870,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-123',
-    title: '入試の誤文訂正〈123〉（旧帝大レベル：主語と動詞の一致）',
+    title: '入試の誤文訂正〈123〉（主語と動詞の一致）',
     points: ['the number of ～（～の数）は単数あつかい、a number of ～（たくさんの～）は複数あつかい。each・every・either・neither（単独）は単数。either A or B・neither A nor B・not only A but also B は動詞に近い B に合わせる。A as well as B は A に合わせる。主語と動詞のあいだに長い修飾語（前置詞句・関係詞節）があっても、動詞は本当の主語に合わせる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The number of students who study abroad is increasing.', ja: '留学する学生の数はふえている。' }],
     questions: [
@@ -8628,7 +7888,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-124',
-    title: '入試の誤文訂正〈124〉（京大レベル：強調構文と倒置）',
+    title: '入試の誤文訂正〈124〉（強調構文と倒置）',
     points: ['強調構文は It is ～ that …（人なら who も可）。否定の語（Never・Rarely・Little・Not until ～・Only then など）が文頭にくると、疑問文と同じ語順の倒置（助動詞＋S＋動詞）になる。Not until A did S ～（A してはじめて～した）。So＋形容詞 is S that ～、Hardly had S＋過去分詞 when ～ もよく出る。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。' }],
     questions: [
@@ -8646,7 +7906,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-125',
-    title: '入試の誤文訂正〈125〉（国公立レベル：不定詞と動名詞）',
+    title: '入試の誤文訂正〈125〉（不定詞と動名詞）',
     points: ['remember／forget＋to do は「（これから）～することを覚えている／忘れる」、＋-ing は「（すでに）～したことを覚えている／忘れる」。stop＋-ing は「～するのをやめる」、stop＋to do は「～するために立ち止まる」。enjoy・finish・mind・avoid・give up などのあとは動名詞、want・hope・decide・plan などのあとは不定詞。look forward to・be used to・object to の to は前置詞なので後ろは -ing。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I look forward to seeing you again.', ja: 'またお会いできるのを楽しみにしています。' }],
     questions: [
@@ -8664,7 +7924,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-126',
-    title: '入試の誤文訂正〈126〉（東大レベル：英作文の語法）',
+    title: '入試の誤文訂正〈126〉（語法）',
     points: ['自由英作文・和文英訳で多いまちがい。discuss・mention・marry・enter・approach・resemble・reach は他動詞なので前置詞をつけない（discuss about は誤り）。suggest・propose・insist・demand・recommend＋that S（should）＋原形。explain は explain＋もの＋to 人（explain me は誤り）。suggest も suggest to 人 that ～ の形で、suggest 人 to do は誤り。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'We discussed the problem for an hour.', ja: '私たちは1時間その問題について話し合った。' }],
     questions: [
@@ -8682,7 +7942,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-127',
-    title: '入試の誤文訂正〈127〉（旧帝大レベル：数量の言い方）',
+    title: '入試の誤文訂正〈127〉（数量の言い方）',
     points: ['many・a few・few・a number of は数えられる名詞（複数形）に、much・a little・little・an amount of は数えられない名詞に使う。a lot of・some・any・plenty of はどちらにも使える。few／little は「ほとんどない」、a few／a little は「少しある」。homework・baggage・equipment・scenery・money は数えられない名詞。「たくさんの人」は many people（peoples は「民族」）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I have a little money, so I can buy lunch.', ja: '少しお金があるので、昼食を買える。' }],
     questions: [
@@ -8700,7 +7960,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-128',
-    title: '入試の誤文訂正〈128〉（京大レベル：時制の一致と話法）',
+    title: '入試の誤文訂正〈128〉（時制の一致と話法）',
     points: ['主節が過去形なら、that 節の動詞もふつう過去形（同じとき）・過去完了（それより前）・would（それよりあと）にそろえる。ただし不変の真理や今も続く習慣は現在形のまま。間接話法の疑問文は ask if／whether S＋V、ask 疑問詞＋S＋V（語順はふつうの文）。命令は tell 人 to do、依頼は ask 人 to do。say は say to 人、tell は tell 人（said me は誤り）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She told me that she had lost her key.', ja: '彼女は鍵をなくしたと私に言った。' }],
     questions: [
@@ -8718,7 +7978,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-129',
-    title: '入試の誤文訂正〈129〉（国公立レベル：前置詞）',
+    title: '入試の誤文訂正〈129〉（前置詞）',
     points: ['時刻は at、曜日・日付は on、月・年・季節は in（in the morning でも on Sunday morning）。by は「～までに（期限）」、until は「～まで（ずっと）」。for は「（期間の長さ）～のあいだ」、during は「（特定の期間）の間に」。in ～ は「（今から）～後に」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Please finish the report by Friday.', ja: '金曜日までにレポートを仕上げてください。' }],
     questions: [
@@ -8735,26 +7995,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-130',
-    title: '入試の誤文訂正〈130〉（東大レベル：まぎらわしい動詞）',
-    points: ['make は「作る・生み出す」（make a mistake／make a decision／make progress／make an effort）、do は「行う・こなす」（do homework／do the dishes／do research／do your best）。say は言葉そのもの、tell は 人＋内容（tell a lie／tell the truth）、talk は会話（talk to 人／talk about）、speak は言語・話す行為（speak English）。see は自然に目に入る、look at は意識して見る、watch は動くものをじっと見る。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'I made a mistake, so I did the exercise again.', ja: 'まちがえたので、その練習問題をやり直した。' }],
-    questions: [
-      { sentence: 'I [did] a big mistake on the test yesterday.', choices: ['made', 'took', 'got', 'had'], answer: 0, why: 'make a mistake（まちがえる）。' },
-      { sentence: 'Have you [made] your homework yet?', choices: ['done', 'taken', 'got', 'had'], answer: 0, why: 'do your homework（宿題をする）。' },
-      { sentence: 'We need to [do] a decision by tomorrow.', choices: ['make', 'take on', 'get', 'have on'], answer: 0, why: 'make a decision（決定する）。' },
-      { sentence: 'Scientists are [making] research on this disease.', choices: ['doing', 'taking', 'getting', 'having'], answer: 0, why: 'do research（研究する）。' },
-      { sentence: 'He [said] me that he was leaving.', choices: ['told', 'spoke', 'talked', 'said to'], answer: 0, why: '人を目的語にとるのは tell。told me that ～。（said to me that ～ も可だが選択肢 said to は後ろに me が必要なので不可）' },
-      { sentence: 'She always [says] the truth.', choices: ['tells', 'speaks', 'talks', 'says to'], answer: 0, why: 'tell the truth（本当のことを言う）。' },
-      { sentence: 'Can you [talk] Spanish?', choices: ['speak', 'tell', 'say', 'talk in'], answer: 0, why: '言語を話すのは speak。' },
-      { sentence: 'I want to [speak] with you about the plan.', choices: ['talk', 'say', 'tell', 'speak to'], answer: 0, why: '会話として話し合うのは talk with（to）you about ～。' },
-      { sentence: 'We [saw] a soccer game on TV last night.', choices: ['watched', 'looked', 'looked at', 'seen'], answer: 0, why: 'テレビで動くものをじっと見るのは watch。' },
-      { sentence: '[Watch] this picture. Is it beautiful?', choices: ['Look at', 'See at', 'Watch at', 'Look'], answer: 0, why: '止まっているものを意識して見るのは look at。' },
-    ],
-  },
-  {
     id: 'exam-fix-131',
-    title: '入試の誤文訂正〈131〉（旧帝大レベル：代名詞）',
+    title: '入試の誤文訂正〈131〉（代名詞）',
     points: ['one は「同じ種類の別のもの（a＋名詞）」、it は「まさにそのもの（the＋名詞）」。比べる名詞のくり返しをさけるときは、単数なら that of ～、複数なら those of ～。each other は「おたがい」で副詞ではないので前置詞が必要なことがある（talk to each other）。主語と同じものを目的語にするときは再帰代名詞（-self）。「2つのうち一方は one、もう一方は the other」「3つ以上の残り全部は the others」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I lost my umbrella, so I bought a new one.', ja: '傘をなくしたので、新しいのを買った。' }],
     questions: [
@@ -8772,7 +8014,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-132',
-    title: '入試の誤文訂正〈132〉（京大レベル：接続詞）',
+    title: '入試の誤文訂正〈132〉（接続詞）',
     points: ['unless は「～しない限り（＝if not）」なので、さらに not をつけない。in case は「～するといけないから（念のため）」、as long as は「～する限り（条件）」、as far as は「～する範囲では」。even if は「たとえ～でも（仮定）」、even though は「～なのに（事実）」。whether A or B は「A であろうと B であろうと」。because は理由の節、because of は名詞の前。although と but を同じ文で両方使わない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Take an umbrella in case it rains.', ja: '雨が降るといけないから、傘を持っていきなさい。' }],
     questions: [
@@ -8789,44 +8031,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-133',
-    title: '入試の誤文訂正〈133〉（国公立レベル：受動態と by 以外の前置詞）',
-    points: ['be made of ～ は「（材料が見てわかる）～でできている」、be made from ～ は「（原料が変化して）～から作られる」。be known to ～ は「～に知られている」、be known for ～ は「～で有名だ」、be known as ～ は「～として知られている」。be covered with・be filled with・be interested in・be surprised at・be pleased with など、by 以外の前置詞をとる受動態に注意。助動詞の受動態は 助動詞＋be＋過去分詞。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'This desk is made of wood, but paper is made from wood.', ja: 'この机は木でできているが、紙は木から作られる。' }],
-    questions: [
-      { sentence: 'This chair is made [from] wood.', choices: ['of', 'by', 'in', 'with'], answer: 0, why: '見て材料（木）がわかるので be made of。' },
-      { sentence: 'Cheese is made [of] milk.', choices: ['from', 'by', 'into', 'with'], answer: 0, why: '原料（牛乳）が変化しているので be made from。' },
-      { sentence: 'Kyoto is known [by] its old temples.', choices: ['for', 'to', 'as', 'with'], answer: 0, why: '「～で有名だ」は be known for。' },
-      { sentence: 'His name is known [for] everyone in the town.', choices: ['to', 'by', 'as', 'of'], answer: 0, why: '「～に知られている」は be known to。' },
-      { sentence: 'The mountain was covered [by] snow.', choices: ['with', 'of', 'at', 'for'], answer: 0, why: 'be covered with（～でおおわれている）。' },
-      { sentence: 'I was surprised [of] the news.', choices: ['at', 'with', 'for', 'to'], answer: 0, why: 'be surprised at（～におどろく）。' },
-      { sentence: 'She is interested [about] Japanese history.', choices: ['in', 'at', 'for', 'with'], answer: 0, why: 'be interested in（～に興味がある）。' },
-      { sentence: 'The box was filled [of] old letters.', choices: ['with', 'by', 'at', 'in'], answer: 0, why: 'be filled with（～でいっぱいだ）。' },
-      { sentence: 'This work must [finish] by tomorrow.', choices: ['be finished', 'finished', 'be finishing', 'have finish'], answer: 0, why: '仕事は「終えられる」側なので 助動詞＋be＋過去分詞。must be finished。' },
-      { sentence: 'The new bridge [is building] now.', choices: ['is being built', 'is built', 'has building', 'was build'], answer: 0, why: '「今建設中である」は進行形の受動態 is being built。' },
-    ],
-  },
-  {
-    id: 'exam-fix-134',
-    title: '入試の誤文訂正〈134〉（東大レベル：形容詞と副詞）',
-    points: ['hard（熱心に）と hardly（ほとんど～ない）、late（おそく）と lately（最近）、near（近くに）と nearly（ほとんど）は意味がまったくちがう。動詞をくわしくするのは副詞（speak clearly）、be動詞や look・sound・feel・taste・smell のあとは形容詞（look happy）。friendly・lovely・lonely は -ly で終わるが形容詞。enough は形容詞・副詞のあとに置く（old enough）。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'He worked hard, but he could hardly finish the job.', ja: '彼は熱心に働いたが、その仕事をほとんど終えられなかった。' }],
-    questions: [
-      { sentence: 'She studied [hardly] for the exam, so she passed easily.', choices: ['hard', 'hardness', 'more hardly', 'harder than'], answer: 0, why: '「熱心に勉強した」は study hard。hardly は「ほとんど～ない」。' },
-      { sentence: 'I could [hard] hear what he was saying because of the noise.', choices: ['hardly', 'hardest', 'harder', 'hard to'], answer: 0, why: '「ほとんど聞こえなかった」は hardly。' },
-      { sentence: 'Have you seen any good movies [late]?', choices: ['lately', 'later', 'latest', 'lateness'], answer: 0, why: '「最近」は lately（現在完了とよく使う）。' },
-      { sentence: 'It is [near] midnight, so we should go home.', choices: ['nearly', 'nearer', 'nearest', 'nearby to'], answer: 0, why: '「ほとんど真夜中（もうすぐ真夜中）」は nearly。near は「近くに」。' },
-      { sentence: 'Please speak more [clear] so that everyone can hear you.', choices: ['clearly', 'clearness', 'clearer than', 'clears'], answer: 0, why: '動詞 speak をくわしくするのは副詞。more clearly。' },
-      { sentence: 'The soup tastes [well]. Who made it?', choices: ['good', 'goodly', 'better than', 'goodness'], answer: 0, why: 'taste のあとは形容詞。tastes good。' },
-      { sentence: 'You look [happily] today. Did something good happen?', choices: ['happy', 'happiness', 'more happily', 'happier than'], answer: 0, why: 'look（～に見える）のあとは形容詞。look happy。' },
-      { sentence: 'He is [enough old] to drive a car.', choices: ['old enough', 'enough older', 'too old enough', 'oldly enough'], answer: 0, why: 'enough は形容詞のあとに置く。old enough。' },
-      { sentence: 'The staff at the hotel were very [friendlily].', choices: ['friendly', 'friend', 'friendship', 'friendliness'], answer: 0, why: 'friendly は -ly で終わる形容詞。were very friendly。' },
-      { sentence: 'The train arrived [lately] because of the snow.', choices: ['late', 'later than', 'latest', 'lateness'], answer: 0, why: '「おくれて着いた」は late（副詞）。lately は「最近」。' },
-    ],
-  },
-  {
     id: 'exam-fix-135',
-    title: '入試の誤文訂正〈135〉（旧帝大レベル：使役動詞と知覚動詞）',
+    title: '入試の誤文訂正〈135〉（使役動詞と知覚動詞）',
     points: ['使役の make／let／have は 目的語＋動詞の原形（make him wait）。get は get 人 to do。受け身にすると make は be made to do（to が必要）。have／get＋もの＋過去分詞は「～してもらう・～される」（have my hair cut）。知覚動詞 see・hear・watch・feel は 目的語＋原形（全部を見る）か -ing（～しているところを見る）。help は help 人 (to) do。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'My mother made me clean my room, and I had my bike repaired.', ja: '母は私に部屋をそうじさせ、私は自転車を修理してもらった。' }],
     questions: [
@@ -8844,7 +8050,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-136',
-    title: '入試の誤文訂正〈136〉（京大レベル：無生物主語の構文）',
+    title: '入試の誤文訂正〈136〉（無生物主語の構文）',
     points: ['英語では「もの・こと」を主語にした文がよく使われる。make it possible for 人 to do（～が…するのを可能にする）、prevent／keep／stop 人 from -ing（～が…するのをさまたげる）、remind 人 of ～（～に…を思い出させる）、enable 人 to do、cause 人 to do、allow 人 to do、take 人 to 場所（～を…へ連れていく）。前置詞・不定詞の形をまちがえやすい。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The heavy rain prevented us from going out.', ja: '大雨のせいで、私たちは外出できなかった。' }],
     questions: [
@@ -8862,7 +8068,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-137',
-    title: '入試の誤文訂正〈137〉（国公立レベル：関係副詞）',
+    title: '入試の誤文訂正〈137〉（関係副詞）',
     points: ['関係副詞 where（場所）・when（時）・why（理由）・how（方法）のあとは、名詞が欠けていない完全な文がくる。前置詞＋which に言いかえられる（where＝in which）。how と the way はいっしょに使わない（the way I did it か how I did it）。先行詞が場所でも、あとの文に目的語が欠けていれば関係代名詞 which／that を使う。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the town where I was born.', ja: 'ここは私が生まれた町だ。' }],
     questions: [
@@ -8880,7 +8086,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-138',
-    title: '入試の誤文訂正〈138〉（東大レベル：英作文の数と時の表現）',
+    title: '入試の誤文訂正〈138〉（数と時の表現）',
     points: ['for the first time は「（生まれて）初めて」、at first は「最初のうちは（あとで変わる）」。ago は「今から～前」で過去形といっしょに使い、過去のある時から「～前」は before（had＋過去分詞と使うことが多い）。last は「最後の・この前の」、latest は「最新の」。期間は for ～、時点からは since ～。「～するのは初めてだ」は the first time＋主語＋完了形。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'At first I did not like natto, but now I love it.', ja: '最初は納豆が好きではなかったが、今は大好きだ。' }],
     questions: [
@@ -8898,7 +8104,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-139',
-    title: '入試の誤文訂正〈139〉（国公立レベル：動名詞を目的語にとる動詞）',
+    title: '入試の誤文訂正〈139〉（動名詞を目的語にとる動詞）',
     points: ['enjoy・avoid・mind・finish・give up・stop・practice・consider・suggest・put off などは、目的語に to 不定詞ではなく動名詞（-ing）をとる。Would you mind -ing? は「～していただけますか」。stop to do は「～するために立ち止まる」で、stop -ing「～するのをやめる」と意味がちがう。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'We enjoyed swimming in the lake.', ja: '私たちは湖で泳ぐのを楽しんだ。' }],
     questions: [
@@ -8916,7 +8122,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-140',
-    title: '入試の誤文訂正〈140〉（京大レベル：名詞構文）',
+    title: '入試の誤文訂正〈140〉（名詞構文）',
     points: ['動詞＋名詞のセット（名詞構文）は、組み合わせる動詞が決まっている。have／take a look（見る）・make a decision（決める）・make a mistake（まちがえる）・pay attention to（注意をはらう、attention は数えられない）・take a walk（散歩する）・take a breath（息をする）・have a dream（夢を見る）・give 人 advice（助言する）・ask 人 a question（質問する）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'We have to make a decision by Friday.', ja: '金曜日までに決めなければならない。' }],
     questions: [
@@ -8934,7 +8140,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-141',
-    title: '入試の誤文訂正〈141〉（東大レベル：英作文の数えられない名詞）',
+    title: '入試の誤文訂正〈141〉（数えられない名詞）',
     points: ['advice・information・furniture・homework・luggage（baggage）・progress・news・weather・traffic・paper（紙）は数えられない名詞。a／an や複数形の -s をつけず、many ではなく much／a lot of を使う。数えるときは a piece of advice・a sheet of paper のように言う。news は単数あつかい（The news is ～）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She gave me a lot of useful advice.', ja: '彼女は私にたくさんの役に立つ助言をくれた。' }],
     questions: [
@@ -8952,7 +8158,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-142',
-    title: '入試の誤文訂正〈142〉（国公立レベル：再帰代名詞と熟語）',
+    title: '入試の誤文訂正〈142〉（再帰代名詞と熟語）',
     points: ['主語と目的語が同じ人・ものなら再帰代名詞（myself・yourself／yourselves・himself・herself・itself・ourselves・themselves）を使う。enjoy oneself（楽しむ）・help oneself to（自由に取って食べる）・by oneself（ひとりで）・hurt oneself（けがをする）・teach oneself（独学する）・behave oneself（行儀よくする）・talk to oneself（ひとりごとを言う）。複数の相手には yourselves。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'We enjoyed ourselves at the party.', ja: '私たちはパーティーで楽しんだ。' }],
     questions: [
@@ -8970,7 +8176,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-143',
-    title: '入試の誤文訂正〈143〉（京大レベル：使役 have／get と受け身）',
+    title: '入試の誤文訂正〈143〉（使役 have／get と受け身）',
     points: ['have／get＋物＋過去分詞は「物を～してもらう・～される」（have my hair cut・get my watch repaired・have my bag stolen）。have＋人＋原形、get＋人＋to 不定詞は「人に～してもらう」。もの が主語で「～される」は be＋過去分詞（The house was built）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I had my hair cut yesterday.', ja: '私はきのう髪を切ってもらった。' }],
     questions: [
@@ -8988,7 +8194,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-144',
-    title: '入試の誤文訂正〈144〉（東大レベル：英作文の前置詞 in／on／at）',
+    title: '入試の誤文訂正〈144〉（前置詞 in／on／at）',
     points: ['時：at は時刻・夜（at 3 p.m.・at night）、on は日付・曜日・特定の日（on May 5・on Monday morning・on Christmas Day）、in は月・年・季節・午前／午後（in 2008・in the morning）。場所：at は地点・番地（at the bus stop・at 12 Green Street）、on は面（on the wall）、in は広い場所・都市（arrive in Tokyo）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I met her on Monday morning at the station.', ja: '私は月曜日の朝、駅で彼女に会った。' }],
     questions: [
@@ -9006,7 +8212,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-145',
-    title: '入試の誤文訂正〈145〉（国公立レベル：比較級の強めと the＋比較級）',
+    title: '入試の誤文訂正〈145〉（比較級の強めと the＋比較級）',
     points: ['比較級を強めるのは much・far・even・a lot（very は使えない）。比較級は -er か more のどちらか一方（more easier・more better は×）。「～すればするほど…」は the＋比較級 ～, the＋比較級 …（The more you practice, the better you become）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、上手になる。' }],
     questions: [
@@ -9024,7 +8230,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-146',
-    title: '入試の誤文訂正〈146〉（京大レベル：感情を表す分詞形容詞）',
+    title: '入試の誤文訂正〈146〉（感情を表す分詞形容詞）',
     points: ['感情を表す動詞（interest・surprise・bore・excite・disappoint・tire・amaze・shock・confuse）から作る形容詞は、「人の気持ちを～させる（もの・こと）」なら -ing（interesting・boring）、「人が～させられて（感じて）いる」なら -ed（interested・bored）。主語がものか人か、だけでなく「感じさせる側か、感じる側か」で決める。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The movie was interesting, so I was interested in it.', ja: 'その映画はおもしろかったので、私は興味をもった。' }],
     questions: [
@@ -9042,7 +8248,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-147',
-    title: '入試の誤文訂正〈147〉（東大レベル：英作文の自動詞と他動詞）',
+    title: '入試の誤文訂正〈147〉（自動詞と他動詞）',
     points: ['discuss（～について話し合う）・reach（～に着く）・marry（～と結婚する）・mention（～について言う）・enter（～に入る）・approach（～に近づく）・resemble（～に似ている）・answer（～に答える）は他動詞なので、すぐ後ろに目的語を置き、about・to・with・into などの前置詞をつけない。反対に arrive は自動詞なので arrive at／in ～、explain は「人に」説明するとき explain to 人。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'We discussed the plan and reached the station at noon.', ja: '私たちは計画について話し合い、正午に駅に着いた。' }],
     questions: [
@@ -9060,7 +8266,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-148',
-    title: '入試の誤文訂正〈148〉（国公立レベル：不定詞の意味上の主語 for／of）',
+    title: '入試の誤文訂正〈148〉（不定詞の意味上の主語 for／of）',
     points: ['It is ＋形容詞＋for 人＋to do が基本（difficult・easy・necessary・important・hard）。kind・nice・careless・wise・rude・foolish など「人の性質・人がらをほめたりけなしたりする」形容詞のときは of 人 を使う（It is kind of you to help me）。見分け方：「人 is 形容詞」と言えるなら of（You are kind → of you）。too ～ to do の主語も for 人。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It is kind of you to help me, but it is difficult for me to accept.', ja: '手伝ってくれるのは親切だが、私には受け入れるのがむずかしい。' }],
     questions: [
@@ -9078,7 +8284,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-149',
-    title: '入試の誤文訂正〈149〉（京大レベル：関係代名詞 what と that・which）',
+    title: '入試の誤文訂正〈149〉（関係代名詞 what と that・which）',
     points: ['what は先行詞をふくむ関係代名詞で「～すること・もの」（＝the thing(s) which）。前に先行詞（名詞）があるときは what ではなく which・that を使う。all・anything・everything のあとは that。what を使う慣用表現：what I can（できること）・what she used to be（以前の彼女）・A is to B what C is to D（A と B の関係は C と D の関係と同じ）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is what I wanted. The book which I bought is interesting.', ja: 'これは私がほしかったものだ。私が買った本はおもしろい。' }],
     questions: [
@@ -9096,7 +8302,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-150',
-    title: '入試の誤文訂正〈150〉（東大レベル：英作文の時の前置詞 by／until・in／within・for／during）',
+    title: '入試の誤文訂正〈150〉（時の前置詞 by／until・in／within・for／during）',
     points: ['by は「～までに（しめきり）」、until は「～までずっと（継続）」。in は「（今から）～後に」、within は「～以内に」。for は「～のあいだ（期間の長さ・数字）」、during は「～のあいだに（特定の期間・名詞）」。since は「～以来（時点）」なので期間の長さには使わない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Please finish the report by Friday. I will wait here until 5 p.m.', ja: '金曜日までに報告書を仕上げてください。私は午後5時までここで待ちます。' }],
     questions: [
@@ -9114,7 +8320,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-151',
-    title: '入試の誤文訂正〈151〉（国公立レベル：使役動詞 make／let／have と get）',
+    title: '入試の誤文訂正〈151〉（使役動詞 make／let／have と get）',
     points: ['make・let・have＋人＋原形（to はつけない）。make は「むりに～させる」、let は「～させてやる（許可）」、have は「～してもらう」。get＋人＋to 不定詞は「（説得して）～してもらう」。make の受け身は be made to do（to が必要）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'My mother made me clean my room, but she let me go out later.', ja: '母は私に部屋をそうじさせたが、あとで出かけさせてくれた。' }],
     questions: [
@@ -9132,7 +8338,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-152',
-    title: '入試の誤文訂正〈152〉（京大レベル：分詞構文の完了形・否定・受け身）',
+    title: '入試の誤文訂正〈152〉（分詞構文の完了形・否定・受け身）',
     points: ['主節より前のことは完了形の分詞構文 Having＋過去分詞（Having lost my wallet）。否定は分詞の前に not を置く（Not knowing・Not having eaten）。主語が「される」側なら過去分詞から始める（Seen from the hill・Born in Kyoto）。主節と主語がちがうときは独立分詞構文（It being sunny）。慣用表現 Judging from ～・Compared with ～。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Not knowing what to say, she kept silent.', ja: '何と言えばよいかわからなかったので、彼女はだまっていた。' }],
     questions: [
@@ -9150,7 +8356,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-153',
-    title: '入試の誤文訂正〈153〉（東大レベル：英作文のつなぎ語 however・therefore・moreover）',
+    title: '入試の誤文訂正〈153〉（つなぎ語 however・therefore・moreover）',
     points: ['however・therefore・moreover は副詞なので、2つの文をコンマだけでつなげない（コンマでつなぐなら but・so・and を使う）。文頭や ; のあとに置くときは後ろにコンマ（However, ～）。however は「しかし」（逆接）、therefore は「だから」（結果）、moreover は「そのうえ」（追加）。意味の流れに合うものを選ぶ。However hard ～「どんなに～しても」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The hotel was cheap. Moreover, it was close to the station.', ja: 'そのホテルは安かった。そのうえ、駅に近かった。' }],
     questions: [
@@ -9168,7 +8374,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-154',
-    title: '入試の誤文訂正〈154〉（国公立レベル：使役動詞 make・let・have・get の形）',
+    title: '入試の誤文訂正〈154〉（使役動詞 make・let・have・get の形）',
     points: ['使役動詞の形：make＋人＋動詞の原形「（むりに）～させる」、let＋人＋動詞の原形「（したいように）～させる」、have＋人＋動詞の原形「（たのんで）～してもらう」、get＋人＋to＋動詞の原形。物が「される」ときは have（get）＋物＋過去分詞（have my hair cut・had her bag stolen）。受け身では to が出る（be made to do）。make oneself understood「自分の言うことを通じさせる」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' }],
     questions: [
@@ -9186,7 +8392,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-155',
-    title: '入試の誤文訂正〈155〉（京大レベル：仮定法 I wish・If only・as if の時制）',
+    title: '入試の誤文訂正〈155〉（仮定法 I wish・If only・as if の時制）',
     points: ['仮定法は「事実とちがうこと」を時制を1つ過去にずらして表す。今のことは過去形（I wish I were・If only I knew・as if he knew）、過去のことは過去完了（I wish I had studied・as if she had seen）。be 動詞は were がふつう。「～してくれたらいいのに」は I wish you would ～。can は could に。It’s time ＋過去形「もう～する時間だ」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I wish I had studied harder when I was in high school.', ja: '高校のときもっと勉強していればよかった。' }],
     questions: [
@@ -9204,7 +8410,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-156',
-    title: '入試の誤文訂正〈156〉（東大レベル：英作文の無生物主語）',
+    title: '入試の誤文訂正〈156〉（無生物主語）',
     points: ['英語では「物・こと」を主語にして「（人に）～させる」と書くことが多い（無生物主語）。take（bring）人 to 場所「人を～へ連れていく」、make 人＋動詞の原形、cause（enable）人 to do、prevent（keep）人 from doing「人が～するのをさまたげる」、remind 人 of ～「人に～を思い出させる」。日本語に直すときは「～のおかげで」「～のせいで」と人を主語にするとよい。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Heavy rain prevented us from going out.', ja: '大雨のせいで、私たちは外出できなかった。' }],
     questions: [
@@ -9222,7 +8428,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-157',
-    title: '入試の誤文訂正〈157〉（国公立レベル：分詞形容詞 interesting・interested／surprising・surprised）',
+    title: '入試の誤文訂正〈157〉（分詞形容詞 interesting・interested／surprising・surprised）',
     points: ['感情を表す動詞から作った形容詞：-ing は「（物・こと・人が）～させる」、-ed は「（人が）～させられる＝～と感じる」。The movie was interesting（映画がおもしろい）／I was interested（私は興味をもった）。surprising／surprised、exciting／excited、boring／bored、confusing／confused、disappointing／disappointed、tiring／tired、satisfying／satisfied。「人が感じる」なら -ed、「感じさせる側」なら -ing。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I was surprised at the surprising news.', ja: '私はそのおどろくべき知らせにおどろいた。' }],
     questions: [
@@ -9240,7 +8446,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-158',
-    title: '入試の誤文訂正〈158〉（京大レベル：否定語が文頭に出る倒置 Never have I・Only then did）',
+    title: '入試の誤文訂正〈158〉（否定語が文頭に出る倒置 Never have I・Only then did）',
     points: ['否定や制限の語（Never・Little・Seldom・Rarely・Hardly・No sooner・Not until ～・Only then・Not only・Under no circumstances）が文頭に出ると、そのあとは疑問文と同じ語順（倒置）になる。一般動詞なら do（does・did）＋主語＋動詞の原形、完了形なら have（had）＋主語＋過去分詞、助動詞なら助動詞＋主語。Hardly（No sooner）had I ～ when（than）…「～するとすぐに…」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は一度も見たことがない。' }],
     questions: [
@@ -9258,7 +8464,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-159',
-    title: '入試の誤文訂正〈159〉（東大レベル：英作文の動名詞をとる動詞と不定詞をとる動詞）',
+    title: '入試の誤文訂正〈159〉（動名詞をとる動詞と不定詞をとる動詞）',
     points: ['動名詞（-ing）だけを目的語にとる動詞：enjoy・finish・avoid・mind・give up・stop（～するのをやめる）など。不定詞（to do）だけをとる動詞：decide・hope・want・agree・refuse・plan・promise など。remember・forget は意味が変わる：remember doing「～したのを覚えている」（過去）／remember to do「忘れずに～する」（これから）。forget to do「～するのを忘れる」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I enjoy playing tennis, and I hope to join a club.', ja: '私はテニスをするのが好きで、クラブに入りたいと思っている。' }],
     questions: [
@@ -9276,7 +8482,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-160',
-    title: '入試の誤文訂正〈160〉（国公立レベル：the＋比較級, the＋比較級「～すればするほど…」）',
+    title: '入試の誤文訂正〈160〉（the＋比較級, the＋比較級「～すればするほど…」）',
     points: ['The＋比較級 ～, the＋比較級 …「～すればするほど…」。両方の部分に the をつけ、最上級ではなく比較級を使う（the better・the wiser・the earlier）。長い形容詞は the more＋原級（the more dangerous）。数えられる名詞の「より少ない」は the fewer、数えられない名詞や形容詞は the less。比較級のあとはふつうの語順（主語＋動詞）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The more you practice, the better you become.', ja: '練習すればするほど、うまくなる。' }],
     questions: [
@@ -9294,7 +8500,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-161',
-    title: '入試の誤文訂正〈161〉（京大レベル：関係代名詞 what と which・that の使い分け）',
+    title: '入試の誤文訂正〈161〉（関係代名詞 what と which・that の使い分け）',
     points: ['what は先行詞をふくむ関係代名詞で「～すること・もの」（＝the thing(s) which）。先行詞があるときは what を使わず which・that（everything・the only thing・all など のあとはふつう that）。先行詞がないのに which・that を使うのもまちがい。コンマのあとで前の文全体を受けるのは which（what・that は×）。what を使った表現：what he said・What surprised me・what she used to be「昔の彼女」・Do what you can。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is what I wanted.', ja: 'これが私のほしかったものだ。' }],
     questions: [
@@ -9312,7 +8518,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-162',
-    title: '入試の誤文訂正〈162〉（東大レベル：英作文の時と場所の前置詞 in・on・at）',
+    title: '入試の誤文訂正〈162〉（時と場所の前置詞 in・on・at）',
     points: ['時の前置詞：at は時刻・一点（at 3 p.m.・at noon）、on は曜日・日付・特定の日（on Sunday・on May 5・on Christmas Eve）、in は月・季節・年・午前／午後（in May・in 2008・in the morning）。場所の前置詞：at は地点（at the airport・arrive at）、in は広がりのある空間・都市や国（in Tokyo）、on は表面にくっついている（on the wall）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I was born in Kyoto on May 5, 2008, at six in the morning.', ja: '私は2008年5月5日の朝6時に京都で生まれた。' }],
     questions: [
@@ -9329,26 +8535,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-163',
-    title: '入試の誤文訂正〈163〉（国公立レベル：受動態で by 以外を使う表現 be interested in・be covered with）',
-    points: ['受動態でも by 以外の前置詞を使う決まった表現がある。be interested in ～・be covered with ～・be filled with ～・be crowded with ～・be satisfied with ～・be known to ～（～に知られている）・be surprised at ～・be caught in ～（にわか雨などにあう）。be made of ～（材料がそのまま：木の机）／be made from ～（材料が変化：牛乳からバター）。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'I am interested in Japanese history.', ja: '私は日本の歴史に興味がある。' }],
-    questions: [
-      { sentence: 'I am interested [about] Japanese history.', choices: ['in', 'on', 'with', 'at'], answer: 0, why: 'be interested in ～「～に興味がある」。' },
-      { sentence: 'The table was covered [of] dust.', choices: ['with', 'at', 'for', 'to'], answer: 0, why: 'be covered with ～「～でおおわれている」。' },
-      { sentence: 'He is known [by] everyone in the town.', choices: ['to', 'for', 'of', 'at'], answer: 0, why: '「～に知られている」は be known to ～。' },
-      { sentence: 'I was surprised [of] the news.', choices: ['at', 'for', 'to', 'in'], answer: 0, why: 'be surprised at ～「～におどろく」。' },
-      { sentence: 'Butter is made [of] milk.', choices: ['from', 'by', 'with', 'in'], answer: 0, why: '材料の牛乳が変化してバターになるので be made from。' },
-      { sentence: 'This desk is made [from] wood.', choices: ['of', 'by', 'with', 'at'], answer: 0, why: '木がそのまま材料として見えるので be made of。' },
-      { sentence: 'She is satisfied [about] her new job.', choices: ['with', 'to', 'for', 'at'], answer: 0, why: 'be satisfied with ～「～に満足している」。' },
-      { sentence: 'The street was crowded [by] tourists.', choices: ['with', 'at', 'in', 'for'], answer: 0, why: 'be crowded with ～「～でこみあっている」。' },
-      { sentence: 'We were caught [by] a shower on the way home.', choices: ['in', 'at', 'to', 'of'], answer: 0, why: 'be caught in a shower「にわか雨にあう」。' },
-      { sentence: 'The glass is filled [by] water.', choices: ['with', 'of', 'in', 'at'], answer: 0, why: 'be filled with ～「～でいっぱいである」。' },
-    ],
-  },
-  {
     id: 'exam-fix-164',
-    title: '入試の誤文訂正〈164〉（京大レベル：not A but B・not only A but also B・either A or B の動詞の一致）',
+    title: '入試の誤文訂正〈164〉（not A but B・not only A but also B・either A or B の動詞の一致）',
     points: ['相関接続詞の動詞は、動詞に近いほうの主語に合わせる：not A but B（B に合わせる）・not only A but also B（B）・either A or B（B）・neither A nor B（B）。A as well as B は A に合わせる。both A and B はいつも複数。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Not only the students but also the teacher was surprised.', ja: '生徒だけでなく先生もおどろいた。' }],
     questions: [
@@ -9366,7 +8554,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-165',
-    title: '入試の誤文訂正〈165〉（東大レベル：英作文の few・a few・little・a little）',
+    title: '入試の誤文訂正〈165〉（ few・a few・little・a little）',
     points: ['few・a few は数えられる名詞（複数形）、little・a little は数えられない名詞に使う。a がつくと「少しある」（肯定）、a がないと「ほとんどない」（否定）。quite a few「かなり多くの」。「より少ない」は数えられる名詞なら fewer、数えられない名詞なら less。advice・money・time・milk は数えられない名詞。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I have a few friends but little time.', ja: '友だちは少しいるが、時間はほとんどない。' }],
     questions: [
@@ -9384,7 +8572,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-166',
-    title: '入試の誤文訂正〈166〉（国公立レベル：付加疑問文の形）',
+    title: '入試の誤文訂正〈166〉（付加疑問文の形）',
     points: ['付加疑問文「～ですよね」は、前が肯定なら否定、前が否定なら肯定にする。be 動詞・助動詞はそのまま使い（can → can’t he?）、一般動詞は do・does・did で受ける。完了形は have・has。主語は代名詞に（Tom → he）。There is ～ は isn’t there?。never・hardly は否定なので肯定の付加疑問。Let’s ～ は shall we?、命令文は will you?。I’m ～ は aren’t I?。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'You are a student, aren’t you?', ja: 'きみは学生だよね。' }],
     questions: [
@@ -9402,7 +8590,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-167',
-    title: '入試の誤文訂正〈167〉（京大レベル：前置詞＋関係代名詞 on which・with whom の前置詞の選び方）',
+    title: '入試の誤文訂正〈167〉（前置詞＋関係代名詞 on which・with whom の前置詞の選び方）',
     points: ['前置詞＋関係代名詞（in which・with whom・on which）は、もとの文で使う前置詞を関係代名詞の前に出したもの。I was born in the house → the house in which I was born。人なら whom、物なら which（前置詞のあとに that・who・where・when は使わない）。前置詞は動詞や名詞との結びつき（depend on・talk about・write with・the reason for）で決まる。前に出したら文の最後に前置詞をくり返さない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the house in which I was born.', ja: 'これは私が生まれた家だ。' }],
     questions: [
@@ -9420,7 +8608,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-168',
-    title: '入試の誤文訂正〈168〉（東大レベル：英作文の再帰代名詞と each other）',
+    title: '入試の誤文訂正〈168〉（再帰代名詞と each other）',
     points: ['再帰代名詞（myself・himself・themselves など）は、主語と目的語が同じ人のときに使う（He hurt himself.）。主語とちがう人なら him・her など。enjoy oneself「楽しむ」・help oneself to ～「～を自由にとって食べる」・by oneself「ひとりで」・introduce oneself「自己紹介する」は決まった形。each other・one another は「おたがい」で、代名詞なので前置詞が必要な動詞ではそれをつける（talk to each other）。each other は主語には使えない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'They looked at each other and smiled.', ja: '彼らはおたがいを見てほほえんだ。' }],
     questions: [
@@ -9438,7 +8626,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-169',
-    title: '入試の誤文訂正〈169〉（国公立レベル：比較の as ～ as と倍数表現）',
+    title: '入試の誤文訂正〈169〉（比較の as ～ as と倍数表現）',
     points: ['as ＋原級＋as で「同じくらい～」。否定は not as（so）～ as「…ほど～ない」。倍数は「X times as ～ as」（twice・half・three times）の形で、倍数を as の前に置く。as many（much）＋名詞＋as のように、数えられる名詞は many、数えられない名詞は much。比べるものの形をそろえる（that of ～・those of ～）。as ～ as possible「できるだけ～」・as ～ as one can。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This room is three times as large as mine.', ja: 'この部屋は私の部屋の3倍の広さだ。' }],
     questions: [
@@ -9456,7 +8644,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-170',
-    title: '入試の誤文訂正〈170〉（京大レベル：関係副詞 where・when と関係代名詞 which の使い分け）',
+    title: '入試の誤文訂正〈170〉（関係副詞 where・when と関係代名詞 which の使い分け）',
     points: ['先行詞が場所・時でも、関係詞のあとの文に主語や目的語が欠けていれば関係代名詞 which（that）、主語も目的語もそろっていて「そこで・そのとき」の意味なら関係副詞 where・when を使う。This is the town which I visited.（visit の目的語が欠けている）／This is the town where I was born.（文がそろっている）。where＝in which・at which、when＝on which・in which。先行詞が case・situation・point でも where を使えることがある。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This is the town where I was born, and that is the museum which I visited yesterday.', ja: 'ここは私が生まれた町で、あれは私がきのう訪れた博物館だ。' }],
     questions: [
@@ -9473,26 +8661,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-171',
-    title: '入試の誤文訂正〈171〉（東大レベル：英作文の名詞＋前置詞の結びつき）',
-    points: ['英作文では名詞とあとの前置詞の結びつきが決まっていることが多い。interest in ～「～への興味」・effect（influence）on ～「～への影響」・reason for ～「～の理由」・solution（answer・key）to ～「～の解決策・答え・かぎ」・demand for ～「～の需要」・increase（decrease）in ～「～の増加（減少）」・attitude toward ～「～への態度」・difficulty in ～ing「～するむずかしさ」。日本語の「の」にひっぱられて of を使わないよう注意する。［ ］の部分を正しくするものを4つから選ぶ。'],
-    examples: [{ en: 'Smartphones have a great effect on our daily lives.', ja: 'スマートフォンは私たちの日常生活に大きな影響をあたえている。' }],
-    questions: [
-      { sentence: 'Smartphones have a great effect [of] our daily lives.', choices: ['on', 'at', 'for', 'with'], answer: 0, why: 'effect on ～「～への影響」。' },
-      { sentence: 'She has a strong interest [about] history.', choices: ['in', 'on', 'of', 'to'], answer: 0, why: 'interest in ～「～への興味」。' },
-      { sentence: 'What is the reason [of] his absence?', choices: ['for', 'to', 'in', 'on'], answer: 0, why: 'reason for ～「～の理由」。' },
-      { sentence: 'There is no easy solution [for] this problem.', choices: ['to', 'of', 'at', 'with'], answer: 0, why: 'solution to ～「～の解決策」。' },
-      { sentence: 'Hard work is the key [of] success.', choices: ['to', 'in', 'on', 'from'], answer: 0, why: 'the key to ～「～へのかぎ」。' },
-      { sentence: 'There has been an increase [of] the number of tourists.', choices: ['in', 'at', 'to', 'by'], answer: 0, why: 'increase in ～「～の増加」。' },
-      { sentence: 'The demand [of] electric cars is growing.', choices: ['for', 'in', 'to', 'at'], answer: 0, why: 'demand for ～「～の需要」。' },
-      { sentence: 'His attitude [for] his work has changed.', choices: ['toward', 'of', 'in', 'at'], answer: 0, why: 'attitude toward（to）～「～への態度」。' },
-      { sentence: 'I had difficulty [to find] his house.', choices: ['finding', 'find', 'to finding', 'found'], answer: 0, why: 'have difficulty (in) ～ing「～するのに苦労する」。' },
-      { sentence: 'Television has a strong influence [to] children.', choices: ['on', 'for', 'at', 'of'], answer: 0, why: 'influence on ～「～への影響」。' },
-    ],
-  },
-  {
     id: 'exam-fix-172',
-    title: '入試の誤文訂正〈172〉（京大レベル：不定詞の形容詞的用法と前置詞 a house to live in）',
+    title: '入試の誤文訂正〈172〉（不定詞の形容詞的用法と前置詞 a house to live in）',
     points: ['名詞のあとに置いて「～するための・～すべき」と説明する不定詞（形容詞的用法）では、もとの文で必要な前置詞を最後に残す。live in a house → a house to live in・write with a pen → a pen to write with・talk to a friend → a friend to talk to・sit on a chair → a chair to sit on。名詞が不定詞の目的語になる場合は前置詞は不要（a book to read）。something to drink・nothing to do のように -thing のあとにも置ける。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'They are looking for a house to live in.', ja: '彼らは住む家を探している。' }],
     questions: [
@@ -9510,7 +8680,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-173',
-    title: '入試の誤文訂正〈173〉（国公立レベル：部分否定 not all・not always・not every）',
+    title: '入試の誤文訂正〈173〉（部分否定 not all・not always・not every）',
     points: ['not と all・every・always・both・necessarily・completely がいっしょに使われると「すべてが～というわけではない」という部分否定になる。Not all students like math.「すべての生徒が数学を好きなわけではない」・He is not always busy.「いつもいそがしいわけではない」。「どれも～ない」という全部否定は none・no・never・neither を使う（None of the students like math.）。日本語の意味に合う形を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Not all students like math, and none of them likes tests.', ja: 'すべての生徒が数学を好きなわけではなく、テストが好きな生徒はひとりもいない。' }],
     questions: [
@@ -9528,7 +8698,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-174',
-    title: '入試の誤文訂正〈174〉（東大レベル：英作文の分数と割合 two thirds of・percent of）',
+    title: '入試の誤文訂正〈174〉（分数と割合 two thirds of・percent of）',
     points: ['英語の分数は「分子を基数、分母を序数」で表し、分子が2以上なら分母を複数形にする（one third・two thirds・three quarters）。half は a half ではなく half of ～ の形が多い。percent は数字のあとでも s をつけない（30 percent）。分数・percent・half のあとの of ～ が単数・数えられない名詞なら単数扱い、複数名詞なら複数扱い。「～の割合」は the percentage（proportion）of ～ で単数扱い。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Two thirds of the students live near the school.', ja: '生徒の3分の2が学校の近くに住んでいる。' }],
     questions: [
@@ -9546,7 +8716,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-175',
-    title: '入試の誤文訂正〈175〉（京大レベル：比較の慣用 no more than・no less than・not so much A as B）',
+    title: '入試の誤文訂正〈175〉（比較の慣用 no more than・no less than・not so much A as B）',
     points: ['no more than ～「たった～（＝only）」・no less than ～「～も（＝as much as）」・not more than ～「多くても～（＝at most）」・not less than ～「少なくとも～（＝at least）」。not so much A as B「A というよりむしろ B」、A is no more B than C is D「A が B でないのは C が D でないのと同じ」（クジラの構文）。日本語の意味に合う形を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He is not so much a scholar as a writer.', ja: '彼は学者というよりむしろ作家だ。' }],
     questions: [
@@ -9564,7 +8734,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-176',
-    title: '入試の誤文訂正〈176〉（国公立レベル：too ～ to と ～ enough to）',
+    title: '入試の誤文訂正〈176〉（too ～ to と ～ enough to）',
     points: ['too ＋形容詞・副詞＋to do「～すぎて…できない」・形容詞・副詞＋enough to do「…するのに十分～」。enough は形容詞・副詞のあとに置く（old enough）が、名詞につくときは前に置く（enough money）。to do の意味上の主語は for ～ で表す（too difficult for me to solve）。to do の目的語が文の主語と同じなら、くり返さない（This box is too heavy to carry.）。so ～ that S can not … とも書きかえられる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This box is too heavy for me to carry.', ja: 'この箱は重すぎて私には運べない。' }],
     questions: [
@@ -9582,7 +8752,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-177',
-    title: '入試の誤文訂正〈177〉（東大レベル：英作文の目的表現 so that・in order to・so as not to）',
+    title: '入試の誤文訂正〈177〉（目的表現 so that・in order to・so as not to）',
     points: ['「～するために」は in order to do・so as to do・so that S can（will）do。否定の目的「～しないように」は in order not to do・so as not to do・so that S will not do（for fear of ～ing・lest S should do も書き言葉で使う）。not の位置は to の前（not to do）。so that のあとは主語＋助動詞（can・will・may）＋動詞の原形がふつう。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She left early so that she could catch the first train.', ja: '彼女は始発に乗れるように早く出た。' }],
     questions: [
@@ -9600,7 +8770,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-178',
-    title: '入試の誤文訂正〈178〉（京大レベル：副詞 only・even・also の位置）',
+    title: '入試の誤文訂正〈178〉（副詞 only・even・also の位置）',
     points: ['only・even・also・just は、ふつう修飾する語のすぐ前に置く。書きことばで意味をはっきりさせるには位置が大切（I only saw him.／I saw only him.）。also・always・often などの頻度や付加の副詞は、一般動詞の前、be 動詞・助動詞のあとに置く（He is also kind.／She can also swim.）。even は強調したい語の前（Even a child can do it.）。enough は形容詞・副詞のあと。日本語の意味に合う位置を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Even a child can understand it, and he also knows the answer.', ja: '子どもでさえそれを理解でき、彼も答えを知っている。' }],
     questions: [
@@ -9618,7 +8788,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-179',
-    title: '入試の誤文訂正〈179〉（京大レベル：二重目的語と to・for への書きかえ）',
+    title: '入試の誤文訂正〈179〉（二重目的語と to・for への書きかえ）',
     points: ['give・show・tell・send・lend・teach などは「人に物を」を SVOO（give him a book）でも SVO＋to 人（give a book to him）でも表せる。buy・make・cook・find・get などは for 人（buy a book for him）。ask は of 人（ask a question of him）。explain・suggest・introduce・describe は二重目的語にできず、explain it to me の形にする。目的語が代名詞 it・them のときは give it to him の形がふつう（give him it はさける）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She bought a present for her mother and explained the plan to us.', ja: '彼女は母親にプレゼントを買い、私たちにその計画を説明した。' }],
     questions: [
@@ -9636,7 +8806,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-180',
-    title: '入試の誤文訂正〈180〉（東大レベル：英作文の感嘆文 What a ～・How ～）',
+    title: '入試の誤文訂正〈180〉（感嘆文 What a ～・How ～）',
     points: ['感嘆文は What a（an）＋形容詞＋名詞＋主語＋動詞！（数えられない名詞・複数名詞なら a はつけない：What beautiful flowers!）と How ＋形容詞・副詞＋主語＋動詞！の二つの形。主語＋動詞はふつうの語順（How fast he runs!）で、疑問文の語順にしない。名詞があるなら What、形容詞・副詞だけなら How。英作文では so ＋形容詞・such a ＋形容詞＋名詞でも同じ気持ちを表せる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'What a beautiful day it is! How fast he runs!', ja: 'なんてすばらしい日だろう。彼はなんて速く走るのだろう。' }],
     questions: [
@@ -9654,7 +8824,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-181',
-    title: '入試の誤文訂正〈181〉（京大レベル：形容詞を並べる順序 a beautiful old wooden box）',
+    title: '入試の誤文訂正〈181〉（形容詞を並べる順序 a beautiful old wooden box）',
     points: ['名詞の前に形容詞をいくつか並べるときは、ふつう「冠詞・数 → 意見（beautiful・nice）→ 大きさ（big・small）→ 年齢・新旧（old・new）→ 形（round）→ 色（red）→ 産地・国籍（Japanese）→ 材料（wooden・silk）→ 名詞」の順にする。数は all・both → the・my → 序数（first）→ 基数（three）の順。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She bought a beautiful old wooden box.', ja: '彼女は美しい古い木の箱を買った。' }],
     questions: [
@@ -9672,7 +8842,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-182',
-    title: '入試の誤文訂正〈182〉（国公立レベル：ago・before・since の使い分け）',
+    title: '入試の誤文訂正〈182〉（ago・before・since の使い分け）',
     points: ['～ ago は「今から～前」で、過去形といっしょに使う（現在完了とは使わない）。～ before は「その時（過去のある時点）から～前」で、過去完了といっしょに使うことが多い。before だけなら「以前に」で現在完了とも使える。since は「～以来」で、ふつう現在完了とともに使う（since last year・since I was a child）。for は「～のあいだ」で期間を表す。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I met him three years ago, and I have known him since then.', ja: '私は3年前に彼に会い、それ以来彼を知っている。' }],
     questions: [
@@ -9690,7 +8860,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-183',
-    title: '入試の誤文訂正〈183〉（東大レベル：英作文の many・much・a few・a little）',
+    title: '入試の誤文訂正〈183〉（ many・much・a few・a little）',
     points: ['数えられる名詞（books・friends）には many・a few・few、数えられない名詞（water・money・information・advice）には much・a little・little を使う。a few・a little は「少しある（肯定的）」、few・little は「ほとんどない（否定的）」。a lot of・plenty of はどちらにも使える。英作文では、ふつうの肯定文では much より a lot of を使うことが多い。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I have a few friends here, but little money.', ja: 'ここには友人が少しいるが、お金はほとんどない。' }],
     questions: [
@@ -9708,7 +8878,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-184',
-    title: '入試の誤文訂正〈184〉（国公立レベル：命令文＋and／or「そうすれば・さもないと」）',
+    title: '入試の誤文訂正〈184〉（命令文＋and／or「そうすれば・さもないと」）',
     points: ['「命令文, and ～」は「…しなさい、そうすれば～」、「命令文, or ～」は「…しなさい、さもないと～」。and のあとはよい結果、or のあとは悪い結果がくる。命令文は動詞の原形で始め、否定は Don’t ＋原形。うしろの文は未来のことなので will を使うことが多い。If 〜 で言いかえると、Hurry up, or you will be late. ＝ If you don’t hurry up, you will be late. ［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Study hard, and you will pass the exam.', ja: '一生けんめい勉強しなさい、そうすれば試験に受かるよ。' }],
     questions: [
@@ -9726,7 +8896,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-185',
-    title: '入試の誤文訂正〈185〉（京大レベル：英作文の分詞構文 Having done）',
+    title: '入試の誤文訂正〈185〉（分詞構文 Having done）',
     points: ['分詞構文は「接続詞＋主語＋動詞」を分詞で短く表す形。主節より前のことは Having ＋過去分詞（完了分詞構文）で表す。主語が「される」側なら過去分詞（Written in English, ～）や Having been ＋過去分詞。否定は Not を分詞の前に置く（Not having been invited）。分詞の主語が主節の主語とちがうときは、主語を前に置く（It being Sunday, ～：独立分詞構文）。分詞構文のあとに so や and を入れて主節をつなげない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Having finished my homework, I went out to play.', ja: '宿題を終えたので、私は遊びに出かけた。' }],
     questions: [
@@ -9744,7 +8914,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-186',
-    title: '入試の誤文訂正〈186〉（東大レベル：英作文の so that・in order to）',
+    title: '入試の誤文訂正〈186〉（ so that・in order to）',
     points: ['目的「～するために」は in order to do／so as to do（否定は in order not to do／so as not to do）か、so that S can／will／may do で表す。so that のあとは「主語＋動詞」で、過去の文では could／would／might になる。in order to のあとは動詞の原形で、ing 形や「主語＋動詞」は来ない。「～しないように」は in order not to do か so that S will not（would not）do。will と can のように助動詞を2つ続けることはできない。英作文では、主語が変わるときは so that を使う。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I spoke slowly so that everyone could understand me.', ja: 'みんなが理解できるように、私はゆっくり話した。' }],
     questions: [
@@ -9762,7 +8932,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-187',
-    title: '入試の誤文訂正〈187〉（国公立レベル：使役動詞 make・let・have・get）',
+    title: '入試の誤文訂正〈187〉（使役動詞 make・let・have・get）',
     points: ['使役動詞は「人に～させる・してもらう」。make ＋人＋原形（むりに～させる）、let ＋人＋原形（～させてあげる）、have ＋人＋原形（～してもらう）。get だけは get ＋人＋ to do。物が「～される」なら have／get ＋物＋過去分詞（have my hair cut）。受け身の文では make のあとの原形が to do になる（He was made to wait）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' }],
     questions: [
@@ -9780,7 +8950,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-188',
-    title: '入試の誤文訂正〈188〉（京大レベル：英作文の It is ～ that 強調構文）',
+    title: '入試の誤文訂正〈188〉（ It is ～ that 強調構文）',
     points: ['強調構文 It is（was）＋強調したい語句＋ that ～ は「～なのは…だ」。強調する部分が人なら that の代わりに who も使えるが、what や which は使わない。時や場所・理由の語句（in 2010・at the station・because ～）を強調するときも that を使う。時制は文に合わせて It is／It was。疑問詞を強調すると What was it that ～? の語順になる。It was not until ～ that …「～になってはじめて…」も強調構文。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was in Kyoto that I first met her.', ja: '私が彼女に初めて会ったのは京都だった。' }],
     questions: [
@@ -9798,7 +8968,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-189',
-    title: '入試の誤文訂正〈189〉（東大レベル：英作文の what を使った名詞節）',
+    title: '入試の誤文訂正〈189〉（ what を使った名詞節）',
     points: ['関係代名詞 what は「～すること・もの」で、what の節は文の主語・目的語・補語になる（What I want is time.／This is what I need.）。what の節が主語なら単数あつかい。疑問詞の what で始まる名詞節（間接疑問）は「what ＋主語＋動詞」のふつうの語順になる（I don’t know what he means.）。what 自体が節のなかの主語・目的語なので、it などをくり返さない。A is to B what C is to D「A と B の関係は C と D の関係と同じ」、what she used to be「以前の彼女」、what ＋名詞「ありったけの～」も覚えておく。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'What I want is a little more time.', ja: '私がほしいのは、もう少しの時間だ。' }],
     questions: [
@@ -9816,7 +8986,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-190',
-    title: '入試の誤文訂正〈190〉（国公立レベル：look forward to ～ing など to のあとの ing）',
+    title: '入試の誤文訂正〈190〉（look forward to ～ing など to のあとの ing）',
     points: ['to が不定詞ではなく前置詞の表現では、うしろに動詞の ing 形（動名詞）や名詞が来る。look forward to ～ing「～するのを楽しみにする」、be used（accustomed）to ～ing「～することになれている」、What do you say to ～ing?「～するのはどうですか」、object to ～ing「～することに反対する」、when it comes to ～ing「～することとなると」、devote … to ～ing、in addition to ～ing、be committed to ～ing など。一方、used to do「以前は～したものだ」の to は不定詞なので原形が来る。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I am looking forward to seeing you again.', ja: 'またあなたに会えるのを楽しみにしています。' }],
     questions: [
@@ -9834,7 +9004,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-191',
-    title: '入試の誤文訂正〈191〉（京大レベル：英作文の部分否定 not all・not always）',
+    title: '入試の誤文訂正〈191〉（部分否定 not all・not always）',
     points: ['「すべてが～というわけではない」のように一部だけを打ち消すのが部分否定。not all・not every（body）・not always・not both・not necessarily・not completely など、not ＋「全部・いつも」を表す語で表す。一方、no・none・nobody・never・neither・not ～ either は「まったく～ない」の全体否定。英作文では「～とはかぎらない」「～わけではない」を見たら部分否定を使う。［ ］の部分を、日本語に合うように正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Not all rich people are happy.', ja: '金持ちがみな幸せとはかぎらない。' }],
     questions: [
@@ -9852,7 +9022,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-192',
-    title: '入試の誤文訂正〈192〉（東大レベル：英作文の so ～ that・such ～ that）',
+    title: '入試の誤文訂正〈192〉（ so ～ that・such ～ that）',
     points: ['「とても～なので…」は so ＋形容詞・副詞＋ that ～、または such ＋（a）＋形容詞＋名詞＋ that ～。so のあとは形容詞・副詞（so tired・so fast）、such のあとは名詞のかたまり（such a hot day・such good news）。数えられる名詞の複数には so many、数えられない名詞には so much、少ないときは so few・so little を使う。that のあとは「主語＋動詞」で、to do は来ない。too ～ to do と混ぜない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was such a hot day that we went swimming.', ja: 'とても暑い日だったので、私たちは泳ぎに行った。' }],
     questions: [
@@ -9870,7 +9040,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-193',
-    title: '入試の誤文訂正〈193〉（国公立レベル：形容詞と副詞 hard・hardly・late・lately）',
+    title: '入試の誤文訂正〈193〉（形容詞と副詞 hard・hardly・late・lately）',
     points: ['-ly がつくと意味が変わる副詞に注意する。hard「熱心に・はげしく」と hardly「ほとんど～ない」、late「おそく」と lately「最近」、near「近くに」と nearly「ほとんど」、high「高く」と highly「大いに・非常に」、most「もっとも」と mostly「たいてい・主に」。hardly はそれ自体が否定の意味なので not や never と重ねない（hardly ever「めったに～ない」）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He works hard, but he has hardly any free time.', ja: '彼は熱心に働くが、自由な時間はほとんどない。' }],
     questions: [
@@ -9888,7 +9058,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-194',
-    title: '入試の誤文訂正〈194〉（京大レベル：英作文の付加疑問と否定疑問への答え）',
+    title: '入試の誤文訂正〈194〉（付加疑問と否定疑問への答え）',
     points: ['付加疑問は「肯定文, 否定の短い疑問？」「否定文, 肯定の短い疑問？」で、前の文の助動詞・be 動詞と主語に合わせる（She can swim, can’t she?）。never・nobody・nothing をふくむ文は否定文なので、うしろは肯定（has he?・did they?）。Let’s ～, shall we?、命令文, will you?、There is ～, isn’t there?、I am ～, aren’t I? も覚える。否定疑問文への答えは、答えの内容が肯定なら Yes、否定なら No（日本語の「はい・いいえ」と逆になることがある）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: '"Aren’t you going?" "Yes, I am."', ja: '「行かないの？」「いいえ、行きます。」' }],
     questions: [
@@ -9906,7 +9076,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-195',
-    title: '入試の誤文訂正〈195〉（東大レベル：英作文の the reason why・the way）',
+    title: '入試の誤文訂正〈195〉（ the reason why・the way）',
     points: ['「～する理由」は the reason why ～（why や the reason は省略できる）、「～する方法・やり方」は the way ～ か how ～ で、the way how とはいわない。That is why ～「だから～」は前が理由、That is because ～「それは～だからだ」はうしろが理由。The reason ～ is that ...「～の理由は…だ」で、is because はさけるのがふつう。「～の理由」は the reason for ～（of ではない）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'That is the reason why he was late.', ja: 'それが彼がおくれた理由だ。' }],
     questions: [
@@ -9924,7 +9094,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-196',
-    title: '入試の誤文訂正〈196〉（国公立レベル：感嘆文 What a ～!・How ～!）',
+    title: '入試の誤文訂正〈196〉（感嘆文 What a ～!・How ～!）',
     points: ['感嘆文は「なんて～だろう」。名詞をふくむときは What（a／an）＋形容詞＋名詞＋主語＋動詞!、形容詞・副詞だけのときは How ＋形容詞・副詞＋主語＋動詞!。主語と動詞はふつうの語順で最後に置く。数えられない名詞（news・advice）や複数名詞の前には a／an をつけない（What good news!・What beautiful flowers!）。名詞の前は形容詞で、副詞は使わない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'What a beautiful day it is!', ja: 'なんて美しい日なんだろう！' }],
     questions: [
@@ -9942,7 +9112,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-197',
-    title: '入試の誤文訂正〈197〉（京大レベル：英作文の無生物主語 make・enable・prevent）',
+    title: '入試の誤文訂正〈197〉（無生物主語 make・enable・prevent）',
     points: ['英語では、物や出来事を主語にして「～が人に…させる」と言うことが多い（無生物主語）。make ＋人＋原形、enable・allow ＋人＋ to do、prevent・keep ＋人＋ from ～ing、take・lead ＋人＋ to ＋場所、remind ＋人＋ of ～、bring ＋人＋物 の形をおさえる。日本語の「～のせいで」「～のおかげで」「～すれば」を、無生物主語で書きかえる英作文によく使う。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The heavy rain prevented us from going out.', ja: '大雨のせいで、私たちは外出できなかった。' }],
     questions: [
@@ -9960,7 +9130,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-198',
-    title: '入試の誤文訂正〈198〉（東大レベル：英作文の倍数表現 twice as ～ as・three times）',
+    title: '入試の誤文訂正〈198〉（倍数表現 twice as ～ as・three times）',
     points: ['「A は B の～倍…だ」は 倍数＋ as ＋原級＋ as（twice as large as・three times as many books as）。2倍は twice、半分は half、1.5倍は one and a half times。倍数は as の前に置く。比較級を使う形 three times larger than もあるが、as と than を混ぜない。「～倍の大きさ」は twice the size of ～ のように 倍数＋ the ＋名詞 でも言える。数えられる名詞には many、数えられない名詞には much、大きさや人口には large を使う。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This room is twice as large as mine.', ja: 'この部屋は私の部屋の2倍の広さだ。' }],
     questions: [
@@ -9978,7 +9148,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-199',
-    title: '入試の誤文訂正〈199〉（国公立レベル：make と do の使い分け）',
+    title: '入試の誤文訂正〈199〉（make と do の使い分け）',
     points: ['make は「（形のあるものや結果を）作り出す」、do は「（作業・行為を）する」が基本。make を使う決まった言い方に make a mistake（まちがえる）・make a decision（決める）・make progress（進歩する）・make an effort（努力する）・make a noise（音を立てる）・make friends with ～（～と友だちになる）・make money（お金をかせぐ）がある。do を使う決まった言い方に do one’s homework（宿題をする）・do the dishes（皿を洗う）・do one’s best（最善をつくす）・do ～ a favor（～の頼みを聞く）・do harm（害をあたえる）・do business（商売をする）がある。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I made a mistake, but I did my best.', ja: '私はまちがえたが、最善をつくした。' }],
     questions: [
@@ -9996,7 +9166,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-200',
-    title: '入試の誤文訂正〈200〉（東大レベル：英作文の every time・whenever・each time）',
+    title: '入試の誤文訂正〈200〉（ every time・whenever・each time）',
     points: ['「～するたびに」は every time ～・each time ～・whenever ～。every time と each time はそれ自体が接続詞のように働くので、when を続けない（every time when は×）。time は単数のまま（every times は×）。時を表す節なので、未来のことでも現在形を使う（Whenever you need help, ...）。the next time ～「次に～するときに」、the first time ～「初めて～したときに」も同じ形。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Every time I visit him, he is reading a book.', ja: '彼をたずねるたびに、彼は本を読んでいる。' }],
     questions: [
@@ -10014,7 +9184,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-201',
-    title: '入試の誤文訂正〈201〉（国公立レベル：remember・forget・stop のあとの to と ing）',
+    title: '入試の誤文訂正〈201〉（remember・forget・stop のあとの to と ing）',
     points: ['remember・forget・regret は、あとに to ～ が来ると「これから～すること」、～ing が来ると「（すでに）～したこと」を表す。remember to lock「わすれずにかぎをかける」、remember meeting「会ったことをおぼえている」、forget to call「電話するのをわすれる」、never forget visiting「おとずれたことを決してわすれない」、regret to tell「残念ながら～を伝える」、regret telling「話したことをくやむ」。stop ～ing は「～するのをやめる」、stop to ～ は「～するために立ち止まる（手を止める）」。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Remember to lock the door. I remember meeting him last year.', ja: 'わすれずにドアのかぎをかけてね。私は去年彼に会ったことをおぼえている。' }],
     questions: [
@@ -10032,7 +9202,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-202',
-    title: '入試の誤文訂正〈202〉（京大レベル：英作文の否定語の倒置 Not until・Little did）',
+    title: '入試の誤文訂正〈202〉（否定語の倒置 Not until・Little did）',
     points: ['Never・Little・Seldom・Hardly・No sooner・Not until ～・Only after ～・Not only・Under no circumstances などの否定や制限の語句が文の頭に出ると、そのあとは疑問文と同じ語順（倒置）になる。一般動詞は do／does／did ＋主語＋原形、完了形は have／had ＋主語＋過去分詞、助動詞は助動詞＋主語。Not until ～ や Only after ～ では、その語句のあとの主節が倒置する。Hardly／No sooner は had ＋主語＋過去分詞のあと when／than が続く。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'Not until he came home did he notice the mistake.', ja: '家に帰ってはじめて、彼はそのまちがいに気づいた。' }],
     questions: [
@@ -10050,7 +9220,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-203',
-    title: '入試の誤文訂正〈203〉（国公立レベル：used to・be used to ～ing・get used to）',
+    title: '入試の誤文訂正〈203〉（used to・be used to ～ing・get used to）',
     points: ['used to ＋動詞の原形は「以前はよく～した・以前は～だった」（今はちがう）。疑問文・否定文は did ＋ use to ＋原形（Did you use to ～? / didn’t use to ～）。be used to ＋名詞・～ing は「～に慣れている」、get used to ＋名詞・～ing は「～に慣れる」で、この to は前置詞なので動詞は ing 形にする。be used to ＋動詞の原形は「～するのに使われる」（受け身の use）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I used to live in Osaka, so I am used to crowded trains.', ja: '私は以前大阪に住んでいたので、こんだ電車に慣れている。' }],
     questions: [
@@ -10068,7 +9238,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-204',
-    title: '入試の誤文訂正〈204〉（京大レベル：英作文の because of・due to・thanks to）',
+    title: '入試の誤文訂正〈204〉（ because of・due to・thanks to）',
     points: ['because of・due to・owing to・thanks to は前置詞のはたらきをするので、あとには名詞（句）が来る（because of the rain）。主語と動詞のある節が来るときは because・since・as を使う（because it rained）。due to は be 動詞のあとにも置ける（The delay was due to the snow.）。thanks to は「～のおかげで」とよい結果に使うことが多い。「～によって引き起こされる」は be caused by。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'The game was canceled because of the rain. / The game was canceled because it rained.', ja: '雨のために試合は中止になった。' }],
     questions: [
@@ -10086,7 +9256,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-205',
-    title: '入試の誤文訂正〈205〉（東大レベル：英作文の during・while・for の使い分け）',
+    title: '入試の誤文訂正〈205〉（ during・while・for の使い分け）',
     points: ['during は前置詞で、あとに「出来事・期間を表す名詞」が来て「～のあいだ（に）」（during the movie）。while は接続詞で、あとに「主語＋動詞」または ～ing が来る（while I was cooking / while driving）。for は前置詞で、あとに「時間の長さ」が来る（for three weeks）。during のあとに時間の長さ（three weeks）や節を置かない。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'I fell asleep during the movie. / I fell asleep while I was watching the movie.', ja: '私は映画のあいだにねむってしまった。' }],
     questions: [
@@ -10104,7 +9274,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-206',
-    title: '入試の誤文訂正〈206〉（国公立レベル：英作文の worth ～ing・It is worth）',
+    title: '入試の誤文訂正〈206〉（ worth ～ing・It is worth）',
     points: ['worth は前置詞のように使う形容詞で、あとに名詞か ～ing を置く。A is worth ～ing「A は～する価値がある」のとき、～ing の目的語は主語の A なので、うしろにもう一度 it を置かない（This book is worth reading.）。listen to のような前置詞つきの動詞は to を残す（worth listening to）。worth to ～ や worth of は×。It is worth ～ing「～する価値がある」、It is worthwhile to ～ も同じ意味。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'This book is worth reading. / It is worth visiting the museum.', ja: 'この本は読む価値がある。／その博物館はたずねる価値がある。' }],
     questions: [
@@ -10122,7 +9292,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-207',
-    title: '入試の誤文訂正〈207〉（東大レベル：英作文の so と such・too と enough の語順）',
+    title: '入試の誤文訂正〈207〉（ so と such・too と enough の語順）',
     points: ['so ＋形容詞・副詞、such (a) ＋形容詞＋名詞。数えられない名詞や複数形には a をつけず such good weather・such good friends。so many ＋数えられる名詞の複数、so much ＋数えられない名詞。「とても～なので…」は so／such ～ that …。too ～ to …「～すぎて…できない」では to のあとの動詞の目的語が主語と同じなら it を置かない。enough は形容詞・副詞のあとに置く（old enough）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was such a hot day that we went swimming. / He is old enough to drive.', ja: 'とても暑い日だったので泳ぎに行った。／彼は運転できる年齢だ。' }],
     questions: [
@@ -10140,7 +9310,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-208',
-    title: '入試の誤文訂正〈208〉（国公立レベル：英作文の reach・discuss などの他動詞と arrive at・talk about）',
+    title: '入試の誤文訂正〈208〉（ reach・discuss などの他動詞と arrive at・talk about）',
     points: ['reach・discuss・marry・enter・answer・resemble・contact・approach は他動詞で、すぐあとに目的語を置き、前置詞をつけない（reach the station、discuss the plan）。同じ意味でも arrive は自動詞なので arrive at（in）～、talk は talk about ～、reply は reply to ～ と前置詞が必要。日本語の「～に着く」「～について話し合う」「～と結婚する」につられて前置詞を入れないこと。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'We reached the station at noon. / We arrived at the station at noon.', ja: '私たちは正午に駅に着いた。' }],
     questions: [
@@ -10158,7 +9328,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-209',
-    title: '入試の誤文訂正〈209〉（京大レベル：英作文の It is not until ～ that …）',
+    title: '入試の誤文訂正〈209〉（ It is not until ～ that …）',
     points: ['It is (was) not until ～ that …「～してはじめて…する（した）」。強調構文なので that を使い、when や which にしない。that のあとはふつうの語順（主語＋動詞）で倒置しない。過去のことなら It was not until ～ と was にし、that のあとの動詞も過去形にそろえる。同じ意味で Not until ～ を文頭に出すと、主節は倒置して did he notice のようになる。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was not until he came home that he noticed the mistake.', ja: '家に帰ってはじめて、彼はそのまちがいに気づいた。' }],
     questions: [
@@ -10176,7 +9346,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-210',
-    title: '入試の誤文訂正〈210〉（東大レベル：英作文の比較 than・of と in の使い分け）',
+    title: '入試の誤文訂正〈210〉（比較 than・of と in の使い分け）',
     points: ['比較級のあとは than（as や then にしない）。最上級の「～の中で」は、場所や集団を表す単数名詞なら in（in the city・in our class）、同じ種類の複数のものなら of（of the three sisters・of all the seasons）。比較級を強めるのは much・far（more better・very better は×）。「ほかのどの～よりも」は 比較級＋ than any other ＋単数名詞。くらべる対象をそろえる（her score と my score → mine）。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'She is the youngest of the three sisters, and the tallest girl in her class.', ja: '彼女は三姉妹の中でいちばん年下で、クラスでいちばん背が高い女の子だ。' }],
     questions: [
@@ -10194,7 +9364,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-211',
-    title: '入試の誤文訂正〈211〉（国公立レベル：英作文の come と go・bring と take の使い分け）',
+    title: '入試の誤文訂正〈211〉（ come と go・bring と take の使い分け）',
     points: ['come は話し手や聞き手のいる（いることになる）場所へ近づくとき、go はそこからはなれて別の場所へ行くとき。英語では相手のところへ行くときも come を使う（I’m coming. / I’ll come to your house.）。bring は物や人を話し手・聞き手のいる場所へ「持ってくる・連れてくる」、take はそこから別の場所へ「持っていく・連れていく」。日本語の「行く」「持っていく」にそのまま合わせないこと。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: '“Dinner is ready!” “OK, I’m coming.” / Take an umbrella when you go out.', ja: '「ごはんですよ」「はい、今行きます」／出かけるときはかさを持っていきなさい。' }],
     questions: [
@@ -10212,7 +9382,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-212',
-    title: '入試の誤文訂正〈212〉（京大レベル：英作文の数字＋名詞の形容詞 a ten-year-old boy・a five-minute walk）',
+    title: '入試の誤文訂正〈212〉（数字＋名詞の形容詞 a ten-year-old boy・a five-minute walk）',
     points: ['「数字＋名詞」を名詞の前に置いて形容詞として使うときは、ハイフンでつなぎ、名詞は単数形にする（a ten-year-old boy・a five-minute walk・a three-day trip）。be 動詞のあとに置くときはハイフンをつけず複数形にする（He is ten years old.）。「～歳の子どもたち」と名詞として使うときは eight-year-olds のように最後に s をつける。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'He is a ten-year-old boy. / He is ten years old.', ja: '彼は十歳の男の子だ。／彼は十歳だ。' }],
     questions: [
@@ -10230,7 +9400,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-213',
-    title: '入試の誤文訂正〈213〉（東大レベル：英作文の one of the ＋複数名詞・each・every と動詞の一致）',
+    title: '入試の誤文訂正〈213〉（ one of the ＋複数名詞・each・every と動詞の一致）',
     points: ['one of the ～「～のうちの一つ（一人）」は、of のあとが複数名詞（one of the best players）で、主語の中心は one なので動詞は単数（One of my friends lives ～）。each と every は単数あつかいで、あとの名詞も単数（Each student has ～・Every child needs ～）。each of ＋複数名詞も動詞は単数（Each of the boys is ～）。every A and every B も単数あつかい。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'One of my friends lives in Canada. / Each student has a locker.', ja: '友だちの一人はカナダに住んでいる。／生徒はそれぞれロッカーをもっている。' }],
     questions: [
@@ -10248,7 +9418,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-214',
-    title: '入試の誤文訂正〈214〉（国公立レベル：まぎらわしい形容詞 sensitive・sensible・economic・economical）',
+    title: '入試の誤文訂正〈214〉（まぎらわしい形容詞 sensitive・sensible・economic・economical）',
     points: ['同じ語から生まれた形容詞は意味がちがう。sensitive「敏感な・傷つきやすい」／sensible「分別のある・賢明な」、economic「経済の」／economical「経済的な（安上がりな）」、imaginative「想像力豊かな」／imaginary「想像上の」、respectful「敬意をはらう」／respectable「りっぱな」、considerate「思いやりのある」／considerable「かなりの」、successful「成功した」／successive「連続する」。文の意味に合う方を選ぶ。［ ］の部分を正しくするものを4つから選ぶ。'],
     examples: [{ en: 'It was sensible of you to bring an umbrella. / My skin is sensitive to the sun.', ja: 'かさを持ってきたのは賢明だったね。／私のはだは日光に敏感だ。' }],
     questions: [
@@ -10266,7 +9436,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-215',
-    title: '入試の誤文訂正〈215〉（京大レベル：英作文の despite・in spite of・although の使い分け）',
+    title: '入試の誤文訂正〈215〉（ despite・in spite of・although の使い分け）',
     points: ['despite と in spite of は前置詞なので、あとに名詞や動名詞が来る（despite the rain／in spite of being tired）。although・though・even though は接続詞なので、あとに主語＋動詞が来る（although it rained）。despite of とは言わない。'],
     examples: [{ en: 'Despite the rain, we went out. / Although it was raining, we went out.', ja: '雨にもかかわらず、私たちは出かけた。／雨がふっていたけれど、私たちは出かけた。' }],
     questions: [
@@ -10284,7 +9454,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-216',
-    title: '入試の誤文訂正〈216〉（東大レベル：英作文の regret・stop・try ＋ to 不定詞／動名詞）',
+    title: '入試の誤文訂正〈216〉（ regret・stop・try ＋ to 不定詞／動名詞）',
     points: ['regret・stop・try は、あとが to 不定詞か動名詞かで意味が変わる。regret -ing「（過去に）～したことを後悔する」／regret to ～「残念ながら～する」、stop -ing「～するのをやめる」／stop to ～「～するために立ち止まる」、try -ing「ためしに～してみる」／try to ～「～しようと努力する」。'],
     examples: [{ en: 'He stopped to talk with his friend. / He stopped talking.', ja: '彼は友だちと話すために立ち止まった。／彼は話すのをやめた。' }],
     questions: [
@@ -10302,7 +9472,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-217',
-    title: '入試の誤文訂正〈217〉（国公立レベル：まぎらわしい前置詞 besides・except・between・among）',
+    title: '入試の誤文訂正〈217〉（まぎらわしい前置詞 besides・except・between・among）',
     points: ['besides は「～に加えて」（ほかにもある）、except は「～をのぞいて」（それだけはちがう）。between は2つ（または1つ1つがはっきりした個々）のあいだ、among は3つ以上のまとまりの中。beside（～のそばに）と besides をまちがえない。'],
     examples: [{ en: 'Besides English, she speaks French. / Everyone came except Tom.', ja: '英語に加えて、彼女はフランス語も話す。／トム以外はみんな来た。' }],
     questions: [
@@ -10319,26 +9489,8 @@ const RAW_FIX: GrammarUnit[] = [
     ],
   },
   {
-    id: 'exam-fix-218',
-    title: '入試の誤文訂正〈218〉（京大レベル：英作文の It is no use ～ing・There is no point in ～ing）',
-    points: ['「～してもむだだ」は It is no use ～ing／It is no good ～ing／There is no point (in) ～ing。use・good のあとも in のあとも動名詞を使い、to 不定詞にしない（It is useless to ～ なら to 不定詞）。no use のあとに of をつけない。'],
-    examples: [{ en: 'It is no use crying over spilt milk. / There is no point in waiting any longer.', ja: 'こぼれたミルクをなげいてもむだだ。／これ以上待ってもしかたがない。' }],
-    questions: [
-      { sentence: 'It is no use [to cry] over the broken vase now.', choices: ['crying', 'cry', 'cried', 'of crying'], answer: 0, why: 'It is no use のあとは動名詞 crying。' },
-      { sentence: 'There is no point [to wait] for the bus; it has already left.', choices: ['in waiting', 'wait', 'waited', 'for wait'], answer: 0, why: 'There is no point (in) ～ing なので in waiting。' },
-      { sentence: 'It is no good [to complain] about the weather.', choices: ['complaining', 'complain', 'complained', 'for complaining'], answer: 0, why: 'It is no good のあとも動名詞 complaining。' },
-      { sentence: 'It is no use [of asking] him; he never listens.', choices: ['asking', 'to asking', 'ask', 'asked'], answer: 0, why: 'no use のあとに of はつけない。It is no use asking。' },
-      { sentence: 'There is no point [in to argue] with her about it.', choices: ['in arguing', 'to argue in', 'argue', 'argued'], answer: 0, why: '前置詞 in のあとは動名詞 arguing。' },
-      { sentence: 'It is [no useful] trying to change his mind.', choices: ['no use', 'not use', 'no using', 'useless of'], answer: 0, why: '「～してもむだだ」は It is no use ～ing。' },
-      { sentence: 'It is useless [arguing] with him; he is very stubborn.', choices: ['to argue', 'argue', 'argued', 'of arguing'], answer: 0, why: 'It is useless のあとは to 不定詞 to argue（形式主語 It）。' },
-      { sentence: 'There is no point [of studying] all night before the test.', choices: ['in studying', 'to studying', 'studied', 'for study'], answer: 0, why: 'There is no point in ～ing なので in studying。' },
-      { sentence: 'It is no use [worried] about things you cannot control.', choices: ['worrying', 'worry', 'to worry', 'of worry'], answer: 0, why: 'It is no use のあとは動名詞 worrying。' },
-      { sentence: 'There is [not point] in hurrying; the shop is already closed.', choices: ['no point', 'none point', 'not a point of', 'no pointing'], answer: 0, why: '「～してもしかたがない」は There is no point in ～ing。' },
-    ],
-  },
-  {
     id: 'exam-fix-219',
-    title: '入試の誤文訂正〈219〉（東大レベル：英作文の provide A with B・rob A of B・remind A of B の前置詞）',
+    title: '入試の誤文訂正〈219〉（ provide A with B・rob A of B・remind A of B の前置詞）',
     points: ['動詞ごとに決まった前置詞がある。provide・supply A with B「A に B をあたえる」（provide B for A とも言う）、rob・deprive A of B「A から B をうばう」、remind A of B「A に B を思い出させる」、inform A of B「A に B を知らせる」、cure A of B「A の B を治す」。steal は steal B from A（物を主語の目的語にする）。'],
     examples: [{ en: 'The school provides students with lunch. / This song reminds me of my childhood.', ja: 'その学校は生徒に昼食を出している。／この歌を聞くと子どものころを思い出す。' }],
     questions: [
@@ -10356,7 +9508,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-220',
-    title: '入試の誤文訂正〈220〉（国公立レベル：as soon as・the moment ～「～するとすぐに」）',
+    title: '入試の誤文訂正〈220〉（as soon as・the moment ～「～するとすぐに」）',
     points: ['as soon as・the moment・the minute・immediately（イギリス英語）は「～するとすぐに」という接続詞のはたらきをする。時をあらわす副詞節なので、未来のことでも中は現在形（As soon as he arrives, …）。as soon as の as を落とさない。on ～ing も「～するとすぐに」の意味になる（On arriving, …）。'],
     examples: [{ en: 'As soon as he arrives, we will start. / The moment she saw me, she smiled.', ja: '彼が着いたらすぐに始めよう。／私を見たとたん、彼女はほほえんだ。' }],
     questions: [
@@ -10374,7 +9526,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-221',
-    title: '入試の誤文訂正〈221〉（京大レベル：英作文の anything but・nothing but・all but）',
+    title: '入試の誤文訂正〈221〉（ anything but・nothing but・all but）',
     points: ['but は「～以外」の意味の前置詞としても使われる。anything but ～「けっして～ではない（～以外なら何でも）」、nothing but ～「～だけ（～以外は何もない）＝only」、all but ～「ほとんど～（＝almost）」。意味が正反対になりやすいので、文の内容から選ぶ。'],
     examples: [{ en: 'The test was anything but easy. / He did nothing but sleep all day.', ja: 'そのテストはけっしてかんたんではなかった。／彼は一日中ねてばかりいた。' }],
     questions: [
@@ -10392,7 +9544,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-222',
-    title: '入試の誤文訂正〈222〉（東大レベル：英作文の形容詞＋前置詞 similar to・aware of・capable of・responsible for）',
+    title: '入試の誤文訂正〈222〉（形容詞＋前置詞 similar to・aware of・capable of・responsible for）',
     points: ['形容詞ごとに決まった前置詞がある。similar to「～に似ている」、aware of「～に気づいている」、capable of ～ing「～できる」、responsible for「～に責任がある」、familiar with（人が物事に）／familiar to（物事が人に）「よく知っている」、dependent on「～にたよっている」、independent of「～から独立した」。'],
     examples: [{ en: 'Her idea is similar to mine. / He was not aware of the danger.', ja: '彼女の考えは私の考えに似ている。／彼はその危険に気づいていなかった。' }],
     questions: [
@@ -10410,7 +9562,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-223',
-    title: '入試の誤文訂正〈223〉（国公立レベル：borrow・lend・rent の使い分け）',
+    title: '入試の誤文訂正〈223〉（borrow・lend・rent の使い分け）',
     points: ['borrow は「（無料で）借りる」（borrow A from B）、lend は「（無料で）貸す」（lend 人 物／lend 物 to 人）、rent は「お金をはらって借りる・貸す」（家・車など）。トイレや電話のように持ち運ばずにその場で使うものは use を使う（May I use your bathroom?）。'],
     examples: [{ en: 'Can I borrow your pen? / She lent me her umbrella.', ja: 'ペンを借りてもいい？／彼女はかさを貸してくれた。' }],
     questions: [
@@ -10428,7 +9580,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-224',
-    title: '入試の誤文訂正〈224〉（京大レベル：英作文の hope と wish の使い分け）',
+    title: '入試の誤文訂正〈224〉（ hope と wish の使い分け）',
     points: ['hope は「（実現しそうなことを）望む」で、that 節の中はふつうの時制（I hope it will be sunny／I hope you get well）。wish は「（実現しそうにないことを）願う」で、that 節の中は仮定法（今のことは過去形、過去のことは過去完了）。ただし wish 人 物（I wish you a happy birthday）や wish to do は「願う・したい」の意味で使える。'],
     examples: [{ en: 'I hope it will be sunny tomorrow. / I wish I could fly.', ja: '明日晴れるといいな。／空を飛べたらいいのに。' }],
     questions: [
@@ -10446,7 +9598,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-225',
-    title: '入試の誤文訂正〈225〉（東大レベル：英作文の affect と effect・expect と wait for）',
+    title: '入試の誤文訂正〈225〉（ affect と effect・expect と wait for）',
     points: ['affect は動詞「～に影響する」（affect A）、effect は名詞「影響・効果」（have an effect on A）。expect は「（起こると）予想する・期待する」（expect A／expect to do／expect 人 to do）、wait for は「（来るのを）待つ」、look forward to ～ing は「～を楽しみに待つ」。'],
     examples: [{ en: 'The weather affects our mood. / Music has a strong effect on us.', ja: '天気は気分に影響する。／音楽は私たちに強い影響をあたえる。' }],
     questions: [
@@ -10464,7 +9616,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-226',
-    title: '入試の誤文訂正〈226〉（国公立レベル：「～もそうだ」の So do I・Neither do I）',
+    title: '入試の誤文訂正〈226〉（「～もそうだ」の So do I・Neither do I）',
     points: ['肯定の文に「～もそうだ」と続けるときは So ＋（助）動詞＋主語、否定の文には Neither（Nor）＋（助）動詞＋主語。（助）動詞は前の文に合わせる（be 動詞なら be、一般動詞なら do・does・did、助動詞ならその助動詞）。主語と動詞の順番が入れかわることに注意。'],
     examples: [{ en: 'I like cats. — So do I. / I can’t swim. — Neither can I.', ja: '私はネコが好き。— 私も。／私は泳げない。— 私も（泳げない）。' }],
     questions: [
@@ -10482,7 +9634,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-227',
-    title: '入試の誤文訂正〈227〉（京大レベル：英作文の be to 不定詞（予定・義務・可能・意図））',
+    title: '入試の誤文訂正〈227〉（ be to 不定詞（予定・義務・可能・意図））',
     points: ['be to ＋動詞の原形は、文脈によって「予定（～することになっている）」「義務（～すべきだ）」「可能（～できる、ふつう否定文・受け身）」「意図（～するつもりなら、if 節で）」などをあらわす。to のあとは原形。可能の意味ではふつう受け身（be to be seen）を使う。'],
     examples: [{ en: 'The meeting is to be held next Monday. / If you are to succeed, you must work hard.', ja: '会議は来週の月曜日に開かれることになっている。／成功するつもりなら、一生けんめい働かなければならない。' }],
     questions: [
@@ -10500,7 +9652,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-228',
-    title: '入試の誤文訂正〈228〉（東大レベル：英作文の people・police・news・furniture などの単数・複数）',
+    title: '入試の誤文訂正〈228〉（ people・police・news・furniture などの単数・複数）',
     points: ['people（人々）・police（警察）・cattle（牛）はつねに複数あつかい。news・information・furniture・advice は数えられない名詞で単数あつかい（a news／newses とは言わない）。mathematics・physics・economics のような学問名は s で終わっても単数あつかい。a series は「一続き」で単数あつかい。'],
     examples: [{ en: 'The police are looking for the man. / The news was surprising.', ja: '警察はその男をさがしている。／その知らせはおどろくべきものだった。' }],
     questions: [
@@ -10518,7 +9670,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-229',
-    title: '入試の誤文訂正〈229〉（国公立レベル：I don’t think ～ の否定の位置と I hope not・I’m afraid not）',
+    title: '入試の誤文訂正〈229〉（I don’t think ～ の否定の位置と I hope not・I’m afraid not）',
     points: ['英語では「～ではないと思う」を I don’t think ～ と、think の側を否定するのがふつう（×I think he won’t come → ○I don’t think he will come）。believe・suppose・imagine も同じ。ただし hope と be afraid は I hope he won’t ～ のように that 節を否定する。', '相手のことばに「そうではないといいね」「残念ながらそうではない」とこたえるときは I hope not／I’m afraid not（×I don’t hope so）。「そうだといいね」は I hope so、「そう思う」は I think so。'],
     examples: [{ en: 'I don’t think it will rain. / Will he be late? — I hope not.', ja: '雨はふらないと思う。／彼はおくれるかな？—おくれないといいね。' }],
     questions: [
@@ -10536,7 +9688,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-230',
-    title: '入試の誤文訂正〈230〉（京大レベル：英作文の接続詞の重ね使い Although ～, but・Because ～, so をさける）',
+    title: '入試の誤文訂正〈230〉（接続詞の重ね使い Although ～, but・Because ～, so をさける）',
     points: ['日本語の「～だけれど、…」「～なので、…」につられて、英語で Although ～, but … や Because ～, so … のように接続詞を2つ重ねるのはまちがい。Although か but、Because か so のどちらか一方だけを使う（○Although it rained, we went out. ○It rained, but we went out.）。', 'though・even though・while・since・as も同じで、主節の前に but や so をつけない。because of ＋名詞・despite ＋名詞は前置詞なので、うしろに文（主語＋動詞）はおかない。'],
     examples: [{ en: 'Although the road was icy, we arrived on time. / Because the bus was late, I took a taxi.', ja: '道はこおっていたけれど、私たちは時間どおりに着いた。／バスがおくれたので、私はタクシーに乗った。' }],
     questions: [
@@ -10554,7 +9706,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-231',
-    title: '入試の誤文訂正〈231〉（東大レベル：英作文の数の言い方 hundreds of・two hundred・dozens of）',
+    title: '入試の誤文訂正〈231〉（数の言い方 hundreds of・two hundred・dozens of）',
     points: ['具体的な数のときの hundred・thousand・million・dozen は複数形にせず、of もつけない（two hundred people／three thousand yen／a dozen eggs）。数がはっきりしない「何百もの」「何十もの」は hundreds of・thousands of・dozens of と複数形＋of を使う。', '数詞＋名詞をハイフンでつないで形容詞にするときは名詞を単数にする（a five-year-old boy／a two-hour meeting）。a lot of・a number of のあとは複数名詞、the number of ～ は「～の数」で単数あつかい。'],
     examples: [{ en: 'Two hundred people came to the concert, and hundreds of others watched it online.', ja: '200人がコンサートに来て、ほかに何百人もがオンラインで見た。' }],
     questions: [
@@ -10572,7 +9724,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-232',
-    title: '入試の誤文訂正〈232〉（国公立レベル：形容詞をならべる順番 a beautiful old wooden house）',
+    title: '入試の誤文訂正〈232〉（形容詞をならべる順番 a beautiful old wooden house）',
     points: ['名詞の前に形容詞をいくつかならべるときは、ふつう「冠詞・数 → 意見（beautiful・nice）→ 大きさ（big・small）→ 新旧・年齢（old・new・young）→ 形（round）→ 色（red）→ 産地（Japanese）→ 材料（wooden）→ 名詞」の順にする。', '数は first・second などの序数が先で、そのあとに two・three などの数がくる（the first two chapters）。all・both は冠詞や所有格の前に置く（all the students／both my parents）。'],
     examples: [{ en: 'She lives in a beautiful old wooden house. / The first two chapters are easy.', ja: '彼女は美しく古い木の家に住んでいる。／最初の2章はやさしい。' }],
     questions: [
@@ -10590,7 +9742,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-233',
-    title: '入試の誤文訂正〈233〉（国公立レベル：交通手段の by car・on foot・take a bus）',
+    title: '入試の誤文訂正〈233〉（交通手段の by car・on foot・take a bus）',
     points: ['「～で行く」の交通手段は by ＋無冠詞の名詞（by car・by bus・by train・by bike）。ただし「歩いて」は on foot。by のあとに a・the・my をつけたり、名詞を複数形にしたりしない。', '特定の乗り物や冠詞・所有格がつくときは in my car・on the bus・on the 8:30 train のように in／on を使う（車・タクシーは in、バス・電車・自転車は on）。動詞で言うなら take a bus・take the train・walk to school。get on／off は バス・電車、get in／out of は 車・タクシー。'],
     examples: [{ en: 'I go to school by bus, but my sister goes on foot. / We went there in my father’s car.', ja: '私はバスで通学するが、姉は歩いて行く。／私たちは父の車でそこへ行った。' }],
     questions: [
@@ -10608,7 +9760,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-234',
-    title: '入試の誤文訂正〈234〉（東大レベル：英作文の can と be able to・could と was able to）',
+    title: '入試の誤文訂正〈234〉（ can と be able to・could と was able to）',
     points: ['can は助動詞なので、ほかの助動詞（will・would like to のあと）や完了形（have ～）の中では使えない。そのときは be able to を使う（will be able to／have been able to）。can のあとは原形で、can に s や to はつけない。', 'could は「（いつでも）～する能力があった」を表す。過去の一回の場面で「（実際に）～できた」と言うときは was able to／managed to を使う（I was able to catch the last train.）。否定の could not はどちらにも使える。be able to の否定は be not able to。'],
     examples: [{ en: 'I could swim when I was five. / Yesterday I was able to catch the last train.', ja: '私は5歳のとき泳げた。／きのうは最終電車に間に合った。' }],
     questions: [
@@ -10626,7 +9778,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-235',
-    title: '入試の誤文訂正〈235〉（京大レベル：英作文の say・tell・speak・talk の使い分け）',
+    title: '入試の誤文訂正〈235〉（ say・tell・speak・talk の使い分け）',
     points: ['tell は人を直接目的語にとる（tell 人 that ～／tell 人 to do／tell 人 how to ～）。say は人を目的語にとらず、say that ～／say to 人 の形。tell には tell a lie・tell the truth・tell a story などの決まった言い方がある。', 'speak は言語や「話す能力」（speak English／speak to 人）、talk は「話し合う・おしゃべりする」（talk to 人／talk about ～）。about をとるのは talk・speak で、say about ～ とはふつう言わない。「実を言うと」は To tell the truth。'],
     examples: [{ en: 'She told me that she was tired. / He said that he would come later.', ja: '彼女は私に、つかれていると言った。／彼はあとで来ると言った。' }],
     questions: [
@@ -10644,7 +9796,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-236',
-    title: '入試の誤文訂正〈236〉（国公立レベル：in time と on time・in the end と at the end）',
+    title: '入試の誤文訂正〈236〉（in time と on time・in the end と at the end）',
     points: ['on time は「時間どおりに・定刻に」（The train arrived on time.）、in time は「間に合って」（in time to catch the train／in time for the start）。just in time で「ぎりぎり間に合って」。', 'in the end は「最後には・結局」（副詞句として文全体にかかる）、at the end of ～ は「～の終わりに・～のつき当たりに」（at the end of the street／at the end of the film）。「～の終わりまでに」は by the end of ～、「ついに・やっと」は at last。'],
     examples: [{ en: 'The bus left on time, and we arrived just in time for the concert. / In the end, we went home happy.', ja: 'バスは定刻に出発し、私たちはコンサートにぎりぎり間に合った。／結局、私たちは楽しい気分で家に帰った。' }],
     questions: [
@@ -10662,7 +9814,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-237',
-    title: '入試の誤文訂正〈237〉（東大レベル：英作文の alone と lonely・alive と living の使い分け）',
+    title: '入試の誤文訂正〈237〉（ alone と lonely・alive と living の使い分け）',
     points: ['alone は「ひとりで（いる）」という状態を表し、名詞の前には置かない（live alone／leave 人 alone）。lonely は「さびしい」という気持ちを表す形容詞で、名詞の前にも置ける（a lonely man）が、副詞としては使わない。', 'alive・asleep のように a- で始まる形容詞はふつう名詞の前に置かず、be動詞のあとなどで使う（The fish is alive.）。名詞の前では living・sleeping・live を使う（a living fish／a sleeping baby）。lively は「元気な・にぎやかな」で意味がちがう。'],
     examples: [{ en: 'He lives alone, but he never feels lonely. / The fish was still alive, so we put the living fish back in the river.', ja: '彼はひとりで暮らしているが、さびしいと感じたことはない。／魚はまだ生きていたので、私たちはその生きている魚を川にもどした。' }],
     questions: [
@@ -10680,7 +9832,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-238',
-    title: '入試の誤文訂正〈238〉（京大レベル：英作文の so far・until now と現在完了）',
+    title: '入試の誤文訂正〈238〉（ so far・until now と現在完了）',
     points: ['so far・until now・up to now（今までのところ）、this month・this year（今月・今年これまでに）、since ～・for ＋期間は、今までの経験・完了・継続を表す現在完了（have ＋過去分詞）といっしょに使うことが多い。', 'last year・an hour ago・yesterday のような過去の一点を表す語は現在完了といっしょに使わず、過去形にする。過去のある時点までの経験は過去完了（had ＋過去分詞）、「～したにちがいない」は must have ＋過去分詞。since のあとは起点、for のあとは期間。'],
     examples: [{ en: 'So far, I have visited five countries. / I met him three times last year.', ja: '今までのところ、私は5か国を訪れたことがある。／私は去年彼に3回会った。' }],
     questions: [
@@ -10698,7 +9850,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-239',
-    title: '入試の誤文訂正〈239〉（国公立レベル：no longer・not ～ any longer・still と yet）',
+    title: '入試の誤文訂正〈239〉（no longer・not ～ any longer・still と yet）',
     points: ['「もはや～ない」は no longer（一般動詞の前・be動詞のあと）か not ～ any longer（文の終わり）。no longer はそれ自体が否定なので don’t や not と重ねない（×doesn’t live no longer）。', 'still は「まだ（続いている）」で肯定文・疑問文に使う（She is still sleeping.／Are you still angry?）。yet は否定文で「まだ（～ない）」、疑問文で「もう（～したか）」。肯定文で「もう～した」は already。'],
     examples: [{ en: 'He no longer lives in Tokyo. / Have you finished yet? — No, I’m still working.', ja: '彼はもう東京に住んでいない。／もう終わった？—いいえ、まだやっているところです。' }],
     questions: [
@@ -10716,7 +9868,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-240',
-    title: '入試の誤文訂正〈240〉（東大レベル：英作文の as ～ as possible・as ～ as one can）',
+    title: '入試の誤文訂正〈240〉（ as ～ as possible・as ～ as one can）',
     points: ['「できるだけ～」は as ＋原級＋ as possible か as ＋原級＋ as 主語 can。過去の文では can を could にする（I ran as fast as I could.）。possible は形容詞なので possibly にしない。', 'as と as のあいだは比較級ではなく原級。動詞を修飾するときは副詞（as clearly as possible）、名詞をともなうときは as many ＋複数名詞 as／as much ＋数えられない名詞 as にする。'],
     examples: [{ en: 'Please come back as soon as possible. / I ran as fast as I could.', ja: 'できるだけ早くもどってきてください。／私はできるだけ速く走った。' }],
     questions: [
@@ -10734,7 +9886,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-241',
-    title: '入試の誤文訂正〈241〉（京大レベル：英作文の手段・道具の by と with）',
+    title: '入試の誤文訂正〈241〉（手段・道具の by と with）',
     points: ['手に持って使う道具は with ＋冠詞＋名詞（with a pen／with scissors／with a key）。通信・交通・支払いなどの手段は by ＋無冠詞の名詞（by email／by bus／by credit card／by hand）。', '受け身の動作主（だれによって）は by（painted by Picasso）。自然の力による破壊も by（destroyed by fire）。「～することによって」は by ～ing（by watching films）で、with ～ing にはしない。'],
     examples: [{ en: 'He cut the paper with scissors and sent the documents by email.', ja: '彼ははさみで紙を切り、書類を電子メールで送った。' }],
     questions: [
@@ -10752,7 +9904,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-242',
-    title: '入試の誤文訂正〈242〉（国公立レベル：否定文の「～も」too と either・also の位置）',
+    title: '入試の誤文訂正〈242〉（否定文の「～も」too と either・also の位置）',
     points: ['「～も」は肯定文では too（文末）・also（文中）、否定文では文末の either を使う（I don’t like it, either.）。否定文で too・also・as well は使わない。', 'also は一般動詞の前、be動詞と助動詞のあとに置く（She also speaks Spanish.／I am also tired.／We can also go.）。also と too を重ねたり、文頭に Too を置いたりしない。'],
     examples: [{ en: 'I like soccer, too. / I don’t like coffee, either. / She is also a good singer.', ja: '私もサッカーが好きだ。／私もコーヒーは好きではない。／彼女は歌もうまい。' }],
     questions: [
@@ -10770,7 +9922,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-243',
-    title: '入試の誤文訂正〈243〉（東大レベル：英作文の some と any・something と anything）',
+    title: '入試の誤文訂正〈243〉（ some と any・something と anything）',
     points: ['some・something・somebody はふつう肯定文で、any・anything・anybody は否定文や疑問文で使う（I have some friends.／I don’t have any money.／Do you have any questions?）。', 'ものをすすめたりたのんだりする疑問文では some を使う（Would you like some tea?）。not と nothing・nobody を重ねない（×isn’t nothing → ○isn’t anything／is nothing）。'],
     examples: [{ en: 'I don’t have any money, but I have some ideas. / Would you like some tea?', ja: '私はお金はまったくないが、考えはいくつかある。／お茶はいかがですか。' }],
     questions: [
@@ -10788,7 +9940,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-244',
-    title: '入試の誤文訂正〈244〉（京大レベル：英作文の mind ～ing・Would you mind if ～）',
+    title: '入試の誤文訂正〈244〉（ mind ～ing・Would you mind if ～）',
     points: ['mind のあとは動名詞（～ing）で、to 不定詞はとらない（Would you mind opening the window?／I don’t mind waiting.）。否定は not ～ing（Would you mind not smoking here?）。', '「～してもかまいませんか」は Do you mind if I ～（現在形）／Would you mind if I ～（過去形がていねい）。mind は「いやだと思う」という意味なので、引き受けるときの答えは Not at all. や Of course not. になる。'],
     examples: [{ en: 'Would you mind opening the window? — Not at all. / Do you mind if I sit here?', ja: '窓を開けていただけますか。—いいですよ。／ここにすわってもいいですか。' }],
     questions: [
@@ -10806,7 +9958,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-245',
-    title: '入試の誤文訂正〈245〉（国公立レベル：agree with・agree to・agree on の使い分け）',
+    title: '入試の誤文訂正〈245〉（agree with・agree to・agree on の使い分け）',
     points: ['agree with は「（人・意見）に賛成する」（I agree with you.／I agree with his opinion.）。agree to は「（提案・計画・条件）に同意する・応じる」（She agreed to the plan.）。agree on は「（決めること）について意見が一致する」（We agreed on the date.）。', 'agree は自動詞なので、ふつう目的語を直接とらない（× agree you）。agree to do で「～することに同意する」、agree that ～ で「～ということで意見が一致する」。'],
     examples: [{ en: 'I agree with you. / They agreed to our proposal. / We agreed on a meeting place.', ja: 'あなたに賛成です。／彼らは私たちの提案に応じた。／私たちは待ち合わせ場所について意見が一致した。' }],
     questions: [
@@ -10824,7 +9976,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-246',
-    title: '入試の誤文訂正〈246〉（東大レベル：英作文の apologize to 人 for・complain to 人 about）',
+    title: '入試の誤文訂正〈246〉（ apologize to 人 for・complain to 人 about）',
     points: ['apologize は自動詞で、「（人）にあやまる」は apologize to 人、「（こと）についてあやまる」は apologize for ～（I apologized to her for being late.）。× apologize her。', 'complain も自動詞で、「（人）に不満を言う」は complain to 人、「（こと）について不満を言う」は complain about（of）～。complain that ～ で「～だと不満を言う」。名詞形は apology・complaint で、make an apology／make a complaint とも言う。'],
     examples: [{ en: 'I apologized to my teacher for being late. / She complained to the manager about the noise.', ja: '私は遅れたことを先生にあやまった。／彼女は騒音のことで支配人に苦情を言った。' }],
     questions: [
@@ -10842,7 +9994,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-247',
-    title: '入試の誤文訂正〈247〉（京大レベル：英作文の deal with・cope with・put up with）',
+    title: '入試の誤文訂正〈247〉（ deal with・cope with・put up with）',
     points: ['deal with ～ は「（問題・人）に対処する・あつかう」、cope with ～ は「（困難）にうまく対処する・なんとか切りぬける」、put up with ～ は「（いやなこと）をがまんする」。どれも with が必要で、× deal the problem／× cope the stress／× put up the noise。', 'put up with は3語でひとまとまりの句動詞で、with をぬかすと「（テント・看板）を立てる」などの別の意味になる。前置詞のあとに動詞を置くときは ～ing（cope with living alone）。'],
     examples: [{ en: 'We need to deal with this problem. / She coped with the stress well. / I can’t put up with the noise.', ja: '私たちはこの問題に対処する必要がある。／彼女はストレスにうまく対処した。／その騒音にはがまんできない。' }],
     questions: [
@@ -10860,7 +10012,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-248',
-    title: '入試の誤文訂正〈248〉（国公立レベル：英作文の succeed in ～ing・manage to do・fail to do）',
+    title: '入試の誤文訂正〈248〉（ succeed in ～ing・manage to do・fail to do）',
     points: ['「～することに成功する」は succeed in ～ing（前置詞 in のあとは動名詞）で、× succeed to do。manage to do は「なんとか～する」、fail to do は「～しそこなう・～できない」で、どちらも to 不定詞をとる。', 'never fail to do は「かならず～する」。名詞は success（成功）・failure（失敗）。形容詞は successful（be successful in ～ing）。'],
     examples: [{ en: 'She succeeded in passing the exam. / We managed to catch the last train. / He failed to arrive on time.', ja: '彼女は試験に合格することに成功した。／私たちはなんとか終電に間に合った。／彼は時間どおりに着けなかった。' }],
     questions: [
@@ -10878,7 +10030,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-249',
-    title: '入試の誤文訂正〈249〉（東大レベル：英作文の result in・result from・lead to）',
+    title: '入試の誤文訂正〈249〉（ result in・result from・lead to）',
     points: ['A result in B は「A が B という結果になる（原因→結果）」、B result from A は「B が A から生じる（結果←原因）」。向きを逆にするとまちがい。lead to ～ も「～につながる・～をまねく」（原因→結果）。', 'result・lead は自動詞で、受け身にしない（× is resulted in）。前置詞のあとに動詞を置くときは ～ing（lead to losing）。名詞の result は as a result（その結果）。'],
     examples: [{ en: 'Heavy rain resulted in floods. / The floods resulted from heavy rain. / Stress can lead to illness.', ja: '大雨の結果、洪水が起きた。／洪水は大雨から生じた。／ストレスは病気につながりうる。' }],
     questions: [
@@ -10896,7 +10048,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-250',
-    title: '入試の誤文訂正〈250〉（国公立レベル：英作文の take part in・participate in・join）',
+    title: '入試の誤文訂正〈250〉（ take part in・participate in・join）',
     points: ['「（活動・行事）に参加する」は take part in ～／participate in ～ で、前置詞 in が必要（× take part the race／× participate the meeting）。', 'join は他動詞で、前置詞なしで目的語をとる（join the club／join us）。× join to the club／× join in the club（「クラブに入る」の意味では in をつけない）。'],
     examples: [{ en: 'She took part in the speech contest. / Many students participated in the event. / Why don’t you join us?', ja: '彼女はスピーチコンテストに参加した。／多くの生徒がその行事に参加した。／いっしょにどう？' }],
     questions: [
@@ -10914,7 +10066,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-251',
-    title: '入試の誤文訂正〈251〉（国公立レベル：英作文の be accustomed to ～ing・when it comes to ～ing）',
+    title: '入試の誤文訂正〈251〉（ be accustomed to ～ing・when it comes to ～ing）',
     points: ['be accustomed to ～ は「～になれている」で、to は前置詞なので動詞を置くときは ～ing（be accustomed to getting up early）。get / become accustomed to ～ は「～になれる」。', 'when it comes to ～ は「～のことになると」で、これも to は前置詞（when it comes to cooking）。× when it comes to cook。'],
     examples: [{ en: 'I am accustomed to getting up early. / When it comes to cooking, my father is the best.', ja: '私は早起きになれている。／料理のことになると、父がいちばんだ。' }],
     questions: [
@@ -10932,7 +10084,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-252',
-    title: '入試の誤文訂正〈252〉（東大レベル：英作文の concentrate on・focus on・be absorbed in）',
+    title: '入試の誤文訂正〈252〉（ concentrate on・focus on・be absorbed in）',
     points: ['「～に集中する」は concentrate on ～／focus on ～ で、前置詞は on（× concentrate in／× focus at）。他動詞として concentrate A on B（A を B に集中させる）とも言う。', 'be absorbed in ～ は「～に夢中になっている」で、前置詞は in。前置詞のあとに動詞を置くときは ～ing（concentrate on studying）。'],
     examples: [{ en: 'I can’t concentrate on my homework. / We should focus on the main problem. / He was absorbed in a book.', ja: '宿題に集中できない。／おもな問題に焦点をしぼるべきだ。／彼は本に夢中になっていた。' }],
     questions: [
@@ -10950,7 +10102,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-253',
-    title: '入試の誤文訂正〈253〉（京大レベル：英作文の adapt to・adjust to・get used to）',
+    title: '入試の誤文訂正〈253〉（ adapt to・adjust to・get used to）',
     points: ['「～に慣れる・適応する」は adapt to ～／adjust to ～／get used to ～。どれも to は前置詞なので、動詞を置くときは ～ing（adjust to living abroad／get used to getting up early）。', 'adapt は「（自分を）合わせる」なら adapt (oneself) to ～。adopt（採用する・養子にする）とまちがえやすい。used to do（以前は～した）と get used to ～ing（～に慣れる）を区別する。'],
     examples: [{ en: 'It took me a month to adjust to the new school. / She got used to living alone.', ja: '新しい学校に慣れるのに1か月かかった。／彼女はひとりぐらしに慣れた。' }],
     questions: [
@@ -10968,7 +10120,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-254',
-    title: '入試の誤文訂正〈254〉（国公立レベル：英作文の thank 人 for・blame 人 for・praise 人 for）',
+    title: '入試の誤文訂正〈254〉（ thank 人 for・blame 人 for・praise 人 for）',
     points: ['「（人）に（こと）を感謝する」は thank 人 for ～、「（人）を（こと）で責める」は blame 人 for ～、「（人）を（こと）でほめる」は praise 人 for ～。どれも人を目的語にして、理由は for で表す。', 'for のあとに動詞を置くときは ～ing（thank you for helping me）。blame A on B は「A を B のせいにする」（blame the accident on the weather）。× thank to you（「～のおかげで」は thanks to）。'],
     examples: [{ en: 'Thank you for helping me. / They blamed him for the mistake. / The teacher praised her for her hard work.', ja: '手伝ってくれてありがとう。／彼らはそのまちがいで彼を責めた。／先生は彼女のがんばりをほめた。' }],
     questions: [
@@ -10986,7 +10138,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-255',
-    title: '入試の誤文訂正〈255〉（東大レベル：英作文の worry about・be worried about・be anxious about）',
+    title: '入試の誤文訂正〈255〉（ worry about・be worried about・be anxious about）',
     points: ['「～を心配する」は worry about ～（動作・習慣）／be worried about ～（状態）。worry は「（人を）心配させる」という他動詞にもなるので、「心配している」は受け身の形 be worried（× I am worry）。', 'be anxious about ～ は「～を心配している」、be anxious to do は「～したがっている」。前置詞のあとに動詞を置くときは ～ing（worry about failing）。'],
     examples: [{ en: 'Don’t worry about the test. / She is worried about her son. / He is anxious about the interview.', ja: 'テストのことは心配しないで。／彼女は息子のことを心配している。／彼は面接を心配している。' }],
     questions: [
@@ -11004,7 +10156,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-256',
-    title: '入試の誤文訂正〈256〉（京大レベル：英作文の avoid・deny・consider・enjoy のあとの ～ing）',
+    title: '入試の誤文訂正〈256〉（ avoid・deny・consider・enjoy のあとの ～ing）',
     points: ['avoid（さける）・deny（否定する）・consider（よく考える）・enjoy（楽しむ）・finish・mind・give up などは、目的語に動名詞（～ing）をとり、to 不定詞はとらない（× avoid to go／○ avoid going）。', '否定は not ～ing（I considered not going.＝行かないでおこうかと考えた）。「～したことを否定する」は deny ～ing または deny having done。consider ～ing は「～しようかと考える」。'],
     examples: [{ en: 'Try to avoid eating too late. / He denied breaking the window. / I am considering studying abroad.', ja: '夜おそくに食べるのはさけるようにしよう。／彼は窓を割ったことを否定した。／留学しようかと考えている。' }],
     questions: [
@@ -11022,7 +10174,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-257',
-    title: '入試の誤文訂正〈257〉（国公立レベル：英作文の call off・turn down・put up の意味と語順）',
+    title: '入試の誤文訂正〈257〉（ call off・turn down・put up の意味と語順）',
     points: ['call off ～（～を中止する）・turn down ～（～をことわる・音量を下げる）・put up ～（～をかかげる・建てる・泊める）は「動詞＋副詞」の句動詞。目的語が名詞なら call off the game／call the game off のどちらの語順でもよい。', '目的語が代名詞（it・them など）のときは、かならず動詞と副詞のあいだに置く（call it off／× call off it）。'],
     examples: [{ en: 'They called off the game. / They called it off. / She turned down the offer.', ja: '彼らは試合を中止した。／彼らはそれを中止した。／彼女はその申し出をことわった。' }],
     questions: [
@@ -11040,7 +10192,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-258',
-    title: '入試の誤文訂正〈258〉（東大レベル：英作文の do without・give in・break down）',
+    title: '入試の誤文訂正〈258〉（ do without・give in・break down）',
     points: ['do without ～（～なしですませる）・give in (to ～)（（～に）屈する・負ける）・break down（こわれる・（話し合いが）だめになる・（人が）泣きくずれる）。give in と break down は自動詞的に使い、目的語をとらない（× give in the pressure → give in to the pressure）。', 'do without のあとは名詞か ～ing（do without sleeping）。受け身にしない句動詞（× was broken down）に注意する。'],
     examples: [{ en: 'I can’t do without my phone. / He finally gave in to their demands. / The car broke down on the way.', ja: '電話なしではやっていけない。／彼はついに彼らの要求に屈した。／車がとちゅうでこわれた。' }],
     questions: [
@@ -11058,7 +10210,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-259',
-    title: '入試の誤文訂正〈259〉（京大レベル：英作文の set up・set off・set out）',
+    title: '入試の誤文訂正〈259〉（ set up・set off・set out）',
     points: ['set up ～ は「～を設立する・準備する・組み立てる」、set off は「出発する」（＋～ で「（警報など）を鳴らす」）、set out は「出発する」「（set out to do で）～しようとし始める」。', '「出発する」の意味の set off／set out は自動詞的に使い、for ～（～に向かって）を続ける（set off for Kyoto）。目的語が代名詞なら set it up の語順。'],
     examples: [{ en: 'She set up her own company. / We set off for the mountains at dawn. / He set out to write a novel.', ja: '彼女は自分の会社を立ち上げた。／私たちは夜明けに山へ向けて出発した。／彼は小説を書こうと取りかかった。' }],
     questions: [
@@ -11076,7 +10228,7 @@ const RAW_FIX: GrammarUnit[] = [
   },
   {
     id: 'exam-fix-260',
-    title: '入試の誤文訂正〈260〉（国公立レベル：英作文の pick up・drop off・drop by）',
+    title: '入試の誤文訂正〈260〉（ pick up・drop off・drop by）',
     points: ['pick up ～ は「～を（車で）むかえに行く・拾う」「（言葉など）を自然に身につける」、自動詞で「（景気などが）よくなる」。drop off ～ は「（人・物）を車からおろす・置いていく」、drop by は「ちょっと立ち寄る」。', '目的語が代名詞のときは pick you up／drop it off のように動詞と up・off のあいだに入れる（× pick up you）。「中退する・やめる」は drop out (of ～)。'],
     examples: [{ en: 'I’ll pick you up at six. / Could you drop me off at the corner? / Drop by anytime.', ja: '6時にむかえに行くね。／角でおろしてもらえますか。／いつでも寄ってね。' }],
     questions: [
@@ -11092,6 +10244,96 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The taxi [dropped us at off] the hotel entrance.', choices: ['dropped us off at', 'dropped off us at', 'dropped us at off to', 'dropped us by off'], answer: 0, why: '「～で（人）をおろす」は drop 人 off at ～。' },
     ],
   },
+  {
+    id: 'exam-fix-lv-shinan-1',
+    title: '入試の誤文訂正（私学難関①：動詞・形容詞の語法）',
+    points: ['動詞ごとの型（remind 人 of、prevent 人 from doing、自動詞 rise・lie）をおさえる', 'convenient・hard・necessary は人を主語にとらず、it を使った形にする'],
+    examples: [{ en: 'It is convenient for most students to study online in the evening.', ja: '多くの学生にとって、夜にオンラインで勉強するのが都合がよい。' }],
+    questions: [
+      { sentence: 'Many parents worry that spending hours online will [prevent children to develop] the social skills they need as adults.', choices: ['prevent children from developing', 'prevent children of developing', 'prevent children for developing', 'prevent children with developing'], answer: 0, why: 'prevent は prevent 人 from doing（人が〜するのを妨げる）の形をとり、to 不定詞はとらない。of・for・with も使わない。keep・stop も同じ from doing の形。' },
+      { sentence: 'Old photographs of the harbor [remind many residents with] the days when fishing was the town’s main industry.', choices: ['remind many residents of', 'remind many residents from', 'remind to many residents of', 'remind many residents for'], answer: 0, why: 'remind は remind 人 of 物事（人に〜を思い出させる）。人は前置詞なしで直接目的語になる。inform・convince なども同じ「人 of 物事」の形をとる。' },
+      { sentence: 'If [you are convenient], the interview with the research team can be held online instead of at the university laboratory.', choices: ['it is convenient for you', 'you are convenient for it', 'it is convenient of you', 'you find convenient'], answer: 0, why: 'convenient は人を主語にとらず、it is convenient for 人 の形で使う。of 人 は kind など人の性質を言う形容詞の形。find convenient は目的語がなく誤り。' },
+      { sentence: 'The population of the region [has been risen] steadily since the factory opened, putting pressure on local schools and hospitals.', choices: ['has risen', 'has raised', 'has rose', 'has arisen'], answer: 0, why: 'rise は自動詞なので受動態にできず has risen が正しい。raise は他動詞で目的語が必要、rose は過去形で完了形に使えない。arise は「（問題が）生じる」で意味が合わない。' },
+      { sentence: 'After the long swim, the exhausted seals [laid on the rocks] for hours before they had enough strength to hunt again.', choices: ['lay on the rocks', 'lain on the rocks', 'lied on the rocks', 'were lain on the rocks'], answer: 0, why: '「横たわる」は自動詞 lie で過去形は lay。laid は他動詞 lay（横たえる）の過去形で目的語が必要。lain は過去分詞、lied は「うそをつく」の過去形。' },
+      { sentence: 'As the storm [approached to the coast], residents were ordered to leave their homes and move to shelters on higher ground.', choices: ['approached the coast', 'approached at the coast', 'approached on the coast', 'approached for the coast'], answer: 0, why: 'approach は他動詞で「〜に近づく」と言うとき前置詞はいらない。approached the coast が正しい。discuss・enter・reach なども前置詞をつけやすいので注意。' },
+      { sentence: 'Linguists have noticed that the dialect spoken on the island [resembles closely to] that of a region far to the north.', choices: ['closely resembles', 'resembles closely with', 'is closely resembled to', 'closely resembles to'], answer: 0, why: 'resemble は他動詞で to・with をつけず、進行形・受動態にもしない。副詞 closely は動詞の前に置いて closely resembles that of とする。' },
+      { sentence: 'Many students [are hard to concentrate] in noisy classrooms, which is why some schools have begun to install sound-absorbing panels.', choices: ['find it hard to concentrate', 'are hard concentrating', 'find hard to concentrate', 'are hard for concentrating'], answer: 0, why: 'hard は人を主語にして「〜しにくい」とは言えない。find it hard to do（形式目的語 it が必要）とする。it を落とした find hard to も誤り。' },
+      { sentence: 'All applicants [are necessary to submit] a short essay explaining how they would contribute to the university’s research community.', choices: ['are required to submit', 'are necessary for submitting', 'are needed to be submitted', 'are required submitting'], answer: 0, why: 'necessary は人を主語にとれない。be required to do（〜することを求められる）が正しい。It is necessary for applicants to submit とも言える。require は to 不定詞をとる。' },
+      { sentence: 'In her lecture, the scientist [mentioned about] the ethical problems that could arise if genetic data were shared without consent.', choices: ['mentioned', 'mentioned on', 'referred', 'mentioned of'], answer: 0, why: 'mention は他動詞で前置詞をつけず mentioned the problems とする。refer は自動詞なので refer to が必要で、referred だけでは誤り。' },
+    ],
+  },
+  {
+    id: 'exam-fix-lv-kokko-1',
+    title: '入試の誤文訂正（国公立①：長い文の時制・態・一致）',
+    points: ['長い主語は修飾部分をはずして中心の名詞を見つけ、動詞の数を合わせる', '時を表す語句（since, by the time, ago, now）と「する／される」の関係から時制と態を決める'],
+    examples: [{ en: 'Since the bridge was built, millions of cars have been driven across it.', ja: 'その橋が建設されて以来、何百万台もの車がそこを通ってきた。' }],
+    questions: [
+      { sentence: 'By the time the new law took effect, more than half of the factories in the area [have already closed] because of rising energy costs.', choices: ['had already closed', 'has already closed', 'would already close', 'already close'], answer: 0, why: 'by the time + 過去形（took）より前に完了したことなので過去完了 had already closed にする。主語 half of the factories は複数なので has は誤り。' },
+      { sentence: 'The ancient manuscripts, which [discovered] in a cave in the 1940s, have helped scholars understand how the language of the region changed over time.', choices: ['were discovered', 'had discovered', 'discovering', 'have been discovered'], answer: 0, why: '写本は「発見された」側なので受け身。in the 1940s という過去の時点があるので現在完了ではなく過去形の were discovered にする。' },
+      { sentence: 'The quality of the essays written by students who had read widely [were] noticeably higher than that of the essays written by those who had not.', choices: ['was', 'were being', 'have been', 'are'], answer: 0, why: '主語は The quality（単数）で、essays や students は修飾部分。動詞は単数の was にする。後ろの that は the quality を受ける代名詞で正しい。' },
+      { sentence: 'If the government had invested in renewable energy twenty years ago, the country [would not have depended] so heavily on imported oil now.', choices: ['would not depend', 'had not depended', 'will not depend', 'does not depend'], answer: 0, why: 'if節は過去の仮定（had invested）だが、帰結は now の現在の状態なので仮定法過去の would not depend にする（混合仮定法）。' },
+      { sentence: 'Most of the energy [consuming] in modern cities is used for heating, cooling, and lighting buildings, rather than for transportation as many people assume.', choices: ['consumed', 'to consume', 'having consumed', 'consumes'], answer: 0, why: 'エネルギーは「消費される」側なので過去分詞 consumed で energy を後ろから修飾する。動詞 is は Most of the energy（不可算で単数）に一致して正しい。' },
+      { sentence: 'She is one of the few researchers who [has] managed to grow these cells outside the body, a technique that could transform the treatment of burns.', choices: ['have', 'has been', 'having', 'is'], answer: 0, why: '関係代名詞 who の先行詞は複数の researchers なので動詞は have managed にする。one に合わせて単数にするのはよくある誤り（the only one of ～ なら単数）。' },
+      { sentence: 'Since the first satellite was launched in 1957, thousands of objects [were sent] into orbit, and many of them still circle the Earth as space debris.', choices: ['have been sent', 'had been sent', 'were sending', 'have sent'], answer: 0, why: 'since ～（過去の起点）から現在までの継続・経験なので現在完了。物体は「送られる」側なので受け身の have been sent にする。' },
+      { sentence: 'Children who live near busy roads are more likely [to affect] by air pollution than those who grow up in the countryside, a recent study has found.', choices: ['to be affected', 'affecting', 'to have affected', 'being affected'], answer: 0, why: '子どもは汚染に「影響される」側で、後ろに by もあるので受け身の不定詞 be likely to be affected にする。those は children を受けて正しい。' },
+      { sentence: 'Scientists will not be able to predict earthquakes accurately until they [will understand] more about the forces that build up deep beneath the surface.', choices: ['understand', 'understood', 'will have understood', 'would understand'], answer: 0, why: '時を表す until の節では、未来のことでも現在形を使うので until they understand にする。主節の will not be able は正しい。' },
+      { sentence: 'Neither the manager nor the employees [was] informed that the factory would be closed, which caused anger when the news finally reached them through the media.', choices: ['were', 'was being', 'has been', 'had'], answer: 0, why: 'neither A nor B は動詞に近い B（the employees、複数）に一致するので were informed にする。would be closed は時制の一致で正しい。' },
+    ],
+  },
+  {
+    id: 'exam-fix-lv-kyutei-1',
+    title: '入試の誤文訂正（旧帝大①：修飾関係と文の骨組み）',
+    points: ['どこからどこまでが修飾語かを見きわめ、文の骨組み（S＋V）をまず取り出す', '関係詞節・分詞・不定詞の中で、語が欠けているか重複していないかを確かめる'],
+    examples: [{ en: 'The village where the festival is held every summer lies at the foot of a mountain known for its hot springs.', ja: '毎年夏に祭りが開かれるその村は、温泉で知られる山のふもとにある。' }],
+    questions: [
+      { sentence: 'Many of the problems [which modern cities face them], such as traffic congestion and air pollution, can be traced back to decisions made by planners more than half a century ago.', choices: ['that modern cities face', 'what modern cities face', 'that modern cities face with', 'modern cities facing them'], answer: 0, why: '関係代名詞が face の目的語の役目をしているので、them をくり返さない。face は他動詞なので with は不要（be faced with なら可）。what は先行詞 problems があるので使えない。' },
+      { sentence: 'The belief [that intelligence fixed at birth], which still influences the way many teachers treat their students, has little support in modern research on how the brain develops.', choices: ['that intelligence is fixed at birth', 'which intelligence is fixed at birth', 'that intelligence fixing at birth', 'of intelligence is fixed at birth'], answer: 0, why: '同格の that 節は完全な文なので動詞 is が必要。同格節を which でみちびくことはできない。文全体の動詞は has で、挿入の which 節は belief を説明している。' },
+      { sentence: 'The results of the survey, which was conducted among more than three thousand households in rural areas, [shows] that access to clean water remains a serious concern for most families.', choices: ['show', 'has shown', 'showing', 'is shown'], answer: 0, why: '主語は The results（of the survey は修飾語、which 節は survey の挿入説明）なので複数の show にする。has shown は単数、is shown は受け身で that 節を目的語にとれない。' },
+      { sentence: '[Seeing from space], the thin layer of atmosphere that surrounds the earth looks remarkably fragile, which is why many astronauts return with a deeper concern for the environment.', choices: ['Seen from space', 'Having seen from space', 'Seeing it from space', 'To see from space'], answer: 0, why: '分詞構文の意味上の主語は主節の主語 the thin layer で、大気は「見られる」側なので過去分詞 Seen にする。Seeing it や Having seen では大気が見る側になってしまう。' },
+      { sentence: 'The period [which the industrial revolution began] was marked by rapid population growth, as people moved from the countryside to towns in search of work in the new factories.', choices: ['in which the industrial revolution began', 'which the industrial revolution began in it', 'what the industrial revolution began', 'where the industrial revolution began at'], answer: 0, why: 'began は自動詞で目的語をとらないので、「その時期に始まった」は in which が必要。in it や at を残すと前置詞が重複する。文の骨組みは The period was marked で正しい。' },
+      { sentence: 'It was not until scientists began to measure carbon dioxide levels systematically [when they realized] how quickly human activity was altering the composition of the atmosphere.', choices: ['that they realized', 'did they realize', 'which they realized', 'that did they realize'], answer: 0, why: 'It was not until 〜 that ... の強調構文なので that を使う。倒置の did they realize は Not until を文頭に出したときの形で、強調構文の中では倒置しない。' },
+      { sentence: '[That] most consumers fail to recognize is the degree to which their purchasing decisions are influenced by the order in which products are displayed on supermarket shelves.', choices: ['What', 'Which', 'It', 'As'], answer: 0, why: 'recognize の目的語が欠けた節が文の主語になるので、先行詞をふくむ関係代名詞 What が必要。That 節は完全な文しかみちびけない。後半の to which・in which は正しい。' },
+      { sentence: 'The data collected by the satellite were too complex [for researchers to analyze them] without the help of powerful computers, so the project took far longer than planned.', choices: ['for researchers to analyze', 'that researchers analyze', 'for researchers analyzing', 'for researchers to be analyzed'], answer: 0, why: 'too 〜 to do で不定詞の目的語が文の主語 The data と同じときは、目的語 them を置かない。for researchers は不定詞の意味上の主語。受け身にすると研究者が分析される意味になる。' },
+      { sentence: 'The extent [which young children rely] on facial expressions to judge whether an adult is trustworthy surprised the psychologists who designed the experiment.', choices: ['to which young children rely', 'in which young children rely', 'of which young children rely', 'that young children rely'], answer: 0, why: 'to an extent（ある程度まで）の前置詞 to が関係代名詞の前に出て the extent to which となる。主語は The extent で、動詞は surprised。rely on は on が後ろに残っている。' },
+      { sentence: '[Being no] reliable written records from that period, historians must rely largely on archaeological evidence to reconstruct how ordinary people lived in the ancient kingdom.', choices: ['There being no', 'It being no', 'There are no', 'There having no'], answer: 0, why: 'There is no 〜 を分詞構文にすると There being no 〜 となる（独立分詞構文）。主語を消して Being だけにすると historians が主語になる。There are では文が2つ接続詞なしにつながる。' },
+    ],
+  },
+  {
+    id: 'exam-fix-lv-kyodai-1',
+    title: '入試の誤文訂正（京大①：比較・関係詞 as/than・同格）',
+    points: ['比較は「何と何を比べているか」をそろえ、that of / those of や the + 比較級の形を確かめる', 'as・than が関係代名詞として主語の役をする形と、後ろが完全な文になる同格の that を区別する'],
+    examples: [{ en: 'The climate of this island is milder than that of the mainland.', ja: 'この島の気候は本土の気候よりおだやかだ。' }],
+    questions: [
+      { sentence: 'In the early twentieth century, the population of Osaka was larger than [Tokyo], a fact that surprises many people today, since the two cities have since grown at very different rates.', choices: ['that of Tokyo', 'those of Tokyo', 'Tokyo’s one', 'it of Tokyo'], answer: 0, why: '比べているのは都市ではなく「人口」どうしなので that of Tokyo とする。population は単数なので those は不可で、it of や Tokyo’s one という形も使えない。' },
+      { sentence: 'In many dry regions, modern irrigation systems deliver far more water to the fields [than it is needed] for the crops to grow, and the excess gradually raises the salt content of the soil.', choices: ['than is needed', 'than are needed', 'as is needed', 'than which is needed'], answer: 0, why: 'than が関係代名詞のように主語の役をするので it を入れず than is needed とする。water は不可算なので are は不可、more と組むのは as でなく than で、which を重ねることもできない。' },
+      { sentence: '[Which] is often the case with rapid social change, the spread of the internet has been accompanied by anxieties about its effects on young people, many of which have since proved exaggerated.', choices: ['As', 'What', 'That', 'So'], answer: 0, why: '主節の内容全体を受けて「よくあることだが」と前置きする関係代名詞は as。Which・What・That はこの位置で後ろの主節を先行詞にできず、So も主語になれない。' },
+      { sentence: 'The tools discovered at the site are made of [same kind of stone] as those found three hundred kilometers away, which suggests that ancient trade networks extended far more widely than archaeologists had assumed.', choices: ['the same kind of stone', 'a same kind of stone', 'the similar kind of stone', 'same kinds of stones'], answer: 0, why: 'same は「同じ」と一つに限定する語なので the をつけ the same ~ as … とする。a same とは言えず、similar は the similar ~ as の形にならない。冠詞なしの same も誤り。' },
+      { sentence: 'There is growing evidence [which] regular physical exercise can slow the decline of memory in old age, although researchers still disagree about how much exercise is needed and of what kind.', choices: ['that', 'of which', 'what', 'whether'], answer: 0, why: '後ろが完全な文で evidence の中身を説明しているので同格の that を使う。which・of which は後ろに欠けた要素が必要、what は先行詞をとれず、whether では意味が通らない。' },
+      { sentence: 'A bat is [not more] a bird than a whale is a fish, yet for centuries naturalists grouped animals by their appearance rather than by the structure of their bodies and the way they reproduce.', choices: ['no more', 'no less', 'not less', 'any more'], answer: 0, why: '「クジラが魚でないのと同様コウモリは鳥でない」は A is no more B than C is D。no less では「鳥である」となり事実に反し、not more・not less は別の意味、any more は否定語が必要。' },
+      { sentence: 'The longer a language remains isolated from its neighbors, [the most] distinctive its grammar and vocabulary tend to become, which is why remote mountain valleys often preserve dialects found nowhere else.', choices: ['the more', 'much more', 'the much more', 'so much more'], answer: 0, why: '「~すればするほど…」は the + 比較級, the + 比較級 なので後半も the more distinctive とする。最上級は不可で、the を落とした形や the much more もこの構文では誤り。' },
+      { sentence: 'Some historians argue that the agricultural techniques of the medieval Islamic world were in many respects [superior than] those of contemporary Europe, particularly in irrigation and the cultivation of new crops.', choices: ['superior to', 'more superior to', 'superior over', 'more superior than'], answer: 0, why: 'superior はラテン語系の比較の形容詞で than ではなく to をとる。それ自体が比較の意味なので more もつけられず、over とも組まない。those は techniques を受けて正しい。' },
+      { sentence: 'What matters most in learning a foreign language is [not much] the number of hours spent in class as the quality of the attention learners bring to the material they encounter.', choices: ['not so much', 'not so many', 'not much so', 'much not so'], answer: 0, why: '後ろの as と呼応して「A というよりむしろ B」を表すのは not so much A as B。not much だけでは as と組めず、number の前でも many にはしない。語順を入れかえた形も不可。' },
+      { sentence: 'Recent surveys suggest that households in the region now consume [as twice much water as] they did a generation ago, largely because of the spread of washing machines and private bathrooms.', choices: ['twice as much water as', 'twice as many water as', 'as much twice water as', 'twice so much water as'], answer: 0, why: '倍数表現は「倍数 + as + 原級 + as」の語順で twice as much water as とする。water は不可算名詞なので many は不可、twice を as の後ろに置く形や so を使う形も誤り。' },
+    ],
+  },
+  {
+    id: 'exam-fix-lv-todai-1',
+    title: '入試の誤文訂正（東大①：語法と比較の対象）',
+    points: ['enable / prevent / despite など、後ろに続く形が決まっている語の語法を正確に覚える', '比較では「何と何を比べているか」を考え、that of / those of で対象をそろえる'],
+    examples: [{ en: 'The climate of this region is milder than that of the inland areas.', ja: 'この地域の気候は内陸部の気候よりおだやかだ。' }],
+    questions: [
+      { sentence: 'The proportion of adults who read for pleasure [have declined] steadily over the past two decades, a trend that some researchers attribute to the rise of digital entertainment.', choices: ['has declined', 'have been declined', 'has been declined', 'are declining'], answer: 0, why: '主語は The proportion（単数）なので has declined とする。直前の adults に引かれない。decline は自動詞で受動態にできず、over the past two decades には現在完了が合う。' },
+      { sentence: 'The carbon footprint of a person living in a large city is often smaller than [a person] in the countryside, largely because urban residents rely more on public transport and live in smaller homes.', choices: ['that of a person', 'those of a person', 'a person’s one', 'that of person'], answer: 0, why: '比べるのは「人」でなく「炭素排出量」どうしなので that of a person とする。footprint は単数で those は不可、所有格のあとに one は付けず、可算名詞 person には冠詞が要る。' },
+      { sentence: 'Smartphones have enabled researchers [collecting] data on human behavior on a scale that would have been unimaginable only a generation ago, raising concerns about privacy.', choices: ['to collect', 'collect', 'to collecting', 'for collecting'], answer: 0, why: 'enable は enable + 目的語 + to 不定詞（〜が…するのを可能にする）の形をとる。to collect とする。原形や動名詞、for 〜ing はこの語法では使えない。raising は結果を表す分詞構文で正しい。' },
+      { sentence: 'Despite [it is widely believed] that memory works like a video recorder, psychologists have shown that each act of recalling an event involves reconstructing it, often with subtle distortions.', choices: ['the widespread belief', 'it is a widespread belief', 'of the widespread belief', 'the widely believed'], answer: 0, why: 'Despite は前置詞なので節を直接続けられない。名詞句 the widespread belief にし、that 節を同格としてつなぐ。Despite of とは言わず、the widely believed は名詞がなく不可。' },
+      { sentence: 'Had the warning signs been taken seriously, the financial crisis [could be avoided], or at least its effects on ordinary households would have been considerably less severe.', choices: ['could have been avoided', 'could have avoided', 'could be avoiding', 'can have been avoided'], answer: 0, why: 'Had 〜 been taken は過去の事実に反する仮定（If の省略による倒置）なので、帰結は could have been avoided。危機は「避けられる」側なので受動態にし、can have は仮定法には使えない。' },
+      { sentence: 'Governments that invest heavily in early childhood education tend to see [a remarkable progresses] in later academic achievement, although economists still disagree about how large the long-term returns actually are.', choices: ['remarkable progress', 'remarkable progresses', 'a remarkable progress', 'the remarkable progresses'], answer: 0, why: 'progress は不可算名詞なので a も複数の -es も付かない。remarkable progress とする。主語 Governments に合う tend、how large 〜 are の間接疑問の語順は正しい。' },
+      { sentence: 'The new regulation is intended to [prevent farmers to use] pesticides that are known to harm bees, whose role in pollinating crops is essential to global food security.', choices: ['prevent farmers from using', 'prevent farmers from use', 'prevent farmers to using', 'prevent from farmers using'], answer: 0, why: 'prevent は prevent + 目的語 + from 〜ing（〜が…するのを妨げる）の形。from のあとは動名詞 using にし、目的語は from の前に置く。whose role 〜 is の一致も正しい。' },
+      { sentence: 'The extent [which] human activity has altered the planet’s climate is now so great that some geologists propose naming a new geological epoch after our own species.', choices: ['to which', 'in which', 'for which', 'which to'], answer: 0, why: '「〜の程度まで」は to the extent なので、関係詞は前置詞 to を伴い The extent to which とする。which だけでは関係詞節の中で役割がない。so 〜 that の構文も正しい。' },
+      { sentence: 'Although the average lifespan in Japan is now considerably longer than [the United States], the gap is narrower when only the years lived in good health are taken into account.', choices: ['that in the United States', 'those in the United States', 'it in the United States', 'in the United States one'], answer: 0, why: '比べるのは国ではなく「平均寿命」どうしなので、単数の lifespan を受ける that を使い that in the United States とする。代名詞 it はこの比較の形では使えず、those は数が合わない。' },
+      { sentence: 'Not until the manuscript was translated in the twentieth century [scholars realized] how much the author had borrowed from earlier sources, many of which have since been lost.', choices: ['did scholars realize', 'scholars did realize', 'did scholars realized', 'were scholars realized'], answer: 0, why: '否定の Not until 〜 が文頭に出ると主節は倒置し、did + 主語 + 原形 realize にする。realize は能動なので were は使えない。many of which の関係詞は正しい。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
@@ -11105,8 +10347,10 @@ export const EXAM_FIX: GrammarUnit[] = RAW_FIX.map((u) => ({
 }))
 
 // 正誤問題をすべての単元からランダムに n 問まとめて出す
-export function randomErrorUnit(n = 10, rng: () => number = Math.random): GrammarUnit {
-  const all = EXAM_ERROR.flatMap((u) => u.questions)
+// level をわたすと、そのレベルの単元だけから（10問にとどかないときはすべての単元から）
+export function randomErrorUnit(n = 10, rng: () => number = Math.random, level?: string): GrammarUnit {
+  const lv = level ? EXAM_ERROR.filter((u) => errorLevelOf(u.id) === level).flatMap((u) => u.questions) : []
+  const all = lv.length >= n ? lv : EXAM_ERROR.flatMap((u) => u.questions)
   const pick = [...all]
   for (let i = pick.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1))
@@ -11114,7 +10358,7 @@ export function randomErrorUnit(n = 10, rng: () => number = Math.random): Gramma
   }
   return {
     id: 'exam-error-random',
-    title: '入試の正誤問題（ランダム10問）',
+    title: level && lv.length >= n ? `入試の正誤問題（${level}・ランダム10問）` : '入試の正誤問題（ランダム10問）',
     points: ['いろいろな単元の正誤問題がランダムに出る。(A)〜(D) のうち、まちがっている1か所を選ぶ。'],
     examples: [],
     questions: pick.slice(0, n),
