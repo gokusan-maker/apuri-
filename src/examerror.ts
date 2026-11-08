@@ -6183,6 +6183,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The mayor (B) was strong (C) opposed to (D) the plan.', choices: ['(A) The mayor', '(B) was strong', '(C) opposed to', '(D) the plan'], answer: 1, why: '形容詞 opposed を修飾するので副詞 strongly。was strongly opposed。' },
     ],
   },
+  {
+    id: 'exam-error-search-seek',
+    title: '入試の正誤問題〈258〉（京大レベル：英作文の search for・look for・seek の使い分け）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「（人・物）をさがす」は look for ～／search for ～。search のすぐあとに名詞を置くと「（場所・人の体）を調べる」の意味になる（search the house for the money＝家の中をお金をさがして調べる）。',
+      'seek は他動詞で、前置詞なしで目的語をとる（seek a job／seek advice）。seek to do で「～しようとする」。',
+    ],
+    examples: [
+      { en: 'I am looking for my keys. / They searched the room for the ring.', ja: 'かぎをさがしている。／彼らは指輪をさがして部屋を調べた。' },
+      { en: 'Many people seek advice from experts.', ja: '多くの人が専門家に助言をもとめる。' },
+    ],
+    questions: [
+      { sentence: '(A) The police (B) are searching (C) the missing child (D) in the forest.', choices: ['(A) The police', '(B) are searching', '(C) the missing child', '(D) in the forest'], answer: 2, why: '「（人・物）をさがす」は search for ～。search the forest は「森（場所）をさがす」。searching for the missing child。' },
+      { sentence: '(A) I (B) have been looking (C) my keys (D) all morning.', choices: ['(A) I', '(B) have been looking', '(C) my keys', '(D) all morning'], answer: 2, why: '「～をさがす」は look for ～。looking for my keys。' },
+      { sentence: '(A) Many young people (B) seek for (C) jobs (D) in large cities.', choices: ['(A) Many young people', '(B) seek for', '(C) jobs', '(D) in large cities'], answer: 1, why: 'seek は他動詞なので for は不要。seek jobs。' },
+      { sentence: '(A) Search (B) for a cheaper hotel, (C) we (D) walked around the town.', choices: ['(A) Search', '(B) for a cheaper hotel,', '(C) we', '(D) walked around the town'], answer: 0, why: '分詞構文なので Searching for a cheaper hotel。' },
+      { sentence: '(A) She (B) is looking (C) for a job (D) since last spring.', choices: ['(A) She', '(B) is looking', '(C) for a job', '(D) since last spring'], answer: 1, why: 'since があるので現在完了進行形 has been looking。' },
+      { sentence: '(A) The police (B) searched (C) for the house (D) the stolen money.', choices: ['(A) The police', '(B) searched', '(C) for the house', '(D) the stolen money'], answer: 2, why: '「（場所）を（物をもとめて）さがす」は search 場所 for 物。searched the house for the stolen money。' },
+      { sentence: '(A) The guards (B) searched (C) every (D) bags at the entrance.', choices: ['(A) The guards', '(B) searched', '(C) every', '(D) bags at the entrance'], answer: 3, why: 'every のあとは単数なので every bag。' },
+      { sentence: '(A) Most (B) of the visitors (C) was looking for (D) the exit.', choices: ['(A) Most', '(B) of the visitors', '(C) was looking for', '(D) the exit'], answer: 2, why: 'Most of the visitors は複数あつかいなので were looking for。' },
+      { sentence: '(A) He (B) searched (C) for his wallet (D) careful.', choices: ['(A) He', '(B) searched', '(C) for his wallet', '(D) careful'], answer: 3, why: '動詞 searched を修飾するので副詞 carefully。' },
+      { sentence: '(A) Looking (B) for (C) an advice, (D) she called her teacher.', choices: ['(A) Looking', '(B) for', '(C) an advice,', '(D) she called her teacher'], answer: 2, why: 'advice は数えられない名詞なので an はつけない。for advice。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

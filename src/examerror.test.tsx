@@ -3564,3 +3564,10 @@ it('誤文訂正〈251〉：国公立レベル be accustomed to・when it comes 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('working')
 })
+
+it('正誤問題〈258〉：京大レベル search for・look for・seek の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-search-seek')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) the missing child')
+})
