@@ -10472,6 +10472,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The team members could not [agree to who] should be the leader.', choices: ['agree on who', 'agree who to', 'agree with who of', 'agree at who'], answer: 0, why: '「だれにするか」という決めることについては agree on。' },
     ],
   },
+  {
+    id: 'exam-fix-246',
+    title: '入試の誤文訂正〈246〉（東大レベル：英作文の apologize to 人 for・complain to 人 about）',
+    points: ['apologize は自動詞で、「（人）にあやまる」は apologize to 人、「（こと）についてあやまる」は apologize for ～（I apologized to her for being late.）。× apologize her。', 'complain も自動詞で、「（人）に不満を言う」は complain to 人、「（こと）について不満を言う」は complain about（of）～。complain that ～ で「～だと不満を言う」。名詞形は apology・complaint で、make an apology／make a complaint とも言う。'],
+    examples: [{ en: 'I apologized to my teacher for being late. / She complained to the manager about the noise.', ja: '私は遅れたことを先生にあやまった。／彼女は騒音のことで支配人に苦情を言った。' }],
+    questions: [
+      { sentence: 'I [apologized her] for breaking the cup.', choices: ['apologized to her', 'apologized at her', 'apologized with her', 'apologized on her'], answer: 0, why: '「（人）にあやまる」は apologize to 人。' },
+      { sentence: 'He apologized to us [about being] late.', choices: ['for being', 'to be', 'of be', 'with been'], answer: 0, why: '「～したことをあやまる」は apologize for ～ing。' },
+      { sentence: 'The customers [complained the manager] about the food.', choices: ['complained to the manager', 'complained at the manager of', 'complained with the manager on', 'complained by the manager'], answer: 0, why: '「（人）に不満を言う」は complain to 人。' },
+      { sentence: 'My neighbor often [complains on] the noise from our house.', choices: ['complains about', 'complains to with', 'complains at on', 'complains by'], answer: 0, why: '「（こと）について不満を言う」は complain about ～。' },
+      { sentence: 'She [complained me that] the room was too cold.', choices: ['complained to me that', 'complained me about that', 'complained of me that', 'complained at me of'], answer: 0, why: '「人に～だと不満を言う」は complain to 人 that ～。' },
+      { sentence: 'You should [apologize your mistake] to him.', choices: ['apologize for your mistake', 'apologize about your mistake of', 'apologize your mistake for', 'apologize with your mistake'], answer: 0, why: '「（まちがい）についてあやまる」は apologize for ～。' },
+      { sentence: 'The company [made an apologize] for the delay.', choices: ['made an apology', 'made an apologizing', 'did an apologize', 'made apologize'], answer: 0, why: '名詞は apology。make an apology for ～。' },
+      { sentence: 'Several guests [made complains] about the service.', choices: ['made complaints', 'did complains', 'made complaining of', 'made a complain'], answer: 0, why: '名詞は complaint。make complaints about ～。' },
+      { sentence: 'I want to [apologize for him] for what I said.', choices: ['apologize to him', 'apologize him', 'apologize with him', 'apologize of him'], answer: 0, why: 'あやまる相手は to 人。apologize to him for ～。' },
+      { sentence: 'Nobody [complained of the teacher] about the test.', choices: ['complained to the teacher', 'complained the teacher', 'complained at the teacher with', 'complained by the teacher'], answer: 0, why: '不満を言う相手は to 人。complain to the teacher about ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

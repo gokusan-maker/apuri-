@@ -3487,3 +3487,10 @@ it('正誤問題〈252〉：京大レベル think of・think about・think that 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) for my grandfather,')
 })
+
+it('誤文訂正〈246〉：東大レベル apologize to・complain to の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-246')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('apologized to her')
+})
