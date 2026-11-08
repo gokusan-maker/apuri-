@@ -44542,6 +44542,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-postcards',
+    title: 'On Postcards',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For more than a century, travelers have sent postcards home from the places they visited. A picture of a famous building or a beautiful landscape on one side, a few lines of handwriting and an address on the other, the postcard is one of the simplest forms of written communication ever devised. Today, when photographs can be shared instantly with anyone in the world, sending a postcard may seem old-fashioned, yet the humble card reveals something interesting about the relationship between travel, memory, and the people we leave behind.",
+      "Unlike a letter, a postcard has no envelope. Its message is open for anyone to read, from the postal workers who handle it to the neighbors who may glimpse it on a doormat. This openness shapes what people write, since few would use a postcard to share their deepest secrets. Instead, postcards tend to carry short, cheerful messages about the weather, the food, or the sights, messages whose main purpose is not to inform but simply to say that the sender is thinking of the person who receives them.",
+      "The limited space on a postcard also influences how people write. With room for only a few sentences, writers must choose what matters most and express it briefly, and many people find this restriction strangely freeing. ( A ) a postcard rarely contains anything profound, its brevity can make it more personal than a long letter, since every word has been chosen with the reader in mind and nothing has been added merely to fill the page.",
+      "A postcard also travels more slowly than the traveler. It is often written in a café or a hotel room and posted on the way to somewhere else, and it may arrive days or even weeks after the sender has returned home. This delay gives the postcard a curious quality, since it brings news of a moment that has already passed, allowing the person who receives it to share, belatedly, in a journey that is already over. Some travelers even enjoy the thought that their card will arrive as a small surprise, reminding the recipient of a trip they may have almost forgotten.",
+      "Postcards can also become objects of lasting value. Many people keep the cards they receive, fixing them to refrigerators or storing them in boxes, and old postcards are often treasured by their recipients long after the senders have died. Collectors value historical postcards because they show how towns and landscapes looked in the past, and the brief messages on their backs can offer glimpses into the everyday thoughts of ordinary people from earlier times. A note about a rainy afternoon or a delicious meal, written a hundred years ago, can make the past feel surprisingly close.",
+      "In recent decades, the number of postcards sent has declined sharply, as travelers share photographs and messages instantly through their phones. Digital images are quick, free, and can reach many people at once, but they are also easily lost among the countless other images that people see each day. A postcard, by contrast, is a single object chosen for a single person, and the effort required to buy a stamp and find a postbox may itself be part of what makes it meaningful.",
+      "Perhaps, then, postcards deserve more attention than we usually give them. They remind us that communication is not only about speed and quantity but also about care and attention, and that a few words sent to one person can sometimes mean more than many images shared with everyone. In an age when we can tell the whole world where we are in an instant, the slow and simple postcard may still teach us the value of thinking of someone in particular, and of letting them know that they were in our minds while we were far away.",
+    ],
+    ja: [
+      '百年以上ものあいだ、旅人は訪れた場所から家に絵はがきを送ってきた。一方の面には有名な建物や美しい景色の写真、もう一方には数行の手書きの文と住所がある絵はがきは、これまでに考え出されたもっとも単純な書きことばによるやりとりの形の一つである。写真が一瞬で世界のだれとでも共有できる今日、絵はがきを送ることは古くさく思えるかもしれないが、このつつましいカードは、旅と記憶、そして私たちがあとに残してきた人々との関係について、興味深いことを明らかにしている。',
+      '手紙とちがって、絵はがきにはふうとうがない。その文面は、それをあつかう郵便の働き手から、玄関マットの上でそれをちらりと見るかもしれない近所の人まで、だれにでも読める。この開かれた性質が人々の書く内容を形づくっている。絵はがきを使っていちばん深い秘密を打ち明ける人はほとんどいないからである。むしろ絵はがきは、天気や食べもの、見どころについての短く明るい文を運ぶことが多い。その文のおもな目的は、知らせることではなく、ただ送り手が受けとる人のことを思っていると伝えることなのである。',
+      '絵はがきのかぎられた余白もまた、人々の書き方に影響する。数文分の場所しかないので、書き手は何がいちばん大切かを選び、それを短く表さなければならず、多くの人はこの制約をふしぎと自由に感じる。絵はがきに深い内容がふくまれることはめったにないが、その短さのおかげで、長い手紙よりも個人的なものになりうる。どのことばも読み手を思いうかべて選ばれ、ただページをうめるために加えられたものは何もないからである。',
+      '絵はがきはまた、旅人よりもゆっくり旅をする。それはしばしばカフェやホテルの部屋で書かれ、どこかほかへ行くとちゅうで投かんされ、送り手が家に帰って何日も、あるいは何週間もたってからとどくことがある。このおくれは絵はがきにふしぎな性質をあたえる。それはすでに過ぎ去った瞬間の知らせを運び、受けとる人が、おくればせながら、もう終わった旅を分かち合えるようにしてくれるのである。自分のカードが小さなおどろきとしてとどき、受けとる人に、ほとんどわすれかけていたかもしれない旅を思い出させることを楽しみにする旅人さえいる。',
+      '絵はがきはまた、長く価値のあるものになることもある。多くの人は受けとったカードをとっておき、冷蔵庫にはったり箱にしまったりする。古い絵はがきは、送り手が亡くなったずっとあとも、受けとった人に大切にされることが多い。収集家は、町や景色が昔どのように見えたかを示すので歴史的な絵はがきを大切にし、その裏の短い文は、昔のふつうの人々の日々の思いをかいま見せてくれることがある。百年前に書かれた、雨の午後やおいしい食事についての一言が、過去をおどろくほど身近に感じさせることもある。',
+      'ここ数十年、旅人が電話で写真や文を一瞬で共有するようになり、送られる絵はがきの数は大きく減った。デジタルの画像は速く、無料で、一度に多くの人にとどけられるが、人々が毎日見る数えきれないほかの画像のなかにまぎれて、かんたんに失われてもしまう。それに対して絵はがきは、一人の人のために選ばれた一つのものであり、切手を買い、ポストをさがすのに必要な手間そのものが、それを意味のあるものにしている一部なのかもしれない。',
+      'だとすれば、絵はがきは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。絵はがきは、やりとりが速さと量だけでなく、心配りと注意の問題でもあること、そして一人に送られたいくつかのことばが、ときにはみんなと共有された多くの画像よりも大きな意味をもちうることを思い出させてくれる。自分がどこにいるかを一瞬で全世界に知らせられる時代に、ゆっくりした単純な絵はがきは、特定のだれかのことを思い、遠くにいるあいだもその人が心の中にいたと伝えることの価値を、いまも私たちに教えてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「深い内容はめったにないが、その短さのおかげで個人的なものになりうる」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '絵はがきには、手紙のようなふうとうがない。', answer: true, why: '第2段落 Unlike a letter, a postcard has no envelope。' },
+      { statement: '多くの人は、絵はがきを使っていちばん深い秘密を打ち明ける。', answer: false, why: '第2段落 few would use a postcard to share their deepest secrets。' },
+      { statement: '絵はがきは、送り手が帰宅したあとにとどくことがある。', answer: true, why: '第4段落 may arrive days or even weeks after the sender has returned home。' },
+      { statement: 'ここ数十年、送られる絵はがきの数は大きくふえた。', answer: false, why: '第6段落 the number of postcards sent has declined sharply。' },
+    ],
+    qa: [
+      { q: 'Why do collectors value historical postcards?', choices: ['They show how towns and landscapes looked in the past.', 'They are made of expensive paper.', 'They always contain secrets.', 'They are very rare to find.'], answer: 0, why: '第5段落 because they show how towns and landscapes looked in the past。' },
+      { q: 'What may be part of what makes a postcard meaningful, according to the passage?', choices: ['The effort required to buy a stamp and find a postbox.', 'Its speed of delivery.', 'The number of people who see it.', 'Its low price.'], answer: 0, why: '第6段落 the effort required to buy a stamp and find a postbox。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
