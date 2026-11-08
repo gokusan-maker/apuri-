@@ -3763,6 +3763,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 28 l-4 -10 l-4 3 M60 28 l4 -10 l4 3" stroke="#3f2a1e" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'huemul')
+    return (
+      <g>
+        {/* 顔の黒い模様 */}
+        <path d="M46 44 l4 6 l4 -6" stroke="#1c1917" strokeWidth="2" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
