@@ -46658,6 +46658,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-early-languages',
+    title: 'When Should Children Start Learning a Foreign Language?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, children now begin learning a foreign language at primary school, sometimes as early as the age of six or seven. Only a generation ago, most students did not start until secondary school, and some educators believe that the earlier start is one of the most important changes in language education. Others, however, question whether beginning so early really leads to better results, and argue that the time might be better spent on other subjects. The question of when children should start learning a foreign language remains a subject of lively debate.",
+      "Supporters of an early start argue first that young children are naturally good at learning languages. They are often less afraid of making mistakes than older learners, and they may find it easier to imitate new sounds and rhythms, so that they can develop more natural pronunciation. Supporters point out that children who grow up hearing two languages at home usually learn both without great difficulty, and they suggest that schools can make use of this natural ability by introducing a foreign language as early as possible.",
+      "Supporters also emphasize the wider benefits of learning a language at a young age. Studying another language can help children understand that there are different ways of describing the world, and it may encourage curiosity about other cultures and respect for people from different backgrounds. In addition, supporters argue, children who begin early have more years in which to build their skills, so that by the time they leave school they may be able to use the language with confidence. A child who has studied a language for ten years, they note, has a clear advantage over one who has studied it for only five.",
+      "Critics, however, argue that the advantages of an early start are often exaggerated. ( A ) young children may learn pronunciation easily, research suggests that older learners often make faster progress in grammar and vocabulary, since they can understand rules and use strategies that younger children cannot. Critics also point out that in many schools foreign language lessons for young children are short and infrequent, perhaps only one or two hours a week, which may not be enough to produce lasting results.",
+      "Critics further worry about the quality of teaching. Many primary school teachers are not trained as language specialists, and some may lack confidence in the language themselves. If children are taught poorly at an early age, critics argue, they may develop bad habits that are difficult to correct later, or they may come to dislike the subject before they have had a real chance to enjoy it. In addition, adding a new subject may reduce the time available for basic skills such as reading and arithmetic in the children's own language.",
+      "Some countries have tried to address these concerns. They introduce foreign languages early but focus mainly on listening, speaking, songs, and games, leaving grammar and writing until later years. They also provide additional training for primary teachers and, where possible, invite specialists or native speakers to support lessons. Such approaches aim to make use of young children's enthusiasm and ability to imitate sounds, while recognizing that more formal study may be more effective when students are older.",
+      "The debate over when to begin foreign language education therefore reflects a wider question about how schools should use limited time and resources. An early start may offer real benefits, but only if lessons are frequent enough and teachers are well prepared. Rather than asking simply how early children should begin, it may be more useful to ask what kind of teaching works best at each age, and how schools can ensure that the time children spend learning a language leads to lasting ability and interest.",
+    ],
+    ja: [
+      '多くの国で、子どもたちはいまでは小学校で外国語を学びはじめ、ときには6歳か7歳という早い時期から始める。ほんの1世代前には、ほとんどの生徒は中学校まで始めなかったので、早く始めることは語学教育のもっとも大切な変化のひとつだと考える教育者もいる。しかし、そんなに早く始めることが本当によりよい結果につながるのかを疑問に思い、その時間はほかの教科に使うほうがよいかもしれないと主張する人もいる。子どもはいつ外国語を学びはじめるべきかという問いは、いまも活発な議論の対象である。',
+      '早く始めることを支持する人々は、まず、幼い子どもはもともと言語を学ぶのが得意だと主張する。彼らはしばしば年上の学習者よりもまちがえることをこわがらず、新しい音やリズムをまねるのがかんたんで、より自然な発音を身につけられるかもしれない。家でふたつの言語を聞いて育つ子どもは、たいてい大きな苦労なく両方を身につけると支持する人々は指摘し、学校はできるだけ早く外国語を取り入れることで、この生まれつきの力を生かせると考える。',
+      '支持する人々はまた、幼いころに言語を学ぶことのより広い利益も強調する。別の言語を学ぶことは、世界を表すさまざまなやり方があることを子どもが理解する助けになり、ほかの文化への好奇心や、ちがう背景をもつ人々への敬意をうながすかもしれない。さらに、早く始めた子どもには力をのばすための年月が多くあるので、学校を出るころには自信をもってその言語を使えるようになっているかもしれないと支持する人々は主張する。10年間ある言語を学んだ子どもは、5年間しか学んでいない子どもよりはっきり有利だと彼らは指摘する。',
+      'しかし批判する人々は、早く始めることの利点はしばしば大げさに言われていると主張する。幼い子どもは発音をかんたんに身につけるかもしれないが、研究によれば、年上の学習者のほうが、幼い子どもにはできない規則の理解や学習の工夫ができるので、文法や語彙ではより速く上達することが多いという。批判する人々はまた、多くの学校で幼い子どものための外国語の授業は短く回数も少なく、週に1、2時間ほどかもしれず、それでは長く続く成果を生むには足りないかもしれないと指摘する。',
+      '批判する人々はさらに、教え方の質を心配している。小学校の先生の多くは語学の専門家として訓練されておらず、自分自身その言語に自信がない人もいるかもしれない。幼いころにまずい教え方をされると、子どもはあとで直すのがむずかしい悪いくせを身につけたり、本当に楽しむ機会を得る前にその教科をきらいになったりするかもしれないと批判する人々は主張する。さらに、新しい教科を加えれば、子ども自身の言語での読みや計算といった基本的な力のための時間がへるかもしれない。',
+      'こうした心配に対応しようとしてきた国もある。外国語を早く取り入れるが、おもに聞くことや話すこと、歌やゲームに重点をおき、文法や書くことはのちの学年にまわすのである。また、小学校の先生に追加の研修を行い、できるところでは専門家やその言語を母語とする人をまねいて授業を手伝ってもらっている。そうしたやり方は、幼い子どものやる気と音をまねる力を生かしながら、より正式な勉強は生徒が年上になってからのほうが効果的かもしれないことをみとめるものである。',
+      'したがって、外国語教育をいつ始めるかをめぐる議論は、学校がかぎられた時間と資源をどのように使うべきかという、より広い問いを映し出している。早く始めることには本当の利益があるかもしれないが、それは授業が十分にひんぱんで、先生がよく準備されている場合にかぎられる。子どもがどれだけ早く始めるべきかをただ問うよりも、それぞれの年齢でどのような教え方がもっともうまくいくのか、そして子どもが言語を学ぶのに使う時間が長く続く力と興味につながるよう、学校がどのように保証できるのかを問うほうが役に立つのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「幼い子どもは発音をかんたんに身につけるかもしれないが、年上の学習者のほうが速く上達する」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say young children learn sounds easily and that an early start encourages ( 1 ) about other cultures. Critics argue that older learners make faster progress in grammar and that lessons for young children are often too ( 2 ). Some countries focus on listening, speaking, and games at first and provide extra ( 3 ) for primary teachers.',
+      blanks: [
+        { choices: ['curiosity', 'fear', 'anger', 'boredom'], answer: 0, why: '第3段落 may encourage curiosity about other cultures。' },
+        { choices: ['short', 'long', 'difficult', 'expensive'], answer: 0, why: '第4段落 lessons for young children are short and infrequent。' },
+        { choices: ['training', 'money', 'holidays', 'books'], answer: 0, why: '第6段落 They also provide additional training for primary teachers。' },
+      ],
+    },
+    tf: [
+      { statement: '1世代前には、ほとんどの生徒は中学校まで外国語を始めなかった。', answer: true, why: '第1段落 most students did not start until secondary school。' },
+      { statement: '支持する人々によると、幼い子どもはまちがえることをとてもこわがる。', answer: false, why: '第2段落 They are often less afraid of making mistakes。' },
+      { statement: '研究によれば、年上の学習者のほうが文法では速く上達することが多い。', answer: true, why: '第4段落 older learners often make faster progress in grammar and vocabulary。' },
+      { statement: '取り組みをした国では、最初から文法と書くことに重点をおいている。', answer: false, why: '第6段落 leaving grammar and writing until later years。' },
+    ],
+    qa: [
+      { q: 'Why may poorly taught children come to dislike the subject?', choices: ['They may develop bad habits or lose interest early.', 'The lessons are too long.', 'They have too much homework.', 'They meet too many native speakers.'], answer: 0, why: '第5段落 they may come to dislike the subject before they have had a real chance to enjoy it。' },
+      { q: 'According to the last paragraph, what may be more useful to ask?', choices: ['What kind of teaching works best at each age.', 'How early children should begin.', 'How many languages exist.', 'Which language is easiest.'], answer: 0, why: '第7段落 to ask what kind of teaching works best at each age。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
