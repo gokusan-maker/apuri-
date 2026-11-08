@@ -44498,6 +44498,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tracking-children',
+    title: 'Should Parents Track Their Children’s Location?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Smartphones have made it possible for parents to know exactly where their children are at almost any moment. With a few taps, a mother can check whether her son has arrived at school, and a father can see the route his daughter is taking home from a friend's house. Many parents find this ability reassuring, especially in a world that often seems full of dangers, but others worry that constant tracking may harm children's independence and the trust between parents and their sons and daughters. The question of whether parents should monitor their children's location has therefore become a common and sometimes painful debate in many families.",
+      "Supporters argue that tracking can help keep children safe. If a child fails to arrive home at the expected time, parents can find out immediately where they are and whether they need help, and in emergencies the ability to locate a child quickly could make an important difference. Supporters also point out that knowing their children can be found may make parents more willing to let them go out alone, so that tracking can in some cases increase rather than reduce children's freedom. A ten-year-old who would not otherwise be allowed to walk to a friend's house alone, for example, may be given permission once parents know they can check the route.",
+      "Supporters also claim that tracking can reduce anxiety for both parents and children. Parents who might otherwise telephone repeatedly to ask where their children are can simply check a map, and children may feel more secure knowing that someone could find them if something went wrong. ( A ) some children may initially resist being tracked, supporters argue, many come to see it as a normal part of family life, much like telling their parents where they are going before they leave the house.",
+      "Critics, however, warn that constant monitoring can undermine children's sense of independence. Growing up involves learning to make decisions, to cope with small problems, and to take responsibility for one's own safety, and critics fear that children who know they are always being watched may never fully develop these abilities. They also argue that tracking can create an illusion of safety, since knowing where a child is located does not reveal whether that child is happy, safe, or in trouble.",
+      "Critics also emphasize the importance of trust. When parents track their children without discussing it with them, children may feel that they are not trusted, and this feeling can damage the relationship more than any danger that tracking might prevent. Some critics further point out that teenagers who feel overly controlled may find ways to avoid being tracked, such as leaving their phones with friends, so that monitoring may produce secrecy rather than openness. In such cases, the information parents receive may become less reliable at the very moment when they most need to know the truth.",
+      "In response, many families and experts recommend a more balanced approach. They suggest that parents discuss tracking openly with their children, explaining why they want to use it and agreeing together on when it will be checked. Some families use tracking only for younger children or for specific situations, such as long journeys, and gradually reduce it as children grow older and demonstrate that they can manage their own safety.",
+      "The debate over tracking children ultimately reflects a broader question about how parents can protect their children while allowing them to grow up. Technology offers powerful tools for keeping watch, but the goal of parenting is not only to keep children safe today but also to prepare them to live independently tomorrow. Finding the right balance may therefore depend less on the technology itself than on the conversations families have about trust, responsibility, and the freedom that young people need in order to become capable adults.",
+    ],
+    ja: [
+      'スマートフォンのおかげで、親はほとんどいつでも、子どもが正確にどこにいるかを知ることができるようになった。何回か画面にふれるだけで、母親は息子が学校に着いたかどうかを確かめられ、父親は娘が友だちの家から帰る道すじを見ることができる。多くの親は、とくに危険にみちているように思えることの多い世界で、この力に安心するが、たえず居場所を追うことが子どもの自立や親子の信頼をそこなうのではないかと心配する親もいる。そのため、親が子どもの居場所を見守るべきかどうかという問いは、多くの家庭でよくある、ときにつらい議論になっている。',
+      '支持する人々は、居場所の確認は子どもの安全を守る助けになりうると主張する。子どもが予定の時刻に帰らなかったら、親はすぐにどこにいて助けが必要かどうかを知ることができ、緊急のときには、子どもの居場所をすばやく見つけられることが大きなちがいを生むかもしれない。支持する人々はまた、子どもを見つけられるとわかっていれば、親は子どもを一人で出かけさせることにより前向きになるかもしれず、居場所の確認は、場合によっては子どもの自由を減らすどころか広げうると指摘する。たとえば、そうでなければ友だちの家まで一人で歩いて行くことを許されない十歳の子どもも、親が道すじを確かめられるとわかれば、許可をもらえるかもしれない。',
+      '支持する人々はまた、居場所の確認は親と子どもの両方の不安を減らしうると主張する。そうでなければ、どこにいるのかたずねるために何度も電話をかけるかもしれない親も、ただ地図を見ればよく、子どもは、何かまずいことが起きてもだれかが見つけてくれると知って、より安心できるかもしれない。最初は居場所を追われることをいやがる子どももいるかもしれないが、多くの子どもは、出かける前に行き先を親に伝えるのと同じように、それを家族の生活のふつうの一部と見なすようになる、と支持者は主張する。',
+      'しかし批判する人々は、たえず見張ることが子どもの自立の感覚をそこないうると警告する。大人になるとは、決断をし、小さな問題に対処し、自分の安全に責任をもつことを学ぶことであり、いつも見られているとわかっている子どもは、こうした力を十分に育てられないかもしれないと批判する人々は心配する。彼らはまた、居場所の確認は安全だという錯覚を生みうると主張する。子どもがどこにいるかを知っても、その子が幸せなのか、安全なのか、困っているのかはわからないからである。',
+      '批判する人々はまた、信頼の大切さを強調する。親が子どもと話し合わずに居場所を追うと、子どもは信頼されていないと感じるかもしれず、この気持ちは、居場所の確認がふせぐかもしれないどんな危険よりも、親子の関係をそこなうことがある。さらに、支配されすぎていると感じる十代の若者は、電話を友だちにあずけるなど、居場所を追われないようにする方法を見つけるかもしれず、見張ることが、開かれた関係ではなく秘密を生むことになりかねないと指摘する批判者もいる。そうした場合、親が受けとる情報は、本当のことをもっとも知る必要があるまさにそのときに、たよりにならないものになるかもしれない。',
+      'これに対して、多くの家族や専門家は、よりつりあいのとれたやり方をすすめている。親が子どもと居場所の確認について開かれた話し合いをし、なぜそれを使いたいのかを説明し、いつ確認するかをいっしょに決めることを彼らは提案する。幼い子どもや、長い旅のような特定の場面でだけ居場所の確認を使い、子どもが成長して自分の安全を管理できることを示すにつれて、少しずつ減らしていく家族もある。',
+      '子どもの居場所の確認をめぐる議論は、結局のところ、親がどのようにして子どもを守りながら成長させられるのかという、より広い問いを反映している。技術は見守るための強力な道具をあたえてくれるが、子育ての目的は、今日子どもを安全に保つことだけでなく、明日自立して生きる準備をさせることでもある。だから、正しいつりあいを見つけられるかどうかは、技術そのものよりも、信頼や責任、そして若者が有能な大人になるために必要な自由について、家族がどのような話し合いをするかにかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「最初はいやがる子どももいるかもしれないが、多くはふつうの一部と見なすようになる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say tracking can keep children safe and reduce ( 1 ) for families. Critics warn that constant monitoring may weaken children’s ( 2 ) and damage trust. Many experts recommend that parents ( 3 ) tracking openly with their children.',
+      blanks: [
+        { choices: ['anxiety', 'homework', 'traffic', 'noise'], answer: 0, why: '第3段落 tracking can reduce anxiety for both parents and children。' },
+        { choices: ['independence', 'height', 'eyesight', 'appetite'], answer: 0, why: '第4段落 can undermine children’s sense of independence。' },
+        { choices: ['discuss', 'hide', 'sell', 'forget'], answer: 0, why: '第6段落 parents discuss tracking openly with their children。' },
+      ],
+    },
+    tf: [
+      { statement: '支持する人々によると、居場所の確認は子どもの自由を広げることもある。', answer: true, why: '第2段落 tracking can in some cases increase rather than reduce children’s freedom。' },
+      { statement: '批判する人々によると、子どもの居場所がわかれば、その子が幸せかどうかもわかる。', answer: false, why: '第4段落 does not reveal whether that child is happy, safe, or in trouble。' },
+      { statement: '居場所を追われないようにする方法を見つける十代の若者もいるかもしれない。', answer: true, why: '第5段落 may find ways to avoid being tracked。' },
+      { statement: 'すべての家族が、子どもが大きくなっても同じように居場所を確認しつづける。', answer: false, why: '第6段落 gradually reduce it as children grow older。' },
+    ],
+    qa: [
+      { q: 'What do some teenagers do to avoid being tracked, according to critics?', choices: ['Leave their phones with friends.', 'Change schools.', 'Buy two phones.', 'Stay at home all day.'], answer: 0, why: '第5段落 such as leaving their phones with friends。' },
+      { q: 'What is the goal of parenting, according to the last paragraph?', choices: ['To keep children safe today and prepare them to live independently.', 'To watch children at every moment.', 'To use the newest technology.', 'To avoid all conversations about trust.'], answer: 0, why: '第7段落 not only to keep children safe today but also to prepare them to live independently tomorrow。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
