@@ -45902,6 +45902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-rooftops',
+    title: 'On Rooftops',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us spend our lives beneath roofs without ever looking at them. We notice the walls, doors, and windows of the buildings we pass, but the roofs above them remain largely out of sight, visible only from a hill, a tall building, or the window of a plane. Yet the roof is perhaps the most essential part of any shelter, and the rooftops of a city form a whole landscape of their own, one that reveals much about climate, history, and the changing ways in which people use the space above their heads.",
+      "The first purpose of a roof is protection. It keeps out rain, snow, and the heat of the sun, and its shape is often determined by the climate in which it is built. In regions with heavy snow, roofs are usually steep so that the snow slides off before it becomes too heavy, while in dry, hot regions roofs are often flat, since there is little rain to drain away. A journey across a country can therefore be traced in the changing shapes of its roofs, which reflect the conditions their builders had to face.",
+      "Roofs also express the materials and skills available in each place. ( A ) many modern roofs are made of similar industrial materials, traditional roofs were built from whatever was found nearby: straw, reeds, wooden boards, slate, or clay tiles. Each material required particular techniques, often passed down through generations of craftsmen, and the appearance of old villages and towns owes much to these local traditions, which give each region a character that visitors can recognize at a glance.",
+      "For much of history, roofs were spaces that people rarely used. In crowded cities, however, the roof has increasingly been seen as valuable land. Flat roofs have long served as places to dry laundry, to sleep on hot nights, or to gather with neighbors in the cool of the evening, and in some cultures the rooftop has been an important part of family and social life, a kind of open room above the busy streets below. In such places, the roof is not simply the top of a building but a part of the home where much of daily life takes place.",
+      "In recent years, architects and city planners have begun to rethink the potential of rooftops. Gardens planted on roofs can reduce the heat that buildings absorb, slow the flow of rainwater into drains, and provide homes for insects and birds. Solar panels placed on roofs can generate electricity without taking up land, and some cities have encouraged or even required new buildings to use their roofs in such ways, turning a neglected surface into a resource that benefits the whole community.",
+      "Rooftops have also held a special place in the human imagination. They offer a view that is usually hidden, allowing those who climb onto them to see their surroundings from a new angle and to feel briefly removed from the noise of the streets. In stories and films, rooftops are often the setting for moments of escape, secret meetings, or quiet reflection, and the image of someone sitting alone on a roof, looking out over a city at night, has become a familiar symbol of solitude and longing.",
+      "Perhaps, then, the roof deserves more thought than we usually give it. It protects us from the weather, reflects the climate and traditions of each place, and offers space that cities are only now learning to use wisely. The next time we have a chance to look down on a town from above, it may be worth studying its rooftops carefully, since in their shapes, colors, and uses we may read a quiet history of how people have learned to make a home under the sky.",
+    ],
+    ja: [
+      '私たちのほとんどは、屋根を一度も見上げることなく、その下で一生をすごす。通りすぎる建物のかべやドア、窓には気づくが、その上の屋根は丘や高い建物、飛行機の窓からしか見えず、ほとんど目に入らない。しかし屋根はおそらくどんなすまいにとってももっとも欠かせない部分であり、都市の屋根の連なりはそれ自体がひとつの風景をなしている。それは、気候や歴史、そして人々が頭の上の空間を使うやり方の移り変わりについて、多くのことを明らかにしてくれるのである。',
+      '屋根の第一の目的は守ることである。それは雨や雪、日ざしの熱をふせぎ、その形はしばしばそれが建てられる気候によって決まる。雪の多い地域では、雪が重くなりすぎる前にすべり落ちるよう、屋根はふつう急なかたむきになっており、かわいた暑い地域では、流すべき雨がほとんどないので、屋根は平らなことが多い。したがって、ある国を旅すると、屋根の形の変化をたどることができ、それは建てた人々が向き合わなければならなかった条件を映し出しているのである。',
+      '屋根はまた、それぞれの場所で手に入る材料と技術を表している。現代の屋根の多くは似たような工業製品の材料でつくられているが、伝統的な屋根は、わら、アシ、木の板、石板、粘土のかわらなど、近くで見つかるものでつくられた。それぞれの材料にはとくべつな技術が必要で、それはしばしば職人の何世代にもわたって受けつがれてきた。そして古い村や町の見た目は、こうした地元の伝統に多くをおっており、それが訪れる人がひと目でわかるそれぞれの地域らしさをあたえているのである。',
+      '歴史のほとんどのあいだ、屋根は人々がめったに使わない空間だった。しかし混み合った都市では、屋根はますます価値のある土地と見なされるようになった。平らな屋根は昔から、洗たくものをほしたり、暑い夜にねむったり、夕方の涼しさの中で近所の人と集まったりする場所として使われてきた。そして文化によっては、屋上は家族や社会の生活の大切な一部であり、下のにぎやかな通りの上にある一種の外の部屋だったのである。そうした場所では、屋根は単に建物のいちばん上ではなく、日々の生活の多くが行われる家の一部なのである。',
+      '近年、建築家や都市計画の専門家は、屋上の可能性を考え直しはじめている。屋上に植えられた庭は、建物がすいこむ熱をへらし、雨水が排水管に流れこむのをおそくし、昆虫や鳥のすみかにもなる。屋根に置かれた太陽光パネルは、土地をとらずに電気をつくることができ、新しい建物にこうした屋根の使い方をすすめたり、義務づけたりさえした都市もある。こうして、見すごされてきた表面が、地域全体の利益になる資源に変わっているのである。',
+      '屋上はまた、人間の想像力の中でとくべつな場所をしめてきた。そこはふだんはかくれている眺めをあたえ、上にのぼった人がまわりを新しい角度から見て、通りのさわがしさからしばしはなれていると感じられるようにしてくれる。物語や映画では、屋上はしばしばにげ出す瞬間や、ひみつの待ち合わせ、静かに考えにふける場面の舞台になる。そして夜、ひとり屋根にすわって都市を見わたす人のすがたは、孤独とあこがれのよく知られたシンボルになっている。',
+      'だとすれば、屋根は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは私たちを天気から守り、それぞれの場所の気候と伝統を映し出し、都市がいまようやくかしこく使うことを学びはじめた空間をあたえてくれる。次に上から町を見下ろす機会があったら、その屋根の連なりを注意深くながめてみる価値があるかもしれない。その形や色や使われ方の中に、人々が空の下で家をつくることをどのように学んできたかの静かな歴史を読みとれるかもしれないからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「現代の屋根の多くは似た材料だが、伝統的な屋根は近くの材料でつくられた」という対比なので Although。' },
+    ],
+    tf: [
+      { statement: '雪の多い地域では、屋根はふつう急なかたむきになっている。', answer: true, why: '第2段落 In regions with heavy snow, roofs are usually steep。' },
+      { statement: '伝統的な屋根は、どこでも同じ工業製品の材料でつくられた。', answer: false, why: '第3段落 traditional roofs were built from whatever was found nearby。' },
+      { statement: '屋上の庭は、昆虫や鳥のすみかになることがある。', answer: true, why: '第5段落 provide homes for insects and birds。' },
+      { statement: '筆者によると、屋根は歴史を通じていつもよく使われる空間だった。', answer: false, why: '第4段落 For much of history, roofs were spaces that people rarely used。' },
+    ],
+    qa: [
+      { q: 'Why are roofs in dry, hot regions often flat?', choices: ['There is little rain to drain away.', 'Snow is very heavy there.', 'People cannot build steep roofs.', 'The law requires it.'], answer: 0, why: '第2段落 since there is little rain to drain away。' },
+      { q: 'What has the image of someone sitting alone on a roof become a symbol of?', choices: ['Solitude and longing.', 'Wealth and power.', 'Danger and fear.', 'Work and duty.'], answer: 0, why: '第6段落 a familiar symbol of solitude and longing。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
