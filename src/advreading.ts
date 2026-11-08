@@ -46338,6 +46338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-paper-receipts',
+    title: 'Should Shops Stop Printing Receipts?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Almost every purchase in a shop ends with a small slip of paper: the receipt. Customers fold it into a pocket, drop it into a bag, or leave it on the counter, and most receipts are thrown away within minutes. In recent years, however, a growing number of shops and governments have begun to question whether paper receipts are necessary at all, and some places have introduced rules that require shops to offer digital receipts instead, or to print them only when customers ask. The proposal has prompted a surprisingly heated debate.",
+      "Supporters of reducing paper receipts argue first that they create a great deal of waste. Billions of receipts are printed every year, consuming large amounts of paper, water, and energy, and many of them cannot be recycled because of the special coating used on the paper. In addition, supporters point out, some of these coatings contain chemicals that may be harmful to health, particularly for shop workers who handle receipts all day. Sending receipts by email or through an app, supporters say, would avoid these problems entirely. A shop that stopped printing receipts could save thousands of rolls of paper each year.",
+      "Supporters also note that digital receipts can be more convenient for customers. Paper receipts are easily lost or fade over time, making it difficult to return goods or to keep records for warranties and expenses. A digital record, by contrast, can be stored safely and found quickly when needed. For shops, too, supporters argue, reducing paper saves money and time, since printers require maintenance and rolls of paper must be bought and replaced regularly.",
+      "Critics, however, argue that digital receipts raise concerns about privacy. ( A ) a paper receipt reveals nothing about the customer, a digital one usually requires an email address or a phone number, which allows shops to collect information about people's shopping habits. Critics worry that this information may be used to send unwanted advertising, shared with other companies, or exposed in a data leak, and they argue that customers should not have to give up personal details simply to receive proof of what they have bought. Some shops, critics add, already use receipts mainly as a tool for marketing.",
+      "Critics also point out that not everyone has easy access to digital technology. Elderly people, those without smartphones, and people who are uncomfortable with online systems may find digital receipts difficult to use, and they may be left without a record of their purchases. In addition, critics note, a paper receipt allows customers to check immediately that they have been charged the correct amount, something that is harder to do when the receipt arrives later by email. A mistake that is not noticed at the till may be much harder to correct afterwards.",
+      "Some places have tried to find a middle way. Rather than banning paper receipts, they require shops to ask customers whether they want one, so that receipts are printed only when needed. Others encourage the use of paper without harmful coatings, or allow customers to receive digital receipts without providing personal details, for example by scanning a code at the till. Such measures aim to reduce waste while respecting customers' privacy and their right to choose the form of record they prefer.",
+      "The debate over paper receipts therefore reflects a wider question about how small, everyday habits contribute to larger problems, and how changes to them should be made. A single receipt seems trivial, but billions of them add up to a significant environmental cost. At the same time, efforts to solve one problem may create others, such as threats to privacy or the exclusion of those who are less familiar with technology. Finding a fair solution requires attention to all of these concerns.",
+    ],
+    ja: [
+      '店での買い物のほとんどは、小さな紙切れで終わる。レシートである。客はそれをたたんでポケットに入れたり、袋に落としたり、カウンターに置いていったりし、ほとんどのレシートは数分のうちに捨てられる。しかし近年、紙のレシートがそもそも必要なのかを問いはじめる店や政府がふえており、店にかわりにデジタルのレシートを提供するよう、あるいは客がたのんだときにだけ印刷するよう求める決まりを取り入れた場所もある。この提案は、おどろくほどはげしい議論を引き起こしている。',
+      '紙のレシートをへらすことを支持する人々は、まず、それは大量のごみを生むと主張する。毎年何十億枚ものレシートが印刷され、大量の紙や水、エネルギーを使っており、その多くは紙に使われるとくべつな表面加工のせいでリサイクルできない。さらに、こうした加工のなかには健康に害があるかもしれない化学物質をふくむものもあり、とくに1日中レシートをさわる店員にとってはそうだと支持する人々は指摘する。レシートをメールやアプリで送れば、こうした問題はまったくさけられるだろうと支持する人々は言う。レシートの印刷をやめた店は、毎年何千もの紙のロールを節約できるかもしれない。',
+      '支持する人々はまた、デジタルのレシートは客にとってより便利になりうると考える。紙のレシートはなくしやすく、時間がたつとうすれてしまうので、品物を返したり、保証や経費のための記録をとっておいたりするのがむずかしくなる。それに対して、デジタルの記録は安全に保存でき、必要なときにすばやく見つけられる。店にとっても、紙をへらすことはお金と時間の節約になると支持する人々は主張する。プリンターには手入れが必要で、紙のロールを定期的に買って取りかえなければならないからである。',
+      'しかし批判する人々は、デジタルのレシートはプライバシーについての心配を生むと主張する。紙のレシートは客について何も明らかにしないが、デジタルのものはふつうメールアドレスか電話番号が必要で、それによって店は人々の買い物の習慣についての情報を集められるようになる。この情報が、いらない広告を送るのに使われたり、ほかの会社と共有されたり、情報もれで流出したりするかもしれないと批判する人々は心配しており、買ったものの証明を受けとるだけのために、客が個人情報を手放さなければならないのはおかしいと主張する。すでにレシートをおもに販売促進の道具として使っている店もあると、批判する人々はつけ加える。',
+      '批判する人々はまた、すべての人がデジタル技術をかんたんに使えるわけではないと指摘する。お年寄りやスマートフォンをもたない人々、オンラインのしくみになじめない人々にとって、デジタルのレシートは使いにくいかもしれず、買い物の記録がないままになってしまうかもしれない。さらに、紙のレシートなら、客は正しい金額を請求されたかをすぐにたしかめられるが、あとでメールでレシートがとどく場合にはそれがむずかしくなると批判する人々は指摘する。レジで気づかなかったまちがいは、あとから正すのがずっとむずかしいかもしれない。',
+      '中間の道を見つけようとしてきた場所もある。紙のレシートを禁止するかわりに、店に客がほしいかどうかをたずねるよう求め、必要なときにだけ印刷されるようにするのである。また、害のある加工をしていない紙の使用をすすめたり、レジでコードを読みとるなどして、個人情報を出さずにデジタルのレシートを受けとれるようにしたりしているところもある。そうした対策は、ごみをへらしながら、客のプライバシーと、好みの記録の形を選ぶ権利を尊重することをめざしている。',
+      'したがって、紙のレシートをめぐる議論は、日々の小さな習慣がより大きな問題にどのように結びつき、それをどのように変えるべきかという、より広い問いを映し出している。1枚のレシートはささいなものに思えるが、何十億枚も集まれば、環境への大きな負担になる。同時に、ひとつの問題を解決しようとする努力が、プライバシーへのおびやかしや、技術になじみの少ない人々の切りすてなど、ほかの問題を生むこともある。公平な解決策を見つけるには、こうしたすべての心配に注意をはらう必要があるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「紙のレシートは客について何も明らかにしないが、デジタルのものはメールアドレスが必要だ」という対比なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say paper receipts create waste, may contain harmful ( 1 ), and are easily lost. Critics argue that digital receipts threaten ( 2 ) and are hard for some people to use. Some places require shops to ask customers whether they want a receipt, so that receipts are printed only when ( 3 ).',
+      blanks: [
+        { choices: ['chemicals', 'colors', 'pictures', 'words'], answer: 0, why: '第2段落 some of these coatings contain chemicals that may be harmful。' },
+        { choices: ['privacy', 'health', 'speed', 'safety'], answer: 0, why: '第4段落 digital receipts raise concerns about privacy。' },
+        { choices: ['needed', 'cheap', 'colorful', 'late'], answer: 0, why: '第6段落 so that receipts are printed only when needed。' },
+      ],
+    },
+    tf: [
+      { statement: 'ほとんどのレシートは、数分のうちに捨てられる。', answer: true, why: '第1段落 most receipts are thrown away within minutes。' },
+      { statement: 'すべてのレシートの紙はかんたんにリサイクルできる。', answer: false, why: '第2段落 many of them cannot be recycled。' },
+      { statement: 'デジタルのレシートには、ふつうメールアドレスか電話番号が必要だ。', answer: true, why: '第4段落 usually requires an email address or a phone number。' },
+      { statement: 'どの場所も、個人情報なしにデジタルのレシートを受けとれるようにはしていない。', answer: false, why: '第6段落 allow customers to receive digital receipts without providing personal details。' },
+    ],
+    qa: [
+      { q: 'Who may be most affected by harmful chemicals on receipts?', choices: ['Shop workers who handle receipts all day.', 'Customers who shop once a year.', 'Delivery drivers.', 'Factory owners.'], answer: 0, why: '第2段落 particularly for shop workers who handle receipts all day。' },
+      { q: 'What does a paper receipt allow customers to do immediately?', choices: ['Check that they have been charged correctly.', 'Return goods without a reason.', 'Receive a discount.', 'Share it with friends.'], answer: 0, why: '第5段落 allows customers to check immediately that they have been charged the correct amount。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
