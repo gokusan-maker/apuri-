@@ -1378,7 +1378,7 @@
   - [x] 515 誤文訂正〈254〉（国公立レベル：英作文の thank 人 for・blame 人 for・praise 人 for）10問
   - [x] 516 正誤問題〈261〉（京大レベル：英作文の accuse 人 of・congratulate 人 on・approve of）10問
   - [x] 517 誤文訂正〈255〉（東大レベル：英作文の worry about・be worried about・be anxious about）10問
-  - [ ] 518 正誤問題〈262〉（国公立レベル：英作文の come up with・catch up with・run out of（3語の句動詞））10問
+  - [x] 518 正誤問題〈262〉（国公立レベル：英作文の come up with・catch up with・run out of（3語の句動詞））10問
   - [ ] 519 誤文訂正〈256〉（京大レベル：英作文の avoid・deny・consider・enjoy のあとの ～ing）10問
   - [ ] 520 正誤問題〈263〉（東大レベル：英作文の look up to・make up for・get along with）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

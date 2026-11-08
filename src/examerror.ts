@@ -6283,6 +6283,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) He (B) strong (C) denied (D) the accusation.', choices: ['(A) He', '(B) strong', '(C) denied', '(D) the accusation'], answer: 1, why: '動詞 denied を修飾するので副詞 strongly。' },
     ],
   },
+  {
+    id: 'exam-error-three-word-verbs',
+    title: '入試の正誤問題〈262〉（国公立レベル：英作文の come up with・catch up with・run out of（3語の句動詞））',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '3語の句動詞は最後の前置詞まででひとまとまり：come up with ～（～を思いつく）・catch up with ～（～に追いつく）・run out of ～（～を切らす）。前置詞をぬかしたり、別の前置詞にしたりしない。',
+      '前置詞のあとの代名詞は目的格（catch up with us）。run out of は「～がなくなる」で、主語は使う人（We ran out of milk.）。',
+    ],
+    examples: [
+      { en: 'She came up with a great idea. / I ran to catch up with my friends.', ja: '彼女はすばらしい考えを思いついた。／友だちに追いつこうと走った。' },
+      { en: 'We have run out of milk.', ja: '牛乳を切らしてしまった。' },
+    ],
+    questions: [
+      { sentence: '(A) She (B) came up (C) a great idea (D) for the school festival.', choices: ['(A) She', '(B) came up', '(C) a great idea', '(D) for the school festival'], answer: 1, why: '「（考え）を思いつく」は come up with ～。came up with。' },
+      { sentence: '(A) I (B) have to work hard (C) to catch up (D) my classmates.', choices: ['(A) I', '(B) have to work hard', '(C) to catch up', '(D) my classmates'], answer: 2, why: '「（人）に追いつく」は catch up with ～。to catch up with。' },
+      { sentence: '(A) We (B) ran out (C) from (D) milk this morning.', choices: ['(A) We', '(B) ran out', '(C) from', '(D) milk this morning'], answer: 2, why: '「～を使い切る・切らす」は run out of ～。ran out of milk。' },
+      { sentence: '(A) Catch (B) up with the others, (C) he (D) ran as fast as he could.', choices: ['(A) Catch', '(B) up with the others,', '(C) he', '(D) ran as fast as he could'], answer: 0, why: '「追いつくために」は目的を表す不定詞 To catch up with。' },
+      { sentence: '(A) The company (B) came up with (C) a new way (D) to saving energy.', choices: ['(A) The company', '(B) came up with', '(C) a new way', '(D) to saving energy'], answer: 3, why: 'a way to do で「～する方法」。to save energy。' },
+      { sentence: '(A) Most (B) of the shops (C) has run out of (D) bread.', choices: ['(A) Most', '(B) of the shops', '(C) has run out of', '(D) bread'], answer: 2, why: 'Most of the shops は複数あつかいなので have run out of。' },
+      { sentence: '(A) He (B) finally (C) caught up with (D) we at the station.', choices: ['(A) He', '(B) finally', '(C) caught up with', '(D) we at the station'], answer: 3, why: '前置詞のあとは目的格。caught up with us。' },
+      { sentence: '(A) The printer (B) ran out (C) of ink (D) during I was printing.', choices: ['(A) The printer', '(B) ran out', '(C) of ink', '(D) during I was printing'], answer: 3, why: 'あとに文が続くので接続詞 while。while I was printing。' },
+      { sentence: '(A) Nobody (B) could come (C) up for (D) a good answer.', choices: ['(A) Nobody', '(B) could come', '(C) up for', '(D) a good answer'], answer: 2, why: '「～を思いつく」は come up with ～。up with。' },
+      { sentence: '(A) We (B) are running out (C) of time, (D) so let’s hurrying.', choices: ['(A) We', '(B) are running out', '(C) of time,', '(D) so let’s hurrying'], answer: 3, why: 'let’s のあとは動詞の原形。let’s hurry。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
