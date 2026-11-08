@@ -3655,3 +3655,10 @@ it('正誤問題〈264〉：京大レベル carry out・bring up・take after �
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) on out')
 })
+
+it('誤文訂正〈258〉：東大レベル do without・give in・break down の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-258')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('do without')
+})

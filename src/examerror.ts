@@ -10988,6 +10988,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Please [turn off down] the TV when you leave.', choices: ['turn off', 'turn down off', 'turn off it', 'turn it of'], answer: 0, why: '「（電源を）切る」は turn off。down は不要。' },
     ],
   },
+  {
+    id: 'exam-fix-258',
+    title: '入試の誤文訂正〈258〉（東大レベル：英作文の do without・give in・break down）',
+    points: ['do without ～（～なしですませる）・give in (to ～)（（～に）屈する・負ける）・break down（こわれる・（話し合いが）だめになる・（人が）泣きくずれる）。give in と break down は自動詞的に使い、目的語をとらない（× give in the pressure → give in to the pressure）。', 'do without のあとは名詞か ～ing（do without sleeping）。受け身にしない句動詞（× was broken down）に注意する。'],
+    examples: [{ en: 'I can’t do without my phone. / He finally gave in to their demands. / The car broke down on the way.', ja: '電話なしではやっていけない。／彼はついに彼らの要求に屈した。／車がとちゅうでこわれた。' }],
+    questions: [
+      { sentence: 'I cannot [do with] coffee in the morning.', choices: ['do without', 'do out', 'do off', 'do away'], answer: 0, why: '「～なしですませる」は do without ～。' },
+      { sentence: 'The workers refused to [give in the pressure].', choices: ['give in to the pressure', 'give the pressure in', 'give up to pressure in', 'give in of the pressure'], answer: 0, why: '「～に屈する」は give in to ～。' },
+      { sentence: 'Our car [was broken down] on the highway.', choices: ['broke down', 'was breaking down to', 'broken down', 'breaks down to'], answer: 0, why: '「（機械が）こわれる」は break down で、受け身にしない。' },
+      { sentence: 'Many people find it hard to do without [use] their smartphones.', choices: ['using', 'to use', 'used', 'uses'], answer: 0, why: '前置詞 without のあとは動名詞なので using。' },
+      { sentence: 'The talks between the two companies [broke off down] last week.', choices: ['broke down', 'broke out down', 'were broke down', 'breaks down'], answer: 0, why: '「（話し合いが）だめになる」は break down。' },
+      { sentence: 'After hours of crying, the child finally [gave in up] and fell asleep.', choices: ['gave in', 'gave on', 'gave in to up', 'given in'], answer: 0, why: '「負ける・屈する」は give in。up は不要。' },
+      { sentence: 'We had to [do without of] electricity for three days after the storm.', choices: ['do without', 'do with of', 'do without to', 'done without'], answer: 0, why: 'do without のあとにすぐ名詞を置く。of は不要。' },
+      { sentence: 'When she heard the news, she [broke in tears down].', choices: ['broke down in tears', 'broke tears down', 'was broken down in tears', 'broke in down tears'], answer: 0, why: '「泣きくずれる」は break down (in tears)。' },
+      { sentence: 'The government will never [give in for] terrorists.', choices: ['give in to', 'give in at', 'give for in', 'give on to'], answer: 0, why: '「～に屈する」は give in to ～。' },
+      { sentence: 'If the computer [break down] again, call the repair shop.', choices: ['breaks down', 'will break down to', 'broken down', 'break downs'], answer: 0, why: '条件を表す if 節は現在形。主語は単数なので breaks down。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
