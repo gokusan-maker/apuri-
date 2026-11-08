@@ -43822,6 +43822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-blankets',
+    title: 'On Blankets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A blanket is perhaps one of the most comforting objects that human beings possess. We wrap ourselves in blankets when we are cold, ill, or tired, we place them over sleeping children, and we spread them on the grass for picnics in the sun. Because blankets are so common, we rarely think of them as anything more than practical items for keeping warm, yet the way people use them reveals a great deal about the human need for protection, comfort, and closeness to others.",
+      "The most basic function of a blanket is to keep the body warm. Long before modern heating, people in cold climates depended on thick layers of wool or fur to survive the night, and a family's blankets were often among its most valuable possessions, carefully repaired and passed down from one generation to the next. In many cultures, the making of blankets was also an art, and the patterns woven or stitched into them could express the identity of a family or a community. A blanket woven by a grandmother, for instance, might carry colors and designs that told anyone who saw it where its owner came from.",
+      "For young children, a blanket often becomes much more than a source of warmth. Many children develop a strong attachment to a particular blanket, carrying it everywhere and refusing to sleep without it, and psychologists have suggested that such objects help children cope with the anxiety of being separated from their parents. ( A ) adults sometimes smile at this attachment, it may reflect a deep and lasting need, since many grown-ups also find comfort in familiar objects during times of stress or change. Some hospitals even allow patients to bring a favorite blanket from home, recognizing that a familiar texture can ease the fear of an unfamiliar room.",
+      "Blankets also play an important role in moments of crisis. People rescued from cold water, survivors of disasters, and refugees arriving in unfamiliar places are often given blankets as one of the first forms of help, and the simple act of wrapping someone in a blanket can communicate care more clearly than words. In such situations, the blanket becomes a symbol of shelter, offering not only physical warmth but also the reassurance that someone is looking after the person who receives it.",
+      "At the same time, blankets are associated with sharing and closeness. Families gather under a single blanket on cold evenings, friends share one while watching the stars, and a blanket spread on the ground can create a small space in which people sit together, eat, and talk. In this way, a blanket can turn an open and impersonal place, such as a park or a beach, into something that feels, for a while, like home. Even a plain and inexpensive blanket can serve this purpose, since its value lies less in what it is made of than in the way it gathers people together.",
+      "In modern societies, many homes are kept so warm that blankets are needed less often for survival. Central heating, electric blankets, and lightweight synthetic fabrics have made it easy to stay comfortable without the heavy layers that earlier generations relied on. Yet many people continue to value blankets for reasons that have little to do with temperature, suggesting that their importance lies as much in the feelings they provide as in the warmth they hold.",
+      "Perhaps, then, blankets deserve more attention than we usually give them. They remind us that human beings need not only food and shelter but also comfort, protection, and the sense of being cared for, and that these needs remain with us throughout our lives. The next time we wrap ourselves in a blanket or offer one to someone else, it may be worth remembering that this simple gesture expresses one of the oldest forms of kindness, the wish to keep another person warm and safe.",
+    ],
+    ja: [
+      '毛布は、おそらく人間がもっているもののなかでもっとも心をなぐさめてくれるものの一つである。私たちは寒いとき、病気のとき、つかれたときに毛布にくるまり、眠っている子どもに毛布をかけ、晴れた日のピクニックでは草の上に広げる。毛布はあまりにもふつうにあるので、私たちはそれを温かく保つための実用品以上のものと考えることはめったにないが、人々が毛布をどのように使うかは、守られることや、なぐさめや、ほかの人とのつながりを求める人間の必要について、多くのことを明らかにしている。',
+      '毛布のもっとも基本的な働きは、体を温かく保つことである。現代の暖房よりずっと前、寒い地方の人々は、夜を生きのびるために羊毛や毛皮の厚い重なりにたよっており、家族の毛布はしばしばもっとも価値のある持ち物の一つであり、注意深くつくろわれ、世代から世代へと受けつがれた。多くの文化で、毛布をつくることはまた一つの芸術であり、そこに織りこまれたりぬいこまれたりした模様は、家族や共同体のアイデンティティを表すことができた。たとえば祖母が織った毛布には、それを見る人にだれでも、持ち主がどこの出身かを伝える色や模様がこめられていたかもしれない。',
+      '幼い子どもにとって、毛布はしばしば温かさの源をはるかにこえたものになる。多くの子どもは特定の毛布に強い愛着をもち、どこへでももち歩き、それがないと眠ろうとしない。心理学者たちは、そうしたものが、子どもが親とはなれる不安に対処する助けになっていると考えてきた。大人はときにこの愛着をほほえましく見るが、それは深く長く続く必要を反映しているのかもしれない。多くの大人もまた、ストレスや変化のときに、なじみのものになぐさめを見いだすからである。患者が家からお気に入りの毛布をもってくることを認める病院さえある。なじみのある手ざわりが、見知らぬ部屋へのおそれをやわらげうると考えているのである。',
+      '毛布はまた、危機の瞬間にも大切な役割を果たす。冷たい水から救い出された人や、災害を生きのびた人、見知らぬ土地にたどりついた難民には、最初の助けの一つとして毛布がわたされることが多く、だれかを毛布でくるむという単純な行為は、ことばよりもはっきりと思いやりを伝えることができる。そのような状況で、毛布は避難所の象徴になる。体の温かさだけでなく、受けとる人をだれかが見守ってくれているという安心もあたえてくれるのである。',
+      '同時に、毛布は分かち合いや親しさとも結びついている。寒い夜には家族が一枚の毛布の下に集まり、友だちどうしは星を見ながら一枚をいっしょに使い、地面に広げた毛布は、人々がいっしょにすわり、食べ、話す小さな空間をつくり出すことができる。このように、毛布は公園や海辺のような開けた、よそよそしい場所を、しばらくのあいだ家のように感じられるものに変えることができる。地味で安い毛布でさえ、この役目を果たすことができる。その価値は、何でできているかよりも、人々を集めるそのしかたにあるからである。',
+      '現代の社会では、多くの家がとても暖かく保たれているので、生きのびるために毛布が必要になることは少なくなった。セントラルヒーティングや電気毛布、軽い化学繊維の布のおかげで、前の世代がたよっていた重い重なりなしに、かんたんに快適に過ごせるようになった。それでも多くの人は、温度とはほとんど関係のない理由で毛布を大切にしつづけている。このことは、毛布の大切さが、それがたもつ温かさと同じくらい、それがあたえてくれる気持ちにあることを示している。',
+      'だとすれば、毛布は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。毛布は、人間が食べものと住まいだけでなく、なぐさめや守り、大切にされているという感覚も必要としていること、そしてこうした必要が一生を通じて私たちとともにあることを思い出させてくれる。次に毛布にくるまったり、だれかに毛布を差し出したりするとき、この単純なしぐさが、もっとも古い親切の形の一つ、つまりほかの人を温かく安全に保ちたいという願いを表していることを思い出す価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「大人はこの愛着をほほえましく見るが、深い必要を反映しているのかもしれない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '寒い地方では、家族の毛布はしばしば価値のある持ち物だった。', answer: true, why: '第2段落 a family’s blankets were often among its most valuable possessions。' },
+      { statement: '心理学者によると、毛布は子どもの不安を強める。', answer: false, why: '第3段落 such objects help children cope with the anxiety。' },
+      { statement: '災害を生きのびた人には、最初の助けの一つとして毛布がわたされることが多い。', answer: true, why: '第4段落 are often given blankets as one of the first forms of help。' },
+      { statement: '筆者によると、現代の人々は毛布をまったく使わなくなった。', answer: false, why: '第6段落 many people continue to value blankets。' },
+    ],
+    qa: [
+      { q: 'What could the patterns woven into blankets express in many cultures?', choices: ['The identity of a family or a community.', 'The price of the blanket.', 'The weather of the next day.', 'The age of the sheep.'], answer: 0, why: '第2段落 could express the identity of a family or a community。' },
+      { q: 'What can a blanket spread on the ground turn an open place into?', choices: ['Something that feels like home.', 'A crowded market.', 'A dangerous area.', 'A classroom.'], answer: 0, why: '第5段落 into something that feels, for a while, like home。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
