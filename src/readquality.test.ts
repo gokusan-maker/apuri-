@@ -32,5 +32,5 @@ it('内容一致で、正解だけが長い（ほかの1.6倍以上）選択肢�
     const L = q.choices.map((c) => c.length)
     return L[q.answer] >= 1.6 * Math.max(...L.filter((_, i) => i !== q.answer))
   })
-  expect(bad.length).toBeLessThanOrEqual(243)
+  expect(bad.length).toBeLessThanOrEqual(1)
 })
