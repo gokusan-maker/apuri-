@@ -46818,6 +46818,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-museum-photography',
+    title: 'Should Museums Allow Photography?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Visitors to museums and art galleries today often spend as much time looking at their phones as at the works on display. They photograph paintings, take pictures of themselves beside famous sculptures, and share the images online within minutes. Some museums have welcomed this, seeing it as free publicity and a sign of public interest, while others ban photography entirely or restrict it in certain rooms. The question of whether museums should allow visitors to take photographs has become a subject of lively debate among curators, artists, and the public.",
+      "Supporters of allowing photography argue first that it helps people engage with art and history. A photograph allows visitors to remember what they have seen, to look again at details they noticed, and to share their experiences with friends who could not come. When images of a museum's collection are shared widely online, supporters say, they may encourage new audiences, including young people who might not otherwise visit, to come and see the works for themselves. Some museums have even found that their visitor numbers rose after they began to allow photography.",
+      "Supporters also point out that banning photography is increasingly difficult to enforce. Almost every visitor now carries a camera in the form of a phone, and guards may spend much of their time telling people to put their phones away rather than protecting the works or helping visitors. In addition, supporters argue, many works in museums belong to the public, and people should be free to keep a personal record of the cultural heritage that their taxes help to preserve. A ban, they argue, may make visitors feel distrusted rather than welcomed.",
+      "Critics, however, argue that photography can harm the experience of looking at art. ( A ) a photograph may help people remember a work, the act of taking pictures can replace careful looking, so that visitors move quickly from one object to the next, capturing images without really seeing what is in front of them. Crowds gathering to photograph the most famous works can also make it difficult for others to approach and enjoy them quietly, turning a calm gallery into a noisy and crowded space. Studies have even suggested that people who photograph objects may remember them less well than those who simply look.",
+      "Critics also raise practical concerns. Bright flashes of light may damage fragile paintings, textiles, and documents over time, and some lenders of works for temporary exhibitions do not permit photography for reasons of copyright or privacy. In addition, critics note, some objects, such as sacred items or human remains, may be regarded as inappropriate to photograph, and taking pictures of them can be seen as disrespectful to the communities from which they came.",
+      "Many museums have tried to find a balance. They allow photography without flash in most areas but forbid it in special exhibitions or near particularly fragile works, and they discourage the use of selfie sticks and tripods that may cause accidents. Some museums have set aside times or rooms where photography is not permitted, so that visitors who prefer a quieter experience can enjoy the works without distraction. Others provide high-quality images of their collections online, reducing the need for visitors to take their own. Such measures allow different kinds of visitors to enjoy the same building in different ways.",
+      "The debate over photography in museums therefore reflects a wider question about how people experience culture in a digital age. Technology allows us to record and share almost everything we see, but it may also change the way we see it. Museums face the challenge of welcoming new forms of engagement while preserving the conditions that allow visitors to look slowly, think deeply, and form a personal connection with the objects that tell the story of human creativity.",
+    ],
+    ja: [
+      '今日、美術館や博物館を訪れる人々は、展示されている作品と同じくらいの時間を電話の画面を見てすごすことが多い。絵画を撮影し、有名な彫刻の横で自分の写真をとり、数分のうちにその画像をオンラインで共有する。これを無料の宣伝であり、人々の関心のしるしと見て歓迎してきた館もあれば、撮影を完全に禁止したり、一部の部屋で制限したりしている館もある。館は訪問者に写真をとらせるべきかどうかという問いは、学芸員や芸術家、一般の人々のあいだで活発な議論の対象になっている。',
+      '撮影をみとめることを支持する人々は、まず、それは人々が芸術や歴史にかかわる助けになると主張する。写真があれば、訪問者は見たものを思い出し、気づいた細かな部分をもう一度見て、来られなかった友人と経験を分かち合うことができる。館の所蔵品の画像がオンラインで広く共有されると、そうでなければ訪れなかったかもしれない若い人々をふくむ新しい観客が、自分の目で作品を見に来るきっかけになるかもしれないと支持する人々は言う。撮影をみとめはじめてから訪問者の数がふえた館さえある。',
+      '支持する人々はまた、撮影を禁止しても、それを守らせるのはますますむずかしくなっていると指摘する。いまではほとんどすべての訪問者が電話という形でカメラをもち歩いており、警備員は作品を守ったり訪問者を助けたりするよりも、人々に電話をしまうよう注意するのに多くの時間を使うことになりかねない。さらに、館の作品の多くは公共のものであり、人々は自分の税金が守る助けになっている文化遺産について、個人の記録をとっておく自由があるべきだと支持する人々は主張する。禁止は、訪問者に歓迎されるのではなく信用されていないと感じさせるかもしれないと彼らは主張する。',
+      'しかし批判する人々は、撮影は芸術を見る経験をそこなうことがあると主張する。写真は人々が作品を覚えておく助けになるかもしれないが、写真をとる行為が注意深く見ることに取ってかわり、訪問者は目の前にあるものを本当には見ずに画像をとらえながら、ひとつの作品から次へとすばやく移動してしまうかもしれない。もっとも有名な作品を撮影するために集まる人ごみは、ほかの人々が近づいて静かに楽しむのをむずかしくし、静かな展示室をさわがしく混み合った空間に変えてしまうこともある。研究によっては、ものを撮影した人は、ただ見ただけの人よりもそれをよく覚えていないことがあるという。',
+      '批判する人々はまた、実際的な心配もあげる。明るいフラッシュの光は、時がたつにつれてこわれやすい絵画や布、文書をいためるかもしれず、特別展のために作品を貸し出す人のなかには、著作権やプライバシーの理由で撮影をみとめない人もいる。さらに、神聖な品物や人の遺体など、撮影するのがふさわしくないと見なされるものもあり、それを撮影することは、それが来た共同体への敬意を欠くことと見なされうると批判する人々は指摘する。',
+      '多くの館はつりあいを見つけようとしてきた。ほとんどの場所でフラッシュなしの撮影をみとめるが、特別展や特にこわれやすい作品の近くでは禁止し、事故を引き起こしうる自撮り棒や三脚の使用はひかえるよう求めるのである。また、撮影がみとめられない時間や部屋を設け、より静かな経験を好む訪問者が気を散らされずに作品を楽しめるようにしている館もある。所蔵品の質の高い画像をオンラインで提供し、訪問者が自分で撮影する必要をへらしている館もある。そうした対策によって、さまざまな種類の訪問者が、同じ建物をそれぞれのやり方で楽しめるようになるのである。',
+      'したがって、館での撮影をめぐる議論は、デジタルの時代に人々が文化をどのように経験するかという、より広い問いを映し出している。技術のおかげで私たちは見るもののほとんどすべてを記録し共有できるが、それは私たちの見方そのものを変えてしまうかもしれない。館は、新しいかかわり方を歓迎しながら、訪問者がゆっくりと見て、深く考え、人間の創造性の物語を語る品々と個人的なつながりを結べる条件を守るという課題に直面しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「写真は覚えておく助けになるかもしれないが、注意深く見ることに取ってかわる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say photography helps people remember and share what they see and may attract new ( 1 ). Critics argue that taking pictures can replace careful looking and that flashes may ( 2 ) fragile works. Many museums allow photography without flash in most areas and provide high-quality ( 3 ) of their collections online.',
+      blanks: [
+        { choices: ['audiences', 'artists', 'guards', 'sponsors'], answer: 0, why: '第2段落 they may encourage new audiences。' },
+        { choices: ['damage', 'protect', 'clean', 'sell'], answer: 0, why: '第5段落 Bright flashes of light may damage fragile paintings。' },
+        { choices: ['images', 'tickets', 'guides', 'souvenirs'], answer: 0, why: '第6段落 provide high-quality images of their collections online。' },
+      ],
+    },
+    tf: [
+      { statement: '撮影を完全に禁止している館もある。', answer: true, why: '第1段落 others ban photography entirely。' },
+      { statement: '支持する人々によると、撮影の禁止を守らせるのはますますかんたんになっている。', answer: false, why: '第3段落 banning photography is increasingly difficult to enforce。' },
+      { statement: '特別展の作品を貸す人のなかには、撮影をみとめない人もいる。', answer: true, why: '第5段落 some lenders ... do not permit photography。' },
+      { statement: '多くの館は、どこでもフラッシュを使った撮影を自由にみとめている。', answer: false, why: '第6段落 They allow photography without flash ...。' },
+    ],
+    qa: [
+      { q: 'What might guards spend much of their time doing if photography is banned?', choices: ['Telling people to put their phones away.', 'Taking photographs.', 'Selling tickets.', 'Cleaning paintings.'], answer: 0, why: '第3段落 telling people to put their phones away。' },
+      { q: 'Why have some museums set aside rooms where photography is not permitted?', choices: ['So that visitors can enjoy the works without distraction.', 'To sell more postcards.', 'To protect the guards.', 'To save electricity.'], answer: 0, why: '第6段落 so that visitors who prefer a quieter experience can enjoy the works without distraction。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
