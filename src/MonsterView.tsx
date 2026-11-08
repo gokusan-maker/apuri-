@@ -3726,6 +3726,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 28 l-6 -8 M60 28 l6 -8" stroke="#292524" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'anoa')
+    return (
+      <g>
+        {/* まっすぐな短いツノ */}
+        <path d="M42 28 l-3 -8 M58 28 l3 -8" stroke="#1c1917" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
