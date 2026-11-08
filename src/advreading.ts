@@ -44338,6 +44338,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-no-show-fees',
+    title: 'Should Restaurants Charge Customers Who Fail to Turn Up?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every evening, restaurants around the world prepare for customers who have booked a table but never arrive. Food is bought and prepared, staff are scheduled, and other customers may be turned away because the restaurant appears to be full, yet the expected guests simply fail to appear without letting anyone know. In response, a growing number of restaurants have begun to ask for a card number when customers make a reservation and to charge a fee if they do not turn up, and the practice has prompted a debate about fairness, trust, and the responsibilities of customers and businesses.",
+      "Supporters of no-show fees argue that missed reservations cause real financial harm. Many restaurants operate on very small profit margins, and a few empty tables on a busy evening can turn a profitable night into a loss. Supporters point out that the cost of a missed booking is not limited to lost income, since food that has been prepared for expected guests may be wasted and staff may have been paid to serve customers who never came, so that a modest fee simply asks those responsible to share the burden they have created.",
+      "Supporters also claim that fees encourage people to treat reservations more seriously. When booking a table costs nothing, some customers make several reservations at different restaurants and decide only at the last moment where to go, without canceling the others. ( A ) most diners are considerate, supporters argue, the small number who behave carelessly can cause serious problems, and the prospect of a charge may be enough to persuade them to cancel in advance so that the table can be offered to someone else.",
+      "Critics, however, argue that no-show fees can be unfair to customers who miss a reservation for reasons beyond their control. A sudden illness, a family emergency, or a delayed train may prevent someone from arriving, and critics worry that a rigid policy would punish such people as if they had acted irresponsibly. They also point out that asking for card details when booking may discourage some customers, particularly those who do not have credit cards or who are uncomfortable sharing financial information.",
+      "Critics further suggest that restaurants have other ways of reducing the problem. Sending reminders by text message on the day of a booking, asking customers to confirm their plans, or keeping a waiting list of people ready to take a free table can all reduce the impact of missed reservations without charging anyone. Some critics also note that customers sometimes face long waits even when they arrive on time, and they question whether it is fair for restaurants to expect perfect punctuality from diners while offering no compensation when they themselves fail to keep their promises.",
+      "In response, many restaurants that charge no-show fees have tried to apply them flexibly. They often allow customers to cancel without charge up to a day before the booking, and they may waive the fee for those who explain that an emergency prevented them from coming. Some restaurants charge fees only for large groups or for special occasions, when the cost of an empty table is especially high, while continuing to accept ordinary reservations without any guarantee. Restaurants that explain their policies clearly and politely often find that customers accept them without complaint.",
+      "The debate over no-show fees ultimately reflects a broader question about trust between businesses and customers. A reservation is a kind of promise on both sides: the restaurant promises to keep a table, and the customer promises to come. When such promises are frequently broken, businesses may feel compelled to introduce rules and penalties, but those rules can also change the relationship, replacing goodwill with contracts. Finding a balance that protects businesses while treating customers with understanding may depend on both sides taking their promises seriously.",
+    ],
+    ja: [
+      '毎晩、世界中のレストランは、テーブルを予約したのにけっして来ない客のために準備をしている。食材が買われて下ごしらえされ、店員の勤務が組まれ、店が満席に見えるためにほかの客がことわられることもあるのに、来るはずの客はだれにも知らせずにただあらわれないのである。これに対して、ますます多くのレストランが、客が予約するときにカード番号を求め、来なかった場合には料金をとるようになっており、このやり方は、公平さや信頼、そして客と店それぞれの責任についての議論を引き起こしている。',
+      '無断キャンセル料を支持する人々は、すっぽかされた予約は現実の経済的な損害をもたらすと主張する。多くのレストランはとても少ない利益で営業しており、いそがしい夜にいくつかのテーブルが空くだけで、もうかる夜が赤字の夜に変わりうる。すっぽかされた予約の損失は、失われた売上だけにかぎられない、と支持者は指摘する。来るはずの客のために用意された料理はむだになるかもしれず、けっして来なかった客にサービスするために店員に給料がはらわれていたかもしれない。だから、ささやかな料金は、責任のある人に、自分が生んだ負担を分かち合ってもらうよう求めているにすぎないのである。',
+      '支持する人々はまた、料金によって人々が予約をより真剣にあつかうようになると主張する。テーブルの予約に何もかからないと、ちがうレストランにいくつも予約を入れ、最後の瞬間にどこへ行くかを決めて、ほかの予約を取り消さない客もいる。ほとんどの客は思いやりがあるが、いいかげんにふるまうわずかな人々が深刻な問題を引き起こしうるのであり、料金がかかるかもしれないと思えば、テーブルをほかの人にまわせるよう前もって取り消すよう彼らを説得するのに十分かもしれない、と支持者は主張する。',
+      'しかし批判する人々は、無断キャンセル料は、自分ではどうにもできない理由で予約に行けなかった客にとって不公平になりうると主張する。とつぜんの病気や家族の緊急事態、電車のおくれのために来られなくなることがあり、厳しい方針はそうした人々を、まるで無責任にふるまったかのように罰することになるのではないかと批判する人々は心配する。彼らはまた、予約のときにカード情報を求めると、とくにクレジットカードをもっていない人や、お金に関する情報を伝えるのに不安を感じる人など、一部の客を遠ざけるかもしれないと指摘する。',
+      '批判する人々はさらに、レストランにはこの問題を減らすほかの方法もあると言う。予約の当日にメッセージで確認の連絡を送ったり、客に予定の確認を求めたり、空いたテーブルにすぐ入れる人々の順番待ちの名簿を用意したりすれば、だれからも料金をとらずに、すっぽかされた予約の影響を減らせる。また、客は時間どおりに着いても長く待たされることがあると指摘し、店自身が約束を守れなかったときには何の補償もしないのに、客に完ぺきに時間を守るよう求めるのは公平なのかと疑問をもつ批判者もいる。',
+      'これに対して、無断キャンセル料をとる多くのレストランは、それを柔軟に使おうとしてきた。予約の前日までなら料金なしで取り消せるようにしていることが多く、緊急のことがあって来られなかったと説明した客には料金を求めないこともある。空いたテーブルの損失がとくに大きい大人数のグループや特別な行事のときにだけ料金をとり、ふつうの予約は保証なしで受けつけつづけるレストランもある。方針をはっきりていねいに説明するレストランは、客が不満を言わずにそれを受け入れることが多いと気づいている。',
+      '無断キャンセル料をめぐる議論は、結局のところ、店と客との信頼についての、より広い問いを反映している。予約は両方の側にとっての一種の約束である。店はテーブルを空けておくと約束し、客は来ると約束する。そうした約束がしばしば破られると、店は決まりや罰を設けざるをえないと感じるかもしれないが、そうした決まりはまた関係そのものを変え、善意を契約に置きかえてしまうこともある。客を思いやりをもってあつかいながら店を守るつりあいを見つけられるかどうかは、両方の側が自分の約束を真剣に受けとめるかどうかにかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ほとんどの客は思いやりがあるが、わずかな人々が問題を引き起こしうる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of no-show fees say missed bookings cause financial harm and that fees make people treat reservations more ( 1 ). Critics argue that fees can be unfair to people facing ( 2 ) and that reminders or waiting lists could help instead. Many restaurants allow free ( 3 ) up to a day before the booking.',
+      blanks: [
+        { choices: ['seriously', 'quickly', 'cheaply', 'quietly'], answer: 0, why: '第3段落 encourage people to treat reservations more seriously。' },
+        { choices: ['emergencies', 'holidays', 'parties', 'birthdays'], answer: 0, why: '第4段落 A sudden illness, a family emergency, or a delayed train。' },
+        { choices: ['cancellation', 'meals', 'parking', 'drinks'], answer: 0, why: '第6段落 allow customers to cancel without charge up to a day before the booking。' },
+      ],
+    },
+    tf: [
+      { statement: '多くのレストランは、とても少ない利益で営業している。', answer: true, why: '第2段落 Many restaurants operate on very small profit margins。' },
+      { statement: '支持する人々によると、ほとんどの客はいいかげんにふるまう。', answer: false, why: '第3段落 most diners are considerate。' },
+      { statement: '批判する人々は、予約の当日に確認の連絡を送ることをすすめている。', answer: true, why: '第5段落 Sending reminders by text message on the day of a booking。' },
+      { statement: 'すべてのレストランが、ふつうの予約にもかならず料金をとっている。', answer: false, why: '第6段落 continuing to accept ordinary reservations without any guarantee。' },
+    ],
+    qa: [
+      { q: 'What do some customers do when booking a table costs nothing?', choices: ['Make several reservations and decide at the last moment.', 'Always arrive early.', 'Pay in advance.', 'Bring their own food.'], answer: 0, why: '第3段落 make several reservations at different restaurants and decide only at the last moment。' },
+      { q: 'When do some restaurants charge fees only?', choices: ['For large groups or special occasions.', 'On weekday mornings.', 'For customers who live nearby.', 'During holidays abroad.'], answer: 0, why: '第6段落 charge fees only for large groups or for special occasions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
