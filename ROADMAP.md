@@ -1363,7 +1363,7 @@
   - [x] 510 正誤問題〈258〉（京大レベル：英作文の search for・look for・seek の使い分け）10問
   - [x] 511 誤文訂正〈252〉（東大レベル：英作文の concentrate on・focus on・be absorbed in）10問
   - [x] 512 正誤問題〈259〉（国公立レベル：英作文の apply for・apply to・graduate from）10問
-  - [ ] 513 誤文訂正〈253〉（京大レベル：英作文の adapt to・adjust to・get used to）10問
+  - [x] 513 誤文訂正〈253〉（京大レベル：英作文の adapt to・adjust to・get used to）10問
   - [ ] 514 正誤問題〈260〉（東大レベル：英作文の belong to・recover from・suffer from の形）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

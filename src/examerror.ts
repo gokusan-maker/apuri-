@@ -10773,6 +10773,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I find it difficult to [concentrate] the lecture after lunch.', choices: ['concentrate on', 'concentrate at', 'concentrate in', 'concentrate to'], answer: 0, why: 'concentrate は自動詞として concentrate on ～。' },
     ],
   },
+  {
+    id: 'exam-fix-253',
+    title: '入試の誤文訂正〈253〉（京大レベル：英作文の adapt to・adjust to・get used to）',
+    points: ['「～に慣れる・適応する」は adapt to ～／adjust to ～／get used to ～。どれも to は前置詞なので、動詞を置くときは ～ing（adjust to living abroad／get used to getting up early）。', 'adapt は「（自分を）合わせる」なら adapt (oneself) to ～。adopt（採用する・養子にする）とまちがえやすい。used to do（以前は～した）と get used to ～ing（～に慣れる）を区別する。'],
+    examples: [{ en: 'It took me a month to adjust to the new school. / She got used to living alone.', ja: '新しい学校に慣れるのに1か月かかった。／彼女はひとりぐらしに慣れた。' }],
+    questions: [
+      { sentence: 'Animals must [adapt with] changes in their environment.', choices: ['adapt to', 'adapt at', 'adapt for', 'adapt by'], answer: 0, why: '「～に適応する」は adapt to ～。' },
+      { sentence: 'It took him a long time to adjust to [live] in a big city.', choices: ['living', 'lived', 'lives', 'be lived'], answer: 0, why: '前置詞 to のあとは動名詞なので living。' },
+      { sentence: 'I am slowly [getting use to] the cold weather here.', choices: ['getting used to', 'getting using to', 'get use to', 'getting uses to'], answer: 0, why: '「慣れる」は get used to ～。used は過去分詞の形。' },
+      { sentence: 'Companies need to [adopt to] new technology quickly.', choices: ['adapt to', 'adapting to', 'adopt with', 'adapt for'], answer: 0, why: '「適応する」は adapt。adopt は「採用する」。' },
+      { sentence: 'She soon got used to [speak] English every day.', choices: ['speaking', 'speak to', 'spoke', 'speaks'], answer: 0, why: 'get used to のあとは動名詞なので speaking。' },
+      { sentence: 'My eyes needed a few minutes to [adjust the] darkness.', choices: ['adjust to the', 'adjust in the', 'adjust on the', 'adjust by the'], answer: 0, why: '「（暗さ）に慣れる」は adjust to ～。' },
+      { sentence: 'I [used to getting] up early, so it is not hard for me.', choices: ['am used to getting', 'used to got', 'am use to get', 'used getting to'], answer: 0, why: '「～に慣れている」は be used to ～ing。used to do は「以前は～した」。' },
+      { sentence: 'New students usually adapt [at] school life within a few weeks.', choices: ['to', 'with', 'by', 'from'], answer: 0, why: '「～に適応する」は adapt to ～。' },
+      { sentence: 'Having [adjusting] to the time difference, he felt much better.', choices: ['adjusted', 'adjust', 'adjusts', 'to adjust'], answer: 0, why: '完了形の分詞構文 Having のあとは過去分詞 adjusted。' },
+      { sentence: 'It is hard to [get used] the noise of the trains.', choices: ['get used to', 'get use to', 'get using', 'get used at'], answer: 0, why: '「～に慣れる」は get used to ～。to が必要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
