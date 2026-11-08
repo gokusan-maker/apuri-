@@ -1387,7 +1387,7 @@
   - [x] 518 正誤問題〈262〉（国公立レベル：英作文の come up with・catch up with・run out of（3語の句動詞））10問
   - [x] 519 誤文訂正〈256〉（京大レベル：英作文の avoid・deny・consider・enjoy のあとの ～ing）10問
   - [x] 520 正誤問題〈263〉（東大レベル：英作文の look up to・make up for・get along with）10問
-  - [ ] 521 誤文訂正〈257〉（国公立レベル：英作文の call off・turn down・put up の意味と語順）10問
+  - [x] 521 誤文訂正〈257〉（国公立レベル：英作文の call off・turn down・put up の意味と語順）10問
   - [ ] 522 正誤問題〈264〉（京大レベル：英作文の carry out・bring up・take after）10問
   - [ ] 523 誤文訂正〈258〉（東大レベル：英作文の do without・give in・break down）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

@@ -10945,6 +10945,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Many people enjoy [to listen] to music while studying.', choices: ['listening', 'listen', 'to listening', 'listened'], answer: 0, why: 'enjoy のあとは動名詞なので listening。' },
     ],
   },
+  {
+    id: 'exam-fix-257',
+    title: '入試の誤文訂正〈257〉（国公立レベル：英作文の call off・turn down・put up の意味と語順）',
+    points: ['call off ～（～を中止する）・turn down ～（～をことわる・音量を下げる）・put up ～（～をかかげる・建てる・泊める）は「動詞＋副詞」の句動詞。目的語が名詞なら call off the game／call the game off のどちらの語順でもよい。', '目的語が代名詞（it・them など）のときは、かならず動詞と副詞のあいだに置く（call it off／× call off it）。'],
+    examples: [{ en: 'They called off the game. / They called it off. / She turned down the offer.', ja: '彼らは試合を中止した。／彼らはそれを中止した。／彼女はその申し出をことわった。' }],
+    questions: [
+      { sentence: 'The game was rained out, so they [called off it].', choices: ['called it off', 'called off to it', 'called it out', 'off called it'], answer: 0, why: '代名詞の目的語は動詞と副詞のあいだ。called it off。' },
+      { sentence: 'She received a job offer but [turned down it].', choices: ['turned it down', 'turned down to it', 'turned it under', 'down turned it'], answer: 0, why: '代名詞の目的語は動詞と副詞のあいだ。turned it down。' },
+      { sentence: 'The music is too loud. Could you [turn it up] a little?', choices: ['turn it down', 'turn down it', 'turn it off down', 'turn up it'], answer: 0, why: '「音量を下げる」は turn down。代名詞は間に入れて turn it down。' },
+      { sentence: 'The students put up a poster, but someone [took down it] later.', choices: ['took it down', 'took down to it', 'took it off down', 'down took it'], answer: 0, why: '代名詞の目的語は動詞と副詞のあいだ。took it down。' },
+      { sentence: 'Because of the storm, the concert was [called it off].', choices: ['called off', 'called it out', 'calling off', 'call off'], answer: 0, why: '受け身なので was called off。目的語 it は不要。' },
+      { sentence: 'My friend kindly [put me in up] for the night.', choices: ['put me up', 'put up me', 'put me on', 'put upon me'], answer: 0, why: '「（人）を泊める」は put 人 up。代名詞は間に入れる。' },
+      { sentence: 'He asked her to dinner, but she [turned down him].', choices: ['turned him down', 'turned down to him', 'turned him off', 'down turned him'], answer: 0, why: '代名詞の目的語は動詞と副詞のあいだ。turned him down。' },
+      { sentence: 'The match was [call off] because of heavy rain.', choices: ['called off', 'calling off', 'to call off', 'call it off'], answer: 0, why: '受け身なので過去分詞 called off。' },
+      { sentence: 'It is cold outside, so [put on it] before you go.', choices: ['put it on', 'put on to it', 'put it in', 'on put it'], answer: 0, why: '代名詞の目的語は動詞と副詞のあいだ。put it on。' },
+      { sentence: 'Please [turn off down] the TV when you leave.', choices: ['turn off', 'turn down off', 'turn off it', 'turn it of'], answer: 0, why: '「（電源を）切る」は turn off。down は不要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
