@@ -46222,6 +46222,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-glass',
+    title: 'On Glass',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Glass is so common in modern life that we seldom notice it, which is, in a sense, exactly what it is designed for. We look through windows without seeing them, drink from glasses without thinking about what they are made of, and stare at the glass screens of our phones for hours each day. Yet glass is a remarkable material, made from little more than sand heated to very high temperatures, and its long history has shaped the way human beings build, see, and understand the world around them.",
+      "Glass was first made thousands of years ago, probably by accident, when sand and other substances were heated together in very hot fires. Early glass was colored and cloudy, and it was used mainly for beads, small bottles, and decorations, valued much like precious stones. Only much later did people learn to make glass that was clear enough to see through, and even then it remained expensive for a long time, so that glass windows were at first found only in the homes of the wealthy and in important buildings.",
+      "The development of clear glass changed daily life in profound ways. ( A ) a window may seem an ordinary feature of a house, it allowed people to let light into their homes while keeping out wind, rain, and cold, making rooms brighter and more comfortable. Glass windows also changed the appearance of cities, as buildings with large panes allowed shops to display their goods and allowed people inside to watch the life of the street, creating a new relationship between private and public space.",
+      "Glass also transformed the way human beings see. Lenses made of glass were used to make spectacles, allowing people with poor eyesight to continue reading and working well into old age. Later, glass lenses made possible the microscope and the telescope, which revealed worlds that had been invisible to the naked eye, from tiny organisms in a drop of water to distant planets and stars. In this sense, glass has extended the reach of human vision in both directions, toward the very small and the very far. Many of the great discoveries of modern science would have been impossible without it.",
+      "In the modern world, glass has found countless new uses. Thin fibers of glass carry information across oceans in the form of light, connecting computers and telephones around the world. Glass covers the screens of phones and computers, forms the walls of tall office buildings, and is used in laboratories, hospitals, and kitchens. Because it can be recycled again and again without losing its quality, glass is also valued as a material that can help reduce waste. Few substances have proved so useful in so many different fields.",
+      "Glass has also carried meanings beyond its practical uses. Its transparency has made it a symbol of honesty and openness, as when we speak of a transparent process or decision. At the same time, its fragility has made it an image of things that are easily broken, such as trust, peace, or a person's feelings. The idea of a glass ceiling, an invisible barrier that prevents certain people from rising to the highest positions, shows how the material can stand for limits that are real even when they cannot be seen.",
+      "Perhaps, then, glass deserves more thought than we usually give it. It has brought light into our homes, sharpened our vision, connected the world, and given us powerful images for thinking about honesty and fragility. The next time we look through a window or at the screen of a phone, it may be worth remembering that this almost invisible material has a long history, and that much of what we see, and the way we see it, depends on a substance that we rarely see at all.",
+    ],
+    ja: [
+      'ガラスは現代の生活であまりにもありふれているので、私たちはそれにめったに気づかない。それは、ある意味では、まさにガラスがそのためにつくられていることである。私たちは窓を見ることなくその向こうを見、何でできているかを考えずにコップで飲み、毎日何時間も電話のガラスの画面を見つめている。しかしガラスはおどろくべき材料であり、とても高い温度で熱した砂とほとんど変わらないものからつくられ、その長い歴史は、人間がまわりの世界をどのように建て、見て、理解するかを形づくってきた。',
+      'ガラスは何千年も前に、おそらくぐうぜんに、砂とほかの物質がとても熱い火でいっしょに熱せられたときに初めてつくられた。初期のガラスは色がついていてくもっており、おもにビーズや小さなびん、かざりに使われ、宝石とほぼ同じように大切にされた。向こうが見えるほどすきとおったガラスをつくれるようになったのはずっとあとのことであり、そのあとも長いあいだ高価なままだったので、ガラスの窓ははじめは裕福な人々の家や重要な建物にしか見られなかった。',
+      'すきとおったガラスが発達したことは、日々の生活を深いところで変えた。窓は家のありふれた特徴に思えるかもしれないが、それによって人々は風や雨、寒さをふせぎながら家に光を入れられるようになり、部屋はより明るく快適になった。ガラスの窓はまた都市の見た目も変えた。大きなガラスのはまった建物では、店が品物をかざって見せたり、中の人々が通りの生活をながめたりできるようになり、私的な空間と公共の空間との新しい関係が生まれたのである。',
+      'ガラスはまた、人間の見方も大きく変えた。ガラスでできたレンズはめがねをつくるのに使われ、目の悪い人々が年をとってもずっと読んだり働いたりしつづけられるようにした。のちにガラスのレンズは顕微鏡と望遠鏡を可能にし、それは1てきの水の中の小さな生きものから遠くの惑星や星にいたるまで、肉眼には見えなかった世界を明らかにした。この意味で、ガラスは人間の視力のとどく範囲を、とても小さいものととても遠いものの両方の方向へ広げてきたのである。近代科学の偉大な発見の多くは、ガラスがなければ不可能だっただろう。',
+      '現代の世界では、ガラスは数えきれない新しい使い道を見いだしてきた。ガラスの細い繊維は光の形で情報を海をこえて運び、世界中のコンピューターや電話をつないでいる。ガラスは電話やコンピューターの画面をおおい、高いオフィスビルのかべをつくり、研究所や病院、台所で使われている。ガラスは質を落とさずに何度でもリサイクルできるので、ごみをへらす助けになる材料としても大切にされている。これほど多くのちがう分野で役立ってきた物質はほとんどない。',
+      'ガラスはまた、実用をこえた意味もになってきた。そのすきとおった性質は、すきとおった手続きや決定と言うときのように、正直さと開かれていることのシンボルになってきた。同時に、そのこわれやすさは、信頼や平和、人の気持ちのように、かんたんにこわれてしまうもののイメージになってきた。ある人々が最も高い地位にのぼるのをさまたげる目に見えないかべである「ガラスの天井」という考えは、この材料が、見えなくても本当に存在する限界を表しうることを示している。',
+      'だとすれば、ガラスは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは私たちの家に光をもたらし、視力をするどくし、世界をつなぎ、正直さともろさについて考えるための力強いイメージをあたえてくれた。次に窓の向こうや電話の画面を見るとき、このほとんど見えない材料に長い歴史があること、そして私たちが見るものの多くと、その見方が、私たちがほとんど見ることのない物質にたよっていることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「窓はありふれた特徴に思えるかもしれないが、生活を大きく変えた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '初期のガラスは、色がついていてくもっていた。', answer: true, why: '第2段落 Early glass was colored and cloudy。' },
+      { statement: 'ガラスの窓は、はじめからどの家にもあった。', answer: false, why: '第2段落 at first found only in the homes of the wealthy。' },
+      { statement: 'ガラスの繊維は、光の形で情報を運んでいる。', answer: true, why: '第5段落 Thin fibers of glass carry information ... in the form of light。' },
+      { statement: '筆者によると、ガラスはリサイクルすると質が落ちる。', answer: false, why: '第5段落 can be recycled again and again without losing its quality。' },
+    ],
+    qa: [
+      { q: 'What did glass lenses make possible?', choices: ['The microscope and the telescope.', 'The first cities.', 'Electric light.', 'The printing press.'], answer: 0, why: '第4段落 glass lenses made possible the microscope and the telescope。' },
+      { q: 'What is a glass ceiling?', choices: ['An invisible barrier to the highest positions.', 'A roof made of glass.', 'A type of window.', 'A strong building material.'], answer: 0, why: '第6段落 an invisible barrier that prevents certain people from rising。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
