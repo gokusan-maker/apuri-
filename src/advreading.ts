@@ -45822,6 +45822,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-fog',
+    title: 'On Fog',
+    level: '難関大（評論）',
+    paragraphs: [
+      "There are mornings when a city wakes up to find that it has almost disappeared. Buildings that are usually clear against the sky fade into gray shapes, the far end of a familiar street vanishes, and sounds seem strangely muffled, as if the world had been wrapped in cotton. Fog is, of course, simply a cloud that has formed close to the ground, made of countless tiny drops of water hanging in the air. Yet few kinds of weather change our experience of the world as completely, or have inspired so many different feelings in human beings.",
+      "Fog forms when air near the ground is cooled until the water vapor in it begins to condense, or when moist air passes over a colder surface. It is common in valleys on calm nights, along coasts where warm air meets cold water, and in cities where tiny particles of smoke and dust provide surfaces on which the drops can form. In some places it appears so regularly that it has become part of the identity of the region, mentioned in songs and stories and expected by visitors as much as by residents.",
+      "For most of history, fog has been a serious danger to travelers. ( A ) it may seem gentle and harmless, thick fog can reduce visibility to a few meters, and countless ships have been wrecked on rocks that their crews could not see. To warn sailors, people built lighthouses and later installed foghorns that sent out deep, regular sounds across the water. On land, fog has caused many accidents on roads and railways, and even today it can delay flights and close airports for hours.",
+      "Yet fog is not only a hazard; in some places it is a source of life. Along certain dry coasts, where rain is rare, plants and animals depend on the moisture that fog brings. Some insects collect drops of water on their bodies, and certain trees capture fog with their leaves. In recent years, communities in dry regions have imitated these natural methods by stretching large nets in the path of the fog, collecting water that can be used for drinking and farming. What was once feared mainly as a danger has thus become, in some places, a valuable resource.",
+      "Fog has also played an important part in art and literature. Painters have been fascinated by the way it softens outlines and blurs colors, turning ordinary scenes into something mysterious and beautiful. Writers have used fog to create an atmosphere of uncertainty or danger, in which characters lose their way or cannot see what lies ahead. In such works, fog often stands for confusion, for the limits of human knowledge, or for the past, which becomes harder to see clearly as time passes.",
+      "The image of fog has entered everyday language as well. We speak of being in a fog when we cannot think clearly, of the fog of war when events are too confused to be understood, and of a situation becoming clearer when the fog lifts. Such expressions suggest that human beings have long linked seeing with knowing, and that the experience of being unable to see has served as a natural way of describing the experience of not understanding.",
+      "Perhaps, then, fog deserves more thought than we usually give it. It is a danger and a gift, a subject for artists and a source of metaphors, and a reminder of how much our sense of the world depends on what we can see. When we walk through a fog-covered street and watch familiar places slowly reappear as it clears, we may sense something of the way understanding itself often arrives: not all at once, but gradually, as shapes emerge from the gray.",
+    ],
+    ja: [
+      '都市が目をさますと、ほとんど消えてしまっていることに気づく朝がある。ふだんは空を背にくっきりしている建物は灰色の形にうすれ、見なれた通りの向こうのはしは見えなくなり、音はふしぎとくぐもって聞こえる。まるで世界がわたにつつまれたかのようである。霧は、もちろん、地面の近くにできた雲にすぎず、空気中にうかぶ数えきれない小さな水のつぶからできている。しかし、これほど完全に私たちの世界の経験を変え、人間にこれほど多くのさまざまな気持ちをよびおこしてきた天気はほとんどない。',
+      '霧は、地面近くの空気が冷やされて中の水蒸気が水になりはじめるとき、あるいはしめった空気がより冷たい表面の上を通るときにできる。風のない夜の谷や、あたたかい空気が冷たい水と出会う海岸ぞい、そしてけむりやちりの小さなつぶが水のつぶのできる面になる都市によく見られる。場所によってはとても規則正しくあらわれるので、その地域らしさの一部になり、歌や物語の中でふれられ、住民と同じくらい訪れる人にも期待されている。',
+      '歴史のほとんどのあいだ、霧は旅人にとって深刻な危険だった。霧はおだやかで害がないように思えるかもしれないが、こい霧は見通しを数メートルにまでへらすことがあり、数えきれない船が、乗組員の見えない岩にぶつかって難破してきた。船乗りに警告するため、人々は灯台を建て、のちには水の上に低く規則正しい音を送り出す霧笛を取りつけた。陸の上でも、霧は道路や鉄道で多くの事故を引き起こしてきたし、今日でも飛行機を遅らせたり、空港を何時間もとざしたりすることがある。',
+      'しかし霧は危険であるだけではない。場所によっては命のみなもとでもある。雨がめったにふらないある種のかわいた海岸ぞいでは、植物や動物は霧がもたらす水分にたよっている。体に水のつぶを集める昆虫もいれば、葉で霧をとらえる木もある。近年、かわいた地域の人々は、霧の通り道に大きなあみを広げることでこうした自然の方法をまね、飲み水や農業に使える水を集めている。こうして、かつてはおもに危険としておそれられたものが、場所によっては貴重な資源になったのである。',
+      '霧はまた、芸術や文学でも大切な役割をはたしてきた。画家たちは、霧が輪郭をやわらげ、色をぼかし、ありふれた景色をふしぎで美しいものに変えるようすに心をうばわれてきた。作家たちは、霧を使って、登場人物が道にまよったり、行く手に何があるのか見えなかったりする、不確かさや危険の雰囲気をつくり出してきた。そうした作品では、霧はしばしば混乱や、人間の知識の限界、あるいは時がたつにつれてはっきり見えにくくなる過去を表している。',
+      '霧のイメージは日々のことばにも入りこんでいる。私たちは、はっきり考えられないときに霧の中にいると言い、できごとがあまりにも混乱していて理解できないときに「戦場の霧」と言い、霧が晴れると状況がはっきりしてくると言う。そうした表現は、人間が長いあいだ見ることと知ることを結びつけてきたこと、そして見えないという経験が、理解できないという経験を表す自然な方法として役立ってきたことを示している。',
+      'だとすれば、霧は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは危険であり、めぐみであり、芸術家の題材であり、たとえのみなもとであり、私たちの世界の感じ方が見えるものにどれほどたよっているかを思い出させるものでもある。霧につつまれた通りを歩き、霧が晴れるにつれて見なれた場所がゆっくりとあらわれてくるのを見るとき、私たちは、理解そのものがしばしばやってくるやり方の何かを感じるのかもしれない。いちどきにではなく、灰色の中から形があらわれるように、少しずつやってくるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「霧はおだやかに思えるかもしれないが、見通しを数メートルにへらす」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '霧は、地面の近くにできた雲である。', answer: true, why: '第1段落 Fog is, of course, simply a cloud that has formed close to the ground。' },
+      { statement: '今日では、霧で飛行機が遅れることはない。', answer: false, why: '第3段落 even today it can delay flights。' },
+      { statement: 'かわいた地域では、あみを使って霧から水を集めている人々がいる。', answer: true, why: '第4段落 stretching large nets in the path of the fog。' },
+      { statement: '筆者によると、文学で霧はいつも明るい未来を表している。', answer: false, why: '第5段落 fog often stands for confusion, for the limits of human knowledge, or for the past。' },
+    ],
+    qa: [
+      { q: 'What were foghorns used for?', choices: ['To warn sailors.', 'To wake up cities.', 'To call animals.', 'To start races.'], answer: 0, why: '第3段落 To warn sailors, people built lighthouses and later installed foghorns。' },
+      { q: 'What does the writer say understanding often arrives like?', choices: ['Gradually, as shapes emerge from the gray.', 'Suddenly, like a flash of light.', 'Never, like a lost ship.', 'Loudly, like a foghorn.'], answer: 0, why: '第7段落 not all at once, but gradually, as shapes emerge from the gray。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
