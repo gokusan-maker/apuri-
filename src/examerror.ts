@@ -10214,6 +10214,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This shop is [not any more longer] open on Sundays.', choices: ['no longer', 'not longer any', 'any no longer', 'no more longer'], answer: 0, why: 'be動詞のあとに no longer を置く。' },
     ],
   },
+  {
+    id: 'exam-fix-240',
+    title: '入試の誤文訂正〈240〉（東大レベル：英作文の as ～ as possible・as ～ as one can）',
+    points: ['「できるだけ～」は as ＋原級＋ as possible か as ＋原級＋ as 主語 can。過去の文では can を could にする（I ran as fast as I could.）。possible は形容詞なので possibly にしない。', 'as と as のあいだは比較級ではなく原級。動詞を修飾するときは副詞（as clearly as possible）、名詞をともなうときは as many ＋複数名詞 as／as much ＋数えられない名詞 as にする。'],
+    examples: [{ en: 'Please come back as soon as possible. / I ran as fast as I could.', ja: 'できるだけ早くもどってきてください。／私はできるだけ速く走った。' }],
+    questions: [
+      { sentence: 'Please come back [as soon as possibly].', choices: ['as soon as possible', 'as soon possible', 'as sooner as possible', 'so soon as possible'], answer: 0, why: '「できるだけ早く」は as soon as possible。' },
+      { sentence: 'I ran [as fast as I can] yesterday.', choices: ['as fast as I could', 'as faster as I could', 'as fast as I can be', 'so fast as can'], answer: 0, why: '過去の文なので as fast as I could。' },
+      { sentence: 'She tried to speak [as clear as possible].', choices: ['as clearly as possible', 'as clearer as possible', 'as clear possibly', 'so clear as possible'], answer: 0, why: '動詞 speak を修飾するので副詞 clearly。' },
+      { sentence: 'Eat [as many vegetable as] you can.', choices: ['as many vegetables as', 'as much vegetable as', 'as more vegetables as', 'many as vegetables as'], answer: 0, why: 'as many のあとは複数名詞なので vegetables。' },
+      { sentence: 'Drink [as much waters as] possible.', choices: ['as much water as', 'as many water as', 'as more water as', 'much as water as'], answer: 0, why: 'water は数えられないので as much water as。' },
+      { sentence: 'We should leave [as early as we possible].', choices: ['as early as possible', 'as earlier as possible', 'as early as we possibly', 'so early as possible'], answer: 0, why: '主語を入れないなら as early as possible（または as early as we can）。' },
+      { sentence: 'He did the work [as careful as he could].', choices: ['as carefully as he could', 'as careful as he can', 'as more careful as', 'carefully as could'], answer: 0, why: '動詞 did を修飾するので副詞 carefully。' },
+      { sentence: 'Try to make your answer [as short as you can possible].', choices: ['as short as possible', 'as shorter as possible', 'as short possibly', 'short as possible as'], answer: 0, why: 'can と possible は重ねない。as short as possible。' },
+      { sentence: 'Please write [as neat as possible].', choices: ['as neatly as possible', 'as neater as possible', 'neatly as possible as', 'as neat possibly'], answer: 0, why: '動詞 write を修飾するので副詞 neatly。' },
+      { sentence: 'She saved [as much money as she can] last year.', choices: ['as much money as she could', 'as many money as she could', 'as much money she could', 'as more money as she could'], answer: 0, why: '過去の文なので as she could。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
