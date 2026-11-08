@@ -45618,6 +45618,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-entrance-exams',
+    title: 'Should Universities Rely on Entrance Exams?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, admission to university depends largely on a single written examination taken at the end of secondary school. Students spend years preparing for it, and their performance on one or two days may determine which institution they attend and, to some extent, the direction of their future careers. In recent years, however, a growing number of universities have begun to admit some students without such exams, relying instead on interviews, essays, and records of activities, and the question of whether entrance exams should remain central has become a matter of lively debate.",
+      "Supporters of entrance exams argue first that they are fair. Every candidate answers the same questions under the same conditions, and the results are marked according to clear standards, so that personal connections, family wealth, or the opinions of individual interviewers play little part. In a society where many people compete for a limited number of places, supporters say, an objective test may be the best way of ensuring that admission depends on ability and effort rather than on privilege. Interviews and essays, they warn, can be influenced by coaching and by the cultural background of the candidate.",
+      "Supporters also note that exams encourage students to master a broad range of knowledge. Preparing for a demanding test requires discipline and steady work over a long period, and many students gain a solid foundation in subjects such as mathematics, languages, and science that serves them well at university. Without the motivation that exams provide, supporters worry, some students might neglect difficult subjects and arrive at university less prepared for advanced study.",
+      "Critics, however, argue that a single examination measures only a narrow range of abilities. ( A ) exams may test knowledge and the ability to solve problems quickly, they reveal little about creativity, curiosity, the ability to work with others, or the capacity to pursue a long project. Critics also point out that performance on a single day can be affected by illness, anxiety, or simple bad luck, so that a capable student may lose an opportunity because of circumstances beyond his or her control. In some countries, a student who fails may have to wait a whole year before trying again.",
+      "Critics further suggest that exams may not be as fair as they appear. Families with more money can pay for private lessons and preparation courses, giving their children an advantage that has little to do with natural ability. In addition, the pressure of preparing for a single decisive test may harm the health and happiness of young people, and may encourage a style of learning based on memorizing answers rather than understanding ideas or asking questions of one's own.",
+      "Some universities have tried to combine the strengths of both approaches. They continue to use written exams but also consider other information, such as school records, essays, and descriptions of activities outside the classroom, giving weight to the whole of a student's achievements. Others reserve a portion of their places for students admitted through interviews or recommendations, while keeping exams for the rest, in the hope of attracting a more varied group of students without abandoning objective standards. Early studies suggest that students admitted in different ways often perform equally well once they begin their studies.",
+      "The debate over entrance exams therefore reflects a deeper question about what universities are looking for in their students and what kind of learning they wish to encourage. A system that values only test scores may reward a certain kind of ability while overlooking others, but a system without clear standards may open the door to unfairness of a different kind. The challenge is to design methods of selection that are both fair and broad enough to recognize the many different ways in which young people can show their promise.",
+    ],
+    ja: [
+      '多くの国で、大学への入学は、中等教育の終わりに受けるひとつの筆記試験に大きく左右される。生徒たちはそのために何年も準備し、1日か2日の出来が、どの学校に通うか、そしてある程度は将来の仕事の方向までも決めるかもしれない。しかし近年、そうした試験なしで一部の学生を入学させ、かわりに面接や作文、活動の記録にたよる大学がふえており、入学試験を中心にしつづけるべきかどうかという問いは、活発な議論の的になっている。',
+      '入学試験を支持する人々は、まず、それは公平だと主張する。すべての受験者が同じ条件のもとで同じ問題に答え、結果ははっきりした基準にしたがって採点されるので、個人的なつながりや家の富、ひとりひとりの面接官の意見はほとんど関係しない。多くの人がかぎられた数の席をめぐって競う社会では、入学が特権ではなく能力と努力によって決まるようにするには、客観的なテストが最善の方法かもしれないと支持する人々は言う。面接や作文は、指導を受けることや受験者の文化的な背景に左右されうると彼らは警告する。',
+      '支持する人々はまた、試験は生徒に幅広い知識を身につけるようはげますと指摘する。むずかしいテストの準備には、長い期間にわたる規律と着実な努力が必要であり、多くの生徒は数学や語学、理科などの科目でしっかりした土台を得て、それが大学で大いに役立つ。試験があたえる動機づけがなければ、むずかしい科目をおろそかにし、高度な勉強への準備が不十分なまま大学に入る生徒もいるかもしれないと支持する人々は心配する。',
+      'しかし批判する人々は、ひとつの試験ははかれる能力の範囲がせまいと主張する。試験は知識や問題をすばやく解く力をためすかもしれないが、創造性や好奇心、ほかの人と協力する力、長い取り組みをやりとげる力についてはほとんど何も明らかにしない。批判する人々はまた、1日の出来は病気や不安、ただの運の悪さに左右されうるので、力のある生徒が自分にはどうしようもない事情のために機会を失うかもしれないと指摘する。国によっては、失敗した生徒はもう一度挑戦するまでまる1年待たなければならないこともある。',
+      '批判する人々はさらに、試験は見かけほど公平ではないかもしれないと考える。お金のある家庭は個人授業や受験講座にお金を払うことができ、生まれもった能力とはほとんど関係のない有利さを子どもにあたえられる。さらに、ひとつの決定的なテストのために準備する重圧は若い人々の健康と幸福をそこなうかもしれず、考えを理解したり自分自身の問いを立てたりするのではなく、答えを覚えることにもとづいた学び方をうながすかもしれない。',
+      '両方のやり方の長所を組み合わせようとしてきた大学もある。筆記試験を使いつづけながら、学校の成績や作文、教室の外での活動の説明などのほかの情報も考え、学生の業績全体に重みをおくのである。また、席の一部を面接や推薦で入学する学生のためにとっておき、残りには試験を使いつづけることで、客観的な基準を捨てることなく、よりさまざまな学生を集めようとしている大学もある。初期の研究によれば、ちがう方法で入学した学生も、いったん勉強を始めると同じようによい成績をあげることが多いという。',
+      'したがって、入学試験をめぐる議論は、大学が学生に何を求めているのか、そしてどのような学びをうながしたいのかという、より深い問いを映し出している。テストの点数だけを重んじるしくみは、ある種の能力にむくいる一方でほかの能力を見すごすかもしれないが、はっきりした基準のないしくみは、別の種類の不公平への道を開くかもしれない。課題は、公平であると同時に、若い人々が自分の可能性を示すさまざまなあり方をみとめられるほど幅広い選び方を考え出すことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「試験は知識をためすかもしれないが、創造性などはほとんど明らかにしない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say entrance exams are fair because everyone answers the same questions and that they encourage students to master a broad range of ( 1 ). Critics argue that exams measure only a narrow range of abilities and that wealthy families can pay for private ( 2 ). Some universities also consider school records, essays, and activities, giving weight to a student’s whole ( 3 ).',
+      blanks: [
+        { choices: ['knowledge', 'sports', 'music', 'friends'], answer: 0, why: '第3段落 encourage students to master a broad range of knowledge。' },
+        { choices: ['lessons', 'houses', 'holidays', 'cars'], answer: 0, why: '第5段落 can pay for private lessons and preparation courses。' },
+        { choices: ['achievements', 'family', 'appearance', 'income'], answer: 0, why: '第6段落 giving weight to the whole of a student’s achievements。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの国で、大学への入学はひとつの筆記試験に大きく左右される。', answer: true, why: '第1段落 depends largely on a single written examination。' },
+      { statement: '支持する人々によると、試験では個人的なつながりが大きな役割をはたす。', answer: false, why: '第2段落 personal connections ... play little part。' },
+      { statement: '批判する人々によると、1日の出来は病気や不安に左右されうる。', answer: true, why: '第4段落 can be affected by illness, anxiety, or simple bad luck。' },
+      { statement: 'すべての大学が、試験をやめて面接だけで学生を選んでいる。', answer: false, why: '第6段落 They continue to use written exams ...。' },
+    ],
+    qa: [
+      { q: 'What might some students do without the motivation that exams provide?', choices: ['Neglect difficult subjects.', 'Study harder than before.', 'Leave school early.', 'Choose foreign universities.'], answer: 0, why: '第3段落 some students might neglect difficult subjects。' },
+      { q: 'What style of learning may the pressure of a single test encourage?', choices: ['Memorizing answers.', 'Asking questions.', 'Working in groups.', 'Doing long projects.'], answer: 0, why: '第5段落 a style of learning based on memorizing answers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
