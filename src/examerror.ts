@@ -6333,6 +6333,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) We (B) should look up to (C) people (D) who helps others.', choices: ['(A) We', '(B) should look up to', '(C) people', '(D) who helps others'], answer: 3, why: '先行詞 people は複数なので who help。' },
     ],
   },
+  {
+    id: 'exam-error-carry-out',
+    title: '入試の正誤問題〈264〉（京大レベル：英作文の carry out・bring up・take after）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'carry out ～（～を実行する）・bring up ～（～を育てる・（話題）をもち出す）・take after ～（（親）に似ている）。take after は前置詞 after のあとにすぐ人を置き、状態を表すので進行形にしない。',
+      '受け身は be carried out・be brought up (by ～)。分詞構文で受け身の意味なら過去分詞から始める（Brought up in ～, ...）。',
+    ],
+    examples: [
+      { en: 'They carried out an experiment. / She was brought up in Osaka.', ja: '彼らは実験を行った。／彼女は大阪で育った。' },
+      { en: 'He takes after his mother.', ja: '彼は母親に似ている。' },
+    ],
+    questions: [
+      { sentence: '(A) The scientists (B) carried (C) on out (D) a long experiment.', choices: ['(A) The scientists', '(B) carried', '(C) on out', '(D) a long experiment'], answer: 2, why: '「（計画・実験）を実行する」は carry out ～。carried out。' },
+      { sentence: '(A) She (B) was brought (C) in by (D) her grandparents in the countryside.', choices: ['(A) She', '(B) was brought', '(C) in by', '(D) her grandparents in the countryside'], answer: 2, why: '「（子ども）を育てる」は bring up。受け身は was brought up by。' },
+      { sentence: '(A) Tom (B) takes (C) after to (D) his father in many ways.', choices: ['(A) Tom', '(B) takes', '(C) after to', '(D) his father in many ways'], answer: 2, why: '「（親）に似ている」は take after ～。to は不要。' },
+      { sentence: '(A) Bring (B) up in a large family, (C) he (D) learned to share everything.', choices: ['(A) Bring', '(B) up in a large family,', '(C) he', '(D) learned to share everything'], answer: 0, why: '受け身の分詞構文なので Brought up in a large family。' },
+      { sentence: '(A) The plan (B) was carried (C) out (D) careful by the team.', choices: ['(A) The plan', '(B) was carried', '(C) out', '(D) careful by the team'], answer: 3, why: '動詞 was carried out を修飾するので副詞 carefully。' },
+      { sentence: '(A) My sister (B) is taking after (C) our mother (D) in appearance.', choices: ['(A) My sister', '(B) is taking after', '(C) our mother', '(D) in appearance'], answer: 1, why: 'take after は状態を表すので進行形にしない。takes after。' },
+      { sentence: '(A) The survey (B) was carried out (C) among (D) a thousand of students.', choices: ['(A) The survey', '(B) was carried out', '(C) among', '(D) a thousand of students'], answer: 3, why: 'a thousand のあとに of は不要。a thousand students。' },
+      { sentence: '(A) Children (B) who (C) is brought up (D) in the city often miss nature.', choices: ['(A) Children', '(B) who', '(C) is brought up', '(D) in the city often miss nature'], answer: 2, why: '先行詞 Children は複数なので are brought up。' },
+      { sentence: '(A) She (B) brought up (C) an interesting (D) point in the discuss.', choices: ['(A) She', '(B) brought up', '(C) an interesting', '(D) point in the discuss'], answer: 3, why: '前置詞 in のあとは名詞。in the discussion。' },
+      { sentence: '(A) We must (B) carry out (C) the project (D) as quick as possible.', choices: ['(A) We must', '(B) carry out', '(C) the project', '(D) as quick as possible'], answer: 3, why: 'as ～ as possible の中は副詞。as quickly as possible。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
