@@ -43858,6 +43858,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-phones-at-concerts',
+    title: 'Should Phones Be Banned at Live Performances?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "At concerts, comedy shows, and theater performances around the world, it has become common to see rows of glowing screens held up in the air as members of the audience record the event on their phones. In response, a growing number of performers and venues have begun to ask audiences to put their phones away, and some require visitors to lock their devices in special pouches that can only be opened when they leave. The practice has divided opinion, raising questions about the nature of live performance, the rights of audiences, and the relationship between experience and memory.",
+      "Supporters of phone-free performances argue that screens distract both performers and audiences. Musicians and actors often say that it is discouraging to look out at a crowd and see faces hidden behind phones, and that the energy of a performance depends on a sense of connection with people who are fully present. Members of the audience, too, may find their view blocked by the screens of those in front of them, and supporters argue that the experience of a live event is diminished when many people are watching it through a device rather than with their own eyes. Some performers even say that they can feel the difference in the room when an audience has put its phones away and is listening together.",
+      "Supporters also emphasize the value of being fully absorbed in a moment. Research on attention suggests that people who spend much of an event taking photographs may remember it less clearly than those who simply watch, because the act of recording shifts their focus away from the experience itself. ( A ) a recording may seem to preserve a memory, supporters argue, it may in fact replace the richer memory that would have formed if the person had been paying full attention.",
+      "Critics, however, argue that audiences who have paid for a ticket should be free to decide how to enjoy a performance. For many people, sharing photographs and short videos with friends is part of the pleasure of attending an event, and some fans treasure recordings that allow them to relive a special evening years later. Critics also point out that phones are important for safety, allowing people to contact family members, receive urgent messages, or call for help in an emergency. Parents who leave young children at home, for example, may feel uneasy about being unreachable for several hours.",
+      "Critics also note that recordings made by audiences can benefit performers. Videos shared online may introduce new listeners to a musician or a comedian, spreading their work far beyond those who were present and encouraging others to buy tickets for future shows. Some critics argue that banning phones may therefore harm less famous performers in particular, who depend on such informal publicity to build an audience and cannot afford expensive advertising.",
+      "In response, some performers have adopted compromise approaches. Some allow audiences to take photographs during the first few songs or at the end of a show, while asking them to keep their phones away for the rest of the time, and others provide official photographs and recordings that fans can download afterward. Venues that use locking pouches usually allow people to unlock their phones in designated areas, so that they can still deal with emergencies without disturbing others.",
+      "The debate over phones at live performances ultimately reflects a broader question about how we experience the world in an age of constant recording. Devices allow us to capture and share moments as never before, but they may also tempt us to treat experiences as material to be collected rather than events to be lived. Deciding when to put the phone away may therefore require each of us to ask whether we want to remember an experience by recording it or by giving it our complete attention.",
+    ],
+    ja: [
+      '世界中のコンサートや演芸、演劇の公演で、観客が電話でその場面を録画しようと、光る画面がずらりと空中にかかげられているのを見るのは、ありふれたことになった。これに対して、ますます多くの演者や会場が、観客に電話をしまうようたのみはじめており、なかには、帰るときにしか開けられない特別なポーチに機器をとじこめるよう求めるところもある。このやり方は意見を分けており、生の公演とは何か、観客の権利、そして経験と記憶との関係についての問いを投げかけている。',
+      '電話のない公演を支持する人々は、画面が演者と観客の両方の気をちらすと主張する。音楽家や俳優はしばしば、観客を見わたしたときに顔が電話のうしろにかくれているのを見ると気持ちがなえると言い、公演の熱気は、その場に心から居合わせている人々とのつながりの感覚にかかっていると言う。観客もまた、前の人の画面で視界をさえぎられるかもしれず、多くの人が自分の目ではなく機器を通して見ていると、生のできごとの経験は損なわれる、と支持者は主張する。観客が電話をしまっていっしょに聞いているときは、会場の空気のちがいが感じられるとさえ言う演者もいる。',
+      '支持する人々はまた、ある瞬間に完全に没頭することの価値も強調する。注意についての研究によれば、できごとの多くの時間を写真をとることに使う人は、ただ見ている人よりもそれをはっきりと覚えていないことがあるという。記録するという行為が、注意を経験そのものからそらしてしまうからである。録画は記憶を保存するように思えるかもしれないが、実際には、その人が十分に注意をはらっていたならできていたはずの、より豊かな記憶に取ってかわってしまうのかもしれない、と支持者は主張する。',
+      'しかし批判する人々は、チケット代をはらった観客は、公演をどう楽しむかを自由に決めてよいはずだと主張する。多くの人にとって、写真や短い動画を友だちと分かち合うことは、催しに行く楽しみの一部であり、何年もたってから特別な夜を思い出させてくれる録画を大切にしているファンもいる。批判する人々はまた、電話は安全のためにも大切であり、家族に連絡したり、急ぎの知らせを受けとったり、緊急のときに助けをよんだりすることを可能にしていると指摘する。たとえば、小さな子どもを家に残してきた親は、何時間も連絡がとれないことに不安を感じるかもしれない。',
+      '批判する人々はまた、観客がつくった録画が演者の役に立つこともあると注目する。インターネットで共有された動画は、新しい聞き手に音楽家や芸人を紹介し、その場にいた人々をはるかにこえてその作品を広め、ほかの人々に次の公演のチケットを買うよう促すかもしれない。そのため、電話を禁止することは、とくにあまり有名でない演者に害をあたえるかもしれないと主張する批判者もいる。そうした演者は観客を集めるのにこのような非公式の宣伝にたより、高い広告費をはらう余裕がないからである。',
+      'これに対して、歩みよりのやり方をとった演者もいる。最初の数曲のあいだや公演の終わりには写真をとることを認め、それ以外の時間は電話をしまっておくよう観客にたのむ演者もいれば、ファンがあとでダウンロードできる公式の写真や録画を用意する演者もいる。とじこめるポーチを使う会場は、ふつう決められた場所で電話のロックを外せるようにしており、そうすれば人々はほかの人のじゃまをせずに緊急のことに対応できる。',
+      '生の公演での電話をめぐる議論は、結局のところ、たえず記録する時代に私たちが世界をどのように経験するのかという、より広い問いを反映している。機器によって私たちはかつてないほど瞬間をとらえ、分かち合えるようになったが、それはまた、経験を生きるべきできごとではなく、集めるべき材料としてあつかうよう私たちをさそうかもしれない。だから、いつ電話をしまうかを決めることは、私たち一人一人に、ある経験を、記録することで覚えておきたいのか、それとも全身で注意を向けることで覚えておきたいのかを問うことを求めるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「録画は記憶を保存するように思えるかもしれないが、実際にはより豊かな記憶に取ってかわる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of phone-free performances say screens ( 1 ) performers and audiences and weaken memories of the event. Critics argue that audiences should be free to record and that shared videos give performers free ( 2 ). Some venues let people unlock their phones in designated ( 3 ).',
+      blanks: [
+        { choices: ['distract', 'protect', 'teach', 'feed'], answer: 0, why: '第2段落 screens distract both performers and audiences。' },
+        { choices: ['publicity', 'instruments', 'tickets', 'food'], answer: 0, why: '第5段落 such informal publicity。' },
+        { choices: ['areas', 'songs', 'seasons', 'languages'], answer: 0, why: '第6段落 unlock their phones in designated areas。' },
+      ],
+    },
+    tf: [
+      { statement: '電話を特別なポーチにとじこめるよう求める会場もある。', answer: true, why: '第1段落 some require visitors to lock their devices in special pouches。' },
+      { statement: '研究によると、写真をとる人はただ見ている人よりもできごとをよく覚えている。', answer: false, why: '第3段落 may remember it less clearly than those who simply watch。' },
+      { statement: '批判する人々は、電話が安全のためにも大切だと指摘している。', answer: true, why: '第4段落 phones are important for safety。' },
+      { statement: 'すべての演者が、公演中の写真を一枚も認めていない。', answer: false, why: '第6段落 Some allow audiences to take photographs during the first few songs。' },
+    ],
+    qa: [
+      { q: 'What do musicians and actors often find discouraging?', choices: ['Seeing faces hidden behind phones.', 'Playing in small venues.', 'Performing at night.', 'Selling tickets online.'], answer: 0, why: '第2段落 see faces hidden behind phones。' },
+      { q: 'Which performers may be harmed most by phone bans, according to some critics?', choices: ['Less famous performers.', 'The most famous stars.', 'Theater directors.', 'Ticket sellers.'], answer: 0, why: '第5段落 may therefore harm less famous performers in particular。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
