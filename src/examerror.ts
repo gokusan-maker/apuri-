@@ -6158,6 +6158,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Be (B) about to leave, (C) she (D) heard the phone ring.', choices: ['(A) Be', '(B) about to leave,', '(C) she', '(D) heard the phone ring'], answer: 0, why: '分詞構文なので Being about to leave。' },
     ],
   },
+  {
+    id: 'exam-error-contribute-object',
+    title: '入試の正誤問題〈257〉（東大レベル：英作文の contribute to・object to ～ing・be opposed to）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'contribute to ～（～に貢献する・～の一因となる）・object to ～（～に反対する）・be opposed to ～（～に反対している）の to は前置詞なので、あとに動詞を置くときは ～ing にする（object to building／be opposed to raising）。',
+      'object は自動詞なので to が必要（× object the plan）。動名詞の意味上の主語は所有格か目的格で表す（object to his / him going）。',
+    ],
+    examples: [
+      { en: 'She contributed to the success of the project.', ja: '彼女はその計画の成功に貢献した。' },
+      { en: 'Many people objected to building a new airport. / I am opposed to the plan.', ja: '多くの人が新しい空港の建設に反対した。／私はその計画に反対だ。' },
+    ],
+    questions: [
+      { sentence: '(A) Everyone (B) can contribute (C) for (D) protecting the environment.', choices: ['(A) Everyone', '(B) can contribute', '(C) for', '(D) protecting the environment'], answer: 2, why: '「～に貢献する」は contribute to ～。' },
+      { sentence: '(A) Many residents (B) objected (C) to build (D) a new airport nearby.', choices: ['(A) Many residents', '(B) objected', '(C) to build', '(D) a new airport nearby'], answer: 2, why: 'object to のあとは動名詞。objected to building。' },
+      { sentence: '(A) I (B) am opposed (C) to (D) raise the tax on food.', choices: ['(A) I', '(B) am opposed', '(C) to', '(D) raise the tax on food'], answer: 3, why: 'be opposed to のあとは動名詞。to raising。' },
+      { sentence: '(A) Contribute (B) to the project, (C) she (D) gained valuable experience.', choices: ['(A) Contribute', '(B) to the project,', '(C) she', '(D) gained valuable experience'], answer: 0, why: '分詞構文なので Contributing to the project。' },
+      { sentence: '(A) His parents (B) objected (C) his (D) going abroad alone.', choices: ['(A) His parents', '(B) objected', '(C) his', '(D) going abroad alone'], answer: 2, why: 'object は自動詞なので to が必要。objected to his going。' },
+      { sentence: '(A) Smoking (B) contributes (C) to (D) many serious disease.', choices: ['(A) Smoking', '(B) contributes', '(C) to', '(D) many serious disease'], answer: 3, why: 'many のあとは複数なので many serious diseases。' },
+      { sentence: '(A) Most (B) of the students (C) is opposed to (D) the new rule.', choices: ['(A) Most', '(B) of the students', '(C) is opposed to', '(D) the new rule'], answer: 2, why: 'Most of the students は複数あつかいなので are opposed to。' },
+      { sentence: '(A) My father (B) objected to (C) me (D) to use his car.', choices: ['(A) My father', '(B) objected to', '(C) me', '(D) to use his car'], answer: 3, why: 'object to のあとは動名詞。me (my) using his car。' },
+      { sentence: '(A) Her research (B) has contributed (C) much to (D) understand the disease.', choices: ['(A) Her research', '(B) has contributed', '(C) much to', '(D) understand the disease'], answer: 3, why: 'contribute to のあとは名詞か動名詞。to understanding。' },
+      { sentence: '(A) The mayor (B) was strong (C) opposed to (D) the plan.', choices: ['(A) The mayor', '(B) was strong', '(C) opposed to', '(D) the plan'], answer: 1, why: '形容詞 opposed を修飾するので副詞 strongly。was strongly opposed。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
