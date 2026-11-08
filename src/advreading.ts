@@ -45582,6 +45582,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-ink',
+    title: 'On Ink',
+    level: '難関大（評論）',
+    paragraphs: [
+      "It is easy to forget that almost everything we read was once made possible by ink. Today most words appear on screens, formed by tiny points of light, and many people go for days without writing anything by hand. Yet for thousands of years, the written record of human thought, from laws and letters to poems and scientific discoveries, depended on a dark liquid applied to a surface with a brush, a pen, or a press. The history of ink is therefore closely bound up with the history of memory itself.",
+      "The earliest inks were made from simple materials that could be found almost anywhere. Soot from burning oil or wood was mixed with water and a substance that helped it stick, producing a deep black that could be applied with a brush. In other places, people made ink from the juices of plants or from a mixture of iron and substances found in the growths on certain trees. Each method produced ink with its own qualities, some lasting for centuries and others fading within a few years. Writers who chose the wrong ink could thus see their words vanish within their own lifetimes.",
+      "The durability of ink has had enormous consequences for what we know about the past. ( A ) many ancient documents have been lost to fire, flood, and decay, those written with stable inks on suitable materials have sometimes survived for thousands of years. Historians can still read records of trade, government, and daily life that were written long ago, and in some cases chemists can even identify the materials from which an ink was made, revealing where and when a document was produced.",
+      "The invention of printing greatly increased the demand for ink, and it required ink of a different kind. Printers needed a thick, oily substance that would stick to metal type and transfer cleanly to paper, rather than the thin liquids used for writing by hand. As printed books, newspapers, and pamphlets spread, ink became one of the materials on which the circulation of knowledge depended, and the expression printer's ink came to stand for the whole world of publishing. Ink, in this sense, became a symbol of the power of the written word to shape public opinion.",
+      "Ink has also carried meanings beyond its practical use. In many cultures, the art of writing with brush and ink has been regarded as a form of expression in its own right, in which the thickness of a line and the speed of a stroke reveal something of the writer's character. Signing a document in ink has long been treated as a sign of commitment, and the phrase that something is written in ink suggests that it is fixed and cannot easily be changed.",
+      "In the digital age, the role of ink has changed but not disappeared. Printers in homes and offices still use large amounts of it, and the production of ink raises questions about the chemicals it contains and the waste it creates. At the same time, some people have rediscovered the pleasure of writing with fountain pens and bottles of colored ink, finding in the slow movement of the pen a kind of calm that typing on a keyboard rarely provides.",
+      "Perhaps, then, ink deserves more thought than we usually give it. It has preserved the words of people long dead, carried ideas across continents, and given shape to the art of writing. Even as more of our words appear only on screens, ink reminds us that writing was once a physical act that left a lasting mark, and it invites us to consider which of our own words we would wish to survive, and in what form, for those who come after us.",
+    ],
+    ja: [
+      '私たちが読むもののほとんどすべてが、かつてはインクによって可能になっていたことをわすれるのはかんたんである。今日、ほとんどのことばは光の小さな点でつくられた画面の上にあらわれ、多くの人は何日も手で何も書かずにすごす。しかし何千年ものあいだ、法律や手紙から詩や科学の発見にいたるまで、人間の思考の書かれた記録は、筆やペンや印刷機で表面にぬられた黒っぽい液体にたよっていた。したがって、インクの歴史は記憶そのものの歴史と深く結びついているのである。',
+      'もっとも古いインクは、ほとんどどこででも見つかる単純な材料からつくられた。油や木を燃やしたすすを、水と、それがくっつくのを助ける物質とまぜ合わせると、筆でぬることのできる深い黒ができた。ほかの場所では、人々は植物のしるから、あるいは鉄と、ある種の木にできるこぶに見られる物質とのまぜものからインクをつくった。それぞれの方法は独自の性質をもつインクを生み出し、何世紀も残るものもあれば、数年のうちにうすれてしまうものもあった。そのため、まちがったインクを選んだ書き手は、自分が生きているうちに自分のことばが消えていくのを目にすることもありえたのである。',
+      'インクの長持ちする性質は、私たちが過去について知っていることに大きな影響をあたえてきた。多くの古代の文書は火事や洪水やくさることによって失われてきたが、安定したインクで適した材料に書かれたものは、ときに何千年も残ってきた。歴史家はいまでも、ずっと昔に書かれた取り引きや政治、日々の生活の記録を読むことができ、場合によっては化学者がインクの材料を特定し、文書がいつどこでつくられたかを明らかにすることさえできる。',
+      '印刷の発明はインクの需要を大きくふやし、ちがう種類のインクを必要とした。印刷する人々は、手で書くのに使われるうすい液体ではなく、金属の活字にくっついて紙にきれいにうつる、どろっとした油っぽい物質を必要とした。印刷された本や新聞、パンフレットが広まるにつれて、インクは知識の流通がよりどころとする材料のひとつとなり、「印刷屋のインク」という表現は出版の世界全体を表すようになった。この意味で、インクは、書かれたことばが世論を形づくる力のシンボルになったのである。',
+      'インクはまた、実用をこえた意味もになってきた。多くの文化では、筆とすみで書く技術はそれ自体がひとつの表現と見なされてきた。そこでは線の太さや筆の運びの速さが、書く人の人がらの何かを明らかにする。インクで書類に署名することは長いあいだ約束のしるしとあつかわれてきたし、何かが「インクで書かれている」という言い方は、それが決まっていてかんたんには変えられないことを示している。',
+      'デジタルの時代に、インクの役割は変わったが、消えてはいない。家庭や会社のプリンターはいまも大量のインクを使っており、インクの製造は、それがふくむ化学物質や生み出すごみについての問いを投げかける。同時に、万年筆と色のついたインクのびんで書く楽しさを再発見した人々もいる。彼らは、ゆっくりとしたペンの動きの中に、キーボードを打つことではめったに得られない一種の落ち着きを見いだしているのである。',
+      'だとすれば、インクは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それはずっと前に亡くなった人々のことばを保存し、大陸をこえて考えを運び、書く技術に形をあたえてきた。私たちのことばの多くが画面の上にしかあらわれなくなっていくなかでも、インクは、書くことがかつては長く残るしるしを残す物理的な行為だったことを思い出させ、自分自身のことばのうち、どれを、どのような形で、あとに来る人々のために残したいかを考えるようさそってくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「多くの文書は失われてきたが、安定したインクで書かれたものは残ってきた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'もっとも古いインクには、すすからつくられたものがある。', answer: true, why: '第2段落 Soot from burning oil or wood was mixed with water ...。' },
+      { statement: 'どの方法でつくられたインクも、何世紀も残った。', answer: false, why: '第2段落 others fading within a few years。' },
+      { statement: '印刷には、手で書くインクよりどろっとした油っぽいインクが必要だった。', answer: true, why: '第4段落 Printers needed a thick, oily substance。' },
+      { statement: '筆者によると、デジタルの時代にインクはまったく使われなくなった。', answer: false, why: '第6段落 the role of ink has changed but not disappeared。' },
+    ],
+    qa: [
+      { q: 'What can chemists sometimes reveal by identifying the materials of an ink?', choices: ['Where and when a document was produced.', 'Who read the document.', 'How much the document cost.', 'Why the document was lost.'], answer: 0, why: '第3段落 revealing where and when a document was produced。' },
+      { q: 'What do some people find in writing with fountain pens?', choices: ['A kind of calm.', 'A faster way to write.', 'A cheaper way to print.', 'A way to save paper.'], answer: 0, why: '第6段落 finding in the slow movement of the pen a kind of calm。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
