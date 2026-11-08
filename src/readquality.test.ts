@@ -26,3 +26,11 @@ it('本文の語数は、空所に答えの語を入れて数える', () => {
   const p = { id: 'x', title: 'x', level: 'x', paragraphs: ['It is a form ( A ) a content.'], ja: [''], blanks: [{ id: 'A', choices: ['rather than', 'as', 'by', 'of'], answer: 0, why: '' }], tf: [] }
   expect(passageStats(p).words).toBe(8)
 })
+
+it('内容一致で、正解だけが長い（ほかの1.6倍以上）選択肢の問題がへっている', () => {
+  const bad = ADV_PASSAGES.flatMap((p) => p.qa ?? []).filter((q) => {
+    const L = q.choices.map((c) => c.length)
+    return L[q.answer] >= 1.6 * Math.max(...L.filter((_, i) => i !== q.answer))
+  })
+  expect(bad.length).toBeLessThanOrEqual(243)
+})

@@ -896,7 +896,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'Herd immunity can protect people who cannot be vaccinated.', answer: true, why: '第3段落 which also protects people who cannot receive vaccines ... This effect is known as herd immunity。' },
     ],
     qa: [
-      { q: 'What does a vaccine contain?', choices: ['A weakened or inactive germ, or a harmless part of it.', 'Antibodies from other people.', 'Memory cells from animals.', 'A stronger form of the germ.'], answer: 0, why: '第2段落 A vaccine contains a weakened or inactive form of a germ, or just a harmless piece of it。' },
+      { q: 'What does a vaccine contain?', choices: ['Antibodies that the immune system made during an earlier infection.', 'Memory cells that already know how to fight the germ.', 'A germ made weak or inactive, or a harmless piece of one.', 'A small amount of the real germ that causes mild disease.'], answer: 2, why: '第2段落に、弱めた・不活性の病原体、またはその無害な一部を含むとある。抗体や記憶細胞は接種後に体が作るもので中身ではない。病気を起こせないとあるので「軽い病気を起こす」も誤り。' },
     ],
   },
   {
@@ -1344,7 +1344,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、指標は一つだけにしぼって見るのがよいと考えている。', answer: false, why: '第3段落 Wise organizations use several indicators。' },
     ],
     qa: [
-      { q: 'Why might a school under pressure spend weeks practicing test questions?', choices: ['To raise the score quickly, even if real understanding does not improve.', 'Because students prefer tests to lessons.', 'Because tests are the only way to learn.', 'To reduce the number of teachers.'], answer: 0, why: '第2段落 they naturally look for the fastest way to raise it。' },
+      { q: 'Why might a school under pressure spend weeks practicing test questions?', choices: ['Practicing test questions is the best way to develop real understanding.', 'Raising the score is faster than building real understanding.', 'The government punishes schools that use several indicators together.', 'Numbers about learning cannot be compared across places and years.'], answer: 1, why: '第2段落に、数値で評価されると人は数値を上げる最短の方法を探し、それは理解を深めることと同じではないとある。練習が理解を育てるは逆。複数の指標や比較の話は第1・3段落のすりかえ。' },
     ],
   },
   {
@@ -1428,7 +1428,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '最終日、筆者は動物ごとに声を変えて読んだ。', answer: true, why: '第3段落 I changed my voice for each animal。' },
     ],
     qa: [
-      { q: 'What did the writer learn?', choices: ['We must enjoy what we are doing to make others interested.', 'Children do not like picture books.', 'Teachers should not give advice.', 'Reading quietly is the best way.'], answer: 0, why: '第3段落最後の文。' },
+      { q: 'What did the writer learn?', choices: ['Children listen better when the teacher reads a book quietly.', 'Taking care of small children is easier than people imagine.', 'Children enjoy drawing pictures more than listening to stories.', 'We should enjoy something ourselves before others can become interested.'], answer: 3, why: '第3段落の最後に、人の興味を引くにはまず自分が楽しむことだと学んだとある。声を変えて読んだので「静かに」は逆、世話は想像より大変だった。絵は男の子の贈り物の話をずらしたもの。' },
     ],
   },
   {
@@ -1512,7 +1512,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者たちは安全な道の地図を作って近所の人にくばった。', answer: true, why: '第3段落 gave the map to our neighbors。' },
     ],
     qa: [
-      { q: 'Why did it take a long time to get to the shelter?', choices: ['They walked slowly and had to choose another road.', 'They got lost in the school.', 'The drill started late.', 'The weather was very bad.'], answer: 0, why: '第2段落 we moved very slowly / We had to choose another way。' },
+      { q: 'Why did it take a long time to get to the shelter?', choices: ['The elementary school was far away from the writer\'s house.', 'An earthquake broke a wall while they were walking there.', 'They stopped to make a map of safe roads on the way.', 'They moved slowly, and a blocked road made them go another way.'], answer: 3, why: '第2段落に、杖のおばあさんとゆっくり歩き、壊れた塀で道がふさがれ別の道を選んだとある。学校が遠いとは書かれておらず、地震は実際には起きていない。地図作りは訓練の後のこと。' },
     ],
   },
   {
@@ -1876,7 +1876,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、集団は大きければ大きいほど必ず賢くなると述べている。', answer: false, why: '第3段落 not simply because it is large, but because it is diverse and independent。' },
     ],
     qa: [
-      { q: 'What can make a group lose its wisdom?', choices: ['Members seeing each other\'s answers or following one confident voice.', 'Having too many members.', 'Members thinking independently.', 'Bringing different kinds of information.'], answer: 0, why: '第3段落 If people can see each other\'s answers, or if one confident voice persuades the rest。' },
+      { q: 'What can make a group lose its wisdom?', choices: ['The group has too many members with no special knowledge.', 'Members are influenced by others instead of thinking on their own.', 'Individual guesses point in many different directions and cancel.', 'Members bring too many different kinds of information.'], answer: 1, why: '第3段落に、互いの答えが見えたり自信のある1人に流されたりすると誤差が同じ方向に動くとある。知識のない人が多くても正確だった（第1段落）。誤差がばらばらなことや多様な情報はむしろ賢さの条件。' },
     ],
   },
   {
@@ -1960,7 +1960,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '科学者たちは、塚のしくみは最初に考えられていたより単純だと考えている。', answer: false, why: '第3段落 in a more complicated way than first believed。' },
     ],
     qa: [
-      { q: 'Why have engineers studied termite mounds?', choices: ['To learn how to cool buildings using little electricity.', 'To find new kinds of soil.', 'To protect buildings from insects.', 'To make towers taller.'], answer: 0, why: '第3段落 for ideas about how to cool buildings without using much electricity。' },
+      { q: 'Why have engineers studied termite mounds?', choices: ['To find ways of cooling buildings without much electric power.', 'To learn how termites build towers several meters high.', 'To discover how termite colonies produce so much heat.', 'To prove that the mounds work exactly as first believed.'], answer: 0, why: '第3段落に、技術者は電気をあまり使わずに建物を冷やす手がかりを求めて蟻塚を研究したとある。熱を出すのはコロニーの性質、塔の高さは第1段落の話。実際は最初の考えより複雑とわかったので「証明」は誤り。' },
     ],
   },
   {
@@ -2353,7 +2353,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、消えそうな言語は録音して保存すればそれで十分だと考えている。', answer: false, why: '第3段落 a language lives only when people use it in daily life。' },
     ],
     qa: [
-      { q: 'According to the passage, what usually causes a language to decline?', choices: ['Parents stop passing it on because another language seems more useful.', 'A war destroys the people who speak it.', 'The government bans it in schools.', 'Linguists stop recording it.'], answer: 0, why: '第1段落 parents … stop passing it on to their children, usually because another language seems to offer better jobs。' },
+      { q: 'According to the passage, what usually causes a language to decline?', choices: ['A single dramatic event suddenly kills all of its speakers.', 'Schools refuse to teach children in their local language.', 'Parents stop teaching it because another language seems more useful.', 'Elderly speakers forget the language over a few generations.'], answer: 2, why: '第1段落に、多くの場合、別の言語の方が仕事や将来に有利に見えるため親が子に伝えなくなるとある。劇的な出来事で消えるのはまれ。学校は第3段落の復活の例で、高齢者が忘れるとは書かれていない。' },
     ],
   },
   {
@@ -2613,7 +2613,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ミラー療法は、だれにでも効く。', answer: false, why: '第3段落 Mirror therapy does not work for everyone。' },
     ],
     qa: [
-      { q: 'What happens in mirror therapy?', choices: ['The reflection of the remaining arm makes the missing arm seem to move.', 'The patient looks at photos of the lost arm.', 'Doctors attach a new arm with a mirror.', 'The patient sleeps in front of a mirror.'], answer: 0, why: '第3段落 When the patient moves the real arm, the brain sees the missing arm moving too。' },
+      { q: 'What happens in mirror therapy?', choices: ['The mirror sends new signals through the damaged nerves.', 'The patient learns to stop imagining the missing arm.', 'The reflection makes the missing arm feel like a fist.', 'Moving the real arm makes the brain see the lost arm move.'], answer: 3, why: '第3段落に、残った腕を鏡の横に置いて動かすと、脳は失った腕も動いていると見るとある。神経の損傷だけでなく脳の問題であり、「想像している」は昔の医者の誤解。握りこぶしは第1段落の症状。' },
     ],
   },
 {
@@ -3405,7 +3405,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、中古品の人気は続きそうだと考えている。', answer: true, why: '第4段落 the trend seems likely to continue。' },
     ],
     qa: [
-      { q: 'What does the writer recommend to avoid trouble when buying second-hand goods?', choices: ["Read the seller's reviews and ask questions first.", 'Buy only items that are new.', 'Pay before checking the photo.', 'Shop only in ordinary stores.'], answer: 0, why: "第3段落 read the seller's reviews carefully and to ask questions before making a decision。" },
+      { q: 'What does the writer recommend to avoid trouble when buying second-hand goods?', choices: ['Buy only items that cost less than half the new price.', 'Use smartphone apps instead of shopping in ordinary stores.', 'Pay for the item only after seeing it in a photo.', 'Check the seller\'s reviews and ask questions before deciding.'], answer: 3, why: '第3段落に、出品者の評価をよく読み、決める前に質問するのがよいとある。半額は第2段落の値段の話、アプリは第1段落の話で勧めではない。写真と違う品が届くことがあるので写真の確認は対策にならない。' },
     ],
   },
   {
@@ -3437,7 +3437,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'すでに支払っている場合、パテルさんは差額の返金を申しこまなければならない。', answer: false, why: '第3段落 You do not need to take any action。' },
     ],
     qa: [
-      { q: 'What is offered to Ms. Patel as a thank-you?', choices: ['A 10 percent discount on her next order.', 'Three free chairs.', 'A refund of $2,250.', 'Free delivery for a year.'], answer: 0, why: '第4段落 we would like to offer you a 10 percent discount on your next order。' },
+      { q: 'What is offered to Ms. Patel as a thank-you?', choices: ['Ten percent off the next order she places.', 'A refund of $450 within five business days.', 'A corrected invoice for twelve office chairs.', 'Three free chairs added to her next order.'], answer: 0, why: '第4段落に、待ってもらったお礼として次の注文の10％割引を出すとある。450ドルの返金と訂正請求書は請求ミスの訂正（第3段落）でお礼ではない。無料の椅子は15脚と12脚の差をまぜたもの。' },
     ],
   },
   {
@@ -3673,7 +3673,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、図書館の目的は大きく変わったと述べている。', answer: false, why: '第4段落 the purpose of a library has not changed as much as it might seem。' },
     ],
     qa: [
-      { q: 'How do libraries help people who do not have internet access at home?', choices: ['They provide a place to apply for jobs and contact government offices.', 'They sell computers at low prices.', 'They lend fishing rods to everyone.', 'They close their reading rooms.'], answer: 0, why: '第3段落 the library is a place to apply for jobs, contact government offices, or help their children with homework。' },
+      { q: 'How do libraries help people who do not have internet access at home?', choices: ['Lending tools and musical instruments to use at home.', 'Giving them free internet access to use at home.', 'Offering a place to look for work and reach government offices.', 'Replacing quiet reading rooms with areas for group events.'], answer: 2, why: '第3段落に、家でネットが使えない人にとって図書館は仕事に応募したり役所に連絡したりする場だとある。道具の貸し出しや交流の場は第2段落の別の変化で、家でネットを使えるようにするとは書かれていない。' },
     ],
   },
   {
@@ -3765,7 +3765,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ごみをもっとも減らしたオフィスには、1,000ドルの賞金がおくられる。', answer: true, why: '第4段落 will receive a prize of $1,000。' },
     ],
     qa: [
-      { q: 'What should employees who are away on May 29 do?', choices: ['Pick up their mugs at the front desk the following week.', 'Buy their own paper cups.', 'Contact the newsletter editor.', 'Install a recycling station.'], answer: 0, why: '第3段落 Employees who are away on that day can pick up their mugs at the front desk the following week。' },
+      { q: 'What should employees who are away on May 29 do?', choices: ['Collect their mugs at the front desk the next week.', 'Ask Ms. Garcia to send their mugs to their office.', 'Use paper cups in the break room until they return.', 'Get their mugs from General Affairs the day before.'], answer: 0, why: '第3段落に、5月29日に不在の人は翌週に受付でマグを受け取れるとある。ガルシアさんは質問の窓口（第5段落）、紙コップはもう置かれない。総務部が配るのは29日当日で前日ではない。' },
     ],
   },
   {
@@ -3795,7 +3795,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'よい聞き手は、話のすきまをすぐにうめようとする。', answer: false, why: '第3段落 A good listener does not rush to fill every gap。' },
     ],
     qa: [
-      { q: 'What do we often do while another person is talking, according to the writer?', choices: ['Prepare our own reply instead of attending to their words.', 'Take notes on everything they say.', 'Stay completely silent and patient.', 'Ask them to speak more slowly.'], answer: 0, why: '第2段落 we are not really attending to their words but preparing our own reply。' },
+      { q: 'What do we often do while another person is talking, according to the writer?', choices: ['Think about what we will say next rather than truly listen.', 'Stay silent and let the other person\'s thoughts take shape.', 'Ask questions so the speaker can find the right words.', 'Listen carefully because our ears cannot help hearing words.'], answer: 0, why: '第2段落に、相手が話している間、言葉に注意を向けず自分の返事を準備していることが多いとある。沈黙に耐え相手の考えを形にさせるのは第3段落の理想の聞き手。耳が聞こえることと聞くことは違う。' },
     ],
   },
   {
@@ -4059,7 +4059,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、日記は自分に注意を向けすぎることにつながると結論づけている。', answer: false, why: '第4段落 Yet the opposite may be true。' },
     ],
     qa: [
-      { q: 'According to the writer, why does writing help us understand our feelings?', choices: ['Because searching for the right word makes us discover what we actually feel.', 'Because writing is faster than speaking.', 'Because other people read our diaries.', 'Because diaries only record important events.'], answer: 0, why: '第3段落 In searching for the right word, we often discover what we actually feel。' },
+      { q: 'According to the writer, why does writing help us understand our feelings?', choices: ['Looking for the right word shows us what we really feel.', 'Quick words in writing hide our vague feelings well.', 'Reading old pages shows which worries were really enormous.', 'A diary records exactly what happened to us each day.'], answer: 0, why: '第3段落に、書くとペースが落ち、正しい言葉を探すうちに実際の気持ちに気づくとある。すばやい言葉で気持ちを隠せるのは会話の方。昔の悩みは小さく見え、日記は起きたことだけの記録ではない。' },
     ],
   },
   {
@@ -4399,7 +4399,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'チップのかわりに決まった給料を払うようにしたレストランもある。', answer: true, why: '第4段落 some restaurants have replaced tipping with higher menu prices and fixed wages。' },
     ],
     qa: [
-      { q: 'Why can tipping make it hard for workers to plan their lives?', choices: ['Their income can change greatly from week to week.', 'They have to work longer hours.', 'Customers never leave tips.', 'Menu prices are too high.'], answer: 0, why: '第3段落 their income can change greatly from week to week, which makes it hard to plan their lives。' },
+      { q: 'Why can tipping make it hard for workers to plan their lives?', choices: ['Restaurants pay them fixed wages that are too low.', 'Customers often forget to leave tips when it rains.', 'The amount they earn may differ a lot each week.', 'Menu prices go up and down from week to week.'], answer: 2, why: '第3段落に、チップが給料の大部分を占める所では収入が週ごとに大きく変わり、生活の計画が立てにくいとある。固定給やメニュー価格は第4段落の代案、天気はチップの額に影響するだけで忘れるとはない。' },
     ],
   },
   {
@@ -4471,7 +4471,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は今では、スマホを永久に使わなくなった。', answer: false, why: '第4段落 I\'m not going to pretend I\'ve given up my phone for good。' },
     ],
     qa: [
-      { q: 'What does the writer do differently now?', choices: ['Leaves the phone in another room while eating or reading.', 'Uses the phone only on weekends.', 'Has stopped reading novels.', 'Checks notifications more often.'], answer: 0, why: '第4段落 I now leave it in another room when I\'m eating or reading。' },
+      { q: 'What does the writer do differently now?', choices: ['Keeps the phone in a different room during meals and reading.', 'Locks the phone in a drawer every single weekend.', 'Has given up using the phone completely for good.', 'Turns on notifications only while eating or reading.'], answer: 0, why: '第4段落に、今は食事や読書のとき電話を別の部屋に置き、通知もほぼ切ったとある。引き出しにしまったのは先月の週末だけ。完全にやめたふりはしないと書かれ、通知はほとんどオフにしている。' },
     ],
   },
   {
@@ -5193,7 +5193,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、シェアサイクルは大きな計画の一部であるときにいちばんうまくいくと考えている。', answer: true, why: '第4段落 Bike-sharing works best when it is part of a wider plan。' },
     ],
     qa: [
-      { q: 'What is the "last mile" in the passage?', choices: ['The short distance between a station and a home or office.', 'The longest road in a city.', 'The final day of a bike rental.', 'The last station on a train line.'], answer: 0, why: '第2段落 the short distance between a train station and a person\'s home or office。' },
+      { q: 'What is the "last mile" in the passage?', choices: ['The short trip from a train station to home or work.', 'The final part of a long ride across town.', 'A twenty-minute walk between two of the bike stations.', 'The marked area where riders must park shared bikes.'], answer: 0, why: '第2段落に、last mile は駅と自宅・職場の間の短い距離だとある。町を横切る乗車は第1段落、20分は歩いた場合の時間の例。駐輪区域は第3段落の規則の話で、last mile の意味ではない。' },
     ],
   },
   {
@@ -5351,7 +5351,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '贈り物のお金は、全員が同じ金額を出さなければならない。', answer: false, why: '第3段落 any amount is welcome。' },
     ],
     qa: [
-      { q: 'Where will the retirement party be held?', choices: ['In the Garden Room of the Hotel Belmont.', 'In the design department.', 'At the front desk.', 'In Robert\'s home.'], answer: 0, why: '第2段落 in the Garden Room of the Hotel Belmont。' },
+      { q: 'Where will the retirement party be held?', choices: ['In the design department where Robert worked.', 'At the front desk where Sarah works.', 'In the Garden Room at the Hotel Belmont.', 'In the garden of the company\'s main office.'], answer: 2, why: '第2段落に、パーティーは3月28日にホテル・ベルモントのガーデンルームで開くとある。設計部はロバートが率いた部署、受付はサラが贈り物のお金を集める場所で、会社の庭とはどこにも書かれていない。' },
     ],
   },
   {
@@ -5478,7 +5478,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '電信は、新聞や会社にも使われた。', answer: true, why: '第3段落 newspapers used them … businesses used them。' },
     ],
     qa: [
-      { q: 'Why is the telegraph sometimes called the "Victorian Internet"?', choices: ['It let people communicate across great distances almost instantly.', 'It was invented by Queen Victoria.', 'It used computers to send messages.', 'It was used only in Britain.'], answer: 0, why: '第4段落 because it allowed people to communicate across great distances almost instantly。' },
+      { q: 'Why is the telegraph sometimes called the "Victorian Internet"?', choices: ['It was first used to send messages by ship.', 'It allowed nearly instant messages over very long distances.', 'It protected private messages better than earlier methods.', 'It used a code of dots and dashes like computers.'], answer: 1, why: '第4段落に、遠く離れた所とほぼ瞬時に通信できたためそう呼ばれるとある。船は電信以前の方法。私信の保護は新しく生まれた課題で、守れたとは書かれていない。符号は第2段落の話でコンピューターとの比較はない。' },
     ],
   },
   {
@@ -5761,7 +5761,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '子どもたちは、年上の利用客からおふろのマナーを学ぶ。', answer: true, why: '第3段落 who learn bath manners from older users。' },
     ],
     qa: [
-      { q: 'According to the writer, why may sento continue to survive?', choices: ['They are places where people of all ages can relax together.', 'Most homes still have no bathtub.', 'They are cheaper than hotels.', 'They are open only to tourists.'], answer: 0, why: '第4段落 It is a place where people of all ages can relax together, and that may be the reason it continues to survive。' },
+      { q: 'According to the writer, why may sento continue to survive?', choices: ['Most homes in Japan still do not have bathtubs.', 'Tourists pay high prices to see the Mount Fuji paintings.', 'They let people of every age relax together.', 'Young people use them more often than elderly customers.'], answer: 2, why: '第4段落に、銭湯はあらゆる年代の人が一緒にくつろげる場で、それが残る理由かもしれないとある。今はほとんどの家に風呂があり、富士山の絵は人気だが料金の話はない。若者の方が多いとも書かれていない。' },
     ],
   },
   {
@@ -6087,7 +6087,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、鳥の変化には代償もあるかもしれないと述べている。', answer: true, why: '第4段落 they may also have costs。' },
     ],
     qa: [
-      { q: 'Why are higher notes useful for birds in cities?', choices: ['Most urban noise is low in pitch, so higher notes are heard more easily.', 'Higher notes use less energy.', 'Birds in forests cannot sing high notes.', 'Higher notes attract more insects.'], answer: 0, why: '第2段落 Because most urban noise is low in pitch, higher notes are less likely to be drowned out。' },
+      { q: 'Why are higher notes useful for birds in cities?', choices: ['Higher songs are more attractive to all possible mates.', 'City noise is mostly low, so high songs are not covered.', 'Streetlights make birds sing at a higher pitch.', 'Higher notes use less energy than singing at night.'], answer: 1, why: '第2段落に、都市の騒音はほとんど低い音なので、高い音はかき消されにくいとある。高い歌は相手によってはむしろ魅力が下がる（第4段落）。街灯は夜に歌う理由として疑われた話で、音の高さとは関係ない。' },
     ],
   },
   {
@@ -6172,7 +6172,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、同一性は材料だけで決まると主張している。', answer: false, why: '第3段落 identity may depend less on what something is made of than on the continuity …。' },
     ],
     qa: [
-      { q: 'What does the writer suggest at the end of the passage?', choices: ['Identity may be something we give to objects through how we remember and treat them.', 'Old ships should never be repaired.', 'Sports teams should keep the same players forever.', 'Only the original material makes something real.'], answer: 0, why: '第4段落 Perhaps identity is not something an object simply has, but something we give to it …。' },
+      { q: 'What does the writer suggest at the end of the passage?', choices: ['The ship rebuilt from the old planks is the real one.', 'Identity depends mainly on what something is made of.', 'We may give things identity by how we remember and treat them.', 'A sports team becomes a new team when players change.'], answer: 2, why: '第4段落の最後に、同一性は覚え方や扱い方を通して私たちが与えるものかもしれないとある。材料より形や物語が大事とあるので材料説は逆。どちらが本物かは決めておらず、チームは同じとみなされる。' },
     ],
   },
   {
@@ -6383,7 +6383,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '月食のとき、月は完全に見えなくなる。', answer: false, why: '第4段落 Instead of disappearing completely, the Moon often turns a deep red。' },
     ],
     qa: [
-      { q: 'Why does the Moon often look red during a lunar eclipse?', choices: ['Earth\'s atmosphere scatters blue light and lets red light reach the Moon.', 'The Moon gets very hot.', 'The Sun turns red during an eclipse.', 'The Moon reflects light from Mars.'], answer: 0, why: '第4段落 Earth\'s atmosphere … scatters blue light and lets red light pass through to reach the Moon。' },
+      { q: 'Why does the Moon often look red during a lunar eclipse?', choices: ['The Moon\'s surface turns red when it gets cold.', 'Earth\'s air scatters blue light and lets red light reach it.', 'The Sun\'s outer atmosphere becomes visible around the Moon.', 'Earth\'s air scatters red light and lets blue light pass.'], answer: 1, why: '第4段落に、日光が地球の大気を通るとき青い光が散乱し、赤い光が通り抜けて月に届くとある。青と赤を逆にしたものは誤り。外側の大気が見えるのは皆既日食（第1段落）のことで、月の温度の話はない。' },
     ],
   },
   {
@@ -6666,7 +6666,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'キリンは長い舌を使って、とげのある枝から葉をとる。', answer: true, why: '第2段落 which it uses to pull leaves off thorny branches。' },
     ],
     qa: [
-      { q: 'Why does a giraffe need a large and powerful heart?', choices: ['To send blood all the way up to its head.', 'To run faster than lions.', 'To drink a lot of water.', 'To sleep for a long time.'], answer: 0, why: '第3段落 To send blood all the way up to its head, a giraffe needs a large and powerful heart。' },
+      { q: 'Why does a giraffe need a large and powerful heart?', choices: ['It must push blood up to its high head.', 'It must spread its front legs wide to drink.', 'It must run away quickly when lions attack.', 'It must stay awake for long hours on the grasslands.'], answer: 0, why: '第3段落に、頭まで血を送るために大きく強い心臓が必要だとある。足を広げるのは水を飲むときの姿勢で、ライオンはその危険の話。長く起きているのではなく、短い時間しか眠らない（第4段落）。' },
     ],
   },
   {
@@ -6708,7 +6708,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ネズミの研究では、ねむっている間に同じ細胞がにた順番で活動した。', answer: true, why: '第3段落 the same cells often fire again in a similar order。' },
     ],
     qa: [
-      { q: 'What does the writer suggest is more effective than studying all night?', choices: ['Spreading study over several days with sleep in between.', 'Studying only in the morning.', 'Studying with rats.', 'Taking no breaks at all.'], answer: 0, why: '第4段落 Spreading study over several days, with sleep in between, is likely to be more effective。' },
+      { q: 'What does the writer suggest is more effective than studying all night?', choices: ['Studying the same amount of time but staying awake.', 'Studying across several days with sleep between the sessions.', 'Cramming everything into one long night before the exam.', 'Running through a maze before going to sleep.'], answer: 1, why: '第4段落に、数日に分けて間に睡眠をはさむ方が一晩で詰めこむより効果的だとある。起きていた組は覚えた量が少なく（第2段落）、一晩の詰めこみは逆。迷路はネズミの実験の話で勉強法ではない。' },
     ],
   },
   {
@@ -6750,7 +6750,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ねこはどんな高さから落ちても安全だ。', answer: false, why: '第4段落 This does not mean that cats are safe from any height。' },
     ],
     qa: [
-      { q: 'What makes the righting reflex possible?', choices: ['A flexible spine and a sense of balance from the inner ear.', 'Very long whiskers.', 'Sharp claws on the back legs.', 'Strong eyesight at night.'], answer: 0, why: '第3段落 The cat\'s flexible spine and its sense of balance … make this possible。' },
+      { q: 'What makes the righting reflex possible?', choices: ['Strong back legs that push against the ground.', 'Fast photographs that show how the body turns.', 'Soft cushions that make the landing safe.', 'A bendable backbone and balance from organs in the ear.'], answer: 3, why: '第3段落に、柔らかい背骨と内耳の器官による平衡感覚がこれを可能にするとある。猫は押すものがない状態で回転する。写真はマレーの研究方法（第2段落）、クッションは実験の条件にすぎない。' },
     ],
   },
   {
@@ -7223,7 +7223,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'すべての植物は、動物の助けがないと種を運べない。', answer: false, why: '第2・4段落 風・水を使う植物や、自分で種を飛ばす植物もある。' },
     ],
     qa: [
-      { q: 'Why is it a problem for a seedling to grow right next to its parent?', choices: ['It must compete with the parent for light, water, and nutrients.', 'Animals will eat it right away.', 'The wind cannot reach it.', 'It cannot produce any fruit.'], answer: 0, why: '第1段落 a seedling that grows right next to its parent must compete with it for light, water, and nutrients。' },
+      { q: 'Why is it a problem for a seedling to grow right next to its parent?', choices: ['Its parent plant blocks the wind that carries seeds.', 'Animals eat sweet fruits growing near the parent plant.', 'The parent plant\'s pods burst and damage it.', 'It has to share light, water, and food with its parent.'], answer: 3, why: '第1段落に、親のすぐ隣で育つ芽は光・水・養分を親と奪い合わなければならないとある。風・動物・さやがはじける話は第2〜4段落の種の運び方で、隣で育つことの問題としては書かれていない。' },
     ],
   },
   {
@@ -7464,7 +7464,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '天気が悪いとき、相乗りのグループは早く帰るのを優先される。', answer: true, why: '第3段落 carpool groups will be given priority if they need to leave early because of bad weather。' },
     ],
     qa: [
-      { q: 'What will drivers in the program receive?', choices: ['A free parking space near the main entrance.', 'A monthly allowance of $50.', 'A new company car.', 'Extra days off.'], answer: 0, why: '第3段落 Drivers will get a free parking space close to the main entrance。' },
+      { q: 'What will drivers in the program receive?', choices: ['A transportation allowance of fifty dollars each month.', 'Permission to leave early on any day they choose.', 'A parking spot close to the main entrance at no cost.', 'A free parking space at the far end of the lot.'], answer: 2, why: '第3段落に、運転する人は正面入口近くの無料駐車スペースをもらえるとある。月50ドルは同乗者への手当。早く帰れる優先は悪天候のときだけで好きな日ではなく、駐車場の奥とは書かれていない。' },
     ],
   },
   {
@@ -7652,7 +7652,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ハスの葉のしくみは、まだ何の製品にも使われていない。', answer: false, why: '第4段落 some paints for buildings work like lotus leaves。' },
     ],
     qa: [
-      { q: 'Why do drops of water roll off a lotus leaf easily?', choices: ['The leaf is covered with tiny bumps and wax.', 'The leaf is always wet.', 'The pond is full of mud.', 'The leaf is very large.'], answer: 0, why: '第2段落 covered with very tiny bumps, and the bumps are covered with wax。' },
+      { q: 'Why do drops of water roll off a lotus leaf easily?', choices: ['The leaf is cleaned by rain every day.', 'Tiny bumps with wax on the leaf keep water from spreading.', 'The leaf picks up dirt from the muddy pond.', 'Special paints cover the surface of the leaf.'], answer: 1, why: '第2段落に、葉の表面は小さなでこぼことろうでおおわれ、水が広がらず丸い粒になるとある。雨のたびに汚れが落ちるのは転がった結果で、泥を集めるのでもない。ペンキは第4段落の人間の製品の話。' },
     ],
   },
   {
@@ -7694,7 +7694,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今では、ピラミッドは奴隷によって建てられたと考えられている。', answer: false, why: '第4段落 the builders were skilled laborers … not slaves。' },
     ],
     qa: [
-      { q: 'What does the ancient wall painting show?', choices: ['A person pouring water onto the sand in front of a sledge.', 'Slaves building a pyramid.', 'A king choosing stones for his tomb.', 'Workers cooking food in a village.'], answer: 0, why: '第3段落 a person pouring water onto the sand in front of a sledge carrying a huge statue。' },
+      { q: 'What does the ancient wall painting show?', choices: ['Slaves pulling heavy stone blocks up a long ramp.', 'Someone wetting the sand ahead of a sledge with a statue.', 'Workers living in a village near the pyramids.', 'Someone pouring water onto a huge statue to clean it.'], answer: 1, why: '第3段落に、壁画には大きな像をのせたそりの前の砂に水をまく人が描かれているとある。奴隷が造ったという考えは否定され（第4段落）、村は考古学の発見で絵ではない。水をかけるのは像ではなく砂。' },
     ],
   },
   {
@@ -8568,7 +8568,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '赤ちゃんは大人よりもしゃっくりが少ない。', answer: false, why: '第3段落 babies hiccup much more often than adults。' },
     ],
     qa: [
-      { q: 'What do some scientists think hiccups may do for babies?', choices: ['Help them remove air from their stomachs.', 'Help them fall asleep.', 'Make their lungs bigger.', 'Help them learn to talk.'], answer: 0, why: '第3段落 hiccups may help babies remove air from their stomachs while they are drinking milk。' },
+      { q: 'What do some scientists think hiccups may do for babies?', choices: ['Help them breathe more easily before they are born.', 'Stop them from eating or drinking too quickly.', 'Make their diaphragm stronger as they grow older.', 'Get rid of air in their stomachs while drinking milk.'], answer: 3, why: '第3段落に、ミルクを飲む間に胃の空気を出すのに役立つかもしれないと考える科学者がいるとある。生まれる前にもしゃっくりするとあるだけで呼吸の話はない。早食いは原因で、横隔膜を強めるとはない。' },
     ],
   },
   {
@@ -8994,8 +8994,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '古いノートパソコンは、各自で処分してよい。', answer: false, why: '第3段落 Old laptops must be returned to the IT office。' },
     ],
     qa: [
-      { q: 'Which department will receive new laptops first?', choices: ['Sales.', 'IT.', 'Human Resources.', 'Accounting.'], answer: 0, why: '第2段落 starting with Sales on Monday, March 10。' },
-      { q: 'What should employees do before they receive their new laptops?', choices: ['Save important files to the shared drive.', 'Return their old laptops.', 'Buy a new bag.', 'Email the IT office.'], answer: 0, why: '第2段落 please save all of your important files to the shared drive。' },
+      { q: 'Which department will receive new laptops first?', choices: ['The IT Department, which sets up the laptops.', 'The department whose manager asks first.', 'The Sales Department, starting on March 10.', 'The department with the oldest computers.'], answer: 2, why: '第2段落に、ノートパソコンは部署ごとに配られ、3月10日の営業部から始まるとある。IT部は設定を手伝う側で、マネージャーは時間を伝えるだけ。古いパソコンの部署から配るとは書かれていない。' },
+      { q: 'What should employees do before they receive their new laptops?', choices: ['Return their old laptops to the IT office.', 'Move their important files onto the shared drive.', 'Send an email to set up the new laptop.', 'Save all their files only on the old computer.'], answer: 1, why: '第2段落に、受け取る日までに大事なファイルを共有ドライブに保存するよう書かれている。古いパソコンの返却は受け取った後で3月21日まで。設定はIT担当者が手伝い、古いパソコンだけの保存では移されない。' },
     ],
   },
   {
@@ -9320,7 +9320,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '火星の昼間の空は、青く見える。', answer: false, why: '第4段落 the daytime sky there appears yellowish-brown。' },
     ],
     qa: [
-      { q: 'Why are sunsets orange and red?', choices: ['Most of the blue light has been scattered away before it reaches us.', 'The sun becomes colder in the evening.', 'Red dust in the air blocks the sunlight.', 'Our eyes cannot see blue light at night.'], answer: 0, why: '第3段落 most of the blue light has been scattered away, leaving mainly orange and red light。' },
+      { q: 'Why are sunsets orange and red?', choices: ['Low sunlight crosses more air, so most blue light is lost.', 'Red light is scattered more than blue light in air.', 'Fine red dust in the air colors the setting sun.', 'The sun gives off less blue light in the evening.'], answer: 0, why: '第3段落に、太陽が低いと光がより多くの空気を通り、届くまでに青い光の大半が散らされるとある。散乱しやすいのは赤ではなく青。赤いちりは火星の話（第4段落）で、太陽の光そのものが変わるとはない。' },
     ],
   },
   {
@@ -9391,7 +9391,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '熱があるときにふるえることもある。', answer: true, why: '第4段落 people can also shiver when they have a fever。' },
     ],
     qa: [
-      { q: 'How do babies keep warm if they cannot shiver well?', choices: ['They rely on a special kind of fat that produces heat.', 'They sleep more than adults.', 'They move their arms quickly.', 'They drink warm milk.'], answer: 0, why: '第3段落 Babies, who cannot shiver well, rely on a special kind of fat that produces heat directly。' },
+      { q: 'How do babies keep warm if they cannot shiver well?', choices: ['Their muscles tighten and relax faster than adults\'.', 'They eat more food because they feel hungry.', 'Their brains decide that the body needs a fever.', 'They use a special fat that makes heat directly.'], answer: 3, why: '第3段落に、うまくふるえられない赤ちゃんは直接熱を作る特別な脂肪にたよるとある。筋肉の動きはふるえそのもの、空腹は寒さの後の話で、熱のときのふるえは脳の誤った判断として第4段落にある。' },
     ],
   },
   {
@@ -9491,8 +9491,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '面接は会社に行って受ける。', answer: false, why: '第3段落 an online interview。オンライン面接。' },
     ],
     qa: [
-      { q: 'What must applicants send?', choices: ['A résumé, a short letter, and three examples of design work.', 'Only a résumé.', 'A letter from their university.', 'A video presentation.'], answer: 0, why: '第3段落 please send your résumé, a short letter …, and three examples of your design work。' },
-      { q: 'What will each intern do at the end of the program?', choices: ['Present a project to the whole company.', 'Take a written test.', 'Lead a weekly workshop.', 'Interview new applicants.'], answer: 0, why: '第2段落 each intern will present a project to the whole company。' },
+      { q: 'What must applicants send?', choices: ['A résumé and a project to present to the company.', 'Three design samples and a weekly report on workshops.', 'A short letter and a record of travel and lunch costs.', 'A résumé, a short letter, and three design samples.'], answer: 3, why: '第3段落に、履歴書・応募理由の短い手紙・デザイン作品3点を送るとある。発表は研修の最後、ワークショップは研修中の活動、交通費と昼食は手当の対象で、どれも応募のときに送るものではない。' },
+      { q: 'What will each intern do at the end of the program?', choices: ['Lead a weekly workshop for the senior designers.', 'Receive an offer of a full-time position.', 'Show a project they worked on to the whole company.', 'Have an online interview with the design team.'], answer: 2, why: '第2段落に、研修の最後に各研修生が会社全体にプロジェクトを発表するとある。ワークショップを率いるのは先輩デザイナー、正社員になったのは昨年の2人だけ。オンライン面接は6月初めの選考のこと。' },
     ],
   },
   {
@@ -9533,7 +9533,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '宇宙に置かれた望遠鏡は、空気によるまたたきの影響を受けにくい。', answer: true, why: '第4段落 some telescopes are placed in space, far above the air。' },
     ],
     qa: [
-      { q: 'Why do planets twinkle less than stars?', choices: ['They look like tiny disks, so the small bends in light cancel out.', 'They are much hotter than stars.', 'They are farther away than stars.', 'They have no air around them.'], answer: 0, why: '第3段落 they appear as tiny disks … The small bends in the light tend to cancel each other out。' },
+      { q: 'Why do planets twinkle less than stars?', choices: ['They are so far away that they look like points.', 'Their light does not pass through layers of air.', 'They look like small disks, so the light changes cancel out.', 'They are placed in space far above the air.'], answer: 2, why: '第3段落に、惑星は近いので点ではなく小さな円盤に見え、光の曲がりが打ち消し合うとある。遠くて点に見えるのは恒星の特徴。惑星の光も大気を通り、宇宙に置かれるのは望遠鏡（第4段落）のこと。' },
     ],
   },
   {
@@ -9562,8 +9562,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '1クラスの人数に上限はない。', answer: false, why: '第3段落 Class sizes are limited to fifteen people。' },
     ],
     qa: [
-      { q: 'Who will receive a certificate?', choices: ['Employees who attend at least 80 percent of the classes.', 'Everyone who signs up.', 'Only intermediate students.', 'Employees who pass the online test.'], answer: 0, why: '第3段落 Employees who attend at least 80 percent of the classes will receive a certificate of completion。' },
-      { q: 'How long does each course last?', choices: ['Twelve weeks.', 'Fifteen weeks.', 'Eight weeks.', 'One year.'], answer: 0, why: '第2段落 Each course lasts twelve weeks。' },
+      { q: 'Who will receive a certificate?', choices: ['Workers who go to at least 80 percent of the classes.', 'Workers who pass the short online test before class.', 'Workers who complete the form on the staff website early.', 'Workers who finish both the beginner and intermediate levels.'], answer: 0, why: '第3段落に、授業の8割以上に出席した社員が修了証をもらえるとある。オンラインテストはレベル分けのため、フォームは9月19日までの申し込み手続きで、両方のレベルを終える条件は書かれていない。' },
+      { q: 'How long does each course last?', choices: ['One hour, from 5:30 to 6:30.', 'Six weeks for each level.', 'Until the end of October.', 'Twelve weeks for each course.'], answer: 3, why: '第2段落に、各コースは12週間で初級と中級に分かれるとある。1時間は1回の授業の長さ。6週間とはどこにもなく、授業は10月に始まるので10月末までの期間でもない。' },
     ],
   },
   {
@@ -9675,7 +9675,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ほとんどのあざは、2週間ほどで自然に治る。', answer: true, why: '第4段落 Most bruises heal by themselves within about two weeks。' },
     ],
     qa: [
-      { q: 'Why does a bruise change color?', choices: ['The body breaks down a substance in the leaked blood into new substances.', 'The skin becomes thinner every day.', 'Cold weather changes the blood.', 'New blood vessels grow on the skin.'], answer: 0, why: '第3段落 As the body breaks this substance down, it turns into new substances, first a green one and then a yellow one。' },
+      { q: 'Why does a bruise change color?', choices: ['More blood leaks out from the broken vessels each day.', 'The body breaks down a substance in blood into new ones.', 'Something cold on the skin changes the blood\'s color.', 'Oxygen in the air reaches the blood through the skin.'], answer: 1, why: '第3段落に、酸素を運ぶ血液の赤い物質を体が分解し、緑、黄色の物質に変わるとある。漏れた血液は片づけられていく。冷やすのははれを減らすためで、皮膚は切れていないので空気にも触れない。' },
     ],
   },
   {
@@ -9910,7 +9910,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '紙のつつを通して見ると、大きな月はもっと大きく見える。', answer: false, why: '第4段落 the moon suddenly seems to shrink。小さく見える。' },
     ],
     qa: [
-      { q: 'According to the second paragraph, why does the low moon look big?', choices: ['Because the brain compares it with trees and buildings nearby.', 'Because it is closer to Earth.', 'Because the air makes it brighter.', 'Because photographs make it larger.'], answer: 0, why: '第2段落 Our brains compare the moon with these familiar objects and decide that it must be very large。' },
+      { q: 'According to the second paragraph, why does the low moon look big?', choices: ['The moon comes much closer to Earth near the horizon.', 'The brain judges its size against nearby trees and buildings.', 'The brain sees the sky as a flat dome.', 'Photographs show the moon larger when it is rising.'], answer: 1, why: '第2段落に、低い月は木や建物の隣に見え、脳がそれらと比べて大きいと判断するとある。距離はほとんど変わらず写真でも同じ大きさ。平らなドームは第3段落の別の説で第2段落の説明ではない。' },
     ],
   },
   {
@@ -10320,7 +10320,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ダンサーは、回りながら1つの点を見つづけるコツを使う。', answer: true, why: '第4段落 keep looking at a single point for as long as possible while they turn。' },
     ],
     qa: [
-      { q: 'What do the tiny hairs in the ear do?', choices: ['They send messages to the brain about how the head is moving.', 'They keep the ear warm.', 'They clean the liquid.', 'They help us hear music.'], answer: 0, why: '第2段落 These hairs send messages to the brain, telling it which way the head is moving。' },
+      { q: 'What do the tiny hairs in the ear do?', choices: ['They tell the brain which way the head is turning.', 'They move the liquid when you turn your head.', 'They help dancers look at a single point.', 'They keep moving for a few seconds after you stop.'], answer: 0, why: '第2段落に、液体が動いて小さな毛に触れると、毛が頭の動く方向を脳に伝えるとある。液体を動かすのは毛ではなく頭の回転。止まった後も動き続けるのは液体で、一点を見るのはダンサーの工夫。' },
     ],
   },
   {
@@ -10607,7 +10607,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '生まれた赤ちゃんのほとんどは、おとなになれる。', answer: false, why: '第3段落 only a few of them survive to become adults。' },
     ],
     qa: [
-      { q: 'What does the male seahorse do while he carries the eggs?', choices: ['He gives the babies oxygen and keeps them safe.', 'He looks for a new pouch.', 'He stops eating completely.', 'He swims to a different sea.'], answer: 0, why: '第2段落 he gives the growing babies oxygen and keeps them safe from danger。' },
+      { q: 'What does the male seahorse do while he carries the eggs?', choices: ['He puts the eggs into the female\'s pouch.', 'He prepares a new set of eggs quickly.', 'He pushes hundreds of babies out every day.', 'He gives the babies oxygen and protects them.'], answer: 3, why: '第2段落に、オスは卵を運ぶ間に酸素を与え危険から守るとある。卵を袋に入れるのはメス、新しい卵を準備するのもメス（第4段落）、赤ちゃんを押し出すのは準備ができたときだけ。' },
     ],
   },
   {
@@ -10689,7 +10689,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '日本では、免許を持つ料理人しかフグを調理できない。', answer: true, why: '第4段落 Only cooks with a special license are allowed to prepare it。' },
     ],
     qa: [
-      { q: 'What does a pufferfish do when it is in danger?', choices: ['It swallows water and becomes much bigger.', 'It swims away very fast.', 'It hides in the sand.', 'It changes its color.'], answer: 0, why: '第1段落 it quickly swallows a large amount of water and blows up into a ball。' },
+      { q: 'What does a pufferfish do when it is in danger?', choices: ['It takes in water and grows much larger.', 'It swims away quickly from bigger fish.', 'It makes a strong poison in its body.', 'It hides its sharp spines inside its body.'], answer: 0, why: '第1段落に、危険なときは大量の水を飲み込んで何倍もの大きさの球になるとある。泳ぎは遅く逃げられない、毒は自分で作らず細菌から得る（第3段落）、とげは立つので誤り。' },
     ],
   },
   {
@@ -10771,7 +10771,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'お給料のくわしいことは、添付の書類に書いてある。', answer: true, why: '第3段落 Your starting salary and other details are explained in the attached document。' },
     ],
     qa: [
-      { q: 'What should Mr. Nakamura do if he agrees with the conditions?', choices: ['Sign the last page and return it by March 20.', 'Call Ms. Gomez.', 'Visit the office on Friday.', 'Send his own design.'], answer: 0, why: '第3段落 sign the last page and return it to me by March 20。' },
+      { q: 'What should Mr. Nakamura do if he agrees with the conditions?', choices: ['Call Ms. Gomez to discuss the conditions by March 20.', 'Visit the office again for a third interview.', 'Sign the first page and return it on April 7.', 'Sign the last page and send it back by March 20.'], answer: 3, why: '第3段落に、内容に同意するなら最後のページに署名し3月20日までに返送するとある。ゴメスさんは指導役の先輩、三次面接はなく、4月7日は初出勤日なので誤り。' },
     ],
   },
   {
@@ -10812,7 +10812,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'メスは、より大きくてあざやかな尾のオスを好むことが多い。', answer: true, why: '第3段落 peahens often prefer males with larger and brighter tails。' },
     ],
     qa: [
-      { q: 'What may a big, healthy tail show?', choices: ['That the male is strong and has found plenty of food.', 'That the male can fly very fast.', 'That the male is very young.', 'That the male lives alone.'], answer: 0, why: '第3段落 A big, healthy tail may show that the male is strong and has found plenty of food。' },
+      { q: 'What may a big, healthy tail show?', choices: ['That the male can fly away from tigers easily.', 'That the female prefers plain, brown males.', 'That the male is strong and well fed.', 'That the male will live longer than others.'], answer: 2, why: '第3段落に、大きく健康な尾は力が強く食べ物を十分に見つけた証かもしれないとある。尾は重く逃げにくい（第2段落）、生存には役立たない（第4段落）、メスは明るい尾を好むので誤り。' },
     ],
   },
   {
@@ -10894,7 +10894,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'おとなのゾウガメには敵が多い。', answer: false, why: '第3段落 Adult giant tortoises have very few enemies。' },
     ],
     qa: [
-      { q: 'Why are adult giant tortoises safe from most enemies?', choices: ['Because few animals can break their thick shells.', 'Because they run very fast.', 'Because they live in the sea.', 'Because they are poisonous.'], answer: 0, why: '第3段落 few animals can break through such a thick shell。' },
+      { q: 'Why are adult giant tortoises safe from most enemies?', choices: ['Their hearts beat only a few times a minute.', 'They can repair damage to their shells quickly.', 'They live on islands where no animals hunt.', 'Few animals can get through their thick shells.'], answer: 3, why: '第3段落に、厚い甲羅を破れる動物はほとんどいないので敵が少ないとある。心拍の遅さは長生きの別の理由、修復は細胞の話（第4段落）、島に敵がいないとは書かれていない。' },
     ],
   },
   {
@@ -11017,7 +11017,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '工事のあいだ、自転車置き場も使えない。', answer: false, why: '第4段落 Bicycle parking will not be affected by the work。' },
     ],
     qa: [
-      { q: 'What should employees do with their parking receipts?', choices: ['Give them to the general affairs office by August 22.', 'Throw them away.', 'Send them to the city.', 'Show them to the bus driver.'], answer: 0, why: '第2段落 Please keep your receipts and give them to the general affairs office by August 22。' },
+      { q: 'What should employees do with their parking receipts?', choices: ['Give them to Ms. Kim at extension 214 by August 17.', 'Hand them to the general affairs office by August 22.', 'Show them at the Maple Street lot every day.', 'Keep them until the garage opens on August 17.'], answer: 1, why: '第2段落に、領収書を保管し8月22日までに総務部に渡すとある。キムさんは問い合わせ先、駐車場で毎日見せるとは書かれず、8月17日は工事の最終日なので誤り。' },
     ],
   },
   {
@@ -11058,7 +11058,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ひょうはどれもエンドウ豆より小さい。', answer: false, why: '第4段落 some grow as big as a tennis ball。' },
     ],
     qa: [
-      { q: 'How does a hailstone get bigger?', choices: ['A new layer of ice freezes around it each time it goes up and down.', 'It joins with snow on the ground.', 'It melts and freezes on the ground.', 'It is pushed by cars.'], answer: 0, why: '第3段落 Each time it goes up and down, a new layer of ice freezes around it。' },
+      { q: 'How does a hailstone get bigger?', choices: ['It gets a new layer of ice each trip up and down.', 'It joins with other hailstones in the cold wind.', 'It stays high in the cloud until it melts.', 'It grows like an onion after it hits the ground.'], answer: 0, why: '第3段落に、上下するたびに新しい氷の層がまわりに凍りつくとある。他のあられとくっつく話はなく、重くなると落ちる。玉ねぎのたとえは雲の中の層の話で、地面に落ちた後ではない。' },
     ],
   },
   {
@@ -11099,7 +11099,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '参加者は全員、ノートパソコンを買わなければならない。', answer: false, why: '第4段落 Please bring a laptop if you have one。持っていればでよい。' },
     ],
     qa: [
-      { q: 'How will places at the workshop be given?', choices: ['In the order that replies are received.', 'By drawing lots.', 'Only to managers.', 'By a short test.'], answer: 0, why: '第3段落 Places will be given in the order that replies are received。' },
+      { q: 'How will places at the workshop be given?', choices: ['To the first 20 sales managers who apply.', 'By Dr. Hart after a short presentation.', 'To everyone who replies by November 20.', 'In the order the replies arrive.'], answer: 3, why: '第3段落に、席は返信を受け取った順に与えられるとある。対象は営業部の全社員で管理職に限らず、発表は当日の内容、締め切りは11月7日で20日は開催日なので誤り。' },
     ],
   },
   {
@@ -11140,7 +11140,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '蒸発した水は、永遠になくなってしまう。', answer: false, why: '第4段落 the water is not gone forever。' },
     ],
     qa: [
-      { q: 'Why do puddles disappear more slowly on humid days?', choices: ['Because wet air cannot take in as much water vapor.', 'Because the sun is hotter.', 'Because the wind is stronger.', 'Because the ground is softer.'], answer: 0, why: '第3段落 Dry air can also take in more vapor than wet air, so puddles disappear more slowly on humid days。' },
+      { q: 'Why do puddles disappear more slowly on humid days?', choices: ['Wet air can take in less water vapor than dry air.', 'Wind carries the water vapor back into the puddle.', 'The sun warms the water less on humid days.', 'More water sinks into the soft ground on those days.'], answer: 0, why: '第3段落に、乾いた空気は湿った空気より多くの水蒸気を取りこめるとあり、湿った日は乾きにくい。風は水蒸気を運び去り、日光や地面にしみこむ話は湿度と結びつけられていない。' },
     ],
   },
   {
@@ -11304,7 +11304,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '点検のあと、パスワードを変える必要がある。', answer: true, why: '第4段落 you will be asked to change your password when you first log in。' },
     ],
     qa: [
-      { q: 'What should staff do before leaving the office on Friday?', choices: ['Save important documents to their computers.', 'Change their passwords.', 'Book a meeting room.', 'Call the IT help desk.'], answer: 0, why: '第2段落 Please save any important documents to your computer before you leave the office on Friday。' },
+      { q: 'What should staff do before leaving the office on Friday?', choices: ['Change their passwords to twelve characters.', 'Save important files onto their own computers.', 'Send all important e-mails before 10:00 P.M.', 'Call the IT help desk at extension 300.'], answer: 1, why: '第2段落に、金曜に退社する前に重要な書類をパソコンに保存するよう書かれている。パスワード変更は作業後の初回ログイン時、メールは失われない、ヘルプデスクは月曜に困ったとき。' },
     ],
   },
   {
@@ -11386,7 +11386,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '10月1日から年会費が安くなる。', answer: false, why: '第3段落 the price of a yearly membership will increase from October 1。' },
     ],
     qa: [
-      { q: 'What will Mr. Silva get if he renews before September 15?', choices: ['A discount and two free sessions with a trainer.', 'A free tennis racket.', 'A month of free membership.', 'A new locker.'], answer: 0, why: '第2段落 you will receive a 15 percent discount ... You will also get two free sessions with one of our personal trainers。' },
+      { q: 'What will Mr. Silva get if he renews before September 15?', choices: ['A free month and two sessions at the pool.', 'Two free sessions only if he renews online.', 'A 15 percent discount starting from October 1.', 'A lower yearly fee and two free trainer sessions.'], answer: 3, why: '第2段落に、9月15日前に更新すれば年会費が15％引きになり、トレーナーとの無料セッションが2回つくとある。プールやオンライン限定の条件はなく、10月1日は値上げの日。' },
     ],
   },
   {
@@ -11550,7 +11550,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '5万円をこえる注文の割引は、なくなる。', answer: false, why: '第3段落 we will continue to give you a 5 percent discount, just as before。' },
     ],
     qa: [
-      { q: 'Why are some prices going up?', choices: ['Poor summer weather made growing vegetables more expensive.', 'The company opened a new shop.', 'Delivery costs have doubled.', 'The restaurant ordered less.'], answer: 0, why: '第2段落 Because of poor weather this summer, the cost of growing vegetables has gone up。' },
+      { q: 'Why are some prices going up?', choices: ['The prices of rice and grains went up.', 'Free delivery now costs the company more money.', 'Bad summer weather raised the cost of growing vegetables.', 'Ms. Park\'s restaurant ordered more than 50,000 yen.'], answer: 2, why: '第2段落に、今夏の悪天候で野菜の栽培費が上がったため値上げするとある。米や穀物は据え置きで、無料配送の費用や5万円以上の注文は値上げの理由として書かれていない。' },
     ],
   },
   {
@@ -11632,7 +11632,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'いちばん多くリサイクルした階には、毎月ボーナスのお金が出る。', answer: false, why: '第4段落 will receive a free lunch from the company。お金ではなく昼食。' },
     ],
     qa: [
-      { q: 'What is the goal of the new program?', choices: ['To cut the amount of trash by half by the end of the year.', 'To buy new printers.', 'To build a new kitchen.', 'To stop using e-mail.'], answer: 0, why: '第1段落 The goal is to cut the amount of trash we throw away by half by the end of the year。' },
+      { q: 'What is the goal of the new program?', choices: ['To reduce the office\'s trash by half before the year ends.', 'To give a free lunch to every floor each month.', 'To stop all printing in the office by April 7.', 'To cut food waste in the kitchens by half.'], answer: 0, why: '第1段落に、年末までに捨てるごみの量を半分にするのが目標とある。昼食は最もリサイクルした階だけ、印刷は両面にするだけ、生ごみは通常のごみ箱に入れるので誤り。' },
     ],
   },
   {
@@ -11837,7 +11837,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '用紙は10月11日までに送り返す。', answer: false, why: '第4段落 send it back to me by October 3。10月11日は説明会の日。' },
     ],
     qa: [
-      { q: 'What will all volunteers receive?', choices: ['A T-shirt, a free lunch, and a gift card.', 'A free hotel room.', 'A ticket for the train.', 'Money for each hour.'], answer: 0, why: '第3段落 All volunteers will receive a festival T-shirt, a free lunch, and a 1,000-yen gift card。' },
+      { q: 'What will all volunteers receive?', choices: ['A T-shirt, a free meal, and a shop gift card.', 'A T-shirt and free English or Chinese lessons.', 'A free lunch and 1,000 yen in cash.', 'A gift card and a free festival map.'], answer: 0, why: '第3段落に、全員に祭りのTシャツ、無料の昼食、地元の店で使える千円のギフトカードとある。語学レッスンはなく、現金ではなくカード、地図は来場者に配るものなので誤り。' },
     ],
   },
   {
@@ -11960,7 +11960,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '若いオスは、一生同じ群れにいる。', answer: false, why: '第3段落 Young males leave the pride when they are two or three years old。' },
     ],
     qa: [
-      { q: 'What is the main job of the males in a pride?', choices: ['To protect the pride’s area from other males.', 'To hunt zebras.', 'To feed the cubs.', 'To find water.'], answer: 0, why: '第3段落 They protect the pride’s area from other males。' },
+      { q: 'What is the main job of the males in a pride?', choices: ['Guarding the pride\'s land against other males.', 'Hunting large animals such as zebras for the pride.', 'Feeding the cubs of the other mothers.', 'Leading young males to join another pride.'], answer: 0, why: '第3段落に、オスは他のオスから群れのなわばりを守るとある。狩りをするのはメス（第2段落）、他の子に乳を与えるのも母親（第4段落）、若いオスは自力で別の群れに加わる。' },
     ],
   },
   {
@@ -12370,7 +12370,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ノルウェーでは、クリップが団結のしるしとして使われたことがある。', answer: true, why: '第3段落 some people in Norway wore paper clips on their clothes to show that they stood together。' },
     ],
     qa: [
-      { q: 'Why did today’s shape of the paper clip become popular?', choices: ['It is easy to put on and holds papers without damaging them.', 'It is made of gold.', 'It can make holes in papers.', 'It was the first clip ever made.'], answer: 0, why: '第2段落 it is easy to slide on and it holds papers firmly without damaging them。' },
+      { q: 'Why did today’s shape of the paper clip become popular?', choices: ['It holds papers firmly by making small holes.', 'It slides on easily and holds paper without harm.', 'It was the first clip invented in Norway.', 'It was cheaper to make than pins or string.'], answer: 1, why: '第2段落に、すべらせて付けやすく、紙を傷めずにしっかりとめられるので広まったとある。穴をあけるのはピン、ノルウェーは戦時中の象徴の話、値段については書かれていない。' },
     ],
   },
   {
@@ -12534,7 +12534,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '多くの学校では、生徒も料理を配ったり片づけたりする。', answer: true, why: '第4段落 students also serve the food and clean up together。' },
     ],
     qa: [
-      { q: 'How did the first school lunch help the children?', choices: ['They could think more clearly and enjoy their lessons.', 'They could go home earlier.', 'They did not need to study.', 'They could sell the food.'], answer: 0, why: '第2段落 Children who had enough to eat could think more clearly and enjoy their lessons。' },
+      { q: 'How did the first school lunch help the children?', choices: ['They got milk and bread every day at school.', 'They learned how to serve food as a team.', 'They no longer had to bring rice balls from home.', 'They were able to think better and enjoy class.'], answer: 3, why: '第2段落に、十分食べた子どもはより明確に考え、授業を楽しめたとある。牛乳とパンは戦後、配膳やチームワークは現代の給食の話、おにぎりを家から持参したとは書かれていない。' },
     ],
   },
   {
@@ -12739,7 +12739,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今日では、手紙を運ぶのにハトはもう必要ない。', answer: true, why: '第4段落 we do not need pigeons to carry messages。' },
     ],
     qa: [
-      { q: 'Why do people keep studying homing pigeons?', choices: ['Their skill may teach us new ideas about how animals understand the world.', 'They are needed to carry messages today.', 'They can talk with people.', 'They are the fastest birds in the world.'], answer: 0, why: '第4段落 their skill may teach us new ideas about how animals understand the world。' },
+      { q: 'Why do people keep studying homing pigeons?', choices: ['They are still needed to carry messages in wars.', 'They may help us build a better compass.', 'They may show how animals understand the world.', 'They can teach us how to read maps quickly.'], answer: 2, why: '第4段落に、その能力が動物の世界の理解の仕方について新しい考えを教えてくれるかもしれないとある。今は伝書は不要で、方位磁石や地図の話は研究を続ける理由ではない。' },
     ],
   },
   {
@@ -12903,7 +12903,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '日本のある村には、人よりも人形のほうが多い。', answer: true, why: '第3段落 a village where there are more dolls than people。' },
     ],
     qa: [
-      { q: 'Why do farmers move their scarecrows from time to time?', choices: ['So that birds do not learn that the scarecrows never move.', 'So that the dolls can get some sun.', 'Because visitors want to see them.', 'Because the clothes get dirty.'], answer: 0, why: '第2段落 If a scarecrow stays in the same place ... the birds soon learn that it never moves ... So farmers move their scarecrows。' },
+      { q: 'Why do farmers move their scarecrows from time to time?', choices: ['To make shiny objects flash in the sun.', 'To stop birds from learning that they never move.', 'To bring more visitors to their mountain village.', 'To make room for the birds to eat seeds.'], answer: 1, why: '第2段落に、同じ場所に何日も置くと鳥が動かないことを学んでしまうので時々動かすとある。光る物は別の工夫、観光客は第3段落の話、鳥に種を食べさせるのは逆なので誤り。' },
     ],
   },
   {
@@ -13026,7 +13026,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今日、めがねはおしゃれの一部にもなっている。', answer: true, why: '第4段落 glasses have even become a part of fashion。' },
     ],
     qa: [
-      { q: 'What problem did people with weak eyes have long ago?', choices: ['They could not read small letters or do fine work.', 'They could not walk.', 'They could not hear well.', 'They could not eat hard food.'], answer: 0, why: '第1段落 They could no longer read small letters or do fine work such as sewing。' },
+      { q: 'What problem did people with weak eyes have long ago?', choices: ['They had to balance glass on their noses.', 'They could not read small print or sew well.', 'Their glasses fell off when they walked.', 'They could not find jobs as young workers.'], answer: 1, why: '第1段落に、年をとって目が弱ると小さな文字が読めず、縫い物などの細かい作業ができなかったとある。鼻にのせる・落ちるのはめがね登場後の話で、若い労働者の話でもない。' },
     ],
   },
   {
@@ -13108,7 +13108,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ふせんは1980年に売りはじめられた。', answer: true, why: '第4段落 The company started selling small sticky notes in 1980。' },
     ],
     qa: [
-      { q: 'Why was the weak glue good for paper markers?', choices: ['They stayed in place and could be removed without damaging the book.', 'They made the book heavier.', 'They changed the color of the pages.', 'They could not be removed at all.'], answer: 0, why: '第3段落 They stayed in place, and when he removed them, the book was not damaged。' },
+      { q: 'Why was the weak glue good for paper markers?', choices: ['The glue was very strong and never came off.', 'The markers stayed put and came off without harming the book.', 'The markers made the songbook pages stick together.', 'The glue had been designed for church songbooks.'], answer: 1, why: '第3段落に、しおりはずれずに留まり、はがしても本が傷まなかったとある。のりは強力ではなく弱いもの、ページがくっつく話はなく、もとは強いのりを作ろうとしてできたので誤り。' },
     ],
   },
   {
@@ -13231,7 +13231,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '黄色の明かりは、緑と赤のあいだに加えられた。', answer: true, why: '第3段落 a yellow light was added between green and red。' },
     ],
     qa: [
-      { q: 'Why do people in Japan call the green light "blue"?', choices: ['Because the word ao was once used for both blue and green.', 'Because the light is really blue.', 'Because blue lights are cheaper.', 'Because a law says so.'], answer: 0, why: '第4段落 This is because the Japanese word ao was once used for both blue and green。' },
+      { q: 'Why do people in Japan call the green light "blue"?', choices: ['The first lights in Japan were actually blue.', 'A blue light was added between green and red.', 'The word ao once meant both blue and green.', 'The word ao was once used only for green.'], answer: 2, why: '第4段落に、日本語の「あお」がかつて青と緑の両方に使われたからとある。最初の信号が青だったとはなく、間に加えられたのは黄色、「緑だけ」は本文の「両方」とずれる。' },
     ],
   },
   {
@@ -13354,7 +13354,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'クロスワードは、新しい言葉を学ぶのにも役立つ。', answer: true, why: '第4段落 a good way to learn new words。' },
     ],
     qa: [
-      { q: 'Why are crosswords a good way to learn new words?', choices: ['Each answer must fit both the hint and the letters around it.', 'They are always very easy.', 'They are only printed in English.', 'They give the answers first.'], answer: 0, why: '第4段落 because each answer must fit both the hint and the letters around it。' },
+      { q: 'Why are crosswords a good way to learn new words?', choices: ['Each puzzle is shaped like a diamond.', 'Each answer must fit only the hint given.', 'People solve them on trains every day.', 'Each answer has to match the hint and nearby letters.'], answer: 3, why: '第4段落に、答えはヒントとまわりの文字の両方に合わなければならないからとある。ダイヤ形は最初のパズル、「ヒントだけ」は「両方」とずれ、電車で解くのは1920年代の流行の話。' },
     ],
   },
   {
@@ -13600,7 +13600,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '像の緑色のまくは、下の金属を守っている。', answer: true, why: '第4段落 This green layer actually protects the metal underneath。' },
     ],
     qa: [
-      { q: 'What color was the statue when it was first opened?', choices: ['The color of a new copper coin.', 'Green.', 'White.', 'Black.'], answer: 0, why: '第3段落 At that time, it was the color of a new copper coin。' },
+      { q: 'What color was the statue when it was first opened?', choices: ['Like a shiny new copper coin.', 'Green, just like it is today.', 'The color of old green copper.', 'The color of the stone base.'], answer: 0, why: '第3段落に、1886年の開場時は新しい銅貨の色だったとある。緑になったのはその後約30年かけて空気と反応したためで、石の台座の色については書かれていないので誤り。' },
     ],
   },
   {
@@ -13764,7 +13764,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'その会社は、アイデアをほかの会社に無料で使わせた。', answer: true, why: '第3段落 it decided to let other car makers use the idea for free。' },
     ],
     qa: [
-      { q: 'Why did the company share its design for free?', choices: ['It believed saving lives was more important than earning money.', 'The design did not work well.', 'Other companies paid a lot for it.', 'The engineer left the company.'], answer: 0, why: '第3段落 because it believed that saving lives was more important than earning money。' },
+      { q: 'Why did the company share its design for free?', choices: ['It thought saving lives mattered more than profit.', 'It could not make money from such a simple belt.', 'Other car makers had already designed the same belt.', 'The Swedish government asked it to share the idea.'], answer: 0, why: '第3段落に、命を救うことはお金をかせぐより大切だと考えたからとある。多くのお金をもうけることもできたと書かれ、他社が同じものを作っていた・政府の要請という記述はない。' },
     ],
   },
   {
@@ -13887,7 +13887,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今では、新幹線もトンネルを走っている。', answer: true, why: '第4段落 even bullet trains run through it。' },
     ],
     qa: [
-      { q: 'Why did people start planning the tunnel?', choices: ['A ferry sank in a typhoon, and they wanted a safer way to cross.', 'Ferries were too fast.', 'The islands moved closer together.', 'People wanted to see fish under the sea.'], answer: 0, why: '第1・2段落 in 1954 a ferry sank in a typhoon ... After that accident, people began to plan a safer way to cross。' },
+      { q: 'Why did people start planning the tunnel?', choices: ['Bullet trains needed a faster way to reach Hokkaido.', 'Water often poured into the ferries in bad weather.', 'Many people died when a ferry sank in a typhoon.', 'The ferry took more than twenty years to cross.'], answer: 2, why: '第1・2段落に、1954年にフェリーが台風で沈み多くの人が亡くなった事故の後、安全な渡り方が計画されたとある。水が流れこんだのはトンネル工事、新幹線は現在の話、20年は工事期間。' },
     ],
   },
   {
@@ -13928,7 +13928,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今では、電球を使うちょうちんが多い。', answer: true, why: '第4段落 many chochin use electric bulbs instead of candles。' },
     ],
     qa: [
-      { q: 'Why was a chochin useful for travelers long ago?', choices: ['It could be folded flat and carried easily.', 'It was very heavy.', 'It used electric bulbs.', 'It could be eaten.'], answer: 0, why: '第2段落 Then it is easy to carry and store. This made it a useful light for travelers。' },
+      { q: 'Why was a chochin useful for travelers long ago?', choices: ['It folded flat, so it was easy to carry.', 'Its electric bulb was safer than a candle.', 'Its light could guide the spirits of travelers.', 'Its strong paper kept it dry in the rain.'], answer: 0, why: '第2段落に、使わないときは平らにたためるので持ち運びやしまうのが楽で、旅人に便利だったとある。電球は現代の話、霊を導くのはお盆の灯籠、雨の話は書かれていない。' },
     ],
   },
   {
@@ -14051,7 +14051,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'こまをぶつけ合う遊びでは、長く回ったほうが勝ちだ。', answer: true, why: '第4段落 The top that keeps spinning longer is the winner。' },
     ],
     qa: [
-      { q: 'Why can a spinning top stay upright?', choices: ['A spinning object tends to keep turning in the same direction.', 'It has a very wide bottom.', 'Someone holds it up.', 'It is made of light paper.'], answer: 0, why: '第2段落 a spinning object tends to keep turning in the same direction, and this helps it stay upright。' },
+      { q: 'Why can a spinning top stay upright?', choices: ['Its tiny point holds it firmly on the floor.', 'A spinning object tends to keep turning the same way.', 'It wobbles more and more as it speeds up.', 'Another top hits it and keeps it spinning.'], answer: 1, why: '第2段落に、回転する物は同じ向きに回り続けようとする性質があり、それで立っていられるとある。回さないと先端だけではすぐ倒れ、ぐらつくのは遅くなったとき、ぶつけ合いは遊びの話。' },
     ],
   },
   {
@@ -14092,7 +14092,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'コーンは、ワッフルを巻いて作られた。', answer: true, why: '第3段落 He rolled one of his waffles into a cone shape。' },
     ],
     qa: [
-      { q: 'Why did customers love the new ice cream?', choices: ['They could eat the dish as well as the dessert.', 'It was free.', 'It was very hot.', 'It came in a glass dish.'], answer: 0, why: '第3段落 Customers loved it, because they could eat the dish as well as the dessert。' },
+      { q: 'Why did customers love the new ice cream?', choices: ['The ice cream was served in cold glass dishes.', 'The waffles were sold at half the usual price.', 'They could eat the cone that held the ice cream.', 'The ice cream was mixed with honey and fruit juice.'], answer: 2, why: '第3段落に、器もデザートといっしょに食べられたので客は喜んだとある。ガラスの器は以前の出し方、値段の記述はなく、果汁やはちみつは昔の暑い国の冷たいデザートの話。' },
     ],
   },
   {
@@ -14207,9 +14207,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '一部の動物がほかの動物より少ない睡眠ですむ理由は、すでに解明されている。', answer: false, why: '第6段落 many questions remain unanswered, including why some animals appear to need far less sleep。まだわかっていない。' },
     ],
     qa: [
-      { q: 'What do the recordings made in rats suggest?', choices: ['The brain replays daytime experiences during sleep.', 'Rats learn mazes faster when they sleep less.', 'Rats dream about places they have never seen.', 'Brain activity stops completely during deep sleep.'], answer: 0, why: '第3段落 patterns … during the day have been observed to repeat … while the same animal was asleep。昼の経験を再生している。' },
-      { q: 'According to the writer, why might forgetting be useful?', choices: ['It helps the brain notice general patterns instead of being overwhelmed by details.', 'It allows people to sleep for fewer hours.', 'It prevents people from having emotional memories.', 'It makes examinations easier for students.'], answer: 0, why: '第4段落 a brain that held on to every detail … would find it much harder to notice the general patterns。' },
-      { q: 'Which piece of advice is most consistent with the passage?', choices: ['Get enough sleep after studying instead of staying up late to study more.', 'Study only in the morning and never in the evening.', 'Practice a skill once and then avoid it for several days.', 'Sleep as little as possible before an important examination.'], answer: 0, why: '第5段落 A student who studies for one hour less and sleeps for one hour more may … remember more。' },
+      { q: 'What do the recordings made in rats suggest?', choices: ['Rats learn mazes faster when they stay awake.', 'The sleeping brain switches off until morning.', 'The brain repeats the day\'s experiences during sleep.', 'Rats remember every detail of the maze forever.'], answer: 2, why: '第3段落に、昼に迷路を探索したときの脳活動のパターンが夜の睡眠中に圧縮されて繰り返されたとある。起きている方が速いとはなく、脳が止まるのは昔の見方、すべてを覚えるのは第4段落と逆。' },
+      { q: 'According to the writer, why might forgetting be useful?', choices: ['It shows that the memory system has failed.', 'It removes emotionally meaningful memories during sleep.', 'It helps the brain notice general patterns in experience.', 'It gives the brain more time to practice movements.'], answer: 2, why: '第4段落に、毎日の細部をすべて保持する脳は経験を役立てる一般的なパターンに気づきにくいとある。忘却は単なる失敗ではなく、感情的に大切な記憶はむしろ強められるので誤り。' },
+      { q: 'Which piece of advice is most consistent with the passage?', choices: ['Cut sleep before an exam to gain more study time.', 'Practice movements in your sleep to improve them.', 'Sleep an extra hour rather than studying late into the night.', 'Study less, since sleep alone creates long-term memories.'], answer: 2, why: '第5段落に、1時間勉強を減らして1時間多く眠る方が学んだことを覚えている可能性があるとある。睡眠を削るのは逆効果、睡眠中の練習はたとえ、睡眠だけで記憶ができるとは言っていない。' },
     ],
     gist: [
       { para: 2, choices: ['睡眠中に記憶が安定した形へ移されるという理論', '睡眠時間の国ごとのちがい', '迷路の作り方', '夢の内容を記録する方法'], answer: 0, why: '第3段落は How can this be explained? と問い、記憶を一時的な保管場所から安定した形へ移すという理論と、ネズミの記録による裏づけを述べている。' },
@@ -14262,8 +14262,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['How containers changed the location of port activity', 'Why city centres became more crowded', 'The design of modern apartments', 'A comparison of London and New York'], answer: 0, why: '第6段落は海運の活動が都心の港から都市のはずれへ移ったことを述べている。' },
     ],
     qa: [
-      { q: 'According to the writer, what was McLean’s most important idea?', choices: ['Designing boxes, ships, ports and land transport as one connected system.', 'Using old tankers instead of building new ships.', 'Making containers out of steel instead of wood.', 'Hiring more dock workers to load ships faster.'], answer: 0, why: '第3段落 the box, the ship, the port, and the truck or train should be designed together as a single system。' },
-      { q: 'Why did international standards matter for container shipping?', choices: ['They allowed boxes from different companies to be handled by the same equipment.', 'They made containers cheaper to paint.', 'They required ports to stay in city centres.', 'They reduced the number of ships in the world.'], answer: 0, why: '第4段落 a container belonging to one firm might not fit the cranes or ships of another … compatible across borders。' },
+      { q: 'According to the writer, what was McLean’s most important idea?', choices: ['Inventing the first metal box for carrying goods.', 'Using old tankers instead of building new ships.', 'Hiring more dock workers to load boxes quickly.', 'Planning the box, ship, port and truck as one system.'], answer: 3, why: '第3段落に、マクリーンの発想は箱そのものではなく、箱・船・港・トラックを一つのシステムとして設計することだったとある。箱は以前からあり、古いタンカーは手段で、作業員は減った。' },
+      { q: 'Why did international standards matter for container shipping?', choices: ['Boxes from any company could fit the same cranes and ships.', 'Ports could store boxes in crowded city centres.', 'Dock workers\' unions finally agreed to accept fewer jobs.', 'Each company could design its own box sizes.'], answer: 0, why: '第4段落に、会社ごとに箱の大きさが違い他社のクレーンや船に合わなかったが、国際規格で互換性が生まれたとある。組合の合意や都心での保管は書かれず、各社独自の大きさは逆。' },
     ],
   },
   {
@@ -14391,8 +14391,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['Early research into the biology of slow ageing', 'A cure for cancer in mole-rats', 'Why DNA is damaged by stress', 'The protection offered by shells'], answer: 0, why: '第6段落はゆっくり年をとるしくみの研究を紹介し、まだ初期の段階だと注意している。cure（治療法）はどこにも書かれていない。' },
     ],
     qa: [
-      { q: 'Why does the writer mention animals that live underground or in the deep sea?', choices: ['They are examples of animals protected from many outside dangers.', 'They have the highest metabolic rates of all animals.', 'They are the easiest animals to study in laboratories.', 'They show that large animals always live longest.'], answer: 0, why: '第5段落 animals that live underground or in the deep sea are similarly protected from many dangers。危険が少ないと長生きになるという進化論の例。' },
-      { q: 'What is the main point of the final paragraph?', choices: ['Studying long-lived animals has changed ideas about ageing, even if human treatments are uncertain.', 'Human lifespan will soon double because of new treatments.', 'Ageing happens in exactly the same way in every species.', 'Better food is the only reason animals live long.'], answer: 0, why: '第7段落は、人間への応用は不確かだとしたうえで Nevertheless … has changed the way scientists think about ageing とまとめている。' },
+      { q: 'Why does the writer mention animals that live underground or in the deep sea?', choices: ['To show that animals living slowly always live longer.', 'To explain why cold animals burn energy quickly.', 'To prove that their DNA is repaired more easily.', 'To give examples of animals safe from many outside dangers.'], answer: 3, why: '第5段落で、地下や深海の動物は鳥やこうもりと同じく多くの危険から守られている例として挙げられる。ゆっくり生きる説は第2段落、DNA修復は第6段落の話で、ここでの目的ではない。' },
+      { q: 'What is the main point of the final paragraph?', choices: ['Research on long-lived animals has changed views of ageing.', 'Treatments that slow human ageing will soon be available.', 'Humans live longer mainly because of changes in biology.', 'Ageing is a fixed process shared by all living things.'], answer: 0, why: '第7段落は、人間の老化を遅らせる治療は不確かだが、長寿動物の研究が老化の考え方を変えたと述べる。治療がすぐできるとは言わず、寿命の延びは食事・水・医療のおかげで、固定された過程でもない。' },
     ],
   },
   {
@@ -14425,8 +14425,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '技術の発達で、気軽な会話の機会がへっていると考える研究者がいる。', answer: true, why: '第5段落 opportunities for casual conversation are disappearing。' },
     ],
     qa: [
-      { q: 'According to the passage, why does nobody on the train start a conversation?', choices: ['Each person assumes the others want to be left alone and waits for them to speak first.', 'Talking on trains is against the rules in most cities.', 'People are too tired to speak in the morning.', 'Most passengers do not speak the same language.'], answer: 0, why: '第3段落 We assume that strangers want to be left alone … each person waits for the other to speak first, and nobody does。' },
-      { q: 'Which of the following would the writer most likely agree with?', choices: ['A short, friendly chat with a shop assistant can improve your mood.', 'People should never use phones on trains.', 'Quiet people are less happy than talkative people.', 'Technology has made people more sociable than before.'], answer: 0, why: '第4段落 small moments of connection, such as a short chat with a shop assistant … can make a real difference to how we feel。' },
+      { q: 'According to the passage, why does nobody on the train start a conversation?', choices: ['Most people on trains are too busy with their phones.', 'People who talk to strangers are often rudely rejected.', 'Each person wants quiet time and refuses to talk.', 'Each person thinks others want quiet and waits for them.'], answer: 3, why: '第3段落に、他人は放っておいてほしいと思っていると互いに考え、相手が先に話すのを待つので誰も話さないとある。乱暴に断られた人はいなかったとあり、本当に静けさが必要な人は一部だけ。' },
+      { q: 'Which of the following would the writer most likely agree with?', choices: ['Everyone should start chatting with every stranger they meet.', 'A short chat with a shop clerk can make you feel better.', 'Talking with strangers is usually awkward and ends badly.', 'Quiet time alone always makes a train ride more pleasant.'], answer: 1, why: '第4段落に、店員や近所の人との短い会話が一日の気分を大きく変えうるとある。全員と話すべきとは言っておらず、気まずく終わるのは思いこみで、一人で静かにする方が楽しいわけでもない。' },
     ],
     gist: [
       { para: 2, choices: ['人が話しかけない理由：相手の気持ちの思いちがい', '電車でのマナーの歴史', 'スマートフォンの使いすぎ', '会話を上手に終わらせる方法'], answer: 0, why: '第3段落は、相手が話したがっていることを低く見積もること、会話がうまくいかないと想像することの2つの理由をあげている。' },
@@ -14465,9 +14465,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'オフィスビルは窓が多いので、アパートに作りかえるのは簡単である。', answer: false, why: '第5段落 office buildings are often designed with deep floors and few windows。改装は簡単ではない。' },
     ],
     qa: [
-      { q: 'Why did relatively few employers encourage working from home before 2020?', choices: ['Managers doubted that people would work hard without being watched.', 'The internet was not fast enough for any kind of work.', 'Workers did not want to stay at home.', 'It was against the law in most countries.'], answer: 0, why: '第2段落 partly because managers doubted that people would work as hard without being observed。' },
-      { q: 'What does the writer mean by saying that economic life "has not disappeared but shifted"?', choices: ['Spending has moved from city centers to the areas where people live.', 'Businesses in all areas have closed.', 'People have stopped spending money altogether.', 'Office workers now spend more in the city center.'], answer: 0, why: '第4段落 moving away from the center toward the places where people actually live。' },
-      { q: 'How do some urban planners view the change?', choices: ['As a chance to make city centers more varied, for example by building homes.', 'As a disaster that will destroy all cities.', 'As a reason to build more office towers.', 'As unimportant for the future of cities.'], answer: 0, why: '第5段落 see this shift as an opportunity … empty office space could be converted into apartments … more varied and lively places。' },
+      { q: 'Why did relatively few employers encourage working from home before 2020?', choices: ['Fast internet was not yet available for most jobs.', 'Workers did not want to leave the city center.', 'Managers feared staff would not work hard unless watched.', 'Remote work had caused a serious loss of productivity.'], answer: 2, why: '第2段落に、管理職が見られていなければ同じように働かないのではと疑ったからとある。高速回線はすでに在宅勤務を可能にしており、都心の話はなく、生産性の大きな低下もなかった。' },
+      { q: 'What does the writer mean by saying that economic life "has not disappeared but shifted"?', choices: ['Small businesses in city centers have all closed down.', 'Economic activity has left cities for the countryside completely.', 'Office workers now spend more money during lunch breaks.', 'Money is now spent nearer homes than in city centers.'], answer: 3, why: '第4段落に、経済活動は消えたのではなく中心部から人が実際に住む地域へ移ったとある。閉店は一部だけで全部ではなく、都市から完全に出たわけでもなく、昼休みの消費が増えたとは書かれていない。' },
+      { q: 'How do some urban planners view the change?', choices: ['As a threat that will empty city centers forever.', 'As a chance to add homes and make centers more varied.', 'As an easy task, since offices have many windows.', 'As a reason to build more office towers downtown.'], answer: 1, why: '第5段落に、都市計画家は空いたオフィスを住宅に変え、中心部を多様でにぎやかにする機会と見ているとある。脅威ではなく機会で、オフィスは窓が少なく転用は簡単ではなく、オフィスを増やす話もない。' },
     ],
     gist: [
       { para: 3, choices: ['影響の両面：都心の店は客を失い、住宅地は活気づく', '在宅勤務の健康への影響', 'ビデオ通話のソフトの歴史', '郊外の住宅の値段'], answer: 0, why: '第4段落は The effects on cities have been mixed で始まり、都心の衰退と住宅地の活気の両面を述べている。' },
@@ -14559,9 +14559,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'マーシャルの実験のあと、抗生物質による治療はすぐにどの国でも標準になった。', answer: false, why: '第5段落 Even after this experiment, acceptance came slowly … It was only in the 1990s … that treatment with antibiotics became standard practice。' },
     ],
     qa: [
-      { q: 'Why did Marshall swallow a culture of the bacteria?', choices: ['To show that the bacteria could cause the stomach inflammation that leads to ulcers.', 'To prove that the bacteria were harmless to humans.', 'To test a new kind of antibiotic on himself.', 'To win the Nobel Prize more quickly.'], answer: 0, why: '第3段落で association alone could not prove that the bacteria caused the disease とあり、第4段落でその因果関係を自分の体で示した。' },
-      { q: 'According to the passage, which of the following was NOT a reason for the slow acceptance of the new theory?', choices: ['The bacteria could not be seen under a microscope.', 'Many doctors’ careers were based on the acid theory.', 'Drug companies profited from acid-reducing medicines.', 'A simple cure seemed too good to be true.'], answer: 0, why: '第5段落には医師のキャリア、製薬会社の利益、単純すぎるという3つの理由がある。第7段落によれば細菌は何十年も顕微鏡で見えていたので、「顕微鏡で見えなかった」は本文と合わない。' },
-      { q: 'What is the main point of the last two paragraphs?', choices: ['Scientific caution is valuable, but evidence must outweigh authority and fixed assumptions.', 'Experts are usually wrong and should not be trusted.', 'Stress is the true cause of most stomach problems.', 'Microscopes were not good enough before the 1980s.'], answer: 0, why: '第6段落 evidence, rather than authority or habit, must have the final word、第7段落 a widely shared assumption can quietly limit what researchers are willing to look for。' },
+      { q: 'Why did Marshall swallow a culture of the bacteria?', choices: ['To show that stress, not bacteria, caused ulcers.', 'To test whether antibiotics could reduce stomach acid.', 'To prove the bacteria could cause stomach inflammation leading to ulcers.', 'To grow the bacteria faster than in the laboratory.'], answer: 2, why: '第4段落に、細菌が長くストレスのせいとされた病気を起こしうるという証拠を示したとある。ストレス説を支持したのではなく、抗生物質は治療に使ったもの、培養は研究室で偶然成功していた。' },
+      { q: 'According to the passage, which of the following was NOT a reason for the slow acceptance of the new theory?', choices: ['Many doctors\' careers depended on the acid theory.', 'The bacteria could not be seen through a microscope.', 'Drug companies earned large profits from acid medicines.', 'A cure using antibiotics seemed too simple to believe.'], answer: 1, why: '第5段落には、酸説で築いた経歴、酸を抑える薬の利益、抗生物質で治るのは単純すぎるという理由が挙がる。第7段落では細菌は何十年も顕微鏡で見えていたとあり、これが理由でないもの。' },
+      { q: 'What is the main point of the last two paragraphs?', choices: ['Caution is useful, but evidence must beat authority and habit.', 'Experts are usually closed-minded and should be ignored.', 'Doctors should accept new claims without strong evidence.', 'Bacteria cannot survive in the acidic human stomach.'], answer: 0, why: '第6・7段落は、慎重さは誤った主張から医学を守るが、最後は権威や習慣ではなく証拠が決めるべきだと述べる。専門家を無視せよとは言わず、強い証拠は必要で、細菌は胃で生きられた。' },
     ],
     gist: [
       { para: 1, choices: ['この説明はあまりにも明らかに正しく思えたので、それを疑う必要があると考える研究者はほとんどいなかった。また、人間の胃の強い酸性の環境では、どんな細菌も長くは生きられないと広く思われていた。そのため、オーストラリアのパースの病理医ロビン・ウォレンが、1970年代後半から1980年代初めにかけて、胃に炎症のある患者からとった試料に、小さならせん形の細菌をくり返し観察したと報告したとき、その観察はかなり疑いの目で見られた。たいていの専門家は、その細菌は害がないか、試料の汚染によるものだと考えたのである。', 'この説明はあまりにも明らかに正しく思えたので、それを疑う研究者が数多くあらわれた。また、人間の胃の強い酸性の環境では、どんな細菌も長くは生きられないと広く思われていた。そのため、オーストラリアのパースの病理医ロビン・ウォレンが、1970年代後半から1980年代初めにかけて、胃に炎症のある患者からとった試料に、小さならせん形の細菌をくり返し観察したと報告したとき、その観察はすぐに広く受け入れられた。たいていの専門家は、その細菌は害がないか、試料の汚染によるものだと考えたのである。', 'この説明はあまりにも明らかに正しく思えたので、それを疑う必要があると考える研究者はほとんどいなかった。また、人間の胃の強い酸性の環境では、多くの細菌が生きられると広く思われていた。そのため、オーストラリアのパースの病理医ロビン・ウォレンが、1970年代後半から1980年代初めにかけて、胃に炎症のある患者からとった試料に、小さならせん形の細菌をくり返し観察したと報告したとき、その観察はかなり疑いの目で見られた。たいていの専門家は、その細菌は潰瘍の本当の原因だと考えたのである。', 'この説明はあまりにも明らかに正しく思えたので、それを疑う必要があると考える研究者はほとんどいなかった。また、人間の胃の強い酸性の環境では、どんな細菌も長くは生きられないと広く思われていた。そのため、オーストラリアのパースの病理医ロビン・ウォレンが、1990年代に入ってから、胃に炎症のある患者からとった試料に、細菌は一度も見つからなかったと報告したとき、その観察はかなり疑いの目で見られた。たいていの専門家は、その細菌は害がないか、試料の汚染によるものだと考えたのである。'], answer: 0, why: '第2段落の和訳。細菌は酸性の胃では生きられないと思われていたので、ウォレンの観察は「疑いの目で見られた」。受け入れられた・細菌が見つからなかった、などは本文と逆。' },
@@ -14600,8 +14600,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、あまり体を動かしていない人にとって、少しの運動の増加にも意味がある。', answer: true, why: '第4段落 every additional bit of movement seems to help, especially for people who are currently very inactive。' },
     ],
     qa: [
-      { q: 'What does the writer mean by saying the relationship is "gradual rather than sudden"?', choices: ['Health benefits increase little by little as people walk more.', 'People must walk exactly 10,000 steps to become healthy.', 'Walking has no effect on health until people are old.', 'The benefits of walking appear only after many years.'], answer: 0, why: '第4段落 There is no magic point … every additional bit of movement seems to help。少しずつ効果がふえるという意味。' },
-      { q: 'Which of the following best expresses the writer’s main point?', choices: ['A familiar number should not be treated as a scientific fact without knowing its origin.', 'Fitness watches give incorrect step counts.', 'Advertising should be banned in health products.', 'Everyone should walk at least 10,000 steps a day.'], answer: 0, why: '第5段落 we should be careful about treating a familiar number as a scientific fact before we know where it came from。' },
+      { q: 'What does the writer mean by saying the relationship is "gradual rather than sudden"?', choices: ['Health suddenly improves once you reach 10,000 steps.', 'Walking more than 7,500 steps can hurt your health.', 'Each extra step adds a little more health benefit.', 'Only very active people get benefits from walking.'], answer: 2, why: '第4段落に、「不健康」から「健康」に切りかわる魔法の点はなく、動いた分だけ少しずつ役立つとある。1万歩で急に変わるのは逆、7,500歩で効果は横ばいになるだけで害はなく、運動不足の人にこそ効く。' },
+      { q: 'Which of the following best expresses the writer’s main point?', choices: ['Walking 10,000 steps a day is a bad idea.', 'Check where a familiar number came from before trusting it.', 'Round numbers are useless as goals for exercise.', 'Doctors calculated 10,000 steps from careful medical research.'], answer: 1, why: '第5段落に、出どころを知らないまま身近な数字を科学的事実として扱わないよう注意すべきとある。1万歩は悪くないと第3段落にあり、丸い数字にも意欲を高める効果があり、数字は広告から生まれた。' },
     ],
     gist: [
       { para: 1, choices: ['1万歩という数字は宣伝から広まった', '東京オリンピックの競技の歴史', '歩数計のしくみ', '日本の会社の海外進出'], answer: 0, why: '第2段落は歩数計の名前から1万という数字が広まり、医学的根拠があると誤解されたことを述べている。' },
@@ -14653,8 +14653,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['A failed attempt at closure', 'A new law protecting coffeehouses', 'The king’s love of coffee', 'How rumors were checked'], answer: 0, why: '第6段落はチャールズ2世の閉鎖命令が強い反対で数日のうちに撤回されたことを述べている。' },
     ],
     qa: [
-      { q: 'Why were coffeehouses sometimes called "penny universities"?', choices: ['People could learn a lot there for very little money.', 'They were owned by universities.', 'Students had to pay a penny to enter lectures there.', 'They sold books at very low prices.'], answer: 0, why: '第3段落 places where an ordinary person could learn a great deal for very little money。' },
-      { q: 'What does the writer suggest about the scholars who "warn against romanticizing" coffeehouses?', choices: ['They think the image of coffeehouses as calm places of reasoned debate is exaggerated.', 'They believe coffeehouses had no influence at all.', 'They want modern cafés to become noisier.', 'They think coffee was harmful to health.'], answer: 0, why: '第7段落 many coffeehouses were noisy, smoky, and far from the calm centers of rational debate sometimes imagined today。' },
+      { q: 'Why were coffeehouses sometimes called "penny universities"?', choices: ['Students from universities ran most of the coffeehouses.', 'Coffee there cost one penny more than elsewhere.', 'Professors gave lessons there for very little money.', 'Customers could learn a great deal for a small fee.'], answer: 3, why: '第3段落に、わずかな料金でコーヒーを買い、新聞を読んだり議論に加わったりして多くを学べたとある。大学生が経営した、教授が授業をした、他の店より高いといった記述はないので誤り。' },
+      { q: 'What does the writer suggest about the scholars who "warn against romanticizing" coffeehouses?', choices: ['They believe coffeehouses created the modern public sphere.', 'They argue that coffeehouses spread no news at all.', 'They think the calm, rational picture of coffeehouses is exaggerated.', 'They think women were welcome in most coffeehouses.'], answer: 2, why: '第7段落に、多くはうるさく煙たく、今想像される冷静な討論の場とはかけ離れていたと指摘する学者がいるとある。公共圏を唱えたのは別の学者で、ニュースが広まったことは否定せず、女性は歓迎されなかった。' },
     ],
   },
   {
@@ -14691,9 +14691,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、この分野のすべての研究結果がくり返し確かめられていると述べている。', answer: false, why: '第7段落 some studies have proved difficult to repeat。' },
     ],
     qa: [
-      { q: 'What does the result of the color experiment suggest?', choices: ['The effect came from using language during the task, not from a permanent difference in perception.', 'Russian speakers have better eyesight than English speakers.', 'English has more color words than Russian.', 'Color perception is completely determined by language.'], answer: 0, why: '第5段落 the effect depended on the active use of language during the task rather than on any permanent difference。' },
-      { q: 'Which position does the writer support?', choices: ['Language does not limit thought, but it may influence what people habitually notice.', 'Language completely determines how people think.', 'Language has no influence on thought at all.', 'Only people who speak several languages can think clearly.'], answer: 0, why: '第6段落 a position that lies between two extremes。言語は考えをとじこめないが、注意の習慣に影響するかもしれない。' },
-      { q: 'Why does the writer mention speakers of Guugu Yimithirr?', choices: ['As an example of how a language’s way of describing space may train attention to direction.', 'To show that some languages have no words for left and right because they are simple.', 'To argue that Australian languages are older than English.', 'To prove that all people use the same frame of reference.'], answer: 0, why: '第4段落で、方角で位置を表す言語の話し手が方角を正確に把握している例として出している。' },
+      { q: 'What does the result of the color experiment suggest?', choices: ['Russian speakers\' eyes see blue differently forever.', 'English speakers are faster at telling shades apart.', 'The effect came from using language during the task.', 'The verbal task made the Russian advantage larger.'], answer: 2, why: '第5段落に、同時に言語課題をすると利点が消えたので、効果は目や脳の恒久的な違いではなく課題中の言語使用によるとある。英語話者の方が遅く、言語課題で利点は大きくならず消えた。' },
+      { q: 'Which position does the writer support?', choices: ['Language does not trap thought but shapes what people often notice.', 'Language completely decides what people are able to think.', 'Language has no effect at all on attention or memory.', 'Language limits thought only for speakers of one language.'], answer: 0, why: '第6段落で筆者は、言語は思考を閉じこめないが、ふだん注意を向ける点に影響しうるという中間の立場をとる。言語が思考を決めるのは否定された強い説で、影響が全くないとも言っていない。' },
+      { q: 'Why does the writer mention speakers of Guugu Yimithirr?', choices: ['To prove that they cannot think about left and right.', 'To show that English describes space the same way.', 'To show that their color words differ from Russian.', 'To show how a language\'s way of describing space trains attention.'], answer: 3, why: '第4段落で、方位を常に使う言語が方角への注意の習慣を育てる例として挙げられている。左右を考えられないとは言っておらず、英語は体を基準にするので違い、色の話は第5段落のロシア語。' },
     ],
     gist: [
       { para: 1, choices: ['この考えはアメリカの言語学者ベンジャミン・リー・ウォーフと結びつけて語られることが多い。彼は20世紀前半に、ある言語の文法の区分が、その話し手が現実をどう区切るかを決めると論じた。ふつう言語決定論とよばれるもっとも強い形では、この理論は、人は自分の言語に単語のない考えを考えることができないということを意味する。しかしこの結論は、今日のたいていの研究者にとって明らかにまちがいだと考えられている。人はたえず新しい単語を作り、ほかの言語から表現を借り、名前のつけ方を教わったことのない概念も理解するからである。', 'この考えはアメリカの言語学者ベンジャミン・リー・ウォーフと結びつけて語られることが多い。彼は20世紀前半に、ある言語の文法の区分が、その話し手が現実をどう区切るかを決めると論じた。ふつう言語決定論とよばれるもっとも強い形では、この理論は、人は自分の言語に単語のない考えを考えることができないということを意味する。しかしこの結論は、今日のたいていの研究者にとって正しいと広く認められている。人はたえず新しい単語を作り、ほかの言語から表現を借り、名前のつけ方を教わったことのない概念も理解するからである。', 'この考えはアメリカの言語学者ベンジャミン・リー・ウォーフと結びつけて語られることが多い。彼は19世紀後半に、ある言語の文法の区分が、その話し手が現実をどう区切るかを決めると論じた。ふつう言語決定論とよばれるもっとも強い形では、この理論は、人は自分の言語に単語のない考えを考えることができないということを意味する。しかしこの結論は、今日のたいていの研究者にとって明らかにまちがいだと考えられている。人はたえず新しい単語を作り、ほかの言語から表現を借り、名前を教わった概念しか理解できないからである。', 'この考えはアメリカの言語学者ベンジャミン・リー・ウォーフと結びつけて語られることが多い。彼は20世紀前半に、ある言語の話し手の考え方が、その言語の文法の区分を決めると論じた。ふつう言語決定論とよばれるもっとも強い形では、この理論は、人は自分の言語に単語のない考えを考えることができないということを意味する。しかしこの結論は、今日のたいていの研究者にとって明らかにまちがいだと考えられている。人はたえず新しい単語を作り、ほかの言語から表現を借り、名前のつけ方を教わったことのない概念も理解するからである。'], answer: 0, why: '第2段落の和訳。ウォーフは「文法の区分が現実の区切り方を決める」と論じたが、その強い形（言語決定論）は今日「明らかにまちがい」とされる。理由は、人が新しい語を作り、教わっていない概念も理解するから。' },
@@ -14732,8 +14732,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'コンクリートの需要がふえた一因は、都市の急速な成長である。', answer: true, why: '第2段落 As cities grow rapidly … the demand for concrete has risen enormously。' },
     ],
     qa: [
-      { q: 'Why can’t desert sand simply solve the shortage?', choices: ['Its grains are too smooth and round to hold together well in concrete.', 'Deserts are too far from cities.', 'Desert sand contains too much salt.', 'It is illegal to take sand from deserts.'], answer: 0, why: '第3段落 Grains … become smooth and round, so they do not lock together well in concrete。' },
-      { q: 'Which of the following would the writer most likely support?', choices: ['Reusing crushed concrete from old buildings in new construction.', 'Taking more sand from beaches to protect rivers.', 'Building more short-lived buildings.', 'Stopping all construction in Asia and Africa.'], answer: 0, why: '第5段落 Concrete from demolished buildings can be crushed and reused。' },
+      { q: 'Why can’t desert sand simply solve the shortage?', choices: ['Deserts are too far away from growing cities.', 'Its smooth, round grains do not lock together well.', 'Desert grains are too rough to mix into concrete.', 'Taking it from deserts damages riverbanks and wells.'], answer: 1, why: '第3段落に、風に長く吹かれた砂粒はなめらかで丸くなり、コンクリートの中でよくかみ合わないとある。距離の話はなく、粗いのは川などの砂、川岸や井戸への害は川から砂を取る場合の話。' },
+      { q: 'Which of the following would the writer most likely support?', choices: ['Taking more rough sand from beaches and the seabed.', 'Crushing old concrete and using it again in new buildings.', 'Using desert sand instead of river sand for concrete.', 'Building more roads so sand can be moved faster.'], answer: 1, why: '第5段落に、解体した建物のコンクリートを砕いて再利用する方法が挙げられている。海岸や海底の砂を取ると生き物のすみかが壊れ、砂漠の砂は建設に向かず、道路を増やす話は書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['砂漠の砂が建築に向かない理由', '砂漠の観光の人気', '風の強さを測る方法', '湖の水がへる原因'], answer: 0, why: '第3段落は、風で丸くなった砂漠の砂はコンクリートでかみ合わないことを説明している。' },
@@ -14785,8 +14785,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 6, choices: ['Conditions for long-term success', 'The cost of fences', 'Why tourism harms wildlife', 'A plan to remove all predators'], answer: 0, why: '第7段落は、地元の人々の参加と利益が成功に必要だという主張を中心に、課題と条件を述べている。' },
     ],
     qa: [
-      { q: 'What is the main difference between rewilding and earlier conservation?', choices: ['Rewilding tries to restore lost natural processes, not just protect what remains.', 'Rewilding only takes place inside national parks.', 'Rewilding requires more human control of nature.', 'Rewilding focuses only on protecting plants.'], answer: 0, why: '第1段落 it aims not simply to preserve existing ecosystems but to restore natural processes that have been lost。' },
-      { q: 'Why does the writer say the debate about Yellowstone is "not merely academic"?', choices: ['Because how the evidence is presented can affect the way other projects are judged and public trust.', 'Because scientists are paid by tourists.', 'Because the wolves may soon be removed again.', 'Because it decides which animals can live in Canada.'], answer: 0, why: '第5段落 rewilding projects elsewhere may be judged failures … overstating the evidence could damage public trust。' },
+      { q: 'What is the main difference between rewilding and earlier conservation?', choices: ['It draws boundaries around forests and wetlands to prevent damage.', 'It restores lost natural processes instead of only protecting habitats.', 'It gives humans more control over how nature recovers.', 'It focuses only on removing predators such as wolves.'], answer: 1, why: '第1段落に、従来の保護は残ったものを守るのが中心だったが、再野生化は失われた自然の働きを取り戻すことを目指すとある。境界線は従来の方法、人の管理はできるだけ少なく、捕食者は戻す。' },
+      { q: 'Why does the writer say the debate about Yellowstone is "not merely academic"?', choices: ['How the evidence is told can affect other projects and public trust.', 'Scientists have proved wolves were the single cause of change.', 'Ranchers lost many cattle and sheep to the wolves.', 'The popular story is true, so other projects will succeed.'], answer: 0, why: '第5段落に、効果が期待より小さいと他の計画が失敗とされうるし、証拠を誇張すると科学への信頼を損なうとある。オオカミは原因の一つにすぎず、家畜被害は心配として書かれるだけで、成功の保証もない。' },
     ],
   },
   {
@@ -14863,8 +14863,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、カッコウのふるまいを道徳的にまちがった選択だと考えている。', answer: false, why: '第5段落 it is better understood as a result of natural selection than as a moral choice。' },
     ],
     qa: [
-      { q: 'What does "an evolutionary arms race" refer to in the passage?', choices: ['Hosts get better at spotting cuckoo eggs, and cuckoos get better at copying host eggs.', 'Cuckoos and hosts fight over food every day.', 'Larger birds always win against smaller ones.', 'Scientists compete to study cuckoos.'], answer: 0, why: '第4段落：持ち主は見分けがうまくなり、カッコウはよりよく似た卵を産むようになる。each side’s improvements put pressure on the other。' },
-      { q: 'Why do the host parents keep feeding the cuckoo chick?', choices: ['Its loud, frequent calls make them act as if they had many hungry chicks.', 'It is their own chick.', 'The cuckoo mother pays them back with food.', 'They know it is a cuckoo but feel sorry for it.'], answer: 0, why: '第3段落 Its loud and frequent begging calls seem to persuade them that they are feeding a whole nest of hungry young。' },
+      { q: 'What does "an evolutionary arms race" refer to in the passage?', choices: ['Cuckoo chicks grow larger and push host chicks out of the nest.', 'Hosts learn to spot strange eggs while cuckoo eggs become more similar.', 'Hosts stop feeding cuckoo chicks, so cuckoos build their own nests.', 'Cuckoos remove host eggs so that the number of eggs stays the same.'], answer: 1, why: '第4段落：宿主が違う卵を見分けるようになり、カッコウはより似た卵を産むようになるという互いの改良を指す。ヒナが押し出す・卵を取り除くは第2・3段落の別の話、自分で巣を作るは本文にない。' },
+      { q: 'Why do the host parents keep feeding the cuckoo chick?', choices: ['It hatches after their own chicks and looks just like them.', 'They notice it is a cuckoo but cannot push it out.', 'Its loud, frequent calls make them feel they are feeding many chicks.', 'The cuckoo mother brings food and helps them feed it.'], answer: 2, why: '第3段落：大きく頻繁にえさをねだる声が、たくさんのヒナを育てていると思わせる。カッコウのヒナは先にかえるので「後にかえる」は逆、気づいている・母鳥が手伝うは本文にない。' },
     ],
     gist: [
       { para: 2, choices: ['カッコウのひなが巣を独りじめする', '親鳥のえさの選び方', '卵がかえるまでの日数', '巣の作り方のちがい'], answer: 0, why: '第3段落は、ひながほかの卵をおし出し、1羽で親鳥のえさを受けることを述べている。' },
@@ -14950,8 +14950,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、リサイクルだけで電子ごみの問題は解決できると考えている。', answer: false, why: '第5段落 Recycling alone, however, cannot solve the problem。' },
     ],
     qa: [
-      { q: 'Why does the writer say throwing away e-waste is "throwing away valuable materials"?', choices: ['Devices contain metals such as gold and copper that can be recovered.', 'Old phones can be sold for a high price in shops.', 'E-waste can be burned to make electricity.', 'Chargers can be used with every new device.'], answer: 0, why: '第3段落 A single smartphone contains small amounts of gold, silver, copper, and other metals。' },
-      { q: 'What does the writer suggest is the most effective long-term solution?', choices: ['Making products that last longer and are easy to repair.', 'Building more gold mines.', 'Keeping old devices at home.', 'Banning smartphones completely.'], answer: 0, why: '第5段落 the most effective solution is to make products that last longer and can be fixed easily。' },
+      { q: 'Why does the writer say throwing away e-waste is "throwing away valuable materials"?', choices: ['Old devices contain lead and mercury that can be sold at high prices.', 'Old devices contain metals like gold and copper that can be reused.', 'Recycling devices costs more money than digging new gold mines.', 'Most devices are stored in homes and never used again.'], answer: 1, why: '第2・3段落：スマホには金・銀・銅など採掘が大変な金属が含まれ、回収して再利用できる。鉛や水銀は有害物質として挙げられ売れるとは書かれていない。家にしまわれる話は理由ではない。' },
+      { q: 'What does the writer suggest is the most effective long-term solution?', choices: ['Using recycled gold and silver to make Olympic medals.', 'Recycling every device as soon as one part breaks.', 'Designing products that last longer and are easy to fix.', 'Keeping old devices safely at home in a drawer.'], answer: 2, why: '第5段落：専門家は長持ちし簡単に修理できる製品づくりが最も効果的だと言う。メダルは第4段落の一例、リサイクルだけでは解決しないとある。引き出しにしまうのは避けるべきこと。' },
     ],
     gist: [
       { para: 2, choices: ['使わなくなった電子機器は「都市鉱山」になる', '金鉱山の歴史', 'スマートフォンの値段', '森を守る方法'], answer: 0, why: '第3段落は、電子機器にふくまれる金属を取り出せることから「都市鉱山」とよばれることを説明している。' },
@@ -14991,9 +14991,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '思考実験を擁護する人たちは、それが現実の緊急事態とまったく同じだから役に立つと主張する。', answer: false, why: '第5段落 the very artificiality of the cases is what makes them useful。人工的だからこそ役に立つと主張している。' },
     ],
     qa: [
-      { q: 'What is the main difference between the lever case and the bridge case, according to the doctrine of double effect?', choices: ['In the bridge case, the stranger’s death is the means by which the five are saved.', 'In the bridge case, more people are saved.', 'In the lever case, the person acting does not know about the worker.', 'In the lever case, nobody dies at all.'], answer: 0, why: '第3段落 in the bridge case the stranger’s death is the very mechanism by which the five are saved。' },
-      { q: 'How do psychologists explain people’s different reactions to the two cases?', choices: ['A fast emotional response to physically harming someone conflicts with slower reasoning about outcomes.', 'People simply cannot count the number of lives correctly.', 'People are more afraid of bridges than of trains.', 'Most people have studied moral philosophy.'], answer: 0, why: '第4段落 two systems … A slower … favors saving the greater number, while a faster, emotional response is triggered … by the idea of physically harming someone。' },
-      { q: 'What does the writer suggest is the real value of the trolley problem?', choices: ['It makes us aware of principles we hold without realizing it.', 'It provides one correct answer for every moral question.', 'It shows that emotions should always be ignored.', 'It proves that self-driving cars are dangerous.'], answer: 0, why: '第6段落 The value of the puzzle may lie not in providing a single correct answer but in forcing us to recognize principles we hold without realizing it。' },
+      { q: 'What is the main difference between the lever case and the bridge case, according to the doctrine of double effect?', choices: ['On the bridge, more people die than in the lever case.', 'On the bridge, the stranger\'s death itself is how the five are saved.', 'In the lever case, the worker\'s death is the means of saving five.', 'In the lever case, the person pulling it cannot foresee any death.'], answer: 1, why: '第3段落：レバーでは一人の死は予見された副作用だが、橋では見知らぬ人の死そのものが五人を救う手段になる。人数は同じ、手段なのはレバー側ではなく橋側、レバー側でも死は予見されている。' },
+      { q: 'How do psychologists explain people’s different reactions to the two cases?', choices: ['A quick emotional reaction to harming someone directly conflicts with slower reasoning.', 'Slow careful reasoning makes people refuse to push the stranger off.', 'People in different cultures learn different moral rules while growing up.', 'A principle carefully reasoned out tells people which case is worse.'], answer: 0, why: '第4段落：結果を比べるゆっくりした思考と、自分の手で人を傷つけることへの速い感情的反応がぶつかると説明する。ゆっくりした思考は多数を救う側、文化差は第1段落で否定、「よく考えた原理ではない」とある。' },
+      { q: 'What does the writer suggest is the real value of the trolley problem?', choices: ['It gives one correct answer for designing self-driving cars.', 'It shows exactly how people behave in real emergencies.', 'It proves that saving five lives is always the right choice.', 'It helps us notice principles we follow without being aware of them.'], answer: 3, why: '第6段落：価値は一つの正解ではなく、気づかずに持っている原理を自覚させる点にある。「一つの正解」は否定されている。現実の行動がわかるは第5段落の批判と逆、常に五人が正しいとは述べていない。' },
     ],
     gist: [
       { para: 2, choices: ['なぜ結果がまったく同じ2つの場面が、これほどちがう判断を引き起こすのだろうか。伝統的な答えのひとつは二重結果の原則とよばれるものにもとづいている。それによれば、よいことをすることの予見された副作用として害をもたらすことは許されうるが、そのよいことを達成するための手段として人を利用することは許されない。レバーが引かれる場合、側線の作業員の死は、レバーを引く人ができればよろこんでさけたい不幸な結果である。それに対して橋の場合には、見知らぬ人の死こそが、5人が救われるしくみそのものなのである。', 'なぜ結果がまったく同じ2つの場面が、これほどちがう判断を引き起こすのだろうか。伝統的な答えのひとつは二重結果の原則とよばれるものにもとづいている。それによれば、よいことをすることの予見された副作用として害をもたらすことは許されず、そのよいことを達成するための手段として人を利用することは許される。レバーが引かれる場合、側線の作業員の死は、レバーを引く人ができればよろこんでさけたい不幸な結果である。それに対して橋の場合には、見知らぬ人の死こそが、5人が救われるしくみそのものなのである。', 'なぜ結果がまったく同じ2つの場面が、これほどちがう判断を引き起こすのだろうか。伝統的な答えのひとつは二重結果の原則とよばれるものにもとづいている。それによれば、よいことをすることの予見された副作用として害をもたらすことは許されうるが、そのよいことを達成するための手段として人を利用することは許されない。レバーが引かれる場合、側線の作業員の死は、レバーを引く人がはじめからねらっていた目的である。それに対して橋の場合には、見知らぬ人の死こそが、5人が救われるしくみそのものなのである。', 'なぜ結果がまったく同じ2つの場面が、これほどちがう判断を引き起こすのだろうか。伝統的な答えのひとつは二重結果の原則とよばれるものにもとづいている。それによれば、よいことをすることの予見された副作用として害をもたらすことは許されうるが、そのよいことを達成するための手段として人を利用することは許されない。レバーが引かれる場合、側線の作業員の死は、レバーを引く人ができればよろこんでさけたい不幸な結果である。それに対して橋の場合には、見知らぬ人の死こそが、5人が救われることとは関係のない偶然なのである。'], answer: 0, why: '第3段落の和訳。二重結果の原則は「副作用としての害は許されうるが、人を手段として使うことは許されない」。橋の場面では見知らぬ人の死が「救うしくみそのもの」になる。' },
@@ -15119,8 +15119,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、試食には店にとって何の費用もかからないと述べている。', answer: false, why: '第5段落 free samples have costs for businesses, including the products themselves and the wages of the staff。' },
     ],
     qa: [
-      { q: 'Why does the writer say a sample is "not really a gift"?', choices: ['Because it works as a kind of advertisement for the product.', 'Because customers must pay for it later.', 'Because it is too small to be useful.', 'Because shops only give samples to regular customers.'], answer: 0, why: '第2段落 a sample is not really a gift but a kind of advertisement that lets the product speak for itself。' },
-      { q: 'What advice does the writer give to shoppers?', choices: ['Be aware that a small gift can make you feel you should buy, and decide calmly.', 'Never try free samples in supermarkets.', 'Always buy a product after trying a sample.', 'Ask shops to give more free samples.'], answer: 0, why: '第5段落 Knowing that a small gift may make us feel we owe something allows us to make our decisions more calmly。' },
+      { q: 'Why does the writer say a sample is "not really a gift"?', choices: ['Shop assistants expect customers to give something back in return.', 'It works as advertising that lets the product sell itself.', 'Customers must pay for the sample after they taste it.', 'Businesses get the products for free from the makers.'], answer: 1, why: '第2段落：試食は贈り物ではなく、製品自身に語らせる一種の広告だと述べる。お返しの気持ち（返報性）は第3段落の別の説明で店員が期待するとは言っていない。試食後に払う・無料で得るは本文にない。' },
+      { q: 'What advice does the writer give to shoppers?', choices: ['Remember that small gifts can make us feel we owe something.', 'Always buy the product if you enjoyed the free sample.', 'Avoid stores that offer free samples on weekends.', 'Ask how much the free samples cost the business.'], answer: 0, why: '第5段落：小さな贈り物で借りがあると感じやすいと知っておけば、落ち着いて判断し、欲しいから買うことができる。気に入れば必ず買う・店を避ける・費用を聞くという助言はない。' },
     ],
     gist: [
       { para: 2, choices: ['もらうとお返ししたくなる心理', 'プレゼントの選び方', '店員の接客のしかた', '近所づきあいの大切さ'], answer: 0, why: '第3段落は「返報性」という心理で試食の効果を説明している。プレゼントや近所の例はその傾向の例にすぎない。' },
@@ -15160,9 +15160,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、投機のバブルはまったく害がないと結論づけている。', answer: false, why: '第6段落 None of this means that speculative bubbles are harmless。' },
     ],
     qa: [
-      { q: 'Why did Mackay’s account become widely accepted?', choices: ['It was vivid and was repeated so often that people took it as fact.', 'It was based on careful study of court records.', 'Mackay was himself a witness of the events.', 'Dutch historians officially approved it.'], answer: 0, why: '第3段落 his vivid account was repeated so often … that it came to be accepted as historical fact。' },
-      { q: 'According to Goldgar, what was the real shock of the episode?', choices: ['A cultural shock to values such as trust and the keeping of promises.', 'The loss of most of the nation’s wealth.', 'The disappearance of tulips from Europe.', 'A war with the Ottoman Empire.'], answer: 0, why: '第5段落 the real shock was cultural rather than financial … seemed to threaten the moral foundations on which commercial life depended。' },
-      { q: 'What lesson does the writer draw in the final paragraph?', choices: ['Historical examples used in arguments should be examined as carefully as the arguments themselves.', 'Speculation should be banned by law.', 'Stories about the past are never useful.', 'Flowers are a safe investment.'], answer: 0, why: '第6段落 historical examples used to illustrate economic arguments deserve the same careful scrutiny as the arguments themselves。' },
+      { q: 'Why did Mackay’s account become widely accepted?', choices: ['He studied contracts and court records from the seventeenth century.', 'He lived in the Dutch Republic and saw the collapse himself.', 'His vivid story was retold so often that people treated it as fact.', 'Pamphlets written at the time reported the events very accurately.'], answer: 2, why: '第3段落：生き生きした記述が長年くり返され史実と受け取られた。契約書や裁判記録を調べたのはゴールドガー、マッケイは1841年のスコットランドの作家、当時のパンフレットは正確な報告より強欲批判が目的。' },
+      { q: 'According to Goldgar, what was the real shock of the episode?', choices: ['Many merchants were driven into bankruptcy by tulips alone.', 'A virus suddenly destroyed most of the valuable tulip bulbs.', 'Broken promises seemed to threaten values like trust and honesty.', 'The whole nation was left in poverty when prices fell.'], answer: 2, why: '第5段落：衝撃は経済的ではなく文化的で、契約を守らない買い手が信頼や正直さという価値をおびやかした。チューリップだけで破産した例は見つからず国全体の貧困も否定、ウイルスは模様の原因の話。' },
+      { q: 'What lesson does the writer draw in the final paragraph?', choices: ['Historical examples should be checked as carefully as the arguments they support.', 'Speculative bubbles are harmless, so their lessons are mistaken.', 'Stories repeated often are usually supported by strong evidence.', 'Crowds tend to go mad whenever prices rise very quickly.'], answer: 0, why: '第6段落：くり返された話は証拠以上の権威を持ちうるので、議論に使う歴史の例も議論と同じく慎重に検討すべきだという。バブルが無害とは言っておらず、くり返しが証拠になるは逆、群衆の狂気より物語づくりの話。' },
     ],
     gist: [
       { para: 2, choices: ['しかし、そのあとに起きたことについてのよく知られたイメージの多くは、当時の記録ではなく、スコットランドの作家チャールズ・マッケイが1841年に出版した本から来ている。彼は、国全体が熱狂にとらわれ、バブルがはじけたときに貧困に取り残されたと描いた。マッケイは、暴落の直後に書かれた教訓的なパンフレットに大きくたよっていたが、その多くはできごとを正確に伝えるためではなく強欲を批判するために書かれたものだった。そして彼のあざやかな記述は、その後150年にわたって何度もくり返されたので、歴史的な事実として受け入れられるようになったのである。', 'しかし、そのあとに起きたことについてのよく知られたイメージの多くは、当時の正確な記録と、スコットランドの作家チャールズ・マッケイが1841年に出版した本から来ている。彼は、国全体が熱狂にとらわれ、バブルがはじけたときに貧困に取り残されたと描いた。マッケイは、暴落の直後に書かれた教訓的なパンフレットに大きくたよっていたが、その多くはできごとを正確に伝えるためではなく強欲を批判するために書かれたものだった。そして彼のあざやかな記述は、その後150年にわたって何度もくり返されたので、歴史的な事実として受け入れられるようになったのである。', 'しかし、そのあとに起きたことについてのよく知られたイメージの多くは、当時の記録ではなく、スコットランドの作家チャールズ・マッケイが1841年に出版した本から来ている。彼は、国全体が熱狂にとらわれ、バブルがはじけたときに貧困に取り残されたと描いた。マッケイは、暴落の直後に書かれた教訓的なパンフレットに大きくたよっていたが、その多くはできごとを正確に伝えるためではなくできごとを正確に伝えるために書かれたものだった。そして彼のあざやかな記述は、その後150年にわたって何度もくり返されたので、歴史的な事実として受け入れられるようになったのである。', 'しかし、そのあとに起きたことについてのよく知られたイメージの多くは、当時の記録ではなく、スコットランドの作家チャールズ・マッケイが1841年に出版した本から来ている。彼は、国全体が熱狂にとらわれ、バブルがはじけたときに貧困に取り残されたと描いた。マッケイは、暴落の直後に書かれた教訓的なパンフレットに大きくたよっていたが、その多くはできごとを正確に伝えるためではなく強欲を批判するために書かれたものだった。そして彼のあざやかな記述は、その後150年にわたって何度もくり返されたので、すぐにまちがいだと見ぬかれたのである。'], answer: 0, why: '第3段落の和訳。よく知られたイメージは「当時の記録ではなく」1841年のマッケイの本から来ており、そのもとのパンフレットは「強欲を批判するため」に書かれた。' },
@@ -15254,8 +15254,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 6, choices: ['Why ideas should be tested early', 'The cost of the Nobel Prize', 'How to measure income', 'Problems with savings accounts'], answer: 0, why: '第7段落は、人気の考えを証拠で早く検証することの大切さを述べている。' },
     ],
     qa: [
-      { q: 'Why were banks reluctant to lend to poor people before microcredit?', choices: ['They had no property as security, and small loans seemed too costly to process.', 'Poor people did not want to borrow money.', 'The government did not allow it.', 'Moneylenders offered lower interest rates.'], answer: 0, why: '第1段落 people who had no property to offer as security, and the cost of processing many tiny loans seemed too high。' },
-      { q: 'According to many economists, where may the greatest value of microfinance lie?', choices: ['In giving people more choice and security.', 'In making everyone rich.', 'In replacing all banks.', 'In ending all poverty quickly.'], answer: 0, why: '第6段落 its greatest value may lie not in transforming people’s incomes but in giving them more choice and security。' },
+      { q: 'Why were banks reluctant to lend to poor people before microcredit?', choices: ['Poor people had already borrowed too much from banks before.', 'Moneylenders asked the banks not to lend to poor families.', 'They had no security, and small loans seemed too costly to handle.', 'Poor people had proved unable to repay loans in the past.'], answer: 2, why: '第1段落：担保となる財産がなく、小口融資を多数処理する費用が高すぎると思われた。借りていたのは銀行ではなく高利の金貸し、金貸しが頼んだとは書かれず、返せないという思い込みは後に第3段落で否定された。' },
+      { q: 'According to many economists, where may the greatest value of microfinance lie?', choices: ['In giving families more choice and security in daily life.', 'In greatly increasing the average income of borrowers.', 'In replacing education and health care as tools against poverty.', 'In helping lenders grow into large commercial businesses.'], answer: 0, why: '第6段落：最大の価値は収入を変えることではなく選択肢と安心を与えることにあるという。平均収入の大幅な増加は第5段落で否定、教育や医療も同じく大切とあり代わりではない、商業化は価値として挙げていない。' },
     ],
   },
   {
@@ -15423,8 +15423,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['Focusing on cases and their contacts', 'Vaccinating animals first', 'Closing all national borders', 'Building more hospitals'], answer: 0, why: '第6段落は、患者を見つけてそのまわりの人にワクチンを打つリングワクチン接種の戦略を述べている。' },
     ],
     qa: [
-      { q: 'Why was Jenner’s method safer than variolation?', choices: ['Cowpox caused only a mild illness and could not spread like smallpox.', 'It did not involve any cut in the skin.', 'It was tested on many animals first.', 'It used medicine from China.'], answer: 0, why: '第4段落 Because cowpox caused only a mild illness and could not spread like smallpox, the new method was far safer than variolation。' },
-      { q: 'According to experts, what did the success against smallpox require besides an effective vaccine?', choices: ['International cooperation, careful monitoring, and community trust.', 'Only a large amount of money.', 'The closing of all schools.', 'A new kind of hospital in every village.'], answer: 0, why: '第7段落 success required not only an effective vaccine but also international cooperation, careful monitoring, and the trust of local communities。' },
+      { q: 'Why was Jenner’s method safer than variolation?', choices: ['Cowpox material came from milkmaids, who never got sick at all.', 'It used material from people with only mild smallpox cases.', 'It was tested on royal family members before ordinary people.', 'Cowpox caused only mild illness and could not spread like smallpox.'], answer: 3, why: '第4段落：牛痘は軽い病気で天然痘のように広がらないので種痘法より安全だった。軽い天然痘患者の材料を使うのは種痘法（第2段落）、王族が受けたのも種痘法（第3段落）、乳しぼりの女性が全く病気にならないとは書いていない。' },
+      { q: 'According to experts, what did the success against smallpox require besides an effective vaccine?', choices: ['Vaccinating every single person in each country at once.', 'Cooperation between countries, close monitoring, and local people\'s trust.', 'Animals that could carry the virus back to humans.', 'New roads built to reach every remote village.'], answer: 1, why: '第7段落：効果的なワクチンに加え、国際協力・注意深い監視・地域社会の信頼が必要だった。全員接種は非現実的なので輪状接種をとった、動物にひそまないことが有利だった、道のない村へは徒歩で行った。' },
     ],
   },
   {
@@ -15457,8 +15457,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'グルタミン酸に反応する舌の受容体の発見は、うま味が基本の味だという証拠になった。', answer: true, why: '第4段落 This provided strong biological evidence that umami is indeed a basic taste。' },
     ],
     qa: [
-      { q: 'Which of the following was NOT given as a reason why umami was ignored outside Japan?', choices: ['Glutamate was too expensive to study.', 'Much of the early research was written in Japanese.', 'Umami is usually tasted together with other flavors.', 'Many people did not recognize it as a separate taste.'], answer: 0, why: '第3段落の理由は、言語（日本語で発表された）と、ほかの味といっしょに感じられて気づきにくいことの2つ。費用については書かれていない。' },
-      { q: 'What lesson does the writer draw from the story of umami?', choices: ['Careful observation in everyday life can lead to scientific discoveries.', 'Japanese food is better than Western food.', 'There are only four basic tastes.', 'New ideas are always accepted quickly.'], answer: 0, why: '第5段落 good observation in everyday life … can lead to important scientific discoveries。' },
+      { q: 'Which of the following was NOT given as a reason why umami was ignored outside Japan?', choices: ['Much early research was written in Japanese.', 'Umami is often hard to notice by itself.', 'Glutamate was too expensive for scientists to study.', 'It usually comes together with other tastes in food.'], answer: 2, why: '第3段落：理由として、日本語で発表されたこと、単独では気づきにくいこと、ほかの味といっしょに感じられることが挙げられている。グルタミン酸の研究に費用がかかるという話は本文にない。' },
+      { q: 'What lesson does the writer draw from the story of umami?', choices: ['Paying attention to everyday things can lead to scientific discoveries.', 'Scientific ideas usually travel quickly between different cultures.', 'Only four basic tastes can be explained by biology.', 'Chefs discovered the fifth taste before scientists did.'], answer: 0, why: '第5段落：身近なスープの味に注意を払うような日常の観察が大発見につながるという。考えが文化の間を伝わるには時間がかかる（第1段落）、五つ目も受容体で裏づけられた、シェフが先に発見したとは書いていない。' },
     ],
     gist: [
       { para: 1, choices: ['だしの味からうま味の正体を見つけた', '海藻の育て方', '日本の料理の歴史', '調味料の売り方'], answer: 0, why: '第2段落は、池田がだしの味に疑問をもち、グルタミン酸を見つけてうま味と名づけたことを述べている。' },
@@ -15495,8 +15495,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、名前が変わったことで冥王星そのものも変わった。', answer: false, why: '第5段落 Changing the name of something does not change the object itself。' },
     ],
     qa: [
-      { q: 'Why does Pluto not meet the third condition for being a planet?', choices: ['It shares its region of space with many other icy objects.', 'It is too far from the Sun to orbit it.', 'It is not round.', 'It is smaller than the Moon.'], answer: 0, why: '第3段落 because it shares its region of space with many other icy bodies。軌道からほかの天体を取りのぞいていない。' },
-      { q: 'What is the main point of the last paragraph?', choices: ['Scientific categories are tools that can be revised as knowledge changes.', 'Pluto should be called a planet again.', 'Astronomers often make mistakes.', 'The names of planets never change.'], answer: 0, why: '第5段落 scientific categories are tools … they may need to be revised when new evidence appears。' },
+      { q: 'Why does Pluto not meet the third condition for being a planet?', choices: ['It is not large enough to have a nearly round shape.', 'It shares its area of space with many other icy bodies.', 'It does not travel around the Sun like other planets.', 'It is much smaller than the newly found object Eris.'], answer: 1, why: '第3段落：冥王星は太陽を回り、丸い形という二つの条件は満たすが、多くの氷の天体と同じ領域にあり軌道を一掃していない。エリスはほぼ同じ大きさで、ずっと小さいとは書いていない。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['Changing Pluto\'s name has also changed the object itself.', 'The 2006 decision was wrong because the public disliked it.', 'Scientific categories are human tools that can change with new evidence.', 'Pictures from a spacecraft proved Pluto is a planet again.'], answer: 2, why: '第5段落：科学の分類は知識を整理する道具で、新しい証拠で見直されうる。名前を変えても物自体は変わらないとある。人々が反対したのは第4段落の事実で決定が誤りとは言っていない、探査機で惑星に戻ってはいない。' },
     ],
     gist: [
       { para: 1, choices: ['冥王星に似た天体が見つかり問いが生まれた', '望遠鏡の作り方', '海王星の大きさ', '氷の性質'], answer: 0, why: '第2段落は、エリスなど冥王星に似た天体の発見が「どれを惑星とよぶか」という問いを生んだことを述べている。' },
@@ -15574,9 +15574,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '検索練習の効果は、成績に数えられない短い小テストでも現れる。', answer: true, why: '第5段落 The benefits of retrieval practice appear even when the quizzes are short, frequent, and do not count toward a final grade。' },
     ],
     qa: [
-      { q: 'Why can familiarity with a text be misleading?', choices: ['It makes us feel we understand the text even when we cannot explain it.', 'It makes the text harder to read a second time.', 'It causes us to forget the text immediately.', 'It makes us spend too much time on difficult words.'], answer: 0, why: '第3段落 a text that looks familiar gives us the comfortable feeling that we know it well, even when we would be unable to explain its main ideas。' },
-      { q: 'What is meant by "desirable difficulties" in the fourth paragraph?', choices: ['Efforts that feel unpleasant at first but make learning last longer.', 'Tests that are too hard for most students.', 'Problems that teachers create to punish students.', 'Subjects that students like but find difficult.'], answer: 0, why: '第4段落 the very effort which makes them unpleasant in the short run is what makes them valuable in the long run。' },
-      { q: 'Which of the following best summarizes the writer’s main point?', choices: ['The effort of recalling information is a powerful way to learn, not just to measure learning.', 'Students should stop reading textbooks altogether.', 'Examinations should be removed from schools.', 'Rereading is the most effective study method.'], answer: 0, why: '第1段落と第6段落 tests may come to be seen not only as a way of judging learning but also as one of its most powerful tools。' },
+      { q: 'Why can familiarity with a text be misleading?', choices: ['It forces us to rebuild the meaning of every word.', 'It strengthens the paths that lead to a memory.', 'It makes us feel we know a text we cannot explain.', 'It shows exactly which parts we can produce from memory.'], answer: 2, why: '第3段落：見慣れた文章はよく知っているという心地よい感覚を与えるが、実際は要点を説明できないことがある。記憶への道を強める・意味を組み立て直す・どこが思い出せるかわかるのは想起の働きで、再読ではない。' },
+      { q: 'What is meant by "desirable difficulties" in the fourth paragraph?', choices: ['Easy methods like highlighting that feel smooth and helpful.', 'High-stakes exams that create anxiety for many students.', 'Efforts that feel hard now but make learning last longer.', 'Problems so difficult that students should avoid them.'], answer: 2, why: '第4段落：短期的には不快に感じる努力そのものが、長期的には価値を生む方法のこと。マーカー引きや再読は効果が小さい方法、重要な試験の不安は第5段落の別の話、避けるべきとは言っていない。' },
+      { q: 'Which of the following best summarizes the writer’s main point?', choices: ['Recalling information is a powerful way to learn, not only to measure.', 'Rereading a passage several times is the best way to study.', 'Schools should give students many more important exams that count for grades.', 'Learning feels smooth and easy when it is working well.'], answer: 0, why: '第1・6段落：思い出そうとする行為は学習を測るだけでなく記憶そのものを強める強力な学び方だという。再読は一週間後に劣る、重要な試験を増やせとは言っていない、なめらかな学習は誤った自信を生む。' },
     ],
     gist: [
       { para: 1, choices: ['心理学者がテスト効果、あるいは検索練習とよぶこの発見は、多くの実験室での実験でも、実際の教室でも示されてきた。典型的な研究では、一方のグループの学生は文章を何度か読み、もう一方のグループは一度読んでから、本文を見ずに思い出せるかぎりのことを書き出そうとする。数分後に両グループをテストすると、単に読み返した学生のほうがわずかによい成績をとることが多いが、1週間後にテストをすると、内容を思い出す練習をしたグループのほうが、ふつうかなり多くのことを覚えている。', '心理学者がテスト効果、あるいは検索練習とよぶこの発見は、多くの実験室での実験でも、実際の教室でも示されてきた。典型的な研究では、一方のグループの学生は文章を何度か読み、もう一方のグループは一度読んでから、本文を見ずに思い出せるかぎりのことを書き出そうとする。数分後に両グループをテストすると、単に読み返した学生のほうがかなり悪い成績をとることが多いが、1週間後にテストをすると、内容を思い出す練習をしたグループのほうが、ふつうかなり多くのことを覚えている。', '心理学者がテスト効果、あるいは検索練習とよぶこの発見は、多くの実験室での実験でも、実際の教室でも示されてきた。典型的な研究では、一方のグループの学生は文章を何度か読み、もう一方のグループは一度読んでから、本文を見ずに思い出せるかぎりのことを書き出そうとする。数分後に両グループをテストすると、単に読み返した学生のほうがわずかによい成績をとることが多いが、1週間後にテストをすると、内容を思い出す練習をしたグループのほうが、ふつうかえって少ししか覚えていない。', '心理学者がテスト効果、あるいは検索練習とよぶこの発見は、多くの実験室での実験でも、実際の教室でも示されてきた。典型的な研究では、一方のグループの学生は文章を何度か読み、もう一方のグループは一度読んでから、本文を見ながら思い出せるかぎりのことを書き出そうとする。数分後に両グループをテストすると、単に読み返した学生のほうがわずかによい成績をとることが多いが、1週間後にテストをすると、内容を思い出す練習をしたグループのほうが、ふつうかなり多くのことを覚えている。'], answer: 0, why: '第2段落の和訳。数分後は読み返したグループが「わずかによい」が、1週間後は「本文を見ずに」思い出す練習をしたグループが「かなり多く」覚えている。' },
@@ -15632,8 +15632,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 6, choices: ['Why early advantages continue to matter', 'The decline of airports', 'How digital networks were invented', 'The end of city growth'], answer: 0, why: '第7段落は、今日の成長理由は複雑だが、集積によって初期の利点が今も都市の発展を形づくることを述べている。' },
     ],
     qa: [
-      { q: 'Why did many settlements develop at the lowest point where a river could be bridged?', choices: ['Traders moving in different directions had to pass through them.', 'The water there was cleaner than elsewhere.', 'It was the easiest place to build ships.', 'Enemies could not find them there.'], answer: 0, why: '第3段落 traders travelling in different directions were forced to pass through them。' },
-      { q: 'According to the final paragraph, why can some features that once attracted settlers now be dangerous?', choices: ['Low-lying coastal land is exposed to rising sea levels and flooding.', 'Rivers no longer carry any goods.', 'Hills are too expensive to build on.', 'Harbours have become too deep for ships.'], answer: 0, why: '第8段落 low-lying coastal land, now expose cities to serious risks from rising sea levels and flooding。' },
+      { q: 'Why did many settlements develop at the lowest point where a river could be bridged?', choices: ['The land there was higher and safer from floods.', 'Traders going in different directions had to travel through them.', 'Ships could unload goods safely in a deep harbour.', 'Hills and river bends protected them from enemy attacks.'], answer: 1, why: '第3段落：橋をかけられる最も下流の地点には、いろいろな方向へ行く商人が必ず通ったから。深い港は第4段落、丘や川の曲がり角による防御は第5段落の話で、高くて洪水から安全とは書かれていない。' },
+      { q: 'According to the final paragraph, why can some features that once attracted settlers now be dangerous?', choices: ['Old city walls make narrow streets hard to build on.', 'Railways passing nearby have caused many cities to decline.', 'Low coastal land is now at risk from rising seas and floods.', 'Large cities attract too many new businesses and people every year.'], answer: 2, why: '第8段落：かつて人を引きつけた低い沿岸の土地は、今は海面上昇と洪水の危険にさらされる。城壁と細い道は第5段落、鉄道に外された町の衰退は第6段落、集積は第7段落の話で危険とはされていない。' },
     ],
   },
   {
@@ -15666,8 +15666,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、水を守るためにコーヒーを飲むのをやめるべきだと主張している。', answer: false, why: '第5段落 Thinking about virtual water does not mean that we must stop eating meat or drinking coffee。' },
     ],
     qa: [
-      { q: 'Why do experts say virtual water should not be judged by numbers alone?', choices: ['The effect of using water depends on whether the region is wet or dry.', 'The numbers are always too small to matter.', 'Water cannot be measured accurately.', 'Only drinking water is important.'], answer: 0, why: '第4段落 Water used in a region where rain is plentiful has a very different effect from the same amount taken from a dry region。' },
-      { q: 'What is the main point of the last paragraph?', choices: ['Our everyday choices about food and products can help save water.', 'People should take shorter showers.', 'Countries should stop trading food.', 'Coffee uses more water than any other product.'], answer: 0, why: '第5段落 By wasting less food and choosing products with care, each of us can reduce the amount of water。' },
+      { q: 'Why do experts say virtual water should not be judged by numbers alone?', choices: ['Meat products always need less water than vegetables do in total.', 'The numbers for coffee and meat are often calculated wrongly.', 'Water taken from a dry region matters more than from a wet one.', 'Countries that import food quickly use up their own rivers and water.'], answer: 2, why: '第4段落：同じ量でも雨の多い地域と、川や地下水が減っている乾いた地域とでは影響がまったく違う。肉は野菜より多くの水を要し（第2段落）、自国の水を使うのは輸出国（第3段落）、計算の誤りの話はない。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['We must stop eating meat and drinking coffee to save water.', 'Turning off the tap is the most effective way to save water.', 'Faraway farms should use less water for our products.', 'Careful choices about food and products can help save water.'], answer: 3, why: '第5段落：食べ物をむだにせず製品を注意して選ぶ日々の選択で水を節約できる。肉やコーヒーをやめる必要はないとある。蛇口の節水はごく一部（第1段落）、遠くの農場への要求は述べていない。' },
     ],
     gist: [
       { para: 2, choices: ['食べ物の貿易は水のやりとりでもあること', '小麦と米の育て方のちがい', '雨がふるしくみ', '飲み水のきれいにし方'], answer: 0, why: '第3段落は、作物の輸入はその作物を育てた水の輸入でもあり、水の少ない国が食べ物を輸入して水を節約することを述べている。' },
@@ -15748,8 +15748,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '新しい四角いコードは、もとのしまより少ない情報しかもてない。', answer: false, why: '第5段落 These codes can hold much more information than the original stripes。' },
     ],
     qa: [
-      { q: 'According to the passage, what may be the greatest effect of barcodes?', choices: ['Stores and companies can use sales records to plan orders and deliveries.', 'Shoppers can pay without any money.', 'Products have become much more expensive.', 'Cashiers no longer need to work in stores.'], answer: 0, why: '第4段落 Because every sale is recorded automatically … They can order new goods … Factories and delivery companies use the same kind of information to plan。' },
-      { q: 'What idea do barcodes and newer square codes share?', choices: ['Turning information into a pattern a machine can read quickly.', 'Using only black and white colors.', 'Being read only in supermarkets.', 'Holding the same amount of information.'], answer: 0, why: '第5段落 they are based on the same idea: turning information into a pattern that a machine can read quickly and accurately。' },
+      { q: 'According to the passage, what may be the greatest effect of barcodes?', choices: ['Sales records help stores and companies plan orders and deliveries.', 'Cashiers can type every price into the register more quickly.', 'Shoppers can read product names with their smartphones.', 'Workers can put price labels on each item by hand.'], answer: 0, why: '第4段落：売上が自動で記録されるので、店は人気商品を知って注文でき、工場や配送会社も生産・配送を計画できる。値段を打ちこむ・手で値札を貼るのはバーコード以前、スマホで読むのは新しいコードの話。' },
+      { q: 'What idea do barcodes and newer square codes share?', choices: ['Holding much more information than the original stripes.', 'Being used mainly for tickets, payments, and menus.', 'Changing information into a pattern machines can read fast.', 'Measuring the size of black and white squares by hand.'], answer: 2, why: '第5段落：どちらも情報を機械がすばやく正確に読める模様に変えるという同じ考えに基づく。情報量が多いのも、チケットや支払いに使うのも新しいコードだけの特徴。手で測るは本文にない。' },
     ],
     gist: [
       { para: 2, choices: ['バーコードが数字を表し、機械が読み取るしくみ', 'チューインガムの作り方', 'レジの値段の決め方', 'スーパーマーケットの歴史'], answer: 0, why: '第3段落は、しまの模様が数字を表し、スキャナーとコンピューターがそれを読み取るしくみと、使われはじめたころのことを説明している。' },
@@ -15789,9 +15789,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'アインシュタインは、道案内に役立てるために相対性理論を考えた。', answer: false, why: '第6段落 Einstein did not develop his theories in order to help people find their way。' },
     ],
     qa: [
-      { q: 'How does a receiver on the ground calculate its position?', choices: ['By comparing the times of signals from several satellites.', 'By measuring the brightness of the satellites.', 'By sending its own clock to the satellites.', 'By counting how many satellites it can see.'], answer: 0, why: '第2段落 A receiver on the ground compares the times of signals from several satellites … allowing the receiver to calculate its own position。' },
-      { q: 'Why do the satellite clocks run ahead of clocks on the ground overall?', choices: ['The gain from weaker gravity is larger than the loss from high speed.', 'The satellites are closer to the Sun.', 'The clocks on the ground are broken.', 'Radio signals travel faster in space.'], answer: 0, why: '第4・5段落 速さで1日約7マイクロ秒おくれ、弱い重力で約45マイクロ秒進むので、差し引き約38マイクロ秒進む。' },
-      { q: 'What broader point does the writer draw from this example?', choices: ['It is hard to know in advance which research will become useful.', 'Basic research should be stopped.', 'Only practical research deserves money.', 'Einstein was mainly interested in technology.'], answer: 0, why: '第6段落 it is difficult to predict in advance what kinds of research will prove valuable。' },
+      { q: 'How does a receiver on the ground calculate its position?', choices: ['By measuring the speed of light with its own atomic clock.', 'By comparing when signals from several satellites arrive.', 'By receiving its exact position from a single satellite.', 'By checking the height of satellites above the Earth.'], answer: 1, why: '第2段落：受信機は複数の衛星からの信号の時刻を比べ、到着時間の差を距離に直して位置を計算する。原子時計を積むのは衛星、少なくとも4つの衛星が必要で1つでは足りず、高さを調べるとは書いていない。' },
+      { q: 'Why do the satellite clocks run ahead of clocks on the ground overall?', choices: ['Engineers set the satellite clocks ahead before launch.', 'Weaker gravity adds more time than high speed takes away.', 'Fast movement makes the satellite clocks run faster.', 'Stronger gravity in space speeds up the clocks.'], answer: 1, why: '第4・5段落：速さで1日約7マイクロ秒遅れるが、弱い重力で約45マイクロ秒進むため、合わせると進む。速い動きは時計を遅らせる、宇宙では重力が弱い、技術者は進みを補正するのであって原因ではない。' },
+      { q: 'What broader point does the writer draw from this example?', choices: ['Einstein developed his theories to help people find their way.', 'Basic research is interesting only to a few specialists.', 'Practical technology should always come before basic research.', 'It is hard to predict which research will later prove useful.'], answer: 3, why: '第6段落：すぐには役に立たないと思われた知識が不可欠になったことから、どの研究が価値を持つか前もって予測するのは難しいという。理論は道案内のためではない、専門家だけの興味というのはかつての見方。' },
     ],
     gist: [
       { para: 3, choices: ['ここで相対性理論が欠かせないものになる。特殊相対性理論によれば、観測者に対して速く動いている時計は、止まっている時計よりわずかにおそく進む。衛星は秒速数キロメートルで進むので、その時計は1日に約100万分の7秒おくれる。一方、一般相対性理論は、重力が弱いところでは時計が速く進むと予測する。衛星は地表から遠くはなれているので、この効果によって衛星の時計は1日に約100万分の45秒進む。', 'ここで相対性理論が欠かせないものになる。特殊相対性理論によれば、観測者に対して速く動いている時計は、止まっている時計よりわずかに速く進む。衛星は秒速数キロメートルで進むので、その時計は1日に約100万分の7秒おくれる。一方、一般相対性理論は、重力が弱いところでは時計が速く進むと予測する。衛星は地表から遠くはなれているので、この効果によって衛星の時計は1日に約100万分の45秒進む。', 'ここで相対性理論が欠かせないものになる。特殊相対性理論によれば、観測者に対して速く動いている時計は、止まっている時計よりわずかにおそく進む。衛星は秒速数キロメートルで進むので、その時計は1日に約100万分の7秒おくれる。一方、一般相対性理論は、重力が弱いところでは時計がおそく進むと予測する。衛星は地表から遠くはなれているので、この効果によって衛星の時計は1日に約100万分の45秒進む。', 'ここで相対性理論が欠かせないものになる。特殊相対性理論によれば、観測者に対して速く動いている時計は、止まっている時計よりわずかにおそく進む。衛星は秒速数キロメートルで進むので、その時計は1日に約100万分の7秒おくれる。一方、一般相対性理論は、重力が弱いところでは時計が速く進むと予測する。衛星は地表から遠くはなれているので、この効果によって衛星の時計は1日に約100万分の45秒おくれる。'], answer: 0, why: '第4段落の和訳。速く動く時計は「おそく」進み（1日約100万分の7秒おくれる）、重力が弱いところでは時計が「速く」進む（1日約100万分の45秒進む）。' },
@@ -15881,8 +15881,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、静的ストレッチはまったく役に立たないと述べている。', answer: false, why: '第4段落 This does not mean that static stretching is useless。' },
     ],
     qa: [
-      { q: 'When do many experts suggest doing static stretches?', choices: ['After exercise or as a separate routine.', 'Just before a race.', 'Only on the day of a competition.', 'Instead of all other training.'], answer: 0, why: '第4段落 doing static stretches after exercise or as a separate routine, rather than just before a race。' },
-      { q: 'What is the main lesson of the last paragraph?', choices: ['Understand the reasons for advice and change habits as evidence changes.', 'Always follow the advice of coaches.', 'Stop doing warm-ups before exercise.', 'Common sense is always correct.'], answer: 0, why: '第5段落 understand the reasons behind it and to adjust their routines as new evidence becomes available。' },
+      { q: 'When do many experts suggest doing static stretches?', choices: ['Just before a race, for thirty seconds or more.', 'After exercise, or as a routine of their own.', 'Before sprinting or jumping, to increase muscle power.', 'During light jogging, high knees, and leg swings.'], answer: 1, why: '第4段落：静的ストレッチは運動の後か、別の習慣として行うことを勧める。レース直前ではない。静的ストレッチは短時間筋力を下げうる（第3段落）、ジョギングなどは動的ウォームアップの例。' },
+      { q: 'What is the main lesson of the last paragraph?', choices: ['Always follow what coaches say without asking questions.', 'Never do static stretching because it is useless.', 'Common sense is usually correct about sports habits.', 'Know why advice is given, and change habits when evidence changes.'], answer: 3, why: '第5段落：助言をうのみにせず理由を理解し、新しい証拠に応じて習慣を調整せよという。考えずに従うのは逆、静的ストレッチは無用ではない（第4段落）、常識は部分的にしか正しくなかった。' },
     ],
     gist: [
       { para: 1, choices: ['ウォーミングアップで体と神経が準備されるしくみ', '心臓の病気の治し方', '筋肉の大きくし方', '体温の測り方'], answer: 0, why: '第2段落は、運動で血流と筋肉の温度が上がり、神経のはたらきも準備されるというウォーミングアップの目的を説明している。' },
@@ -15922,9 +15922,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、大気や公海のような資源にはもう使いすぎの心配はないと述べている。', answer: false, why: '第6段落 are still threatened by exactly the kind of overuse he predicted。' },
     ],
     qa: [
-      { q: 'Why, according to Hardin, would rational herders keep adding animals?', choices: ['Each herder gains from an extra animal while the cost is shared by all.', 'They did not understand the effects of overgrazing.', 'The government forced them to do so.', 'The pasture was owned by a single person.'], answer: 0, why: '第1段落 each of whom could gain by adding one more animal … while the cost of overgrazing would be shared by everyone。' },
-      { q: 'What did Ostrom find about many communities that managed shared resources?', choices: ['They avoided the tragedy by creating their own fair rules.', 'They always destroyed the resources within a few years.', 'They succeeded only after the land became private property.', 'They depended completely on government control.'], answer: 0, why: '第4段落 because they had developed their own rules for using the resource fairly。' },
-      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['The tragedy is a possibility whose outcome depends on the institutions people create.', 'Hardin’s idea has been proven completely false.', 'Only private property can protect the environment.', 'Shared resources can never be protected.'], answer: 0, why: '第6段落 the tragedy of the commons is a possibility rather than a law of nature, and that the outcome depends heavily on the institutions people create。' },
+      { q: 'Why, according to Hardin, would rational herders keep adding animals?', choices: ['They do not understand that the pasture can be destroyed.', 'Each herder gains from one more animal, but everyone shares the cost.', 'The government pays them for every extra animal they add.', 'Their own rules say that each herder must add animals.'], answer: 1, why: '第1・2段落：家畜を1頭増やす利益は自分のものだが、過放牧の損害は全員で分け合うから。悲劇は無知から起こるのではないとある。政府の支払いや増やせという規則は本文にない。' },
+      { q: 'What did Ostrom find about many communities that managed shared resources?', choices: ['They avoided the tragedy by dividing the land into private property.', 'They escaped the tragedy by making their own rules for fair use.', 'They needed strong government control to protect their forests.', 'They soon destroyed their shared resources when they were left alone.'], answer: 1, why: '第4段落：多くの共同体は私有化や政府の管理ではなく、資源を公平に使う独自のルールで悲劇を避けた。私有地への分割と政府管理はハーディンの解決策、放っておけば滅ぼすという想定はオストロムが否定した。' },
+      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Whether the tragedy happens depends greatly on the institutions people build.', 'Hardin was simply wrong, so shared resources are always safe.', 'The tragedy is a law of nature that no one can avoid.', 'Only the market or the state can protect shared resources.'], answer: 0, why: '第6段落：共有地の悲劇は自然法則ではなく可能性で、結果は人々が作る制度に大きく左右される。ハーディンが単に誤りとは言わず大気や公海はなお危険、市場も国家も完全でなくても協力は可能とある。' },
     ],
     gist: [
       { para: 3, choices: ['この前提に最も効果的に異議をとなえたのは、政治経済学者のエリノア・オストロムである。彼女は2009年、女性として初めてノーベル経済学賞を受賞した。オストロムと同僚たちは理論上のモデルにたよるのではなく、共有の森林や漁場、かんがいの仕組みを、場合によっては何世紀にもわたって管理してきた世界中の実際の地域社会を調べた。その結果、こうした集団の多くがハーディンの説明した悲劇をさけてきたことがわかった。それは私有や政府の管理のおかげではなく、資源を公平に使うための自分たち自身の規則をつくりあげてきたからだった。', 'この前提に最も効果的に異議をとなえたのは、政治経済学者のエリノア・オストロムである。彼女は2009年、女性として2人目のノーベル経済学賞を受賞した。オストロムと同僚たちは理論上のモデルにたよるのではなく、共有の森林や漁場、かんがいの仕組みを、場合によっては何世紀にもわたって管理してきた世界中の実際の地域社会を調べた。その結果、こうした集団の多くがハーディンの説明した悲劇をさけてきたことがわかった。それは私有や政府の管理のおかげではなく、資源を公平に使うための自分たち自身の規則をつくりあげてきたからだった。', 'この前提に最も効果的に異議をとなえたのは、政治経済学者のエリノア・オストロムである。彼女は2009年、女性として初めてノーベル経済学賞を受賞した。オストロムと同僚たちは理論上のモデルだけにたよって、共有の森林や漁場、かんがいの仕組みを、場合によっては何世紀にもわたって管理してきた世界中の実際の地域社会を調べた。その結果、こうした集団の多くがハーディンの説明した悲劇をさけてきたことがわかった。それは私有や政府の管理のおかげではなく、資源を公平に使うための自分たち自身の規則をつくりあげてきたからだった。', 'この前提に最も効果的に異議をとなえたのは、政治経済学者のエリノア・オストロムである。彼女は2009年、女性として初めてノーベル経済学賞を受賞した。オストロムと同僚たちは理論上のモデルにたよるのではなく、共有の森林や漁場、かんがいの仕組みを、場合によっては何世紀にもわたって管理してきた世界中の実際の地域社会を調べた。その結果、こうした集団の多くがハーディンの説明した悲劇をさけてきたことがわかった。それは私有や政府の管理のおかげであり、資源を公平に使うための自分たち自身の規則をつくりあげてきたからだった。'], answer: 0, why: '第4段落の和訳。オストロムは2009年に女性として「初めて」受賞し、理論上のモデルに「たよるのではなく」実際の地域社会を調べ、悲劇をさけたのは私有や政府の管理の「おかげではなく」自分たちの規則のためだと示した。' },
@@ -15980,8 +15980,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['Risks for some groups and for privacy', 'How to open a bank account', 'Why power cuts happen', 'The growth of online shopping'], answer: 0, why: '第6段落は、お年寄りなどが困ること、仕組みが止まる危険、プライバシーの心配という批判を述べている。' },
     ],
     qa: [
-      { q: 'What may happen when a government prints too much money?', choices: ['Prices may rise quickly and people may lose confidence in the currency.', 'Banks may stop using computers.', 'Coins may become lighter.', 'People may start using shells again.'], answer: 0, why: '第3段落 prices may rise rapidly and people may lose confidence in the currency altogether。' },
-      { q: 'According to the final paragraph, what will the future of money most likely depend on?', choices: ['Both technology and people’s trust in the institutions that manage money.', 'Only the speed of new smartphones.', 'The number of shops that accept cash.', 'The amount of metal available for coins.'], answer: 0, why: '第7段落 the outcome is likely to depend not only on technology but on the degree of trust that people place in the institutions that manage it。' },
+      { q: 'What may happen when a government prints too much money?', choices: ['Paper money may become heavier and harder to carry around.', 'The government may collect taxes and pay soldiers more easily.', 'Prices may go up fast and people may stop trusting the currency.', 'Banknotes may gain value because of the material they use.'], answer: 2, why: '第3段落：政府が紙幣を刷りすぎると物価が急に上がり、人々が通貨への信頼を失うことがある。重いのは金属、税や兵士への支払いが楽になるのは紙幣の利点（第2段落）、紙幣の価値は素材から来ない。' },
+      { q: 'According to the final paragraph, what will the future of money most likely depend on?', choices: ['Both technology and people\'s trust in the institutions managing it.', 'Only on how fast and convenient new technology becomes.', 'On whether shops decide to stop accepting cash entirely.', 'On how much gold and silver governments keep in banks.'], answer: 0, why: '第7・8段落：将来は技術だけでなく、お金を管理する制度への人々の信頼の度合いによるという。技術「だけ」ではない。現金を受け付けない店は第4段落の現状、金銀の保有量は本文にない。' },
     ],
   },
   {
@@ -16014,8 +16014,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、改まった発表ではフィラーをたくさん使うべきだと述べている。', answer: false, why: '第5段落 In a formal presentation, too many of them can make the speaker seem unsure。' },
     ],
     qa: [
-      { q: 'What did some experiments find about listeners who heard a filler before a word?', choices: ['They were better at noticing and remembering the word.', 'They forgot the word more quickly.', 'They stopped listening to the speaker.', 'They thought the speaker had finished.'], answer: 0, why: '第4段落 people who heard a filler just before a word were better at noticing and remembering that word later。' },
-      { q: 'What is the writer’s main point?', choices: ['Fillers do useful work in conversation and should be understood, not simply removed.', 'Fillers should never be used in any situation.', 'Japanese has more fillers than English.', 'Good speakers never pause.'], answer: 0, why: '第5段落 Rather than trying to remove every “um,” we might do better to understand the work these little words do。' },
+      { q: 'What did some experiments find about listeners who heard a filler before a word?', choices: ['They thought the speaker had finished talking.', 'They felt the speaker was nervous and unprepared.', 'They forgot the word because the filler distracted them.', 'They noticed the word better and remembered it later.'], answer: 3, why: '第4段落：単語の直前につなぎ言葉を聞いた人は、その単語に気づき後で覚えている割合が高かった。話し終えたと思うのは長い沈黙の場合（第3段落）、緊張の表れはよくある見方にすぎず、忘れるは逆。' },
+      { q: 'What is the writer’s main point?', choices: ['Fillers are mistakes that good speakers never make in speeches.', 'Fillers help conversation, so we should understand them, not just remove them.', 'A speech full of fillers sounds more natural and friendly.', 'Fillers are used only by children and nervous speakers.'], answer: 1, why: '第5段落：つなぎ言葉は話し手と聞き手の協力の一部なので、すべて消すより働きを理解して状況に応じて使うべきだ。単なる誤りではなく熟練者も使う（第2段落）、多すぎると自信がなく見える。' },
     ],
     gist: [
       { para: 2, choices: ['フィラーが話す番を保つ合図になること', '会話をすばやく終わらせる方法', 'だまっている時間の長さの測り方', 'スピーチの原稿の書き方'], answer: 0, why: '第3段落は、フィラーが「もう少し時間がほしい」と伝え、話し手が番を保てるようにする役割を説明している。' },
@@ -16055,9 +16055,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '人間の患者での臨床研究の結果は、はっきり一致している。', answer: false, why: '第5段落 the evidence from clinical studies in human patients is mixed。' },
     ],
     qa: [
-      { q: 'Why may a person with a developing fever shiver and feel cold?', choices: ['The brain has raised the temperature the body tries to maintain.', 'The body is losing heat faster than it produces it.', 'The person has been exercising on a hot day.', 'The medicine has lowered the temperature too much.'], answer: 0, why: '第2段落 a region of the brain … deliberately raises the temperature that the body tries to maintain, which is why … may shiver and feel cold。' },
-      { q: 'What do the animal experiments in the third paragraph suggest?', choices: ['Animals allowed to reach a higher temperature were more likely to survive infection.', 'Animals kept cool always recovered faster.', 'Fish and reptiles cannot become infected.', 'Fever is found only in mammals.'], answer: 0, why: '第3段落 such animals were more likely to survive an infection when they were allowed to reach a higher temperature。' },
-      { q: 'According to many experts, what should decisions about reducing a fever depend on?', choices: ['How uncomfortable the patient is and how high the temperature is.', 'Only whether the temperature is above normal.', 'The age of the doctor.', 'The time of day the fever began.'], answer: 0, why: '第6段落 should depend on how uncomfortable the patient is and how high the temperature has become。' },
+      { q: 'Why may a person with a developing fever shiver and feel cold?', choices: ['The body is producing heat faster than it can lose it.', 'The temperature of the body has dropped below normal.', 'Medicine taken for the fever has brought the temperature down too quickly.', 'The brain has set a higher temperature for the body to keep.'], answer: 3, why: '第2段落：発熱では脳の体温調節の部分が保とうとする温度を上げるので、体温がすでに高くても寒く感じる。熱を逃がすより速く作るのは運動時の過熱、平熱より下がる・薬で急に下がるは本文にない。' },
+      { q: 'What do the animal experiments in the third paragraph suggest?', choices: ['Animals kept cool recovered from infections more quickly.', 'Reptiles and fish produce a lot of heat when infected.', 'Fever is found only in mammals and birds.', 'Animals kept warmer were more likely to survive an infection.'], answer: 3, why: '第3段落：高い体温になることを許された動物は、冷やされた動物より感染を生き延びやすかった。冷やすほうが不利、爬虫類や魚は熱をあまり作れず暖かい場所へ移る、発熱は爬虫類・魚・昆虫にも見られる。' },
+      { q: 'According to many experts, what should decisions about reducing a fever depend on?', choices: ['How uncomfortable the patient feels and how high the temperature is.', 'Simply whether the temperature is above normal or not.', 'Whether the patient has caught a cold or the flu.', 'How long the patient\'s immune cells take to move.'], answer: 0, why: '第6段落：熱を下げるかは患者のつらさと体温の高さで決めるべきで、平熱より高いという事実だけで決めるのではない。かぜかインフルエンザか、免疫細胞の速さは判断の基準として挙げられていない。' },
     ],
     gist: [
       { para: 1, choices: ['発熱は、体が熱くなりすぎることと同じではない。暑い日にはげしい運動をすると、体は熱を逃がすよりも速く熱を生み出し、体の意思に反して体温が上がる。これに対して発熱のあいだは、温度調節器のような働きをする脳の一部が、体が保とうとする温度を意図的に引き上げている。熱が出はじめた人が、体温がすでにふだんより高いのに、ふるえて寒く感じることがあるのはそのためである。', '発熱は、体が熱くなりすぎることと同じである。暑い日にはげしい運動をすると、体は熱を逃がすよりも速く熱を生み出し、体の意思に反して体温が上がる。これに対して発熱のあいだは、温度調節器のような働きをする脳の一部が、体が保とうとする温度を意図的に引き上げている。熱が出はじめた人が、体温がすでにふだんより高いのに、ふるえて寒く感じることがあるのはそのためである。', '発熱は、体が熱くなりすぎることと同じではない。暑い日にはげしい運動をすると、体は熱を逃がすよりも速く熱を生み出し、体の意思に反して体温が上がる。これに対して発熱のあいだは、温度調節器のような働きをする脳の一部が、体が保とうとする温度を意図せずに下げてしまっている。熱が出はじめた人が、体温がすでにふだんより高いのに、ふるえて寒く感じることがあるのはそのためである。', '発熱は、体が熱くなりすぎることと同じではない。暑い日にはげしい運動をすると、体は熱を逃がすよりも速く熱を生み出し、体の意思に反して体温が上がる。これに対して発熱のあいだは、温度調節器のような働きをする脳の一部が、体が保とうとする温度を意図的に引き上げている。熱が出はじめた人が、体温がすでにふだんより高いのに、汗をかいて暑く感じることがあるのはそのためである。'], answer: 0, why: '第2段落の和訳。発熱は熱くなりすぎることと「同じではなく」、脳が保つ温度を「意図的に引き上げる」ので、熱が出はじめた人は「ふるえて寒く」感じる。' },
@@ -16111,8 +16111,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['Experience and the difference between young and old birds', 'Why birds stop migrating', 'How far birds can fly in one day', 'The colour of young birds'], answer: 0, why: '第6段落は、成鳥は経験から頭の中の地図をつくるが、若い鳥は生まれつきの方向感覚にたよることを述べている。' },
     ],
     qa: [
-      { q: 'What did the planetarium experiments suggest about night-flying birds?', choices: ['They learn the pattern of the night sky.', 'They are born with a complete map of the stars.', 'They cannot see stars at all.', 'They prefer to fly when there is no moon.'], answer: 0, why: '第3段落 suggests that they learn the pattern of the night sky rather than being born with a fixed map of it。' },
-      { q: 'Why does the writer say a compass alone is not enough for navigation?', choices: ['It shows direction but not the bird’s present location.', 'It works only during the day.', 'It is too heavy for small birds.', 'It is affected by city lights.'], answer: 0, why: '第6段落 A compass, however, only tells a bird which direction to fly; it does not tell the bird where it is。' },
+      { q: 'What did the planetarium experiments suggest about night-flying birds?', choices: ['They are born with a fixed map of the stars.', 'They learn the pattern of the night sky as they grow.', 'They follow the sun\'s position even at night.', 'They use magnetic fields instead of the stars.'], answer: 1, why: '第3段落：プラネタリウムで育てた若い鳥は固定点の周りを回る星で方角を決めたので、生まれつきの地図ではなく夜空の型を学ぶと考えられる。太陽は昼に飛ぶ鳥、磁場は第4段落の別の実験。' },
+      { q: 'Why does the writer say a compass alone is not enough for navigation?', choices: ['It tells the direction to fly but not where the bird is.', 'It works only during the day when the sun can be seen.', 'It is confused by artificial light and tall buildings in cities.', 'It is used only by young birds on their first journey.'], answer: 0, why: '第6段落：コンパスは飛ぶ方角を教えるだけで、鳥が今どこにいるかは教えない。夜には星のコンパスもある、街の光の害は第7段落の話、若い鳥は生まれつきの方向感覚に頼るとあるだけ。' },
     ],
   },
   {
@@ -16145,8 +16145,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今日、週4日労働を試している会社もある。', answer: true, why: '第5段落 some companies are experimenting with a four-day working week。' },
     ],
     qa: [
-      { q: 'Why did some business owners support giving workers more time off?', choices: ['They believed rested workers would be healthier and more productive.', 'They wanted to close their factories.', 'They had too many workers.', 'They were forced by farmers.'], answer: 0, why: '第3段落 who believed that rested workers would be healthier and more productive。' },
-      { q: 'Why did Henry Ford think a five-day week would be good for business?', choices: ['People with more free time would buy more products such as cars.', 'Factories would use less electricity.', 'Workers would not need to be paid.', 'Cars could be made more slowly.'], answer: 0, why: '第4段落 people with more free time would travel, shop … this would increase demand for products such as cars。' },
+      { q: 'Why did some business owners support giving workers more time off?', choices: ['They wanted workers to have time for religious activities on Sunday.', 'They hoped workers would spend free Saturdays buying their cars.', 'They had to follow new laws that shortened working hours.', 'They thought workers with more rest would be healthier and work better.'], answer: 3, why: '第3段落：一部の経営者は、休んだ労働者のほうが健康で生産性が高いと考えた。宗教活動の日は第2段落の伝統、車を買うのはフォードの考え（第4段落）、法律で決まったとは書かれていない。' },
+      { q: 'Why did Henry Ford think a five-day week would be good for business?', choices: ['Workers would produce more cars if they worked fewer hours.', 'Lower pay for a shorter week would reduce his costs.', 'Other companies had already started a five-day week.', 'Workers with more free time would buy more goods like cars.'], answer: 3, why: '第4段落：自由時間が増えれば人は旅行や買い物をし、車などの需要が増えると考えた。賃金は下げていない、他社はフォードの後に続いた、短い時間で多く作るとは書かれていない。' },
     ],
     gist: [
       { para: 1, choices: ['農民や工場労働者には休みがほとんどなかったこと', '宗教の歴史', '動物の育て方', '工場の建て方'], answer: 0, why: '第2段落は、伝統的な社会でも工場の時代でも、人々には休む時間がほとんどなかったことを述べている。' },
@@ -16186,9 +16186,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、二言語を話す価値は実験室のテストの結果だけで決まると述べている。', answer: false, why: '第6段落 the value of speaking more than one language does not depend on it。' },
     ],
     qa: [
-      { q: 'Why did researchers think bilingualism might strengthen executive control?', choices: ['Bilinguals must constantly manage two languages and stop one from interfering.', 'Bilinguals sleep longer than monolinguals.', 'Bilinguals study harder at school.', 'Bilinguals use only one language at home.'], answer: 0, why: '第2段落 because bilingual people must constantly manage two languages and prevent the one they are not using from interfering。' },
-      { q: 'What is one possible reason given for the earlier positive findings?', choices: ['Journals tend to publish surprising results more readily than studies that find no effect.', 'The tests were too easy for monolinguals.', 'Only adults were studied.', 'The researchers did not speak a second language.'], answer: 0, why: '第4段落 the tendency of scientific journals to publish surprising results more readily than studies that find no effect at all。' },
-      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Learning another language is valuable regardless of any cognitive advantage.', 'Bilingualism clearly makes everyone smarter.', 'Children should learn only one language.', 'Laboratory tests are the best way to judge language learning.'], answer: 0, why: '第6段落 These benefits are real whether or not bilingualism also improves performance on laboratory tests。' },
+      { q: 'Why did researchers think bilingualism might strengthen executive control?', choices: ['They learn their second language at a very early age.', 'They usually come from richer social and economic family backgrounds.', 'They are tested in a language they know well.', 'They always manage two languages and keep the unused one from interfering.'], answer: 3, why: '第2段落：二言語話者は常に二つの言語を管理し、使っていない方が邪魔しないよう抑えるので、絶えず頭の訓練を受けると考えた。家庭環境やテストの言語は第1段落の初期研究の欠点、習得年齢は第5段落の話。' },
+      { q: 'What is one possible reason given for the earlier positive findings?', choices: ['Journals publish surprising results more easily than studies finding no effect.', 'Large studies with thousands of people found clear differences.', 'Researchers tested children in languages they did not know well.', 'Bilinguals were treated as many separate groups in studies.'], answer: 0, why: '第4段落：学術誌は意外な結果を、効果なしの研究より掲載しやすい傾向がある。大規模研究は一貫した差を見つけられなかった、知らない言語でのテストは第1段落の否定的研究の欠点、二言語話者は一つの集団として扱われた。' },
+      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Bilingualism has clearly been proved to delay dementia and improve test scores.', 'Children should not learn two languages until they are older.', 'Learning another language is worth it whether or not it sharpens the mind.', 'The debate about cognitive effects has now been finally settled.'], answer: 2, why: '第6段落：認知面の利点の結論にかかわらず、意思疎通や文化理解、家族の歴史とのつながりなど言語を学ぶ価値は本物だという。認知症の遅れは一部の研究の主張にすぎず、議論はまだ決着していない。' },
     ],
     gist: [
       { para: 1, choices: ['20世紀の終わりまでに、その状況は大きく変わった。影響力のあるいくつかの研究が、二言語を使う子どもは、まぎらわしい情報を無視したり、ちがう規則のあいだですばやく切りかえたりすることを求める特定の課題で、一つの言語しか使わない子どもよりもよい成績をとると報告したのである。研究者たちは、二言語を使う人は2つの言語をたえず管理し、使っていないほうの言語がじゃまをしないようにしなければならないので、心理学者が実行制御とよぶ働きを強める、一種の絶え間ない頭の訓練を受けているのだと考えた。実行制御とは、計画を立て、注意を集中させ、気をちらすものに負けないようにすることを可能にする、一連の心の働きのことである。', '20世紀の終わりまでに、その状況は大きく変わった。影響力のあるいくつかの研究が、二言語を使う子どもは、まぎらわしい情報を無視したり、ちがう規則のあいだですばやく切りかえたりすることを求める特定の課題で、一つの言語しか使わない子どもよりも悪い成績をとると報告したのである。研究者たちは、二言語を使う人は2つの言語をたえず管理し、使っていないほうの言語がじゃまをしないようにしなければならないので、心理学者が実行制御とよぶ働きを強める、一種の絶え間ない頭の訓練を受けているのだと考えた。実行制御とは、計画を立て、注意を集中させ、気をちらすものに負けないようにすることを可能にする、一連の心の働きのことである。', '20世紀の終わりまでに、その状況は大きく変わった。影響力のあるいくつかの研究が、二言語を使う子どもは、まぎらわしい情報を無視したり、ちがう規則のあいだですばやく切りかえたりすることを求める特定の課題で、一つの言語しか使わない子どもよりもよい成績をとると報告したのである。研究者たちは、二言語を使う人は2つの言語をたえず管理し、使っていないほうの言語を自由にまぜて使うようにしなければならないので、心理学者が実行制御とよぶ働きを強める、一種の絶え間ない頭の訓練を受けているのだと考えた。実行制御とは、計画を立て、注意を集中させ、気をちらすものに負けないようにすることを可能にする、一連の心の働きのことである。', '20世紀の終わりまでに、その状況は大きく変わった。影響力のあるいくつかの研究が、二言語を使う子どもは、まぎらわしい情報を無視したり、ちがう規則のあいだですばやく切りかえたりすることを求める特定の課題で、一つの言語しか使わない子どもよりもよい成績をとると報告したのである。研究者たちは、二言語を使う人は2つの言語をたえず管理し、使っていないほうの言語がじゃまをしないようにしなければならないので、心理学者が実行制御とよぶ働きを弱める、一種の絶え間ない頭の訓練を受けているのだと考えた。実行制御とは、計画を立て、注意を集中させ、気をちらすものに負けないようにすることを可能にする、一連の心の働きのことである。'], answer: 0, why: '第2段落の和訳。二言語を使う子どもは特定の課題で「よい」成績をとり、使っていない言語が「じゃまをしないように」管理することが実行制御を「強める」と考えられた。' },
@@ -16278,8 +16278,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '切れない包丁を使うと、涙が出にくくなる。', answer: false, why: '第5段落 Using a very sharp knife also helps, because it breaks fewer cells than a dull one。' },
     ],
     qa: [
-      { q: 'Why does cooling an onion before cutting it help?', choices: ['It slows down the chemical reactions, so less gas is produced.', 'It makes the onion taste sweeter.', 'It makes the cells larger.', 'It removes the sulfur from the onion.'], answer: 0, why: '第5段落 Cooling an onion … slows down the chemical reactions, so less gas is produced。' },
-      { q: 'What is the main purpose of the chemical reaction for the onion?', choices: ['To protect itself from animals that might eat it.', 'To help it grow faster.', 'To attract insects.', 'To keep its cells warm.'], answer: 0, why: '第1・4段落 a clever chemical defense … to protect themselves from animals。' },
+      { q: 'Why does cooling an onion before cutting it help?', choices: ['It keeps the substances and enzymes mixed inside the cells.', 'It makes the onion harder, so a sharp knife breaks fewer cells.', 'It moves the gas away from the cook\'s face.', 'It makes the chemical reactions slower, so less gas comes out.'], answer: 3, why: '第5段落：冷やすと化学反応が遅くなり、出るガスが減る。細胞を壊す数が少ないのは鋭い包丁の効果、ガスを顔から遠ざけるのは扇風機や窓、物質と酵素は丸ごとのときは分かれている。' },
+      { q: 'What is the main purpose of the chemical reaction for the onion?', choices: ['To help the onion cells grow faster and larger.', 'To protect the eyes of animals from harmful gas.', 'To give the onion a strong taste like garlic.', 'To keep away animals that might try to eat it.'], answer: 3, why: '第1・4段落：この化学反応は、タマネギを食べようとする動物から身を守るための防御。ニンニクの強い味は他の植物の例、涙で目を守るのは人の体の反応で、細胞の成長を助けるとは書いていない。' },
     ],
     gist: [
       { para: 2, choices: ['気体が目を刺激し、涙が出るしくみ', 'まな板の洗い方', '神経の病気', '空気のよごれ'], answer: 0, why: '第3段落は、化学反応でできた気体が目の神経を刺激し、体が涙で洗い流そうとするしくみを説明している。' },
@@ -16321,9 +16321,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、ウェゲナーを批判した人々はまったくまちがっていたと述べている。', answer: false, why: '第7段落 Wegener’s critics were right to demand a mechanism。' },
     ],
     qa: [
-      { q: 'What was the main objection to Wegener’s theory?', choices: ['He could not explain how solid continents could move.', 'He had no evidence from fossils.', 'He said the continents had never been joined.', 'He refused to publish his ideas.'], answer: 0, why: '第3段落 he could not offer a convincing explanation of how continents … could possibly move。' },
-      { q: 'What did the study of the ocean floor reveal?', choices: ['New crust appeared to be forming at an underwater mountain chain and moving outward.', 'The ocean floor was completely flat.', 'The continents were sinking into the sea.', 'Magnetism did not exist under the oceans.'], answer: 0, why: '第5段落 as if new crust were being formed at the centre and slowly pushed outward。' },
-      { q: 'Which statement best expresses the writer’s view of the episode?', choices: ['Scientific progress depends on bold ideas and on new methods of observation.', 'Experts always reject new ideas without reason.', 'Wegener’s theory was completely wrong.', 'Evidence is never needed to accept a theory.'], answer: 0, why: '第7段落 scientific progress often depends not only on bold ideas but also on the development of new methods of observation。' },
+      { q: 'What was the main objection to Wegener’s theory?', choices: ['The coastlines of the continents did not fit together well.', 'Fossils of the same animals were found only on one continent.', 'He had collected too little evidence from different fields.', 'He could not show how solid continents were able to move.'], answer: 3, why: '第3段落：主な反対理由は、固い岩でできた大陸がどう動くのか説得力ある説明ができなかったこと。海岸線はよく合い、同じ化石は離れた大陸で見つかり、証拠は多くの種類が集められていた（第2段落）。' },
+      { q: 'What did the study of the ocean floor reveal?', choices: ['The plates move about as fast as human fingernails grow.', 'Ancient glaciers once covered regions that are hot today.', 'The ocean floor was much older than the continents.', 'New crust seemed to form at an undersea mountain chain and spread.'], answer: 3, why: '第5段落：大西洋中央の海底山脈の両側の岩が同じ磁気模様を示し、中央で新しい地殻ができ外へ押し出されていると考えられた。爪の速さは後の衛星観測、氷河の跡はウェゲナーの証拠、海底が古いとは書いていない。' },
+      { q: 'Which statement best expresses the writer’s view of the episode?', choices: ['Progress needs both bold ideas and new ways of observing.', 'A brilliant individual was simply ignored by narrow-minded experts.', 'Wegener\'s critics were wrong to ask him for a mechanism.', 'A theory should be rejected until all evidence is available.'], answer: 0, why: '第7段落：科学の進歩は大胆な考えだけでなく新しい観測方法の発達にもよる。天才が無視された単純な話ではないとあり、批判者が仕組みを求めたのは正しかった。証拠がそろうまで退けよとは言っていない。' },
     ],
     gist: [
       { para: 2, choices: ['このように印象的な証拠を集めたにもかかわらず、当時のほとんどの地質学者はウェゲナーの理論をしりぞけ、中にはかなりの敵意をもってそうした人もいた。主な反対の理由は、かたい岩でできた大陸がどのようにして地球の表面を動くことができるのかについて、彼が納得のいく説明を示せなかったことである。彼が提案した仕組みは、ほかの科学者によって、それほど大きな結果を生むにはあまりにも弱すぎることが示され、そのため多くの人が、その考え全体がまちがっているにちがいないと結論づけた。', 'このように印象的な証拠を集めたにもかかわらず、当時のほとんどの地質学者はウェゲナーの理論をすぐに受け入れ、中にはかなりの敵意をもってそうした人もいた。主な反対の理由は、かたい岩でできた大陸がどのようにして地球の表面を動くことができるのかについて、彼が納得のいく説明を示せなかったことである。彼が提案した仕組みは、ほかの科学者によって、それほど大きな結果を生むにはあまりにも弱すぎることが示され、そのため多くの人が、その考え全体がまちがっているにちがいないと結論づけた。', 'このように印象的な証拠を集めたにもかかわらず、当時のほとんどの地質学者はウェゲナーの理論をしりぞけ、中にはかなりの敵意をもってそうした人もいた。主な反対の理由は、かたい岩でできた大陸がどのようにして地球の表面を動くことができるのかについて、彼が納得のいく説明をはっきり示したことである。彼が提案した仕組みは、ほかの科学者によって、それほど大きな結果を生むにはあまりにも弱すぎることが示され、そのため多くの人が、その考え全体がまちがっているにちがいないと結論づけた。', 'このように印象的な証拠を集めたにもかかわらず、当時のほとんどの地質学者はウェゲナーの理論をしりぞけ、中にはかなりの敵意をもってそうした人もいた。主な反対の理由は、かたい岩でできた大陸がどのようにして地球の表面を動くことができるのかについて、彼が納得のいく説明を示せなかったことである。彼が提案した仕組みは、ほかの科学者によって、それほど大きな結果を生むには十分に強いことが示され、そのため多くの人が、その考え全体がまちがっているにちがいないと結論づけた。'], answer: 0, why: '第3段落の和訳。ほとんどの地質学者は理論を「しりぞけ」、ウェゲナーは大陸の動く仕組みを「示せず」、彼の仕組みは「弱すぎる」と示された。' },
@@ -16379,8 +16379,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 6, choices: ['Part of a wider solution', 'The end of water shortages', 'Why farming uses no water', 'How to build longer coastlines'], answer: 0, why: '第7段落は、淡水化は完全な解決ではなく、もれの修理や下水の再利用などとならぶ広い戦略の一部だと述べている。' },
     ],
     qa: [
-      { q: 'How does reverse osmosis remove salt from seawater?', choices: ['By pushing water at high pressure through membranes that block salt.', 'By boiling the water and collecting the steam.', 'By freezing the seawater.', 'By adding chemicals that turn salt into gas.'], answer: 0, why: '第3段落 seawater is pushed at high pressure through special membranes … block most of the salt。' },
-      { q: 'Why can desalination add to greenhouse gas emissions?', choices: ['The electricity for its pumps is often generated by burning fossil fuels.', 'Brine releases gases into the air.', 'Membranes are made from oil.', 'Ships are needed to carry the water.'], answer: 0, why: '第4段落 the electricity for these pumps is generated by burning fossil fuels, which adds to greenhouse gas emissions。' },
+      { q: 'How does reverse osmosis remove salt from seawater?', choices: ['Seawater is boiled and the steam is collected as fresh water.', 'Seawater is heated in chambers where the pressure slowly falls.', 'Salt is removed by adding chemicals that clean the equipment.', 'Water is pushed hard through membranes that let water pass but block salt.'], answer: 3, why: '第3段落：逆浸透では海水を高圧で極小の穴の膜に通し、水分子は通すが塩はさえぎる。湯気を集める・圧力を下げた部屋で加熱するのは熱による方法（第2段落）、洗浄用の化学物質は残った塩水に含まれるもの。' },
+      { q: 'Why can desalination add to greenhouse gas emissions?', choices: ['The brine released into the sea gives off harmful gases.', 'Power for its pumps often comes from burning fossil fuels.', 'Thermal plants burn oil only in Middle Eastern countries.', 'Solar and wind energy are used to boil the seawater.'], answer: 1, why: '第4段落：膜に水を通す強力なポンプの電気が多くの場所で化石燃料から作られ、温室効果ガスが増える。塩水の害は海の生物への影響（第5段落）、太陽光・風力は対策、中東は燃料が安かったという説明。' },
     ],
   },
   {
@@ -16456,9 +16456,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '多くの研究者は、ナッジは人々に気づかれないようにすべきだと主張している。', answer: false, why: '第7段落 nudges should be transparent, so that people can recognise and question them。' },
     ],
     qa: [
-      { q: 'What is a default option, according to the passage?', choices: ['The choice that applies automatically if a person does nothing.', 'The cheapest option available.', 'The option chosen by most neighbours.', 'An option that is forbidden by law.'], answer: 0, why: '第3段落 default options, the choices that apply automatically if a person does nothing。' },
-      { q: 'Why might letters about neighbours paying taxes encourage more people to pay?', choices: ['People tend to follow what they believe others are doing.', 'The letters threaten people with punishment.', 'The letters lower the amount of tax.', 'Neighbours collect the taxes themselves.'], answer: 0, why: '第4段落 presumably because individuals tend to follow what they believe others are doing。' },
-      { q: 'What does the writer suggest is the important question about nudges?', choices: ['Under what conditions they are acceptable.', 'Whether they are cheaper than laws.', 'How quickly they can be introduced.', 'Which country invented them.'], answer: 0, why: '第7段落 the important question is not simply whether nudges work, but under what conditions they are acceptable。' },
+      { q: 'What is a default option, according to the passage?', choices: ['The option that applies by itself when a person does nothing.', 'The option that most of a person\'s neighbours have already chosen.', 'The option that is placed at eye level in a cafeteria.', 'The option that costs the least money for the person.'], answer: 0, why: '第3段落：初期設定とは、何もしなければ自動的に適用される選択のこと。隣人の多くの行動や目の高さの果物は第4段落の情報の並べ方によるナッジ、費用の安さは定義に含まれない。' },
+      { q: 'Why might letters about neighbours paying taxes encourage more people to pay?', choices: ['People who do not pay are punished more strictly.', 'People tend to do what they think others are doing.', 'The letters make paying taxes cheaper and easier.', 'People are not aware that they owe any taxes.'], answer: 1, why: '第4段落：人は他人がしていると思うことに合わせる傾向があるからだと考えられる。ナッジは選択肢を禁じず費用も大きく変えないので罰や値下げではない。税金を知らないという話は本文にない。' },
+      { q: 'What does the writer suggest is the important question about nudges?', choices: ['Whether nudges work better than strict rules or not.', 'How cheaply governments can test nudges on a small scale.', 'Under which conditions nudges are acceptable to use.', 'Whether nudges should be kept secret from the public.'], answer: 2, why: '第7段落：重要なのは単に効くかどうかではなく、どんな条件なら許されるかだという。安く試せるのは支持者の主張（第5段落）、むしろ透明であるべきとされ、秘密にせよとは言っていない。' },
     ],
     gist: [
       { para: 2, choices: ['最もよく引き合いに出される例の一つは、何もしなければ自動的に適用される選択であるデフォルトの選択肢にかかわるものである。従業員が会社の年金制度に自動的に加入させられ、やめたければ手続きをしなければならない場合には、加入するために手続きをしなければならない場合よりもはるかに多くの人が結局貯金をする。どちらの場合も、選べる選択肢はまったく同じであるにもかかわらずである。同じような効果は、電気の契約から電子機器の設定まで、ほかの多くの分野でも見られてきた。', '最もよく引き合いに出される例の一つは、何もしなければ自動的に適用される選択であるデフォルトの選択肢にかかわるものである。従業員が会社の年金制度に自動的に加入させられ、やめたければ手続きをしなければならない場合には、加入するために手続きをしなければならない場合よりもはるかに少ない人しか貯金をしない。どちらの場合も、選べる選択肢はまったく同じであるにもかかわらずである。同じような効果は、電気の契約から電子機器の設定まで、ほかの多くの分野でも見られてきた。', '最もよく引き合いに出される例の一つは、何もしなければ自動的に適用される選択であるデフォルトの選択肢にかかわるものである。従業員が会社の年金制度に自動的に加入させられ、やめたければ手続きをしなければならない場合には、加入するために手続きをしなければならない場合よりもはるかに多くの人が結局貯金をする。どちらの場合も、選べる選択肢はまったくちがうにもかかわらずである。同じような効果は、電気の契約から電子機器の設定まで、ほかの多くの分野でも見られてきた。', '最もよく引き合いに出される例の一つは、何もしなければ自動的に適用される選択であるデフォルトの選択肢にかかわるものである。従業員が会社の年金制度に自動的に加入させられ、やめたければ手続きをしなければならない場合には、加入するために手続きをしなければならない場合よりもはるかに多くの人が結局貯金をする。どちらの場合も、選べる選択肢はまったく同じであるにもかかわらずである。同じような効果は、電気の契約から電子機器の設定まで、ほかの分野ではまったく見られていない。'], answer: 0, why: '第3段落の和訳。自動加入だと「はるかに多くの人」が貯金をし、選択肢は「まったく同じ」であり、同じ効果は「ほかの多くの分野でも」見られる。' },
@@ -16514,8 +16514,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 4, choices: ['A darker side of connection', 'How doctors cured the plague', 'Why animals carry goods', 'The safest trade routes'], answer: 0, why: '第5段落は、交易のネットワークが病気も広めたという、つながりの暗い面を述べている。' },
     ],
     qa: [
-      { q: 'Why do many historians think the name Silk Road is misleading?', choices: ['Silk was only one of many products, and the routes carried more than goods.', 'Silk was never traded along the routes.', 'The routes were only used by sea.', 'The name was invented by a Chinese emperor.'], answer: 0, why: '第2段落 since silk was only one of a great many products … and since the routes carried far more than goods。' },
-      { q: 'Why did more trade move to the sea from the fifteenth century?', choices: ['Ships could carry more goods and avoid many territories with taxes.', 'Camels became too expensive to feed.', 'Deserts became completely impassable.', 'Merchants preferred to travel alone.'], answer: 0, why: '第6段落 Ships could carry far larger quantities … did not need to pass through many different territories, each of which might demand taxes。' },
+      { q: 'Why do many historians think the name Silk Road is misleading?', choices: ['The routes were really a single highway from China to Europe.', 'Silk was one of many goods, and ideas also travelled the routes.', 'Silk was never traded between China and the West at all.', 'The name was used by merchants who travelled the whole way.'], answer: 1, why: '第2段落：絹は数多い産物の一つにすぎず、道は物以外のものも運んだので誤解を招くという。実際は一本道ではなく網の目（第1段落）、絹は高く評価された（第3段落）、名前は19世紀の地理学者が作った。' },
+      { q: 'Why did more trade move to the sea from the fifteenth century?', choices: ['Camels could carry larger amounts of goods than ships could.', 'Diseases such as the plague spread only along land routes.', 'Ships carried more goods and did not pass through many taxing lands.', 'New railways and ports were built across Asia at that time.'], answer: 2, why: '第6段落：造船と航海術が進み、船はラクダより多く運べ、税を求める多くの領土を通らずにすんだ。ラクダが多く運べるは逆、疫病は第5段落の話で理由ではない、鉄道や港は最近の計画（第7段落）。' },
     ],
   },
   {
@@ -16591,9 +16591,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '専門家は、単に指示を出すことが最も効果的だと主張している。', answer: false, why: '第7段落 may be more effective … than simply issuing instructions。説明と傾聴のほうが効果的かもしれない。' },
     ],
     qa: [
-      { q: 'Why is herd immunity particularly important for newborn babies and people with weakened immune systems?', choices: ['They may not be able to be protected directly by vaccines.', 'They cannot catch infectious diseases.', 'They are always vaccinated first.', 'They have stronger immune systems than others.'], answer: 0, why: '第4段落 some people cannot be protected directly … These individuals depend on the immunity of the people around them。' },
-      { q: 'What is meant by the "free-rider problem" in the sixth paragraph?', choices: ['Gaining the benefit of others’ vaccination without being vaccinated oneself.', 'Getting vaccines without paying for them.', 'Traveling without a ticket on public transport.', 'Doctors refusing to vaccinate patients.'], answer: 0, why: '第6段落 gaining the benefit without accepting even the small risks associated with vaccination。' },
-      { q: 'Which statement best expresses the writer’s main point?', choices: ['Vaccination is both a personal decision and a contribution to the community.', 'Vaccination is purely a private matter.', 'Herd immunity can never be achieved.', 'Only governments should decide about health.'], answer: 0, why: '第7段落 vaccination should be understood not only as a personal medical decision but also as a contribution to the welfare of the community。' },
+      { q: 'Why is herd immunity particularly important for newborn babies and people with weakened immune systems?', choices: ['They are more likely than others to spread the disease.', 'Vaccines may not be able to protect them directly.', 'They choose not to be vaccinated because of false information.', 'They have already recovered from earlier infections.'], answer: 1, why: '第4段落：新生児はまだ接種できず、免疫が弱い人は安全に受けられないか効きにくいので、周囲の免疫に頼る。接種しない選択は第5段落の親の話、感染を広めやすい・すでに回復したとは書いていない。' },
+      { q: 'What is meant by the "free-rider problem" in the sixth paragraph?', choices: ['Paying others to get vaccinated in one\'s place.', 'Getting protection from others\' vaccination without being vaccinated oneself.', 'Being unable to receive vaccines because of cancer treatment.', 'Spreading a disease to more than one other person.'], answer: 1, why: '第6段落：周りが十分に接種していれば、自分は接種せず小さなリスクも負わずに利益を得られることを指す。がん治療で受けられないのは第4段落、一人以上にうつすのは第2段落の基本再生産数の話。' },
+      { q: 'Which statement best expresses the writer’s main point?', choices: ['Health authorities should simply give people clear instructions.', 'Getting vaccinated is a personal choice and also helps the community.', 'Herd immunity protects people even when vaccination rates fall.', 'Each person\'s choice about vaccines affects only that person.'], answer: 1, why: '第7段落：接種は個人の医療上の決定であると同時に地域社会への貢献だという。指示を出すより説明と傾聴が効果的、接種率が少し下がるだけで病気は戻る（第5段落）、決定の影響は本人をはるかに超える。' },
     ],
     gist: [
       { para: 2, choices: ['病気が広まるのを止めるために、人口のどれだけの割合が免疫をもっていなければならないかは、主にその病気がどれほどうつりやすいかによって決まる。一人がわずか2、3人にしかうつさない病気なら、人口のおよそ半分から3分の2が免疫をもっていれば十分かもしれない。しかし知られている中で最もうつりやすい病気の一つであるはしかでは、その数ははるかに高く、公衆衛生の専門家はふつう、人口の約95パーセントに予防接種をすることをめざしている。', '病気が広まるのを止めるために、人口のどれだけの割合が免疫をもっていなければならないかは、主にその病気がどれほどうつりやすいかによって決まる。一人がわずか2、3人にしかうつさない病気なら、人口のおよそ半分から3分の2が免疫をもっていれば十分かもしれない。しかし知られている中で最もうつりやすい病気の一つであるはしかでは、その数ははるかに低く、公衆衛生の専門家はふつう、人口の約95パーセントに予防接種をすることをめざしている。', '病気が広まるのを止めるために、人口のどれだけの割合が免疫をもっていなければならないかは、主にその病気がどれほどうつりやすいかによって決まる。一人がわずか2、3人にしかうつさない病気なら、人口のおよそ95パーセント以上が免疫をもっていれば十分かもしれない。しかし知られている中で最もうつりやすい病気の一つであるはしかでは、その数ははるかに高く、公衆衛生の専門家はふつう、人口の約95パーセントに予防接種をすることをめざしている。', '病気が広まるのを止めるために、人口のどれだけの割合が免疫をもっていなければならないかは、主にその病気がどれほどうつりやすいかによって決まる。一人がわずか2、3人にしかうつさない病気なら、人口のおよそ半分から3分の2が免疫をもっていれば十分かもしれない。しかし知られている中で最もうつりやすい病気の一つであるはしかでは、その数ははるかに高く、公衆衛生の専門家はふつう、人口の約50パーセントに予防接種をすることをめざしている。'], answer: 0, why: '第3段落の和訳。必要な割合は病気のうつりやすさで決まり、2、3人にうつす病気なら「およそ半分から3分の2」、はしかでは「はるかに高く」約「95パーセント」をめざす。' },
@@ -16726,9 +16726,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、道徳の問いにはたいていかんたんな答えがあると述べている。', answer: false, why: '第7段落 moral questions rarely have simple answers。' },
     ],
     qa: [
-      { q: 'Why, according to Kant, does lying fail the test of a moral rule?', choices: ['If everyone lied when convenient, trust would disappear and lies would stop working.', 'Lying always causes physical harm.', 'Lying is forbidden by law.', 'Only children tell lies.'], answer: 0, why: '第2段落 if everyone lied whenever it was convenient, people would stop trusting one another’s words and lying itself would no longer be effective。' },
-      { q: 'What danger does the writer see in judging lies only by their consequences?', choices: ['People may too easily convince themselves that their lies are harmless.', 'People will never tell any lies.', 'Happiness will become impossible.', 'Laws will become too strict.'], answer: 0, why: '第4段落 people may become too willing to deceive others, persuading themselves that their own lies are harmless or beneficial。' },
-      { q: 'Which statement best describes the writer’s conclusion?', choices: ['Careful thought helps us understand why honesty matters, though it gives no single formula.', 'Kant’s strict rule is correct in every case.', 'Lying is acceptable whenever it makes people happy.', 'Small social lies are the most serious kind.'], answer: 0, why: '第7段落 may not give us a single formula, but it can help us to understand why truthfulness matters。' },
+      { q: 'Why, according to Kant, does lying fail the test of a moral rule?', choices: ['Lying usually leads to more suffering than happiness overall.', 'If all lied when convenient, trust would vanish and lies would fail.', 'A lie told to a murderer can never save a life.', 'Small social lies always make everyday conversations less smooth for everyone.'], answer: 1, why: '第2段落：だれもが都合よくうそをつけば互いの言葉を信じなくなり、うそ自体も効かなくなるので、全員が守れる規則にならない。幸福と苦痛で判断するのは結果主義（第4段落）、社交上のうそは第6段落の話。' },
+      { q: 'What danger does the writer see in judging lies only by their consequences?', choices: ['People may refuse to lie even when a life is in danger.', 'People may follow strict rules even in extreme cases.', 'People may too easily believe their own lies are harmless.', 'People may stop caring whether others are happy or not.'], answer: 2, why: '第4段落：よい結果になりそうならうそが許されるとすると、自分のうそは無害だと思いこみだましやすくなる。命が危なくてもうそをつかない、極端な場合も規則に従うのは厳格な立場の問題、他人の幸福への無関心は本文にない。' },
+      { q: 'Which statement best describes the writer’s conclusion?', choices: ['Careful thinking shows why honesty matters, though no single formula exists.', 'Lying is always wrong, as Kant argued, in every situation.', 'Any lie is acceptable if it produces better results.', 'Small social lies are the most harmful kind of lie.'], answer: 0, why: '第7段落：注意深く考えても一つの公式は得られないが、なぜ正直が大切で、いつ他の価値に負けうるかを理解できる。カントの絶対禁止も結果だけの判断も問題があるとされ、社交上のうそは不確かな位置にある。' },
     ],
     gist: [
       { para: 1, choices: ['ドイツの哲学者イマヌエル・カントは、この問いに対する最もきびしい答えの一つを主張したことで有名である。彼の考えでは、道徳の規則は、理性をもつすべての人が矛盾なく従うことのできるものでなければならない。そしてうそはこの基準を満たさない。もしだれもが都合のよいときにうそをつけば、人々はたがいの言葉を信用しなくなり、うそそのものがもう効果をもたなくなるからである。カントは、あるうそがどんなよい結果を生むとしても、うそはどんな場合にもまちがいだと結論づけた。', 'ドイツの哲学者イマヌエル・カントは、この問いに対する最もゆるやかな答えの一つを主張したことで有名である。彼の考えでは、道徳の規則は、理性をもつすべての人が矛盾なく従うことのできるものでなければならない。そしてうそはこの基準を満たさない。もしだれもが都合のよいときにうそをつけば、人々はたがいの言葉を信用しなくなり、うそそのものがもう効果をもたなくなるからである。カントは、あるうそがどんなよい結果を生むとしても、うそはどんな場合にもまちがいだと結論づけた。', 'ドイツの哲学者イマヌエル・カントは、この問いに対する最もきびしい答えの一つを主張したことで有名である。彼の考えでは、道徳の規則は、理性をもつすべての人が矛盾なく従うことのできるものでなければならない。そしてうそはこの基準をよく満たす。もしだれもが都合のよいときにうそをつけば、人々はたがいの言葉を信用しなくなり、うそそのものがもう効果をもたなくなるからである。カントは、あるうそがどんなよい結果を生むとしても、うそはどんな場合にもまちがいだと結論づけた。', 'ドイツの哲学者イマヌエル・カントは、この問いに対する最もきびしい答えの一つを主張したことで有名である。彼の考えでは、道徳の規則は、理性をもつすべての人が矛盾なく従うことのできるものでなければならない。そしてうそはこの基準を満たさない。もしだれもが都合のよいときにうそをつけば、人々はたがいの言葉を信用しなくなり、うそそのものがもう効果をもたなくなるからである。カントは、あるうそがどんなよい結果を生むとしても、よい結果を生むうそは許されると結論づけた。'], answer: 0, why: '第2段落の和訳。カントは「最もきびしい」答えを主張し、うそは基準を「満たさない」ので「どんな場合にもまちがい」だとした。' },
@@ -16861,9 +16861,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、地元での対策だけで酸性化を解決できると述べている。', answer: false, why: '第7段落 ocean acidification cannot be solved by local measures alone。' },
     ],
     qa: [
-      { q: 'Why has the oceans’ absorption of carbon dioxide been "fortunate" in one sense?', choices: ['Without it, global warming would be considerably faster.', 'It has made seawater less salty.', 'It has helped corals grow larger.', 'It has stopped extreme weather.'], answer: 0, why: '第2段落 without the oceans the concentration of carbon dioxide in the air, and therefore the pace of global warming, would be considerably greater。' },
-      { q: 'Which organisms are most directly affected by ocean acidification?', choices: ['Those that build shells or skeletons from calcium carbonate.', 'Large fish that live in deep water.', 'Seabirds that eat fish.', 'Plants that grow on land near the coast.'], answer: 0, why: '第4段落 those that build shells or skeletons from calcium carbonate。' },
-      { q: 'According to the writer, what is the only lasting solution?', choices: ['Reducing the amount of carbon dioxide entering the atmosphere.', 'Building more oyster farms.', 'Adding chemicals to the sea.', 'Moving coral reefs to cooler water.'], answer: 0, why: '第7段落 The only lasting solution is to reduce the amount of carbon dioxide entering the atmosphere in the first place。' },
+      { q: 'Why has the oceans’ absorption of carbon dioxide been "fortunate" in one sense?', choices: ['Global warming would be much faster if the oceans had not absorbed it.', 'The oceans have turned the gas into fresh water for fish.', 'The acid formed in seawater helps corals build their skeletons.', 'The oceans have absorbed nearly all of the carbon dioxide.'], answer: 0, why: '第2段落：海がなければ大気中の二酸化炭素濃度も温暖化のペースもずっと大きかった。吸収したのは約4分の1でほぼ全部ではない、酸は殻づくりを妨げる（第4段落）、真水に変える話はない。' },
+      { q: 'Which organisms are most directly affected by ocean acidification?', choices: ['Creatures that build shells or skeletons from calcium carbonate.', 'Fish that live only around coral reefs in warm water.', 'Animals in the deepest parts of the sea far from land.', 'Large sea animals that feed on plankton and oysters.'], answer: 0, why: '第4段落：最も直接影響を受けるのは、サンゴ・プランクトン・カキ・ハマグリなど炭酸カルシウムで殻や骨格を作る生物。サンゴ礁の魚は間接的な影響、深海は最後の比喩、大型動物の話はない。' },
+      { q: 'According to the writer, what is the only lasting solution?', choices: ['Protecting coral reefs from local pollution and from overfishing in the area.', 'Watching water closely and changing the timing of farm work.', 'Helping marine species adapt to warmer and more acidic water.', 'Cutting the carbon dioxide that enters the atmosphere in the first place.'], answer: 3, why: '第7段落：唯一の永続的な解決策は大気に入る二酸化炭素そのものを減らすこと。サンゴ礁の保護は負担に耐える助けにすぎない、水の監視はカキ養殖の対応（第5段落）、種の適応を助けるとは書いていない。' },
     ],
     gist: [
       { para: 2, choices: ['科学者は液体の酸性の度合いを、数が小さいほど酸性が強いことを示すpHのものさしを使ってはかる。海面近くの海水の平均のpHは、18世紀以来約0.1下がった。これはとるに足りない変化に聞こえるかもしれないが、pHのものさしは対数なので、この大きさの低下は、水を酸性にする水素イオンの濃度がおよそ30パーセントふえたことにあたる。海はふだんの言葉の意味で酸性になったわけではないが、着実にその方向へ動いているのである。', '科学者は液体の酸性の度合いを、数が大きいほど酸性が強いことを示すpHのものさしを使ってはかる。海面近くの海水の平均のpHは、18世紀以来約0.1下がった。これはとるに足りない変化に聞こえるかもしれないが、pHのものさしは対数なので、この大きさの低下は、水を酸性にする水素イオンの濃度がおよそ30パーセントふえたことにあたる。海はふだんの言葉の意味で酸性になったわけではないが、着実にその方向へ動いているのである。', '科学者は液体の酸性の度合いを、数が小さいほど酸性が強いことを示すpHのものさしを使ってはかる。海面近くの海水の平均のpHは、18世紀以来約0.1上がった。これはとるに足りない変化に聞こえるかもしれないが、pHのものさしは対数なので、この大きさの低下は、水を酸性にする水素イオンの濃度がおよそ30パーセントふえたことにあたる。海はふだんの言葉の意味で酸性になったわけではないが、着実にその方向へ動いているのである。', '科学者は液体の酸性の度合いを、数が小さいほど酸性が強いことを示すpHのものさしを使ってはかる。海面近くの海水の平均のpHは、18世紀以来約0.1下がった。これはとるに足りない変化に聞こえるかもしれないが、pHのものさしは対数なので、この大きさの低下は、水を酸性にする水素イオンの濃度がおよそ30パーセント減ったことにあたる。海はふだんの言葉の意味で酸性になったわけではないが、着実にその方向へ動いているのである。'], answer: 0, why: '第3段落の和訳。pHは数が「小さい」ほど酸性が強く、海面近くのpHは約0.1「下がり」、水素イオンの濃度はおよそ30パーセント「ふえた」。' },
@@ -16902,8 +16902,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '英語には、ほかの言語から来た言葉はほとんどない。', answer: false, why: '第4段落 English itself contains a very large number of words from French, Latin, and many other languages。' },
     ],
     qa: [
-      { q: 'Why are many words for foods, sports, and new technology borrowed?', choices: ['They often arrive from another culture together with their names.', 'They are easier to pronounce in every language.', 'Governments order people to use them.', 'They are always shorter than native words.'], answer: 0, why: '第2段落 a new object or idea arrives from another culture … it is often easiest to use the name that comes with it。' },
-      { q: 'What can loanwords teach us, according to the last paragraph?', choices: ['Which cultures a language’s speakers traded with, learned from, or admired.', 'How to speak many languages quickly.', 'Which language is the oldest.', 'Why some foods are more popular than others.'], answer: 0, why: '第5段落 The words a language has borrowed often tell us which cultures its speakers traded with, learned from, or admired。' },
+      { q: 'Why are many words for foods, sports, and new technology borrowed?', choices: ['They often come from another culture along with their names.', 'Native speakers do not like using words from their own language.', 'Inventing new words for them is quick and always accepted.', 'Their pronunciation already fits the sounds of every language.'], answer: 0, why: '第2段落：新しい物や考えが他の文化から来るとき、いっしょに来た名前を使うのがいちばん簡単だから。新語を作るのは時間がかかり受け入れられないこともある、発音は新しい言語に合わせて変わる（第3段落）。' },
+      { q: 'What can loanwords teach us, according to the last paragraph?', choices: ['Which loanwords native English speakers would not be able to understand.', 'How too many loanwords slowly weaken a traditional language.', 'Which cultures a language\'s speakers traded with, learned from, or admired.', 'Why Japanese speakers shorten so many words from English.'], answer: 2, why: '第5段落：借りた語から、その言語の話者がどの文化と交易し、学び、あこがれたかがわかる。英語話者に通じない表現や短縮は第3段落、言語が弱まるという心配は第4段落の一部の人の意見。' },
     ],
     gist: [
       { para: 2, choices: ['借用語が新しい言語に合わせて変わること', '英語の発音のしかた', 'まちがった言葉の直し方', '言葉を短くする規則'], answer: 0, why: '第3段落は、借用語の発音や意味が新しい言語に合わせて変わり、それが自然な結果であることを述べている。' },
@@ -16996,9 +16996,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '当時、標準時を批判する人はいなかった。', answer: false, why: '第6段落 Some critics at the time complained that it replaced the natural time of the sun with an artificial time。' },
     ],
     qa: [
-      { q: 'Why was a timetable using many local times dangerous?', choices: ['Trains on the same line needed careful coordination to avoid collisions.', 'Passengers could not read the timetables.', 'Clocks in stations often stopped.', 'Trains were not allowed to run at night.'], answer: 0, why: '第3段落 trains running on the same line needed to be carefully coordinated to avoid collisions。' },
-      { q: 'What did the international conference of 1884 decide?', choices: ['To use the meridian through Greenwich as the starting point for longitude and time.', 'To abolish all local clocks immediately.', 'To use the time of Washington everywhere.', 'To stop building railways.'], answer: 0, why: '第5段落 selected the meridian passing through Greenwich as the starting point for measuring longitude and time。' },
-      { q: 'What broader lesson does the writer draw from the history of standard time?', choices: ['New technologies can create problems that need new forms of cooperation.', 'Technology always makes life simpler.', 'Local customs should never change.', 'Railways were a mistake.'], answer: 0, why: '第7段落 a new technology can create problems that require new forms of cooperation to solve。' },
+      { q: 'Why was a timetable using many local times dangerous?', choices: ['Passengers could not travel between distant towns in a few hours.', 'The telegraph sent messages between the stations far too slowly.', 'Trains sharing a line had to be timed carefully to avoid crashes.', 'Station clocks showed both local and railway time side by side.'], answer: 2, why: '第3段落：同じ線路を走る列車は衝突を避けるため注意深く調整する必要があったから。列車は数時間で遠くへ行けた、電信はほぼ瞬時に伝えた、二つの時刻の並記は第4段落の町の時計の話。' },
+      { q: 'What did the international conference of 1884 decide?', choices: ['To measure longitude and time from the meridian through Greenwich.', 'To divide North America into broad bands called time zones.', 'To give Greenwich time legal status across all of Britain.', 'To let each town keep its own time based on the sun.'], answer: 0, why: '第5段落：1884年の国際会議はグリニッジを通る子午線を経度と時刻の基準に選んだ。北米の時間帯は1883年の鉄道会社、グリニッジ時刻の法的地位は英国内の話（第4段落）、各町の太陽時は昔のやり方。' },
+      { q: 'What broader lesson does the writer draw from the history of standard time?', choices: ['Local time based on the sun is more natural than clock time.', 'Railways made travel slower until standard time was introduced.', 'New technology can cause problems that need new kinds of cooperation.', 'The internet has already solved the problem of common standards.'], answer: 2, why: '第7段落：新しい技術は新しい形の協力を必要とする問題を生むという教訓。太陽の時間が自然だというのは当時の批判者の意見、鉄道は旅を速くした、インターネットは今も共通規格の問題を生んでいる。' },
     ],
     gist: [
       { para: 1, choices: ['19世紀より前、たいていの町は太陽の位置にもとづく独自の地方時を使っていた。正午は太陽が空でいちばん高くなる瞬間であり、太陽が東と西の場所でわずかにちがう瞬間にこの位置に来るので、となりの町の時計が数分ちがうこともあった。長い距離をすばやく旅する人はほとんどいなかったので、こうしたちがいはほとんど不便を生まず、多くの人はそれに気づいてさえいなかっただろう。', '19世紀より前、たいていの町は国が決めた共通の標準時を使っていた。正午は太陽が空でいちばん高くなる瞬間であり、太陽が東と西の場所でわずかにちがう瞬間にこの位置に来るので、となりの町の時計が数分ちがうこともあった。長い距離をすばやく旅する人はほとんどいなかったので、こうしたちがいはほとんど不便を生まず、多くの人はそれに気づいてさえいなかっただろう。', '19世紀より前、たいていの町は太陽の位置にもとづく独自の地方時を使っていた。正午は太陽が空でいちばん高くなる瞬間であり、太陽が東と西の場所でわずかにちがう瞬間にこの位置に来るので、となりの町の時計がいつもぴったり同じだった。長い距離をすばやく旅する人はほとんどいなかったので、こうしたちがいはほとんど不便を生まず、多くの人はそれに気づいてさえいなかっただろう。', '19世紀より前、たいていの町は太陽の位置にもとづく独自の地方時を使っていた。正午は太陽が空でいちばん高くなる瞬間であり、太陽が東と西の場所でわずかにちがう瞬間にこの位置に来るので、となりの町の時計が数分ちがうこともあった。長い距離をすばやく旅する人はほとんどいなかったので、こうしたちがいは大きな不便を生み、多くの人はそれに気づいてさえいなかっただろう。'], answer: 0, why: '第2段落の和訳。町は「太陽の位置にもとづく」地方時を使い、となりの町の時計が「数分ちがう」こともあったが、そのちがいは「ほとんど不便を生まなかった」。' },
@@ -17037,8 +17037,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '小さな子どもは、ほかの人からあくびがうつりにくい。', answer: true, why: '第4段落 young children and some animals are less likely to catch yawns from others。' },
     ],
     qa: [
-      { q: 'Which idea about yawning seems to be supported by the effect of air temperature?', choices: ['Yawning helps to cool the brain.', 'Yawning brings more oxygen into the lungs.', 'Yawning shows that a person is angry.', 'Yawning makes the jaw stronger.'], answer: 0, why: '第3段落 people yawn more often when the air is cool than when it is very hot, which seems to fit this idea（脳を冷やす説）。' },
-      { q: 'What is the main point of the last paragraph?', choices: ['Ordinary things about our bodies can still be mysterious and worth studying.', 'Scientists have completely explained yawning.', 'Children should not ask simple questions.', 'Yawning is a sign of serious illness.'], answer: 0, why: '第5段落 many ordinary things about our bodies are still mysterious. Simple questions … can lead to serious scientific research。' },
+      { q: 'Which idea about yawning seems to be supported by the effect of air temperature?', choices: ['Yawning helps to cool down the brain.', 'Yawning brings more oxygen into the lungs.', 'Yawning is caught from other people.', 'Yawning helps us understand others\' feelings.'], answer: 0, why: '第3段落：空気が暑いときより涼しいときによくあくびをするという結果は、脳を冷やすという説に合う。酸素説は実験で支持されず（第2段落）、うつることや気持ちの理解は第4段落の別の話。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['Scientists now fully understand the reasons why we yawn.', 'Common things about our bodies can still be mysteries worth studying.', 'Children should stop asking simple questions about yawning.', 'Reading about yawning is the main reason people yawn.'], answer: 1, why: '第5段落：あくびのような身近な体のことにもまだなぞがあり、子どもの素朴な問いが研究につながるという。理由はまだわかっていない、子どもの問いは大切、読むとあくびが出るは最後の軽い一言にすぎない。' },
     ],
     gist: [
       { para: 1, choices: ['酸素の不足であくびをするという説が支持されないこと', '肺の病気', '呼吸の練習のしかた', '空気のよごれ'], answer: 0, why: '第2段落は、酸素が足りないからあくびをするという昔からの考えが、実験であまり支持されていないことを述べている。' },
@@ -17092,8 +17092,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { para: 5, choices: ['Responses from governments and doctors', 'The life of a politician', 'How to become a volunteer', 'Why art classes are expensive'], answer: 0, why: '第6段落は、孤独担当の大臣や社会的処方、ボランティアの取り組みなどの対応を述べている。' },
     ],
     qa: [
-      { q: 'What kind of event can leave people without their usual support networks?', choices: ['Moving to a new city for study or work.', 'Joining a walking group.', 'Using a messaging application.', 'Visiting a library.'], answer: 0, why: '第4段落 Major life changes, such as moving to a new city for study or work, can leave people without the support networks。' },
-      { q: 'What does the writer suggest may be one of the most practical ways of reducing loneliness?', choices: ['Protecting places such as parks, libraries, and community centres.', 'Making everyone join a club.', 'Banning social media.', 'Giving everyone the same medicine.'], answer: 0, why: '第8段落 protecting such spaces may be one of the most practical ways of reducing loneliness。' },
+      { q: 'What kind of event can leave people without their usual support networks?', choices: ['Spending a lot of time alone and feeling content.', 'Joining a walking group or an art class.', 'Using social media to contact faraway friends.', 'Moving to a new city for school or a job.'], answer: 3, why: '第4段落：勉強や仕事で新しい町へ引っ越すような大きな生活の変化は、頼ってきた支えを失わせる。一人で満足な人は第2段落、散歩の会や美術教室は社会的処方（第6段落）、SNSは遠くの人とつながる助け。' },
+      { q: 'What does the writer suggest may be one of the most practical ways of reducing loneliness?', choices: ['Making governments responsible for everyone\'s friendships.', 'Replacing face-to-face meetings with online messaging apps.', 'Giving lonely patients medication instead of activities.', 'Preserving places such as parks, libraries, and community centres.'], answer: 3, why: '第8段落：公園・図書館・公民館のように特別な理由なく人が集まれる場所を守ることが、最も実際的な方法の一つだという。政府が友人関係に責任を持つことは否定、オンラインは対面の代わりにならない、薬より活動を勧めている。' },
     ],
   },
   {
@@ -17131,9 +17131,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、年れいはまったく関係ないと述べている。', answer: false, why: '第6段落 None of this means that age is irrelevant。' },
     ],
     qa: [
-      { q: 'Why can older learners often make faster progress at first?', choices: ['They can use more developed memory, knowledge of language, and deliberate study.', 'They have more free time than children.', 'Their teachers are always better.', 'They never make mistakes.'], answer: 0, why: '第4段落 because they can use their more developed memory, their knowledge of how language works, and their ability to study deliberately。' },
-      { q: 'According to the writer, what is the goal of most learners?', choices: ['To communicate effectively.', 'To be mistaken for a native speaker.', 'To pass a test as early as possible.', 'To learn as many languages as possible.'], answer: 0, why: '第6段落 the goal of most learners is not to be mistaken for a native speaker but to communicate effectively。' },
-      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Language learning changes over life, and practice and motivation matter at any age.', 'Learning a language after puberty is impossible.', 'Only children should study foreign languages.', 'Age is the only important factor.'], answer: 0, why: '第7段落 language learning as a process that changes in character over the course of life … the willingness to keep learning, regardless of when that learning begins。' },
+      { q: 'Why can older learners often make faster progress at first?', choices: ['They can use better memory, knowledge of language, and careful study.', 'They grow up surrounded by the language every day.', 'Their brains are better prepared before reaching puberty.', 'They develop a native-like accent more easily than children.'], answer: 0, why: '第4段落：年長の学習者は発達した記憶力、言語の仕組みの知識、意識的に学ぶ力を使えるので初めは速く進む。言語に囲まれて育つのは幼い子の利点、思春期前の脳と発音の利点も子ども側の話（第2・3段落）。' },
+      { q: 'According to the writer, what is the goal of most learners?', choices: ['To be mistaken for a native speaker.', 'To start learning before the age of puberty.', 'To pass examinations after studying a few hours.', 'To be able to communicate well with others.'], answer: 3, why: '第6段落：たいていの学習者の目標はネイティブと間違えられることではなく、効果的に意思疎通することだという。思春期前に始めることは発音の利点の話、試験合格は目標として述べられていない。' },
+      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Learning changes through life, and practice and motivation matter at any age.', 'Language learning becomes impossible after the end of puberty.', 'Starting early is the only important factor in learning languages.', 'Adults always learn languages better than young children do.'], answer: 0, why: '第7段落：言語学習は人生を通じて性質が変わる過程で、何歳でも意味ある練習・指導の質・学び続ける意欲が大切だという。思春期で終わる見方は否定、年齢だけが要因ではない、大人が常に上とも言っていない。' },
     ],
     gist: [
       { para: 2, choices: ['第二言語を学ぶ人についての研究は、より複雑な結果を生んできた。多くの研究では、幼いころに言語を学びはじめた人は、あとから始めた人よりも母語話者のような発音を身につけやすいことがわかっている。その一方で、文法についての有利さはより小さく、年れいとともにより少しずつ減っていくように見える。そのため研究者の中には、急に終わる一つの区切りがあるのではなく、言語のある面を身につけるやさしさがゆっくりと減っていくのだと主張する人もいる。', '第二言語を学ぶ人についての研究は、より複雑な結果を生んできた。多くの研究では、幼いころに言語を学びはじめた人は、あとから始めた人よりも母語話者のような発音を身につけにくいことがわかっている。その一方で、文法についての有利さはより小さく、年れいとともにより少しずつ減っていくように見える。そのため研究者の中には、急に終わる一つの区切りがあるのではなく、言語のある面を身につけるやさしさがゆっくりと減っていくのだと主張する人もいる。', '第二言語を学ぶ人についての研究は、より複雑な結果を生んできた。多くの研究では、幼いころに言語を学びはじめた人は、あとから始めた人よりも母語話者のような発音を身につけやすいことがわかっている。その一方で、文法についての有利さはより大きく、年れいとともにより少しずつ減っていくように見える。そのため研究者の中には、急に終わる一つの区切りがあるのではなく、言語のある面を身につけるやさしさがゆっくりと減っていくのだと主張する人もいる。', '第二言語を学ぶ人についての研究は、より複雑な結果を生んできた。多くの研究では、幼いころに言語を学びはじめた人は、あとから始めた人よりも母語話者のような発音を身につけやすいことがわかっている。その一方で、文法についての有利さはより小さく、年れいとともにより少しずつ減っていくように見える。そのため研究者の中には、急に終わるはっきりした区切りがあり、言語のある面を身につけるやさしさがゆっくりと減っていくのだと主張する人もいる。'], answer: 0, why: '第3段落の和訳。早く始めた人は発音を身につけ「やすく」、文法の有利さは「より小さく」、急に終わる区切りが「あるのではなく」ゆっくり減っていく。' },
@@ -17266,9 +17266,9 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '多くの専門家は、すべての事実を一度に伝えるべきだと強調している。', answer: false, why: '第6段落 Rather than presenting all the facts at once … may then share information gradually。' },
     ],
     qa: [
-      { q: 'What does the principle of informed consent require?', choices: ['Patients must understand a treatment’s nature, risks, and alternatives before agreeing.', 'Doctors must make all decisions for their patients.', 'Families must agree before patients are told anything.', 'Patients must always choose the newest treatment.'], answer: 0, why: '第3段落 patients must understand the nature, risks, and alternatives of a treatment before agreeing to it。' },
-      { q: 'According to supporters of disclosure, what can patients do if they understand their situation?', choices: ['Plan for the future and take part in decisions about treatment.', 'Avoid all medical treatment.', 'Become doctors themselves.', 'Ignore their families completely.'], answer: 0, why: '第4段落 Patients who understand their situation can plan for the future, take part in decisions about their treatment。' },
-      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Communicating difficult truths with skill and sensitivity is a vital ability for doctors.', 'Doctors should never tell patients bad news.', 'Patients should make decisions without any information.', 'Honesty always requires being blunt.'], answer: 0, why: '第7段落 Learning to communicate difficult truths with skill and sensitivity may therefore be one of the most important abilities。' },
+      { q: 'What does the principle of informed consent require?', choices: ['Doctors must tell only the patient\'s family about serious illness.', 'Doctors must decide what is best for patients like parents.', 'Patients must agree to every treatment their doctor suggests.', 'Patients must understand a treatment\'s risks and choices before agreeing.'], answer: 3, why: '第3段落：インフォームド・コンセントとは、患者が治療の内容・危険・他の選択肢を理解してから同意すること。家族だけに伝えるのは昔の慣習、親のように決めるのは医療父権主義（第2段落）、何でも同意せよではない。' },
+      { q: 'According to supporters of disclosure, what can patients do if they understand their situation?', choices: ['They can avoid feeling any fear about their illness.', 'They can let their family make all the decisions.', 'They can plan ahead and help decide on their treatment.', 'They can trust doctors who hide important facts.'], answer: 2, why: '第4段落：状況を理解した患者は将来の計画を立て、治療の決定に参加し、大切なことを伝えられる。恐怖がなくなるとは書いていない、家族の決定は第5段落の文化の話、事実を隠されると信頼は損なわれる。' },
+      { q: 'Which statement best expresses the writer’s conclusion?', choices: ['Doctors should give patients all the facts at once.', 'Keeping patients uninformed about their illness is still the kindest choice.', 'Telling hard truths skillfully and sensitively is a key ability for doctors.', 'Families, not patients, should always receive difficult news first.'], answer: 2, why: '第6・7段落：難しい真実を技術と思いやりをもって伝えることが医師の大切な能力だという。一度に全部ではなく少しずつ伝える、何も知らせないやり方を擁護する人はほとんどいない、家族優先とは言っていない。' },
     ],
     gist: [
       { para: 2, choices: ['しかしここ数十年のあいだに、多くの国で考え方はかなり変わった。患者は治療に同意する前に、その性質や危険、ほかの選択肢を理解していなければならないというインフォームド・コンセントの原則は、医療倫理の、そして多くの場所では法律の中心的な部分となった。患者が自分の病状について真実を伝えられなければ、どうして本当に情報にもとづいた決定ができるのかはわかりにくい。そのため、今では多くの倫理学者が、正直に知らせることは患者を一人の人間として尊重するための基本的な条件だと主張している。', 'しかしここ数十年のあいだに、多くの国で考え方はほとんど変わらなかった。患者は治療に同意する前に、その性質や危険、ほかの選択肢を理解していなければならないというインフォームド・コンセントの原則は、医療倫理の、そして多くの場所では法律の中心的な部分となった。患者が自分の病状について真実を伝えられなければ、どうして本当に情報にもとづいた決定ができるのかはわかりにくい。そのため、今では多くの倫理学者が、正直に知らせることは患者を一人の人間として尊重するための基本的な条件だと主張している。', 'しかしここ数十年のあいだに、多くの国で考え方はかなり変わった。患者は治療に同意する前に、その性質や危険、ほかの選択肢を理解していなくてもよいというインフォームド・コンセントの原則は、医療倫理の、そして多くの場所では法律の中心的な部分となった。患者が自分の病状について真実を伝えられなければ、どうして本当に情報にもとづいた決定ができるのかはわかりにくい。そのため、今では多くの倫理学者が、正直に知らせることは患者を一人の人間として尊重するための基本的な条件だと主張している。', 'しかしここ数十年のあいだに、多くの国で考え方はかなり変わった。患者は治療に同意する前に、その性質や危険、ほかの選択肢を理解していなければならないというインフォームド・コンセントの原則は、医療倫理の、そして多くの場所では法律の中心的な部分となった。患者が自分の病状について真実を伝えられなければ、どうして本当に情報にもとづいた決定ができるのかはわかりにくい。そのため、今では多くの倫理学者が、正直に知らせることは患者を一人の人間として尊重するための必要のないことだと主張している。'], answer: 0, why: '第3段落の和訳。ここ数十年で考え方は「かなり変わり」、患者は治療の前に内容を「理解していなければならない」とされ、正直に知らせることは尊重の「基本的な条件」とされる。' },
@@ -17307,8 +17307,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '主催者の多くは、問題があるのでピアノをすぐに撤去している。', answer: false, why: '第4段落 主催者は時間を決め、調律や修理を手配している（set hours … arrange for regular tuning and repair）。' },
     ],
     qa: [
-      { q: 'What often happens when someone starts playing a piano in a station?', choices: ['Travellers slow down, listen, and sometimes talk to each other.', 'The trains stop running for a while.', 'Station staff ask the player to leave.', 'People buy tickets for a concert.'], answer: 0, why: '第2段落 travellers often slow down, stop to listen, and sometimes even begin talking to one another。' },
-      { q: 'Which is NOT mentioned as a way organisers deal with problems?', choices: ['Charging money to play the piano.', 'Setting hours when the piano may be used.', 'Asking players to limit their time.', 'Arranging regular tuning and repair.'], answer: 0, why: '第4段落にお金をとる話はない。ほかの3つは本文にある。' },
+      { q: 'What often happens when someone starts playing a piano in a station?', choices: ['People slow down to listen and sometimes talk to each other.', 'People walk faster because they do not want the noise.', 'Travellers always miss their trains to hear the music.', 'Station staff ask the player to limit the playing time.'], answer: 0, why: '第2段落：だれかが弾き始めると旅行者は歩みをゆるめて聞き、見知らぬ人と話すこともある。電車に乗り遅れた人もいるが「いつも」ではない、騒音の苦情は一部の人（第4段落）、時間制限は主催者のルール。' },
+      { q: 'Which is NOT mentioned as a way organisers deal with problems?', choices: ['Charging people money each time they play.', 'Setting hours when the piano may be used.', 'Asking players to limit their playing time.', 'Arranging regular tuning and repair work.'], answer: 0, why: '第4段落：主催者の対策として、使える時間を決める、演奏時間を限るよう頼む、定期的に調律・修理することが挙げられている。弾くたびにお金を取るという対策は書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['人前で演奏する機会をあたえること', 'ピアノの作り方', '駅の歴史', '音楽学校の選び方'], answer: 0, why: '第3段落は、ふだん観客の前でひかない人に演奏の機会をあたえることを述べている。' },
@@ -17463,8 +17463,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、天気予報の正確さはここ数十年で下がった。', answer: false, why: '第5段落 Over the past few decades, forecasts have improved greatly。' },
     ],
     qa: [
-      { q: 'Why do forecasters run the same model many times?', choices: ['To deal with uncertainty by comparing results from slightly different starting conditions.', 'Because the computers often break down.', 'To make the forecast take longer.', 'Because each country uses a different model.'], answer: 0, why: '第4段落 To deal with this uncertainty, forecasters often run the same model many times with slightly different starting conditions。' },
-      { q: 'Which is NOT mentioned as a source of weather information?', choices: ['Reports from people’s smartphones.', 'Weather stations on land.', 'Balloons carrying instruments.', 'Satellites taking pictures of clouds.'], answer: 0, why: '第2段落にスマートフォンの話はない。ほかの3つは本文にある。' },
+      { q: 'Why do forecasters run the same model many times?', choices: ['To make the calculations for next week faster than for tomorrow.', 'To handle uncertainty by comparing runs with slightly different starting data.', 'To share their results with other countries around the world.', 'To remove all the small errors from the starting data.'], answer: 1, why: '第4段落：不確かさに対応するため、少しずつ違う初期条件で何度も計算し、結果がそろうかで確信度を判断する。誤差を全部なくすことはできない、来週の予報は明日より信頼性が低い、データの共有は第2段落。' },
+      { q: 'Which is NOT mentioned as a source of weather information?', choices: ['Balloons carrying instruments high into the sky.', 'Satellites taking pictures of clouds.', 'Reports sent from people\'s smartphones.', 'Weather stations measuring air pressure on land.'], answer: 2, why: '第2段落：情報源として地上の気象観測所、空高く上がる気球、船や飛行機の報告、雲を撮る衛星が挙げられている。人々のスマートフォンからの報告は書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['気象モデルによる計算のしくみ', 'コンピューターの値段', '物理学者の生活', '箱の作り方'], answer: 0, why: '第3段落は、データを気象モデルに入れ、物理の法則で大気の変化を計算することを述べている。' },
@@ -17502,8 +17502,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、折り紙は子どもの遊びにしか使われないと述べている。', answer: false, why: '第4段落 科学者や技術者も人工衛星のパネルや医療器具に折り方を使っている。' },
     ],
     qa: [
-      { q: 'How have engineers used origami?', choices: ['To design objects that are stored small and opened later, such as satellite panels.', 'To make paper cheaper.', 'To write new books about religion.', 'To teach mathematics without numbers.'], answer: 0, why: '第4段落 engineers have used folding patterns to design objects that must be stored in a small space and then opened。' },
-      { q: 'Which is NOT mentioned as a reason people enjoy origami today?', choices: ['It is a way to earn a lot of money.', 'It is a relaxing hobby.', 'It helps people to concentrate.', 'It is a way to teach children about shapes and numbers.'], answer: 0, why: '第5段落にお金をかせぐ話はない。ほかの3つは本文にある。' },
+      { q: 'How have engineers used origami?', choices: ['To decide which shapes can be folded from a flat sheet.', 'To make folded paper decorations for presents and religious ceremonies.', 'To create simple diagrams with lines and arrows for books.', 'To design things that fold small and open up later, like satellite panels.'], answer: 3, why: '第4段落：技術者は折りたたみ模様を使い、小さくしまってから広げる物（人工衛星のパネルや医療器具）を設計した。どの形が折れるかを研究したのは数学者、贈り物の飾りは第2段落、図の仕組みは第3段落。' },
+      { q: 'Which is NOT mentioned as a reason people enjoy origami today?', choices: ['It is a relaxing hobby for some people.', 'It helps teach children about shapes and numbers.', 'It is a way to earn a lot of money.', 'It helps some people to concentrate better.'], answer: 2, why: '第5段落：楽しむ理由として、リラックスできて集中の助けになる趣味であること、子どもに形や数を教える方法であることが挙げられている。大金をかせぐ手段という話は本文にない。' },
     ],
     gist: [
       { para: 1, choices: ['折り紙の歴史（儀式から娯楽へ）', '紙の作り方', '宗教の教え', '贈り物の値段'], answer: 0, why: '第2段落は、高価だった紙が儀式や贈り物に使われ、のちに人々の娯楽になった歴史を述べている。' },
@@ -17541,8 +17541,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、質問は自分があまり知らないことの告白である。', answer: false, why: '第5段落 a question is not a confession that you know little, but proof that you want to know more。' },
     ],
     qa: [
-      { q: 'Why do some teachers ask students to write questions on small cards?', choices: ['So that no one has to speak in front of everyone.', 'So that students can take the cards home.', 'To make the lesson longer.', 'To check students’ handwriting.'], answer: 0, why: '第4段落 so that no one has to speak in front of everyone。' },
-      { q: 'Which kind of question does the writer say is more useful?', choices: ['One that explains exactly which part of a problem is difficult.', 'One that only asks for the answer.', 'One that is asked very quickly.', 'One that is asked only before an exam.'], answer: 0, why: '第5段落 “What is the answer?” is less useful than one that explains exactly which part of a problem is difficult。' },
+      { q: 'Why do some teachers ask students to write questions on small cards?', choices: ['So that the teacher can cover more material before exams.', 'So that students can make a list before a new topic.', 'So that classmates do not ask questions that are too simple.', 'So that nobody has to speak up in front of the class.'], answer: 3, why: '第4段落：質問をカードに書いて集めるのは、みんなの前で話さなくてすむようにするため。リストを作るのは別の先生のやり方、教える量が多いのは質問しない理由（第2段落）、簡単な質問を防ぐ目的ではない。' },
+      { q: 'Which kind of question does the writer say is more useful?', choices: ['One that simply asks what the right answer is.', 'One that shows exactly which part of a problem is hard.', 'One that is written on a card and collected.', 'One that the teacher has already answered in class.'], answer: 1, why: '第5段落：「答えは何？」より、問題のどの部分が難しいかを正確に説明する質問のほうが役に立つ。カードに書くのは第4段落の方法で質問の質の話ではない、すでに答えた質問の話は本文にない。' },
     ],
     gist: [
       { para: 1, choices: ['生徒が学校で質問しなくなる理由', '試験の作り方', 'ノートのとり方', '先生になる方法'], answer: 0, why: '第2段落は、はずかしさや時間のなさ、授業の形など、質問がへる理由をあげている。' },
@@ -17619,8 +17619,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、ラジオ体操は日本の外ではまったく知られていない。', answer: false, why: '第5段落 radio exercises have also attracted attention outside Japan。' },
     ],
     qa: [
-      { q: 'Why do stamps encourage children during the summer holiday?', choices: ['They help children wake up early and keep a regular routine.', 'They can be exchanged for money.', 'They are needed to enter school.', 'They show who is the fastest runner.'], answer: 0, why: '第3段落 Collecting stamps encourages children to wake up early and keep a regular routine。' },
-      { q: 'Which is NOT mentioned as a benefit of morning stretching?', choices: ['It makes people taller.', 'It wakes up the body.', 'It improves blood flow.', 'It helps to prevent stiffness.'], answer: 0, why: '第4段落に背がのびる話はない。ほかの3つは本文にある。' },
+      { q: 'Why do stamps encourage children during the summer holiday?', choices: ['They help children get up early every morning.', 'Children can exchange them for a large prize.', 'They show which children do the exercises best.', 'They are needed to join the exercises at school.'], answer: 0, why: '第3段落にスタンプ集めが早起きと規則正しい生活を促すとある。賞品は毎日来た子への「小さな」もので交換ではなく、上手さや参加条件の話も本文にない。' },
+      { q: 'Which is NOT mentioned as a benefit of morning stretching?', choices: ['It wakes up the body.', 'It makes muscles grow much bigger.', 'It improves the flow of blood.', 'It helps prevent stiff shoulders.'], answer: 1, why: '第4段落は体を目覚めさせる・血流をよくする・肩や背中のこりを防ぐと述べる。筋肉を大きくするとは書かれておらず、高齢者の筋肉や関節を柔らかく保つ話だけである。' },
     ],
     gist: [
       { para: 2, choices: ['夏休みの子どもの思い出とスタンプ', 'カードの印刷のしかた', '学校の宿題', 'ごほうびの値段'], answer: 0, why: '第3段落は、夏休みのラジオ体操とスタンプカードが子どもの習慣をささえることを述べている。' },
@@ -17658,8 +17658,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、訪れた人のまちがいを大目に見る人はいない。', answer: false, why: '第5段落 many people are forgiving when visitors make innocent mistakes。' },
     ],
     qa: [
-      { q: 'What can a circle made with the thumb and first finger mean?', choices: ['“OK,” “money,” or “zero,” depending on the person.', 'Only “hello” in every country.', 'A sign that someone is angry.', 'A way to call a taxi.'], answer: 0, why: '第3段落 may mean "OK" to one person, "money" to another, and "zero" to someone else。' },
-      { q: 'What do communication experts advise travellers to do?', choices: ['Observe local people and avoid gestures they are not sure about.', 'Use as many gestures as possible.', 'Never smile at strangers.', 'Always stand very close to people.'], answer: 0, why: '第5段落 advise travellers to observe how local people behave and to avoid gestures they are not sure about。' },
+      { q: 'What can a circle made with the thumb and first finger mean?', choices: ['It always means "OK" in every country.', 'It is a rude sign in most regions.', 'It can mean different things to different people.', 'It shows the number of fingers used.'], answer: 2, why: '第3段落で親指と人さし指の輪は人によって「OK」「お金」「ゼロ」を意味するとある。「どの国でも OK」は言いすぎで、失礼とされるのは親指を立てるしぐさの話である。' },
+      { q: 'What do communication experts advise travellers to do?', choices: ['Use many gestures to make friends quickly.', 'Look directly into older people\'s eyes.', 'Stand close to people to seem friendly.', 'Watch local people and avoid uncertain gestures.'], answer: 3, why: '第5段落で専門家は現地の人のふるまいを観察し、自信のないしぐさを避けるよう勧める。目を見る・近くに立つは第4段落の文化差の例で、勧められてはいない。' },
     ],
     gist: [
       { para: 2, choices: ['手の合図による誤解', 'お金の数え方', '指の運動のしかた', '写真のとり方'], answer: 0, why: '第3段落は、親指を立てる合図や指の輪など、手の合図の意味が国によってちがうことを述べている。' },
@@ -17697,8 +17697,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '専門家によれば、返却できるびんは長いきょりを運ぶときに最も効果的である。', answer: false, why: '第4段落 most effective when they are used within a limited area … where the distance … is short。' },
     ],
     qa: [
-      { q: 'Why does the deposit system encourage people to return bottles?', choices: ['They get their money back when they return the empty bottle.', 'They receive a free drink every time.', 'They must pay a large fine otherwise.', 'The bottles become more beautiful.'], answer: 0, why: '第3段落 the money is given back when they return the empty bottle. This simple rule gives people a clear reason to bring bottles back。' },
-      { q: 'Which is NOT mentioned as a disadvantage of returnable bottles?', choices: ['Glass bottles make drinks taste bad.', 'Glass is heavy to transport.', 'Washing requires water and energy.', 'The system needs enough customers to return them.'], answer: 0, why: '第4段落に味が悪くなる話はない。ほかの3つは本文にある。' },
+      { q: 'Why does the deposit system encourage people to return bottles?', choices: ['People get their money back for empty bottles.', 'People pay less for drinks in glass bottles.', 'Machines give people a prize for each bottle.', 'Shops refuse to sell drinks without a bottle.'], answer: 0, why: '第3段落で、飲み物を買うときに少額の預り金を払い、空きびんを返すとそのお金がもどるとある。値段が安い・賞品がもらえる・販売を断るという話は本文にない。' },
+      { q: 'Which is NOT mentioned as a disadvantage of returnable bottles?', choices: ['Glass is heavy to transport over long distances.', 'Glass bottles make drinks taste worse.', 'Washing bottles needs water and energy.', 'It fails if few customers return bottles.'], answer: 1, why: '第4段落の欠点は、ガラスが重く遠くへ運ぶと燃料を使う、洗うのに水とエネルギーが要る、客が返さないとうまくいかない、の3つ。味が悪くなるとは書かれていない。' },
     ],
     gist: [
       { para: 1, choices: ['使い捨ての容器が生むごみの問題', 'ガラスの作り方', '海の生き物の種類', 'エネルギーの値段'], answer: 0, why: '第2段落は、ペットボトルのリサイクルの問題と、くり返し使えるびんがごみをへらすことを述べている。' },
@@ -17775,8 +17775,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、ユニバーサルデザインは建物や製品だけにかかわる。', answer: false, why: '第4段落 Universal design is not only about physical things. Information can also be designed。' },
     ],
     qa: [
-      { q: 'Who were the bumps on shampoo bottles first intended to help?', choices: ['People who cannot see well.', 'Children who cannot read.', 'People who work in shops.', 'Travellers from other countries.'], answer: 0, why: '第3段落 the bumps on shampoo bottles were first intended to help people who cannot see well。' },
-      { q: 'Why do supporters say universal design benefits society as a whole?', choices: ['Almost everyone will need help at some point in their lives.', 'It makes products much cheaper.', 'It is required only by a few people.', 'It makes buildings taller.'], answer: 0, why: '第5段落 almost everyone will need help at some point in their lives。' },
+      { q: 'Who were the bumps on shampoo bottles first intended to help?', choices: ['People washing their hair with eyes closed.', 'Older people with heavy suitcases.', 'People who have trouble seeing.', 'Foreign visitors who cannot read Japanese.'], answer: 2, why: '第3段落でシャンプーの突起はもともと目の不自由な人のためとある。目を閉じて洗う人にも役立つのは後から分かった利点で、スーツケースは低床バス、外国人は第4段落の案内表示の例。' },
+      { q: 'Why do supporters say universal design benefits society as a whole?', choices: ['It is a special favour for a small group.', 'It makes buildings cheaper to build and repair.', 'It adds equipment after buildings are finished.', 'Almost everyone needs help at some time in life.'], answer: 3, why: '第5段落で、ほぼだれもが人生のどこかで助けを必要とするので社会全体の利益になるとある。「少数への特別な好意」は本文が否定する内容で、完成後の設備追加は第2段落の昔の方法。' },
     ],
     gist: [
       { para: 2, choices: ['一つのデザインが多くの人を助ける例', 'バスの運転のしかた', 'シャンプーの作り方', 'スーツケースの選び方'], answer: 0, why: '第3段落は、床の低いバスやシャンプーのでこぼこが、多くの人の役に立つ例をあげている。' },
@@ -17814,8 +17814,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、使い捨てのはしはごみを生まない。', answer: false, why: '第5段落 using large numbers of them only once creates waste。' },
     ],
     qa: [
-      { q: 'Why are Chinese chopsticks often long with blunt ends?', choices: ['They are convenient for reaching shared dishes in the middle of a large table.', 'They are easier to make from metal.', 'They are used mainly for removing fish bones.', 'They are used only by children.'], answer: 0, why: '第3段落 convenient for reaching dishes placed in the middle of a large table and shared by everyone。' },
-      { q: 'Which is NOT mentioned as bad chopstick manners?', choices: ['Holding chopsticks in the right hand.', 'Sticking chopsticks upright in rice.', 'Pointing at people with chopsticks.', 'Waving chopsticks in the air while talking.'], answer: 0, why: '第4段落に右手で持つことが失礼だという話はない。ほかの3つは本文にある。' },
+      { q: 'Why are Chinese chopsticks often long with blunt ends?', choices: ['They can reach shared dishes on a large table.', 'They are good for removing small fish bones.', 'They are made of metal and used with spoons.', 'They were first used mainly for cooking food.'], answer: 0, why: '第3段落で中国の箸は長く先が丸く、大きな食卓の中央にある共有の皿に届きやすいとある。魚の骨は日本、金属とスプーンは韓国、調理用は第2段落の初期の使い方の話である。' },
+      { q: 'Which is NOT mentioned as bad chopstick manners?', choices: ['Sticking chopsticks upright in a bowl of rice.', 'Carrying your own chopsticks in a case.', 'Pointing at people with your chopsticks.', 'Passing food from chopsticks to chopsticks.'], answer: 1, why: '第4段落はご飯に箸を立てる、箸から箸へ食べ物を渡す、人を箸で指すことを無作法とする。自分の箸をケースで持ち歩くのは第5段落の環境への取り組みで、マナー違反ではない。' },
     ],
     gist: [
       { para: 2, choices: ['国によるはしの形のちがい', 'テーブルの作り方', '魚の料理のしかた', 'スプーンの歴史'], answer: 0, why: '第3段落は、中国・日本・韓国のはしの長さや形、材料のちがいを述べている。' },
@@ -17853,8 +17853,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '今も世界の多くの地域では、人々が手で服を洗っている。', answer: true, why: '第5段落 in many parts of the world, people still wash clothes by hand。' },
     ],
     qa: [
-      { q: 'What did people have to do before washing machines became common?', choices: ['Carry and heat water, then rub, rinse, and squeeze the clothes by hand.', 'Send all their clothes to factories.', 'Wear the same clothes for a year.', 'Use machines powered by the wind.'], answer: 0, why: '第2段落 Water had to be carried … heated … rubbed by hand … rinsed … squeezed。' },
-      { q: 'Why do some people still wash clothes by hand today?', choices: ['They cannot afford a machine or lack reliable electricity and water.', 'Machines are not sold anywhere.', 'Hand washing uses less time.', 'Machines cannot wash cotton.'], answer: 0, why: '第5段落 because they cannot afford a machine or do not have a reliable supply of electricity and water。' },
+      { q: 'What did people have to do before washing machines became common?', choices: ['Buy expensive machines that needed a lot of attention.', 'Take their clothes to a river every day.', 'Carry and heat water and wash clothes by hand.', 'Send their clothes to be washed by women outside.'], answer: 2, why: '第2段落で、井戸や川から水を運んで火で温め、手でこすり、すすいでしぼったとある。高価な機械は第3段落の初期の洗濯機の話で、毎日川へ行く・外に出すとは書かれていない。' },
+      { q: 'Why do some people still wash clothes by hand today?', choices: ['They think machines use too much water.', 'They prefer the old ways of their families.', 'They want to save time for other activities.', 'They cannot buy machines or lack steady power.'], answer: 3, why: '第5段落で、機械を買う余裕がない、または電気や水が安定して使えないため今も手で洗う人がいるとある。水を使いすぎる・昔のやり方を好む・時間を節約したいとは書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['洗濯機の進歩と自動化', '電気の発明の歴史', '洗剤の作り方', 'ボタンのデザイン'], answer: 0, why: '第3段落は、洗濯機がより安く、安全に、自動的になっていった進歩を述べている。' },
@@ -18009,8 +18009,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '日付変更線は、おもに太平洋の上を通っている。', answer: true, why: '第5段落 it runs mainly through the Pacific Ocean。' },
     ],
     qa: [
-      { q: 'Why is the world divided into zones roughly 15 degrees wide?', choices: ['The Earth turns 360 degrees in about 24 hours.', 'There are 15 large countries in the world.', 'Railways are about 15 kilometres long.', 'The sun is 15 times larger than the Earth.'], answer: 0, why: '第4段落 The Earth turns through 360 degrees in about 24 hours, so the world was divided into zones roughly 15 degrees wide。' },
-      { q: 'What can happen to a traveller who crosses the International Date Line?', choices: ['They may move forward or back by a whole day.', 'Their watch stops working.', 'They must change trains.', 'They lose one hour only.'], answer: 0, why: '第5段落 A traveller who crosses it may suddenly move forward or back by a whole day。' },
+      { q: 'Why is the world divided into zones roughly 15 degrees wide?', choices: ['The Earth turns 360 degrees in about a day.', 'Railway companies wanted each town to keep local time.', 'Every country chose a zone that suits its economy.', 'The sun is highest at noon in every town.'], answer: 0, why: '第4段落で地球は約24時間で360度回るので、約15度ごとに1時間ずつ違う区分にしたとある。鉄道会社は地方時ではなく標準時を求め、国の事情は境界線の話である。' },
+      { q: 'What can happen to a traveller who crosses the International Date Line?', choices: ['Their watch stops working for a whole day.', 'Their date may jump forward or back a day.', 'Their time changes by only half an hour.', 'They must change trains on a Pacific island.'], answer: 1, why: '第5段落で日付変更線をこえると、急に丸1日進んだりもどったりするとある。30分ずれるのは第4段落の一部の国の時間帯の話で、時計が止まる・島で乗りかえるとは書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['鉄道が標準時を必要にしたこと', '列車の作り方', '駅の名前のつけ方', '時刻表の印刷のしかた'], answer: 0, why: '第3段落は、鉄道が広まり、列車の時刻表のために広い地域の標準時が使われはじめたことを述べている。' },
@@ -18048,8 +18048,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、ストリートアートに反対する人はいない。', answer: false, why: '第5段落 Not everyone is convinced, though。' },
     ],
     qa: [
-      { q: 'What can legal murals do for an area?', choices: ['Turn a dull wall into a landmark and attract tourists.', 'Make rents lower everywhere.', 'Stop all crime in the city.', 'Replace all galleries.'], answer: 0, why: '第3段落 Such projects can turn a dull grey wall into a landmark, which may encourage tourists to visit。' },
-      { q: 'What is one worry some residents have about popular street art?', choices: ['It can raise rents and push out local people.', 'It uses too much water.', 'It makes the streets too dark.', 'It is too small to see.'], answer: 0, why: '第5段落 popular street art can raise rents and push out the very people who made the neighbourhood interesting。' },
+      { q: 'What can legal murals do for an area?', choices: ['Lower the rents for people who live there.', 'Stop all graffiti across the whole city.', 'Make a dull wall a landmark that draws tourists.', 'Allow anyone to paint on any building freely.'], answer: 2, why: '第3段落で合法の壁画は灰色の壁を名所に変え、観光客を呼ぶとある。家賃は第5段落で逆に上がる心配があり、落書きを「すべて」止めるは言いすぎ、自由に描けるのは決められた壁だけ。' },
+      { q: 'What is one worry some residents have about popular street art?', choices: ['It costs the city a lot to remove.', 'It makes the area look neglected and dirty.', 'It is shown only in expensive galleries.', 'It may raise rents and force residents out.'], answer: 3, why: '第5段落で、人気のストリートアートが家賃を上げ、地域を面白くした住民を追い出すという心配がある。除去費用や荒れた印象は第2段落の昔の落書きへの見方である。' },
     ],
     gist: [
       { para: 1, choices: ['犯罪と見られてきたグラフィティの歴史', '美術館の作り方', '警察の仕事', 'ペンキの値段'], answer: 0, why: '第2段落は、グラフィティがおもに犯罪と見られ、消されたり罰せられたりしてきた歴史を述べている。' },
@@ -18321,8 +18321,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、すべての雪の結晶はまったく同じ道すじで落ちてくる。', answer: false, why: '第5段落 every snowflake follows a slightly different path through the cloud。' },
     ],
     qa: [
-      { q: 'Why do most snowflakes have six sides?', choices: ['Water molecules naturally arrange themselves in a six-sided pattern.', 'Clouds are shaped like hexagons.', 'Dust particles always have six sides.', 'Wind cuts them into six pieces.'], answer: 0, why: '第2段落 they naturally arrange themselves in a six-sided pattern。' },
-      { q: 'What did Nakaya show by comparing crystal shapes with conditions?', choices: ['A snowflake carries information about the air it has fallen through.', 'Snow always falls in the same shape.', 'Snowflakes are made in laboratories only.', 'Temperature has no effect on snow.'], answer: 0, why: '第4段落 he showed that a snowflake carries information about the air through which it has fallen。' },
+      { q: 'Why do most snowflakes have six sides?', choices: ['Water molecules join in a six-sided pattern.', 'Dust particles in clouds have six sides.', 'Moist air makes crystals grow six arms.', 'Cold temperatures always produce flat plates.'], answer: 0, why: '第2段落で、水の分子が氷になるとき自然に六角形に並び、それが結晶の形に表れるとある。ちりは結晶のもとになるだけで、湿った空気は枝分かれ、温度は板や針の形に関係する。' },
+      { q: 'What did Nakaya show by comparing crystal shapes with conditions?', choices: ['No two snowflakes ever form in a laboratory.', 'A snowflake\'s shape reflects the air it passed through.', 'Temperature has no effect on crystal shape.', 'Artificial snow is more beautiful than real snow.'], answer: 1, why: '第4段落で中谷は結晶の形と条件を比べ、雪は落ちてきた空気の情報を運ぶことを示した。実験室で人工雪を作ることに成功しており、温度は形に影響する。美しさの比較はない。' },
     ],
     gist: [
       { para: 2, choices: ['気温と水分で変わる結晶の形', '雲のでき方の歴史', '針の作り方', '羽毛の集め方'], answer: 0, why: '第3段落は、気温や水分の量によって板・針・柱・羽のような形に変わることを述べている。' },
@@ -18399,8 +18399,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、プランクトンの数が変わっても海のほかの生き物には影響しない。', answer: false, why: '第5段落 even small changes in plankton populations could have large effects throughout the ocean。' },
     ],
     qa: [
-      { q: 'How do certain whales feed?', choices: ['By swallowing water and filtering out tiny animals such as krill.', 'By hunting large sharks.', 'By eating plants on the sea floor.', 'By catching birds.'], answer: 0, why: '第4段落 feed by swallowing huge amounts of water and filtering out tiny animals such as krill。' },
-      { q: 'Which is NOT mentioned as something that can affect plankton?', choices: ['The noise of ships.', 'Warmer water.', 'Changes in ocean currents.', 'Pollution.'], answer: 0, why: '第5段落に船の音の話はない。ほかの3つは本文にある。' },
+      { q: 'How do certain whales feed?', choices: ['By eating small fish that feed on plankton.', 'By hunting seabirds and seals near the surface.', 'By filtering tiny animals like krill from water.', 'By using sunlight to make their own food.'], answer: 2, why: '第4段落で、ある種のクジラは大量の水を飲みこみ、オキアミなどの小さな動物をこし取って食べるとある。日光で栄養を作るのは植物プランクトンで、小魚や海鳥を食べるとは書かれていない。' },
+      { q: 'Which is NOT mentioned as something that can affect plankton?', choices: ['Warmer water in the ocean.', 'Changes in ocean currents.', 'Pollution in the sea.', 'The noise made by large ships.'], answer: 3, why: '第5段落は、水温の上昇・海流の変化・汚染がプランクトンの生える場所や数に影響すると述べる。船の音については本文のどこにも書かれていない。' },
     ],
     gist: [
       { para: 1, choices: ['植物プランクトンと動物プランクトンのちがい', 'けんび鏡の使い方', 'カニの育て方', '水面の温度'], answer: 0, why: '第2段落は、植物プランクトンと動物プランクトンの2つのグループを説明している。' },
@@ -18438,8 +18438,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者は、どんな目的でも紙で読むほうが必ずすぐれていると述べている。', answer: false, why: '第5段落 perhaps the question is not which method is better, but which one suits a particular purpose。' },
     ],
     qa: [
-      { q: 'Why might readers have an advantage with difficult texts?', choices: ['They can slow down, go back, and read sentences again.', 'They can listen to different voices.', 'They can read while cooking.', 'They never get tired.'], answer: 0, why: '第3段落 they can easily slow down, go back, and read a difficult sentence again。' },
-      { q: 'How can audiobooks help language learners?', choices: ['By connecting the written form of words with their pronunciation.', 'By replacing all textbooks.', 'By making stories shorter.', 'By translating every word.'], answer: 0, why: '第4段落 an excellent way to connect the written form of words with their pronunciation。' },
+      { q: 'Why might readers have an advantage with difficult texts?', choices: ['They can easily go back and read again.', 'They understand simple stories much better.', 'They can hear the narrator\'s emotions.', 'They read faster than listeners can speak.'], answer: 0, why: '第3段落で、難しい文章では読む人はゆっくり読んだり、もどって読み直したりできるので有利とある。簡単な話は同じくらいの理解で、感情は第4段落の朗読者の利点、速さの話はない。' },
+      { q: 'How can audiobooks help language learners?', choices: ['By letting them skip difficult sentences.', 'By linking how words look and sound.', 'By teaching them to speak like narrators.', 'By replacing printed books in the classroom.'], answer: 1, why: '第4段落で、本文を目で追いながら聞くと、語のつづりと発音を結びつけられるとある。難しい文を飛ばす・朗読者のように話す・教室の本を置きかえるとは書かれていない。' },
     ],
     gist: [
       { para: 1, choices: ['オーディオブックの便利さとだれでも楽しめること', '朗読者の給料', '目の病気の治し方', '料理の手順'], answer: 0, why: '第2段落は、ほかのことをしながら聞ける便利さと、読むのがむずかしい人にもとどくことを述べている。' },
@@ -18477,8 +18477,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '専門家によれば、電気がどう作られても電気自動車の汚染のへり方は同じである。', answer: false, why: '第5段落 If the electricity is produced mainly by burning coal, the overall reduction in pollution may be smaller。' },
     ],
     qa: [
-      { q: 'Why did petrol cars replace early electric cars?', choices: ['They became cheaper and could travel much farther.', 'They were quieter.', 'They produced no exhaust.', 'They needed no fuel.'], answer: 0, why: '第1段落 before petrol cars became cheaper and able to travel much farther。' },
-      { q: 'Which is NOT mentioned as a challenge for electric cars?', choices: ['They are too noisy for cities.', 'Batteries are expensive.', 'Charging takes a long time.', 'There are not enough charging stations in some areas.'], answer: 0, why: '第4段落にうるさいという話はない（むしろ静か）。ほかの3つは本文にある。' },
+      { q: 'Why did petrol cars replace early electric cars?', choices: ['They produced no exhaust gases at all.', 'They needed less regular maintenance.', 'They became cheaper and could go farther.', 'They were quieter on city streets.'], answer: 2, why: '第1段落で、ガソリン車が安くなり、ずっと遠くまで走れるようになったため電気自動車にとってかわったとある。排ガスなし・整備が少ない・静かは電気自動車側の利点である。' },
+      { q: 'Which is NOT mentioned as a challenge for electric cars?', choices: ['Batteries are still expensive.', 'Charging takes a long time.', 'There are too few charging stations.', 'They make too much noise in cities.'], answer: 3, why: '第4段落の課題は電池が高い、充電に時間がかかる、充電所が足りない、金属の採掘など。電気自動車はほとんど音を出さず、第2段落では町が静かになると述べられている。' },
     ],
     gist: [
       { para: 2, choices: ['電気自動車の実用的な利点', '車の色の選び方', 'ガソリンの作り方', '運転免許のとり方'], answer: 0, why: '第3段落は、充電が安い、手入れが少ない、なめらかに速度が上がるなどの利点を述べている。' },
@@ -18516,8 +18516,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '浮世絵がヨーロッパで称賛されていたころ、日本でも浮世絵の人気はますます高まった。', answer: false, why: '第5段落 the prints were sometimes considered old-fashioned。' },
     ],
     qa: [
-      { q: 'Why were many copies of an ukiyo-e print possible?', choices: ['The same carved blocks could be used again and again.', 'Machines printed them automatically.', 'Each artist drew many copies by hand.', 'They were printed on cloth.'], answer: 0, why: '第2段落 Because the same blocks could be used again and again, many copies of a picture could be produced。' },
-      { q: 'What fascinated European artists about ukiyo-e?', choices: ['Bold outlines, flat areas of colour, and unusual viewpoints.', 'Their very high prices.', 'Their realistic shadows.', 'The use of oil paint.'], answer: 0, why: '第4段落 fascinated by the bold outlines, flat areas of colour, and unusual viewpoints of the prints。' },
+      { q: 'Why were many copies of an ukiyo-e print possible?', choices: ['The same wooden blocks could be reused.', 'Each artist carved all the blocks alone.', 'Only one block was used for all colours.', 'European printers made copies by machine.'], answer: 0, why: '第2段落で、同じ版木を何度も使えたので多くの枚数を刷れたとある。彫るのは職人で絵師ではなく、版木はふつう色ごとに1枚。ヨーロッパで機械で刷ったとは書かれていない。' },
+      { q: 'What fascinated European artists about ukiyo-e?', choices: ['Their use as wrapping paper for goods.', 'Strong outlines, flat colours, and unusual views.', 'Their Western style, popular in Japan then.', 'Their low price for ordinary European people.'], answer: 1, why: '第4段落で、ヨーロッパの画家は大胆な輪郭、平らな色面、めずらしい視点に夢中になったとある。包み紙はたしかでない言い伝えで、西洋風は当時の日本の流行、安さは日本の庶民の話。' },
     ],
     gist: [
       { para: 1, choices: ['木版で作られた浮世絵の作り方', '絵の具の値段', '木の育て方', '職人の給料'], answer: 0, why: '第2段落は、絵師・ほり師・刷り師による木版の作り方と、それが安さにつながったことを述べている。' },
@@ -18633,8 +18633,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、食べ方を変えるにはむずかしい訓練が必要である。', answer: false, why: '第5段落 Changing the way we eat does not have to be difficult。' },
     ],
     qa: [
-      { q: 'What can happen if we eat very quickly?', choices: ['We may eat more than we need before the brain knows we are full.', 'Our food becomes tastier.', 'We digest food more easily.', 'We feel full immediately.'], answer: 0, why: '第2段落 we may finish a large amount of food before this message reaches the brain, which can lead to eating more than we need。' },
-      { q: 'Which is NOT mentioned as a simple step to slow the pace of eating?', choices: ['Eating only once a day.', 'Putting down chopsticks between bites.', 'Turning off the television.', 'Talking with others at the table.'], answer: 0, why: '第5段落に1日1回だけ食べるという話はない。ほかの3つは本文にある。' },
+      { q: 'What can happen if we eat very quickly?', choices: ['Our stomach stops sending signals to the brain.', 'We enjoy the taste of food much more.', 'We may overeat before feeling full.', 'Saliva begins digestion faster in the mouth.'], answer: 2, why: '第2段落で、満腹の合図が脳に届くまで約20分かかるので、早食いだと必要以上に食べてしまうことがあるとある。合図が止まるのではなく遅れて届く。味や唾液はゆっくり食べる利点。' },
+      { q: 'Which is NOT mentioned as a simple step to slow the pace of eating?', choices: ['Putting down your fork between bites.', 'Turning off the TV while eating.', 'Talking with others at the table.', 'Eating only one meal each day.'], answer: 3, why: '第5段落の方法は、ひと口ごとに箸やフォークを置く、食事中にテレビを消す、食卓で人と話すの3つ。1日1食にするという方法は本文に書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['よくかむことと消化', '歯のみがき方', '料理の味つけ', 'フォークの使い方'], answer: 0, why: '第3段落は、よくかむことが消化を助け、味も楽しめることを述べている。' },
@@ -18789,8 +18789,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、花火大会を続けることに何の苦労もない。', answer: false, why: '第5段落 some communities have had difficulty continuing them。' },
     ],
     qa: [
-      { q: 'Which metal produces blue in fireworks?', choices: ['Copper.', 'Strontium.', 'Sodium.', 'Barium.'], answer: 0, why: '第3段落 copper produces blue。' },
-      { q: 'What are Japanese fireworks especially famous for?', choices: ['Their round shape that looks like a perfect circle from any angle.', 'Being the loudest in the world.', 'Being made only by machines.', 'Lasting for several hours each.'], answer: 0, why: '第4段落 especially famous for their round shape … looks like a perfect circle from any angle。' },
+      { q: 'Which metal produces blue in fireworks?', choices: ['Copper.', 'Sodium.', 'Barium.', 'Strontium.'], answer: 0, why: '第3段落で、銅は青、ストロンチウムは赤、ナトリウムは黄、バリウムは緑を出すとある。ほかの3つは本文に出る金属だが、出す色がそれぞれ違う。' },
+      { q: 'What are Japanese fireworks especially famous for?', choices: ['Their bright red and yellow colours.', 'Their round shape seen from any angle.', 'Being made entirely by modern machines.', 'Being invented in Japan before China.'], answer: 1, why: '第4段落で、日本の花火はどの角度から見ても完全な円に見える丸い形で有名とある。今も職人の手作業が多く、花火は中国で生まれたと第2段落にある。色は日本特有の話ではない。' },
     ],
     gist: [
       { para: 2, choices: ['花火の色を生む化学', '金属のほり方', '料理の色づけ', '空の色が変わる理由'], answer: 0, why: '第3段落は、金属ごとにちがう色が出るしくみと、花火師の色の配置を述べている。' },
@@ -18867,8 +18867,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、よごれた地下水はかんたんにきれいにできる。', answer: false, why: '第5段落 cleaning it can be extremely difficult。' },
     ],
     qa: [
-      { q: 'Why can groundwater seem like an endless supply?', choices: ['It is often clean and available even during dry seasons.', 'It is always found near the sea.', 'It never needs to be pumped.', 'It is made in factories.'], answer: 0, why: '第2段落 Because groundwater is often cleaner than surface water and is available even during dry seasons, it can seem like an endless supply。' },
-      { q: 'What happens to the ground when too much water is removed from soil layers?', choices: ['The soil is compressed and the surface slowly sinks.', 'The ground rises higher.', 'New rivers appear.', 'The soil becomes cleaner.'], answer: 0, why: '第4段落 the soil becomes compressed and the surface slowly drops。' },
+      { q: 'Why can groundwater seem like an endless supply?', choices: ['Rain refills it within a few days.', 'Factories use it to cool their machines.', 'It is often clean and lasts through dry seasons.', 'It is found under every river and lake.'], answer: 2, why: '第2段落で、地下水は地表の水よりきれいなことが多く、乾いた季節でも使えるので無限に見えるとある。第3段落では補充に何年もかかるとあり、工場の利用は理由ではない。' },
+      { q: 'What happens to the ground when too much water is removed from soil layers?', choices: ['The soil fills with more water and rises.', 'Wells become shallower and cheaper to dig.', 'Chemicals from farms seep into the soil.', 'The soil gets pressed and the ground sinks.'], answer: 3, why: '第4段落で、土の層から水がぬかれると土が押し縮められ、地面がゆっくり沈むとある。上がるのは逆で、第3段落では井戸を深くほる必要があり費用が増える。化学物質は第5段落の汚染の話。' },
     ],
     gist: [
       { para: 1, choices: ['地下水のさまざまな使い道', '井戸のほり方の歴史', '工場の機械', '雨のふり方'], answer: 0, why: '第2段落は、飲み水・農業・工場など、地下水の使われ方を述べている。' },
@@ -18906,8 +18906,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、すべての親が子どもへの影響を心配していない。', answer: false, why: '第5段落 Some parents have also raised a different question … some worry that children may become less polite。' },
     ],
     qa: [
-      { q: 'Why can voice assistants be helpful for older people?', choices: ['Speaking may be easier for them than using screens and small buttons.', 'They can repair their computers.', 'They make their eyesight better.', 'They cook meals for them.'], answer: 0, why: '第2段落 helpful for people who find screens and small buttons difficult to use, such as older people。' },
-      { q: 'What do experts advise users to do about privacy?', choices: ['Check the privacy settings and delete unwanted recordings.', 'Never use the internet.', 'Speak more loudly.', 'Buy more devices.'], answer: 0, why: '第4段落 Experts advise users to check the privacy settings carefully and to delete recordings that they do not want to keep。' },
+      { q: 'Why can voice assistants be helpful for older people?', choices: ['Speaking can be easier than using small buttons.', 'They always understand strong accents well.', 'They teach older people to be more polite.', 'They keep conversations private from families.'], answer: 0, why: '第2段落で、画面や小さなボタンが使いにくい高齢者には話すだけのほうが楽とある。第3段落では強いなまりが苦手とされ、礼儀は第5段落の子どもの話、プライバシーは心配の種である。' },
+      { q: 'What do experts advise users to do about privacy?', choices: ['Stop using voice assistants at home.', 'Check settings and delete unwanted recordings.', 'Train devices with many different voices.', 'Say the wake word only when alone.'], answer: 1, why: '第4段落で専門家はプライバシー設定をよく確認し、残したくない録音を消すよう勧める。使うのをやめるとは言っておらず、多くの声で学習させるのは第3段落の開発者の取り組み。' },
     ],
     gist: [
       { para: 1, choices: ['音声アシスタントの便利さ', '料理の手順', '運転のしかた', '暖房の値段'], answer: 0, why: '第2段落は、画面にふれずに使える便利さと、使いにくい人への助けを述べている。' },
@@ -18984,8 +18984,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、トンボはどの地域でもふえている。', answer: false, why: '第5段落 some kinds are becoming rarer as ponds and rice fields disappear。' },
     ],
     qa: [
-      { q: 'What makes dragonflies excellent hunters?', choices: ['They can control their flight very precisely.', 'They hunt only at night.', 'They have very long legs.', 'They live in large groups.'], answer: 0, why: '第2段落 Such control makes dragonflies excellent hunters。' },
-      { q: 'Why can the number of dragonflies be a sign of a healthy environment?', choices: ['Their nymphs need clean water.', 'They eat only clean plants.', 'They avoid cities completely.', 'They live for many hundreds of years.'], answer: 0, why: '第4段落 Because nymphs need clean water, the number of dragonflies in an area can be a sign of how healthy the local environment is。' },
+      { q: 'What makes dragonflies excellent hunters?', choices: ['Their huge wings, wider than a person\'s arm.', 'Their long life spent underwater as nymphs.', 'Their excellent control over how they fly.', 'Their habit of hunting only at night.'], answer: 2, why: '第2段落で、4枚の羽を別々に動かして前後左右に飛びホバリングもできるので、優れた狩りの名手だとある。腕より広い羽は大昔の仲間の話で、水中生活や夜の狩りは理由ではない。' },
+      { q: 'Why can the number of dragonflies be a sign of a healthy environment?', choices: ['Adults need clean air to fly well.', 'They eat the insects that pollute water.', 'Ponds and rice fields have been increasing.', 'Young dragonflies can only live in clean water.'], answer: 3, why: '第4段落で、幼虫（ヤゴ）はきれいな水が必要なので、トンボの数は環境の健康さの目印になるとある。必要なのは空気ではなく水で、第5段落では池や田んぼは減っている。' },
     ],
     gist: [
       { para: 1, choices: ['自由に飛べる4枚の羽', 'ヘリコプターの作り方', '蚊のふせぎ方', '空の天気'], answer: 0, why: '第2段落は、4枚の羽を別々に動かして自由に飛び、狩りがうまいことを述べている。' },
@@ -19062,8 +19062,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '初期の研究者は、はじめからX線の危険をよく知っていた。', answer: false, why: '第4段落 At first, however, people did not understand that X-rays could be dangerous。' },
     ],
     qa: [
-      { q: 'What made Röntgen realise that an unknown ray existed?', choices: ['A nearby screen began to glow although the tube was covered.', 'His wife told him about it.', 'He read about it in a book.', 'The tube exploded.'], answer: 0, why: '第2段落 he noticed that a nearby screen had begun to glow, even though the tube was covered with black paper。' },
-      { q: 'Which is NOT mentioned as a modern use of X-ray technology?', choices: ['Cooking food quickly.', 'Checking luggage at airports.', 'Finding flaws in products.', 'Studying the structure of materials.'], answer: 0, why: '第5段落に料理の話はない。ほかの3つは本文にある。' },
+      { q: 'What made Röntgen realise that an unknown ray existed?', choices: ['A nearby screen glowed though the tube was covered.', 'His wife\'s ring appeared in an image.', 'The black paper over the tube began to burn.', 'A doctor asked him to find a broken bone.'], answer: 0, why: '第2段落で、管を黒い紙でおおっていたのに近くの画面が光ったので、未知の光線に気づいたとある。妻の手の写真は発見後のことで、紙が燃えた・医師に頼まれたとは書かれていない。' },
+      { q: 'Which is NOT mentioned as a modern use of X-ray technology?', choices: ['Checking luggage at airports.', 'Cooking food more quickly.', 'Finding hidden flaws in products.', 'Studying the structure of materials.'], answer: 1, why: '第5段落の今の使い道は、空港の荷物検査、工場での製品の欠陥さがし、科学者による物質の構造研究。食べ物を早く調理するという使い道は本文にない。' },
     ],
     gist: [
       { para: 2, choices: ['X線の性質と医療での利用の広まり', '指輪の作り方', '新聞の歴史', 'ノーベル賞の選び方'], answer: 0, why: '第3段落は、X線が通る物と通らない物、最初の画像、医療への急速な広まりを述べている。' },
@@ -19101,8 +19101,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、畳の表面は一度作れば張りかえる必要がない。', answer: false, why: '第4段落 their surface must be replaced every several years。' },
     ],
     qa: [
-      { q: 'How do people often describe the size of a room in Japan?', choices: ['By the number of tatami that would cover the floor.', 'By the number of windows.', 'By the height of the ceiling.', 'By the number of doors.'], answer: 0, why: '第2段落 using the number of tatami that would cover the floor。' },
-      { q: 'Why have fewer tatami rooms been built in new homes?', choices: ['Many people prefer Western-style rooms that are easier to clean.', 'Tatami became illegal.', 'Rush grass is no longer grown anywhere.', 'Tatami are too hard to sleep on.'], answer: 0, why: '第4段落 Many people now prefer Western-style rooms … partly because they are easier to clean。' },
+      { q: 'How do people often describe the size of a room in Japan?', choices: ['By the length of the wooden floor.', 'By how many people can sleep in it.', 'By how many mats would cover the floor.', 'By the smell of the new rush grass.'], answer: 2, why: '第2段落で、部屋の広さを床をおおう畳の枚数で「六畳」「八畳」のように表すとある。木の床の長さや寝られる人数ではなく、においは第1段落の新しい畳の特徴である。' },
+      { q: 'Why have fewer tatami rooms been built in new homes?', choices: ['Tatami absorb too much sound in rooms.', 'Tatami make rooms hot in the summer.', 'Visitors from abroad do not like tatami.', 'Many prefer Western rooms that are easier to clean.'], answer: 3, why: '第4段落で、掃除しやすく生活も変わったため洋室を好む人が多いとある。音を吸うのは第3段落の長所、夏を快適にするのも長所で、第5段落では外国人は畳の部屋を楽しむとある。' },
     ],
     gist: [
       { para: 1, choices: ['畳を使った部屋の大きさのはかり方', '地図の読み方', '家の値段の決め方', '地域のことば'], answer: 0, why: '第2段落は、6畳・8畳のように畳の数で部屋の大きさを表すしくみを述べている。' },
@@ -19140,8 +19140,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'ラニーニャのときは、太平洋の東部がふだんよりあたたかくなる。', answer: false, why: '第4段落 La Niña, in which the eastern Pacific becomes cooler than usual。' },
     ],
     qa: [
-      { q: 'Why were Peruvian fishermen unhappy when the warm current appeared?', choices: ['Fewer fish could be caught.', 'Their boats were damaged.', 'It was too cold to fish.', 'Christmas was cancelled.'], answer: 0, why: '第2段落 it often meant that fewer fish could be caught。' },
-      { q: 'How can El Niño forecasts help people?', choices: ['Farmers can choose suitable crops and governments can prepare.', 'They can stop El Niño from happening.', 'They make the ocean cooler.', 'They increase the number of fish.'], answer: 0, why: '第5段落 Such forecasts can help farmers choose suitable crops and allow governments to prepare for floods or water shortages。' },
+      { q: 'Why were Peruvian fishermen unhappy when the warm current appeared?', choices: ['The warm water meant fewer fish to catch.', 'The current always came during Christmas.', 'Cold water brought too many fish to sell.', 'Strong winds made fishing boats unsafe.'], answer: 0, why: '第2段落で、暖かい海流は魚があまりとれなくなることを意味したので漁師には悪い知らせだったとある。クリスマスごろは名前の由来で「いつも」ではなく、冷たい水は本来魚を支えるもの。' },
+      { q: 'How can El Niño forecasts help people?', choices: ['They can stop El Niño from developing.', 'Farmers can pick crops and governments prepare.', 'Fishermen can catch more fish near Peru.', 'Japan can have warmer summers every year.'], answer: 1, why: '第5段落で、予報は農家が合う作物を選び、政府が洪水や水不足に備える助けになるとある。発生を止めることはできず、日本は冷夏・暖冬の傾向で、漁獲が増えるとは書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['エルニーニョが起こるしくみ', '魚の料理のしかた', 'オーストラリアの観光', '船の作り方'], answer: 0, why: '第3段落は、ふだんの風と海流のようすと、エルニーニョで風が弱まり冷たい水が上がりにくくなるしくみを述べている。' },
@@ -19218,8 +19218,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、イルカは人間の活動の影響を受けていない。', answer: false, why: '第5段落 pollution, fishing nets, and noise from ships pose serious threats。' },
     ],
     qa: [
-      { q: 'Why do some dolphins carry sponges on their noses?', choices: ['To protect their noses from sharp rocks and stinging creatures.', 'To play with other dolphins.', 'To keep their noses warm.', 'To attract humans.'], answer: 0, why: '第4段落 The sponge protects their noses from sharp rocks and stinging creatures。' },
-      { q: 'Which animals are mentioned as having shown similar mirror behaviour?', choices: ['Great apes and elephants.', 'Cats and dogs.', 'Sharks and whales.', 'Birds and fish.'], answer: 0, why: '第3段落 Only a few kinds of animals, such as great apes and elephants, have shown similar behaviour。' },
+      { q: 'Why do some dolphins carry sponges on their noses?', choices: ['To call a particular friend in the group.', 'To look at marks on their bodies.', 'To guard their noses against sharp rocks.', 'To carry food back to their young.'], answer: 2, why: '第4段落で、海綿は鋭い岩や刺す生き物から鼻を守るとある。友だちを呼ぶのは第2段落の口笛、印を見るのは第3段落の鏡の実験の話で、子に食べ物を運ぶとは書かれていない。' },
+      { q: 'Which animals are mentioned as having shown similar mirror behaviour?', choices: ['Sharks and other large fish.', 'Whales and seals in the sea.', 'Birds that ride ocean waves.', 'Great apes and elephants.'], answer: 3, why: '第3段落で、鏡で自分を見分ける似た行動を示したのは類人猿やゾウなど少数の動物だけとある。サメ・クジラ・アザラシ・鳥についてそのような記述はない。' },
     ],
     gist: [
       { para: 1, choices: ['名前のような口笛でのコミュニケーション', '口笛のふき方', '音楽の歴史', '船の汽笛'], answer: 0, why: '第2段落は、個体ごとの口笛で仲間を見分け、まねることを述べている。' },
@@ -19257,8 +19257,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、ラウンドアバウトはどんな場所にも向いている。', answer: false, why: '第5段落 roundabouts are not suitable everywhere。' },
     ],
     qa: [
-      { q: 'Why do collisions in roundabouts tend to be less severe?', choices: ['All vehicles move in the same direction and must slow down.', 'There are more traffic lights.', 'Cars are not allowed to enter.', 'The roads are always empty.'], answer: 0, why: '第3段落 all vehicles move in the same direction and must slow down … so collisions that do occur tend to be less severe。' },
-      { q: 'Which is NOT mentioned as a disadvantage of roundabouts?', choices: ['They use a lot of electricity.', 'They need more space.', 'Cars may wait long in heavy traffic.', 'Some drivers may be confused at first.'], answer: 0, why: '第4段落で電気は不要と述べられており、電気を多く使うという欠点はない。ほかの3つは第5段落にある。' },
+      { q: 'Why do collisions in roundabouts tend to be less severe?', choices: ['Cars go the same way and must slow down.', 'Traffic lights control the cars more carefully.', 'Cars entering always have priority over others.', 'Cars hit each other from the side at speed.'], answer: 0, why: '第3段落で、すべての車が同じ方向に進み、円を回るために速度を落とすので事故が軽くなるとある。信号はなく、優先は中にいる車。横からの高速衝突はふつうの交差点の事故である。' },
+      { q: 'Which is NOT mentioned as a disadvantage of roundabouts?', choices: ['They need more space than a crossroads.', 'They need a lot of electricity to run.', 'Entering takes long when traffic is heavy.', 'New drivers may feel confused at first.'], answer: 1, why: '第5段落の欠点は、広い場所が必要、交通が多いと入るまで長く待つ、慣れない人がとまどう、の3つ。第4段落では電気がまったく要らないことが利点とされている。' },
     ],
     gist: [
       { para: 2, choices: ['ラウンドアバウトが安全な理由', '事故の調査のしかた', '車の速さのはかり方', '保険の選び方'], answer: 0, why: '第3段落は、同じ方向に進み速度が落ちるため、ひどい事故がへることを述べている。' },
@@ -19296,8 +19296,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、日本のカレーは多くのインドのカレーとまったく同じである。', answer: false, why: '第5段落 it is very different from many Indian curries。' },
     ],
     qa: [
-      { q: 'What did curry roux make possible?', choices: ['Almost anyone could cook curry quickly.', 'Curry could be eaten without rice.', 'Curry became spicier.', 'Curry could be grown in gardens.'], answer: 0, why: '第4段落 This made it possible for almost anyone to cook curry quickly。' },
-      { q: 'Why did curry suit the needs of navy sailors?', choices: ['It was nutritious, easy to make in large amounts, and eaten with rice.', 'It could be kept for years without cooking.', 'It was the cheapest food in the world.', 'It was eaten only on holidays.'], answer: 0, why: '第3段落 meals that were nutritious, easy to cook in large amounts, and could be eaten with rice。' },
+      { q: 'What did curry roux make possible?', choices: ['Curry arrived in Japan directly from India.', 'Sailors could cook curry at naval bases.', 'Almost anyone could make curry quickly.', 'Restaurants abroad could sell Japanese curry.'], answer: 2, why: '第4段落で、カレールウのおかげでほとんどだれでも早くカレーを作れるようになったとある。カレーはインドから直接ではなくイギリス経由で伝わり、海軍や海外の店はルウとは別の話。' },
+      { q: 'Why did curry suit the needs of navy sailors?', choices: ['It was spicy and came straight from India.', 'It could be stored on ships for months.', 'It was served in school lunches already.', 'It was healthy, easy to make, and went with rice.'], answer: 3, why: '第3段落で、水兵には栄養があり大量に作りやすくご飯と食べられる食事が必要で、カレーがそれに合ったとある。インド直送ではなく、長期保存や給食は海軍の理由として書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['海軍がカレーを広めた役割', '船の作り方', '海の天気', '野菜の育て方'], answer: 0, why: '第3段落は、栄養があり作りやすいカレーが海軍で食べられ、広まったことを述べている。' },
@@ -19374,8 +19374,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、献血者は自分の血液がだれを助けるか正確に知っている。', answer: false, why: '第5段落 donors never know exactly whose life they may help to save。' },
     ],
     qa: [
-      { q: 'Why do hospitals need a steady supply of blood throughout the year?', choices: ['Some parts of blood cannot be stored for long.', 'Blood becomes more valuable over time.', 'Hospitals are closed in winter.', 'Patients only need blood in summer.'], answer: 0, why: '第3段落 blood cannot be stored forever … This means that hospitals need a steady supply。' },
-      { q: 'How do blood services try to encourage young donors?', choices: ['By setting up donation buses near universities and shopping areas.', 'By paying them large amounts of money.', 'By closing hospitals on weekends.', 'By asking only older people to donate.'], answer: 0, why: '第4段落 by setting up donation buses near universities and shopping areas。' },
+      { q: 'Why do hospitals need a steady supply of blood throughout the year?', choices: ['Some parts of blood last only a short time.', 'Donors must rest after giving blood.', 'Artificial blood is too expensive to use.', 'Hospitals have more patients during holidays.'], answer: 0, why: '第3段落で、血液は永久に保存できず血小板は数日しかもたないので、年中新しい献血が必要とある。人工血液は高いのではなく存在しない。休日に減るのは献血に来る人で、患者ではない。' },
+      { q: 'How do blood services try to encourage young donors?', choices: ['By paying students for each donation.', 'By sending donation buses near universities.', 'By asking older people to donate less.', 'By making the medical check much shorter.'], answer: 1, why: '第4段落で、大学や買い物をする地域の近くに献血バスを置いて若い人に呼びかけるとある。お金を払う・高齢者に減らしてもらう・検査を短くするといった方法は本文にない。' },
     ],
     gist: [
       { para: 2, choices: ['血液が長く保存できないむずかしさ', '冷蔵庫の作り方', '休日のすごし方', '天気予報の見方'], answer: 0, why: '第3段落は、血液の成分によって保存期間が短く、安定した献血が必要なことを述べている。' },
@@ -19413,8 +19413,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、環境を守るには必ず人を自然から遠ざけなければならない。', answer: false, why: '第5段落 does not always mean keeping people away from nature。' },
     ],
     qa: [
-      { q: 'Why could many kinds of plants grow in satoyama woods?', choices: ['Sunlight could reach the ground because people cut some trees.', 'The woods were always dark.', 'Chemical fertilisers were used.', 'No one ever entered the woods.'], answer: 0, why: '第2段落 Because people regularly cut some of the trees … sunlight could reach the ground。' },
-      { q: 'Which is NOT mentioned as a change that harmed satoyama?', choices: ['More tourists visiting the area.', 'Using gas and oil instead of firewood.', 'Young people moving to cities.', 'Land cleared for housing and roads.'], answer: 0, why: '第4段落に観光客がふえた話はない。ほかの3つは本文にある。' },
+      { q: 'Why could many kinds of plants grow in satoyama woods?', choices: ['Fallen leaves were left to cover the ground.', 'Wild forests grew without any human care.', 'Cutting some trees let sunlight reach the ground.', 'Chemical fertilisers made the soil richer.'], answer: 2, why: '第2段落で、人が木を切り林の地面を片づけたので日光が届き、多くの植物が育ったとある。落ち葉は集めて肥料にし、里山は人の手で作られた。化学肥料は第4段落で里山を弱めた変化。' },
+      { q: 'Which is NOT mentioned as a change that harmed satoyama?', choices: ['Using gas and oil instead of firewood.', 'Young people moving to the cities.', 'Clearing land for houses and roads.', 'More tourists coming to visit the area.'], answer: 3, why: '第4段落は、薪のかわりにガスや石油を使う、若者が都会へ移る、住宅や道路のため切り開く、などを害として挙げる。観光客がふえたという話は本文に出てこない。' },
     ],
     gist: [
       { para: 2, choices: ['里山がささえる多くの生き物', '鳥の飼い方', '田んぼの作り方', '虫の名前の覚え方'], answer: 0, why: '第3段落は、ホタルやカエル、トンボなど、里山にすむさまざまな生き物を述べている。' },
@@ -19452,8 +19452,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、海底ケーブルはけっして傷つかない。', answer: false, why: '第4段落 Despite these precautions, cables are sometimes damaged。' },
     ],
     qa: [
-      { q: 'What are the most common causes of damage to undersea cables?', choices: ['Fishing equipment and ship anchors.', 'Sharks biting the cables.', 'Heavy rain on the sea.', 'Satellites falling into the ocean.'], answer: 0, why: '第4段落 The most common causes are fishing equipment and ship anchors。' },
-      { q: 'Why do companies and governments build extra cable routes?', choices: ['So that data can travel another way if one cable fails.', 'To make cables cheaper.', 'To stop ships from moving.', 'To replace all satellites.'], answer: 0, why: '第5段落 so that if one cable fails, data can travel another way。' },
+      { q: 'What are the most common causes of damage to undersea cables?', choices: ['Fishing gear and anchors dragged on the bottom.', 'Satellites passing over the deep ocean.', 'Light pulses that are too strong.', 'Repair ships lifting cables to the surface.'], answer: 0, why: '第4段落で、いちばん多い原因は浅い海の底を引きずられる漁具や船のいかりとある。人工衛星や光の強さは原因ではなく、修理船が引き上げるのはこわれた後の作業である。' },
+      { q: 'Why do companies and governments build extra cable routes?', choices: ['To send data faster than by satellite.', 'So data can take another path if one breaks.', 'To make thicker cables near the coast.', 'So that fishing boats can avoid them.'], answer: 1, why: '第5段落で、1本がこわれてもデータが別の道を通れるよう予備の経路を作るとある。衛星より速くするためではなく、岸の近くで太くするのは第3段落の保護の話である。' },
     ],
     gist: [
       { para: 2, choices: ['海底ケーブルのしき方', '船の作り方', 'ホースの使い方', '海岸の地図'], answer: 0, why: '第3段落は、特別な船でケーブルをしくことと、深さによる太さのちがいを述べている。' },
@@ -19530,8 +19530,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、味覚は一生まったく変わらない。', answer: false, why: '第5段落 Our sense of taste also changes over time。' },
     ],
     qa: [
-      { q: 'What does bitterness often warn us about?', choices: ['That something may be harmful.', 'That food is rich in energy.', 'That food contains minerals.', 'That food is very fresh.'], answer: 0, why: '第2段落 bitterness often warns us that something may be harmful。' },
-      { q: 'Why might many young people dislike green peppers?', choices: ['Children are often more sensitive to bitter tastes.', 'Green peppers have no taste.', 'Children cannot smell.', 'Green peppers are too sweet.'], answer: 0, why: '第5段落 Children are often more sensitive to bitter tastes than adults, which may explain why many young people dislike vegetables such as green peppers。' },
+      { q: 'What does bitterness often warn us about?', choices: ['That food is rich in energy.', 'That the body needs more minerals.', 'That something might be dangerous.', 'That our nose is blocked by a cold.'], answer: 2, why: '第2段落で、苦味はそれが害になるかもしれないと知らせることが多いとある。エネルギーは甘味、ミネラルは塩味の役割で、鼻づまりは第4段落の香りの話である。' },
+      { q: 'Why might many young people dislike green peppers?', choices: ['Their tongue maps are different from adults\'.', 'They cannot smell vegetables very well.', 'Green peppers have little umami taste.', 'Children notice bitter tastes more strongly.'], answer: 3, why: '第5段落で、子どもは大人より苦味に敏感なことが多く、それがピーマン嫌いの理由かもしれないとある。舌の地図はまちがった考えで、においやうま味が理由とは書かれていない。' },
     ],
     gist: [
       { para: 1, choices: ['5つの基本の味とそれぞれの役割', 'スープの作り方', '海藻の育て方', 'チーズの歴史'], answer: 0, why: '第2段落は、5つの基本の味と、うまみの発見、それぞれの味の目的を述べている。' },
@@ -19569,8 +19569,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、すべての地域に同じくらい公園がある。', answer: false, why: '第5段落 the poorest neighbourhoods have the fewest parks。' },
     ],
     qa: [
-      { q: 'How can parks help cool cities in summer?', choices: ['Trees provide shade and plants release moisture.', 'Parks have air conditioners.', 'People stay at home.', 'Parks are closed in summer.'], answer: 0, why: '第3段落 because trees provide shade and plants release moisture into the air。' },
-      { q: 'What do experts argue cities should do?', choices: ['Make sure every resident can reach a green space within a short walk.', 'Build more roads instead of parks.', 'Close parks at night.', 'Charge money to enter parks.'], answer: 0, why: '第5段落 cities should make sure that every resident can reach a green space within a short walk。' },
+      { q: 'How can parks help cool cities in summer?', choices: ['Trees give shade and plants add moisture.', 'Parks hold events that bring people together.', 'Fewer people drive cars near parks.', 'Plants take smoke from the air.'], answer: 0, why: '第3段落で、木が日かげを作り、植物が空気に水分を出すので夏に町を冷やすとある。行事は第4段落の社会的な役割で、車が減る・煙を吸うとは書かれていない。' },
+      { q: 'What do experts argue cities should do?', choices: ['Build large parks only in rich neighbourhoods.', 'Let every resident walk to a green space easily.', 'Stop spending money on repairing park paths.', 'Replace small parks with roads and buildings.'], answer: 1, why: '第5段落で専門家は、すべての住民が少し歩けば緑地に行けるようにすべきだと言う。貧しい地域ほど公園が少ないことが問題とされ、修理をやめる・道路にかえるという主張はない。' },
     ],
     gist: [
       { para: 2, choices: ['公園の健康への効果と都市を冷やす働き', '木の植え方', '天気予報の見方', '病院の建て方'], answer: 0, why: '第3段落は、運動やストレスの軽減、夏の都市を冷やす効果を述べている。' },
@@ -19686,8 +19686,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、雨水はそのまま飲んでもよい。', answer: false, why: '第5段落 rainwater should not be used for drinking unless it has been properly treated。' },
     ],
     qa: [
-      { q: 'Why does saving tap water also help reduce energy use?', choices: ['Treating and pumping tap water requires a lot of energy.', 'Rainwater produces electricity.', 'Tanks are made of solar panels.', 'People take shorter showers.'], answer: 0, why: '第3段落 Treating and pumping tap water requires a lot of energy。' },
-      { q: 'How can stored rainwater be used after a disaster?', choices: ['For toilets and cleaning, so bottled water can be saved for drinking.', 'For drinking without any treatment.', 'For putting out large fires only.', 'For selling to other cities.'], answer: 0, why: '第4段落 stored rainwater can be used for toilets and cleaning, so that bottled water can be saved for drinking。' },
+      { q: 'Why does saving tap water also help reduce energy use?', choices: ['Rainwater is cleaner than tap water.', 'Storing rain prevents floods in storms.', 'Cleaning and pumping tap water uses much energy.', 'Tanks make electricity when rain falls.'], answer: 2, why: '第3段落で、水道水を浄化して送るには多くのエネルギーが要るので、使う量を減らすと省エネになるとある。洪水を防ぐのは別の利点で、雨水がきれい・発電するとは書かれていない。' },
+      { q: 'How can stored rainwater be used after a disaster?', choices: ['For drinking without any treatment.', 'For filling bottles to sell to others.', 'For washing cars and watering gardens.', 'For toilets and cleaning, saving bottled water.'], answer: 3, why: '第4段落で、災害後はためた雨水をトイレや掃除に使い、ペットボトルの水を飲み水に残せるとある。洗車や水やりは第2段落のふだんの使い道で、処理なしで飲むのは第5段落で否定。' },
     ],
     gist: [
       { para: 2, choices: ['雨水を使う利点', 'タンクのそうじ方法', '水道料金の歴史', '競技場の建て方'], answer: 0, why: '第3段落は、水道水とエネルギーの節約、洪水をふせぐという利点を述べている。' },
@@ -19725,8 +19725,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、外での学びの目的は教室をなくすことである。', answer: false, why: '第5段落 The goal is not to replace the classroom。' },
     ],
     qa: [
-      { q: 'Why do students ask more questions outside, according to many teachers?', choices: ['They notice things that no textbook could show them.', 'They want to go back inside quickly.', 'They have no textbooks.', 'The teacher asks them to.'], answer: 0, why: '第2段落 because they notice things that no textbook could show them。' },
-      { q: 'What do many educators suggest because of the difficulties?', choices: ['Starting with small steps, such as one lesson in the schoolyard.', 'Stopping all trips to museums.', 'Building a new school in a forest.', 'Studying only on sunny days.'], answer: 0, why: '第5段落 many educators suggest starting with small steps, such as holding a single lesson in the schoolyard。' },
+      { q: 'Why do students ask more questions outside, according to many teachers?', choices: ['They notice things textbooks cannot show.', 'They memorize the names of body parts.', 'They find it hard to sit still for long.', 'They must measure the depth of rivers.'], answer: 0, why: '第2段落で、外では教科書が見せられないことに気づくので質問が増えると教師は言う。体の部分の名前は教室での学習、じっと座れないのは第4段落、川の深さは第3段落の別の話。' },
+      { q: 'What do many educators suggest because of the difficulties?', choices: ['Replacing the classroom with trips to farms.', 'Beginning small, like one schoolyard lesson.', 'Taking students to museums every week.', 'Holding lessons only in good weather.'], answer: 1, why: '第5段落で、多くの教育者は校庭で1回授業をするなど小さく始めることを勧める。目的は教室を置きかえることではないとあり、毎週の博物館や晴れの日だけという提案はない。' },
     ],
     gist: [
       { para: 2, choices: ['外での学びがのばす協力と伝え合う力', '川の深さの測り方', '森の植物の名前', '仕事の選び方'], answer: 0, why: '第3段落は、グループ活動で協力し伝え合う力がのびることを述べている。' },
@@ -19764,8 +19764,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '冷蔵庫はほとんど電気を使わない。', answer: false, why: '第4段落 refrigerators still use a large amount of electricity。' },
     ],
     qa: [
-      { q: 'How did some people keep food cool in summer before refrigerators?', choices: ['They stored blocks of ice cut from frozen lakes.', 'They put food in the sun.', 'They bought electric fans.', 'They kept food in the snow all year.'], answer: 0, why: '第2段落 people cut blocks of ice from frozen lakes in winter and stored them in special buildings。' },
-      { q: 'What can people do to make the most of refrigerators?', choices: ['Buy only what they need and check what is already inside.', 'Buy as much food as possible.', 'Turn the refrigerator off at night.', 'Keep the door open.'], answer: 0, why: '第5段落 By buying only what they need, checking what is already in the refrigerator。' },
+      { q: 'How did some people keep food cool in summer before refrigerators?', choices: ['They dried and salted ice from the sea.', 'They bought fresh ice every single day.', 'They kept winter lake ice in special buildings.', 'They used gases that cooled the air.'], answer: 2, why: '第2段落で、冬に凍った湖から氷を切り出し、特別な建物に保管して夏に食べ物を冷やしたとある。乾燥や塩漬けは別の保存法で、毎日買ったのは新鮮な食べ物、ガスは後の冷蔵庫の話。' },
+      { q: 'What can people do to make the most of refrigerators?', choices: ['Buy large amounts of food once a week.', 'Keep the refrigerator running only at night.', 'Replace it with a new model every year.', 'Buy only what they need and check inside.'], answer: 3, why: '第5段落で、必要な分だけ買い、すでに入っているものを確認し、適温に保つとよいとある。週1回の買い物は第3段落の変化の話で、夜だけ動かす・毎年買いかえるとは書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['電気冷蔵庫による生活の変化', '湖の氷の切り方', '牛乳の作り方', '20世紀の戦争'], answer: 0, why: '第3段落は、週に1、2回の買い物、1年じゅうの新鮮な食べ物、遠くからの輸送という変化を述べている。' },
@@ -19803,8 +19803,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '水を飲みすぎることも体に害になりうる。', answer: true, why: '第5段落 it is also possible to drink too much water ... which can also be harmful。' },
     ],
     qa: [
-      { q: 'What may happen if the water lost through sweat is not replaced?', choices: ['The heart has to work harder and the athlete may feel dizzy.', 'The athlete becomes stronger.', 'The body produces more muscles.', 'The blood becomes thinner.'], answer: 0, why: '第2段落 the blood becomes thicker, the heart has to work harder, and the athlete may feel tired, dizzy。' },
-      { q: 'Why can sports drinks be useful during long exercise?', choices: ['They contain salt and sugar that help the body absorb water.', 'They contain no water.', 'They make people sweat less.', 'They are cheaper than water.'], answer: 0, why: '第4段落 Some sports drinks contain small amounts of salt and sugar, which help the body absorb water。' },
+      { q: 'What may happen if the water lost through sweat is not replaced?', choices: ['The heart works harder and they may feel dizzy.', 'The blood becomes thinner and flows faster.', 'The salt level in the blood falls too low.', 'The body stops sweating and stays cool.'], answer: 0, why: '第2段落で、失った水を補わないと血液が濃くなり心臓の負担が増え、めまいなどが起こるとある。血液は薄くではなく濃くなり、塩分が下がるのは第5段落の水の飲みすぎの場合である。' },
+      { q: 'Why can sports drinks be useful during long exercise?', choices: ['They contain no sugar at all.', 'Their salt and sugar help the body absorb water.', 'They make people feel thirsty sooner.', 'They cool the skin faster than water.'], answer: 1, why: '第4段落で、スポーツドリンクの少量の塩と糖が水の吸収を助け、失ったものを補うとある。糖はむしろ多いことがあり、のどがかわく・肌を冷やすという働きは書かれていない。' },
     ],
     gist: [
       { para: 2, choices: ['のどがかわく前に少しずつ飲むことの大切さ', 'コーチの選び方', '試合のルール', 'のどの病気'], answer: 0, why: '第3段落は、のどのかわきはたよりにならないので、定期的に少しずつ飲むようすすめている。' },
@@ -19842,8 +19842,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: 'かん切りは、かんよりも先に発明された。', answer: false, why: '第4段落 a practical can opener was not invented until many years after the can itself。' },
     ],
     qa: [
-      { q: 'What did Appert discover?', choices: ['Food sealed in bottles and heated in boiling water stayed good for months.', 'Salt makes food more nutritious.', 'Bacteria can be seen without tools.', 'Metal cans are lighter than bottles.'], answer: 0, why: '第3段落 if food was sealed tightly in glass bottles and then heated in boiling water, it stayed good for months。' },
-      { q: 'Why did people begin using metal containers?', choices: ['They were stronger and lighter than glass bottles.', 'They were easier to open.', 'They were made in France.', 'They kept food warm.'], answer: 0, why: '第4段落 Glass bottles ... were heavy and broke easily ... containers made of metal coated with tin, which were stronger and lighter。' },
+      { q: 'What did Appert discover?', choices: ['Bacteria cause food to spoil quickly.', 'Metal cans kept food fresh for years.', 'Sealed, boiled bottles kept food good for months.', 'Dried and salted food was more nutritious.'], answer: 2, why: '第3段落で、アペールは食べ物をびんに密封して熱湯で温めると何か月ももつことを発見した。細菌の原因は数十年後に科学者が示し、金属缶はイギリスの話、乾物は栄養が少ないとある。' },
+      { q: 'Why did people begin using metal containers?', choices: ['They were easier to open than bottles.', 'The French government offered a prize for them.', 'Can openers were already common then.', 'They were stronger and lighter than glass.'], answer: 3, why: '第4段落で、ガラスびんは重く割れやすかったので、より丈夫で軽い金属の容器が使われたとある。缶は開けにくく缶切りはずっと後に発明された。賞は保存方法全体に対するもの。' },
     ],
     gist: [
       { para: 1, choices: ['食べ物の保存という問題と賞', '軍隊の歴史', '船の作り方', '塩の値段'], answer: 0, why: '第2段落は、軍隊や船乗りの食べ物の問題と、よりよい保存方法への賞を述べている。' },
@@ -19959,8 +19959,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '科学者のあいだでは、動物が遊ぶ理由についてまだ意見が分かれている。', answer: true, why: '第5段落 scientists still disagree about exactly why animals play。' },
     ],
     qa: [
-      { q: 'What do young wolves or dogs learn when they play-fight?', choices: ['How hard they can bite without causing pain.', 'How to find water.', 'How to build nests.', 'How to climb trees.'], answer: 0, why: '第3段落 they learn how hard they can bite without causing pain。' },
-      { q: 'What do the examples of crows and octopuses suggest?', choices: ['Play may be more widespread than people once thought.', 'Only birds can play in the snow.', 'Octopuses are dangerous.', 'Play is a waste of energy.'], answer: 0, why: '第4段落 These examples suggest that play may be more widespread in the animal world than people once thought。' },
+      { q: 'What do young wolves or dogs learn when they play-fight?', choices: ['How hard they can bite without hurting.', 'How to catch mice and birds quickly.', 'How to escape from predators by running.', 'How to slide down snowy roofs together.'], answer: 0, why: '第3段落で、オオカミや犬の子はじゃれあいで、痛くせずにどれくらい強くかめるかを学ぶとある。ネズミや鳥は子ネコ、逃げる動きはヤギやシカ、屋根すべりはカラスの例である。' },
+      { q: 'What do the examples of crows and octopuses suggest?', choices: ['Only mammals are clever enough to play.', 'Play may be more common than once believed.', 'Birds and octopuses play to find food.', 'Play is simply a way to pass time.'], answer: 1, why: '第4段落で、カラスやタコの例は、遊びが思われていたより動物界に広がっていることを示すとある。遊びは哺乳類だけではなく、えさを探すためでもなく、第5段落でひまつぶしでないとされる。' },
     ],
     gist: [
       { para: 1, choices: ['遊びはおとなになって必要な技能の練習になること', 'ネコの飼い方', 'シカの食べ物', '捕食者の種類'], answer: 0, why: '第2段落は、狩りやにげる動きの練習としての遊びを述べている。' },
@@ -19998,8 +19998,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '筆者によれば、技術を使うことに反対する人はだれもいない。', answer: false, why: '第4段落 Critics worry that screens may distract visitors from the real objects。' },
     ],
     qa: [
-      { q: 'What do some art museums offer?', choices: ['Workshops in which people can create their own works.', 'Free paintings to take home.', 'Lessons in building museums.', 'Concerts every night.'], answer: 0, why: '第3段落 Art museums hold workshops in which children and adults can create their own works。' },
-      { q: 'What difficult question do museums face?', choices: ['How to respond to requests to return objects taken from other countries.', 'How to make their rooms quieter.', 'How to sell more tickets online.', 'How to stop people from using smartphones.'], answer: 0, why: '第5段落 people in those countries have asked for them to be returned. Museums must decide how to respond。' },
+      { q: 'What do some art museums offer?', choices: ['Online collections for people living far away.', 'Simple experiments with exhibits to touch.', 'Workshops where visitors make their own art.', 'Glass cases with signs saying not to touch.'], answer: 2, why: '第3段落で、美術館は名画を見たあと自分で作品を作るワークショップを開くとある。触れる展示や実験は科学博物館、オンライン公開は第4段落の技術の話、ガラスケースは昔の姿である。' },
+      { q: 'What difficult question do museums face?', choices: ['How to stop visitors from touching exhibits.', 'How to make labels shorter and simpler.', 'Whether to put collections online.', 'How to fairly answer calls to return objects.'], answer: 3, why: '第5段落で、戦争や植民地支配の時代に他国から持ち出された物の返還要求に、どう公平にこたえるかを決めなければならないとある。触る・説明文・オンライン公開は難問として挙げられていない。' },
     ],
     gist: [
       { para: 2, choices: ['より活発な学びの場になろうとする博物館', '科学の実験の方法', '有名な画家の生涯', '地域のお祭り'], answer: 0, why: '第3段落は、さわれる展示、ワークショップ、地域の参加という新しい取り組みを述べている。' },
@@ -20037,8 +20037,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '天文学者は、明るい衛星が観測に役立つとよろこんでいる。', answer: false, why: '第5段落 Astronomers also complain that bright satellites can interfere with their observations。' },
     ],
     qa: [
-      { q: 'Why does a satellite keep traveling around the Earth without falling?', choices: ['Its forward speed balances the pull of gravity.', 'It has no weight in space.', 'It is pulled by the Moon.', 'Its engine runs all the time.'], answer: 0, why: '第2段落 because its forward speed balances the pull of gravity。' },
-      { q: 'What do many experts argue about the growing number of satellites?', choices: ['Countries and companies should cooperate to manage space more carefully.', 'No more satellites should ever be launched.', 'Space debris is not a problem.', 'Only one country should control space.'], answer: 0, why: '第5段落 countries and companies should cooperate to manage space more carefully。' },
+      { q: 'Why does a satellite keep traveling around the Earth without falling?', choices: ['Its forward speed balances gravity\'s pull.', 'The Moon\'s gravity holds it in place.', 'Rockets keep pushing it around the Earth.', 'It is too high for gravity to reach.'], answer: 0, why: '第2段落で、前に進む速さが重力の引く力とつりあうので落ちずに回り続けるとある。月は自然の衛星の例で、ロケットは打ち上げるだけ。重力が届かないとは書かれていない。' },
+      { q: 'What do many experts argue about the growing number of satellites?', choices: ['Fewer satellites should be used for maps.', 'Countries and companies should manage space together.', 'Astronomers should stop observing the night sky.', 'Old satellites should be brought back to Earth.'], answer: 1, why: '第5段落で、多くの専門家は国や企業が協力して宇宙をより注意深く管理すべきだと言う。天文学者は観測のじゃまを不満に思う側で、地図用を減らす・持ち帰るという主張はない。' },
     ],
     gist: [
       { para: 2, choices: ['衛星を使って位置を知るしくみと使い方', '道路の作り方', '荷物の包み方', '畑の耕し方'], answer: 0, why: '第3段落は、複数の衛星の信号から位置を計算するしくみと、その使い道を述べている。' },
@@ -20115,8 +20115,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '海草の草原は、どこでも回復することはない。', answer: false, why: '第5段落 the meadows have slowly recovered。' },
     ],
     qa: [
-      { q: 'How does seagrass protect coastlines?', choices: ['Its roots hold the sea floor and the plants slow down waves.', 'It builds walls along the beach.', 'It makes the water warmer.', 'It attracts more boats.'], answer: 0, why: '第2段落 Its roots ... holding it in place ... because the plants slow down waves and currents。' },
-      { q: 'Why do seagrass meadows disappear when water becomes cloudy?', choices: ['Sunlight cannot reach the plants.', 'Fish eat all the leaves.', 'The water becomes too cold.', 'The plants grow too fast.'], answer: 0, why: '第5段落 Pollution ... makes the water cloudy, which prevents sunlight from reaching the plants。' },
+      { q: 'How does seagrass protect coastlines?', choices: ['Its leaves hide fish from larger animals.', 'It stores carbon in the mud below.', 'Its roots hold the sea floor and slow waves.', 'It grows taller than coral reefs.'], answer: 2, why: '第2段落で、根が海底の砂や泥を固定し、植物が波や流れを弱めて海岸の浸食を防ぐとある。魚の隠れ場所は第3段落、炭素の貯蔵は第4段落の別の役割である。' },
+      { q: 'Why do seagrass meadows disappear when water becomes cloudy?', choices: ['Turtles and dugongs eat too much of it.', 'Boats tear the plants out of the sand.', 'Cloudy water holds too much carbon dioxide.', 'Sunlight is blocked from reaching the plants.'], answer: 3, why: '第5段落で、汚染で水がにごると日光が植物に届かなくなるとある。ウミガメなどは食べるだけで食べすぎとは書かれず、船は別の原因、二酸化炭素はにごりと関係がない。' },
     ],
     gist: [
       { para: 2, choices: ['海草の草原が多くの生き物をささえること', 'カニの料理のしかた', '漁船の作り方', 'ジュゴンの数え方'], answer: 0, why: '第3段落は、かくれ場や育つ場、食べ物として生き物をささえ、漁業にも役立つことを述べている。' },
@@ -20193,8 +20193,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '宇宙飛行士は、宇宙で骨が強くなる。', answer: false, why: '第5段落 astronauts living in space, can lose bone strength。' },
     ],
     qa: [
-      { q: 'What helps the body to use calcium effectively?', choices: ['Vitamin D, which the body makes in sunlight.', 'Drinking a lot of water.', 'Sleeping for a long time.', 'Eating sweet food.'], answer: 0, why: '第4段落 Vitamin D, which the body makes when the skin is exposed to sunlight, helps the body to use calcium effectively。' },
-      { q: 'What kind of exercise signals the body to make bones stronger?', choices: ['Activities in which bones support the body’s weight.', 'Only swimming.', 'Sitting quietly.', 'Exercises done lying down.'], answer: 0, why: '第5段落 Activities in which bones must support the body’s weight ... signal the body to make bones stronger。' },
+      { q: 'What helps the body to use calcium effectively?', choices: ['Vitamin D made when skin gets sunlight.', 'Bone marrow that produces blood cells.', 'Running and jumping every single day.', 'Green vegetables eaten with small fish.'], answer: 0, why: '第4段落で、日光を浴びると体が作るビタミンDがカルシウムを上手に使う助けになるとある。骨髄は血液を作り、運動は骨を強くし、野菜や小魚はカルシウムをふくむ食べ物の例である。' },
+      { q: 'What kind of exercise signals the body to make bones stronger?', choices: ['Exercise done while floating in space.', 'Activities where bones carry the body\'s weight.', 'Sitting still to let bones rebuild themselves.', 'Gentle stretching after drinking milk.'], answer: 1, why: '第5段落で、走る・跳ぶ・踊るなど骨が体重を支える運動が骨を強くする合図になるとある。宇宙の飛行士は逆に骨が弱くなり、じっとしているのも同じ。ストレッチの話はない。' },
     ],
     gist: [
       { para: 2, choices: ['骨がたえず作りなおされていること', '骨折の治療費', 'テニスのルール', '細胞の数え方'], answer: 0, why: '第3段落は、古い骨をこわし新しい骨をつくるはたらきと、その結果を述べている。' },
@@ -20310,8 +20310,8 @@ export const ADV_PASSAGES: LongPassage[] = [
       { statement: '使い終わった電池は、どのようにすてても問題はない。', answer: false, why: '第5段落 used batteries can cause fires or pollution if they are not thrown away properly。' },
     ],
     qa: [
-      { q: 'Why are batteries useful for solar and wind power?', choices: ['They can store extra electricity and release it when needed.', 'They make the sun shine longer.', 'They create wind.', 'They make solar panels cheaper.'], answer: 0, why: '第4段落 Large battery systems can store extra electricity when production is high and release it when it is needed。' },
-      { q: 'What are researchers trying to do?', choices: ['Develop batteries that use more common materials.', 'Stop using batteries completely.', 'Make batteries heavier.', 'Mine more rare materials.'], answer: 0, why: '第5段落 researchers are working to develop batteries that use more common materials。' },
+      { q: 'Why are batteries useful for solar and wind power?', choices: ['They produce electricity from sunlight themselves.', 'They make solar panels lighter and thinner.', 'They save extra power and release it later.', 'They stop wind turbines in strong wind.'], answer: 2, why: '第4段落で、発電が多いときに余った電気をため、夕方など必要なときに出せるので再生可能エネルギーが安定するとある。電池は日光で発電せず、パネルを軽くする話もない。' },
+      { q: 'What are researchers trying to do?', choices: ['Make batteries from rarer, stronger metals.', 'Build more mines for battery materials.', 'Stop the recycling of old batteries.', 'Make batteries from more common materials.'], answer: 3, why: '第5段落で、研究者はもっとありふれた材料を使う電池を開発しようとしているとある。採掘は環境を傷つける心配の種で、多くの国は古い電池のリサイクルを進めている。' },
     ],
     gist: [
       { para: 1, choices: ['電池が電気を生み出すしくみ', '電子の発見者', '導線の作り方', 'コンセントの歴史'], answer: 0, why: '第2段落は、化学エネルギーを電気に変えるしくみと、充電のしくみを述べている。' },
