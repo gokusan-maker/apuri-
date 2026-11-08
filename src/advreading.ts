@@ -43902,6 +43902,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-puzzles',
+    title: 'On Puzzles',
+    level: '難関大（評論）',
+    paragraphs: [
+      "People in almost every culture have enjoyed puzzles. Children solve riddles and fit together the pieces of simple pictures, adults spend their evenings on crosswords or number games, and ancient texts record riddles that were told around fires thousands of years ago. At first sight, this enthusiasm is rather strange, since a puzzle is a problem that has been created deliberately, offering no practical reward once it has been solved. Why, then, should so many people choose to spend their free time struggling with difficulties that no one needed them to overcome?",
+      "One answer is that puzzles allow people to experience difficulty in a safe and limited form. In ordinary life, problems are often vague, their causes are unclear, and there may be no satisfying solution at all. A puzzle, by contrast, has clear rules and a definite answer, so that the person who works on it can be confident that success is possible. In this sense, a puzzle offers a small and orderly world in which effort is reliably rewarded, a quality that the larger world does not always share.",
+      "Puzzles also provide a particular kind of pleasure, the moment of sudden understanding when a solution appears. Many people describe this moment as one of delight, as if a confused picture had suddenly come into focus, and researchers have suggested that it may be linked to the brain's own system of rewards. ( A ) the struggle before this moment can be frustrating, it seems to be an essential part of the experience, since a puzzle that is solved too easily rarely produces the same satisfaction.",
+      "Working on a puzzle can also change the way people think. Many puzzles can be solved only by abandoning an obvious approach and looking at the problem from a different angle, and people who enjoy such challenges may become more willing to question their first assumptions in other areas of life as well. Teachers have long used puzzles for this reason, hoping that the habit of patient, flexible thinking developed through play will carry over into more serious tasks.",
+      "At the same time, puzzles can be a social activity. Families gather around a large jigsaw on a holiday afternoon, friends compete to solve a riddle first, and newspapers once printed crosswords that readers would discuss with colleagues the next day. In such cases, the puzzle becomes an occasion for conversation and cooperation, and the shared effort of solving it can create a sense of closeness that has little to do with the answer itself. Indeed, some families keep the same unfinished jigsaw on a table for weeks, adding a few pieces whenever someone passes, so that the puzzle becomes a slow conversation carried on by the whole household.",
+      "In recent years, puzzles have moved increasingly onto screens, where games can offer endless new challenges and instant feedback. These games have introduced many people to the pleasures of problem solving, but some observers worry that they are sometimes designed to keep players occupied for as long as possible rather than to provide the satisfaction of a well-made problem. The difference may lie in whether a puzzle invites us to think deeply and then lets us go, or keeps us returning without ever allowing us to feel that we have finished.",
+      "Perhaps, then, puzzles deserve more attention than we usually give them. They remind us that human beings seem to need challenges as well as comforts, and that the effort of struggling with a difficulty can be a source of joy rather than merely a burden to be avoided. In a world full of problems that have no clear solution, the humble puzzle may offer not an escape but a kind of practice, teaching us patience, flexibility, and the hope that confusion can eventually give way to understanding.",
+    ],
+    ja: [
+      'ほとんどどの文化の人々も、パズルを楽しんできた。子どもはなぞなぞをとき、簡単な絵のピースを組み合わせ、大人はクロスワードや数のゲームで夜を過ごし、古い文書には、何千年も前に火のまわりで語られたなぞなぞが記録されている。一見すると、この熱中ぶりはかなりふしぎである。パズルとはわざとつくられた問題であり、とけてしまえば実際的なむくいは何もないからである。それなら、なぜこれほど多くの人が、だれもこえてほしいとは思っていないむずかしさと格闘して、自由な時間を過ごすことを選ぶのだろうか。',
+      '一つの答えは、パズルによって人々が安全でかぎられた形でむずかしさを経験できるということである。ふだんの生活では、問題はしばしばあいまいで、その原因ははっきりせず、満足のいく解決がまったくないこともある。それに対して、パズルにははっきりした決まりと決まった答えがあるので、それに取り組む人は、成功が可能だと確信していられる。この意味で、パズルは努力がたしかにむくわれる小さく整った世界を提供しており、それは、より大きな世界がいつもそなえているとはかぎらない性質なのである。',
+      'パズルはまた、特別な種類の喜び、つまり答えがあらわれるとつぜんの理解の瞬間をあたえてくれる。多くの人はこの瞬間を、ぼやけた絵がとつぜんはっきり見えたかのような喜びの瞬間だとあらわし、研究者たちは、それが脳そのもののほうびの仕組みと結びついているのかもしれないと考えてきた。この瞬間の前の格闘はもどかしいこともあるが、それは経験に欠かせない一部であるらしい。あまりにもかんたんにとけてしまうパズルが、同じ満足をもたらすことはめったにないからである。',
+      'パズルに取り組むことはまた、人々の考え方を変えることもある。多くのパズルは、明らかなやり方をすててちがう角度から問題を見ることでしかとけず、そうした挑戦を楽しむ人々は、生活のほかの分野でも最初の思いこみを疑うことに前向きになるかもしれない。教師たちは昔からこの理由でパズルを使ってきた。遊びを通して育った根気強く柔軟な考え方の習慣が、より真剣な課題にも引きつがれることを願っているのである。',
+      '同時に、パズルは人と人とが関わる活動にもなりうる。休日の午後に家族が大きなジグソーパズルのまわりに集まり、友だちどうしがなぞなぞを先にとこうと競い合い、新聞はかつて、読者が次の日に同僚と話し合うクロスワードをのせていた。そうした場合、パズルは会話と協力のきっかけになり、それをとくためのいっしょの努力は、答えそのものとはほとんど関係のない親しさの感覚を生み出すことがある。実際、同じやりかけのジグソーパズルを何週間もテーブルに置いておき、だれかが通りかかるたびにいくつかのピースを足していく家族もいる。そうしてパズルは、家族全員でゆっくり続ける会話のようなものになるのである。',
+      '近年、パズルはますます画面の上に移り、そこではゲームが果てしなく新しい挑戦とすぐの反応をあたえてくれる。こうしたゲームは多くの人に問題をとく楽しさを教えてきたが、それらはときに、よくできた問題の満足をあたえるためではなく、できるだけ長くプレイヤーを引きとめておくように設計されているのではないかと心配する人もいる。そのちがいは、あるパズルが、私たちを深く考えさせたあとで解放してくれるのか、それとも、終わったと感じさせることなく何度ももどってこさせるのかにあるのかもしれない。',
+      'だとすれば、パズルは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。パズルは、人間が快適さだけでなく挑戦も必要としているらしいこと、そしてむずかしさと格闘する努力が、たださけるべき重荷ではなく、喜びの源になりうることを思い出させてくれる。はっきりした解決のない問題にあふれた世界で、つつましいパズルは、にげ道ではなく一種の練習をあたえてくれるのかもしれない。根気と柔軟さ、そして混乱もいつかは理解に道をゆずるという希望を教えてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「この瞬間の前の格闘はもどかしいこともあるが、経験に欠かせない一部である」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '古い文書には、何千年も前のなぞなぞが記録されている。', answer: true, why: '第1段落 ancient texts record riddles that were told around fires thousands of years ago。' },
+      { statement: 'パズルには、ふだんの生活の問題と同じようにあいまいな決まりしかない。', answer: false, why: '第2段落 A puzzle, by contrast, has clear rules and a definite answer。' },
+      { statement: 'かんたんにとけるパズルは、同じ満足をもたらすことがめったにない。', answer: true, why: '第3段落 a puzzle that is solved too easily rarely produces the same satisfaction。' },
+      { statement: '筆者によると、画面のゲームはだれにも問題をとく楽しさを教えてこなかった。', answer: false, why: '第6段落 These games have introduced many people to the pleasures of problem solving。' },
+    ],
+    qa: [
+      { q: 'Why have teachers long used puzzles, according to the passage?', choices: ['To develop patient, flexible thinking.', 'To make lessons shorter.', 'To give students free time.', 'To test their memory only.'], answer: 0, why: '第4段落 the habit of patient, flexible thinking developed through play。' },
+      { q: 'What do some observers worry about screen-based puzzle games?', choices: ['They may be designed to keep players occupied as long as possible.', 'They are too easy for children.', 'They cost too much to download.', 'They have no rules at all.'], answer: 0, why: '第6段落 designed to keep players occupied for as long as possible。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
