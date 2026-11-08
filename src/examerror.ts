@@ -6308,6 +6308,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) We (B) are running out (C) of time, (D) so let’s hurrying.', choices: ['(A) We', '(B) are running out', '(C) of time,', '(D) so let’s hurrying'], answer: 3, why: 'let’s のあとは動詞の原形。let’s hurry。' },
     ],
   },
+  {
+    id: 'exam-error-look-up-to',
+    title: '入試の正誤問題〈263〉（東大レベル：英作文の look up to・make up for・get along with）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'look up to ～（～を尊敬する）・make up for ～（～をうめ合わせる）・get along with ～（～と仲よくやっていく）は3語でひとまとまり。最後の前置詞をぬかしたり変えたりしない（look up だけだと「調べる」になる）。',
+      '受け身は be looked up to (by ～) のように前置詞を残す。前置詞のあとに動詞を置くときは ～ing（make up for being late）。',
+    ],
+    examples: [
+      { en: 'Many students look up to their teacher. / I want to make up for my mistake.', ja: '多くの生徒が先生を尊敬している。／自分のまちがいをうめ合わせたい。' },
+      { en: 'She gets along well with everyone.', ja: '彼女はだれとでも仲よくやっている。' },
+    ],
+    questions: [
+      { sentence: '(A) Many young players (B) look up (C) the captain (D) as a role model.', choices: ['(A) Many young players', '(B) look up', '(C) the captain', '(D) as a role model'], answer: 1, why: '「～を尊敬する」は look up to ～。look up to the captain。' },
+      { sentence: '(A) He (B) worked late (C) to make up (D) the time he had lost.', choices: ['(A) He', '(B) worked late', '(C) to make up', '(D) the time he had lost'], answer: 2, why: '「～をうめ合わせる」は make up for ～。to make up for。' },
+      { sentence: '(A) My sister and I (B) get along (C) for (D) each other very well.', choices: ['(A) My sister and I', '(B) get along', '(C) for', '(D) each other very well'], answer: 2, why: '「～と仲よくやっていく」は get along with ～。' },
+      { sentence: '(A) Look (B) up to by everyone, (C) the teacher (D) never lost her patience.', choices: ['(A) Look', '(B) up to by everyone,', '(C) the teacher', '(D) never lost her patience'], answer: 0, why: '受け身の分詞構文なので Looked up to by everyone。' },
+      { sentence: '(A) Nothing (B) can make up for (C) the loss of (D) a friends.', choices: ['(A) Nothing', '(B) can make up for', '(C) the loss of', '(D) a friends'], answer: 3, why: 'a のあとは単数。a friend。' },
+      { sentence: '(A) She (B) finds it (C) easy to get along with (D) people which are kind.', choices: ['(A) She', '(B) finds it', '(C) easy to get along with', '(D) people which are kind'], answer: 3, why: '人を先行詞とする関係代名詞は who。people who are kind。' },
+      { sentence: '(A) Most children (B) looks up to (C) their parents (D) when they are young.', choices: ['(A) Most children', '(B) looks up to', '(C) their parents', '(D) when they are young'], answer: 1, why: '主語 Most children は複数なので look up to。' },
+      { sentence: '(A) I (B) bought her flowers (C) to make up for (D) forget her birthday.', choices: ['(A) I', '(B) bought her flowers', '(C) to make up for', '(D) forget her birthday'], answer: 3, why: '前置詞 for のあとは動名詞。forgetting her birthday。' },
+      { sentence: '(A) The new student (B) is getting along (C) good with (D) his classmates.', choices: ['(A) The new student', '(B) is getting along', '(C) good with', '(D) his classmates'], answer: 2, why: '動詞 get along を修飾するので副詞 well。getting along well with。' },
+      { sentence: '(A) We (B) should look up to (C) people (D) who helps others.', choices: ['(A) We', '(B) should look up to', '(C) people', '(D) who helps others'], answer: 3, why: '先行詞 people は複数なので who help。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

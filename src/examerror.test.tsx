@@ -3634,3 +3634,10 @@ it('誤文訂正〈256〉：京大レベル avoid・deny・consider・enjoy ＋ 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('eating')
 })
+
+it('正誤問題〈263〉：東大レベル look up to・make up for・get along with の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-look-up-to')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(B) look up')
+})
