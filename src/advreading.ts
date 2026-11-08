@@ -45182,6 +45182,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-echoes',
+    title: 'On Echoes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Anyone who has shouted into a deep valley or a large empty hall knows the strange pleasure of hearing one's own voice return. The sound comes back a moment later, softer and slightly changed, as if someone far away were answering. An echo is, of course, nothing more than sound reflected from a distant surface, and it can be explained in a few sentences of physics. Yet echoes have fascinated human beings for thousands of years, and the ways in which we have understood them reveal much about our relationship with the world around us.",
+      "In many early cultures, echoes seem to have been understood not as reflections but as voices. A cry returned from a cliff or a cave might be taken as the reply of a spirit living in the rocks, and some places with powerful echoes were treated as sacred. Researchers who have studied ancient sites have noticed that certain caves containing paintings are also places where sound behaves in unusual ways, which has led some to suggest that early people chose such places partly because of the voices they seemed to hold.",
+      "The scientific understanding of echoes developed as people began to measure the speed of sound. ( A ) the idea that sound travels through the air may seem obvious today, it took careful experiments to show that it moves at a steady and measurable speed. Once this was known, the time between a shout and its echo could be used to calculate the distance to the reflecting surface, so that something mysterious became a tool for measurement, a change that reflects a wider shift in the way people came to regard nature.",
+      "This tool has proved enormously useful. Ships send pulses of sound into the water and listen for their return in order to measure the depth of the sea and to find objects beneath the surface, and doctors use echoes of sound too high for human ears to hear in order to see inside the body without cutting it open. Some animals, such as bats and dolphins, have relied on echoes for far longer than we have, sending out calls and listening to their return in order to find their way and to catch food in the dark.",
+      "Echoes also play an important part in architecture and music. The designers of concert halls must think carefully about how sound will be reflected from walls and ceilings, since too many echoes can make music blurred and speech impossible to understand, while too few can make a room sound dead. Many old churches and temples, built long before the science of sound was understood, have acoustic qualities that are still admired, suggesting that their builders learned through long experience how to shape spaces for the human voice.",
+      "Beyond its physical meaning, the word echo has come to describe many other kinds of repetition. We speak of the echoes of past events in the present, of a writer whose work echoes that of an earlier one, or of an idea that finds an echo in the minds of many people. In each case the word suggests something that returns, changed but recognizable, and that connects one moment or one person with another across a distance of space or time.",
+      "Perhaps, then, the echo deserves more thought than we usually give it. It is at once a simple fact of physics, a source of wonder, a tool of science, and a powerful image for the ways in which the past continues to sound in the present. When we hear our own voice come back to us from a distant hillside, we may be reminded that the world is not silent, and that whatever we send out into it has a way of returning to us in some form.",
+    ],
+    ja: [
+      '深い谷や大きながらんとしたホールに向かってさけんだことのある人は、自分の声がもどってくるのを聞くふしぎな楽しさを知っている。音は少しおくれて、より小さく、わずかに変わってもどってくる。まるで遠くのだれかが答えているかのようである。こだまは、もちろん、遠くの面からはね返った音にすぎず、物理学の数文で説明できる。しかしこだまは何千年ものあいだ人間の心をとらえてきたのであり、私たちがそれをどのように理解してきたかは、私たちとまわりの世界との関係について多くを明らかにしてくれる。',
+      '初期の多くの文化では、こだまは反射としてではなく、声として理解されていたらしい。がけやどうくつからはね返ったさけび声は、岩の中にすむ精霊の返事と受けとられたかもしれず、強いこだまのする場所のなかには神聖なものとしてあつかわれたところもあった。古代の遺跡を研究してきた研究者たちは、絵がえがかれたある種のどうくつが、音がめずらしいふるまいをする場所でもあることに気づいており、そのことから、初期の人々がそうした場所を選んだのは、ひとつには、そこにやどっているように思えた声のためだったのではないかと考える人もいる。',
+      'こだまについての科学的な理解は、人々が音の速さをはかりはじめるにつれて発達した。音が空気の中を伝わるという考えはいまでは当たり前に思えるかもしれないが、それが一定の、はかることのできる速さで進むことを示すには、注意深い実験が必要だった。このことがわかると、さけび声とこだまのあいだの時間を使って、はね返す面までの距離を計算できるようになった。こうして、ふしぎなものがはかるための道具になったのであり、この変化は、人々が自然をとらえる見方のより広い変化を映し出している。',
+      'この道具はおどろくほど役に立ってきた。船は水の中に音の信号を送り、それがもどってくるのを聞いて、海の深さをはかったり水面下のものを見つけたりするし、医師は人間の耳には聞こえないほど高い音のこだまを使って、切り開くことなく体の中を見る。コウモリやイルカのような動物は、私たちよりもずっと長いあいだこだまにたよってきた。鳴き声を出し、それがもどってくるのを聞いて、暗やみの中で道を見つけたり、えさをとらえたりしているのである。',
+      'こだまはまた、建築や音楽においても大切な役割をはたしている。コンサートホールを設計する人は、音がかべや天井からどのようにはね返るかを注意深く考えなければならない。こだまが多すぎると音楽はぼやけ、話は聞きとれなくなり、少なすぎると部屋の音が死んだように聞こえるからである。音の科学が理解されるずっと前に建てられた古い教会や寺院の多くは、いまもほめたたえられる音響の性質をもっており、それを建てた人々が長い経験を通じて、人間の声のために空間を形づくる方法を学んでいたことをうかがわせる。',
+      '物理的な意味をこえて、こだまということばは、ほかの多くの種類のくり返しを表すようになった。私たちは、過去のできごとが現在にこだましていると言ったり、ある作家の作品が以前の作家の作品をこだましていると言ったり、ある考えが多くの人々の心にこだまを見いだすと言ったりする。どの場合でも、このことばは、変わってはいてもそれとわかる形でもどってきて、空間や時間のへだたりをこえて、ある瞬間やある人を別の瞬間や別の人と結びつける何かを示している。',
+      'だとすれば、こだまは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは単純な物理の事実であると同時に、おどろきのもとであり、科学の道具であり、過去が現在にひびきつづけるあり方を表す力強いイメージでもある。遠くの丘の斜面から自分の声がもどってくるのを聞くとき、私たちは、世界が静まりかえっているのではなく、私たちがそこに送り出すものは何であれ、何らかの形で私たちのもとにもどってくるものなのだと思い出させられるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「音が空気を伝わるという考えはいまは当たり前に思えるかもしれないが、注意深い実験が必要だった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '初期の多くの文化では、こだまは声として理解されていたらしい。', answer: true, why: '第2段落 understood not as reflections but as voices。' },
+      { statement: '音がはかれる速さで進むことは、実験なしにすぐわかった。', answer: false, why: '第3段落 it took careful experiments to show that ...。' },
+      { statement: 'コウモリやイルカは、暗やみで道を見つけるのにこだまを使う。', answer: true, why: '第4段落 bats and dolphins ... find their way and to catch food in the dark。' },
+      { statement: '筆者によると、コンサートホールではこだまが多いほどよい。', answer: false, why: '第5段落 too many echoes can make music blurred。' },
+    ],
+    qa: [
+      { q: 'Why might early people have chosen certain caves for their paintings?', choices: ['Because of the voices they seemed to hold.', 'Because they were warm.', 'Because they were easy to find.', 'Because they had water.'], answer: 0, why: '第2段落 partly because of the voices they seemed to hold。' },
+      { q: 'How do doctors use echoes?', choices: ['To see inside the body without cutting it open.', 'To measure the depth of the sea.', 'To design concert halls.', 'To catch food in the dark.'], answer: 0, why: '第4段落 to see inside the body without cutting it open。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
