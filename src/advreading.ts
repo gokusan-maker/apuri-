@@ -45422,6 +45422,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-coins',
+    title: 'On Coins',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, coins are slowly disappearing from daily life. People pay for coffee with a card, buy train tickets with their phones, and may go for days without touching a single piece of metal money. The coins that remain often collect at the bottom of bags or in jars on kitchen shelves, rarely spent and easily forgotten. Yet for more than two thousand years, coins have been among the most important objects that human beings have made, and their long history has much to tell us about trust, power, and the nature of value itself.",
+      "Before coins were invented, people exchanged goods directly or used various objects, such as grain, shells, or lumps of metal, as a means of payment. Lumps of metal had to be weighed and tested every time they changed hands, which was slow and open to cheating. The great advantage of the coin was that its weight and purity were guaranteed by whoever issued it, usually a ruler or a city, so that people could accept it without checking it each time, and trade could take place far more easily.",
+      "This guarantee depended on trust. ( A ) a coin might contain a certain amount of gold or silver, its value in daily use came from the confidence of those who used it that others would accept it in turn. When rulers secretly reduced the amount of precious metal in their coins in order to make more of them, people often noticed, and prices rose as confidence fell. The history of coins is therefore also a history of the fragile trust on which every system of money depends.",
+      "Coins have also served as a powerful means of communication. Because they passed through the hands of so many people, rulers used them to spread images of themselves, symbols of their power, and messages about their achievements. For historians, coins are a valuable source of information, revealing the names and faces of rulers, the gods that were worshipped, and the extent of trade, since coins from one region are often found buried in places very far away from where they were made. A single buried coin can thus reveal a journey that no written record describes.",
+      "In modern times, the value of coins has become almost entirely separate from the metal they contain. Most coins today are made from inexpensive metals, and in some cases the cost of producing a coin is greater than the value written on it. What gives them value is not their material but the agreement of a whole society to treat them as money, an agreement that is supported by governments and banks and that most of us accept without ever thinking about it. If that agreement were to collapse, the coins in our pockets would be worth little more than the metal itself.",
+      "The decline of coins in daily life raises questions of its own. For some people, especially the elderly and those without bank accounts, cash remains the most familiar and reliable way of paying, and a society without coins may leave them behind. Others value the privacy of cash, since payments made with coins leave no record. At the same time, many people welcome the convenience of paying without carrying heavy pockets of change, and the trend toward digital money shows little sign of slowing.",
+      "Perhaps, then, the coin deserves more thought than we usually give it. It is at once a piece of metal, a promise, a message, and a record of history. Whether or not coins continue to be used in the future, they remind us that money has always rested on agreements between people, and that the small objects we pass from hand to hand carry within them a long story of how human beings have learned to trust one another.",
+    ],
+    ja: [
+      '多くの国で、硬貨は日々の生活から少しずつ消えつつある。人々はコーヒーの代金をカードで払い、電話で電車の切符を買い、金属のお金に一度もさわらずに何日もすごすこともある。残った硬貨はしばしばかばんの底や台所の棚のびんにたまり、使われることはまれで、すぐにわすれられてしまう。しかし2000年以上ものあいだ、硬貨は人間がつくったもののなかでもっとも大切なもののひとつであり、その長い歴史は、信頼や権力、そして価値そのものの性質について多くのことを教えてくれる。',
+      '硬貨が発明される前、人々は品物を直接交換したり、穀物や貝がら、金属のかたまりなどのさまざまなものを支払いの手段として使ったりしていた。金属のかたまりは、人の手にわたるたびに重さをはかり、たしかめなければならず、それは時間がかかり、ごまかしの余地もあった。硬貨の大きな利点は、その重さと純度が、それを発行した者、ふつうは支配者や都市によって保証されていたことである。そのため人々はそのたびにたしかめることなくそれを受けとることができ、取り引きははるかにかんたんに行われるようになった。',
+      'この保証は信頼にもとづいていた。硬貨は一定量の金や銀をふくんでいたかもしれないが、日々の使用における価値は、それを使う人々の、ほかの人も今度はそれを受けとってくれるだろうという信頼から生まれていた。支配者がもっと多くの硬貨をつくるために、こっそり硬貨の中の貴金属の量をへらすと、人々はしばしばそれに気づき、信頼が落ちるにつれて物価が上がった。したがって、硬貨の歴史は、あらゆるお金のしくみがよりどころとしているもろい信頼の歴史でもあるのである。',
+      '硬貨はまた、強力な伝達の手段としても役立ってきた。硬貨はとても多くの人の手を通るので、支配者はそれを使って自分のすがたや権力のシンボル、自分の業績についてのメッセージを広めた。歴史家にとって、硬貨は貴重な情報源であり、支配者の名前や顔、あがめられていた神々、取り引きの広がりを明らかにしてくれる。ある地域の硬貨が、それがつくられた場所からとても遠くはなれた場所にうめられているのが見つかることがよくあるからである。このように、うめられたたった1枚の硬貨が、どんな文字の記録にも書かれていない旅を明らかにすることがあるのである。',
+      '現代では、硬貨の価値は、それがふくむ金属とほとんど完全に切りはなされている。今日のほとんどの硬貨は安い金属でつくられており、場合によっては、硬貨をつくる費用がそこに書かれた額より大きいこともある。硬貨に価値をあたえているのはその材料ではなく、社会全体がそれをお金としてあつかうという合意であり、その合意は政府や銀行にささえられ、私たちのほとんどは一度も考えることなくそれを受け入れている。もしその合意がくずれれば、ポケットの硬貨は金属そのものとほとんど変わらない値打ちしかなくなるだろう。',
+      '日々の生活で硬貨がへっていることは、それ自体の問いを投げかける。一部の人々、とくにお年寄りや銀行口座をもたない人々にとっては、現金はいまでももっともなじみ深く信頼できる支払い方法であり、硬貨のない社会はそうした人々をとり残してしまうかもしれない。また、硬貨での支払いは記録を残さないので、現金のプライバシーを大切にする人もいる。同時に、多くの人は重い小銭をポケットに入れずに支払える便利さを歓迎しており、デジタルのお金へ向かう流れはおそくなるきざしをほとんど見せていない。',
+      'だとすれば、硬貨は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは金属のかけらであると同時に、約束であり、メッセージであり、歴史の記録でもある。硬貨が将来も使われつづけるかどうかにかかわらず、それは、お金がいつも人々のあいだの合意の上に成り立ってきたこと、そして私たちが手から手へとわたす小さなものが、人間がたがいに信頼し合うことをどのように学んできたかという長い物語をその中にたずさえていることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「硬貨は金や銀をふくんでいたかもしれないが、価値は信頼から生まれていた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '金属のかたまりは、手にわたるたびに重さをはかる必要があった。', answer: true, why: '第2段落 had to be weighed and tested every time they changed hands。' },
+      { statement: '支配者が硬貨の貴金属をへらしても、人々はけっして気づかなかった。', answer: false, why: '第3段落 people often noticed。' },
+      { statement: '硬貨をつくる費用が、そこに書かれた額より大きいこともある。', answer: true, why: '第5段落 the cost of producing a coin is greater than the value written on it。' },
+      { statement: '筆者によると、デジタルのお金へ向かう流れは止まりつつある。', answer: false, why: '第6段落 shows little sign of slowing。' },
+    ],
+    qa: [
+      { q: 'What was the great advantage of the coin?', choices: ['Its weight and purity were guaranteed.', 'It was made of paper.', 'It could be eaten.', 'It was always very large.'], answer: 0, why: '第2段落 its weight and purity were guaranteed by whoever issued it。' },
+      { q: 'Why do some people value cash?', choices: ['Payments with coins leave no record.', 'Coins are lighter than cards.', 'Coins earn interest.', 'Shops give discounts for coins.'], answer: 0, why: '第6段落 payments made with coins leave no record。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
