@@ -3529,3 +3529,10 @@ it('正誤問題〈255〉：京大レベル consist of・be made up of・be comp
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) from')
 })
+
+it('誤文訂正〈249〉：東大レベル result in・result from・lead to の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-249')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('resulted in')
+})

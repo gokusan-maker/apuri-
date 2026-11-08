@@ -10601,6 +10601,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Scientists have [succeeded to develop] a new vaccine.', choices: ['succeeded in developing', 'succeeded developing to', 'succeeded on develop', 'succeeded of developing'], answer: 0, why: '「～することに成功する」は succeed in ～ing。' },
     ],
   },
+  {
+    id: 'exam-fix-249',
+    title: '入試の誤文訂正〈249〉（東大レベル：英作文の result in・result from・lead to）',
+    points: ['A result in B は「A が B という結果になる（原因→結果）」、B result from A は「B が A から生じる（結果←原因）」。向きを逆にするとまちがい。lead to ～ も「～につながる・～をまねく」（原因→結果）。', 'result・lead は自動詞で、受け身にしない（× is resulted in）。前置詞のあとに動詞を置くときは ～ing（lead to losing）。名詞の result は as a result（その結果）。'],
+    examples: [{ en: 'Heavy rain resulted in floods. / The floods resulted from heavy rain. / Stress can lead to illness.', ja: '大雨の結果、洪水が起きた。／洪水は大雨から生じた。／ストレスは病気につながりうる。' }],
+    questions: [
+      { sentence: 'The accident [resulted from] the death of two people.', choices: ['resulted in', 'resulted to', 'resulted by', 'resulted on'], answer: 0, why: '事故（原因）→死（結果）なので result in。' },
+      { sentence: 'His illness [resulted in] working too hard.', choices: ['resulted from', 'resulted to', 'resulted by', 'resulted with'], answer: 0, why: '病気（結果）←働きすぎ（原因）なので result from。' },
+      { sentence: 'Eating too much sugar can [lead in] health problems.', choices: ['lead to', 'lead from', 'lead by', 'lead at'], answer: 0, why: '「～につながる」は lead to ～。' },
+      { sentence: 'The fire [was resulted in] great damage.', choices: ['resulted in', 'was resulting from', 'was resulted to', 'resulted by'], answer: 0, why: 'result は自動詞なので受け身にしない。resulted in。' },
+      { sentence: 'Careless driving often leads to [have] accidents.', choices: ['having', 'has', 'had', 'to having'], answer: 0, why: '前置詞 to のあとは動名詞なので having。' },
+      { sentence: 'The flood [resulted by] days of heavy rain.', choices: ['resulted from', 'resulted in by', 'resulted of', 'resulted to'], answer: 0, why: '洪水（結果）←雨（原因）なので result from。' },
+      { sentence: 'She studied hard. [As result], she passed the exam.', choices: ['As a result', 'For result', 'In results', 'By result'], answer: 0, why: '「その結果」は as a result。' },
+      { sentence: 'The new policy led to a sharp rise [on] prices.', choices: ['in', 'to', 'at', 'with'], answer: 0, why: '「物価の上昇」は a rise in prices。' },
+      { sentence: 'Lack of sleep can [result to] poor performance at school.', choices: ['result in', 'result from to', 'result of', 'result at'], answer: 0, why: '睡眠不足（原因）→成績不振（結果）なので result in。' },
+      { sentence: 'Their success [resulted in] years of hard work.', choices: ['resulted from', 'resulted to', 'resulted by', 'resulted on'], answer: 0, why: '成功（結果）←努力（原因）なので result from。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
