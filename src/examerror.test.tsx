@@ -3417,3 +3417,10 @@ it('正誤問題〈247〉：国公立レベル 句動詞の単元が10問ある'
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) my keys')
 })
+
+it('誤文訂正〈241〉：京大レベル 手段・道具の by と with の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-241')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('with scissors')
+})

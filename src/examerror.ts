@@ -10257,6 +10257,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She saved [as much money as she can] last year.', choices: ['as much money as she could', 'as many money as she could', 'as much money she could', 'as more money as she could'], answer: 0, why: '過去の文なので as she could。' },
     ],
   },
+  {
+    id: 'exam-fix-241',
+    title: '入試の誤文訂正〈241〉（京大レベル：英作文の手段・道具の by と with）',
+    points: ['手に持って使う道具は with ＋冠詞＋名詞（with a pen／with scissors／with a key）。通信・交通・支払いなどの手段は by ＋無冠詞の名詞（by email／by bus／by credit card／by hand）。', '受け身の動作主（だれによって）は by（painted by Picasso）。自然の力による破壊も by（destroyed by fire）。「～することによって」は by ～ing（by watching films）で、with ～ing にはしない。'],
+    examples: [{ en: 'He cut the paper with scissors and sent the documents by email.', ja: '彼ははさみで紙を切り、書類を電子メールで送った。' }],
+    questions: [
+      { sentence: 'He cut the paper [by scissors].', choices: ['with scissors', 'by the scissors', 'on scissors', 'in scissors'], answer: 0, why: '手に持つ道具は with。with scissors。' },
+      { sentence: 'Please write your name [by a pen].', choices: ['with a pen', 'by pen of', 'on a pen', 'through a pen'], answer: 0, why: '道具なので with a pen。' },
+      { sentence: 'She sent the documents [with email].', choices: ['by email', 'with an email of', 'on email by', 'in email with'], answer: 0, why: '通信の手段は by email。' },
+      { sentence: 'We paid [with credit card].', choices: ['by credit card', 'with credit card of', 'on credit card', 'in credit card'], answer: 0, why: '支払いの手段は by credit card（with なら with a credit card）。' },
+      { sentence: 'The old house was destroyed [with fire].', choices: ['by fire', 'with a fire of', 'on fire by', 'in fire'], answer: 0, why: '受け身で「火事によって」は by fire。' },
+      { sentence: 'He opened the door [by a key].', choices: ['with a key', 'by key of', 'on a key', 'through key'], answer: 0, why: '道具なので with a key。' },
+      { sentence: 'This picture was painted [with Picasso].', choices: ['by Picasso', 'with Picasso by', 'on Picasso', 'from Picasso'], answer: 0, why: '受け身の動作主は by。' },
+      { sentence: 'I learned English [with watching] films.', choices: ['by watching', 'with watch', 'on watching of', 'in watch'], answer: 0, why: '「～することによって」は by ～ing。' },
+      { sentence: 'She ate the soup [by a spoon].', choices: ['with a spoon', 'by spoon of', 'on a spoon', 'through a spoon'], answer: 0, why: '道具なので with a spoon。' },
+      { sentence: 'The letter was written [by hand of].', choices: ['by hand', 'with hand', 'in hand', 'on hand'], answer: 0, why: '「手書きで」は by hand。of は不要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
