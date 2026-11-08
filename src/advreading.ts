@@ -43938,6 +43938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-native-planting',
+    title: 'Should Cities Plant Only Native Species?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Walk through the parks and streets of almost any city, and you will find trees and flowers that originally came from distant parts of the world. Over the centuries, gardeners and planners have introduced plants from other continents because they were beautiful, grew quickly, or survived well in difficult conditions. In recent years, however, a growing number of ecologists and local governments have argued that cities should plant mainly native species, those that grew naturally in the region before human beings brought others, and the proposal has prompted a lively debate about what kind of nature cities should contain.",
+      "Supporters of native planting argue that local wildlife depends on local plants. Many insects have evolved alongside particular plants and can feed only on them, and birds in turn depend on those insects to feed their young. Supporters point out that a park filled with attractive but unfamiliar species may look green and healthy while offering little food or shelter to the animals that live in the area, so that replacing them with native plants could help to support declining populations of insects and birds. Even a small garden planted with native flowers, they note, can become a stopping place for bees and butterflies moving across the city.",
+      "Supporters also warn about the risks that introduced species can pose. Some plants brought from elsewhere have spread beyond gardens and parks, crowding out native species and changing entire landscapes, and controlling them can be extremely expensive once they have become established. ( A ) only a small proportion of introduced plants cause such problems, supporters argue, it is difficult to predict in advance which ones will do so, and favoring native species is therefore a sensible precaution.",
+      "Critics, however, argue that a strict preference for native plants may be unrealistic in modern cities. Urban environments are very different from the forests and grasslands that once covered the land, with hotter temperatures, polluted air, and compacted soil, and some native species struggle to survive in such conditions. Critics point out that certain introduced trees are especially good at tolerating heat and pollution, providing shade and cooling streets in ways that native trees might not.",
+      "Critics also note that climate change is altering the conditions in which plants grow. Species that are native to a region today may find it increasingly difficult to survive as temperatures rise, while plants from warmer places may be better suited to the climate that cities will face in the coming decades. Some critics further argue that the line between native and introduced species is not always clear, since plants and animals have always moved across the world, and that what matters is whether a plant supports a healthy ecosystem rather than where it originally came from.",
+      "In response, many cities have adopted a mixed approach. They increase the proportion of native plants in parks and gardens, particularly those that are known to support local wildlife, while continuing to use carefully chosen introduced species in places where hardiness and shade are especially important. Some cities have also stopped planting species known to spread aggressively, and they encourage residents to include native plants in their own gardens. Such policies are often reviewed every few years, so that planners can learn from experience which plants thrive and which do not.",
+      "The debate over native planting ultimately reflects a broader question about what we expect from nature in cities. If urban green spaces are valued mainly for their beauty and their ability to make cities more comfortable for people, then any plant that serves those purposes may seem acceptable. If, however, they are also meant to support the wider web of life with which human beings share the land, then the choice of what to plant becomes a decision about how cities can live in partnership with the natural world around them.",
+    ],
+    ja: [
+      'ほとんどどの都市の公園や通りを歩いても、もともと世界の遠い地域から来た木や花が見つかる。何世紀ものあいだ、庭師や計画者は、美しかったり、早く育ったり、きびしい条件でもよく生きのびたりするという理由で、ほかの大陸から植物を持ちこんできた。しかし近年、ますます多くの生態学者や地方自治体が、都市はおもに在来種、つまり人間がほかの種を持ちこむ前からその地域に自然に生えていた種を植えるべきだと主張するようになっており、その提案は、都市にどのような自然をおくべきかについての活発な議論を引き起こしている。',
+      '在来種を植えることを支持する人々は、地元の野生生物は地元の植物にたよっていると主張する。多くの昆虫は特定の植物とともに進化してきて、それしか食べられず、鳥はそのひなを育てるためにその昆虫にたよっている。魅力的だがなじみのない種でいっぱいの公園は、緑ゆたかで健康そうに見えても、その地域に住む動物に食べものやかくれ場所をほとんど提供していないかもしれず、それを在来の植物に置きかえれば、減りつつある昆虫や鳥の数をささえる助けになりうる、と支持者は指摘する。在来の花を植えた小さな庭でさえ、都市を移動するハチやチョウの立ち寄り場所になりうると彼らは言う。',
+      '支持する人々はまた、持ちこまれた種がもたらしうる危険についても警告する。ほかの場所から持ちこまれた植物のなかには、庭や公園をこえて広がり、在来種をおしのけ、景色全体を変えてしまったものもあり、一度定着してしまうと、それをおさえるにはひどく費用がかかることがある。そうした問題を起こすのは持ちこまれた植物のごく一部にすぎないが、どれがそうなるかを前もって予想するのはむずかしく、だから在来種を優先するのは賢明な予防策だ、と支持者は主張する。',
+      'しかし批判する人々は、在来の植物を厳しく優先することは、現代の都市では現実的でないかもしれないと主張する。都市の環境は、かつて土地をおおっていた森や草原とは大きくちがい、気温は高く、空気はよごれ、土はふみかためられており、在来種のなかにはそうした条件で生きのびるのに苦労するものもある。持ちこまれた木のなかには、暑さや汚染にとくに強く、在来の木にはできないかたちで日かげをつくり、通りをすずしくするものもある、と批判する人々は指摘する。',
+      '批判する人々はまた、気候変動が植物の育つ条件を変えつつあることにも注目する。いまその地域の在来種である種も、気温が上がるにつれて生きのびるのがますますむずかしくなるかもしれず、一方で、より暖かい場所から来た植物のほうが、これからの数十年に都市が直面する気候に合っているかもしれない。さらに、植物や動物はつねに世界じゅうを移動してきたので、在来種と持ちこまれた種のさかいめはいつもはっきりしているわけではなく、大切なのは植物がもともとどこから来たかではなく、健全な生態系をささえているかどうかだと主張する批判者もいる。',
+      'これに対して、多くの都市は組み合わせのやり方をとっている。公園や庭で在来の植物の割合をふやし、とくに地元の野生生物をささえることがわかっているものを植える一方で、じょうぶさや日かげがとくに大切な場所では、注意深く選んだ持ちこまれた種を使いつづけているのである。また、はげしく広がることがわかっている種を植えるのをやめ、住民に自分の庭にも在来の植物を取り入れるよう促している都市もある。そうした方針は数年ごとに見直されることが多く、計画者はどの植物がよく育ち、どの植物が育たないかを経験から学べるようになっている。',
+      '在来種を植えることをめぐる議論は、結局のところ、都市の自然に私たちが何を期待しているのかという、より広い問いを反映している。都市の緑の空間がおもに、その美しさや、人々にとって都市をより快適にする力のために大切にされるのなら、その目的にかなう植物はどれも受け入れられるように思えるかもしれない。しかしそれが、人間が土地を分かち合っているより広い生命の網をささえるためのものでもあるなら、何を植えるかを選ぶことは、都市がまわりの自然界とどのように協力して生きていけるのかについての決定になるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「問題を起こすのはごく一部だが、前もって予想するのはむずかしい」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of native planting say local wildlife depends on local plants and that introduced species can ( 1 ) beyond gardens. Critics argue that some introduced trees tolerate heat and ( 2 ) better and that climate change is altering growing conditions. Many cities now take a ( 3 ) approach.',
+      blanks: [
+        { choices: ['spread', 'sing', 'shrink', 'sleep'], answer: 0, why: '第3段落 have spread beyond gardens and parks。' },
+        { choices: ['pollution', 'music', 'tourism', 'traffic'], answer: 0, why: '第4段落 good at tolerating heat and pollution。' },
+        { choices: ['mixed', 'strict', 'secret', 'violent'], answer: 0, why: '第6段落 many cities have adopted a mixed approach。' },
+      ],
+    },
+    tf: [
+      { statement: '多くの昆虫は、特定の植物しか食べられない。', answer: true, why: '第2段落 can feed only on them。' },
+      { statement: '支持者によると、持ちこまれた植物はすべて問題を起こす。', answer: false, why: '第3段落 only a small proportion of introduced plants cause such problems。' },
+      { statement: '批判する人々は、在来種と持ちこまれた種のさかいめはいつもはっきりしているわけではないと言う。', answer: true, why: '第5段落 the line between native and introduced species is not always clear。' },
+      { statement: 'すべての都市が、持ちこまれた種を植えることを完全にやめた。', answer: false, why: '第6段落 continuing to use carefully chosen introduced species。' },
+    ],
+    qa: [
+      { q: 'Why may some native species struggle in cities, according to critics?', choices: ['Urban conditions such as heat, polluted air, and compacted soil.', 'There are too many birds.', 'People water them too much.', 'They grow too quickly.'], answer: 0, why: '第4段落 with hotter temperatures, polluted air, and compacted soil。' },
+      { q: 'What do some cities encourage residents to do?', choices: ['Include native plants in their own gardens.', 'Remove all trees from their gardens.', 'Plant only fast-growing species.', 'Stop feeding birds.'], answer: 0, why: '第6段落 encourage residents to include native plants in their own gardens。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
