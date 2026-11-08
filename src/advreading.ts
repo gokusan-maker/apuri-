@@ -44382,6 +44382,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-hats',
+    title: 'On Hats',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A hat is one of the simplest garments human beings wear, yet it has carried an astonishing variety of meanings. It protects the head from sun, rain, and cold, but it has also been used to signal rank, profession, belief, and membership of a group. In many places, people once felt incomplete leaving home without a hat, while today hats are worn mainly for practical reasons or for fashion. Considering the history of the hat may reveal something about how people use clothing not only to protect their bodies but also to show others who they are.",
+      "The most basic purpose of a hat is protection. In hot climates, a wide brim shades the face and neck from the sun, while in cold regions a thick woolen cap prevents the loss of heat from the head. Workers in many occupations wear hard hats or helmets to protect themselves from falling objects, and such headgear has saved countless lives. In these cases, the hat is a practical response to the dangers and discomforts of the environment. Doctors in sunny countries regularly advise parents to make sure that children wear hats outdoors, since protecting young skin from strong sunlight can prevent serious problems later in life.",
+      "Yet hats have also long served as signs of identity. Soldiers, police officers, nurses, cooks, and many others wear particular kinds of headgear that announce their roles at a glance, and in some societies the style of a person's hat could reveal their social class or the region from which they came. ( A ) such signals are less rigid today, hats still allow people to recognize one another quickly, and a uniform cap can give its wearer a sense of belonging to a larger group with shared duties.",
+      "Hats have also been closely connected with manners and respect. In many cultures, men were expected to remove their hats when entering a building, greeting a woman, or attending a religious service, and failing to do so could be regarded as rude. Raising one's hat slightly to an acquaintance in the street was once a common gesture of greeting, a small movement that expressed recognition and politeness without the need for words. Even today, the expression of taking off one’s hat to someone survives in several languages as a way of showing admiration for what that person has achieved.",
+      "In some traditions, covering the head carries religious or spiritual meaning. People of various faiths wear particular head coverings as an expression of devotion, humility, or respect for the sacred, and these customs have often been maintained for centuries. Such practices remind us that what people wear on their heads may express not only their place in society but also their deepest beliefs and the values they wish to honor. For those who observe them, removing such a covering in public may feel as uncomfortable as being asked to give up a part of who they are.",
+      "Over the past century, the everyday hat has largely disappeared from many cities. Changes in transport, heating, and fashion have made hats less necessary, and many people now go bareheaded except in very cold or sunny weather. Yet hats have not vanished entirely; they have become more a matter of personal choice, worn to express individual style, to support a sports team, or simply to enjoy the pleasure of choosing something distinctive to wear.",
+      "Perhaps, then, hats deserve more attention than we usually give them. They remind us that clothing has always been a language, a way of telling others where we belong, what we do, and what we believe. The decline of the everyday hat may reflect a world in which people prefer to choose their own identities rather than have them assigned, but it may also invite us to consider what new signs we now use, in an age of screens and social media, to show others who we are.",
+    ],
+    ja: [
+      'ぼうしは人間が身につけるもっとも単純な衣服の一つだが、おどろくほどさまざまな意味をになってきた。それは頭を日ざしや雨、寒さから守るが、身分や職業、信仰、集団への所属を示すためにも使われてきた。多くの場所で、人々はかつてぼうしをかぶらずに家を出ると何かが足りないように感じていたが、今日ではぼうしはおもに実用的な理由か、おしゃれのためにかぶられる。ぼうしの歴史を考えることは、人々が衣服を、体を守るためだけでなく、自分が何者かをほかの人に示すためにもどのように使っているかについて、何かを明らかにしてくれるかもしれない。',
+      'ぼうしのもっとも基本的な目的は守ることである。暑い地方では、広いつばが顔や首を日ざしからさえぎり、寒い地方では、厚い毛糸のぼうしが頭から熱がにげるのをふせぐ。多くの職業の働き手は、落ちてくるものから身を守るためにヘルメットをかぶり、そうしたかぶりものは数えきれない命を救ってきた。こうした場合、ぼうしは環境の危険や不快さに対する実際的な答えなのである。日ざしの強い国の医師は、子どもが外でかならずぼうしをかぶるよう親にくり返し助言している。強い日光から幼い肌を守ることが、のちの人生での深刻な問題をふせぎうるからである。',
+      'しかしぼうしは、昔から自分が何者かを示すしるしとしての役割も果たしてきた。兵士や警察官、看護師、料理人、そのほか多くの人々が、自分の役割をひと目で知らせる特定のかぶりものを身につけており、社会によっては、人のぼうしの形が、その人の社会階級や出身地を明らかにすることもあった。そうしたしるしは今日ではそれほど厳しいものではないが、ぼうしはいまも人々がおたがいをすばやく見分けることを可能にし、制服のぼうしは、かぶる人に、共通の務めをもつより大きな集団に属しているという感覚をあたえることがある。',
+      'ぼうしはまた、礼儀や敬意とも深く結びついてきた。多くの文化で、男性は建物に入るとき、女性にあいさつするとき、宗教の儀式に出るときにぼうしをとることを求められ、そうしないと失礼とみなされることがあった。通りで知り合いに向かってぼうしを少しもち上げることは、かつてはふつうのあいさつのしぐさであり、ことばを必要とせずに相手に気づいたことと礼儀を表す小さな動きだったのである。今日でも、だれかに「ぼうしをとる」という表現は、その人がなしとげたことへの感心を示す言い方として、いくつかの言語に残っている。',
+      '伝統によっては、頭をおおうことが宗教的・精神的な意味をもつ。さまざまな信仰の人々が、信心やけんそん、聖なるものへの敬意の表れとして特定のかぶりものを身につけており、こうした習慣はしばしば何世紀にもわたって守られてきた。そうした慣わしは、人々が頭に身につけるものが、社会のなかでの位置だけでなく、もっとも深い信念や大切にしたい価値をも表しうることを思い出させてくれる。それを守る人々にとって、人前でそうしたかぶりものを外すことは、自分の一部を手ばなすよう求められるのと同じくらい落ちつかないことかもしれない。',
+      'この百年ほどのあいだに、日常のぼうしは多くの都市からほとんど姿を消した。交通や暖房、流行の変化によってぼうしはそれほど必要でなくなり、多くの人はいまでは、とても寒い日か日ざしの強い日をのぞいて、何もかぶらずに出かける。しかしぼうしは完全に消えたわけではない。それはむしろ個人の選択の問題になり、自分らしいスタイルを表したり、スポーツのチームを応援したり、ただ目立つものを選んで身につける楽しみを味わったりするためにかぶられるようになったのである。',
+      'だとすれば、ぼうしは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。ぼうしは、衣服がつねに一つのことばであり、自分がどこに属し、何をし、何を信じているかをほかの人に伝える方法であったことを思い出させてくれる。日常のぼうしがすたれたことは、人々が自分のアイデンティティを割りあてられるよりも自分で選ぶことを好む世界を反映しているのかもしれないが、それはまた、画面とソーシャルメディアの時代に、私たちが自分が何者かをほかの人に示すためにいまどのような新しいしるしを使っているのかを考えるよう、私たちをさそっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうしたしるしは今日ではそれほど厳しくないが、ぼうしはいまも見分けることを可能にする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'ヘルメットのようなかぶりものは、多くの命を救ってきた。', answer: true, why: '第2段落 such headgear has saved countless lives。' },
+      { statement: 'ぼうしの形が社会階級を示すことは、どの社会でもなかった。', answer: false, why: '第3段落 in some societies the style of a person’s hat could reveal their social class。' },
+      { statement: '多くの文化で、男性は建物に入るときぼうしをとることを求められた。', answer: true, why: '第4段落 men were expected to remove their hats when entering a building。' },
+      { statement: '筆者によると、ぼうしは完全に消えてしまった。', answer: false, why: '第6段落 Yet hats have not vanished entirely。' },
+    ],
+    qa: [
+      { q: 'What did raising one’s hat slightly to an acquaintance once express?', choices: ['Recognition and politeness.', 'Anger and surprise.', 'A wish to leave.', 'A request for money.'], answer: 0, why: '第4段落 expressed recognition and politeness without the need for words。' },
+      { q: 'Why are hats worn today, according to the sixth paragraph?', choices: ['To express style, support a team, or enjoy choosing something distinctive.', 'Because the law requires them.', 'Only to show social class.', 'Only for religious ceremonies.'], answer: 0, why: '第6段落 worn to express individual style, to support a sports team, or simply to enjoy ...。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
