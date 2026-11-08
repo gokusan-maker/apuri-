@@ -44098,6 +44098,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-feeding-wildlife',
+    title: 'Should Feeding Wild Animals Be Banned?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many people, feeding wild animals is one of the simplest pleasures of spending time outdoors. Children throw bread to ducks in the park, families leave seeds for birds in their gardens, and tourists offer snacks to monkeys, deer, or squirrels in the hope of seeing them up close. In recent years, however, a growing number of local governments and nature reserves have restricted or banned the feeding of wild animals, and the question of whether such rules are necessary has divided people who share a common affection for wildlife.",
+      "Supporters of restrictions argue first that human food can harm animals' health. Bread, crisps, and sweets contain little of the nutrition that wild animals need, and animals that fill themselves with such food may become ill or fail to find the natural foods on which they depend. Supporters also point out that leftover food can pollute ponds and rivers, encouraging the growth of algae and attracting rats, so that an act intended as kindness may end up damaging the very environment in which the animals live. Large gatherings of birds around a single source of food can also spread disease quickly, since sick and healthy animals come into close contact.",
+      "Supporters also emphasize that feeding can change animals' behavior in dangerous ways. Animals that learn to associate people with food may lose their natural fear of humans, approaching visitors aggressively, stealing from bags, or wandering into towns and roads. ( A ) such animals may appear tame, supporters argue, they can injure people when they do not receive what they expect, and in some cases the animals themselves must be removed or even killed because they have become a danger. In several popular tourist areas, warning signs now explain that a fed animal is often a dead animal, a phrase intended to make visitors think twice before offering food.",
+      "Critics, however, argue that strict bans may be unnecessary and may deprive people of a valuable connection with nature. For many city dwellers, especially children and older people, feeding birds is one of the few direct contacts they have with wild animals, and it can encourage an interest in nature that lasts a lifetime. Critics point out that careful feeding with suitable food, such as seeds for garden birds, can help animals survive harsh winters when natural food is scarce. Many birdwatchers began their lifelong interest simply by watching which birds came to a feeder outside a kitchen window.",
+      "Critics also question whether bans can be enforced without spoiling people's enjoyment of public spaces. Parks and reserves are visited by large numbers of people, and it may be impossible to prevent every visitor from offering food to animals. Critics argue that education, rather than prohibition, is the most effective way to change behavior, and that visitors who understand why feeding can be harmful are more likely to stop than those who simply see a sign forbidding it.",
+      "In response, many places have adopted more nuanced approaches. Some parks forbid feeding certain animals, such as monkeys or bears, while allowing visitors to feed birds with special food sold on site, and others provide information explaining which foods are harmful. Some nature reserves have created observation areas where people can watch animals closely without feeding them, and many organizations encourage gardeners to plant native flowers and shrubs that provide natural food for wildlife throughout the year.",
+      "The debate over feeding wild animals ultimately reflects a broader question about how human beings should relate to the wild creatures with which they share their environment. Affection for animals can lead people to want to help them, but help that ignores the animals' natural needs may do more harm than good. Finding the right balance requires learning to enjoy wildlife on its own terms, recognizing that respecting animals may sometimes mean keeping our distance rather than reaching out to them.",
+    ],
+    ja: [
+      '多くの人にとって、野生動物にえさをやることは、外で過ごすときのもっとも単純な楽しみの一つである。子どもたちは公園でカモにパンを投げ、家族は庭に鳥のための種を置き、観光客は近くで見たいと思ってサルやシカ、リスにおやつを差し出す。しかし近年、ますます多くの地方自治体や自然保護区が野生動物へのえさやりを制限したり禁止したりしており、そうした決まりが必要かどうかという問いは、野生動物への愛情を共有する人々のあいだで意見を分けている。',
+      '制限を支持する人々は、まず人間の食べものが動物の健康を害しうると主張する。パンやポテトチップス、あまいおかしには、野生動物に必要な栄養がほとんどふくまれておらず、そうした食べもので満腹になった動物は、病気になったり、たよっている自然の食べものを見つけられなくなったりするかもしれない。支持する人々はまた、食べ残しが池や川をよごし、藻をふやし、ネズミを引きよせることがあると指摘する。そのため、親切のつもりの行為が、動物の暮らすまさにその環境をそこなうことになりかねないのである。また、一つの食べものの源のまわりに鳥がたくさん集まると、病気の動物と健康な動物が近くでふれ合うため、病気が早く広がることもある。',
+      '支持する人々はまた、えさやりが動物のふるまいを危険なかたちで変えうることも強調する。人を食べものと結びつけるようになった動物は、人間へのもともとのおそれをなくし、訪問者に攻撃的に近づいたり、かばんから食べものをぬすんだり、町や道路にまよいこんだりするかもしれない。そうした動物はなれているように見えるかもしれないが、期待したものがもらえないと人にけがをさせることがあり、場合によっては、危険になってしまったために、その動物自身が移されたり殺されたりさえしなければならない、と支持者は主張する。人気のある観光地のいくつかでは、いまでは警告の看板が「えさをもらった動物は、しばしば死ぬ動物である」と説明している。訪問者に食べものを差し出す前に考え直させるためのことばである。',
+      'しかし批判する人々は、厳しい禁止は不要かもしれず、人々から自然との価値あるつながりをうばうかもしれないと主張する。多くの都会の住民、とくに子どもやお年寄りにとって、鳥にえさをやることは、野生動物とじかにふれ合う数少ない機会の一つであり、一生続く自然への関心を育てることもある。庭の鳥に種をやるような、ふさわしい食べものでの注意深いえさやりは、自然の食べものが少ない厳しい冬を動物が生きのびる助けになりうる、と批判する人々は指摘する。多くのバードウォッチャーは、台所の窓の外のえさ台にどんな鳥が来るかをながめることから、一生の趣味を始めたのである。',
+      '批判する人々はまた、公共の空間での人々の楽しみをそこなわずに禁止を守らせることができるのかどうかを疑う。公園や保護区には多くの人々が訪れ、すべての訪問者が動物に食べものを差し出すのをふせぐのは不可能かもしれない。ふるまいを変えるもっとも効果的な方法は禁止ではなく教育であり、なぜえさやりが害になりうるのかを理解した訪問者のほうが、ただ禁止の看板を見た訪問者よりもやめる可能性が高い、と批判する人々は主張する。',
+      'これに対して、多くの場所はよりきめ細かなやり方を取り入れている。サルやクマのような特定の動物へのえさやりを禁止しながら、その場で売られる専用の食べもので鳥にえさをやることは認める公園もあれば、どの食べものが害になるかを説明する情報を用意する公園もある。えさをやらずに動物を近くで観察できる場所をつくった自然保護区もあり、多くの団体は、一年を通して野生動物に自然の食べものをあたえる在来の花や低木を植えるよう、庭づくりをする人々に促している。',
+      '野生動物へのえさやりをめぐる議論は、結局のところ、人間が環境を分かち合う野生の生きものとどのように関わるべきかという、より広い問いを反映している。動物への愛情は、人々に動物を助けたいと思わせることがあるが、動物の本来の必要を無視した助けは、益よりも害のほうが大きいかもしれない。正しいつりあいを見つけるには、野生動物をそのありのままの姿で楽しむことを学び、動物を尊重することが、ときには手を差しのべるのではなく、距離をおくことを意味しうると認めることが必要なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「そうした動物はなれているように見えるかもしれないが、人にけがをさせることがある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of restrictions say human food can harm animals’ ( 1 ) and that feeding can make animals lose their fear of people. Critics argue that feeding gives people a connection with nature and that ( 2 ) works better than prohibition. Many places now provide areas where people can ( 3 ) animals without feeding them.',
+      blanks: [
+        { choices: ['health', 'wealth', 'music', 'language'], answer: 0, why: '第2段落 human food can harm animals’ health。' },
+        { choices: ['education', 'punishment', 'silence', 'advertising'], answer: 0, why: '第5段落 education, rather than prohibition, is the most effective way。' },
+        { choices: ['watch', 'sell', 'catch', 'paint'], answer: 0, why: '第6段落 observation areas where people can watch animals closely without feeding them。' },
+      ],
+    },
+    tf: [
+      { statement: 'パンやおかしには、野生動物に必要な栄養がほとんどない。', answer: true, why: '第2段落 contain little of the nutrition that wild animals need。' },
+      { statement: '支持する人々によると、えさをもらった動物は人間をよりおそれるようになる。', answer: false, why: '第3段落 may lose their natural fear of humans。' },
+      { statement: '批判する人々は、注意深いえさやりが冬の動物を助けうると言う。', answer: true, why: '第4段落 can help animals survive harsh winters。' },
+      { statement: 'すべての公園が、どの動物へのえさやりも禁止している。', answer: false, why: '第6段落 allowing visitors to feed birds with special food sold on site。' },
+    ],
+    qa: [
+      { q: 'What can leftover food in ponds and rivers encourage, according to supporters?', choices: ['The growth of algae and the arrival of rats.', 'Cleaner water.', 'More fish in the river.', 'Fewer visitors.'], answer: 0, why: '第2段落 encouraging the growth of algae and attracting rats。' },
+      { q: 'What do many organizations encourage gardeners to plant?', choices: ['Native flowers and shrubs.', 'Fast-growing foreign trees.', 'Only grass.', 'Fruit for people to sell.'], answer: 0, why: '第6段落 plant native flowers and shrubs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
