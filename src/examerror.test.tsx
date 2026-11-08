@@ -3606,3 +3606,10 @@ it('誤文訂正〈254〉：国公立レベル thank 人 for・blame 人 for・p
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('for helping')
 })
+
+it('正誤問題〈261〉：京大レベル accuse 人 of・congratulate 人 on・approve of の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-accuse-congratulate')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) him for')
+})

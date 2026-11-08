@@ -6258,6 +6258,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The economy (B) has slowly (C) recovered from (D) the crisis since last years.', choices: ['(A) The economy', '(B) has slowly', '(C) recovered from', '(D) the crisis since last years'], answer: 3, why: 'since のあとの last year は単数。since last year。' },
     ],
   },
+  {
+    id: 'exam-error-accuse-congratulate',
+    title: '入試の正誤問題〈261〉（京大レベル：英作文の accuse 人 of・congratulate 人 on・approve of）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'accuse 人 of ～（人を～で責める・告発する）、congratulate 人 on ～（人の～を祝う）、approve of ～（～に賛成する・～をよいと思う）。前置詞がそれぞれちがうので注意する（× accuse 人 for／× congratulate 人 for）。',
+      '前置詞のあとに動詞を置くときは ～ing。受け身は be accused of ～／be congratulated on ～。',
+    ],
+    examples: [
+      { en: 'They accused him of lying. / We congratulated her on her success.', ja: '彼らは彼がうそをついたと責めた。／私たちは彼女の成功を祝った。' },
+      { en: 'My parents approved of my decision.', ja: '両親は私の決心に賛成してくれた。' },
+    ],
+    questions: [
+      { sentence: '(A) The police (B) accused (C) him for (D) stealing the car.', choices: ['(A) The police', '(B) accused', '(C) him for', '(D) stealing the car'], answer: 2, why: '「（人）を（こと）で責める・告発する」は accuse 人 of ～。accused him of。' },
+      { sentence: '(A) We (B) congratulated (C) her for (D) winning the prize.', choices: ['(A) We', '(B) congratulated', '(C) her for', '(D) winning the prize'], answer: 2, why: '「（人）の（こと）を祝う」は congratulate 人 on ～。congratulated her on。' },
+      { sentence: '(A) My parents (B) do not (C) approve (D) my plan to travel alone.', choices: ['(A) My parents', '(B) do not', '(C) approve', '(D) my plan to travel alone'], answer: 2, why: '「～に賛成する・～をよいとみとめる」は approve of ～。approve of my plan。' },
+      { sentence: '(A) Accuse (B) of cheating, (C) the player (D) left the game.', choices: ['(A) Accuse', '(B) of cheating,', '(C) the player', '(D) left the game'], answer: 0, why: '受け身の分詞構文なので Accused of cheating。' },
+      { sentence: '(A) The manager (B) was accused (C) of (D) lie to his staff.', choices: ['(A) The manager', '(B) was accused', '(C) of', '(D) lie to his staff'], answer: 3, why: '前置詞 of のあとは動名詞。of lying。' },
+      { sentence: '(A) The teacher (B) congratulated (C) to the students (D) on their success.', choices: ['(A) The teacher', '(B) congratulated', '(C) to the students', '(D) on their success'], answer: 2, why: 'congratulate は他動詞なので to は不要。congratulated the students。' },
+      { sentence: '(A) The committee (B) has approved (C) of (D) the new budget last week.', choices: ['(A) The committee', '(B) has approved', '(C) of', '(D) the new budget last week'], answer: 1, why: 'last week は過去の一点なので過去形 approved。（「正式に承認する」は approve the budget とも言う。）' },
+      { sentence: '(A) She (B) was congratulated (C) on (D) pass the exam.', choices: ['(A) She', '(B) was congratulated', '(C) on', '(D) pass the exam'], answer: 3, why: '前置詞 on のあとは動名詞。on passing。' },
+      { sentence: '(A) Most people (B) does not approve (C) of (D) cruelty to animals.', choices: ['(A) Most people', '(B) does not approve', '(C) of', '(D) cruelty to animals'], answer: 1, why: '主語 Most people は複数なので do not。' },
+      { sentence: '(A) He (B) strong (C) denied (D) the accusation.', choices: ['(A) He', '(B) strong', '(C) denied', '(D) the accusation'], answer: 1, why: '動詞 denied を修飾するので副詞 strongly。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
