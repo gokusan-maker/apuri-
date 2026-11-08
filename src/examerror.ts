@@ -10859,6 +10859,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Many critics [praised the film of] its beautiful music.', choices: ['praised the film for', 'praised the film with', 'praised for the film', 'praised to the film for'], answer: 0, why: 'praise 人・もの for ～。praised the film for its beautiful music。' },
     ],
   },
+  {
+    id: 'exam-fix-255',
+    title: '入試の誤文訂正〈255〉（東大レベル：英作文の worry about・be worried about・be anxious about）',
+    points: ['「～を心配する」は worry about ～（動作・習慣）／be worried about ～（状態）。worry は「（人を）心配させる」という他動詞にもなるので、「心配している」は受け身の形 be worried（× I am worry）。', 'be anxious about ～ は「～を心配している」、be anxious to do は「～したがっている」。前置詞のあとに動詞を置くときは ～ing（worry about failing）。'],
+    examples: [{ en: 'Don’t worry about the test. / She is worried about her son. / He is anxious about the interview.', ja: 'テストのことは心配しないで。／彼女は息子のことを心配している。／彼は面接を心配している。' }],
+    questions: [
+      { sentence: 'I [am worry] about my exam results.', choices: ['am worried', 'am worrying to', 'worried of', 'am worries'], answer: 0, why: '「心配している」は be worried（受け身の形）。' },
+      { sentence: 'Don’t [worry of] me. I’ll be fine.', choices: ['worry about', 'worry to', 'worry at', 'worry by'], answer: 0, why: '「～を心配する」は worry about ～。' },
+      { sentence: 'She was anxious [for] the result of the interview.', choices: ['about', 'to', 'at', 'with'], answer: 0, why: '「～を心配している」は be anxious about ～。' },
+      { sentence: 'Many students worry about [fail] their exams.', choices: ['failing', 'to fail', 'failed', 'fails'], answer: 0, why: '前置詞 about のあとは動名詞なので failing。' },
+      { sentence: 'The news [worried about] his parents a lot.', choices: ['worried', 'was worried about', 'worried for', 'worrying'], answer: 0, why: '「（人を）心配させる」は他動詞 worry 人。worried his parents。' },
+      { sentence: 'He is anxious [meeting] his new classmates.', choices: ['to meet', 'about meet', 'for meeting', 'meet'], answer: 0, why: '「～したがっている」は be anxious to do。' },
+      { sentence: 'Her health is a big [worried] for the family.', choices: ['worry', 'worrying', 'worries to', 'worried about'], answer: 0, why: '冠詞 a big のあとは名詞。worry（心配ごと）。' },
+      { sentence: 'Parents are often [worried with] their children’s safety.', choices: ['worried about', 'worried to', 'worried at', 'worried on'], answer: 0, why: '「～を心配している」は be worried about ～。' },
+      { sentence: 'My mother [worries always] about me.', choices: ['always worries', 'worries always to', 'always worried of', 'is always worry'], answer: 0, why: '頻度の副詞 always は一般動詞の前。always worries about ～。' },
+      { sentence: 'She seemed [anxiety] about the trip.', choices: ['anxious', 'anxiously', 'anxieties', 'to anxiety'], answer: 0, why: 'seem のあとは形容詞。anxious about ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
