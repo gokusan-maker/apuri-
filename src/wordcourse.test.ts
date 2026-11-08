@@ -56,3 +56,8 @@ it('単語のレベルの見直し②：上のレベルにやさしすぎる語�
   expect(lv('acrimonious')).toEqual(['東大'])
   expect(lv('ephemeral')).toEqual(['京大'])
 })
+
+it('2026-11-08 に足した国公立・旧帝大の単語は、そのレベルに入る', () => {
+  expect(courseWords('国公立').some((w) => w.en === 'equilibrium')).toBe(true)
+  expect(courseWords('旧帝大').some((w) => w.en === 'supersede')).toBe(true)
+})
