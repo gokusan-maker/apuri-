@@ -46702,6 +46702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-dust',
+    title: 'On Dust',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Dust is something most of us would rather not think about. It gathers on shelves and under beds, it drifts in the light that falls through a window, and no matter how often we clean, it always returns. We usually regard it as a nuisance, a sign of neglect, or simply dirt. Yet dust is far more interesting than it appears. It is made of tiny pieces of almost everything around us, and it plays a surprising part in the life of the planet, in the work of scientists, and in the way human beings have thought about time and change.",
+      "The dust in a home is a mixture of many things. Fibers from clothes and carpets, flakes of skin, pollen from outside, soil carried in on shoes, and tiny particles from cooking all contribute to it. In a sense, the dust in a room is a record of the lives of the people who live there, and scientists who study it can learn about what people eat, what materials surround them, and even which plants grow in their neighborhood. A small sample of dust can therefore reveal a surprising amount of information.",
+      "Dust also travels far beyond the walls of our homes. ( A ) a single particle may be too small to see, winds can lift enormous quantities of dust from deserts and carry them across oceans and continents. Dust from some of the world's great deserts falls on distant forests and seas, bringing minerals that help plants and tiny sea creatures to grow. In this way, a storm in one part of the world can help to support life thousands of kilometers away. The forests and seas of the world, it seems, are linked by threads of dust carried on the wind.",
+      "Dust is not always welcome, however. Fine particles in the air can harm the lungs, and in cities, dust from roads, construction, and industry is a serious cause of pollution. Large dust storms can block out the sun, close airports, and damage crops, and in some regions, the loss of plants and the overuse of land have made such storms more frequent. Protecting soil from being blown away has therefore become an important concern for farmers and governments. Planting trees and grasses at the edges of fields is one of the simplest ways of doing so.",
+      "Scientists have also learned a great deal from dust that is very old. Layers of dust trapped in ice or at the bottom of lakes and seas preserve information about the climate of the distant past, showing when the earth was drier or windier than it is today. Even dust from space falls to the earth constantly, and some of these tiny grains are older than our solar system, offering clues about how the planets were formed.",
+      "Dust has also carried deep meanings in human thought. In many traditions, dust is a symbol of the shortness of human life, a reminder that all living things eventually return to the earth from which they came. Gathering dust is used to describe things that have been forgotten or neglected, while the image of dust settling after a storm or a battle suggests a moment of calm in which the consequences of events become clear.",
+      "Perhaps, then, dust deserves more thought than we usually give it. It records the lives of households, carries nourishment across oceans, preserves the history of the climate, and reminds us of the passing of time. The next time we notice dust floating in a beam of sunlight, it may be worth remembering that these tiny specks connect our homes to deserts, oceans, and even distant stars, and that something we usually sweep away can tell us remarkable stories about the world.",
+    ],
+    ja: [
+      'ほこりは、私たちのほとんどがあまり考えたくないものである。それは棚の上やベッドの下にたまり、窓からさしこむ光の中をただよい、どれほどそうじをしてもかならずもどってくる。私たちはふつうそれを、やっかいなもの、手入れをおこたったしるし、あるいはただのよごれと見なしている。しかしほこりは見かけよりはるかに興味深い。それはまわりのほとんどあらゆるものの小さなかけらでできており、地球の生命や科学者の仕事、そして人間が時と変化をどのように考えてきたかにおいて、意外な役割をはたしているのである。',
+      '家の中のほこりは、多くのもののまじり合いである。服やじゅうたんの繊維、皮ふのかけら、外からの花粉、くつで運ばれた土、料理から出る小さなつぶが、どれもほこりになる。ある意味で、部屋のほこりはそこにくらす人々の生活の記録であり、それを研究する科学者は、人々が何を食べているか、どんな材料にかこまれているか、さらには近所にどんな植物がはえているかまで知ることができる。したがって、少しのほこりのサンプルが、おどろくほど多くの情報を明らかにしうるのである。',
+      'ほこりはまた、家のかべをはるかにこえて旅をする。1つぶは小さすぎて見えないかもしれないが、風は砂漠から大量のちりを持ち上げ、海や大陸をこえて運ぶことができる。世界の大きな砂漠のいくつかからのちりは遠くの森や海にふりそそぎ、植物や海の小さな生きものが育つのを助けるミネラルをもたらす。このように、世界のある場所のあらしが、何千キロメートルもはなれた場所の生命をささえる助けになりうるのである。世界の森と海は、風に運ばれるちりの糸で結ばれているらしいのである。',
+      'しかし、ほこりはいつも歓迎されるわけではない。空気中の細かいつぶは肺をいためることがあり、都市では、道路や建設工事、工場からのちりが深刻な汚染の原因になっている。大きな砂あらしは太陽をさえぎり、空港をとざし、作物をいためることがあり、地域によっては、植物がへったり土地を使いすぎたりしたことで、そうしたあらしがより多くなっている。そのため、土が風で飛ばされないよう守ることは、農家や政府にとって大切な関心事になっている。畑のはしに木や草を植えることは、そのためのもっとも単純な方法のひとつである。',
+      '科学者たちはまた、とても古いちりから多くのことを学んできた。氷の中や湖や海の底にとじこめられたちりの層は、遠い過去の気候についての情報を保存しており、地球が今日よりかわいていたり、風が強かったりした時期を示している。宇宙からのちりでさえたえず地球にふりそそいでおり、こうした小さなつぶのなかには太陽系よりも古いものもあり、惑星がどのようにできたかについての手がかりをあたえてくれる。',
+      'ほこりはまた、人間の考えの中で深い意味をになってきた。多くの伝統で、ちりは人間の命の短さのシンボルであり、すべての生きものはやがて自分が生まれた土にかえるのだということを思い出させるものである。「ほこりをかぶる」という言い方はわすれられたり、ほうっておかれたりしたものを表すのに使われ、あらしや戦いのあとにちりがしずまるイメージは、できごとの結果がはっきりしてくる静かなひとときを思わせる。',
+      'だとすれば、ほこりは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは家庭の生活を記録し、海をこえて養分を運び、気候の歴史を保存し、時がすぎゆくことを思い出させてくれる。次に日の光の中をただようほこりに気づいたら、この小さなつぶが私たちの家を砂漠や海、さらには遠い星々とつないでいること、そしてふだん私たちがはき出してしまうものが、世界についてのおどろくべき物語を語りうることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「1つぶは小さすぎて見えないかもしれないが、風は大量のちりを運ぶ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '家のほこりから、近所にはえている植物がわかることがある。', answer: true, why: '第2段落 even which plants grow in their neighborhood。' },
+      { statement: '砂漠のちりは、遠くの森や海の生命をさまたげるだけである。', answer: false, why: '第3段落 bringing minerals that help plants and tiny sea creatures to grow。' },
+      { statement: '宇宙からのちりのなかには、太陽系より古いものもある。', answer: true, why: '第5段落 some of these tiny grains are older than our solar system。' },
+      { statement: '筆者によると、ほこりは健康にまったく害がない。', answer: false, why: '第4段落 Fine particles in the air can harm the lungs。' },
+    ],
+    qa: [
+      { q: 'What do layers of dust trapped in ice preserve?', choices: ['Information about the climate of the distant past.', 'The names of ancient kings.', 'Seeds of extinct plants.', 'Pieces of ancient pottery.'], answer: 0, why: '第5段落 preserve information about the climate of the distant past。' },
+      { q: 'What does gathering dust describe?', choices: ['Things that have been forgotten or neglected.', 'Things that are very clean.', 'A coming storm.', 'A busy household.'], answer: 0, why: '第6段落 used to describe things that have been forgotten or neglected。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
