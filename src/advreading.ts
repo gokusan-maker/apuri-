@@ -46018,6 +46018,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-classroom-cameras',
+    title: 'Should Classrooms Have Security Cameras?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Security cameras have become a familiar sight in streets, shops, and stations, and in recent years some schools have begun to install them not only at entrances and in corridors but also inside classrooms. Supporters argue that cameras make schools safer and help to resolve disputes fairly, while opponents worry about their effect on privacy and on the relationship between teachers and students. As the technology becomes cheaper and more widespread, the question of whether cameras belong in classrooms has become a subject of serious debate.",
+      "Supporters argue first that cameras can protect students and teachers. Recordings may discourage bullying, violence, and theft, and when incidents do occur, they can provide clear evidence of what actually happened. Without such evidence, supporters say, disputes between students, or between parents and teachers, may depend on conflicting memories and accusations, and innocent people may be blamed. A camera, in this view, offers an impartial witness that protects everyone in the room. Some parents, they add, feel reassured simply knowing that what happens in their children's classrooms can be checked if necessary.",
+      "Supporters also suggest that recordings can be used to improve teaching. Teachers who watch recordings of their own lessons may notice habits they were not aware of, such as speaking too quickly or paying attention mainly to certain students. Recordings can also be shared with experienced colleagues for advice, or used to train new teachers. In addition, supporters point out, recorded lessons could help students who were absent to catch up on what they missed. Students who are ill for long periods could follow lessons from home in this way.",
+      "Critics, however, argue that constant recording may harm the atmosphere of a classroom. ( A ) cameras may discourage bad behavior, they may also discourage students from asking questions, sharing personal opinions, or making mistakes in front of others, all of which are an important part of learning. A classroom, critics say, should be a place where young people feel free to try out ideas and to fail without fear, and the knowledge that every word is being recorded may make them more cautious and less open. Shy students, in particular, may stop speaking altogether.",
+      "Critics also raise concerns about privacy and trust. Recordings of children contain sensitive information, and there are questions about who may watch them, how long they are kept, and whether they could be misused or leaked. Many teachers feel that cameras in classrooms suggest that they are not trusted to do their jobs, and some worry that recordings could be used unfairly to judge their performance on the basis of short clips taken out of context. Such fears, critics argue, may lead some talented people to avoid the profession entirely.",
+      "Some schools have tried to find a balance. They install cameras in corridors and entrances but not inside classrooms, or allow cameras in classrooms only for specific purposes, such as teacher training, with the agreement of those involved. Others set strict rules about who may view recordings and require them to be deleted after a short period unless an incident has been reported. Such rules aim to keep the benefits of cameras while limiting the risks to privacy and trust. Teachers in such schools are often consulted before any new camera is installed.",
+      "The debate over cameras in classrooms therefore reflects a wider question about the role of surveillance in modern life. Technology makes it increasingly easy to record and monitor what people do, and in many situations this can make them safer. Yet some places may depend on a degree of privacy and trust in order to fulfill their purpose, and schools may be among them. Deciding where to draw the line requires careful thought about what kind of environment best helps young people to learn and grow.",
+    ],
+    ja: [
+      '防犯カメラは通りや店、駅でおなじみのものになり、近年、入り口や廊下だけでなく教室の中にもカメラを取りつけはじめた学校もある。支持する人々は、カメラは学校をより安全にし、争いを公平に解決する助けになると主張し、反対する人々は、それがプライバシーや先生と生徒との関係にあたえる影響を心配している。技術が安く広まるにつれて、カメラは教室にあるべきかどうかという問いは真剣な議論の対象になっている。',
+      '支持する人々は、まず、カメラは生徒と先生を守りうると主張する。録画はいじめや暴力、ぬすみを思いとどまらせるかもしれず、できごとが起こったときには、実際に何があったかのはっきりした証拠になりうる。そうした証拠がなければ、生徒どうしの、あるいは親と先生とのあいだの争いは、くいちがう記憶や非難にたよることになり、罪のない人が責められるかもしれないと支持する人々は言う。この見方では、カメラは部屋にいるすべての人を守る、かたよりのない証人なのである。必要なときに子どもの教室で起こったことをたしかめられるとわかっているだけで安心する親もいると、彼らはつけ加える。',
+      '支持する人々はまた、録画は教え方をよくするのに使えると考える。自分の授業の録画を見た先生は、速く話しすぎることや、おもに一部の生徒にばかり注意を向けることなど、気づいていなかったくせに気づくかもしれない。録画はまた、助言をもらうために経験ゆたかな同僚と共有したり、新しい先生の研修に使ったりすることもできる。さらに、録画された授業は、休んだ生徒が受けそこねた内容に追いつく助けにもなりうると支持する人々は指摘する。長いあいだ病気の生徒も、このようにして家から授業についていけるだろう。',
+      'しかし批判する人々は、たえず録画されていると教室の雰囲気がそこなわれるかもしれないと主張する。カメラは悪いふるまいを思いとどまらせるかもしれないが、生徒が質問したり、自分の意見を話したり、ほかの人の前でまちがえたりすることも思いとどまらせるかもしれない。それらはどれも学びの大切な一部である。教室は、若い人々が自由に考えをためし、おそれずに失敗できる場所であるべきであり、すべてのことばが録画されているとわかっていると、彼らはより用心深く、心を開かなくなるかもしれないと批判する人々は言う。とくに内気な生徒は、まったく話さなくなってしまうかもしれない。',
+      '批判する人々はまた、プライバシーと信頼についての心配もあげる。子どもの録画にはとりあつかいに注意が必要な情報がふくまれており、だれがそれを見てよいのか、どれくらいの期間保存されるのか、悪用されたりもれたりしないかといった問いがある。多くの先生は、教室のカメラは自分が仕事をきちんとすると信頼されていないことを示していると感じており、前後の状況から切りはなされた短い場面にもとづいて、自分の仕事ぶりが不公平に評価されるのではないかと心配する先生もいる。そうしたおそれから、才能のある人のなかには教職そのものをさける人も出てくるかもしれないと批判する人々は主張する。',
+      'つりあいを見つけようとしてきた学校もある。廊下や入り口にはカメラを取りつけるが教室の中には取りつけない、あるいは、関係する人の同意を得たうえで、先生の研修などの特定の目的にかぎって教室のカメラをみとめるのである。また、だれが録画を見てよいかについてきびしい決まりを設け、できごとが報告されないかぎり短い期間のあとに録画を消すよう求める学校もある。そうした決まりは、カメラの利益をたもちながら、プライバシーと信頼への危険をおさえることをめざしている。そうした学校では、新しいカメラを取りつける前に先生に相談することが多い。',
+      'したがって、教室のカメラをめぐる議論は、現代の生活における監視の役割についての、より広い問いを映し出している。技術によって人々の行動を記録し見張ることはますますかんたんになっており、多くの場面でそれは人々をより安全にしうる。しかし、目的をはたすためにある程度のプライバシーと信頼にたよっている場所もあるのかもしれず、学校はそのひとつなのかもしれない。どこで線を引くかを決めるには、どのような環境が若い人々の学びと成長をもっともよく助けるのかについて、注意深く考える必要があるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「カメラは悪いふるまいを思いとどまらせるかもしれないが、質問することも思いとどまらせるかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say classroom cameras protect students and teachers by providing clear ( 1 ) and can help teachers improve. Critics argue that recording may discourage students from asking questions and raises concerns about privacy and ( 2 ). Some schools allow cameras only for specific purposes and require recordings to be ( 3 ) after a short period.',
+      blanks: [
+        { choices: ['evidence', 'lessons', 'rules', 'music'], answer: 0, why: '第2段落 they can provide clear evidence of what actually happened。' },
+        { choices: ['trust', 'money', 'health', 'speed'], answer: 0, why: '第5段落 Critics also raise concerns about privacy and trust。' },
+        { choices: ['deleted', 'sold', 'printed', 'shown'], answer: 0, why: '第6段落 require them to be deleted after a short period。' },
+      ],
+    },
+    tf: [
+      { statement: '一部の学校は、教室の中にもカメラを取りつけはじめた。', answer: true, why: '第1段落 some schools have begun to install them ... also inside classrooms。' },
+      { statement: '支持する人々によると、録画は先生の研修には使えない。', answer: false, why: '第3段落 or used to train new teachers。' },
+      { statement: '批判する人々によると、教室は生徒がおそれずに失敗できる場所であるべきだ。', answer: true, why: '第4段落 to fail without fear。' },
+      { statement: 'すべての学校が、教室の中にカメラを取りつけている。', answer: false, why: '第6段落 install cameras in corridors and entrances but not inside classrooms。' },
+    ],
+    qa: [
+      { q: 'How could recorded lessons help students who were absent?', choices: ['They could catch up on what they missed.', 'They could skip their exams.', 'They could choose new teachers.', 'They could change their classes.'], answer: 0, why: '第3段落 could help students who were absent to catch up。' },
+      { q: 'What do many teachers feel cameras in classrooms suggest?', choices: ['That they are not trusted.', 'That they are well paid.', 'That their lessons are perfect.', 'That students like them.'], answer: 0, why: '第5段落 suggest that they are not trusted to do their jobs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
