@@ -44258,6 +44258,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-hotel-cleaning',
+    title: 'Should Hotels Stop Cleaning Rooms Every Day?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For many travelers, one of the small pleasures of staying in a hotel is returning in the evening to find the bed made, the towels replaced, and the room tidied. In recent years, however, a growing number of hotels have stopped cleaning rooms every day unless guests ask for it, presenting the change as a way of protecting the environment. The policy has been welcomed by some and criticized by others, and it raises questions about environmental responsibility, the quality of service, and the jobs of the many people who clean hotel rooms for a living.",
+      "Supporters argue that daily cleaning wastes large amounts of resources. Washing towels and sheets that have been used only once requires water, energy, and detergents, and cleaning products and vacuum cleaners add further to the environmental cost of each stay. Supporters point out that most people do not change their towels and sheets every day at home, and they argue that hotels can significantly reduce their impact by encouraging guests to reuse towels and to request cleaning only when they really need it. Large hotels with hundreds of rooms may wash many tons of laundry every week, so that even small changes in the habits of guests can add up to large savings.",
+      "Supporters also claim that many guests prefer not to be disturbed. Some travelers dislike having staff enter their rooms while they are out, worrying about their privacy or the safety of their belongings, and others simply want to rest without interruption. ( A ) some guests may miss the comfort of daily cleaning, supporters argue, giving them the choice allows each person to decide what kind of service they want, rather than imposing the same routine on everyone.",
+      "Critics, however, suspect that environmental arguments are sometimes used to disguise cost-cutting. Cleaning rooms less often allows hotels to employ fewer staff and to save money, and critics point out that guests rarely see a reduction in the price of their rooms in return. They argue that if hotels genuinely wished to protect the environment, they would invest in energy-efficient laundry systems and renewable power rather than simply reducing the services they provide. Some critics also note that guests who pay high prices for a room may reasonably expect the level of service that has traditionally been part of a hotel stay.",
+      "Critics also emphasize the effects on hotel workers. Cleaning staff are often among the lowest-paid employees in the tourism industry, and many depend on a steady number of hours to support their families. When rooms are cleaned less often, some workers lose hours or jobs, while others find that the rooms they do clean have become much dirtier and take longer to prepare, since several days of use have accumulated. Critics argue that such changes can make an already demanding job even harder without any improvement in pay.",
+      "In response, some hotels have tried to design policies that address these concerns. Some offer guests a small discount or a reward, such as points or a free drink, if they decline daily cleaning, so that the savings are shared with customers. Others continue to provide light daily tidying, such as emptying bins and replacing towels on request, while saving thorough cleaning for every few days, and some have promised not to reduce the hours of their cleaning staff. Such policies suggest that environmental goals and fair treatment of workers need not be in conflict, provided that the change is planned with care.",
+      "The debate over daily cleaning ultimately reflects a broader question about how environmental goals should be balanced with other values. Reducing waste is clearly important, but the way in which it is achieved can affect workers, customers, and businesses in very different ways. Deciding whether hotels should clean rooms every day therefore requires asking not only how much water and energy can be saved, but also who bears the costs of the change and whether those costs are being shared fairly.",
+    ],
+    ja: [
+      '多くの旅行者にとって、ホテルに泊まる小さな楽しみの一つは、夕方にもどるとベッドがととのえられ、タオルがかえられ、部屋がかたづいているのを見ることである。しかし近年、ますます多くのホテルが、客がたのまないかぎり毎日部屋を掃除するのをやめており、その変化を環境を守る方法として示している。この方針は、ある人々からは歓迎され、ほかの人々からは批判されており、環境への責任やサービスの質、そしてホテルの部屋を掃除して生計を立てる多くの人々の仕事についての問いを投げかけている。',
+      '支持する人々は、毎日の掃除は多くの資源をむだにしていると主張する。一度しか使っていないタオルやシーツを洗うには水やエネルギー、洗剤が必要であり、掃除用品や掃除機は、一回の宿泊ごとの環境への負担をさらに大きくする。ほとんどの人は家で毎日タオルやシーツをかえたりはしないと支持者は指摘し、客にタオルをくり返し使い、本当に必要なときだけ掃除をたのむよう促すことで、ホテルは環境への影響を大きく減らせると主張する。何百もの部屋がある大きなホテルでは毎週何トンもの洗たく物を洗うことがあり、客の習慣の小さな変化でも、大きな節約につながりうるのである。',
+      '支持する人々はまた、多くの客はじゃまされたくないと思っていると主張する。外出中に従業員が部屋に入るのをいやがり、プライバシーや持ち物の安全を心配する旅行者もいれば、ただじゃまされずに休みたいだけの旅行者もいる。毎日の掃除の快適さをなつかしく思う客もいるかもしれないが、選べるようにすれば、全員に同じ決まった手順をおしつけるのではなく、一人一人がどのようなサービスを望むかを決められる、と支持者は主張する。',
+      'しかし批判する人々は、環境についての主張が、ときに費用の削減をごまかすために使われているのではないかと疑う。部屋の掃除の回数を減らせば、ホテルは従業員を減らしてお金を節約でき、その見返りに客の部屋代が下がることはめったにないと批判する人々は指摘する。ホテルが本当に環境を守りたいのなら、ただ提供するサービスを減らすのではなく、エネルギー効率のよい洗たくの設備や再生可能な電力にお金をかけるはずだ、と彼らは主張する。また、高い部屋代をはらう客が、昔からホテルの宿泊の一部であったサービスの水準を期待するのはもっともだと指摘する批判者もいる。',
+      '批判する人々はまた、ホテルで働く人々への影響を強調する。掃除の従業員は、観光業のなかでもっとも給料の低い働き手であることが多く、その多くは家族をささえるために一定の働く時間にたよっている。部屋の掃除の回数が減ると、働く時間や仕事を失う働き手もいる一方で、掃除する部屋が何日分もの使用でずっとよごれ、準備により時間がかかるようになったと感じる働き手もいる。そうした変化は、給料が少しも上がらないまま、すでにきつい仕事をさらにきつくしかねない、と批判する人々は主張する。',
+      'これに対して、こうした懸念に応える方針を考えようとしてきたホテルもある。毎日の掃除をことわった客に、ポイントや無料の飲み物のような小さな割引やほうびをあたえ、節約の分を客と分かち合うホテルもある。ごみを捨てたり、たのまれればタオルをかえたりといった軽い毎日のかたづけは続けながら、本格的な掃除は数日ごとにするホテルもあり、掃除の従業員の働く時間を減らさないと約束したホテルもある。そうした方針は、変化が注意深く計画されさえすれば、環境の目標と働き手の公正なあつかいはかならずしも対立しないことを示している。',
+      '毎日の掃除をめぐる議論は、結局のところ、環境の目標をほかの価値とどのようにつりあわせるべきかという、より広い問いを反映している。むだを減らすことは明らかに大切だが、それをどのようになしとげるかは、働き手や客、会社にまったくちがうかたちで影響しうる。だから、ホテルが毎日部屋を掃除すべきかどうかを決めるには、どれだけの水とエネルギーを節約できるかだけでなく、だれがその変化の代償を負い、その代償が公平に分かち合われているかどうかも問う必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「毎日の掃除をなつかしく思う客もいるかもしれないが、選べるようにすれば一人一人が決められる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say daily cleaning wastes water and ( 1 ) and that many guests prefer not to be disturbed. Critics suspect the policy is partly about cutting ( 2 ) and warn that it harms cleaning staff. Some hotels offer guests a small ( 3 ) if they decline daily cleaning.',
+      blanks: [
+        { choices: ['energy', 'music', 'time', 'sand'], answer: 0, why: '第2段落 requires water, energy, and detergents。' },
+        { choices: ['costs', 'trees', 'songs', 'roads'], answer: 0, why: '第4段落 environmental arguments are sometimes used to disguise cost-cutting。' },
+        { choices: ['discount', 'punishment', 'fine', 'tax'], answer: 0, why: '第6段落 offer guests a small discount or a reward。' },
+      ],
+    },
+    tf: [
+      { statement: '一度使っただけのタオルを洗うにも、水やエネルギーが必要である。', answer: true, why: '第2段落 requires water, energy, and detergents。' },
+      { statement: '批判する人々によると、掃除を減らしたホテルはたいてい部屋代を下げている。', answer: false, why: '第4段落 guests rarely see a reduction in the price of their rooms。' },
+      { statement: '掃除の回数が減ると、掃除する部屋がよりよごれることがある。', answer: true, why: '第5段落 the rooms they do clean have become much dirtier。' },
+      { statement: 'すべてのホテルが、掃除の従業員の働く時間を減らした。', answer: false, why: '第6段落 some have promised not to reduce the hours of their cleaning staff。' },
+    ],
+    qa: [
+      { q: 'Why do some travelers dislike staff entering their rooms?', choices: ['They worry about their privacy or the safety of their belongings.', 'They want the room cleaned twice a day.', 'They do not like hotel towels.', 'They need help with their luggage.'], answer: 0, why: '第3段落 worrying about their privacy or the safety of their belongings。' },
+      { q: 'What do critics say hotels would invest in if they genuinely wished to protect the environment?', choices: ['Energy-efficient laundry systems and renewable power.', 'Larger rooms.', 'More advertising.', 'New swimming pools.'], answer: 0, why: '第4段落 invest in energy-efficient laundry systems and renewable power。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
