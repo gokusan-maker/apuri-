@@ -44702,6 +44702,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-buttons',
+    title: 'On Buttons',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few objects are as ordinary as the button. We fasten and unfasten dozens of them every day without a moment's thought, and we notice them only when one comes loose or falls off at an inconvenient time. Yet the button is a remarkably clever invention, and its long history shows how a small solution to a practical problem can shape not only the way we dress but also the way we think about clothing, status, and even the act of pressing something to make it work.",
+      "For a surprisingly long time, people managed without buttons as we know them. Clothes were held together with pins, belts, ties, or simple knots, and the small round objects found in some ancient sites seem to have been worn mainly as decorations rather than as fasteners. It was only when people began to cut buttonholes into cloth, several centuries ago, that buttons became a practical way of closing garments, allowing clothes to fit the body more closely than loose robes had done. This change, small as it may seem, made possible many of the fitted styles of clothing that are still worn today.",
+      "Once this idea spread, buttons quickly became a sign of wealth and fashion. ( A ) the basic function of a button is simple, the buttons on the clothes of rich people were often made of silver, gold, or carved ivory, and a single coat might carry dozens of them. In some periods, laws even limited who was allowed to wear certain kinds of buttons, so that a glance at a person's clothing could reveal his or her place in society. Buttons, in other words, served not only to close clothes but also to open a window onto the order of society.",
+      "Buttons also reveal something about the relationship between convenience and habit. For many years, men's and women's clothes in some countries have had buttons on opposite sides, and people have offered various explanations for this difference, some connected with the idea that wealthy women were once dressed by servants. Whatever the true reason, the custom has survived long after the conditions that may have produced it disappeared, showing how designs can outlive their original purposes.",
+      "In the modern world, the word button has also come to mean something quite different: a small part that we press to make a machine do something. Lifts, telephones, cameras, and computers all invite us to push buttons, and the simple action of pressing has become a symbol of control. A single button, we are told, can start a process that would once have required great effort, and this promise of effortless power has made the button one of the most familiar images of modern technology.",
+      "Yet the spread of touch screens has begun to change our relationship with physical buttons. Many devices now have only a smooth surface, and the buttons that appear on it are images that respond to the touch of a finger. Some people welcome this flexibility, since a screen can show different buttons for different tasks, while others miss the reassuring feeling of a real button that moves slightly under the finger and makes a small sound when it is pressed. For such people, a button that can be felt without looking remains more trustworthy than any image on glass.",
+      "Perhaps, then, the button deserves a little more respect than we usually give it. In its long journey from decoration to fastener and from fastener to symbol, it has quietly reflected changes in fashion, society, and technology. The next time we fasten a coat or press a key, it may be worth remembering that even the smallest objects can carry a history, and that ordinary things often tell us as much about human life as extraordinary ones.",
+    ],
+    ja: [
+      'ボタンほどありふれたものはほとんどない。私たちは毎日何十ものボタンを、何も考えずにとめたりはずしたりしており、それに気づくのは、つごうの悪いときにひとつがゆるんだり取れたりしたときだけである。しかしボタンはおどろくほどかしこい発明であり、その長い歴史は、実用上の問題に対する小さな解決が、私たちの服の着方だけでなく、衣服や身分について、さらには何かを押して動かすという行為についての考え方まで形づくりうることを示している。',
+      'おどろくほど長いあいだ、人々は私たちの知っているようなボタンなしでやってきた。服はピンやベルト、ひも、あるいは単純な結び目でとめられており、古代の遺跡で見つかる小さな丸いものは、とめ具としてよりも、おもにかざりとして身につけられていたらしい。数百年前、人々が布にボタン穴を切りこむようになってはじめて、ボタンは服をとじる実用的な方法となり、それまでのゆったりした衣よりも服が体にぴったり合うようになったのである。この変化は小さく見えるかもしれないが、いまも着られている体に合った服の多くのかたちを可能にした。',
+      'この考えが広まると、ボタンはすぐに富と流行のしるしになった。ボタンの基本的なはたらきは単純だが、金持ちの服のボタンはしばしば銀や金、彫刻した象牙でつくられ、1着の上着に何十ものボタンがついていることもあった。時代によっては、ある種類のボタンをだれが身につけてよいかを法律で制限することさえあり、人の服をひと目見れば、その人の社会での地位がわかるようになっていた。言いかえれば、ボタンは服をとじるだけでなく、社会の秩序をのぞく窓を開くはたらきもしていたのである。',
+      'ボタンはまた、便利さと習慣の関係についても何かを明らかにしてくれる。長いあいだ、いくつかの国では男性の服と女性の服でボタンが反対側についており、このちがいについてはさまざまな説明がなされてきた。そのなかには、かつて裕福な女性は使用人に服を着せてもらっていたという考えと結びついたものもある。本当の理由が何であれ、この習慣は、それを生んだかもしれない状況が消えたずっとあとまで生きのこっており、デザインがもともとの目的よりも長く生きのびうることを示している。',
+      '現代の世界では、ボタンということばはまったくちがうものも意味するようになった。機械に何かをさせるために押す小さな部分である。エレベーターや電話、カメラ、コンピューターはどれも私たちにボタンを押すようさそい、押すという単純な動作は、支配のしるしになった。ボタンひとつで、かつては大きな努力が必要だった作業を始められると私たちは言われており、この、苦労なしに力をふるえるという約束が、ボタンを現代の技術のもっともなじみ深いイメージのひとつにしたのである。',
+      'しかしタッチスクリーンが広まったことで、私たちと物としてのボタンとの関係は変わりはじめている。いまでは多くの機器がなめらかな表面しかもたず、そこにあらわれるボタンは、指でふれると反応する画像である。画面は作業ごとにちがうボタンを表示できるので、この自由さを歓迎する人もいれば、指の下で少し動き、押すと小さな音を立てる本物のボタンの安心できる感じをなつかしく思う人もいる。そうした人々にとっては、見なくても指で感じられるボタンのほうが、ガラスの上のどんな画像よりも信頼できるのである。',
+      'だとすれば、ボタンは、私たちがふだんはらっているよりも少しだけ多くの敬意に値するのかもしれない。かざりからとめ具へ、とめ具からしるしへという長い旅のなかで、ボタンは流行や社会、技術の変化を静かに映し出してきた。次に上着のボタンをとめたり、キーを押したりするとき、どんなに小さなものにも歴史がこめられていること、そしてありふれたものがしばしば並はずれたものと同じくらい人間の生活について教えてくれることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ボタンのはたらきは単純だが、金持ちのボタンは銀や金でできていた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '古代の遺跡で見つかる小さな丸いものは、おもにかざりだったらしい。', answer: true, why: '第2段落 worn mainly as decorations rather than as fasteners。' },
+      { statement: 'どの時代にも、だれでも好きなボタンを身につけてよかった。', answer: false, why: '第3段落 laws even limited who was allowed to wear certain kinds of buttons。' },
+      { statement: 'ボタンの位置の習慣は、それを生んだ状況が消えたあとも残っている。', answer: true, why: '第4段落 the custom has survived long after the conditions ... disappeared。' },
+      { statement: '筆者によると、すべての人がタッチスクリーンのボタンを好んでいる。', answer: false, why: '第6段落 others miss the reassuring feeling of a real button。' },
+    ],
+    qa: [
+      { q: 'What made buttons a practical way of closing garments?', choices: ['Cutting buttonholes into cloth.', 'Making buttons of gold.', 'Using belts and pins.', 'Wearing loose robes.'], answer: 0, why: '第2段落 It was only when people began to cut buttonholes into cloth。' },
+      { q: 'What has the simple action of pressing become a symbol of?', choices: ['Control.', 'Wealth.', 'Fashion.', 'Danger.'], answer: 0, why: '第5段落 the simple action of pressing has become a symbol of control。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
