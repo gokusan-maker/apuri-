@@ -10687,6 +10687,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Everyone [participated actively] the project.', choices: ['participated actively in', 'participated actively to', 'participated actively on', 'participated actively at'], answer: 0, why: 'participate in ～。副詞が入っても in は必要。' },
     ],
   },
+  {
+    id: 'exam-fix-251',
+    title: '入試の誤文訂正〈251〉（国公立レベル：英作文の be accustomed to ～ing・when it comes to ～ing）',
+    points: ['be accustomed to ～ は「～になれている」で、to は前置詞なので動詞を置くときは ～ing（be accustomed to getting up early）。get / become accustomed to ～ は「～になれる」。', 'when it comes to ～ は「～のことになると」で、これも to は前置詞（when it comes to cooking）。× when it comes to cook。'],
+    examples: [{ en: 'I am accustomed to getting up early. / When it comes to cooking, my father is the best.', ja: '私は早起きになれている。／料理のことになると、父がいちばんだ。' }],
+    questions: [
+      { sentence: 'She is accustomed to [work] late at night.', choices: ['working', 'work to', 'worked', 'works'], answer: 0, why: 'be accustomed to のあとは動名詞なので working。' },
+      { sentence: 'When it comes to [cook], nobody is better than my father.', choices: ['cooking', 'cooked', 'cooks', 'be cooked'], answer: 0, why: 'when it comes to のあとは動名詞なので cooking。' },
+      { sentence: 'I am not [accustom to] eating spicy food.', choices: ['accustomed to', 'accustoming to', 'accustom for', 'accustomed with'], answer: 0, why: '「～になれている」は be accustomed to。過去分詞 accustomed。' },
+      { sentence: 'It took him a year to get accustomed [with] the cold weather.', choices: ['to', 'at', 'by', 'on'], answer: 0, why: '「～になれる」は get accustomed to ～。' },
+      { sentence: 'When it [came] to sports, my sister is very good.', choices: ['comes', 'coming', 'come', 'is come'], answer: 0, why: '決まった言い方なので現在形 When it comes to。主節も現在形。' },
+      { sentence: 'Tourists are not accustomed to [drive] on the left.', choices: ['driving', 'drove', 'drives', 'be driven'], answer: 0, why: 'be accustomed to のあとは動名詞なので driving。' },
+      { sentence: '[When it comes for] money, he is very careful.', choices: ['When it comes to', 'When it came for', 'When comes it to', 'When it coming to'], answer: 0, why: '「～のことになると」は when it comes to ～。' },
+      { sentence: 'My grandmother [accustomed to living] alone now.', choices: ['is accustomed to living', 'accustomed living to', 'is accustoming living', 'accustoms to live'], answer: 0, why: '「～になれている」は be 動詞が必要。is accustomed to living。' },
+      { sentence: 'When it comes to [speak] English, practice is the key.', choices: ['speaking', 'spoke', 'speaks', 'be spoken'], answer: 0, why: 'when it comes to のあとは動名詞なので speaking。' },
+      { sentence: 'We soon became [accustomed in] the noise of the city.', choices: ['accustomed to', 'accustomed at', 'accustomed by', 'accustomed with'], answer: 0, why: '「～になれる」は become accustomed to ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

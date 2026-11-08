@@ -1351,7 +1351,7 @@
   - [x] 506 正誤問題〈256〉（京大レベル：英作文の be likely to・be sure to・be about to）10問
   - [x] 507 誤文訂正〈250〉（国公立レベル：英作文の take part in・participate in・join）10問
   - [x] 508 正誤問題〈257〉（東大レベル：英作文の contribute to・object to ～ing・be opposed to）10問
-  - [ ] 509 誤文訂正〈251〉（国公立レベル：英作文の be accustomed to ～ing・when it comes to ～ing）10問
+  - [x] 509 誤文訂正〈251〉（国公立レベル：英作文の be accustomed to ～ing・when it comes to ～ing）10問
   - [ ] 510 正誤問題〈258〉（京大レベル：英作文の search for・look for・seek の使い分け）10問
   - [ ] 511 誤文訂正〈252〉（東大レベル：英作文の concentrate on・focus on・be absorbed in）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
