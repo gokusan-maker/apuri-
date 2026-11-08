@@ -6208,6 +6208,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Looking (B) for (C) an advice, (D) she called her teacher.', choices: ['(A) Looking', '(B) for', '(C) an advice,', '(D) she called her teacher'], answer: 2, why: 'advice は数えられない名詞なので an はつけない。for advice。' },
     ],
   },
+  {
+    id: 'exam-error-apply-graduate',
+    title: '入試の正誤問題〈259〉（国公立レベル：英作文の apply for・apply to・graduate from）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'apply for ～ は「（仕事・許可・ビザ）を申しこむ・に応募する」、apply to ～ は「（大学・会社）に出願する」「（規則が）～に当てはまる」。apply to a company for a job のように両方使うこともある。',
+      '「～を卒業する」は graduate from ～ で、from が必要（× graduate the university）。卒業した年は過去形で表す（graduated in 2020）。',
+    ],
+    examples: [
+      { en: 'She applied for a job at a bank. / I applied to three universities.', ja: '彼女は銀行の仕事に応募した。／私は3つの大学に出願した。' },
+      { en: 'He graduated from college in 2020.', ja: '彼は2020年に大学を卒業した。' },
+    ],
+    questions: [
+      { sentence: '(A) She (B) applied (C) to (D) the job at a bank.', choices: ['(A) She', '(B) applied', '(C) to', '(D) the job at a bank'], answer: 2, why: '「（仕事・許可）に応募する・申しこむ」は apply for ～。applied for the job。' },
+      { sentence: '(A) My brother (B) graduated (C) the university (D) last year.', choices: ['(A) My brother', '(B) graduated', '(C) the university', '(D) last year'], answer: 2, why: '「～を卒業する」は graduate from ～。graduated from the university。' },
+      { sentence: '(A) I (B) am going to (C) apply for (D) three universities.', choices: ['(A) I', '(B) am going to', '(C) apply for', '(D) three universities'], answer: 2, why: '「（大学・会社）に出願する」は apply to ～。apply to three universities。' },
+      { sentence: '(A) Graduate (B) from college, (C) he (D) started his own business.', choices: ['(A) Graduate', '(B) from college,', '(C) he', '(D) started his own business'], answer: 0, why: '分詞構文。時間の前後をはっきりさせるなら Having graduated from college（Graduating from college も可）。' },
+      { sentence: '(A) This rule (B) applies (C) for (D) all students.', choices: ['(A) This rule', '(B) applies', '(C) for', '(D) all students'], answer: 2, why: '「（規則が）～に当てはまる」は apply to ～。applies to all students。' },
+      { sentence: '(A) After (B) graduated (C) from high school, (D) she moved to Tokyo.', choices: ['(A) After', '(B) graduated', '(C) from high school,', '(D) she moved to Tokyo'], answer: 1, why: '前置詞 after のあとは動名詞。After graduating。' },
+      { sentence: '(A) Many students (B) are applying (C) for (D) a scholarships this year.', choices: ['(A) Many students', '(B) are applying', '(C) for', '(D) a scholarships this year'], answer: 3, why: 'scholarships は複数なので a はつけない。for scholarships。' },
+      { sentence: '(A) He (B) has graduated (C) from (D) college in 2020.', choices: ['(A) He', '(B) has graduated', '(C) from', '(D) college in 2020'], answer: 1, why: 'in 2020 は過去の一点なので過去形 graduated。' },
+      { sentence: '(A) You must (B) apply (C) for a visa (D) before you will travel.', choices: ['(A) You must', '(B) apply', '(C) for a visa', '(D) before you will travel'], answer: 3, why: '時の副詞節の中は現在形。before you travel。' },
+      { sentence: '(A) Students (B) who wish to apply (C) for the program (D) must to submit an essay.', choices: ['(A) Students', '(B) who wish to apply', '(C) for the program', '(D) must to submit an essay'], answer: 3, why: 'must のあとは動詞の原形。must submit。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
