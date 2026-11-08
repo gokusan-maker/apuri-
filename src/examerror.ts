@@ -5933,6 +5933,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) He (B) came across (C) with an interesting book (D) at the library.', choices: ['(A) He', '(B) came across', '(C) with an interesting book', '(D) at the library'], answer: 2, why: 'come across は「偶然見つける」で、with は不要。' },
     ],
   },
+  {
+    id: 'exam-error-such-as',
+    title: '入試の正誤問題〈248〉（東大レベル：英作文の such as・like・for example の使い方）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '例をあげるときは「名詞, such as A and B」「名詞 like A」の形で、such as は前の名詞のあとに置く（×Such as apples, many fruits ～）。such A as B の形もあり、A が複数なら a はつけない（such vegetables as carrots）。for example は文頭や文中にコンマとともに置く。',
+      'あげる例は前の名詞と数・形をそろえる（fruits such as apples and oranges／activities such as hiking）。例をあげても主語の中心は前の名詞なので、動詞はそれに合わせる（Countries like Japan have ～）。',
+    ],
+    examples: [
+      { en: 'Many fruits, such as apples and oranges, are good for your health.', ja: 'リンゴやオレンジのような多くの果物は健康によい。' },
+      { en: 'He enjoys outdoor activities like hiking and camping.', ja: '彼はハイキングやキャンプのような野外活動を楽しむ。' },
+    ],
+    questions: [
+      { sentence: '(A) I like (B) fruits (C) such as (D) apple and orange.', choices: ['(A) I like', '(B) fruits', '(C) such as', '(D) apple and orange'], answer: 3, why: 'such as のあとの例は前の名詞（fruits）に合わせて複数形 apples and oranges。' },
+      { sentence: '(A) Many animals, (B) such like (C) bears and frogs, (D) sleep through the winter.', choices: ['(A) Many animals,', '(B) such like', '(C) bears and frogs,', '(D) sleep through the winter'], answer: 1, why: '「たとえば～のような」は such as（または like）。such like とは言わない。' },
+      { sentence: '(A) For example, (B) Kyoto and Nara (C) has (D) many old temples.', choices: ['(A) For example,', '(B) Kyoto and Nara', '(C) has', '(D) many old temples'], answer: 2, why: '主語は Kyoto and Nara（複数）なので have。' },
+      { sentence: '(A) Countries (B) like (C) Japan and Korea (D) has four seasons.', choices: ['(A) Countries', '(B) like', '(C) Japan and Korea', '(D) has four seasons'], answer: 3, why: '主語は Countries（複数）なので have。' },
+      { sentence: '(A) Such as (B) apples, (C) many fruits (D) are good for health.', choices: ['(A) Such as', '(B) apples,', '(C) many fruits', '(D) are good for health'], answer: 0, why: 'such as は名詞のあとに置く。Many fruits, such as apples, ～ の語順にする。' },
+      { sentence: '(A) He enjoys (B) outdoor activities (C) such as (D) to hike and camp.', choices: ['(A) He enjoys', '(B) outdoor activities', '(C) such as', '(D) to hike and camp'], answer: 3, why: 'activities の例なので名詞（動名詞）hiking and camping。' },
+      { sentence: '(A) I want to visit (B) cities (C) as such (D) Paris and Rome.', choices: ['(A) I want to visit', '(B) cities', '(C) as such', '(D) Paris and Rome'], answer: 2, why: '語順は such as。' },
+      { sentence: '(A) Some birds, (B) for example (C) penguin, (D) cannot fly.', choices: ['(A) Some birds,', '(B) for example', '(C) penguin,', '(D) cannot fly'], answer: 2, why: 'birds の例なので複数形 penguins。' },
+      { sentence: '(A) A lot of things, (B) like (C) a phone or wallets, (D) are left on trains.', choices: ['(A) A lot of things,', '(B) like', '(C) a phone or wallets,', '(D) are left on trains'], answer: 2, why: '例はそろえて phones or wallets。' },
+      { sentence: '(A) Such a (B) vegetables as carrots (C) are (D) rich in vitamins.', choices: ['(A) Such a', '(B) vegetables as carrots', '(C) are', '(D) rich in vitamins'], answer: 0, why: '複数名詞には a をつけないので Such vegetables as carrots。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
