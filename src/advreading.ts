@@ -44978,6 +44978,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-school-starting-age',
+    title: 'When Should Children Start School?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The age at which children begin formal schooling differs considerably from one country to another. In some places, children start learning to read and write at the age of four or five, while in others they spend their early years mainly in play and do not begin formal lessons until they are six or seven. As parents and governments look for ways to give children the best possible start in life, the question of when formal education should begin has become a subject of lively and sometimes heated debate.",
+      "Supporters of an early start argue that young children are remarkably quick learners. The early years are a period of rapid development in the brain, they point out, and children who are introduced to letters and numbers at this age may build a foundation that helps them throughout their education. An early start may also benefit children from poorer families, who may have fewer books at home and less opportunity to practice reading, and who might otherwise fall behind their classmates before they have even begun.",
+      "Supporters also note that many families depend on schools to care for their children while both parents work. A system in which formal schooling begins at six or seven may leave families to find and pay for childcare for several additional years, which can place a heavy burden on those with low incomes. An earlier start, in their view, not only supports learning but also makes it easier for parents, and particularly mothers, to return to work and to support their families. A later start may therefore widen the gap between families who can afford private care and those who cannot.",
+      "Critics of an early start, however, argue that young children learn best through play rather than formal lessons. ( A ) some children may be ready to read at four, many are not, and those who are pushed into lessons too early may come to see learning as a source of stress and failure rather than enjoyment. Critics point out that in some countries where formal schooling begins later, children quickly catch up with their peers and often achieve high results in international comparisons of reading and mathematics. In their view, the age at which lessons begin matters less than the quality of teaching.",
+      "Critics also stress the importance of skills that are not easily measured by tests. Through play, young children learn to share, to take turns, to solve problems, and to manage their own feelings, and these abilities may be just as important for later success as an early knowledge of letters and numbers. A crowded timetable of formal lessons, critics fear, may leave little room for the kind of free and imaginative play through which such abilities develop, and may make childhood more anxious than it needs to be.",
+      "Some countries have tried to combine the strengths of both approaches. In these systems, children attend school from an early age, so that families receive support with childcare, but the first years are organized mainly around play, with reading and writing introduced gradually as each child shows signs of being ready. Teachers in such systems are trained to observe children carefully and to adjust their teaching to the needs of individual pupils, rather than following a single plan for an entire class.",
+      "The debate over when schooling should begin therefore reflects a wider disagreement about the purpose of early childhood. If childhood is seen mainly as a preparation for later study and work, an early start may seem the obvious choice. If, on the other hand, it is seen as a stage of life with its own value, in which play and exploration matter for their own sake, then the pressure to begin formal lessons as early as possible may deserve to be questioned more carefully than it often is.",
+    ],
+    ja: [
+      '子どもが正式な学校教育を始める年齢は、国によってかなりちがう。4歳か5歳で読み書きを学びはじめるところもあれば、幼い時期をおもに遊んですごし、6歳か7歳になるまで正式な授業を始めないところもある。親や政府が子どもにできるだけよい人生のスタートをあたえる方法をさがすなかで、正式な教育をいつ始めるべきかという問いは、活発な、ときにははげしい議論の対象になっている。',
+      '早いスタートを支持する人々は、幼い子どもはおどろくほど学ぶのが速いと主張する。幼い時期は脳が急速に発達する時期であり、この年齢で文字や数にふれた子どもは、教育全体を通じて役立つ土台を築けるかもしれないと彼らは指摘する。早いスタートはまた、家に本が少なく、読む練習をする機会も少ないかもしれない貧しい家庭の子どもたちにとっても利益になるかもしれない。そうでなければ、その子どもたちは始める前からクラスの仲間におくれをとってしまうかもしれないのである。',
+      '支持する人々はまた、多くの家庭が、両親がともに働いているあいだ子どもの世話を学校にたよっていることも指摘する。正式な学校教育が6歳か7歳で始まるしくみでは、家庭は何年も余分に保育を見つけてお金を払わなければならないかもしれず、それは収入の少ない家庭に重い負担をかけうる。彼らの考えでは、早いスタートは学びを支えるだけでなく、親、とくに母親が仕事にもどり、家族を支えるのを容易にするのである。したがって、遅いスタートは、民間の保育にお金を払える家庭とそうでない家庭との差を広げるかもしれない。',
+      'しかし早いスタートを批判する人々は、幼い子どもは正式な授業よりも遊びを通してもっともよく学ぶと主張する。4歳で読む準備ができている子どももいるかもしれないが、多くはそうではなく、早すぎる時期に授業におしこまれた子どもは、学ぶことを楽しみではなくストレスと失敗のもとと見なすようになるかもしれない。正式な学校教育が遅く始まるいくつかの国では、子どもたちはすぐに同じ年の子どもに追いつき、読解と数学の国際比較でしばしば高い成績をあげていると批判する人々は指摘する。彼らの考えでは、授業を始める年齢よりも、教え方の質のほうが大切なのである。',
+      '批判する人々はまた、テストではかんたんにはかれない力の大切さを強調する。遊びを通して、幼い子どもは分け合うこと、順番を守ること、問題を解決すること、自分の気持ちをコントロールすることを学び、こうした力は、早くから文字や数を知っていることと同じくらい、のちの成功にとって大切かもしれない。正式な授業でいっぱいの時間割は、そうした力が育つ自由で想像力に富んだ遊びのための余地をほとんど残さず、子ども時代を必要以上に不安なものにするかもしれないと批判する人々は心配している。',
+      '両方のやり方の長所を組み合わせようとしてきた国もある。そうしたしくみでは、家庭が保育の支えを受けられるよう、子どもは早い年齢から学校に通うが、最初の数年はおもに遊びを中心に組み立てられ、読み書きは、ひとりひとりの子どもに準備ができたきざしが見えるにつれて少しずつ取り入れられる。そうしたしくみの教師は、クラス全体でひとつの計画にしたがうのではなく、子どもを注意深く観察し、ひとりひとりの児童の必要に合わせて教え方を変えるよう訓練されている。',
+      'したがって、学校教育をいつ始めるべきかをめぐる議論は、幼い子ども時代の目的についてのより広い意見のちがいを映し出している。子ども時代がおもにのちの勉強や仕事への準備と見なされるなら、早いスタートは当然の選択に思えるかもしれない。一方、子ども時代が、遊びや探検がそれ自体として大切な、それ自身の価値をもつ人生の一段階と見なされるなら、できるだけ早く正式な授業を始めようとする圧力は、ふだんよりもっと注意深く問い直されるべきなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「4歳で読む準備ができている子もいるかもしれないが、多くはそうではない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters of an early start say young children learn quickly and that it helps poorer families and working ( 1 ). Critics argue that young children learn best through ( 2 ) and that skills such as sharing and managing feelings are hard to measure. Some countries combine both approaches, introducing reading gradually as each child becomes ( 3 ).',
+      blanks: [
+        { choices: ['parents', 'teachers', 'doctors', 'farmers'], answer: 0, why: '第3段落 makes it easier for parents ... to return to work。' },
+        { choices: ['play', 'tests', 'homework', 'television'], answer: 0, why: '第4段落 young children learn best through play rather than formal lessons。' },
+        { choices: ['ready', 'older', 'taller', 'famous'], answer: 0, why: '第6段落 as each child shows signs of being ready。' },
+      ],
+    },
+    tf: [
+      { statement: '子どもが正式な学校教育を始める年齢は、国によってかなりちがう。', answer: true, why: '第1段落 differs considerably from one country to another。' },
+      { statement: '支持する人々によると、早いスタートは貧しい家庭の子どもには不利になる。', answer: false, why: '第2段落 An early start may also benefit children from poorer families。' },
+      { statement: '学校教育が遅く始まる国でも、子どもが国際比較で高い成績をあげることがある。', answer: true, why: '第4段落 often achieve high results in international comparisons。' },
+      { statement: '組み合わせたしくみの教師は、クラス全体でひとつの計画にしたがうよう訓練されている。', answer: false, why: '第6段落 rather than following a single plan for an entire class。' },
+    ],
+    qa: [
+      { q: 'What may children pushed into lessons too early come to see learning as?', choices: ['A source of stress and failure.', 'An easy game.', 'A way to make friends.', 'A job for adults.'], answer: 0, why: '第4段落 may come to see learning as a source of stress and failure。' },
+      { q: 'Which abilities do young children learn through play, according to critics?', choices: ['Sharing and taking turns.', 'Reading long novels.', 'Solving difficult equations.', 'Speaking foreign languages.'], answer: 0, why: '第5段落 young children learn to share, to take turns ...。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
