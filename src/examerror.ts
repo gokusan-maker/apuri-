@@ -6358,6 +6358,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) We must (B) carry out (C) the project (D) as quick as possible.', choices: ['(A) We must', '(B) carry out', '(C) the project', '(D) as quick as possible'], answer: 3, why: 'as ～ as possible の中は副詞。as quickly as possible。' },
     ],
   },
+  {
+    id: 'exam-error-hand-in-out',
+    title: '入試の正誤問題〈265〉（国公立レベル：英作文の hand in・hand out・hand over）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'hand in ～（～を提出する）・hand out ～（～を配る）・hand over ～（～をわたす・引きわたす）。向きのちがいに注意：先生に出すのは in、みんなに配るのは out、相手にゆずりわたすのは over。',
+      '目的語が代名詞のときは動詞と副詞のあいだに置く（hand it in／hand them out）。受け身は be handed in／be handed out。',
+    ],
+    examples: [
+      { en: 'Please hand in your report. / The teacher handed out the tests.', ja: 'レポートを提出してください。／先生はテストを配った。' },
+      { en: 'He handed over the keys to his son.', ja: '彼はかぎを息子にわたした。' },
+    ],
+    questions: [
+      { sentence: '(A) Please (B) hand (C) out in (D) your homework by Friday.', choices: ['(A) Please', '(B) hand', '(C) out in', '(D) your homework by Friday'], answer: 2, why: '「（宿題・書類）を提出する」は hand in。hand in your homework。' },
+      { sentence: '(A) The teacher (B) handed (C) in (D) the test papers to the students.', choices: ['(A) The teacher', '(B) handed', '(C) in', '(D) the test papers to the students'], answer: 2, why: '「（生徒に）配る」は hand out。handed out the test papers。' },
+      { sentence: '(A) The robber (B) handed over (C) the bag (D) to the police quick.', choices: ['(A) The robber', '(B) handed over', '(C) the bag', '(D) to the police quick'], answer: 3, why: '動詞 handed over を修飾するので副詞 quickly。' },
+      { sentence: '(A) Hand (B) in late, (C) the report (D) received a lower grade.', choices: ['(A) Hand', '(B) in late,', '(C) the report', '(D) received a lower grade'], answer: 0, why: '受け身の分詞構文なので Handed in late。' },
+      { sentence: '(A) Volunteers (B) are handing out (C) a free leaflets (D) at the station.', choices: ['(A) Volunteers', '(B) are handing out', '(C) a free leaflets', '(D) at the station'], answer: 2, why: 'leaflets は複数なので a はつけない。free leaflets。' },
+      { sentence: '(A) All the students (B) has handed in (C) their essays (D) on time.', choices: ['(A) All the students', '(B) has handed in', '(C) their essays', '(D) on time'], answer: 1, why: '主語 All the students は複数なので have handed in。' },
+      { sentence: '(A) Leaflets (B) was handed (C) out (D) to everyone at the door.', choices: ['(A) Leaflets', '(B) was handed', '(C) out', '(D) to everyone at the door'], answer: 1, why: '主語 Leaflets は複数なので were handed out。' },
+      { sentence: '(A) Before (B) you leave, (C) please hand in them (D) at the office.', choices: ['(A) Before', '(B) you leave,', '(C) please hand in them', '(D) at the office'], answer: 2, why: '代名詞の目的語は動詞と副詞のあいだ。hand them in。' },
+      { sentence: '(A) The company (B) handed out (C) free gift (D) to all its customers.', choices: ['(A) The company', '(B) handed out', '(C) free gift', '(D) to all its customers'], answer: 2, why: 'gift は数えられる名詞なので複数 free gifts。' },
+      { sentence: '(A) She (B) was asked (C) to hand over (D) to her passport.', choices: ['(A) She', '(B) was asked', '(C) to hand over', '(D) to her passport'], answer: 3, why: 'hand over のあとにすぐ目的語を置く。hand over her passport。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
