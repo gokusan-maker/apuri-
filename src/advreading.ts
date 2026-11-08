@@ -44142,6 +44142,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-curtains',
+    title: 'On Curtains',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Curtains hang in the windows of homes, schools, and offices all over the world, and most of us open and close them every day without a second thought. They keep out the morning sun or the cold night air, they protect us from the eyes of passers-by, and they give a room a particular color and mood. Yet a curtain is a curious object, a thin layer of fabric that stands between the inside and the outside, and the way people use curtains reveals a great deal about how they balance the desire for privacy with the desire for light, openness, and connection.",
+      "The most obvious function of a curtain is to control what can be seen. When the curtains are open, the people inside can look out at the street, and those outside can catch glimpses of the life within. When they are closed, the room becomes a private space, hidden from view. In this sense, a curtain gives its owner the power to decide, at any moment, how visible they wish to be, and this small power may be an important part of feeling at home. People who move into a new house often hang curtains before they unpack anything else, as if a room could not truly become theirs until they were able to close it off from the world.",
+      "Customs concerning curtains differ widely between cultures. In some places, people leave their curtains open in the evening, allowing neighbors to see lighted rooms and families gathered inside, while in others closing the curtains at dusk is regarded as a natural part of the day. ( A ) such differences may seem trivial, they can reflect deeper attitudes toward privacy and community, suggesting how far people expect their lives to be visible to those who live around them.",
+      "Curtains also play an important role in the theater. The rise of the curtain at the beginning of a play marks the moment at which the ordinary world gives way to the world of the story, and its fall at the end returns the audience to their own lives. In this way, the theater curtain creates a boundary in time as well as in space, separating the moment of performance from everything that comes before and after it. Even in theaters that no longer use a curtain, a sudden change in the lights often performs the same function, signaling to the audience that the story is about to begin.",
+      "The image of the curtain has also entered our language. We speak of drawing a curtain over an unpleasant event when we wish to stop discussing it, and of looking behind the curtain when we want to discover what is really happening beneath an appearance. Such expressions suggest that curtains are associated not only with privacy but also with secrecy, with the possibility that what is hidden may be different from what is shown.",
+      "In recent years, the boundary that curtains once provided has become less clear. Many people now share images of their homes and daily lives online, inviting strangers to see rooms that would once have been hidden behind closed curtains. At the same time, cameras and other devices may record what happens inside homes without the inhabitants fully realizing it, so that the simple act of drawing a curtain no longer guarantees that a person cannot be seen.",
+      "Perhaps, then, curtains deserve more attention than we usually give them. They remind us that a good life requires both openness and privacy, both the light of the outside world and the shelter of a space that belongs to us alone. In an age when the line between public and private is constantly shifting, it may be worth asking how we can preserve the freedom that the humble curtain once offered, the freedom to choose, from moment to moment, how much of ourselves we wish to show.",
+    ],
+    ja: [
+      'カーテンは世界中の家や学校、職場の窓にかかっており、私たちのほとんどは毎日、何も考えずにそれを開けたり閉めたりしている。カーテンは朝の日ざしや冷たい夜の空気をさえぎり、通りかかる人の目から私たちを守り、部屋に特定の色や雰囲気をあたえる。しかしカーテンはふしぎなものである。内と外とのあいだに立つ一枚のうすい布であり、人々がカーテンをどのように使うかは、プライバシーを求める気持ちと、光や開かれたこと、つながりを求める気持ちとのつりあいを、人々がどのようにとっているかについて、多くのことを明らかにしている。',
+      'カーテンのもっとも明らかな働きは、何が見えるかを調整することである。カーテンが開いていると、中の人々は通りを見わたすことができ、外の人々は中の暮らしをちらりと目にすることができる。閉じていると、部屋は人目からかくされた私的な空間になる。この意味で、カーテンは持ち主に、どの瞬間にも、自分がどれほど見られたいかを決める力をあたえており、この小さな力は、くつろいだ気持ちになるための大切な一部なのかもしれない。新しい家に引っこした人は、ほかの何よりも先にカーテンをかけることが多い。まるで、世界から部屋を閉ざせるようになるまでは、そこが本当に自分のものにはならないかのように。',
+      'カーテンについての習慣は、文化によって大きくちがう。夕方もカーテンを開けたままにしておき、近所の人に明かりのついた部屋や中に集まる家族が見えるようにしている場所もあれば、たそがれどきにカーテンを閉めることが一日の自然な一部と考えられている場所もある。そうしたちがいはささいに思えるかもしれないが、それはプライバシーや共同体に対するより深い態度を反映していることがあり、人々が自分の生活をまわりに住む人々にどこまで見られるものと思っているかを示している。',
+      'カーテンはまた、劇場でも大切な役割を果たしている。劇の始まりに幕が上がることは、ふつうの世界が物語の世界に道をゆずる瞬間を示し、終わりに幕が下りることは、観客をそれぞれの生活に返す。このように、劇場の幕は空間だけでなく時間にもさかいめをつくり、演じられる瞬間をその前後のあらゆるものから切りはなすのである。もう幕を使わない劇場でさえ、照明がとつぜん変わることがしばしば同じ働きをし、物語がまもなく始まることを観客に知らせる。',
+      'カーテンのイメージは、私たちのことばにも入りこんでいる。いやなできごとについて話すのをやめたいときには、それに「カーテンを引く（幕を引く）」と言い、見かけの下で本当は何が起きているのかを知りたいときには「カーテンのうしろを見る」と言う。そうした表現は、カーテンがプライバシーだけでなく秘密とも、つまりかくされたものが見せられているものとちがうかもしれないという可能性とも結びついていることを思わせる。',
+      '近年、カーテンがかつてあたえていたさかいめは、はっきりしなくなってきた。多くの人がいまでは自分の家や日々の生活の写真をインターネットで共有し、かつては閉じたカーテンのうしろにかくされていたはずの部屋を見知らぬ人々に見せている。同時に、カメラやほかの機器が、住んでいる人が十分に気づかないうちに家の中のできごとを記録するかもしれず、カーテンを引くという単純な行為は、もはや人に見られないことを保証しなくなったのである。',
+      'だとすれば、カーテンは、私たちがふだん向けているよりも多くの注意に値するのかもしれない。カーテンは、よい生活には開かれたこととプライバシーの両方、外の世界の光と、自分だけのものである空間の守りの両方が必要であることを思い出させてくれる。公と私のさかいめがたえず動いている時代に、つつましいカーテンがかつてあたえてくれた自由、つまり自分のどれほどを見せたいかを瞬間ごとに選ぶ自由を、どうすれば保てるのかを問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうしたちがいはささいに思えるかもしれないが、より深い態度を反映している」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'カーテンは、持ち主にどれほど見られたいかを決める力をあたえる。', answer: true, why: '第2段落 gives its owner the power to decide ... how visible they wish to be。' },
+      { statement: 'どの文化でも、夕方にはかならずカーテンを閉める。', answer: false, why: '第3段落 In some places, people leave their curtains open in the evening。' },
+      { statement: '劇場の幕は、時間にもさかいめをつくる。', answer: true, why: '第4段落 creates a boundary in time as well as in space。' },
+      { statement: '筆者によると、カーテンを引けばいまでも人に見られないことが保証される。', answer: false, why: '第6段落 no longer guarantees that a person cannot be seen。' },
+    ],
+    qa: [
+      { q: 'What does the expression "looking behind the curtain" refer to?', choices: ['Discovering what is really happening beneath an appearance.', 'Cleaning the window.', 'Opening a theater.', 'Hiding from neighbors.'], answer: 0, why: '第5段落 discover what is really happening beneath an appearance。' },
+      { q: 'What do many people now share online, according to the passage?', choices: ['Images of their homes and daily lives.', 'Their curtains for sale.', 'Plans for new theaters.', 'Maps of their neighborhoods.'], answer: 0, why: '第6段落 share images of their homes and daily lives online。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
