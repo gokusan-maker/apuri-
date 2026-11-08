@@ -73,7 +73,10 @@ it('単語コース（英検1級など）をえらんでいると、今日の単
   localStorage.setItem('eitan:levels', JSON.stringify(['英検1級']))
   const ws = todayWords('2026-10-25')
   expect(ws).toHaveLength(5)
-  expect(ws.every((w) => levelOf(w) === '英検1級')).toBe(true)
+  // 英検1級のコースは「東大」のレベル（レベルの見直しで、むずかしい準1級の語も東大に入る）
+  const { courseWords } = await import('./wordcourse')
+  const todai = new Set(courseWords('東大').map((w) => w.id))
+  expect(ws.every((w) => todai.has(w.id))).toBe(true)
   localStorage.setItem('eitan:levels', JSON.stringify(['ネイティブ']))
   expect(todayWords('2026-10-25').every((w) => levelOf(w) === 'ネイティブ')).toBe(true) // コースを変えたらその日でも変わる
   localStorage.removeItem('eitan:grade')

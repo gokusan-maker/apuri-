@@ -17,7 +17,9 @@ it('レベルの単語は重ならず（TOEIC・TOEFL はほかと重なって�
   expect(courseWords('東大').filter((w) => levelOf(w) === '英検1級' || levelOf(w) === '英検準1級').length).toBeGreaterThan(courseWords('東大').length * 0.8)
   expect(courseWords('高3').some((w) => levelOf(w) === '中1')).toBe(false)
   expect(courseWords('中1').some((w) => w.en === 'have')).toBe(true)
-  expect(ids.length + courseWords('TOEIC').filter((w) => levelOf(w) === 'ビジネス').length + courseWords('TOEFL・IELTS').filter((w) => w.id.startsWith('up-')).length).toBe(WORDS.length)
+  // どの単語もどこかのレベルで学べる（レベルの見直しで移した語も消えない）
+  const every = new Set([...ids, ...courseWords('TOEIC').map((w) => w.id), ...courseWords('TOEFL・IELTS').map((w) => w.id)])
+  expect(WORDS.filter((w) => !every.has(w.id))).toEqual([])
 })
 
 it('まえの単語コース（英検・3000語など）からも、新しいレベルにうつる', () => {
@@ -28,7 +30,7 @@ it('まえの単語コース（英検・3000語など）からも、新しいレ
 })
 
 it('大学入試レベルの単語を増やした分も、そのレベルに入る', () => {
-  expect(courseWords('東大').some((w) => w.en === 'albeit')).toBe(true)
+  expect(courseWords('旧帝大').some((w) => w.en === 'albeit')).toBe(true)
   expect(courseWords('私学').some((w) => w.en === 'convey')).toBe(true)
   expect(courseWords('中3').some((w) => w.en === 'paradox')).toBe(false)
 })
@@ -42,7 +44,15 @@ it('単語のレベルの見直し：CEFR で下のレベルの語は、高い�
   const kokko = ens('国公立')
   for (const e of ['generous', 'tragedy', 'embarrass', 'symptom']) expect(kokko.has(e)).toBe(false)
   // 移した語は、下のレベルで学べる
-  expect(ens('私学難関').has('drought')).toBe(true)
-  expect(ens('私学').has('generous')).toBe(true)
+  expect(ens('私学').has('drought')).toBe(true)
+  expect(ens('高3').has('generous')).toBe(true)
   expect(ens('高3').has('fortune')).toBe(true)
+})
+
+it('単語のレベルの見直し②：上のレベルにやさしすぎる語を入れない（circumstance・investigate は下のレベル、acrimonious は東大）', () => {
+  const lv = (e: string) => COURSES.filter((c) => c.id !== 'TOEFL・IELTS' && courseWords(c.id).some((w) => w.en.toLowerCase() === e)).map((c) => c.id)
+  expect(lv('investigate')).toEqual(['高2'])
+  for (const e of ['circumstance', 'cooperate']) expect(lv(e).some((x) => ['旧帝大', '京大', '東大'].includes(x))).toBe(false)
+  expect(lv('acrimonious')).toEqual(['東大'])
+  expect(lv('ephemeral')).toEqual(['京大'])
 })

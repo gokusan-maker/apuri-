@@ -1,6 +1,7 @@
 // 単語コース（単語のレベル）：中1〜高3・大学入試（私学〜東大）・TOEIC・TOEFL/IELTS・ネイティブ。
 // えらんだレベルの単語だけで地図（ステージ）とミニゲームを出す。どの語がどのレベルかは wordband.ts（CEFR-J・使用頻度・学年で作成）
 import { BAND_IDS } from './wordband'
+import { movedIn, movedOut } from './wordbandfix'
 import { WORDS_UPPER } from './wordsupper'
 import { loadGrade, type GradeId } from './usergrade'
 import { WORDS, type Level, type Word } from './words'
@@ -37,7 +38,10 @@ export function courseWords(id: CourseId): Word[] {
     const extra = WORDS_UPPER.filter((w) => w.band === id).map((w) => w.id)
     // ネイティブは、あとから wordsnative.ts に足した口語表現もすべて入れる
     const native = id === 'ネイティブ' ? [...byId.values()].filter((w) => w.level === 'ネイティブ' && !ids.includes(w.id)).map((w) => w.id) : []
-    cache.set(id, [...ids, ...extra, ...native].map((x) => byId.get(x)).filter((w): w is Word => !!w))
+    // レベルの見直し②（wordbandfix.ts）：やさしすぎ・むずかしすぎの語を合うレベルへ移す
+    const out = movedOut(id)
+    const all = [...new Set([...[...ids, ...extra, ...native].filter((x) => !out.has(x)), ...movedIn(id)])]
+    cache.set(id, all.map((x) => byId.get(x)).filter((w): w is Word => !!w))
   }
   return cache.get(id)!
 }
