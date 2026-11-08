@@ -43982,6 +43982,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-signs',
+    title: 'On Signs',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Signs are everywhere in the modern world. They tell us which way to drive, where to find a station, when to cross the road, and which door leads to the exit, and most of the time we follow them without thinking. Because they are so common, signs rarely attract our attention except when they are missing or confusing. Yet a sign is a remarkable object, a small surface on which a few words or a simple picture can guide the behavior of thousands of strangers, and the way societies design and use signs reveals a great deal about how they communicate and how they expect people to behave.",
+      "The most basic purpose of a sign is to give information to people who do not already have it. A traveler arriving in an unfamiliar city depends on signs to find the way, and a visitor to a large hospital may be completely lost without them. In this sense, signs are a kind of hospitality, a way for a place to welcome those who come to it for the first time, and a city with clear and helpful signs can make strangers feel that they are expected and cared for.",
+      "Many signs, however, do more than inform. They also instruct, warn, and forbid, telling people where they may not go and what they must not do. ( A ) such signs are often necessary for safety, a place covered with prohibitions can feel unwelcoming, as if visitors were regarded mainly as potential troublemakers, and some designers have argued that the tone of a sign can matter as much as its message. A sign that politely asks visitors to keep a path clean, for example, may be obeyed more willingly than one that simply threatens them with a fine.",
+      "Signs also face the challenge of communicating across languages. In international airports and stations, many signs rely on simple pictures, such as a suitcase, a train, or a person walking, which can be understood by people who speak different languages. Such symbols are remarkably effective, but they are not entirely universal, since the meaning of a picture may depend on cultural habits, and designers must take care that a symbol which seems obvious in one place is not confusing in another.",
+      "The history of signs is closely connected with the growth of cities and travel. When most people lived in small communities where everyone knew the way, there was little need for signs, but as roads, railways, and cities expanded, strangers increasingly had to find their way without asking others. Signs therefore reflect a world in which people move constantly among others they do not know, relying on shared symbols rather than personal relationships to guide them.",
+      "In recent years, many signs have been supplemented or even replaced by digital devices. Maps on mobile phones can guide people turn by turn through unfamiliar streets, and screens in stations can display information that changes from minute to minute. These tools are extremely convenient, but they may also reduce our attention to the physical environment, encouraging us to look at a screen rather than at the places we pass through, and to depend on technology rather than on our own sense of direction.",
+      "Perhaps, then, signs deserve more attention than we usually give them. They remind us that public life depends on countless small acts of communication between people who will never meet, and that the way those messages are written can make others feel welcome or excluded. To read a sign thoughtfully is to recognize the care, or the lack of care, that went into making a place understandable to strangers, and perhaps to ask how we might make the places we share a little easier for others to find their way through.",
+    ],
+    ja: [
+      '看板や標識は、現代の世界のいたるところにある。それはどちらへ運転すればよいか、駅がどこにあるか、いつ道をわたればよいか、どの扉が出口に通じているかを教えてくれ、私たちはたいてい何も考えずにそれに従う。あまりにもふつうにあるので、標識が私たちの注意を引くのは、それがないときかわかりにくいときくらいである。しかし標識はおどろくべきものである。いくつかのことばや単純な絵がのった小さな面が、何千人もの見知らぬ人々のふるまいを導くことができるのであり、社会が標識をどのように設計し使うかは、その社会がどのようにやりとりし、人々にどのようにふるまうことを期待しているかについて、多くのことを明らかにしている。',
+      '標識のもっとも基本的な目的は、まだそれを知らない人々に情報をあたえることである。見知らぬ都市に着いた旅人は道を見つけるために標識にたより、大きな病院を訪れた人は標識がなければすっかり迷ってしまうかもしれない。この意味で、標識は一種のもてなしであり、ある場所が、はじめてそこに来た人々を迎えるための方法である。はっきりとして役に立つ標識のある都市は、見知らぬ人々に、自分は待たれていて大切にされていると感じさせることができる。',
+      'しかし多くの標識は、知らせる以上のことをする。それは指示し、警告し、禁止し、人々にどこへ行ってはいけないか、何をしてはいけないかを告げる。そうした標識は安全のためにしばしば必要だが、禁止の表示でおおわれた場所は、まるで訪問者がおもに問題を起こしかねない人と見なされているかのように、歓迎されていないと感じさせることがある。そして、標識の口調はその内容と同じくらい大切になりうると論じる設計者もいる。たとえば、道をきれいに保つよう訪問者にていねいにたのむ標識は、ただ罰金でおどす標識よりも、すすんで守られるかもしれない。',
+      '標識はまた、ことばのちがいをこえて伝えるというむずかしさにも直面する。国際空港や駅では、多くの標識が、スーツケースや電車、歩いている人のような単純な絵にたよっており、それはちがうことばを話す人々にも理解できる。そうした記号はおどろくほど効果的だが、完全にどこでも通じるわけではない。絵の意味は文化の習慣に左右されることがあり、設計者は、ある場所では明らかに思える記号が別の場所ではまぎらわしくならないよう注意しなければならないからである。',
+      '標識の歴史は、都市と旅の成長と深く結びついている。ほとんどの人が、だれもが道を知っている小さな共同体に暮らしていたころは、標識はほとんど必要なかったが、道路や鉄道、都市が広がるにつれて、見知らぬ人々はますます他人にたずねずに道を見つけなければならなくなった。だから標識は、人々が知らない人々のあいだをたえず移動し、個人的な関係ではなく共有された記号にたよって進む世界を反映しているのである。',
+      '近年、多くの標識はデジタル機器によっておぎなわれたり、取ってかわられたりさえしている。携帯電話の地図は、見知らぬ通りで人々を曲がりかどごとに案内でき、駅の画面は分ごとに変わる情報を表示できる。こうした道具はひじょうに便利だが、まわりの物理的な環境への注意を減らすかもしれない。私たちが通りすぎる場所ではなく画面を見るよう促し、自分自身の方向感覚ではなく技術にたよるようにさせるかもしれないのである。',
+      'だとすれば、標識は、私たちがふだん向けているよりも多くの注意に値するのかもしれない。標識は、公共の生活が、けっして出会うことのない人々のあいだの数えきれない小さなやりとりにささえられていること、そしてそうした知らせの書き方しだいで、ほかの人々を歓迎されていると感じさせることも、しめ出されていると感じさせることもできることを思い出させてくれる。標識をよく考えながら読むことは、ある場所を見知らぬ人にわかりやすくするためにこめられた心配り、あるいはその欠如に気づくことであり、そしてもしかすると、私たちが分かち合う場所を、ほかの人々にとって少しでも道を見つけやすいものにするにはどうすればよいかを問うことなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした標識は安全のために必要だが、歓迎されていないと感じさせることがある」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '筆者は、はっきりした標識を一種のもてなしだと考えている。', answer: true, why: '第2段落 signs are a kind of hospitality。' },
+      { statement: '絵の記号は、どの文化でもまったく同じ意味をもつ。', answer: false, why: '第4段落 they are not entirely universal。' },
+      { statement: '小さな共同体に暮らしていたころは、標識はほとんど必要なかった。', answer: true, why: '第5段落 there was little need for signs。' },
+      { statement: '筆者によると、デジタル機器はまわりの環境への注意をつねに高める。', answer: false, why: '第6段落 they may also reduce our attention to the physical environment。' },
+    ],
+    qa: [
+      { q: 'What do some designers argue can matter as much as a sign’s message?', choices: ['Its tone.', 'Its size only.', 'Its price.', 'Its age.'], answer: 0, why: '第3段落 the tone of a sign can matter as much as its message。' },
+      { q: 'Why do many signs in international airports rely on simple pictures?', choices: ['People who speak different languages can understand them.', 'Pictures are cheaper to print.', 'Words are not allowed.', 'Pictures last longer.'], answer: 0, why: '第4段落 which can be understood by people who speak different languages。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
