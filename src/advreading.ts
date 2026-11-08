@@ -46782,6 +46782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-markets',
+    title: 'On Markets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Long before there were shopping centers or online stores, there were markets. In towns and villages around the world, people gathered in open squares or along streets on certain days of the week to buy and sell food, cloth, tools, and animals. Many of these markets still exist, and in some places they remain at the center of daily life. Yet the market is more than a place to exchange goods. It has shaped the growth of towns, the relationships between strangers, and the way human beings have come to think about value, trust, and community.",
+      "The earliest markets probably grew up at places where people from different areas naturally met, such as river crossings, the meeting points of roads, or the gates of towns. Farmers brought what they had grown, craftspeople brought what they had made, and those who needed these things came to buy them. Over time, regular markets encouraged settlements to grow around them, and many towns owe their location, and sometimes even their names, to the markets that were once held there.",
+      "Markets have always depended on trust. ( A ) buyers and sellers may be strangers to one another, they must believe that the goods are what they appear to be and that the prices are fair. In many traditional markets, this trust was built up through repeated meetings, as customers returned week after week to the same sellers and came to know them by name. Rules about weights, measures, and the quality of goods were also developed to protect buyers and to make trade possible between people who did not know each other.",
+      "A market is also a place of conversation and social life. People come not only to buy and sell but also to meet friends, exchange news, and enjoy the noise and color of the crowd. In many cultures, the market has been a place where information spread, where political ideas were discussed, and where people from different backgrounds encountered one another. Even today, a visit to a local market can reveal more about the daily life of a place than any guidebook. In this sense, the market has been as much a social institution as an economic one.",
+      "Modern ways of shopping have changed the role of markets in many places. Supermarkets offer a wide range of goods under one roof, and online shopping allows people to buy almost anything without leaving their homes. As a result, some traditional markets have declined or disappeared. Yet in many cities, markets have also experienced a revival, as people seek fresh local produce, direct contact with those who grow their food, and an experience of shopping that feels more personal than a visit to a large store.",
+      "The word market has also taken on a much broader meaning. Economists speak of the market as an abstract system in which prices are determined by supply and demand, and governments and businesses talk about entering new markets or responding to market forces. Such uses can make the market seem distant and impersonal, very different from the lively squares in which the word first had its meaning, and they invite us to remember that every market, however large, is ultimately made up of human choices.",
+      "Perhaps, then, the market deserves more thought than we usually give it. It has helped to create towns, taught people to trust strangers, served as a place of meeting and conversation, and given its name to one of the most powerful ideas of modern economics. The next time we walk through a busy market, surrounded by the voices of sellers and the smell of fresh food, it may be worth remembering that we are taking part in one of the oldest forms of human cooperation.",
+    ],
+    ja: [
+      'ショッピングセンターやオンラインの店ができるずっと前から、市場があった。世界中の町や村で、人々は週の決まった日に広場や通りぞいに集まり、食べ物や布、道具、動物を売り買いした。こうした市場の多くはいまも残っており、場所によっては日々の生活の中心でありつづけている。しかし市場は品物を交換する場所以上のものである。それは町の成長や見知らぬ人どうしの関係、そして人間が価値や信頼、共同体についてどのように考えるようになったかを形づくってきたのである。',
+      'もっとも古い市場は、おそらく川をわたる場所や道の合流点、町の門のように、ちがう地域の人々が自然に出会う場所に生まれた。農民は自分が育てたものを、職人は自分がつくったものをもってきて、それを必要とする人々が買いに来た。時がたつにつれて、定期的な市場はそのまわりに集落が育つのをうながし、多くの町は、その場所や、ときには名前までも、かつてそこで開かれていた市場におっているのである。',
+      '市場はいつも信頼にたよってきた。買い手と売り手はたがいに見知らぬ人どうしかもしれないが、品物が見かけどおりのものであり、値段が公平であると信じなければならない。多くの伝統的な市場では、この信頼はくり返しの出会いを通じて築かれた。客は毎週同じ売り手のもとにもどり、名前で知り合うようになったのである。また、重さやはかり方、品物の質についての決まりがつくられ、買い手を守り、知り合いでない人どうしの取り引きを可能にした。',
+      '市場はまた、会話と社会生活の場所でもある。人々は売り買いするためだけでなく、友人に会い、知らせを交わし、人ごみのにぎやかさと色あいを楽しむためにもやってくる。多くの文化で、市場は情報が広まり、政治の考えが話し合われ、ちがう背景をもつ人々がたがいに出会う場所だった。今日でも、地元の市場を訪れることは、どんなガイドブックよりもその土地の日々の生活について多くを明らかにしてくれることがある。この意味で、市場は経済のしくみであるのと同じくらい、社会のしくみでもあったのである。',
+      '現代の買い物のしかたは、多くの場所で市場の役割を変えてきた。スーパーマーケットはひとつの屋根の下で幅広い品物を提供し、オンラインの買い物によって人々は家を出ずにほとんど何でも買えるようになった。その結果、伝統的な市場のなかにはさびれたり、消えてしまったりしたものもある。しかし多くの都市では、人々が新鮮な地元の産物や、食べ物を育てる人との直接のふれあい、そして大きな店に行くよりも人間らしく感じられる買い物の経験をもとめるようになり、市場が復活してもいる。',
+      '市場ということばは、ずっと広い意味ももつようになった。経済学者は、値段が供給と需要によって決まる抽象的なしくみとして市場について語り、政府や会社は新しい市場に進出することや市場の力にこたえることについて話す。そうした使い方は市場を遠く人間味のないものに思わせ、そのことばが最初に意味をもったにぎやかな広場とはまったくちがうものに見せるので、どんなに大きな市場も、結局は人間の選択から成り立っていることを思い出すよう私たちをさそうのである。',
+      'だとすれば、市場は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは町を生み出す助けとなり、人々に見知らぬ人を信頼することを教え、出会いと会話の場となり、現代経済学のもっとも強力な考えのひとつにその名をあたえてきた。次ににぎやかな市場を、売り手の声と新鮮な食べ物のにおいにかこまれて歩くとき、私たちが人間の協力のもっとも古い形のひとつに加わっているのだと思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「買い手と売り手は見知らぬ人どうしかもしれないが、信じなければならない」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'もっとも古い市場は、ちがう地域の人々が自然に出会う場所に生まれたらしい。', answer: true, why: '第2段落 grew up at places where people from different areas naturally met。' },
+      { statement: '伝統的な市場では、客は毎回ちがう売り手から買うのがふつうだった。', answer: false, why: '第3段落 customers returned week after week to the same sellers。' },
+      { statement: '多くの都市で、市場が復活している。', answer: true, why: '第5段落 markets have also experienced a revival。' },
+      { statement: '筆者によると、市場は経済のしくみであり、社会のしくみではない。', answer: false, why: '第4段落 as much a social institution as an economic one。' },
+    ],
+    qa: [
+      { q: 'What were rules about weights and measures developed for?', choices: ['To protect buyers and make trade possible between strangers.', 'To make prices higher.', 'To limit the number of sellers.', 'To close markets on weekends.'], answer: 0, why: '第3段落 to protect buyers and to make trade possible between people who did not know each other。' },
+      { q: 'What do people seek when they return to markets in cities?', choices: ['Fresh local produce and direct contact with growers.', 'Cheaper electronics.', 'Faster delivery.', 'Larger shopping bags.'], answer: 0, why: '第5段落 fresh local produce, direct contact with those who grow their food。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
