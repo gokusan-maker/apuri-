@@ -3822,6 +3822,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 28 l-2 -6 M56 28 l2 -6" stroke="#44403c" strokeWidth="2.5" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'whitelipped')
+    return (
+      <g>
+        {/* 白い口もと */}
+        <ellipse cx="50" cy="52" rx="6" ry="3" fill="#fafaf9" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
