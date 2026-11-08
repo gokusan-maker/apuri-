@@ -47058,6 +47058,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-leaf-blowers',
+    title: 'Should Gas-Powered Leaf Blowers Be Banned?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On autumn mornings in many towns, the quiet of the streets is broken by the loud roar of leaf blowers. These machines, which push fallen leaves and grass cuttings into piles with a powerful stream of air, have become a common tool for both professional gardeners and ordinary homeowners. Most of them are powered by small gasoline engines. In recent years, however, a growing number of cities have begun to restrict or ban gas-powered leaf blowers, and the question of whether such bans are wise has provoked surprisingly strong feelings on both sides.",
+      "Supporters of bans point first to the problem of noise. Gas-powered leaf blowers are extremely loud, and because they are often used early in the morning or for long periods, they can disturb people who work at home, young children trying to sleep, and patients recovering from illness. The workers who operate the machines every day, supporters add, are exposed to the greatest risk of all, since years of such noise can permanently damage their hearing. A quieter neighborhood, in their view, is not a luxury but a basic part of a healthy life.",
+      "Supporters also emphasize the effects on air quality. The small engines used in many leaf blowers burn fuel far less cleanly than modern car engines, and they release harmful gases and fine particles into the air. Some studies have suggested that running such a machine for an hour can produce as much pollution as driving a car for a long distance. In addition, the powerful stream of air raises dust, pollen, and dirt from the ground, which may cause problems for people with asthma or allergies. Supporters argue that these costs are borne by everyone nearby, not only by those who choose to use the machines.",
+      "Critics, however, argue that bans place an unfair burden on gardeners and small businesses. ( A ) battery-powered machines are becoming more common, they are often more expensive and may not yet be powerful enough for large areas or heavy, wet leaves. Gardening companies that must replace all their equipment may face high costs, and some workers fear that slower tools will force them to work longer hours for the same pay. Critics suggest that rules made with good intentions may end up harming those who can least afford the change.",
+      "Critics also question whether bans are the best way to address the problem. They note that leaf blowers are only one of many sources of noise and pollution in modern cities, and that traffic and construction produce far more of both. Some critics argue that it would be fairer to limit the hours during which leaf blowers may be used, or to set standards for noise and emissions, rather than banning an entire type of machine. Such rules, they suggest, would reduce the most serious problems while allowing people to choose the tools that suit their work.",
+      "Several cities have tried to respond to these concerns by introducing bans gradually. They give residents and businesses several years to prepare, offer financial support to help gardeners buy quieter electric equipment, and begin by limiting use in the early morning and near schools and hospitals. Some have also encouraged people to reconsider whether leaves need to be removed at all, since fallen leaves left on flower beds can protect the soil and provide shelter for insects and other small creatures through the winter.",
+      "The debate over leaf blowers may seem minor, but it raises a broader question about how communities should balance the convenience of individuals against the shared environment. A tool that saves one person time can impose noise and pollution on many others, and decisions about such tools affect workers, residents, and nature in different ways. Finding a fair solution may therefore depend less on simply permitting or forbidding a machine than on listening carefully to all of those whom the decision will affect, and on giving them the time and support they need to adapt.",
+    ],
+    ja: [
+      '多くの町の秋の朝、通りの静けさは落ち葉吹き飛ばし機（ブロワー）の大きなうなり声によってやぶられる。強い空気の流れで落ち葉や刈った草を山に集めるこれらの機械は、プロの庭師にもふつうの家の持ち主にも、よくある道具になっている。そのほとんどは小さなガソリンエンジンで動いている。しかし近年、ガソリン式のブロワーを制限したり禁止したりしはじめた都市がふえており、そうした禁止がかしこいかどうかという問いは、両方の側に意外なほど強い感情を引き起こしている。',
+      '禁止を支持する人々は、まず騒音の問題を指摘する。ガソリン式のブロワーはとても音が大きく、しばしば朝早くや長い時間使われるので、家で働く人や、ねむろうとしている幼い子ども、病気から回復しつつある患者のじゃまをすることがある。毎日機械を動かす作業員こそ、もっとも大きな危険にさらされていると支持する人々はつけ加える。何年もそうした騒音を浴びると、耳が永久にいためられることがあるからだ。彼らの考えでは、静かな地域はぜいたくではなく、健康な生活の基本的な一部なのである。',
+      '支持する人々はまた、空気の質への影響を強調する。多くのブロワーに使われている小さなエンジンは、現代の車のエンジンよりはるかにきたなく燃料を燃やし、有害なガスや細かい粒子を空気中に出す。そうした機械を1時間動かすと、車で長い距離を走るのと同じくらいの汚染を生むことがあると示した研究もある。さらに、強い空気の流れは地面からほこりや花粉、土をまい上げ、ぜんそくやアレルギーのある人に問題を起こすかもしれない。支持する人々は、こうした負担は機械を使うことを選んだ人だけでなく、近くにいるすべての人が負っていると主張する。',
+      'しかし批判する人々は、禁止は庭師や小さな会社に不公平な負担をかけると主張する。電池式の機械はふえてきているが、しばしば値段が高く、広い場所や重くぬれた落ち葉にはまだ十分な力がないかもしれない。道具をすべて買いかえなければならない造園会社は高い費用に直面するかもしれず、おそい道具のせいで同じ給料でより長く働かされるのではないかと心配する作業員もいる。批判する人々は、善意でつくられた決まりが、変化にもっともたえられない人々を苦しめることになりかねないと言う。',
+      '批判する人々はまた、禁止が問題に取り組む最善の方法なのかを問う。彼らは、ブロワーは現代の都市の騒音と汚染の多くの原因のひとつにすぎず、交通や工事のほうがどちらもはるかに多く生み出していると指摘する。機械の種類をまるごと禁止するよりも、ブロワーを使ってよい時間を制限したり、騒音や排出の基準を定めたりするほうが公平だと主張する批判者もいる。そうした決まりなら、もっとも深刻な問題をへらしつつ、人々が自分の仕事に合った道具を選べるようにできると彼らは言う。',
+      'いくつかの都市は、禁止を少しずつ取り入れることでこうした心配にこたえようとしてきた。住民や会社に何年もの準備期間をあたえ、庭師が静かな電動の道具を買えるようにお金の支援をし、まずは朝早くや学校・病院の近くでの使用を制限することからはじめるのである。落ち葉をそもそも取りのぞく必要があるのかを考え直すよう人々にすすめている都市もある。花だんに残された落ち葉は、土を守り、冬のあいだ虫やほかの小さな生き物のかくれ場所になるからだ。',
+      'ブロワーをめぐる議論は小さなことに思えるかもしれないが、地域社会が個人の便利さと共有の環境のつりあいをどうとるべきかという、より広い問いを投げかけている。ひとりの時間を節約する道具が多くのほかの人々に騒音や汚染をおしつけることがあり、そうした道具についての決定は、作業員、住民、自然にそれぞれちがう形で影響する。だとすれば、公平な解決策を見つけられるかどうかは、機械を単に許すか禁じるかよりも、その決定が影響するすべての人の声にていねいに耳をかたむけ、彼らが適応するのに必要な時間と支援をあたえることにかかっているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「電池式はふえているが、値段が高く力が足りないかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say gas-powered leaf blowers are loud and can permanently damage the ( 1 ) of workers. Critics argue that battery-powered machines are often more ( 2 ) and that limits on hours would be fairer than bans. Some cities offer financial ( 3 ) to help gardeners buy quieter equipment.',
+      blanks: [
+        { choices: ['hearing', 'eyesight', 'memory', 'balance'], answer: 0, why: '第2段落 can permanently damage their hearing。' },
+        { choices: ['expensive', 'popular', 'dangerous', 'colorful'], answer: 0, why: '第4段落 they are often more expensive。' },
+        { choices: ['support', 'penalties', 'records', 'contests'], answer: 0, why: '第6段落 offer financial support to help gardeners buy quieter electric equipment。' },
+      ],
+    },
+    tf: [
+      { statement: 'ほとんどのブロワーは小さなガソリンエンジンで動いている。', answer: true, why: '第1段落 Most of them are powered by small gasoline engines。' },
+      { statement: 'ブロワーの小さなエンジンは、現代の車のエンジンよりきれいに燃料を燃やす。', answer: false, why: '第3段落 burn fuel far less cleanly than modern car engines。' },
+      { statement: '批判する人々によると、交通や工事はブロワーよりはるかに多くの騒音と汚染を生む。', answer: true, why: '第5段落 traffic and construction produce far more of both。' },
+      { statement: '筆者によると、落ち葉は花だんに残すと土をいためる。', answer: false, why: '第6段落 fallen leaves left on flower beds can protect the soil。' },
+    ],
+    qa: [
+      { q: 'Why might the stream of air from leaf blowers cause problems for some people?', choices: ['It raises dust, pollen, and dirt from the ground.', 'It is too cold.', 'It spreads water.', 'It blows away their hats.'], answer: 0, why: '第3段落 raises dust, pollen, and dirt from the ground。' },
+      { q: 'Where do some cities first limit the use of leaf blowers?', choices: ['Near schools and hospitals, and in the early morning.', 'Only in parks at night.', 'Inside shopping centers.', 'On highways.'], answer: 0, why: '第6段落 limiting use in the early morning and near schools and hospitals。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
