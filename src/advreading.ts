@@ -46898,6 +46898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-standing-desks',
+    title: 'Should Workplaces and Schools Provide Standing Desks?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most office workers spend the greater part of their working day sitting at a desk, and many students sit for hours in classrooms and libraries. In recent years, however, concern about the health effects of long periods of sitting has led some companies and schools to introduce desks at which people can stand while they work. Supporters regard standing desks as a simple way of improving health and concentration, while critics doubt that they deliver the benefits that are claimed. Whether workplaces and schools should provide them has become a subject of debate.",
+      "Supporters argue first that sitting for long periods is bad for the body. Research has linked prolonged sitting to a range of health problems, including back pain, weight gain, and illnesses of the heart, and some studies suggest that these risks remain even for people who exercise regularly in their free time. A desk that allows people to stand for part of the day, supporters say, can reduce the total time spent sitting and encourage small movements that keep the body active. Even changing position every half hour, they add, may bring noticeable benefits over months and years.",
+      "Supporters also claim that standing can improve concentration and mood. Some workers report that they feel more alert and energetic when they stand, particularly during the afternoon, when many people feel tired after lunch. In schools, teachers have observed that some children who find it difficult to sit still for long periods are calmer and more attentive when they are allowed to stand. Standing desks, in this view, offer a flexible way of adapting the workplace or classroom to individual needs.",
+      "Critics, however, argue that the benefits of standing desks may be smaller than supporters suggest. ( A ) reducing time spent sitting may be helpful, standing still for long periods has its own risks, including pain in the legs and feet and problems with blood circulation. Critics point out that what matters most for health is likely to be regular movement rather than simply standing instead of sitting, and that a desk alone cannot replace walking, exercise, and frequent breaks. In their view, the desk is at best a reminder, not a solution.",
+      "Critics also raise concerns about cost and practicality. Adjustable desks are considerably more expensive than ordinary ones, and replacing the furniture in an entire office or school would require a large investment. In addition, critics note, many people who are given standing desks soon stop using them and return to sitting all day, so that the expected benefits are never achieved. Money spent on new desks, they argue, might be better used to encourage other forms of activity.",
+      "Some organizations have tried to find a balance. Rather than replacing all their furniture, they provide a small number of standing desks that workers can share, or offer simple devices that can be placed on ordinary desks to raise the height of a computer. Others focus on encouraging regular movement, for example by holding short meetings while standing or walking, and by reminding workers to take brief breaks every hour. Such approaches aim to reduce long periods of sitting without large costs. Workers in such organizations often say that the habit of moving matters more than the furniture itself.",
+      "The debate over standing desks therefore reflects a wider question about how modern ways of working affect the human body. Many jobs and forms of study now require people to remain in one place for long hours, a pattern very different from the more active lives of our ancestors. Finding healthy ways of working may depend less on any single piece of furniture than on a broader willingness to build movement and variety into the ordinary routines of the working and school day.",
+    ],
+    ja: [
+      'ほとんどの会社員は勤務時間の大部分を机にすわってすごし、多くの生徒は教室や図書館で何時間もすわっている。しかし近年、長い時間すわっていることが健康にあたえる影響への心配から、立ったまま作業できる机を取り入れる会社や学校が出てきた。支持する人々はスタンディングデスクを健康と集中力をよくする単純な方法と見なしているが、批判する人々は、それが言われているほどの利益をもたらすかどうかを疑っている。職場や学校がそれを用意すべきかどうかは、議論の対象になっている。',
+      '支持する人々は、まず、長い時間すわっていることは体に悪いと主張する。研究では、長時間すわっていることがこしの痛みや体重の増加、心臓の病気など、さまざまな健康問題と結びつけられており、自由な時間に定期的に運動している人でさえこうした危険は残ると示す研究もある。1日の一部を立ってすごせる机があれば、すわっている時間の合計をへらし、体を活発にたもつ小さな動きをうながせると支持する人々は言う。30分ごとに姿勢を変えるだけでも、何か月、何年とたつうちにはっきりした利益をもたらすかもしれないと彼らはつけ加える。',
+      '支持する人々はまた、立つことで集中力と気分がよくなると主張する。とくに多くの人が昼食のあとにつかれを感じる午後に、立っているほうが頭がさえて元気に感じると言う働く人もいる。学校では、長い時間じっとすわっているのがむずかしい子どもが、立つことをゆるされるとより落ち着いて注意深くなることに先生たちが気づいている。この見方では、スタンディングデスクは職場や教室をひとりひとりの必要に合わせる柔軟な方法をあたえてくれるのである。',
+      'しかし批判する人々は、スタンディングデスクの利益は支持する人々が言うより小さいかもしれないと主張する。すわっている時間をへらすことは役立つかもしれないが、長い時間じっと立っていることには、足の痛みや血のめぐりの問題など、それ自体の危険がある。健康にとってもっとも大切なのはおそらく、すわるかわりにただ立つことではなく定期的に動くことであり、机だけでは歩くことや運動、ひんぱんな休けいの代わりにはならないと批判する人々は指摘する。彼らの考えでは、机はせいぜい思い出させるものであって、解決策ではないのである。',
+      '批判する人々はまた、費用と実用性についての心配もあげる。高さを変えられる机はふつうの机よりかなり高く、会社全体や学校全体の家具を取りかえるには大きな投資が必要になる。さらに、スタンディングデスクをあたえられた多くの人はすぐにそれを使わなくなり、また1日中すわる生活にもどってしまうので、期待された利益はけっして得られないと批判する人々は指摘する。新しい机に使うお金は、ほかの形の活動をうながすのに使うほうがよいかもしれないと彼らは主張する。',
+      'つりあいを見つけようとしてきた団体もある。すべての家具を取りかえるかわりに、働く人が共有できる少数のスタンディングデスクを用意したり、ふつうの机の上に置いてコンピューターの高さを上げられる簡単な道具を提供したりするのである。また、立ったまま、あるいは歩きながら短い会議をしたり、毎時間短い休けいをとるよう働く人にうながしたりして、定期的に体を動かすことに力を入れる団体もある。そうしたやり方は、大きな費用をかけずに長い時間すわっていることをへらすことをめざしている。そうした団体の働く人々は、家具そのものよりも動く習慣のほうが大切だとよく言う。',
+      'したがって、スタンディングデスクをめぐる議論は、現代の働き方が人間の体にどのような影響をあたえるかという、より広い問いを映し出している。いまでは多くの仕事や勉強のしかたが、人々に長い時間ひとつの場所にとどまることを求めており、それは私たちの祖先のより活動的な生活とはまったくちがう型である。健康的な働き方を見つけることは、どれかひとつの家具よりも、働く日や学校の日のふだんの習慣に、動きと変化を取り入れようとするより広い気持ちによるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「すわる時間をへらすことは役立つかもしれないが、長く立つことにも危険がある」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say standing desks reduce time spent sitting and may improve concentration and ( 1 ). Critics argue that standing still has its own risks, that desks are ( 2 ), and that many people soon stop using them. Some organizations instead encourage regular ( 3 ), such as walking meetings and short breaks.',
+      blanks: [
+        { choices: ['mood', 'salary', 'height', 'eyesight'], answer: 0, why: '第3段落 standing can improve concentration and mood。' },
+        { choices: ['expensive', 'heavy', 'small', 'noisy'], answer: 0, why: '第5段落 Adjustable desks are considerably more expensive。' },
+        { choices: ['movement', 'sleep', 'study', 'eating'], answer: 0, why: '第6段落 focus on encouraging regular movement。' },
+      ],
+    },
+    tf: [
+      { statement: '研究では、長時間すわることがこしの痛みなどと結びつけられている。', answer: true, why: '第2段落 Research has linked prolonged sitting to ... back pain。' },
+      { statement: '研究によると、運動している人には長時間すわることの危険はまったくない。', answer: false, why: '第2段落 these risks remain even for people who exercise regularly。' },
+      { statement: '長い時間じっと立っていることにも、それ自体の危険がある。', answer: true, why: '第4段落 standing still for long periods has its own risks。' },
+      { statement: 'スタンディングデスクをあたえられた人は、みなずっと使いつづける。', answer: false, why: '第5段落 many people ... soon stop using them。' },
+    ],
+    qa: [
+      { q: 'What have teachers observed about some children who are allowed to stand?', choices: ['They are calmer and more attentive.', 'They get tired faster.', 'They talk more in class.', 'They finish homework sooner.'], answer: 0, why: '第3段落 are calmer and more attentive when they are allowed to stand。' },
+      { q: 'What do some organizations provide instead of replacing all furniture?', choices: ['A small number of shared standing desks.', 'New chairs for everyone.', 'Longer lunch breaks.', 'Free gym memberships.'], answer: 0, why: '第6段落 provide a small number of standing desks that workers can share。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
