@@ -45938,6 +45938,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-car-free-days',
+    title: 'Should Cities Hold Regular Car-Free Days?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On certain days of the year, some cities close their central streets to cars entirely. For a few hours, roads that are usually filled with traffic become spaces where children ride bicycles, families walk in the middle of the street, and musicians perform at crossroads. Such car-free days began as occasional events in a handful of cities, but they have since spread widely, and some places now hold them every week. Whether cities should make car-free days a regular part of urban life has become a subject of growing debate.",
+      "Supporters of car-free days argue first that they improve the quality of the air. Exhaust from cars is a major source of pollution in many cities, and measurements taken during car-free days have often shown a sharp fall in harmful gases and fine particles. Even if the effect lasts only for a day, supporters say, it gives residents a vivid sense of how much cleaner and quieter their city could be, and it may encourage them to support longer-term measures to reduce traffic. In several cities, they note, car-free days were the first step toward permanent pedestrian zones.",
+      "Supporters also emphasize the social benefits. When streets are free of cars, people of all ages can use them safely, and neighbors who usually pass each other quickly may stop to talk. Local shops and cafés sometimes report more customers on car-free days, as people stroll slowly rather than drive past. In this way, supporters argue, car-free days remind people that streets can be places for meeting and enjoyment, not merely channels through which vehicles move as quickly as possible.",
+      "Critics, however, point out that closing streets can create real difficulties. ( A ) many residents may enjoy a quiet day, others depend on cars to reach work, to visit relatives, or to carry heavy goods, and for them a day without access to the center may be a serious inconvenience. Critics note that traffic does not simply disappear when streets are closed; it often moves to surrounding roads, where it may cause congestion and pollution in neighborhoods that receive none of the benefits. Small businesses that rely on deliveries, they add, may also lose income on such days.",
+      "Critics also argue that car-free days may be more symbolic than effective. A single day without cars, they suggest, does little to change the habits that create traffic on the other days of the year, and the cost of organizing such events, including closing roads and providing extra public transport, may be considerable. If the real goal is to reduce pollution and congestion, critics say, money would be better spent on permanent improvements, such as more frequent buses and safer routes for cyclists.",
+      "Some cities have tried to answer these concerns by combining car-free days with lasting changes. They hold the events regularly, so that residents can plan for them, and allow exceptions for emergency vehicles, delivery vans at certain times, and people with disabilities. At the same time, they use the experience of car-free days to test new arrangements, such as wider pavements or bicycle lanes, and keep those that prove popular. In this way, a temporary event can become the starting point for permanent change. Residents who once opposed such events have sometimes become their strongest supporters.",
+      "The debate over car-free days therefore reflects a deeper question about whom city streets are for. For much of the past century, streets have been designed mainly for the movement of cars, and many people have come to regard this as natural. Car-free days challenge that assumption by showing, if only for a few hours, what a city might feel like if streets were shared more equally, and they invite residents to consider what kind of urban life they would most like to create.",
+    ],
+    ja: [
+      '1年のある日には、中心部の通りに車を完全に入れないようにする都市がある。数時間のあいだ、ふだんは車でいっぱいの道路が、子どもたちが自転車に乗り、家族が通りのまんなかを歩き、音楽家が交差点で演奏する空間になる。こうしたカーフリーデーは、ひとにぎりの都市でときどき行われる行事として始まったが、その後広く広まり、いまでは毎週行う場所もある。都市はカーフリーデーを都市生活のふつうの一部にすべきかどうかは、ますます議論の対象になっている。',
+      'カーフリーデーを支持する人々は、まず、それは空気の質をよくすると主張する。車の排気ガスは多くの都市でおもな汚染のもとであり、カーフリーデーにとられた測定では、有害なガスや細かいつぶが急にへったことがよく示されている。たとえその効果が1日しか続かなくても、それは住民に、自分の都市がどれほどきれいで静かになりうるかをありありと感じさせ、交通をへらすための長期的な対策を支持するようはげますかもしれないと支持する人々は言う。いくつかの都市では、カーフリーデーが長く続く歩行者専用区域への第一歩になったと彼らは指摘する。',
+      '支持する人々はまた、社会的な利益も強調する。通りに車がいなければ、あらゆる年齢の人々が安全にそこを使え、ふだんはすれちがうだけの近所の人々が立ち止まって話すかもしれない。地元の店やカフェは、人々が車で通りすぎるのではなくゆっくり歩くので、カーフリーデーには客がふえると報告することもある。このように、カーフリーデーは、通りが車をできるだけ速く走らせるための通路であるだけでなく、出会いと楽しみの場所にもなりうることを人々に思い出させると支持する人々は主張する。',
+      'しかし批判する人々は、通りをとざすと本当にこまることが起こりうると指摘する。多くの住民は静かな1日を楽しむかもしれないが、仕事に行ったり、親せきを訪ねたり、重い荷物を運んだりするのに車にたよっている人もおり、その人たちにとって中心部に入れない1日は深刻な不便になるかもしれない。通りをとざしても交通がただ消えるわけではなく、しばしばまわりの道路にうつり、何の利益も受けない地域で混雑や汚染を引き起こすかもしれないと批判する人々は指摘する。配達にたよる小さな店も、そうした日には収入を失うかもしれないと彼らはつけ加える。',
+      '批判する人々はまた、カーフリーデーは効果よりも象徴としての意味のほうが大きいかもしれないと主張する。車のない1日だけでは、1年のほかの日に交通を生み出している習慣はほとんど変わらず、道路をとざしたり公共交通をふやしたりするなど、そうした行事を行う費用はかなり大きいかもしれないと彼らは言う。本当の目的が汚染と混雑をへらすことなら、お金は、もっとひんぱんなバスや自転車のためのより安全な道など、長く続く改善に使うほうがよいと批判する人々は考える。',
+      'カーフリーデーと長く続く変化を組み合わせることで、こうした心配にこたえようとしてきた都市もある。住民が予定を立てられるよう行事を定期的に行い、救急車や、決まった時間の配達のバン、体の不自由な人々には例外をみとめるのである。同時に、カーフリーデーの経験を使って、広い歩道や自転車専用車線などの新しいしくみをためし、人気のあったものを残す。このようにして、一時的な行事が長く続く変化の出発点になりうるのである。かつてそうした行事に反対していた住民が、いちばん熱心な支持者になったこともある。',
+      'したがって、カーフリーデーをめぐる議論は、都市の通りはだれのためにあるのかという、より深い問いを映し出している。前の世紀のほとんどのあいだ、通りはおもに車の移動のために設計され、多くの人がそれを当然のことと見なすようになった。カーフリーデーは、たとえ数時間だけでも、通りがもっと平等に分け合われたら都市がどのように感じられるかを示すことでその前提に問いをなげかけ、住民に、自分たちがもっともつくりたいのはどのような都市生活なのかを考えるようさそうのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「多くの住民は静かな1日を楽しむかもしれないが、車にたよる人もいる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say car-free days improve the ( 1 ) and remind people that streets can be places for meeting. Critics argue that traffic moves to surrounding roads and that a single day changes few ( 2 ). Some cities use car-free days to test new arrangements and keep those that prove ( 3 ).',
+      blanks: [
+        { choices: ['air', 'roads', 'weather', 'prices'], answer: 0, why: '第2段落 they improve the quality of the air。' },
+        { choices: ['habits', 'laws', 'buildings', 'schools'], answer: 0, why: '第5段落 does little to change the habits that create traffic。' },
+        { choices: ['popular', 'expensive', 'dangerous', 'difficult'], answer: 0, why: '第6段落 keep those that prove popular。' },
+      ],
+    },
+    tf: [
+      { statement: 'カーフリーデーにとられた測定では、有害なガスが急にへったことがよく示されている。', answer: true, why: '第2段落 have often shown a sharp fall in harmful gases。' },
+      { statement: '地元の店は、カーフリーデーにはいつも客がへると報告している。', answer: false, why: '第3段落 sometimes report more customers on car-free days。' },
+      { statement: '通りをとざすと、交通がまわりの道路にうつることがある。', answer: true, why: '第4段落 it often moves to surrounding roads。' },
+      { statement: 'カーフリーデーでは、救急車にも例外はみとめられていない。', answer: false, why: '第6段落 allow exceptions for emergency vehicles。' },
+    ],
+    qa: [
+      { q: 'What do critics say money would be better spent on?', choices: ['Permanent improvements such as more frequent buses.', 'More car-free days.', 'Wider roads for cars.', 'New car parks.'], answer: 0, why: '第5段落 money would be better spent on permanent improvements。' },
+      { q: 'For much of the past century, what have streets been designed mainly for?', choices: ['The movement of cars.', 'Walking and meeting.', 'Children’s games.', 'Street music.'], answer: 0, why: '第7段落 designed mainly for the movement of cars。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
