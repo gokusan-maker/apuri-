@@ -3928,6 +3928,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M42 28 v-10 l-3 3 M58 28 v-10 l3 3" stroke="#1c1917" strokeWidth="2.5" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'babirusa')
+    return (
+      <g>
+        {/* 鼻の上を通って曲がるキバ */}
+        <path d="M40 40 q-4 -12 4 -18 M60 40 q4 -12 -4 -18" stroke="#f5f5f4" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
