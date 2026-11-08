@@ -44942,6 +44942,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-paper-maps',
+    title: 'On Maps',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A map is one of the most familiar objects in the world, yet it is also one of the strangest. It takes a space far too large to be seen at once, such as a city, a country, or the whole surface of the earth, and reduces it to something that can be folded into a pocket or held in the palm of a hand. We use maps so often, especially now that they appear on our phones, that we rarely stop to consider how much thought and choice lie behind every line and every name that they contain.",
+      "The first thing to notice about a map is that it can never show everything. A map that included every tree, every stone, and every house would be as large and as confusing as the land itself, and therefore of no use at all. Every map must leave things out, and the decision about what to include and what to omit depends on the purpose for which the map is made. A map for drivers shows roads and petrol stations, while a map for walkers shows paths, hills, and streams. Two accurate maps of the same place may therefore look completely different, because each answers a different question.",
+      "Maps also involve choices that are less obvious. ( A ) the earth is round, most maps are flat, and it is impossible to show a curved surface on a flat sheet without stretching or squeezing some parts of it. Different methods of drawing the world produce different shapes, and on some common maps, countries far from the equator appear much larger than they really are. Such choices may seem technical, but they can quietly shape how people imagine the size and importance of different parts of the world.",
+      "The names written on a map can carry meaning as well. A single mountain, river, or sea may be known by different names in different languages or by different communities, and the name chosen by the mapmaker may reflect whose view of the place is being treated as official. In some regions, maps have become the subject of serious disputes, because to draw a border in one place rather than another is to make a claim about who the land belongs to.",
+      "Yet maps are not only instruments of power or tools for finding the way. They can also be works of imagination and memory. Many people have drawn maps of places that exist only in stories, and children often make maps of their own neighborhoods that show not the official streets but the places that matter to them, such as a friend's house, a shop that sells sweets, or a tree that is good for climbing. Such maps reveal how people actually experience the spaces in which they live.",
+      "The arrival of digital maps has changed our relationship with maps in important ways. A phone can show our position at every moment and tell us exactly where to turn, so that we may reach a destination without ever forming a picture of the area in our minds. Some researchers have suggested that people who rely heavily on such guidance may become less skilled at finding their way without it, although others argue that digital maps simply free our attention for other things.",
+      "Perhaps, then, the map deserves more thought than we usually give it. Every map is a kind of argument about the world, a statement about what is worth showing and how it should be seen. To read a map carefully is therefore to ask not only where things are but also who made the map, for what purpose, and what has been left out, and in asking these questions we may learn as much about ourselves as about the places that the map describes.",
+    ],
+    ja: [
+      '地図は世界でもっともなじみ深いもののひとつだが、もっとも奇妙なもののひとつでもある。それは、都市や国、あるいは地球の表面全体のように、一度に見るにはあまりにも大きすぎる空間をとりあげ、ポケットにたためるもの、あるいは手のひらにのせられるものにまでちぢめる。私たちは、とくにいまでは電話に地図があらわれるので、あまりにもよく地図を使っており、そこにふくまれるすべての線やすべての名前のうらに、どれほど多くの考えと選択があるのかを立ち止まって考えることはめったにない。',
+      '地図についてまず気づくべきことは、地図がすべてを示すことはけっしてできないということである。すべての木、すべての石、すべての家をふくむ地図は、土地そのものと同じくらい大きくてわかりにくく、したがってまったく役に立たないだろう。どの地図も何かを省かなければならず、何をふくめ何を省くかという決定は、その地図がつくられる目的による。運転する人のための地図は道路やガソリンスタンドを示し、歩く人のための地図は小道や丘、小川を示す。したがって、同じ場所の正確な地図が2枚あっても、まったくちがって見えることがある。それぞれがちがう問いに答えているからである。',
+      '地図には、もっと目立たない選択もふくまれている。地球はまるいが、ほとんどの地図は平らであり、曲がった表面を平らな紙の上に示すには、どこかの部分をのばしたりちぢめたりしないわけにはいかない。世界をえがく方法がちがえばちがう形ができあがり、よく使われる地図のなかには、赤道から遠い国々が実際よりずっと大きく見えるものもある。そうした選択は技術的なことに思えるかもしれないが、人々が世界のさまざまな地域の大きさや重要さをどのように思いえがくかを、静かに形づくりうるのである。',
+      '地図に書かれる名前も意味をになうことがある。ひとつの山や川や海が、言語や集団によってちがう名前で知られていることがあり、地図をつくる人が選んだ名前は、その場所についてのだれの見方が公式のものとしてあつかわれているかを映し出しているのかもしれない。地域によっては、地図が深刻な争いの対象になってきた。国境をある場所ではなく別の場所に引くことは、その土地がだれのものかについての主張をすることだからである。',
+      'しかし地図は、権力の道具や道を見つけるための道具であるだけではない。それは想像や記憶の作品にもなりうる。多くの人が物語の中にしか存在しない場所の地図をえがいてきたし、子どもはしばしば自分の近所の地図をつくるが、それは公式の通りではなく、友だちの家や、おかしを売る店や、木登りにちょうどよい木など、自分にとって大切な場所を示している。そうした地図は、人々が自分のくらす空間を実際にどのように経験しているかを明らかにしてくれる。',
+      'デジタルの地図があらわれたことで、私たちと地図との関係は大きく変わった。電話はいつでも私たちの位置を示し、どこで曲がればよいかを正確に教えてくれるので、私たちはその地域のすがたを頭の中に思いえがくことなしに目的地に着けるかもしれない。そうした案内に大きくたよる人は、それなしで道を見つけるのが下手になるかもしれないと考える研究者もいるが、デジタルの地図は私たちの注意をほかのことに向けられるようにしてくれるだけだと主張する人もいる。',
+      'だとすれば、地図は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。どの地図も世界についての一種の主張であり、何を示す価値があり、それをどのように見るべきかについての言明である。したがって地図を注意深く読むことは、ものがどこにあるかだけでなく、だれがどんな目的でその地図をつくり、何が省かれているのかを問うことであり、こうした問いを発するなかで、私たちは地図がえがく場所についてと同じくらい、自分自身について学ぶのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「地球はまるいが、ほとんどの地図は平らだ」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'すべてを示す地図は、まったく役に立たないだろう。', answer: true, why: '第2段落 would be as large and as confusing as the land itself, and therefore of no use at all。' },
+      { statement: 'よく使われる地図では、赤道から遠い国々が実際より小さく見える。', answer: false, why: '第3段落 appear much larger than they really are。' },
+      { statement: '国境をどこに引くかは、土地がだれのものかについての主張になる。', answer: true, why: '第4段落 to draw a border ... is to make a claim about who the land belongs to。' },
+      { statement: 'すべての研究者が、デジタルの地図は道を見つける力を弱めると考えている。', answer: false, why: '第6段落 although others argue that digital maps simply free our attention。' },
+    ],
+    qa: [
+      { q: 'What do children’s maps of their neighborhoods often show?', choices: ['Places that matter to them.', 'The official streets.', 'Petrol stations.', 'National borders.'], answer: 0, why: '第5段落 show not the official streets but the places that matter to them。' },
+      { q: 'What does the writer say every map is a kind of?', choices: ['An argument about the world.', 'A work of science only.', 'A list of names.', 'A game for children.'], answer: 0, why: '第7段落 Every map is a kind of argument about the world。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
