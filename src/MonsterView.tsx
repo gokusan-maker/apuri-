@@ -3631,6 +3631,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="64" cy="40" r="3" fill="#1c1917" />
       </g>
     )
+  if (species === 'reedbuck')
+    return (
+      <g>
+        {/* 口笛の音 */}
+        <path d="M70 48 q6 -4 10 0 M74 42 q6 -4 10 0" stroke="#4a3518" strokeWidth="2" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
