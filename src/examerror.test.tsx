@@ -3466,3 +3466,10 @@ it('誤文訂正〈244〉：京大レベル mind ～ing・Would you mind if の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('opening')
 })
+
+it('正誤問題〈251〉：東大レベル hear from・hear of・hear about の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-hear-from-of')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) of him')
+})

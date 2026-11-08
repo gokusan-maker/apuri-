@@ -6008,6 +6008,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Help (B) to me (C) find (D) my glasses.', choices: ['(A) Help', '(B) to me', '(C) find', '(D) my glasses'], answer: 1, why: 'help のあとに to はつけない。Help me。' },
     ],
   },
+  {
+    id: 'exam-error-hear-from-of',
+    title: '入試の正誤問題〈251〉（東大レベル：英作文の hear from・hear of・hear about）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'hear from 人 は「人から連絡（手紙・電話）がある」、hear of ～ は「～のこと（存在・うわさ）を聞く」、hear about ～ は「～について（くわしく）聞く」。hear のあとに to はつけない（×hear to the rumor）。',
+      'look forward to hearing from you のように、to のあとは ～ing。過去の一点（last week）とは現在完了を使わない。',
+    ],
+    examples: [
+      { en: 'I haven’t heard from him since he moved. / Have you ever heard of this band?', ja: '彼が引っこしてから連絡がない。／このバンドのことを聞いたことがある？' },
+      { en: 'Did you hear about the accident yesterday?', ja: 'きのうの事故について聞いた？' },
+    ],
+    questions: [
+      { sentence: '(A) I haven’t (B) heard (C) of him (D) since he moved to Canada.', choices: ['(A) I haven’t', '(B) heard', '(C) of him', '(D) since he moved to Canada'], answer: 2, why: '「（人から）連絡がある」は hear from。heard from him。' },
+      { sentence: '(A) I have never (B) heard (C) from (D) a band called Blue Sky.', choices: ['(A) I have never', '(B) heard', '(C) from', '(D) a band called Blue Sky'], answer: 2, why: '「（存在・うわさを）聞いたことがある」は hear of。' },
+      { sentence: '(A) We (B) heard (C) about the accident (D) at yesterday.', choices: ['(A) We', '(B) heard', '(C) about the accident', '(D) at yesterday'], answer: 3, why: 'yesterday の前に at はつけない。' },
+      { sentence: '(A) Heard (B) the news, (C) she (D) burst into tears.', choices: ['(A) Heard', '(B) the news,', '(C) she', '(D) burst into tears'], answer: 0, why: '分詞構文なので Hearing the news。' },
+      { sentence: '(A) We (B) heard (C) to the (D) rumor from a friend.', choices: ['(A) We', '(B) heard', '(C) to the', '(D) rumor from a friend'], answer: 2, why: 'hear のあとに to はつけない。heard the rumor（または heard about the rumor）。' },
+      { sentence: '(A) I (B) hear (C) from my grandmother (D) every months.', choices: ['(A) I', '(B) hear', '(C) from my grandmother', '(D) every months'], answer: 3, why: 'every のあとは単数なので every month。' },
+      { sentence: '(A) Nobody (B) has ever (C) heard about (D) a such place.', choices: ['(A) Nobody', '(B) has ever', '(C) heard about', '(D) a such place'], answer: 3, why: '語順は such a place。' },
+      { sentence: '(A) Hear (B) of the plan, (C) everyone (D) was surprised.', choices: ['(A) Hear', '(B) of the plan,', '(C) everyone', '(D) was surprised'], answer: 0, why: '分詞構文なので Hearing of the plan。' },
+      { sentence: '(A) She (B) was (C) happy to hear (D) of her son every week.', choices: ['(A) She', '(B) was', '(C) happy to hear', '(D) of her son every week'], answer: 3, why: '「（息子から）連絡がある」は hear from her son。' },
+      { sentence: '(A) I (B) have heard (C) from her (D) last week.', choices: ['(A) I', '(B) have heard', '(C) from her', '(D) last week'], answer: 1, why: 'last week は過去の一点なので過去形 heard。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
