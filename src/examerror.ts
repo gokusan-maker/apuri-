@@ -6058,6 +6058,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) We (B) should think (C) more careful (D) about our future.', choices: ['(A) We', '(B) should think', '(C) more careful', '(D) about our future'], answer: 2, why: '動詞 think を修飾するので副詞 carefully。more carefully。' },
     ],
   },
+  {
+    id: 'exam-error-adj-prep',
+    title: '入試の正誤問題〈253〉（国公立レベル：英作文の be good at・be fond of・be afraid of などの前置詞）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '形容詞ごとに前置詞が決まっている：be good at（得意）・be fond of（好き）・be afraid of（こわい）・be proud of（ほこり）・be full of（いっぱい）・be famous for（有名）・be interested in（興味）・be tired of（あきた）。',
+      '前置詞のあとに動詞を置くときは動名詞（～ing）にする（be good at cooking／be afraid of swimming）。',
+    ],
+    examples: [
+      { en: 'She is good at drawing. / I am afraid of dogs.', ja: '彼女は絵をかくのが得意だ。／私は犬がこわい。' },
+      { en: 'The park is full of children. / He is proud of his son.', ja: '公園は子どもでいっぱいだ。／彼は息子をほこりに思っている。' },
+    ],
+    questions: [
+      { sentence: '(A) My brother (B) is very good (C) in (D) playing the guitar.', choices: ['(A) My brother', '(B) is very good', '(C) in', '(D) playing the guitar'], answer: 2, why: '「～が得意だ」は be good at ～。' },
+      { sentence: '(A) She (B) has been (C) fond (D) to animals since she was a child.', choices: ['(A) She', '(B) has been', '(C) fond', '(D) to animals since she was a child'], answer: 3, why: '「～が好きだ」は be fond of ～。fond of animals。' },
+      { sentence: '(A) Many children (B) are afraid (C) of (D) swim in deep water.', choices: ['(A) Many children', '(B) are afraid', '(C) of', '(D) swim in deep water'], answer: 3, why: '前置詞 of のあとは動名詞なので swimming。' },
+      { sentence: '(A) Being (B) proud for (C) your work (D) is important.', choices: ['(A) Being', '(B) proud for', '(C) your work', '(D) is important'], answer: 1, why: '「～をほこりに思う」は be proud of ～。' },
+      { sentence: '(A) I (B) am not (C) interesting in (D) history at all.', choices: ['(A) I', '(B) am not', '(C) interesting in', '(D) history at all'], answer: 2, why: '「（人が）興味がある」は be interested in。' },
+      { sentence: '(A) Our teacher (B) is famous (C) about (D) her funny jokes.', choices: ['(A) Our teacher', '(B) is famous', '(C) about', '(D) her funny jokes'], answer: 2, why: '「～で有名だ」は be famous for ～。' },
+      { sentence: '(A) Tired (B) of waiting, (C) he went (D) to home alone.', choices: ['(A) Tired', '(B) of waiting,', '(C) he went', '(D) to home alone'], answer: 3, why: 'home は副詞なので to はつけない。went home。' },
+      { sentence: '(A) Be (B) afraid of (C) making mistakes, (D) she never spoke in class.', choices: ['(A) Be', '(B) afraid of', '(C) making mistakes,', '(D) she never spoke in class'], answer: 0, why: '分詞構文なので Being afraid of。' },
+      { sentence: '(A) The town (B) is full (C) with (D) tourists every summer.', choices: ['(A) The town', '(B) is full', '(C) with', '(D) tourists every summer'], answer: 2, why: '「～でいっぱいだ」は be full of ～。' },
+      { sentence: '(A) My father (B) is (C) good at (D) cook Italian food.', choices: ['(A) My father', '(B) is', '(C) good at', '(D) cook Italian food'], answer: 3, why: '前置詞 at のあとは動名詞なので cooking。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
