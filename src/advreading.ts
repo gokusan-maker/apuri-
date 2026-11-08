@@ -45138,6 +45138,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-city-beekeeping',
+    title: 'Should Bees Be Kept in Cities?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, a growing number of people in large cities have begun to keep bees. Hives can now be found on the roofs of office buildings, hotels, and schools, in small back gardens, and even on the balconies of apartments. Supporters see this trend as a welcome way of bringing nature back into the city and of helping insects whose numbers have fallen in many parts of the world. Others, however, have begun to question whether the rapid spread of city beekeeping is as beneficial as it appears, and the debate has drawn in scientists, city officials, and ordinary residents.",
+      "Supporters of city beekeeping argue first that it helps to protect bees at a time when they face serious threats. In the countryside, the use of chemicals on farms and the loss of wild flowers have made life difficult for many insects. Cities, by contrast, often contain a surprising variety of plants in parks, gardens, and along streets, and some studies have suggested that bees kept in cities can be healthier and produce more honey than those kept in areas dominated by large farms. For supporters, the city may therefore offer bees a kind of refuge.",
+      "Supporters also emphasize the educational and social value of keeping bees. Hives on school roofs allow children to learn about the life cycle of insects and the importance of pollination, and community projects bring together neighbors who might otherwise never meet. Many people who take up beekeeping report that it changes the way they see their surroundings, making them more aware of the seasons, the flowers that bloom in their neighborhood, and the connections between human activity and the natural world.",
+      "Critics, however, point out that the bees kept in hives are usually honeybees, which are only one of many kinds of bee. ( A ) honeybees may benefit from city hives, many wild bees, which are often more important for the pollination of certain plants, may suffer as a result. When too many hives are placed in a small area, honeybees may take most of the available nectar and pollen, leaving little for wild bees, and they may also spread diseases to them. In some cities, critics argue, the number of hives has already grown beyond what the local flowers can support.",
+      "Critics also raise practical concerns. Bees can sting, and although serious reactions are rare, some residents worry about the safety of children and of people with allergies. Hives that are not properly cared for may become crowded, leading bees to swarm and settle in unwanted places such as chimneys or walls. Critics further suggest that keeping bees has become fashionable, and that some people take it up without the knowledge or the time required to manage hives responsibly.",
+      "Some cities have responded by introducing rules for beekeepers. They may require hives to be registered, so that officials know how many there are in each area, and they may ask new beekeepers to take a course before they begin. Some experts have suggested that people who wish to help bees should do so not by adding more hives but by planting a variety of flowers and leaving parts of gardens and parks wild, which would benefit honeybees and wild bees alike.",
+      "The debate over city beekeeping therefore reflects a wider question about how human beings should try to help nature. Actions that seem obviously good may have consequences that are not immediately visible, and helping one species may sometimes harm another. Before taking such steps, it may be wise to ask not only whether they make us feel closer to nature, but also whether they truly serve the needs of the living things that we hope to protect, and of the wider web of life to which those creatures belong.",
+    ],
+    ja: [
+      '近年、大都市でハチを飼いはじめる人がふえている。いまでは巣箱は、会社のビルやホテル、学校の屋上、小さな裏庭、さらにはアパートのベランダにさえ見られる。支持する人々はこの流れを、都市に自然をよびもどし、世界の多くの地域で数がへっている昆虫を助ける、歓迎すべき方法と見なしている。しかし、都市での養蜂が急速に広まっていることが、見かけほど有益なのかどうかを問いはじめた人々もおり、議論には科学者や市の職員、ふつうの住民も加わっている。',
+      '都市での養蜂を支持する人々は、まず、それはハチが深刻な危険に直面している時期にハチを守る助けになると主張する。いなかでは、農場での薬品の使用や野の花がへったことで、多くの昆虫がくらしにくくなっている。それに対して都市には、公園や庭、通りぞいにおどろくほどさまざまな植物があることが多く、研究によっては、都市で飼われるハチは、大きな農場が広がる地域で飼われるハチよりも健康で、多くのはちみつをつくることがあるという。したがって支持する人々にとって、都市はハチにとって一種のにげ場になりうるのである。',
+      '支持する人々はまた、ハチを飼うことの教育的・社会的な価値も強調する。学校の屋上の巣箱によって、子どもたちは昆虫の一生や受粉の大切さについて学ぶことができ、地域の取り組みは、そうでなければ出会うことのなかった近所の人々を結びつける。養蜂を始めた多くの人は、それによってまわりの見方が変わり、季節や、近所でさく花や、人間の活動と自然界とのつながりに、より気づくようになったと語っている。',
+      'しかし批判する人々は、巣箱で飼われるハチはふつうミツバチであり、それは多くの種類のハチのひとつにすぎないと指摘する。ミツバチは都市の巣箱から利益を得るかもしれないが、ある種の植物の受粉にとってはしばしばより大切な多くの野生のハチが、その結果苦しむかもしれない。せまい地域にあまりにも多くの巣箱が置かれると、ミツバチが手に入る花のみつや花粉のほとんどをとってしまい、野生のハチにはほとんど残らず、さらに野生のハチに病気をうつすこともある。都市によっては、巣箱の数がすでに地元の花がささえられる数をこえていると批判する人々は主張する。',
+      '批判する人々はまた、実際的な心配もあげる。ハチはさすことがあり、重い反応はまれではあるが、子どもやアレルギーのある人の安全を心配する住民もいる。きちんと世話をされない巣箱は混み合うことがあり、そうなるとハチは分かれて飛び立ち、えんとつやかべの中のような望まれない場所にすみつくことがある。批判する人々はさらに、ハチを飼うことは流行になっており、巣箱を責任をもって管理するのに必要な知識や時間がないまま始める人もいると考えている。',
+      'これに対して、養蜂をする人のための決まりを取り入れた都市もある。各地域にどれだけの巣箱があるかを職員が知れるよう、巣箱の登録を求めたり、新しく始める人に、始める前に講習を受けるよう求めたりするのである。ハチを助けたい人は、巣箱をふやすことによってではなく、さまざまな花を植え、庭や公園の一部を自然のまま残すことによってそうすべきだと提案する専門家もいる。そうすれば、ミツバチにも野生のハチにも同じように利益があるだろう。',
+      'したがって、都市での養蜂をめぐる議論は、人間がどのように自然を助けようとすべきかという、より広い問いを映し出している。明らかによいことに思える行動が、すぐには見えない結果をもたらすことがあり、ある種を助けることが、ときに別の種を害することもある。そうした手段をとる前に、それが私たちを自然に近づけたと感じさせるかどうかだけでなく、私たちが守りたいと願う生きものと、その生きものが属するより広い生命の網の必要を本当にみたしているかどうかを問うことが、かしこいのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「ミツバチは利益を得るかもしれないが、野生のハチは苦しむかもしれない」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say city beekeeping protects bees and has educational and social ( 1 ). Critics argue that too many honeybee hives may harm ( 2 ) bees by taking most of the nectar and spreading diseases. Some experts suggest that people should plant a variety of ( 3 ) instead of adding more hives.',
+      blanks: [
+        { choices: ['value', 'danger', 'noise', 'cost'], answer: 0, why: '第3段落 the educational and social value of keeping bees。' },
+        { choices: ['wild', 'tame', 'sick', 'young'], answer: 0, why: '第4段落 leaving little for wild bees。' },
+        { choices: ['flowers', 'trees', 'crops', 'grasses'], answer: 0, why: '第6段落 by planting a variety of flowers。' },
+      ],
+    },
+    tf: [
+      { statement: '都市で飼われるハチは、大きな農場の地域のハチより健康なことがあるという研究がある。', answer: true, why: '第2段落 bees kept in cities can be healthier。' },
+      { statement: '支持する人々によると、養蜂を始めても、まわりの見方は何も変わらない。', answer: false, why: '第3段落 it changes the way they see their surroundings。' },
+      { statement: '巣箱で飼われるハチは、ふつうミツバチである。', answer: true, why: '第4段落 the bees kept in hives are usually honeybees。' },
+      { statement: 'どの都市も、巣箱の登録を求めていない。', answer: false, why: '第6段落 They may require hives to be registered。' },
+    ],
+    qa: [
+      { q: 'What may happen when hives are not properly cared for?', choices: ['Bees may swarm and settle in unwanted places.', 'Bees may stop making honey forever.', 'Flowers may grow faster.', 'Wild bees may move into the hives.'], answer: 0, why: '第5段落 leading bees to swarm and settle in unwanted places。' },
+      { q: 'What do some cities ask new beekeepers to do before they begin?', choices: ['Take a course.', 'Buy more hives.', 'Move to the countryside.', 'Sell their honey.'], answer: 0, why: '第6段落 ask new beekeepers to take a course before they begin。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
