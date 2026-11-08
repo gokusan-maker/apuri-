@@ -45742,6 +45742,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-bowls',
+    title: 'On Bowls',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the objects in a kitchen, the bowl may be the most ancient and the most universal. Its shape is simple, a curved hollow that can hold food or water without spilling, and it is found in almost every culture on earth. We use bowls so often, for breakfast cereal, soup, rice, or salad, that we rarely notice them at all. Yet the humble bowl has accompanied human beings for many thousands of years, and its history reveals much about how people have lived, eaten, and shared their lives with one another.",
+      "The first bowls were probably natural objects, such as shells, hollowed gourds, or the cupped palms of human hands. Later, people learned to carve bowls from wood and stone, and eventually to shape them from clay and harden them in fire. The invention of pottery was one of the great turning points in human history, since it allowed people to store, cook, and carry food in new ways, and fragments of ancient bowls are among the most common objects that archaeologists find when they study early settlements. In this sense, the bowl may tell us more about ordinary life in the past than many grand monuments do.",
+      "Because bowls were so widely used, they have become an important source of knowledge about the past. ( A ) a broken piece of pottery may seem worthless, it can reveal when it was made, what techniques were used, and sometimes even what food it once contained, since traces of oil, grain, or milk may survive in the clay for thousands of years. By comparing the styles of bowls found in different places, archaeologists can also trace the movements of peoples and the spread of ideas across great distances.",
+      "The bowl also reflects differences in the way people eat. In some cultures, meals are served on flat plates and eaten with knives and forks, while in others most food is eaten from bowls held close to the mouth, often with chopsticks or spoons. Such differences are connected with the kinds of food people eat, the tools they use, and the customs that govern behavior at the table, so that the simple choice between a plate and a bowl can say a great deal about a whole way of life.",
+      "In many traditions, the bowl carries meanings beyond its practical use. A bowl offered to a guest may express welcome and respect, and the act of sharing food from a common bowl can be a powerful sign of trust and belonging. In some religious traditions, a simple bowl has been used to receive offerings of food, symbolizing a life of humility and dependence on the generosity of others. The emptiness of the bowl, which allows it to be filled, has also been taken as an image of openness.",
+      "The making of bowls has also become an art in its own right. Skilled potters and woodworkers may spend years learning to shape a bowl that is both beautiful and comfortable to hold, and some bowls are valued far more highly as works of art than as tools for eating. In certain traditions, bowls with small imperfections, such as uneven edges or cracks that have been carefully repaired, are especially admired, since they are thought to show the marks of time and use.",
+      "Perhaps, then, the bowl deserves more thought than we usually give it. It has helped human beings to survive, preserved traces of their past, reflected the variety of their customs, and inspired works of great beauty. When we hold a bowl of warm soup on a cold evening, we take part in one of the oldest experiences of human life, and we may be reminded that even the simplest objects can hold far more than they appear to contain.",
+    ],
+    ja: [
+      '台所にあるすべてのものの中で、おわんはもっとも古く、もっとも世界中に広まったものかもしれない。その形は単純で、食べ物や水をこぼさずに入れられる曲がったくぼみであり、地球上のほとんどすべての文化に見られる。私たちは朝食のシリアルやスープ、ごはん、サラダのためにあまりにもよくおわんを使うので、それに気づくことはほとんどない。しかしこのつつましいおわんは何千年ものあいだ人間とともにあり、その歴史は、人々がどのようにくらし、食べ、たがいに生活を分かち合ってきたかについて多くを明らかにしてくれる。',
+      '最初のおわんは、おそらく貝がらや、中をくりぬいたひょうたん、人間の手のひらをまるめたものなど、自然のものだっただろう。のちに人々は木や石をけずっておわんをつくることを覚え、やがて粘土で形をつくり、火でかためることを覚えた。土器の発明は人間の歴史の大きな転換点のひとつだった。それによって人々は新しいやり方で食べ物をたくわえ、料理し、運べるようになったからである。そして古代のおわんのかけらは、考古学者が初期の集落を調べるときに見つける、もっともありふれたもののひとつである。この意味で、おわんは、多くの壮大な記念碑よりも、過去のふつうの生活について多くを教えてくれるのかもしれない。',
+      'おわんはとても広く使われていたので、過去についての知識の大切な源になってきた。こわれた土器のかけらは値打ちがないように思えるかもしれないが、それがいつつくられたか、どんな技術が使われたか、そしてときにはかつて何の食べ物が入っていたかさえも明らかにすることがある。あぶらや穀物、乳の跡が、何千年も粘土の中に残っていることがあるからである。さまざまな場所で見つかったおわんのつくり方をくらべることで、考古学者は人々の移動や、遠くはなれた土地への考えの広がりをたどることもできる。',
+      'おわんはまた、人々の食べ方のちがいも映し出している。食事が平らな皿で出され、ナイフとフォークで食べられる文化もあれば、ほとんどの食べ物を口の近くにもったおわんから、しばしばはしやスプーンで食べる文化もある。そうしたちがいは、人々が食べるものの種類や使う道具、食卓でのふるまいを決める習慣と結びついており、そのため皿かおわんかという単純な選択が、生活のしかた全体について多くを語りうるのである。',
+      '多くの伝統で、おわんは実用をこえた意味をになっている。客にさし出されるおわんは歓迎と敬意を表すことがあり、ひとつのおわんから食べ物を分け合う行為は、信頼と仲間であることの力強いしるしになりうる。いくつかの宗教の伝統では、食べ物のささげものを受けとるのに簡素なおわんが使われ、それはけんきょで、ほかの人々の気前のよさにたよる生活を表してきた。また、おわんのからっぽさは、それがみたされることを可能にするものであり、心を開いていることのイメージとも受けとられてきた。',
+      'おわんをつくることは、それ自体がひとつの芸術にもなっている。腕のよい陶工や木工の職人は、美しく、しかも手にもちやすいおわんをつくれるようになるまでに何年も学ぶことがあり、食べるための道具としてよりも芸術作品として、ずっと高く評価されるおわんもある。ある種の伝統では、ふちがでこぼこしていたり、ていねいに直されたひびがあったりする、小さな不完全さをもつおわんがとくにたたえられる。それが時と使用の跡を示していると考えられるからである。',
+      'だとすれば、おわんは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは人間が生きのびるのを助け、過去の跡をとどめ、習慣の多様さを映し出し、たいへん美しい作品を生み出すきっかけとなってきた。寒い夕方にあたたかいスープの入ったおわんを手にもつとき、私たちは人間の生活のもっとも古い経験のひとつに加わっているのであり、どんなに単純なものでも、見かけよりはるかに多くのものを入れることができるのだと思い出させられるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「土器のかけらは値打ちがないように思えるかもしれないが、多くを明らかにする」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '最初のおわんは、おそらく貝がらなどの自然のものだっただろう。', answer: true, why: '第2段落 The first bowls were probably natural objects。' },
+      { statement: '土器のかけらに、食べ物の跡が残ることはけっしてない。', answer: false, why: '第3段落 traces of oil, grain, or milk may survive in the clay。' },
+      { statement: 'ひとつのおわんから食べ物を分け合うことは、信頼のしるしになりうる。', answer: true, why: '第5段落 a powerful sign of trust and belonging。' },
+      { statement: '筆者によると、不完全なおわんはどの伝統でもきらわれる。', answer: false, why: '第6段落 bowls with small imperfections ... are especially admired。' },
+    ],
+    qa: [
+      { q: 'Why was the invention of pottery a great turning point?', choices: ['It allowed people to store, cook, and carry food in new ways.', 'It made food taste better.', 'It replaced the use of fire.', 'It ended the need for farming.'], answer: 0, why: '第2段落 allowed people to store, cook, and carry food in new ways。' },
+      { q: 'What can the choice between a plate and a bowl say a great deal about?', choices: ['A whole way of life.', 'The price of food.', 'The size of a kitchen.', 'The weather of a region.'], answer: 0, why: '第4段落 can say a great deal about a whole way of life。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
