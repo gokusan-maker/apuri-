@@ -22,6 +22,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test-setup.ts'],
-    testTimeout: 60000, // App 全体のテストや、270体以上のキャラ図鑑を描くテストは重いので余裕をもたせる
+    testTimeout: 180000, // App 全体のテストや、490体以上のキャラ図鑑を描くテストは重いので余裕をもたせる
   },
 })
