@@ -3536,3 +3536,10 @@ it('誤文訂正〈249〉：東大レベル result in・result from・lead to �
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('resulted in')
 })
+
+it('正誤問題〈256〉：京大レベル be likely to・be sure to・be about to の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-likely-sure')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) raining')
+})

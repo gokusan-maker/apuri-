@@ -6133,6 +6133,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) The jury (B) was made up (C) of (D) twelve ordinary citizen.', choices: ['(A) The jury', '(B) was made up', '(C) of', '(D) twelve ordinary citizen'], answer: 3, why: 'twelve のあとは複数なので citizens。' },
     ],
   },
+  {
+    id: 'exam-error-likely-sure',
+    title: '入試の正誤問題〈256〉（京大レベル：英作文の be likely to・be sure to・be about to）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be likely to do（～しそうだ）・be sure to do（きっと～する）・be about to do（まさに～しようとしている）は、どれも to のあとが動詞の原形。',
+      '「～ということは確かだ」は It is certain that ～ で、It is sure that とは言わない。likely は It is likely that ～ も He is likely to ～ も使えるが、He is likely that とは言わない。',
+    ],
+    examples: [
+      { en: 'It is likely to rain. / He is sure to come. / The train is about to leave.', ja: '雨がふりそうだ。／彼はきっと来る。／電車がまさに出るところだ。' },
+      { en: 'It is certain that he will come.', ja: '彼が来ることは確かだ。' },
+    ],
+    questions: [
+      { sentence: '(A) It (B) is likely (C) raining (D) this afternoon.', choices: ['(A) It', '(B) is likely', '(C) raining', '(D) this afternoon'], answer: 2, why: 'be likely to do で「～しそうだ」。likely to rain。' },
+      { sentence: '(A) She (B) is sure (C) passing (D) the exam next week.', choices: ['(A) She', '(B) is sure', '(C) passing', '(D) the exam next week'], answer: 2, why: 'be sure to do で「きっと～する」。sure to pass。' },
+      { sentence: '(A) The train (B) is about (C) leave, (D) so we must hurry.', choices: ['(A) The train', '(B) is about', '(C) leave,', '(D) so we must hurry'], answer: 2, why: 'be about to do で「まさに～しようとしている」。about to leave。' },
+      { sentence: '(A) It (B) is sure (C) that he (D) will come to the party.', choices: ['(A) It', '(B) is sure', '(C) that he', '(D) will come to the party'], answer: 1, why: '「～ということは確かだ」は It is certain that ～。It is sure that とは言わない（He is sure to come は可）。' },
+      { sentence: '(A) We (B) were about (C) to going (D) out when it began to rain.', choices: ['(A) We', '(B) were about', '(C) to going', '(D) out when it began to rain'], answer: 2, why: 'be about to のあとは動詞の原形。about to go。' },
+      { sentence: '(A) Prices (B) are likely (C) to rise (D) sharp next year.', choices: ['(A) Prices', '(B) are likely', '(C) to rise', '(D) sharp next year'], answer: 3, why: '動詞 rise を修飾するので副詞 sharply。' },
+      { sentence: '(A) Be sure (B) to lock (C) the door (D) when you will leave.', choices: ['(A) Be sure', '(B) to lock', '(C) the door', '(D) when you will leave'], answer: 3, why: '時の副詞節の中は現在形。when you leave。' },
+      { sentence: '(A) He (B) is likely (C) that he will (D) win the race.', choices: ['(A) He', '(B) is likely', '(C) that he will', '(D) win the race'], answer: 2, why: '人が主語なら He is likely to win。It is likely that he will win とも言う。' },
+      { sentence: '(A) Many (B) people (C) is likely to (D) come to the festival.', choices: ['(A) Many', '(B) people', '(C) is likely to', '(D) come to the festival'], answer: 2, why: '主語 people は複数なので are likely to。' },
+      { sentence: '(A) Be (B) about to leave, (C) she (D) heard the phone ring.', choices: ['(A) Be', '(B) about to leave,', '(C) she', '(D) heard the phone ring'], answer: 0, why: '分詞構文なので Being about to leave。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

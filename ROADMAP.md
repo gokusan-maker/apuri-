@@ -1342,7 +1342,7 @@
   - [x] 503 誤文訂正〈248〉（国公立レベル：英作文の succeed in ～ing・manage to do・fail to do）10問
   - [x] 504 正誤問題〈255〉（京大レベル：英作文の consist of・be made up of・be composed of）10問
   - [x] 505 誤文訂正〈249〉（東大レベル：英作文の result in・result from・lead to）10問
-  - [ ] 506 正誤問題〈256〉（京大レベル：英作文の be likely to・be sure to・be about to）10問
+  - [x] 506 正誤問題〈256〉（京大レベル：英作文の be likely to・be sure to・be about to）10問
   - [ ] 507 誤文訂正〈250〉（国公立レベル：英作文の take part in・participate in・join）10問
   - [ ] 508 正誤問題〈257〉（東大レベル：英作文の contribute to・object to ～ing・be opposed to）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
