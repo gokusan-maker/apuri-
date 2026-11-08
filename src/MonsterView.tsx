@@ -3921,6 +3921,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M47 56 v4 M53 56 v4" stroke="#fafaf9" strokeWidth="1.5" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pronghorn')
+    return (
+      <g>
+        {/* 前にでっぱりのあるツノ */}
+        <path d="M42 28 v-10 l-3 3 M58 28 v-10 l3 3" stroke="#1c1917" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
