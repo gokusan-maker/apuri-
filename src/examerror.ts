@@ -11031,6 +11031,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'If the computer [break down] again, call the repair shop.', choices: ['breaks down', 'will break down to', 'broken down', 'break downs'], answer: 0, why: '条件を表す if 節は現在形。主語は単数なので breaks down。' },
     ],
   },
+  {
+    id: 'exam-fix-259',
+    title: '入試の誤文訂正〈259〉（京大レベル：英作文の set up・set off・set out）',
+    points: ['set up ～ は「～を設立する・準備する・組み立てる」、set off は「出発する」（＋～ で「（警報など）を鳴らす」）、set out は「出発する」「（set out to do で）～しようとし始める」。', '「出発する」の意味の set off／set out は自動詞的に使い、for ～（～に向かって）を続ける（set off for Kyoto）。目的語が代名詞なら set it up の語順。'],
+    examples: [{ en: 'She set up her own company. / We set off for the mountains at dawn. / He set out to write a novel.', ja: '彼女は自分の会社を立ち上げた。／私たちは夜明けに山へ向けて出発した。／彼は小説を書こうと取りかかった。' }],
+    questions: [
+      { sentence: 'My uncle [set off] his own company last year.', choices: ['set up', 'set out', 'set in', 'set by'], answer: 0, why: '「（会社）を設立する」は set up。' },
+      { sentence: 'We [set up for] the station early in the morning.', choices: ['set off for', 'set up to', 'set in for', 'set on at'], answer: 0, why: '「～に向けて出発する」は set off for ～。' },
+      { sentence: 'The tent was heavy, but we [set up it] in ten minutes.', choices: ['set it up', 'set up to it', 'set it off', 'up set it'], answer: 0, why: '代名詞の目的語は動詞と副詞のあいだ。set it up。' },
+      { sentence: 'She set out [becoming] a doctor when she was young.', choices: ['to become', 'become', 'became', 'for becoming of'], answer: 0, why: '「～しようとし始める」は set out to do。' },
+      { sentence: 'Smoke from the kitchen [set up] the fire alarm.', choices: ['set off', 'set out', 'set down', 'set in'], answer: 0, why: '「（警報）を鳴らす」は set off。' },
+      { sentence: 'The explorers [set out to] a long journey across the desert.', choices: ['set out on', 'set out for to', 'set up on', 'set off to on'], answer: 0, why: '「（旅）に出発する」は set out on a journey。' },
+      { sentence: 'A new committee was [set off] to deal with the problem.', choices: ['set up', 'set out to', 'setting up', 'set in'], answer: 0, why: '「（組織）が設けられる」は be set up。' },
+      { sentence: 'They [sat off] for London after breakfast.', choices: ['set off', 'setted off', 'sit off', 'sat out'], answer: 0, why: 'set の過去形は set のまま。sat は sit の過去形。' },
+      { sentence: 'Before [set] off, check the weather forecast.', choices: ['setting', 'to set', 'sets', 'have set'], answer: 0, why: '前置詞 before のあとは動名詞なので setting。' },
+      { sentence: 'The volunteers [set the chairs up them] for the concert.', choices: ['set up the chairs', 'set the chairs off', 'set out them the chairs', 'set them the chairs up'], answer: 0, why: '名詞の目的語が1つあれば them は不要。set up the chairs（set the chairs up も可）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
