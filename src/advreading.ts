@@ -44898,6 +44898,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-keeping-score',
+    title: 'Should Children’s Sports Keep Score?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, sports leagues for young children have begun to change their rules in a way that would have surprised earlier generations. In some football and baseball leagues for children under a certain age, nobody keeps the score, no winners or losers are announced, and every player receives the same small prize at the end of the season. Supporters see these changes as a sensible way of protecting young children, while critics regard them as a mistake, and the debate has spread from sports fields to schools and homes.",
+      "Supporters of not keeping score argue first that the main purpose of sport for young children should be enjoyment and the development of basic skills. When the score becomes the center of attention, they say, coaches may give most of the playing time to the strongest children, and weaker or younger players may spend whole matches waiting on the bench. Without a score, every child is more likely to be given a fair chance to play, to make mistakes, and to improve at his or her own pace.",
+      "Supporters also point to the pressure that competition can place on children. Some parents shout at referees or at their own children from the side of the field, and some children feel that they have let their families down when their team loses. Many young players give up sport altogether before they reach their teenage years, and supporters suggest that an early emphasis on winning may be one of the reasons. Removing the score, in their view, allows children to discover the pleasure of sport before they face its pressures.",
+      "Critics, however, argue that the attempt to remove competition from children's sport is unrealistic and may even be harmful. ( A ) adults may stop keeping the score, children themselves usually know exactly who is winning, and they may find the pretense that there is no winner confusing or even dishonest. Critics also note that children quickly lose interest in a game in which nothing seems to be at stake, and that the excitement of trying to win is part of what makes sport enjoyable in the first place.",
+      "Critics further argue that learning to lose is an important part of growing up. Life outside sport is full of situations in which people succeed or fail, and children who never experience defeat in a safe setting may find it harder to deal with disappointment later. A match lost on a Saturday morning, they suggest, is a relatively gentle way of learning that effort does not always lead to success, and that it is possible to accept defeat, recover, and try again.",
+      "Some leagues have tried to find a compromise. In these leagues, scores are kept but not recorded in league tables, so that each match has a winner but no team is ranked at the bottom of a list at the end of the season. Others require every child to play for a minimum amount of time in each match, whatever the score, and ask parents to agree to a code of behavior before their children join. Organizers of such leagues report that both children and parents generally seem to enjoy matches more under these rules.",
+      "The debate over keeping score therefore reflects a deeper question about what children's sport is for. If its main aim is to discover and develop talented players, competition from an early age may seem natural. If, on the other hand, its main aim is to help as many children as possible enjoy physical activity for the rest of their lives, the adults who organize it may need to think carefully about how much weight they place on winning, and about what lessons children actually learn from the games they play.",
+    ],
+    ja: [
+      '多くの国で、幼い子どものためのスポーツリーグが、前の世代ならおどろいたであろう形でルールを変えはじめている。一定の年齢より下の子どものサッカーや野球のリーグのなかには、だれも得点をつけず、勝ち負けも発表されず、シーズンの終わりにすべての選手が同じ小さな賞をもらうところがある。支持する人々はこうした変化を幼い子どもを守るかしこい方法と見なし、批判する人々はまちがいと見なしており、議論は競技場から学校や家庭にまで広がっている。',
+      '得点をつけないことを支持する人々は、まず、幼い子どもにとってのスポーツのおもな目的は、楽しむことと基本的な技術をのばすことであるべきだと主張する。得点が注目の中心になると、コーチは出場時間のほとんどをもっとも強い子どもたちにあたえ、弱い子や年下の選手は試合のあいだずっとベンチで待つことになるかもしれないと彼らは言う。得点がなければ、どの子どもにも、プレーし、まちがい、自分のペースで上達する公平な機会があたえられやすくなる。',
+      '支持する人々はまた、競争が子どもにあたえうる重圧を指摘する。競技場のわきから審判や自分の子どもにどなる親もいるし、チームが負けると家族の期待をうらぎったと感じる子どももいる。多くの若い選手は10代になる前にスポーツをすっかりやめてしまい、早い時期から勝つことを重んじることがその理由のひとつかもしれないと支持する人々は考える。彼らの考えでは、得点をなくすことで、子どもはスポーツの重圧に直面する前に、その楽しさを見つけられるのである。',
+      'しかし批判する人々は、子どものスポーツから競争を取りのぞこうとする試みは現実的でなく、害になることさえあると主張する。大人が得点をつけるのをやめても、子どもたち自身はたいていだれが勝っているかを正確に知っており、勝者がいないふりをすることを、わかりにくい、あるいは不正直だとさえ感じるかもしれない。批判する人々はまた、何もかかっていないように思える試合には子どもはすぐに興味を失うこと、そして勝とうとする興奮こそがそもそもスポーツを楽しくしているものの一部であることも指摘する。',
+      '批判する人々はさらに、負けることを学ぶのは成長の大切な一部だと主張する。スポーツの外の生活は人が成功したり失敗したりする場面でいっぱいであり、安全な場で一度も負けを経験しない子どもは、のちに失望に向き合うのがよりむずかしくなるかもしれない。土曜日の朝に負けた試合は、努力がいつも成功につながるわけではないこと、そして負けを受け入れ、立ち直り、もう一度やってみることができるということを学ぶ、比較的おだやかな方法なのだと彼らは言う。',
+      '折り合いをつけようとしてきたリーグもある。そうしたリーグでは、得点はつけるがリーグの順位表には記録しないので、それぞれの試合には勝者がいても、シーズンの終わりに表のいちばん下に順位づけされるチームはない。また、得点にかかわらず、すべての子どもが試合ごとに最低限の時間プレーすることを求め、子どもが入る前に親に行動の決まりに同意してもらうリーグもある。そうしたリーグの運営者は、こうした決まりのもとでは子どもも親もおおむね試合をより楽しんでいるようだと報告している。',
+      'したがって、得点をつけるかどうかをめぐる議論は、子どものスポーツは何のためにあるのかという、より深い問いを映し出している。そのおもな目的が才能ある選手を見つけてのばすことなら、早い年齢からの競争は自然に思えるかもしれない。一方、そのおもな目的ができるだけ多くの子どもが一生体を動かすことを楽しめるよう助けることなら、それを運営する大人たちは、勝つことにどれだけ重きを置くか、そして子どもたちが自分のする試合から実際にどんな教訓を学ぶのかを、注意深く考える必要があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「大人が得点をつけるのをやめても、子どもはだれが勝っているか知っている」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say that without a score every child gets a fair chance to play and that early competition puts ( 1 ) on children. Critics argue that children know who is winning anyway and that learning to ( 2 ) is part of growing up. Some leagues keep scores but do not record them in league ( 3 ).',
+      blanks: [
+        { choices: ['pressure', 'money', 'weight', 'light'], answer: 0, why: '第3段落 the pressure that competition can place on children。' },
+        { choices: ['lose', 'cook', 'swim', 'draw'], answer: 0, why: '第5段落 learning to lose is an important part of growing up。' },
+        { choices: ['tables', 'books', 'songs', 'buildings'], answer: 0, why: '第6段落 scores are kept but not recorded in league tables。' },
+      ],
+    },
+    tf: [
+      { statement: '得点をつけないリーグでは、すべての選手がシーズンの終わりに同じ小さな賞をもらうことがある。', answer: true, why: '第1段落 every player receives the same small prize。' },
+      { statement: '支持する人々によると、得点が中心になると弱い選手の出場時間がふえる。', answer: false, why: '第2段落 weaker or younger players may spend whole matches waiting on the bench。' },
+      { statement: '批判する人々によると、子どもたちはたいていだれが勝っているかを知っている。', answer: true, why: '第4段落 children themselves usually know exactly who is winning。' },
+      { statement: '折り合いをつけたリーグの運営者は、親が試合を楽しまなくなったと報告している。', answer: false, why: '第6段落 both children and parents generally seem to enjoy matches more。' },
+    ],
+    qa: [
+      { q: 'What do many young players do before reaching their teenage years?', choices: ['Give up sport altogether.', 'Become professional players.', 'Start coaching others.', 'Join several teams.'], answer: 0, why: '第3段落 Many young players give up sport altogether before they reach their teenage years。' },
+      { q: 'What do some leagues ask parents to agree to?', choices: ['A code of behavior.', 'A higher fee.', 'More practice time.', 'A new uniform.'], answer: 0, why: '第6段落 ask parents to agree to a code of behavior。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
