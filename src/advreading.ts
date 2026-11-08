@@ -44578,6 +44578,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tattoos',
+    title: 'Should Visible Tattoos Be Accepted at Work?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, tattoos have moved from the margins of society into the mainstream. Where they were once associated mainly with sailors, soldiers, or particular groups, they are now common among young people, office workers, athletes, and artists, and many regard them as a form of personal expression. Yet some employers still require staff to cover tattoos at work or refuse to hire people whose tattoos are visible, and some public baths and gyms do not admit customers with tattoos. The question of whether such rules are fair has become the subject of growing debate.",
+      "Supporters of allowing visible tattoos argue that people should be judged by their abilities and conduct rather than their appearance. A tattoo, they point out, says nothing about whether a person is honest, hardworking, or skilled, and refusing to employ someone because of one may exclude capable workers for no good reason. Supporters also emphasize that for many people tattoos have deep personal meaning, commemorating loved ones, important experiences, or cultural heritage, so that asking them to hide their tattoos may feel like asking them to hide part of who they are.",
+      "Supporters also note that attitudes are changing rapidly. As tattoos become more common, customers are less likely to be surprised or offended by them, and businesses that insist on strict rules may find it harder to attract young employees. ( A ) some older customers may still hold negative views, supporters argue, companies that welcome diversity in appearance are often seen as more modern and open, which may benefit their reputation. In several industries, such as design, music, and hospitality, visible tattoos have already become so common that few customers even notice them.",
+      "Critics, however, argue that employers have a legitimate interest in how their staff present themselves to the public. Many businesses ask workers to follow dress codes, wear uniforms, or avoid certain hairstyles and jewelry, and critics see rules about tattoos as part of the same tradition. They point out that in some professions, such as banking or law, customers may expect a particular image of seriousness, and that a business should be free to decide what image it wishes to present. Some also argue that workers who accept a job know its rules in advance and are free to look for employment elsewhere if they disagree with them.",
+      "Critics also emphasize that the meaning of tattoos varies between cultures. In some societies, tattoos have long been associated with criminal groups, and customers who share this association may feel uncomfortable, even if the person with the tattoo has no such connection. Critics argue that businesses serving a broad public, such as hotels and public baths, must consider the feelings of all their customers, and that it may be unrealistic to expect such long-standing associations to disappear overnight.",
+      "In response, many organizations have adopted more flexible approaches. Some allow visible tattoos as long as they are not offensive, while others ask staff to cover tattoos only in particular situations, such as meetings with important clients. Some public baths have begun to admit visitors with small tattoos or to provide stickers that can be used to cover them, and a number of tourist areas have encouraged facilities to welcome foreign visitors, for whom tattoos often carry no negative meaning at all. Such compromises suggest that the question need not be settled by a single rule applied everywhere.",
+      "The debate over tattoos ultimately reflects a broader question about how societies balance individual expression with shared expectations. Appearance has always carried social meanings, and those meanings change over time and differ from place to place. Deciding how far workplaces and public facilities should accommodate personal styles requires respecting the freedom of individuals to express themselves, while also recognizing that changes in social attitudes often happen gradually and through mutual understanding rather than through rules alone.",
+    ],
+    ja: [
+      '多くの国で、いれずみは社会のはしから主流へと移ってきた。かつてはおもに船乗りや兵士、特定の集団と結びつけられていたが、いまでは若者や会社員、スポーツ選手、芸術家のあいだでふつうに見られ、多くの人がそれを自己表現の一つの形と考えている。しかし一部の雇い主はいまも、職場でいれずみをかくすよう従業員に求めたり、いれずみが見える人をやとうのをことわったりしており、いれずみのある客を入れない公衆浴場やジムもある。そうした決まりが公平かどうかという問いは、ますます議論の対象になっている。',
+      '見えるいれずみを認めることを支持する人々は、人は見た目ではなく能力やふるまいで判断されるべきだと主張する。いれずみは、その人が正直か、まじめか、腕があるかについて何も語らず、それを理由にだれかをやとうのをことわれば、正当な理由なく有能な働き手をしめ出すことになりかねない、と彼らは指摘する。支持する人々はまた、多くの人にとっていれずみは深い個人的な意味をもっており、愛する人や大切な経験、文化の伝統を記念するものであることを強調する。そのため、いれずみをかくすよう求めることは、その人の一部をかくすよう求めるように感じられるかもしれないのである。',
+      '支持する人々はまた、考え方が急速に変わっていることにも注目する。いれずみがふつうになるにつれて、客がそれにおどろいたり気分を害したりすることは少なくなり、厳しい決まりにこだわる会社は、若い従業員を集めにくくなるかもしれない。一部の年配の客はいまも否定的な見方をもっているかもしれないが、見た目の多様性を歓迎する会社は、より現代的で開かれていると見られることが多く、それが評判の役に立つかもしれない、と支持者は主張する。デザインや音楽、接客などいくつかの業界では、見えるいれずみはすでにとてもふつうになっており、それに気づく客さえほとんどいない。',
+      'しかし批判する人々は、雇い主には従業員が人前にどう姿を見せるかについて正当な利益があると主張する。多くの会社は働き手に服装の決まりに従ったり、制服を着たり、特定の髪型やアクセサリーをさけたりするよう求めており、批判する人々はいれずみについての決まりも同じ伝統の一部と見なしている。銀行や法律のような職業では、客がまじめさという特定のイメージを期待しているかもしれず、会社はどのようなイメージを示したいかを自由に決めてよいはずだと彼らは指摘する。また、仕事を引き受ける働き手は前もってその決まりを知っており、それに反対なら自由にほかの職場をさがせると主張する人もいる。',
+      '批判する人々はまた、いれずみの意味が文化によってちがうことを強調する。社会によっては、いれずみは長いあいだ犯罪集団と結びつけられてきており、この結びつきを共有する客は、いれずみのある人にそうしたつながりがまったくなくても、落ちつかないと感じるかもしれない。ホテルや公衆浴場のように、はば広い人々にサービスする施設は、すべての客の気持ちを考えなければならず、そうした長く続いてきた結びつきが一晩で消えることを期待するのは現実的でないかもしれない、と批判する人々は主張する。',
+      'これに対して、多くの組織はより柔軟なやり方をとっている。不快なものでないかぎり見えるいれずみを認めるところもあれば、大切な取引先との打ち合わせのような特定の場面でだけいれずみをかくすよう従業員に求めるところもある。小さないれずみのある客を入れたり、それをかくすシールを用意したりしはじめた公衆浴場もあり、いれずみに否定的な意味がまったくないことも多い外国からの訪問者を歓迎するよう施設に促している観光地もいくつかある。そうした歩みよりは、この問いが、どこにでも当てはめられる一つの決まりで決着をつける必要はないことを示している。',
+      'いれずみをめぐる議論は、結局のところ、社会が個人の表現と共有された期待とのつりあいをどうとるのかという、より広い問いを反映している。見た目はいつも社会的な意味をになってきており、その意味は時とともに変わり、場所によってもちがう。職場や公共の施設が個人のスタイルをどこまで受け入れるべきかを決めるには、自分を表現する個人の自由を尊重すると同時に、社会の考え方の変化はしばしば決まりだけによってではなく、少しずつ、おたがいの理解を通じて起こることを認める必要がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「否定的な見方の年配の客もいるかもしれないが、多様性を歓迎する会社は現代的に見られる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say people should be judged by their abilities rather than their ( 1 ) and that attitudes toward tattoos are changing. Critics argue that employers may decide their public image and that tattoos carry different meanings in different ( 2 ). Some public baths now provide ( 3 ) to cover small tattoos.',
+      blanks: [
+        { choices: ['appearance', 'salary', 'education', 'height'], answer: 0, why: '第2段落 judged by their abilities and conduct rather than their appearance。' },
+        { choices: ['cultures', 'seasons', 'markets', 'sports'], answer: 0, why: '第5段落 the meaning of tattoos varies between cultures。' },
+        { choices: ['stickers', 'uniforms', 'umbrellas', 'tickets'], answer: 0, why: '第6段落 provide stickers that can be used to cover them。' },
+      ],
+    },
+    tf: [
+      { statement: 'いれずみは、いまでは多くの人々のあいだでふつうに見られる。', answer: true, why: '第1段落 they are now common among young people, office workers ...。' },
+      { statement: '支持する人々によると、いれずみはその人の正直さを示す。', answer: false, why: '第2段落 a tattoo says nothing about whether a person is honest。' },
+      { statement: '批判する人々は、いれずみの決まりを服装の決まりと同じ伝統の一部と見なしている。', answer: true, why: '第4段落 critics see rules about tattoos as part of the same tradition。' },
+      { statement: 'すべての公衆浴場が、いれずみのある客を一切入れていない。', answer: false, why: '第6段落 Some public baths have begun to admit visitors with small tattoos。' },
+    ],
+    qa: [
+      { q: 'What may businesses with strict rules find harder, according to supporters?', choices: ['Attracting young employees.', 'Selling products abroad.', 'Opening new shops.', 'Paying their taxes.'], answer: 0, why: '第3段落 may find it harder to attract young employees。' },
+      { q: 'For whom do tattoos often carry no negative meaning at all?', choices: ['Many foreign visitors.', 'Bank managers.', 'Older customers.', 'Hotel owners.'], answer: 0, why: '第6段落 foreign visitors, for whom tattoos often carry no negative meaning at all。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
