@@ -45022,6 +45022,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-shells',
+    title: 'On Shells',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Walking along a beach, few people can resist picking up a shell. There is something about these small, hard objects, with their curves, ridges, and delicate colors, that seems to invite us to hold them, turn them over, and carry them home. Yet a shell is, in a sense, a strange thing to treasure, since it is simply the empty house of a creature that has died or moved on. Our long fascination with shells may therefore tell us something about how human beings find meaning in the traces that living things leave behind.",
+      "For the animals that make them, shells are above all a means of survival. A snail or a clam builds its shell slowly, adding new material to the edge as it grows, so that the shell becomes a kind of record of its life. The rings and ridges on a shell can reveal periods of rapid growth and periods of difficulty, much as the rings of a tree do, and scientists have learned to read these patterns in order to understand how conditions in the sea have changed over time. A single shell, in other words, may hold a small history of the waters in which its maker lived.",
+      "Human beings have valued shells for thousands of years, and not only for their beauty. In many parts of the world, certain shells were once used as money, passed from hand to hand in exchange for food, tools, and other goods. ( A ) they had little practical use in themselves, these shells were durable, easy to carry, and difficult to obtain in large numbers, qualities that made them suitable for measuring value. The use of shells as money shows how a society can agree to treat a natural object as a symbol of worth.",
+      "Shells have also been used to decorate the body and to mark important moments in life. Necklaces, bracelets, and ornaments made of shells have been found in some of the oldest sites of human settlement, often far from the sea, which suggests that shells were traded over long distances. In some cultures, shells have been placed in graves or used in ceremonies, perhaps because their hardness and their survival after the death of the creature inside seemed to suggest something lasting.",
+      "The shape of shells has fascinated artists and mathematicians as well. Many shells grow in a spiral that keeps the same form as it becomes larger, a pattern that appears elsewhere in nature, in the arrangement of seeds in a flower or the curve of a storm seen from above. Architects and designers have borrowed this form, and the study of how shells grow has helped scientists to understand how simple rules can produce shapes of remarkable beauty and strength.",
+      "In recent years, however, the collecting of shells has come to raise concerns. On some popular beaches, visitors have taken so many shells that the natural balance of the shore has been affected, since empty shells provide shelter for small creatures and help to protect the sand from being washed away. In addition, the warming and changing chemistry of the oceans is making it harder for some animals to build their shells at all, so that the objects we have long taken for granted may become less common in the future.",
+      "Perhaps, then, the shell deserves a little more thought than we usually give it. It is at once a home, a record of growth, a form of money, a decoration, and a model of natural design. When we pick up a shell on the beach, we hold in our hand not only a beautiful object but also a small piece of the history of life on earth, and it may be worth asking whether that piece is better carried home or left where we found it.",
+    ],
+    ja: [
+      '浜辺を歩いていて、貝がらを拾わずにいられる人はほとんどいない。曲線やみぞ、繊細な色をもつこの小さくかたいものには、手にとり、ひっくり返し、家にもち帰るよう私たちをさそう何かがあるようだ。しかし貝がらは、ある意味では大切にするには奇妙なものである。それは死んでしまったか、どこかへ移っていった生きものの、からっぽの家にすぎないからである。したがって、私たちが貝がらに長く心をひかれてきたことは、人間が生きものの残した跡の中にどのように意味を見いだすかについて、何かを教えてくれるのかもしれない。',
+      '貝がらをつくる動物にとって、それは何よりも生きのびるための手段である。巻き貝や二枚貝は、成長するにつれてふちに新しい材料を加えながらゆっくりと貝がらを築くので、貝がらはその一生の一種の記録になる。貝がらの輪やみぞは、木の年輪と同じように、急速に成長した時期と苦しかった時期を明らかにすることがあり、科学者たちは、海の状態が時とともにどのように変わってきたかを理解するために、こうした模様を読みとることを学んできた。言いかえれば、たった1枚の貝がらが、それをつくった生きものがくらした海の小さな歴史をとどめているのかもしれない。',
+      '人間は何千年ものあいだ貝がらを大切にしてきたが、それは美しさのためだけではない。世界の多くの地域で、ある種の貝がらはかつてお金として使われ、食べ物や道具やその他の品物と引きかえに手から手へとわたされた。それ自体にはほとんど実用的な使い道がなかったが、こうした貝がらはじょうぶで、もち運びやすく、大量に手に入れるのがむずかしかった。そうした性質が、価値をはかるのに適していたのである。貝がらがお金として使われたことは、社会が自然のものを価値のシンボルとしてあつかうことに合意できることを示している。',
+      '貝がらはまた、体をかざったり、人生の大切な節目をしるしたりするのにも使われてきた。貝がらでつくられた首かざりやうでわ、かざりは、人間が住みついたもっとも古い遺跡のいくつかで見つかっており、しばしば海から遠くはなれた場所であることから、貝がらが長い距離をこえて取り引きされていたことがうかがえる。文化によっては、貝がらが墓に入れられたり儀式で使われたりしてきた。それはおそらく、そのかたさと、中の生きものが死んだあとも残ることが、何か長く続くものを思わせたからだろう。',
+      '貝がらの形は、芸術家や数学者の心もとらえてきた。多くの貝がらは、大きくなっても同じ形をたもつらせんをえがいて成長する。この模様は、花の種のならび方や、上空から見たあらしの曲線など、自然のほかの場所にもあらわれる。建築家やデザイナーはこの形を取り入れてきたし、貝がらがどのように成長するかを研究することは、単純な規則がおどろくほど美しくじょうぶな形を生み出しうることを科学者が理解する助けになってきた。',
+      'しかし近年、貝がらを集めることは心配を生むようになった。人気のある浜辺のなかには、訪れた人々があまりにも多くの貝がらをもち去ったために、海岸の自然のつりあいに影響が出たところもある。からっぽの貝がらは小さな生きもののかくれ家になり、砂が流されるのをふせぐ助けにもなっているからである。さらに、海があたたまり、その化学的な性質が変わってきていることで、一部の動物はそもそも貝がらをつくるのがむずかしくなっており、私たちが長いあいだ当たり前と思ってきたものが、将来はもっと少なくなるかもしれない。',
+      'だとすれば、貝がらは、私たちがふだん向けているよりも少しだけ多くの考察に値するのかもしれない。それは家であると同時に、成長の記録であり、お金の一形態であり、かざりであり、自然のデザインの手本でもある。浜辺で貝がらを拾うとき、私たちは手の中に、美しいものだけでなく、地球の生命の歴史の小さなかけらをもっているのであり、そのかけらは家にもち帰るより、見つけた場所に残しておくほうがよいのではないかと問うてみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「それ自体にはほとんど使い道がなかったが、じょうぶでもち運びやすかった」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '貝がらの輪やみぞから、急速に成長した時期がわかることがある。', answer: true, why: '第2段落 can reveal periods of rapid growth and periods of difficulty。' },
+      { statement: '貝がらのかざりは、いつも海の近くでしか見つかっていない。', answer: false, why: '第4段落 often far from the sea。' },
+      { statement: '多くの貝がらは、大きくなっても同じ形をたもつらせんをえがいて成長する。', answer: true, why: '第5段落 grow in a spiral that keeps the same form as it becomes larger。' },
+      { statement: '筆者によると、海の変化は貝がらをつくる動物に何の影響もない。', answer: false, why: '第6段落 making it harder for some animals to build their shells at all。' },
+    ],
+    qa: [
+      { q: 'Why were certain shells suitable for use as money?', choices: ['They were durable and difficult to obtain in large numbers.', 'They were very useful as tools.', 'They could be eaten.', 'They were found on every beach.'], answer: 0, why: '第3段落 durable, easy to carry, and difficult to obtain in large numbers。' },
+      { q: 'How do empty shells help the shore?', choices: ['They give shelter to small creatures.', 'They make the sea warmer.', 'They attract more visitors.', 'They make the sand softer.'], answer: 0, why: '第6段落 empty shells provide shelter for small creatures。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
