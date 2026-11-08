@@ -44782,6 +44782,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-umbrellas',
+    title: 'On Umbrellas',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of all the objects we carry, the umbrella may be the one we are most likely to lose. It is useful only when it rains, and as soon as the rain stops it becomes something awkward to hold, easily left behind on a train, in a shop, or at a friend's house. Lost property offices in large cities collect umbrellas by the thousands every year, and few of them are ever claimed. Yet this humble and forgettable object has a long history, and it reveals a good deal about how people have thought about protection, status, and the shared spaces of city life.",
+      "The earliest umbrellas seem to have been made not to keep off rain but to provide shade from the sun. In several ancient civilizations, servants held large shades over the heads of kings and nobles, and the shade itself became a sign of power and dignity. To stand beneath such a cover was to be marked as someone important, and in some societies ordinary people were not permitted to carry one at all, so that a simple tool for comfort became a symbol of the order of society.",
+      "The use of umbrellas against rain spread more slowly, and in some places it was at first met with laughter. ( A ) the advantages of staying dry seem obvious to us, people who carried umbrellas in the rain were sometimes mocked as weak or foolish, especially men, who were expected to endure bad weather without complaint. Only gradually did the umbrella come to be accepted as a sensible object for anyone to carry, and its acceptance tells us how slowly ideas about what is proper can change.",
+      "As cities grew larger and more crowded, the umbrella also began to raise questions about how people should share public space. On a busy pavement in the rain, an open umbrella takes up far more room than its owner, and those who carry them must constantly raise, lower, or tilt them to avoid striking others. In this sense, walking with an umbrella requires a small but continuous effort of attention to strangers, a kind of quiet cooperation that most of us practice without ever noticing it. When this cooperation fails, as it sometimes does, the result can be a small but real moment of conflict between strangers.",
+      "The umbrella has also become an example of how design can remain almost unchanged for centuries. Although materials have improved, with lighter frames and cloth that dries more quickly, the basic form of a folding cover on a central stick has hardly changed. Many inventors have tried to improve it, but most of their ideas have failed to replace the familiar shape, perhaps because the ordinary umbrella already balances cost, weight, and convenience remarkably well. A design that works well enough, it seems, can survive for a very long time simply because nobody finds a clearly better one.",
+      "In recent years, some cities have introduced schemes in which umbrellas can be borrowed and returned at stations or shops, much like shared bicycles. Such schemes reflect a growing concern about waste, since cheap umbrellas are often thrown away after breaking in a strong wind. They also suggest a different way of thinking about ownership, in which an object that we need only occasionally is treated not as personal property but as something that belongs, in a sense, to everyone.",
+      "Perhaps, then, the umbrella deserves more thought than we usually give it. In its history we can see how a tool can become a symbol, how a new habit can meet resistance before it is accepted, and how ordinary objects shape the way strangers behave toward one another. The next time we leave an umbrella behind on a train, it may be worth remembering that this forgettable object carries with it a long and surprisingly rich story.",
+    ],
+    ja: [
+      '私たちがもち歩くもののなかで、かさはもっともなくしやすいものかもしれない。それは雨がふっているときにしか役に立たず、雨がやむとすぐにもてあますものになり、電車や店、友人の家にかんたんに置きわすれられる。大都市の遺失物係は毎年何千本ものかさを集めるが、受け取りに来る人はほとんどいない。しかしこのつつましくわすれられやすいものには長い歴史があり、人々が保護や身分、そして都市生活の共有の空間についてどのように考えてきたかを多く明らかにしてくれる。',
+      'もっとも古いかさは、雨をよけるためではなく、日ざしをさえぎるためにつくられたらしい。いくつかの古代文明では、使用人が王や貴族の頭の上に大きな日がさをさしかけ、その日がさ自体が権力と威厳のしるしになった。そうしたおおいの下に立つことは、重要な人物であるとしるされることであり、社会によってはふつうの人々はそれをもつことをまったくゆるされなかった。こうして、快適さのための単純な道具が、社会の秩序のシンボルになったのである。',
+      '雨をよけるためのかさの使用はもっとゆっくり広まり、場所によっては、はじめは笑いものにされた。かわいたままでいる利点は私たちには明らかに思えるが、雨の中でかさをさす人は、ときに弱い者やおろかな者としてからかわれた。とくに、悪い天気にも文句を言わずにたえることを期待されていた男性はそうであった。かさがだれでももち歩いてよいもっともなものとして受け入れられたのはゆっくりとであり、その受け入れられ方は、何がふさわしいかについての考えがいかにゆっくりとしか変わらないかを教えてくれる。',
+      '都市が大きく混み合うようになると、かさは、人々が公共の空間をどのように分け合うべきかという問いも投げかけるようになった。雨の日の混んだ歩道では、開いたかさはもち主よりもずっと多くの場所をとり、かさをさす人は、ほかの人にぶつからないよう、たえずかさを上げたり下げたりかたむけたりしなければならない。この意味で、かさをさして歩くことは、見知らぬ人への小さいけれどたえまない注意を必要とする。それは、私たちのほとんどが気づきもせずに実行している、一種の静かな協力なのである。この協力がうまくいかないと、ときにそうなるように、見知らぬ人どうしのあいだに小さいけれど本当の争いの瞬間が生じることがある。',
+      'かさはまた、デザインが何世紀ものあいだほとんど変わらずに残りうることの例にもなっている。骨組みが軽くなり、布が早くかわくようになるなど材料は改良されたが、中心の棒に折りたためるおおいがついているという基本的な形はほとんど変わっていない。多くの発明家がそれを改良しようとしてきたが、そのアイデアのほとんどはなじみの形にとってかわることができなかった。それはたぶん、ふつうのかさが、値段と重さと便利さのつりあいをすでにおどろくほどうまくとっているからだろう。十分にうまくはたらくデザインは、だれもはっきりとよりよいものを見つけられないというだけで、とても長く生きのこりうるらしい。',
+      '近年、共有の自転車のように、駅や店でかさを借りたり返したりできるしくみを取り入れた都市もある。そうしたしくみは、安いかさが強い風でこわれたあとによく捨てられることから、ごみへの関心が高まっていることを映し出している。それはまた、ときどきしか必要としないものを、個人の財産としてではなく、ある意味でみんなのものとしてあつかうという、所有についてのちがう考え方を示している。',
+      'だとすれば、かさは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。その歴史の中に、道具がどのようにシンボルになりうるか、新しい習慣が受け入れられる前にどのように抵抗にあうか、そしてありふれたものが見知らぬ人どうしのふるまい方をどのように形づくるかを見ることができる。次に電車にかさを置きわすれたとき、このわすれられやすいものが、長くおどろくほど豊かな物語をたずさえていることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「かわいたままでいる利点は明らかに思えるが、かさをさす人はからかわれた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'もっとも古いかさは、日ざしをさえぎるためにつくられたらしい。', answer: true, why: '第2段落 made not to keep off rain but to provide shade from the sun。' },
+      { statement: '雨の中でかさをさすことは、はじめからどこでも歓迎された。', answer: false, why: '第3段落 in some places it was at first met with laughter。' },
+      { statement: 'かさの基本的な形は、何世紀ものあいだほとんど変わっていない。', answer: true, why: '第5段落 the basic form ... has hardly changed。' },
+      { statement: '筆者によると、遺失物係に集まるかさのほとんどは受け取られる。', answer: false, why: '第1段落 few of them are ever claimed。' },
+    ],
+    qa: [
+      { q: 'What does walking with an umbrella on a busy pavement require?', choices: ['Continuous attention to strangers.', 'A very large umbrella.', 'Walking faster than others.', 'Permission from the city.'], answer: 0, why: '第4段落 requires a small but continuous effort of attention to strangers。' },
+      { q: 'Why are cheap umbrellas often thrown away?', choices: ['They break in a strong wind.', 'They are too heavy.', 'They are out of fashion.', 'They are not allowed on trains.'], answer: 0, why: '第6段落 cheap umbrellas are often thrown away after breaking in a strong wind。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
