@@ -10644,6 +10644,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Their success [resulted in] years of hard work.', choices: ['resulted from', 'resulted to', 'resulted by', 'resulted on'], answer: 0, why: '成功（結果）←努力（原因）なので result from。' },
     ],
   },
+  {
+    id: 'exam-fix-250',
+    title: '入試の誤文訂正〈250〉（国公立レベル：英作文の take part in・participate in・join）',
+    points: ['「（活動・行事）に参加する」は take part in ～／participate in ～ で、前置詞 in が必要（× take part the race／× participate the meeting）。', 'join は他動詞で、前置詞なしで目的語をとる（join the club／join us）。× join to the club／× join in the club（「クラブに入る」の意味では in をつけない）。'],
+    examples: [{ en: 'She took part in the speech contest. / Many students participated in the event. / Why don’t you join us?', ja: '彼女はスピーチコンテストに参加した。／多くの生徒がその行事に参加した。／いっしょにどう？' }],
+    questions: [
+      { sentence: 'Over a hundred runners [took part] the marathon.', choices: ['took part in', 'took part at', 'took part to', 'took part with'], answer: 0, why: '「～に参加する」は take part in ～。' },
+      { sentence: 'All the members [participated to] the discussion.', choices: ['participated in', 'participated at', 'participated with', 'participated on'], answer: 0, why: '「～に参加する」は participate in ～。' },
+      { sentence: 'My brother [joined to] the tennis club last year.', choices: ['joined', 'joined in to', 'joined at', 'joined with to'], answer: 0, why: 'join は他動詞なので前置詞は不要。joined the tennis club。' },
+      { sentence: 'Would you like to [join with us] for dinner?', choices: ['join us', 'join to us', 'join at us', 'join in us'], answer: 0, why: 'join は他動詞。join us。' },
+      { sentence: 'She was too shy to [take a part in] the game.', choices: ['take part in', 'take parts in', 'take the part to', 'take part at'], answer: 0, why: '「参加する」は冠詞なしの take part in。' },
+      { sentence: 'Students are encouraged to [participate] volunteer work.', choices: ['participate in', 'participate to', 'participate at', 'participate on'], answer: 0, why: 'participate は自動詞なので participate in ～。' },
+      { sentence: 'He decided to [join in] the army after high school.', choices: ['join', 'join to', 'join at', 'join with'], answer: 0, why: '「（組織）に入る」は join ～。in は不要。' },
+      { sentence: 'Taking part in [play] sports is good for your health.', choices: ['playing', 'to play', 'played', 'plays'], answer: 0, why: '前置詞 in のあとは動名詞なので playing。' },
+      { sentence: 'Ten countries [took part of] the conference.', choices: ['took part in', 'took part to', 'took part on', 'took part by'], answer: 0, why: '「～に参加する」は take part in ～。' },
+      { sentence: 'Everyone [participated actively] the project.', choices: ['participated actively in', 'participated actively to', 'participated actively on', 'participated actively at'], answer: 0, why: 'participate in ～。副詞が入っても in は必要。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
