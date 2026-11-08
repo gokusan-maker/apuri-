@@ -45662,6 +45662,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-candles',
+    title: 'On Candles',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an age of electric light, the candle might seem to have lost its purpose. A switch on the wall can fill a room with steady brightness in an instant, and few people today depend on candles to see after dark. Yet candles have not disappeared. They are lit on birthday cakes, placed on tables for special meals, carried in ceremonies, and kept in drawers in case the power fails. The survival of this ancient object in a world that no longer needs it for light suggests that it offers something that electricity cannot replace.",
+      "For most of human history, candles were a practical necessity, and an expensive one. They were made from animal fat or from wax collected by bees, and the better kinds, which burned cleanly and gave a bright light, were costly enough that many families used them only sparingly. The length of a winter evening, and the amount of reading, sewing, or conversation that could take place after sunset, often depended on how many candles a household could afford to burn. Light, in other words, was once a measure of wealth, and darkness was a common experience of the poor.",
+      "Because candles burned at a fairly steady rate, they were also used to measure time. ( A ) such methods were not very precise, a candle marked with lines at regular intervals could show roughly how many hours had passed during the night, and in some places auctions were conducted by the burning of a short candle, with the last bid made before the flame went out being accepted. In this way, the candle served not only as a source of light but also as a simple clock.",
+      "The arrival of gas lighting and then of electric light transformed the role of the candle. Within a few generations, an object that had been essential became almost unnecessary for its original purpose. Yet rather than disappearing, candles took on new meanings. Freed from the need to provide light, they came to be associated with celebration, memory, and calm, and the gentle, flickering flame that had once been a sign of poverty became a sign of warmth and intimacy.",
+      "Candles have long played an important part in religious and cultural life. In many traditions, a lit candle represents hope, faith, or the presence of something sacred, and people light candles to remember those who have died or to express a wish. The act of lighting a candle is often slow and deliberate, and the small flame seems to invite a moment of quiet attention that is rare in the busy rhythms of modern life. Even people who follow no religion often find themselves lighting a candle at moments of sadness or hope.",
+      "There are, however, practical concerns about candles. An unattended flame can easily start a fire, and some candles release smoke and substances that may affect the air inside homes. For these reasons, some people now use electric candles that imitate the flicker of a real flame without its dangers. Whether such imitations can provide the same feeling as a real candle is an interesting question, since part of the appeal of a candle may lie in the knowledge that its light is alive and will eventually burn out.",
+      "Perhaps, then, the candle deserves more thought than we usually give it. It has lit homes, measured time, and marked the most important moments of human life, and it continues to do so long after its practical use has largely passed. When we light a candle on a dark evening, we join a tradition that stretches back thousands of years, and we may sense, in its small and fragile flame, something of the human desire to find light and meaning in the darkness.",
+    ],
+    ja: [
+      '電気の明かりの時代に、ろうそくは役目を失ったように思えるかもしれない。かべのスイッチひとつで部屋はすぐにむらのない明るさでみたされ、今日、暗くなってから物を見るのにろうそくにたよる人はほとんどいない。しかしろうそくは消えてはいない。誕生日のケーキの上にともされ、特別な食事のためにテーブルに置かれ、儀式で手にもたれ、停電にそなえて引き出しにしまわれている。明かりとしてはもう必要とされない世界でこの古いものが生きのこっていることは、それが電気にはかわれない何かをあたえていることを示している。',
+      '人間の歴史のほとんどにおいて、ろうそくは実際に欠かせないものであり、しかも高価なものだった。それは動物のあぶらやハチが集めたろうからつくられ、きれいに燃えて明るい光を出すよい種類のものは、多くの家庭がほんの少ししか使えないほど高かった。冬の夜の長さや、日がしずんだあとにどれだけ読んだり、ぬいものをしたり、話したりできるかは、しばしばその家がどれだけのろうそくを燃やす余裕があるかで決まっていたのである。言いかえれば、明かりはかつて富をはかるものさしであり、暗やみは貧しい人々のありふれた経験だったのである。',
+      'ろうそくはかなり一定の速さで燃えるので、時間をはかるのにも使われた。そうした方法はあまり正確ではなかったが、一定の間かくで線を引いたろうそくは、夜のあいだにおよそ何時間たったかを示すことができた。また場所によっては、短いろうそくを燃やして競売が行われ、炎が消える前の最後のつけ値が受け入れられた。このように、ろうそくは明かりのもとであるだけでなく、単純な時計としても役立ったのである。',
+      'ガス灯、そして電気の明かりがあらわれたことで、ろうそくの役割は大きく変わった。数世代のうちに、欠かせなかったものが、もともとの目的にはほとんど必要のないものになった。しかし消えてしまうかわりに、ろうそくは新しい意味をもつようになった。明かりをあたえる必要から解放されて、それはお祝いや思い出、落ち着きと結びつけられるようになり、かつては貧しさのしるしだったやわらかくゆらめく炎は、あたたかさと親しさのしるしになったのである。',
+      'ろうそくは長いあいだ、宗教や文化の生活で大切な役割をはたしてきた。多くの伝統で、ともされたろうそくは希望や信仰、あるいは何か神聖なものの存在を表し、人々は亡くなった人をしのんだり願いを表したりするためにろうそくをともす。ろうそくをともす行為はしばしばゆっくりとした、心をこめたものであり、その小さな炎は、現代の生活のいそがしいリズムの中ではめったにない、静かに心を向けるひとときにさそってくれるように思える。どの宗教も信じていない人でさえ、悲しみや希望の瞬間に、気がつくとろうそくをともしていることがよくある。',
+      'しかし、ろうそくには実際的な心配もある。見ていない炎はかんたんに火事を起こしうるし、家の中の空気に影響をあたえるかもしれないけむりや物質を出すろうそくもある。こうした理由から、いまでは本物の炎の危険なしにそのゆらめきをまねる電気のろうそくを使う人もいる。そうしたまねものが本物のろうそくと同じ気持ちをあたえられるかどうかは興味深い問いである。ろうそくの魅力の一部は、その光が生きていて、いつかは燃えつきるとわかっていることにあるのかもしれないからである。',
+      'だとすれば、ろうそくは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは家を照らし、時間をはかり、人間の人生でもっとも大切な瞬間をしるしてきたのであり、実用的な役目がほとんど終わったずっとあとも、そうしつづけている。暗い夕方にろうそくをともすとき、私たちは何千年もさかのぼる伝統に加わるのであり、その小さくもろい炎の中に、暗やみの中で光と意味を見つけたいという人間の願いの何かを感じとるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「そうした方法はあまり正確ではなかったが、およその時間を示せた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: 'よい種類のろうそくは、多くの家庭が少ししか使えないほど高かった。', answer: true, why: '第2段落 costly enough that many families used them only sparingly。' },
+      { statement: 'ろうそくで時間をはかる方法は、とても正確だった。', answer: false, why: '第3段落 such methods were not very precise。' },
+      { statement: 'ゆらめく炎は、かつては貧しさのしるしだった。', answer: true, why: '第4段落 had once been a sign of poverty。' },
+      { statement: '筆者によると、電気のろうそくには本物の炎と同じ危険がある。', answer: false, why: '第6段落 without its dangers。' },
+    ],
+    qa: [
+      { q: 'How were some auctions conducted, according to the passage?', choices: ['By the burning of a short candle.', 'By counting votes.', 'By ringing a bell.', 'By using a clock.'], answer: 0, why: '第3段落 auctions were conducted by the burning of a short candle。' },
+      { q: 'What did candles come to be associated with after electric light arrived?', choices: ['Celebration, memory, and calm.', 'Danger and poverty.', 'Work and study.', 'Science and technology.'], answer: 0, why: '第4段落 associated with celebration, memory, and calm。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
