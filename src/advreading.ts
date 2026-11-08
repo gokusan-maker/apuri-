@@ -46462,6 +46462,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-tunnels',
+    title: 'On Tunnels',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few experiences are as strange as passing through a long tunnel. Daylight disappears behind us, the sound of the engine grows louder against the walls, and for a while there is nothing to see but a line of lights stretching ahead into the darkness. Then, almost suddenly, the world returns, often changed: a different valley, a different weather, sometimes even a different country. Tunnels are such an ordinary part of modern travel that we rarely think about them, yet they represent one of the boldest ways in which human beings have reshaped the earth.",
+      "The idea of digging through the ground is very old. People dug tunnels to reach water, to mine metals and stone, and to carry water from one place to another long before there were trains or cars. Some ancient tunnels were dug from both ends at once, and the workers had to calculate their direction carefully so that the two halves would meet in the middle. That they often succeeded, with only simple tools and measurements, shows remarkable skill and patience. Some of these early tunnels still carry water today, many centuries after they were completed.",
+      "Building tunnels has always been difficult and dangerous work. ( A ) modern machines can now cut through rock with great speed, for most of history tunnels were dug by hand, and workers faced the constant risk of collapse, flooding, and poor air. Many lost their lives in the construction of famous tunnels, and their sacrifices are sometimes remembered in monuments near the entrances. Even today, engineers must study the ground carefully, since unexpected water or weak rock can halt work for months. A single mistake in planning can therefore cost both time and lives.",
+      "Tunnels have transformed transport and the life of cities. A tunnel through a mountain can shorten a journey that once took days to a matter of minutes, and tunnels under rivers and seas have connected places that were once separated by water. Such connections have changed not only travel but also trade and the ways in which neighboring regions see one another. In many large cities, underground railways carry millions of people every day, allowing them to move quickly beneath crowded streets. Without such tunnels, modern cities could hardly function at their present size. In some cities, people spend more time traveling below the ground than above it.",
+      "Tunnels also carry things we rarely see. Beneath most cities lies a hidden network of passages for water, waste, electricity, and communication cables, quietly supporting the life on the surface. These underground systems are easily forgotten until something goes wrong, but they are as essential to modern life as the buildings and roads above them, and their construction and maintenance require constant care. Workers who look after them do much of their work at night, unseen by the people they serve.",
+      "The tunnel has also become a powerful image in human thought. We speak of seeing light at the end of the tunnel when a long period of difficulty seems about to end, and of tunnel vision when someone focuses so narrowly on one thing that they fail to notice anything else. In stories, tunnels often represent passages between different worlds, or journeys through fear and darkness toward safety, reflecting the strong feelings that enclosed underground spaces can arouse.",
+      "Perhaps, then, the tunnel deserves more thought than we usually give it. It shows how human beings have overcome natural barriers through skill, effort, and sacrifice, and it supports the daily life of cities in ways that are largely invisible. The next time we pass through a tunnel and emerge into the light, it may be worth remembering those who dug it, and the long history of human determination that lies beneath the ground we walk upon every day.",
+    ],
+    ja: [
+      '長いトンネルを通りぬけることほど奇妙な経験はほとんどない。日の光はうしろに消え、エンジンの音はかべに反響して大きくなり、しばらくのあいだは、暗やみの先へとのびる光の列しか見えない。そして、ほとんどとつぜんに世界がもどってくるが、それはしばしば変わっている。ちがう谷、ちがう天気、ときにはちがう国でさえある。トンネルは現代の旅のあまりにもありふれた一部なので、私たちはめったにそれについて考えないが、それは人間が地球をつくり変えてきたもっとも大胆なやり方のひとつを表しているのである。',
+      '地面をほりぬくという考えはとても古い。人々は、電車や車があるずっと前から、水にたどり着くため、金属や石をほり出すため、そしてある場所から別の場所へ水を運ぶためにトンネルをほった。古代のトンネルのなかには両はしから同時にほられたものもあり、働き手はふたつの半分がまんなかで出会うよう、方向を注意深く計算しなければならなかった。単純な道具とはかり方だけで、彼らがしばしば成功したことは、おどろくべき技術と根気を示している。こうした初期のトンネルのなかには、完成から何世紀もたったいまも水を運んでいるものがある。',
+      'トンネルを建設するのはいつもむずかしく危険な仕事だった。いまでは現代の機械が岩をとても速く切りくずすことができるが、歴史のほとんどのあいだ、トンネルは手でほられ、働き手はくずれ落ちることや水があふれること、空気が悪いことのたえまない危険に直面していた。有名なトンネルの建設で多くの人が命を落とし、その犠牲は入り口の近くの記念碑でしのばれることもある。今日でさえ、思いがけない水や弱い岩が何か月も工事を止めることがあるので、技術者は地面を注意深く調べなければならない。したがって、計画のたったひとつのまちがいが、時間と命の両方を失わせることがありうるのである。',
+      'トンネルは交通と都市の生活を大きく変えた。山をつらぬくトンネルは、かつては何日もかかった旅を数分にちぢめることができ、川や海の下のトンネルは、かつて水でへだてられていた場所をつないできた。そうしたつながりは、旅だけでなく、取り引きや、となり合う地域がたがいをどのように見るかも変えてきた。多くの大都市では、地下鉄が毎日何百万もの人々を運び、混み合った通りの下をすばやく移動できるようにしている。そうしたトンネルがなければ、現代の都市はいまの大きさではほとんどはたらかないだろう。都市によっては、人々は地上よりも地下を移動するのに多くの時間をすごしている。',
+      'トンネルはまた、私たちがめったに目にしないものも運んでいる。ほとんどの都市の下には、水や下水、電気、通信ケーブルのためのかくれた通路の網が広がっており、地上の生活を静かにささえている。こうした地下のしくみは、何かがうまくいかなくなるまですぐにわすれられてしまうが、その上の建物や道路と同じくらい現代の生活に欠かせないものであり、その建設と維持にはたえまない注意が必要である。それを管理する人々は仕事の多くを夜に行い、自分たちが役立っている人々の目にふれることはない。',
+      'トンネルはまた、人間の考えの中で力強いイメージにもなっている。私たちは、長い苦しい時期が終わりそうに思えるとき、トンネルの先に光が見えると言い、だれかがひとつのことにあまりにもせまく集中してほかのことに気づかないとき、トンネルの視野と言う。物語の中では、トンネルはしばしばちがう世界のあいだの通り道や、おそれと暗やみをぬけて安全へと向かう旅を表しており、とざされた地下の空間がよびおこしうる強い気持ちを映し出している。',
+      'だとすれば、トンネルは、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは人間が技術と努力と犠牲によって自然のかべを乗りこえてきたことを示し、ほとんど目に見えないやり方で都市の日々の生活をささえている。次にトンネルを通りぬけて光の中に出るとき、それをほった人々と、私たちが毎日歩く地面の下に横たわる、人間の決意の長い歴史を思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「いまは機械が速く切れるが、歴史のほとんどのあいだトンネルは手でほられた」という対比なので Although。' },
+    ],
+    tf: [
+      { statement: '古代のトンネルには、両はしから同時にほられたものもある。', answer: true, why: '第2段落 Some ancient tunnels were dug from both ends at once。' },
+      { statement: 'トンネルを手でほる仕事には、ほとんど危険がなかった。', answer: false, why: '第3段落 workers faced the constant risk of collapse, flooding, and poor air。' },
+      { statement: 'ほとんどの都市の下には、かくれた通路の網が広がっている。', answer: true, why: '第5段落 Beneath most cities lies a hidden network of passages。' },
+      { statement: '筆者によると、今日では工事が止まることはない。', answer: false, why: '第3段落 can halt work for months。' },
+    ],
+    qa: [
+      { q: 'What can a tunnel through a mountain do?', choices: ['Shorten a journey from days to minutes.', 'Make a mountain taller.', 'Stop the flow of rivers.', 'Change the weather.'], answer: 0, why: '第4段落 can shorten a journey that once took days to a matter of minutes。' },
+      { q: 'What does tunnel vision describe?', choices: ['Focusing so narrowly that one fails to notice anything else.', 'Seeing well in the dark.', 'The end of a difficult period.', 'A journey between worlds.'], answer: 0, why: '第6段落 focuses so narrowly on one thing that they fail to notice anything else。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
