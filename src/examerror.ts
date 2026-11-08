@@ -11074,6 +11074,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'The volunteers [set the chairs up them] for the concert.', choices: ['set up the chairs', 'set the chairs off', 'set out them the chairs', 'set them the chairs up'], answer: 0, why: '名詞の目的語が1つあれば them は不要。set up the chairs（set the chairs up も可）。' },
     ],
   },
+  {
+    id: 'exam-fix-260',
+    title: '入試の誤文訂正〈260〉（国公立レベル：英作文の pick up・drop off・drop by）',
+    points: ['pick up ～ は「～を（車で）むかえに行く・拾う」「（言葉など）を自然に身につける」、自動詞で「（景気などが）よくなる」。drop off ～ は「（人・物）を車からおろす・置いていく」、drop by は「ちょっと立ち寄る」。', '目的語が代名詞のときは pick you up／drop it off のように動詞と up・off のあいだに入れる（× pick up you）。「中退する・やめる」は drop out (of ～)。'],
+    examples: [{ en: 'I’ll pick you up at six. / Could you drop me off at the corner? / Drop by anytime.', ja: '6時にむかえに行くね。／角でおろしてもらえますか。／いつでも寄ってね。' }],
+    questions: [
+      { sentence: 'I’ll [pick up you] at the station at six.', choices: ['pick you up', 'pick up you to', 'up pick you', 'pick you in'], answer: 0, why: '代名詞の目的語は pick と up のあいだに入れる。pick you up。' },
+      { sentence: 'Could you [drop up me] at the corner? I can walk from there.', choices: ['drop me off', 'drop me on', 'off drop me', 'drop to me off'], answer: 0, why: '「（車から）おろす」は drop ～ off。代名詞はあいだに入れる。' },
+      { sentence: 'Why don’t you [drop on by] my office tomorrow?', choices: ['drop by', 'drop by to', 'drop off by', 'drop on'], answer: 0, why: '「ちょっと立ち寄る」は drop by ～。' },
+      { sentence: 'She [picked up to] Spanish while living in Madrid.', choices: ['picked up', 'picked on', 'picked out to', 'picked up with'], answer: 0, why: '「（言葉）を自然に身につける」は pick up ～。to は不要。' },
+      { sentence: 'Please [drop off it] at the front desk when you are done.', choices: ['drop it off', 'drop off to it', 'drop it of', 'it drop off'], answer: 0, why: '代名詞の目的語は drop と off のあいだ。drop it off。' },
+      { sentence: 'The economy began to [pick on] in the spring.', choices: ['pick up', 'pick off', 'be picked', 'pick out up'], answer: 0, why: '「（景気が）よくなる」は自動詞の pick up。' },
+      { sentence: 'Feel free to [drop to] whenever you are in the neighborhood.', choices: ['drop by', 'drop by at', 'by drop', 'drop to by'], answer: 0, why: '「立ち寄る」は drop by。' },
+      { sentence: 'I [was picked] my sister up from school yesterday.', choices: ['picked', 'was picking to', 'have picked', 'pick'], answer: 0, why: 'yesterday のできごとで「むかえに行った」は能動の過去形 picked ～ up。' },
+      { sentence: 'Several students have [dropped off] of the course because it was too difficult.', choices: ['dropped out', 'dropped by', 'dropped up', 'dropped in'], answer: 0, why: '「（講座など）をやめる」は drop out of ～。' },
+      { sentence: 'The taxi [dropped us at off] the hotel entrance.', choices: ['dropped us off at', 'dropped off us at', 'dropped us at off to', 'dropped us by off'], answer: 0, why: '「～で（人）をおろす」は drop 人 off at ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

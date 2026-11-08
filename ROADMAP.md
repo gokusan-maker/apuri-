@@ -1405,7 +1405,7 @@
   - [x] 524 正誤問題〈265〉（国公立レベル：英作文の hand in・hand out・hand over）10問
   - [x] 525 誤文訂正〈259〉（京大レベル：英作文の set up・set off・set out）10問
   - [x] 526 正誤問題〈266〉（東大レベル：英作文の look into・look over・go through）10問
-  - [ ] 527 誤文訂正〈260〉（国公立レベル：英作文の pick up・drop off・drop by）10問
+  - [x] 527 誤文訂正〈260〉（国公立レベル：英作文の pick up・drop off・drop by）10問
   - [ ] 528 正誤問題〈267〉（京大レベル：英作文の turn into・turn out・turn up）10問
   - [ ] 529 誤文訂正〈261〉（東大レベル：英作文の run into・come across・come up）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
