@@ -3829,6 +3829,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="52" rx="6" ry="3" fill="#fafaf9" />
       </g>
     )
+  if (species === 'eldsdeer')
+    return (
+      <g>
+        {/* 弓のように曲がったツノ */}
+        <path d="M40 28 q-8 -10 2 -14 M60 28 q8 -10 -2 -14" stroke="#57534e" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
