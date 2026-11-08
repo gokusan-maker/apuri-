@@ -45778,6 +45778,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-air-conditioning',
+    title: 'Should Air Conditioning Be Restricted?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "As summers grow hotter in many parts of the world, air conditioning has spread rapidly from offices and shopping centers into homes, schools, and public transport. For millions of people, it has made it possible to work, sleep, and study comfortably during periods of intense heat. Yet air conditioners use large amounts of electricity, and some governments have begun to consider rules that would limit how cool buildings may be kept. The question of whether the use of air conditioning should be restricted has become an increasingly urgent subject of debate.",
+      "Supporters of restrictions argue first that air conditioning contributes to the very problem it is meant to solve. Much of the electricity it consumes is still produced by burning coal, oil, or gas, which releases gases that warm the planet. As temperatures rise, people use more air conditioning, which in turn leads to more emissions and even higher temperatures. Breaking this cycle, supporters say, requires limits on how much energy is used for cooling, such as rules that prevent offices from setting their thermostats too low. Several countries, they note, already ask public buildings to keep temperatures above a certain level in summer.",
+      "Supporters also point out that air conditioners can make cities hotter outside. The machines remove heat from inside buildings but release it into the streets, so that pedestrians and people without air conditioning may suffer even more. In addition, many buildings are kept far cooler than necessary, so that office workers sometimes wear sweaters in the middle of summer. Modest limits, supporters argue, would reduce waste without causing real discomfort, and might encourage people to dress more sensibly for the season.",
+      "Critics, however, argue that air conditioning is a matter of health and even survival. ( A ) some buildings may be kept too cool, extreme heat can be deadly, particularly for elderly people, young children, and those with certain illnesses, and air conditioning has saved many lives during heat waves. Critics warn that strict limits could put vulnerable people at risk, and that rules designed for offices might be unfairly applied to homes, hospitals, and care facilities where cooling is essential. For a person living alone in a small apartment, they add, an air conditioner may be the only protection against a dangerous summer.",
+      "Critics also point out that air conditioning has important economic benefits. Workers are more productive and make fewer mistakes when they are not suffering from heat, and students learn better in comfortable classrooms. In hot countries, the spread of air conditioning has been linked to economic growth, and critics argue that it would be unfair for wealthy countries, which have long enjoyed cooling, to discourage its use in poorer regions where many people are only now able to afford it.",
+      "Some places have tried to find a balance. Rather than banning cooling, they encourage the use of more efficient machines and set recommended temperatures for offices, while allowing exceptions for hospitals and homes with vulnerable residents. Others have invested in buildings designed to stay cool naturally, with thick walls, shaded windows, and ventilation that allows air to flow through, as well as in trees and green spaces that lower the temperature of streets. Such approaches aim to reduce the need for cooling rather than simply limiting it.",
+      "The debate over air conditioning therefore reflects a wider challenge facing societies in a warming world. People have a reasonable desire to be comfortable and safe, but the ways in which they meet that desire may make the problem worse for everyone. Finding solutions will require not only new technology but also changes in how buildings and cities are designed, and a willingness to think about comfort as something to be shared fairly rather than as a private good to be enjoyed without limit.",
+    ],
+    ja: [
+      '世界の多くの地域で夏がますます暑くなるにつれて、冷房は会社やショッピングセンターから家庭や学校、公共交通機関へと急速に広まってきた。何百万もの人々にとって、冷房のおかげで、ひどい暑さの時期にも快適に働き、ねむり、勉強することができるようになった。しかし冷房機は大量の電気を使い、建物をどこまで涼しくしてよいかを制限する決まりを考えはじめた政府もある。冷房の使用を制限すべきかどうかという問いは、ますます急を要する議論の対象になっている。',
+      '制限を支持する人々は、まず、冷房はそれが解決しようとしている問題そのものの原因になっていると主張する。冷房が使う電気の多くはいまも石炭や石油、ガスを燃やしてつくられており、それは地球をあたためるガスを出す。気温が上がると人々はもっと冷房を使い、それがさらに多くの排出とさらに高い気温につながる。この循環を断ち切るには、会社が温度を低く設定しすぎないようにする決まりなど、冷房に使うエネルギーの量の制限が必要だと支持する人々は言う。いくつかの国では、すでに公共の建物に夏は一定以上の温度をたもつよう求めていると彼らは指摘する。',
+      '支持する人々はまた、冷房機は外の都市をより暑くしうると指摘する。その機械は建物の中から熱を取りのぞくが、それを通りに出すので、歩行者や冷房のない人々はさらに苦しむかもしれない。さらに、多くの建物は必要よりはるかに涼しくたもたれており、会社員が真夏にセーターを着ていることもある。ほどほどの制限は、本当の不快さを生むことなくむだをへらし、人々が季節に合ったかしこい服装をするようはげますかもしれないと支持する人々は主張する。',
+      'しかし批判する人々は、冷房は健康の、さらには生きのびるための問題だと主張する。涼しくしすぎている建物もあるかもしれないが、ひどい暑さはとくにお年寄りや幼い子ども、ある種の病気をもつ人々にとって命にかかわることがあり、冷房は熱波のあいだに多くの命を救ってきた。きびしい制限は弱い立場の人々を危険にさらしうるし、会社のためにつくられた決まりが、冷房が欠かせない家庭や病院、介護施設に不公平に当てはめられるかもしれないと批判する人々は警告する。小さなアパートでひとりぐらしをする人にとって、冷房機は危険な夏から身を守る唯一の手段かもしれないと彼らはつけ加える。',
+      '批判する人々はまた、冷房には大切な経済的利益があると指摘する。働く人は暑さに苦しんでいないときのほうが生産的でまちがいも少なく、生徒は快適な教室のほうがよく学ぶ。暑い国々では、冷房が広まったことが経済の成長と結びつけられており、長いあいだ冷房を楽しんできた豊かな国々が、多くの人がようやくそれを買えるようになったばかりの貧しい地域でその使用を思いとどまらせるのは不公平だと批判する人々は主張する。',
+      'つりあいを見つけようとしてきた場所もある。冷房を禁止するかわりに、より効率のよい機械の使用をすすめ、会社にすすめる温度を決めながら、病院や弱い立場の人がいる家庭には例外をみとめるのである。また、厚いかべや日よけのついた窓、空気が通りぬける換気によって自然に涼しくたもてるよう設計された建物や、通りの温度を下げる木や緑地に投資してきた場所もある。そうしたやり方は、冷房をただ制限するのではなく、冷房の必要そのものをへらすことをめざしている。',
+      'したがって、冷房をめぐる議論は、あたたまっていく世界で社会が直面するより広い課題を映し出している。人々が快適で安全でいたいと願うのはもっともなことだが、その願いのみたし方が、すべての人にとって問題を悪化させるかもしれない。解決策を見つけるには、新しい技術だけでなく、建物や都市の設計のしかたの変化も必要であり、また快適さを、かぎりなく楽しむ私的なものとしてではなく、公平に分け合うべきものとして考える気持ちも必要になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「涼しくしすぎている建物もあるかもしれないが、ひどい暑さは命にかかわる」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say air conditioning uses electricity that warms the planet and releases heat into the ( 1 ). Critics argue that cooling protects health and brings economic benefits, especially for ( 2 ) people and poorer regions. Some places encourage efficient machines and buildings designed to stay cool ( 3 ).',
+      blanks: [
+        { choices: ['streets', 'oceans', 'mountains', 'forests'], answer: 0, why: '第3段落 release it into the streets。' },
+        { choices: ['vulnerable', 'wealthy', 'famous', 'young'], answer: 0, why: '第4段落 strict limits could put vulnerable people at risk。' },
+        { choices: ['naturally', 'expensively', 'slowly', 'loudly'], answer: 0, why: '第6段落 buildings designed to stay cool naturally。' },
+      ],
+    },
+    tf: [
+      { statement: '冷房が使う電気の多くは、いまも石炭や石油、ガスからつくられている。', answer: true, why: '第2段落 Much of the electricity it consumes is still produced by burning coal, oil, or gas。' },
+      { statement: '支持する人々によると、建物はいつも必要なだけしか涼しくされていない。', answer: false, why: '第3段落 many buildings are kept far cooler than necessary。' },
+      { statement: '冷房は熱波のあいだに多くの命を救ってきた。', answer: true, why: '第4段落 air conditioning has saved many lives during heat waves。' },
+      { statement: 'つりあいを見つけようとする場所では、病院にも例外をみとめていない。', answer: false, why: '第6段落 allowing exceptions for hospitals。' },
+    ],
+    qa: [
+      { q: 'Why do some office workers wear sweaters in summer?', choices: ['Buildings are kept far cooler than necessary.', 'They are often ill.', 'The weather is cold.', 'They are required to by law.'], answer: 0, why: '第3段落 many buildings are kept far cooler than necessary。' },
+      { q: 'What do critics say would be unfair?', choices: ['Wealthy countries discouraging cooling in poorer regions.', 'Paying workers more in summer.', 'Building more hospitals.', 'Planting trees in cities.'], answer: 0, why: '第5段落 it would be unfair for wealthy countries ... to discourage its use in poorer regions。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
