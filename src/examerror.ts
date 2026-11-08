@@ -5983,6 +5983,31 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) When (B) I will finish (C) my homework, (D) I’ll watch TV.', choices: ['(A) When', '(B) I will finish', '(C) my homework,', '(D) I’ll watch TV'], answer: 1, why: '時の副詞節は現在形なので I finish。' },
     ],
   },
+  {
+    id: 'exam-error-help-do',
+    title: '入試の正誤問題〈250〉（国公立レベル：help 人 (to) do・help 人 with ～）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '「人が～するのを手伝う」は help 人 (to) do で、to は省略できる（help me carry the bags）。～ing にはしない。人の前に to はつけない（×help to me）。',
+      '「人の～を手伝う」は help 人 with ＋名詞（help me with my homework）。受け身では to を入れる（I was helped to carry ～）。前置詞のあとは helping のように動名詞にする。',
+    ],
+    examples: [
+      { en: 'My father helped me (to) do my homework. / She helped me with my report.', ja: '父は私が宿題をするのを手伝ってくれた。／彼女は私のレポートを手伝ってくれた。' },
+      { en: 'This app helps students learn new words.', ja: 'このアプリは生徒が新しい単語を覚えるのに役立つ。' },
+    ],
+    questions: [
+      { sentence: '(A) My father (B) helped me (C) doing (D) my homework.', choices: ['(A) My father', '(B) helped me', '(C) doing', '(D) my homework'], answer: 2, why: 'help 人 (to) do なので do（または help me with my homework）。' },
+      { sentence: '(A) She (B) helped (C) to me (D) carry the bags.', choices: ['(A) She', '(B) helped', '(C) to me', '(D) carry the bags'], answer: 2, why: 'help のあとにすぐ人を置く。helped me。' },
+      { sentence: '(A) Helps (B) me (C) carry (D) this box, please.', choices: ['(A) Helps', '(B) me', '(C) carry', '(D) this box, please'], answer: 0, why: '命令文は動詞の原形なので Help。' },
+      { sentence: '(A) He (B) helped his mother (C) with the dishes (D) every evenings.', choices: ['(A) He', '(B) helped his mother', '(C) with the dishes', '(D) every evenings'], answer: 3, why: 'every のあとは単数なので every evening。' },
+      { sentence: '(A) The teacher (B) helped us (C) understanding (D) the problem.', choices: ['(A) The teacher', '(B) helped us', '(C) understanding', '(D) the problem'], answer: 2, why: 'help 人 (to) do なので understand。' },
+      { sentence: '(A) Thank you (B) for (C) help me (D) yesterday.', choices: ['(A) Thank you', '(B) for', '(C) help me', '(D) yesterday'], answer: 2, why: '前置詞 for のあとは動名詞なので helping。' },
+      { sentence: '(A) This app (B) helps (C) students (D) learning new words.', choices: ['(A) This app', '(B) helps', '(C) students', '(D) learning new words'], answer: 3, why: 'help 人 (to) do なので (to) learn。' },
+      { sentence: '(A) I (B) was helped (C) carry (D) the luggage by a stranger.', choices: ['(A) I', '(B) was helped', '(C) carry', '(D) the luggage by a stranger'], answer: 2, why: '受け身では to を入れて was helped to carry。' },
+      { sentence: '(A) She (B) helps (C) her brother (D) with study English.', choices: ['(A) She', '(B) helps', '(C) her brother', '(D) with study English'], answer: 3, why: 'with のあとに動詞の原形は置けない。helps her brother (to) study English とする。' },
+      { sentence: '(A) Help (B) to me (C) find (D) my glasses.', choices: ['(A) Help', '(B) to me', '(C) find', '(D) my glasses'], answer: 1, why: 'help のあとに to はつけない。Help me。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
