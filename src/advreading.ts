@@ -45342,6 +45342,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-balloons',
+    title: 'On Balloons',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few objects are as closely connected with happiness as the balloon. Children reach for them at fairs and birthday parties, and brightly colored balloons decorate weddings, shop openings, and celebrations of every kind. A balloon is, after all, nothing more than a thin skin filled with air or gas, and it usually lasts only a few days before it shrinks and falls. Yet this simple and short-lived object has played a surprising part in human history, and the feelings it arouses may tell us something about how we experience joy and loss.",
+      "The first balloons to carry people into the sky were large bags of cloth filled with hot air, and their flights caused enormous excitement. For the first time, human beings could rise above the ground and look down on their towns and fields from a height that only birds had known. Crowds gathered to watch these early flights, and some observers described them as a sign that there was no limit to what human ingenuity might achieve, even though the balloons could not be steered and went wherever the wind carried them.",
+      "Balloons soon found practical uses as well. ( A ) they could not travel in a chosen direction, they could rise high enough to observe the land below, and armies used them to watch the movements of enemy troops. Scientists sent balloons carrying instruments high into the atmosphere to measure temperature, pressure, and wind, and weather balloons are still released every day around the world, collecting information that helps forecasters predict the conditions of the days ahead. In this way, an invention first admired as a spectacle became one of the quiet tools on which modern science depends.",
+      "The small rubber balloons that children play with have a more recent history. They became widely available only after methods of producing rubber cheaply had been developed, and they quickly became a familiar part of festivals and parties. Part of their charm lies in their lightness, since a balloon filled with gas seems to want to escape from the hand that holds it, and the sight of a balloon drifting away into the sky can produce a strange mixture of delight and sadness. Many adults can still remember the moment in childhood when a balloon slipped from their fingers.",
+      "In recent years, however, the release of balloons has come to be seen as a problem. Balloons released at celebrations do not simply disappear; they eventually fall back to earth, often far away, and the remains may be swallowed by birds, turtles, and other animals that mistake them for food. Some towns and countries have therefore discouraged or banned the mass release of balloons, and many organizers of events have looked for other ways of marking special occasions, such as planting trees or blowing bubbles.",
+      "The balloon has also become a powerful image in language and thought. We speak of ideas or prices that rise like balloons, of plans that burst, and of hopes that are inflated beyond what reality can support. Such expressions draw on the balloon's peculiar combination of growth and fragility: a balloon can become larger and larger, but the more it expands, the thinner its skin becomes and the more easily it may break, a pattern that seems to apply to many human enterprises.",
+      "Perhaps, then, the balloon deserves more thought than we usually give it. It has carried human beings into the sky, helped scientists to understand the atmosphere, and brought pleasure to countless children, while also reminding us of the harm that even cheerful objects can cause. When we watch a balloon rise and vanish, we may feel both joy and a quiet sense of loss, and in that mixture of feelings we may recognize something true about many of the happiest moments in our lives.",
+    ],
+    ja: [
+      '風船ほど幸せと深く結びついているものはほとんどない。子どもたちはお祭りや誕生日会で風船に手をのばし、あざやかな色の風船は結婚式や店の開店、あらゆる種類のお祝いをかざる。風船は結局のところ、空気やガスをつめたうすい皮にすぎず、たいていは数日しかもたずに、しぼんで落ちてしまう。しかしこの単純で短命なものは人間の歴史の中で意外な役割をはたしてきたのであり、それがよびおこす気持ちは、私たちが喜びと喪失をどのように経験するかについて何かを教えてくれるのかもしれない。',
+      '人を空へ運んだ最初の気球は、熱い空気をつめた大きな布のふくろであり、その飛行は大きな興奮を引き起こした。はじめて人間は地面の上にのぼり、鳥しか知らなかった高さから自分たちの町や畑を見下ろすことができたのである。こうした初期の飛行を見ようと群衆が集まり、気球はかじをとることができず、風の運ぶままにどこへでも行ってしまったにもかかわらず、それを人間の工夫が達成しうることには限りがないしるしだと言う見物人もいた。',
+      '気球はやがて実際的な使い道も見いだした。選んだ方向へ進むことはできなかったが、下の土地を観察できるほど高くのぼることはでき、軍隊は敵の部隊の動きを見張るのにそれを使った。科学者たちは、気温や気圧、風をはかるために計器をのせた気球を大気の高いところまで送り、気象観測用の気球はいまも世界中で毎日放たれて、予報する人々がこの先の数日の天気を予測するのに役立つ情報を集めている。このようにして、はじめは見世物としてもてはやされた発明が、現代の科学がたよる静かな道具のひとつになったのである。',
+      '子どもたちが遊ぶ小さなゴム風船の歴史はもっと新しい。それはゴムを安くつくる方法が開発されてからようやく広く手に入るようになり、すぐにお祭りやパーティーのなじみの一部になった。その魅力の一部はその軽さにある。ガスをつめた風船は、それをもつ手からにげたがっているように見え、風船が空へただよっていくのを見ると、喜びと悲しみのふしぎなまじり合いが生まれることがあるのである。多くの大人は、子どものころ風船が指からすりぬけていった瞬間をいまも覚えている。',
+      'しかし近年、風船を放すことは問題と見なされるようになった。お祝いで放された風船はただ消えてしまうのではなく、やがてしばしば遠くはなれた場所で地上に落ち、その残りを、えさとまちがえた鳥やカメなどの動物がのみこんでしまうことがある。そのため、風船をいっせいに放すことをやめるようよびかけたり、禁止したりした町や国もあり、多くの行事の主催者は、木を植えたりシャボン玉をふいたりするなど、特別な機会をしるすほかの方法をさがしてきた。',
+      '風船はまた、ことばや考えの中で力強いイメージにもなっている。私たちは、考えや物価が風船のようにふくらむと言い、計画がはじけると言い、希望が現実にささえきれないほどふくらまされていると言う。そうした表現は、成長ともろさという風船ならではの組み合わせにもとづいている。風船はどんどん大きくなりうるが、ふくらめばふくらむほどその皮はうすくなり、われやすくなる。この型は、人間の多くのくわだてにもあてはまるように思える。',
+      'だとすれば、風船は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それは人間を空へ運び、科学者が大気を理解する助けとなり、数えきれない子どもたちに喜びをあたえてきたが、同時に、陽気なものでさえ害をもたらしうることを思い出させてもくれる。風船がのぼって消えていくのを見るとき、私たちは喜びと静かな喪失感の両方を感じるかもしれず、そのまじり合った気持ちの中に、人生でもっとも幸せな瞬間の多くについての何か本当のことを見いだすのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「選んだ方向へ進めなかったが、高くのぼることはできた」という譲歩なので Although。' },
+    ],
+    tf: [
+      { statement: '人を運んだ最初の気球は、かじをとることができなかった。', answer: true, why: '第2段落 the balloons could not be steered。' },
+      { statement: '気象観測用の気球は、いまではまったく使われていない。', answer: false, why: '第3段落 weather balloons are still released every day。' },
+      { statement: '放された風船の残りを、動物がのみこんでしまうことがある。', answer: true, why: '第5段落 the remains may be swallowed by birds, turtles, and other animals。' },
+      { statement: '筆者によると、風船はふくらむほど皮が厚くなる。', answer: false, why: '第6段落 the more it expands, the thinner its skin becomes。' },
+    ],
+    qa: [
+      { q: 'When did small rubber balloons become widely available?', choices: ['After cheap methods of producing rubber were developed.', 'Before the first hot-air balloons flew.', 'When armies began using them.', 'After weather balloons were banned.'], answer: 0, why: '第4段落 only after methods of producing rubber cheaply had been developed。' },
+      { q: 'What have some event organizers done instead of releasing balloons?', choices: ['Planted trees or blown bubbles.', 'Released more balloons.', 'Used larger balloons.', 'Stopped holding events.'], answer: 0, why: '第5段落 such as planting trees or blowing bubbles。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
