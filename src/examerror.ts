@@ -10558,6 +10558,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'This book [deals of] the history of Japan.', choices: ['deals with', 'deals from', 'deals at', 'deals by'], answer: 0, why: '「（本が話題）をあつかう」は deal with ～。' },
     ],
   },
+  {
+    id: 'exam-fix-248',
+    title: '入試の誤文訂正〈248〉（国公立レベル：英作文の succeed in ～ing・manage to do・fail to do）',
+    points: ['「～することに成功する」は succeed in ～ing（前置詞 in のあとは動名詞）で、× succeed to do。manage to do は「なんとか～する」、fail to do は「～しそこなう・～できない」で、どちらも to 不定詞をとる。', 'never fail to do は「かならず～する」。名詞は success（成功）・failure（失敗）。形容詞は successful（be successful in ～ing）。'],
+    examples: [{ en: 'She succeeded in passing the exam. / We managed to catch the last train. / He failed to arrive on time.', ja: '彼女は試験に合格することに成功した。／私たちはなんとか終電に間に合った。／彼は時間どおりに着けなかった。' }],
+    questions: [
+      { sentence: 'She finally [succeeded to pass] the exam.', choices: ['succeeded in passing', 'succeeded passing to', 'succeeded on pass', 'succeeded at pass'], answer: 0, why: '「～することに成功する」は succeed in ～ing。' },
+      { sentence: 'We [managed catching] the last train.', choices: ['managed to catch', 'managed in catching', 'managed catch to', 'managed for catching'], answer: 0, why: '「なんとか～する」は manage to do。' },
+      { sentence: 'He [failed arriving] on time for the meeting.', choices: ['failed to arrive', 'failed in arrive', 'failed arrived', 'failed for arriving'], answer: 0, why: '「～しそこなう」は fail to do。' },
+      { sentence: 'The team [succeeded in win] the championship.', choices: ['succeeded in winning', 'succeeded to winning', 'succeeded win', 'succeeded on won'], answer: 0, why: '前置詞 in のあとは動名詞なので winning。' },
+      { sentence: 'My grandmother never fails [calling] me on my birthday.', choices: ['to call', 'in calling', 'call', 'called'], answer: 0, why: 'never fail to do で「かならず～する」。' },
+      { sentence: 'The plan was a great [succeed].', choices: ['success', 'successful', 'succeeding', 'successfully'], answer: 0, why: '冠詞 a great のあとは名詞なので success。' },
+      { sentence: 'He was [success in] finding a new job.', choices: ['successful in', 'success to', 'succeed in', 'successfully at'], answer: 0, why: 'be 動詞のあとは形容詞 successful。be successful in ～ing。' },
+      { sentence: 'Did you [manage finishing] the report by Friday?', choices: ['manage to finish', 'manage in finishing', 'manage finished', 'manage for finish'], answer: 0, why: '「なんとか～する」は manage to do。' },
+      { sentence: 'The experiment ended in [fail].', choices: ['failure', 'failing', 'failed', 'fails'], answer: 0, why: '前置詞 in のあとの名詞は failure（失敗）。' },
+      { sentence: 'Scientists have [succeeded to develop] a new vaccine.', choices: ['succeeded in developing', 'succeeded developing to', 'succeeded on develop', 'succeeded of developing'], answer: 0, why: '「～することに成功する」は succeed in ～ing。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
