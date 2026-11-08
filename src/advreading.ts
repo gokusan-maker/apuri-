@@ -46062,6 +46062,42 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-wheels',
+    title: 'On Wheels',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The wheel is often described as one of the greatest inventions in human history, and it is easy to see why. Wheels carry us to work in cars, buses, and trains, they turn inside clocks and machines, and they allow heavy loads to be moved with far less effort than would otherwise be needed. Yet the wheel is so familiar that we rarely think about it, and its history turns out to be more surprising than we might expect, raising questions about how inventions spread and why some societies adopt them while others do not.",
+      "It is natural to assume that the wheel was invented very early, perhaps soon after human beings began to make tools. In fact, it appeared relatively late, thousands of years after the development of farming, pottery, and even the first cities. One reason may be that a working wheel requires more than a simple round object. It must be attached to an axle that turns smoothly, and both must be shaped with considerable precision, so that the wheel depends on a whole set of skills and materials that took a long time to develop. The apparent simplicity of the wheel, in other words, hides a great deal of earlier knowledge.",
+      "Interestingly, the first use of the wheel may not have been for transport at all. ( A ) we usually associate wheels with carts and vehicles, some of the earliest wheels seem to have been used by potters, who turned clay on a spinning disk to shape bowls and jars more quickly and evenly. The use of wheels for transport came later, and even then it spread slowly, since carts were of little use without roads or paths smooth enough for them to travel on.",
+      "The history of the wheel also shows that useful inventions are not always adopted everywhere. Some societies that knew of the wheel, and even used it in toys, did not use it widely for transport, perhaps because they lacked suitable animals to pull carts or because their land was too steep or rough. In such places, people found other ways to carry goods, relying on human strength, boats, or pack animals. An invention, it seems, is valuable only when it suits the conditions in which people live.",
+      "Over time, the wheel became the basis for an enormous range of machines. Water wheels used the force of rivers to grind grain, spinning wheels made thread for cloth, and gears, which are wheels with teeth, allowed movement to be transferred and controlled with great precision. Many of the machines that transformed industry, and many of the devices we use today, depend on the simple principle of an object turning around a central point. Even the hard drives of older computers relied on disks spinning at great speed.",
+      "The wheel has also become a powerful image in human thought. We speak of the wheel of fortune, which raises some people up and brings others down, of the wheels of government turning slowly, and of reinventing the wheel when someone wastes effort on a problem that has already been solved. The circular shape of the wheel has suggested ideas of repetition, change, and return, and many cultures have used it as a symbol of time or of the cycle of life.",
+      "Perhaps, then, the wheel deserves more thought than we usually give it. Its late appearance reminds us that even simple-looking inventions may depend on many earlier developments, and its uneven spread shows that an idea's value depends on circumstances. The next time we ride a bicycle or watch the wheels of a train turn, it may be worth remembering that this familiar object carries within it a long and complicated story of human ingenuity, adaptation, and imagination.",
+    ],
+    ja: [
+      '車輪はしばしば人間の歴史でもっとも偉大な発明のひとつと言われ、その理由はすぐにわかる。車輪は車やバス、電車で私たちを職場へ運び、時計や機械の中で回り、そうでなければ必要になるよりもはるかに少ない労力で重い荷物を動かせるようにしてくれる。しかし車輪はあまりにもなじみ深いので、私たちはそれについてめったに考えない。そしてその歴史は予想よりもおどろくべきものであり、発明がどのように広まるのか、そしてなぜある社会はそれを取り入れ、別の社会は取り入れないのかという問いを投げかけるのである。',
+      '車輪はとても早く、おそらく人間が道具をつくりはじめてまもなく発明されたと思うのは自然なことである。実際には、それは比較的おそく、農業や土器、さらには最初の都市が発達してから何千年もあとにあらわれた。その理由のひとつは、うまくはたらく車輪には単純なまるいもの以上のものが必要だからかもしれない。それはなめらかに回る車軸に取りつけられなければならず、どちらもかなりの正確さで形づくられなければならない。そのため車輪は、発達するのに長い時間のかかった技術と材料のひとそろいにたよっているのである。言いかえれば、車輪の見かけの単純さは、それ以前の多くの知識をかくしているのである。',
+      '興味深いことに、車輪の最初の使い道は、そもそも運ぶことではなかったのかもしれない。私たちはふつう車輪を荷車や乗り物と結びつけるが、もっとも古い車輪のいくつかは陶工が使っていたらしい。彼らは回る円盤の上で粘土を回し、おわんやつぼをより早く均一に形づくったのである。運ぶための車輪の使用はそのあとになってからであり、そのときでさえゆっくりと広まった。荷車は、それが通れるほどなめらかな道や小道がなければほとんど役に立たなかったからである。',
+      '車輪の歴史はまた、役に立つ発明がいつもどこでも取り入れられるわけではないことを示している。車輪を知っていて、おもちゃに使ってさえいたのに、運ぶためには広く使わなかった社会もある。おそらく荷車を引くのに適した動物がいなかったか、土地が急すぎたり、でこぼこすぎたりしたからだろう。そうした場所では、人々は人の力や船、荷物を運ぶ動物にたよって、品物を運ぶほかの方法を見つけた。発明は、人々がくらす条件に合っているときにだけ価値があるらしいのである。',
+      '時がたつにつれて、車輪はとても幅広い機械のもとになった。水車は川の力を使って穀物をひき、糸車は布のための糸をつくり、歯のついた車輪である歯車は、動きをとても正確に伝えたりあやつったりすることを可能にした。産業を大きく変えた機械の多く、そして今日私たちが使う道具の多くは、ものが中心のまわりを回るという単純な原理にたよっている。古いコンピューターのハードディスクでさえ、とても速く回る円盤にたよっていた。',
+      '車輪はまた、人間の考えの中で力強いイメージにもなっている。私たちは、ある人を持ち上げ、ほかの人を落とす運命の輪について話し、政府の歯車がゆっくり回ると言い、すでに解決された問題にだれかが労力をむだにすると、車輪を発明し直すと言う。車輪のまるい形はくり返しや変化、もどることの考えを思わせ、多くの文化がそれを時や生命の循環のシンボルとして使ってきた。',
+      'だとすれば、車輪は、私たちがふだん向けているよりも多くの考察に値するのかもしれない。それがおそくあらわれたことは、単純に見える発明でさえ多くのそれ以前の発達にたよっているかもしれないことを思い出させ、その広まり方がばらばらだったことは、考えの価値が状況によることを示している。次に自転車に乗ったり、電車の車輪が回るのを見たりするとき、このなじみ深いものが、人間の工夫と適応と想像力の長く複雑な物語をその中にたずさえていることを思い出してみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Once'], answer: 0, why: '「ふつう車輪を乗り物と結びつけるが、最古の車輪は陶工が使っていたらしい」という対比なので Although。' },
+    ],
+    tf: [
+      { statement: '車輪は、最初の都市が発達してから何千年もあとにあらわれた。', answer: true, why: '第2段落 thousands of years after the development of farming, pottery, and even the first cities。' },
+      { statement: '車輪の最初の使い道は、まちがいなく荷車だった。', answer: false, why: '第3段落 the first use of the wheel may not have been for transport at all。' },
+      { statement: '車輪を知っていても、運ぶために広く使わなかった社会がある。', answer: true, why: '第4段落 did not use it widely for transport。' },
+      { statement: '筆者によると、発明はどんな条件でも同じように価値がある。', answer: false, why: '第4段落 valuable only when it suits the conditions in which people live。' },
+    ],
+    qa: [
+      { q: 'Why were carts of little use at first?', choices: ['There were no smooth roads or paths.', 'They were too expensive.', 'Nobody knew how to make them.', 'They were too small.'], answer: 0, why: '第3段落 without roads or paths smooth enough for them to travel on。' },
+      { q: 'What does reinventing the wheel mean?', choices: ['Wasting effort on a problem already solved.', 'Making a better car.', 'Learning to ride a bicycle.', 'Repairing a broken machine.'], answer: 0, why: '第6段落 when someone wastes effort on a problem that has already been solved。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
