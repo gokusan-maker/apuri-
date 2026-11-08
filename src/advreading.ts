@@ -45378,6 +45378,50 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-portion-sizes',
+    title: 'Should Restaurants Serve Smaller Portions?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Over the past few decades, the size of the meals served in many restaurants has grown considerably. A plate of pasta, a burger, or a bowl of rice that would once have been regarded as generous is now often treated as normal, and many customers expect to receive large amounts of food for their money. In response to concerns about health and waste, some governments and doctors have begun to ask whether restaurants should be encouraged, or even required, to offer smaller portions, and the question has provoked a lively debate.",
+      "Supporters of smaller portions argue first that large servings contribute to overeating. Studies have suggested that people tend to eat much of the food placed in front of them, regardless of how hungry they actually are, so that a larger plate often leads to a larger meal. Over time, supporters say, this habit can contribute to weight gain and to illnesses connected with an unhealthy diet, and restaurants therefore bear some responsibility for the amounts of food they serve. Children, in particular, may learn from an early age to regard oversized meals as normal.",
+      "Supporters also point to the problem of waste. A large share of the food served in restaurants is never eaten, and most of it is simply thrown away at the end of the meal. Offering smaller portions, or allowing customers to choose between different sizes, could reduce this waste considerably and save restaurants money at the same time. In some countries, supporters note, customers are already used to ordering half portions, and nobody regards this as unusual. Making such options more widely available, they argue, would require little effort and could bring considerable benefits.",
+      "Critics, however, argue that the size of a meal is a matter for customers and restaurants to decide, not governments. ( A ) some people may eat more than they need, adults should be free to choose how much they wish to eat, and many customers regard a generous serving as a sign of good value. Critics also warn that restaurants which reduce their portions may lose customers to competitors, particularly in places where diners are accustomed to large meals and may feel cheated if they receive less. For small family restaurants with narrow profits, such a loss could be serious.",
+      "Critics further point out that people's needs differ greatly. A young athlete or a manual worker may need far more food than an office worker or an elderly person, and a single standard portion cannot suit everyone. Rather than reducing portions for all, critics suggest, it would be better to provide clear information about the energy content of meals, so that customers can make informed decisions, and to make it easy and acceptable to take leftover food home.",
+      "Some restaurants have tried to satisfy both sides by offering a choice of sizes. Customers may order a small, medium, or large serving, sometimes with a modest difference in price, and some restaurants serve meals on smaller plates so that an ordinary portion looks more generous. Others have introduced boxes in which diners can carry home what they cannot finish, a practice that was once regarded as slightly embarrassing in some cultures but is now increasingly common. Such small changes, restaurant owners report, have reduced waste without upsetting regular customers.",
+      "The debate over portion sizes therefore reflects a broader question about how far businesses and governments should influence personal choices. Most people would agree that excessive eating and food waste are serious problems, but there is less agreement about who is responsible for solving them. The most effective approach may be one that respects the freedom of customers while making healthier and less wasteful choices easier, so that eating sensibly becomes a natural habit rather than a rule imposed from outside.",
+    ],
+    ja: [
+      'この数十年で、多くのレストランで出される食事の量はかなりふえた。かつては気前がよいと見なされたであろうパスタの皿やハンバーガー、ごはんの茶わんが、いまではしばしばふつうのものとあつかわれ、多くの客は払ったお金に見合う大量の食べ物を受けとることを期待している。健康とむだへの心配から、一部の政府や医師は、レストランにもっと少ない量を出すようすすめるべきか、あるいは義務づけるべきかを問いはじめており、この問いは活発な議論を引き起こしている。',
+      '少ない量を支持する人々は、まず、多すぎる量は食べすぎの原因になると主張する。研究によれば、人は実際にどれだけおなかがすいているかにかかわらず、目の前に置かれた食べ物の多くを食べる傾向があり、そのため大きな皿はしばしば多い食事につながるという。時がたつにつれて、この習慣は体重の増加や不健康な食事と結びついた病気の原因になりうるので、レストランは出す食べ物の量についてある程度の責任を負っていると支持する人々は言う。とくに子どもは、幼いころから大きすぎる食事をふつうのものと見なすようになるかもしれない。',
+      '支持する人々はまた、むだの問題も指摘する。レストランで出される食べ物の大きな割合は食べられることがなく、そのほとんどは食事の終わりにただ捨てられる。少ない量を出したり、客がいろいろな大きさから選べるようにしたりすれば、このむだをかなりへらし、同時にレストランのお金も節約できるだろう。国によっては、客はすでに半分の量を注文することになれており、だれもそれをめずらしいとは思わないと支持する人々は指摘する。そうした選択肢をもっと広く用意することは、ほとんど手間がかからず、かなりの利益をもたらしうると彼らは主張する。',
+      'しかし批判する人々は、食事の量は客とレストランが決めることであり、政府が決めることではないと主張する。必要以上に食べる人もいるかもしれないが、大人はどれだけ食べたいかを自由に選べるべきであり、多くの客は気前のよい量をお得のしるしと見なしている。批判する人々はまた、量をへらしたレストランは競争相手に客をうばわれるかもしれないと警告する。とくに、食べる人が多い食事になれていて、少なく出されるとだまされたと感じるかもしれない場所ではそうである。利益の少ない小さな家族経営のレストランにとって、そうした損失は深刻なものになりうる。',
+      '批判する人々はさらに、人々の必要は大きくちがうと指摘する。若い運動選手や体を使って働く人は、会社員やお年寄りよりもずっと多くの食べ物を必要とするかもしれず、ひとつの標準的な量がすべての人に合うことはない。すべての人の量をへらすよりも、客が知ったうえで決められるよう食事のエネルギーについてはっきりした情報を示し、残った食べ物をもち帰ることをかんたんで当たり前のことにするほうがよいと批判する人々は提案する。',
+      '大きさを選べるようにすることで、両方の側を満足させようとしてきたレストランもある。客は小・中・大の量を注文でき、ときには値段にも少し差があり、ふつうの量がより多く見えるよう小さめの皿で食事を出すレストランもある。また、食べきれなかったものをもち帰れる箱を用意したレストランもある。これは、文化によってはかつて少しはずかしいことと見なされていたが、いまではますますふつうになっている。こうした小さな変化によって、常連客をいやな気持ちにさせることなくむだがへったと、レストランの経営者たちは報告している。',
+      'したがって、量の大きさをめぐる議論は、会社や政府が個人の選択にどこまで影響をあたえるべきかという、より広い問いを映し出している。食べすぎや食べ物のむだが深刻な問題であることにはほとんどの人が同意するだろうが、それを解決する責任がだれにあるかについてはあまり意見が一致しない。もっとも効果的なやり方は、客の自由を尊重しながら、より健康的でむだの少ない選択をしやすくし、賢明に食べることが外からおしつけられる決まりではなく、自然な習慣になるようにするものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Although', 'Because', 'Unless', 'Until'], answer: 0, why: '「必要以上に食べる人もいるかもしれないが、大人は自由に選べるべきだ」という譲歩なので Although。' },
+    ],
+    summary: {
+      text: 'Supporters say large servings lead to overeating and food ( 1 ), and that smaller portions could save restaurants money. Critics argue that adults should be free to choose and that people’s needs differ, so clear ( 2 ) about meals would be better. Some restaurants offer a choice of sizes and boxes for taking ( 3 ) home.',
+      blanks: [
+        { choices: ['waste', 'prices', 'safety', 'colors'], answer: 0, why: '第3段落 Supporters also point to the problem of waste。' },
+        { choices: ['information', 'music', 'lighting', 'uniforms'], answer: 0, why: '第5段落 provide clear information about the energy content of meals。' },
+        { choices: ['leftovers', 'menus', 'plates', 'chairs'], answer: 0, why: '第6段落 boxes in which diners can carry home what they cannot finish。' },
+      ],
+    },
+    tf: [
+      { statement: '多くのレストランで出される食事の量は、この数十年でふえた。', answer: true, why: '第1段落 the size of the meals ... has grown considerably。' },
+      { statement: '研究によれば、人はおなかがすいている分だけを正確に食べる。', answer: false, why: '第2段落 regardless of how hungry they actually are。' },
+      { statement: '批判する人々は、量をへらしたレストランが客を失うかもしれないと警告する。', answer: true, why: '第4段落 may lose customers to competitors。' },
+      { statement: '残った食べ物をもち帰ることは、どの文化でもずっとふつうのことだった。', answer: false, why: '第6段落 once regarded as slightly embarrassing in some cultures。' },
+    ],
+    qa: [
+      { q: 'Why do some restaurants serve meals on smaller plates?', choices: ['So that an ordinary portion looks more generous.', 'So that they can save space.', 'So that meals cool down faster.', 'So that they can charge more.'], answer: 0, why: '第6段落 so that an ordinary portion looks more generous。' },
+      { q: 'Who may need far more food than an office worker, according to critics?', choices: ['A young athlete or a manual worker.', 'An elderly person.', 'A restaurant owner.', 'A doctor.'], answer: 0, why: '第5段落 A young athlete or a manual worker may need far more food。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
