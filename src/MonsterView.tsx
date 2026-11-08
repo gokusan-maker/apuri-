@@ -3652,6 +3652,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M74 60 q8 -4 6 -12" stroke="#1c1917" strokeWidth="3" fill="none" strokeLinecap="round" />
       </g>
     )
+  if (species === 'grysbok')
+    return (
+      <g>
+        {/* しもふりの白い毛 */}
+        <circle cx="42" cy="58" r="1.5" fill="#ffffff" />
+        <circle cx="50" cy="62" r="1.5" fill="#ffffff" />
+        <circle cx="58" cy="58" r="1.5" fill="#ffffff" />
+        <circle cx="46" cy="66" r="1.5" fill="#ffffff" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
