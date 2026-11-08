@@ -1327,7 +1327,7 @@
   - [x] 498 正誤問題〈252〉（京大レベル：英作文の think of・think about・think that）10問
   - [x] 499 誤文訂正〈246〉（東大レベル：英作文の apologize to 人 for・complain to 人 about）10問
   - [x] 500 正誤問題〈253〉（国公立レベル：英作文の be good at・be fond of・be afraid of などの前置詞）10問
-  - [ ] 501 誤文訂正〈247〉（京大レベル：英作文の deal with・cope with・put up with）10問
+  - [x] 501 誤文訂正〈247〉（京大レベル：英作文の deal with・cope with・put up with）10問
   - [ ] 502 正誤問題〈254〉（東大レベル：英作文の depend on・rely on・count on）10問
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
 - [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）

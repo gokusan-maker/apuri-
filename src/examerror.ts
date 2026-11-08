@@ -10515,6 +10515,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'Nobody [complained of the teacher] about the test.', choices: ['complained to the teacher', 'complained the teacher', 'complained at the teacher with', 'complained by the teacher'], answer: 0, why: '不満を言う相手は to 人。complain to the teacher about ～。' },
     ],
   },
+  {
+    id: 'exam-fix-247',
+    title: '入試の誤文訂正〈247〉（京大レベル：英作文の deal with・cope with・put up with）',
+    points: ['deal with ～ は「（問題・人）に対処する・あつかう」、cope with ～ は「（困難）にうまく対処する・なんとか切りぬける」、put up with ～ は「（いやなこと）をがまんする」。どれも with が必要で、× deal the problem／× cope the stress／× put up the noise。', 'put up with は3語でひとまとまりの句動詞で、with をぬかすと「（テント・看板）を立てる」などの別の意味になる。前置詞のあとに動詞を置くときは ～ing（cope with living alone）。'],
+    examples: [{ en: 'We need to deal with this problem. / She coped with the stress well. / I can’t put up with the noise.', ja: '私たちはこの問題に対処する必要がある。／彼女はストレスにうまく対処した。／その騒音にはがまんできない。' }],
+    questions: [
+      { sentence: 'The government must [deal the problem] quickly.', choices: ['deal with the problem', 'deal on the problem', 'deal for the problem', 'deal to the problem'], answer: 0, why: '「（問題）に対処する」は deal with ～。' },
+      { sentence: 'She found it hard to [cope the stress] of her new job.', choices: ['cope with the stress', 'cope at the stress', 'cope of the stress', 'cope by the stress'], answer: 0, why: '「（困難）に対処する」は cope with ～。' },
+      { sentence: 'I can’t [put up the noise] from next door any longer.', choices: ['put up with the noise', 'put with up the noise', 'put on with the noise', 'put the noise up to'], answer: 0, why: '「（いやなこと）をがまんする」は put up with ～。' },
+      { sentence: 'How do you [deal about] difficult customers?', choices: ['deal with', 'deal in', 'deal at', 'deal to'], answer: 0, why: '「（人）をあつかう」は deal with ～。' },
+      { sentence: 'Old people sometimes find it hard to cope with [live] alone.', choices: ['living', 'to live', 'lived', 'lives'], answer: 0, why: '前置詞 with のあとは動名詞なので living。' },
+      { sentence: 'Why do you [put up to] his rude behavior?', choices: ['put up with', 'put away with', 'put off with', 'put out with'], answer: 0, why: '「がまんする」は put up with ～。' },
+      { sentence: 'The new manager [dealt well the situation].', choices: ['dealt with the situation well', 'dealt well to the situation', 'dealt the situation with well', 'dealt well of the situation'], answer: 0, why: 'deal with ～ のあとに副詞 well を置く。dealt with the situation well。' },
+      { sentence: 'Many students [cope by] the pressure of exams by talking to friends.', choices: ['cope with', 'cope to', 'cope on', 'cope at'], answer: 0, why: '「（重圧）に対処する」は cope with ～。' },
+      { sentence: 'We had to [put up with to] a lot of rain during the trip.', choices: ['put up with', 'put up to with', 'put with up', 'put up on'], answer: 0, why: 'put up with のあとにすぐ名詞を置く。to は不要。' },
+      { sentence: 'This book [deals of] the history of Japan.', choices: ['deals with', 'deals from', 'deals at', 'deals by'], answer: 0, why: '「（本が話題）をあつかう」は deal with ～。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
