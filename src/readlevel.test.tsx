@@ -6338,3 +6338,57 @@ it('私学難関 の長文「仕事を内側から作り変える」（691語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('京大 の長文「かけまちがいの電話について」（708語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-wrong-numbers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「水道水に塩素を入れた歴史」（601語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-chlorinated-water')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「海をこえて広がるクジラの歌」（609語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-humpback-song-waves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「掃除機の歩み」（451語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-vacuum-cleaner-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「運動中に足がつるのはなぜか」（432語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-muscle-cramps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「真冬に船を燃やす祭り」（548語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-up-helly-aa')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「小さな承諾が大きな承諾を生む」（536語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-foot-in-the-door')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「バイオ炭で炭素を土にとじこめる」（648語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-biochar-soil')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「小さな失敗が好感を生むとき」（647語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-pratfall-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
