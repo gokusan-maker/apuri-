@@ -23,6 +23,7 @@ describe('並べ替え', () => {
   })
 
   it('単語帳の例文の多くが出題できる（3〜9語）', () => {
-    expect(WORDS.filter((w) => canScramble(w.example)).length / WORDS.length).toBeGreaterThan(0.8)
+    // 上のレベル（国公立〜東大）の単語は入試らしい長い例文（12〜22語）なので並べかえには出ない。それでも4分の3以上は出題できる
+    expect(WORDS.filter((w) => canScramble(w.example)).length / WORDS.length).toBeGreaterThan(0.75)
   })
 })
