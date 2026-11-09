@@ -8540,3 +8540,63 @@ it('国公立 の長文「小さな昆虫の羽ばたきの秘密」（643語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ナキウサギの冬じたく」（442語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-pika-haypiles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「広いグラウンドで音をそろえる」（430語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-school-marching-band')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「魔法びんの歴史」（558語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-vacuum-flask-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「地面にとどかない雨」（541語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-virga-vanishing-rain')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「絵をかくと覚えられる」（678語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-drawing-effect-memory')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「雪とともに生きる鳥ライチョウ」（685語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-ptarmigan-snow-life')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「採用で信用情報を調べるべきか」（762語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-employer-credit-checks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「おたまについて」（798語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-ladles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「火を使わない銀の精錬―パティオ法」（685語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-patio-process-silver')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「のどで子を育てるダーウィンガエル」（590語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-darwins-frog-brooding')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
