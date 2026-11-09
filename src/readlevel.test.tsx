@@ -6158,3 +6158,63 @@ it('国公立 の長文「待つことができるコウイカ」（643語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「健康な人をわざと感染させてよいか」（787語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-challenge-trials')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「古い住所録について」（783語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-address-book')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ベルリンで偶然生まれた青」（691語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-prussian-blue')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「危険な姿を借りる生き物」（559語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-batesian-mimicry')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「北極星の見つけ方」（488語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-north-star')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「家から家へ回る回覧板」（453語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-kairanban')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「トランプの長い旅」（559語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-playing-cards')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「シャドーイングで学ぶ」（524語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-shadowing')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「陽性の結果が私たちを惑わすとき」（681語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-base-rate-neglect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「教材から生まれたパズル」（641語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-rubiks-cube')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
