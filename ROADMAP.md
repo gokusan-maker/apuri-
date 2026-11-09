@@ -74,7 +74,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊽（仮定法・前置詞＋関係詞・倒置・長い主語の一致・名詞節、whether/if・as/like・during/while・by/until・since/for の使い分け。別の目で全問を検証し、既存と似た9問を書きかえて10問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊾（動詞の型 enable/allow O to・suggest/insist that・persuade/convince・let/make・find it＋形容詞＋to・regard O as・attribute A to B・credit A with。別の目で全問を検証し1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊿（倒置・比較・仮定法・不定詞の完了形・名詞の数の一致など、5レベル×正誤と訂正で100問）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正51
+- [x] 私学難関〜東大の正誤問題・誤文訂正51（他動詞と前置詞・不可算名詞・lie と lay・完了不定詞・No sooner/Hardly・A is to B what C is to D・enough の語順・Not until の倒置など、5レベル×正誤と訂正で100問）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正52
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉚（suggest・let/make/have・help・prevent from などの語法、形容詞と副詞、lie/lay・rise/raise、動詞・形容詞と前置詞、接続詞と前置詞、相関接続詞の並列。別の目で全問を検証し3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉛（関係詞と名詞節の使い分け・前置詞＋関係代名詞・関係副詞・譲歩節・強調構文・one of the＋複数・the number of・倒置。別の目で全問を検証し2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉜（長い文での時制と相・話法の時制の一致・助動詞＋完了形・仮定法現在・wish/if only・as if・would rather・伝達動詞の受け身。別の目で全問を検証し5問を直した）
@@ -96,7 +97,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊽（仮定法・前置詞＋関係詞・倒置・長い主語の一致・名詞節、whether/if・as/like・during/while・by/until・since/for の使い分け。別の目で全問を検証し、既存と似た9問を書きかえて10問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊾（動詞の型 enable/allow O to・suggest/insist that・persuade/convince・let/make・find it＋形容詞＋to・regard O as・attribute A to B・credit A with。別の目で全問を検証し1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊿（倒置・比較・仮定法・不定詞の完了形・名詞の数の一致など、5レベル×正誤と訂正で100問）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正51
+- [x] 私学難関〜東大の正誤問題・誤文訂正51（他動詞と前置詞・不可算名詞・lie と lay・完了不定詞・No sooner/Hardly・A is to B what C is to D・enough の語順・Not until の倒置など、5レベル×正誤と訂正で100問）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正52
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
