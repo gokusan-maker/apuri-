@@ -6098,3 +6098,39 @@ it('私学難関 の長文「警報が雑音になるとき」（631語）：私
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ユースホステルの始まり」（398語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-youth-hostels')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「店がクーポンを配る理由」（441語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-coupons')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「こげつかないフライパンの誕生」（552語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-nonstick-pans')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「グループ作業の手抜き」（494語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-group-projects')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「食べ放題がもうかるしくみ」（608語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-buffet-economics')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ほとんど空気でできた固体」（608語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-aerogel')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
