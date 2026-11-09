@@ -8720,3 +8720,63 @@ it('国公立 の長文「南アフリカのイワシの大移動」（528語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ミーアキャットのサソリ授業」（541語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-meerkat-scorpion-lessons')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「町の博物館の「なぞの品」の日」（491語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mystery-object-day')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ヘアドライヤーの歴史」（527語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hair-dryer-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「夕日と反対の空のピンクの帯」（523語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-belt-of-venus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「単語の中の文字は見やすい」（624語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-word-superiority-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「オットセイの親子の再会」（611語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-fur-seal-reunions')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「財団は期限内に資金を使い切るべきか」（780語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-foundation-spend-down')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「爪切りについて」（723語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-nail-clippers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「鏡の裏の銀：水銀を使わなくなった鏡」（629語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-mirror-silvering')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「餌で魚をつるサギ」（562語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-heron-bait-fishing')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
