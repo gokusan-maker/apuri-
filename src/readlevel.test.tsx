@@ -6530,3 +6530,39 @@ it('国公立 の長文「虫を撃ち落とす魚」（602語）：国公立に
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「選択にかくれた値段」（548語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-opportunity-cost')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「スマホが文を先に書く」（446語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-predictive-text')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「高層ビルのハヤブサ」（573語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-city-peregrines')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「光の祭りディワリ」（548語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-diwali-lights')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「集団はなぜ知っていることばかり話すのか」（742語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hidden-profiles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「月餅と中秋の名月」（778語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-mooncakes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
