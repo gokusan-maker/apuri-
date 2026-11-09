@@ -3,11 +3,11 @@ import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
   it('中学2033語＋高校基礎680語＋熟語280＋曜日・月25＋テーマ別544＋数44＋色・形24＋会話190＋ビジネス71＋英検2級101＋英検準1級100＋英検1級100＋ネイティブ100あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(7671)
+    expect(WORDS).toHaveLength(7971)
     expect(WORDS.filter((w) => levelOf(w) === 'ネイティブ')).toHaveLength(300)
-    expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(1164) // 単語のレベルの見直しで、京大から私学難関・国公立へ移した語は近い級も変わる
-    expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(1571) // 2026-11-08 に国公立・旧帝大の単語を93語足した
-    expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(662)
+    expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(1264) // 単語のレベルの見直しで、京大から私学難関・国公立へ移した語は近い級も変わる
+    expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(1721) // 2026-11-08 に国公立・旧帝大の単語を93語足した
+    expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(712)
     expect(new Set(WORDS.map((w) => w.en.toLowerCase())).size).toBe(WORDS.length) // 同じ英単語を2回入れない
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
     expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(807) // CEFR-J で見直して中学から103語移した
@@ -37,8 +37,8 @@ describe('WORDS', () => {
 
   it('例文は大文字（か数字）で始まり . ! ? で終わり、訳は 。！？ などで終わる', () => {
     for (const w of WORDS) {
-      expect(w.example, w.id).toMatch(/^[A-Z0-9"']/)
-      expect(w.example, w.id).toMatch(/[.!?"]$/)
+      expect(w.example, w.id).toMatch(/^[A-Z0-9"'“‘]/)
+      expect(w.example, w.id).toMatch(/[.!?"”’]$/)
       expect(w.exampleJa, w.id).toMatch(/[。！？）」]$/)
     }
   })
