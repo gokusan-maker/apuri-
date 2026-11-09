@@ -6470,3 +6470,39 @@ it('国公立 の長文「触れると葉を閉じる植物」（564語）：国
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「風が吹くと寒く感じるわけ」（466語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-wind-chill')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ガラスに刻む模様」（410語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-edo-kiriko')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「人力車の盛衰」（552語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-rickshaw-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「牛乳を消化できない大人がいるわけ」（589語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-lactase-persistence')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「「なぜなら」の説得力」（727語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-because-requests')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「関節の痛みで雨はわかるのか」（704語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-weather-joint-pain')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
