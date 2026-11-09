@@ -6980,3 +6980,27 @@ it('私学難関 の長文「敵対的メディア効果」（682語）：私学
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「図書館の貸出に作家への支払いは必要か」（797語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-public-lending-right')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「文鎮について」（798語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-paperweights')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「計算尺の盛衰」（698語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-slide-rule-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ワニの敏感な皮膚」（610語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-crocodile-dome-receptors')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
