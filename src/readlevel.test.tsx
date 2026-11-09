@@ -4370,3 +4370,51 @@ it('京大専用の長文284「巣について」：京大の下限600語以上�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
 })
+
+it('東大 の長文「山火事を燃えるままにすべきか」（789語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-let-fires-burn')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「公費の研究は無料で読めるべきか」（715語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-open-access-research')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「余白について」（750語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-margins')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「引き出しについて」（702語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-drawers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「沈んでいく都市の地面」（672語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-sinking-cities-groundwater')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「バラスト水の密航者たち」（637語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-ballast-water-stowaways')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「産業の時代を運んだ運河」（550語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-canal-age')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「菌とたたかう銅の力」（528語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-copper-surfaces')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
