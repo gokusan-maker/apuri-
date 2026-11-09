@@ -9260,3 +9260,57 @@ it('国公立 の長文「頭に窓をもつ魚」（625語）：国公立に出
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「マーガレット・ナイトと底の平らな紙袋」（414語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-paper-bag-machine')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「霧から水をつかまえる」（404語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-fog-nets')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「歩道に置かれた手紙」（521語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-lost-letter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「言いまちがいが明かすもの」（490語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-slips-of-tongue')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ドッガーランド：北海の下の国」（644語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-doggerland')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ロンドンが息をできなかった夏」（673語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-great-stink')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「紙やすりについて」（772語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-sandpaper')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「フナクイムシ：木の船の見えない敵」（671語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-shipworm-timber')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「キャリントン・イベント：1859年からの警告」（634語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-carrington-storm')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
