@@ -6044,3 +6044,57 @@ it('私学難関 の長文「会話の一瞬のタイミング」（748語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「AIを発明者と認めるべきか」（780語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-ai-named-inventor')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「箱に入ったままの贈り物」（712語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-the-unused-gift')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「雨量計の歴史」（606語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-history-of-rain-gauge')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「一日に何千回も眠るペンギン」（581語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-penguin-microsleeps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ティーバッグの歴史」（477語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tea-bag')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「退職面談の本音」（505語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-exit-interviews')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「その名言はだれのもの？」（502語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-misattributed-quotes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「グラフの軸はどこから」（628語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-truncated-axes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「警報が雑音になるとき」（631語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-alarm-fatigue')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
