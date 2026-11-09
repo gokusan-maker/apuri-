@@ -7286,3 +7286,27 @@ it('国公立 の長文「アカガニの大移動」（592語）：国公立に
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「燃料補助金は廃止すべきか」（794語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-fuel-subsidy-reform')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「コートかけについて」（736語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-coat-hooks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ガタパーチャと海底電信」（652語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-gutta-percha')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ミヤコドリの貝の開け方」（588語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-oystercatcher-shells')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
