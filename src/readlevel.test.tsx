@@ -6680,3 +6680,63 @@ it('私学難関 の長文「酵母なしでふくらむ菓子」（661語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「サッカークラブはサポーターが所有すべきか」（790語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-fan-owned-football-clubs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「みかんの皮をむくこと」（747語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-peeling-an-orange')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「地震計の歴史」（690語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-history-seismograph')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「目から血を飛ばすトカゲ」（577語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-horned-lizard-blood')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「海底にしずんだクジラ」（537語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-whale-fall')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「金星が水星より熱いわけ」（501語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-venus-heat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ビルのあいだの小さな公園」（610語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-pocket-parks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「スタンプカードの力」（580語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-stamp-cards')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「注射器がたどった長い道」（726語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hypodermic-syringe')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「だれにも見えない質量」（732語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-dark-matter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
