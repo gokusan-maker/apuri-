@@ -4754,3 +4754,39 @@ it('国公立 の長文「風をとらえて家を冷やす」（563語）：国
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「店内に流れる音楽」（414語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-shop-music')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「のどまで出かかった言葉」（472語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tip-tongue')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「氷でつくる道路」（604語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-ice-roads')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「右側通行と左側通行」（642語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-road-sides')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ネタバレは本当に物語を台無しにするのか」（753語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-spoilers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「堤防が招く危険」（751語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-levee-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
