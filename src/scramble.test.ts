@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { canScramble, isCorrectOrder, scramble, split } from './scramble'
-import { WORDS } from './words'
+import { WORDS, levelOf } from './words'
 
 describe('並べ替え', () => {
   it('文末の記号を分けて単語に分ける', () => {
@@ -23,7 +23,8 @@ describe('並べ替え', () => {
   })
 
   it('単語帳の例文の多くが出題できる（3〜9語）', () => {
-    // 上のレベル（国公立〜東大）の単語は入試らしい長い例文（12〜22語）なので並べかえには出ない。それでも4分の3以上は出題できる
-    expect(WORDS.filter((w) => canScramble(w.example)).length / WORDS.length).toBeGreaterThan(0.75)
+    // 上のレベル（英検準1級・1級）の単語は入試らしい長い例文（12〜22語）なので並べかえには出さない。それ以外の単語は8割以上が出題できる
+    const basic = WORDS.filter((w) => levelOf(w) !== '英検準1級' && levelOf(w) !== '英検1級')
+    expect(basic.filter((w) => canScramble(w.example)).length / basic.length).toBeGreaterThan(0.8)
   })
 })
