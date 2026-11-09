@@ -577,7 +577,7 @@ const WORDS_2: Word[] = [
   { id: 'garlic', en: 'garlic', ja: 'ニンニク', example: 'This pasta has a lot of garlic.', exampleJa: 'このパスタにはニンニクがたくさん入っている。', level: '中1' },
   { id: 'ginger', en: 'ginger', ja: 'しょうが', example: 'Add some ginger to the soup.', exampleJa: 'スープにしょうがを少し入れて。', level: '中1' },
   { id: 'cucumber', en: 'cucumber', ja: 'キュウリ', example: 'We had cucumber salad for lunch.', exampleJa: '昼ごはんにキュウリのサラダを食べた。', level: '中1' },
-  { id: 'radish', en: 'radish', ja: '大根・ラディッシュ', example: 'Grated radish goes well with fish.', exampleJa: '大根おろしは魚によく合う。', level: '中1' },
+  { id: 'radish', en: 'radish', ja: 'ラディッシュ・はつか大根', example: 'This radish is small, red and round.', exampleJa: 'このラディッシュは小さくて赤くて丸い。', level: '中1' },
   { id: 'twelfth', en: 'twelfth', ja: '12番目（の）', example: 'December is the twelfth month of the year.', exampleJa: '12月は1年の12番目の月だ。', level: '中1' },
   { id: 'twentieth', en: 'twentieth', ja: '20番目（の）', example: 'Today is my twentieth day at this school.', exampleJa: '今日でこの学校に来て20日目だ。', level: '中1' },
   { id: 'hundredth', en: 'hundredth', ja: '100番目（の）', example: 'He was the hundredth visitor to the museum.', exampleJa: '彼は博物館の100人目の来館者だった。', level: '中1' },
