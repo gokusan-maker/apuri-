@@ -6644,3 +6644,39 @@ it('国公立 の長文「羽のないクモが空を飛ぶしくみ」（645語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「王がつくった文字」（510語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hangul-alphabet')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ロンドンの暗い五日間」（488語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-great-smog-london')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「飛行を記録するオレンジの箱」（545語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-flight-recorder')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「どの国のものでもない言語」（572語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-esperanto-dream')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「うまくいかなくなるまで昇進する」（671語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-peter-principle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「酵母なしでふくらむ菓子」（661語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-chemical-leavening')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
