@@ -7424,3 +7424,57 @@ it('国公立 の長文「脳のない眠り：逆さクラゲ」（616語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('京大 の長文「ドアストッパーについて」（797語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-doorstops')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「金網の中の炎：炭鉱の安全灯」（696語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-davy-safety-lamp')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「木にたたきこむ合図：キツツキのドラミング」（582語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-woodpecker-drumming')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「切ったリンゴが茶色くなるわけ」（513語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-apple-browning')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「バスケットボールを救った時計」（487語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-shot-clock')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「金細工師が銀行家になるまで」（612語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-goldsmith-bankers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「畑の味方のすみか「ビートルバンク」」（555語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-beetle-banks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「目で聞く――マガーク効果」（722語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-mcgurk-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「小さい箱のほうが重く感じるのはなぜか」（678語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-size-weight-illusion')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
