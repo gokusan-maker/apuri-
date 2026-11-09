@@ -8066,3 +8066,63 @@ it('国公立 の長文「追い風を待つ渡り鳥」（625語）：国公立
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「一日だけの虫の長い一生」（487語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mayfly-life')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「使い終わった油で走る町のバス」（455語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-cooking-oil-bus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ギターのネックの小さなクリップ」（548語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-guitar-capo')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「さまよう巨石」（507語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-glacial-erratics')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「すりばちの底で待つ狩人」（641語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-antlion-pits')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「集団の中の顔はなぜよく見えるのか」（607語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-cheerleader-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「格闘技は減量を規制すべきか」（799語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-weight-cutting')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「くしについて」（767語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-combs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「線をなぞって面積をはかる道具」（698語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-polar-planimeter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「最も深く潜るクジラ」（581語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-beaked-whale-dives')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
