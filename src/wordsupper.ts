@@ -193,7 +193,7 @@ export const WORDS_UPPER: Up[] = [
   w('TOEFL・IELTS', 'herbivore', '草食動物', 'Herbivores such as deer feed on grass and leaves.', 'シカのような草食動物は草や葉を食べる。'),
   w('TOEFL・IELTS', 'inscription', '（石などに）刻まれた文字・碑文', 'The inscription on the stone was written in an old language.', '石に刻まれた文字は古いことばで書かれていた。'),
   w('高2', 'ashamed', '恥じて', 'I was ashamed of my rude words.', '失礼なことを言ったのが恥ずかしかった。'),
-  w('高2', 'dare', '思いきって～する・～する勇気がある', 'Nobody dared to speak during the test.', 'テスト中はだれも口をきこうとしなかった。'),
+  w('高2', 'dare', '思いきって～する・～する勇気がある', 'Nobody dared to speak during the test.', 'テスト中、思いきって口をきく人はだれもいなかった。'),
   w('高2', 'declare', '宣言する・はっきり言う', 'The country declared its independence in 1960.', 'その国は1960年に独立を宣言した。'),
   w('高2', 'delight', '大喜び（させる）', 'To our delight, the rain stopped before the game.', 'うれしいことに、試合の前に雨がやんだ。'),
   w('高2', 'divorce', '離婚（する）', 'His parents divorced when he was ten.', '彼の両親は彼が10歳のときに離婚した。'),
