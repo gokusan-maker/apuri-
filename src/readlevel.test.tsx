@@ -4508,3 +4508,39 @@ it('国公立 の長文「中央銀行はなぜ2%をめざすのか」（598語�
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「潮だまりの生き物たち」（454語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-rock-pools')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ムンバイの弁当配達人」（515語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-lunchbox-carriers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「家に番地がある理由」（555語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-house-numbers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「書体の静かな力」（535語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-typefaces')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「善い行いが言い訳になるとき」（664語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-moral-licensing')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「鳥がV字で飛ぶ理由」（631語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-v-formation')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
