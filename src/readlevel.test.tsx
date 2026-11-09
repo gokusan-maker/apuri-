@@ -5684,3 +5684,51 @@ it('私学難関 の長文「砂粒いくつで砂山になるか」（769語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「親は子を相続から外してよいか」（772語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-disinherit-children')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「乗り換えについて」（772語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-changing-trains')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「速記の歴史」（687語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-shorthand-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「温泉の細菌とPCR」（612語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-thermus-aquaticus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「食料援助は現地で買うべきか」（794語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-local-food-aid')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「自転車のサドルから手を離すこと」（719語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-letting-go-saddle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「グアノの時代」（698語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-guano-age')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「船を引きとめる海」（620語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-dead-water')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
