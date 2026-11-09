@@ -359,6 +359,9 @@ export const BAND_MOVE: Record<string, Record<string, string>> = {
     "up-lens": '高1',
   },
   '私学難関': {
+    "pace": '高3',
+    "revenge": '高3',
+    "hurricane": '高3',
     "factor": '高3',
     "identify": '高3',
     "consume": '高3',
@@ -504,6 +507,7 @@ export const BAND_MOVE: Record<string, Record<string, string>> = {
     "up-inflation": '私学',
   },
   '国公立': {
+    "unemployment": '高3',
     "investigate": '高2',
     "crucial": '私学',
     "detect": '高3',
