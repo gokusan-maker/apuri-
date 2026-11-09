@@ -4706,3 +4706,51 @@ it('私学難関 の長文「古いものほど長く残る？」（628語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「埋め立て地に都市を広げ続けるべきか」（772語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-reclaimed-land')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「延長保証について」（678語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-warranties')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「鳥は明日のために計画できるか」（596語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-jay-future-planning')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「科学者はなぜ単純な説明を好むのか」（527語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-occams-razor')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「健康な人にがん検診をすべきか」（752語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-cancer-screening')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「同じ本を訳し直すことについて」（717語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-retranslation')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「根はどうやって下を知るのか」（627語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-root-gravity')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「風をとらえて家を冷やす」（563語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-windcatchers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
