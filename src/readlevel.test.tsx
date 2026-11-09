@@ -7262,3 +7262,27 @@ it('私学難関 の長文「アフリカを横切る木の壁」（705語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「従業員は取締役を選ぶべきか」（732語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-worker-directors')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ブックエンドについて」（695語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-bookends')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「自動ピアノと記録された演奏」（692語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-player-piano-rolls')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「アカガニの大移動」（592語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-red-crab-migration')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
