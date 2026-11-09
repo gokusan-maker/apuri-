@@ -19,7 +19,7 @@ it('レベルごとのまとまりは、やさしいレベルから順で、東�
   const order = s.map((x) => ERROR_LEVELS.indexOf(x.level as (typeof ERROR_LEVELS)[number]))
   expect(order).toEqual([...order].sort((a, b) => a - b))
   const todai = s.find((x) => x.level === '東大')!
-  expect(todai.units.map((u) => u.id)).toEqual(['exam-todai', 'exam-error-lv-todai-1', 'exam-error-lv-todai-2', 'exam-error-lv-todai-3', 'exam-error-lv-todai-4', 'exam-error-lv-todai-5', 'exam-error-lv-todai-6', 'exam-fix-lv-todai-1', 'exam-fix-lv-todai-2', 'exam-fix-lv-todai-3', 'exam-fix-lv-todai-4', 'exam-fix-lv-todai-5', 'exam-fix-lv-todai-6'])
+  expect(todai.units.map((u) => u.id)).toEqual(['exam-todai', 'exam-error-lv-todai-1', 'exam-error-lv-todai-2', 'exam-error-lv-todai-3', 'exam-error-lv-todai-4', 'exam-error-lv-todai-5', 'exam-error-lv-todai-6', 'exam-error-lv-todai-7', 'exam-fix-lv-todai-1', 'exam-fix-lv-todai-2', 'exam-fix-lv-todai-3', 'exam-fix-lv-todai-4', 'exam-fix-lv-todai-5', 'exam-fix-lv-todai-6', 'exam-fix-lv-todai-7'])
   // 句動詞だけの短い文の単元（pick up・look into）は東大・京大に入らない
   for (const lv of ['東大', '京大']) for (const u of s.find((x) => x.level === lv)!.units) expect(u.title).not.toMatch(/pick up|look into/)
 })
