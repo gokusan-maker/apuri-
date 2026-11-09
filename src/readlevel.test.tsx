@@ -5924,3 +5924,63 @@ it('私学難関 の長文「人がさける数字」（661語）：私学難関
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「美術館は所蔵品を売ってよいか」（778語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-museum-deaccession')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「夕暮れについて」（777語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-dusk')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ワクチンなしで病気に打ち勝つ」（679語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-guinea-worm-campaign')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「マルハナバチは花の電気を感じる」（632語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-bumblebee-electric-fields')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「不景気と小さなぜいたく」（408語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-lipstick-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「コーヒーのしみのなぞ」（442語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-coffee-ring')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「複利の静かな力」（550語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-compound-interest')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ストレスとおやつの関係」（497語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-stress-eating')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「教師の期待と生徒の成長」（643語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-teacher-expectations')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「都会の人はなぜ速く歩くのか」（625語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-city-walking-pace')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
