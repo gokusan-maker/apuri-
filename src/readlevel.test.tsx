@@ -7346,3 +7346,27 @@ it('私学難関 の長文「見つかった惑星と存在しなかった惑星
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「発見物に報奨金を払うべきか」（784語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-metal-detecting-rewards')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「巻き尺について」（788語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-tape-measures')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「瞳の奥を見る――検眼鏡の発明」（681語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-ophthalmoscope-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「深海魚はなぜ水圧に耐えられるのか」（638語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-deep-sea-fish-pressure')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
