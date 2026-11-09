@@ -23,8 +23,8 @@ describe('並べ替え', () => {
   })
 
   it('単語帳の例文の多くが出題できる（3〜9語）', () => {
-    // 上のレベル（英検準1級・1級）の単語は入試らしい長い例文（12〜22語）なので並べかえには出さない。それ以外の単語は8割以上が出題できる
-    const basic = WORDS.filter((w) => levelOf(w) !== '英検準1級' && levelOf(w) !== '英検1級')
+    // 上のレベル（英検2級・準1級・1級＝高3〜東大・TOEFL）の単語は入試らしい長い例文（10〜22語）なので並べかえには出さない。それ以外の単語は8割以上が出題できる
+    const basic = WORDS.filter((w) => !['英検2級', '英検準1級', '英検1級'].includes(levelOf(w)))
     expect(basic.filter((w) => canScramble(w.example)).length / basic.length).toBeGreaterThan(0.8)
   })
 })
