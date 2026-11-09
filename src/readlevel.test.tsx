@@ -8180,3 +8180,63 @@ it('国公立 の長文「ハエの小さな平衡器官」（578語）：国公
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「アリが植える花」（544語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-ants-plant-seeds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「果物救出の日」（505語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-fruit-rescue-day')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「パックはなぜ平らか」（621語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hockey-puck-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「砂の城を支えるもの」（589語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-wet-sand-strength')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「花をふるわせるハチ」（734語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-buzz-pollination')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「戸口で忘れるわけ」（738語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-doorway-forgetting')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「歴史的な蒸気機関車は走らせ続けるべきか」（734語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-historic-locomotives')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「エプロンについて」（750語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-apron')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「カメラ・ルシダ　プリズムで描く道具」（690語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-camera-lucida')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「水の上を走るトカゲ」（588語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-basilisk-water-running')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
