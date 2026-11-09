@@ -7772,3 +7772,63 @@ it('国公立 の長文「キーウィのくちばしの感覚」（648語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「レモネードの長い旅」（488語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-lemonade-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「チャイムのない一週間」（404語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-bell-free-week')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ヒキガエルのおなかから逃げ出す虫」（543語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-bombardier-beetle-toad')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「パン屋で仕事を入れかえる」（518語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-bakery-job-rotation')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「楽しみと義務を組み合わせる」（717語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-temptation-bundling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「海がつくる雪」（687語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sea-effect-snow')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「研究助成で大学の間接経費を払うべきか」（764語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-grant-overheads')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「靴べらについて」（758語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-shoehorns')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「種まき機（シードドリル）の歴史」（692語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-seed-drill-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「アザラシはひげで見えない跡をたどる」（628語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-seal-whisker-trails')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
