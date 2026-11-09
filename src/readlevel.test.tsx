@@ -7616,3 +7616,39 @@ it('国公立 の長文「カレイの目はなぜ片側にあるのか」（616
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「自分で熱をつくる花」（444語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-flowers-make-heat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「肩を並べて語る作業小屋」（466語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mens-sheds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「みんなの乗り物 乗合馬車のはじまり」（657語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-omnibus-origins')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「車の色が白・黒・灰色ばかりの理由」（540語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-car-color-choices')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「他人も自分と同じだと思いこむ心理」（655語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-false-consensus-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「木は傷を壁で囲いこむ」（715語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-tree-wound-walls')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
