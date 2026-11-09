@@ -8600,3 +8600,63 @@ it('国公立 の長文「のどで子を育てるダーウィンガエル」（
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「家に帰るカサガイ」（536語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-limpets')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「昼食は前の日に注文」（504語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-canteen-preorder')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「日没の緑の光」（633語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-green-flash')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「インデックスカードの歴史」（544語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-index-cards')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ささいなことほど長引く議論」（711語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-law-of-triviality')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ホヤに隠された歴史」（727語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sea-squirts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「遺跡の見学に案内人を義務づけるべきか」（743語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-heritage-guides')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「音叉について」（737語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-tuning-fork')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「海に浮かぶ灯台――灯台船の歴史」（699語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-lightship-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「水が切れるとき――木の中の気泡」（601語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-xylem-embolism')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
