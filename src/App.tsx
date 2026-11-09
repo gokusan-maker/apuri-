@@ -172,6 +172,8 @@ import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, 
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
+import { AdBanner } from './AdBanner'
+import { AD_SLOTS } from './ads'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
 
 type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'boss' | 'settings'
@@ -2097,6 +2099,10 @@ function App() {
               <Backup />
             </section>
           )}
+          <AdBanner slot={AD_SLOTS.home} />
+          <p className="legal-links">
+            <a href="./privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+          </p>
         </>
       ) : mode === 'word' && wordTab === 'stage' ? (
         stagesView('stages')

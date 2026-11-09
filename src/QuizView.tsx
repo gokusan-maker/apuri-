@@ -51,6 +51,8 @@ import { GRAMMAR_MONSTER_COINS, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
 import { Tiles } from './TilesView'
+import { AdBanner } from './AdBanner'
+import { AD_SLOTS } from './ads'
 import { WORDS, type Level, type Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
@@ -998,6 +1000,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
             {shared}
           </p>
         )}
+        <AdBanner slot={AD_SLOTS.result} />
         <MissedList words={missed} />
         {missed.length > 0 && !onRestart && (
           <button className="list-link miss-retry" onClick={() => restart(direction, missed)}>

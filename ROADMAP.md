@@ -75,6 +75,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊾（動詞の型 enable/allow O to・suggest/insist that・persuade/convince・let/make・find it＋形容詞＋to・regard O as・attribute A to B・credit A with。別の目で全問を検証し1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊿（倒置・比較・仮定法・不定詞の完了形・名詞の数の一致など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正51（他動詞と前置詞・不可算名詞・lie と lay・完了不定詞・No sooner/Hardly・A is to B what C is to D・enough の語順・Not until の倒置など、5レベル×正誤と訂正で100問）
+- [x] 公開に向けて広告（Google AdSense）を入れる（ホームの下と結果画面だけに小さく表示。問題の画面には出さない。中高生向けなのでパーソナライズしない広告。src/adconfig.ts に ID を入れると表示され、ads.txt とサイト確認タグも自動で出る。プライバシーポリシーのページを追加）
 - [ ] 私学難関〜東大の正誤問題・誤文訂正52
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉚（suggest・let/make/have・help・prevent from などの語法、形容詞と副詞、lie/lay・rise/raise、動詞・形容詞と前置詞、接続詞と前置詞、相関接続詞の並列。別の目で全問を検証し3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉛（関係詞と名詞節の使い分け・前置詞＋関係代名詞・関係副詞・譲歩節・強調構文・one of the＋複数・the number of・倒置。別の目で全問を検証し2問を直した）
