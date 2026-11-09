@@ -68,7 +68,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊷（話法の時制の一致・助動詞＋完了形の受け身・have/get＋O＋過去分詞・知覚動詞と受け身・make の受け身・要求の動詞＋that 節・a number of／the number of などの一致。別の目で全問を検証し問題なし）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊸（数えられない名詞 advice・equipment・research・progress など、many/much・a number of/an amount of、news・economics・species・criteria/criterion・phenomena などの単数・複数。別の目で全問を検証し5問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊹（助動詞・完了・受け身の動詞の形、arise/bear/seek/lie/lay/forbid/undergo/withdraw などの不規則変化、there is/are の一致。別の目で全問を検証し2問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正㊺
+- [x] 私学難関〜東大の正誤問題・誤文訂正㊺（形容詞＋前置詞・to 不定詞 be likely to・be worth -ing・be capable of・be dependent on・be familiar with/to など、so/such/too/enough の位置。別の目で全問を検証し、東大で易しすぎた1問を差しかえて3問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正㊻
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉚（suggest・let/make/have・help・prevent from などの語法、形容詞と副詞、lie/lay・rise/raise、動詞・形容詞と前置詞、接続詞と前置詞、相関接続詞の並列。別の目で全問を検証し3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉛（関係詞と名詞節の使い分け・前置詞＋関係代名詞・関係副詞・譲歩節・強調構文・one of the＋複数・the number of・倒置。別の目で全問を検証し2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉜（長い文での時制と相・話法の時制の一致・助動詞＋完了形・仮定法現在・wish/if only・as if・would rather・伝達動詞の受け身。別の目で全問を検証し5問を直した）
@@ -84,7 +85,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊷（話法の時制の一致・助動詞＋完了形の受け身・have/get＋O＋過去分詞・知覚動詞と受け身・make の受け身・要求の動詞＋that 節・a number of／the number of などの一致。別の目で全問を検証し問題なし）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊸（数えられない名詞 advice・equipment・research・progress など、many/much・a number of/an amount of、news・economics・species・criteria/criterion・phenomena などの単数・複数。別の目で全問を検証し5問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊹（助動詞・完了・受け身の動詞の形、arise/bear/seek/lie/lay/forbid/undergo/withdraw などの不規則変化、there is/are の一致。別の目で全問を検証し2問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正㊺
+- [x] 私学難関〜東大の正誤問題・誤文訂正㊺（形容詞＋前置詞・to 不定詞 be likely to・be worth -ing・be capable of・be dependent on・be familiar with/to など、so/such/too/enough の位置。別の目で全問を検証し、東大で易しすぎた1問を差しかえて3問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正㊻
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
