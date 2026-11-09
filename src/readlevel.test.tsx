@@ -7952,3 +7952,57 @@ it('国公立 の長文「盗んだ毒針で身を守るウミウシ」（632語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「泥の上で暮らす魚」（462語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mudskipper-land-fish')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「おろし金の歴史」（560語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-grater-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「星の海に流した手紙」（572語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-voyager-golden-record')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「一人の顔が百万人より心を動かす理由」（662語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-identifiable-victim')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「鏡の前の小さな魚」（702語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-cleaner-wrasse-mirror')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「カード払いの上乗せ料金は認めるべきか」（737語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-card-surcharges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「水準器について」（695語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-spirit-levels')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「息を測る：スパイロメーターの歴史」（608語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-spirometer-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「巻きひげはどうやって支えをつかむのか」（542語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-tendril-coiling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
