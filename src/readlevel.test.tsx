@@ -7058,3 +7058,63 @@ it('国公立 の長文「わざと受粉させるガ」（563語）：国公立
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「外国籍住民に地方選挙権を認めるべきか」（737語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-noncitizen-local-vote')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ふたについて」（668語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-lids')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「潮を予報した真ちゅうの機械」（608語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-tide-predicting-machines')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「潮の時間を刻む海辺の生き物」（544語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-tidal-clocks-shore-animals')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「いちばん早い日の入り」（498語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-earliest-sunset')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「やってくる図書館」（470語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mobile-library')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「質屋の歴史」（625語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-pawnshop-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「「元に戻す」の力」（557語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-undo-command')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「値段をつけられないもの」（687語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-taboo-tradeoffs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「夕方5時のメロディー」（659語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-evening-chime')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
