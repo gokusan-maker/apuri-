@@ -64,7 +64,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊳（前置詞をとる動詞 account for・result in/from・attribute A to B・deprive A of B・object to -ing と、前置詞をとらない discuss・resemble・enter・reach など。別の目で全問を検証し5問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊴（否定語・so/such のあとの倒置、demand/insist のあとの仮定法現在、many of whom などの関係詞、独立分詞構文、副詞を強調する強調構文、長い並列、a series of などの一致。別の目で全問を検証し1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊵（this/these と名詞の一致・such a・whose と of which・集合名詞と不可算名詞を受ける代名詞・再帰代名詞・each of と every one of・both…and／either…or の一致・形容詞の順序と複合形容詞。別の目で全問を検証し問題なし）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正㊶
+- [x] 私学難関〜東大の正誤問題・誤文訂正㊶（接続詞・前置詞・副詞の区別 however/although/despite・whereas/while・so that/in order to・as a result of・unless/except・besides、not only…but also と文頭の倒置。別の目で全問を検証し5問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正㊷
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉚（suggest・let/make/have・help・prevent from などの語法、形容詞と副詞、lie/lay・rise/raise、動詞・形容詞と前置詞、接続詞と前置詞、相関接続詞の並列。別の目で全問を検証し3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉛（関係詞と名詞節の使い分け・前置詞＋関係代名詞・関係副詞・譲歩節・強調構文・one of the＋複数・the number of・倒置。別の目で全問を検証し2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉜（長い文での時制と相・話法の時制の一致・助動詞＋完了形・仮定法現在・wish/if only・as if・would rather・伝達動詞の受け身。別の目で全問を検証し5問を直した）
@@ -76,7 +77,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊳（前置詞をとる動詞 account for・result in/from・attribute A to B・deprive A of B・object to -ing と、前置詞をとらない discuss・resemble・enter・reach など。別の目で全問を検証し5問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊴（否定語・so/such のあとの倒置、demand/insist のあとの仮定法現在、many of whom などの関係詞、独立分詞構文、副詞を強調する強調構文、長い並列、a series of などの一致。別の目で全問を検証し1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㊵（this/these と名詞の一致・such a・whose と of which・集合名詞と不可算名詞を受ける代名詞・再帰代名詞・each of と every one of・both…and／either…or の一致・形容詞の順序と複合形容詞。別の目で全問を検証し問題なし）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正㊶
+- [x] 私学難関〜東大の正誤問題・誤文訂正㊶（接続詞・前置詞・副詞の区別 however/although/despite・whereas/while・so that/in order to・as a result of・unless/except・besides、not only…but also と文頭の倒置。別の目で全問を検証し5問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正㊷
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
