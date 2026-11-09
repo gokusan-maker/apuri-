@@ -7226,3 +7226,39 @@ it('国公立 の長文「キャベツの葉の中の「からし油爆弾」」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「地球でいちばん古い湖」（492語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-lake-baikal')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ひとつまみのヨウ素」（495語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-iodized-salt')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「世界に広まった種」（563語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-quinoa-boom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「サモワールとロシアの茶」（579語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-russian-samovar')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「規範の強い社会、ゆるい社会」（705語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-tight-loose-cultures')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「アフリカを横切る木の壁」（705語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-great-green-wall')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
