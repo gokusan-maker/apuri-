@@ -4,7 +4,7 @@ import type { Word } from './words'
 const w = (id: string, ja: string, example: string, exampleJa: string): Word => ({ id: `e2-${id}`, en: id, ja, example, exampleJa, level: '英検2級' })
 
 export const WORDS_EIKEN2: Word[] = [
-  w('administration', '管理・行政', 'The school administration decided to change the rules.', '学校の管理部はきまりを変えることに決めた。'),
+  w('administration', '管理・行政', 'The school administration decided to change the rules.', '学校当局はきまりを変えることに決めた。'),
   w('affordable', '手ごろな価格の', 'The town needs more affordable housing for young families.', 'その町には若い家族向けの手ごろな住宅がもっと必要だ。'),
   w('applause', '拍手', 'The singer bowed to the loud applause.', '歌手は大きな拍手におじぎをした。'),
   w('architecture', '建築・建築様式', 'She is studying modern architecture at university.', '彼女は大学で現代建築を学んでいる。'),

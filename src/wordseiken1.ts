@@ -72,7 +72,7 @@ export const WORDS_EIKEN1: Word[] = [
   w('substantiate', '（証拠で）立証する', 'Can you substantiate your claim with facts?', 'あなたの主張を事実で立証できますか。'),
   w('tantamount', '（〜に）等しい', 'Ignoring the warning was tantamount to inviting disaster.', '警告を無視するのは災難をまねくのに等しかった。'),
   w('tenuous', '（根拠・つながりが）弱い・あやふやな', 'The link between the two events is tenuous.', '2つの出来事のつながりはあやふやだ。'),
-  w('truncate', '（一部を）切り詰める・短くする', 'The long title was truncated on the screen.', '長い題名は画面上で途中が切られていた。'),
+  w('truncate', '（一部を）切り詰める・短くする', 'The long title was truncated on the screen.', '長い題名は画面上で途中までしか表示されていなかった。'),
   w('ubiquitous', 'どこにでもある', 'Convenience stores are ubiquitous in Japan.', '日本ではコンビニがどこにでもある。'),
   w('vehement', '激しい・熱烈な', 'There was vehement opposition to the new tax.', '新しい税には激しい反対があった。'),
   w('venerate', '崇敬する・あがめる', 'The villagers venerate the old tree as sacred.', '村人たちはその古木を神聖なものとしてあがめている。'),
