@@ -7370,3 +7370,33 @@ it('国公立 の長文「深海魚はなぜ水圧に耐えられるのか」（
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「フリスビーの誕生」（543語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-frisbee-pie-tins')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「都市とアマツバメ」（512語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-city-swifts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「生まれ順と性格」（583語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-birth-order-myth')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「失われた言葉と脳」（724語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-aphasia-brain-maps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ピンボールを解放した一打」（693語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-pinball-skill-chance')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
