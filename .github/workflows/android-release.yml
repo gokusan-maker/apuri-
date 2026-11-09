@@ -1,0 +1,86 @@
+name: Android release
+
+# Google Play に出す .aab（署名済み）を作る。GitHub の Actions 画面から手動で動かす。
+# Android のプロジェクト（android/）はリポジトリに置かず、実行のたびに Capacitor で作る。
+# アイコンとスプラッシュは assets/ の画像から作る。アプリの ID は capacitor.config.json（公開後は変更不可）。
+# 必要なシークレット：ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD
+on:
+  workflow_dispatch:
+
+jobs:
+  aab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm run build
+      - name: Add Capacitor (Android)
+        run: |
+          npm i --no-save --no-audit --no-fund @capacitor/cli@8.6.0 @capacitor/core@8.6.0 @capacitor/android@8.6.0 @capacitor/assets@4.0.0
+          npx cap add android
+          # アイコンとスプラッシュの元画像を public/icon-maskable-512.png から作る（青い背景にモンスター）
+          mkdir -p assets
+          cp public/icon-maskable-512.png assets/icon-only.png
+          cp public/icon-maskable-512.png assets/icon-foreground.png
+          node -e "
+            const sharp = require('sharp');
+            const blue = { r: 37, g: 99, b: 235 };
+            (async () => {
+              await sharp({ create: { width: 512, height: 512, channels: 3, background: blue } }).png().toFile('assets/icon-background.png');
+              const icon = await sharp('public/icon-maskable-512.png').resize(900, 900).png().toBuffer();
+              for (const f of ['assets/splash.png', 'assets/splash-dark.png']) {
+                await sharp({ create: { width: 2732, height: 2732, channels: 3, background: blue } }).composite([{ input: icon, gravity: 'center' }]).png().toFile(f);
+              }
+            })();
+          "
+          npx capacitor-assets generate --android --iconBackgroundColor '#2563eb' --splashBackgroundColor '#2563eb'
+          npx cap sync android
+      - name: Signing and version settings
+        run: |
+          cat >> android/app/build.gradle <<'EOF'
+
+          android {
+              defaultConfig {
+                  versionCode Integer.parseInt(System.getenv("ANDROID_VERSION_CODE") ?: "1")
+                  versionName "1.0." + (System.getenv("ANDROID_VERSION_CODE") ?: "1")
+              }
+              signingConfigs {
+                  upload {
+                      storeFile file(System.getenv("ANDROID_KEYSTORE_PATH"))
+                      storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                      keyAlias System.getenv("ANDROID_KEY_ALIAS")
+                      keyPassword System.getenv("ANDROID_KEY_PASSWORD")
+                  }
+              }
+              buildTypes {
+                  release {
+                      signingConfig signingConfigs.upload
+                  }
+              }
+          }
+          EOF
+      - name: Write the upload key
+        run: echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+      - run: ./gradlew bundleRelease --no-daemon
+        working-directory: android
+        env:
+          ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/upload.jks
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          # 実行のたびに増える番号を、ストアのバージョン番号にする
+          ANDROID_VERSION_CODE: ${{ github.run_number }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: english-monster-release-aab
+          path: android/app/build/outputs/bundle/release/app-release.aab
