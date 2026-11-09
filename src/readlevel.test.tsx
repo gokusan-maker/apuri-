@@ -6620,3 +6620,27 @@ it('私学難関 の長文「ゴルフはなぜ18ホールか」（741語）：�
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「メッセージアプリの相互接続は義務にすべきか」（780語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-messaging-interoperability')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「通りすぎる列車に手を振ること」（789語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-waving-at-trains')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「貝から生まれた紫」（688語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-tyrian-purple')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「羽のないクモが空を飛ぶしくみ」（645語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-ballooning-spiders')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})

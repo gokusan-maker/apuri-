@@ -9,7 +9,7 @@ describe('相棒のひとこと', () => {
 
   it('ふだんは一覧からえらぶ（範囲外にならない）', () => {
     expect(pickLine(2, false, 0)).toBe(LINES[0])
-    expect(pickLine(2, false, 0.9999)).toBe(LINES[LINES.length - 1])
+    expect(pickLine(2, false, 0.9999999)).toBe(LINES[LINES.length - 1])
     expect(pickLine(2, false, 1)).toBe(LINES[0])
   })
 })
