@@ -4460,3 +4460,51 @@ it('国公立 の長文「氷はなぜすべるのか」（555語）：国公立
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「豊かな国は貧しい国から医療者を集めてよいか」（793語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-health-worker-recruitment')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「脚注について」（740語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-footnotes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「藍色の長い旅」（668語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-indigo-blue')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「マラリアと闘った樹皮」（599語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-quinine-bark')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「うるう秒は廃止すべきか」（798語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-leap-second')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「婉曲表現について」（797語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-euphemism')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「脳の半分で眠る」（655語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-half-brain-sleep')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「中央銀行はなぜ2%をめざすのか」（598語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-inflation-target')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
