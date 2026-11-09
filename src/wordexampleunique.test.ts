@@ -10,8 +10,8 @@ describe('単語の例文の重複', () => {
       if (!w.example) continue
       const key = w.example.trim().toLowerCase()
       const prev = seen.get(key)
-      if (prev && prev !== w.word) dups.push(`${prev} / ${w.word}: ${w.example}`)
-      else seen.set(key, w.word)
+      if (prev && prev !== w.en) dups.push(`${prev} / ${w.en}: ${w.example}`)
+      else seen.set(key, w.en)
     }
     expect(dups).toEqual([])
   })
