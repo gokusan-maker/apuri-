@@ -5810,3 +5810,57 @@ it('私学難関 の長文「海岸線の長さはどれだけか」（667語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「選挙区の線は独立委員会が引くべきか」（799語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-independent-redistricting')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ターンパイク・トラストとイギリスの道路」（681語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-turnpike-trusts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「イチジクとイチジクコバチ」（598語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-fig-and-wasp')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ウォンバットの四角いふん」（513語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-wombat-cubes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「逃げ水と蜃気楼」（492語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-road-mirage')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「大人にならないサンショウウオ」（648語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-axolotl-regrowth')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「海でいちばん速いパンチ」（647語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-mantis-shrimp')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「湖がガスを吐いた夜」（762語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-lake-nyos')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「カメレオンの色の本当の意味」（720語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-chameleon-colors')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
