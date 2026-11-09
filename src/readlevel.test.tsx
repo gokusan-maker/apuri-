@@ -9428,3 +9428,57 @@ it('国公立 の長文「シベリアの空が爆発した朝」（619語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「樹液から生まれたガム」（494語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-chewing-gum-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「転がって旅する草」（443語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tumbleweed-travels')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「選んでいないものを弁護する」（548語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-choice-blindness')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「こずえの役に立つどろぼう」（515語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-mistletoe-forests')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「よく使う語にひそむ規則」（705語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-zipf-word-frequency')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「誰にも勝てないネズミ捕り」（690語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-mousetrap-patents')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「シーソーについて」（777語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-seesaws')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「砂漠の丸い裸地の謎」（666語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-fairy-circles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「海氷の下のつらら」（606語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-brinicles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
