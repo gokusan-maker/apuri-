@@ -44,7 +44,7 @@ export const WORDS_EIKEN1: Word[] = [
   w('impeccable', '非のうちどころがない', 'Her English pronunciation is impeccable.', '彼女の英語の発音は非のうちどころがない。'),
   w('impetuous', '性急な・衝動的な', 'Making an impetuous decision can lead to regret.', '衝動的に決めると後悔することがある。'),
   w('incongruous', '場ちがいな・調和しない', 'A modern glass building looks incongruous in the old village.', '現代的なガラスの建物は古い村では場ちがいに見える。'),
-  w('indolent', '怠惰な・なまけた', 'The indolent cat slept all afternoon.', 'そのものぐさなねこは午後じゅう寝ていた。'),
+  w('indolent', '怠惰な・なまけた', 'The manager warned the indolent clerk to work harder.', '店長はなまけている店員にもっとまじめに働くよう注意した。'),
   w('insidious', '（害が）じわじわ進行する・油断ならない', 'The disease is insidious because it has no early symptoms.', 'その病気は初期の症状がないので油断ならない。'),
   w('intransigent', '妥協しない・頑固な', 'Both sides remained intransigent, so no deal was made.', '両者とも妥協しなかったので、合意は成立しなかった。'),
   w('inundate', '殺到させる・水びたしにする', 'The office was inundated with phone calls.', '事務所には電話が殺到した。'),
