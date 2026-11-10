@@ -32,6 +32,10 @@ export default defineConfig({
           if (id.endsWith('/src/words.ts')) return 'words'
           // 読み物・文法・まちがえやすい単語などの学習データもまとめて分ける
           if (/\/src\/(reading|grammar|confusing|definitions|emoji|twisters|sounds)\.ts$/.test(id)) return 'content'
+          // 大きな問題データは1ファイルずつ分ける（Cloudflare Pages は1ファイル 25 MiB までしか公開できない）
+          if (id.endsWith('/src/advreading.ts')) return 'advreading'
+          if (id.endsWith('/src/examerror.ts')) return 'examerror'
+          if (/\/src\/(wordsupper|longreading)\.ts$/.test(id)) return 'content2'
         },
       },
     },
