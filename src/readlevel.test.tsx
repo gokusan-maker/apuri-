@@ -10628,3 +10628,39 @@ it('国公立 の長文「避雷針の本当の役割」（551語）：国公立
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「若いヒマワリが太陽を追うわけ」（420語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-young-sunflowers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「木が葉を落とすわけ」（417語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-trees-drop-leaves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「布の工場から庭へ：芝刈り機の誕生」（514語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-lawn-mower-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「指差喚呼：まちがいを防ぐ習慣」（489語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-pointing-and-calling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「人のせいにして状況を忘れる」（622語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-fundamental-attribution-error')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「部屋を変えた一着の部屋着」（613語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-diderot-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
