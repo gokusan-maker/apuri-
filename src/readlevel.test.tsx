@@ -10244,3 +10244,63 @@ it('国公立 の長文「音の大きさを競った時代」（626語）：国
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「道路のオレンジ色のコーン」（511語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-traffic-cones')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「町を起こして回った人々」（444語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-knocker-uppers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「見つめると消えるもの」（508語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-troxler-fading')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「人の体の身代わり」（494語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-crash-test-dummies')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「値上がりで買う量が増えるとき」（649語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-giffen-goods')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「23人と同じ誕生日」（630語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-birthday-problem')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「生き物を人の手で移住させるべきか」（792語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-assisted-migration')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ぶらんこについて」（790語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-swings')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「永遠に上がり続ける音」（686語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-shepard-tone')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「アバターが使う人を変えるとき」（621語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-proteus-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
