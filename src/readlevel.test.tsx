@@ -9482,3 +9482,63 @@ it('国公立 の長文「海氷の下のつらら」（606語）：国公立に
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ヤナギの皮からアスピリンへ」（501語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-willow-aspirin')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「うろこの鎧をまとう動物」（529語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-pangolins')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「バニラの秘密を解いた少年」（624語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-vanilla-pollination')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ないはずの顔が見える」（601語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-face-pareidolia')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「押すと生まれる電気」（749語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-piezoelectricity')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「値札が生まれるまで」（713語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-fixed-prices')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「作家の「原稿を燃やして」に従うべきか」（785語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-destroying-manuscripts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「古びの艶について」（783語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-patina')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「島の動物はなぜ大きさが変わるのか」（677語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-island-rule')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「あらゆる音をまねる鳥」（623語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-lyrebird-mimicry')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
