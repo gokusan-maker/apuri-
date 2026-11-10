@@ -139,7 +139,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正67（自動詞と他動詞・explain/suggest to 人・provide/supply with・remind/inform/accuse of・形式目的語の it・使役・say と tell・二重目的語の受け身など動詞の語法を中心に、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正68（接続詞・前置詞・副詞の区別・コンマだけでつないだ文・関係詞節の主語や目的語の重複・分詞だけの文・which と what・whether と if・so that と in order to など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正69（so do I・neither＋助動詞・do so・that/those of・think so などの代用と省略、enough や still の位置、数の表現、than did などの省略を中心に、5レベル×正誤と訂正で100問。よく出た型は東大・京大で使わない）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正71
+- [x] 私学難関〜東大の正誤問題・誤文訂正71（不定詞の意味上の主語 for/of・tough 構文・too/enough to の目的語・分詞形容詞・remember/regret/stop など・知覚使役の補語・独立分詞構文・with＋O＋分詞・強調構文を中心に、5レベル×正誤と訂正で100問。別の目で検証し10問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正72
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
