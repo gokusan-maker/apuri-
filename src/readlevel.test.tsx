@@ -9740,3 +9740,63 @@ it('国公立 の長文「死んだふりをする動物たち」（608語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ブラシのような猫の舌」（452語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-cat-tongue')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「晴れた日の小さなつむじ風」（456語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-dust-devils')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「回転扉のひみつ」（530語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-revolving-doors')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「泡で漁をするクジラ」（504語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-bubble-net-whales')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「船底に住みつく生き物たち」（661語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hull-fouling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「泡で鳴るテッポウエビ」（617語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-snapping-shrimp')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「古い墓を再利用すべきか」（781語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-grave-reuse')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「お下がりについて」（769語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-hand-me-downs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「大西洋の美しい侵入者」（671語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-lionfish-invasion')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「水へ下りる階段　インドの階段井戸」（625語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-stepwells')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
