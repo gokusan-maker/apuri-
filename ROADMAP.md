@@ -163,7 +163,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正92（仮定法と助動詞：仮定法過去・過去完了・混合仮定法・I wish/if only/as if・It is time＋過去形・but for/without/were it not for・倒置の仮定法・should have done・must/can’t have done・need not have done・提案・要求の that 節 など、5レベル×正誤・訂正の100問。別の目で検証し、読みが2通りになる文など7問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正93（一致と代名詞：長い主語・as well as・one of the＋複数・the number of/a number of・each/every・either/neither の近接一致・there is/are・the＋形容詞・news/measles の単数・倒置文の一致・代名詞の格・myself・that of/those of・those who など、5レベル×正誤・訂正の100問。別の目で検証し、代名詞の指すものが2通りに読める文など6問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正94（語順と構文：否定語・only のあとの倒置・So/Such の倒置・強調構文・間接疑問の語順・so/such a・形式主語と形式目的語の it・enough の位置・the＋比較級 など、5レベル×正誤・訂正の100問。別の目で検証し、take for granted that など4問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正95（名詞と冠詞・数量詞の発展：抽象名詞の可算・不可算・the の有無・few/a few/little/a little・much/many・most/almost all など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正95（名詞と冠詞・数量詞の発展：advice/equipment/evidence などの不可算名詞・few/a few/little/a little・much/many・most/almost all・a number of/an amount of・every/another・a/an の使い分け・最上級と序数の the・by train など、5レベル×正誤・訂正の100問。別の目で検証し、a pottery が可算になる文など5問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正96（前置詞の発展：時・場所の前置詞（in/on/at・by/until・for/during・since/from）・動詞や形容詞と結びつく前置詞 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）

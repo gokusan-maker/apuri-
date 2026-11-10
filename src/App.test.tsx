@@ -435,6 +435,7 @@ describe('App', () => {
       accent: 'en-GB',
       theme: 'dark',
       sound: false,
+      bgm: true,
       dailyGoal: 20,
       autoSpeak: false,
       cardJaFirst: false,
