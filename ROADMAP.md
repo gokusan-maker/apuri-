@@ -155,7 +155,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正84（police/people の複数扱い・news/economics の単数扱い・不可算名詞の数え方・a great success などの抽象名詞・固有名詞の冠詞・it/one/that・another/the other・再帰代名詞・a cousin of hers・too long a journey などの名詞・代名詞・冠詞の発展を中心に、5レベル×正誤と訂正で100問。別の目で検証し、measles の単複など5問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正85（動詞の語法・発展：自動詞と他動詞・make/let/have と原形・rob/deprive A of B・provide A with B など、5レベル×正誤・訂正の10単元100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正86（形容詞・副詞の語法：hard/hardly・late/lately・most/almost・so/such・enough の位置・asleep/alive などの叙述用法・sensible/sensitive・considerate/considerable など、5レベル×正誤・訂正の100問。別の目で検証し、friendly を副詞に使う文など6問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正87（接続詞・前置詞の語法：during/while・by/until・because/because of・despite/although など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正87（接続詞・前置詞の語法：during/while・by/until・because/because of・despite/although・whether/if・in case/in case of・no sooner…than・lest…should・with a view to doing など、5レベル×正誤・訂正の100問。別の目で検証し、接続詞 for と読める1問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正88（比較の語法：the＋比較級・倍数表現・no more than/no less than・superior to・最上級の書きかえ など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
