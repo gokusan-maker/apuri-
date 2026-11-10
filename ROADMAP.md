@@ -80,7 +80,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正53（-ing/-ed の形容詞・the number of と a number of・助動詞＋完了形・再帰代名詞・否定語の倒置・Would that・as if＋過去完了・deprive A of B など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正54（few/little・get O to do・It was not until ... that・遠くはなれた主語との一致・独立分詞構文・Whatever 節・than の関係詞用法・比較の対象など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正55（形容詞・名詞のあとの前置詞・that 節をとらない動詞・stop/forget/regret の後の形・準否定語・集合名詞・倍数表現・with＋O＋分詞・接続詞と前置詞の区別など、5レベル×正誤と訂正で100問）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正56
+- [x] 私学難関〜東大の正誤問題・誤文訂正56（for/during/since・until/by・時を表す語と現在完了・非制限用法の that・but for・all but・be it・Try as she might・接続語の品詞など、5レベル×正誤と訂正で100問）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正57
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉚（suggest・let/make/have・help・prevent from などの語法、形容詞と副詞、lie/lay・rise/raise、動詞・形容詞と前置詞、接続詞と前置詞、相関接続詞の並列。別の目で全問を検証し3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉛（関係詞と名詞節の使い分け・前置詞＋関係代名詞・関係副詞・譲歩節・強調構文・one of the＋複数・the number of・倒置。別の目で全問を検証し2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉜（長い文での時制と相・話法の時制の一致・助動詞＋完了形・仮定法現在・wish/if only・as if・would rather・伝達動詞の受け身。別の目で全問を検証し5問を直した）
@@ -107,7 +108,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正53（-ing/-ed の形容詞・the number of と a number of・助動詞＋完了形・再帰代名詞・否定語の倒置・Would that・as if＋過去完了・deprive A of B など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正54（few/little・get O to do・It was not until ... that・遠くはなれた主語との一致・独立分詞構文・Whatever 節・than の関係詞用法・比較の対象など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正55（形容詞・名詞のあとの前置詞・that 節をとらない動詞・stop/forget/regret の後の形・準否定語・集合名詞・倍数表現・with＋O＋分詞・接続詞と前置詞の区別など、5レベル×正誤と訂正で100問）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正56
+- [x] 私学難関〜東大の正誤問題・誤文訂正56（for/during/since・until/by・時を表す語と現在完了・非制限用法の that・but for・all but・be it・Try as she might・接続語の品詞など、5レベル×正誤と訂正で100問）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正57
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
