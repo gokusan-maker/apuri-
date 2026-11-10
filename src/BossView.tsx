@@ -24,6 +24,7 @@ import { quizXp, type Form, type Source } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
+import { setBossBgmIntense, startBossBgm, stopBossBgm } from './bossbgm'
 import { LEVELS, levelOf, WORDS, type Level, type Word } from './words'
 
 type Props = {
@@ -404,6 +405,17 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const comeback = isComeback(hearts, startHearts) // 逆転チャンス：のこりハート1つで正解ダメージ2倍
   const q = qs[index]
   const enraged = isEnraged(hp, maxHp)
+  // ボス戦の BGM：戦っているあいだだけ鳴らす。ピンチ（ハート1つ）や怒り状態でははげしくする
+  const battling = !won && !lost
+  const pinchNow = battling && hearts === 1
+  useEffect(() => {
+    if (battling) startBossBgm()
+    else stopBossBgm()
+  }, [battling])
+  useEffect(() => () => stopBossBgm(), [])
+  useEffect(() => {
+    setBossBgmIntense(enraged || pinchNow)
+  }, [enraged, pinchNow])
   // チャンス問題かどうかは、問題が出たときのいかり具合で決める
   const [chanceAt, setChanceAt] = useState(-1)
   if (picked === null && isChance(enraged, index) && chanceAt !== index) setChanceAt(index)

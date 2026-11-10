@@ -212,6 +212,11 @@ export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
       </label>
 
       <label className="setting toggle">
+        <span>ボス戦の BGM</span>
+        <input type="checkbox" checked={settings.bgm} onChange={(e) => set({ bgm: e.target.checked })} />
+      </label>
+
+      <label className="setting toggle">
         <span>相棒の励ましの声</span>
         <input type="checkbox" checked={settings.petVoice} onChange={(e) => set({ petVoice: e.target.checked })} />
       </label>

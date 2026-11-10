@@ -16,6 +16,20 @@ function tone(freq: number, start: number, dur: number) {
   osc.stop(ctx.currentTime + start + dur)
 }
 
+// 効果音・BGM で共有する AudioContext（作れない環境では null）
+export function audioContext(): AudioContext | null {
+  try {
+    if (!ctx) {
+      const AC = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+      if (!AC) return null
+      ctx = new AC()
+    }
+    return ctx
+  } catch {
+    return null
+  }
+}
+
 function ready(): boolean {
   if (!loadSettings().sound) return false
   try {

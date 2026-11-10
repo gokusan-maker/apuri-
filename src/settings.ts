@@ -42,6 +42,7 @@ export type Settings = {
   accent: Accent
   theme: Theme
   sound: boolean // 効果音
+  bgm: boolean // ボス戦などの BGM
   dailyGoal: number // 1日の目標（問題数）
   autoSpeak: boolean // カードを出したら自動で発音
   cardJaFirst: boolean // カードを日本語→英語にする
@@ -75,6 +76,7 @@ export const DEFAULT_SETTINGS: Settings = {
   accent: 'en-US',
   theme: 'system',
   sound: true,
+  bgm: true,
   dailyGoal: 20,
   autoSpeak: false,
   cardJaFirst: false,
@@ -101,6 +103,7 @@ export function loadSettings(): Settings {
       accent: v.accent === 'en-GB' ? 'en-GB' : 'en-US',
       theme: v.theme === 'light' || v.theme === 'dark' ? v.theme : 'system',
       sound: typeof v.sound === 'boolean' ? v.sound : true,
+      bgm: typeof v.bgm === 'boolean' ? v.bgm : true,
       dailyGoal: typeof v.dailyGoal === 'number' && GOALS.includes(v.dailyGoal) ? v.dailyGoal : DEFAULT_SETTINGS.dailyGoal,
       autoSpeak: v.autoSpeak === true,
       cardJaFirst: v.cardJaFirst === true,
