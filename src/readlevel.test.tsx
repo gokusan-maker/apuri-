@@ -9680,3 +9680,63 @@ it('国公立 の長文「ハトが首をふって歩くわけ」（604語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「犬はなぜ首をかしげるのか」（521語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-dog-head-tilt')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「寝入りばなの「びくっ」」（487語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-sleep-starts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「海の泡はどこから来るのか」（563語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sea-foam')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「友人の数に限界はあるか」（557語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-dunbar-number')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「空腹でイライラする科学」（725語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hunger-and-mood')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「サンゴが一斉に産卵する夜」（661語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-coral-mass-spawning')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「裁判を放送すべきか」（783語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-televised-trials')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ステンシルについて」（789語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-stencils')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「そこにない音――耳鳴りの科学」（663語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-tinnitus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「死んだふりをする動物たち」（608語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-playing-dead')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
