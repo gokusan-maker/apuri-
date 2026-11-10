@@ -3,6 +3,7 @@ name: Android release
 # Google Play に出す .aab（署名済み）を作る。GitHub の Actions 画面から手動で動かす。
 # Android のプロジェクト（android/）はリポジトリに置かず、実行のたびに Capacitor で作る。
 # アイコンとスプラッシュは assets/ の画像から作る。アプリの ID は capacitor.config.json（公開後は変更不可）。
+# 広告は AdMob（@capacitor-community/admob）。アプリ ID は下で AndroidManifest.xml に入れる。
 # 必要なシークレット：ANDROID_KEYSTORE_BASE64 / ANDROID_KEYSTORE_PASSWORD / ANDROID_KEY_ALIAS / ANDROID_KEY_PASSWORD
 on:
   workflow_dispatch:
@@ -21,10 +22,13 @@ jobs:
           distribution: temurin
           java-version: 21
       - run: npm ci
+      # ストアに出すビルドは本番の広告（src/admob.ts）
       - run: npm run build
+        env:
+          VITE_ADMOB_TEST: '0'
       - name: Add Capacitor (Android)
         run: |
-          npm i --no-save --no-audit --no-fund @capacitor/cli@8.6.0 @capacitor/core@8.6.0 @capacitor/android@8.6.0 @capacitor/assets@4.0.0
+          npm i --no-save --no-audit --no-fund @capacitor/cli@8.6.0 @capacitor/android@8.6.0 @capacitor/assets@4.0.0
           npx cap add android
           # アイコンとスプラッシュの元画像を public/icon-maskable-512.png から作る（青い背景にモンスター）
           mkdir -p assets
@@ -43,6 +47,9 @@ jobs:
           "
           npx capacitor-assets generate --android --iconBackgroundColor '#2563eb' --splashBackgroundColor '#2563eb'
           npx cap sync android
+          # AdMob のアプリ ID（src/admob.ts の ADMOB.appId と同じ）
+          sed -i '0,/<activity/s##<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-5098915072054707~6195364830" />\n        <activity#' android/app/src/main/AndroidManifest.xml
+          grep -q 'ca-app-pub-5098915072054707~6195364830' android/app/src/main/AndroidManifest.xml
       - name: Signing and version settings
         run: |
           cat >> android/app/build.gradle <<'EOF'
