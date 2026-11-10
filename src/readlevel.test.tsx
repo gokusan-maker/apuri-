@@ -10304,3 +10304,63 @@ it('国公立 の長文「アバターが使う人を変えるとき」（621語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「決まりを破った動物」（471語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-platypus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「スパゲッティが二つに折れないわけ」（416語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-spaghetti-snap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「前から読んでも後ろから読んでも」（551語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-palindromes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「暗闇の中の絵」（501語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-cave-art-darkness')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「言葉が意味を失うとき」（671語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-semantic-satiation')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「自分でも気づかない動き」（626語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-ideomotor-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「スキー場は人工雪に頼るべきか」（790語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-artificial-snow')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「給水塔について」（783語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-water-towers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ハンマーに耐えるガラスのおたまじゃくし」（677語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-prince-ruperts-drops')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「失われたダマスカス鋼の秘密」（615語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-damascus-steel')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
