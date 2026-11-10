@@ -9584,3 +9584,57 @@ it('国公立 の長文「フラミンゴはなぜピンク色か」（611語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ミントが冷たく感じる理由」（434語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mint-cooling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「段ボールの波の歴史」（465語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-corrugated-board')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「計算する馬ハンスの秘密」（576語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-clever-hans')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「枯れ葉を落とさない木」（577語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-marcescence')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「光を飲みこむ超黒色の動物」（702語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-super-black')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「スピードバンプに頼るべきか」（788語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-speed-bumps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「砂の城について」（781語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-sandcastles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「水切りの物理学」（683語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-stone-skipping')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「わき腹の痛みのなぞ」（611語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-side-stitch')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
