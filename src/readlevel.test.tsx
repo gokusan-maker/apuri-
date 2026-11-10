@@ -9800,3 +9800,51 @@ it('国公立 の長文「水へ下りる階段　インドの階段井戸」（
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ヘアアイス：枯れ枝にできる氷の毛」（441語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hair-ice')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「スノーローラー：風が作る雪玉」（420語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-snow-rollers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ペニテンテ：アンデスの氷の刃」（536語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-penitentes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「デコレータークラブ：海底を身にまとうカニ」（526語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-decorator-crabs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ヌタウナギのすごい粘液」（615語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hagfish-slime')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「鬼火を追いかけて」（609語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-will-o-wisp')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「古い船を沈めて魚礁にすべきか」（770語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-ships-to-reefs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「泥火山：大地が泥をふき出すとき」（693語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-mud-volcanoes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
