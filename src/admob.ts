@@ -1,9 +1,10 @@
-// Android アプリ（Capacitor）だけに出す AdMob のバナー広告。ウェブ版には出さない（ウェブ版は ads.ts の AdSense）。
+// スマホアプリ（Capacitor の Android / iPhone）だけに出す AdMob のバナー広告。ウェブ版には出さない（ウェブ版は ads.ts の AdSense）。
 // 広告は下のタブ（.tabbar）のすぐ上に出す。タブの上側に広告の高さぶんの余白を足し、その余白に広告を重ねるので、
 // 「タブの上」を基準にしているほかの部品（次へボタンなど）はそのまま広告にかくれない。
 // 開発中のビルドはテスト広告。ストアに出すビルドだけ本番の広告にする（.github/workflows/android-release.yml で VITE_ADMOB_TEST=0）。
 // 自分で本番の広告をタップすると AdMob に不正とみなされるので注意。
-// アプリ ID（ca-app-pub-…~…）は android-release.yml で AndroidManifest.xml に入れている。
+// アプリ ID（ca-app-pub-…~…）は android-release.yml で AndroidManifest.xml に、ios-release.yml で Info.plist に入れている。
+// iPhone ではパーソナライズしない広告だけなので、「トラッキングの許可」（ATT）の確認は出さない。
 // 中高生も使うので、パーソナライズしない広告（npa）にし、広告の内容は「保護者の指導」レベルまでにする。
 
 import { isNativeApp } from './ads'
@@ -12,6 +13,25 @@ export const ADMOB = {
   test: import.meta.env.VITE_ADMOB_TEST !== '0',
   appId: 'ca-app-pub-5098915072054707~6195364830',
   banner: 'ca-app-pub-5098915072054707/8438384794',
+  ios: {
+    appId: 'ca-app-pub-5098915072054707~4616037356',
+    banner: 'ca-app-pub-5098915072054707/1989874018',
+  },
+}
+
+/** 動いている端末の種類（Capacitor がないときは web） */
+export function platform(w: Window | undefined = typeof window === 'undefined' ? undefined : window): string {
+  const cap = (w as (Window & { Capacitor?: { getPlatform?: () => string } }) | undefined)?.Capacitor
+  try {
+    return cap?.getPlatform?.() ?? 'web'
+  } catch {
+    return 'web'
+  }
+}
+
+/** 端末に合わせたバナーの広告ユニット ID */
+export function bannerId(p: string = platform()): string {
+  return p === 'ios' ? ADMOB.ios.banner : ADMOB.banner
 }
 
 const STYLE = `
@@ -71,7 +91,7 @@ export async function startAdMob(): Promise<void> {
     const margin = await waitTabbar()
     if (margin === null) return
     await AdMob.showBanner({
-      adId: ADMOB.banner,
+      adId: bannerId(),
       adSize: BannerAdSize.ADAPTIVE_BANNER,
       position: BannerAdPosition.BOTTOM_CENTER,
       margin,
