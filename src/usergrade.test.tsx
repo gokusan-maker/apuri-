@@ -41,7 +41,7 @@ it('中3なら今日の単語は中3の単語帳から5語、読解は高校入�
 it('社会人なら文法は中3〜高校、単語はビジネス・高校基礎、読解は大学入試レベル', () => {
   saveGrade('adult')
   for (let i = 1; i <= 20; i++) expect(['中3', '高校']).toContain(gradeOf(dailyGrammar(`2026-11-${String(i).padStart(2, '0')}`).id))
-  expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎' || w.level === '熟語' || w.level === '英検2級')).toBe(true) // 高校の単語コースには英検2級の語もある
+  expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎' || w.level === '熟語' || w.level === '英検2級' || w.level === '英検準1級')).toBe(true) // 高校の単語コースには英検2級・準1級の語（ecosystem など）もある
   expect(passagesFor('高3').map((p) => p.id)).toContain(todayReading('2026-11-01').p.id)
 })
 
