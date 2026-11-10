@@ -87,7 +87,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正60（such と so・too ... to・one/another/the other・時と条件の副詞節の現在形・would rather・as though＋過去完了・総称の the・Without/But for/Were it not for・Only if の倒置など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正61（句動詞の受け身・状態動詞の進行形・need -ing・分数や the majority of の一致・the police・独立分詞構文・no less ... than など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正62（不可算名詞・let/allow/help/prevent/persuade の語法・be made to do・間接疑問の語順・句動詞と代名詞の位置・the Dutch・Only by -ing の倒置・譲歩の as・much less・if not など、5レベル×正誤と訂正で100問）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正63
+- [x] 私学難関〜東大の正誤問題・誤文訂正63（時制とアスペクト・need not と don’t need to・must/can’t/should have done・完了不定詞・be supposed to・仮定法過去完了と混合仮定法・It was not until ... that・時制の一致など、5レベル×正誤と訂正で100問）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正64
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉚（suggest・let/make/have・help・prevent from などの語法、形容詞と副詞、lie/lay・rise/raise、動詞・形容詞と前置詞、接続詞と前置詞、相関接続詞の並列。別の目で全問を検証し3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉛（関係詞と名詞節の使い分け・前置詞＋関係代名詞・関係副詞・譲歩節・強調構文・one of the＋複数・the number of・倒置。別の目で全問を検証し2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正㉜（長い文での時制と相・話法の時制の一致・助動詞＋完了形・仮定法現在・wish/if only・as if・would rather・伝達動詞の受け身。別の目で全問を検証し5問を直した）
@@ -121,7 +122,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正60（such と so・too ... to・one/another/the other・時と条件の副詞節の現在形・would rather・as though＋過去完了・総称の the・Without/But for/Were it not for・Only if の倒置など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正61（句動詞の受け身・状態動詞の進行形・need -ing・分数や the majority of の一致・the police・独立分詞構文・no less ... than など、5レベル×正誤と訂正で100問）
 - [x] 私学難関〜東大の正誤問題・誤文訂正62（不可算名詞・let/allow/help/prevent/persuade の語法・be made to do・間接疑問の語順・句動詞と代名詞の位置・the Dutch・Only by -ing の倒置・譲歩の as・much less・if not など、5レベル×正誤と訂正で100問）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正63
+- [x] 私学難関〜東大の正誤問題・誤文訂正63（時制とアスペクト・need not と don’t need to・must/can’t/should have done・完了不定詞・be supposed to・仮定法過去完了と混合仮定法・It was not until ... that・時制の一致など、5レベル×正誤と訂正で100問）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正64
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
