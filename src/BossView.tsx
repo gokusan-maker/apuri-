@@ -89,6 +89,22 @@ function BossDecoBack({ deco, look }: { deco: string; look: BossLook }) {
           <text x="87" y="37" fontSize="8" textAnchor="middle" fill="#713f12" stroke="none" fontWeight="900">Yo!</text>
         </g>
       )
+    case 'horns':
+      return <path d="M26 34 Q4 22 10 0 Q18 18 34 24 Z M74 34 Q96 22 90 0 Q82 18 66 24 Z" fill="#f5f5f4" stroke={look.line} strokeWidth="2.5" strokeLinejoin="round" />
+    case 'wings':
+      return (
+        <g fill={look.line} stroke={look.line} strokeWidth="2" strokeLinejoin="round" opacity="0.92">
+          <path d="M18 58 Q-4 40 2 16 Q8 30 14 28 Q10 40 20 42 Q16 50 24 52 Z" />
+          <path d="M82 58 Q104 40 98 16 Q92 30 86 28 Q90 40 80 42 Q84 50 76 52 Z" />
+        </g>
+      )
+    case 'flame':
+      return (
+        <g strokeLinejoin="round">
+          <path d="M16 70 Q2 46 14 26 Q16 40 24 40 Q20 24 34 10 Q34 28 44 24 Q42 12 50 2 Q58 12 56 24 Q66 28 66 10 Q80 24 76 40 Q84 40 86 26 Q98 46 84 70 Z" fill="#f97316" opacity="0.85" />
+          <path d="M26 66 Q20 50 28 38 Q32 48 38 44 Q38 32 50 20 Q62 32 62 44 Q68 48 72 38 Q80 50 74 66 Z" fill="#fde047" opacity="0.8" />
+        </g>
+      )
     case 'akamon':
       return <path d="M14 56 L0 30 L8 34 L4 20 L16 30 L18 22 L24 40 Z M86 56 L100 30 L92 34 L96 20 L84 30 L82 22 L76 40 Z" fill="#fca5a5" stroke={look.line} strokeWidth="2" strokeLinejoin="round" />
     case 'okuma':
@@ -105,6 +121,32 @@ function BossDecoBack({ deco, look }: { deco: string; look: BossLook }) {
 // 大学入試の塔のボスの飾り（体の上）
 function BossDecoFront({ deco, look }: { deco: string; look: BossLook }) {
   switch (deco) {
+    case 'halo':
+      return <ellipse cx="50" cy="10" rx="20" ry="5" fill="none" stroke="#fde047" strokeWidth="3.5" opacity="0.95" />
+    case 'leaf':
+      return (
+        <g strokeLinejoin="round">
+          <path d="M50 24 Q48 14 50 8" fill="none" stroke="#3f6212" strokeWidth="2.5" />
+          <path d="M50 10 Q62 -2 74 6 Q64 18 50 12 Z" fill="#84cc16" stroke="#3f6212" strokeWidth="1.5" />
+          <path d="M50 14 Q38 4 28 10 Q38 20 50 16 Z" fill="#a3e635" stroke="#3f6212" strokeWidth="1.5" />
+        </g>
+      )
+    case 'mask':
+      return (
+        <g>
+          <path d="M22 50 Q50 40 78 50 Q78 64 64 64 Q56 64 50 58 Q44 64 36 64 Q22 64 22 50 Z" fill="#111827" stroke="#000" strokeWidth="1.5" />
+          <circle cx="38" cy="56" r="4" fill={look.eye} />
+          <circle cx="62" cy="56" r="4" fill={look.eye} />
+        </g>
+      )
+    case 'antenna':
+      return (
+        <g stroke={look.line} strokeWidth="2.5" strokeLinecap="round">
+          <path d="M40 24 L32 6 M60 24 L68 6" fill="none" />
+          <circle cx="32" cy="5" r="4" fill="#22d3ee" />
+          <circle cx="68" cy="5" r="4" fill="#f472b6" />
+        </g>
+      )
     case 'mortarboard':
       return (
         <g>

@@ -5,6 +5,7 @@ import { medalFor } from './medal'
 import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, loadNoMissBosses, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ, bossTraits, BOSS_TRAITS, bossBgOf } from './boss'
 import { dayKey } from './srs'
+import { loadBook, recordWin, saveBook } from './bossbook'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
 import { BossBook } from './BossBookView'
@@ -18,11 +19,12 @@ import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, type UnivBoss
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
+import { BossTower } from './BossTowerView'
 import { BossFloor } from './BossFloorView'
 import { Arena } from './ArenaView'
 import { MonsterFigure } from './MonsterView'
 import { arenaFloor, loadArenaBest, loadArenaBestStreak, loadArenaLast } from './arena'
-import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, BC_PERFECT_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, retryFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, BC_PERFECT_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, bcRankOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, retryFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -608,6 +610,8 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         onDone={(score) => {
           recordBcBest(bcFloor.id, score)
           if (score === bcFloor.qs.length) onRankBonus?.(BC_PERFECT_COINS)
+          // 階のボスもたおしたらボス図鑑にのる（オーナーの要望：ボスを増やす）
+          if (score >= bcPassOf(bcFloor.qs.length)) saveBook(recordWin(loadBook(), floorBossLook(bcFloor.course, bcFloor.floor), bcRankOf(bcFloor.qs.length - score), dayKey()))
           if (score >= bcPassOf(bcFloor.qs.length) && !bcClears.includes(bcFloor.id)) {
             onRankBonus?.(BC_FLOOR_COINS)
             const next = [...bcClears, bcFloor.id]
@@ -639,24 +643,21 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             saveBossLevel(id as CourseId)
           }}
         />
-        <Castle
+        <BossTower
           key={bossLv}
           name={`${courseById(bossLv).label}のボスの城`}
-          theme="red"
           floors={bossCastleFloors([bossLv]).map((f) => {
             const isBoss = f.floor === BC_FLOORS - 1
             const c = courseById(f.course)
-            const look = BOSSES[LEVEL_BOSS_LOOK[f.course]]
+            const look = isBoss ? BOSSES[LEVEL_BOSS_LOOK[f.course]] : floorBossLook(f.course, f.floor)
             return {
               id: f.id,
+              look,
               label: isBoss ? `👹 ${look.name}` : `${c.label}　${BC_KIND[f.floor]}`,
-              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `👾 ${floorBossLook(f.course, f.floor).name}・${f.floor === 0 ? BC_WORD_QS : BC_QS}問${bcBest[f.id] !== undefined ? `・最高 ${bcBest[f.id]}問` : ''}`,
-              fig: isBoss ? <BossFigure hit={false} look={look} /> : undefined,
+              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `👾 ${look.name}・${f.floor === 0 ? BC_WORD_QS : BC_QS}問${bcBest[f.id] !== undefined ? `・最高 ${bcBest[f.id]}問` : ''}`,
               cleared: !!lboss[f.course] || bcClears.includes(f.id),
             }
           })}
-          goLabel="⚔ のぼる"
-          againLabel="✅ もう一度"
           onOpen={(id) => {
             const f = bossCastleFloors([bossLv]).find((x) => x.id === id)!
             window.scrollTo?.({ top: 0 })

@@ -1539,3 +1539,18 @@ it('闘技場：無限の階に入ると、うしろで星がゆっくり流れ�
   render(<Arena start={ARENA_ENDLESS + 2} onExit={() => {}} />)
   expect(document.querySelector('.arena .arena-starfield')).not.toBeNull()
 })
+
+it('ボスの城の階のボスをたおすと、ボス図鑑にのる', async () => {
+  const { floorBossLook } = await import('./bosscastle')
+  const { loadBook } = await import('./bossbook')
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(within(screen.getByRole('region', { name: '中1のボスの城' })).getByRole('button', { name: /^1階：中1　単語/ }))
+  for (let n = 0; n < 10; n++) {
+    bfPick(true)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  const e = loadBook()[floorBossLook('中1', 0).name]
+  expect(e?.wins).toBe(1)
+  expect(e?.best).toBe('S')
+})
