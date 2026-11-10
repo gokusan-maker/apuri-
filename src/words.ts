@@ -3728,7 +3728,7 @@ const WORDS_4: Word[] = [
   { id: 'just-kidding', en: 'Just kidding', ja: 'じょうだんだよ', example: 'I ate all the cake. Just kidding!', exampleJa: 'ケーキ全部食べちゃった。じょうだんだよ！', level: '会話' },
   { id: 'what-happened', en: 'What happened?', ja: '何があったの？', example: 'You look tired. What happened?', exampleJa: 'つかれてるね。何があったの？', level: '会話' },
   { id: 'be-careful', en: 'Be careful', ja: '気をつけて', example: 'Be careful! The floor is wet.', exampleJa: '気をつけて！床がぬれてるよ。', level: '会話' },
-  { id: 'well-done', en: 'Well done', ja: 'よくできました', example: 'You got 100 points? Well done!', exampleJa: '100点とったの？よくできました！', level: '会話' },
+  { id: 'well-done', en: 'Well done', ja: 'よくできました', example: 'You got a perfect score? Well done!', exampleJa: '満点をとったの？よくできました！', level: '会話' },
   { id: 'im-ready', en: 'I\'m ready', ja: '準備できたよ', example: 'I\'m ready. Let\'s go!', exampleJa: '準備できたよ。行こう！', level: '会話' },
   { id: 'how-about', en: 'How about ...?', ja: '〜はどう？', example: 'How about going to the movies?', exampleJa: '映画に行くのはどう？', level: '会話' },
   { id: 'what-do-you-think', en: 'What do you think?', ja: 'どう思う？', example: 'I want to try this. What do you think?', exampleJa: 'これをやってみたい。どう思う？', level: '会話' },
