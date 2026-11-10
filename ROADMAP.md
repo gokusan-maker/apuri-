@@ -158,7 +158,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正87（接続詞・前置詞の語法：during/while・by/until・because/because of・despite/although・whether/if・in case/in case of・no sooner…than・lest…should・with a view to doing など、5レベル×正誤・訂正の100問。別の目で検証し、接続詞 for と読める1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正88（比較の語法：the＋比較級・more cheaper などの二重比較・very＋比較級・fewer と不可算名詞・superior/prior/preferable to・prefer A to B・the latter/the former・倍数表現・that of/those of・no more … than・any other＋単数 など、5レベル×正誤・訂正の100問。別の目で検証し、主語と現在完了がかみ合わない1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正89（関係詞の語法：先行詞のある what・the way how・関係詞節の中の余分な代名詞・前置詞の落ち・where と which・コンマや前置詞のあとの that・whose・most of whom・whoever/whichever・as/than/such … as・A is to B what C is to D など、5レベル×正誤・訂正の100問。別の目で検証し、解説の動詞の取りちがえ1問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正90（準動詞の語法：不定詞と動名詞をとる動詞・分詞の形容詞用法・独立分詞構文・to不定詞の意味上の主語 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正90（準動詞の語法：動名詞だけ・不定詞だけをとる動詞・remember/regret/stop・-ing/-ed の形容詞・分詞構文と独立分詞構文・of/for＋人＋to do・too/enough・look forward to -ing・完了不定詞 など、5レベル×正誤・訂正の100問。別の目で検証し、recommend と thoughtful の2問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正91（時制と態：時・条件の副詞節・現在完了と過去・過去完了・受動態にできない動詞・進行形にしない動詞 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
