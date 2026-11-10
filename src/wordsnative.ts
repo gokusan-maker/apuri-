@@ -88,7 +88,7 @@ export const WORDS_NATIVE: Word[] = [
   w('burn the midnight oil', '夜おそくまで勉強・仕事をする', 'Exams are coming, so I am burning the midnight oil.', '試験が近いので夜おそくまで勉強している。'),
   w('cut to the chase', '本題に入る', "Let's cut to the chase. What do you need?", '本題に入ろう。何が必要なの？'),
   w('get cold feet', '（直前に）おじけづく', 'Many people get cold feet just before a big speech.', '大事なスピーチの直前におじけづく人は多い。'),
-  w('hit the road', '（旅などに）出かける・出発しよう', "It's late. We should hit the road.", 'おそくなった。そろそろ出発しよう。'),
+  w('hit the road', '（旅などに）出かける・出発する', "It's late. We should hit the road.", 'おそくなった。そろそろ出発しよう。'),
   w('let the cat out of the bag', 'うっかり秘密をもらす', 'My little brother let the cat out of the bag about the gift.', '弟がうっかりプレゼントのことをもらしてしまった。'),
   w('on the same page', '同じ認識で', "Before we start, let's make sure we are on the same page.", '始める前に、同じ認識でいるか確かめよう。'),
   w('once in a blue moon', 'ごくたまに', 'I eat fast food once in a blue moon.', 'ファストフードはごくたまにしか食べない。'),

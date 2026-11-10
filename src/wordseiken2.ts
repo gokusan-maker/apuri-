@@ -89,7 +89,7 @@ export const WORDS_EIKEN2: Word[] = [
   w('stimulate', '刺激する・活発にする', 'Low prices may stimulate sales.', '低い価格は売り上げを刺激するかもしれない。'),
   w('subscribe', '定期購読する・登録する', 'I subscribe to a science magazine.', '私は科学雑誌を定期購読している。'),
   w('summit', '頂上・首脳会談', 'We reached the summit of the mountain at noon.', '私たちは正午に山の頂上に着いた。'),
-  w('superior', 'よりすぐれた', 'This model is superior to the old one.', 'この型は古いものよりすぐれている。'),
+  w('superior', 'よりすぐれた・上司', 'This model is superior to the old one.', 'この型は古いものよりすぐれている。'),
   w('supplement', '補足・栄養補助食品', 'Some people take vitamin supplements every day.', '毎日ビタミンのサプリメントを飲む人もいる。'),
   w('surgery', '手術', 'He needed surgery on his knee.', '彼はひざの手術が必要だった。'),
   w('symptom', '症状', 'A high fever is a common symptom of the flu.', '高熱はインフルエンザのよくある症状だ。'),
