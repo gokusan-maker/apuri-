@@ -144,7 +144,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正73（前置詞＋関係代名詞・the extent to which・where と which・the way how・非制限の which・whoever/whomever・関係詞 as・by と until・during と while・lest・on behalf of などの群前置詞を中心に、5レベル×正誤と訂正で100問。別の目で検証し2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正74（rob/steal・lend/borrow・say/tell・raise/rise・lie/lay・suit/fit・win/beat などの動詞の区別、avoid doing/refuse to do、possible/likely・alike/like・economic/economical などの形容詞、fare/fee/fine、discuss about などの余分な前置詞を、京大・東大は倒置などの構文の中で。5レベル×正誤と訂正で100問。別の目で検証し1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正75（長い主語・動名詞の主語・倒置文・not only A but also B・A rather than B・分数などの主語と動詞の一致を中心に、時制・態・分詞・関係詞もまぜた総合問題。5レベル×正誤と訂正で100問。別の目で検証し、近接一致や the majority of など判断が分かれる6問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正76
+- [x] 私学難関〜東大の正誤問題・誤文訂正76（間接疑問の語順・such a/so＋形＋a・倍数の語順・Not until/Only when などの倒置・形容詞＋as＋S＋V などの譲歩・if の省略・句動詞の代名詞の位置を中心に、5レベル×正誤と訂正で100問。別の目で検証し4問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正77
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
