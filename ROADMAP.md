@@ -141,7 +141,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正69（so do I・neither＋助動詞・do so・that/those of・think so などの代用と省略、enough や still の位置、数の表現、than did などの省略を中心に、5レベル×正誤と訂正で100問。よく出た型は東大・京大で使わない）
 - [x] 私学難関〜東大の正誤問題・誤文訂正71（不定詞の意味上の主語 for/of・tough 構文・too/enough to の目的語・分詞形容詞・remember/regret/stop など・知覚使役の補語・独立分詞構文・with＋O＋分詞・強調構文を中心に、5レベル×正誤と訂正で100問。別の目で検証し10問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正72（不可算名詞・数量の語・冠詞・each/every の一致・再帰代名詞・one と it・the＋比較級・最上級の範囲・superior to・prefer A to B・not so much A as B・no more than・倍数表現を中心に、5レベル×正誤と訂正で100問。別の目で検証し6問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正73
+- [x] 私学難関〜東大の正誤問題・誤文訂正73（前置詞＋関係代名詞・the extent to which・where と which・the way how・非制限の which・whoever/whomever・関係詞 as・by と until・during と while・lest・on behalf of などの群前置詞を中心に、5レベル×正誤と訂正で100問。別の目で検証し2問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正74
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
