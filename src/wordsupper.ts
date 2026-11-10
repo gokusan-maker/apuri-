@@ -7179,7 +7179,7 @@ export const WORDS_UPPER: Up[] = [
   w('国公立', 'neural', '神経の', 'Learning a new skill gradually strengthens the neural connections involved, which helps explain why practice matters.', '新しい技能を学ぶと関係する神経のつながりが徐々に強まり、それが練習の大切さを説明する助けとなる。'),
   w('旧帝大', 'neurological', '神経学的な・神経の', 'Doctors performed several neurological tests to check her balance, reflexes, and memory after the accident.', '医師たちは事故の後、彼女の平衡感覚、反射、記憶を調べるためにいくつかの神経学的検査を行った。'),
   w('国公立', 'neuroscience', '神経科学', 'Recent advances in neuroscience have helped researchers understand how stress affects the developing brains of teenagers.', '神経科学の最近の進歩により、研究者はストレスが十代の発達中の脳にどう影響するかを理解しやすくなった。'),
-  w('京大', 'prefrontal', '前頭前野の・前頭葉前部の', 'The prefrontal cortex, which supports planning and self-control, continues to mature until people reach their mid-twenties.', '計画や自制を支える前頭前野は、人が20代半ばになるまで成熟し続ける。'),
+  w('京大', 'prefrontal', '前頭前野の・前頭葉前部の', 'Prefrontal regions of the brain help us resist sudden impulses and keep long-term goals in mind.', '脳の前頭前野の領域は、とっさの衝動を抑え、長期的な目標を意識し続けるのを助ける。'),
   w('東大', 'cerebellum', '小脳', 'The cerebellum is best known for coordinating movement, but studies suggest it also contributes to some cognitive functions.', '小脳は運動の調整で最もよく知られているが、研究によれば一部の認知機能にも関わっているらしい。'),
   w('TOEFL・IELTS', 'plasticity', '可塑性・柔軟性', 'The plasticity of the brain allows some patients to regain lost abilities as other regions gradually take over.', '脳の可塑性のおかげで、ほかの領域が徐々に役割を引き継ぎ、失った能力を取り戻す患者もいる。'),
   w('東大', 'neurodegenerative', '神経変性の', 'Neurodegenerative diseases involve the gradual loss of nerve cells, a process that often continues over many years.', '神経変性疾患では神経細胞が少しずつ失われ、その過程は何年も続くことが多い。'),
