@@ -1256,6 +1256,16 @@ const LEVEL_OF: Record<string, ErrorLevel> = {
   'exam-fix-lv-kyodai-77': '京大',
   'exam-error-lv-todai-77': '東大',
   'exam-fix-lv-todai-77': '東大',
+  'exam-error-lv-shinan-78': '私学難関',
+  'exam-fix-lv-shinan-78': '私学難関',
+  'exam-error-lv-kokko-78': '国公立',
+  'exam-fix-lv-kokko-78': '国公立',
+  'exam-error-lv-kyutei-78': '旧帝大',
+  'exam-fix-lv-kyutei-78': '旧帝大',
+  'exam-error-lv-kyodai-78': '京大',
+  'exam-fix-lv-kyodai-78': '京大',
+  'exam-error-lv-todai-78': '東大',
+  'exam-fix-lv-todai-78': '東大',
 }
 
 // 単元のレベル（まだ判定していない新しい単元は 高2 にしておく）
