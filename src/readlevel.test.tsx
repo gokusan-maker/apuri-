@@ -9968,3 +9968,57 @@ it('国公立 の長文「さわれないほど熱い川」（621語）：国公
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「れんが壁に残る消えかけた広告」（452語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-ghost-signs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「道のりを数えた石」（403語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-roadside-milestones')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「倒れた木が苗を育てる」（488語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-nurse-logs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「貝のいない真珠」（495語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-cave-pearls')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「建てるのではなく育てる橋」（610語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-living-root-bridges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「国籍をお金で売ってよいか」（782語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-golden-passports')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「蔵書票について」（787語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-bookplates')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「海が迫る海岸の幽霊の森」（682語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-ghost-forests')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「泥炭から現れた顔」（625語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-bog-bodies')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
