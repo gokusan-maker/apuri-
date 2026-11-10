@@ -161,7 +161,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正90（準動詞の語法：動名詞だけ・不定詞だけをとる動詞・remember/regret/stop・-ing/-ed の形容詞・分詞構文と独立分詞構文・of/for＋人＋to do・too/enough・look forward to -ing・完了不定詞 など、5レベル×正誤・訂正の100問。別の目で検証し、recommend と thoughtful の2問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正91（時制と態：時・条件の副詞節の will・過去を表す語と現在完了・過去完了・since＋過去・状態動詞の進行形・happen/occur などの受動態・be born/borne・未来完了 など、5レベル×正誤・訂正の100問。別の目で検証し、since が「〜なので」とも読める1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正92（仮定法と助動詞：仮定法過去・過去完了・混合仮定法・I wish/if only/as if・It is time＋過去形・but for/without/were it not for・倒置の仮定法・should have done・must/can’t have done・need not have done・提案・要求の that 節 など、5レベル×正誤・訂正の100問。別の目で検証し、読みが2通りになる文など7問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正93（一致と代名詞：主語と動詞の一致・each/every/either/neither・a number of/the number of・代名詞の格と指すもの・one/it/that など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正93（一致と代名詞：長い主語・as well as・one of the＋複数・the number of/a number of・each/every・either/neither の近接一致・there is/are・the＋形容詞・news/measles の単数・倒置文の一致・代名詞の格・myself・that of/those of・those who など、5レベル×正誤・訂正の100問。別の目で検証し、代名詞の指すものが2通りに読める文など6問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正94（語順と構文：倒置・強調構文・挿入・名詞節の語順（間接疑問）・so/such の構文・形式主語と形式目的語 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
