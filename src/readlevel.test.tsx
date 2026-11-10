@@ -10664,3 +10664,39 @@ it('私学難関 の長文「部屋を変えた一着の部屋着」（613語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ラクダのこぶの中身」（474語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-camel-humps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「背は暗く腹は明るく：見えにくくなる色のしくみ」（459語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-countershading')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「町とともに色を変えたガ」（484語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-peppered-moth')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「白黒のしま模様：ゼブラ横断歩道の物語」（488語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-zebra-crossing-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「自分でつくり出したことは覚えやすい」（663語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-generation-effect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「空腹で買い物をすると：ホット・コールド共感ギャップ」（653語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hot-cold-empathy-gap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
