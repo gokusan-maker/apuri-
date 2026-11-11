@@ -567,7 +567,8 @@
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（形容詞＋名詞の型〈tacit consent・stark contrast・vested interest など〉）で50語ずつ追加209（暗黙の同意・抜本的な改革・確固たる味方 など）
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（副詞＋形容詞の型〈painfully aware・deeply entrenched・inextricably linked など〉）で50語ずつ追加210（深く根付いた・切り離せないほど結びついた・目立って欠けている など）
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（動詞＋副詞の型〈vehemently deny・categorically reject・wholeheartedly support など〉）で50語ずつ追加211（しぶしぶ受け入れる・うっかり明かす・根気強く復元する など）
-- [ ] 国公立〜東大・TOEFL の単語をコロケーション（名詞＋名詞の複合名詞の型〈policy shift・trade deficit・sample size など〉）で50語ずつ追加212
+- [x] 国公立〜東大・TOEFL の単語をコロケーション（名詞＋名詞の複合名詞の型〈policy shift・trade deficit・sample size など〉）で50語ずつ追加212（交渉力・資産バブル・群集行動 など）
+- [ ] 国公立〜東大・TOEFL の単語を学術語の派生語・反意語の組（〈ambiguous/unambiguous・plausible/implausible など〉で未収録のもの）で50語ずつ追加213
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
