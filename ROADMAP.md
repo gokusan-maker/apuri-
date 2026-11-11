@@ -244,7 +244,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正173（主語と動詞の一致の発展：there is/are・either A or B／neither A nor B の近い方の一致・not only A but also B・as well as・関係代名詞節の中の一致・倒置文の主語の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正174（前置詞の語法：自動詞・他動詞の取り違え〈discuss about / enter into the room / reach to〉・by と until・in と within・during と for・besides と beside の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正175（接続詞の注意点：because と because of・although と despite・unless と if not の取り違え・so that と such that・whether と if（主語の位置など）・as soon as / no sooner than の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正176（倒置と強調構文：否定の副詞句の倒置〈Never have I / Not until … did〉・only＋副詞句の倒置・so/neither の倒置・It is … that の強調構文と形式主語の区別の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正176（倒置と強調構文：否定の副詞句の倒置〈Never have I / Not until … did〉・only＋副詞句の倒置・so/neither の倒置・It is … that の強調構文と形式主語の区別の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正177（使役・知覚動詞の語法：make/let/have＋原形・get＋to不定詞・受動態での to の復活〈was made to〉・see/hear＋原形／-ing／過去分詞・help＋O＋(to) do の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
