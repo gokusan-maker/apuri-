@@ -228,7 +228,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正157（比較の慣用表現：the＋比較級 of the two・no other ... than・more A than B（AよりむしろB）・as many/much as・not so much A as B・all the＋比較級 for の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正158（譲歩と条件の構文：however＋形容詞・no matter how/what・whether A or B・even if/even though・as long as と unless の使い分けの総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正159（語順：only/even/also の位置・頻度副詞の位置・形容詞の並ぶ順序・間接疑問の語順・something＋形容詞 の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正160（分詞構文と独立分詞構文：主語の一致〈懸垂分詞〉・having done・being の省略・with＋O＋分詞・慣用的な分詞構文〈generally speaking・judging from〉の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正160（分詞構文と独立分詞構文：主語の一致〈懸垂分詞〉・having done・being の省略・with＋O＋分詞・慣用的な分詞構文〈generally speaking・judging from〉の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正161（文型と動詞の型：第4文型をとれない動詞〈explain/suggest/describe me〉・SVOC〈make/keep/find O C〉・使役と知覚の原形不定詞・help O (to) do・let の受動態不可 の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
