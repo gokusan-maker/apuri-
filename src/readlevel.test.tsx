@@ -17018,3 +17018,51 @@ it('私学難関 の長文「確実なことの値段」（651語）：私学難
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「会社は紙の請求書にお金を取るべきか」（680語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-paper-bill-charges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「空港は免税店をのこすべきか」（666語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-duty-free-shops')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「回転式の入り口について」（659語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-turnstiles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「電車のつり革について」（671語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-train-straps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「まばたきより速くのみこむわな」（656語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-bladderwort-trap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「木から木へすべるように飛ぶヘビ」（657語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-flying-snake')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「二つの世界を同時に見る甲虫」（560語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-whirligig-beetle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ふくろのようにたれ下がる雲」（565語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-mammatus-clouds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
