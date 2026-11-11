@@ -174,7 +174,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正103（否定と数量：not … all の部分否定・hardly/scarcely・no/none/neither・few/little の否定的意味・二重否定・not until など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正104（形容詞と副詞：叙述用法のみの形容詞 alive/asleep・-ly で意味が変わる副詞 hardly/lately/nearly・enough の位置・感情の -ing/-ed・数詞＋名詞の形容詞化 a ten-year-old など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正105（前置詞：時の at/on/in・by と until・for と during・since と from・in と within・手段の by/with・群前置詞 because of/in spite of/instead of・前置詞＋動名詞 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正106（冠詞と名詞：数えられない名詞 information/advice/furniture・the の有無・a＋固有名詞・総称の the/a/無冠詞・集合名詞 police/family・複数形で別の意味の名詞 arms/manners など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正106（冠詞と名詞：数えられない名詞 information/advice/furniture・the の有無・a＋固有名詞・総称の the/a/無冠詞・集合名詞 police/family・複数形で別の意味の名詞 arms/manners など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正107（代名詞：it と one・that/those の比較での代用・each other と one another・再帰代名詞・所有代名詞 a friend of mine・either/neither/both の一致・-thing + 形容詞 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
