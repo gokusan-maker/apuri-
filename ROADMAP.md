@@ -191,7 +191,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正120（語法の総合：混同しやすい語 affect/effect・rise/raise・lie/lay 以外の語 economic/economical・sensible/sensitive・respectable/respectful・imaginary/imaginative・historic/historical など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正121（名詞の語法：可算・不可算で意味が変わる名詞 paper/glass/experience・数量表現 a piece of/an item of・所有格と of・名詞の後置修飾・同格の that など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正122（形容詞の語法：人を主語にとらない形容詞 convenient/possible/necessary・be sure/certain to・be likely to・worth と worthy・alike/like・数量形容詞の語順 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正123（副詞の語法：very と much・too と either・already と yet・ago と before 以外の時の副詞 still/any longer・so と such・else・enough の位置以外の副詞の位置 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正123（副詞の語法：very と much・too と either・already と yet・ago と before 以外の時の副詞 still/any longer・so と such・else・enough の位置以外の副詞の位置 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正124（形容詞の語法：限定用法だけ・叙述用法だけの形容詞〈alive・asleep・afraid・main・mere〉・意味がまぎらわしい形容詞〈economic/economical・sensible/sensitive・respectable/respective〉・数量の形容詞 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
