@@ -571,7 +571,8 @@
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（名詞＋名詞の複合名詞の型〈policy shift・trade deficit・sample size など〉）で50語ずつ追加212（交渉力・資産バブル・群集行動 など）
 - [x] 国公立〜東大・TOEFL の単語を学術語の派生語・反意語の組（〈ambiguous/unambiguous・plausible/implausible など〉で未収録のもの）で50語ずつ追加213（反証できない・交渉の余地のない・単純化しすぎ など）
 - [x] 国公立〜東大・TOEFL の単語を学術語の派生語・反意語その2（〈unworkable・inequitable・fallibility・underrepresented など〉で未収録のもの）で50語ずつ追加214（誤りうること・検証できない・交換可能性 など）
-- [ ] 国公立〜東大・TOEFL の単語を学術語の派生語・反意語その3（cand.txt の残り〈接頭辞 mis-・over-・under-・counter- の語など〉で未収録のもの）で50語ずつ追加215
+- [x] 国公立〜東大・TOEFL の単語を学術語の派生語・反意語その3（cand.txt の残り〈接頭辞 mis-・over-・under-・counter- の語など〉で未収録のもの）で50語ずつ追加215（誤って配分する・過度に一般化する・不正流用する など）
+- [ ] 国公立〜東大・TOEFL の単語を接頭辞 re-・inter-・trans-・sub- などの未収録の派生語（〈reinterpret・interdependence・transnational・subordinate など〉）で50語ずつ追加216
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
