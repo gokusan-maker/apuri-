@@ -15080,3 +15080,39 @@ it('私学難関 の長文「こわれた台――「バンクラプト」の語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「灰色の川魚から金色のペットへ――金魚の物語」（423語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-goldfish-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「角のあるご近所さん――ならのシカ」（435語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-nara-park-deer')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「遅れたことの証明――日本の電車の遅延証明書」（525語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-train-delay-certificates')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「梅の実のころの雨――日本に梅雨がある理由」（526語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tsuyu-rainy-season')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「塩で給料？――「サラリー」の語源」（626語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-salary-word-origin')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「肉を食べる石――「サルコファガス」の語源」（633語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sarcophagus-word-origin')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
