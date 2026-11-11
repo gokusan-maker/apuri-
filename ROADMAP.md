@@ -550,7 +550,8 @@
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（make/take/have/do/give/pay＋名詞の上級結合〈take issue with・make allowances for など〉）で50語ずつ追加197（大目に見る・重視される・矢面に立つ など）
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（形容詞＋名詞・副詞＋形容詞の上級結合〈a far cry・deeply rooted など〉）で50語ずつ追加198（正反対の・相いれない・根本的に欠陥のある など）
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（副詞＋動詞・動詞＋前置詞の上級結合〈flatly refuse・vehemently deny・account for など〉）で50語ずつ追加199（きっぱり断る・強く否定する・〜を逆手にとる など）
-- [ ] 国公立〜東大・TOEFL の単語をコロケーション（名詞＋of の上級表現〈a glimmer of hope・a wealth of など〉）で50語ずつ追加200
+- [x] 国公立〜東大・TOEFL の単語をコロケーション（名詞＋of の上級表現〈a glimmer of hope・a wealth of など〉）で50語ずつ追加200（天才のひらめき・消耗戦・見る影もない など）
+- [ ] 国公立〜東大・TOEFL の単語をコロケーション（前置詞で始まる上級の句〈in the wake of・at the expense of・on the verge of など〉）で50語ずつ追加201
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
