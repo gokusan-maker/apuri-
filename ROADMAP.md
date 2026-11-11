@@ -169,7 +169,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正98（総合2：挿入句・同格・懸垂分詞・非制限用法の関係詞・not only … but also などの並列構造を中心に、倒置・比較・語法・可算不可算もまぜた長文の正誤問題、5レベル×正誤・訂正の100問。別の目で検証し、指すもののない his など4問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正99（語彙・語法の正誤：lie/lay・rise/raise・sit/seat・borrow/lend・rob/steal・say/tell・win/beat・remember/remind・affect/effect・principal/principle・complement/compliment・stationary/stationery・make/do などのコロケーション、5レベル×正誤・訂正の100問。別の目で検証し、文法的に成り立つ選択肢があった1問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正100（総合3：東大・京大は1文30〜38語で、関係詞をはさんだ倒置文の一致・間接話法の時制・同格をまたぐ懸垂分詞など2〜3の文法事項がからむまちがいを1か所、5レベル×正誤・訂正の100問。別の目で検証し、時制の一致の1問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正101（品詞と語形：名詞・形容詞・副詞・動詞の形のとりちがえ（succeed/success/successful・economy/economic など）・分詞形容詞）
+- [x] 私学難関〜東大の正誤問題・誤文訂正101（品詞と語形：success/successful/successfully・economy/economic・dependent/dependence・broad/breadth/broaden などの形のとりちがえ・find it＋形容詞・分詞形容詞・phenomena/criteria/crises の単複、5レベル×正誤・訂正の100問。別の目で検証し、答えの記号がずれていた1問など4問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正102（総合4：これまでの文法事項をまぜた長文の正誤問題、とくに論説文の書き言葉（名詞化・受動態・it is … that 構文）の中のまちがい）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
