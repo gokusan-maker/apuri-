@@ -16172,3 +16172,39 @@ it('国公立 の長文「砂糖を雲に変える：わたあめの話」（569
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「川をふさぐ鋼の門：ロンドンのテムズ・バリア」（414語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-thames-barrier-gates')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「仲間の顔を見分けるハチ」（408語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-paper-wasp-faces')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「フォードランディア：熱帯雨林の中の工場の町」（511語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-fordlandia-rubber-town')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「うすい空気の中で元気に暮らす：チベットの人々の高地への適応」（519語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tibetan-high-altitude-genes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「多すぎるプランクトンの種類：ハッチンソンのなぞ」（647語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-plankton-paradox-hutchinson')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「第1幕に銃があらわれたら：チェーホフの銃という原則」（655語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-chekhovs-gun-principle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
