@@ -585,7 +585,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（環境・生態学〈biodiversity hotspot・keystone species・carrying capacity など〉で未収録のもの）で50語ずつ追加221（絶滅の負債・予防原則・競争排除 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（政治・国際関係〈filibuster・gerrymander・realpolitik など〉で未収録のもの）で50語ずつ追加222（影の内閣・人質外交・信託統治 など。puppet government は puppet state と近いので外して49語）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（情報技術・データ〈encryption・latency・open source など〉で未収録のもの）で50語ずつ追加223（サービス妨害・損失関数・ゼロトラスト など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（心理学・認知科学〈anchoring・priming・cognitive load など〉で未収録のもの）で50語ずつ追加224
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（心理学・認知科学〈anchoring・priming・cognitive load など〉で未収録のもの）で50語ずつ追加224（ツァイガルニク効果・機能的固着・交換記憶 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（言語学・文学〈morpheme・connotation・unreliable narrator など〉で未収録のもの）で50語ずつ追加225
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
