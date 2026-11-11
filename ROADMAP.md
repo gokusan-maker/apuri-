@@ -179,7 +179,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正108（動詞の語法：自動詞と他動詞 lie/lay・rise/raise・SVOO をとらない explain/suggest・使役 make/let/have/get・知覚動詞＋原形/-ing・remember/forget/stop＋to/-ing など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正109（接続詞：though/despite・because/because of・while/during・unless/if not・as long as/as far as・so that/in order to・whether/if・lest・now that・once など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正110（比較：as ～ as の形・比較級の強調 much/far/still・the 比較級, the 比較級・最上級の the・ラテン比較 superior to/prefer A to B・倍数表現・比較の対象のずれ など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正111（不定詞と動名詞：to 不定詞の意味上の主語 for/of・完了不定詞・be to 構文・動名詞の意味上の主語・前置詞 to＋動名詞 be used to/look forward to・too ～ to と enough to・独立不定詞 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正111（不定詞と動名詞：to 不定詞の意味上の主語 for/of・完了不定詞・be to 構文・動名詞の意味上の主語・前置詞 to＋動名詞 be used to/look forward to・too ～ to と enough to・独立不定詞 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正112（分詞と分詞構文：現在分詞と過去分詞の区別・独立分詞構文・with＋O＋分詞・懸垂分詞・having＋過去分詞・慣用的な分詞構文 generally speaking/considering など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
