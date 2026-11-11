@@ -230,7 +230,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正159（語順：only/even/also の位置・頻度副詞の位置・形容詞の並ぶ順序・間接疑問の語順・something＋形容詞 の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正160（分詞構文と独立分詞構文：主語の一致〈懸垂分詞〉・having done・being の省略・with＋O＋分詞・慣用的な分詞構文〈generally speaking・judging from〉の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正161（文型と動詞の型：第4文型をとれない動詞〈explain/suggest/describe me〉・SVOC〈make/keep/find O C〉・使役と知覚の原形不定詞・help O (to) do・let の受動態不可 の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正162（冠詞の語法：a/an の発音による使い分け・the＋最上級/序数・by＋交通手段（無冠詞）・a＋固有名詞・総称の the/a/無冠詞・the＋形容詞（〜な人々）の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正162（冠詞の語法：a/an の発音による使い分け・the＋最上級/序数・by＋交通手段（無冠詞）・a＋固有名詞・総称の the/a/無冠詞・the＋形容詞（〜な人々）の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正163（受動態の注意点：自動詞は受動態にならない〈happen/occur/consist〉・群動詞の受動態〈be laughed at〉・by 以外の前置詞〈be known to/be covered with〉・get＋過去分詞 の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
