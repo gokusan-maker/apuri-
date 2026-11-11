@@ -15500,3 +15500,39 @@ it('国公立 の長文「画面はどうやって指を感じるのか」（600
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「車線がへるところで交互に入る」（476語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-zipper-merge-lanes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「降水確率30%の意味」（415語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-chance-of-rain-forecast')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「道の駅――電車の来ない駅」（487語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-michi-no-eki-roadside')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「駅につけられた記号と番号」（496語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-station-numbering-japan')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「完ぺきとくらべるわな――ニルヴァーナの誤り」（635語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-nirvana-fallacy-perfect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「念のため、はどこまで正しいか――予防原則」（639語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-precautionary-principle-risk')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
