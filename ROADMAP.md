@@ -242,7 +242,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正171（代名詞の注意点：one/it/that の使い分け・those of・each other と one another 以外の誤り〈themselves の誤用〉・所有代名詞〈a friend of mine〉・指す名詞との数の一致の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正172（形容詞と副詞の区別：補語の形容詞〈smell good / feel bad〉・hard と hardly・late と lately・near と nearly・-ly 副詞の位置〈enough の語順〉・数量形容詞の語順〈the first three〉の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正173（主語と動詞の一致の発展：there is/are・either A or B／neither A nor B の近い方の一致・not only A but also B・as well as・関係代名詞節の中の一致・倒置文の主語の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正174（前置詞の語法：自動詞・他動詞の取り違え〈discuss about / enter into the room / reach to〉・by と until・in と within・during と for・besides と beside の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正174（前置詞の語法：自動詞・他動詞の取り違え〈discuss about / enter into the room / reach to〉・by と until・in と within・during と for・besides と beside の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正175（接続詞の注意点：because と because of・although と despite・unless と if not の取り違え・so that と such that・whether と if（主語の位置など）・as soon as / no sooner than の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
