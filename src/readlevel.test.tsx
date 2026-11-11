@@ -16004,3 +16004,39 @@ it('国公立 の長文「いちばん小さなえさを食べるおだやかな
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「川を読む：エジプトのナイロメーター」（430語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-nilometers-egypt')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「耳もとの声：美術館の音声ガイドの歴史」（404語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-museum-audio-guides')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「グアムの森を静かにしたヘビ」（500語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-guam-brown-tree-snake')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「動物園からもどってきた野生の馬」（505語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-przewalski-horse-return')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「くじで選ぶ政治？市民議会の広がり」（647語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-citizens-assemblies-lot')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「フェアトレードのラベルにできること、できないこと」（621語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-fair-trade-labels')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
