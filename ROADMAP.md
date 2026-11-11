@@ -209,7 +209,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正138（まぎらわしい動詞の語法：lie/lay・rise/raise・sit/seat・borrow/lend/rent・rob/steal・say/tell/speak/talk・suit/fit/match・remind/remember・自動詞と他動詞〈discuss about・enter into・marry with〉 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正139（強調・省略・挿入・同格：It is ... that の強調構文・do の強調・共通要素の省略・同格の that と関係代名詞の that の区別・名詞＋of＋名詞の同格・挿入句の後の動詞の一致 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正140（総合：これまでの単元をまぜた東大・京大型の長文の正誤問題〈1文に複数の文法項目〉 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正141（名詞構文・無生物主語・否定表現：make/enable/prevent＋O＋to do・cause＋O＋to do・部分否定と全体否定・no/not/never の位置・二重否定・far from/anything but など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正141（名詞構文・無生物主語・否定表現：make/enable/prevent＋O＋to do・cause＋O＋to do・部分否定と全体否定・no/not/never の位置・二重否定・far from/anything but など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正142（数量・時の表現：数詞＋名詞の単複〈a five-year-old boy・three thousand〉・dozens of・hundreds of・分数・時刻と日付の前置詞・ago/before/later・by/until の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
