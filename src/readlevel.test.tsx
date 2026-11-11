@@ -15248,3 +15248,39 @@ it('国公立 の長文「仙台から生まれた強い磁石：本多光太郎
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ドアの上の小さな緑の走る人」（453語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-running-man-exit-sign')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「去年の冬の雪ですずしく――雪むろ」（435語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yukimuro-snow-rooms')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「雨をためる田んぼ――田んぼダム」（508語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-paddy-field-dams')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「魚のための階段――ダムをこえる」（502語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-fish-ladders-dams')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「知るには早すぎ、変えるには遅すぎる――コリングリッジのジレンマ」（633語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-collingridge-dilemma')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「失敗を先に想像する――プレモーテム」（618語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-premortem-planning')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
