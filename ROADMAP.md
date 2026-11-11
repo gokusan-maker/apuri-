@@ -236,7 +236,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正165（仮定法の注意点：if 省略の倒置〈Had I known / Were it not for / Should you〉・混合仮定法・I wish / as if の時制・It is time＋過去形・without / but for の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正166（分詞構文と懸垂分詞：意味上の主語のずれ・独立分詞構文〈weather permitting / There being〉・完了形分詞〈Having finished〉・否定の位置〈Not knowing〉・with＋O＋分詞の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正167（不定詞と動名詞の使い分け：remember/forget/regret＋to do/doing・stop to do・目的語に動名詞だけをとる動詞〈avoid/mind/postpone〉・to＋動名詞〈look forward to/be used to/object to〉・不定詞の意味上の主語 for/of の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正168（関係詞の注意点：what と which/that の区別・前置詞＋関係代名詞〈in which / of whom〉・関係副詞と関係代名詞の区別〈where vs which〉・非制限用法の that 不可・複合関係詞〈whoever / whatever〉の格の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正168（関係詞の注意点：what と which/that の区別・前置詞＋関係代名詞〈in which / of whom〉・関係副詞と関係代名詞の区別〈where vs which〉・非制限用法の that 不可・複合関係詞〈whoever / whatever〉の格の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正169（名詞の数と限定詞：不可算名詞〈information/advice/equipment/furniture〉の複数形・much/many・a few/a little・each/every＋単数・the number of と a number of の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
