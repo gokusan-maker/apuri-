@@ -16040,3 +16040,51 @@ it('私学難関 の長文「フェアトレードのラベルにできること
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「赤ちゃんポストを設けるべきか」（770語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-baby-hatches')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「少年の加害者の名前を公表すべきか」（705語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-naming-young-offenders')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「大皿に残った最後の一切れについて」（775語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-last-piece')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ウインドーショッピングについて」（719語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-window-shopping')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「赤と灰色：イギリスのリスたちの争い」（626語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-grey-squirrels-britain')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ハエが運ぶ病気：睡眠病との戦い」（636語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-sleeping-sickness-tsetse')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「春の海の青い光：富山湾のホタルイカ」（539語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-firefly-squid-toyama')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「氷の上の釣り：凍った湖のワカサギ」（533語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-wakasagi-ice-fishing')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
