@@ -166,7 +166,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正95（名詞と冠詞・数量詞の発展：advice/equipment/evidence などの不可算名詞・few/a few/little/a little・much/many・most/almost all・a number of/an amount of・every/another・a/an の使い分け・最上級と序数の the・by train など、5レベル×正誤・訂正の100問。別の目で検証し、a pottery が可算になる文など5問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正96（前置詞の発展：日付・曜日・時刻の on/in/at・since と from・for と during・depend on・consist of・result in/from・capable of・responsible for・the key to・an effect on・contribute to・prefer A to B など、5レベル×正誤・訂正の100問。別の目で検証し、from 1952 など3問を直した）
 - [x] 私学難関〜東大の正誤問題・誤文訂正97（総合：語法・一致・時制と態・仮定法・関係詞・準動詞・比較・接続詞と前置詞・倒置・冠詞と数量詞・形容詞と副詞を1単元10項目でまぜた長文の正誤問題、5レベル×正誤・訂正の100問。東大・京大は1文30語前後。別の目で検証し、2つ目の誤りがあった文など4問を直した）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正98（総合2：ことなる文法事項をまぜた長文の正誤問題、とくに挿入句・同格・分詞構文の入った文）
+- [x] 私学難関〜東大の正誤問題・誤文訂正98（総合2：挿入句・同格・懸垂分詞・非制限用法の関係詞・not only … but also などの並列構造を中心に、倒置・比較・語法・可算不可算もまぜた長文の正誤問題、5レベル×正誤・訂正の100問。別の目で検証し、指すもののない his など4問を直した）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正99（語彙・語法の正誤：まぎらわしい動詞（lie/lay・rise/raise・borrow/lend・rob/steal・say/tell）・形の似た語（affect/effect・economic/economical）・コロケーション（make/do・take/have）など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
