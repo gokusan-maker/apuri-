@@ -17096,3 +17096,39 @@ it('私学難関 の長文「学習が進化を導くとき」（656語）：私
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ガラスのうしろの黒い壁」（457語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-trombe-wall-solar-heat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「落ちる水が押しちぢめた空気」（457語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-trompe-water-air-blast')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「光の筋にのせて話す」（515語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-photophone-voice-on-light')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「二つの粘土のつぼで作った冷蔵庫」（512語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-zeer-pot-in-pot-cooler')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「まちがいをふくむはずの本」（668語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-preface-paradox-errors')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「一つの問い、三つの答え」（666語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-bertrand-chord-paradox')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
