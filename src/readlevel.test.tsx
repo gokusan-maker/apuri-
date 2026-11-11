@@ -16622,3 +16622,39 @@ it('国公立 の長文「一つの台に二つの時計：チェス・クロッ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「国が入れかわる島」（438語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-pheasant-island-two-flags')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「住民が1人の村」（441語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-monowi-village-of-one')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「消えない火」（522語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-darvaza-burning-crater')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「海で最も孤独な場所」（520語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-point-nemo-ocean-pole')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「緑のリンゴはカラスについて教えてくれるか」（647語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hempel-raven-paradox')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「はじめて形を見るとき」（655語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-molyneux-blind-cube-sphere')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
