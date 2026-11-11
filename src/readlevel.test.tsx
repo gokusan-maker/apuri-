@@ -13497,12 +13497,6 @@ it('私学難関 の長文「ドル記号はどこから来たのか」（630語
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
 
-it('東大 の長文「親が子につける名前を国が制限すべきか」（733語）：東大に出る', async () => {
-  const p = passagesFor('東大').find((x) => x.id === 'todai-childrens-name-limits')!
-  expect(p).toBeTruthy()
-  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
-})
-
 it('東大 の長文「飼い主に犬のDNAの登録を義務づけるべきか」（734語）：東大に出る', async () => {
   const p = passagesFor('東大').find((x) => x.id === 'todai-dog-dna-registers')!
   expect(p).toBeTruthy()

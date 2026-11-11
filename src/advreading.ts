@@ -101604,50 +101604,6 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
-    id: 'todai-childrens-name-limits',
-    title: 'Should the State Limit the Names Parents Give Their Children?',
-    level: '難関大（評論）',
-    paragraphs: [
-      "Choosing a name is often the first decision parents make on behalf of a child, and it is one that the child will carry for life. In most countries parents may choose almost any name they like, but this freedom is rarely complete. In Japan, the characters used in a given name must come from approved lists. Under a revised law that took effect in 2025, the reading of a name must also be recorded, and readings which stray too far from the usual ones may be refused. Other countries set wider or narrower limits. Should the state limit the names parents give their children?",
-      "The strongest argument for limits rests on the interests of the child. A name is chosen by adults, but it is the child who must answer to it at school, write it on forms and introduce himself or herself with it for decades. A name that invites mockery, or that nobody except the parents can read, may become a small but constant burden. Supporters often mention a case in Japan in the early 1990s, when a father tried to register his son under a name meaning \"devil\" and officials eventually refused to accept it. The child, they say, had no voice in the matter, so someone had to speak for him.",
-      "Supporters also make a practical point. Names are not only private expressions of taste; they are tools that schools, hospitals and government offices use every day to identify people. When a name can be read in many different ways, or is written with characters that few people recognise, mistakes become more likely, and in a hospital or an emergency such mistakes can matter a great deal. Rules about which characters may be used and how they are read help to keep official records consistent. In this view, a limit on names is no more unreasonable than the rule that a birth must be registered within a fixed period.",
-      "Critics reply that naming is one of the most personal choices a family can make, and that the state should interfere only in extreme cases. Names express religion, family history and hopes for the future, and what looks strange to an official may be deeply meaningful within a particular community. ( A ), tastes in names change constantly. Many names that are common today were once regarded as unusual, and a rule based on present ideas of what is acceptable may simply freeze the preferences of one generation. Critics also note that officials who judge names are making decisions of taste, which is not a task that governments perform well.",
-      "There is also the question of where the line should be drawn. A name meaning \"devil\" may seem an easy case, but most disputed names are far less clear. Is an unusual reading of a common character harmful, or merely creative? Is a name taken from a cartoon character an embarrassment, or a sign of affection? Critics argue that rules vague enough to cover such cases give officials too much power, while rules precise enough to be applied fairly will inevitably miss many names that are in fact unkind. They add that people who dislike their names can, in many countries, apply to change them later in life.",
-      "These objections are serious, but they argue against detailed rules about taste, not against any limit at all. A narrow rule could allow officials to refuse names likely to expose a child to ridicule or harm, and could require the written form and reading of a name to be clear. Such a rule would still leave parents a very wide choice while protecting the person who has no say. The right to change one's name later is valuable, but it comes only after years in which the child has already lived with the name, and changing it may itself require going to court.",
-      "The state should therefore set limits on names, but they should be few and clearly stated. Parents should remain free to choose names that are unusual, old-fashioned or meaningful only to their own family, and officials should not act as judges of style. What the state can reasonably do is make sure that a name can be read and recorded, and refuse the rare name that seems certain to burden the child. Such limits respect the freedom of parents while remembering that a name belongs, in the end, to someone else.",
-    ],
-    ja: [
-      '名前を選ぶことは、親が子どものために行う最初の決定であることが多く、子どもはそれを一生背負っていくことになる。たいていの国では、親はほとんどどんな名前でも選ぶことができるが、この自由が完全であることはまれである。日本では、名前に使う文字は認められた一覧の中から選ばなければならず、さらに2025年に施行された改正法のもとで、名前の読み方も記録しなければならなくなった。そのため、ふつうの読み方からあまりにかけはなれた読み方は受け付けられないことがある。ほかの国々は、もっと広い、あるいはもっとせまい制限を設けている。親が子どもにつける名前を、国は制限すべきだろうか。',
-      '制限に賛成する最も強い理由は、子どもの利益にもとづいている。名前は大人が選ぶものだが、学校でその名前で呼ばれて返事をし、書類にそれを書き、何十年もその名前で自己紹介をしなければならないのは子どもである。からかいをまねく名前や、親以外のだれにも読めない名前は、小さいけれども絶え間ない重荷になるかもしれない。支持する人々はよく、1990年代の初めに日本で起きたできごとを挙げる。ある父親が息子を「悪魔」という意味の名前で届け出ようとし、役所が最終的にそれを受理しなかったのである。支持する人々によれば、子どもはこの問題について何も言えなかったのだから、だれかがその子にかわって声を上げなければならなかったのだ。',
-      '支持する人々は、実際的な点も指摘する。名前は好みを個人的に表すものであるだけでなく、学校や病院や役所が毎日人を見分けるために使う道具でもある。名前がいくつもの読み方をされうる場合や、知っている人の少ない文字で書かれている場合には、まちがいが起きやすくなり、病院や緊急の場面では、そうしたまちがいがとても大きな意味を持つことがある。どの文字を使ってよいか、それをどう読むかについての規則は、公的な記録の一貫性を保つのに役立つ。この考え方によれば、名前を制限することは、出生を決められた期間内に届け出なければならないという規則と同じくらい、もっともなことなのである。',
-      '批判する人々は、名前をつけることは家族が行う選択の中でも最も個人的なものの一つであり、国が口を出すのは極端な場合に限るべきだと答える。名前は宗教や家族の歴史、将来への願いを表すものであり、役人には奇妙に見えるものが、ある共同体の中では深い意味を持つこともある。さらに、名前の好みは絶えず変わる。今ではありふれた名前の多くも、かつてはめずらしいと見なされていたのであり、何が受け入れられるかについての現在の考え方にもとづく規則は、ある世代の好みを固定してしまうだけかもしれない。批判する人々はまた、名前を判断する役人は好みについての決定を下しているのであり、それは国がうまく行える仕事ではないと指摘する。',
-      'どこで線を引くべきかという問題もある。「悪魔」という意味の名前はわかりやすい例に見えるかもしれないが、争いになる名前のほとんどは、それよりはるかにあいまいである。よく使われる文字をめずらしい読み方で読むことは有害なのか、それとも単に創造的なのか。漫画の登場人物からとった名前ははずかしいものなのか、それとも愛情のしるしなのか。批判する人々は、こうした場合までふくめられるほどあいまいな規則は役人に大きすぎる力を与え、公平に当てはめられるほど厳密な規則は、実際には思いやりのない名前の多くを必ず見のがしてしまうと主張する。さらに、自分の名前がきらいな人は、多くの国で、のちに名前の変更を申し立てることができるとつけ加える。',
-      'これらの反論は重要だが、それが反対しているのは好みについての細かな規則であって、制限そのものではない。子どもをあざけりや害にさらすおそれの大きい名前を役所が受け付けないことを認めるせまい規則と、名前の書き方と読み方がはっきりしていることを求める決まりとを組み合わせれば、親にはなおとても広い選択の余地が残り、しかも発言の機会を持たない人を守ることができる。のちに名前を変える権利は大切だが、それが使えるのは、子どもがすでに何年もその名前とともに暮らした後であり、名前を変えるには裁判所に申し立てなければならないこともある。',
-      'したがって、国は名前に制限を設けるべきだが、その制限は少なく、明確に示されたものであるべきだ。親は、めずらしい名前や古風な名前、自分の家族にとってだけ意味のある名前を、自由に選べるままであるべきであり、役人は名前の趣味のよしあしを判断する者としてふるまうべきではない。国がもっともな形で行えるのは、名前が読めて記録できることを確かめること、そして子どもの重荷になることがまず確かなまれな名前を受け付けないことである。そうした制限は、親の自由を尊重しながらも、名前は結局のところ、ほかのだれかのものだということを忘れないものなのである。',
-    ],
-    blanks: [
-      { id: 'A', choices: ['Instead', 'Even so', 'Moreover', 'For instance'], answer: 2, why: '空所の前で「名前は宗教や家族の歴史を表す」という批判の理由を述べ、後で「名前の好みは絶えず変わる」という別の理由を加えているので、追加を表す Moreover。' },
-    ],
-    summary: {
-      text: 'Supporters of limits argue that a name should not become a ( 1 ) for the child and that records need names that can be read clearly. Critics say that tastes change and that it is hard to decide where to draw the ( 2 ). The writer supports a few clear limits that leave the ( 3 ) of parents largely intact.',
-      blanks: [
-        { choices: ['gift', 'burden', 'secret', 'habit'], answer: 1, why: '第2段落 may become a small but constant burden。名前が子どもの「重荷」になってはならないという主張である。' },
-        { choices: ['line', 'water', 'crowd', 'breath'], answer: 0, why: '第5段落 the question of where the line should be drawn。どこで「線」を引くかという問題である。' },
-        { choices: ['income', 'health', 'address', 'freedom'], answer: 3, why: '第7段落 Such limits respect the freedom of parents。親の「自由」を大きくそこなわない制限である。' },
-      ],
-    },
-    tf: [
-      { statement: '日本では、名前に使う文字は、認められた一覧の中から選ばなければならない。', answer: true, why: '第1段落 the characters used in a given name must come from approved lists。' },
-      { statement: '支持する人々は、名前は学校や病院が人を見分けるための道具でもあると考えている。', answer: true, why: '第3段落 they are tools that schools, hospitals and government offices use every day to identify people。' },
-      { statement: '批判する人々は、どの名前を認めるべきかの線引きは簡単だと考えている。', answer: false, why: '第5段落 most disputed names are far less clear。線引きは難しいと考えている。' },
-      { statement: '筆者は、役所が名前の趣味のよしあしを判断すべきだと考えている。', answer: false, why: '第7段落 officials should not act as judges of style。' },
-    ],
-    qa: [
-      { q: 'What practical point do supporters make in the third paragraph?', choices: ['Clear names reduce mistakes in official records', 'Short names are cheaper for schools to print', 'Popular names make children feel more confident', 'Old names help officials trace family history'], answer: 0, why: '第3段落 When a name can be read in many different ways ... mistakes become more likely。読みやすい名前は記録のまちがいをへらすという点である。' },
-      { q: 'What do critics say about people who dislike their names?', choices: ['They usually grow to like them in time', 'They should be given new names by officials', 'They rarely complain until they become adults', 'They can often change them later'], answer: 3, why: '第5段落 people who dislike their names can, in many countries, apply to change them later in life。' },
-    ],
-  },
-  {
     id: 'todai-dog-dna-registers',
     title: 'Should Dog Owners Be Required to Register Their Pets\' DNA?',
     level: '難関大（評論）',
