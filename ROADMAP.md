@@ -606,7 +606,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（メディア・ジャーナリズム〈news cycle・paywall・op-ed など〉で未収録のもの）で50語ずつ追加235（集団的過熱取材・プレバンキング・ニュース回避 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（ビジネス・経営〈first-mover advantage・economies of scope・churn rate など〉で未収録のもの）で50語ずつ追加236（破壊的イノベーション・中抜き・ポイズンピル など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（教育・学習科学〈spaced repetition・formative assessment・growth mindset など〉で未収録のもの）で50語ずつ追加237（交互練習・場所法・生産的失敗 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（スポーツ・健康科学〈VO2 max・overtraining・muscle memory など〉で未収録のもの）で50語ずつ追加238
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（スポーツ・健康科学〈VO2 max・overtraining・muscle memory など〉で未収録のもの）で50語ずつ追加238（イップス・漸進的過負荷・心拍変動 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（法と行政・公共政策〈means test・sunset clause・pilot scheme など〉で未収録のもの）で50語ずつ追加239
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
