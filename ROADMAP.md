@@ -592,7 +592,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（物理・化学・天文〈event horizon・activation energy・redshift など〉で未収録のもの）で50語ずつ追加226（価電子・浸透圧・質量とエネルギーの等価性 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（生物・遺伝・医科学〈gene expression・cell division・immune response など〉で未収録のもの）で50語ずつ追加227（オートファジー・血管新生・異種移植 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（哲学・倫理学〈moral luck・veil of ignorance・is-ought problem など〉で未収録のもの）で50語ずつ追加228（二重結果の原理・誤謬理論・最善の説明への推論 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（社会学・人類学〈rite of passage・moral panic・participant observation など〉で未収録のもの）で50語ずつ追加229
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（社会学・人類学〈rite of passage・moral panic・participant observation など〉で未収録のもの）で50語ずつ追加229（理念型・液状化する近代・集合的沸騰 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（歴史・考古学〈primary source・stratigraphy・city-state など〉で未収録のもの）で50語ずつ追加230
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
