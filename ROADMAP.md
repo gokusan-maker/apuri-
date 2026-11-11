@@ -579,7 +579,8 @@
 - [x] 国公立〜東大・TOEFL の単語を接尾辞 -ize・-ify・-ism・-ity などの未収録の学術語（〈marginalize・commodify・relativism・contingency など〉）で50語ずつ追加217（政治問題化する・文脈に位置づける・不透明さ など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（法律・裁判〈acquittal・plaintiff・injunction など〉で未収録のもの）で50語ずつ追加218（上訴の・遺言検認・禁反言 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（医学・医療〈prognosis・benign・contraindication など〉で未収録のもの）で50語ずつ追加219（肝硬変・心身症の・挿管する など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（経済・金融〈liquidity・solvency・arbitrage など〉で未収録のもの）で50語ずつ追加220
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（経済・金融〈liquidity・solvency・arbitrage など〉で未収録のもの）で50語ずつ追加220（イールドカーブ・最後の貸し手・購買力平価 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（環境・生態学〈biodiversity hotspot・keystone species・carrying capacity など〉で未収録のもの）で50語ずつ追加221
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
