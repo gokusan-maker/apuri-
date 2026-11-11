@@ -211,7 +211,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正140（総合：これまでの単元をまぜた東大・京大型の長文の正誤問題〈1文に複数の文法項目〉 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正141（名詞構文・無生物主語・否定表現：make/enable/prevent＋O＋to do・cause＋O＋to do・部分否定と全体否定・no/not/never の位置・二重否定・far from/anything but など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正142（数量・時の表現：数詞＋名詞の単複〈a five-year-old boy・three thousand〉・dozens of・hundreds of・分数・時刻と日付の前置詞・ago/before/later・by/until の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正143（形容詞・副詞の語法：enough の位置・so/such・too〜to・叙述用法のみの形容詞〈asleep・alike〉・-ly の有無で意味が変わる副詞〈hard/hardly・late/lately〉の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正143（形容詞・副詞の語法：enough の位置・so/such・too〜to・叙述用法のみの形容詞〈asleep・alike〉・-ly の有無で意味が変わる副詞〈hard/hardly・late/lately〉の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正144（接続詞の語法：unless・in case・as long as・now that・once・while/whereas・so that・whether/if の使い分けと時制の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
