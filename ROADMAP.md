@@ -188,7 +188,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正117（仮定法：仮定法過去・過去完了・混合仮定法・I wish/as if・If it were not for/But for・If S should/were to・倒置による if の省略・It is time S＋過去形 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正118（主語と動詞の一致：A as well as B・either/neither A or/nor B・the number of・集合名詞・距離や金額の単数扱い・there is/are・関係代名詞の先行詞との一致 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正119（倒置・強調・省略：否定の副詞句による倒置 Only then/Not once/At no time・So/Such による倒置・It is … that の強調構文・do による強調・共通語の省略・代不定詞 to など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正120（語法の総合：混同しやすい語 affect/effect・rise/raise・lie/lay 以外の語 economic/economical・sensible/sensitive・respectable/respectful・imaginary/imaginative・historic/historical など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正120（語法の総合：混同しやすい語 affect/effect・rise/raise・lie/lay 以外の語 economic/economical・sensible/sensitive・respectable/respectful・imaginary/imaginative・historic/historical など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正121（名詞の語法：可算・不可算で意味が変わる名詞 paper/glass/experience・数量表現 a piece of/an item of・所有格と of・名詞の後置修飾・同格の that など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
