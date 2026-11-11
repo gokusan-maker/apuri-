@@ -16742,3 +16742,39 @@ it('私学難関 の長文「理解せずに規則にしたがう」（665語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「財産をほり出した島」（453語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-nauru-phosphate-island')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「燃やされつづけるヤギ」（432語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-gavle-straw-goat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「数のない言語」（505語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-piraha-without-numbers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「2つの山の間のロバ」（518語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-buridans-ass-choice')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「あなたは機械につながるか」（653語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-nozick-experience-machine')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「運が罪を決めるとき」（660語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-moral-luck-drivers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
