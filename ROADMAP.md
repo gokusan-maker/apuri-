@@ -206,7 +206,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正135（時制と態：現在完了と過去・過去完了・未来完了・進行形にしない動詞・時や条件の副詞節の現在形・受動態〈by 以外の前置詞・群動詞の受動態・知覚動詞と使役動詞の受動態〉 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正136（助動詞：must/have to・should/ought to・may/might/could の推量・助動詞＋have done・need not have done と did not need to・had better・used to と would・cannot help -ing など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正137（主語と動詞の一致・語順：the number of/a number of・each/every・there is/are・倒置〈Never have I・Only then did〉・間接疑問の語順・enough の位置・so/such の語順 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正138（まぎらわしい動詞の語法：lie/lay・rise/raise・sit/seat・borrow/lend/rent・rob/steal・say/tell/speak/talk・suit/fit/match・remind/remember・自動詞と他動詞〈discuss about・enter into・marry with〉 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正138（まぎらわしい動詞の語法：lie/lay・rise/raise・sit/seat・borrow/lend/rent・rob/steal・say/tell/speak/talk・suit/fit/match・remind/remember・自動詞と他動詞〈discuss about・enter into・marry with〉 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正139（強調・省略・挿入・同格：It is ... that の強調構文・do の強調・共通要素の省略・同格の that と関係代名詞の that の区別・名詞＋of＋名詞の同格・挿入句の後の動詞の一致 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
