@@ -203,7 +203,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正132（比較の語法：比較級と最上級の形・than の後の代名詞と省略・the＋比較級・as ... as の否定・倍数表現・no more than/no less than・superior to・prefer A to B・比較対象のずれ〈that of〉 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正133（仮定法：if 節と主節の時制・仮定法過去完了・混合仮定法・I wish/as if・if it were not for/but for・should/were to・if の省略と倒置・suggest/demand that の原形 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正134（関係詞：関係代名詞 who/which/that/whose・前置詞＋関係代名詞・関係副詞 where/when/why・what と that・継続用法・複合関係詞 whoever/whatever・関係詞の省略 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正135（時制と態：現在完了と過去・過去完了・未来完了・進行形にしない動詞・時や条件の副詞節の現在形・受動態〈by 以外の前置詞・群動詞の受動態・知覚動詞と使役動詞の受動態〉 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正135（時制と態：現在完了と過去・過去完了・未来完了・進行形にしない動詞・時や条件の副詞節の現在形・受動態〈by 以外の前置詞・群動詞の受動態・知覚動詞と使役動詞の受動態〉 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正136（助動詞：must/have to・should/ought to・may/might/could の推量・助動詞＋have done・need not have done と did not need to・had better・used to と would・cannot help -ing など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
