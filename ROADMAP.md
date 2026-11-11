@@ -177,7 +177,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正106（冠詞と名詞：数えられない名詞 information/advice/furniture・the の有無・a＋固有名詞・総称の the/a/無冠詞・集合名詞 police/family・複数形で別の意味の名詞 arms/manners など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正107（代名詞：it と one・that/those の比較での代用・each other と one another・再帰代名詞・所有代名詞 a friend of mine・either/neither/both の一致・-thing + 形容詞 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正108（動詞の語法：自動詞と他動詞 lie/lay・rise/raise・SVOO をとらない explain/suggest・使役 make/let/have/get・知覚動詞＋原形/-ing・remember/forget/stop＋to/-ing など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正109（接続詞：though/despite・because/because of・while/during・unless/if not・as long as/as far as・so that/in order to・whether/if・lest・now that・once など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正109（接続詞：though/despite・because/because of・while/during・unless/if not・as long as/as far as・so that/in order to・whether/if・lest・now that・once など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正110（比較：as ～ as の形・比較級の強調 much/far/still・the 比較級, the 比較級・最上級の the・ラテン比較 superior to/prefer A to B・倍数表現・比較の対象のずれ など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
