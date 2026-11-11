@@ -192,7 +192,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正121（名詞の語法：可算・不可算で意味が変わる名詞 paper/glass/experience・数量表現 a piece of/an item of・所有格と of・名詞の後置修飾・同格の that など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正122（形容詞の語法：人を主語にとらない形容詞 convenient/possible/necessary・be sure/certain to・be likely to・worth と worthy・alike/like・数量形容詞の語順 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正123（副詞の語法：very と much・too と either・already と yet・ago と before 以外の時の副詞 still/any longer・so と such・else・enough の位置以外の副詞の位置 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正124（形容詞の語法：限定用法だけ・叙述用法だけの形容詞〈alive・asleep・afraid・main・mere〉・意味がまぎらわしい形容詞〈economic/economical・sensible/sensitive・respectable/respective〉・数量の形容詞 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正124（形容詞の語法：限定用法だけ・叙述用法だけの形容詞〈alive・asleep・afraid・main・mere〉・意味がまぎらわしい形容詞〈economic/economical・sensible/sensitive・respectable/respective〉・数量の形容詞 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正125（名詞の語法：可算・不可算〈advice・information・furniture・equipment〉・集合名詞〈family・police・cattle〉・常に複数形の名詞・意味がまぎらわしい名詞〈customer/guest/client・fare/fee/charge〉 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
@@ -418,7 +419,7 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別（獣医学・畜産の専門語）に50語ずつ追加101（乳房炎・ワンヘルス・飼料要求率など）
 - [x] 国公立〜東大・TOEFL の単語を分野別（建築学・都市計画の専門語）に50語ずつ追加102（建ぺい率・空中権・ボンエルフなど）
 - [x] 国公立〜東大・TOEFL の単語を分野別（交通・物流・海運の専門語）に50語ずつ追加103（転覆する・竜骨・満載喫水線など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別（スポーツ科学・運動生理学の専門語）に50語ずつ追加104
+- [ ] 国公立〜東大・TOEFL の単語を分野別（映画・写真・映像制作の専門語）に50語ずつ追加104
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
