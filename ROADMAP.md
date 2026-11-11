@@ -601,7 +601,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（芸術・音楽・建築〈chiaroscuro・counterpoint・flying buttress など〉で未収録のもの）で50語ずつ追加232（リブ・ヴォールト・十二音技法・空気遠近法 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（農業・食料〈monoculture・agroforestry・food mile など〉で未収録のもの）で50語ずつ追加233（契約農業・隠れた飢餓・種子主権 など。seed vault は seed bank と近いので外して49語）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（交通・都市計画〈congestion charge・transit-oriented development・last mile など〉で未収録のもの）で50語ずつ追加234（交通の貧困・スポンジシティ・ブライスのパラドックス など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（メディア・ジャーナリズム〈news cycle・paywall・op-ed など〉で未収録のもの）で50語ずつ追加235
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（メディア・ジャーナリズム〈news cycle・paywall・op-ed など〉で未収録のもの）で50語ずつ追加235（集団的過熱取材・プレバンキング・ニュース回避 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（ビジネス・経営〈first-mover advantage・economies of scope・churn rate など〉で未収録のもの）で50語ずつ追加236
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
