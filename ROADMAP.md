@@ -182,7 +182,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正111（不定詞と動名詞：to 不定詞の意味上の主語 for/of・完了不定詞・be to 構文・動名詞の意味上の主語・前置詞 to＋動名詞 be used to/look forward to・too ～ to と enough to・独立不定詞 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正112（分詞と分詞構文：現在分詞と過去分詞の区別・独立分詞構文・with＋O＋分詞・懸垂分詞・having＋過去分詞・慣用的な分詞構文 generally speaking/considering など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正113（時制：現在完了と過去・時と条件の副詞節の現在・過去完了・未来完了・進行形にしない動詞・時制の一致とその例外・since/for/ago など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正114（助動詞：must/have to・should have done・may well/might as well・need not have done・used to/would・had better の否定・cannot have done など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正114（助動詞：must/have to・should have done・may well/might as well・need not have done・used to/would・had better の否定・cannot have done など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正115（受動態：自動詞は受動態にしない・by 以外の前置詞 be known to/be covered with・群動詞の受動態 be laughed at・知覚・使役動詞の受動態で to が必要・進行形と完了形の受動態 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
