@@ -15164,3 +15164,39 @@ it('国公立 の長文「二つの国をつないだ化学者：高峰譲吉」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「秋の風が生むあまさ――ほしがき」（411語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hoshigaki-dried-persimmons')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「漢字の上の小さな助け――ふりがな」（403語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-furigana-reading-aids')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「うでで作る文字――手旗信号」（510語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-flag-semaphore')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「すっぱくて塩からくて赤い――梅干しができるまで」（515語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-umeboshi-pickled-ume')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「テーブルの伯爵？――「サンドイッチ」の語源」（606語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sandwich-word-origin')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ガマの穂からカニカマへ――すり身の科学」（623語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-surimi-fish-paste')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
