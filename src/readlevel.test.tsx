@@ -16424,3 +16424,39 @@ it('国公立 の長文「管を通る声：伝声管」（541語）：国公立
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「さびない鉄の柱」（425語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-iron-pillar-delhi-rust')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「塩でほられた礼拝堂」（428語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-wieliczka-salt-mine-chapel')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ハーメルンで本当は何が起きたのか」（524語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hamelin-pied-piper-history')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ロジャー・ティチボーンだと名乗った男」（520語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tichborne-claimant-trial')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「正しく、根拠があっても知識ではない？　ゲティア問題」（639語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-gettier-problem-knowledge')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「表か裏か？　眠り姫問題」（647語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sleeping-beauty-probability')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
