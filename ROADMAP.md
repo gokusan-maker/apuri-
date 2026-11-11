@@ -186,7 +186,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正115（受動態：自動詞は受動態にしない・by 以外の前置詞 be known to/be covered with・群動詞の受動態 be laughed at・知覚・使役動詞の受動態で to が必要・進行形と完了形の受動態 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正116（関係詞：関係代名詞 which/that/what の区別・前置詞＋関係代名詞・関係副詞 where/when/why/how・非制限用法・複合関係詞 whatever/whoever・関係代名詞の省略 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正117（仮定法：仮定法過去・過去完了・混合仮定法・I wish/as if・If it were not for/But for・If S should/were to・倒置による if の省略・It is time S＋過去形 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正118（主語と動詞の一致：A as well as B・either/neither A or/nor B・the number of・集合名詞・距離や金額の単数扱い・there is/are・関係代名詞の先行詞との一致 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正118（主語と動詞の一致：A as well as B・either/neither A or/nor B・the number of・集合名詞・距離や金額の単数扱い・there is/are・関係代名詞の先行詞との一致 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正119（倒置・強調・省略：否定の副詞句による倒置 Only then/Not once/At no time・So/Such による倒置・It is … that の強調構文・do による強調・共通語の省略・代不定詞 to など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
