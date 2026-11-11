@@ -8876,7 +8876,7 @@ export const WORDS_UPPER: Up[] = [
   w('私学', 'shellfish', '貝類・甲殻類（食用の水生動物）', 'Toxic algae can build up in shellfish, so harvesting is sometimes banned during a bloom.', '有毒な藻が貝類の体内に蓄積しうるため、大量発生の間は採取が禁止されることがある。'),
   w('私学難関', 'oceanography', '海洋学', 'Oceanography combines physics, chemistry, biology, and geology to understand how the seas work.', '海洋学は物理学、化学、生物学、地質学を組み合わせて海の仕組みを理解しようとする。'),
   w('国公立', 'kelp forest', 'ケルプの森（大型の海藻が茂る海中林）', 'Sea otters protect the kelp forest by eating the sea urchins that would otherwise devour it.', 'ラッコは、放っておけば海藻を食べ尽くしてしまうウニを食べることでケルプの森を守る。'),
-  w('国公立', 'riptide', '離岸流', 'If you are caught in a riptide, swim parallel to the shore instead of fighting the current.', '離岸流に巻きこまれたら、流れに逆らわずに岸と平行に泳ぎなさい。'),
+  w('国公立', 'riptide', '離岸流（引き波）・相反する力のせめぎ合い', 'If you are caught in a riptide, swim parallel to the shore instead of fighting the current.', '離岸流に巻きこまれたら、流れに逆らわずに岸と平行に泳ぎなさい。'),
   w('国公立', 'submersible', '潜水艇、潜水調査船', 'The Japanese submersible Shinkai 6500 can carry three people to a depth of 6,500 meters.', '日本の潜水調査船「しんかい6500」は3人を乗せて水深6500メートルまで潜ることができる。'),
   w('国公立', 'landings', '水揚げ（量）', 'Sardine landings at the port rose sharply this year, pushing down prices at the fish market.', '今年はその港のイワシの水揚げ量が急増し、魚市場の価格を押し下げた。'),
   w('国公立', 'sea surface temperature', '海面水温', 'Satellites measure sea surface temperature across the globe every day with remarkable accuracy.', '人工衛星は毎日、地球全体の海面水温を非常に高い精度で測定している。'),
