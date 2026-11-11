@@ -16208,3 +16208,51 @@ it('私学難関 の長文「第1幕に銃があらわれたら：チェーホ�
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「大学の授業は成績を相対評価でつけるべきか」（664語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-grading-on-a-curve')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「急を要しない救急車の利用は有料にすべきか」（670語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-ambulance-fees')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「受け皿について」（702語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-saucers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「栓抜きについて」（683語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-bottle-openers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ゼリーの中の輪：リーゼガング環のなぞ」（658語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-liesegang-rings')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「流しの中の輪：ハイドロリックジャンプの科学」（661語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-hydraulic-jump')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「電気がえがく木：リヒテンベルク図形」（542語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-lichtenberg-figures')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「決して話さない給仕：ダムウェイターの物語」（551語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-dumbwaiter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
