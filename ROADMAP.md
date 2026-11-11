@@ -198,7 +198,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正127（冠詞の語法：a/an/the の使い分け・無冠詞〈by bus・at school・go to bed〉・the＋比較級・総称の the/a/無冠詞・固有名詞と the・by the hour など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正128（前置詞の使い分け：時の前置詞 in/on/at・by と until・for と during・since・within・場所の above/over・below/under・between/among・across/through・beside/besides など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正129（接続詞の語法：while/whereas・as long as/as far as・in case・unless・once・now that・so that/in order that・whether/if・both A and B・not only A but also B の一致 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正130（動名詞と不定詞：目的語に動名詞だけ・不定詞だけをとる動詞〈avoid/mind/postpone・decide/refuse/manage〉・remember/forget/regret/stop/try の意味の違い・look forward to -ing・be used to -ing と used to do など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正130（動名詞と不定詞：目的語に動名詞だけ・不定詞だけをとる動詞〈avoid/mind/postpone・decide/refuse/manage〉・remember/forget/regret/stop/try の意味の違い・look forward to -ing・be used to -ing と used to do など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正131（分詞の語法：現在分詞と過去分詞の使い分け〈exciting/excited・boring/bored〉・名詞を修飾する分詞・分詞構文〈主語の一致・懸垂分詞〉・with＋O＋分詞・感情動詞の分詞・having＋過去分詞 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
