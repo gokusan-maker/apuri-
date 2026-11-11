@@ -562,7 +562,8 @@
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（形容詞＋前置詞の型〈averse to・conducive to・fraught with など〉）で50語ずつ追加205（〜に夢中の・〜に染まった・〜を前提とした など）
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（名詞＋前置詞の型〈aversion to・impact on・exception to など〉）で50語ずつ追加206（〜への負担・〜への免疫・〜との連帯 など）
 - [x] 国公立〜東大・TOEFL の単語をコロケーション（動詞＋名詞の型〈wield influence・forge ties・allay fears など〉）で50語ずつ追加207（影響力をふるう・不安をやわらげる・対立をあおる など）
-- [ ] 国公立〜東大・TOEFL の単語をコロケーション（動詞＋名詞の型その2〈kindle interest・muster courage・cement ties など〉）で50語ずつ追加208
+- [x] 国公立〜東大・TOEFL の単語をコロケーション（動詞＋名詞の型その2〈kindle interest・muster courage・cement ties など〉）で50語ずつ追加208（興味をかきたてる・勇気をふりしぼる・恨みを抱く など）
+- [ ] 国公立〜東大・TOEFL の単語をコロケーション（形容詞＋名詞の型〈tacit consent・stark contrast・vested interest など〉）で50語ずつ追加209
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
