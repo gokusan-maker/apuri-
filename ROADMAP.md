@@ -216,7 +216,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正145（前置詞の to と不定詞の to：look forward to・object to・be used to・when it comes to・with a view to・devote oneself to と to do の区別の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正146（仮定法現在：suggest・recommend・insist・demand・propose that S (should) 原形・it is essential/vital that・insist の「事実の主張」との区別の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正147（感情を表す分詞形容詞：interesting/interested・exciting/excited・confusing/confused・embarrassing/embarrassed と、分詞の後置修飾〈the people invited・a man named〉の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正148（完了進行形と時制の一致：have/had been doing・will have done・by the time 節・時制の一致とその例外〈不変の真理・歴史的事実〉の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正148（完了進行形と時制の一致：have/had been doing・will have done・by the time 節・時制の一致とその例外〈不変の真理・歴史的事実〉の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正149（集合名詞と数の一致：police・cattle・people は複数扱い・staff/family/audience・the number of と a number of・each/every＋単数・neither of の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
