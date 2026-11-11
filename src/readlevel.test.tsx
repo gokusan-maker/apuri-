@@ -16256,3 +16256,39 @@ it('国公立 の長文「決して話さない給仕：ダムウェイターの
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「農家の畑の下の金：スタッフォードシャーの埋蔵品」（420語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-staffordshire-hoard-gold')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「7つの橋と答えのないパズル」（416語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-konigsberg-seven-bridges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「エニグマを破る：ブレッチリー・パークの静かな仕事」（522語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-bletchley-enigma-codebreakers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「タラがいなくなった日：グランドバンクス」（510語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-grand-banks-cod-collapse')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「みんなどこにいるのか：フェルミのパラドックス」（641語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-fermi-paradox-silence')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「あなたのノートは心の一部か」（646語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-extended-mind-notebook')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
