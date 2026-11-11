@@ -609,7 +609,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（教育・学習科学〈spaced repetition・formative assessment・growth mindset など〉で未収録のもの）で50語ずつ追加237（交互練習・場所法・生産的失敗 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（スポーツ・健康科学〈VO2 max・overtraining・muscle memory など〉で未収録のもの）で50語ずつ追加238（イップス・漸進的過負荷・心拍変動 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（法と行政・公共政策〈means test・sunset clause・pilot scheme など〉で未収録のもの）で50語ずつ追加239（意地悪な問題・リバタリアン・パターナリズム・既得権条項 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（エネルギー・工学〈grid storage・load factor・heat pump など〉で未収録のもの）で50語ずつ追加240
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（エネルギー・工学〈grid storage・load factor・heat pump など〉で未収録のもの）で50語ずつ追加240（ダックカーブ・瞬動予備力・成績係数 など。plug-in hybrid は hybrid と近いので外して49語）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（海洋・気象〈storm surge・upwelling・jet stream など〉で未収録のもの）で50語ずつ追加241
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
