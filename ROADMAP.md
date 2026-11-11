@@ -220,7 +220,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正149（集合名詞と数の一致：police・cattle・people は複数扱い・staff/family/audience・the number of と a number of・each/every＋単数・neither of の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正150（動名詞と不定詞で意味が変わる動詞：remember/forget/stop/try/regret/mean/go on・need doing の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正151（助動詞の慣用表現：would rather A than B・had better (not)・may well・may as well・cannot help doing・cannot ... too・used to と would の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正152（否定の強調と慣用表現：not ... at all・by no means・far from・anything but・nothing but・no longer・not ... until・hardly ... when の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正152（否定の強調と慣用表現：not ... at all・by no means・far from・anything but・nothing but・no longer・not ... until・hardly ... when の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正153（前置詞の使い分け：in/on/at の時と場所・by/until・for/during・since/from・between/among・beside/besides・across/through の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
