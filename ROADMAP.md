@@ -588,7 +588,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（情報技術・データ〈encryption・latency・open source など〉で未収録のもの）で50語ずつ追加223（サービス妨害・損失関数・ゼロトラスト など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（心理学・認知科学〈anchoring・priming・cognitive load など〉で未収録のもの）で50語ずつ追加224（ツァイガルニク効果・機能的固着・交換記憶 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（言語学・文学〈morpheme・connotation・unreliable narrator など〉で未収録のもの）で50語ずつ追加225（書簡体小説・語彙の空白・不信の自発的停止 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（物理・化学・天文〈event horizon・activation energy・redshift など〉で未収録のもの）で50語ずつ追加226
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（物理・化学・天文〈event horizon・activation energy・redshift など〉で未収録のもの）で50語ずつ追加226（価電子・浸透圧・質量とエネルギーの等価性 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（生物・遺伝・医科学〈gene expression・cell division・immune response など〉で未収録のもの）で50語ずつ追加227
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
