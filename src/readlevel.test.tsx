@@ -16904,3 +16904,39 @@ it('国公立 の長文「空気をおしちぢめて火をおこす」（575語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「帝国の果てからの手紙」（455語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-vindolanda-writing-tablets')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ブラックヒルズの4つの顔」（459語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mount-rushmore-carving')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ツァボのライオン」（495語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tsavo-lions-railway')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「方位磁針をもつ細菌」（507語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-magnetotactic-bacteria')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「多数派が堂々めぐりするとき」（653語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-condorcet-voting-paradox')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「世界は大きいほどよいのか」（659語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-parfit-repugnant-conclusion')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
