@@ -15368,3 +15368,51 @@ it('私学難関 の長文「「ノーマル・アクシデント」――仕組
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「海水浴場をサメよけの網で守るべきか」（755語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-shark-nets')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「古いダムは取りこわすべきか」（765語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-old-dam-removal')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「歩道橋について」（751語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-footbridges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「マグカップについて」（738語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-mugs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「かわいた霧の夏：アイスランドのラキ火山の噴火」（631語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-laki-eruption-1783')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「小さなダニとミツバチの苦難」（633語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-varroa-mite-honeybees')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「シルフィウム：古代の世界が使いつくした植物」（607語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-silphium-lost-plant')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「スキャブランドをけずった大洪水」（599語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-missoula-floods')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
