@@ -16508,3 +16508,39 @@ it('国公立 の長文「聞くためのじょうご：補聴ラッパの歴史
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「波がひく音楽」（424語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-zadar-sea-organ-waves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「人々が地下でくらす町」（426語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-coober-pedy-dugout-homes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「カーディフの石の巨人」（523語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-cardiff-giant-stone-hoax')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「畑の下にかくれた都市」（514語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-derinkuyu-underground-city')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「1つの箱か2つの箱か：ニューカムの問題」（660語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-newcomb-problem-two-boxes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「おどろきにならないはずのテスト」（649語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-surprise-exam-paradox')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
