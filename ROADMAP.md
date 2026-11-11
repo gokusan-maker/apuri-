@@ -195,7 +195,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正124（形容詞の語法：限定用法だけ・叙述用法だけの形容詞〈alive・asleep・afraid・main・mere〉・意味がまぎらわしい形容詞〈economic/economical・sensible/sensitive・respectable/respective〉・数量の形容詞 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正125（名詞の語法：可算・不可算〈advice・information・furniture・equipment〉・集合名詞〈family・police・cattle〉・常に複数形の名詞・意味がまぎらわしい名詞〈customer/guest/client・fare/fee/charge〉 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正126（代名詞の語法：one/it/that・those who・each other/one another・another/the other/others・either/neither/none・something/anything・再帰代名詞 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正127（冠詞の語法：a/an/the の使い分け・無冠詞〈by bus・at school・go to bed〉・the＋比較級・総称の the/a/無冠詞・固有名詞と the・by the hour など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正127（冠詞の語法：a/an/the の使い分け・無冠詞〈by bus・at school・go to bed〉・the＋比較級・総称の the/a/無冠詞・固有名詞と the・by the hour など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正128（前置詞の使い分け：時の前置詞 in/on/at・by と until・for と during・since・within・場所の above/over・below/under・between/among・across/through・beside/besides など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
