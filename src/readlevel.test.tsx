@@ -19958,3 +19958,39 @@ it('私学難関 の長文「しずくを落とす葉の先」（605語）：私
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「農家が石を焼いていたわけ」（525語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-lime-kilns-farm-fields')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「けむりをはき出すキノコ」（519語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-puffball-raindrop-spores')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「風がけずった丘」（546語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-yardang-wind-carved-ridges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「こおった地面が石をおし上げるとき」（512語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-frost-heave-rising-stones')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「メロディーをかなでない鐘」（677語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-change-ringing-bell-permutations')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「極地の雪にきざまれた尾根を読む」（608語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sastrugi-wind-snow-ridges')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
