@@ -780,7 +780,9 @@
   - caving は基本的な語なので私学難関に下げた。stalactite・sump・lava tube などは既に収録済みのため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（パン作りと製パン科学〈既存語以外：sourdough・levain・autolyse・oven spring など未収録のもの〉）で50語ずつ追加343
   - brioche・bagel など身近なパンの名前は私学難関に下げた。lame（クープナイフ）は形容詞の lame と混同しやすいため除外し49語
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（測量と土地境界〈既存語以外：benchmark・traverse・cadastral survey など未収録のもの〉）で50語ずつ追加344
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（測量と土地境界〈既存語以外：benchmark・traverse・cadastral survey など未収録のもの〉）で50語ずつ追加344
+  - 測量の語が少ないため、未収録の不動産法・登記の語（fee simple・quiet title・Torrens system など）も加えた。encroachment は既存の encroach と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（馬術と馬の飼育〈既存語以外：dressage・withers・canter・show jumping など未収録のもの〉）で50語ずつ追加345
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
