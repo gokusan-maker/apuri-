@@ -619,7 +619,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（宗教・神話・民俗〈creation myth・ancestor worship・trickster など〉で未収録のもの）で50語ずつ追加244（千年王国の・教皇勅書・菩薩 など。Inquisition は既存の inquisition と重なるので外して49語）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（食と料理・栄養〈Maillard reaction・glycemic index・food additive など〉で未収録のもの）で50語ずつ追加245（多量栄養素・発煙点・レトロネーザル など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（建築・住まい・インフラ〈seismic retrofit・building code・utility pole など〉で未収録のもの）で50語ずつ追加246（死荷重・合流式下水道・日照権 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（心と感情・人間関係〈emotional labor・compassion fatigue・people-pleasing など〉で未収録のもの）で50語ずつ追加247
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（心と感情・人間関係〈emotional labor・compassion fatigue・people-pleasing など〉で未収録のもの）で50語ずつ追加247（共感ギャップ・道徳的負傷・感情の粒度 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（旅行・観光・文化交流〈voluntourism・dark tourism・jet lag など〉で未収録のもの）で50語ずつ追加248
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
