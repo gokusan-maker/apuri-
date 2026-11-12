@@ -288,7 +288,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正217（数えられない名詞と数量詞〈information・advice・equipment・furniture・evidence の複数形の誤り・a number of と an amount of・few と little・many と much・each / every / both の後の名詞の数 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正218（受動態の形〈自動詞の受動態の誤り・happen / occur / consist / belong・be born・get + 過去分詞・by 以外の前置詞をとる受動態 be known to / be covered with・使役動詞の受動態 be made to など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正219（紛らわしい形容詞と語法〈sensitive と sensible・economic と economical・industrial と industrious・respectful と respectable・imaginary と imaginative・possible / convenient を人主語にする誤り・alive / asleep の名詞前の誤り など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正220（代名詞の使い分け〈one と it・再帰代名詞の誤用と省略・each other・whoever と whomever の格・the others と others・another と other・those who など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正220（代名詞の使い分け〈one と it・再帰代名詞の誤用と省略・each other・whoever と whomever の格・the others と others・another と other・those who など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正221（関係詞の選択〈what と which / that・前置詞 + which と where・非制限用法の that の誤り・whose と who・関係代名詞の後の余分な代名詞 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
