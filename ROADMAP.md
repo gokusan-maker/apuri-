@@ -273,7 +273,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正202（接続詞と前置詞の取りちがえ〈because / because of、although / despite、during / while、in spite of + 節、due to + 節、unless と if not の誤用 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正203（再帰代名詞と相互代名詞・所有の形〈of + 所有代名詞、a friend of mine、each other の所有格、one の所有格、二重所有 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正204（名詞の後ろにつく語の形〈the reason why / for which、the way how の誤り、the fact that と関係詞 that の混同、同格の that と whether、名詞 + to 不定詞と名詞 + of -ing の使い分け など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正205（動詞の語法〈discuss about・mention about・marry with・enter into の誤り、explain 人 の誤り、suggest/recommend + 人 to の誤り、prevent/keep + 人 from -ing、remind 人 of、rob/steal の使い分け など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正205（動詞の語法〈discuss about・mention about・marry with・enter into の誤り、explain 人 の誤り、suggest/recommend + 人 to の誤り、prevent/keep + 人 from -ing、remind 人 of、rob/steal の使い分け など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正206（副詞の語法〈hard と hardly・late と lately・near と nearly・most と almost・ago と before・enough の位置・否定の either・比較級を強める much など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
