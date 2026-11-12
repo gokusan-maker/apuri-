@@ -638,7 +638,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（海洋学・海の科学〈thermohaline circulation・upwelling・dead zone など〉で未収録のもの）で50語ずつ追加258（鯨骨生物群集・炭酸塩補償深度・ギヨー など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（労働・人事〈gig worker・performance review・collective bargaining など〉で未収録のもの）で50語ずつ追加259（ゼロ時間契約・苦情処理手続き・目標管理 など。基本的な語は私学・私学難関へ）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（農業・園芸〈crop rotation・grafting・cover crop など〉で未収録のもの）で50語ずつ追加260（取り木・収穫指数・永久しおれ点 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（天文学・宇宙科学〈light-year・red giant・exoplanet など〉で未収録のもの）で50語ずつ追加261
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（天文学・宇宙科学〈light-year・red giant・exoplanet など〉で未収録のもの）で50語ずつ追加261（チャンドラセカール限界・ホーキング放射・ケスラーシンドローム など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（行政・公共政策〈means test・sunset clause・public consultation など〉で未収録のもの）で50語ずつ追加262
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
