@@ -339,7 +339,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正252（目的格補語の形〈find / make / keep + 目的語 + 形容詞（副詞にしない）・leave + 目的語 + 分詞・regard A as B と think of A as B の as・call A B に as を入れない・make it a rule to など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正253（まぎらわしい動詞の使い分け〈raise と rise・lay と lie の活用・seat と sit・rob と steal・borrow と lend・wear と put on・fall と fell・find と found の活用 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正254（動名詞の慣用表現〈have difficulty -ing・have trouble -ing・feel like -ing・on -ing（〜するとすぐ）・There is no -ing・be busy -ing・spend 時間 -ing など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正255（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正255（前置詞の後ろに置ける節〈前置詞 + that 節は不可（except that・in that は可）・前置詞 + whether / what / how 節・前置詞 + if 節は不可・because of + 節は不可 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
