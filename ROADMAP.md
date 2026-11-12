@@ -285,7 +285,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正214（群前置詞の形〈in charge of・by means of・on account of・at the expense of・with regard to・in terms of・regardless of・due to と because of の品詞 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正215（相関接続詞と並列〈not A but B・both A and B・either A or B・not only A but also B の並列の形・so … that と such … that・as long as と as far as など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正216（動名詞と不定詞の使い分け〈stop / remember / forget / regret + to と -ing・avoid / postpone / mind / deny + -ing・afford / refuse / pretend + to・be used to -ing と used to など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正217（数えられない名詞と数量詞〈information・advice・equipment・furniture・evidence の複数形の誤り・a number of と an amount of・few と little・many と much・each / every / both の後の名詞の数 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正217（数えられない名詞と数量詞〈information・advice・equipment・furniture・evidence の複数形の誤り・a number of と an amount of・few と little・many と much・each / every / both の後の名詞の数 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正218（受動態の形〈自動詞の受動態の誤り・happen / occur / consist / belong・be born・get + 過去分詞・by 以外の前置詞をとる受動態 be known to / be covered with・使役動詞の受動態 be made to など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
