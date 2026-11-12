@@ -675,7 +675,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（法律・司法手続き〈burden of proof・plea bargain・due process など〉で未収録のもの）で50語ずつ追加282（略式判決・限定責任能力・犯罪行為 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（心理学・臨床心理〈learned helplessness・defense mechanism など〉で未収録のもの）で50語ずつ追加283（反動形成・メンタライゼーション・耐性の窓 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（エネルギー・電力〈grid storage・baseload power・capacity factor など〉で未収録のもの）で50語ずつ追加284（メリットオーダー・慣性力・無効電力 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（文学・修辞〈unreliable narrator・free indirect speech・pathetic fallacy など〉で未収録のもの）で50語ずつ追加285
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（文学・修辞〈unreliable narrator・free indirect speech・pathetic fallacy など〉で未収録のもの）で50語ずつ追加285（自由間接話法・転移修飾語・二詞一意 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（数学の基礎概念〈prime factorization・vector space・conditional probability など〉で未収録のもの）で50語ずつ追加286
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
