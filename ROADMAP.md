@@ -627,7 +627,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（コンピューター科学の基礎概念〈time complexity・hash function・edge case など〉で未収録のもの）で50語ずつ追加250（時間計算量・停止問題・競合状態 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（統計学・データ分析の基礎〈confidence interval・regression・outlier など〉で未収録のもの）で50語ずつ追加251（既存の line graph と重なる line chart を外して49語。決定係数・天井効果・最小二乗法 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（言語学の基礎概念〈phoneme・morpheme・pragmatics など〉で未収録のもの）で50語ずつ追加252（あいづち・隣接ペア・シュワー など。文法用語は私学・私学難関へ）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（地質学・地球科学〈plate boundary・sedimentary rock・magma chamber など〉で未収録のもの）で50語ずつ追加253
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（地質学・地球科学〈plate boundary・sedimentary rock・magma chamber など〉で未収録のもの）で50語ずつ追加253（モホロビチッチ不連続面・岩塩ドーム・全球凍結 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（栄養学・食品科学〈glycemic index・fermentation starter・food additive など〉で未収録のもの）で50語ずつ追加254
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
