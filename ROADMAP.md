@@ -826,7 +826,9 @@
   - booster shot・confirmed case・school closure は基本的な語なので私学難関に下げた。contact tracing・attack rate などは既に収録済み、vaccine effectiveness は vaccine efficacy と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（宝飾と宝石のカット〈既存語以外：prong setting・pave・facet・girdle・karat など未収録のもの〉）で50語ずつ追加359
   - earring・bracelet など身近なアクセサリーの語は私学難関に下げた。lab-grown diamond は既存の synthetic diamond と重なるため除外し49語
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（語用論と談話分析の残り〈既存語以外：illocutionary・perlocutionary・felicity condition・cohesion・coherence など未収録のもの〉）で50語ずつ追加360
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（語用論と談話分析の残り〈既存語以外：illocutionary・perlocutionary・felicity condition・cohesion・coherence など未収録のもの〉）で50語ずつ追加360
+  - back-channeling は既存の back-channel、flouting は flout と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加361
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
@@ -1064,7 +1066,8 @@
 - [x] 新しい長文（266）（東大・京大・旧帝大・国公立を2本ずつ）
   - 使い捨て電子たばこ禁止の討論は既存の「Should Electronic Cigarettes Be Banned?」と重なるため除外し7本
 - [x] 新しい長文（267）（東大・京大・旧帝大・国公立を2本ずつ）
-- [ ] 新しい長文（268）（東大・京大・旧帝大・国公立を2本ずつ）
+- [x] 新しい長文（268）（東大・京大・旧帝大・国公立を2本ずつ）
+- [ ] 新しい長文（269）（東大・京大・旧帝大・国公立を2本ずつ）
 - [x] 新しい長文⑩：共通テスト2本（店のBGM・ど忘れ）・私学2本（氷の道路・右側通行と左側通行）・私学難関2本（ネタバレ・堤防効果）
 - [x] 新しい長文⑫：共通テスト2本（マンホールのふた・ショッピングカート）・私学2本（紙のサイズ・砂時計）・私学難関2本（人工降雨・博物館のレプリカ）
 - [x] 新しい長文⑭：共通テスト2本（台風の名前・クマノミの性転換）・私学2本（空港と鳥・ムペンバ効果）・私学難関2本（ホーソン効果・ストライサンド効果）
