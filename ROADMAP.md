@@ -752,7 +752,9 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（生命倫理・研究倫理〈informed consent 以外の未収録語：dual-use research・equipoise など〉で未収録のもの）で50語ずつ追加331（治療との誤解・アウトカムのすり替え・原則主義 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（物流・サプライチェーン管理〈既存語以外：bullwhip effect・cross-docking など〉で未収録のもの）で50語ずつ追加332（多段階在庫・燃料調整係数・ABC分析 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（保全生物学・野生動物管理〈既存語以外：minimum viable population・wildlife corridor など〉で未収録のもの）で50語ずつ追加333（生態学的わな・中型捕食者の解放・緩和の階層 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（半導体工学〈semiconductor 以外の未収録語：photolithography・doping など〉で未収録のもの）で50語ずつ追加334
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（半導体工学〈semiconductor 以外の未収録語：photolithography・doping など〉で未収録のもの）で50語ずつ追加334
+  - chipmaker・chip shortage は基本的な語なので私学難関に下げた。photolithography・doping・band gap などは既に収録済みのため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（火災科学・消防工学〈既存語以外：fire load・fire triangle・compartmentation など未収録のもの〉）で50語ずつ追加335
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
