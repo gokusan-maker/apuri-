@@ -788,7 +788,9 @@
   - trot・foal・mare・stallion・jockey・mane・hoof・horseshoe・colt は基本的な語なので私学難関に下げた。gallop は既存の galloping と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（パン以外の菓子づくりと製菓科学〈既存語以外：tempering chocolate・meringue・ganache・choux pastry など未収録のもの〉）で50語ずつ追加346
   - caramel・marshmallow・mousse など身近な菓子の名前は私学難関に下げた。crystallization は既存の crystallize と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（茶とコーヒーの科学と文化〈既存語以外：first flush・withering・cupping・pour-over など未収録のもの〉）で50語ずつ追加347
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（茶とコーヒーの科学と文化〈既存語以外：first flush・withering・cupping・pour-over など未収録のもの〉）で50語ずつ追加347
+  - cold brew・cappuccino・afternoon tea など身近な語は私学難関に下げた。withering は既存の wither、tamping は tamper と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（バレエと舞踊〈既存語以外：plie・pirouette・arabesque・corps de ballet など未収録のもの〉）で50語ずつ追加348
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
