@@ -845,7 +845,9 @@
   - decommissioning は既存の decommission、reactor pressure vessel は pressure vessel と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（税務行政と裁判手続）で50語ずつ追加366
   - cross-examination は既存の cross-examine、tax withholding は withholding tax と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（獣医療の臨床〈未収録のもの〉）で50語ずつ追加367
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（獣医療の臨床〈未収録のもの〉）で50語ずつ追加367
+  - hairball・cattery・boarding kennel は身近な語なので私学難関に下げた。intubation は既存の intubate と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（通信網・氷河学など、担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加368
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
