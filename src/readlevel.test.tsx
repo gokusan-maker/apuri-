@@ -19076,3 +19076,39 @@ it('国公立 の長文「パタゴニアマーラ：子育ての場を分け合
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「岩にあいた穴：タフォニのでき方」（540語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tafoni-salt-hollows')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ジャガイモのでんぷんでつくったカラー写真」（539語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-autochrome-starch-colour')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「理性にもとづく暦」（534語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-french-revolutionary-calendar')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「もっともらしい結論が悪い論理をかくすとき」（521語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-belief-bias-syllogism')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ねばねばする乳液と、それを断ち切る昆虫」（673語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-latex-vein-cutting-insects')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「空にうかぶ鉄の川」（667語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-pontcysyllte-iron-aqueduct')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
