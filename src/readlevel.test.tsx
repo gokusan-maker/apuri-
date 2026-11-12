@@ -19550,3 +19550,51 @@ it('私学難関 の長文「静かな通りのおいしい店」（656語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「レンタカー会社は料金を求める前に損傷を証明しなければならないようにすべきか」（678語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-car-rental-damage-proof')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「行きの便に乗らなかったとき、航空会社は帰りの便を取り消してよいか」（667語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-airline-return-flight-cancelled-after-missed-outward')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「手で書き写すことについて」（669語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-copying-out-by-hand')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「内気さについて」（669語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-shyness')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ノコギリエイ――鼻先にのこぎりを持つエイ」（635語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-sawfish-ray-rostrum')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「アグーチ――森に種をまくネズミのなかま」（630語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-agouti-seed-burying')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ランプフィッシュ――吸盤を持つ丸い魚」（552語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-lumpfish-sucker-disc')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ウェカ――ニュージーランドの好奇心の強い飛べない鳥」（553語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-weka-curious-flightless-rail')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
