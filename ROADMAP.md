@@ -762,7 +762,9 @@
   - noncomedogenic は既存の non-comedogenic、olfactory fatigue は既存の sensory adaptation と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（時計学と時刻の計測〈既存語以外：tourbillon・balance wheel・hairspring・power reserve など未収録のもの〉）で50語ずつ追加337
   - pocket watch・watchmaker は基本的な語なので私学難関に下げた。water clock は既存の clepsydra、UTC は既存の Coordinated Universal Time と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（醸造・発酵科学〈既存語以外：wort・mash tun・secondary fermentation など未収録のもの〉）で50語ずつ追加338
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（醸造・発酵科学〈既存語以外：wort・mash tun・secondary fermentation など未収録のもの〉）で50語ずつ追加338
+  - brewer・husk・keg・sanitizer は基本的な語なので私学難関に下げた。fermentation lock は既存の airlock と同じ概念のため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（楽器製作と楽器学〈既存語以外：luthier・soundboard・embouchure・aerophone など未収録のもの〉）で50語ずつ追加339
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
