@@ -18440,3 +18440,33 @@ it('私学難関 の長文「青銅器時代の沈没船の積荷」（669語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「野生の草からトウモロコシ畑へ」（521語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-maize-teosinte-ancestor')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ハワイへ船でわたった小さなギター」（540語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-ukulele-madeira-hawaii')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「湖の底の鐘：水中の音の速さを測る」（538語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-colladon-sound-in-lake')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「夏の太陽に立ち向かう三つの言葉」（544語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-slip-slop-slap-campaign')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ほかの人が来ないときだけ行く：エル・ファロル問題」（643語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-el-farol-bar-problem')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
