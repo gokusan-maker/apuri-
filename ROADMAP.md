@@ -302,7 +302,9 @@
   - thoughtful / generous for は意味によっては使えるため、kind for → of など明確な誤りに差し替え
 - [x] 私学難関〜東大の正誤問題・誤文訂正229（前置詞の to と不定詞の to〈look forward to -ing・be used to -ing と used to do・object to -ing・when it comes to -ing・contribute to -ing・with a view to -ing・devote oneself to -ing など〉）
   - contribute with・accustomed with は文脈によって使えるため、誤りや選択肢から外した
-- [ ] 私学難関〜東大の正誤問題・誤文訂正230（副詞の語法〈almost と most・ago と before・already / yet / still・very と much の修飾・near と nearly・high と highly・late と lately・hard と hardly の取り違え など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正230（副詞の語法〈almost と most・ago と before・already / yet / still・very と much の修飾・near と nearly・high と highly・late と lately・hard と hardly の取り違え など〉）
+  - most all・very much confusing は口語で使われることがあるため、選択肢から外した
+- [ ] 私学難関〜東大の正誤問題・誤文訂正231（不定詞・動名詞・分詞の態と完了形〈受動の不定詞 to be done・完了不定詞 to have done・having been done・needs doing と needs to be done・worth -ing の態・being done の受動の動名詞 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
