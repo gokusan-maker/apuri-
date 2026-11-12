@@ -18404,3 +18404,39 @@ it('国公立 の長文「ヤマアラシ：とげで身を守るネズミのな
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「失われたゲームのルールを取りもどす」（524語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-royal-game-of-ur')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「なぜ昆虫は明かりのまわりを回るのか」（533語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-insects-circling-lights')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「2人の兄弟とスラブの文字」（537語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-glagolitic-cyrillic-alphabet')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「なぜあめで炭酸飲料が噴き出すのか」（546語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-mint-candy-soda-fountain')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「子どもを学校に通わせる家庭にお金をはらう」（650語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-progresa-cash-school-trial')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「青銅器時代の沈没船の積荷」（669語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-uluburun-bronze-age-wreck')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
