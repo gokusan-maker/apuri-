@@ -247,7 +247,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正176（倒置と強調構文：否定の副詞句の倒置〈Never have I / Not until … did〉・only＋副詞句の倒置・so/neither の倒置・It is … that の強調構文と形式主語の区別の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正177（使役・知覚動詞の語法：make/let/have＋原形・get＋to不定詞・受動態での to の復活〈was made to〉・see/hear＋原形／-ing／過去分詞・help＋O＋(to) do の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正178（助動詞の語法：must have done と should have done・cannot have done・may well / might as well・had better の否定の語順・used to と be used to・need not have done の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正179（語法の総合：say/tell/speak/talk・rise/raise・lie/lay・borrow/lend・rob/steal・suit/fit/match の使い分けの総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正179（語法の総合：say/tell/speak/talk・rise/raise・lie/lay・borrow/lend・rob/steal・suit/fit/match の使い分けの総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正180（並列構造と比較の総合：both/either/not only の後の形をそろえる・動名詞と不定詞の並列・比較対象の並列・リストの品詞の一致の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
