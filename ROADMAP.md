@@ -318,7 +318,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正237（比較級・最上級の強調と修飾〈much / far / even / still と very の区別・by far と the very ＋最上級・a lot と many の混同・比較級の重複（more better）・最上級の重複（most fastest）・superior / inferior に more を付ける誤り など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正238（準動詞の意味上の主語と独立分詞構文〈for ＋人＋to 不定詞・所有格／目的格＋動名詞・主語がちがう分詞構文の主語の置き忘れ（懸垂分詞）・There being / It being・weather permitting・with ＋名詞＋分詞の付帯状況 など〉）
   - 「Being bitterly cold」は人が主語なら正しく読めるため、人がなれない「Being below zero」に差し替え
-- [ ] 私学難関〜東大の正誤問題・誤文訂正239（文の構造と並列〈主語のない文・動詞が二つの文の接続詞抜け・関係代名詞の後の主語の重複・it と that 節の主語の重複・不完全な並列（to 不定詞と動名詞の混在）・both A and B の形のずれ など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正239（文の構造と並列〈主語のない文・動詞が二つの文の接続詞抜け・関係代名詞の後の主語の重複・it と that 節の主語の重複・不完全な並列（to 不定詞と動名詞の混在）・both A and B の形のずれ など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正240（数と名詞の形〈数詞＋名詞の複合形容詞（a two-year-old child と two years old）・hundreds of と three hundred・dozens of・a ten-minute walk・複数形で別の意味になる名詞（customs・manners・arms・goods）・the ＋形容詞が複数を表す など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
