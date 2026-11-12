@@ -6041,3 +6041,4 @@
 - 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（255：前置詞の後ろに置ける節〈about that 節は不可・aware that・because と because of・while と during・although と in spite of・about whether〉）
 - 2026-11-12: 新しい長文を6本追加（283b：ヤブツバキ、ウグイス、ヒラタケ、モリアオガエル、フジ、スズラン）
 - 2026-11-12: 新しい長文を7本追加（281：免税制度のリファンド方式、ふるさと納税のポイント禁止、落ち葉かきについて、つえについて、ノイズキャンセリング、むちの音、フレスコ画）
+- 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（256：組になる語の取り違え〈between A and B・from A to B・neither A nor B・both A and B・either A or B・not only A but also B・the same 〜 as・prefer A to B〉）
