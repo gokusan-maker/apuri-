@@ -268,7 +268,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正197（冠詞と名詞の数〈the の要不要、a / an の選択、総称の the・a・複数形、固有名詞の冠詞、one of the + 複数形、数えられない名詞の複数形 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正198（前置詞の選択〈on / in / at の時と場所、by / until、for / during / since、between / among、besides / beside、in time / on time など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正199（主語と動詞の一致の発展〈either A or B / neither A nor B、A as well as B、the number of、集合名詞、each / every、there is + 複数、分数・割合 + of など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正200（仮定法の発展〈I wish + 過去完了、as if の時制、It is time + 過去形、if it were not for / but for、without の仮定、混合仮定法、should / were to の未来の仮定 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正200（仮定法の発展〈I wish + 過去完了、as if の時制、It is time + 過去形、if it were not for / but for、without の仮定、混合仮定法、should / were to の未来の仮定 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正201（並列構造の乱れ〈not only A but also B の品詞のずれ、both A and B、either A or B、比較対象の並列、等位接続詞の前後で形がそろわない など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
