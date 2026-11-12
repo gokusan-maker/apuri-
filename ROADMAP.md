@@ -800,7 +800,9 @@
   - cuff など身近な語は私学難関に下げた。basting・pleat・gathering は既存の baste・pleated・gather と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（木工と継ぎ手〈既存語以外：mortise and tenon・dado・rabbet・kerf など未収録のもの〉）で50語ずつ追加350
   - wood glue・table saw は基本的な語なので私学難関に下げた。mortise・chisel・rebate などは既に収録済みのため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（鳥類学と野鳥観察〈既存語以外：brood patch・contour feather・flight feather・precocial・syrinx など未収録のもの〉）で50語ずつ追加351
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（鳥類学と野鳥観察〈既存語以外：brood patch・contour feather・flight feather・precocial・syrinx など未収録のもの〉）で50語ずつ追加351
+  - beak・birdwatching・sighting・birdsong は基本的な語なので私学難関に下げた。preening は既存の preen、nest parasite は既存の brood parasite と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（養蜂以外の昆虫学と昆虫観察〈既存語以外：instar・exoskeleton 以外の未収録語：ocellus・spiracle・ovipositor など〉）で50語ずつ追加352
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
