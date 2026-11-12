@@ -21452,3 +21452,51 @@ it('私学難関 の長文「しめった空気の中で固まる樹液」（672
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「市は人々がスマートフォンを使う時間の目安を示すべきか」（709語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-toyoake-smartphone-two-hours')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「カスタマーハラスメントを条例で禁止すべきか」（715語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-tokyo-customer-harassment-ordinance')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「スケート場について」（686語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-ice-rinks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「空っぽの駐車場について」（688語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-empty-car-parks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「熱い金属で言葉を鋳造する：ライノタイプ」（643語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-linotype-hot-metal-lines')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「紙とのりとしんぼう：張り子（パピエマシェ）の技術」（640語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-papier-mache-paper-and-paste')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「銀の中の黒い線：ニエロ（黒金象がん）の技術」（568語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-niello-black-inlay')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「蒸気から生まれる音楽：カリオペ」（556語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-calliope-steam-whistle-organ')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
