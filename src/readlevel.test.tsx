@@ -17318,3 +17318,39 @@ it('国公立 の長文「死からよみがえる植物」（561語）：国公
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「片面しかない帯」（469語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mobius-strip-one-side')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「どの列をたしても同じになる四角」（437語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-magic-square-equal-sums')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「白と黒の円盤からあらわれる色」（496語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-benham-top-flicker-colours')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「曲線をえがいて落ちるビーズ」（507語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-galton-board-falling-beads')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「一つのナイトと64のマス」（681語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-knights-tour-chessboard')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「けっしてくり返さないタイル」（670語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-penrose-tiles-never-repeat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
