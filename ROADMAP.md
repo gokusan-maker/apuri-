@@ -664,7 +664,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（会計・財務〈balance sheet・depreciation・cash flow statement など〉で未収録のもの）で50語ずつ追加275（既存と訳が重なる residual value を外して49語。のれんの減損・限定付適正意見・キャッシュ・コンバージョン・サイクル など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（国際関係・外交〈soft power・buffer state・track two diplomacy など〉で未収録のもの）で50語ずつ追加276（経済的ステートクラフト・口上書・主権の共同行使 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（気象学・大気科学〈jet stream・dew point・temperature inversion など〉で未収録のもの）で50語ずつ追加277（前線形成・成層圏突然昇温・夜光雲 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（経営戦略・マーケティング〈first-mover advantage・brand equity・value chain など〉で未収録のもの）で50語ずつ追加278
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（経営戦略・マーケティング〈first-mover advantage・brand equity・value chain など〉で未収録のもの）で50語ずつ追加278（プロダクト・マーケット・フィット・戦略的漂流・スカンクワークス など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（環境科学・生態系サービス〈carbon sink・ecological footprint・rewilding など〉で未収録のもの）で50語ずつ追加279
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
