@@ -731,7 +731,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（古生物学〈trace fossil 以外の未収録語：index fossil・mass extinction event など〉で未収録のもの）で50語ずつ追加319（イリジウム異常・幽霊系統・クラウングループ など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（惑星科学〈habitable zone 以外の未収録語：tidal heating・cryovolcanism など〉で未収録のもの）で50語ずつ追加320（カオス地形・カークウッドの空隙・テクノシグネチャー など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（暗号学・情報セキュリティ〈public key 以外の未収録語：zero-knowledge proof・side-channel attack など〉で未収録のもの）で50語ずつ追加321（前方秘匿性・ゼロ知識証明・紛失通信 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（人口学〈demographic dividend 以外の未収録語：replacement fertility・cohort analysis など〉で未収録のもの）で50語ずつ追加322
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（人口学〈demographic dividend 以外の未収録語：replacement fertility・cohort analysis など〉で未収録のもの）で50語ずつ追加322（テンポ効果・レキシス図・病的状態の圧縮 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（音響学・音声科学〈reverberation time 以外の未収録語：formant・psychoacoustics など〉で未収録のもの）で50語ずつ追加323
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
