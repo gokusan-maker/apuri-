@@ -249,7 +249,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正178（助動詞の語法：must have done と should have done・cannot have done・may well / might as well・had better の否定の語順・used to と be used to・need not have done の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正179（語法の総合：say/tell/speak/talk・rise/raise・lie/lay・borrow/lend・rob/steal・suit/fit/match の使い分けの総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正180（並列構造と比較の総合：both/either/not only の後の形をそろえる・動名詞と不定詞の並列・比較対象の並列・リストの品詞の一致の総合 など）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正181（形式主語・形式目的語と it の構文：it is ... for/of 人 to do・find it difficult to・make it a rule to・take it for granted that・it seems that の総合 など）
+- [x] 私学難関〜東大の正誤問題・誤文訂正181（形式主語・形式目的語と it の構文：it is ... for/of 人 to do・find it difficult to・make it a rule to・take it for granted that・it seems that の総合 など）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正182（数の表現と数量詞：hundreds of と two hundred・dozens of・a couple of・per cent と percentage・分数の主語の一致〈two thirds of … is/are〉・-ish/-odd の総合 など）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
