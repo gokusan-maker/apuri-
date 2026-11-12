@@ -809,7 +809,9 @@
   - zoom lens・autofocus・self-timer・megapixel は基本的な語なので私学難関に下げた。telephoto lens・wide-angle lens は既存の telephoto・wide-angle と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（染色と天然染料〈既存語以外：madder・woad・cochineal・colorfast・vat dye など未収録のもの〉）で50語ずつ追加353
   - tie-dye・henna は基本的な語なので私学難関に下げた。colorfast は既存の colorfastness、shibori は tie-dye と同じ訳になるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（鍛冶と金属工芸〈既存語以外：forge・bellows・forge welding・pattern welding・swage など未収録のもの〉）で50語ずつ追加354
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（鍛冶と金属工芸〈既存語以外：forge・bellows・forge welding・pattern welding・swage など未収録のもの〉）で50語ずつ追加354
+  - rivet・metalwork は基本的な語なので私学難関に下げた。forge・solder・brazing などは既に収録済みのため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（消費者保護と契約〈既存語以外：cooling-off period・warranty・product recall・lemon law など未収録のもの〉）で50語ずつ追加355
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
