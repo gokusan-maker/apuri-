@@ -717,7 +717,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（視覚科学・眼科学〈visual acuity 以外の未収録語：saccade・accommodation reflex など〉で未収録のもの）で50語ずつ追加310（側抑制・視交叉・運動盲 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（翻訳学・通訳〈source text・domestication など〉で未収録のもの）で50語ずつ追加311（異化・明示化・スコポス理論 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（ロボット工学〈actuator 以外の未収録語：end effector・degrees of freedom など〉で未収録のもの）で50語ずつ追加312（逆運動学・ゼロモーメントポイント・形態計算 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（法医学・鑑識科学〈chain of custody 以外の未収録語：blood spatter analysis・trace evidence など〉で未収録のもの）で50語ずつ追加313
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（法医学・鑑識科学〈chain of custody 以外の未収録語：blood spatter analysis・trace evidence など〉で未収録のもの）で50語ずつ追加313（死後経過時間・摩擦隆線・文脈バイアス など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（冶金・金属工学〈annealing 以外の未収録語：work hardening・grain boundary など〉で未収録のもの）で50語ずつ追加314
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
