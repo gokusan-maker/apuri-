@@ -768,7 +768,9 @@
   - brewer・husk・keg・sanitizer は基本的な語なので私学難関に下げた。fermentation lock は既存の airlock と同じ概念のため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（楽器製作と楽器学〈既存語以外：luthier・soundboard・embouchure・aerophone など未収録のもの〉）で50語ずつ追加339
   - bagpipe は基本的な語なので私学難関に下げた。kettledrum は既存の timpani、fingerboard は fretboard と同じものなので除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（チェス・囲碁・将棋などの盤上ゲームと戦略〈既存語以外：en passant・castling・zugzwang・fianchetto など未収録のもの〉）で50語ずつ追加340
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（チェス・囲碁・将棋などの盤上ゲームと戦略〈既存語以外：en passant・castling・zugzwang・fianchetto など未収録のもの〉）で50語ずつ追加340
+  - strategy game は基本的な語なので私学難関に下げた。fork・pin・tempo などは一般の意味で既に収録済みのため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（紋章学と旗章学〈既存語以外：coat of arms・escutcheon・blazon・vexillology など未収録のもの〉）で50語ずつ追加341
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
