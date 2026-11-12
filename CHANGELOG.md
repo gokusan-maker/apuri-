@@ -6052,3 +6052,4 @@
 - 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（258：数量・速さ・差を表す前置詞〈差の by・at a speed of・at the rate of・at a price of・by the hour・on average・an increase of〉）
 - 2026-11-12: 新しい長文を6本追加（285b：ワラビ、スズムシ、タイコウチ、ゲンゴロウ、コブシ、マンネンタケ）
 - 2026-11-12: 国公立〜東大・TOEFL の単語を50語追加（393：酪農と家禽・家畜の飼養の上級語）
+- 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（259：最上級と序数の形〈the second largest・one of the + 最上級 + 複数名詞・than any other + 単数名詞・most people・the very best・by far the〉）
