@@ -17468,3 +17468,39 @@ it('国公立 の長文「スローロリスの毒のあるかみつき」（555
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「滝のうしろで燃える火」（502語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-eternal-flame-falls')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「空にうかぶ島」（467語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-roraima-tepui-island')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「帰ってこなかった犬」（486語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-laika-sputnik-dog')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「月に残された鏡」（491語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-lunar-laser-ranging')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ゆうれいをつかまえるための巨大なタンク」（644語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-super-kamiokande-tank')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「生命が止まるように見える池」（631語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-dallol-lifeless-pools')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
