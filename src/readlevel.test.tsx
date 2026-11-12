@@ -17438,3 +17438,33 @@ it('私学難関 の長文「人が去った区域の野生動物」（636語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「航空会社は機内持ちこみの荷物に追加料金をとるべきか」（669語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-airline-cabin-bag-fees')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「コメツキムシは足を使わずにどうやってとぶのか」（609語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-click-beetle-jump')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「足で呼吸するウミグモ」（610語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-sea-spider-leg-gut')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ろっ骨でかっ空するトカゲ」（559語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-draco-gliding-lizard')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「スローロリスの毒のあるかみつき」（555語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-slow-loris-venom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
