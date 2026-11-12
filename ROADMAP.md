@@ -262,7 +262,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正191（関係詞の選び方と形〈前置詞＋which / whom、関係副詞 where / when と which の取りちがえ、what と that、非制限用法の that、whose の誤用 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正192（時制の一致と時・条件の副詞節〈will の誤用、過去完了の要不要、主節が過去のときの従属節の時制、by the time の時制 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正193（強調構文と倒置〈It is … that の形、only + 副詞句の倒置、so / such … that の倒置、場所の副詞句の倒置、not only の倒置 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正194（不定詞と動名詞の使い分け〈stop / remember / forget / regret / try + to do と -ing、avoid / mind / deny + -ing、be used to / used to、cannot help -ing など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正194（不定詞と動名詞の使い分け〈stop / remember / forget / regret / try + to do と -ing、avoid / mind / deny + -ing、be used to / used to、cannot help -ing など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正195（形容詞と副詞の取りちがえ〈hard / hardly、late / lately、near / nearly、high / highly、feel bad / badly、sound good / well、-ly 形容詞 friendly / lovely の副詞的誤用 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
