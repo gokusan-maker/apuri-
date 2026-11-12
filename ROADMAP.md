@@ -337,7 +337,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正250（be about to・be to blame・be due to などの形〈be about to の後は動詞の原形・be to blame は受け身にしない・be due to + 名詞 と be due to do・be sure to と be sure of -ing・be bound to など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正251（程度を表す too / enough / quite の語順〈too + 形容詞 + to・形容詞 + enough to（enough の位置）・enough + 名詞・too の後に名詞を直接置かない・quite a + 形容詞 + 名詞・too 〜 to の後に目的語を重ねない など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正252（目的格補語の形〈find / make / keep + 目的語 + 形容詞（副詞にしない）・leave + 目的語 + 分詞・regard A as B と think of A as B の as・call A B に as を入れない・make it a rule to など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正253（まぎらわしい動詞の使い分け〈raise と rise・lay と lie の活用・seat と sit・rob と steal・borrow と lend・wear と put on・fall と fell・find と found の活用 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正253（まぎらわしい動詞の使い分け〈raise と rise・lay と lie の活用・seat と sit・rob と steal・borrow と lend・wear と put on・fall と fell・find と found の活用 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正254（まぎらわしい形容詞の使い分け〈economic と economical・historic と historical・sensible と sensitive・industrial と industrious・considerable と considerate・respectful と respectable・imaginary と imaginative など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）

@@ -6028,3 +6028,4 @@
 - 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（252：目的格補語の形〈keep / make / find + 目的語 + 形容詞・leave the door open・regard A as B・call A B・find it 形容詞 to〉）
 - 2026-11-12: 国公立〜東大・TOEFL の単語を50語追加（384：鉱山・選鉱と石油ガス掘削の上級語）
 - 2026-11-12: 新しい長文を6本追加（280b：エノキタケ、カツラ、モクズガニ、淡水海綿、コウゾ、ウルシ）
+- 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（253：まぎらわしい動詞〈raise と rise・lay と lie・seat と sit・rob と steal・borrow と lend・find と found・affect と effect・arise と arouse〉）
