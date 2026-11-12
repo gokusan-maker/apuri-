@@ -313,7 +313,9 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正234（前置詞と接続詞の使い分け〈despite / in spite of と although・because of / due to と because・during と while・in spite of the fact that・owing to・whereas と on the other hand の混同 など〉）
   - 文頭の Due to ＋名詞や while ＋（省略された主語と be 動詞）は正しい形なので誤りにしていない
 - [x] 私学難関〜東大の正誤問題・誤文訂正235（譲歩の複合関係詞と no matter〈whatever と no matter what・however ＋形容詞の語順・no matter how の後の語順・whichever・wherever・whenever と no matter の重複 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正236（主語と動詞の一致の発展〈A along with B / A as well as B / A together with B は A に一致・the number of と a number of・each of / one of ＋複数名詞＋単数動詞・either A or B と neither A nor B は近い方に一致・There is / are の後の主語・関係詞節内の動詞と先行詞 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正236（主語と動詞の一致の発展〈A along with B / A as well as B / A together with B は A に一致・the number of と a number of・each of / one of ＋複数名詞＋単数動詞・either A or B と neither A nor B は近い方に一致・There is / are の後の主語・関係詞節内の動詞と先行詞 など〉）
+  - 誤りのない問題が1問あったので直し、答えが2つ考えられる問題も1問直した
+- [ ] 私学難関〜東大の正誤問題・誤文訂正237（比較級・最上級の強調と修飾〈much / far / even / still と very の区別・by far と the very ＋最上級・a lot と many の混同・比較級の重複（more better）・最上級の重複（most fastest）・superior / inferior に more を付ける誤り など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
