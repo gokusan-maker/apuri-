@@ -253,7 +253,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正182（数の表現と数量詞：hundreds of と two hundred・dozens of・a couple of・per cent と percentage・分数の主語の一致〈two thirds of … is/are〉・-ish/-odd の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正183（名詞を修飾する語句の語順と形：形容詞の語順〈a beautiful old wooden house〉・something＋形容詞・前置修飾と後置修飾・分詞の前置／後置・the＋形容詞＝人々の総合 など）
 - [x] 私学難関〜東大の正誤問題・誤文訂正184（前置詞の目的語になる動名詞・名詞節と、前置詞の脱落・重複〈discuss about・enter into の誤り、depend whether など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正185（比較の対象のずれと比較級・最上級の形〈than that of / those of の脱落、more better、the most + 比較級、as … as の片方の脱落 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正185（比較の対象のずれと比較級・最上級の形〈than that of / those of の脱落、more better、the most + 比較級、as … as の片方の脱落 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正186（否定と準否定の語法〈hardly/scarcely の二重否定、not … either と neither、no sooner … than の倒置、nothing but と anything but の取りちがえ など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
