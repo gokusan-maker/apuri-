@@ -19712,3 +19712,51 @@ it('私学難関 の長文「電気の報告書にそえられた笑顔」（649
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「審判は観客に判定を説明すべきか」（681語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-referees-explaining-decisions-to-crowd')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「無料の試用が終わる前に、会社は客に知らせるべきか」（672語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-free-trial-reminder-before-charging')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「手紙の結びについて」（682語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-ending-a-letter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「旗かざりについて」（670語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-bunting')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ピラルクー――空気を吸う巨大な魚」（632語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-arapaima-air-breathing-giant')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ウミヤツメ――五大湖に入りこんだあごのない魚」（625語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-sea-lamprey-great-lakes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ヒレアシシギ――水の上でくるくる回る鳥」（549語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-phalarope-spinning-shorebird')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「カンムリカイツブリ――水の上でおどる鳥」（572語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-great-crested-grebe-courtship')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
