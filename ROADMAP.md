@@ -325,7 +325,9 @@
   - guard は自動詞としても読めるため、目的語が必要な dread に差し替え
 - [x] 私学難関〜東大の正誤問題・誤文訂正242（感嘆文と強調の語順〈What a ＋形容詞＋名詞・How ＋形容詞＋主語＋動詞の語順・What と How の取り違え・不可算名詞に a を付ける誤り（What a fine weather）・so と such の後の語順 など〉）
   - 「how a ＋形容詞＋名詞＋完全な文」は「どのように」の意味で正しく読めるため、名詞の後に欠けた部分のある形に書き直した
-- [ ] 私学難関〜東大の正誤問題・誤文訂正243（再帰代名詞と所有の表現〈by oneself と for oneself・enjoy oneself の目的語抜け・myself を主語に使う誤り・of mine / of his の二重所有・each other と one another の所有格・own の前の所有格抜け など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正243（再帰代名詞と所有の表現〈by oneself と for oneself・enjoy oneself の目的語抜け・myself を主語に使う誤り・of mine / of his の二重所有・each other と one another の所有格・own の前の所有格抜け など〉）
+  - 建築家の性別と代名詞が合っていなかった問題を直し、by one's own の説明を by に限った言い方に改めた
+- [ ] 私学難関〜東大の正誤問題・誤文訂正244（ハイフンでつなぐ複合形容詞と語形〈well-known と well known の位置・形容詞＋名詞-ed（kind-hearted）・-ly 副詞にはハイフンを付けない・名詞＋現在分詞（time-consuming）・名詞＋過去分詞（hand-made）など、形の誤り（time-consumed など）を中心に〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
