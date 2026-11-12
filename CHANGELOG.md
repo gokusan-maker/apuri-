@@ -6044,3 +6044,4 @@
 - 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（256：組になる語の取り違え〈between A and B・from A to B・neither A nor B・both A and B・either A or B・not only A but also B・the same 〜 as・prefer A to B〉）
 - 2026-11-12: 国公立〜東大・TOEFL の単語を50語追加（389：鉄道の保線と橋梁部材の上級語）
 - 2026-11-12: 国公立〜東大・TOEFL の単語を50語追加（390：紡績・製織機械と編機の上級語）
+- 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（257：伝達・紹介の動詞の語法〈introduce A to B・notify 人 of・convince 人 that・describe A to 人・hope to・propose to 人 that・announce A to 人〉）

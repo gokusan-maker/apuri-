@@ -341,7 +341,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正254（動名詞の慣用表現〈have difficulty -ing・have trouble -ing・feel like -ing・on -ing（〜するとすぐ）・There is no -ing・be busy -ing・spend 時間 -ing など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正255（前置詞の後ろに置ける節〈前置詞 + that 節は不可（except that・in that は可）・前置詞 + whether / what / how 節・前置詞 + if 節は不可・because of + 節は不可 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正256（組になる語の取り違え〈between A and B（or にしない）・from A to B・whether A or B・neither A nor B（or にしない）・both A and B・so 〜 that と such 〜 that の that の脱落ではなく相手の語の取り違え など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正257（伝達・紹介の動詞の語法〈introduce A to B（introduce 人 A は不可）・notify 人 of・convince 人 of / that・describe 人 に は不可（describe A to 人）・hope 人 to は不可・propose to 人 that・announce to 人 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正257（伝達・紹介の動詞の語法〈introduce A to B（introduce 人 A は不可）・notify 人 of・convince 人 of / that・describe 人 に は不可（describe A to 人）・hope 人 to は不可・propose to 人 that・announce to 人 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正258（数量・速さ・差を表す前置詞〈差を表す by（taller by five centimeters）・at a speed of・at the rate of・at a price of・by weight と by the kilogram・in number・on average など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
