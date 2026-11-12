@@ -6020,3 +6020,4 @@
 - 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（250：be about to・be to blame・be due to・be sure to・be bound to・be likely to・be supposed to・be willing to の形）
 - 2026-11-12: 新しい長文を8本追加（277：賃貸住宅の一酸化炭素警報器、古いタイヤの使用制限、ステッカーについて、ショッピングカートについて、ベークライト、寄木細工、スグラッフィート、テラゾー）
 - 2026-11-12: 新しい長文を6本追加（278b：ヒシ、マツタケ、カワゲラ、ビワ、ラクダムシ、トビイロウンカ）
+- 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（251：too / enough / quite / so / such の語順〈much too expensive・old enough to・enough + 名詞・such a + 形容詞 + 名詞・too 〜 to の目的語〉）
