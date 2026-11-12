@@ -19394,3 +19394,45 @@ it('私学難関 の長文「長さがちがって見える同じ長さの線」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「自動車は基本的な操作のための物理的なボタンを残すよう義務づけられるべきか」（713語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-physical-controls-in-cars')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「店は暖房や冷房を使っている間ドアを閉めておくよう義務づけられるべきか」（704語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-shop-doors-closed-heating-cooling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「セミコロンについて」（685語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-the-semicolon')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ヨーロッパハチクイ――針をもつ虫をとらえる狩人」（647語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-european-bee-eater-burrows')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「オリンギート――目の前にかくれていたほ乳類」（644語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-olinguito-cloud-forest')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「カベバシリ――がけのチョウ」（546語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-wallcreeper-cliff-bird')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ゾリラ――アフリカの夜のしまもようの狩人」（559語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-zorilla-striped-polecat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
