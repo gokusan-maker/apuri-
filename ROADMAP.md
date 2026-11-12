@@ -623,7 +623,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（心と感情・人間関係〈emotional labor・compassion fatigue・people-pleasing など〉で未収録のもの）で50語ずつ追加247（共感ギャップ・道徳的負傷・感情の粒度 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（旅行・観光・文化交流〈voluntourism・dark tourism・jet lag など〉で未収録のもの）で50語ずつ追加248（観光の漏出・文化的仲介者・疑似イベント など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（ファッション・デザイン・消費文化〈capsule wardrobe・conspicuous consumption・upcycling など〉で未収録のもの）で50語ずつ追加249（ヴェブレン財・顕示的閑暇・自発的簡素 など。既存語と近い hedonic treadmill と新語の masstige を外して48語）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（コンピューター科学の基礎概念〈time complexity・hash function・edge case など〉で未収録のもの）で50語ずつ追加250
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（コンピューター科学の基礎概念〈time complexity・hash function・edge case など〉で未収録のもの）で50語ずつ追加250（時間計算量・停止問題・競合状態 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（統計学・データ分析の基礎〈confidence interval・regression・outlier など〉で未収録のもの）で50語ずつ追加251
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
