@@ -632,7 +632,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（栄養学・食品科学〈glycemic index・fermentation starter・food additive など〉で未収録のもの）で50語ずつ追加254（腸内細菌叢・難消化性でんぷん・食物新奇性恐怖 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（交通・都市インフラ〈congestion charge・park and ride・grade separation など〉で未収録のもの）で50語ずつ追加255（49語。立体交差化・開削工法・運賃回収率 など。基本的な語は私学・私学難関へ）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（保険・リスク管理〈deductible・premium・risk pooling など〉で未収録のもの）で50語ずつ追加256（引受審査・残余リスク・既発生未報告損害 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（舞台芸術・演劇〈stage direction・dress rehearsal・fourth wall など〉で未収録のもの）で50語ずつ追加257
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（舞台芸術・演劇〈stage direction・dress rehearsal・fourth wall など〉で未収録のもの）で50語ずつ追加257（ホリゾント・活人画・メタ演劇 など。基本的な語は私学・私学難関へ）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（海洋学・海の科学〈thermohaline circulation・upwelling・dead zone など〉で未収録のもの）で50語ずつ追加258
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
