@@ -714,7 +714,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（動物行動学〈imprinting 以外の未収録語：fixed action pattern・optimal foraging など〉で未収録のもの）で50語ずつ追加308（婚姻贈呈・労働寄生・限界値定理 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（博物館学・文化財保存〈provenance research・conservation science など〉で未収録のもの）で50語ずつ追加309（予防的保存・アナスティローシス・顕著な普遍的価値 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（視覚科学・眼科学〈visual acuity 以外の未収録語：saccade・accommodation reflex など〉で未収録のもの）で50語ずつ追加310（側抑制・視交叉・運動盲 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（翻訳学・通訳〈source text・domestication など〉で未収録のもの）で50語ずつ追加311
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（翻訳学・通訳〈source text・domestication など〉で未収録のもの）で50語ずつ追加311（異化・明示化・スコポス理論 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（ロボット工学〈actuator 以外の未収録語：end effector・degrees of freedom など〉で未収録のもの）で50語ずつ追加312
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
