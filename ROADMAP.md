@@ -333,7 +333,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正246（倍数と比較の慣用表現〈twice as 〜 as・three times the size of・as many as と as much as・no fewer than と no less than・the + 比較級, the + 比較級 の語順・比較対象のそろえ方 など〉）（as much as は報道文で許容されるため many more に差しかえ）
 - [x] 私学難関〜東大の正誤問題・誤文訂正247（不定代名詞の使い分け〈one と ones・one と it・none of の後の数・either / neither の単数扱い・each other と one another・another と the other(s)・some と any など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正248（名詞を修飾する形〈a five-minute walk・a ten-year-old girl・a three-day trip のように数詞つきの名詞は単数形・sports car・a man of courage・名詞の形容詞用法と所有格 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正249（疑問詞 + to 不定詞の形〈what to do と how to do の取り違え・what to do の後に目的語を重ねない・whether to は可で if to は不可・where to と which to・疑問詞 + to の前の前置詞 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正249（疑問詞 + to 不定詞の形〈what to do と how to do の取り違え・what to do の後に目的語を重ねない・whether to は可で if to は不可・where to と which to・疑問詞 + to の前の前置詞 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正250（be about to・be to blame・be due to などの形〈be about to の後は動詞の原形・be to blame は受け身にしない・be due to + 名詞 と be due to do・be sure to と be sure of -ing・be bound to など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
@@ -872,7 +873,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（皮革なめしと製糖）で50語ずつ追加377
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（建築照明と建築音響）で50語ずつ追加378
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（チーズ製造と水産加工・養殖）で50語ずつ追加379（日本語そのままの語・カタカナで済む語の3語は外して47語）
-- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（包装工学・染色加工・醸造など、担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加380
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（包装技術とロープ・索具）で50語ずつ追加380
+- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（養蜂・製茶・コーヒー加工など、担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加381
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
