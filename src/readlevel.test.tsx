@@ -18470,3 +18470,51 @@ it('私学難関 の長文「ほかの人が来ないときだけ行く：エル
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「タイヤのすりへる速さに上限を設けるべきか」（696語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-tyre-wear-limits')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「こみあった町の中心では小さな荷物の配達をカーゴバイクに限るべきか」（710語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-cargo-bike-deliveries')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ジャグリングについて」（677語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-juggling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「なぞなぞについて」（712語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-riddles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ジャコウウシ：北極地方で氷河時代を生きのびた動物」（624語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-musk-ox-ice-age-survivor')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「タカヘ：絶滅したと思われていた鳥」（623語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-takahe-rediscovered-bird')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「イボイノシシ：アフリカのサバンナでひざをついて草を食べる動物」（548語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-warthog-kneeling-grazer')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ビルビー：オーストラリアの砂漠にすむ耳の長い穴ほり名人」（548語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-bilby-desert-digger')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
