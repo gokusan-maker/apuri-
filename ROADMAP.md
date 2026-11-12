@@ -308,7 +308,9 @@
   - 「is expected to finish」は自動詞としても使えるため、to build → to be built に差し替え
 - [x] 私学難関〜東大の正誤問題・誤文訂正232（同格と名詞を修飾する語句〈名詞＋that 節の同格と関係代名詞の区別・the idea of -ing と the idea to・the possibility of -ing・名詞＋to 不定詞をとる名詞（ability・decision・tendency）と of -ing をとる名詞の区別 など〉）
   - tendency of -ing・failure of -ing は使われることがあるため、ability of・attempt of・decision of などの明確な誤りに差し替え
-- [ ] 私学難関〜東大の正誤問題・誤文訂正233（目的・結果の表現〈so that と in order that の後の助動詞・so as not to と in order not to の語順・for fear that・so ＋形容詞＋that と such ＋名詞＋that・with the result that・so that の結果用法 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正233（目的・結果の表現〈so that と in order that の後の助動詞・so as not to と in order not to の語順・for fear that・so ＋形容詞＋that と such ＋名詞＋that・with the result that・so that の結果用法 など〉）
+  - 答えが2つ考えられる問題（with the result of）を1問直し、so that のあとの -ing 形の説明を「現在分詞」に改めた
+- [ ] 私学難関〜東大の正誤問題・誤文訂正234（前置詞と接続詞の使い分け〈despite / in spite of と although・because of / due to と because・during と while・in spite of the fact that・owing to・whereas と on the other hand の混同 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
