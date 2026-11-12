@@ -291,7 +291,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正220（代名詞の使い分け〈one と it・再帰代名詞の誤用と省略・each other・whoever と whomever の格・the others と others・another と other・those who など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正221（関係詞の選択〈what と which / that・前置詞 + which と where・非制限用法の that の誤り・whose と who・関係代名詞の後の余分な代名詞 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正222（条件・譲歩の接続詞〈unless と if not の重複・in case と if・provided that・even if と even though・whether or not・now that・once・as if と like の使い分け など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正223（冠詞の有無〈by + 交通手段・the + 形容詞で人々・楽器と the・唯一のものと the・a / an と発音・総称の the と無冠詞・所有格と冠詞の重複 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正223（冠詞の有無〈by + 交通手段・the + 形容詞で人々・楽器と the・唯一のものと the・a / an と発音・総称の the と無冠詞・所有格と冠詞の重複 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正224（語順〈形容詞の並び順・something + 形容詞・all / both の位置・頻度の副詞の位置・句動詞と代名詞の目的語 turn it off・二重目的語の語順 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
