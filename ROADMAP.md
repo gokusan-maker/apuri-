@@ -643,7 +643,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（天文学・宇宙科学〈light-year・red giant・exoplanet など〉で未収録のもの）で50語ずつ追加261（チャンドラセカール限界・ホーキング放射・ケスラーシンドローム など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（行政・公共政策〈means test・sunset clause・public consultation など〉で未収録のもの）で50語ずつ追加262（行政指導・補正予算・自動安定化装置 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（化学の基礎概念〈covalent bond・molar mass・titration など〉で未収録のもの）で50語ずつ追加263（律速段階・溶解度積・ギブズ自由エネルギー など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（材料工学・ものづくり〈tensile strength・alloy steel・injection molding など〉で未収録のもの）で50語ずつ追加264
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（材料工学・ものづくり〈tensile strength・alloy steel・injection molding など〉で未収録のもの）で50語ずつ追加264（破壊じん性・加工硬化・マルテンサイト など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（哲学・論理学〈modus ponens・category mistake・thought experiment など〉で未収録のもの）で50語ずつ追加265
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
