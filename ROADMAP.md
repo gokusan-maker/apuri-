@@ -283,7 +283,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正212（時制の選択〈現在完了と過去を表す語句・過去完了・未来完了・時や条件の副詞節の現在形・現在完了進行形・状態動詞の進行形 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正213（比較の慣用表現〈the + 比較級, the + 比較級・no more than と no less than・倍数表現の語順・superior / prefer A to B・as … as any・比較の対象をそろえる that of など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正214（群前置詞の形〈in charge of・by means of・on account of・at the expense of・with regard to・in terms of・regardless of・due to と because of の品詞 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正215（相関接続詞と並列〈not A but B・both A and B・either A or B・not only A but also B の並列の形・so … that と such … that・as long as と as far as など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正215（相関接続詞と並列〈not A but B・both A and B・either A or B・not only A but also B の並列の形・so … that と such … that・as long as と as far as など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正216（動名詞と不定詞の使い分け〈stop / remember / forget / regret + to と -ing・avoid / postpone / mind / deny + -ing・afford / refuse / pretend + to・be used to -ing と used to など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
