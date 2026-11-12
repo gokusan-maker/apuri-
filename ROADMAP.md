@@ -724,7 +724,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（冶金・金属工学〈annealing 以外の未収録語：work hardening・grain boundary など〉で未収録のもの）で50語ずつ追加314（犠牲陽極・水素脆化・浸炭 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（造船・海洋工学〈ballast water 以外の未収録語：hull form・bulbous bow など〉で未収録のもの）で50語ずつ追加315（球状船首・メタセンタ高さ・フルード数 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（養蜂・昆虫学〈colony collapse disorder 以外の未収録語：exoskeleton molting・complete metamorphosis など〉で未収録のもの）で50語ずつ追加316（花粉かご・個眼・平均こん など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（第二言語習得・応用言語学〈interlanguage・comprehensible input など〉で未収録のもの）で50語ずつ追加317
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（第二言語習得・応用言語学〈interlanguage・comprehensible input など〉で未収録のもの）で49語追加317（気づき仮説・インプット強化・U字型学習 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（火山学・地震学〈pyroclastic flow 以外の未収録語：seismic wave attenuation・lava dome など〉で未収録のもの）で50語ずつ追加318
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
