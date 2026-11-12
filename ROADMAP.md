@@ -708,7 +708,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（鉱業・資源工学〈open-pit mining・ore grade など〉で未収録のもの）で50語ずつ追加304（浮遊選鉱・はぎ取り比・粉砕 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（ジャーナリズム・メディア研究〈agenda setting・gatekeeping など〉で未収録のもの）で50語ずつ追加305（萎縮効果・敵対的メディア効果・サミズダート など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（陶芸・工芸〈glaze firing・slip casting など〉で未収録のもの）で50語ずつ追加306（素焼き・匣鉢・七宝 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（睡眠科学・時間生物学〈circadian rhythm 以外の未収録語：sleep architecture・chronotype など〉で未収録のもの）で50語ずつ追加307
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（睡眠科学・時間生物学〈circadian rhythm 以外の未収録語：sleep architecture・chronotype など〉で未収録のもの）で50語ずつ追加307（同調因子・社会的時差ぼけ・半球睡眠 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（動物行動学〈imprinting 以外の未収録語：fixed action pattern・optimal foraging など〉で未収録のもの）で50語ずつ追加308
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
