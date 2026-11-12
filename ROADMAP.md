@@ -741,7 +741,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（繊維工学・ファッション産業〈fast fashion 以外の未収録語：warp and weft・moisture wicking など〉で未収録のもの）で50語ずつ追加325（マーセル化・サンフォライズ加工・ヴァニティサイジング など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（水文学・水資源〈aquifer 以外の未収録語：groundwater recharge・baseflow など〉で未収録のもの）で50語ずつ追加326（基底流量・透水係数・不飽和帯 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（スポーツ科学・運動生理学〈VO2 max 以外の未収録語：lactate threshold・periodization など〉で未収録のもの）で50語ずつ追加327（換気性作業閾値・反復効果・力の立ち上がり率 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（図書館情報学〈metadata 以外の未収録語：controlled vocabulary・information retrieval など〉で未収録のもの）で50語ずつ追加328
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（図書館情報学〈metadata 以外の未収録語：controlled vocabulary・information retrieval など〉で未収録のもの）で50語ずつ追加328（統制語彙・書誌結合・転置索引 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（交通工学・道路計画〈既存の交通の語以外：sight distance・level of service など〉で未収録のもの）で50語ずつ追加329
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
