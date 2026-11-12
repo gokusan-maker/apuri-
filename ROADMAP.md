@@ -331,7 +331,8 @@
   - heart-broken・fast-grown・hard-worked は使い方によっては正しいため、明確に誤りになる形に差し替え
 - [x] 私学難関〜東大の正誤問題・誤文訂正245（時を表す前置詞と接続詞〈in / on / at の使い分け（on the morning of・at night・in the evening）・in two days（〜後）と after two days・by the time の後の時制・in time と on time・within と in・since と from の取り違え など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正246（倍数と比較の慣用表現〈twice as 〜 as・three times the size of・as many as と as much as・no fewer than と no less than・the + 比較級, the + 比較級 の語順・比較対象のそろえ方 など〉）（as much as は報道文で許容されるため many more に差しかえ）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正247（不定代名詞の使い分け〈one と ones・one と it・none of の後の数・either / neither の単数扱い・each other と one another・another と the other(s)・some と any など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正247（不定代名詞の使い分け〈one と ones・one と it・none of の後の数・either / neither の単数扱い・each other と one another・another と the other(s)・some と any など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正248（名詞を修飾する形〈a five-minute walk・a ten-year-old girl・a three-day trip のように数詞つきの名詞は単数形・sports car・a man of courage・名詞の形容詞用法と所有格 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
