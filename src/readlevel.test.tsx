@@ -21500,3 +21500,39 @@ it('国公立 の長文「蒸気から生まれる音楽：カリオペ」（556
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ぬるぬるしたかさのキノコ」（561語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-nameko-slippery-cap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「寒い冬のためのかんきつ」（537語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yuzu-winter-citrus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「地面から出てくるつぼみ」（559語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-myoga-ground-buds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「生で食べられるイモ」（565語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-chinese-yam-sticky')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「舌がしびれる香辛料」（661語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sansho-tingling-spice')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「湖をおおう美しい花」（687語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-water-hyacinth-floating-mats')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
