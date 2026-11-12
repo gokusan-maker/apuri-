@@ -17834,3 +17834,39 @@ it('国公立 の長文「ボルネオの鼻の大きなサル」（552語）：
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「木の重さはどこから来るのか」（499語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-van-helmont-willow-weight')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「後ろ向きにバーをこえる」（507語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-fosbury-flop-high-jump')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ヨーロッパの数え方を変えた商人の本」（540語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-fibonacci-liber-abaci-numerals')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「マーガリンの色をめぐる長いたたかい」（534語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-margarine-colour-laws')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「アメリカに名前をあたえた地図」（668語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-waldseemuller-map-america')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ヨーロッパがフォークを使い始めるのがおそかったわけ」（679語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-table-fork-europe')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
