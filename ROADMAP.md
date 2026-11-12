@@ -316,7 +316,9 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正236（主語と動詞の一致の発展〈A along with B / A as well as B / A together with B は A に一致・the number of と a number of・each of / one of ＋複数名詞＋単数動詞・either A or B と neither A nor B は近い方に一致・There is / are の後の主語・関係詞節内の動詞と先行詞 など〉）
   - 誤りのない問題が1問あったので直し、答えが2つ考えられる問題も1問直した
 - [x] 私学難関〜東大の正誤問題・誤文訂正237（比較級・最上級の強調と修飾〈much / far / even / still と very の区別・by far と the very ＋最上級・a lot と many の混同・比較級の重複（more better）・最上級の重複（most fastest）・superior / inferior に more を付ける誤り など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正238（準動詞の意味上の主語と独立分詞構文〈for ＋人＋to 不定詞・所有格／目的格＋動名詞・主語がちがう分詞構文の主語の置き忘れ（懸垂分詞）・There being / It being・weather permitting・with ＋名詞＋分詞の付帯状況 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正238（準動詞の意味上の主語と独立分詞構文〈for ＋人＋to 不定詞・所有格／目的格＋動名詞・主語がちがう分詞構文の主語の置き忘れ（懸垂分詞）・There being / It being・weather permitting・with ＋名詞＋分詞の付帯状況 など〉）
+  - 「Being bitterly cold」は人が主語なら正しく読めるため、人がなれない「Being below zero」に差し替え
+- [ ] 私学難関〜東大の正誤問題・誤文訂正239（文の構造と並列〈主語のない文・動詞が二つの文の接続詞抜け・関係代名詞の後の主語の重複・it と that 節の主語の重複・不完全な並列（to 不定詞と動名詞の混在）・both A and B の形のずれ など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
