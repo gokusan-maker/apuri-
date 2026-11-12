@@ -774,7 +774,9 @@
   - strategy game は基本的な語なので私学難関に下げた。fork・pin・tempo などは一般の意味で既に収録済みのため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（紋章学と旗章学〈既存語以外：coat of arms・escutcheon・blazon・vexillology など未収録のもの〉）で50語ずつ追加341
   - banner・flagpole・bunting は基本的な語なので私学難関に下げた。tricolour は米式つづりの tricolor にそろえた
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（洞窟学と鍾乳洞〈既存語以外：speleology・flowstone・helictite・troglobite など未収録のもの〉）で50語ずつ追加342
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（洞窟学と鍾乳洞〈既存語以外：speleology・flowstone・helictite・troglobite など未収録のもの〉）で50語ずつ追加342
+  - caving は基本的な語なので私学難関に下げた。stalactite・sump・lava tube などは既に収録済みのため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（パン作りと製パン科学〈既存語以外：sourdough・levain・autolyse・oven spring など未収録のもの〉）で50語ずつ追加343
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
