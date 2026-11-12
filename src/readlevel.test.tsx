@@ -19040,3 +19040,39 @@ it('私学難関 の長文「速すぎるように見えたニュートリノ」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「市は道路より先に歩道の雪をとりのぞくべきか」（668語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-snow-clearing-pavements-first')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「鉄道の駅は切符売り場を残すべきか」（672語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-station-ticket-offices')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「キャン：チベット高原の野生のロバ」（633語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-kiang-tibetan-plateau')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「ビクーニャ：アンデスのもっとも細い毛」（631語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-vicuna-andes-wool')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「キバノロ：きばをもつシカ」（549語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-water-deer-tusks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「パタゴニアマーラ：子育ての場を分け合うネズミのなかま」（547語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-patagonian-mara-nursery')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
