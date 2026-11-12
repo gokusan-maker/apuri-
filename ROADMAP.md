@@ -334,7 +334,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正247（不定代名詞の使い分け〈one と ones・one と it・none of の後の数・either / neither の単数扱い・each other と one another・another と the other(s)・some と any など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正248（名詞を修飾する形〈a five-minute walk・a ten-year-old girl・a three-day trip のように数詞つきの名詞は単数形・sports car・a man of courage・名詞の形容詞用法と所有格 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正249（疑問詞 + to 不定詞の形〈what to do と how to do の取り違え・what to do の後に目的語を重ねない・whether to は可で if to は不可・where to と which to・疑問詞 + to の前の前置詞 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正250（be about to・be to blame・be due to などの形〈be about to の後は動詞の原形・be to blame は受け身にしない・be due to + 名詞 と be due to do・be sure to と be sure of -ing・be bound to など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正250（be about to・be to blame・be due to などの形〈be about to の後は動詞の原形・be to blame は受け身にしない・be due to + 名詞 と be due to do・be sure to と be sure of -ing・be bound to など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正251（程度を表す too / enough / quite の語順〈too + 形容詞 + to・形容詞 + enough to（enough の位置）・enough + 名詞・too の後に名詞を直接置かない・quite a + 形容詞 + 名詞・too 〜 to の後に目的語を重ねない など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
