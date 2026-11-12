@@ -804,7 +804,9 @@
   - wood glue・table saw は基本的な語なので私学難関に下げた。mortise・chisel・rebate などは既に収録済みのため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（鳥類学と野鳥観察〈既存語以外：brood patch・contour feather・flight feather・precocial・syrinx など未収録のもの〉）で50語ずつ追加351
   - beak・birdwatching・sighting・birdsong は基本的な語なので私学難関に下げた。preening は既存の preen、nest parasite は既存の brood parasite と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（写真撮影の技術〈既存語以外：bokeh・white balance・f-number・bracketing など未収録のもの〉）で50語ずつ追加352
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（写真撮影の技術〈既存語以外：bokeh・white balance・f-number・bracketing など未収録のもの〉）で50語ずつ追加352
+  - zoom lens・autofocus・self-timer・megapixel は基本的な語なので私学難関に下げた。telephoto lens・wide-angle lens は既存の telephoto・wide-angle と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（染色と天然染料〈既存語以外：madder・woad・cochineal・colorfast・vat dye など未収録のもの〉）で50語ずつ追加353
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
