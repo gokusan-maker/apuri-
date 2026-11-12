@@ -649,7 +649,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（哲学・論理学〈modus ponens・category mistake・thought experiment など〉で未収録のもの）で50語ずつ追加265（後件肯定・ゲティア問題・付随性 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（医療・看護の現場〈triage・informed consent・palliative care など〉で未収録のもの）で50語ずつ追加266（鑑別診断・誤嚥性肺炎・減薬 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（音楽理論・音響〈chord progression・timbre・reverberation など〉で未収録のもの）で50語ずつ追加267（五度圏・無響室・ヘミオラ など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（メディア・ジャーナリズム〈news cycle・press freedom・editorial board など〉で未収録のもの）で50語ずつ追加268
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（メディア・ジャーナリズム〈news cycle・press freedom・editorial board など〉で未収録のもの）で50語ずつ追加268（メディアスクラム・反論権・二段階の流れ など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（建築・都市デザイン〈cantilever・load-bearing wall・mixed-use zoning など〉で未収録のもの）で50語ずつ追加269
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
