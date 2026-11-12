@@ -298,7 +298,9 @@
   - 「There is not no reason」型は緩叙法として読めるため、明確な二重否定（did not meet nobody など）に差し替え
 - [x] 私学難関〜東大の正誤問題・誤文訂正227（間接疑問と名詞節〈間接疑問の語順 I wonder where he lives・whether と if の使い分け（前置詞の後・文頭）・that 節と what 節の混同・the fact that の同格・疑問詞 + to 不定詞・do you know と do you think の語順の違い など〉）
   - 「the reason … is because」「whomever を主語に」は口語で使われるため、whether to・間接疑問の語順・whatever の後の目的語の重複などに差し替え
-- [ ] 私学難関〜東大の正誤問題・誤文訂正228（形式主語・形式目的語と there 構文〈it is … for 人 to と of 人 to の使い分け・make it possible to の it 抜け・find it difficult の it 抜け・there is / there are と主語の数・there seems to be・it takes 人 時間 to など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正228（形式主語・形式目的語と there 構文〈it is … for 人 to と of 人 to の使い分け・make it possible to の it 抜け・find it difficult の it 抜け・there is / there are と主語の数・there seems to be・it takes 人 時間 to など〉）
+  - thoughtful / generous for は意味によっては使えるため、kind for → of など明確な誤りに差し替え
+- [ ] 私学難関〜東大の正誤問題・誤文訂正229（前置詞の to と不定詞の to〈look forward to -ing・be used to -ing と used to do・object to -ing・when it comes to -ing・contribute to -ing・with a view to -ing・devote oneself to -ing など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
