@@ -258,7 +258,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正187（代名詞の照応と形〈one / it / that の取りちがえ、each other と one another、oneself の誤用、指すものと数が合わない they / it など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正188（数量を表す語の使い分け〈few / a few、little / a little、many / much、a number of / the number of、amount / number、fewer / less など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正189（分詞構文と懸垂分詞〈主語のずれた分詞構文、Having + 過去分詞の時制、being の不要な挿入、with + 名詞 + 分詞の形 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正190（自動詞と他動詞の取りちがえ〈lie / lay、rise / raise、sit / set、discuss about、reach to、mention about、explain me など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正190（自動詞と他動詞の取りちがえ〈lie / lay、rise / raise、sit / set、discuss about、reach to、mention about、explain me など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正191（関係詞の選び方と形〈前置詞＋which / whom、関係副詞 where / when と which の取りちがえ、what と that、非制限用法の that、whose の誤用 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
