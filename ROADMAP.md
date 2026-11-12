@@ -817,7 +817,9 @@
   - free trial・hidden fee など身近な語は私学難関に下げた。small print は既存の fine print、deceptive advertising は false advertising と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（内装と室内装飾〈既存語以外：wainscoting・crown molding・baseboard・chair rail・accent wall など未収録のもの〉）で50語ずつ追加356
   - throw pillow・area rug など身近な語は私学難関に下げた。wainscoting は既存の wainscot、minimalism は minimalist と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（通商政策と貿易救済〈既存語以外：non-tariff barrier・anti-dumping duty・countervailing duty・safeguard measure など未収録のもの〉）で50語ずつ追加357
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（通商政策と貿易救済〈既存語以外：non-tariff barrier・anti-dumping duty・countervailing duty・safeguard measure など未収録のもの〉）で50語ずつ追加357
+  - trade talks・trade policy など基本的な語は私学難関に下げた。trade war・customs union・embargo などは既に収録済みのため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（公衆衛生と疫学調査〈既存語以外の未収録語：contact tracing・case definition・attack rate など〉）で50語ずつ追加358
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
