@@ -277,7 +277,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正206（副詞の語法〈hard と hardly・late と lately・near と nearly・most と almost・ago と before・enough の位置・否定の either・比較級を強める much など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正207（仮定法の形〈I wish + 過去完了・it is time + 過去形・if it were not for / had it not been for・as if + 過去形・仮定法過去と過去完了の混合・suggest/insist + 原形 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正208（分詞の形〈分詞構文の意味上の主語・懸垂分詞・-ing と -ed の形容詞・having + 過去分詞・with + 名詞 + 分詞 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正209（間接疑問と疑問詞〈間接疑問の語順・what … like と how・how + 形容詞の語順・whatever と however・疑問詞 + to 不定詞・付加疑問 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正209（間接疑問と疑問詞〈間接疑問の語順・what … like と how・how + 形容詞の語順・whatever と however・疑問詞 + to 不定詞・付加疑問 など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正210（否定語句の倒置〈Not until … did・Only after … did・Never have I・Little did・Hardly … when・No sooner … than・So + 形容詞 + be の倒置 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
