@@ -338,7 +338,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正251（程度を表す too / enough / quite の語順〈too + 形容詞 + to・形容詞 + enough to（enough の位置）・enough + 名詞・too の後に名詞を直接置かない・quite a + 形容詞 + 名詞・too 〜 to の後に目的語を重ねない など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正252（目的格補語の形〈find / make / keep + 目的語 + 形容詞（副詞にしない）・leave + 目的語 + 分詞・regard A as B と think of A as B の as・call A B に as を入れない・make it a rule to など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正253（まぎらわしい動詞の使い分け〈raise と rise・lay と lie の活用・seat と sit・rob と steal・borrow と lend・wear と put on・fall と fell・find と found の活用 など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正254（題材は既出の少ないものを選ぶ。形容詞の使い分けは既出が多いので避ける）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正254（動名詞の慣用表現〈have difficulty -ing・have trouble -ing・feel like -ing・on -ing（〜するとすぐ）・There is no -ing・be busy -ing・spend 時間 -ing など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
