@@ -18326,3 +18326,33 @@ it('国公立 の長文「ココノオビアルマジロ：よろい、四つ子
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「水はどうやって水そうからのぼって出ていくのか」（529語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-siphon-gravity-debate')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「かつて皇帝にふさわしかった金属」（521語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-aluminum-hall-heroult')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「たばこで決まる値段：鉄条網の中の市場」（528語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-pow-camp-cigarette-money')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「公平な審判としての偶然：ストレプトマイシンの試験」（663語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-streptomycin-trial-1948')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ロンドンを通りごとに色分けする」（656語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-charles-booth-poverty-maps')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
