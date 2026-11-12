@@ -678,7 +678,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（エネルギー・電力〈grid storage・baseload power・capacity factor など〉で未収録のもの）で50語ずつ追加284（メリットオーダー・慣性力・無効電力 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（文学・修辞〈unreliable narrator・free indirect speech・pathetic fallacy など〉で未収録のもの）で50語ずつ追加285（自由間接話法・転移修飾語・二詞一意 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（数学の基礎概念〈prime factorization・vector space・conditional probability など〉で未収録のもの）で50語ずつ追加286（平均値の定理・収束半径・ラグランジュの未定乗数 など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（食文化・料理〈umami は除く・fermentation vessel・braising など〉で未収録のもの）で50語ずつ追加287
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（食文化・料理〈tasting menu・molecular gastronomy など〉で未収録のもの）で50語ずつ追加287（既存の best-before date と近い use-by date を外して49語。分子ガストロノミー・ニシュタマリゼーション・余熱調理 など）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（宗教・思想史〈monotheism は除く・theodicy・secularization thesis など〉で未収録のもの）で50語ずつ追加288
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
