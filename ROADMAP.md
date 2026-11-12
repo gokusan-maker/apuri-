@@ -796,7 +796,9 @@
   - cold brew・cappuccino・afternoon tea など身近な語は私学難関に下げた。withering は既存の wither、tamping は tamper と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（バレエと舞踊〈既存語以外：plie・pirouette・arabesque・corps de ballet など未収録のもの〉）で50語ずつ追加348
   - ballet・tango・waltz などよく知られた語は私学難関に下げた。labanotation は固有名詞なので Labanotation にした
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（裁縫と服飾の仕立て〈既存語以外：bias cut・basting・pleat・serger など未収録のもの〉）で50語ずつ追加349
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（裁縫と服飾の仕立て〈既存語以外：bias cut・basting・pleat・serger など未収録のもの〉）で50語ずつ追加349
+  - cuff など身近な語は私学難関に下げた。basting・pleat・gathering は既存の baste・pleated・gather と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（木工と継ぎ手〈既存語以外：mortise and tenon・dado・rabbet・kerf など未収録のもの〉）で50語ずつ追加350
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
