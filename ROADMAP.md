@@ -321,7 +321,9 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正239（文の構造と並列〈主語のない文・動詞が二つの文の接続詞抜け・関係代名詞の後の主語の重複・it と that 節の主語の重複・不完全な並列（to 不定詞と動名詞の混在）・both A and B の形のずれ など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正240（数と名詞の形〈数詞＋名詞の複合形容詞（a two-year-old child と two years old）・hundreds of と three hundred・dozens of・a ten-minute walk・複数形で別の意味になる名詞（customs・manners・arms・goods）・the ＋形容詞が複数を表す など〉）
   - 「a pair of ＋複数名詞＋複数動詞」は使われることがあるため、主語を this pair などにして単数の動詞だけが正しい形に書き直した
-- [ ] 私学難関〜東大の正誤問題・誤文訂正241（関係副詞と前置詞＋関係代名詞〈where と which の使い分け（先行詞が場所でも動詞の目的語なら which）・in which と where・the reason why と the reason which・the way how の誤り・when と on which・関係副詞の非制限用法 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正241（関係副詞と前置詞＋関係代名詞〈where と which の使い分け（先行詞が場所でも動詞の目的語なら which）・in which と where・the reason why と the reason which・the way how の誤り・when と on which・関係副詞の非制限用法 など〉）
+  - guard は自動詞としても読めるため、目的語が必要な dread に差し替え
+- [ ] 私学難関〜東大の正誤問題・誤文訂正242（感嘆文と強調の語順〈What a ＋形容詞＋名詞・How ＋形容詞＋主語＋動詞の語順・What と How の取り違え・不可算名詞に a を付ける誤り（What a fine weather）・so と such の後の語順 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
@@ -841,7 +843,9 @@
   - deicing は既存の de-icing、altimeter setting は altimeter と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（原子力工学〈fuel assembly・spent fuel pool・criticality・neutron flux など未収録のもの〉）で50語ずつ追加365
   - decommissioning は既存の decommission、reactor pressure vessel は pressure vessel と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（林業作業・鉱山・通信網など、担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加366
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（税務行政と裁判手続）で50語ずつ追加366
+  - cross-examination は既存の cross-examine、tax withholding は withholding tax と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（獣医療の臨床〈未収録のもの〉）で50語ずつ追加367
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
