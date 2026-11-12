@@ -18038,3 +18038,51 @@ it('私学難関 の長文「開いたままなのににごらなかったフラ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「スカイランタンは禁止すべきか」（689語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-sky-lantern-ban')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「スーパーは話をしたい客のためのレジを開くべきか」（673語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-slow-chat-checkouts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「まん中の席について」（674語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-the-middle-seat')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ため息について」（672語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-sighing')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「バビルサ：鼻をつきぬけるきばをもつブタ」（625語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-babirusa-tusked-pig')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「タテガミオオカミ：果物を食べる竹馬のイヌ科動物」（618語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-maned-wolf-stilts')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ラーテル：大きな評判をもつ小さな動物」（561語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-honey-badger-bold')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「スナドリネコ：泳ぐ野生のネコ」（561語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-fishing-cat-wetlands')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
