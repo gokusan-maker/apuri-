@@ -683,7 +683,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（宗教・思想史〈secularization thesis・Axial Age など〉で未収録のもの）で50語ずつ追加288（既存の middle ages と重なる Dark Ages を外して49語。枢軸時代・存在の大いなる連鎖・否定神学 など。基本的な語は私学難関へ）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（地理学・人文地理〈threshold population・gravity model など〉で未収録のもの）で50語ずつ追加289（距離逓減・付け値地代・環境決定論 など）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（映画・写真・映像表現〈depth of field・montage・long take など〉で未収録のもの）で50語ずつ追加290（既存の crosscutting と同じ cross-cutting を外して49語。ドリーズーム・視線一致・ロトスコープ など）
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（物流・サプライチェーン〈just-in-time・last mile・bullwhip effect など〉で未収録のもの）で50語ずつ追加291
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（物流・サプライチェーン〈just-in-time・last mile・bullwhip effect など〉で未収録のもの）で50語ずつ追加291（発注点・混載未満輸送・裸用船 など。基本的な語は私学難関へ）
+- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（神経科学・脳科学〈synaptic pruning・neural plasticity は除く・action potential など〉で未収録のもの）で50語ずつ追加292
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
