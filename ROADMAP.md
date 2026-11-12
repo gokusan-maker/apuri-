@@ -839,7 +839,9 @@
   - 英式つづり（colour-light・signalling）は米式にそろえた。semaphore signal は既存の semaphore と重なるため除外
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（航空運航と航空管制）で50語ずつ追加364
   - deicing は既存の de-icing、altimeter setting は altimeter と重なるため除外
-- [ ] 国公立〜東大・TOEFL の単語を分野別の上級語（原子力工学〈fuel assembly・spent fuel pool・criticality・neutron flux など未収録のもの〉）で50語ずつ追加365
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（原子力工学〈fuel assembly・spent fuel pool・criticality・neutron flux など未収録のもの〉）で50語ずつ追加365
+  - decommissioning は既存の decommission、reactor pressure vessel は pressure vessel と重なるため除外
+- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（林業作業・鉱山・通信網など、担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加366
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
