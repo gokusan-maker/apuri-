@@ -294,7 +294,9 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正223（冠詞の有無〈by + 交通手段・the + 形容詞で人々・楽器と the・唯一のものと the・a / an と発音・総称の the と無冠詞・所有格と冠詞の重複 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正224（語順〈形容詞の並び順・something + 形容詞・all / both の位置・頻度の副詞の位置・句動詞と代名詞の目的語 turn it off・二重目的語の語順 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正225（助動詞の形〈must have + 過去分詞と can not have・should have・need not have・would rather + 原形・had better not・used to と would・may well / may as well など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正226（否定の表現〈hardly / scarcely と not の二重否定・neither do I と so do I・not … either と neither・no と not any・nor の後の倒置・without と not の重複 など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正226（否定の表現〈hardly / scarcely と not の二重否定・neither do I と so do I・not … either と neither・no と not any・nor の後の倒置・without と not の重複 など〉）
+  - 「There is not no reason」型は緩叙法として読めるため、明確な二重否定（did not meet nobody など）に差し替え
+- [ ] 私学難関〜東大の正誤問題・誤文訂正227（間接疑問と名詞節〈間接疑問の語順 I wonder where he lives・whether と if の使い分け（前置詞の後・文頭）・that 節と what 節の混同・the fact that の同格・疑問詞 + to 不定詞・do you know と do you think の語順の違い など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
