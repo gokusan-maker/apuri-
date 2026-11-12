@@ -18518,3 +18518,51 @@ it('国公立 の長文「ビルビー：オーストラリアの砂漠にすむ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「水上バイクを人気のある浜辺や静かな湖から遠ざけるべきか」（678語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-jet-ski-limits')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「園芸店はピート入りの土を売るのをやめるべきか」（666語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-peat-compost-sales')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「木をけずることについて」（693語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-whittling')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「木登りについて」（700語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-climbing-trees')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「クズリ：雪の北国をつかれ知らずに旅する動物」（622語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-wolverine-snow-traveller')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「オオアリクイ：草原にすむ歯のない大きな動物」（619語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-giant-anteater-toothless')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「カラカル：耳に房のある野生のネコ」（547語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-caracal-tufted-ears')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「フクロネコ：オーストラリアの斑点のある狩人」（556語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-quoll-spotted-hunters')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
