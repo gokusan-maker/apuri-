@@ -296,7 +296,9 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正225（助動詞の形〈must have + 過去分詞と can not have・should have・need not have・would rather + 原形・had better not・used to と would・may well / may as well など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正226（否定の表現〈hardly / scarcely と not の二重否定・neither do I と so do I・not … either と neither・no と not any・nor の後の倒置・without と not の重複 など〉）
   - 「There is not no reason」型は緩叙法として読めるため、明確な二重否定（did not meet nobody など）に差し替え
-- [ ] 私学難関〜東大の正誤問題・誤文訂正227（間接疑問と名詞節〈間接疑問の語順 I wonder where he lives・whether と if の使い分け（前置詞の後・文頭）・that 節と what 節の混同・the fact that の同格・疑問詞 + to 不定詞・do you know と do you think の語順の違い など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正227（間接疑問と名詞節〈間接疑問の語順 I wonder where he lives・whether と if の使い分け（前置詞の後・文頭）・that 節と what 節の混同・the fact that の同格・疑問詞 + to 不定詞・do you know と do you think の語順の違い など〉）
+  - 「the reason … is because」「whomever を主語に」は口語で使われるため、whether to・間接疑問の語順・whatever の後の目的語の重複などに差し替え
+- [ ] 私学難関〜東大の正誤問題・誤文訂正228（形式主語・形式目的語と there 構文〈it is … for 人 to と of 人 to の使い分け・make it possible to の it 抜け・find it difficult の it 抜け・there is / there are と主語の数・there seems to be・it takes 人 時間 to など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
