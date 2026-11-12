@@ -329,7 +329,8 @@
   - 建築家の性別と代名詞が合っていなかった問題を直し、by one's own の説明を by に限った言い方に改めた
 - [x] 私学難関〜東大の正誤問題・誤文訂正244（ハイフンでつなぐ複合形容詞と語形〈well-known と well known の位置・形容詞＋名詞-ed（kind-hearted）・-ly 副詞にはハイフンを付けない・名詞＋現在分詞（time-consuming）・名詞＋過去分詞（hand-made）など、形の誤り（time-consumed など）を中心に〉）
   - heart-broken・fast-grown・hard-worked は使い方によっては正しいため、明確に誤りになる形に差し替え
-- [ ] 私学難関〜東大の正誤問題・誤文訂正245（時を表す前置詞と接続詞〈in / on / at の使い分け（on the morning of・at night・in the evening）・in two days（〜後）と after two days・by the time の後の時制・in time と on time・within と in・since と from の取り違え など〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正245（時を表す前置詞と接続詞〈in / on / at の使い分け（on the morning of・at night・in the evening）・in two days（〜後）と after two days・by the time の後の時制・in time と on time・within と in・since と from の取り違え など〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正246（倍数と比較の慣用表現〈twice as 〜 as・three times the size of・as many as と as much as・no fewer than と no less than・the + 比較級, the + 比較級 の語順・比較対象のそろえ方 など〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）

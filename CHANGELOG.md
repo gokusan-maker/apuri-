@@ -5994,3 +5994,4 @@
 - 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（244：複合形容詞の語形〈time-consuming・hand-made・kind-hearted・well-known・long-lasting・English-speaking〉）
 - 2026-11-12: 国公立〜東大・TOEFL の単語を50語追加（371：上下水道処理と建築設備〈空調・昇降機〉の上級語）
 - 2026-11-12: 国公立〜東大・TOEFL の単語を50語追加（372：道路舗装と林業の伐出作業の上級語）
+- 2026-11-12: 私学難関〜東大の正誤問題・誤文訂正を100問追加（245：時を表す前置詞と接続詞〈on the morning of・at night・by the time の後の時制・since と from・for と during・by と until〉）
