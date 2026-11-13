@@ -344,7 +344,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正257（伝達・紹介の動詞の語法〈introduce A to B（introduce 人 A は不可）・notify 人 of・convince 人 of / that・describe 人 に は不可（describe A to 人）・hope 人 to は不可・propose to 人 that・announce to 人 など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正258（数量・速さ・差を表す前置詞〈差を表す by（taller by five centimeters）・at a speed of・at the rate of・at a price of・by weight と by the kilogram・in number・on average など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正259（最上級と序数の形〈the second largest・one of the + 最上級 + 複数名詞・than any other + 単数名詞・最上級の後の of と in・most people と most of the people・the very best など〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正260（状態を表す前置詞句〈under construction・out of order・on duty と off duty・in favor of・at risk・in charge of・at a loss・in danger・out of stock など、前置詞の取り違え〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正260（状態を表す前置詞句〈under construction・out of order・on duty と off duty・in favor of・at risk・in charge of・at a loss・in danger・out of stock など、前置詞の取り違え〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正261（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
@@ -899,7 +900,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（酪農と家禽・家畜の飼養）で50語ずつ追加393
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（廃棄物処理・リサイクル施設と井戸掘削）で50語ずつ追加394（既出の drilling rig に近い1語を外して49語）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（屋根工事と窓ガラス施工）で50語ずつ追加395
-- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加396
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（スキー場運営とプール管理）で50語ずつ追加396（基本的すぎる4語を外して46語）
+- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加397
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
