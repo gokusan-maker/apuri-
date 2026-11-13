@@ -3,10 +3,10 @@ import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
   it('中学2033語＋高校基礎680語＋熟語280＋曜日・月25＋テーマ別544＋数44＋色・形24＋会話190＋ビジネス71＋英検2級101＋英検準1級100＋英検1級100＋ネイティブ100あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(31154) // 2026-11-10 に分野別の語⑭〜㉒を450語、 TOEFL・IELTS の学術語を48語、東大・京大の評論語を34語、旧帝大・国公立・高3の語を42語、私学難関・私学の語を50語、TOEFL の学術語をさらに50語、東大・京大・旧帝大の語句を50足した
+    expect(WORDS).toHaveLength(31189) // 2026-11-10 に分野別の語⑭〜㉒を450語、 TOEFL・IELTS の学術語を48語、東大・京大の評論語を34語、旧帝大・国公立・高3の語を42語、私学難関・私学の語を50語、TOEFL の学術語をさらに50語、東大・京大・旧帝大の語句を50足した
     expect(WORDS.filter((w) => levelOf(w) === 'ネイティブ')).toHaveLength(300)
-    expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(8530) // 2026-11-10 に分野別の語⑱を20語、東大・京大の評論語を34語、さらに語句を34足した。単語のレベルの見直しで、京大から私学難関・国公立へ移した語は近い級も変わる
-    expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(14509) // 11-10 に分野別の語⑭〜⑱を161語、2026-11-08 に国公立・旧帝大の単語を93語、11-10 に TOEFL の48語、旧帝大・国公立の29語を足した（pessimistic は高3へ）、TOEFL の50語、旧帝大の語句16を足した
+    expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(8540) // 2026-11-10 に分野別の語⑱を20語、東大・京大の評論語を34語、さらに語句を34足した。単語のレベルの見直しで、京大から私学難関・国公立へ移した語は近い級も変わる
+    expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(14534) // 11-10 に分野別の語⑭〜⑱を161語、2026-11-08 に国公立・旧帝大の単語を93語、11-10 に TOEFL の48語、旧帝大・国公立の29語を足した（pessimistic は高3へ）、TOEFL の50語、旧帝大の語句16を足した
     expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(3787) // 2026-11-10 に私学難関・私学の語を50語、分野別の語⑭〜⑰を69語足した（レベル判定で1語が準1級から2級へ）
     expect(new Set(WORDS.map((w) => w.en.toLowerCase())).size).toBe(WORDS.length) // 同じ英単語を2回入れない
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
