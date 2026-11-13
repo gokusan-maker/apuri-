@@ -24572,3 +24572,39 @@ it('国公立 の長文「銀でかく：シルバーポイント（銀筆素描
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「カメの手の形をした生き物、カメノテ」（568語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-kamenote-gooseneck-barnacle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「葉をゆずる木、ユズリハ」（568語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yuzuriha-handing-over-leaves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「砂漠の夜の小さな狩人、スナネコ」（573語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sand-cat-desert-night')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「とげをもつ香りのキノコ、コウタケ」（565語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-kotake-fragrant-tooth-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「詩から名前をとった砂漠の植物、ブージャムツリー」（665語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-boojum-tree-cirio')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「落ち葉にかくれたキノコ、クロラッパタケ」（657語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-black-trumpet-horn-of-plenty')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
