@@ -360,7 +360,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正273（否定語と any・二重否定の誤り〈not … nobody・hardly no・without no・no と not any〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正274（形容詞と結びつく前置詞〈capable of・aware of・responsible for・similar to・dependent on・independent of〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正275（品詞の取り違え〈advice と advise・belief と believe・proof と prove・choice と choose・loss と lose〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正276（感情を表す分詞形容詞〈interesting と interested・boring と bored・confusing と confused〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正276（感情を表す分詞形容詞〈interesting と interested・boring と bored・confusing と confused〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正277（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
