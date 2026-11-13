@@ -24656,3 +24656,39 @@ it('国公立 の長文「機械が刻む模様：ギョーシェ彫り」（557
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「砂浜の夜を走るスナガニ」（580語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-sunagani-ghost-crab')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「ヘビのような姿の植物、マムシグサ」（565語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mamushigusa-snake-plant')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「森を支える小さな穴ほり名人、ハナナガネズミカンガルー」（566語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-long-nosed-potoroo')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「くさった切りかぶに生える黒いこん棒、マメザヤタケ」（564語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-dead-mans-fingers-xylaria')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ほとんど地下でくらす植物、ヒドノラ・アフリカーナ」（681語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-hydnora-underground-flower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「身近なキノコが教えた教訓、スギヒラタケ」（663語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sugihiratake-angel-wings')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
