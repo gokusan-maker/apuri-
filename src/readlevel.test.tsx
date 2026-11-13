@@ -24524,3 +24524,51 @@ it('私学難関 の長文「カラマツとともに生えるキノコ、ハナ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「雪の多い地域のLED信号機に着雪対策のヒーターをつけるべきか」（695語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-led-traffic-lights-snow-heaters')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「学校は上ばき（室内ばき）の義務をやめるべきか」（676語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-school-indoor-shoes-rule')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ぜんまいじかけのおもちゃについて」（709語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-wind-up-toys')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ポケットナイフについて」（682語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-pocket-knives')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「金属の階段：ビスマスの結晶」（634語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-bismuth-staircase-crystals')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「結晶に変えられたガラス：ガラスセラミックス（結晶化ガラス）」（632語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-glass-ceramics-zero-expansion')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ろうで手紙をとじる：封ろう（シーリングワックス）」（557語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-sealing-wax-letters')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「銀でかく：シルバーポイント（銀筆素描）」（559語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-silverpoint-metal-drawing')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
