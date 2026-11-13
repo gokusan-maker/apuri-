@@ -378,7 +378,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正291（自動詞と結びつく前置詞〈graduate from・apologize to 人 for・participate in・insist on・refer to・account for〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正292（類似と相違の表現〈similar to・different from・the same as・resemble（前置詞なし）・in contrast to〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正293（群前置詞の形〈instead of -ing・regardless of・apart from・owing to・in addition to -ing〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正294（程度を強める語の位置と形〈much too ＋形容詞・too much ＋名詞・quite a ＋名詞・such a と so ＋形容詞＋ a〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正294（程度を強める語の位置と形〈much too ＋形容詞・too much ＋名詞・quite a ＋名詞・such a と so ＋形容詞＋ a〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正295（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
