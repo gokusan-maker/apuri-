@@ -6125,3 +6125,4 @@
 - 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（274：形容詞と結びつく前置詞〈capable of・aware of・responsible for・similar to・dependent on・superior to・accustomed to・rich in・prone to〉）
 - 2026-11-13: 国公立〜東大・TOEFL の単語を47語追加（422：否定・再・過不足の接頭辞をもつ評価・状態の語）
 - 2026-11-13: 国公立〜東大・TOEFL の単語を42語追加（423：強い言い方・比喩的な意味の一般語彙）
+- 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（275：品詞の取り違え〈advice と advise・belief と believe・proof と prove・loss と lose・形容詞と副詞〉）
