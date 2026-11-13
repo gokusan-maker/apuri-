@@ -23312,3 +23312,51 @@ it('国公立 の長文「長いロープのための長い建物：ロープ工
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「すべての酒類に原材料表示を義務づけるべきか」（691語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-alcoholic-drink-ingredient-lists')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「プロのサッカーに一時退場（シンビン）を導入すべきか」（704語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-sin-bins-professional-football')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「缶切りについて」（688語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-tin-openers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「庭の物置小屋について」（682語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-garden-sheds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「海底を手さぐりする：測鉛（レッドライン）」（636語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-sounding-lead-and-line')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「鉄でしめつけられた木：車大工の技術」（643語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-wheelwright-wooden-wheels')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「声とかねで伝えるニュース：町の触れ役（タウンクライヤー）」（571語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-town-crier-announcements')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「一列の管から生まれる音楽：パンパイプ」（567語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-panpipes-closed-tubes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
