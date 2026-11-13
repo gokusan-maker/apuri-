@@ -351,7 +351,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正264（提案・要求の動詞の語法〈suggest that／insist on／explain A to B〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正265（動詞＋A＋前置詞＋B の型〈rob A of B・provide A with B・prevent A from・accuse A of・inform A of〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正266（接続詞の後の省略と分詞〈while waiting・once finished・if necessary〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正267（関係代名詞の格と形〈whose・whom・前置詞＋which・what と that〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正267（関係代名詞の格と形〈whose・whom・前置詞＋which・what と that〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正268（仮定法の慣用表現〈It is time・would rather・wish・if only・but for〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
