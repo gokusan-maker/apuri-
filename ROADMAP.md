@@ -366,7 +366,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正279（接続詞・接続副詞の重複と誤用〈although … but・because … so・despite of・however を接続詞に使う〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正280（名詞を後ろから修飾する分詞の態〈the data collected・a bridge built・goods damaged〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正281（数の一致の注意点〈the number of と a number of・each of・many a・the majority of〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正282（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正282（比較級の形と語法〈much・far で強める比較級・superior to・prefer A to B・the ＋比較級, the ＋比較級〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
