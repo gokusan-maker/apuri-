@@ -345,7 +345,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正258（数量・速さ・差を表す前置詞〈差を表す by（taller by five centimeters）・at a speed of・at the rate of・at a price of・by weight と by the kilogram・in number・on average など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正259（最上級と序数の形〈the second largest・one of the + 最上級 + 複数名詞・than any other + 単数名詞・最上級の後の of と in・most people と most of the people・the very best など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正260（状態を表す前置詞句〈under construction・out of order・on duty と off duty・in favor of・at risk・in charge of・at a loss・in danger・out of stock など、前置詞の取り違え〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正261（時を表す前置詞句の形〈at present・for the time being・in the meantime・at the moment・in the long run・at the same time・on time・in advance・by then など、前置詞や冠詞の取り違え〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正261（時を表す前置詞句の形〈at present・for the time being・in the meantime・at the moment・in the long run・at the same time・on time・in advance・by then など、前置詞や冠詞の取り違え〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正262（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
@@ -1401,7 +1402,8 @@
 - [x] 新しい長文（286b）（共通テスト・私学・私学難関を2本ずつ）
 - [x] 新しい長文（287b）（共通テスト・私学・私学難関を2本ずつ）
 - [x] 新しい長文（288b）（共通テスト・私学・私学難関を2本ずつ）
-- [ ] 新しい長文（289b）（共通テスト・私学・私学難関を2本ずつ）
+- [x] 新しい長文（289b）（共通テスト・私学・私学難関を2本ずつ）
+- [ ] 新しい長文（290b）（共通テスト・私学・私学難関を2本ずつ）
 - [x] 新しい長文⑧：共通テスト2本（いびき・扇子）・私学2本（歌詞の聞きまちがい・幻のバイブ）・私学難関2本（幽霊語・リンディ効果）
 - [x] 新しい長文④：共通テスト2本（潮だまり・ムンバイの弁当配達）・私学2本（番地・書体）・私学難関2本（モラル・ライセンシング・鳥のV字飛行）
 
