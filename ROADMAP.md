@@ -356,7 +356,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正269（同意・追加の表現〈so do I・neither did she・nor＋倒置・either と too〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正270（使役・知覚動詞の受動態と補語の形〈be made to・be seen to・have A done・get A to do〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正271（状態動詞と進行形〈know・belong・contain・consist は進行形にしない・have・think・see は意味で変わる〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正272（不可算名詞の形〈advice・information・equipment・furniture・evidence・research に a・複数形は不可〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正272（不可算名詞の形〈advice・information・equipment・furniture・evidence・research に a・複数形は不可〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正273（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
