@@ -22928,3 +22928,51 @@ it('私学難関 の長文「かたい実と、それを開ける動物たち」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「交差点で曲がる車は、渡ろうと待つ歩行者を優先すべきか」（690語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-turning-drivers-give-way-to-pedestrians')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「電動アシスト自転車の補助速度の上限を上げるべきか」（688語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-electric-bicycle-speed-limit')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「トーストラックについて」（676語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-toast-racks')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ピーラー（皮むき器）について」（677語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-vegetable-peelers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「本のはしにかくされた絵：小口絵（フォアエッジ・ペインティング）」（654語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-fore-edge-painting-hidden-pictures')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「木のキャップの中のリード：クルムホルン」（652語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-crumhorn-capped-reed')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「パンの重さをはかる：パンとエールの公定価格令」（560語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-assize-of-bread-and-ale')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「木のように見える金属：木目金」（569語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-mokume-gane-wood-grain-metal')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
