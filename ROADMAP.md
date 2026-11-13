@@ -384,7 +384,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正297（受け身の後に続く前置詞〈be satisfied with・be filled with・be involved in・be exposed to・be engaged in〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正298（人＋to 不定詞をとる動詞・とらない動詞〈want・would like・expect 人 to／hope・suggest・demand は that 節〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正299（主語を前に出す構文〈He seems to …／It seems that he …・is said to have done・is likely to〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正300（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正300（原因と結果を表す動詞の形〈lead to -ing・stem from・give rise to・attribute A to B・owe A to B〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
