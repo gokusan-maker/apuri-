@@ -346,7 +346,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正259（最上級と序数の形〈the second largest・one of the + 最上級 + 複数名詞・than any other + 単数名詞・最上級の後の of と in・most people と most of the people・the very best など〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正260（状態を表す前置詞句〈under construction・out of order・on duty と off duty・in favor of・at risk・in charge of・at a loss・in danger・out of stock など、前置詞の取り違え〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正261（時を表す前置詞句の形〈at present・for the time being・in the meantime・at the moment・in the long run・at the same time・on time・in advance・by then など、前置詞や冠詞の取り違え〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正262（場所・位置の前置詞の使い分け〈beside と besides・among と between・across と through・into と in・onto と on・arrive at / in・from 〜 to の位置関係 など、意味がはっきり決まるもの〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正262（場所・位置の前置詞の使い分け〈beside と besides・among と between・across と through・into と in・onto と on・arrive at / in・from 〜 to の位置関係 など、意味がはっきり決まるもの〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正263（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
@@ -906,7 +907,8 @@
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（花屋・フラワーデザイン）で50語ずつ追加398（基本語・カタカナで済む語の3語を外して47語）
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（ゴルフ場のコース管理とゴルフ競技）で50語ずつ追加399
 - [x] 国公立〜東大・TOEFL の単語を分野別の上級語（自転車競技・整備と陸上競技）で50語ずつ追加400（基本的すぎる語・俗語の7語を外して43語）
-- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加401
+- [x] 国公立〜東大・TOEFL の単語を分野別の上級語（科学技術政策・研究資金と研究の実務）で50語ずつ追加401
+- [ ] 国公立〜東大・TOEFL の単語を、まだ収録の少ない分野（担当が未収録語を50語集められる分野を選ぶ）の上級語で50語ずつ追加402
 #### 読解
 - [x] 東大・京大の長文で空所Aの答えが毎回 Although になっている438本を、本文の別の語（接続語・論理語・語彙）の空所に作り直す①（40本）
 - [x] 同②（40本）
