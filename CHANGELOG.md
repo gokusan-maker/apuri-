@@ -6119,3 +6119,4 @@
 - 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（272：不可算名詞の形〈advice・information・equipment・furniture・luggage に a・複数形は不可・much と many・news は単数〉）
 - 2026-11-13: 国公立〜東大・TOEFL の単語を50語追加（420：報道・論説の慣用句と句動詞）
 - 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（273：否定語と any・二重否定の誤り〈not … anything・hardly ever・without any・no と none of・not … either〉）
+- 2026-11-13: 国公立〜東大・TOEFL の単語を34語追加（421：生物・地学・天文と美術・建築・歴史の講義語彙）
