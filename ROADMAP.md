@@ -380,7 +380,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正293（群前置詞の形〈instead of -ing・regardless of・apart from・owing to・in addition to -ing〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正294（程度を強める語の位置と形〈much too ＋形容詞・too much ＋名詞・quite a ＋名詞・such a と so ＋形容詞＋ a〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正295（動詞と名詞の決まった組み合わせ〈make a decision・do research・pay attention・take a risk・give a speech〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正296（目的語で使い分ける動詞〈win 試合／beat 相手・rob 人／steal 物・borrow と lend・say と tell〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正296（目的語で使い分ける動詞〈win 試合／beat 相手・rob 人／steal 物・borrow と lend・say と tell〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正297（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
