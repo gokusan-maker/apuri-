@@ -386,7 +386,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正299（主語を前に出す構文〈He seems to …／It seems that he …・is said to have done・is likely to〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正300（原因と結果を表す動詞の形〈lead to -ing・stem from・give rise to・attribute A to B・owe A to B〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正301（A を B とみなす表現〈regard A as B・think of A as B・refer to A as B・call A B（as なし）・describe A as B〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正302（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正302（交換と責任の動詞の前置詞〈replace A with B・exchange A for B・substitute A for B・blame A for B／blame B on A・thank A for B〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
