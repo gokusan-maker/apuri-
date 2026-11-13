@@ -23648,3 +23648,39 @@ it('国公立 の長文「結び目から生まれるレース：タティング
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「海辺を走るフナムシ」（568語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-funamushi-sea-slater')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「三つの葉をもつ香草、ミツバ」（562語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mitsuba-three-leaves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「クリタケとそっくりな毒キノコ」（573語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-kuritake-chestnut-mushroom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「手でつまれる香辛料、カルダモン」（569語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-cardamom-green-pods')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「外洋の光る筒、ヒカリボヤ」（669語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-pyrosome-fire-body')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ナンキョクブナに実る「ダーウィンのキノコ」」（664語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-cyttaria-darwins-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
