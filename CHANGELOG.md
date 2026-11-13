@@ -6083,3 +6083,4 @@
 - 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（264：提案・要求・説明の動詞の語法〈suggest that・insist on・demand that・explain A to B・avoid -ing〉）
 - 2026-11-13: 新しい長文を6本追加（293b：ナンテン、アキアカネ、ヒバリ、シキミ、ネムノキ、ゴイサギ）
 - 2026-11-13: 国公立〜東大・TOEFL の単語を50語追加（405：岩石・鉱物学と水文学・土壌の上級語）
+- 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（265：動詞＋A＋前置詞＋B の型〈rob A of B・provide A with B・prevent A from・accuse A of・inform A of・blame B on A・regard A as〉）
