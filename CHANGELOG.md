@@ -6086,3 +6086,4 @@
 - 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（265：動詞＋A＋前置詞＋B の型〈rob A of B・provide A with B・prevent A from・accuse A of・inform A of・blame B on A・regard A as〉）
 - 2026-11-13: 新しい長文を6本追加（294b：ツワブキ、ニホンイシガメ、ハギ、オオムラサキ、マスタケ、ムクゲ）
 - 2026-11-13: 国公立〜東大・TOEFL の単語を48語追加（406：薬理学・免疫学ほかの上級語）
+- 2026-11-13: 私学難関〜東大の正誤問題・誤文訂正を100問追加（266：接続詞の後の省略と分詞〈while waiting・once signed・if necessary・as expected・unless otherwise noted・during と while〉）
