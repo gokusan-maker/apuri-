@@ -362,7 +362,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正275（品詞の取り違え〈advice と advise・belief と believe・proof と prove・choice と choose・loss と lose〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正276（感情を表す分詞形容詞〈interesting と interested・boring と bored・confusing と confused〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正277（人称代名詞の格〈between you and me・for him and his wife・we students・she and I が主語〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正278（まぎらわしい副詞〈hard と hardly・late と lately・near と nearly・high と highly・most と mostly〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正278（まぎらわしい副詞〈hard と hardly・late と lately・near と nearly・high と highly・most と mostly〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正279（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
