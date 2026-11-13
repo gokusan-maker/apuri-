@@ -364,7 +364,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正277（人称代名詞の格〈between you and me・for him and his wife・we students・she and I が主語〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正278（まぎらわしい副詞〈hard と hardly・late と lately・near と nearly・high と highly・most と mostly〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正279（接続詞・接続副詞の重複と誤用〈although … but・because … so・despite of・however を接続詞に使う〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正280（題材は既出の少ないものを選ぶ）
+- [x] 私学難関〜東大の正誤問題・誤文訂正280（名詞を後ろから修飾する分詞の態〈the data collected・a bridge built・goods damaged〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正281（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
