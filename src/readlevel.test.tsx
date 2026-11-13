@@ -23816,3 +23816,39 @@ it('国公立 の長文「二つの太鼓、一つの声：タブラ」（568語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「春のすきとおった魚、シラウオ」（575語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-shirauo-japanese-icefish')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「あまいさやの木、イナゴマメ」（564語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-carob-pods-seeds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「北海道の黄金色のキノコ、タモギタケ」（561語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tamogitake-golden-oyster')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「農業で数をふやしたピンクのオウム、モモイロインコ」（559語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-galah-pink-cockatoo')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「高貴な色を生んだ植物、ムラサキ」（677語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-murasaki-purple-gromwell')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「カマンベールチーズの白いカビ」（664語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-camembert-white-mold')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
