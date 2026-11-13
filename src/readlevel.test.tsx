@@ -24908,3 +24908,39 @@ it('国公立 の長文「回る円板から生まれる火花：ウィムズハ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「草のボールをあむネズミ、カヤネズミ」（575語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-kayanezumi-grass-ball-nest')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「緑の葉をもたないラン、ツチアケビ」（567語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tsuchiakebi-leafless-red-orchid')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ツバキの木の下の小さなおわん、ツバキキンカクチャワンタケ」（567語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-camellia-cup-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「転がってにげるペブルトード」（572語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-pebble-toad-tumbling-escape')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「バケツランとそのぬれたわな」（658語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-bucket-orchid-bee-trap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ニュージーランドの空色のキノコ」（668語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-blue-pinkgill-sky-mushroom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
