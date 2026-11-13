@@ -22766,3 +22766,45 @@ it('私学難関 の長文「カリフラワーのようなキノコ」（659語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「電気料金の基本料金（毎日の固定料金）は廃止されるべきか」（678語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-electricity-standing-charge')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「懐中電灯について」（687語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-torches')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「旅行用の変換プラグについて」（681語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-travel-adapters')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「金ではない金：ピンチベック」（636語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-pinchbeck-imitation-gold')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「弦一本のトランペット：トロンバ・マリーナ」（642語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-tromba-marina-bowed-trumpet')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「アジアの漆をまねる：ジャパニング」（570語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-japanning-european-lacquer')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ピンにたくわえられた音楽：手回しオルガン（バレルオルガン）」（560語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-barrel-organ-pinned-music')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
