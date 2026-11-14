@@ -27368,3 +27368,39 @@ it('国公立 の長文「通りを掘り返して造る：開削工法」（563
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「落ち葉の下でくらす小さなモグラ、ヒミズ」（578語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-himizu-urotrichus-leaf-litter-mole')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「葉に細菌をすまわせる赤い実の低木、マンリョウ」（561語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-manryo-ardisia-leaf-nodule-bacteria')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「二枚貝の子どもを運ぶサンショウウオ、マッドパピー」（561語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-mudpuppy-necturus-salamander-mussel')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「葉に窓をもつつる性の植物、モンステラ」（560語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-monstera-deliciosa-leaf-holes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「花の中にひそむ菌、ミクロボトリウム」（675語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-microbotryum-anther-smut-campion')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「すすのような樹皮の病気を起こす菌、クリプトストロマ」（669語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-cryptostroma-sooty-bark-maple')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
