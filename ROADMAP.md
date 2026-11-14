@@ -419,7 +419,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正332（不規則動詞の過去形と過去分詞の取り違え〈has began・had went・was wrote・have drank・had ran〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正333（現在完了と期間の表し方〈for three years と since 2019・since の後の時点・ago と現在完了〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正334（動詞と目的語の間に副詞を入れる誤り〈speaks well English・enjoyed very much the concert〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正335（群動詞の受け身で前置詞が抜ける誤り〈be laughed at・be spoken to・be dealt with・be taken care of・be looked after〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正335（群動詞の受け身で前置詞が抜ける誤り〈be laughed at・be spoken to・be dealt with・be taken care of・be looked after〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正336（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
