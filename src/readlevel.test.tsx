@@ -25364,3 +25364,39 @@ it('国公立 の長文「細胞より薄い切片：ミクロトーム」（565
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「山のれきの上にさく花、コマクサ」（575語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-komakusa-alpine-gravel-flower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「よろいを着た魚、ミナミハコフグ」（568語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yellow-boxfish-armored-reef-fish')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ミツクリザメと、とび出すあご」（562語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-goblin-shark-mitsukurizame')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「イエバエをねらうカビ、ハエカビ」（576語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-entomophthora-fly-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「小さな大砲の玉をうつキノコ、タマハジキタケ」（660語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sphaerobolus-artillery-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「とびつくように見えるサボテン、ジャンピング・チョーヤ」（653語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-jumping-cholla-desert-cactus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
