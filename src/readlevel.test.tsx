@@ -25652,3 +25652,39 @@ it('国公立 の長文「ガラスから作った青：スマルト」（561語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「暗い森の小さなホタル、ヒメボタル」（574語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-himebotaru-forest-firefly')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「二つの型の花をもつ水にうかぶ花、アサザ」（575語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-asaza-floating-heart')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「たくさんの客をむかえるユムシのなかま」（572語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-innkeeper-worm-burrow')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「落ち葉の上の小さなピンクのかさ、ハナオチバタケ」（573語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hanaochibatake-leaf-litter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「雨を待つクローバーのようなシダ、ナルドゥー」（676語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-nardoo-clover-fern')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「昆虫に乗ってくらす小さな菌、ラブルベニア目」（688語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-laboulbeniales-beetle-fungi')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
