@@ -26864,3 +26864,39 @@ it('国公立 の長文「緑に光るガラス：ウランガラス」（561語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「古い木にすむ甲虫、ヤンバルテナガコガネ」（594語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yanbaru-tenaga-kogane-cheirotonus-hollow-tree')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「海辺の黄色いハイビスカス、ハマボウ」（572語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hamabou-hibiscus-hamabo-river-mouth')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「水の上に卵を産む魚、スプラッシュテトラ」（564語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-splash-tetra-copella-leaf-eggs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「葉のない宙にうかぶ花、ゴーストオーキッド」（579語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-ghost-orchid-dendrophylax-green-roots')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「かさがひびわれる大きなイグチ、アカヤマドリ」（661語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-akayamadori-leccinum-cracked-cap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「病院をなやませる酵母、カンジダ・アウリス」（676語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-candida-auris-hospital-yeast')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
