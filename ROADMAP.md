@@ -431,7 +431,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正344（let・make・have の後の原形と allow・force・get・cause の後の to 不定詞の取り違え）
 - [x] 私学難関〜東大の正誤問題・誤文訂正345（前置詞＋動名詞をとる表現を to 不定詞にする誤り〈succeed in -ing・insist on -ing・be accused of -ing・be capable of -ing〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正346（不規則な比較変化の取り違え〈worse と worst・better と best・elder と older・less と least〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正347（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正347（名詞＋名詞で前の名詞を複数形にする誤り〈a shoe store・a toothbrush・a car factory〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
