@@ -26108,3 +26108,51 @@ it('私学難関 の長文「田んぼの緑の玉、イネこうじ病」（673
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「ゴールキーパーの8秒ルール：ボールを長く持ちすぎたらコーナーキックを科すべきか」（711語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-goalkeeper-eight-second-rule')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「マイナ保険証：健康保険証をマイナンバーカードに一本化すべきか」（716語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-japan-my-number-health-insurance-card')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「冷蔵庫のマグネットについて」（687語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-refrigerator-magnets')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「雪かきスコップについて」（688語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-snow-shovels')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「とけたガラスに息を吹きこむ：吹きガラスの発明」（639語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-glassblowing-blowpipe')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「機械で編む：ウィリアム・リーの靴下編み機（ストッキング・フレーム）」（639語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-stocking-frame-bearded-needles')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ホウ砂：金属をつなぐ手助けをする白い鉱物」（572語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-borax-metalworking-flux')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「しなる棒で木をけずる：ポールレース（足踏みろくろ）」（572語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-pole-lathe-springy-pole')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
