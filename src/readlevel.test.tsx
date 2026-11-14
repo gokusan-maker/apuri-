@@ -26744,3 +26744,39 @@ it('国公立 の長文「ゼラチンで濃淡を刷る：コロタイプ」（
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「寒さを好むはねのない虫、ガロアムシ」（558語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-garoamushi-galloisiana-cold-loving-insect')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「羽根つきの羽根のような実をつける木、ツクバネ」（555語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tsukubane-buckleya-shuttlecock-fruit')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「カに卵を運ばせるハエ、ヒトヒフバエ」（571語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-human-botfly-dermatobia-mosquito-carrier')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「本当は木ではない砂漠の大きな植物、ジョシュアツリー」（560語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-joshua-tree-yucca-brevifolia-mojave')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「モグラのトイレから生えるキノコ、ナガエノスギタケ」（659語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-nagaenosugitake-hebeloma-mole-latrine')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「海をこえて広がった菌、マートルラスト」（663語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-myrtle-rust-austropuccinia-native-guava')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
