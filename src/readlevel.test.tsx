@@ -26576,3 +26576,39 @@ it('国公立 の長文「瓦ともり上がったしっくい：なまこ壁」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「二枚貝ではない貝がらの生き物、シャミセンガイ」（573語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-shamisengai-lingula-tidal-flat-brachiopod')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「糸のような柄に実をつるす低木、ツリバナ」（559語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-tsuribana-euonymus-hanging-fruit-aril')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「父親がたまごを運ぶカエル、サンバガエル」（570語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-midwife-toad-alytes-father-carries-eggs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「むき出しの地面のだいだい色のカップ、ヒイロチャワンタケ」（558語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hiiro-chawantake-aleuria-orange-cup')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ゴムをつくる砂ばくの低木、グアユール」（656語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-guayule-parthenium-desert-rubber-shrub')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ハチを利用するブルーベリーの病気、マミーベリー病」（654語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-mummy-berry-monilinia-blueberry-bees')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
