@@ -417,7 +417,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正330（副詞に前置詞をつける誤り〈go abroad・come home・go upstairs・live overseas・come here〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正331（前置詞をつけない時の表現〈last week・next year・this morning・every day に on・in・at をつける誤り〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正332（不規則動詞の過去形と過去分詞の取り違え〈has began・had went・was wrote・have drank・had ran〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正333（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正333（現在完了と期間の表し方〈for three years と since 2019・since の後の時点・ago と現在完了〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
