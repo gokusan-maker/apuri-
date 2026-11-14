@@ -25448,3 +25448,39 @@ it('国公立 の長文「電話でオペラを聞く：テアトロフォン」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「鳥のように空中にとまるガ、ホシホウジャク」（584語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hoshihojaku-hovering-moth')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「かれ木の上の赤いキノコ、ヒイロタケ」（572語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hiirotake-scarlet-bracket-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ゆっくりと広がる植物、カンアオイ」（586語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-kanaoi-slow-spreading-wild-ginger')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ゾウの遠い親せきの小さな走り手、ハネジネズミ」（577語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sengi-elephant-shrew-trails')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「くさった肉のにおいがする星形の花、スタペリア」（681語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-stapelia-starfish-carrion-flower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「あれた土地で木を助けるキノコ、コツブタケ」（675語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-pisolithus-dyeball-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
