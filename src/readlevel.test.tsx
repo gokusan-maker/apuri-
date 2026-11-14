@@ -27452,3 +27452,39 @@ it('国公立 の長文「農場の門口まで届いた郵便：アメリカの
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「エゴノキと、そこをおとずれる動物たち」（577語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-egonoki-styrax-snowbell-seed-visitors')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「暗い森にかくれる鳥、ミゾゴイ」（565語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mizogoi-gorsachius-forest-night-heron')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ぬれた地面をわたる魚、キノボリウオ」（573語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-climbing-perch-anabas-labyrinth-overland')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「線路のまくら木に生えるきのこ、マツオウジ」（573語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-matsuoji-neolentinus-treated-timber-brown-rot')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「消化を虫にまかせるねばねばした植物、ロリドゥラ」（670語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-roridula-pameridea-bug-digestion')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「マツかさのきのこから現代の殺菌剤へ」（680語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-strobilurus-pinecone-cap-strobilurin-fungicide')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
