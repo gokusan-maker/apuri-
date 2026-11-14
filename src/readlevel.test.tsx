@@ -25568,3 +25568,39 @@ it('国公立 の長文「風景をながめる暗い鏡：クロード・グラ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ほかの巣を借りるかがやく虫、セイボウ」（578語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-seibou-cuckoo-wasp-jewel')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「日本の古い過去から来たひとりぼっちの木、コウヤマキ」（579語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-koyamaki-umbrella-pine')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ひとつの口をもつキノコ、ヒトクチタケ」（567語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hitokuchitake-veiled-polypore')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「肺をもたない谷川の生き物、ハコネサンショウウオ」（570語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hakone-sanshouo-clawed-salamander')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「草地に花をさかせる手助けをする寄生植物、イエローラトル」（667語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-yellow-rattle-meadow-maker')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「見分けにくい小さな黒いキノコ、テングノメシガイのなかま」（674語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-earth-tongue-hidden-species')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
