@@ -3396,3 +3396,8 @@ it('誤文訂正〈260〉：国公立レベル pick up・drop off・drop by の�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('pick you up')
 })
+
+it('正誤問題のデータファイルは 24MB 未満（Cloudflare Pages は1ファイル25MiBまで。こえそうなら別ファイルに分ける）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/examerror.ts').length).toBeLessThan(24_000_000)
+})
