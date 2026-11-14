@@ -27284,3 +27284,39 @@ it('国公立 の長文「鋼鉄の線に残された声：テレグラフォン
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ボールのように集まる海のナマズ、ゴンズイ」（574語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-gonzui-plotosus-catfish-ball-school')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「海にうかぶ種をもつ浜辺の花、ハマユウ」（572語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hamayu-crinum-floating-seeds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「植物の象牙とよばれるヤシの種、タグア」（565語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tagua-phytelephas-vegetable-ivory')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「海で食べ物をとるトカゲ、ウミイグアナ」（562語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-marine-iguana-galapagos-algae-shrink')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「マイマイガの幼虫をたおす菌、エントモファガ・マイマイガ」（660語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-entomophaga-maimaiga-spongy-moth-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「カイガラムシをかくまう菌、セプトバシディウム」（657語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-septobasidium-scale-insect-felt-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
