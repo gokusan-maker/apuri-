@@ -26948,3 +26948,39 @@ it('国公立 の長文「土をみがいて光らせる：光る泥だんご」
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ワイ染色体を失ったほにゅう類、アマミトゲネズミ」（582語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-amami-spiny-rat-tokudaia-no-y')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「中部地方の赤い花のカエデ、ハナノキ」（572語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hananoki-acer-pycnanthum-wetland-maple')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「深海の毛深い動物、イエティクラブ」（570語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-yeti-crab-kiwa-hairy-bacteria')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ツパイに養われるウツボカズラ、ネペンテス・ロウィー」（562語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-nepenthes-lowii-treeshrew-pitcher')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「霜をかぶったようなかさのキノコ、ショウゲンジ」（679語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-shogenji-cortinarius-caperatus-frosted-cap')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「木とともに旅する猛毒のキノコ、タマゴテングタケ」（677語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-death-cap-amanita-phalloides-spread')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
