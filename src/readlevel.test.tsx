@@ -27200,3 +27200,39 @@ it('国公立 の長文「ヒ素から生まれた金色の黄：石黄（オー
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「かくれたもりをもつゆっくりした狩人、イモガイ」（585語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-imogai-cone-snail-venom-harpoon')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「遺伝学を教えたオレンジ色のカビ、アカパンカビ」（573語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-akapankabi-neurospora-one-gene-clock')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「白いずきんの僧にちなむ木、ヤマボウシ」（555語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-yamaboushi-cornus-kousa-hooded-monk')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「菌がつくる野菜、マコモタケ」（567語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-makomotake-ustilago-esculenta-swollen-shoot')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「しめった地面の狩人、コウガイビル」（662語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-kougaibiru-bipalium-hammerhead-flatworm')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「布と細胞を染めた木、ログウッド」（658語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-logwood-haematoxylum-dye-hematoxylin-stain')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
