@@ -25904,3 +25904,39 @@ it('国公立 の長文「何度でも消して書ける板：石盤」（562語
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「すっぱいしぶきを出すサソリモドキ」（574語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-sasorimodoki-whip-scorpion-spray')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「秋の野にさく苦い草、センブリ」（566語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-senburi-bitter-autumn-herb')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「石で巣あなをかためるイエローヘッドジョーフィッシュ」（566語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-yellowhead-jawfish-stone-burrow')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「サクラのなかまの枝につく黒いこぶ、ブラックノット」（570語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-black-knot-cherry-twigs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「にせの光の窓をもつコブラリリー」（672語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-cobra-lily-darlingtonia-windows')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「マツの切りかぶの下にかくれたブクリョウ」（675語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-bukuryo-pine-root-sclerotium')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
