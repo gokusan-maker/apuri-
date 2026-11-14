@@ -26156,3 +26156,39 @@ it('国公立 の長文「しなる棒で木をけずる：ポールレース（
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「川をのぼるハゼ、ヨシノボリ」（556語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yoshinobori-sucker-fin-goby')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「秋の日かげにさく、はん点のある花ホトトギス」（565語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hototogisu-toad-lily-nectar-pouches')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「地中でくらすインドハナガエル」（575語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-purple-frog-monsoon-burrower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「大きなおうぎをもつタビビトノキ」（571語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-ravenala-travelers-tree-blue-seeds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ヨーロッパのぶどう畑をゆるがした白い粉、ブドウうどんこ病菌」（657語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-erysiphe-grape-powdery-mildew')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「しょうゆのかげの塩に強い酵母」（667語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-zygosaccharomyces-soy-sauce-yeast')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
