@@ -27032,3 +27032,39 @@ it('国公立 の長文「二枚の刃で引く線：からす口」（562語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「子に木の実を運ぶ赤と黒の虫、ベニツチカメムシ」（568語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-benitsuchi-kamemushi-parastrachia-fruit-carrying-mother')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「まだ相手を待っている植物、ウッドのソテツ」（572語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-woods-cycad-encephalartos-woodii-no-female')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「一晩だけさく花の木、サガリバナ」（561語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sagaribana-barringtonia-night-flowers-river')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「高原の草地の宝、シネンシストウチュウカソウ」（563語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-ophiocordyceps-sinensis-caterpillar-fungus-harvest')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「鉄をまとった動物、ウロコフネタマガイ」（667語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-scaly-foot-snail-chrysomallon-iron-armor-mining')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「緑の胞子をもつ芝生のキノコ、オオシロカラカサタケ」（661語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-ooshirokarakasatake-chlorophyllum-green-spores-lawn')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
