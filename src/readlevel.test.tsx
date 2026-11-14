@@ -25484,3 +25484,39 @@ it('私学難関 の長文「あれた土地で木を助けるキノコ、コツ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「海そうにすいつく小さな丸い魚、ダンゴウオ」（561語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-dangouo-round-clinging-fish')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「小さな葉がおどるように動く植物、マイハギ」（579語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-maihagi-telegraph-plant-dancing-leaves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「土の中の虫から生えるオレンジ色のキノコ、サナギタケ」（566語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sanagitake-pupa-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「二本の足しかないハ虫類、フタアシミミズトカゲ」（566語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-bipes-two-legged-worm-lizard')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「葉をもたないラン、オニノヤガラ」（655語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-oninoyagara-leafless-orchid')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「赤いかごのような形のキノコ、アカカゴタケ」（654語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-akakagotake-red-cage-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
