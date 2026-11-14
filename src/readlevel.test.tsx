@@ -27152,3 +27152,51 @@ it('私学難関 の長文「チャウルモーグラ油と、忘れられかけ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「人新世を地質時代の正式な「世」にすべきか」（694語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-anthropocene-official-epoch')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「共通の採用日程（就活ルール）を残すべきか」（715語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-japan-graduate-hiring-calendar')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「単語カードについて」（684語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-flashcards')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「降車ボタンについて」（682語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-the-stop-button')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「駅ごとに替える家畜：ローマの公用駅伝制度クルスス・プブリクス」（663語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-cursus-publicus-roman-state-post')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「表面に残された金：トゥンバガ」（638語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-tumbaga-depletion-gilding')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「1本の針で作る輪：ナールビンディング」（572語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-nalbinding-single-needle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「ヒ素から生まれた金色の黄：石黄（オーピメント）」（576語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-orpiment-arsenic-yellow')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
