@@ -25736,3 +25736,39 @@ it('国公立 の長文「現地で地図をかく：平板測量」（570語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「山の谷川にすむ古いトンボ、ムカシトンボ」（561語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-mukashitonbo-stream-dragonfly')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「アンデスの高地の毛におおわれた巨人、フライレホン」（563語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-frailejon-paramo-rosette')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「カエデの葉の黒いしみ、黒紋病の菌」（568語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tar-spot-maple-leaves')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「とじる袋をもつ泳ぐオポッサム、ミズオポッサム」（576語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-yapok-water-opossum-pouch')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「緑にならない赤い植物、ツチトリモチ」（671語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-tsuchitorimochi-root-parasite')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「やわらかい歯をもつゼリー状の菌、ニカワハリタケ」（665語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-nikawaharitake-jelly-tooth')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
