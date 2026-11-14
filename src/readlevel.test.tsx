@@ -26780,3 +26780,39 @@ it('私学難関 の長文「海をこえて広がった菌、マートルラス
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「にらむような目をもつ小さな魚、オヤニラミ」（578語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-oyanirami-coreoperca-glaring-fish')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「花びらのない山の花、シラネアオイ」（575語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-shiraneaoi-glaucidium-petal-less-flower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「太陽を見つめるとげのあるトカゲ、オオヨロイトカゲ」（581語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sungazer-smaug-giganteus-grassland-lizard')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「カメのこうらのような皮をもつヤマノイモのなかま、キッコウリュウ」（577語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-kikkoryu-dioscorea-elephantipes-cork-tuber')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ナラ枯れを引きおこす菌、ナラ菌」（676語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-narakin-raffaelea-oak-wilt-beetle')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「バレー熱の原因となる砂漠の土の菌、コクシジオイデス」（677語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-coccidioides-valley-fever-desert-soil')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
