@@ -26492,3 +26492,39 @@ it('国公立 の長文「家をこわして火を止める：江戸の町火消
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「海で一生をはじめる川のエビ、ヤマトヌマエビ」（574語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yamato-numaebi-shrimp-sea-larvae')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「どろの中で待つとげだらけのスイレンのなかま、オニバス」（569語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-onibasu-euryale-spiny-water-lily')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「自分のかくれ家を持ち歩くタコ、メジロダコ」（571語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-veined-octopus-coconut-shell-shelter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ツツジの葉をふくらませる菌、ツツジもち病菌」（557語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tsutsuji-mochibyo-azalea-gall-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「アンデスのとげだらけの生きのこり、チリマツ」（662語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-monkey-puzzle-araucaria-andes')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「もどってきた古い敵、コムギ黒さび病」（674語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-wheat-stem-rust-barberry-ug99')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
