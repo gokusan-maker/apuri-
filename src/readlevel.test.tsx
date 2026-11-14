@@ -26408,3 +26408,39 @@ it('国公立 の長文「水の力で打つハンマー：トリップハンマ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「パートナーに「ふた」をするうすい羽のチョウ、ウスバシロチョウ」（564語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-usubashirocho-butterfly-mating-seal')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「種をつくらない花をもつ木、オオカメノキ」（564語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-okamenoki-viburnum-showy-sterile-flowers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「薬をつくる細菌を育てるハチ、ビーウルフ」（567語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-beewolf-wasp-antibiotic-bacteria')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「かくれた根をもつキノコ、ツエタケ」（563語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tsuetake-rooting-mushroom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「アフリカの「空の島」で枝分かれする巨人、ジャイアント・グラウンドセル」（662語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-giant-groundsel-sky-island-branching')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「古い建物の中の「なみだを流す」菌、ナミダタケ」（667語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-namidatake-dry-rot-weeping-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
