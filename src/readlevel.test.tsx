@@ -25160,3 +25160,39 @@ it('国公立 の長文「二枚の金箔：はく検電器」（564語）：国
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「海へもどるカニ、アカテガニ」（556語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-akategani-summer-night-larvae')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「花がらせんにならぶ小さなラン、ネジバナ」（562語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-nejibana-spiral-lawn-orchid')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「キノコの上に生えるキノコ、ヤグラタケ」（565語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-yaguratake-mushroom-on-mushroom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「植木ばちに生える黄色いキノコ」（562語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-flowerpot-parasol-yellow-mushroom')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「鳥がとまる花、ゴクラクチョウカ」（670語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-strelitzia-perching-bird-flower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「サンゴ礁の小さなかざり、イバラカンザシ」（669語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-christmas-tree-worm-reef')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
