@@ -21,3 +21,10 @@ it('難関大の長文の「下線部の意味」は本文にあり、「語句�
     }
   }
 })
+
+it('読解データの各ファイルは 24MB 未満（Cloudflare Pages は1ファイル25MiBまでしか公開できない）', async () => {
+  const { readFileSync, readdirSync } = await import('node:fs')
+  const files = readdirSync('src').filter((f) => /^advread(ing|\d)\.ts$/.test(f))
+  expect(files.length).toBeGreaterThanOrEqual(4)
+  for (const f of files) expect(readFileSync(`src/${f}`).length).toBeLessThan(24_000_000)
+})
