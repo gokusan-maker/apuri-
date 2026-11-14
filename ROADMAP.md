@@ -422,7 +422,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正335（群動詞の受け身で前置詞が抜ける誤り〈be laughed at・be spoken to・be dealt with・be taken care of・be looked after〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正336（most of・some of・many of・none of の後に the・these・代名詞が要る〈most of students の誤り〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正337（再帰代名詞が要る動詞〈pride oneself on・avail oneself of・absent oneself from・help oneself to・seat oneself〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正338（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正338（比較の後の代動詞 do・does・did・be の形〈than her brother do・as they does の誤り〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
