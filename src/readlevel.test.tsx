@@ -25400,3 +25400,51 @@ it('私学難関 の長文「とびつくように見えるサボテン、ジャ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「タトゥー（入れ墨）インクに厳しい化学物質の制限を課すべきか」（708語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-tattoo-ink-chemical-limits')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「薬局に残薬の回収を義務づけるべきか」（694語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-pharmacy-medicine-take-back')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「題辞（エピグラフ）について」（697語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-epigraphs')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「バス停の屋根（待合所）について」（709語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-bus-shelters')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「熱を感じる帯：ボロメーター」（647語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-bolometer-langley-platinum')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「石に写しとる：星取り機（ポインティングマシン）」（647語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-pointing-machine-marble-copying')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「水を沸かして高さを測る：沸点高度計」（570語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-hypsometer-boiling-point-altitude')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「電話でオペラを聞く：テアトロフォン」（565語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-theatrophone-opera-by-telephone')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
