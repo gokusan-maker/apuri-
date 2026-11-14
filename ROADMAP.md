@@ -424,7 +424,7 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正337（再帰代名詞が要る動詞〈pride oneself on・avail oneself of・absent oneself from・help oneself to・seat oneself〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正338（比較の後の代動詞 do・does・did・be の形〈than her brother do・as they does の誤り〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正339（-s で終わる単数名詞と複数扱いの名詞〈news・mathematics・physics は単数、police・cattle・people は複数〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正340（題材は既出の少ないものを選ぶ）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正340（連結動詞の補語に副詞を置く誤り〈remain calm・prove effective・grow anxious・stay silent〉）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
