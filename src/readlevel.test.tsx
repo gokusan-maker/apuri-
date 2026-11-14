@@ -27536,3 +27536,39 @@ it('国公立 の長文「あたためてから光るランプ：ネルンスト
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「ヒバカリ、おそろしい名前をもつ小さなヘビ」（563語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-hibakari-hebius-small-waterside-snake')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「セツブンソウ、春の前にさく小さな白い花」（576語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-setsubunso-eranthis-white-sepals-late-winter')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ニーム、昆虫が食べようとしない苦い木」（562語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-neem-azadirachta-bitter-seed-insects')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「日本酒を支える酵母」（568語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-sake-yeast-kyokai-strains-foamless')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「オセダックス、クジラの骨にすむ口のない虫」（663語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-osedax-bone-worm-acid-roots-dwarf-males')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「分裂酵母、細胞が分かれるしくみを示した小さな菌類」（666語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-fission-yeast-pombe-cell-cycle-switch')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
