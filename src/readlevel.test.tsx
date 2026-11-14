@@ -25940,3 +25940,51 @@ it('私学難関 の長文「マツの切りかぶの下にかくれたブクリ
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('東大 の長文「国立図書館は許可なしにウェブサイトを保存すべきか：納本制度とウェブアーカイブ」（699語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-web-archiving-legal-deposit')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('東大 の長文「人工衛星に5年以内の軌道離脱を義務づけるべきか」（693語）：東大に出る', async () => {
+  const p = passagesFor('東大').find((x) => x.id === 'todai-satellite-five-year-deorbit')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ブックカバー（カバー）について」（687語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-dust-jackets')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('京大 の長文「ピルケースについて」（690語）：京大に出る', async () => {
+  const p = passagesFor('京大').find((x) => x.id === 'kyodai-on-pill-organizers')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「酢と鉛から生まれる白：鉛白のスタック法」（633語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-lead-white-stack-process')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('旧帝大 の長文「金属に写されたページ：ステロ版（鉛版）印刷」（648語）：旧帝大に出る', async () => {
+  const p = passagesFor('旧帝大').find((x) => x.id === 'adv-stereotype-paper-flong')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「星で時刻を知る：ノクターナル（星時計）」（564語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-nocturnal-star-clock')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('国公立 の長文「石こう型に泥しょうを流す：鋳込み成形（泥しょう鋳込み）」（563語）：国公立に出る', async () => {
+  const p = passagesFor('国公立').find((x) => x.id === 'adv-slip-casting-plaster-molds')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
