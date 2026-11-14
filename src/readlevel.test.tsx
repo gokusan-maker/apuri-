@@ -26072,3 +26072,39 @@ it('国公立 の長文「手で粉をひく：回転式石うす」（566語）
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「宝石のような実をつける「くさい木」、クサギ」（572語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-kusagi-blue-fruit-red-calyx')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「二つの武器をもつヘビ、ヤマカガシ」（568語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-yamakagashi-toad-toxin-snake')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「雨を待つアンザンジュ」（569語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-anastatica-rose-of-jericho-rain')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「魚の舌になりかわる寄生虫」（571語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-cymothoa-tongue-replacing-isopod')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「用心して食べられるキノコ、シャグマアミガサタケ」（667語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-gyromitra-false-morel-rocket-fuel')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「田んぼの緑の玉、イネこうじ病」（673語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-rice-false-smut-ine-koji')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
