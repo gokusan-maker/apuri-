@@ -26324,3 +26324,39 @@ it('国公立 の長文「頭上の焼き物：日本の瓦」（572語）：国
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「実をつけるために相手が必要な木、アオキ」（555語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-aoki-aucuba-berries-need-males')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「アリに育てられるチョウ、クロシジミ」（557語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-kuroshijimi-butterfly-raised-by-ants')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「ヤシオウムとそのドラムスティック」（574語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-palm-cockatoo-drumming-stick')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「土の中にかくれた菌、ツチダンゴ」（588語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-tsuchi-dango-soil-dumpling-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ヒマラヤの温室、セイタカダイオウ」（665語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-sikkim-rhubarb-himalayan-glasshouse')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「アスペルギルス・フラブスとシチメンチョウのなぞの病気」（669語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-aspergillus-flavus-turkey-x-aflatoxin')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
