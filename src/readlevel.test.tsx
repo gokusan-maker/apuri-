@@ -25076,3 +25076,39 @@ it('国公立 の長文「浮かべて液体を読む：浮きばかり（比重
   expect(p).toBeTruthy()
   expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
 })
+
+it('高3 の長文「葉のゆりかごを作る虫、オトシブミ」（555語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-otoshibumi-leaf-cradle-weevil')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('高3 の長文「夜にレースのような花をさかせるカラスウリ」（558語）：高3に出る', async () => {
+  const p = passagesFor('高3').find((x) => x.id === 'adv-karasuuri-night-lace-flower')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「サンゴのような形のキノコ、ホウキタケ」（562語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-hokitake-coral-fungus')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学 の長文「絶めつの危機にある小さなイルカ、コガシラネズミイルカ」（559語）：私学に出る', async () => {
+  const p = passagesFor('私学').find((x) => x.id === 'adv-vaquita-smallest-porpoise')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「ふしぎなかざりをもつバットフラワー」（659語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-bat-flower-selfing-display')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
+
+it('私学難関 の長文「黒く変わるキノコ、アカヤマタケと古い草地のひみつ」（660語）：私学難関に出る', async () => {
+  const p = passagesFor('私学難関').find((x) => x.id === 'adv-blackening-waxcap-old-grassland')!
+  expect(p).toBeTruthy()
+  expect(p.blanks[0].choices[p.blanks[0].answer]).not.toBe('Although')
+})
