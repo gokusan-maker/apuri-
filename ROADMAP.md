@@ -406,7 +406,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正319（A with B の型をとる動詞〈furnish・entrust・endow・present・credit〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正320（A for B の型をとる動詞〈punish・scold・forgive・reward・mistake〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正321（A into B の型をとる動詞〈translate・divide・convert・transform・trick〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正322（A to B の型をとる動詞〈assign・subject・dedicate・confine・limit〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正322（A to B の型をとる動詞〈assign・subject・dedicate・confine・limit〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正323（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
