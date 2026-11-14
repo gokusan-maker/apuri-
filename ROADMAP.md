@@ -395,7 +395,8 @@
 - [x] 私学難関〜東大の正誤問題・誤文訂正308（for をとる自動詞〈compensate for・opt for・qualify for・yearn for・atone for〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正309（in をとる自動詞〈persist in・excel in・indulge in・engage in・abound in〉）
 - [x] 私学難関〜東大の正誤問題・誤文訂正310（at をとる自動詞〈marvel at・glance at・hint at・scoff at・stare at〉）
-- [ ] 私学難関〜東大の正誤問題・誤文訂正311（of をとる自動詞〈dispose of・conceive of・despair of・smack of・tire of〉）
+- [x] 私学難関〜東大の正誤問題・誤文訂正311（of をとる自動詞〈dispose of・conceive of・despair of・smack of・tire of〉）
+- [ ] 私学難関〜東大の正誤問題・誤文訂正312（題材は既出の少ないものを選ぶ）
 #### 単語
 - [x] 高2〜東大・TOEFL の 2588語を1語ずつ判定しなおし、レベルに合わない 1160語を合うレベルへ移す（wordbandfix.ts。例：investigate 国公立→高2、circumstance 旧帝大→私学、exorbitant 旧帝大→京大）
 - [x] 国公立の単語を50語追加（B2〜B2+。訳・例文は自作）
